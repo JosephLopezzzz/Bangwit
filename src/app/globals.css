@@ -1,14 +1,67 @@
 @import "tailwindcss";
 
+/* Tailwind `dark:` follows Bangwit's theme toggle, not the OS preference. */
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
 :root {
   --ink: #102b35;
-  --muted: #667c84;
+  --muted: #60757d;
   --teal: #087f78;
   --teal-dark: #05615d;
   --teal-soft: #e1f3f0;
   --line: #dbe6e6;
   --paper: #f5f8f7;
   --white: #ffffff;
+  --slate-50: #f8fafc;
+  --slate-300: #cbd5e1;
+  --slate-400: #5f747c;
+  --slate-500: #64748b;
+  --slate-600: #475569;
+  --slate-700: #334155;
+  --teal-action: #087f78;
+  --teal-action-hover: #05615d;
+  --review-surface: #fffbeb;
+  --review-line: #fef3c7;
+  --review-copy: #78350f;
+  --review-ink: #451a03;
+  --error-surface: #fff1f2;
+  --error-line: #fecdd3;
+  --error-ink: #881337;
+  --focus: #087f78;
+  --scrim: rgb(16 43 53 / 55%);
+  --toast-bg: #102b35;
+  --toast-ink: #ffffff;
+}
+
+:root[data-theme="dark"] {
+  color-scheme: dark;
+  --ink: #e5eff0;
+  --muted: #b1c2c6;
+  --teal: #65c9c0;
+  --teal-dark: #96e2db;
+  --teal-soft: #173b3c;
+  --line: #60777d;
+  --paper: #0c191d;
+  --white: #15292e;
+  --slate-50: #1d343a;
+  --slate-300: #425b62;
+  --slate-400: #9bb0b5;
+  --slate-500: #afc2c6;
+  --slate-600: #526970;
+  --slate-700: #c8d7d9;
+  --teal-action: #087f78;
+  --teal-action-hover: #05615d;
+  --review-surface: #372d18;
+  --review-line: #62512a;
+  --review-copy: #f2cc78;
+  --review-ink: #ffe1a5;
+  --error-surface: #38202a;
+  --error-line: #6e3948;
+  --error-ink: #ffb8c4;
+  --focus: #70d2c8;
+  --scrim: rgb(0 9 12 / 72%);
+  --toast-bg: #dbe9e9;
+  --toast-ink: #123039;
 }
 
 @theme inline {
@@ -19,7 +72,32 @@
   --color-teal-soft: var(--teal-soft);
   --color-line: var(--line);
   --color-paper: var(--paper);
+  --color-white: var(--white);
+  --color-slate-50: var(--slate-50);
+  --color-slate-300: var(--slate-300);
+  --color-slate-400: var(--slate-400);
+  --color-slate-500: var(--slate-500);
+  --color-slate-600: var(--slate-600);
+  --color-slate-700: var(--slate-700);
+  --color-amber-50: var(--review-surface);
+  --color-amber-100: var(--review-line);
+  --color-amber-900: var(--review-copy);
+  --color-amber-950: var(--review-ink);
+  --color-rose-50: var(--error-surface);
+  --color-rose-200: var(--error-line);
+  --color-rose-700: var(--error-ink);
   --font-sans: Arial, Helvetica, sans-serif;
+
+  /* shadcn / Lightswind aliases mapped to Bangwit tokens. `muted` keeps Bangwit's text meaning. */
+  --color-foreground: var(--ink);
+  --color-background: var(--white);
+  --color-primary: var(--teal-action);
+  --color-primary-foreground: #ffffff;
+  --color-accent: var(--teal-soft);
+  --color-accent-foreground: var(--teal-dark);
+  --color-muted-foreground: var(--muted);
+  --color-border: var(--line);
+  --color-ring: var(--focus);
 }
 
 * {
@@ -29,6 +107,7 @@
 html {
   min-width: 320px;
   background: var(--paper);
+  color-scheme: light;
 }
 
 body {
@@ -44,11 +123,43 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 
+.text-white {
+  color: #ffffff;
+}
+
+.border-white,
+.border-white\/90 {
+  border-color: #ffffff;
+}
+
+.border-white\/80 {
+  border-color: rgb(255 255 255 / 80%);
+}
+
+::selection {
+  background: var(--teal-soft);
+  color: var(--ink);
+}
+
+* {
+  scrollbar-color: var(--line) var(--paper);
+}
+
+input,
+textarea {
+  caret-color: var(--teal);
+}
+
+select option {
+  background: var(--white);
+  color: var(--ink);
+}
+
 .tour-spotlight {
   position: relative;
   z-index: 41;
   border-radius: 1rem;
-  outline: 3px solid #087f78;
+  outline: 3px solid var(--teal);
   outline-offset: 4px;
   box-shadow: 0 0 0 100vmax rgb(16 43 53 / 36%);
 }
@@ -57,8 +168,156 @@ button:focus-visible,
 a:focus-visible,
 input:focus-visible,
 select:focus-visible {
-  outline: 3px solid #56b9b0;
+  outline: 3px solid var(--focus);
   outline-offset: 3px;
+}
+
+.bg-teal {
+  background-color: var(--teal-action);
+}
+
+.hover\:bg-teal-dark:hover,
+.enabled\:hover\:bg-teal-dark:enabled:hover {
+  background-color: var(--teal-action-hover);
+}
+
+.app-dialog-scrim {
+  background-color: var(--scrim);
+}
+
+.app-status-message {
+  background-color: var(--toast-bg);
+  color: var(--toast-ink);
+}
+
+.map-illustration {
+  border-color: #d4e8e6;
+  background-color: #caedf1;
+}
+
+.map-water {
+  background-image:
+    radial-gradient(ellipse at 74% 26%, rgb(255 255 255 / 70%), transparent 45%),
+    linear-gradient(155deg, #bde7ed 0%, #d8f0ee 100%);
+}
+
+.map-landform-main {
+  background: #c8e5c7;
+  box-shadow: inset -20px 22px 40px rgb(63 147 135 / 12%);
+}
+
+.map-landform-inset {
+  background: #d4ebce;
+  box-shadow: inset -12px 12px 24px rgb(63 147 135 / 10%);
+}
+
+.map-area-label {
+  color: #245d70;
+}
+
+.map-region-label {
+  color: #225a44;
+}
+
+.catch-empty-art {
+  background: linear-gradient(to bottom, #eaf7f5, #ffffff);
+}
+
+:root[data-theme="dark"] .map-illustration {
+  border-color: #31545b;
+  background-color: #10303a;
+}
+
+:root[data-theme="dark"] .map-water {
+  background-image:
+    radial-gradient(ellipse at 74% 26%, rgb(161 226 221 / 17%), transparent 45%),
+    linear-gradient(155deg, #174653 0%, #102f3a 100%);
+}
+
+:root[data-theme="dark"] .map-landform-main {
+  background: #42675e;
+  box-shadow: inset -20px 22px 40px rgb(2 16 19 / 28%);
+}
+
+:root[data-theme="dark"] .map-landform-inset {
+  background: #527466;
+  box-shadow: inset -12px 12px 24px rgb(2 16 19 / 22%);
+}
+
+:root[data-theme="dark"] .map-area-label {
+  color: #c6e9e6;
+  text-shadow: 0 1px 2px rgb(3 19 25 / 70%);
+}
+
+:root[data-theme="dark"] .map-region-label {
+  color: #e1edca;
+  text-shadow: 0 1px 2px rgb(3 19 25 / 70%);
+}
+
+:root[data-theme="dark"] .catch-empty-art {
+  background: linear-gradient(to bottom, #1a393a, #15292e);
+}
+
+::view-transition {
+  pointer-events: none;
+}
+
+::view-transition-old(root) {
+  animation: none;
+}
+
+@supports (clip-path: polygon(0 100%, 100% 100%, 100% 0%)) {
+  :root[data-theme-transition="rise"]::view-transition-new(root) {
+    animation: tide-rise 850ms cubic-bezier(0.16, 1, 0.3, 1) both;
+    filter: drop-shadow(0 -2px 1px rgb(112 210 200 / 78%));
+  }
+
+  :root[data-theme-transition="recede"]::view-transition-new(root) {
+    animation: tide-recede 850ms cubic-bezier(0.16, 1, 0.3, 1) both;
+    filter: drop-shadow(0 2px 1px rgb(112 210 200 / 72%));
+  }
+}
+
+@keyframes tide-rise {
+  from {
+    clip-path: polygon(
+      0 95%,
+      12% 92%,
+      25% 96%,
+      38% 91%,
+      51% 94%,
+      64% 91%,
+      77% 95%,
+      89% 92%,
+      100% 94%,
+      100% 100%,
+      0 100%
+    );
+  }
+  to {
+    clip-path: polygon(0 0, 12% 0, 25% 0, 38% 0, 51% 0, 64% 0, 77% 0, 89% 0, 100% 0, 100% 100%, 0 100%);
+  }
+}
+
+@keyframes tide-recede {
+  from {
+    clip-path: polygon(0 0, 100% 0, 100% 8%, 89% 6%, 77% 9%, 64% 6%, 51% 8%, 38% 5%, 25% 8%, 12% 6%, 0 9%);
+  }
+  to {
+    clip-path: polygon(
+      0 0,
+      100% 0,
+      100% 100%,
+      89% 100%,
+      77% 100%,
+      64% 100%,
+      51% 100%,
+      38% 100%,
+      25% 100%,
+      12% 100%,
+      0 100%
+    );
+  }
 }
 
 @media (prefers-reduced-motion: reduce) {

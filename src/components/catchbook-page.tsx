@@ -4,15 +4,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { useCallback, useEffect, useMemo, useState, type FormEvent } from "react";
 import { useBangwit } from "@/components/bangwit-provider";
+import { CatchDatePicker } from "@/components/catch-date-picker";
+import { getDispositionLabel, getHabitatLabel, getSpeciesDisplay } from "@/i18n/labels";
 import { listCatches, removeCatch, saveCatch } from "@/lib/storage/catches";
 import type { CatchEntry } from "@/types/catch";
-
-const WATER_TYPES = [
-  { value: "Saltwater", label: "Saltwater", detail: "Dagat" },
-  { value: "Freshwater", label: "Freshwater", detail: "Ilog o lawa" },
-  { value: "Brackish", label: "Brackish", detail: "Halo ng alat at tabang" },
-  { value: "Hindi alam", label: "Hindi alam", detail: "Idagdag mamaya" },
-];
 
 const controlClass =
   "mt-2 min-h-12 w-full rounded-xl border border-line bg-white px-4 text-sm text-ink placeholder:text-slate-400 focus:border-teal focus:outline-none focus:ring-2 focus:ring-teal/15";
@@ -23,14 +18,16 @@ function localDateValue() {
   return new Date(now.getTime() - now.getTimezoneOffset() * 60_000).toISOString().slice(0, 10);
 }
 
-function formatDate(value: string) {
-  if (!value) return "Petsa hindi naitala";
-  return new Intl.DateTimeFormat("fil-PH", { year: "numeric", month: "short", day: "numeric" }).format(
-    new Date(`${value}T12:00:00`),
-  );
+function formatDate(value: string, lang: "fil" | "en") {
+  if (!value) return lang === "fil" ? "Petsa hindi naitala" : "Date not recorded";
+  return new Intl.DateTimeFormat(lang === "fil" ? "fil-PH" : "en-US", {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+  }).format(new Date(`${value}T12:00:00`));
 }
 
-function CatchPhoto({ photo }: { photo: Blob | File | null }) {
+function CatchPhoto({ photo, altText }: { photo: Blob | File | null; altText: string }) {
   const [url, setUrl] = useState("");
   useEffect(() => {
     if (!photo) return;
@@ -38,16 +35,18 @@ function CatchPhoto({ photo }: { photo: Blob | File | null }) {
     setUrl(objectUrl);
     return () => URL.revokeObjectURL(objectUrl);
   }, [photo]);
+
   if (!url)
     return (
       <div aria-hidden="true" className="grid aspect-[4/3] place-items-center bg-teal-soft text-4xl text-teal">
         ≈
       </div>
     );
+
   return (
     <Image
       src={url}
-      alt="Larawan ng nahuling yamang-tubig"
+      alt={altText}
       width={720}
       height={540}
       unoptimized
@@ -57,7 +56,7 @@ function CatchPhoto({ photo }: { photo: Blob | File | null }) {
 }
 
 export function CatchbookPage() {
-  const { showMessage } = useBangwit();
+  const { showMessage, lang, dict } = useBangwit();
   const [entries, setEntries] = useState<CatchEntry[]>([]);
   const [date, setDate] = useState("");
   const [photo, setPhoto] = useState<File | null>(null);
@@ -67,17 +66,40 @@ export function CatchbookPage() {
   const [saving, setSaving] = useState(false);
   const [storageError, setStorageError] = useState("");
 
+  const waterTypes = useMemo(
+    () => [
+      {
+        value: "Saltwater",
+        label: dict.catches.habitats.saltwater.label,
+        detail: dict.catches.habitats.saltwater.detail,
+      },
+      {
+        value: "Freshwater",
+        label: dict.catches.habitats.freshwater.label,
+        detail: dict.catches.habitats.freshwater.detail,
+      },
+      { value: "Brackish", label: dict.catches.habitats.brackish.label, detail: dict.catches.habitats.brackish.detail },
+      { value: "Hindi alam", label: dict.catches.habitats.unknown.label, detail: dict.catches.habitats.unknown.detail },
+    ],
+    [dict],
+  );
+
   const refresh = useCallback(async () => {
     try {
       setEntries(await listCatches());
       setStorageError("");
     } catch (error) {
-      const message = error instanceof Error ? error.message : "Hindi mabuksan ang catch journal.";
+      const message =
+        error instanceof Error
+          ? error.message
+          : lang === "fil"
+            ? "Hindi mabuksan ang catch journal."
+            : "Could not open catch journal.";
       setStorageError(message);
     } finally {
       setLoading(false);
     }
-  }, []);
+  }, [lang]);
 
   useEffect(() => {
     setDate(localDateValue());
@@ -127,10 +149,24 @@ export function CatchbookPage() {
       setDate(localDateValue());
       setEntries(await listCatches());
       setStorageError("");
-      showMessage("Naka-save ang huli sa device mo. Wala pang cloud sync.");
+      showMessage(
+        lang === "fil"
+          ? "Naka-save ang huli sa device mo. Wala pang cloud sync."
+          : "Catch saved to this device. No cloud sync.",
+      );
     } catch (error) {
-      setStorageError(error instanceof Error ? error.message : "Hindi na-save ang huli. Subukang muli.");
-      showMessage("Hindi na-save ang huli. Nasa form pa rin ang mga detalye para masubukan ulit.");
+      setStorageError(
+        error instanceof Error
+          ? error.message
+          : lang === "fil"
+            ? "Hindi na-save ang huli. Subukang muli."
+            : "Failed to save catch. Please try again.",
+      );
+      showMessage(
+        lang === "fil"
+          ? "Hindi na-save ang huli. Nasa form pa rin ang mga detalye para masubukan ulit."
+          : "Catch could not be saved. Form details were kept so you can retry.",
+      );
     } finally {
       setSaving(false);
     }
@@ -141,20 +177,30 @@ export function CatchbookPage() {
     try {
       await removeCatch(entry.id);
       setEntries(await listCatches());
-      showMessage("Nabura ang tala sa device na ito.");
+      showMessage(lang === "fil" ? "Nabura ang tala sa device na ito." : "Record deleted from this device.");
     } catch (error) {
-      setStorageError(error instanceof Error ? error.message : "Hindi nabura ang tala.");
+      setStorageError(
+        error instanceof Error ? error.message : lang === "fil" ? "Hindi nabura ang tala." : "Failed to delete record.",
+      );
     }
   }
 
   function acceptPhoto(file: File | undefined) {
     if (!file) return;
     if (!file.type.startsWith("image/")) {
-      setStorageError("Pumili ng image file para sa larawan ng huli.");
+      setStorageError(
+        lang === "fil"
+          ? "Pumili ng image file para sa larawan ng huli."
+          : "Please choose an image file for the catch photo.",
+      );
       return;
     }
     if (file.size > 10 * 1024 * 1024) {
-      setStorageError("Hanggang 10 MB muna ang larawan para hindi mapuno agad ang device storage.");
+      setStorageError(
+        lang === "fil"
+          ? "Hanggang 10 MB muna ang larawan para hindi mapuno agad ang device storage."
+          : "Photo size limited to 10 MB to prevent filling device storage.",
+      );
       return;
     }
     setStorageError("");
@@ -165,12 +211,14 @@ export function CatchbookPage() {
     <main className="mx-auto max-w-[1440px] px-5 pb-12 pt-8 sm:px-8 sm:pt-10 lg:px-12">
       <div className="flex flex-wrap items-center justify-between gap-3">
         <p className="rounded-full bg-teal-soft px-4 py-2 text-xs font-bold text-teal-dark">
-          🔒 Pribado · sa device lang
+          {dict.common.privateDeviceOnly}
         </p>
-        <span className="rounded-full bg-white px-4 py-2 text-xs font-bold text-muted">Device-only storage</span>
+        <span className="rounded-full bg-white px-4 py-2 text-xs font-bold text-muted">
+          {dict.common.deviceOnlyStorage}
+        </span>
       </div>
-      <h1 className="mt-4 text-4xl font-extrabold tracking-tight text-ink sm:text-5xl">My Catches</h1>
-      <p className="mt-2 text-lg text-muted sm:text-xl">Bawat huli, may kuwento. I-save ang sa iyo.</p>
+      <h1 className="mt-4 text-4xl font-extrabold tracking-tight text-ink sm:text-5xl">{dict.catches.title}</h1>
+      <p className="mt-2 text-lg text-muted sm:text-xl">{dict.catches.subtitle}</p>
 
       {storageError && (
         <p role="alert" className="mt-5 rounded-xl border border-rose-200 bg-rose-50 px-4 py-3 text-sm text-rose-900">
@@ -184,12 +232,12 @@ export function CatchbookPage() {
           onSubmit={submitCatch}
           className="rounded-3xl border border-line bg-white p-5 shadow-sm sm:p-7"
         >
-          <p className="text-xs font-bold uppercase tracking-[0.15em] text-teal">Bagong entry</p>
-          <h2 className="mt-2 text-3xl font-extrabold tracking-tight text-ink">May huli ako!</h2>
-          <p className="mt-1 text-sm text-muted">Kapag bukas na ang journal, local ang save kahit walang signal.</p>
+          <p className="text-xs font-bold uppercase tracking-[0.15em] text-teal">{dict.catches.formTag}</p>
+          <h2 className="mt-2 text-3xl font-extrabold tracking-tight text-ink">{dict.catches.formTitle}</h2>
+          <p className="mt-1 text-sm text-muted">{dict.catches.formDesc}</p>
 
           <fieldset
-            aria-label="Pumili o mag-drag ng larawan ng huli"
+            aria-label={dict.catches.photoLabel}
             onDragOver={(event) => {
               event.preventDefault();
               setDragging(true);
@@ -200,28 +248,28 @@ export function CatchbookPage() {
               setDragging(false);
               acceptPhoto(event.dataTransfer.files[0]);
             }}
-            className={`mt-5 flex min-h-24 flex-wrap items-center gap-3 rounded-2xl border border-dashed px-4 py-3 transition-colors ${dragging ? "border-teal bg-teal-soft" : "border-slate-300 bg-white hover:border-teal"}`}
+            className={`mt-5 flex min-h-24 flex-wrap items-center gap-3 rounded-2xl border border-dashed px-4 py-3 transition-colors ${
+              dragging ? "border-teal bg-teal-soft" : "border-slate-300 bg-white hover:border-teal"
+            }`}
           >
             <label
               htmlFor="catchPhoto"
               className="grid h-12 w-12 shrink-0 cursor-pointer place-items-center rounded-full bg-teal-soft text-xl text-teal"
-              aria-label="Pumili ng larawan"
+              aria-label={dict.catches.photoLabel}
             >
               ▣
             </label>
             <div className="min-w-0 flex-1">
               <label htmlFor="catchPhoto" className="cursor-pointer text-sm font-bold text-ink">
-                Magdagdag ng larawan
+                {dict.catches.photoLabel}
               </label>
-              <p className="mt-1 break-all text-xs text-muted">
-                {photo?.name ?? "Opsyonal · hanggang 10 MB · sa device mo lang"}
-              </p>
+              <p className="mt-1 break-all text-xs text-muted">{photo?.name ?? dict.catches.photoHelp}</p>
             </div>
             {photoUrl && (
               <div className="flex items-center gap-2">
                 <Image
                   src={photoUrl}
-                  alt="Preview ng larawan ng huli"
+                  alt={dict.catches.photoPreviewAlt}
                   width={64}
                   height={64}
                   unoptimized
@@ -231,9 +279,9 @@ export function CatchbookPage() {
                   type="button"
                   onClick={() => setPhoto(null)}
                   className="rounded-lg px-2 py-1 text-sm font-semibold text-muted hover:bg-paper"
-                  aria-label="Alisin ang larawan"
+                  aria-label={dict.catches.photoRemove}
                 >
-                  Alisin
+                  {dict.catches.photoRemove}
                 </button>
               </div>
             )}
@@ -249,46 +297,31 @@ export function CatchbookPage() {
 
           <div className="mt-5">
             <label htmlFor="catchSpecies" className={labelClass}>
-              Species <span className="ml-1 font-normal text-muted">opsyonal</span>
+              {dict.catches.speciesLabel} <span className="ml-1 font-normal text-muted">{dict.common.optional}</span>
             </label>
             <input
               id="catchSpecies"
               name="species"
               maxLength={80}
-              placeholder="Anong nahuli mo?"
+              placeholder={dict.catches.speciesPlaceholder}
               className={controlClass}
             />
-            <p className="mt-1.5 text-xs text-muted">Puwede itong iwanang blangko kung hindi pa matukoy.</p>
+            <p className="mt-1.5 text-xs text-muted">{dict.catches.speciesHelp}</p>
           </div>
 
           <div className="mt-5 grid gap-5 md:grid-cols-[minmax(180px,.75fr)_minmax(0,1.5fr)]">
             <div>
-              <label htmlFor="catchDate" className={labelClass}>
-                Petsa
+              <label htmlFor="catchDateTrigger" className={labelClass}>
+                {dict.catches.dateLabel}
               </label>
-              <div className="mt-2 flex gap-2">
-                <input
-                  id="catchDate"
-                  name="date"
-                  type="date"
-                  required
-                  value={date}
-                  onChange={(event) => setDate(event.target.value)}
-                  className="min-h-12 min-w-0 flex-1 rounded-xl border border-line bg-white px-3 text-sm text-ink"
-                />
-                <button
-                  type="button"
-                  onClick={() => setDate(localDateValue())}
-                  className="min-h-12 rounded-xl bg-teal-soft px-3 text-sm font-bold text-teal-dark hover:bg-[#cdebe6]"
-                >
-                  Ngayon
-                </button>
-              </div>
+              {/* Lightswind Calendar integration via CatchDatePicker */}
+              <CatchDatePicker value={date} onChange={setDate} lang={lang} />
             </div>
+
             <fieldset>
-              <legend className={labelClass}>Uri ng tubig</legend>
+              <legend className={labelClass}>{dict.catches.habitatLegend}</legend>
               <div className="mt-2 grid grid-cols-2 gap-2">
-                {WATER_TYPES.map((water, index) => (
+                {waterTypes.map((water, index) => (
                   <label
                     key={water.value}
                     className="flex min-h-12 cursor-pointer items-center gap-2 rounded-xl border border-line px-3 py-2 has-[:checked]:border-teal has-[:checked]:bg-teal-soft/70"
@@ -312,27 +345,27 @@ export function CatchbookPage() {
 
           <details className="mt-5 border-t border-line pt-4">
             <summary className="cursor-pointer list-none font-bold text-ink marker:content-none">
-              Dagdag na detalye <span className="ml-1 text-sm font-normal text-muted">Lugar, sukat, pain at tala</span>
+              {dict.catches.moreDetailsSummary}{" "}
+              <span className="ml-1 text-sm font-normal text-muted">{dict.catches.moreDetailsSummarySub}</span>
             </summary>
             <div className="mt-4 grid gap-4 sm:grid-cols-2">
               <div className="sm:col-span-2">
                 <label htmlFor="catchLocation" className={labelClass}>
-                  Lugar <span className="ml-1 font-normal text-muted">optional · private</span>
+                  {dict.catches.locationLabel}{" "}
+                  <span className="ml-1 font-normal text-muted">· {dict.common.optional}</span>
                 </label>
                 <input
                   id="catchLocation"
                   name="location"
                   maxLength={100}
-                  placeholder="Bay, barangay, o private spot label"
+                  placeholder={dict.catches.locationPlaceholder}
                   className={controlClass}
                 />
-                <p className="mt-1 text-xs leading-5 text-muted">
-                  Sa device lang ito naka-save. Huwag ilagay ang eksaktong spot kung ayaw mong itala.
-                </p>
+                <p className="mt-1 text-xs leading-5 text-muted">{dict.catches.locationHelp}</p>
               </div>
               <div>
                 <label htmlFor="catchLength" className={labelClass}>
-                  Haba (cm) <span className="font-normal text-muted">· optional</span>
+                  {dict.catches.lengthLabel} <span className="font-normal text-muted">· {dict.common.optional}</span>
                 </label>
                 <input
                   id="catchLength"
@@ -348,7 +381,7 @@ export function CatchbookPage() {
               </div>
               <div>
                 <label htmlFor="catchWeight" className={labelClass}>
-                  Timbang (g) <span className="font-normal text-muted">· optional</span>
+                  {dict.catches.weightLabel} <span className="font-normal text-muted">· {dict.common.optional}</span>
                 </label>
                 <input
                   id="catchWeight"
@@ -364,36 +397,36 @@ export function CatchbookPage() {
               </div>
               <div>
                 <label htmlFor="catchBait" className={labelClass}>
-                  Pain o pang-akit <span className="font-normal text-muted">· optional</span>
+                  {dict.catches.baitLabel} <span className="font-normal text-muted">· {dict.common.optional}</span>
                 </label>
                 <input
                   id="catchBait"
                   name="bait"
                   maxLength={100}
-                  placeholder="Hal. bulate o lure"
+                  placeholder={dict.catches.baitPlaceholder}
                   className={controlClass}
                 />
               </div>
               <div>
                 <label htmlFor="catchDisposition" className={labelClass}>
-                  Catch status
+                  {dict.catches.dispositionLabel}
                 </label>
                 <select id="catchDisposition" name="disposition" defaultValue="Released" className={controlClass}>
-                  <option value="Released">Released</option>
-                  <option value="Kept">Kept</option>
-                  <option value="Not recorded">Not recorded</option>
+                  <option value="Released">{dict.catches.dispositionReleased}</option>
+                  <option value="Kept">{dict.catches.dispositionKept}</option>
+                  <option value="Not recorded">{dict.catches.dispositionNotRecorded}</option>
                 </select>
               </div>
               <div className="sm:col-span-2">
                 <label htmlFor="catchNotes" className={labelClass}>
-                  Notes <span className="font-normal text-muted">· optional</span>
+                  {dict.catches.notesLabel} <span className="font-normal text-muted">· {dict.common.optional}</span>
                 </label>
                 <textarea
                   id="catchNotes"
                   name="notes"
                   rows={3}
                   maxLength={500}
-                  placeholder="Kondisyon, gear, o iba pang detalye"
+                  placeholder={dict.catches.notesPlaceholder}
                   className={`${controlClass} py-3`}
                 />
               </div>
@@ -405,11 +438,9 @@ export function CatchbookPage() {
             disabled={saving || !date}
             className="mt-5 min-h-12 w-full rounded-xl bg-teal px-5 font-bold text-white shadow-sm hover:bg-teal-dark disabled:cursor-wait disabled:opacity-60"
           >
-            {saving ? "Sine-save…" : "▣  I-save ang huli"}
+            {saving ? dict.catches.submittingBtn : dict.catches.submitBtn}
           </button>
-          <p className="mt-3 text-center text-xs text-muted">
-            Naka-save sa browser ng device mo. Wala pang cloud sync o GPS.
-          </p>
+          <p className="mt-3 text-center text-xs text-muted">{dict.catches.storageNote}</p>
         </form>
 
         <section
@@ -418,17 +449,17 @@ export function CatchbookPage() {
         >
           <div className="flex items-center justify-between gap-3">
             <h2 id="journalHeading" className="text-xl font-extrabold text-ink">
-              Ang iyong journal
+              {dict.catches.journalHeading}
             </h2>
             <span className="rounded-full bg-teal-soft px-4 py-2 text-sm font-bold text-teal-dark">
-              {entries.length} huli
+              {entries.length} {dict.catches.catchesCount}
             </span>
           </div>
           {loading ? (
-            <p className="py-10 text-center text-sm text-muted">Binubuksan ang journal…</p>
+            <p className="py-10 text-center text-sm text-muted">{dict.catches.loadingJournal}</p>
           ) : sortedEntries.length === 0 ? (
             <div className="py-5 text-center">
-              <div className="mx-auto grid h-52 w-full max-w-xs place-items-center rounded-3xl bg-gradient-to-b from-[#eaf7f5] to-white">
+              <div className="catch-empty-art mx-auto grid h-52 w-full max-w-xs place-items-center rounded-3xl">
                 <Image
                   src="/assets/bilog-idle-blink-slow-right.gif"
                   alt="Si Bangwit, ang mascot mo"
@@ -438,66 +469,68 @@ export function CatchbookPage() {
                   className="h-40 w-40 object-contain"
                 />
               </div>
-              <h3 className="mt-3 text-lg font-extrabold text-ink">Dito magsisimula ang kuwento mo</h3>
-              <p className="mt-2 text-sm leading-6 text-muted">
-                Wala ka pang naitatala.
-                <br />
-                I-log ang unang huli mo sa form.
-              </p>
+              <h3 className="mt-3 text-lg font-extrabold text-ink">{dict.catches.emptyTitle}</h3>
+              <p className="mt-2 text-sm leading-6 text-muted">{dict.catches.emptyDesc}</p>
               <p className="mt-7 rounded-xl bg-teal-soft/70 px-4 py-3 text-xs font-semibold text-teal-dark">
-                🔒 Ikaw lang ang may access sa mga tala sa browser na ito.
+                {dict.catches.emptyPrivacyNote}
               </p>
             </div>
           ) : (
             <ul className="mt-5 space-y-3">
-              {sortedEntries.map((entry, index) => (
-                <li
-                  key={entry.id ?? `${entry.date}-${index}`}
-                  className="overflow-hidden rounded-2xl border border-line bg-white"
-                >
-                  <CatchPhoto photo={entry.photo} />
-                  <div className="p-4">
-                    <div className="flex items-start justify-between gap-3">
-                      <div className="min-w-0">
-                        <h3 className="truncate font-bold text-ink">{entry.species || "Hindi pa natukoy"}</h3>
-                        <p className="mt-1 text-xs text-muted">
-                          {formatDate(entry.date)} · {entry.habitat || "Uri ng tubig hindi naitala"}
-                        </p>
+              {sortedEntries.map((entry, index) => {
+                const displayName = getSpeciesDisplay(entry.species, lang);
+                const displayHabitat = getHabitatLabel(entry.habitat, lang);
+                const displayDisposition = getDispositionLabel(entry.disposition, lang);
+
+                return (
+                  <li
+                    key={entry.id ?? `${entry.date}-${index}`}
+                    className="overflow-hidden rounded-2xl border border-line bg-white"
+                  >
+                    <CatchPhoto photo={entry.photo} altText={`${displayName} photo`} />
+                    <div className="p-4">
+                      <div className="flex items-start justify-between gap-3">
+                        <div className="min-w-0">
+                          <h3 className="truncate font-bold text-ink">{displayName}</h3>
+                          <p className="mt-1 text-xs text-muted">
+                            {formatDate(entry.date, lang)} · {displayHabitat}
+                          </p>
+                        </div>
+                        <button
+                          type="button"
+                          onClick={() => void deleteEntry(entry)}
+                          className="shrink-0 rounded-lg px-2 py-1 text-xs font-semibold text-slate-500 hover:bg-rose-50 hover:text-rose-700"
+                          aria-label={`${dict.catches.deleteCatchAria} ${displayName}`}
+                        >
+                          {dict.common.delete}
+                        </button>
                       </div>
-                      <button
-                        type="button"
-                        onClick={() => void deleteEntry(entry)}
-                        className="shrink-0 rounded-lg px-2 py-1 text-xs font-semibold text-slate-500 hover:bg-rose-50 hover:text-rose-700"
-                        aria-label={`Burahin ang catch na ${entry.species || "hindi pa natukoy"}`}
-                      >
-                        Burahin
-                      </button>
+                      {(entry.location || entry.length || entry.weight || entry.bait || entry.disposition) && (
+                        <p className="mt-2 text-xs leading-5 text-muted">
+                          {[
+                            entry.location,
+                            entry.length && `${entry.length} cm`,
+                            entry.weight && `${entry.weight} g`,
+                            entry.bait,
+                            displayDisposition,
+                          ]
+                            .filter(Boolean)
+                            .join(" · ")}
+                        </p>
+                      )}
+                      {entry.notes && (
+                        <p className="mt-2 whitespace-pre-wrap text-sm leading-5 text-slate-700">{entry.notes}</p>
+                      )}
+                      <p className="mt-3 text-[11px] font-medium text-muted">{dict.common.offlineSaved}</p>
                     </div>
-                    {(entry.location || entry.length || entry.weight || entry.bait || entry.disposition) && (
-                      <p className="mt-2 text-xs leading-5 text-muted">
-                        {[
-                          entry.location,
-                          entry.length && `${entry.length} cm`,
-                          entry.weight && `${entry.weight} g`,
-                          entry.bait,
-                          entry.disposition,
-                        ]
-                          .filter(Boolean)
-                          .join(" · ")}
-                      </p>
-                    )}
-                    {entry.notes && (
-                      <p className="mt-2 whitespace-pre-wrap text-sm leading-5 text-slate-700">{entry.notes}</p>
-                    )}
-                    <p className="mt-3 text-[11px] font-medium text-muted">Naka-save lang sa device mo</p>
-                  </div>
-                </li>
-              ))}
+                  </li>
+                );
+              })}
             </ul>
           )}
           <div className="mt-5 border-t border-line pt-4">
             <Link href="/my-species" className="font-bold text-teal hover:text-teal-dark">
-              Tingnan ang My Species →
+              {dict.catches.viewMySpecies}
             </Link>
           </div>
         </section>

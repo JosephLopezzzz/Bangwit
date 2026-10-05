@@ -3,23 +3,11 @@
 import Link from "next/link";
 import { useState } from "react";
 import { useBangwit } from "@/components/bangwit-provider";
+import { getFisherTypeLabel, getPreferredWaterLabel } from "@/i18n/labels";
 import { clearCatches, exportCatchBackup, restoreCatchBackup } from "@/lib/storage/catches";
 
-const profileLabels: Record<string, string> = {
-  exploring: "Nag-e-explore pa lang",
-  angler: "Recreational angler",
-  livelihood: "Mangingisdang pangkabuhayan",
-  both: "Angler at livelihood fisher",
-};
-const waterLabels: Record<string, string> = {
-  any: "Wala pang preference",
-  saltwater: "Dagat o baybayin",
-  freshwater: "Ilog o lawa",
-  brackish: "Brackish o estuary",
-};
-
 export default function SettingsPage() {
-  const { profile, openProfile, startTour, showMessage } = useBangwit();
+  const { profile, openProfile, startTour, showMessage, lang, setLang, dict } = useBangwit();
   const [busy, setBusy] = useState(false);
   const [importKey, setImportKey] = useState(0);
 
@@ -33,9 +21,19 @@ export default function SettingsPage() {
       link.download = `bangwit-catches-${new Date().toISOString().slice(0, 10)}.json`;
       link.click();
       URL.revokeObjectURL(url);
-      showMessage("Nagawa ang backup file sa device mo. Ingatan ito dahil kasama ang photos at optional na lugar.");
+      showMessage(
+        lang === "fil"
+          ? "Nagawa ang backup file sa device mo. Ingatan ito dahil kasama ang photos at optional na lugar."
+          : "Backup file created on your device. Keep it safe as it includes photos and optional spot labels.",
+      );
     } catch (error) {
-      showMessage(error instanceof Error ? error.message : "Hindi nagawa ang backup.");
+      showMessage(
+        error instanceof Error
+          ? error.message
+          : lang === "fil"
+            ? "Hindi nagawa ang backup."
+            : "Failed to create backup.",
+      );
     } finally {
       setBusy(false);
     }
@@ -47,11 +45,19 @@ export default function SettingsPage() {
     try {
       const restored = await restoreCatchBackup(file);
       showMessage(
-        `${restored} catch ${restored === 1 ? "tala" : "tala"} ang na-restore. Nasa device lang ang mga ito.`,
+        lang === "fil"
+          ? `${restored} catch tala ang na-restore. Nasa device lang ang mga ito.`
+          : `${restored} catch ${restored === 1 ? "record" : "records"} restored on this device.`,
       );
       setImportKey((value) => value + 1);
     } catch (error) {
-      showMessage(error instanceof Error ? error.message : "Hindi na-restore ang backup.");
+      showMessage(
+        error instanceof Error
+          ? error.message
+          : lang === "fil"
+            ? "Hindi na-restore ang backup."
+            : "Failed to restore backup.",
+      );
       setImportKey((value) => value + 1);
     } finally {
       setBusy(false);
@@ -59,12 +65,7 @@ export default function SettingsPage() {
   }
 
   async function eraseLocalData() {
-    if (
-      !window.confirm(
-        "Burahin ang lahat ng Bangwit catch logs, preferences, at policy acknowledgment sa browser na ito? Hindi ito maibabalik maliban kung may backup ka.",
-      )
-    )
-      return;
+    if (!window.confirm(dict.settings.eraseConfirm)) return;
     setBusy(true);
     try {
       await clearCatches();
@@ -73,62 +74,103 @@ export default function SettingsPage() {
         "bangwit.profile",
         "bangwit.onboarding.seen",
         "bangwit.tour.done",
+        "bangwit.theme",
+        "bangwit.lang",
       ]) {
         localStorage.removeItem(key);
       }
       window.location.assign("/");
     } catch (error) {
-      showMessage(error instanceof Error ? error.message : "Hindi nabura ang local data.");
+      showMessage(
+        error instanceof Error
+          ? error.message
+          : lang === "fil"
+            ? "Hindi nabura ang local data."
+            : "Failed to erase local data.",
+      );
       setBusy(false);
     }
   }
 
   return (
     <main className="mx-auto max-w-[1100px] px-5 pb-12 pt-8 sm:px-8 sm:pt-10">
-      <p className="text-xs font-bold uppercase tracking-[0.15em] text-teal">Account & privacy</p>
-      <h1 className="mt-3 text-4xl font-extrabold tracking-tight text-ink sm:text-5xl">Settings</h1>
-      <p className="mt-2 text-lg text-muted">Pamahalaan ang preferences, gabay, at data sa device mo.</p>
+      <p className="text-xs font-bold uppercase tracking-[0.15em] text-teal">{dict.settings.tag}</p>
+      <h1 className="mt-3 text-4xl font-extrabold tracking-tight text-ink sm:text-5xl">{dict.settings.title}</h1>
+      <p className="mt-2 text-lg text-muted">{dict.settings.subtitle}</p>
 
       <div className="mt-6 grid gap-4 lg:grid-cols-2">
+        {/* Language Selection Card */}
+        <section className="rounded-3xl border border-line bg-white p-5 shadow-sm sm:p-6 lg:col-span-2">
+          <p className="text-xs font-bold uppercase tracking-[0.14em] text-teal">{dict.settings.languageTag}</p>
+          <h2 className="mt-2 text-xl font-extrabold text-ink">{dict.settings.languageTitle}</h2>
+          <p className="mt-1 text-sm text-muted">{dict.settings.languageDesc}</p>
+          <div className="mt-4 flex flex-wrap gap-3">
+            <button
+              type="button"
+              onClick={() => setLang("fil")}
+              className={`flex min-h-12 items-center gap-2 rounded-2xl border px-5 text-sm font-bold transition-all ${
+                lang === "fil"
+                  ? "border-teal bg-teal-soft text-teal-dark ring-2 ring-teal/20"
+                  : "border-line bg-white text-ink hover:bg-paper"
+              }`}
+            >
+              <span>🇵🇭</span>
+              <span>Filipino (Taglish)</span>
+              {lang === "fil" && <span className="ml-1 text-xs">✓</span>}
+            </button>
+            <button
+              type="button"
+              onClick={() => setLang("en")}
+              className={`flex min-h-12 items-center gap-2 rounded-2xl border px-5 text-sm font-bold transition-all ${
+                lang === "en"
+                  ? "border-teal bg-teal-soft text-teal-dark ring-2 ring-teal/20"
+                  : "border-line bg-white text-ink hover:bg-paper"
+              }`}
+            >
+              <span>🌐</span>
+              <span>English</span>
+              {lang === "en" && <span className="ml-1 text-xs">✓</span>}
+            </button>
+          </div>
+        </section>
+
+        {/* Profile Preferences */}
         <section className="rounded-3xl border border-line bg-white p-5 shadow-sm sm:p-6">
-          <p className="text-xs font-bold uppercase tracking-[0.14em] text-teal">Profile preferences</p>
+          <p className="text-xs font-bold uppercase tracking-[0.14em] text-teal">{dict.settings.profileTag}</p>
           <h2 className="mt-2 text-xl font-extrabold text-ink">
-            {profile ? profileLabels[profile.type] : "Preferences not set"}
+            {profile ? getFisherTypeLabel(profile.type, lang) : dict.settings.profileUnset}
           </h2>
           <p className="mt-1 text-sm text-muted">
-            {profile ? waterLabels[profile.water] : "Puwede mong itakda ang uri ng pangingisda at tubig na gusto mo."}
+            {profile ? getPreferredWaterLabel(profile.water, lang) : getPreferredWaterLabel(undefined, lang)}
           </p>
           <button
             type="button"
             onClick={() => openProfile("edit")}
             className="mt-5 min-h-11 rounded-xl border border-teal px-4 font-bold text-teal hover:bg-teal-soft"
           >
-            I-edit preferences
+            {dict.settings.editProfileBtn}
           </button>
         </section>
 
+        {/* In-app guide */}
         <section className="rounded-3xl border border-line bg-white p-5 shadow-sm sm:p-6">
-          <p className="text-xs font-bold uppercase tracking-[0.14em] text-teal">Help</p>
-          <h2 className="mt-2 text-xl font-extrabold text-ink">Balikan ang in-app guide</h2>
-          <p className="mt-1 text-sm leading-6 text-muted">
-            Iha-highlight ng guide ang pagpili ng lugar, species status, offline catch log, at collection.
-          </p>
+          <p className="text-xs font-bold uppercase tracking-[0.14em] text-teal">{dict.settings.helpTag}</p>
+          <h2 className="mt-2 text-xl font-extrabold text-ink">{dict.settings.helpTitle}</h2>
+          <p className="mt-1 text-sm leading-6 text-muted">{dict.settings.helpDesc}</p>
           <button
             type="button"
             onClick={startTour}
             className="mt-5 min-h-11 rounded-xl border border-teal px-4 font-bold text-teal hover:bg-teal-soft"
           >
-            Ulitin ang guide
+            {dict.settings.restartTourBtn}
           </button>
         </section>
 
+        {/* Local backup */}
         <section className="rounded-3xl border border-line bg-white p-5 shadow-sm sm:p-6">
-          <p className="text-xs font-bold uppercase tracking-[0.14em] text-teal">Local backup</p>
-          <h2 className="mt-2 text-xl font-extrabold text-ink">I-save o ibalik ang catch log</h2>
-          <p className="mt-2 text-sm leading-6 text-muted">
-            Nasa browser address lang nakakabit ang local data. Gumawa ng backup bago lumipat ng address o browser.
-            Kasama sa file ang photos at lahat ng fields.
-          </p>
+          <p className="text-xs font-bold uppercase tracking-[0.14em] text-teal">{dict.settings.backupTag}</p>
+          <h2 className="mt-2 text-xl font-extrabold text-ink">{dict.settings.backupTitle}</h2>
+          <p className="mt-2 text-sm leading-6 text-muted">{dict.settings.backupDesc}</p>
           <div className="mt-4 flex flex-wrap gap-2">
             <button
               type="button"
@@ -136,12 +178,14 @@ export default function SettingsPage() {
               onClick={() => void downloadBackup()}
               className="min-h-11 rounded-xl bg-teal px-4 font-bold text-white hover:bg-teal-dark disabled:opacity-50"
             >
-              I-download ang backup
+              {dict.settings.downloadBackupBtn}
             </button>
             <label
-              className={`inline-flex min-h-11 cursor-pointer items-center rounded-xl border border-line px-4 font-bold text-ink hover:bg-paper ${busy ? "pointer-events-none opacity-50" : ""}`}
+              className={`inline-flex min-h-11 cursor-pointer items-center rounded-xl border border-line px-4 font-bold text-ink hover:bg-paper ${
+                busy ? "pointer-events-none opacity-50" : ""
+              }`}
             >
-              I-restore ang backup
+              {dict.settings.restoreBackupBtn}
               <input
                 key={importKey}
                 type="file"
@@ -152,53 +196,46 @@ export default function SettingsPage() {
               />
             </label>
           </div>
-          <p className="mt-3 text-xs leading-5 text-muted">
-            Ang restore ay papayag lang sa empty journal. Hindi nito papalitan o paghahaluin ang kasalukuyang records.
-            Ingatan ang backup file dahil may pribadong impormasyon ito.
-          </p>
+          <p className="mt-3 text-xs leading-5 text-muted">{dict.settings.backupNote}</p>
           <p className="mt-4 border-t border-line pt-4 text-sm leading-6 text-muted">
-            Galing ba sa lumang Bangwit prototype ang entries mo? I-export muna sa old address na may local records:{" "}
+            {dict.settings.prototypeBackupNote}{" "}
             <a
               href="http://127.0.0.1:4173/migration.html"
               target="_blank"
               rel="noreferrer"
               className="font-bold text-teal hover:text-teal-dark"
             >
-              Buksan ang prototype backup page →
+              {dict.settings.prototypeBackupLink}
             </a>
           </p>
         </section>
 
+        {/* Privacy controls */}
         <section className="rounded-3xl border border-line bg-white p-5 shadow-sm sm:p-6">
-          <p className="text-xs font-bold uppercase tracking-[0.14em] text-teal">Privacy controls</p>
-          <h2 className="mt-2 text-xl font-extrabold text-ink">Local prototype data</h2>
-          <p className="mt-2 text-sm leading-6 text-muted">
-            Catch logs at optional na larawan ay naka-save sa browser storage ng device na ito. Walang account o cloud
-            sync. Walang kinukuhang GPS.
-          </p>
+          <p className="text-xs font-bold uppercase tracking-[0.14em] text-teal">{dict.settings.privacyTag}</p>
+          <h2 className="mt-2 text-xl font-extrabold text-ink">{dict.settings.privacyTitle}</h2>
+          <p className="mt-2 text-sm leading-6 text-muted">{dict.settings.privacyDesc}</p>
           <button
             type="button"
             disabled={busy}
             onClick={() => void eraseLocalData()}
             className="mt-4 min-h-11 rounded-xl border border-rose-200 px-4 font-bold text-rose-800 hover:bg-rose-50 disabled:opacity-50"
           >
-            Burahin ang Bangwit data sa device
+            {dict.settings.eraseBtn}
           </button>
         </section>
 
+        {/* Policies */}
         <section className="rounded-3xl border border-line bg-white p-5 shadow-sm sm:col-span-2 sm:p-6">
-          <p className="text-xs font-bold uppercase tracking-[0.14em] text-teal">Terms & privacy</p>
-          <h2 className="mt-2 text-xl font-extrabold text-ink">Basahin ang mga policy</h2>
-          <p className="mt-2 text-sm leading-6 text-muted">
-            Prototype draft ang mga notice na ito. Ipa-review muna ang final text bago ilunsad sa publiko o magdagdag ng
-            account, analytics, at cloud sync.
-          </p>
+          <p className="text-xs font-bold uppercase tracking-[0.14em] text-teal">{dict.settings.policiesTag}</p>
+          <h2 className="mt-2 text-xl font-extrabold text-ink">{dict.settings.policiesTitle}</h2>
+          <p className="mt-2 text-sm leading-6 text-muted">{dict.settings.policiesDesc}</p>
           <div className="mt-4 flex flex-wrap gap-x-5 gap-y-2">
             <Link className="font-bold text-teal hover:text-teal-dark" href="/terms">
-              Terms of Use →
+              {dict.settings.termsLink}
             </Link>
             <Link className="font-bold text-teal hover:text-teal-dark" href="/privacy">
-              Privacy Notice →
+              {dict.settings.privacyLink}
             </Link>
           </div>
         </section>

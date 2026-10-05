@@ -2,7 +2,10 @@
 
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { createContext, useCallback, useContext, useEffect, useMemo, useState, type ReactNode } from "react";
+import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
+import { enDictionary } from "@/i18n/dictionaries/en";
+import { filDictionary } from "@/i18n/dictionaries/fil";
+import type { Dictionary, Language } from "@/i18n/types";
 import type { FisherProfile } from "@/types/catch";
 
 const POLICY_KEY = "bangwit.policy.2026-09-prototype";
@@ -10,38 +13,29 @@ const POLICY_VERSION = "prototype-2";
 const PROFILE_KEY = "bangwit.profile";
 const ONBOARDING_KEY = "bangwit.onboarding.seen";
 const TOUR_KEY = "bangwit.tour.done";
+const THEME_KEY = "bangwit.theme";
+const LANG_KEY = "bangwit.lang";
 const AREAS = ["Manila Bay", "Bacoor Bay", "Cañacao Bay"];
-const TOUR_STEPS = [
-  {
-    path: "/",
-    target: "#areaPicker",
-    title: "Pumili muna ng lugar",
-    text: "Pumili ng Cavite fishing ground. Ipapakita ng Bangwit ang verified na records kapag handa na ang lokal na data.",
-  },
-  {
-    path: "/species",
-    target: "#speciesNotice",
-    title: "Basahin ang status at coverage",
-    text: "Paghiwalayin ang naitalang species, legal na rules, at personal mong huli. Kapag kulang ang datos, malinaw itong sasabihin.",
-  },
-  {
-    path: "/catches",
-    target: "#catchForm",
-    title: "I-log ang huli mo",
-    text: "Kapag bukas na ang journal, mase-save ang tala sa device kahit offline. Wala pang cloud sync at hindi kinukuha ang GPS.",
-  },
-  {
-    path: "/my-species",
-    target: "#collectionNotice",
-    title: "Buuin ang My Species",
-    text: "Ang identified species sa personal mong catch log ang magbubukas ng collection card.",
-  },
+
+const TOUR_PATH_TARGETS = [
+  { path: "/", target: "#areaPicker" },
+  { path: "/species", target: "#speciesNotice" },
+  { path: "/catches", target: "#catchForm" },
+  { path: "/my-species", target: "#collectionNotice" },
 ];
 
 type ProfileMode = "first" | "edit";
+type ColorTheme = "light" | "dark";
+type NativeViewTransition = { finished: Promise<void> };
+
 type BangwitContextValue = {
   selectedArea: string;
   setSelectedArea: (area: string) => void;
+  theme: ColorTheme;
+  toggleTheme: () => void;
+  lang: Language;
+  setLang: (lang: Language) => void;
+  dict: Dictionary;
   profile: FisherProfile | null;
   openProfile: (mode: ProfileMode) => void;
   showMessage: (message: string) => void;
@@ -94,16 +88,41 @@ export function BangwitProvider({ children }: { children: ReactNode }) {
   const [fisherType, setFisherType] = useState<FisherProfile["type"]>("exploring");
   const [preferredWater, setPreferredWater] = useState<FisherProfile["water"]>("any");
   const [selectedArea, setSelectedAreaState] = useState(AREAS[0]);
+  const [theme, setTheme] = useState<ColorTheme>("light");
+  const [lang, setLangState] = useState<Language>("fil");
+  const themeRef = useRef<ColorTheme>("light");
+  const themeTransitionRef = useRef(0);
   const [tourStep, setTourStep] = useState<number | null>(null);
   const [message, setMessage] = useState("");
 
+  const dict = useMemo(() => (lang === "en" ? enDictionary : filDictionary), [lang]);
+
   useEffect(() => {
+    const initialTheme = document.documentElement.dataset.theme === "dark" ? "dark" : "light";
+    themeRef.current = initialTheme;
+    setTheme(initialTheme);
+
+    let savedLang: Language = "fil";
+    try {
+      const stored = localStorage.getItem(LANG_KEY);
+      if (stored === "en" || stored === "fil") savedLang = stored;
+    } catch {
+      /* fallback to default */
+    }
+    setLangState(savedLang);
+    document.documentElement.lang = savedLang;
+    document.documentElement.dataset.lang = savedLang;
+
     let didAccept = false;
     try {
       didAccept = hasCurrentPolicyAcceptance();
       setProfile(readProfile());
     } catch {
-      setMessage("Hindi mabasa ang browser preferences. Local storage may be unavailable.");
+      setMessage(
+        savedLang === "fil"
+          ? "Hindi mabasa ang browser preferences. Local storage may be unavailable."
+          : "Could not read browser preferences. Local storage may be unavailable.",
+      );
     }
     setAccepted(didAccept);
     setReady(true);
@@ -114,6 +133,17 @@ export function BangwitProvider({ children }: { children: ReactNode }) {
       } catch {
         /* The user can still open the guide manually. */
       }
+    }
+  }, []);
+
+  const setLang = useCallback((nextLang: Language) => {
+    setLangState(nextLang);
+    document.documentElement.lang = nextLang;
+    document.documentElement.dataset.lang = nextLang;
+    try {
+      localStorage.setItem(LANG_KEY, nextLang);
+    } catch {
+      /* ignore */
     }
   }, []);
 
@@ -164,12 +194,12 @@ export function BangwitProvider({ children }: { children: ReactNode }) {
 
   useEffect(() => {
     if (tourStep === null) return;
-    const step = TOUR_STEPS[tourStep];
-    if (pathname !== step.path) {
-      router.push(step.path);
+    const stepTarget = TOUR_PATH_TARGETS[tourStep];
+    if (pathname !== stepTarget.path) {
+      router.push(stepTarget.path);
       return;
     }
-    const target = document.querySelector<HTMLElement>(step.target);
+    const target = document.querySelector<HTMLElement>(stepTarget.target);
     if (!target) return;
     target.classList.add("tour-spotlight");
     target.scrollIntoView({ behavior: "smooth", block: "center" });
@@ -192,9 +222,69 @@ export function BangwitProvider({ children }: { children: ReactNode }) {
 
   const startTour = useCallback(() => setTourStep(0), []);
 
+  const toggleTheme = useCallback(() => {
+    themeRef.current = themeRef.current === "dark" ? "light" : "dark";
+    const root = document.documentElement;
+    root.dataset.themeTransition = themeRef.current === "dark" ? "rise" : "recede";
+
+    const commitTheme = () => {
+      const nextTheme = themeRef.current;
+      root.dataset.theme = nextTheme;
+      setTheme(nextTheme);
+      try {
+        localStorage.setItem(THEME_KEY, nextTheme);
+      } catch {
+        setMessage(
+          lang === "fil"
+            ? "Hindi na-save ang theme preference. Maaaring bumalik ito sa light sa susunod na bukas."
+            : "Could not save theme preference.",
+        );
+      }
+    };
+
+    const startViewTransition = (
+      document as Document & {
+        startViewTransition?: (updateCallback: () => void) => NativeViewTransition;
+      }
+    ).startViewTransition;
+    const reduceMotion = window.matchMedia?.("(prefers-reduced-motion: reduce)").matches ?? false;
+    const supportsWave = typeof CSS !== "undefined" && CSS.supports("clip-path", "polygon(0 100%, 100% 100%, 100% 0%)");
+
+    if (!startViewTransition || reduceMotion || !supportsWave) {
+      root.removeAttribute("data-theme-transition");
+      commitTheme();
+      return;
+    }
+
+    const transitionId = ++themeTransitionRef.current;
+    const clearTransitionDirection = () => {
+      if (transitionId === themeTransitionRef.current) root.removeAttribute("data-theme-transition");
+    };
+
+    try {
+      const transition = startViewTransition.call(document, commitTheme);
+      void transition.finished.then(clearTransitionDirection, clearTransitionDirection);
+    } catch {
+      clearTransitionDirection();
+      commitTheme();
+    }
+  }, [lang]);
+
   const contextValue = useMemo(
-    () => ({ selectedArea, setSelectedArea, profile, openProfile, showMessage: setMessage, startTour }),
-    [selectedArea, setSelectedArea, profile, openProfile, startTour],
+    () => ({
+      selectedArea,
+      setSelectedArea,
+      theme,
+      toggleTheme,
+      lang,
+      setLang,
+      dict,
+      profile,
+      openProfile,
+      showMessage: setMessage,
+      startTour,
+    }),
+    [selectedArea, setSelectedArea, theme, toggleTheme, lang, setLang, dict, profile, openProfile, startTour],
   );
 
   function acceptPolicies() {
@@ -207,7 +297,11 @@ export function BangwitProvider({ children }: { children: ReactNode }) {
       setAccepted(true);
       setProfileOpen(true);
     } catch {
-      setMessage("Hindi ma-save ang pag-acknowledge. Tingnan ang browser storage settings at subukan ulit.");
+      setMessage(
+        lang === "fil"
+          ? "Hindi ma-save ang pag-acknowledge. Tingnan ang browser storage settings at subukan ulit."
+          : "Could not save policy agreement.",
+      );
     }
   }
 
@@ -218,7 +312,11 @@ export function BangwitProvider({ children }: { children: ReactNode }) {
         localStorage.setItem(PROFILE_KEY, JSON.stringify(next));
         setProfile(next);
       } catch {
-        setMessage("Hindi na-save ang preferences; maaari mo pa ring gamitin ang app.");
+        setMessage(
+          lang === "fil"
+            ? "Hindi na-save ang preferences; maaari mo pa ring gamitin ang app."
+            : "Could not save preferences.",
+        );
       }
     }
     try {
@@ -245,7 +343,7 @@ export function BangwitProvider({ children }: { children: ReactNode }) {
     if (tourStep === null) return;
     const next = tourStep + direction;
     if (next < 0) return;
-    if (next >= TOUR_STEPS.length) closeTour(true);
+    if (next >= TOUR_PATH_TARGETS.length) closeTour(true);
     else setTourStep(next);
   }
 
@@ -253,7 +351,7 @@ export function BangwitProvider({ children }: { children: ReactNode }) {
     <BangwitContext.Provider value={contextValue}>
       {children}
       {ready && !accepted && !isPolicyPage && (
-        <div className="fixed inset-0 z-50 grid place-items-center overflow-y-auto bg-ink/55 p-4 backdrop-blur-sm">
+        <div className="app-dialog-scrim fixed inset-0 z-50 grid place-items-center overflow-y-auto p-4 backdrop-blur-sm">
           <section
             data-bangwit-dialog
             role="dialog"
@@ -261,33 +359,52 @@ export function BangwitProvider({ children }: { children: ReactNode }) {
             aria-labelledby="policyTitle"
             className="my-auto w-full max-w-xl rounded-3xl bg-white p-6 shadow-2xl sm:p-8"
           >
-            <p className="text-xs font-bold uppercase tracking-[0.15em] text-teal">Prototype access</p>
+            <div className="flex items-center justify-between gap-3">
+              <p className="text-xs font-bold uppercase tracking-[0.15em] text-teal">{dict.policy.tag}</p>
+              {/* Language switcher inside the policy dialog */}
+              <fieldset
+                className="flex rounded-lg border border-line bg-paper p-0.5 text-xs font-bold m-0"
+                aria-label={dict.policy.selectLanguage}
+              >
+                <button
+                  type="button"
+                  onClick={() => setLang("fil")}
+                  aria-pressed={lang === "fil"}
+                  className={`rounded-md px-2.5 py-1 transition-colors ${lang === "fil" ? "bg-teal-soft text-teal-dark font-extrabold" : "text-muted hover:text-ink"}`}
+                >
+                  Filipino
+                </button>
+                <button
+                  type="button"
+                  onClick={() => setLang("en")}
+                  aria-pressed={lang === "en"}
+                  className={`rounded-md px-2.5 py-1 transition-colors ${lang === "en" ? "bg-teal-soft text-teal-dark font-extrabold" : "text-muted hover:text-ink"}`}
+                >
+                  English
+                </button>
+              </fieldset>
+            </div>
             <h1 id="policyTitle" className="mt-2 text-3xl font-extrabold text-ink">
-              Bago ka magpatuloy
+              {dict.policy.title}
             </h1>
-            <p className="mt-3 text-sm leading-6 text-muted">
-              Basahin ang Terms at Privacy Notice bago gamitin ang mga feature na nagse-save ng impormasyon.
-            </p>
+            <p className="mt-3 text-sm leading-6 text-muted">{dict.policy.desc}</p>
             <div className="mt-5 grid gap-3 sm:grid-cols-2">
               <Link
                 className="rounded-xl border border-line p-4 text-sm font-bold text-teal hover:bg-teal-soft"
                 href="/terms"
               >
-                Basahin ang Terms of Use ↗
+                {dict.policy.readTerms}
               </Link>
               <Link
                 className="rounded-xl border border-line p-4 text-sm font-bold text-teal hover:bg-teal-soft"
                 href="/privacy"
               >
-                Basahin ang Privacy Notice ↗
+                {dict.policy.readPrivacy}
               </Link>
             </div>
             <details className="mt-4 rounded-xl border border-line px-4 py-3 text-sm text-muted">
-              <summary className="cursor-pointer font-semibold text-ink">Mahahalagang limitasyon ng prototype</summary>
-              <p className="mt-3 leading-6">
-                Hindi pa verified ang species coverage, fishing rules, boundaries, weather alerts, o food-safety
-                guidance. Huwag gamitin ito para magpasya kung legal o ligtas mangisda o kung ligtas kainin ang huli.
-              </p>
+              <summary className="cursor-pointer font-semibold text-ink">{dict.policy.summaryTitle}</summary>
+              <p className="mt-3 leading-6">{dict.policy.summaryText}</p>
             </details>
             <label className="mt-5 flex cursor-pointer items-start gap-3 text-sm leading-6 text-ink">
               <input
@@ -297,8 +414,7 @@ export function BangwitProvider({ children }: { children: ReactNode }) {
                 onChange={(event) => setPolicyChecked(event.target.checked)}
                 className="mt-1 h-4 w-4 accent-teal"
               />
-              Sumasang-ayon ako sa prototype Terms at Privacy Notice, at naiintindihan kong sa device lang nase-save ang
-              impormasyon.
+              {dict.policy.agreeCheckbox}
             </label>
             <button
               type="button"
@@ -306,18 +422,15 @@ export function BangwitProvider({ children }: { children: ReactNode }) {
               onClick={acceptPolicies}
               className="mt-5 min-h-12 w-full rounded-xl bg-teal px-5 font-bold text-white enabled:hover:bg-teal-dark disabled:cursor-not-allowed disabled:opacity-50"
             >
-              Sumang-ayon at magpatuloy
+              {dict.policy.agreeBtn}
             </button>
-            <p className="mt-3 text-xs leading-5 text-muted">
-              Draft ito para sa prototype. Kailangan ng policy review bago public launch. Hindi ito pahintulot para
-              mag-upload ng data sa cloud.
-            </p>
+            <p className="mt-3 text-xs leading-5 text-muted">{dict.policy.disclaimer}</p>
           </section>
         </div>
       )}
 
       {ready && accepted && profileOpen && (
-        <div className="fixed inset-0 z-50 grid place-items-center overflow-y-auto bg-ink/55 p-4 backdrop-blur-sm">
+        <div className="app-dialog-scrim fixed inset-0 z-50 grid place-items-center overflow-y-auto p-4 backdrop-blur-sm">
           <section
             data-bangwit-dialog
             role="dialog"
@@ -326,16 +439,14 @@ export function BangwitProvider({ children }: { children: ReactNode }) {
             className="my-auto w-full max-w-lg rounded-3xl bg-white p-6 shadow-2xl sm:p-8"
           >
             <p className="text-xs font-bold uppercase tracking-[0.15em] text-teal">
-              {profileMode === "first" ? "Mabilis na setup · puwedeng i-skip" : "Preferences"}
+              {profileMode === "first" ? dict.onboarding.tagFirst : dict.onboarding.tagEdit}
             </p>
             <h2 id="welcomeTitle" className="mt-2 text-3xl font-extrabold text-ink">
-              Kumusta, mangingisda!
+              {dict.onboarding.title}
             </h2>
-            <p className="mt-3 text-sm leading-6 text-muted">
-              Iangkop ang Bangwit sa paraan mo ng pangingisda. Mananatili sa device ang preferences sa prototype.
-            </p>
+            <p className="mt-3 text-sm leading-6 text-muted">{dict.onboarding.desc}</p>
             <label className="mt-5 block text-sm font-semibold text-ink" htmlFor="fisherType">
-              Ano ang pinakamalapit sa iyo?
+              {dict.onboarding.fisherTypeLabel}
             </label>
             <select
               data-initial-focus
@@ -344,13 +455,13 @@ export function BangwitProvider({ children }: { children: ReactNode }) {
               onChange={(event) => setFisherType(event.target.value as FisherProfile["type"])}
               className="mt-2 min-h-12 w-full rounded-xl border border-line bg-white px-4 text-sm text-ink"
             >
-              <option value="exploring">Nag-e-explore pa lang</option>
-              <option value="angler">Recreational angler</option>
-              <option value="livelihood">Mangingisdang pangkabuhayan</option>
-              <option value="both">Pareho</option>
+              <option value="exploring">{dict.onboarding.types.exploring}</option>
+              <option value="angler">{dict.onboarding.types.angler}</option>
+              <option value="livelihood">{dict.onboarding.types.livelihood}</option>
+              <option value="both">{dict.onboarding.types.both}</option>
             </select>
             <label className="mt-4 block text-sm font-semibold text-ink" htmlFor="preferredWater">
-              Saan ka madalas mangisda?
+              {dict.onboarding.preferredWaterLabel}
             </label>
             <select
               id="preferredWater"
@@ -358,10 +469,10 @@ export function BangwitProvider({ children }: { children: ReactNode }) {
               onChange={(event) => setPreferredWater(event.target.value as FisherProfile["water"])}
               className="mt-2 min-h-12 w-full rounded-xl border border-line bg-white px-4 text-sm text-ink"
             >
-              <option value="any">Wala pang preference</option>
-              <option value="saltwater">Dagat o baybayin</option>
-              <option value="freshwater">Ilog o lawa</option>
-              <option value="brackish">Brackish o estuary</option>
+              <option value="any">{dict.onboarding.waters.any}</option>
+              <option value="saltwater">{dict.onboarding.waters.saltwater}</option>
+              <option value="freshwater">{dict.onboarding.waters.freshwater}</option>
+              <option value="brackish">{dict.onboarding.waters.brackish}</option>
             </select>
             <div className="mt-6 flex gap-3">
               <button
@@ -369,14 +480,14 @@ export function BangwitProvider({ children }: { children: ReactNode }) {
                 onClick={() => finishProfile(false)}
                 className="min-h-12 flex-1 rounded-xl border border-line px-4 font-bold text-ink hover:bg-paper"
               >
-                {profileMode === "first" ? "Skip muna" : "Isara"}
+                {profileMode === "first" ? dict.onboarding.skipBtn : dict.onboarding.closeBtn}
               </button>
               <button
                 type="button"
                 onClick={() => finishProfile(true)}
                 className="min-h-12 flex-1 rounded-xl bg-teal px-4 font-bold text-white hover:bg-teal-dark"
               >
-                {profileMode === "first" ? "Ituloy" : "I-save"}
+                {profileMode === "first" ? dict.onboarding.continueBtn : dict.onboarding.saveBtn}
               </button>
             </div>
           </section>
@@ -392,16 +503,16 @@ export function BangwitProvider({ children }: { children: ReactNode }) {
           className="fixed inset-x-4 bottom-4 z-50 mx-auto max-w-xl rounded-2xl border border-line bg-white p-5 shadow-2xl sm:bottom-6 sm:p-6"
         >
           <div className="flex items-center justify-between text-xs font-bold uppercase tracking-[0.12em] text-teal">
-            <span>Gabay sa Bangwit</span>
+            <span>{dict.tour.header}</span>
             <span>
-              {tourStep + 1} / {TOUR_STEPS.length}
+              {tourStep + 1} / {TOUR_PATH_TARGETS.length}
             </span>
           </div>
           <h2 id="tourTitle" className="mt-3 text-xl font-extrabold text-ink">
-            {TOUR_STEPS[tourStep].title}
+            {dict.tour.steps[tourStep]?.title}
           </h2>
           <p id="tourText" className="mt-2 text-sm leading-6 text-muted">
-            {TOUR_STEPS[tourStep].text}
+            {dict.tour.steps[tourStep]?.text}
           </p>
           <div className="mt-4 flex items-center justify-between gap-2">
             <button
@@ -410,21 +521,21 @@ export function BangwitProvider({ children }: { children: ReactNode }) {
               onClick={() => advanceTour(-1)}
               className="min-h-10 rounded-lg border border-line px-3 text-sm font-semibold text-ink disabled:opacity-40"
             >
-              Back
+              {dict.common.back}
             </button>
             <button
               type="button"
               onClick={() => closeTour(true)}
               className="min-h-10 px-3 text-sm font-semibold text-muted hover:text-ink"
             >
-              Skip
+              {dict.common.skip}
             </button>
             <button
               type="button"
               onClick={() => advanceTour(1)}
               className="min-h-10 rounded-lg bg-teal px-4 text-sm font-bold text-white hover:bg-teal-dark"
             >
-              {tourStep === TOUR_STEPS.length - 1 ? "Tapos na" : "Next"}
+              {tourStep === TOUR_PATH_TARGETS.length - 1 ? dict.common.done : dict.common.next}
             </button>
           </div>
         </section>
@@ -434,7 +545,7 @@ export function BangwitProvider({ children }: { children: ReactNode }) {
         <div
           role="status"
           aria-live="polite"
-          className="fixed bottom-4 left-1/2 z-[60] w-[calc(100%-2rem)] max-w-lg -translate-x-1/2 rounded-xl bg-ink px-4 py-3 text-center text-sm font-semibold text-white shadow-xl"
+          className="app-status-message fixed bottom-4 left-1/2 z-[60] w-[calc(100%-2rem)] max-w-lg -translate-x-1/2 rounded-xl px-4 py-3 text-center text-sm font-semibold shadow-xl"
         >
           {message}
         </div>
