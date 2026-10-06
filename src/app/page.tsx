@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { ArrowUpRight } from "lucide-react";
 import { AreaExplorer } from "@/components/area-explorer";
 import { useBangwit } from "@/components/bangwit-provider";
 
@@ -42,11 +43,23 @@ export default function ExplorePage() {
         </div>
         <p className="mt-3 max-w-4xl text-sm leading-6 text-muted">{dict.home.safetyDesc}</p>
         <div className="mt-4 flex flex-wrap gap-x-5 gap-y-2 text-sm font-bold text-teal">
-          <a href="https://bagong.pagasa.dost.gov.ph/products-and-services" target="_blank" rel="noreferrer">
+          <a
+            href="https://bagong.pagasa.dost.gov.ph/products-and-services"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-1"
+          >
             {dict.home.pagasaLink}
+            <ArrowUpRight aria-hidden="true" className="h-4 w-4" />
           </a>
-          <a href="https://www.bfar.da.gov.ph/red-tide-archives/" target="_blank" rel="noreferrer">
+          <a
+            href="https://www.bfar.da.gov.ph/red-tide-archives/"
+            target="_blank"
+            rel="noreferrer"
+            className="inline-flex items-center gap-1"
+          >
             {dict.home.bfarLink}
+            <ArrowUpRight aria-hidden="true" className="h-4 w-4" />
           </a>
         </div>
       </section>

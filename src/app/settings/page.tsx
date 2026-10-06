@@ -1,5 +1,6 @@
 "use client";
 
+import { ArrowRight, ArrowUpRight, Check, Languages } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 import { useBangwit } from "@/components/bangwit-provider";
@@ -114,9 +115,9 @@ export default function SettingsPage() {
                   : "border-line bg-white text-ink hover:bg-paper"
               }`}
             >
-              <span>🇵🇭</span>
+              <Languages aria-hidden="true" className="h-4 w-4 shrink-0" />
               <span>Filipino (Taglish)</span>
-              {lang === "fil" && <span className="ml-1 text-xs">✓</span>}
+              {lang === "fil" && <Check aria-hidden="true" className="ml-1 h-4 w-4" />}
             </button>
             <button
               type="button"
@@ -127,9 +128,9 @@ export default function SettingsPage() {
                   : "border-line bg-white text-ink hover:bg-paper"
               }`}
             >
-              <span>🌐</span>
+              <Languages aria-hidden="true" className="h-4 w-4 shrink-0" />
               <span>English</span>
-              {lang === "en" && <span className="ml-1 text-xs">✓</span>}
+              {lang === "en" && <Check aria-hidden="true" className="ml-1 h-4 w-4" />}
             </button>
           </div>
         </section>
@@ -203,9 +204,10 @@ export default function SettingsPage() {
               href="http://127.0.0.1:4173/migration.html"
               target="_blank"
               rel="noreferrer"
-              className="font-bold text-teal hover:text-teal-dark"
+              className="inline-flex items-center gap-1 font-bold text-teal hover:text-teal-dark"
             >
               {dict.settings.prototypeBackupLink}
+              <ArrowUpRight aria-hidden="true" className="h-4 w-4" />
             </a>
           </p>
         </section>
@@ -231,11 +233,13 @@ export default function SettingsPage() {
           <h2 className="mt-2 text-xl font-extrabold text-ink">{dict.settings.policiesTitle}</h2>
           <p className="mt-2 text-sm leading-6 text-muted">{dict.settings.policiesDesc}</p>
           <div className="mt-4 flex flex-wrap gap-x-5 gap-y-2">
-            <Link className="font-bold text-teal hover:text-teal-dark" href="/terms">
+            <Link className="inline-flex items-center gap-1 font-bold text-teal hover:text-teal-dark" href="/terms">
               {dict.settings.termsLink}
+              <ArrowRight aria-hidden="true" className="h-4 w-4" />
             </Link>
-            <Link className="font-bold text-teal hover:text-teal-dark" href="/privacy">
+            <Link className="inline-flex items-center gap-1 font-bold text-teal hover:text-teal-dark" href="/privacy">
               {dict.settings.privacyLink}
+              <ArrowRight aria-hidden="true" className="h-4 w-4" />
             </Link>
           </div>
         </section>

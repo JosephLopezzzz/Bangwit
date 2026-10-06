@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import { ArrowRight, TriangleAlert } from "lucide-react";
 import { useBangwit } from "@/components/bangwit-provider";
 
 export default function PrivacyPage() {
@@ -12,8 +13,9 @@ export default function PrivacyPage() {
       <div className="flex flex-wrap items-center justify-between gap-3">
         <p className="text-xs font-bold uppercase tracking-[0.15em] text-teal">{page.tag}</p>
         {lang === "en" && page.reviewNotice && (
-          <span className="rounded-full bg-amber-50 px-3 py-1 text-xs font-bold text-amber-900">
-            ⚠️ {page.reviewNotice}
+          <span className="inline-flex items-center gap-1.5 rounded-full bg-amber-50 px-3 py-1 text-xs font-bold text-amber-900">
+            <TriangleAlert aria-hidden="true" className="h-3.5 w-3.5 shrink-0" />
+            {page.reviewNotice}
           </span>
         )}
       </div>
@@ -37,8 +39,12 @@ export default function PrivacyPage() {
         ))}
       </div>
 
-      <Link href="/terms" className="mt-5 inline-flex min-h-11 items-center font-bold text-teal hover:text-teal-dark">
+      <Link
+        href="/terms"
+        className="mt-5 inline-flex min-h-11 items-center gap-1 font-bold text-teal hover:text-teal-dark"
+      >
         {page.termsLink}
+        <ArrowRight aria-hidden="true" className="h-4 w-4" />
       </Link>
     </main>
   );

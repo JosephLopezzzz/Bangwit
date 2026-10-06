@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
+import { Fish, Waves } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 import { useBangwit } from "@/components/bangwit-provider";
 import { listCatches } from "@/lib/storage/catches";
@@ -19,8 +20,8 @@ function Photo({ photo, altText }: { photo: Blob | File | null; altText: string 
   return url ? (
     <Image src={url} alt={altText} width={560} height={320} unoptimized className="aspect-[16/9] w-full object-cover" />
   ) : (
-    <div className="grid aspect-[16/9] place-items-center bg-teal-soft text-4xl text-teal" aria-hidden="true">
-      ≈
+    <div className="grid aspect-[16/9] place-items-center bg-teal-soft" aria-hidden="true">
+      <Waves className="h-8 w-8 text-teal" strokeWidth={1.75} />
     </div>
   );
 }
@@ -87,10 +88,10 @@ export default function MySpeciesPage() {
         ) : species.length === 0 ? (
           <section className="rounded-3xl border border-line bg-white px-6 py-12 text-center shadow-sm sm:px-10">
             <div
-              className="mx-auto grid h-16 w-16 place-items-center rounded-2xl bg-teal-soft text-3xl text-teal"
+              className="mx-auto grid h-16 w-16 place-items-center rounded-2xl bg-teal-soft"
               aria-hidden="true"
             >
-              ✦
+              <Fish className="h-8 w-8 text-teal" strokeWidth={1.75} />
             </div>
             <p className="mt-5 text-xs font-bold uppercase tracking-[0.15em] text-teal">{dict.mySpecies.emptyTag}</p>
             <h2 className="mt-2 text-2xl font-extrabold text-ink">{dict.mySpecies.emptyTitle}</h2>

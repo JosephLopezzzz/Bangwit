@@ -16,7 +16,7 @@ export const enDictionary: Dictionary = {
     edit: "Edit",
     error: "An error occurred",
     optional: "optional",
-    privateDeviceOnly: "🔒 Private · on this device only",
+    privateDeviceOnly: "Private · on this device only",
     deviceOnlyStorage: "Device-only storage",
     offlineSaved: "Saved only on your device",
     language: "Language",
@@ -37,8 +37,8 @@ export const enDictionary: Dictionary = {
     tag: "Prototype access",
     title: "Before you continue",
     desc: "Please review the Terms of Use and Privacy Notice before using features that save your information.",
-    readTerms: "Read Terms of Use ↗",
-    readPrivacy: "Read Privacy Notice ↗",
+    readTerms: "Read Terms of Use",
+    readPrivacy: "Read Privacy Notice",
     summaryTitle: "Important prototype limitations",
     summaryText:
       "Species coverage, fishing rules, boundaries, weather alerts, and food safety advisories are not yet verified. Do not rely on this prototype to determine whether it is legal or safe to fish or consume your catch.",
@@ -105,8 +105,8 @@ export const enDictionary: Dictionary = {
     safetyStatus: "Not live",
     safetyDesc:
       "No live PAGASA weather/flood feed or BFAR shellfish bulletin is connected yet. This does not mean there are no warnings or that travel is safe; check official sources for your selected area.",
-    pagasaLink: "PAGASA advisories ↗",
-    bfarLink: "BFAR red tide ↗",
+    pagasaLink: "PAGASA advisories",
+    bfarLink: "BFAR red tide",
     ctaTitle: "Begin the story of your catches",
     ctaDesc: "Once the journal is opened, catches save to your device even without cellular signal.",
     ctaBtn: "Open My Catches",
@@ -159,7 +159,7 @@ export const enDictionary: Dictionary = {
     dispositionLabel: "Catch status",
     notesLabel: "Notes",
     notesPlaceholder: "Conditions, tackle, or other details",
-    submitBtn: "▣  Save catch",
+    submitBtn: "Save catch",
     submittingBtn: "Saving…",
     storageNote: "Saved in your device's browser. No cloud sync or GPS tracking.",
     journalHeading: "Your Journal",
@@ -167,8 +167,8 @@ export const enDictionary: Dictionary = {
     loadingJournal: "Opening journal…",
     emptyTitle: "Your story starts here",
     emptyDesc: "You haven't recorded any catches yet. Log your first catch in the form.",
-    emptyPrivacyNote: "🔒 Only you have access to these records in this browser.",
-    viewMySpecies: "View My Species →",
+    emptyPrivacyNote: "Only you have access to these records in this browser.",
+    viewMySpecies: "View My Species",
     deleteCatchAria: "Delete catch record for",
     unidentifiedSpecies: "Unidentified",
     dateNotRecorded: "Date not recorded",
@@ -244,7 +244,7 @@ export const enDictionary: Dictionary = {
       "Restore is only permitted into an empty journal to avoid overwriting or mixing records. Keep your backup file secure as it contains private information.",
     prototypeBackupNote:
       "Looking to import records from an older Bangwit prototype? Export from the old address first:",
-    prototypeBackupLink: "Open prototype backup page →",
+    prototypeBackupLink: "Open prototype backup page",
     privacyTag: "Privacy controls",
     privacyTitle: "Local prototype data",
     privacyDesc:
@@ -256,8 +256,8 @@ export const enDictionary: Dictionary = {
     policiesTitle: "Review policies",
     policiesDesc:
       "These notices are prototype drafts. Legal review is required before public launch or adding accounts, analytics, and cloud sync.",
-    termsLink: "Terms of Use →",
-    privacyLink: "Privacy Notice →",
+    termsLink: "Terms of Use",
+    privacyLink: "Privacy Notice",
   },
   offline: {
     tag: "Bangwit · Offline",
@@ -297,7 +297,7 @@ export const enDictionary: Dictionary = {
           "Terms may change as verified data, user accounts, sharing, or cloud synchronization are added. Explicit consent will be requested before processing data in new ways. This draft does not substitute for formal legal review prior to public launch.",
       },
     ],
-    privacyLink: "Read Privacy Notice →",
+    privacyLink: "Read Privacy Notice",
   },
   privacyPage: {
     tag: "Bangwit prototype · draft",
@@ -336,6 +336,6 @@ export const enDictionary: Dictionary = {
           "This notice is a draft for prototype evaluation. It must undergo formal legal review and alignment with production data practices prior to any public release.",
       },
     ],
-    termsLink: "Read Terms of Use →",
+    termsLink: "Read Terms of Use",
   },
 };

@@ -24,7 +24,7 @@ export function AreaExplorer() {
             id="waterbody"
             value={selected}
             onChange={(event) => setSelected(event.target.value)}
-            className="min-h-11 rounded-xl border border-line bg-white px-4 text-sm font-semibold text-ink shadow-sm"
+            className="app-select app-select--compact"
           >
             {areas.map((name) => (
               <option key={name}>{name}</option>

@@ -3,6 +3,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useCallback, useEffect, useMemo, useState, type FormEvent } from "react";
+import { ArrowRight, Camera, LockKeyhole, Save, Waves } from "lucide-react";
 import { useBangwit } from "@/components/bangwit-provider";
 import { CatchDatePicker } from "@/components/catch-date-picker";
 import { getDispositionLabel, getHabitatLabel, getSpeciesDisplay } from "@/i18n/labels";
@@ -38,8 +39,8 @@ function CatchPhoto({ photo, altText }: { photo: Blob | File | null; altText: st
 
   if (!url)
     return (
-      <div aria-hidden="true" className="grid aspect-[4/3] place-items-center bg-teal-soft text-4xl text-teal">
-        ≈
+      <div aria-hidden="true" className="grid aspect-[4/3] place-items-center bg-teal-soft">
+        <Waves className="h-8 w-8 text-teal" strokeWidth={1.75} />
       </div>
     );
 
@@ -210,7 +211,8 @@ export function CatchbookPage() {
   return (
     <main className="mx-auto max-w-[1440px] px-5 pb-12 pt-8 sm:px-8 sm:pt-10 lg:px-12">
       <div className="flex flex-wrap items-center justify-between gap-3">
-        <p className="rounded-full bg-teal-soft px-4 py-2 text-xs font-bold text-teal-dark">
+        <p className="inline-flex items-center gap-2 rounded-full bg-teal-soft px-4 py-2 text-xs font-bold text-teal-dark">
+          <LockKeyhole aria-hidden="true" className="h-4 w-4 shrink-0" />
           {dict.common.privateDeviceOnly}
         </p>
         <span className="rounded-full bg-white px-4 py-2 text-xs font-bold text-muted">
@@ -254,10 +256,10 @@ export function CatchbookPage() {
           >
             <label
               htmlFor="catchPhoto"
-              className="grid h-12 w-12 shrink-0 cursor-pointer place-items-center rounded-full bg-teal-soft text-xl text-teal"
+              className="grid h-12 w-12 shrink-0 cursor-pointer place-items-center rounded-full bg-teal-soft text-teal"
               aria-label={dict.catches.photoLabel}
             >
-              ▣
+              <Camera aria-hidden="true" className="h-5 w-5" />
             </label>
             <div className="min-w-0 flex-1">
               <label htmlFor="catchPhoto" className="cursor-pointer text-sm font-bold text-ink">
@@ -411,7 +413,12 @@ export function CatchbookPage() {
                 <label htmlFor="catchDisposition" className={labelClass}>
                   {dict.catches.dispositionLabel}
                 </label>
-                <select id="catchDisposition" name="disposition" defaultValue="Released" className={controlClass}>
+                <select
+                  id="catchDisposition"
+                  name="disposition"
+                  defaultValue="Released"
+                  className={`${controlClass} app-select`}
+                >
                   <option value="Released">{dict.catches.dispositionReleased}</option>
                   <option value="Kept">{dict.catches.dispositionKept}</option>
                   <option value="Not recorded">{dict.catches.dispositionNotRecorded}</option>
@@ -436,9 +443,16 @@ export function CatchbookPage() {
           <button
             type="submit"
             disabled={saving || !date}
-            className="mt-5 min-h-12 w-full rounded-xl bg-teal px-5 font-bold text-white shadow-sm hover:bg-teal-dark disabled:cursor-wait disabled:opacity-60"
+            className="mt-5 inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-xl bg-teal px-5 font-bold text-white shadow-sm hover:bg-teal-dark disabled:cursor-wait disabled:opacity-60"
           >
-            {saving ? dict.catches.submittingBtn : dict.catches.submitBtn}
+            {saving ? (
+              dict.catches.submittingBtn
+            ) : (
+              <>
+                <Save aria-hidden="true" className="h-4 w-4" />
+                {dict.catches.submitBtn}
+              </>
+            )}
           </button>
           <p className="mt-3 text-center text-xs text-muted">{dict.catches.storageNote}</p>
         </form>
@@ -471,7 +485,8 @@ export function CatchbookPage() {
               </div>
               <h3 className="mt-3 text-lg font-extrabold text-ink">{dict.catches.emptyTitle}</h3>
               <p className="mt-2 text-sm leading-6 text-muted">{dict.catches.emptyDesc}</p>
-              <p className="mt-7 rounded-xl bg-teal-soft/70 px-4 py-3 text-xs font-semibold text-teal-dark">
+              <p className="mt-7 flex items-center gap-2 rounded-xl bg-teal-soft/70 px-4 py-3 text-left text-xs font-semibold text-teal-dark">
+                <LockKeyhole aria-hidden="true" className="h-4 w-4 shrink-0" />
                 {dict.catches.emptyPrivacyNote}
               </p>
             </div>
@@ -529,8 +544,9 @@ export function CatchbookPage() {
             </ul>
           )}
           <div className="mt-5 border-t border-line pt-4">
-            <Link href="/my-species" className="font-bold text-teal hover:text-teal-dark">
+            <Link href="/my-species" className="inline-flex items-center gap-1 font-bold text-teal hover:text-teal-dark">
               {dict.catches.viewMySpecies}
+              <ArrowRight aria-hidden="true" className="h-4 w-4" />
             </Link>
           </div>
         </section>

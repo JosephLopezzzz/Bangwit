@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
+import { ArrowRight } from "lucide-react";
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { flushSync } from "react-dom";
 import { enDictionary } from "@/i18n/dictionaries/en";
@@ -396,16 +397,18 @@ export function BangwitProvider({ children }: { children: ReactNode }) {
             <p className="mt-3 text-sm leading-6 text-muted">{dict.policy.desc}</p>
             <div className="mt-5 grid gap-3 sm:grid-cols-2">
               <Link
-                className="rounded-xl border border-line p-4 text-sm font-bold text-teal hover:bg-teal-soft"
+                className="flex items-center justify-between gap-3 rounded-xl border border-line p-4 text-sm font-bold text-teal hover:bg-teal-soft"
                 href="/terms"
               >
                 {dict.policy.readTerms}
+                <ArrowRight aria-hidden="true" className="h-4 w-4 shrink-0" />
               </Link>
               <Link
-                className="rounded-xl border border-line p-4 text-sm font-bold text-teal hover:bg-teal-soft"
+                className="flex items-center justify-between gap-3 rounded-xl border border-line p-4 text-sm font-bold text-teal hover:bg-teal-soft"
                 href="/privacy"
               >
                 {dict.policy.readPrivacy}
+                <ArrowRight aria-hidden="true" className="h-4 w-4 shrink-0" />
               </Link>
             </div>
             <details className="mt-4 rounded-xl border border-line px-4 py-3 text-sm text-muted">
@@ -459,7 +462,7 @@ export function BangwitProvider({ children }: { children: ReactNode }) {
               id="fisherType"
               value={fisherType}
               onChange={(event) => setFisherType(event.target.value as FisherProfile["type"])}
-              className="mt-2 min-h-12 w-full rounded-xl border border-line bg-white px-4 text-sm text-ink"
+              className="app-select mt-2"
             >
               <option value="exploring">{dict.onboarding.types.exploring}</option>
               <option value="angler">{dict.onboarding.types.angler}</option>
@@ -473,7 +476,7 @@ export function BangwitProvider({ children }: { children: ReactNode }) {
               id="preferredWater"
               value={preferredWater}
               onChange={(event) => setPreferredWater(event.target.value as FisherProfile["water"])}
-              className="mt-2 min-h-12 w-full rounded-xl border border-line bg-white px-4 text-sm text-ink"
+              className="app-select mt-2"
             >
               <option value="any">{dict.onboarding.waters.any}</option>
               <option value="saltwater">{dict.onboarding.waters.saltwater}</option>

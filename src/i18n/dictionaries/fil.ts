@@ -16,7 +16,7 @@ export const filDictionary: Dictionary = {
     edit: "I-edit",
     error: "May naganap na error",
     optional: "opsyonal",
-    privateDeviceOnly: "🔒 Pribado · sa device lang",
+    privateDeviceOnly: "Pribado · sa device lang",
     deviceOnlyStorage: "Device-only storage",
     offlineSaved: "Naka-save lang sa device mo",
     language: "Wika",
@@ -37,8 +37,8 @@ export const filDictionary: Dictionary = {
     tag: "Prototype access",
     title: "Bago ka magpatuloy",
     desc: "Basahin ang Terms at Privacy Notice bago gamitin ang mga feature na nagse-save ng impormasyon.",
-    readTerms: "Basahin ang Terms of Use ↗",
-    readPrivacy: "Basahin ang Privacy Notice ↗",
+    readTerms: "Basahin ang Terms of Use",
+    readPrivacy: "Basahin ang Privacy Notice",
     summaryTitle: "Mahahalagang limitasyon ng prototype",
     summaryText:
       "Hindi pa verified ang species coverage, fishing rules, boundaries, weather alerts, o food-safety guidance. Huwag gamitin ito para magpasya kung legal o ligtas mangisda o kung ligtas kainin ang huli.",
@@ -105,8 +105,8 @@ export const filDictionary: Dictionary = {
     safetyStatus: "Hindi live",
     safetyDesc:
       "Wala pang live na PAGASA weather/flood feed o BFAR shellfish bulletin. Hindi ito nangangahulugang walang babala o ligtas bumiyahe; tingnan muna ang opisyal na abiso para sa napiling lugar.",
-    pagasaLink: "PAGASA advisories ↗",
-    bfarLink: "BFAR red tide ↗",
+    pagasaLink: "PAGASA advisories",
+    bfarLink: "BFAR red tide",
     ctaTitle: "Simulan ang kuwento ng mga huli mo",
     ctaDesc: "Kapag bukas na ang journal, mase-save ang catch sa device kahit walang signal.",
     ctaBtn: "Buksan ang My Catches",
@@ -159,7 +159,7 @@ export const filDictionary: Dictionary = {
     dispositionLabel: "Catch status",
     notesLabel: "Notes",
     notesPlaceholder: "Kondisyon, gear, o iba pang detalye",
-    submitBtn: "▣  I-save ang huli",
+    submitBtn: "I-save ang huli",
     submittingBtn: "Sine-save…",
     storageNote: "Naka-save sa browser ng device mo. Wala pang cloud sync o GPS.",
     journalHeading: "Ang iyong journal",
@@ -167,8 +167,8 @@ export const filDictionary: Dictionary = {
     loadingJournal: "Binubuksan ang journal…",
     emptyTitle: "Dito magsisimula ang kuwento mo",
     emptyDesc: "Wala ka pang naitatala. I-log ang unang huli mo sa form.",
-    emptyPrivacyNote: "🔒 Ikaw lang ang may access sa mga tala sa browser na ito.",
-    viewMySpecies: "Tingnan ang My Species →",
+    emptyPrivacyNote: "Ikaw lang ang may access sa mga tala sa browser na ito.",
+    viewMySpecies: "Tingnan ang My Species",
     deleteCatchAria: "Burahin ang catch na",
     unidentifiedSpecies: "Hindi pa natukoy",
     dateNotRecorded: "Petsa hindi naitala",
@@ -244,7 +244,7 @@ export const filDictionary: Dictionary = {
       "Ang restore ay papayag lang sa empty journal. Hindi nito papalitan o paghahaluin ang kasalukuyang records. Ingatan ang backup file dahil may pribadong impormasyon ito.",
     prototypeBackupNote:
       "Galing ba sa lumang Bangwit prototype ang entries mo? I-export muna sa old address na may local records:",
-    prototypeBackupLink: "Buksan ang prototype backup page →",
+    prototypeBackupLink: "Buksan ang prototype backup page",
     privacyTag: "Privacy controls",
     privacyTitle: "Local prototype data",
     privacyDesc:
@@ -256,8 +256,8 @@ export const filDictionary: Dictionary = {
     policiesTitle: "Basahin ang mga policy",
     policiesDesc:
       "Prototype draft ang mga notice na ito. Ipa-review muna ang final text bago ilunsad sa publiko o magdagdag ng account, analytics, at cloud sync.",
-    termsLink: "Terms of Use →",
-    privacyLink: "Privacy Notice →",
+    termsLink: "Terms of Use",
+    privacyLink: "Privacy Notice",
   },
   offline: {
     tag: "Bangwit · Offline",
@@ -296,7 +296,7 @@ export const filDictionary: Dictionary = {
           "Maaaring magbago ang mga tuntunin kapag nagdagdag ng verified data, accounts, sharing, o cloud sync. Hihingi ng hiwalay at malinaw na impormasyon at consent bago magproseso ng datos sa bagong paraan. Ang draft na ito ay hindi kapalit ng legal review bago public launch.",
       },
     ],
-    privacyLink: "Basahin ang Privacy Notice →",
+    privacyLink: "Basahin ang Privacy Notice",
   },
   privacyPage: {
     tag: "Bangwit prototype · draft",
@@ -334,6 +334,6 @@ export const filDictionary: Dictionary = {
           "Draft lang ang notice na ito para sa prototype. Kailangan itong ipa-review at palitan ng final notice na tumutugma sa aktuwal na data practices bago ilunsad sa publiko.",
       },
     ],
-    termsLink: "Basahin ang Terms of Use →",
+    termsLink: "Basahin ang Terms of Use",
   },
 };

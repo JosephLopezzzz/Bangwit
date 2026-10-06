@@ -1,6 +1,7 @@
 "use client";
 
 import { useState } from "react";
+import { Waves } from "lucide-react";
 import { useBangwit } from "@/components/bangwit-provider";
 
 export default function SpeciesPage() {
@@ -41,7 +42,7 @@ export default function SpeciesPage() {
           <select
             value={water}
             onChange={(event) => setWater(event.target.value)}
-            className="mt-1 block min-h-11 w-full rounded-xl border border-line bg-white px-3 text-sm font-medium text-ink"
+            className="app-select mt-1"
           >
             <option value="all">{dict.species.allWaters}</option>
             <option value="Saltwater">Saltwater</option>
@@ -54,7 +55,7 @@ export default function SpeciesPage() {
           <select
             value={status}
             onChange={(event) => setStatus(event.target.value)}
-            className="mt-1 block min-h-11 w-full rounded-xl border border-line bg-white px-3 text-sm font-medium text-ink"
+            className="app-select mt-1"
           >
             <option value="all">{dict.species.allStatuses}</option>
             <option>Native</option>
@@ -70,8 +71,8 @@ export default function SpeciesPage() {
         className="mt-5 rounded-3xl border border-line bg-white px-6 py-12 text-center shadow-sm sm:px-10"
         aria-live="polite"
       >
-        <div className="mx-auto grid h-16 w-16 place-items-center rounded-2xl bg-teal-soft text-3xl" aria-hidden="true">
-          ≈
+        <div className="mx-auto grid h-16 w-16 place-items-center rounded-2xl bg-teal-soft" aria-hidden="true">
+          <Waves className="h-8 w-8 text-teal" strokeWidth={1.75} />
         </div>
         <p className="mt-5 text-xs font-bold uppercase tracking-[0.15em] text-teal">{dict.species.noRecordsTag}</p>
         <h2 className="mt-2 text-2xl font-extrabold text-ink sm:text-3xl">
