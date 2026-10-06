@@ -3,9 +3,10 @@
 import Image from "next/image";
 import Link from "next/link";
 import { useCallback, useEffect, useMemo, useState, type FormEvent } from "react";
-import { ArrowRight, Camera, LockKeyhole, Save, Waves } from "lucide-react";
+import { ArrowRight, Camera, CircleCheck, CircleQuestionMark, Fish, LockKeyhole, Save, Waves } from "lucide-react";
 import { useBangwit } from "@/components/bangwit-provider";
 import { CatchDatePicker } from "@/components/catch-date-picker";
+import { DropdownSelect } from "@/components/dropdown-select";
 import { getDispositionLabel, getHabitatLabel, getSpeciesDisplay } from "@/i18n/labels";
 import { listCatches, removeCatch, saveCatch } from "@/lib/storage/catches";
 import type { CatchEntry } from "@/types/catch";
@@ -60,6 +61,7 @@ export function CatchbookPage() {
   const { showMessage, lang, dict } = useBangwit();
   const [entries, setEntries] = useState<CatchEntry[]>([]);
   const [date, setDate] = useState("");
+  const [disposition, setDisposition] = useState("Released");
   const [photo, setPhoto] = useState<File | null>(null);
   const [photoUrl, setPhotoUrl] = useState("");
   const [dragging, setDragging] = useState(false);
@@ -81,6 +83,14 @@ export function CatchbookPage() {
       },
       { value: "Brackish", label: dict.catches.habitats.brackish.label, detail: dict.catches.habitats.brackish.detail },
       { value: "Hindi alam", label: dict.catches.habitats.unknown.label, detail: dict.catches.habitats.unknown.detail },
+    ],
+    [dict],
+  );
+  const dispositionOptions = useMemo(
+    () => [
+      { value: "Released", label: dict.catches.dispositionReleased, icon: Fish },
+      { value: "Kept", label: dict.catches.dispositionKept, icon: CircleCheck },
+      { value: "Not recorded", label: dict.catches.dispositionNotRecorded, icon: CircleQuestionMark },
     ],
     [dict],
   );
@@ -146,6 +156,7 @@ export function CatchbookPage() {
     try {
       await saveCatch(entry);
       form.reset();
+      setDisposition("Released");
       setPhoto(null);
       setDate(localDateValue());
       setEntries(await listCatches());
@@ -413,16 +424,15 @@ export function CatchbookPage() {
                 <label htmlFor="catchDisposition" className={labelClass}>
                   {dict.catches.dispositionLabel}
                 </label>
-                <select
+                <DropdownSelect
                   id="catchDisposition"
+                  label={dict.catches.dispositionLabel}
                   name="disposition"
-                  defaultValue="Released"
-                  className={`${controlClass} app-select`}
-                >
-                  <option value="Released">{dict.catches.dispositionReleased}</option>
-                  <option value="Kept">{dict.catches.dispositionKept}</option>
-                  <option value="Not recorded">{dict.catches.dispositionNotRecorded}</option>
-                </select>
+                  value={disposition}
+                  onValueChange={setDisposition}
+                  options={dispositionOptions}
+                  className="mt-2"
+                />
               </div>
               <div className="sm:col-span-2">
                 <label htmlFor="catchNotes" className={labelClass}>

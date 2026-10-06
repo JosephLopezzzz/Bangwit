@@ -1,8 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { Waves } from "lucide-react";
+import { Droplets, Layers, Leaf, ShieldCheck, Sprout, TriangleAlert, Waves } from "lucide-react";
 import { useBangwit } from "@/components/bangwit-provider";
+import { DropdownSelect } from "@/components/dropdown-select";
 
 export default function SpeciesPage() {
   const { selectedArea, dict } = useBangwit();
@@ -37,33 +38,39 @@ export default function SpeciesPage() {
             className="min-h-12 w-full rounded-xl border border-line bg-white px-4 text-sm text-ink placeholder:text-slate-400"
           />
         </label>
-        <label className="text-xs font-semibold text-muted">
-          {dict.species.waterFilterLabel}
-          <select
+        <div className="text-xs font-semibold text-muted">
+          <span className="block">{dict.species.waterFilterLabel}</span>
+          <DropdownSelect
+            id="species-water-filter"
+            label={dict.species.waterFilterLabel}
             value={water}
-            onChange={(event) => setWater(event.target.value)}
-            className="app-select mt-1"
-          >
-            <option value="all">{dict.species.allWaters}</option>
-            <option value="Saltwater">Saltwater</option>
-            <option value="Freshwater">Freshwater</option>
-            <option value="Brackish">Brackish</option>
-          </select>
-        </label>
-        <label className="text-xs font-semibold text-muted">
-          {dict.species.statusFilterLabel}
-          <select
+            onValueChange={setWater}
+            className="mt-1"
+            options={[
+              { value: "all", label: dict.species.allWaters, icon: Layers },
+              { value: "Saltwater", label: "Saltwater", icon: Waves },
+              { value: "Freshwater", label: "Freshwater", icon: Droplets },
+              { value: "Brackish", label: "Brackish", icon: Waves },
+            ]}
+          />
+        </div>
+        <div className="text-xs font-semibold text-muted">
+          <span className="block">{dict.species.statusFilterLabel}</span>
+          <DropdownSelect
+            id="species-status-filter"
+            label={dict.species.statusFilterLabel}
             value={status}
-            onChange={(event) => setStatus(event.target.value)}
-            className="app-select mt-1"
-          >
-            <option value="all">{dict.species.allStatuses}</option>
-            <option>Native</option>
-            <option>Introduced</option>
-            <option>Invasive</option>
-            <option>Protected</option>
-          </select>
-        </label>
+            onValueChange={setStatus}
+            className="mt-1"
+            options={[
+              { value: "all", label: dict.species.allStatuses, icon: Layers },
+              { value: "Native", label: "Native", icon: Leaf },
+              { value: "Introduced", label: "Introduced", icon: Sprout },
+              { value: "Invasive", label: "Invasive", icon: TriangleAlert },
+              { value: "Protected", label: "Protected", icon: ShieldCheck },
+            ]}
+          />
+        </div>
       </section>
 
       <section

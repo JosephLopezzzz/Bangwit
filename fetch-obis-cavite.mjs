@@ -1,4 +1,9 @@
-﻿import { writeFile } from "node:fs/promises";
+import { mkdir, writeFile } from "node:fs/promises";
+import path from "node:path";
+import { fileURLToPath } from "node:url";
+
+const projectRoot = path.dirname(fileURLToPath(import.meta.url));
+const outputDir = path.join(projectRoot, "data", "research", "obis", "cavite");
 
 const geometry =
   "POLYGON ((120.9114 14.5018, 120.6093 14.2755, 120.5825 14.2389, 120.5653 14.1357, 120.6093 14.1157, 120.6237 14.0984, 120.9114 14.5018))";
@@ -63,7 +68,9 @@ const csv = [
   ),
 ].join("\r\n");
 
-await writeFile("cavite-obis-occurrences.csv", `\uFEFF${csv}`, "utf8");
+await mkdir(outputDir, { recursive: true });
+const outputPath = path.join(outputDir, "cavite-obis-occurrences.csv");
+await writeFile(outputPath, `\uFEFF${csv}`, "utf8");
 
 const species = new Set(
   records.map((record) => record.species).filter(Boolean)
@@ -71,4 +78,5 @@ const species = new Set(
 
 console.log(`Tapos: ${records.length} occurrence records`);
 console.log(`Unique species names: ${species.size}`);
-console.log("Nai-save ang cavite-obis-occurrences.csv sa kasalukuyang folder.");
+console.log(`Nai-save ang file sa ${path.relative(projectRoot, outputPath)}.`);
+

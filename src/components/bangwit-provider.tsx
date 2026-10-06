@@ -2,7 +2,8 @@
 
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, BriefcaseBusiness, Compass, Droplets, Fish, Users, Waves } from "lucide-react";
+import { DropdownSelect } from "@/components/dropdown-select";
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { flushSync } from "react-dom";
 import { enDictionary } from "@/i18n/dictionaries/en";
@@ -457,32 +458,36 @@ export function BangwitProvider({ children }: { children: ReactNode }) {
             <label className="mt-5 block text-sm font-semibold text-ink" htmlFor="fisherType">
               {dict.onboarding.fisherTypeLabel}
             </label>
-            <select
-              data-initial-focus
+            <DropdownSelect
+              initialFocus
               id="fisherType"
+              label={dict.onboarding.fisherTypeLabel}
               value={fisherType}
-              onChange={(event) => setFisherType(event.target.value as FisherProfile["type"])}
-              className="app-select mt-2"
-            >
-              <option value="exploring">{dict.onboarding.types.exploring}</option>
-              <option value="angler">{dict.onboarding.types.angler}</option>
-              <option value="livelihood">{dict.onboarding.types.livelihood}</option>
-              <option value="both">{dict.onboarding.types.both}</option>
-            </select>
+              onValueChange={(value) => setFisherType(value as FisherProfile["type"])}
+              className="mt-2"
+              options={[
+                { value: "exploring", label: dict.onboarding.types.exploring, icon: Compass },
+                { value: "angler", label: dict.onboarding.types.angler, icon: Fish },
+                { value: "livelihood", label: dict.onboarding.types.livelihood, icon: BriefcaseBusiness },
+                { value: "both", label: dict.onboarding.types.both, icon: Users },
+              ]}
+            />
             <label className="mt-4 block text-sm font-semibold text-ink" htmlFor="preferredWater">
               {dict.onboarding.preferredWaterLabel}
             </label>
-            <select
+            <DropdownSelect
               id="preferredWater"
+              label={dict.onboarding.preferredWaterLabel}
               value={preferredWater}
-              onChange={(event) => setPreferredWater(event.target.value as FisherProfile["water"])}
-              className="app-select mt-2"
-            >
-              <option value="any">{dict.onboarding.waters.any}</option>
-              <option value="saltwater">{dict.onboarding.waters.saltwater}</option>
-              <option value="freshwater">{dict.onboarding.waters.freshwater}</option>
-              <option value="brackish">{dict.onboarding.waters.brackish}</option>
-            </select>
+              onValueChange={(value) => setPreferredWater(value as FisherProfile["water"])}
+              className="mt-2"
+              options={[
+                { value: "any", label: dict.onboarding.waters.any, icon: Waves },
+                { value: "saltwater", label: dict.onboarding.waters.saltwater, icon: Waves },
+                { value: "freshwater", label: dict.onboarding.waters.freshwater, icon: Droplets },
+                { value: "brackish", label: dict.onboarding.waters.brackish, icon: Waves },
+              ]}
+            />
             <div className="mt-6 flex gap-3">
               <button
                 type="button"

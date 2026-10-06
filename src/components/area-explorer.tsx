@@ -1,8 +1,11 @@
 "use client";
 
 import { useBangwit } from "@/components/bangwit-provider";
+import { MapPin } from "lucide-react";
+import { DropdownSelect, type DropdownOption } from "@/components/dropdown-select";
 
 const areas = ["Manila Bay", "Bacoor Bay", "Cañacao Bay"] as const;
+const areaOptions: DropdownOption[] = areas.map((name) => ({ value: name, label: name, icon: MapPin }));
 
 export function AreaExplorer() {
   const { selectedArea: selected, setSelectedArea: setSelected, dict } = useBangwit();
@@ -11,7 +14,7 @@ export function AreaExplorer() {
     <div className="mt-8 grid gap-5 lg:grid-cols-[minmax(0,1.65fr)_minmax(320px,0.95fr)]">
       <section
         aria-labelledby="area-heading"
-        className="overflow-hidden rounded-3xl border border-line bg-white p-4 shadow-sm sm:p-6"
+        className="rounded-3xl border border-line bg-white p-4 shadow-sm sm:p-6"
       >
         <div className="flex flex-wrap items-center justify-between gap-3">
           <h2 id="area-heading" className="text-xl font-bold tracking-tight text-ink">
@@ -20,16 +23,14 @@ export function AreaExplorer() {
           <label className="sr-only" htmlFor="waterbody">
             {dict.areaExplorer.selectAreaLabel}
           </label>
-          <select
+          <DropdownSelect
             id="waterbody"
+            label={dict.areaExplorer.selectAreaLabel}
             value={selected}
-            onChange={(event) => setSelected(event.target.value)}
-            className="app-select app-select--compact"
-          >
-            {areas.map((name) => (
-              <option key={name}>{name}</option>
-            ))}
-          </select>
+            onValueChange={setSelected}
+            options={areaOptions}
+            className="dropdown-select--compact"
+          />
         </div>
 
         <div className="map-illustration relative mt-4 min-h-[320px] overflow-hidden rounded-2xl border sm:min-h-[435px]">
