@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { useBangwit } from "@/components/bangwit-provider";
+import { Expand } from "@/components/ui/expand";
 
 export function AppHeader() {
   const pathname = usePathname();
@@ -87,40 +88,15 @@ export function AppHeader() {
           </fieldset>
 
           {/* Theme switcher */}
-          <button
-            type="button"
-            role="switch"
-            aria-label={dict.common.theme}
-            aria-checked={isDark}
+          <Expand
+            toggled={isDark}
             onClick={toggleTheme}
-            className="inline-flex min-h-11 min-w-11 shrink-0 items-center gap-2 rounded-xl border border-line bg-white px-3 text-sm font-semibold text-ink transition-colors hover:bg-paper"
-          >
-            <svg
-              aria-hidden="true"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="1.8"
-              className="h-4 w-4"
-            >
-              {isDark ? (
-                <path
-                  d="M20.1 15.1A8.5 8.5 0 0 1 8.9 3.9 8.6 8.6 0 1 0 20.1 15.1Z"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              ) : (
-                <>
-                  <circle cx="12" cy="12" r="4" />
-                  <path
-                    d="M12 2v2m0 16v2M4.93 4.93l1.42 1.42m11.3 11.3 1.42 1.42M2 12h2m16 0h2M4.93 19.07l1.42-1.42m11.3-11.3 1.42-1.42"
-                    strokeLinecap="round"
-                  />
-                </>
-              )}
-            </svg>
-            <span>{isDark ? dict.common.dark : dict.common.light}</span>
-          </button>
+            role="switch"
+            aria-checked={isDark}
+            aria-label={dict.common.theme}
+            title={dict.common.theme}
+            className="grid h-11 w-11 shrink-0 place-items-center rounded-xl text-teal transition-colors hover:bg-teal-soft"
+          />
 
           {/* Guide button */}
           <button
