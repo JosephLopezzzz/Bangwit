@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
+import { flushSync } from "react-dom";
 import { enDictionary } from "@/i18n/dictionaries/en";
 import { filDictionary } from "@/i18n/dictionaries/fil";
 import type { Dictionary, Language } from "@/i18n/types";
@@ -223,23 +224,28 @@ export function BangwitProvider({ children }: { children: ReactNode }) {
   const startTour = useCallback(() => setTourStep(0), []);
 
   const toggleTheme = useCallback(() => {
-    themeRef.current = themeRef.current === "dark" ? "light" : "dark";
+    const nextTheme = themeRef.current === "dark" ? "light" : "dark";
     const root = document.documentElement;
-    root.dataset.themeTransition = themeRef.current === "dark" ? "rise" : "recede";
+    themeRef.current = nextTheme;
 
     const commitTheme = () => {
-      const nextTheme = themeRef.current;
       root.dataset.theme = nextTheme;
-      setTheme(nextTheme);
+      let storageError = false;
       try {
         localStorage.setItem(THEME_KEY, nextTheme);
       } catch {
-        setMessage(
-          lang === "fil"
-            ? "Hindi na-save ang theme preference. Maaaring bumalik ito sa light sa susunod na bukas."
-            : "Could not save theme preference.",
-        );
+        storageError = true;
       }
+      flushSync(() => {
+        setTheme(nextTheme);
+        if (storageError) {
+          setMessage(
+            lang === "fil"
+              ? "Hindi na-save ang theme preference. Maaaring bumalik ito sa light sa susunod na bukas."
+              : "Could not save theme preference.",
+          );
+        }
+      });
     };
 
     const startViewTransition = (
@@ -256,6 +262,7 @@ export function BangwitProvider({ children }: { children: ReactNode }) {
       return;
     }
 
+    root.dataset.themeTransition = nextTheme === "dark" ? "rise" : "recede";
     const transitionId = ++themeTransitionRef.current;
     const clearTransitionDirection = () => {
       if (transitionId === themeTransitionRef.current) root.removeAttribute("data-theme-transition");
@@ -269,7 +276,6 @@ export function BangwitProvider({ children }: { children: ReactNode }) {
       commitTheme();
     }
   }, [lang]);
-
   const contextValue = useMemo(
     () => ({
       selectedArea,

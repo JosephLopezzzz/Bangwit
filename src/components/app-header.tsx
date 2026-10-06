@@ -90,10 +90,10 @@ export function AppHeader() {
           <button
             type="button"
             role="switch"
-            aria-label={isDark ? "Dark theme" : "Light theme"}
+            aria-label={dict.common.theme}
             aria-checked={isDark}
             onClick={toggleTheme}
-            className="inline-flex min-h-10 shrink-0 items-center gap-2 rounded-xl border border-line bg-white px-3 text-sm font-semibold text-ink transition-colors hover:bg-paper"
+            className="inline-flex min-h-11 min-w-11 shrink-0 items-center gap-2 rounded-xl border border-line bg-white px-3 text-sm font-semibold text-ink transition-colors hover:bg-paper"
           >
             <svg
               aria-hidden="true"
@@ -119,7 +119,7 @@ export function AppHeader() {
                 </>
               )}
             </svg>
-            <span className="hidden sm:inline">{isDark ? dict.common.dark : dict.common.light}</span>
+            <span>{isDark ? dict.common.dark : dict.common.light}</span>
           </button>
 
           {/* Guide button */}
