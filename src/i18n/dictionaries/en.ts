@@ -35,15 +35,15 @@ export const enDictionary: Dictionary = {
   },
   policy: {
     tag: "Prototype access",
-    title: "Before you continue",
-    desc: "Please review the Terms of Use and Privacy Notice before using features that save your information.",
-    readTerms: "Read Terms of Use",
-    readPrivacy: "Read Privacy Notice",
+    title: "Privacy Policy & Terms of Use",
+    desc: "Start with the Privacy Policy, then review the Terms of Use before continuing.",
+    readToContinue: "Scroll to the end of the combined policy to enable the agreement checkbox.",
+    readComplete: "You’ve reached the end. You can now select the agreement checkbox.",
     summaryTitle: "Important prototype limitations",
     summaryText:
       "Species coverage, fishing rules, boundaries, weather alerts, and food safety advisories are not yet verified. Do not rely on this prototype to determine whether it is legal or safe to fish or consume your catch.",
     agreeCheckbox:
-      "I agree to the prototype Terms and Privacy Notice, and I understand my data is stored strictly on this device.",
+      "I agree to the prototype Privacy Policy and Terms of Use, and understand my data is stored only on this device.",
     agreeBtn: "Agree and continue",
     disclaimer:
       "This is a prototype draft. Legal policy review is required prior to public launch. This does not grant permission to upload data to cloud servers.",
@@ -256,8 +256,7 @@ export const enDictionary: Dictionary = {
     policiesTitle: "Review policies",
     policiesDesc:
       "These notices are prototype drafts. Legal review is required before public launch or adding accounts, analytics, and cloud sync.",
-    termsLink: "Terms of Use",
-    privacyLink: "Privacy Notice",
+    policiesLink: "Read Privacy Policy & Terms of Use",
   },
   offline: {
     tag: "Bangwit · Offline",
@@ -297,7 +296,6 @@ export const enDictionary: Dictionary = {
           "Terms may change as verified data, user accounts, sharing, or cloud synchronization are added. Explicit consent will be requested before processing data in new ways. This draft does not substitute for formal legal review prior to public launch.",
       },
     ],
-    privacyLink: "Read Privacy Notice",
   },
   privacyPage: {
     tag: "Bangwit prototype · draft",
@@ -336,6 +334,5 @@ export const enDictionary: Dictionary = {
           "This notice is a draft for prototype evaluation. It must undergo formal legal review and alignment with production data practices prior to any public release.",
       },
     ],
-    termsLink: "Read Terms of Use",
   },
 };

@@ -35,15 +35,15 @@ export const filDictionary: Dictionary = {
   },
   policy: {
     tag: "Prototype access",
-    title: "Bago ka magpatuloy",
-    desc: "Basahin ang Terms at Privacy Notice bago gamitin ang mga feature na nagse-save ng impormasyon.",
-    readTerms: "Basahin ang Terms of Use",
-    readPrivacy: "Basahin ang Privacy Notice",
+    title: "Privacy Notice at Terms of Use",
+    desc: "Basahin muna ang Privacy Notice, kasunod ang Terms of Use bago magpatuloy.",
+    readToContinue: "I-scroll hanggang dulo ang pinagsamang policy para ma-enable ang checkbox.",
+    readComplete: "Nakarating ka na sa dulo. Maaari mo nang i-check ang kahon.",
     summaryTitle: "Mahahalagang limitasyon ng prototype",
     summaryText:
       "Hindi pa verified ang species coverage, fishing rules, boundaries, weather alerts, o food-safety guidance. Huwag gamitin ito para magpasya kung legal o ligtas mangisda o kung ligtas kainin ang huli.",
     agreeCheckbox:
-      "Sumasang-ayon ako sa prototype Terms at Privacy Notice, at naiintindihan kong sa device lang nase-save ang impormasyon.",
+      "Sumasang-ayon ako sa Privacy Notice at Terms of Use para sa prototype, at nauunawaan kong sa device lang na ito naka-save ang data ko.",
     agreeBtn: "Sumang-ayon at magpatuloy",
     disclaimer:
       "Draft ito para sa prototype. Kailangan ng policy review bago public launch. Hindi ito pahintulot para mag-upload ng data sa cloud.",
@@ -256,8 +256,7 @@ export const filDictionary: Dictionary = {
     policiesTitle: "Basahin ang mga policy",
     policiesDesc:
       "Prototype draft ang mga notice na ito. Ipa-review muna ang final text bago ilunsad sa publiko o magdagdag ng account, analytics, at cloud sync.",
-    termsLink: "Terms of Use",
-    privacyLink: "Privacy Notice",
+    policiesLink: "Basahin ang Privacy Notice at Terms of Use",
   },
   offline: {
     tag: "Bangwit · Offline",
@@ -296,7 +295,6 @@ export const filDictionary: Dictionary = {
           "Maaaring magbago ang mga tuntunin kapag nagdagdag ng verified data, accounts, sharing, o cloud sync. Hihingi ng hiwalay at malinaw na impormasyon at consent bago magproseso ng datos sa bagong paraan. Ang draft na ito ay hindi kapalit ng legal review bago public launch.",
       },
     ],
-    privacyLink: "Basahin ang Privacy Notice",
   },
   privacyPage: {
     tag: "Bangwit prototype · draft",
@@ -334,6 +332,5 @@ export const filDictionary: Dictionary = {
           "Draft lang ang notice na ito para sa prototype. Kailangan itong ipa-review at palitan ng final notice na tumutugma sa aktuwal na data practices bago ilunsad sa publiko.",
       },
     ],
-    termsLink: "Basahin ang Terms of Use",
   },
 };

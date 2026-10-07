@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import { ArrowRight, BriefcaseBusiness, Compass, Droplets, Fish, Users, Waves } from "lucide-react";
 import { DropdownSelect } from "@/components/dropdown-select";
+import { PolicyDocument } from "@/components/policy-document";
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
 import { flushSync } from "react-dom";
 import { enDictionary } from "@/i18n/dictionaries/en";
@@ -12,7 +13,7 @@ import type { Dictionary, Language } from "@/i18n/types";
 import type { FisherProfile } from "@/types/catch";
 
 const POLICY_KEY = "bangwit.policy.2026-09-prototype";
-const POLICY_VERSION = "prototype-2";
+const POLICY_VERSION = "prototype-3";
 const PROFILE_KEY = "bangwit.profile";
 const ONBOARDING_KEY = "bangwit.onboarding.seen";
 const TOUR_KEY = "bangwit.tour.done";
@@ -81,10 +82,11 @@ function hasCurrentPolicyAcceptance(): boolean {
 export function BangwitProvider({ children }: { children: ReactNode }) {
   const router = useRouter();
   const pathname = usePathname();
-  const isPolicyPage = pathname === "/terms" || pathname === "/privacy";
+  const isPolicyPage = pathname === "/policies" || pathname === "/terms" || pathname === "/privacy";
   const [ready, setReady] = useState(false);
   const [accepted, setAccepted] = useState(false);
   const [policyChecked, setPolicyChecked] = useState(false);
+  const [policyRead, setPolicyRead] = useState(false);
   const [profile, setProfile] = useState<FisherProfile | null>(null);
   const [profileOpen, setProfileOpen] = useState(false);
   const [profileMode, setProfileMode] = useState<ProfileMode>("first");
@@ -97,6 +99,7 @@ export function BangwitProvider({ children }: { children: ReactNode }) {
   const themeTransitionRef = useRef(0);
   const [tourStep, setTourStep] = useState<number | null>(null);
   const [message, setMessage] = useState("");
+  const policyReaderRef = useRef<HTMLDivElement>(null);
 
   const dict = useMemo(() => (lang === "en" ? enDictionary : filDictionary), [lang]);
 
@@ -138,6 +141,15 @@ export function BangwitProvider({ children }: { children: ReactNode }) {
       }
     }
   }, []);
+
+  useEffect(() => {
+    if (!ready || accepted || isPolicyPage) return;
+    const reader = policyReaderRef.current;
+    if (!reader) return;
+    reader.scrollTop = 0;
+    setPolicyChecked(false);
+    setPolicyRead(reader.scrollHeight <= reader.clientHeight + 1);
+  }, [accepted, isPolicyPage, lang, ready]);
 
   const setLang = useCallback((nextLang: Language) => {
     setLangState(nextLang);
@@ -296,7 +308,7 @@ export function BangwitProvider({ children }: { children: ReactNode }) {
   );
 
   function acceptPolicies() {
-    if (!policyChecked) return;
+    if (!policyRead || !policyChecked) return;
     try {
       localStorage.setItem(
         POLICY_KEY,
@@ -365,7 +377,7 @@ export function BangwitProvider({ children }: { children: ReactNode }) {
             role="dialog"
             aria-modal="true"
             aria-labelledby="policyTitle"
-            className="my-auto w-full max-w-xl rounded-3xl bg-white p-6 shadow-2xl sm:p-8"
+            className="my-auto max-h-[calc(100dvh-2rem)] w-full max-w-xl overflow-y-auto rounded-3xl bg-white p-6 shadow-2xl sm:p-8"
           >
             <div className="flex items-center justify-between gap-3">
               <p className="text-xs font-bold uppercase tracking-[0.15em] text-teal">{dict.policy.tag}</p>
@@ -396,39 +408,43 @@ export function BangwitProvider({ children }: { children: ReactNode }) {
               {dict.policy.title}
             </h1>
             <p className="mt-3 text-sm leading-6 text-muted">{dict.policy.desc}</p>
-            <div className="mt-5 grid gap-3 sm:grid-cols-2">
-              <Link
-                className="flex items-center justify-between gap-3 rounded-xl border border-line p-4 text-sm font-bold text-teal hover:bg-teal-soft"
-                href="/terms"
-              >
-                {dict.policy.readTerms}
-                <ArrowRight aria-hidden="true" className="h-4 w-4 shrink-0" />
-              </Link>
-              <Link
-                className="flex items-center justify-between gap-3 rounded-xl border border-line p-4 text-sm font-bold text-teal hover:bg-teal-soft"
-                href="/privacy"
-              >
-                {dict.policy.readPrivacy}
-                <ArrowRight aria-hidden="true" className="h-4 w-4 shrink-0" />
-              </Link>
+            <div
+              ref={policyReaderRef}
+              data-initial-focus
+              role="region"
+              tabIndex={0}
+              aria-label={dict.policy.title}
+              aria-describedby="policyReadStatus"
+              onScroll={(event) => {
+                const reader = event.currentTarget;
+                if (reader.scrollTop + reader.clientHeight >= reader.scrollHeight - 4) setPolicyRead(true);
+              }}
+              className="policy-reader mt-5 max-h-[min(38vh,22rem)] overflow-y-auto rounded-2xl border border-line bg-paper px-4 py-4 sm:px-5"
+            >
+              <PolicyDocument privacy={dict.privacyPage} terms={dict.termsPage} className="space-y-6" />
             </div>
             <details className="mt-4 rounded-xl border border-line px-4 py-3 text-sm text-muted">
               <summary className="cursor-pointer font-semibold text-ink">{dict.policy.summaryTitle}</summary>
               <p className="mt-3 leading-6">{dict.policy.summaryText}</p>
             </details>
-            <label className="mt-5 flex cursor-pointer items-start gap-3 text-sm leading-6 text-ink">
+            <p id="policyReadStatus" role="status" aria-live="polite" className="mt-4 text-xs leading-5 text-muted">
+              {policyRead ? dict.policy.readComplete : dict.policy.readToContinue}
+            </p>
+            <label
+              className={`mt-3 flex items-start gap-3 text-sm leading-6 ${policyRead ? "cursor-pointer text-ink" : "cursor-not-allowed text-muted"}`}
+            >
               <input
-                data-initial-focus
                 type="checkbox"
+                disabled={!policyRead}
                 checked={policyChecked}
                 onChange={(event) => setPolicyChecked(event.target.checked)}
-                className="mt-1 h-4 w-4 accent-teal"
+                className="mt-1 h-4 w-4 accent-teal disabled:cursor-not-allowed"
               />
               {dict.policy.agreeCheckbox}
             </label>
             <button
               type="button"
-              disabled={!policyChecked}
+              disabled={!policyRead || !policyChecked}
               onClick={acceptPolicies}
               className="mt-5 min-h-12 w-full rounded-xl bg-teal px-5 font-bold text-white enabled:hover:bg-teal-dark disabled:cursor-not-allowed disabled:opacity-50"
             >

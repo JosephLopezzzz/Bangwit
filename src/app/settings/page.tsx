@@ -233,12 +233,8 @@ export default function SettingsPage() {
           <h2 className="mt-2 text-xl font-extrabold text-ink">{dict.settings.policiesTitle}</h2>
           <p className="mt-2 text-sm leading-6 text-muted">{dict.settings.policiesDesc}</p>
           <div className="mt-4 flex flex-wrap gap-x-5 gap-y-2">
-            <Link className="inline-flex items-center gap-1 font-bold text-teal hover:text-teal-dark" href="/terms">
-              {dict.settings.termsLink}
-              <ArrowRight aria-hidden="true" className="h-4 w-4" />
-            </Link>
-            <Link className="inline-flex items-center gap-1 font-bold text-teal hover:text-teal-dark" href="/privacy">
-              {dict.settings.privacyLink}
+            <Link className="inline-flex items-center gap-1 font-bold text-teal hover:text-teal-dark" href="/policies">
+              {dict.settings.policiesLink}
               <ArrowRight aria-hidden="true" className="h-4 w-4" />
             </Link>
           </div>

@@ -37,8 +37,8 @@ export type Dictionary = {
     tag: string;
     title: string;
     desc: string;
-    readTerms: string;
-    readPrivacy: string;
+    readToContinue: string;
+    readComplete: string;
     summaryTitle: string;
     summaryText: string;
     agreeCheckbox: string;
@@ -223,8 +223,7 @@ export type Dictionary = {
     policiesTag: string;
     policiesTitle: string;
     policiesDesc: string;
-    termsLink: string;
-    privacyLink: string;
+    policiesLink: string;
   };
   offline: {
     tag: string;
@@ -241,7 +240,6 @@ export type Dictionary = {
       heading: string;
       content: string;
     }>;
-    privacyLink: string;
   };
   privacyPage: {
     tag: string;
@@ -252,6 +250,5 @@ export type Dictionary = {
       heading: string;
       content: string;
     }>;
-    termsLink: string;
   };
 };
