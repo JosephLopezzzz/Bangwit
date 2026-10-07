@@ -27,13 +27,13 @@ colors:
 typography:
   display:
     fontFamily: "Arial, Helvetica, sans-serif"
-    fontSize: "60px"
+    fontSize: "56px"
     fontWeight: 800
     lineHeight: 1
     letterSpacing: "-0.025em"
   headline:
     fontFamily: "Arial, Helvetica, sans-serif"
-    fontSize: "48px"
+    fontSize: "42px"
     fontWeight: 800
     lineHeight: 1
     letterSpacing: "-0.025em"
@@ -44,7 +44,7 @@ typography:
     lineHeight: 1.333
   body:
     fontFamily: "Arial, Helvetica, sans-serif"
-    fontSize: "16px"
+    fontSize: "15px"
     fontWeight: 400
     lineHeight: 1.5
   label:
@@ -55,19 +55,19 @@ typography:
     letterSpacing: "0.15em"
   explore-display:
     fontFamily: "Arial, Helvetica, sans-serif"
-    fontSize: "clamp(48px, 4.31vw, 72px)"
+    fontSize: "clamp(40px, 3.25vw, 56px)"
     fontWeight: 700
     lineHeight: 1.08
     letterSpacing: "-0.035em"
   explore-map-title:
     fontFamily: "Arial, Helvetica, sans-serif"
-    fontSize: "24px"
+    fontSize: "20px"
     fontWeight: 700
     lineHeight: 1.25
     letterSpacing: "-0.035em"
   explore-selector-title:
     fontFamily: "Arial, Helvetica, sans-serif"
-    fontSize: "26px"
+    fontSize: "22px"
     fontWeight: 700
     lineHeight: 1.25
     letterSpacing: "-0.035em"
@@ -78,31 +78,31 @@ typography:
     lineHeight: 1.636364
   sidebar-label:
     fontFamily: "Arial, Helvetica, sans-serif"
-    fontSize: "17px"
+    fontSize: "15px"
     fontWeight: 400
     lineHeight: 1.25
   sidebar-label-active:
     fontFamily: "Arial, Helvetica, sans-serif"
-    fontSize: "17px"
+    fontSize: "15px"
     fontWeight: 600
     lineHeight: 1.25
   location-title:
     fontFamily: "Arial, Helvetica, sans-serif"
-    fontSize: "21px"
+    fontSize: "18px"
     fontWeight: 700
     lineHeight: 1.2
     letterSpacing: "-0.025em"
   marker-number:
     fontFamily: "Arial, Helvetica, sans-serif"
-    fontSize: "21px"
+    fontSize: "18px"
     fontWeight: 700
 rounded:
   sm: "8px"
   md: "12px"
   lg: "16px"
   xl: "24px"
-  shell: "20px"
-  navigation: "14px"
+  shell: "16px"
+  navigation: "12px"
   pill: "9999px"
 spacing:
   xs: "4px"
@@ -141,8 +141,8 @@ components:
     textColor: "{colors.deep-current-teal}"
     typography: "{typography.sidebar-label-active}"
     rounded: "{rounded.navigation}"
-    padding: "12px 20px"
-    height: "56px"
+    padding: "10px 14px"
+    height: "48px"
   status-chip:
     backgroundColor: "{colors.review-surface}"
     textColor: "{colors.review-copy}"
@@ -153,47 +153,48 @@ components:
     textColor: "{colors.surface-white}"
     rounded: "{rounded.pill}"
     typography: "{typography.marker-number}"
-    height: "54px"
-    width: "54px"
+    height: "48px"
+    width: "48px"
   map-marker-unselected:
     backgroundColor: "{colors.map-marker-slate}"
     textColor: "{colors.surface-white}"
     rounded: "{rounded.pill}"
     typography: "{typography.marker-number}"
-    height: "54px"
-    width: "54px"
+    height: "48px"
+    width: "48px"
   app-shell:
-    backgroundColor: "color-mix(in srgb, var(--white) 75%, var(--teal-soft))"
-    rounded: "{rounded.shell}"
-    width: "calc(100% - 36px)"
-    height: "calc(100dvh - 124px)"
+    backgroundColor: "transparent"
+    rounded: "0px"
+    width: "100%"
+    height: "100dvh"
   app-sidebar:
     backgroundColor: "{colors.surface-white}"
-    width: "200px"
+    width: "184px"
+    position: "sticky"
   explore-map-panel:
     backgroundColor: "{colors.surface-white}"
-    rounded: "{rounded.shell}"
+    rounded: "16px"
     typography: "{typography.explore-map-title}"
-    padding: "22px"
+    padding: "18px"
   explore-location-panel:
     backgroundColor: "{colors.surface-white}"
-    rounded: "{rounded.shell}"
+    rounded: "16px"
     typography: "{typography.explore-selector-title}"
-    padding: "28px"
+    padding: "22px"
   location-row:
     backgroundColor: "{colors.surface-white}"
     textColor: "{colors.ink}"
-    rounded: "{rounded.lg}"
+    rounded: "14px"
     typography: "{typography.location-title}"
-    padding: "16px"
-    height: "89px"
+    padding: "12px"
+    height: "76px"
   location-row-selected:
     backgroundColor: "color-mix(in srgb, var(--teal-soft) 42%, var(--white))"
     textColor: "{colors.ink}"
-    rounded: "{rounded.lg}"
+    rounded: "14px"
     typography: "{typography.location-title}"
-    padding: "16px"
-    height: "89px"
+    padding: "12px"
+    height: "76px"
   location-sheet:
     backgroundColor: "{colors.surface-white}"
     textColor: "{colors.ink}"
@@ -250,27 +251,27 @@ The palette pairs deep-water teal with bay-mist surfaces and cool, dark ink. Tea
 **Character:** A sturdy system sans keeps the interface familiar and readable. Heavy, tightly tracked headings provide the expressive contrast; body copy stays plain and open.
 
 ### Hierarchy
-- **Display** (extra-bold, 60px, 1 line-height): The largest page heading at wide desktop sizes.
-- **Headline** (extra-bold, 48px, 1 line-height): Responsive page headings below the largest breakpoint.
+- **Display** (extra-bold, 56px, 1 line-height): The largest page heading at wide desktop sizes.
+- **Headline** (extra-bold, 42px, 1 line-height): Responsive page headings below the largest breakpoint.
 - **Title** (extra-bold, 24px, 1.333 line-height): Section headings and prominent card titles.
-- **Body** (regular, 16px, 1.5 line-height): Explanatory text and standard reading copy.
+- **Body** (regular, 15px, 1.5 line-height): Explanatory text and standard reading copy.
 - **Label** (bold, 12px, 0.15em letter-spacing, often uppercase): Short section overlines, category labels, and status context.
 
-Explore has scoped display, map-title, selector-title and caption roles in the frontmatter. Its display uses bold rather than extra-bold Arial, and its caption keeps an 18px reading line. Sidebar labels, location names and marker numbers also have dedicated roles; these do not replace the default type scale on other pages. At widths below the sidebar breakpoint, the Explore display becomes 48px; mobile uses 36px with a 1.1 line-height. Map and selector headings reduce in the compact layouts.
+Explore has scoped display, map-title, selector-title and caption roles in the frontmatter. Its display uses bold rather than extra-bold Arial, and its caption keeps an 18px reading line. Sidebar labels, location names and marker numbers also have dedicated roles. A 15px root size makes the application type and rem-sized controls slightly more compact. Explore's display ranges from 40px to 56px on desktop, uses 42px on tablet, and 32px on mobile with a 1.1 line-height.
 
 ## Layout
 
-Use a centered content area capped at 1440px. Page gutters are 20px on narrow screens, increase to 32px at the 640px breakpoint, and reach 48px at 1024px. Keep a 4px spacing base, with most component gaps and padding drawn from 12px, 16px, 20px, 24px, and 32px steps.
+Use a centered content area capped at 1440px on secondary pages. Explore fills the available content width. Page gutters are 20px on narrow screens, increase to 32px at the 640px breakpoint, and reach 48px at 1024px. Keep a 4px spacing base, with most component gaps and padding drawn from 12px, 16px, 20px, 24px, and 32px steps.
 
 The catch-journal form and list use a wider split from 1280px upward.
 
 ### Map-first Explore reference
 
-The approved Explore reference uses an inset application shell capped at 1880px, with a 200px labeled sidebar from 1200px upward. The desktop shell has 18px outer side gutters, a 64px top inset, a 60px bottom inset and a 650px minimum height. Its content scrolls within the shell. Smaller widths use a visible Menu button and a native navigation drawer, with an auto-height shell and 12px outer side gutters.
+The Explore dashboard fills the viewport with no inset shell or outside frame. Its 184px labeled sidebar stays pinned while the content pane scrolls independently. A restrained wave accent sits along the bottom of the pale dashboard background. Smaller widths use a sticky header with a visible Menu button and a native navigation drawer; the page then scrolls as a single column.
 
-Explore keeps its content capped at 1440px. At the desktop sidebar breakpoint, its illustrated map and location panel form a 1.87:1 grid with a 16px gap and a 360px minimum chooser width. Both panels align at the top and bottom. From 768px to 1199px, the chooser follows the map and its three options share a row. Below 768px, the chooser becomes a selected-location trigger that opens a native bottom-sheet dialog. The map has a 320px mobile height; desktop and tablet preserve a larger illustration area.
+At the desktop sidebar breakpoint, the illustrated map and location panel form a 1.87:1 grid with a 14px gap and a 320px minimum chooser width. Both panels align at the top and bottom. From 768px to 1199px, the chooser follows the map and its three options share a row. Below 768px, the chooser becomes a selected-location trigger that opens a native bottom-sheet dialog. The map is 300px tall on mobile and 420px on tablet; desktop preserves a larger illustration area.
 
-Widths from 1200px to 1439px use denser selector padding and smaller titles and numbered circles. Preserve the desktop row's 89px minimum height, with the mobile sheet reducing rows to a 76px minimum. The shell and panel sizing tokens describe their wide desktop defaults; use these responsive exceptions rather than forcing the desktop composition onto narrow screens.
+Location rows use a 76px minimum height with 46px number markers. Controls retain practical click targets while text, cards and spacing use the more compact dashboard scale.
 
 `public/assets/cavite-waters-map.png` is generated artwork reconstructed from the user-supplied reference. It is an illustration, not verified geography. Labels and interactive markers are rendered separately. Zoom enlarges the illustration; reset restores its overview and never requests GPS. Keep the illustration note outside the map controls and the truthful records-coverage notice below the workspace. Mobile places the illustration note beneath the map panel.
 
@@ -292,7 +293,7 @@ Explore uses a quieter panel shadow (0 8px 24px rgb(38 105 107 / 4%)), a compact
 
 Use soft, deliberate rounding rather than sharp corners. Small chips are fully pill-shaped; buttons, inputs, and navigation links use a 12px radius; selectable rows and secondary panels use 16px; major cards use 24px. Keep borders thin and light. Clip map art inside its rounded frame, while its coast shapes remain organic and irregular.
 
-The inset Explore shell and its main panels use the shell radius; sidebar links use the navigation radius. Mobile reduces the shell and outer map panel to the existing large radius, while the map itself uses the medium radius. The bottom sheet rounds only its upper corners.
+The full-screen Explore shell has no outside radius. Its map and location panels use 16px corners, sidebar links use 12px, and the bottom sheet rounds only its upper corners.
 
 Keyboard focus uses a 3px aqua outline with a 3px offset. Honor reduced-motion preferences: transitions and animation should become effectively immediate when the system requests reduced motion.
 

@@ -6,7 +6,13 @@ import { usePathname } from "next/navigation";
 import { BookOpen, CircleHelp, Fish, Globe2, MapPin, Menu, NotebookPen, Settings2, X } from "lucide-react";
 import { useEffect, useRef, useState } from "react";
 import { useBangwit } from "@/components/bangwit-provider";
+import { DropdownSelect, type DropdownOption } from "@/components/dropdown-select";
 import { Expand } from "@/components/ui/expand";
+
+const languageOptions: DropdownOption[] = [
+  { value: "fil", label: "FIL", icon: Globe2 },
+  { value: "en", label: "EN", icon: Globe2 },
+];
 
 export function AppHeader() {
   const pathname = usePathname();
@@ -73,7 +79,7 @@ export function AppHeader() {
     );
   }
 
-  function navigationPanel() {
+  function navigationPanel(variant: "sidebar" | "drawer") {
     return (
       <div className="app-nav-panel">
         {brand()}
@@ -96,17 +102,16 @@ export function AppHeader() {
           })}
         </nav>
         <div className="app-sidebar-footer">
-          <label className="app-language-picker">
-            <Globe2 aria-hidden="true" size={21} strokeWidth={1.75} />
-            <select
-              aria-label={dict.common.language}
+          <div className="app-language-picker">
+            <DropdownSelect
+              id={`app-language-${variant}`}
+              label={dict.common.language}
               value={lang}
-              onChange={(event) => setLang(event.target.value === "en" ? "en" : "fil")}
-            >
-              <option value="fil">FIL</option>
-              <option value="en">EN</option>
-            </select>
-          </label>
+              options={languageOptions}
+              onValueChange={(value) => setLang(value === "en" ? "en" : "fil")}
+              className="app-language-dropdown"
+            />
+          </div>
           <div className="app-footer-actions">
             <Expand
               toggled={theme === "dark"}
@@ -134,7 +139,7 @@ export function AppHeader() {
 
   return (
     <>
-      <aside className="app-sidebar">{navigationPanel()}</aside>
+      <aside className="app-sidebar">{navigationPanel("sidebar")}</aside>
       <header className="app-mobile-header">
         {brand()}
         <button
@@ -160,7 +165,7 @@ export function AppHeader() {
         <button type="button" onClick={closeDrawer} aria-label={dict.common.close} className="app-drawer-close">
           <X aria-hidden="true" size={22} strokeWidth={1.75} />
         </button>
-        {navigationPanel()}
+        {navigationPanel("drawer")}
       </dialog>
     </>
   );
