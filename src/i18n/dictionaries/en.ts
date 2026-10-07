@@ -32,6 +32,7 @@ export const enDictionary: Dictionary = {
     settings: "Settings",
     openGuide: "Open Bangwit guide",
     mainMenu: "Main menu",
+    menuButton: "Menu",
   },
   policy: {
     tag: "Prototype access",
@@ -97,7 +98,7 @@ export const enDictionary: Dictionary = {
   },
   home: {
     tag: "Cavite · CALABARZON",
-    pilotBadge: "Pilot data under review",
+    pilotBadge: "Local records not yet verified",
     title: "Where are we fishing?",
     subtitle: "Select a location and discover the waters of Cavite.",
     safetyTag: "Before you travel",
@@ -118,12 +119,19 @@ export const enDictionary: Dictionary = {
     heading: "Explore Cavite waters",
     selectAreaLabel: "Select location",
     mapIllustrationNote: "Illustration only · not for navigation",
+    mapDescription:
+      "Illustrated overview of Manila Bay, Bacoor Bay and Cañacao Bay along the Cavite coast. Locations are approximate.",
+    mapUnavailable: "Map illustration unavailable. You can still choose a location from the list.",
+    zoomIn: "Zoom in on the illustration",
+    zoomOut: "Zoom out of the illustration",
+    resetMap: "Reset map view",
     sideTag: "Select a location",
     sideHeading: "Where would you like to explore?",
     sideDesc:
       "Choose a Cavite fishing ground. Species and legal recommendations are withheld until local records are verified.",
-    pendingReviewTitle: "records pending review",
-    pendingReviewDesc: "Species data and fishing rules will be displayed once verified.",
+    pendingReviewTitle: "No verified local records loaded",
+    pendingReviewDesc:
+      "Species data and fishing rules are unavailable for this location. This does not indicate whether fishing is legal or safe.",
     areas: {
       "Manila Bay": { subtitle: "West Cavite coast" },
       "Bacoor Bay": { subtitle: "Bacoor, Cavite" },

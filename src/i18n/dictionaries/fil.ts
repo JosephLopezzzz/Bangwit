@@ -32,6 +32,7 @@ export const filDictionary: Dictionary = {
     settings: "Settings",
     openGuide: "Buksan ang Bangwit guide",
     mainMenu: "Pangunahing menu",
+    menuButton: "Menu",
   },
   policy: {
     tag: "Prototype access",
@@ -97,7 +98,7 @@ export const filDictionary: Dictionary = {
   },
   home: {
     tag: "Cavite · CALABARZON",
-    pilotBadge: "Pilot data under review",
+    pilotBadge: "Hindi pa verified ang local records",
     title: "Saan tayo mangingisda?",
     subtitle: "Pumili ng lugar at alamin ang katubigan ng Cavite.",
     safetyTag: "Bago bumiyahe",
@@ -118,12 +119,19 @@ export const filDictionary: Dictionary = {
     heading: "Explore Cavite waters",
     selectAreaLabel: "Pumili ng lugar",
     mapIllustrationNote: "Illustration lang · hindi para sa navigation",
+    mapDescription:
+      "Illustrated overview ng Manila Bay, Bacoor Bay at Cañacao Bay sa baybayin ng Cavite. Tinatayang lokasyon lang ang ipinapakita.",
+    mapUnavailable: "Hindi maipakita ang mapa. Maaari ka pa ring pumili ng lugar sa listahan.",
+    zoomIn: "Palakihin ang illustration",
+    zoomOut: "Paliitin ang illustration",
+    resetMap: "Ibalik ang buong mapa",
     sideTag: "Pumili ng lugar",
     sideHeading: "Saan mo gustong mag-explore?",
     sideDesc:
       "Pumili ng Cavite fishing ground. Hindi pa ipinapakita ang species o legal recommendations hangga’t hindi beripikado ang lokal na data.",
-    pendingReviewTitle: "records pending review",
-    pendingReviewDesc: "Ipakikita ang species at fishing rules kapag napatunayan na ang datos.",
+    pendingReviewTitle: "Wala pang verified local records",
+    pendingReviewDesc:
+      "Wala pang species data at fishing rules para sa lugar na ito. Hindi nito sinasabi kung legal o ligtas mangisda.",
     areas: {
       "Manila Bay": { subtitle: "West Cavite coast" },
       "Bacoor Bay": { subtitle: "Bacoor, Cavite" },

@@ -32,6 +32,7 @@ export type Dictionary = {
     settings: string;
     openGuide: string;
     mainMenu: string;
+    menuButton: string;
   };
   policy: {
     tag: string;
@@ -100,6 +101,11 @@ export type Dictionary = {
     heading: string;
     selectAreaLabel: string;
     mapIllustrationNote: string;
+    mapDescription: string;
+    mapUnavailable: string;
+    zoomIn: string;
+    zoomOut: string;
+    resetMap: string;
     sideTag: string;
     sideHeading: string;
     sideDesc: string;

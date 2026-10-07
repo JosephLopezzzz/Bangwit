@@ -41,8 +41,10 @@ export default function RootLayout({ children }: Readonly<{ children: ReactNode 
       <body>
         <SerwistProvider swUrl="/serwist/sw.js">
           <BangwitProvider>
-            <AppHeader />
-            {children}
+            <div className="app-shell">
+              <AppHeader />
+              <div className="app-shell-content">{children}</div>
+            </div>
           </BangwitProvider>
         </SerwistProvider>
       </body>

@@ -10,19 +10,16 @@ export default function ExplorePage() {
   const { dict } = useBangwit();
 
   return (
-    <main className="mx-auto max-w-[1440px] px-5 pb-12 pt-9 sm:px-8 sm:pt-12 lg:px-12">
-      <div className="flex flex-wrap items-center justify-between gap-3">
-        <p className="text-xs font-bold uppercase tracking-[0.16em] text-teal">{dict.home.tag}</p>
-        <span className="inline-flex items-center gap-2 rounded-full bg-amber-50 px-4 py-2 text-xs font-bold text-amber-900">
-          <span className="h-2 w-2 rounded-full bg-amber-400" aria-hidden="true" />
+    <main className="explore-page">
+      <header className="explore-hero">
+        <p className="explore-section-tag">{dict.home.tag}</p>
+        <span className="explore-status">
+          <span aria-hidden="true" />
           {dict.home.pilotBadge}
         </span>
-      </div>
-
-      <h1 className="mt-3 text-4xl font-extrabold tracking-tight text-ink sm:text-5xl lg:text-6xl">
-        {dict.home.title}
-      </h1>
-      <p className="mt-3 max-w-3xl text-lg leading-7 text-muted sm:text-xl">{dict.home.subtitle}</p>
+        <h1>{dict.home.title}</h1>
+        <p className="explore-subtitle">{dict.home.subtitle}</p>
+      </header>
 
       <AreaExplorer />
 

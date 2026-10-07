@@ -17,6 +17,13 @@ colors:
   error-surface: "#fff1f2"
   error-line: "#fecdd3"
   error-ink: "#881337"
+  illustrated-water: "#d9f1f3"
+  illustrated-water-night: "#123d49"
+  illustration-ink: "#154d68"
+  illustration-land-ink: "#386f51"
+  illustration-night-ink: "#e4f3ee"
+  map-marker-slate: "#505d6e"
+  map-marker-slate-hover: "#354a5b"
 typography:
   display:
     fontFamily: "Arial, Helvetica, sans-serif"
@@ -46,11 +53,56 @@ typography:
     fontWeight: 700
     lineHeight: 1.333
     letterSpacing: "0.15em"
+  explore-display:
+    fontFamily: "Arial, Helvetica, sans-serif"
+    fontSize: "clamp(48px, 4.31vw, 72px)"
+    fontWeight: 700
+    lineHeight: 1.08
+    letterSpacing: "-0.035em"
+  explore-map-title:
+    fontFamily: "Arial, Helvetica, sans-serif"
+    fontSize: "24px"
+    fontWeight: 700
+    lineHeight: 1.25
+    letterSpacing: "-0.035em"
+  explore-selector-title:
+    fontFamily: "Arial, Helvetica, sans-serif"
+    fontSize: "26px"
+    fontWeight: 700
+    lineHeight: 1.25
+    letterSpacing: "-0.035em"
+  explore-caption:
+    fontFamily: "Arial, Helvetica, sans-serif"
+    fontSize: "11px"
+    fontWeight: 400
+    lineHeight: 1.636364
+  sidebar-label:
+    fontFamily: "Arial, Helvetica, sans-serif"
+    fontSize: "17px"
+    fontWeight: 400
+    lineHeight: 1.25
+  sidebar-label-active:
+    fontFamily: "Arial, Helvetica, sans-serif"
+    fontSize: "17px"
+    fontWeight: 600
+    lineHeight: 1.25
+  location-title:
+    fontFamily: "Arial, Helvetica, sans-serif"
+    fontSize: "21px"
+    fontWeight: 700
+    lineHeight: 1.2
+    letterSpacing: "-0.025em"
+  marker-number:
+    fontFamily: "Arial, Helvetica, sans-serif"
+    fontSize: "21px"
+    fontWeight: 700
 rounded:
   sm: "8px"
   md: "12px"
   lg: "16px"
   xl: "24px"
+  shell: "20px"
+  navigation: "14px"
   pill: "9999px"
 spacing:
   xs: "4px"
@@ -85,10 +137,12 @@ components:
     rounded: "{rounded.xl}"
     padding: "20px"
   nav-active:
-    backgroundColor: "{colors.sea-glass}"
+    backgroundColor: "color-mix(in srgb, var(--teal-soft) 62%, var(--white))"
     textColor: "{colors.deep-current-teal}"
-    rounded: "{rounded.md}"
-    padding: "10px 16px"
+    typography: "{typography.sidebar-label-active}"
+    rounded: "{rounded.navigation}"
+    padding: "12px 20px"
+    height: "56px"
   status-chip:
     backgroundColor: "{colors.review-surface}"
     textColor: "{colors.review-copy}"
@@ -98,8 +152,54 @@ components:
     backgroundColor: "{colors.deep-water-teal}"
     textColor: "{colors.surface-white}"
     rounded: "{rounded.pill}"
-    height: "44px"
-    width: "44px"
+    typography: "{typography.marker-number}"
+    height: "54px"
+    width: "54px"
+  map-marker-unselected:
+    backgroundColor: "{colors.map-marker-slate}"
+    textColor: "{colors.surface-white}"
+    rounded: "{rounded.pill}"
+    typography: "{typography.marker-number}"
+    height: "54px"
+    width: "54px"
+  app-shell:
+    backgroundColor: "color-mix(in srgb, var(--white) 75%, var(--teal-soft))"
+    rounded: "{rounded.shell}"
+    width: "calc(100% - 36px)"
+    height: "calc(100dvh - 124px)"
+  app-sidebar:
+    backgroundColor: "{colors.surface-white}"
+    width: "200px"
+  explore-map-panel:
+    backgroundColor: "{colors.surface-white}"
+    rounded: "{rounded.shell}"
+    typography: "{typography.explore-map-title}"
+    padding: "22px"
+  explore-location-panel:
+    backgroundColor: "{colors.surface-white}"
+    rounded: "{rounded.shell}"
+    typography: "{typography.explore-selector-title}"
+    padding: "28px"
+  location-row:
+    backgroundColor: "{colors.surface-white}"
+    textColor: "{colors.ink}"
+    rounded: "{rounded.lg}"
+    typography: "{typography.location-title}"
+    padding: "16px"
+    height: "89px"
+  location-row-selected:
+    backgroundColor: "color-mix(in srgb, var(--teal-soft) 42%, var(--white))"
+    textColor: "{colors.ink}"
+    rounded: "{rounded.lg}"
+    typography: "{typography.location-title}"
+    padding: "16px"
+    height: "89px"
+  location-sheet:
+    backgroundColor: "{colors.surface-white}"
+    textColor: "{colors.ink}"
+    rounded: "20px 20px 0 0"
+    padding: "24px 20px max(24px, env(safe-area-inset-bottom))"
+    width: "min(100%, 600px)"
 ---
 
 # Design System: Bangwit
@@ -134,6 +234,11 @@ The palette pairs deep-water teal with bay-mist surfaces and cool, dark ink. Tea
 - **Tidal line:** The thin border and divider color used to define card and control edges.
 - **Focus aqua:** The visible keyboard-focus outline color.
 
+### Illustration and Map Controls
+- **Illustrated water / illustrated water night:** The map canvas under the generated artwork in light and dark themes.
+- **Illustration ink / illustration land ink / illustration night ink:** Labels rendered over the artwork; the land-region label has its own green tone. Keep these colors scoped to the map.
+- **Map-marker slate / map-marker slate hover:** Unselected numbered map controls and matching location circles. Selection uses the existing deep-water teal action fill with white numbers.
+
 **The Review-Color Rule.** Keep amber for review or warning information and rose for errors; neither becomes a general brand accent.
 
 ## Typography
@@ -151,11 +256,25 @@ The palette pairs deep-water teal with bay-mist surfaces and cool, dark ink. Tea
 - **Body** (regular, 16px, 1.5 line-height): Explanatory text and standard reading copy.
 - **Label** (bold, 12px, 0.15em letter-spacing, often uppercase): Short section overlines, category labels, and status context.
 
+Explore has scoped display, map-title, selector-title and caption roles in the frontmatter. Its display uses bold rather than extra-bold Arial, and its caption keeps an 18px reading line. Sidebar labels, location names and marker numbers also have dedicated roles; these do not replace the default type scale on other pages. At widths below the sidebar breakpoint, the Explore display becomes 48px; mobile uses 36px with a 1.1 line-height. Map and selector headings reduce in the compact layouts.
+
 ## Layout
 
 Use a centered content area capped at 1440px. Page gutters are 20px on narrow screens, increase to 32px at the 640px breakpoint, and reach 48px at 1024px. Keep a 4px spacing base, with most component gaps and padding drawn from 12px, 16px, 20px, 24px, and 32px steps.
 
-The home surface uses a flexible, asymmetric map-and-choice composition: it stacks on narrow screens, then places the map beside the selection panel from 1024px upward. The map column receives more width; the chooser keeps at least 320px. The catch-journal form and list use a wider split from 1280px upward. The header wraps its navigation below the brand on small screens and keeps the navigation in one row on wide screens.
+The catch-journal form and list use a wider split from 1280px upward.
+
+### Map-first Explore reference
+
+The approved Explore reference uses an inset application shell capped at 1880px, with a 200px labeled sidebar from 1200px upward. The desktop shell has 18px outer side gutters, a 64px top inset, a 60px bottom inset and a 650px minimum height. Its content scrolls within the shell. Smaller widths use a visible Menu button and a native navigation drawer, with an auto-height shell and 12px outer side gutters.
+
+Explore keeps its content capped at 1440px. At the desktop sidebar breakpoint, its illustrated map and location panel form a 1.87:1 grid with a 16px gap and a 360px minimum chooser width. Both panels align at the top and bottom. From 768px to 1199px, the chooser follows the map and its three options share a row. Below 768px, the chooser becomes a selected-location trigger that opens a native bottom-sheet dialog. The map has a 320px mobile height; desktop and tablet preserve a larger illustration area.
+
+Widths from 1200px to 1439px use denser selector padding and smaller titles and numbered circles. Preserve the desktop row's 89px minimum height, with the mobile sheet reducing rows to a 76px minimum. The shell and panel sizing tokens describe their wide desktop defaults; use these responsive exceptions rather than forcing the desktop composition onto narrow screens.
+
+`public/assets/cavite-waters-map.png` is generated artwork reconstructed from the user-supplied reference. It is an illustration, not verified geography. Labels and interactive markers are rendered separately. Zoom enlarges the illustration; reset restores its overview and never requests GPS. Keep the illustration note outside the map controls and the truthful records-coverage notice below the workspace. Mobile places the illustration note beneath the map panel.
+
+Use the existing Arial family, teal/ink palette, white surfaces and Lucide icons. Respect dark theme and reduced motion. Keep advisories and journal actions below the primary map workspace.
 
 ## Elevation & Depth
 
@@ -165,11 +284,15 @@ The visual system is mostly flat. White surfaces, a fine tidal-line border, and 
 - **Surface separation** (0 1px 3px 0 rgb(0 0 0 / 0.1), 0 1px 2px -1px rgb(0 0 0 / 0.1)): A quiet edge beneath white cards and select controls.
 - **Map-marker lift** (0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1)): Keeps circular location markers legible above the illustrated water.
 
+Explore uses a quieter panel shadow (0 8px 24px rgb(38 105 107 / 4%)), a compact marker shadow (0 5px 12px rgb(16 43 53 / 23%)) and a control shadow (0 3px 8px rgb(16 43 53 / 15%)). These are scoped additions to the flat field-guide surfaces.
+
 **The Border-First Rule.** Use the border and surface contrast to define a resting card; reserve stronger shadow for small interactive markers.
 
 ## Shapes
 
 Use soft, deliberate rounding rather than sharp corners. Small chips are fully pill-shaped; buttons, inputs, and navigation links use a 12px radius; selectable rows and secondary panels use 16px; major cards use 24px. Keep borders thin and light. Clip map art inside its rounded frame, while its coast shapes remain organic and irregular.
+
+The inset Explore shell and its main panels use the shell radius; sidebar links use the navigation radius. Mobile reduces the shell and outer map panel to the existing large radius, while the map itself uses the medium radius. The bottom sheet rounds only its upper corners.
 
 Keyboard focus uses a 3px aqua outline with a 3px offset. Honor reduced-motion preferences: transitions and animation should become effectively immediate when the system requests reduced motion.
 
@@ -199,14 +322,25 @@ Keyboard focus uses a 3px aqua outline with a 3px offset. Honor reduced-motion p
 - **Error:** Use the rose surface, border, and ink colors together so the state stays clear without relying on color alone.
 
 ### Navigation
-- **Style:** Sticky white header with a fine lower border. The brand stays left; navigation links align right on wide screens and scroll horizontally beneath the brand on narrow screens.
-- **States:** The active link uses a sea-glass fill and deep-current text. Inactive links stay quiet until hover.
-- **Treatment:** Keep the help control compact and outlined.
+- **Style:** A labeled sidebar contains Explore, Species, My Catches, My Species and Settings. Language, theme and guide controls sit at the bottom, below a fine divider. Smaller widths expose the same navigation through a visible Menu button and a native drawer.
+- **States:** The active link uses a mixed sea-glass/white fill, deep-current text and a 600 weight. Inactive links use the current muted-text token; hover introduces a lighter sea-glass mix. Keep route labels and Lucide icons together.
+- **Treatment:** Keep language accessible through its native select, and retain accessible labels on icon-only theme, guide and close controls. Preserve the existing route and state behavior when changing layout.
 
 ### Map Selection Marker
-- **Shape:** 44px circular control with a white 3px rim and a soft lift.
-- **Selected:** Deep-water teal fill, a slightly enlarged scale, and a subtle teal ring.
-- **Unselected:** Muted slate fill; keep the marker number white and bold.
+- **Shape:** Circular numbered controls with a white 3px rim and compact lift. Mobile uses a 44px control and 17px number; wide desktop uses the marker size and type tokens.
+- **Selected:** Deep-water teal action fill. The selected marker retains the same size as its peers.
+- **Unselected:** Map-marker slate fill, darkening on hover; keep numbers white and bold. Map focus uses a dark ink outline so it stays distinct from the pale water.
+
+### Explore Map Panel
+- **Character:** The illustration is the dominant discovery surface, framed by a white rounded panel and a quiet heading row.
+- **Controls:** Numbered buttons and the compact waterbody selector share the selected area. Reset restores the illustration overview; plus and minus change its visual scale without implying map navigation or GPS.
+- **Caption:** Keep the small illustration note visible outside the control cluster. The separate coverage notice uses the existing review colors and reflects the selected water.
+- **Dark theme:** Use the dedicated night canvas, reduced artwork brightness and pale map-label ink; keep selected controls teal with white numbers.
+
+### Location Options and Sheet
+- **Rows:** Native radio inputs sit beside a numbered circle, bold location name and muted subtitle. The selected row uses a teal border and a sea-glass/white mix; an unselected radio uses the live muted-text token for its two-pixel border.
+- **Focus:** Place the visible focus outline around the full row. Preserve native radio semantics and the shared selected-area state across markers, dropdown, panel and sheet.
+- **Sheet:** The mobile trigger opens a native modal dialog anchored at the bottom, with upper rounded corners, safe-area padding, a close control and a full-width Done action. Focus starts on the selected radio; the dialog's native keyboard behavior and return to its trigger remain intact.
 
 ## Do's and Don'ts
 

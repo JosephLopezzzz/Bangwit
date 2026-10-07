@@ -1,123 +1,231 @@
 "use client";
 
+import Image from "next/image";
+import { ChevronRight, LocateFixed, MapPin, Minus, Plus, X } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
 import { useBangwit } from "@/components/bangwit-provider";
-import { MapPin } from "lucide-react";
 import { DropdownSelect, type DropdownOption } from "@/components/dropdown-select";
 
 const areas = ["Manila Bay", "Bacoor Bay", "Cañacao Bay"] as const;
 const areaOptions: DropdownOption[] = areas.map((name) => ({ value: name, label: name, icon: MapPin }));
+const markerPositions = [
+  { left: "27.2%", top: "27.6%" },
+  { left: "61.2%", top: "63.8%" },
+  { left: "85.8%", top: "54.2%" },
+];
+
+function LocationOptions({ group }: { group: string }) {
+  const { selectedArea, setSelectedArea, dict } = useBangwit();
+
+  return (
+    <fieldset className="location-options">
+      <legend className="sr-only">{dict.areaExplorer.selectAreaLabel}</legend>
+      {areas.map((name, index) => (
+        <label key={name} className="location-row" data-selected={selectedArea === name}>
+          <span className="location-number" aria-hidden="true">
+            {index + 1}
+          </span>
+          <span className="location-copy">
+            <span className="location-name">{name}</span>
+            <span className="location-subtitle">{dict.areaExplorer.areas[name]?.subtitle}</span>
+          </span>
+          <input
+            type="radio"
+            name={group}
+            value={name}
+            checked={selectedArea === name}
+            onChange={() => setSelectedArea(name)}
+          />
+        </label>
+      ))}
+    </fieldset>
+  );
+}
 
 export function AreaExplorer() {
   const { selectedArea: selected, setSelectedArea: setSelected, dict } = useBangwit();
+  const [zoomStep, setZoomStep] = useState(0);
+  const zoom = 1 + zoomStep / 5;
+  const [mapUnavailable, setMapUnavailable] = useState(false);
+  const [sheetOpen, setSheetOpen] = useState(false);
+  const sheetRef = useRef<HTMLDialogElement>(null);
+  const sheetTriggerRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    const wideScreen = window.matchMedia("(min-width: 768px)");
+    const closeOnWideScreen = () => {
+      if (wideScreen.matches) sheetRef.current?.close();
+    };
+    wideScreen.addEventListener("change", closeOnWideScreen);
+    return () => wideScreen.removeEventListener("change", closeOnWideScreen);
+  }, []);
+
+  useEffect(() => {
+    if (!sheetOpen) return;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [sheetOpen]);
+
+  function openSheet() {
+    sheetTriggerRef.current?.focus();
+    sheetRef.current?.showModal();
+    setSheetOpen(true);
+    sheetRef.current?.querySelector<HTMLInputElement>("input:checked")?.focus();
+  }
 
   return (
-    <div className="mt-8 grid gap-5 lg:grid-cols-[minmax(0,1.65fr)_minmax(320px,0.95fr)]">
-      <section
-        aria-labelledby="area-heading"
-        className="rounded-3xl border border-line bg-white p-4 shadow-sm sm:p-6"
-      >
-        <div className="flex flex-wrap items-center justify-between gap-3">
-          <h2 id="area-heading" className="text-xl font-bold tracking-tight text-ink">
-            {dict.areaExplorer.heading}
-          </h2>
-          <label className="sr-only" htmlFor="waterbody">
-            {dict.areaExplorer.selectAreaLabel}
-          </label>
-          <DropdownSelect
-            id="waterbody"
-            label={dict.areaExplorer.selectAreaLabel}
-            value={selected}
-            onValueChange={setSelected}
-            options={areaOptions}
-            className="dropdown-select--compact"
-          />
-        </div>
+    <>
+      <div className="explore-workspace">
+        <section aria-labelledby="area-heading" className="explore-map-panel">
+          <div className="explore-map-heading">
+            <h2 id="area-heading">{dict.areaExplorer.heading}</h2>
+            <DropdownSelect
+              id="waterbody"
+              label={dict.areaExplorer.selectAreaLabel}
+              value={selected}
+              onValueChange={setSelected}
+              options={areaOptions}
+              className="dropdown-select--compact"
+            />
+          </div>
 
-        <div className="map-illustration relative mt-4 min-h-[320px] overflow-hidden rounded-2xl border sm:min-h-[435px]">
-          <div className="map-water absolute inset-0" />
-          <div
-            aria-hidden="true"
-            className="map-landform map-landform-main absolute -bottom-20 -left-12 h-[72%] w-[76%] rounded-[42%_58%_12%_8%] border-t-[3px] border-white/90 sm:-bottom-28 sm:-left-16"
-          />
-          <div
-            aria-hidden="true"
-            className="map-landform map-landform-inset absolute bottom-10 left-[13%] h-[44%] w-[47%] rotate-[-11deg] rounded-[50%_50%_4%_45%] border-t-2 border-white/80 sm:bottom-14"
-          />
-          <span className="map-area-label absolute left-[46%] top-[20%] text-sm italic">Manila Bay</span>
-          <span className="map-area-label absolute left-[56%] top-[53%] text-sm italic">Bacoor Bay</span>
-          <span className="map-area-label absolute right-[9%] top-[42%] text-sm italic">Cañacao Bay</span>
-          <span className="map-region-label absolute bottom-[23%] left-[26%] text-sm font-bold tracking-[0.15em]">
-            CAVITE
-          </span>
-          {areas.map((name, index) => (
-            <button
-              key={name}
-              type="button"
-              aria-label={`${name} marker`}
-              aria-pressed={selected === name}
-              onClick={() => setSelected(name)}
-              className={`map-marker absolute grid h-11 w-11 place-items-center rounded-full border-[3px] border-white text-sm font-extrabold text-white shadow-lg transition-transform hover:scale-110 ${
-                index === 0 ? "left-[25%] top-[31%]" : index === 1 ? "left-[58%] top-[57%]" : "right-[14%] top-[49%]"
-              } ${selected === name ? "z-10 scale-110 bg-teal ring-4 ring-teal/20" : "bg-slate-600/90"}`}
-            >
-              {index + 1}
-            </button>
-          ))}
-          <span className="absolute bottom-3 left-3 rounded-lg bg-white/95 px-3 py-2 text-xs font-medium text-slate-700 shadow-sm">
-            {dict.areaExplorer.mapIllustrationNote}
-          </span>
-        </div>
-      </section>
-
-      <aside className="rounded-3xl border border-line bg-white p-5 shadow-sm sm:p-6">
-        <p className="text-xs font-bold uppercase tracking-[0.15em] text-teal">{dict.areaExplorer.sideTag}</p>
-        <h2 className="mt-2 text-2xl font-bold tracking-tight text-ink">{dict.areaExplorer.sideHeading}</h2>
-        <p className="mt-2 text-sm leading-6 text-muted">{dict.areaExplorer.sideDesc}</p>
-
-        <div className="mt-5 space-y-2">
-          {areas.map((name, index) => {
-            const subtitle = dict.areaExplorer.areas[name]?.subtitle ?? "";
-            return (
-              <button
-                key={name}
-                type="button"
-                aria-pressed={selected === name}
-                onClick={() => setSelected(name)}
-                className={`flex min-h-[68px] w-full items-center gap-3 rounded-2xl border px-4 py-3 text-left transition-colors ${
-                  selected === name
-                    ? "border-teal bg-teal-soft/60"
-                    : "border-line hover:border-teal/50 hover:bg-slate-50"
-                }`}
-              >
-                <span
-                  className={`grid h-9 w-9 shrink-0 place-items-center rounded-full text-sm font-bold text-white ${
-                    selected === name ? "bg-teal" : "bg-slate-600"
-                  }`}
+          <fieldset className="explore-map" aria-labelledby="area-heading" aria-describedby="map-description">
+            <p id="map-description" className="sr-only">
+              {dict.areaExplorer.mapDescription}
+            </p>
+            <div className="explore-map-stage" style={{ transform: `scale(${zoom})` }}>
+              {!mapUnavailable && (
+                <Image
+                  src="/assets/cavite-waters-map.png"
+                  alt=""
+                  fill
+                  priority
+                  sizes="(min-width: 1200px) 65vw, 100vw"
+                  className="explore-map-art"
+                  onError={() => setMapUnavailable(true)}
+                />
+              )}
+              <span className="explore-water-label explore-label-manila">Manila Bay</span>
+              <span className="explore-water-label explore-label-bacoor-bay">Bacoor Bay</span>
+              <span className="explore-water-label explore-label-canacao">Cañacao Bay</span>
+              <span className="explore-land-label explore-label-cavite-city">Cavite City</span>
+              <span className="explore-land-label explore-label-bacoor">Bacoor</span>
+              <span className="explore-region-label">Cavite</span>
+              {areas.map((name, index) => (
+                <button
+                  key={name}
+                  type="button"
+                  aria-label={`${dict.areaExplorer.selectAreaLabel}: ${name}`}
+                  aria-pressed={selected === name}
+                  onClick={() => setSelected(name)}
+                  onFocus={() => setZoomStep(0)}
+                  className="explore-map-marker"
+                  data-selected={selected === name}
+                  style={markerPositions[index]}
                 >
                   {index + 1}
-                </span>
-                <span className="min-w-0 flex-1">
-                  <span className="block font-bold text-ink">{name}</span>
-                  <span className="mt-0.5 block text-xs text-muted">{subtitle}</span>
-                </span>
-                <span
-                  aria-hidden="true"
-                  className={`h-5 w-5 rounded-full border-2 ${
-                    selected === name ? "border-teal bg-teal shadow-[inset_0_0_0_4px_white]" : "border-slate-300"
-                  }`}
-                />
+                </button>
+              ))}
+            </div>
+            {mapUnavailable && (
+              <p className="explore-map-error" role="status">
+                {dict.areaExplorer.mapUnavailable}
+              </p>
+            )}
+            <div className="explore-map-controls">
+              <button
+                type="button"
+                onClick={() => setZoomStep(0)}
+                aria-label={dict.areaExplorer.resetMap}
+                title={dict.areaExplorer.resetMap}
+              >
+                <LocateFixed aria-hidden="true" size={23} strokeWidth={1.75} />
               </button>
-            );
-          })}
-        </div>
+              <div className="explore-zoom-controls">
+                <button
+                  type="button"
+                  disabled={zoomStep >= 3}
+                  onClick={() => setZoomStep((value) => Math.min(3, value + 1))}
+                  aria-label={dict.areaExplorer.zoomIn}
+                  title={dict.areaExplorer.zoomIn}
+                >
+                  <Plus aria-hidden="true" size={23} strokeWidth={1.75} />
+                </button>
+                <button
+                  type="button"
+                  disabled={zoomStep <= 0}
+                  onClick={() => setZoomStep((value) => Math.max(0, value - 1))}
+                  aria-label={dict.areaExplorer.zoomOut}
+                  title={dict.areaExplorer.zoomOut}
+                >
+                  <Minus aria-hidden="true" size={23} strokeWidth={1.75} />
+                </button>
+              </div>
+            </div>
+          </fieldset>
+          <p className="explore-map-note">{dict.areaExplorer.mapIllustrationNote}</p>
+        </section>
 
-        <div className="mt-5 rounded-2xl border border-amber-100 bg-amber-50/80 p-4" aria-live="polite">
-          <p className="text-sm font-bold text-amber-950">
-            {selected} · {dict.areaExplorer.pendingReviewTitle}
-          </p>
-          <p className="mt-1 text-sm leading-5 text-amber-900/80">{dict.areaExplorer.pendingReviewDesc}</p>
+        <div id="areaPicker" className="explore-location-picker">
+          <aside className="explore-location-panel" aria-labelledby="location-heading">
+            <p className="explore-section-tag">{dict.areaExplorer.sideTag}</p>
+            <h2 id="location-heading">{dict.areaExplorer.sideHeading}</h2>
+            <p className="explore-location-description">{dict.areaExplorer.sideDesc}</p>
+            <LocationOptions group="explore-location" />
+          </aside>
+          <button
+            ref={sheetTriggerRef}
+            type="button"
+            className="explore-location-trigger"
+            onClick={openSheet}
+            aria-haspopup="dialog"
+            aria-expanded={sheetOpen}
+            aria-controls="location-sheet"
+          >
+            <MapPin aria-hidden="true" size={24} />
+            <span>
+              <span className="location-trigger-label">{dict.areaExplorer.selectAreaLabel}</span>
+              <strong>{selected}</strong>
+            </span>
+            <ChevronRight aria-hidden="true" size={22} />
+          </button>
         </div>
-      </aside>
-    </div>
+      </div>
+
+      <div className="explore-coverage" aria-live="polite">
+        <h2>
+          {selected} · {dict.areaExplorer.pendingReviewTitle}
+        </h2>
+        <p>{dict.areaExplorer.pendingReviewDesc}</p>
+      </div>
+
+      <dialog
+        ref={sheetRef}
+        id="location-sheet"
+        aria-labelledby="location-sheet-heading"
+        className="location-sheet"
+        onClose={() => setSheetOpen(false)}
+      >
+        <div className="location-sheet-heading">
+          <h2 id="location-sheet-heading">{dict.areaExplorer.sideHeading}</h2>
+          <button
+            type="button"
+            className="location-sheet-close"
+            aria-label={dict.common.close}
+            onClick={() => sheetRef.current?.close()}
+          >
+            <X aria-hidden="true" size={22} />
+          </button>
+        </div>
+        <p className="explore-location-description">{dict.areaExplorer.sideDesc}</p>
+        <LocationOptions group="explore-location-sheet" />
+        <button type="button" className="location-sheet-done" onClick={() => sheetRef.current?.close()}>
+          {dict.common.done}
+        </button>
+      </dialog>
+    </>
   );
 }
