@@ -1,12 +1,13 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
-import { ArrowRight, ChevronLeft, ChevronRight, Fish, LockKeyhole, NotebookPen, Plus, Trash2, X } from "lucide-react";
+import { ArrowRight, ChevronLeft, ChevronRight, Fish, LockKeyhole, NotebookPen, Plus, X } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { type KeyboardEvent, type PointerEvent, useEffect, useId, useMemo, useRef, useState } from "react";
 import { useBangwit } from "@/components/bangwit-provider";
 import { DropdownSelect } from "@/components/dropdown-select";
+import { FuseButton } from "@/components/fuse-button";
 import { PhotoThumbnail, PhotoViewer } from "@/components/photo-viewer";
 import { usePhotoUrl } from "@/hooks/use-photo-url";
 import { getDispositionLabel, getHabitatLabel, getSpeciesDisplay } from "@/i18n/labels";
@@ -17,7 +18,7 @@ type CatchGalleryProps = {
   entries: CatchEntry[];
   selectedId: number | null;
   onSelect: (id: number) => void;
-  onDelete: (entry: CatchEntry) => void;
+  onDelete: (entry: CatchEntry) => Promise<boolean>;
   onAdd: () => void;
   loading: boolean;
 };
@@ -300,15 +301,28 @@ export function CatchGallery({ entries, selectedId, onSelect, onDelete, onAdd, l
               <div className="catch-gallery-metadata">
                 <div className="catch-gallery-title-row">
                   <h3 title={getSpeciesDisplay(active.species, lang)}>{getSpeciesDisplay(active.species, lang)}</h3>
-                  <button
-                    type="button"
-                    className="catch-gallery-delete"
-                    onClick={() => onDelete(active)}
-                    aria-label={`${dict.catches.deleteCatchAria} ${getSpeciesDisplay(active.species, lang)}`}
-                  >
-                    <Trash2 aria-hidden="true" size={15} />
-                    <span>{dict.common.delete}</span>
-                  </button>
+                  <FuseButton
+                    key={active.id}
+                    label={dict.catches.deleteLog}
+                    undoLabel={dict.catches.deleteUndo}
+                    doneLabel={dict.catches.logDeleted}
+                    committingLabel={dict.catches.deletingLog}
+                    pendingLabel={dict.catches.deletePending}
+                    canceledLabel={dict.catches.deleteCanceled}
+                    failedLabel={dict.catches.deleteFailed}
+                    ariaLabel={`${dict.catches.deleteCatchAria} ${getSpeciesDisplay(active.species, lang)}`}
+                    hint={dict.catches.deleteFuseHint}
+                    onCommit={async () => {
+                      const focused = Boolean(document.activeElement?.closest(".fuse-button"));
+                      const deleted = await onDelete(active);
+                      if (deleted && focused)
+                        requestAnimationFrame(() => {
+                          if (document.activeElement === document.body)
+                            sectionRef.current?.focus({ preventScroll: true });
+                        });
+                      return deleted;
+                    }}
+                  />
                 </div>
                 <p>
                   {formatDate(active.date)} · {getHabitatLabel(active.habitat, lang)}

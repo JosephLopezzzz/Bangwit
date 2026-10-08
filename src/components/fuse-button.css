@@ -1,0 +1,150 @@
+.fuse-button {
+  position: relative;
+  display: inline-grid;
+  flex-shrink: 0;
+  min-height: 36px;
+  border: 1px solid var(--error-line);
+  border-radius: 12px;
+  background: var(--error-surface);
+  color: var(--error-ink);
+  isolation: isolate;
+  touch-action: manipulation;
+}
+.fuse-button:has(:focus-visible) {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+}
+.fuse-button-face {
+  display: inline-flex;
+  grid-area: 1 / 1;
+  min-width: 0;
+  min-height: 34px;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  border: 0;
+  border-radius: 11px;
+  padding: 6px 10px;
+  background: transparent;
+  color: inherit;
+  font:
+    600 12px / 1.3 Arial,
+    Helvetica,
+    sans-serif;
+  white-space: nowrap;
+  cursor: pointer;
+  opacity: 0;
+  visibility: hidden;
+  filter: blur(2px);
+  transition:
+    opacity 200ms ease,
+    filter 200ms ease,
+    visibility 200ms;
+}
+.fuse-button-face:focus-visible {
+  outline: none;
+}
+.fuse-button-face:hover:enabled {
+  background: color-mix(in srgb, var(--error-ink) 7%, transparent);
+}
+.fuse-button-face:active:enabled {
+  background: color-mix(in srgb, var(--error-ink) 12%, transparent);
+}
+.fuse-button-result {
+  cursor: default;
+}
+.fuse-button[data-phase="idle"] .fuse-button-idle,
+.fuse-button[data-phase="armed"] .fuse-button-undo,
+.fuse-button[data-phase="committing"] .fuse-button-result,
+.fuse-button[data-phase="settled"] .fuse-button-result {
+  visibility: visible;
+  opacity: 1;
+  filter: none;
+}
+.fuse-button-seconds {
+  min-width: 2ch;
+  font-variant-numeric: tabular-nums;
+}
+.fuse-button-rim {
+  position: absolute;
+  inset: -1px;
+  width: calc(100% + 2px);
+  height: calc(100% + 2px);
+  overflow: visible;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 200ms ease;
+}
+.fuse-button[data-phase="armed"] .fuse-button-rim {
+  opacity: 1;
+}
+.fuse-button-rim rect {
+  x: 1px;
+  y: 1px;
+  width: calc(100% - 2px);
+  height: calc(100% - 2px);
+  rx: 11px;
+  fill: none;
+  stroke: var(--error-ink);
+  stroke-width: 2px;
+  stroke-linecap: round;
+  stroke-dasharray: 1;
+}
+.fuse-button-spinner {
+  animation: fuse-button-spin 900ms linear infinite;
+}
+.fuse-button:has(.fuse-button-idle:disabled)[data-phase="idle"] {
+  opacity: 0.55;
+}
+.fuse-button-idle:disabled {
+  cursor: not-allowed;
+}
+.fuse-button-settings {
+  max-width: 100%;
+  min-height: 44px;
+}
+.fuse-button-settings .fuse-button-face {
+  min-height: 42px;
+  padding: 8px 14px;
+  font-size: 14px;
+  white-space: normal;
+}
+@keyframes fuse-button-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+@media (max-width: 599px) {
+  .fuse-button {
+    min-height: 44px;
+  }
+  .fuse-button-face {
+    min-height: 42px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .fuse-button-face,
+  .fuse-button-rim {
+    transition: none;
+    filter: none;
+  }
+  .fuse-button-spinner {
+    animation: none;
+  }
+  .fuse-button-rim {
+    display: none;
+  }
+}
+.fuse-button[data-instant] .fuse-button-face {
+  transition: none;
+}
+@media (forced-colors: active) {
+  .fuse-button {
+    border-color: ButtonText;
+    background: ButtonFace;
+    color: ButtonText;
+  }
+  .fuse-button-rim rect {
+    stroke: Highlight;
+  }
+}

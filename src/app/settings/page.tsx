@@ -4,12 +4,14 @@ import { ArrowRight, ArrowUpRight, Check, Languages } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 import { useBangwit } from "@/components/bangwit-provider";
+import { FuseButton } from "@/components/fuse-button";
 import { getFisherTypeLabel, getPreferredWaterLabel } from "@/i18n/labels";
 import { clearCatches, exportCatchBackup, restoreCatchBackup } from "@/lib/storage/catches";
 
 export default function SettingsPage() {
   const { profile, openProfile, startTour, showMessage, lang, setLang, dict } = useBangwit();
   const [busy, setBusy] = useState(false);
+  const [erasePending, setErasePending] = useState(false);
   const [importKey, setImportKey] = useState(0);
 
   async function downloadBackup() {
@@ -66,7 +68,7 @@ export default function SettingsPage() {
   }
 
   async function eraseLocalData() {
-    if (!window.confirm(dict.settings.eraseConfirm)) return;
+    if (busy) return false;
     setBusy(true);
     try {
       await clearCatches();
@@ -81,6 +83,7 @@ export default function SettingsPage() {
         localStorage.removeItem(key);
       }
       window.location.assign("/");
+      return true;
     } catch (error) {
       showMessage(
         error instanceof Error
@@ -90,6 +93,7 @@ export default function SettingsPage() {
             : "Failed to erase local data.",
       );
       setBusy(false);
+      return false;
     }
   }
 
@@ -109,7 +113,8 @@ export default function SettingsPage() {
             <button
               type="button"
               onClick={() => setLang("fil")}
-              className={`flex min-h-12 items-center gap-2 rounded-2xl border px-5 text-sm font-bold transition-all ${
+              disabled={busy || erasePending}
+              className={`flex min-h-12 items-center gap-2 rounded-2xl border px-5 text-sm font-bold transition-all disabled:cursor-not-allowed disabled:opacity-50 ${
                 lang === "fil"
                   ? "border-teal bg-teal-soft text-teal-dark ring-2 ring-teal/20"
                   : "border-line bg-white text-ink hover:bg-paper"
@@ -122,7 +127,8 @@ export default function SettingsPage() {
             <button
               type="button"
               onClick={() => setLang("en")}
-              className={`flex min-h-12 items-center gap-2 rounded-2xl border px-5 text-sm font-bold transition-all ${
+              disabled={busy || erasePending}
+              className={`flex min-h-12 items-center gap-2 rounded-2xl border px-5 text-sm font-bold transition-all disabled:cursor-not-allowed disabled:opacity-50 ${
                 lang === "en"
                   ? "border-teal bg-teal-soft text-teal-dark ring-2 ring-teal/20"
                   : "border-line bg-white text-ink hover:bg-paper"
@@ -147,7 +153,8 @@ export default function SettingsPage() {
           <button
             type="button"
             onClick={() => openProfile("edit")}
-            className="mt-5 min-h-11 rounded-xl border border-teal px-4 font-bold text-teal hover:bg-teal-soft"
+            disabled={busy || erasePending}
+            className="mt-5 min-h-11 rounded-xl border border-teal px-4 font-bold text-teal hover:bg-teal-soft disabled:cursor-not-allowed disabled:opacity-50"
           >
             {dict.settings.editProfileBtn}
           </button>
@@ -161,7 +168,8 @@ export default function SettingsPage() {
           <button
             type="button"
             onClick={startTour}
-            className="mt-5 min-h-11 rounded-xl border border-teal px-4 font-bold text-teal hover:bg-teal-soft"
+            disabled={busy || erasePending}
+            className="mt-5 min-h-11 rounded-xl border border-teal px-4 font-bold text-teal hover:bg-teal-soft disabled:cursor-not-allowed disabled:opacity-50"
           >
             {dict.settings.restartTourBtn}
           </button>
@@ -175,7 +183,7 @@ export default function SettingsPage() {
           <div className="mt-4 flex flex-wrap gap-2">
             <button
               type="button"
-              disabled={busy}
+              disabled={busy || erasePending}
               onClick={() => void downloadBackup()}
               className="min-h-11 rounded-xl bg-teal px-4 font-bold text-white hover:bg-teal-dark disabled:opacity-50"
             >
@@ -183,7 +191,7 @@ export default function SettingsPage() {
             </button>
             <label
               className={`inline-flex min-h-11 cursor-pointer items-center rounded-xl border border-line px-4 font-bold text-ink hover:bg-paper ${
-                busy ? "pointer-events-none opacity-50" : ""
+                busy || erasePending ? "pointer-events-none opacity-50" : ""
               }`}
             >
               {dict.settings.restoreBackupBtn}
@@ -191,7 +199,7 @@ export default function SettingsPage() {
                 key={importKey}
                 type="file"
                 accept="application/json,.json"
-                disabled={busy}
+                disabled={busy || erasePending}
                 onChange={(event) => void importBackup(event.target.files?.[0])}
                 className="sr-only"
               />
@@ -217,14 +225,24 @@ export default function SettingsPage() {
           <p className="text-xs font-bold uppercase tracking-[0.14em] text-teal">{dict.settings.privacyTag}</p>
           <h2 className="mt-2 text-xl font-extrabold text-ink">{dict.settings.privacyTitle}</h2>
           <p className="mt-2 text-sm leading-6 text-muted">{dict.settings.privacyDesc}</p>
-          <button
-            type="button"
-            disabled={busy}
-            onClick={() => void eraseLocalData()}
-            className="mt-4 min-h-11 rounded-xl border border-rose-200 px-4 font-bold text-rose-800 hover:bg-rose-50 disabled:opacity-50"
-          >
-            {dict.settings.eraseBtn}
-          </button>
+          <p className="mt-3 text-sm leading-6 text-muted">{dict.settings.eraseConfirm}</p>
+          <div className="mt-4">
+            <FuseButton
+              className="fuse-button-settings"
+              disabled={busy}
+              label={dict.settings.eraseBtn}
+              undoLabel={dict.catches.deleteUndo}
+              doneLabel={dict.settings.eraseDone}
+              committingLabel={dict.settings.erasingLabel}
+              pendingLabel={dict.settings.erasePending}
+              canceledLabel={dict.settings.eraseCanceled}
+              failedLabel={dict.settings.eraseFailed}
+              ariaLabel={dict.settings.eraseBtn}
+              hint={dict.settings.eraseHint}
+              onPendingChange={setErasePending}
+              onCommit={eraseLocalData}
+            />
+          </div>
         </section>
 
         {/* Policies */}

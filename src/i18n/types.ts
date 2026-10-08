@@ -176,6 +176,14 @@ export type Dictionary = {
     emptyPrivacyNote: string;
     viewMySpecies: string;
     deleteCatchAria: string;
+    deleteLog: string;
+    deleteUndo: string;
+    logDeleted: string;
+    deletingLog: string;
+    deletePending: string;
+    deleteCanceled: string;
+    deleteFailed: string;
+    deleteFuseHint: string;
     unidentifiedSpecies: string;
     dateNotRecorded: string;
     habitatNotRecorded: string;
@@ -258,6 +266,12 @@ export type Dictionary = {
     privacyDesc: string;
     eraseBtn: string;
     eraseConfirm: string;
+    erasePending: string;
+    erasingLabel: string;
+    eraseDone: string;
+    eraseHint: string;
+    eraseFailed: string;
+    eraseCanceled: string;
     policiesTag: string;
     policiesTitle: string;
     policiesDesc: string;

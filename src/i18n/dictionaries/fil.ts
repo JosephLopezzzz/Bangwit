@@ -202,6 +202,15 @@ export const filDictionary: Dictionary = {
     emptyPrivacyNote: "Ikaw lang ang may access sa mga tala sa browser na ito.",
     viewMySpecies: "Tingnan ang My Species",
     deleteCatchAria: "Burahin ang catch na",
+    deleteLog: "Burahin ang tala",
+    deleteUndo: "Kanselahin",
+    logDeleted: "Nabura ang tala",
+    deletingLog: "Binubura…",
+    deletePending: "Naka-pending ang pagbura. Kanselahin sa loob ng 5 segundo para manatili ang tala.",
+    deleteCanceled: "Kinansela ang pagbura.",
+    deleteFailed: "Hindi nabura ang tala. Naka-save pa rin ito; subukang muli.",
+    deleteFuseHint:
+      "Buburahin pagkatapos ng 5 segundo. Kanselahin o Escape para ihinto; hihinto rin kapag lumipat ng huli.",
     unidentifiedSpecies: "Hindi pa natukoy",
     dateNotRecorded: "Petsa hindi naitala",
     habitatNotRecorded: "Uri ng tubig hindi naitala",
@@ -291,8 +300,14 @@ export const filDictionary: Dictionary = {
     privacyDesc:
       "Catch logs at optional na larawan ay naka-save sa browser storage ng device na ito. Walang account o cloud sync. Walang kinukuhang GPS.",
     eraseBtn: "Burahin ang Bangwit data sa device",
+    erasePending: "Naka-pending ang pagbura. Kanselahin sa loob ng 5 segundo para manatili ang Bangwit data.",
+    erasingLabel: "Binubura…",
+    eraseDone: "Nabura ang data",
+    eraseHint: "Buburahin pagkatapos ng 5 segundo. Kanselahin o Escape para ihinto.",
+    eraseFailed: "Hindi nabura ang Bangwit data. Subukang muli.",
+    eraseCanceled: "Kinansela ang pagbura ng data.",
     eraseConfirm:
-      "Burahin ang lahat ng Bangwit catch logs, preferences, at policy acknowledgment sa browser na ito? Hindi ito maibabalik maliban kung may backup ka.",
+      "Buburahin ang lahat ng Bangwit catch logs, larawan, preferences, at policy acknowledgment sa browser na ito kapag natapos ang 5-segundong countdown. Magtabi ng backup; hindi na makakansela pagkatapos.",
     policiesTag: "Terms & privacy",
     policiesTitle: "Basahin ang mga policy",
     policiesDesc:

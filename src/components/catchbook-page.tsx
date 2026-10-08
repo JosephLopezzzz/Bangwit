@@ -182,20 +182,24 @@ export function CatchbookPage() {
   }
 
   async function deleteEntry(entry: CatchEntry) {
-    if (entry.id == null) return;
+    if (entry.id == null) return false;
     try {
       await removeCatch(entry.id);
       const index = sortedEntries.findIndex((item) => item.id === entry.id);
       const remaining = sortedEntries.filter((item) => item.id !== entry.id);
-      setEntries(remaining);
-      if (selectedId === entry.id || selectedId === null) {
-        setSelectedId(remaining[Math.min(index, remaining.length - 1)]?.id ?? null);
-      }
+      setEntries((current) => current.filter((item) => item.id !== entry.id));
+      setSelectedId((current) =>
+        current === entry.id || current === null
+          ? (remaining[Math.min(index, remaining.length - 1)]?.id ?? null)
+          : current,
+      );
       showMessage(lang === "fil" ? "Nabura ang tala sa device na ito." : "Record deleted from this device.");
+      return true;
     } catch (error) {
       setStorageError(
         error instanceof Error ? error.message : lang === "fil" ? "Hindi nabura ang tala." : "Failed to delete record.",
       );
+      return false;
     }
   }
 
