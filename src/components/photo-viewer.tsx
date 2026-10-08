@@ -21,6 +21,7 @@ type PhotoThumbnailProps = {
   className?: string;
   photoCount?: number;
   fit?: "cover" | "contain";
+  opensDialog?: boolean;
 };
 
 export function PhotoThumbnail({
@@ -30,6 +31,7 @@ export function PhotoThumbnail({
   className,
   photoCount = 1,
   fit = "cover",
+  opensDialog = true,
 }: PhotoThumbnailProps) {
   const { dict } = useBangwit();
   const url = usePhotoUrl(photo);
@@ -49,8 +51,9 @@ export function PhotoThumbnail({
       type="button"
       className={classes}
       onClick={onView}
-      aria-haspopup="dialog"
+      aria-haspopup={opensDialog ? "dialog" : undefined}
       aria-label={`${dict.photos.viewFull}: ${altText}`}
+      title={dict.photos.viewFull}
     >
       {url && (
         <Image
@@ -72,7 +75,6 @@ export function PhotoThumbnail({
       )}
       <span className="bangwit-photo-view-hint" aria-hidden="true">
         <Expand size={16} />
-        {dict.photos.viewFull}
       </span>
     </button>
   );

@@ -1,11 +1,12 @@
 "use client";
 
 import { motion, useReducedMotion } from "framer-motion";
-import { ArrowRight, ChevronLeft, ChevronRight, Fish, LockKeyhole, NotebookPen, Plus, X } from "lucide-react";
+import { ArrowRight, ChevronLeft, ChevronRight, Fish, LockKeyhole, NotebookPen, Plus } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { type KeyboardEvent, type PointerEvent, useEffect, useId, useMemo, useRef, useState } from "react";
 import { useBangwit } from "@/components/bangwit-provider";
+import { CatchDetails } from "@/components/catch-details";
 import { DropdownSelect } from "@/components/dropdown-select";
 import { FuseButton } from "@/components/fuse-button";
 import { PhotoThumbnail, PhotoViewer } from "@/components/photo-viewer";
@@ -46,16 +47,14 @@ function GalleryPreview({ entry, title, noPhoto }: { entry: CatchEntry; title: s
 export function CatchGallery({ entries, selectedId, onSelect, onDelete, onAdd, loading }: CatchGalleryProps) {
   const { dict, lang } = useBangwit();
   const headingId = useId();
-  const detailsHeadingId = useId();
   const chooserId = useId();
   const stageRef = useRef<HTMLDivElement>(null);
   const sectionRef = useRef<HTMLElement>(null);
-  const detailsRef = useRef<HTMLDialogElement>(null);
   const gesture = useRef<{ id: number; x: number; y: number; index: number; dragging: boolean } | null>(null);
   const suppressClick = useRef(false);
   const [stageSize, setStageSize] = useState({ width: 0, height: 0 });
   const [viewedId, setViewedId] = useState<number | null>(null);
-  const [detailsEntry, setDetailsEntry] = useState<CatchEntry | null>(null);
+  const [detailsId, setDetailsId] = useState<number | null>(null);
   const reducedMotion = useReducedMotion();
   const selectedIndex = entries.findIndex((entry) => entry.id === selectedId);
   const activeIndex = Math.max(0, selectedIndex);
@@ -104,13 +103,6 @@ export function CatchGallery({ entries, selectedId, onSelect, onDelete, onAdd, l
     observer.observe(stage);
     return () => observer.disconnect();
   }, [loading, hasEntries]);
-
-  useEffect(() => {
-    if (!detailsEntry) return;
-    const dialog = detailsRef.current;
-    if (!dialog || dialog.open) return;
-    dialog.showModal();
-  }, [detailsEntry]);
 
   function formatDate(date: string) {
     const parsed = new Date(`${date}T12:00:00`);
@@ -302,7 +294,7 @@ export function CatchGallery({ entries, selectedId, onSelect, onDelete, onAdd, l
                 <div className="catch-gallery-title-row">
                   <h3 title={getSpeciesDisplay(active.species, lang)}>{getSpeciesDisplay(active.species, lang)}</h3>
                   <FuseButton
-                    key={active.id}
+                    key={`${active.id}-${detailsId !== null}`}
                     label={dict.catches.deleteLog}
                     undoLabel={dict.catches.deleteUndo}
                     doneLabel={dict.catches.logDeleted}
@@ -329,7 +321,7 @@ export function CatchGallery({ entries, selectedId, onSelect, onDelete, onAdd, l
                 </p>
                 <div className="catch-gallery-detail-row">
                   <span>{getDispositionLabel(active.disposition, lang)}</span>
-                  <button type="button" onClick={() => setDetailsEntry(active)} aria-haspopup="dialog">
+                  <button type="button" onClick={() => setDetailsId(active.id ?? null)} aria-haspopup="dialog">
                     {dict.catches.journalViewDetails}
                     <ArrowRight aria-hidden="true" size={14} />
                   </button>
@@ -412,50 +404,16 @@ export function CatchGallery({ entries, selectedId, onSelect, onDelete, onAdd, l
         open={viewedId != null && viewedIndex !== -1}
         onClose={() => setViewedId(null)}
       />
-      <dialog
-        ref={detailsRef}
-        className="catch-gallery-details"
-        aria-labelledby={detailsHeadingId}
-        onClose={() => setDetailsEntry(null)}
-      >
-        <header>
-          <h2 id={detailsHeadingId}>{getSpeciesDisplay(detailsEntry?.species, lang)}</h2>
-          <button
-            type="button"
-            onClick={() => detailsRef.current?.close()}
-            aria-label={dict.catches.journalCloseDetails}
-          >
-            <X size={21} aria-hidden="true" />
-          </button>
-        </header>
-        {detailsEntry && (
-          <div className="catch-gallery-details-body">
-            <dl>
-              {[
-                [dict.catches.dateLabel, formatDate(detailsEntry.date)],
-                [dict.catches.habitatLegend, getHabitatLabel(detailsEntry.habitat, lang)],
-                [dict.catches.dispositionLabel, getDispositionLabel(detailsEntry.disposition, lang)],
-                [dict.catches.locationLabel, detailsEntry.location],
-                [dict.catches.lengthLabel, detailsEntry.length],
-                [dict.catches.weightLabel, detailsEntry.weight],
-                [dict.catches.baitLabel, detailsEntry.bait],
-                [dict.catches.notesLabel, detailsEntry.notes],
-              ]
-                .filter(([, value]) => value)
-                .map(([label, value]) => (
-                  <div key={label}>
-                    <dt>{label}</dt>
-                    <dd>{value}</dd>
-                  </div>
-                ))}
-            </dl>
-            <p className="catch-gallery-private">
-              <LockKeyhole size={14} aria-hidden="true" />
-              {dict.common.offlineSaved}
-            </p>
-          </div>
-        )}
-      </dialog>
+      <CatchDetails
+        entries={entries}
+        entryId={detailsId}
+        onSelect={(id) => {
+          setDetailsId(id);
+          onSelect(id);
+        }}
+        onClose={() => setDetailsId(null)}
+        formatDate={formatDate}
+      />
     </>
   );
 }

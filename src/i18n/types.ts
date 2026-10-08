@@ -127,6 +127,9 @@ export type Dictionary = {
     journalNoPhoto: string;
     journalViewDetails: string;
     journalCloseDetails: string;
+    detailsBack: string;
+    detailsNoOptional: string;
+    detailsMoreBelow: string;
     photoDestinationCompact: string;
     title: string;
     subtitle: string;
