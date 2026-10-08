@@ -1,0 +1,509 @@
+.app-shell:has(.catches-page) {
+  height: 100dvh;
+  min-height: 0;
+  overflow: hidden;
+}
+.app-shell-content:has(> .catches-page) {
+  min-height: 0;
+  overflow: hidden;
+}
+.catches-page {
+  display: flex;
+  height: 100%;
+  min-height: 0;
+  flex-direction: column;
+  gap: 16px;
+  padding: 20px 24px;
+}
+.catches-page-heading {
+  display: flex;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.catches-page-heading h1 {
+  margin: 0;
+  font-size: clamp(26px, 2.5vw, 34px);
+  font-weight: 800;
+  line-height: 1.15;
+  letter-spacing: -0.035em;
+}
+.catches-page-heading p {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.4;
+}
+.catches-privacy {
+  display: inline-flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 6px;
+  border-radius: 999px;
+  background: var(--teal-soft);
+  padding: 8px 12px;
+  color: var(--teal-dark);
+  font-size: 11px;
+  font-weight: 600;
+}
+.catches-storage-error {
+  margin: 0;
+  max-height: 76px;
+  flex-shrink: 0;
+  overflow-y: auto;
+  border: 1px solid var(--error-line);
+  border-radius: 10px;
+  padding: 8px 12px;
+  background: var(--error-surface);
+  color: var(--error-ink);
+  font-size: 13px;
+}
+.catches-workspace {
+  display: grid;
+  min-height: 0;
+  flex: 1;
+  grid-template-columns: minmax(0, 1fr) minmax(360px, 420px);
+  gap: 20px;
+}
+.catches-journal-panel {
+  min-width: 0;
+  min-height: 0;
+}
+.catch-form {
+  display: flex;
+  min-width: 0;
+  min-height: 0;
+  flex-direction: column;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 20px;
+  background: var(--white);
+}
+.catch-form h2 {
+  margin: 0;
+  flex-shrink: 0;
+  padding: 12px 18px 10px;
+  font-size: 20px;
+  font-weight: 800;
+  line-height: 1.2;
+}
+.catch-form-tabs,
+.catches-mobile-tabs {
+  display: flex;
+  flex-shrink: 0;
+  gap: 4px;
+}
+.catch-form-tabs {
+  margin: 0 18px;
+  border-bottom: 1px solid var(--line);
+}
+.catch-form-tabs button,
+.catches-mobile-tabs button {
+  display: inline-flex;
+  min-height: 40px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 0;
+  background: transparent;
+  padding: 8px 12px;
+  color: var(--muted);
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.catch-form-tabs button {
+  border-bottom: 2px solid transparent;
+}
+.catch-form-tabs button[aria-selected="true"] {
+  border-color: var(--teal);
+  color: var(--teal-dark);
+}
+.catch-form-tabs :where(button) span,
+.catches-mobile-tabs :where(button) span {
+  border-radius: 999px;
+  padding: 2px 6px;
+  background: var(--teal-soft);
+  color: var(--teal-dark);
+  font-size: 11px;
+}
+.catch-form-tabs button:disabled {
+  cursor: wait;
+  opacity: 0.6;
+}
+.catch-form-body {
+  margin: 0;
+  min-width: 0;
+  min-height: 0;
+  flex: 1;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+  border: 0;
+  padding: 12px 18px;
+  scrollbar-width: thin;
+}
+.catch-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.catch-fields[hidden] {
+  display: none;
+}
+.catch-fields > div > .relative {
+  margin-top: 6px;
+}
+.catch-fields :where(.relative) > button {
+  min-height: 42px;
+}
+.catch-form-tabs button:hover:enabled {
+  color: var(--teal-dark);
+}
+.catch-field-label {
+  display: block;
+  margin: 0;
+  font-size: 12px;
+  font-weight: 700;
+  line-height: 1.4;
+}
+.catch-field-label > span {
+  margin-left: 4px;
+  color: var(--muted);
+  font-weight: 400;
+}
+.catch-control {
+  display: block;
+  width: 100%;
+  min-height: 42px;
+  margin-top: 6px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 9px 12px;
+  background: var(--white);
+  color: var(--ink);
+  font-size: 13px;
+  line-height: 1.4;
+}
+.catch-control::placeholder {
+  color: var(--muted);
+}
+.catch-control:focus {
+  border-color: var(--teal);
+  outline: 2px solid color-mix(in srgb, var(--teal) 30%, transparent);
+  outline-offset: 1px;
+}
+textarea.catch-control {
+  min-height: 90px;
+  resize: vertical;
+}
+.catch-field-help {
+  margin: 5px 0 0;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.4;
+}
+.catch-field-row {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+.catch-field-row .dropdown-select {
+  margin-top: 6px;
+}
+.catch-field-row .dropdown-select-trigger {
+  min-height: 42px;
+  padding: 9px 10px;
+  box-shadow: none;
+  font-size: 12px;
+}
+.catch-photo-dropzone {
+  display: flex;
+  min-width: 0;
+  margin: 6px 0 0;
+  min-height: 64px;
+  align-items: center;
+  gap: 8px;
+  margin-top: 6px;
+  border: 1px dashed var(--line);
+  border-radius: 12px;
+  background: color-mix(in srgb, var(--teal-soft) 20%, var(--white));
+  padding: 8px;
+  transition:
+    border-color 150ms,
+    background-color 150ms;
+}
+.catch-photo-dropzone:hover,
+.catch-photo-dropzone[data-dragging="true"] {
+  border-color: var(--teal);
+  background: var(--teal-soft);
+}
+.catch-photo-choose {
+  display: flex;
+  min-width: 0;
+  min-height: 44px;
+  flex: 1;
+  align-items: center;
+  gap: 10px;
+  border: 0;
+  padding: 4px;
+  background: transparent;
+  text-align: left;
+  cursor: pointer;
+}
+.catch-photo-choose > svg {
+  flex-shrink: 0;
+  color: var(--teal);
+}
+.catch-photo-choose > span {
+  min-width: 0;
+}
+.catch-photo-choose strong {
+  display: block;
+  color: var(--teal-dark);
+  font-size: 12px;
+}
+.catch-photo-choose small {
+  display: block;
+  overflow: hidden;
+  margin-top: 3px;
+  color: var(--muted);
+  font-size: 11px;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+.catch-photo-attached {
+  display: flex;
+  flex-shrink: 0;
+  align-items: center;
+  gap: 3px;
+}
+.catch-photo-miniature {
+  width: 54px;
+  height: 54px;
+  border-radius: 8px;
+}
+.catch-photo-miniature .bangwit-photo-view-hint {
+  right: 3px;
+  bottom: 3px;
+  left: 3px;
+  justify-content: center;
+  padding: 3px;
+  font-size: 0;
+}
+.catch-photo-miniature :where(.bangwit-photo-view-hint) svg {
+  width: 13px;
+  height: 13px;
+}
+.catch-photo-remove {
+  display: grid;
+  width: 32px;
+  min-height: 44px;
+  place-items: center;
+  border: 0;
+  border-radius: 8px;
+  background: transparent;
+  color: var(--muted);
+  cursor: pointer;
+}
+.catch-photo-remove:hover {
+  background: var(--error-surface);
+  color: var(--error-ink);
+}
+.catch-photo-destination {
+  display: flex;
+  align-items: flex-start;
+  gap: 5px;
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.4;
+}
+.catch-photo-destination svg {
+  flex-shrink: 0;
+}
+.catch-photo-feedback {
+  min-height: 16px;
+  margin-top: 5px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.4;
+}
+.catch-photo-feedback[data-error="true"] {
+  color: var(--error-ink);
+}
+.catch-photo-feedback .catch-photo-progress {
+  margin-top: 4px;
+}
+.catch-habitat {
+  margin: 0;
+  min-width: 0;
+  border: 0;
+  padding: 0;
+}
+.catch-habitat-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 6px;
+  margin-top: 6px;
+}
+.catch-habitat-option {
+  display: flex;
+  min-height: 40px;
+  align-items: center;
+  gap: 7px;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  padding: 7px 9px;
+  cursor: pointer;
+}
+.catch-habitat-option:has(input:checked) {
+  border-color: var(--teal);
+  background: var(--teal-soft);
+}
+.catch-habitat-option input {
+  accent-color: var(--teal-action);
+}
+.catch-habitat-option strong,
+.catch-habitat-option small {
+  display: block;
+  font-size: 11px;
+  line-height: 1.25;
+}
+.catch-habitat-option small {
+  margin-top: 2px;
+  color: var(--muted);
+  font-size: 10px;
+}
+.catch-form-footer {
+  flex-shrink: 0;
+  border-top: 1px solid var(--line);
+  padding: 10px 18px;
+  background: var(--white);
+}
+.catch-form-footer > button {
+  display: flex;
+  width: 100%;
+  min-height: 44px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: 0;
+  border-radius: 10px;
+  background: var(--teal-action);
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+  cursor: pointer;
+}
+.catch-form-footer > button:hover:enabled {
+  background: var(--teal-action-hover);
+}
+.catch-form-footer > button:disabled {
+  cursor: wait;
+  opacity: 0.65;
+}
+.catch-form-footer p {
+  margin: 6px 0 0;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.4;
+}
+.catches-mobile-tabs {
+  display: none;
+}
+@media (min-width: 1000px) {
+  .catches-page {
+    gap: 12px;
+    padding: 18px 24px;
+  }
+  .catch-form h2 {
+    padding: 10px 18px 8px;
+  }
+  .catch-form-body {
+    padding: 8px 18px;
+  }
+  .catch-form-footer {
+    padding: 8px 18px;
+  }
+  .catch-photo-feedback {
+    position: relative;
+  }
+  .catch-photo-feedback .catch-photo-progress {
+    position: absolute;
+    right: 0;
+    bottom: -8px;
+    left: 0;
+    height: 6px;
+    margin-top: 0;
+  }
+}
+@media (max-width: 1199px) {
+  .app-shell:has(.catches-page) {
+    display: flex;
+    flex-direction: column;
+  }
+  .app-shell-content:has(> .catches-page) {
+    flex: 1;
+  }
+}
+@media (max-width: 999px) {
+  .catches-page {
+    gap: 12px;
+    padding: 16px;
+  }
+  .catches-workspace {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 0;
+  }
+  .catches-mobile-tabs {
+    display: flex;
+    border: 1px solid var(--line);
+    border-radius: 12px;
+    padding: 3px;
+    background: var(--white);
+  }
+  .catches-mobile-tabs > button {
+    flex: 1;
+    border-radius: 8px;
+  }
+  .catches-mobile-tabs > button[aria-selected="true"] {
+    background: var(--teal-soft);
+    color: var(--teal-dark);
+  }
+  .catches-page[data-mobile-view="journal"] .catch-form,
+  .catches-page[data-mobile-view="form"] .catches-journal-panel {
+    display: none;
+  }
+}
+@media (max-width: 599px) {
+  .catches-page {
+    gap: 10px;
+    padding: 12px;
+  }
+  .catches-page-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .catches-page-heading h1 {
+    font-size: 26px;
+  }
+  .catches-page-heading p {
+    margin-top: 4px;
+    font-size: 12px;
+  }
+  .catches-privacy {
+    padding: 4px 8px;
+    font-size: 10px;
+  }
+  .catch-form h2 {
+    padding-top: 12px;
+    font-size: 18px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .catch-photo-dropzone {
+    transition: none;
+  }
+}

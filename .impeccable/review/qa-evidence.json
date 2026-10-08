@@ -1,0 +1,111 @@
+{
+  "environment": "Headless system Chrome through temporary playwright-core; fresh nonpersistent contexts; localhost:3000 development server",
+  "timezone": "Asia/Manila",
+  "fixtures": "Synthetic QA records only. Photo bytes copied from public/assets/bilog.png. Policy/profile/tour/lang/theme seeded only into isolated browser contexts; user's browser profiles and device catches were not accessed or changed.",
+  "first_round": "8 viewport/count captures remain in task temporary directory. They exposed core overflow, disabled-arrow focus loss, and hidden numeric-validation tab failure.",
+  "final_scan": {
+    "scenarios": 8,
+    "runtime_errors": 0,
+    "document_matches_viewport": true,
+    "horizontal_overflow": false,
+    "counts": [
+      0,
+      1,
+      2,
+      8
+    ],
+    "viewports": [
+      "1535x712",
+      "1366x768",
+      "390x844"
+    ],
+    "languages_themes": [
+      "EN light",
+      "FIL dark"
+    ],
+    "capture_timing": "Desktop main/form/empty/single/two/progress screenshots refreshed after reviewer desktop-fit fix with explicit image decode and settled bounds. Unaffected viewer, My Species, mobile, and short-screen captures retained."
+  },
+  "final_interactions": {
+    "passed": 15,
+    "failed": 1,
+    "runtime_errors": 0
+  },
+  "remaining_material_finding": null,
+  "verified_behaviors": [
+    "Gallery arrows/dots/chooser expose catch count and boundaries; no-photo catch remains a slide.",
+    "Gallery keyboard remains scoped away from text input, repeated thumbnail navigation retains focus, End followed by Home works after an arrow becomes disabled.",
+    "Single horizontal pointer drag changes one catch and suppresses accidental photo opening.",
+    "Full photo is object-fit contain; native dialog is within viewport; Escape returns focus to thumbnail.",
+    "Catch chooser popup and 500-character detail modal remain usable.",
+    "All typed optional details persist through core/details and mobile journal/form tabs.",
+    "Invalid hidden length1001 reveals Details and focuses length input; no catch is saved.",
+    "Drag-and-drop and file picker show filename and pointer cursor; selected photo opens in full viewer.",
+    "Invalid MIME and 10MB+ photo reject with visible error and preserve the previous valid photo.",
+    "Test-only transaction abort after add request success rolls back storage and preserves all fields/photo/count; retry commits new catch, selects it, and persists photo bytes after reload.",
+    "Test-only1500ms asynchronous transaction keepalive shows progressbar while saving, switches to core tab, disables fields, and completes only after transaction commit.",
+    "Deleting active last catch updates count and selects remaining last catch.",
+    "My Species uses older available image when newest catch lacks photo, shows2-photo badge, supports hover/pointer/full-viewer navigation, and keeps no-photo placeholder noninteractive.",
+    "Mobile390x844 Save remains at y757,height44; calendar293x303 and dropdown158x138 remain within viewport.",
+    "Short844x480 gallery keeps navigation/footer outside contained image/details scroll (81px visible,202px content).",
+    "Shrunk390x480 mobile form keeps Save at y393,height44 and section tabs visible; body retains71px contained scrolling area.",
+    "Reduced-motion disables thumbnail transform."
+  ],
+  "screenshots": {
+    "desktop.png": "1366x768 EN light, eight catches",
+    "user-1535.png": "1535x712 EN light, active photo, final interaction source",
+    "mobile.png": "390x844 EN light, eight catches",
+    "desktop-fil-dark.png": "1535x712 FIL dark, eight catches",
+    "mobile-fil-dark.png": "390x844 FIL dark, eight catches",
+    "empty-journal.png": "1535x712 empty journal",
+    "single-journal.png": "1535x712 one catch without photo",
+    "two-journal.png": "1535x712 two catches, active photo",
+    "my-species.png": "Desktop My Species synthetic grouped-photo fixtures",
+    "my-species-viewer.png": "My Species full viewer on second of two photos",
+    "user-1535-viewer.png": "Catch gallery full photo viewer",
+    "mobile-form.png": "390x844 FIL dark core form",
+    "mobile-details.png": "390x844 FIL dark details form",
+    "short-gallery.png": "844x480 contained gallery scrolling with pinned navigation/footer",
+    "shrunk-mobile-form.png": "390x480 keyboard-like height form with pinned Save",
+    "attached-photo-upload-progress.png": "1535x712 selected synthetic photo during real pending local IndexedDB transaction",
+    "user-1535-attached-photo.png": "1535x712 EN light attached photo, final desktop fit correction",
+    "desktop-fil-dark-attached-photo.png": "1535x712 FIL dark attached photo, final desktop fit correction",
+    "desktop-fil-dark-upload-progress.png": "1535x712 FIL dark pending real local photo transaction, final desktop fit correction"
+  },
+  "browser_state": "All headless browsers and isolated contexts closed; user data untouched. Reviewer fix validation complete.",
+  "previous_material_finding": {
+    "viewport": "1535x712",
+    "issue": "Core catch form still needs contained scrolling to reveal bottom of water-type controls at the user's exact viewport.",
+    "empty_photo_body": {
+      "clientHeight": 417,
+      "scrollHeight": 429,
+      "overflow": 12
+    },
+    "attached_photo_body": {
+      "clientHeight": 417,
+      "scrollHeight": 437,
+      "overflow": 20
+    },
+    "suggested_acceptance": "Core and details body scrollHeight <= clientHeight + 1 at 1535x712, both without and with selected photo. Additional contained scrolling may remain for shorter or keyboard-like viewports.",
+    "screenshot": "attached-photo-upload-progress.png"
+  },
+  "reviewer_fix_verification": {
+    "file": "qa-fix-verification.json",
+    "passed": true,
+    "checks": 14,
+    "failed": 0,
+    "runtimeErrors": 0,
+    "desktopFilesRecapturedAfterImageDecodeAndSettledBounds": [
+      "user-1535.png",
+      "user-1535-attached-photo.png",
+      "attached-photo-upload-progress.png",
+      "desktop-fil-dark.png",
+      "desktop-fil-dark-attached-photo.png",
+      "desktop-fil-dark-upload-progress.png",
+      "empty-journal.png",
+      "single-journal.png",
+      "two-journal.png",
+      "desktop.png"
+    ],
+    "unchangedValidCaptures": "Viewer, My Species, mobile, short viewport files retained because fix is desktop form CSS only."
+  }
+}

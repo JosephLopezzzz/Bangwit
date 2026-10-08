@@ -1,0 +1,173 @@
+{
+  "checks": [
+    {
+      "name": "desktop core and details fit without contained scroll",
+      "passed": false,
+      "error": "AssertionError [ERR_ASSERTION]: core {\"clientHeight\":417,\"scrollHeight\":429,\"scrollTop\":0}\n    at file:///C:/Users/Joseph%20T%20Lopez/AppData/Local/Temp/bangwit-gallery-qa-196a04d570f84ba39dfde52950dc5546/interactions.mjs:23:12\n    at async check (file:///C:/Users/Joseph%20T%20Lopez/AppData/Local/Temp/bangwit-gallery-qa-196a04d570f84ba39dfde52950dc5546/interactions.mjs:8:24)\n    at async file:///C:/Users/Joseph%20T%20Lopez/AppData/Local/Temp/bangwit-gallery-qa-196a04d570f84ba39dfde52950dc5546/interactions.mjs:18:3"
+    },
+    {
+      "name": "gallery arrows, no-photo placeholder, full-photo Escape focus",
+      "passed": true,
+      "detail": {
+        "position": "2 of 8 catches",
+        "viewerRect": {
+          "x": 227.5,
+          "y": 15,
+          "width": 1080,
+          "height": 682
+        }
+      }
+    },
+    {
+      "name": "gallery keyboard stays scoped and boundary controls work",
+      "passed": true
+    },
+    {
+      "name": "catch chooser portal and long details dialog",
+      "passed": true,
+      "detail": {
+        "chooserBox": {
+          "x": 760,
+          "y": 355,
+          "width": 290,
+          "height": 270
+        }
+      }
+    },
+    {
+      "name": "horizontal drag navigates once without opening photo viewer",
+      "passed": true
+    },
+    {
+      "name": "hidden invalid detail reveals correct tab and preserves all drafts",
+      "passed": true
+    },
+    {
+      "name": "drag drop accepts photo and click preview keeps original visible",
+      "passed": true
+    },
+    {
+      "name": "invalid and oversized photos show errors without discarding valid attached photo",
+      "passed": true,
+      "detail": {
+        "attached": {
+          "clientHeight": 417,
+          "scrollHeight": 437,
+          "scrollTop": 0
+        }
+      }
+    },
+    {
+      "name": "save failure preserves drafts and photo; retry commits and selects new catch",
+      "passed": true,
+      "detail": {
+        "persistedPhoto": {
+          "size": 757830,
+          "type": "image/png",
+          "name": "qa-fixture-photo.png"
+        },
+        "recordCount": 9,
+        "transactionProgressObserved": true
+      }
+    },
+    {
+      "name": "delete active last catch updates count and selection",
+      "passed": true
+    },
+    {
+      "name": "My Species latest available photo, hover, photo count, viewer arrows, no-photo placeholder",
+      "passed": true
+    },
+    {
+      "name": "mobile form tabs and journal retain details, save action always visible",
+      "passed": true,
+      "detail": {
+        "saveRect": {
+          "x": 31,
+          "y": 757,
+          "width": 328,
+          "height": 44
+        },
+        "coreBody": {
+          "clientHeight": 435,
+          "scrollHeight": 435,
+          "scrollTop": 0
+        }
+      }
+    },
+    {
+      "name": "mobile calendar popup and dropdown options remain in viewport",
+      "passed": true,
+      "detail": {
+        "calendarBox": {
+          "x": 31,
+          "y": 247.671875,
+          "width": 293,
+          "height": 303
+        },
+        "popupBox": {
+          "x": 201,
+          "y": 581.453125,
+          "width": 158,
+          "height": 138
+        }
+      }
+    },
+    {
+      "name": "short viewport keeps gallery navigation visible with contained content scroll",
+      "passed": true,
+      "detail": {
+        "navigation": {
+          "x": 37,
+          "y": 340,
+          "width": 770,
+          "height": 55
+        },
+        "footer": {
+          "x": 37,
+          "y": 395,
+          "width": 770,
+          "height": 48
+        },
+        "scrolls": [
+          {
+            "className": "catch-gallery-content",
+            "clientHeight": 81,
+            "scrollHeight": 202
+          }
+        ]
+      }
+    },
+    {
+      "name": "shrunk mobile form keeps Save and section tabs visible",
+      "passed": true,
+      "detail": {
+        "save": {
+          "x": 31,
+          "y": 393,
+          "width": 328,
+          "height": 44
+        },
+        "tabs": {
+          "x": 31,
+          "y": 270.28125,
+          "width": 328,
+          "height": 41
+        },
+        "body": {
+          "clientHeight": 71,
+          "scrollHeight": 429,
+          "scrollTop": 0
+        }
+      }
+    },
+    {
+      "name": "reduced motion disables thumbnail transform and gallery animation",
+      "passed": true,
+      "detail": {
+        "imageTransform": "none"
+      }
+    }
+  ],
+  "errors": []
+}

@@ -114,6 +114,20 @@ export type Dictionary = {
     areas: Record<string, { subtitle: string }>;
   };
   catches: {
+    catchTab: string;
+    detailsTab: string;
+    journalTab: string;
+    logCatchTab: string;
+    journalPrevious: string;
+    journalNext: string;
+    journalOf: string;
+    journalStart: string;
+    journalEnd: string;
+    journalChoose: string;
+    journalNoPhoto: string;
+    journalViewDetails: string;
+    journalCloseDetails: string;
+    photoDestinationCompact: string;
     title: string;
     subtitle: string;
     formTag: string;
@@ -207,6 +221,15 @@ export type Dictionary = {
     cardTag: string;
     personalCatchesLabel: string;
     disclaimer: string;
+  };
+  photos: {
+    viewFull: string;
+    previous: string;
+    next: string;
+    of: string;
+    noPhoto: string;
+    photoTaken: string;
+    viewerLabel: string;
   };
   settings: {
     tag: string;

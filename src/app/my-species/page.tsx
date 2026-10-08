@@ -1,36 +1,20 @@
 "use client";
 
-import Image from "next/image";
+import { Fish } from "lucide-react";
 import Link from "next/link";
-import { Fish, Waves } from "lucide-react";
 import { useEffect, useMemo, useState } from "react";
 import { useBangwit } from "@/components/bangwit-provider";
+import { type PhotoItem, PhotoThumbnail, PhotoViewer } from "@/components/photo-viewer";
 import { listCatches } from "@/lib/storage/catches";
 import type { CatchEntry } from "@/types/catch";
-
-function Photo({ photo, altText }: { photo: Blob | File | null; altText: string }) {
-  const [url, setUrl] = useState("");
-  useEffect(() => {
-    if (!photo) return;
-    const objectUrl = URL.createObjectURL(photo);
-    setUrl(objectUrl);
-    return () => URL.revokeObjectURL(objectUrl);
-  }, [photo]);
-
-  return url ? (
-    <Image src={url} alt={altText} width={560} height={320} unoptimized className="aspect-[16/9] w-full object-cover" />
-  ) : (
-    <div className="grid aspect-[16/9] place-items-center bg-teal-soft" aria-hidden="true">
-      <Waves className="h-8 w-8 text-teal" strokeWidth={1.75} />
-    </div>
-  );
-}
 
 export default function MySpeciesPage() {
   const { lang, dict } = useBangwit();
   const [entries, setEntries] = useState<CatchEntry[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
+  const [viewerPhotos, setViewerPhotos] = useState<PhotoItem[]>([]);
+  const [viewerOpen, setViewerOpen] = useState(false);
 
   useEffect(() => {
     listCatches()
@@ -87,10 +71,7 @@ export default function MySpeciesPage() {
           <p className="text-sm text-muted">{dict.mySpecies.loading}</p>
         ) : species.length === 0 ? (
           <section className="rounded-3xl border border-line bg-white px-6 py-12 text-center shadow-sm sm:px-10">
-            <div
-              className="mx-auto grid h-16 w-16 place-items-center rounded-2xl bg-teal-soft"
-              aria-hidden="true"
-            >
+            <div className="mx-auto grid h-16 w-16 place-items-center rounded-2xl bg-teal-soft" aria-hidden="true">
               <Fish className="h-8 w-8 text-teal" strokeWidth={1.75} />
             </div>
             <p className="mt-5 text-xs font-bold uppercase tracking-[0.15em] text-teal">{dict.mySpecies.emptyTag}</p>
@@ -115,13 +96,29 @@ export default function MySpeciesPage() {
             )}
             <div className="grid gap-4 sm:grid-cols-2 xl:grid-cols-3">
               {species.map(({ name, catches }) => {
-                const latest = [...catches].sort((a, b) => b.date.localeCompare(a.date))[0];
+                const sorted = [...catches].sort(
+                  (a, b) => b.date.localeCompare(a.date) || b.savedAt.localeCompare(a.savedAt),
+                );
+                const latest = sorted[0];
+                const photos = sorted.flatMap<PhotoItem>((entry, index) =>
+                  entry.photo
+                    ? [{ id: entry.id ?? `${name}-${index}`, photo: entry.photo, title: name, date: entry.date }]
+                    : [],
+                );
                 return (
                   <article
                     key={name.toLowerCase()}
                     className="overflow-hidden rounded-3xl border border-line bg-white shadow-sm"
                   >
-                    <Photo photo={latest.photo} altText={`${name} photo`} />
+                    <PhotoThumbnail
+                      photo={photos[0]?.photo ?? null}
+                      altText={name}
+                      photoCount={photos.length}
+                      onView={() => {
+                        setViewerPhotos(photos);
+                        setViewerOpen(true);
+                      }}
+                    />
                     <div className="p-5">
                       <p className="text-xs font-bold uppercase tracking-[0.12em] text-teal">
                         {dict.mySpecies.cardTag}
@@ -140,6 +137,7 @@ export default function MySpeciesPage() {
           </>
         )}
       </div>
+      <PhotoViewer photos={viewerPhotos} open={viewerOpen} onClose={() => setViewerOpen(false)} />
     </main>
   );
 }

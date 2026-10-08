@@ -1,7 +1,8 @@
 "use client";
 
 import { Check, ChevronDown, type LucideIcon } from "lucide-react";
-import { useEffect, useRef, useState, type KeyboardEvent } from "react";
+import { type CSSProperties, type KeyboardEvent, useEffect, useLayoutEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 
 export type DropdownOption = {
   value: string;
@@ -18,6 +19,8 @@ type DropdownSelectProps = {
   name?: string;
   className?: string;
   initialFocus?: boolean;
+  portal?: boolean;
+  disabled?: boolean;
 };
 
 export function DropdownSelect({
@@ -29,12 +32,20 @@ export function DropdownSelect({
   name,
   className = "",
   initialFocus = false,
+  portal = false,
+  disabled = false,
 }: DropdownSelectProps) {
   const rootRef = useRef<HTMLDivElement>(null);
+  const triggerRef = useRef<HTMLButtonElement>(null);
+  const popupRef = useRef<HTMLDivElement>(null);
   const searchTextRef = useRef("");
   const searchTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const [isOpen, setIsOpen] = useState(false);
-  const selectedIndex = Math.max(0, options.findIndex((option) => option.value === value));
+  const [popupStyle, setPopupStyle] = useState<CSSProperties>({ position: "fixed", visibility: "hidden" });
+  const selectedIndex = Math.max(
+    0,
+    options.findIndex((option) => option.value === value),
+  );
   const [activeIndex, setActiveIndex] = useState(selectedIndex);
   const selectedOption = options[selectedIndex];
   const listboxId = `${id}-options`;
@@ -44,7 +55,9 @@ export function DropdownSelect({
     if (!isOpen) return;
 
     function closeOnOutsidePointer(event: PointerEvent) {
-      if (!rootRef.current?.contains(event.target as Node)) setIsOpen(false);
+      if (!rootRef.current?.contains(event.target as Node) && !popupRef.current?.contains(event.target as Node)) {
+        setIsOpen(false);
+      }
     }
 
     document.addEventListener("pointerdown", closeOnOutsidePointer);
@@ -53,10 +66,68 @@ export function DropdownSelect({
 
   useEffect(() => {
     if (!isOpen) return;
-    rootRef.current
+    popupRef.current
       ?.querySelector<HTMLElement>(`[data-option-index="${activeIndex}"]`)
       ?.scrollIntoView({ block: "nearest" });
   }, [activeIndex, isOpen]);
+
+  useEffect(() => {
+    if (disabled) setIsOpen(false);
+  }, [disabled]);
+
+  useLayoutEffect(() => {
+    if (!isOpen || !portal) return;
+
+    const updatePosition = () => {
+      const trigger = triggerRef.current;
+      const popup = popupRef.current;
+      if (!trigger || !popup) return;
+      const rect = trigger.getBoundingClientRect();
+      const viewport = window.visualViewport;
+      const viewportLeft = viewport?.offsetLeft ?? 0;
+      const viewportTop = viewport?.offsetTop ?? 0;
+      const viewportWidth = viewport?.width ?? window.innerWidth;
+      const viewportHeight = viewport?.height ?? window.innerHeight;
+      const margin = 8;
+      const gap = 8;
+      const width = Math.min(rect.width, Math.max(0, viewportWidth - margin * 2));
+      popup.style.width = `${width}px`;
+      const rootFontSize = Number.parseFloat(getComputedStyle(document.documentElement).fontSize);
+      const desiredHeight = Math.min(popup.scrollHeight, rootFontSize * 18, viewportHeight / 2);
+      const below = Math.max(0, viewportTop + viewportHeight - margin - rect.bottom - gap);
+      const above = Math.max(0, rect.top - gap - viewportTop - margin);
+      const placeAbove = desiredHeight > below && (desiredHeight <= above || above > below);
+      const maxHeight = Math.min(desiredHeight, placeAbove ? above : below);
+      setPopupStyle({
+        position: "fixed",
+        visibility: "visible",
+        zIndex: 80,
+        width,
+        maxHeight,
+        marginTop: 0,
+        left: Math.max(viewportLeft + margin, Math.min(rect.left, viewportLeft + viewportWidth - width - margin)),
+        top: Math.max(
+          viewportTop + margin,
+          Math.min(
+            placeAbove ? rect.top - gap - maxHeight : rect.bottom + gap,
+            viewportTop + viewportHeight - margin - maxHeight,
+          ),
+        ),
+      });
+    };
+
+    updatePosition();
+    window.addEventListener("resize", updatePosition);
+    window.addEventListener("scroll", updatePosition, true);
+    window.visualViewport?.addEventListener("resize", updatePosition);
+    window.visualViewport?.addEventListener("scroll", updatePosition);
+    return () => {
+      window.removeEventListener("resize", updatePosition);
+      window.removeEventListener("scroll", updatePosition, true);
+      window.visualViewport?.removeEventListener("resize", updatePosition);
+      window.visualViewport?.removeEventListener("scroll", updatePosition);
+    };
+  }, [isOpen, portal]);
 
   useEffect(
     () => () => {
@@ -66,17 +137,21 @@ export function DropdownSelect({
   );
 
   function openOptions(index = selectedIndex) {
+    if (disabled) return;
     setActiveIndex(index);
     setIsOpen(true);
   }
 
   function chooseOption(option: DropdownOption, index: number) {
+    if (disabled) return;
     onValueChange(option.value);
     setActiveIndex(index);
     setIsOpen(false);
+    triggerRef.current?.focus({ preventScroll: true });
   }
 
   function handleKeyDown(event: KeyboardEvent<HTMLButtonElement>) {
+    if (disabled) return;
     if (event.key === "Escape" && isOpen) {
       event.preventDefault();
       setIsOpen(false);
@@ -135,16 +210,57 @@ export function DropdownSelect({
   }
 
   const SelectedIcon = selectedOption.icon;
+  const popup = (
+    <div
+      ref={popupRef}
+      id={listboxId}
+      role="listbox"
+      aria-label={label}
+      className="dropdown-select-popup"
+      hidden={!isOpen}
+      style={portal ? popupStyle : undefined}
+    >
+      {options.map((option, index) => {
+        const OptionIcon = option.icon;
+        const selected = option.value === value;
+        return (
+          <div
+            id={`${listboxId}-${index}`}
+            key={option.value}
+            role="option"
+            tabIndex={-1}
+            aria-selected={selected}
+            data-option-index={index}
+            data-active={index === activeIndex}
+            className="dropdown-select-option"
+            onPointerMove={() => setActiveIndex(index)}
+            onPointerDown={(event) => event.preventDefault()}
+            onClick={() => chooseOption(option, index)}
+            onKeyDown={(event) => {
+              if (event.key === "Enter" || event.key === " ") {
+                event.preventDefault();
+                chooseOption(option, index);
+              }
+            }}
+          >
+            <OptionIcon aria-hidden="true" className="dropdown-select-option-icon" />
+            <span className="dropdown-select-option-label">{option.label}</span>
+            {selected && <Check aria-hidden="true" className="dropdown-select-option-check" />}
+          </div>
+        );
+      })}
+    </div>
+  );
 
   return (
     <div ref={rootRef} className={`dropdown-select ${className}`.trim()}>
       {name && <input type="hidden" name={name} value={value} />}
       <button
+        ref={triggerRef}
         id={id}
         type="button"
         role="combobox"
-        aria-label={label}
-        aria-valuetext={selectedOption.label}
+        aria-label={`${label}: ${selectedOption.label}`}
         aria-haspopup="listbox"
         aria-expanded={isOpen}
         aria-controls={listboxId}
@@ -152,6 +268,8 @@ export function DropdownSelect({
         aria-autocomplete="none"
         data-initial-focus={initialFocus ? "" : undefined}
         className="dropdown-select-trigger"
+        disabled={disabled}
+        style={disabled ? { opacity: 0.5, cursor: "not-allowed" } : undefined}
         onClick={() => (isOpen ? setIsOpen(false) : openOptions())}
         onKeyDown={handleKeyDown}
       >
@@ -161,29 +279,7 @@ export function DropdownSelect({
         </span>
         <ChevronDown aria-hidden="true" className="dropdown-select-chevron" />
       </button>
-      <div id={listboxId} role="listbox" aria-label={label} className="dropdown-select-popup" hidden={!isOpen}>
-        {options.map((option, index) => {
-          const OptionIcon = option.icon;
-          const selected = option.value === value;
-          return (
-            <div
-              id={`${listboxId}-${index}`}
-              key={option.value}
-              role="option"
-              aria-selected={selected}
-              data-option-index={index}
-              data-active={index === activeIndex}
-              className="dropdown-select-option"
-              onPointerMove={() => setActiveIndex(index)}
-              onClick={() => chooseOption(option, index)}
-            >
-              <OptionIcon aria-hidden="true" className="dropdown-select-option-icon" />
-              <span className="dropdown-select-option-label">{option.label}</span>
-              {selected && <Check aria-hidden="true" className="dropdown-select-option-check" />}
-            </div>
-          );
-        })}
-      </div>
+      {portal ? (isOpen ? createPortal(popup, document.body) : null) : popup}
     </div>
   );
 }
