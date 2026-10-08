@@ -2,8 +2,18 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { useCallback, useEffect, useMemo, useState, type FormEvent } from "react";
-import { ArrowRight, Camera, CircleCheck, CircleQuestionMark, Fish, LockKeyhole, Save, Waves } from "lucide-react";
+import { useCallback, useEffect, useMemo, useRef, useState, type FormEvent } from "react";
+import {
+  ArrowRight,
+  CircleCheck,
+  CircleQuestionMark,
+  Fish,
+  ImagePlus,
+  LockKeyhole,
+  Save,
+  Upload,
+  Waves,
+} from "lucide-react";
 import { useBangwit } from "@/components/bangwit-provider";
 import { CatchDatePicker } from "@/components/catch-date-picker";
 import { DropdownSelect } from "@/components/dropdown-select";
@@ -14,6 +24,7 @@ import type { CatchEntry } from "@/types/catch";
 const controlClass =
   "mt-2 min-h-12 w-full rounded-xl border border-line bg-white px-4 text-sm text-ink placeholder:text-slate-400 focus:border-teal focus:outline-none focus:ring-2 focus:ring-teal/15";
 const labelClass = "block text-sm font-semibold text-ink";
+const MAX_PHOTO_SIZE = 10 * 1024 * 1024;
 
 function localDateValue() {
   const now = new Date();
@@ -27,6 +38,15 @@ function formatDate(value: string, lang: "fil" | "en") {
     month: "short",
     day: "numeric",
   }).format(new Date(`${value}T12:00:00`));
+}
+
+function formatFileSize(bytes: number, lang: "fil" | "en") {
+  const unit = bytes < 1024 * 1024 ? "KB" : "MB";
+  const size = unit === "KB" ? bytes / 1024 : bytes / (1024 * 1024);
+  const formatted = new Intl.NumberFormat(lang === "fil" ? "fil-PH" : "en-US", {
+    maximumFractionDigits: 1,
+  }).format(size);
+  return `${formatted} ${unit}`;
 }
 
 function CatchPhoto({ photo, altText }: { photo: Blob | File | null; altText: string }) {
@@ -63,7 +83,12 @@ export function CatchbookPage() {
   const [date, setDate] = useState("");
   const [disposition, setDisposition] = useState("Released");
   const [photo, setPhoto] = useState<File | null>(null);
+  const [savedPhoto, setSavedPhoto] = useState<File | null>(null);
+  const photoInputRef = useRef<HTMLInputElement>(null);
   const [photoUrl, setPhotoUrl] = useState("");
+  const [savedPhotoUrl, setSavedPhotoUrl] = useState("");
+  const [photoSaved, setPhotoSaved] = useState(false);
+  const [photoSaveError, setPhotoSaveError] = useState("");
   const [dragging, setDragging] = useState(false);
   const [loading, setLoading] = useState(true);
   const [saving, setSaving] = useState(false);
@@ -127,6 +152,16 @@ export function CatchbookPage() {
     return () => URL.revokeObjectURL(url);
   }, [photo]);
 
+  useEffect(() => {
+    if (!savedPhoto) {
+      setSavedPhotoUrl("");
+      return;
+    }
+    const url = URL.createObjectURL(savedPhoto);
+    setSavedPhotoUrl(url);
+    return () => URL.revokeObjectURL(url);
+  }, [savedPhoto]);
+
   const sortedEntries = useMemo(
     () => [...entries].sort((a, b) => (b.date || "").localeCompare(a.date || "") || (b.id ?? 0) - (a.id ?? 0)),
     [entries],
@@ -152,12 +187,20 @@ export function CatchbookPage() {
       savedAt: new Date().toISOString(),
       syncStatus: "device-only",
     };
+    const hasPhoto = Boolean(photo);
+    let photoStored = false;
     setSaving(true);
+    setPhotoSaveError("");
+    setPhotoSaved(false);
+    setSavedPhoto(null);
     try {
       await saveCatch(entry);
+      photoStored = hasPhoto;
       form.reset();
       setDisposition("Released");
+      if (photo) setSavedPhoto(photo);
       setPhoto(null);
+      setPhotoSaved(photoStored);
       setDate(localDateValue());
       setEntries(await listCatches());
       setStorageError("");
@@ -167,6 +210,7 @@ export function CatchbookPage() {
           : "Catch saved to this device. No cloud sync.",
       );
     } catch (error) {
+      if (hasPhoto && !photoStored) setPhotoSaveError(dict.catches.photoSaveFailed);
       setStorageError(
         error instanceof Error
           ? error.message
@@ -198,7 +242,7 @@ export function CatchbookPage() {
   }
 
   function acceptPhoto(file: File | undefined) {
-    if (!file) return;
+    if (!file || saving) return;
     if (!file.type.startsWith("image/")) {
       setStorageError(
         lang === "fil"
@@ -207,7 +251,7 @@ export function CatchbookPage() {
       );
       return;
     }
-    if (file.size > 10 * 1024 * 1024) {
+    if (file.size > MAX_PHOTO_SIZE) {
       setStorageError(
         lang === "fil"
           ? "Hanggang 10 MB muna ang larawan para hindi mapuno agad ang device storage."
@@ -216,6 +260,9 @@ export function CatchbookPage() {
       return;
     }
     setStorageError("");
+    setPhotoSaved(false);
+    setPhotoSaveError("");
+    setSavedPhoto(null);
     setPhoto(file);
   }
 
@@ -243,70 +290,180 @@ export function CatchbookPage() {
         <form
           id="catchForm"
           onSubmit={submitCatch}
+          onInput={() => {
+            if (photoSaved) {
+              setPhotoSaved(false);
+              setSavedPhoto(null);
+            }
+          }}
+          onChange={() => {
+            if (photoSaved) {
+              setPhotoSaved(false);
+              setSavedPhoto(null);
+            }
+          }}
           className="rounded-3xl border border-line bg-white p-5 shadow-sm sm:p-7"
         >
           <p className="text-xs font-bold uppercase tracking-[0.15em] text-teal">{dict.catches.formTag}</p>
           <h2 className="mt-2 text-3xl font-extrabold tracking-tight text-ink">{dict.catches.formTitle}</h2>
           <p className="mt-1 text-sm text-muted">{dict.catches.formDesc}</p>
 
-          <fieldset
-            aria-label={dict.catches.photoLabel}
-            onDragOver={(event) => {
-              event.preventDefault();
-              setDragging(true);
-            }}
-            onDragLeave={() => setDragging(false)}
-            onDrop={(event) => {
-              event.preventDefault();
-              setDragging(false);
-              acceptPhoto(event.dataTransfer.files[0]);
-            }}
-            className={`mt-5 flex min-h-24 flex-wrap items-center gap-3 rounded-2xl border border-dashed px-4 py-3 transition-colors ${
-              dragging ? "border-teal bg-teal-soft" : "border-slate-300 bg-white hover:border-teal"
-            }`}
-          >
-            <label
-              htmlFor="catchPhoto"
-              className="grid h-12 w-12 shrink-0 cursor-pointer place-items-center rounded-full bg-teal-soft text-teal"
-              aria-label={dict.catches.photoLabel}
+          <div className="mt-5">
+            <p id="catchPhotoLabel" className={labelClass}>
+              {dict.catches.photoLabel} <span className="ml-1 font-normal text-muted">{dict.common.optional}</span>
+            </p>
+            <div
+              role="group"
+              aria-labelledby="catchPhotoLabel"
+              aria-busy={saving && Boolean(photo)}
+              onClick={(event) => {
+                if (event.target instanceof Element && event.target.closest("label, button, input")) return;
+                if (!saving) photoInputRef.current?.click();
+              }}
+              onDragOver={(event) => {
+                event.preventDefault();
+                event.dataTransfer.dropEffect = "copy";
+              }}
+              onDragEnter={(event) => {
+                event.preventDefault();
+                if (!saving) setDragging(true);
+              }}
+              onDragLeave={(event) => {
+                const target = event.relatedTarget;
+                if (!(target instanceof Node) || !event.currentTarget.contains(target)) setDragging(false);
+              }}
+              onDrop={(event) => {
+                event.preventDefault();
+                setDragging(false);
+                acceptPhoto(event.dataTransfer.files[0]);
+              }}
+              className={`flex min-h-36 flex-wrap items-center gap-4 rounded-2xl border border-dashed p-4 transition-colors duration-150 focus-within:border-teal focus-within:ring-2 focus-within:ring-teal/15 ${saving ? "cursor-wait" : "cursor-pointer"} ${
+                dragging
+                  ? "border-teal bg-teal-soft ring-2 ring-teal/15"
+                  : "border-slate-300 bg-white hover:border-teal"
+              }`}
             >
-              <Camera aria-hidden="true" className="h-5 w-5" />
-            </label>
-            <div className="min-w-0 flex-1">
-              <label htmlFor="catchPhoto" className="cursor-pointer text-sm font-bold text-ink">
-                {dict.catches.photoLabel}
-              </label>
-              <p className="mt-1 break-all text-xs text-muted">{photo?.name ?? dict.catches.photoHelp}</p>
+              <div
+                aria-hidden="true"
+                className="grid h-12 w-12 shrink-0 place-items-center rounded-2xl bg-teal-soft text-teal"
+              >
+                <ImagePlus className="h-6 w-6" strokeWidth={1.8} />
+              </div>
+              <div className="min-w-0 flex-1">
+                <div className="flex flex-wrap items-baseline gap-x-2 gap-y-1">
+                  <label
+                    htmlFor="catchPhoto"
+                    className={`text-sm font-bold text-teal underline-offset-4 hover:underline ${saving ? "cursor-wait" : "cursor-pointer"}`}
+                  >
+                    {photo ? dict.catches.photoChooseAnother : dict.catches.photoChoose}
+                  </label>
+                  <span className="text-sm text-muted">{dict.catches.photoDropHint}</span>
+                </div>
+                <p className="mt-1 break-all text-xs text-muted">
+                  {photo ? `${photo.name} · ${formatFileSize(photo.size, lang)}` : dict.catches.photoHelp}
+                </p>
+                <p className="mt-3 flex items-start gap-2 text-xs leading-5 text-muted">
+                  <LockKeyhole aria-hidden="true" className="mt-0.5 h-3.5 w-3.5 shrink-0 text-teal" />
+                  <span>{dict.catches.photoStorageDestination}</span>
+                </p>
+              </div>
+              {photoUrl && (
+                <div className="flex items-center gap-2">
+                  <Image
+                    src={photoUrl}
+                    alt={dict.catches.photoPreviewAlt}
+                    width={64}
+                    height={64}
+                    unoptimized
+                    className="h-14 w-14 rounded-xl object-cover"
+                  />
+                  <button
+                    type="button"
+                    disabled={saving}
+                    onClick={() => {
+                      setPhoto(null);
+                      setPhotoSaveError("");
+                      setPhotoSaved(false);
+                    }}
+                    className="rounded-lg px-2 py-1 text-sm font-semibold text-muted hover:bg-paper"
+                    aria-label={dict.catches.photoRemove}
+                  >
+                    {dict.catches.photoRemove}
+                  </button>
+                </div>
+              )}
+              <input
+                ref={photoInputRef}
+                id="catchPhoto"
+                name="photo"
+                type="file"
+                accept="image/*"
+                disabled={saving}
+                onChange={(event) => acceptPhoto(event.target.files?.[0])}
+                className="sr-only"
+              />
             </div>
-            {photoUrl && (
-              <div className="flex items-center gap-2">
-                <Image
-                  src={photoUrl}
-                  alt={dict.catches.photoPreviewAlt}
-                  width={64}
-                  height={64}
-                  unoptimized
-                  className="h-14 w-14 rounded-xl object-cover"
+            {photo && saving && (
+              <div role="status" aria-live="polite" className="mt-3 rounded-xl border border-line bg-white px-3 py-3">
+                <div className="flex items-center gap-2 text-sm font-semibold text-ink">
+                  <Upload aria-hidden="true" className="h-4 w-4 shrink-0 text-teal" />
+                  <span>{dict.catches.photoSavingStatus}</span>
+                </div>
+                <div
+                  role="progressbar"
+                  aria-label={dict.catches.photoSavingStatus}
+                  aria-valuetext={dict.catches.photoSavingStatus}
+                  className="catch-photo-progress mt-2.5"
                 />
-                <button
-                  type="button"
-                  onClick={() => setPhoto(null)}
-                  className="rounded-lg px-2 py-1 text-sm font-semibold text-muted hover:bg-paper"
-                  aria-label={dict.catches.photoRemove}
-                >
-                  {dict.catches.photoRemove}
-                </button>
               </div>
             )}
-            <input
-              id="catchPhoto"
-              name="photo"
-              type="file"
-              accept="image/*"
-              onChange={(event) => acceptPhoto(event.target.files?.[0])}
-              className="sr-only"
-            />
-          </fieldset>
+            {photo && !saving && (
+              <p
+                role={photoSaveError ? "alert" : "status"}
+                className={`mt-3 text-sm ${photoSaveError ? "text-rose-700" : "text-muted"}`}
+              >
+                {photoSaveError || dict.catches.photoReadyStatus}
+              </p>
+            )}
+            {photoSaved && !photo && (
+              <div role="status" className="mt-3 flex items-center gap-3 rounded-xl border border-line bg-white p-3">
+                {savedPhotoUrl && (
+                  <a
+                    href={savedPhotoUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={dict.catches.photoOpenFull}
+                    className="shrink-0 rounded-lg focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-teal"
+                  >
+                    <Image
+                      src={savedPhotoUrl}
+                      alt={dict.catches.photoPreviewAlt}
+                      width={88}
+                      height={72}
+                      unoptimized
+                      className="h-[72px] w-[88px] rounded-lg bg-paper object-cover"
+                    />
+                  </a>
+                )}
+                <div className="min-w-0">
+                  <p className="flex items-center gap-2 text-sm font-semibold text-teal-dark">
+                    <CircleCheck aria-hidden="true" className="h-4 w-4 shrink-0" />
+                    <span>{dict.catches.photoSaveSuccess}</span>
+                  </p>
+                  {savedPhotoUrl && (
+                    <a
+                      href={savedPhotoUrl}
+                      target="_blank"
+                      rel="noreferrer"
+                      className="mt-1 inline-block text-sm font-semibold text-teal underline-offset-4 hover:underline"
+                    >
+                      {dict.catches.photoOpenFull}
+                    </a>
+                  )}
+                </div>
+              </div>
+            )}
+          </div>
 
           <div className="mt-5">
             <label htmlFor="catchSpecies" className={labelClass}>
@@ -554,7 +711,10 @@ export function CatchbookPage() {
             </ul>
           )}
           <div className="mt-5 border-t border-line pt-4">
-            <Link href="/my-species" className="inline-flex items-center gap-1 font-bold text-teal hover:text-teal-dark">
+            <Link
+              href="/my-species"
+              className="inline-flex items-center gap-1 font-bold text-teal hover:text-teal-dark"
+            >
               {dict.catches.viewMySpecies}
               <ArrowRight aria-hidden="true" className="h-4 w-4" />
             </Link>

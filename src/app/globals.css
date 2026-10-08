@@ -151,6 +151,42 @@ textarea {
   caret-color: var(--teal);
 }
 
+.catch-photo-progress {
+  position: relative;
+  height: 8px;
+  overflow: hidden;
+  border-radius: 999px;
+  background: var(--teal-soft);
+}
+
+.catch-photo-progress::after {
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 38%;
+  border-radius: inherit;
+  background: var(--teal);
+  content: "";
+  animation: catch-photo-progress 900ms ease-in-out infinite alternate;
+}
+
+@keyframes catch-photo-progress {
+  from {
+    transform: translateX(-100%);
+  }
+
+  to {
+    transform: translateX(260%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .catch-photo-progress::after {
+    width: 100%;
+    animation: none;
+    opacity: 0.7;
+  }
+}
+
 .dropdown-select {
   position: relative;
   width: 100%;

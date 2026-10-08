@@ -121,6 +121,15 @@ export type Dictionary = {
     formDesc: string;
     photoLabel: string;
     photoHelp: string;
+    photoChoose: string;
+    photoChooseAnother: string;
+    photoDropHint: string;
+    photoStorageDestination: string;
+    photoReadyStatus: string;
+    photoSavingStatus: string;
+    photoSaveSuccess: string;
+    photoSaveFailed: string;
+    photoOpenFull: string;
     photoRemove: string;
     photoPreviewAlt: string;
     speciesLabel: string;

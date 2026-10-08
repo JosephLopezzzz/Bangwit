@@ -42,6 +42,8 @@ For local rules, the current public-source leads are: Bacoor (full Ordinance 278
 
 ### Copy-ready request draft
 
+Public contact routes checked on 8 October 2026: Bacoor lists `cityagri@bacoor.gov.ph` for the Office of Agricultural Services and `sp@bacoor.gov.ph` for the Sangguniang Panlungsod on its [department directory](https://bacoor.gov.ph/city-and-units-heads/). Cavite City's [Citizen's Charter page](https://cavitecity.gov.ph/index.php/service-2/citizen-s-charter-new-website) lists the Agriculture Office at 885-5056, while its [LGU office directory](https://cavitecity.gov.ph/index.php/about-lgu/directory/lgu-offices) lists 434-0913; these official pages conflict, so confirm the current number before relying on it. The same directory lists the Sangguniang at 484-8570. No official Cavite City Agriculture or Sanggunian email address was found in the sources checked.
+
 > Subject: Inquiry about Cavite municipal-water boundary data for research
 >
 > Hello NAMRIA One-stop Shop,
@@ -54,19 +56,41 @@ For local rules, the current public-source leads are: Bacoor (full Ordinance 278
 
 This is a draft only; no request has been sent.
 
-> Subject: Request for current fisheries ordinances and mapped restricted areas
+> Subject: Bangwit research inquiry: Bacoor fisheries ordinances and municipal-water zone data
 >
-> Hello,
+> Magandang araw, City Agriculture Office and Sangguniang Panlungsod,
 >
-> I am preparing a research prototype about fisheries information for Cavite. May I request copies or official links to the current fisheries ordinances and their amendments for your city/municipality, including rules for municipal fisherfolk and recreational/sports anglers, fishing methods/gears, permits, closed seasons, sanctuaries, and other restricted areas?
+> Ako si Joseph Lopez, at gumagawa ako ng Bangwit, isang research-stage web app para sa fisheries information na balak palawakin sa buong Pilipinas. Nagsisimula kami sa Cavite at nais naming gumamit lamang ng beripikadong ordinansa at opisyal na mapa; hindi namin ilalabel na legal o catchable ang isang species batay lang sa occurrence record.
 >
-> If available, may I also request the official maps or boundary descriptions for municipal waters and any fish sanctuary, marine protected area, no-take zone, or other fishing restriction? A GIS file (GeoJSON/Shapefile) is preferred; if unavailable, a map with its scale, coordinate reference system, and technical description would be useful.
+> Para sa Bacoor, maaari po bang hingin ang:
 >
-> Please include the approval/effectivity date, any amendment or repeal, the office responsible for confirming that each rule and boundary is current, and the source/attribution or reuse terms. We will keep unverified boundaries clearly marked and will not describe a recorded species as legally catchable based on presence alone.
+> - Kumpirmasyon kung Ordinance 278-2023 at amendment 292-2023 ang kasalukuyang umiiral, kasama ang mga amendment, repeal, implementing rules, at petsa/paraan ng effectivity o publication.
+> - Pinakabagong opisyal na mapa o technical description ng municipal-water zones na tinutukoy sa Section 7, kabilang ang fishing ground, aquaculture, mangrove/MPA at anumang bawal na lugar.
+> - Coordinate reference system/datum at map date/version; kung mayroon, GeoJSON, Shapefile, o ibang GIS format.
+> - Mga patakaran at pagkakaiba para sa municipal fisherfolk, resident/non-resident recreational anglers, gear, permit, closed season, at protected/restricted areas.
+> - Attribution, reuse, redistribution, at public-display conditions para sa app.
 >
-> Thank you.
+> Kung ibang tanggapan ang may hawak ng signed ordinances o GIS/map records, maaari po ba ninyo akong i-refer sa tamang opisina o opisyal na public source? Inquiry at request for existing public records lamang ito; hindi ito request for certification o paid product order.
+>
+> Maraming salamat,
+> Joseph Lopez
 
-This is a draft only; no request has been sent.
+> Subject: Bangwit research inquiry: Cavite City fisheries ordinance and mapped restricted areas
+>
+> Magandang araw, City Agriculture Office and Sangguniang Panlungsod,
+>
+> Ako si Joseph Lopez, at gumagawa ako ng Bangwit, isang research-stage web app para sa fisheries information na balak palawakin sa buong Pilipinas. Nagsisimula kami sa Cavite at nais naming gumamit lamang ng beripikadong ordinansa at opisyal na mapa; hindi namin ilalabel na legal o catchable ang isang species batay lang sa occurrence record.
+>
+> Nakita ko sa opisyal na ordinance archive ang listing ng Ordinance 2023-3388 tungkol sa compressor bilang breathing apparatus sa fishing activities sa territorial waters ng Cavite City. Maaari po ba akong humingi ng signed/full-text copy o stable official link, at kumpirmasyon ng approval at effectivity/publication, implementing rules, anumang amendment o repeal, saklaw at exceptions, at penalties?
+>
+> Kung mayroon, maaari rin po bang hingin ang kasalukuyang fisheries ordinances para sa municipal fisherfolk at recreational/sports anglers, at mga opisyal na mapa o technical descriptions para sa municipal waters, fish sanctuaries/MPAs, no-take zones, at iba pang fishing restrictions? GeoJSON/Shapefile ay makatutulong; kung wala, maaari po bang isama ang map scale, date/version, coordinate reference system/datum, at legal/survey basis?
+>
+> Pakitukoy rin po ang source attribution at reuse/redistribution conditions para sa public-facing app, at kung aling tanggapan ang makapagkukumpirma na current ang rules at maps. Inquiry at request for existing public records lamang ito; hindi ito request for certification o paid product order. Kung ibang opisina ang may hawak ng records, maaari po ba ninyo akong i-refer doon?
+>
+> Maraming salamat,
+> Joseph Lopez
+
+These Bacoor and Cavite City drafts are for the user to send; no local LGU request has been sent.
 
 The BFAR index also lists FAO 175 (1991), titled as a **five-year** Manila Bay closed season for specified commercial and municipal gears. Because its stated duration is time-limited, do not show it as an active 2026 closure without an authoritative later order confirming the current rule.
 
