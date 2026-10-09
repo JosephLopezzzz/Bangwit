@@ -75,3 +75,44 @@ test("preserves a version-1 catch and photo through export and empty-database re
   await assert.rejects(restoreCatchBackup(backupFile), /May laman na ang catch journal/);
   assert.equal((await listCatches()).length, 1);
 });
+
+test("preserves chosen measurement units through backup and rejects unsupported units", async () => {
+  await clearCatches();
+  const measurements = [
+    { length: "23.5", lengthUnit: "cm", weight: "410", weightUnit: "g" },
+    { length: "9.25", lengthUnit: "in", weight: "0.41", weightUnit: "kg" },
+    { length: "9.25", lengthUnit: "in", weight: "0.9", weightUnit: "lbs" },
+  ];
+  for (const measurement of measurements) {
+    await saveCatch({
+      species: "Unit test catch",
+      date: "2026-10-10",
+      habitat: "Saltwater",
+      location: "",
+      ...measurement,
+      bait: "",
+      notes: "",
+      disposition: "Released",
+      photo: null,
+      savedAt: "2026-10-10T00:00:00.000Z",
+      syncStatus: "device-only",
+    });
+  }
+  const backup = await exportCatchBackup();
+  await clearCatches();
+  assert.equal(await restoreCatchBackup(new File([backup], "units.json")), 3);
+  assert.deepEqual(
+    (await listCatches()).map(({ length, lengthUnit, weight, weightUnit }) => ({ length, lengthUnit, weight, weightUnit })),
+    measurements,
+  );
+  await clearCatches();
+  for (const [field, invalidUnit] of [["lengthUnit", "feet"], ["weightUnit", "stones"]]) {
+    const invalidBackup = JSON.parse(backup);
+    invalidBackup.catches[0][field] = invalidUnit;
+    await assert.rejects(
+      restoreCatchBackup(new File([JSON.stringify(invalidBackup)], "invalid-units.json")),
+      /invalid na .* unit/,
+    );
+    assert.equal((await listCatches()).length, 0);
+  }
+});

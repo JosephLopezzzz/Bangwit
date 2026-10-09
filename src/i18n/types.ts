@@ -162,7 +162,9 @@ export type Dictionary = {
     locationPlaceholder: string;
     locationHelp: string;
     lengthLabel: string;
+    lengthUnitLabel: string;
     weightLabel: string;
+    weightUnitLabel: string;
     baitLabel: string;
     baitPlaceholder: string;
     dispositionLabel: string;

@@ -91,8 +91,8 @@ export function CatchDetails({
     ? [
         [dict.catches.habitatLegend, getHabitatLabel(entry.habitat, lang)],
         [dict.catches.locationLabel, entry.location],
-        [dict.catches.lengthLabel, entry.length],
-        [dict.catches.weightLabel, entry.weight],
+        [dict.catches.lengthLabel, entry.length ? `${entry.length} ${entry.lengthUnit ?? "cm"}` : ""],
+        [dict.catches.weightLabel, entry.weight ? `${entry.weight} ${entry.weightUnit ?? "g"}` : ""],
         [dict.catches.baitLabel, entry.bait],
       ].filter(([, value]) => value?.trim())
     : [];

@@ -1,4 +1,6 @@
 export type CatchDisposition = "Released" | "Kept" | "Not recorded";
+export type CatchLengthUnit = "cm" | "in";
+export type CatchWeightUnit = "g" | "kg" | "lbs";
 
 export type CatchEntry = {
   id?: number;
@@ -7,7 +9,9 @@ export type CatchEntry = {
   habitat: string;
   location: string;
   length: string;
+  lengthUnit?: CatchLengthUnit;
   weight: string;
+  weightUnit?: CatchWeightUnit;
   bait: string;
   notes: string;
   disposition: CatchDisposition | string;

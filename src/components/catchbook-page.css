@@ -217,6 +217,59 @@ textarea.catch-control {
   box-shadow: none;
   font-size: 12px;
 }
+#catchDisposition-options {
+  scrollbar-width: none;
+}
+#catchDisposition-options::-webkit-scrollbar {
+  display: none;
+}
+.catch-measurement {
+  display: flex;
+  min-width: 0;
+  align-items: center;
+  gap: 6px;
+  margin-top: 6px;
+}
+.catch-measurement .catch-control {
+  min-width: 0;
+  flex: 1;
+  margin-top: 0;
+  appearance: textfield;
+}
+.catch-measurement input::-webkit-inner-spin-button,
+.catch-measurement input::-webkit-outer-spin-button {
+  margin: 0;
+  appearance: none;
+}
+.catch-measurement .catch-measurement-unit {
+  width: 80px;
+  flex-shrink: 0;
+  margin-top: 0;
+}
+.catch-measurement-unit .dropdown-select-trigger {
+  gap: 4px;
+  padding-right: 8px;
+  padding-left: 8px;
+}
+.catch-measurement-unit .dropdown-select-value-icon,
+#catchLengthUnit-options .dropdown-select-option-icon,
+#catchWeightUnit-options .dropdown-select-option-icon {
+  display: none;
+}
+#catchLengthUnit-options,
+#catchWeightUnit-options {
+  scrollbar-width: none;
+}
+#catchLengthUnit-options::-webkit-scrollbar,
+#catchWeightUnit-options::-webkit-scrollbar {
+  display: none;
+}
+#catchLengthUnit-options .dropdown-select-option,
+#catchWeightUnit-options .dropdown-select-option {
+  gap: 4px;
+  padding: 0 4px;
+  font-size: 12px;
+}
 .catch-photo-dropzone {
   display: flex;
   min-width: 0;

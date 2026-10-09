@@ -141,6 +141,17 @@ async function parseBackup(file: File): Promise<CatchEntry[]> {
       for (const field of textFields) {
         if (typeof value[field] !== "string") throw new Error(`May invalid na ${field} field sa backup.`);
       }
+      if (value.lengthUnit !== undefined && value.lengthUnit !== "cm" && value.lengthUnit !== "in") {
+        throw new Error("May invalid na length unit sa backup.");
+      }
+      if (
+        value.weightUnit !== undefined &&
+        value.weightUnit !== "g" &&
+        value.weightUnit !== "kg" &&
+        value.weightUnit !== "lbs"
+      ) {
+        throw new Error("May invalid na weight unit sa backup.");
+      }
 
       let photo: Blob | null = null;
       if (value.photo !== null) {

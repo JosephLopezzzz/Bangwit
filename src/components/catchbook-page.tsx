@@ -1,6 +1,16 @@
 "use client";
 
-import { CircleCheck, CircleQuestionMark, Fish, ImagePlus, LockKeyhole, Save, Trash2 } from "lucide-react";
+import {
+  CircleCheck,
+  CircleQuestionMark,
+  Fish,
+  ImagePlus,
+  LockKeyhole,
+  Ruler,
+  Save,
+  Scale,
+  Trash2,
+} from "lucide-react";
 import { type FormEvent, type KeyboardEvent, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useBangwit } from "@/components/bangwit-provider";
 import { CatchDatePicker } from "@/components/catch-date-picker";
@@ -8,10 +18,21 @@ import { CatchGallery } from "@/components/catch-gallery";
 import { DropdownSelect } from "@/components/dropdown-select";
 import { type PhotoItem, PhotoThumbnail, PhotoViewer } from "@/components/photo-viewer";
 import { listCatches, removeCatch, saveCatch } from "@/lib/storage/catches";
-import type { CatchEntry } from "@/types/catch";
+import type { CatchEntry, CatchLengthUnit, CatchWeightUnit } from "@/types/catch";
 import "./catchbook-page.css";
 
 const MAX_PHOTO_SIZE = 10 * 1024 * 1024;
+const LENGTH_UNITS = [
+  { value: "cm", label: "cm", icon: Ruler },
+  { value: "in", label: "inches", icon: Ruler },
+];
+const WEIGHT_UNITS = [
+  { value: "g", label: "g", icon: Scale },
+  { value: "kg", label: "kg", icon: Scale },
+  { value: "lbs", label: "lbs", icon: Scale },
+];
+const WEIGHT_GRAMS = { g: 1, kg: 1000, lbs: 453.59237 };
+const WEIGHT_EXAMPLES = { g: "410", kg: "0.41", lbs: "0.9" };
 
 function localDateValue() {
   const now = new Date();
@@ -45,6 +66,8 @@ export function CatchbookPage() {
   const [selectedId, setSelectedId] = useState<number | null>(null);
   const [date, setDate] = useState("");
   const [disposition, setDisposition] = useState("Released");
+  const [lengthUnit, setLengthUnit] = useState<CatchLengthUnit>("cm");
+  const [weightUnit, setWeightUnit] = useState<CatchWeightUnit>("g");
   const [photo, setPhoto] = useState<File | null>(null);
   const [photoSaved, setPhotoSaved] = useState(false);
   const [photoSaveError, setPhotoSaveError] = useState("");
@@ -132,7 +155,9 @@ export function CatchbookPage() {
       habitat: String(data.get("habitat") || "Saltwater"),
       location: String(data.get("location") || "").trim(),
       length: String(data.get("length") || ""),
+      lengthUnit,
       weight: String(data.get("weight") || ""),
+      weightUnit,
       bait: String(data.get("bait") || "").trim(),
       notes: String(data.get("notes") || "").trim(),
       disposition,
@@ -151,6 +176,8 @@ export function CatchbookPage() {
       setSelectedId(id);
       form.reset();
       setDisposition("Released");
+      setLengthUnit("cm");
+      setWeightUnit("g");
       setPhotoSaved(Boolean(photo));
       setPhoto(null);
       setPhotoViewerOpen(false);
@@ -490,29 +517,57 @@ export function CatchbookPage() {
                   <label className="catch-field-label" htmlFor="catchLength">
                     {dict.catches.lengthLabel}
                   </label>
-                  <input
-                    id="catchLength"
-                    name="length"
-                    className="catch-control"
-                    type="number"
-                    min={0}
-                    max={1000}
-                    step={0.1}
-                  />
+                  <div className="catch-measurement">
+                    <input
+                      id="catchLength"
+                      name="length"
+                      className="catch-control"
+                      type="number"
+                      inputMode="decimal"
+                      min={0}
+                      max={lengthUnit === "cm" ? 1000 : 1000 / 2.54}
+                      step="any"
+                      placeholder={lengthUnit === "cm" ? "23.5" : "9.3"}
+                    />
+                    <DropdownSelect
+                      id="catchLengthUnit"
+                      label={dict.catches.lengthUnitLabel}
+                      value={lengthUnit}
+                      options={LENGTH_UNITS}
+                      onValueChange={(value) => setLengthUnit(value as CatchLengthUnit)}
+                      className="catch-measurement-unit"
+                      portal
+                      disabled={saving}
+                    />
+                  </div>
                 </div>
                 <div>
                   <label className="catch-field-label" htmlFor="catchWeight">
                     {dict.catches.weightLabel}
                   </label>
-                  <input
-                    id="catchWeight"
-                    name="weight"
-                    className="catch-control"
-                    type="number"
-                    min={0}
-                    max={1000000}
-                    step={1}
-                  />
+                  <div className="catch-measurement">
+                    <input
+                      id="catchWeight"
+                      name="weight"
+                      className="catch-control"
+                      type="number"
+                      inputMode="decimal"
+                      min={0}
+                      max={1000000 / WEIGHT_GRAMS[weightUnit]}
+                      step="any"
+                      placeholder={WEIGHT_EXAMPLES[weightUnit]}
+                    />
+                    <DropdownSelect
+                      id="catchWeightUnit"
+                      label={dict.catches.weightUnitLabel}
+                      value={weightUnit}
+                      options={WEIGHT_UNITS}
+                      onValueChange={(value) => setWeightUnit(value as CatchWeightUnit)}
+                      className="catch-measurement-unit"
+                      portal
+                      disabled={saving}
+                    />
+                  </div>
                 </div>
               </div>
               <div className="catch-field-row">
