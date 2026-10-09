@@ -1,10 +1,19 @@
 "use client";
 
-import { motion, useReducedMotion } from "framer-motion";
+import { animate, motion, type MotionValue, useMotionValue, useReducedMotion, useTransform } from "framer-motion";
 import { ArrowRight, ChevronLeft, ChevronRight, Fish, LockKeyhole, NotebookPen, Plus } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { type KeyboardEvent, type PointerEvent, useEffect, useId, useMemo, useRef, useState } from "react";
+import {
+  type KeyboardEvent,
+  type PointerEvent,
+  type ReactNode,
+  useEffect,
+  useId,
+  useMemo,
+  useRef,
+  useState,
+} from "react";
 import { useBangwit } from "@/components/bangwit-provider";
 import { CatchDetails } from "@/components/catch-details";
 import { DropdownSelect } from "@/components/dropdown-select";
@@ -44,6 +53,66 @@ function GalleryPreview({ entry, title, noPhoto }: { entry: CatchEntry; title: s
   );
 }
 
+function ArcCard({
+  index,
+  active,
+  position,
+  width,
+  height,
+  radius,
+  angleStep,
+  reducedMotion,
+  label,
+  children,
+}: {
+  index: number;
+  active: boolean;
+  position: MotionValue<number>;
+  width: number;
+  height: number;
+  radius: number;
+  angleStep: number;
+  reducedMotion: boolean;
+  label: string;
+  children: ReactNode;
+}) {
+  // All cards share a pivot below the stage: rotating the position follows
+  // the circle itself, including while dragging and snapping between catches.
+  const angle = useTransform(position, (value) => (index - value) * angleStep);
+  const x = useTransform(angle, (value) => radius * Math.sin(value));
+  const y = useTransform(angle, (value) => radius * (1 - Math.cos(value)));
+  const rotate = useTransform(angle, (value) => (value * 180) / Math.PI);
+  const rotateY = useTransform(position, (value) => (reducedMotion ? 0 : (index - value) * -6));
+  const z = useTransform(position, (value) => (reducedMotion ? 0 : -Math.abs(index - value) * 24));
+  const zIndex = useTransform(position, (value) => 10 - Math.round(Math.abs(index - value) * 2));
+  const opacity = useTransform(position, (value) => Math.max(0.45, 1 - Math.abs(index - value) * 0.18));
+
+  return (
+    <motion.div
+      className={`catch-gallery-card ${active ? "catch-gallery-card-active" : "catch-gallery-card-side"}`}
+      role="group"
+      aria-roledescription="slide"
+      aria-label={label}
+      style={{
+        width,
+        height,
+        marginLeft: -width / 2,
+        marginTop: -height / 2,
+        visibility: width ? "visible" : "hidden",
+        x,
+        y,
+        rotate,
+        rotateY,
+        z,
+        zIndex,
+        opacity,
+      }}
+    >
+      {children}
+    </motion.div>
+  );
+}
+
 export function CatchGallery({ entries, selectedId, onSelect, onDelete, onAdd, loading }: CatchGalleryProps) {
   const { dict, lang } = useBangwit();
   const headingId = useId();
@@ -58,6 +127,7 @@ export function CatchGallery({ entries, selectedId, onSelect, onDelete, onAdd, l
   const reducedMotion = useReducedMotion();
   const selectedIndex = entries.findIndex((entry) => entry.id === selectedId);
   const activeIndex = Math.max(0, selectedIndex);
+  const position = useMotionValue(activeIndex);
   const active = entries[activeIndex];
   const hasEntries = Boolean(active);
   const photos = useMemo(
@@ -92,6 +162,15 @@ export function CatchGallery({ entries, selectedId, onSelect, onDelete, onAdd, l
       ),
     [entries, lang],
   );
+
+  useEffect(() => {
+    gesture.current = null;
+    const animation = animate(position, activeIndex, {
+      duration: reducedMotion ? 0 : 0.3,
+      ease: [0.22, 1, 0.36, 1],
+    });
+    return () => animation.stop();
+  }, [activeIndex, position, reducedMotion]);
 
   useEffect(() => {
     if (loading || !hasEntries) return;
@@ -145,6 +224,7 @@ export function CatchGallery({ entries, selectedId, onSelect, onDelete, onAdd, l
 
   function startGesture(event: PointerEvent<HTMLDivElement>) {
     if (!event.isPrimary || event.button !== 0) return;
+    position.stop();
     suppressClick.current = false;
     gesture.current = { id: event.pointerId, x: event.clientX, y: event.clientY, index: activeIndex, dragging: false };
   }
@@ -154,28 +234,47 @@ export function CatchGallery({ entries, selectedId, onSelect, onDelete, onAdd, l
     if (!current || current.id !== event.pointerId) return;
     const dx = event.clientX - current.x;
     const dy = event.clientY - current.y;
-    if (Math.abs(dx) > 8 && Math.abs(dx) > Math.abs(dy)) {
+    if (!current.dragging && Math.abs(dx) > 8 && Math.abs(dx) > Math.abs(dy)) {
       current.dragging = true;
       event.currentTarget.setPointerCapture(event.pointerId);
-      event.preventDefault();
     }
+    if (current.dragging) {
+      event.preventDefault();
+      if (!reducedMotion) {
+        const next = Math.max(0, Math.min(entries.length - 1, current.index - dx / dragStep));
+        position.set(Math.max(current.index - 0.9, Math.min(current.index + 0.9, next)));
+      }
+    }
+  }
+
+  function snapTo(index: number) {
+    animate(position, index, { duration: reducedMotion ? 0 : 0.3, ease: [0.22, 1, 0.36, 1] });
   }
 
   function finishGesture(event: PointerEvent<HTMLDivElement>) {
     const current = gesture.current;
     if (!current || current.id !== event.pointerId) return;
     gesture.current = null;
-    suppressClick.current = current.dragging;
     const dx = event.clientX - current.x;
     const dy = event.clientY - current.y;
-    if (current.dragging && Math.abs(dx) >= 45 && Math.abs(dx) > Math.abs(dy))
-      selectAt(current.index + (dx < 0 ? 1 : -1));
+    suppressClick.current = current.dragging || Math.max(Math.abs(dx), Math.abs(dy)) > 8;
+    const next =
+      current.dragging && Math.abs(dx) >= 45 && Math.abs(dx) > Math.abs(dy)
+        ? Math.max(0, Math.min(entries.length - 1, current.index + (dx < 0 ? 1 : -1)))
+        : current.index;
+    if (next !== current.index) selectAt(next);
+    snapTo(next);
     if (event.currentTarget.hasPointerCapture(event.pointerId))
       event.currentTarget.releasePointerCapture(event.pointerId);
   }
 
-  const cardWidth = Math.max(0, Math.min(stageSize.width * 0.72, stageSize.height * 1.6));
-  const cardHeight = Math.max(0, stageSize.height - 12);
+  // Reserve space for the fan inside the existing flexible stage, rather than
+  // giving the template a fixed-height canvas or expanding the journal panel.
+  const cardHeight = Math.max(0, stageSize.height * 0.8);
+  const cardWidth = Math.max(0, Math.min(stageSize.width * 0.66, cardHeight * 1.6));
+  const arcRadius = Math.max(cardHeight, stageSize.width * 0.52);
+  const dragStep = Math.max(1, Math.min(stageSize.width * 0.24, cardWidth * 0.55));
+  const angleStep = arcRadius ? Math.asin(Math.min(0.48, dragStep / arcRadius)) : 0;
   const counter = `${activeIndex + 1} ${dict.catches.journalOf} ${entries.length}`;
 
   return (
@@ -227,6 +326,14 @@ export function CatchGallery({ entries, selectedId, onSelect, onDelete, onAdd, l
                 onPointerCancel={() => {
                   gesture.current = null;
                   suppressClick.current = true;
+                  snapTo(activeIndex);
+                }}
+                onLostPointerCapture={() => {
+                  if (gesture.current) {
+                    gesture.current = null;
+                    suppressClick.current = true;
+                    snapTo(activeIndex);
+                  }
                 }}
                 onClickCapture={(event) => {
                   if (suppressClick.current) {
@@ -236,32 +343,22 @@ export function CatchGallery({ entries, selectedId, onSelect, onDelete, onAdd, l
                   }
                 }}
               >
-                {entries.slice(Math.max(0, activeIndex - 2), activeIndex + 3).map((entry) => {
-                  const index = entries.indexOf(entry);
+                {entries.slice(Math.max(0, activeIndex - 2), activeIndex + 3).map((entry, visibleIndex) => {
+                  const index = Math.max(0, activeIndex - 2) + visibleIndex;
                   const offset = index - activeIndex;
                   const title = getSpeciesDisplay(entry.species, lang);
                   return (
-                    <motion.div
+                    <ArcCard
                       key={entry.id}
-                      className={`catch-gallery-card ${offset === 0 ? "catch-gallery-card-active" : "catch-gallery-card-side"}`}
-                      style={{
-                        width: cardWidth,
-                        height: cardHeight,
-                        marginLeft: -cardWidth / 2,
-                        marginTop: -cardHeight / 2,
-                        zIndex: 5 - Math.abs(offset),
-                        visibility: stageSize.width ? "visible" : "hidden",
-                      }}
-                      initial={false}
-                      animate={{
-                        x: offset * stageSize.width * 0.27,
-                        y: Math.abs(offset) * 5,
-                        rotateY: reducedMotion ? 0 : offset * -9,
-                        z: reducedMotion ? 0 : -Math.abs(offset) * 35,
-                        scale: 1 - Math.abs(offset) * 0.08,
-                        opacity: Math.abs(offset) === 2 ? 0.55 : 1,
-                      }}
-                      transition={{ duration: reducedMotion ? 0 : 0.3, ease: [0.22, 1, 0.36, 1] }}
+                      index={index}
+                      active={offset === 0}
+                      position={position}
+                      width={cardWidth}
+                      height={cardHeight}
+                      radius={arcRadius}
+                      angleStep={angleStep}
+                      reducedMotion={Boolean(reducedMotion)}
+                      label={`${index + 1} ${dict.catches.journalOf} ${entries.length}: ${title}`}
                     >
                       {offset === 0 ? (
                         <PhotoThumbnail
@@ -285,7 +382,7 @@ export function CatchGallery({ entries, selectedId, onSelect, onDelete, onAdd, l
                           <span className="catch-gallery-side-caption">{title}</span>
                         </button>
                       )}
-                    </motion.div>
+                    </ArcCard>
                   );
                 })}
               </div>

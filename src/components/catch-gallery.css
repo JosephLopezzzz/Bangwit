@@ -41,11 +41,15 @@
   flex: 1;
   min-height: 80px;
   margin-top: 12px;
-  overflow: hidden;
+  overflow: clip;
   perspective: 1100px;
   border-radius: 16px;
   touch-action: pan-y;
   user-select: none;
+  cursor: grab;
+}
+.catch-gallery-stage:active {
+  cursor: grabbing;
 }
 .catch-gallery-content {
   display: flex;
@@ -75,6 +79,7 @@
   border-radius: 16px;
   background: var(--paper);
   transform-style: preserve-3d;
+  backface-visibility: hidden;
 }
 
 .catch-gallery-card-active {
@@ -97,7 +102,7 @@
   border: 0;
   background: var(--teal-soft);
   color: var(--teal-dark);
-  cursor: pointer;
+  cursor: inherit;
 }
 
 .catch-gallery-preview-image {
