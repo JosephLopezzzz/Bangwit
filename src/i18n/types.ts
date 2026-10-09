@@ -113,6 +113,23 @@ export type Dictionary = {
     pendingReviewDesc: string;
     areas: Record<string, { subtitle: string }>;
   };
+  fisheriesEvidence: {
+    title: string;
+    description: string;
+    scope: string;
+    limits: string;
+    groupsSummary: string;
+    groupsLabel: string;
+    sourceSummary: string;
+    sourceLabel: string;
+    tableLabel: string;
+    printedPageLabel: string;
+    pdfPageLabel: string;
+    sourceOwnerLabel: string;
+    reviewLabel: string;
+    reviewNote: string;
+    opensPdf: string;
+  };
   catches: {
     catchTab: string;
     detailsTab: string;

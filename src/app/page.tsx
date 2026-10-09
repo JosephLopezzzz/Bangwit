@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { ArrowUpRight } from "lucide-react";
 import { AreaExplorer } from "@/components/area-explorer";
+import { CaviteFisheriesEvidence } from "@/components/cavite-fisheries-evidence";
 import { useBangwit } from "@/components/bangwit-provider";
 
 export default function ExplorePage() {
@@ -22,6 +23,8 @@ export default function ExplorePage() {
       </header>
 
       <AreaExplorer />
+
+      <CaviteFisheriesEvidence />
 
       <section
         className="mt-5 rounded-3xl border border-line bg-white p-5 shadow-sm sm:p-6"

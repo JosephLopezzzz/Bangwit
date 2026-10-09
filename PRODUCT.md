@@ -15,7 +15,7 @@ web
 
 Bangwit is a Philippine waterbody discovery and personal catch-journaling product. Its intended primary flow is to select a region or waterbody, explore species records with supporting evidence, and separately record one's own catches. Identified species in a person's catch log can form a private `My Species` collection.
 
-The current prototype is scoped to a Cavite pilot. Its regional species records are not yet loaded or verified. Success measures and the priority audience for the pilot have not been established.
+The current prototype is scoped to a Cavite pilot. Explore includes dated province-wide fisheries information from the Cavite Ecological Profile 2024. Verified scientific species records for individual waters are not yet loaded. Success measures and the priority audience for the pilot have not been established.
 
 ## Positioning
 
@@ -35,6 +35,7 @@ Species occurrence, legal catchability, community catch reports, live safety adv
 ### Current prototype
 
 - Area selection for the three listed Cavite waters and a species-explorer interface with name, water-type, and status filters. No verified species records are loaded, so the filters do not yet return validated results.
+- A separate Explore panel presents 11 reported catch groups and local names from the Cavite Ecological Profile 2024, Table 4.25, printed page 209 / PDF page 239. It includes expandable group/source details, the report year, provincial scope and review limits in Filipino and English. It does not assign these groups to a selected bay, resolve exact scientific species, show seasonal recommendations, or populate verified species filters.
 - A device-local catch journal using browser storage. Entries can include species or an unknown identification, date, water type, optional spot label, length, weight, bait, notes, released/kept status, and a photo. GPS is not collected, and there is no cloud sync.
 - `My Species` is derived only from identified entries in the person's own catch log. It is not a public sighting or a verified regional record.
 - First-use policy acknowledgment, optional fisher preferences, an in-app guide, local backup and restore, and local-data deletion controls.
@@ -53,7 +54,7 @@ The current implementation uses the name `Bangwit`, the tagline “Bawat huli, m
 
 ## Evidence on Hand
 
-- Current evidence is the prototype code, local catch-journal behavior, and Bilog artwork in `public/assets/`.
+- Current evidence includes the prototype code, local catch-journal behavior, Bilog artwork in `public/assets/`, and the reviewed provincial catch-group table in `data/research/alternatives/cavite/cavite-reported-catch-groups-2024.json`. A direct-access source catalog and retrieval manifest accompany this research file; downloaded originals remain local and are ignored by Git.
 - No verified Cavite species dataset, regional legal guidance, access-point data, live advisories, user research, or validated market comparison is present in this project.
 - `MIGRATION_BASELINE.md` records the prior prototype as a reference and rollback copy and documents the manual migration context.
 

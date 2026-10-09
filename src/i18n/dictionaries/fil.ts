@@ -138,6 +138,26 @@ export const filDictionary: Dictionary = {
       "Cañacao Bay": { subtitle: "Cavite City" },
     },
   },
+  fisheriesEvidence: {
+    title: "Impormasyon sa pangisdaan ng Cavite",
+    description:
+      "{count} pangkat ng huli at lokal na pangalan ang iniulat noong 2024. Hindi pa tiyak ang eksaktong scientific species.",
+    scope: "Para sa buong lalawigan ng Cavite; hindi nakatalaga sa napiling bay o fishing spot.",
+    limits:
+      "Hindi nito kinukumpirma kung naroon pa ngayon ang mga ito, kung mahuhuli, o kung legal at ligtas mangisda.",
+    groupsSummary: "Tingnan ang {count} naiulat na pangkat ng huli",
+    groupsLabel: "Mga pangkat ng huli na iniulat para sa Cavite noong 2024",
+    sourceSummary: "Pinagkunan at detalye ng pagsusuri",
+    sourceLabel: "Publikasyon",
+    tableLabel: "Talahanayan",
+    printedPageLabel: "nakalimbag na pahina",
+    pdfPageLabel: "pahina sa PDF",
+    sourceOwnerLabel: "Pinagkunan ng talahanayan",
+    reviewLabel: "Sinuri ang source",
+    reviewNote:
+      "Naitugma ang mga pangalan sa source table. Hindi ginagawang kasalukuyan ng petsa ng pagsusuri ang datos noong 2024. Hindi sapat ang karaniwang pangalan para matukoy ang eksaktong scientific species.",
+    opensPdf: "(PDF, magbubukas sa bagong tab)",
+  },
   catches: {
     catchTab: "Huli",
     detailsTab: "Dagdag na detalye",

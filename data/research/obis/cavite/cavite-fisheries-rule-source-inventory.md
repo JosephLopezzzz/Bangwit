@@ -1,5 +1,7 @@
 # Cavite pilot fisheries rule source inventory
 
+**Direct-access alternatives (10 October 2026):** See [the alternative source bundle](../../alternatives/cavite/README.md) for acquired public documents, a provenance/hash manifest, a dated administrative discovery outline and a reviewed provincial catch-group table. This lets source/evidence/advisory and catchbook development continue while exact legal water-boundary questions are unresolved. The discovery outline must not be used as a substitute legal municipal-water polygon.
+
 **Reviewed:** 2026-10-07  
 **Status:** Source map only. This is not a legal clearance or a recommendation to fish.
 
