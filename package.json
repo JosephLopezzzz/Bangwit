@@ -12,7 +12,9 @@
     "test:storage": "node --experimental-strip-types --test tests/catches-storage.test.mjs",
     "format": "biome format --write src",
     "format:check": "biome format src",
-    "typecheck": "tsc --noEmit"
+    "typecheck": "tsc --noEmit",
+    "test:evidence": "node --test tests/historical-evidence.test.mjs",
+    "test:offline": "node --experimental-strip-types --test tests/offline-precache.test.mjs"
   },
   "dependencies": {
     "class-variance-authority": "^0.7.1",

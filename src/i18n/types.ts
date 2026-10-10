@@ -219,6 +219,33 @@ export type Dictionary = {
       unknown: { label: string; detail: string };
     };
   };
+  historicalEvidence: {
+    title: string;
+    description: string;
+    scope: string;
+    limits: string;
+    recordsSummary: string;
+    coveTitle: string;
+    coveNote: string;
+    coastTitle: string;
+    coastNote: string;
+    dateMissing: string;
+    recordedAs: string;
+    sourceLocality: string;
+    uncertainty: string;
+    providerNote: string;
+    recordId: string;
+    recordLink: string;
+    taxonomyLink: string;
+    sourceSummary: string;
+    datasetLabel: string;
+    licenseLabel: string;
+    licenseNote: string;
+    taxonomyChecked: string;
+    licenseChecked: string;
+    reviewNote: string;
+    opensTab: string;
+  };
   species: {
     tag: string;
     badge: string;

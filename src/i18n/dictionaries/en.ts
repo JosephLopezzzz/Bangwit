@@ -246,6 +246,38 @@ export const enDictionary: Dictionary = {
       unknown: { label: "Unknown", detail: "Add later" },
     },
   },
+  historicalEvidence: {
+    title: "Historical research records",
+    description:
+      "{count} museum specimen records from a reviewed OBIS snapshot, with collection dates and source links.",
+    scope:
+      "Broad historical locality reports; these records are not matched to your selected bay. The filters above apply to the verified local species view.",
+    limits:
+      "Current presence, fishing permission, catchability, and safety remain unverified. These records do not identify fishing spots.",
+    recordsSummary: "View {count} museum records",
+    coveTitle: "Limbones Cove · source-reported locality",
+    coveNote: "Coordinates were placed at the centre of a polygon covering the cove. Reported uncertainty: 3,131 m.",
+    coastTitle: "Cavite / Manila Bay · broad source locality",
+    coastNote: "The provider describes a broad area off Cavite, with reported uncertainty of 24,829 m.",
+    dateMissing: "Collection date not supplied",
+    recordedAs: "Recorded name",
+    sourceLocality: "Original locality text",
+    uncertainty: "Coordinate uncertainty",
+    providerNote: "Provider location note",
+    recordId: "Museum record ID",
+    recordLink: "OBIS record",
+    taxonomyLink: "WoRMS name review",
+    sourceSummary: "Dataset, license and review details",
+    datasetLabel: "Source dataset",
+    licenseLabel: "Record and dataset license",
+    licenseNote:
+      "Both the included occurrence records and the reviewed dataset metadata are CC0. Other OBIS records may use different licenses.",
+    taxonomyChecked: "Taxonomy checked",
+    licenseChecked: "License checked",
+    reviewNote:
+      "These are stored review dates, not live updates or collection dates. One record was excluded because its locality could not support Cavite-specific evidence. Original provider text is retained in English.",
+    opensTab: "(opens in a new tab)",
+  },
   species: {
     tag: "Cavite pilot · sourced records only",
     badge: "Coverage pending",

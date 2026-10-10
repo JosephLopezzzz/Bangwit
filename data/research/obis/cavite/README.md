@@ -23,3 +23,9 @@ To refresh the taxonomic name cross-check, run `node scripts/fetch-cavite-worms-
 To rebuild the CC0-only fish shortlist after refreshing its source files, run `node scripts/build-cavite-cc0-fish-shortlist.mjs` from the project root. The script requires both the occurrence-level license and the reviewed dataset-level license to be CC0. It keeps historic specimen records separate from current presence and legal catchability.
 
 The shortlist's locality screen reads the source locality and georeference remarks. It does not perform a point-in-polygon test: the project does not contain a suitable authoritative Cavite fishing-water boundary geometry. Do not treat its broad-area labels as verified provincial or municipal-water coverage.
+
+## Historical product view
+
+`node scripts/build-cavite-historical-evidence.mjs` builds `src/data/cavite-historical-evidence.json` for the separate historical research section on the Species page. It retains 12 reviewed museum records, excludes the locality rejected by this screen, preserves three missing collection dates and one month-only date, and publishes no coordinates or bay assignment. Its required inputs are this shortlist, the WoRMS crosswalk, dataset-license review, and the license-review date documented in the validation notes. Invalid licenses, taxonomy, provenance, dates, duplicate IDs or unknown locality-review states stop generation. The raw shortlist remains unchanged.
+
+Run `npm run test:evidence` to check the adapter and exact snapshot regeneration. This projection is historical source evidence only; verified current species filters and legal/catchability guidance remain unavailable.

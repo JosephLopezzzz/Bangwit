@@ -249,6 +249,39 @@ export const filDictionary: Dictionary = {
       unknown: { label: "Hindi alam", detail: "Idagdag mamaya" },
     },
   },
+  historicalEvidence: {
+    title: "Mga makasaysayang research record",
+    description:
+      "{count} museum specimen record mula sa na-review na OBIS snapshot, kasama ang petsa ng pagkolekta at source links.",
+    scope:
+      "Malawakang ulat ng dating lokasyon; hindi nakatalaga ang mga record na ito sa napili mong bay. Para sa verified local species view ang filters sa itaas.",
+    limits:
+      "Hindi pa verified ang kasalukuyang presensya, legal na panghuhuli, catchability, at kaligtasan. Hindi ito pagtukoy ng fishing spots.",
+    recordsSummary: "Tingnan ang {count} museum record",
+    coveTitle: "Limbones Cove · lokasyong iniulat ng source",
+    coveNote: "Inilagay ang coordinates sa gitna ng polygon na sumasakop sa cove. Iniulat na uncertainty: 3,131 m.",
+    coastTitle: "Cavite / Manila Bay · malawak na lokasyon sa source",
+    coastNote:
+      "Malawak na lugar sa labas ng baybayin ng Cavite ang inilalarawan ng provider, na may uncertainty na 24,829 m.",
+    dateMissing: "Hindi ibinigay ang petsa ng pagkolekta",
+    recordedAs: "Pangalang nasa record",
+    sourceLocality: "Orihinal na paglalarawan ng lokasyon",
+    uncertainty: "Uncertainty ng coordinates",
+    providerNote: "Tala ng provider sa lokasyon",
+    recordId: "Museum record ID",
+    recordLink: "Record sa OBIS",
+    taxonomyLink: "Name review sa WoRMS",
+    sourceSummary: "Dataset, license at detalye ng review",
+    datasetLabel: "Source dataset",
+    licenseLabel: "License ng record at dataset",
+    licenseNote:
+      "CC0 ang mga kasamang occurrence record at ang na-review na dataset metadata. Maaaring iba ang license ng ibang OBIS record.",
+    taxonomyChecked: "Sinuri ang taxonomy",
+    licenseChecked: "Sinuri ang license",
+    reviewNote:
+      "Naka-save na petsa ng review ang mga ito, hindi live update o petsa ng pagkolekta. Ibinukod ang isang record dahil hindi sapat ang lokasyon nito bilang Cavite-specific evidence. Nananatili sa English ang orihinal na teksto ng provider.",
+    opensTab: "(magbubukas sa bagong tab)",
+  },
   species: {
     tag: "Cavite pilot · sourced records only",
     badge: "Coverage pending",

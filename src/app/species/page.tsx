@@ -4,6 +4,7 @@ import { useState } from "react";
 import { Droplets, Layers, Leaf, ShieldCheck, Sprout, TriangleAlert, Waves } from "lucide-react";
 import { useBangwit } from "@/components/bangwit-provider";
 import { DropdownSelect } from "@/components/dropdown-select";
+import { HistoricalSpeciesEvidence } from "@/components/historical-species-evidence";
 
 export default function SpeciesPage() {
   const { selectedArea, dict } = useBangwit();
@@ -72,6 +73,8 @@ export default function SpeciesPage() {
           />
         </div>
       </section>
+
+      <HistoricalSpeciesEvidence />
 
       <section
         id="speciesNotice"

@@ -36,7 +36,9 @@ Species occurrence, legal catchability, community catch reports, live safety adv
 
 - Area selection for the three listed Cavite waters and a species-explorer interface with name, water-type, and status filters. No verified species records are loaded, so the filters do not yet return validated results.
 - A separate Explore panel presents 11 reported catch groups and local names from the Cavite Ecological Profile 2024, Table 4.25, printed page 209 / PDF page 239. It includes expandable group/source details, the report year, provincial scope and review limits in Filipino and English. It does not assign these groups to a selected bay, resolve exact scientific species, show seasonal recommendations, or populate verified species filters.
+- A separate Species section presents 12 historical CAS museum specimen records from the reviewed CC0 OBIS shortlist, grouped by broad source-reported locality. Nine collection dates are supplied (1947–1964, including one month-only date); three are unknown. Expandable entries retain scientific/recorded names, provider locality text and coordinate uncertainty, OBIS/WoRMS links, citation, license and the October 6, 2026 review dates. The rejected locality record is excluded; these records do not populate verified filters, map points, catch recommendations, or personal collections.
 - A device-local catch journal using browser storage. Entries can include species or an unknown identification, date, water type, optional spot label, length, weight, bait, notes, released/kept status, and a photo. GPS is not collected, and there is no cloud sync.
+- The service-worker configuration precaches the journal and offline fallback with revisions tied to source and asset changes. Reconnecting does not deliberately reload the page, and the fallback links directly to the journal document. Production offline reload, navigation, reconnect and upgrade acceptance remain pending; see `OFFLINE_ACCEPTANCE.md`.
 - `My Species` is derived only from identified entries in the person's own catch log. It is not a public sighting or a verified regional record.
 - First-use policy acknowledgment, optional fisher preferences, an in-app guide, local backup and restore, and local-data deletion controls.
 
@@ -54,7 +56,7 @@ The current implementation uses the name `Bangwit`, the tagline “Bawat huli, m
 
 ## Evidence on Hand
 
-- Current evidence includes the prototype code, local catch-journal behavior, Bilog artwork in `public/assets/`, and the reviewed provincial catch-group table in `data/research/alternatives/cavite/cavite-reported-catch-groups-2024.json`. A direct-access source catalog and retrieval manifest accompany this research file; downloaded originals remain local and are ignored by Git.
+- Current evidence includes the prototype code, local catch-journal behavior, Bilog artwork in `public/assets/`, and the reviewed provincial catch-group table in `data/research/alternatives/cavite/cavite-reported-catch-groups-2024.json`. The reviewed historical projection is in `src/data/cavite-historical-evidence.json` and is reproducibly generated from the OBIS shortlist, taxonomy crosswalk, license review and documented review date. A direct-access source catalog and retrieval manifest accompany the provincial research file; downloaded originals remain local and are ignored by Git.
 - No verified Cavite species dataset, regional legal guidance, access-point data, live advisories, user research, or validated market comparison is present in this project.
 - `MIGRATION_BASELINE.md` records the prior prototype as a reference and rollback copy and documents the manual migration context.
 
