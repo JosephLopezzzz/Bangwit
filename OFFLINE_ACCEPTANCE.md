@@ -1,6 +1,6 @@
 # Offline acceptance
 
-Status checked: October 13, 2026. The production build and focused policy-dialog checks **pass**. Full offline browser/device acceptance is **pending**.
+Status checked: October 13, 2026. The production build, focused policy-dialog checks, and isolated desktop offline cases including fresh-origin controlled reload and rebuild-upgrade **pass to the scope recorded below**. A brand-new browser profile and physical-device acceptance are **pending**. Outbound-traffic review is partial.
 
 ## Changes in this slice
 
@@ -19,11 +19,11 @@ Status checked: October 13, 2026. The production build and focused policy-dialog
 | Focused format | Pass for `bangwit-provider.tsx`. |
 | Whole-app lint | Pass: 49 files, zero errors or warnings. |
 | `npm run test:research` | Pass: 15/15 covering the historical snapshot, finite candidate ledger, search selectors, and study-based guide boundaries. |
-| Production Species page smoke check | Pass at `http://localhost:4178/species`: page content, evidence filters/counts, and source-linked diet cards rendered with no console errors. The isolated origin's policy dialog remained unaccepted, and no catch data was changed. This is not interaction, consent, or offline acceptance. |
+| Production Species page smoke check | Pass at `http://localhost:4178/species`: page content, evidence filters/counts, and source-linked diet cards rendered with no console errors. This did not test species interactions or offline behavior. |
 | Manifest inspection | Completed production worker contains `/catches` and `/~offline` with matching revisions; the build reports 36 precache entries. |
-| Production build | Pass: normal Turbopack build, all 16 static outputs generated. Current build ID: `kZKsVb1SuPcEfzhf5ejPQ`. |
+| Production build | Pass: normal Turbopack builds generated all 16 static outputs. Build A: `kZKsVb1SuPcEfzhf5ejPQ`; rebuild B: `c02r_OIfSgsx1WSmxTF9-`. |
 | Policy-dialog browser check | Pass within the scope recorded below, using the production server. |
-| Browser/device offline, reconnect and upgrade | User reported that it appears to work, without individual case/device results. Detailed acceptance remains pending; this report is not a full pass. |
+| Desktop offline and reconnect | See the recorded runs below. Offline save/reload with a synthetic photo, cached routes/fallback, reconnect draft recovery, offline backup export, empty-journal restore, non-empty restore rejection, fresh-origin controlled reload, and rebuild-upgrade passed on isolated desktop browser origins; a brand-new browser profile and real-phone cases remain open. |
 
 An independent source review found no actionable issue in the offline-cache slice. It does not replace browser acceptance.
 
@@ -41,6 +41,24 @@ Checked in Brave on Windows at the fresh test origin `http://127.0.0.1:4176/catc
 - Screenshots: [desktop English](.impeccable/review/policy-lint-20261013/desktop-en.png) and [mobile Filipino](.impeccable/review/policy-lint-20261013/mobile-fil.png).
 
 No agreement was submitted, catch saved/deleted, or real journal cleared. Mobile viewport emulation is not a real-phone or screen-reader test. This check does not establish offline catch persistence, reconnect recovery or release upgrades.
+
+## Isolated desktop offline run
+
+Run date: October 13, 2026. Test origin: `http://127.0.0.1:4178`. Build: `kZKsVb1SuPcEfzhf5ejPQ`. Environment: Windows 11 Home Single Language, build 26200; Codex In-app Browser (Chrome engine 155), 920 × 668 viewport at DPR 1.25. The test origin displayed the prototype Terms and Privacy text. After the user explicitly agreed, the prototype notice was accepted on this isolated test origin only. This is not legal approval of production policies.
+
+For actual no-server checks, the local production server on port 4178 was stopped and verified absent; the tab's network was also set offline through browser developer controls. `navigator.onLine` was false and the page was service-worker controlled. The server was restarted and online state restored after testing. An earlier attempt that only set the tab offline while the server still ran was not treated as offline evidence, because the service worker could still fetch from localhost.
+
+| Case | Result |
+| --- | --- |
+| O1 — first visit and controlled reload | **Pass after install on a fresh origin; first offline visit remains unsupported.** On new origin `http://127.0.0.1:4180/catches`, the initial online page was uncontrolled; after an online reload it became service-worker controlled. With the server stopped and the tab offline, reloading `/catches` rendered and hydrated the empty journal. The prototype notice stayed unaccepted. This was a new origin in the same browser profile, not a brand-new browser profile. |
+| O2 — offline save and reload | **Pass for this desktop test case.** With the server stopped and the tab offline, a clearly labeled synthetic entry and SVG test image were saved, then verified after reload. The gallery thumbnail, full photo viewer, 19.5 in, 2.3 lbs, location label and notes were present. The five unidentified test entries remained outside My Species. This does not test a physical camera photo or fresh-profile first visit. |
+| O3 — unsaved draft on reconnect | **Partial.** A draft filled while the server was stopped survived reconnection. It was saved once; journal count increased from 2 to 3, and its 7 in / 2 lbs, test-only location and note were verified after reload. No photo was included. |
+| O4 — navigation and fallback | **Pass for the tested desktop origin.** With the server stopped, `/`, `/species`, `/my-species`, `/settings` and `/catches` loaded from cache. An unvisited path showed the cached offline fallback, and its journal link opened the cached journal. The Explore map imagery was unavailable offline while its text remained readable. |
+| O5 — private backup | **Pass for backup/restore behavior; privacy traffic review partial.** A backup of all five synthetic entries was exported while the server was stopped and the tab offline. It was restored into an empty journal on the separate `127.0.0.1:4179` origin after the user reviewed and authorized the prototype notice there. All five entries appeared; the photo viewer, 19.5 in / 2.3 lbs units, test-only location label and notes were preserved. The unidentified entries stayed out of My Species. A second restore attempt against the non-empty journal was rejected with “May laman na ang catch journal na ito”; the count remained five. Cache inspection found no catch-note text in cached request URLs, but outbound traffic was not exhaustively monitored. |
+| O6 — release upgrade | **Pass for the desktop rebuild-upgrade path; no source feature change was included.** On the same `4179` origin, build A (`kZKsVb1SuPcEfzhf5ejPQ`) had five synthetic catches and the SVG photo. Rebuild B (`c02r_OIfSgsx1WSmxTF9-`; 36 precache entries, 5221.16 KiB) was installed while the A-controlled tab remained open. The new worker was observed in `waiting: installed` while the old page was still controlled, and an unsaved synthetic species/location/note draft remained visible. The old tab was then closed normally. A new page loaded with all five records; after stopping the server, an offline reload still showed the five-entry journal and opened the full synthetic photo viewer. Build A's catch/photo data survived. The B build was a rebuild of the same source tree, so this verifies worker/cache replacement across builds, not a user-visible feature-code release. The post-close active state was not directly inspected. |
+| O7 — mobile device | **Not run.** No physical phone or installed home-screen session was tested. |
+
+Five synthetic, unidentified test records remain in the IndexedDB journals for `127.0.0.1:4178` and `127.0.0.1:4179`; `127.0.0.1:4180` remains an empty-origin test. The five records contain only explicit `TEST`/`SYNTHETIC` labels and no real catch or location; one includes a synthetic SVG, not a user photo. A local JSON backup of all five records, including that SVG, remains in Downloads and should be treated as private test data. The prototype notice was accepted on 4179 only after the user authorized that action. No user catch data was entered, no external uploads occurred, and no test records were deleted. The production test server is running again on port 4178; the temporary 4179 and 4180 servers are stopped.
 
 ## Previous environment limitation
 
