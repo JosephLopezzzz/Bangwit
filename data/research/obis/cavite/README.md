@@ -12,6 +12,7 @@ This folder keeps the raw OBIS occurrence export and its working review outputs 
 - `../../alternatives/cavite/README.md` — direct-access alternative source bundle, local downloaded evidence, a dated discovery outline, and development tasks that do not depend on agency email replies.
 - `cavite-obis-dataset-license-review.csv` — live OBIS dataset metadata cross-check for the 11 source datasets, including per-record license counts, dataset-level rights, citation availability, and follow-up actions.
 - `cavite-obis-location-review.csv` — occurrence rows flagged for coordinate uncertainty review.
+- `cavite-obis-fish-candidate-review.csv` — reproducible decision ledger for all 27 fish-candidate names and 52 linked occurrence records. It separates already published rows, one specifically excluded occurrence, and rows still pending taxonomy, locality, or reuse review. The `source_or_shortlist_name` column preserves a source name or a name already admitted to the reviewed shortlist; it does not assert taxonomy acceptance for pending rows.
 - `cavite-obis-data-review-notes.md` and `cavite-obis-validation-notes.md` — interpretation, limitations, and source notes.
 
 The checklist is research material, not app-ready or legal catch advice. This export contains multiple licenses; the repository's own license does not replace source-dataset terms. Check the license review and keep the dataset, citation, and individual record license attached before redistributing or integrating any occurrence. Verify names, locations, and applicable rules separately.
@@ -24,8 +25,10 @@ To rebuild the CC0-only fish shortlist after refreshing its source files, run `n
 
 The shortlist's locality screen reads the source locality and georeference remarks. It does not perform a point-in-polygon test: the project does not contain a suitable authoritative Cavite fishing-water boundary geometry. Do not treat its broad-area labels as verified provincial or municipal-water coverage.
 
+Rebuild the finite candidate-review ledger after changing any source review input with `node scripts/build-cavite-fish-candidate-review.mjs`. It reads the current candidate list, raw OBIS export, locality and dataset-license reviews, reviewed shortlist, and published snapshot. Pending rows remain research-only and are not copied into the public snapshot. Run `npm run test:research` to check this ledger along with historical-snapshot regeneration and Species selectors.
+
 ## Historical product view
 
 `node scripts/build-cavite-historical-evidence.mjs` builds `src/data/cavite-historical-evidence.json` for the separate historical research section on the Species page. It retains 12 reviewed museum records, excludes the locality rejected by this screen, preserves three missing collection dates and one month-only date, and publishes no coordinates or bay assignment. Its required inputs are this shortlist, the WoRMS crosswalk, dataset-license review, and the license-review date documented in the validation notes. Invalid licenses, taxonomy, provenance, dates, duplicate IDs or unknown locality-review states stop generation. The raw shortlist remains unchanged.
 
-Run `npm run test:evidence` to check the adapter and exact snapshot regeneration. This projection is historical source evidence only; verified current species filters and legal/catchability guidance remain unavailable.
+Run `npm run test:research` to check the adapter, exact snapshot regeneration, candidate-review ledger and Species selectors. The projection is historical source evidence only; water-type, conservation, current-presence and legal/catchability filters remain unavailable until reviewed values exist.

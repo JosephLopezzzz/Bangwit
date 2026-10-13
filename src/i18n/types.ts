@@ -245,6 +245,18 @@ export type Dictionary = {
     licenseChecked: string;
     reviewNote: string;
     opensTab: string;
+    resultsSummary: string;
+    localityFilterLabel: string;
+    allLocalities: string;
+    coveLocality: string;
+    coastLocality: string;
+    dateFilterLabel: string;
+    allDates: string;
+    datedOnly: string;
+    undatedOnly: string;
+    clearFilters: string;
+    noMatches: string;
+    noMatchesDesc: string;
   };
   species: {
     tag: string;
@@ -263,6 +275,37 @@ export type Dictionary = {
     warningBoxTitle: string;
     warningBoxDesc: string;
     selectedGroundLabel: string;
+    localStatusTitle: string;
+    localStatusDesc: string;
+    moreFilters: string;
+    unavailableFilterNote: string;
+    clearAllFilters: string;
+  };
+  feedingGuides: {
+    title: string;
+    description: string;
+    searchLabel: string;
+    searchPlaceholder: string;
+    foodFilterLabel: string;
+    allFoods: string;
+    foodGroups: {
+      fish: string;
+      crustaceans: string;
+      insects: string;
+      mollusks: string;
+      algae: string;
+      "plant-material": string;
+      detritus: string;
+    };
+    resultsSummary: string;
+    noMatches: string;
+    studyContextLabel: string;
+    foodsLabel: string;
+    sourcesLabel: string;
+    sourceDetails: string;
+    baitPendingTitle: string;
+    baitPendingDesc: string;
+    reviewDateLabel: string;
   };
   mySpecies: {
     tag: string;

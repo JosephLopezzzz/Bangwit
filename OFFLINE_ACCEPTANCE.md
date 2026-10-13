@@ -1,6 +1,6 @@
 # Offline acceptance
 
-Status checked: October 11, 2026. Offline browser acceptance is **pending**.
+Status checked: October 13, 2026. The production build and focused policy-dialog checks **pass**. Full offline browser/device acceptance is **pending**.
 
 ## Changes in this slice
 
@@ -15,26 +15,40 @@ Status checked: October 11, 2026. Offline browser acceptance is **pending**.
 | --- | --- |
 | `npm run test:offline` | 5/5 pass: both HTML documents, deterministic revisions, source changes, replaced chunks and private-file exclusion. |
 | `npm run test:storage` | 2/2 pass using an isolated IndexedDB implementation: photo/legacy-record backup and restore, measurement units and invalid-unit rejection. This is not a browser reload test. |
-| TypeScript | Pass with incremental output disabled. |
-| Focused lint and format | Pass for the changed application/configuration files and offline tests. |
-| Whole-app lint | Fails in the existing `bangwit-provider.tsx`: policy-reader semantics/tab index and effect dependency; unused imports also warn. That component is unchanged in this slice. |
-| Manifest inspection | Both document entries present, no warnings, against the available compiled assets. This does not establish that a complete production build exists. |
-| Production build | Blocked in this environment; details below. |
-| Browser/device offline, reconnect and upgrade | Not run; no acceptance claim. |
+| TypeScript | Pass with incremental output disabled and in the production build. |
+| Focused format | Pass for `bangwit-provider.tsx`. |
+| Whole-app lint | Pass: 49 files, zero errors or warnings. |
+| `npm run test:research` | Pass: 15/15 covering the historical snapshot, finite candidate ledger, search selectors, and study-based guide boundaries. |
+| Production Species page smoke check | Pass at `http://localhost:4178/species`: page content, evidence filters/counts, and source-linked diet cards rendered with no console errors. The isolated origin's policy dialog remained unaccepted, and no catch data was changed. This is not interaction, consent, or offline acceptance. |
+| Manifest inspection | Completed production worker contains `/catches` and `/~offline` with matching revisions; the build reports 36 precache entries. |
+| Production build | Pass: normal Turbopack build, all 16 static outputs generated. Current build ID: `kZKsVb1SuPcEfzhf5ejPQ`. |
+| Policy-dialog browser check | Pass within the scope recorded below, using the production server. |
+| Browser/device offline, reconnect and upgrade | User reported that it appears to work, without individual case/device results. Detailed acceptance remains pending; this report is not a full pass. |
 
-An independent source review found no actionable issue in this slice. It does not replace browser acceptance.
+An independent source review found no actionable issue in the offline-cache slice. It does not replace browser acceptance.
 
-## Build limitation
+## Policy-dialog verification
 
-The normal Turbopack build encounters Windows native path-resolution access errors. A narrowly scoped repository read/write grant did not resolve native `realpath` failures; ordinary JavaScript path resolution and basic file writes succeeded. The configured Turbopack root already points to the repository.
+The lint cleanup removes unused imports and uses a named native `section` for the scrollable policy reader. Its `tabIndex={0}` and language-change effect dependency are deliberately retained with narrowly scoped lint explanations: keyboard users must be able to focus/scroll the reader, and translated policy text requires a fresh reading/checkbox state. No policy wording, acceptance version, storage keys or acceptance guard changed.
 
-A one-off `next build --webpack` diagnostic compiled and passed its TypeScript phase, then failed while prerendering `/catches` with `EPERM: operation not permitted, mkdir` at `.next/server/app/catches.segments/catches`. An isolated test of Next's directory writer passed three concurrent cases and a sequential control, so a concurrency explanation is unproven. The exact prerender access cause remains unresolved.
+Checked in Brave on Windows at the fresh test origin `http://127.0.0.1:4176/catches`, with a 1536 × 702 desktop viewport and a 390 × 844 mobile viewport:
 
-No bundler, worker, ACL, security or Git configuration was changed to work around these errors. A successful production build is required before offline acceptance; development mode disables Serwist precaching and is not an equivalent test.
+- The reader receives initial focus, exposes section/region semantics and retains a keyboard tab stop. Privacy appears before Terms.
+- The checkbox is disabled before reaching the end. `Ctrl+End` scrolls the reader and enables the checkbox. The agreement button remains disabled while the checkbox is unchecked.
+- Desktop forward/reverse Tab navigation wraps inside the dialog.
+- Switching Filipino to English resets scroll to the top and disables the checkbox again; the unchecked state and disabled agreement button remain. The checkbox was never checked during this run, so clearing a previously checked box was confirmed from the unchanged source operation, not replayed in the browser.
+- Both viewport layouts fit the viewport width without horizontal document overflow. No browser console errors were captured during the run.
+- Screenshots: [desktop English](.impeccable/review/policy-lint-20261013/desktop-en.png) and [mobile Filipino](.impeccable/review/policy-lint-20261013/mobile-fil.png).
 
-## Run outside the restricted session
+No agreement was submitted, catch saved/deleted, or real journal cleared. Mobile viewport emulation is not a real-phone or screen-reader test. This check does not establish offline catch persistence, reconnect recovery or release upgrades.
 
-From a normal VS Code terminal in this project:
+## Previous environment limitation
+
+Earlier restricted-session attempts failed in Windows native path resolution and, in a one-off Webpack diagnostic, prerender directory creation. Those historical failures are no longer the current build status. The user's normal-terminal Turbopack build passed on October 11, and the agent's fresh Turbopack build passed on October 13. No bundler, worker, ACL, security or Git configuration workaround was needed.
+
+## Run production acceptance
+
+From a terminal in this project:
 
 ```powershell
 npm run test:offline

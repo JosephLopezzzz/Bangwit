@@ -1,8 +1,7 @@
 "use client";
 
-import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { ArrowRight, BriefcaseBusiness, Compass, Droplets, Fish, Users, Waves } from "lucide-react";
+import { BriefcaseBusiness, Compass, Droplets, Fish, Users, Waves } from "lucide-react";
 import { DropdownSelect } from "@/components/dropdown-select";
 import { PolicyDocument } from "@/components/policy-document";
 import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
@@ -99,7 +98,7 @@ export function BangwitProvider({ children }: { children: ReactNode }) {
   const themeTransitionRef = useRef(0);
   const [tourStep, setTourStep] = useState<number | null>(null);
   const [message, setMessage] = useState("");
-  const policyReaderRef = useRef<HTMLDivElement>(null);
+  const policyReaderRef = useRef<HTMLElement>(null);
 
   const dict = useMemo(() => (lang === "en" ? enDictionary : filDictionary), [lang]);
 
@@ -142,6 +141,7 @@ export function BangwitProvider({ children }: { children: ReactNode }) {
     }
   }, []);
 
+  // biome-ignore lint/correctness/useExhaustiveDependencies: A language change replaces the policy text and must reset reading and checkbox progress.
   useEffect(() => {
     if (!ready || accepted || isPolicyPage) return;
     const reader = policyReaderRef.current;
@@ -408,10 +408,10 @@ export function BangwitProvider({ children }: { children: ReactNode }) {
               {dict.policy.title}
             </h1>
             <p className="mt-3 text-sm leading-6 text-muted">{dict.policy.desc}</p>
-            <div
+            <section
               ref={policyReaderRef}
               data-initial-focus
-              role="region"
+              // biome-ignore lint/a11y/noNoninteractiveTabindex: The scrollable reader needs keyboard scrolling and the dialog's initial focus.
               tabIndex={0}
               aria-label={dict.policy.title}
               aria-describedby="policyReadStatus"
@@ -422,7 +422,7 @@ export function BangwitProvider({ children }: { children: ReactNode }) {
               className="policy-reader mt-5 max-h-[min(38vh,22rem)] overflow-y-auto rounded-2xl border border-line bg-paper px-4 py-4 sm:px-5"
             >
               <PolicyDocument privacy={dict.privacyPage} terms={dict.termsPage} className="space-y-6" />
-            </div>
+            </section>
             <details className="mt-4 rounded-xl border border-line px-4 py-3 text-sm text-muted">
               <summary className="cursor-pointer font-semibold text-ink">{dict.policy.summaryTitle}</summary>
               <p className="mt-3 leading-6">{dict.policy.summaryText}</p>
