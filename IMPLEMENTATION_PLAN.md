@@ -215,11 +215,12 @@ Run only checks relevant to the actual slice, followed by a production build for
 ### Completion checklist
 
 - [ ] O1–O7 offline/reconnect/upgrade/device acceptance completed for the declared supported devices/browsers.
-- [ ] Development and validated checkpoints are distinguishable, reproducible and privately backed up where needed.
+- [x] Local development checkpoint created as commit `f25a84a`; no push or deployment.
+- [ ] Validated offline checkpoint after O1–O7 acceptance remains pending.
 - [x] Existing candidate queue has a deterministic, auditable record ledger; published evidence retains identity, rights, dates and locality limits. Remaining candidate rows stay pending rather than being treated as accepted or published.
 - [x] Species name/locality/date controls filter the labeled reviewed dataset and handle counts/reset/no-match states. Water-type and status remain explicitly unavailable until values are reviewed.
 - [x] Starter diet claims have sources and study context. Method/bait claims do not yet have independent support, so recommendations remain withheld.
 - [ ] Applicable restrictions/unknowns are enforced before contextual catching guidance is available.
 - [x] Relevant final source checks, production build, and Species-route smoke check pass. The isolated browser's prototype policy dialog remained unaccepted.
 
-Status on October 13, 2026: implementation is in progress. The functional Species filters, source-linked diet sample, and finite candidate ledger are implemented. Final checks and a local development checkpoint remain; browser/device cases O1–O7 and contextual catching advice remain pending because a human has not accepted the isolated prototype policy and applicable official rules remain unverified.
+Status on October 13, 2026: the functional Species filters, source-linked diet sample, finite candidate ledger, final source checks, production build, and local development checkpoint are complete. Commit `f25a84a` is local and has not been pushed. Browser/device cases O1–O7 remain pending; contextual catching advice remains unavailable until independent method evidence and current applicable official rules are reviewed. The isolated preview's prototype policy remains unaccepted.
