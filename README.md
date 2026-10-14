@@ -1,6 +1,6 @@
 # Bangwit
 
-Next.js, TypeScript, and Tailwind CSS remake for the Cavite pilot. The UI, local catch journal, collection, onboarding, first-use guide, draft policy gate, and local backup/restore flow are in place. Offline behavior has scoped desktop evidence; physical-phone testing remains pending. Current species coverage, legal guidance and live alerts remain unverified.
+Next.js, TypeScript, and Tailwind CSS remake for the Cavite pilot. The UI, local catch journal, collection, onboarding, first-use guide, draft policy gate, and local backup/restore flow are in place. Offline behavior has scoped desktop evidence, and the user reported a phone pass in online and offline modes on October 15; device, browser, and installed-app details were not recorded. Current species coverage, legal guidance and live alerts remain unverified.
 
 ## Local development
 
@@ -34,9 +34,9 @@ The policy pages are drafts for the prototype, not final legal advice. The app d
 
 The service worker is configured to precache the catch journal and offline fallback, with document revisions derived from source and asset changes. Reconnecting no longer triggers an automatic page reload, so the open form is not deliberately discarded. The fallback's journal button requests the cached HTML directly.
 
-`test:offline` checks the actual Serwist manifest configuration, including document updates between releases and exclusion of source/private files. Recorded desktop testing covers offline save/reload with a synthetic photo, cached navigation/fallback, backup/restore, fresh-origin controlled reload and a rebuild upgrade. Reconnect coverage is partial; a new browser profile, physical phone and exhaustive outbound-traffic review remain pending. See [OFFLINE_ACCEPTANCE.md](OFFLINE_ACCEPTANCE.md) for the scope of each result.
+`test:offline` checks the actual Serwist manifest configuration, including document updates between releases and exclusion of source/private files. Recorded desktop testing covers offline save/reload with a synthetic photo, cached navigation/fallback, backup/restore, fresh-origin controlled reload and a rebuild upgrade. Reconnect coverage is partial; a new browser profile and exhaustive outbound-traffic review remain pending. The October 15 phone pass was user-reported, but its device, browser, and installed-app details were not recorded. See [OFFLINE_ACCEPTANCE.md](OFFLINE_ACCEPTANCE.md) for the scope of each result.
 
-For HTTPS Preview deployment settings, the hosting checker and physical-phone steps, follow [STAGING_ACCEPTANCE.md](STAGING_ACCEPTANCE.md). Deployment preparation does not establish a hosted or phone-tested release.
+For HTTPS Preview deployment settings and the hosting checker, follow [STAGING_ACCEPTANCE.md](STAGING_ACCEPTANCE.md). The hosted-origin check passed at `https://bangwit.vercel.app/`; its deployed commit ID and a fully detailed phone record remain unverified.
 
 ## Historical research records
 

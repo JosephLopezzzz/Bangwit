@@ -1,6 +1,6 @@
 # HTTPS staging and phone acceptance
 
-Prepared October 14, 2026. The current hosted origin is `https://bangwit.vercel.app/`. The read-only hosting checker passed there on October 14, confirming the journal and fallback documents, worker scope/update headers and document references, manifest, and icon dimensions. The checker does not identify the deployed commit or prove worker installation, successful precaching, offline hydration, or phone behavior. The latest recorded production build predates completion of the shared UI edits and should be rerun before another deployment. Physical-phone acceptance remains pending. Prior desktop results are in [OFFLINE_ACCEPTANCE.md](OFFLINE_ACCEPTANCE.md).
+Prepared October 14, 2026. The current hosted origin is `https://bangwit.vercel.app/`. The read-only hosting checker passed there on October 15, confirming the journal and fallback documents, worker scope/update headers and document references, manifest, and icon dimensions. The checker does not identify the deployed commit or prove worker installation, successful precaching, offline hydration, or phone behavior. The previously recorded local production build overlapped the final UI edits, so verify the live deployment's commit before treating its build as final. On October 15, the user reported a phone pass in online and offline modes; device/browser details and browser-tab versus installed-app context were not recorded. Prior desktop results are in [OFFLINE_ACCEPTANCE.md](OFFLINE_ACCEPTANCE.md).
 
 ## Deployment setup
 
@@ -63,13 +63,14 @@ Run separately on each supported physical phone/browser and in the installed hom
 
 | Detail | Recorded value |
 | --- | --- |
-| Date and tester | Pending |
-| Phone model / OS version | Pending |
-| Browser / version | Pending |
-| Browser tab or installed app | Pending |
-| Exact HTTPS origin | `https://bangwit.vercel.app/` (read-only hosting checks passed October 14, 2026) |
-| Deployed commit / build ID | Pending |
-| Starting / ending journal counts | Pending |
+| Date and tester | October 15, 2026; user-reported result |
+| Overall online/offline phone result | Pass, user-reported; individual results and device details not recorded |
+| Phone model / OS version | Not provided |
+| Browser / version | Not provided |
+| Browser tab or installed app | Phone test reported; exact context not specified |
+| Exact HTTPS origin | `https://bangwit.vercel.app/` (read-only hosting checks passed October 15, 2026) |
+| Deployed commit / build ID | Pending verification |
+| Starting / ending journal counts | Not recorded |
 | First-visit installation / controlled reload | Pending |
 | Offline saved catch + full photo + units | Pending |
 | Reconnect draft + single save | Pending |
