@@ -1,6 +1,6 @@
 # HTTPS staging and phone acceptance
 
-Prepared October 14, 2026. The latest production build and local HTTP hosting checks passed; source files changed during the build's before/after fingerprint window, so repeat the build after shared UI edits settle before deploying. No hosted URL or physical-phone pass is recorded yet. Prior desktop results are in [OFFLINE_ACCEPTANCE.md](OFFLINE_ACCEPTANCE.md).
+Prepared October 14, 2026. The current hosted origin is `https://bangwit.vercel.app/`. The read-only hosting checker passed there on October 14, confirming the journal and fallback documents, worker scope/update headers and document references, manifest, and icon dimensions. The checker does not identify the deployed commit or prove worker installation, successful precaching, offline hydration, or phone behavior. The latest recorded production build predates completion of the shared UI edits and should be rerun before another deployment. Physical-phone acceptance remains pending. Prior desktop results are in [OFFLINE_ACCEPTANCE.md](OFFLINE_ACCEPTANCE.md).
 
 ## Deployment setup
 
@@ -36,10 +36,10 @@ Choose one HTTPS hostname and retain it throughout each persistence/upgrade run.
 
 ## Hosting verification
 
-After deployment, substitute the actual origin:
+Run the checker against the current hosted origin or a later HTTPS deployment:
 
 ```powershell
-npm run check:staging -- https://your-staging-host
+npm run check:staging -- https://bangwit.vercel.app/
 ```
 
 This read-only checker verifies the journal/fallback documents, `/serwist/sw.js` type and root scope, update-cache header, worker references to the document URLs, manifest and icon dimensions. Document references alone do not prove worker installation, successful precaching or offline hydration; those need the offline tests and browser/device runs. It sends no catch data and does not inspect browser storage. A protected preview can reject the automated checker; verify these endpoints in the signed-in browser instead, keeping protection enabled.
@@ -67,7 +67,7 @@ Run separately on each supported physical phone/browser and in the installed hom
 | Phone model / OS version | Pending |
 | Browser / version | Pending |
 | Browser tab or installed app | Pending |
-| Exact HTTPS origin | Pending |
+| Exact HTTPS origin | `https://bangwit.vercel.app/` (read-only hosting checks passed October 14, 2026) |
 | Deployed commit / build ID | Pending |
 | Starting / ending journal counts | Pending |
 | First-visit installation / controlled reload | Pending |
