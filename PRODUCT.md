@@ -25,7 +25,7 @@ Species occurrence, legal catchability, community catch reports, live safety adv
 
 ## Operating Context
 
-- This is a browser-based Next.js app with a web manifest and service-worker code. Reliable offline app reload behavior has not been verified.
+- This is a browser-based Next.js app with a web manifest and service-worker code. Isolated desktop offline reload and catch/photo persistence were verified to the recorded scope in `OFFLINE_ACCEPTANCE.md`; physical-phone acceptance remains pending.
 - The current Cavite prototype offers Manila Bay, Bacoor Bay, and Cañacao Bay as area choices. Its map is an illustration, not a navigation map; boundaries and access information are not verified.
 - The UI currently mixes Filipino and English. Users manually enter an optional spot label; the prototype does not collect GPS coordinates.
 - The prior prototype at `../bangwit` uses a different browser origin and separate local storage. Catch migration is a manual backup-and-restore flow, and restore requires an empty journal.
@@ -40,7 +40,7 @@ Species occurrence, legal catchability, community catch reports, live safety adv
 - A separate bilingual feeding-guide section shows two attributed, study-specific diet examples for *Channa striata* and *Oreochromis niloticus*. It filters guide entries by name/food group and states the study location and scope. These examples are not Cavite diet surveys or proof of local presence. Effective bait, gear and location-specific catching advice remain unavailable because independent method evidence and current applicable rule review are not complete.
 - The research-only candidate-review ledger classifies 52 linked OBIS occurrences under 27 candidate names: 12 already published, one excluded occurrence, and 39 pending review. Pending names/records are not treated as accepted taxa or added to the public snapshot.
 - A device-local catch journal using browser storage. Entries can include species or an unknown identification, date, water type, optional spot label, length, weight, bait, notes, released/kept status, and a photo. GPS is not collected, and there is no cloud sync.
-- The service-worker configuration precaches the journal and offline fallback with revisions tied to source and asset changes. Reconnecting does not deliberately reload the page, and the fallback links directly to the journal document. Production offline reload, navigation, reconnect and upgrade acceptance remain pending; see `OFFLINE_ACCEPTANCE.md`.
+- The service-worker configuration precaches the journal and offline fallback with revisions tied to source and asset changes. Reconnecting does not deliberately reload the page, and the fallback links directly to the journal document. Isolated desktop tests cover offline catch/photo save/reload, navigation/fallback, backup/restore, fresh-origin controlled reload and rebuild upgrade. Reconnect testing is partial; physical-phone, new-profile and exhaustive outbound-traffic acceptance remain pending. See `OFFLINE_ACCEPTANCE.md` and `STAGING_ACCEPTANCE.md`.
 - `My Species` is derived only from identified entries in the person's own catch log. It is not a public sighting or a verified regional record.
 - First-use policy acknowledgment, optional fisher preferences, an in-app guide, local backup and restore, and local-data deletion controls.
 

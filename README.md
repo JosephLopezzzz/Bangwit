@@ -1,10 +1,10 @@
 # Bangwit
 
-Next.js, TypeScript, and Tailwind CSS remake for the Cavite pilot. The UI, local catch journal, collection, onboarding, first-use guide, draft policy gate, and local backup/restore flow are in place. Verified species coverage, legal guidance, live alerts, and fully tested offline reload behavior are not available yet.
+Next.js, TypeScript, and Tailwind CSS remake for the Cavite pilot. The UI, local catch journal, collection, onboarding, first-use guide, draft policy gate, and local backup/restore flow are in place. Offline behavior has scoped desktop evidence; physical-phone testing remains pending. Current species coverage, legal guidance and live alerts remain unverified.
 
 ## Local development
 
-Use Node.js 22.6 or newer to run the storage test script.
+Use Node.js 24.x, matching the deployment engine.
 
 ```powershell
 npm install
@@ -34,7 +34,9 @@ The policy pages are drafts for the prototype, not final legal advice. The app d
 
 The service worker is configured to precache the catch journal and offline fallback, with document revisions derived from source and asset changes. Reconnecting no longer triggers an automatic page reload, so the open form is not deliberately discarded. The fallback's journal button requests the cached HTML directly.
 
-`test:offline` checks the actual Serwist manifest configuration, including document updates between releases and exclusion of source/private files. These checks do not prove browser offline behavior. The production build, whole-app lint and focused policy-dialog checks pass. Follow [OFFLINE_ACCEPTANCE.md](OFFLINE_ACCEPTANCE.md) for the recorded evidence and the remaining reload, reconnect, device and upgrade checks.
+`test:offline` checks the actual Serwist manifest configuration, including document updates between releases and exclusion of source/private files. Recorded desktop testing covers offline save/reload with a synthetic photo, cached navigation/fallback, backup/restore, fresh-origin controlled reload and a rebuild upgrade. Reconnect coverage is partial; a new browser profile, physical phone and exhaustive outbound-traffic review remain pending. See [OFFLINE_ACCEPTANCE.md](OFFLINE_ACCEPTANCE.md) for the scope of each result.
+
+For HTTPS Preview deployment settings, the hosting checker and physical-phone steps, follow [STAGING_ACCEPTANCE.md](STAGING_ACCEPTANCE.md). Deployment preparation does not establish a hosted or phone-tested release.
 
 ## Historical research records
 

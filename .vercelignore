@@ -1,0 +1,21 @@
+# Upload only build inputs when deploying with the Vercel CLI.
+# This is an upload allowlist; Git repository access has its own permissions.
+/*
+!/package.json
+!/package-lock.json
+!/next.config.mjs
+!/next-env.d.ts
+!/tsconfig.json
+!/postcss.config.mjs
+!/vercel.json
+!/src/
+!/public/
+!/data/
+/data/*
+!/data/research/
+/data/research/*
+!/data/research/alternatives/
+/data/research/alternatives/*
+!/data/research/alternatives/cavite/
+/data/research/alternatives/cavite/*
+!/data/research/alternatives/cavite/cavite-reported-catch-groups-2024.json

@@ -90,6 +90,10 @@ Fix only reproduced failures in the owning layer, then repeat the failed case an
 
 **Deliverables:** completed case log in OFFLINE_ACCEPTANCE.md, reproducible defects/fixes if needed, private test fixtures/backups, and updated README/PRODUCT wording limited to proven behavior. Release upgrades and real-device coverage stay pending until actually exercised.
 
+### HTTPS phone-test preparation — October 14, 2026
+
+The next-step request has produced a Vercel Preview configuration, matching Node.js 24.x engine metadata, a CLI upload allowlist, a worker update-cache header and a read-only HTTP hosting checker. Production build, five offline-cache tests and local hosting checks passed. [STAGING_ACCEPTANCE.md](STAGING_ACCEPTANCE.md) contains account/setup requirements and separate browser/installed-app phone cases. Vercel account connection is not yet confirmed; a hosted URL and physical-phone results remain pending. Existing October 13 browser results retain their recorded build scope.
+
 ## 5. Work package 2 — create safe checkpoints
 
 1. Review the current uncommitted policy/documentation work and screenshots before selecting a commit boundary. Treat existing `next-env.d.ts` changes as generated/user workspace state to inspect, not something to overwrite blindly.

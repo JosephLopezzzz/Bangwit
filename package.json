@@ -3,6 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "type": "module",
+  "engines": {
+    "node": "24.x"
+  },
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
@@ -15,7 +18,8 @@
     "typecheck": "tsc --noEmit",
     "test:evidence": "node --test tests/historical-evidence.test.mjs",
     "test:research": "node --experimental-strip-types --test tests/historical-evidence.test.mjs tests/cavite-fish-candidate-review.test.mjs tests/species-research.test.mjs",
-    "test:offline": "node --experimental-strip-types --test tests/offline-precache.test.mjs"
+    "test:offline": "node --experimental-strip-types --test tests/offline-precache.test.mjs",
+    "check:staging": "node scripts/check-staging.mjs"
   },
   "dependencies": {
     "class-variance-authority": "^0.7.1",

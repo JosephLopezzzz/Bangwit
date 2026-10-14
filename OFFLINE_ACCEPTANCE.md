@@ -60,6 +60,12 @@ For actual no-server checks, the local production server on port 4178 was stoppe
 
 Five synthetic, unidentified test records remain in the IndexedDB journals for `127.0.0.1:4178` and `127.0.0.1:4179`; `127.0.0.1:4180` remains an empty-origin test. The five records contain only explicit `TEST`/`SYNTHETIC` labels and no real catch or location; one includes a synthetic SVG, not a user photo. A local JSON backup of all five records, including that SVG, remains in Downloads and should be treated as private test data. The prototype notice was accepted on 4179 only after the user authorized that action. No user catch data was entered, no external uploads occurred, and no test records were deleted. The production test server is running again on port 4178; the temporary 4179 and 4180 servers are stopped.
 
+## HTTPS staging preparation — October 14, 2026
+
+Added a minimal Vercel Preview configuration, Node.js 24.x deployment engine, CLI upload allowlist and worker HTTP update-cache header. The upload rules retain the provincial JSON imported by the app while excluding local secrets, downloaded research originals, backups and QA screenshots. No hosted URL or phone result has been produced; Vercel account connection is not yet confirmed.
+
+After the shared UI edits appeared, `npm run build` passed with all 16 outputs and 37 Serwist precache entries (5,238.64 KiB). The source fingerprint differed across that build, so rerun the build after edits settle before deploying. The prior `test:offline` run passed 5/5. `check:staging` passed against the temporary local production server at `http://127.0.0.1:4181`, including root worker scope, the actual no-cache response header and icon dimensions; that server is now stopped. The checker rejected an insecure LAN HTTP origin before networking. These HTTP/source checks do not replace browser offline or phone acceptance. Follow [STAGING_ACCEPTANCE.md](STAGING_ACCEPTANCE.md) for the deployment and device workflow.
+
 ## Previous environment limitation
 
 Earlier restricted-session attempts failed in Windows native path resolution and, in a one-off Webpack diagnostic, prerender directory creation. Those historical failures are no longer the current build status. The user's normal-terminal Turbopack build passed on October 11, and the agent's fresh Turbopack build passed on October 13. No bundler, worker, ACL, security or Git configuration workaround was needed.
