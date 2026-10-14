@@ -33,6 +33,8 @@ export const filDictionary: Dictionary = {
     openGuide: "Buksan ang Bangwit guide",
     mainMenu: "Pangunahing menu",
     menuButton: "Menu",
+    expandSidebar: "Palawakin ang sidebar",
+    collapseSidebar: "Paliitin ang sidebar",
   },
   policy: {
     tag: "Prototype access",

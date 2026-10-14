@@ -27,25 +27,25 @@ export function HistoricalSpeciesEvidence({ records }: HistoricalSpeciesEvidence
   const linkClass =
     "inline-flex items-center gap-1.5 font-semibold text-teal underline decoration-line underline-offset-4 hover:decoration-teal focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-teal";
   const summaryClass =
-    "flex min-h-12 cursor-pointer list-none items-center justify-between gap-3 py-3 text-sm font-semibold text-teal hover:text-teal-dark focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-teal [&::-webkit-details-marker]:hidden";
+    "flex min-h-9 cursor-pointer list-none items-center justify-between gap-3 py-2 text-sm font-semibold text-teal hover:text-teal-dark focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-teal [&::-webkit-details-marker]:hidden";
   const filteredSpecies = countEvidenceSpecies(records);
 
   return (
     <section
       aria-labelledby="historical-evidence-heading"
       aria-describedby="historical-evidence-scope historical-evidence-limits"
-      className="mt-5 min-w-0 rounded-2xl border border-line bg-white px-5 py-5 sm:px-6"
+      className="ui-card mt-5 min-w-0"
     >
-      <h2 id="historical-evidence-heading" className="text-xl font-bold leading-snug text-ink">
+      <h2 id="historical-evidence-heading" className="ui-section-title">
         {copy.title}
       </h2>
-      <p className="mt-2 max-w-[75ch] text-sm leading-6 text-muted">
+      <p className="mt-2 max-w-[75ch] text-[14px] leading-relaxed text-muted">
         {copy.description.replace("{count}", String(evidence.records.length))}
       </p>
       <p id="historical-evidence-scope" className="mt-3 max-w-[75ch] text-sm font-semibold leading-6 text-ink">
         {copy.scope}
       </p>
-      <p id="historical-evidence-limits" className="mt-1 max-w-[75ch] text-sm leading-6 text-muted">
+      <p id="historical-evidence-limits" className="mt-1 max-w-[75ch] text-[14px] leading-relaxed text-muted">
         {copy.limits}
       </p>
       <p className="mt-3 text-sm font-semibold text-ink" aria-live="polite">
@@ -54,7 +54,7 @@ export function HistoricalSpeciesEvidence({ records }: HistoricalSpeciesEvidence
       {records.length === 0 ? (
         <div className="mt-3 rounded-xl bg-teal-soft px-4 py-4" role="status">
           <p className="font-semibold text-ink">{copy.noMatches}</p>
-          <p className="mt-1 text-sm leading-6 text-muted">{copy.noMatchesDesc}</p>
+          <p className="mt-1 text-[14px] leading-relaxed text-muted">{copy.noMatchesDesc}</p>
         </div>
       ) : (
         <details className="group mt-4 border-t border-line">
@@ -68,7 +68,7 @@ export function HistoricalSpeciesEvidence({ records }: HistoricalSpeciesEvidence
             return (
               <div key={group.id} className="pb-4">
                 <h3 className="mt-4 text-base font-semibold text-ink">{group.title}</h3>
-                <p className="mb-3 mt-1 max-w-[75ch] text-sm leading-6 text-muted">{group.note}</p>
+                <p className="mb-3 mt-1 max-w-[75ch] text-[14px] leading-relaxed text-muted">{group.note}</p>
                 <ul aria-label={group.title}>
                   {groupRecords.map((record) => (
                     <li key={record.id} className="border-t border-line">
@@ -86,7 +86,7 @@ export function HistoricalSpeciesEvidence({ records }: HistoricalSpeciesEvidence
                           </span>
                           <ChevronDown aria-hidden="true" size={18} className="shrink-0 group-open/record:rotate-180" />
                         </summary>
-                        <dl className="grid gap-y-3 pb-4 text-sm leading-6 sm:grid-cols-[180px_minmax(0,1fr)] sm:gap-x-5">
+                        <dl className="grid gap-y-3 pb-4 text-[14px] leading-relaxed sm:grid-cols-[180px_minmax(0,1fr)] sm:gap-x-5">
                           {record.recordedName !== record.acceptedName && (
                             <div className="contents">
                               <dt className="font-semibold text-ink">{copy.recordedAs}</dt>
@@ -144,7 +144,7 @@ export function HistoricalSpeciesEvidence({ records }: HistoricalSpeciesEvidence
           {copy.sourceSummary}
           <ChevronDown aria-hidden="true" size={18} className="shrink-0 group-open:rotate-180" />
         </summary>
-        <dl className="grid gap-y-4 pb-2 text-sm leading-6 sm:grid-cols-[180px_minmax(0,1fr)] sm:gap-x-5">
+        <dl className="grid gap-y-4 pb-2 text-[14px] leading-relaxed sm:grid-cols-[180px_minmax(0,1fr)] sm:gap-x-5">
           <div className="contents">
             <dt className="font-semibold text-ink">{copy.datasetLabel}</dt>
             <dd className="min-w-0 text-muted">
@@ -186,7 +186,7 @@ export function HistoricalSpeciesEvidence({ records }: HistoricalSpeciesEvidence
             </dd>
           </div>
         </dl>
-        <p className="mt-3 max-w-[75ch] pb-3 text-sm leading-6 text-muted">{copy.reviewNote}</p>
+        <p className="mt-3 max-w-[75ch] pb-3 text-[14px] leading-relaxed text-muted">{copy.reviewNote}</p>
       </details>
     </section>
   );

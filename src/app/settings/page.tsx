@@ -98,27 +98,24 @@ export default function SettingsPage() {
   }
 
   return (
-    <main className="mx-auto max-w-[1100px] px-5 pb-12 pt-8 sm:px-8 sm:pt-10">
-      <p className="text-xs font-bold uppercase tracking-[0.15em] text-teal">{dict.settings.tag}</p>
-      <h1 className="mt-3 text-4xl font-extrabold tracking-tight text-ink sm:text-5xl">{dict.settings.title}</h1>
-      <p className="mt-2 text-lg text-muted">{dict.settings.subtitle}</p>
+    <main className="ui-page">
+      <header className="ui-page-header">
+        <h1 className="ui-page-title">{dict.settings.title}</h1>
+        <p className="text-muted">{dict.settings.subtitle}</p>
+      </header>
 
-      <div className="mt-6 grid gap-4 lg:grid-cols-2">
+      <div className="grid gap-4 lg:grid-cols-2">
         {/* Language Selection Card */}
-        <section className="rounded-3xl border border-line bg-white p-5 shadow-sm sm:p-6 lg:col-span-2">
-          <p className="text-xs font-bold uppercase tracking-[0.14em] text-teal">{dict.settings.languageTag}</p>
-          <h2 className="mt-2 text-xl font-extrabold text-ink">{dict.settings.languageTitle}</h2>
+        <section className="ui-card lg:col-span-2">
+          <h2 className="ui-section-title">{dict.settings.languageTitle}</h2>
           <p className="mt-1 text-sm text-muted">{dict.settings.languageDesc}</p>
           <div className="mt-4 flex flex-wrap gap-3">
             <button
               type="button"
               onClick={() => setLang("fil")}
+              aria-pressed={lang === "fil"}
               disabled={busy || erasePending}
-              className={`flex min-h-12 items-center gap-2 rounded-2xl border px-5 text-sm font-bold transition-all disabled:cursor-not-allowed disabled:opacity-50 ${
-                lang === "fil"
-                  ? "border-teal bg-teal-soft text-teal-dark ring-2 ring-teal/20"
-                  : "border-line bg-white text-ink hover:bg-paper"
-              }`}
+              className={`ui-button ui-button--secondary ${lang === "fil" ? "is-selected" : ""}`}
             >
               <Languages aria-hidden="true" className="h-4 w-4 shrink-0" />
               <span>Filipino (Taglish)</span>
@@ -127,12 +124,9 @@ export default function SettingsPage() {
             <button
               type="button"
               onClick={() => setLang("en")}
+              aria-pressed={lang === "en"}
               disabled={busy || erasePending}
-              className={`flex min-h-12 items-center gap-2 rounded-2xl border px-5 text-sm font-bold transition-all disabled:cursor-not-allowed disabled:opacity-50 ${
-                lang === "en"
-                  ? "border-teal bg-teal-soft text-teal-dark ring-2 ring-teal/20"
-                  : "border-line bg-white text-ink hover:bg-paper"
-              }`}
+              className={`ui-button ui-button--secondary ${lang === "en" ? "is-selected" : ""}`}
             >
               <Languages aria-hidden="true" className="h-4 w-4 shrink-0" />
               <span>English</span>
@@ -142,11 +136,11 @@ export default function SettingsPage() {
         </section>
 
         {/* Profile Preferences */}
-        <section className="rounded-3xl border border-line bg-white p-5 shadow-sm sm:p-6">
-          <p className="text-xs font-bold uppercase tracking-[0.14em] text-teal">{dict.settings.profileTag}</p>
-          <h2 className="mt-2 text-xl font-extrabold text-ink">
+        <section className="ui-card">
+          <h2 className="ui-section-title">{dict.settings.profileTag}</h2>
+          <p className="mt-2 font-semibold text-ink">
             {profile ? getFisherTypeLabel(profile.type, lang) : dict.settings.profileUnset}
-          </h2>
+          </p>
           <p className="mt-1 text-sm text-muted">
             {profile ? getPreferredWaterLabel(profile.water, lang) : getPreferredWaterLabel(undefined, lang)}
           </p>
@@ -154,43 +148,41 @@ export default function SettingsPage() {
             type="button"
             onClick={() => openProfile("edit")}
             disabled={busy || erasePending}
-            className="mt-5 min-h-11 rounded-xl border border-teal px-4 font-bold text-teal hover:bg-teal-soft disabled:cursor-not-allowed disabled:opacity-50"
+            className="ui-button ui-button--secondary mt-4"
           >
             {dict.settings.editProfileBtn}
           </button>
         </section>
 
         {/* In-app guide */}
-        <section className="rounded-3xl border border-line bg-white p-5 shadow-sm sm:p-6">
-          <p className="text-xs font-bold uppercase tracking-[0.14em] text-teal">{dict.settings.helpTag}</p>
-          <h2 className="mt-2 text-xl font-extrabold text-ink">{dict.settings.helpTitle}</h2>
+        <section className="ui-card">
+          <h2 className="ui-section-title">{dict.settings.helpTitle}</h2>
           <p className="mt-1 text-sm leading-6 text-muted">{dict.settings.helpDesc}</p>
           <button
             type="button"
             onClick={startTour}
             disabled={busy || erasePending}
-            className="mt-5 min-h-11 rounded-xl border border-teal px-4 font-bold text-teal hover:bg-teal-soft disabled:cursor-not-allowed disabled:opacity-50"
+            className="ui-button ui-button--secondary mt-4"
           >
             {dict.settings.restartTourBtn}
           </button>
         </section>
 
         {/* Local backup */}
-        <section className="rounded-3xl border border-line bg-white p-5 shadow-sm sm:p-6">
-          <p className="text-xs font-bold uppercase tracking-[0.14em] text-teal">{dict.settings.backupTag}</p>
-          <h2 className="mt-2 text-xl font-extrabold text-ink">{dict.settings.backupTitle}</h2>
+        <section className="ui-card" aria-busy={busy}>
+          <h2 className="ui-section-title">{dict.settings.backupTitle}</h2>
           <p className="mt-2 text-sm leading-6 text-muted">{dict.settings.backupDesc}</p>
           <div className="mt-4 flex flex-wrap gap-2">
             <button
               type="button"
               disabled={busy || erasePending}
               onClick={() => void downloadBackup()}
-              className="min-h-11 rounded-xl bg-teal px-4 font-bold text-white hover:bg-teal-dark disabled:opacity-50"
+              className="ui-button"
             >
               {dict.settings.downloadBackupBtn}
             </button>
             <label
-              className={`inline-flex min-h-11 cursor-pointer items-center rounded-xl border border-line px-4 font-bold text-ink hover:bg-paper ${
+              className={`ui-button ui-button--secondary focus-within:outline-3 focus-within:outline-offset-2 focus-within:outline-teal ${
                 busy || erasePending ? "pointer-events-none opacity-50" : ""
               }`}
             >
@@ -221,9 +213,8 @@ export default function SettingsPage() {
         </section>
 
         {/* Privacy controls */}
-        <section className="rounded-3xl border border-line bg-white p-5 shadow-sm sm:p-6">
-          <p className="text-xs font-bold uppercase tracking-[0.14em] text-teal">{dict.settings.privacyTag}</p>
-          <h2 className="mt-2 text-xl font-extrabold text-ink">{dict.settings.privacyTitle}</h2>
+        <section className="ui-card">
+          <h2 className="ui-section-title">{dict.settings.privacyTitle}</h2>
           <p className="mt-2 text-sm leading-6 text-muted">{dict.settings.privacyDesc}</p>
           <p className="mt-3 text-sm leading-6 text-muted">{dict.settings.eraseConfirm}</p>
           <div className="mt-4">
@@ -246,9 +237,8 @@ export default function SettingsPage() {
         </section>
 
         {/* Policies */}
-        <section className="rounded-3xl border border-line bg-white p-5 shadow-sm sm:col-span-2 sm:p-6">
-          <p className="text-xs font-bold uppercase tracking-[0.14em] text-teal">{dict.settings.policiesTag}</p>
-          <h2 className="mt-2 text-xl font-extrabold text-ink">{dict.settings.policiesTitle}</h2>
+        <section className="ui-card lg:col-span-2">
+          <h2 className="ui-section-title">{dict.settings.policiesTitle}</h2>
           <p className="mt-2 text-sm leading-6 text-muted">{dict.settings.policiesDesc}</p>
           <div className="mt-4 flex flex-wrap gap-x-5 gap-y-2">
             <Link className="inline-flex items-center gap-1 font-bold text-teal hover:text-teal-dark" href="/policies">

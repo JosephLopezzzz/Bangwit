@@ -1,13 +1,26 @@
 "use client";
 
+import {
+  BookOpen,
+  ChevronsLeft,
+  CircleHelp,
+  Fish,
+  Globe2,
+  MapPin,
+  Menu,
+  NotebookPen,
+  Settings2,
+  X,
+} from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { BookOpen, CircleHelp, Fish, Globe2, MapPin, Menu, NotebookPen, Settings2, X } from "lucide-react";
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useId, useLayoutEffect, useRef, useState } from "react";
+import { createPortal } from "react-dom";
 import { useBangwit } from "@/components/bangwit-provider";
-import { DropdownSelect, type DropdownOption } from "@/components/dropdown-select";
+import { type DropdownOption, DropdownSelect } from "@/components/dropdown-select";
 import { Expand } from "@/components/ui/expand";
+import "./app-shell.css";
 
 const languageOptions: DropdownOption[] = [
   { value: "fil", label: "FIL", icon: Globe2 },
@@ -20,14 +33,44 @@ export function AppHeader() {
   const drawerRef = useRef<HTMLDialogElement>(null);
   const menuButtonRef = useRef<HTMLButtonElement>(null);
   const [drawerOpen, setDrawerOpen] = useState(false);
+  const [collapsed, setCollapsed] = useState(false);
+  const [tooltip, setTooltip] = useState<{ href: string; label: string; left: number; top: number } | null>(null);
+  const tooltipId = useId();
+
+  // CSS and the head bootstrap own first-paint geometry. React only synchronizes
+  // control semantics after hydration, so server markup never guesses a viewport.
+  useLayoutEffect(() => {
+    const desktop = window.matchMedia("(min-width: 1024px)");
+    const syncPreference = () => {
+      const preference = document.documentElement.dataset.sidebar;
+      setCollapsed(preference === "collapsed" || (preference !== "expanded" && !desktop.matches));
+    };
+    const syncStorage = (event: StorageEvent) => {
+      if (event.key !== "bangwit.sidebar" && event.key !== null) return;
+      if (event.newValue === "expanded" || event.newValue === "collapsed") {
+        document.documentElement.dataset.sidebar = event.newValue;
+      } else {
+        delete document.documentElement.dataset.sidebar;
+      }
+      syncPreference();
+    };
+    syncPreference();
+    desktop.addEventListener("change", syncPreference);
+    window.addEventListener("storage", syncStorage);
+    return () => {
+      desktop.removeEventListener("change", syncPreference);
+      window.removeEventListener("storage", syncStorage);
+    };
+  }, []);
 
   // biome-ignore lint/correctness/useExhaustiveDependencies: A route change closes the navigation drawer.
   useEffect(() => {
     drawerRef.current?.close();
+    setTooltip(null);
   }, [pathname]);
 
   useEffect(() => {
-    const desktop = window.matchMedia("(min-width: 1200px)");
+    const desktop = window.matchMedia("(min-width: 768px)");
     const closeOnDesktop = () => {
       if (desktop.matches) drawerRef.current?.close();
     };
@@ -43,6 +86,22 @@ export function AppHeader() {
       document.body.style.overflow = previousOverflow;
     };
   }, [drawerOpen]);
+
+  useEffect(() => {
+    if (!tooltip) return;
+    const hideTooltip = () => setTooltip(null);
+    const dismissTooltip = (event: KeyboardEvent) => {
+      if (event.key === "Escape") hideTooltip();
+    };
+    window.addEventListener("resize", hideTooltip);
+    window.addEventListener("scroll", hideTooltip, true);
+    document.addEventListener("keydown", dismissTooltip);
+    return () => {
+      window.removeEventListener("resize", hideTooltip);
+      window.removeEventListener("scroll", hideTooltip, true);
+      document.removeEventListener("keydown", dismissTooltip);
+    };
+  }, [tooltip]);
 
   const links = [
     { href: "/", label: dict.nav.explore, icon: MapPin },
@@ -62,6 +121,25 @@ export function AppHeader() {
     setDrawerOpen(true);
   }
 
+  function toggleSidebar() {
+    const nextCollapsed = !collapsed;
+    const preference = nextCollapsed ? "collapsed" : "expanded";
+    document.documentElement.dataset.sidebar = preference;
+    setCollapsed(nextCollapsed);
+    setTooltip(null);
+    try {
+      localStorage.setItem("bangwit.sidebar", preference);
+    } catch {
+      // The current session remains usable when browser storage is blocked.
+    }
+  }
+
+  function showTooltip(target: HTMLElement, href: string, label: string) {
+    if (!collapsed) return;
+    const rect = target.getBoundingClientRect();
+    setTooltip({ href, label, left: rect.right + 12, top: rect.top + rect.height / 2 });
+  }
+
   function openGuide() {
     closeDrawer();
     startTour();
@@ -71,7 +149,7 @@ export function AppHeader() {
     return (
       <Link href="/" aria-label={`Bangwit — ${dict.nav.explore}`} className="app-brand" onClick={closeDrawer}>
         <Image src="/assets/bilog.png" alt="" width={80} height={80} priority className="app-brand-image" />
-        <span>
+        <span className="app-brand-copy">
           <span className="app-brand-name">{dict.common.appName}</span>
           <span className="app-brand-tagline">{dict.common.tagline}</span>
         </span>
@@ -82,8 +160,27 @@ export function AppHeader() {
   function navigationPanel(variant: "sidebar" | "drawer") {
     return (
       <div className="app-nav-panel">
-        {brand()}
-        <nav aria-label={dict.nav.mainMenu} className="app-primary-nav">
+        <div className="app-sidebar-heading">
+          {brand()}
+          {variant === "sidebar" && (
+            <button
+              type="button"
+              className="app-sidebar-toggle"
+              onClick={toggleSidebar}
+              aria-expanded={!collapsed}
+              aria-controls="app-sidebar-navigation"
+              aria-label={collapsed ? dict.nav.expandSidebar : dict.nav.collapseSidebar}
+              title={collapsed ? dict.nav.expandSidebar : dict.nav.collapseSidebar}
+            >
+              <ChevronsLeft aria-hidden="true" size={16} strokeWidth={1.75} />
+            </button>
+          )}
+        </div>
+        <nav
+          id={variant === "sidebar" ? "app-sidebar-navigation" : undefined}
+          aria-label={dict.nav.mainMenu}
+          className="app-primary-nav"
+        >
           {links.map(({ href, label, icon: Icon }) => {
             const active = pathname === href;
             return (
@@ -91,12 +188,24 @@ export function AppHeader() {
                 key={href}
                 href={href}
                 aria-current={active ? "page" : undefined}
+                aria-label={label}
+                aria-describedby={variant === "sidebar" && tooltip?.href === href ? tooltipId : undefined}
                 data-active={active}
                 className="app-nav-link"
                 onClick={closeDrawer}
+                onMouseEnter={(event) => {
+                  if (variant === "sidebar") showTooltip(event.currentTarget, href, label);
+                }}
+                onMouseLeave={(event) => {
+                  if (document.activeElement !== event.currentTarget) setTooltip(null);
+                }}
+                onFocus={(event) => {
+                  if (variant === "sidebar") showTooltip(event.currentTarget, href, label);
+                }}
+                onBlur={() => setTooltip(null)}
               >
-                <Icon aria-hidden="true" size={24} strokeWidth={1.75} />
-                <span>{label}</span>
+                <Icon aria-hidden="true" size={18} strokeWidth={1.75} />
+                <span className="app-nav-label">{label}</span>
               </Link>
             );
           })}
@@ -121,6 +230,7 @@ export function AppHeader() {
               aria-label={dict.common.theme}
               title={dict.common.theme}
               className="app-theme-switch"
+              duration={180}
             />
             <button
               type="button"
@@ -129,7 +239,7 @@ export function AppHeader() {
               title={dict.nav.openGuide}
               className="app-guide-button"
             >
-              <CircleHelp aria-hidden="true" size={22} strokeWidth={1.75} />
+              <CircleHelp aria-hidden="true" size={18} strokeWidth={1.75} />
             </button>
           </div>
         </div>
@@ -151,7 +261,7 @@ export function AppHeader() {
           aria-haspopup="dialog"
           className="app-menu-button"
         >
-          <Menu aria-hidden="true" size={22} strokeWidth={1.75} />
+          <Menu aria-hidden="true" size={18} strokeWidth={1.75} />
           <span>{dict.nav.menuButton}</span>
         </button>
       </header>
@@ -160,13 +270,43 @@ export function AppHeader() {
         id="app-navigation-drawer"
         aria-label={dict.nav.mainMenu}
         className="app-navigation-drawer"
-        onClose={() => setDrawerOpen(false)}
+        onClick={(event) => {
+          if (event.target !== event.currentTarget) return;
+          const rect = event.currentTarget.getBoundingClientRect();
+          if (
+            event.clientX < rect.left ||
+            event.clientX > rect.right ||
+            event.clientY < rect.top ||
+            event.clientY > rect.bottom
+          ) {
+            closeDrawer();
+          }
+        }}
+        onKeyDown={(event) => {
+          if (event.key === "Escape") closeDrawer();
+        }}
+        onClose={() => {
+          setDrawerOpen(false);
+          if (window.matchMedia("(max-width: 767px)").matches) menuButtonRef.current?.focus({ preventScroll: true });
+        }}
       >
         <button type="button" onClick={closeDrawer} aria-label={dict.common.close} className="app-drawer-close">
-          <X aria-hidden="true" size={22} strokeWidth={1.75} />
+          <X aria-hidden="true" size={18} strokeWidth={1.75} />
         </button>
         {navigationPanel("drawer")}
       </dialog>
+      {tooltip &&
+        createPortal(
+          <div
+            id={tooltipId}
+            role="tooltip"
+            className="app-sidebar-tooltip"
+            style={{ left: tooltip.left, top: tooltip.top }}
+          >
+            {tooltip.label}
+          </div>,
+          document.body,
+        )}
     </>
   );
 }

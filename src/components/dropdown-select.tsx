@@ -15,7 +15,7 @@ type DropdownSelectProps = {
   label: string;
   value: string;
   options: DropdownOption[];
-  onValueChange: (value: string) => void;
+  onValueChange?: (value: string) => void;
   name?: string;
   className?: string;
   initialFocus?: boolean;
@@ -144,7 +144,7 @@ export function DropdownSelect({
 
   function chooseOption(option: DropdownOption, index: number) {
     if (disabled) return;
-    onValueChange(option.value);
+    onValueChange?.(option.value);
     setActiveIndex(index);
     setIsOpen(false);
     triggerRef.current?.focus({ preventScroll: true });
@@ -154,6 +154,7 @@ export function DropdownSelect({
     if (disabled) return;
     if (event.key === "Escape" && isOpen) {
       event.preventDefault();
+      event.stopPropagation();
       setIsOpen(false);
       return;
     }

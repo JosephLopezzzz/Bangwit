@@ -33,6 +33,8 @@ export type Dictionary = {
     openGuide: string;
     mainMenu: string;
     menuButton: string;
+    expandSidebar: string;
+    collapseSidebar: string;
   };
   policy: {
     tag: string;

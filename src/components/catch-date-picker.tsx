@@ -57,6 +57,8 @@ export function CatchDatePicker({
 
     function handleKeyDown(event: KeyboardEvent) {
       if (event.key === "Escape") {
+        event.preventDefault();
+        event.stopPropagation();
         setIsOpen(false);
         triggerRef.current?.focus();
       }
@@ -183,7 +185,7 @@ export function CatchDatePicker({
       id={popoverId}
       role="dialog"
       aria-label={lang === "fil" ? "Kalendaryo ng petsa ng huli" : "Catch date calendar"}
-      className="absolute left-0 top-full z-50 mt-2 w-auto min-w-[280px] max-w-[calc(100vw-2rem)] rounded-3xl border border-line bg-white p-2 shadow-xl"
+      className="absolute left-0 top-full z-50 mt-2 w-auto min-w-[280px] max-w-[calc(100vw-2rem)] rounded-xl border border-line bg-white p-2 shadow-lg"
       style={portal ? popupStyle : undefined}
     >
       <Calendar
@@ -211,7 +213,7 @@ export function CatchDatePicker({
         aria-controls={popoverId}
         disabled={disabled}
         onClick={() => setIsOpen((prev) => !prev)}
-        className="flex min-h-12 min-w-0 flex-1 items-center justify-between rounded-xl border border-line bg-white px-3.5 text-left text-sm font-medium text-ink transition-colors hover:border-teal/60 focus:border-teal focus:outline-none focus:ring-2 focus:ring-teal/15 disabled:cursor-not-allowed disabled:opacity-50"
+        className="ui-input flex min-w-0 flex-1 items-center justify-between text-left"
       >
         <span className={value ? "text-ink font-semibold" : "text-muted"}>{displayDate}</span>
         <svg
@@ -235,7 +237,7 @@ export function CatchDatePicker({
         type="button"
         onClick={handleToday}
         disabled={disabled}
-        className="min-h-12 shrink-0 rounded-xl bg-teal-soft px-3.5 text-sm font-bold text-teal-dark transition-colors hover:bg-[#cdebe6]"
+        className="ui-button ui-button--secondary shrink-0"
       >
         {lang === "fil" ? "Ngayon" : "Today"}
       </button>

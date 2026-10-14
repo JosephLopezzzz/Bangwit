@@ -12,8 +12,8 @@
   height: 100%;
   min-height: 0;
   flex-direction: column;
-  gap: 16px;
-  padding: 20px 24px;
+  gap: 12px;
+  padding: 16px 20px;
 }
 .catches-page-heading {
   display: flex;
@@ -24,10 +24,10 @@
 }
 .catches-page-heading h1 {
   margin: 0;
-  font-size: clamp(26px, 2.5vw, 34px);
-  font-weight: 800;
-  line-height: 1.15;
-  letter-spacing: -0.035em;
+  font-size: var(--text-page);
+  font-weight: 700;
+  line-height: 1.2;
+  letter-spacing: -0.025em;
 }
 .catches-page-heading p {
   margin: 6px 0 0;
@@ -77,15 +77,15 @@
   flex-direction: column;
   overflow: hidden;
   border: 1px solid var(--line);
-  border-radius: 20px;
+  border-radius: var(--card-radius);
   background: var(--white);
 }
 .catch-form h2 {
   margin: 0;
   flex-shrink: 0;
-  padding: 12px 18px 10px;
-  font-size: 20px;
-  font-weight: 800;
+  padding: 10px 16px 8px;
+  font-size: var(--text-section);
+  font-weight: 700;
   line-height: 1.2;
 }
 .catch-form-tabs,
@@ -95,19 +95,19 @@
   gap: 4px;
 }
 .catch-form-tabs {
-  margin: 0 18px;
+  margin: 0 16px;
   border-bottom: 1px solid var(--line);
 }
 .catch-form-tabs button,
 .catches-mobile-tabs button {
   display: inline-flex;
-  min-height: 40px;
+  min-height: var(--control-height);
   align-items: center;
   justify-content: center;
   gap: 8px;
   border: 0;
   background: transparent;
-  padding: 8px 12px;
+  padding: 6px 10px;
   color: var(--muted);
   font-size: 13px;
   font-weight: 700;
@@ -140,7 +140,7 @@
   overflow-y: auto;
   overscroll-behavior: contain;
   border: 0;
-  padding: 12px 18px;
+  padding: 10px 16px;
   scrollbar-width: thin;
 }
 .catch-fields {
@@ -155,7 +155,7 @@
   margin-top: 6px;
 }
 .catch-fields :where(.relative) > button {
-  min-height: 42px;
+  min-height: var(--control-height);
 }
 .catch-form-tabs button:hover:enabled {
   color: var(--teal-dark);
@@ -175,14 +175,14 @@
 .catch-control {
   display: block;
   width: 100%;
-  min-height: 42px;
+  min-height: var(--control-height);
   margin-top: 6px;
   border: 1px solid var(--line);
-  border-radius: 10px;
-  padding: 9px 12px;
+  border-radius: var(--control-radius);
+  padding: 7px 12px;
   background: var(--white);
   color: var(--ink);
-  font-size: 13px;
+  font-size: var(--text-control);
   line-height: 1.4;
 }
 .catch-control::placeholder {
@@ -212,8 +212,9 @@ textarea.catch-control {
   margin-top: 6px;
 }
 .catch-field-row .dropdown-select-trigger {
-  min-height: 42px;
-  padding: 9px 10px;
+  min-height: var(--control-height);
+  padding: 0 10px;
+  border-radius: var(--control-radius);
   box-shadow: none;
   font-size: 12px;
 }
@@ -351,7 +352,7 @@ textarea.catch-control {
 .catch-photo-remove {
   display: grid;
   width: 32px;
-  min-height: 44px;
+  min-height: var(--control-height);
   place-items: center;
   border: 0;
   border-radius: 8px;
@@ -437,12 +438,12 @@ textarea.catch-control {
 .catch-form-footer > button {
   display: flex;
   width: 100%;
-  min-height: 44px;
+  min-height: var(--control-height);
   align-items: center;
   justify-content: center;
   gap: 8px;
   border: 0;
-  border-radius: 10px;
+  border-radius: var(--control-radius);
   background: var(--teal-action);
   color: #fff;
   font-size: 13px;
@@ -471,13 +472,13 @@ textarea.catch-control {
     padding: 18px 24px;
   }
   .catch-form h2 {
-    padding: 10px 18px 8px;
+    padding: 10px 16px 8px;
   }
   .catch-form-body {
-    padding: 8px 18px;
+    padding: 8px 16px;
   }
   .catch-form-footer {
-    padding: 8px 18px;
+    padding: 8px 16px;
   }
   .catch-photo-feedback {
     position: relative;
@@ -540,7 +541,7 @@ textarea.catch-control {
     gap: 8px;
   }
   .catches-page-heading h1 {
-    font-size: 26px;
+    font-size: var(--text-page);
   }
   .catches-page-heading p {
     margin-top: 4px;
@@ -558,5 +559,19 @@ textarea.catch-control {
 @media (prefers-reduced-motion: reduce) {
   .catch-photo-dropzone {
     transition: none;
+  }
+}
+
+@media (pointer: coarse) {
+  .catch-control,
+  .catch-fields :where(.relative) > button,
+  .catch-field-row .dropdown-select-trigger {
+    min-height: 44px;
+  }
+  .catch-control {
+    font-size: 16px;
+  }
+  .catch-photo-remove {
+    min-width: 44px;
   }
 }

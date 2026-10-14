@@ -29,13 +29,19 @@ const themeBootstrap = `try {
 } catch {
   document.documentElement.dataset.theme = "light";
   document.documentElement.lang = "fil";
+}
+try {
+  const sidebar = localStorage.getItem("bangwit.sidebar");
+  if (sidebar === "expanded" || sidebar === "collapsed") document.documentElement.dataset.sidebar = sidebar;
+} catch {
+  // Responsive CSS supplies the default when storage is unavailable.
 }`;
 
 export default function RootLayout({ children }: Readonly<{ children: ReactNode }>) {
   return (
     <html lang="tl" suppressHydrationWarning>
       <head>
-        {/* biome-ignore lint/security/noDangerouslySetInnerHtml: Static theme bootstrap reads only a fixed localStorage key to prevent a first-paint flash. */}
+        {/* biome-ignore lint/security/noDangerouslySetInnerHtml: Static preference bootstrap reads fixed localStorage keys to prevent a first-paint flash. */}
         <script dangerouslySetInnerHTML={{ __html: themeBootstrap }} />
       </head>
       <body>

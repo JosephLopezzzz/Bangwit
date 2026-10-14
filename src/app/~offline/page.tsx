@@ -6,15 +6,12 @@ export default function OfflinePage() {
   const { dict } = useBangwit();
 
   return (
-    <main className="mx-auto max-w-xl px-5 py-16 text-center sm:py-24">
+    <main className="ui-page ui-page--narrow text-center">
       <p className="text-xs font-bold uppercase tracking-[0.16em] text-teal">{dict.offline.tag}</p>
-      <h1 className="mt-3 text-4xl font-extrabold tracking-tight text-ink">{dict.offline.title}</h1>
-      <p className="mt-4 text-base leading-7 text-muted">{dict.offline.desc}</p>
+      <h1 className="ui-page-title mt-2">{dict.offline.title}</h1>
+      <p className="mx-auto mt-3 max-w-prose text-sm leading-6 text-muted">{dict.offline.desc}</p>
       {/* Request the precached document even when no router payload was warmed online. */}
-      <a
-        href="/catches"
-        className="mt-7 inline-flex min-h-11 items-center justify-center rounded-xl bg-teal px-5 font-bold text-white hover:bg-teal-dark"
-      >
+      <a href="/catches" className="ui-button mt-5">
         {dict.offline.catchesBtn}
       </a>
     </main>

@@ -24,35 +24,32 @@ export function FeedingGuides() {
   }).format(new Date(guides.reviewedAt));
 
   return (
-    <section
-      className="mt-5 rounded-2xl border border-line bg-white px-5 py-5 sm:px-6"
-      aria-labelledby="feeding-guides-title"
-    >
+    <section className="ui-card mt-5 min-w-0" aria-labelledby="feeding-guides-title">
       <div className="flex flex-wrap items-start justify-between gap-3">
         <div>
-          <h2 id="feeding-guides-title" className="text-xl font-bold leading-snug text-ink">
+          <h2 id="feeding-guides-title" className="ui-section-title">
             {copy.title}
           </h2>
-          <p className="mt-2 max-w-[75ch] text-sm leading-6 text-muted">{copy.description}</p>
+          <p className="mt-2 max-w-[75ch] text-[14px] leading-relaxed text-muted">{copy.description}</p>
         </div>
-        <span className="rounded-full bg-teal-soft px-3 py-2 text-xs font-semibold text-teal">
+        <span className="rounded-full bg-teal-soft px-3 py-1 text-xs font-semibold text-teal">
           {copy.reviewDateLabel}: <time dateTime={guides.reviewedAt}>{reviewedAt}</time>
         </span>
       </div>
 
-      <div className="mt-4 grid gap-3 sm:grid-cols-[minmax(220px,1fr)_minmax(220px,0.8fr)]">
+      <div className="mt-4 grid items-end gap-3 lg:grid-cols-[minmax(180px,1fr)_minmax(180px,0.8fr)]">
         <label className="relative block min-w-0">
           <span className="sr-only">{copy.searchLabel}</span>
           <Search
             aria-hidden="true"
-            className="pointer-events-none absolute left-4 top-1/2 h-4 w-4 -translate-y-1/2 text-muted"
+            className="pointer-events-none absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted"
           />
           <input
             type="search"
             value={query}
             onChange={(event) => setQuery(event.target.value)}
             placeholder={copy.searchPlaceholder}
-            className="min-h-12 w-full rounded-xl border border-line bg-white py-3 pl-11 pr-4 text-sm text-ink placeholder:text-slate-400 focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-teal"
+            className="ui-input ui-input--search w-full"
           />
         </label>
         <div className="min-w-0 text-xs font-semibold text-muted">
@@ -82,10 +79,10 @@ export function FeedingGuides() {
       {filtered.length ? (
         <ul className="mt-3 divide-y divide-line border-y border-line">
           {filtered.map((guide) => (
-            <li key={guide.aphiaId} className="py-5">
+            <li key={guide.aphiaId} className="py-4">
               <article aria-labelledby={`feeding-guide-${guide.aphiaId}`}>
                 <div className="flex flex-wrap items-baseline gap-x-3 gap-y-1">
-                  <h3 id={`feeding-guide-${guide.aphiaId}`} className="text-lg font-bold text-ink">
+                  <h3 id={`feeding-guide-${guide.aphiaId}`} className="text-base font-bold text-ink">
                     {guide.commonName[lang]}
                   </h3>
                   <span className="text-sm text-muted">
@@ -102,10 +99,10 @@ export function FeedingGuides() {
                     <span className="sr-only">{dict.historicalEvidence.opensTab}</span>
                   </a>
                 </div>
-                <p className="mt-3 max-w-[85ch] text-sm leading-6 text-ink">{guide.summary[lang]}</p>
+                <p className="mt-3 max-w-[75ch] text-[14px] leading-relaxed text-ink">{guide.summary[lang]}</p>
                 <div className="mt-3 rounded-xl bg-slate-50 px-4 py-3">
                   <p className="text-xs font-bold uppercase tracking-wide text-muted">{copy.studyContextLabel}</p>
-                  <p className="mt-1 text-sm leading-6 text-muted">{guide.studyContext[lang]}</p>
+                  <p className="mt-1 text-[14px] leading-relaxed text-muted">{guide.studyContext[lang]}</p>
                 </div>
                 <div className="mt-3">
                   <p className="text-xs font-bold uppercase tracking-wide text-muted">{copy.foodsLabel}</p>
@@ -121,13 +118,13 @@ export function FeedingGuides() {
                   </ul>
                 </div>
                 <details className="group mt-3 border-t border-line">
-                  <summary className="flex min-h-11 cursor-pointer list-none items-center justify-between gap-3 text-sm font-semibold text-teal focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-teal [&::-webkit-details-marker]:hidden">
+                  <summary className="flex min-h-9 cursor-pointer list-none items-center justify-between gap-3 text-sm font-semibold text-teal focus-visible:outline-3 focus-visible:outline-offset-2 focus-visible:outline-teal [&::-webkit-details-marker]:hidden">
                     {copy.sourcesLabel}
                     <ChevronDown aria-hidden="true" size={17} className="shrink-0 group-open:rotate-180" />
                   </summary>
                   <ul className="grid gap-3 pb-1">
                     {guide.sources.map((source) => (
-                      <li key={source.url} className="text-sm leading-6 text-muted">
+                      <li key={source.url} className="text-[14px] leading-relaxed text-muted">
                         <a
                           href={source.url}
                           target="_blank"
@@ -154,7 +151,7 @@ export function FeedingGuides() {
         </p>
       )}
 
-      <div className="mt-4 flex gap-3 rounded-xl border border-amber-200 bg-amber-50 px-4 py-4 text-sm leading-6 text-amber-950">
+      <div className="mt-4 flex gap-3 rounded-xl border border-amber-200 bg-amber-50 px-4 py-4 text-[14px] leading-relaxed text-amber-950">
         <Info aria-hidden="true" className="mt-0.5 h-5 w-5 shrink-0" />
         <p>
           <strong>{copy.baitPendingTitle}.</strong> {copy.baitPendingDesc}

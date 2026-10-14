@@ -50,15 +50,16 @@ export default function MySpeciesPage() {
   }).length;
 
   return (
-    <main className="mx-auto max-w-[1440px] px-5 pb-12 pt-8 sm:px-8 sm:pt-10 lg:px-12">
-      <div className="flex flex-wrap items-center justify-between gap-3">
-        <p className="text-xs font-bold uppercase tracking-[0.15em] text-teal">{dict.mySpecies.tag}</p>
-        <span className="rounded-full bg-teal-soft px-4 py-2 text-sm font-bold text-teal-dark">
-          {species.length} {dict.mySpecies.badge}
-        </span>
-      </div>
-      <h1 className="mt-3 text-4xl font-extrabold tracking-tight text-ink sm:text-5xl">{dict.mySpecies.title}</h1>
-      <p className="mt-2 max-w-2xl text-lg leading-7 text-muted">{dict.mySpecies.subtitle}</p>
+    <main className="ui-page">
+      <header className="ui-page-header">
+        <div className="flex flex-wrap items-center justify-between gap-3">
+          <h1 className="ui-page-title">{dict.mySpecies.title}</h1>
+          <span className="ui-caption rounded-full bg-teal-soft px-3 py-1 font-semibold text-teal-dark">
+            {species.length} {dict.mySpecies.badge}
+          </span>
+        </div>
+        <p className="max-w-[75ch] leading-relaxed text-muted">{dict.mySpecies.subtitle}</p>
+      </header>
 
       {error && (
         <p role="alert" className="mt-5 rounded-xl border border-rose-200 bg-rose-50 px-4 py-3 text-sm text-rose-900">
@@ -66,24 +67,20 @@ export default function MySpeciesPage() {
         </p>
       )}
 
-      <div id="collectionNotice" className="mt-6">
+      <div id="collectionNotice">
         {loading ? (
           <p className="text-sm text-muted">{dict.mySpecies.loading}</p>
         ) : species.length === 0 ? (
-          <section className="rounded-3xl border border-line bg-white px-6 py-12 text-center shadow-sm sm:px-10">
-            <div className="mx-auto grid h-16 w-16 place-items-center rounded-2xl bg-teal-soft" aria-hidden="true">
-              <Fish className="h-8 w-8 text-teal" strokeWidth={1.75} />
+          <section className="ui-card text-center">
+            <div className="mx-auto grid h-12 w-12 place-items-center rounded-xl bg-teal-soft" aria-hidden="true">
+              <Fish className="h-6 w-6 text-teal" strokeWidth={1.75} />
             </div>
-            <p className="mt-5 text-xs font-bold uppercase tracking-[0.15em] text-teal">{dict.mySpecies.emptyTag}</p>
-            <h2 className="mt-2 text-2xl font-extrabold text-ink">{dict.mySpecies.emptyTitle}</h2>
+            <h2 className="ui-section-title mt-3">{dict.mySpecies.emptyTitle}</h2>
             <p className="mx-auto mt-3 max-w-xl text-sm leading-6 text-muted">
               {unknownCount ? `${unknownCount} ` : ""}
               {dict.mySpecies.emptyDesc}
             </p>
-            <Link
-              href="/catches"
-              className="mt-6 inline-flex min-h-11 items-center rounded-xl bg-teal px-5 font-bold text-white hover:bg-teal-dark"
-            >
+            <Link href="/catches" className="ui-button mt-4">
               {dict.mySpecies.logCatchBtn}
             </Link>
           </section>
@@ -106,10 +103,7 @@ export default function MySpeciesPage() {
                     : [],
                 );
                 return (
-                  <article
-                    key={name.toLowerCase()}
-                    className="overflow-hidden rounded-3xl border border-line bg-white shadow-sm"
-                  >
+                  <article key={name.toLowerCase()} className="overflow-hidden rounded-xl border border-line bg-white">
                     <PhotoThumbnail
                       photo={photos[0]?.photo ?? null}
                       altText={name}
@@ -119,11 +113,8 @@ export default function MySpeciesPage() {
                         setViewerOpen(true);
                       }}
                     />
-                    <div className="p-5">
-                      <p className="text-xs font-bold uppercase tracking-[0.12em] text-teal">
-                        {dict.mySpecies.cardTag}
-                      </p>
-                      <h2 className="mt-2 text-xl font-extrabold text-ink">{name}</h2>
+                    <div className="p-4">
+                      <h2 className="text-base font-bold text-ink">{name}</h2>
                       <p className="mt-1 text-sm text-muted">
                         {catches.length} {dict.mySpecies.personalCatchesLabel} · latest{" "}
                         {latest.date || (lang === "fil" ? "petsa hindi naitala" : "date not recorded")}

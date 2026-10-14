@@ -3,7 +3,7 @@
 import { AnimatePresence, MotionConfig, motion } from "framer-motion";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import * as React from "react";
-import { type ChevronProps, DayPicker, type DayButtonProps, type MonthProps } from "react-day-picker";
+import { type ChevronProps, type DayButtonProps, DayPicker, type MonthProps } from "react-day-picker";
 
 import { cn } from "@/lib/utils";
 import { buttonVariants } from "./button";
@@ -128,7 +128,7 @@ function Calendar({ className, classNames, showOutsideDays = true, ...props }: C
             setMonth(newMonth);
             props.onMonthChange?.(newMonth);
           }}
-          className={cn("rounded-3xl border border-border bg-background p-4 text-foreground shadow-sm", className)}
+          className={cn("rounded-xl border border-border bg-background p-3 text-foreground shadow-sm", className)}
           classNames={{
             months: "relative",
             month: "space-y-4",

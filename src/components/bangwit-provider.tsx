@@ -172,6 +172,12 @@ export function BangwitProvider({ children }: { children: ReactNode }) {
     if (!ready || (accepted ? !profileOpen : isPolicyPage)) return;
     const dialog = document.querySelector<HTMLElement>("[data-bangwit-dialog]");
     if (!dialog) return;
+    const previousFocus = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+    const shell = document.querySelector<HTMLElement>(".app-shell");
+    const previousInert = shell?.inert ?? false;
+    const previousOverflow = document.body.style.overflow;
+    if (shell) shell.inert = true;
+    document.body.style.overflow = "hidden";
     const focusable = () =>
       Array.from(
         dialog.querySelectorAll<HTMLElement>(
@@ -204,7 +210,12 @@ export function BangwitProvider({ children }: { children: ReactNode }) {
       }
     }
     document.addEventListener("keydown", keepFocusInside);
-    return () => document.removeEventListener("keydown", keepFocusInside);
+    return () => {
+      document.removeEventListener("keydown", keepFocusInside);
+      if (shell) shell.inert = previousInert;
+      document.body.style.overflow = previousOverflow;
+      if (previousFocus?.isConnected) previousFocus.focus({ preventScroll: true });
+    };
   }, [accepted, isPolicyPage, profileOpen, ready]);
 
   useEffect(() => {
@@ -217,7 +228,10 @@ export function BangwitProvider({ children }: { children: ReactNode }) {
     const target = document.querySelector<HTMLElement>(stepTarget.target);
     if (!target) return;
     target.classList.add("tour-spotlight");
-    target.scrollIntoView({ behavior: "smooth", block: "center" });
+    target.scrollIntoView({
+      behavior: window.matchMedia("(prefers-reduced-motion: reduce)").matches ? "instant" : "smooth",
+      block: "center",
+    });
     return () => target.classList.remove("tour-spotlight");
   }, [pathname, router, tourStep]);
 
@@ -377,7 +391,7 @@ export function BangwitProvider({ children }: { children: ReactNode }) {
             role="dialog"
             aria-modal="true"
             aria-labelledby="policyTitle"
-            className="my-auto max-h-[calc(100dvh-2rem)] w-full max-w-xl overflow-y-auto rounded-3xl bg-white p-6 shadow-2xl sm:p-8"
+            className="ui-dialog my-auto max-h-[calc(100dvh-2rem)] w-full max-w-xl overflow-y-auto"
           >
             <div className="flex items-center justify-between gap-3">
               <p className="text-xs font-bold uppercase tracking-[0.15em] text-teal">{dict.policy.tag}</p>
@@ -404,7 +418,7 @@ export function BangwitProvider({ children }: { children: ReactNode }) {
                 </button>
               </fieldset>
             </div>
-            <h1 id="policyTitle" className="mt-2 text-3xl font-extrabold text-ink">
+            <h1 id="policyTitle" className="ui-section-title mt-2">
               {dict.policy.title}
             </h1>
             <p className="mt-3 text-sm leading-6 text-muted">{dict.policy.desc}</p>
@@ -419,7 +433,7 @@ export function BangwitProvider({ children }: { children: ReactNode }) {
                 const reader = event.currentTarget;
                 if (reader.scrollTop + reader.clientHeight >= reader.scrollHeight - 4) setPolicyRead(true);
               }}
-              className="policy-reader mt-5 max-h-[min(38vh,22rem)] overflow-y-auto rounded-2xl border border-line bg-paper px-4 py-4 sm:px-5"
+              className="policy-reader mt-4 max-h-[min(38vh,22rem)] overflow-y-auto rounded-xl border border-line bg-paper p-4"
             >
               <PolicyDocument privacy={dict.privacyPage} terms={dict.termsPage} className="space-y-6" />
             </section>
@@ -446,7 +460,7 @@ export function BangwitProvider({ children }: { children: ReactNode }) {
               type="button"
               disabled={!policyRead || !policyChecked}
               onClick={acceptPolicies}
-              className="mt-5 min-h-12 w-full rounded-xl bg-teal px-5 font-bold text-white enabled:hover:bg-teal-dark disabled:cursor-not-allowed disabled:opacity-50"
+              className="ui-button mt-4 w-full"
             >
               {dict.policy.agreeBtn}
             </button>
@@ -462,16 +476,22 @@ export function BangwitProvider({ children }: { children: ReactNode }) {
             role="dialog"
             aria-modal="true"
             aria-labelledby="welcomeTitle"
-            className="my-auto w-full max-w-lg rounded-3xl bg-white p-6 shadow-2xl sm:p-8"
+            onKeyDown={(event) => {
+              if (event.key !== "Escape" || event.defaultPrevented) return;
+              event.preventDefault();
+              event.stopPropagation();
+              finishProfile(false);
+            }}
+            className="ui-dialog my-auto max-h-[calc(100dvh-2rem)] w-full max-w-lg overflow-y-auto"
           >
             <p className="text-xs font-bold uppercase tracking-[0.15em] text-teal">
               {profileMode === "first" ? dict.onboarding.tagFirst : dict.onboarding.tagEdit}
             </p>
-            <h2 id="welcomeTitle" className="mt-2 text-3xl font-extrabold text-ink">
+            <h2 id="welcomeTitle" className="ui-section-title mt-2">
               {dict.onboarding.title}
             </h2>
             <p className="mt-3 text-sm leading-6 text-muted">{dict.onboarding.desc}</p>
-            <label className="mt-5 block text-sm font-semibold text-ink" htmlFor="fisherType">
+            <label className="ui-field-label mt-4 block" htmlFor="fisherType">
               {dict.onboarding.fisherTypeLabel}
             </label>
             <DropdownSelect
@@ -488,7 +508,7 @@ export function BangwitProvider({ children }: { children: ReactNode }) {
                 { value: "both", label: dict.onboarding.types.both, icon: Users },
               ]}
             />
-            <label className="mt-4 block text-sm font-semibold text-ink" htmlFor="preferredWater">
+            <label className="ui-field-label mt-3 block" htmlFor="preferredWater">
               {dict.onboarding.preferredWaterLabel}
             </label>
             <DropdownSelect
@@ -504,19 +524,15 @@ export function BangwitProvider({ children }: { children: ReactNode }) {
                 { value: "brackish", label: dict.onboarding.waters.brackish, icon: Waves },
               ]}
             />
-            <div className="mt-6 flex gap-3">
+            <div className="mt-5 flex gap-3">
               <button
                 type="button"
                 onClick={() => finishProfile(false)}
-                className="min-h-12 flex-1 rounded-xl border border-line px-4 font-bold text-ink hover:bg-paper"
+                className="ui-button ui-button--secondary flex-1"
               >
                 {profileMode === "first" ? dict.onboarding.skipBtn : dict.onboarding.closeBtn}
               </button>
-              <button
-                type="button"
-                onClick={() => finishProfile(true)}
-                className="min-h-12 flex-1 rounded-xl bg-teal px-4 font-bold text-white hover:bg-teal-dark"
-              >
+              <button type="button" onClick={() => finishProfile(true)} className="ui-button flex-1">
                 {profileMode === "first" ? dict.onboarding.continueBtn : dict.onboarding.saveBtn}
               </button>
             </div>
@@ -530,7 +546,7 @@ export function BangwitProvider({ children }: { children: ReactNode }) {
           aria-modal="false"
           aria-labelledby="tourTitle"
           aria-describedby="tourText"
-          className="fixed inset-x-4 bottom-4 z-50 mx-auto max-w-xl rounded-2xl border border-line bg-white p-5 shadow-2xl sm:bottom-6 sm:p-6"
+          className="ui-dialog fixed inset-x-4 bottom-4 z-50 mx-auto max-w-xl sm:bottom-6"
         >
           <div className="flex items-center justify-between text-xs font-bold uppercase tracking-[0.12em] text-teal">
             <span>{dict.tour.header}</span>
@@ -538,7 +554,7 @@ export function BangwitProvider({ children }: { children: ReactNode }) {
               {tourStep + 1} / {TOUR_PATH_TARGETS.length}
             </span>
           </div>
-          <h2 id="tourTitle" className="mt-3 text-xl font-extrabold text-ink">
+          <h2 id="tourTitle" className="ui-section-title mt-3">
             {dict.tour.steps[tourStep]?.title}
           </h2>
           <p id="tourText" className="mt-2 text-sm leading-6 text-muted">
@@ -549,22 +565,14 @@ export function BangwitProvider({ children }: { children: ReactNode }) {
               type="button"
               disabled={tourStep === 0}
               onClick={() => advanceTour(-1)}
-              className="min-h-10 rounded-lg border border-line px-3 text-sm font-semibold text-ink disabled:opacity-40"
+              className="ui-button ui-button--secondary"
             >
               {dict.common.back}
             </button>
-            <button
-              type="button"
-              onClick={() => closeTour(true)}
-              className="min-h-10 px-3 text-sm font-semibold text-muted hover:text-ink"
-            >
+            <button type="button" onClick={() => closeTour(true)} className="ui-button ui-button--secondary">
               {dict.common.skip}
             </button>
-            <button
-              type="button"
-              onClick={() => advanceTour(1)}
-              className="min-h-10 rounded-lg bg-teal px-4 text-sm font-bold text-white hover:bg-teal-dark"
-            >
+            <button type="button" onClick={() => advanceTour(1)} className="ui-button">
               {tourStep === TOUR_PATH_TARGETS.length - 1 ? dict.common.done : dict.common.next}
             </button>
           </div>

@@ -14,12 +14,12 @@ export function PolicyDocument({
   const documents = [privacy, terms];
 
   return (
-    <div className={`space-y-6 text-sm leading-6 text-muted ${className}`}>
+    <div className={`space-y-5 text-[14px] leading-relaxed text-muted ${className}`}>
       {documents.map((document) => (
         <section key={document.title}>
-          <h2 className="text-lg font-extrabold text-ink">{document.title}</h2>
+          <h2 className="ui-section-title">{document.title}</h2>
           <p className="mt-1 text-xs text-muted">{document.lastUpdated}</p>
-          <div className="mt-4 space-y-5">
+          <div className="mt-3 space-y-4">
             {document.sections.map((section) => (
               <section key={section.heading}>
                 <h3 className="font-extrabold text-ink">{section.heading}</h3>

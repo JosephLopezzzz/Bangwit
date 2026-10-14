@@ -1,10 +1,11 @@
 "use client";
 
-import Image from "next/image";
 import { ChevronRight, LocateFixed, MapPin, Minus, Plus, X } from "lucide-react";
+import Image from "next/image";
 import { useEffect, useRef, useState } from "react";
 import { useBangwit } from "@/components/bangwit-provider";
-import { DropdownSelect, type DropdownOption } from "@/components/dropdown-select";
+import { type DropdownOption, DropdownSelect } from "@/components/dropdown-select";
+import "./area-explorer.css";
 
 const areas = ["Manila Bay", "Bacoor Bay", "Cañacao Bay"] as const;
 const areaOptions: DropdownOption[] = areas.map((name) => ({ value: name, label: name, icon: MapPin }));
@@ -48,6 +49,7 @@ export function AreaExplorer() {
   const zoom = 1 + zoomStep / 5;
   const [mapUnavailable, setMapUnavailable] = useState(false);
   const [sheetOpen, setSheetOpen] = useState(false);
+  const mapRef = useRef<HTMLFieldSetElement>(null);
   const sheetRef = useRef<HTMLDialogElement>(null);
   const sheetTriggerRef = useRef<HTMLButtonElement>(null);
 
@@ -70,6 +72,7 @@ export function AreaExplorer() {
   }, [sheetOpen]);
 
   function openSheet() {
+    if (sheetRef.current?.open) return;
     sheetTriggerRef.current?.focus();
     sheetRef.current?.showModal();
     setSheetOpen(true);
@@ -92,7 +95,12 @@ export function AreaExplorer() {
             />
           </div>
 
-          <fieldset className="explore-map" aria-labelledby="area-heading" aria-describedby="map-description">
+          <fieldset
+            ref={mapRef}
+            className="explore-map"
+            aria-labelledby="area-heading"
+            aria-describedby="map-description"
+          >
             <p id="map-description" className="sr-only">
               {dict.areaExplorer.mapDescription}
             </p>
@@ -142,7 +150,7 @@ export function AreaExplorer() {
                 aria-label={dict.areaExplorer.resetMap}
                 title={dict.areaExplorer.resetMap}
               >
-                <LocateFixed aria-hidden="true" size={23} strokeWidth={1.75} />
+                <LocateFixed aria-hidden="true" size={20} strokeWidth={1.75} />
               </button>
               <div className="explore-zoom-controls">
                 <button
@@ -152,7 +160,7 @@ export function AreaExplorer() {
                   aria-label={dict.areaExplorer.zoomIn}
                   title={dict.areaExplorer.zoomIn}
                 >
-                  <Plus aria-hidden="true" size={23} strokeWidth={1.75} />
+                  <Plus aria-hidden="true" size={20} strokeWidth={1.75} />
                 </button>
                 <button
                   type="button"
@@ -161,7 +169,7 @@ export function AreaExplorer() {
                   aria-label={dict.areaExplorer.zoomOut}
                   title={dict.areaExplorer.zoomOut}
                 >
-                  <Minus aria-hidden="true" size={23} strokeWidth={1.75} />
+                  <Minus aria-hidden="true" size={20} strokeWidth={1.75} />
                 </button>
               </div>
             </div>
@@ -185,12 +193,12 @@ export function AreaExplorer() {
             aria-expanded={sheetOpen}
             aria-controls="location-sheet"
           >
-            <MapPin aria-hidden="true" size={24} />
+            <MapPin aria-hidden="true" size={20} />
             <span>
               <span className="location-trigger-label">{dict.areaExplorer.selectAreaLabel}</span>
               <strong>{selected}</strong>
             </span>
-            <ChevronRight aria-hidden="true" size={22} />
+            <ChevronRight aria-hidden="true" size={18} />
           </button>
         </div>
       </div>
@@ -207,7 +215,26 @@ export function AreaExplorer() {
         id="location-sheet"
         aria-labelledby="location-sheet-heading"
         className="location-sheet"
-        onClose={() => setSheetOpen(false)}
+        onClose={() => {
+          setSheetOpen(false);
+          if (window.matchMedia("(max-width: 767px)").matches) {
+            sheetTriggerRef.current?.focus({ preventScroll: true });
+          } else {
+            mapRef.current?.querySelector<HTMLButtonElement>('[aria-pressed="true"]')?.focus({ preventScroll: true });
+          }
+        }}
+        onPointerDown={(event) => {
+          if (event.target !== event.currentTarget) return;
+          const bounds = event.currentTarget.getBoundingClientRect();
+          if (
+            event.clientX < bounds.left ||
+            event.clientX > bounds.right ||
+            event.clientY < bounds.top ||
+            event.clientY > bounds.bottom
+          ) {
+            event.currentTarget.close();
+          }
+        }}
       >
         <div className="location-sheet-heading">
           <h2 id="location-sheet-heading">{dict.areaExplorer.sideHeading}</h2>
@@ -217,7 +244,7 @@ export function AreaExplorer() {
             aria-label={dict.common.close}
             onClick={() => sheetRef.current?.close()}
           >
-            <X aria-hidden="true" size={22} />
+            <X aria-hidden="true" size={18} />
           </button>
         </div>
         <p className="explore-location-description">{dict.areaExplorer.sideDesc}</p>

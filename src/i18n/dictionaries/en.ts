@@ -33,6 +33,8 @@ export const enDictionary: Dictionary = {
     openGuide: "Open Bangwit guide",
     mainMenu: "Main menu",
     menuButton: "Menu",
+    expandSidebar: "Expand sidebar",
+    collapseSidebar: "Collapse sidebar",
   },
   policy: {
     tag: "Prototype access",

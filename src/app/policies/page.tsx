@@ -1,15 +1,15 @@
 "use client";
 
 import { TriangleAlert } from "lucide-react";
-import { PolicyDocument } from "@/components/policy-document";
 import { useBangwit } from "@/components/bangwit-provider";
+import { PolicyDocument } from "@/components/policy-document";
 
 export default function PoliciesPage() {
   const { dict, lang } = useBangwit();
   const reviewNotice = dict.privacyPage.reviewNotice;
 
   return (
-    <main className="mx-auto max-w-3xl px-5 pb-12 pt-10 sm:px-8 sm:pt-14">
+    <main className="ui-page ui-page--wide">
       <div className="flex flex-wrap items-center justify-between gap-3">
         <p className="text-xs font-bold uppercase tracking-[0.15em] text-teal">{dict.settings.policiesTag}</p>
         {lang === "en" && reviewNotice && (
@@ -20,21 +20,17 @@ export default function PoliciesPage() {
         )}
       </div>
 
-      <h1 className="mt-3 text-4xl font-extrabold tracking-tight text-ink">{dict.policy.title}</h1>
-      <p className="mt-2 text-sm text-muted">{dict.policy.desc}</p>
+      <h1 className="ui-page-title mt-2">{dict.policy.title}</h1>
+      <p className="mt-1 text-sm text-muted">{dict.policy.desc}</p>
 
       {lang === "en" && (
-        <div className="mt-5 rounded-2xl border border-amber-200 bg-amber-50 p-4 text-xs leading-6 text-amber-950">
+        <div className="mt-4 rounded-xl border border-amber-200 bg-amber-50 p-4 text-xs leading-5 text-amber-950">
           <strong>Notice:</strong> This English translation is provided as a working convenience for prototype testing.
           Formal legal review is required before public launch.
         </div>
       )}
 
-      <PolicyDocument
-        privacy={dict.privacyPage}
-        terms={dict.termsPage}
-        className="mt-7 rounded-3xl border border-line bg-white p-5 shadow-sm sm:p-8"
-      />
+      <PolicyDocument privacy={dict.privacyPage} terms={dict.termsPage} className="ui-card mt-5" />
     </main>
   );
 }

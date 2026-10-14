@@ -18,23 +18,23 @@ export function CaviteFisheriesEvidence() {
     <section
       aria-labelledby="cavite-evidence-heading"
       aria-describedby="cavite-evidence-scope cavite-evidence-limits"
-      className="mt-5 min-w-0 rounded-2xl border border-line bg-white px-5 py-5 sm:px-6"
+      className="ui-card mt-5 min-w-0"
     >
-      <h2 id="cavite-evidence-heading" className="text-xl font-bold leading-snug text-ink">
+      <h2 id="cavite-evidence-heading" className="ui-section-title">
         {copy.title} · {report.reportYear}
       </h2>
-      <p className="mt-2 max-w-[75ch] text-sm leading-6 text-muted">
+      <p className="mt-2 max-w-[75ch] text-[14px] leading-relaxed text-muted">
         {copy.description.replace("{count}", String(report.records.length))}
       </p>
       <p id="cavite-evidence-scope" className="mt-3 max-w-[75ch] text-sm font-semibold leading-6 text-ink">
         {copy.scope}
       </p>
-      <p id="cavite-evidence-limits" className="mt-1 max-w-[75ch] text-sm leading-6 text-muted">
+      <p id="cavite-evidence-limits" className="mt-1 max-w-[75ch] text-[14px] leading-relaxed text-muted">
         {copy.limits}
       </p>
 
       <details className="group mt-4 border-t border-line">
-        <summary className="flex min-h-12 cursor-pointer list-none items-center justify-between gap-3 py-3 text-sm font-semibold text-teal hover:text-teal-dark focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-teal [&::-webkit-details-marker]:hidden">
+        <summary className="flex min-h-9 cursor-pointer list-none items-center justify-between gap-3 py-2 text-sm font-semibold text-teal hover:text-teal-dark focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-teal [&::-webkit-details-marker]:hidden">
           {copy.groupsSummary.replace("{count}", String(report.records.length))}
           <ChevronDown aria-hidden="true" size={18} className="shrink-0 group-open:rotate-180" />
         </summary>
@@ -44,7 +44,7 @@ export function CaviteFisheriesEvidence() {
             return (
               <li key={record.group} className="min-w-0 border-t border-line py-3">
                 <p className="text-sm font-semibold leading-6 text-ink">{lang === "fil" ? localNames : record.group}</p>
-                <p className="text-sm leading-6 text-muted">{lang === "fil" ? record.group : localNames}</p>
+                <p className="text-[14px] leading-relaxed text-muted">{lang === "fil" ? record.group : localNames}</p>
               </li>
             );
           })}
@@ -52,11 +52,11 @@ export function CaviteFisheriesEvidence() {
       </details>
 
       <details className="group border-t border-line">
-        <summary className="flex min-h-12 cursor-pointer list-none items-center justify-between gap-3 py-3 text-sm font-semibold text-teal hover:text-teal-dark focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-teal [&::-webkit-details-marker]:hidden">
+        <summary className="flex min-h-9 cursor-pointer list-none items-center justify-between gap-3 py-2 text-sm font-semibold text-teal hover:text-teal-dark focus-visible:outline-3 focus-visible:outline-offset-3 focus-visible:outline-teal [&::-webkit-details-marker]:hidden">
           {copy.sourceSummary}
           <ChevronDown aria-hidden="true" size={18} className="shrink-0 group-open:rotate-180" />
         </summary>
-        <dl className="grid gap-y-4 pb-2 text-sm leading-6 sm:grid-cols-[180px_minmax(0,1fr)] sm:gap-x-5">
+        <dl className="grid gap-y-4 pb-2 text-[14px] leading-relaxed sm:grid-cols-[180px_minmax(0,1fr)] sm:gap-x-5">
           <div className="contents">
             <dt className="font-semibold text-ink">{copy.sourceLabel}</dt>
             <dd className="min-w-0 text-muted">

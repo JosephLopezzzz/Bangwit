@@ -1,11 +1,11 @@
 "use client";
 
+import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowUpRight } from "lucide-react";
 import { AreaExplorer } from "@/components/area-explorer";
-import { CaviteFisheriesEvidence } from "@/components/cavite-fisheries-evidence";
 import { useBangwit } from "@/components/bangwit-provider";
+import { CaviteFisheriesEvidence } from "@/components/cavite-fisheries-evidence";
 
 export default function ExplorePage() {
   const { dict } = useBangwit();
@@ -26,18 +26,15 @@ export default function ExplorePage() {
 
       <CaviteFisheriesEvidence />
 
-      <section
-        className="mt-5 rounded-3xl border border-line bg-white p-5 shadow-sm sm:p-6"
-        aria-labelledby="safetyHeading"
-      >
+      <section className="ui-card mt-5" aria-labelledby="safetyHeading">
         <div className="flex flex-wrap items-center justify-between gap-3">
           <div>
             <p className="text-xs font-bold uppercase tracking-[0.15em] text-teal">{dict.home.safetyTag}</p>
-            <h2 id="safetyHeading" className="mt-1 text-xl font-extrabold text-ink">
+            <h2 id="safetyHeading" className="ui-section-title mt-1">
               {dict.home.safetyTitle}
             </h2>
           </div>
-          <span className="rounded-full bg-amber-50 px-4 py-2 text-xs font-bold text-amber-900">
+          <span className="rounded-full bg-amber-50 px-3 py-1 text-xs font-semibold text-amber-900">
             {dict.home.safetyStatus}
           </span>
         </div>
@@ -64,8 +61,8 @@ export default function ExplorePage() {
         </div>
       </section>
 
-      <section className="mt-5 flex flex-col gap-4 rounded-3xl border border-line bg-white px-5 py-5 shadow-sm sm:flex-row sm:items-center sm:px-6">
-        <picture className="h-20 w-20 shrink-0">
+      <section className="ui-card mt-5 flex flex-col gap-3 sm:flex-row sm:items-center">
+        <picture className="h-14 w-14 shrink-0">
           <source srcSet="/assets/bilog.png" media="(prefers-reduced-motion: reduce)" />
           <Image
             src="/assets/bilog-idle-blink-slow-right.gif"
@@ -73,17 +70,14 @@ export default function ExplorePage() {
             width={96}
             height={96}
             unoptimized
-            className="h-20 w-20 object-contain"
+            className="h-14 w-14 object-contain"
           />
         </picture>
         <div className="flex-1">
           <h2 className="font-bold text-ink">{dict.home.ctaTitle}</h2>
           <p className="mt-1 text-sm leading-6 text-muted">{dict.home.ctaDesc}</p>
         </div>
-        <Link
-          href="/catches"
-          className="inline-flex min-h-11 items-center justify-center rounded-xl border border-teal px-5 font-bold text-teal hover:bg-teal-soft"
-        >
+        <Link href="/catches" className="ui-button ui-button--secondary">
           {dict.home.ctaBtn}
         </Link>
       </section>
