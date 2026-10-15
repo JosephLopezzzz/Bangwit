@@ -1,6 +1,6 @@
 # HTTPS staging and phone acceptance
 
-Prepared October 15, 2026. The current hosted origin is `https://bangwit.vercel.app/`. The last recorded Vercel dashboard check showed production deployment `Gb1SKrj6GC3xkf7npFqHe9yFYgUw` as Ready for commit `d957c1379f7f7c6deafdb670553199e5dca4654c`. Since that check, `main` and `origin/main` have advanced to `a199eb29b133cf7f843a889aa7c66dec6551f2f7`; the hosted deployment has not been rechecked against the newer commit. The local Turbopack build, hosting checker, and desktop browser check below were recorded against the earlier release state and do not verify the current `main` build or deployment. Browser worker control, offline hydration, and phone details were not established by those checks. The user reported a phone pass in online and offline modes; device/browser details and browser-tab versus installed-app context were not recorded. Prior desktop results are in [OFFLINE_ACCEPTANCE.md](OFFLINE_ACCEPTANCE.md).
+Prepared October 15, 2026. The hosted origin `https://bangwit.vercel.app/` was checked against Vercel Production deployment `A74x3ZMLJMAjQ8ZhxiMcFeEWELYK`, Ready for commit `8dd97f3c425cabc4f4b71a96259fda83325bb427`. This hostname is the Production alias, not a Preview deployment. The production-origin synthetic traffic run is recorded below. The local Turbopack build, hosting checker, and prior desktop checks in the historical release section were recorded against earlier source and do not verify the build or phone behavior of this commit. The user reported a phone pass in online and offline modes; device/browser details and browser-tab versus installed-app context were not recorded. Prior desktop results are in [OFFLINE_ACCEPTANCE.md](OFFLINE_ACCEPTANCE.md).
 
 ## Deployment setup
 
@@ -44,12 +44,20 @@ npm run check:staging -- https://bangwit.vercel.app/
 
 This read-only checker verifies the journal/fallback documents, `/serwist/sw.js` type and root scope, update-cache header, worker references to the document URLs, manifest and icon dimensions. Document references alone do not prove worker installation, successful precaching or offline hydration; those need the offline tests and browser/device runs. It sends no catch data and does not inspect browser storage. A protected preview can reject the automated checker; verify these endpoints in the signed-in browser instead, keeping protection enabled.
 
-## October 15 release verification
+## Historical release verification before commit 8dd97f3
 
-- The last recorded Vercel production deployment check showed `Gb1SKrj6GC3xkf7npFqHe9yFYgUw` Ready for Git commit `d957c1379f7f7c6deafdb670553199e5dca4654c`. Current `main` / `origin/main` has since advanced to `a199eb29b133cf7f843a889aa7c66dec6551f2f7`; recheck the deployment after pushing before treating it as current.
+- At the time of the earlier release check, Vercel Production deployment `Gb1SKrj6GC3xkf7npFqHe9yFYgUw` was Ready for `d957c1379f7f7c6deafdb670553199e5dca4654c`; later branch and deployment checks are recorded separately below.
 - `npm run build` passed on the earlier `d957c13` source: 16 static routes and 37 precache entries. `npm run test:offline` passed 5/5; `npm run test:storage` passed 2/2; `npm run check:staging -- https://bangwit.vercel.app/` passed at that recorded check.
 - In a desktop Brave browser, `https://bangwit.vercel.app/catches` rendered the journal with zero catches, then rendered the same zero-catch journal after an online reload. No catch was saved or changed. Service-worker control was not independently observed.
 - These checks do not complete the offline reload, unsaved photo-draft reconnect, fresh-profile, phone, or installed-app cases below.
+
+## October 15 production-origin synthetic traffic run
+
+- Origin and deployment: `https://bangwit.vercel.app/`, Vercel Production deployment `A74x3ZMLJMAjQ8ZhxiMcFeEWELYK`, commit `8dd97f3c425cabc4f4b71a96259fda83325bb427` (Ready). This was not a Preview deployment.
+- Browser and data: Microsoft Edge 155.0.4283.45 in two fresh, isolated contexts. The first empty journal saved one synthetic catch with a 68-byte PNG and downloaded a version 1 JSON backup containing that record and photo. The second empty journal restored the backup; IndexedDB then contained one record with the same 68-byte photo. The journal UI showed one catch. No real catch data was used.
+- Service worker: `https://bangwit.vercel.app/serwist/sw.js` activated and controlled the page after an online reload.
+- Traffic: 160 DevTools HTTP(S) request events were observed across page and service-worker sessions. All targeted `https://bangwit.vercel.app`, used GET, and had no request bodies; no external origin or write method was observed. The response statuses observed were 200.
+- Scope: this is browser-visible traffic for the synthetic flow. It does not inspect Vercel server/CDN logs, browser-level telemetry, other browser profiles, physical-phone behavior, or a protected Preview deployment. Repeat on a controlled Preview for Preview-specific acceptance.
 
 In that browser, confirm the app loads, the service worker finishes installing, and an online reload is controlled before testing offline. A first visit without internet cannot install the worker. The worker response must retain `Service-Worker-Allowed: /` and revalidate through `Cache-Control: no-cache, no-store, must-revalidate`. HTTPS and a valid manifest are part of [Next.js PWA installation](https://nextjs.org/docs/app/guides/progressive-web-apps).
 
