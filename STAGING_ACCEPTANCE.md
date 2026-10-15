@@ -1,6 +1,6 @@
 # HTTPS staging and phone acceptance
 
-Prepared October 15, 2026. The hosted origin `https://bangwit.vercel.app/` was checked against Vercel Production deployment `A74x3ZMLJMAjQ8ZhxiMcFeEWELYK`, Ready for commit `8dd97f3c425cabc4f4b71a96259fda83325bb427`. This hostname is the Production alias, not a Preview deployment. The production-origin synthetic traffic run is recorded below. Separate Preview UI and backup-file checks on commit `6a8814950884b1c55fbd35c6f5ec049af298f2df` are also recorded; full Preview HTTP traffic capture remains pending. The local Turbopack build, hosting checker, and prior desktop checks in the historical release section were recorded against earlier source and do not verify the build or phone behavior of this commit. The user reported a phone pass in online and offline modes; device/browser details and browser-tab versus installed-app context were not recorded, so this report does not establish which checklist scenarios were covered. Prior desktop results are in [OFFLINE_ACCEPTANCE.md](OFFLINE_ACCEPTANCE.md).
+Prepared October 15, 2026. The hosted origin `https://bangwit.vercel.app/` was checked against Vercel Production deployment `A74x3ZMLJMAjQ8ZhxiMcFeEWELYK`, Ready for commit `8dd97f3c425cabc4f4b71a96259fda83325bb427`. This hostname is the Production alias, not a Preview deployment. The production-origin synthetic traffic run is recorded below. Separate Preview UI and backup-file checks on commit `6a8814950884b1c55fbd35c6f5ec049af298f2df` are also recorded; full Preview HTTP traffic capture remains pending. The local Turbopack build, hosting checker, and prior desktop checks in the historical release section were recorded against earlier source and do not verify the build or phone behavior of this commit. The user reported a phone pass in online and offline modes and clarified that testing used a personal Tecno phone in a browser tab. The exact phone model, OS, browser/version, and checklist scenarios covered remain unknown. Prior desktop results are in [OFFLINE_ACCEPTANCE.md](OFFLINE_ACCEPTANCE.md).
 
 ## Deployment setup
 
@@ -91,10 +91,10 @@ Run separately on each supported physical phone/browser and in the installed hom
 | Detail | Recorded value |
 | --- | --- |
 | Date and tester | October 15, 2026; local release checks, user-reported phone pass, Production-origin traffic run, and partial Preview UI round-trip |
-| Overall online/offline phone result | Pass, user-reported; individual results and device details not recorded |
-| Phone model / OS version | Not provided |
-| Browser / version | Not provided |
-| Browser tab or installed app | Desktop hosted journal and online reload checked; phone context not specified |
+| Overall online/offline phone result | Pass, user-reported; checklist scenarios not individually recorded |
+| Phone model / OS version | Tecno (exact model not provided) / OS not provided |
+| Browser / version | Browser used; name and version not provided |
+| Browser tab or installed app | Browser tab on personal Tecno phone |
 | Exact HTTPS origins | Production: `https://bangwit.vercel.app/`; Preview: `https://bangwit-38a0tqos7-josephlopezzzzs-projects.vercel.app/` |
 | Last recorded deployed commit / build ID | Production traffic run: `8dd97f3c425cabc4f4b71a96259fda83325bb427`, Vercel deployment `A74x3ZMLJMAjQ8ZhxiMcFeEWELYK`; Preview UI run: `6a8814950884b1c55fbd35c6f5ec049af298f2df`, Vercel deployment `8xbXUrGUrW7fwSMH1StvRUdzmtJL`, branch `codex/https-preview-20261015` (Ready) |
 | Starting / ending journal counts | Desktop hosted journal showed 0 before and after online reload; phone counts not recorded |
@@ -105,6 +105,6 @@ Run separately on each supported physical phone/browser and in the installed hom
 | Backup download | Preview version 1 JSON inspected: 876 bytes, 1 synthetic record, 69-byte photo matching the uploaded test PNG |
 | Preview save / restore | Preview save/export passed; Preview-generated file restored on the second Preview origin; both test rows removed and both journals returned to 0 |
 | Preview traffic / hosting check | HTTP traffic capture pending; unauthenticated staging checker received `302` for `/catches` |
-| Failures, screenshots and limitations | Preview service worker did not register and `/serwist/sw.js` was blocked by the browser; Preview request methods/bodies not captured; phone/device details not provided |
+| Failures, screenshots and limitations | Preview service worker did not register and `/serwist/sw.js` was blocked by the browser; Preview request methods/bodies not captured; Tecno browser-tab phone pass is user-reported, with exact model, OS, browser/version, tested commit and individual scenarios unrecorded |
 
 Mark each result pass, fail, not run or not supported. Add a separate table for each phone/browser context. Record new failures before changing the app. A phone pass or local traffic check does not complete deployed-origin/CDN traffic review, production policy review, or current fishing/legal/safety data review.
