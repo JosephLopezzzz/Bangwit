@@ -33,9 +33,11 @@ Microsoft Edge 155.0.4283.45 used two fresh isolated browser contexts. The first
 
 The DevTools capture recorded 160 browser-visible HTTP(S) request events across page and service-worker sessions. All requests targeted the supplied origin and used GET; none had request bodies, none used a write method, and no external HTTP(S) origin appeared. The response statuses observed were 200. The capture does not include Vercel server/CDN logs or browser-level telemetry.
 
+The October 15, 2026 read-only hosting checker also passed against this Production alias. It verified the journal and fallback documents, service-worker scope/update headers and references, manifest, and icon dimensions; it did not inspect browser traffic or storage.
+
 This confirms the tested Production-origin flow only. It does not establish Preview request methods/bodies, physical-phone/installed-app acceptance, or legal review of the prototype policies.
 
-## Protected Preview UI round-trip (partial)
+## Protected Preview UI round-trips (partial)
 
 Run on October 15, 2026 against Vercel Preview deployment `8xbXUrGUrW7fwSMH1StvRUdzmtJL`, Ready for commit `6a8814950884b1c55fbd35c6f5ec049af298f2df` on `codex/https-preview-20261015`: `https://bangwit-38a0tqos7-josephlopezzzzs-projects.vercel.app/`. The app source is unchanged from the Production-tested commit `8dd97f3`; the intervening commit contains only documentation changes.
 
@@ -43,6 +45,6 @@ In a fresh Preview origin in the user's Brave browser session, the test accepted
 
 A second empty origin, the Vercel branch alias `https://bangwit-git-codex-https-preview-bc9472-josephlopezzzzs-projects.vercel.app/`, was tested in the same Brave profile. After accepting the prototype notice, the same previously verified synthetic backup restored one catch. Settings reported one restored record, and the journal showed the synthetic catch and image entry. The row was deleted and the journal returned to zero. This verifies a restore across distinct origins in the same browser profile, not across browser contexts. No real catch data was used.
 
-The read-only staging checker received `302` for `/catches` and reported that protected Previews may require a signed-in browser; the interactive Brave session could load both Preview origins. No access protection was bypassed. The isolated Edge launch was blocked by policy, and raw CDP capture was unavailable in the Browser Use session, so these runs did not observe Preview HTTP(S) methods, bodies, service-worker traffic, or external origins. The Preview-generated backup bytes were not inspected.
+The read-only staging checker received `302` for `/catches`. Separate unauthenticated GETs to `/`, `/~offline`, `/manifest.webmanifest`, and `/serwist/sw.js` also returned `302` redirects to Vercel SSO; the interactive Brave session could load both Preview app origins. No access protection was bypassed. The isolated Edge launch was blocked by policy, and raw CDP capture was unavailable in the Browser Use session, so these runs did not observe Preview HTTP(S) methods, bodies, service-worker traffic, or external origins. The Preview-generated backup bytes were not inspected.
 
 These are Preview UI results only. Keep the Production traffic result bounded to Production, and do not claim the Preview's network behavior from these partial runs.
