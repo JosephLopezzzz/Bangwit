@@ -4,6 +4,12 @@ Reviewed 15 October 2026. This is a source review of the current local-first cat
 
 The map-warning extension adds a same-origin GET to /api/advisories with credentials omitted. Only a public warning snapshot is cached under bangwit.public-advisories.v1; catch/profile/spot/GPS data is not included in that request or the configured server-side publisher fetch. The new cache is excluded from catch backups and removed by Settings erasure. Live ingestion remains disabled pending source review. These additions were not part of the earlier browser/production traffic captures below; see [MAP_ADVISORIES.md](docs/MAP_ADVISORIES.md) for their contract and remaining acceptance.
 
+## October 15 map-release follow-up (partial)
+
+The verified application source is `43718d6`; documentation-only checkpoint `6143041` was observed Ready as Production deployment `7wYKjmJ6D19SVS9oBjGUps95npgo` and protected Preview deployment `3RGietzLktomWKEyhfccXdAseuMv`. The public Production hosting checker passed. Direct HTTP GETs to the Production alias returned `/api/advisories` as 503 `unavailable` / `not_configured` with `Cache-Control: no-store, max-age=0`, and `/serwist/sw.js` as 200 JavaScript with root scope and the expected no-cache update headers. These are HTTP endpoint results, not a browser traffic capture.
+
+The existing Brave profile loaded the Preview branch alias with zero catches, then exercised the hosted map's fictional warning demonstration, panel/zoom controls, light/dark rendering and desktop/mobile viewport layouts. The demo was exited afterward. The supported CDP observer again refused `Network.enable` while a document response was paused; no Preview request methods/bodies, current worker control, or offline/reconnect behavior were established. Unauthenticated Preview API/worker GETs returned 302 to Vercel protection. Access protection remained enabled. The current map/advisory requests therefore remain outside the earlier Production catch/backup traffic evidence. Host/CDN logs, physical-device advisory behavior and installed-app acceptance also remain open. See [STAGING_ACCEPTANCE.md](STAGING_ACCEPTANCE.md) for exact release identities and the remaining browser workflow.
+
 ## Findings
 
 - `src/lib/storage/catches.ts` stores catch entries in the browser's IndexedDB database `bangwit-local`, object store `catches`. The storage module contains no network request code.

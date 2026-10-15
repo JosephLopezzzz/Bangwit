@@ -1,6 +1,6 @@
 # HTTPS staging and phone acceptance
 
-Prepared October 15, 2026. The hosted origin `https://bangwit.vercel.app/` was checked against Vercel Production deployment `A74x3ZMLJMAjQ8ZhxiMcFeEWELYK`, Ready for commit `8dd97f3c425cabc4f4b71a96259fda83325bb427`. This hostname is the Production alias, not a Preview deployment. The production-origin synthetic traffic run is recorded below. Separate Preview UI and backup-file checks on commit `6a8814950884b1c55fbd35c6f5ec049af298f2df` are also recorded; full Preview HTTP traffic capture remains pending. The local Turbopack build, hosting checker, and prior desktop checks in the historical release section were recorded against earlier source and do not verify the build or phone behavior of this commit. The user reported a phone pass in online and offline modes and clarified that testing used a personal Tecno phone in a browser tab. The exact phone model, OS, browser/version, and checklist scenarios covered remain unknown. Prior desktop results are in [OFFLINE_ACCEPTANCE.md](OFFLINE_ACCEPTANCE.md).
+Updated October 15, 2026. Current release checks cover application source `43718d6`, also deployed in the documentation-only checkpoint `6143041`. The local production build, focused tests, public Production hosting checks and protected Preview map UI passed to the scope recorded below. Current Preview service-worker control, offline/reconnect behavior and HTTP traffic capture remain unverified. Earlier Production synthetic traffic on `8dd97f3` and Preview backup/restore on `6a88149` retain their separate recorded scope. The user reported online/offline checks passed on a personal Tecno phone in a browser tab; exact phone model, OS, browser/version, tested commit and individual scenarios remain unknown. Prior desktop results are in [OFFLINE_ACCEPTANCE.md](OFFLINE_ACCEPTANCE.md).
 
 ## Deployment setup
 
@@ -43,6 +43,21 @@ npm run check:staging -- https://bangwit.vercel.app/
 ```
 
 This read-only checker verifies the journal/fallback documents, `/serwist/sw.js` type and root scope, update-cache header, worker references to the document URLs, manifest and icon dimensions. Document references alone do not prove worker installation, successful precaching or offline hydration; those need the offline tests and browser/device runs. It sends no catch data and does not inspect browser storage. A protected preview can reject the automated checker; verify these endpoints in the signed-in browser instead, keeping protection enabled.
+
+## October 15 current map release verification (partial)
+
+- Application source: `43718d65e2c4e1a75346529457365e7288749480`. Commit `6143041ddfe8d5695aa401141478ccf629fa8769` changes acceptance documentation only; it was pushed to `main` and the existing `codex/https-preview-20261015` branch.
+- Vercel confirmed Ready Production deployment `7wYKjmJ6D19SVS9oBjGUps95npgo` at `https://bangwit.vercel.app/` and Ready Preview deployment `3RGietzLktomWKEyhfccXdAseuMv` for `6143041`. The protected Preview's unique URL is `https://bangwit-9qaits9qq-josephlopezzzzs-projects.vercel.app/`; the UI run used its stable branch alias `https://bangwit-git-codex-https-preview-bc9472-josephlopezzzzs-projects.vercel.app/`.
+- Local verification passed: Next.js 16.3.7 production build `L0PLkFnIojTIuMu1Z6ArC` with 17 outputs including the dynamic advisory route and 38 Serwist precache entries (6,053.92 KiB), standalone TypeScript, storage 2/2, offline 5/5 and advisory 20/20 tests. The local build used the application source above; these tests do not inspect the hosted browser's installed worker.
+- The public Production hosting checker passed. Direct HTTP probes at 14:16 UTC returned `/api/advisories` as HTTP 503 JSON `{"status":"unavailable","reason":"not_configured"}` with `Cache-Control: no-store, max-age=0`; `/serwist/sw.js` returned HTTP 200 JavaScript, `Service-Worker-Allowed: /`, and `Cache-Control: no-cache, no-store, must-revalidate`. The worker includes the advisory route. Live ingestion remains disabled.
+- Hosted Preview UI checks passed in the existing Brave profile: the empty catch journal showed zero entries; Explore showed unavailable coverage; opt-in warnings were explicitly fictional; panel X and scoped Escape expanded the map and returned focus to the toolbar; the toolbar and province selection reopened details; zoom changed the SVG viewBox; selected warning color remained red; warning-card dismissal/restoration preserved details; the outage demonstration retained warning details; dark-theme warning rendering worked. At desktop width 1,536 and mobile viewport width 390 there was no horizontal document overflow. Viewport emulation is a layout check, not a physical-phone result. The run exited the demo and restored the original light theme, full-map view and normal viewport.
+- Limits: the supported Preview CDP `Network.enable` command again refused instrumentation while a document response was paused; no Preview methods/bodies or current worker-control state were captured. Unauthenticated Preview API and worker GETs returned HTTP 302 to Vercel access protection. No protection was changed. Current offline save/reload, photo-draft reconnect, fresh-profile and installed-app acceptance remain open. Earlier traffic/backup runs do not establish these results for the map release.
+
+### Remaining browser verification
+
+Use the stable protected Preview alias in a normally launched test browser/profile with authorized Vercel access. In DevTools, confirm `/serwist/sw.js` has root scope and the current worker controls the page after an online reload. Close other test tabs for that origin normally if the update is waiting; preserve any real journal and unsaved work. If access protection blocks the worker, resolve access through the intended account before proceeding.
+
+On an empty synthetic journal, repeat offline save/reload with a test photo and nondefault units, then reconnect an unsaved photo draft and confirm one save adds exactly one entry. During the same flow, observe page and worker requests, recording methods, origins, bodies and `/api/advisories` failure/reconnect behavior. Verify the current worker does not reuse cached advisory API responses. Keep authenticated capture artifacts local. Record worker identity, test counts and results before closing these acceptance gaps. Installed-app cold launch and case-by-case phone coverage remain separate runs.
 
 ## Historical release verification before commit 8dd97f3
 
@@ -95,8 +110,8 @@ Run separately on each supported physical phone/browser and in the installed hom
 | Phone model / OS version | Tecno (exact model not provided) / OS not provided |
 | Browser / version | Browser used; name and version not provided |
 | Browser tab or installed app | Browser tab on personal Tecno phone |
-| Exact HTTPS origins | Production: `https://bangwit.vercel.app/`; Preview: `https://bangwit-38a0tqos7-josephlopezzzzs-projects.vercel.app/` |
-| Last recorded deployed commit / build ID | Production traffic run: `8dd97f3c425cabc4f4b71a96259fda83325bb427`, Vercel deployment `A74x3ZMLJMAjQ8ZhxiMcFeEWELYK`; Preview UI run: `6a8814950884b1c55fbd35c6f5ec049af298f2df`, Vercel deployment `8xbXUrGUrW7fwSMH1StvRUdzmtJL`, branch `codex/https-preview-20261015` (Ready) |
+| Historical traffic / backup origins | Production: `https://bangwit.vercel.app/`; Preview: `https://bangwit-38a0tqos7-josephlopezzzzs-projects.vercel.app/`. The current map Preview origin is recorded above. |
+| Historical traffic / backup run build IDs | Production traffic run: `8dd97f3c425cabc4f4b71a96259fda83325bb427`, Vercel deployment `A74x3ZMLJMAjQ8ZhxiMcFeEWELYK`; Preview UI run: `6a8814950884b1c55fbd35c6f5ec049af298f2df`, Vercel deployment `8xbXUrGUrW7fwSMH1StvRUdzmtJL`, branch `codex/https-preview-20261015` (Ready). Current map release identities are recorded above. |
 | Starting / ending journal counts | Desktop hosted journal showed 0 before and after online reload; phone counts not recorded |
 | First-visit installation / controlled reload | Pending |
 | Offline saved catch + full photo + units | Pending |
@@ -105,6 +120,6 @@ Run separately on each supported physical phone/browser and in the installed hom
 | Backup download | Preview version 1 JSON inspected: 876 bytes, 1 synthetic record, 69-byte photo matching the uploaded test PNG |
 | Preview save / restore | Preview save/export passed; Preview-generated file restored on the second Preview origin; both test rows removed and both journals returned to 0 |
 | Preview traffic / hosting check | HTTP traffic capture pending; unauthenticated staging checker received `302` for `/catches` |
-| Failures, screenshots and limitations | Preview service worker did not register and `/serwist/sw.js` was blocked by the browser; Preview request methods/bodies not captured; Tecno browser-tab phone pass is user-reported, with exact model, OS, browser/version, tested commit and individual scenarios unrecorded |
+| Historical limitations and remaining phone details | In the earlier Preview run, the service worker did not register and `/serwist/sw.js` was blocked by the browser; Preview request methods/bodies were not captured. Tecno browser-tab phone pass is user-reported, with exact model, OS, browser/version, tested commit and individual scenarios unrecorded. Current map-release limits are recorded above. |
 
 Mark each result pass, fail, not run or not supported. Add a separate table for each phone/browser context. Record new failures before changing the app. A phone pass or local traffic check does not complete deployed-origin/CDN traffic review, production policy review, or current fishing/legal/safety data review.

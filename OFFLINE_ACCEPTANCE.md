@@ -1,6 +1,6 @@
 # Offline acceptance
 
-Status checked: October 15, 2026. The production build, focused policy-dialog checks, and isolated desktop offline cases including fresh-origin controlled reload and rebuild-upgrade **pass to the scope recorded below**. On October 15, the user reported that phone checks passed in online and offline modes using a personal Tecno phone in a browser tab. Exact model, OS, browser/version, tested commit and individual scenarios were not provided, so the result is user-reported and not independently reproducible from this record. Installed-app testing has no recorded result. A brand-new browser profile remains **pending**. Outbound-traffic review is partial.
+Status checked: October 15, 2026. The earlier production build, focused policy-dialog checks, and isolated desktop offline cases including fresh-origin controlled reload and rebuild-upgrade **pass to the scope recorded below**; current map-release checks are recorded separately. On October 15, the user reported that phone checks passed in online and offline modes using a personal Tecno phone in a browser tab. Exact model, OS, browser/version, tested commit and individual scenarios were not provided, so the result is user-reported and not independently reproducible from this record. Installed-app testing has no recorded result. A brand-new browser profile remains **pending**. Outbound-traffic review is partial.
 
 ## Changes in this slice
 
@@ -9,7 +9,14 @@ Status checked: October 15, 2026. The production build, focused policy-dialog ch
 - Use document navigation from the offline fallback to `/catches`, so recovery does not require previously cached Next.js router data.
 - Keep personal catches and photo files in IndexedDB. Source files are used only to fingerprint documents; source, environment and private data files are not included in the precache.
 
-## Evidence so far
+## Latest application release verification — October 15, 2026
+
+- Application source: `43718d65e2c4e1a75346529457365e7288749480`; later commit `6143041` changes documentation only. Ready Vercel Production deployment `4zT6gvbqj12BVJDNwziTxKXNLK7S` was observed for the application commit. The subsequent documentation checkpoint was confirmed Ready in Production deployment `7wYKjmJ6D19SVS9oBjGUps95npgo` at `https://bangwit.vercel.app/` and protected Preview deployment `3RGietzLktomWKEyhfccXdAseuMv` on the stable test alias.
+- Local verification passed: `npm run build` on Next.js 16.3.7, standalone TypeScript, storage 2/2, offline 5/5 and advisory 20/20 tests. Build ID: `L0PLkFnIojTIuMu1Z6ArC`; 17 route outputs including the dynamic advisory route; 38 Serwist precache entries, 6,053.92 KiB.
+- Public `check:staging` passed. The deployed worker returned HTTP 200 JavaScript with root scope and `Cache-Control: no-cache, no-store, must-revalidate`; its source contains the advisory route. `GET /api/advisories` returned HTTP 503 JSON with `unavailable` / `not_configured` and `Cache-Control: no-store, max-age=0`, consistent with live feeds remaining disabled.
+- These build, test and HTTP results do not establish worker installation/control or current offline/reconnect behavior in a browser. Protected Preview worker/API requests still redirected with HTTP 302 without authentication. Preview CDP `Network.enable` was refused while the document response was paused; no Preview request methods/bodies were captured. Current installed-worker, offline and reconnect acceptance remains open. Earlier desktop and Production traffic results retain their recorded source/origin scope; the Tecno browser-tab pass has no recorded tested commit.
+
+## Earlier offline-slice evidence
 
 | Check | Result |
 | --- | --- |
