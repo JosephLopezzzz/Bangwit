@@ -116,6 +116,7 @@ function LocationOptions({ group }: { group: string }) {
 export function AreaExplorer() {
   const { selectedArea, selectedProvince, setSelectedProvince, dict } = useBangwit();
   const stageRef = useRef<HTMLDivElement>(null);
+  const mapSvgRef = useRef<SVGSVGElement>(null);
   const dragRef = useRef<{
     pointerId: number;
     startX: number;
@@ -177,6 +178,53 @@ export function AreaExplorer() {
     observer.observe(stage);
     return () => observer.disconnect();
   }, []);
+
+  useEffect(() => {
+    const mapSvg = mapSvgRef.current;
+    if (!mapSvg) return;
+
+    function handleMapWheel(event: WheelEvent) {
+      if (!event.ctrlKey) return;
+      event.preventDefault();
+
+      const rect = mapSvg.getBoundingClientRect();
+      if (!rect.width || !rect.height || event.deltaY === 0) return;
+
+      const deltaMultiplier =
+        event.deltaMode === WheelEvent.DOM_DELTA_LINE
+          ? 16
+          : event.deltaMode === WheelEvent.DOM_DELTA_PAGE
+            ? rect.height
+            : 1;
+      const deltaPixels = event.deltaY * deltaMultiplier;
+      const zoomFactor = Math.exp(-Math.max(-400, Math.min(400, deltaPixels)) * 0.0015);
+      const anchorX = Math.max(0, Math.min(1, (event.clientX - rect.left) / rect.width)) - 0.5;
+      const anchorY = Math.max(0, Math.min(1, (event.clientY - rect.top) / rect.height)) - 0.5;
+
+      setCamera((current) => {
+        const zoom = Math.max(1, Math.min(MAX_ZOOM, current.zoom * zoomFactor));
+        if (zoom === current.zoom) return current;
+
+        const currentViewWidth = baseViewWidth / current.zoom;
+        const currentViewHeight = baseViewHeight / current.zoom;
+        const nextViewWidth = baseViewWidth / zoom;
+        const nextViewHeight = baseViewHeight / zoom;
+        const mapX = current.centerX + anchorX * currentViewWidth;
+        const mapY = current.centerY + anchorY * currentViewHeight;
+        const clampedCenter = clampCameraCenter(
+          mapX - anchorX * nextViewWidth,
+          mapY - anchorY * nextViewHeight,
+          nextViewWidth,
+          nextViewHeight,
+        );
+
+        return { ...current, ...clampedCenter, zoom };
+      });
+    }
+
+    mapSvg.addEventListener("wheel", handleMapWheel, { passive: false });
+    return () => mapSvg.removeEventListener("wheel", handleMapWheel);
+  }, [baseViewHeight, baseViewWidth]);
 
   function selectProvince(provinceId: ProvinceId) {
     setSelectedProvince(provinceId);
@@ -312,6 +360,7 @@ export function AreaExplorer() {
           <div ref={stageRef} className="explore-map-stage">
             {/* biome-ignore lint/a11y/useSemanticElements: SVG groups aggregate province controls under one accessible map label. */}
             <svg
+              ref={mapSvgRef}
               className="province-map-svg"
               viewBox={`${viewX} ${viewY} ${viewWidth} ${viewHeight}`}
               preserveAspectRatio="xMidYMid meet"
@@ -414,6 +463,7 @@ export function AreaExplorer() {
         </fieldset>
 
         <p className="explore-map-note">
+          <span className="explore-map-zoom-hint">{dict.areaExplorer.mapZoomHint}</span>
           <span>{dict.areaExplorer.mapSourceNote}</span>
           <a
             href="https://github.com/wmgeolab/geoBoundaries/raw/41af8f1/releaseData/gbOpen/PHL/ADM2/geoBoundaries-PHL-ADM2_simplified.geojson"

@@ -108,6 +108,7 @@ export type Dictionary = {
     selectAreaLabel: string;
     mapSourceNote: string;
     mapSourceLinkLabel: string;
+    mapZoomHint: string;
     mapDescription: string;
     zoomIn: string;
     zoomOut: string;

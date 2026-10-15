@@ -126,8 +126,9 @@ export const filDictionary: Dictionary = {
     selectAreaLabel: "Pumili ng lugar",
     mapSourceNote: "Mga administratibong outline: 2020 snapshot · hindi para sa navigation",
     mapSourceLinkLabel: "geoBoundaries · CC BY 3.0 IGO",
+    mapZoomHint: "Pindutin ang Ctrl at mag-scroll sa mapa para mag-zoom",
     mapDescription:
-      "Interactive na mapa ng mga outline ng lalawigan sa Pilipinas. Isang beses pindutin ang Tab para pumasok sa mapa; gamitin ang mga arrow key para lumipat ng lalawigan at Enter o Space para pumili. Hanapin sa listahan ang maliliit na lugar. Batay sa heograpiya noong 2020 ang mga outline.",
+      "Interactive na mapa ng mga outline ng lalawigan sa Pilipinas. Isang beses pindutin ang Tab para pumasok sa mapa; gamitin ang mga arrow key para lumipat ng lalawigan at Enter o Space para pumili. Pindutin ang Ctrl at mag-scroll sa mapa para mag-zoom. Hanapin sa listahan ang maliliit na lugar. Batay sa heograpiya noong 2020 ang mga outline.",
     zoomIn: "Palakihin ang mapa ng mga lalawigan",
     zoomOut: "Paliitin ang mapa ng mga lalawigan",
     resetMap: "Ibalik ang buong mapa",

@@ -126,8 +126,9 @@ export const enDictionary: Dictionary = {
     selectAreaLabel: "Select location",
     mapSourceNote: "Administrative outlines: 2020 source snapshot · not for navigation",
     mapSourceLinkLabel: "geoBoundaries · CC BY 3.0 IGO",
+    mapZoomHint: "Hold Ctrl and scroll over the map to zoom",
     mapDescription:
-      "Interactive map of Philippine province outlines. Tab enters the map once; use arrow keys to move between provinces and Enter or Space to select one. Search the province list to find and focus a small region. The outlines represent 2020 administrative geography.",
+      "Interactive map of Philippine province outlines. Tab enters the map once; use arrow keys to move between provinces and Enter or Space to select one. Hold Ctrl and scroll over the map to zoom. Search the province list to find and focus a small region. The outlines represent 2020 administrative geography.",
     zoomIn: "Zoom in on the province map",
     zoomOut: "Zoom out of the province map",
     resetMap: "Reset map view",
