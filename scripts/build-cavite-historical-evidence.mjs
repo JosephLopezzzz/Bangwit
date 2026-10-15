@@ -7,6 +7,7 @@ import { parseCsv } from "./lib/csv.mjs";
 const projectRoot = path.resolve(path.dirname(fileURLToPath(import.meta.url)), "..");
 export const shortlistFile = "data/research/obis/cavite/cavite-obis-cc0-fish-shortlist.csv";
 const dataDir = "data/research/obis/cavite";
+const curatorReviewFile = `${dataDir}/cavite-obis-curator-review.csv`;
 const cc0 = "https://creativecommons.org/publicdomain/zero/1.0/";
 const datasetId = "d6af0fac-8a21-4d77-8872-f10d471fc0cf";
 const rejectedId = "urn:catalog:CAS:SU(ICH):51590";
@@ -65,10 +66,20 @@ function collectedOn(row) {
   }
   return value;
 }
-export function buildHistoricalEvidence({ shortlistCsv, crosswalkCsv, licenseReviewCsv, licenseReviewNotes }) {
+export function buildHistoricalEvidence({ shortlistCsv, crosswalkCsv, licenseReviewCsv, licenseReviewNotes, curatorReviewCsv }) {
   const shortlist = parseCsv(shortlistCsv.toString("utf8"));
   if (!shortlist.length) throw new Error("The historical shortlist is empty.");
   uniqueRows(shortlist, "occurrence_id", "occurrence ID");
+  const curatorReviews = uniqueRows(parseCsv(curatorReviewCsv.toString("utf8")), "occurrence_id", "curator-review occurrence ID");
+  for (const review of curatorReviews.values()) {
+    if (!["hold", "exclude-record"].includes(review.review_status))
+      throw new Error(`Invalid curator review status: ${review.occurrence_id}.`);
+  }
+  for (const row of shortlist) {
+    const review = curatorReviews.get(row.occurrence_id);
+    if (review)
+      throw new Error(`Curator-reviewed ${review.review_status} occurrence cannot enter the historical shortlist: ${row.occurrence_id}.`);
+  }
   const crosswalk = uniqueRows(parseCsv(crosswalkCsv.toString("utf8")), "obis_species_name", "taxonomy name");
   const licenses = uniqueRows(parseCsv(licenseReviewCsv.toString("utf8")), "dataset_id", "dataset ID");
   const dataset = licenses.get(datasetId);
@@ -198,13 +209,14 @@ export function buildHistoricalEvidence({ shortlistCsv, crosswalkCsv, licenseRev
   };
 }
 export async function readHistoricalEvidenceInputs(root = projectRoot) {
-  const [shortlistCsv, crosswalkCsv, licenseReviewCsv, licenseReviewNotes] = await Promise.all([
+  const [shortlistCsv, crosswalkCsv, licenseReviewCsv, licenseReviewNotes, curatorReviewCsv] = await Promise.all([
     readFile(path.join(root, shortlistFile)),
     readFile(path.join(root, dataDir, "cavite-obis-worms-crosswalk.csv")),
     readFile(path.join(root, dataDir, "cavite-obis-dataset-license-review.csv")),
     readFile(path.join(root, dataDir, "cavite-obis-validation-notes.md")),
+    readFile(path.join(root, curatorReviewFile)),
   ]);
-  return { shortlistCsv, crosswalkCsv, licenseReviewCsv, licenseReviewNotes };
+  return { shortlistCsv, crosswalkCsv, licenseReviewCsv, licenseReviewNotes, curatorReviewCsv };
 }
 export function historicalEvidenceJson(evidence) {
   return `${JSON.stringify(evidence, null, 2)}\n`;

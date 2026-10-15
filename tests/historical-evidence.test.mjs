@@ -69,6 +69,22 @@ test("publishes only the 12 reviewed museum records and leaves the rejected sour
   ].sort();
   for (const record of evidence.records) assert.deepEqual(Object.keys(record).sort(), expectedKeys);
 });
+test("blocks curator-held or excluded occurrences from entering the publication shortlist", () => {
+  const heldOccurrenceId = parseCsv(inputs.curatorReviewCsv.toString("utf8"))[0].occurrence_id;
+  const shortlistWithHeldOccurrence = changedRows("shortlistCsv", (rows) => {
+    rows[0].occurrence_id = heldOccurrenceId;
+  });
+  assert.throws(
+    () => buildHistoricalEvidence(shortlistWithHeldOccurrence),
+    new RegExp(`curator-reviewed hold occurrence.*${heldOccurrenceId}`, "i"),
+  );
+  const excludedReviews = parseCsv(inputs.curatorReviewCsv.toString("utf8"));
+  excludedReviews[0].review_status = "exclude-record";
+  assert.throws(
+    () => buildHistoricalEvidence({ ...shortlistWithHeldOccurrence, curatorReviewCsv: csv(excludedReviews) }),
+    new RegExp(`curator-reviewed exclude-record occurrence.*${heldOccurrenceId}`, "i"),
+  );
+});
 test("rejects unknown locality statuses and any attempt to include the rejected locality", () => {
   assert.throws(
     () =>

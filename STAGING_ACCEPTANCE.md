@@ -1,6 +1,6 @@
 # HTTPS staging and phone acceptance
 
-Prepared October 14, 2026. The current hosted origin is `https://bangwit.vercel.app/`. The read-only hosting checker passed there on October 15, confirming the journal and fallback documents, worker scope/update headers and document references, manifest, and icon dimensions. The checker does not identify the deployed commit or prove worker installation, successful precaching, offline hydration, or phone behavior. The previously recorded local production build overlapped the final UI edits, so verify the live deployment's commit before treating its build as final. On October 15, the user reported a phone pass in online and offline modes; device/browser details and browser-tab versus installed-app context were not recorded. Prior desktop results are in [OFFLINE_ACCEPTANCE.md](OFFLINE_ACCEPTANCE.md).
+Prepared October 15, 2026. The current hosted origin is `https://bangwit.vercel.app/`. The last recorded Vercel dashboard check showed production deployment `Gb1SKrj6GC3xkf7npFqHe9yFYgUw` as Ready for commit `d957c1379f7f7c6deafdb670553199e5dca4654c`. Since that check, `main` and `origin/main` have advanced to `a199eb29b133cf7f843a889aa7c66dec6551f2f7`; the hosted deployment has not been rechecked against the newer commit. The local Turbopack build, hosting checker, and desktop browser check below were recorded against the earlier release state and do not verify the current `main` build or deployment. Browser worker control, offline hydration, and phone details were not established by those checks. The user reported a phone pass in online and offline modes; device/browser details and browser-tab versus installed-app context were not recorded. Prior desktop results are in [OFFLINE_ACCEPTANCE.md](OFFLINE_ACCEPTANCE.md).
 
 ## Deployment setup
 
@@ -44,11 +44,18 @@ npm run check:staging -- https://bangwit.vercel.app/
 
 This read-only checker verifies the journal/fallback documents, `/serwist/sw.js` type and root scope, update-cache header, worker references to the document URLs, manifest and icon dimensions. Document references alone do not prove worker installation, successful precaching or offline hydration; those need the offline tests and browser/device runs. It sends no catch data and does not inspect browser storage. A protected preview can reject the automated checker; verify these endpoints in the signed-in browser instead, keeping protection enabled.
 
+## October 15 release verification
+
+- The last recorded Vercel production deployment check showed `Gb1SKrj6GC3xkf7npFqHe9yFYgUw` Ready for Git commit `d957c1379f7f7c6deafdb670553199e5dca4654c`. Current `main` / `origin/main` has since advanced to `a199eb29b133cf7f843a889aa7c66dec6551f2f7`; recheck the deployment after pushing before treating it as current.
+- `npm run build` passed on the earlier `d957c13` source: 16 static routes and 37 precache entries. `npm run test:offline` passed 5/5; `npm run test:storage` passed 2/2; `npm run check:staging -- https://bangwit.vercel.app/` passed at that recorded check.
+- In a desktop Brave browser, `https://bangwit.vercel.app/catches` rendered the journal with zero catches, then rendered the same zero-catch journal after an online reload. No catch was saved or changed. Service-worker control was not independently observed.
+- These checks do not complete the offline reload, unsaved photo-draft reconnect, fresh-profile, phone, or installed-app cases below.
+
 In that browser, confirm the app loads, the service worker finishes installing, and an online reload is controlled before testing offline. A first visit without internet cannot install the worker. The worker response must retain `Service-Worker-Allowed: /` and revalidate through `Cache-Control: no-cache, no-store, must-revalidate`. HTTPS and a valid manifest are part of [Next.js PWA installation](https://nextjs.org/docs/app/guides/progressive-web-apps).
 
 ## Phone test
 
-Run separately on each supported physical phone/browser and in the installed home-screen app. Viewport emulation is not a phone pass. Read the prototype notice on that device before accepting it. Use a fresh synthetic journal; do not restore over or clear a real journal.
+Run separately on each supported physical phone/browser and in the installed home-screen app. Viewport emulation is not a phone pass. Read the prototype notice on that device before accepting it. Use a fresh synthetic journal; do not restore over or clear a real journal. The isolated local browser traffic result is documented in [PRIVACY_REVIEW.md](PRIVACY_REVIEW.md); repeat it against the controlled HTTPS Preview for a deployed-origin check.
 
 1. Open the chosen HTTPS origin online in Android Chrome or iPhone Safari. Visit `/catches`, wait for installation and reload online. Record the initial journal count.
 2. Turn off both Wi-Fi and cellular data. Reload `/catches` and verify the form and existing journal open. If the offline page appears, use its journal link and record whether recovery worked.
@@ -63,19 +70,19 @@ Run separately on each supported physical phone/browser and in the installed hom
 
 | Detail | Recorded value |
 | --- | --- |
-| Date and tester | October 15, 2026; user-reported result |
+| Date and tester | October 15, 2026; local release checks and user-reported phone result |
 | Overall online/offline phone result | Pass, user-reported; individual results and device details not recorded |
 | Phone model / OS version | Not provided |
 | Browser / version | Not provided |
-| Browser tab or installed app | Phone test reported; exact context not specified |
+| Browser tab or installed app | Desktop hosted journal and online reload checked; phone context not specified |
 | Exact HTTPS origin | `https://bangwit.vercel.app/` (read-only hosting checks passed October 15, 2026) |
-| Deployed commit / build ID | Pending verification |
-| Starting / ending journal counts | Not recorded |
+| Last recorded deployed commit / build ID | `d957c1379f7f7c6deafdb670553199e5dca4654c`; Vercel deployment `Gb1SKrj6GC3xkf7npFqHe9yFYgUw` Ready at last check; current branch is newer and deployment needs recheck |
+| Starting / ending journal counts | Desktop hosted journal showed 0 before and after online reload; phone counts not recorded |
 | First-visit installation / controlled reload | Pending |
 | Offline saved catch + full photo + units | Pending |
 | Reconnect draft + single save | Pending |
 | Installed app cold launch offline | Pending |
 | Backup download | Pending |
-| Failures, screenshots and limitations | Pending |
+| Failures, screenshots and limitations | Browser worker control not independently observed; phone/device details not provided |
 
-Mark each result pass, fail, not run or not supported. Add a separate table for each phone/browser context. Record new failures before changing the app. A phone pass does not complete the outstanding outbound-traffic audit, production policy review, or current fishing/legal/safety data review.
+Mark each result pass, fail, not run or not supported. Add a separate table for each phone/browser context. Record new failures before changing the app. A phone pass or local traffic check does not complete deployed-origin/CDN traffic review, production policy review, or current fishing/legal/safety data review.
