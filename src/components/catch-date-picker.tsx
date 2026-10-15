@@ -7,9 +7,16 @@ import { Calendar } from "@/components/lightswind/calendar";
 type CatchDatePickerProps = {
   value: string; // ISO date format "YYYY-MM-DD"
   onChange: (value: string) => void;
+  id?: string;
+  name?: string | null;
+  required?: boolean;
   lang?: "fil" | "en";
   disabled?: boolean;
   portal?: boolean;
+  minDate?: string;
+  maxDate?: string;
+  showToday?: boolean;
+  className?: string;
 };
 
 // Converts local YYYY-MM-DD string to Date object at noon (to prevent timezone offset shifting)
@@ -31,9 +38,16 @@ function toDateString(date: Date): string {
 export function CatchDatePicker({
   value,
   onChange,
+  id = "catchDateTrigger",
+  name = "date",
+  required = true,
   lang = "fil",
   disabled = false,
   portal = false,
+  minDate,
+  maxDate,
+  showToday = true,
+  className = "",
 }: CatchDatePickerProps) {
   const [isOpen, setIsOpen] = useState(false);
   const containerRef = useRef<HTMLDivElement>(null);
@@ -44,6 +58,8 @@ export function CatchDatePicker({
 
   const selectedDate = parseDateString(value);
   const today = new Date();
+  const minimumDate = minDate ? parseDateString(minDate) : undefined;
+  const maximumDate = (maxDate ? parseDateString(maxDate) : undefined) ?? today;
 
   // Close when clicking outside
   useEffect(() => {
@@ -185,7 +201,7 @@ export function CatchDatePicker({
       id={popoverId}
       role="dialog"
       aria-label={lang === "fil" ? "Kalendaryo ng petsa ng huli" : "Catch date calendar"}
-      className="absolute left-0 top-full z-50 mt-2 w-auto min-w-[280px] max-w-[calc(100vw-2rem)] rounded-xl border border-line bg-white p-2 shadow-lg"
+      className="catch-date-picker-popup"
       style={portal ? popupStyle : undefined}
     >
       <Calendar
@@ -193,27 +209,30 @@ export function CatchDatePicker({
         selected={selectedDate}
         onSelect={handleSelect}
         defaultMonth={selectedDate || today}
-        disabled={{ after: today }}
+        disabled={[
+          { after: maximumDate },
+          ...(minimumDate ? [{ before: minimumDate }] : []),
+        ]}
         className="border-0 shadow-none p-2"
       />
     </div>
   );
 
   return (
-    <div ref={containerRef} className="relative mt-2 flex min-w-0 items-center gap-2">
+    <div ref={containerRef} className={`catch-date-picker ${className}`.trim()}>
       {/* Hidden input to maintain FormData ("date") compatibility */}
-      <input type="hidden" name="date" value={value} required />
+      {name && <input type="hidden" name={name} value={value} required={required} />}
 
       <button
         ref={triggerRef}
         type="button"
-        id="catchDateTrigger"
+        id={id}
         aria-haspopup="dialog"
         aria-expanded={isOpen}
         aria-controls={popoverId}
         disabled={disabled}
         onClick={() => setIsOpen((prev) => !prev)}
-        className="ui-input flex min-w-0 flex-1 items-center justify-between text-left"
+        className="ui-input catch-date-picker-trigger"
       >
         <span className={value ? "text-ink font-semibold" : "text-muted"}>{displayDate}</span>
         <svg
@@ -233,14 +252,16 @@ export function CatchDatePicker({
         </svg>
       </button>
 
-      <button
-        type="button"
-        onClick={handleToday}
-        disabled={disabled}
-        className="ui-button ui-button--secondary shrink-0"
-      >
-        {lang === "fil" ? "Ngayon" : "Today"}
-      </button>
+      {showToday && (
+        <button
+          type="button"
+          onClick={handleToday}
+          disabled={disabled}
+          className="ui-button ui-button--secondary catch-date-picker-today"
+        >
+          {lang === "fil" ? "Ngayon" : "Today"}
+        </button>
+      )}
 
       {portal ? (isOpen ? createPortal(popup, document.body) : null) : popup}
     </div>

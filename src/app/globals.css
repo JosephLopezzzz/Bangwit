@@ -209,6 +209,66 @@ textarea {
   width: 100%;
 }
 
+.catch-date-picker {
+  position: relative;
+  display: flex;
+  width: 100%;
+  min-width: 0;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+}
+
+.catch-date-picker-trigger {
+  display: flex;
+  min-width: 0;
+  flex: 1 1 auto;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  text-align: left;
+}
+
+.catch-date-picker-trigger > span {
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.catch-date-picker-today {
+  flex: 0 0 auto;
+}
+
+.catch-date-picker-popup {
+  position: absolute;
+  z-index: 60;
+  top: calc(100% + 8px);
+  left: 0;
+  width: max-content;
+  min-width: min(280px, calc(100vw - 32px));
+  max-width: calc(100vw - 32px);
+  overflow: auto;
+  padding: 8px;
+  border: 1px solid var(--line);
+  border-radius: var(--card-radius);
+  background: var(--white);
+  color: var(--ink);
+  box-shadow: var(--shadow-popover);
+  animation: ui-enter var(--motion-duration) ease-out;
+}
+
+.dropdown-select-popup,
+.catch-date-picker-popup {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.dropdown-select-popup::-webkit-scrollbar,
+.catch-date-picker-popup::-webkit-scrollbar {
+  display: none;
+}
+
 .dropdown-select--compact {
   width: auto;
   min-width: 14rem;

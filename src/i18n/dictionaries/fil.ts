@@ -407,14 +407,14 @@ export const filDictionary: Dictionary = {
     privacyDesc:
       "Catch logs at optional na larawan ay naka-save sa browser storage ng device na ito. Walang account o cloud sync. Walang kinukuhang GPS.",
     eraseBtn: "Burahin ang Bangwit data sa device",
-    erasePending: "Naka-pending ang pagbura. Kanselahin sa loob ng 5 segundo para manatili ang Bangwit data.",
+    erasePending: "Hinihintay ang kumpirmasyon bago burahin ang data.",
     erasingLabel: "Binubura…",
     eraseDone: "Nabura ang data",
-    eraseHint: "Buburahin pagkatapos ng 5 segundo. Kanselahin o Escape para ihinto.",
+    eraseHint: "Suriin ang kumpirmasyon bago permanenteng burahin ang data.",
     eraseFailed: "Hindi nabura ang Bangwit data. Subukang muli.",
     eraseCanceled: "Kinansela ang pagbura ng data.",
     eraseConfirm:
-      "Buburahin ang lahat ng Bangwit catch logs, larawan, preferences, at policy acknowledgment sa browser na ito kapag natapos ang 5-segundong countdown. Magtabi ng backup; hindi na makakansela pagkatapos.",
+      "Permanenteng buburahin ang Bangwit catch logs, larawan, preferences, at policy acknowledgment sa browser na ito kapag kinumpirma mo. Magtabi ng backup; hindi na ito maibabalik.",
     policiesTag: "Terms & privacy",
     policiesTitle: "Basahin ang mga policy",
     policiesDesc:

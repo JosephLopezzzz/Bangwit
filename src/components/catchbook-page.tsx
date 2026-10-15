@@ -10,7 +10,9 @@ import {
   Save,
   Scale,
   Trash2,
+  X,
 } from "lucide-react";
+import Image from "next/image";
 import { type FormEvent, type KeyboardEvent, useCallback, useEffect, useMemo, useRef, useState } from "react";
 import { useBangwit } from "@/components/bangwit-provider";
 import { CatchDatePicker } from "@/components/catch-date-picker";
@@ -77,7 +79,8 @@ export function CatchbookPage() {
   const [saving, setSaving] = useState(false);
   const [storageError, setStorageError] = useState("");
   const [formTab, setFormTab] = useState<"catch" | "details">("catch");
-  const [mobileView, setMobileView] = useState<"journal" | "form">("journal");
+  const [formOpen, setFormOpen] = useState(false);
+  const formDialogRef = useRef<HTMLDialogElement>(null);
   const photoInputRef = useRef<HTMLInputElement>(null);
   const speciesRef = useRef<HTMLInputElement>(null);
 
@@ -125,10 +128,20 @@ export function CatchbookPage() {
     void refresh();
   }, [refresh]);
 
+  useEffect(() => {
+    const dialog = formDialogRef.current;
+    if (!dialog) return;
+    if (formOpen && !dialog.open) {
+      dialog.showModal();
+      requestAnimationFrame(() => speciesRef.current?.focus({ preventScroll: true }));
+    } else if (!formOpen && dialog.open) {
+      dialog.close();
+    }
+  }, [formOpen]);
+
   function openForm() {
-    setMobileView("form");
+    setFormOpen(true);
     setFormTab("catch");
-    requestAnimationFrame(() => speciesRef.current?.focus());
   }
 
   async function submitCatch(event: FormEvent<HTMLFormElement>) {
@@ -183,7 +196,7 @@ export function CatchbookPage() {
       setPhotoViewerOpen(false);
       setDate(localDateValue());
       setFormTab("catch");
-      setMobileView("journal");
+      setFormOpen(false);
       showMessage(
         lang === "fil"
           ? "Naka-save ang huli sa device mo. Wala pang cloud sync."
@@ -251,7 +264,7 @@ export function CatchbookPage() {
   }
 
   return (
-    <main className="catches-page" data-mobile-view={mobileView}>
+    <main className="catches-page">
       <header className="catches-page-heading">
         <div>
           <h1>{dict.catches.title}</h1>
@@ -267,31 +280,6 @@ export function CatchbookPage() {
           {storageError}
         </p>
       )}
-      <div className="catches-mobile-tabs" role="tablist" aria-label={dict.catches.title} onKeyDown={navigateTabs}>
-        <button
-          type="button"
-          id="catches-journal-tab"
-          role="tab"
-          aria-selected={mobileView === "journal"}
-          aria-controls="catches-journal-panel"
-          tabIndex={mobileView === "journal" ? 0 : -1}
-          onClick={() => setMobileView("journal")}
-        >
-          {dict.catches.journalTab}
-          <span>{entries.length}</span>
-        </button>
-        <button
-          type="button"
-          id="catches-form-tab"
-          role="tab"
-          aria-selected={mobileView === "form"}
-          aria-controls="catches-form-panel"
-          tabIndex={mobileView === "form" ? 0 : -1}
-          onClick={() => setMobileView("form")}
-        >
-          {dict.catches.logCatchTab}
-        </button>
-      </div>
       <div id="catchForm" className="catches-workspace">
         <div id="catches-journal-panel" className="catches-journal-panel">
           <CatchGallery
@@ -303,6 +291,16 @@ export function CatchbookPage() {
             loading={loading}
           />
         </div>
+      </div>
+      <dialog
+        ref={formDialogRef}
+        className="catch-form-dialog"
+        aria-labelledby="catch-form-heading"
+        onCancel={(event) => {
+          if (saving) event.preventDefault();
+        }}
+        onClose={() => setFormOpen(false)}
+      >
         <form
           id="catches-form-panel"
           className="catch-form"
@@ -310,7 +308,25 @@ export function CatchbookPage() {
           onSubmit={submitCatch}
           onInput={() => setPhotoSaved(false)}
         >
-          <h2>{dict.catches.logCatchTab}</h2>
+          <header className="catch-form-header">
+            <h2 id="catch-form-heading">{dict.catches.logCatchTab}</h2>
+            <button
+              type="button"
+              className="catch-form-close"
+              aria-label={lang === "fil" ? "Isara ang form ng huli" : "Close catch form"}
+              onClick={() => setFormOpen(false)}
+            >
+              <X aria-hidden="true" size={18} />
+            </button>
+          </header>
+          <div className="catch-guide-hint">
+            <Image src="/assets/bilog-idle-blink-slow-right.gif" alt="" width={38} height={38} unoptimized />
+            <p>
+              {lang === "fil"
+                ? "Di sigurado sa species? I-save muna bilang hindi pa natukoy at magdagdag ng note kung gusto."
+                : "Not sure what you caught? Save it as unidentified and add a note if you like."}
+            </p>
+          </div>
           <div className="catch-form-tabs" role="tablist" aria-label={dict.catches.formTitle} onKeyDown={navigateTabs}>
             <button
               type="button"
@@ -622,7 +638,7 @@ export function CatchbookPage() {
             <p>{dict.catches.storageNote}</p>
           </footer>
         </form>
-      </div>
+      </dialog>
       <PhotoViewer photos={pendingPhotos} open={photoViewerOpen} onClose={() => setPhotoViewerOpen(false)} />
     </main>
   );

@@ -265,11 +265,11 @@ Explore has scoped display, map-title, selector-title and caption roles in the f
 
 Use a centered content area capped at 1440px on secondary pages. Explore fills the available content width. Shared page gutters are 24px and tighten to 16px below 768px; Explore and the catchbook use their own 20px desktop gutters. Keep a 4px spacing base, with common component gaps and padding drawn from 8px, 12px, 16px, 20px, and 24px steps.
 
-The catch-journal form and list use a split from 1000px upward and stack below 1000px. Policy pages cap at 768px; the offline page caps at 576px.
+The catch journal fills the page content area. “Log a catch” opens a right-hand native dialog drawer while keeping the journal behind it; below 600px, the drawer fills the screen. Policy pages cap at 768px; the offline page caps at 576px.
 
 ### Map-first Explore reference
 
-The app shell reserves a sidebar column and floats its white, bordered panel 14px from the viewport edges. The expanded sidebar is 212px wide and the icon-only state is 68px; desktop content scrolls independently. Below 768px, a compact sticky header opens the same navigation in a native modal drawer and the page scrolls as one column.
+The app shell reserves a sidebar column and floats its white, bordered panel 14px from the viewport edges. The expanded sidebar is 212px wide and the icon-only state is 64px; desktop content scrolls independently. Below 768px, a compact sticky header opens the same navigation in a native modal drawer and the page scrolls as one column.
 
 At 1200px and wider, the illustrated map and location panel form a 1.87:1 grid with a 16px gap and a 280px minimum chooser width. From 768px to 1199px, the chooser follows the map and its three options share a row. Below 768px, the chooser becomes a selected-location trigger that opens a native bottom-sheet dialog. The map is 300px tall on mobile and 420px on tablet; desktop preserves at least 360px of illustration height.
 
@@ -326,9 +326,15 @@ Keyboard focus uses a 3px aqua outline with a 3px offset. Honor reduced-motion p
 - **Focus:** Shift the border toward teal and retain a visible keyboard focus treatment.
 - **Error:** Use the rose surface, border, and ink colors together so the state stays clear without relying on color alone.
 
+### Shared UI Rule for New Screens
+- Use `.ui-card`, `.ui-button`, and `.ui-input` from `src/app/globals.css` for new surfaces and controls. These classes inherit the shared spacing, color, radius, focus, and coarse-pointer tokens.
+- Use `DropdownSelect` from `src/components/dropdown-select.tsx` for choice menus, and `CatchDatePicker` from `src/components/catch-date-picker.tsx` for date and calendar controls. Do not add native selects or separate date-picker markup for new UI.
+- When a screen needs a new size or behavior, add a named variant to the shared component and its token-based styles. Avoid recreating the base card, dropdown, calendar, or field styles in a page stylesheet.
+- This rule keeps new cards, dropdowns, and calendars aligned automatically through the shared primitives and global tokens.
+
 ### Navigation
 - **Style:** A labeled sidebar contains Explore, Species, My Catches, My Species and Settings. Language, theme and guide controls sit at the bottom, below a fine divider. Smaller widths expose the same navigation through a visible Menu button and a native drawer.
-- **States:** Desktop navigation expands to 212px or collapses to a 68px icon rail; the first desktop visit starts expanded, and the choice persists. Navigation rows are 40px, with 18px Lucide icons and 13px labels. The active link uses a mixed sea-glass/white fill, deep-current text and a 600 weight. Inactive links use muted ink; hover introduces a lighter sea-glass mix. Tablet defaults to the icon rail; below 768px the same routes live in a floating native dialog drawer.
+- **States:** Desktop navigation expands to 212px or collapses to a 64px icon rail; the first desktop visit starts expanded, and the choice persists. Navigation rows are 40px, with 18px Lucide icons and 13px labels. The active link uses a mixed sea-glass/white fill, deep-current text and a 600 weight. Inactive links use muted ink; hover introduces a lighter sea-glass mix. Tablet defaults to the icon rail; below 768px the same routes live in a floating native dialog drawer.
 - **Treatment:** Keep language accessible through its native select, and retain accessible labels on icon-only theme, guide and close controls. Preserve the existing route and state behavior when changing layout.
 
 ### Map Selection Marker

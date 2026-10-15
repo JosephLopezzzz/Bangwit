@@ -403,14 +403,14 @@ export const enDictionary: Dictionary = {
     privacyDesc:
       "Catch logs and optional photos are stored in this device's browser storage. No account, no cloud sync, and no GPS tracking.",
     eraseBtn: "Erase Bangwit data on device",
-    erasePending: "Erasure pending. Undo within 5 seconds to keep all Bangwit data.",
+    erasePending: "Data erasure is waiting for your confirmation.",
     erasingLabel: "Erasing…",
     eraseDone: "Data erased",
-    eraseHint: "Erase after 5 seconds. Undo or Escape cancels.",
+    eraseHint: "Review the confirmation before permanently erasing data.",
     eraseFailed: "Could not erase Bangwit data. Please try again.",
     eraseCanceled: "Erasure canceled.",
     eraseConfirm:
-      "This erases all Bangwit catch logs, photos, preferences, and policy acknowledgments from this browser when the 5-second countdown ends. Keep a backup; erasure cannot be undone afterward.",
+      "This permanently erases Bangwit catch logs, photos, preferences, and policy acknowledgments from this browser after you confirm. Keep a backup; erasure cannot be undone.",
     policiesTag: "Terms & privacy",
     policiesTitle: "Review policies",
     policiesDesc:

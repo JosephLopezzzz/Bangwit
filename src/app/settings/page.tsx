@@ -1,21 +1,114 @@
 "use client";
 
-import { ArrowRight, ArrowUpRight, Check, Languages } from "lucide-react";
+import {
+  ArrowRight,
+  ArrowUpRight,
+  BookOpen,
+  Check,
+  Database,
+  FileText,
+  Languages,
+  LoaderCircle,
+  LockKeyhole,
+  Trash2,
+  UserRound,
+  Upload,
+  X,
+} from "lucide-react";
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useBangwit } from "@/components/bangwit-provider";
-import { FuseButton } from "@/components/fuse-button";
 import { getFisherTypeLabel, getPreferredWaterLabel } from "@/i18n/labels";
 import { clearCatches, exportCatchBackup, restoreCatchBackup } from "@/lib/storage/catches";
+import "./settings.css";
 
 export default function SettingsPage() {
   const { profile, openProfile, startTour, showMessage, lang, setLang, dict } = useBangwit();
   const [busy, setBusy] = useState(false);
-  const [erasePending, setErasePending] = useState(false);
+  const [backupOpen, setBackupOpen] = useState(false);
+  const [restoreFile, setRestoreFile] = useState<File | null>(null);
+  const [eraseOpen, setEraseOpen] = useState(false);
+  const [eraseComplete, setEraseComplete] = useState(false);
+  const [feedback, setFeedback] = useState("");
   const [importKey, setImportKey] = useState(0);
+  const backupDialogRef = useRef<HTMLDialogElement>(null);
+  const restoreDialogRef = useRef<HTMLDialogElement>(null);
+  const eraseDialogRef = useRef<HTMLDialogElement>(null);
+  const copy =
+    lang === "fil"
+      ? {
+          privacyMore: "Tungkol sa privacy at local storage",
+          privacyLink: "Basahin ang privacy notice",
+          backupTitle: "Gumawa ng backup?",
+          backupText: "Magda-download ng file na may catch details, optional na spot label, at photos. Ingatan ito dahil pribado ang laman.",
+          backupCancel: "Huwag muna",
+          backupConfirm: "I-download ang backup",
+          restoreTitle: "I-restore ang backup?",
+          restoreText:
+            "Kasama sa file ang pribadong records, photos, at optional na spot label. Sa empty journal lang puwedeng mag-restore; hindi nito ihahalo o papalitan ang laman.",
+          restoreCancel: "Huwag muna",
+          restoreConfirm: "I-restore ang file",
+          backupSuccess: "Nagawa ang backup file sa device mo. Ingatan ito dahil may pribadong catch details at photos.",
+          restoreSuccess: (count: number) => `${count} ${count === 1 ? "catch record" : "catch records"} ang na-restore sa device na ito.`,
+          dangerHeading: "Danger zone",
+          eraseTitle: "Burahin ang lahat ng Bangwit data?",
+          eraseText:
+            "Permanenteng mabubura ang catch logs, photos, preferences, at policy acknowledgment na naka-save ng Bangwit sa browser na ito. Hindi na ito maibabalik.",
+          eraseCancel: "Panatilihin ang data",
+          eraseConfirm: "Burahin ang data",
+          eraseSuccess: "Nabura ang local Bangwit data. Babalik sa simula…",
+          close: "Isara",
+          saving: "Sandali…",
+        }
+      : {
+          privacyMore: "About privacy and local storage",
+          privacyLink: "Read the Privacy Notice",
+          backupTitle: "Create a backup?",
+          backupText: "This downloads a file with catch details, optional spot labels, and photos. Keep it safe because it contains private information.",
+          backupCancel: "Cancel",
+          backupConfirm: "Download backup",
+          restoreTitle: "Restore this backup?",
+          restoreText:
+            "The file includes private records, photos, and optional spot labels. Restore works only when this journal is empty; it will not merge with or replace existing records.",
+          restoreCancel: "Cancel",
+          restoreConfirm: "Restore backup",
+          backupSuccess: "Backup file downloaded to this device. Keep it safe; it contains private catch details and photos.",
+          restoreSuccess: (count: number) => `${count} ${count === 1 ? "catch record" : "catch records"} restored on this device.`,
+          dangerHeading: "Danger zone",
+          eraseTitle: "Erase all Bangwit data?",
+          eraseText:
+            "This permanently removes catch logs, photos, preferences, and policy acknowledgments stored by Bangwit in this browser. It cannot be undone.",
+          eraseCancel: "Keep my data",
+          eraseConfirm: "Erase data",
+          eraseSuccess: "Local Bangwit data erased. Returning to the start…",
+          close: "Close",
+          saving: "Working…",
+        };
+
+  useEffect(() => {
+    const dialog = backupDialogRef.current;
+    if (!dialog) return;
+    if (backupOpen && !dialog.open) dialog.showModal();
+    else if (!backupOpen && dialog.open) dialog.close();
+  }, [backupOpen]);
+
+  useEffect(() => {
+    const dialog = restoreDialogRef.current;
+    if (!dialog) return;
+    if (restoreFile && !dialog.open) dialog.showModal();
+    else if (!restoreFile && dialog.open) dialog.close();
+  }, [restoreFile]);
+
+  useEffect(() => {
+    const dialog = eraseDialogRef.current;
+    if (!dialog) return;
+    if (eraseOpen && !dialog.open) dialog.showModal();
+    else if (!eraseOpen && dialog.open) dialog.close();
+  }, [eraseOpen]);
 
   async function downloadBackup() {
     setBusy(true);
+    setFeedback("");
     try {
       const content = await exportCatchBackup();
       const url = URL.createObjectURL(new Blob([content], { type: "application/json" }));
@@ -24,43 +117,44 @@ export default function SettingsPage() {
       link.download = `bangwit-catches-${new Date().toISOString().slice(0, 10)}.json`;
       link.click();
       URL.revokeObjectURL(url);
-      showMessage(
-        lang === "fil"
-          ? "Nagawa ang backup file sa device mo. Ingatan ito dahil kasama ang photos at optional na lugar."
-          : "Backup file created on your device. Keep it safe as it includes photos and optional spot labels.",
-      );
+      setFeedback(copy.backupSuccess);
+      showMessage(copy.backupSuccess);
+      setBackupOpen(false);
     } catch (error) {
-      showMessage(
+      const message =
         error instanceof Error
           ? error.message
           : lang === "fil"
             ? "Hindi nagawa ang backup."
-            : "Failed to create backup.",
-      );
+            : "Failed to create backup.";
+      setFeedback(message);
+      showMessage(message);
     } finally {
       setBusy(false);
     }
   }
 
-  async function importBackup(file: File | undefined) {
-    if (!file) return;
+  async function importBackup() {
+    if (!restoreFile || busy) return;
     setBusy(true);
+    setFeedback("");
     try {
-      const restored = await restoreCatchBackup(file);
-      showMessage(
-        lang === "fil"
-          ? `${restored} catch tala ang na-restore. Nasa device lang ang mga ito.`
-          : `${restored} catch ${restored === 1 ? "record" : "records"} restored on this device.`,
-      );
+      const restored = await restoreCatchBackup(restoreFile);
+      const message = copy.restoreSuccess(restored);
+      setFeedback(message);
+      showMessage(message);
+      setRestoreFile(null);
       setImportKey((value) => value + 1);
     } catch (error) {
-      showMessage(
+      const message =
         error instanceof Error
           ? error.message
           : lang === "fil"
             ? "Hindi na-restore ang backup."
-            : "Failed to restore backup.",
-      );
+            : "Failed to restore backup.";
+      setFeedback(message);
+      showMessage(message);
+      setRestoreFile(null);
       setImportKey((value) => value + 1);
     } finally {
       setBusy(false);
@@ -68,8 +162,9 @@ export default function SettingsPage() {
   }
 
   async function eraseLocalData() {
-    if (busy) return false;
+    if (busy) return;
     setBusy(true);
+    setFeedback("");
     try {
       await clearCatches();
       for (const key of [
@@ -82,172 +177,296 @@ export default function SettingsPage() {
       ]) {
         localStorage.removeItem(key);
       }
-      window.location.assign("/");
-      return true;
+      setEraseComplete(true);
+      setFeedback(copy.eraseSuccess);
+      showMessage(copy.eraseSuccess);
+      window.setTimeout(() => window.location.assign("/"), 1400);
     } catch (error) {
-      showMessage(
+      const message =
         error instanceof Error
           ? error.message
           : lang === "fil"
             ? "Hindi nabura ang local data."
-            : "Failed to erase local data.",
-      );
+            : "Failed to erase local data.";
+      setFeedback(message);
+      showMessage(message);
       setBusy(false);
-      return false;
     }
   }
 
   return (
-    <main className="ui-page">
+    <main className="ui-page settings-page">
       <header className="ui-page-header">
         <h1 className="ui-page-title">{dict.settings.title}</h1>
-        <p className="text-muted">{dict.settings.subtitle}</p>
+        <p>{dict.settings.subtitle}</p>
       </header>
 
-      <div className="grid gap-4 lg:grid-cols-2">
-        {/* Language Selection Card */}
-        <section className="ui-card lg:col-span-2">
-          <h2 className="ui-section-title">{dict.settings.languageTitle}</h2>
-          <p className="mt-1 text-sm text-muted">{dict.settings.languageDesc}</p>
-          <div className="mt-4 flex flex-wrap gap-3">
-            <button
-              type="button"
-              onClick={() => setLang("fil")}
-              aria-pressed={lang === "fil"}
-              disabled={busy || erasePending}
-              className={`ui-button ui-button--secondary ${lang === "fil" ? "is-selected" : ""}`}
-            >
-              <Languages aria-hidden="true" className="h-4 w-4 shrink-0" />
-              <span>Filipino (Taglish)</span>
-              {lang === "fil" && <Check aria-hidden="true" className="ml-1 h-4 w-4" />}
-            </button>
-            <button
-              type="button"
-              onClick={() => setLang("en")}
-              aria-pressed={lang === "en"}
-              disabled={busy || erasePending}
-              className={`ui-button ui-button--secondary ${lang === "en" ? "is-selected" : ""}`}
-            >
-              <Languages aria-hidden="true" className="h-4 w-4 shrink-0" />
-              <span>English</span>
-              {lang === "en" && <Check aria-hidden="true" className="ml-1 h-4 w-4" />}
+      {feedback && <p className="settings-feedback" role="status">{feedback}</p>}
+
+      <div className="settings-grid">
+        <section className="settings-card settings-card--language">
+          <div className="settings-card-heading">
+            <span className="settings-card-icon"><Languages aria-hidden="true" size={18} /></span>
+            <div>
+              <h2>{dict.settings.languageTitle}</h2>
+              <p>{lang === "fil" ? "Palitan ang wika anumang oras." : "Change the app language anytime."}</p>
+            </div>
+          </div>
+          <div className="settings-language-options">
+            {(["fil", "en"] as const).map((value) => (
+              <button
+                key={value}
+                type="button"
+                onClick={() => setLang(value)}
+                aria-pressed={lang === value}
+                disabled={busy || eraseComplete}
+                className={`settings-language-button ${lang === value ? "is-selected" : ""}`}
+              >
+                <span>{value === "fil" ? "Filipino (Taglish)" : "English"}</span>
+                {lang === value && <Check aria-hidden="true" size={15} />}
+              </button>
+            ))}
+          </div>
+        </section>
+
+        <section className="settings-card">
+          <div className="settings-card-heading">
+            <span className="settings-card-icon"><UserRound aria-hidden="true" size={18} /></span>
+            <div>
+              <h2>{dict.settings.profileTag}</h2>
+              <p>{profile ? getFisherTypeLabel(profile.type, lang) : dict.settings.profileUnset}</p>
+            </div>
+          </div>
+          <div className="settings-card-row">
+            <span>{profile ? getPreferredWaterLabel(profile.water, lang) : getPreferredWaterLabel(undefined, lang)}</span>
+            <button type="button" className="ui-button ui-button--secondary" onClick={() => openProfile("edit")} disabled={busy || eraseComplete}>
+              {dict.settings.editProfileBtn}
             </button>
           </div>
         </section>
 
-        {/* Profile Preferences */}
-        <section className="ui-card">
-          <h2 className="ui-section-title">{dict.settings.profileTag}</h2>
-          <p className="mt-2 font-semibold text-ink">
-            {profile ? getFisherTypeLabel(profile.type, lang) : dict.settings.profileUnset}
-          </p>
-          <p className="mt-1 text-sm text-muted">
-            {profile ? getPreferredWaterLabel(profile.water, lang) : getPreferredWaterLabel(undefined, lang)}
-          </p>
-          <button
-            type="button"
-            onClick={() => openProfile("edit")}
-            disabled={busy || erasePending}
-            className="ui-button ui-button--secondary mt-4"
-          >
-            {dict.settings.editProfileBtn}
-          </button>
-        </section>
-
-        {/* In-app guide */}
-        <section className="ui-card">
-          <h2 className="ui-section-title">{dict.settings.helpTitle}</h2>
-          <p className="mt-1 text-sm leading-6 text-muted">{dict.settings.helpDesc}</p>
-          <button
-            type="button"
-            onClick={startTour}
-            disabled={busy || erasePending}
-            className="ui-button ui-button--secondary mt-4"
-          >
+        <section className="settings-card">
+          <div className="settings-card-heading">
+            <span className="settings-card-icon"><BookOpen aria-hidden="true" size={18} /></span>
+            <div>
+              <h2>{dict.settings.helpTitle}</h2>
+              <p>{lang === "fil" ? "Ulitin ang gabay sa paggamit ng app." : "Replay the short in-app guide."}</p>
+            </div>
+          </div>
+          <button type="button" className="ui-button ui-button--secondary" onClick={startTour} disabled={busy || eraseComplete}>
             {dict.settings.restartTourBtn}
           </button>
         </section>
 
-        {/* Local backup */}
-        <section className="ui-card" aria-busy={busy}>
-          <h2 className="ui-section-title">{dict.settings.backupTitle}</h2>
-          <p className="mt-2 text-sm leading-6 text-muted">{dict.settings.backupDesc}</p>
-          <div className="mt-4 flex flex-wrap gap-2">
-            <button
-              type="button"
-              disabled={busy || erasePending}
-              onClick={() => void downloadBackup()}
-              className="ui-button"
-            >
+        <section className="settings-card settings-card--backup" aria-busy={busy}>
+          <div className="settings-card-heading">
+            <span className="settings-card-icon"><Database aria-hidden="true" size={18} /></span>
+            <div>
+              <h2>{dict.settings.backupTitle}</h2>
+              <p>{lang === "fil" ? "Gumawa ng kopya o magbalik ng local catch log." : "Save a copy or restore your local catch log."}</p>
+            </div>
+          </div>
+          <div className="settings-card-actions">
+          <button
+            type="button"
+            disabled={busy || eraseComplete}
+            onClick={() => {
+              setFeedback("");
+              setBackupOpen(true);
+            }}
+            className="ui-button"
+          >
+              {busy ? <LoaderCircle className="settings-spinner" aria-hidden="true" size={15} /> : <Database aria-hidden="true" size={15} />}
               {dict.settings.downloadBackupBtn}
             </button>
-            <label
-              className={`ui-button ui-button--secondary focus-within:outline-3 focus-within:outline-offset-2 focus-within:outline-teal ${
-                busy || erasePending ? "pointer-events-none opacity-50" : ""
-              }`}
-            >
+            <label className={`ui-button ui-button--secondary settings-file-button ${busy || eraseComplete ? "is-disabled" : ""}`}>
+              {busy ? <LoaderCircle className="settings-spinner" aria-hidden="true" size={15} /> : <Upload aria-hidden="true" size={15} />}
               {dict.settings.restoreBackupBtn}
               <input
                 key={importKey}
                 type="file"
                 accept="application/json,.json"
-                disabled={busy || erasePending}
-                onChange={(event) => void importBackup(event.target.files?.[0])}
+                disabled={busy || eraseComplete}
+                onChange={(event) => {
+                  setFeedback("");
+                  setRestoreFile(event.currentTarget.files?.[0] ?? null);
+                  event.currentTarget.value = "";
+                }}
                 className="sr-only"
               />
             </label>
-          </div>
-          <p className="mt-3 text-xs leading-5 text-muted">{dict.settings.backupNote}</p>
-          <p className="mt-4 border-t border-line pt-4 text-sm leading-6 text-muted">
-            {dict.settings.prototypeBackupNote}{" "}
             <a
               href="http://127.0.0.1:4173/migration.html"
               target="_blank"
               rel="noreferrer"
-              className="inline-flex items-center gap-1 font-bold text-teal hover:text-teal-dark"
+              className="settings-prototype-link"
             >
               {dict.settings.prototypeBackupLink}
-              <ArrowUpRight aria-hidden="true" className="h-4 w-4" />
+              <ArrowUpRight aria-hidden="true" size={14} />
             </a>
-          </p>
+          </div>
+          <details className="settings-privacy-details">
+            <summary>{copy.privacyMore}</summary>
+            <p>{dict.settings.backupDesc} {dict.settings.backupNote}</p>
+          </details>
         </section>
 
-        {/* Privacy controls */}
-        <section className="ui-card">
-          <h2 className="ui-section-title">{dict.settings.privacyTitle}</h2>
-          <p className="mt-2 text-sm leading-6 text-muted">{dict.settings.privacyDesc}</p>
-          <p className="mt-3 text-sm leading-6 text-muted">{dict.settings.eraseConfirm}</p>
-          <div className="mt-4">
-            <FuseButton
-              className="fuse-button-settings"
-              disabled={busy}
-              label={dict.settings.eraseBtn}
-              undoLabel={dict.catches.deleteUndo}
-              doneLabel={dict.settings.eraseDone}
-              committingLabel={dict.settings.erasingLabel}
-              pendingLabel={dict.settings.erasePending}
-              canceledLabel={dict.settings.eraseCanceled}
-              failedLabel={dict.settings.eraseFailed}
-              ariaLabel={dict.settings.eraseBtn}
-              hint={dict.settings.eraseHint}
-              onPendingChange={setErasePending}
-              onCommit={eraseLocalData}
-            />
+        <section className="settings-card">
+          <div className="settings-card-heading">
+            <span className="settings-card-icon"><LockKeyhole aria-hidden="true" size={18} /></span>
+            <div>
+              <h2>{dict.settings.privacyTitle}</h2>
+              <p>{dict.settings.privacyDesc}</p>
+            </div>
           </div>
+          <Link className="settings-inline-link" href="/privacy">
+            {copy.privacyLink}
+            <ArrowRight aria-hidden="true" size={14} />
+          </Link>
         </section>
 
-        {/* Policies */}
-        <section className="ui-card lg:col-span-2">
-          <h2 className="ui-section-title">{dict.settings.policiesTitle}</h2>
-          <p className="mt-2 text-sm leading-6 text-muted">{dict.settings.policiesDesc}</p>
-          <div className="mt-4 flex flex-wrap gap-x-5 gap-y-2">
-            <Link className="inline-flex items-center gap-1 font-bold text-teal hover:text-teal-dark" href="/policies">
-              {dict.settings.policiesLink}
-              <ArrowRight aria-hidden="true" className="h-4 w-4" />
-            </Link>
+        <section className="settings-card settings-card--policies">
+          <div className="settings-card-heading">
+            <span className="settings-card-icon"><FileText aria-hidden="true" size={18} /></span>
+            <div>
+              <h2>{dict.settings.policiesTitle}</h2>
+              <p>{dict.settings.policiesDesc}</p>
+            </div>
           </div>
+          <Link className="settings-inline-link" href="/policies">
+            {dict.settings.policiesLink}
+            <ArrowRight aria-hidden="true" size={14} />
+          </Link>
         </section>
       </div>
+
+      <section className="settings-danger-zone" aria-labelledby="settings-danger-heading">
+        <header>
+          <Trash2 aria-hidden="true" size={17} />
+          <h2 id="settings-danger-heading">{copy.dangerHeading}</h2>
+        </header>
+        <div className="settings-danger-card">
+          <div>
+            <h3>{lang === "fil" ? "Burahin ang local data" : "Erase local data"}</h3>
+            <p>{lang === "fil" ? "Permanenteng alisin ang Bangwit data na naka-save sa browser na ito." : "Permanently remove Bangwit data saved in this browser."}</p>
+          </div>
+          <button
+            type="button"
+            className="settings-danger-button"
+            onClick={() => {
+              setFeedback("");
+              setEraseOpen(true);
+            }}
+            disabled={busy || eraseComplete}
+          >
+            <Trash2 aria-hidden="true" size={15} />
+            {dict.settings.eraseBtn}
+          </button>
+        </div>
+      </section>
+
+      <dialog
+        ref={backupDialogRef}
+        className="settings-confirm-dialog"
+        aria-labelledby="settings-backup-title"
+        aria-describedby="settings-backup-description"
+        onCancel={(event) => {
+          if (busy) event.preventDefault();
+        }}
+        onClose={() => setBackupOpen(false)}
+      >
+        <div className="settings-dialog-content">
+          <header>
+            <span className="settings-dialog-icon"><Database aria-hidden="true" size={19} /></span>
+            <button type="button" aria-label={copy.close} onClick={() => setBackupOpen(false)} disabled={busy}>
+              <X aria-hidden="true" size={18} />
+            </button>
+          </header>
+          <h2 id="settings-backup-title">{copy.backupTitle}</h2>
+          <p id="settings-backup-description">{copy.backupText}</p>
+          {feedback && <p className="settings-dialog-feedback" role="alert">{feedback}</p>}
+          <div className="settings-dialog-actions">
+            <button type="button" className="ui-button ui-button--secondary" onClick={() => setBackupOpen(false)} disabled={busy}>
+              {copy.backupCancel}
+            </button>
+            <button type="button" className="ui-button" onClick={() => void downloadBackup()} disabled={busy}>
+              {busy && <LoaderCircle className="settings-spinner" aria-hidden="true" size={15} />}
+              {busy ? copy.saving : copy.backupConfirm}
+            </button>
+          </div>
+        </div>
+      </dialog>
+
+      <dialog
+        ref={restoreDialogRef}
+        className="settings-confirm-dialog"
+        aria-labelledby="settings-restore-title"
+        aria-describedby="settings-restore-description"
+        onCancel={(event) => {
+          if (busy) event.preventDefault();
+        }}
+        onClose={() => setRestoreFile(null)}
+      >
+        <div className="settings-dialog-content">
+          <header>
+            <span className="settings-dialog-icon"><Database aria-hidden="true" size={19} /></span>
+            <button type="button" aria-label={copy.close} onClick={() => setRestoreFile(null)} disabled={busy}>
+              <X aria-hidden="true" size={18} />
+            </button>
+          </header>
+          <h2 id="settings-restore-title">{copy.restoreTitle}</h2>
+          <p id="settings-restore-description">{copy.restoreText}</p>
+          {restoreFile && <p className="settings-dialog-filename">{restoreFile.name}</p>}
+          {feedback && <p className="settings-dialog-feedback" role="alert">{feedback}</p>}
+          <div className="settings-dialog-actions">
+            <button type="button" className="ui-button ui-button--secondary" onClick={() => setRestoreFile(null)} disabled={busy}>
+              {copy.restoreCancel}
+            </button>
+            <button type="button" className="ui-button" onClick={() => void importBackup()} disabled={busy || !restoreFile}>
+              {busy && <LoaderCircle className="settings-spinner" aria-hidden="true" size={15} />}
+              {busy ? copy.saving : copy.restoreConfirm}
+            </button>
+          </div>
+        </div>
+      </dialog>
+
+      <dialog
+        ref={eraseDialogRef}
+        className="settings-confirm-dialog settings-confirm-dialog--danger"
+        aria-labelledby="settings-erase-title"
+        aria-describedby="settings-erase-description"
+        onCancel={(event) => {
+          if (busy || eraseComplete) event.preventDefault();
+        }}
+        onClose={() => {
+          if (!eraseComplete) setEraseOpen(false);
+        }}
+      >
+        <div className="settings-dialog-content">
+          <header>
+            <span className="settings-dialog-icon"><Trash2 aria-hidden="true" size={19} /></span>
+            {!eraseComplete && (
+              <button type="button" aria-label={copy.close} onClick={() => setEraseOpen(false)} disabled={busy}>
+                <X aria-hidden="true" size={18} />
+              </button>
+            )}
+          </header>
+          <h2 id="settings-erase-title">{eraseComplete ? dict.settings.eraseDone : copy.eraseTitle}</h2>
+          <p id="settings-erase-description">{eraseComplete ? copy.eraseSuccess : copy.eraseText}</p>
+          {feedback && !eraseComplete && <p className="settings-dialog-feedback" role="alert">{feedback}</p>}
+          {!eraseComplete && (
+            <div className="settings-dialog-actions">
+              <button type="button" className="ui-button ui-button--secondary" onClick={() => setEraseOpen(false)} disabled={busy}>
+                {copy.eraseCancel}
+              </button>
+              <button type="button" className="settings-danger-button" onClick={() => void eraseLocalData()} disabled={busy}>
+                {busy ? <LoaderCircle className="settings-spinner" aria-hidden="true" size={15} /> : <Trash2 aria-hidden="true" size={15} />}
+                {busy ? copy.saving : copy.eraseConfirm}
+              </button>
+            </div>
+          )}
+        </div>
+      </dialog>
     </main>
   );
 }
