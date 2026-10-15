@@ -1,11 +1,12 @@
 "use client";
 
-import { usePathname, useRouter } from "next/navigation";
 import { BriefcaseBusiness, Compass, Droplets, Fish, Users, Waves } from "lucide-react";
+import { usePathname, useRouter } from "next/navigation";
+import { createContext, type ReactNode, useCallback, useContext, useEffect, useMemo, useRef, useState } from "react";
+import { flushSync } from "react-dom";
 import { DropdownSelect } from "@/components/dropdown-select";
 import { PolicyDocument } from "@/components/policy-document";
-import { createContext, useCallback, useContext, useEffect, useMemo, useRef, useState, type ReactNode } from "react";
-import { flushSync } from "react-dom";
+import { DEFAULT_PROVINCE_ID, PHILIPPINE_PROVINCES, type ProvinceId } from "@/data/phl-provinces";
 import { enDictionary } from "@/i18n/dictionaries/en";
 import { filDictionary } from "@/i18n/dictionaries/fil";
 import type { Dictionary, Language } from "@/i18n/types";
@@ -34,6 +35,8 @@ type NativeViewTransition = { finished: Promise<void> };
 type BangwitContextValue = {
   selectedArea: string;
   setSelectedArea: (area: string) => void;
+  selectedProvince: ProvinceId;
+  setSelectedProvince: (province: string) => void;
   theme: ColorTheme;
   toggleTheme: () => void;
   lang: Language;
@@ -92,6 +95,7 @@ export function BangwitProvider({ children }: { children: ReactNode }) {
   const [fisherType, setFisherType] = useState<FisherProfile["type"]>("exploring");
   const [preferredWater, setPreferredWater] = useState<FisherProfile["water"]>("any");
   const [selectedArea, setSelectedAreaState] = useState(AREAS[0]);
+  const [selectedProvince, setSelectedProvinceState] = useState<ProvinceId>(DEFAULT_PROVINCE_ID);
   const [theme, setTheme] = useState<ColorTheme>("light");
   const [lang, setLangState] = useState<Language>("fil");
   const themeRef = useRef<ColorTheme>("light");
@@ -239,6 +243,12 @@ export function BangwitProvider({ children }: { children: ReactNode }) {
     if (AREAS.includes(area)) setSelectedAreaState(area);
   }, []);
 
+  const setSelectedProvince = useCallback((province: string) => {
+    if (PHILIPPINE_PROVINCES.some(({ id }) => id === province)) {
+      setSelectedProvinceState(province as ProvinceId);
+    }
+  }, []);
+
   const openProfile = useCallback(
     (mode: ProfileMode) => {
       setProfileMode(mode);
@@ -308,6 +318,8 @@ export function BangwitProvider({ children }: { children: ReactNode }) {
     () => ({
       selectedArea,
       setSelectedArea,
+      selectedProvince,
+      setSelectedProvince,
       theme,
       toggleTheme,
       lang,
@@ -318,7 +330,20 @@ export function BangwitProvider({ children }: { children: ReactNode }) {
       showMessage: setMessage,
       startTour,
     }),
-    [selectedArea, setSelectedArea, theme, toggleTheme, lang, setLang, dict, profile, openProfile, startTour],
+    [
+      selectedArea,
+      setSelectedArea,
+      selectedProvince,
+      setSelectedProvince,
+      theme,
+      toggleTheme,
+      lang,
+      setLang,
+      dict,
+      profile,
+      openProfile,
+      startTour,
+    ],
   );
 
   function acceptPolicies() {

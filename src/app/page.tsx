@@ -6,9 +6,10 @@ import Link from "next/link";
 import { AreaExplorer } from "@/components/area-explorer";
 import { useBangwit } from "@/components/bangwit-provider";
 import { CaviteFisheriesEvidence } from "@/components/cavite-fisheries-evidence";
+import { CAVITE_PROVINCE_ID } from "@/data/phl-provinces";
 
 export default function ExplorePage() {
-  const { dict } = useBangwit();
+  const { dict, selectedProvince } = useBangwit();
 
   return (
     <main className="explore-page">
@@ -24,7 +25,7 @@ export default function ExplorePage() {
 
       <AreaExplorer />
 
-      <CaviteFisheriesEvidence />
+      {selectedProvince === CAVITE_PROVINCE_ID && <CaviteFisheriesEvidence />}
 
       <section className="ui-card mt-5" aria-labelledby="safetyHeading">
         <div className="flex flex-wrap items-center justify-between gap-3">

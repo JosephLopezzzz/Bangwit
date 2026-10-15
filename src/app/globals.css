@@ -20,6 +20,15 @@
   --slate-700: #334155;
   --teal-action: #087f78;
   --teal-action-hover: #05615d;
+  --province-map-water: #d9f1f3;
+  --province-land: #8eaaa1;
+  --province-land-outline: #e8f7f4;
+  --province-land-hover: #b9dfd6;
+  --province-land-hover-outline: #087f7d;
+  --province-land-selected: #087f7d;
+  --province-land-selected-hover: #075f61;
+  --province-land-selected-outline: #ffffff;
+  --province-land-focus: #102b35;
   --review-surface: #fffbeb;
   --review-line: #fef3c7;
   --review-copy: #78350f;
@@ -66,6 +75,15 @@
   --slate-700: #c8d7d9;
   --teal-action: #087f78;
   --teal-action-hover: #05615d;
+  --province-map-water: #123d49;
+  --province-land: #698d83;
+  --province-land-outline: #b9d1ca;
+  --province-land-hover: #8dc3b6;
+  --province-land-hover-outline: #d6f7ed;
+  --province-land-selected: #25aaa0;
+  --province-land-selected-hover: #137a78;
+  --province-land-selected-outline: #e4fff8;
+  --province-land-focus: #e7fbf4;
   --review-surface: #372d18;
   --review-line: #62512a;
   --review-copy: #f2cc78;
@@ -342,6 +360,40 @@ textarea {
   background: var(--white);
   box-shadow: var(--shadow-popover);
   animation: ui-enter var(--motion-duration) ease-out;
+}
+
+.dropdown-select-search-row {
+  position: sticky;
+  z-index: 1;
+  top: -6px;
+  display: grid;
+  gap: 6px;
+  margin: -6px -6px 6px;
+  padding: 8px;
+  border-bottom: 1px solid var(--line);
+  background: var(--white);
+}
+
+.dropdown-select-search-input {
+  min-width: 0;
+}
+
+.dropdown-select-result-count {
+  color: var(--muted);
+  font-size: var(--text-caption);
+  line-height: 1.4;
+}
+
+.dropdown-select-options {
+  min-width: 0;
+}
+
+.dropdown-select-no-results {
+  margin: 0;
+  padding: 10px;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.45;
 }
 
 .dropdown-select-popup[hidden] {

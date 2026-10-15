@@ -1,6 +1,6 @@
 ---
 name: Bangwit
-description: A calm field guide to Cavite waters, shaped around clear maps and personal catch stories.
+description: A calm field guide to Philippine province discovery, Cavite waters, and personal catch stories.
 colors:
   deep-water-teal: "#087f78"
   deep-current-teal: "#05615d"
@@ -17,13 +17,24 @@ colors:
   error-surface: "#fff1f2"
   error-line: "#fecdd3"
   error-ink: "#881337"
-  illustrated-water: "#d9f1f3"
-  illustrated-water-night: "#123d49"
-  illustration-ink: "#154d68"
-  illustration-land-ink: "#386f51"
-  illustration-night-ink: "#e4f3ee"
-  map-marker-slate: "#505d6e"
-  map-marker-slate-hover: "#354a5b"
+  province-map-water: "#d9f1f3"
+  province-map-water-night: "#123d49"
+  province-land: "#8eaaa1"
+  province-land-outline: "#e8f7f4"
+  province-land-hover: "#b9dfd6"
+  province-land-hover-outline: "#087f7d"
+  province-land-selected: "#087f7d"
+  province-land-selected-hover: "#075f61"
+  province-land-selected-outline: "#ffffff"
+  province-land-focus: "#102b35"
+  province-land-night: "#698d83"
+  province-land-outline-night: "#b9d1ca"
+  province-land-hover-night: "#8dc3b6"
+  province-land-hover-outline-night: "#d6f7ed"
+  province-land-selected-night: "#25aaa0"
+  province-land-selected-hover-night: "#137a78"
+  province-land-selected-outline-night: "#e4fff8"
+  province-land-focus-night: "#e7fbf4"
 typography:
   display:
     fontFamily: "Arial, Helvetica, sans-serif"
@@ -92,10 +103,6 @@ typography:
     fontWeight: 700
     lineHeight: 1.2
     letterSpacing: "-0.025em"
-  marker-number:
-    fontFamily: "Arial, Helvetica, sans-serif"
-    fontSize: "17px"
-    fontWeight: 700
 rounded:
   sm: "8px"
   md: "8px"
@@ -149,20 +156,15 @@ components:
     rounded: "{rounded.pill}"
     padding: "4px 10px"
     height: "28px"
-  map-marker-selected:
-    backgroundColor: "{colors.deep-water-teal}"
-    textColor: "{colors.surface-white}"
-    rounded: "{rounded.pill}"
-    typography: "{typography.marker-number}"
-    height: "44px"
-    width: "44px"
-  map-marker-unselected:
-    backgroundColor: "{colors.map-marker-slate}"
-    textColor: "{colors.surface-white}"
-    rounded: "{rounded.pill}"
-    typography: "{typography.marker-number}"
-    height: "44px"
-    width: "44px"
+  province-map-region:
+    backgroundColor: "{colors.province-land}"
+    borderColor: "{colors.surface-white}"
+  province-map-region-hover:
+    backgroundColor: "{colors.province-land-hover}"
+    borderColor: "{colors.deep-water-teal}"
+  province-map-region-selected:
+    backgroundColor: "{colors.province-land-selected}"
+    borderColor: "{colors.surface-white}"
   app-shell:
     backgroundColor: "transparent"
     rounded: "0px"
@@ -209,11 +211,11 @@ components:
 
 ## Overview
 
-**Creative North Star: "Cavite Waters Field Guide"**
+**Creative North Star: "Philippine Waters Field Guide"**
 
 The interface should feel like a clear, well-kept field guide: steady, local, and easy to scan. A pale bay-mist canvas, dark ink typography, and deep teal accents make the page feel calm without losing the confidence needed for clear actions and selected states.
 
-Keep the map illustration and area selector visually legible and purposeful. Use compact, letter-spaced overlines to orient the reader, then let moderately weighted headings and quiet supporting copy establish hierarchy. Bilog appears as a small, warm illustration in the current prototype; keep that artwork supportive rather than making it the interface's main visual language.
+Keep the interactive province map and area selector visually legible and purposeful. Use compact, letter-spaced overlines to orient the reader, then let moderately weighted headings and quiet supporting copy establish hierarchy. Bilog appears as a small, warm illustration in the current prototype; keep that artwork supportive rather than making it the interface's main visual language.
 
 **Key Characteristics:**
 - Field-guide clarity with a calm, coastal palette.
@@ -222,7 +224,7 @@ Keep the map illustration and area selector visually legible and purposeful. Use
 
 ## Colors
 
-The palette pairs deep-water teal with bay-mist surfaces and cool, dark ink. Teal carries links, actions, active navigation, and selected map markers; lighter sea-glass tints support selected states and quiet emphasis. Amber is reserved for review or warning states, while rose is reserved for errors.
+The palette pairs deep-water teal with bay-mist surfaces and cool, dark ink. Teal carries links, actions, active navigation, and selected map regions; lighter sea-glass tints support hover, focus, and quiet emphasis. Amber is reserved for review or warning states, while rose is reserved for errors.
 
 ### Primary
 - **Deep-water teal:** The main action and selection color; use it for primary buttons, links, selected locations, and small section labels.
@@ -237,10 +239,12 @@ The palette pairs deep-water teal with bay-mist surfaces and cool, dark ink. Tea
 - **Tidal line:** The thin border and divider color used to define card and control edges.
 - **Focus aqua:** The visible keyboard-focus outline color.
 
-### Illustration and Map Controls
-- **Illustrated water / illustrated water night:** The map canvas under the generated artwork in light and dark themes.
-- **Illustration ink / illustration land ink / illustration night ink:** Labels rendered over the artwork; the land-region label has its own green tone. Keep these colors scoped to the map.
-- **Map-marker slate / map-marker slate hover:** Unselected numbered map controls and matching location circles. Selection uses the existing deep-water teal action fill with white numbers.
+### Province Map
+- **Province map water / province map water night:** The quiet sea-glass canvas behind the province outlines.
+- **Province land:** The unselected region fill, with a pale shoreline stroke.
+- **Province land hover:** The lighter teal hover and keyboard-focus fill.
+- **Province land selected:** The deeper teal fill that persists after selecting a province.
+- Map hover and selection never encode catch counts, abundance, legality, or safety.
 
 **The Review-Color Rule.** Keep amber for review or warning information and rose for errors; neither becomes a general brand accent.
 
@@ -259,7 +263,7 @@ The palette pairs deep-water teal with bay-mist surfaces and cool, dark ink. Tea
 - **Body** (regular, 14px, 1.5 line-height): Explanatory text and standard reading copy.
 - **Label** (bold, 12px, 0.15em letter-spacing, often uppercase): Short section overlines, category labels, and status context.
 
-Explore has scoped display, map-title, selector-title and caption roles in the frontmatter. The page title is 28px on desktop and 26px on mobile; map and selector headings are 18px on desktop and 17px on mobile. Sidebar labels, location names and marker numbers have dedicated compact roles. The 14px body baseline is supported by explicit 12px caption and 13px control tokens.
+Explore has scoped display, map-title, selector-title and caption roles in the frontmatter. The page title is 28px on desktop and 26px on mobile; map and selector headings are 18px on desktop and 17px on mobile. Sidebar labels, province names and map labels have dedicated compact roles. The 14px body baseline is supported by explicit 12px caption and 13px control tokens.
 
 ## Layout
 
@@ -271,25 +275,24 @@ The catch journal fills the page content area. “Log a catch” opens a right-h
 
 The app shell reserves a sidebar column and floats its white, bordered panel 14px from the viewport edges. The expanded sidebar is 212px wide and the icon-only state is 64px; desktop content scrolls independently. Below 768px, a compact sticky header opens the same navigation in a native modal drawer and the page scrolls as one column.
 
-At 1200px and wider, the illustrated map and location panel form a 1.87:1 grid with a 16px gap and a 280px minimum chooser width. From 768px to 1199px, the chooser follows the map and its three options share a row. Below 768px, the chooser becomes a selected-location trigger that opens a native bottom-sheet dialog. The map is 300px tall on mobile and 420px on tablet; desktop preserves at least 360px of illustration height.
+At 1200px and wider, the province map and selected-area panel form a 1.87:1 grid with a 16px gap and a 280px minimum panel width. From 768px to 1199px, the panel follows the map and the three Cavite water choices share a row. Below 768px, the panel remains below the map, the searchable province selector expands to the available width, and province details collapse behind a compact disclosure. The map is 300px tall on mobile, 420–540px on tablet and 420–640px on desktop.
 
-Location rows use a 60px minimum height with 24px number badges. Map markers and map controls keep 44px interaction targets. Text, cards and spacing use the shared compact scale.
+Province outlines use SVG paths as pointer and keyboard targets; one path is in the Tab order at a time, arrow keys move focus between provinces, and Enter or Space selects. A searchable shared dropdown provides an alternative for small islands. Map controls keep 44px interaction targets. Cavite water rows use the shared compact scale.
 
-`public/assets/cavite-waters-map.png` is generated artwork reconstructed from the user-supplied reference. It is an illustration, not verified geography. Labels and interactive markers are rendered separately. Zoom enlarges the illustration; reset restores its overview and never requests GPS. Keep the illustration note outside the map controls and the truthful records-coverage notice below the workspace. Mobile places the illustration note beneath the map panel.
+`src/data/phl-province-paths.ts` is generated from the pinned geoBoundaries PHL ADM2 simplified layer. The layer represents 2020 geography, credits NAMRIA, PSA, and OCHA Philippines, and is licensed CC BY 3.0 IGO; its provenance and exclusions are recorded in `data/research/alternatives/cavite/philippine-province-map-provenance.json`. It yields 81 source-era province outlines after excluding NCR district and independent-city features. The source retains one combined Maguindanao outline and uses the former name Compostela Valley for Davao de Oro. Keep the source year and non-navigation limitation visible. Hover updates the highlight and anchored name label without moving the camera. Clicking a region changes selection and preserves the camera; choosing a search result focuses that province. Focus selected frames any province, while Fit Philippines returns to the national view without changing selection. Mouse and horizontal touch drags pan within bounded map extents; vertical touch gestures continue to scroll the page. Cavite remains the only pilot with water-area choices; other provinces display unavailable coverage beside the selected province.
 
 Use the existing Arial family, teal/ink palette, white surfaces and Lucide icons. Respect dark theme and reduced motion. Keep advisories and journal actions below the primary map workspace.
 
 ## Elevation & Depth
 
-The visual system is mostly flat. White surfaces, a fine tidal-line border, and the difference between bay mist and white do most of the separation work. Shadows remain soft and sparse: the floating sidebar and popovers use diffuse shadows, while map markers use stronger lift against the illustration. Cards stay flat at rest. The map landforms use inset shading as part of the illustration only.
+The visual system is mostly flat. White surfaces, a fine tidal-line border, and the difference between bay mist and white do most of the separation work. Shadows remain soft and sparse: the floating sidebar and popovers use diffuse shadows. Cards stay flat at rest; the map uses flat region fills and clean outlines.
 
 ### Shadow Vocabulary
 - **Floating shell** (`0 4px 18px rgb(16 43 53 / 6%)`): A light shadow beneath the independent sidebar panel.
 - **Popover** (`0 8px 24px rgb(16 43 53 / 12%)`): Separates dropdown surfaces from nearby content.
-- **Map-marker lift** (`0 5px 12px rgb(16 43 53 / 23%)`): Keeps circular location markers legible above the illustrated water.
-- **Map-control lift** (`0 2px 6px rgb(16 43 53 / 15%)`): Keeps reset and zoom controls clear over the illustration.
+- **Map-control lift** (`0 2px 6px rgb(16 43 53 / 15%)`): Keeps reset and zoom controls clear over the province map.
 
-The floating sidebar uses a soft 0 4px 18px shadow, popovers use 0 8px 24px, and map markers use 0 5px 12px. Cards remain flat at rest; the map's landform inset shading belongs to its illustration.
+The floating sidebar uses a soft 0 4px 18px shadow, and popovers use 0 8px 24px. Cards remain flat at rest; province outlines use restrained fills and borders.
 
 **The Border-First Rule.** Use the border and surface contrast to define a resting card; reserve shadows for floating navigation, popovers and map controls.
 
@@ -328,7 +331,7 @@ Keyboard focus uses a 3px aqua outline with a 3px offset. Honor reduced-motion p
 
 ### Shared UI Rule for New Screens
 - Use `.ui-card`, `.ui-button`, and `.ui-input` from `src/app/globals.css` for new surfaces and controls. These classes inherit the shared spacing, color, radius, focus, and coarse-pointer tokens.
-- Use `DropdownSelect` from `src/components/dropdown-select.tsx` for choice menus, and `CatchDatePicker` from `src/components/catch-date-picker.tsx` for date and calendar controls. Do not add native selects or separate date-picker markup for new UI.
+- Use `DropdownSelect` from `src/components/dropdown-select.tsx` for choice menus, including its searchable variant when a list is long, and `CatchDatePicker` from `src/components/catch-date-picker.tsx` for date and calendar controls. Do not add native selects or separate date-picker markup for new UI.
 - When a screen needs a new size or behavior, add a named variant to the shared component and its token-based styles. Avoid recreating the base card, dropdown, calendar, or field styles in a page stylesheet.
 - This rule keeps new cards, dropdowns, and calendars aligned automatically through the shared primitives and global tokens.
 
@@ -337,21 +340,22 @@ Keyboard focus uses a 3px aqua outline with a 3px offset. Honor reduced-motion p
 - **States:** Desktop navigation expands to 212px or collapses to a 64px icon rail; the first desktop visit starts expanded, and the choice persists. Navigation rows are 40px, with 18px Lucide icons and 13px labels. The active link uses a mixed sea-glass/white fill, deep-current text and a 600 weight. Inactive links use muted ink; hover introduces a lighter sea-glass mix. Tablet defaults to the icon rail; below 768px the same routes live in a floating native dialog drawer.
 - **Treatment:** Keep language accessible through its native select, and retain accessible labels on icon-only theme, guide and close controls. Preserve the existing route and state behavior when changing layout.
 
-### Map Selection Marker
-- **Shape:** Circular numbered controls with a white 3px rim and compact lift. All breakpoints use a 44px control with a bold 17px number.
-- **Selected:** Deep-water teal action fill. The selected marker retains the same size as its peers.
-- **Unselected:** Map-marker slate fill, darkening on hover; keep numbers white and bold. Map focus uses a dark ink outline so it stays distinct from the pale water.
+### Province Selection
+- **Shape:** Use the source province polygons with thin pale strokes. Do not add numbered dots or pulse animation.
+- **Hover / focus:** Fill the region with lighter sea-glass teal and a stronger outline. Show its name in the map label.
+- **Selected:** Keep the province filled with deep teal after pointer exit and synchronize the searchable dropdown and detail panel.
+- **Keyboard / touch:** Keep one outline in the Tab order; arrow keys move focus, Enter or Space selects, and touch selects by tapping. Keep the searchable dropdown as an alternative for small or hard-to-target shapes.
 
 ### Explore Map Panel
-- **Character:** The illustration is the dominant discovery surface, framed by a white rounded panel and a quiet heading row.
-- **Controls:** Numbered buttons and the compact waterbody selector share the selected area. Reset restores the illustration overview; plus and minus change its visual scale without implying map navigation or GPS.
-- **Caption:** Keep the small illustration note visible outside the control cluster. The separate coverage notice uses the existing review colors and reflects the selected water.
-- **Dark theme:** Use the dedicated night canvas, reduced artwork brightness and pale map-label ink; keep selected controls teal with white numbers.
+- **Character:** The national SVG map is the dominant discovery surface, framed by a white rounded panel and a quiet heading row.
+- **Controls:** One searchable dropdown, province paths, and the detail panel share one selected-province state. Focus selected frames the chosen province; Fit Philippines restores the national overview without changing selection. Zoom and pan affect only the camera and never imply navigation or GPS.
+- **Caption:** Show the 2020 outline year, source/license attribution, and non-navigation limitation. Keep the coverage notice beside the selected province and Cavite water area choices.
+- **Dark theme:** Use the dedicated night canvas with muted land fills and clear pale borders; selected regions remain teal.
 
-### Location Options and Sheet
+### Province Selector and Cavite Water Areas
 - **Rows:** Native radio inputs sit beside a compact numbered badge, bold location name and muted subtitle. Rows are 60px high; selection uses a teal border and sea-glass/white mix.
-- **Focus:** Place the visible focus outline around the full row. Preserve native radio semantics and the shared selected-area state across markers, dropdown, panel and sheet.
-- **Sheet:** The mobile trigger opens a native modal dialog anchored at the bottom, with 14px upper corners, safe-area padding, a close control and a full-width Done action. Focus starts on the selected radio; the dialog's native keyboard behavior and return to its trigger remain intact.
+- **Focus:** Place the visible focus outline around the full row. Preserve native radio semantics and keep the selected Cavite water area separate from the selected province.
+- **Province choices:** The searchable dropdown and map update the same selected province. Only Cavite exposes the three pilot water-area choices.
 
 ## Do's and Don'ts
 
@@ -366,4 +370,4 @@ Keyboard focus uses a 3px aqua outline with a 3px offset. Honor reduced-motion p
 - **Don't** add faux-nautical decoration such as ropes, anchors, weathered paper, or generic fishing clip art.
 - **Don't** use amber as a general accent or let status color replace a readable label.
 - **Don't** spread shadows across every surface; reserve them for floating navigation, popovers and map controls.
-- **Don't** use the map's illustrated gradients and organic land shapes as a general page background treatment.
+- **Don't** imply that the 2020 province outlines are current legal, municipal-water, navigation, or fishing-access boundaries.

@@ -10,6 +10,19 @@ export type DropdownOption = {
   icon: LucideIcon;
 };
 
+type SearchableDropdown = {
+  placeholder: string;
+  noResults: string;
+  resultCountLabel?: (count: number) => string;
+};
+
+function normalizeOptionLabel(value: string) {
+  return value
+    .normalize("NFD")
+    .replace(/\p{Diacritic}/gu, "")
+    .toLocaleLowerCase();
+}
+
 type DropdownSelectProps = {
   id: string;
   label: string;
@@ -21,6 +34,7 @@ type DropdownSelectProps = {
   initialFocus?: boolean;
   portal?: boolean;
   disabled?: boolean;
+  searchable?: SearchableDropdown;
 };
 
 export function DropdownSelect({
@@ -34,13 +48,16 @@ export function DropdownSelect({
   initialFocus = false,
   portal = false,
   disabled = false,
+  searchable,
 }: DropdownSelectProps) {
   const rootRef = useRef<HTMLDivElement>(null);
   const triggerRef = useRef<HTMLButtonElement>(null);
   const popupRef = useRef<HTMLDivElement>(null);
+  const searchInputRef = useRef<HTMLInputElement>(null);
   const searchTextRef = useRef("");
   const searchTimeoutRef = useRef<ReturnType<typeof setTimeout> | null>(null);
   const [isOpen, setIsOpen] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
   const [popupStyle, setPopupStyle] = useState<CSSProperties>({ position: "fixed", visibility: "hidden" });
   const selectedIndex = Math.max(
     0,
@@ -50,6 +67,16 @@ export function DropdownSelect({
   const selectedOption = options[selectedIndex];
   const listboxId = `${id}-options`;
   const activeOptionId = `${listboxId}-${activeIndex}`;
+  const triggerActiveAttributes = searchable
+    ? {}
+    : {
+        "aria-activedescendant": isOpen ? activeOptionId : undefined,
+        "aria-autocomplete": "none" as const,
+      };
+  const filteredOptions = options
+    .map((option, index) => ({ option, index }))
+    .filter(({ option }) => normalizeOptionLabel(option.label).includes(normalizeOptionLabel(searchQuery.trim())));
+  const searchPlaceholder = searchable?.placeholder;
 
   useEffect(() => {
     if (!isOpen) return;
@@ -66,10 +93,13 @@ export function DropdownSelect({
 
   useEffect(() => {
     if (!isOpen) return;
+    if (searchPlaceholder && document.activeElement !== searchInputRef.current) {
+      searchInputRef.current?.focus({ preventScroll: true });
+    }
     popupRef.current
       ?.querySelector<HTMLElement>(`[data-option-index="${activeIndex}"]`)
       ?.scrollIntoView({ block: "nearest" });
-  }, [activeIndex, isOpen]);
+  }, [activeIndex, isOpen, searchPlaceholder]);
 
   useEffect(() => {
     if (disabled) setIsOpen(false);
@@ -138,6 +168,7 @@ export function DropdownSelect({
 
   function openOptions(index = selectedIndex) {
     if (disabled) return;
+    setSearchQuery("");
     setActiveIndex(index);
     setIsOpen(true);
   }
@@ -189,6 +220,18 @@ export function DropdownSelect({
       return;
     }
 
+    if (searchable && event.key.length === 1 && !event.ctrlKey && !event.metaKey && !event.altKey) {
+      event.preventDefault();
+      const query = event.key;
+      const nextOptions = options
+        .map((option, index) => ({ option, index }))
+        .filter(({ option }) => normalizeOptionLabel(option.label).includes(normalizeOptionLabel(query)));
+      setSearchQuery(query);
+      setActiveIndex(nextOptions[0]?.index ?? selectedIndex);
+      setIsOpen(true);
+      return;
+    }
+
     if (event.key.length === 1 && !event.ctrlKey && !event.metaKey && !event.altKey) {
       event.preventDefault();
       const nextSearch = `${searchTextRef.current}${event.key}`.trim().toLocaleLowerCase();
@@ -210,46 +253,128 @@ export function DropdownSelect({
     }
   }
 
+  function handleSearchKeyDown(event: KeyboardEvent<HTMLInputElement>) {
+    if (event.key === "Escape") {
+      event.preventDefault();
+      event.stopPropagation();
+      setIsOpen(false);
+      triggerRef.current?.focus({ preventScroll: true });
+      return;
+    }
+
+    if (event.key === "Tab") {
+      setIsOpen(false);
+      return;
+    }
+
+    if (event.key === "ArrowDown" || event.key === "ArrowUp" || event.key === "Home" || event.key === "End") {
+      if (!filteredOptions.length) return;
+      event.preventDefault();
+      const activePosition = filteredOptions.findIndex(({ index }) => index === activeIndex);
+      const nextPosition =
+        event.key === "Home"
+          ? 0
+          : event.key === "End"
+            ? filteredOptions.length - 1
+            : Math.max(
+                0,
+                Math.min(
+                  filteredOptions.length - 1,
+                  (activePosition < 0 ? 0 : activePosition) + (event.key === "ArrowDown" ? 1 : -1),
+                ),
+              );
+      setActiveIndex(filteredOptions[nextPosition].index);
+      return;
+    }
+
+    if (event.key === "Enter") {
+      const activeOption = filteredOptions.find(({ index }) => index === activeIndex);
+      if (activeOption) {
+        event.preventDefault();
+        chooseOption(activeOption.option, activeOption.index);
+      }
+    }
+  }
+
+  function renderOptions() {
+    return filteredOptions.map(({ option, index }, position) => {
+      const OptionIcon = option.icon;
+      const selected = option.value === value;
+      return (
+        <div
+          id={`${listboxId}-${index}`}
+          key={option.value}
+          role="option"
+          tabIndex={-1}
+          aria-selected={selected}
+          aria-posinset={position + 1}
+          aria-setsize={filteredOptions.length}
+          data-option-index={index}
+          data-active={index === activeIndex}
+          className="dropdown-select-option"
+          onPointerMove={() => setActiveIndex(index)}
+          onPointerDown={(event) => event.preventDefault()}
+          onClick={() => chooseOption(option, index)}
+          onKeyDown={(event) => {
+            if (event.key === "Enter" || event.key === " ") {
+              event.preventDefault();
+              chooseOption(option, index);
+            }
+          }}
+        >
+          <OptionIcon aria-hidden="true" className="dropdown-select-option-icon" />
+          <span className="dropdown-select-option-label">{option.label}</span>
+          {selected && <Check aria-hidden="true" className="dropdown-select-option-check" />}
+        </div>
+      );
+    });
+  }
+
   const SelectedIcon = selectedOption.icon;
   const popup = (
-    <div
-      ref={popupRef}
-      id={listboxId}
-      role="listbox"
-      aria-label={label}
-      className="dropdown-select-popup"
-      hidden={!isOpen}
-      style={portal ? popupStyle : undefined}
-    >
-      {options.map((option, index) => {
-        const OptionIcon = option.icon;
-        const selected = option.value === value;
-        return (
-          <div
-            id={`${listboxId}-${index}`}
-            key={option.value}
-            role="option"
-            tabIndex={-1}
-            aria-selected={selected}
-            data-option-index={index}
-            data-active={index === activeIndex}
-            className="dropdown-select-option"
-            onPointerMove={() => setActiveIndex(index)}
-            onPointerDown={(event) => event.preventDefault()}
-            onClick={() => chooseOption(option, index)}
-            onKeyDown={(event) => {
-              if (event.key === "Enter" || event.key === " ") {
-                event.preventDefault();
-                chooseOption(option, index);
-              }
+    <div ref={popupRef} className="dropdown-select-popup" hidden={!isOpen} style={portal ? popupStyle : undefined}>
+      {searchable && (
+        <div className="dropdown-select-search-row">
+          <input
+            ref={searchInputRef}
+            className="ui-input dropdown-select-search-input"
+            type="search"
+            value={searchQuery}
+            placeholder={searchable.placeholder}
+            aria-label={searchable.placeholder}
+            role="combobox"
+            aria-autocomplete="list"
+            aria-expanded={isOpen}
+            aria-controls={listboxId}
+            aria-activedescendant={
+              filteredOptions.some(({ index }) => index === activeIndex) ? activeOptionId : undefined
+            }
+            onChange={(event) => {
+              const query = event.target.value;
+              const nextOptions = options
+                .map((option, index) => ({ option, index }))
+                .filter(({ option }) =>
+                  normalizeOptionLabel(option.label).includes(normalizeOptionLabel(query.trim())),
+                );
+              setSearchQuery(query);
+              setActiveIndex(nextOptions[0]?.index ?? selectedIndex);
             }}
-          >
-            <OptionIcon aria-hidden="true" className="dropdown-select-option-icon" />
-            <span className="dropdown-select-option-label">{option.label}</span>
-            {selected && <Check aria-hidden="true" className="dropdown-select-option-check" />}
-          </div>
-        );
-      })}
+            onKeyDown={handleSearchKeyDown}
+          />
+          {searchable.resultCountLabel && (
+            <span className="dropdown-select-result-count" aria-live="polite">
+              {searchable.resultCountLabel(filteredOptions.length)}
+            </span>
+          )}
+        </div>
+      )}
+      <div id={listboxId} role="listbox" aria-label={label} className="dropdown-select-options">
+        {filteredOptions.length ? (
+          renderOptions()
+        ) : (
+          <p className="dropdown-select-no-results">{searchable?.noResults}</p>
+        )}
+      </div>
     </div>
   );
 
@@ -260,13 +385,12 @@ export function DropdownSelect({
         ref={triggerRef}
         id={id}
         type="button"
-        role="combobox"
+        role={searchable ? undefined : "combobox"}
         aria-label={`${label}: ${selectedOption.label}`}
         aria-haspopup="listbox"
         aria-expanded={isOpen}
         aria-controls={listboxId}
-        aria-activedescendant={isOpen ? activeOptionId : undefined}
-        aria-autocomplete="none"
+        {...triggerActiveAttributes}
         data-initial-focus={initialFocus ? "" : undefined}
         className="dropdown-select-trigger"
         disabled={disabled}

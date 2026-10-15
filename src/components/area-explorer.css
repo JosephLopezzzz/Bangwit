@@ -14,7 +14,7 @@
 .explore-section-tag {
   margin: 0;
   color: var(--teal-dark);
-  font-size: 11px;
+  font-size: var(--text-caption);
   font-weight: 700;
   line-height: 16px;
   letter-spacing: 0.1em;
@@ -51,7 +51,7 @@
   border-radius: 999px;
   background: var(--review-surface);
   color: var(--review-copy);
-  font-size: 11px;
+  font-size: var(--text-caption);
   font-weight: 700;
   line-height: 1.4;
 }
@@ -75,10 +75,6 @@
 .explore-map-panel,
 .explore-location-panel {
   min-width: 0;
-  padding: var(--card-padding);
-  border: 1px solid var(--line);
-  border-radius: var(--card-radius);
-  background: var(--white);
 }
 
 .explore-map-heading {
@@ -101,7 +97,8 @@
 }
 
 .explore-map-heading .dropdown-select--compact {
-  min-width: 176px;
+  width: min(100%, 360px);
+  min-width: min(100%, 240px);
 }
 
 .explore-map-heading .dropdown-select-trigger {
@@ -117,97 +114,101 @@
 .explore-map {
   position: relative;
   min-width: 0;
-  height: max(360px, calc(100dvh - 360px));
+  width: 100%;
+  height: clamp(420px, calc(100dvh - 250px), 640px);
   margin: 0;
   padding: 0;
   overflow: clip;
   border: 0;
   border-radius: 8px;
-  background: #d9f1f3;
+  background: var(--province-map-water);
 }
 
 .explore-map-stage {
   position: absolute;
   inset: 0;
-  transform-origin: 55% 50%;
-  transition: transform var(--motion-duration) cubic-bezier(0.16, 1, 0.3, 1);
+  overflow: clip;
 }
 
-.explore-map-art {
-  object-fit: fill;
-  opacity: 0.7;
+.province-map-svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  cursor: grab;
+  touch-action: pan-y;
+  user-select: none;
 }
 
-.explore-water-label,
-.explore-land-label,
-.explore-region-label {
-  position: absolute;
-  pointer-events: none;
-  color: #154d68;
-  font-size: 16px;
-  line-height: 1.2;
-  font-style: italic;
-  white-space: nowrap;
+.province-map-svg[data-panning="true"] {
+  cursor: grabbing;
 }
 
-.explore-label-manila {
-  left: 46.5%;
-  top: 20%;
-  font-size: 18px;
-}
-.explore-label-bacoor-bay {
-  left: 57.2%;
-  top: 52%;
-}
-.explore-label-canacao {
-  right: 6%;
-  top: 42%;
-}
-.explore-label-cavite-city {
-  left: 10.5%;
-  top: 49%;
-  font-size: 14px;
-}
-.explore-label-bacoor {
-  left: 34.5%;
-  top: 64.5%;
-  font-size: 14px;
-}
-.explore-region-label {
-  left: 36%;
-  top: 82%;
-  color: #386f51;
-  font-size: 22px;
-  font-weight: 700;
+.province-map-region {
+  fill: var(--province-land);
+  stroke: var(--province-land-outline);
+  stroke-width: 1px;
+  vector-effect: non-scaling-stroke;
+  cursor: pointer;
+  transition:
+    fill var(--motion-duration),
+    stroke var(--motion-duration),
+    stroke-width var(--motion-duration);
 }
 
-.explore-map-marker {
+.province-map-region:hover,
+.province-map-region[data-hovered="true"] {
+  fill: var(--province-land-hover);
+  stroke: var(--province-land-hover-outline);
+  stroke-width: 2px;
+}
+
+.province-map-region[data-selected="true"] {
+  fill: var(--province-land-selected);
+  stroke: var(--province-land-selected-outline);
+  stroke-width: 2.2px;
+}
+
+.province-map-region[data-selected="true"][data-hovered="true"],
+.province-map-region[data-selected="true"]:hover {
+  fill: var(--province-land-selected-hover);
+  stroke: var(--province-land-selected-outline);
+  stroke-width: 2.8px;
+}
+
+.province-map-region:focus {
+  outline: none;
+}
+
+.province-map-region:focus-visible {
+  outline: none;
+  fill: var(--province-land-hover);
+  stroke: var(--province-land-focus);
+  stroke-width: 3px;
+}
+
+.province-map-region[data-selected="true"]:focus-visible {
+  fill: var(--province-land-selected-hover);
+  stroke: var(--province-land-focus);
+}
+
+.province-map-label {
   position: absolute;
   z-index: 1;
-  display: grid;
-  width: 44px;
-  height: 44px;
-  place-items: center;
-  transform: translate(-50%, -50%);
-  border: 3px solid #fff;
-  border-radius: 50%;
-  background: #505d6e;
-  box-shadow: 0 5px 12px rgb(16 43 53 / 23%);
-  color: #fff;
-  font-size: 17px;
+  transform: translate(-50%, -112%);
+  max-width: min(60%, 240px);
+  overflow: hidden;
+  padding: 7px 10px;
+  border: 1px solid var(--line);
+  border-radius: var(--control-radius);
+  background: var(--white);
+  color: var(--ink);
+  font-size: 13px;
   font-weight: 700;
-  cursor: pointer;
-  transition: background-color var(--motion-duration);
-}
-.explore-map-marker:hover {
-  background: #354a5b;
-}
-.explore-map-marker[data-selected="true"] {
-  background: var(--teal-action);
-}
-.explore-map-marker:focus-visible {
-  z-index: 2;
-  outline-color: #102b35;
+  line-height: 1.3;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  pointer-events: none;
 }
 
 .explore-map-controls {
@@ -215,8 +216,15 @@
   right: 8px;
   bottom: 8px;
   display: grid;
-  gap: 4px;
+  gap: 8px;
 }
+
+.explore-map-view-controls,
+.explore-zoom-controls {
+  display: grid;
+  gap: 2px;
+}
+
 .explore-map-controls button {
   position: relative;
   display: grid;
@@ -230,6 +238,7 @@
   color: var(--ink);
   cursor: pointer;
 }
+
 .explore-map-controls button::before {
   position: absolute;
   z-index: -1;
@@ -240,56 +249,95 @@
   content: "";
   transition: background-color var(--motion-duration);
 }
+
 .explore-map-controls button:hover:enabled {
   color: var(--teal-dark);
 }
+
 .explore-map-controls button:hover:enabled::before {
   background: var(--teal-soft);
 }
+
 .explore-map-controls button:active:enabled::before {
   background: var(--line);
 }
+
 .explore-map-controls button:disabled {
   color: var(--muted);
   cursor: default;
 }
-.explore-zoom-controls {
-  display: grid;
-}
 
 .explore-map-note {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 4px 12px;
   margin: 8px 0 0;
   color: var(--muted);
-  font-size: 11px;
+  font-size: var(--text-caption);
   line-height: 16px;
-  text-align: right;
 }
-.explore-map-error {
-  position: absolute;
-  top: 12px;
-  left: 12px;
-  max-width: calc(100% - 24px);
-  margin: 0;
-  padding: 8px 12px;
-  border-radius: var(--control-radius);
-  background: var(--white);
-  color: var(--ink);
-  font-size: 13px;
+
+.explore-map-note a {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  color: var(--teal-dark);
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.explore-map-note a:hover {
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.explore-map-note a:focus-visible {
+  outline: 3px solid var(--focus);
+  outline-offset: 2px;
+  border-radius: 2px;
 }
 
 .explore-location-picker {
   min-width: 0;
 }
-.explore-location-panel h2,
-.location-sheet h2 {
+
+.explore-location-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.explore-location-panel h2 {
   margin: 8px 0 0;
   color: var(--ink);
-  font-size: 18px;
+  font-size: var(--text-section);
   font-weight: 700;
   line-height: 1.3;
   letter-spacing: -0.025em;
   text-wrap: balance;
 }
+
+.explore-location-summary-status {
+  display: none;
+  margin: 2px 0 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.4;
+}
+
+.explore-details-toggle {
+  display: none;
+  flex: 0 0 auto;
+  padding: 0 10px;
+}
+
+.explore-location-content {
+  display: block;
+}
+
 .explore-location-description {
   max-width: 70ch;
   margin: 8px 0 0;
@@ -297,6 +345,25 @@
   font-size: 13px;
   line-height: 1.5;
 }
+
+.explore-pilot-description {
+  margin-top: 14px;
+}
+
+.explore-pilot-action {
+  margin-top: 12px;
+}
+
+.explore-historical-note {
+  margin: 12px 0 0;
+  padding: 10px 12px;
+  border-radius: var(--control-radius);
+  background: var(--review-surface);
+  color: var(--review-copy);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
 .location-options {
   display: grid;
   gap: 8px;
@@ -305,6 +372,7 @@
   padding: 0;
   border: 0;
 }
+
 .location-row {
   display: flex;
   align-items: center;
@@ -319,14 +387,17 @@
     border-color var(--motion-duration),
     background-color var(--motion-duration);
 }
+
 .location-row:hover {
   border-color: var(--teal);
   background: color-mix(in srgb, var(--teal-soft) 20%, var(--white));
 }
+
 .location-row[data-selected="true"] {
   border-color: var(--teal);
   background: color-mix(in srgb, var(--teal-soft) 42%, var(--white));
 }
+
 .location-number {
   display: grid;
   width: 24px;
@@ -340,13 +411,16 @@
   font-weight: 700;
   font-variant-numeric: tabular-nums;
 }
+
 .location-row[data-selected="true"] .location-number {
   background: var(--teal-action);
 }
+
 .location-copy {
   min-width: 0;
   flex: 1;
 }
+
 .location-name {
   display: block;
   color: var(--ink);
@@ -354,6 +428,7 @@
   font-weight: 700;
   line-height: 1.3;
 }
+
 .location-subtitle {
   display: block;
   margin-top: 2px;
@@ -361,6 +436,7 @@
   font-size: 13px;
   line-height: 1.35;
 }
+
 .location-row input {
   appearance: none;
   width: 14px;
@@ -372,34 +448,37 @@
   background: var(--white);
   cursor: pointer;
 }
+
 .location-row input:checked {
   border-color: var(--teal);
   background: radial-gradient(circle, var(--teal) 0 3px, transparent 3.5px);
 }
+
 .location-row:has(input:focus-visible) {
   outline: 3px solid var(--focus);
   outline-offset: 3px;
 }
+
 .location-row input:focus-visible {
   outline: none;
-}
-.explore-location-trigger {
-  display: none;
 }
 
 .explore-coverage {
   margin-top: 16px;
-  padding: 12px 16px;
-  border-radius: var(--card-radius);
+  padding: 12px;
+  border: 1px solid color-mix(in srgb, var(--review-copy) 16%, transparent);
+  border-radius: var(--control-radius);
   background: var(--review-surface);
   color: var(--review-copy);
 }
-.explore-coverage h2 {
+
+.explore-coverage h3 {
   margin: 0;
   font-size: 13px;
   font-weight: 700;
   line-height: 1.5;
 }
+
 .explore-coverage p {
   max-width: 75ch;
   margin: 4px 0 0;
@@ -407,90 +486,19 @@
   line-height: 1.5;
 }
 
-.location-sheet {
-  inset: auto 0 0;
-  width: 100%;
-  max-width: 560px;
-  max-height: calc(100dvh - 24px);
-  margin: auto auto 0;
-  padding: 16px 16px max(16px, env(safe-area-inset-bottom));
-  overflow-y: auto;
-  overscroll-behavior: contain;
-  border: 0;
-  border-radius: var(--dialog-radius) var(--dialog-radius) 0 0;
-  background: var(--white);
-  color: var(--ink);
-}
-.location-sheet::backdrop {
-  background: var(--scrim);
-}
-.location-sheet-heading {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-.location-sheet h2 {
-  flex: 1;
-  margin: 0;
-}
-.location-sheet-close {
-  display: grid;
-  width: 44px;
-  height: 44px;
-  flex-shrink: 0;
-  place-items: center;
-  margin: -8px -8px -8px 0;
-  border: 0;
-  border-radius: var(--control-radius);
-  background: transparent;
-  color: var(--muted);
-  cursor: pointer;
-}
-.location-sheet-close:hover {
-  background: var(--teal-soft);
-  color: var(--teal-dark);
-}
-.location-sheet-done {
-  width: 100%;
-  min-height: 44px;
-  margin-top: 16px;
-  border: 0;
-  border-radius: var(--control-radius);
-  background: var(--teal-action);
-  color: #fff;
-  font-size: 13px;
-  font-weight: 700;
-  cursor: pointer;
-}
-.location-sheet-done:hover,
-.location-sheet-done:active {
-  background: var(--teal-action-hover);
-}
-
-:root[data-theme="dark"] .explore-map {
-  background: #123d49;
-}
-:root[data-theme="dark"] .explore-map-art {
-  opacity: 0.65;
-  filter: brightness(0.58) saturate(0.75);
-}
-:root[data-theme="dark"] .explore-water-label,
-:root[data-theme="dark"] .explore-land-label,
-:root[data-theme="dark"] .explore-region-label {
-  color: #e4f3ee;
-  text-shadow: 0 1px 2px rgb(3 19 25 / 70%);
-}
-
 @media (max-width: 1199px) {
   .explore-page {
     padding: 20px;
   }
+
   .explore-workspace {
     grid-template-columns: minmax(0, 1fr);
   }
+
   .explore-map {
-    height: 420px;
+    height: clamp(420px, 48vw, 540px);
   }
+
   .explore-location-panel .location-options {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
@@ -500,120 +508,97 @@
   .explore-page {
     padding: 20px 16px;
   }
+
   .explore-hero {
     grid-template-columns: minmax(0, 1fr);
   }
+
   .explore-hero h1 {
     font-size: 26px;
   }
+
   .explore-status {
     grid-row: 4;
     justify-self: start;
     margin-top: 8px;
   }
+
   .explore-map-panel {
     padding: 12px;
   }
+
   .explore-map-heading {
-    min-height: 24px;
+    align-items: stretch;
     margin-bottom: 8px;
   }
+
   .explore-map-heading h2 {
     font-size: 17px;
   }
+
   .explore-map-heading .dropdown-select {
-    display: none;
+    width: 100%;
   }
+
+  .explore-map-heading .dropdown-select--compact {
+    min-width: 0;
+  }
+
   .explore-map {
     height: 300px;
   }
-  .explore-water-label,
-  .explore-land-label {
-    font-size: 12px;
-  }
-  .explore-label-manila {
-    left: 42%;
-    top: 12%;
-    font-size: 16px;
-  }
-  .explore-label-bacoor-bay {
-    left: 45%;
-    top: 48%;
-  }
-  .explore-label-canacao {
-    right: 3%;
-    top: 34%;
-  }
-  .explore-label-cavite-city {
-    left: 5%;
-  }
-  .explore-label-bacoor {
-    left: 28%;
-    top: 68%;
-  }
-  .explore-region-label {
-    left: 33%;
-    font-size: 19px;
-  }
-  .explore-map-controls {
-    position: static;
-    display: contents;
-  }
-  .explore-map-controls > button {
-    position: absolute;
-    top: 4px;
-    right: 4px;
-  }
-  .explore-zoom-controls {
-    position: absolute;
-    right: 4px;
-    bottom: 4px;
-  }
+
   .explore-map-note {
+    justify-content: center;
     text-align: center;
   }
+
   .explore-location-panel {
-    display: none;
+    padding: 16px;
   }
-  .explore-location-trigger {
-    display: flex;
-    width: 100%;
-    min-height: 60px;
+
+  .explore-location-heading {
+    min-height: 44px;
+  }
+
+  .explore-location-summary-status {
+    display: block;
+  }
+
+  .explore-details-toggle {
+    display: inline-flex;
+    width: 44px;
+    height: 44px;
     align-items: center;
-    gap: 12px;
-    padding: 10px 12px;
-    border: 1px solid var(--line);
-    border-radius: var(--card-radius);
-    background: var(--white);
-    color: var(--teal-dark);
-    text-align: left;
-    cursor: pointer;
+    justify-content: center;
+    padding: 0;
   }
-  .explore-location-trigger:hover {
-    border-color: var(--teal);
-    background: color-mix(in srgb, var(--teal-soft) 20%, var(--white));
+
+  .explore-details-toggle svg {
+    transition: transform var(--motion-duration);
   }
-  .explore-location-trigger > span {
-    min-width: 0;
-    flex: 1;
+
+  .explore-details-toggle[aria-expanded="true"] svg {
+    transform: rotate(180deg);
   }
-  .location-trigger-label {
+
+  .explore-location-content {
+    display: none;
+    padding-top: 4px;
+  }
+
+  .explore-location-content[data-expanded="true"] {
     display: block;
-    color: var(--muted);
-    font-size: 12px;
-    line-height: 1.4;
   }
-  .explore-location-trigger strong {
-    display: block;
-    margin-top: 2px;
-    color: var(--ink);
-    font-size: 14px;
+
+  .explore-location-panel .location-options {
+    grid-template-columns: minmax(0, 1fr);
   }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .explore-map-stage,
-  .explore-map-marker,
+  .province-map-svg,
+  .province-map-region,
   .explore-map-controls button::before,
   .location-row {
     transition: none;
@@ -621,13 +606,22 @@
 }
 
 @media (forced-colors: active) {
+  .province-map-region {
+    fill: Canvas;
+    stroke: ButtonText;
+  }
+
+  .province-map-region[data-selected="true"],
+  .province-map-region[data-hovered="true"] {
+    fill: Highlight;
+    stroke: HighlightText;
+  }
+
   .location-row[data-selected="true"] {
     outline: 1px solid Highlight;
   }
+
   .location-row input {
     appearance: auto;
-  }
-  .explore-map-marker {
-    border-color: ButtonText;
   }
 }
