@@ -23,7 +23,7 @@ On the first origin, the test accepted the prototype notice, skipped optional pr
 
 The browser context emitted 654 request events while visiting routes, loading the service worker, and exercising the flow. After excluding the two local test origins, local `blob:` image URLs, and Edge's own `edge://downloads-hub` download UI, **zero external HTTP(S) requests were observed**. The run recorded zero browser console errors and zero page errors. The download UI and blob URLs are browser-local activity, not requests to a third-party host.
 
-This evidence applies to this local build and these test origins only. It does not inspect the deployed site's traffic, hosting/CDN logs, browser extensions, browser-level telemetry, other Edge profiles, or a physical phone. It also does not establish that the draft policies are legally approved. Repeat the same synthetic flow against the controlled HTTPS Preview before making a release claim.
+This evidence applies to this local build and these test origins only. It does not inspect the deployed site's traffic, hosting/CDN logs, browser extensions, browser-level telemetry, other Edge profiles, or a physical phone. It also does not establish that the draft policies are legally approved. A partial Preview UI round-trip is recorded below; a Preview request capture remains necessary before making a deployed traffic claim.
 
 ## Production-origin HTTPS synthetic traffic check
 
@@ -33,4 +33,14 @@ Microsoft Edge 155.0.4283.45 used two fresh isolated browser contexts. The first
 
 The DevTools capture recorded 160 browser-visible HTTP(S) request events across page and service-worker sessions. All requests targeted the supplied origin and used GET; none had request bodies, none used a write method, and no external HTTP(S) origin appeared. The response statuses observed were 200. The capture does not include Vercel server/CDN logs or browser-level telemetry.
 
-This confirms the tested Production-origin flow only. It does not complete the controlled Preview repeat, physical-phone/installed-app acceptance, or legal review of the prototype policies.
+This confirms the tested Production-origin flow only. It does not establish Preview request methods/bodies, physical-phone/installed-app acceptance, or legal review of the prototype policies.
+
+## Protected Preview UI round-trip (partial)
+
+Run on October 15, 2026 against Vercel Preview deployment `8xbXUrGUrW7fwSMH1StvRUdzmtJL`, Ready for commit `6a8814950884b1c55fbd35c6f5ec049af298f2df` on `codex/https-preview-20261015`: `https://bangwit-38a0tqos7-josephlopezzzzs-projects.vercel.app/`. The app source is unchanged from the Production-tested commit `8dd97f3`; the intervening commit contains only documentation changes.
+
+In a fresh Preview origin in the user's Brave browser session, the test accepted the prototype notice, skipped optional setup and the tour, saved a synthetic catch with the synthetic PNG, and saw one catch with an image in the journal. The Settings export flow displayed its success message, but the browser automation did not expose the generated Blob as a local file. The test then removed the synthetic row, confirmed the journal was empty, selected the previously verified version 1 synthetic backup from the Production-origin run, and restored it. Settings reported one restored record; the journal showed the synthetic catch and image. The row was deleted afterward and the Preview journal returned to zero. No real catch data was used.
+
+The read-only staging checker received `302` for `/catches` and reported that protected Previews may require a signed-in browser; the interactive Brave session could load the Preview. No access protection was bypassed. The isolated Edge launch was blocked by policy, and raw CDP capture was unavailable in the Browser Use session, so this run did not observe Preview HTTP(S) methods, bodies, service-worker traffic, or external origins. Restore was not performed in a second browser context, and the Preview-generated backup bytes were not inspected.
+
+This is Preview UI evidence only. Keep the Production traffic result bounded to Production, and do not claim the Preview's network behavior from this partial run.

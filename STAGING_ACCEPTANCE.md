@@ -1,6 +1,6 @@
 # HTTPS staging and phone acceptance
 
-Prepared October 15, 2026. The hosted origin `https://bangwit.vercel.app/` was checked against Vercel Production deployment `A74x3ZMLJMAjQ8ZhxiMcFeEWELYK`, Ready for commit `8dd97f3c425cabc4f4b71a96259fda83325bb427`. This hostname is the Production alias, not a Preview deployment. The production-origin synthetic traffic run is recorded below. The local Turbopack build, hosting checker, and prior desktop checks in the historical release section were recorded against earlier source and do not verify the build or phone behavior of this commit. The user reported a phone pass in online and offline modes; device/browser details and browser-tab versus installed-app context were not recorded. Prior desktop results are in [OFFLINE_ACCEPTANCE.md](OFFLINE_ACCEPTANCE.md).
+Prepared October 15, 2026. The hosted origin `https://bangwit.vercel.app/` was checked against Vercel Production deployment `A74x3ZMLJMAjQ8ZhxiMcFeEWELYK`, Ready for commit `8dd97f3c425cabc4f4b71a96259fda83325bb427`. This hostname is the Production alias, not a Preview deployment. The production-origin synthetic traffic run is recorded below. A separate Preview UI round-trip on commit `6a8814950884b1c55fbd35c6f5ec049af298f2df` is also recorded; full Preview HTTP traffic capture remains pending. The local Turbopack build, hosting checker, and prior desktop checks in the historical release section were recorded against earlier source and do not verify the build or phone behavior of this commit. The user reported a phone pass in online and offline modes; device/browser details and browser-tab versus installed-app context were not recorded. Prior desktop results are in [OFFLINE_ACCEPTANCE.md](OFFLINE_ACCEPTANCE.md).
 
 ## Deployment setup
 
@@ -57,13 +57,21 @@ This read-only checker verifies the journal/fallback documents, `/serwist/sw.js`
 - Browser and data: Microsoft Edge 155.0.4283.45 in two fresh, isolated contexts. The first empty journal saved one synthetic catch with a 68-byte PNG and downloaded a version 1 JSON backup containing that record and photo. The second empty journal restored the backup; IndexedDB then contained one record with the same 68-byte photo. The journal UI showed one catch. No real catch data was used.
 - Service worker: `https://bangwit.vercel.app/serwist/sw.js` activated and controlled the page after an online reload.
 - Traffic: 160 DevTools HTTP(S) request events were observed across page and service-worker sessions. All targeted `https://bangwit.vercel.app`, used GET, and had no request bodies; no external origin or write method was observed. The response statuses observed were 200.
-- Scope: this is browser-visible traffic for the synthetic flow. It does not inspect Vercel server/CDN logs, browser-level telemetry, other browser profiles, physical-phone behavior, or a protected Preview deployment. Repeat on a controlled Preview for Preview-specific acceptance.
+- Scope: this is browser-visible traffic for the synthetic flow. It does not inspect Vercel server/CDN logs, browser-level telemetry, other browser profiles, physical-phone behavior, or Preview request methods/bodies. The separate Preview UI round-trip below exercised save, export feedback, and restore but did not provide a Preview network capture.
+
+## October 15 protected Preview UI round-trip (partial)
+
+- Deployment: Vercel Preview `8xbXUrGUrW7fwSMH1StvRUdzmtJL`, Ready for commit `6a8814950884b1c55fbd35c6f5ec049af298f2df` on branch `codex/https-preview-20261015`. The app source is unchanged from `8dd97f3`; the intervening commit changes only these acceptance/privacy documents. Preview URL: `https://bangwit-38a0tqos7-josephlopezzzzs-projects.vercel.app/`.
+- In a fresh origin in Brave, the test accepted the prototype notice, skipped optional setup and the tour, saved a synthetic catch with the synthetic PNG, and confirmed the journal showed one catch with an image preview. Settings displayed its backup success message after export was confirmed.
+- The browser automation did not expose the Preview-created Blob as a file for inspection. To test restore, the synthetic row was removed until the Preview journal showed zero, then the previously verified version 1 synthetic backup from the Production-origin run was selected. Settings reported one record restored and the Preview journal showed the synthetic catch and image. The synthetic row was deleted afterward and the journal returned to zero.
+- The read-only hosting checker returned `302` for `/catches` and reported that protected Previews may require a signed-in browser. The interactive Brave session could load the deployment. No access protection was bypassed.
+- Scope: this verifies the Preview UI save/export feedback/import flow in one browser profile; restore used a backup produced by the earlier run, not the Preview download. A fresh second browser context, Preview backup bytes, service-worker control, and Preview HTTP request methods/bodies were not verified. The isolated Edge launch was blocked by policy and raw CDP capture was unavailable in the browser session. Do not claim Preview traffic acceptance from this run.
 
 In that browser, confirm the app loads, the service worker finishes installing, and an online reload is controlled before testing offline. A first visit without internet cannot install the worker. The worker response must retain `Service-Worker-Allowed: /` and revalidate through `Cache-Control: no-cache, no-store, must-revalidate`. HTTPS and a valid manifest are part of [Next.js PWA installation](https://nextjs.org/docs/app/guides/progressive-web-apps).
 
 ## Phone test
 
-Run separately on each supported physical phone/browser and in the installed home-screen app. Viewport emulation is not a phone pass. Read the prototype notice on that device before accepting it. Use a fresh synthetic journal; do not restore over or clear a real journal. The isolated local browser traffic result is documented in [PRIVACY_REVIEW.md](PRIVACY_REVIEW.md); repeat it against the controlled HTTPS Preview for a deployed-origin check.
+Run separately on each supported physical phone/browser and in the installed home-screen app. Viewport emulation is not a phone pass. Read the prototype notice on that device before accepting it. Use a fresh synthetic journal; do not restore over or clear a real journal. The Production-origin traffic run and partial Preview UI round-trip are documented in [PRIVACY_REVIEW.md](PRIVACY_REVIEW.md); full Preview request capture remains pending.
 
 1. Open the chosen HTTPS origin online in Android Chrome or iPhone Safari. Visit `/catches`, wait for installation and reload online. Record the initial journal count.
 2. Turn off both Wi-Fi and cellular data. Reload `/catches` and verify the form and existing journal open. If the offline page appears, use its journal link and record whether recovery worked.
@@ -78,19 +86,21 @@ Run separately on each supported physical phone/browser and in the installed hom
 
 | Detail | Recorded value |
 | --- | --- |
-| Date and tester | October 15, 2026; local release checks and user-reported phone result |
+| Date and tester | October 15, 2026; local release checks, user-reported phone pass, Production-origin traffic run, and partial Preview UI round-trip |
 | Overall online/offline phone result | Pass, user-reported; individual results and device details not recorded |
 | Phone model / OS version | Not provided |
 | Browser / version | Not provided |
 | Browser tab or installed app | Desktop hosted journal and online reload checked; phone context not specified |
-| Exact HTTPS origin | `https://bangwit.vercel.app/` (read-only hosting checks passed October 15, 2026) |
-| Last recorded deployed commit / build ID | `d957c1379f7f7c6deafdb670553199e5dca4654c`; Vercel deployment `Gb1SKrj6GC3xkf7npFqHe9yFYgUw` Ready at last check; current branch is newer and deployment needs recheck |
+| Exact HTTPS origins | Production: `https://bangwit.vercel.app/`; Preview: `https://bangwit-38a0tqos7-josephlopezzzzs-projects.vercel.app/` |
+| Last recorded deployed commit / build ID | Production traffic run: `8dd97f3c425cabc4f4b71a96259fda83325bb427`, Vercel deployment `A74x3ZMLJMAjQ8ZhxiMcFeEWELYK`; Preview UI run: `6a8814950884b1c55fbd35c6f5ec049af298f2df`, Vercel deployment `8xbXUrGUrW7fwSMH1StvRUdzmtJL`, branch `codex/https-preview-20261015` (Ready) |
 | Starting / ending journal counts | Desktop hosted journal showed 0 before and after online reload; phone counts not recorded |
 | First-visit installation / controlled reload | Pending |
 | Offline saved catch + full photo + units | Pending |
 | Reconnect draft + single save | Pending |
 | Installed app cold launch offline | Pending |
-| Backup download | Pending |
-| Failures, screenshots and limitations | Browser worker control not independently observed; phone/device details not provided |
+| Backup download | Preview success message shown; downloaded Preview file not captured for inspection |
+| Preview save / restore | UI round-trip passed with synthetic data; restore used previously verified backup; test row removed afterward |
+| Preview traffic / hosting check | HTTP traffic capture pending; unauthenticated staging checker received `302` for `/catches` |
+| Failures, screenshots and limitations | Preview service-worker control and request methods/bodies not observed; phone/device details not provided |
 
 Mark each result pass, fail, not run or not supported. Add a separate table for each phone/browser context. Record new failures before changing the app. A phone pass or local traffic check does not complete deployed-origin/CDN traffic review, production policy review, or current fishing/legal/safety data review.
