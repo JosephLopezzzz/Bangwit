@@ -72,6 +72,29 @@
   margin-top: 16px;
 }
 
+.explore-workspace[data-details-open="false"] {
+  grid-template-columns: minmax(0, 1fr);
+}
+
+.explore-location-picker[hidden] {
+  display: none;
+}
+
+.explore-map-heading-actions {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  min-width: 0;
+  width: min(100%, 404px);
+  max-width: 100%;
+}
+
+.explore-map-heading .explore-map-heading-actions .dropdown-select {
+  flex: 1;
+  min-width: 0;
+  width: auto;
+}
+
 .explore-map-panel,
 .explore-location-panel {
   min-width: 0;
@@ -166,14 +189,14 @@
 .province-map-region[data-selected="true"] {
   fill: var(--province-land-selected);
   stroke: var(--province-land-selected-outline);
-  stroke-width: 2.2px;
+  stroke-width: 1.5px;
 }
 
 .province-map-region[data-selected="true"][data-hovered="true"],
 .province-map-region[data-selected="true"]:hover {
   fill: var(--province-land-selected-hover);
   stroke: var(--province-land-selected-outline);
-  stroke-width: 2.8px;
+  stroke-width: 1.75px;
 }
 
 .province-map-region:focus {
@@ -195,13 +218,12 @@
 .province-map-label {
   position: absolute;
   z-index: 1;
-  transform: translate(-50%, -112%);
-  max-width: min(60%, 240px);
+  transform: translate(8px, -50%);
+  max-width: min(40%, 180px);
   overflow: hidden;
-  padding: 7px 10px;
-  border: 1px solid var(--line);
-  border-radius: var(--control-radius);
-  background: var(--white);
+  padding: 0;
+  border: 0;
+  background: transparent;
   color: var(--ink);
   font-size: 13px;
   font-weight: 700;
@@ -209,6 +231,18 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   pointer-events: none;
+  text-shadow:
+    -1px -1px 1px var(--province-map-water),
+    1px -1px 1px var(--province-map-water),
+    -1px 1px 1px var(--province-map-water),
+    1px 1px 1px var(--province-map-water);
+}
+
+.explore-location-actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  flex: 0 0 auto;
 }
 
 .explore-map-controls {
@@ -537,6 +571,10 @@
   }
 
   .explore-map-heading .dropdown-select {
+    width: 100%;
+  }
+
+  .explore-map-heading-actions {
     width: 100%;
   }
 

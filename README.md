@@ -40,6 +40,18 @@ The source-level privacy review and isolated local browser traffic check for cat
 
 For HTTPS Preview deployment settings and the hosting checker, follow [STAGING_ACCEPTANCE.md](STAGING_ACCEPTANCE.md). The hosted-origin check passed at `https://bangwit.vercel.app/`; its deployed commit ID and a fully detailed phone record remain unverified.
 
+## Map warning preview
+
+Explore includes an opt-in **Preview warning layer** with fictional Cavite, Batangas and Laguna examples. The scenario menu previews overlapping warnings, stale/expired last-known alerts and a checked empty state on a fixed 1 January 2026 timeline. Exit preview returns to actual feed availability.
+
+Live warnings are **not enabled**. The normalized server ingestion endpoint, strict geography/source validation, freshness handling and public snapshot cache are in place. A reviewed publisher/adapter, its update schedule and production acceptance remain required. See [MAP_ADVISORIES.md](docs/MAP_ADVISORIES.md) for the source review, contract and rollout gates.
+
+Run the focused safety-state checks with:
+
+~~~powershell
+npm run test:advisories
+~~~
+
 ## Historical research records
 
 The Species page has a separate bilingual historical-record section with 12 reviewed CC0 museum specimens. The research adapter excludes the rejected locality, preserves unknown and month-only collection dates, and cross-checks taxonomy, provenance, licenses and locality-review states before writing the browser-facing snapshot. These records are not a current species list or fishing advice. No API key or live provider request is needed to read the snapshot.

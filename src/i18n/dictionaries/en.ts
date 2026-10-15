@@ -1,6 +1,8 @@
+import { enMapWarnings } from "../map-warnings";
 import type { Dictionary } from "../types";
 
 export const enDictionary: Dictionary = {
+  mapWarnings: enMapWarnings,
   common: {
     appName: "Bangwit",
     tagline: "Every catch has a story.",

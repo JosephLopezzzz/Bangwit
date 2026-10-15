@@ -2,6 +2,8 @@
 
 Reviewed 15 October 2026. This is a source review of the current local-first catch flow, not a production network-capture audit or legal approval of the draft policies.
 
+The map-warning extension adds a same-origin GET to /api/advisories with credentials omitted. Only a public warning snapshot is cached under bangwit.public-advisories.v1; catch/profile/spot/GPS data is not included in that request or the configured server-side publisher fetch. The new cache is excluded from catch backups and removed by Settings erasure. Live ingestion remains disabled pending source review. These additions were not part of the earlier browser/production traffic captures below; see [MAP_ADVISORIES.md](docs/MAP_ADVISORIES.md) for their contract and remaining acceptance.
+
 ## Findings
 
 - `src/lib/storage/catches.ts` stores catch entries in the browser's IndexedDB database `bangwit-local`, object store `catches`. The storage module contains no network request code.

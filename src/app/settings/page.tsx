@@ -19,6 +19,7 @@ import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { useBangwit } from "@/components/bangwit-provider";
 import { getFisherTypeLabel, getPreferredWaterLabel } from "@/i18n/labels";
+import { PUBLIC_ADVISORY_CACHE_KEY } from "@/lib/map-advisories";
 import { clearCatches, exportCatchBackup, restoreCatchBackup } from "@/lib/storage/catches";
 import "./settings.css";
 
@@ -174,6 +175,7 @@ export default function SettingsPage() {
         "bangwit.tour.done",
         "bangwit.theme",
         "bangwit.lang",
+        PUBLIC_ADVISORY_CACHE_KEY,
       ]) {
         localStorage.removeItem(key);
       }

@@ -1,6 +1,9 @@
+import type { enMapWarnings } from "./map-warnings";
+
 export type Language = "fil" | "en";
 
 export type Dictionary = {
+  mapWarnings: typeof enMapWarnings;
   common: {
     appName: string;
     tagline: string;

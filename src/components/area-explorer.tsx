@@ -1,6 +1,17 @@
 "use client";
 
-import { ArrowUpRight, ChevronDown, LocateFixed, MapPin, Minus, Plus, RotateCcw } from "lucide-react";
+import {
+  ArrowUpRight,
+  ChevronDown,
+  LocateFixed,
+  MapPin,
+  Minus,
+  PanelRightClose,
+  PanelRightOpen,
+  Plus,
+  RotateCcw,
+  X,
+} from "lucide-react";
 import {
   type KeyboardEvent as ReactKeyboardEvent,
   type PointerEvent as ReactPointerEvent,
@@ -10,9 +21,14 @@ import {
 } from "react";
 import { useBangwit } from "@/components/bangwit-provider";
 import { type DropdownOption, DropdownSelect } from "@/components/dropdown-select";
+import { WarningCallout, WarningDetails, WarningLegend, WarningToolbar } from "@/components/map-warning-ui";
+import { useMapAdvisories } from "@/components/use-map-advisories";
+import { type AdvisoryDemoScenario, createAdvisoryDemo, DEMO_ADVISORY_NOW } from "@/data/map-advisory-demo";
 import { PHILIPPINE_PROVINCE_PATHS } from "@/data/phl-province-paths";
 import { CAVITE_PROVINCE_ID, PHILIPPINE_PROVINCES, type ProvinceId } from "@/data/phl-provinces";
+import { getProvinceWarning, type HazardType, WARNING_RANK } from "@/lib/map-advisories";
 import "./area-explorer.css";
+import "./map-warnings.css";
 
 const areas = ["Manila Bay", "Bacoor Bay", "CaÃ±acao Bay"] as const;
 const MAX_ZOOM = 5;
@@ -114,7 +130,50 @@ function LocationOptions({ group }: { group: string }) {
 }
 
 export function AreaExplorer() {
-  const { selectedArea, selectedProvince, setSelectedProvince, dict } = useBangwit();
+  const { selectedArea, selectedProvince, setSelectedProvince, dict, lang } = useBangwit();
+  const liveAdvisories = useMapAdvisories();
+  const [demoScenario, setDemoScenario] = useState<AdvisoryDemoScenario | null>(null);
+  const [hazardFilter, setHazardFilter] = useState<HazardType | "all">("all");
+  const [regionDetailsOpen, setRegionDetailsOpen] = useState(true);
+  const [dismissedCalloutKey, setDismissedCalloutKey] = useState<string | null>(null);
+  const workspaceRef = useRef<HTMLDivElement>(null);
+  const detailsToggleRef = useRef<HTMLButtonElement>(null);
+  const warningSnapshot = demoScenario ? createAdvisoryDemo(demoScenario) : liveAdvisories.snapshot;
+  const warningNow = demoScenario
+    ? DEMO_ADVISORY_NOW + (demoScenario === "stale" ? 4 * 60 * 60 * 1000 : 0)
+    : liveAdvisories.now;
+  const warningConnectionUnavailable =
+    demoScenario === "stale" || (!demoScenario && liveAdvisories.connection !== "ready");
+  const warningsByProvince = new Map(
+    PHILIPPINE_PROVINCES.map((province) => [
+      province.id,
+      getProvinceWarning(warningSnapshot, province.id, warningNow, warningConnectionUnavailable),
+    ]),
+  );
+  const filteredWarnings = new Map(
+    PHILIPPINE_PROVINCES.map((province) => [
+      province.id,
+      getProvinceWarning(warningSnapshot, province.id, warningNow, warningConnectionUnavailable, hazardFilter),
+    ]),
+  );
+  const affectedProvinces = PHILIPPINE_PROVINCES.flatMap((province) => {
+    const warning = filteredWarnings.get(province.id);
+    return warning && warning.alerts.length > 0 ? [{ province, warning }] : [];
+  }).sort((a, b) => WARNING_RANK[b.warning.alerts[0].level] - WARNING_RANK[a.warning.alerts[0].level]);
+  const urgentProvince = affectedProvinces[0];
+  const urgentAlert = urgentProvince?.warning.alerts[0];
+  const warningCalloutKey = urgentAlert
+    ? [
+        demoScenario ?? "live",
+        urgentAlert.id,
+        urgentAlert.issuedAt,
+        urgentAlert.expiresAt,
+        urgentAlert.level,
+        urgentProvince.warning.stale,
+      ].join("|")
+    : null;
+  const visibleCalloutKey = warningCalloutKey !== dismissedCalloutKey ? warningCalloutKey : null;
+  const affectedCount = [...warningsByProvince.values()].filter((warning) => warning.alerts.length > 0).length;
   const stageRef = useRef<HTMLDivElement>(null);
   const mapSvgRef = useRef<SVGSVGElement>(null);
   const dragRef = useRef<{
@@ -161,13 +220,19 @@ export function AreaExplorer() {
   const viewY = camera.centerY - viewHeight / 2;
   const isCavite = selectedProvince === CAVITE_PROVINCE_ID;
   const isHistoricalMaguindanao = selectedProvinceData.sourceName === "Maguindanao";
-  const labelMaxWidth = Math.min(stageSize.width * 0.6, 240);
-  const labelAnchorX = ((labelProvince.center.x - viewX) / viewWidth) * stageSize.width;
+  const labelMaxWidth = Math.min(stageSize.width * 0.4, 180);
+  const labelAnchorX =
+    ((labelProvince.bounds.x + labelProvince.bounds.width * 0.85 - viewX) / viewWidth) * stageSize.width;
   const labelAnchorY = ((labelProvince.center.y - viewY) / viewHeight) * stageSize.height;
   const mapLabelLeft = stageSize.width
-    ? Math.max(labelMaxWidth / 2 + 8, Math.min(stageSize.width - labelMaxWidth / 2 - 8, labelAnchorX))
+    ? Math.max(8, Math.min(stageSize.width - labelMaxWidth - 16, labelAnchorX))
     : undefined;
-  const mapLabelTop = stageSize.height ? Math.max(40, Math.min(stageSize.height - 8, labelAnchorY)) : undefined;
+  const mapLabelTop = stageSize.height ? Math.max(16, Math.min(stageSize.height - 16, labelAnchorY)) : undefined;
+  const labelInView =
+    labelProvince.bounds.x < viewX + viewWidth &&
+    labelProvince.bounds.x + labelProvince.bounds.width > viewX &&
+    labelProvince.bounds.y < viewY + viewHeight &&
+    labelProvince.bounds.y + labelProvince.bounds.height > viewY;
 
   useEffect(() => {
     const stage = stageRef.current;
@@ -180,10 +245,30 @@ export function AreaExplorer() {
   }, []);
 
   useEffect(() => {
+    const onEscape = (event: KeyboardEvent) => {
+      if (
+        event.key !== "Escape" ||
+        event.defaultPrevented ||
+        !(event.target instanceof Node) ||
+        !workspaceRef.current?.contains(event.target) ||
+        (!regionDetailsOpen && !visibleCalloutKey)
+      )
+        return;
+      event.preventDefault();
+      setRegionDetailsOpen(false);
+      if (visibleCalloutKey) setDismissedCalloutKey(visibleCalloutKey);
+      setHoveredProvince(null);
+      detailsToggleRef.current?.focus({ preventScroll: true });
+    };
+    document.addEventListener("keydown", onEscape);
+    return () => document.removeEventListener("keydown", onEscape);
+  }, [regionDetailsOpen, visibleCalloutKey]);
+
+  useEffect(() => {
     const mapSvg = mapSvgRef.current;
     if (!mapSvg) return;
 
-    function handleMapWheel(event: WheelEvent) {
+    const handleMapWheel = (event: WheelEvent) => {
       if (!event.ctrlKey) return;
       event.preventDefault();
 
@@ -220,7 +305,7 @@ export function AreaExplorer() {
 
         return { ...current, ...clampedCenter, zoom };
       });
-    }
+    };
 
     mapSvg.addEventListener("wheel", handleMapWheel, { passive: false });
     return () => mapSvg.removeEventListener("wheel", handleMapWheel);
@@ -230,6 +315,14 @@ export function AreaExplorer() {
     setSelectedProvince(provinceId);
     setKeyboardProvinceId(provinceId);
     setHoveredProvince(null);
+    setRegionDetailsOpen(true);
+  }
+
+  function dismissRegionDetails() {
+    setRegionDetailsOpen(false);
+    if (warningCalloutKey) setDismissedCalloutKey(warningCalloutKey);
+    setHoveredProvince(null);
+    detailsToggleRef.current?.focus({ preventScroll: true });
   }
 
   function focusProvince(provinceId: ProvinceId) {
@@ -330,32 +423,72 @@ export function AreaExplorer() {
   }
 
   return (
-    <div className="explore-workspace">
+    <div ref={workspaceRef} className="explore-workspace" data-details-open={regionDetailsOpen}>
       <section aria-labelledby="area-heading" className="explore-map-panel ui-card">
         <div className="explore-map-heading">
           <h2 id="area-heading">{dict.areaExplorer.heading}</h2>
-          <DropdownSelect
-            id="province-select"
-            label={dict.areaExplorer.provinceSelectLabel}
-            value={selectedProvince}
-            onValueChange={(province) => {
-              const provinceId = province as ProvinceId;
-              selectProvince(provinceId);
-              focusProvince(provinceId);
-            }}
-            options={provinceOptions}
-            searchable={{
-              placeholder: dict.areaExplorer.provinceSearchLabel,
-              noResults: dict.areaExplorer.provinceNoResults,
-              resultCountLabel: dict.areaExplorer.provinceResultsCount,
-            }}
-            className="dropdown-select--compact explore-province-select"
-          />
+          <div className="explore-map-heading-actions">
+            <DropdownSelect
+              id="province-select"
+              label={dict.areaExplorer.provinceSelectLabel}
+              value={selectedProvince}
+              onValueChange={(province) => {
+                const provinceId = province as ProvinceId;
+                selectProvince(provinceId);
+                focusProvince(provinceId);
+              }}
+              options={provinceOptions}
+              searchable={{
+                placeholder: dict.areaExplorer.provinceSearchLabel,
+                noResults: dict.areaExplorer.provinceNoResults,
+                resultCountLabel: dict.areaExplorer.provinceResultsCount,
+              }}
+              className="dropdown-select--compact explore-province-select"
+            />
+            <button
+              ref={detailsToggleRef}
+              type="button"
+              className="ui-button ui-button--secondary ui-button--icon"
+              aria-expanded={regionDetailsOpen}
+              aria-controls="areaPicker"
+              aria-label={
+                regionDetailsOpen ? dict.areaExplorer.hideProvinceDetails : dict.areaExplorer.showProvinceDetails
+              }
+              title={regionDetailsOpen ? dict.areaExplorer.hideProvinceDetails : dict.areaExplorer.showProvinceDetails}
+              onClick={() => (regionDetailsOpen ? dismissRegionDetails() : setRegionDetailsOpen(true))}
+            >
+              {regionDetailsOpen ? (
+                <PanelRightClose aria-hidden="true" size={17} />
+              ) : (
+                <PanelRightOpen aria-hidden="true" size={17} />
+              )}
+            </button>
+          </div>
         </div>
 
-        <fieldset className="explore-map" aria-labelledby="area-heading" aria-describedby="province-map-description">
+        <WarningToolbar
+          demo={demoScenario}
+          onDemoChange={(scenario) => {
+            setDemoScenario(scenario);
+            setHazardFilter("all");
+            setDismissedCalloutKey(null);
+          }}
+          connection={liveAdvisories.connection}
+          refreshing={liveAdvisories.refreshing}
+          onRefresh={() => void liveAdvisories.refresh()}
+          snapshot={liveAdvisories.snapshot}
+        />
+        <fieldset
+          className="explore-map"
+          aria-labelledby="area-heading"
+          aria-describedby="province-map-description map-warning-description"
+        >
           <p id="province-map-description" className="sr-only">
             {dict.areaExplorer.mapDescription}
+          </p>
+          <p id="map-warning-description" className="sr-only">
+            {demoScenario ? dict.mapWarnings.demoDescription : dict.mapWarnings.connectedDescription}{" "}
+            {dict.mapWarnings.filterNotice}
           </p>
           <div ref={stageRef} className="explore-map-stage">
             {/* biome-ignore lint/a11y/useSemanticElements: SVG groups aggregate province controls under one accessible map label. */}
@@ -380,6 +513,11 @@ export function AreaExplorer() {
               }}
             >
               <title>{dict.areaExplorer.heading}</title>
+              <defs>
+                <pattern id="map-warning-stale-pattern" width="5" height="5" patternUnits="userSpaceOnUse">
+                  <path d="M-1 1 1-1M0 5 5 0M4 6 6 4" className="map-warning-pattern-line" />
+                </pattern>
+              </defs>
               {PHILIPPINE_PROVINCES.map((province) => (
                 // biome-ignore lint/a11y/useSemanticElements: SVG paths provide province-shaped controls that HTML buttons cannot match.
                 <path
@@ -392,10 +530,21 @@ export function AreaExplorer() {
                   role="button"
                   tabIndex={keyboardProvinceId === province.id ? 0 : -1}
                   focusable="true"
-                  aria-label={`${dict.areaExplorer.provinceSelectLabel}: ${province.name}`}
+                  aria-label={
+                    dict.areaExplorer.provinceSelectLabel +
+                    ": " +
+                    province.name +
+                    ". " +
+                    (demoScenario ? `${dict.mapWarnings.demoBadge}. ` : "") +
+                    (filteredWarnings.get(province.id)?.alerts[0]?.title[lang] ??
+                      dict.mapWarnings.levels[filteredWarnings.get(province.id)?.level ?? "unknown"]) +
+                    (filteredWarnings.get(province.id)?.stale ? `. ${dict.mapWarnings.stale}` : "")
+                  }
                   aria-pressed={selectedProvince === province.id}
                   data-selected={selectedProvince === province.id}
                   data-hovered={hoveredProvince === province.id}
+                  data-warning-level={filteredWarnings.get(province.id)?.level ?? "unknown"}
+                  data-warning-stale={filteredWarnings.get(province.id)?.stale ?? false}
                   onPointerEnter={() => setHoveredProvince(province.id)}
                   onPointerLeave={() => setHoveredProvince(null)}
                   onFocus={() => {
@@ -407,19 +556,54 @@ export function AreaExplorer() {
                   onKeyDown={(event) => handleProvinceKeyDown(event, province.id)}
                 />
               ))}
+              {/* biome-ignore lint/a11y/noAriaHiddenOnFocusable: Decorative SVG hatching is explicitly non-focusable and has no interaction handlers. */}
+              <g aria-hidden="true" pointerEvents="none" focusable="false">
+                {PHILIPPINE_PROVINCES.filter((province) => {
+                  const warning = filteredWarnings.get(province.id);
+                  return warning?.stale && warning.alerts.length > 0;
+                }).map((province) => (
+                  <path
+                    key={`stale-${province.id}`}
+                    d={PHILIPPINE_PROVINCE_PATHS[province.id]}
+                    className="map-warning-hatch"
+                    fillRule="evenodd"
+                    focusable="false"
+                  />
+                ))}
+              </g>
             </svg>
-            <span
-              className="province-map-label"
-              aria-hidden="true"
-              style={{
-                left: mapLabelLeft === undefined ? "50%" : `${mapLabelLeft}px`,
-                top: mapLabelTop === undefined ? "50%" : `${mapLabelTop}px`,
-              }}
-            >
-              {labelProvince.name}
-            </span>
+            {labelInView && (regionDetailsOpen || hoveredProvince !== null) && (
+              <span
+                className="province-map-label"
+                aria-hidden="true"
+                style={{
+                  left: mapLabelLeft === undefined ? "50%" : `${mapLabelLeft}px`,
+                  top: mapLabelTop === undefined ? "50%" : `${mapLabelTop}px`,
+                }}
+              >
+                <strong>{labelProvince.name}</strong>
+              </span>
+            )}
           </div>
 
+          {visibleCalloutKey && urgentProvince?.warning?.alerts[0] && (
+            <WarningCallout
+              provinceId={urgentProvince.province.id}
+              provinceName={urgentProvince.province.name}
+              alert={urgentProvince.warning.alerts[0]}
+              stale={urgentProvince.warning.stale}
+              demo={Boolean(demoScenario)}
+              onDismiss={() => {
+                setDismissedCalloutKey(warningCalloutKey);
+                detailsToggleRef.current?.focus({ preventScroll: true });
+              }}
+              onSelect={() => {
+                selectProvince(urgentProvince.province.id);
+                focusProvince(urgentProvince.province.id);
+              }}
+            />
+          )}
+          {demoScenario && <span className="map-warning-demo-watermark">{dict.mapWarnings.demoBadge}</span>}
           <div className="explore-map-controls">
             <div className="explore-map-view-controls">
               <button
@@ -462,6 +646,16 @@ export function AreaExplorer() {
           </div>
         </fieldset>
 
+        <WarningLegend
+          filter={hazardFilter}
+          onFilterChange={setHazardFilter}
+          count={affectedCount}
+          available={Boolean(warningSnapshot)}
+          filteredCount={affectedProvinces.length}
+          calloutHidden={Boolean(warningCalloutKey && !visibleCalloutKey)}
+          onRestoreCallout={() => setDismissedCalloutKey(null)}
+          stale={[...warningsByProvince.values()].some((warning) => warning.stale && warning.alerts.length > 0)}
+        />
         <p className="explore-map-note">
           <span className="explore-map-zoom-hint">{dict.areaExplorer.mapZoomHint}</span>
           <span>{dict.areaExplorer.mapSourceNote}</span>
@@ -476,7 +670,7 @@ export function AreaExplorer() {
         </p>
       </section>
 
-      <div id="areaPicker" className="explore-location-picker">
+      <div id="areaPicker" className="explore-location-picker" hidden={!regionDetailsOpen}>
         <aside className="explore-location-panel ui-card" aria-labelledby="location-heading">
           <div className="explore-location-heading">
             <div>
@@ -486,20 +680,37 @@ export function AreaExplorer() {
                 {isCavite ? dict.areaExplorer.pendingReviewTitle : dict.areaExplorer.unsupportedTitle}
               </p>
             </div>
-            <button
-              type="button"
-              className="ui-button ui-button--secondary explore-details-toggle"
-              aria-expanded={detailsExpanded}
-              aria-controls="explore-location-details"
-              aria-label={
-                detailsExpanded ? dict.areaExplorer.hideProvinceDetails : dict.areaExplorer.showProvinceDetails
-              }
-              onClick={() => setDetailsExpanded((expanded) => !expanded)}
-            >
-              <ChevronDown aria-hidden="true" size={18} />
-            </button>
+            <div className="explore-location-actions">
+              <button
+                type="button"
+                className="ui-button ui-button--secondary explore-details-toggle"
+                aria-expanded={detailsExpanded}
+                aria-controls="explore-location-details"
+                aria-label={
+                  detailsExpanded ? dict.areaExplorer.hideProvinceDetails : dict.areaExplorer.showProvinceDetails
+                }
+                onClick={() => setDetailsExpanded((expanded) => !expanded)}
+              >
+                <ChevronDown aria-hidden="true" size={18} />
+              </button>
+              <button
+                type="button"
+                className="ui-button ui-button--quiet ui-button--icon"
+                aria-label={dict.areaExplorer.hideProvinceDetails}
+                title={dict.areaExplorer.hideProvinceDetails}
+                onClick={dismissRegionDetails}
+              >
+                <X aria-hidden="true" size={17} />
+              </button>
+            </div>
           </div>
 
+          <WarningDetails
+            warning={warningsByProvince.get(selectedProvince) ?? getProvinceWarning(null, selectedProvince, warningNow)}
+            provinceId={selectedProvince}
+            snapshot={warningSnapshot}
+            demo={Boolean(demoScenario)}
+          />
           <div id="explore-location-details" className="explore-location-content" data-expanded={detailsExpanded}>
             <p className="explore-location-description">{dict.areaExplorer.sideDesc}</p>
 

@@ -23,18 +23,26 @@ colors:
   province-land-outline: "#e8f7f4"
   province-land-hover: "#b9dfd6"
   province-land-hover-outline: "#087f7d"
-  province-land-selected: "#087f7d"
-  province-land-selected-hover: "#075f61"
-  province-land-selected-outline: "#ffffff"
+  province-land-selected: "#c4d3a9"
+  province-land-selected-hover: "#cedbb8"
+  province-land-selected-outline: "#69804e"
   province-land-focus: "#102b35"
   province-land-night: "#698d83"
   province-land-outline-night: "#b9d1ca"
   province-land-hover-night: "#8dc3b6"
   province-land-hover-outline-night: "#d6f7ed"
-  province-land-selected-night: "#25aaa0"
-  province-land-selected-hover-night: "#137a78"
-  province-land-selected-outline-night: "#e4fff8"
+  province-land-selected-night: "#98ab7d"
+  province-land-selected-hover-night: "#b1c192"
+  province-land-selected-outline-night: "#dce6b5"
   province-land-focus-night: "#e7fbf4"
+  hazard-emergency: "#b42332"
+  hazard-emergency-night: "#df5660"
+  hazard-warning: "#c5650c"
+  hazard-warning-night: "#dd9951"
+  hazard-advisory: "#e2b943"
+  hazard-advisory-night: "#d9bb62"
+  hazard-unknown: "#a3b4b5"
+  hazard-unknown-night: "#687d84"
 typography:
   display:
     fontFamily: "Arial, Helvetica, sans-serif"
@@ -161,10 +169,10 @@ components:
     borderColor: "{colors.surface-white}"
   province-map-region-hover:
     backgroundColor: "{colors.province-land-hover}"
-    borderColor: "{colors.deep-water-teal}"
+    borderColor: "{colors.province-land-hover-outline}"
   province-map-region-selected:
     backgroundColor: "{colors.province-land-selected}"
-    borderColor: "{colors.surface-white}"
+    borderColor: "{colors.province-land-selected-outline}"
   app-shell:
     backgroundColor: "transparent"
     rounded: "0px"
@@ -224,7 +232,7 @@ Keep the interactive province map and area selector visually legible and purpose
 
 ## Colors
 
-The palette pairs deep-water teal with bay-mist surfaces and cool, dark ink. Teal carries links, actions, active navigation, and selected map regions; lighter sea-glass tints support hover, focus, and quiet emphasis. Amber is reserved for review or warning states, while rose is reserved for errors.
+The palette pairs deep-water teal with bay-mist surfaces and cool, dark ink. Teal carries links, actions, and active navigation; lighter sea-glass tints support hover, focus, and quiet emphasis. Selected map regions use a soft sage fill unless an active hazard requires its warning color. Amber is reserved for review or warning states, while rose is reserved for errors.
 
 ### Primary
 - **Deep-water teal:** The main action and selection color; use it for primary buttons, links, selected locations, and small section labels.
@@ -243,8 +251,9 @@ The palette pairs deep-water teal with bay-mist surfaces and cool, dark ink. Tea
 - **Province map water / province map water night:** The quiet sea-glass canvas behind the province outlines.
 - **Province land:** The unselected region fill, with a pale shoreline stroke.
 - **Province land hover:** The lighter teal hover and keyboard-focus fill.
-- **Province land selected:** The deeper teal fill that persists after selecting a province.
-- Map hover and selection never encode catch counts, abundance, legality, or safety.
+- **Province land selected:** A soft sage fill with a thin polygon outline; use the dedicated sage tokens for light and dark themes.
+- Map selection never encodes catch counts, abundance or legality. Active warnings retain their severity fills during hover, selection and keyboard focus. Unknown or clear regions may use sage for interaction; that highlight does not indicate verified coverage or safety.
+- Province names appear as unboxed text anchored beside their map shape, with a subtle water-colored text halo for readability. Keep hazard descriptions in the warning callout and province details.
 
 **The Review-Color Rule.** Keep amber for review or warning information and rose for errors; neither becomes a general brand accent.
 
@@ -275,7 +284,7 @@ The catch journal fills the page content area. “Log a catch” opens a right-h
 
 The app shell reserves a sidebar column and floats its white, bordered panel 14px from the viewport edges. The expanded sidebar is 212px wide and the icon-only state is 64px; desktop content scrolls independently. Below 768px, a compact sticky header opens the same navigation in a native modal drawer and the page scrolls as one column.
 
-At 1200px and wider, the province map and selected-area panel form a 1.87:1 grid with a 16px gap and a 280px minimum panel width. From 768px to 1199px, the panel follows the map and the three Cavite water choices share a row. Below 768px, the panel remains below the map, the searchable province selector expands to the available width, and province details collapse behind a compact disclosure. The map is 300px tall on mobile, 420–540px on tablet and 420–640px on desktop.
+At 1200px and wider, the province map and selected-area panel form a 1.87:1 grid with a 16px gap and a 280px minimum panel width. Dismissing the panel gives the map the full available content width. From 768px to 1199px, the panel follows the map and the three Cavite water choices share a row. Below 768px, the panel remains below the map, the searchable province selector expands to the available width, and province details collapse behind a compact disclosure. The map is 300px tall on mobile, 420–540px on tablet and 420–640px on desktop.
 
 Province outlines use SVG paths as pointer and keyboard targets; one path is in the Tab order at a time, arrow keys move focus between provinces, and Enter or Space selects. A searchable shared dropdown provides an alternative for small islands. Map controls keep 44px interaction targets. Cavite water rows use the shared compact scale.
 
@@ -342,15 +351,25 @@ Keyboard focus uses a 3px aqua outline with a 3px offset. Honor reduced-motion p
 
 ### Province Selection
 - **Shape:** Use the source province polygons with thin pale strokes. Do not add numbered dots or pulse animation.
-- **Hover / focus:** Fill the region with lighter sea-glass teal and a stronger outline. Show its name in the map label.
-- **Selected:** Keep the province filled with deep teal after pointer exit and synchronize the searchable dropdown and detail panel.
+- **Hover / focus:** Highlight unknown or clear regions in soft sage with a thin polygon outline. Active warnings keep their hazard fill. Keyboard focus uses a visible 3px polygon stroke without a rectangular browser focus box.
+- **Selected:** Synchronize the searchable dropdown and detail panel. Use the sage selected tokens and thin outline for regions without active hazards; preserve every active warning fill. Show only the province name as unboxed anchored text.
+- **Dismiss / restore:** The panel X, heading toolbar toggle, or Escape within the map workspace hides the whole region sidebar and urgent callout. Expand the map to the available width and return focus to the heading toggle. That toggle reopens details; selecting a province by map, dropdown or callout also reopens them. Preserve selected province and camera state when dismissing.
 - **Keyboard / touch:** Keep one outline in the Tab order; arrow keys move focus, Enter or Space selects, and touch selects by tapping. Keep the searchable dropdown as an alternative for small or hard-to-target shapes.
+
+### Weather and Water Warning Layer
+- Default to unavailable coverage until a reviewed live publisher is connected. Demonstration mode is opt-in and carries a persistent fictional-data label on the toolbar, map and province details.
+- Use dedicated emergency, warning, advisory and unavailable tokens, with readable hazard labels and a static urgent-province callout. The display levels are separate from the retained official warning category. Do not pulse markers.
+- Show the highest ranked matching warning as the province fill. Keep selection and keyboard focus as province-shaped outlines. Partial-area and coastal warnings retain their listed affected locations; a province-level highlight does not mean every locality is affected.
+- Preserve last-known colors with a diagonal SVG hatch when updates are unavailable or stale. A neutral state requires complete, fresh coverage; unavailable coverage stays gray except for the temporary sage interaction highlight. Hazard filters explain that they affect the map while details retain all hazards.
+- While the region sidebar is open, keep warning details above the collapsible species/water-area content on mobile. The sidebar can be dismissed entirely. Use the shared dropdowns and buttons, existing type scale, and light/dark semantic tokens.
+- Use the shared ui-button--notice variant for the urgent map callout. Small legend swatches and the DEMO badge use 3px corners; the fixed demo watermark uses 4px corners to distinguish these compact annotations from cards and controls.
+- Give the urgent callout separate select and dismiss buttons. Dismissing it leaves warning fills, the legend and warning count visible; a restore action appears below the map. A changed alert identity, validity, severity, demo scenario or stale state resurfaces the callout.
 
 ### Explore Map Panel
 - **Character:** The national SVG map is the dominant discovery surface, framed by a white rounded panel and a quiet heading row.
 - **Controls:** One searchable dropdown, province paths, and the detail panel share one selected-province state. Focus selected frames the chosen province; Fit Philippines restores the national overview without changing selection. Zoom and pan affect only the camera and never imply navigation or GPS.
 - **Caption:** Show the 2020 outline year, source/license attribution, and non-navigation limitation. Keep the coverage notice beside the selected province and Cavite water area choices.
-- **Dark theme:** Use the dedicated night canvas with muted land fills and clear pale borders; selected regions remain teal.
+- **Dark theme:** Use the dedicated night canvas, sage selection and hazard tokens with clear pale borders. Preserve active warning fills and indicate their selection with a thin polygon outline.
 
 ### Province Selector and Cavite Water Areas
 - **Rows:** Native radio inputs sit beside a compact numbered badge, bold location name and muted subtitle. Rows are 60px high; selection uses a teal border and sea-glass/white mix.

@@ -1,6 +1,8 @@
+import { filMapWarnings } from "../map-warnings";
 import type { Dictionary } from "../types";
 
 export const filDictionary: Dictionary = {
+  mapWarnings: filMapWarnings,
   common: {
     appName: "Bangwit",
     tagline: "Bawat huli, may kuwento.",
