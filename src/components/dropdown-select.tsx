@@ -313,7 +313,9 @@ export function DropdownSelect({
           data-active={index === activeIndex}
           className="dropdown-select-option"
           onPointerMove={() => setActiveIndex(index)}
-          onPointerDown={(event) => event.preventDefault()}
+          onPointerDown={(event) => {
+            if (event.pointerType === "mouse") event.preventDefault();
+          }}
           onClick={() => chooseOption(option, index)}
           onKeyDown={(event) => {
             if (event.key === "Enter" || event.key === " ") {
@@ -404,7 +406,11 @@ export function DropdownSelect({
         </span>
         <ChevronDown aria-hidden="true" className="dropdown-select-chevron" />
       </button>
-      {portal ? (isOpen ? createPortal(popup, document.body) : null) : popup}
+      {portal
+        ? isOpen
+          ? createPortal(popup, rootRef.current?.closest("dialog[open]") ?? document.body)
+          : null
+        : popup}
     </div>
   );
 }
