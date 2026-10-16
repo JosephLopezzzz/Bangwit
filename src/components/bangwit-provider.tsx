@@ -7,6 +7,7 @@ import { flushSync } from "react-dom";
 import { DropdownSelect } from "@/components/dropdown-select";
 import { PolicyDocument } from "@/components/policy-document";
 import { DEFAULT_PROVINCE_ID, PHILIPPINE_PROVINCES, type ProvinceId } from "@/data/phl-provinces";
+import { getBrowserPreferredLanguage } from "@/i18n/browser-language";
 import { enDictionary } from "@/i18n/dictionaries/en";
 import { filDictionary } from "@/i18n/dictionaries/fil";
 import type { Dictionary, Language } from "@/i18n/types";
@@ -111,12 +112,14 @@ export function BangwitProvider({ children }: { children: ReactNode }) {
     themeRef.current = initialTheme;
     setTheme(initialTheme);
 
-    let savedLang: Language = "fil";
+    let savedLang = getBrowserPreferredLanguage(
+      navigator.languages?.length ? navigator.languages : [navigator.language],
+    );
     try {
       const stored = localStorage.getItem(LANG_KEY);
       if (stored === "en" || stored === "fil") savedLang = stored;
     } catch {
-      /* fallback to default */
+      /* Keep the browser language when local preferences are unavailable. */
     }
     setLangState(savedLang);
     document.documentElement.lang = savedLang;
