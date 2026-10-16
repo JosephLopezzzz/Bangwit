@@ -113,6 +113,8 @@ export function DropdownSelect({
       const popup = popupRef.current;
       if (!trigger || !popup) return;
       const rect = trigger.getBoundingClientRect();
+      const dialog = trigger.closest("dialog[open]");
+      const dialogRect = dialog && popup.parentElement === dialog ? dialog.getBoundingClientRect() : null;
       const viewport = window.visualViewport;
       const viewportLeft = viewport?.offsetLeft ?? 0;
       const viewportTop = viewport?.offsetTop ?? 0;
@@ -128,6 +130,21 @@ export function DropdownSelect({
       const above = Math.max(0, rect.top - gap - viewportTop - margin);
       const placeAbove = desiredHeight > below && (desiredHeight <= above || above > below);
       const maxHeight = Math.min(desiredHeight, placeAbove ? above : below);
+      const left = Math.max(
+        viewportLeft + margin,
+        Math.min(rect.left, viewportLeft + viewportWidth - width - margin),
+      );
+      const top = Math.max(
+        viewportTop + margin,
+        Math.min(
+          placeAbove ? rect.top - gap - maxHeight : rect.bottom + gap,
+          viewportTop + viewportHeight - margin - maxHeight,
+        ),
+      );
+      // The catch dialog animates with a transform, so fixed descendants use
+      // the dialog as their containing block instead of the viewport.
+      const dialogOffsetLeft = dialog && dialogRect ? dialogRect.left + dialog.clientLeft : 0;
+      const dialogOffsetTop = dialog && dialogRect ? dialogRect.top + dialog.clientTop : 0;
       setPopupStyle({
         position: "fixed",
         visibility: "visible",
@@ -135,14 +152,8 @@ export function DropdownSelect({
         width,
         maxHeight,
         marginTop: 0,
-        left: Math.max(viewportLeft + margin, Math.min(rect.left, viewportLeft + viewportWidth - width - margin)),
-        top: Math.max(
-          viewportTop + margin,
-          Math.min(
-            placeAbove ? rect.top - gap - maxHeight : rect.bottom + gap,
-            viewportTop + viewportHeight - margin - maxHeight,
-          ),
-        ),
+        left: left - dialogOffsetLeft,
+        top: top - dialogOffsetTop,
       });
     };
 
