@@ -51,7 +51,7 @@ export const enDictionary: Dictionary = {
       "I have read and agree to these prototype draft notices. I understand catch records and photos stay in this device's browser storage and that this acknowledgment does not authorize cloud uploads.",
     agreeBtn: "Agree and continue",
     disclaimer:
-      "These bilingual notices are prototype drafts. Operator and privacy-contact details, plus hosting-provider request metadata and log handling, still need confirmation and legal review before public launch. This does not authorize cloud uploads of catch records.",
+      "These bilingual notices are prototype drafts. Joseph Lopez maintains Bangwit and monitors tepezzzz070@gmail.com for privacy and support. Hosting-provider request metadata and log handling still need final review before public launch. This does not authorize cloud uploads of catch records.",
     selectLanguage: "Select language / Pumili ng wika",
   },
   onboarding: {
@@ -482,6 +482,11 @@ export const enDictionary: Dictionary = {
     reviewNotice: "Prototype policy draft · legal review pending",
     sections: [
       {
+        heading: "Project Owner and Contact",
+        content:
+          "Joseph Lopez maintains the Bangwit prototype and monitors tepezzzz070@gmail.com for privacy questions and support. Do not send private catch backups, photos, exact fishing locations, or passwords by email. The final operator/controller wording and request-handling terms remain under review.",
+      },
+      {
         heading: "Information Stored",
         content:
           "When you log a catch, the browser may store species names, date, water type, optional spot labels, length, weight, bait, notes, disposition, and photos. The location field is optional and manually entered. The prototype does not collect GPS coordinates.",
@@ -492,9 +497,19 @@ export const enDictionary: Dictionary = {
           "Catch logs and photos reside in this device's local browser storage. There are no Bangwit accounts or automatic uploads or synchronization of catch records and photos in this prototype. Policy acknowledgments and preferences are also saved locally.",
       },
       {
-        heading: "Hosting Metadata and Operator Details",
+        heading: "Purpose and Local Retention",
         content:
-          "This draft does not yet document the hosting provider's processing of website request metadata or logs, including the project's actual settings, retention, or recipients. The responsible operator and public privacy contact also need to be confirmed. These facts must be completed and reviewed before public launch; catch records and photos remain separate and local in this prototype.",
+          "Local records let you keep a catch journal, view your personal species collection, and back up or restore your entries. Preferences and acknowledgments support your chosen interface and the prototype notice. Local records stay until you delete them or browser data is cleared or evicted. Deleting browser data does not delete previously exported backup files.",
+      },
+      {
+        heading: "Hosting Metadata",
+        content:
+          "Vercel hosts the website. The hosting provider's processing of website request metadata or logs is separate from local catch storage: opening a page or requesting an advisory can expose technical information such as IP address, browser details, request path, time, and response status to Vercel. The project was checked on October 17, 2026 on Hobby with no configured drains. Vercel documents a one-hour Hobby runtime-log window; this does not establish a deletion deadline for all CDN, security, or other provider metadata. Those retention details and the final notice remain under review.",
+      },
+      {
+        heading: "Public Advisories and Source Links",
+        content:
+          "The map requests public advisories from this website and may cache a validated public snapshot in browser storage. That request contains no catch entries, photos, spot labels, profile fields, or GPS coordinates. The public cache is excluded from catch backups and is cleared by Settings erasure; an old copy does not confirm current conditions. Live warnings remain unavailable. Opening an external source link visits that provider's website and its own privacy practices apply.",
       },
       {
         heading: "Sharing and Access",
@@ -504,7 +519,7 @@ export const enDictionary: Dictionary = {
       {
         heading: "Backup, Export, and Deletion",
         content:
-          "You can create a local JSON backup under Settings. This file includes catch details, photo data, notes, and any optional manually entered location text. Store downloaded backup files securely. You can also restore backups into an empty journal or delete all local data from Settings.",
+          "You can create a local JSON backup under Settings. This file includes catch details, photo data, notes, and any optional manually entered location text. Store downloaded backup files securely. You can also restore backups into an empty journal or delete local journal data, preferences, acknowledgments, and the public advisory cache from Settings. Joseph cannot retrieve or erase your device-local journal remotely; contact the support inbox for guidance without sending the backup itself.",
       },
       {
         heading: "Changes to Data Handling",

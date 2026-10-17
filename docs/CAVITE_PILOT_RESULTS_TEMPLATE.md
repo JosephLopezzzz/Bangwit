@@ -11,6 +11,11 @@
 - Device/OS/browser:
 - Facilitator:
 - Participant notice version:
+- Project context: Independent personal project
+- Participant compensation: None
+- Session notes deletion deadline (session date + 30 days):
+- Notes custodian/access: Joseph Lopez only; private local folder, outside this repository
+- Audio/video recording: None
 - Pilot audience selected for this round: Mixed beginner and experienced fishers (planned; recruitment and sessions have not started)
 - Number of participants:
 

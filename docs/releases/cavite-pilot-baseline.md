@@ -47,3 +47,7 @@ The source checkpoint for this verification is commit `bb02c5075941bfd4ea81c1964
 | `npm run build` | Passed |
 
 This is source-level verification only. No new Vercel deployment, live-origin check, fresh browser/phone acceptance, or production behavior was verified. The last previously recorded Production application source remains `43718d65e2c4e1a75346529457365e7288749480`; the rollback reference above has not changed. Treat `bb02c50` as tested source, not as a deployed release.
+
+## Live deployment identity follow-up — 17 October 2026
+
+A read-only check of the Vercel project overview found Production Ready at deployment `4MytvJzrn7UseSmUM19eubP5MT7p`, on `main`, commit `cadbca7f96f359322a8bbf46f02d6bf2c5b960a8`. This supersedes the older recorded Production identity above for the current serving deployment; it matches the checkout HEAD before the privacy and source-review changes in the current working copy. The existing Ready Preview branch `codex/https-preview-20261015` remains on `6143041ddfe8d5695aa401141478ccf629fa8769`, so it does not verify those changes. No deployment, push, or route-level production check was performed. See the [privacy review packet](../CAVITE_PRIVACY_REVIEW_PACKET.md) for the dated hosting observations and limits.

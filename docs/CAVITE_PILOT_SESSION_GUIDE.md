@@ -6,14 +6,15 @@ Draft facilitator material — **do not recruit or run sessions until the pilot 
 
 - Use one fixed, recorded build and HTTPS origin for each round. Do not switch builds mid-session.
 - Planned first-round audience: a mix of beginner and experienced fishers. This choice is for task planning only; no participants have been recruited.
+- Project context: independent personal project maintained by Joseph Lopez. Participant compensation: none. State these facts before the participant chooses whether to join.
 - Use a fresh test profile with no personal journal data. Use only the app's synthetic catch, photo and note values.
 - Tell the participant that Bangwit is a prototype, the Cavite species records are historical and limited, live warnings are unavailable, and the map is not a legal fishing boundary or navigation aid.
-- Ask before taking notes or recording. Recording is optional and needs its own clear notice; prefer deidentified task notes without audio/video.
+- Ask before taking notes. The owner-selected setup uses deidentified notes only, stored privately by Joseph and deleted within 30 days after each session; no audio/video recording is planned. Use the reviewed participant notice for these choices.
 - Record device model, OS, browser/version, screen size, build/URL, date and whether the task was completed without help, with help, or not completed. Do not record names or precise home/fishing locations in the issue notes.
 
 ## Opening script
 
-“Thanks for trying this Bangwit prototype. We are testing the design, not you. You can skip any task or stop at any time. Please use only the example details shown; do not enter a real catch, private fishing spot, or personal contact. The map does not confirm legal access or safe conditions, and live alerts are not enabled. Is it okay if I take brief notes about where the interface is confusing? I will not record audio or video unless we separately discuss and agree to it.”
+"Thanks for trying this Bangwit prototype. We are testing the design, not you. You can skip any task or stop at any time. Please use only the example details shown; do not enter a real catch, private fishing spot, or personal contact. The map does not confirm legal access or safe conditions, and live alerts are not enabled. Is it okay if I take brief notes about where the interface is confusing? Joseph will keep the notes privately and delete them within 30 days after this session. We will not record audio or video."
 
 Do not start if the participant has not received and understood the separately approved pilot notice. Do not collect a signature or consent response for the project through this draft script.
 
@@ -34,4 +35,4 @@ The plan proposes 5–8 participants and 80% unassisted completion for the guide
 
 ## Closeout
 
-Thank the participant, answer remaining questions, and remind them not to send real catches or locations through this research session. Store notes without names or precise spots, restrict access to the project team, and delete the temporary test profile only after confirming it contains no participant-owned journal data. Do not claim that a pilot ran until sessions and a dated deidentified report exist.
+Thank the participant, answer remaining questions, and remind them not to send real catches or locations through this research session. Store deidentified notes in `%LOCALAPPDATA%\Bangwit\pilot-feedback`, accessible to Joseph only, and record a deletion deadline 30 days after the session. Delete the temporary test profile only after confirming it contains no participant-owned journal data. Do not claim that a pilot ran until sessions and a dated deidentified report exist.

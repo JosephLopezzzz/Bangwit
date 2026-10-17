@@ -55,5 +55,5 @@ test("keeps prototype policy drafts and review disclosures available in both lan
   assert.match(filipino, /optional na location text na ikaw ang naglagay/);
   assert.match(english, /does not authorize cloud uploads/);
   assert.match(filipino, /hindi pahintulot sa cloud upload/);
-  assert.match(provider, /POLICY_VERSION = "prototype-4"/);
+  assert.match(provider, /POLICY_VERSION = "prototype-5"/);
 });

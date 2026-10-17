@@ -51,7 +51,7 @@ export const filDictionary: Dictionary = {
       "Nabasa at sinasang-ayunan ko ang mga draft notice para sa prototype. Nauunawaan kong sa browser storage ng device na ito nananatili ang catch records at photos, at hindi pahintulot sa cloud upload ang acknowledgment na ito.",
     agreeBtn: "Sumang-ayon at magpatuloy",
     disclaimer:
-      "Draft para sa prototype ang mga notice na ito sa Filipino at English. Kailangan pang kumpirmahin at ipa-review ang detalye ng operator at privacy contact, pati ang pagproseso ng hosting provider sa request metadata at logs, bago public launch. Hindi ito pahintulot na i-upload sa cloud ang mga tala at larawan ng huli.",
+      "Draft para sa prototype ang mga notice na ito sa Filipino at English. Si Joseph Lopez ang namamahala sa Bangwit at nagmo-monitor ng tepezzzz070@gmail.com para sa privacy at support. Kailangan pa ng final review ang pagproseso ng hosting provider sa request metadata at logs bago public launch. Hindi ito pahintulot na i-upload sa cloud ang mga tala at larawan ng huli.",
     selectLanguage: "Pumili ng wika / Select language",
   },
   onboarding: {
@@ -486,6 +486,11 @@ export const filDictionary: Dictionary = {
     reviewNotice: "Draft ng prototype policy · kailangan pa ng legal review",
     sections: [
       {
+        heading: "Project owner at contact",
+        content:
+          "Si Joseph Lopez ang namamahala sa Bangwit prototype at nagmo-monitor ng tepezzzz070@gmail.com para sa privacy questions at support. Huwag mag-email ng pribadong catch backup, larawan, eksaktong fishing location, o password. Nasa review pa ang final na pagtukoy sa operator/controller at ang paraan ng paghawak sa requests.",
+      },
+      {
         heading: "Anong impormasyon ang mase-save",
         content:
           "Kapag nag-log ka ng huli, maaaring itago ng browser ang pangalan ng species, petsa, uri ng tubig, opsyonal na spot label, haba, timbang, pain, notes, catch status, at larawan. Opsyonal ang location field at ikaw ang naglalagay nito. Hindi kinukuha ng prototype ang GPS.",
@@ -496,9 +501,19 @@ export const filDictionary: Dictionary = {
           "Nasa lokal na browser storage ng device na ito ang catch log at photos. Walang Bangwit account o awtomatikong upload o sync ng catch records at photos sa prototype. Naka-save rin locally ang Terms acknowledgment at optional preferences.",
       },
       {
-        heading: "Hosting metadata at detalye ng operator",
+        heading: "Layunin at lokal na retention",
         content:
-          "Hindi pa inilalarawan ng draft na ito kung paano pinoproseso ng hosting provider ang request metadata o logs ng website, kasama ang aktuwal na settings, retention, at recipients ng project. Kailangan ding kumpirmahin kung sino ang responsable sa app at ang pampublikong privacy contact. Kumpletuhin at ipa-review ang mga ito bago public launch; hiwalay at lokal pa rin sa prototype ang catch records at photos.",
+          "Ginagamit ang local records para sa catch journal, personal species collection, at pag-backup o restore ng entries. Para sa napili mong interface at prototype notice ang preferences at acknowledgments. Mananatili ang local records hanggang burahin mo o ma-clear o ma-evict ang browser data. Hindi nabubura ang dating exported backup files kapag binura ang browser data.",
+      },
+      {
+        heading: "Hosting metadata",
+        content:
+          "Vercel ang host ng website. Hiwalay sa local catch storage ang pagproseso ng hosting provider sa request metadata at logs: kapag nagbukas ng page o humiling ng advisory, maaaring maproseso ng Vercel ang technical information gaya ng IP address, browser details, request path, oras, at response status. Na-check noong Oktubre 17, 2026 na Hobby ang project at walang configured drains. Ayon sa Vercel, isang oras ang Hobby runtime-log window; hindi nito itinatakda kung kailan buburahin ang lahat ng CDN, security, o iba pang provider metadata. Nasa review pa ang retention ng mga iyon at ang final notice.",
+      },
+      {
+        heading: "Public advisories at source links",
+        content:
+          "Humihiling ang map ng public advisories mula sa website na ito at maaaring mag-cache ng validated public snapshot sa browser storage. Walang catch entries, larawan, spot label, profile fields, o GPS coordinates sa request na iyon. Hindi kasama sa catch backups ang public cache at nabubura ito sa Settings erasure; hindi patunay ng kasalukuyang kondisyon ang lumang copy. Unavailable pa ang live warnings. Kapag binuksan ang external source link, pupunta ka sa website ng provider at ang sarili nitong privacy practices ang iiral doon.",
       },
       {
         heading: "Pagbabahagi at access",
@@ -508,7 +523,7 @@ export const filDictionary: Dictionary = {
       {
         heading: "Pag-backup, pag-export, at pagbura",
         content:
-          "Maaari kang gumawa ng local JSON backup sa Settings. Kasama rito ang catch details, photos, notes, at anumang optional na location text na ikaw ang naglagay. Ingatan ang na-download na file. Maaari mo ring i-restore ito sa empty Bangwit journal o burahin ang local Bangwit data sa Settings. Ang browser data clearing o storage eviction ay maaari ring magtanggal ng records.",
+          "Maaari kang gumawa ng local JSON backup sa Settings. Kasama rito ang catch details, photos, notes, at anumang optional na location text na ikaw ang naglagay. Ingatan ang na-download na file. Maaari mo itong i-restore sa empty Bangwit journal o burahin ang local journal data, preferences, acknowledgments, at public advisory cache sa Settings. Hindi kayang kunin o burahin ni Joseph nang remote ang journal sa device mo; humingi ng gabay sa support inbox nang hindi ipinapadala ang backup mismo.",
       },
       {
         heading: "Pagbabago sa data handling",
