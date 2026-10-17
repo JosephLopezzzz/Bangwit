@@ -1,6 +1,7 @@
 import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import test from "node:test";
+import { CAVITE_AREAS } from "../src/data/cavite-areas.ts";
 import { getBrowserPreferredLanguage } from "../src/i18n/browser-language.ts";
 
 test("uses the first supported browser language", () => {
@@ -10,6 +11,10 @@ test("uses the first supported browser language", () => {
 
 test("recognizes Tagalog as the Filipino app language", () => {
   assert.equal(getBrowserPreferredLanguage(["tl-PH"]), "fil");
+});
+
+test("uses the correctly encoded Cavite area names across location controls", () => {
+  assert.deepEqual(CAVITE_AREAS, ["Manila Bay", "Bacoor Bay", "Ca\u00f1acao Bay"]);
 });
 
 test("uses Filipino when no supported browser language is available", () => {

@@ -23,6 +23,7 @@ import { useBangwit } from "@/components/bangwit-provider";
 import { type DropdownOption, DropdownSelect } from "@/components/dropdown-select";
 import { WarningCallout, WarningDetails, WarningLegend, WarningToolbar } from "@/components/map-warning-ui";
 import { useMapAdvisories } from "@/components/use-map-advisories";
+import { CAVITE_AREAS } from "@/data/cavite-areas";
 import { type AdvisoryDemoScenario, createAdvisoryDemo, DEMO_ADVISORY_NOW } from "@/data/map-advisory-demo";
 import { PHILIPPINE_PROVINCE_PATHS } from "@/data/phl-province-paths";
 import { CAVITE_PROVINCE_ID, PHILIPPINE_PROVINCES, type ProvinceId } from "@/data/phl-provinces";
@@ -30,7 +31,6 @@ import { getProvinceWarning, type HazardType, WARNING_RANK } from "@/lib/map-adv
 import "./area-explorer.css";
 import "./map-warnings.css";
 
-const areas = ["Manila Bay", "Bacoor Bay", "CaÃ±acao Bay"] as const;
 const MAX_ZOOM = 5;
 const provinceOptions: DropdownOption[] = PHILIPPINE_PROVINCES.map(({ id, name }) => ({
   value: id,
@@ -107,7 +107,7 @@ function LocationOptions({ group }: { group: string }) {
   return (
     <fieldset className="location-options">
       <legend className="sr-only">{dict.areaExplorer.selectAreaLabel}</legend>
-      {areas.map((name, index) => (
+      {CAVITE_AREAS.map((name, index) => (
         <label key={name} className="location-row" data-selected={selectedArea === name}>
           <span className="location-number" aria-hidden="true">
             {index + 1}

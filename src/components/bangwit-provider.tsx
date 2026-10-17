@@ -6,6 +6,7 @@ import { createContext, type ReactNode, useCallback, useContext, useEffect, useM
 import { flushSync } from "react-dom";
 import { DropdownSelect } from "@/components/dropdown-select";
 import { PolicyDocument } from "@/components/policy-document";
+import { CAVITE_AREAS } from "@/data/cavite-areas";
 import { DEFAULT_PROVINCE_ID, PHILIPPINE_PROVINCES, type ProvinceId } from "@/data/phl-provinces";
 import { getBrowserPreferredLanguage } from "@/i18n/browser-language";
 import { enDictionary } from "@/i18n/dictionaries/en";
@@ -20,8 +21,6 @@ const ONBOARDING_KEY = "bangwit.onboarding.seen";
 const TOUR_KEY = "bangwit.tour.done";
 const THEME_KEY = "bangwit.theme";
 const LANG_KEY = "bangwit.lang";
-const AREAS = ["Manila Bay", "Bacoor Bay", "Cañacao Bay"];
-
 const TOUR_PATH_TARGETS = [
   { path: "/", target: "#areaPicker" },
   { path: "/species", target: "#speciesNotice" },
@@ -95,7 +94,7 @@ export function BangwitProvider({ children }: { children: ReactNode }) {
   const [profileMode, setProfileMode] = useState<ProfileMode>("first");
   const [fisherType, setFisherType] = useState<FisherProfile["type"]>("exploring");
   const [preferredWater, setPreferredWater] = useState<FisherProfile["water"]>("any");
-  const [selectedArea, setSelectedAreaState] = useState(AREAS[0]);
+  const [selectedArea, setSelectedAreaState] = useState(CAVITE_AREAS[0]);
   const [selectedProvince, setSelectedProvinceState] = useState<ProvinceId>(DEFAULT_PROVINCE_ID);
   const [theme, setTheme] = useState<ColorTheme>("light");
   const [lang, setLangState] = useState<Language>("fil");
@@ -243,7 +242,7 @@ export function BangwitProvider({ children }: { children: ReactNode }) {
   }, [pathname, router, tourStep]);
 
   const setSelectedArea = useCallback((area: string) => {
-    if (AREAS.includes(area)) setSelectedAreaState(area);
+    if (CAVITE_AREAS.includes(area)) setSelectedAreaState(area);
   }, []);
 
   const setSelectedProvince = useCallback((province: string) => {
