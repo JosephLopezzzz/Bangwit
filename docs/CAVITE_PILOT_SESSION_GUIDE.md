@@ -19,17 +19,18 @@ Do not start if the participant has not received and understood the separately a
 
 ## Tasks
 
-1. **Find a species and its source.** “Choose Cavite and find one species record. Tell me what the record does and does not prove.” Observe source-link discovery and whether the participant infers current presence, a specific bay, or permission to catch.
-2. **Interpret coverage.** “What would you do if the advisory says unavailable or the last update is old?” Expected understanding: check the official source independently; missing or stale data is not an all-clear.
-3. **Save a synthetic catch offline.** Use a synthetic species or unidentified value, a generated image, `50 cm`, `1000 g`, a test note, and a fake place label. Disconnect only the test device/profile, save, reopen and verify the entry and photo. Reconnect while an unsaved synthetic draft is open; verify the draft is retained and one save creates one entry.
-4. **Understand My Species.** Ask the participant to distinguish identified catches from unknown catches and explain whether the collection proves the fish is present in Cavite.
-5. **Back up the test journal.** Export only the synthetic test record. Ask the participant where the file would be private and how restore behaves; do not restore over a populated journal.
+1. **Use and revisit the first-time guide.** Starting from the approved fresh test profile, ask: “Imagine this is your first visit. Show me how you would learn where to explore and save a catch.” Observe whether the participant can follow the spotlight tour, move backward/forward, skip or finish, and reopen it with Help. Do not explain the controls unless help is requested; record whether the tour feels useful or interrupts the task.
+2. **Find a species and its source.** “Choose Cavite and find one species record. Tell me what the record does and does not prove.” Observe source-link discovery and whether the participant infers current presence, a specific bay, or permission to catch.
+3. **Interpret coverage.** “What would you do if the advisory says unavailable or the last update is old?” Expected understanding: check the official source independently; missing or stale data is not an all-clear.
+4. **Save a synthetic catch offline.** Use a synthetic species or unidentified value, a generated image, `50 cm`, `1000 g`, a test note, and a fake place label. Disconnect only the test device/profile, save, reopen and verify the entry and photo. Reconnect while an unsaved synthetic draft is open; verify the draft is retained and one save creates one entry.
+5. **Understand My Species.** Ask the participant to distinguish identified catches from unknown catches and explain whether the collection proves the fish is present in Cavite.
+6. **Back up the test journal.** Export only the synthetic test record. Ask the participant where the file would be private and how restore behaves; do not restore over a populated journal.
 
 ## Observation and thresholds
 
 For each task, record start/end, unassisted/assisted/not completed, help given, confusion point, participant's interpretation, and a short deidentified note. Report raw counts alongside percentages. Treat any interpretation that turns unknown species evidence, unavailable warnings or map outlines into a safety/legal claim as a high-priority issue. Treat any loss of a saved synthetic catch/photo or accidental duplication as a blocker.
 
-The plan proposes 5–8 participants and 80% unassisted completion for the core discovery, offline save and backup tasks. These are discovery targets, not a representative research sample or launch certification. The selected audience is a mix of beginner and experienced fishers; finalize task wording and complete the approved participant notice, contact, storage and review gates before recruitment. After each session, stop and fix journal loss or dangerous interpretation issues before visual polish.
+The plan proposes 5–8 participants and 80% unassisted completion for the guide, core discovery, offline save and backup tasks. Include both beginner and experienced fishers (aim for at least two in each group where recruitment allows) and report the actual counts; this small round is not a representative research sample or launch certification. Finalize task wording and complete the approved participant notice, contact, storage and review gates before recruitment. After each session, stop and fix journal loss or dangerous interpretation issues before visual polish.
 
 ## Closeout
 

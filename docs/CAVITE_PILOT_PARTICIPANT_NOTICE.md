@@ -10,7 +10,7 @@ The prototype's species evidence is limited and historical. Live weather and haz
 
 ## What participation involves
 
-You may be asked to find a species and its source, explain an unavailable advisory, save a synthetic catch while offline, inspect My Species, and review a backup made from the synthetic test record. Use only the example values provided by the facilitator. Do not enter a real catch, exact fishing spot, GPS location, account credential, personal contact, or private photograph.
+You may be asked to try the first-time in-app guide and its Help/replay control, find a species and its source, explain an unavailable advisory, save a synthetic catch while offline, inspect My Species, and review a backup made from the synthetic test record. Use only the example values provided by the facilitator. Do not enter a real catch, exact fishing spot, GPS location, account credential, personal contact, or private photograph.
 
 Participation is voluntary. You may skip a question or stop at any time without giving a reason. **Compensation:** `[project owner to specify, or state “none”]`.
 

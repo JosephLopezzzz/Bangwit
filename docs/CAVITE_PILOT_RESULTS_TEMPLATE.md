@@ -20,6 +20,7 @@ Use participant codes only. Record unassisted, assisted, skipped, or not complet
 
 | Participant code | Task | Outcome | Help given | Confusion or interpretation observed | Severity | Follow-up issue |
 | --- | --- | --- | --- | --- | --- | --- |
+|  | First-time guide and Help replay |  |  |  |  |  |
 |  | Find species and source |  |  |  |  |  |
 |  | Interpret unavailable/stale advisory |  |  |  |  |  |
 |  | Save synthetic catch offline |  |  |  |  |  |
@@ -30,6 +31,7 @@ Use participant codes only. Record unassisted, assisted, skipped, or not complet
 
 | Task | Unassisted | Assisted | Skipped | Not completed | Notes |
 | --- | ---: | ---: | ---: | ---: | --- |
+| First-time guide and Help replay |  |  |  |  |  |
 | Find species and source |  |  |  |  |  |
 | Interpret unavailable/stale advisory |  |  |  |  |  |
 | Save synthetic catch offline |  |  |  |  |  |
