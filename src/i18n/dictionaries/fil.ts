@@ -83,8 +83,8 @@ export const filDictionary: Dictionary = {
     stepCount: "Hakbang",
     steps: [
       {
-        title: "Pumili muna ng lugar",
-        text: "Pumili ng Cavite fishing ground. Ipapakita ng Bangwit ang verified na records kapag handa na ang lokal na data.",
+        title: "Pumili ng lugar na titingnan",
+        text: "Pumili ng Cavite area para mag-browse. Hindi nito kinukumpirma ang pahintulot mangisda o legal na hangganan ng katubigan. Maaaring wala pang beripikadong lokal na species o tuntunin.",
       },
       {
         title: "Basahin ang status at coverage",

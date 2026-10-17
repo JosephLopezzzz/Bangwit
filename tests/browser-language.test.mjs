@@ -17,6 +17,20 @@ test("uses Filipino when no supported browser language is available", () => {
   assert.equal(getBrowserPreferredLanguage([]), "fil");
 });
 
+test("first-use guide describes pilot areas as browsing choices, not verified fishing grounds", async () => {
+  const [english, filipino] = await Promise.all([
+    readFile(new URL("../src/i18n/dictionaries/en.ts", import.meta.url), "utf8"),
+    readFile(new URL("../src/i18n/dictionaries/fil.ts", import.meta.url), "utf8"),
+  ]);
+
+  assert.match(english, /Choose an area to explore/);
+  assert.match(english, /does not confirm fishing access or legal water boundaries/);
+  assert.doesNotMatch(english, /Select a Cavite fishing ground/);
+  assert.match(filipino, /Pumili ng lugar na titingnan/);
+  assert.match(filipino, /Hindi nito kinukumpirma ang pahintulot mangisda o legal na hangganan ng katubigan/);
+  assert.doesNotMatch(filipino, /Cavite fishing ground/);
+});
+
 test("keeps prototype policy drafts and review disclosures available in both languages", async () => {
   const [english, filipino, provider] = await Promise.all([
     readFile(new URL("../src/i18n/dictionaries/en.ts", import.meta.url), "utf8"),

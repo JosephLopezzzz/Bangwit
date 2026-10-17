@@ -83,8 +83,8 @@ export const enDictionary: Dictionary = {
     stepCount: "Step",
     steps: [
       {
-        title: "First, pick a location",
-        text: "Select a Cavite fishing ground. Bangwit will display verified records as soon as local data is ready.",
+        title: "Choose an area to explore",
+        text: "Choose a Cavite area to browse. The map does not confirm fishing access or legal water boundaries, and verified local species or rules may be unavailable.",
       },
       {
         title: "Review status and coverage",
