@@ -1,4 +1,5 @@
 import assert from "node:assert/strict";
+import { readFile } from "node:fs/promises";
 import test from "node:test";
 import { getBrowserPreferredLanguage } from "../src/i18n/browser-language.ts";
 
@@ -14,4 +15,26 @@ test("recognizes Tagalog as the Filipino app language", () => {
 test("uses Filipino when no supported browser language is available", () => {
   assert.equal(getBrowserPreferredLanguage(["ja-JP", "fr-FR"]), "fil");
   assert.equal(getBrowserPreferredLanguage([]), "fil");
+});
+
+test("keeps prototype policy drafts and review disclosures available in both languages", async () => {
+  const [english, filipino, provider] = await Promise.all([
+    readFile(new URL("../src/i18n/dictionaries/en.ts", import.meta.url), "utf8"),
+    readFile(new URL("../src/i18n/dictionaries/fil.ts", import.meta.url), "utf8"),
+    readFile(new URL("../src/components/bangwit-provider.tsx", import.meta.url), "utf8"),
+  ]);
+
+  assert.match(english, /reviewNotice: "Prototype policy draft · legal review pending"/);
+  assert.match(filipino, /reviewNotice: "Draft ng prototype policy · kailangan pa ng legal review"/);
+  assert.match(english, /hosting provider's processing of website request metadata or logs/);
+  assert.match(filipino, /hosting provider sa request metadata at logs/);
+  assert.match(english, /weather, flood, or red-tide alerts/);
+  assert.match(filipino, /weather, flood, o red-tide alerts/);
+  assert.match(english, /protected-species and protected-area restrictions/);
+  assert.match(filipino, /protected-species at protected-area restrictions/);
+  assert.match(english, /optional manually entered location text/);
+  assert.match(filipino, /optional na location text na ikaw ang naglagay/);
+  assert.match(english, /does not authorize cloud uploads/);
+  assert.match(filipino, /hindi pahintulot sa cloud upload/);
+  assert.match(provider, /POLICY_VERSION = "prototype-4"/);
 });

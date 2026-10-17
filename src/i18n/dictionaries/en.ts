@@ -48,10 +48,10 @@ export const enDictionary: Dictionary = {
     summaryText:
       "Species coverage, fishing rules, boundaries, weather alerts, and food safety advisories are not yet verified. Do not rely on this prototype to determine whether it is legal or safe to fish or consume your catch.",
     agreeCheckbox:
-      "I agree to the prototype Privacy Policy and Terms of Use, and understand my data is stored only on this device.",
+      "I have read and agree to these prototype draft notices. I understand catch records and photos stay in this device's browser storage and that this acknowledgment does not authorize cloud uploads.",
     agreeBtn: "Agree and continue",
     disclaimer:
-      "This is a prototype draft. Legal policy review is required prior to public launch. This does not grant permission to upload data to cloud servers.",
+      "These bilingual notices are prototype drafts. Operator and privacy-contact details, plus hosting-provider request metadata and log handling, still need confirmation and legal review before public launch. This does not authorize cloud uploads of catch records.",
     selectLanguage: "Select language / Pumili ng wika",
   },
   onboarding: {
@@ -353,6 +353,7 @@ export const enDictionary: Dictionary = {
       algae: "Algae / phytoplankton",
       "plant-material": "Plant material",
       detritus: "Detritus",
+      zooplankton: "Zooplankton",
     },
     resultsSummary: "{count} species guide(s)",
     noMatches: "No feeding notes match those filters.",
@@ -444,13 +445,13 @@ export const enDictionary: Dictionary = {
   termsPage: {
     tag: "Bangwit prototype · draft",
     title: "Terms of Use",
-    lastUpdated: "Last updated: September 30, 2026 · for local prototype",
-    reviewNotice: "Needs legal review · English translation draft",
+    lastUpdated: "Last updated: October 17, 2026 · prototype draft",
+    reviewNotice: "Prototype policy draft · legal review pending",
     sections: [
       {
         heading: "1. Prototype Only",
         content:
-          "This Bangwit build is for testing interface design and local catch journaling. Species records, fishery boundaries, access points, fishing regulations, closed seasons, protected-species guidelines, bait recommendations, and weather/red-tide alerts are not yet verified.",
+          "This Bangwit build is for testing interface design and local catch journaling. Species records, fishery boundaries, access points, fishing regulations, closed seasons, protected-species and protected-area restrictions, diet information, bait or method suggestions, and weather, flood, or red-tide alerts are not yet verified.",
       },
       {
         heading: "2. Do Not Rely on This for Safety or Legal Decisions",
@@ -460,7 +461,7 @@ export const enDictionary: Dictionary = {
       {
         heading: "3. Personal Records",
         content:
-          "You are solely responsible for the accuracy of information entered into your personal catch log. The log remains strictly in your device's browser storage and is not automatically uploaded or synced to Bangwit servers. It may be lost if browser cache or storage is cleared.",
+          "You are solely responsible for the accuracy of information entered into your personal catch log. Catch records and photos remain in this device's browser storage and are not automatically uploaded or synced to Bangwit. They may be lost if browser data is cleared or evicted.",
       },
       {
         heading: "4. No Service Guarantee",
@@ -470,15 +471,15 @@ export const enDictionary: Dictionary = {
       {
         heading: "5. Modifications and Future Services",
         content:
-          "Terms may change as verified data, user accounts, sharing, or cloud synchronization are added. Explicit consent will be requested before processing data in new ways. This draft does not substitute for formal legal review prior to public launch.",
+          "Terms may change as verified data, user accounts, sharing, external services, or cloud synchronization are added. Appropriate notice and consent will be addressed before processing data in new ways. This draft does not substitute for qualified legal review prior to public launch.",
       },
     ],
   },
   privacyPage: {
     tag: "Bangwit prototype · draft",
     title: "Privacy Notice",
-    lastUpdated: "Last updated: September 30, 2026 · for local prototype",
-    reviewNotice: "Needs legal review · English translation draft",
+    lastUpdated: "Last updated: October 17, 2026 · prototype draft",
+    reviewNotice: "Prototype policy draft · legal review pending",
     sections: [
       {
         heading: "Information Stored",
@@ -488,7 +489,12 @@ export const enDictionary: Dictionary = {
       {
         heading: "Where Data is Stored",
         content:
-          "Catch logs and photos reside entirely in your device's local browser storage. There are no Bangwit accounts, cloud uploads, or synchronization in this prototype. Policy acknowledgments and preferences are also saved locally.",
+          "Catch logs and photos reside in this device's local browser storage. There are no Bangwit accounts or automatic uploads or synchronization of catch records and photos in this prototype. Policy acknowledgments and preferences are also saved locally.",
+      },
+      {
+        heading: "Hosting Metadata and Operator Details",
+        content:
+          "This draft does not yet document the hosting provider's processing of website request metadata or logs, including the project's actual settings, retention, or recipients. The responsible operator and public privacy contact also need to be confirmed. These facts must be completed and reviewed before public launch; catch records and photos remain separate and local in this prototype.",
       },
       {
         heading: "Sharing and Access",
@@ -498,17 +504,17 @@ export const enDictionary: Dictionary = {
       {
         heading: "Backup, Export, and Deletion",
         content:
-          "You can create a local JSON backup under Settings. This file includes catch details, photo data, and notes. Store downloaded backup files securely. You can also restore backups into an empty journal or delete all local data from Settings.",
+          "You can create a local JSON backup under Settings. This file includes catch details, photo data, notes, and any optional manually entered location text. Store downloaded backup files securely. You can also restore backups into an empty journal or delete all local data from Settings.",
       },
       {
         heading: "Changes to Data Handling",
         content:
-          "If accounts, analytics, social features, or cloud sync are added in the future, this notice will be revised and proper consent requested. Acceptance of this prototype notice does not grant permission for future cloud data uploads.",
+          "If accounts, analytics, social features, external services, or cloud sync are added in the future, this notice will be revised and appropriate notice and consent addressed. Acceptance of this prototype notice does not grant permission for future cloud catch-data uploads.",
       },
       {
         heading: "Limitations",
         content:
-          "This notice is a draft for prototype evaluation. It must undergo formal legal review and alignment with production data practices prior to any public release.",
+          "This notice is a prototype draft, not legal approval. It must undergo qualified legal review and be completed with the operator's confirmed hosting and data-handling facts before any public release.",
       },
     ],
   },

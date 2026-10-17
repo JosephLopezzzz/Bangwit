@@ -7,7 +7,16 @@ import { DropdownSelect } from "@/components/dropdown-select";
 import guides from "@/data/feeding-guides.json";
 import { filterFeedingGuides } from "@/lib/species-research";
 
-const foodCategories = ["fish", "crustaceans", "insects", "mollusks", "algae", "plant-material", "detritus"] as const;
+const foodCategories = [
+  "fish",
+  "crustaceans",
+  "insects",
+  "mollusks",
+  "algae",
+  "plant-material",
+  "detritus",
+  "zooplankton",
+] as const;
 
 export function FeedingGuides() {
   const { dict, lang } = useBangwit();

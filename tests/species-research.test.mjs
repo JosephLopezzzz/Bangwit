@@ -57,6 +57,16 @@ test("feeding guides filter by documented food group and searchable name or prey
     ["Channa striata"],
   );
   assert.deepEqual(
+    filterFeedingGuides(guides.taxa, { query: "", foodCategory: "zooplankton" }).map((guide) => guide.scientificName),
+    ["Otolithes ruber", "Stolephorus commersonnii", "Stolephorus indicus"],
+  );
+  assert.deepEqual(
+    filterFeedingGuides(guides.taxa, { query: "crustaceans", foodCategory: "all" }).map(
+      (guide) => guide.scientificName,
+    ),
+    ["Otolithes ruber", "Stolephorus commersonnii", "Stolephorus indicus"],
+  );
+  assert.deepEqual(
     filterFeedingGuides(guides.taxa, { query: "detritus", foodCategory: "all" }).map((guide) => guide.scientificName),
     ["Channa striata", "Oreochromis niloticus"],
   );
@@ -73,6 +83,7 @@ test("published diet guidance keeps sources, taxon IDs, scope caveats and no uns
     assert.ok(guide.sources.every((source) => source.url.startsWith("https://") && source.locator));
   }
   const review = await readFile(new URL("../data/research/feeding-guides-review.md", import.meta.url), "utf8");
+  assert.match(review, /CC BY 4\.0/);
   assert.match(review, /Diet is not treated as bait evidence/);
   assert.match(review, /Contextual catching advice remains unavailable/);
 });

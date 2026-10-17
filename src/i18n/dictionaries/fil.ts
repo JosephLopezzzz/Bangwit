@@ -48,10 +48,10 @@ export const filDictionary: Dictionary = {
     summaryText:
       "Hindi pa verified ang species coverage, fishing rules, boundaries, weather alerts, o food-safety guidance. Huwag gamitin ito para magpasya kung legal o ligtas mangisda o kung ligtas kainin ang huli.",
     agreeCheckbox:
-      "Sumasang-ayon ako sa Privacy Notice at Terms of Use para sa prototype, at nauunawaan kong sa device lang na ito naka-save ang data ko.",
+      "Nabasa at sinasang-ayunan ko ang mga draft notice para sa prototype. Nauunawaan kong sa browser storage ng device na ito nananatili ang catch records at photos, at hindi pahintulot sa cloud upload ang acknowledgment na ito.",
     agreeBtn: "Sumang-ayon at magpatuloy",
     disclaimer:
-      "Draft ito para sa prototype. Kailangan ng policy review bago public launch. Hindi ito pahintulot para mag-upload ng data sa cloud.",
+      "Draft para sa prototype ang mga notice na ito sa Filipino at English. Kailangan pang kumpirmahin at ipa-review ang detalye ng operator at privacy contact, pati ang pagproseso ng hosting provider sa request metadata at logs, bago public launch. Hindi ito pahintulot na i-upload sa cloud ang mga tala at larawan ng huli.",
     selectLanguage: "Pumili ng wika / Select language",
   },
   onboarding: {
@@ -357,6 +357,7 @@ export const filDictionary: Dictionary = {
       algae: "Algae / phytoplankton",
       "plant-material": "Materyal ng halaman",
       detritus: "Detritus",
+      zooplankton: "Zooplankton",
     },
     resultsSummary: "{count} species guide",
     noMatches: "Walang feeding note na tugma sa filters.",
@@ -448,12 +449,13 @@ export const filDictionary: Dictionary = {
   termsPage: {
     tag: "Bangwit prototype · draft",
     title: "Terms of Use",
-    lastUpdated: "Huling inayos: Setyembre 30, 2026 · para sa local prototype",
+    lastUpdated: "Huling inayos: Oktubre 17, 2026 · prototype draft",
+    reviewNotice: "Draft ng prototype policy · kailangan pa ng legal review",
     sections: [
       {
         heading: "1. Prototype lamang",
         content:
-          "Ang Bangwit build na ito ay pang-testing ng interface at local catch journal. Hindi pa verified ang species records, fishery boundaries, access points, fishing rules, closed seasons, protected-species guidance, diet o bait recommendations, weather, flood, at red-tide alerts.",
+          "Ang Bangwit build na ito ay pang-testing ng interface at local catch journal. Hindi pa verified ang species records, fishery boundaries, access points, fishing rules, closed seasons, protected-species at protected-area restrictions, impormasyon tungkol sa diet, mungkahi sa pain o paraan ng pangingisda, at weather, flood, o red-tide alerts.",
       },
       {
         heading: "2. Huwag gawing batayan ng kaligtasan o legal na desisyon",
@@ -463,7 +465,7 @@ export const filDictionary: Dictionary = {
       {
         heading: "3. Personal na tala",
         content:
-          "Ikaw ang responsable sa katumpakan ng mga impormasyong inilagay mo sa personal na catch log. Mananatili ang log sa browser storage ng device na ito at hindi awtomatikong ia-upload o isi-sync sa Bangwit server. Maaari itong mawala kapag binura o na-evict ang browser data.",
+          "Ikaw ang responsable sa katumpakan ng mga impormasyong inilagay mo sa personal na catch log. Mananatili sa browser storage ng device na ito ang catch records at photos; hindi awtomatikong ia-upload o isi-sync ang mga ito sa Bangwit. Maaari silang mawala kapag binura o na-evict ang browser data.",
       },
       {
         heading: "4. Walang garantiya ng serbisyo",
@@ -473,14 +475,15 @@ export const filDictionary: Dictionary = {
       {
         heading: "5. Mga pagbabago at susunod na serbisyo",
         content:
-          "Maaaring magbago ang mga tuntunin kapag nagdagdag ng verified data, accounts, sharing, o cloud sync. Hihingi ng hiwalay at malinaw na impormasyon at consent bago magproseso ng datos sa bagong paraan. Ang draft na ito ay hindi kapalit ng legal review bago public launch.",
+          "Maaaring magbago ang mga tuntunin kapag nagdagdag ng verified data, accounts, sharing, external services, o cloud sync. Magbibigay ng angkop na abiso at aalamin ang consent bago magproseso ng data sa bagong paraan. Hindi kapalit ng qualified legal review bago public launch ang draft na ito.",
       },
     ],
   },
   privacyPage: {
     tag: "Bangwit prototype · draft",
     title: "Privacy Notice",
-    lastUpdated: "Huling inayos: Setyembre 30, 2026 · para sa local prototype",
+    lastUpdated: "Huling inayos: Oktubre 17, 2026 · prototype draft",
+    reviewNotice: "Draft ng prototype policy · kailangan pa ng legal review",
     sections: [
       {
         heading: "Anong impormasyon ang mase-save",
@@ -490,7 +493,12 @@ export const filDictionary: Dictionary = {
       {
         heading: "Saan ito naka-save",
         content:
-          "Nasa lokal na storage ng browser ang catch log at photos ng device na ginagamit mo. Walang Bangwit account, cloud upload, o sync sa prototype. Ang Terms acknowledgment at optional preferences ay naka-save rin locally.",
+          "Nasa lokal na browser storage ng device na ito ang catch log at photos. Walang Bangwit account o awtomatikong upload o sync ng catch records at photos sa prototype. Naka-save rin locally ang Terms acknowledgment at optional preferences.",
+      },
+      {
+        heading: "Hosting metadata at detalye ng operator",
+        content:
+          "Hindi pa inilalarawan ng draft na ito kung paano pinoproseso ng hosting provider ang request metadata o logs ng website, kasama ang aktuwal na settings, retention, at recipients ng project. Kailangan ding kumpirmahin kung sino ang responsable sa app at ang pampublikong privacy contact. Kumpletuhin at ipa-review ang mga ito bago public launch; hiwalay at lokal pa rin sa prototype ang catch records at photos.",
       },
       {
         heading: "Pagbabahagi at access",
@@ -500,17 +508,17 @@ export const filDictionary: Dictionary = {
       {
         heading: "Pag-backup, pag-export, at pagbura",
         content:
-          "Maaari kang gumawa ng backup sa Settings. Kasama rito ang catch details, photo bytes, at optional na location text. Ingatan ang na-download na file. Maaari mo ring i-restore ito sa empty Bangwit journal o burahin ang local Bangwit data sa Settings. Ang browser data clearing o storage eviction ay maaari ring magtanggal ng records.",
+          "Maaari kang gumawa ng local JSON backup sa Settings. Kasama rito ang catch details, photos, notes, at anumang optional na location text na ikaw ang naglagay. Ingatan ang na-download na file. Maaari mo ring i-restore ito sa empty Bangwit journal o burahin ang local Bangwit data sa Settings. Ang browser data clearing o storage eviction ay maaari ring magtanggal ng records.",
       },
       {
         heading: "Pagbabago sa data handling",
         content:
-          "Kung magdagdag sa hinaharap ng accounts, analytics, sharing, cloud sync, o external service, kailangang baguhin at ipaliwanag muna ang notice at kumuha ng angkop na consent. Ang pagtanggap sa prototype notice na ito ay hindi pahintulot para sa future cloud uploads.",
+          "Kung magdagdag sa hinaharap ng accounts, analytics, sharing, external services, o cloud sync, babaguhin ang notice at magbibigay ng angkop na impormasyon at hihingi ng consent. Hindi pahintulot sa future cloud upload ng catch data ang pagtanggap sa prototype notice na ito.",
       },
       {
         heading: "Limitasyon",
         content:
-          "Draft lang ang notice na ito para sa prototype. Kailangan itong ipa-review at palitan ng final notice na tumutugma sa aktuwal na data practices bago ilunsad sa publiko.",
+          "Prototype draft lang ang notice na ito at hindi ito legal approval. Kailangan ito ng qualified legal review at kailangang punan ng kumpirmadong detalye tungkol sa operator, hosting, at aktuwal na paghawak sa data bago ilunsad sa publiko.",
       },
     ],
   },

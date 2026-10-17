@@ -315,6 +315,7 @@ export type Dictionary = {
       algae: string;
       "plant-material": string;
       detritus: string;
+      zooplankton: string;
     };
     resultsSummary: string;
     noMatches: string;

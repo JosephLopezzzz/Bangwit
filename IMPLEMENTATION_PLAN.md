@@ -1,5 +1,7 @@
 # Bangwit implementation plan
 
+Continuation: [Cavite data and pilot implementation plan — 17 October 2026](docs/CAVITE_PILOT_IMPLEMENTATION_PLAN.md) covers the next five work packages after the user's reported functional acceptance pass. The dated baseline and execution history below remain historical records; use the continuation for the next implementation sequence.
+
 Prepared October 13, 2026 · Cavite pilot · Status: execution in progress
 
 This plan covers the five agreed milestones: offline acceptance, a safe Git checkpoint, Cavite evidence review, working Species search/filtering, and sourced diet/catching guides. The user authorized implementation on October 13, 2026. It does not authorize a deployment, push, agency message, or new data collection from users.

@@ -18,6 +18,8 @@ Release stage: opt-in warning demonstration and gated normalized ingestion. Live
 | Product | Official reference | Integration status |
 | --- | --- | --- |
 | Rainfall/thunderstorm | https://www.pagasa.dost.gov.ph/regional-forecast/ncrprsd | Publishing page reviewed; stable structured access, cadence and reuse terms pending |
+| Cavite regional weather and warnings | https://pagasa.dost.gov.ph/regional-forecast/slprsd | Southern Luzon publishing page reviewed 17 October 2026; regional, not a Cavite-only feed. See [source assessment](research/CAVITE_PAGASA_SOURCE_ASSESSMENT.md). |
+| TenDay forecast API | https://tenday.pagasa.dost.gov.ph/static/media/api-doc.c9cf6abbaa781437ed96.pdf | Official forecast API documented; requires an approved token. Forecasts are not active warnings. No token or warning adapter is configured. |
 | Rainfall meaning | https://www.pagasa.dost.gov.ph/information/rainfall-and-thunderstorm-warning-system | Interpretation reference; not a live feed |
 | Tropical cyclone wind | https://www.pagasa.dost.gov.ph/tropical-cyclone/severe-weather-bulletin | Raw bulletin adapter and category mapping pending |
 | Flood | https://floodcaster.pagasa.dost.gov.ph/ | Direct retrieval timed out during this check; integration pending |
@@ -25,6 +27,8 @@ Release stage: opt-in warning demonstration and gated normalized ingestion. Live
 | Older CAP feed | https://publicalert.pagasa.dost.gov.ph/feeds/ | Historical WMO listing found; direct retrieval timed out and web retrieval failed. Not configured |
 
 Do not infer observed flooding from rainfall, or treat cyclone wind signals as rainfall/flood levels. An adapter must retain forecast/observed language and native categories. Review the hazard-specific mapping to the three overview levels against official meanings.
+
+The TenDay API is not the warning source. Its documented approval/token gate is unresolved, and Bangwit has no government partner or approved token. The public Southern Luzon page is the current manual fallback link only; it does not establish automated warning access or complete Cavite hazard coverage. Keep the live API unavailable. See the dated [Cavite PAGASA assessment](research/CAVITE_PAGASA_SOURCE_ASSESSMENT.md).
 
 ## Live publisher contract
 
