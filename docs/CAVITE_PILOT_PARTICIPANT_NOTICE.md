@@ -30,8 +30,8 @@ The prototype keeps synthetic catch records in the test browser's local storage.
 
 ## Contact and questions
 
-Project lead: `[approved name and contact route]`
-Privacy contact: `[approved contact route]`
+Project lead: `Joseph Lopez (individual project owner; operator wording subject to review), via [dedicated Bangwit project email not yet created]`
+Privacy contact: `[dedicated Bangwit project email to be created and confirmed]`
 Institutional review contact, if applicable: `[contact or “not applicable after review”]`
 
 
