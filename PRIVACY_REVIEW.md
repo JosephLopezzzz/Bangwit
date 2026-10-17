@@ -75,7 +75,7 @@ This is a technical wording/parity update, not formal legal review. The public o
 
 ## Pilot contact decision (17 October 2026)
 
-The project owner chose to keep the personal email address used for the NAMRIA data inquiry private. It is not approved as the app's or pilot notice's public privacy/support contact and must not be copied into project materials. The owner selected Joseph Lopez as the individual project operator for planning and a dedicated Bangwit project email as the intended public privacy/support route. The address has not yet been created or confirmed, and a qualified reviewer must confirm how the responsible operator/controller should be identified in the notice. This decision does not change the app's policy text or authorize recruitment; the pilot notice remains unapproved pending those confirmations and the storage, retention, hosting and reviewer decisions.
+The project owner chose to keep the personal email address used for the NAMRIA data inquiry private. It is not approved as the app's or pilot notice's public privacy/support contact and must not be copied into project materials. The owner selected Joseph Lopez as the individual project operator for planning and provided `tepezzzz070@gmail.com` as the dedicated Bangwit public privacy/support route. The project owner must confirm that this mailbox is active and monitored; no email was sent to test it. A qualified reviewer must confirm how the responsible operator/controller should be identified in the notice. This decision does not change the app's policy text or authorize recruitment; the pilot notice remains unapproved pending those confirmations and the storage, retention, hosting and reviewer decisions.
 
 ## Runtime request-source update (17 October 2026)
 
