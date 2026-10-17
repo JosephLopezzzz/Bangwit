@@ -11,7 +11,7 @@
 - Device/OS/browser:
 - Facilitator:
 - Participant notice version:
-- Pilot audience selected for this round:
+- Pilot audience selected for this round: Mixed beginner and experienced fishers (planned; recruitment and sessions have not started)
 - Number of participants:
 
 ## Task outcomes

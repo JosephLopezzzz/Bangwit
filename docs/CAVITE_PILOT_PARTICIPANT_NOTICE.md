@@ -4,7 +4,7 @@
 
 ## What the session is for
 
-We are testing whether people can understand and use the Bangwit prototype. We are testing the interface, not the participant. The session is not a fishing-safety check, a test of fishing knowledge, or a representative survey of Cavite fishers.
+We are testing whether people can understand and use the Bangwit prototype. We are testing the interface, not the participant. The first planned round is intended for a mix of beginner and experienced fishers. The session is not a fishing-safety check, a test of fishing knowledge, or a representative survey of Cavite fishers. No participants have been recruited.
 
 The prototype's species evidence is limited and historical. Live weather and hazard warnings are unavailable. The map does not define legal fishing boundaries, access rights, or safe conditions.
 
@@ -18,7 +18,7 @@ Participation is voluntary. You may skip a question or stop at any time without 
 
 With your agreement, the facilitator will record brief, deidentified task outcomes and interface-confusion notes. The default session does not record audio or video and does not collect names or precise personal locations. If recording is later proposed, it needs a separate notice and choice before recording starts.
 
-The project should use a participant code and avoid details that identify you. Any optional experience category used to compare task results must be approved by the project owner and must not include unnecessary personal details.
+The project should use a participant code and avoid details that identify you. If the project owner and reviewer approve comparing outcomes by experience, use only a broad self-described category such as beginner or experienced; do not collect unnecessary personal details. The planned mixed audience is not permission to recruit before this notice and its privacy details are approved.
 
 ## Storage, access and deletion
 
@@ -33,6 +33,7 @@ The prototype keeps synthetic catch records in the test browser's local storage.
 Project lead: `[approved name and contact route]`
 Privacy contact: `[approved contact route]`
 Institutional review contact, if applicable: `[contact or “not applicable after review”]`
+
 
 Ask the facilitator before beginning if anything is unclear. Do not begin until the final contact and storage details have been completed and reviewed.
 
