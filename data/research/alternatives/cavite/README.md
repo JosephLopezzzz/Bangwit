@@ -1,10 +1,10 @@
 # Cavite direct-access source bundle
 
-Reviewed on **10 October 2026**. This folder removes email replies as a prerequisite for source collection and most app development. It contains research inputs, not a production legal/safety dataset.
+Reviewed on **17 October 2026**. This folder removes email replies as a prerequisite for source collection and most app development. It contains research inputs, not a production legal/safety dataset.
 
 ## What has been acquired
 
-The collection acquired **13 source files**; two reference downloads remain blocked and are recorded as failures below. Live public requests to GBIF (name matching), WoRMS (accepted taxon) and OBIS (dataset metadata) all returned usable JSON without API keys. These were acquisition checks, not production integrations or proof of current Cavite occurrence.
+The collection acquired **13 source files**; three source downloads remain blocked and are recorded as failures below. Live public requests to GBIF (name matching), WoRMS (accepted taxon) and OBIS (dataset metadata) all returned usable JSON without API keys. These were acquisition checks, not production integrations or proof of current Cavite occurrence.
 
 - `sources.json`: reviewed direct URLs, source roles and rights notes.
 - `download-manifest.json`: per-file retrieval status, time, size and SHA-256. A successful download means file retrieval succeeded; it does not establish that an advisory is current or a legal rule is applicable.
@@ -33,7 +33,7 @@ The collector uses public endpoints and needs no API key. It validates file type
 
 The independent geometry review and structured catch-group review are tied to exact file hashes. If a refreshed file's hash changes, repeat the relevant review before carrying its validation forward; downloading new bytes does not automatically revalidate the derived facts or topology.
 
-Two sources could not be archived during this review: BFAR's central bulletin page had a certificate-chain verification error; the Senate's historical RA10654 PDF returned HTTP 403 to the downloader. Keep their official links visible as reference routes. Do not disable TLS verification or describe the failed/stale bulletin as a current Cavite safety status. The [SC E-library statute](https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/61041) remains a readable official legal-text reference through browsing. BFAR regional archives did not yield a verified current full bulletin download in this pass.
+Three sources could not be archived by the collector: BFAR's central bulletin page had a certificate-chain verification error; the Senate's historical RA10654 PDF returned HTTP 403; and the new FAO 201-1 official PDF request failed with `UNABLE_TO_VERIFY_LEAF_SIGNATURE`. The FAO 201-1 official text was reviewed through the source-indexed document, but no local raw PDF or checksum was acquired. Keep official links as reference routes and do not disable TLS verification or present the failed/stale bulletin as current Cavite safety status. The [SC E-library statute](https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/61041) remains a readable official legal-text reference.
 
 ## Alternatives that can support development now
 
@@ -49,6 +49,10 @@ Two sources could not be archived during this review: BFAR's central bulletin pa
 
 Public access and reuse are distinct. GBIF/OBIS content has per-dataset/per-record licenses; WoRMS taxonomic text and photographs have different terms. Official legal text can be referenced without waiting for a blanket quoting permission (see [RA8293 section 175](https://elibrary.judiciary.gov.ph/thebookshelf/showdocs/2/4371)); this does not settle GIS/map/image rights. For PAGASA/BFAR, a public advisory page is different from requested restricted station data.
 
+## National-order and case-status refresh (17 October 2026)
+
+The [Cavite fisheries-rule inventory](../../obis/cavite/cavite-fisheries-rule-source-inventory.md) records a limited review of the official 2025 FAO 201-1 active-gear amendment and new 2026 BFAR order listings. FAO 201-1 is a useful national reference, but its own publication/filing effectivity conditions and exceptions still need confirmation before any app rule can be stated. FAO 277 and FAO 244-1 are not yet full-text reviewed; the 2024 FAO 244-1 proposal is not evidence of the 2026 final terms. DA's public update confirms that a motion for reconsideration was filed in Mercidar, G.R. No. 270929, in January 2025, but this review did not verify a current Supreme Court docket disposition. All remain unavailable for an actionable fishing recommendation.
+
 ## Development sequence that can proceed without agency replies
 
 1. Use the discovery outline and PSGC place catalog to build province/LGU selection. Label administrative geography and source year clearly.
@@ -58,4 +62,4 @@ Public access and reuse are distinct. GBIF/OBIS content has per-dataset/per-reco
 5. Continue the private catchbook/offline checks, onboarding and policy flows against the existing product contract.
 6. Integrate exact legal polygons only when their datum, mapped extent, effectivity/amendments and reuse are settled. NAMRIA/LGU replies enhance that component; the other tasks continue independently.
 
-No runtime app behavior or product claims were changed by this research bundle. Newer BFAR index entries (201-1, 277, 244-1) and the municipal-water litigation status remain follow-up items; no October 2026 final judicial status was established in this pass. All existing product features stay on the roadmap.
+No runtime app behavior or product claims were changed by this research bundle. The official 201-1 text, 2026 FAO index entries, and Mercidar docket-status limitation are documented above and in the linked rule inventory. No current final judicial disposition was established. All existing product features stay on the roadmap.
