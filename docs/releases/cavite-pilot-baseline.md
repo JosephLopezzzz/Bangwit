@@ -31,3 +31,19 @@ Before treating a later build as a release, tie the exact built source commit to
 ## Rollback reference
 
 The last previously recorded Production application deployment is listed above. If a later release introduces a regression, identify the currently serving deployment in Vercel first, then use the team's authorized rollback/promotion procedure to restore a known-good deployment. Verify the resulting deployment identity. No rollback or deployment action was taken while creating this baseline.
+
+## Tested source checkpoint — 17 October 2026
+
+The source checkpoint for this verification is commit `bb02c5075941bfd4ea81c196488f638b9965c98a` (`feat(pilot): implement Cavite research and policy slice`), pushed to `origin/main`. The following checks were run against that checkout and passed:
+
+| Check | Result |
+| --- | --- |
+| `npm run test:research` | 18 passed, 0 failed |
+| `npm run test:i18n` | 4 passed, 0 failed |
+| `npm run test:storage` | 2 passed, 0 failed |
+| `npm run test:offline` | 5 passed, 0 failed |
+| `npm run test:advisories` | 20 passed, 0 failed |
+| `npm run typecheck` | Passed |
+| `npm run build` | Passed |
+
+This is source-level verification only. No new Vercel deployment, live-origin check, fresh browser/phone acceptance, or production behavior was verified. The last previously recorded Production application source remains `43718d65e2c4e1a75346529457365e7288749480`; the rollback reference above has not changed. Treat `bb02c50` as tested source, not as a deployed release.

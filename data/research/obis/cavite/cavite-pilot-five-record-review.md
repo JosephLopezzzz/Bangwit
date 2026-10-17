@@ -22,6 +22,16 @@ The current public snapshot continues to contain 12 reviewed CAS CC0 records. A 
 - The original NMI IPT archive URL advertised by GBIF did not resolve during the 17 October check. The current GBIF occurrence records were readable, but they do not provide a detailed collection locality or coordinate uncertainty. The archive retrieval failure is a source-access limit, not a finding that no locality exists in the museum catalog.
 - Keep the five rows as pending in the generated candidate ledger. Do not convert these desk-review holds into specialist approval or rejection. The `cavite-obis-location-review.csv` entries explain why each must stay unplotted and pending.
 
+## Supplementary secondary-source lead — 17 October 2026
+
+FishBase's museum-occurrence pages provide a possible lead for the two National Museum catalog numbers that was not present in the OBIS export reviewed above:
+
+- NMI `1657` (*Ostracion rhinorhynchos*): FishBase lists year 1947, collector San Juan M., gazetteer locality Naic, date 1947-11-23, and identifier Umali A.F. The page's "Name used" field spells the name *Ostracion rhinorhynchus*.
+- NMI `859` (*Stolephorus indicus*): FishBase lists year 1948, collector College of Agri, U.P., gazetteer locality Naic, date 1948-04-01, and identifier Umali A.F.
+- Both pages cite Anonymous (2003), *Fish Collection of the Philippine National Museum*, National Museum, and display a last-modified stamp of `10/04/17`. The linked citation page gives no DOI or digitized catalog page.
+
+This is a secondary catalog lead, not primary validation. It may narrow the source locality to a gazetteer entry for Naic, but it does not provide the original catalog image, confirm whether the locality means capture rather than landing/market provenance, establish coordinate uncertainty, or prove a point lies in municipal waters. Keep both records pending and unplotted until the National Museum catalog/source or a qualified curator confirms the collection context and locality. The candidate-review generator and public snapshot are unchanged by this lead.
+
 ## References checked
 
 - Smithsonian NMNH Fishes IPT dataset: https://ipt.obis.org/nonode/resource?r=nmnh-vzfishes
@@ -29,4 +39,7 @@ The current public snapshot continues to contain 12 reviewed CAS CC0 records. A 
 - National Museum / ASEAN Centre for Biodiversity dataset: https://www.gbif.org/dataset/18896efa-22df-4fbd-9782-42f47257e753
 - GBIF NMI 1657 record: https://api.gbif.org/v1/occurrence/4509664098
 - GBIF NMI 859 record: https://api.gbif.org/v1/occurrence/4509664309
+- FishBase NMI 1657 secondary occurrence detail: https://fishbase.net.br/museum/SpecOccurrences.php?catnum2=100609
+- FishBase NMI 859 secondary occurrence detail: https://fishbase.net.br/museum/SpecOccurrences.php?catnum2=101808
+- FishBase linked reference (Anonymous 2003): https://fishbase.net.br/references/FBRefSummary.php?ID=45880
 - OBIS and WoRMS IDs are recorded in each row of `cavite-obis-fish-candidate-review.csv` and `cavite-obis-worms-crosswalk.csv`.

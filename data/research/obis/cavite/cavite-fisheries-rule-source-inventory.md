@@ -5,6 +5,8 @@
 **Reviewed:** 2026-10-07  
 **Status:** Source map only. This is not a legal clearance or a recommendation to fish.
 
+**Focused follow-up:** 2026-10-17. The source notes below record a limited text review of Bacoor Ordinances 278-2023 and 292-2023 and their NARO catalog entry. This does not establish present legal effectivity or replace certified/current copies.
+
 Bangwit's rule result has to be matched to **user type, exact water area, trip date, species, and fishing method/gear**. A species occurrence record cannot answer whether a person may catch it.
 
 ## Primary sources to use
@@ -33,6 +35,16 @@ Bangwit's rule result has to be matched to **user type, exact water area, trip d
 The 2024 Ecological Profile reports catch season/peak/lean patterns and indexes, among others, a Maragondon fish sanctuary (2020), a Naic fish sanctuary in part of Barangay Bagong Kalsada's municipal waters, and local fishing/gear ordinances. These are useful source leads, but the seasonal pattern is not a breeding or legal closure calendar. Its 2021 ecological profile separately reported Rosario, Tanza, and Naic sanctuaries as maintained, Ternate as “for assessment,” and Maragondon as “lost marker.” These are dated status reports, not proof of current status. The Maragondon dates/descriptions differ across the provincial records, so get the signed ordinance and current map before labeling it on the app.
 
 Bacoor's full Ordinance 278-2023 and its 292-2023 amendment are now available from the City Council's public site. Ordinance 292 changes Section 7 and supplies waypoint tables for municipal-water zones; the 2025 zoning ordinance also cites the amended 278-2023. This is a substantial geometry lead, but the coordinate datum, actual effectivity/publication, any later changes, and reuse terms remain unconfirmed. Do not treat these coordinates as a complete municipal-water outer boundary: they delineate local use zones and features. Cavite City's official index lists Ordinance 2023-3388, but the full text still needs review. The provincial 2011 municipal-waters map is useful for orientation but is too old and visual-only to substitute for current local GIS geometry. The 13-record CC0 shortlist includes broad historical leads, so it does not yet identify a single LGU or sanctuary boundary to test.
+
+### Limited text check — 17 October 2026
+
+- **Bacoor Ordinance 278-2023:** the official City Council PDF identifies passage on 24 April 2023. Section 71 says it takes effect after posting in public/conspicuous places and barangay halls for at least three consecutive weeks after approval. The available PDF is not evidence that the posting actually occurred.
+- **Bacoor Ordinance 292-2023:** the official City Council PDF says it was enacted on 26 July 2023, amends Section 7 of 278-2023, and supplies decimal-degree waypoint tables for internal municipal-water use zones. Its effectivity clause requires publication once weekly for three consecutive weeks and posting in three conspicuous places, with effectivity fifteen days after publication. The PDF does not provide the missing publication/posting proof or a CRS/datum.
+- **NARO cross-check:** the UP Law Center catalog lists an official copy of 292-2023 with issue date 2023-07-26, filing metadata, and a linked electronic document. The catalog expressly says it assists discovery and does not replace an official certified copy. Catalog filing is not proof that the ordinance's local publication/posting conditions were satisfied.
+- **Later-rule limit:** [Bacoor City Ordinance 438-2025, Revised Environment Code](https://bacoorcitysp.com/wp-content/PDF/ORD/2025/438-2025.pdf) is indexed by the City Council, but its large full text was not reviewed in this pass. We did not establish whether it amended, repealed, or otherwise affects either fisheries ordinance. A current amendment/repeal check is still required.
+- **Cavite City Ordinance 2023-3388:** the official ordinance archive confirms the title about banning compressors as breathing apparatus in fishing activities in the city's territorial waters. The full ordinance text, effectivity, amendments, exceptions, penalties and map were not obtained in this pass.
+
+Therefore, these documents are research leads only. Do not encode an actionable rule, a boundary polygon, or a `permitted` result from this review. Confirm current text, effective status, geographic scope and reuse with the responsible LGU/BFAR, and obtain a current official/certified map or technical description before spatial enforcement.
 
 ## Next source-gathering action
 

@@ -242,10 +242,10 @@ Planning horizon: roughly 3–6 focused working weeks for the full implementatio
 
 ## 11. Completion checklist and first implementation slice
 
-- [ ] M1: Current status/counts reconciled; tested source/deployment checkpoint and rollback record captured.
-- [ ] M2: Five candidate decisions and evidence stored; holds/exclusions preserved; any published additions meet admission/attribution gates.
-- [ ] M3A: One advisory product has a written source feasibility and field-mapping decision.
-- [ ] M3B, if feasible: Operational publisher and changed-release acceptance pass before enabling only that product. Otherwise live coverage remains unavailable with the blocker documented.
+- [x] M1: Current status/counts reconciled; tested source checkpoint (`bb02c50`) and last-recorded production/rollback reference captured. No deployment is claimed.
+- [x] M2: Five candidate decisions and evidence stored; holds/exclusions preserved; a supplementary FishBase lead is recorded as secondary evidence only. No public additions were made.
+- [x] M3A: PAGASA manual-source feasibility and field-mapping decision documented; no automated feed is authorized or enabled.
+- [x] M3B: Not applicable after the M3A no-go; no operational publisher or activation was attempted, and live coverage remains unavailable with the blocker documented.
 - [ ] M4: Qualified rule/diet content and bilingual policies reviewed; public operator/contact and hosting facts confirmed.
 - [ ] M5: Pilot tasks/targets agreed, sessions recorded, priority issues resolved or explicitly deferred, and next Cavite batch chosen.
 
@@ -259,3 +259,8 @@ Begin with M1, then the five-record M2.1 review. In parallel, perform only M3.1 
 - M4.1: expanded the source-backed feeding guide from two to five taxa. Three added marine examples are scoped to a 1993 San Miguel Bay study and its CC BY 4.0 repository record; no local-presence or bait claim was added. Existing independent rules and method research remains pending.
 - M4.2: aligned the English and Filipino prototype drafts, disclosed unresolved operator/hosting-log facts, and incremented the acceptance version to `prototype-4` so users must review the revised drafts. Existing browser-local journals, photos, preferences and backups are not migrated or cleared. Qualified legal review, operator/contact details, and actual hosting settings/retention/recipients remain open. The personal contact supplied for the NAMRIA inquiry has not been made an app contact.
 - M5: prepared the facilitator guide, a participant-notice draft and an empty results template, all using synthetic data and deidentified observations. The notice still needs responsible-operator, contact, retention and review decisions. No participant was recruited or tested, and the pilot cannot be described as run.
+- Follow-up after commit `bb02c5075941bfd4ea81c196488f638b9965c98a`: `test:research` 18/18, `test:i18n` 4/4, `test:storage` 2/2, `test:offline` 5/5, `test:advisories` 20/20, typecheck and production build passed. This verifies the pushed source only; no deployment or browser/device acceptance was performed. Evidence is in `docs/releases/cavite-pilot-baseline.md`.
+- M2 supplementary research: FishBase lists Naic as the gazetteer locality for NMI 1657 and NMI 859, with dates and collectors. It cites a 2003 National Museum collection reference but does not expose the primary catalog page or resolve capture versus landing/market context. Both records remain pending and unplotted; evidence and limits are in `data/research/obis/cavite/cavite-pilot-five-record-review.md`.
+- M3A field mapping: the PAGASA public regional page remains a manual link only. A human-verified publisher, regional coverage, source issue time and checked-at time are the only safe fields for now. Warning text, inferred Cavite impact, and “safe” status stay unavailable pending a stable authorized product and semantics review. Historical BFAR bulletin text is not current status.
+- M3: completed via the documented no-go path. M3B is not an outstanding implementation task unless an authorized, stable source and operational owner become available.
+- M4.1 legal-source follow-up: read the official Bacoor Ordinances 278-2023 and 292-2023 and cross-checked 292-2023 against the UP Law Center NARO listing. The texts provide different posting/publication conditions for effectivity, but no proof of those steps or a current certified copy was established. The coordinates in 292-2023 are zonation/use areas, not a complete municipal-water boundary; datum, current applicability, later amendments and reuse remain open. Cavite City Ordinance 2023-3388 is still verified only by its official archive listing. No legal recommendation or geometry was published.

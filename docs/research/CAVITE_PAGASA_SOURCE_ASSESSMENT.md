@@ -10,6 +10,16 @@ Decision: no-go for enabling a live app feed; continue with official links and a
 3. A public August 2026 FOI response from PAGASA states that the API request was denied because access was then limited to government agencies. This is evidence that access may be restricted, not a definitive ruling on every partnership or request. Bangwit has no approved token or authorized government partner recorded.
 4. The current app has no validated raw warning adapter, authorized source access, publisher, scheduler or durable last-good snapshot. Rewriting the public HTML page as an undocumented scraper would not satisfy source stability, reuse, update/cancellation, outage and monitoring gates.
 
+## Manual-source field mapping — checked 17 October 2026
+
+The official Southern Luzon regional page was checked as a human-readable bulletin. The page showed dated forecast content, a statement about whether a Heavy Rainfall Warning had been issued, and a separately dated thunderstorm-watch item. Those are distinct products and must not be collapsed into a single province-wide “safe” status. The page's regional coverage and changing page content are not a validated Cavite warning feed.
+
+For the current app contract, the only safe mapping is a manual source link with the publisher name, regional coverage label, the source's displayed issue time when a person can verify it, and a checked-at time. Do not ingest warning title/body, infer Cavite impact from regional text, or turn “no warning issued” into a clear/safe badge until PAGASA provides a stable authorized data product and its geographic, update, cancellation and reuse semantics are verified. If the linked page is unavailable, show the existing unavailable state.
+
+The BFAR shellfish material found during research is a dated bulletin, not a live API. A historical “free from toxic red tide” statement must never be reused as a current status; a later implementation needs a newly issued bulletin, explicit affected-water coverage, effective/expiry semantics and a source check timestamp.
+
+This closes the source-feasibility decision only. It does not establish an automated feed, a current safety condition, source permission to republish, or an operational publisher.
+
 ## Go/no-go
 
 **No-go for automated live-warning activation now.** Keep live advisory coverage unavailable. Keep the fictional preview clearly marked as a demonstration, and let users open PAGASA's official Southern Luzon page for the source bulletin. Do not display a green or “safe” state from a missing feed.
