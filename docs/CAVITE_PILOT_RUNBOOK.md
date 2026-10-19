@@ -26,11 +26,13 @@ Check a box only after the named person records dated evidence. A prepared docum
 | G2 — Starter-content review | Reviewed content set/reference and limits; held/excluded records remain unpublished, no unsupported legality/safety claims | Receipt pending; do not infer approval from document existence |
 | G3 — Policy and notice review | Owner and appropriate qualified reviewer resolve the packet's open operator/controller, purposes/basis, rights/contact and provider metadata/recipient wording; review the selected 90-day-after-resolution support-email procedure, participant notice version and choice procedure | Pending; no qualified reviewer assigned and notice remains NOT APPROVED |
 | G4 — Cohort and task agreement | Proposed mixed cohort, optional broad category, scripts/language, tasks/criteria, scoring, target denominators and any timing rule agreed before invitations | Prepared, agreement pending |
-| G5 — Private notes and retention | Joseph verifies folder/access in practice, no cloud/recording workflow, deletion reminders and copy-check procedure usable; no participant notes collected during preparation | Operating decision recorded; pre-session verification pending |
-| G6 — Synthetic setup | Photo fixture rights/reference, exact fictional values, empty profiles, cache/worker and backup/offline/reconnect checks on the fixed build, no personal data | Pending selected build and fixture receipt |
+| G5 — Private notes and retention | Joseph verifies folder/access in practice, no cloud/recording workflow, deletion reminders and copy-check procedure usable; no participant notes collected during preparation | Empty-folder ACL restricted and read back on 19 October; backup/sync handling, actual reminder/deletion procedure and pre-session verification pending |
+| G6 — Synthetic setup | Photo fixture rights/reference, exact fictional values, empty profiles, cache/worker and backup/offline/reconnect checks on the fixed build, no personal data | [Exact A/B inputs and original SVG prepared](fixtures/cavite-pilot/README.md); selected-build/device checks and actual fixture receipt pending |
 | G7 — Owner readiness decision | Dated decision referencing G1–G6 and any limitations; recruitment text matches reviewed notice | CLOSED; no readiness decision recorded |
 
 Required readiness record:
+
+The [complete English/Filipino draft copy](review/CAVITE_POLICY_DRAFT_SNAPSHOT.md) and [proposed pilot-field inventory](CAVITE_PRIVACY_REVIEW_PACKET.md#proposed-pilot-fields) are ready for G3 review; neither is an approval. Use the [fixture specification](fixtures/cavite-pilot/README.md) for G6: A has the free-text name `SYNTHETIC pilot A`; B leaves Species empty. The source-based collection expectations still require the selected build/device check. The separate [partial local traffic follow-up](CAVITE_LOCAL_TRAFFIC_FOLLOWUP.md) does not satisfy G1/G6 or the hosted privacy gate.
 
 - Round ID / scope / planned dates: `[unselected]`
 - G1–G6 evidence references and date: `[pending]`
@@ -120,6 +122,14 @@ The round owner records: continue controlled pilot / revise and retest / stop / 
 These 30-day rules apply to pilot task notes and their working copies. They do not declare a retention period for a participant's own journal, provider metadata or recruitment logistics. Voluntary support email has the separate owner-selected 90-day-after-resolution procedure above. Those boundaries and any provider limitations must be explained by the reviewed notice and privacy packet.
 
 ## Current blockers and next authorized preparation
+
+### Empty-folder setup receipt — 19 October 2026
+
+Read-only inspection found zero entries in `%LOCALAPPDATA%\Bangwit\pilot-feedback`, no reparse-point flag on that folder and no containment in the configured OneDrive root environment values. Its inherited ACL additionally allowed a local `CodexSandboxUsers` automation group to read/execute. Before collecting anything, saved the original ACL outside Git, then restricted this empty folder's DACL to the current owner/user, SYSTEM and local Administrators, preserving those principals' existing rights and blocking parent permission inheritance. Read-back found three allow rules, no automation-group grant or other rules, the same owner and zero entries. No parent folder, group membership or file content was changed.
+
+The rollback receipt is `outputs/qa-policy-upgrade/pilot-folder-acl-before-20261019T155125Z.json` in the session workspace, outside the repository. It contains the exact target and original SDDL for an owner-controlled restoration if needed; keep it local. An initial attempt stopped on its pre-write grant-count guard, so no ACL write occurred in that attempt. The subsequent explicit three-rule replacement and read-back succeeded.
+
+This is a bounded Windows ACL check/configuration, not proof of exclusive human access, effective group-membership/privilege isolation, device encryption, cloud/backup exclusion or a working deletion reminder. SYSTEM/Administrators retain access; processes running as the owner may also access the folder. No participant data, reminder, session or deletion receipt was created. G5 remains open for the remaining operating checks and notice review.
 
 The materials are ready for owner/reviewer review, not participant use. The remaining gates are final policy/notice and processing/retention review, starter-content/wording agreement, a fixed tested build receipt, and verified private-note/reminder/synthetic-test setup. Recruitment, sessions, results, fixes inferred from participants and the final next-batch decision cannot be completed without those inputs and actual voluntary sessions.
 

@@ -5,7 +5,7 @@
 
 ## Scope of this follow-up
 
-One bounded official-source retrieval retry targeted **Cavite City Ordinance 2023-3388**. A separate bounded follow-up sought the final full text of **FAO 277**. The Bacoor and other national-order questions below are carried forward from the [17 October source cards](../../data/research/obis/cavite/cavite-rule-reference-cards.md); their full texts, legal status and external records were not reverified on 19 October.
+Separate bounded official-source follow-ups targeted **Cavite City Ordinance 2023-3388**, **FAO 277** and **FAO 244-1**. The Bacoor and other national-order questions below are carried forward from the [17 October source cards](../../data/research/obis/cavite/cavite-rule-reference-cards.md); their full texts, legal status and external records were not reverified on 19 October.
 
 ## Cavite City retrieval record — 19 October 2026
 
@@ -32,6 +32,20 @@ The target was the final order listed by BFAR as FAO 277, dated 8 July 2026, con
 No final-order bytes, signature page, section-level review, effectivity clause or supporting publication/registration record was obtained. Later amendments, repeal, current enforceability and public-app reuse terms remain unverified. FAO 244-1 was not included in this follow-up. Link to and paraphrase available references only; do not archive or publish a purported full order from a press summary.
 
 For the next reviewer: obtain an authoritative signed/final copy that matches the index number, series, title and date; inspect every relevant definition, scope/exception, obligation, sanction, repeal/transition and effectivity section; then separately obtain the required publication/registration evidence and check later official changes. Record source/version and reuse terms. These are separate evidence questions, and a final text alone would not resolve them all.
+
+## FAO 244-1 final-text retrieval record — 19 October 2026
+
+This separate target was the final amendment listed as FAO 244-1, dated 24 July 2026, concerning the 2012 national FAD-management policy. The earlier FAO 277 receipt's exclusion of FAO 244-1 describes that earlier pass only.
+
+| Check | Observed result | Evidence limit |
+| --- | --- | --- |
+| Targeted FAO 244-1 number/title searches in BFAR/DA, UP NARO, Official Gazette and Supreme Court E-Library official domains | The search-indexed [central BFAR order index](https://www.bfar.da.gov.ph/laws-regulations-issuances/administrative-orders/) supplies an identity/date lead. No final text or matching publication/registration record was exposed. | An indexed title/date does not supply the signed order, detailed provisions, publication or filing evidence. Non-discovery does not establish that those records do not exist. |
+| [UP NARO homepage](https://naro.law.upd.edu.ph/) and [bulletin archive](https://naro.law.upd.edu.ph/bulletins), read through public navigation | Both were accessible. The displayed bulletin archive lists volumes 13–15, ending with Book 21 dated 19–23 May 2025; it displays no July 2026 bulletin. | This is a coverage limit of the page inspected, not a finding about all ONAR holdings or whether FAO 244-1 was filed. No search form was submitted or certified copy obtained. NARO identifies its public material as research/reference and directs official legal use to certified copies. |
+| [BFAR Region XI order index](https://region11.bfar.da.gov.ph/fisheries-administrative-orders/), an alternate official index surfaced by the searches | Web reader returned HTTP 502. | No final-order attachment or page body was acquired from this read. The failed central BFAR retrieval paths from the FAO 277 pass were not repeated. |
+
+No final-order bytes, signature page, section-level scope review, effectivity clause or evidence satisfying that clause was obtained. The existing May 2024 proposal was not treated as final text. There is no finding that FAO 244-1 is unpublished, unfiled, ineffective, superseded or currently enforceable; later/current status, interaction with the base order and public-app reuse terms remain unverified. No TLS validation exception, outreach, form, login or paid service was used.
+
+Next reviewer questions: which authoritative signed/final copy corresponds to the index entry, and what does it actually amend? Which final effectivity conditions and applicable publication/registration requirements must be checked, and which dated records prove their completion? Are there later amendments, suspensions, repeals or implementing measures that change its scope? Record each answer independently with a source/locator and qualified review before any contextual FAD/tuna-method guidance is considered. M4 remains incomplete.
 
 ## Evidence required for the next review
 

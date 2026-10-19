@@ -11,7 +11,8 @@ Use the [runbook](CAVITE_PILOT_RUNBOOK.md) for readiness gates, the build receip
 - Confirm the reviewed notice/version and choice process before notes or tasks. The app acknowledgment is not pilot participation consent. Do not obtain agreement through this draft guide.
 - Confirm the round's fixed-build receipt and exact HTTPS origin. Do not change the build, origin or task wording within the round. An unplanned update pauses the round for relevant checks and a new receipt.
 - Use an isolated test browser profile with an empty journal. Do not inspect a participant's personal browser profile. No accounts, real catches, private photos, exact spots, GPS or personal contacts are needed.
-- Prepare the reviewed synthetic photo fixture and these values: `50 cm`, `1000 g`, place `Demo Cove — synthetic`, notes `Pilot example A — fictional` and `Pilot example B — fictional`. They are examples, not Cavite occurrence evidence. Use a supported identified species for A and the app's unidentified option for B; record the chosen species in the round fixture receipt.
+- Prepare the [exact A/B fixture specification](fixtures/cavite-pilot/README.md) and its [original synthetic photo](fixtures/cavite-pilot/synthetic-catch.svg). A uses species text `SYNTHETIC pilot A`; B leaves the optional Species input completely empty. Both use `50 cm`, `1000 g`, Saltwater, Released, manually typed place `Demo Cove - synthetic`, and the same test photo. Their notes are `Pilot example A - fictional` and `Pilot example B - fictional`. Record the device-local session date as `YYYY-MM-DD` and use it for both examples, including after A resets the form. These are fictional inputs, not identified fish or Cavite occurrence evidence; no GPS is used.
+- Include the fixture paths, photo SHA-256 and session-date parameter in the fixture receipt. Freeze the other values within the round. The source has an optional free-text Species field, not an unidentified dropdown option or a validated list of supported species. The expected blank-species/collection behavior is documented below from source only; check it on the fixed pilot build before sessions.
 - Cache/load the build online in the test profile and confirm worker control before an offline task. Start tasks from the pre-agreed state; facilitator setup is not participant task completion.
 - Record date, participant code, language, device model, OS/browser version, viewport and installed/browser context. Keep only the information needed to reproduce an interface problem.
 - Keep deidentified notes on Joseph's device in `%LOCALAPPDATA%\Bangwit\pilot-feedback`, with Joseph-only project access and deletion due 30 calendar days after each session. No audio, video, screen recording, identifiable screenshot or automatic transcription is part of this pilot.
@@ -61,21 +62,23 @@ Success: recognizes that unavailable/stale information is not an all-clear, and 
 
 Prompt: “Use example A to save a fictional catch and photo while offline, then reopen it. Start example B as a new draft. When the connection comes back, check the draft and save it once.”
 
-Before the task, the facilitator confirms the recorded online cache/worker setup and zero saved entries; switching the test device/profile offline and online on cue is standard setup. Do not disconnect someone else's connection or clear storage. Use only the prepared photo fixture and fictional values.
+Before the task, the facilitator confirms the recorded online cache/worker setup and zero saved entries; switching the test device/profile offline and online on cue is standard setup. Do not disconnect someone else's connection or clear storage. Give the participant the [A/B fixture specification](fixtures/cavite-pilot/README.md), with `SESSION_DATE` resolved to the recorded device-local date, and the original synthetic photo. Giving the fixed example values is standard setup; navigation hints still count as help. Do not substitute real catches, locations or photos.
 
 Success checks, all required for U/A:
 
-1. Offline save A; after reopen/reload it has readable photo and correct values/units, and the journal count is exactly one.
-2. Start B with the unidentified choice and fictional note/photo; reconnect before saving. The draft and photo stay intact.
-3. Save B once; reopen the journal and confirm exactly two entries, one of each example, with readable photos and values.
+1. Offline save A with species text `SYNTHETIC pilot A` and the exact fixture values; after reopen/reload it has a readable photo, the recorded session date, `50 cm`, `1000 g` and its A note, and the journal count is exactly one.
+2. Start B with the optional Species input completely empty and the exact B values/photo. Confirm the recorded session date and `cm`/`g` units after the form reset. Reconnect before saving, without reloading or navigating away from the unsaved draft. The entered values and photo stay intact.
+3. Save B once; reopen the journal and confirm exactly two entries, one of each example, with readable photos and all specified values. B should display `Unidentified` in English or `Hindi pa natukoy` in Filipino; it is saved internally as `Hindi pa natukoy`.
 
 Record observed counts and any reload/network problem. If a prerequisite prevents a real attempt, use S with the setup reason; if an attempted save fails, use F. Saved-data/photo loss, corrupted backup or accidental duplication is a blocker. Preserve a short deidentified description and stop affected tasks; do not retry until the failure disappears and report it as an initial pass.
 
 ### T5 — My Species meaning
 
-Prompt: “Open My Species. How are the identified example and the unidentified example treated? Does this collection establish what fish are present in Cavite?”
+Prompt: “Open My Species. How are example A with a name and example B with the species left blank treated? Does this collection establish what fish are present in Cavite?”
 
 Success: explains the build's identified/unknown behavior and recognizes that a personal collection is not verified regional occurrence evidence. Record actual UI behavior. If T4 failed, a prepared separate synthetic profile may be used only as a recorded setup assistance; never invent a T4 completion. Mark T5 S if the necessary test state is unavailable.
+
+Facilitator expectation from source review only: A creates one personal collection group named `SYNTHETIC pilot A`, with one catch; B remains in My Catches and contributes one unknown catch to the My Species notice without creating a second group. The code trims names, excludes blank/`Hindi pa natukoy`/`Unidentified` names without regard to case, and groups other names without checking a biological species list. A named card is therefore not a verified identification. This preparation did not browser-test that A/B flow; record what the selected pilot build actually does and treat any mismatch as an issue.
 
 ### T6 — Private journal backup
 

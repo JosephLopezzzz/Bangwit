@@ -1,6 +1,6 @@
 # Cavite pilot rule-source reference cards
 
-**Reviewed:** 17 October 2026; bounded Cavite City and FAO 277 retrieval follow-ups on 19 October 2026. Other cards were not reverified in those follow-ups.
+**Reviewed:** 17 October 2026; separate bounded Cavite City, FAO 277 and FAO 244-1 retrieval follow-ups on 19 October 2026. Other cards were not reverified in those follow-ups.
 
 **Use:** Internal source register for research and UX planning. These cards describe located documents and open verification questions. They are not legal advice, proof of current effectivity, or permission to fish.
 
@@ -46,6 +46,13 @@
 - **Open:** The final full text, detailed scope, conditions and effectivity evidence were not located in this review. A press release or index entry is insufficient for a rule card in the app.
 - **Retrieval follow-up (19 October 2026):** The official BFAR index remained search-indexed with this entry. The web reader did not return the index; a normal HTTPS request to its `www` host timed out after 20 seconds, and the non-`www` host failed certificate-name validation. Neither TLS check was bypassed. Targeted official-source searches did not expose a final attachment in this pass. The accessible [DA release of 21 July 2026](https://www.da.gov.ph/new-crab-rules-safeguard-exports-seas-fishing-livelihoods-together/) is a press release, with no final-order link in the article body inspected. No actual order sections or effectivity clause were obtained; later/current status and reuse terms remain unknown. See the [review handoff](../../../../docs/research/CAVITE_RULE_REVIEW_HANDOFF.md).
 - **Application to Bangwit:** No gillnet or crab recommendation is enabled.
+
+### BFAR Fisheries Administrative Order 244-1, 2026 listing
+
+- **Identity lead:** The search-indexed [official BFAR order index](https://www.bfar.da.gov.ph/laws-regulations-issuances/administrative-orders/) identifies FAO 244-1, dated 24 July 2026, as an amendment to the 2012 national FAD-management order. This is catalog identity evidence only.
+- **Retrieval follow-up (19 October 2026):** Targeted official-source searches did not expose a final text or matching publication/registration record. The accessible [UP NARO bulletin archive](https://naro.law.upd.edu.ph/bulletins) displays volumes 13–15 with its last displayed book dated 19–23 May 2025; that page does not supply a July 2026 bulletin. The [BFAR Region XI index](https://region11.bfar.da.gov.ph/fisheries-administrative-orders/) returned HTTP 502 in the web reader. The central BFAR request paths that failed during the FAO 277 pass were not repeated. See the [review handoff](../../../../docs/research/CAVITE_RULE_REVIEW_HANDOFF.md#fao-244-1-final-text-retrieval-record--19-october-2026).
+- **Draft distinction:** The inventory's [May 2024 proposed amendment](https://www.bfar.da.gov.ph/wp-content/uploads/2024/05/Proposed-Amendment-of-FAO-244-on-FAD-Management-Policy_23May2024.pdf) remains an earlier draft lead, not the final 2026 order. It was not reread or used to fill missing final provisions in this pass.
+- **Open / application:** No final sections, signature page, effectivity clause or completion evidence were obtained. Detailed scope, interaction with the base order and other FAD measures, later changes/current status and public-app reuse remain unverified. Search/archive non-discovery does not establish non-publication or non-registration. No FAD/tuna-method advice or permission result is enabled.
 
 ## Cavite local instruments
 

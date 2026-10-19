@@ -4,6 +4,8 @@ Prepared: 19 October 2026. **Factual preparation complete; final privacy/legal a
 
 Read with the [privacy review packet](CAVITE_PRIVACY_REVIEW_PACKET.md), [technical evidence](../PRIVACY_REVIEW.md) and [participant notice draft](CAVITE_PILOT_PARTICIPANT_NOTICE.md). The English/Filipino dictionaries were reviewed as drafts. No app code or acknowledgment was changed by this handoff.
 
+The [complete bilingual policy draft snapshot](review/CAVITE_POLICY_DRAFT_SNAPSHOT.md) now supplies all English/Filipino Privacy/Terms paragraphs and acknowledgment UI text without requiring the reviewer to decode TypeScript. It preserves the app's dates and source wording, records source commit `2f08dc7fe01d8b27613613df8e1cc50ff04afe7d` / `prototype-6`, and includes source-file/text fingerprints with a 110/110 exact-copy check. The [proposed pilot-field inventory](CAVITE_PRIVACY_REVIEW_PACKET.md#proposed-pilot-fields) separately lists the blank templates' session context, optional category, choice receipts, task observations, synthetic evidence, issue/tally and deletion records. Both are preparation for review; no collection, translation/legal approval or pilot-release choice is implied.
+
 ## Confirmed owner decisions
 
 | Item | Confirmed operating decision | Boundary |
@@ -42,6 +44,8 @@ The [NPC right-to-be-informed checklist](https://privacy.gov.ph/the-right-to-be-
 | Pilot-note operation | Keep participant codes; set and carry out the existing 30-day deletion schedule; handle early requests by code. | Joseph confirms the reminder/deletion process before sessions. A prepared folder is not evidence the procedure has run. |
 | Bilingual notice and pilot release | Review the final English/Filipino meaning, distinguish acknowledgment from any applicable consent, select one tested build/URL, and complete the participant-notice approval record. | Owner and appropriate reviewer; recruitment/session approval stays pending under the existing plan. Absence of a reviewer is not approval. |
 
+Review the full copied draft alongside the proposed pilot fields: which timestamps/device details and optional experience fields are needed, what participation-choice record is appropriate, and how accidental personal data, logistics, session-level receipts and any retained aggregate report are handled. The working templates propose these records; this handoff neither approves their collection nor invents a report/logistics retention period. General project/build receipts without participant traces are distinct from session notes.
+
 ## Proposed bilingual support-email wording — review only
 
 These aligned draft paragraphs use the confirmed owner decision and the Google sources above. They do not replace the full notice or settle legal adequacy.
@@ -52,4 +56,4 @@ These aligned draft paragraphs use the confirmed owner decision and the Google s
 
 ## Scope of completed work
 
-Reviewed the existing packet, technical review, participant notice and bilingual drafts; refreshed the linked primary sources; recorded the owner's email decision and pending reviewer questions. Verified documentation references and whitespace only. This task performed no policy acceptance, personal-data collection, account inspection/change, email send, commit, push or deployment. M4 final review and M5 participant sessions remain open.
+Reviewed the existing packet, technical review, participant notice and bilingual drafts; refreshed the linked primary sources; recorded the owner's email decision and pending reviewer questions. Added the complete source-copy appendix and proposed pilot-field inventory, checking exact source/text parity and documentation links/whitespace only. This handoff work performed no policy acceptance, personal-data collection, account inspection/change, email send, commit, push or deployment. The separately authorized local synthetic upgrade check is recorded in the packet; it is not privacy approval. M4 final review and M5 participant sessions remain open.
