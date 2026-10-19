@@ -1,0 +1,55 @@
+# Cavite privacy review — decisions and reviewer handoff
+
+Prepared: 19 October 2026. **Factual preparation complete; final privacy/legal approval pending.** No qualified reviewer is currently available. This document does not approve the policies or participant notice, or authorize recruitment.
+
+Read with the [privacy review packet](CAVITE_PRIVACY_REVIEW_PACKET.md), [technical evidence](../PRIVACY_REVIEW.md) and [participant notice draft](CAVITE_PILOT_PARTICIPANT_NOTICE.md). The English/Filipino dictionaries were reviewed as drafts. No app code or acknowledgment was changed by this handoff.
+
+## Confirmed owner decisions
+
+| Item | Confirmed operating decision | Boundary |
+| --- | --- | --- |
+| Responsible person and contact | Joseph Lopez is the individual operator for planning and monitors `tepezzzz070@gmail.com` for public privacy/support requests. | Final controller identification and legal wording need review. The private NAMRIA-inquiry address remains private. |
+| Project and participation | Independent personal project; no institutional affiliation or approval claimed; no participant compensation. | Reassess the process if institutional involvement or the activity changes. |
+| Pilot notes | Private local folder, Joseph-only project access, deletion of notes and working copies 30 days after each session; no audio/video recording. | Owner-confirmed practice, not an audit of device security or a promise about journals, email or hosting logs. No participant sessions or notes are evidenced here. |
+| Voluntary support email | **Owner confirmed on 19 October: retain for 90 days after resolution, then delete working copies and empty Trash.** | Operator retention, separate from Google/provider retention and any sender's copies. Final wording and lawful exceptions need review. No mailbox content or settings were inspected. |
+
+## Provider facts refreshed from primary sources
+
+All sources below were opened on 19 October 2026. These are provider statements, not an audit of Bangwit's account or a guarantee about every data category.
+
+| Processing surface | Verified provider fact and source | Exact limitation for this notice |
+| --- | --- | --- |
+| Vercel runtime logs | [Runtime Logs, “Limits”](https://vercel.com/docs/logs/runtime#limits) documents one hour of logs for Hobby. Its request/log details include paths, methods, timestamps and status; browser-log filtering uses IP address and user agent. | Use the one-hour figure only for the documented runtime-log category. It is not universal erasure of visitor metadata. |
+| Vercel build logs | [Platform limits, “Logs”](https://vercel.com/docs/limits#logs) says build logs are stored indefinitely for each deployment. | Build logs have a separate lifecycle. This does not establish that private journals are present in them; do not put participant information in source/build output. |
+| CDN and security | [How Vercel CDN works](https://vercel.com/docs/how-vercel-cdn-works) says requests pass through its global CDN and firewall. [Firewall Observability](https://vercel.com/docs/vercel-firewall/firewall-observability) describes a traffic view up to 24 hours and dimensions including IP, user agent, path and country. | Dashboard display windows do not establish complete backend deletion deadlines. No current Bangwit Firewall/account settings were inspected. |
+| Vercel infrastructure/backups | [Security & Compliance Measures, “Infrastructure” and “Data backup”](https://vercel.com/docs/security/compliance) says its platform primarily uses AWS, permits international processing, and describes customer-data backups retained 30 days. | The general backup statement does not identify which Bangwit metadata is backed up, or set its total retention. It does not establish that device-local journals reach Vercel. |
+| Vercel purposes, recipients and retention | [Privacy Notice](https://vercel.com/legal/privacy-notice), updated 1 June 2026, describes traffic IP/IP-derived location/system information; service, security and legal purposes; recipients including affiliates, cloud/CDN and security providers, and legally required disclosures. Retention is purpose-based, with deletion/anonymization or secure storage where deletion is not possible. It permits international processing. | No exact CDN/security/system-metadata retention period is established. Provider-controller processing is distinguished from customer-directed processing. These general categories do not prove every recipient receives Bangwit visitor data. |
+| Applicable Vercel contract | [DPA, sections 1 and 4](https://vercel.com/legal/dpa), effective 31 March 2026, expressly scopes its processor provisions to Enterprise/Pro. [Terms, section 4](https://vercel.com/legal/terms#4-hobby-plan) says Hobby is subject to the Terms. | Do not assume the published DPA is Bangwit's Hobby agreement or assign every flow a processor role. Reviewer/owner must establish applicable terms. The [subprocessor URL](https://vercel.com/legal/sub-processors) redirects to the Trust Center; the extracted public page did not expose a complete list, so no complete named-recipient list was verified. |
+| Gmail support messages | [Google Privacy Policy](https://policies.google.com/privacy?hl=en), effective 16 October 2026, covers sent/received email and communication metadata. It describes service provision, affiliates/service providers, legal disclosures and processing on servers outside a user's country. | Email is a separate Google-hosted processing activity. Consumer Gmail facts do not establish a Google Workspace agreement, data region, mailbox delegation, forwarding, connected apps or copies on other devices. None was inspected. |
+| Gmail deletion and Google backend retention | [Gmail deletion help](https://support.google.com/mail/answer/7401?hl=en) says deleted messages remain recoverable in Trash for up to 30 days unless permanently deleted earlier. [Google retention guidance](https://policies.google.com/technologies/retention?hl=en) says deletion generally takes about two months, encrypted backups may retain data up to six months, and delays or longer limited-purpose retention can apply. | These are provider descriptions, not an exact deletion promise for a particular support message. Emptying Trash does not demonstrate immediate erasure from all Google systems. The owner's 90-day rule governs his handling, not Google's or the sender's. |
+
+The packet's Hobby/one Owner/no drains/analytics-not-enabled observations remain dated **17 October**. Source review began at `d16714501704b8d3197a6ef36a2a1fac070032a2`; local HEAD and the locally tracked `origin/main` matched it. The existing release record says Production was restored on 17 October to `cadbca7` using Vercel Promote. This task did not inspect a deployment, capture current hosted traffic or verify a freshly deployed SHA. No older production capture is promoted into current-release evidence.
+
+## Concrete decisions still pending
+
+The [NPC right-to-be-informed checklist](https://privacy.gov.ph/the-right-to-be-informed/) covers data, purposes/basis, scope/method, recipients, automated access, controller/contact, retention and rights. Use it to complete the following review; this checklist comparison is not a legal conclusion.
+
+| Decision | Proposed next action | Required sign-off/evidence |
+| --- | --- | --- |
+| Controller, basis and rights | Review the individual-operator description and each flow separately: device journal, website metadata, pilot notes and voluntary email. Finalize applicable rights, identity-check method, response/complaint route and any deadlines. | Qualified reviewer; Joseph confirms the resulting procedure is workable. No legal basis or statutory deadline is selected here. |
+| Hosting scope and retention | Establish the Hobby agreement/roles and whether additional provider clarification is necessary for data-specific recipients, international processing, security logs and backups. Keep unknown periods explicit. | Owner/reviewer; provider answer if required. No provider contact was made. |
+| Support-email operation | Record a resolution date and the corresponding 90-day deletion date; include related messages, sent replies and any working copies in the deletion check. Review legitimate exceptions and what to say if a request is reopened. | Owner/reviewer approve the detailed procedure. Forwarding, exports, delegates, connected clients and device copies need factual checking before claiming exclusive access or complete operator deletion. No settings changes or purge ran. |
+| Pilot-note operation | Keep participant codes; set and carry out the existing 30-day deletion schedule; handle early requests by code. | Joseph confirms the reminder/deletion process before sessions. A prepared folder is not evidence the procedure has run. |
+| Bilingual notice and pilot release | Review the final English/Filipino meaning, distinguish acknowledgment from any applicable consent, select one tested build/URL, and complete the participant-notice approval record. | Owner and appropriate reviewer; recruitment/session approval stays pending under the existing plan. Absence of a reviewer is not approval. |
+
+## Proposed bilingual support-email wording — review only
+
+These aligned draft paragraphs use the confirmed owner decision and the Google sources above. They do not replace the full notice or settle legal adequacy.
+
+**English:** If you email `tepezzzz070@gmail.com`, Joseph uses your address and message to respond to your privacy or support request. Gmail/Google also processes the email under its own privacy practices. Joseph will retain the support correspondence for 90 days after the request is resolved, then delete his working copies and empty Trash. Google's recovery, backup and legal-retention processes are separate. Do not send private catch backups, photos, exact fishing locations or passwords.
+
+**Filipino:** Kung mag-email ka sa `tepezzzz070@gmail.com`, gagamitin ni Joseph ang iyong email address at mensahe para tumugon sa privacy o support request mo. Pinoproseso rin ng Gmail/Google ang email ayon sa sarili nitong privacy practices. Itatago ni Joseph ang support correspondence nang 90 araw matapos maresolba ang request, pagkatapos ay buburahin ang kaniyang working copies at aalisin ang mga ito sa Trash. Hiwalay ang recovery, backup at legal-retention processes ng Google. Huwag magpadala ng pribadong catch backup, larawan, eksaktong fishing location o password.
+
+## Scope of completed work
+
+Reviewed the existing packet, technical review, participant notice and bilingual drafts; refreshed the linked primary sources; recorded the owner's email decision and pending reviewer questions. Verified documentation references and whitespace only. This task performed no policy acceptance, personal-data collection, account inspection/change, email send, commit, push or deployment. M4 final review and M5 participant sessions remain open.

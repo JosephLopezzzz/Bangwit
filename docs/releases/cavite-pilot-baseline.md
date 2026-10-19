@@ -1,7 +1,13 @@
 # Cavite pilot baseline — release identity and limits
 
-Reviewed: 17 October 2026
+Reviewed: 17 October 2026; release reconciliation updated 19 October 2026.
 Status: documentation baseline; this file does not declare a new release.
+
+## Current reconciliation — 19 October 2026
+
+The historical observations below retain their original scope. They are superseded for the latest publication/restoration sequence by the [production recovery record](cavite-production-recovery.md). Both remote `main` and `codex/pilot-policy-review-20261017` were checked at `d167145` on 19 October. The owner-authorized Production restoration to `cadbca7` was verified in the signed-in Vercel dashboard on 17 October; a fresh dashboard session is unavailable in the current browser inventory. Public Production assets checked on 19 October expose `prototype-4`, consistent with that restored source, but do not prove its current deployed SHA. The exact deployment URLs remain protected.
+
+A local recovery branch, `codex/restore-production-20261019` at `27b3b1b94810ff7155c203caf85ad0fe8001a280`, reverses `d167145` and has an identical Git tree to `cadbca7`. It is prepared for review and has not been pushed. The policy/content work remains on its separate review branch, with a new local `prototype-6` draft; it is not part of the recovery tree. Final approved policy review, a fixed pilot build and participant sessions remain pending.
 
 ## Source and deployment identity
 

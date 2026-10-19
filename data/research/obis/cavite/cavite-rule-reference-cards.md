@@ -1,6 +1,6 @@
 # Cavite pilot rule-source reference cards
 
-**Reviewed:** 17 October 2026
+**Reviewed:** 17 October 2026; bounded Cavite City and FAO 277 retrieval follow-ups on 19 October 2026. Other cards were not reverified in those follow-ups.
 
 **Use:** Internal source register for research and UX planning. These cards describe located documents and open verification questions. They are not legal advice, proof of current effectivity, or permission to fish.
 
@@ -44,6 +44,7 @@
 - **Issuer / date:** BFAR order index lists an order dated 8 July 2026 titled “Regulating the Use of Blue Swimming Crab Gillnets in Philippine Waters.”
 - **Source / locator:** [Official BFAR administrative-order index](https://www.bfar.da.gov.ph/laws-regulations-issuances/administrative-orders/).
 - **Open:** The final full text, detailed scope, conditions and effectivity evidence were not located in this review. A press release or index entry is insufficient for a rule card in the app.
+- **Retrieval follow-up (19 October 2026):** The official BFAR index remained search-indexed with this entry. The web reader did not return the index; a normal HTTPS request to its `www` host timed out after 20 seconds, and the non-`www` host failed certificate-name validation. Neither TLS check was bypassed. Targeted official-source searches did not expose a final attachment in this pass. The accessible [DA release of 21 July 2026](https://www.da.gov.ph/new-crab-rules-safeguard-exports-seas-fishing-livelihoods-together/) is a press release, with no final-order link in the article body inspected. No actual order sections or effectivity clause were obtained; later/current status and reuse terms remain unknown. See the [review handoff](../../../../docs/research/CAVITE_RULE_REVIEW_HANDOFF.md).
 - **Application to Bangwit:** No gillnet or crab recommendation is enabled.
 
 ## Cavite local instruments
@@ -77,6 +78,7 @@
 - **Issuer / date:** Cavite City; 2023 ordinance listing.
 - **Source / locator:** [Official Cavite City ordinance archive](https://cavitecity.gov.ph/index.php/component/phocadownload/category/77-city-ordinance-2023); the listing title describes a ban on using a compressor as a breathing apparatus in fishing activities in Cavite City territorial waters.
 - **Retrieval check (17 October 2026):** The official site's indexed archive lists the PDF attachment, but opening the archive returned HTTP 502 in the web reader; a normal HTTPS request failed certificate trust, and direct retrieval did not complete. TLS verification was not bypassed. No ordinance text was obtained.
+- **Retrieval follow-up (19 October 2026):** Official-domain searches still returned the title/PDF label in the 2023 archive. The search result URL has an encoded download query naming **2023-3391**, a different ordinance; its archive snippet is not a verified download link for 2023-3388. Opening the plain archive was inaccessible in the web reader, opening the indexed result timed out, and a normal HTTPS archive request timed out after 20 seconds. No final text, attachment bytes or effectivity evidence was obtained. No TLS bypass was used. See the [review handoff](../../../../docs/research/CAVITE_RULE_REVIEW_HANDOFF.md) for the bounded retrieval record and reviewer questions.
 - **Open:** Effectivity, amendments/repeal, exact exceptions, penalties, mapped scope and reuse terms remain unknown.
 - **Application to Bangwit:** Do not display the archive title as an operative rule or determine a user's legality from it.
 

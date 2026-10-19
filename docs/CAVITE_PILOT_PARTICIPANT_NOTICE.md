@@ -26,6 +26,8 @@ Project notes will be stored in a private local folder on Joseph Lopez's device 
 
 The test build is served from `[exact tested URL or local setup to be selected]`. If using the Vercel-hosted build, Vercel processes technical request information separately from the local catch journal. The October 17, 2026 account check found a Hobby team with one Owner and no configured drains. The documented Hobby runtime-log window is one hour; this is not a deletion guarantee for all provider metadata. Complete the remaining hosting/retention wording with the reviewer using the [privacy review packet](CAVITE_PRIVACY_REVIEW_PACKET.md) before session use.
 
+If you voluntarily email the project, Joseph will use your email address and message to respond. The owner selected retention of support correspondence for 90 days after resolution, then deletion of his working copies and removal from Trash. Gmail/Google processes email separately under its own privacy practices; operator deletion does not guarantee immediate erasure from provider systems or the sender's copies. This rule is separate from the 30-day pilot-note rule and remains subject to final notice review. See the [review decisions](CAVITE_PRIVACY_REVIEW_DECISIONS.md).
+
 The prototype keeps synthetic catch records in the test browser's local storage. The participant should use a fresh test profile with no personal journal data. The facilitator must not inspect or copy the participant's personal browser profile.
 
 ## Contact and questions
@@ -36,6 +38,8 @@ School/institutional affiliation: None declared for this independent personal pr
 
 
 Ask the facilitator before beginning if anything is unclear. Do not begin until the final contact and storage details have been completed and reviewed.
+
+19 October readiness: the owner confirmed no qualified privacy/legal reviewer is assigned yet. This notice remains a draft; use the [pilot runbook](CAVITE_PILOT_RUNBOOK.md) to record the eventual review, fixed-build and session-setup receipts before recruitment.
 
 ## Session choice — facilitator record
 

@@ -2,7 +2,9 @@
 
 Prepared: 17 October 2026. Status: factual review packet and draft updates; no legal approval or participant sessions.
 
-Source at the start of this review: `cadbca7f96f359322a8bbf46f02d6bf2c5b960a8` on `main`. This packet records the later policy and research change set; those changes have not been pushed or deployed. The policy acknowledgment version is `prototype-5`.
+Source at the start of the 17 October review: `cadbca7f96f359322a8bbf46f02d6bf2c5b960a8` on `main`. The resulting `prototype-5` change set was committed as `d167145`, pushed, and briefly deployed as Production before the owner authorized restoration of `cadbca7` through Vercel Promote. The earlier statement that it had not been pushed or deployed was superseded by those events. See the [release recovery record](releases/cavite-production-recovery.md).
+
+19 October follow-up: the local draft is now `prototype-6` to disclose the owner's support-email retention decision. The owner confirmed there is no qualified reviewer yet; final policy/participant-notice approval remains pending. The [decisions and reviewer handoff](CAVITE_PRIVACY_REVIEW_DECISIONS.md) records refreshed provider documentation, unresolved hosting questions and the distinction between operator deletion and provider processing. These local changes are not a new hosted release.
 
 ## Confirmed owner decisions
 
@@ -22,7 +24,7 @@ The owner also confirmed on 17 October 2026 that Bangwit is currently an indepen
 | Browser requests for documents/assets and `/api/advisories` | Serve the website, public advisory retrieval and hosting operation | Vercel receives request metadata; see the hosting facts below | Browser advisory GET omits credentials and sends no catch/profile/spot/GPS fields. Ordinary transport metadata is still visible to the host. |
 | Exported backup | User-controlled recovery file containing catch details and photo bytes | User chooses file destination and deletion; app erasure cannot delete copies outside browser storage | Existing Settings and backup implementation; backup files are private and are not feedback artifacts. |
 | Pilot task notes | Understand interface problems; deidentified outcomes in the private local folder | Joseph only; manual deletion 30 days after the respective session | Owner-confirmed plan; no notes collected. The 30-day rule applies to pilot notes, not personal journals, hosting logs or email. |
-| Voluntary support email | Respond to a question sent to the monitored public inbox | Joseph and the email provider process the message; handling/retention terms need review | No email was sent or read in this task. Do not ask for catch backups, private photographs, passwords or precise spots. |
+| Voluntary support email | Respond to a question sent to the monitored public inbox | Owner confirmed on 19 October: retain correspondence for 90 days after resolution, then delete working copies and empty Trash; Google/provider processing is separate | Detailed exceptions/rights procedures need reviewer approval. No mailbox settings or contents were inspected. Do not ask for catch backups, private photographs, passwords or precise spots. |
 
 ## Hosting facts observed read-only
 
@@ -61,7 +63,7 @@ The existing signed-in Vercel browser session was used on 17 October 2026. No se
 The [NPC right-to-be-informed guidance](https://privacy.gov.ph/the-right-to-be-informed/) is the review checklist for data, purposes, scope, recipients, responsible identity/contact, retention and rights. This packet supplies facts and open questions; it does not decide the applicable legal basis or controller/processor roles.
 
 - Confirm the final operator/controller wording, purposes/processing basis, rights/request process and any applicable complaint route with the qualified reviewer.
-- Resolve retention and recipient wording for hosting metadata beyond the runtime-log window and for voluntary support email. The owner's 30-day pilot-note rule must not be applied to these by assumption.
+- Resolve retention and recipient wording for hosting metadata beyond the runtime-log window. Review the confirmed 90-day support-email procedure, including exceptions, copies, resolution/reopening and request handling. The 30-day pilot-note rule is a separate lifecycle.
 - Select the fixed pilot build/URL and complete/review the participant notice before inviting participants under the existing project plan. The owner decisions on compensation and current project context are resolved; reassess the notice and any applicable review process if an institution later becomes involved.
 - Recheck these account facts if the plan, memberships, analytics, drains, publisher or hosting provider changes.
 
@@ -74,4 +76,6 @@ Related artifacts: [technical review](../PRIVACY_REVIEW.md), [participant notice
 - On the fresh-origin first-use gate, the acknowledgment started disabled, scrolling the policy reader to the end enabled the unchecked checkbox, and switching language reset scroll progress and disabled acknowledgment again. No agreement was submitted. No catch, backup or participant record was created or restored during this browser check, and no browser console errors were recorded.
 - The private pilot directory was checked to have zero entries. Markdown link/reference checks and `git diff --check` cover the documentation changes.
 
-This is a scoped local copy/gate check and existing storage/precache regression proof. It is not a test of reacknowledgment over an existing populated journal, production traffic, physical-phone or installed-app behavior, legal approval, or a participant pilot. No deployment was performed.
+This was a scoped local `prototype-5` copy/gate check and existing storage/precache regression proof. It did not test reacknowledgment over an existing populated journal, current production traffic, physical-phone or installed-app behavior, legal approval, or a participant pilot. The later publication/restoration events are recorded above; this historical browser check itself performed no deployment. Verification for the 19 October `prototype-6` follow-up is recorded in the implementation plan.
+
+The 19 October `prototype-6` build and scoped bilingual first-use check passed without accepting an agreement. The existing-populated-journal upgrade is prepared at a separate local origin and awaits the owner's action-time test-agreement confirmation. It is not included in the passed checks. The private pilot folder still had zero entries; no participant data or mailbox content was accessed.

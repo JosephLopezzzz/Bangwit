@@ -15,7 +15,7 @@ import type { Dictionary, Language } from "@/i18n/types";
 import type { FisherProfile } from "@/types/catch";
 
 const POLICY_KEY = "bangwit.policy.2026-09-prototype";
-const POLICY_VERSION = "prototype-5";
+const POLICY_VERSION = "prototype-6";
 const PROFILE_KEY = "bangwit.profile";
 const ONBOARDING_KEY = "bangwit.onboarding.seen";
 const TOUR_KEY = "bangwit.tour.done";

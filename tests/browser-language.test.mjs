@@ -55,5 +55,9 @@ test("keeps prototype policy drafts and review disclosures available in both lan
   assert.match(filipino, /optional na location text na ikaw ang naglagay/);
   assert.match(english, /does not authorize cloud uploads/);
   assert.match(filipino, /hindi pahintulot sa cloud upload/);
-  assert.match(provider, /POLICY_VERSION = "prototype-5"/);
+  assert.match(provider, /POLICY_VERSION = "prototype-6"/);
+  assert.match(english, /90 days after the request is resolved/);
+  assert.match(filipino, /90 araw matapos maresolba ang request/);
+  assert.match(english, /Google's recovery, backup and legal-retention processes are separate/);
+  assert.match(filipino, /Hiwalay ang recovery, backup at legal-retention processes ng Google/);
 });

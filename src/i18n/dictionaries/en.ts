@@ -478,13 +478,18 @@ export const enDictionary: Dictionary = {
   privacyPage: {
     tag: "Bangwit prototype · draft",
     title: "Privacy Notice",
-    lastUpdated: "Last updated: October 17, 2026 · prototype draft",
+    lastUpdated: "Last updated: October 19, 2026 · prototype draft",
     reviewNotice: "Prototype policy draft · legal review pending",
     sections: [
       {
         heading: "Project Owner and Contact",
         content:
           "Joseph Lopez maintains the Bangwit prototype and monitors tepezzzz070@gmail.com for privacy questions and support. Do not send private catch backups, photos, exact fishing locations, or passwords by email. The final operator/controller wording and request-handling terms remain under review.",
+      },
+      {
+        heading: "Voluntary Support Email",
+        content:
+          "If you email tepezzzz070@gmail.com, Joseph uses your address and message to respond to your privacy or support request. Gmail/Google also processes the email under its own privacy practices. Joseph will retain support correspondence for 90 days after the request is resolved, then delete his working copies and empty Trash. Google's recovery, backup and legal-retention processes are separate. This operating rule and the final notice remain subject to privacy/legal review.",
       },
       {
         heading: "Information Stored",

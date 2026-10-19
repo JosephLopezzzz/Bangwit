@@ -1,6 +1,6 @@
 # Bangwit: Cavite data and pilot implementation plan
 
-Prepared: 17 October 2026. Status: execution in progress; dated outcomes are recorded in section 12.
+Prepared: 17 October 2026. Updated: 19 October 2026. Status: preparation implemented; M4 final review and M5 participant work remain pending. Dated outcomes are recorded in sections 12 and 13.
 
 ## 1. Outcome and starting point
 
@@ -246,7 +246,8 @@ Planning horizon: roughly 3–6 focused working weeks for the full implementatio
 
 ## 11. Completion checklist and first implementation slice
 
-- [x] M1: Current status/counts reconciled; tested source checkpoint (`bb02c50`) and last-recorded production/rollback reference captured. No deployment is claimed.
+- [x] M1: Current status/counts, tested source checkpoint (`bb02c50`) and dated publication/restoration receipts reconciled. The latest independently observed deployment identity remains the 17 October dashboard check; the 19 October public asset check has its narrower scope recorded.
+- [ ] Release follow-up: publish/review the prepared source recovery only after the owner selects that release action, then verify the resulting deployment. The [recovery record](releases/cavite-production-recovery.md) supersedes stale no-publication wording in the older notes below.
 - [x] M2: Five candidate decisions and evidence stored; holds/exclusions preserved; a supplementary FishBase lead is recorded as secondary evidence only. No public additions were made.
 - [x] M3A: PAGASA manual-source feasibility and field-mapping decision documented; no automated feed is authorized or enabled.
 - [x] M3B: Not applicable after the M3A no-go; no operational publisher or activation was attempted, and live coverage remains unavailable with the blocker documented.
@@ -254,6 +255,8 @@ Planning horizon: roughly 3–6 focused working weeks for the full implementatio
 - [ ] M5: Pilot tasks/targets agreed, sessions recorded, priority issues resolved or explicitly deferred, and next Cavite batch chosen.
 
 Begin with M1, then the five-record M2.1 review. In parallel, perform only M3.1 source feasibility and M4.2 fact-gathering. Do not build multi-source publication support, purchase infrastructure or enable a live feed before the concrete source/batch justifies it.
+
+For the current next action, use section 13 rather than repeating the completed first slice above.
 
 ## 12. Execution notes — 17 October 2026
 
@@ -281,3 +284,21 @@ Begin with M1, then the five-record M2.1 review. In parallel, perform only M3.1 
 - M4.2 hosting/owner follow-up (17 October 2026): confirmed the monitored public inbox and private pilot-note plan with the owner, prepared the empty local folder outside Git, and inspected the signed-in Vercel account read-only. Recorded Hobby, one Owner, no project/team drains, the bounded runtime-log window and the currently unconfigured public advisory endpoint. Updated bilingual privacy drafts to `prototype-5` and assembled `docs/CAVITE_PRIVACY_REVIEW_PACKET.md`; participant materials now contain the selected notes/access/retention/no-recording details. Provider metadata beyond the runtime-log window, support-email retention, final review, remaining owner questions and a fixed pilot build remain open. No external settings, deployment or participant session was changed/run.
 - M4.2 verification: i18n 6/6, storage 2/2, offline precache 5/5, typecheck, scoped lint/format and production build passed. A separate local production-origin browser check verified English/Filipino draft rendering and the first-use scroll/language-reset gate without accepting the notice or writing a catch. Detailed scope and remaining review decisions are in the privacy packet; M4/M5 are not marked complete.
 - M4.2/M5 owner-context follow-up (17 October 2026): the owner confirmed that Bangwit is currently an independent personal project and pilot participants will receive no compensation. Resolved these placeholders in the participant notice, privacy packet and facilitator/results materials. This does not imply institutional approval, final policy review or that any participant session has occurred; provider/email retention wording, final review and a fixed tested pilot build remain open.
+
+## 13. Execution and remaining gates — 19 October 2026
+
+| Work | Completed in this follow-up | Still required |
+| --- | --- | --- |
+| Release reconciliation | Corrected the record of `d167145` publication and the owner-authorized restoration to `cadbca7`. Remote `main`/review branch remain `d167145`; public assets expose `prototype-4`. Prepared clean local recovery commit `27b3b1b` whose tree equals `cadbca7`. | Owner selection of the concrete recovery publication; fresh dashboard/deployed-SHA and hosted acceptance after any authorized deployment. No push/deploy in this follow-up. |
+| M4 fishing references | Refreshed the Cavite City retrieval attempt; identified the mismatched indexed attachment link and preserved the unavailable full text/effectivity status. Prepared [rule reviewer handoff](research/CAVITE_RULE_REVIEW_HANDOFF.md). Five scoped diet examples remain available. | Primary Cavite City text/effectivity, Bacoor ordinance interactions/maps/current applicability, national-order status and independent bait/gear/method evidence. No permission/safety result can be enabled from unresolved references. |
+| M4 privacy | Owner selected support-email retention of 90 days after resolution, then deletion of working copies and emptying Trash. Refreshed provider documentation and prepared [review decisions](CAVITE_PRIVACY_REVIEW_DECISIONS.md). Added aligned English/Filipino email disclosure and local acknowledgment `prototype-6`. | No qualified reviewer is assigned. Applicable controller/basis/rights/complaint wording, Hobby hosting agreement/recipient/retention questions, detailed deletion exceptions and final bilingual notice approval remain pending. `prototype-6` is a review draft, not a Production release. |
+| M5 preparation | [Runbook](CAVITE_PILOT_RUNBOOK.md), session guide and blank P01–P08 results template now contain review/build/setup receipts, six tasks, U/A/F/S scoring, raw denominators, stop/fix priorities and a 30-calendar-day note-deletion procedure. Recruitment script is unsent. | Approved notice, fixed tested build/URL, task/target agreement and verified private-note/reminder/test setup, followed by real voluntary sessions, findings/fixes and next-batch decision. No participants or results have been created. |
+
+The 90-day support-email decision does not apply to pilot notes (30 days), local journals/backups, or Vercel/Google provider processing. The owner explicitly selected preparation of the handoff while qualified review is pending. The absence of a reviewer does not complete M4 or authorize participant sessions.
+
+Verification so far: bilingual regression checks 6/6, storage 2/2, offline precache 5/5, typecheck, scoped Biome check and production build passed. The build generated 38 precache entries. These checks do not prove an existing populated browser journal survives policy reacknowledgment, a deployed `prototype-6` build, current-release traffic privacy, phone/installed-app behavior or participant acceptance. Final scoped browser/review outcomes are appended below when actually performed; the previous full acceptance report is not replaced by a new blanket pass.
+
+- Scoped browser result: in the in-app browser at `http://127.0.0.1:4193`, both languages rendered the 90-day support-email paragraph with the provider-processing caveat. On `/catches`, the checkbox began disabled, scrolling to the end enabled it while it stayed unchecked, and changing language reset it to disabled. English was restored; no agreement, catch or backup action was submitted. No browser error logs were returned. This is a local first-use/copy check, not populated-journal or device acceptance.
+- Recovery/test setup: the clean `27b3b1b` recovery tree also built successfully (38 precache entries) after installing the locked dependencies in that worktree. An initial shared-dependency junction failed Turbopack's filesystem-root check; only that verified QA link was removed, its shared target was preserved, and the successful build used an ordinary independent install. The recovery worktree remained clean and tree-identical to `cadbca7`.
+- Populated-journal upgrade check: the old `prototype-4` build is prepared at `http://127.0.0.1:4194/catches` with an unchecked acknowledgment, and a one-record synthetic SVG backup is prepared outside Git. The two local test acceptances (`prototype-4`, then `prototype-6` at the same origin) await action-time owner confirmation under the browser automation agreement policy. No restore or acceptance has occurred; this check remains pending. It does not require a participant or a real journal.
+- Read-only setup check found the private pilot folder present with zero entries. This is not an ACL/encryption/sync audit, a reminder receipt, or evidence of any participant session. An independent diff review found no actionable issues in policy/release wording and pilot scoring; it is not qualified legal review. Changed-document local-reference checks and `git diff --check` passed.

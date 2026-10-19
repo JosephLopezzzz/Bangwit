@@ -8,14 +8,14 @@ web
 
 ## Users
 
-- Recreational anglers and local livelihood fishers are the intended audiences. The product concept includes both; which audience the initial Cavite pilot should prioritize remains undecided.
+- Recreational anglers and local livelihood fishers are the intended audiences. The owner selected a mix of beginner and experienced fishers for the first Cavite usability round. This experience mix does not establish that occupational groups have been recruited or studied.
 - The prototype offers an optional fisher profile (`exploring`, `angler`, `livelihood`, or `both`) and preferred-water setting. These preferences are stored locally.
 
 ## Product Purpose
 
 Bangwit is a Philippine waterbody discovery and personal catch-journaling product. Its intended primary flow is to select a region or waterbody, explore species records with supporting evidence, and separately record one's own catches. Identified species in a person's catch log can form a private `My Species` collection.
 
-The current prototype is scoped to a Cavite pilot. Explore includes dated province-wide fisheries information from the Cavite Ecological Profile 2024. Verified scientific species records for individual waters are not yet loaded. Success measures and the priority audience for the pilot have not been established.
+The current prototype is scoped to a Cavite pilot. Explore includes dated province-wide fisheries information from the Cavite Ecological Profile 2024. Verified scientific species records for individual waters are not yet loaded. The implementation plan proposes task-completion and interpretation targets for a mixed beginner/experienced audience; no participant results or final approved pilot build are recorded. See the pilot plan and runbook before claiming readiness or validation.
 
 ## Positioning
 
@@ -39,7 +39,7 @@ Species occurrence, legal catchability, community catch reports, live safety adv
 - Interactive province selection for the 81 source-era outline features, with Cavite selected by default and the three Cavite water areas shown only for the supported pilot. Other provinces display coverage unavailable. The species-explorer interface has name, water-type, and status filters; no verified species records are loaded, so the filters do not yet return validated results.
 - A separate Explore panel presents 11 reported catch groups and local names from the Cavite Ecological Profile 2024, Table 4.25, printed page 209 / PDF page 239. It includes expandable group/source details, the report year, provincial scope and review limits in Filipino and English. It does not assign these groups to a selected bay, resolve exact scientific species, show seasonal recommendations, or populate verified species filters.
 - The Species section filters 12 historical CAS museum specimen records from the reviewed CC0 OBIS shortlist by source/accepted name, broad source-reported locality, and whether a collection date is present. Search and filters update record and accepted-taxon counts, can be combined/reset, and show an explicit no-match state. Nine collection dates are supplied (1947–1964, including one month-only date); three are unknown. Expandable entries retain scientific/recorded names, provider locality text and coordinate uncertainty, OBIS/WoRMS links, citation, license and the October 6, 2026 review dates. The rejected locality record is excluded. These old records do not confirm current presence, the selected bay, map points, catchability, legal status, or personal catches. Water type and conservation-status filters remain visibly unavailable until reviewed attributes exist.
-- A separate bilingual feeding-guide section shows two attributed, study-specific diet examples for *Channa striata* and *Oreochromis niloticus*. It filters guide entries by name/food group and states the study location and scope. These examples are not Cavite diet surveys or proof of local presence. Effective bait, gear and location-specific catching advice remain unavailable because independent method evidence and current applicable rule review are not complete.
+- A separate bilingual feeding-guide section shows five attributed, study-specific diet examples, including *Channa striata* and *Oreochromis niloticus* and three marine examples scoped to a San Miguel Bay study. It filters guide entries by name/food group and states the study location and scope. These examples are not Cavite diet surveys or proof of local presence. Effective bait, gear and location-specific catching advice remain unavailable because independent method evidence and current applicable rule review are not complete.
 - The research-only candidate-review ledger classifies 52 linked OBIS occurrences under 27 candidate names: 12 already published, two excluded occurrences, and 38 pending review. Pending names/records are not treated as accepted taxa or added to the public snapshot.
 - A device-local catch journal using browser storage. Entries can include species or an unknown identification, date, water type, optional spot label, length, weight, bait, notes, released/kept status, and a photo. GPS is not collected, and there is no cloud sync.
 - The service-worker configuration precaches the journal and offline fallback with revisions tied to source and asset changes. Reconnecting does not deliberately reload the page, and the fallback links directly to the journal document. Isolated desktop tests cover offline catch/photo save/reload, navigation/fallback, backup/restore, fresh-origin controlled reload and rebuild upgrade; historical desktop O3 reconnect coverage remains partial. The user reported that an unsaved synthetic photo catch with `7 in`, `2 lbs` and test notes survived reconnect without a reload in a Tecno browser tab at `https://bangwit.vercel.app/`: the photo and all fields remained, and one Save added exactly one entry. This scoped Production phone pass does not establish instrumented Preview worker-control, traffic or offline/reconnect acceptance. Exact device/browser/build details and full phone checklist coverage remain unrecorded. Installed-app, new-profile and exhaustive outbound-traffic acceptance remain pending. See `OFFLINE_ACCEPTANCE.md` and `STAGING_ACCEPTANCE.md`.
@@ -52,7 +52,7 @@ Species occurrence, legal catchability, community catch reports, live safety adv
 - The prototype has no verified regional species coverage, fishing rules, protected-area boundaries, food-safety advice, weather or flood feed, or BFAR shellfish/red-tide feed. It must not be used as legal, navigation, emergency, or safety guidance.
 - There is no account system, cloud upload or sync, community feed, or public catch sharing in this build. Personal entries remain in the current browser profile and may be lost if that storage is cleared or evicted.
 - Privacy and Terms pages are prototype drafts and require appropriate review before a public launch or new data practices.
-- GBIF, OBIS, FishBase/rfishbase, and GRIIS Philippines were discussed as possible research sources; none is integrated as verified app data. Validate any source and its regional coverage before making claims.
+- The limited reviewed historical OBIS/CAS projection described above is integrated as attributed historical evidence. Other GBIF, OBIS, FishBase/rfishbase and GRIIS Philippines leads remain research inputs and are not verified regional coverage. Validate identity, rights and regional scope before adding records or claims.
 
 ## Brand Commitments
 
@@ -70,4 +70,10 @@ The current implementation uses the name `Bangwit`, the tagline “Bawat huli, m
 2. Show source, status, and coverage limits when species evidence becomes available; present data gaps instead of guessing.
 3. Keep documented presence, catch reports, legal rules, safety advisories, and personal catches distinct.
 4. Keep personal catch locations private by default; do not collect GPS or publish catches without an explicit future decision.
-5. Include both recreational and livelihood fishers while the initial pilot's priority audience remains undecided.
+5. Include both recreational and livelihood fishers in the product roadmap; the first proposed usability round includes beginner and experienced fishers and still awaits notice review and actual sessions.
+
+## Current preparation and release scope — 19 October 2026
+
+The local `prototype-6` privacy draft includes Joseph's confirmed public support inbox and planned 90-day retention after resolution, separate from Google's processing and the 30-day pilot-note rule. No qualified reviewer is assigned. Pilot materials are prepared, but recruitment and participant sessions remain closed pending the reviewed notice, a fixed tested build and setup receipts in `docs/CAVITE_PILOT_RUNBOOK.md`.
+
+The later full functional/mobile/installed-app acceptance report is recorded as user-reported in the acceptance documents; older narrower checks above keep their original scope. It does not establish current-release traffic privacy or a deployed `prototype-6` build. The Production restoration/source mismatch and prepared local recovery are recorded in `docs/releases/cavite-production-recovery.md`; reviewed source in this checkout must not be described as the currently serving release.

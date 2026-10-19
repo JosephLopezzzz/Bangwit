@@ -482,13 +482,18 @@ export const filDictionary: Dictionary = {
   privacyPage: {
     tag: "Bangwit prototype · draft",
     title: "Privacy Notice",
-    lastUpdated: "Huling inayos: Oktubre 17, 2026 · prototype draft",
+    lastUpdated: "Huling inayos: Oktubre 19, 2026 · prototype draft",
     reviewNotice: "Draft ng prototype policy · kailangan pa ng legal review",
     sections: [
       {
         heading: "Project owner at contact",
         content:
           "Si Joseph Lopez ang namamahala sa Bangwit prototype at nagmo-monitor ng tepezzzz070@gmail.com para sa privacy questions at support. Huwag mag-email ng pribadong catch backup, larawan, eksaktong fishing location, o password. Nasa review pa ang final na pagtukoy sa operator/controller at ang paraan ng paghawak sa requests.",
+      },
+      {
+        heading: "Kusang Pag-email sa Support",
+        content:
+          "Kung mag-email ka sa tepezzzz070@gmail.com, gagamitin ni Joseph ang iyong email address at mensahe para tumugon sa privacy o support request mo. Pinoproseso rin ng Gmail/Google ang email ayon sa sarili nitong privacy practices. Itatago ni Joseph ang support correspondence nang 90 araw matapos maresolba ang request, pagkatapos ay buburahin ang kaniyang working copies at aalisin ang mga ito sa Trash. Hiwalay ang recovery, backup at legal-retention processes ng Google. Kailangan pa ng privacy/legal review ang operating rule na ito at ang final notice.",
       },
       {
         heading: "Anong impormasyon ang mase-save",

@@ -7,6 +7,10 @@
 
 **Focused follow-up:** 2026-10-17. The source notes below record limited reviews of Bacoor Ordinances 278-2023, 292-2023 and 438-2025 and the NARO catalog entries for 292-2023. This does not establish present legal effectivity or replace certified/current copies.
 
+**Bounded retrieval follow-up:** 2026-10-19, Cavite City Ordinance 2023-3388 only. The official indexed archive still exposes the title/PDF label, but the archive and indexed-result reads did not return the ordinance text. The search result's encoded download query names a different ordinance, 2023-3391, so it is not a verified 2023-3388 attachment link. A normal HTTPS archive request timed out after 20 seconds; no TLS bypass was used. Full text and effectivity remain unverified. See [Cavite rule review handoff](../../../../docs/research/CAVITE_RULE_REVIEW_HANDOFF.md) for evidence limits and concrete next questions; other instruments were not reverified in this pass.
+
+**Separate national full-text follow-up:** 2026-10-19, FAO 277 only. The BFAR index entry remained discoverable, but normal index retrieval failed and targeted official-source searches did not expose a final attachment. The accessible DA press release did not supply actual order sections or an effectivity clause. Detailed access outcomes and the remaining final-text/publication/status questions are in the [review handoff](../../../../docs/research/CAVITE_RULE_REVIEW_HANDOFF.md#fao-277-final-text-retrieval-record--19-october-2026). FAO 244-1 was not followed up. No current enforceability finding or advice was enabled.
+
 **Internal source cards:** See [Cavite pilot rule-source reference cards](./cavite-rule-reference-cards.md) for a concise, status-labeled index of the national and local instruments reviewed on 2026-10-17. The cards are research notes only and do not enable a legal result.
 
 Bangwit's rule result has to be matched to **user type, exact water area, trip date, species, and fishing method/gear**. A species occurrence record cannot answer whether a person may catch it.
