@@ -2,6 +2,8 @@
 
 Recorded: **21 October 2026**. **Internal preparation only; recruitment and participant sessions remain CLOSED.** This records the earlier protected Preview walkthrough, today's read-only backup verification, and a separate local calendar fix. It does not approve policies, freeze a pilot release, or report Production acceptance.
 
+Later same-day evidence for the calendar correction on the exact hosted source `2ba1693` is recorded in the [protected Preview follow-up](cavite-preview-2ba1693-20261021.md). The earlier scopes and limits below remain historical; the follow-up does not close the offline-startup or traffic gates.
+
 ## Two source scopes
 
 | Scope | Exact identity and evidence | Limit |

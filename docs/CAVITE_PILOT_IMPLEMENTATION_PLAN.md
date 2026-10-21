@@ -321,3 +321,9 @@ Remaining gates are a qualified privacy/legal reviewer and approved notices/hand
 - Prepared the [exact starter-content candidate inventory](review/CAVITE_STARTER_CONTENT_CANDIDATE.md): 12 historical specimens/taxa, 5 study-specific feeding examples and 11 provincial catch groups. No new content was admitted; owner/editorial and qualified review remain pending.
 
 Next: validate the calendar change on its new protected Preview before selecting a fixed pilot release; complete the remaining startup/traffic evidence on that release; obtain the outstanding content/notice decisions and verify the note/reminder procedure before recruitment. G1–G7 remain unapproved where their required evidence or decisions are missing.
+
+### Hosted follow-up — 21 October 2026
+
+Created and identified the protected Preview for exact source `2ba1693` after Vercel reported delayed automatic GitHub deployments. The [hosted receipt](releases/cavite-preview-2ba1693-20261021.md) records the owner's new-origin approval, verified empty baseline, two-record synthetic restore, both details/photos, online reload, personal-collection grouping and calendar selection/Escape checks. No new catch was saved, no protection exception was created, and the Production overview still showed restored source `cadbca7`.
+
+Current-origin offline/worker and traffic checks could not run because the browser tool refused network controls while resolving a paused document response. The re-export UI reported a download, but no actual new backup file was verified. G1/G6 remain partial; the receipt supplies concrete manual steps for those remaining checks. No runtime code changed in this follow-up, and the fixed tested candidate remains the pinned `2ba1693` deployment rather than a mutable branch alias.
