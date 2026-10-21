@@ -100,6 +100,8 @@ export function CatchDatePicker({
       const popup = popupRef.current;
       if (!trigger || !popup) return;
       const rect = trigger.getBoundingClientRect();
+      const dialog = trigger.closest("dialog[open]");
+      const dialogRect = dialog && popup.parentElement === dialog ? dialog.getBoundingClientRect() : null;
       const viewport = window.visualViewport;
       const viewportLeft = viewport?.offsetLeft ?? 0;
       const viewportTop = viewport?.offsetTop ?? 0;
@@ -114,6 +116,10 @@ export function CatchDatePicker({
       const above = Math.max(0, rect.top - gap - viewportTop - margin);
       const placeAbove = desiredHeight > below && (desiredHeight <= above || above > below);
       const maxHeight = Math.min(desiredHeight, placeAbove ? above : below);
+      // The catch dialog animates with a transform, so fixed descendants use
+      // the dialog as their containing block instead of the viewport.
+      const dialogOffsetLeft = dialog && dialogRect ? dialogRect.left + dialog.clientLeft : 0;
+      const dialogOffsetTop = dialog && dialogRect ? dialogRect.top + dialog.clientTop : 0;
       setPopupStyle({
         position: "fixed",
         visibility: "visible",
@@ -124,14 +130,17 @@ export function CatchDatePicker({
         maxHeight,
         overflow: "auto",
         marginTop: 0,
-        left: Math.max(viewportLeft + margin, Math.min(rect.left, viewportLeft + viewportWidth - width - margin)),
-        top: Math.max(
-          viewportTop + margin,
-          Math.min(
-            placeAbove ? rect.top - gap - maxHeight : rect.bottom + gap,
-            viewportTop + viewportHeight - margin - maxHeight,
-          ),
-        ),
+        left:
+          Math.max(viewportLeft + margin, Math.min(rect.left, viewportLeft + viewportWidth - width - margin)) -
+          dialogOffsetLeft,
+        top:
+          Math.max(
+            viewportTop + margin,
+            Math.min(
+              placeAbove ? rect.top - gap - maxHeight : rect.bottom + gap,
+              viewportTop + viewportHeight - margin - maxHeight,
+            ),
+          ) - dialogOffsetTop,
       });
     };
 
@@ -209,10 +218,7 @@ export function CatchDatePicker({
         selected={selectedDate}
         onSelect={handleSelect}
         defaultMonth={selectedDate || today}
-        disabled={[
-          { after: maximumDate },
-          ...(minimumDate ? [{ before: minimumDate }] : []),
-        ]}
+        disabled={[{ after: maximumDate }, ...(minimumDate ? [{ before: minimumDate }] : [])]}
         className="border-0 shadow-none p-2"
       />
     </div>
@@ -263,7 +269,11 @@ export function CatchDatePicker({
         </button>
       )}
 
-      {portal ? (isOpen ? createPortal(popup, document.body) : null) : popup}
+      {portal
+        ? isOpen
+          ? createPortal(popup, containerRef.current?.closest("dialog[open]") ?? document.body)
+          : null
+        : popup}
     </div>
   );
 }

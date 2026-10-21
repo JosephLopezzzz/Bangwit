@@ -1,6 +1,6 @@
 # Bangwit Cavite pilot runbook
 
-Prepared: 19 October 2026. **Preparation only. Recruitment and participant sessions are CLOSED.** The [participant notice](CAVITE_PILOT_PARTICIPANT_NOTICE.md) is unapproved and a fixed tested pilot build/URL is not recorded. No participants are recruited, no sessions are completed, and no results are supplied by this runbook.
+Prepared: 19 October 2026; progress updated 21 October 2026. **Preparation only. Recruitment and participant sessions are CLOSED.** The [participant notice](CAVITE_PILOT_PARTICIPANT_NOTICE.md) is unapproved and a fixed accepted pilot release has not been selected. An internal Preview candidate and its incomplete checks are recorded in the [21 October receipt](releases/cavite-preview-candidate-20261021.md). No participants are recruited, no sessions are completed, and no results are supplied by this runbook.
 
 This runbook makes M5 preparation usable; it does not waive M1, reviewed starter-content or M4 policy/notice dependencies in the [implementation plan](CAVITE_PILOT_IMPLEMENTATION_PLAN.md). Use it with the [privacy review packet](CAVITE_PRIVACY_REVIEW_PACKET.md), [session guide](CAVITE_PILOT_SESSION_GUIDE.md) and blank [results template](CAVITE_PILOT_RESULTS_TEMPLATE.md).
 
@@ -22,12 +22,12 @@ Check a box only after the named person records dated evidence. A prepared docum
 
 | Gate | Evidence required before recruitment | Current state |
 | --- | --- | --- |
-| G1 — M1 fixed tested source/build | Completed receipt below; actual source/build/origin match, scoped relevant acceptance and rollback reference | Pending fixed pilot build |
-| G2 — Starter-content review | Reviewed content set/reference and limits; held/excluded records remain unpublished, no unsupported legality/safety claims | Receipt pending; do not infer approval from document existence |
+| G1 — M1 fixed tested source/build | Completed receipt below; actual source/build/origin match, scoped relevant acceptance and rollback reference | Internal Preview source/origin identified; [candidate receipt](releases/cavite-preview-candidate-20261021.md) is partial. Fixed accepted pilot release pending |
+| G2 — Starter-content review | Reviewed content set/reference and limits; held/excluded records remain unpublished, no unsupported legality/safety claims | [Technical inventory prepared](review/CAVITE_STARTER_CONTENT_CANDIDATE.md); dated owner/editorial and qualified review decisions pending |
 | G3 — Policy and notice review | Owner and appropriate qualified reviewer resolve the packet's open operator/controller, purposes/basis, rights/contact and provider metadata/recipient wording; review the selected 90-day-after-resolution support-email procedure, participant notice version and choice procedure | Pending; no qualified reviewer assigned and notice remains NOT APPROVED |
 | G4 — Cohort and task agreement | Proposed mixed cohort, optional broad category, scripts/language, tasks/criteria, scoring, target denominators and any timing rule agreed before invitations | Prepared, agreement pending |
 | G5 — Private notes and retention | Joseph verifies folder/access in practice, no cloud/recording workflow, deletion reminders and copy-check procedure usable; no participant notes collected during preparation | Empty-folder ACL restricted and read back on 19 October; backup/sync handling, actual reminder/deletion procedure and pre-session verification pending |
-| G6 — Synthetic setup | Photo fixture rights/reference, exact fictional values, empty profiles, cache/worker and backup/offline/reconnect checks on the fixed build, no personal data | [Exact A/B inputs and original SVG prepared](fixtures/cavite-pilot/README.md); selected-build/device checks and actual fixture receipt pending |
+| G6 — Synthetic setup | Photo fixture rights/reference, exact fictional values, empty profiles, cache/worker and backup/offline/reconnect checks on the fixed build, no personal data | [A/B candidate check and verified backup](releases/cavite-preview-candidate-20261021.md) recorded; offline cold reload did not pass, complete traffic and selected-release/device checks remain pending |
 | G7 — Owner readiness decision | Dated decision referencing G1–G6 and any limitations; recruitment text matches reviewed notice | CLOSED; no readiness decision recorded |
 
 Required readiness record:
