@@ -42,3 +42,42 @@ For a manual browser check when developer controls are available:
 5. Verify any exported file actually exists before claiming export integrity. Compare only this synthetic backup with the approved fixture; do not inspect or send a personal backup.
 
 These instructions prepare the remaining checks; they are not recorded results. The old `15a1cf9` in-app-browser offline-reload failure remains a historical result for that source/context, not a new `2ba1693` failure or pass.
+
+## 22 October retry — offline and export
+
+Retested the same pinned Preview in a fresh Brave tab. Its two approved synthetic records were present. Raw `Network.enable` now succeeded; this supersedes the earlier tooling limitation for **page-target** observation only. No app code, pinned test deployment, protection setting or Production source was changed.
+
+| Check | New observed result |
+| --- | --- |
+| Already-open Preview while offline | **Pass:** with the tab's offline override acknowledged, both restored catches reopened with their details and complete 320 × 200 photos. The override was returned to Online in `finally`. This is not an offline navigation/startup result. |
+| Unsaved Preview draft across reconnect | **Pass to the entered scope:** a fictional species and original SVG were selected while offline. After reconnect, the species, October 22 date, Saltwater choice and complete photo remained. The draft was closed without saving; the journal stayed at two records. |
+| Preview worker/startup prerequisite | **Blocked:** the browser logged a `SecurityError` because `/serwist/sw.js` was behind a redirect. The online `/catches` document returned 200 with `fromServiceWorker: false`. Anonymous GETs to the worker, journal and fallback returned 302 to Vercel `/sso-api`; a separate normal browser navigation to the worker was blocked with `net::ERR_BLOCKED_BY_CLIENT`. No hosted offline reload was attempted without a working worker. |
+| Local production comparison | **Pass:** `http://127.0.0.1:4194`, existing build ID `dXrpmCZIRJXd8eXGkYX9w`, started with zero catches and restored the same two-record fixture. An online reload and then an acknowledged-offline full reload of `/catches` both returned 200 **from the service worker**. Both records and both complete 320 × 200 photos remained usable. The tab was returned to Online. This existing local calendar build and unchanged runtime source are separate from hosted/physical-device acceptance. |
+| Current backup-file delivery | **Pass with user-assisted Save As:** automated download observers timed out in Preview and local comparisons. Joseph then confirmed a native Save As prompt and completed saving. Four newly saved default-name JSON files were independently inspected; every record field, unit, ID, timestamp, photo metadata and photo byte matched the approved input. Only the top-level export timestamp changed. The native save is user-performed; automated download-event observation did not pass. |
+
+The redirect observations identify an access/environment boundary, rather than a demonstrated catch-storage defect. Vercel documents that [Deployment Protection requires authentication for all requests](https://vercel.com/docs/deployment-protection). The anonymous SSO response corroborates that boundary, but the worker's own authenticated request/redirect chain was not captured. Protection was kept enabled and no bypass token or access exception was created.
+
+### Scoped traffic evidence
+
+Saved **67 page-target requests**, with methods **GET, OPTIONS and HEAD**, and HTTP(S) origins limited to the pinned Preview and **`https://vercel.live`**. None of these retained requests had a body or a synthetic marker in a body. Each recorded event drain was untruncated. These are facts about the retained events, not a finding of no external traffic or no data disclosure.
+
+The capture starts before the controlled online reload and covers the subsequent offline reopens, photo-draft reconnect and export attempt. `ServiceWorker.enable` is unsupported through this raw-CDP interface, so worker-target/request coverage and initial-first-visit coverage remain missing. Headers and URL query values were not saved. Body-marker checks do not establish that no private information could appear elsewhere. Full current-release traffic/privacy acceptance remains open.
+
+### Actual export files after native Save As
+
+The requested custom filename was not present; the scoped Downloads check instead found `bangwit-catches-2026-10-21.json` and copies `(1)`, `(2)`, `(3)`, saved after Joseph completed the queued native prompts. The date in these filenames is UTC, while this verification occurred on October 22 in Manila.
+
+All four files are **3,519 bytes**, format `bangwit-catches`, version 1, and contain exactly the two expected synthetic records. Deep comparison of the complete parsed backup, substituting only the original top-level `exportedAt`, matched the original backup. Each of the eight decoded photos is exactly **829 bytes**, SHA-256 `dbd8305915d9884a372c8ab48f0267c6b5a003fdbd72646badc5edc03abb239e`.
+
+| Saved filename suffix | Exported at UTC | File SHA-256 |
+| --- | --- | --- |
+| no suffix | `2026-10-21T15:54:09.971Z` | `749cfd36fad5ca7f3a785c986ff744fba276de7d939671d081847de5c60844ba` |
+| `(1)` | `2026-10-21T16:11:02.777Z` | `c107704f37a00904f35471032ccc708adfe471791f3cd7c52850191476ab3b8e` |
+| `(2)` | `2026-10-21T16:16:07.896Z` | `7fd6a54a8ce68e74feb24a71925406d0c78caed639f1f3acad2fe6648f7eb541` |
+| `(3)` | `2026-10-21T16:17:32.543Z` | `965e04824c806d9384c5f7e25ebc25b89a0345138000becaca6079b042a94828` |
+
+These are the saved files from the QA export sequence across Preview and local comparison; a download event did not independently identify each file's browser origin. Do not infer four different environments or a fully automated download pass. No application download bug was established from the earlier observer timeouts, and no product patch was made for them.
+
+Artifacts are outside Git at `outputs/qa-preview-2ba1693-20261022/`: `sanitized-page-traffic.json`, `test-results.json`, `roundtrip-file-verification.json`, copies of the four verified exports, `already-open-offline-photo.jpg`, `draft-after-reconnect.jpg`, `local-offline-reload-photo.jpg`, and the final hosted-journal screenshot. Network observers were disabled and all applied offline overrides were restored to Online. Both test journals were left at two synthetic records; no third catch was saved and no record was erased.
+
+**Result:** local offline reload, hosted already-open offline reads, hosted draft reconnect and user-assisted export-file integrity now have bounded evidence. Hosted worker/cold-start, full traffic review and physical-device/installed-PWA checks remain unresolved. This does not approve a pilot launch or the policies.
