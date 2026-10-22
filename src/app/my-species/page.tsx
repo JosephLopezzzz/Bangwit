@@ -266,7 +266,8 @@ export default function MySpeciesPage() {
                 portal
               />
             </div>
-            <div className="my-species-view-toggle" role="group" aria-label={lang === "fil" ? "Ayos ng collection" : "Collection view"}>
+            <fieldset className="my-species-view-toggle">
+              <legend className="sr-only">{lang === "fil" ? "Ayos ng collection" : "Collection view"}</legend>
               <button
                 type="button"
                 aria-label={copy.grid}
@@ -285,7 +286,7 @@ export default function MySpeciesPage() {
               >
                 <List aria-hidden="true" size={17} />
               </button>
-            </div>
+            </fieldset>
           </section>
 
           {filteredSpecies.length === 0 ? (
