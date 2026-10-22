@@ -2,6 +2,8 @@
 
 Prepared: 17 October 2026. Updated: 19 October 2026. Status: preparation implemented; M4 final review and M5 participant work remain pending. Dated outcomes are recorded in sections 12 and 13.
 
+Development/data priority update -- 22 October 2026: the [Philippines species expansion plan](PHILIPPINES_SPECIES_EXPANSION_PLAN.md) defines the next substantial workstream: a reusable fish evidence pipeline and marine/brackish/inland coverage, completing regional baselines for Luzon, then Visayas, then Mindanao. Existing release, content, policy and participant gates below remain separate and retain their recorded status; unresolved agency correspondence does not block eligible internal data work.
+
 ## 1. Outcome and starting point
 
 Deliver a more useful, source-backed Cavite library, a validated first live-advisory integration if a suitable source qualifies, aligned policies, and a small Cavite usability pilot. Use the existing Next.js App Router, TypeScript, Tailwind CSS, Serwist, bilingual UI and device-local catch journal.

@@ -20,6 +20,21 @@ export function normaliseSpeciesSearch(value: string) {
     .toLocaleLowerCase();
 }
 
+export function filterSpeciesNameAssertions<T extends { scientificName: string; recordedName: string }>(
+  records: readonly T[],
+  query: string,
+) {
+  const normalized = normaliseSpeciesSearch(query);
+  return records.filter(
+    (record) =>
+      !normalized ||
+      normaliseSpeciesSearch(record.scientificName).includes(normalized) ||
+      normaliseSpeciesSearch(record.recordedName).includes(normalized),
+  );
+}
+
+export const filterTaalChecklist = filterSpeciesNameAssertions;
+
 export function filterHistoricalEvidence<T extends HistoricalEvidenceRecord>(
   records: readonly T[],
   filters: HistoricalEvidenceFilter,

@@ -1,0 +1,682 @@
+{
+  "schemaVersion": 1,
+  "checkedOn": "2026-10-22",
+  "status": "research-only-source-registry",
+  "scope": "National acquisition references and CALABARZON identity/source leads. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
+  "sourceCount": 28,
+  "sources": [
+    {
+      "id": "gbif-col-xr-taxonomy-matching",
+      "title": "GBIF v2 species matching with explicit Catalogue of Life Extended Release",
+      "provider": "GBIF Secretariat / Catalogue of Life",
+      "url": "https://techdocs.gbif.org/en/data-processing/taxonomy-interpretation",
+      "additionalUrls": [
+        "https://data-blog.gbif.org/post/catalogue-of-life-taxonomic-backbone/",
+        "https://api.gbif.org/v2/species/match"
+      ],
+      "role": "Research-only name/identifier matching proposals against an explicitly selected taxonomy; not Philippine occurrence or locality evidence.",
+      "checkedOn": "2026-10-22",
+      "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+      "access": {
+        "status": "official-documentation-and-service-probes",
+        "localRawSnapshot": "raw/gbif-col-xr-taxonomy/"
+      },
+      "reuse": {
+        "metadata": "Retain API parameters, actual matching-service index version and source-response hashes; do not infer the service version from a separate dataset landing page.",
+        "raw": "Local research cache only; authority dataset field-level reuse review remains separate.",
+        "content": "Matching responses are proposals, not approved taxonomic decisions; no conservation status, habitat or occurrence facts are admitted from this adapter."
+      },
+      "publicationApproval": false,
+      "researchStatus": "taxonomy-proposals-pending-review",
+      "caveats": [
+        "Use explicit COL XR checklistKey. Legacy GBIF integer keys and COL XR identifiers are distinct namespaces.",
+        "Exact automated matching does not independently verify biological identity, source-era taxonomy or waterbody presence.",
+        "Fuzzy, synonym, higher-rank, no-match and classification conflicts require review rather than silent replacement."
+      ]
+    },
+    {
+      "id": "psa-psgc-2026-q3",
+      "title": "Third Quarter 2026 PSGC updates",
+      "provider": "Philippine Statistics Authority",
+      "url": "https://psa.gov.ph/classification/psgc/node/1684084314",
+      "role": "Pinned national administrative revision reference; not waterbody or legal marine geometry.",
+      "checkedOn": "2026-10-22",
+      "access": {
+        "status": "official-release-reference",
+        "localRawSnapshot": null
+      },
+      "reuse": {
+        "metadata": "Research citation and minimal source-description only; field-level redistribution review pending.",
+        "raw": "No public redistribution approval. Local acquisition requires its own receipt and source terms.",
+        "content": "No blanket permission to copy text, images, maps or databases. Extracted assertions require source and scope review."
+      },
+      "publicationApproval": false,
+      "researchStatus": "queued-for-field-level-review",
+      "sourceYear": 2026,
+      "asOf": "2026-09-30",
+      "releaseDate": "2026-10-12"
+    },
+    {
+      "id": "psa-calabarzon-directory",
+      "title": "CALABARZON province directory",
+      "provider": "Philippine Statistics Authority",
+      "url": "https://psa.gov.ph/classification/psgc/provinces/0400000000",
+      "role": "Names and 10-digit codes of five provinces; explicitly excludes Lucena from Quezon population.",
+      "checkedOn": "2026-10-22",
+      "access": {
+        "status": "official-page-read",
+        "localRawSnapshot": null,
+        "pageDateCaveat": "Directory body says 31 July 2025 while release links point to Q3 2026; current national snapshot must be reconciled separately."
+      },
+      "reuse": {
+        "metadata": "Website footer declares CC BY 4.0 unless otherwise stated; preserve attribution.",
+        "raw": "No public HTML/map asset copying approved in this work.",
+        "content": "Minimal administrative facts recorded for research; map embed and third-party assets excluded."
+      },
+      "publicationApproval": false,
+      "researchStatus": "queued-for-field-level-review",
+      "sourceYear": 2026
+    },
+    {
+      "id": "psa-calabarzon-cities",
+      "title": "CALABARZON city directory",
+      "provider": "Philippine Statistics Authority",
+      "url": "https://psa.gov.ph/classification/psgc/cities/0400000000",
+      "role": "Lucena PSGC 0431200000 as a separate highly urbanized city.",
+      "checkedOn": "2026-10-22",
+      "access": {
+        "status": "official-page-read",
+        "localRawSnapshot": null
+      },
+      "reuse": {
+        "metadata": "Research citation and minimal source-description only; field-level redistribution review pending.",
+        "raw": "No public redistribution approval. Local acquisition requires its own receipt and source terms.",
+        "content": "No blanket permission to copy text, images, maps or databases. Extracted assertions require source and scope review."
+      },
+      "publicationApproval": false,
+      "researchStatus": "queued-for-field-level-review",
+      "sourceYear": 2026
+    },
+    {
+      "id": "gbif-occurrence-downloads",
+      "title": "GBIF API occurrence downloads",
+      "provider": "GBIF Secretariat",
+      "url": "https://techdocs.gbif.org/en/data-use/api-downloads",
+      "role": "Candidate occurrence acquisition using versioned queries/download keys and source citations.",
+      "checkedOn": "2026-10-22",
+      "access": {
+        "status": "official-documentation-read",
+        "localRawSnapshot": null
+      },
+      "reuse": {
+        "metadata": "API documentation is an access reference, not a license for occurrence records.",
+        "raw": "Each dataset/record license and download citation must be retained.",
+        "content": "Mixed-source data and media are not blanket-approved; no public occurrence admission from this registry."
+      },
+      "publicationApproval": false,
+      "researchStatus": "queued-for-field-level-review",
+      "apiBaseUrl": "https://api.gbif.org/v1",
+      "accessRequirements": "Occurrence search is public. Bulk download requests require a GBIF account and authenticated request; no request submitted by this registry."
+    },
+    {
+      "id": "obis-occurrence-access",
+      "title": "OBIS data access",
+      "provider": "UNESCO-IOC OBIS",
+      "url": "https://manual.obis.org/access.html",
+      "role": "Marine candidate acquisition and retained quality/provenance fields; not a freshwater inventory.",
+      "checkedOn": "2026-10-22",
+      "access": {
+        "status": "official-documentation-read",
+        "localRawSnapshot": null
+      },
+      "reuse": {
+        "metadata": "Access guidance and dataset citations must remain separate from record terms.",
+        "raw": "Check source dataset and record rights; preserve download query/citations and QC fields.",
+        "content": "No blanket approval for records or imagery; provider mirrors must be reconciled with GBIF."
+      },
+      "publicationApproval": false,
+      "researchStatus": "queued-for-field-level-review",
+      "apiBaseUrl": "https://api.obis.org/v3"
+    },
+    {
+      "id": "jamandre-2023-plazi-freshwater",
+      "title": "Freshwater fishes of the Philippines: a provisional checklist",
+      "provider": "Brian Wade Jamandre; Plazi TreatmentBank; GBIF",
+      "url": "https://www.gbif.org/dataset/f33f36f9-829f-4206-9dca-358ce455b037",
+      "role": "National freshwater name/literature seed, not regional or waterbody presence.",
+      "checkedOn": "2026-10-22",
+      "access": {
+        "status": "inspected-metadata-and-archive",
+        "localRawSnapshot": "raw/jamandre-2023-dwca.zip",
+        "archiveBytes": 32069,
+        "archiveSha256": "bdcb9e1c2c204946dfb80e19574501cc02d6ba8569b8084050d4c6b5fcea7a1f"
+      },
+      "reuse": {
+        "metadata": "GBIF dataset metadata declares CC0 1.0; primary metadata checked.",
+        "raw": "DwCA EML CC0 declaration checked; retain article/dataset attribution and archive hash. Alternative ColDP archive not inspected.",
+        "content": "CC0 extracted dataset does not license the restricted journal PDF, figures or prose for wholesale reproduction. Each extracted biological assertion remains pending review."
+      },
+      "publicationApproval": false,
+      "researchStatus": "candidate-extraction-only-taxonomy-and-location-pending",
+      "sourceYear": 2023,
+      "datasetKey": "f33f36f9-829f-4206-9dca-358ce455b037",
+      "datasetDoi": "10.15468/aaa5s3",
+      "metadataUrl": "https://api.gbif.org/v1/dataset/f33f36f9-829f-4206-9dca-358ce455b037",
+      "archiveUrl": "https://tb.plazi.org/GgServer/dwca/FFEDFF8BFFD9FFB1FFA5286528420D67.zip",
+      "alternativeArchiveUrl": "https://tb.plazi.org/GgServer/colDp/FFEDFF8BFFD9FFB1FFA5286528420D67.zip",
+      "articleUrl": "https://www.biotaxa.org/Zootaxa/article/view/zootaxa.5301.2.1",
+      "articleDoi": "10.11646/zootaxa.5301.2.1",
+      "structuredDistributionStatus": "unavailable-in-inspected-archive",
+      "extractionCaveats": [
+        "taxa.txt contains 78 family rows and no species-level taxon rows.",
+        "distribution.txt has no rows; four material-citation extension rows join family cores but are not imported as reliable species-level locality evidence.",
+        "Family treatment HTML in media.txt contains species-name candidates; research extraction must retain paragraph context and cannot assign regions or waterbodies."
+      ],
+      "approvedProjectionBatches": [
+        "taal-checklist-20261022"
+      ]
+    },
+    {
+      "id": "obis-cas-ichthyology-historical",
+      "title": "CAS Ichthyology historical source used by the Cavite projection",
+      "provider": "California Academy of Sciences via OBIS",
+      "url": "https://obis.org/dataset/d6af0fac-8a21-4d77-8872-f10d471fc0cf",
+      "role": "Preserve existing 12 reviewed historical records; no new national, current-presence or selected-bay approval.",
+      "checkedOn": "2026-10-22",
+      "access": {
+        "status": "existing-repository-reviewed-source",
+        "localRawSnapshot": null
+      },
+      "reuse": {
+        "metadata": "Existing Cavite review records CC0 with citation; scope remains the frozen reviewed projection.",
+        "raw": "New records need their own provenance and applicable record rights checks.",
+        "content": "Only the existing historical projection has prior admission; this source registry approves no additional rows."
+      },
+      "publicationApproval": false,
+      "researchStatus": "historical-baseline-only",
+      "datasetId": "d6af0fac-8a21-4d77-8872-f10d471fc0cf",
+      "metadataUrl": "https://api.obis.org/v3/dataset/d6af0fac-8a21-4d77-8872-f10d471fc0cf",
+      "repositoryEvidence": "src/data/cavite-historical-evidence.json"
+    },
+    {
+      "id": "denr-calabarzon-wetlands-2024",
+      "title": "CALABARZON wetlands conservation roadmap 2024-2029",
+      "provider": "DENR CALABARZON",
+      "url": "https://calabarzon.denr.gov.ph/news-events/denr-crafts-5-year-conservation-roadmap-for-calabarzon-inland-wetlands/",
+      "role": "Named wetland/site inventory across five provinces; identities and feature types require reconciliation.",
+      "checkedOn": "2026-10-22",
+      "access": {
+        "status": "official-indexed-content-read-direct-fetch-403",
+        "localRawSnapshot": null
+      },
+      "reuse": {
+        "metadata": "Research citation and minimal source-description only; field-level redistribution review pending.",
+        "raw": "No public redistribution approval. Local acquisition requires its own receipt and source terms.",
+        "content": "No blanket permission to copy text, images, maps or databases. Extracted assertions require source and scope review."
+      },
+      "publicationApproval": false,
+      "researchStatus": "queued-for-field-level-review",
+      "sourceYear": 2024,
+      "caveats": [
+        "The page says 30 wetlands; its prose appears to name 31 entries, mixing lakes, reservoirs, river sanctuaries, mangroves and marine sites.",
+        "Named protected/habitat sites are not automatically independent waterbodies; no geometry, current designation or fish presence is supplied here."
+      ]
+    },
+    {
+      "id": "llda-annual-report-2022",
+      "title": "LLDA Annual Report 2022",
+      "provider": "Laguna Lake Development Authority",
+      "url": "https://llda.gov.ph/wp-content/uploads/dox/ar/ar22.v7.pdf",
+      "role": "Laguna de Bay hydrological map, named tributaries and sub-basin inventory.",
+      "checkedOn": "2026-10-22",
+      "access": {
+        "status": "official-indexed-content-read-direct-fetch-403",
+        "localRawSnapshot": null
+      },
+      "reuse": {
+        "metadata": "Research citation and minimal source-description only; field-level redistribution review pending.",
+        "raw": "No public redistribution approval. Local acquisition requires its own receipt and source terms.",
+        "content": "No blanket permission to copy text, images, maps or databases. Extracted assertions require source and scope review."
+      },
+      "publicationApproval": false,
+      "researchStatus": "queued-for-field-level-review",
+      "sourceYear": 2022,
+      "locator": "Printed p.45, hydrological map and accompanying tributary text.",
+      "caveats": [
+        "The lake, drainage basin, LLDA jurisdiction and individual rivers are different entities.",
+        "Reported counts of tributaries/sub-basins depend on source definition; do not treat them as an exhaustive small-water inventory."
+      ]
+    },
+    {
+      "id": "llda-masterplan-tor-2024",
+      "title": "Laguna de Bay master-plan terms of reference",
+      "provider": "Laguna Lake Development Authority",
+      "url": "https://llda.gov.ph/wp-content/uploads/dox/bid/2024/08_August/TOR_CompLDB%20MasterPlan_As%20of%20Aug2_FINAL%20%281%29.pdf",
+      "role": "Freshwater lake identity, shared Laguna/Rizal/Metro Manila basin context.",
+      "checkedOn": "2026-10-22",
+      "access": {
+        "status": "official-indexed-content-read",
+        "localRawSnapshot": null
+      },
+      "reuse": {
+        "metadata": "Research citation and minimal source-description only; field-level redistribution review pending.",
+        "raw": "No public redistribution approval. Local acquisition requires its own receipt and source terms.",
+        "content": "No blanket permission to copy text, images, maps or databases. Extracted assertions require source and scope review."
+      },
+      "publicationApproval": false,
+      "researchStatus": "queued-for-field-level-review",
+      "sourceYear": 2024,
+      "caveats": [
+        "Basin coverage is broader than the wetted lake and cannot be used to assign every basin locality to the lake."
+      ]
+    },
+    {
+      "id": "emb-calabarzon-waterbodies",
+      "title": "Water Quality Management Section: monitored and adopted waterbodies",
+      "provider": "DENR Environmental Management Bureau CALABARZON",
+      "url": "https://calabarzon.emb.gov.ph/water-quality-management-section/",
+      "role": "Named rivers/creeks and locality leads, including Maragondon River and Tagbac creek.",
+      "checkedOn": "2026-10-22",
+      "access": {
+        "status": "official-indexed-content-read-direct-fetch-403",
+        "localRawSnapshot": null
+      },
+      "reuse": {
+        "metadata": "Research citation and minimal source-description only; field-level redistribution review pending.",
+        "raw": "No public redistribution approval. Local acquisition requires its own receipt and source terms.",
+        "content": "No blanket permission to copy text, images, maps or databases. Extracted assertions require source and scope review."
+      },
+      "publicationApproval": false,
+      "researchStatus": "queued-for-field-level-review",
+      "caveats": [
+        "Monitoring stations and adoption segments are not full-waterbody boundaries.",
+        "Historical water-quality tables do not establish current safety or a fish species checklist."
+      ]
+    },
+    {
+      "id": "paller-2011-makiling-fishes",
+      "title": "Freshwater Fish Fauna in Watersheds of Mt. Makiling Forest Reserve, Laguna, Philippines",
+      "provider": "Paller et al.; Philippine Journal of Science / DOST",
+      "url": "https://philjournalsci.dost.gov.ph/images/pdf/pjs_pdf/vol140no2/pdfs/Freshwater_Fish_Fauna_in_Watersheds_of_Mt_Makiling.pdf",
+      "role": "Primary freshwater survey lead for Molawin Creek, Dampalit Falls and Cambantoc River.",
+      "checkedOn": "2026-10-22",
+      "access": {
+        "status": "official-indexed-content-read-direct-fetch-403",
+        "localRawSnapshot": null
+      },
+      "reuse": {
+        "metadata": "Research citation and minimal source-description only; field-level redistribution review pending.",
+        "raw": "No public redistribution approval. Local acquisition requires its own receipt and source terms.",
+        "content": "No blanket permission to copy text, images, maps or databases. Extracted assertions require source and scope review."
+      },
+      "publicationApproval": false,
+      "researchStatus": "queued-for-field-level-review",
+      "sourceYear": 2011,
+      "citation": "Paller, V.G.V., Labatos, B.V. Jr., Lontoc, B.M., Matalog, O.E. and Ocampo, P.P. (2011). Philippine Journal of Science 140(2):195-206.",
+      "caveats": [
+        "Full sampling dates, table rows, taxonomy and field-level reuse require review.",
+        "No species assertions are imported by this scope inventory."
+      ],
+      "additionalUrls": [
+        "https://philjournalsci.dost.gov.ph/freshwater-fish-fauna-in-watersheds-of-mt-makiling-forest-reserve-laguna-philippines/"
+      ]
+    },
+    {
+      "id": "nfrdi-pansipit-taal-migratory-survey",
+      "title": "Survey of Migratory Fishes in Pansipit River and Taal Lake",
+      "provider": "Mercene and Alzona; Philippine Journal of Fisheries / DA-NFRDI",
+      "url": "https://nfrdi.da.gov.ph/tpjf/vol21/Survey%20Migratory%20Fishes%20in%20Pansipit%20River%20and%20Taal%20Lake.pdf",
+      "role": "Historical primary-survey lead for lake-river-marine migration context.",
+      "checkedOn": "2026-10-22",
+      "access": {
+        "status": "official-indexed-content-read",
+        "localRawSnapshot": null
+      },
+      "reuse": {
+        "metadata": "Research citation and minimal source-description only; field-level redistribution review pending.",
+        "raw": "No public redistribution approval. Local acquisition requires its own receipt and source terms.",
+        "content": "No blanket permission to copy text, images, maps or databases. Extracted assertions require source and scope review."
+      },
+      "publicationApproval": false,
+      "researchStatus": "queued-for-field-level-review",
+      "sourceYear": null,
+      "caveats": [
+        "Publication and collection dates require reading the original issue; a new upload is not a new survey.",
+        "Corral catch evidence needs study-specific locality and capture-method interpretation."
+      ],
+      "additionalUrls": []
+    },
+    {
+      "id": "nfrdi-taal-research-2025",
+      "title": "Safeguarding Taal Lake through science-based conservation efforts",
+      "provider": "DA-NFRDI",
+      "url": "https://nfrdi.da.gov.ph/2025/08/29/feature-safeguarding-taal-lake-through-science-based-conservation-efforts/",
+      "role": "Taal Lake, Pansipit and Balayan Bay identity/connection and research bibliography leads.",
+      "checkedOn": "2026-10-22",
+      "access": {
+        "status": "official-indexed-content-read",
+        "localRawSnapshot": null
+      },
+      "reuse": {
+        "metadata": "Research citation and minimal source-description only; field-level redistribution review pending.",
+        "raw": "No public redistribution approval. Local acquisition requires its own receipt and source terms.",
+        "content": "No blanket permission to copy text, images, maps or databases. Extracted assertions require source and scope review."
+      },
+      "publicationApproval": false,
+      "researchStatus": "queued-for-field-level-review",
+      "sourceYear": 2025
+    },
+    {
+      "id": "nfrdi-tayabas-bay-profile",
+      "title": "Tayabas Bay profile and NSAP landing-center context",
+      "provider": "DA-NFRDI repository",
+      "url": "https://repository.nfrdi.da.gov.ph/bitstreams/e893f878-dbb8-4c79-a4e4-e1843b7174a6/download",
+      "role": "Shared bay identity including Quezon, Lucena, Batangas and Marinduque.",
+      "checkedOn": "2026-10-22",
+      "access": {
+        "status": "official-indexed-content-read-direct-file-too-large",
+        "localRawSnapshot": null
+      },
+      "reuse": {
+        "metadata": "Research citation and minimal source-description only; field-level redistribution review pending.",
+        "raw": "No public redistribution approval. Local acquisition requires its own receipt and source terms.",
+        "content": "No blanket permission to copy text, images, maps or databases. Extracted assertions require source and scope review."
+      },
+      "publicationApproval": false,
+      "researchStatus": "queued-for-field-level-review",
+      "caveats": [
+        "Exact publication date and chapter/page context await a local receipt.",
+        "Landing-center names do not establish wild capture location; listed extent is not a legal marine boundary."
+      ]
+    },
+    {
+      "id": "bfar4a-nsap-2020",
+      "title": "BFAR CALABARZON Annual Report 2020: NSAP",
+      "provider": "DA-BFAR CALABARZON",
+      "url": "https://bfar4a.da.gov.ph/wp-content/uploads/2022/06/2020-ANNUAL-REPORT-1_opt.pdf",
+      "role": "Historical named marine study-area leads including Lamon, Tayabas, Balayan and Batangas bays.",
+      "checkedOn": "2026-10-22",
+      "access": {
+        "status": "official-indexed-content-read",
+        "localRawSnapshot": null
+      },
+      "reuse": {
+        "metadata": "Research citation and minimal source-description only; field-level redistribution review pending.",
+        "raw": "No public redistribution approval. Local acquisition requires its own receipt and source terms.",
+        "content": "No blanket permission to copy text, images, maps or databases. Extracted assertions require source and scope review."
+      },
+      "publicationApproval": false,
+      "researchStatus": "queued-for-field-level-review",
+      "sourceYear": 2020,
+      "locator": "Printed p.40, National Stock Assessment Program.",
+      "caveats": [
+        "Monitoring of landing centers is not a species-level capture-origin assertion."
+      ]
+    },
+    {
+      "id": "emb-manila-bay-about",
+      "title": "About Manila Bay",
+      "provider": "DENR-EMB Manila Bay Office",
+      "url": "https://mbo.emb.gov.ph/?page_id=18",
+      "role": "Shared coastal association with NCR, Region III and Cavite; separate drainage-basin context.",
+      "checkedOn": "2026-10-22",
+      "access": {
+        "status": "official-indexed-content-read",
+        "localRawSnapshot": null
+      },
+      "reuse": {
+        "metadata": "Research citation and minimal source-description only; field-level redistribution review pending.",
+        "raw": "No public redistribution approval. Local acquisition requires its own receipt and source terms.",
+        "content": "No blanket permission to copy text, images, maps or databases. Extracted assertions require source and scope review."
+      },
+      "publicationApproval": false,
+      "researchStatus": "queued-for-field-level-review"
+    },
+    {
+      "id": "cavitecity-waterbodies",
+      "title": "Cavite City demography: bodies of water",
+      "provider": "City Government of Cavite",
+      "url": "https://cavitecity.gov.ph/index.php/about-lgu/demography",
+      "role": "Identity/locality of Manila, Bacoor and Ca?acao bays around Cavite City.",
+      "checkedOn": "2026-10-22",
+      "access": {
+        "status": "official-indexed-content-read",
+        "localRawSnapshot": null
+      },
+      "reuse": {
+        "metadata": "Research citation and minimal source-description only; field-level redistribution review pending.",
+        "raw": "No public redistribution approval. Local acquisition requires its own receipt and source terms.",
+        "content": "No blanket permission to copy text, images, maps or databases. Extracted assertions require source and scope review."
+      },
+      "publicationApproval": false,
+      "researchStatus": "queued-for-field-level-review"
+    },
+    {
+      "id": "emb-iyam-dumacaa-profile",
+      "title": "Iyam-Dumacaa River System water-quality data CY2020",
+      "provider": "DENR-EMB",
+      "url": "https://emb.gov.ph/wp-content/uploads/2021/03/IYAM-DUMACAA-River-System.pdf",
+      "role": "Identity of two rivers and Lucban/Tayabas/Lucena locality.",
+      "checkedOn": "2026-10-22",
+      "access": {
+        "status": "official-indexed-content-read-direct-fetch-403",
+        "localRawSnapshot": null
+      },
+      "reuse": {
+        "metadata": "Research citation and minimal source-description only; field-level redistribution review pending.",
+        "raw": "No public redistribution approval. Local acquisition requires its own receipt and source terms.",
+        "content": "No blanket permission to copy text, images, maps or databases. Extracted assertions require source and scope review."
+      },
+      "publicationApproval": false,
+      "researchStatus": "queued-for-field-level-review",
+      "sourceYear": 2020,
+      "caveats": [
+        "Provider uses geographic Quezon context including independent Lucena; administrative registry keeps Lucena separate.",
+        "No monitoring coordinates or historical quality results are copied as current conditions."
+      ]
+    },
+    {
+      "id": "emb-calabarzon-annual-report-2024",
+      "title": "EMB CALABARZON Annual Report 2024",
+      "provider": "DENR-EMB CALABARZON",
+      "url": "https://calabarzon.emb.gov.ph/wp-content/uploads/2025/02/Annual-Report-2024.pdf",
+      "role": "Iyam-Dumacaa river-system geography and Tayabas Bay outfall.",
+      "checkedOn": "2026-10-22",
+      "access": {
+        "status": "official-indexed-content-read",
+        "localRawSnapshot": null
+      },
+      "reuse": {
+        "metadata": "Research citation and minimal source-description only; field-level redistribution review pending.",
+        "raw": "No public redistribution approval. Local acquisition requires its own receipt and source terms.",
+        "content": "No blanket permission to copy text, images, maps or databases. Extracted assertions require source and scope review."
+      },
+      "publicationApproval": false,
+      "researchStatus": "queued-for-field-level-review",
+      "sourceYear": 2024,
+      "locator": "Section c: Iyam-Dumacaa River System WQMA.",
+      "caveats": [
+        "WQMA polygon, river geometry and legal-access boundaries are not equivalent."
+      ]
+    },
+    {
+      "id": "scssap-ph-wetlands-2021",
+      "title": "Philippines presentation: first regional working-group meeting on wetlands",
+      "provider": "South China Sea and Gulf of Thailand Strategic Action Programme project",
+      "url": "https://www.scssap.org/library/publications/374-c4-rwg-w1-philippine-presentation/file",
+      "role": "Primary project naming of Maragondon River Estuary and Pansipit River Estuary research sites.",
+      "checkedOn": "2026-10-22",
+      "access": {
+        "status": "primary-project-indexed-content-read",
+        "localRawSnapshot": null
+      },
+      "reuse": {
+        "metadata": "Research citation and minimal source-description only; field-level redistribution review pending.",
+        "raw": "No public redistribution approval. Local acquisition requires its own receipt and source terms.",
+        "content": "No blanket permission to copy text, images, maps or databases. Extracted assertions require source and scope review."
+      },
+      "publicationApproval": false,
+      "researchStatus": "queued-for-field-level-review",
+      "sourceYear": 2021,
+      "meetingDate": "2021-12-07",
+      "caveats": [
+        "Site selection/management extents are not legal boundaries or salinity measurements.",
+        "Current feature extent, survey dates and fish evidence remain unreviewed."
+      ]
+    },
+    {
+      "id": "agoncillo-pansipit-identity",
+      "title": "Pansipit River",
+      "provider": "Municipal Government of Agoncillo",
+      "url": "https://www.agoncillo.gov.ph/explore-agoncillo/pansipit-river",
+      "role": "Lake-river-bay identity: freshwater Taal outlet to saline Balayan Bay.",
+      "checkedOn": "2026-10-22",
+      "access": {
+        "status": "official-indexed-content-read",
+        "localRawSnapshot": null
+      },
+      "reuse": {
+        "metadata": "Research citation and minimal source-description only; field-level redistribution review pending.",
+        "raw": "No public redistribution approval. Local acquisition requires its own receipt and source terms.",
+        "content": "No blanket permission to copy text, images, maps or databases. Extracted assertions require source and scope review."
+      },
+      "publicationApproval": false,
+      "researchStatus": "queued-for-field-level-review",
+      "caveats": [
+        "Tourism text is used only as an identity lead, not species identification, safety or fishing permission.",
+        "Do not assign one measured salinity to the entire river."
+      ]
+    },
+    {
+      "id": "corpuz-2025-palico-lian",
+      "title": "Freshwater Fish Assemblages in Palico-Lian River, Batangas, Southern Luzon, Philippines",
+      "provider": "Original study publisher / institutional repository",
+      "url": "https://www.biodiversityjournal.com/images/pubblicazioni/biodiversity-journal-2025/biodiversity-journal-2025-16-04/biodiversity-journal-2025-16-04_579-588.pdf",
+      "additionalUrls": [
+        "https://doi.org/10.31396/Biodiv.Jour.2025.16.4.579.588"
+      ],
+      "role": "Primary CALABARZON source reviewed for river or estuarine evidence; inclusion alone is not fish admission.",
+      "checkedOn": "2026-10-22",
+      "access": {
+        "status": "full-pdf-acquired",
+        "reviewFiles": [
+          "calabarzon-river-source-review.json"
+        ]
+      },
+      "reuse": {
+        "metadata": "Bibliographic citation, source access and rights-review facts only.",
+        "raw": "Originals and receipts remain in the ignored local research cache.",
+        "content": "No blanket publication approval. Palico has a custom publisher copying/distribution grant; candidate identity/reach decisions are separate. Other restrictions and unresolved terms are retained in source reviews."
+      },
+      "publicationApproval": false,
+      "approvedProjectionBatches": [
+        "palico-lian-survey-20261023"
+      ],
+      "researchStatus": "scoped-projection-batch-approved",
+      "doi": "10.31396/Biodiv.Jour.2025.16.4.579.588"
+    },
+    {
+      "id": "corpuz-2016-taal-river-survey",
+      "title": "Diversity and Distribution of Freshwater Fish Assemblages in Lake Taal River Systems in Batangas, Philippines",
+      "provider": "Original study publisher / institutional repository",
+      "url": "https://ovcre.uplb.edu.ph/journals-uplb/index.php/JESAM/article/download/158/140",
+      "additionalUrls": [
+        "https://www.ukdr.uplb.edu.ph/journal-articles/1591/",
+        "https://doi.org/10.47125/jesam/2016_1/09"
+      ],
+      "role": "Primary CALABARZON source reviewed for river or estuarine evidence; inclusion alone is not fish admission.",
+      "checkedOn": "2026-10-22",
+      "access": {
+        "status": "full-primary-pdf-403",
+        "reviewFiles": [
+          "calabarzon-river-source-review.json"
+        ]
+      },
+      "reuse": {
+        "metadata": "Bibliographic citation, source access and rights-review facts only.",
+        "raw": "Originals and receipts remain in the ignored local research cache.",
+        "content": "No blanket publication approval. Palico has a custom publisher copying/distribution grant; candidate identity/reach decisions are separate. Other restrictions and unresolved terms are retained in source reviews."
+      },
+      "publicationApproval": false,
+      "researchStatus": "source-held-with-documented-gaps",
+      "doi": "10.47125/jesam/2016_1/09"
+    },
+    {
+      "id": "nob-et-al-2026-mangrove-edna",
+      "title": "Mangrove-Associated Fish Biodiversity in Selected Philippine Bioregions During the Northeast (Amihan) Monsoon: Insights from eDNA Metabarcoding for Biomonitoring",
+      "provider": "Original study publisher / institutional repository",
+      "url": "https://doi.org/10.1002/edn3.70273",
+      "additionalUrls": [],
+      "role": "Primary CALABARZON source reviewed for river or estuarine evidence; inclusion alone is not fish admission.",
+      "checkedOn": "2026-10-22",
+      "access": {
+        "status": "Article text read through primary web result; ordinary HTML returned 403; original supplementary workbook not acquired. Crossref DOI metadata acquired HTTP200.",
+        "reviewFiles": [
+          "calabarzon-brackish-source-review.json"
+        ]
+      },
+      "reuse": {
+        "metadata": "Bibliographic citation, source access and rights-review facts only.",
+        "raw": "Originals and receipts remain in the ignored local research cache.",
+        "content": "No blanket publication approval. Palico has a custom publisher copying/distribution grant; candidate identity/reach decisions are separate. Other restrictions and unresolved terms are retained in source reviews."
+      },
+      "publicationApproval": false,
+      "researchStatus": "source-held-with-documented-gaps",
+      "doi": "10.1002/edn3.70273"
+    },
+    {
+      "id": "espiritu-et-al-2019-bombong-microplastics",
+      "title": "Assessment of Quantity and Quality of Microplastics in the Sediments, Waters, Oysters, and Selected Fish Species in Key Sites Along the Bombong Estuary and the Coastal Waters of Ticalan in San Juan, Batangas",
+      "provider": "Original study publisher / institutional repository",
+      "url": "https://philjournalsci.dost.gov.ph/images/pdf/pjs_pdf/vol148no4/assessment_of_quantity_and_quality_of_microplastics_in_sediments_.pdf",
+      "additionalUrls": [],
+      "role": "Primary CALABARZON source reviewed for river or estuarine evidence; inclusion alone is not fish admission.",
+      "checkedOn": "2026-10-22",
+      "access": {
+        "status": "Official PDF indexed by web; ordinary HTTPS returned 403; no original pages acquired here.",
+        "reviewFiles": [
+          "calabarzon-brackish-source-review.json"
+        ]
+      },
+      "reuse": {
+        "metadata": "Bibliographic citation, source access and rights-review facts only.",
+        "raw": "Originals and receipts remain in the ignored local research cache.",
+        "content": "No blanket publication approval. Palico has a custom publisher copying/distribution grant; candidate identity/reach decisions are separate. Other restrictions and unresolved terms are retained in source reviews."
+      },
+      "publicationApproval": false,
+      "researchStatus": "source-held-with-documented-gaps"
+    },
+    {
+      "id": "pup-pugad-baboy-kawit-microplastics",
+      "title": "Assessment of Microplastics in Fish GI Tracts and Shallow Water Sediments in Pugad Baboy Mangrove Area, Kawit, Cavite Using Fourier Transform Infrared-Attenuated Total Reflectance Spectroscopy",
+      "provider": "Original study publisher / institutional repository",
+      "url": "https://publishing.pup.edu.ph/ojs/index.php/PUP-JST/article/view/50",
+      "additionalUrls": [
+        "https://publishing.pup.edu.ph/ojs/index.php/PUP-JST/article/download/50/version/54/24/101"
+      ],
+      "role": "Primary CALABARZON source reviewed for river or estuarine evidence; inclusion alone is not fish admission.",
+      "checkedOn": "2026-10-22",
+      "access": {
+        "status": "Official article metadata reviewed through web; raw article request returned500; original fish specimen table not acquired here.",
+        "reviewFiles": [
+          "calabarzon-brackish-source-review.json"
+        ]
+      },
+      "reuse": {
+        "metadata": "Bibliographic citation, source access and rights-review facts only.",
+        "raw": "Originals and receipts remain in the ignored local research cache.",
+        "content": "No blanket publication approval. Palico has a custom publisher copying/distribution grant; candidate identity/reach decisions are separate. Other restrictions and unresolved terms are retained in source reviews."
+      },
+      "publicationApproval": false,
+      "researchStatus": "source-held-with-documented-gaps",
+      "doi": "10.70922/094kv205"
+    }
+  ],
+  "sourcePolicy": {
+    "rawSnapshotDefault": "Ignored local research storage; record hashes/receipts before using as build inputs.",
+    "publicAdmissionDefault": false,
+    "rightsReview": "Review metadata, raw data, article text, images and derived claims separately.",
+    "qualityReview": "No waterbody identity source alone establishes fish presence, legal catchability or safety.",
+    "accessEvidence": "Indexed official/primary page excerpts were read where direct access was denied. Such entries require successful source retrieval before detailed assertion extraction."
+  }
+}

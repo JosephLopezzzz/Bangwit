@@ -2,10 +2,12 @@ import assert from "node:assert/strict";
 import { readFile } from "node:fs/promises";
 import { test } from "node:test";
 import guides from "../src/data/feeding-guides.json" with { type: "json" };
+import taal from "../src/data/taal-checklist-evidence.json" with { type: "json" };
 import {
   countEvidenceSpecies,
   filterFeedingGuides,
   filterHistoricalEvidence,
+  filterTaalChecklist,
   normaliseSpeciesSearch,
 } from "../src/lib/species-research.ts";
 
@@ -32,6 +34,20 @@ const records = [
     collectedOn: "2001-01-01",
   },
 ];
+
+test("Taal name search uses only its reviewed package and preserves original records on clear", () => {
+  const original = structuredClone(taal.records);
+  assert.deepEqual(
+    filterTaalChecklist(taal.records, "  TAWILIS  ").map((row) => row.scientificName),
+    ["Sardinella tawilis"],
+  );
+  assert.equal(filterTaalChecklist(taal.records, "forsskal").length, 1);
+  assert.equal(filterTaalChecklist(taal.records, "Caranx").length, 3);
+  assert.deepEqual(filterTaalChecklist(taal.records, "not in this package"), []);
+  assert.deepEqual(filterTaalChecklist(taal.records, ""), original);
+  assert.deepEqual(taal.records, original);
+  assert.equal(filterHistoricalEvidence(records, { query: "", locality: "all", date: "all" }).length, 3);
+});
 
 test("historical search handles case and diacritics and matches accepted or recorded names", () => {
   assert.equal(normaliseSpeciesSearch("  CÁVIte "), "cavite");

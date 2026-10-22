@@ -1,0 +1,195 @@
+{
+  "schemaVersion": 1,
+  "checkedOn": "2026-10-22",
+  "status": "bounded-source-review-no-brackish-admissions",
+  "scope": "CALABARZON brackish or estuarine fish evidence. A site name, mangrove habitat, migratory ecology or connection to sea alone does not establish sampled brackish conditions.",
+  "counts": {
+    "primarySourceLeadsReviewed": 5,
+    "extractedSpeciesAssertions": 0,
+    "publicRecordsAdmitted": 0
+  },
+  "publicationApproval": false,
+  "records": [],
+  "provenance": {
+    "rawDirectory": "raw/brackish-source-review/",
+    "retrievalReceipts": "raw/brackish-source-review/retrieval-receipts.json",
+    "retrievalReceiptsSha256": "af519fc201dc774c04593401d8e96430e3dfeb43d62ae3373912b4332c62b9e2",
+    "webReadObservations": "raw/brackish-source-review/web-read-observations.json",
+    "webReadObservationsSha256": "791a060aa5282acf325d8694d135a01417037a8ab439936fb10b7a6b4bc6c9e8",
+    "method": "Ordinary HTTPS with verified TLS and primary journal/institutional web reads; no TLS bypass, login, access-control bypass, bulk scraper or email used."
+  },
+  "sources": [
+    {
+      "id": "corpuz-2016-taal-river-survey",
+      "title": "Diversity and Distribution of Freshwater Fish Assemblages in Lake Taal River Systems in Batangas, Philippines",
+      "doi": "10.47125/jesam/2016_1/09",
+      "publicationYear": 2016,
+      "url": "https://doi.org/10.47125/jesam/2016_1/09",
+      "primaryPdfUrl": "https://ovcre.uplb.edu.ph/journals-uplb/index.php/JESAM/article/download/158/140",
+      "sourceLocator": "Journal 19(1):85-95; fish checklist Table 1 pp.89-90; environmental methods p.87",
+      "sampleDatesReported": [
+        "2011-01-21/2011-01-24",
+        "2011-07-05/2011-07-08"
+      ],
+      "geographicScope": [
+        "Looc River, Batangas",
+        "Magapi River, Batangas",
+        "Pansipit River, Batangas"
+      ],
+      "accessStatus": "Official PDF indexed by web; ordinary verified-TLS acquisition returned 403. No local original PDF acquired by this reviewer. River-source review owns independent table verification.",
+      "reuse": {
+        "status": "article-specific-open-reuse-unverified",
+        "policyUrl": "https://www.ukdr.uplb.edu.ph/jesam/policies.html",
+        "conclusion": "Repository policy describes copyright assignment and personal-use exceptions for authors. It does not establish a reusable public derived table license for this batch."
+      },
+      "salinityReview": {
+        "measured": true,
+        "stationValuesVerified": false,
+        "brackishQualification": "hold",
+        "reason": "Salinity measurement method alone is insufficient; exact station/season values and co-sampled fish linkage are not verified here."
+      },
+      "decision": "hold-rights-and-station-salinity",
+      "publicRecordsAdmitted": 0
+    },
+    {
+      "id": "nfrdi-pansipit-taal-migratory-survey",
+      "title": "Survey of Migratory Fishes in Pansipit River and Taal Lake",
+      "publicationYear": 1990,
+      "url": "https://nfrdi.da.gov.ph/tpjf/vol21/Survey%20Migratory%20Fishes%20in%20Pansipit%20River%20and%20Taal%20Lake.pdf",
+      "sourceLocator": "Philippine Journal of Fisheries 21, pp.89 onward; corral methodology pp.90-91",
+      "geographicScope": [
+        "Pansipit River fish corral",
+        "Taal Lake fish corrals",
+        "Balayan Bay shoreline near Pansipit mouth"
+      ],
+      "accessStatus": "Official PDF indexed and read through web; ordinary HTTPS acquisition failed certificate verification. No TLS bypass attempted.",
+      "reuse": {
+        "status": "article-specific-license-unverified",
+        "conclusion": "Government-hosted PDF is not treated as blanket permission for all original article fields or figures."
+      },
+      "salinityReview": {
+        "measured": null,
+        "stationValuesVerified": false,
+        "brackishQualification": "hold",
+        "reason": "The visible methods identify corrals and near-mouth larval collection, but no measured brackish value or matched station salinity was verified."
+      },
+      "decision": "hold-salinity-rights-and-historical-name-review",
+      "publicRecordsAdmitted": 0
+    },
+    {
+      "id": "nob-et-al-2026-mangrove-edna",
+      "title": "Mangrove-Associated Fish Biodiversity in Selected Philippine Bioregions During the Northeast (Amihan) Monsoon: Insights from eDNA Metabarcoding for Biomonitoring",
+      "doi": "10.1002/edn3.70273",
+      "publicationYear": 2026,
+      "url": "https://doi.org/10.1002/edn3.70273",
+      "sourceLocator": "Methods 2.1-2.2 and supplementary Tables S1-S2",
+      "sampleWindowReported": "2023-12/2024-01",
+      "geographicScope": [
+        "Olo-Olo Mangrove Forest and Ecopark, Lobo, Batangas"
+      ],
+      "accessStatus": "Article text read through primary web result; ordinary HTML returned 403; original supplementary workbook not acquired. Crossref DOI metadata acquired HTTP200.",
+      "metadataSnapshot": {
+        "path": "raw/brackish-source-review/crossref-edna.json",
+        "sha256": "86e8a53c251da839f3453c2d064bd5a81e55b3bcb6d98b6f8055e75821b6468d"
+      },
+      "reuse": {
+        "status": "restricted-license-needs-scope-review",
+        "license": "CC-BY-NC-ND-4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+        "licenseEvidenceUrl": "https://api.crossref.org/works/10.1002/edn3.70273",
+        "conclusion": "Deposited VOR license specifies noncommercial/no-derivatives terms. No independent unrestricted data license for Tables S1/S2 verified."
+      },
+      "salinityReview": {
+        "measured": true,
+        "stationValuesVerified": false,
+        "brackishQualification": "hold",
+        "reason": "Authors call the Batangas site fringe mangrove; the riverine mangrove sites are Aklan and Palawan. Do not label Olo-Olo brackish from mangrove wording alone."
+      },
+      "evidenceKind": "environmental-dna-detection",
+      "limitations": [
+        "Supplement workbook must join OTU identity and read counts to exact sample salinity and date.",
+        "eDNA can be transported by currents; it does not establish resident population or a photographed/vouchered individual.",
+        "Ambiguous, paired-species and unknown OTUs require explicit holds; no substitutions from article-wide totals."
+      ],
+      "decision": "hold-restricted-terms-supplement-and-salinity",
+      "publicRecordsAdmitted": 0
+    },
+    {
+      "id": "espiritu-et-al-2019-bombong-microplastics",
+      "title": "Assessment of Quantity and Quality of Microplastics in the Sediments, Waters, Oysters, and Selected Fish Species in Key Sites Along the Bombong Estuary and the Coastal Waters of Ticalan in San Juan, Batangas",
+      "publicationYear": 2019,
+      "url": "https://philjournalsci.dost.gov.ph/images/pdf/pjs_pdf/vol148no4/assessment_of_quantity_and_quality_of_microplastics_in_sediments_.pdf",
+      "sourceLocator": "PJS 148(4), methods p.790 and water-quality Table 1",
+      "sampleWindowReported": "2018-09 and 2018-11",
+      "geographicScope": [
+        "Bombong Estuary upstream",
+        "Bombong Estuary downstream",
+        "Adjoining coastal Ticalan, San Juan, Batangas"
+      ],
+      "accessStatus": "Official PDF indexed by web; ordinary HTTPS returned 403; no original pages acquired here.",
+      "reuse": {
+        "status": "unverified",
+        "conclusion": "No explicit article or underlying fish observation data reuse license established."
+      },
+      "salinityReview": {
+        "measured": true,
+        "stationValuesVerified": false,
+        "brackishQualification": "hold",
+        "reason": "Do not join study-wide water chemistry to selected fish without verified collection station, sampling mode and date."
+      },
+      "decision": "hold-original-table-reuse-and-specimen-locality",
+      "publicRecordsAdmitted": 0
+    },
+    {
+      "id": "pup-pugad-baboy-kawit-microplastics",
+      "title": "Assessment of Microplastics in Fish GI Tracts and Shallow Water Sediments in Pugad Baboy Mangrove Area, Kawit, Cavite Using Fourier Transform Infrared-Attenuated Total Reflectance Spectroscopy",
+      "doi": "10.70922/094kv205",
+      "url": "https://publishing.pup.edu.ph/ojs/index.php/PUP-JST/article/view/50",
+      "primaryPdfUrl": "https://publishing.pup.edu.ph/ojs/index.php/PUP-JST/article/download/50/version/54/24/101",
+      "geographicScope": [
+        "Pugad Baboy Mangrove Area, Kawit, Cavite"
+      ],
+      "accessStatus": "Official article metadata reviewed through web; raw article request returned500; original fish specimen table not acquired here.",
+      "reuse": {
+        "status": "restricted-license-needs-scope-review",
+        "license": "CC-BY-NC-4.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by-nc/4.0/",
+        "policyUrl": "https://publishing.pup.edu.ph/ojs/index.php/PUP-JST/Licensing",
+        "conclusion": "Explicit noncommercial term retained. No unrestricted derived app-data approval is inferred."
+      },
+      "salinityReview": {
+        "measured": null,
+        "stationValuesVerified": false,
+        "brackishQualification": "hold",
+        "reason": "Mangrove locality alone does not prove sampled salinity. Fish supplied from local fishers also require verified actual capture reach/date and scientific identity."
+      },
+      "decision": "hold-salinity-identity-capture-provenance-and-restricted-license",
+      "publicRecordsAdmitted": 0
+    }
+  ],
+  "nextActions": [
+    {
+      "priority": 1,
+      "action": "Finish river-source review of Pansipit/Looc/Magapi fish table; preserve it as river evidence if admitted, with salinity unknown until station values are verified."
+    },
+    {
+      "priority": 2,
+      "action": "Acquire an original station-linked fish list with explicit measured brackish conditions and reusable underlying data terms. Keep estuary-name-only leads quarantined."
+    },
+    {
+      "priority": 3,
+      "action": "If pursuing Olo-Olo eDNA, obtain Tables S1/S2 through permitted publisher access and verify the data-specific license before an independent eDNA batch."
+    },
+    {
+      "priority": 4,
+      "action": "Advance other reviewed waterbody packages while these source gaps remain open. This bounded search does not establish that no usable CALABARZON brackish data exists."
+    }
+  ],
+  "nonClaims": [
+    "No brackish species absence inference.",
+    "No estuary geometry or municipal-water boundary derived.",
+    "No current presence, abundance, capture permission, safety, conservation status, native status or bait claims admitted.",
+    "No emails or data requests sent.",
+    "No complete CALABARZON estuarine coverage claim."
+  ]
+}
