@@ -1,8 +1,10 @@
 # Bangwit
 
-Next milestone: [Cavite data and pilot implementation plan](docs/CAVITE_PILOT_IMPLEMENTATION_PLAN.md).
+**Status: In progress.** The current expansion roadmap is the [Philippines species expansion plan](docs/PHILIPPINES_SPECIES_EXPANSION_PLAN.md). The [Cavite data and pilot implementation plan](docs/CAVITE_PILOT_IMPLEMENTATION_PLAN.md) documents the existing first pilot.
 
-Next.js, TypeScript, and Tailwind CSS remake for the Cavite pilot. The UI, local catch journal, collection, onboarding, first-use guide, draft policy gate, and local backup/restore flow are in place. The user reports that all planned acceptance tests passed, including the dropdown retest and mobile checks. Earlier, they reported online/offline and photo-draft reconnect passes on a personal Tecno phone in a browser tab at `https://bangwit.vercel.app/`. Exact phone model, OS, browser/version, tested commit and case-by-case results remain unrecorded. Current species coverage, legal guidance and live alerts remain unverified.
+Bangwit is an in-progress, Philippines-wide waterbody discovery and personal catch-journaling project. Its intended fish coverage spans regions across Luzon, Visayas, and Mindanao, and freshwater, brackish, and marine waters. National research and regional coverage are being expanded in phases.
+
+The current Next.js, TypeScript, and Tailwind CSS prototype remains a Cavite pilot. Its UI, local catch journal, collection, onboarding, first-use guide, draft policy gate, and local backup/restore flow are in place. Nationwide species coverage is not complete, and the app does not yet provide verified nationwide fishing rules or live safety alerts. The user reports that all planned acceptance tests passed, including the dropdown retest and mobile checks. Earlier, they reported online/offline and photo-draft reconnect passes on a personal Tecno phone in a browser tab at `https://bangwit.vercel.app/`. Exact phone model, OS, browser/version, tested commit and case-by-case results remain unrecorded.
 
 ## Local development
 
