@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "checkedOn": "2026-10-22",
+  "checkedOn": "2026-10-23",
   "regionId": "0400000000",
   "regionName": "Region IV-A (CALABARZON)",
   "status": "research-queued",
@@ -72,15 +72,15 @@
     "limits": "Province plus separate-city starter coverage. Municipalities/component cities and each island/waterbody still require the source-sweep inventory; this is not a completed regional inventory."
   },
   "counts": {
-    "waterbodyResearchLeads": 30,
+    "waterbodyResearchLeads": 36,
     "provincesWithLeads": 5,
     "separateCityCoverageUnits": 1,
     "byKind": {
       "bay": 7,
       "estuary": 2,
-      "lake": 6,
+      "lake": 11,
       "reservoir": 2,
-      "river": 8,
+      "river": 9,
       "stream": 2,
       "wetland": 3
     },
@@ -105,7 +105,8 @@
           "relationship": "source-described-locality",
           "sourceRefs": [
             "emb-manila-bay-about",
-            "cavitecity-waterbodies"
+          "cavitecity-waterbodies",
+          "nfrdi-2017-manila-bay-trawl"
           ],
           "provinceId": "0402100000"
         },
@@ -126,14 +127,15 @@
       ],
       "sourceRefs": [
         "emb-manila-bay-about",
-        "cavitecity-waterbodies"
+        "cavitecity-waterbodies",
+        "nfrdi-2017-manila-bay-trawl"
       ],
       "identityStatus": "source-named-research-lead",
       "boundaryStatus": "not-delineated",
-      "fishEvidenceStatus": "not-reviewed",
+    "fishEvidenceStatus": "historical-trawl-table-reviewed; no-species-assertions-admitted",
       "reviewStatus": "research-queued",
       "publicAdmission": false,
-      "scopeNote": "One shared bay identity. Coastal associations differ from the much wider drainage basin; no municipal-water geometry is supplied."
+    "scopeNote": "One shared bay identity. The 2014-2015 NFRDI survey defines a Cavite stratum, but its station map has not been georeferenced; the source does not define current species presence, current bay boundaries, or municipal-water geometry."
     },
     {
       "id": "ph-wb-bacoor-bay",
@@ -349,7 +351,8 @@
       ],
       "sourceRefs": [
         "nfrdi-taal-research-2025",
-        "agoncillo-pansipit-identity"
+        "agoncillo-pansipit-identity",
+        "nfrdi-fy2023-taal-pansipit-stock-assessment"
       ],
       "identityStatus": "source-named-research-lead",
       "boundaryStatus": "not-delineated",
@@ -381,7 +384,8 @@
       ],
       "sourceRefs": [
         "agoncillo-pansipit-identity",
-        "nfrdi-pansipit-taal-migratory-survey"
+        "nfrdi-pansipit-taal-migratory-survey",
+        "nfrdi-fy2023-taal-pansipit-stock-assessment"
       ],
       "identityStatus": "source-named-research-lead",
       "boundaryStatus": "not-delineated",
@@ -452,7 +456,8 @@
       ],
       "sourceRefs": [
         "agoncillo-pansipit-identity",
-        "bfar4a-nsap-2020"
+        "bfar4a-nsap-2020",
+        "bfar-nfrdi-2025-balayan-calatagan-poster"
       ],
       "identityStatus": "source-named-research-lead",
       "boundaryStatus": "not-delineated",
@@ -564,7 +569,8 @@
       ],
       "sourceRefs": [
         "llda-masterplan-tor-2024",
-        "llda-annual-report-2022"
+        "llda-annual-report-2022",
+        "nfrdi-llda-2025-laguna-assessment"
       ],
       "identityStatus": "source-named-research-lead",
       "boundaryStatus": "not-delineated",
@@ -651,20 +657,22 @@
           "regionId": "0400000000",
           "relationship": "source-described-locality",
           "sourceRefs": [
-            "denr-calabarzon-wetlands-2024"
+            "denr-calabarzon-wetlands-2024",
+            "paller-2017-seven-lakes-fish"
           ],
           "provinceId": "0403400000"
         }
       ],
       "sourceRefs": [
-        "denr-calabarzon-wetlands-2024"
+        "denr-calabarzon-wetlands-2024",
+        "paller-2017-seven-lakes-fish"
       ],
       "identityStatus": "source-named-research-lead",
       "boundaryStatus": "not-delineated",
-      "fishEvidenceStatus": "not-reviewed",
-      "reviewStatus": "research-queued",
+      "fishEvidenceStatus": "historical-seven-lake-survey-described; species-rows-held-for-rights-review",
+      "reviewStatus": "historical-source-described; item-rights-pending",
       "publicAdmission": false,
-      "scopeNote": "One of the named Laguna lakes; San Pablo locality/aliases need primary inventory reconciliation before site display."
+      "scopeNote": "Included in the 2017 seven-lake survey's publisher-indexed Table 1. The source reports an aggregate study total, but no per-lake species row, coordinate or geometry is adopted while item-specific reuse rights remain unresolved."
     },
     {
       "id": "ph-wb-pandin-laguna-lake",
@@ -681,19 +689,174 @@
           "regionId": "0400000000",
           "relationship": "source-described-locality",
           "sourceRefs": [
-            "denr-calabarzon-wetlands-2024"
+            "denr-calabarzon-wetlands-2024",
+            "paller-2017-seven-lakes-fish"
           ],
           "provinceId": "0403400000"
         }
       ],
       "sourceRefs": [
-        "denr-calabarzon-wetlands-2024"
+        "denr-calabarzon-wetlands-2024",
+        "paller-2017-seven-lakes-fish"
       ],
       "identityStatus": "source-named-research-lead",
       "boundaryStatus": "not-delineated",
-      "fishEvidenceStatus": "not-reviewed",
-      "reviewStatus": "research-queued",
-      "publicAdmission": false
+      "fishEvidenceStatus": "historical-seven-lake-survey-described; species-rows-held-for-rights-review",
+      "reviewStatus": "historical-source-described; item-rights-pending",
+      "publicAdmission": false,
+      "scopeNote": "Included in the 2017 seven-lake survey's publisher-indexed Table 1. The source reports an aggregate study total, but no per-lake species row, coordinate or geometry is adopted while item-specific reuse rights remain unresolved."
+    },
+    {
+      "id": "ph-wb-bunot-lake",
+      "name": "Bunot Lake",
+      "aliases": [
+        "Buot Lake"
+      ],
+      "kind": "lake",
+      "salinity": {
+        "classification": "unknown",
+        "reviewStatus": "not-assessed",
+        "sourceRefs": []
+      },
+      "administrativeAssociations": [
+        {
+          "regionId": "0400000000",
+          "relationship": "source-described-locality",
+          "sourceRefs": [
+            "paller-2017-seven-lakes-fish"
+          ],
+          "provinceId": "0403400000"
+        }
+      ],
+      "sourceRefs": [
+        "paller-2017-seven-lakes-fish"
+      ],
+      "identityStatus": "source-named-research-lead",
+      "boundaryStatus": "not-delineated",
+      "fishEvidenceStatus": "historical-seven-lake-survey-described; species-rows-held-for-rights-review",
+      "reviewStatus": "historical-source-described; item-rights-pending",
+      "publicAdmission": false,
+      "scopeNote": "Listed in the 2017 seven-lake survey's publisher-indexed Table 1 as Buot; normalized display name Bunot follows the common lake name. No species row, coordinate or geometry is adopted while item-specific reuse rights remain unresolved."
+    },
+    {
+      "id": "ph-wb-mohicap-lake",
+      "name": "Mohicap Lake",
+      "aliases": [],
+      "kind": "lake",
+      "salinity": {
+        "classification": "unknown",
+        "reviewStatus": "not-assessed",
+        "sourceRefs": []
+      },
+      "administrativeAssociations": [
+        {
+          "regionId": "0400000000",
+          "relationship": "source-described-locality",
+          "sourceRefs": [
+            "paller-2017-seven-lakes-fish"
+          ],
+          "provinceId": "0403400000"
+        }
+      ],
+      "sourceRefs": [
+        "paller-2017-seven-lakes-fish"
+      ],
+      "identityStatus": "source-named-research-lead",
+      "boundaryStatus": "not-delineated",
+      "fishEvidenceStatus": "historical-seven-lake-survey-described; species-rows-held-for-rights-review",
+      "reviewStatus": "historical-source-described; item-rights-pending",
+      "publicAdmission": false,
+      "scopeNote": "Included in the 2017 seven-lake survey's publisher-indexed Table 1. No per-lake species row, coordinate or geometry is adopted while item-specific reuse rights remain unresolved."
+    },
+    {
+      "id": "ph-wb-yambo-lake",
+      "name": "Yambo Lake",
+      "aliases": [],
+      "kind": "lake",
+      "salinity": {
+        "classification": "unknown",
+        "reviewStatus": "not-assessed",
+        "sourceRefs": []
+      },
+      "administrativeAssociations": [
+        {
+          "regionId": "0400000000",
+          "relationship": "source-described-locality",
+          "sourceRefs": [
+            "paller-2017-seven-lakes-fish"
+          ],
+          "provinceId": "0403400000"
+        }
+      ],
+      "sourceRefs": [
+        "paller-2017-seven-lakes-fish"
+      ],
+      "identityStatus": "source-named-research-lead",
+      "boundaryStatus": "not-delineated",
+      "fishEvidenceStatus": "historical-seven-lake-survey-described; species-rows-held-for-rights-review",
+      "reviewStatus": "historical-source-described; item-rights-pending",
+      "publicAdmission": false,
+      "scopeNote": "Included in the 2017 seven-lake survey's publisher-indexed Table 1. No per-lake species row, coordinate or geometry is adopted while item-specific reuse rights remain unresolved."
+    },
+    {
+      "id": "ph-wb-calibato-lake",
+      "name": "Calibato Lake",
+      "aliases": [],
+      "kind": "lake",
+      "salinity": {
+        "classification": "unknown",
+        "reviewStatus": "not-assessed",
+        "sourceRefs": []
+      },
+      "administrativeAssociations": [
+        {
+          "regionId": "0400000000",
+          "relationship": "source-described-locality",
+          "sourceRefs": [
+            "paller-2017-seven-lakes-fish"
+          ],
+          "provinceId": "0403400000"
+        }
+      ],
+      "sourceRefs": [
+        "paller-2017-seven-lakes-fish"
+      ],
+      "identityStatus": "source-named-research-lead",
+      "boundaryStatus": "not-delineated",
+      "fishEvidenceStatus": "historical-seven-lake-survey-described; species-rows-held-for-rights-review",
+      "reviewStatus": "historical-source-described; item-rights-pending",
+      "publicAdmission": false,
+      "scopeNote": "Included in the 2017 seven-lake survey's publisher-indexed Table 1. No per-lake species row, coordinate or geometry is adopted while item-specific reuse rights remain unresolved."
+    },
+    {
+      "id": "ph-wb-palakpakin-lake",
+      "name": "Palakpakin Lake",
+      "aliases": [],
+      "kind": "lake",
+      "salinity": {
+        "classification": "unknown",
+        "reviewStatus": "not-assessed",
+        "sourceRefs": []
+      },
+      "administrativeAssociations": [
+        {
+          "regionId": "0400000000",
+          "relationship": "source-described-locality",
+          "sourceRefs": [
+            "paller-2017-seven-lakes-fish"
+          ],
+          "provinceId": "0403400000"
+        }
+      ],
+      "sourceRefs": [
+        "paller-2017-seven-lakes-fish"
+      ],
+      "identityStatus": "source-named-research-lead",
+      "boundaryStatus": "not-delineated",
+      "fishEvidenceStatus": "historical-seven-lake-survey-described; species-rows-held-for-rights-review",
+      "reviewStatus": "historical-source-described; item-rights-pending",
+      "publicAdmission": false,
+      "scopeNote": "Included in the 2017 seven-lake survey's publisher-indexed Table 1. No per-lake species row, coordinate or geometry is adopted while item-specific reuse rights remain unresolved."
     },
     {
       "id": "ph-wb-molawin-makiling-creek",
@@ -1110,6 +1273,36 @@
         "palico-lian-survey-20261023"
       ],
       "scopeNote": "A separate page projection shows 12 identity-and-family-reviewed rows from the 2025 survey table. Three rows remain held for source-family conflicts. The study reports three sites, but no precise site geometry, field-calendar date, whole-river presence or measured salinity is adopted."
+    },
+    {
+      "id": "ph-wb-tayabas-river",
+      "name": "Tayabas River",
+      "aliases": [],
+      "kind": "river",
+      "salinity": {
+        "classification": "unknown",
+        "reviewStatus": "not-assessed",
+        "sourceRefs": []
+      },
+      "administrativeAssociations": [
+        {
+          "regionId": "0400000000",
+          "relationship": "source-described-locality",
+          "sourceRefs": [
+            "paller-2013-tayabas-river-fish"
+          ],
+          "provinceId": "0405600000"
+        }
+      ],
+      "sourceRefs": [
+        "paller-2013-tayabas-river-fish"
+      ],
+      "identityStatus": "source-named-research-lead",
+      "boundaryStatus": "not-delineated",
+      "fishEvidenceStatus": "not-reviewed",
+      "reviewStatus": "research-queued",
+      "publicAdmission": false,
+      "scopeNote": "A 2013 study reports three sampled stream sections on Tayabas River, Quezon, during wet and dry seasons of 2010. Exact reaches, municipal crosswalk, salinity and geometry remain unreviewed."
     }
   ],
   "coverageRules": {
@@ -1174,6 +1367,22 @@
         "ph-wb-laguna-de-bay",
         "ph-wb-tayabas-bay"
       ]
+    },
+    {
+      "priority": 5,
+      "task": "Resolve the item-specific reuse terms for the 2017 Seven Lakes fish survey or find an eligible alternative source; keep its species table quarantined until then.",
+      "sourceIds": [
+        "paller-2017-seven-lakes-fish"
+      ],
+      "waterbodyIds": [
+        "ph-wb-sampaloc-san-pablo-lake",
+        "ph-wb-bunot-lake",
+        "ph-wb-mohicap-lake",
+        "ph-wb-yambo-lake",
+        "ph-wb-pandin-laguna-lake",
+        "ph-wb-calibato-lake",
+        "ph-wb-palakpakin-lake"
+      ]
     }
   ],
   "gaps": [
@@ -1181,7 +1390,7 @@
       "id": "scope-not-exhaustive",
       "status": "open",
       "count": null,
-      "reason": "Thirty selected named water/habitat leads are seeded, including the acquired Palico-Lian survey. Full provincial, municipal, island, small-stream, pond and reservoir denominators remain unestablished.",
+      "reason": "Thirty-six selected named water/habitat leads are seeded, including the seven-lake San Pablo survey group and Tayabas/Palico-Lian river leads. Full provincial, municipal, island, small-stream, pond and reservoir denominators remain unestablished.",
       "nextAction": "Expand the source-derived registry with explicit inclusion criteria and a frozen manifest before claiming a regional baseline."
     },
     {
@@ -1216,14 +1425,14 @@
     {
       "id": "fish-coverage",
       "status": "open",
-      "count": 30,
-      "reason": "Regional fish coverage remains incomplete. Palico-Lian has 15 pending source-table candidates; four Taal checklist assertions are separately admitted without field-observation dates, while the broad Cavite historical specimens remain outside this inventory.",
+      "count": 36,
+      "reason": "Regional fish coverage remains incomplete. The seven San Pablo lakes have an aggregate historic survey lead whose table rows are rights-held; Palico-Lian has 15 pending source-table candidates; four Taal checklist assertions are separately admitted without field-observation dates, while broad Cavite historical specimens remain outside this inventory.",
       "nextAction": "Join only independently reviewed evidence at its supported geographic scale."
     },
     {
       "id": "identity-and-geometry",
       "status": "open",
-      "count": 30,
+      "count": 36,
       "reason": "No validated waterbody geometry or precise point assignment was created. Repeated names, local spellings and habitat-versus-waterbody identity require review.",
       "nextAction": "Reconcile stable identities and source-era/current geography before map display."
     },

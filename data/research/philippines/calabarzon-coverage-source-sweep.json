@@ -1,0 +1,286 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-23",
+  "regionId": "0400000000",
+  "status": "source-leads-expanded-no-new-species-admissions",
+  "sourceRegistryCountBefore": 28,
+  "sourceRegistryCountAfter": 33,
+  "sourceRegistryCountAfterFollowUp": 34,
+  "scopeNote": "This is a bounded sweep of high-value public research leads for inland, marine and estuarine coverage. It is not a complete review of all 36 waterbody leads, a fish distribution baseline, or an absence assessment.",
+  "counts": {
+    "newSourceLeadsReviewed": 5,
+    "fullPrimaryDocumentsAcquiredThisFollowUp": 1,
+    "primaryDocumentsReviewedThisFollowUp": 1,
+    "indexedPrimaryArticleTextsReviewedThisFollowUp": 1,
+    "speciesAssertionsAdmitted": 0,
+    "waterbodyGeometriesValidated": 0,
+    "brackishAssertionsAdmitted": 0
+  },
+  "followUpSources": [
+    {
+      "sourceId": "paller-2017-seven-lakes-fish",
+      "waterbodyIds": [
+        "ph-wb-sampaloc-san-pablo-lake",
+        "ph-wb-bunot-lake",
+        "ph-wb-mohicap-lake",
+        "ph-wb-yambo-lake",
+        "ph-wb-pandin-laguna-lake",
+        "ph-wb-calibato-lake",
+        "ph-wb-palakpakin-lake"
+      ],
+      "evidenceType": "freshwater-seven-lake-fish-assemblage-survey",
+      "bibliography": "Paller, V. G. V., Corpuz, M. N. C., & Bandal, M. Z. Jr. (2017). Freshwater fish assemblages and water quality parameters in Seven Lakes of San Pablo, Laguna, Philippines. Asian Journal of Biodiversity, 8(1), 1-22.",
+      "publisherArticleUrl": "https://asianscientificjournal.com/new/publication/index.php/ajob/article/view/995",
+      "primaryPdfUrl": "https://asianscientificjournal.com/new/publication/index.php/ajob/article/viewFile/995/1813",
+      "doi": "10.7828/ajob.v8i1.995",
+      "sourceAbstractFacts": {
+        "studyLakes": 7,
+        "collectedFishIndividuals": 5166,
+        "reportedFishSpeciesAcrossStudy": 10,
+        "reportedFamiliesAcrossStudy": 6,
+        "durationDescription": "two-year study; exact sampling dates not verified from the official article page"
+      },
+      "accessReview": "Official publisher article page and indexed primary article text reviewed, including its seven-lake scope and Table 1 lake names. Direct PDF retrieval returned an interactive JavaScript/cookie challenge; no local copy or bypass.",
+      "reuseReview": "No item-specific reuse license verified. Current publisher submission guidance says authors must submit a signed Mandatory Copyright Transfer; the signed form for this 2017 article was not inspected. Per-lake species rows remain quarantined.",
+      "decision": "hold-species-rows-pending-item-rights-review",
+      "admittedAssertions": 0,
+      "limits": [
+        "The abstract's ten fish species and 5,166 individuals are aggregate historical study facts, not per-lake species assignments or a current census.",
+        "Table 1 supports lake identity and location context, but no coordinates or lake geometry are adopted in the scope registry.",
+        "No per-lake species rows are copied or admitted until item-specific rights are confirmed.",
+        "The article's historic survey does not establish present-day abundance, legality, safety or fishing permission."
+      ]
+    }
+  ],
+  "openDataAlternativeChecks": [
+    {
+      "provider": "GBIF public occurrence search API",
+      "checkedOn": "2026-10-23",
+      "apiEndpoint": "https://api.gbif.org/v1/occurrence/search",
+      "queryParameters": {
+        "country": "PH",
+        "locality": "exact lake name string",
+        "limit": 50
+      },
+      "localityResults": [
+        {
+          "waterbodyId": "ph-wb-sampaloc-san-pablo-lake",
+          "query": "Sampaloc Lake",
+          "records": 5,
+          "reviewedRecords": 5,
+          "resultTypes": "3 human-observation bird records and 2 preserved-specimen algal records; no fish record"
+        },
+        {
+          "waterbodyId": "ph-wb-bunot-lake",
+          "query": "Bunot Lake",
+          "records": 0
+        },
+        {
+          "waterbodyId": "ph-wb-mohicap-lake",
+          "query": "Mohicap Lake",
+          "records": 0
+        },
+        {
+          "waterbodyId": "ph-wb-yambo-lake",
+          "query": "Yambo Lake",
+          "records": 0
+        },
+        {
+          "waterbodyId": "ph-wb-pandin-laguna-lake",
+          "query": "Pandin Lake",
+          "records": 6,
+          "reviewedRecords": 6,
+          "resultTypes": "6 human-observation bird records; no fish record"
+        },
+        {
+          "waterbodyId": "ph-wb-calibato-lake",
+          "query": "Calibato Lake",
+          "records": 0
+        },
+        {
+          "waterbodyId": "ph-wb-palakpakin-lake",
+          "query": "Palakpakin Lake",
+          "records": 0
+        }
+      ],
+      "reviewedRecords": 11,
+      "fishRecordsInExactLocalityResults": 0,
+      "decision": "not-a-fish-source-for-these-exact-locality-queries",
+      "limits": [
+        "Exact locality strings do not cover spelling variants, records lacking locality text, or coordinate-only records.",
+        "No fish result from this narrow query is not evidence that fish are absent from any lake.",
+        "No returned coordinates are treated as lake geometry or as proof of a record's exact aquatic habitat."
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "sourceId": "paller-2013-tayabas-river-fish",
+      "waterbodyIds": [
+        "ph-wb-tayabas-river"
+      ],
+      "evidenceType": "freshwater-river-assemblage-survey",
+      "bibliography": "Paller, V. G. V., Corpuz, M. N. C., & Ocampo, P. P. (2013). Diversity and distribution of freshwater fish assemblages in Tayabas River, Quezon (Philippines). Philippine Journal of Science, 142(1), 55-67.",
+      "primaryArticleUrl": "https://philjournalsci.dost.gov.ph/diversity-and-distribution-of-freshwater-fish-assemblages-in-tayabas-river-quezon-philippines/",
+      "metadataRepositoryUrl": "https://repository.seafdec.org.ph/handle/10862/2236?show=full",
+      "published": "2013-06",
+      "fieldPeriod": "wet and dry seasons of 2010",
+      "sourceAbstractFacts": {
+        "streamSections": 3,
+        "individuals": 1070,
+        "species": 15,
+        "families": 8
+      },
+      "accessReview": "Official PJS/SEAFDEC metadata and abstract were readable through indexed source results. Direct publisher page/PDF requests returned 403 during review; SEAFDEC item metadata lists no associated file. No original PDF or Table 1 was acquired for this batch.",
+      "reuseReview": "No item-specific reuse license was verified. The PJS author guide says accepted authors sign a copyright-transfer form, but that current policy does not establish the exact rights for this 2013 article. Open-access visibility is not treated as table-reuse permission.",
+      "decision": "hold-species-table-extraction-pending-original-access-and-item-rights",
+      "admittedAssertions": 0,
+      "limits": [
+        "The abstract's three stream sections are not precise site coordinates or river-wide geometry.",
+        "2010 sampling is historical and not a current-presence report.",
+        "No salinity values or source-matched brackish designation were reviewed."
+      ]
+    },
+    {
+      "sourceId": "nfrdi-2017-manila-bay-trawl",
+      "waterbodyIds": [
+        "ph-wb-manila-bay"
+      ],
+      "evidenceType": "marine-experimental-trawl-survey",
+      "bibliography": "Torres, F. S. B. Jr., Bendaño, A. P., Lopez, G. D. V., Perez, M. A., & Santos, M. D. (2017). Species composition, distribution, biomass trends and exploitation of dominant fish species in Manila Bay using experimental trawl survey.",
+      "repositoryUrl": "https://repository.nfrdi.da.gov.ph/items/5845cc49-44c8-4c18-8d4d-d458ceaa0aad",
+      "doi": "10.31398/tpjf/24.1.2016A0002",
+      "primaryPdfUrl": "https://repository.nfrdi.da.gov.ph/bitstreams/a2965005-8feb-46dc-90c6-840fe0189f93/download",
+      "studyPeriod": "2014-03 to 2015-10",
+      "sourceAbstractFacts": {
+        "stations": 16,
+        "reportedTotal": 146,
+        "reportedTotalIncludes": [
+          "fish",
+          "invertebrates"
+        ],
+        "dominantTaxaNamedInAbstract": 6
+      },
+      "sourceTableFacts": {
+        "table": "Table 3.2",
+        "tableTitleScope": "Top 50 fish and invertebrate species by biomass abundance, summarized by province",
+        "caviteFishSpeciesCountInTableSummary": 24,
+        "caviteAllSpeciesCountInTableSummary": 100,
+        "bayTotalSpeciesCountInTableSummary": 118,
+        "commonnessMarksDescribe": "frequency-of-hauls bands, not individual fish counts",
+        "interpretation": "The 100 Cavite-group total is mixed fish and invertebrate species, not 100 fish species; it is a historical survey summary, not a current checklist."
+      },
+      "acquiredPdf": {
+        "localIgnoredPath": "raw/calabarzon-source-retrieval-20261023/nfrdi-2017-manila-bay-trawl.pdf",
+        "bytes": 1368815,
+        "sha256": "dc5733fbc9040efbc37a3ed80cba5cb923e67beb4b42870f34692d657aa2ad08"
+      },
+      "accessReview": "Official NFRDI item metadata and the complete 16-page primary PDF were reviewed; the abstract and Table 3.2 confirm the 16-station study and a province-grouped Cavite summary. The station map has not been georeferenced.",
+      "reuseReview": "No item-specific reuse license was found on the 2017 item/PDF. The journal's current CC BY-NC 4.0 policy is not assumed to apply retroactively to this 2017 article; table rows remain held pending written/item-specific rights confirmation.",
+      "decision": "hold-station-attribution-and-reuse-review",
+      "admittedAssertions": 0,
+      "limits": [
+        "The paper groups one historical trawling sector under Cavite, but does not provide a georeferenced municipal-water boundary or prove all 16 stations fall within Cavite.",
+        "The 100 Cavite-group species total includes fish and invertebrates; the table separately reports 24 fish species in its summary, and neither count is a current checklist.",
+        "The 146 paper-wide total includes fish and invertebrates and must not be presented as a fish-only species total.",
+        "No individual table species rows are admitted or reproduced while article-specific reuse rights remain unverified.",
+        "Study-period trawl evidence does not establish present abundance, fishing permission or safety."
+      ]
+    },
+    {
+      "sourceId": "bfar-nfrdi-2025-balayan-calatagan-poster",
+      "waterbodyIds": [
+        "ph-wb-balayan-bay"
+      ],
+      "evidenceType": "official-fisheries-poster-metadata",
+      "repositoryUrl": "https://repository.nfrdi.da.gov.ph/items/43c33cc3-7826-4068-8e12-ede31d616d37",
+      "studyPeriod": "2018-2022",
+      "sourceAbstractFacts": {
+        "titleClaimsTopSpecies": 10,
+        "taxaListedInAbstract": 9,
+        "posterFileSizeListed": "51.49 MB"
+      },
+      "accessReview": "Official NFRDI repository metadata reviewed. The 51.49-MB poster image was not downloaded or visually inspected.",
+      "reuseReview": "No poster-image or derived-data reuse terms verified. Do not copy the image or assume its species and size table is reusable.",
+      "decision": "hold-poster-and-underlying-table-rights-review",
+      "admittedAssertions": 0,
+      "limits": [
+        "The repository abstract lists nine taxa although the item title says Top 10; the missing tenth is unknown.",
+        "The item concerns Balayan/Calatagan Bay, not all Batangas waters or CALABARZON.",
+        "Maximum size and common/local names require direct poster review and identity checks before any use."
+      ]
+    },
+    {
+      "sourceId": "nfrdi-fy2023-taal-pansipit-stock-assessment",
+      "waterbodyIds": [
+        "ph-wb-taal-lake",
+        "ph-wb-pansipit-river"
+      ],
+      "evidenceType": "official-annual-report-stock-assessment-summary",
+      "repositoryUrl": "https://repository.nfrdi.da.gov.ph/server/api/core/bitstreams/3f88f5b7-4c87-47bb-999e-6564bbb1b255/content",
+      "reportPeriod": "FY 2023",
+      "sourceSummaryFacts": {
+        "pansipitLandingCenters": 5,
+        "pansipitCatchSurveyWindow": "2023-02 to 2023-09",
+        "pansipitLandedCatchKg": 1419.33,
+        "mixedTaxaReported": 38,
+        "finfishReported": 32,
+        "otherGroups": [
+          "molluscs",
+          "crustaceans"
+        ]
+      },
+      "accessReview": "Official NFRDI FY2023 annual-report search-index text was reviewed, including its Pansipit summary. Opening the repository's bitstream view returned a login page; no full report or underlying species table was acquired.",
+      "reuseReview": "No explicit reuse license for the report or underlying catch data was verified. The summary is a source lead only; no species rows are extracted.",
+      "decision": "hold-species-list-pending-report-access-and-data-rights",
+      "admittedAssertions": 0,
+      "limits": [
+        "Landing-center catch composition is not a complete river inventory or abundance estimate for the whole river.",
+        "The 38 total includes non-finfish groups; it is not 38 fish species.",
+        "No station-specific salinity or brackish classification is provided in the reviewed summary."
+      ]
+    },
+    {
+      "sourceId": "nfrdi-llda-2025-laguna-assessment",
+      "waterbodyIds": [
+        "ph-wb-laguna-de-bay"
+      ],
+      "evidenceType": "ongoing-fisheries-assessment-announcement",
+      "announcementUrl": "https://nfrdi.da.gov.ph/2025/06/18/nfrdi-llda-partner-to-assess-laguna-de-bay-fisheries/",
+      "repositoryUrl": "https://repository.nfrdi.da.gov.ph/items/4f7ee7f4-9313-430e-a920-d399a8e1e122",
+      "announcementDate": "2025-06-18",
+      "sourceSummaryFacts": {
+        "assessmentDataPublishedInAnnouncement": false
+      },
+      "accessReview": "Official NFRDI announcement and repository metadata describe the NFRDI-LLDA assessment partnership; no assessment results were supplied in the announcement.",
+      "reuseReview": "No fish data are present to reuse or admit. Re-check the official repository when the assessment outputs are released.",
+      "decision": "monitor-for-official-assessment-release",
+      "admittedAssertions": 0,
+      "limits": [
+        "A planned assessment is not a species occurrence source.",
+        "Do not substitute older lake checklists or fisheries summaries for the new assessment's unpublished results."
+      ]
+    }
+  ],
+  "regionalGapSummary": {
+    "freshwater": "Tayabas River is a strong historical study lead, but the original species table and article-specific reuse terms remain unverified. Laguna de Bay's NFRDI-LLDA assessment is a future source opportunity, not current data.",
+    "marine": "The full NFRDI Manila Bay trawl paper is acquired and reviewed, including a historic Cavite-group table summary; item-specific reuse rights and station georeferencing remain open, so zero species assertions are admitted. Balayan/Calatagan remains a metadata/poster lead.",
+    "brackishEstuarine": "The five existing held leads still yield zero admitted assertions. No new source in this sweep verifies fish identities joined to measured station salinity under reusable terms.",
+    "smallLakesWetlandsReservoirs": "A historical survey source now covers all seven named San Pablo crater lakes, but item-specific reuse rights block per-lake species rows. Other small lakes, wetlands and reservoirs remain source and coverage gaps.",
+    "regionalBaselineComplete": false
+  },
+  "nextActions": [
+    "Continue with sources whose full table and item-specific reuse terms can be checked without login or access-control bypass; do not wait for NAMRIA or other email replies.",
+    "Prioritize the original Tayabas River article/table and NFRDI Pansipit report for access and rights review; preserve their historical, reach/landing-center scopes.",
+    "Seek item-specific permission for the 2017 Manila Bay table and a source-ready station dataset/map; do not turn the Cavite-group summary into current presence or a municipal-water boundary.",
+    "Check the Balayan/Calatagan poster's tenth taxon and item-specific terms only if direct access becomes available; do not republish its image.",
+    "Seek item-specific rights clarification or an eligible alternative dataset for the seven San Pablo lakes; continue named small-lake, wetland and reservoir sources beyond that study.",
+    "Publish an L1 coverage-and-gap report before advancing to NCR; zero admissions here does not mean the waterbodies lack fish."
+  ],
+  "nonClaims": [
+    "No species assertions from these five leads were admitted into the app.",
+    "No blanket Creative Commons or public-domain status was inferred for journal tables, NFRDI reports or poster imagery.",
+    "No brackish classification, boundary, current presence, abundance, catchability, legal access or safety advice was added.",
+    "No email or data request was sent, and no login, payment or access-control bypass was used."
+  ]
+}
