@@ -77,23 +77,23 @@ export function PalicoRiverSurveyEvidence() {
                   </i>
                   <ChevronDown aria-hidden="true" size={18} className="shrink-0 group-open:rotate-180" />
                 </summary>
-                <div className="flex flex-wrap gap-2 pb-2" aria-label={copy.studySitesLabel}>
+                <ul className="flex flex-wrap gap-2 pb-2" aria-label={copy.studySitesLabel}>
                   {record.sitePresence.site1 && (
-                    <span className="rounded-full bg-teal-soft px-2.5 py-1 text-xs font-semibold text-teal">
+                    <li className="rounded-full bg-teal-soft px-2.5 py-1 text-xs font-semibold text-teal">
                       {copy.site1}
-                    </span>
+                    </li>
                   )}
                   {record.sitePresence.site2 && (
-                    <span className="rounded-full bg-teal-soft px-2.5 py-1 text-xs font-semibold text-teal">
+                    <li className="rounded-full bg-teal-soft px-2.5 py-1 text-xs font-semibold text-teal">
                       {copy.site2}
-                    </span>
+                    </li>
                   )}
                   {record.sitePresence.site3 && (
-                    <span className="rounded-full bg-teal-soft px-2.5 py-1 text-xs font-semibold text-teal">
+                    <li className="rounded-full bg-teal-soft px-2.5 py-1 text-xs font-semibold text-teal">
                       {copy.site3}
-                    </span>
+                    </li>
                   )}
-                </div>
+                </ul>
                 <dl className="grid gap-y-3 py-2 text-sm leading-relaxed sm:grid-cols-[180px_minmax(0,1fr)] sm:gap-x-5">
                   <div className="contents">
                     <dt className="font-semibold text-ink">{copy.recordedAs}</dt>
