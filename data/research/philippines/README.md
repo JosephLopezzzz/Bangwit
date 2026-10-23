@@ -289,4 +289,12 @@ The official Research Staff page lists `vipcorals@g.batstate-u.edu.ph` and `(043
 
 I queried the [public GBIF Occurrence API](https://api.gbif.org/v1/occurrence/search) with country `PH`, fish class key 204 (`Actinopterygii`), and four locality strings: `Verde Island`, `Isla Verde`, `Verde Island Passage`, and `Verde Island, Batangas`. Each returned zero records. The request URLs, response hashes and ignored raw responses are recorded in `calabarzon-vipcorals-verde-island-source-review-20261024.json`.
 
-This is a bounded exact-text check, not evidence that fish are absent; records may use other locality wording or have no locality string. No GBIF data rows or species assertions were admitted. OBIS spatial filtering is deferred until a validated area geometry or OBIS area identifier is available; no boundary was inferred from the island name.
+This is a bounded exact-text check, not evidence that fish are absent; records may use other locality wording or have no locality string. No GBIF data rows or species assertions were admitted. The OBIS area lookup found no Verde Island area. It found only a broad national Philippines area, which is not a substitute for local geometry; no boundary was inferred from the island name.
+
+## OBIS Philippines-area discovery -- 24 October 2026
+
+The [OBIS API area list](https://api.obis.org/v3/area) returned 799 areas. It contained a country-level `Philippines` area (ID `191`) but no area named Verde Island, Isla Verde or Verde Island Passage. The area detail response exposes only the ID, name and type, so it does not independently verify a Verde Island footprint.
+
+Count-only queries for area `191` returned 380,993 occurrence records overall and 128,352 records for Actinopterygii (ray-finned fishes). These are national-area occurrence records, not unique fish species or local current-presence evidence. The OBIS access guide describes its integrated holdings as marine biodiversity data, so this cannot replace inland freshwater sources.
+
+A national Actinopterygii checklist response reported `total: 4502` but returned 4,786 rows, so the counts do not reconcile. No checklist richness number is adopted, and the locally retained checklist rows remain in ignored research storage. Dataset-level licenses, record-level taxonomy, dates and exact waterbody scope have not been reviewed; no species assertions or app projection were admitted. See `calabarzon-obis-philippines-area-review-20261024.json` and the source sweep.

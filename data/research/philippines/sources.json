@@ -3,7 +3,7 @@
   "checkedOn": "2026-10-24",
   "status": "research-only-source-registry",
   "scope": "National acquisition references and CALABARZON identity/source leads. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 58,
+  "sourceCount": 59,
   "sources": [
     {
       "id": "gbif-col-xr-taxonomy-matching",
@@ -1469,6 +1469,36 @@
       "publicationApproval": false,
       "researchStatus": "bounded-zero-result-exact-locality-check; not-an-absence-claim; no-species-assertions-admitted",
       "sourceYear": null
+    },
+    {
+      "id": "obis-philippines-area-actinopterygii-discovery",
+      "title": "OBIS API Philippines-area occurrence and checklist discovery",
+      "provider": "Ocean Biodiversity Information System",
+      "url": "https://api.obis.org/",
+      "additionalUrls": [
+        "https://manual.obis.org/access",
+        "https://obis.org/data/access/",
+        "https://api.obis.org/v3/area/191",
+        "https://api.obis.org/v3/occurrence?areaid=191&taxonid=10194&size=0"
+      ],
+      "role": "National-scale open marine biodiversity discovery lead; the registered Philippines area is not a substitute for a Cavite or Verde Island boundary and does not provide a complete inland freshwater inventory.",
+      "checkedOn": "2026-10-24",
+      "access": {
+        "status": "public-area-lookup-and-national-count-query-reviewed-local-verde-area-not-found",
+        "reviewFiles": [
+          "calabarzon-obis-philippines-area-review-20261024.json"
+        ],
+        "rawPath": "raw/obis-verde-area-lookup-20261024/"
+      },
+      "reuse": {
+        "metadata": "OBIS API and official data-access guidance reviewed.",
+        "raw": "Area, taxonomy, count-only occurrence responses and a national taxon checklist response are retained in ignored local research storage with SHA-256 hashes.",
+        "content": "No occurrence rows are admitted. Before using any taxa or occurrences, inspect contributing dataset-level licenses, taxonomy, record dates, quality fields and precise waterbody scope."
+      },
+      "publicationApproval": false,
+      "researchStatus": "national-area-discovery-only;checklist-count-unreconciled;no-local-verde-area;no-species-assertions-admitted",
+      "sourceYear": null,
+      "license": null
     }
   ],
   "sourcePolicy": {

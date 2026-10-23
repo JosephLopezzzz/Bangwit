@@ -62,4 +62,12 @@ test("VIP CORALS Verde Island remains a metadata/access lead, not a species inve
   assert.equal(gbifFollowUp.searches.length, 4);
   assert.equal(gbifFollowUp.totalReturnedRecords, 0);
   assert.match(gbifFollowUp.decision, /not-an-absence-claim/);
+
+  const obisFollowUp = sweep.additionalOpenDataFollowUps.find(
+    (item) => item.reviewFile === "calabarzon-obis-philippines-area-review-20261024.json",
+  );
+  assert.ok(obisFollowUp);
+  assert.equal(obisFollowUp.areaId, "191");
+  assert.equal(obisFollowUp.actinopterygiiOccurrenceRecords, 128352);
+  assert.match(obisFollowUp.decision, /checklist-count-unreconciled/);
 });

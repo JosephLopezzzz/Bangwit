@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-24",
+  "regionId": "0400000000",
+  "status": "national-area-open-data-discovery-only-no-local-verde-area",
+  "provider": "Ocean Biodiversity Information System (OBIS)",
+  "api": {
+    "openApi": "https://api.obis.org/",
+    "accessGuide": "https://manual.obis.org/access",
+    "accessOverview": "https://obis.org/data/access/",
+    "rawResponseDirectory": "raw/obis-verde-area-lookup-20261024/"
+  },
+  "areaLookup": {
+    "endpoint": "https://api.obis.org/v3/area",
+    "totalAreasReturned": 799,
+    "responseBytes": 48223,
+    "responseSha256": "bb97d2654cd33eac28032a9de31703c6272844c1d29f05c8b7035697321aba19",
+    "targetNameMatches": [],
+    "nearbyNationalArea": {
+      "id": "191",
+      "name": "Philippines",
+      "type": "obis",
+      "detailEndpoint": "https://api.obis.org/v3/area/191",
+      "detailSha256": "2ece2cd832206937f1abae8cfabbaec455bd0ae516740f63f46d27cc0282b622",
+      "detailResponseFields": ["id", "name", "type"]
+    },
+    "decision": "No OBIS area named Verde Island, Isla Verde, or Verde Island Passage was found. The Philippines country-level area is too broad to stand in for a local waterbody or municipal-water boundary."
+  },
+  "nationalAreaCounts": {
+    "areaId": "191",
+    "allOccurrenceRecords": {
+      "endpoint": "https://api.obis.org/v3/occurrence?areaid=191&size=0",
+      "count": 380993,
+      "responseBytes": 29,
+      "responseSha256": "2cec6dfceec89806a0500c20c6f3b72ff7586bb3e357095b1399aaee055520a0"
+    },
+    "rayFinnedFishTaxon": {
+      "endpoint": "https://api.obis.org/v3/taxon/Actinopterygii",
+      "scientificName": "Actinopterygii",
+      "taxonId": 10194,
+      "vernacularName": "ray-finned fishes",
+      "responseBytes": 509,
+      "responseSha256": "02ff923ef7a55c1bb08d7be46b9ad799523e3cc1949f1dd7c180a073757d66a8"
+    },
+    "rayFinnedFishOccurrenceRecords": {
+      "endpoint": "https://api.obis.org/v3/occurrence?areaid=191&taxonid=10194&size=0",
+      "count": 128352,
+      "responseBytes": 29,
+      "responseSha256": "e3682a9755f7c961f3177ca47920410ae0c3cce4134b2549e7f5993c79b066c7"
+    },
+    "interpretation": "These are occurrence-record counts for an OBIS country-level area, not counts of unique, current, locally present fish species. Actinopterygii is ray-finned fish, not every fish group."
+  },
+  "checklistDiagnostic": {
+    "endpoint": "https://api.obis.org/v3/checklist?areaid=191&taxonid=10194&size=5000",
+    "responseBytes": 3716629,
+    "responseSha256": "2f89af98463a85d6248bc4aadc656c8d78d47b28ec0c32f5d6529314931b9063",
+    "reportedTotal": 4502,
+    "rowsReturned": 4786,
+    "speciesRankRowsReturned": 3936,
+    "acceptedSpeciesRankRowsReturned": 3932,
+    "decision": "The response total and returned-row count do not reconcile. Do not use these values as a species-richness count; do not import or publish the returned taxon rows."
+  },
+  "rightsAndScope": {
+    "occurrenceRowsDownloaded": false,
+    "checklistRowsRetainedOnlyInIgnoredLocalResearchStorage": true,
+    "datasetLevelLicensesReviewed": false,
+    "speciesAssertionsAdmitted": 0,
+    "publicProjection": false,
+    "decision": "Use OBIS as a future discovery and cross-check source only. Before using occurrence rows, review their contributing datasets, licenses, taxonomic identity, record dates, quality flags, and exact waterbody scope."
+  },
+  "limits": [
+    "The available Philippines area is national in scope and is not evidence for Cavite or Verde Island specifically.",
+    "The area detail response exposes only its identifier, name and type; this review did not verify a local boundary geometry from OBIS.",
+    "OBIS describes its integrated holdings as marine biodiversity data; it is not a complete inland freshwater inventory.",
+    "Occurrence totals are not unique species totals and do not establish current abundance, catchability, diet, fishing permission, legality or safety.",
+    "No absence inference or application species assertion is made."
+  ]
+}

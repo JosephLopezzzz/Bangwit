@@ -50,14 +50,14 @@ test("Pansipit source alternatives retain historical scope and rights limits wit
   assert.equal(corpuz2016.repositoryMetadataFacts.pansipitSpeciesRichnessInAbstract, 36);
   assert.match(corpuz2016.observedAccessResult, /HTTP 403/);
 
-  assert.equal(sourceRegistry.sourceCount, 58);
+  assert.equal(sourceRegistry.sourceCount, 59);
   const source = sourceRegistry.sources.find((row) => row.id === primary.sourceId);
   assert.ok(source);
   assert.equal(source.publicationApproval, false);
   assert.equal(source.access.rawPdfSha256, primary.rawPdfSha256);
   assert.equal(source.researchStatus, "historical-aggregate-only-no-list;rights-scope-unresolved");
 
-  assert.equal(sweep.sourceRegistryCountAfterFollowUp, 58);
+  assert.equal(sweep.sourceRegistryCountAfterFollowUp, 59);
   const followUp = sweep.additionalPrimarySourceFollowUps.find((row) => row.sourceId === primary.sourceId);
   assert.ok(followUp);
   assert.equal(followUp.admittedSpeciesAssertions, 0);
