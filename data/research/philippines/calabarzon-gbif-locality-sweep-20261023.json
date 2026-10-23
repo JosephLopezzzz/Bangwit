@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "batchId": "calabarzon-gbif-locality-sweep-20261023",
+  "checkedOn": "2026-10-23",
+  "regionId": "0400000000",
+  "provider": "GBIF public occurrence search API",
+  "sourceId": "gbif-occurrence-downloads",
+  "apiBaseUrl": "https://api.gbif.org/v1/occurrence/search",
+  "queryParameters": {
+    "country": "PH",
+    "locality": "one named waterbody string per request",
+    "limit": 100
+  },
+  "searches": [
+    {
+      "waterbodyId": "ph-wb-maragondon-river",
+      "waterbodyName": "Maragondon River",
+      "locality": "Maragondon River",
+      "apiUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Maragondon+River&limit=100",
+      "checkedAt": "2026-10-23T15:19:08Z",
+      "recordCount": 0,
+      "enumeratedCount": 0
+    },
+    {
+      "waterbodyId": "ph-wb-tanay-rizal-river",
+      "waterbodyName": "Tanay River",
+      "locality": "Tanay River",
+      "apiUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Tanay+River&limit=100",
+      "checkedAt": "2026-10-23T15:19:09Z",
+      "recordCount": 0,
+      "enumeratedCount": 0
+    },
+    {
+      "waterbodyId": "ph-wb-dumacaa-lucena-river",
+      "waterbodyName": "Dumacaa River",
+      "locality": "Dumacaa River",
+      "apiUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Dumacaa+River&limit=100",
+      "checkedAt": "2026-10-23T15:19:10Z",
+      "recordCount": 0,
+      "enumeratedCount": 0
+    },
+    {
+      "waterbodyId": "ph-wb-lagadlarin-mangrove-wetland",
+      "waterbodyName": "Lagadlarin Mangrove Forest",
+      "locality": "Lagadlarin Mangrove Forest",
+      "apiUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Lagadlarin+Mangrove+Forest&limit=100",
+      "checkedAt": "2026-10-23T15:19:10Z",
+      "recordCount": 0,
+      "enumeratedCount": 0
+    },
+    {
+      "waterbodyId": "ph-wb-ticub-quezon-lake",
+      "waterbodyName": "Ticub Lake",
+      "locality": "Ticub Lake",
+      "apiUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Ticub+Lake&limit=100",
+      "checkedAt": "2026-10-23T15:19:10Z",
+      "recordCount": 0,
+      "enumeratedCount": 0
+    }
+  ],
+  "decision": "bounded-exact-locality-string-check; no-species-assertions-admitted",
+  "admittedSpeciesAssertions": 0,
+  "nonClaims": [
+    "Zero results for these five query strings do not establish fish absence from any river, lake or wetland.",
+    "No aliases, coordinates, polygons, spelling variants, other datasets or non-GBIF sources were searched in this batch.",
+    "No catchability, current presence, abundance, salinity, boundary, access, safety or legal claim is made.",
+    "No species assertion is admitted to a public projection."
+  ],
+  "nextActions": [
+    "Search eligible source alternatives and known spelling/alias variants for these waterbodies.",
+    "Keep zero-result localities visible as coverage gaps and continue the L1 waterbody sweep."
+  ]
+}

@@ -321,13 +321,37 @@
         "The four Caliraya records share one unvalidated coordinate and are not mapped.",
         "Zero exact locality results do not establish fish absence, and the checks omit spelling variants and coordinate-only records."
       ]
+    },
+    {
+      "provider": "GBIF public occurrence API",
+      "reviewFile": "calabarzon-gbif-locality-sweep-20261023.json",
+      "checkedOn": "2026-10-23",
+      "waterbodyIds": [
+        "ph-wb-maragondon-river",
+        "ph-wb-tanay-rizal-river",
+        "ph-wb-dumacaa-lucena-river",
+        "ph-wb-lagadlarin-mangrove-wetland",
+        "ph-wb-ticub-quezon-lake"
+      ],
+      "localityResults": [
+        { "locality": "Maragondon River", "records": 0 },
+        { "locality": "Tanay River", "records": 0 },
+        { "locality": "Dumacaa River", "records": 0 },
+        { "locality": "Lagadlarin Mangrove Forest", "records": 0 },
+        { "locality": "Ticub Lake", "records": 0 }
+      ],
+      "decision": "bounded-exact-locality-string-check; no-absence-inferred",
+      "limits": [
+        "Only the five listed GBIF locality strings with country=PH were queried; no aliases, coordinate filters, polygons or alternate providers were searched.",
+        "Zero result counts do not establish fish absence or complete waterbody coverage."
+      ]
     }
   ],
   "regionalGapSummary": {
     "freshwater": "The four 1933 Pansipit River GBIF specimens support historical locality evidence only. Tayabas River remains a strong historical study lead, but the original species table and article-specific reuse terms remain unverified. Laguna de Bay's NFRDI-LLDA assessment is a future source opportunity, not current data.",
     "marine": "The full NFRDI Manila Bay trawl paper is acquired and reviewed, including a historic Cavite-group table summary; item-specific reuse rights and station georeferencing remain open, so zero species assertions are admitted. Balayan/Calatagan remains a metadata/poster lead.",
     "brackishEstuarine": "The five existing held leads still yield zero admitted assertions. No new source in this sweep verifies fish identities joined to measured station salinity under reusable terms.",
-    "smallLakesWetlandsReservoirs": "A historical survey source now covers all seven named San Pablo crater lakes, but item-specific reuse rights block per-lake species rows. A 2022 conference abstract reports a Caliraya/Lumot fish survey, but the complete species table, field dates and item-specific reuse terms remain unverified. The bounded Caliraya/Lumot GBIF check found four copepod specimens at Caliraya and no fish record in that result; the Lumot exact-name searches returned zero. Reservoir coverage remains open.",
+    "smallLakesWetlandsReservoirs": "A historical survey source now covers all seven named San Pablo crater lakes, but item-specific reuse rights block per-lake species rows. A 2022 conference abstract reports a Caliraya/Lumot fish survey, but the complete species table, field dates and item-specific reuse terms remain unverified. The bounded Caliraya/Lumot GBIF check found four copepod specimens at Caliraya and no fish record in that result; the Lumot exact-name searches returned zero. The additional Ticub Lake GBIF string query returned zero. Reservoir coverage remains open.",
     "regionalBaselineComplete": false
   },
   "nextActions": [
@@ -337,6 +361,7 @@
     "Check the Balayan/Calatagan poster's tenth taxon and item-specific terms only if direct access becomes available; do not republish its image.",
     "Seek item-specific rights clarification or an eligible alternative dataset for the seven San Pablo lakes; continue named small-lake, wetland and reservoir sources beyond that study.",
     "For the 2022 Caliraya/Lumot conference abstract, seek the full species table and item-specific reuse terms before admitting any study-derived claim.",
+    "Follow up the five zero-result GBIF locality strings with documented aliases or eligible coordinate/locality sources; keep all zeroes as gaps rather than absence claims.",
     "Publish an L1 coverage-and-gap report before advancing to NCR; zero admissions here does not mean the waterbodies lack fish."
   ],
   "nonClaims": [

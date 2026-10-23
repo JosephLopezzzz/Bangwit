@@ -435,3 +435,9 @@ Next L1 work is a wider, bounded freshwater and coastal search across the remain
 - **Rights and admission:** the issue front matter says “All rights reserved.” No item-specific reuse permission was verified. `caliraya-lumot-aabe-source-review.json` records the abstract facts as held research notes; no species assertion or aggregate abundance claim is admitted to the app, and no prose/table/image is reproduced.
 - **Scope:** the source is linked to both reservoir leads in `calabarzon-scope.json`. Its reported richness is not a complete or current inventory. It does not change the separate bounded GBIF result or establish fish absence, exact geometry, current abundance, catchability, legality or safety.
 - **Next:** obtain the complete species table and exact field-period details, then verify item-specific reuse terms. If either remains unavailable, keep the claims held and continue with eligible sources.
+
+## 26. Five additional CALABARZON GBIF locality checks -- 23 October 2026
+
+- **Bounded searches:** public GBIF occurrence searches with `country=PH`, each named `locality` string and `limit=100` returned zero for Maragondon River, Tanay River, Dumacaa River, Lagadlarin Mangrove Forest and Ticub Lake. The request URLs and timestamps are retained in `calabarzon-gbif-locality-sweep-20261023.json`.
+- **Scope update:** the five waterbody leads now record these bounded source checks. The exact-string zeroes do not establish fish absence; aliases, coordinates/polygons and alternate providers remain unchecked. No species assertions, geometries, salinity or fishing claims were added.
+- **Next:** check documented aliases and accessible local survey alternatives, then include these unresolved leads in the CALABARZON coverage-and-gap report.
