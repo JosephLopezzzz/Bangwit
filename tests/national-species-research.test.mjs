@@ -19,7 +19,9 @@ test("cross-file research inventory preserves rollout order, unknown regional co
   assert.equal(status.scopedChecklistLeadsReviewed, 7);
   assert.equal(status.preparedChecklistAssertions, 4);
   assert.equal(status.scopedChecklistHolds, 3);
-  assert.equal(status.sourcesRegistered, 28);
+  assert.equal(status.sourcesRegistered, 36);
+  assert.equal(status.makilingGbifAssertionsPrepared, 1);
+  assert.equal(status.makilingGbifOccurrenceRecords, 3);
   assert.equal(status.pendingRiverCandidates, 15);
   assert.equal(status.independentRiverIdentityChecks, 5);
   assert.equal(status.brackishSourceLeadsReviewed, 5);
@@ -105,7 +107,10 @@ test("scope references must resolve to the pinned administrative and source regi
       input.scope.counts.publicRecordsAdmitted = 1;
     },
     (input) => {
-      input.scope.counts.speciesAssertionsImported = 1;
+      input.scope.counts.speciesAssertionsImported = 2;
+    },
+    (input) => {
+      input.makilingGbifProjection.counts.speciesAssertions = 0;
     },
     (input) => {
       input.scope.administrativeScope.provinces.pop();

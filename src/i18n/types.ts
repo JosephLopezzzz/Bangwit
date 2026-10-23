@@ -305,6 +305,32 @@ export type Dictionary = {
     taxonomyIndexLabel: string;
     opensTab: string;
   };
+  makilingGbifEvidence: {
+    title: string;
+    description: string;
+    scope: string;
+    limits: string;
+    localityLabel: string;
+    collectionDateLabel: string;
+    collectionDateUnknown: string;
+    recordCountLabel: string;
+    recordCountValue: string;
+    recordLicenseLabel: string;
+    qualityFlags: string;
+    sourceDetails: string;
+    reviewedOnLabel: string;
+    scopeMethodNote: string;
+    gbifRecordLabel: string;
+    catalogNumberLabel: string;
+    qualityCodeLabel: string;
+    datasetCitationLabel: string;
+    taxonomyLabel: string;
+    gbifTaxonLink: string;
+    independentTaxonomyLink: string;
+    rightsLabel: string;
+    rightsNote: string;
+    opensTab: string;
+  };
   palicoRiverEvidence: {
     title: string;
     description: string;

@@ -343,6 +343,36 @@ export const enDictionary: Dictionary = {
     taxonomyIndexLabel: "Taxonomy reference",
     opensTab: "(opens in a new tab)",
   },
+  makilingGbifEvidence: {
+    title: "Molawin Creek · museum specimen records",
+    description:
+      "One historical species-locality assertion is supported by three preserved-specimen records across two GBIF datasets.",
+    scope: "Molawin Creek · Laguna · CALABARZON. The locality is linked by text only; no map point or stream geometry is supplied.",
+    limits:
+      "These records do not include a collection date or coordinates. They do not establish current presence, abundance, a complete creek inventory, fishing permission, safety, diet, or bait effectiveness. Three GBIF rows are not three individuals or confirmed separate collecting events.",
+    localityLabel: "GBIF locality",
+    collectionDateLabel: "Collection date",
+    collectionDateUnknown: "Not provided. The 1933 text in two catalog numbers is not treated as a collection date.",
+    recordCountLabel: "Evidence records",
+    recordCountValue: "Three preserved-specimen records from two datasets; not an individual count.",
+    recordLicenseLabel: "Record license",
+    qualityFlags:
+      "GBIF flags are retained: both NHMUK rows have institution/collection matching flags; the CAS row has continent-field and inferred occurrence-status flags. See the source details for the original codes.",
+    sourceDetails: "Sources, taxonomy, rights and review",
+    reviewedOnLabel: "Checked",
+    scopeMethodNote: "Waterbody assignment uses the locality text only; no coordinate or mapped point is available.",
+    gbifRecordLabel: "GBIF occurrence",
+    catalogNumberLabel: "Catalog number",
+    qualityCodeLabel: "GBIF quality flags",
+    datasetCitationLabel: "Dataset citation:",
+    taxonomyLabel: "Taxonomy",
+    gbifTaxonLink: "GBIF name record",
+    independentTaxonomyLink: "Catalogue of Fishes",
+    rightsLabel: "Selected-record rights",
+    rightsNote:
+      "GBIF marks these selected records and their datasets CC0 1.0. This does not grant rights to other articles or source materials.",
+    opensTab: "(opens in a new tab)",
+  },
   palicoRiverEvidence: {
     title: "Palico–Lian River · 2025 survey table",
     description:

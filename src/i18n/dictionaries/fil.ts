@@ -347,6 +347,36 @@ export const filDictionary: Dictionary = {
     taxonomyIndexLabel: "Sanggunian ng taxonomy",
     opensTab: "(magbubukas sa bagong tab)",
   },
+  makilingGbifEvidence: {
+    title: "Molawin Creek · mga tala ng specimen sa museo",
+    description:
+      "Isang historical na species-locality assertion ang sinusuportahan ng tatlong preserved-specimen record mula sa dalawang GBIF dataset.",
+    scope: "Molawin Creek · Laguna · CALABARZON. Batay lamang ito sa locality text; walang map point o geometry ng sapa.",
+    limits:
+      "Walang collection date o coordinates ang mga record. Hindi nito pinatutunayan ang kasalukuyang presensya, dami, kumpletong listahan ng sapa, pahintulot mangisda, kaligtasan, diet o bisa ng pain. Hindi katumbas ng tatlong GBIF row ang tatlong isda o magkakahiwalay na collection event.",
+    localityLabel: "Locality sa GBIF",
+    collectionDateLabel: "Petsa ng pagkolekta",
+    collectionDateUnknown: "Hindi ibinigay. Hindi itinuring na collection date ang tekstong 1933 sa dalawang catalog number.",
+    recordCountLabel: "Mga evidence record",
+    recordCountValue: "Tatlong preserved-specimen record mula sa dalawang dataset; hindi bilang ng isda.",
+    recordLicenseLabel: "Lisensya ng record",
+    qualityFlags:
+      "Napanatili ang mga GBIF flag: may institution/collection matching flag ang dalawang NHMUK row; may continent-field at inferred occurrence-status flag ang CAS row. Tingnan sa source details ang orihinal na code.",
+    sourceDetails: "Mga source, taxonomy, karapatan at review",
+    reviewedOnLabel: "Sinuri",
+    scopeMethodNote: "Locality text lang ang batayan ng pag-ugnay sa sapa; walang coordinate o puntong mailalagay sa mapa.",
+    gbifRecordLabel: "GBIF occurrence",
+    catalogNumberLabel: "Catalog number",
+    qualityCodeLabel: "Mga GBIF quality flag",
+    datasetCitationLabel: "Citation ng dataset:",
+    taxonomyLabel: "Taxonomy",
+    gbifTaxonLink: "Pangalan sa GBIF",
+    independentTaxonomyLink: "Catalogue of Fishes",
+    rightsLabel: "Karapatan sa napiling records",
+    rightsNote:
+      "CC0 1.0 ang nakasaad sa GBIF para sa napiling records at mga dataset nito. Hindi nito saklaw ang ibang artikulo o materyal ng source.",
+    opensTab: "(magbubukas sa bagong tab)",
+  },
   palicoRiverEvidence: {
     title: "Ilog Palico–Lian · talahanayan ng survey noong 2025",
     description:

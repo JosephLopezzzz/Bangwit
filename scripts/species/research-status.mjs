@@ -7,6 +7,7 @@ import { validateAdministrativeRegistry } from "./build-administrative-registry.
 import { CHECKLIST_KEY, queryFor } from "./match-freshwater-taxonomy.mjs";
 import { buildTaalChecklistEvidence } from "./build-taal-checklist-evidence.mjs";
 import { buildPalicoRiverEvidence, readPalicoRiverInputs } from "./build-palico-river-evidence.mjs";
+import { buildMakilingGbifEvidence } from "./build-makiling-gbif-evidence.mjs";
 import { readFieldSourceReviews, validateFieldSourceReviews } from "./check-field-source-reviews.mjs";
 
 const root = new URL("../../", import.meta.url);
@@ -37,6 +38,8 @@ export function buildResearchStatus({
   fieldSources,
   palicoRiverInputs,
   palicoRiverProjection,
+  makilingGbifReview,
+  makilingGbifProjection,
   inputHashes,
 }) {
   validateAdministrativeRegistry(registry);
@@ -48,6 +51,12 @@ export function buildResearchStatus({
     expectedPalicoProjection,
     "Palico public assertion projection differs from its scoped review ledger",
   );
+  const expectedMakilingProjection = buildMakilingGbifEvidence(makilingGbifReview, inputHashes.makilingGbifReview);
+  assert.deepEqual(
+    makilingGbifProjection,
+    expectedMakilingProjection,
+    "Makiling GBIF projection differs from its scoped source review",
+  );
   const regionIds = new Set(registry.regions.map((region) => region.id));
   const unitIds = new Set(registry.administrativeUnits.map((unit) => unit.code));
   const units = new Map(registry.administrativeUnits.map((unit) => [unit.code, unit]));
@@ -56,7 +65,11 @@ export function buildResearchStatus({
   assert.ok(sourceIds.has(freshwater.source.id), "Checklist source is absent from the source registry");
   assert.equal(scope.publicAdmission, false, "This scope has no public admission approval");
   assert.equal(scope.counts.publicRecordsAdmitted, 0, "This scope has no admitted public records");
-  assert.equal(scope.counts.speciesAssertionsImported, 0, "This scope contains identity leads, not species assertions");
+  assert.equal(
+    scope.counts.speciesAssertionsImported,
+    expectedMakilingProjection.counts.speciesAssertions,
+    "Scoped species assertion count must match the reviewed Makiling projection",
+  );
   assert.equal(scope.counts.waterbodyResearchLeads, scope.waterbodies.length, "Waterbody lead count mismatch");
   const waterbodyIds = unique(scope.waterbodies, "id", "waterbody ID");
   for (const [key, level] of [
@@ -70,6 +83,16 @@ export function buildResearchStatus({
       assert.equal(units.get(unit.id).regionId, scope.regionId, `Scoped ${level} is in another region`);
       for (const id of unit.sourceRefs) assert.ok(sourceIds.has(id), `Unknown administrative source: ${id}`);
     }
+  }
+  const makilingWaterbody = scope.waterbodies.find((waterbody) => waterbody.id === "ph-wb-molawin-makiling-creek");
+  assert.ok(makilingWaterbody, "Makiling assertion waterbody is absent from the CALABARZON scope");
+  assert.equal(makilingWaterbody.publicAdmission, false, "A text-locality assertion cannot admit a mapped waterbody");
+  assert.ok(makilingWaterbody.evidenceBatchRefs.includes(expectedMakilingProjection.batchId));
+  for (const source of expectedMakilingProjection.sources) {
+    assert.ok(sourceIds.has(source.id), `Makiling dataset source is absent from the source registry: ${source.id}`);
+  }
+  for (const record of expectedMakilingProjection.assertions.flatMap((assertion) => assertion.records)) {
+    assert.ok(sourceIds.has(record.datasetId), `Makiling occurrence dataset is not registered: ${record.datasetId}`);
   }
   assert.deepEqual(
     scope.administrativeScope.provinces.map((unit) => unit.id).sort(),
@@ -257,11 +280,13 @@ export function buildResearchStatus({
       rolloutKey: region.rolloutKey,
       administrativeCoverageUnits: registry.administrativeUnits.filter((unit) => unit.regionId === region.id).length,
       scopedWaterbodyResearchLeads: region.id === scope.regionId ? scope.waterbodies.length : 0,
-      workStatus: region.id === scope.regionId ? "scoped-checklist-and-river-assertions-prepared" : "queued",
+      workStatus: region.id === scope.regionId ? "scoped-checklist-river-and-historical-locality-evidence-prepared" : "queued",
       baselineReviewed: false,
       reviewedRegionalSpeciesCount: null,
       coverageStatus:
-        region.id === scope.regionId ? "partial-cavite-history-taal-and-palico-river" : "regional-review-pending",
+        region.id === scope.regionId
+          ? "partial-cavite-history-taal-palico-river-and-makiling-creek"
+          : "regional-review-pending",
     }));
   return {
     schemaVersion: 1,
@@ -287,6 +312,8 @@ export function buildResearchStatus({
     palicoRiverSourceRowsReviewed: expectedPalicoProjection.counts.sourceRows,
     palicoRiverAssertionsPrepared: expectedPalicoProjection.counts.admittedAssertions,
     palicoRiverRowsHeld: expectedPalicoProjection.counts.heldRows,
+    makilingGbifAssertionsPrepared: expectedMakilingProjection.counts.speciesAssertions,
+    makilingGbifOccurrenceRecords: expectedMakilingProjection.counts.sourceOccurrenceRecords,
     palicoRiverIdentityChecks:
       fieldSources.independent.taxonomyChecks.length + palicoRiverInputs.identityAddendum.checks.length,
     palicoRiverFamilyConflicts:
@@ -294,7 +321,7 @@ export function buildResearchStatus({
     ...fieldSummary,
     reviewedRegionalBaselines: 0,
     interpretation:
-      "Raw candidates/proposals remain immutable research inputs. Four Taal checklist assertions and twelve Palico-Lian river-survey table assertions are prepared for the app; these are not current observations or completed regional coverage. Null reviewed regional counts are unknown, not absence. This status does not verify deployment.",
+      "Raw candidates/proposals remain immutable research inputs. Four Taal checklist assertions, twelve Palico-Lian river-survey table assertions, and one undated text-locality assertion for Molawin Creek are prepared for the app; these do not establish current presence or completed regional coverage. Null reviewed regional counts are unknown, not absence. This status does not verify deployment.",
     regions,
   };
 }
@@ -311,6 +338,8 @@ export async function readResearchInputs() {
     decisions: new URL("taal-checklist-decisions.json", research),
     taalProjection: new URL("src/data/taal-checklist-evidence.json", root),
     historical: new URL("src/data/cavite-historical-evidence.json", root),
+    makilingGbifReview: new URL("data/research/philippines/makiling-gbif-source-review.json", root),
+    makilingGbifProjection: new URL("src/data/makiling-gbif-evidence.json", root),
   };
   const entries = await Promise.all(
     Object.entries(files).map(async ([key, file]) => {
@@ -351,6 +380,9 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
       );
       console.log(
         `App evidence: existing Cavite historical records ${status.existingCaviteHistoricalRecords}; Taal checklist assertions ${status.preparedChecklistAssertions}; Palico-Lian river assertions ${status.palicoRiverAssertionsPrepared} (${status.palicoRiverRowsHeld} held). Deployment not verified.`,
+      );
+      console.log(
+        `Makiling freshwater evidence: ${status.makilingGbifAssertionsPrepared} historical text-locality assertion from ${status.makilingGbifOccurrenceRecords} CC0 museum records; date/coordinates unknown.`,
       );
       console.log(
         `Palico review: ${status.palicoRiverIdentityChecks} WoRMS identity checks plus ten COL cross-checks; ${status.palicoRiverFamilyConflicts} source-family conflicts held. Brackish: ${status.brackishSourceLeadsReviewed} reviewed leads; ${status.preparedBrackishAssertions} admitted assertions.`,
