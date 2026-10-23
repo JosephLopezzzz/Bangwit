@@ -42,6 +42,56 @@
     "inquiryDraftFile": "calabarzon-vipcorals-data-access-inquiry-draft-20261024.md",
     "messageSent": false
   },
+  "gbifCheck": {
+    "sourceId": "gbif-verde-island-fish-exact-locality-check",
+    "endpoint": "https://api.gbif.org/v1/occurrence/search",
+    "parameters": {
+      "country": "PH",
+      "classKey": 204,
+      "className": "Actinopterygii",
+      "limit": 300
+    },
+    "queries": [
+      {
+        "locality": "Verde Island",
+        "url": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Verde+Island&classKey=204&limit=300",
+        "responseCount": 0,
+        "rowsReturned": 0,
+        "responseBytes": 79,
+        "responseSha256": "895e98c4fc942ab7d7a88a36b939ef457d89aa6b53c9aed51a7fd67ff354269a",
+        "ignoredRawPath": "raw/gbif-verde-island-fish-locality-20261024/verde-island.json"
+      },
+      {
+        "locality": "Isla Verde",
+        "url": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Isla+Verde&classKey=204&limit=300",
+        "responseCount": 0,
+        "rowsReturned": 0,
+        "responseBytes": 79,
+        "responseSha256": "895e98c4fc942ab7d7a88a36b939ef457d89aa6b53c9aed51a7fd67ff354269a",
+        "ignoredRawPath": "raw/gbif-verde-island-fish-locality-20261024/isla-verde.json"
+      },
+      {
+        "locality": "Verde Island Passage",
+        "url": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Verde+Island+Passage&classKey=204&limit=300",
+        "responseCount": 0,
+        "rowsReturned": 0,
+        "responseBytes": 79,
+        "responseSha256": "895e98c4fc942ab7d7a88a36b939ef457d89aa6b53c9aed51a7fd67ff354269a",
+        "ignoredRawPath": "raw/gbif-verde-island-fish-locality-20261024/verde-island-passage.json"
+      },
+      {
+        "locality": "Verde Island, Batangas",
+        "url": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Verde+Island%2C+Batangas&classKey=204&limit=300",
+        "responseCount": 0,
+        "rowsReturned": 0,
+        "responseBytes": 79,
+        "responseSha256": "895e98c4fc942ab7d7a88a36b939ef457d89aa6b53c9aed51a7fd67ff354269a",
+        "ignoredRawPath": "raw/gbif-verde-island-fish-locality-20261024/verde-island-batangas.json"
+      }
+    ],
+    "totalReturnedRecords": 0,
+    "decision": "bounded-zero-result-exact-locality-check;not-an-absence-claim"
+  },
   "rightsAndScope": {
     "catalogueDataLicenseDisplayed": false,
     "itemSpecificDataReusePermissionVerified": false,
@@ -51,6 +101,7 @@
   },
   "counts": {
     "speciesRowsAcquired": 0,
+    "gbifFishRecordsReturned": 0,
     "speciesAssertionsAdmitted": 0,
     "publicProjection": false
   },

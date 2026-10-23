@@ -20,6 +20,9 @@ test("VIP CORALS Verde Island remains a metadata/access lead, not a species inve
   assert.equal(review.contactRoute.primaryOfficialEmail, "vipcorals@g.batstate-u.edu.ph");
   assert.equal(review.contactRoute.secondaryEmailListedOnHub, "vipcorals.batstateu@gmail.com");
   assert.equal(review.contactRoute.messageSent, false);
+  assert.equal(review.gbifCheck.queries.length, 4);
+  assert.equal(review.gbifCheck.totalReturnedRecords, 0);
+  assert.ok(review.gbifCheck.queries.every((query) => query.responseCount === 0 && /^[a-f0-9]{64}$/.test(query.responseSha256)));
   assert.match(draft, /Draft only/i);
   assert.match(draft, /Philippines in stages/);
   assert.match(draft, /public web app/);
@@ -28,6 +31,7 @@ test("VIP CORALS Verde Island remains a metadata/access lead, not a species inve
   assert.equal(review.rightsAndScope.dataRequestSent, false);
   assert.deepEqual(review.counts, {
     speciesRowsAcquired: 0,
+    gbifFishRecordsReturned: 0,
     speciesAssertionsAdmitted: 0,
     publicProjection: false,
   });
@@ -50,4 +54,12 @@ test("VIP CORALS Verde Island remains a metadata/access lead, not a species inve
   assert.equal(followUp.inquiryPrepared, true);
   assert.equal(followUp.inquirySent, false);
   assert.equal(followUp.admittedSpeciesAssertions, 0);
+
+  const gbifFollowUp = sweep.additionalOpenDataFollowUps.find(
+    (item) => item.reviewFile === "calabarzon-vipcorals-verde-island-source-review-20261024.json",
+  );
+  assert.ok(gbifFollowUp);
+  assert.equal(gbifFollowUp.searches.length, 4);
+  assert.equal(gbifFollowUp.totalReturnedRecords, 0);
+  assert.match(gbifFollowUp.decision, /not-an-absence-claim/);
 });

@@ -3,7 +3,7 @@
   "checkedOn": "2026-10-24",
   "status": "research-only-source-registry",
   "scope": "National acquisition references and CALABARZON identity/source leads. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 57,
+  "sourceCount": 58,
   "sources": [
     {
       "id": "gbif-col-xr-taxonomy-matching",
@@ -1439,6 +1439,36 @@
       "researchStatus": "historical-collection-summary-only;44-fish-specimens-not-44-species;no-public-admission",
       "sourceYear": 2020,
       "license": null
+    },
+    {
+      "id": "gbif-verde-island-fish-exact-locality-check",
+      "title": "GBIF Occurrence API exact-locality Actinopterygii search for Verde Island",
+      "provider": "Global Biodiversity Information Facility",
+      "url": "https://techdocs.gbif.org/en/openapi/v1/occurrence",
+      "additionalUrls": [
+        "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Verde+Island&classKey=204&limit=300",
+        "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Isla+Verde&classKey=204&limit=300",
+        "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Verde+Island+Passage&classKey=204&limit=300",
+        "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Verde+Island%2C+Batangas&classKey=204&limit=300"
+      ],
+      "role": "Bounded exact-text search for GBIF fish-class records under four Verde Island locality variants; not an exhaustive inventory or absence assessment.",
+      "checkedOn": "2026-10-24",
+      "access": {
+        "status": "four-public-zero-result-occurrence-search-responses-captured",
+        "reviewFiles": [
+          "calabarzon-vipcorals-verde-island-source-review-20261024.json"
+        ],
+        "rawPath": "raw/gbif-verde-island-fish-locality-20261024/",
+        "responseSha256": "895e98c4fc942ab7d7a88a36b939ef457d89aa6b53c9aed51a7fd67ff354269a"
+      },
+      "reuse": {
+        "metadata": "GBIF public Occurrence API endpoint and query parameters reviewed.",
+        "raw": "Four zero-result JSON responses are retained in ignored local research storage with SHA-256 hashes.",
+        "content": "No occurrence rows were returned, so no record-specific license or attribution applies to this check. Any future GBIF records need separate dataset-level license, taxonomy, date, quality and waterbody-scope review."
+      },
+      "publicationApproval": false,
+      "researchStatus": "bounded-zero-result-exact-locality-check; not-an-absence-claim; no-species-assertions-admitted",
+      "sourceYear": null
     }
   ],
   "sourcePolicy": {
