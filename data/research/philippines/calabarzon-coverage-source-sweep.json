@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "reviewedOn": "2026-10-23",
+  "reviewedOn": "2026-10-24",
   "regionId": "0400000000",
   "status": "source-leads-expanded-no-new-species-admissions",
   "sourceRegistryCountBefore": 28,
   "sourceRegistryCountAfter": 33,
-  "sourceRegistryCountAfterFollowUp": 52,
+  "sourceRegistryCountAfterFollowUp": 54,
   "scopeNote": "This is a bounded sweep of high-value public research leads for inland, marine and estuarine coverage. It is not a complete review of all 36 waterbody leads, a fish distribution baseline, or an absence assessment.",
   "counts": {
     "newSourceLeadsReviewed": 5,
@@ -468,11 +468,37 @@
         "No fish among these returned rows is not evidence of fish absence.",
         "No coordinates were mapped and no waterbody geometry or present-day fish presence is claimed."
       ]
+    },
+    {
+      "provider": "GBIF public Occurrence API",
+      "reviewFile": "calabarzon-batangas-bay-source-review-20261024.json",
+      "checkedOn": "2026-10-24",
+      "waterbodyIds": [
+        "ph-wb-batangas-bay"
+      ],
+      "localityResults": [
+        {
+          "locality": "Batangas Bay",
+          "classKey": 204,
+          "records": 0
+        }
+      ],
+      "reviewedRecords": 0,
+      "fishRecordsInReturnedRows": 0,
+      "fishAssertionsAdmitted": 0,
+      "publicProjection": false,
+      "responseSha256": "16004ddeb6b1eb033e3665fa6082d9cdd36533ce1f36272a2a95f5664f1b9dcd",
+      "decision": "bounded-exact-locality-zero-result; not-an-absence-claim",
+      "limits": [
+        "Only the exact locality Batangas Bay, country PH and classKey 204 were searched.",
+        "Zero returned rows do not establish fish absence.",
+        "No record licenses, species rows or coordinates were available to review."
+      ]
     }
   ],
   "regionalGapSummary": {
     "freshwater": "The four 1933 Pansipit River GBIF specimens support historical locality evidence only. Tayabas River remains a strong historical study lead, but the original species table and article-specific reuse terms remain unverified. Laguna de Bay's NFRDI-LLDA assessment is a future source opportunity, not current data.",
-    "marine": "The full NFRDI Manila Bay trawl paper is acquired and reviewed, including a historic Cavite-group table summary; item-specific reuse rights and station georeferencing remain open, so zero species assertions are admitted. Balayan/Calatagan remains a metadata/poster lead.",
+    "marine": "The full NFRDI Manila Bay trawl paper is acquired and reviewed, including a historic Cavite-group table summary; item-specific reuse rights and station georeferencing remain open, so zero species assertions are admitted. Balayan/Calatagan remains a metadata/poster lead. A 2020-2022 NFRDI Batangas Bay poster now provides a held ten-taxon source lead; its no-ranking footer and missing item-specific reuse terms prevent app admission. An exact GBIF Batangas Bay fish-locality query returned zero and is retained only as a bounded gap.",
     "brackishEstuarine": "The five existing held leads still yield zero admitted assertions. No new source in this sweep verifies fish identities joined to measured station salinity under reusable terms.",
     "smallLakesWetlandsReservoirs": "A historical survey source now covers all seven named San Pablo crater lakes, but item-specific reuse rights block per-lake species rows. The 2022 Caliraya/Lumot abstract has been checked in an alternate volume PDF; it still lacks the complete species table and exact field dates, with all-rights-reserved terms. A 2014 Tikub Lake fish survey is now identified for the Ticub/Tikub scope lead, but item-specific rights are unverified and its table remains held. The bounded Caliraya/Lumot GBIF check found four copepod specimens at Caliraya and no fish record in that result; the Lumot exact-name searches and Ticub/Tikub string queries returned zero. Reservoir coverage remains open.",
     "regionalBaselineComplete": false
@@ -487,7 +513,8 @@
     "The five original zero-result locality queries now have source-backed name/system follow-ups; continue only with documented coordinates or eligible alternative sources, keeping zeroes as gaps rather than absence claims.",
     "Seek an independent review or the reported National Museum voucher outcome for the three conflicting 2014 Maragondon goby IDs; keep the species-level claims held.",
     "Find item-specific reuse terms or an eligible independent dataset for the 2014 Tikub Lake fish table before transcribing it into a public projection.",
-    "Publish an L1 coverage-and-gap report before advancing to NCR; zero admissions here does not mean the waterbodies lack fish."
+    "Publish an L1 coverage-and-gap report before advancing to NCR; zero admissions here does not mean the waterbodies lack fish.",
+    "For Batangas Bay, seek authorized item-specific rights or independently reusable location-matched fish records; do not treat the zero-result exact GBIF locality search as absence."
   ],
   "nonClaims": [
     "No species assertions from the held primary-source leads were admitted into the app.",
@@ -758,6 +785,26 @@
       "accessReview": "Official Ateneo institutional metadata and abstract reviewed; its publisher full-text link returned HTTP 403. The institutional record states Elsevier copyright; no species table was acquired.",
       "reuseReview": "No item-specific open license or permission verified; do not copy the species list or tables.",
       "decision": "historical-landing-site-aggregate-lead-only; hold-species-rows-pending-full-text-and-rights-review",
+      "admittedSpeciesAssertions": 0
+    },
+    {
+      "sourceId": "nfrdi-2025-batangas-bay-dominant-fish-poster",
+      "reviewFile": "calabarzon-batangas-bay-source-review-20261024.json",
+      "checkedOn": "2026-10-24",
+      "waterbodyIds": [
+        "ph-wb-batangas-bay"
+      ],
+      "sourceFactsHeld": {
+        "studyWindow": "2020-2022",
+        "repositoryReportedTaxa": 10,
+        "visuallyConfirmedPosterLabels": 10,
+        "arrangementIsRanked": false,
+        "maxLengthValuesTranscribed": false,
+        "itemSpecificReuseLicenseDisplayed": false
+      },
+      "accessReview": "Official NFRDI repository poster downloaded by ordinary HTTPS and visually reviewed; its footer says the arrangement is not ranked.",
+      "reuseReview": "No item-specific license or permission was verified; keep the poster image and species-level rows out of the app.",
+      "decision": "historical-bay-poster-source-lead-only; rights-and-independent-taxonomy-pending",
       "admittedSpeciesAssertions": 0
     }
   ]

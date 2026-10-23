@@ -3,7 +3,7 @@
   "checkedOn": "2026-10-24",
   "status": "research-only-source-registry",
   "scope": "National acquisition references and CALABARZON identity/source leads. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 52,
+  "sourceCount": 54,
   "sources": [
     {
       "id": "gbif-col-xr-taxonomy-matching",
@@ -1313,6 +1313,59 @@
       "publicationApproval": false,
       "researchStatus": "historical-landing-site-aggregate;full-text-and-reuse-rights-pending;zero-app-admissions",
       "sourceYear": 2019
+    },
+    {
+      "id": "nfrdi-2025-batangas-bay-dominant-fish-poster",
+      "title": "Top 10 dominant species Batangas Bay (2020-2022)",
+      "provider": "Bureau of Fisheries and Aquatic Resources IV-A / National Fisheries Research and Development Institute / National Stock Assessment Program IV-A",
+      "url": "https://repository.nfrdi.da.gov.ph/items/bf21d1a3-06cc-450d-b638-28d227d8f36e",
+      "additionalUrls": [
+        "https://repository.nfrdi.da.gov.ph/bitstreams/c594d292-80c8-4553-9dad-c64a53f6dee3/download"
+      ],
+      "role": "Official poster lead documenting ten source-labeled fish taxa for Batangas Bay in 2020-2022; poster layout is explicitly not a rank and does not establish current presence.",
+      "checkedOn": "2026-10-24",
+      "access": {
+        "status": "official-repository-PNG-downloaded-and-visually-reviewed",
+        "reviewFiles": [
+          "calabarzon-batangas-bay-source-review-20261024.json"
+        ]
+      },
+      "reuse": {
+        "metadata": "Official repository item metadata and abstract reviewed; the item page does not display an item-specific Creative Commons license.",
+        "raw": "Original 2-MB poster is retained only in ignored local research storage; do not copy or redistribute it.",
+        "content": "No item-specific content or derived-data reuse permission was verified. Keep poster images and species-level rows out of the app pending rights, independent taxonomy and locality-scope review."
+      },
+      "publicationApproval": false,
+      "researchStatus": "poster-visually-reviewed; item-specific-reuse-rights-and-independent-taxonomy-pending; no-species-assertions-admitted",
+      "sourceYear": 2025,
+      "license": null
+    },
+    {
+      "id": "gbif-batangas-bay-exact-fish-locality-check",
+      "title": "GBIF Occurrence API exact-locality Actinopterygii search for Batangas Bay",
+      "provider": "Global Biodiversity Information Facility",
+      "url": "https://techdocs.gbif.org/en/openapi/v1/occurrence",
+      "additionalUrls": [
+        "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Batangas%20Bay&classKey=204&limit=100"
+      ],
+      "role": "Bounded exact-text search for GBIF fish-class records with locality Batangas Bay; not an exhaustive inventory or absence assessment.",
+      "checkedOn": "2026-10-24",
+      "access": {
+        "status": "one-public-zero-result-occurrence-search-response-captured",
+        "reviewFiles": [
+          "calabarzon-batangas-bay-source-review-20261024.json"
+        ],
+        "rawPath": "raw/gbif-batangas-bay-fish-20261024/occurrence-search.json",
+        "rawSha256": "16004ddeb6b1eb033e3665fa6082d9cdd36533ce1f36272a2a95f5664f1b9dcd"
+      },
+      "reuse": {
+        "metadata": "GBIF public Occurrence API endpoint and query parameters reviewed.",
+        "raw": "The zero-result JSON response is retained in ignored local research storage and pinned by SHA-256.",
+        "content": "No occurrence rows were returned, so no record-specific license or attribution applies to this query. Any future returned records need separate dataset-level rights, taxonomy, date, quality and waterbody-scope review."
+      },
+      "publicationApproval": false,
+      "researchStatus": "bounded-zero-result-exact-locality-check; not-an-absence-claim; no-species-assertions-admitted",
+      "sourceYear": null
     }
   ],
   "sourcePolicy": {
