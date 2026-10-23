@@ -347,7 +347,8 @@ export const enDictionary: Dictionary = {
     title: "Molawin Creek · museum specimen records",
     description:
       "One historical species-locality assertion is supported by three preserved-specimen records across two GBIF datasets.",
-    scope: "Molawin Creek · Laguna · CALABARZON. The locality is linked by text only; no map point or stream geometry is supplied.",
+    scope:
+      "Molawin Creek · Laguna · CALABARZON. The locality is linked by text only; no map point or stream geometry is supplied.",
     limits:
       "These records do not include a collection date or coordinates. They do not establish current presence, abundance, a complete creek inventory, fishing permission, safety, diet, or bait effectiveness. Three GBIF rows are not three individuals or confirmed separate collecting events.",
     localityLabel: "GBIF locality",
@@ -371,6 +372,61 @@ export const enDictionary: Dictionary = {
     rightsLabel: "Selected-record rights",
     rightsNote:
       "GBIF marks these selected records and their datasets CC0 1.0. This does not grant rights to other articles or source materials.",
+    opensTab: "(opens in a new tab)",
+  },
+  lagunaDeBaySpecimenEvidence: {
+    title: "Laguna de Bay · specimen record",
+    description:
+      "A peer-reviewed 2025 paper documents one preserved tinfoil barb specimen associated with Laguna de Bay, collected on 28 September 2024.",
+    scope:
+      "Laguna de Bay · corrected source locality: Brgy. Calahan, Cardona, Rizal. A 2026 corrigendum corrected the locality; Bangwit does not georeference the article's sampling-location figure.",
+    localityLabel: "Corrected source locality",
+    collectionDateLabel: "Collection date",
+    specimenLabel: "Voucher specimen",
+    limits:
+      "This is a dated historical specimen report, not a current-presence estimate or complete lake checklist. The article text gives no capture coordinates; its map figure is not georeferenced here. The locality is not a fishing spot. A separate unvouchered Talim Island anecdote is excluded.",
+    rightsSummary:
+      "The journal states CC BY-NC 3.0 terms. This attributed material is for noncommercial use; separate permission is needed for commercial use.",
+    sourceDetails: "Citation, correction, taxonomy and reuse terms",
+    citation: "Full citation:",
+    articleLink: "Original article",
+    corrigendumLink: "Official locality correction",
+    taxonomyLink: "Catalogue of Fishes",
+    licenseLink: "CC BY-NC 3.0 license",
+    licenseNote:
+      "No article photos, figures or prose are reproduced. The claim is limited to the one retained ADMU voucher and corrected lake-level locality; the Talim Island report had no retained specimen.",
+    opensTab: "(opens in a new tab)",
+  },
+  pansipitRiverGbifEvidence: {
+    title: "Pansipit River · museum specimens",
+    description:
+      "Four preserved-specimen records in a Field Museum dataset resolve to four historical fish species. GBIF data-quality flags are retained for every record.",
+    scope: "Pansipit River · Batangas · CALABARZON. The locality is linked by text only; no map pin is shown.",
+    localityLabel: "GBIF locality",
+    collectionDatesLabel: "Collection dates",
+    specimenRecordsLabel: "Specimen records",
+    limits:
+      "These records date to 1933. They do not establish current presence, abundance, measured salinity, a complete river list, fishing permission, safety, diet or bait effectiveness. Four database rows are not four individual fish.",
+    qualityFlags:
+      "All four selected records have institution/collection matching flags and an assumed-WGS84 datum flag; three also have recorded-date-mismatch flags. Their shared coordinate has no accuracy value and is withheld from the map.",
+    sourceDetails: "Source records, taxonomy and rights",
+    reviewedOnLabel: "Reviewed",
+    queryMethodNote: "Exact GBIF locality search for Pansipit River:",
+    queryResultSuffix:
+      "preserved-specimen results were reviewed, including 15 bird records; four fish records were selected.",
+    gbifRecordLabel: "GBIF occurrence",
+    acceptedAsLabel: "accepted as",
+    collectionDateShortLabel: "collected",
+    catalogNumberLabel: "Catalog number",
+    qualityCodeLabel: "GBIF quality flags",
+    datasetCitationLabel: "Dataset citation:",
+    taxonomyLabel: "Taxonomy references",
+    gbifTaxonLink: "GBIF",
+    independentTaxonomyLink: "Independent authority",
+    rightsLabel: "Selected-record rights",
+    licenseLabel: "CC0 1.0",
+    rightsNote:
+      "The GBIF dataset metadata marks the selected records CC0 1.0. This does not approve other records or separate datasets.",
     opensTab: "(opens in a new tab)",
   },
   palicoRiverEvidence: {
@@ -431,7 +487,7 @@ export const enDictionary: Dictionary = {
     selectedGroundLabel: "Selected Cavite bay:",
     localStatusTitle: "Local fishing status is still under review",
     localStatusDesc:
-      "The selected Cavite bay remains under review. Historical source localities do not confirm its current species, protected status or fishing permission. The Taal checklist and Palico-Lian survey have separate lake and river contexts.",
+      "The selected Cavite bay remains under review. Historical source localities do not confirm its current species, protected status or fishing permission. The Taal checklist, Palico-Lian survey, and Molawin, Laguna de Bay and Pansipit specimen records are separate historical evidence contexts.",
     moreFilters: "More filters",
     unavailableFilterNote: "Water type and conservation status are unavailable until reviewed values can support them.",
     clearAllFilters: "Clear all",

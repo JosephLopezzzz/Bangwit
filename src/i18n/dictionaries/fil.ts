@@ -351,12 +351,14 @@ export const filDictionary: Dictionary = {
     title: "Molawin Creek · mga tala ng specimen sa museo",
     description:
       "Isang historical na species-locality assertion ang sinusuportahan ng tatlong preserved-specimen record mula sa dalawang GBIF dataset.",
-    scope: "Molawin Creek · Laguna · CALABARZON. Batay lamang ito sa locality text; walang map point o geometry ng sapa.",
+    scope:
+      "Molawin Creek · Laguna · CALABARZON. Batay lamang ito sa locality text; walang map point o geometry ng sapa.",
     limits:
       "Walang collection date o coordinates ang mga record. Hindi nito pinatutunayan ang kasalukuyang presensya, dami, kumpletong listahan ng sapa, pahintulot mangisda, kaligtasan, diet o bisa ng pain. Hindi katumbas ng tatlong GBIF row ang tatlong isda o magkakahiwalay na collection event.",
     localityLabel: "Locality sa GBIF",
     collectionDateLabel: "Petsa ng pagkolekta",
-    collectionDateUnknown: "Hindi ibinigay. Hindi itinuring na collection date ang tekstong 1933 sa dalawang catalog number.",
+    collectionDateUnknown:
+      "Hindi ibinigay. Hindi itinuring na collection date ang tekstong 1933 sa dalawang catalog number.",
     recordCountLabel: "Mga evidence record",
     recordCountValue: "Tatlong preserved-specimen record mula sa dalawang dataset; hindi bilang ng isda.",
     recordLicenseLabel: "Lisensya ng record",
@@ -364,7 +366,8 @@ export const filDictionary: Dictionary = {
       "Napanatili ang mga GBIF flag: may institution/collection matching flag ang dalawang NHMUK row; may continent-field at inferred occurrence-status flag ang CAS row. Tingnan sa source details ang orihinal na code.",
     sourceDetails: "Mga source, taxonomy, karapatan at review",
     reviewedOnLabel: "Sinuri",
-    scopeMethodNote: "Locality text lang ang batayan ng pag-ugnay sa sapa; walang coordinate o puntong mailalagay sa mapa.",
+    scopeMethodNote:
+      "Locality text lang ang batayan ng pag-ugnay sa sapa; walang coordinate o puntong mailalagay sa mapa.",
     gbifRecordLabel: "GBIF occurrence",
     catalogNumberLabel: "Catalog number",
     qualityCodeLabel: "Mga GBIF quality flag",
@@ -375,6 +378,61 @@ export const filDictionary: Dictionary = {
     rightsLabel: "Karapatan sa napiling records",
     rightsNote:
       "CC0 1.0 ang nakasaad sa GBIF para sa napiling records at mga dataset nito. Hindi nito saklaw ang ibang artikulo o materyal ng source.",
+    opensTab: "(magbubukas sa bagong tab)",
+  },
+  lagunaDeBaySpecimenEvidence: {
+    title: "Laguna de Bay · tala ng specimen",
+    description:
+      "Itinatala ng peer-reviewed na artikulo noong 2025 ang isang preserved tinfoil barb specimen na iniuugnay sa Laguna de Bay, na nakolekta noong 28 Setyembre 2024.",
+    scope:
+      "Laguna de Bay · itinamang locality sa source: Brgy. Calahan, Cardona, Rizal. Itinama ito sa corrigendum noong 2026; hindi ginagawang georeferenced point ng Bangwit ang mapa ng sampling site sa artikulo.",
+    localityLabel: "Itinamang locality sa source",
+    collectionDateLabel: "Petsa ng pagkolekta",
+    specimenLabel: "Voucher specimen",
+    limits:
+      "Historical specimen report ito na may petsa, hindi pagtataya ng kasalukuyang presensya o kumpletong checklist ng lawa. Walang capture coordinates sa teksto ng artikulo; hindi ginagawang georeferenced dito ang mapa nito. Hindi fishing spot ang locality. Hindi isinama ang hiwalay at walang specimen na salaysay mula sa Talim Island.",
+    rightsSummary:
+      "Ayon sa journal, CC BY-NC 3.0 ang terms. Para lamang ito sa noncommercial na paggamit na may attribution; kailangan ng hiwalay na pahintulot para sa commercial use.",
+    sourceDetails: "Citation, pagwawasto, taxonomy at terms sa paggamit",
+    citation: "Buong citation:",
+    articleLink: "Orihinal na artikulo",
+    corrigendumLink: "Opisyal na pagwawasto ng locality",
+    taxonomyLink: "Catalogue of Fishes",
+    licenseLink: "Lisensyang CC BY-NC 3.0",
+    licenseNote:
+      "Walang larawan, figure o prosa mula sa artikulo ang kinopya. Limitado ang claim sa isang ADMU voucher at sa itinamang lake-level locality; walang specimen na itinago mula sa ulat sa Talim Island.",
+    opensTab: "(magbubukas sa bagong tab)",
+  },
+  pansipitRiverGbifEvidence: {
+    title: "Ilog Pansipit · mga museum specimen",
+    description:
+      "Apat na preserved-specimen record sa dataset ng Field Museum ang tumutugma sa apat na makasaysayang species ng isda. Pinananatili ang GBIF data-quality flags sa bawat record.",
+    scope: "Ilog Pansipit · Batangas · CALABARZON. Teksto lang ang batayan ng locality; walang ipinapakitang map pin.",
+    localityLabel: "Locality sa GBIF",
+    collectionDatesLabel: "Mga petsa ng pagkolekta",
+    specimenRecordsLabel: "Mga specimen record",
+    limits:
+      "Noong 1933 ang mga record na ito. Hindi nito pinatutunayan ang kasalukuyang presensya, dami, nasukat na alat ng tubig, kumpletong talaan ng ilog, pahintulot mangisda, kaligtasan, diyeta o bisa ng pain. Hindi ibig sabihin ng apat na database row ay apat na isdang nahuli.",
+    qualityFlags:
+      "Lahat ng apat na napiling record ay may institution/collection matching flags at assumed-WGS84 datum flag; tatlo rin ang may recorded-date-mismatch flag. Walang accuracy value ang iisang coordinate ng mga ito kaya hindi ito ipinapakita sa mapa.",
+    sourceDetails: "Mga source record, taxonomy at karapatan",
+    reviewedOnLabel: "Sinuri noong",
+    queryMethodNote: "Eksaktong GBIF locality search para sa Pansipit River:",
+    queryResultSuffix:
+      "preserved-specimen result ang sinuri, kabilang ang 15 record ng ibon; apat na record ng isda ang napili.",
+    gbifRecordLabel: "GBIF occurrence",
+    acceptedAsLabel: "tinanggap bilang",
+    collectionDateShortLabel: "nakolekta",
+    catalogNumberLabel: "Catalog number",
+    qualityCodeLabel: "GBIF quality flags",
+    datasetCitationLabel: "Citation ng dataset:",
+    taxonomyLabel: "Mga sanggunian ng taxonomy",
+    gbifTaxonLink: "GBIF",
+    independentTaxonomyLink: "Hiwalay na awtoridad",
+    rightsLabel: "Karapatan sa napiling record",
+    licenseLabel: "CC0 1.0",
+    rightsNote:
+      "CC0 1.0 ang nakasaad sa metadata ng GBIF dataset para sa mga napiling record. Hindi nito pinahihintulutan ang paggamit sa ibang record o hiwalay na dataset.",
     opensTab: "(magbubukas sa bagong tab)",
   },
   palicoRiverEvidence: {
@@ -435,7 +493,7 @@ export const filDictionary: Dictionary = {
     selectedGroundLabel: "Napiling bay sa Cavite:",
     localStatusTitle: "Hindi pa nasusuri ang local fishing status",
     localStatusDesc:
-      "Nasa review pa ang napiling bay sa Cavite. Hindi kinukumpirma ng historical source localities ang kasalukuyang species, protected status o pahintulot mangisda rito. Hiwalay ang konteksto ng lawa sa checklist ng Taal at ng ilog sa survey ng Palico-Lian.",
+      "Nasa review pa ang napiling bay sa Cavite. Hindi kinukumpirma ng historical source localities ang kasalukuyang species, protected status o pahintulot mangisda rito. Magkakahiwalay na makasaysayang konteksto ang Taal checklist, Palico-Lian survey, at mga specimen record sa Molawin, Laguna de Bay at Pansipit.",
     moreFilters: "Iba pang filters",
     unavailableFilterNote: "Hindi pa available ang water type at conservation status hangga't walang reviewed values.",
     clearAllFilters: "I-clear lahat",

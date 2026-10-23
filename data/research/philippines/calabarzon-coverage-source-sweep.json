@@ -262,8 +262,33 @@
       ]
     }
   ],
+  "separateOpenDataFollowUp": {
+    "provider": "GBIF public occurrence API",
+    "reviewFile": "pansipit-river-gbif-source-review.json",
+    "waterbodyId": "ph-wb-pansipit-river",
+    "queryParameters": {
+      "country": "PH",
+      "locality": "Pansipit River",
+      "basisOfRecord": "PRESERVED_SPECIMEN",
+      "limit": 100
+    },
+    "resultCount": 19,
+    "enumeratedCount": 19,
+    "birdRecords": 15,
+    "selectedFishRecords": 4,
+    "acceptedTaxa": 4,
+    "license": "CC0-1.0",
+    "preparedMapAdmissions": 0,
+    "decision": "prepare-four-historical-text-locality-assertions; keep-coordinates-withheld",
+    "limits": [
+      "The four selected records have null GBIF class fields and were reviewed against the Field Museum fish-collection dataset, specimen basis, taxon, family and catalog number.",
+      "All four records share one coordinate with no uncertainty value and retain GBIF quality flags; the projection omits the coordinate.",
+      "This open-data batch is separate from the 2023 NFRDI landing-center report, which remains held pending source access and reuse review.",
+      "Historical locality records do not establish current presence, an exact river reach, salinity or a complete fish inventory."
+    ]
+  },
   "regionalGapSummary": {
-    "freshwater": "Tayabas River is a strong historical study lead, but the original species table and article-specific reuse terms remain unverified. Laguna de Bay's NFRDI-LLDA assessment is a future source opportunity, not current data.",
+    "freshwater": "The four 1933 Pansipit River GBIF specimens support historical locality evidence only. Tayabas River remains a strong historical study lead, but the original species table and article-specific reuse terms remain unverified. Laguna de Bay's NFRDI-LLDA assessment is a future source opportunity, not current data.",
     "marine": "The full NFRDI Manila Bay trawl paper is acquired and reviewed, including a historic Cavite-group table summary; item-specific reuse rights and station georeferencing remain open, so zero species assertions are admitted. Balayan/Calatagan remains a metadata/poster lead.",
     "brackishEstuarine": "The five existing held leads still yield zero admitted assertions. No new source in this sweep verifies fish identities joined to measured station salinity under reusable terms.",
     "smallLakesWetlandsReservoirs": "A historical survey source now covers all seven named San Pablo crater lakes, but item-specific reuse rights block per-lake species rows. Other small lakes, wetlands and reservoirs remain source and coverage gaps.",
@@ -271,7 +296,7 @@
   },
   "nextActions": [
     "Continue with sources whose full table and item-specific reuse terms can be checked without login or access-control bypass; do not wait for NAMRIA or other email replies.",
-    "Prioritize the original Tayabas River article/table and NFRDI Pansipit report for access and rights review; preserve their historical, reach/landing-center scopes.",
+    "Prioritize the original Tayabas River article/table and NFRDI Pansipit report for access and rights review; keep the latter separate from the CC0 museum specimens and preserve its landing-center scope.",
     "Seek item-specific permission for the 2017 Manila Bay table and a source-ready station dataset/map; do not turn the Cavite-group summary into current presence or a municipal-water boundary.",
     "Check the Balayan/Calatagan poster's tenth taxon and item-specific terms only if direct access becomes available; do not republish its image.",
     "Seek item-specific rights clarification or an eligible alternative dataset for the seven San Pablo lakes; continue named small-lake, wetland and reservoir sources beyond that study.",

@@ -8,6 +8,8 @@ import { CHECKLIST_KEY, queryFor } from "./match-freshwater-taxonomy.mjs";
 import { buildTaalChecklistEvidence } from "./build-taal-checklist-evidence.mjs";
 import { buildPalicoRiverEvidence, readPalicoRiverInputs } from "./build-palico-river-evidence.mjs";
 import { buildMakilingGbifEvidence } from "./build-makiling-gbif-evidence.mjs";
+import { buildLagunaDeBaySpecimenEvidence } from "./build-laguna-de-bay-specimen-evidence.mjs";
+import { buildPansipitRiverGbifEvidence } from "./build-pansipit-river-gbif-evidence.mjs";
 import { readFieldSourceReviews, validateFieldSourceReviews } from "./check-field-source-reviews.mjs";
 
 const root = new URL("../../", import.meta.url);
@@ -40,6 +42,10 @@ export function buildResearchStatus({
   palicoRiverProjection,
   makilingGbifReview,
   makilingGbifProjection,
+  lagunaDeBayReview,
+  lagunaDeBayProjection,
+  pansipitRiverGbifReview,
+  pansipitRiverGbifProjection,
   inputHashes,
 }) {
   validateAdministrativeRegistry(registry);
@@ -57,6 +63,24 @@ export function buildResearchStatus({
     expectedMakilingProjection,
     "Makiling GBIF projection differs from its scoped source review",
   );
+  const expectedLagunaDeBayProjection = buildLagunaDeBaySpecimenEvidence(
+    lagunaDeBayReview,
+    inputHashes.lagunaDeBayReview,
+  );
+  assert.deepEqual(
+    lagunaDeBayProjection,
+    expectedLagunaDeBayProjection,
+    "Laguna de Bay projection differs from its scoped specimen review",
+  );
+  const expectedPansipitProjection = buildPansipitRiverGbifEvidence(
+    pansipitRiverGbifReview,
+    inputHashes.pansipitRiverGbifReview,
+  );
+  assert.deepEqual(
+    pansipitRiverGbifProjection,
+    expectedPansipitProjection,
+    "Pansipit River projection differs from its reviewed GBIF source ledger",
+  );
   const regionIds = new Set(registry.regions.map((region) => region.id));
   const unitIds = new Set(registry.administrativeUnits.map((unit) => unit.code));
   const units = new Map(registry.administrativeUnits.map((unit) => [unit.code, unit]));
@@ -67,8 +91,10 @@ export function buildResearchStatus({
   assert.equal(scope.counts.publicRecordsAdmitted, 0, "This scope has no admitted public records");
   assert.equal(
     scope.counts.speciesAssertionsImported,
-    expectedMakilingProjection.counts.speciesAssertions,
-    "Scoped species assertion count must match the reviewed Makiling projection",
+    expectedMakilingProjection.counts.speciesAssertions +
+      expectedLagunaDeBayProjection.counts.speciesAssertions +
+      expectedPansipitProjection.counts.speciesAssertions,
+    "Scoped species assertion count must match the reviewed Makiling, Laguna de Bay and Pansipit projections",
   );
   assert.equal(scope.counts.waterbodyResearchLeads, scope.waterbodies.length, "Waterbody lead count mismatch");
   const waterbodyIds = unique(scope.waterbodies, "id", "waterbody ID");
@@ -94,6 +120,17 @@ export function buildResearchStatus({
   for (const record of expectedMakilingProjection.assertions.flatMap((assertion) => assertion.records)) {
     assert.ok(sourceIds.has(record.datasetId), `Makiling occurrence dataset is not registered: ${record.datasetId}`);
   }
+  const lagunaDeBayWaterbody = scope.waterbodies.find((waterbody) => waterbody.id === "ph-wb-laguna-de-bay");
+  assert.ok(lagunaDeBayWaterbody, "Laguna de Bay specimen assertion waterbody is absent from the CALABARZON scope");
+  assert.equal(lagunaDeBayWaterbody.publicAdmission, false);
+  assert.ok(lagunaDeBayWaterbody.evidenceBatchRefs.includes(expectedLagunaDeBayProjection.batchId));
+  assert.ok(sourceIds.has(expectedLagunaDeBayProjection.source.id));
+  const pansipitWaterbody = scope.waterbodies.find((waterbody) => waterbody.id === "ph-wb-pansipit-river");
+  assert.ok(pansipitWaterbody, "Pansipit River specimen assertions are absent from the CALABARZON scope");
+  assert.equal(pansipitWaterbody.publicAdmission, false);
+  assert.equal(pansipitWaterbody.salinity.classification, "unknown");
+  assert.ok(pansipitWaterbody.evidenceBatchRefs.includes(expectedPansipitProjection.batchId));
+  assert.ok(sourceIds.has(expectedPansipitProjection.source.id));
   assert.deepEqual(
     scope.administrativeScope.provinces.map((unit) => unit.id).sort(),
     registry.administrativeUnits
@@ -280,12 +317,14 @@ export function buildResearchStatus({
       rolloutKey: region.rolloutKey,
       administrativeCoverageUnits: registry.administrativeUnits.filter((unit) => unit.regionId === region.id).length,
       scopedWaterbodyResearchLeads: region.id === scope.regionId ? scope.waterbodies.length : 0,
-      workStatus: region.id === scope.regionId ? "scoped-checklist-river-and-historical-locality-evidence-prepared" : "queued",
+      workStatus: region.id === scope.regionId
+        ? "scoped-checklist-and-multi-habitat-historical-evidence-prepared"
+        : "queued",
       baselineReviewed: false,
       reviewedRegionalSpeciesCount: null,
       coverageStatus:
         region.id === scope.regionId
-          ? "partial-cavite-history-taal-palico-river-and-makiling-creek"
+          ? "partial-cavite-history-taal-palico-laguna-pansipit-and-makiling"
           : "regional-review-pending",
     }));
   return {
@@ -314,6 +353,10 @@ export function buildResearchStatus({
     palicoRiverRowsHeld: expectedPalicoProjection.counts.heldRows,
     makilingGbifAssertionsPrepared: expectedMakilingProjection.counts.speciesAssertions,
     makilingGbifOccurrenceRecords: expectedMakilingProjection.counts.sourceOccurrenceRecords,
+    lagunaDeBaySpecimenAssertionsPrepared: expectedLagunaDeBayProjection.counts.speciesAssertions,
+    lagunaDeBaySpecimenRecords: expectedLagunaDeBayProjection.counts.specimenRecords,
+    pansipitGbifAssertionsPrepared: expectedPansipitProjection.counts.speciesAssertions,
+    pansipitGbifOccurrenceRecords: expectedPansipitProjection.counts.sourceOccurrenceRecords,
     palicoRiverIdentityChecks:
       fieldSources.independent.taxonomyChecks.length + palicoRiverInputs.identityAddendum.checks.length,
     palicoRiverFamilyConflicts:
@@ -321,7 +364,7 @@ export function buildResearchStatus({
     ...fieldSummary,
     reviewedRegionalBaselines: 0,
     interpretation:
-      "Raw candidates/proposals remain immutable research inputs. Four Taal checklist assertions, twelve Palico-Lian river-survey table assertions, and one undated text-locality assertion for Molawin Creek are prepared for the app; these do not establish current presence or completed regional coverage. Null reviewed regional counts are unknown, not absence. This status does not verify deployment.",
+      "Raw candidates/proposals remain immutable research inputs. Four Taal checklist assertions, twelve Palico-Lian river-survey table assertions, one undated text-locality assertion for Molawin Creek, one dated specimen assertion for Laguna de Bay, and four historical Pansipit River text-locality assertions from four flagged museum records are prepared for the app; these do not establish current presence or completed regional coverage. Null reviewed regional counts are unknown, not absence. This status does not verify deployment.",
     regions,
   };
 }
@@ -340,6 +383,10 @@ export async function readResearchInputs() {
     historical: new URL("src/data/cavite-historical-evidence.json", root),
     makilingGbifReview: new URL("data/research/philippines/makiling-gbif-source-review.json", root),
     makilingGbifProjection: new URL("src/data/makiling-gbif-evidence.json", root),
+    lagunaDeBayReview: new URL("data/research/philippines/laguna-de-bay-specimen-source-review.json", root),
+    lagunaDeBayProjection: new URL("src/data/laguna-de-bay-specimen-evidence.json", root),
+    pansipitRiverGbifReview: new URL("data/research/philippines/pansipit-river-gbif-source-review.json", root),
+    pansipitRiverGbifProjection: new URL("src/data/pansipit-river-gbif-evidence.json", root),
   };
   const entries = await Promise.all(
     Object.entries(files).map(async ([key, file]) => {
@@ -383,6 +430,12 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
       );
       console.log(
         `Makiling freshwater evidence: ${status.makilingGbifAssertionsPrepared} historical text-locality assertion from ${status.makilingGbifOccurrenceRecords} CC0 museum records; date/coordinates unknown.`,
+      );
+      console.log(
+        `Laguna de Bay freshwater evidence: ${status.lagunaDeBaySpecimenAssertionsPrepared} dated specimen assertion(s) from ${status.lagunaDeBaySpecimenRecords} ADMU voucher record(s); corrected locality, no map point; noncommercial CC BY-NC 3.0 attribution.`,
+      );
+      console.log(
+        `Pansipit River evidence: ${status.pansipitGbifAssertionsPrepared} historical locality assertions from ${status.pansipitGbifOccurrenceRecords} CC0 museum records; quality flags retained and shared coordinates withheld.`,
       );
       console.log(
         `Palico review: ${status.palicoRiverIdentityChecks} WoRMS identity checks plus ten COL cross-checks; ${status.palicoRiverFamilyConflicts} source-family conflicts held. Brackish: ${status.brackishSourceLeadsReviewed} reviewed leads; ${status.preparedBrackishAssertions} admitted assertions.`,

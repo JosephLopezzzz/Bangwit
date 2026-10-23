@@ -6,8 +6,10 @@ import { useBangwit } from "@/components/bangwit-provider";
 import { DropdownSelect } from "@/components/dropdown-select";
 import { FeedingGuides } from "@/components/feeding-guides";
 import { HistoricalSpeciesEvidence } from "@/components/historical-species-evidence";
+import { LagunaDeBaySpecimenEvidence } from "@/components/laguna-de-bay-specimen-evidence";
 import { MakilingGbifEvidence } from "@/components/makiling-gbif-evidence";
 import { PalicoRiverSurveyEvidence } from "@/components/palico-river-survey-evidence";
+import { PansipitRiverGbifEvidence } from "@/components/pansipit-river-gbif-evidence";
 import { TaalChecklistEvidence } from "@/components/taal-checklist-evidence";
 import evidence from "@/data/cavite-historical-evidence.json";
 import { filterHistoricalEvidence } from "@/lib/species-research";
@@ -133,6 +135,8 @@ export default function SpeciesPage() {
       <TaalChecklistEvidence />
       <PalicoRiverSurveyEvidence />
       <MakilingGbifEvidence />
+      <LagunaDeBaySpecimenEvidence />
+      <PansipitRiverGbifEvidence />
       <FeedingGuides />
 
       <section id="speciesNotice" className="ui-card mt-5" aria-labelledby="species-status-heading">
