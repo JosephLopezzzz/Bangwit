@@ -287,11 +287,47 @@
       "Historical locality records do not establish current presence, an exact river reach, salinity or a complete fish inventory."
     ]
   },
+  "additionalOpenDataFollowUps": [
+    {
+      "provider": "GBIF public occurrence API",
+      "reviewFile": "caliraya-lumot-gbif-source-review.json",
+      "waterbodyIds": [
+        "ph-wb-caliraya-reservoir",
+        "ph-wb-lumot-reservoir"
+      ],
+      "checkedOn": "2026-10-23",
+      "searches": [
+        {
+          "locality": "Lake Caliraya",
+          "records": 4,
+          "enumeratedRecords": 4,
+          "result": "Four CC BY 4.0 preserved-specimen rows of Arctodiaptomus dorsalis (Copepoda); no fish record in the returned result."
+        },
+        {
+          "locality": "Caliraya Lake",
+          "records": 0
+        },
+        {
+          "locality": "Lake Lumot",
+          "records": 0
+        },
+        {
+          "locality": "Lumot Lake",
+          "records": 0
+        }
+      ],
+      "decision": "record-bounded-source-search-only; admit-no-fish-assertions",
+      "limits": [
+        "The four Caliraya records share one unvalidated coordinate and are not mapped.",
+        "Zero exact locality results do not establish fish absence, and the checks omit spelling variants and coordinate-only records."
+      ]
+    }
+  ],
   "regionalGapSummary": {
     "freshwater": "The four 1933 Pansipit River GBIF specimens support historical locality evidence only. Tayabas River remains a strong historical study lead, but the original species table and article-specific reuse terms remain unverified. Laguna de Bay's NFRDI-LLDA assessment is a future source opportunity, not current data.",
     "marine": "The full NFRDI Manila Bay trawl paper is acquired and reviewed, including a historic Cavite-group table summary; item-specific reuse rights and station georeferencing remain open, so zero species assertions are admitted. Balayan/Calatagan remains a metadata/poster lead.",
     "brackishEstuarine": "The five existing held leads still yield zero admitted assertions. No new source in this sweep verifies fish identities joined to measured station salinity under reusable terms.",
-    "smallLakesWetlandsReservoirs": "A historical survey source now covers all seven named San Pablo crater lakes, but item-specific reuse rights block per-lake species rows. Other small lakes, wetlands and reservoirs remain source and coverage gaps.",
+    "smallLakesWetlandsReservoirs": "A historical survey source now covers all seven named San Pablo crater lakes, but item-specific reuse rights block per-lake species rows. The bounded Caliraya/Lumot GBIF check found four copepod specimens at Caliraya and no fish record in that result; the Lumot exact-name searches returned zero. Fish checklists for these reservoirs and wider lake, wetland and reservoir coverage remain open.",
     "regionalBaselineComplete": false
   },
   "nextActions": [

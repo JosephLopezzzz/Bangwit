@@ -1,0 +1,131 @@
+{
+  "schemaVersion": 1,
+  "batchId": "caliraya-lumot-gbif-bounded-search-20261023",
+  "checkedOn": "2026-10-23",
+  "regionId": "0400000000",
+  "reviewPurpose": "Bounded open-data search for fish records in two Laguna reservoirs; this review is not a complete fish survey or an absence assessment.",
+  "source": {
+    "sourceId": "gbif-caliraya-copepod-occurrences",
+    "title": "Freshwater Calanoid Copepods in Southern Luzon, Philippines",
+    "provider": "University of Santo Tomas - Zooplankton Ecology, Systematics, and Limnology Laboratory via GBIF",
+    "datasetKey": "3833ef8b-ac61-43a8-a513-0dfe1d4a69e8",
+    "doi": "10.15468/qwhdjn",
+    "datasetUrl": "https://www.gbif.org/dataset/3833ef8b-ac61-43a8-a513-0dfe1d4a69e8",
+    "datasetCitation": "Guinto S K, Tordesillas D, Papa R D (2022). Freshwater Calanoid Copepods in Southern Luzon, Philippines. Version 1.7. University of Santo Tomas - Zooplankton Ecology, Systematics, and Limnology Laboratory. Sampling event dataset https://doi.org/10.15468/qwhdjn accessed via GBIF.org on 2026-10-23.",
+    "recordLicense": "CC-BY-4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/"
+  },
+  "searches": [
+    {
+      "waterbodyId": "ph-wb-caliraya-reservoir",
+      "waterbodyName": "Caliraya Reservoir",
+      "queryLocalities": [
+        {
+          "locality": "Lake Caliraya",
+          "apiUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Lake+Caliraya&limit=100",
+          "recordCount": 4,
+          "enumeratedCount": 4
+        },
+        {
+          "locality": "Caliraya Lake",
+          "apiUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Caliraya+Lake&limit=100",
+          "recordCount": 0,
+          "enumeratedCount": 0
+        }
+      ],
+      "records": [
+        {
+          "gbifId": 3916293305,
+          "occurrenceId": "USTZRC-0025-0055B",
+          "scientificName": "Arctodiaptomus dorsalis (Marsh, 1907)",
+          "taxonKey": 2114510,
+          "class": "Copepoda",
+          "order": "Calanoida",
+          "family": "Diaptomidae",
+          "basisOfRecord": "PRESERVED_SPECIMEN",
+          "locality": "Lake Caliraya",
+          "eventDate": "2011-08-13",
+          "license": "CC-BY-4.0",
+          "issues": ["CONTINENT_DERIVED_FROM_COORDINATES", "INSTITUTION_MATCH_NONE"]
+        },
+        {
+          "gbifId": 3916293313,
+          "occurrenceId": "USTZRC-0025-0055A",
+          "scientificName": "Arctodiaptomus dorsalis (Marsh, 1907)",
+          "taxonKey": 2114510,
+          "class": "Copepoda",
+          "order": "Calanoida",
+          "family": "Diaptomidae",
+          "basisOfRecord": "PRESERVED_SPECIMEN",
+          "locality": "Lake Caliraya",
+          "eventDate": "2011-08-13",
+          "license": "CC-BY-4.0",
+          "issues": ["CONTINENT_DERIVED_FROM_COORDINATES", "INSTITUTION_MATCH_NONE"]
+        },
+        {
+          "gbifId": 3916293333,
+          "occurrenceId": "USTZRC-0025-0056B",
+          "scientificName": "Arctodiaptomus dorsalis (Marsh, 1907)",
+          "taxonKey": 2114510,
+          "class": "Copepoda",
+          "order": "Calanoida",
+          "family": "Diaptomidae",
+          "basisOfRecord": "PRESERVED_SPECIMEN",
+          "locality": "Lake Caliraya",
+          "eventDate": "2011-08-13",
+          "license": "CC-BY-4.0",
+          "issues": ["CONTINENT_DERIVED_FROM_COORDINATES", "INSTITUTION_MATCH_NONE"]
+        },
+        {
+          "gbifId": 3916293334,
+          "occurrenceId": "USTZRC-0025-0056A",
+          "scientificName": "Arctodiaptomus dorsalis (Marsh, 1907)",
+          "taxonKey": 2114510,
+          "class": "Copepoda",
+          "order": "Calanoida",
+          "family": "Diaptomidae",
+          "basisOfRecord": "PRESERVED_SPECIMEN",
+          "locality": "Lake Caliraya",
+          "eventDate": "2011-08-13",
+          "license": "CC-BY-4.0",
+          "issues": ["CONTINENT_DERIVED_FROM_COORDINATES", "INSTITUTION_MATCH_NONE"]
+        }
+      ],
+      "decision": "review-only-four-copepod-records-no-fish-assertions",
+      "limits": [
+        "All four returned records are copepod preserved specimens, not fish; no fish evidence is admitted from this query.",
+        "All records share one coordinate and do not provide coordinate uncertainty; coordinates are intentionally excluded from this review and no mapped point is inferred.",
+        "The exact locality string and its alias search do not cover spelling variants, coordinate-only records, unindexed records or alternate waterbody names."
+      ]
+    },
+    {
+      "waterbodyId": "ph-wb-lumot-reservoir",
+      "waterbodyName": "Lumot Reservoir",
+      "queryLocalities": [
+        {
+          "locality": "Lake Lumot",
+          "apiUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Lake+Lumot&limit=100",
+          "recordCount": 0,
+          "enumeratedCount": 0
+        },
+        {
+          "locality": "Lumot Lake",
+          "apiUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Lumot+Lake&limit=100",
+          "recordCount": 0,
+          "enumeratedCount": 0
+        }
+      ],
+      "records": [],
+      "decision": "bounded-name-search-no-fish-record-returned-no-absence-inferred",
+      "limits": [
+        "Zero exact-text query results do not show that fish are absent from the reservoir.",
+        "The searches do not cover coordinate-only records, spelling variants, unindexed records or every locally used name."
+      ]
+    }
+  ],
+  "overallDecision": "No fish species assertions admitted. Retain the review as a bounded source-coverage check and continue searching for rights-cleared fish evidence.",
+  "nonClaims": [
+    "No fish absence, complete reservoir checklist, current presence, abundance, catchability, safety, legality, reservoir geometry or fishing access is inferred.",
+    "The copepod records are excluded from Bangwit's fish-species list; no bait or diet advice is derived from them."
+  ]
+}
