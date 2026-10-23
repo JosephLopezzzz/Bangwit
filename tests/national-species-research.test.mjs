@@ -19,7 +19,7 @@ test("cross-file research inventory preserves rollout order, unknown regional co
   assert.equal(status.scopedChecklistLeadsReviewed, 7);
   assert.equal(status.preparedChecklistAssertions, 4);
   assert.equal(status.scopedChecklistHolds, 3);
-  assert.equal(status.sourcesRegistered, 40);
+  assert.equal(status.sourcesRegistered, 52);
   assert.equal(status.makilingGbifAssertionsPrepared, 1);
   assert.equal(status.makilingGbifOccurrenceRecords, 3);
   assert.equal(status.lagunaDeBaySpecimenAssertionsPrepared, 1);

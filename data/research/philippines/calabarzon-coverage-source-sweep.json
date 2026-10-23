@@ -5,7 +5,7 @@
   "status": "source-leads-expanded-no-new-species-admissions",
   "sourceRegistryCountBefore": 28,
   "sourceRegistryCountAfter": 33,
-  "sourceRegistryCountAfterFollowUp": 34,
+  "sourceRegistryCountAfterFollowUp": 52,
   "scopeNote": "This is a bounded sweep of high-value public research leads for inland, marine and estuarine coverage. It is not a complete review of all 36 waterbody leads, a fish distribution baseline, or an absence assessment.",
   "counts": {
     "newSourceLeadsReviewed": 5,
@@ -200,14 +200,21 @@
         "taxaListedInAbstract": 9,
         "posterFileSizeListed": "51.49 MB"
       },
-      "accessReview": "Official NFRDI repository metadata reviewed. The 51.49-MB poster image was not downloaded or visually inspected.",
-      "reuseReview": "No poster-image or derived-data reuse terms verified. Do not copy the image or assume its species and size table is reusable.",
+      "posterReview": {
+        "posterTaxaVisuallyLabeled": 10,
+        "taxonLabeledOnPosterButOmittedFromAbstract": "Sardinella lemuru",
+        "footerSaysArrangementIsNotRanked": true,
+        "fileSha256": "037265dd42680ad720ad3ecace9aefb2c6b75a5a9f969280a8f2c70df4254bfa"
+      },
+      "accessReview": "Official NFRDI item metadata and the full 7205x10748 PNG poster were reviewed after an ordinary unauthenticated HTTPS download. The poster labels ten taxa; Sardinella lemuru is absent from the nine-taxon abstract.",
+      "reuseReview": "No item-specific poster or derived-data reuse terms were found. The poster footer says the layout is not ranked; keep its image and all species rows out of the app pending rights and identity review.",
       "decision": "hold-poster-and-underlying-table-rights-review",
       "admittedAssertions": 0,
       "limits": [
-        "The repository abstract lists nine taxa although the item title says Top 10; the missing tenth is unknown.",
+        "The poster resolves the abstract mismatch with a tenth label, Sardinella lemuru, but the source-reported name has not been independently taxonomically validated or admitted.",
+        "Despite the title's Top 10 phrasing, the poster footer says its arrangement is not based on ranking; no abundance order can be inferred.",
         "The item concerns Balayan/Calatagan Bay, not all Batangas waters or CALABARZON.",
-        "Maximum size and common/local names require direct poster review and identity checks before any use."
+        "The poster's common/local names and length values were not extracted; it gives no validated station geometry or current-presence evidence."
       ]
     },
     {
@@ -334,16 +341,132 @@
         "ph-wb-ticub-quezon-lake"
       ],
       "localityResults": [
-        { "locality": "Maragondon River", "records": 0 },
-        { "locality": "Tanay River", "records": 0 },
-        { "locality": "Dumacaa River", "records": 0 },
-        { "locality": "Lagadlarin Mangrove Forest", "records": 0 },
-        { "locality": "Ticub Lake", "records": 0 }
+        {
+          "locality": "Maragondon River",
+          "records": 0
+        },
+        {
+          "locality": "Tanay River",
+          "records": 0
+        },
+        {
+          "locality": "Dumacaa River",
+          "records": 0
+        },
+        {
+          "locality": "Lagadlarin Mangrove Forest",
+          "records": 0
+        },
+        {
+          "locality": "Ticub Lake",
+          "records": 0
+        }
       ],
       "decision": "bounded-exact-locality-string-check; no-absence-inferred",
       "limits": [
         "Only the five listed GBIF locality strings with country=PH were queried; no aliases, coordinate filters, polygons or alternate providers were searched.",
         "Zero result counts do not establish fish absence or complete waterbody coverage."
+      ]
+    },
+    {
+      "provider": "GBIF public occurrence API",
+      "reviewFile": "calabarzon-alias-source-followup-20261023.json",
+      "checkedOn": "2026-10-23",
+      "waterbodyIds": [
+        "ph-wb-ticub-quezon-lake",
+        "ph-wb-tanay-rizal-river",
+        "ph-wb-dumacaa-lucena-river",
+        "ph-wb-lagadlarin-mangrove-wetland"
+      ],
+      "localityResults": [
+        {
+          "locality": "Tikub Lake",
+          "records": 0,
+          "role": "published-study-name; documented alias"
+        },
+        {
+          "locality": "Tanay River System",
+          "records": 0,
+          "role": "LLDA system label"
+        },
+        {
+          "locality": "Mouth of Tanay River",
+          "records": 0,
+          "role": "LLDA sampling station"
+        },
+        {
+          "locality": "Iyam-Dumacaa River System",
+          "records": 0,
+          "role": "umbrella watershed/system label"
+        },
+        {
+          "locality": "Iyam and Dumacaa Rivers",
+          "records": 0,
+          "role": "official component-river wording"
+        },
+        {
+          "locality": "Lagardlarin Mangrove Forest",
+          "records": 0,
+          "role": "unadopted article-body spelling variant"
+        }
+      ],
+      "decision": "bounded-source-string-follow-up; no-absence-inferred; no-species-assertions-admitted",
+      "limits": [
+        "All six locality strings returned zero rows; no coordinate or polygon search was performed.",
+        "The river system labels and Tanay station are not aliases for whole rivers; the body-text spelling is not adopted as an alias."
+      ]
+    },
+    {
+      "provider": "GBIF public occurrence API",
+      "reviewFile": "calabarzon-san-pablo-lake-name-variant-review-20261024.json",
+      "sourceId": "calabarzon-san-pablo-lake-name-variant-gbif-check",
+      "waterbodyIds": [
+        "ph-wb-bunot-lake",
+        "ph-wb-mohicap-lake",
+        "ph-wb-yambo-lake",
+        "ph-wb-calibato-lake",
+        "ph-wb-palakpakin-lake"
+      ],
+      "checkedOn": "2026-10-24",
+      "searches": [
+        {
+          "locality": "Lake Bunot",
+          "records": 4,
+          "result": "Four preserved copepod rows; no fish."
+        },
+        {
+          "locality": "Buot Lake",
+          "records": 0
+        },
+        {
+          "locality": "Lake Mohicap",
+          "records": 0
+        },
+        {
+          "locality": "Lake Yambo",
+          "records": 4,
+          "result": "Four preserved copepod rows; no fish."
+        },
+        {
+          "locality": "Lake Calibato",
+          "records": 3,
+          "result": "Three fern herbarium rows; no fish."
+        },
+        {
+          "locality": "Lake Palakpakin",
+          "records": 55,
+          "result": "51 eBird bird observation rows and four preserved copepod rows; no fish."
+        }
+      ],
+      "reviewedRecords": 66,
+      "fishRecordsInReturnedRows": 0,
+      "fishAssertionsAdmitted": 0,
+      "publicProjection": false,
+      "decision": "bounded-name-variant-search; no fish assertions admitted; no absence inferred",
+      "limits": [
+        "Only six country=PH locality phrases with limit=100 were searched.",
+        "No fish among these returned rows is not evidence of fish absence.",
+        "No coordinates were mapped and no waterbody geometry or present-day fish presence is claimed."
       ]
     }
   ],
@@ -351,17 +474,19 @@
     "freshwater": "The four 1933 Pansipit River GBIF specimens support historical locality evidence only. Tayabas River remains a strong historical study lead, but the original species table and article-specific reuse terms remain unverified. Laguna de Bay's NFRDI-LLDA assessment is a future source opportunity, not current data.",
     "marine": "The full NFRDI Manila Bay trawl paper is acquired and reviewed, including a historic Cavite-group table summary; item-specific reuse rights and station georeferencing remain open, so zero species assertions are admitted. Balayan/Calatagan remains a metadata/poster lead.",
     "brackishEstuarine": "The five existing held leads still yield zero admitted assertions. No new source in this sweep verifies fish identities joined to measured station salinity under reusable terms.",
-    "smallLakesWetlandsReservoirs": "A historical survey source now covers all seven named San Pablo crater lakes, but item-specific reuse rights block per-lake species rows. A 2022 conference abstract reports a Caliraya/Lumot fish survey, but the complete species table, field dates and item-specific reuse terms remain unverified. The bounded Caliraya/Lumot GBIF check found four copepod specimens at Caliraya and no fish record in that result; the Lumot exact-name searches returned zero. The additional Ticub Lake GBIF string query returned zero. Reservoir coverage remains open.",
+    "smallLakesWetlandsReservoirs": "A historical survey source now covers all seven named San Pablo crater lakes, but item-specific reuse rights block per-lake species rows. The 2022 Caliraya/Lumot abstract has been checked in an alternate volume PDF; it still lacks the complete species table and exact field dates, with all-rights-reserved terms. A 2014 Tikub Lake fish survey is now identified for the Ticub/Tikub scope lead, but item-specific rights are unverified and its table remains held. The bounded Caliraya/Lumot GBIF check found four copepod specimens at Caliraya and no fish record in that result; the Lumot exact-name searches and Ticub/Tikub string queries returned zero. Reservoir coverage remains open.",
     "regionalBaselineComplete": false
   },
   "nextActions": [
     "Continue with sources whose full table and item-specific reuse terms can be checked without login or access-control bypass; do not wait for NAMRIA or other email replies.",
     "Prioritize the original Tayabas River article/table and NFRDI Pansipit report for access and rights review; keep the latter separate from the CC0 museum specimens and preserve its landing-center scope.",
     "Seek item-specific permission for the 2017 Manila Bay table and a source-ready station dataset/map; do not turn the Cavite-group summary into current presence or a municipal-water boundary.",
-    "Check the Balayan/Calatagan poster's tenth taxon and item-specific terms only if direct access becomes available; do not republish its image.",
+    "Balayan/Calatagan's poster is now visually reviewed: its tenth label is Sardinella lemuru, but item-specific rights and taxonomic/locality review remain open; do not republish the image or imply ranking.",
     "Seek item-specific rights clarification or an eligible alternative dataset for the seven San Pablo lakes; continue named small-lake, wetland and reservoir sources beyond that study.",
-    "For the 2022 Caliraya/Lumot conference abstract, seek the full species table and item-specific reuse terms before admitting any study-derived claim.",
-    "Follow up the five zero-result GBIF locality strings with documented aliases or eligible coordinate/locality sources; keep all zeroes as gaps rather than absence claims.",
+    "For the 2022 Caliraya/Lumot conference abstract, keep the lead held: the alternate volume contains the same abstract without its species table or exact sampling dates.",
+    "The five original zero-result locality queries now have source-backed name/system follow-ups; continue only with documented coordinates or eligible alternative sources, keeping zeroes as gaps rather than absence claims.",
+    "Seek an independent review or the reported National Museum voucher outcome for the three conflicting 2014 Maragondon goby IDs; keep the species-level claims held.",
+    "Find item-specific reuse terms or an eligible independent dataset for the 2014 Tikub Lake fish table before transcribing it into a public projection.",
     "Publish an L1 coverage-and-gap report before advancing to NCR; zero admissions here does not mean the waterbodies lack fish."
   ],
   "nonClaims": [
@@ -395,7 +520,244 @@
       },
       "accessReview": "Publisher-hosted full journal volume and conference abstract read online; no local copy retained. The issue front matter states all rights reserved.",
       "reuseReview": "No item-specific reuse permission verified; all study-derived species claims remain held.",
+      "alternateCopyReviewFile": "calabarzon-alias-source-followup-20261023.json",
+      "alternatePublisherCopy": "https://www.aabe.sakura.ne.jp/Journal/Papers/Asian%20J%20%20Biol%201%20September%202022.pdf",
+      "alternateCopyResult": "Same conference abstract on printed page 40; still no complete species table or exact field dates.",
       "decision": "abstract-lead-only; hold-study-derived-claims-pending-full-table-and-rights-review",
+      "admittedSpeciesAssertions": 0
+    },
+    {
+      "sourceId": "ijcs-2014-maragondon-goby-barcoding",
+      "reviewFile": "calabarzon-alias-source-followup-20261023.json",
+      "checkedOn": "2026-10-23",
+      "waterbodyIds": [
+        "ph-wb-maragondon-river"
+      ],
+      "publication": "International Journal of Current Science, 2014, 12, E50-E56",
+      "rightsReview": "Publisher landing page states CC BY 4.0.",
+      "sourceFactsHeld": {
+        "historicalCollectionContext": "Summer 2010 and 2011; three pre-collected goby phenotypes.",
+        "identityIssue": "The article presents conflicting morphology, BLAST and phylogenetic IDs; it calls the identities putative and does not report the National Museum voucher-verification result."
+      },
+      "decision": "hold-all-three-species-identities-pending-independent-review",
+      "admittedSpeciesAssertions": 0
+    },
+    {
+      "sourceId": "ajob-2014-tikub-freshwater-fish",
+      "reviewFile": "calabarzon-alias-source-followup-20261023.json",
+      "checkedOn": "2026-10-23",
+      "waterbodyIds": [
+        "ph-wb-ticub-quezon-lake"
+      ],
+      "publication": "Asian Journal of Biodiversity, 5(1), 41-53, January 2014",
+      "sourceFactsHeld": {
+        "abstractReportedRichness": 9,
+        "abstractReportedIndividuals": 221,
+        "fullTextAccess": "ResearchGate marks an author-uploaded full text; the publisher landing page requires login or registration.",
+        "itemSpecificReuseTerms": "Not verified."
+      },
+      "decision": "hold-species-table-pending-item-specific-reuse-review",
+      "admittedSpeciesAssertions": 0
+    },
+    {
+      "sourceId": "seafdec-2013-taal-fishery-resource-assessment",
+      "reviewFile": "calabarzon-seafdec-taal-followup-20261024.json",
+      "checkedOn": "2026-10-24",
+      "waterbodyIds": [
+        "ph-wb-taal-lake"
+      ],
+      "publication": "LakeCon2011 proceedings, published 2013, pp. 217-229",
+      "sourceFactsHeld": {
+        "surveyWindow": "2010-01/2010-12",
+        "landingSiteCoverage": "Major landing sites in 11 coastal towns around Taal Lake",
+        "abstractReportedTotalOrganismSpecies": 47,
+        "abstractReportedFinfishSpecies": 38,
+        "siteSpecificSpeciesTableAvailableInRepository": false
+      },
+      "accessReview": "Official SEAFDEC/AQD repository abstract and full metadata page reviewed. The item lists no associated file; no per-town table or survey data was acquired.",
+      "reuseReview": "No item-specific reuse license verified; no species assertions admitted.",
+      "decision": "historical-metadata-lead-only; hold-species-claims-pending-source-access-and-rights-review",
+      "admittedSpeciesAssertions": 0
+    },
+    {
+      "sourceId": "nfrdi-2023-taal-field-identification-guide",
+      "reviewFile": "calabarzon-nfrdi-taal-guide-review-20261024.json",
+      "checkedOn": "2026-10-24",
+      "waterbodyIds": [
+        "ph-wb-taal-lake"
+      ],
+      "publication": "Department of Agriculture - NFRDI, 2023; stock-assessment landed-catch data collected 2014-2018",
+      "sourceFactsHeld": {
+        "speciesPagesReviewed": 45,
+        "recordsWithNamedMunicipalLandingSites": 16,
+        "recordsWithLakeWideLabel": 29,
+        "perSpeciesExactDatesReported": false
+      },
+      "accessReview": "Official NFRDI PDF downloaded by ordinary HTTPS and reviewed; the source says its 45 species are actual records from landed-catch surveys in 2014-2018.",
+      "reuseReview": "Printed page 2 states CC BY-NC 4.0. Attribution and noncommercial-use limits are retained; public publication scope and taxonomy review are pending.",
+      "decision": "source-records-extracted; hold-app-admission-pending-taxonomy-and-noncommercial-scope-review",
+      "admittedSpeciesAssertions": 0
+    },
+    {
+      "sourceId": "calacademy-catalog-taal-taxonomy-followup",
+      "reviewFile": "calabarzon-nfrdi-taal-taxonomy-followup-20261024.json",
+      "checkedOn": "2026-10-24",
+      "waterbodyIds": [
+        "ph-wb-taal-lake"
+      ],
+      "sourceFactsHeld": {
+        "nameStatusesCrossChecked": 45,
+        "previouslyUnmatchedNames": 4,
+        "familyConflictFollowups": 2,
+        "catalogCurrentNameMatches": 45
+      },
+      "accessReview": "All 45 Catalog of Fishes species pages were fetched by ordinary HTTPS and retained as ignored local HTML snapshots with SHA-256 hashes.",
+      "reuseReview": "Only taxonomic name/authorship/family facts are recorded. Catalog-specific reuse terms were not verified; no prose or images are copied.",
+      "decision": "all-45-current-name-statuses-supported; hold-two-family-disagreements-for-backbone-review; retain-all-nfrdi-catch-rows-outside-app-pending-source-identity-and-noncommercial-scope-review",
+      "admittedSpeciesAssertions": 0
+    },
+    {
+      "sourceId": "gbif-sampaloc-lake-exact-locality-check",
+      "reviewFile": "calabarzon-sampaloc-lake-gbif-locality-review-20261024.json",
+      "checkedOn": "2026-10-24",
+      "waterbodyIds": [
+        "ph-wb-sampaloc-san-pablo-lake"
+      ],
+      "queries": [
+        {
+          "locality": "Sampaloc Lake",
+          "count": 2,
+          "recordsReturned": 2
+        },
+        {
+          "locality": "Lake Sampaloc",
+          "count": 4,
+          "recordsReturned": 4
+        }
+      ],
+      "sourceFactsHeld": {
+        "bacteriaRecords": 2,
+        "copepodRecords": 4,
+        "fishRecords": 0,
+        "coordinateIssuesOnLakeSampalocRows": true
+      },
+      "decision": "bounded-exact-locality-query-only; six-returned-records-are-nonfish; no-fish-absence-claim-or-app-admission",
+      "admittedSpeciesAssertions": 0
+    },
+    {
+      "sourceId": "nfrdi-fy2019-pansipit-stock-assessment",
+      "reviewFile": "calabarzon-pansipit-alternative-source-review-20261024.json",
+      "checkedOn": "2026-10-24",
+      "waterbodyIds": [
+        "ph-wb-pansipit-river"
+      ],
+      "publication": "DA-NFRDI Annual Report 2019; report copyright page dated 2022",
+      "sourceFactsHeld": {
+        "surveyPeriod": "2019-01/2019-09",
+        "fisherfolkRespondents": 51,
+        "fishingGearsAccounted": 140,
+        "gearTypes": 17,
+        "totalLandedProductionKg": 6886.98,
+        "reportedOrganismSpeciesCaught": 42,
+        "reportedFinfishSpecies": 36,
+        "reportedMolluscSpecies": 2,
+        "reportedCrustaceanSpecies": 4,
+        "completeSpeciesListAvailable": false
+      },
+      "accessReview": "Official 52-page NFRDI PDF retrieved by ordinary HTTPS and reviewed at printed page 16. The report provides aggregate catch facts but no complete species list or per-species table.",
+      "reuseReview": "Page 2 says copyright 2022/all rights reserved and also describes CC BY-NC without a version. Scope and terms need clarification; no species rows are published.",
+      "decision": "historical-aggregate-source-lead-only; hold-species-claims-until-list-and-reuse-terms-are-verified",
+      "admittedSpeciesAssertions": 0
+    },
+    {
+      "sourceId": "nfrdi-2017-manila-bay-trawl",
+      "reviewFile": "calabarzon-manila-bay-station-data-review-20261024.json",
+      "checkedOn": "2026-10-24",
+      "waterbodyIds": [
+        "ph-wb-manila-bay"
+      ],
+      "sourceFactsHeld": {
+        "surveyPeriod": "2014-03/2015-10",
+        "preEstablishedDraggingStations": 16,
+        "studyMapFigure": "Figure 3.1",
+        "individualStationCoordinatesInText": false,
+        "stationCoordinateTableFound": false,
+        "table3_2GroupedBy": "province",
+        "table3_2Includes": [
+          "fish",
+          "invertebrates"
+        ],
+        "caviteSummaryFishTaxa": 24,
+        "caviteSummaryAllTaxa": 100
+      },
+      "accessReview": "The official NFRDI item contains one 16-page PDF. Figure 3.1 is a printed station map with visible coordinate ticks but no individual station coordinate table or linked station dataset.",
+      "reuseReview": "The item/PDF has no item-specific license statement located. The current journal policy's CC BY-NC 4.0 term is not assumed retroactive to this 2017 article; written clarification is needed before transcribing Table 3.2.",
+      "decision": "hold-table-rows-and-station-geometry-pending-item-specific-rights-and-source-data",
+      "permissionRequestDraftPrepared": true,
+      "permissionRequestSent": false,
+      "admittedSpeciesAssertions": 0
+    },
+    {
+      "sourceId": "bfar-nfrdi-2025-balayan-calatagan-poster",
+      "reviewFile": "calabarzon-balayan-calatagan-poster-review-20261024.json",
+      "checkedOn": "2026-10-24",
+      "waterbodyIds": [
+        "ph-wb-balayan-bay"
+      ],
+      "sourceFactsHeld": {
+        "studyPeriod": "2018-2022",
+        "abstractTaxaListed": 9,
+        "posterTaxaLabeled": 10,
+        "posterLabelOmittedFromAbstract": "Sardinella lemuru",
+        "posterArrangementIsRanked": false,
+        "taxonomyIndependentlyValidated": false
+      },
+      "accessReview": "The official 51.49-MB poster was retrieved by ordinary unauthenticated HTTPS and visually reviewed; the local original is ignored by Git and its SHA-256 is pinned in the review file.",
+      "reuseReview": "No item-specific reuse terms were found. Do not copy the poster, publish its species list, or infer abundance ranking until rights and species identities are reviewed.",
+      "decision": "resolve-title-abstract-count-mismatch-only; hold-poster-derived-claims-pending-rights-and-identity-review",
+      "admittedSpeciesAssertions": 0
+    },
+    {
+      "sourceId": "gbif-balayan-calatagan-exact-fish-locality-check",
+      "reviewFile": "calabarzon-balayan-gbif-fish-locality-review-20261024.json",
+      "checkedOn": "2026-10-24",
+      "waterbodyIds": [
+        "ph-wb-balayan-bay"
+      ],
+      "queries": [
+        "Balayan Bay",
+        "Calatagan Bay",
+        "Balayan",
+        "Calatagan"
+      ],
+      "sourceFactsHeld": {
+        "taxonClass": "Actinopterygii",
+        "exactLocalityQueries": 4,
+        "returnedRecords": 0
+      },
+      "decision": "bounded-zero-result-exact-locality-check; not-an-absence-claim",
+      "admittedSpeciesAssertions": 0
+    },
+    {
+      "sourceId": "anilao-2019-bycatch-fish-port-survey",
+      "reviewFile": "calabarzon-anilao-fish-port-source-review-20261024.json",
+      "checkedOn": "2026-10-24",
+      "waterbodyIds": [
+        "ph-wb-balayan-bay"
+      ],
+      "publication": "Banzon et al. (2019), Marine Policy 100, 1-7; DOI 10.1016/j.marpol.2018.10.045",
+      "sourceFactsHeld": {
+        "surveyWindow": "2016-07/2017-02",
+        "landingSite": "Anilao Fish Port",
+        "reportedFishSpecies": 35,
+        "reportedFamilies": 15,
+        "reportedBycatchSpecies": 7,
+        "completeSpeciesListAcquired": false,
+        "itemSpecificOpenLicenseFound": false
+      },
+      "accessReview": "Official Ateneo institutional metadata and abstract reviewed; its publisher full-text link returned HTTP 403. The institutional record states Elsevier copyright; no species table was acquired.",
+      "reuseReview": "No item-specific open license or permission verified; do not copy the species list or tables.",
+      "decision": "historical-landing-site-aggregate-lead-only; hold-species-rows-pending-full-text-and-rights-review",
       "admittedSpeciesAssertions": 0
     }
   ]

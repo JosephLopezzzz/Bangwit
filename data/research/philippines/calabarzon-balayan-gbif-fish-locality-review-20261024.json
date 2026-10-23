@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "batchId": "calabarzon-balayan-gbif-fish-locality-review-20261024",
+  "checkedOn": "2026-10-24",
+  "regionId": "0400000000",
+  "waterbodyId": "ph-wb-balayan-bay",
+  "source": {
+    "id": "gbif-balayan-calatagan-exact-fish-locality-check",
+    "title": "GBIF Occurrence API exact-locality Actinopterygii search",
+    "provider": "Global Biodiversity Information Facility",
+    "apiDocumentationUrl": "https://techdocs.gbif.org/en/openapi/v1/occurrence",
+    "taxonClass": {
+      "key": 204,
+      "scientificName": "Actinopterygii",
+      "rank": "CLASS",
+      "status": "ACCEPTED"
+    },
+    "filters": {
+      "country": "PH",
+      "classKey": 204,
+      "limit": 1,
+      "localityMatching": "exact text filter"
+    },
+    "querySnapshots": [
+      {
+        "locality": "Balayan Bay",
+        "url": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Balayan+Bay&classKey=204&limit=1",
+        "count": 0,
+        "resultsReturned": 0,
+        "rawSnapshot": "raw/gbif-balayan-locality-fish-20261024/balayan-bay.json",
+        "rawSha256": "f80b70551e630bf92a4f2d087f549acf03489da01c639913da79a1d4f34520b9"
+      },
+      {
+        "locality": "Calatagan Bay",
+        "url": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Calatagan+Bay&classKey=204&limit=1",
+        "count": 0,
+        "resultsReturned": 0,
+        "rawSnapshot": "raw/gbif-balayan-locality-fish-20261024/calatagan-bay.json",
+        "rawSha256": "f80b70551e630bf92a4f2d087f549acf03489da01c639913da79a1d4f34520b9"
+      },
+      {
+        "locality": "Balayan",
+        "url": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Balayan&classKey=204&limit=1",
+        "count": 0,
+        "resultsReturned": 0,
+        "rawSnapshot": "raw/gbif-balayan-locality-fish-20261024/balayan.json",
+        "rawSha256": "f80b70551e630bf92a4f2d087f549acf03489da01c639913da79a1d4f34520b9"
+      },
+      {
+        "locality": "Calatagan",
+        "url": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Calatagan&classKey=204&limit=1",
+        "count": 0,
+        "resultsReturned": 0,
+        "rawSnapshot": "raw/gbif-balayan-locality-fish-20261024/calatagan.json",
+        "rawSha256": "f80b70551e630bf92a4f2d087f549acf03489da01c639913da79a1d4f34520b9"
+      }
+    ]
+  },
+  "counts": {
+    "exactLocalityQueries": 4,
+    "returnedActinopterygiiRecords": 0,
+    "fishAssertionsAdmitted": 0,
+    "publicProjection": false
+  },
+  "decision": "The four exact locality strings returned no GBIF Actinopterygii occurrences. Retain only as bounded source-coverage checks; do not infer fish absence from a zero result.",
+  "nonClaims": [
+    "The query covers exact occurrence locality text only and can miss spelling variants, blank locality fields, coordinates without matching locality text, and records contributed later.",
+    "The taxon filter is Actinopterygii; it does not cover every fish class or validate the completeness and identity of occurrence records.",
+    "No returned record means no dataset-specific species license or attribution analysis was applicable in this batch; any later returned records require their own dataset and record review.",
+    "The queries do not establish species absence, current presence, abundance, waterbody geometry, fishing permission, safety, diet, or bait advice."
+  ]
+}

@@ -1,0 +1,210 @@
+{
+  "schemaVersion": 1,
+  "batchId": "calabarzon-alias-source-followup-20261023",
+  "checkedOn": "2026-10-23",
+  "regionId": "0400000000",
+  "reviewPurpose": "Follow up five exact-locality GBIF zeroes with source-backed name variants and accessible fish-source alternatives; do not infer absence.",
+  "gbifFollowUp": {
+    "provider": "GBIF public occurrence search API",
+    "queryParameters": {
+      "country": "PH",
+      "locality": "one exact source-quoted string per request",
+      "limit": 100
+    },
+    "queries": [
+      {
+        "waterbodyId": "ph-wb-ticub-quezon-lake",
+        "locality": "Tikub Lake",
+        "queryRole": "published-study-name; documented alias of registry name Ticub Lake",
+        "supportingSourceId": "ajob-2014-tikub-freshwater-fish",
+        "apiUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Tikub%20Lake&limit=100",
+        "recordCount": 0,
+        "enumeratedCount": 0
+      },
+      {
+        "waterbodyId": "ph-wb-tanay-rizal-river",
+        "locality": "Tanay River System",
+        "queryRole": "LLDA report title/map label; system wording, not a separate alias",
+        "supportingSourceId": "llda-tanay-water-quality-assessment",
+        "apiUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Tanay%20River%20System&limit=100",
+        "recordCount": 0,
+        "enumeratedCount": 0
+      },
+      {
+        "waterbodyId": "ph-wb-tanay-rizal-river",
+        "locality": "Mouth of Tanay River",
+        "queryRole": "LLDA sampling-station label; a reach/station, not a river alias",
+        "supportingSourceId": "llda-tanay-water-quality-assessment",
+        "apiUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Mouth%20of%20Tanay%20River&limit=100",
+        "recordCount": 0,
+        "enumeratedCount": 0
+      },
+      {
+        "waterbodyId": "ph-wb-dumacaa-lucena-river",
+        "locality": "Iyam-Dumacaa River System",
+        "queryRole": "official WQMA/system label; umbrella geography, not an alias for Dumacaa River alone",
+        "supportingSourceId": "emb-calabarzon-annual-report-2024",
+        "apiUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Iyam-Dumacaa%20River%20System&limit=100",
+        "recordCount": 0,
+        "enumeratedCount": 0
+      },
+      {
+        "waterbodyId": "ph-wb-dumacaa-lucena-river",
+        "locality": "Iyam and Dumacaa Rivers",
+        "queryRole": "official report wording naming the component rivers separately; not an alias for Dumacaa alone",
+        "supportingSourceId": "emb-calabarzon-annual-report-2024",
+        "apiUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Iyam%20and%20Dumacaa%20Rivers&limit=100",
+        "recordCount": 0,
+        "enumeratedCount": 0
+      },
+      {
+        "waterbodyId": "ph-wb-lagadlarin-mangrove-wetland",
+        "locality": "Lagardlarin Mangrove Forest",
+        "queryRole": "spelling variant in article body text; not adopted as an alias because the article title consistently uses Lagadlarin",
+        "supportingSourceId": "jesam-2024-lagadlarin-mangrove-flora",
+        "apiUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Lagardlarin%20Mangrove%20Forest&limit=100",
+        "recordCount": 0,
+        "enumeratedCount": 0
+      }
+    ],
+    "result": "All six additional exact source-string queries returned zero rows. No coordinates, polygons, taxon filters, or other providers were queried in this follow-up.",
+    "decision": "retain-all-five-waterbodies-as-research-gaps; no-species-assertions-admitted"
+  },
+  "waterbodyIdentityReviews": [
+    {
+      "waterbodyId": "ph-wb-maragondon-river",
+      "nameDecision": "No well-supported alternate river name was adopted in this pass. A 2014 goby study uses Maragondon River directly; the phrase San Diego River found only in a third-party copy of an unverified watershed report and was not added as an alias.",
+      "fishLeadSourceIds": [
+        "ijcs-2014-maragondon-goby-barcoding"
+      ]
+    },
+    {
+      "waterbodyId": "ph-wb-tanay-rizal-river",
+      "nameDecision": "Retain Tanay River as the waterbody name. Tanay River System is an official LLDA report label; Mouth of Tanay River is one named station/reach, not a whole-river alias.",
+      "fishLeadSourceIds": []
+    },
+    {
+      "waterbodyId": "ph-wb-dumacaa-lucena-river",
+      "nameDecision": "Retain Dumacaa River. Iyam-Dumacaa River System/WQMA describes an umbrella watershed with two rivers, not a synonym or duplicate for Dumacaa River.",
+      "fishLeadSourceIds": []
+    },
+    {
+      "waterbodyId": "ph-wb-lagadlarin-mangrove-wetland",
+      "nameDecision": "Retain Lagadlarin Mangrove Forest. Lagardlarin appears in body/table text in one study but not its title; treat it as a likely typographic/OCR variant, not a verified alias.",
+      "fishLeadSourceIds": []
+    },
+    {
+      "waterbodyId": "ph-wb-ticub-quezon-lake",
+      "nameDecision": "Add Tikub Lake as a source-supported alias of the existing Ticub Lake lead. The fish-survey article locates Tikub Lake in Tiaong, Quezon and names Barangays Ayusan I and San Pedro.",
+      "fishLeadSourceIds": [
+        "ajob-2014-tikub-freshwater-fish"
+      ]
+    }
+  ],
+  "alternativeSourceReviews": [
+    {
+      "sourceId": "ijcs-2014-maragondon-goby-barcoding",
+      "waterbodyId": "ph-wb-maragondon-river",
+      "bibliography": "Bayot, F. A. A., Joya, K. N. A., & Jacinto, W. R. (2014). Phylogenetic analysis and barcoding of gobies in Maragondon River, Cavite, Philippines. International Journal of Current Science, 12, E50-E56.",
+      "primaryUrl": "https://rjpn.org/IJCSPUB/papers/IJCSP10A1190.pdf",
+      "publisherLandingUrl": "https://rjpn.org/ijcspub/viewpaperforall.php?paper=IJCSP10A1190",
+      "rightsReview": "The publisher page declares CC BY 4.0. Reuse terms do not resolve the source's biological identification conflicts.",
+      "sourceFactsHeld": {
+        "reportedCollectionSeason": "Summer 2010 and 2011",
+        "sampleContext": "Three pre-collected goby phenotypes; the article cites an unpublished 2011 study and says voucher specimens were sent to the Philippine National Museum for verification, but does not report a verification outcome.",
+        "molecularMatches": [
+          { "phenotype": "A1", "reportedName": "Amblygobius sphynx", "reportedMatchPercent": 95 },
+          { "phenotype": "B2", "reportedName": "Glossogobius giuris", "reportedMatchPercent": 83 },
+          { "phenotype": "D4", "reportedName": "Oxyurichthys ophthalmonema", "reportedMatchPercent": 92 }
+        ],
+        "identityConflicts": [
+          "A1 has a conflicting morphological identification in the article and the authors discuss inconsistent morphometrics.",
+          "B2 is assigned conflicting goby names across the article's morphology, BLAST and phylogenetic discussion.",
+          "The article itself calls the molecular identifications putative and recommends further sequence verification."
+        ]
+      },
+      "accessReview": "Complete seven-page publisher PDF and publisher landing-page license text reviewed online; no local PDF copy retained.",
+      "decision": "hold-all-three-species-level-assertions-pending-independent-taxonomic-and-voucher-review",
+      "admittedSpeciesAssertions": 0,
+      "limits": [
+        "The study is a historical goby lead, not a complete river inventory or current-presence survey.",
+        "No exact sampling reach or coordinates are adopted.",
+        "No species-level claim is admitted until identity conflicts are independently resolved."
+      ]
+    },
+    {
+      "sourceId": "ajob-2014-tikub-freshwater-fish",
+      "waterbodyId": "ph-wb-ticub-quezon-lake",
+      "bibliography": "Labatos, B. V. Jr., & Briones, N. D. (2014). Freshwater Fishes of Tikub Lake, Tiaong, Quezon, Philippines. Asian Journal of Biodiversity, 5(1), 41-53. DOI: 10.7828/ajob.v5i1.480.",
+      "primaryUrl": "https://doi.org/10.7828/ajob.v5i1.480",
+      "publisherLandingUrl": "https://www.ejournals.ph/article.php?id=1509",
+      "authorUploadUrl": "https://www.researchgate.net/publication/267335974_Freshwater_Fishes_of_Tikub_Lake_Tiaong_Quezon_Philippines",
+      "sourceFactsHeld": {
+        "abstractReports": "A historical survey of 221 individuals and nine species; the abstract names two most-abundant taxa.",
+        "waterbodyLocality": "Tikub Lake, Tiaong, Quezon; Barangays Ayusan I and San Pedro.",
+        "fullArticle": "ResearchGate identifies an author-uploaded public full text; the publisher landing page requires login or registration for its full text. Exact sampling calendar dates were not confirmed in this follow-up."
+      },
+      "reuseReview": "No item-specific license was verified. The author-upload page warns that content may be subject to copyright. Do not transcribe the species table into a public dataset until the reuse basis is established.",
+      "decision": "strong-historical-fish-source-lead; hold-table-and-study-derived-species-claims-pending-rights-and-taxonomic-review",
+      "admittedSpeciesAssertions": 0,
+      "limits": [
+        "A 2014 survey is historical and is not a current or complete lake checklist.",
+        "The article's study results do not establish current abundance, native status today, catchability, legal access or safety.",
+        "The alias query Tikub Lake returned zero GBIF occurrence rows; that is not evidence of fish absence."
+      ]
+    },
+    {
+      "sourceId": "llda-tanay-water-quality-assessment",
+      "waterbodyId": "ph-wb-tanay-rizal-river",
+      "title": "Water Quality Assessment Report - Tanay River",
+      "primaryUrl": "https://llda.gov.ph/wp-content/uploads/dox/waterqualityrpt/rivers/tanay.pdf",
+      "sourceFactsHeld": "The official LLDA report maps five water-quality stations, including the river mouth at Barangay Wawa, Plaza Aldea, a Manila East Road bridge, a headwater, and Daranak Falls.",
+      "decision": "use-for-waterbody-and-station-context-only; not-a-fish-inventory",
+      "admittedSpeciesAssertions": 0
+    },
+    {
+      "sourceId": "jesam-2024-lagadlarin-mangrove-flora",
+      "waterbodyId": "ph-wb-lagadlarin-mangrove-wetland",
+      "title": "Geospatial Biodiversity Assessment of Lagadlarin Mangrove Forest in Lobo, Batangas, Philippines, for Sustainable Ecotourism",
+      "primaryUrl": "https://ovcre.uplb.edu.ph/journals-uplb/index.php/JESAM/article/download/1185/949",
+      "sourceFactsHeld": "The 2024 article surveys mangrove and mangrove-associate flora, not fish. Its title uses Lagadlarin; one body-text extraction uses Lagardlarin.",
+      "decision": "use-for-site-name-and-flora-context-only; do-not-adopt-body-text-spelling-as-alias-or-fish-evidence",
+      "admittedSpeciesAssertions": 0
+    },
+    {
+      "sourceId": "aabe-2022-caliraya-lumot-fish-study",
+      "waterbodyIds": [
+        "ph-wb-caliraya-reservoir",
+        "ph-wb-lumot-reservoir"
+      ],
+      "alternatePublisherCopyUrl": "https://www.aabe.sakura.ne.jp/Journal/Papers/Asian%20J%20%20Biol%201%20September%202022.pdf",
+      "sourceFactsHeld": "The alternate journal-volume PDF contains the same conference abstract on printed page 40, without the complete fish table or exact sampling dates.",
+      "decision": "no-new-study-rows; retain-existing-rights-and-full-table-hold",
+      "admittedSpeciesAssertions": 0
+    },
+    {
+      "sourceId": "fishangler-user-catch-page-dumacaa",
+      "waterbodyId": "ph-wb-dumacaa-lucena-river",
+      "url": "https://www.fishangler.com/fishing-waters/ph/quezon/dumacaa-river-run-off-hydrographic-slope/36476618",
+      "sourceFactsHeld": "A third-party user-catch page reports two catches but does not provide a source-reviewed fish inventory or auditable specimen/observation evidence.",
+      "decision": "exclude-from-regional-species-catalog; retain-only-as-unverified-community-lead",
+      "admittedSpeciesAssertions": 0
+    }
+  ],
+  "summary": {
+    "additionalGbifQueries": 6,
+    "queriesWithRecords": 0,
+    "documentedAliasAdded": "Tikub Lake -> Ticub Lake",
+    "credibleFishStudyLeadsFound": 2,
+    "usableSpeciesAssertionsAdmitted": 0,
+    "maragondonReasonHeld": "material species-identification conflicts",
+    "tikubReasonHeld": "item-specific reuse basis remains unverified"
+  },
+  "nonClaims": [
+    "No zero-result GBIF query establishes fish absence.",
+    "No species names from these held research leads were added to a public projection.",
+    "A water-quality station or watershed/system label is not a fish occurrence or a substitute river boundary.",
+    "No alias is adopted from the unverified San Diego River third-party-copy wording or the likely Lagadlarin/Lagardlarin typo.",
+    "No municipal-water boundary, present-day abundance, fishing permission, safety, diet or bait claim is added."
+  ]
+}
