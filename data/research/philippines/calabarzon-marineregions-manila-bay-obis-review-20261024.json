@@ -1,0 +1,237 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-24",
+  "regionId": "0400000000",
+  "waterbodyId": "ph-wb-manila-bay",
+  "status": "bounded-manila-bay-obis-discovery-only-no-new-species-assertions",
+  "provider": "UNESCO-IOC Ocean Biodiversity Information System (OBIS)",
+  "geometry": {
+    "sourceId": "marine-regions-manila-bay-bay-geometry",
+    "mrgid": 31579,
+    "name": "Manila Bay",
+    "placeType": "Bay",
+    "placeNameSource": "GeoNames",
+    "geometryProvenance": "Marine Regions",
+    "geometryId": "http://marineregions.org/mrgid/31579/geometries?source=169&attributeValue=31579",
+    "geometryEndpoint": "https://www.marineregions.org/rest/getGazetteerGeometries.jsonld/31579/",
+    "detailPage": "https://www.marineregions.org/gazetteer.php?id=31579&p=details",
+    "crs": "OGC:CRS84",
+    "polygonComponents": 3,
+    "rings": 11,
+    "coordinatePairs": 6159,
+    "bbox": {
+      "west": 120.48462617,
+      "south": 14.1335057,
+      "east": 121.01483047,
+      "north": 14.86550355
+    },
+    "responseBytes": 159991,
+    "responseSha256": "425829a0061ad7f6ee2f11adcd24cf85001b56e1f8774123cd39784696cae9ae",
+    "rawSnapshot": "raw/marineregions-manila-bay-20261024/geometry.jsonld",
+    "useDecision": "Exploratory named-bay query filter only. This is not a NAMRIA/LGU boundary, a municipal-water boundary, a fishing-ground boundary, or an app navigation/legal geometry.",
+    "terms": {
+      "page": "https://www.marineregions.org/disclaimer.php",
+      "statement": "Marine Regions states CC-BY for its products, asks users to link to the current source, and limits intended use to scientific, educational and research purposes; it says its data has no legal value and is not for legal, economic-resource or navigation use.",
+      "productSpecificLicenseChecked": false,
+      "publicAppReuseApproved": false
+    }
+  },
+  "query": {
+    "endpoint": "https://api.obis.org/v3/occurrence",
+    "taxon": {
+      "name": "Actinopterygii",
+      "taxonId": 10194,
+      "meaning": "ray-finned fishes"
+    },
+    "queryGeometryMethod": "Use the Marine Regions polygon bounding box for the OBIS query, then exact-filter returned point coordinates against the unmodified Marine Regions multipolygon in OGC:CRS84.",
+    "bboxWkt": "POLYGON ((120.48462617 14.1335057, 121.01483047 14.1335057, 121.01483047 14.86550355, 120.48462617 14.86550355, 120.48462617 14.1335057))",
+    "size": 5000,
+    "boundingBoxRecordCount": 2654,
+    "boundingBoxRowsDownloaded": 2654,
+    "rawSnapshot": "raw/marineregions-manila-bay-20261024/obis-bbox/all.json",
+    "rawResponseBytes": 4789427,
+    "rawResponseSha256": "253bee792cad7eaa4e3fe4330d4cdfcc798c8d836f69c0c25881604d37f1a296",
+    "exactGeometryFilter": {
+      "method": "point-in-multipolygon ray casting; boundary tolerance 1e-10 degrees; no topology repair or simplification",
+      "recordsInside": 1874,
+      "recordsMissingCoordinates": 0,
+      "distinctDatasets": 10,
+      "distinctScientificNameStrings": 539,
+      "distinctSpeciesFieldValues": 479,
+      "recordsWithAnyObisQualityFlag": 1795,
+      "qualityFlags": {
+        "NO_DEPTH": 1778,
+        "WORMS_ANNOTATION_RESOLVABLE": 11,
+        "ON_LAND": 10,
+        "DEPTH_EXCEEDS_BATH": 17,
+        "NO_ACCEPTED_NAME": 4,
+        "MARINE_UNSURE": 2
+      },
+      "flagCountsMayOverlap": true
+    },
+    "interpretation": "The 539 scientificName strings and 479 values in the OBIS species field are not validated unique-species totals. These are historical marine occurrence candidates selected with a broad named-bay geometry, not confirmed current presence, abundance, catchability, diet, safety, fishing legality, or municipal-water presence."
+  },
+  "datasetTriage": {
+    "reviewed": 10,
+    "licenseSummary": {
+      "CC_BY_4_0": 7,
+      "CC0_1_0": 1,
+      "CC_BY_NC_4_0": 2
+    },
+    "datasets": [
+      {
+        "datasetId": "2891a788-9f30-4413-8f73-9e7686890e9d",
+        "title": "FishNet2 Marine Data",
+        "license": "CC-BY-NC-4.0",
+        "recordsInGeometry": 694,
+        "metadataUrl": "https://api.obis.org/v3/dataset/2891a788-9f30-4413-8f73-9e7686890e9d",
+        "metadataSnapshot": "raw/marineregions-manila-bay-20261024/datasets/2891a788-9f30-4413-8f73-9e7686890e9d.json",
+        "metadataResponseSha256": "45cdc73349c6b9011ac1d2e501de593167e8d3e46a782ba362fa3957d0178262"
+      },
+      {
+        "datasetId": "d6af0fac-8a21-4d77-8872-f10d471fc0cf",
+        "title": "CAS Ichthyology (ICH)",
+        "license": "CC0-1.0",
+        "recordsInGeometry": 610,
+        "metadataUrl": "https://api.obis.org/v3/dataset/d6af0fac-8a21-4d77-8872-f10d471fc0cf",
+        "metadataSnapshot": "raw/marineregions-manila-bay-20261024/datasets/d6af0fac-8a21-4d77-8872-f10d471fc0cf.json",
+        "metadataResponseSha256": "4611f21e03567f6c0edbd3e588f91ea521cb1bedb69389ec91127496b9e8a23e"
+      },
+      {
+        "datasetId": "288e63af-5f94-43d4-a039-f238b432129c",
+        "title": "Fish Specimen Collection of National Museum, Philippines",
+        "license": "CC-BY-4.0",
+        "recordsInGeometry": 504,
+        "metadataUrl": "https://api.obis.org/v3/dataset/288e63af-5f94-43d4-a039-f238b432129c",
+        "metadataSnapshot": "raw/marineregions-manila-bay-20261024/datasets/288e63af-5f94-43d4-a039-f238b432129c.json",
+        "metadataResponseSha256": "3ce67e712f09b6bc64de000f4d07cda9026987de16c84572e6a9fc3fdd0da41e"
+      },
+      {
+        "datasetId": "d6d6fe4c-425f-4ce7-bf28-7a6befaeb413",
+        "title": "National Museum of Natural History Vertebrate Zoology Fishes Collections",
+        "license": "CC-BY-4.0",
+        "recordsInGeometry": 40,
+        "metadataUrl": "https://api.obis.org/v3/dataset/d6d6fe4c-425f-4ce7-bf28-7a6befaeb413",
+        "metadataSnapshot": "raw/marineregions-manila-bay-20261024/datasets/d6d6fe4c-425f-4ce7-bf28-7a6befaeb413.json",
+        "metadataResponseSha256": "b822db4e6dad60ebe4624ea7debf161bdef2ece85fe4c3e0b5f894cdccf052e3"
+      },
+      {
+        "datasetId": "e971710e-054e-43f2-b23c-c149d6c76cb4",
+        "title": "Benthic species from the tropical Pacific surrounding New Caledonia",
+        "license": "CC-BY-4.0",
+        "recordsInGeometry": 8,
+        "metadataUrl": "https://api.obis.org/v3/dataset/e971710e-054e-43f2-b23c-c149d6c76cb4",
+        "metadataSnapshot": "raw/marineregions-manila-bay-20261024/datasets/e971710e-054e-43f2-b23c-c149d6c76cb4.json",
+        "metadataResponseSha256": "5f6c227e35e629e82f83e2325b2cfb9b3fce39167c663703897d0b3a00f44a89"
+      },
+      {
+        "datasetId": "f8c046f0-e8ae-49f5-b94c-f78809a8b7dc",
+        "title": "Western Australian Museum Fish Collection - Marine records",
+        "license": "CC-BY-4.0",
+        "recordsInGeometry": 8,
+        "metadataUrl": "https://api.obis.org/v3/dataset/f8c046f0-e8ae-49f5-b94c-f78809a8b7dc",
+        "metadataSnapshot": "raw/marineregions-manila-bay-20261024/datasets/f8c046f0-e8ae-49f5-b94c-f78809a8b7dc.json",
+        "metadataResponseSha256": "d91b3b97ac4951c4ab924555d4d28d3b9f957366a54ab27d154b6fa2e6c27065"
+      },
+      {
+        "datasetId": "340cf56f-f494-48c1-9f13-dd1fb3bfbdf2",
+        "title": "Fish collection of National Museum of Nature and Science",
+        "license": "CC-BY-4.0",
+        "recordsInGeometry": 6,
+        "metadataUrl": "https://api.obis.org/v3/dataset/340cf56f-f494-48c1-9f13-dd1fb3bfbdf2",
+        "metadataSnapshot": "raw/marineregions-manila-bay-20261024/datasets/340cf56f-f494-48c1-9f13-dd1fb3bfbdf2.json",
+        "metadataResponseSha256": "850770306b2ebe6107c7da9568b02ccdce627c6294859810122293849d3d6554"
+      },
+      {
+        "datasetId": "eaea291a-1e1d-4382-b86f-ac3cc15b8d5a",
+        "title": "iNaturalist Research-grade Observations Marine Subset",
+        "license": "CC-BY-NC-4.0",
+        "recordsInGeometry": 2,
+        "metadataUrl": "https://api.obis.org/v3/dataset/eaea291a-1e1d-4382-b86f-ac3cc15b8d5a",
+        "metadataSnapshot": "raw/marineregions-manila-bay-20261024/datasets/eaea291a-1e1d-4382-b86f-ac3cc15b8d5a.json",
+        "metadataResponseSha256": "139bd24dfb5fcbba9f7bf0baca2b3a544c3714949273b0d4f2d796fd502bf234"
+      },
+      {
+        "datasetId": "fbe20230-f4f1-48e7-83ee-4cd3ad15a1db",
+        "title": "Occurrence records of southern African aquatic biodiversity",
+        "license": "CC-BY-4.0",
+        "recordsInGeometry": 1,
+        "metadataUrl": "https://api.obis.org/v3/dataset/fbe20230-f4f1-48e7-83ee-4cd3ad15a1db",
+        "metadataSnapshot": "raw/marineregions-manila-bay-20261024/datasets/fbe20230-f4f1-48e7-83ee-4cd3ad15a1db.json",
+        "metadataResponseSha256": "f70bce8f2f0d4e1b6a0194db09143eacba3733cef31fa442c64a58ff5a674d33"
+      },
+      {
+        "datasetId": "a0737a06-66ef-41e7-9458-9c05f53340b5",
+        "title": "Australian Museum Ichthyology Collection",
+        "license": "CC-BY-4.0",
+        "recordsInGeometry": 1,
+        "metadataUrl": "https://api.obis.org/v3/dataset/a0737a06-66ef-41e7-9458-9c05f53340b5",
+        "metadataSnapshot": "raw/marineregions-manila-bay-20261024/datasets/a0737a06-66ef-41e7-9458-9c05f53340b5.json",
+        "metadataResponseSha256": "3094ab3a723e73246420f1c069007797aa63be30521b557a506170b1872d047c"
+      }
+    ],
+    "decision": "Each contributing dataset carries its own license and scope. The API result has no single result-wide reuse permission. Dataset metadata is only a first rights review; inspect each retained occurrence and original archive before any public reuse."
+  },
+  "highPriorityDatasetReview": {
+    "datasetId": "d6af0fac-8a21-4d77-8872-f10d471fc0cf",
+    "title": "CAS Ichthyology (ICH)",
+    "license": "CC0-1.0",
+    "recordsInsideGeometry": 610,
+    "distinctScientificNameStrings": 356,
+    "distinctSpeciesFieldValues": 330,
+    "distinctCoordinates": 28,
+    "yearRange": [
+      1900,
+      1969
+    ],
+    "recordsMissingYear": 189,
+    "recordsWithEventDate": 421,
+    "recordsWithLocalityText": 610,
+    "recordsWithCoordinateUncertainty": 609,
+    "recordsWithAnyQualityFlag": 583,
+    "qualityFlags": {
+      "NO_DEPTH": 566,
+      "ON_LAND": 6,
+      "DEPTH_EXCEEDS_BATH": 17,
+      "NO_ACCEPTED_NAME": 1
+    },
+    "caviteLocalityText": {
+      "records": 160,
+      "distinctScientificNameStrings": 142,
+      "recordsWithYear": 24,
+      "recordsWithCoordinateUncertainty": 160,
+      "medianCoordinateUncertaintyMeters": 45341
+    },
+    "manilaBayLocalityText": {
+      "records": 149,
+      "distinctScientificNameStrings": 112,
+      "recordsWithYear": 129,
+      "recordsWithCoordinateUncertainty": 149
+    },
+    "metadataCaveat": "This is the CAS electronic ichthyology collection. Broad locality strings and coarse coordinates do not establish exact Cavite capture sites or current presence.",
+    "decision": "CC0 source lead for a later record-level historical review; do not add the 610 rows or 356 name strings to app evidence from this query alone."
+  },
+  "rightsAndScope": {
+    "occurrenceRowsRetainedOnlyInIgnoredLocalResearchStorage": true,
+    "datasetLicenseReviewCompletedForAllContributingDatasetMetadata": true,
+    "recordLevelIdentityAndOriginalArchiveReviewCompleted": false,
+    "newSpeciesAssertionsAdmitted": 0,
+    "publicProjection": false,
+    "officialMunicipalWaterGeometryFound": false,
+    "absenceInferenceMade": false
+  },
+  "limits": [
+    "Marine Regions MRGID 31579 is a named Manila Bay polygon, not an official Cavite or municipal-water boundary; the Gazetteer record identifies GeoNames as the place-name source and Marine Regions as geometry provenance.",
+    "Marine Regions terms restrict intended use to scientific, educational and research uses and disclaim legal value. Do not expose this geometry as a fishing, navigation, legal or municipal-water boundary in Bangwit.",
+    "The bbox includes points outside the bay polygon; only the 1,874 exact-filter matches were counted inside this named-bay geometry. The ray-casting implementation was used for discovery and is not a full topology validation.",
+    "OBIS quality flags may overlap and include missing depth, location, bathymetry and taxonomic issues; they require record-level interpretation.",
+    "The CAS subset is historic (1900-1969); 160 locality strings include Cavite but have a median coordinate uncertainty of 45,341 m, and only 24 of those rows have a year value.",
+    "Dataset licenses vary. No record-level original archive, current-presence, legal boundary, abundance, catchability, diet or safety conclusion is made.",
+    "OBIS is a marine biodiversity source and does not cover the regional freshwater checklist needed for rivers, lakes and reservoirs."
+  ],
+  "nextActions": [
+    "Continue record-level review of the CC0 CAS candidate subset, retaining original locality/date and OBIS quality flags; only admit a small historical Manila Bay assertion if an explicit criterion is met.",
+    "Keep seeking an authoritative Cavite municipal-water or other fit-for-purpose boundary independently; do not infer it from this bay polygon.",
+    "Continue separate inland-water source work for CALABARZON before advancing to NCR."
+  ]
+}

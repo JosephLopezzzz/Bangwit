@@ -5,7 +5,7 @@
   "status": "source-leads-expanded-no-new-species-admissions",
   "sourceRegistryCountBefore": 28,
   "sourceRegistryCountAfter": 33,
-  "sourceRegistryCountAfterFollowUp": 59,
+  "sourceRegistryCountAfterFollowUp": 61,
   "scopeNote": "This is a bounded sweep of high-value public research leads for inland, marine and estuarine coverage. It is not a complete review of all 36 waterbody leads, a fish distribution baseline, or an absence assessment.",
   "counts": {
     "newSourceLeadsReviewed": 5,
@@ -536,6 +536,32 @@
       "reportedChecklistTotal": 4502,
       "checklistRowsReturned": 4786,
       "decision": "national-area-discovery-only;checklist-count-unreconciled;no-local-verde-area;no-species-assertions-admitted"
+    },
+    {
+      "sourceId": "obis-manila-bay-actinopterygii-geometry-discovery",
+      "relatedSourceIds": [
+        "marine-regions-manila-bay-bay-geometry"
+      ],
+      "reviewFile": "calabarzon-marineregions-manila-bay-obis-review-20261024.json",
+      "checkedOn": "2026-10-24",
+      "waterbodyIds": [
+        "ph-wb-manila-bay"
+      ],
+      "queryScope": "OBIS Actinopterygii within a bbox around Marine Regions MRGID 31579, followed by local point-in-multipolygon filtering.",
+      "sourceFacts": {
+        "bboxRows": 2654,
+        "rowsInsideNamedBayGeometry": 1874,
+        "contributingDatasets": 10,
+        "distinctScientificNameStrings": 539,
+        "recordsWithAnyQualityFlag": 1795,
+        "caviteTextRowsInCAS": 160,
+        "caviteTextMedianCoordinateUncertaintyMeters": 45341
+      },
+      "accessReview": "Marine Regions geometry and OBIS API/dataset metadata were retrieved through public official endpoints; raw snapshots are ignored and SHA-256 pinned.",
+      "reuseReview": "Contributor datasets have mixed CC-BY, CC0 and CC-BY-NC licenses. Marine Regions terms restrict intended use to scientific, educational and research and disclaim legal value. No public app geometry or record reuse was approved.",
+      "decision": "bounded-named-bay-discovery-only;no-new-species-assertions;not-municipal-water-geometry",
+      "admittedSpeciesAssertions": 0,
+      "publicProjection": false
     }
   ],
   "regionalGapSummary": {

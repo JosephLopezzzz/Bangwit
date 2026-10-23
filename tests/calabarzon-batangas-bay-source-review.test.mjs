@@ -30,8 +30,8 @@ test("Batangas Bay poster and GBIF checks remain bounded research leads, not app
     publicProjection: false,
   });
 
-  assert.equal(registry.sourceCount, 59);
-  assert.equal(registry.sources.length, 59);
+  assert.equal(registry.sourceCount, 61);
+  assert.equal(registry.sources.length, 61);
   for (const id of ["nfrdi-2025-batangas-bay-dominant-fish-poster", "gbif-batangas-bay-exact-fish-locality-check"]) {
     assert.ok(registry.sources.some((source) => source.id === id && source.publicationApproval === false));
     assert.ok(scope.waterbodies.find((waterbody) => waterbody.id === review.waterbodyId)?.sourceRefs.includes(id));
@@ -44,5 +44,5 @@ test("Batangas Bay poster and GBIF checks remain bounded research leads, not app
   assert.ok(gbifFollowUp);
   assert.equal(gbifFollowUp.localityResults[0].records, 0);
   assert.match(gbifFollowUp.decision, /not-an-absence-claim/);
-  assert.equal(sweep.sourceRegistryCountAfterFollowUp, 59);
+  assert.equal(sweep.sourceRegistryCountAfterFollowUp, 61);
 });

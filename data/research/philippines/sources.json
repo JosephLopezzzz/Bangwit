@@ -3,7 +3,7 @@
   "checkedOn": "2026-10-24",
   "status": "research-only-source-registry",
   "scope": "National acquisition references and CALABARZON identity/source leads. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 59,
+  "sourceCount": 61,
   "sources": [
     {
       "id": "gbif-col-xr-taxonomy-matching",
@@ -1499,6 +1499,65 @@
       "researchStatus": "national-area-discovery-only;checklist-count-unreconciled;no-local-verde-area;no-species-assertions-admitted",
       "sourceYear": null,
       "license": null
+    },
+    {
+      "id": "marine-regions-manila-bay-bay-geometry",
+      "title": "Marine Regions Manila Bay Gazetteer geometry, MRGID 31579",
+      "provider": "Flanders Marine Institute / Marine Regions",
+      "url": "https://www.marineregions.org/gazetteer.php?id=31579&p=details",
+      "additionalUrls": [
+        "https://www.marineregions.org/rest/getGazetteerGeometries.jsonld/31579/",
+        "https://www.marineregions.org/disclaimer.php"
+      ],
+      "role": "Exploratory named-bay geometry for bounded OBIS discovery only; not an official Cavite, legal, navigation, fishing-ground or municipal-water boundary.",
+      "checkedOn": "2026-10-24",
+      "access": {
+        "status": "official-gazetteer-and-geometry-response-reviewed",
+        "reviewFiles": [
+          "calabarzon-marineregions-manila-bay-obis-review-20261024.json"
+        ],
+        "rawPath": "raw/marineregions-manila-bay-20261024/",
+        "geometrySha256": "425829a0061ad7f6ee2f11adcd24cf85001b56e1f8774123cd39784696cae9ae"
+      },
+      "reuse": {
+        "metadata": "Gazetteer page identifies GeoNames as the place-name source; the returned geometry lists Marine Regions as its provenance. The site states CC-BY for products, but product-specific licensing and suitability for public operational app use were not separately confirmed.",
+        "raw": "Ignored local research snapshots retained for source verification; do not rehost the geometry.",
+        "content": "Marine Regions terms limit intended use to scientific, educational and research purposes and state that data has no legal value; no public app geometry projection is approved."
+      },
+      "publicationApproval": false,
+      "researchStatus": "research-only-named-bay-geometry;not-official-boundary;no-app-projection",
+      "license": "CC-BY per site-wide statement; specific product scope not independently confirmed",
+      "mrgid": 31579
+    },
+    {
+      "id": "obis-manila-bay-actinopterygii-geometry-discovery",
+      "title": "OBIS Actinopterygii Manila Bay geometry-based discovery query",
+      "provider": "UNESCO-IOC Ocean Biodiversity Information System",
+      "url": "https://api.obis.org/v3/occurrence",
+      "additionalUrls": [
+        "https://manual.obis.org/access",
+        "https://manual.obis.org/FAQ.html",
+        "https://api.obis.org/v3/dataset/d6af0fac-8a21-4d77-8872-f10d471fc0cf"
+      ],
+      "role": "Bounded historical marine candidate search using a Marine Regions Manila Bay bbox query and local point-in-polygon filter; not a Cavite municipal-water inventory or complete CALABARZON checklist.",
+      "checkedOn": "2026-10-24",
+      "access": {
+        "status": "bounded-bbox-query-and-10-contributing-dataset-metadata-reviewed",
+        "reviewFiles": [
+          "calabarzon-marineregions-manila-bay-obis-review-20261024.json"
+        ],
+        "rawPath": "raw/marineregions-manila-bay-20261024/",
+        "occurrenceResponseSha256": "253bee792cad7eaa4e3fe4330d4cdfcc798c8d836f69c0c25881604d37f1a296"
+      },
+      "reuse": {
+        "metadata": "OBIS access guide supports geometry-filtered occurrence queries and recommends bounding-box retrieval followed by exact geometric filtering for complex geometries. Contributor dataset licenses differ and must be treated separately.",
+        "raw": "The 2,654 bounding-box query rows and ten dataset metadata responses are held only in ignored local research storage with hashes.",
+        "content": "No new occurrence records or species assertions are admitted. Each record needs its source dataset, original archive, locality, date, quality flags and taxonomy reviewed before reuse."
+      },
+      "publicationApproval": false,
+      "researchStatus": "historical-discovery-only;record-level-review-pending;no-species-assertions-admitted",
+      "taxonId": 10194,
+      "occurrenceRecordsInsideNamedBayGeometry": 1874
     }
   ],
   "sourcePolicy": {
