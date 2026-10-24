@@ -3,7 +3,7 @@
   "checkedOn": "2026-10-24",
   "status": "research-only-source-registry",
   "scope": "National acquisition references and CALABARZON/Central Luzon identity/source leads. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 112,
+  "sourceCount": 114,
   "sources": [
     {
       "id": "gbif-col-xr-taxonomy-matching",
@@ -2884,6 +2884,63 @@
       "publicationApproval": false,
       "researchStatus": "2018-station-bounded-interview-catch-context;fish-identities-and-catch-dates-unverified;no-app-projection",
       "sourceYear": 2018
+    },
+    {
+      "id": "gbif-central-luzon-jica-station-proximity-screen-20261024",
+      "title": "GBIF corrected COL XR Actinopterygii screen around five DOTr/JICA freshwater survey stations",
+      "provider": "Global Biodiversity Information Facility and contributing occurrence datasets",
+      "url": "https://techdocs.gbif.org/en/openapi/v1/occurrence",
+      "additionalUrls": [
+        "https://api.gbif.org/v1/occurrence/search",
+        "https://mczbase.mcz.harvard.edu/info/api.cfm",
+        "https://mczbase.mcz.harvard.edu/guid/MCZ:Ich:26349"
+      ],
+      "role": "Five station-centered coordinate windows and one broad Pampanga-Bulacan rectangle used only to discover candidate fish records near the 2018 DOTr/JICA EIS sites. The five windows returned zero rows; the broad rectangle returned nine, none assigned to a named station reach.",
+      "checkedOn": "2026-10-24",
+      "access": {
+        "status": "six-public-GBIF-search-responses-reviewed-and-hashed;raw-snapshots-ignored",
+        "reviewFiles": [
+          "central-luzon-jica-gbif-proximity-screen-20261024.json"
+        ],
+        "rawPath": "raw/gbif-jica-station-proximity-screen-20261024/",
+        "rawSha256Recorded": true
+      },
+      "reuse": {
+        "metadata": "The GBIF API query and selected occurrence metadata were reviewed; one follow-up links to the MCZbase API documentation and specimen GUID.",
+        "raw": "The six GBIF response snapshots and manifest are local ignored research files and are not added to the application bundle.",
+        "content": "Candidate records have mixed contributor licenses, coarse or conflicting localities, and taxonomic or georeferencing issues. Review each independently; this screen grants no general reuse permission and supports no current-presence claims."
+      },
+      "publicationApproval": false,
+      "researchStatus": "five-station-windows-zero;wide-rectangle-nine;all-nine-held;no-app-projection",
+      "apiBaseUrl": "https://api.gbif.org/v1",
+      "accessRequirements": "Public occurrence searches are available without a GBIF key; bulk downloads require authenticated GBIF access. No bulk download was submitted."
+    },
+    {
+      "id": "up-iesm-angeles-pampanga-ibi-thesis-2005",
+      "title": "Assessment of the fish population in Pampanga River, Central Luzon, Philippines using the index of biotic integrity",
+      "provider": "Sheryll P. Angeles; University of the Philippines Diliman Institute of Environmental Science and Meteorology; National Library of the Philippines catalog",
+      "url": "https://www.elib.gov.ph/details.php?uid=b3115f1f316f5a74fb20f80209ee81bb",
+      "additionalUrls": [
+        "https://iesm.science.upd.edu.ph/wp-content/uploads/2017/11/Assessment-of-theFish-Popukation-in-Pampanga-River-Central-Luzon-Philippines-Using-the-Index-ofBiotic-Integrity.pdf",
+        "https://www.asiaresearchnews.com/html/article.php/aid/3114/cid/2/research/science/university_of_the_philippines_diliman/the_philippines_pampanga_river_scores_well_in_ibi_ecological_test"
+      ],
+      "role": "Catalog-confirmed 2005 UP Diliman thesis lead for Pampanga River. The National Library record identifies a physical thesis and says the digital copy is unavailable; the old UP-linked PDF returned 404. A secondary institutional summary reports four study sites including Apalit but does not supply species-by-site data.",
+      "checkedOn": "2026-10-24",
+      "sourceYear": 2005,
+      "access": {
+        "status": "national-library-catalog-reviewed;digital-copy-not-available;institutional-pdf-link-http-404",
+        "reviewFiles": [
+          "central-luzon-pampanga-apalit-2005-ibi-thesis-access-review-20261024.json"
+        ],
+        "primaryTablesReviewed": false
+      },
+      "reuse": {
+        "metadata": "National Library catalog metadata and an attributed secondary UP-study summary were reviewed.",
+        "raw": "No thesis file was acquired or redistributed; the failed PDF response was an HTML 404 page and was not retained.",
+        "content": "Thesis item-specific reuse terms are unreviewed. Do not reconstruct or publish the species table from aggregate secondary reporting."
+      },
+      "publicationApproval": false,
+      "researchStatus": "2005-thesis-catalog-confirmed;primary-table-access-pending;zero-species-assertions"
     }
   ],
   "sourcePolicy": {

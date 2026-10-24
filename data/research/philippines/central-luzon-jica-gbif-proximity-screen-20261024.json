@@ -1,0 +1,206 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-24",
+  "phaseId": "L3",
+  "regionId": "0300000000",
+  "status": "bounded-coordinate-screen-reviewed;research-only;all-candidates-held",
+  "purpose": "Check whether a corrected GBIF COL XR Actinopterygii occurrence query returns records close to five DOTr/JICA freshwater environmental-survey stations, then run one wider Pampanga-Bulacan discovery rectangle. This is candidate discovery only, not a waterbody checklist.",
+  "sourceIds": [
+    "gbif-central-luzon-jica-station-proximity-screen-20261024",
+    "jica-dotr-pnr-clark-phase2-eis-freshwater-ecology-2018"
+  ],
+  "queryDefinition": {
+    "endpoint": "https://api.gbif.org/v1/occurrence/search",
+    "parameters": {
+      "country": "PH",
+      "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+      "checklistName": "Catalogue of Life eXtended Release (COL XR)",
+      "taxonKey": "8VR36",
+      "taxonName": "Actinopterygii",
+      "hasCoordinate": true,
+      "occurrenceStatus": "PRESENT",
+      "limit": 100
+    },
+    "stationWindowMethod": "One square search window per JICA station, centered on the environmental-survey station coordinate and extending 0.01 degrees in each cardinal direction (about 1.1 km per side-half at this latitude; not a measured waterbody buffer).",
+    "stationCoordinatesMeaning": "JICA coordinates identify environmental sampling stations, not fish capture coordinates. The windows are only query geometry and do not claim the station is a catch locality.",
+    "stationWindows": [
+      {
+        "station": "SW-2",
+        "waterbodyAsPrinted": "Labangan River, Calumpit, Bulacan (Confluence of Angat River and Bagbag River)",
+        "resultCount": 0,
+        "returnedRows": 0,
+        "endOfRecords": true,
+        "rawSnapshot": "raw/gbif-jica-station-proximity-screen-20261024/SW-2.json",
+        "sha256": "16004ddeb6b1eb033e3665fa6082d9cdd36533ce1f36272a2a95f5664f1b9dcd"
+      },
+      {
+        "station": "SW-4",
+        "waterbodyAsPrinted": "Pampanga River, Apalit, Pampanga",
+        "resultCount": 0,
+        "returnedRows": 0,
+        "endOfRecords": true,
+        "rawSnapshot": "raw/gbif-jica-station-proximity-screen-20261024/SW-4.json",
+        "sha256": "16004ddeb6b1eb033e3665fa6082d9cdd36533ce1f36272a2a95f5664f1b9dcd"
+      },
+      {
+        "station": "SW-5",
+        "waterbodyAsPrinted": "Malalam River, Minalin, Pampanga",
+        "resultCount": 0,
+        "returnedRows": 0,
+        "endOfRecords": true,
+        "rawSnapshot": "raw/gbif-jica-station-proximity-screen-20261024/SW-5.json",
+        "sha256": "16004ddeb6b1eb033e3665fa6082d9cdd36533ce1f36272a2a95f5664f1b9dcd"
+      },
+      {
+        "station": "SW-6",
+        "waterbodyAsPrinted": "Masaluso, Minalin, Pampanga",
+        "resultCount": 0,
+        "returnedRows": 0,
+        "endOfRecords": true,
+        "rawSnapshot": "raw/gbif-jica-station-proximity-screen-20261024/SW-6.json",
+        "sha256": "16004ddeb6b1eb033e3665fa6082d9cdd36533ce1f36272a2a95f5664f1b9dcd"
+      },
+      {
+        "station": "SW-8",
+        "waterbodyAsPrinted": "Calutcut Creek, San Fernando City, Pampanga",
+        "resultCount": 0,
+        "returnedRows": 0,
+        "endOfRecords": true,
+        "rawSnapshot": "raw/gbif-jica-station-proximity-screen-20261024/SW-8.json",
+        "sha256": "16004ddeb6b1eb033e3665fa6082d9cdd36533ce1f36272a2a95f5664f1b9dcd"
+      }
+    ],
+    "widerDiscoveryRectangle": {
+      "geometry": "POLYGON ((120.60 14.85, 120.80 14.85, 120.80 15.16, 120.60 15.16, 120.60 14.85))",
+      "resultCount": 9,
+      "returnedRows": 9,
+      "endOfRecords": true,
+      "interpretation": "A broad rectangular geographic query includes land, estuary, coastal and neighboring localities. Its records are not automatically assigned to the named JICA reaches.",
+      "rawSnapshot": "raw/gbif-jica-station-proximity-screen-20261024/broad-regional-rectangle.json",
+      "sha256": "91fc33853cff255f0b9f4c8a13ce6a754a632335583f82cfa580234896e7444b"
+    },
+    "rawManifest": "raw/gbif-jica-station-proximity-screen-20261024/manifest.json"
+  },
+  "candidateDispositions": [
+    {
+      "gbifKey": 5205863888,
+      "recordedTaxon": "Pterygoplichthys",
+      "rank": "GENUS",
+      "eventDate": "2020-03-28",
+      "reportedLocality": "Bebe Matua, Masantol, Pampanga",
+      "uncertaintyMeters": 1752,
+      "license": "CC-BY-NC-4.0",
+      "decision": "hold; genus-only and not assigned to a named station waterbody; noncommercial license is not cleared for Bangwit reuse"
+    },
+    {
+      "gbifKey": 3350348502,
+      "recordedTaxon": "Mayaheros urophthalmus",
+      "rank": "SPECIES",
+      "eventDate": "2013-08-25",
+      "reportedLocality": "Bulacan, Region III",
+      "reportedCatalogNumber": "FH02; sequence accession KM212020",
+      "license": "CC-BY-4.0",
+      "decision": "hold; eDNA/sequence-associated record with coarse locality and a coordinate on the query rectangle edge; no named river/site confirmed"
+    },
+    {
+      "gbifKey": 3350436837,
+      "recordedTaxon": "Mayaheros urophthalmus",
+      "rank": "SPECIES",
+      "eventDate": "2013-08-25",
+      "reportedLocality": "Bulacan, Region III",
+      "reportedCatalogNumber": "FH01; sequence accession KM212017",
+      "license": "CC-BY-4.0",
+      "decision": "hold; same coarse coordinate, locality, date and source context as two linked sequence rows; do not count the three rows as independent site-level evidence"
+    },
+    {
+      "gbifKey": 3350484626,
+      "recordedTaxon": "Mayaheros urophthalmus",
+      "rank": "SPECIES",
+      "eventDate": "2013-08-25",
+      "reportedLocality": "Bulacan, Region III",
+      "reportedCatalogNumber": "FH06; sequence accession KM212019",
+      "license": "CC-BY-4.0",
+      "decision": "hold; same coarse coordinate, locality, date and source context as two linked sequence rows; do not count the three rows as independent site-level evidence"
+    },
+    {
+      "gbifKey": 6517569929,
+      "recordedTaxon": "Taenioides gracilis",
+      "rank": "SPECIES",
+      "eventDate": "1948",
+      "reportedCatalogNumber": "NMI 11707",
+      "license": "CC-BY-4.0",
+      "decision": "hold; locality and waterbody are blank, coordinate uncertainty is absent, and the record does not support a Pampanga reach assignment"
+    },
+    {
+      "gbifKey": 3426421933,
+      "recordedTaxon": "Manacopus falcifer",
+      "gbifAcceptedName": "Gulaphallus falcifer",
+      "rank": "SPECIES",
+      "eventDate": "1936-12-12",
+      "reportedLocality": "Mexico, P.I.",
+      "uncertaintyMeters": 3036,
+      "license": "CC0-1.0",
+      "decision": "hold; historical municipality-level label and broad georeference do not identify a waterbody or reach"
+    },
+    {
+      "gbifKey": 3426461771,
+      "recordedTaxon": "Stenogobius ophthalmoporus",
+      "rank": "SPECIES",
+      "eventDate": "1927-04-11",
+      "reportedLocality": "Guagua.",
+      "uncertaintyMeters": 4764,
+      "license": "CC0-1.0",
+      "decision": "hold; historical town-level locality, no named waterbody, and uncertainty spans possible sites"
+    },
+    {
+      "gbifKey": 3426466781,
+      "recordedTaxon": "Stenogobius ophthalmoporus",
+      "rank": "SPECIES",
+      "eventDate": "1925-09-19",
+      "reportedLocality": "Calumpit",
+      "reportedWaterBody": "Quingoa River",
+      "uncertaintyMeters": 9235,
+      "license": "CC0-1.0",
+      "decision": "already reviewed in the separate Quingoa screen; retain as historical held candidate, do not duplicate or treat as current presence"
+    },
+    {
+      "gbifKey": 863131305,
+      "recordedTaxon": "Leiopotherapon plumbeus",
+      "rank": "SPECIES",
+      "eventDate": "1885-05-01/1885-05-31",
+      "reportedLocality": "Colompit, Philipines",
+      "reportedWaterBody": "Pacific, Western Central",
+      "uncertaintyMeters": 12326,
+      "reportedCatalogNumber": "MCZ:Ich:26349",
+      "reportedFieldNumber": "GOTT:COLOMPIT",
+      "license": "CC-BY-NC-4.0",
+      "gbifGeoreferenceRemark": "Coordinates at Calumpit.",
+      "museumCatalogFollowup": {
+        "recordUri": "https://mczbase.mcz.harvard.edu/guid/MCZ:Ich:26349",
+        "apiDocumentation": "https://mczbase.mcz.harvard.edu/info/api.cfm",
+        "apiDocumentationResult": "MCZbase documentation confirms the permanent GUID pattern institution:collection:catalog number and identifies HTML/RDF access methods.",
+        "recordAccess": "The exact specimen URI returned HTTP 403 in the direct request and was inaccessible through the search tool; no primary catalog page contents were reviewed.",
+        "decision": "hold; the verbatim spelling, Calumpit georeference remark, 12.3-km uncertainty, and Pacific waterBody field conflict. Do not normalize Colompit to Calumpit or assign a river without the original catalog record/label. CC-BY-NC reuse is not cleared."
+      },
+      "decision": "hold; historical locality unresolved, record fields conflict, original MCZ label has not been inspected, and noncommercial reuse is not cleared"
+    }
+  ],
+  "interpretation": [
+    "The five exact station-centered square windows each returned zero rows. This only describes the GBIF query and geometry used; it is not evidence that fish are absent from the sites.",
+    "The wider rectangle returned nine rows, but none can be assigned to one of the five JICA reach/station sites from this query alone.",
+    "The query covered COL XR Actinopterygii only. It did not screen sharks, rays, taxa without the selected classification, no-coordinate records, occurrence records omitted by GBIF indexing, or non-GBIF literature.",
+    "The query's country, taxon and coordinate filters do not certify field identity, locality, source rights, wild capture, present-day occupancy, catchability, legal access or food safety."
+  ],
+  "disposition": {
+    "stationWindows": 5,
+    "zeroResultWindows": 5,
+    "widerRectangleRows": 9,
+    "candidateRowsAdmitted": 0,
+    "currentPresenceAssertionsAdded": 0,
+    "appProjectionRowsAdded": 0,
+    "captureCoordinatesAdded": 0,
+    "waterbodyGeometryAdded": false,
+    "regionalCompletionApproved": false
+  },
+  "nextStep": "Seek a legitimately accessible copy of Angeles (2005) from the National Library or UP Diliman to review its Pampanga River/Apalit fish evidence; continue site-resolved freshwater discovery for the remaining Central Luzon rivers, lakes, reservoirs, wetlands and coastal/brackish leads. Keep Central Luzon incomplete."
+}
