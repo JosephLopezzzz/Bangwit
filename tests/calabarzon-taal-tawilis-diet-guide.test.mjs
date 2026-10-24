@@ -4,10 +4,11 @@ import { test } from "node:test";
 import guides from "../src/data/feeding-guides.json" with { type: "json" };
 
 const base = new URL("../data/research/philippines/", import.meta.url);
-const [review, scope, sourceRegistry] = await Promise.all([
+const [review, scope, sourceRegistry, midasReview] = await Promise.all([
   readFile(new URL("calabarzon-taal-tawilis-diet-review-20261024.json", base), "utf8").then(JSON.parse),
   readFile(new URL("calabarzon-scope.json", base), "utf8").then(JSON.parse),
   readFile(new URL("sources.json", base), "utf8").then(JSON.parse),
+  readFile(new URL("calabarzon-taal-midas-cichlid-catch-study-rights-review-20261024.json", base), "utf8").then(JSON.parse),
 ]);
 
 test("publishes one attributed Taal tawilis natural-diet guide without adding an occurrence claim", () => {
@@ -37,4 +38,22 @@ test("pins the CC BY source to Taal Lake while keeping the regional species inve
   assert.equal(taal.fishEvidenceStatus, "not-reviewed");
   assert.equal(review.decision.regionalBaselineComplete, false);
   assert.equal(review.accessAndRights.excludedMaterial.includes("No table or figure image"), true);
+});
+
+test("tracks the Taal Midas cichlid assessment as historical noncommercial evidence without publishing catch claims", () => {
+  const source = sourceRegistry.sources.find((item) => item.id === midasReview.sourceId);
+  const taal = scope.waterbodies.find((item) => item.id === midasReview.waterbodyId);
+  assert.ok(source);
+  assert.ok(taal);
+  assert.ok(source.access.reviewFiles.includes("calabarzon-taal-midas-cichlid-catch-study-rights-review-20261024.json"));
+  assert.ok(taal.sourceRefs.includes(source.id));
+  assert.match(source.reuse.metadata, /CC BY-NC 4\.0/);
+  assert.match(midasReview.sourceFacts.assessmentPeriod, /2011 through 2022/);
+  assert.match(midasReview.sourceFacts.tableConflict, /eight landing municipalities.*nine municipalities/i);
+  assert.equal(midasReview.decision.speciesAssertionsAdded, 0);
+  assert.equal(midasReview.decision.municipalityPresenceClaimsAdded, 0);
+  assert.equal(midasReview.decision.abundanceOrCatchForecastAdded, 0);
+  assert.equal(midasReview.decision.publicAppProjectionAdded, false);
+  assert.equal(midasReview.decision.publicationApproval, false);
+  assert.equal(midasReview.decision.regionalBaselineComplete, false);
 });

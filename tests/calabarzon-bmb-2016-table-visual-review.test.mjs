@@ -80,7 +80,7 @@ test("new river and creek leads carry bounded zero searches, not fish-absence cl
   assert.ok(gbif.access.reviewFiles.includes("calabarzon-bmb-2016-visual-followup-river-gbif-screen-20261024.json"));
   assert.ok(gbif.access.additionalRawPaths.includes("raw/calabarzon-bmb-2016-visual-followup-gbif-20261024/"));
   assert.equal(report.coverageSummary.namedWaterbodyLeads, 83);
-assert.equal(report.coverageSummary.sourceAssignments, 193);
+assert.equal(report.coverageSummary.sourceAssignments, 194);
   assert.equal(report.coverageSummary.leadsStillResearchQueued, 20);
   assert.equal(report.coverageSummary.unknownSalinityLeads, 78);
   assert.equal(report.coverageSummary.regionalBaselineComplete, false);
