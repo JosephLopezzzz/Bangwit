@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-24",
+  "phaseId": "L3",
+  "regionId": "0300000000",
+  "waterbodyStudyReach": "Angat River Network, Bustos, Bulacan; source-reported approximate 8 km stretch",
+  "sourceId": "de-regla-et-al-angat-bustos-aquatic-life-2015",
+  "status": "source-name-crosswalk-complete;sample-identities-and-date-unverified;no-app-assertions",
+  "method": {
+    "sourceTable": "Table 3, scientific/local names of fish samples",
+    "abstractConflict": "The abstract omits Trichogaster lalius, although the results and Table 3 include Gurami / Trichogaster lalius.",
+    "spellingConflict": "The abstract prints Misgurnus fossils; Table 3 prints Misgurnus fossilis.",
+    "taxonomyAuthorities": [
+      {
+        "sourceId": "calacademy-catalog-angat-bustos-taxonomy-followup-20261024",
+        "checkedOn": "2026-10-24",
+        "catalogVersion": "Online Version, updated 13 August 2026"
+      },
+      {
+        "sourceId": "itis-angat-bustos-taxonomy-followup-20261024",
+        "checkedOn": "2026-10-24"
+      },
+      {
+        "sourceId": "gbif-backbone-angat-bustos-name-match-20261024",
+        "checkedOn": "2026-10-24",
+        "query": "strict scientific-name matches for six printed fish names"
+      }
+    ]
+  },
+  "nameReviews": [
+    {
+      "sourceName": "Leiopotherapon plumbeus",
+      "catalogOfFishes": "Valid as Leiopotherapon plumbeus (Kner, 1864)",
+      "itis": "Valid species; TSN 168057",
+      "gbif": "Exact accepted species match; key 2374507",
+      "disposition": "name-crosswalk-agreement;source-specimen-identification-not-independently-verified"
+    },
+    {
+      "sourceName": "Glossogobius giuris",
+      "catalogOfFishes": "Valid as Glossogobius giuris (Hamilton, 1822)",
+      "itis": "Species record; TSN 637376",
+      "gbif": "Exact accepted species match; key 2378087",
+      "disposition": "name-crosswalk-agreement;source-specimen-identification-not-independently-verified"
+    },
+    {
+      "sourceName": "Oreochromis niloticus",
+      "catalogOfFishes": "Valid as Oreochromis niloticus (Linnaeus, 1758)",
+      "itis": "Valid species; TSN 553310",
+      "gbif": "Exact accepted species match; key 4285694",
+      "disposition": "name-crosswalk-agreement;source-specimen-identification-not-independently-verified"
+    },
+    {
+      "sourceName": "Trichogaster lalius",
+      "catalogOfFishes": "Current status: synonym of Trichogaster fasciata (Bloch & Schneider, 1801)",
+      "itis": "TSN 638787 treats the name as invalid and gives Colisa lalia as the valid name",
+      "gbif": "Exact accepted species match; key 5211200",
+      "disposition": "taxonomy-conflict-hold;preserve-source-string;do-not-select-an-accepted-name"
+    },
+    {
+      "sourceName": "Misgurnus fossilis",
+      "sourceVariantInAbstract": "Misgurnus fossils",
+      "catalogOfFishes": "The Catalog query surfaced an uncertain historical synonym, not independent confirmation of the Angat sample",
+      "itis": "Valid species; TSN 163979",
+      "gbif": "Exact accepted species match; key 2367936",
+      "disposition": "source-identification-hold;table-and-abstract-spelling-conflict;no-voucher-or-diagnostic-description"
+    },
+    {
+      "sourceName": "Cyprinus carpio",
+      "catalogOfFishes": "Valid as Cyprinus carpio Linnaeus, 1758",
+      "itis": "Valid species; TSN 163344",
+      "gbif": "Exact accepted species match; key 4286975",
+      "disposition": "name-crosswalk-agreement;source-specimen-identification-not-independently-verified"
+    }
+  ],
+  "excludedFromFishCrosswalk": [
+    {
+      "sourceName": "Macrobrachium rosenbergii",
+      "reason": "Prawn/crustacean, not a fish; retain only as source-reported aquatic-life context."
+    }
+  ],
+  "evidenceLimits": [
+    "Taxonomic name agreement does not independently verify the fish specimens named in the paper.",
+    "The paper supplies no voucher/catalog numbers or independently reviewable diagnostic identifications for the samples.",
+    "The equipment-rental date is not a sampling date; no taxon-specific collection date is established.",
+    "The article's negative metal readings and unresolved item-level reuse terms remain separate source-quality and rights holds.",
+    "Do not infer current presence, abundance, catchability, fish safety, legal access or complete Angat River Network inventory."
+  ],
+  "disposition": {
+    "sourceNameRowsReviewed": 6,
+    "nameCrosswalkAgreements": 4,
+    "taxonomyConflictHolds": 1,
+    "sourceIdentificationsNotIndependentlyVerified": 6,
+    "crustaceanRowsExcludedFromFishCrosswalk": 1,
+    "siteResolvedFishAssertionsAdded": 0,
+    "appProjectionRowsAdded": 0,
+    "foodSafetyClaimsAdded": 0,
+    "geometryAdded": false,
+    "regionalCompletionApproved": false
+  },
+  "nextStep": "Seek voucher, diagnostic images or an independent site-linked survey to review source identifications; keep the source-name crosswalk separate from specimen identity, current presence and food-safety claims."
+}

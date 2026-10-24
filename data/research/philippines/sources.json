@@ -3,7 +3,7 @@
   "checkedOn": "2026-10-24",
   "status": "research-only-source-registry",
   "scope": "National acquisition references and CALABARZON/Central Luzon identity/source leads. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 108,
+  "sourceCount": 111,
   "sources": [
     {
       "id": "gbif-col-xr-taxonomy-matching",
@@ -2689,6 +2689,89 @@
       },
       "publicationApproval": false,
       "researchStatus": "valid-species-name-crosscheck-only"
+    },
+    {
+      "id": "calacademy-catalog-angat-bustos-taxonomy-followup-20261024",
+      "title": "Eschmeyer's Catalog of Fishes: Angat-Bustos study-name cross-check",
+      "provider": "California Academy of Sciences",
+      "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Trichogaster&tbl=species",
+      "additionalUrls": [
+        "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=22356",
+        "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=18735",
+        "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Oreochromis&species=niloticus&tbl=species",
+        "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Cyprinus&species=carpio&tbl=species"
+      ],
+      "role": "Independent fish-name and nomenclatural-status cross-check for six source-reported Angat River Network fish strings; does not verify source specimen identifications.",
+      "checkedOn": "2026-10-24",
+      "access": {
+        "status": "public-catalog-record-pages-reviewed",
+        "reviewFiles": ["central-luzon-angat-bustos-2015-taxonomy-followup-20261024.json"],
+        "rawPath": null,
+        "rawSha256Recorded": false
+      },
+      "reuse": {
+        "metadata": "Catalog is a nomenclatural reference; six fish names were checked against the online version updated 13 August 2026.",
+        "raw": "No catalog text or images copied into the project.",
+        "content": "Use status strings only as taxonomic cross-checks. No site occurrence, source specimen identity, current presence, legal, safety, diet or bait claim follows from a name match."
+      },
+      "publicationApproval": false,
+      "researchStatus": "taxonomy-name-crosswalk-only;no-source-specimen-identifications-verified"
+    },
+    {
+      "id": "itis-angat-bustos-taxonomy-followup-20261024",
+      "title": "ITIS taxonomic reports: Angat-Bustos study-name cross-check",
+      "provider": "Integrated Taxonomic Information System",
+      "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=638787",
+      "additionalUrls": [
+        "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=168057",
+        "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=637376",
+        "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=553310",
+        "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=163979",
+        "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=163344"
+      ],
+      "role": "Independent taxonomic name and status cross-check for six printed fish names; its Trichogaster lalius record conflicts with the current Catalog of Fishes status and is held.",
+      "checkedOn": "2026-10-24",
+      "access": {
+        "status": "public-taxonomic-report-pages-reviewed",
+        "reviewFiles": ["central-luzon-angat-bustos-2015-taxonomy-followup-20261024.json"],
+        "rawPath": null,
+        "rawSha256Recorded": false
+      },
+      "reuse": {
+        "metadata": "ITIS report records were checked by TSN for the six source-name strings.",
+        "raw": "No report text or images copied into the project.",
+        "content": "Name standing does not validate any source specimen or establish a Bulacan occurrence."
+      },
+      "publicationApproval": false,
+      "researchStatus": "taxonomy-name-crosswalk-only;one-name-conflict-held;no-source-specimen-identifications-verified"
+    },
+    {
+      "id": "gbif-backbone-angat-bustos-name-match-20261024",
+      "title": "GBIF Backbone exact-name matches: Angat-Bustos study fish strings",
+      "provider": "Global Biodiversity Information Facility",
+      "url": "https://api.gbif.org/v1/species/match?strict=true&name=Leiopotherapon%20plumbeus",
+      "additionalUrls": [
+        "https://api.gbif.org/v1/species/match?strict=true&name=Glossogobius%20giuris",
+        "https://api.gbif.org/v1/species/match?strict=true&name=Oreochromis%20niloticus",
+        "https://api.gbif.org/v1/species/match?strict=true&name=Trichogaster%20lalius",
+        "https://api.gbif.org/v1/species/match?strict=true&name=Misgurnus%20fossilis",
+        "https://api.gbif.org/v1/species/match?strict=true&name=Cyprinus%20carpio"
+      ],
+      "role": "Exact GBIF Backbone matching-index comparison for six printed fish names; it is not an independent specimen identification authority.",
+      "checkedOn": "2026-10-24",
+      "access": {
+        "status": "public-species-match-api-queried",
+        "reviewFiles": ["central-luzon-angat-bustos-2015-taxonomy-followup-20261024.json"],
+        "rawPath": null,
+        "rawSha256Recorded": false
+      },
+      "reuse": {
+        "metadata": "Six strict scientific-name match results were reviewed; the response keys and accepted-name fields are recorded in the research artifact.",
+        "raw": "No raw API response is retained.",
+        "content": "Matching results were compared against ITIS and Eschmeyer's Catalog of Fishes; a GBIF exact match does not verify the sampled fish."
+      },
+      "publicationApproval": false,
+      "researchStatus": "matching-index-taxonomic-crosscheck-only;no-occurrence-assertions"
     },
     {
       "id": "psa-openstat-qifs-inland-volume-2026-08-06",

@@ -748,3 +748,11 @@ Verification for this research-only batch: `npm run test:species:pipeline`, `npm
 - **Reproducibility:** `npm run species:fetch:bulacan-qifs-openstat` fetches and checks the two-request official API query, then saves the CSV to ignored local research storage. SHA-256 is recorded in the QIFS profile. The local raw snapshot is not committed.
 - **Disposition:** retain provincial catch-production categories as statistical research context only. They are not named-waterbody occurrences, a taxonomic checklist, current-presence evidence, or catch/legal/safety/diet advice. No app projection is added. Central Luzon and national coverage remain incomplete.
 - **Next:** return to site-resolved freshwater evidence discovery for Angat, Meycauayan and Bocaue, prioritizing primary surveys or voucher-backed records; retain the PSA series only as a lead-prioritization context.
+
+## 67. Angat River Network study-name cross-check -- 24 October 2026
+
+- **Names reviewed:** compared six fish-name strings from Table 3 of De Regla et al. (2015) against Eschmeyer's Catalog of Fishes, ITIS and strict GBIF Backbone matches. Four names have a matching accepted-name crosswalk; that confirms nomenclature, not the specimens identified by the paper.
+- **Conflict held:** the authorities disagree on `Trichogaster lalius`: GBIF matches it as accepted, ITIS gives `Colisa lalia` as valid, and the current Catalog of Fishes lists it as a synonym of `Trichogaster fasciata`. Keep the printed name unresolved.
+- **Identification hold:** the paper's abstract prints `Misgurnus fossils`, while Table 3 prints `Misgurnus fossilis`; no voucher or diagnostic description was found. Do not resolve the sample as a Philippine occurrence from name matching alone. `Macrobrachium rosenbergii` remains excluded from the fish crosswalk as a prawn.
+- **Disposition:** the paper has no verified sample date or voucher; the metal-value audit and item-level reuse questions also remain open. No species assertions, safety advice or map geometry are added. See `central-luzon-angat-bustos-2015-taxonomy-followup-20261024.json`.
+- **Next:** seek voucher-backed identity material or an independently checkable survey from the Angat River Network reach, while continuing distinct locality-resolved work for Meycauayan and Bocaue. Central Luzon and national coverage remain incomplete.
