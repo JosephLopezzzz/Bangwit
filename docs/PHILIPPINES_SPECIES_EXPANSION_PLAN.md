@@ -1,6 +1,6 @@
 # Bangwit: Philippines species expansion plan
 
-Prepared: 22 October 2026; status updated 24 October 2026. Research foundation, local Taal checklist, Palico-Lian river evidence, a narrowly scoped Molawin Creek historical freshwater assertion, a corrected Laguna de Bay specimen assertion, four flagged Pansipit River specimen assertions, a corrected GBIF taxon-key audit, an NCR discovery checkpoint, one attributed Pasig River historical collection-event projection, and an L3 Central Luzon discovery checkpoint with a reviewed Bataan river source table, cross-study conflict review, and three historical Bulacan Manila Bay specimen assertions are in the repository. A follow-up L3 GBIF station-proximity screen and a catalog-only review of the 2005 Pampanga River/Apalit thesis were also recorded on 24 October, with no new species assertions. CALABARZON, NCR, Central Luzon and all other regional baselines remain incomplete. These research updates do not constitute complete regional baselines or a production release.
+Prepared: 22 October 2026; status updated 24 October 2026. Research foundation, local Taal checklist, Palico-Lian river evidence, a narrowly scoped Molawin Creek historical freshwater assertion, a corrected Laguna de Bay specimen assertion, four flagged Pansipit River specimen assertions, a corrected GBIF taxon-key audit, an NCR discovery checkpoint, one attributed Pasig River historical collection-event projection, and an L3 Central Luzon discovery checkpoint with a reviewed Bataan river source table, cross-study conflict review, and three historical Bulacan Manila Bay specimen assertions are in the repository. Follow-up L3 reviews include a GBIF station-proximity screen, a catalog-only review of the 2005 Pampanga River/Apalit thesis, and a held 2019 Cabiao river fish-and-diet study with a six-name nomenclature crosswalk; none added new species assertions. CALABARZON, NCR, Central Luzon and all other regional baselines remain incomplete. These research updates do not constitute complete regional baselines or a production release.
 
 Delivery order: **Luzon -> Visayas -> Mindanao**. Build one reusable national catalog and evidence pipeline, then finish dated regional baselines in that order. Marine and inland research run together within each region.
 
@@ -764,3 +764,26 @@ Verification for this research-only batch: `npm run test:species:pipeline`, `npm
 - **Taxonomic limits:** the source's 12 reported categories mix binomials, a family, genera, broad animal groups and local-only labels; no fish voucher, catch date, count or independent identification is supplied. The field date is not treated as the capture date. The report's domestic-consumption note is not food-safety evidence.
 - **Rights and disposition:** an official JICA-hosted copy was downloaded and reviewed; its SHA-256 is `b9a9157fcc69cedd2404507c2106f0f565c93f130e8ed23332e7a8e9df8db41c`. Item-specific reuse terms remain unassessed. Preserve this as internal historical interview context: zero public/app assertions, map points, safety claims or table-reuse approval. See `central-luzon-jica-mcrp-freshwater-interview-catches-review-20261024.json`.
 - **Next:** seek recent, voucher-backed or independently checkable fish surveys for the same freshwater reaches and the other Central Luzon rivers, reservoirs and lakes; keep the region incomplete.
+
+## 69. JICA station-centered GBIF proximity screen -- 24 October 2026
+
+- **Search:** corrected COL XR Actinopterygii queries around five JICA freshwater environmental stations returned zero rows in each local query window; a broader Pampanga-Bulacan rectangle returned nine rows.
+- **Disposition:** none of the nine can be assigned to a named JICA station reach. The local zeroes are not absence evidence, and the rectangle is not a waterbody boundary. No assertion or map point was added. See `central-luzon-jica-gbif-proximity-screen-20261024.json`.
+
+## 70. Pampanga River Apalit 2005 IBI thesis access review -- 24 October 2026
+
+- **Catalog:** the National Library of the Philippines catalogs Sheryll P. Angeles' 2005 UP Diliman thesis (control no. `nlp00316842`, 56 leaves) and says a digital copy is not available. The old IESM PDF URL returned HTTP 404.
+- **Secondary summary:** an attributed 2008 UP-study summary reports quarterly sampling at four sites, including Apalit, but supplies no species-by-site table or exact reach coordinates. Aggregate counts are not assigned to Apalit.
+- **Disposition:** no species or app rows were added. Seek legitimate library access; keep the thesis and regional baseline incomplete. See `central-luzon-pampanga-apalit-2005-ibi-thesis-access-review-20261024.json`.
+
+## 71. Cabiao Pampanga River fish and diet source review -- 24 October 2026
+
+- **Survey:** Reyes et al. report six author-identified taxa from 55 fish collected at three unnamed Pampanga River sites in Cabiao in May 2019. The article describes stomach-content analysis, but gives no site names, coordinates or specimen vouchers.
+- **Diet and limits:** the qualitative gut observations are one local sampling event, not fixed species diets. The snakehead passage reports whole prey but does not identify the prey species, so it does not establish cannibalism.
+- **Rights and disposition:** the paper has an article copyright notice; no article-level reuse license was verified. No species/diet claim or app projection was added. See `central-luzon-cabiao-pampanga-river-fish-diet-review-20261024.json`.
+
+## 72. Cabiao Pampanga River fish-name taxonomy cross-check -- 24 October 2026
+
+- **Authority check:** all six names were checked against Eschmeyer's Catalog of Fishes. Its accepted-name entries support the reported fish-name candidates, including the source-internal spellings *Channa striata* and *Hypophthalmichthys molitrix*.
+- **Boundary:** name cross-checking is not specimen identification. The two source spelling conflicts remain visible; zero vouchers or specimen identities were independently verified; no site assignment, current-presence claim or public projection changed.
+- **Next:** continue site-resolved Central Luzon discovery across freshwater, wetland, brackish and coastal areas. Seek follow-up surveys and reuse terms; keep the regional baseline incomplete. See `central-luzon-cabiao-fish-taxonomy-followup-20261024.json`.

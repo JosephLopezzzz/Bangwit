@@ -46,7 +46,7 @@ test("cross-file research inventory preserves rollout order, unknown regional co
   assert.equal(status.regions[0].workStatus, "coverage-gap-checkpoint-published-incomplete");
   assert.equal(status.regions[2].workStatus, "discovery-checkpoint-published-incomplete");
   assert.equal(status.regions[2].scopedWaterbodyResearchLeads, 0);
-  assert.equal(status.regions[2].discoveryCheckpointLeads, 39);
+  assert.equal(status.regions[2].discoveryCheckpointLeads, 40);
   assert.equal(status.regions[2].coverageStatus, "central-luzon-discovery-only-incomplete");
   assert.ok(status.regions.slice(1).filter((region) => region.rolloutKey !== "L3").every((region) => region.workStatus === "queued"));
 });
