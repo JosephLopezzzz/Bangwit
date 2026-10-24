@@ -3,9 +3,11 @@ import { readFile } from "node:fs/promises";
 import { test } from "node:test";
 
 const dataDir = new URL("../data/research/philippines/", import.meta.url);
-const [scope, tableReview, administrative, sourceRegistry] = await Promise.all([
+const [scope, tableReview, taxonomyProposals, independentCatalogReview, administrative, sourceRegistry] = await Promise.all([
   "central-luzon-discovery-checkpoint-20261024.json",
   "central-luzon-bataan-river-table-review-20261024.json",
+  "central-luzon-bataan-taxonomy-proposals-20261024.json",
+  "central-luzon-bataan-cof-name-review-20261024.json",
   "administrative-registry.json",
   "sources.json",
 ].map((name) => readFile(new URL(name, dataDir), "utf8").then(JSON.parse)));
@@ -68,5 +70,20 @@ test("Bataan source-table transcription reconciles the article's three river ric
   assert.equal(tableReview.fieldDisposition.appProjection, false);
   assert.equal(tableReview.fieldDisposition.regionalReleaseApproved, false);
   assert.equal(tableReview.taxonomyReview.status, "pending-current-authoritative-review");
+  assert.equal(tableReview.taxonomyProposalLedger.path, "central-luzon-bataan-taxonomy-proposals-20261024.json");
+  assert.equal(taxonomyProposals.status, "proposal-batch-complete-review-pending");
+  assert.equal(taxonomyProposals.counts.totalSourceRows, 52);
+  assert.equal(taxonomyProposals.counts.speciesBinomialQueries, 42);
+  assert.equal(taxonomyProposals.counts.successfulResponses, 42);
+  assert.equal(taxonomyProposals.counts.heldNonBinomialRows, 10);
+  assert.equal(taxonomyProposals.counts.acceptedTaxa, 0);
+  assert.equal(taxonomyProposals.counts.publicationEligible, 0);
+  assert.equal(tableReview.independentCatalogReview.path, "central-luzon-bataan-cof-name-review-20261024.json");
+  assert.equal(independentCatalogReview.coverage.selectedRowsReviewed, 12);
+  assert.equal(independentCatalogReview.coverage.sourceBinomialsRemainingForCatalogReview, 30);
+  assert.equal(independentCatalogReview.coverage.acceptedTaxa, 0);
+  assert.equal(independentCatalogReview.coverage.publicationEligible, 0);
+  assert.ok(independentCatalogReview.records.some((record) => record.sourceNameVerbatim === "Cynoglossus bilineatus" && record.catalogStatus === "ambiguous-homonym-and-combination-review"));
+  assert.ok(independentCatalogReview.records.some((record) => record.sourceNameVerbatim === "Clarias batrachus" && /identity review/.test(record.disposition)));
   assert.equal(scope.candidateFishEvidence.bataanStudyTaxonRows, review.rowCount);
 });
