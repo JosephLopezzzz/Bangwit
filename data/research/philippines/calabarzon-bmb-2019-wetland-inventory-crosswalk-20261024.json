@@ -1,0 +1,440 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-24",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "regionName": "Region IV-A (CALABARZON)",
+  "status": "historical-bmb-inventory-crosswalked;new-waterbody-leads-added;dagatan-identity-conflict-held",
+  "sourceIds": [
+    "denr-bmb-philchm-inland-wetlands-2019",
+    "denr-calabarzon-wetlands-2024",
+    "denr-fasps-gefs-sgp5-terminal-evaluation-dagatan-annex",
+    "seafdec-palmaa-bartolome-2016-fish-for-the-people"
+  ],
+  "receipts": [
+    {
+      "sourceId": "denr-bmb-philchm-inland-wetlands-2019",
+      "localPath": "data/research/philippines/raw/philchm/inland-wetlands-as-of-1st-qtr-2019-for-chm-2.pdf",
+      "bytes": 497255,
+      "sha256": "d1a33bb0d7a27169cf6cffbaf900443e306bf1c1c3f9dbed160652853f9a0765",
+      "visuallyReviewedPdfPages": [
+        3,
+        4
+      ],
+      "sourceTermsUrl": "https://www.philchm.ph/contact-us/terms-of-use/",
+      "termsDecision": "citation required; commercial use strongly discouraged; not an open data license; no blanket public derived-database approval"
+    },
+    {
+      "sourceId": "seafdec-palmaa-bartolome-2016-fish-for-the-people",
+      "localPath": "data/research/philippines/raw/philchm/seafdec-palmaa-2016-fish-for-the-people-14-3.pdf",
+      "bytes": 909703,
+      "sha256": "d89be00a7bb46ff420c095cfae2eab9796c78d2602de85d9db0046428d878e7f",
+      "pageCount": 5,
+      "visuallyReviewedPdfPages": [
+        1,
+        3,
+        4,
+        5
+      ],
+      "termsDecision": "SEAFDEC copyright shown; no item-specific open reuse license found; no article text or figure image projected"
+    }
+  ],
+  "method": {
+    "bmbRowsTranscribed": "Minimal factual row fields (source name, province/locality, source class, reported area and inventory year) visually checked in the 2019 PDF pages 3-4; not a complete copy of the source table.",
+    "crosswalk": "Name/locality crosswalk is source-era and research-only. Existing stable IDs were linked only where locality and name correspond; disagreements remain explicit.",
+    "seafdecReview": "Repository record and full five-page article visually reviewed. It describes historical stocking/restoration and figure labels but supplies no fish-sampling date, vouchers, diagnostic identification or site-level sampled catch table for San Antonio Dagatan.",
+    "nonInference": "No geometry, current presence, current designation, fishing access, safety status, diet claim or public app row is inferred."
+  },
+  "bmbRows": [
+    {
+      "sourceName": "Yellow Lake",
+      "province": "Batangas",
+      "locality": "Talisay; San Nicolas",
+      "sourceClass": "Lake",
+      "reportedAreaHa": 117.34,
+      "inventoryYear": 2014,
+      "scopeLeadId": "ph-wb-yellow-lake"
+    },
+    {
+      "sourceName": "Taal Lake",
+      "province": "Batangas",
+      "locality": "Batangas Lakehore",
+      "sourceClass": "Lake",
+      "reportedAreaHa": 26360.25,
+      "inventoryYear": null,
+      "scopeLeadId": "ph-wb-taal-lake"
+    },
+    {
+      "sourceName": "Laguna Lake",
+      "province": "Laguna",
+      "locality": null,
+      "sourceClass": "Lake",
+      "reportedAreaHa": null,
+      "inventoryYear": null,
+      "scopeLeadId": "ph-wb-laguna-de-bay",
+      "crosswalkNote": "Separate regional table row; not a confirmed physical sub-lake."
+    },
+    {
+      "sourceName": "Laguna Lake",
+      "province": "Rizal",
+      "locality": null,
+      "sourceClass": "Lake",
+      "reportedAreaHa": null,
+      "inventoryYear": null,
+      "scopeLeadId": "ph-wb-laguna-de-bay",
+      "crosswalkNote": "Separate regional table row; not a confirmed physical sub-lake."
+    },
+    {
+      "sourceName": "Laguna Lake",
+      "province": "NCR",
+      "locality": null,
+      "sourceClass": "Lake",
+      "reportedAreaHa": null,
+      "inventoryYear": null,
+      "scopeLeadId": "ph-wb-laguna-de-bay",
+      "crosswalkNote": "Separate regional table row; not a confirmed physical sub-lake."
+    },
+    {
+      "sourceName": "Tadlac Lake",
+      "province": "Laguna",
+      "locality": "Los Ba?os",
+      "sourceClass": "Lake",
+      "reportedAreaHa": 23.32,
+      "inventoryYear": 2015,
+      "scopeLeadId": "ph-wb-tadlac-laguna-lake"
+    },
+    {
+      "sourceName": "Lake Mojicap",
+      "province": "Laguna",
+      "locality": "San Pablo City",
+      "sourceClass": "Lake",
+      "reportedAreaHa": 18.68,
+      "inventoryYear": null,
+      "scopeLeadId": "ph-wb-mohicap-lake",
+      "crosswalkNote": "Mojicap/Mohicap spelling variant retained as candidate pending independent identity check."
+    },
+    {
+      "sourceName": "Palakpakin Lake",
+      "province": "Laguna",
+      "locality": "San Pablo City",
+      "sourceClass": "Lake",
+      "reportedAreaHa": 51.98,
+      "inventoryYear": null,
+      "scopeLeadId": "ph-wb-palakpakin-lake"
+    },
+    {
+      "sourceName": "Yambo Lake",
+      "province": "Laguna",
+      "locality": "San Pablo City",
+      "sourceClass": "Lake",
+      "reportedAreaHa": 35.12,
+      "inventoryYear": null,
+      "scopeLeadId": "ph-wb-yambo-lake"
+    },
+    {
+      "sourceName": "Pandin Lake",
+      "province": "Laguna",
+      "locality": "San Pablo City",
+      "sourceClass": "Lake",
+      "reportedAreaHa": 24.83,
+      "inventoryYear": 2016,
+      "scopeLeadId": "ph-wb-pandin-laguna-lake"
+    },
+    {
+      "sourceName": "Calibato Lake",
+      "province": "Laguna",
+      "locality": "San Pablo City",
+      "sourceClass": "Lake",
+      "reportedAreaHa": 47.58,
+      "inventoryYear": null,
+      "scopeLeadId": "ph-wb-calibato-lake"
+    },
+    {
+      "sourceName": "Bunot Lake",
+      "province": "Laguna",
+      "locality": "San Pablo City",
+      "sourceClass": "Lake",
+      "reportedAreaHa": 36.82,
+      "inventoryYear": null,
+      "scopeLeadId": "ph-wb-bunot-lake"
+    },
+    {
+      "sourceName": "Sampaloc Lake",
+      "province": "Laguna",
+      "locality": "San Pablo City",
+      "sourceClass": "Lake",
+      "reportedAreaHa": 99.58,
+      "inventoryYear": null,
+      "scopeLeadId": "ph-wb-sampaloc-san-pablo-lake"
+    },
+    {
+      "sourceName": "Dagat Dagatan Lake",
+      "province": "Quezon",
+      "locality": "Tayabas City",
+      "sourceClass": "Lake",
+      "reportedAreaHa": 24.38,
+      "inventoryYear": null,
+      "scopeLeadId": "ph-wb-dagatan-quezon-lake",
+      "crosswalkNote": "Historical name and area conflict with the 2 ha FASPS plan for the same Tayabas locality."
+    },
+    {
+      "sourceName": "Ticub Lake",
+      "province": "Quezon",
+      "locality": null,
+      "sourceClass": "Lake",
+      "reportedAreaHa": 47.69,
+      "inventoryYear": 2012,
+      "scopeLeadId": "ph-wb-ticub-quezon-lake"
+    },
+    {
+      "sourceName": "Lake Pagatan",
+      "province": "Quezon",
+      "locality": "San Antonio",
+      "sourceClass": "Lake",
+      "reportedAreaHa": 3.22,
+      "inventoryYear": null,
+      "scopeLeadId": "ph-wb-pagatan-quezon-lake",
+      "crosswalkNote": "Potential name overlap with SEAFDEC San Antonio \"Dagatan Lake\" is unresolved."
+    },
+    {
+      "sourceName": "Gunaw Lake",
+      "province": "Quezon",
+      "locality": "Dolores",
+      "sourceClass": "Lake",
+      "reportedAreaHa": 1.32,
+      "inventoryYear": 2004,
+      "scopeLeadId": "ph-wb-gunaw-quezon-lake",
+      "crosswalkNote": "2024 DENR roadmap spells \"Gunao Lake\"; candidate spelling variant only."
+    },
+    {
+      "sourceName": "Lalaguna Marsh",
+      "province": "Quezon",
+      "locality": "Lopez",
+      "sourceClass": "Lake",
+      "reportedAreaHa": 89.25,
+      "inventoryYear": 2011,
+      "scopeLeadId": "ph-wb-lalaguna-quezon-marsh",
+      "crosswalkNote": "BMB classifies as Lake; DENR/CENRO names a marshland. Preserve both source classifications pending feature identity review."
+    },
+    {
+      "sourceName": "Lake Podon",
+      "province": "Quezon",
+      "locality": "Jomalig",
+      "sourceClass": "Lake",
+      "reportedAreaHa": 158.91,
+      "inventoryYear": null,
+      "scopeLeadId": "ph-wb-lake-podon-quezon"
+    },
+    {
+      "sourceName": "Lawa ng Tres Cruses",
+      "province": "Cavite",
+      "locality": "Tanza",
+      "sourceClass": "Water Storage",
+      "reportedAreaHa": 15.65,
+      "inventoryYear": null,
+      "scopeLeadId": "ph-wb-tres-cruzes-cavite-lake",
+      "crosswalkNote": "Scope currently calls this a lake based on another source; BMB row says Water Storage, so classification conflict is held."
+    },
+    {
+      "sourceName": "Caliraya Reservoir",
+      "province": "Laguna",
+      "locality": null,
+      "sourceClass": "Water Storage",
+      "reportedAreaHa": 1047.84,
+      "inventoryYear": null,
+      "scopeLeadId": "ph-wb-caliraya-reservoir"
+    },
+    {
+      "sourceName": "Lumot Reservoir",
+      "province": "Laguna",
+      "locality": null,
+      "sourceClass": "Water Storage",
+      "reportedAreaHa": 637.36,
+      "inventoryYear": null,
+      "scopeLeadId": "ph-wb-lumot-reservoir"
+    },
+    {
+      "sourceName": "Wawa Dam",
+      "province": "Rizal",
+      "locality": "Rodriguez",
+      "sourceClass": "Water Storage",
+      "reportedAreaHa": 1.29,
+      "inventoryYear": null,
+      "scopeLeadId": "ph-wb-wawa-rizal-dam"
+    },
+    {
+      "sourceName": "Tan-ag Ilaya Peatland",
+      "province": "Quezon",
+      "locality": "Lopez",
+      "sourceClass": "Peatland",
+      "reportedAreaHa": 99.18,
+      "inventoryYear": null,
+      "scopeLeadId": "ph-wb-tan-ag-ilaya-quezon-peatland"
+    }
+  ],
+  "denrRoadmapCrosswalk": [
+    {
+      "sourceName": "Yellow Lake",
+      "scopeLeadId": "ph-wb-yellow-lake",
+      "status": "source-name-and-province-match"
+    },
+    {
+      "sourceName": "Pagatan Lake",
+      "scopeLeadId": "ph-wb-pagatan-quezon-lake",
+      "status": "source-name-and-province-match"
+    },
+    {
+      "sourceName": "Gunao Lake",
+      "scopeLeadId": "ph-wb-gunaw-quezon-lake",
+      "status": "candidate-spelling-crosswalk;not-an-accepted-alias"
+    },
+    {
+      "sourceName": "Pudaw Lake",
+      "scopeLeadId": "ph-wb-pudaw-quezon-lake",
+      "status": "roadmap-name-only;municipality-unknown"
+    },
+    {
+      "sourceName": "Tadlac Lake",
+      "scopeLeadId": "ph-wb-tadlac-laguna-lake",
+      "status": "source-name-and-province-match"
+    },
+    {
+      "sourceName": "Patola Lake",
+      "scopeLeadId": "ph-wb-patola-laguna-lake",
+      "status": "roadmap-name-only;municipality-unknown"
+    },
+    {
+      "sourceName": "Olo-olo Mangrove Forest",
+      "scopeLeadId": "ph-wb-olo-olo-batangas-mangrove",
+      "status": "habitat-lead;municipality-unknown"
+    },
+    {
+      "sourceName": "Wawa Dam",
+      "scopeLeadId": "ph-wb-wawa-rizal-dam",
+      "status": "dam/water-storage identity lead;not-a-delineated-reservoir"
+    },
+    {
+      "sourceName": "Maragondon Seagrass Beds",
+      "scopeLeadId": "ph-wb-maragondon-seagrass-beds",
+      "status": "coastal-habitat-lead;not-inland-wetland"
+    },
+    {
+      "sourceName": "Tan-ag Ilaya Peatland",
+      "scopeLeadId": "ph-wb-tan-ag-ilaya-quezon-peatland",
+      "status": "BMB locality and roadmap name lead"
+    }
+  ],
+  "dagatanPagatanIdentityConflict": {
+    "cases": [
+      {
+        "source": "BMB 2019 inventory",
+        "name": "Dagat Dagatan Lake",
+        "locality": "Tayabas City, Quezon",
+        "reportedAreaHa": 24.38
+      },
+      {
+        "source": "DENR FASPS Annex 17",
+        "name": "Dagatan Lake",
+        "locality": "Sitio Busal, Barangay Ibabang Palale, Tayabas City, Quezon",
+        "reportedAreaHa": 2
+      },
+      {
+        "source": "SEAFDEC 2016 article",
+        "name": "Dagatan Lake",
+        "locality": "San Antonio, Quezon",
+        "reportedAreaHa": 7,
+        "coordinatesAsPrinted": "13°44'N, 121°18'E",
+        "context": "stocking/restoration article; figure fish names are not a dated, voucher-backed survey"
+      },
+      {
+        "source": "BMB 2019 inventory",
+        "name": "Lake Pagatan",
+        "locality": "San Antonio, Quezon",
+        "reportedAreaHa": 3.22
+      }
+    ],
+    "disposition": "Keep Tayabas Dagatan and San Antonio Pagatan as separate leads. SEAFDEC San Antonio Dagatan may refer to Pagatan but name/area conflict is unresolved; do not attach its figure labels to either scope record or translate coordinates into a boundary."
+  },
+  "heldFigureTaxa": [
+    {
+      "nameAsPrinted": "Monopterus albus",
+      "rank": "species-name-string",
+      "status": "historical figure label in a stocking/restoration context; no sample date/voucher; no local presence assertion"
+    },
+    {
+      "nameAsPrinted": "Trichogaster pectoralis",
+      "rank": "species-name-string",
+      "status": "historical figure label in a stocking/restoration context; no sample date/voucher; no local presence assertion"
+    },
+    {
+      "nameAsPrinted": "Cyprinus carpio",
+      "rank": "species-name-string",
+      "status": "historical figure label in a stocking/restoration context; no sample date/voucher; no local presence assertion"
+    },
+    {
+      "nameAsPrinted": "Oreochromis sp.",
+      "rank": "genus-level-label",
+      "status": "not species-level; no local presence assertion"
+    },
+    {
+      "nameAsPrinted": "Channa striata",
+      "rank": "species-name-string",
+      "status": "historical figure label in a stocking/restoration context; no sample date/voucher; no local presence assertion"
+    },
+    {
+      "nameAsPrinted": "Clarias macrocephalus",
+      "rank": "species-name-string",
+      "status": "historical figure label in a stocking/restoration context; no sample date/voucher; no local presence assertion"
+    }
+  ],
+  "scopeChange": {
+    "newLeadIds": [
+      "ph-wb-yellow-lake",
+      "ph-wb-pagatan-quezon-lake",
+      "ph-wb-gunaw-quezon-lake",
+      "ph-wb-pudaw-quezon-lake",
+      "ph-wb-lake-podon-quezon",
+      "ph-wb-tadlac-laguna-lake",
+      "ph-wb-patola-laguna-lake",
+      "ph-wb-olo-olo-batangas-mangrove",
+      "ph-wb-wawa-rizal-dam",
+      "ph-wb-maragondon-seagrass-beds",
+      "ph-wb-tan-ag-ilaya-quezon-peatland"
+    ],
+    "existingLeadsUpdated": [
+      "ph-wb-taal-lake",
+      "ph-wb-laguna-de-bay",
+      "ph-wb-caliraya-reservoir",
+      "ph-wb-lumot-reservoir",
+      "ph-wb-sampaloc-san-pablo-lake",
+      "ph-wb-pandin-laguna-lake",
+      "ph-wb-bunot-lake",
+      "ph-wb-mohicap-lake",
+      "ph-wb-yambo-lake",
+      "ph-wb-calibato-lake",
+      "ph-wb-palakpakin-lake",
+      "ph-wb-lalaguna-quezon-marsh",
+      "ph-wb-dagatan-quezon-lake",
+      "ph-wb-ticub-quezon-lake",
+      "ph-wb-tres-cruzes-cavite-lake"
+    ],
+    "sourceNameVariantCandidates": [
+      "Gunaw Lake / Gunao Lake",
+      "Mojicap / Mohicap Lake"
+    ],
+    "dagatanAliasAdded": "Dagat Dagatan Lake",
+    "speciesAssertionsAdded": 0,
+    "dietClaimsAdded": 0,
+    "boundaryGeometryAdded": false,
+    "publicAppProjectionAdded": false,
+    "publicationApproval": false
+  },
+  "limitations": [
+    "BMB rows are a historical source list, not an exhaustive inventory. The values may use source-era measurement methods and do not define contemporary geometry.",
+    "The 2024 roadmap has 30 in its headline and 31 phrase entries; the 2019 list does not reconcile phrase identity or establish a current denominator.",
+    "Mangrove, seagrass, peatland, dam and sanctuary names require feature-type and boundary review before waterbody/UI representation.",
+    "SEAFDEC figure names are held as historical stocking-context leads. No identity or fish-sampling basis ties them to the BMB Tayabas Dagatan or San Antonio Pagatan rows.",
+    "No species/diet/catchability/safety, precise location, legal restriction, geometry or public assertion was added."
+  ],
+  "nextAction": "Continue L1 CALABARZON with official locality-resolved fisheries studies and bounded occurrence screens for the added inland waters; first resolve source access/rights and the Dagatan-Pagatan identity conflict. Keep region incomplete."
+}

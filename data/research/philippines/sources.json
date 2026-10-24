@@ -3,7 +3,7 @@
   "checkedOn": "2026-10-24",
   "status": "research-only-source-registry",
   "scope": "National acquisition references and CALABARZON/Central Luzon identity/source leads. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 123,
+  "sourceCount": 125,
   "sources": [
     {
       "id": "gbif-col-xr-taxonomy-matching",
@@ -3225,6 +3225,91 @@
       },
       "publicationApproval": false,
       "researchStatus": "access-route-known;dataset-availability-eligibility-fees-and-license-pending"
+    },
+    {
+      "id": "denr-bmb-philchm-inland-wetlands-2019",
+      "title": "Inland Wetlands of the Philippines as of 1st Quarter 2019",
+      "provider": "DENR Biodiversity Management Bureau / Philippine Clearing House Mechanism",
+      "url": "https://www.philchm.ph/wp-content/uploads/2019/06/inland-wetlands-as-of-1st-qtr-2019-for-chm-2.pdf",
+      "additionalUrls": [
+        "https://www.philchm.ph/contact-us/terms-of-use/"
+      ],
+      "role": "Historical inland-wetland inventory rows used as named locality, feature-class and source-reported-area research leads; not a complete current waterbody inventory, fish evidence or geometry.",
+      "checkedOn": "2026-10-24",
+      "access": {
+        "status": "official-pdf-downloaded-and-visually-reviewed-pages-3-4",
+        "localRawPath": "raw/philchm/inland-wetlands-as-of-1st-qtr-2019-for-chm-2.pdf",
+        "downloadedFile": {
+          "bytes": 497255,
+          "sha256": "d1a33bb0d7a27169cf6cffbaf900443e306bf1c1c3f9dbed160652853f9a0765"
+        },
+        "reviewedPages": [
+          3,
+          4
+        ],
+        "reviewFiles": [
+          "calabarzon-bmb-2019-wetland-inventory-crosswalk-20261024.json"
+        ]
+      },
+      "reuse": {
+        "metadata": "The PhilCHM terms require attribution for reuse of BMB/partner articles and information; commercial use is strongly discouraged. This is not an open data license or a blanket derivative-database grant.",
+        "raw": "Original PDF retained only in ignored local research storage; not committed or redistributed.",
+        "content": "Internal crosswalk records minimal factual locality, class, reported area and inventory year with citations. No full table, map, image, geometry, fish assertion or public projection is approved. Field-level and intended-use review remain pending."
+      },
+      "publicationApproval": false,
+      "researchStatus": "historical-inland-wetland-rows-crosswalked;inventory-incomplete;rights-and-feature-identity-pending",
+      "sourceYear": 2019,
+      "caveats": [
+        "The inventory is a historical as-of-2019 list and does not establish present-day status, completeness, a legal boundary or fish presence.",
+        "The source reports Lawa ng Tres Cruses as Water Storage, not Lake; do not silently change the existing scope classification.",
+        "Source names and areas are retained as reported; locality and area conflicts require separate identity review."
+      ]
+    },
+    {
+      "id": "seafdec-palmaa-bartolome-2016-fish-for-the-people",
+      "title": "Enhancing the fishery resources in Philippine lakes: The Philippine national inland fisheries enhancement program",
+      "provider": "Southeast Asian Fisheries Development Center (SEAFDEC)",
+      "url": "https://repository.seafdec.org/handle/20.500.12066/998",
+      "additionalUrls": [
+        "https://repository.seafdec.org/bitstream/handle/20.500.12066/998/SP14-3%20enhancing%20fishery%20resources%20in%20philippine%20lakes.pdf?isAllowed=y&sequence=1"
+      ],
+      "role": "Historical inland fisheries program article reviewed for a San Antonio, Quezon Dagatan-named lake and stocking-context fish-name leads; not a dated wild-fish survey or accepted species list for the locally named lake.",
+      "checkedOn": "2026-10-24",
+      "access": {
+        "status": "official-repository-record-and-five-page-pdf-downloaded-and-visually-reviewed",
+        "localRawPath": "raw/philchm/seafdec-palmaa-2016-fish-for-the-people-14-3.pdf",
+        "downloadedFile": {
+          "bytes": 909703,
+          "sha256": "d89be00a7bb46ff420c095cfae2eab9796c78d2602de85d9db0046428d878e7f"
+        },
+        "pageCount": 5,
+        "reviewedPages": [
+          1,
+          3,
+          4,
+          5
+        ],
+        "reviewFiles": [
+          "calabarzon-bmb-2019-wetland-inventory-crosswalk-20261024.json"
+        ]
+      },
+      "reuse": {
+        "metadata": "SEAFDEC repository metadata and suggested citation reviewed; the article displays SEAFDEC copyright and no item-specific open reuse license was identified.",
+        "raw": "Original PDF retained only in ignored local research storage; not committed or redistributed.",
+        "content": "Internal historical identity and stocking-context triage only. Do not reproduce figure images or article text; no species, diet, current-presence or public app assertion is approved."
+      },
+      "publicationApproval": false,
+      "researchStatus": "historical-stock-enhancement-context;lake-identity-and-taxon-evidence-held;reuse-terms-pending",
+      "sourceYear": 2016,
+      "authors": [
+        "Adelaida L. Palma",
+        "Virginia M. Bartolome"
+      ],
+      "caveats": [
+        "The article describes a 7 ha Dagatan Lake in San Antonio, Quezon, with a stocking/restoration context; no fish sampling date, voucher, diagnostic identification or site-level table is provided for the figure labels.",
+        "Do not merge this name with the 2019 Tayabas Dagat Dagatan entry or the separate San Antonio Lake Pagatan entry based on name similarity alone.",
+        "Article copyright applies; no item-specific permission to reuse its table or image was found."
+      ]
     }
   ],
   "sourcePolicy": {

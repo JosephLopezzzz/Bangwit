@@ -15,8 +15,8 @@ const [report, scope, sweep, sourceRegistry, scopeBytes] = await Promise.all([
 test("CALABARZON checkpoint reports its gaps without claiming a complete region", () => {
   assert.equal(report.status, "checkpoint-published-incomplete-baseline");
   assert.equal(report.regionId, scope.regionId);
-  assert.equal(report.coverageSummary.namedWaterbodyLeads, 39);
-  assert.equal(report.coverageSummary.registeredSources, 61);
+  assert.equal(report.coverageSummary.namedWaterbodyLeads, 50);
+  assert.equal(report.coverageSummary.registeredSources, 125);
   assert.equal(sourceRegistry.sourceCount, sourceRegistry.sources.length);
   assert.ok(sourceRegistry.sourceCount >= report.coverageSummary.registeredSources);
   assert.equal(report.coverageSummary.waterbodyDenominatorEstablished, false);
@@ -27,16 +27,16 @@ test("CALABARZON checkpoint reports its gaps without claiming a complete region"
   assert.deepEqual(report.coverageSummary.byWaterbodyKind, {
     bay: 7,
     estuary: 2,
-    lake: 12,
-    reservoir: 2,
+    lake: 19,
+    reservoir: 3,
     river: 9,
     stream: 2,
-    wetland: 5,
+    wetland: 8,
   });
-  assert.equal(report.coverageSummary.leadsStillResearchQueued, 19);
-  assert.equal(report.coverageSummary.unknownSalinityLeads, 34);
-  assert.equal(report.coverageSummary.sourceAssignments, 80);
-  assert.equal(report.coverageSummary.distinctSourceReferencesAssigned, 41);
+  assert.equal(report.coverageSummary.leadsStillResearchQueued, 30);
+  assert.equal(report.coverageSummary.unknownSalinityLeads, 45);
+  assert.equal(report.coverageSummary.sourceAssignments, 111);
+  assert.equal(report.coverageSummary.distinctSourceReferencesAssigned, 42);
   assert.equal(report.inputHashes.scopeSha256, createHash("sha256").update(scopeBytes).digest("hex"));
   assert.deepEqual(
     report.waterbodySnapshot,
@@ -52,9 +52,9 @@ test("CALABARZON checkpoint reports its gaps without claiming a complete region"
       sourceRefs: waterbody.sourceRefs,
     })),
   );
-  assert.equal(report.nextStep.phaseId, "L2");
-  assert.equal(report.nextStep.regionName, "National Capital Region (NCR)");
-  assert.match(report.nextStep.action, /do not mark it complete/i);
+  assert.equal(report.nextStep.phaseId, "L1");
+  assert.equal(report.nextStep.regionName, "CALABARZON (Region IV-A)");
+  assert.match(report.nextStep.action, /do not advance to NCR or mark CALABARZON complete/i);
   assert.ok(report.openGaps.some((gap) => gap.id === "scope-not-exhaustive"));
   assert.equal(sweep.regionalGapSummary.regionalBaselineComplete, false);
 });
