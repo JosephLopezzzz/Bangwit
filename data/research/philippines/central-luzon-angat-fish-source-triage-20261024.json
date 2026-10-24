@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-24",
+  "phaseId": "L3",
+  "regionId": "0300000000",
+  "status": "historical-source-triage-research-only-not-app-ready",
+  "decision": "Separate the Angat Reservoir historical fisheries summary, the Norzagaray River morphometrics study reach, and the Angat River Network reach in Bustos. These sources do not form one waterbody-wide or current checklist; retain source-reported candidates only and do not project species or food-safety claims.",
+  "sources": [
+    {
+      "id": "portillo-et-al-glossogobius-norzagaray-2017",
+      "title": "Body Shape Variation in the Goby, Glossogobius giuris Collected in Selected Areas in the River of Norzagaray Bulacan Using Landmark-Based Geometric Morphometrics",
+      "authors": ["Jhomarie N. Portillo", "Rove R. Patulili", "Mark Marvin A. Lucas", "Oliver Alaijos", "Cesar G. Demayo"],
+      "doi": "10.26713/jims.v9i4.1021",
+      "landingPage": "https://www.rgnpublications.com/journals/index.php/jims/article/view/1021",
+      "pdf": "https://www.rgnpublications.com/journals/index.php/jims/article/download/1021/784",
+      "publishedOn": "2017-12-30",
+      "access": "Publisher abstract and publisher-indexed PDF text were reviewed. A direct PDF request during this pass redirected to the journal login page.",
+      "reuse": "The publisher says authors retain copyright and the work is shared under a CCAL allowing sharing with acknowledgment; the exact license version/terms were not established here. No table or figure is reproduced."
+    },
+    {
+      "id": "de-regla-et-al-angat-bustos-aquatic-life-2015",
+      "title": "Lead and Cadmium Contents of Selected Species of Aquatic Life in the Angat River Network in Bustos, Bulacan",
+      "authors": ["Editha N. De Regla", "Marilyn S. De Leon", "Edwin A. Estrella", "Butch Stephen C. Duay", "Edric D. A. Estrella"],
+      "url": "https://annals.fih.upt.ro/pdf-full/2015/ANNALS-2015-3-25.pdf",
+      "publishedOn": "2015-08",
+      "access": "The 4-page publisher PDF was downloaded and text-extracted for this review.",
+      "reviewedPdfSha256": "29A2D5A4678C7E1BA387A12312FFDBF9090972ECEE28AB7E906FC757C686C9BC",
+      "reuse": "The journal identifies the item as free-access but the reviewed PDF gives a copyright notice and no item-level open reuse license. Do not reproduce the source table wholesale."
+    },
+    {
+      "id": "guerrero-angat-reservoir-fisheries-review-2022",
+      "title": "Commercially Caught Freshwater Fishes in the Philippines: Status, Issues, and Recommendations",
+      "author": "Rafael D. Guerrero III",
+      "doi": "10.57043/transnastphl.2022.2568",
+      "url": "https://transactions.nast.ph/wp-content/uploads/2023/01/2022_RD-Guerrero.pdf",
+      "publishedOn": "2022",
+      "license": "CC-BY-4.0",
+      "access": "Open publisher PDF reviewed; Angat section summarizes stocking and historical catch figures and cites Balite (1993)."
+    },
+    {
+      "id": "conlu-angat-reservoir-fish-production-report-1981",
+      "title": "Fish production studies of Angat reservoir",
+      "author": "Prodencia Conlu",
+      "catalogUrl": "https://www.elib.gov.ph/results.php?f=subject&q=Fishery+biology",
+      "publicationYear": 1981,
+      "catalogReportedLengthPages": 147,
+      "access": "Catalog record only; report contents were not accessed."
+    }
+  ],
+  "waterbodyScopes": [
+    {
+      "name": "Angat Reservoir",
+      "kind": "reservoir",
+      "administrativeArea": "Bulacan",
+      "sourceIds": ["guerrero-angat-reservoir-fisheries-review-2022", "conlu-angat-reservoir-fish-production-report-1981"],
+      "geometryValidated": false,
+      "sourceReportedEvidence": "A 2022 review summarizes historical stocking of Nile tilapia and catch figures attributed to Balite (1993): 781,783 kg Nile tilapia catch and total fisherfolk catch rising from 57,363 kg in 1983 to 81,172 kg in 1987. These are historical fishery statistics, not a current inventory.",
+      "unreviewedPrimaryLead": "Conlu, Prodencia (1981), Fish production studies of Angat reservoir, 147 pages, NSDB Project No. 7811 Ag; catalog record found, report contents not accessed.",
+      "disposition": "Historical stocking/catch context only. Do not infer an Angat-wide roster, current presence, relative abundance, catchability, or fishing permission."
+    },
+    {
+      "name": "Norzagaray River, Matictic study reach",
+      "kind": "river-study-reach",
+      "administrativeArea": "Barangay Matictic, Norzagaray, Bulacan",
+      "sourceIds": ["portillo-et-al-glossogobius-norzagaray-2017"],
+      "geometryValidated": false,
+      "sourceReportedEvidence": "Portillo et al. (2017) report collecting Glossogobius giuris at five stations in the Norzagaray River, using backpack electrofishing followed by nets; the abstract says specimens were authenticated/identified through BFAR Region III. The accessible source text gives no sampling date or station coordinates.",
+      "disposition": "One author-reported historical study taxon only; not a full river inventory, reservoir record, current occurrence, or population assessment."
+    },
+    {
+      "name": "Angat River Network, Bustos study reach",
+      "kind": "river-network-study-reach",
+      "administrativeArea": "Bustos, Bulacan",
+      "sourceIds": ["de-regla-et-al-angat-bustos-aquatic-life-2015"],
+      "geometryValidated": false,
+      "sourceReportedReach": "The 2015 article describes an approximately 8 km fishing stretch from the Bustos Dam watershed covering Tibagan, Bonga Mayor, Bonga Menor, Tanawan, Poblacion, San Pedro, and Cambaog.",
+      "sourceReportedTaxonStrings": [
+        "Leiopotherapon plumbeus",
+        "Glossogobius giuris",
+        "Oreochromis niloticus",
+        "Trichogaster lalius",
+        "Misgurnus fossilis",
+        "Cyprinus carpio",
+        "Macrobrachium rosenbergii"
+      ],
+      "sourceReportedMethod": "The paper says two fishermen harvested aquatic life from the stated reach; it does not give a fish-collection date. 30 October 2014 is the FAAS equipment rental date, not a confirmed sampling date.",
+      "negativeMeasurementAudit": {
+        "lead": { "numericEntries": 32, "negativeEntries": 28 },
+        "cadmium": { "numericEntries": 32, "negativeEntries": 32 }
+      },
+      "qualityIssues": [
+        "The abstract's species list omits Trichogaster lalius even though the results text discusses Gurami and Table 3 includes it.",
+        "The abstract spells the loach name as Misgurnus fossils while Table 3 prints Misgurnus fossilis; preserve the table spelling only as the author's reported string and do not accept the identity.",
+        "Tables 4 and 5 report many negative concentration values: 28 negative lead readings among 32 numeric entries and 32 negative cadmium readings among 32 numeric entries. These values undermine the paper's safety conclusion and are not suitable for food-safety guidance.",
+        "The article lists no specimen vouchers or independently checked taxonomic determinations; item-specific reuse terms were not verified."
+      ],
+      "disposition": "Historical, author-reported reach-level candidates for taxonomic/source-quality review only. Do not reproduce the table wholesale or use the paper to support food-safety advice."
+    }
+  ],
+  "crossScopeReconciliation": {
+    "scopesAreInterchangeable": false,
+    "reason": "The reservoir review concerns historical stocked-fish catch statistics; the Norzagaray paper is a five-station river morphometrics study; the Bustos article samples a separately described lower river-network reach. Their dates, methods, and evidence units differ.",
+    "currentOccurrenceEstablished": false,
+    "completeAngatCatchmentChecklist": false
+  },
+  "coverageAndAdmission": {
+    "speciesRowsIndependentlyVerified": 0,
+    "acceptedTaxa": 0,
+    "speciesAssertionsAdded": 0,
+    "dietClaimsAdded": 0,
+    "foodSafetyClaimsAdded": 0,
+    "appProjectionsAdded": 0,
+    "geometryAdded": false,
+    "coordinatesProjected": false,
+    "regionalReleaseApproved": false
+  },
+  "nextStep": "Continue Central Luzon coverage with Sasmuan Pampanga Coastal Wetlands and additional Pampanga River Basin records. Keep estuarine/coastal, river reach, and reservoir evidence separate; the region remains incomplete."
+}
