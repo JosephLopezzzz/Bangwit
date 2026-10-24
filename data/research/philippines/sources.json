@@ -3,7 +3,7 @@
   "checkedOn": "2026-10-24",
   "status": "research-only-source-registry",
   "scope": "National acquisition references and CALABARZON/Central Luzon identity/source leads. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 119,
+  "sourceCount": 121,
   "sources": [
     {
       "id": "gbif-col-xr-taxonomy-matching",
@@ -203,11 +203,14 @@
       "title": "CALABARZON wetlands conservation roadmap 2024-2029",
       "provider": "DENR CALABARZON",
       "url": "https://calabarzon.denr.gov.ph/news-events/denr-crafts-5-year-conservation-roadmap-for-calabarzon-inland-wetlands/",
-      "role": "Named wetland/site inventory across five provinces; identities and feature types require reconciliation.",
-      "checkedOn": "2026-10-22",
+      "role": "2024-2029 conservation roadmap lead naming wetland and aquatic habitat features across CALABARZON; headline/list count and feature identities remain unresolved.",
+      "checkedOn": "2026-10-24",
       "access": {
         "status": "official-indexed-content-read-direct-fetch-403",
-        "localRawSnapshot": null
+        "localRawSnapshot": null,
+        "reviewFiles": [
+          "calabarzon-wetland-roadmap-count-review-20261024.json"
+        ]
       },
       "reuse": {
         "metadata": "Research citation and minimal source-description only; field-level redistribution review pending.",
@@ -215,12 +218,61 @@
         "content": "No blanket permission to copy text, images, maps or databases. Extracted assertions require source and scope review."
       },
       "publicationApproval": false,
-      "researchStatus": "queued-for-field-level-review",
+      "researchStatus": "reviewed-name-count-discrepancy; physical-inventory-unresolved",
       "sourceYear": 2024,
       "caveats": [
-        "The page says 30 wetlands; its prose appears to name 31 entries, mixing lakes, reservoirs, river sanctuaries, mangroves and marine sites.",
-        "Named protected/habitat sites are not automatically independent waterbodies; no geometry, current designation or fish presence is supplied here."
+        "The headline says 30 wetlands; a structured count of the province-grouped prose yields 31 named phrases. The source does not define grouping or resolve this discrepancy.",
+        "The list mixes feature-name cues including inland waters, a dam, mangroves, seagrass, a marine park and a river sanctuary; these are not automatically 31 independent inland waterbodies.",
+        "No geometry, current designation, fish presence, complete inventory or field-level reuse permission is established by this source."
       ]
+    },
+    {
+      "id": "calabarzon-regional-development-plan-2023-2028",
+      "title": "CALABARZON Regional Development Plan 2023-2028",
+      "provider": "DEPDev CALABARZON Regional Office",
+      "url": "https://calabarzon.depdev.gov.ph/wp-content/uploads/2024/03/CRDP-2023-2028-ao-March-2024-compressed.pdf",
+      "role": "Historical regional-scale context attributed to DENR Region IV-A 2021 ENR Statistics: 19 inland wetlands (16 lakes and three water-storage areas) and 354 river systems by province; not a named waterbody inventory.",
+      "checkedOn": "2026-10-24",
+      "sourceYear": 2023,
+      "access": {
+        "status": "official-indexed-PDF-text-read-direct-fetch-403",
+        "localRawSnapshot": null,
+        "reviewFiles": [
+          "calabarzon-wetland-roadmap-count-review-20261024.json"
+        ],
+        "directPdfRead": false
+      },
+      "reuse": {
+        "metadata": "Research citation and minimal indexed-text metadata only; item-level redistribution terms were not verified.",
+        "raw": "No local PDF was acquired.",
+        "content": "Aggregate historical planning context only. The figures are reported as of 2021 and do not identify individual waterbodies or fish distributions; no public projection is approved."
+      },
+      "publicationApproval": false,
+      "researchStatus": "historical-aggregate-waterbody-context;named-inventory-unavailable;rights-unreviewed"
+    },
+    {
+      "id": "denr-calabarzon-enr-statistical-report-2025",
+      "title": "2025 ENR Statistical Report",
+      "provider": "DENR CALABARZON",
+      "url": "https://calabarzon.denr.gov.ph/enr-statistics/2025-enr-statistical-report/",
+      "role": "Official report index lists a Table 8 titled Inland Wetland in the Region; table content is not present in the readable indexed outline and direct access returned 403.",
+      "checkedOn": "2026-10-24",
+      "sourceYear": 2025,
+      "access": {
+        "status": "official-indexed-report-outline-read-direct-fetch-403",
+        "localRawSnapshot": null,
+        "reviewFiles": [
+          "calabarzon-wetland-roadmap-count-review-20261024.json"
+        ],
+        "tableContentRead": false
+      },
+      "reuse": {
+        "metadata": "Research citation and table-title metadata only; table content and item-level redistribution terms were not verified.",
+        "raw": "No report or data table was acquired.",
+        "content": "Table existence does not resolve the 2024 roadmap's list count, feature identity or complete wetland denominator. No data rows or public projection are approved."
+      },
+      "publicationApproval": false,
+      "researchStatus": "table-title-confirmed;table-content-and-rights-unavailable"
     },
     {
       "id": "llda-annual-report-2022",
