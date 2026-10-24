@@ -621,3 +621,12 @@ Verification for this research-only batch: `npm run test:species:pipeline`, `npm
 - **Disposition:** source counts are not comparable and are not summed. Preserve the 14 2020 strings verbatim as held candidates; zero independently verified fish rows, zero species assertions, zero diet claims and zero app projections. No waterbody geometry or full wetland extent was validated.
 - **Artifacts:** `central-luzon-candaba-inventory-review-20261024.json` and its regression test record access, source scope, identity and reuse limits. The Central Luzon discovery checkpoint remains incomplete.
 - **Next:** review Angat reservoir/river and Pampanga River reaches including the Minalin Channel fish-diversity study; then continue Sasmuan wetlands and freshwater/brackish/coastal leads across the remaining provinces.
+
+## 50. Minalin Channel seasonal catch table -- 24 October 2026
+
+- **Source and reuse:** Baysa et al. (2019) publish a Table 1 fish catch-composition matrix under CC BY 4.0. The study uses three Minalin Channel stations, byakus/hoop nets from a motorized banca, and sampling every 15 days during February-April and July-September 2018.
+- **Transcription:** the 24 source rows reconcile to 16 rows labeled freshwater and eight labeled marine; the table gives 17 dry-season and 19 wet-season presences. The source reports salinity of 11.57 ppt in the dry season and 0 ppt in the wet season. These results describe the study gear and its catches, not the whole fish community.
+- **Quality and use:** source name spellings include `Ctenophangyrodon idella`, `Cyprinos carpio` and a table/abstract spelling difference for `Elops`. Five rows are genus-only. The article notes that its gear-based diversity indices cannot represent the entire waterbody community. No voucher crosswalk, site geometry or current occurrence was verified.
+- **Disposition:** retain the attributed source-table transcription as historical, channel-specific research evidence. Zero accepted taxa, public assertions, diet claims, app projections or coordinates. Do not merge this evidence with Candaba wetland or basin-wide records.
+- **Artifacts:** `central-luzon-minalin-channel-fish-table-review-20261024.json` and the regression test preserve rows and seasonal counts. Central Luzon remains incomplete.
+- **Next:** review Angat reservoir and river evidence; continue beyond the single Minalin channel to other Pampanga Basin reaches, Sasmuan wetlands and coastal/brackish Central Luzon waters.
