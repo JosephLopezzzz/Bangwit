@@ -74,7 +74,7 @@ test("feeding guides filter by documented food group and searchable name or prey
   );
   assert.deepEqual(
     filterFeedingGuides(guides.taxa, { query: "", foodCategory: "zooplankton" }).map((guide) => guide.scientificName),
-    ["Otolithes ruber", "Stolephorus commersonnii", "Stolephorus indicus"],
+    ["Otolithes ruber", "Stolephorus commersonnii", "Stolephorus indicus", "Sardinella tawilis"],
   );
   assert.deepEqual(
     filterFeedingGuides(guides.taxa, { query: "crustaceans", foodCategory: "all" }).map(

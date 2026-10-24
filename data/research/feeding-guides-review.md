@@ -1,6 +1,6 @@
 # Feeding-guide source review
 
-Reviewed October 17, 2026. This is a small, source-backed educational sample, not a Cavite species inventory.
+Reviewed October 24, 2026. This is a small, source-backed educational sample, not a Cavite species inventory.
 
 | Taxon | Identity source | Diet source and scope | Decision |
 | --- | --- | --- | --- |
@@ -9,6 +9,7 @@ Reviewed October 17, 2026. This is a small, source-backed educational sample, no
 | *Otolithes ruber* (tiger-toothed croaker) | WoRMS AphiaID 218641. | Palomares et al. (1997), fish trawled in San Miguel Bay in April–May 1993. The reported diet consisted mainly of zooplankton, primarily crustaceans. The repository labels the paper CC BY 4.0. | Publish a paraphrased, cited example with the 1993 San Miguel Bay scope; not evidence of Cavite presence or bait effectiveness. |
 | *Stolephorus commersonnii* (Commerson's anchovy) | WoRMS AphiaID 152017; the paper spells the name *S. commersonii*, treated as an unaccepted spelling by WoRMS. | Palomares et al. (1997), trawl-caught San Miguel Bay fish, April–May 1993. The reported diet consisted mainly of zooplankton, primarily crustaceans. Repository license: CC BY 4.0. | Publish under the accepted name while preserving the paper's recorded spelling in source details; scoped to that historical sample. |
 | *Stolephorus indicus* (Indian anchovy) | WoRMS AphiaID 212280. | Palomares et al. (1997), trawl-caught San Miguel Bay fish, April–May 1993. The reported diet consisted mainly of zooplankton, primarily crustaceans. Repository license: CC BY 4.0. | Publish a paraphrased, cited example with study place and period; not evidence of Cavite presence or bait effectiveness. |
+| *Sardinella tawilis* (tawilis) | WoRMS AphiaID 1016224. | To et al. (2025), Taal Lake. Gut-content fish samples were collected in 2021-2022 and compared with 2003-2004 observations. The article reports size-selective zooplanktivory, temporal changes in copepods and cladocerans, and greater post-eruption selection for cyclopoid copepods and *Moina micrura*, *Ceriodaphnia cornuta* and *Bosmina fatalis*. The paper states CC BY 4.0. | Publish one attributed paraphrase scoped to Taal Lake and study periods. It is not a whole-species fixed diet, other-water presence claim, or bait recommendation. |
 
 Sources:
 
@@ -19,4 +20,7 @@ Sources:
 - World Register of Marine Species: [*Otolithes ruber*, AphiaID 218641](https://www.marinespecies.org/aphia.php?p=taxdetails&id=218641); [*Stolephorus commersonnii*, AphiaID 152017](https://www.marinespecies.org/aphia.php?p=taxdetails&id=152017); [*Stolephorus indicus*, AphiaID 212280](https://www.marinespecies.org/aphia.php?p=taxdetails&id=212280).
 - Department of Agriculture–National Fisheries Research and Development Institute, [mudfish locally known as dalag](https://nfrdi.da.gov.ph/2026/03/02/feature-unlocking-aquaculture-potential-of-mudfish-in-muslim-region/).
 
-Food categories are kept as coarse search facets, not claims that a food is always preferred. The published diet summaries are paraphrases. The WorldFish paper is credited under its stated CC BY 4.0 license; no photos or figures are copied. No effective bait, lure, gear, legal season, protected status, local presence or catch recommendation is supplied. Diet is not treated as bait evidence. Contextual catching advice remains unavailable until independent method evidence and applicable current rules are reviewed.
+- To DAL et al. 2025. "Shifts in the feeding ecology of the endemic and Endangered *Sardinella tawilis* in Lake Taal, Philippines." *Endangered Species Research* 57:177-192. [Article](https://www.int-res.com/articles/esr2025/57/n057p177.pdf), DOI: 10.3354/esr01408. The article states CC BY 4.0. The Bangwit summary is paraphrased and attributed; findings are limited to Taal Lake and the sampling/comparison periods.
+- World Register of Marine Species: [*Sardinella tawilis*, AphiaID 1016224](https://www.marinespecies.org/aphia.php?p=taxdetails&id=1016224).
+
+Food categories are kept as coarse search facets, not claims that a food is always preferred. The published diet summaries are paraphrases. The WorldFish and Inter-Research papers are credited under their stated CC BY 4.0 licenses; no photos or figures are copied. No effective bait, lure, gear, legal season, protected status, local presence or catch recommendation is supplied. Diet is not treated as bait evidence. Contextual catching advice remains unavailable until independent method evidence and applicable current rules are reviewed.
