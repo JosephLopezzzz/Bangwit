@@ -6,57 +6,59 @@
   "regionName": "Region IV-A (CALABARZON)",
   "status": "checkpoint-published-incomplete-baseline",
   "inputHashes": {
-    "scopeSha256": "92b84d2ca35ac6e2e890a207a4173e405245a81271058fc82b3464494954f82d"
+    "scopeSha256": "bf2c4e9f25d4a0583fbad930901c84fcc833c78b0df562670e3022a80b657718"
   },
   "decision": "Keep CALABARZON visibly in progress. This checkpoint records the current source-backed leads and specific gaps; it is not a complete fish checklist, a completed region, or a public species release.",
   "coverageSummary": {
-    "namedWaterbodyLeads": 36,
-    "distinctSourceReferencesAssigned": 39,
-    "sourceAssignments": 74,
+    "namedWaterbodyLeads": 39,
+    "distinctSourceReferencesAssigned": 41,
+    "sourceAssignments": 80,
     "registeredSources": 61,
     "provincesWithLeads": 5,
     "separateCityCoverageUnits": 1,
     "byWaterbodyKind": {
       "bay": 7,
       "estuary": 2,
-      "lake": 11,
+      "lake": 12,
       "reservoir": 2,
       "river": 9,
       "stream": 2,
-      "wetland": 3
+      "wetland": 5
     },
     "waterbodyDenominatorEstablished": false,
     "boundaryGeometryValidated": 0,
     "fishEvidenceStatusCounts": {
-      "historical-trawl-source-review-and-bounded-OBIS-discovery; no-new-species-assertions-admitted": 1,
-      "not-reviewed": 15,
-      "bounded-GBIF-locality-query-zero-no-absence-inferred": 5,
-      "bounded-exact-locality-review-returned-four-copepod-records-and-no-fish-record": 2,
-      "four-historical-species-locality-assertions-from-four-CC0-museum-records; quality-flags-retained; coordinates-held": 1,
-      "one-corrected-2024-preserved-specimen-assertion-for-Barbonymus-schwanefeldii": 1,
-      "bounded-Lake-Lumot-and-Lumot-Lake-queries-returned-zero; no-absence-inferred": 1,
-      "historical-seven-lake-survey-described; species-rows-held-for-rights-review": 7,
-      "one historical Gulaphallus mirabilis locality assertion from three CC0 museum occurrence records; dates and coordinates absent": 1,
       "12-survey-table-assertions-reviewed; 3-family-conflicts-held": 1,
-      "historical-aggregate-only-table-unavailable": 1
+      "bounded-exact-locality-review-returned-four-copepod-records-and-no-fish-record": 2,
+      "bounded-GBIF-locality-query-zero-no-absence-inferred": 5,
+      "bounded-Lake-Lumot-and-Lumot-Lake-queries-returned-zero; no-absence-inferred": 1,
+      "four-historical-species-locality-assertions-from-four-CC0-museum-records; quality-flags-retained; coordinates-held": 1,
+      "historical-aggregate-only-table-unavailable": 1,
+      "historical-common-fish-name-list; taxonomy-and-date-unresolved; no assertion": 1,
+      "historical-seven-lake-survey-described; species-rows-held-for-rights-review": 7,
+      "historical-trawl-source-review-and-bounded-OBIS-discovery; no-new-species-assertions-admitted": 1,
+      "not-reviewed": 17,
+      "one historical Gulaphallus mirabilis locality assertion from three CC0 museum occurrence records; dates and coordinates absent": 1,
+      "one-corrected-2024-preserved-specimen-assertion-for-Barbonymus-schwanefeldii": 1
     },
     "waterbodyReviewStatusCounts": {
-      "research-queued": 17,
       "bounded-GBIF-locality-string-checked-no-records-returned": 5,
+      "historical-gbif-assertion-reviewed-in-local-projection": 1,
+      "historical-source-described; item-rights-pending": 7,
+      "historical-source-reviewed;taxonomy-and-item-rights-pending": 1,
       "historical-specimen-evidence-reviewed; regional-baseline-incomplete": 1,
       "one-historical-specimen-assertion-reviewed; regional-baseline-incomplete": 1,
-      "primary-conference-abstract-reviewed-full-table-and-reuse-rights-pending": 2,
-      "historical-source-described; item-rights-pending": 7,
-      "historical-gbif-assertion-reviewed-in-local-projection": 1,
       "partial-source-table-identity-reviewed": 1,
+      "primary-conference-abstract-reviewed-full-table-and-reuse-rights-pending": 2,
+      "research-queued": 19,
       "source-reviewed-with-rights-and-locality-gaps": 1
     },
-    "leadsStillResearchQueued": 17,
-    "unknownSalinityLeads": 31,
+    "leadsStillResearchQueued": 19,
+    "unknownSalinityLeads": 34,
     "salinityClassificationsByWaterbody": {
-      "unknown": 31,
       "freshwater": 4,
-      "marine": 1
+      "marine": 1,
+      "unknown": 34
     },
     "researchProjectionAssertionsImported": 6,
     "admittedPublicRecords": 0,
@@ -91,17 +93,18 @@
       "Seven San Pablo lakes: one historical aggregate study lead; per-lake species rows held pending item-specific rights.",
       "Manila Bay: historic trawl table and seven additional CAS named-bay candidates remain held; broad named-bay geometry is not a legal or Cavite boundary.",
       "Brackish and estuarine leads: no admitted assertions tied to reviewed station salinity.",
-      "Several rivers, lakes, bays, wetlands, reservoirs and streams remain unreviewed or have only bounded locality-string checks."
+      "Several rivers, lakes, bays, wetlands, reservoirs and streams remain unreviewed or have only bounded locality-string checks.",
+      "Dagatan Lake: a DENR plan lists five local fish names, but no scientific identities, specimens or fish sampling date; item-level reuse terms and current protection status are unresolved."
     ],
-    "zeroResultMeaning": "Exact-locality zeroes are bounded search gaps, not fish-absence findings."
+    "zeroResultMeaning": "Exact-locality zeroes are bounded search gaps, not fish-absence findings. Waterbird monitoring and historical common-name lists are not species-level fish presence evidence."
   },
   "openGaps": [
     {
       "id": "scope-not-exhaustive",
       "status": "open",
       "count": null,
-      "reason": "Thirty-six selected named water/habitat leads are seeded, including the seven-lake San Pablo survey group and Tayabas/Palico-Lian river leads. The CALABARZON Regional Development Plan relays a 2021 baseline of 354 river systems and 19 inland wetlands, but supplies no named inventory in the reviewed text; these historical aggregate categories do not define today's complete waterbody denominator.",
-      "nextAction": "Obtain a named river/wetland inventory and define feature inclusion and alias rules; keep the 36-lead starter scope explicitly incomplete until a frozen, source-derived manifest is available."
+      "reason": "Thirty-nine selected named water/habitat leads are seeded, including the seven-lake San Pablo survey group, Tayabas/Palico-Lian rivers, three newly cross-walked Quezon wetlands and Dagatan Lake. The CALABARZON Regional Development Plan relays a 2021 baseline of 354 river systems and 19 inland wetlands, but supplies no named inventory in the reviewed text; these historical aggregate categories do not define today's complete waterbody denominator.",
+      "nextAction": "Obtain a named river/wetland inventory and define feature inclusion and alias rules; keep the 39-lead starter scope explicitly incomplete until a frozen, source-derived manifest is available."
     },
     {
       "id": "wetland-list-count-reconciliation",
@@ -109,7 +112,7 @@
       "sourceRefs": [
         "denr-calabarzon-wetlands-2024"
       ],
-      "reason": "A structured count of the official 2024 roadmap's province-grouped prose yields 31 name phrases against its headline of 30 wetlands. The names mix lakes, marshes, a river, reservoirs, a dam, mangroves, seagrass, a marine park and a river sanctuary. Historical 2021 aggregates (19 inland wetlands; 354 river systems) and a 2025 report table title do not resolve the identity or grouping; source documents were indexed but direct retrieval returned 403.",
+      "reason": "A structured count of the official 2024 roadmap's province-grouped prose yields 31 name phrases against its headline of 30 wetlands. The 2026 CENRO waterbird-census article provides barangay context for Kalantasan, Lalaguna and Lutang in Lopez, but does not resolve all name variants or fish presence. The names mix lakes, marshes, a river, reservoirs, a dam, mangroves, seagrass, a marine park and a river sanctuary. The historical 2021 aggregates and 2025 report table title do not resolve identity or grouping; direct official-page retrieval returned 403.",
       "nextAction": "Obtain the readable 2024 inventory and 2025 Table 8 through permitted official access; ask DENR how the 30 headline count maps to 31 phrases and whether there is a named inventory for the reported river systems. Do not equate name phrases to distinct wetlands or use them as a complete denominator."
     },
     {
@@ -137,15 +140,15 @@
     {
       "id": "fish-coverage",
       "status": "open",
-      "count": 36,
-      "reason": "Regional fish coverage remains incomplete. The seven San Pablo lakes have an aggregate historic survey lead whose table rows are rights-held; Palico-Lian has 15 pending source-table candidates; four Taal checklist assertions are separately admitted without field-observation dates, while broad Cavite historical specimens remain outside this inventory.",
+      "count": 39,
+      "reason": "Regional fish coverage remains incomplete. The seven San Pablo lakes have an aggregate historic survey lead whose table rows are rights-held; Palico-Lian has 15 pending source-table candidates; four Taal checklist assertions are separately admitted without field-observation dates. Dagatan Lake's historic local fish names are taxonomically unresolved and held. Several marshes, rivers, estuaries, lakes, reservoirs and streams remain unreviewed or have only bounded locality-string checks.",
       "nextAction": "Join only independently reviewed evidence at its supported geographic scale."
     },
     {
       "id": "identity-and-geometry",
       "status": "open",
-      "count": 36,
-      "reason": "No validated waterbody geometry or precise point assignment was created. Repeated names, local spellings and habitat-versus-waterbody identity require review.",
+      "count": 39,
+      "reason": "No validated waterbody geometry or precise point assignment was created. Repeated names, local spellings and habitat-versus-waterbody identity require review; the three Lopez marsh leads and Dagatan Lake have locality descriptions only.",
       "nextAction": "Reconcile stable identities and source-era/current geography before map display."
     },
     {
@@ -589,7 +592,49 @@
       "boundaryStatus": "not-delineated",
       "publicAdmission": false,
       "sourceRefs": [
-        "denr-calabarzon-wetlands-2024"
+        "denr-calabarzon-wetlands-2024",
+        "denr-cenro-calauag-2026-asian-waterbird-census"
+      ]
+    },
+    {
+      "id": "ph-wb-dagatan-quezon-lake",
+      "name": "Dagatan Lake",
+      "kind": "lake",
+      "salinity": "unknown",
+      "fishEvidenceStatus": "historical-common-fish-name-list; taxonomy-and-date-unresolved; no assertion",
+      "reviewStatus": "historical-source-reviewed;taxonomy-and-item-rights-pending",
+      "boundaryStatus": "not-delineated",
+      "publicAdmission": false,
+      "sourceRefs": [
+        "denr-fasps-gefs-sgp5-terminal-evaluation-dagatan-annex"
+      ]
+    },
+    {
+      "id": "ph-wb-kalantasan-lopez-marsh",
+      "name": "Kalantasan Marsh",
+      "kind": "wetland",
+      "salinity": "unknown",
+      "fishEvidenceStatus": "not-reviewed",
+      "reviewStatus": "research-queued",
+      "boundaryStatus": "not-delineated",
+      "publicAdmission": false,
+      "sourceRefs": [
+        "denr-calabarzon-wetlands-2024",
+        "denr-cenro-calauag-2026-asian-waterbird-census"
+      ]
+    },
+    {
+      "id": "ph-wb-lutang-lopez-marsh",
+      "name": "Lutang Marsh",
+      "kind": "wetland",
+      "salinity": "unknown",
+      "fishEvidenceStatus": "not-reviewed",
+      "reviewStatus": "research-queued",
+      "boundaryStatus": "not-delineated",
+      "publicAdmission": false,
+      "sourceRefs": [
+        "denr-calabarzon-wetlands-2024",
+        "denr-cenro-calauag-2026-asian-waterbird-census"
       ]
     },
     {

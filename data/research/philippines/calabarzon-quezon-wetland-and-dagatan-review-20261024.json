@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-24",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "regionName": "Region IV-A (CALABARZON)",
+  "status": "three-source-backed-quezon-waterbody-leads-added;fish-names-held",
+  "sourceIds": [
+    "denr-calabarzon-wetlands-2024",
+    "denr-cenro-calauag-2026-asian-waterbird-census",
+    "denr-fasps-gefs-sgp5-terminal-evaluation-dagatan-annex"
+  ],
+  "localityCrosswalk": [
+    {
+      "sourceName": "Lalaguna Marshland",
+      "sourceLocality": "Barangay Lalaguna, Lopez, Quezon",
+      "scopeLeadId": "ph-wb-lalaguna-quezon-marsh",
+      "crosswalk": "Add 'Lalaguna Marshland' as a source-name variant for the existing 'Lalaguna Marsh' lead. The 2024 list and 2026 DENR census names align and the latter supplies barangay/municipality context; no geometry is inferred.",
+      "confidence": "strong-name-and-locality-match"
+    },
+    {
+      "sourceName": "Kalantasan Marsh",
+      "earlierRoadmapName": "Kalantasan",
+      "sourceLocality": "Barangay Rizal Rural, Lopez, Quezon",
+      "scopeLeadId": "ph-wb-kalantasan-lopez-marsh",
+      "crosswalk": "Add a wetland research lead under the 2026 named form and retain the 2024 shorter name as an alias. These are source-described names in the same municipality; the physical feature boundary remains unknown.",
+      "confidence": "supported-name-variant;physical-identity-unmapped"
+    },
+    {
+      "sourceName": "Lutang Marsh",
+      "sourceLocality": "Barangay Pamampangin, Lopez, Quezon",
+      "scopeLeadId": "ph-wb-lutang-lopez-marsh",
+      "crosswalk": "Add a wetland research lead from the 2024 and 2026 DENR sources. The census supplies a barangay-level locality; no geometry or fish evidence is supplied.",
+      "confidence": "same-source-name-and-municipality"
+    }
+  ],
+  "dagatanLake": {
+    "scopeLeadId": "ph-wb-dagatan-quezon-lake",
+    "sourceDescribedLocality": "Sitio Busal, Barangay Ibabang Palale, Tayabas City, Quezon Province",
+    "sourceReportedAreaHectares": 2,
+    "sourceDescribedAccess": "Approximately 12 km on a hilly trail from Sitio Sentro; not converted to coordinates or a boundary.",
+    "managementPlanLocation": "Annex 17, printed pages 1-15, in the downloaded FASPS report PDF pages 145-159; lake locality and local-name passage visually checked on printed page 3.",
+    "fishCommonNameCandidates": [
+      "palos",
+      "tilapia",
+      "dalag",
+      "hito",
+      "baculi"
+    ],
+    "sourceWordingContext": "The plan calls these freshwater fish and says they are abundant, but gives no scientific identifications, specimens, fish-sampling date, counts or per-name evidence. Its separate mention of a 1995 flora/fauna study does not establish that the fish-name list came from that study.",
+    "taxonomyResolution": "none; common names are ambiguous and no species-level crosswalk is adopted",
+    "presentDayStatus": "unverified; the old plan says the lake was soon to be declared a protected area, which is not evidence of current designation",
+    "geometry": "not delineated"
+  },
+  "scopeChange": {
+    "newLeadIds": [
+      "ph-wb-dagatan-quezon-lake",
+      "ph-wb-kalantasan-lopez-marsh",
+      "ph-wb-lutang-lopez-marsh"
+    ],
+    "existingLeadAliasUpdated": "ph-wb-lalaguna-quezon-marsh",
+    "speciesAssertionsAdded": 0,
+    "dietClaimsAdded": 0,
+    "geometryAdded": false,
+    "publicAppProjectionAdded": false,
+    "publicationApproval": false
+  },
+  "limitations": [
+    "The CENRO article is available as official indexed text but direct retrieval returned HTTP 403; its cited waterbird monitoring does not establish fish presence or absence.",
+    "The Dagatan source is an official management-plan annex, not a taxonomic fish survey. Its local names remain unmapped and the fish statements are historical and undated.",
+    "The FASPS PDF has no verified item-level reuse license. No prose, tables, photos, coordinates, fish species or current protection claim are redistributed.",
+    "All new leads have unknown salinity, no validated geometry and no public species admission."
+  ],
+  "nextAction": "Review official or voucher-backed fish evidence for Dagatan and the two Lopez marshes; resolve local-name taxonomy only when locality-specific evidence supports it. Continue the remaining Quezon wetland aliases and waterbody denominator review without inferring fish presence from the waterbird census."
+}

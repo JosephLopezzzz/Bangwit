@@ -72,17 +72,17 @@
     "limits": "Province plus separate-city starter coverage. Municipalities/component cities and each island/waterbody still require the source-sweep inventory; this is not a completed regional inventory."
   },
   "counts": {
-    "waterbodyResearchLeads": 36,
+    "waterbodyResearchLeads": 39,
     "provincesWithLeads": 5,
     "separateCityCoverageUnits": 1,
     "byKind": {
       "bay": 7,
-      "estuary": 2,
-      "lake": 11,
-      "reservoir": 2,
       "river": 9,
-      "stream": 2,
-      "wetland": 3
+      "estuary": 2,
+      "wetland": 5,
+      "lake": 12,
+      "reservoir": 2,
+      "stream": 2
     },
     "geometryValidated": 0,
     "speciesAssertionsImported": 6,
@@ -105,8 +105,8 @@
           "relationship": "source-described-locality",
           "sourceRefs": [
             "emb-manila-bay-about",
-          "cavitecity-waterbodies",
-          "nfrdi-2017-manila-bay-trawl"
+            "cavitecity-waterbodies",
+            "nfrdi-2017-manila-bay-trawl"
           ],
           "provinceId": "0402100000"
         },
@@ -134,10 +134,10 @@
       ],
       "identityStatus": "source-named-research-lead",
       "boundaryStatus": "not-delineated",
-    "fishEvidenceStatus": "historical-trawl-source-review-and-bounded-OBIS-discovery; no-new-species-assertions-admitted",
+      "fishEvidenceStatus": "historical-trawl-source-review-and-bounded-OBIS-discovery; no-new-species-assertions-admitted",
       "reviewStatus": "research-queued",
       "publicAdmission": false,
-    "scopeNote": "One shared bay identity. The 2014-2015 NFRDI survey defines a Cavite stratum, but its station map has not been georeferenced; the source does not define current species presence, current bay boundaries, or municipal-water geometry. A Marine Regions named-bay polygon was used only for an exploratory OBIS query and is not an official or app boundary."
+      "scopeNote": "One shared bay identity. The 2014-2015 NFRDI survey defines a Cavite stratum, but its station map has not been georeferenced; the source does not define current species presence, current bay boundaries, or municipal-water geometry. A Marine Regions named-bay polygon was used only for an exploratory OBIS query and is not an official or app boundary."
     },
     {
       "id": "ph-wb-bacoor-bay",
@@ -401,7 +401,9 @@
       "fishEvidenceStatus": "four-historical-species-locality-assertions-from-four-CC0-museum-records; quality-flags-retained; coordinates-held",
       "reviewStatus": "historical-specimen-evidence-reviewed; regional-baseline-incomplete",
       "publicAdmission": false,
-      "evidenceBatchRefs": ["pansipit-fmnh-gbif-20261023"],
+      "evidenceBatchRefs": [
+        "pansipit-fmnh-gbif-20261023"
+      ],
       "scopeNote": "Four 1933 CC0 Field Museum specimen records support four historical species-locality assertions by exact Pansipit River text. All carry institution/collection quality flags; three also carry recorded-date mismatch flags. Their shared coordinate has no uncertainty and is withheld. No exact reach, estuary, salinity, current presence, or complete river list is inferred. The river links Taal Lake to Balayan Bay; one salinity class cannot be assigned to every reach from this connection."
     },
     {
@@ -594,7 +596,9 @@
       "fishEvidenceStatus": "one-corrected-2024-preserved-specimen-assertion-for-Barbonymus-schwanefeldii",
       "reviewStatus": "one-historical-specimen-assertion-reviewed; regional-baseline-incomplete",
       "publicAdmission": false,
-      "evidenceBatchRefs": ["laguna-de-bay-tinfoil-barb-20261023"],
+      "evidenceBatchRefs": [
+        "laguna-de-bay-tinfoil-barb-20261023"
+      ],
       "scopeNote": "Shared lake. One 2024 preserved specimen is reported from a fisherfolk catch and associated with Laguna de Bay; the official 2026 corrigendum corrects the locality to Brgy. Calahan, Cardona, Rizal. Article text gives no capture coordinates; its sampling-location figure is not georeferenced in the app. Basin/jurisdiction membership is broader than the lake; Cavite/Batangas/Quezon basin membership is not a lake-surface assertion."
     },
     {
@@ -922,7 +926,9 @@
       "fishEvidenceStatus": "one historical Gulaphallus mirabilis locality assertion from three CC0 museum occurrence records; dates and coordinates absent",
       "reviewStatus": "historical-gbif-assertion-reviewed-in-local-projection",
       "publicAdmission": false,
-      "evidenceBatchRefs": ["makiling-molawin-gbif-20261023"],
+      "evidenceBatchRefs": [
+        "makiling-molawin-gbif-20261023"
+      ],
       "scopeNote": "One text-locality assertion for Gulaphallus mirabilis is based on three GBIF preserved-specimen records from two CC0 datasets. No event date, coordinate, exact station, abundance or current-presence claim is adopted; the 2011 article's species table remains unextracted pending rights."
     },
     {
@@ -1137,7 +1143,9 @@
     {
       "id": "ph-wb-lalaguna-quezon-marsh",
       "name": "Lalaguna Marsh",
-      "aliases": [],
+      "aliases": [
+        "Lalaguna Marshland"
+      ],
       "kind": "wetland",
       "salinity": {
         "classification": "unknown",
@@ -1150,20 +1158,118 @@
           "relationship": "source-described-locality",
           "sourceRefs": [
             "denr-calabarzon-wetlands-2024",
-            "ajob-2014-tikub-freshwater-fish"
+            "ajob-2014-tikub-freshwater-fish",
+            "denr-cenro-calauag-2026-asian-waterbird-census"
           ],
           "provinceId": "0405600000"
         }
       ],
       "sourceRefs": [
-        "denr-calabarzon-wetlands-2024"
+        "denr-calabarzon-wetlands-2024",
+        "denr-cenro-calauag-2026-asian-waterbird-census"
       ],
       "identityStatus": "source-named-research-lead",
       "boundaryStatus": "not-delineated",
       "fishEvidenceStatus": "not-reviewed",
       "reviewStatus": "research-queued",
       "publicAdmission": false,
-      "scopeNote": "Quezon inventory lead; local administrative scope and hydrological connections require review."
+      "scopeNote": "Quezon wetland lead. DENR/CENRO 2026 names Lalaguna Marshland in Barangay Lalaguna, Lopez, matching this source-named lead; that census is waterbird monitoring only and supplies neither fish evidence nor feature geometry."
+    },
+    {
+      "id": "ph-wb-dagatan-quezon-lake",
+      "name": "Dagatan Lake",
+      "aliases": [],
+      "kind": "lake",
+      "salinity": {
+        "classification": "unknown",
+        "reviewStatus": "not-assessed",
+        "sourceRefs": []
+      },
+      "administrativeAssociations": [
+        {
+          "regionId": "0400000000",
+          "provinceId": "0405600000",
+          "relationship": "source-described-locality",
+          "sourceRefs": [
+            "denr-fasps-gefs-sgp5-terminal-evaluation-dagatan-annex"
+          ]
+        }
+      ],
+      "sourceRefs": [
+        "denr-fasps-gefs-sgp5-terminal-evaluation-dagatan-annex"
+      ],
+      "identityStatus": "source-named-research-lead",
+      "boundaryStatus": "not-delineated",
+      "fishEvidenceStatus": "historical-common-fish-name-list; taxonomy-and-date-unresolved; no assertion",
+      "reviewStatus": "historical-source-reviewed;taxonomy-and-item-rights-pending",
+      "publicAdmission": false,
+      "scopeNote": "DENR-hosted management-plan annex locates a 2 ha lake at Sitio Busal, Barangay Ibabang Palale, Tayabas City, Quezon. It lists palos, tilapia, dalag, hito and baculi as local freshwater fish names without scientific IDs, specimens, counts or a fish-sampling date. The plan's statement that the lake would soon be declared protected does not establish current designation."
+    },
+    {
+      "id": "ph-wb-kalantasan-lopez-marsh",
+      "name": "Kalantasan Marsh",
+      "aliases": [
+        "Kalantasan"
+      ],
+      "kind": "wetland",
+      "salinity": {
+        "classification": "unknown",
+        "reviewStatus": "not-assessed",
+        "sourceRefs": []
+      },
+      "administrativeAssociations": [
+        {
+          "regionId": "0400000000",
+          "provinceId": "0405600000",
+          "relationship": "source-described-locality",
+          "sourceRefs": [
+            "denr-calabarzon-wetlands-2024",
+            "denr-cenro-calauag-2026-asian-waterbird-census"
+          ]
+        }
+      ],
+      "sourceRefs": [
+        "denr-calabarzon-wetlands-2024",
+        "denr-cenro-calauag-2026-asian-waterbird-census"
+      ],
+      "identityStatus": "source-named-research-lead",
+      "boundaryStatus": "not-delineated",
+      "fishEvidenceStatus": "not-reviewed",
+      "reviewStatus": "research-queued",
+      "publicAdmission": false,
+      "scopeNote": "DENR/CENRO 2026 names Kalantasan Marsh at Barangay Rizal Rural, Lopez, Quezon, corresponding to the 2024 roadmap's shorter Kalantasan name. Waterbird monitoring does not establish fish presence; physical identity and boundaries remain unmapped."
+    },
+    {
+      "id": "ph-wb-lutang-lopez-marsh",
+      "name": "Lutang Marsh",
+      "aliases": [],
+      "kind": "wetland",
+      "salinity": {
+        "classification": "unknown",
+        "reviewStatus": "not-assessed",
+        "sourceRefs": []
+      },
+      "administrativeAssociations": [
+        {
+          "regionId": "0400000000",
+          "provinceId": "0405600000",
+          "relationship": "source-described-locality",
+          "sourceRefs": [
+            "denr-calabarzon-wetlands-2024",
+            "denr-cenro-calauag-2026-asian-waterbird-census"
+          ]
+        }
+      ],
+      "sourceRefs": [
+        "denr-calabarzon-wetlands-2024",
+        "denr-cenro-calauag-2026-asian-waterbird-census"
+      ],
+      "identityStatus": "source-named-research-lead",
+      "boundaryStatus": "not-delineated",
+      "fishEvidenceStatus": "not-reviewed",
+      "reviewStatus": "research-queued",
+      "publicAdmission": false,
+      "scopeNote": "DENR/CENRO 2026 names Lutang Marsh at Barangay Pamampangin, Lopez, Quezon and the 2024 roadmap uses the same name. Waterbird monitoring does not establish fish presence; physical identity and boundaries remain unmapped."
     },
     {
       "id": "ph-wb-ticub-quezon-lake",
