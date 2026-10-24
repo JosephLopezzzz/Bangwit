@@ -31,10 +31,10 @@ test("BMB Atlas adds selected CALABARZON river leads without implying a complete
     assert.equal(row.kind, "river");
     assert.equal(row.salinity.classification, "unknown");
     assert.equal(row.boundaryStatus, "not-delineated");
-    assert.equal(row.fishEvidenceStatus, "not-reviewed");
-    assert.equal(row.reviewStatus, "research-queued");
+    assert.equal(row.fishEvidenceStatus, "bounded-COLXR-Actinopterygii-waterBody-and-locality-text-screen-zero; no-fish-absence-inferred");
+    assert.equal(row.reviewStatus, "bounded-COLXR-Actinopterygii-waterBody-and-locality-text-screen-zero-no-absence-inferred");
     assert.equal(row.publicAdmission, false);
-    assert.deepEqual(row.sourceRefs, [review.sourceId]);
+    assert.deepEqual(row.sourceRefs, [review.sourceId, "gbif-occurrence-downloads"]);
   }
 
   for (const id of review.decision.existingLeadIdsUpdated) {

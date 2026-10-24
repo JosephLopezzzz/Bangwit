@@ -64,9 +64,9 @@ test("SEAFDEC stocking and restoration table remains distinct from fish occurren
 
   assert.equal(scope.counts.waterbodyResearchLeads, 60);
   assert.equal(report.coverageSummary.namedWaterbodyLeads, 60);
-  assert.equal(report.coverageSummary.leadsStillResearchQueued, 29);
+  assert.equal(report.coverageSummary.leadsStillResearchQueued, 20);
   assert.equal(report.coverageSummary.unknownSalinityLeads, 55);
-  assert.equal(report.coverageSummary.sourceAssignments, 136);
+  assert.equal(report.coverageSummary.sourceAssignments, 145);
   assert.equal(report.coverageSummary.distinctSourceReferencesAssigned, 44);
   assert.equal(report.coverageSummary.regionalBaselineComplete, false);
   assert.equal(report.coverageSummary.publicAdmission, false);
