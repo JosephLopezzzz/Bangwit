@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-24",
+  "phaseId": "L3",
+  "regionId": "0300000000",
+  "status": "planning-geometry-candidate-limited-not-app-ready",
+  "decision": "Use the University of Glasgow dataset only as attributed, exploratory river-catchment context after reviewing the actual geometry. It is not an official administrative or municipal-water boundary, a fish-site layer, or a complete Central Luzon waterbody inventory.",
+  "source": {
+    "id": "philippines-national-catchment-geodatabase-2023",
+    "title": "National-scale geodatabase of catchment characteristics in the Philippines for river management applications",
+    "citation": "Boothroyd, R. J., Williams, R. D., Hoey, T. B., MacDonell, C., Tolentino, P. L. M., Quick, L., Guardian, E. L., Reyes, J. C. M., Sabillo, C. J., Perez, J. E. G., & David, C. P. C. (2023). University of Glasgow Enlighten Research Data. DOI: 10.5525/gla.researchdata.1396.",
+    "recordUrl": "https://researchdata.gla.ac.uk/1396/",
+    "datasetDescription": "The record describes GIS catchment and stream-network shapefiles for 128 Philippine catchments. The accompanying paper defines its assessed catchments as greater than 250 km2.",
+    "license": "CC-BY-4.0",
+    "licenseEvidence": "The University of Glasgow record labels the direct-host files CC BY 4.0. A separate NERC EIDC record for the related geodatabase lists Open Government Licence; treat rights as file-and-host specific and re-check before using that mirror.",
+    "methodAndDate": "Catchment properties were derived with TopoToolbox V2 from a nationwide IfSAR digital elevation model acquired in 2013 with 5 m spatial resolution and reported 1 m vertical RMSE.",
+    "spatialReference": {
+      "catchmentPolygonProjectionFile": "WGS 84 / Pseudo-Mercator (EPSG:3857)",
+      "sourceRecordAlsoLists": ["WGS 84 / Pseudo-Mercator", "WGS 84 / UTM zone 51N"],
+      "interpretation": "The retrieved catchment polygon .prj identifies Web Mercator. Do not assume every file in the repository uses the same CRS."
+    }
+  },
+  "acquiredInputs": [
+    {
+      "file": "Philippines_topographic_characterstics_n128.zip",
+      "bytes": 57948,
+      "sha256": "5b9c7b3c6c8ca6d072ec0088e7b020060846bd58b1fb706c5c93b90101c37217",
+      "observedRecords": 128
+    },
+    {
+      "file": "Philippines_GIS_catchments_n128.zip",
+      "bytes": 22590206,
+      "sha256": "af85c4c551df89f1da7fe80275960be417cafc212aff545050d2ea6c38af0ae6",
+      "observedPolygonFeatures": 128,
+      "observedProjection": "WGS 84 / Pseudo-Mercator (EPSG:3857)"
+    }
+  ],
+  "centralLuzonNamedCatchments": [
+    {
+      "name": "Pampanga",
+      "catchmentAreaKm2": 7842.332,
+      "geometryExtentMetersEpsg3857": [13401644.875, 1683452.375, 13518116.688, 1821167.375]
+    },
+    {
+      "name": "Angat",
+      "catchmentAreaKm2": 910.21973,
+      "geometryExtentMetersEpsg3857": [13449837.25, 1668032.141, 13507132.438, 1712287.109]
+    }
+  ],
+  "scopeAndAccuracyLimits": [
+    "The 128-feature product is catchment geomorphology, not a named inventory of every river, stream, lake, wetland, estuary, reservoir or fishing area.",
+    "The reviewed roster includes Pampanga and Angat but no separately named Bataan river catchment, Pantabangan reservoir catchment or Candaba wetland. This is a dataset coverage gap, not evidence that those waterbodies are absent.",
+    "PAGASA describes the Pampanga River Basin as approximately 10,540 km2 including the allied Guagua basin, while this dataset's Pampanga polygon attribute is 7,842.332 km2. Basin definitions and extents are not reconciled, so neither figure is substituted for the other.",
+    "A catchment polygon cannot locate a fish collection, define the species' river reach, classify water salinity, or establish a legal municipal-water boundary.",
+    "Only the catchment-polygon archive and attribute-summary archive were downloaded and inspected; the separate 149 MB stream-network archive remains unreviewed."
+  ],
+  "appUse": {
+    "publicGeometryAdded": false,
+    "fishAssertionsAdded": 0,
+    "appProjections": 0,
+    "regionalReleaseApproved": false
+  },
+  "nextStep": "Review the Pantabangan reservoir fish-barcode source beyond its indexed abstract: obtain an eligible complete table and item-specific reuse basis, compare with older reservoir evidence and verify sequence/voucher/locality references. Keep the nine-species claim out of the app until those checks pass; then continue the remaining Central Luzon waterbody and coastal inventory."
+}
