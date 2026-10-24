@@ -55,10 +55,10 @@ test("exact GBIF text searches record bounded zeroes without claiming fish absen
 
   assert.ok(gbif.access.reviewFiles.includes("calabarzon-bmb-2016-river-gbif-screen-20261024.json"));
   assert.ok(gbif.access.additionalRawPaths.includes("raw/calabarzon-bmb-2016-river-gbif-screen-20261024/"));
-  assert.equal(report.coverageSummary.namedWaterbodyLeads, 60);
-  assert.equal(report.coverageSummary.sourceAssignments, 145);
+  assert.equal(report.coverageSummary.namedWaterbodyLeads, 80);
+  assert.equal(report.coverageSummary.sourceAssignments, 185);
   assert.equal(report.coverageSummary.leadsStillResearchQueued, 20);
-  assert.equal(report.coverageSummary.unknownSalinityLeads, 55);
+  assert.equal(report.coverageSummary.unknownSalinityLeads, 75);
   assert.equal(report.coverageSummary.regionalBaselineComplete, false);
   assert.equal(report.coverageSummary.publicAdmission, false);
   assert.equal(report.inputHashes.scopeSha256, createHash("sha256").update(scopeBytes).digest("hex"));
