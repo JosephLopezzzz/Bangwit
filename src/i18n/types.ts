@@ -409,6 +409,44 @@ export type Dictionary = {
     rightsNote: string;
     opensTab: string;
   };
+  angatGbifEvidence: {
+    title: string;
+    description: string;
+    scope: string;
+    localityLabel: string;
+    collectionDateLabel: string;
+    recordCountLabel: string;
+    individualCountLabel: string;
+    limits: string;
+    qualityFlags: string;
+    sourceDetails: string;
+    recordLink: string;
+    datasetLink: string;
+    taxonomyLink: string;
+    taxonomyNote: string;
+    licenseLink: string;
+    licenseNote: string;
+    opensTab: string;
+  };
+  bulacanManilaBayGbifEvidence: {
+    title: string;
+    description: string;
+    scope: string;
+    localityLabel: string;
+    recordedAs: string;
+    catalogLabel: string;
+    individualsLabel: string;
+    limits: string;
+    sourceDetails: string;
+    recordLink: string;
+    datasetLink: string;
+    museumRecordLink: string;
+    taxonomyLink: string;
+    qualityFlags: string;
+    licenseLink: string;
+    licenseNote: string;
+    opensTab: string;
+  };
   palicoRiverEvidence: {
     title: string;
     description: string;

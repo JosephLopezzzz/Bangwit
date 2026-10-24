@@ -10,6 +10,8 @@ import { buildPalicoRiverEvidence, readPalicoRiverInputs } from "./build-palico-
 import { buildMakilingGbifEvidence } from "./build-makiling-gbif-evidence.mjs";
 import { buildLagunaDeBaySpecimenEvidence } from "./build-laguna-de-bay-specimen-evidence.mjs";
 import { buildPansipitRiverGbifEvidence } from "./build-pansipit-river-gbif-evidence.mjs";
+import { buildAngatGbifEvidence } from "./build-angat-gbif-evidence.mjs";
+import { buildBulacanManilaBayEvidence } from "./build-bulacan-manila-bay-gbif-evidence.mjs";
 import { readFieldSourceReviews, validateFieldSourceReviews } from "./check-field-source-reviews.mjs";
 
 const root = new URL("../../", import.meta.url);
@@ -46,6 +48,12 @@ export function buildResearchStatus({
   lagunaDeBayProjection,
   pansipitRiverGbifReview,
   pansipitRiverGbifProjection,
+  bulacanAngatGbifReview,
+  bulacanAngatGbifProjection,
+  bulacanManilaBayGbifReview,
+  bulacanManilaBayGbifProjection,
+  bulacanQifsProfile,
+  centralLuzonCheckpoint,
   inputHashes,
 }) {
   validateAdministrativeRegistry(registry);
@@ -81,10 +89,67 @@ export function buildResearchStatus({
     expectedPansipitProjection,
     "Pansipit River projection differs from its reviewed GBIF source ledger",
   );
+  const expectedAngatProjection = buildAngatGbifEvidence(
+    bulacanAngatGbifReview,
+    inputHashes.bulacanAngatGbifReview,
+  );
+  assert.deepEqual(
+    bulacanAngatGbifProjection,
+    expectedAngatProjection,
+    "Angat historical projection differs from its reviewed GBIF source ledger",
+  );
+  const expectedBulacanManilaBayProjection = buildBulacanManilaBayEvidence(
+    bulacanManilaBayGbifReview,
+    inputHashes.bulacanManilaBayGbifReview,
+  );
+  assert.deepEqual(
+    bulacanManilaBayGbifProjection,
+    expectedBulacanManilaBayProjection,
+    "Bulacan Manila Bay projection differs from its reviewed GBIF source ledger",
+  );
+  assert.equal(centralLuzonCheckpoint.phaseId, "L3", "Central Luzon checkpoint must remain in its rollout phase");
+  assert.equal(centralLuzonCheckpoint.regionId, "0300000000", "Central Luzon checkpoint region mismatch");
+  assert.equal(centralLuzonCheckpoint.status, "discovery-checkpoint-incomplete");
+  assert.equal(centralLuzonCheckpoint.administrativeCoverage.geometryVerified, false);
+  assert.ok(Array.isArray(centralLuzonCheckpoint.waterbodyLeads.inlandAndBrackish));
+  assert.ok(Array.isArray(centralLuzonCheckpoint.waterbodyLeads.coastalAndMarine));
+  const centralLuzonDiscoveryLeads =
+    centralLuzonCheckpoint.waterbodyLeads.inlandAndBrackish.length +
+    centralLuzonCheckpoint.waterbodyLeads.coastalAndMarine.length;
   const regionIds = new Set(registry.regions.map((region) => region.id));
   const unitIds = new Set(registry.administrativeUnits.map((unit) => unit.code));
   const units = new Map(registry.administrativeUnits.map((unit) => [unit.code, unit]));
   const sourceIds = unique(sources.sources, "id", "source ID");
+  assert.ok(sourceIds.has(bulacanAngatGbifReview.source.id), "Angat specimen source is absent from the source registry");
+  assert.ok(
+    sourceIds.has(bulacanAngatGbifReview.taxonomyReview.sourceId),
+    "Angat taxonomy source is absent from the source registry",
+  );
+  assert.ok(sourceIds.has(bulacanManilaBayGbifReview.source.id), "Bulacan Manila Bay specimen source is absent");
+  for (const record of bulacanManilaBayGbifReview.records) {
+    assert.ok(sourceIds.has(record.taxonomyReview.sourceId), `Missing taxonomy source ${record.taxonomyReview.sourceId}`);
+  }
+  assert.equal(expectedBulacanManilaBayProjection.counts.speciesAssertions, 3);
+  assert.equal(expectedBulacanManilaBayProjection.counts.sourceOccurrenceRecords, 3);
+  assert.equal(bulacanQifsProfile.phaseId, "L3", "Bulacan QIFS profile must remain in Central Luzon");
+  assert.equal(bulacanQifsProfile.provincePsgc, "0301400000");
+  assert.equal(bulacanQifsProfile.status, "provincial-inland-catch-production-statistics;not-waterbody-species-inventory");
+  assert.equal(bulacanQifsProfile.annualProductionRows.length, 38);
+  assert.equal(bulacanQifsProfile.coverageAndAdmission.reportedCatchCategories, 34);
+  assert.equal(bulacanQifsProfile.coverageAndAdmission.availableCatchCategoryValues, 23);
+  assert.equal(bulacanQifsProfile.coverageAndAdmission.unavailableCatchCategoryValues, 11);
+  assert.equal(bulacanQifsProfile.coverageAndAdmission.scientificTaxaCrosswalked, 0);
+  assert.equal(bulacanQifsProfile.coverageAndAdmission.siteResolvedFishAssertionsAdded, 0);
+  assert.equal(bulacanQifsProfile.coverageAndAdmission.appProjectionRowsAdded, 0);
+  assert.equal(bulacanQifsProfile.annualProductionRows.find((row) => row.code === "000")?.metricTons, 2598.821);
+  assert.ok(bulacanQifsProfile.annualProductionRows
+    .filter((row) => row.type === "reported-catch-category")
+    .every((row) => !Object.hasOwn(row, "scientificName")));
+  for (const id of [
+    bulacanQifsProfile.sources.officialOpenstat.sourceId,
+    bulacanQifsProfile.sources.retrievalMirror.sourceId,
+    bulacanQifsProfile.sources.officialAggregateCrosscheck.sourceId,
+  ]) assert.ok(sourceIds.has(id), `Bulacan QIFS source is absent from the source registry: ${id}`);
   assert.ok(regionIds.has(scope.regionId), "Unknown scope region");
   assert.ok(sourceIds.has(freshwater.source.id), "Checklist source is absent from the source registry");
   assert.equal(scope.publicAdmission, false, "This scope has no public admission approval");
@@ -317,7 +382,10 @@ export function buildResearchStatus({
       rolloutKey: region.rolloutKey,
       administrativeCoverageUnits: registry.administrativeUnits.filter((unit) => unit.regionId === region.id).length,
       scopedWaterbodyResearchLeads: region.id === scope.regionId ? scope.waterbodies.length : 0,
-      workStatus: region.id === scope.regionId
+      discoveryCheckpointLeads: region.id === centralLuzonCheckpoint.regionId ? centralLuzonDiscoveryLeads : 0,
+      workStatus: region.id === centralLuzonCheckpoint.regionId
+        ? "discovery-checkpoint-published-incomplete"
+        : region.id === scope.regionId
         ? scope.status === "in-progress-incomplete-baseline"
           ? "coverage-gap-checkpoint-published-incomplete"
           : "scoped-checklist-and-multi-habitat-historical-evidence-prepared"
@@ -325,7 +393,9 @@ export function buildResearchStatus({
       baselineReviewed: false,
       reviewedRegionalSpeciesCount: null,
       coverageStatus:
-        region.id === scope.regionId
+        region.id === centralLuzonCheckpoint.regionId
+          ? "central-luzon-discovery-only-incomplete"
+          : region.id === scope.regionId
           ? "partial-cavite-history-taal-palico-laguna-pansipit-and-makiling"
           : "regional-review-pending",
     }));
@@ -359,6 +429,12 @@ export function buildResearchStatus({
     lagunaDeBaySpecimenRecords: expectedLagunaDeBayProjection.counts.specimenRecords,
     pansipitGbifAssertionsPrepared: expectedPansipitProjection.counts.speciesAssertions,
     pansipitGbifOccurrenceRecords: expectedPansipitProjection.counts.sourceOccurrenceRecords,
+    bulacanAngatGbifAssertionsPrepared: expectedAngatProjection.counts.speciesAssertions,
+    bulacanAngatGbifOccurrenceRecords: expectedAngatProjection.counts.sourceOccurrenceRecords,
+    bulacanManilaBayGbifAssertionsPrepared: expectedBulacanManilaBayProjection.counts.speciesAssertions,
+    bulacanManilaBayGbifOccurrenceRecords: expectedBulacanManilaBayProjection.counts.sourceOccurrenceRecords,
+    bulacanQifsReportedProductionCategories: bulacanQifsProfile.coverageAndAdmission.reportedCatchCategories,
+    bulacanQifsAppProjectionRows: bulacanQifsProfile.coverageAndAdmission.appProjectionRowsAdded,
     palicoRiverIdentityChecks:
       fieldSources.independent.taxonomyChecks.length + palicoRiverInputs.identityAddendum.checks.length,
     palicoRiverFamilyConflicts:
@@ -366,7 +442,7 @@ export function buildResearchStatus({
     ...fieldSummary,
     reviewedRegionalBaselines: 0,
     interpretation:
-      "Raw candidates/proposals remain immutable research inputs. Four Taal checklist assertions, twelve Palico-Lian river-survey table assertions, one undated text-locality assertion for Molawin Creek, one dated specimen assertion for Laguna de Bay, and four historical Pansipit River text-locality assertions from four flagged museum records are prepared for the app; these do not establish current presence or completed regional coverage. Null reviewed regional counts are unknown, not absence. This status does not verify deployment.",
+      "Raw candidates/proposals remain immutable research inputs. Four Taal checklist assertions, twelve Palico-Lian river-survey table assertions, one undated text-locality assertion for Molawin Creek, one dated specimen assertion for Laguna de Bay, four historical Pansipit River text-locality assertions, one 1929 Bulacan CAS specimen-locality assertion, and three historical 1982 Bulacan Manila Bay USNM specimen assertions are prepared for the app; these do not establish current presence or completed regional coverage. Null reviewed regional counts are unknown, not absence. This status does not verify deployment.",
     regions,
   };
 }
@@ -389,6 +465,21 @@ export async function readResearchInputs() {
     lagunaDeBayProjection: new URL("src/data/laguna-de-bay-specimen-evidence.json", root),
     pansipitRiverGbifReview: new URL("data/research/philippines/pansipit-river-gbif-source-review.json", root),
     pansipitRiverGbifProjection: new URL("src/data/pansipit-river-gbif-evidence.json", root),
+    bulacanAngatGbifReview: new URL(
+      "data/research/philippines/central-luzon-bulacan-angat-gbif-source-review-20261024.json",
+      root,
+    ),
+    bulacanAngatGbifProjection: new URL("src/data/angat-gbif-species-evidence.json", root),
+    bulacanManilaBayGbifReview: new URL(
+      "data/research/philippines/central-luzon-bulacan-manila-bay-usnm-source-review-20261024.json",
+      root,
+    ),
+    bulacanManilaBayGbifProjection: new URL("src/data/bulacan-manila-bay-gbif-evidence.json", root),
+    bulacanQifsProfile: new URL(
+      "data/research/philippines/central-luzon-bulacan-qifs-statistical-profile-20261024.json",
+      root,
+    ),
+    centralLuzonCheckpoint: new URL("data/research/philippines/central-luzon-discovery-checkpoint-20261024.json", root),
   };
   const entries = await Promise.all(
     Object.entries(files).map(async ([key, file]) => {
@@ -440,17 +531,27 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
         `Pansipit River evidence: ${status.pansipitGbifAssertionsPrepared} historical locality assertions from ${status.pansipitGbifOccurrenceRecords} CC0 museum records; quality flags retained and shared coordinates withheld.`,
       );
       console.log(
+        `Bulacan Angat evidence: ${status.bulacanAngatGbifAssertionsPrepared} historical text-locality assertion from ${status.bulacanAngatGbifOccurrenceRecords} CC0 CAS specimen record; no map point or current-presence claim.`,
+      );
+      console.log(
+        `Bulacan Manila Bay evidence: ${status.bulacanManilaBayGbifAssertionsPrepared} historical 1982 text-locality assertions from ${status.bulacanManilaBayGbifOccurrenceRecords} CC0 Smithsonian records; no map point or current-presence claim.`,
+      );
+      console.log(
+        `Bulacan PSA QIFS: ${status.bulacanQifsReportedProductionCategories} province-level catch categories; ${status.bulacanQifsAppProjectionRows} app rows; individual mirror values remain provisional.`,
+      );
+      console.log(
         `Palico review: ${status.palicoRiverIdentityChecks} WoRMS identity checks plus ten COL cross-checks; ${status.palicoRiverFamilyConflicts} source-family conflicts held. Brackish: ${status.brackishSourceLeadsReviewed} reviewed leads; ${status.preparedBrackishAssertions} admitted assertions.`,
       );
       console.log(
         `PSGC workbook verification: ${status.administrativeWorkbookVerification}; regional baselines reviewed: ${status.reviewedRegionalBaselines}.`,
       );
       console.table(
-        status.regions.map(({ rolloutKey, name, workStatus, scopedWaterbodyResearchLeads }) => ({
+        status.regions.map(({ rolloutKey, name, workStatus, scopedWaterbodyResearchLeads, discoveryCheckpointLeads }) => ({
           phase: rolloutKey,
           region: name,
           status: workStatus,
           waterbodyLeads: scopedWaterbodyResearchLeads,
+          discoveryLeads: discoveryCheckpointLeads,
         })),
       );
     }

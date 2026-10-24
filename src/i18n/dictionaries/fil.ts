@@ -476,6 +476,50 @@ export const filDictionary: Dictionary = {
       "CC0 1.0 ang nakasaad sa metadata ng GBIF dataset para sa mga napiling record. Hindi nito pinahihintulutan ang paggamit sa ibang record o hiwalay na dataset.",
     opensTab: "(magbubukas sa bagong tab)",
   },
+  angatGbifEvidence: {
+    title: "Angat Dam at Ilog Angat Â· makasaysayang specimen",
+    description:
+      "Isang CAS Ichthyology collection record ang nag-ulat ng dalawang Arius dispar na nakolekta noong 1929.",
+    scope: "Bulacan Â· Central Luzon. Eksakto ang source locality text; walang map pin.",
+    localityLabel: "Locality sa source",
+    collectionDateLabel: "Petsa ng pagkolekta",
+    recordCountLabel: "GBIF occurrence record",
+    individualCountLabel: "Indibidwal na iniulat sa record",
+    limits:
+      "Iisang makasaysayang record ito mula 18 Mayo 1929. Hindi nito pinatutunayan ang kasalukuyang presensya, kumpletong talaan ng isda sa Angat, o eksaktong bahagi ng pinagsamang locality kung saan nakolekta ang mga specimen. Wala itong sinasabi tungkol sa pahintulot mangisda, kaligtasan, diyeta o pain.",
+    qualityFlags: "Pinananatili ang GBIF quality flags:",
+    sourceDetails: "Source record, taxonomy at karapatan",
+    recordLink: "GBIF occurrence",
+    datasetLink: "CAS dataset",
+    taxonomyLink: "Taxonomy check: valid ang pangalan ayon sa ITIS",
+    taxonomyNote:
+      "Kinukumpirma lamang nito ang kasalukuyang status ng pangalan; hindi nito muling tinutukoy nang hiwalay ang specimen o bineberipika ang locality.",
+    licenseLink: "CC0 1.0",
+    licenseNote: "CC0 1.0 ang nakasaad sa napiling GBIF occurrence at CAS dataset. Walang kasamang larawan.",
+    opensTab: "(magbubukas sa bagong tab)",
+  },
+  bulacanManilaBayGbifEvidence: {
+    title: "Malolos · baybayin ng Manila Bay · makasaysayang fish-trap specimen",
+    description:
+      "Tatlong tala ng Smithsonian museum ang nagdokumento ng mga napreserbang isdang nahuli sa fish trap noong Pebrero 1982. Hilagang baybayin ng Manila Bay ang locality na nakasaad sa source.",
+    scope: "Malolos, Bulacan · Central Luzon. Makasaysayang tekstong ebidensiya lamang; walang map pin.",
+    localityLabel: "Locality sa source",
+    recordedAs: "Pangalang nasa source",
+    catalogLabel: "Museum catalog",
+    individualsLabel: "Indibidwal sa source",
+    limits:
+      "Hindi pinatutunayan ng mga record na naroon pa ang isda ngayon, ang dami ng populasyon, kumpletong listahan ng isda sa Manila Bay o Bulacan, o eksaktong lugar ng pagkolekta. Hindi pagtataya ng populasyon ang bilang ng indibidwal. Hindi ipinapakita ang malawak na GBIF waterBody label. Walang ipinahihiwatig na pahintulot mangisda, kaligtasan, diyeta o pain.",
+    sourceDetails: "Mga tala ng museum, taxonomy at data terms",
+    recordLink: "GBIF record",
+    datasetLink: "Smithsonian dataset sa GBIF",
+    museumRecordLink: "Smithsonian catalog record",
+    taxonomyLink: "Name check sa ITIS",
+    qualityFlags: "GBIF quality flags:",
+    licenseLink: "CC0 1.0 terms",
+    licenseNote:
+      "CC0 1.0 ang nakasaad para sa napiling Smithsonian dataset at occurrence records. Walang larawan o coordinates na kasama.",
+    opensTab: "(magbubukas sa bagong tab)",
+  },
   palicoRiverEvidence: {
     title: "Ilog Palico–Lian · talahanayan ng survey noong 2025",
     description:

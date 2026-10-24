@@ -36,22 +36,58 @@ test("one Quingoa River row is held as a historical candidate, never current or 
   assert.equal(candidate.independentTaxonomyCrosscheck.sourceId, "calacademy-catalog-stenogobius-ophthalmoporus-20261024");
   assert.match(candidate.independentTaxonomyCrosscheck.limits, /does not independently verify/);
   assert.equal(review.decision.currentPresenceAssertions, 0);
-  assert.equal(review.decision.publicSpeciesAssertionsAdded, 0);
-  assert.equal(review.decision.appProjectionRowsAdded, 0);
+  assert.equal(candidate.disposition.includes("not-public-app-assertion"), true);
+  assert.equal(review.screenDisposition.publicSpeciesAssertionsAdded, 0);
+  assert.equal(review.screenDisposition.appProjectionRowsAdded, 0);
 });
 
-test("administrative Perciformes results and raw hashes retain their quality limitations", () => {
-  const screen = review.queries.bulacanPerciformesAdministrativeScreen;
-  assert.equal(screen.resultCount, 19);
-  assert.equal(screen.parameters.orderKey, 587);
-  assert.match(screen.interpretation, /not a complete fish-class query/);
-  assert.match(review.otherAdministrativeQueryRows.disposition, /Namibia/);
-  assert.match(review.otherAdministrativeQueryRows.disposition, /Metro Manila/);
+test("corrected COL XR fish-class screen and observation metadata retain locality and privacy limits", () => {
+  const legacy = review.queries.bulacanPerciformesAdministrativeScreen;
+  assert.equal(legacy.resultCount, 19);
+  assert.equal(legacy.parameters.orderKey, 587);
+  assert.match(legacy.interpretation, /superseded/);
+
+  const classScreen = review.queries.bulacanActinopterygiiAdministrativeScreen;
+  assert.equal(classScreen.parameters.checklistKey, "7ddf754f-d193-4cc9-b351-99906754a03b");
+  assert.equal(classScreen.parameters.taxonKey, "8VR36");
+  assert.equal(classScreen.resultCount, 31);
+  assert.equal(classScreen.returnedRows, 31);
+  assert.equal(classScreen.endOfRecords, true);
+  assert.deepEqual(classScreen.basisOfRecordCounts, [
+    { basisOfRecord: "HUMAN_OBSERVATION", count: 14 },
+    { basisOfRecord: "PRESERVED_SPECIMEN", count: 17 },
+  ]);
+  assert.match(classScreen.interpretation, /not.*complete/i);
+  assert.match(classScreen.privacyNote, /No row-level observation IDs or coordinates/);
+
+  const observationFollowup = review.queries.iNaturalistDirectMetadataFollowup;
+  assert.equal(observationFollowup.resultCount, 14);
+  assert.equal(observationFollowup.waterBodyFieldCount, 0);
+  assert.equal(observationFollowup.qualityGradeCounts[0].count, 14);
+  assert.match(observationFollowup.limits, /proof of wild capture/);
+  assert.doesNotMatch(JSON.stringify(observationFollowup), /decimalLatitude|decimalLongitude|inaturalist\.org\/observations\//);
+  assert.match(review.otherAdministrativeQueryRows.disposition, /Namibia coordinate mismatch/);
+  assert.match(review.otherAdministrativeQueryRows.disposition, /bought at Manila Market/);
+
+  const angat = review.angatHistoricalCandidate;
+  assert.equal(angat.recordedName, "Arius dispar Herre, 1926");
+  assert.equal(angat.locality, "Angat Dam, Angat River, Luzon");
+  assert.equal(angat.eventDate, "1929-05-18");
+  assert.equal(angat.individualCount, 2);
+  assert.equal(angat.independentTaxonomyCrosscheck.result.includes("valid species"), true);
+  assert.match(angat.coordinate.decision, /excluded from the app projection and map/);
+  assert.equal(review.decision.historicalWaterbodyCandidates, 1);
+  assert.equal(review.decision.historicalNamedAquaticLocalityCandidates, 2);
+  assert.equal(review.decision.publicSpeciesAssertionsAdded, 1);
+  assert.equal(review.decision.appProjectionRowsAdded, 1);
   assert.ok(review.rawSnapshots.every((snapshot) => /^[a-f0-9]{64}$/.test(snapshot.sha256)));
   assert.ok(review.rawSnapshots.every((snapshot) => snapshot.gitIgnored === true));
   assert.equal(checkpoint.bulacanGbifWaterbodyScreenReviewFile, "central-luzon-bulacan-gbif-waterbody-screen-20261024.json");
   assert.equal(checkpoint.status, "discovery-checkpoint-incomplete");
   assert.equal(registry.sourceCount, registry.sources.length);
   assert.ok(registry.sources.some((source) => source.id === "gbif-bulacan-perciformes-screen-20261024"));
+  assert.ok(registry.sources.some((source) => source.id === classScreen.sourceId));
+  assert.ok(registry.sources.some((source) => source.id === observationFollowup.sourceId));
+  assert.ok(registry.sources.some((source) => source.id === angat.independentTaxonomyCrosscheck.sourceId));
   assert.ok(registry.sources.some((source) => source.id === "calacademy-catalog-stenogobius-ophthalmoporus-20261024"));
 });

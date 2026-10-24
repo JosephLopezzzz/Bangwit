@@ -3,8 +3,8 @@
   "reviewedOn": "2026-10-24",
   "phaseId": "L3",
   "regionId": "0300000000",
-  "status": "bounded-gbif-waterbody-screen-reviewed;one-historical-river-candidate-held",
-  "purpose": "Screen the 22 Bulacan communal/inland names from the BFAR profile against GBIF's exact waterBody field, then inspect a bounded administrative Perciformes result for named freshwater source localities.",
+  "status": "col-xr-actinopterygii-screen-reviewed;one-angat-historical-record-projected;one-quingoa-candidate-held",
+  "purpose": "Screen the 22 Bulacan communal/inland names against GBIF waterBody text, correct the earlier Perciformes-only search with a pinned COL XR Actinopterygii administrative query, and check linked public observation metadata without inferring geoprivacy-protected localities.",
   "queries": {
     "bfarWaterbodyNameScreen": {
       "endpoint": "https://api.gbif.org/v1/occurrence/search",
@@ -55,7 +55,7 @@
         "limit": 100
       },
       "resultCount": 19,
-      "interpretation": "This is GBIF Backbone Perciformes only, not a complete fish-class query or a province inventory. It demonstrates administrative-filter noise: some source localities resolve to Metro Manila, and two records have coordinates in Namibia despite the Bulacan query. The bounded result yielded one row whose waterBody field explicitly says Quingoa River.",
+      "interpretation": "Legacy GBIF Backbone Perciformes-only diagnostic (19 returned rows). It is retained to explain the earlier undercount and is superseded for fish-class screening by the COL XR Actinopterygii query below. It is not a province inventory or an absence finding.",
       "sourceId": "gbif-bulacan-perciformes-screen-20261024"
     },
     "quingoaExactWaterbodyFollowup": {
@@ -69,6 +69,66 @@
       },
       "resultCount": 1,
       "sourceId": "gbif-bulacan-perciformes-screen-20261024"
+    },
+    "bulacanActinopterygiiAdministrativeScreen": {
+      "endpoint": "https://api.gbif.org/v1/occurrence/search",
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&stateProvince=Bulacan&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&hasCoordinate=true&occurrenceStatus=PRESENT&limit=100",
+      "parameters": {
+        "country": "PH",
+        "stateProvince": "Bulacan",
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "checklistName": "Catalogue of Life eXtended Release (COL XR)",
+        "taxonKey": "8VR36",
+        "taxonName": "Actinopterygii",
+        "taxonRank": "GIGACLASS",
+        "hasCoordinate": true,
+        "occurrenceStatus": "PRESENT",
+        "limit": 100
+      },
+      "resultCount": 31,
+      "returnedRows": 31,
+      "endOfRecords": true,
+      "basisOfRecordCounts": [
+        {
+          "basisOfRecord": "HUMAN_OBSERVATION",
+          "count": 14
+        },
+        {
+          "basisOfRecord": "PRESERVED_SPECIMEN",
+          "count": 17
+        }
+      ],
+      "interpretation": "This corrected query uses the current COL XR Actinopterygii taxon key instead of the former order-only screen. All 31 returned rows were reviewed as a bounded query, not a complete province checklist. The result contains substantial administrative/locality noise: three museum rows carry Namibia coordinates, six CAS rows say Malabon, and the linked iNaturalist metadata includes a public Valenzuela locality conflict. Two CAS rows provide named aquatic locality text (Angat Dam/Angat River and Quingoa River); the separate Rio Grande de Pampanga label explicitly says the fish was bought in Manila Market. Do not map or infer site membership from the administrative filter alone.",
+      "privacyNote": "Some linked iNaturalist entries expose only broad public place context or carry geoprivacy restrictions. No row-level observation IDs or coordinates are copied into this tracked review, and no restricted location is inferred. GBIF administrative selection is not permission to reveal a more precise observation site.",
+      "sourceId": "gbif-bulacan-col-xr-actinopterygii-screen-20261024"
+    },
+    "iNaturalistDirectMetadataFollowup": {
+      "endpoint": "https://api.inaturalist.org/v1/observations",
+      "parameters": {
+        "ids": "matched locally to the GBIF screen response; omitted here",
+        "perPage": 200
+      },
+      "resultCount": 14,
+      "qualityGradeCounts": [
+        {
+          "qualityGrade": "research",
+          "count": 14
+        }
+      ],
+      "waterBodyFieldCount": 0,
+      "licenseCounts": [
+        {
+          "license": "CC-BY",
+          "count": 4
+        },
+        {
+          "license": "CC-BY-NC",
+          "count": 10
+        }
+      ],
+      "localityReview": "Public place guesses can sometimes narrow a record to a municipality but do not name a river, lake, reservoir, or capture station. One public locality conflicts with Bulacan and is excluded. Records whose public place context is country-level or geoprivacy-restricted are excluded from finer locality reasoning; their IDs, coordinates, and taxa are not surfaced here.",
+      "limits": "Research Grade is iNaturalist platform quality metadata, not independent taxonomic certification, proof of wild capture, or proof of a named waterbody. No photographs were downloaded, no exact coordinates were copied, and no observation was projected into the app.",
+      "sourceId": "inaturalist-bulacan-observation-metadata-followup-20261024"
     }
   },
   "rawSnapshots": [
@@ -95,6 +155,21 @@
     {
       "path": "raw/gbif-bulacan-waterbody-screen-20261024/catalog-of-fishes-stenogobius-ophthalmoporus.html",
       "sha256": "37472e0cd52c006324c12475ecd581194217649b0b2fb68700766c341c0a021d",
+      "gitIgnored": true
+    },
+    {
+      "path": "raw/gbif-bulacan-waterbody-screen-20261024/colxr-actinopterygii-stateprovince.json",
+      "sha256": "9b7db052cb8918380826bdc6ebdbe58af47ce7e5ba9e8945ea1fabef3aee1172",
+      "gitIgnored": true
+    },
+    {
+      "path": "raw/gbif-bulacan-waterbody-screen-20261024/inat-observations-bulk.json",
+      "sha256": "90b20f075a24612cd57b1c8a5b6db50e5733378f0fadf5b717e4dab8243945c6",
+      "gitIgnored": true
+    },
+    {
+      "path": "raw/gbif-bulacan-waterbody-screen-20261024/record-3426466682.json",
+      "sha256": "2f58909813bd3b599dabdeda7e6e6ddf096562d7cc047111ea52da39a3b7ee86",
       "gitIgnored": true
     }
   ],
@@ -146,39 +221,76 @@
     "disposition": "historical-waterbody-occurrence-candidate-held-for-original-catalog-label-and-site-resolution;not-current-presence;not-public-app-assertion"
   },
   "otherAdministrativeQueryRows": {
-    "returnedRows": 18,
-    "disposition": "No additional named freshwater waterBody row was established. The remaining rows include observations with no waterBody field, coastal or otherwise unresolved localities, five CAS rows whose locality/GADM resolves to Malabon in Metro Manila, and two preserved-specimen records with Namibia coordinates and COUNTRY_COORDINATE_MISMATCH. Do not assign these to Bulacan freshwater sites from the stateProvince search filter alone.",
-    "examples": [
-      {
-        "gbifOccurrenceKey": 4525181289,
-        "name": "Oreochromis niloticus",
-        "date": "2024-02-08",
-        "sourceLocality": "Pitpitan, Bulakan, Bulacan",
-        "waterBody": null,
-        "basisOfRecord": "HUMAN_OBSERVATION",
-        "gbifIssue": "TAXON_ID_NOT_FOUND",
-        "disposition": "Species-level administrative-area observation candidate only; no named waterbody, so it does not establish a river/lake record."
-      },
-      {
-        "gbifOccurrenceKey": 3759588372,
-        "name": "Channa striata",
-        "date": "2022",
-        "sourceLocality": "Meycauayan City, PH-BU, PH",
-        "waterBody": null,
-        "basisOfRecord": "HUMAN_OBSERVATION",
-        "disposition": "Species-level administrative-area observation candidate only; no named waterbody."
-      }
-    ]
+    "returnedRows": 29,
+    "disposition": "The remaining 29 class-query rows do not establish named Bulacan fish-waterbody evidence. They include 14 iNaturalist observations with no waterBody field and mixed locality precision, seven National Museum rows (four with no named waterBody and three with Namibia coordinate mismatch), and eight other CAS rows (six Malabon localities, one Obando locality without a named waterBody, and one Rio Grande de Pampanga label explicitly recorded as bought at Manila Market). Exclude these from a wild freshwater checklist unless the original locality, collection context, taxon identity, and rights are independently resolved.",
+    "iNaturalistSourceId": "inaturalist-bulacan-observation-metadata-followup-20261024"
   },
   "decision": {
     "historicalWaterbodyCandidates": 1,
-    "speciesNameCrosschecked": 1,
+    "historicalNamedAquaticLocalityCandidates": 2,
+    "speciesNameCrosschecked": 2,
     "currentPresenceAssertions": 0,
-    "publicSpeciesAssertionsAdded": 0,
-    "appProjectionRowsAdded": 0,
+    "publicSpeciesAssertionsAdded": 1,
+    "appProjectionRowsAdded": 1,
     "exactNameZeroesUsedAsAbsence": false,
     "geometryAdded": false,
     "regionalCompletionApproved": false
   },
-  "nextStep": "Continue Bulacan freshwater discovery with direct, recent, taxon-resolved capture surveys and source-level collection records. Resolve the CAS Quingoa locality against the original collection record before any historical assertion is promoted. Expand beyond GBIF's Perciformes order filter; this search is not a complete fish-class inventory. Keep Central Luzon incomplete."
+  "nextStep": "Continue Bulacan evidence with modern, site-resolved fish surveys for Angat, Meycauayan and Bocaue; the one Angat app row is a 1929 text-locality record only, while the Quingoa candidate remains held pending original-label/site resolution. Preserve the iNaturalist geoprivacy limits. Central Luzon remains incomplete.",
+  "angatHistoricalCandidate": {
+    "gbifOccurrenceKey": 3426466682,
+    "gbifOccurrenceUrl": "https://www.gbif.org/occurrence/3426466682",
+    "gbifApiUrl": "https://api.gbif.org/v1/occurrence/3426466682",
+    "datasetKey": "5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+    "datasetUrl": "https://www.gbif.org/dataset/5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+    "datasetDoi": "10.15468/efh2ib",
+    "provider": "California Academy of Sciences, CAS Ichthyology via GBIF",
+    "occurrenceId": "urn:catalog:CAS:SU(ICH):27667",
+    "institutionCode": "CAS",
+    "collectionCode": "SU(ICH)",
+    "catalogNumber": "27667",
+    "fieldNumber": "Z127667",
+    "basisOfRecord": "PRESERVED_SPECIMEN",
+    "individualCount": 2,
+    "occurrenceStatus": "PRESENT (inferred by GBIF from individualCount)",
+    "recordedName": "Arius dispar Herre, 1926",
+    "acceptedName": "Arius dispar Herre, 1926",
+    "taxonRank": "SPECIES",
+    "eventDate": "1929-05-18",
+    "locality": "Angat Dam, Angat River, Luzon",
+    "waterBody": null,
+    "recordedBy": "Villadolid, Deogracias V.",
+    "identifiedBy": "A. W. C. T. Herre",
+    "coordinate": {
+      "latitude": 14.957152,
+      "longitude": 120.954631,
+      "datum": "WGS84 (assumed by GBIF)",
+      "uncertaintyMeters": 301,
+      "decision": "Coordinates are excluded from the app projection and map. The source gives combined dam/river locality text, and GBIF flags the datum as assumed; do not interpret the point as a verified collection station."
+    },
+    "gbifIssues": [
+      "GEODETIC_DATUM_ASSUMED_WGS84",
+      "CONTINENT_INVALID",
+      "CONTINENT_DERIVED_FROM_COORDINATES",
+      "OCCURRENCE_STATUS_INFERRED_FROM_INDIVIDUAL_COUNT"
+    ],
+    "gbifTaxonomy": {
+      "taxonKey": 2345282,
+      "family": "Ariidae",
+      "order": "Siluriformes"
+    },
+    "independentTaxonomyCrosscheck": {
+      "sourceId": "itis-arius-dispar-taxonomy-20261024",
+      "url": "https://itis.gov/servlet/SingleRpt/SingleRpt?print_version=PRT&search_topic=TSN&search_value=680688&source=to_print",
+      "result": "ITIS lists Arius dispar Herre, 1926 as a valid species in Ariidae: Siluriformes.",
+      "limits": "This is an independent nomenclatural cross-check only; it does not independently re-identify the CAS specimen or verify the source locality."
+    },
+    "license": "CC0-1.0",
+    "disposition": "historical-named-aquatic-locality-candidate-admitted-as-text-only-evidence;not-current-presence;no-map-point"
+  },
+  "screenDisposition": {
+    "publicSpeciesAssertionsAdded": 0,
+    "appProjectionRowsAdded": 0,
+    "reason": "The GBIF query itself is discovery only; any promotion requires its own source, taxonomy, rights and projection review."
+  }
 }

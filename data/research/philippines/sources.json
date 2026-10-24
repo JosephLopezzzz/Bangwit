@@ -3,7 +3,7 @@
   "checkedOn": "2026-10-24",
   "status": "research-only-source-registry",
   "scope": "National acquisition references and CALABARZON/Central Luzon identity/source leads. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 99,
+  "sourceCount": 108,
   "sources": [
     {
       "id": "gbif-col-xr-taxonomy-matching",
@@ -1666,23 +1666,25 @@
         "https://doi.org/10.15468/hnhrg3",
         "https://api.gbif.org/v1/dataset/821cc27a-e3bb-4bc5-ac34-89ada245069d"
       ],
-      "role": "Dataset source for two dated, preserved-specimen records explicitly associated with shared Manila Bay; not NCR-only evidence or a current inventory.",
+      "role": "Dataset source for dated, preserved-specimen records from shared Manila Bay and Bulacan; selected rows remain historical evidence, not current inventories.",
       "checkedOn": "2026-10-24",
       "access": {
         "status": "dataset-metadata-and-selected-occurrence-records-reviewed",
         "reviewFiles": [
-          "ncr-manila-bay-gbif-record-triage-20261024.json"
+          "ncr-manila-bay-gbif-record-triage-20261024.json",
+          "central-luzon-bulacan-manila-bay-usnm-source-review-20261024.json"
         ],
         "rawPath": "raw/ncr-colxr-actinopterygii-administrative-20261024/",
+        "additionalRawPaths": ["raw/gbif-bulacan-preserved-no-coordinate-20261024.json"],
         "metadataSha256": "ce20f881724070d2155b1861864321a1ade62973fd621a6a20fd0440c151a4b1"
       },
       "reuse": {
-        "metadata": "GBIF dataset metadata specifies CC0 1.0; both selected occurrence records also carry CC0 1.0.",
+        "metadata": "GBIF dataset metadata specifies CC0 1.0; each selected occurrence record also carries CC0 1.0.",
         "raw": "Only query and dataset-metadata snapshots are retained in ignored research storage.",
-        "content": "Projection is limited to attributed catalog facts for two historical specimen records; no coordinate, image or specimen-media file is copied."
+        "content": "Projection is limited to attributed catalog facts for selected historical specimen records; no coordinate, image or specimen-media file is copied."
       },
       "publicationApproval": false,
-      "researchStatus": "two-shared-manila-bay-historical-records-projected;regional-release-unapproved",
+      "researchStatus": "shared-manila-bay-and-bulacan-historical-records-projected;regional-release-unapproved",
       "license": "CC0-1.0",
       "doi": "10.15468/hnhrg3",
       "sourceYear": null
@@ -1921,12 +1923,16 @@
       "title": "DNA Barcoding of Teleost Fishes from North Luzon, Philippines: A Dataset for Ichthyofaunal Diversity Assessment",
       "provider": "Scientific Data / Springer Nature",
       "url": "https://www.nature.com/articles/s41597-025-05758-3",
-      "additionalUrls": ["https://doi.org/10.1038/s41597-025-05758-3"],
+      "additionalUrls": [
+        "https://doi.org/10.1038/s41597-025-05758-3"
+      ],
       "role": "Cross-regional historical barcode-study lead for Aurora, Cagayan and Zambales, including river collections and marine market/landing-site samples; not a current or app-ready occurrence checklist.",
       "checkedOn": "2026-10-24",
       "access": {
         "status": "publisher-indexed-article-and-abstract-reviewed;live-page-open-redirected-to-inaccessible-authorization",
-        "reviewFiles": ["central-luzon-north-luzon-dna-barcoding-source-review-20261024.json"],
+        "reviewFiles": [
+          "central-luzon-north-luzon-dna-barcoding-source-review-20261024.json"
+        ],
         "supplementaryData": "Not acquired or transcribed in this review.",
         "genbank": "Four public EFetch accession records were spot-checked; each had a voucher and date but only country-level location and no latitude/longitude. One record citation uses a different author group and remains crosswalk-held."
       },
@@ -2034,148 +2040,165 @@
       "license": null
     },
     {
-          "id": "agno-river-basin-fish-assemblage-2026",
-          "title": "Diversity and distribution of freshwater fish in mineralized watersheds of the Agno River Basin, Northern Philippines",
-          "provider": "Watershed Ecology and the Environment / University of Glasgow Enlighten",
-          "url": "https://doi.org/10.1016/j.wsee.2026.05.001",
-          "additionalUrls": ["https://eprints.gla.ac.uk/386293/", "https://eprints.gla.ac.uk/386293/2/386293.pdf"],
-          "role": "Historical fish assemblage and water-quality study across eight Agno River Basin stations; this review extracts only the ARB7 Paniqui, Tarlac site and does not claim basin-wide current coverage.",
-          "checkedOn": "2026-10-24",
-          "access": {
-            "status": "publisher-and-institutional-record-reviewed;full-article-pdf-downloaded-and-hashed;ARB7-tables-reviewed",
-            "reviewFiles": ["central-luzon-agno-paniqui-station-fish-review-20261024.json"],
-            "rawPdfSha256": "a8b56137a4db86f32b14bb6fdb328661081717433852441aa8dd030b023eca8e"
-          },
-          "reuse": {
-            "metadata": "University of Glasgow record lists a Creative Commons Attribution license; article footer identifies CC BY 4.0.",
-            "raw": "Full PDF retained outside the repository in local temporary research storage; hash recorded in the review artifact.",
-            "content": "Attribution-only excerpt and source-specific review artifact; no public app admission. Preserve article typos, site/date scope, and specimen-identity limits."
-          },
-          "publicationApproval": false,
-          "researchStatus": "historical-agno-arb7-source-reviewed;site-specific-taxonomy-and-current-presence-not-certified",
-          "license": "CC-BY-4.0",
-          "sourceYear": 2026
-        },
+      "id": "agno-river-basin-fish-assemblage-2026",
+      "title": "Diversity and distribution of freshwater fish in mineralized watersheds of the Agno River Basin, Northern Philippines",
+      "provider": "Watershed Ecology and the Environment / University of Glasgow Enlighten",
+      "url": "https://doi.org/10.1016/j.wsee.2026.05.001",
+      "additionalUrls": [
+        "https://eprints.gla.ac.uk/386293/",
+        "https://eprints.gla.ac.uk/386293/2/386293.pdf"
+      ],
+      "role": "Historical fish assemblage and water-quality study across eight Agno River Basin stations; this review extracts only the ARB7 Paniqui, Tarlac site and does not claim basin-wide current coverage.",
+      "checkedOn": "2026-10-24",
+      "access": {
+        "status": "publisher-and-institutional-record-reviewed;full-article-pdf-downloaded-and-hashed;ARB7-tables-reviewed",
+        "reviewFiles": [
+          "central-luzon-agno-paniqui-station-fish-review-20261024.json"
+        ],
+        "rawPdfSha256": "a8b56137a4db86f32b14bb6fdb328661081717433852441aa8dd030b023eca8e"
+      },
+      "reuse": {
+        "metadata": "University of Glasgow record lists a Creative Commons Attribution license; article footer identifies CC BY 4.0.",
+        "raw": "Full PDF retained outside the repository in local temporary research storage; hash recorded in the review artifact.",
+        "content": "Attribution-only excerpt and source-specific review artifact; no public app admission. Preserve article typos, site/date scope, and specimen-identity limits."
+      },
+      "publicationApproval": false,
+      "researchStatus": "historical-agno-arb7-source-reviewed;site-specific-taxonomy-and-current-presence-not-certified",
+      "license": "CC-BY-4.0",
+      "sourceYear": 2026
+    },
     {
-          "id": "agno-river-basin-fish-dataset-2026",
-          "title": "Diversity and Distribution of Freshwater Fish in Mineralized Watersheds of the Agno River Basin, Northern Philippines [Data Collection]",
-          "provider": "University of Glasgow Enlighten Research Data",
-          "url": "https://researchdata.gla.ac.uk/2287/",
-          "additionalUrls": [
-            "https://doi.org/10.5525/gla.researchdata.2287",
-            "https://researchdata.gla.ac.uk/2287/1/Data_2287.zip"
-          ],
-          "role": "CC BY 4.0 source dataset with station coordinates and wet/dry fish counts; used to cross-check ARB7 Paniqui study-table richness and abundance only.",
-          "checkedOn": "2026-10-24",
-          "access": {
-            "status": "institutional-dataset-record-and-zip-reviewed;zip-hashed;Fish_count-and-Sampling_sites-checked",
-            "reviewFiles": ["central-luzon-agno-paniqui-station-fish-review-20261024.json"],
-            "rawZipSha256": "2acd528d5e1a47643bbc80002ed85168b2d7809e23c3de978b176c04983547fb"
-          },
-          "reuse": {
-            "metadata": "Research-data landing page lists CC BY 4.0 for data and README.",
-            "raw": "ZIP and CSV files retained outside the repository in local temporary research storage; hashes recorded in the review artifact.",
-            "content": "Transcribed ARB7 site-specific counts with attribution. Season labels retained without date mapping because article, metadata and filenames conflict."
-          },
-          "publicationApproval": false,
-          "researchStatus": "historical-dataset-reviewed;ARB7-counts-reconciled;season-date-crosswalk-unresolved",
-          "license": "CC-BY-4.0",
-          "sourceYear": 2026
-        },
+      "id": "agno-river-basin-fish-dataset-2026",
+      "title": "Diversity and Distribution of Freshwater Fish in Mineralized Watersheds of the Agno River Basin, Northern Philippines [Data Collection]",
+      "provider": "University of Glasgow Enlighten Research Data",
+      "url": "https://researchdata.gla.ac.uk/2287/",
+      "additionalUrls": [
+        "https://doi.org/10.5525/gla.researchdata.2287",
+        "https://researchdata.gla.ac.uk/2287/1/Data_2287.zip"
+      ],
+      "role": "CC BY 4.0 source dataset with station coordinates and wet/dry fish counts; used to cross-check ARB7 Paniqui study-table richness and abundance only.",
+      "checkedOn": "2026-10-24",
+      "access": {
+        "status": "institutional-dataset-record-and-zip-reviewed;zip-hashed;Fish_count-and-Sampling_sites-checked",
+        "reviewFiles": [
+          "central-luzon-agno-paniqui-station-fish-review-20261024.json"
+        ],
+        "rawZipSha256": "2acd528d5e1a47643bbc80002ed85168b2d7809e23c3de978b176c04983547fb"
+      },
+      "reuse": {
+        "metadata": "Research-data landing page lists CC BY 4.0 for data and README.",
+        "raw": "ZIP and CSV files retained outside the repository in local temporary research storage; hashes recorded in the review artifact.",
+        "content": "Transcribed ARB7 site-specific counts with attribution. Season labels retained without date mapping because article, metadata and filenames conflict."
+      },
+      "publicationApproval": false,
+      "researchStatus": "historical-dataset-reviewed;ARB7-counts-reconciled;season-date-crosswalk-unresolved",
+      "license": "CC-BY-4.0",
+      "sourceYear": 2026
+    },
     {
-          "id": "aurora-dibut-river-ichthyofauna-2025",
-          "title": "Ichthyofaunal Community in Dibut River Baler, Aurora",
-          "provider": "Egyptian Journal of Aquatic Biology and Fisheries / Aurora State College of Technology",
-          "url": "https://doi.org/10.21608/ejabf.2025.426195",
-          "additionalUrls": [
-            "https://journals.ekb.eg/article_426195_0.html",
-            "https://journals.ekb.eg/article_426195_dd6e1cec9caaf922fbfa04ef1e86bc58.pdf"
-          ],
-          "role": "Historical October 2023-March 2024 three-station Dibut River fish survey in Baler, Aurora, including the tidal lower reach; species counts and article reuse rights remain held.",
-          "checkedOn": "2026-10-24",
-          "access": {
-            "status": "publisher-pdf-index-text-reviewed;species-count-conflict-and-rights-triaged",
-            "reviewFiles": ["central-luzon-aurora-dibut-river-source-review-20261024.json"],
-            "localPdf": "Direct download attempt reset; PDF text was reviewed from publisher-hosted indexed PDF."
-          },
-          "reuse": {
-            "metadata": "DOAJ journal-level record lists CC BY-NC-SA but is not treated as article-specific permission; publisher policy states copyright transfers to the journal.",
-            "raw": "No PDF retained in the repository.",
-            "content": "No table, image, or prose is redistributed; obtain article-level reuse clarification before adapting data for Bangwit."
-          },
-          "publicationApproval": false,
-          "researchStatus": "historical-river-estuary-study;species-count-and-rights-held;no-app-admissions",
-          "sourceYear": 2025,
-          "license": null
-        },
+      "id": "aurora-dibut-river-ichthyofauna-2025",
+      "title": "Ichthyofaunal Community in Dibut River Baler, Aurora",
+      "provider": "Egyptian Journal of Aquatic Biology and Fisheries / Aurora State College of Technology",
+      "url": "https://doi.org/10.21608/ejabf.2025.426195",
+      "additionalUrls": [
+        "https://journals.ekb.eg/article_426195_0.html",
+        "https://journals.ekb.eg/article_426195_dd6e1cec9caaf922fbfa04ef1e86bc58.pdf"
+      ],
+      "role": "Historical October 2023-March 2024 three-station Dibut River fish survey in Baler, Aurora, including the tidal lower reach; species counts and article reuse rights remain held.",
+      "checkedOn": "2026-10-24",
+      "access": {
+        "status": "publisher-pdf-index-text-reviewed;species-count-conflict-and-rights-triaged",
+        "reviewFiles": [
+          "central-luzon-aurora-dibut-river-source-review-20261024.json"
+        ],
+        "localPdf": "Direct download attempt reset; PDF text was reviewed from publisher-hosted indexed PDF."
+      },
+      "reuse": {
+        "metadata": "DOAJ journal-level record lists CC BY-NC-SA but is not treated as article-specific permission; publisher policy states copyright transfers to the journal.",
+        "raw": "No PDF retained in the repository.",
+        "content": "No table, image, or prose is redistributed; obtain article-level reuse clarification before adapting data for Bangwit."
+      },
+      "publicationApproval": false,
+      "researchStatus": "historical-river-estuary-study;species-count-and-rights-held;no-app-admissions",
+      "sourceYear": 2025,
+      "license": null
+    },
     {
-          "id": "fasps-masinloc-oyon-bay-reef-assessment-2021",
-          "title": "Coral Reef as a Vital Resource for Marine Biodiversity Conservation and Management: Habitat Assessment",
-          "provider": "DENR Foreign-Assisted and Special Projects Service E-Library / USAID SIBOL",
-          "url": "https://faspselib.denr.gov.ph/Materials/Detail/2e8fa962-33f3-46db-8a2a-632eda322bbb",
-          "role": "Official report metadata lead for coral-reef fish richness and habitat coverage in Masinloc-Oyon Bay PLS, Zambales; source tables are login-gated.",
-          "checkedOn": "2026-10-24",
-          "access": {
-            "status": "official-landing-page-reviewed;full-report-authentication-required",
-            "reviewFiles": ["central-luzon-zambales-masinloc-oyon-bay-report-source-review-20261024.json"],
-            "raw": null
-          },
-          "reuse": {
-            "metadata": "The landing page does not specify a reuse license.",
-            "raw": "The PDF preview/download requires login or registration; no login attempted and no report file retained.",
-            "content": "Landing-page aggregate counts remain source-reported metadata only; no species list or geometry is approved."
-          },
-          "publicationApproval": false,
-          "researchStatus": "official-marine-habitat-report-lead;full-report-and-rights-review-pending;no-app-admissions",
-          "sourceYear": 2021,
-          "license": null
-        },
+      "id": "fasps-masinloc-oyon-bay-reef-assessment-2021",
+      "title": "Coral Reef as a Vital Resource for Marine Biodiversity Conservation and Management: Habitat Assessment",
+      "provider": "DENR Foreign-Assisted and Special Projects Service E-Library / USAID SIBOL",
+      "url": "https://faspselib.denr.gov.ph/Materials/Detail/2e8fa962-33f3-46db-8a2a-632eda322bbb",
+      "role": "Official report metadata lead for coral-reef fish richness and habitat coverage in Masinloc-Oyon Bay PLS, Zambales; source tables are login-gated.",
+      "checkedOn": "2026-10-24",
+      "access": {
+        "status": "official-landing-page-reviewed;full-report-authentication-required",
+        "reviewFiles": [
+          "central-luzon-zambales-masinloc-oyon-bay-report-source-review-20261024.json"
+        ],
+        "raw": null
+      },
+      "reuse": {
+        "metadata": "The landing page does not specify a reuse license.",
+        "raw": "The PDF preview/download requires login or registration; no login attempted and no report file retained.",
+        "content": "Landing-page aggregate counts remain source-reported metadata only; no species list or geometry is approved."
+      },
+      "publicationApproval": false,
+      "researchStatus": "official-marine-habitat-report-lead;full-report-and-rights-review-pending;no-app-admissions",
+      "sourceYear": 2021,
+      "license": null
+    },
     {
-          "id": "bfar-region-iii-bulacan-fisheries-profile",
-          "title": "Bulacan Fisheries Profile",
-          "provider": "Bureau of Fisheries and Aquatic Resources Region III",
-          "url": "https://r3.bfar.da.gov.ph/fisheries-profile-bulacan/",
-          "additionalUrls": ["https://r3.bfar.da.gov.ph/wp-content/uploads/2023/12/Bulacan.pdf"],
-          "role": "Official provincial fishery profile and named communal/inland waterbody discovery source; it does not provide a species-by-waterbody checklist in the reviewed sections.",
-          "checkedOn": "2026-10-24",
-          "access": {
-            "status": "official-two-page-PDF-downloaded-and-text-reviewed",
-            "reviewFiles": ["central-luzon-bulacan-waterbody-source-review-20261024.json"],
-            "rawPdfSha256": "e26101c5da113286d906e320cf1f45aaeececf41ca28dba4b04ef8b4ada5e08",
-            "rawPdfRetainedOutsideRepository": true
-          },
-          "reuse": {
-            "metadata": "The PDF is publicly downloadable, but no item-specific reuse license or public redistribution permission was located.",
-            "raw": "Temporary PDF retained outside the repository for source review only.",
-            "content": "Waterbody names remain research discovery leads. No profile species names, figures, or tables are projected into Bangwit."
-          },
-          "publicationApproval": false,
-          "researchStatus": "bulacan-waterbody-name-leads-only;site-specific-fish-evidence-and-reuse-pending",
-          "sourceYear": null,
-          "license": null
-        },
+      "id": "bfar-region-iii-bulacan-fisheries-profile",
+      "title": "Bulacan Fisheries Profile",
+      "provider": "Bureau of Fisheries and Aquatic Resources Region III",
+      "url": "https://r3.bfar.da.gov.ph/fisheries-profile-bulacan/",
+      "additionalUrls": [
+        "https://r3.bfar.da.gov.ph/wp-content/uploads/2023/12/Bulacan.pdf"
+      ],
+      "role": "Official provincial fishery profile and named communal/inland waterbody discovery source; it does not provide a species-by-waterbody checklist in the reviewed sections.",
+      "checkedOn": "2026-10-24",
+      "access": {
+        "status": "official-two-page-PDF-downloaded-and-text-reviewed",
+        "reviewFiles": [
+          "central-luzon-bulacan-waterbody-source-review-20261024.json"
+        ],
+        "rawPdfSha256": "e26101c5da113286d906e320cf1f45aaeececf41ca28dba4b04ef8b4ada5e08",
+        "rawPdfRetainedOutsideRepository": true
+      },
+      "reuse": {
+        "metadata": "The PDF is publicly downloadable, but no item-specific reuse license or public redistribution permission was located.",
+        "raw": "Temporary PDF retained outside the repository for source review only.",
+        "content": "Waterbody names remain research discovery leads. No profile species names, figures, or tables are projected into Bangwit."
+      },
+      "publicationApproval": false,
+      "researchStatus": "bulacan-waterbody-name-leads-only;site-specific-fish-evidence-and-reuse-pending",
+      "sourceYear": null,
+      "license": null
+    },
     {
-          "id": "emb-region-iii-rsober-2022-angat-monitoring",
-          "title": "Region III State of Brown Environment Report 2022",
-          "provider": "Environmental Management Bureau Region III / DENR",
-          "url": "https://r3.emb.gov.ph/wp-content/uploads/2024/01/RSOBER-2022.pdf",
-          "role": "Official indexed Table 17 lead for three Angat River water-quality monitoring station locations; it is not a fish survey.",
-          "checkedOn": "2026-10-24",
-          "access": {
-            "status": "official-search-indexed-table-excerpt-reviewed;direct-PDF-request-403",
-            "reviewFiles": ["central-luzon-bulacan-waterbody-source-review-20261024.json"],
-            "raw": null
-          },
-          "reuse": {
-            "metadata": "Report metadata and a search-indexed official station table were reviewed; no data license or reuse terms were established.",
-            "raw": "No full report copy was obtained or retained.",
-            "content": "Monitoring station names and coordinates are research locality leads only; the summarized water-quality statement has no verified sampling date and is not a current safety finding."
-          },
-          "publicationApproval": false,
-          "researchStatus": "angat-water-quality-stations-discovered;full-report-date-and-methods-pending",
-          "sourceYear": 2022,
-          "license": null
-        },
+      "id": "emb-region-iii-rsober-2022-angat-monitoring",
+      "title": "Region III State of Brown Environment Report 2022",
+      "provider": "Environmental Management Bureau Region III / DENR",
+      "url": "https://r3.emb.gov.ph/wp-content/uploads/2024/01/RSOBER-2022.pdf",
+      "role": "Official indexed Table 17 lead for three Angat River water-quality monitoring station locations; it is not a fish survey.",
+      "checkedOn": "2026-10-24",
+      "access": {
+        "status": "official-search-indexed-table-excerpt-reviewed;direct-PDF-request-403",
+        "reviewFiles": [
+          "central-luzon-bulacan-waterbody-source-review-20261024.json"
+        ],
+        "raw": null
+      },
+      "reuse": {
+        "metadata": "Report metadata and a search-indexed official station table were reviewed; no data license or reuse terms were established.",
+        "raw": "No full report copy was obtained or retained.",
+        "content": "Monitoring station names and coordinates are research locality leads only; the summarized water-quality statement has no verified sampling date and is not a current safety finding."
+      },
+      "publicationApproval": false,
+      "researchStatus": "angat-water-quality-stations-discovered;full-report-date-and-methods-pending",
+      "sourceYear": 2022,
+      "license": null
+    },
     {
       "id": "dlsu-chavez-carandang-pterygoplichthys-luzon-2014",
       "title": "Invasion stages of Pterygoplichthys spp. (Pisces: Loricariidae) in the Luzon Island, Philippines",
@@ -2519,6 +2542,240 @@
       "publicationApproval": false,
       "researchStatus": "accepted-species-name-crosschecked;family-placement-differs-from-gbif;no-locality-or-occurrence-validation",
       "sourceYear": 2026
+    },
+    {
+      "id": "gbif-bulacan-col-xr-actinopterygii-screen-20261024",
+      "title": "GBIF Bulacan administrative Actinopterygii screening using COL XR",
+      "provider": "Global Biodiversity Information Facility and contributing occurrence datasets",
+      "url": "https://techdocs.gbif.org/en/openapi/v1/occurrence",
+      "additionalUrls": [
+        "https://api.gbif.org/v1/occurrence/search?country=PH&stateProvince=Bulacan&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&hasCoordinate=true&occurrenceStatus=PRESENT&limit=100",
+        "https://techdocs.gbif.org/en/data-processing/taxonomy-interpretation"
+      ],
+      "role": "Corrected bounded administrative fish-class query for Bulacan using the COL XR Actinopterygii key. It returned 31 rows and was reviewed for locality and quality; this is not a province inventory or proof of waterbody presence.",
+      "checkedOn": "2026-10-24",
+      "access": {
+        "status": "public-occurrence-search-and-selected-records-directly-reviewed",
+        "reviewFiles": [
+          "central-luzon-bulacan-gbif-waterbody-screen-20261024.json"
+        ],
+        "rawPath": "raw/gbif-bulacan-waterbody-screen-20261024/",
+        "rawSha256Recorded": true
+      },
+      "reuse": {
+        "metadata": "GBIF API, checklist, query, selected occurrence and dataset metadata reviewed.",
+        "raw": "Selected query and record snapshots remain in ignored local research storage; the full dataset was not downloaded.",
+        "content": "Occurrence records have mixed contributor rights and quality flags. Each row must be reviewed individually. The screen does not grant reuse of unrelated records or approve current-presence claims."
+      },
+      "publicationApproval": false,
+      "researchStatus": "31-row-col-xr-actinopterygii-administrative-screen-reviewed;two-historical-cas-aquatic-locality-candidates;no-current-assertions",
+      "apiBaseUrl": "https://api.gbif.org/v1",
+      "accessRequirements": "Public occurrence searches are available without a GBIF key; bulk downloads require authenticated GBIF access. No download request was submitted."
+    },
+    {
+      "id": "inaturalist-bulacan-observation-metadata-followup-20261024",
+      "title": "iNaturalist public observation API metadata quality and privacy follow-up",
+      "provider": "iNaturalist",
+      "url": "https://www.inaturalist.org/api",
+      "additionalUrls": [
+        "https://help.inaturalist.org/en/support/solutions/articles/151000169938"
+      ],
+      "role": "Public metadata QA for observations surfaced by a GBIF administrative screen. No row identifiers, exact coordinates, protected-place guesses, or photographs are included in the tracked review. The records do not name a waterBody.",
+      "checkedOn": "2026-10-24",
+      "access": {
+        "status": "public-observation-api-metadata-reviewed-with-geoprivacy-respected",
+        "reviewFiles": [
+          "central-luzon-bulacan-gbif-waterbody-screen-20261024.json"
+        ],
+        "rawPath": "raw/gbif-bulacan-waterbody-screen-20261024/inat-observations-bulk.json",
+        "rawSha256Recorded": true
+      },
+      "reuse": {
+        "metadata": "Public API fields reviewed; iNaturalist documents both observer geoprivacy and taxon geoprivacy, and notes that obscured locations can be inferred. Restricted location details are not used or reproduced.",
+        "raw": "The raw response is kept only in ignored local research storage; no photo assets were downloaded.",
+        "content": "Returned observation licenses are mixed, including CC BY and CC BY-NC. Do not treat platform Research Grade as proof of wild capture or named-waterbody presence; review each observation license and locality before any reuse."
+      },
+      "publicationApproval": false,
+      "researchStatus": "metadata-only-followup;geoprivacy-limited-rows-withheld;no-app-projection",
+      "apiBaseUrl": "https://api.inaturalist.org/v1",
+      "accessRequirements": "Public observation API; no account or API key used."
+    },
+    {
+      "id": "itis-arius-dispar-taxonomy-20261024",
+      "title": "ITIS taxonomy record for Arius dispar",
+      "provider": "Integrated Taxonomic Information System (ITIS)",
+      "url": "https://itis.gov/servlet/SingleRpt/SingleRpt?print_version=PRT&search_topic=TSN&search_value=680688&source=to_print",
+      "additionalUrls": [],
+      "role": "Independent current-name check for the CAS Angat historical specimen candidate: species rank, valid standing, Ariidae, Siluriformes. It does not verify the specimen identity or locality.",
+      "checkedOn": "2026-10-24",
+      "access": {
+        "status": "public-taxonomic-record-reviewed",
+        "reviewFiles": [
+          "central-luzon-bulacan-angat-gbif-source-review-20261024.json"
+        ],
+        "rawPath": null,
+        "rawSha256Recorded": false
+      },
+      "reuse": {
+        "metadata": "The ITIS report identifies its other source as the Catalog of Fishes; nomenclature is used only as an independent cross-check.",
+        "raw": "No taxonomic dataset or ITIS bulk file was downloaded.",
+        "content": "Nomenclatural validity only; not proof of locality, species identification for a particular specimen, current occurrence, legality or safety."
+      },
+      "publicationApproval": false,
+      "researchStatus": "valid-species-name-crosscheck-only"
+    },
+    {
+      "id": "itis-oxyurichthys-microlepis-taxonomy-20261024",
+      "title": "ITIS taxonomy record for Oxyurichthys microlepis",
+      "provider": "Integrated Taxonomic Information System (ITIS)",
+      "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=171949",
+      "additionalUrls": [],
+      "role": "Independent current-name check for a Smithsonian Bulacan historical specimen; species rank and valid standing only.",
+      "checkedOn": "2026-10-24",
+      "access": {
+        "status": "public-taxonomic-record-reviewed",
+        "reviewFiles": ["central-luzon-bulacan-manila-bay-usnm-source-review-20261024.json"],
+        "rawPath": null,
+        "rawSha256Recorded": false
+      },
+      "reuse": {
+        "metadata": "ITIS report provides the current taxonomic name and standing.",
+        "raw": "No taxonomic dataset or ITIS bulk file was downloaded.",
+        "content": "Nomenclatural validity only; not proof of specimen identity, locality, current presence, legality or safety."
+      },
+      "publicationApproval": false,
+      "researchStatus": "valid-species-name-crosscheck-only"
+    },
+    {
+      "id": "itis-drombus-ocyurus-taxonomy-20261024",
+      "title": "ITIS taxonomy record for Drombus ocyurus",
+      "provider": "Integrated Taxonomic Information System (ITIS)",
+      "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=637240",
+      "additionalUrls": [],
+      "role": "Independent current-name check for a Smithsonian Bulacan historical specimen; species rank and valid standing only.",
+      "checkedOn": "2026-10-24",
+      "access": {
+        "status": "public-taxonomic-record-reviewed",
+        "reviewFiles": ["central-luzon-bulacan-manila-bay-usnm-source-review-20261024.json"],
+        "rawPath": null,
+        "rawSha256Recorded": false
+      },
+      "reuse": {
+        "metadata": "ITIS report provides the current taxonomic name and standing.",
+        "raw": "No taxonomic dataset or ITIS bulk file was downloaded.",
+        "content": "Nomenclatural validity only; not proof of specimen identity, locality, current presence, legality or safety."
+      },
+      "publicationApproval": false,
+      "researchStatus": "valid-species-name-crosscheck-only"
+    },
+    {
+      "id": "itis-butis-koilomatodon-taxonomy-20261024",
+      "title": "ITIS taxonomy record for Butis koilomatodon",
+      "provider": "Integrated Taxonomic Information System (ITIS)",
+      "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=637078",
+      "additionalUrls": [],
+      "role": "Independent current-name check for the Smithsonian synonym Prionobutis koilomatodon; ITIS recognizes Butis koilomatodon as a valid species name.",
+      "checkedOn": "2026-10-24",
+      "access": {
+        "status": "public-taxonomic-record-reviewed",
+        "reviewFiles": ["central-luzon-bulacan-manila-bay-usnm-source-review-20261024.json"],
+        "rawPath": null,
+        "rawSha256Recorded": false
+      },
+      "reuse": {
+        "metadata": "ITIS report provides the current taxonomic name and standing.",
+        "raw": "No taxonomic dataset or ITIS bulk file was downloaded.",
+        "content": "Nomenclatural validity only; not proof of specimen identity, locality, current presence, legality or safety."
+      },
+      "publicationApproval": false,
+      "researchStatus": "valid-species-name-crosscheck-only"
+    },
+    {
+      "id": "psa-openstat-qifs-inland-volume-2026-08-06",
+      "title": "Inland Municipal Fisheries: Volume of Production by Geolocation, Species, Year and Quarter",
+      "provider": "Philippine Statistics Authority, OpenSTAT",
+      "url": "https://openstat.psa.gov.ph/PXWeb/api/v1/en/DB/2E/FS/0052E4GVIP0.px",
+      "additionalUrls": [
+        "https://openstat.psa.gov.ph/",
+        "https://openstat.psa.gov.ph/Metadata/2E4GVIP0",
+        "https://openstat.psa.gov.ph/API-Documentation",
+        "https://openstat.psa.gov.ph/Portals/0/files/Fisheries%20Technical%20Notes.pdf",
+        "https://psa.gov.ph/content/psa-greenlights-conduct-2025-quarterly-fisheries-surveys"
+      ],
+      "role": "Official provincial, regional and national statistical series of inland fishery catch production categories. It is not a waterbody-level occurrence inventory or taxonomic checklist.",
+      "checkedOn": "2026-10-24",
+      "access": {
+        "status": "official-metadata-and-2025-bulacan-quarterly-category-values-directly-queried-from-openstat-api",
+        "reviewFiles": [
+          "central-luzon-bulacan-qifs-statistical-profile-20261024.json"
+        ],
+        "rawPath": "raw/bulacan-qifs-2025-quarterly-categories-openstat.csv",
+        "rawSha256Recorded": true
+      },
+      "reuse": {
+        "metadata": "PSA OpenSTAT identifies QIFS, metric tons, quarterly update, and defines production as catch from inland waters including household use/gifts/rejected catch. Its footnotes distinguish unavailable data from zero.",
+        "raw": "The canonical official PSA PxWeb API endpoint returned the 2025 Bulacan QIFS quarterly category table on 2026-10-24. A local ignored CSV snapshot is pinned by SHA-256; a two-request fetch script can retrieve and cross-check it again.",
+        "content": "Keep common-name/statistical categories verbatim. Do not invent scientific names, individual waterbody assignments, current wild presence, abundance, catchability, legal advice, safety or bait guidance. No app projection is approved."
+      },
+      "publicationApproval": false,
+      "researchStatus": "bulacan-2025-provincial-qifs-catch-statistics;official-quarterly-category-values-directly-verified;no-app-projection",
+      "datasetId": "2E/FS/0052E4GVIP0.px",
+      "reportedUnit": "metric tons",
+      "updateFrequency": "Quarterly"
+    },
+    {
+      "id": "bettergov-qifs-volume-snapshot-20260908",
+      "title": "Philippine Data Explorer snapshot of PSA OpenSTAT QIFS production data",
+      "provider": "BetterGov.ph Philippine Data Explorer (independent community mirror)",
+      "url": "https://statistics.bettergov.ph/datasets/9482c96e097f7ca5b5a7",
+      "additionalUrls": [
+        "https://statistics.bettergov.ph/api",
+        "https://statistics.bettergov.ph/api/v1/datasets/9482c96e097f7ca5b5a7"
+      ],
+      "role": "Retrieval mirror for a pinned PSA OpenSTAT inland municipal fisheries snapshot; not an official PSA endpoint and not the authoritative source.",
+      "checkedOn": "2026-10-24",
+      "access": {
+        "status": "public-read-api-no-key-pinned-snapshot-queried",
+        "reviewFiles": [
+          "central-luzon-bulacan-qifs-statistical-profile-20261024.json"
+        ],
+        "rawPath": "raw/bulacan-qifs-2025-annual.json",
+        "rawSha256Recorded": true
+      },
+      "reuse": {
+        "metadata": "The mirror documents its REST API and labels itself an independent community project. Its snapshot states that complete mirrors may still include missing observations and directs users to verify definitions and notes at PSA OpenSTAT.",
+        "raw": "The pinned 2026-08-06 release response is retained only in ignored local research storage with a SHA-256 receipt.",
+        "content": "Use this snapshot as an independent precision cross-check only. Its category values agree with the official PSA quarterly API values within two-decimal quarter rounding; it is not the authoritative source."
+      },
+      "publicationApproval": false,
+      "researchStatus": "community-mirror-snapshot;all-available-bulacan-category-values-crosschecked-against-official-api;not-authoritative",
+      "release": "2026-08-06T15-32-28-5696533e41bb",
+      "sourceUpdated": "2026-08-06T15:32:28",
+      "retrieved": "2026-09-08T19:34:29.179Z"
+    },
+    {
+      "id": "psa-rsso3-bulacan-annual-report-2025",
+      "title": "2025 Annual Report, Provincial Statistical Office Bulacan",
+      "provider": "Philippine Statistics Authority, Regional Statistical Services Office III",
+      "url": "https://rsso03.psa.gov.ph/sites/default/files/2026-03/2025-Annual-Report_PSO-Bulacan_compressed.pdf",
+      "additionalUrls": [],
+      "role": "Official source for rounded Bulacan QIFS annual and quarterly production totals used to check the independent mirror extraction; it does not publish the species-level breakdown used in this review.",
+      "checkedOn": "2026-10-24",
+      "access": {
+        "status": "official-report-indexed-text-reviewed",
+        "reviewFiles": [
+          "central-luzon-bulacan-qifs-statistical-profile-20261024.json"
+        ],
+        "rawPath": null,
+        "rawSha256Recorded": false
+      },
+      "reuse": {
+        "metadata": "PSA report documents QIFS methods and reports annual/quarterly Bulacan inland production totals.",
+        "raw": "No local copy or derived image is tracked.",
+        "content": "Only rounded aggregate total values are used for cross-checking; the report does not substantiate the species/category rows retrieved from the independent mirror."
+      },
+      "publicationApproval": false,
+      "researchStatus": "official-aggregate-qifs-crosscheck;not-species-resolution-evidence"
     }
   ],
   "sourcePolicy": {

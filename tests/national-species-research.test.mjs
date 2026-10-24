@@ -20,6 +20,10 @@ test("cross-file research inventory preserves rollout order, unknown regional co
   assert.equal(status.preparedChecklistAssertions, 4);
   assert.equal(status.scopedChecklistHolds, 3);
   assert.equal(status.sourcesRegistered, inputs.sources.sourceCount);
+  assert.equal(status.bulacanQifsReportedProductionCategories, 34);
+  assert.equal(status.bulacanQifsAppProjectionRows, 0);
+  assert.equal(status.bulacanManilaBayGbifAssertionsPrepared, 3);
+  assert.equal(status.bulacanManilaBayGbifOccurrenceRecords, 3);
   assert.equal(status.makilingGbifAssertionsPrepared, 1);
   assert.equal(status.makilingGbifOccurrenceRecords, 3);
   assert.equal(status.lagunaDeBaySpecimenAssertionsPrepared, 1);
@@ -40,7 +44,11 @@ test("cross-file research inventory preserves rollout order, unknown regional co
   assert.equal(status.regions[0].scopedWaterbodyResearchLeads, inputs.scope.waterbodies.length);
   assert.ok(status.regions[0].scopedWaterbodyResearchLeads > 0);
   assert.equal(status.regions[0].workStatus, "coverage-gap-checkpoint-published-incomplete");
-  assert.ok(status.regions.slice(1).every((region) => region.workStatus === "queued"));
+  assert.equal(status.regions[2].workStatus, "discovery-checkpoint-published-incomplete");
+  assert.equal(status.regions[2].scopedWaterbodyResearchLeads, 0);
+  assert.equal(status.regions[2].discoveryCheckpointLeads, 39);
+  assert.equal(status.regions[2].coverageStatus, "central-luzon-discovery-only-incomplete");
+  assert.ok(status.regions.slice(1).filter((region) => region.rolloutKey !== "L3").every((region) => region.workStatus === "queued"));
 });
 
 test("research status rejects a stale or expanded public checklist projection", () => {
@@ -53,6 +61,12 @@ test("research status rejects a stale or expanded public checklist projection", 
     },
     (data) => {
       data.decisions.counts.admittedAssertions = 5;
+    },
+    (data) => {
+      data.centralLuzonCheckpoint.administrativeCoverage.geometryVerified = true;
+    },
+    (data) => {
+      data.centralLuzonCheckpoint.regionId = "0400000000";
     },
   ]) {
     const changed = structuredClone(inputs);

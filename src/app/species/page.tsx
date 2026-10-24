@@ -2,16 +2,18 @@
 
 import { ChevronDown, Layers, Search } from "lucide-react";
 import { useState } from "react";
+import { AngatGbifEvidence } from "@/components/angat-gbif-evidence";
 import { useBangwit } from "@/components/bangwit-provider";
+import { BulacanManilaBayGbifEvidence } from "@/components/bulacan-manila-bay-gbif-evidence";
 import { DropdownSelect } from "@/components/dropdown-select";
 import { FeedingGuides } from "@/components/feeding-guides";
 import { HistoricalSpeciesEvidence } from "@/components/historical-species-evidence";
 import { LagunaDeBaySpecimenEvidence } from "@/components/laguna-de-bay-specimen-evidence";
-import { ManilaBaySharedGbifEvidence } from "@/components/manila-bay-shared-gbif-evidence";
 import { MakilingGbifEvidence } from "@/components/makiling-gbif-evidence";
+import { ManilaBaySharedGbifEvidence } from "@/components/manila-bay-shared-gbif-evidence";
 import { PalicoRiverSurveyEvidence } from "@/components/palico-river-survey-evidence";
-import { PasigRiverSpeciesEvidence } from "@/components/pasig-river-species-evidence";
 import { PansipitRiverGbifEvidence } from "@/components/pansipit-river-gbif-evidence";
+import { PasigRiverSpeciesEvidence } from "@/components/pasig-river-species-evidence";
 import { TaalChecklistEvidence } from "@/components/taal-checklist-evidence";
 import evidence from "@/data/cavite-historical-evidence.json";
 import { filterHistoricalEvidence } from "@/lib/species-research";
@@ -139,6 +141,8 @@ export default function SpeciesPage() {
       <MakilingGbifEvidence />
       <LagunaDeBaySpecimenEvidence />
       <PansipitRiverGbifEvidence />
+      <AngatGbifEvidence />
+      <BulacanManilaBayGbifEvidence />
       <PasigRiverSpeciesEvidence />
       <ManilaBaySharedGbifEvidence />
       <FeedingGuides />

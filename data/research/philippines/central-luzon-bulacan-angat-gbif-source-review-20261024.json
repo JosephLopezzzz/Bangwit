@@ -1,0 +1,128 @@
+{
+  "schemaVersion": 1,
+  "batchId": "central-luzon-bulacan-angat-cas-20261024",
+  "reviewedOn": "2026-10-24",
+  "reviewer": "Agent-assisted source and taxonomy desk review; not expert, legal, or field certification",
+  "status": "admit-one-historical-text-locality-assertion",
+  "purpose": "Project one CC0 CAS historical specimen-lot record as text-locality evidence for the Species page, retaining the source locality verbatim and withholding the unverified coordinate.",
+  "region": {
+    "id": "0300000000",
+    "name": "Central Luzon",
+    "administrativeUnit": "Bulacan"
+  },
+  "source": {
+    "id": "gbif-cas-ichthyology",
+    "provider": "California Academy of Sciences, CAS Ichthyology via GBIF",
+    "datasetKey": "5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+    "datasetTitle": "CAS Ichthyology (ICH)",
+    "doi": "10.15468/efh2ib",
+    "datasetUrl": "https://www.gbif.org/dataset/5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+    "citation": "Fong J (2026). CAS Ichthyology (ICH). Version 150.545. California Academy of Sciences. Occurrence dataset. http://ipt.calacademy.org:8080/resource?r=ich&v=150.545 https://doi.org/10.15468/efh2ib accessed via GBIF.org on 2026-10-24.",
+    "license": "CC0-1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "reviewScope": "Only the selected occurrence row and factual fields listed in this review; no images or unrelated dataset records."
+  },
+  "occurrenceQuery": {
+    "endpoint": "https://api.gbif.org/v1/occurrence/search",
+    "reviewFile": "central-luzon-bulacan-gbif-waterbody-screen-20261024.json",
+    "queryId": "bulacanActinopterygiiAdministrativeScreen",
+    "resultCount": 31,
+    "selectedOccurrenceKey": 3426466682,
+    "interpretation": "The class-level search is a bounded administrative screen and is not used as proof of exact site membership. This specimen is selected because its CAS locality text explicitly names Angat Dam and Angat River."
+  },
+  "record": {
+    "gbifId": 3426466682,
+    "occurrenceId": "urn:catalog:CAS:SU(ICH):27667",
+    "url": "https://www.gbif.org/occurrence/3426466682",
+    "apiUrl": "https://api.gbif.org/v1/occurrence/3426466682",
+    "catalogNumber": "27667",
+    "fieldNumber": "Z127667",
+    "institutionCode": "CAS",
+    "collectionCode": "SU(ICH)",
+    "basisOfRecord": "PRESERVED_SPECIMEN",
+    "individualCount": 2,
+    "occurrenceStatus": "PRESENT (inferred by GBIF from individualCount)",
+    "recordedName": "Arius dispar Herre, 1926",
+    "acceptedName": "Arius dispar Herre, 1926",
+    "taxonKey": 2345282,
+    "taxonRank": "SPECIES",
+    "family": "Ariidae",
+    "order": "Siluriformes",
+    "eventDate": "1929-05-18",
+    "locality": "Angat Dam, Angat River, Luzon",
+    "waterBody": null,
+    "recordedBy": "Villadolid, Deogracias V.",
+    "identifiedBy": "A. W. C. T. Herre",
+    "license": "CC0-1.0",
+    "issues": [
+      "GEODETIC_DATUM_ASSUMED_WGS84",
+      "CONTINENT_INVALID",
+      "CONTINENT_DERIVED_FROM_COORDINATES",
+      "OCCURRENCE_STATUS_INFERRED_FROM_INDIVIDUAL_COUNT"
+    ]
+  },
+  "taxonomyReview": {
+    "sourceId": "itis-arius-dispar-taxonomy-20261024",
+    "authority": "Integrated Taxonomic Information System (ITIS)",
+    "url": "https://itis.gov/servlet/SingleRpt/SingleRpt?print_version=PRT&search_topic=TSN&search_value=680688&source=to_print",
+    "tsn": 680688,
+    "name": "Arius dispar Herre, 1926",
+    "rank": "SPECIES",
+    "currentStanding": "valid",
+    "hierarchy": "Ariidae, Siluriformes",
+    "limits": "Current nomenclature cross-check only; it does not independently re-identify this CAS specimen or establish its locality."
+  },
+  "coordinateReview": {
+    "sourceLatitude": 14.957152,
+    "sourceLongitude": 120.954631,
+    "uncertaintyMeters": 301,
+    "datum": "WGS84 (assumed by GBIF)",
+    "projected": false,
+    "decision": "Withhold from app and map. The source locality is a combined dam/river string and GBIF marks the datum as assumed; the coordinate is not treated as a verified collection station."
+  },
+  "decision": {
+    "status": "admit-one-historical-text-locality-assertion",
+    "speciesAssertionCount": 1,
+    "sourceOccurrenceRecordCount": 1,
+    "currentPresenceAssertionCount": 0,
+    "publicRecordAdded": true,
+    "appProjectionAdded": true,
+    "coordinateProjected": false,
+    "mapGeometryAdded": false,
+    "waterbodySpecificGeometryAdded": false,
+    "taxonomicNameIndependentlyCrosschecked": true,
+    "fieldIdentificationIndependentlyVerified": false,
+    "localityVerbatim": true,
+    "reason": "The preserved-specimen row has a stable catalog identifier, exact collection date, named source locality, determiner, record-level and dataset CC0 declarations, and an independent valid-name check. Projection is limited to one historical text-locality assertion with quality flags and explicit non-claims.",
+    "caveats": [
+      "The GBIF waterBody field is blank. Preserve the combined source locality verbatim; do not assign the specimen to a specific river reach or draw a reservoir/riverside point.",
+      "The source date is 1929-05-18. This is historical evidence, not current presence or a complete Angat fish checklist.",
+      "GBIF reports individualCount 2 and infers occurrenceStatus PRESENT from the count; this remains one database occurrence record, not an abundance estimate.",
+      "The coordinate has 301 m uncertainty and a GBIF assumed-WGS84 flag; it is withheld from the app and map.",
+      "No catchability, legality, food safety, diet, bait, abundance, or fishing-access claim is made."
+    ]
+  },
+  "rawSnapshots": [
+    {
+      "path": "raw/gbif-bulacan-waterbody-screen-20261024/record-3426466682.json",
+      "sha256": "2f58909813bd3b599dabdeda7e6e6ddf096562d7cc047111ea52da39a3b7ee86",
+      "gitIgnored": true
+    }
+  ],
+  "publicAssertion": {
+    "id": "gbif:2345282@angat-dam-river-text-locality-1929",
+    "scientificName": "Arius dispar Herre, 1926",
+    "family": "Ariidae",
+    "reportedLocality": "Angat Dam, Angat River, Luzon",
+    "evidenceKind": "preserved-specimen-text-locality",
+    "collectionDate": "1929-05-18",
+    "sourceRecordCount": 1,
+    "reportedIndividualCount": 2,
+    "coordinateInclusion": false
+  },
+  "nonClaims": [
+    "The record does not establish current presence, population size, abundance, a complete Angat or Bulacan fish list, or a precise point/reach within the combined locality.",
+    "The record does not establish fishing permission, legal catchability, food safety, diet, bait effectiveness, or public access.",
+    "No exact coordinates, map point, boundary, or waterbody geometry are part of the app projection."
+  ]
+}

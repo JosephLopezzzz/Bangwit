@@ -470,6 +470,49 @@ export const enDictionary: Dictionary = {
       "The GBIF dataset metadata marks the selected records CC0 1.0. This does not approve other records or separate datasets.",
     opensTab: "(opens in a new tab)",
   },
+  angatGbifEvidence: {
+    title: "Angat Dam and Angat River Â· historical specimen",
+    description: "A CAS Ichthyology collection record reports two Arius dispar individuals collected in 1929.",
+    scope: "Bulacan Â· Central Luzon. The source locality is shown verbatim; no map pin is shown.",
+    localityLabel: "Source locality",
+    collectionDateLabel: "Collected",
+    recordCountLabel: "GBIF occurrence records",
+    individualCountLabel: "Individuals in source record",
+    limits:
+      "This is one historical record from 18 May 1929, not evidence of current presence, a complete Angat fish list, or where within this combined locality the specimens were collected. It gives no fishing permission, safety, diet, or bait advice.",
+    qualityFlags: "GBIF quality flags retained:",
+    sourceDetails: "Source record, taxonomy and rights",
+    recordLink: "GBIF occurrence",
+    datasetLink: "CAS dataset",
+    taxonomyLink: "Taxonomy check: ITIS marks this name valid",
+    taxonomyNote:
+      "This confirms the name's current status only; it does not independently re-identify the specimen or verify the locality.",
+    licenseLink: "CC0 1.0",
+    licenseNote: "The selected GBIF occurrence and CAS dataset declare CC0 1.0. No photos are included.",
+    opensTab: "(opens in a new tab)",
+  },
+  bulacanManilaBayGbifEvidence: {
+    title: "Malolos · Manila Bay shore · historical fish-trap specimens",
+    description:
+      "Three Smithsonian museum records document preserved fish collected from a fish trap in February 1982. The source describes the locality as the northern shore of Manila Bay.",
+    scope: "Malolos, Bulacan · Central Luzon. Historical text evidence only; no map pin.",
+    localityLabel: "Source locality",
+    recordedAs: "Recorded name",
+    catalogLabel: "Museum catalog",
+    individualsLabel: "Source individuals",
+    limits:
+      "These records do not show current presence, abundance, a complete Manila Bay or Bulacan fish list, or an exact collection station. Individual counts are not population estimates. The broad GBIF waterBody label is omitted. No fishing permission, safety, diet, or bait advice is implied.",
+    sourceDetails: "Museum records, taxonomy and data terms",
+    recordLink: "GBIF record",
+    datasetLink: "Smithsonian dataset via GBIF",
+    museumRecordLink: "Smithsonian catalog record",
+    taxonomyLink: "ITIS name check",
+    qualityFlags: "GBIF quality flags:",
+    licenseLink: "CC0 1.0 terms",
+    licenseNote:
+      "The selected Smithsonian dataset and occurrence rows declare CC0 1.0. No photos or coordinates are included.",
+    opensTab: "(opens in a new tab)",
+  },
   palicoRiverEvidence: {
     title: "Palico–Lian River · 2025 survey table",
     description:
