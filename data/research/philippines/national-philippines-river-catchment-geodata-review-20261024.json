@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-24",
+  "scope": "National freshwater spatial-framework source review; not a fish checklist or occurrence review.",
+  "status": "128-national-river-catchments-verified;770-basin-hydrology-lead-pending;no-species-assertions",
+  "sourceIds": [
+    "boothroyd-2023-philippines-river-catchment-geodata",
+    "perez-et-al-2016-philippine-hydrologic-dataset-project",
+    "lipad-phil-lidar-hydrological-data-access"
+  ],
+  "dataset": {
+    "title": "National-scale geodatabase of catchment characteristics in the Philippines for river management applications",
+    "citation": "Boothroyd, R. J., Williams, R. D., Hoey, T. B., et al. (2023). PLOS ONE 18(3): e0281933. DOI: 10.1371/journal.pone.0281933. Data Collection DOI: 10.5525/gla.researchdata.1396.",
+    "repository": "University of Glasgow Enlighten Research Data",
+    "repositoryUrl": "https://researchdata.gla.ac.uk/1396/",
+    "license": "CC BY 4.0",
+    "licenseEvidence": "The official data repository labels each downloaded file CC BY 4.0.",
+    "retrievedOn": "2026-10-24",
+    "productsDownloaded": [
+      {
+        "filename": "Philippines_GIS_catchments_n128.zip",
+        "product": "Catchment polygon shapefile and attributes",
+        "bytes": 22590206,
+        "sha256": "af854c4551df89f1da7fe80275960be417cafc212aff545050d2ea6c38af0ae6",
+        "rawPath": "raw/boothroyd-1396/Philippines_GIS_catchments_n128.zip"
+      },
+      {
+        "filename": "Philippines_topographic_characterstics_n128.zip",
+        "product": "Catchment morphometric and topographic CSVs",
+        "bytes": 57948,
+        "sha256": "5b9c7b3c6c8ca6d072ec0088e7b020060846bd58b1fb706c5c93b90101c37217",
+        "rawPath": "raw/boothroyd-1396/Philippines_topographic_characterstics_n128.zip"
+      }
+    ],
+    "structuralChecks": {
+      "polygonRecords": 128,
+      "uniqueCatchmentNames": 128,
+      "catchmentAreaKm2": {
+        "minimum": 258.43,
+        "maximum": 27684.068
+      },
+      "crs": "WGS 84 / Pseudo-Mercator (EPSG:3857)",
+      "catchmentAreaThresholdKm2": 250,
+      "articleDemSourceYear": 2013,
+      "exampleCatchmentNames": [
+        "Cagayan",
+        "Agno",
+        "Pampanga",
+        "Angat",
+        "Marikina_Pasig",
+        "Bicol",
+        "Pansipit"
+      ]
+    }
+  },
+  "relatedNationalHydrologyLead": {
+    "sourceId": "perez-et-al-2016-philippine-hydrologic-dataset-project",
+    "paperDoi": "10.5194/isprs-archives-XLI-B6-139-2016",
+    "paperLicense": "CC BY 3.0 for the paper only",
+    "reportedPrincipalBasins": 770,
+    "reportedMinimumAreaKm2": 40,
+    "dataAcquired": false,
+    "accessAndDataLicense": "not verified",
+    "note": "A 2023 primary paper describes the PHD inventory as 770 principal basins; it distinguishes this broader project lead from the 128-catchment CC BY 4.0 dataset actually downloaded and checked here.",
+    "dataAccess": "Official LiPAD manual-request route identified; specific 770-basin layer, current access, fee, eligibility and data license remain unverified."
+  },
+  "decision": {
+    "use": "Use as an internal, nationwide river-catchment discovery and scope-planning aid. Reconcile catchments with official regional and administrative geometry before assigning them to rollout regions.",
+    "speciesOccurrenceRows": 0,
+    "regionalFishBaselineContribution": 0,
+    "regionOverlayCompleted": false,
+    "lakeCoverage": "Not a standalone lake inventory. Large lakes and reservoirs are represented as flat areas in the underlying DEM workflow; the source paper notes unquantified effects for catchments including Marikina-Pasig, Pansipit and Agno.",
+    "limitations": [
+      "Only 128 catchments larger than 250 km2 are included; smaller river systems are out of scope.",
+      "The dataset describes catchment and stream-network morphology, not fish presence, catch dates, habitat suitability or fishing access.",
+      "Catchment geometry is hydrological, not a legal marine boundary or administrative boundary.",
+      "The catchment polygons have not been overlaid with the project's 18-region registry.",
+      "No source geometry or derived map is copied into public app assets by this review."
+    ],
+    "publicationApproval": false,
+    "next": [
+      "Verify the access path and item-specific terms for the broader 770-basin PHD data before acquisition.",
+      "Overlay the 128 hydrological polygons against a properly licensed official administrative geometry source.",
+      "Use basin names as a freshwater source-search frame, then review site-specific fish evidence separately.",
+      "Continue lake and reservoir inventory from independent lake/waterbody sources; do not infer lakes from river catchment geometry."
+    ]
+  },
+  "accessReview": {
+    "checkedOn": "2026-10-24",
+    "officialPortal": "https://lipad.dream.upd.edu.ph/",
+    "portalStatus": "The LiPAD site says the portal is under maintenance and directs data requests to two Google Forms.",
+    "category": "Hydrological Datasets is listed in the portal resource-map categories; the public page does not identify a specific 770-basin PHD layer or expose its license.",
+    "requestRoute": "Complete the requester registration form and the separate LiDAR Data Request form. The page says resource maps are available by manual request.",
+    "statedDocuments": [
+      "Formal request letter",
+      "Area of Interest shapefile",
+      "Proof of consultancy when requesting on behalf of another organization"
+    ],
+    "wholeCountryHandling": "For a large request such as the whole country, the portal instructs requesters to contact the Business Development Officer.",
+    "costAndEligibility": "No fee, eligibility decision, exact 770-basin dataset availability, or dataset license was confirmed.",
+    "requestSubmitted": false,
+    "personalDataSubmitted": false
+  },
+  "dataRequestDraft": "phil-lidar-phd-whole-country-hydrology-data-request-draft-20261024.md"
+}
