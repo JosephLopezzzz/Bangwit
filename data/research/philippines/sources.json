@@ -3,7 +3,7 @@
   "checkedOn": "2026-10-24",
   "status": "research-only-source-registry",
   "scope": "National acquisition references and CALABARZON/Central Luzon identity/source leads. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 97,
+  "sourceCount": 99,
   "sources": [
     {
       "id": "gbif-col-xr-taxonomy-matching",
@@ -900,21 +900,22 @@
       "additionalUrls": [
         "https://doi.org/10.15468/efh2ib"
       ],
-      "role": "One CC0 preserved-specimen occurrence row with the GBIF locality Molawin Creek; supports the same single undated, text-locality assertion.",
-      "checkedOn": "2026-10-23",
+      "role": "One CC0 preserved-specimen occurrence row with the GBIF locality Molawin Creek is used by the existing local projection; a separate 1925 Quingoa River occurrence is held as a Central Luzon historical candidate only.",
+      "checkedOn": "2026-10-24",
       "access": {
         "status": "GBIF-occurrence-record-and-dataset-metadata-directly-reviewed",
         "reviewFiles": [
-          "makiling-gbif-source-review.json"
+          "makiling-gbif-source-review.json",
+          "central-luzon-bulacan-gbif-waterbody-screen-20261024.json"
         ]
       },
       "reuse": {
         "metadata": "The GBIF dataset metadata cites DOI 10.15468/efh2ib and marks the dataset CC0-1.0.",
-        "raw": "Only one selected occurrence record is normalized in the reviewed batch; no full dataset download is retained.",
-        "content": "Record-level CC0 supports the selected normalized factual fields in this batch. Continent-field and inferred-occurrence-status flags are retained; this entry does not approve other records or imply current presence."
+        "raw": "Two selected occurrence records are normalized across separate reviews; no full dataset download is retained.",
+        "content": "Record-level CC0 supports the selected normalized factual fields. The Quingoa River specimen remains a historical research candidate with its coordinate and taxonomy limitations retained; this entry does not approve new app rows, other records, or current-presence claims."
       },
       "publicationApproval": false,
-      "researchStatus": "selected-record-reviewed-in-one-local-projection; broader-dataset-not-approved",
+      "researchStatus": "one-existing-local-projection;one-held-historical-quingoa-candidate;broader-dataset-not-approved",
       "datasetKey": "5d6c10bd-ea31-4363-8b79-58c96d859f5b",
       "doi": "10.15468/efh2ib",
       "license": "CC0-1.0"
@@ -2464,6 +2465,60 @@
       "publicationApproval": false,
       "researchStatus": "two-pond-culture-fish-names-in-abstract;zero-wild-occurrence-admissions",
       "sourceYear": 2022
+    },
+    {
+      "id": "gbif-bulacan-perciformes-screen-20261024",
+      "title": "GBIF Occurrence API exact-waterbody and Bulacan administrative screening",
+      "provider": "GBIF Secretariat and contributing occurrence datasets",
+      "url": "https://techdocs.gbif.org/en/openapi/v1/occurrence",
+      "additionalUrls": [
+        "https://api.gbif.org/v1/occurrence/search?country=PH&stateProvince=Bulacan&orderKey=587&hasCoordinate=true&occurrenceStatus=PRESENT&limit=100",
+        "https://api.gbif.org/v1/occurrence/search?country=PH&waterBody=Quingoa%20River&basisOfRecord=PRESERVED_SPECIMEN&limit=20",
+        "https://api.gbif.org/v1/occurrence/3426466781"
+      ],
+      "role": "Bounded 22-name exact waterBody-field search and one Bulacan Perciformes administrative query. It found one historical record naming Quingoa River; this is not an exhaustive fish or waterbody inventory and does not establish current presence.",
+      "checkedOn": "2026-10-24",
+      "access": {
+        "status": "public-occurrence-search-and-record-apis-directly-reviewed",
+        "reviewFiles": [
+          "central-luzon-bulacan-gbif-waterbody-screen-20261024.json"
+        ],
+        "rawPath": "raw/gbif-bulacan-waterbody-screen-20261024/",
+        "rawSha256Recorded": true
+      },
+      "reuse": {
+        "metadata": "GBIF API documentation and query/record metadata reviewed.",
+        "raw": "Selected query and record snapshots are retained in ignored local research storage with SHA-256 hashes; the full GBIF dataset was not downloaded.",
+        "content": "Occurrence records have mixed source licenses and must be reviewed individually. The Quingoa River record declares CC0 1.0. No images were downloaded; no public checklist or app publication is approved by this screen."
+      },
+      "publicationApproval": false,
+      "researchStatus": "one-historical-quingoa-waterbody-candidate-held;22-exact-bfar-waterbody-name-queries-zero;not-a-complete-fish-class-screen",
+      "apiBaseUrl": "https://api.gbif.org/v1",
+      "accessRequirements": "Occurrence search is public; bulk occurrence downloads require a GBIF account and authenticated request. No download request was submitted."
+    },
+    {
+      "id": "calacademy-catalog-stenogobius-ophthalmoporus-20261024",
+      "title": "Eschmeyer's Catalog of Fishes: Stenogobius ophthalmoporus",
+      "provider": "California Academy of Sciences, Institute for Biodiversity Science and Sustainability",
+      "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=50060",
+      "role": "Independent nomenclature cross-check for the name on a historical CAS specimen record. The catalog lists the species as valid but uses a different family placement from GBIF; it does not verify this specimen's identity or locality.",
+      "checkedOn": "2026-10-24",
+      "access": {
+        "status": "current-taxonomic-entry-reviewed-and-local-html-hash-recorded",
+        "reviewFiles": [
+          "central-luzon-bulacan-gbif-waterbody-screen-20261024.json"
+        ],
+        "rawPath": "raw/gbif-bulacan-waterbody-screen-20261024/catalog-of-fishes-stenogobius-ophthalmoporus.html",
+        "rawSha256": "37472e0cd52c006324c12475ecd581194217649b0b2fb68700766c341c0a021d"
+      },
+      "reuse": {
+        "metadata": "Current species name and family placement reviewed.",
+        "raw": "The fetched HTML is retained in ignored local research storage and is not redistributed.",
+        "content": "Only factual nomenclature and family-placement findings are recorded. Catalog text and images are not reproduced; item-specific reuse terms were not verified."
+      },
+      "publicationApproval": false,
+      "researchStatus": "accepted-species-name-crosschecked;family-placement-differs-from-gbif;no-locality-or-occurrence-validation",
+      "sourceYear": 2026
     }
   ],
   "sourcePolicy": {

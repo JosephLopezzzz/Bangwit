@@ -1,0 +1,184 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-24",
+  "phaseId": "L3",
+  "regionId": "0300000000",
+  "status": "bounded-gbif-waterbody-screen-reviewed;one-historical-river-candidate-held",
+  "purpose": "Screen the 22 Bulacan communal/inland names from the BFAR profile against GBIF's exact waterBody field, then inspect a bounded administrative Perciformes result for named freshwater source localities.",
+  "queries": {
+    "bfarWaterbodyNameScreen": {
+      "endpoint": "https://api.gbif.org/v1/occurrence/search",
+      "parameters": {
+        "country": "PH",
+        "waterBody": "one exact BFAR-listed name per request",
+        "limit": 20
+      },
+      "eachQueryResultCount": 0,
+      "nonzeroQueryCount": 0,
+      "searchedNameCount": 22,
+      "names": [
+        "Angat Dam Watershed",
+        "Longos River",
+        "Taliptip River",
+        "Bocaue River",
+        "Maniknik River",
+        "San Francisco Dam",
+        "Pamarawan River",
+        "Labangan Channel",
+        "Meycauayan River",
+        "Marilao-Meycauayan River",
+        "Salambao River",
+        "Masukol River",
+        "Maasim River",
+        "San Rafael Dam",
+        "Guiguinto River",
+        "Ipo Dam",
+        "Binuangan River",
+        "Bustos Dam",
+        "Matinik River",
+        "Calasat Dam",
+        "Sta. Cruz River",
+        "Tumana River"
+      ],
+      "interpretation": "No exact GBIF waterBody-field matches were returned for these names. This is a bounded text-field screen; spelling variants, blank/misindexed waterBody fields, other taxa/query limits, or unindexed records mean these zeros do not establish absence.",
+      "sourceId": "gbif-bulacan-perciformes-screen-20261024"
+    },
+    "bulacanPerciformesAdministrativeScreen": {
+      "endpoint": "https://api.gbif.org/v1/occurrence/search",
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&stateProvince=Bulacan&orderKey=587&hasCoordinate=true&occurrenceStatus=PRESENT&limit=100",
+      "parameters": {
+        "country": "PH",
+        "stateProvince": "Bulacan",
+        "orderKey": 587,
+        "hasCoordinate": true,
+        "occurrenceStatus": "PRESENT",
+        "limit": 100
+      },
+      "resultCount": 19,
+      "interpretation": "This is GBIF Backbone Perciformes only, not a complete fish-class query or a province inventory. It demonstrates administrative-filter noise: some source localities resolve to Metro Manila, and two records have coordinates in Namibia despite the Bulacan query. The bounded result yielded one row whose waterBody field explicitly says Quingoa River.",
+      "sourceId": "gbif-bulacan-perciformes-screen-20261024"
+    },
+    "quingoaExactWaterbodyFollowup": {
+      "endpoint": "https://api.gbif.org/v1/occurrence/search",
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&waterBody=Quingoa%20River&basisOfRecord=PRESERVED_SPECIMEN&limit=20",
+      "parameters": {
+        "country": "PH",
+        "waterBody": "Quingoa River",
+        "basisOfRecord": "PRESERVED_SPECIMEN",
+        "limit": 20
+      },
+      "resultCount": 1,
+      "sourceId": "gbif-bulacan-perciformes-screen-20261024"
+    }
+  },
+  "rawSnapshots": [
+    {
+      "path": "raw/gbif-bulacan-waterbody-screen-20261024/stateprovince-perciformes.json",
+      "sha256": "6ce4590ef47f49a750a338d0c54ad749f000994cd824841c8ed7bf1651ba2063",
+      "gitIgnored": true
+    },
+    {
+      "path": "raw/gbif-bulacan-waterbody-screen-20261024/quingoa-river-preserved.json",
+      "sha256": "4a9b17940a3217151a1bb62000694b4eba24bcc24351ed59c44eb2a2cf18da86",
+      "gitIgnored": true
+    },
+    {
+      "path": "raw/gbif-bulacan-waterbody-screen-20261024/record-3426466781.json",
+      "sha256": "4380f8f38264da6c40ac10853563185dd6c5ef1b646e1da1301c059fcf4bda41",
+      "gitIgnored": true
+    },
+    {
+      "path": "raw/gbif-bulacan-waterbody-screen-20261024/dataset-cas-ichthyology.json",
+      "sha256": "d5b1879f193f791ea6ce7af1c5aa721ded021b772a7cd40991065f29e830cacf",
+      "gitIgnored": true
+    },
+    {
+      "path": "raw/gbif-bulacan-waterbody-screen-20261024/catalog-of-fishes-stenogobius-ophthalmoporus.html",
+      "sha256": "37472e0cd52c006324c12475ecd581194217649b0b2fb68700766c341c0a021d",
+      "gitIgnored": true
+    }
+  ],
+  "historicalCandidate": {
+    "gbifOccurrenceKey": 3426466781,
+    "gbifOccurrenceUrl": "https://www.gbif.org/occurrence/3426466781",
+    "gbifApiUrl": "https://api.gbif.org/v1/occurrence/3426466781",
+    "datasetKey": "5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+    "datasetUrl": "https://www.gbif.org/dataset/5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+    "datasetDoi": "10.15468/efh2ib",
+    "provider": "California Academy of Sciences, CAS Ichthyology via GBIF",
+    "catalogNumber": "CAS:SU(ICH):29647",
+    "basisOfRecord": "PRESERVED_SPECIMEN",
+    "individualCount": 3,
+    "occurrenceStatus": "PRESENT (inferred by GBIF from individualCount)",
+    "recordedName": "Stenogobius ophthalmoporus (Bleeker, 1853)",
+    "taxonRank": "SPECIES",
+    "eventDate": "1925-09-19",
+    "locality": "Calumpit",
+    "waterBody": "Quingoa River",
+    "recordedBy": "Lopez, G. A.",
+    "identifiedBy": "Ronald Watson",
+    "fieldNumber": "GAL 19-IX-25",
+    "coordinate": {
+      "latitude": 14.919587,
+      "longitude": 120.766666,
+      "datum": "WGS84",
+      "uncertaintyMeters": 9235,
+      "decision": "Do not project or map as an exact collection point. GBIF georeference remarks say the error covers an area around Calumpit; GADM's level-3 label is San Miguel, so the point is not a reliable waterbody coordinate."
+    },
+    "gbifIssues": [
+      "GEODETIC_DATUM_ASSUMED_WGS84",
+      "CONTINENT_INVALID",
+      "CONTINENT_DERIVED_FROM_COORDINATES",
+      "OCCURRENCE_STATUS_INFERRED_FROM_INDIVIDUAL_COUNT"
+    ],
+    "gbifTaxonomy": {
+      "acceptedName": "Stenogobius ophthalmoporus (Bleeker, 1853)",
+      "family": "Gobiidae",
+      "order": "Perciformes"
+    },
+    "independentTaxonomyCrosscheck": {
+      "sourceId": "calacademy-catalog-stenogobius-ophthalmoporus-20261024",
+      "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=50060",
+      "result": "Catalog of Fishes lists Stenogobius ophthalmoporus as valid and places it in Oxudercidae: Gobionellinae; it describes freshwater, brackish, and marine habitat.",
+      "limits": "This verifies current nomenclature and broad habitat classification only. It does not independently verify this 1925 specimen's identity or the locality. The modern family placement differs from GBIF's Gobiidae and is retained as a taxonomic conflict."
+    },
+    "license": "CC0-1.0",
+    "disposition": "historical-waterbody-occurrence-candidate-held-for-original-catalog-label-and-site-resolution;not-current-presence;not-public-app-assertion"
+  },
+  "otherAdministrativeQueryRows": {
+    "returnedRows": 18,
+    "disposition": "No additional named freshwater waterBody row was established. The remaining rows include observations with no waterBody field, coastal or otherwise unresolved localities, five CAS rows whose locality/GADM resolves to Malabon in Metro Manila, and two preserved-specimen records with Namibia coordinates and COUNTRY_COORDINATE_MISMATCH. Do not assign these to Bulacan freshwater sites from the stateProvince search filter alone.",
+    "examples": [
+      {
+        "gbifOccurrenceKey": 4525181289,
+        "name": "Oreochromis niloticus",
+        "date": "2024-02-08",
+        "sourceLocality": "Pitpitan, Bulakan, Bulacan",
+        "waterBody": null,
+        "basisOfRecord": "HUMAN_OBSERVATION",
+        "gbifIssue": "TAXON_ID_NOT_FOUND",
+        "disposition": "Species-level administrative-area observation candidate only; no named waterbody, so it does not establish a river/lake record."
+      },
+      {
+        "gbifOccurrenceKey": 3759588372,
+        "name": "Channa striata",
+        "date": "2022",
+        "sourceLocality": "Meycauayan City, PH-BU, PH",
+        "waterBody": null,
+        "basisOfRecord": "HUMAN_OBSERVATION",
+        "disposition": "Species-level administrative-area observation candidate only; no named waterbody."
+      }
+    ]
+  },
+  "decision": {
+    "historicalWaterbodyCandidates": 1,
+    "speciesNameCrosschecked": 1,
+    "currentPresenceAssertions": 0,
+    "publicSpeciesAssertionsAdded": 0,
+    "appProjectionRowsAdded": 0,
+    "exactNameZeroesUsedAsAbsence": false,
+    "geometryAdded": false,
+    "regionalCompletionApproved": false
+  },
+  "nextStep": "Continue Bulacan freshwater discovery with direct, recent, taxon-resolved capture surveys and source-level collection records. Resolve the CAS Quingoa locality against the original collection record before any historical assertion is promoted. Expand beyond GBIF's Perciformes order filter; this search is not a complete fish-class inventory. Keep Central Luzon incomplete."
+}
