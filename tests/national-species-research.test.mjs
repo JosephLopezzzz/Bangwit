@@ -39,6 +39,7 @@ test("cross-file research inventory preserves rollout order, unknown regional co
   assert.ok(status.regions.every((region) => !region.baselineReviewed && region.reviewedRegionalSpeciesCount === null));
   assert.equal(status.regions[0].scopedWaterbodyResearchLeads, inputs.scope.waterbodies.length);
   assert.ok(status.regions[0].scopedWaterbodyResearchLeads > 0);
+  assert.equal(status.regions[0].workStatus, "coverage-gap-checkpoint-published-incomplete");
   assert.ok(status.regions.slice(1).every((region) => region.workStatus === "queued"));
 });
 

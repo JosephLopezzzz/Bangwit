@@ -1,0 +1,669 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-24",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "regionName": "Region IV-A (CALABARZON)",
+  "status": "checkpoint-published-incomplete-baseline",
+  "inputHashes": {
+    "scopeSha256": "92b84d2ca35ac6e2e890a207a4173e405245a81271058fc82b3464494954f82d"
+  },
+  "decision": "Keep CALABARZON visibly in progress. This checkpoint records the current source-backed leads and specific gaps; it is not a complete fish checklist, a completed region, or a public species release.",
+  "coverageSummary": {
+    "namedWaterbodyLeads": 36,
+    "distinctSourceReferencesAssigned": 39,
+    "sourceAssignments": 74,
+    "registeredSources": 61,
+    "provincesWithLeads": 5,
+    "separateCityCoverageUnits": 1,
+    "byWaterbodyKind": {
+      "bay": 7,
+      "estuary": 2,
+      "lake": 11,
+      "reservoir": 2,
+      "river": 9,
+      "stream": 2,
+      "wetland": 3
+    },
+    "waterbodyDenominatorEstablished": false,
+    "boundaryGeometryValidated": 0,
+    "fishEvidenceStatusCounts": {
+      "historical-trawl-source-review-and-bounded-OBIS-discovery; no-new-species-assertions-admitted": 1,
+      "not-reviewed": 15,
+      "bounded-GBIF-locality-query-zero-no-absence-inferred": 5,
+      "bounded-exact-locality-review-returned-four-copepod-records-and-no-fish-record": 2,
+      "four-historical-species-locality-assertions-from-four-CC0-museum-records; quality-flags-retained; coordinates-held": 1,
+      "one-corrected-2024-preserved-specimen-assertion-for-Barbonymus-schwanefeldii": 1,
+      "bounded-Lake-Lumot-and-Lumot-Lake-queries-returned-zero; no-absence-inferred": 1,
+      "historical-seven-lake-survey-described; species-rows-held-for-rights-review": 7,
+      "one historical Gulaphallus mirabilis locality assertion from three CC0 museum occurrence records; dates and coordinates absent": 1,
+      "12-survey-table-assertions-reviewed; 3-family-conflicts-held": 1,
+      "historical-aggregate-only-table-unavailable": 1
+    },
+    "waterbodyReviewStatusCounts": {
+      "research-queued": 17,
+      "bounded-GBIF-locality-string-checked-no-records-returned": 5,
+      "historical-specimen-evidence-reviewed; regional-baseline-incomplete": 1,
+      "one-historical-specimen-assertion-reviewed; regional-baseline-incomplete": 1,
+      "primary-conference-abstract-reviewed-full-table-and-reuse-rights-pending": 2,
+      "historical-source-described; item-rights-pending": 7,
+      "historical-gbif-assertion-reviewed-in-local-projection": 1,
+      "partial-source-table-identity-reviewed": 1,
+      "source-reviewed-with-rights-and-locality-gaps": 1
+    },
+    "leadsStillResearchQueued": 17,
+    "unknownSalinityLeads": 31,
+    "salinityClassificationsByWaterbody": {
+      "unknown": 31,
+      "freshwater": 4,
+      "marine": 1
+    },
+    "researchProjectionAssertionsImported": 6,
+    "admittedPublicRecords": 0,
+    "publicAdmission": false,
+    "regionalBaselineComplete": false
+  },
+  "evidenceReadout": {
+    "historicalSourcesWithSomeSpeciesLevelResearchEvidence": [
+      {
+        "waterbodyId": "ph-wb-pansipit-river",
+        "note": "Four historical locality assertions from four CC0 museum specimens; shared coordinate is withheld; the NFRDI reports are separate landed-catch or source leads."
+      },
+      {
+        "waterbodyId": "ph-wb-molawin-makiling-creek",
+        "note": "One historical locality assertion derived from three CC0 museum records; date and coordinates are unknown."
+      },
+      {
+        "waterbodyId": "ph-wb-laguna-de-bay",
+        "note": "One corrected 2024 preserved-specimen assertion; noncommercial CC BY-NC terms; no map point."
+      },
+      {
+        "waterbodyId": "ph-wb-palico-lian-river",
+        "note": "Twelve dated-paper table assertions in a separate reviewed projection; three source-family conflicts remain held; not a whole-river or current-presence list."
+      },
+      {
+        "waterbodyId": "ph-wb-taal-lake",
+        "note": "Four checklist assertions prepared from a source; three candidates held; no survey field date is adopted."
+      }
+    ],
+    "materialHeldOrUnavailable": [
+      "Tayabas River: official abstract describes 15 aggregate species, but its table is unavailable and item-specific reuse rights are unresolved; three exact GBIF fish-locality strings returned zero.",
+      "Seven San Pablo lakes: one historical aggregate study lead; per-lake species rows held pending item-specific rights.",
+      "Manila Bay: historic trawl table and seven additional CAS named-bay candidates remain held; broad named-bay geometry is not a legal or Cavite boundary.",
+      "Brackish and estuarine leads: no admitted assertions tied to reviewed station salinity.",
+      "Several rivers, lakes, bays, wetlands, reservoirs and streams remain unreviewed or have only bounded locality-string checks."
+    ],
+    "zeroResultMeaning": "Exact-locality zeroes are bounded search gaps, not fish-absence findings."
+  },
+  "openGaps": [
+    {
+      "id": "scope-not-exhaustive",
+      "status": "open",
+      "count": null,
+      "reason": "Thirty-six selected named water/habitat leads are seeded, including the seven-lake San Pablo survey group and Tayabas/Palico-Lian river leads. Full provincial, municipal, island, small-stream, pond and reservoir denominators remain unestablished.",
+      "nextAction": "Expand the source-derived registry with explicit inclusion criteria and a frozen manifest before claiming a regional baseline."
+    },
+    {
+      "id": "wetland-list-count-reconciliation",
+      "status": "open",
+      "sourceRefs": [
+        "denr-calabarzon-wetlands-2024"
+      ],
+      "reason": "The official article advertises 30 wetlands but its prose appears to name 31 mixed site/habitat entries. Sites, rivers and sanctuary overlays cannot be counted interchangeably.",
+      "nextAction": "Obtain/read the underlying inventory and reconcile entity identity; do not use the headline count as the complete waterbody denominator."
+    },
+    {
+      "id": "direct-source-retrieval",
+      "status": "open",
+      "sourceRefs": [
+        "denr-calabarzon-wetlands-2024",
+        "emb-calabarzon-waterbodies",
+        "llda-annual-report-2022",
+        "paller-2011-makiling-fishes",
+        "emb-iyam-dumacaa-profile"
+      ],
+      "reason": "Official indexed excerpts support starter identity leads, but direct requests returned 403 in this session. No local raw-source hash exists for these pages/PDFs.",
+      "nextAction": "Use a permitted browser/direct access route or alternative primary repository and create a receipt before detailed row extraction; no access-control bypass."
+    },
+    {
+      "id": "estuarine-salinity-and-reaches",
+      "status": "open",
+      "count": 2,
+      "reason": "Two source-named estuary leads have no reviewed reach geometry or salinity profile. No fish evidence has been admitted for them.",
+      "nextAction": "Find study-specific station/reach/salinity evidence or retain unknown classifications."
+    },
+    {
+      "id": "fish-coverage",
+      "status": "open",
+      "count": 36,
+      "reason": "Regional fish coverage remains incomplete. The seven San Pablo lakes have an aggregate historic survey lead whose table rows are rights-held; Palico-Lian has 15 pending source-table candidates; four Taal checklist assertions are separately admitted without field-observation dates, while broad Cavite historical specimens remain outside this inventory.",
+      "nextAction": "Join only independently reviewed evidence at its supported geographic scale."
+    },
+    {
+      "id": "identity-and-geometry",
+      "status": "open",
+      "count": 36,
+      "reason": "No validated waterbody geometry or precise point assignment was created. Repeated names, local spellings and habitat-versus-waterbody identity require review.",
+      "nextAction": "Reconcile stable identities and source-era/current geography before map display."
+    },
+    {
+      "id": "rights-and-citations",
+      "status": "open",
+      "reason": "Source registry entries are not bulk text/map/media reuse permissions or biological approval.",
+      "nextAction": "Complete dataset/record/field-level rights and citation review before generating public data."
+    }
+  ],
+  "waterbodySnapshot": [
+    {
+      "id": "ph-wb-manila-bay",
+      "name": "Manila Bay",
+      "kind": "bay",
+      "salinity": "unknown",
+      "fishEvidenceStatus": "historical-trawl-source-review-and-bounded-OBIS-discovery; no-new-species-assertions-admitted",
+      "reviewStatus": "research-queued",
+      "boundaryStatus": "not-delineated",
+      "publicAdmission": false,
+      "sourceRefs": [
+        "emb-manila-bay-about",
+        "cavitecity-waterbodies",
+        "nfrdi-2017-manila-bay-trawl",
+        "marine-regions-manila-bay-bay-geometry",
+        "obis-manila-bay-actinopterygii-geometry-discovery"
+      ]
+    },
+    {
+      "id": "ph-wb-bacoor-bay",
+      "name": "Bacoor Bay",
+      "kind": "bay",
+      "salinity": "unknown",
+      "fishEvidenceStatus": "not-reviewed",
+      "reviewStatus": "research-queued",
+      "boundaryStatus": "not-delineated",
+      "publicAdmission": false,
+      "sourceRefs": [
+        "cavitecity-waterbodies"
+      ]
+    },
+    {
+      "id": "ph-wb-canacao-bay",
+      "name": "Cañacao Bay",
+      "kind": "bay",
+      "salinity": "unknown",
+      "fishEvidenceStatus": "not-reviewed",
+      "reviewStatus": "research-queued",
+      "boundaryStatus": "not-delineated",
+      "publicAdmission": false,
+      "sourceRefs": [
+        "cavitecity-waterbodies"
+      ]
+    },
+    {
+      "id": "ph-wb-maragondon-river",
+      "name": "Maragondon River",
+      "kind": "river",
+      "salinity": "unknown",
+      "fishEvidenceStatus": "bounded-GBIF-locality-query-zero-no-absence-inferred",
+      "reviewStatus": "bounded-GBIF-locality-string-checked-no-records-returned",
+      "boundaryStatus": "not-delineated",
+      "publicAdmission": false,
+      "sourceRefs": [
+        "emb-calabarzon-waterbodies",
+        "gbif-occurrence-downloads",
+        "ijcs-2014-maragondon-goby-barcoding"
+      ]
+    },
+    {
+      "id": "ph-wb-maragondon-river-estuary",
+      "name": "Maragondon River Estuary",
+      "kind": "estuary",
+      "salinity": "unknown",
+      "fishEvidenceStatus": "not-reviewed",
+      "reviewStatus": "research-queued",
+      "boundaryStatus": "not-delineated",
+      "publicAdmission": false,
+      "sourceRefs": [
+        "scssap-ph-wetlands-2021"
+      ]
+    },
+    {
+      "id": "ph-wb-noveleta-mangrove-wetland",
+      "name": "Noveleta Mangrove Area",
+      "kind": "wetland",
+      "salinity": "unknown",
+      "fishEvidenceStatus": "bounded-exact-locality-review-returned-four-copepod-records-and-no-fish-record",
+      "reviewStatus": "research-queued",
+      "boundaryStatus": "not-delineated",
+      "publicAdmission": false,
+      "sourceRefs": [
+        "denr-calabarzon-wetlands-2024",
+        "gbif-caliraya-copepod-occurrences"
+      ]
+    },
+    {
+      "id": "ph-wb-tres-cruzes-cavite-lake",
+      "name": "Lawa ng Tres Cruzes",
+      "kind": "lake",
+      "salinity": "unknown",
+      "fishEvidenceStatus": "not-reviewed",
+      "reviewStatus": "research-queued",
+      "boundaryStatus": "not-delineated",
+      "publicAdmission": false,
+      "sourceRefs": [
+        "denr-calabarzon-wetlands-2024"
+      ]
+    },
+    {
+      "id": "ph-wb-taal-lake",
+      "name": "Taal Lake",
+      "kind": "lake",
+      "salinity": "freshwater",
+      "fishEvidenceStatus": "not-reviewed",
+      "reviewStatus": "research-queued",
+      "boundaryStatus": "not-delineated",
+      "publicAdmission": false,
+      "sourceRefs": [
+        "nfrdi-taal-research-2025",
+        "agoncillo-pansipit-identity",
+        "nfrdi-fy2023-taal-pansipit-stock-assessment"
+      ]
+    },
+    {
+      "id": "ph-wb-pansipit-river",
+      "name": "Pansipit River",
+      "kind": "river",
+      "salinity": "unknown",
+      "fishEvidenceStatus": "four-historical-species-locality-assertions-from-four-CC0-museum-records; quality-flags-retained; coordinates-held",
+      "reviewStatus": "historical-specimen-evidence-reviewed; regional-baseline-incomplete",
+      "boundaryStatus": "not-delineated",
+      "publicAdmission": false,
+      "sourceRefs": [
+        "agoncillo-pansipit-identity",
+        "nfrdi-pansipit-taal-migratory-survey",
+        "nfrdi-fy2023-taal-pansipit-stock-assessment",
+        "gbif-field-museum-fish-collection"
+      ]
+    },
+    {
+      "id": "ph-wb-pansipit-river-estuary",
+      "name": "Pansipit River Estuary",
+      "kind": "estuary",
+      "salinity": "unknown",
+      "fishEvidenceStatus": "not-reviewed",
+      "reviewStatus": "research-queued",
+      "boundaryStatus": "not-delineated",
+      "publicAdmission": false,
+      "sourceRefs": [
+        "scssap-ph-wetlands-2021"
+      ]
+    },
+    {
+      "id": "ph-wb-balayan-bay",
+      "name": "Balayan Bay",
+      "kind": "bay",
+      "salinity": "marine",
+      "fishEvidenceStatus": "not-reviewed",
+      "reviewStatus": "research-queued",
+      "boundaryStatus": "not-delineated",
+      "publicAdmission": false,
+      "sourceRefs": [
+        "agoncillo-pansipit-identity",
+        "bfar4a-nsap-2020",
+        "bfar-nfrdi-2025-balayan-calatagan-poster",
+        "gbif-balayan-calatagan-exact-fish-locality-check",
+        "anilao-2019-bycatch-fish-port-survey"
+      ]
+    },
+    {
+      "id": "ph-wb-batangas-bay",
+      "name": "Batangas Bay",
+      "kind": "bay",
+      "salinity": "unknown",
+      "fishEvidenceStatus": "not-reviewed",
+      "reviewStatus": "research-queued",
+      "boundaryStatus": "not-delineated",
+      "publicAdmission": false,
+      "sourceRefs": [
+        "bfar4a-nsap-2020",
+        "nfrdi-2025-batangas-bay-dominant-fish-poster",
+        "gbif-batangas-bay-exact-fish-locality-check"
+      ]
+    },
+    {
+      "id": "ph-wb-lagadlarin-mangrove-wetland",
+      "name": "Lagadlarin Mangrove Forest",
+      "kind": "wetland",
+      "salinity": "unknown",
+      "fishEvidenceStatus": "bounded-GBIF-locality-query-zero-no-absence-inferred",
+      "reviewStatus": "bounded-GBIF-locality-string-checked-no-records-returned",
+      "boundaryStatus": "not-delineated",
+      "publicAdmission": false,
+      "sourceRefs": [
+        "denr-calabarzon-wetlands-2024",
+        "gbif-occurrence-downloads",
+        "jesam-2024-lagadlarin-mangrove-flora"
+      ]
+    },
+    {
+      "id": "ph-wb-laguna-de-bay",
+      "name": "Laguna de Bay",
+      "kind": "lake",
+      "salinity": "freshwater",
+      "fishEvidenceStatus": "one-corrected-2024-preserved-specimen-assertion-for-Barbonymus-schwanefeldii",
+      "reviewStatus": "one-historical-specimen-assertion-reviewed; regional-baseline-incomplete",
+      "boundaryStatus": "not-delineated",
+      "publicAdmission": false,
+      "sourceRefs": [
+        "llda-masterplan-tor-2024",
+        "llda-annual-report-2022",
+        "nfrdi-llda-2025-laguna-assessment",
+        "sorgon-2025-laguna-tinfoil-barb"
+      ]
+    },
+    {
+      "id": "ph-wb-caliraya-reservoir",
+      "name": "Caliraya Reservoir",
+      "kind": "reservoir",
+      "salinity": "unknown",
+      "fishEvidenceStatus": "bounded-exact-locality-review-returned-four-copepod-records-and-no-fish-record",
+      "reviewStatus": "primary-conference-abstract-reviewed-full-table-and-reuse-rights-pending",
+      "boundaryStatus": "not-delineated",
+      "publicAdmission": false,
+      "sourceRefs": [
+        "denr-calabarzon-wetlands-2024",
+        "gbif-caliraya-copepod-occurrences",
+        "aabe-2022-caliraya-lumot-fish-study"
+      ]
+    },
+    {
+      "id": "ph-wb-lumot-reservoir",
+      "name": "Lumot Reservoir",
+      "kind": "reservoir",
+      "salinity": "unknown",
+      "fishEvidenceStatus": "bounded-Lake-Lumot-and-Lumot-Lake-queries-returned-zero; no-absence-inferred",
+      "reviewStatus": "primary-conference-abstract-reviewed-full-table-and-reuse-rights-pending",
+      "boundaryStatus": "not-delineated",
+      "publicAdmission": false,
+      "sourceRefs": [
+        "denr-calabarzon-wetlands-2024",
+        "gbif-caliraya-copepod-occurrences",
+        "aabe-2022-caliraya-lumot-fish-study"
+      ]
+    },
+    {
+      "id": "ph-wb-sampaloc-san-pablo-lake",
+      "name": "Sampaloc Lake",
+      "kind": "lake",
+      "salinity": "unknown",
+      "fishEvidenceStatus": "historical-seven-lake-survey-described; species-rows-held-for-rights-review",
+      "reviewStatus": "historical-source-described; item-rights-pending",
+      "boundaryStatus": "not-delineated",
+      "publicAdmission": false,
+      "sourceRefs": [
+        "denr-calabarzon-wetlands-2024",
+        "paller-2017-seven-lakes-fish"
+      ]
+    },
+    {
+      "id": "ph-wb-pandin-laguna-lake",
+      "name": "Pandin Lake",
+      "kind": "lake",
+      "salinity": "unknown",
+      "fishEvidenceStatus": "historical-seven-lake-survey-described; species-rows-held-for-rights-review",
+      "reviewStatus": "historical-source-described; item-rights-pending",
+      "boundaryStatus": "not-delineated",
+      "publicAdmission": false,
+      "sourceRefs": [
+        "denr-calabarzon-wetlands-2024",
+        "paller-2017-seven-lakes-fish"
+      ]
+    },
+    {
+      "id": "ph-wb-bunot-lake",
+      "name": "Bunot Lake",
+      "kind": "lake",
+      "salinity": "unknown",
+      "fishEvidenceStatus": "historical-seven-lake-survey-described; species-rows-held-for-rights-review",
+      "reviewStatus": "historical-source-described; item-rights-pending",
+      "boundaryStatus": "not-delineated",
+      "publicAdmission": false,
+      "sourceRefs": [
+        "paller-2017-seven-lakes-fish"
+      ]
+    },
+    {
+      "id": "ph-wb-mohicap-lake",
+      "name": "Mohicap Lake",
+      "kind": "lake",
+      "salinity": "unknown",
+      "fishEvidenceStatus": "historical-seven-lake-survey-described; species-rows-held-for-rights-review",
+      "reviewStatus": "historical-source-described; item-rights-pending",
+      "boundaryStatus": "not-delineated",
+      "publicAdmission": false,
+      "sourceRefs": [
+        "paller-2017-seven-lakes-fish"
+      ]
+    },
+    {
+      "id": "ph-wb-yambo-lake",
+      "name": "Yambo Lake",
+      "kind": "lake",
+      "salinity": "unknown",
+      "fishEvidenceStatus": "historical-seven-lake-survey-described; species-rows-held-for-rights-review",
+      "reviewStatus": "historical-source-described; item-rights-pending",
+      "boundaryStatus": "not-delineated",
+      "publicAdmission": false,
+      "sourceRefs": [
+        "paller-2017-seven-lakes-fish"
+      ]
+    },
+    {
+      "id": "ph-wb-calibato-lake",
+      "name": "Calibato Lake",
+      "kind": "lake",
+      "salinity": "unknown",
+      "fishEvidenceStatus": "historical-seven-lake-survey-described; species-rows-held-for-rights-review",
+      "reviewStatus": "historical-source-described; item-rights-pending",
+      "boundaryStatus": "not-delineated",
+      "publicAdmission": false,
+      "sourceRefs": [
+        "paller-2017-seven-lakes-fish"
+      ]
+    },
+    {
+      "id": "ph-wb-palakpakin-lake",
+      "name": "Palakpakin Lake",
+      "kind": "lake",
+      "salinity": "unknown",
+      "fishEvidenceStatus": "historical-seven-lake-survey-described; species-rows-held-for-rights-review",
+      "reviewStatus": "historical-source-described; item-rights-pending",
+      "boundaryStatus": "not-delineated",
+      "publicAdmission": false,
+      "sourceRefs": [
+        "paller-2017-seven-lakes-fish"
+      ]
+    },
+    {
+      "id": "ph-wb-molawin-makiling-creek",
+      "name": "Molawin Creek",
+      "kind": "stream",
+      "salinity": "freshwater",
+      "fishEvidenceStatus": "one historical Gulaphallus mirabilis locality assertion from three CC0 museum occurrence records; dates and coordinates absent",
+      "reviewStatus": "historical-gbif-assertion-reviewed-in-local-projection",
+      "boundaryStatus": "not-delineated",
+      "publicAdmission": false,
+      "sourceRefs": [
+        "paller-2011-makiling-fishes",
+        "gbif-nhm-london-collection-specimens",
+        "gbif-cas-ichthyology"
+      ]
+    },
+    {
+      "id": "ph-wb-cambantoc-makiling-river",
+      "name": "Cambantoc River",
+      "kind": "river",
+      "salinity": "freshwater",
+      "fishEvidenceStatus": "not-reviewed",
+      "reviewStatus": "research-queued",
+      "boundaryStatus": "not-delineated",
+      "publicAdmission": false,
+      "sourceRefs": [
+        "paller-2011-makiling-fishes"
+      ]
+    },
+    {
+      "id": "ph-wb-morong-rizal-river",
+      "name": "Morong River",
+      "kind": "river",
+      "salinity": "unknown",
+      "fishEvidenceStatus": "not-reviewed",
+      "reviewStatus": "research-queued",
+      "boundaryStatus": "not-delineated",
+      "publicAdmission": false,
+      "sourceRefs": [
+        "llda-annual-report-2022"
+      ]
+    },
+    {
+      "id": "ph-wb-tanay-rizal-river",
+      "name": "Tanay River",
+      "kind": "river",
+      "salinity": "unknown",
+      "fishEvidenceStatus": "bounded-GBIF-locality-query-zero-no-absence-inferred",
+      "reviewStatus": "bounded-GBIF-locality-string-checked-no-records-returned",
+      "boundaryStatus": "not-delineated",
+      "publicAdmission": false,
+      "sourceRefs": [
+        "llda-annual-report-2022",
+        "gbif-occurrence-downloads",
+        "llda-tanay-water-quality-assessment"
+      ]
+    },
+    {
+      "id": "ph-wb-tagbac-rizal-creek",
+      "name": "Tagbac creek",
+      "kind": "stream",
+      "salinity": "unknown",
+      "fishEvidenceStatus": "not-reviewed",
+      "reviewStatus": "research-queued",
+      "boundaryStatus": "not-delineated",
+      "publicAdmission": false,
+      "sourceRefs": [
+        "emb-calabarzon-waterbodies"
+      ]
+    },
+    {
+      "id": "ph-wb-tayabas-bay",
+      "name": "Tayabas Bay",
+      "kind": "bay",
+      "salinity": "unknown",
+      "fishEvidenceStatus": "not-reviewed",
+      "reviewStatus": "research-queued",
+      "boundaryStatus": "not-delineated",
+      "publicAdmission": false,
+      "sourceRefs": [
+        "nfrdi-tayabas-bay-profile"
+      ]
+    },
+    {
+      "id": "ph-wb-lamon-bay",
+      "name": "Lamon Bay",
+      "kind": "bay",
+      "salinity": "unknown",
+      "fishEvidenceStatus": "not-reviewed",
+      "reviewStatus": "research-queued",
+      "boundaryStatus": "not-delineated",
+      "publicAdmission": false,
+      "sourceRefs": [
+        "bfar4a-nsap-2020"
+      ]
+    },
+    {
+      "id": "ph-wb-lalaguna-quezon-marsh",
+      "name": "Lalaguna Marsh",
+      "kind": "wetland",
+      "salinity": "unknown",
+      "fishEvidenceStatus": "not-reviewed",
+      "reviewStatus": "research-queued",
+      "boundaryStatus": "not-delineated",
+      "publicAdmission": false,
+      "sourceRefs": [
+        "denr-calabarzon-wetlands-2024"
+      ]
+    },
+    {
+      "id": "ph-wb-ticub-quezon-lake",
+      "name": "Ticub Lake",
+      "kind": "lake",
+      "salinity": "unknown",
+      "fishEvidenceStatus": "bounded-GBIF-locality-query-zero-no-absence-inferred",
+      "reviewStatus": "bounded-GBIF-locality-string-checked-no-records-returned",
+      "boundaryStatus": "not-delineated",
+      "publicAdmission": false,
+      "sourceRefs": [
+        "denr-calabarzon-wetlands-2024",
+        "gbif-occurrence-downloads",
+        "ajob-2014-tikub-freshwater-fish"
+      ]
+    },
+    {
+      "id": "ph-wb-iyam-lucena-river",
+      "name": "Iyam River",
+      "kind": "river",
+      "salinity": "unknown",
+      "fishEvidenceStatus": "not-reviewed",
+      "reviewStatus": "research-queued",
+      "boundaryStatus": "not-delineated",
+      "publicAdmission": false,
+      "sourceRefs": [
+        "emb-iyam-dumacaa-profile",
+        "emb-calabarzon-annual-report-2024"
+      ]
+    },
+    {
+      "id": "ph-wb-dumacaa-lucena-river",
+      "name": "Dumacaa River",
+      "kind": "river",
+      "salinity": "unknown",
+      "fishEvidenceStatus": "bounded-GBIF-locality-query-zero-no-absence-inferred",
+      "reviewStatus": "bounded-GBIF-locality-string-checked-no-records-returned",
+      "boundaryStatus": "not-delineated",
+      "publicAdmission": false,
+      "sourceRefs": [
+        "emb-iyam-dumacaa-profile",
+        "emb-calabarzon-annual-report-2024",
+        "gbif-occurrence-downloads"
+      ]
+    },
+    {
+      "id": "ph-wb-palico-lian-river",
+      "name": "Palico-Lian River",
+      "kind": "river",
+      "salinity": "unknown",
+      "fishEvidenceStatus": "12-survey-table-assertions-reviewed; 3-family-conflicts-held",
+      "reviewStatus": "partial-source-table-identity-reviewed",
+      "boundaryStatus": "not-delineated",
+      "publicAdmission": false,
+      "sourceRefs": [
+        "corpuz-2025-palico-lian"
+      ]
+    },
+    {
+      "id": "ph-wb-tayabas-river",
+      "name": "Tayabas River",
+      "kind": "river",
+      "salinity": "unknown",
+      "fishEvidenceStatus": "historical-aggregate-only-table-unavailable",
+      "reviewStatus": "source-reviewed-with-rights-and-locality-gaps",
+      "boundaryStatus": "not-delineated",
+      "publicAdmission": false,
+      "sourceRefs": [
+        "paller-2013-tayabas-river-fish"
+      ]
+    }
+  ],
+  "nextStep": {
+    "phaseId": "L2",
+    "regionName": "National Capital Region (NCR)",
+    "action": "Start the NCR freshwater, estuarine and marine waterbody source inventory with official sources and independently reusable records. Keep CALABARZON open and return to its unresolved leads and geometry/data denominator gaps; do not mark it complete."
+  }
+}

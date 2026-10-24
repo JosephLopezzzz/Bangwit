@@ -318,7 +318,9 @@ export function buildResearchStatus({
       administrativeCoverageUnits: registry.administrativeUnits.filter((unit) => unit.regionId === region.id).length,
       scopedWaterbodyResearchLeads: region.id === scope.regionId ? scope.waterbodies.length : 0,
       workStatus: region.id === scope.regionId
-        ? "scoped-checklist-and-multi-habitat-historical-evidence-prepared"
+        ? scope.status === "in-progress-incomplete-baseline"
+          ? "coverage-gap-checkpoint-published-incomplete"
+          : "scoped-checklist-and-multi-habitat-historical-evidence-prepared"
         : "queued",
       baselineReviewed: false,
       reviewedRegionalSpeciesCount: null,
