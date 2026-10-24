@@ -62,12 +62,12 @@ test("SEAFDEC stocking and restoration table remains distinct from fish occurren
   assert.deepEqual(review.programContext.tableRows.at(-1).scopeLeadIds, []);
   assert.match(review.programContext.tableRows.at(-1).crosswalk, /identity remains unresolved/i);
 
-  assert.equal(scope.counts.waterbodyResearchLeads, 51);
-  assert.equal(report.coverageSummary.namedWaterbodyLeads, 51);
-  assert.equal(report.coverageSummary.leadsStillResearchQueued, 20);
-  assert.equal(report.coverageSummary.unknownSalinityLeads, 46);
-  assert.equal(report.coverageSummary.sourceAssignments, 124);
-  assert.equal(report.coverageSummary.distinctSourceReferencesAssigned, 43);
+  assert.equal(scope.counts.waterbodyResearchLeads, 60);
+  assert.equal(report.coverageSummary.namedWaterbodyLeads, 60);
+  assert.equal(report.coverageSummary.leadsStillResearchQueued, 29);
+  assert.equal(report.coverageSummary.unknownSalinityLeads, 55);
+  assert.equal(report.coverageSummary.sourceAssignments, 136);
+  assert.equal(report.coverageSummary.distinctSourceReferencesAssigned, 44);
   assert.equal(report.coverageSummary.regionalBaselineComplete, false);
   assert.equal(report.coverageSummary.publicAdmission, false);
 });

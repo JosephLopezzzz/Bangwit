@@ -72,7 +72,7 @@
     "limits": "Province plus separate-city starter coverage. Municipalities/component cities and each island/waterbody still require the source-sweep inventory; this is not a completed regional inventory."
   },
   "counts": {
-    "waterbodyResearchLeads": 51,
+    "waterbodyResearchLeads": 60,
     "provincesWithLeads": 5,
     "separateCityCoverageUnits": 1,
     "byKind": {
@@ -80,7 +80,7 @@
       "estuary": 2,
       "lake": 19,
       "reservoir": 4,
-      "river": 9,
+      "river": 18,
       "stream": 2,
       "wetland": 8
     },
@@ -215,7 +215,8 @@
           "relationship": "source-described-locality",
           "sourceRefs": [
             "emb-calabarzon-waterbodies",
-            "ijcs-2014-maragondon-goby-barcoding"
+            "ijcs-2014-maragondon-goby-barcoding",
+            "denr-bmb-inland-wetlands-atlas-2016"
           ],
           "provinceId": "0402100000"
         }
@@ -223,14 +224,15 @@
       "sourceRefs": [
         "emb-calabarzon-waterbodies",
         "gbif-occurrence-downloads",
-        "ijcs-2014-maragondon-goby-barcoding"
+        "ijcs-2014-maragondon-goby-barcoding",
+        "denr-bmb-inland-wetlands-atlas-2016"
       ],
       "identityStatus": "source-named-research-lead",
       "boundaryStatus": "not-delineated",
       "fishEvidenceStatus": "bounded-GBIF-locality-query-zero-no-absence-inferred",
       "reviewStatus": "bounded-GBIF-locality-string-checked-no-records-returned",
       "publicAdmission": false,
-      "scopeNote": "River identity only; monitored segments do not delimit the entire channel or sanctuary. A 2014 goby barcoding paper is a historical fish lead, but it reports conflicting putative species identities and has no adopted reach geometry; all three species-level claims remain held for independent review. GBIF's exact Maragondon River query returned zero rows, which does not establish fish absence."
+      "scopeNote": "River identity only; monitored segments do not delimit the entire channel or sanctuary. A 2014 goby barcoding paper is a historical fish lead, but it reports conflicting putative species identities and has no adopted reach geometry; all three species-level claims remain held for independent review. GBIF's exact Maragondon River query returned zero rows, which does not establish fish absence. The DENR-BMB 2016 Atlas Annex 2b also lists this river under Cavite and reports multiple municipalities; these are source-era locality context only and do not delimit the channel."
     },
     {
       "id": "ph-wb-maragondon-river-estuary",
@@ -389,7 +391,8 @@
           "relationship": "source-described-locality",
           "sourceRefs": [
             "agoncillo-pansipit-identity",
-            "nfrdi-pansipit-taal-migratory-survey"
+            "nfrdi-pansipit-taal-migratory-survey",
+            "denr-bmb-inland-wetlands-atlas-2016"
           ],
           "provinceId": "0401000000"
         }
@@ -398,7 +401,8 @@
         "agoncillo-pansipit-identity",
         "nfrdi-pansipit-taal-migratory-survey",
         "nfrdi-fy2023-taal-pansipit-stock-assessment",
-        "gbif-field-museum-fish-collection"
+        "gbif-field-museum-fish-collection",
+        "denr-bmb-inland-wetlands-atlas-2016"
       ],
       "identityStatus": "source-named-research-lead",
       "boundaryStatus": "not-delineated",
@@ -408,7 +412,7 @@
       "evidenceBatchRefs": [
         "pansipit-fmnh-gbif-20261023"
       ],
-      "scopeNote": "Four 1933 CC0 Field Museum specimen records support four historical species-locality assertions by exact Pansipit River text. All carry institution/collection quality flags; three also carry recorded-date mismatch flags. Their shared coordinate has no uncertainty and is withheld. No exact reach, estuary, salinity, current presence, or complete river list is inferred. The river links Taal Lake to Balayan Bay; one salinity class cannot be assigned to every reach from this connection."
+      "scopeNote": "Four 1933 CC0 Field Museum specimen records support four historical species-locality assertions by exact Pansipit River text. All carry institution/collection quality flags; three also carry recorded-date mismatch flags. Their shared coordinate has no uncertainty and is withheld. No exact reach, estuary, salinity, current presence, or complete river list is inferred. The river links Taal Lake to Balayan Bay; one salinity class cannot be assigned to every reach from this connection. The DENR-BMB 2016 Atlas Annex 2b independently names Pansipit River and lists Lemery, Taal, Agoncillo and San Nicolas; this does not assign salinity to every reach."
     },
     {
       "id": "ph-wb-pansipit-river-estuary",
@@ -1036,7 +1040,8 @@
           "regionId": "0400000000",
           "relationship": "source-described-locality",
           "sourceRefs": [
-            "llda-annual-report-2022"
+            "llda-annual-report-2022",
+            "denr-bmb-inland-wetlands-atlas-2016"
           ],
           "provinceId": "0405800000"
         }
@@ -1044,14 +1049,15 @@
       "sourceRefs": [
         "llda-annual-report-2022",
         "gbif-occurrence-downloads",
-        "llda-tanay-water-quality-assessment"
+        "llda-tanay-water-quality-assessment",
+        "denr-bmb-inland-wetlands-atlas-2016"
       ],
       "identityStatus": "source-named-research-lead",
       "boundaryStatus": "not-delineated",
       "fishEvidenceStatus": "bounded-GBIF-locality-query-zero-no-absence-inferred",
       "reviewStatus": "bounded-GBIF-locality-string-checked-no-records-returned",
       "publicAdmission": false,
-      "scopeNote": "The official LLDA water-quality report documents five stations on the river but is not a fish inventory. GBIF returned zero rows for the source-backed Tanay River System and Mouth of Tanay River labels; this does not establish fish absence."
+      "scopeNote": "The official LLDA water-quality report documents five stations on the river but is not a fish inventory. GBIF returned zero rows for the source-backed Tanay River System and Mouth of Tanay River labels; this does not establish fish absence. The DENR-BMB 2016 Atlas Annex 2b prints Tanay River* under Rizal/Tanay; the asterisk is unexplained in the reviewed table pages."
     },
     {
       "id": "ph-wb-tagbac-rizal-creek",
@@ -1886,6 +1892,284 @@
       "reviewStatus": "research-queued",
       "publicAdmission": false,
       "scopeNote": "SEAFDEC 2016 Table 2 lists Bal-on Reservoir, Quezon, as a NIFEP site for habitat restoration (program status as of 2015). It gives no municipality, fish survey, named taxa, current status or boundary."
+    },
+    {
+      "id": "ph-wb-llavac-river",
+      "name": "Llavac River",
+      "aliases": [],
+      "kind": "river",
+      "salinity": {
+        "classification": "unknown",
+        "reviewStatus": "not-assessed",
+        "sourceRefs": []
+      },
+      "administrativeAssociations": [
+        {
+          "regionId": "0400000000",
+          "relationship": "source-described-locality",
+          "sourceRefs": [
+            "denr-bmb-inland-wetlands-atlas-2016"
+          ],
+          "provinceId": "0402100000"
+        }
+      ],
+      "sourceRefs": [
+        "denr-bmb-inland-wetlands-atlas-2016"
+      ],
+      "identityStatus": "source-named-research-lead",
+      "boundaryStatus": "not-delineated",
+      "fishEvidenceStatus": "not-reviewed",
+      "reviewStatus": "research-queued",
+      "publicAdmission": false,
+      "scopeNote": "Historical DENR-BMB 2016 Atlas Annex 2b names this river and reports locality context: Naic; Indang. This is not channel geometry, a complete reach or fish evidence. Any printed asterisk is unexplained by the reviewed pages and is preserved without interpretation."
+    },
+    {
+      "id": "ph-wb-canas-river",
+      "name": "Canas River",
+      "aliases": [],
+      "kind": "river",
+      "salinity": {
+        "classification": "unknown",
+        "reviewStatus": "not-assessed",
+        "sourceRefs": []
+      },
+      "administrativeAssociations": [
+        {
+          "regionId": "0400000000",
+          "relationship": "source-described-locality",
+          "sourceRefs": [
+            "denr-bmb-inland-wetlands-atlas-2016"
+          ],
+          "provinceId": "0402100000"
+        }
+      ],
+      "sourceRefs": [
+        "denr-bmb-inland-wetlands-atlas-2016"
+      ],
+      "identityStatus": "source-named-research-lead",
+      "boundaryStatus": "not-delineated",
+      "fishEvidenceStatus": "not-reviewed",
+      "reviewStatus": "research-queued",
+      "publicAdmission": false,
+      "scopeNote": "Historical DENR-BMB 2016 Atlas Annex 2b names this river and reports locality context: Rosario; Tanza; General Trias; Trece Martires City; Amadeo; Indang; Tagaytay City. This is not channel geometry, a complete reach or fish evidence. Any printed asterisk is unexplained by the reviewed pages and is preserved without interpretation."
+    },
+    {
+      "id": "ph-wb-obispo-river",
+      "name": "Obispo River",
+      "aliases": [],
+      "kind": "river",
+      "salinity": {
+        "classification": "unknown",
+        "reviewStatus": "not-assessed",
+        "sourceRefs": []
+      },
+      "administrativeAssociations": [
+        {
+          "regionId": "0400000000",
+          "relationship": "source-described-locality",
+          "sourceRefs": [
+            "denr-bmb-inland-wetlands-atlas-2016"
+          ],
+          "provinceId": "0402100000"
+        }
+      ],
+      "sourceRefs": [
+        "denr-bmb-inland-wetlands-atlas-2016"
+      ],
+      "identityStatus": "source-named-research-lead",
+      "boundaryStatus": "not-delineated",
+      "fishEvidenceStatus": "not-reviewed",
+      "reviewStatus": "research-queued",
+      "publicAdmission": false,
+      "scopeNote": "Historical DENR-BMB 2016 Atlas Annex 2b names this river and reports locality context: Tanza. This is not channel geometry, a complete reach or fish evidence. Any printed asterisk is unexplained by the reviewed pages and is preserved without interpretation."
+    },
+    {
+      "id": "ph-wb-postema-river",
+      "name": "Postema River",
+      "aliases": [],
+      "kind": "river",
+      "salinity": {
+        "classification": "unknown",
+        "reviewStatus": "not-assessed",
+        "sourceRefs": []
+      },
+      "administrativeAssociations": [
+        {
+          "regionId": "0400000000",
+          "relationship": "source-described-locality",
+          "sourceRefs": [
+            "denr-bmb-inland-wetlands-atlas-2016"
+          ],
+          "provinceId": "0402100000"
+        }
+      ],
+      "sourceRefs": [
+        "denr-bmb-inland-wetlands-atlas-2016"
+      ],
+      "identityStatus": "source-named-research-lead",
+      "boundaryStatus": "not-delineated",
+      "fishEvidenceStatus": "not-reviewed",
+      "reviewStatus": "research-queued",
+      "publicAdmission": false,
+      "scopeNote": "Historical DENR-BMB 2016 Atlas Annex 2b names this river and reports locality context: Tanza. This is not channel geometry, a complete reach or fish evidence. Any printed asterisk is unexplained by the reviewed pages and is preserved without interpretation."
+    },
+    {
+      "id": "ph-wb-capepisa-river",
+      "name": "Capepisa River",
+      "aliases": [],
+      "kind": "river",
+      "salinity": {
+        "classification": "unknown",
+        "reviewStatus": "not-assessed",
+        "sourceRefs": []
+      },
+      "administrativeAssociations": [
+        {
+          "regionId": "0400000000",
+          "relationship": "source-described-locality",
+          "sourceRefs": [
+            "denr-bmb-inland-wetlands-atlas-2016"
+          ],
+          "provinceId": "0402100000"
+        }
+      ],
+      "sourceRefs": [
+        "denr-bmb-inland-wetlands-atlas-2016"
+      ],
+      "identityStatus": "source-named-research-lead",
+      "boundaryStatus": "not-delineated",
+      "fishEvidenceStatus": "not-reviewed",
+      "reviewStatus": "research-queued",
+      "publicAdmission": false,
+      "scopeNote": "Historical DENR-BMB 2016 Atlas Annex 2b names this river and reports locality context: Tanza. This is not channel geometry, a complete reach or fish evidence. Any printed asterisk is unexplained by the reviewed pages and is preserved without interpretation."
+    },
+    {
+      "id": "ph-wb-timalan-river",
+      "name": "Timalan River",
+      "aliases": [],
+      "kind": "river",
+      "salinity": {
+        "classification": "unknown",
+        "reviewStatus": "not-assessed",
+        "sourceRefs": []
+      },
+      "administrativeAssociations": [
+        {
+          "regionId": "0400000000",
+          "relationship": "source-described-locality",
+          "sourceRefs": [
+            "denr-bmb-inland-wetlands-atlas-2016"
+          ],
+          "provinceId": "0402100000"
+        }
+      ],
+      "sourceRefs": [
+        "denr-bmb-inland-wetlands-atlas-2016"
+      ],
+      "identityStatus": "source-named-research-lead",
+      "boundaryStatus": "not-delineated",
+      "fishEvidenceStatus": "not-reviewed",
+      "reviewStatus": "research-queued",
+      "publicAdmission": false,
+      "scopeNote": "Historical DENR-BMB 2016 Atlas Annex 2b names this river and reports locality context: Tanza; Naic; source spelling: Trece Martirez City. This is not channel geometry, a complete reach or fish evidence. Any printed asterisk is unexplained by the reviewed pages and is preserved without interpretation."
+    },
+    {
+      "id": "ph-wb-imus-river",
+      "name": "Imus River",
+      "aliases": [],
+      "kind": "river",
+      "salinity": {
+        "classification": "unknown",
+        "reviewStatus": "not-assessed",
+        "sourceRefs": []
+      },
+      "administrativeAssociations": [
+        {
+          "regionId": "0400000000",
+          "relationship": "source-described-locality",
+          "sourceRefs": [
+            "denr-bmb-inland-wetlands-atlas-2016"
+          ],
+          "provinceId": "0402100000"
+        }
+      ],
+      "sourceRefs": [
+        "denr-bmb-inland-wetlands-atlas-2016"
+      ],
+      "identityStatus": "source-named-research-lead",
+      "boundaryStatus": "not-delineated",
+      "fishEvidenceStatus": "not-reviewed",
+      "reviewStatus": "research-queued",
+      "publicAdmission": false,
+      "scopeNote": "Historical DENR-BMB 2016 Atlas Annex 2b names this river and reports locality context: City of Bacoor; Kawit; City of Dasmari?as; Silang. This is not channel geometry, a complete reach or fish evidence. Any printed asterisk is unexplained by the reviewed pages and is preserved without interpretation."
+    },
+    {
+      "id": "ph-wb-ylang-ylang-rio-grande-river",
+      "name": "Ylang ylang/Rio Grande River",
+      "aliases": [],
+      "kind": "river",
+      "salinity": {
+        "classification": "unknown",
+        "reviewStatus": "not-assessed",
+        "sourceRefs": []
+      },
+      "administrativeAssociations": [
+        {
+          "regionId": "0400000000",
+          "relationship": "source-described-locality",
+          "sourceRefs": [
+            "denr-bmb-inland-wetlands-atlas-2016"
+          ],
+          "provinceId": "0402100000"
+        }
+      ],
+      "sourceRefs": [
+        "denr-bmb-inland-wetlands-atlas-2016"
+      ],
+      "identityStatus": "source-named-research-lead",
+      "boundaryStatus": "not-delineated",
+      "fishEvidenceStatus": "not-reviewed",
+      "reviewStatus": "research-queued",
+      "publicAdmission": false,
+      "scopeNote": "Historical DENR-BMB 2016 Atlas Annex 2b names this river and reports locality context: Noveleta; General Trias; Imus; City of Dasmari?as; Silang; slash-form identity unresolved. This is not channel geometry, a complete reach or fish evidence. Any printed asterisk is unexplained by the reviewed pages and is preserved without interpretation."
+    },
+    {
+      "id": "ph-wb-pagsanjan-river",
+      "name": "Pagsanjan River",
+      "aliases": [],
+      "kind": "river",
+      "salinity": {
+        "classification": "unknown",
+        "reviewStatus": "not-assessed",
+        "sourceRefs": []
+      },
+      "administrativeAssociations": [
+        {
+          "regionId": "0400000000",
+          "relationship": "source-described-locality",
+          "sourceRefs": [
+            "denr-bmb-inland-wetlands-atlas-2016"
+          ],
+          "provinceId": "0403400000"
+        },
+        {
+          "regionId": "0400000000",
+          "relationship": "source-described-locality",
+          "sourceRefs": [
+            "denr-bmb-inland-wetlands-atlas-2016"
+          ],
+          "provinceId": "0405600000"
+        }
+      ],
+      "sourceRefs": [
+        "denr-bmb-inland-wetlands-atlas-2016"
+      ],
+      "identityStatus": "source-named-research-lead",
+      "boundaryStatus": "not-delineated",
+      "fishEvidenceStatus": "not-reviewed",
+      "reviewStatus": "research-queued",
+      "publicAdmission": false,
+      "scopeNote": "Historical DENR-BMB 2016 Atlas Annex 2b names this river and reports locality context: Lumban; Pagsanjan; Magdalena; Cavinti; Majayjay; Luisiana; Lucban, Quezon. This is not channel geometry, a complete reach or fish evidence. Any printed asterisk is unexplained by the reviewed pages and is preserved without interpretation."
     }
   ],
   "coverageRules": {
