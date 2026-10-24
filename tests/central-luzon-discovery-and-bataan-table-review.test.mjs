@@ -69,7 +69,7 @@ test("Bataan source-table transcription reconciles the article's three river ric
   assert.equal(tableReview.fieldDisposition.publicAdmission, false);
   assert.equal(tableReview.fieldDisposition.appProjection, false);
   assert.equal(tableReview.fieldDisposition.regionalReleaseApproved, false);
-  assert.equal(tableReview.taxonomyReview.status, "pending-current-authoritative-review");
+  assert.equal(tableReview.taxonomyReview.status, "binomial-catalog-pass-complete-overall-identity-pending");
   assert.equal(tableReview.taxonomyProposalLedger.path, "central-luzon-bataan-taxonomy-proposals-20261024.json");
   assert.equal(taxonomyProposals.status, "proposal-batch-complete-review-pending");
   assert.equal(taxonomyProposals.counts.totalSourceRows, 52);
@@ -79,8 +79,9 @@ test("Bataan source-table transcription reconciles the article's three river ric
   assert.equal(taxonomyProposals.counts.acceptedTaxa, 0);
   assert.equal(taxonomyProposals.counts.publicationEligible, 0);
   assert.equal(tableReview.independentCatalogReview.path, "central-luzon-bataan-cof-name-review-20261024.json");
-  assert.equal(independentCatalogReview.coverage.selectedRowsReviewed, 12);
-  assert.equal(independentCatalogReview.coverage.sourceBinomialsRemainingForCatalogReview, 30);
+  assert.equal(independentCatalogReview.coverage.sourceBinomialsCatalogReviewed, 42);
+  assert.equal(independentCatalogReview.coverage.sourceBinomialsRemainingForCatalogReview, 0);
+  assert.equal(independentCatalogReview.records.length, 42);
   assert.equal(independentCatalogReview.coverage.acceptedTaxa, 0);
   assert.equal(independentCatalogReview.coverage.publicationEligible, 0);
   assert.ok(independentCatalogReview.records.some((record) => record.sourceNameVerbatim === "Cynoglossus bilineatus" && record.catalogStatus === "ambiguous-homonym-and-combination-review"));
