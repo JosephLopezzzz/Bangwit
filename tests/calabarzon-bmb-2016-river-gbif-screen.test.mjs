@@ -56,7 +56,7 @@ test("exact GBIF text searches record bounded zeroes without claiming fish absen
   assert.ok(gbif.access.reviewFiles.includes("calabarzon-bmb-2016-river-gbif-screen-20261024.json"));
   assert.ok(gbif.access.additionalRawPaths.includes("raw/calabarzon-bmb-2016-river-gbif-screen-20261024/"));
   assert.equal(report.coverageSummary.namedWaterbodyLeads, 83);
-assert.equal(report.coverageSummary.sourceAssignments, 195);
+assert.equal(report.coverageSummary.sourceAssignments, 196);
   assert.equal(report.coverageSummary.leadsStillResearchQueued, 20);
   assert.equal(report.coverageSummary.unknownSalinityLeads, 78);
   assert.equal(report.coverageSummary.regionalBaselineComplete, false);

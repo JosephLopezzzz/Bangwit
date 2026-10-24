@@ -1,0 +1,145 @@
+{
+  "schemaVersion": 1,
+  "batchId": "calabarzon-taal-gbif-coordinate-candidate-crosswalk-20261024",
+  "checkedOn": "2026-10-24",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "waterbodyId": "ph-wb-taal-lake",
+  "gbifDataset": {
+    "sourceId": "asean-cb-national-museum-fish-collection-gbif",
+    "datasetKey": "18896efa-22df-4fbd-9782-42f47257e753",
+    "version": "1.38",
+    "license": "CC-BY-4.0"
+  },
+  "query": {
+    "url": "https://api.gbif.org/v1/occurrence/search?datasetKey=18896efa-22df-4fbd-9782-42f47257e753&decimalLatitude=13.7%2C14.3&decimalLongitude=120.6%2C121.4&limit=300",
+    "httpStatus": 200,
+    "returnedCount": 242,
+    "resultCount": 242,
+    "endOfRecords": true,
+    "rawResponse": {
+      "bytes": 1058417,
+      "sha256": "315e0808a3d08e518bbfbc06eed4327f0ca9cd736621f382b5d27db34ce973cc",
+      "path": "raw/calabarzon-taal-national-museum-coordinate-screen-20261024/occurrences.json"
+    }
+  },
+  "spatialMethod": {
+    "purpose": "Broad record-discovery envelope only; not a Taal Lake polygon, official boundary, or assertion that a returned point lies in the lake.",
+    "envelope": {
+      "south": 13.7,
+      "north": 14.3,
+      "west": 120.6,
+      "east": 121.4,
+      "crs": "WGS84 geographic coordinates"
+    },
+    "selectedBy": "A GBIF record's exact collection catalog number, taxon and year were cross-matched to a FishBase museum occurrence page that states a Taal locality."
+  },
+  "candidates": [
+    {
+      "gbif": {
+        "occurrenceKey": 6517571837,
+        "url": "https://www.gbif.org/occurrence/6517571837",
+        "recordedName": "Harengula tawilis Herre, 1927",
+        "acceptedName": "Sardinella tawilis (Herre, 1927)",
+        "taxonKey": 2412785,
+        "eventDate": "1996",
+        "institutionCode": "SEAOBIS",
+        "collectionCode": "SEAOBIS-847411",
+        "catalogNumber": "FW O2341-T",
+        "basisOfRecord": "PRESERVED_SPECIMEN",
+        "locality": null,
+        "waterBody": null,
+        "coordinateUncertaintyInMeters": null,
+        "geodeticDatum": "WGS84",
+        "issues": [
+          "COORDINATE_ROUNDED",
+          "GEODETIC_DATUM_ASSUMED_WGS84",
+          "CONTINENT_DERIVED_FROM_COORDINATES",
+          "COLLECTION_MATCH_NONE"
+        ],
+        "license": "CC-BY-4.0",
+        "rawResponse": {
+          "bytes": 4780,
+          "sha256": "c73df2b3072b2f2fadd22254ece8ed7f27b9a22e2c57b244d683d98776035a8c",
+          "path": "raw/calabarzon-taal-national-museum-coordinate-screen-20261024/occurrence-6517571837.json"
+        }
+      },
+      "fishBaseCrosswalk": {
+        "url": "https://fishbase.net.br/museum/SpecOccurrences.php?catnum2=106159",
+        "recordedName": "Harengula tawilis",
+        "museumCode": "FW",
+        "catalogNumber": "FW O2341-T",
+        "year": 1996,
+        "locality": "Taal Lake, Batangas",
+        "collectionReference": "Anonymous (2003), Fish collection of the SEAFDEC AQD Fish World, SEAFDEC AQD"
+      },
+      "crosswalkStrength": "Catalog number, taxon and year match; locality appears only in FishBase, not in GBIF. FishBase's FW museum code differs from the GBIF SEAOBIS institution/collection codes and needs institutional provenance verification.",
+      "decision": "held-pending-direct-SEAFDEC-catalog-verification-and-FishBase-reuse-review"
+    },
+    {
+      "gbif": {
+        "occurrenceKey": 6517569756,
+        "url": "https://www.gbif.org/occurrence/6517569756",
+        "recordedName": "Glossogobius celebius (Valenciennes, 1837)",
+        "acceptedName": "Glossogobius celebius (Valenciennes, 1837)",
+        "taxonKey": 2379433,
+        "eventDate": "1981",
+        "institutionCode": "SEAOBIS",
+        "collectionCode": "SEAOBIS-796665",
+        "catalogNumber": "NMI 11069",
+        "basisOfRecord": "PRESERVED_SPECIMEN",
+        "locality": null,
+        "waterBody": null,
+        "coordinateUncertaintyInMeters": null,
+        "geodeticDatum": "WGS84",
+        "issues": [
+          "GEODETIC_DATUM_ASSUMED_WGS84",
+          "CONTINENT_DERIVED_FROM_COORDINATES",
+          "COLLECTION_MATCH_NONE"
+        ],
+        "license": "CC-BY-4.0",
+        "rawResponse": {
+          "bytes": 5066,
+          "sha256": "9d42416a6d1164d5ffc05a20484ac1274d02fc5636de9e9eec9fc141c267bab8",
+          "path": "raw/calabarzon-taal-national-museum-coordinate-screen-20261024/occurrence-6517569756.json"
+        }
+      },
+      "fishBaseCrosswalk": {
+        "url": "https://fishbase.net.br/museum/SpecOccurrences.php?catnum2=99619",
+        "recordedName": "Glossogobius celebius",
+        "museumCode": "NMI",
+        "catalogNumber": "NMI 11069",
+        "year": 1981,
+        "date": "1981-06-18",
+        "locality": "Lake Taal, Balete",
+        "collectionReference": "Anonymous (2003), Fish Collection of the Philippine National Museum, National Museum"
+      },
+      "crosswalkStrength": "Catalog number, taxon and year match; locality and day-precision date appear only in FishBase, not in GBIF. The institutional catalog match still needs direct verification.",
+      "decision": "held-pending-direct-National-Museum-catalog-verification-and-FishBase-reuse-review"
+    }
+  ],
+  "rightsReview": {
+    "gbifDataset": "The source dataset and both selected GBIF occurrence records declare CC BY 4.0.",
+    "fishBase": "The current FishBase site states CC BY-NC 4.0; cite each Main Reference/Data Reference and link the record. Noncommercial-only terms are not approved for the public app.",
+    "primaryCatalogs": "Underlying SEAFDEC AQD FishWorld and Philippine National Museum catalog entries were not directly retrieved in this review. The FishBase FW museum code for the tawilis also differs from the GBIF SEAOBIS institution/collection codes despite the catalog-number match."
+  },
+  "decision": {
+    "newScopeLeads": 0,
+    "waterbodySourceRefsAdded": 1,
+    "speciesAssertionsAdded": 0,
+    "observationDatesAdded": 0,
+    "geometryAdded": false,
+    "publicAppProjectionAdded": false,
+    "absenceClaimAdded": false,
+    "publicationApproval": false,
+    "regionalBaselineComplete": false
+  },
+  "limitations": [
+    "The coordinate query is a broad discovery envelope and cannot identify lake membership without validated waterbody geometry and reliable occurrence locality.",
+    "Both GBIF records omit locality and waterBody, have no recorded coordinate uncertainty, and carry collection-match quality flags; the tawilis coordinates are rounded.",
+    "FishBase is a secondary crosswalk. Its cited institutional collection records, specimen determinations and locality transcription were not checked directly in this batch; the tawilis institution-code mismatch remains unresolved.",
+    "FishBase's CC BY-NC 4.0 license and the project's future commercial-use status require review before any derived locality field can be published.",
+    "The matching historical specimens do not establish current presence, abundance, diet, catchability, fishing permission, safety or a complete Taal Lake fish list."
+  ],
+  "nextAction": "Attempt direct verification from openly accessible SEAFDEC/AQD and National Museum catalog material; if unavailable, retain both candidates as unresolved and prioritize independently licensed locality-resolved freshwater evidence."
+}

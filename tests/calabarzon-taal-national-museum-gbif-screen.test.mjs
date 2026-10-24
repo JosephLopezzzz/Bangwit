@@ -55,8 +55,8 @@ test("National Museum GBIF source is reusable but the bounded Taal search does n
   assert.equal(taal.publicAdmission, false);
 
   assert.equal(report.coverageSummary.namedWaterbodyLeads, 83);
-  assert.equal(report.coverageSummary.registeredSources, 134);
-  assert.equal(report.coverageSummary.sourceAssignments, 195);
-  assert.equal(report.coverageSummary.distinctSourceReferencesAssigned, 48);
+  assert.equal(report.coverageSummary.registeredSources, 135);
+  assert.equal(report.coverageSummary.sourceAssignments, 196);
+  assert.equal(report.coverageSummary.distinctSourceReferencesAssigned, 49);
   assert.equal(report.coverageSummary.regionalBaselineComplete, false);
 });

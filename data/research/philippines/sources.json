@@ -3,7 +3,7 @@
   "checkedOn": "2026-10-24",
   "status": "research-only-source-registry",
   "scope": "National acquisition references and CALABARZON/Central Luzon identity/source leads. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 134,
+  "sourceCount": 135,
   "sources": [
     {
       "id": "gbif-col-xr-taxonomy-matching",
@@ -3658,6 +3658,40 @@
         "The national collection's broad geographic metadata does not establish that an individual specimen came from Taal Lake.",
         "The exact waterBody, locality and scientificName zeroes are limited to the reviewed version and fields; alternate spellings, coordinates, records not indexed in GBIF, and other datasets were not covered.",
         "A zero-result query is not evidence of fish absence and does not support a complete lake checklist, conservation, diet, catchability, legal, safety or abundance claim."
+      ]
+    },
+    {
+      "id": "fishbase-taal-specimen-crosswalk",
+      "title": "FishBase museum occurrence crosswalk for two Taal candidate specimens",
+      "provider": "FishBase Consortium; record pages accessed through FishBase mirror",
+      "url": "https://www.fishbase.se/",
+      "additionalUrls": [
+        "https://fishbase.net.br/museum/SpecOccurrences.php?catnum2=106159",
+        "https://fishbase.net.br/museum/SpecOccurrences.php?catnum2=99619",
+        "https://fishbase.net.br/references/FBRefSummary.php?ID=48476",
+        "https://fishbase.net.br/references/FBRefSummary.php?ID=45880"
+      ],
+      "role": "Secondary catalog crosswalk locating two GBIF specimen candidates to Taal Lake by matching catalogue number, taxon and year; no app assertions are approved.",
+      "checkedOn": "2026-10-24",
+      "access": {
+        "status": "FishBase-occurrence-and-main-reference-pages-reviewed;underlying-SEAFDEC-and-National-Museum-catalog-entries-not-directly-retrieved",
+        "reviewFiles": [
+          "calabarzon-taal-gbif-coordinate-candidate-crosswalk-20261024.json"
+        ]
+      },
+      "reuse": {
+        "metadata": "The current FishBase site states CC BY-NC 4.0 and requests citation of each record's Main Reference/Data Reference. This project has not established noncommercial-only reuse fit for publication.",
+        "raw": "Only the cited GBIF occurrence records and a bounded coordinate-envelope query are retained in ignored local research raw storage; FishBase page text is not copied into the app.",
+        "content": "FishBase is used only as a secondary locality crosswalk. Direct access to the cited SEAFDEC AQD FishWorld and National Museum catalog records, item-level rights and any publication approval remain pending; both candidates stay out of the public projection."
+      },
+      "publicationApproval": false,
+      "researchStatus": "two-secondary-Taal-catalog-crosswalk-candidates;CC-BY-NC-4.0;primary-catalog-and-reuse-review-pending",
+      "license": "CC-BY-NC-4.0",
+      "caveats": [
+        "GBIF returns no locality or waterBody value for either matched occurrence; its coordinate rounding, assumed datum and missing uncertainty prevent treating its plotted point as confirmed waterbody geometry.",
+        "FishBase identifies a Taal locality and an underlying collection citation, but the cited institutional catalog entries were not directly examined in this batch.",
+        "The candidates do not establish current presence, abundance, diet, legal catchability, safety, lake-wide completeness or permission to reuse the FishBase-derived locality in a public or commercial app.",
+        "FishBase's FW museum code for the tawilis candidate differs from the GBIF SEAOBIS institution/collection codes; verify institutional provenance before relying on that record linkage."
       ]
     }
   ],
