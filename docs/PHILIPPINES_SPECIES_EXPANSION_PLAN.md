@@ -723,3 +723,11 @@ Verification for this research-only batch: `npm run test:species:pipeline`, `npm
 - **Interview and conflict:** fishers reportedly said catches had occurred there since 2005. The 2025 Lake Naujan article table labels 2005 “year of introduction”; do not silently convert an interview-reported catch start into a verified introduction date, a precise observation date, or current presence.
 - **Disposition:** use the manuscript for bounded research review only. It is author-uploaded and publicly readable, but no reuse license is stated; do not reproduce its figures, tables, or text. Keep species admission and public occurrence projection at zero.
 - **Next:** seek voucher-backed/current, independently reviewable records and continue locality-specific Bulacan river, lake, reservoir and estuary work. This does not complete Central Luzon.
+
+## 64. Bulacan GBIF janitor-fish locality false-positive screen -- 24 October 2026
+
+- **Bounded API results:** GBIF exact species-key search returned 28 Philippines-wide records, none for the exact `stateProvince=Bulacan` or `locality=Angat` filters. The Bulacan genus query returned one record, GBIF occurrence `6413607957`.
+- **Locality conflict:** the hit is a 2019, genus-level iNaturalist observation whose verbatim locality is “Coloong, Potrero, Valenzuela, Metro Manila.” GBIF's GADM fields instead assign Bulacan / Meycauayan City / Longos. The PSA PSGC directory (listing as of 31 July 2025) lists Coloong under Valenzuela City, NCR. Retain both source values and exclude the record from Bulacan attribution unless the coordinate/place conflict is independently resolved.
+- **Taxonomy and rights:** community ID remains `Pterygoplichthys` at genus rank; no species is accepted. The record and image are marked CC BY-NC 4.0; no image was copied and no app reuse is approved.
+- **Disposition:** this small exact-query screen is not an absence assessment, current-presence claim, full regional inventory, or species checklist. See `central-luzon-bulacan-gbif-pterygoplichthys-locality-screen-20261024.json`.
+- **Next:** continue locality-specific Bulacan freshwater source discovery and require independently resolvable locality and taxon-level evidence before considering any checklist row. Central Luzon remains incomplete.

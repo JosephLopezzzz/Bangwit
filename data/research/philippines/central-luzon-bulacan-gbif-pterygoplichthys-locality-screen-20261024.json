@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-24",
+  "phaseId": "L3",
+  "regionId": "0300000000",
+  "status": "bounded-api-screen;one-machine-assigned-bulacan-record-excluded;no-species-level-bulacan-record",
+  "taxonMatch": {
+    "query": "Pterygoplichthys disjunctivus",
+    "matchedName": "Pterygoplichthys disjunctivus (Weber, 1991)",
+    "rank": "SPECIES",
+    "matchType": "EXACT",
+    "confidence": 99,
+    "gbifUsageKey": 2340003
+  },
+  "queries": [
+    {
+      "label": "Exact species, Philippines, locality text Angat",
+      "url": "https://api.gbif.org/v1/occurrence/search?scientificName=Pterygoplichthys%20disjunctivus&country=PH&locality=Angat&limit=20",
+      "resultCount": 0,
+      "interpretation": "No GBIF result matched this exact locality-string query; this is not evidence of species absence."
+    },
+    {
+      "label": "Exact species, Philippines, stateProvince Bulacan",
+      "url": "https://api.gbif.org/v1/occurrence/search?scientificName=Pterygoplichthys%20disjunctivus&country=PH&stateProvince=Bulacan&limit=20",
+      "resultCount": 0,
+      "interpretation": "No result matched this exact taxon/province filter in the bounded API query; this is not a verified absence assessment."
+    },
+    {
+      "label": "Genus, Philippines, stateProvince Bulacan",
+      "url": "https://api.gbif.org/v1/occurrence/search?scientificName=Pterygoplichthys&country=PH&stateProvince=Bulacan&limit=20",
+      "resultCount": 1,
+      "interpretation": "The sole matching record is a genus-level iNaturalist observation whose locality metadata conflicts with the GBIF administrative assignment."
+    },
+    {
+      "label": "Genus, Philippines, locality text Angat",
+      "url": "https://api.gbif.org/v1/occurrence/search?scientificName=Pterygoplichthys&country=PH&locality=Angat&limit=20",
+      "resultCount": 0,
+      "interpretation": "No result matched this exact genus/locality-string query; this is not evidence of absence."
+    },
+    {
+      "label": "Exact species, Philippines",
+      "url": "https://api.gbif.org/v1/occurrence/search?taxonKey=2340003&country=PH&limit=20",
+      "resultCount": 28,
+      "interpretation": "National result count only; returned provincial and basin records cannot be projected to Bulacan or Angat without locality review."
+    }
+  ],
+  "screenedRecord": {
+    "gbifOccurrenceKey": 6413607957,
+    "gbifOccurrenceUrl": "https://www.gbif.org/occurrence/6413607957",
+    "apiRecordUrl": "https://api.gbif.org/v1/occurrence/6413607957",
+    "sourceOccurrenceUrl": "https://www.inaturalist.org/observations/33587003",
+    "basisOfRecord": "HUMAN_OBSERVATION",
+    "observedOn": "2019-09-29",
+    "scientificName": "Pterygoplichthys Gill, 1858",
+    "taxonRank": "GENUS",
+    "verbatimLocality": "Coloong, Potrero, Valenzuela, Metro Manila, Philippines",
+    "gbifAdministrativeAssignment": {
+      "stateProvince": "Bulacan",
+      "municipality": "Meycauayan City",
+      "barangay": "Longos"
+    },
+    "coordinate": {
+      "latitude": 14.732685,
+      "longitude": 120.941182,
+      "datum": "WGS84",
+      "uncertaintyMeters": 208,
+      "gbifCoordinateIssue": "COORDINATE_ROUNDED"
+    },
+    "sourcePlatform": {
+      "name": "iNaturalist",
+      "observationId": 33587003,
+      "qualityGrade": "research",
+      "communityTaxon": "Pterygoplichthys",
+      "rank": "genus",
+      "identificationAgreementCount": 4,
+      "recordLicense": "CC-BY-NC-4.0",
+      "photoLicense": "CC-BY-NC-4.0"
+    },
+    "geographicCrossCheck": {
+      "sourceId": "psa-psgc-valenzuela-coloong-2026",
+      "psgcCity": "City of Valenzuela",
+      "psgcBarangay": "Coloong",
+      "psgcDirectoryAsOf": "2025-07-31",
+      "barangay10DigitCode": "1381600009",
+      "correspondenceCode": "137504009",
+      "interpretation": "The PSA PSGC directory page (listing as of 31 July 2025) assigns Coloong to Valenzuela City in NCR. Because this conflicts with GBIF's Bulacan/Meycauayan/Longos administrative lookup, the record cannot be attributed to Bulacan from this query. The stated locality also does not establish that the coordinate lies within an exact barangay polygon."
+    },
+    "disposition": "exclude-from-bulacan-species-evidence;genus-only;administrative-locality-conflict;noncommercial-media-license"
+  },
+  "limits": [
+    "This is a small exact-string/API screen, not a complete GBIF, iNaturalist, museum or published-record audit.",
+    "The GBIF province filter yields a record whose source platform says Valenzuela, NCR; preserve both values and exclude it from Bulacan attribution pending record-coordinate/place resolution.",
+    "The iNaturalist community identification remains at genus rank; it cannot be counted as a species record.",
+    "The observation date is 2019 and does not establish current presence or fish abundance.",
+    "The observation and its photo are marked CC BY-NC 4.0; no image was downloaded or reused, and no source-specific permission for app publication was established.",
+    "Zero-result exact strings do not establish that the genus or species is absent from Angat, Bulacan or nearby waters."
+  ],
+  "disposition": {
+    "candidateBulacanRecordsScreened": 1,
+    "excludedForLocalityConflict": 1,
+    "speciesLevelBulacanRecordsAccepted": 0,
+    "absenceClaimsAdded": 0,
+    "publicSpeciesAssertionsAdded": 0,
+    "appProjectionRowsAdded": 0,
+    "regionalCompletionApproved": false
+  },
+  "nextStep": "Continue locality-specific Bulacan freshwater source discovery and search for taxon/specimen-level records with independently resolvable administrative locality. Do not treat this screen as evidence of absence or current presence."
+}
