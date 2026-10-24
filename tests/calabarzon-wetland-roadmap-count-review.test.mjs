@@ -25,7 +25,7 @@ test("CALABARZON wetland phrases remain separate from unresolved physical invent
 
   const scopeIds = new Set(scope.waterbodies.map((waterbody) => waterbody.id));
   const matched = entries.filter((entry) => entry.existingScopeLeadId !== null);
-  assert.equal(matched.length, 17);
+  assert.equal(matched.length, 18);
   assert.ok(matched.every((entry) => scopeIds.has(entry.existingScopeLeadId)));
   const exactTextMatches = matched.filter((entry) =>
     scope.waterbodies.some(
@@ -36,12 +36,15 @@ test("CALABARZON wetland phrases remain separate from unresolved physical invent
   const possibleAlias = entries.find((entry) => entry.name === "Laguna Lake");
   assert.equal(possibleAlias.existingScopeLeadId, "ph-wb-laguna-de-bay");
   assert.match(possibleAlias.crosswalkStatus, /Candidate alias/);
-  assert.equal(entries.filter((entry) => entry.existingScopeLeadId === null).length, 14);
+  const dagatanCandidate = entries.find((entry) => entry.name === "Dagatan Lake");
+  assert.equal(dagatanCandidate.existingScopeLeadId, "ph-wb-pagatan-quezon-lake");
+  assert.match(dagatanCandidate.crosswalkStatus, /Candidate alias/);
+  assert.equal(entries.filter((entry) => entry.existingScopeLeadId === null).length, 13);
   assert.equal(review.roadmapList.scopeLeadsAdded, 0);
   assert.equal(review.roadmapList.distinctPhysicalWetlandCount, null);
   assert.equal(review.roadmapList.exactTextScopeLeadMatches, 16);
-  assert.equal(review.roadmapList.candidateAliasCrosswalks, 1);
-  assert.equal(review.roadmapList.unmatchedNameEntries, 14);
+  assert.equal(review.roadmapList.candidateAliasCrosswalks, 2);
+  assert.equal(review.roadmapList.unmatchedNameEntries, 13);
   assert.equal(
     entries.find((entry) => entry.name === "Maragondon River Sanctuary").existingScopeLeadId,
     null,

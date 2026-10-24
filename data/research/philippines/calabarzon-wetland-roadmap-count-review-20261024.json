@@ -8,7 +8,10 @@
   "sourceIds": [
     "denr-calabarzon-wetlands-2024",
     "calabarzon-regional-development-plan-2023-2028",
-    "denr-calabarzon-enr-statistical-report-2025"
+    "denr-calabarzon-enr-statistical-report-2025",
+    "brillo-2015-philippine-lake-studies",
+    "quezon-province-tourism-directory",
+    "denr-bmb-philchm-inland-wetlands-2019"
   ],
   "method": "Counted the province-grouped names in the official DENR CALABARZON roadmap search-index text; cross-checked the historical aggregate stated in the official CALABARZON Regional Development Plan and the table title in DENR CALABARZON's 2025 ENR report outline. Direct retrieval of the DENR pages and RDP PDF returned HTTP 403, so no underlying inventory table or roadmap attachment was read.",
   "roadmapList": {
@@ -20,7 +23,11 @@
         "count": 8,
         "entries": [
           { "name": "Lalaguna Marsh", "existingScopeLeadId": "ph-wb-lalaguna-quezon-marsh" },
-          { "name": "Dagatan Lake", "existingScopeLeadId": null },
+          {
+            "name": "Dagatan Lake",
+            "existingScopeLeadId": "ph-wb-pagatan-quezon-lake",
+            "crosswalkStatus": "Candidate alias of San Antonio Lake Pagatan based on a 2015 literature inventory row pairing Pagatan/Dagatan at 3.22 ha and independent locality evidence; not adopted in the scope registry pending official confirmation."
+          },
           { "name": "Ticub Lake", "existingScopeLeadId": "ph-wb-ticub-quezon-lake" },
           { "name": "Gunao Lake", "existingScopeLeadId": null },
           { "name": "Pudaw Lake", "existingScopeLeadId": null },
@@ -104,8 +111,8 @@
     "countMismatchExplanation": "The list has 31 named phrases compared with the roadmap's headline count of 30. The source does not state whether any entries are aliases, grouped features, nested habitat/protected-area designations, or a typographical error. The 31 phrases must not be presented as 31 unique wetlands.",
     "featureScopeNote": "Names in the list include lakes, marshes, a river, reservoirs, a dam, mangrove areas/forests, seagrass beds, a marine park and a river sanctuary. Their names alone do not validate physical feature boundaries or a consistent inland-wetland classification.",
     "exactTextScopeLeadMatches": 16,
-    "candidateAliasCrosswalks": 1,
-    "unmatchedNameEntries": 14,
+    "candidateAliasCrosswalks": 2,
+    "unmatchedNameEntries": 13,
     "scopeLeadsAdded": 0
   },
   "historicalRegionalCounters": {
@@ -143,5 +150,5 @@
     "publicAppProjectionsAdded": 0,
     "publicationApproval": false
   },
-  "nextAction": "Seek the readable underlying 2024 roadmap/inventory and the 2025 Table 8 values through permitted official access; ask DENR how the 30 headline count maps to the 31 phrases and whether a named inventory exists for the 354 reported river systems. Keep all unresolved phrases as research leads, not unique waterbody records or denominator counts."
+  "nextAction": "Seek the readable underlying 2024 roadmap/inventory and the 2025 Table 8 values through permitted official access; ask DENR how the 30 headline count maps to the 31 phrases, including the candidate Dagatan/Pagatan duplicate, and whether a named inventory exists for the 354 reported river systems. Keep unresolved phrases as research leads, not unique waterbody records or denominator counts."
 }

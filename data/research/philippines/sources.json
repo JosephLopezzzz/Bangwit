@@ -3,7 +3,7 @@
   "checkedOn": "2026-10-24",
   "status": "research-only-source-registry",
   "scope": "National acquisition references and CALABARZON/Central Luzon identity/source leads. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 127,
+  "sourceCount": 131,
   "sources": [
     {
       "id": "gbif-col-xr-taxonomy-matching",
@@ -416,28 +416,130 @@
       "provider": "Paller et al.; Philippine Journal of Science / DOST",
       "url": "https://philjournalsci.dost.gov.ph/images/pdf/pjs_pdf/vol140no2/pdfs/Freshwater_Fish_Fauna_in_Watersheds_of_Mt_Makiling.pdf",
       "role": "Primary freshwater survey lead for Molawin Creek, Dampalit Falls and Cambantoc River.",
-      "checkedOn": "2026-10-22",
+      "checkedOn": "2026-10-24",
       "access": {
-        "status": "official-indexed-content-read-direct-fetch-403",
-        "localRawSnapshot": null
+        "status": "official-pjs-full-text-indexed-in-search;direct-fetch-403;not-downloaded",
+        "localRawSnapshot": null,
+        "reviewFiles": [
+          "calabarzon-freshwater-survey-source-triage-20261024.json"
+        ]
       },
       "reuse": {
-        "metadata": "Research citation and minimal source-description only; field-level redistribution review pending.",
+        "metadata": "PJS describes the journal as open access, but its author guide requires copyright transfer; no item-level open reuse license was found. Keep only citation and minimal source-description pending review.",
         "raw": "No public redistribution approval. Local acquisition requires its own receipt and source terms.",
-        "content": "No blanket permission to copy text, images, maps or databases. Extracted assertions require source and scope review."
+        "content": "No table, article text, image, map or structured species list is redistributed pending permission and scope review."
       },
       "publicationApproval": false,
-      "researchStatus": "queued-for-field-level-review",
+      "researchStatus": "primary-survey-reviewed;collection-date-not-established;species-table-held-for-taxonomy-and-reuse-review",
       "sourceYear": 2011,
       "citation": "Paller, V.G.V., Labatos, B.V. Jr., Lontoc, B.M., Matalog, O.E. and Ocampo, P.P. (2011). Philippine Journal of Science 140(2):195-206.",
       "caveats": [
-        "Full sampling dates, table rows, taxonomy and field-level reuse require review.",
-        "No species assertions are imported by this scope inventory."
+        "The official PJS search index exposes the article abstract and site-richness table; direct PDF retrieval returned 403, and no local copy or visually checked table is retained.",
+        "The article is described as open access, but the author guide requires copyright transfer and no item-level open reuse license was found; no species table or app assertion is redistributed.",
+        "Sampling dates and current accepted taxonomy still require review; no species assertions are imported by this scope inventory."
       ],
       "additionalUrls": [
         "https://philjournalsci.dost.gov.ph/freshwater-fish-fauna-in-watersheds-of-mt-makiling-forest-reserve-laguna-philippines/",
+        "https://philjournalsci.dost.gov.ph/authors-guide/",
         "https://digitalgems.nus.edu.sg/view/530385",
         "https://digitalgems.nus.edu.sg/Terms_of_Use"
+      ]
+    },
+    {
+      "id": "quezon-province-tourism-directory",
+      "title": "Cities and Municipalities of Quezon Province",
+      "provider": "Provincial Government of Quezon",
+      "url": "https://quezon.gov.ph/citiesmunicipalities/",
+      "role": "Official local-name and municipal-context source; its San Antonio entry names Dagatan Lake and describes it as man-made, without a shoreline, coordinates, area, fish survey or Pagatan crosswalk.",
+      "checkedOn": "2026-10-24",
+      "access": {
+        "status": "official-page-read;no-download-or-local-snapshot",
+        "reviewFiles": [
+          "calabarzon-dagatan-pagatan-identity-crosscheck-20261024.json",
+          "calabarzon-dagatan-pagatan-literature-crosswalk-20261024.json",
+          "calabarzon-wetland-roadmap-count-review-20261024.json"
+        ]
+      },
+      "reuse": {
+        "metadata": "Citation and minimal factual source-description only.",
+        "raw": "No page copy or image retained.",
+        "content": "No item-specific reuse license reviewed; no text, map, image or database is redistributed."
+      },
+      "publicationApproval": false,
+      "researchStatus": "official-locality-name-confirmed;feature-geometry-and-pagatan-crosswalk-unresolved",
+      "sourceYear": null,
+      "caveats": [
+        "The directory supports the San Antonio locality and source name only; it does not establish the feature boundary or equivalence to BMB Lake Pagatan.",
+        "No fish presence, access, safety, current legal status or geometry is asserted."
+      ]
+    },
+    {
+      "id": "brillo-2015-philippine-lake-studies",
+      "title": "The Status of Philippine Lake Studies: Scholarly Deficit in Social Science and Small-Lake Research",
+      "provider": "Bing Baltazar C. Brillo; Asia-Pacific Social Science Review / De La Salle University",
+      "url": "https://animorepository.dlsu.edu.ph/apssr/vol15/iss1/6/",
+      "additionalUrls": [
+        "https://bbbrillo.blogspot.com/2015/06/the-status-of-philippine-lake-studies_15.html",
+        "https://doi.org/10.59588/2350-8329.1045",
+        "https://animorepository.dlsu.edu.ph/apssr/open_access.html"
+      ],
+      "role": "Secondary review of Philippine lake literature; its author-posted table pairs Pagatan/Dagatan as one Quezon lake at 3.22 ha, a candidate name crosswalk rather than an official map or fish survey.",
+      "checkedOn": "2026-10-24",
+      "access": {
+        "status": "dlsu-repository-metadata-and-author-posted-manuscript-reviewed;direct-pdf-fetch-403;not-downloaded",
+        "localRawSnapshot": null,
+        "reviewFiles": [
+          "calabarzon-dagatan-pagatan-literature-crosswalk-20261024.json",
+          "calabarzon-wetland-roadmap-count-review-20261024.json"
+        ]
+      },
+      "reuse": {
+        "metadata": "The APSSR policy states that all articles are licensed CC BY-NC 4.0; this permits attributable non-commercial use and does not grant commercial reuse.",
+        "raw": "No article PDF or source image is retained.",
+        "content": "Internal review records only a minimal, attributed factual name/area crosswalk. No article prose, full table, fish data, map or geometry is redistributed."
+      },
+      "publicationApproval": false,
+      "researchStatus": "secondary-lake-name-crosswalk-found;san-antonio-alias-candidate-not-adopted;no-fish-data",
+      "sourceYear": 2015,
+      "citation": "Brillo, B.B.C. (2015). The Status of Philippine Lake Studies: Scholarly Deficit in Social Science and Small-Lake Research. Asia-Pacific Social Science Review, 15(1), 78-101. https://doi.org/10.59588/2350-8329.1045",
+      "caveats": [
+        "The row uses the combined text Pagatan/Dagatan and Quezon locality, but does not specify the municipality or supply coordinates.",
+        "Its reported 3.22 ha matches the BMB Lake Pagatan row and its alternate name matches the Quezon provincial directory, supporting a candidate crosswalk only.",
+        "The 2024 DENR list separately prints Dagatan Lake and Pagatan Lake; a possible duplicate phrase does not establish a unique regional wetland denominator.",
+        "This is a literature inventory, not an ichthyological survey, current lake boundary, or evidence of fish presence."
+      ]
+    },
+    {
+      "id": "cui-2022-santa-cruz-river-fish",
+      "title": "Diminutive Freshwater Fish in the Santa Cruz River System, Laguna, Philippines",
+      "provider": "Cui et al.; Journal of Environmental Science and Management / UPLB",
+      "url": "https://ovcre.uplb.edu.ph/journals-uplb/index.php/JESAM/article/download/672/650/",
+      "additionalUrls": [
+        "https://doi.org/10.47125/jesam/2022_1/06",
+        "https://www.ukdr.uplb.edu.ph/jesam/policies.html"
+      ],
+      "role": "Primary survey lead for diminutive freshwater fishes in the Santa Cruz River System, Laguna; the official publisher-indexed article reports 15 species from a 2016-2017 survey.",
+      "checkedOn": "2026-10-24",
+      "access": {
+        "status": "official-uplb-jesam-full-text-indexed-in-search;direct-open-403;not-downloaded",
+        "localRawSnapshot": null,
+        "reviewFiles": [
+          "calabarzon-freshwater-survey-source-triage-20261024.json"
+        ]
+      },
+      "reuse": {
+        "metadata": "Citation and minimal factual source-description only; no item-specific open reuse license identified.",
+        "raw": "No source file retained locally.",
+        "content": "UKDR policies state that authors assign article copyright to UKDR subject to specified personal-use exceptions. No article table, text, figure or structured species list is redistributed pending permission and scope review."
+      },
+      "publicationApproval": false,
+      "researchStatus": "primary-survey-aggregate-reviewed;species-table-held-for-taxonomy-and-reuse-review",
+      "sourceYear": 2022,
+      "citation": "Cui, L.E., Guerrero III, R.D., De Lara, A.V., Rebancos, C.M. and Faustino-Eslava, D.V. (2022). Journal of Environmental Science and Management 25(1):48-56. https://doi.org/10.47125/jesam/2022_1/06",
+      "caveats": [
+        "The article reports sampling across upstream, midstream and downstream areas for three quarters in 2016-2017; exact visit dates and a definitive crosswalk to the single Sta Cruz River scope lead remain unresolved.",
+        "The aggregate survey result is historical and does not establish current presence, abundance today, fishery status or a complete river-system inventory.",
+        "No species table or app projection has been admitted; taxonomy and rights require further review."
       ]
     },
     {
@@ -3260,7 +3362,9 @@
           4
         ],
         "reviewFiles": [
-          "calabarzon-bmb-2019-wetland-inventory-crosswalk-20261024.json"
+          "calabarzon-bmb-2019-wetland-inventory-crosswalk-20261024.json",
+          "calabarzon-dagatan-pagatan-literature-crosswalk-20261024.json",
+          "calabarzon-wetland-roadmap-count-review-20261024.json"
         ]
       },
       "reuse": {
@@ -3419,6 +3523,41 @@
         "Annex 2b is a historical river-system inventory and this selected crosswalk is not a complete CALABARZON list or fish survey.",
         "Several table rows print an asterisk after the river name; the reviewed pages do not explain its meaning, so it is preserved without interpretation.",
         "Source-reported municipality lists do not define channel courses, reaches, estuaries, access, legal status or current fish presence."
+      ]
+    },
+    {
+      "id": "mendoza-2015-pansipit-fish-diet",
+      "title": "Dietary Habits and Distribution of Some Fish Species in the Pansipit River-Lake Taal Connection, Luzon Island, Philippines",
+      "provider": "Mendoza et al.; Journal of Environmental Science and Management / UPLB",
+      "url": "https://ovcre.uplb.edu.ph/journals-uplb/index.php/JESAM/article/download/160/142",
+      "additionalUrls": [
+        "https://research.ateneo.edu/en/publications/dietary-habits-and-distribution-of-some-fish-species-in-the-pansi/",
+        "https://doi.org/10.47125/jesam/2015_2/01",
+        "https://www.ukdr.uplb.edu.ph/jesam/policies.html"
+      ],
+      "role": "Primary historical fish gut-content and distribution study for juvenile fish in the upper Pansipit River; useful as a candidate natural-diet source, not a current or general species diet guide.",
+      "checkedOn": "2026-10-24",
+      "access": {
+        "status": "official-indexed-article-text-and-ateneo-metadata-reviewed;direct-pdf-fetch-timeout;not-downloaded",
+        "localRawSnapshot": null,
+        "reviewFiles": [
+          "calabarzon-pansipit-diet-study-rights-triage-20261024.json"
+        ]
+      },
+      "reuse": {
+        "metadata": "No item-specific reuse license was found. JESAM/UKDR policy describes copyright assignment to UKDR; Ateneo metadata reports publisher copyright ? 2015 UPLB, all rights reserved. Treat table reuse as unapproved pending rights-holder clarification.",
+        "raw": "No article PDF, table, or image retained.",
+        "content": "Internal source triage only. Do not reproduce the species-by-diet table or publish extracted diet assertions without written permission or a verified applicable license."
+      },
+      "publicationApproval": false,
+      "researchStatus": "historical-2012-juvenile-gut-content-study-identified;diet-table-held-pending-rights-and-taxonomy-review",
+      "sourceYear": 2015,
+      "citation": "Mendoza, M.U., Legaspi, K.L., Acojido, M.G., Cabais, A.C., de Guzman, J.L.E., Favila, A.M., Lazo, S.M., Rivera, J.B., Briones, J.C.A. and Papa, R.D.S. (2015). Journal of Environmental Science and Management 18(2):1-9. https://doi.org/10.47125/jesam/2015_2/01",
+      "caveats": [
+        "The article describes juvenile fish from 12 species in the upstream Pansipit River; this is not an all-life-stage species list or the whole river.",
+        "The survey monitored fish from April to September 2012 except July; gut contents are historical, location- and life-stage-specific observations, not fixed diets or current abundance.",
+        "No table rows, fish names, prey names, proportions, or map geometry are imported in this research step.",
+        "The study does not establish bait effectiveness, catchability, fishing legality, safety, or diet across other regions or water types."
       ]
     }
   ],

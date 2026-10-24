@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-24",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "regionName": "Region IV-A (CALABARZON)",
+  "status": "san-antonio-dagatan-locality-independently-confirmed;dagatan-pagatan-physical-crosswalk-unresolved",
+  "sourceIds": [
+    "quezon-province-tourism-directory",
+    "denr-calabarzon-wetlands-2024",
+    "denr-bmb-philchm-inland-wetlands-2019",
+    "seafdec-palma-2016-restoration-philippine-lakes"
+  ],
+  "method": "Compared the official Quezon Provincial Government San Antonio directory entry, the indexed province-grouped DENR 2024 wetland list, BMB's visually reviewed 2019 inventory rows, and the previously reviewed SEAFDEC 2016 case study. No coordinate was converted, map was digitized, or local feature boundary inferred.",
+  "sourceClaims": [
+    {
+      "sourceId": "quezon-province-tourism-directory",
+      "sourceName": "Dagatan Lake",
+      "sourceLocality": "San Antonio, Quezon Province",
+      "sourceClass": "man-made lake; boating point of interest",
+      "areaHa": null,
+      "coordinates": null,
+      "supports": "An official provincial directory independently confirms a feature named Dagatan Lake in San Antonio.",
+      "doesNotSupport": "No shoreline, area, precise barangay, fish survey or Pagatan name crosswalk."
+    },
+    {
+      "sourceId": "denr-calabarzon-wetlands-2024",
+      "sourceNames": ["Dagatan Lake", "Pagatan Lake"],
+      "sourceLocality": "Quezon Province; municipality not specified for either name",
+      "supports": "The official province-grouped roadmap enumerates both names as separate list entries.",
+      "doesNotSupport": "The list does not establish that they are two distinct physical lakes or map either entry."
+    },
+    {
+      "sourceId": "denr-bmb-philchm-inland-wetlands-2019",
+      "sourceName": "Lake Pagatan",
+      "sourceLocality": "San Antonio, Quezon",
+      "sourceClass": "Lake",
+      "reportedAreaHa": 3.22,
+      "inventoryDate": "as of first quarter 2019",
+      "supports": "A historical BMB row associates the name Pagatan with San Antonio.",
+      "doesNotSupport": "The source does not crosswalk Pagatan to the provincial directory's Dagatan Lake or to the SEAFDEC site."
+    },
+    {
+      "sourceId": "seafdec-palma-2016-restoration-philippine-lakes",
+      "sourceName": "Dagatan Lake",
+      "sourceLocality": "San Antonio, Quezon Province",
+      "reportedAreaHa": 7,
+      "sourcePrintedCoordinates": "13 degrees 44 minutes N, 121 degrees 18 minutes E",
+      "coordinatePrecision": "whole minutes; not suitable for boundary derivation",
+      "supports": "The previously reviewed SEAFDEC article describes a 7 ha Dagatan Lake in San Antonio.",
+      "doesNotSupport": "The area difference from BMB Pagatan does not by itself prove sameness or difference; no authoritative crosswalk or detailed map was found."
+    }
+  ],
+  "comparison": {
+    "tayabasDagatanLeadId": "ph-wb-dagatan-quezon-lake",
+    "sanAntonioPagatanLeadId": "ph-wb-pagatan-quezon-lake",
+    "tayabasAndSanAntonio": "Distinct source-described municipalities; keep the Tayabas lead separate from the San Antonio candidates.",
+    "sanAntonioDagatanAndPagatan": "Name/locality evidence is stronger, but physical identity remains unresolved. The DENR name list treats them as two entries, while no source locates Pagatan at a distinct site or resolves the 3.22 ha versus 7 ha difference.",
+    "disposition": "Do not merge, assign the SEAFDEC source to either registered lead, add an alias, or create geometry pending an official local site crosswalk or adequately detailed mapped source."
+  },
+  "decision": {
+    "sourceRegistryEntriesAdded": 1,
+    "sourceRefsAdded": [],
+    "scopeLeadsAdded": 0,
+    "aliasesAdded": 0,
+    "speciesAssertionsAdded": 0,
+    "geometryAdded": false,
+    "publicAppProjectionAdded": false,
+    "publicationApproval": false
+  },
+  "limitations": [
+    "The provincial directory confirms a local name and municipality, not the relation to a historical BMB inventory row.",
+    "The DENR roadmap is a province-level list; separate names there are not proof of separate physical features.",
+    "The 2019 BMB area and 2016 SEAFDEC area may reflect different measurement dates or methods, or separate features; neither is current geometry.",
+    "No current fish survey, access condition, legal status, fishing-safety status, or fish absence is established."
+  ],
+  "nextAction": "Request or locate an official San Antonio LGU/CENRO feature crosswalk or detailed map that distinguishes Dagatan from Pagatan; in parallel, use only a dated locality-resolved fish survey with rights-cleared and taxonomically reviewed records. Keep CALABARZON incomplete."
+}
