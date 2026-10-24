@@ -40,5 +40,5 @@ test("Candaba review creates no app-ready claims and remains an incomplete regio
   assert.equal(review.coverageAndAdmission.regionalReleaseApproved, false);
   assert.equal(checkpoint.status, "discovery-checkpoint-incomplete");
   assert.equal(checkpoint.candabaSourceReviewFile, "central-luzon-candaba-inventory-review-20261024.json");
-  assert.match(checkpoint.nextStep.action, /Sasmuan/);
+  assert.match(checkpoint.nextStep.action, /Pampanga estuary dry-season/);
 });
