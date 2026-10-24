@@ -397,6 +397,47 @@ export const enDictionary: Dictionary = {
       "No article photos, figures or prose are reproduced. The claim is limited to the one retained ADMU voucher and corrected lake-level locality; the Talim Island report had no retained specimen.",
     opensTab: "(opens in a new tab)",
   },
+  pasigRiverSpeciesEvidence: {
+    title: "Pasig River · dated study record",
+    description:
+      "A 2026 open-access study reports one collection event involving three individuals of this species from the Pasig River on 29 October 2025.",
+    localityLabel: "Reported waterbody",
+    collectionDateLabel: "Collection date",
+    individualsLabel: "Individuals reported",
+    limits:
+      "This is one historical study event, not a current population estimate, a river-wide fish list, or evidence of abundance. The study focused on gut microbes; it does not establish catchability, food safety or fishing permission.",
+    coordinateNote:
+      "The article publishes a collection coordinate. Bangwit withholds the point from this page and from the species map.",
+    sourceDetails: "Article, taxonomy and reuse terms",
+    articleLink: "Open-access article",
+    licenseLink: "CC BY 4.0 license",
+    taxonomyNote:
+      "GBIF's exact match confirms a name match only. The authors acknowledge UPLB Museum of Natural History assistance with identifying the sampled fish; Bangwit has not independently re-identified the specimens.",
+    licenseNote:
+      "Only attributed factual fields are shown; the article's prose, figures and microbiome sequence data are not reproduced.",
+    opensTab: "(opens in a new tab)",
+  },
+  manilaBaySharedGbifEvidence: {
+    title: "Manila Bay · shared historical museum records",
+    description:
+      "Two CC0 museum records in GBIF name Manila Bay as their source waterbody, with collection dates in 1963 and 1966.",
+    sharedScope:
+      "Manila Bay is shared across NCR, Central Luzon and CALABARZON. These records are kept with the bay and are not assigned to NCR by the Metro Manila query.",
+    localityLabel: "Original locality text",
+    dateLabel: "Collection date",
+    catalogLabel: "Museum catalog number",
+    recordLink: "GBIF occurrence",
+    taxonomyLink: "Catalogue of Fishes",
+    qualityFlagsLabel: "GBIF quality flags",
+    limits:
+      "These are historical source-reported records, not current-presence estimates, a complete bay checklist, or abundance data. No capture point is shown. They do not establish fishing permission, catchability or food safety.",
+    sourceDetails: "Dataset, citation and license",
+    datasetLinkLabel: "Dataset DOI:",
+    datasetLink: "GBIF dataset",
+    licenseLabel: "Record and dataset license:",
+    licenseLink: "CC0 1.0 terms",
+    opensTab: "(opens in a new tab)",
+  },
   pansipitRiverGbifEvidence: {
     title: "Pansipit River · museum specimens",
     description:

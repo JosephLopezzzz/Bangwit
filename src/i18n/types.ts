@@ -349,6 +349,39 @@ export type Dictionary = {
     licenseNote: string;
     opensTab: string;
   };
+  pasigRiverSpeciesEvidence: {
+    title: string;
+    description: string;
+    localityLabel: string;
+    collectionDateLabel: string;
+    individualsLabel: string;
+    limits: string;
+    coordinateNote: string;
+    sourceDetails: string;
+    articleLink: string;
+    licenseLink: string;
+    taxonomyNote: string;
+    licenseNote: string;
+    opensTab: string;
+  };
+  manilaBaySharedGbifEvidence: {
+    title: string;
+    description: string;
+    sharedScope: string;
+    localityLabel: string;
+    dateLabel: string;
+    catalogLabel: string;
+    recordLink: string;
+    taxonomyLink: string;
+    qualityFlagsLabel: string;
+    limits: string;
+    sourceDetails: string;
+    datasetLinkLabel: string;
+    datasetLink: string;
+    licenseLabel: string;
+    licenseLink: string;
+    opensTab: string;
+  };
   pansipitRiverGbifEvidence: {
     title: string;
     description: string;

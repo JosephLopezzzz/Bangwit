@@ -50,7 +50,7 @@ test("Pansipit source alternatives retain historical scope and rights limits wit
   assert.equal(corpuz2016.repositoryMetadataFacts.pansipitSpeciesRichnessInAbstract, 36);
   assert.match(corpuz2016.observedAccessResult, /HTTP 403/);
 
-  assert.equal(sourceRegistry.sourceCount, 61);
+  assert.equal(sourceRegistry.sourceCount, sourceRegistry.sources.length);
   const source = sourceRegistry.sources.find((row) => row.id === primary.sourceId);
   assert.ok(source);
   assert.equal(source.publicationApproval, false);

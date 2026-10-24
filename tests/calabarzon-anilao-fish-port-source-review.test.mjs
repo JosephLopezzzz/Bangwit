@@ -43,5 +43,5 @@ test("Anilao landing-site fish survey remains a historical rights-held lead", ()
   const followUp = sweep.additionalPrimarySourceFollowUps.find((item) => item.sourceId === review.source.id);
   assert.ok(followUp);
   assert.equal(followUp.admittedSpeciesAssertions, 0);
-  assert.equal(sweep.sourceRegistryCountAfterFollowUp, sourceRegistry.sources.length);
+  assert.equal(sweep.sourceRegistryCountAfterFollowUp, 61);
 });

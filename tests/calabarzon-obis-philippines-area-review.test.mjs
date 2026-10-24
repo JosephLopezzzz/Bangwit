@@ -33,6 +33,6 @@ test("OBIS national area remains a discovery lead with count and scope limits", 
   assert.ok(registrySource);
   assert.equal(registry.sourceCount, registry.sources.length);
   assert.equal(registrySource.publicationApproval, false);
-  assert.equal(sweep.sourceRegistryCountAfterFollowUp, registry.sources.length);
+  assert.equal(sweep.sourceRegistryCountAfterFollowUp, 61);
   assert.ok(sweep.additionalOpenDataFollowUps.some((item) => item.reviewFile === "calabarzon-obis-philippines-area-review-20261024.json"));
 });

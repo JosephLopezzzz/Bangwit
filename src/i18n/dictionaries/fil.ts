@@ -403,6 +403,47 @@ export const filDictionary: Dictionary = {
       "Walang larawan, figure o prosa mula sa artikulo ang kinopya. Limitado ang claim sa isang ADMU voucher at sa itinamang lake-level locality; walang specimen na itinago mula sa ulat sa Talim Island.",
     opensTab: "(magbubukas sa bagong tab)",
   },
+  pasigRiverSpeciesEvidence: {
+    title: "Ilog Pasig · tala mula sa may petsang pag-aaral",
+    description:
+      "Iniulat sa isang open-access na pag-aaral noong 2026 ang iisang pangyayari ng pagkolekta ng tatlong indibidwal ng species na ito mula sa Ilog Pasig noong 29 Oktubre 2025.",
+    localityLabel: "Iniulat na anyong-tubig",
+    collectionDateLabel: "Petsa ng pagkolekta",
+    individualsLabel: "Iniulat na bilang ng isda",
+    limits:
+      "Iisang makasaysayang pangyayari sa pag-aaral ito, hindi pagtataya ng kasalukuyang populasyon, kumpletong talaan ng isda sa buong ilog, o ebidensiya ng dami. Gut microbes ang pinag-aralan; hindi nito pinatutunayan ang dali ng paghuli, kaligtasan kainin o pahintulot mangisda.",
+    coordinateNote:
+      "May inilathalang coordinate ng pagkolekta sa artikulo. Hindi ipinapakita ng Bangwit ang eksaktong punto rito o sa species map.",
+    sourceDetails: "Artikulo, taxonomy at terms sa paggamit",
+    articleLink: "Open-access na artikulo",
+    licenseLink: "Lisensyang CC BY 4.0",
+    taxonomyNote:
+      "Kinukumpirma lang ng exact match sa GBIF ang pagtutugma ng pangalan. Nagpasalamat ang mga may-akda sa UPLB Museum of Natural History sa tulong sa pagkilala ng mga isda; hindi muling natukoy ng Bangwit ang mga specimen.",
+    licenseNote:
+      "Mga fact na may attribution lang ang ipinapakita; hindi kinopya ang prosa, mga larawan o figure, at microbiome sequence data ng artikulo.",
+    opensTab: "(magbubukas sa bagong tab)",
+  },
+  manilaBaySharedGbifEvidence: {
+    title: "Manila Bay · pinagsasaluhang makasaysayang museum record",
+    description:
+      "Dalawang CC0 museum record sa GBIF ang nagtatala sa Manila Bay bilang anyong-tubig, na may petsa ng pagkolekta noong 1963 at 1966.",
+    sharedScope:
+      "Pinagsasaluhan ng NCR, Central Luzon at CALABARZON ang Manila Bay. Nananatili ang mga record sa bay at hindi iniuugnay sa NCR dahil lang sa Metro Manila query.",
+    localityLabel: "Orihinal na locality text",
+    dateLabel: "Petsa ng pagkolekta",
+    catalogLabel: "Museum catalog number",
+    recordLink: "Occurrence sa GBIF",
+    taxonomyLink: "Catalogue of Fishes",
+    qualityFlagsLabel: "Mga quality flag sa GBIF",
+    limits:
+      "Mga makasaysayang source-record ito, hindi pagtataya ng kasalukuyang presensya, kumpletong checklist ng bay o datos ng dami. Walang ipinapakitang capture point. Hindi nito itinatakda ang pahintulot mangisda, catchability o kaligtasan kainin.",
+    sourceDetails: "Dataset, citation at license",
+    datasetLinkLabel: "Dataset DOI:",
+    datasetLink: "Dataset sa GBIF",
+    licenseLabel: "License ng record at dataset:",
+    licenseLink: "Terms ng CC0 1.0",
+    opensTab: "(magbubukas sa bagong tab)",
+  },
   pansipitRiverGbifEvidence: {
     title: "Ilog Pansipit · mga museum specimen",
     description:

@@ -58,7 +58,7 @@ test("Manila Bay geometry query remains research-only and separate from legal bo
   assert.equal(registry.sourceCount, registry.sources.length);
   assert.ok(registry.sources.some((source) => source.id === "marine-regions-manila-bay-bay-geometry"));
   assert.ok(registry.sources.some((source) => source.id === "obis-manila-bay-actinopterygii-geometry-discovery"));
-  assert.equal(sweep.sourceRegistryCountAfterFollowUp, registry.sources.length);
+  assert.equal(sweep.sourceRegistryCountAfterFollowUp, 61);
   assert.ok(
     sweep.additionalOpenDataFollowUps.some(
       (item) => item.reviewFile === "calabarzon-marineregions-manila-bay-obis-review-20261024.json",

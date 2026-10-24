@@ -27,7 +27,7 @@ test("CAS Manila Bay record screen excludes ambiguous/outside localities and adm
     source.access.reviewFiles.includes("calabarzon-cas-manila-bay-record-screen-20261024.json"),
   );
   assert.equal(source.publicationApproval, false);
-  assert.equal(sweep.sourceRegistryCountAfterFollowUp, registry.sources.length);
+  assert.equal(sweep.sourceRegistryCountAfterFollowUp, 61);
   assert.equal(
     sweep.additionalOpenDataFollowUps.find((item) => item.sourceId === source.id)
       .recordLevelReviewFile,

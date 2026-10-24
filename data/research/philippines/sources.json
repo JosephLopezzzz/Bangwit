@@ -3,7 +3,7 @@
   "checkedOn": "2026-10-24",
   "status": "research-only-source-registry",
   "scope": "National acquisition references and CALABARZON identity/source leads. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 61,
+  "sourceCount": 68,
   "sources": [
     {
       "id": "gbif-col-xr-taxonomy-matching",
@@ -689,15 +689,16 @@
         "reviewFiles": [
           "calabarzon-coverage-source-sweep.json",
           "calabarzon-tayabas-river-source-review-20261024.json"
-        ]
+        ],
+        "filterCorrectionFile": "gbif-actinopterygii-retired-key-correction-20261024.json"
       },
       "reuse": {
         "metadata": "Bibliographic metadata and abstract facts only; cite SEAFDEC repository and primary journal.",
         "raw": "No original PDF acquired into the local research cache; publisher article/PDF direct requests returned 403, SEAFDEC lists no file, and the UPLB repository copy is unavailable.",
-        "content": "No item-specific reuse license or agreement verified. The PJS author guide describes a copyright-transfer form for accepted manuscripts but does not establish the exact rights for this 2013 article. The species table remains unavailable and no species assertions are admitted."
+        "content": "No item-specific reuse license or agreement verified. The PJS author guide describes a copyright-transfer form for accepted manuscripts but does not establish the exact rights for this 2013 article. The species table remains unavailable and no species assertions are admitted. The legacy GBIF locality-zero status used deleted taxon key 204 and is invalid; see gbif-actinopterygii-retired-key-correction-20261024.json."
       },
       "publicationApproval": false,
-      "researchStatus": "metadata-and-aggregate-only;table-unavailable;rights-unresolved;gbif-locality-zero",
+      "researchStatus": "metadata-and-aggregate-only;table-unavailable;rights-unresolved;legacy-gbif-query-invalidated-retired-taxon-key",
       "sourceYear": 2013,
       "journalCitation": "Philippine Journal of Science, 142(1), 55-67 (June 2013)"
     },
@@ -1273,20 +1274,21 @@
       "role": "Bounded exact-locality search for GBIF Actinopterygii records in Balayan/Calatagan; not an exhaustive fish inventory or absence assessment.",
       "checkedOn": "2026-10-24",
       "access": {
-        "status": "four-public-zero-result-occurrence-search-responses-captured",
+        "status": "legacy-query-invalidated-retired-taxon-key;corrected-col-xr-rerun-recorded",
         "reviewFiles": [
           "calabarzon-balayan-gbif-fish-locality-review-20261024.json"
         ],
         "rawPath": "raw/gbif-balayan-locality-fish-20261024/",
-        "rawSha256Recorded": true
+        "rawSha256Recorded": true,
+        "filterCorrectionFile": "gbif-actinopterygii-retired-key-correction-20261024.json"
       },
       "reuse": {
         "metadata": "GBIF Occurrence API and query parameters reviewed.",
         "raw": "Four zero-result JSON responses are retained in ignored local research storage with SHA-256 hashes.",
-        "content": "No occurrence records were returned, so no dataset-specific license or record attribution applies in this check; any future returned data needs separate dataset-level rights and quality review."
+        "content": "The legacy zero result used deleted GBIF taxon key 204 and is invalid for coverage. See gbif-actinopterygii-retired-key-correction-20261024.json for the corrected COL XR search and candidate counts; no record is automatically admitted."
       },
       "publicationApproval": false,
-      "researchStatus": "bounded-zero-result-queries; no-species-assertions-admitted",
+      "researchStatus": "historical-zero-invalidated-retired-taxon-key;corrected-col-xr-search-candidates-await-review",
       "sourceYear": null
     },
     {
@@ -1352,20 +1354,21 @@
       "role": "Bounded exact-text search for GBIF fish-class records with locality Batangas Bay; not an exhaustive inventory or absence assessment.",
       "checkedOn": "2026-10-24",
       "access": {
-        "status": "one-public-zero-result-occurrence-search-response-captured",
+        "status": "legacy-query-invalidated-retired-taxon-key;corrected-col-xr-rerun-recorded",
         "reviewFiles": [
           "calabarzon-batangas-bay-source-review-20261024.json"
         ],
         "rawPath": "raw/gbif-batangas-bay-fish-20261024/occurrence-search.json",
-        "rawSha256": "16004ddeb6b1eb033e3665fa6082d9cdd36533ce1f36272a2a95f5664f1b9dcd"
+        "rawSha256": "16004ddeb6b1eb033e3665fa6082d9cdd36533ce1f36272a2a95f5664f1b9dcd",
+        "filterCorrectionFile": "gbif-actinopterygii-retired-key-correction-20261024.json"
       },
       "reuse": {
         "metadata": "GBIF public Occurrence API endpoint and query parameters reviewed.",
         "raw": "The zero-result JSON response is retained in ignored local research storage and pinned by SHA-256.",
-        "content": "No occurrence rows were returned, so no record-specific license or attribution applies to this query. Any future returned records need separate dataset-level rights, taxonomy, date, quality and waterbody-scope review."
+        "content": "The legacy zero result used deleted GBIF taxon key 204 and is invalid for coverage. See gbif-actinopterygii-retired-key-correction-20261024.json for the corrected COL XR search and candidate counts; no record is automatically admitted."
       },
       "publicationApproval": false,
-      "researchStatus": "bounded-zero-result-exact-locality-check; not-an-absence-claim; no-species-assertions-admitted",
+      "researchStatus": "historical-zero-invalidated-retired-taxon-key;corrected-col-xr-search-candidates-await-review",
       "sourceYear": null
     },
     {
@@ -1455,20 +1458,21 @@
       "role": "Bounded exact-text search for GBIF fish-class records under four Verde Island locality variants; not an exhaustive inventory or absence assessment.",
       "checkedOn": "2026-10-24",
       "access": {
-        "status": "four-public-zero-result-occurrence-search-responses-captured",
+        "status": "legacy-query-invalidated-retired-taxon-key;corrected-col-xr-rerun-recorded",
         "reviewFiles": [
           "calabarzon-vipcorals-verde-island-source-review-20261024.json"
         ],
         "rawPath": "raw/gbif-verde-island-fish-locality-20261024/",
-        "responseSha256": "895e98c4fc942ab7d7a88a36b939ef457d89aa6b53c9aed51a7fd67ff354269a"
+        "responseSha256": "895e98c4fc942ab7d7a88a36b939ef457d89aa6b53c9aed51a7fd67ff354269a",
+        "filterCorrectionFile": "gbif-actinopterygii-retired-key-correction-20261024.json"
       },
       "reuse": {
         "metadata": "GBIF public Occurrence API endpoint and query parameters reviewed.",
         "raw": "Four zero-result JSON responses are retained in ignored local research storage with SHA-256 hashes.",
-        "content": "No occurrence rows were returned, so no record-specific license or attribution applies to this check. Any future GBIF records need separate dataset-level license, taxonomy, date, quality and waterbody-scope review."
+        "content": "The legacy zero result used deleted GBIF taxon key 204 and is invalid for coverage. See gbif-actinopterygii-retired-key-correction-20261024.json for the corrected COL XR search and candidate counts; no record is automatically admitted."
       },
       "publicationApproval": false,
-      "researchStatus": "bounded-zero-result-exact-locality-check; not-an-absence-claim; no-species-assertions-admitted",
+      "researchStatus": "historical-zero-invalidated-retired-taxon-key;corrected-col-xr-search-candidates-await-review",
       "sourceYear": null
     },
     {
@@ -1560,6 +1564,171 @@
       "researchStatus": "historical-discovery-only;CAS-record-screen;direct-source-record-check-pending;no-species-assertions-admitted",
       "taxonId": 10194,
       "occurrenceRecordsInsideNamedBayGeometry": 1874
+    },
+    {
+      "id": "denr-ncr-pasig-river-biodiversity-2024",
+      "title": "DENR-NCR Annual Report 2025: Pasig River Biodiversity Assessment Study",
+      "provider": "Department of Environment and Natural Resources - National Capital Region",
+      "url": "https://ncr.denr.gov.ph/wp-content/uploads/2026/01/ANNUAL-REPORT-2025.pdf",
+      "role": "Official source for the 2024 Pasig River and named tributary/estero sampling scope; full PDF currently returned 403, so use only indexed report facts and do not transcribe inaccessible tables.",
+      "checkedOn": "2026-10-24",
+      "access": {
+        "status": "indexed-official-report-text-reviewed;direct-pdf-403",
+        "reviewFiles": [
+          "ncr-species-coverage-review-20261024.json"
+        ]
+      },
+      "reuse": {
+        "metadata": "Official report bibliographic and scope facts only; no PDF downloaded or table extracted.",
+        "raw": "No local report copy.",
+        "content": "No item-specific open data license verified; no species list or figure/table content reproduced."
+      },
+      "publicationApproval": false,
+      "researchStatus": "official-scope-lead;full-document-access-limited;no-species-rows-admitted",
+      "sourceYear": 2025
+    },
+    {
+      "id": "denr-ncr-manila-bay-regional-scope",
+      "title": "DENR-NCR Manila Bay Rehabilitation Program: NCR and shared-bay river-system context",
+      "provider": "Department of Environment and Natural Resources - National Capital Region",
+      "url": "https://ncr.denr.gov.ph/manila-bay-rehabilitation-program/",
+      "role": "Official lead for Manila Bay shared regional scope and the three major NCR river-system groupings; not a fish checklist, legal boundary or fishing authorization.",
+      "checkedOn": "2026-10-24",
+      "access": {
+        "status": "official-page-indexed-content-reviewed;direct-page-403",
+        "reviewFiles": [
+          "ncr-species-coverage-review-20261024.json"
+        ]
+      },
+      "reuse": {
+        "metadata": "Official web page facts and scope descriptions only.",
+        "raw": "No local copy.",
+        "content": "Reuse terms not separately verified; do not republish map geometry or imply the bay belongs solely to NCR."
+      },
+      "publicationApproval": false,
+      "researchStatus": "shared-waterbody-scope-lead;no-species-rows-or-geometry-admitted",
+      "sourceYear": null
+    },
+    {
+      "id": "lirio-2026-arius-manillensis-pasig-river",
+      "title": "Gut bacterial community profile of the endemic catfish Arius manillensis from Pasig River, Philippines",
+      "provider": "Microbiology Resource Announcements / American Society for Microbiology",
+      "url": "https://journals.asm.org/doi/full/10.1128/mra.00370-26",
+      "additionalUrls": [
+        "https://doi.org/10.1128/mra.00370-26"
+      ],
+      "role": "CC BY 4.0 primary-source candidate describing three Arius manillensis collected at Pasig River on 2025-10-29; source supports one dated collection event only.",
+      "checkedOn": "2026-10-24",
+      "access": {
+        "status": "open-access-full-text-reviewed",
+        "reviewFiles": [
+          "ncr-species-coverage-review-20261024.json"
+        ]
+      },
+      "reuse": {
+        "metadata": "Article page displays Creative Commons Attribution 4.0 International license.",
+        "raw": "No full article copy redistributed.",
+        "content": "Use only attributed factual occurrence fields after a separate regional assertion decision; do not copy article prose, figures or microbiome sequence data into the fish profile."
+      },
+      "publicationApproval": false,
+      "researchStatus": "reviewed-dated-pasig-fish-event;taxonomy-name-match-only;projection-prepared;regional-release-unapproved",
+      "sourceYear": 2026
+    },
+    {
+      "id": "denr-ncr-soe-2025",
+      "title": "DENR-NCR State of Metro Manila Environment and Natural Resources campaign",
+      "provider": "Department of Environment and Natural Resources - National Capital Region",
+      "url": "https://ncr.denr.gov.ph/news-events/denr-ncr-launches-state-of-metro-manilas-environment-and-natural-resources-campaign-in-celebration-of-philippine-environment-month-2025/",
+      "role": "Official discovery lead for La Mesa Watershed, Las Pi?as-Para?aque Wetland Park, Baseco Lagoon and Tanza Marine Tree Park; not a fish checklist or verified waterbody geometry.",
+      "checkedOn": "2026-10-24",
+      "access": {
+        "status": "official-page-indexed-text-reviewed",
+        "reviewFiles": [
+          "ncr-species-coverage-review-20261024.json"
+        ]
+      },
+      "reuse": {
+        "metadata": "Official page information and named conservation-area leads only.",
+        "raw": "No local copy.",
+        "content": "No species rows or map data reproduced; source-use terms not separately assessed."
+      },
+      "publicationApproval": false,
+      "researchStatus": "official-conservation-and-wetland-leads;identity-geometry-and-fish-evidence-pending",
+      "sourceYear": 2025
+    },
+    {
+      "id": "gbif-nmnh-usnm-extant-specimens",
+      "title": "NMNH Extant Specimen Records (USNM, US)",
+      "provider": "National Museum of Natural History, Smithsonian Institution, via GBIF",
+      "url": "https://www.gbif.org/dataset/821cc27a-e3bb-4bc5-ac34-89ada245069d",
+      "additionalUrls": [
+        "https://doi.org/10.15468/hnhrg3",
+        "https://api.gbif.org/v1/dataset/821cc27a-e3bb-4bc5-ac34-89ada245069d"
+      ],
+      "role": "Dataset source for two dated, preserved-specimen records explicitly associated with shared Manila Bay; not NCR-only evidence or a current inventory.",
+      "checkedOn": "2026-10-24",
+      "access": {
+        "status": "dataset-metadata-and-selected-occurrence-records-reviewed",
+        "reviewFiles": [
+          "ncr-manila-bay-gbif-record-triage-20261024.json"
+        ],
+        "rawPath": "raw/ncr-colxr-actinopterygii-administrative-20261024/",
+        "metadataSha256": "ce20f881724070d2155b1861864321a1ade62973fd621a6a20fd0440c151a4b1"
+      },
+      "reuse": {
+        "metadata": "GBIF dataset metadata specifies CC0 1.0; both selected occurrence records also carry CC0 1.0.",
+        "raw": "Only query and dataset-metadata snapshots are retained in ignored research storage.",
+        "content": "Projection is limited to attributed catalog facts for two historical specimen records; no coordinate, image or specimen-media file is copied."
+      },
+      "publicationApproval": false,
+      "researchStatus": "two-shared-manila-bay-historical-records-projected;regional-release-unapproved",
+      "license": "CC0-1.0",
+      "doi": "10.15468/hnhrg3",
+      "sourceYear": null
+    },
+    {
+      "id": "catalog-fishes-rastrelliger-kanagurta",
+      "title": "Eschmeyer's Catalog of Fishes: Rastrelliger kanagurta",
+      "provider": "California Academy of Sciences, Institute for Biodiversity Science and Sustainability",
+      "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=41815",
+      "role": "Independent taxonomic cross-check identifying Rastrelliger kanagurta as valid; no locality or occurrence information is derived from this page.",
+      "checkedOn": "2026-10-24",
+      "access": {
+        "status": "current-valid-name-entry-reviewed",
+        "reviewFiles": [
+          "ncr-manila-bay-gbif-record-triage-20261024.json"
+        ]
+      },
+      "reuse": {
+        "metadata": "Online Catalog of Fishes name entry and current status reviewed.",
+        "raw": "No page copy retained.",
+        "content": "Linked as an authority; no text is reproduced."
+      },
+      "publicationApproval": false,
+      "researchStatus": "independent-current-name-check-for-one-historical-record",
+      "sourceYear": 2026
+    },
+    {
+      "id": "catalog-fishes-encrasicholina-heteroloba",
+      "title": "Eschmeyer's Catalog of Fishes: Encrasicholina heteroloba",
+      "provider": "California Academy of Sciences, Institute for Biodiversity Science and Sustainability",
+      "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=58156",
+      "role": "Independent taxonomic cross-check identifying Encrasicholina heteroloba as valid; no locality or occurrence information is derived from this page.",
+      "checkedOn": "2026-10-24",
+      "access": {
+        "status": "current-valid-name-entry-reviewed",
+        "reviewFiles": [
+          "ncr-manila-bay-gbif-record-triage-20261024.json"
+        ]
+      },
+      "reuse": {
+        "metadata": "Online Catalog of Fishes name entry and current status reviewed.",
+        "raw": "No page copy retained.",
+        "content": "Linked as an authority; no text is reproduced."
+      },
+      "publicationApproval": false,
+      "researchStatus": "independent-current-name-check-for-one-historical-record",
+      "sourceYear": 2026
     }
   ],
   "sourcePolicy": {

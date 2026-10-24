@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 1,
+  "id": "gbif-actinopterygii-retired-key-correction-20261024",
+  "checkedOn": "2026-10-24",
+  "status": "correction-published-invalidates-legacy-zeroes",
+  "taxonomy": {
+    "invalidLegacyQuery": {
+      "taxonKey": 204,
+      "scientificName": "Actinopterygii",
+      "formerRank": "CLASS",
+      "apiTaxonUrl": "https://api.gbif.org/v1/species/204",
+      "apiStatus": 200,
+      "deletedOn": "2022-11-23T06:43:29.920+00:00",
+      "responseBytes": 696,
+      "responseSha256": "17af9ff73feb573fae2d18db0d3767354bce098ff0839c3505f84ad1e8b35707",
+      "decision": "Deleted taxon key. Any occurrence query using this key and returning zero is invalid for biological-coverage conclusions."
+    },
+    "currentSelection": {
+      "taxonomy": "Catalogue of Life eXtended Release (CoL XR)",
+      "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+      "taxonKey": "8VR36",
+      "scientificName": "Actinopterygii",
+      "rank": "GIGACLASS",
+      "scope": "Ray-finned fishes only; this filter does not cover sharks and rays or every taxonomic group commonly called fish.",
+      "documentationUrl": "https://techdocs.gbif.org/en/data-processing/taxonomy-interpretation"
+    },
+    "currentValidation": {
+      "queryUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&taxonKey=8VR36&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&limit=0",
+      "status": 200,
+      "count": 204252,
+      "limit": 0,
+      "responseBytes": 83,
+      "responseSha256": "25301de58f93f220cd62dcf3e3f584bc803ee18d5d32c072f03d2431a6fc7ffa"
+    },
+    "deletedKeyControl": {
+      "queryUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&taxonKey=204&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&limit=0",
+      "status": 200,
+      "count": 0,
+      "limit": 0,
+      "responseBytes": 77,
+      "responseSha256": "842e210a1dc11a43b863a7438d0b8ae273f0182c290a7c64e760c176778cc9fa"
+    }
+  },
+  "invalidatedReviews": [
+    "calabarzon-balayan-gbif-fish-locality-review-20261024.json",
+    "calabarzon-batangas-bay-source-review-20261024.json",
+    "calabarzon-vipcorals-verde-island-source-review-20261024.json",
+    "calabarzon-tayabas-river-source-review-20261024.json"
+  ],
+  "correctedCalabarzonSearch": {
+    "queryCount": 12,
+    "queryTerms": [
+      "Batangas Bay",
+      "Balayan Bay",
+      "Calatagan Bay",
+      "Balayan",
+      "Calatagan",
+      "Verde Island",
+      "Isla Verde",
+      "Verde Island Passage",
+      "Verde Island, Batangas",
+      "Tayabas River",
+      "Tayabas",
+      "Tayabas Quezon"
+    ],
+    "queryCounts": {
+      "Batangas Bay": 2,
+      "Balayan Bay": 14,
+      "Calatagan Bay": 0,
+      "Balayan": 0,
+      "Calatagan": 2,
+      "Verde Island": 2,
+      "Isla Verde": 0,
+      "Verde Island Passage": 0,
+      "Verde Island, Batangas": 0,
+      "Tayabas River": 0,
+      "Tayabas": 1,
+      "Tayabas Quezon": 0
+    },
+    "returnedRowsIncludingRepeatedNames": 21,
+    "uniqueOccurrenceRecords": 21,
+    "distinctAcceptedScientificNames": 16,
+    "datasetLicenseUrls": [
+      "http://creativecommons.org/licenses/by/4.0/legalcode",
+      "http://creativecommons.org/publicdomain/zero/1.0/legalcode"
+    ],
+    "qualityIssueCounts": [
+      [
+        "COLLECTION_MATCH_NONE",
+        7
+      ],
+      [
+        "CONTINENT_COORDINATE_MISMATCH",
+        2
+      ],
+      [
+        "CONTINENT_DERIVED_FROM_COORDINATES",
+        12
+      ],
+      [
+        "CONTINENT_DERIVED_FROM_COUNTRY",
+        6
+      ],
+      [
+        "CONTINENT_INVALID",
+        10
+      ],
+      [
+        "COUNTRY_DERIVED_FROM_COORDINATES",
+        1
+      ],
+      [
+        "GEODETIC_DATUM_ASSUMED_WGS84",
+        14
+      ],
+      [
+        "INSTITUTION_COLLECTION_MISMATCH",
+        3
+      ],
+      [
+        "INSTITUTION_MATCH_FUZZY",
+        9
+      ],
+      [
+        "OCCURRENCE_STATUS_INFERRED_FROM_BASIS_OF_RECORD",
+        2
+      ],
+      [
+        "OCCURRENCE_STATUS_INFERRED_FROM_INDIVIDUAL_COUNT",
+        18
+      ],
+      [
+        "TAXON_ID_NOT_FOUND",
+        7
+      ]
+    ],
+    "queryEvidence": [
+      {
+        "locality": "Batangas Bay",
+        "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Batangas%20Bay&taxonKey=8VR36&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&limit=300",
+        "count": 2,
+        "rawSha256": "2f0e10f6d3440ed197a497acddf83f64b8b13545a6911e702e7c594df3ee8caa",
+        "rawPath": "data/research/philippines/raw/gbif-calabarzon-colxr-actinopterygii-rerun-20261024/batangas-bay.json"
+      },
+      {
+        "locality": "Balayan Bay",
+        "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Balayan%20Bay&taxonKey=8VR36&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&limit=300",
+        "count": 14,
+        "rawSha256": "9921ca111916fee1e3a463aab0a5b31d391dd5d1f364b6b6a040093f3bd78f87",
+        "rawPath": "data/research/philippines/raw/gbif-calabarzon-colxr-actinopterygii-rerun-20261024/balayan-bay.json"
+      },
+      {
+        "locality": "Calatagan Bay",
+        "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Calatagan%20Bay&taxonKey=8VR36&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&limit=300",
+        "count": 0,
+        "rawSha256": "895e98c4fc942ab7d7a88a36b939ef457d89aa6b53c9aed51a7fd67ff354269a",
+        "rawPath": "data/research/philippines/raw/gbif-calabarzon-colxr-actinopterygii-rerun-20261024/calatagan-bay.json"
+      },
+      {
+        "locality": "Balayan",
+        "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Balayan&taxonKey=8VR36&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&limit=300",
+        "count": 0,
+        "rawSha256": "895e98c4fc942ab7d7a88a36b939ef457d89aa6b53c9aed51a7fd67ff354269a",
+        "rawPath": "data/research/philippines/raw/gbif-calabarzon-colxr-actinopterygii-rerun-20261024/balayan.json"
+      },
+      {
+        "locality": "Calatagan",
+        "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Calatagan&taxonKey=8VR36&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&limit=300",
+        "count": 2,
+        "rawSha256": "22cf2954ed0758afef553ea212c38ad8d524e2f5afdfd3e1556093766d98987f",
+        "rawPath": "data/research/philippines/raw/gbif-calabarzon-colxr-actinopterygii-rerun-20261024/calatagan.json"
+      },
+      {
+        "locality": "Verde Island",
+        "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Verde%20Island&taxonKey=8VR36&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&limit=300",
+        "count": 2,
+        "rawSha256": "3bb7a6a79fce00f4b0b9f2048497ca77239dbef359cff789f073393222c8ae8b",
+        "rawPath": "data/research/philippines/raw/gbif-calabarzon-colxr-actinopterygii-rerun-20261024/verde-island.json"
+      },
+      {
+        "locality": "Isla Verde",
+        "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Isla%20Verde&taxonKey=8VR36&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&limit=300",
+        "count": 0,
+        "rawSha256": "895e98c4fc942ab7d7a88a36b939ef457d89aa6b53c9aed51a7fd67ff354269a",
+        "rawPath": "data/research/philippines/raw/gbif-calabarzon-colxr-actinopterygii-rerun-20261024/isla-verde.json"
+      },
+      {
+        "locality": "Verde Island Passage",
+        "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Verde%20Island%20Passage&taxonKey=8VR36&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&limit=300",
+        "count": 0,
+        "rawSha256": "895e98c4fc942ab7d7a88a36b939ef457d89aa6b53c9aed51a7fd67ff354269a",
+        "rawPath": "data/research/philippines/raw/gbif-calabarzon-colxr-actinopterygii-rerun-20261024/verde-island-passage.json"
+      },
+      {
+        "locality": "Verde Island, Batangas",
+        "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Verde%20Island%2C%20Batangas&taxonKey=8VR36&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&limit=300",
+        "count": 0,
+        "rawSha256": "895e98c4fc942ab7d7a88a36b939ef457d89aa6b53c9aed51a7fd67ff354269a",
+        "rawPath": "data/research/philippines/raw/gbif-calabarzon-colxr-actinopterygii-rerun-20261024/verde-island-batangas.json"
+      },
+      {
+        "locality": "Tayabas River",
+        "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Tayabas%20River&taxonKey=8VR36&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&limit=300",
+        "count": 0,
+        "rawSha256": "895e98c4fc942ab7d7a88a36b939ef457d89aa6b53c9aed51a7fd67ff354269a",
+        "rawPath": "data/research/philippines/raw/gbif-calabarzon-colxr-actinopterygii-rerun-20261024/tayabas-river.json"
+      },
+      {
+        "locality": "Tayabas",
+        "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Tayabas&taxonKey=8VR36&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&limit=300",
+        "count": 1,
+        "rawSha256": "fd6f0a5ff11d5dab79eb07ad79505eeb80a389f47dbb88a0251c298fcc0f0aca",
+        "rawPath": "data/research/philippines/raw/gbif-calabarzon-colxr-actinopterygii-rerun-20261024/tayabas.json"
+      },
+      {
+        "locality": "Tayabas Quezon",
+        "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Tayabas%20Quezon&taxonKey=8VR36&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&limit=300",
+        "count": 0,
+        "rawSha256": "895e98c4fc942ab7d7a88a36b939ef457d89aa6b53c9aed51a7fd67ff354269a",
+        "rawPath": "data/research/philippines/raw/gbif-calabarzon-colxr-actinopterygii-rerun-20261024/tayabas-quezon.json"
+      }
+    ],
+    "disposition": "All returned rows remain research candidates pending record-level locality, taxonomy, quality, date, and dataset-rights review. No species assertion is admitted by this correction."
+  }
+}

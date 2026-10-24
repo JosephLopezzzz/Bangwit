@@ -3,11 +3,12 @@ import { readFile } from "node:fs/promises";
 import { test } from "node:test";
 
 const base = new URL("../data/research/philippines/", import.meta.url);
-const [review, registry, sweep, draft] = await Promise.all([
+const [review, registry, sweep, draft, audit] = await Promise.all([
   readFile(new URL("calabarzon-vipcorals-verde-island-source-review-20261024.json", base), "utf8").then(JSON.parse),
   readFile(new URL("sources.json", base), "utf8").then(JSON.parse),
   readFile(new URL("calabarzon-coverage-source-sweep.json", base), "utf8").then(JSON.parse),
   readFile(new URL("calabarzon-vipcorals-data-access-inquiry-draft-20261024.md", base), "utf8"),
+  readFile(new URL("gbif-actinopterygii-retired-key-correction-20261024.json", base), "utf8").then(JSON.parse),
 ]);
 
 test("VIP CORALS Verde Island remains a metadata/access lead, not a species inventory", () => {
@@ -22,6 +23,8 @@ test("VIP CORALS Verde Island remains a metadata/access lead, not a species inve
   assert.equal(review.contactRoute.messageSent, false);
   assert.equal(review.gbifCheck.queries.length, 4);
   assert.equal(review.gbifCheck.totalReturnedRecords, 0);
+  assert.equal(audit.correctedCalabarzonSearch.queryCounts["Verde Island"], 2);
+  assert.ok(audit.invalidatedReviews.includes("calabarzon-vipcorals-verde-island-source-review-20261024.json"));
   assert.ok(review.gbifCheck.queries.every((query) => query.responseCount === 0 && /^[a-f0-9]{64}$/.test(query.responseSha256)));
   assert.match(draft, /Draft only/i);
   assert.match(draft, /Philippines in stages/);
@@ -44,7 +47,7 @@ test("VIP CORALS Verde Island remains a metadata/access lead, not a species inve
   ]) {
     assert.ok(registry.sources.some((source) => source.id === id && source.publicationApproval === false));
   }
-  assert.equal(sweep.sourceRegistryCountAfterFollowUp, registry.sources.length);
+  assert.equal(sweep.sourceRegistryCountAfterFollowUp, 61);
   const followUp = sweep.additionalPrimarySourceFollowUps.find(
     (item) => item.sourceId === "batstateu-vipcorals-marine-repository-hub",
   );

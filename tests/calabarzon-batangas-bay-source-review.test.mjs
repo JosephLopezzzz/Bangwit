@@ -9,6 +9,7 @@ const [review, registry, scope, sweep] = await Promise.all([
   readFile(new URL("calabarzon-scope.json", base), "utf8").then(JSON.parse),
   readFile(new URL("calabarzon-coverage-source-sweep.json", base), "utf8").then(JSON.parse),
 ]);
+const audit = JSON.parse(await readFile(new URL("gbif-actinopterygii-retired-key-correction-20261024.json", base), "utf8"));
 
 test("Batangas Bay poster and GBIF checks remain bounded research leads, not app assertions", () => {
   assert.equal(review.regionId, "0400000000");
@@ -23,6 +24,8 @@ test("Batangas Bay poster and GBIF checks remain bounded research leads, not app
   assert.equal(review.rightsAndScope.permissionRequested, false);
   assert.equal(review.gbifCheck.responseCount, 0);
   assert.equal(review.gbifCheck.parameters.classKey, 204);
+  assert.equal(audit.correctedCalabarzonSearch.queryCounts["Batangas Bay"], 2);
+  assert.ok(audit.invalidatedReviews.includes("calabarzon-batangas-bay-source-review-20261024.json"));
   assert.match(review.gbifCheck.responseSha256, /^[a-f0-9]{64}$/);
   assert.deepEqual(review.counts, {
     publicSpeciesAssertions: 0,
@@ -30,8 +33,7 @@ test("Batangas Bay poster and GBIF checks remain bounded research leads, not app
     publicProjection: false,
   });
 
-  assert.equal(registry.sourceCount, 61);
-  assert.equal(registry.sources.length, 61);
+  assert.equal(registry.sourceCount, registry.sources.length);
   for (const id of ["nfrdi-2025-batangas-bay-dominant-fish-poster", "gbif-batangas-bay-exact-fish-locality-check"]) {
     assert.ok(registry.sources.some((source) => source.id === id && source.publicationApproval === false));
     assert.ok(scope.waterbodies.find((waterbody) => waterbody.id === review.waterbodyId)?.sourceRefs.includes(id));
