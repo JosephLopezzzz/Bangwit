@@ -1,0 +1,252 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-24",
+  "regionId": "0400000000",
+  "waterbodyId": "ph-wb-manila-bay",
+  "sourceId": "obis-manila-bay-actinopterygii-geometry-discovery",
+  "datasetId": "d6af0fac-8a21-4d77-8872-f10d471fc0cf",
+  "datasetTitle": "CAS Ichthyology (ICH)",
+  "datasetVersion": "150.545",
+  "datasetLicense": "CC0-1.0",
+  "status": "record-level-screen-complete-no-new-assertions-source-record-check-pending",
+  "inputs": {
+    "queryReview": "calabarzon-marineregions-manila-bay-obis-review-20261024.json",
+    "occurrenceSnapshot": "raw/marineregions-manila-bay-20261024/obis-bbox/all.json",
+    "occurrenceSnapshotSha256": "253bee792cad7eaa4e3fe4330d4cdfcc798c8d836f69c0c25881604d37f1a296",
+    "boundaryRole": "The Marine Regions named-bay polygon was used only to select research candidates; it is not an official or app boundary."
+  },
+  "recordScreen": {
+    "casRowsInsideNamedBayGeometry": 610,
+    "rowsWhoseLocalityTextContainsManilaBay": 149,
+    "distinctScientificNameStrings": 112,
+    "rowsWithEventDate": 129,
+    "rowsWithCoordinateUncertainty": 149,
+    "coordinateUncertaintyMeters": {
+      "p25": 16445,
+      "median": 31428,
+      "p75": 31428,
+      "rowsAtMost10000": 17,
+      "rowsAtMost1000": 0
+    },
+    "screenCriteria": [
+      "Record falls inside the unmodified Marine Regions research polygon under the same point-in-multipolygon method used in the parent review.",
+      "Provider locality text contains Manila Bay, case-insensitively.",
+      "An eventDate is present and the OBIS rank is species.",
+      "OBIS provides an AphiaID and coordinate uncertainty is at most 10000 m.",
+      "No ON_LAND, DEPTH_EXCEEDS_BATH, NO_ACCEPTED_NAME or MARINE_UNSURE flag is present."
+    ],
+    "screenedRecords": 11,
+    "uniqueScreenedNames": 11,
+    "screenedLocalityDispositions": {
+      "namedManilaBayOrBayAdjacentLocality": 7,
+      "entranceToBayAmbiguous": 2,
+      "explicitlySouthOfBay": 2
+    },
+    "existingProjectionOverlap": [
+      "urn:catalog:CAS:ICH:32861",
+      "urn:catalog:CAS:ICH:32862"
+    ],
+    "newNamedBayCandidates": 7
+  },
+  "candidateRecords": [
+    {
+      "obisId": "0cb74508-546b-4fb1-af7c-a2533a44a327",
+      "occurrenceId": "urn:catalog:CAS:ICH:51767",
+      "catalogNumber": "51767",
+      "locality": "Manila Bay near Corregidor.",
+      "georeferenceRemarks": "Error covers Manila Bay around Corregidor Island.",
+      "recordedName": "Oxyurichthys ophthalmonema",
+      "originalName": "Oxyurichthys ophthalmonema",
+      "aphiaId": 219530,
+      "eventDate": "1947-06-10",
+      "coordinateUncertaintyMeters": 9334,
+      "flags": [
+        "NO_DEPTH"
+      ],
+      "disposition": "hold-source-record-verification-and-broad-location"
+    },
+    {
+      "obisId": "18e8ca8c-2707-4824-9119-8dc3fe022242",
+      "occurrenceId": "urn:catalog:CAS:SU(ICH):27594",
+      "catalogNumber": "27594",
+      "locality": "Pasay, Manila Bay, P.I.",
+      "recordedName": "Terapon jarbua",
+      "originalName": "Therapon jarbua",
+      "aphiaId": 218350,
+      "eventDate": "1931-05",
+      "coordinateUncertaintyMeters": 3975,
+      "flags": [
+        "NO_DEPTH"
+      ],
+      "disposition": "hold-source-record-verification-and-shore-adjacent-georeference"
+    },
+    {
+      "obisId": "21fc9dd9-0920-4e85-827f-023af2519ac4",
+      "occurrenceId": "urn:catalog:CAS:ICH:52497",
+      "catalogNumber": "52497",
+      "locality": "6 mi. SW off Corregidor; off Cavite Prov.; S entr. to Manila Bay at 31 fms.",
+      "recordedName": "Cynoglossus sibogae",
+      "originalName": "Cynoglossus sibogae",
+      "aphiaId": 274227,
+      "eventDate": "1947-10-28",
+      "coordinateUncertaintyMeters": 8573,
+      "flags": [
+        "NO_DEPTH"
+      ],
+      "disposition": "hold-entrance-locality-is-not-unambiguous-bay-interior"
+    },
+    {
+      "obisId": "33b0a2e5-ea5c-4325-8d80-f795dce272b7",
+      "occurrenceId": "urn:catalog:CAS:SU(ICH):26807",
+      "catalogNumber": "26807",
+      "locality": "Malabon, Manila Bay, P.I.",
+      "georeferenceRemarks": "Uncertainty includes Manila Bay at Malabon City.",
+      "recordedName": "Gymnothorax richardsonii",
+      "originalName": "Gymnothorax richardsoni",
+      "aphiaId": 271882,
+      "eventDate": "1931-09",
+      "coordinateUncertaintyMeters": 7094,
+      "flags": [
+        "NO_DEPTH"
+      ],
+      "disposition": "hold-source-record-verification-and-shore-adjacent-georeference"
+    },
+    {
+      "obisId": "40140539-bad9-423b-abc4-b637efce4e6a",
+      "occurrenceId": "urn:catalog:CAS:ICH:52498",
+      "catalogNumber": "52498",
+      "locality": "betw. Monja and Corregidor islands: entrance to Manila Bay, at 30 fms.",
+      "recordedName": "Dactylopus dactylopus",
+      "originalName": "Dactylopus dactylopus",
+      "aphiaId": 278368,
+      "eventDate": "1947-10-01",
+      "coordinateUncertaintyMeters": 2825,
+      "flags": [],
+      "disposition": "hold-entrance-locality-is-not-unambiguous-bay-interior"
+    },
+    {
+      "obisId": "58c248b8-09cf-40a8-bbba-42b18cb84d0e",
+      "occurrenceId": "urn:catalog:CAS:ICH:56463",
+      "catalogNumber": "56463",
+      "locality": "LUZON ISL.; MANILA BAY; SEA WALL OF U.S. EMBASSY",
+      "recordedName": "Gerres erythrourus",
+      "originalName": "Gerres abbreviatus",
+      "aphiaId": 218533,
+      "eventDate": "1947-11-11",
+      "coordinateUncertaintyMeters": 5593,
+      "flags": [
+        "NO_DEPTH"
+      ],
+      "disposition": "hold-source-record-verification-and-shore-adjacent-georeference"
+    },
+    {
+      "obisId": "5b5cd485-c3b9-4ef1-94f9-7c909407d503",
+      "occurrenceId": "urn:catalog:CAS:ICH:32862",
+      "catalogNumber": "32862",
+      "locality": "Luzon, S of Manila Bay, eastern side of Limbones Cove; high tide.",
+      "recordedName": "Callionymus filamentosus",
+      "originalName": "Callionymus filamentosus",
+      "aphiaId": 126791,
+      "eventDate": "1964-01-01",
+      "coordinateUncertaintyMeters": 3131,
+      "flags": [],
+      "alreadyInAppProjection": true,
+      "disposition": "keep-as-existing-Limbones-Cove-record-not-a-Manila-Bay-locality"
+    },
+    {
+      "obisId": "74f8482b-7940-435b-a7ec-099788163c1b",
+      "occurrenceId": "urn:catalog:CAS:ICH:32861",
+      "catalogNumber": "32861",
+      "locality": "South of Manila Bay; E side of Limbones Cove",
+      "georeferenceRemarks": "Polygon covers Limbones Cove. Coordinates placed at center of polygon.",
+      "recordedName": "Rogadius asper",
+      "originalName": "Rogadius asper",
+      "aphiaId": 218150,
+      "eventDate": "1964-01-01",
+      "coordinateUncertaintyMeters": 3131,
+      "flags": [],
+      "alreadyInAppProjection": true,
+      "disposition": "keep-as-existing-Limbones-Cove-record-not-a-Manila-Bay-locality"
+    },
+    {
+      "obisId": "f0cbfb49-8e58-403b-b742-fa8c3dba73e0",
+      "occurrenceId": "urn:catalog:CAS:SU(ICH):33099",
+      "catalogNumber": "33099",
+      "locality": "Pasay Beach, Manila Bay; Luzon I., P.I.",
+      "recordedName": "Arcygobius baliurus",
+      "originalName": "Arcygobius baliurus",
+      "aphiaId": 279687,
+      "eventDate": "1936-12",
+      "coordinateUncertaintyMeters": 3975,
+      "flags": [
+        "NO_DEPTH"
+      ],
+      "disposition": "hold-source-record-verification-and-shore-adjacent-georeference"
+    },
+    {
+      "obisId": "f474618a-5eea-4d74-a74e-943faaeab26c",
+      "occurrenceId": "urn:catalog:CAS:ICH:52040",
+      "catalogNumber": "52040",
+      "locality": "Manila Bay near Corregidor.",
+      "georeferenceRemarks": "Error covers Manila Bay around Corregidor Island.",
+      "recordedName": "Callionymus sagitta",
+      "originalName": "Callionymus sagitta",
+      "aphiaId": 219775,
+      "eventDate": "1947-06-10",
+      "coordinateUncertaintyMeters": 9334,
+      "flags": [
+        "NO_DEPTH"
+      ],
+      "disposition": "hold-taxonomy-and-source-record-verification"
+    },
+    {
+      "obisId": "fcd06400-fcbf-44f8-8304-80be869eaf34",
+      "occurrenceId": "urn:catalog:CAS:ICH:51959",
+      "catalogNumber": "51959",
+      "locality": "Manila Bay, Manila, at American Embassy Compound.",
+      "recordedName": "Atherinomorus endrachtensis",
+      "originalName": "Atherina endrachtensis",
+      "aphiaId": 272034,
+      "eventDate": "1948-11-11",
+      "coordinateUncertaintyMeters": 5593,
+      "flags": [
+        "NO_DEPTH"
+      ],
+      "disposition": "hold-source-record-verification-and-shore-adjacent-georeference"
+    }
+  ],
+  "sourceChecks": {
+    "datasetMetadata": {
+      "url": "https://api.obis.org/v3/dataset/d6af0fac-8a21-4d77-8872-f10d471fc0cf",
+      "license": "CC0-1.0",
+      "citationVersion": "150.545",
+      "contact": "California Academy of Sciences; Jon Fong, Collection Manager, Ichthyology"
+    },
+    "originalArchiveUrl": "http://ipt.calacademy.org:8080/archive.do?r=ich",
+    "casCatalogSearchUrl": "https://researcharchive.calacademy.org/research/Ichthyology/collection/index.asp",
+    "attemptedInThisReview": [
+      "CAS collection database page retrieval timed out in the available request channel.",
+      "Direct OBIS single-occurrence endpoint retrieval timed out in the available request channel."
+    ],
+    "sourceRecordIndependentlyOpened": false,
+    "taxonomy": {
+      "authority": "World Register of Marine Species (WoRMS)",
+      "status": "partial-record-level-link-check",
+      "acceptedNameChecksCompleted": 6,
+      "acceptedNameChecksPending": 1,
+      "pendingName": "Callionymus sagitta",
+      "note": "OBIS supplies AphiaIDs and accepted-name fields; these do not replace independent source-record and name verification for app admission."
+    }
+  },
+  "decision": {
+    "newHistoricalAssertionsAdmitted": 0,
+    "publicProjection": false,
+    "reason": "The seven new locality candidates are historical, shore-adjacent or broadly georeferenced records. Their source locality strings and coordinates are not sufficient to claim specific Cavite waters, and direct CAS catalog/DwC-A records could not be independently retrieved in this review. Four other screened rows explicitly describe the south of the bay or its entrance; two are already represented as Limbones Cove records and remain outside this bay batch.",
+    "currentPresenceOrAbundanceClaim": false,
+    "municipalWaterBoundaryClaim": false
+  },
+  "nextActions": [
+    "Continue the CALABARZON ledger's next public-source task: examine the original Tayabas River article/table and reuse terms without login or access-control bypass.",
+    "If a later session can retrieve the CAS collection entry or source DwC-A, verify only the seven locality candidates and their catalog numbers; retain original locality/date and coordinate uncertainty."
+  ]
+}
