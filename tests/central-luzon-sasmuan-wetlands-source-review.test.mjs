@@ -38,5 +38,5 @@ test("Sasmuan local labels remain unresolved research context with no app or geo
   assert.equal(review.coverageAndAdmission.regionalReleaseApproved, false);
   assert.equal(checkpoint.status, "discovery-checkpoint-incomplete");
   assert.equal(checkpoint.sasmuanWetlandsSourceReviewFile, "central-luzon-sasmuan-wetlands-source-review-20261024.json");
-  assert.match(checkpoint.nextStep.action, /Pampanga estuary dry-season/);
+  assert.match(checkpoint.nextStep.action, /Central Luzon source discovery/);
 });

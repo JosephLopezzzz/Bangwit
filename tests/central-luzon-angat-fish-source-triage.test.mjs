@@ -49,5 +49,5 @@ test("Angat source triage does not create current, safety, or app claims", () =>
   assert.equal(review.coverageAndAdmission.regionalReleaseApproved, false);
   assert.equal(checkpoint.status, "discovery-checkpoint-incomplete");
   assert.equal(checkpoint.angatFishSourceTriageFile, "central-luzon-angat-fish-source-triage-20261024.json");
-  assert.match(checkpoint.nextStep.action, /Sasmuan/);
+  assert.match(checkpoint.nextStep.action, /Central Luzon source discovery/);
 });
