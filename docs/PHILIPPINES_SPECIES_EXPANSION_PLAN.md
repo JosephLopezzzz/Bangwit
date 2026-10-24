@@ -679,3 +679,32 @@ Verification for this research-only batch: `npm run test:species:pipeline`, `npm
 - **Finding:** PP355131.1, PP461061.1, PP456720.1 and PP697971.1 each expose a specimen voucher and collection date but only `Philippines` as location and no latitude/longitude qualifier. PP355131.1 also lists a different author group and an unpublished citation title, so its relationship to the 2025 paper is held pending crosswalk.
 - **Rights and boundary:** NCBI says it places no restrictions on GenBank data use but warns that submitters may claim rights; this is not record-specific permission. Country-level records do not support Aurora, Cagayan, Zambales, river, or coastal-site assignments. The CC BY-NC-ND supplementary tables remain untranscribed pending rights-holder clarification.
 - **Next:** continue site-specific primary-source discovery for Central Luzon, prioritizing Bulacan and Tarlac and locality-resolved evidence for Aurora and Zambales. Keep Cagayan in its own rollout phase and keep the national plan incomplete.
+
+## 58. Agno River ARB7 Paniqui station review -- 24 October 2026
+
+- **Sources and rights:** Tenio et al. (2026) report a freshwater fish survey across eight Agno Basin stations. The University of Glasgow article and dataset records identify CC BY 4.0. The article PDF and dataset ZIP were reviewed locally and SHA-256 pinned in central-luzon-agno-paniqui-station-fish-review-20261024.json; no source archive is committed.
+- **Geographic scope:** ARB7 is Paniqui, Tarlac (15.6974 N, 120.4977 E). The coordinate is a study-station reference, not an exact capture point or boundary. This record covers only ARB7; other stations belong to Benguet and Pangasinan.
+- **Fish evidence:** Article Table 4 marks 10 taxa at ARB7; Table 5 reports abundance 137. The dataset Fish_count.csv independently sums to 10 positive rows and 137 individuals (Wet label 51; Dry label 86). Nine rows have binomial names and one remains genus-only as Barbodes sp.
+- **Limits:** The dataset spells Oreochromis mozambicus while the article prints O. mossambicus; Cyprinus carpio carries an apparent author/year typo. Catalog checks are nomenclature-only, not voucher identity verification. The article, repository metadata and file names conflict on which date corresponds to wet/dry, so only dataset season labels are retained. An abstract/Table 5 Shannon range conflict is excluded from use.
+- **Disposition:** Preserve this as historical, site-specific, gear-limited evidence. Add zero current-presence claims, public species assertions, app projections, diet advice, legal advice, or safety claims. See central-luzon-agno-paniqui-station-fish-review-20261024.json; Central Luzon and national coverage remain incomplete.
+- **Next:** continue locality-resolved Bulacan freshwater records and Aurora/Zambales river evidence, then continue the other province and waterbody gaps without assigning whole-basin scope to one station.
+
+## 59. Aurora Dibut River 2025 source and rights review -- 24 October 2026
+
+- **Study scope:** Mercader et al. report monthly gill-net sampling at three Dibut River stations in Baler from October 2023 through March 2024. Station 1 is the lower freshwater/saltwater meeting reach; Station 2 is mid-river; Station 3 is upstream. The article prints coordinates for all three stations.
+- **Source conflicts:** The abstract reports 22 species; results and conclusion report 23; Table 1 lists 22 taxa. The authors used internet/local guides and FishBase/IUCN for names and recommend DNA barcoding. No independent identities are accepted.
+- **Reuse and disposition:** DOAJ lists CC BY-NC-SA at journal level, while the publisher says copyright transfers and no article-specific reuse grant was identified. Keep the table held pending clarification. Zero app projections or public species assertions.
+- **Artifact:** central-luzon-aurora-dibut-river-source-review-20261024.json records station scope, coordinate source, count conflict, name issues and access/rights limits. Do not call it a complete or current Dibut checklist.
+
+## 60. Zambales Masinloc-Oyon Bay reef-report access review -- 24 October 2026
+
+- **Official lead:** the DENR FASPS record for the 2021 habitat assessment reports 254 fish species in 35 families, with 102 at Taklobo MPA and 63 at Panglit MPA, across the Masinloc-Oyon Bay Protected Landscapes and Seascapes area.
+- **Access gate:** preview/download requires login or registration. No login was attempted; the report, taxon tables, methods, coordinates, geometry and reuse terms were not reviewed.
+- **Disposition:** keep the counts as landing-page metadata only. No species rows, boundaries or app projections are added. See central-luzon-zambales-masinloc-oyon-bay-report-source-review-20261024.json.
+
+## 61. Bulacan provincial waterbody sources and Angat monitoring lead -- 24 October 2026
+
+- **BFAR profile reviewed:** downloaded the official two-page Bulacan fisheries profile and pinned its SHA-256. It lists 22 communal/inland features, but separates Manila Bay catch groups and province-wide aquaculture from those place names; it does not supply a fish checklist by river or dam. Its production/FishR figures are historical aggregates.
+- **EMB monitoring lead:** the indexed Table 17 excerpt in the Region III 2022 environment report identifies three Angat River water-quality stations at Baliwag-Bustos, Pulilan-Plaridel, and the Expressway bridge. The direct PDF returned HTTP 403; full methods and sample dates remain unchecked. Station coordinates are not fish captures, boundaries, or current safe-fishing evidence.
+- **Reuse and product limits:** no item-level reuse license was verified for either profile/report. Add zero species rows, current occurrence, food-safety messaging, or app projections. See `central-luzon-bulacan-waterbody-source-review-20261024.json`; retain the existing Angat fish study hold unchanged.
+- **Next:** use the BFAR place names to find locality-resolved, independently reviewable fish surveys and rights-cleared datasets for Bulacan rivers, lakes, reservoirs and estuaries. Central Luzon and the national rollout remain incomplete.

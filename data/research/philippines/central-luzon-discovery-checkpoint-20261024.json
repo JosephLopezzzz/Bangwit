@@ -12,13 +12,13 @@
     "regionRegistryId": "0300000000",
     "expectedProvinceCount": 7,
     "provinces": [
-      { "name": "Aurora", "psgcCode": "0307700000", "sourceId": "provinces" },
-      { "name": "Bataan", "psgcCode": "0300800000", "sourceId": "provinces" },
-      { "name": "Bulacan", "psgcCode": "0301400000", "sourceId": "provinces" },
-      { "name": "Nueva Ecija", "psgcCode": "0304900000", "sourceId": "provinces" },
-      { "name": "Pampanga", "psgcCode": "0305400000", "sourceId": "provinces" },
-      { "name": "Tarlac", "psgcCode": "0306900000", "sourceId": "provinces" },
-      { "name": "Zambales", "psgcCode": "0307100000", "sourceId": "provinces" }
+      {"name": "Aurora", "psgcCode": "0307700000", "sourceId": "provinces"},
+      {"name": "Bataan", "psgcCode": "0300800000", "sourceId": "provinces"},
+      {"name": "Bulacan", "psgcCode": "0301400000", "sourceId": "provinces"},
+      {"name": "Nueva Ecija", "psgcCode": "0304900000", "sourceId": "provinces"},
+      {"name": "Pampanga", "psgcCode": "0305400000", "sourceId": "provinces"},
+      {"name": "Tarlac", "psgcCode": "0306900000", "sourceId": "provinces"},
+      {"name": "Zambales", "psgcCode": "0307100000", "sourceId": "provinces"}
     ],
     "geometryVerified": false,
     "crosswalkStatus": "registry-membership-pinned; hydrological geometry and municipality-to-waterbody crosswalk pending"
@@ -50,7 +50,11 @@
         "kind": "river-basin",
         "administrativeUnits": ["Nueva Ecija", "Pampanga", "Tarlac", "Bulacan"],
         "sharedHydrologyNote": "The basin also extends into Quezon, Nueva Vizcaya and other adjacent areas in source descriptions; basin identity must remain separate from Region III boundaries.",
-        "sourceIds": ["nwrb-pampanga-river-basin-master-plan", "depdev-region-iii-rdp-2023-2028", "silliman-nueva-ecija-pampanga-freshwater-study"],
+        "sourceIds": [
+          "nwrb-pampanga-river-basin-master-plan",
+          "depdev-region-iii-rdp-2023-2028",
+          "silliman-nueva-ecija-pampanga-freshwater-study"
+        ],
         "reviewFiles": ["central-luzon-silliman-nueva-ecija-pampanga-2009-followup-20261024.json"],
         "status": "named-source-lead; geometry-and-subbasin-crosswalk-pending"
       },
@@ -138,8 +142,11 @@
         "name": "Angat River Network, Bustos study reach",
         "kind": "river-network-study-reach",
         "administrativeUnits": ["Bulacan"],
-        "sourceIds": [],
-        "reviewFiles": ["central-luzon-angat-fish-source-triage-20261024.json"],
+        "sourceIds": ["bfar-region-iii-bulacan-fisheries-profile", "emb-region-iii-rsober-2022-angat-monitoring"],
+        "reviewFiles": [
+          "central-luzon-angat-fish-source-triage-20261024.json",
+          "central-luzon-bulacan-waterbody-source-review-20261024.json"
+        ],
         "status": "2015 source table lists seven aquatic taxa but has major negative metal-reading and taxon-list conflicts; held from checklist and food-safety use"
       },
       {
@@ -155,7 +162,10 @@
         "kind": "lake",
         "administrativeUnits": ["Nueva Ecija"],
         "sourceIds": ["silliman-nueva-ecija-pampanga-freshwater-study"],
-        "reviewFiles": ["central-luzon-paitan-vaca-source-review-20261024.json", "central-luzon-silliman-nueva-ecija-pampanga-2009-followup-20261024.json"],
+        "reviewFiles": [
+          "central-luzon-paitan-vaca-source-review-20261024.json",
+          "central-luzon-silliman-nueva-ecija-pampanga-2009-followup-20261024.json"
+        ],
         "status": "historical survey scope and joint stocking announcement reviewed; no rights-cleared species-by-waterbody table, current occurrence, or validated geometry"
       },
       {
@@ -171,7 +181,10 @@
         "kind": "wetland",
         "administrativeUnits": ["Pampanga"],
         "sourceIds": ["denr-national-river-basin-summit-2022", "silliman-nueva-ecija-pampanga-freshwater-study"],
-        "reviewFiles": ["central-luzon-candaba-inventory-review-20261024.json", "central-luzon-silliman-nueva-ecija-pampanga-2009-followup-20261024.json"],
+        "reviewFiles": [
+          "central-luzon-candaba-inventory-review-20261024.json",
+          "central-luzon-silliman-nueva-ecija-pampanga-2009-followup-20261024.json"
+        ],
         "status": "2020, 2010 and 1988 historical inventory leads reviewed; counts/scopes differ, no current checklist or geometry"
       },
       {
@@ -233,6 +246,24 @@
         "studyPeriod": "2021-12 through 2022-11",
         "sourceIds": ["bioflux-bataan-three-rivers-fish-survey-2025"],
         "status": "source-table-reviewed; specific reach geometry and salinity classification pending"
+      },
+      {
+        "name": "Agno River, ARB7 Paniqui study station",
+        "kind": "river-study-station",
+        "administrativeUnits": ["Tarlac"],
+        "studyPeriod": "July 2021 to January 2022",
+        "sourceIds": ["agno-river-basin-fish-assemblage-2026", "agno-river-basin-fish-dataset-2026"],
+        "reviewFiles": ["central-luzon-agno-paniqui-station-fish-review-20261024.json"],
+        "status": "ARB7 station-specific historical table and CC BY dataset reconciled at 10 taxa and 137 sampled individuals; date-to-season mapping conflicts and no current-presence or voucher-level identity claim"
+      },
+      {
+        "name": "Dibut River, Baler three-station fish survey",
+        "kind": "river-estuarine-study-reach",
+        "administrativeUnits": ["Aurora"],
+        "studyPeriod": "2023-10 to 2024-03",
+        "sourceIds": ["aurora-dibut-river-ichthyofauna-2025"],
+        "reviewFiles": ["central-luzon-aurora-dibut-river-source-review-20261024.json"],
+        "status": "source-reported lower tidal interface, middle, and upper stations with exact paper coordinates; 22-versus-23 taxon conflict, identification limitations, and article-level reuse rights held"
       }
     ],
     "coastalAndMarine": [
@@ -277,6 +308,14 @@
         "administrativeUnits": ["Aurora"],
         "sourceIds": ["nnc-region-iii-profile"],
         "status": "coastal scope lead; bays and named fishing grounds need source verification"
+      },
+      {
+        "name": "Masinloc-Oyon Bay Protected Landscapes and Seascapes reef-assessment sites",
+        "kind": "marine-protected-area-report-lead",
+        "administrativeUnits": ["Zambales"],
+        "sourceIds": ["fasps-masinloc-oyon-bay-reef-assessment-2021"],
+        "reviewFiles": ["central-luzon-zambales-masinloc-oyon-bay-report-source-review-20261024.json"],
+        "status": "official landing page reports 254 fish species/35 families across assessment but full report is login-gated; no names, stations, geometry, or reuse terms verified"
       }
     ]
   },
@@ -285,7 +324,11 @@
     "evidenceLedgerFile": "central-luzon-bataan-historical-evidence-ledger-20261024.json",
     "crossStudyReviewFile": "central-luzon-bataan-cross-study-conflict-review-20261024.json",
     "bataanStudyTaxonRows": 52,
-    "reportedPerRiverRowCounts": { "Almacen": 42, "Bagac": 29, "Talisay": 28 },
+    "reportedPerRiverRowCounts": {
+      "Almacen": 42,
+      "Bagac": 29,
+      "Talisay": 28
+    },
     "taxonomyReview": "42 binomials have nomenclature-only proposals; nine genus-level names and one hybrid remain unresolved; no fish identity is independently verified",
     "crossStudyDisposition": "A 2024 Talisay/Bagac paper has inconsistent internal richness statements; three shared names have different river-presence cells versus the 2025 table. The author teams substantially overlap. Keep all rows held.",
     "publicAssertionsPrepared": 0,
@@ -319,10 +362,26 @@
     "Aurora, Bulacan, Nueva Ecija, Pampanga, Tarlac and Zambales require additional source-reviewed fish records beyond the named leads.",
     "Regional species coverage, historical/current distinctions, taxonomy, locality precision, rights and safety information remain incomplete.",
     "The newly reviewed 2009 fish-name excerpts are aggregate across study sites; per-site tables, field dates, coordinates and item-specific reuse approval remain pending.",
-    "The 2025 North Luzon barcode paper spans Aurora, Cagayan and Zambales. Four GenBank endpoint records were spot-checked and expose only country-level location, not province or waterbody; supplementary rows remain held under the article's CC BY-NC-ND license."
+    "The 2025 North Luzon barcode paper spans Aurora, Cagayan and Zambales. Four GenBank endpoint records were spot-checked and expose only country-level location, not province or waterbody; supplementary rows remain held under the article's CC BY-NC-ND license.",
+    "The BFAR Bulacan profile adds 22 communal/inland waterbody name leads but no per-waterbody fish roster or geometry; Angat EMB monitoring station references are water-quality locations, not fish evidence, and report dates/methods remain unverified."
   ],
   "nextStep": {
     "phaseId": "L3",
-    "action": "Continue Central Luzon source discovery with primary site-specific freshwater, wetland, brackish and coastal studies in Bulacan and Tarlac, and obtain locality-resolved evidence for Aurora and Zambales. Four GenBank spot checks from the 2025 North Luzon barcode study were country-level only and cannot be assigned to a province or waterbody; seek rights-holder clarification before using its CC BY-NC-ND supplementary tables. Keep Cagayan in its own rollout phase. Continue additional site-specific evidence for Nueva Ecija and Pampanga across river reaches, lakes, reservoirs, wetlands, brackish waters and coastal areas. The Silliman 2009 name pass is complete as nomenclature review only; hold its one Hypophthalmichthys family conflict and all specimen/locality questions. Keep the 2010 estuary, Minalin Channel, Candaba wetland, Angat reservoir, Norzagaray River and Bustos reach distinct. Angat and Sasmuan reports remain historical; the Bustos paper is unsuitable for food-safety advice. Pantabangan, Paitan and Vaca remain research-only pending row-level site identity, rights and current-occurrence evidence. Bataan rows remain held with no independent identity verification or public app projection. Do not mark Central Luzon complete."
-  }
+    "action": "Continue Central Luzon source discovery with locality-resolved Bulacan freshwater studies. Use the BFAR profile's 22 communal/inland features as a search checklist only, not a fish roster; the 2022 EMB RSOBER report indexes three Angat River water-quality stations, but its full methods and sample dates were inaccessible, so do not infer current safety or fish presence. Continue underlying Zambales/Aurora tables: Dibut's 22-versus-23 conflict and article reuse remain unresolved; the Masinloc-Oyon Bay FASPS report is login-gated. Agno ARB7 is one Paniqui station (10 taxa/137 sampled individuals) with wet/dry date mapping unresolved. Four GenBank spot checks were country-level only (four country-level GenBank checks); keep Cagayan in its own rollout phase, preserve separate Bataan river rows with no independent identity verification, and continue distinct river, lake, reservoir, wetland, brackish and coastal leads. Do not mark Central Luzon complete."
+  },
+  "agnoPaniquiStationReviewFile": "central-luzon-agno-paniqui-station-fish-review-20261024.json",
+  "auroraDibutRiverSourceReviewFile": "central-luzon-aurora-dibut-river-source-review-20261024.json",
+  "zambalesMasinlocOyonBayReviewFile": "central-luzon-zambales-masinloc-oyon-bay-report-source-review-20261024.json",
+  "waterbodyInventorySourceLeads": [
+    {
+      "id": "bfar-bulacan-communal-inland-list",
+      "sourceId": "bfar-region-iii-bulacan-fisheries-profile",
+      "reviewFile": "central-luzon-bulacan-waterbody-source-review-20261024.json",
+      "namedFeatureCount": 22,
+      "scope": "Province-level communal/inland waterbody names; source offers no per-waterbody species checklist or geometry.",
+      "status": "discovery-only;names-require-hydrology-and-locality-crosswalk"
+    }
+  ],
+  "angatMonitoringSourceReviewFile": "central-luzon-bulacan-waterbody-source-review-20261024.json",
+  "bulacanWaterbodySourceReviewFile": "central-luzon-bulacan-waterbody-source-review-20261024.json"
 }

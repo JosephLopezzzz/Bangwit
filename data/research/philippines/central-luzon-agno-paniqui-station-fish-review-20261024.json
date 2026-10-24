@@ -1,0 +1,359 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-24",
+  "phaseId": "L3",
+  "regionId": "0300000000",
+  "status": "historical-single-station-table-and-dataset-reconciled;date-taxonomy-and-current-presence-limits-retained",
+  "sources": {
+    "article": {
+      "id": "agno-river-basin-fish-assemblage-2026",
+      "citation": "Tenio, K. F. C., et al. (2026). Diversity and distribution of freshwater fish in mineralized watersheds of the Agno River Basin, Northern Philippines. Watershed Ecology and the Environment, 8, 248-260. https://doi.org/10.1016/j.wsee.2026.05.001",
+      "recordUrl": "https://eprints.gla.ac.uk/386293/",
+      "pdfUrl": "https://eprints.gla.ac.uk/386293/2/386293.pdf",
+      "pdfSha256": "a8b56137a4db86f32b14bb6fdb328661081717433852441aa8dd030b023eca8e",
+      "license": "CC BY 4.0",
+      "sourceTableReferences": [
+        "Table 1 (PDF p. 3): station locality and coordinates",
+        "Table 4 (PDF p. 6): species/site presence",
+        "Table 5 (PDF p. 8): richness and abundance"
+      ]
+    },
+    "dataset": {
+      "id": "agno-river-basin-fish-dataset-2026",
+      "title": "Diversity and Distribution of Freshwater Fish in Mineralized Watersheds of the Agno River Basin, Northern Philippines [Data Collection]",
+      "doi": "10.5525/gla.researchdata.2287",
+      "recordUrl": "https://researchdata.gla.ac.uk/2287/",
+      "archiveUrl": "https://researchdata.gla.ac.uk/2287/1/Data_2287.zip",
+      "archiveSha256": "2acd528d5e1a47643bbc80002ed85168b2d7809e23c3de978b176c04983547fb",
+      "fishCountCsvSha256": "5311c271b9f0874c4db44560530077476f3b7740f02859ddff4af7254454806b",
+      "license": "CC BY 4.0",
+      "filesReviewed": [
+        "Sampling_sites.csv",
+        "Fish_count.csv"
+      ],
+      "filesNotRetained": true
+    }
+  },
+  "site": {
+    "studyWaterbody": "Agno River Basin",
+    "station": "ARB7",
+    "localityAsPrinted": "Paniqui, Tarlac",
+    "administrativeAssignment": "Tarlac, Central Luzon",
+    "latitude": 15.6974,
+    "longitude": 120.4977,
+    "coordinateMeaning": "Station reference coordinate from article Table 1 and dataset Sampling_sites.csv; not individual capture coordinates and not a waterbody boundary.",
+    "coordinateReferenceSystem": "Not stated in the article table or dataset landing-page metadata reviewed; do not infer a CRS.",
+    "studyPeriod": "July 2021 to January 2022",
+    "siteScopeLimit": "Only ARB7/Paniqui is assigned to Tarlac. Other Agno stations belong to Benguet or Pangasinan and are excluded from this Central Luzon site review."
+  },
+  "methods": {
+    "samplingReported": "Article methods report one fish sampling occasion per season at each site, active electrofishing and seine netting along a 100 m riverbank transect, up to 2 hours per station; representative specimens were preserved and sent to the UP Los Ba?os Museum of Natural History for validation.",
+    "taxonomicValidationEvidence": "The paper reports validation submission but this review found no voucher catalogue identifiers or individual specimen crosswalk. Independent name-catalog checks validate nomenclature candidates only, not the actual collected fish.",
+    "temporalResolution": "Dataset count columns are labelled Wet and Dry, but the article methods describe wet July/dry January while repository metadata and CSV filenames assign the seasons oppositely. Retain season labels and counts without mapping either label to a date."
+  },
+  "siteEvidence": {
+    "evidenceKind": "historical-study-table-presence-and-attributed-counts",
+    "table4ReportedRichness": 10,
+    "datasetPositiveTaxonRows": 10,
+    "table5ReportedAbundance": 137,
+    "datasetCountTotal": 137,
+    "datasetWetLabelCount": 51,
+    "datasetDryLabelCount": 86,
+    "reconciliation": "ARB7 station richness and total abundance agree between article Tables 4/5 and the Fish_count.csv row matrix. The wet/dry label totals also sum to 137; their collection-date mapping is unresolved.",
+    "datasetRows": [
+      {
+        "sourceName": "Caranx ignobilis (Forsskal, 1775)",
+        "reportedName": "Caranx ignobilis",
+        "sourceReportedFamily": "Carangidae",
+        "wetLabelCount": 1,
+        "dryLabelCount": 0,
+        "totalCount": 1,
+        "articleTable4SiteMark": true
+      },
+      {
+        "sourceName": "Cyprinus carpio (Linnaues, 1975)",
+        "reportedName": "Cyprinus carpio",
+        "sourceReportedFamily": "Cyprinidae",
+        "wetLabelCount": 0,
+        "dryLabelCount": 6,
+        "totalCount": 6,
+        "articleTable4SiteMark": true,
+        "spellingNote": "The source prints the author string Linnaues, 1975; the accepted-name authority in GBIF and Catalog of Fishes is Linnaeus, 1758. Preserve the article/source string; this nomenclature comparison does not validate specimens."
+      },
+      {
+        "sourceName": "Glossogobius celebius (Valenciennes, 1837)",
+        "reportedName": "Glossogobius celebius",
+        "sourceReportedFamily": "Gobiidae",
+        "wetLabelCount": 41,
+        "dryLabelCount": 0,
+        "totalCount": 41,
+        "articleTable4SiteMark": true
+      },
+      {
+        "sourceName": "Glossogobius giuris (Hamilton, 1822)",
+        "reportedName": "Glossogobius giuris",
+        "sourceReportedFamily": "Gobiidae",
+        "wetLabelCount": 4,
+        "dryLabelCount": 0,
+        "totalCount": 4,
+        "articleTable4SiteMark": true
+      },
+      {
+        "sourceName": "Leiopotherapon plumbeus (Kner, 1864)",
+        "reportedName": "Leiopotherapon plumbeus",
+        "sourceReportedFamily": "Terapontidae",
+        "wetLabelCount": 1,
+        "dryLabelCount": 6,
+        "totalCount": 7,
+        "articleTable4SiteMark": true
+      },
+      {
+        "sourceName": "Oreochromis mozambicus (Peters, 1852)",
+        "reportedName": "Oreochromis mossambicus",
+        "sourceReportedFamily": "Cichlidae",
+        "wetLabelCount": 4,
+        "dryLabelCount": 0,
+        "totalCount": 4,
+        "articleTable4SiteMark": true,
+        "datasetSpelling": "Oreochromis mozambicus",
+        "articleTableSpelling": "Oreochromis mossambicus",
+        "spellingNote": "The dataset CSV spells mozambicus while article Table 4 and figure caption spell mossambicus. Treat mossambicus as a name crosswalk candidate supported by the article spelling and nomenclature sources, not as independently verified specimen identity."
+      },
+      {
+        "sourceName": "Oreochromis niloticus (Linnaeus, 1758)",
+        "reportedName": "Oreochromis niloticus",
+        "sourceReportedFamily": "Cichlidae",
+        "wetLabelCount": 0,
+        "dryLabelCount": 29,
+        "totalCount": 29,
+        "articleTable4SiteMark": true
+      },
+      {
+        "sourceName": "Pterygoplichthys disjunctivus (Weber, 1991)",
+        "reportedName": "Pterygoplichthys disjunctivus",
+        "sourceReportedFamily": "Loricariidae",
+        "wetLabelCount": 0,
+        "dryLabelCount": 2,
+        "totalCount": 2,
+        "articleTable4SiteMark": true
+      },
+      {
+        "sourceName": "Sarotherodon melanotheron (R?ppell, 1852)",
+        "reportedName": "Sarotherodon melanotheron",
+        "sourceReportedFamily": "Cichlidae",
+        "wetLabelCount": 0,
+        "dryLabelCount": 39,
+        "totalCount": 39,
+        "articleTable4SiteMark": true
+      },
+      {
+        "sourceName": "Barbodes sp.",
+        "reportedName": null,
+        "sourceReportedFamily": "Cyprinidae",
+        "wetLabelCount": 0,
+        "dryLabelCount": 4,
+        "totalCount": 4,
+        "articleTable4SiteMark": true,
+        "taxonomicRank": "genus-level",
+        "status": "held-unresolved"
+      }
+    ],
+    "totals": {
+      "wetLabel": 51,
+      "dryLabel": 86,
+      "all": 137,
+      "positiveTaxonRows": 10
+    }
+  },
+  "taxonomyReview": {
+    "method": "GBIF Species API exact accepted usage matches for the nine binomial crosswalk candidates; the Catalog of Fishes record pages were checked as secondary nomenclature references, but their varied current-status display is not normalized into specimen determinations.",
+    "records": [
+      {
+        "sourceName": "Caranx ignobilis (Forsskal, 1775)",
+        "crosswalkName": "Caranx ignobilis",
+        "gbif": {
+          "matchType": "EXACT",
+          "status": "ACCEPTED",
+          "usageKey": 2390805,
+          "family": "Carangidae",
+          "url": "https://www.gbif.org/species/2390805"
+        },
+        "catalogOfFishes": {
+          "recordPageRetrieved": true,
+          "interpretation": "Nomenclature reference only; current-status display is not used here to verify the source specimen.",
+          "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Caranx&species=ignobilis&tbl=species"
+        }
+      },
+      {
+        "sourceName": "Cyprinus carpio (Linnaues, 1975)",
+        "crosswalkName": "Cyprinus carpio",
+        "gbif": {
+          "matchType": "EXACT",
+          "status": "ACCEPTED",
+          "usageKey": 4286975,
+          "family": "Cyprinidae",
+          "url": "https://www.gbif.org/species/4286975"
+        },
+        "catalogOfFishes": {
+          "recordPageRetrieved": true,
+          "interpretation": "Nomenclature reference only; current-status display is not used here to verify the source specimen.",
+          "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Cyprinus&species=carpio&tbl=species"
+        },
+        "note": "The source prints the author string Linnaues, 1975; the accepted-name authority in GBIF and Catalog of Fishes is Linnaeus, 1758. Preserve the article/source string; this nomenclature comparison does not validate specimens."
+      },
+      {
+        "sourceName": "Glossogobius celebius (Valenciennes, 1837)",
+        "crosswalkName": "Glossogobius celebius",
+        "gbif": {
+          "matchType": "EXACT",
+          "status": "ACCEPTED",
+          "usageKey": 2379433,
+          "family": "Gobiidae",
+          "url": "https://www.gbif.org/species/2379433"
+        },
+        "catalogOfFishes": {
+          "recordPageRetrieved": true,
+          "interpretation": "Nomenclature reference only; current-status display is not used here to verify the source specimen.",
+          "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Glossogobius&species=celebius&tbl=species"
+        }
+      },
+      {
+        "sourceName": "Glossogobius giuris (Hamilton, 1822)",
+        "crosswalkName": "Glossogobius giuris",
+        "gbif": {
+          "matchType": "EXACT",
+          "status": "ACCEPTED",
+          "usageKey": 2378087,
+          "family": "Gobiidae",
+          "url": "https://www.gbif.org/species/2378087"
+        },
+        "catalogOfFishes": {
+          "recordPageRetrieved": true,
+          "interpretation": "Nomenclature reference only; current-status display is not used here to verify the source specimen.",
+          "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Glossogobius&species=giuris&tbl=species"
+        }
+      },
+      {
+        "sourceName": "Leiopotherapon plumbeus (Kner, 1864)",
+        "crosswalkName": "Leiopotherapon plumbeus",
+        "gbif": {
+          "matchType": "EXACT",
+          "status": "ACCEPTED",
+          "usageKey": 2374507,
+          "family": "Terapontidae",
+          "url": "https://www.gbif.org/species/2374507"
+        },
+        "catalogOfFishes": {
+          "recordPageRetrieved": true,
+          "interpretation": "Nomenclature reference only; current-status display is not used here to verify the source specimen.",
+          "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Leiopotherapon&species=plumbeus&tbl=species"
+        }
+      },
+      {
+        "sourceName": "Oreochromis mozambicus (Peters, 1852)",
+        "crosswalkName": "Oreochromis mossambicus",
+        "gbif": {
+          "matchType": "EXACT",
+          "status": "ACCEPTED",
+          "usageKey": 2372396,
+          "family": "Cichlidae",
+          "url": "https://www.gbif.org/species/2372396"
+        },
+        "catalogOfFishes": {
+          "recordPageRetrieved": true,
+          "interpretation": "Nomenclature reference only; current-status display is not used here to verify the source specimen.",
+          "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Oreochromis&species=mossambicus&tbl=species"
+        },
+        "spellingCrosswalk": "dataset misspelling to article Table 4 spelling; candidate only",
+        "note": "The dataset CSV spells mozambicus while article Table 4 and figure caption spell mossambicus. Treat mossambicus as a name crosswalk candidate supported by the article spelling and nomenclature sources, not as independently verified specimen identity."
+      },
+      {
+        "sourceName": "Oreochromis niloticus (Linnaeus, 1758)",
+        "crosswalkName": "Oreochromis niloticus",
+        "gbif": {
+          "matchType": "EXACT",
+          "status": "ACCEPTED",
+          "usageKey": 4285694,
+          "family": "Cichlidae",
+          "url": "https://www.gbif.org/species/4285694"
+        },
+        "catalogOfFishes": {
+          "recordPageRetrieved": true,
+          "interpretation": "Nomenclature reference only; current-status display is not used here to verify the source specimen.",
+          "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Oreochromis&species=niloticus&tbl=species"
+        }
+      },
+      {
+        "sourceName": "Pterygoplichthys disjunctivus (Weber, 1991)",
+        "crosswalkName": "Pterygoplichthys disjunctivus",
+        "gbif": {
+          "matchType": "EXACT",
+          "status": "ACCEPTED",
+          "usageKey": 2340003,
+          "family": "Loricariidae",
+          "url": "https://www.gbif.org/species/2340003"
+        },
+        "catalogOfFishes": {
+          "recordPageRetrieved": true,
+          "interpretation": "Nomenclature reference only; current-status display is not used here to verify the source specimen.",
+          "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Pterygoplichthys&species=disjunctivus&tbl=species"
+        }
+      },
+      {
+        "sourceName": "Sarotherodon melanotheron (R?ppell, 1852)",
+        "crosswalkName": "Sarotherodon melanotheron",
+        "gbif": {
+          "matchType": "EXACT",
+          "status": "ACCEPTED",
+          "usageKey": 4285710,
+          "family": "Cichlidae",
+          "url": "https://www.gbif.org/species/4285710"
+        },
+        "catalogOfFishes": {
+          "recordPageRetrieved": true,
+          "interpretation": "Nomenclature reference only; current-status display is not used here to verify the source specimen.",
+          "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Sarotherodon&species=melanotheron&tbl=species"
+        }
+      }
+    ],
+    "unresolved": [
+      {
+        "sourceName": "Barbodes sp.",
+        "rank": "genus",
+        "gbif": {
+          "matchType": "HIGHERRANK",
+          "usageKey": 2365861,
+          "family": "Cyprinidae"
+        },
+        "decision": "Keep at genus level; no species-level assertion."
+      }
+    ],
+    "identityDecision": "No source specimen identity is independently certified by this desk review. Keep source names and name-catalog candidates distinguishable."
+  },
+  "conflictsAndCaveats": [
+    "The article says 23 species and 13 families overall; only the ten ARB7-marked source rows are reviewed here.",
+    "Dataset CSV spells Oreochromis mozambicus; article Table 4 and Fig. 2 spell Oreochromis mossambicus. Preserve both source forms and hold the specimen-name linkage as a crosswalk candidate.",
+    "The article prints Cyprinus carpio with the apparent author/year typo Linnaues, 1975; preserve it in source transcriptions and separate it from the accepted-name authority.",
+    "Article methods say fish sampling was wet-season July and dry-season January, but research-data landing-page metadata and filenames label January wet and July dry. No date-to-season assignment is made for counts.",
+    "The abstract gives a Shannon range ending at 1.62 while Table 5 gives ARB7 Shannon 1.74. Diversity indices are not used in this site review.",
+    "The point is a sampling-station coordinate only. It is not a fish capture coordinate, verified reach geometry, basin polygon or municipal boundary."
+  ],
+  "evidenceLimits": [
+    "This is a 2021-2022 historical, single-station, gear- and effort-bounded study record; it does not establish current presence, absence, abundance beyond sampled counts, catchability, fishing legality, safety, diet or bait advice.",
+    "Station ARB7 is Paniqui, Tarlac. Do not assign the full Agno River Basin, its other stations, or other province records to Central Luzon/Tarlac.",
+    "Reported ecological and taxonomic results require expert review for public species claims; no voucher-level identity check was performed here.",
+    "CC BY 4.0 allows reuse with attribution under its terms; it does not provide legal advice or by itself approve a Bangwit product claim."
+  ],
+  "disposition": {
+    "researchTableRowsReviewed": 10,
+    "speciesLevelNameCandidates": 9,
+    "genusLevelRowsHeld": 1,
+    "currentOccurrenceAssertionsAdded": 0,
+    "publicSpeciesAssertionsAdded": 0,
+    "dietOrCatchAdviceAdded": 0,
+    "appProjectionRowsAdded": 0,
+    "geometryAdded": false,
+    "regionalCompletionApproved": false
+  },
+  "nextStep": "Continue Central Luzon discovery with locality-resolved Bulacan freshwater records and Aurora/Zambales river locality data. Keep Agno ARB7 separate as a historical Paniqui station, and preserve the source name, season-date, and specimen-identity limits. Central Luzon remains incomplete."
+}
