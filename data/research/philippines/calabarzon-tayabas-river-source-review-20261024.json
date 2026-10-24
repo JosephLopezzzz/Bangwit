@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-24",
+  "regionId": "0400000000",
+  "waterbodyId": "ph-wb-tayabas-river",
+  "sourceId": "paller-2013-tayabas-river-fish",
+  "status": "metadata-reviewed-primary-table-unavailable-rights-unresolved-open-data-check-zero",
+  "bibliography": "Paller, V. G. V., Corpuz, M. N. C., & Ocampo, P. P. (2013). Diversity and distribution of freshwater fish assemblages in Tayabas River, Quezon (Philippines). Philippine Journal of Science, 142(1), 55-67.",
+  "primarySource": {
+    "publisherArticleUrl": "https://philjournalsci.dost.gov.ph/diversity-and-distribution-of-freshwater-fish-assemblages-in-tayabas-river-quezon-philippines/",
+    "publisherPdfUrl": "https://philjournalsci.dost.gov.ph/images/pdf/pjs_pdf/vol142no1/pdf/Diversity_and_Distribution_of_Freshwater_Fish.pdf",
+    "seafdecRecordUrl": "https://repository.seafdec.org.ph/handle/10862/2236?locale-attribute=en&show=full",
+    "uplbRepositoryRecordUrl": "https://www.ukdr.uplb.edu.ph/journal-articles/2086/",
+    "metadataFacts": {
+      "fieldPeriod": "wet and dry seasons of 2010",
+      "streamSections": ["upstream", "midstream", "downstream"],
+      "individuals": 1070,
+      "reportedSpecies": 15,
+      "reportedFamilies": 8
+    },
+    "accessReview": {
+      "publisherArticlePage": "HTTP 403 on direct retrieval",
+      "publisherPdf": "HTTP 403 on direct retrieval",
+      "seafdecRecord": "Official metadata and abstract readable; item says there are no files associated with it.",
+      "uplbRepositoryRecord": "Official UPLB repository record displays the abstract and says the document is not currently available there.",
+      "tableAcquired": false
+    }
+  },
+  "rightsReview": {
+    "pjsAuthorsGuideUrl": "https://philjournalsci.dost.gov.ph/authors-guide/",
+    "policyStatement": "The current PJS author guide says authors are asked to sign a Copyright Transfer form when a manuscript is accepted.",
+    "itemSpecificLicenseFound": false,
+    "itemSpecificAgreementReviewed": false,
+    "decision": "Do not extract or republish the 2013 article's species table without item-specific rights clarification. The current author-guide policy does not establish this article's exact reuse rights."
+  },
+  "openDataAlternative": {
+    "provider": "GBIF public occurrence search API",
+    "endpoint": "https://api.gbif.org/v1/occurrence/search",
+    "queryParameters": {
+      "country": "PH",
+      "classKey": 204,
+      "limit": 100
+    },
+    "queries": [
+      {
+        "locality": "Tayabas River",
+        "url": "https://api.gbif.org/v1/occurrence/search?country=PH&classKey=204&locality=Tayabas+River&limit=100",
+        "httpStatus": 200,
+        "returnedRecords": 0,
+        "responseSha256": "16004ddeb6b1eb033e3665fa6082d9cdd36533ce1f36272a2a95f5664f1b9dcd",
+        "rawResponse": "raw/tayabas-gbif-locality-review-20261024/query-01.json"
+      },
+      {
+        "locality": "Tayabas",
+        "url": "https://api.gbif.org/v1/occurrence/search?country=PH&classKey=204&locality=Tayabas&limit=100",
+        "httpStatus": 200,
+        "returnedRecords": 0,
+        "responseSha256": "16004ddeb6b1eb033e3665fa6082d9cdd36533ce1f36272a2a95f5664f1b9dcd",
+        "rawResponse": "raw/tayabas-gbif-locality-review-20261024/query-02.json"
+      },
+      {
+        "locality": "Tayabas Quezon",
+        "url": "https://api.gbif.org/v1/occurrence/search?country=PH&classKey=204&locality=Tayabas+Quezon&limit=100",
+        "httpStatus": 200,
+        "returnedRecords": 0,
+        "responseSha256": "16004ddeb6b1eb033e3665fa6082d9cdd36533ce1f36272a2a95f5664f1b9dcd",
+        "rawResponse": "raw/tayabas-gbif-locality-review-20261024/query-03.json"
+      }
+    ],
+    "totalReturnedRecords": 0,
+    "checkedAt": "2026-10-24T00:06:29.225Z"
+  },
+  "decision": "metadata-and-aggregate-historical-lead-only;table-and-item-rights-unresolved;exact-locality-zero-is-not-absence",
+  "counts": {
+    "speciesRowsAcquired": 0,
+    "gbifFishRecordsReturned": 0,
+    "speciesAssertionsAdmitted": 0,
+    "publicProjection": false
+  },
+  "limits": [
+    "The 15-species abstract total is aggregate study metadata; no scientific names or reach-by-reach table rows were verified from the original table in this review.",
+    "The direct GBIF searches cover only three locality strings, country PH, and Actinopterygii class key 204; they do not cover aliases, coordinates or other providers.",
+    "Zero results do not establish fish absence from Tayabas River.",
+    "The study's three reach labels do not supply verified coordinates, river geometry, municipal crosswalk or salinity measurements.",
+    "No current presence, abundance, catchability, legal, safety or fishing-permission claim is made."
+  ],
+  "nextActions": [
+    "Seek an authorized or rights-clear copy of the original article/table and item-specific reuse terms through ordinary public access.",
+    "Continue checking independently reusable, location-matched freshwater records for Quezon without inferring Tayabas River presence from broad province-level data.",
+    "Keep the waterbody geometry, exact reaches, municipality association and salinity classification unresolved."
+  ]
+}

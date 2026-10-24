@@ -318,4 +318,12 @@ A conservative screen retained 11 dated, species-rank rows with an AphiaID, coor
 
 The official [CAS collection search](https://researcharchive.calacademy.org/research/Ichthyology/collection/index.asp) and individual OBIS record requests could not be retrieved in this session, so the catalog entries were not independently opened. No candidate was added to the app or treated as current presence, abundance, a Cavite-specific capture, or a legal boundary. See `calabarzon-cas-manila-bay-record-screen-20261024.json` for the occurrence IDs, dates, localities, coordinate uncertainty and dispositions.
 
-Next, review the original Tayabas River article/table and its reuse terms, then continue the CALABARZON coverage-and-gap review before advancing to NCR.
+The Tayabas River access and open-data findings are recorded in the next section; they do not close CALABARZON coverage.
+
+## Tayabas River access and open-data check -- 24 October 2026
+
+The official [SEAFDEC/AQD repository record](https://repository.seafdec.org.ph/handle/10862/2236?locale-attribute=en&show=full) and [UPLB repository record](https://www.ukdr.uplb.edu.ph/journal-articles/2086/) confirm the Paller et al. study metadata: three stream sections sampled in wet and dry seasons of 2010, 1,070 individuals, and 15 aggregate species across eight families. SEAFDEC lists no file for its item; UPLB says its copy is unavailable. Direct requests to the [PJS article](https://philjournalsci.dost.gov.ph/diversity-and-distribution-of-freshwater-fish-assemblages-in-tayabas-river-quezon-philippines/) and publisher PDF returned 403, so the original table was not reviewed.
+
+The current [PJS author guide](https://philjournalsci.dost.gov.ph/authors-guide/) says accepted authors sign a copyright-transfer form, but that does not establish item-specific reuse rights for this 2013 paper. A bounded [GBIF fish occurrence search](https://api.gbif.org/v1/occurrence/search) for `Tayabas River`, `Tayabas`, and `Tayabas Quezon` returned zero rows for each query. These exact-text zeroes are search gaps, not evidence that fish are absent.
+
+No species names were extracted, no waterbody geometry or reach coordinates were verified, and no species assertion was admitted. The study remains historical aggregate metadata only. Review details and response hashes are in `calabarzon-tayabas-river-source-review-20261024.json`; response snapshots remain in ignored local research storage.

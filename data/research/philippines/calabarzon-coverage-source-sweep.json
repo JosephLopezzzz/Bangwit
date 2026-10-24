@@ -116,6 +116,7 @@
   "sources": [
     {
       "sourceId": "paller-2013-tayabas-river-fish",
+      "reviewFile": "calabarzon-tayabas-river-source-review-20261024.json",
       "waterbodyIds": [
         "ph-wb-tayabas-river"
       ],
@@ -131,10 +132,15 @@
         "species": 15,
         "families": 8
       },
-      "accessReview": "Official PJS/SEAFDEC metadata and abstract were readable through indexed source results. Direct publisher page/PDF requests returned 403 during review; SEAFDEC item metadata lists no associated file. No original PDF or Table 1 was acquired for this batch.",
-      "reuseReview": "No item-specific reuse license was verified. The PJS author guide says accepted authors sign a copyright-transfer form, but that current policy does not establish the exact rights for this 2013 article. Open-access visibility is not treated as table-reuse permission.",
-      "decision": "hold-species-table-extraction-pending-original-access-and-item-rights",
+      "accessReview": "SEAFDEC and UPLB institutional records expose the abstract, but SEAFDEC lists no associated file and UPLB says the document is unavailable. Direct PJS article and PDF requests returned 403; a bounded three-string GBIF fish search returned zero rows.",
+      "reuseReview": "No item-specific reuse license or agreement was verified. The PJS author guide describes a copyright-transfer form for accepted manuscripts but does not establish this 2013 article's exact rights.",
+      "decision": "metadata-and-aggregate-historical-lead-only;table-unavailable;rights-unresolved;GBIF-locality-zero",
       "admittedAssertions": 0,
+      "openDataAlternative": {
+        "queries": 3,
+        "returnedFishRecords": 0,
+        "notAnAbsenceClaim": true
+      },
       "limits": [
         "The abstract's three stream sections are not precise site coordinates or river-wide geometry.",
         "2010 sampling is historical and not a current-presence report.",
@@ -295,6 +301,36 @@
     ]
   },
   "additionalOpenDataFollowUps": [
+    {
+      "provider": "GBIF public Occurrence API",
+      "reviewFile": "calabarzon-tayabas-river-source-review-20261024.json",
+      "checkedOn": "2026-10-24",
+      "waterbodyIds": [
+        "ph-wb-tayabas-river"
+      ],
+      "searches": [
+        {
+          "locality": "Tayabas River",
+          "classKey": 204,
+          "records": 0
+        },
+        {
+          "locality": "Tayabas",
+          "classKey": 204,
+          "records": 0
+        },
+        {
+          "locality": "Tayabas Quezon",
+          "classKey": 204,
+          "records": 0
+        }
+      ],
+      "reviewedRecords": 0,
+      "fishRecordsInReturnedRows": 0,
+      "fishAssertionsAdmitted": 0,
+      "publicProjection": false,
+      "decision": "bounded-three-string-zero-result;not-an-absence-claim"
+    },
     {
       "provider": "GBIF public occurrence API",
       "reviewFile": "caliraya-lumot-gbif-source-review.json",
@@ -573,7 +609,7 @@
     }
   ],
   "regionalGapSummary": {
-    "freshwater": "The four 1933 Pansipit River GBIF specimens support historical locality evidence only. Tayabas River remains a strong historical study lead, but the original species table and article-specific reuse terms remain unverified. Laguna de Bay's NFRDI-LLDA assessment is a future source opportunity, not current data.",
+    "freshwater": "The four 1933 Pansipit River GBIF specimens support historical locality evidence only. Tayabas River's official metadata describes a 2010 wet/dry survey of three reaches and 15 aggregate species, but the original table is unavailable, item-specific rights remain unverified, and three bounded GBIF fish-locality queries returned zero; none of these zeroes establishes absence. Laguna de Bay's NFRDI-LLDA assessment is a future source opportunity, not current data.",
     "marine": "The full NFRDI Manila Bay trawl paper is acquired and reviewed, including a historic Cavite-group table summary; item-specific reuse rights and station georeferencing remain open, so zero species assertions are admitted. Balayan/Calatagan remains a metadata/poster lead. A 2020-2022 NFRDI Batangas Bay poster now provides a held ten-taxon source lead; its no-ranking footer and missing item-specific reuse terms prevent app admission. An exact GBIF Batangas Bay fish-locality query returned zero and is retained only as a bounded gap.",
     "brackishEstuarine": "The five existing held leads still yield zero admitted assertions. No new source in this sweep verifies fish identities joined to measured station salinity under reusable terms.",
     "smallLakesWetlandsReservoirs": "A historical survey source now covers all seven named San Pablo crater lakes, but item-specific reuse rights block per-lake species rows. The 2022 Caliraya/Lumot abstract has been checked in an alternate volume PDF; it still lacks the complete species table and exact field dates, with all-rights-reserved terms. A 2014 Tikub Lake fish survey is now identified for the Ticub/Tikub scope lead, but item-specific rights are unverified and its table remains held. The bounded Caliraya/Lumot GBIF check found four copepod specimens at Caliraya and no fish record in that result; the Lumot exact-name searches and Ticub/Tikub string queries returned zero. Reservoir coverage remains open.",
@@ -581,7 +617,7 @@
   },
   "nextActions": [
     "Continue with sources whose full table and item-specific reuse terms can be checked without login or access-control bypass; do not wait for NAMRIA or other email replies.",
-    "Prioritize the original Tayabas River article/table and NFRDI Pansipit report for access and rights review; keep the latter separate from the CC0 museum specimens and preserve its landing-center scope.",
+    "Tayabas River metadata, access limits, rights status and three GBIF locality searches are recorded; keep species rows held and pursue only an authorized table or independently reusable location-matched freshwater records. NFRDI's 2019 Pansipit aggregate is recorded separately from CC0 museum specimens; the 2023 landing-center full report remains login-gated.",
     "Seek item-specific permission for the 2017 Manila Bay table and a source-ready station dataset/map; do not turn the Cavite-group summary into current presence or a municipal-water boundary.",
     "Balayan/Calatagan's poster is now visually reviewed: its tenth label is Sardinella lemuru, but item-specific rights and taxonomic/locality review remain open; do not republish the image or imply ranking.",
     "Seek item-specific rights clarification or an eligible alternative dataset for the seven San Pablo lakes; continue named small-lake, wetland and reservoir sources beyond that study.",
