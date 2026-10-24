@@ -22,7 +22,10 @@ test("North Luzon barcode source retains its reported cross-region and freshwate
 test("CC BY-NC-ND article tables remain untranscribed and outside app admission", () => {
   assert.equal(review.source.license, "CC BY-NC-ND 4.0");
   assert.equal(review.coverageAndAdmission.tableRowsReviewed, 0);
-  assert.equal(review.coverageAndAdmission.genbankRecordsReviewed, 0);
+  assert.equal(review.coverageAndAdmission.genbankRecordsReviewed, 4);
+  assert.equal(review.genbankRecordSpotCheck.records.length, 4);
+  assert.ok(review.genbankRecordSpotCheck.records.every(({ reportedLocation, latitudeLongitude }) => reportedLocation === "Philippines" && latitudeLongitude === null));
+  assert.match(review.genbankRecordSpotCheck.interpretation, /not enough to assign an occurrence/);
   assert.equal(review.coverageAndAdmission.publicSpeciesAssertionsAdded, 0);
   assert.equal(review.coverageAndAdmission.appProjectionsAdded, 0);
   assert.equal(review.coverageAndAdmission.regionalReleaseApproved, false);
@@ -33,5 +36,5 @@ test("CC BY-NC-ND article tables remain untranscribed and outside app admission"
   assert.ok(source.access.reviewFiles.includes("central-luzon-north-luzon-dna-barcoding-source-review-20261024.json"));
   assert.equal(checkpoint.northLuzonBarcodeSourceReviewFile, "central-luzon-north-luzon-dna-barcoding-source-review-20261024.json");
   assert.equal(checkpoint.status, "discovery-checkpoint-incomplete");
-  assert.match(checkpoint.nextStep.action, /GenBank accession records/);
+  assert.match(checkpoint.nextStep.action, /four GenBank spot checks/i);
 });

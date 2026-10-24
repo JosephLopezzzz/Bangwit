@@ -27,8 +27,52 @@
   "accessReview": {
     "publisherArticlePage": "Publisher-indexed article text and abstract reviewed; a live open attempt redirected to an inaccessible authorization endpoint during the 2026-10-24 recheck.",
     "supplementaryWorkbook": "Not downloaded or transcribed. Its contents and any data-specific terms have not been independently reviewed.",
-    "genbankRecords": "Accession records were not fetched or crosswalked in this batch.",
+    "genbankRecords": "Four accession endpoints were screened directly through NCBI EFetch: PP355131.1, PP461061.1, PP456720.1 and PP697971.1. The raw sequence strings were not retained.",
     "reuseDisposition": "The article license permits noncommercial sharing of unadapted material but excludes adapted material. No species table or supplementary row is copied into this review. Obtain rights-holder clarification before creating or publishing an adapted species/locality dataset from the article tables."
+  },
+  "genbankRecordSpotCheck": {
+    "checkedOn": "2026-10-24",
+    "method": "NCBI EFetch nuccore GenBank flat-file request for four accession/version identifiers spanning the reported COI and 12S accession intervals.",
+    "records": [
+      {
+        "accessionVersion": "PP355131.1",
+        "sourceOrganismLabel": "Belobranchus segura",
+        "voucher": "DOS09877",
+        "collectionDate": "2023-06-20",
+        "reportedLocation": "Philippines",
+        "latitudeLongitude": null,
+        "submitterCitationNote": "GenBank lists a different author group and an unpublished title about specimen-based records; hold the relationship to the 2025 study and its specimen identity for reconciliation."
+      },
+      {
+        "accessionVersion": "PP461061.1",
+        "sourceOrganismLabel": "Carassius auratus",
+        "voucher": "DOS09208-1",
+        "collectionDate": "2023-01-14",
+        "reportedLocation": "Philippines",
+        "latitudeLongitude": null,
+        "submitterCitationNote": "The record provides country-level location, not a province, named waterbody or capture site."
+      },
+      {
+        "accessionVersion": "PP456720.1",
+        "sourceOrganismLabel": "Gymnothorax prismodon",
+        "voucher": "DOS09026-1",
+        "collectionDate": "2023-01-11",
+        "reportedLocation": "Philippines",
+        "latitudeLongitude": null,
+        "submitterCitationNote": "The record provides country-level location, not a province, named waterbody or capture site."
+      },
+      {
+        "accessionVersion": "PP697971.1",
+        "sourceOrganismLabel": "Gobiopterus lacustris",
+        "voucher": "DOS09217-2 12S",
+        "collectionDate": "2023-01-15",
+        "reportedLocation": "Philippines",
+        "latitudeLongitude": null,
+        "submitterCitationNote": "The record provides country-level location, not a province, named waterbody or capture site."
+      }
+    ],
+    "interpretation": "All four checked records expose a specimen voucher and collection date but only a Philippines-level location, with no latitude/longitude qualifier. This is not enough to assign an occurrence to Aurora, Cagayan, Zambales, a river, or a coastal capture point. The sample is a spot check, not a review of every accession.",
+    "termsNote": "NCBI states that it places no restrictions on GenBank data use, while warning that submitters may claim rights in some data. This general policy is not a record-specific rights determination."
   },
   "evidenceLimits": [
     "The field work occurred in 2023; it does not establish present-day occurrence.",
@@ -39,11 +83,11 @@
   ],
   "coverageAndAdmission": {
     "tableRowsReviewed": 0,
-    "genbankRecordsReviewed": 0,
+    "genbankRecordsReviewed": 4,
     "independentlyVerifiedSpecimenIdentities": 0,
     "publicSpeciesAssertionsAdded": 0,
     "appProjectionsAdded": 0,
     "regionalReleaseApproved": false
   },
-  "nextStep": "Check whether GenBank records and their individual metadata can be reviewed under their own access terms without adapting the CC BY-NC-ND article tables; separately seek rights-holder clarification for table reuse. Then continue Central Luzon source discovery in Bulacan and Tarlac and obtain site-specific evidence for Aurora and Zambales."
+  "nextStep": "Continue Central Luzon discovery with primary site-specific freshwater, wetland, brackish and coastal studies in Bulacan and Tarlac, and obtain locality-resolved evidence for Aurora and Zambales. The four GenBank spot checks were only country-level and cannot be assigned to these provinces or waterbodies. Seek rights-holder clarification before using the article's CC BY-NC-ND supplementary tables."
 }
