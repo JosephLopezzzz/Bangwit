@@ -6,13 +6,13 @@
   "regionName": "Region IV-A (CALABARZON)",
   "status": "checkpoint-published-incomplete-baseline",
   "inputHashes": {
-    "scopeSha256": "a79546517da6a3e62833bae847a7e78f7b953a19af7aa08bbf5e9508ea70c7f0"
+    "scopeSha256": "8080a3b2d028eb443afca241ec871a969fbac52b661e80cd944a4081368a1555"
   },
   "decision": "Keep CALABARZON visibly in progress. This checkpoint records the current source-backed leads and specific gaps; it is not a complete fish checklist, a completed region, or a public species release.",
   "coverageSummary": {
-    "namedWaterbodyLeads": 50,
-    "distinctSourceReferencesAssigned": 42,
-    "sourceAssignments": 122,
+    "namedWaterbodyLeads": 51,
+    "distinctSourceReferencesAssigned": 43,
+    "sourceAssignments": 124,
     "registeredSources": 125,
     "provincesWithLeads": 5,
     "separateCityCoverageUnits": 1,
@@ -20,7 +20,7 @@
       "bay": 7,
       "estuary": 2,
       "lake": 19,
-      "reservoir": 3,
+      "reservoir": 4,
       "river": 9,
       "stream": 2,
       "wetland": 8
@@ -29,7 +29,7 @@
     "boundaryGeometryValidated": 0,
     "fishEvidenceStatusCounts": {
       "historical-trawl-source-review-and-bounded-OBIS-discovery; no-new-species-assertions-admitted": 1,
-      "not-reviewed": 17,
+      "not-reviewed": 18,
       "bounded-GBIF-locality-query-zero-no-absence-inferred": 5,
       "bounded-exact-locality-review-returned-four-copepod-records-and-no-fish-record": 2,
       "four-historical-species-locality-assertions-from-four-CC0-museum-records; quality-flags-retained; coordinates-held": 1,
@@ -43,7 +43,7 @@
       "bounded-COLXR-Actinopterygii-waterBody-and-locality-text-screen-zero; no-fish-absence-inferred": 11
     },
     "waterbodyReviewStatusCounts": {
-      "research-queued": 19,
+      "research-queued": 20,
       "bounded-GBIF-locality-string-checked-no-records-returned": 5,
       "historical-specimen-evidence-reviewed; regional-baseline-incomplete": 1,
       "one-historical-specimen-assertion-reviewed; regional-baseline-incomplete": 1,
@@ -55,10 +55,10 @@
       "source-reviewed-with-rights-and-locality-gaps": 1,
       "bounded-COLXR-Actinopterygii-waterBody-and-locality-text-screen-zero-no-absence-inferred": 11
     },
-    "leadsStillResearchQueued": 19,
-    "unknownSalinityLeads": 45,
+    "leadsStillResearchQueued": 20,
+    "unknownSalinityLeads": 46,
     "salinityClassificationsByWaterbody": {
-      "unknown": 45,
+      "unknown": 46,
       "freshwater": 4,
       "marine": 1
     },
@@ -97,7 +97,8 @@
       "Brackish and estuarine leads: no admitted assertions tied to reviewed station salinity.",
       "Several rivers, lakes, bays, wetlands, reservoirs and streams remain unreviewed or have only bounded locality-string checks.",
       "Dagatan Lake: a DENR plan lists five local fish names, but no scientific identities, specimens or fish sampling date; item-level reuse terms and current protection status are unresolved.",
-      "The 11 new BMB/DENR CALABARZON water/habitat leads had 32 exact-name GBIF Actinopterygii searches across waterBody/locality fields (including five candidate spelling variants); all returned zero. This is a bounded discovery gap, not evidence of fish absence."
+      "The 11 new BMB/DENR CALABARZON water/habitat leads had 32 exact-name GBIF Actinopterygii searches across waterBody/locality fields (including five candidate spelling variants); all returned zero. This is a bounded discovery gap, not evidence of fish absence.",
+      "SEAFDEC 2016 Table 2 identifies a Bal-on Reservoir site and NIFEP group activities for several CALABARZON waters, but the San Pablo/Tadlak grouping is not allocated to individual lakes and six Rizal river sanctuaries are unnamed. The table gives no contemporary species survey."
     ],
     "zeroResultMeaning": "Exact-locality zeroes are bounded search gaps, not fish-absence findings. Waterbird monitoring and historical common-name lists are not species-level fish presence evidence."
   },
@@ -106,7 +107,7 @@
       "id": "scope-not-exhaustive",
       "status": "open",
       "count": null,
-      "reason": "Fifty selected named water/habitat leads are seeded, including 15 San Pablo/Tayabas/Quezon lake leads, source-named rivers, estuaries, reservoirs, coastal habitats and wetlands. The 2019 BMB inventory and 2024 DENR roadmap are partial, differently classified historical lists; neither establishes today's complete waterbody denominator. Eleven additions have now received a bounded GBIF Actinopterygii waterBody/locality text screen; this does not make the inventory or fish coverage complete.",
+      "reason": "Fifty selected named water/habitat leads are seeded, including 15 San Pablo/Tayabas/Quezon lake leads, source-named rivers, estuaries, reservoirs, coastal habitats and wetlands. The 2019 BMB inventory and 2024 DENR roadmap are partial, differently classified historical lists; neither establishes today's complete waterbody denominator. Eleven additions have now received a bounded GBIF Actinopterygii waterBody/locality text screen; this does not make the inventory or fish coverage complete. SEAFDEC 2016 adds a Bal-on Reservoir locality lead and six unnamed Rizal river-sanctuary sites; the grouped program table is not a complete waterbody inventory.",
       "nextAction": "Continue source-derived locality and feature-identity review across all CALABARZON water types; resolve the DENR 2021 aggregate counts and obtain a named, auditable inventory before claiming complete regional coverage."
     },
     {
@@ -367,7 +368,8 @@
         "llda-annual-report-2022",
         "nfrdi-llda-2025-laguna-assessment",
         "sorgon-2025-laguna-tinfoil-barb",
-        "denr-bmb-philchm-inland-wetlands-2019"
+        "denr-bmb-philchm-inland-wetlands-2019",
+        "seafdec-palmaa-bartolome-2016-fish-for-the-people"
       ]
     },
     {
@@ -882,6 +884,19 @@
         "denr-bmb-philchm-inland-wetlands-2019",
         "denr-calabarzon-wetlands-2024",
         "gbif-occurrence-downloads"
+      ]
+    },
+    {
+      "id": "ph-wb-bal-on-reservoir-quezon",
+      "name": "Bal-on Reservoir",
+      "kind": "reservoir",
+      "salinity": "unknown",
+      "fishEvidenceStatus": "not-reviewed",
+      "reviewStatus": "research-queued",
+      "boundaryStatus": "not-delineated",
+      "publicAdmission": false,
+      "sourceRefs": [
+        "seafdec-palmaa-bartolome-2016-fish-for-the-people"
       ]
     }
   ],

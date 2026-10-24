@@ -15,7 +15,7 @@ const [report, scope, sweep, sourceRegistry, scopeBytes] = await Promise.all([
 test("CALABARZON checkpoint reports its gaps without claiming a complete region", () => {
   assert.equal(report.status, "checkpoint-published-incomplete-baseline");
   assert.equal(report.regionId, scope.regionId);
-  assert.equal(report.coverageSummary.namedWaterbodyLeads, 50);
+  assert.equal(report.coverageSummary.namedWaterbodyLeads, 51);
   assert.equal(report.coverageSummary.registeredSources, 125);
   assert.equal(sourceRegistry.sourceCount, sourceRegistry.sources.length);
   assert.ok(sourceRegistry.sourceCount >= report.coverageSummary.registeredSources);
@@ -28,15 +28,15 @@ test("CALABARZON checkpoint reports its gaps without claiming a complete region"
     bay: 7,
     estuary: 2,
     lake: 19,
-    reservoir: 3,
+    reservoir: 4,
     river: 9,
     stream: 2,
     wetland: 8,
   });
-  assert.equal(report.coverageSummary.leadsStillResearchQueued, 19);
-  assert.equal(report.coverageSummary.unknownSalinityLeads, 45);
-  assert.equal(report.coverageSummary.sourceAssignments, 122);
-  assert.equal(report.coverageSummary.distinctSourceReferencesAssigned, 42);
+  assert.equal(report.coverageSummary.leadsStillResearchQueued, 20);
+  assert.equal(report.coverageSummary.unknownSalinityLeads, 46);
+  assert.equal(report.coverageSummary.sourceAssignments, 124);
+  assert.equal(report.coverageSummary.distinctSourceReferencesAssigned, 43);
   assert.equal(report.inputHashes.scopeSha256, createHash("sha256").update(scopeBytes).digest("hex"));
   assert.deepEqual(
     report.waterbodySnapshot,

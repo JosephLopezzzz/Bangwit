@@ -72,14 +72,14 @@
     "limits": "Province plus separate-city starter coverage. Municipalities/component cities and each island/waterbody still require the source-sweep inventory; this is not a completed regional inventory."
   },
   "counts": {
-    "waterbodyResearchLeads": 50,
+    "waterbodyResearchLeads": 51,
     "provincesWithLeads": 5,
     "separateCityCoverageUnits": 1,
     "byKind": {
       "bay": 7,
       "estuary": 2,
       "lake": 19,
-      "reservoir": 3,
+      "reservoir": 4,
       "river": 9,
       "stream": 2,
       "wetland": 8
@@ -569,7 +569,8 @@
           "sourceRefs": [
             "llda-masterplan-tor-2024",
             "llda-annual-report-2022",
-            "denr-bmb-philchm-inland-wetlands-2019"
+            "denr-bmb-philchm-inland-wetlands-2019",
+            "seafdec-palmaa-bartolome-2016-fish-for-the-people"
           ],
           "provinceId": "0403400000"
         },
@@ -578,7 +579,8 @@
           "relationship": "source-described-locality",
           "sourceRefs": [
             "llda-masterplan-tor-2024",
-            "llda-annual-report-2022"
+            "llda-annual-report-2022",
+            "seafdec-palmaa-bartolome-2016-fish-for-the-people"
           ],
           "provinceId": "0405800000"
         },
@@ -595,7 +597,8 @@
         "llda-annual-report-2022",
         "nfrdi-llda-2025-laguna-assessment",
         "sorgon-2025-laguna-tinfoil-barb",
-        "denr-bmb-philchm-inland-wetlands-2019"
+        "denr-bmb-philchm-inland-wetlands-2019",
+        "seafdec-palmaa-bartolome-2016-fish-for-the-people"
       ],
       "identityStatus": "source-named-research-lead",
       "boundaryStatus": "not-delineated",
@@ -605,7 +608,7 @@
       "evidenceBatchRefs": [
         "laguna-de-bay-tinfoil-barb-20261023"
       ],
-      "scopeNote": "Shared lake. One 2024 preserved specimen is reported from a fisherfolk catch and associated with Laguna de Bay; the official 2026 corrigendum corrects the locality to Brgy. Calahan, Cardona, Rizal. Article text gives no capture coordinates; its sampling-location figure is not georeferenced in the app. Basin/jurisdiction membership is broader than the lake; Cavite/Batangas/Quezon basin membership is not a lake-surface assertion."
+      "scopeNote": "Shared lake. One 2024 preserved specimen is reported from a fisherfolk catch and associated with Laguna de Bay; the official 2026 corrigendum corrects the locality to Brgy. Calahan, Cardona, Rizal. Article text gives no capture coordinates; its sampling-location figure is not georeferenced in the app. Basin/jurisdiction membership is broader than the lake; Cavite/Batangas/Quezon basin membership is not a lake-surface assertion. SEAFDEC 2016 Table 2 lists Laguna de Bay, Rizal, for municipal fish-sanctuary maintenance and invasive-species control in the NIFEP program; this is historical management context, not a local fish list or present-day fishing/safety notice."
     },
     {
       "id": "ph-wb-caliraya-reservoir",
@@ -1853,6 +1856,36 @@
       "reviewStatus": "bounded-COLXR-Actinopterygii-waterBody-and-locality-text-screen-zero-no-absence-inferred",
       "publicAdmission": false,
       "scopeNote": "BMB 2019: Lopez, Quezon. BMB reports 99.18 ha and classifies it as Peatland. No boundary or aquatic fauna is inferred. Bounded GBIF exact source-name searches of waterBody and locality under the COL XR Actinopterygii checklist returned zero rows; these are not fish-absence evidence."
+    },
+    {
+      "id": "ph-wb-bal-on-reservoir-quezon",
+      "name": "Bal-on Reservoir",
+      "aliases": [],
+      "kind": "reservoir",
+      "salinity": {
+        "classification": "unknown",
+        "reviewStatus": "not-assessed",
+        "sourceRefs": []
+      },
+      "administrativeAssociations": [
+        {
+          "regionId": "0400000000",
+          "relationship": "source-described-locality",
+          "sourceRefs": [
+            "seafdec-palmaa-bartolome-2016-fish-for-the-people"
+          ],
+          "provinceId": "0405600000"
+        }
+      ],
+      "sourceRefs": [
+        "seafdec-palmaa-bartolome-2016-fish-for-the-people"
+      ],
+      "identityStatus": "source-named-research-lead",
+      "boundaryStatus": "not-delineated",
+      "fishEvidenceStatus": "not-reviewed",
+      "reviewStatus": "research-queued",
+      "publicAdmission": false,
+      "scopeNote": "SEAFDEC 2016 Table 2 lists Bal-on Reservoir, Quezon, as a NIFEP site for habitat restoration (program status as of 2015). It gives no municipality, fish survey, named taxa, current status or boundary."
     }
   ],
   "coverageRules": {

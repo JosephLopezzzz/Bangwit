@@ -58,7 +58,7 @@ test("Quezon wetland and Dagatan review preserves the evidence limits", () => {
   assert.match(dagatan.fishEvidenceStatus, /no assertion/);
   assert.match(dagatan.reviewStatus, /item-rights-pending/);
   assert.equal(review.dagatanLake.geometry, "not delineated");
-  assert.equal(report.coverageSummary.namedWaterbodyLeads, 50);
+  assert.equal(report.coverageSummary.namedWaterbodyLeads, 51);
   assert.equal(report.coverageSummary.regionalBaselineComplete, false);
   assert.equal(report.coverageSummary.admittedPublicRecords, 0);
   assert.equal(report.inputHashes.scopeSha256, createHash("sha256").update(scopeBytes).digest("hex"));
