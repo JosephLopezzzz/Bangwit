@@ -33,9 +33,9 @@ test("CALABARZON checkpoint reports its gaps without claiming a complete region"
     stream: 2,
     wetland: 8,
   });
-  assert.equal(report.coverageSummary.leadsStillResearchQueued, 30);
+  assert.equal(report.coverageSummary.leadsStillResearchQueued, 19);
   assert.equal(report.coverageSummary.unknownSalinityLeads, 45);
-  assert.equal(report.coverageSummary.sourceAssignments, 111);
+  assert.equal(report.coverageSummary.sourceAssignments, 122);
   assert.equal(report.coverageSummary.distinctSourceReferencesAssigned, 42);
   assert.equal(report.inputHashes.scopeSha256, createHash("sha256").update(scopeBytes).digest("hex"));
   assert.deepEqual(

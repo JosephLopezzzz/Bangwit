@@ -6,13 +6,13 @@
   "regionName": "Region IV-A (CALABARZON)",
   "status": "checkpoint-published-incomplete-baseline",
   "inputHashes": {
-    "scopeSha256": "071a311dd2d5989b78ca38e28c0670b9f8dd5ea19b9560388f8a07f703e055ff"
+    "scopeSha256": "a79546517da6a3e62833bae847a7e78f7b953a19af7aa08bbf5e9508ea70c7f0"
   },
   "decision": "Keep CALABARZON visibly in progress. This checkpoint records the current source-backed leads and specific gaps; it is not a complete fish checklist, a completed region, or a public species release.",
   "coverageSummary": {
     "namedWaterbodyLeads": 50,
     "distinctSourceReferencesAssigned": 42,
-    "sourceAssignments": 111,
+    "sourceAssignments": 122,
     "registeredSources": 125,
     "provincesWithLeads": 5,
     "separateCityCoverageUnits": 1,
@@ -29,7 +29,7 @@
     "boundaryGeometryValidated": 0,
     "fishEvidenceStatusCounts": {
       "historical-trawl-source-review-and-bounded-OBIS-discovery; no-new-species-assertions-admitted": 1,
-      "not-reviewed": 28,
+      "not-reviewed": 17,
       "bounded-GBIF-locality-query-zero-no-absence-inferred": 5,
       "bounded-exact-locality-review-returned-four-copepod-records-and-no-fish-record": 2,
       "four-historical-species-locality-assertions-from-four-CC0-museum-records; quality-flags-retained; coordinates-held": 1,
@@ -39,10 +39,11 @@
       "one historical Gulaphallus mirabilis locality assertion from three CC0 museum occurrence records; dates and coordinates absent": 1,
       "historical-common-fish-name-list; taxonomy-and-date-unresolved; no assertion": 1,
       "12-survey-table-assertions-reviewed; 3-family-conflicts-held": 1,
-      "historical-aggregate-only-table-unavailable": 1
+      "historical-aggregate-only-table-unavailable": 1,
+      "bounded-COLXR-Actinopterygii-waterBody-and-locality-text-screen-zero; no-fish-absence-inferred": 11
     },
     "waterbodyReviewStatusCounts": {
-      "research-queued": 30,
+      "research-queued": 19,
       "bounded-GBIF-locality-string-checked-no-records-returned": 5,
       "historical-specimen-evidence-reviewed; regional-baseline-incomplete": 1,
       "one-historical-specimen-assertion-reviewed; regional-baseline-incomplete": 1,
@@ -51,9 +52,10 @@
       "historical-gbif-assertion-reviewed-in-local-projection": 1,
       "historical-source-reviewed;taxonomy-and-item-rights-pending": 1,
       "partial-source-table-identity-reviewed": 1,
-      "source-reviewed-with-rights-and-locality-gaps": 1
+      "source-reviewed-with-rights-and-locality-gaps": 1,
+      "bounded-COLXR-Actinopterygii-waterBody-and-locality-text-screen-zero-no-absence-inferred": 11
     },
-    "leadsStillResearchQueued": 30,
+    "leadsStillResearchQueued": 19,
     "unknownSalinityLeads": 45,
     "salinityClassificationsByWaterbody": {
       "unknown": 45,
@@ -94,7 +96,8 @@
       "Manila Bay: historic trawl table and seven additional CAS named-bay candidates remain held; broad named-bay geometry is not a legal or Cavite boundary.",
       "Brackish and estuarine leads: no admitted assertions tied to reviewed station salinity.",
       "Several rivers, lakes, bays, wetlands, reservoirs and streams remain unreviewed or have only bounded locality-string checks.",
-      "Dagatan Lake: a DENR plan lists five local fish names, but no scientific identities, specimens or fish sampling date; item-level reuse terms and current protection status are unresolved."
+      "Dagatan Lake: a DENR plan lists five local fish names, but no scientific identities, specimens or fish sampling date; item-level reuse terms and current protection status are unresolved.",
+      "The 11 new BMB/DENR CALABARZON water/habitat leads had 32 exact-name GBIF Actinopterygii searches across waterBody/locality fields (including five candidate spelling variants); all returned zero. This is a bounded discovery gap, not evidence of fish absence."
     ],
     "zeroResultMeaning": "Exact-locality zeroes are bounded search gaps, not fish-absence findings. Waterbird monitoring and historical common-name lists are not species-level fish presence evidence."
   },
@@ -103,7 +106,7 @@
       "id": "scope-not-exhaustive",
       "status": "open",
       "count": null,
-      "reason": "Fifty selected named water/habitat leads are seeded, including 15 San Pablo/Tayabas/Quezon lake leads, source-named rivers, estuaries, reservoirs, coastal habitats and wetlands. The 2019 BMB inventory and 2024 DENR roadmap are partial, differently classified historical lists; neither establishes today's complete waterbody denominator.",
+      "reason": "Fifty selected named water/habitat leads are seeded, including 15 San Pablo/Tayabas/Quezon lake leads, source-named rivers, estuaries, reservoirs, coastal habitats and wetlands. The 2019 BMB inventory and 2024 DENR roadmap are partial, differently classified historical lists; neither establishes today's complete waterbody denominator. Eleven additions have now received a bounded GBIF Actinopterygii waterBody/locality text screen; this does not make the inventory or fish coverage complete.",
       "nextAction": "Continue source-derived locality and feature-identity review across all CALABARZON water types; resolve the DENR 2021 aggregate counts and obtain a named, auditable inventory before claiming complete regional coverage."
     },
     {
@@ -141,7 +144,7 @@
       "id": "fish-coverage",
       "status": "open",
       "count": 50,
-      "reason": "Regional fish coverage remains incomplete across 50 selected research leads. Historical lists and the SEAFDEC Dagatan stocking-context figures are not converted to accepted local species assertions.",
+      "reason": "Regional fish coverage remains incomplete across 50 selected research leads. Historical lists and the SEAFDEC Dagatan stocking-context figures are not converted to accepted local species assertions. Thirty-two exact-name GBIF COL XR fish screens on the 11 recent BMB/DENR additions also returned zero; no absence is inferred.",
       "nextAction": "Join only independently reviewed evidence at its supported geographic scale."
     },
     {
@@ -727,12 +730,13 @@
       "name": "Yellow Lake",
       "kind": "lake",
       "salinity": "unknown",
-      "fishEvidenceStatus": "not-reviewed",
-      "reviewStatus": "research-queued",
+      "fishEvidenceStatus": "bounded-COLXR-Actinopterygii-waterBody-and-locality-text-screen-zero; no-fish-absence-inferred",
+      "reviewStatus": "bounded-COLXR-Actinopterygii-waterBody-and-locality-text-screen-zero-no-absence-inferred",
       "boundaryStatus": "not-delineated",
       "publicAdmission": false,
       "sourceRefs": [
-        "denr-bmb-philchm-inland-wetlands-2019"
+        "denr-bmb-philchm-inland-wetlands-2019",
+        "gbif-occurrence-downloads"
       ]
     },
     {
@@ -740,13 +744,14 @@
       "name": "Lake Pagatan",
       "kind": "lake",
       "salinity": "unknown",
-      "fishEvidenceStatus": "not-reviewed",
-      "reviewStatus": "research-queued",
+      "fishEvidenceStatus": "bounded-COLXR-Actinopterygii-waterBody-and-locality-text-screen-zero; no-fish-absence-inferred",
+      "reviewStatus": "bounded-COLXR-Actinopterygii-waterBody-and-locality-text-screen-zero-no-absence-inferred",
       "boundaryStatus": "not-delineated",
       "publicAdmission": false,
       "sourceRefs": [
         "denr-bmb-philchm-inland-wetlands-2019",
-        "denr-calabarzon-wetlands-2024"
+        "denr-calabarzon-wetlands-2024",
+        "gbif-occurrence-downloads"
       ]
     },
     {
@@ -754,13 +759,14 @@
       "name": "Gunaw Lake",
       "kind": "lake",
       "salinity": "unknown",
-      "fishEvidenceStatus": "not-reviewed",
-      "reviewStatus": "research-queued",
+      "fishEvidenceStatus": "bounded-COLXR-Actinopterygii-waterBody-and-locality-text-screen-zero; no-fish-absence-inferred",
+      "reviewStatus": "bounded-COLXR-Actinopterygii-waterBody-and-locality-text-screen-zero-no-absence-inferred",
       "boundaryStatus": "not-delineated",
       "publicAdmission": false,
       "sourceRefs": [
         "denr-bmb-philchm-inland-wetlands-2019",
-        "denr-calabarzon-wetlands-2024"
+        "denr-calabarzon-wetlands-2024",
+        "gbif-occurrence-downloads"
       ]
     },
     {
@@ -768,12 +774,13 @@
       "name": "Pudaw Lake",
       "kind": "lake",
       "salinity": "unknown",
-      "fishEvidenceStatus": "not-reviewed",
-      "reviewStatus": "research-queued",
+      "fishEvidenceStatus": "bounded-COLXR-Actinopterygii-waterBody-and-locality-text-screen-zero; no-fish-absence-inferred",
+      "reviewStatus": "bounded-COLXR-Actinopterygii-waterBody-and-locality-text-screen-zero-no-absence-inferred",
       "boundaryStatus": "not-delineated",
       "publicAdmission": false,
       "sourceRefs": [
-        "denr-calabarzon-wetlands-2024"
+        "denr-calabarzon-wetlands-2024",
+        "gbif-occurrence-downloads"
       ]
     },
     {
@@ -781,12 +788,13 @@
       "name": "Lake Podon",
       "kind": "lake",
       "salinity": "unknown",
-      "fishEvidenceStatus": "not-reviewed",
-      "reviewStatus": "research-queued",
+      "fishEvidenceStatus": "bounded-COLXR-Actinopterygii-waterBody-and-locality-text-screen-zero; no-fish-absence-inferred",
+      "reviewStatus": "bounded-COLXR-Actinopterygii-waterBody-and-locality-text-screen-zero-no-absence-inferred",
       "boundaryStatus": "not-delineated",
       "publicAdmission": false,
       "sourceRefs": [
-        "denr-bmb-philchm-inland-wetlands-2019"
+        "denr-bmb-philchm-inland-wetlands-2019",
+        "gbif-occurrence-downloads"
       ]
     },
     {
@@ -794,13 +802,14 @@
       "name": "Tadlac Lake",
       "kind": "lake",
       "salinity": "unknown",
-      "fishEvidenceStatus": "not-reviewed",
-      "reviewStatus": "research-queued",
+      "fishEvidenceStatus": "bounded-COLXR-Actinopterygii-waterBody-and-locality-text-screen-zero; no-fish-absence-inferred",
+      "reviewStatus": "bounded-COLXR-Actinopterygii-waterBody-and-locality-text-screen-zero-no-absence-inferred",
       "boundaryStatus": "not-delineated",
       "publicAdmission": false,
       "sourceRefs": [
         "denr-bmb-philchm-inland-wetlands-2019",
-        "denr-calabarzon-wetlands-2024"
+        "denr-calabarzon-wetlands-2024",
+        "gbif-occurrence-downloads"
       ]
     },
     {
@@ -808,12 +817,13 @@
       "name": "Patola Lake",
       "kind": "lake",
       "salinity": "unknown",
-      "fishEvidenceStatus": "not-reviewed",
-      "reviewStatus": "research-queued",
+      "fishEvidenceStatus": "bounded-COLXR-Actinopterygii-waterBody-and-locality-text-screen-zero; no-fish-absence-inferred",
+      "reviewStatus": "bounded-COLXR-Actinopterygii-waterBody-and-locality-text-screen-zero-no-absence-inferred",
       "boundaryStatus": "not-delineated",
       "publicAdmission": false,
       "sourceRefs": [
-        "denr-calabarzon-wetlands-2024"
+        "denr-calabarzon-wetlands-2024",
+        "gbif-occurrence-downloads"
       ]
     },
     {
@@ -821,12 +831,13 @@
       "name": "Olo-olo Mangrove Forest",
       "kind": "wetland",
       "salinity": "unknown",
-      "fishEvidenceStatus": "not-reviewed",
-      "reviewStatus": "research-queued",
+      "fishEvidenceStatus": "bounded-COLXR-Actinopterygii-waterBody-and-locality-text-screen-zero; no-fish-absence-inferred",
+      "reviewStatus": "bounded-COLXR-Actinopterygii-waterBody-and-locality-text-screen-zero-no-absence-inferred",
       "boundaryStatus": "not-delineated",
       "publicAdmission": false,
       "sourceRefs": [
-        "denr-calabarzon-wetlands-2024"
+        "denr-calabarzon-wetlands-2024",
+        "gbif-occurrence-downloads"
       ]
     },
     {
@@ -834,13 +845,14 @@
       "name": "Wawa Dam",
       "kind": "reservoir",
       "salinity": "unknown",
-      "fishEvidenceStatus": "not-reviewed",
-      "reviewStatus": "research-queued",
+      "fishEvidenceStatus": "bounded-COLXR-Actinopterygii-waterBody-and-locality-text-screen-zero; no-fish-absence-inferred",
+      "reviewStatus": "bounded-COLXR-Actinopterygii-waterBody-and-locality-text-screen-zero-no-absence-inferred",
       "boundaryStatus": "not-delineated",
       "publicAdmission": false,
       "sourceRefs": [
         "denr-bmb-philchm-inland-wetlands-2019",
-        "denr-calabarzon-wetlands-2024"
+        "denr-calabarzon-wetlands-2024",
+        "gbif-occurrence-downloads"
       ]
     },
     {
@@ -848,12 +860,13 @@
       "name": "Maragondon Seagrass Beds",
       "kind": "wetland",
       "salinity": "unknown",
-      "fishEvidenceStatus": "not-reviewed",
-      "reviewStatus": "research-queued",
+      "fishEvidenceStatus": "bounded-COLXR-Actinopterygii-waterBody-and-locality-text-screen-zero; no-fish-absence-inferred",
+      "reviewStatus": "bounded-COLXR-Actinopterygii-waterBody-and-locality-text-screen-zero-no-absence-inferred",
       "boundaryStatus": "not-delineated",
       "publicAdmission": false,
       "sourceRefs": [
-        "denr-calabarzon-wetlands-2024"
+        "denr-calabarzon-wetlands-2024",
+        "gbif-occurrence-downloads"
       ]
     },
     {
@@ -861,13 +874,14 @@
       "name": "Tan-ag Ilaya Peatland",
       "kind": "wetland",
       "salinity": "unknown",
-      "fishEvidenceStatus": "not-reviewed",
-      "reviewStatus": "research-queued",
+      "fishEvidenceStatus": "bounded-COLXR-Actinopterygii-waterBody-and-locality-text-screen-zero; no-fish-absence-inferred",
+      "reviewStatus": "bounded-COLXR-Actinopterygii-waterBody-and-locality-text-screen-zero-no-absence-inferred",
       "boundaryStatus": "not-delineated",
       "publicAdmission": false,
       "sourceRefs": [
         "denr-bmb-philchm-inland-wetlands-2019",
-        "denr-calabarzon-wetlands-2024"
+        "denr-calabarzon-wetlands-2024",
+        "gbif-occurrence-downloads"
       ]
     }
   ],

@@ -41,7 +41,8 @@ test("BMB 2019 rows add historical waterbody leads without implying complete cov
     assert.equal(row.publicAdmission, false);
     assert.equal(row.boundaryStatus, "not-delineated");
     assert.equal(row.salinity.classification, "unknown");
-    assert.equal(row.fishEvidenceStatus, "not-reviewed");
+    assert.match(row.fishEvidenceStatus, /bounded-COLXR-Actinopterygii-waterBody-and-locality-text-screen-zero/);
+    assert.ok(row.sourceRefs.includes("gbif-occurrence-downloads"));
   }
 
   const tayabasDagatan = byId.get("ph-wb-dagatan-quezon-lake");
