@@ -1,0 +1,201 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-24",
+  "phaseId": "L3",
+  "regionId": "0300000000",
+  "regionName": "Region III (Central Luzon)",
+  "status": "discovery-checkpoint-incomplete",
+  "decision": "Begin scoped research for Central Luzon while NCR remains incomplete. Do not call this a complete waterbody inventory, regional fish baseline, fishing recommendation, or public release.",
+  "administrativeCoverage": {
+    "sourceFile": "administrative-registry.json",
+    "registrySnapshot": "2026-09-30",
+    "regionRegistryId": "0300000000",
+    "expectedProvinceCount": 7,
+    "provinces": [
+      { "name": "Aurora", "psgcCode": "0307700000", "sourceId": "provinces" },
+      { "name": "Bataan", "psgcCode": "0300800000", "sourceId": "provinces" },
+      { "name": "Bulacan", "psgcCode": "0301400000", "sourceId": "provinces" },
+      { "name": "Nueva Ecija", "psgcCode": "0304900000", "sourceId": "provinces" },
+      { "name": "Pampanga", "psgcCode": "0305400000", "sourceId": "provinces" },
+      { "name": "Tarlac", "psgcCode": "0306900000", "sourceId": "provinces" },
+      { "name": "Zambales", "psgcCode": "0307100000", "sourceId": "provinces" }
+    ],
+    "geometryVerified": false,
+    "crosswalkStatus": "registry-membership-pinned; hydrological geometry and municipality-to-waterbody crosswalk pending"
+  },
+  "reportedWaterbodyScope": {
+    "sourceId": "depdev-region-iii-rdp-2023-2028",
+    "sourceReportedTotal": 168,
+    "sourceReportedBreakdown": {
+      "majorAndMinorRivers": 153,
+      "lakes": 11,
+      "reservoirs": 3,
+      "swamps": 1
+    },
+    "sourceStatement": "The Regional Development Plan describes 168 wetlands using this broader grouping of rivers, lakes, reservoirs, and swamps.",
+    "accessStatus": "official search-indexed text reviewed; direct PDF request returned HTTP 403",
+    "decision": "Treat as a source-reported planning count only. The named rows, definitions, boundaries, aliases and source date have not been reconciled; this is not a verified denominator or exhaustive aquatic-habitat inventory."
+  },
+  "monitoringLead": {
+    "sourceId": "emb-r3-state-environment-2024",
+    "sourceReportedMonitoredWaterbodies": 27,
+    "scope": "Manila Bay Area within Central Luzon; the report describes regular EMB Region III monitoring.",
+    "accessStatus": "official search-indexed text reviewed; direct PDF request returned HTTP 403",
+    "decision": "Monitoring-site count is a separate subset, not a fish inventory or a substitute for the regional waterbody denominator. The individual names and monitoring tables remain unverified."
+  },
+  "waterbodyLeads": {
+    "inlandAndBrackish": [
+      {
+        "name": "Pampanga River Basin",
+        "kind": "river-basin",
+        "administrativeUnits": ["Nueva Ecija", "Pampanga", "Tarlac", "Bulacan"],
+        "sharedHydrologyNote": "The basin also extends into Quezon, Nueva Vizcaya and other adjacent areas in source descriptions; basin identity must remain separate from Region III boundaries.",
+        "sourceIds": ["nwrb-pampanga-river-basin-master-plan", "depdev-region-iii-rdp-2023-2028"],
+        "status": "named-source-lead; geometry-and-subbasin-crosswalk-pending"
+      },
+      {
+        "name": "Angat Dam / Reservoir and Angat River",
+        "kind": "reservoir-and-river",
+        "administrativeUnits": ["Bulacan"],
+        "sourceIds": ["denr-national-river-basin-summit-2022", "emb-r3-state-environment-2024"],
+        "status": "named-source-lead; separate reservoir, river-reach and downstream evidence"
+      },
+      {
+        "name": "Pantabangan Dam / Reservoir",
+        "kind": "reservoir",
+        "administrativeUnits": ["Nueva Ecija"],
+        "sourceIds": ["denr-national-river-basin-summit-2022", "pantabangan-dam-dna-fish-inventory-2026"],
+        "status": "source-lead; article abstract available; full article and row-level identities pending"
+      },
+      {
+        "name": "Candaba Wetlands / Swamp",
+        "kind": "wetland",
+        "administrativeUnits": ["Pampanga"],
+        "sourceIds": ["denr-national-river-basin-summit-2022", "silliman-nueva-ecija-pampanga-freshwater-study"],
+        "status": "named-source-lead; name variants and extent pending"
+      },
+      {
+        "name": "Sasmuan Pampanga Coastal Wetlands",
+        "kind": "coastal-wetland",
+        "administrativeUnits": ["Pampanga"],
+        "sourceIds": ["denr-national-river-basin-summit-2022"],
+        "status": "named-source-lead; extent and fish evidence pending"
+      },
+      {
+        "name": "Carranglan River watershed",
+        "kind": "watershed",
+        "administrativeUnits": ["Nueva Ecija"],
+        "sourceIds": ["pcaarrd-clsu-denr-central-luzon-watersheds-2019"],
+        "status": "watershed-monitoring-lead; not a species checklist"
+      },
+      {
+        "name": "Baler River watershed",
+        "kind": "watershed",
+        "administrativeUnits": ["Aurora"],
+        "sourceIds": ["pcaarrd-clsu-denr-central-luzon-watersheds-2019"],
+        "status": "watershed-monitoring-lead; not a species checklist"
+      },
+      {
+        "name": "Dibut River watershed",
+        "kind": "watershed",
+        "administrativeUnits": ["Aurora"],
+        "sourceIds": ["pcaarrd-clsu-denr-central-luzon-watersheds-2019"],
+        "status": "watershed-monitoring-lead; not a species checklist"
+      },
+      {
+        "name": "Abucay / Samal sub-watershed",
+        "kind": "sub-watershed",
+        "administrativeUnits": ["Bataan"],
+        "sourceIds": ["pcaarrd-clsu-denr-central-luzon-watersheds-2019"],
+        "status": "watershed-monitoring-lead; not a species checklist"
+      },
+      {
+        "name": "Almacen River",
+        "kind": "river-with-estuarine-reach",
+        "administrativeUnits": ["Bataan"],
+        "studyPeriod": "2021-12 through 2022-11",
+        "sourceIds": ["bioflux-bataan-three-rivers-fish-survey-2025"],
+        "status": "source-table-reviewed; distinguish upstream-to-downstream and tidal/brackish reaches; salinity classification pending"
+      },
+      {
+        "name": "Bagac River",
+        "kind": "river",
+        "administrativeUnits": ["Bataan"],
+        "studyPeriod": "2021-12 through 2022-11",
+        "sourceIds": ["bioflux-bataan-three-rivers-fish-survey-2025"],
+        "status": "source-table-reviewed; specific reach geometry and salinity classification pending"
+      },
+      {
+        "name": "Talisay River",
+        "kind": "river",
+        "administrativeUnits": ["Bataan"],
+        "studyPeriod": "2021-12 through 2022-11",
+        "sourceIds": ["bioflux-bataan-three-rivers-fish-survey-2025"],
+        "status": "source-table-reviewed; specific reach geometry and salinity classification pending"
+      }
+    ],
+    "coastalAndMarine": [
+      {
+        "name": "Manila Bay",
+        "kind": "shared-bay",
+        "sharedPhaseIds": ["L2", "L3", "L1"],
+        "sourceIds": ["denr-ncr-manila-bay-regional-scope"],
+        "status": "shared waterbody; never assign bay-wide records exclusively to Central Luzon"
+      },
+      {
+        "name": "Subic Bay",
+        "kind": "bay",
+        "administrativeUnits": ["Zambales", "Bataan"],
+        "sourceIds": ["nnc-region-iii-profile"],
+        "status": "coastal scope lead; exact study areas and boundary pending"
+      },
+      {
+        "name": "Dingalan Bay",
+        "kind": "bay",
+        "administrativeUnits": ["Aurora"],
+        "sourceIds": ["nnc-region-iii-profile"],
+        "status": "coastal scope lead; exact study areas and boundary pending"
+      },
+      {
+        "name": "Palauig Bay",
+        "kind": "bay",
+        "administrativeUnits": ["Zambales"],
+        "sourceIds": ["nnc-region-iii-profile"],
+        "status": "coastal scope lead; exact study areas and boundary pending"
+      },
+      {
+        "name": "Bataan and Zambales coasts",
+        "kind": "coastal-marine-area",
+        "administrativeUnits": ["Bataan", "Zambales"],
+        "sourceIds": ["nnc-region-iii-profile"],
+        "status": "coastal scope leads; fisheries studies, named habitats and study extents need separate review"
+      },
+      {
+        "name": "Aurora Pacific coast",
+        "kind": "coastal-marine-area",
+        "administrativeUnits": ["Aurora"],
+        "sourceIds": ["nnc-region-iii-profile"],
+        "status": "coastal scope lead; bays and named fishing grounds need source verification"
+      }
+    ]
+  },
+  "candidateFishEvidence": {
+    "sourceReviewFile": "central-luzon-bataan-river-table-review-20261024.json",
+    "bataanStudyTaxonRows": 52,
+    "reportedPerRiverRowCounts": { "Almacen": 42, "Bagac": 29, "Talisay": 28 },
+    "taxonomyReview": "pending; preserve source names verbatim and review rank, misspellings, hybrids and current identities",
+    "publicAssertionsPrepared": 0,
+    "regionalReleaseApproved": false
+  },
+  "coverageGaps": [
+    "The reported 168-unit planning count has not been reconciled to a named, versioned inventory.",
+    "No authoritative waterbody geometry or complete municipal/city crosswalk is validated.",
+    "Coastal, estuarine and brackish study-area identities remain incomplete.",
+    "Aurora, Bulacan, Nueva Ecija, Pampanga, Tarlac and Zambales require additional source-reviewed fish records beyond the named leads.",
+    "Regional species coverage, historical/current distinctions, taxonomy, locality precision, rights and safety information remain incomplete."
+  ],
+  "nextStep": {
+    "phaseId": "L3",
+    "action": "Independently reconcile the 52 source-table rows to current taxonomy, preserving source spellings, genus-level rows and the reported hybrid as distinct cases. Admit no row automatically; then build waterbody-scoped historical assertions only for exact, independently supported identities."
+  }
+}
