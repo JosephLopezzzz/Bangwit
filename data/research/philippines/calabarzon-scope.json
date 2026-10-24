@@ -72,17 +72,17 @@
     "limits": "Province plus separate-city starter coverage. Municipalities/component cities and each island/waterbody still require the source-sweep inventory; this is not a completed regional inventory."
   },
   "counts": {
-    "waterbodyResearchLeads": 80,
+    "waterbodyResearchLeads": 83,
     "provincesWithLeads": 5,
     "separateCityCoverageUnits": 1,
     "byKind": {
       "bay": 7,
+      "river": 40,
       "estuary": 2,
+      "wetland": 8,
       "lake": 19,
       "reservoir": 4,
-      "river": 38,
-      "stream": 2,
-      "wetland": 8
+      "stream": 3
     },
     "geometryValidated": 0,
     "speciesAssertionsImported": 6,
@@ -2570,6 +2570,15 @@
             "denr-bmb-inland-wetlands-atlas-2016"
           ],
           "provinceId": "0403400000"
+        },
+        {
+          "regionId": "0400000000",
+          "relationship": "source-described-locality",
+          "sourceRefs": [
+            "denr-bmb-inland-wetlands-atlas-2016"
+          ],
+          "provinceId": "0402100000",
+          "locality": "Dasmari?as; Silang"
         }
       ],
       "sourceRefs": [
@@ -2581,7 +2590,7 @@
       "fishEvidenceStatus": "bounded-COLXR-Actinopterygii-waterBody-and-locality-text-screen-zero; no-fish-absence-inferred",
       "reviewStatus": "bounded-COLXR-Actinopterygii-waterBody-and-locality-text-screen-zero-no-absence-inferred",
       "publicAdmission": false,
-      "scopeNote": "DENR-BMB 2016 Atlas Annex 2b names this river and reports locality context: City of Santa Rosa; text extraction reads the second locality as City of Bi?an; visual check pending. Historical inventory text only; it does not establish channel geometry, salinity, fish presence or legal/access status. The source asterisk, where printed, is unexplained. A 2026-10-24 exact GBIF waterBody/locality text screen returned zero for both fields (100-record limit); this is a bounded search gap, not fish absence."
+      "scopeNote": "DENR-BMB 2016 Atlas Annex 2b visually confirms this row across Laguna and Cavite: City of Santa Rosa; City of Biñan (Laguna); Dasmari?as; Silang (Cavite). No exact reach, geometry, salinity, fish presence or access/legal status is established. The source asterisk is unexplained. A bounded GBIF COL XR Actinopterygii exact-name screen searched waterBody and locality in PH and returned zero for both fields; this is not fish-absence evidence."
     },
     {
       "id": "ph-wb-san-cristobal-river",
@@ -2601,6 +2610,15 @@
             "denr-bmb-inland-wetlands-atlas-2016"
           ],
           "provinceId": "0403400000"
+        },
+        {
+          "regionId": "0400000000",
+          "relationship": "source-described-locality",
+          "sourceRefs": [
+            "denr-bmb-inland-wetlands-atlas-2016"
+          ],
+          "provinceId": "0402100000",
+          "locality": "Tagaytay City"
         }
       ],
       "sourceRefs": [
@@ -2612,7 +2630,7 @@
       "fishEvidenceStatus": "GBIF-text-hit-geography-conflict-held; no assertion",
       "reviewStatus": "geography-conflict-held",
       "publicAdmission": false,
-      "scopeNote": "DENR-BMB 2016 Atlas Annex 2b names San Cristobal River and lists Calamba City and Cabuyao under Laguna. The extracted table places Tagaytay City nearby, but that cross-column attribution is pending visual verification. Historical inventory text only; no geometry, salinity, fish presence or access status. GBIF returned one preserved specimen twice across the waterBody/locality searches; it says Rizal and coordinates 15.706832, 121.111876 with 13,748 m uncertainty, conflicting with this Laguna lead. It is not attributed here."
+      "scopeNote": "DENR-BMB 2016 Atlas Annex 2b visually confirms source-reported localities in Laguna (Calamba City; Cabuyao) and Cavite (Tagaytay City). This is not channel geometry, salinity, fish presence or access/legal status. A GBIF text screen returned one preserved specimen twice across the waterBody/locality searches; its record says Rizal and coordinates 15.706832, 121.111876 with 13,748 m uncertainty. That record remains a geography conflict and is not attributed to this lead."
     },
     {
       "id": "ph-wb-bay-laguna-river",
@@ -2767,7 +2785,7 @@
       "fishEvidenceStatus": "bounded-COLXR-Actinopterygii-waterBody-and-locality-text-screen-zero; no-fish-absence-inferred",
       "reviewStatus": "bounded-COLXR-Actinopterygii-waterBody-and-locality-text-screen-zero-no-absence-inferred",
       "publicAdmission": false,
-      "scopeNote": "DENR-BMB 2016 Atlas Annex 2b names this river and reports locality context: Calamba; Los Ba?os (accent not recoverable in text extraction; visual check pending). Historical inventory text only; it does not establish channel geometry, salinity, fish presence or legal/access status. The source asterisk, where printed, is unexplained. A 2026-10-24 exact GBIF waterBody/locality text screen returned zero for both fields (100-record limit); this is a bounded search gap, not fish absence."
+      "scopeNote": "DENR-BMB 2016 Atlas Annex 2b names this river and reports locality context: Calamba; Los Baños. The printed locality was visually verified on PDF p.128 (printed p.116). Historical inventory text only; no channel geometry, salinity, fish presence or legal/access status is established. The source asterisk is unexplained. A bounded GBIF COL XR Actinopterygii exact-name screen searched waterBody and locality in PH and returned zero for both fields; this is not fish-absence evidence."
     },
     {
       "id": "ph-wb-pila-laguna-river",
@@ -2799,6 +2817,120 @@
       "reviewStatus": "bounded-COLXR-Actinopterygii-waterBody-and-locality-text-screen-zero-no-absence-inferred",
       "publicAdmission": false,
       "scopeNote": "DENR-BMB 2016 Atlas Annex 2b names this river and reports locality context: Pila. Historical inventory text only; it does not establish channel geometry, salinity, fish presence or legal/access status. The source asterisk, where printed, is unexplained. A 2026-10-24 exact GBIF waterBody/locality text screen returned zero for both fields (100-record limit); this is a bounded search gap, not fish absence."
+    },
+    {
+      "id": "ph-wb-binan-calabarzon-river",
+      "name": "Biñan River",
+      "aliases": [],
+      "kind": "river",
+      "salinity": {
+        "classification": "unknown",
+        "reviewStatus": "not-assessed",
+        "sourceRefs": []
+      },
+      "administrativeAssociations": [
+        {
+          "regionId": "0400000000",
+          "relationship": "source-described-locality",
+          "sourceRefs": [
+            "denr-bmb-inland-wetlands-atlas-2016"
+          ],
+          "provinceId": "0403400000",
+          "locality": "City of Biñan; Carmona"
+        },
+        {
+          "regionId": "0400000000",
+          "relationship": "source-described-locality",
+          "sourceRefs": [
+            "denr-bmb-inland-wetlands-atlas-2016"
+          ],
+          "provinceId": "0402100000",
+          "locality": "Carmonan; GMA; Silang"
+        }
+      ],
+      "sourceRefs": [
+        "denr-bmb-inland-wetlands-atlas-2016",
+        "gbif-occurrence-downloads"
+      ],
+      "identityStatus": "source-named-research-lead",
+      "boundaryStatus": "not-delineated",
+      "fishEvidenceStatus": "bounded-COLXR-Actinopterygii-waterBody-and-locality-text-screen-zero; no-fish-absence-inferred",
+      "reviewStatus": "bounded-COLXR-Actinopterygii-waterBody-and-locality-text-screen-zero-no-absence-inferred",
+      "publicAdmission": false,
+      "scopeNote": "DENR-BMB 2016 Atlas Annex 2b, PDF p.128 (printed p.116), visually confirms Biñan River* and source-reported locality context: City of Biñan; Carmona; Carmonan; GMA; Silang. The Atlas visually continues the same named row across Laguna and Cavite. Preserve the printed Cavite locality Carmonan; whether it is a source typo for Carmona is unresolved. No exact reach, geometry, salinity, fish presence, access or legal status is established. A bounded GBIF COL XR Actinopterygii exact-name screen searched waterBody and locality in PH and returned zero for both fields; this is not fish-absence evidence."
+    },
+    {
+      "id": "ph-wb-san-juan-calabarzon-river",
+      "name": "San Juan River",
+      "aliases": [],
+      "kind": "river",
+      "salinity": {
+        "classification": "unknown",
+        "reviewStatus": "not-assessed",
+        "sourceRefs": []
+      },
+      "administrativeAssociations": [
+        {
+          "regionId": "0400000000",
+          "relationship": "source-described-locality",
+          "sourceRefs": [
+            "denr-bmb-inland-wetlands-atlas-2016"
+          ],
+          "provinceId": "0403400000",
+          "locality": "Calamba City"
+        },
+        {
+          "regionId": "0400000000",
+          "relationship": "source-described-locality",
+          "sourceRefs": [
+            "denr-bmb-inland-wetlands-atlas-2016"
+          ],
+          "provinceId": "0401000000",
+          "locality": "Lipa City; Malvar; Santo Tomas; Tanauan City"
+        }
+      ],
+      "sourceRefs": [
+        "denr-bmb-inland-wetlands-atlas-2016",
+        "gbif-occurrence-downloads"
+      ],
+      "identityStatus": "source-named-research-lead",
+      "boundaryStatus": "not-delineated",
+      "fishEvidenceStatus": "bounded-COLXR-Actinopterygii-waterBody-and-locality-text-screen-zero; no-fish-absence-inferred",
+      "reviewStatus": "bounded-COLXR-Actinopterygii-waterBody-and-locality-text-screen-zero-no-absence-inferred",
+      "publicAdmission": false,
+      "scopeNote": "DENR-BMB 2016 Atlas Annex 2b, PDF p.128 (printed p.116), visually confirms San Juan River* and source-reported locality context: Calamba City; Lipa City; Malvar; Santo Tomas; Tanauan City. The Atlas visually continues the same named row from Laguna into Batangas; source locality text only, not channel geometry. No exact reach, geometry, salinity, fish presence, access or legal status is established. A bounded GBIF COL XR Actinopterygii exact-name screen searched waterBody and locality in PH and returned zero for both fields; this is not fish-absence evidence."
+    },
+    {
+      "id": "ph-wb-binan-laguna-creek",
+      "name": "Biñan Creek",
+      "aliases": [],
+      "kind": "stream",
+      "salinity": {
+        "classification": "unknown",
+        "reviewStatus": "not-assessed",
+        "sourceRefs": []
+      },
+      "administrativeAssociations": [
+        {
+          "regionId": "0400000000",
+          "relationship": "source-described-locality",
+          "sourceRefs": [
+            "denr-bmb-inland-wetlands-atlas-2016"
+          ],
+          "provinceId": "0403400000",
+          "locality": "San Pedro"
+        }
+      ],
+      "sourceRefs": [
+        "denr-bmb-inland-wetlands-atlas-2016",
+        "gbif-occurrence-downloads"
+      ],
+      "identityStatus": "source-named-research-lead",
+      "boundaryStatus": "not-delineated",
+      "fishEvidenceStatus": "bounded-COLXR-Actinopterygii-waterBody-and-locality-text-screen-zero; no-fish-absence-inferred",
+      "reviewStatus": "bounded-COLXR-Actinopterygii-waterBody-and-locality-text-screen-zero-no-absence-inferred",
+      "publicAdmission": false,
+      "scopeNote": "DENR-BMB 2016 Atlas Annex 2b, PDF p.128 (printed p.116), visually confirms Biñan Creek* and source-reported locality context: San Pedro. A separate source row from Biñan River; preserved as a distinct creek/stream lead. No exact reach, geometry, salinity, fish presence, access or legal status is established. A bounded GBIF COL XR Actinopterygii exact-name screen searched waterBody and locality in PH and returned zero for both fields; this is not fish-absence evidence."
     }
   ],
   "coverageRules": {
@@ -2886,7 +3018,7 @@
       "id": "scope-not-exhaustive",
       "status": "open",
       "count": null,
-      "reason": "Eighty selected named water and habitat research leads are seeded across CALABARZON water types. Provincial, municipal, island, stream, pond and reservoir denominators remain unestablished; some leads are habitat/designation names rather than delineated waterbodies.",
+      "reason": "Eighty-three selected named water and habitat research leads are seeded across CALABARZON water types. Provincial, municipal, island, stream, pond and reservoir denominators remain unestablished; some leads are habitat/designation names rather than delineated waterbodies. Selected Atlas rows include only a subset of the historical inventory.",
       "nextAction": "Continue the source-derived inventory with explicit inclusion criteria and a frozen manifest; resolve unnamed 2021 aggregate river/wetland counts before claiming a regional baseline."
     },
     {
@@ -2921,15 +3053,15 @@
     {
       "id": "fish-coverage",
       "status": "open",
-      "count": 80,
-      "reason": "Regional fish coverage remains incomplete across 80 selected leads. The Batangas/Laguna Atlas tranche has bounded exact-name GBIF text checks: 18 leads returned zero, two historical Bay River specimen candidates remain held, and one San Cristobal match conflicts geographically. No absence or current-presence claims follow from this screen.",
+      "count": 83,
+      "reason": "Regional fish coverage remains incomplete across 83 selected leads. Exact-name GBIF text screens cover selected watercourse leads only; zero results are bounded discovery gaps, and historical candidates remain held where feature identity is uncertain.",
       "nextAction": "Join only independently reviewed evidence at its supported geographic scale."
     },
     {
       "id": "identity-and-geometry",
       "status": "open",
-      "count": 80,
-      "reason": "No validated waterbody geometry or precise point assignment has been created across 80 selected leads. Repeated names, source-era localities, compound river names and habitat-versus-waterbody identity remain under review.",
+      "count": 83,
+      "reason": "No validated waterbody geometry or precise point assignment has been created across 83 selected leads. Repeated names, source-era localities, compound river names and habitat-versus-waterbody identity remain under review.",
       "nextAction": "Reconcile stable identities and source-era/current geography before map display."
     },
     {

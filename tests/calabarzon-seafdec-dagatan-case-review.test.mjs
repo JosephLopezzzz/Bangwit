@@ -29,7 +29,7 @@ test("SEAFDEC case-study locality and coordinates remain source-reported, not ma
   assert.match(review.identityReview.sanAntonioPagatanDisposition, /No crosswalk or source assignment is made/);
   assert.equal(review.decision.scopeLeadsAdded, 0);
   assert.deepEqual(review.decision.sourceRefsAdded, []);
-  assert.equal(report.coverageSummary.namedWaterbodyLeads, 80);
+  assert.equal(report.coverageSummary.namedWaterbodyLeads, 83);
   assert.equal(report.coverageSummary.regionalBaselineComplete, false);
 });
 

@@ -1,0 +1,181 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-24",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "regionName": "Region IV-A (CALABARZON)",
+  "status": "selected-Annex-2b-row-columns-visually-reviewed;three-additional-watercourse-leads-crosswalked;regional-inventory-incomplete",
+  "sourceId": "denr-bmb-inland-wetlands-atlas-2016",
+  "source": {
+    "title": "Atlas of Philippine Inland Wetlands and Classified Caves",
+    "provider": "DENR Biodiversity Management Bureau / Philippine Clearing House Mechanism",
+    "url": "https://www.philchm.ph/wp-content/uploads/2019/03/Atlas-of-Philippine-Inland-Wetlands-and-Classsified-Caves-2016_BMB_DENR.pdf",
+    "pdfSha256": "39fb2731b45612143b7543d3afb1217673106bb97846ccc81019988e9d869768"
+  },
+  "method": {
+    "pages": [
+      {
+        "pdfPage": 127,
+        "printedPage": 115
+      },
+      {
+        "pdfPage": 128,
+        "printedPage": 116
+      },
+      {
+        "pdfPage": 129,
+        "printedPage": 117
+      }
+    ],
+    "render": "Temporary PyMuPDF raster renders at 2.4 scale inspected visually; table column continuations read from the source image.",
+    "scope": "Selected Region IV-A river rows and adjacent creek rows only. This is not a transcription of every Atlas river, complete waterbody inventory, boundary map or field survey."
+  },
+  "confirmedExistingRows": [
+    {
+      "sourceName": "Pansol River*",
+      "scopeLeadId": "ph-wb-pansol-laguna-river",
+      "pdfPage": 128,
+      "province": "Laguna",
+      "locality": "Calamba and Los Ba?os",
+      "action": "Correct transcription; preserve the two localities as source-reported context."
+    },
+    {
+      "sourceName": "Santa Rosa River*",
+      "scopeLeadId": "ph-wb-santa-rosa-laguna-river",
+      "pdfPage": 128,
+      "associations": [
+        {
+          "province": "Laguna",
+          "locality": "City of Santa Rosa; City of Biñan"
+        },
+        {
+          "province": "Cavite",
+          "locality": "Dasmari?as; Silang"
+        }
+      ],
+      "action": "Same printed row continues into Cavite; add the source-described Cavite association."
+    },
+    {
+      "sourceName": "San Cristobal River*",
+      "scopeLeadId": "ph-wb-san-cristobal-river",
+      "pdfPage": 128,
+      "associations": [
+        {
+          "province": "Laguna",
+          "locality": "Calamba City; Cabuyao"
+        },
+        {
+          "province": "Cavite",
+          "locality": "Tagaytay City"
+        }
+      ],
+      "action": "Same printed row continues into Cavite; add the source-described Cavite association. The separate GBIF coordinate/state conflict remains held."
+    }
+  ],
+  "newRows": [
+    {
+      "sourceName": "Biñan River*",
+      "scopeName": "Biñan River",
+      "kind": "river",
+      "scopeLeadId": "ph-wb-binan-calabarzon-river",
+      "pdfPage": 128,
+      "printedPage": 116,
+      "associations": [
+        {
+          "provinceId": "0403400000",
+          "locality": "City of Biñan; Carmona"
+        },
+        {
+          "provinceId": "0402100000",
+          "locality": "Carmonan; GMA; Silang"
+        }
+      ],
+      "note": "The Atlas visually continues the same named row across Laguna and Cavite. Preserve the printed Cavite locality Carmonan; whether it is a source typo for Carmona is unresolved.",
+      "disposition": "source-named-research-lead; no geometry or species assertion"
+    },
+    {
+      "sourceName": "San Juan River*",
+      "scopeName": "San Juan River",
+      "kind": "river",
+      "scopeLeadId": "ph-wb-san-juan-calabarzon-river",
+      "pdfPage": 128,
+      "printedPage": 116,
+      "associations": [
+        {
+          "provinceId": "0403400000",
+          "locality": "Calamba City"
+        },
+        {
+          "provinceId": "0401000000",
+          "locality": "Lipa City; Malvar; Santo Tomas; Tanauan City"
+        }
+      ],
+      "note": "The Atlas visually continues the same named row from Laguna into Batangas; source locality text only, not channel geometry.",
+      "disposition": "source-named-research-lead; no geometry or species assertion"
+    },
+    {
+      "sourceName": "Biñan Creek*",
+      "scopeName": "Biñan Creek",
+      "kind": "stream",
+      "scopeLeadId": "ph-wb-binan-laguna-creek",
+      "pdfPage": 128,
+      "printedPage": 116,
+      "associations": [
+        {
+          "provinceId": "0403400000",
+          "locality": "San Pedro"
+        }
+      ],
+      "note": "A separate source row from Biñan River; preserved as a distinct creek/stream lead.",
+      "disposition": "source-named-research-lead; no geometry or species assertion"
+    }
+  ],
+  "heldRows": [
+    {
+      "sourceNames": [
+        "Lian River",
+        "Wawa River"
+      ],
+      "reason": "Repeated same names across Batangas and Cavite are explicit rows; visual review resolves text columns but not whether each pair is one cross-boundary watercourse or different features."
+    },
+    {
+      "sourceNames": [
+        "Locloc River",
+        "Locloc River (2)",
+        "Balite River (1)",
+        "Balite River (2)",
+        "Balite River (3)"
+      ],
+      "reason": "Multiple/numbered rows remain separate source identities until map or agency crosswalk confirms their relationship."
+    },
+    {
+      "sourceNames": [
+        "Dumacaa-Tayabas River"
+      ],
+      "reason": "The printed compound row and locality (Lucena City; Sariaya; Tayabas City) are visually clear, but its relationship to the existing Dumacaa River lead is unresolved; do not merge or split by name alone."
+    },
+    {
+      "sourceNames": [
+        "Morong River (1)*",
+        "Morong River*"
+      ],
+      "reason": "Distinct printed variants remain unresolved against each other and the existing Morong River locality."
+    }
+  ],
+  "limitations": [
+    "The Atlas marks selected names with an asterisk but the reviewed pages do not define it.",
+    "Province/locality text is a source description, not exact geometry, jurisdictional boundary, access status or present-day waterbody condition.",
+    "Atlas copyright language allows educational/non-profit reproduction with acknowledgement; the fit of a public derived database remains unreviewed.",
+    "This visual review does not resolve ambiguous duplicate/compound features listed as held."
+  ],
+  "decision": {
+    "newLeadsAdded": 3,
+    "existingLeadsUpdated": 3,
+    "speciesAssertionsAdded": 0,
+    "dietClaimsAdded": 0,
+    "salinityClassificationsAdded": 0,
+    "geometryAdded": false,
+    "publicAdmission": false,
+    "regionalBaselineComplete": false
+  }
+}

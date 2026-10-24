@@ -49,9 +49,9 @@ test("BMB Atlas adds selected CALABARZON river leads without implying a complete
   assert.match(review.heldCrosswalks.find((row) => row.sourceName === "Dumacaa-Tayabas River").disposition, /not split or merged/i);
   assert.match(review.method.asterisk, /without interpretation/i);
 
-  assert.equal(scope.counts.waterbodyResearchLeads, 80);
-  assert.equal(scope.counts.byKind.river, 38);
-  assert.equal(report.coverageSummary.namedWaterbodyLeads, 80);
+  assert.equal(scope.counts.waterbodyResearchLeads, 83);
+  assert.equal(scope.counts.byKind.river, 40);
+  assert.equal(report.coverageSummary.namedWaterbodyLeads, 83);
   assert.equal(report.coverageSummary.regionalBaselineComplete, false);
   assert.equal(report.coverageSummary.publicAdmission, false);
   assert.equal(report.coverageSummary.boundaryGeometryValidated, 0);

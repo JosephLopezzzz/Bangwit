@@ -68,8 +68,8 @@ test("new CALABARZON water and habitat leads have bounded, versioned zero-result
   assert.ok(source);
   assert.ok(source.access.reviewFiles.includes("calabarzon-bmb-lakes-gbif-screen-20261024.json"));
   assert.ok(source.access.additionalRawPaths.includes("raw/calabarzon-bmb-gbif-screen-20261024/"));
-  assert.equal(report.coverageSummary.namedWaterbodyLeads, 80);
+  assert.equal(report.coverageSummary.namedWaterbodyLeads, 83);
   assert.equal(report.coverageSummary.leadsStillResearchQueued, 20);
-  assert.equal(report.coverageSummary.sourceAssignments, 185);
+  assert.equal(report.coverageSummary.sourceAssignments, 191);
   assert.equal(report.coverageSummary.regionalBaselineComplete, false);
 });
