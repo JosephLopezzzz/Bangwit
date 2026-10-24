@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-24",
+  "phaseId": "L3",
+  "regionId": "0300000000",
+  "status": "cross-study-conflicts-found-all-rows-held",
+  "decision": "Use the 2024 survey only as a conflict-detection lead. Its internal richness statements do not reconcile, its team substantially overlaps the 2025 survey team, and its item-specific reuse terms were not verified. Do not use either table to independently validate identities or publish species claims.",
+  "source": {
+    "id": "biodiversity-journal-bataan-talisay-bagac-survey-2024",
+    "title": "Ichthyofaunal Diversity and Water Quality Parameters in Talisay and Bagac River Systems, Bataan, Luzon Island, Philippines",
+    "citation": "Corpuz, M. N. C., Nacorda, H. M. E., Casal, C. M. E., Faustino-Eslava, D. V., Jaranilla-Sanchez, P. A., Vedra, S. A., Paguia, H. M., & Espaldon, M. V. O. (2024). Biodiversity Journal, 15(3), 649-658. DOI: 10.31396/Biodiv.Jour.2024.15.3.649.658.",
+    "articleUrl": "https://www.biodiversityjournal.com/images/pubblicazioni/biodiversity-journal-2024/biodiversity-journal-2024-15-03/biodiversity-journal-2024-15-03_649-658.pdf",
+    "publishedOnline": "2024-09-30",
+    "studyPeriod": "2020-12 through 2021-11",
+    "methodSummary": "The paper describes nine longitudinal stations per river, three 70 m stream sections per station, backpack electrofishing plus seine/cast nets, and identification to the lowest possible taxon. It says some specimens were retained live or preserved for further documentation and identification.",
+    "localityLimits": "The paper gives river-mouth coordinates and broad upstream/midstream/downstream descriptions, but no collection coordinate or station-to-reach crosswalk for the reported taxon rows. Do not map table entries to the mouth coordinates or infer a verified reach geometry.",
+    "authorOverlapWith2025": {
+      "sharedAuthorCount": 6,
+      "2024AuthorCount": 8,
+      "2025AuthorCount": 6,
+      "interpretation": "Substantial research-team overlap; this is a separate sampling period, but not independent taxonomic corroboration by a separate expert team."
+    },
+    "reuseReview": {
+      "status": "item-specific-license-or-permission-unverified",
+      "licenseFoundInRetrievedPdf": false,
+      "decision": "Do not redistribute the species table or use it as an app data source until item-specific reuse terms are confirmed. This review stores only bibliographic and quality-control findings."
+    }
+  },
+  "withinSourceConflicts": [
+    {
+      "field": "per-river richness",
+      "abstract": { "totalSpecies": 50, "talisaySpecies": 28, "bagacSpecies": 37 },
+      "resultsText": { "totalSpecies": 50, "talisaySpecies": 30, "bagacSpecies": 38 },
+      "decision": "Conflicting values; no per-river richness value is adopted."
+    },
+    {
+      "field": "shared-species count",
+      "resultsTextReportedCount": 13,
+      "numberOfTaxonMentionsInFollowingList": 15,
+      "note": "The list contains the abbreviated mention 'O hornorum'; the count comparison is a textual QA flag, not a claim that all mentions resolve to distinct species.",
+      "decision": "No shared-species count is adopted."
+    },
+    {
+      "field": "Table 1 entries versus reported total",
+      "transcribedTableEntryLines": 52,
+      "reportedTotalSpecies": 50,
+      "genusOnlyEntries": 8,
+      "decision": "The table and narrative totals do not reconcile on their face; no total is adopted."
+    }
+  ],
+  "comparisonWith2025Survey": {
+    "otherSourceId": "bioflux-bataan-three-rivers-fish-survey-2025",
+    "comparedRiverScope": ["Talisay", "Bagac"],
+    "2024NamedBinomialRowsReviewed": 44,
+    "sharedNameRowsAfterTwoSourceSpellingNormalizations": 26,
+    "sameReportedTalisayAndBagacPresence": 23,
+    "presenceConflicts": [
+      {
+        "name": "Butis butis",
+        "2024": { "Talisay": true, "Bagac": true },
+        "2025": { "Talisay": false, "Bagac": true }
+      },
+      {
+        "name": "Mayaheros urophthalmus",
+        "2024": { "Talisay": true, "Bagac": true },
+        "2025": { "Talisay": true, "Bagac": false }
+      },
+      {
+        "name": "Scatophagus argus",
+        "2024": { "Talisay": true, "Bagac": true },
+        "2025": { "Talisay": false, "Bagac": true }
+      }
+    ],
+    "spellingNormalizationsUsedOnlyForComparison": [
+      { "2024SourceText": "Cyprnius carpio", "2025SourceText": "Cyprinus carpio", "interpretation": "Possible source spelling error; not a taxonomic identity approval." },
+      { "2024SourceText": "Leiognathus equula", "2025SourceText": "Leiognathus equulus", "interpretation": "Name-string normalization only; current nomenclature and specimen identity remain outside this review." }
+    ],
+    "interpretation": "The papers are separate surveys with heavily overlapping authors. Agreement or disagreement in their tables does not prove or disprove species identity; conflicts require source-level or voucher-level resolution."
+  },
+  "admission": {
+    "speciesAssertions": 0,
+    "appProjections": 0,
+    "regionalReleaseApproved": false,
+    "reasonsHeld": [
+      "The 2024 paper has unreconciled internal richness and shared-count statements.",
+      "Three shared fish-name entries have conflicting river-presence cells across the 2024 and 2025 tables.",
+      "The research teams substantially overlap, so the 2024 study is not independent taxonomic corroboration.",
+      "No item-specific table reuse license or permission was verified for the 2024 article.",
+      "The source tables do not provide row-level collection coordinates or validated river-reach geometry."
+    ]
+  },
+  "nextStep": "Keep the Bataan rows held. Continue Central Luzon by reconciling named waterbody coverage and source-era geography; do not infer river geometry from mouth points. Pursue a separately authored, voucher-backed or officially catalogued identity source only if it has usable item-specific terms."
+}

@@ -27,7 +27,7 @@ test("Bataan historical ledger preserves the paper matrix without claiming verif
   assert.equal(ledger.coverage.appProjections, 0);
   assert.equal(checkpoint.candidateFishEvidence.evidenceLedgerFile, "central-luzon-bataan-historical-evidence-ledger-20261024.json");
   assert.equal(checkpoint.candidateFishEvidence.appProjections, 0);
-  assert.match(checkpoint.nextStep.action, /independent fish-identification evidence/i);
+  assert.match(checkpoint.nextStep.action, /no independent identity verification/i);
   assert.equal(ledger.records.filter((record) => record.publicAssertion || record.appProjection).length, 0);
   assert.deepEqual(ledger.records.map((record) => record.sourceNameVerbatim), sourceRows.map((record) => record.sourceName));
   assert.deepEqual(ledger.records.map((record) => record.sourcePresence), sourceRows.map((record) => record.presence));
