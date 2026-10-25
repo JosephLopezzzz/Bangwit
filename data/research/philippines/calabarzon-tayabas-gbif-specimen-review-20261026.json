@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-26",
+  "regionId": "0400000000",
+  "sourceRegistryId": "gbif-occurrence-downloads",
+  "candidate": {
+    "gbifId": "2432779620",
+    "scientificName": "Stethojulis interrupta (Bleeker, 1851)",
+    "taxonRank": "SPECIES",
+    "basisOfRecord": "PRESERVED_SPECIMEN",
+    "gbifInterpretedLocality": "Tayabas",
+    "catalogNumber": "ZMA.PISC.135570",
+    "collectionCode": "Pisces",
+    "occurrenceUrl": "https://api.gbif.org/v1/occurrence/2432779620",
+    "verbatimUrl": "https://api.gbif.org/v1/occurrence/2432779620/verbatim",
+    "publisherRecordUrl": "https://data.biodiversitydata.nl/naturalis/specimen/ZMA.PISC.135570"
+  },
+  "discoveryQuery": {
+    "url": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Tayabas&taxonKey=8VR36&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&limit=300",
+    "returnedRecords": 1,
+    "sha256": "fd6f0a5ff11d5dab79eb07ad79505eeb80a389f47dbb88a0251c298fcc0f0aca",
+    "rawPath": "raw/gbif-calabarzon-colxr-actinopterygii-rerun-20261024/tayabas.json",
+    "taxonomy": "Catalogue of Life Extended Release Actinopterygii key 8VR36; the retired GBIF class key 204 was not used."
+  },
+  "dataset": {
+    "key": "19828488-7ebf-43f8-88af-6461d8afef9e",
+    "title": "Naturalis Biodiversity Center (NL) - Pisces",
+    "doi": "10.15468/evijly",
+    "license": "CC0 1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "gbifDatasetUrl": "https://www.gbif.org/dataset/19828488-7ebf-43f8-8aaf-6461d8afef9e"
+  },
+  "verbatimFields": {
+    "locality": "Tayabas",
+    "country": "Phillipines",
+    "individualCount": "10",
+    "preparations": "WholeOrganism (wet specimen)",
+    "geodeticDatum": "WGS84",
+    "eventDate": null,
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "waterBody": null,
+    "stateProvince": null,
+    "county": null,
+    "municipality": null
+  },
+  "qualityIssues": [
+    "CONTINENT_DERIVED_FROM_COUNTRY",
+    "OCCURRENCE_STATUS_INFERRED_FROM_INDIVIDUAL_COUNT",
+    "INSTITUTION_COLLECTION_MISMATCH"
+  ],
+  "receipts": {
+    "occurrence": {
+      "path": "raw/calabarzon-tayabas-gbif-specimen-20261026/occurrence.json",
+      "bytes": 4765,
+      "sha256": "65c11f94a82f7b9118a64f3f54764fb7fc1f68e594538f4d977100eeb6ee9fcf"
+    },
+    "verbatim": {
+      "path": "raw/calabarzon-tayabas-gbif-specimen-20261026/verbatim.json",
+      "bytes": 1960,
+      "sha256": "c390756c9290fb1d3d43f3158b4f1f565a53efebc6d89221c0fd06a8159c24e1"
+    },
+    "dataset": {
+      "path": "raw/calabarzon-tayabas-gbif-specimen-20261026/dataset.json",
+      "bytes": 7046,
+      "sha256": "d5f09c59f2c4bb858aa89790a9cf007ddf33b7074d77616606c6f5bfdcb92d3b"
+    },
+    "naturalisRecord": {
+      "path": "raw/calabarzon-tayabas-gbif-specimen-20261026/specimen-rdf.xml",
+      "bytes": 410,
+      "sha256": "34c79b3cdae6d72e2939294cb571b55b98f8b8fab31618b8b8d47f1eb96dbd1c"
+    }
+  },
+  "decision": {
+    "status": "held-unassigned-locality-only",
+    "waterbodyAssignment": false,
+    "speciesAssertionsAdmitted": 0,
+    "publicProjection": false,
+    "currentPresenceInferred": false,
+    "coordinatesPublished": false,
+    "reason": "The only interpreted and verbatim locality is the unqualified string Tayabas. There is no event date, coordinate, waterBody, province, municipality, county, or supporting catalog locality detail to distinguish Tayabas River, Tayabas Bay, Tayabas city, or another locality. Dataset-level CC0 terms do not resolve geography."
+  },
+  "limits": [
+    "This is a single historic preserved-specimen discovery candidate, not a complete species list, survey, or current-presence record.",
+    "The Naturalis record endpoint was checked but supplied no additional locality or date fields in the retained response.",
+    "The spelling Phillipines is retained as verbatim source text; GBIF normalizes the interpreted country to Philippines.",
+    "The presence of this record in the search does not establish fish absence in any other waterbody when records are not returned.",
+    "No claim about catchability, diet, legal status, safety, abundance, or fishing permissions follows from this occurrence record."
+  ],
+  "nextAction": "Keep the record unassigned unless an authoritative catalog source supplies locality/date detail that supports a specific waterbody. Continue the next regional evidence review independently."
+}
