@@ -7,7 +7,7 @@
   "status": "checkpoint-published-incomplete-baseline",
   "inputHashes": {
     "scopeSha256": "e8a6c490cae14465a9ccc33b8078cf68f3e4b9fb016072a5c0f0549a2d96d30f",
-    "sourcesSha256": "e343097d287d2d3c1591bf344ac0445f6248b12b943b0ce832fdfc6f3b2963ed",
+    "sourcesSha256": "190dffd9a0a1160b08994138999772b025b4d65bfe80113de5302d750763e96e",
     "lagunaMuseumVerificationSha256": "5604848902166f821f9a37eb79c9eb1ffea4e05897739f216189b24762a10509",
     "balayanGbifDetailsSha256": "6e466c1df40085b70d314da6af314ecc56ea9cd72da737cc9cf6c1757c80d1e9",
     "balayanIdigbioCrosscheckSha256": "66b5e92896fed932a02ce75316ce5cb8f8031525fa3923ed8a1d8426983a037f",
@@ -16,14 +16,16 @@
     "balayanNmnhSourceSha256": "376922656f884d0ea50d7df4f48b64608fac8b9b564762b9b17ef2a5bc870f15",
     "balayanNmnhRowDecisionsSha256": "e3fb24a2e521e5647f11cb1447b668b9848a6fa5907fecb509ee5ade4ac0cf54",
     "balayanCasSourceSha256": "170f6cf1cf7ea8bd29e342a0696afcab8fabb4d22d2c8f56ed3bbea37681b3da",
-    "balayanCasRowDecisionsSha256": "1e12e60b554eb1b1f9164179b49457212b2b54627bef639995a253d08eb14990"
+    "balayanCasRowDecisionsSha256": "1e12e60b554eb1b1f9164179b49457212b2b54627bef639995a253d08eb14990",
+    "balayanUmmzSourceSha256": "6c2e8671cbc41eb704b9d1024565882bb79536c301f8afa2af9a727d6d52ebb8",
+    "balayanUmmzRowDecisionsSha256": "4c06195e35cc9cc144f0c12f077dfd1f7f0a90430e34c276fc21f8b18d301563"
   },
   "decision": "Keep CALABARZON visibly in progress. This checkpoint records the current source-backed leads and specific gaps; it is not a complete fish checklist, a completed region, or a public species release.",
   "coverageSummary": {
     "namedWaterbodyLeads": 83,
     "distinctSourceReferencesAssigned": 49,
     "sourceAssignments": 197,
-    "registeredSources": 145,
+    "registeredSources": 147,
     "provincesWithLeads": 5,
     "separateCityCoverageUnits": 1,
     "byWaterbodyKind": {
@@ -196,8 +198,8 @@
     {
       "id": "balayan-bay-museum-catalog-review",
       "count": 14,
-      "reason": "Fourteen corrected GBIF candidates group into ten museum catalog identities. The Field Museum-hosted archive and direct CAS Ichthyology archive confirm two FMNH and six CAS SU(ICH) records with Balayan Bay locality text; the eight are admitted only as historical research-ledger evidence, with source date precision and all GBIF flags preserved. CAS publishes its selected Darwin Core archive under CC0, and the CAS 28340 source and GBIF spellings both resolve nomenclaturally to Planiliza macrolepis. The NMNH Fishes search directly confirms USNM 122919, Ventrifossa divergens and its 1908-01-20 source date; five GBIF material-citation rows therefore remain grouped under one catalog item. That record locality combines Sombrero Island, Balayan Bay and Verde Island Passage, and item-level reuse remains unresolved, so those five rows stay held. The UMMZ identity also remains unresolved. No cross-check establishes a complete or current bay checklist.",
-      "nextAction": "Resolve the six remaining held candidate rows: keep the five USNM 122919 citation rows grouped while seeking institutional guidance on the multi-locality wording and item-level reuse; continue the bounded exact-identity search for UMMZ 100346. Keep all GBIF quality flags, exclude coordinates and current-presence claims, and add no public app row until locality scope and reuse are resolved.",
+      "reason": "Fourteen corrected GBIF candidates group into ten museum catalog identities. Direct Field Museum and CAS archives confirm two FMNH and six CAS SU(ICH) records with Balayan Bay locality text; the eight are admitted only as dated historical research-ledger evidence, with source date precision and all GBIF flags preserved. The CAS archive publishes its selected rows under CC0, and source catalog 28340 plus GBIF spelling variants resolve nomenclaturally to Planiliza macrolepis. A direct UMMZ Fish archive release 1.115 check confirms catalog 100346, Sillago sihama and Balayan Bay locality under CC BY 4.0, but the event date is blank; it remains an undated research-only locality candidate, not a dated occurrence. The NMNH Fishes search confirms USNM 122919, Ventrifossa divergens and its 1908-01-20 source date; five GBIF material-citation rows are one source catalog item whose locality combines Sombrero Island, Balayan Bay and Verde Island Passage, with item-level reuse unresolved. Thus eight candidates have dated historical source-locality evidence, one has undated source-locality evidence, and the five USNM citation rows remain held. No cross-check establishes a complete or current bay checklist.",
+      "nextAction": "Resolve the five remaining held USNM 122919 material-citation rows as one source catalog item: seek institutional guidance on the multi-locality wording and item-level reuse terms. Keep all GBIF quality flags, exclude coordinates and current-presence claims, and add no public app row until locality scope and reuse are resolved.",
       "sourceRefs": [
         "idigbio-balayan-catalog-crosscheck",
         "fieldmuseum-balayan-primary-archive-check",
@@ -205,7 +207,9 @@
         "nmnh-balayan-usnm-122919-primary-record-check",
         "worms-balayan-ventrifossa-divergens-taxonomy-crosscheck",
         "cas-balayan-primary-archive-check",
-        "worms-balayan-cas-taxonomy-crosscheck"
+        "worms-balayan-cas-taxonomy-crosscheck",
+        "ummz-balayan-primary-archive-check",
+        "worms-balayan-sillago-sihama-taxonomy-crosscheck"
       ]
     }
   ],

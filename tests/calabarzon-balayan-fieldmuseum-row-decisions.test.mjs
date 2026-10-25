@@ -125,7 +125,7 @@ test("taxonomy source and gap snapshot pin the row-level review without claiming
   assert.ok(source);
   assert.ok(source.access.reviewFiles.includes("calabarzon-balayan-fieldmuseum-row-decisions-20261025.json"));
   assert.equal(source.publicationApproval, false);
-  assert.equal(registry.sourceCount, 145);
+  assert.equal(registry.sourceCount, 147);
   assert.equal(registry.sourceCount, registry.sources.length);
   assert.equal(gap.coverageSummary.registeredSources, registry.sourceCount);
   assert.equal(gap.inputHashes.sourcesSha256, createHash("sha256").update(sourceBytes).digest("hex"));
@@ -137,7 +137,7 @@ test("taxonomy source and gap snapshot pin the row-level review without claiming
   assert.ok(balayanGap);
   assert.equal(balayanGap.count, 14);
   assert.match(balayanGap.reason, /two FMNH and six CAS SU\(ICH\) records.*historical research-ledger evidence/i);
-  assert.match(balayanGap.nextAction, /six remaining/i);
+  assert.match(balayanGap.nextAction, /five remaining/i);
   assert.equal(gap.coverageSummary.admittedPublicRecords, 0);
   assert.equal(gap.coverageSummary.regionalBaselineComplete, false);
 });

@@ -3,7 +3,7 @@
   "checkedOn": "2026-10-25",
   "status": "research-only-source-registry",
   "scope": "National acquisition references and CALABARZON/Central Luzon identity/source leads. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 145,
+  "sourceCount": 147,
   "sources": [
     {
       "id": "gbif-col-xr-taxonomy-matching",
@@ -4071,6 +4071,86 @@
         "WoRMS accepted status does not independently re-identify the CAS specimens.",
         "The Liza source and GBIF spelling variants are both unaccepted synonyms of Planiliza macrolepis; the source-reported name remains preserved.",
         "No locality, current-presence, map or complete-inventory claim follows from the nomenclatural checks."
+      ]
+    },
+    {
+      "id": "ummz-balayan-primary-archive-check",
+      "title": "UMMZ Fish Division current IPT archive check for Balayan Bay catalog 100346",
+      "provider": "University of Michigan Museum of Zoology, Division of Fishes",
+      "url": "https://ipt.lsa.umich.edu/archive.do?r=ummz_fish",
+      "additionalUrls": [
+        "https://ipt.lsa.umich.edu/eml.do?r=ummz_fish",
+        "https://ipt.lsa.umich.edu/resource?r=ummz_fish",
+        "https://portal.idigbio.org/portal/recordsets/459bd81e-63b9-47d2-9818-dceb6657bea0",
+        "https://lsa.umich.edu/ummz/fishes.html"
+      ],
+      "role": "Direct institutional archive and iDigBio recordset check for the UMMZ Fish Division Balayan Bay catalog identity; source collection, locality, undated status and item license only.",
+      "checkedOn": "2026-10-25",
+      "access": {
+        "status": "current-archive-release-1.115-and-exact-catalog-100346-row-matched",
+        "reviewFiles": [
+          "calabarzon-balayan-ummz-source-records-20261025.json",
+          "calabarzon-balayan-ummz-row-decisions-20261025.json"
+        ],
+        "additionalRawPaths": [
+          "raw/calabarzon-balayan-ummz-primary-archive-20261025/"
+        ],
+        "archiveBytes": 25068637,
+        "archiveSha256": "75cf36186ade71d514ac9efba1ac831a7314a1710c5ec85f8b3336b2f5052d8c",
+        "publishedDate": "2026-10-19",
+        "archiveVersion": "1.115",
+        "emlSha256": "0d9868709183cc21b645720ae6560a9105a1c32869d43132871d208f48871810",
+        "occurrenceRows": 208519,
+        "coordinatesRetained": false
+      },
+      "reuse": {
+        "metadata": "The University of Michigan IPT EML identifies Creative Commons Attribution 4.0 International; the exact Darwin Core occurrence row also carries the CC BY 4.0 license URL.",
+        "raw": "The archive contains coordinates and remains in ignored local research storage. The tracked review contains only allowlisted non-coordinate fields and hashes.",
+        "content": "One preserved-specimen catalog row directly reports Balayan Bay as locality. The row has no event date or year/month/day; research-only undated candidate, not a dated occurrence or current-presence claim."
+      },
+      "publicationApproval": false,
+      "researchStatus": "one-undated-source-locality-candidate;research-only;zero-public-assertions",
+      "license": "CC BY 4.0",
+      "caveats": [
+        "Numeric catalog number 100346 appears in other UMMZ collection records; join by institutionCode, collectionCode and catalogNumber, and confirm the occurrenceID.",
+        "UMMZ archive collectionCode is UMMZ-Fish while iDigBio indexes the same occurrence as ummz_fish; both match the same occurrenceID.",
+        "No event date is present in the current archive. Do not infer a date from release, index or record-modified dates.",
+        "The specimen and locality do not establish current presence, abundance, catchability or a complete Balayan Bay checklist."
+      ]
+    },
+    {
+      "id": "worms-balayan-sillago-sihama-taxonomy-crosscheck",
+      "title": "WoRMS accepted-name check for UMMZ Balayan catalog 100346",
+      "provider": "World Register of Marine Species (WoRMS)",
+      "url": "https://www.marinespecies.org/rest/AphiaRecordsByName/Sillago%20sihama?like=false&marine_only=false",
+      "additionalUrls": [
+        "https://www.marinespecies.org/aphia.php?p=taxdetails&id=127046"
+      ],
+      "role": "Exact accepted species-rank nomenclature check for the UMMZ source name Sillago sihama.",
+      "checkedOn": "2026-10-25",
+      "access": {
+        "status": "exact-name-query-returns-accepted-Species-AphiaID-127046",
+        "reviewFiles": [
+          "calabarzon-balayan-ummz-source-records-20261025.json",
+          "calabarzon-balayan-ummz-row-decisions-20261025.json"
+        ],
+        "additionalRawPaths": [
+          "raw/calabarzon-balayan-ummz-primary-archive-20261025/worms-sillago-sihama.json"
+        ],
+        "responseSha256": "b0e8aa28d432840fbf16f5e7f440f304508b7082504598000a6a14a4fa463ad6",
+        "coordinatesRetained": false
+      },
+      "reuse": {
+        "metadata": "The response supplies accepted name, authority, rank and AphiaID; item-specific redistribution terms were not established.",
+        "raw": "The response is stored in ignored research storage; tracked files keep only nomenclatural fields and response hash.",
+        "content": "Taxonomy cross-check only. Does not independently re-identify the specimen or verify locality."
+      },
+      "publicationApproval": false,
+      "researchStatus": "accepted-name-crosscheck;taxonomy-only",
+      "license": null,
+      "caveats": [
+        "WoRMS nomenclatural acceptance does not independently re-identify the UMMZ specimen.",
+        "No date, current-presence, map or complete-inventory claim follows from the taxonomic record."
       ]
     }
   ],

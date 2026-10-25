@@ -108,14 +108,14 @@ test("source registry and CALABARZON gap snapshot record the iDigBio follow-up",
   const gap = gapReport.openGaps.find((item) => item.id === "balayan-bay-museum-catalog-review");
   assert.ok(gap);
   assert.equal(gap.count, 14);
-  assert.match(gap.nextAction, /USNM.*UMMZ/i);
+  assert.match(gap.nextAction, /USNM.*item-level reuse/i);
   assert.equal(
     gapReport.inputHashes.balayanFieldMuseumSourceSha256,
     createHash("sha256").update(fieldMuseumBytes).digest("hex"),
   );
-  assert.equal(gapReport.coverageSummary.registeredSources, 145);
+  assert.equal(gapReport.coverageSummary.registeredSources, 147);
   assert.match(gap.reason, /two FMNH and six CAS SU\(ICH\) records.*historical research-ledger evidence/i);
-  assert.match(gap.nextAction, /six remaining.*quality flags/i);
+  assert.match(gap.nextAction, /five remaining.*quality flags/i);
 });
 
 test("NMNH directly confirms the grouped USNM catalog identity while locality and reuse stay held", () => {
@@ -162,9 +162,9 @@ test("NMNH directly confirms the grouped USNM catalog identity while locality an
   assert.ok(wormsSource);
   assert.equal(nmnhSource.publicationApproval, false);
   assert.equal(wormsSource.publicationApproval, false);
-  assert.equal(registry.sourceCount, 145);
+  assert.equal(registry.sourceCount, 147);
   assert.equal(registry.sourceCount, registry.sources.length);
-  assert.equal(gapReport.coverageSummary.registeredSources, 145);
+  assert.equal(gapReport.coverageSummary.registeredSources, 147);
   assert.equal(gapReport.inputHashes.sourcesSha256, createHash("sha256").update(sourceBytes).digest("hex"));
   assert.equal(
     gapReport.inputHashes.balayanNmnhSourceSha256,
@@ -175,7 +175,7 @@ test("NMNH directly confirms the grouped USNM catalog identity while locality an
     createHash("sha256").update(nmnhDecisionBytes).digest("hex"),
   );
   const gap = gapReport.openGaps.find((item) => item.id === "balayan-bay-museum-catalog-review");
-  assert.match(gap.reason, /NMNH Fishes search directly confirms USNM 122919/i);
+  assert.match(gap.reason, /NMNH Fishes search confirms USNM 122919/i);
   assert.match(gap.nextAction, /multi-locality wording and item-level reuse/i);
 });
 
