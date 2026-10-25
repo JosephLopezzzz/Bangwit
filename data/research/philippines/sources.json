@@ -3,7 +3,7 @@
   "checkedOn": "2026-10-25",
   "status": "research-only-source-registry",
   "scope": "National acquisition references and CALABARZON/Central Luzon identity/source leads. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 140,
+  "sourceCount": 141,
   "sources": [
     {
       "id": "gbif-col-xr-taxonomy-matching",
@@ -3866,16 +3866,55 @@
       "reuse": {
         "metadata": "The Field Museum IPT resource metadata states CC0 1.0. Both archive occurrence rows carry the CC0 public-domain dedication URL.",
         "raw": "The complete 15,082,240-byte Darwin Core Archive is coordinate-bearing and stays in ignored local research storage. The tracked review contains selected non-coordinate fields and an archive SHA-256.",
-        "content": "The official archive confirms provider, collection, catalog number, taxon name, year-level source date, Balayan Bay locality text and item license for two rows. GBIF quality flags and row-level historical-only review remain open; no app reuse or public admission is approved."
+        "content": "The official archive confirms the two provider, collection, catalog, name, year-level date, Balayan Bay locality and CC0 fields. Both rows are approved only as historical source-locality research evidence after accepted-name checks; all GBIF quality flags remain documented, and no app row or map point is admitted."
       },
       "publicationApproval": false,
-      "researchStatus": "two-direct-institution-record-crosschecks;year-only-source-dates;gbif-quality-review-open;zero-public-assertions",
+      "researchStatus": "two-direct-institution-record-crosschecks;two-historical-research-ledger-decisions;year-only-source-dates;zero-public-assertions",
       "license": "CC0 1.0",
       "caveats": [
         "The archive is an institutional Darwin Core publication, not a specimen re-identification or field survey.",
         "Its source dates provide year precision only; iDigBio indexed dateCollected values are not source evidence.",
         "Source-locality text says Balayan Bay but gives no waterBody field; GBIF quality flags remain attached to the candidates.",
         "These 1926 and 1929 records do not establish current presence, abundance, catchability, safety, or a complete bay inventory."
+      ]
+    },
+    {
+      "id": "worms-balayan-taxonomy-crosscheck",
+      "title": "WoRMS exact accepted-name cross-check for two Balayan Bay FMNH records",
+      "provider": "World Register of Marine Species (WoRMS)",
+      "url": "https://www.marinespecies.org/aphia.php?p=taxlist&tName=Caracanthus",
+      "additionalUrls": [
+        "https://www.marinespecies.org/aphia.php?p=taxdetails&id=220365",
+        "https://www.marinespecies.org/aphia.php?p=taxdetails&id=219957",
+        "https://www.marinespecies.org/rest/AphiaRecordsByName/Caracanthus%20unipinna?like=false&marine_only=false",
+        "https://www.marinespecies.org/rest/AphiaRecordsByName/Lagocephalus%20lunaris?like=false&marine_only=false"
+      ],
+      "role": "Exact accepted-name and rank cross-check for two Field Museum historical specimen candidates; taxonomy reference only, not locality evidence or expert specimen re-identification.",
+      "checkedOn": "2026-10-25",
+      "access": {
+        "status": "exact-name-API-returned-one-accepted-species-match-for-each-FMNH-candidate",
+        "reviewFiles": [
+          "calabarzon-balayan-fieldmuseum-row-decisions-20261025.json"
+        ],
+        "additionalRawPaths": [
+          "raw/calabarzon-balayan-fieldmuseum-source-check-20261025/worms-*.json"
+        ],
+        "exactNameMatches": 2,
+        "fieldAllowlistOnly": true,
+        "coordinatesRetained": false
+      },
+      "reuse": {
+        "metadata": "WoRMS API and taxon detail pages were used for concise name, authority, rank and status fields; item-specific redistribution terms were not established.",
+        "raw": "Raw API responses are retained only in ignored local research storage with SHA-256 values. The tracked review contains only the fields needed to document the accepted-name check.",
+        "content": "Taxonomy cross-check only. The WoRMS citation for these taxon records points to FishBase; do not describe the registry response as specimen-independent identification or occurrence evidence."
+      },
+      "publicationApproval": false,
+      "researchStatus": "two-exact-accepted-species-name-matches;taxonomy-only;zero-occurrence-claims",
+      "license": null,
+      "caveats": [
+        "WoRMS provides current nomenclatural status, not historical specimen identification or locality confirmation.",
+        "The source citation shown by WoRMS references FishBase; treat this as a name cross-check rather than independent taxonomic consensus.",
+        "The source names and exact accepted names agree for these two records; GBIF quality flags remain preserved in the separate row review."
       ]
     }
   ],

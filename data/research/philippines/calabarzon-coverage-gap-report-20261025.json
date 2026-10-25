@@ -7,18 +7,19 @@
   "status": "checkpoint-published-incomplete-baseline",
   "inputHashes": {
     "scopeSha256": "e8a6c490cae14465a9ccc33b8078cf68f3e4b9fb016072a5c0f0549a2d96d30f",
-    "sourcesSha256": "c54e73ba679b21b3b130806d6f9d7129976449f4fa541fdf44c19d9d225d2555",
+    "sourcesSha256": "8a7e3c0e4706305f13eb7162c6b56778d0d8fab446113d2cd326bd962a52bedd",
     "lagunaMuseumVerificationSha256": "5604848902166f821f9a37eb79c9eb1ffea4e05897739f216189b24762a10509",
     "balayanGbifDetailsSha256": "6e466c1df40085b70d314da6af314ecc56ea9cd72da737cc9cf6c1757c80d1e9",
     "balayanIdigbioCrosscheckSha256": "66b5e92896fed932a02ce75316ce5cb8f8031525fa3923ed8a1d8426983a037f",
-    "balayanFieldMuseumSourceSha256": "f75c9104540f467c3f3c94e6018ee67317f68269fc8fafecf52ea89042f6a811"
+    "balayanFieldMuseumSourceSha256": "f75c9104540f467c3f3c94e6018ee67317f68269fc8fafecf52ea89042f6a811",
+    "balayanFieldMuseumRowDecisionsSha256": "dc70d39ecd8a7118534362361410bd93f250fa325ed7fd4cc185e0b2be131d11"
   },
   "decision": "Keep CALABARZON visibly in progress. This checkpoint records the current source-backed leads and specific gaps; it is not a complete fish checklist, a completed region, or a public species release.",
   "coverageSummary": {
     "namedWaterbodyLeads": 83,
     "distinctSourceReferencesAssigned": 49,
     "sourceAssignments": 197,
-    "registeredSources": 140,
+    "registeredSources": 141,
     "provincesWithLeads": 5,
     "separateCityCoverageUnits": 1,
     "byWaterbodyKind": {
@@ -191,11 +192,12 @@
     {
       "id": "balayan-bay-museum-catalog-review",
       "count": 14,
-      "reason": "Fourteen corrected GBIF candidates group into ten museum catalog identities. iDigBio returned provider-attributed records for nine identities; the Field Museum-hosted institutional archive directly confirms the FMNH Fishes catalog rows 47041 and 90961, including their names, year-only dates, Balayan Bay locality text and CC0 item terms. One UMMZ exact identity remains unresolved. The source record for CAS catalog 28340 differs in spelling/name from GBIF, and one USNM catalog item is represented by five GBIF material-citation rows with a multi-locality description. These source records are cross-checks, not independent specimens or a complete/current bay checklist.",
-      "nextAction": "Resolve the UMMZ catalog query and CAS catalog 28340 name conflict; reconcile the five-to-one USNM citation group and its multi-locality scope; review the Field Museum and remaining GBIF quality flags and taxonomy row by row; preserve source-reported date precision, locality and per-record/dataset terms; then make explicit row-level historical-only decisions.",
+      "reason": "Fourteen corrected GBIF candidates group into ten museum catalog identities. The Field Museum-hosted archive directly confirms FMNH Fishes catalog rows 47041 and 90961, and WoRMS returns an exact accepted species-name match for both; they are admitted only as historical Balayan Bay locality evidence in the research ledger, with year-only dates and all GBIF flags preserved. Twelve other GBIF candidate rows remain to be resolved across the CAS, USNM and UMMZ catalog identities. The CAS 28340 name conflict, UMMZ unresolved identity and USNM five-to-one multi-locality citation remain open; none of these cross-checks establishes a complete or current bay checklist.",
+      "nextAction": "Review the 12 remaining GBIF rows across the eight non-Field-Museum catalog identities: obtain institution-hosted CAS and USNM source records where available, resolve the UMMZ exact identity and CAS catalog 28340 name conflict, reconcile the five-to-one USNM citation and its multi-locality scope, and make per-row historical-only decisions under source-supported taxonomy, locality, date, quality and reuse terms. Keep coordinates and current-presence claims excluded.",
       "sourceRefs": [
         "idigbio-balayan-catalog-crosscheck",
-        "fieldmuseum-balayan-primary-archive-check"
+        "fieldmuseum-balayan-primary-archive-check",
+        "worms-balayan-taxonomy-crosscheck"
       ]
     }
   ],

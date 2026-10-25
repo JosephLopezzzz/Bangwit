@@ -96,9 +96,9 @@ test("source registry and CALABARZON gap snapshot record the iDigBio follow-up",
     gapReport.inputHashes.balayanFieldMuseumSourceSha256,
     createHash("sha256").update(fieldMuseumBytes).digest("hex"),
   );
-  assert.equal(gapReport.coverageSummary.registeredSources, 140);
-  assert.match(gap.reason, /Field Museum-hosted institutional archive.*47041.*90961/i);
-  assert.match(gap.nextAction, /quality flags.*historical-only decisions/i);
+  assert.equal(gapReport.coverageSummary.registeredSources, 141);
+  assert.match(gap.reason, /catalog rows 47041 and 90961.*WoRMS/i);
+  assert.match(gap.nextAction, /historical-only decisions.*quality/i);
 });
 
 test("Field Museum archive confirms its two Balayan catalog rows without promoting indexed dates", () => {
