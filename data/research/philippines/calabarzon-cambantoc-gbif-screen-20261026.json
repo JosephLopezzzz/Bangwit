@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "batchId": "calabarzon-cambantoc-colxr-gbif-screen-20261026",
+  "reviewedOn": "2026-10-26",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "waterbodyId": "ph-wb-cambantoc-makiling-river",
+  "waterbodyName": "Cambantoc River",
+  "sourceId": "gbif-occurrence-downloads",
+  "endpoint": "https://api.gbif.org/v1/occurrence/search",
+  "queryBasis": {
+    "country": "PH",
+    "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+    "checklistName": "Catalogue of Life eXtended Release",
+    "taxonKey": "8VR36",
+    "taxonName": "Actinopterygii",
+    "taxonRank": "GIGACLASS",
+    "scopeLimit": "Ray-finned fishes only; this is not a complete search for sharks or rays."
+  },
+  "searchTerms": ["Cambantoc", "Cambantoc River"],
+  "queryFields": ["waterBody", "locality"],
+  "queries": [
+    {
+      "field": "waterBody", "value": "Cambantoc", "httpStatus": 200,
+      "totalRecords": 0, "returnedRecords": 0, "endOfRecords": true,
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&waterBody=Cambantoc&limit=100",
+      "rawResponse": { "path": "raw/calabarzon-cambantoc-gbif-screen-20261026/waterBody-cambantoc-offset-0.json", "bytes": 79, "sha256": "16004ddeb6b1eb033e3665fa6082d9cdd36533ce1f36272a2a95f5664f1b9dcd" }
+    },
+    {
+      "field": "locality", "value": "Cambantoc", "httpStatus": 200,
+      "totalRecords": 0, "returnedRecords": 0, "endOfRecords": true,
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&locality=Cambantoc&limit=100",
+      "rawResponse": { "path": "raw/calabarzon-cambantoc-gbif-screen-20261026/locality-cambantoc-offset-0.json", "bytes": 79, "sha256": "16004ddeb6b1eb033e3665fa6082d9cdd36533ce1f36272a2a95f5664f1b9dcd" }
+    },
+    {
+      "field": "waterBody", "value": "Cambantoc River", "httpStatus": 200,
+      "totalRecords": 0, "returnedRecords": 0, "endOfRecords": true,
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&waterBody=Cambantoc+River&limit=100",
+      "rawResponse": { "path": "raw/calabarzon-cambantoc-gbif-screen-20261026/waterBody-cambantoc-river-offset-0.json", "bytes": 79, "sha256": "16004ddeb6b1eb033e3665fa6082d9cdd36533ce1f36272a2a95f5664f1b9dcd" }
+    },
+    {
+      "field": "locality", "value": "Cambantoc River", "httpStatus": 200,
+      "totalRecords": 0, "returnedRecords": 0, "endOfRecords": true,
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&locality=Cambantoc+River&limit=100",
+      "rawResponse": { "path": "raw/calabarzon-cambantoc-gbif-screen-20261026/locality-cambantoc-river-offset-0.json", "bytes": 79, "sha256": "16004ddeb6b1eb033e3665fa6082d9cdd36533ce1f36272a2a95f5664f1b9dcd" }
+    }
+  ],
+  "summary": {
+    "queryCount": 4,
+    "successfulQueryCount": 4,
+    "returnedOccurrenceCount": 0,
+    "fishAssertionsAdded": 0,
+    "geometryOrCoordinatesAdded": false,
+    "publicProjectionAdded": false
+  },
+  "decision": {
+    "interpretation": "These four exact-field queries are a bounded discovery check for two source-backed strings. They do not establish fish absence, exhaustiveness, or lack of occurrences under other spellings, fields, providers, or geospatial searches.",
+    "waterbodyScopeChanged": false,
+    "salinityChanged": false,
+    "publicAdmission": false
+  },
+  "nextAction": "Keep the 2011 Makiling table held pending explicit reuse permission. Continue source discovery for other CALABARZON rivers and lakes; no absence inference or public species row follows from these zero results."
+}
