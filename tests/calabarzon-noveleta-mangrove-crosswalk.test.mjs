@@ -49,6 +49,6 @@ test("Noveleta mangrove lead uses its DENR source and does not inherit Caliraya 
   assert.equal(report.coverageSummary.publicAdmission, false);
   assert.equal(report.coverageSummary.regionalBaselineComplete, false);
   assert.equal(report.coverageSummary.boundaryGeometryValidated, 0);
-  assert.equal(report.coverageSummary.distinctSourceReferencesAssigned, 61);
-  assert.equal(report.coverageSummary.leadsStillResearchQueued, 10);
+  assert.equal(report.coverageSummary.distinctSourceReferencesAssigned, 64);
+  assert.equal(report.coverageSummary.leadsStillResearchQueued, 12);
 });

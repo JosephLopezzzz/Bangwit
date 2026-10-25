@@ -34,7 +34,9 @@ test("BMB Atlas adds selected CALABARZON river leads without implying a complete
     assert.equal(row.fishEvidenceStatus, "bounded-COLXR-Actinopterygii-waterBody-and-locality-text-screen-zero; no-fish-absence-inferred");
     assert.equal(row.reviewStatus, "bounded-COLXR-Actinopterygii-waterBody-and-locality-text-screen-zero-no-absence-inferred");
     assert.equal(row.publicAdmission, false);
-    assert.deepEqual(row.sourceRefs, [review.sourceId, "gbif-occurrence-downloads"]);
+    assert.ok(row.sourceRefs.includes(review.sourceId));
+    assert.ok(row.sourceRefs.includes("gbif-occurrence-downloads"));
+    assert.deepEqual(row.sourceRefs.filter((sourceId) => sourceId !== "cavite-ecological-profile-2024-fisheries"), [review.sourceId, "gbif-occurrence-downloads"]);
   }
 
   for (const id of review.decision.existingLeadIdsUpdated) {
@@ -49,8 +51,8 @@ test("BMB Atlas adds selected CALABARZON river leads without implying a complete
   assert.match(review.heldCrosswalks.find((row) => row.sourceName === "Dumacaa-Tayabas River").disposition, /not split or merged/i);
   assert.match(review.method.asterisk, /without interpretation/i);
 
-  assert.equal(scope.counts.waterbodyResearchLeads, 84);
-  assert.equal(scope.counts.byKind.river, 41);
+  assert.equal(scope.counts.waterbodyResearchLeads, 89);
+  assert.equal(scope.counts.byKind.river, 46);
   assert.equal(report.coverageSummary.namedWaterbodyLeads, 83);
   assert.equal(report.coverageSummary.regionalBaselineComplete, false);
   assert.equal(report.coverageSummary.publicAdmission, false);

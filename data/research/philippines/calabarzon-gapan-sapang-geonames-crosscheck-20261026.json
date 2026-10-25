@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-26",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "regionName": "Region IV-A (CALABARZON)",
+  "waterbodyId": "ph-wb-gapan-sapang-river-ternate",
+  "status": "gazetteer-point-not-close-enough-to-verify-modelled-channel;official-crosswalk-pending",
+  "sourceIds": [
+    "geonames-sapang-river-ternate",
+    "boothroyd-2023-philippines-river-catchment-geodata",
+    "denr-cavite-adopt-waterbody-gapan-river-2025",
+    "pra-gapan-sapang-adopt-waterbody-2025"
+  ],
+  "gazetteerRecord": {
+    "sourceId": "geonames-sapang-river-ternate",
+    "geonameId": 1679414,
+    "reportedName": "Sapang River",
+    "alternateNames": [
+      "Sapang",
+      "Zapang River"
+    ],
+    "featureClass": "stream",
+    "country": "Philippines",
+    "adminArea": "Cavite, Calabarzon",
+    "coordinates": {
+      "latitude": 14.2886,
+      "longitude": 120.7115,
+      "crs": "WGS 84"
+    },
+    "coordinateRole": "Approximate GeoNames feature point; not an official river vertex, station, or boundary.",
+    "license": "CC BY 4.0",
+    "termsCaveat": "GeoNames supplies data as-is without a warranty of accuracy, timeliness, or completeness. Attribution is required."
+  },
+  "modelledNetworkCrosscheck": {
+    "sourceId": "boothroyd-2023-philippines-river-catchment-geodata",
+    "datasetTitle": "Philippines_GIS_stream_network_n128",
+    "sourceArchiveSha256": "58f47df9c8cc90d6734bc7c28db6e2980c52ea17c505561a63405bcd1bf574d2",
+    "networkCrs": "WGS 84 / Pseudo-Mercator (EPSG:3857)",
+    "method": "Project the GeoNames point to EPSG:3857 and compute planar point-to-polyline distance against the published modelled stream network. Approximate ground distance is also shown with a latitude cosine correction.",
+    "nearestFeature": {
+      "record": 59365,
+      "pidValue": "Ternate",
+      "lineLengthMeters": 1729.75,
+      "projectedDistanceMeters": 1617.52,
+      "approximateGroundDistanceMeters": 1567.49
+    },
+    "nextNearestProjectedDistanceMeters": 3000,
+    "interpretation": "The nearest modelled feature is about 1.57 km from the gazetteer point. This is too distant to use as a name-to-channel match; small channels may be absent from the model and the gazetteer point may be approximate."
+  },
+  "sourceNameContext": {
+    "denrReportedName": "Gapan River",
+    "praReportedName": "Gapan (Sapang) River",
+    "denrProgramSegmentLengthKm": 1,
+    "relationshipToGazetteerFeature": "not-confirmed"
+  },
+  "decisions": {
+    "gazetteerNameAddedAsAlias": false,
+    "gazetteerCoordinatesAddedToPublicMap": false,
+    "modelledGeometryAdded": false,
+    "officialChannelIdentityConfirmed": false,
+    "fullChannelGeometryAdded": false,
+    "speciesAssertionsAdded": 0,
+    "fishAbsenceInferred": false,
+    "publicProjectionAdded": false,
+    "publicationApproval": false
+  },
+  "limitations": [
+    "GeoNames is a gazetteer, not an authoritative channel survey; its coordinate is a single approximate feature point.",
+    "The University of Glasgow stream lines are modelled from a 2013 elevation dataset and do not constitute an official named-river geometry.",
+    "The nearest modelled segment is too far from the point for a confident name crosswalk. The distance does not disprove that the named river exists.",
+    "No official Gapan/Sapang reach station, channel trace, fish survey, salinity measurement, access determination, or current legal status was established."
+  ],
+  "nextAction": "Seek an official or otherwise independently validated channel trace and station-level source for the Gapan/Sapang reach. Until then keep the GeoNames feature point and modelled line out of public map geometry and preserve the lead as unresolved."
+}

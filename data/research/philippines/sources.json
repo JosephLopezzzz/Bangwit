@@ -3,7 +3,7 @@
   "checkedOn": "2026-10-26",
   "status": "research-only-source-registry",
   "scope": "National acquisition references and CALABARZON/Central Luzon identity/source leads. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 167,
+  "sourceCount": 169,
   "sources": [
     {
       "id": "gbif-col-xr-taxonomy-matching",
@@ -3332,7 +3332,8 @@
         "status": "three-public-CC-BY-4.0-archives-downloaded;stream-network-107613-features-structurally-and-locally-crosschecked",
         "reviewFiles": [
           "national-philippines-river-catchment-geodata-review-20261024.json",
-          "calabarzon-tagbac-creek-hydrography-crosscheck-20261026.json"
+          "calabarzon-tagbac-creek-hydrography-crosscheck-20261026.json",
+          "calabarzon-gapan-sapang-geonames-crosscheck-20261026.json"
         ],
         "rawPath": "raw/boothroyd-1396/",
         "downloadedFiles": [
@@ -4399,19 +4400,20 @@
       "title": "Cavite Ecological Profile 2024",
       "provider": "Provincial Government of Cavite / Office of the Provincial Agriculturist",
       "url": "https://cavite.gov.ph/wp-content/uploads/2026/04/CEP_2024.pdf",
-      "role": "Official provincial profile: Table 4.25 lists 11 source-reported common catch labels and season/peak/lean periods for Cavite in 2024, without waterbody assignments. Table 5.8 lists Tres Cruzes Dam in Tanza with a source-reported 911.1 ha area-covered figure; this is infrastructure context, not a reservoir outline or fish record.",
+      "role": "Official provincial profile: Table 4.25 lists 11 source-reported common catch labels and season/peak/lean periods for Cavite in 2024, without waterbody assignments. Table 5.8 lists Tres Cruzes Dam in Tanza with a source-reported 911.1 ha area-covered figure; this is infrastructure context, not a reservoir outline or fish record. Tables 2.14–2.16 also provide source-reported names, lengths and narrative course/receiving-water context for major rivers; this does not supply channel geometry or fish evidence.",
       "checkedOn": "2026-10-26",
       "access": {
-        "status": "official-provincial-PDF;indexed-fisheries-and-dam-table-excerpts-reviewed;no-local-copy-or-full-table-extraction",
+        "status": "official-provincial-PDF;indexed-fisheries-and-dam-table-excerpts-reviewed;no-local-copy-or-full-table-extraction;indexed-official-river-course-and-watershed-table-excerpts-reviewed;no-full-table-copy",
         "reviewFiles": [
           "calabarzon-cavite-ecological-profile-fisheries-review-20261025.json",
-          "calabarzon-tres-cruzes-water-storage-crosswalk-20261026.json"
+          "calabarzon-tres-cruzes-water-storage-crosswalk-20261026.json",
+          "calabarzon-cavite-2024-major-rivers-crosswalk-20261026.json"
         ]
       },
       "reuse": {
         "metadata": "The report credits the Office of the Provincial Agriculturist, Trece Martires City, for Table 4.25. No item-specific reuse license was verified.",
         "raw": "No local PDF copy or extracted full table is stored.",
-        "content": "Retain common-name and season labels as research leads only. Do not assign scientific names, individual waterbodies, current presence, or catchability. The dam table is retained only as minimal infrastructure and locality context; its area-covered figure is not adopted as reservoir surface extent. No app content is approved."
+        "content": "Retain common-name and season labels as research leads only. Do not assign scientific names, individual waterbodies, current presence, or catchability. The dam table is retained only as minimal infrastructure and locality context; its area-covered figure is not adopted as reservoir surface extent. No app content is approved. The river profile review records minimal attributed route/length facts only; no table, map, or image is reproduced, and none of these facts grants permission for public app content."
       },
       "publicationApproval": false,
       "researchStatus": "official-provincial-municipal-fisheries-context;common-names-only;not-waterbody-resolved;zero-assertions",
@@ -4421,7 +4423,8 @@
         "Table 4.25 is a province-level municipal-fisheries list and provides no row-level waterbody locality or catch quantities.",
         "The source heading includes an apparent typo, 'Fist Species'; retain the source wording only when needed for audit traceability.",
         "Some reported catch labels may be broader than species rank; no binomial crosswalk is supported by this source alone.",
-        "Do not use the seasonality fields as current forecasts, legal guidance, safety guidance, diet claims or bait advice."
+        "Do not use the seasonality fields as current forecasts, legal guidance, safety guidance, diet claims or bait advice.",
+        "Profile-reported lengths and route narratives are not GIS geometry, current safety or legal access data, or fish occurrence evidence."
       ]
     },
     {
@@ -4853,6 +4856,69 @@
         "No fish inventory, dated fish survey, station coordinates, salinity profile, full-channel geometry, fishing access or legal status is provided.",
         "Direct access returned HTTP 403; indexed official page content was reviewed without bypassing the restriction.",
         "No item-specific reuse permission was verified."
+      ]
+    },
+    {
+      "id": "geonames-sapang-river-ternate",
+      "title": "GeoNames feature record: Sapang River, Cavite",
+      "provider": "GeoNames",
+      "url": "https://www.geonames.org/advanced-search.html?q=Cavite+Philippines&startRow=150",
+      "additionalUrls": [
+        "https://www.geonames.org/1679414/sapang-river.html",
+        "https://www.geonames.org/export/index.html"
+      ],
+      "role": "CC BY 4.0 gazetteer name and approximate point for a stream named Sapang River in Cavite; discovery and spatial crosscheck only, not authoritative channel geometry or fish evidence.",
+      "checkedOn": "2026-10-26",
+      "sourceYear": null,
+      "access": {
+        "status": "official-search-result-opened;feature-detail-not-accessible-in-review-tool;coordinate-crosschecked-against-modelled-network",
+        "reviewFiles": [
+          "calabarzon-gapan-sapang-geonames-crosscheck-20261026.json"
+        ],
+        "localRawSnapshot": null
+      },
+      "reuse": {
+        "metadata": "GeoNames states the data are free under CC BY and require attribution; the data are provided as-is without warranty of accuracy, timeliness or completeness.",
+        "raw": "No raw export or local response was retained.",
+        "content": "Use only as an attributed research lead and approximate point. Do not treat a gazetteer point as a surveyed river vertex, boundary, or definitive identity crosswalk."
+      },
+      "publicationApproval": false,
+      "researchStatus": "approximate-gazetteer-point;distance-to-modelled-channel-inconclusive;not-public-geometry",
+      "license": "CC BY 4.0",
+      "caveats": [
+        "GeoNames disclaims accuracy, timeliness and completeness warranties.",
+        "The feature point is about 1.57 km from the nearest modelled stream-network feature; this does not confirm or disprove the named channel.",
+        "No fish records, salinity or legal/access information are supplied by this source."
+      ]
+    },
+    {
+      "id": "cavite-sepp-2014-protected-landscape-rivers",
+      "title": "Cavite Socio-Economic and Physical Profile 2014, Chapter 3: Physical Resources",
+      "provider": "Provincial Government of Cavite",
+      "url": "https://cavite.gov.ph/home/wp-content/uploads/2017/06/10-SEPP2014_Chapter3_Physical-Resources.pdf",
+      "role": "Official historical planning profile naming portions of Mamba/Cacabay River and Palicpican River in management zones of the Mts. Palay-Palay and Mataas na Gulod Protected Landscape; source lead only, not channel geometry, a fish inventory or current fishing rules.",
+      "checkedOn": "2026-10-26",
+      "sourceYear": 2014,
+      "access": {
+        "status": "official-provincial-PDF-opened-and-reviewed;river-name-and-management-zone-context-only",
+        "reviewFiles": [
+          "calabarzon-ternate-protected-landscape-rivers-review-20261026.json"
+        ],
+        "localRawSnapshot": null
+      },
+      "reuse": {
+        "metadata": "Item-specific reuse terms were not verified. Cite the official profile and do not reproduce its text, tables, map or images.",
+        "raw": "No local source copy was retained.",
+        "content": "Use minimally as historical source-named context. The park crosses Cavite and Batangas, and the profile does not locate the full river courses or provide fish evidence."
+      },
+      "publicationApproval": false,
+      "researchStatus": "historical-protected-landscape-river-name-context;geometry-and-fish-evidence-unresolved",
+      "license": null,
+      "caveats": [
+        "The profile dates to 2014 and is not a contemporary hydrographic survey.",
+        "It describes portions of each named river in management zones but supplies no station coordinates or channel linework.",
+        "The protected landscape extends across Ternate and Maragondon in Cavite and Nasugbu in Batangas; no single-municipality or full-province assignment is made.",
+        "Management-zone text is not a current fishing-access or regulation determination."
       ]
     }
   ],
