@@ -6,8 +6,8 @@
   "regionName": "Region IV-A (CALABARZON)",
   "status": "checkpoint-published-incomplete-baseline",
   "inputHashes": {
-    "scopeSha256": "3134b7abca269b48cd25ad47a18488f9e34fb853d0f267fa276148ee5b4a74b3",
-    "sourcesSha256": "a5c82af364af9ea3af3aad5292c6b38d779fc2f8a976388124034a045e457591",
+    "scopeSha256": "339759f2ca14487e93cf609ab0a0eeb2dd7e657178a2c7a859f8f560b1b20a8f",
+    "sourcesSha256": "5154ab17b8172a492de4dff91d5f9ffde134e7749a6ea4c96d72607af98e25e5",
     "lagunaMuseumVerificationSha256": "2bf81abe01e97008afd4e8564399894ef8011827155364a17a4fb41121a796e2",
     "balayanGbifDetailsSha256": "6e466c1df40085b70d314da6af314ecc56ea9cd72da737cc9cf6c1757c80d1e9",
     "balayanIdigbioCrosscheckSha256": "66b5e92896fed932a02ce75316ce5cb8f8031525fa3923ed8a1d8426983a037f",
@@ -22,14 +22,15 @@
     "balayanNmnhStationCrosswalkSha256": "c9d89cb12f8eeb9a34faf20f17a94ace518892f4d1ca266fb7ddceae565321c7",
     "lagunaCasArchiveCrosswalkSha256": "a5f889ad67216f27415b149d581b2ae8c7f3bb2e6352843c27349781a1824e87",
     "lagunaTaxonomyFollowupSha256": "f4cebe8e7db492c4207c268c3be01d04151c1b09fe6a95aaa3f1e1838c1090b2",
-    "caviteBayGbifScreenSha256": "93d976fc9134dec88696275d881d78694cfd769be55302d2bfe2b9a51ea0b5df"
+    "caviteBayGbifScreenSha256": "01da5f7fbac4a922fb61b00ff927d2907f2227a690a5fe989cd5796ad6e37598",
+    "maragondonTilapiaStudySha256": "9031c25e4c1a2787b91f79b9852f0ee02141acd1aa91c8461fad2e1eddca63a2"
   },
   "decision": "Keep CALABARZON visibly in progress. This checkpoint records the current source-backed leads and specific gaps; it is not a complete fish checklist, a completed region, or a public species release.",
   "coverageSummary": {
     "namedWaterbodyLeads": 83,
-    "distinctSourceReferencesAssigned": 49,
-    "sourceAssignments": 199,
-    "registeredSources": 150,
+    "distinctSourceReferencesAssigned": 50,
+    "sourceAssignments": 200,
+    "registeredSources": 151,
     "provincesWithLeads": 5,
     "separateCityCoverageUnits": 1,
     "byWaterbodyKind": {
@@ -48,7 +49,8 @@
       "bounded-COLXR-Actinopterygii-waterBody-and-locality-text-screen-zero; no-fish-absence-inferred": 41,
       "bounded-exact-locality-review-returned-four-copepod-records-and-no-fish-record": 2,
       "bounded-GBIF-all-taxon-text-screen;four-Mollusca-records-one-taxon-unmatched;no-fish-evidence-or-absence-inferred": 2,
-      "bounded-GBIF-locality-query-zero-no-absence-inferred": 5,
+      "bounded-GBIF-locality-query-zero-no-absence-inferred": 4,
+      "bounded-GBIF-locality-query-zero-no-absence-inferred;historical-genus-level-Tilapia-sampling-confirmed;species-identity-unresolved": 1,
       "bounded-Lake-Lumot-and-Lumot-Lake-queries-returned-zero; no-absence-inferred": 1,
       "candidate-historical-specimen-records-held; exact river identity unresolved; no assertion": 1,
       "four-historical-species-locality-assertions-from-four-CC0-museum-records; quality-flags-retained; coordinates-held": 1,
@@ -64,7 +66,8 @@
     },
     "waterbodyReviewStatusCounts": {
       "bounded-COLXR-Actinopterygii-waterBody-and-locality-text-screen-zero-no-absence-inferred": 41,
-      "bounded-GBIF-locality-string-checked-no-records-returned": 5,
+      "bounded-GBIF-locality-string-checked-no-absence-inferred;historical-genus-level-sampling-reviewed;species-level-evidence-incomplete": 1,
+      "bounded-GBIF-locality-string-checked-no-records-returned": 4,
       "bounded-GBIF-text-screen-reviewed;fish-evidence-incomplete": 2,
       "candidate-match-held-for-waterbody-identity": 1,
       "geography-conflict-held": 1,
@@ -130,7 +133,13 @@
       "Laguna de Bay museum batch: the official CAS IPT archive directly matched all 17 collection-qualified source items, and all 17 are admitted only as historical research-ledger evidence. One MZUSP item remains held because the portal interprets it at family rank, conflicts on locality assertion and license, and gives no waterBody value. No absence or current-presence claim is inferred.",
       "Bacoor Bay and Cañacao Bay: six bounded GBIF all-taxon waterBody/locality text searches returned five unique same-dataset records (four Mollusca, one taxon-unmatched); zero fish-identified candidates. Text labels conflict with some waterBody values, so no bay-specific fish assertion, absence inference, geometry or salinity conclusion is made."
     ],
-    "zeroResultMeaning": "Exact-locality zeroes are bounded search gaps, not fish-absence findings. Waterbird monitoring and historical common-name lists are not species-level fish presence evidence."
+    "zeroResultMeaning": "Exact-locality zeroes are bounded search gaps, not fish-absence findings. Waterbird monitoring and historical common-name lists are not species-level fish presence evidence.",
+    "historicalGenusLevelResearchEvidence": [
+      {
+        "waterbodyId": "ph-wb-maragondon-river",
+        "note": "A 2024 primary study reports 48 juvenile Tilapia sp. sampled at upstream, midstream, and downstream Maragondon River stations in April 2023. The authors withheld species resolution due to possible hybridization and gene-pool uncertainty; this is genus-level historical evidence only. It does not establish current presence, catchability, full-river coverage, salinity, or geometry."
+      }
+    ]
   },
   "openGaps": [
     {
@@ -275,15 +284,16 @@
       "name": "Maragondon River",
       "kind": "river",
       "salinity": "unknown",
-      "fishEvidenceStatus": "bounded-GBIF-locality-query-zero-no-absence-inferred",
-      "reviewStatus": "bounded-GBIF-locality-string-checked-no-records-returned",
+      "fishEvidenceStatus": "bounded-GBIF-locality-query-zero-no-absence-inferred;historical-genus-level-Tilapia-sampling-confirmed;species-identity-unresolved",
+      "reviewStatus": "bounded-GBIF-locality-string-checked-no-absence-inferred;historical-genus-level-sampling-reviewed;species-level-evidence-incomplete",
       "boundaryStatus": "not-delineated",
       "publicAdmission": false,
       "sourceRefs": [
         "emb-calabarzon-waterbodies",
         "gbif-occurrence-downloads",
         "ijcs-2014-maragondon-goby-barcoding",
-        "denr-bmb-inland-wetlands-atlas-2016"
+        "denr-bmb-inland-wetlands-atlas-2016",
+        "limbago-2024-maragondon-tilapia-sampling"
       ]
     },
     {
@@ -1424,6 +1434,6 @@
   "nextStep": {
     "phaseId": "L1",
     "regionName": "CALABARZON (Region IV-A)",
-    "action": "Continue L1 CALABARZON by resolving source-locality and waterbody identity for the Cavite bay candidates, then prioritize independent, rights-clear fish surveys across the remaining Cavite coastal and inland leads. The Bacoor Bay/Cañacao Bay GBIF text screen yielded four non-fish Mollusca records and one taxon-unmatched record, with no fish-identified candidate; do not treat this as absence or as a validated bay assignment. Keep geometry/salinity unknown and do not advance to NCR or mark CALABARZON complete."
+    "action": "Continue L1 CALABARZON by finding independently supported species-rank fish records across the remaining coastal and inland leads, including rights-clear primary evidence for Maragondon River. Keep genus-only Tilapia sp. separate from species claims; do not advance to NCR or mark CALABARZON complete until the baseline and remaining gaps are reviewed or explicitly bounded."
   }
 }
