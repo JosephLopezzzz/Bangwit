@@ -3658,21 +3658,26 @@
         "https://www.gbif.org/dataset/18896efa-22df-4fbd-9782-42f47257e753",
         "https://api.gbif.org/v1/occurrence/search?datasetKey=18896efa-22df-4fbd-9782-42f47257e753"
       ],
-      "role": "Nationally reusable Philippine museum fish-specimen dataset; screened only for exact Taal locality fields in one bounded discovery batch.",
-      "checkedOn": "2026-10-24",
+      "role": "Nationally reusable Philippine fish-specimen dataset; this L1 Manila Bay/Cavite screen found seven administrative-text candidates but did not resolve per-record capture origin from landing, market, port or nearby-sea contexts.",
+      "checkedOn": "2026-10-25",
       "access": {
-        "status": "official-IPT-version-1.38-metadata-and-four-GBIF-exact-field-queries-reviewed",
+        "status": "official-IPT-v1.38-archive-and-GBIF-screen-reviewed;seven-Cavite-records-not-waterbody-localized",
         "reviewFiles": [
-          "calabarzon-taal-national-museum-gbif-screen-20261024.json"
-        ]
+          "calabarzon-taal-national-museum-gbif-screen-20261024.json",
+          "calabarzon-manila-bay-national-museum-gbif-screen-20261025.json"
+        ],
+        "rawPath": "raw/calabarzon-manila-bay-nmp-primary-archive-20261025/",
+        "archiveSha256": "63bbcf7a9842538913e602f69c41f802be5d056b5909f98768267a14a90d9bbf",
+        "archiveVersion": "1.38",
+        "archivePublished": "2026-09-11"
       },
       "reuse": {
         "metadata": "The official IPT lists version 1.38, published 2026-09-11, 8,225 core records, and CC BY 4.0. Attribute the dataset and review record-level terms before any extraction.",
-        "raw": "Four exact text-field search responses retained as local research receipts only; no dataset archive or occurrence rows retained.",
-        "content": "The dataset description refers to commercial-port landing sites, markets and nearby seas; this does not establish Taal locality for individual records. Four exact Taal/Midas GBIF text queries returned zero. No Taal species assertion or absence claim is approved."
+        "raw": "The official IPT version 1.38 archive and bounded GBIF response snapshots are retained under ignored local research storage and pinned by hashes in the review. Tracked candidate records omit coordinates.",
+        "content": "Dataset and selected occurrence records are CC BY 4.0 with attribution. Seven rows have sourceStateProvince=Cavite but no locality or waterBody text; source methods mix landing sites, markets, commercial ports and nearby seas without per-row capture-origin rules. No local waterbody occurrence or public projection is approved."
       },
       "publicationApproval": false,
-      "researchStatus": "CC-BY-4.0-national-source-registered;bounded-Taal-exact-field-screen-zero;no-absence-inferred",
+      "researchStatus": "CC-BY-4.0-primary-archive-crosschecked;seven-Cavite-stateProvince-candidates-held-for-capture-origin;no-waterbody-assertions",
       "datasetKey": "18896efa-22df-4fbd-9782-42f47257e753",
       "license": "CC-BY-4.0",
       "caveats": [
