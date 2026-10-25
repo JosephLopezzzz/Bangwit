@@ -467,7 +467,7 @@ The follow-up GBIF screen queried 16 BMB/DENR names and spelling candidates agai
 
 The SEAFDEC 2016 NIFEP table adds Bal-on Reservoir as a Quezon research lead and Laguna de Bay historical management context. Its San Pablo/Tadlak sites are grouped and the six Rizal river sanctuaries are unnamed; the 2015 program activities are not fish-occurrence records. CALABARZON now has 51 selected leads and remains incomplete; no species, diet, geometry or public app data was added. See `calabarzon-seafdec-nifep-table-review-20261024.json`.
 
-A second SEAFDEC proceedings paper describes a 7 ha Dagatan Lake in San Antonio at coordinates rounded to whole minutes and mentions *Clarias macrocephalus* without survey details. This does not resolve whether it is the separately listed Lake Pagatan, so neither source is assigned to that lead and no occurrence or map point is created. See `calabarzon-seafdec-dagatan-case-review-20261024.json`.
+A second SEAFDEC proceedings paper describes a 7 ha Dagatan Lake in San Antonio at coordinates rounded to whole minutes. Its Figure 4 labels six fish names; five binomials received automated COL XR taxonomy proposals, including the printed synonym *Trichogaster pectoralis* -> *Trichopodus pectoralis*, while *Oreochromis* remains genus-level. The source gives no sampling details, license for figure reuse, or evidence that resolves its lake against the separately listed Lake Pagatan, so no species occurrence, scope assignment or map point is created. See `calabarzon-seafdec-dagatan-case-review-20261024.json` and `calabarzon-seafdec-dagatan-figure-review-20261026.json`.
 
 ### CALABARZON inland-water occurrence screen -- 25 October 2026
 
