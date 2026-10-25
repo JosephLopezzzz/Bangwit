@@ -4,12 +4,14 @@ import { readFile } from "node:fs/promises";
 import { test } from "node:test";
 
 const base = new URL("../data/research/philippines/", import.meta.url);
-const [review, registry, scope, report, reviewBytes, registryBytes, scopeBytes] = await Promise.all([
+const [review, speciesClaimReview, registry, scope, report, reviewBytes, speciesClaimBytes, registryBytes, scopeBytes] = await Promise.all([
   readFile(new URL("calabarzon-maragondon-tilapia-study-review-20261025.json", base), "utf8").then(JSON.parse),
+  readFile(new URL("calabarzon-maragondon-oreochromis-claim-review-20261025.json", base), "utf8").then(JSON.parse),
   readFile(new URL("sources.json", base), "utf8").then(JSON.parse),
   readFile(new URL("calabarzon-scope.json", base), "utf8").then(JSON.parse),
   readFile(new URL("calabarzon-coverage-gap-report-20261025.json", base), "utf8").then(JSON.parse),
   readFile(new URL("calabarzon-maragondon-tilapia-study-review-20261025.json", base)),
+  readFile(new URL("calabarzon-maragondon-oreochromis-claim-review-20261025.json", base)),
   readFile(new URL("sources.json", base)),
   readFile(new URL("calabarzon-scope.json", base)),
 ]);
@@ -46,10 +48,32 @@ test("CC BY source and waterbody scope preserve attribution and research-only li
   assert.match(waterbody.fishEvidenceStatus, /genus-level-Tilapia-sampling-confirmed/);
 });
 
+test("Maragondon Nile tilapia claim stays held pending specimen identification and reuse review", () => {
+  const source = registry.sources.find((row) => row.id === speciesClaimReview.sourceId);
+  const waterbody = scope.waterbodies.find((row) => row.id === speciesClaimReview.waterbodyId);
+  assert.ok(source);
+  assert.ok(waterbody);
+  assert.equal(speciesClaimReview.status, "historical-species-level-source-claim-found;identification-and-reuse-unverified;not-admitted");
+  assert.equal(speciesClaimReview.sourceClaim.sourceTaxonLabel, "Oreochromis niloticus (Tilapia)");
+  assert.match(speciesClaimReview.comparison.finding, /Tilapia sp\./);
+  assert.match(speciesClaimReview.comparison.interpretation, /do not resolve.*Oreochromis niloticus/i);
+  assert.equal(speciesClaimReview.reuse.license, null);
+  assert.equal(speciesClaimReview.decision.speciesAssertionsAdded, 0);
+  assert.equal(speciesClaimReview.decision.publicAppProjectionAdded, false);
+  assert.equal(source.license, null);
+  assert.equal(source.publicationApproval, false);
+  assert.ok(waterbody.sourceRefs.includes(speciesClaimReview.sourceId));
+  assert.equal(waterbody.publicAdmission, false);
+  assert.equal(/14°|120°|decimalLatitude|decimalLongitude/i.test(speciesClaimBytes.toString("utf8")), false);
+  assert.ok(report.evidenceReadout.historicalSpeciesLevelClaimsHeld.some((row) => row.waterbodyId === speciesClaimReview.waterbodyId));
+  assert.ok(report.openGaps.some((row) => row.id === "maragondon-species-identification-and-reuse"));
+});
+
 test("CALABARZON checkpoint hashes and source counts include the Maragondon review", () => {
   assert.equal(report.inputHashes.scopeSha256, sha256(scopeBytes));
   assert.equal(report.inputHashes.sourcesSha256, sha256(registryBytes));
   assert.equal(report.inputHashes.maragondonTilapiaStudySha256, sha256(reviewBytes));
+  assert.equal(report.inputHashes.maragondonOreochromisClaimReviewSha256, sha256(speciesClaimBytes));
   assert.equal(report.coverageSummary.registeredSources, registry.sources.length);
   const sourceRefs = scope.waterbodies.flatMap((waterbody) => waterbody.sourceRefs);
   assert.equal(report.coverageSummary.sourceAssignments, sourceRefs.length);
