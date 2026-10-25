@@ -4,7 +4,7 @@ import { readFile } from "node:fs/promises";
 import { test } from "node:test";
 
 const base = new URL("../data/research/philippines/", import.meta.url);
-const [report, scope, sweep, sourceRegistry, scopeBytes, sourceBytes, museumBytes, taxonomyFollowupBytes] = await Promise.all([
+const [report, scope, sweep, sourceRegistry, scopeBytes, sourceBytes, museumBytes, taxonomyFollowupBytes, caviteBayScreenBytes] = await Promise.all([
   readFile(new URL("calabarzon-coverage-gap-report-20261025.json", base), "utf8").then(JSON.parse),
   readFile(new URL("calabarzon-scope.json", base), "utf8").then(JSON.parse),
   readFile(new URL("calabarzon-coverage-source-sweep.json", base), "utf8").then(JSON.parse),
@@ -13,6 +13,7 @@ const [report, scope, sweep, sourceRegistry, scopeBytes, sourceBytes, museumByte
   readFile(new URL("sources.json", base), "utf8"),
   readFile(new URL("calabarzon-laguna-museum-catalog-verification-20261025.json", base), "utf8"),
   readFile(new URL("calabarzon-laguna-cas-taxonomy-followup-20261025.json", base), "utf8"),
+  readFile(new URL("calabarzon-cavite-bay-gbif-screen-20261025.json", base), "utf8"),
 ]);
 
 test("CALABARZON checkpoint reports its gaps without claiming a complete region", () => {
@@ -36,7 +37,7 @@ test("CALABARZON checkpoint reports its gaps without claiming a complete region"
     stream: 3,
     wetland: 8,
   });
-  assert.equal(report.coverageSummary.leadsStillResearchQueued, 19);
+  assert.equal(report.coverageSummary.leadsStillResearchQueued, 17);
   assert.equal(report.coverageSummary.unknownSalinityLeads, 78);
   assert.equal(report.coverageSummary.researchProjectionAssertionsImported, 9);
   const sourceRefs = scope.waterbodies.flatMap((waterbody) => waterbody.sourceRefs);
@@ -44,6 +45,7 @@ test("CALABARZON checkpoint reports its gaps without claiming a complete region"
   assert.equal(report.coverageSummary.distinctSourceReferencesAssigned, new Set(sourceRefs).size);
   assert.equal(report.inputHashes.scopeSha256, createHash("sha256").update(scopeBytes).digest("hex"));
   assert.equal(report.inputHashes.sourcesSha256, createHash("sha256").update(sourceBytes).digest("hex"));
+  assert.equal(report.inputHashes.caviteBayGbifScreenSha256, createHash("sha256").update(caviteBayScreenBytes).digest("hex"));
   assert.equal(
     report.inputHashes.lagunaMuseumVerificationSha256,
     createHash("sha256").update(museumBytes).digest("hex"),

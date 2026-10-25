@@ -504,3 +504,7 @@ Exact WoRMS API lookups returned accepted species-rank records for *Caracanthus 
 
 
 The USNM station follow-up is documented in `calabarzon-balayan-usnm-station-crosswalk-20261025.json`. The 1910 Bureau of Fisheries station OCR is retained only in ignored raw research storage; tracked station review omits coordinates. Dataset-level CC0 and GBIF-row CC0 resolve the reuse review for data metadata, but no image or third-party article text is copied. No public app row, map point, current-presence claim or completed-checklist claim was added.
+
+### Cavite pilot bays: GBIF text-field screen -- 25 October 2026
+
+Six public GBIF Occurrence API searches covered Bacoor Bay, Cañacao Bay, and the existing `Canacao Bay` spelling alias across indexed `waterBody` and `locality` text fields for the Philippines. Five unique records came from the Bailey-Matthews National Shell Museum dataset. Four identify mollusks (two bivalves and two gastropods); one is taxonomically unmatched. Several records carry locality text for a bay while the interpreted `waterBody` names Manila Bay, Philippine Sea, or is blank, so they are not assigned as fish records for the named bays. Their source flags are preserved. No species/diet assertion, coordinates, bay boundary, salinity, public row, or fish-absence claim was added. The dataset's CC0 metadata is retained for provenance, not treated as blanket permission for public publication. See `calabarzon-cavite-bay-gbif-screen-20261025.json`; full API responses remain ignored in `raw/calabarzon-cavite-bay-gbif-screen-20261025/`.

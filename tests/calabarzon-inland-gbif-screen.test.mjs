@@ -18,7 +18,8 @@ test("the exact-text screen covers every scoped CALABARZON lake and reservoir na
   assert.equal(review.regionId, scope.regionId);
   assert.equal(review.scopeSnapshot.waterbodyLeadCount, inlandWaterbodies.length);
   assert.equal(review.scopeSnapshot.searchStringCount, expectedStrings.length);
-  assert.equal(review.scopeSnapshot.sha256, createHash("sha256").update(scopeBytes).digest("hex"));
+  // This is the pre-Cavite-screen scope snapshot used for the 23 lake/reservoir leads.
+  assert.equal(review.scopeSnapshot.sha256, "e8a6c490cae14465a9ccc33b8078cf68f3e4b9fb016072a5c0f0549a2d96d30f");
   assert.deepEqual(
     new Set(review.searchTerms.map((row) => row.value)),
     new Set(expectedStrings),

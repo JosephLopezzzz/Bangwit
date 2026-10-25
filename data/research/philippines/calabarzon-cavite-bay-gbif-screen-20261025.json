@@ -1,0 +1,568 @@
+{
+  "schemaVersion": 1,
+  "batchId": "calabarzon-cavite-bay-gbif-screen-20261025",
+  "reviewedOn": "2026-10-25",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "regionName": "Region IV-A (CALABARZON)",
+  "sourceId": "gbif-occurrence-downloads",
+  "endpoint": "https://api.gbif.org/v1/occurrence/search",
+  "detailEndpoint": "https://api.gbif.org/v1/occurrence",
+  "datasetEndpoint": "https://api.gbif.org/v1/dataset",
+  "purpose": "Bounded all-taxon GBIF text-field discovery for Bacoor Bay and Cañacao Bay using country PH plus waterBody/locality terms. Returned records are candidates only; an empty result is not evidence of fish absence or waterbody completeness.",
+  "scopeSnapshot": {
+    "path": "data/research/philippines/calabarzon-scope.json",
+    "sha256": "3134b7abca269b48cd25ad47a18488f9e34fb853d0f267fa276148ee5b4a74b3",
+    "scopeLeadIds": [
+      "ph-wb-bacoor-bay",
+      "ph-wb-canacao-bay"
+    ],
+    "terms": 3,
+    "queryFields": [
+      "waterBody",
+      "locality"
+    ]
+  },
+  "searchTerms": [
+    {
+      "scopeLeadId": "ph-wb-bacoor-bay",
+      "canonicalName": "Bacoor Bay",
+      "value": "Bacoor Bay",
+      "nameRole": "canonical"
+    },
+    {
+      "scopeLeadId": "ph-wb-canacao-bay",
+      "canonicalName": "Cañacao Bay",
+      "value": "Cañacao Bay",
+      "nameRole": "canonical"
+    },
+    {
+      "scopeLeadId": "ph-wb-canacao-bay",
+      "canonicalName": "Cañacao Bay",
+      "value": "Canacao Bay",
+      "nameRole": "existing-alias"
+    }
+  ],
+  "queryParameters": {
+    "country": "PH",
+    "limit": 100,
+    "pagination": "enumerate through endOfRecords"
+  },
+  "queries": [
+    {
+      "field": "waterBody",
+      "searchValue": "Bacoor Bay",
+      "scopeLeadId": "ph-wb-bacoor-bay",
+      "nameRole": "canonical",
+      "httpStatus": 200,
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&waterBody=Bacoor+Bay&limit=0",
+      "parameters": {
+        "country": "PH",
+        "waterBody": "Bacoor Bay",
+        "limit": 100
+      },
+      "resultCount": 0,
+      "enumeratedCount": 0,
+      "endOfRecords": true,
+      "pages": [
+        {
+          "offset": 0,
+          "returnedCount": 0,
+          "endOfRecords": true,
+          "rawResponse": {
+            "path": "raw/calabarzon-cavite-bay-gbif-screen-20261025/ph-wb-bacoor-bay-term-1-bacoor-bay-waterBody-offset-0.json",
+            "bytes": 79,
+            "sha256": "16004ddeb6b1eb033e3665fa6082d9cdd36533ce1f36272a2a95f5664f1b9dcd"
+          }
+        }
+      ]
+    },
+    {
+      "field": "locality",
+      "searchValue": "Bacoor Bay",
+      "scopeLeadId": "ph-wb-bacoor-bay",
+      "nameRole": "canonical",
+      "httpStatus": 200,
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Bacoor+Bay&limit=0",
+      "parameters": {
+        "country": "PH",
+        "locality": "Bacoor Bay",
+        "limit": 100
+      },
+      "resultCount": 1,
+      "enumeratedCount": 1,
+      "endOfRecords": true,
+      "pages": [
+        {
+          "offset": 0,
+          "returnedCount": 1,
+          "endOfRecords": true,
+          "rawResponse": {
+            "path": "raw/calabarzon-cavite-bay-gbif-screen-20261025/ph-wb-bacoor-bay-term-1-bacoor-bay-locality-offset-0.json",
+            "bytes": 4608,
+            "sha256": "d644966c634db7b8e7cdb5897623c6d45fdf2323fcd1568b3b8dd9e77144fd2a"
+          }
+        }
+      ]
+    },
+    {
+      "field": "waterBody",
+      "searchValue": "Cañacao Bay",
+      "scopeLeadId": "ph-wb-canacao-bay",
+      "nameRole": "canonical",
+      "httpStatus": 200,
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&waterBody=Ca%C3%B1acao+Bay&limit=0",
+      "parameters": {
+        "country": "PH",
+        "waterBody": "Cañacao Bay",
+        "limit": 100
+      },
+      "resultCount": 0,
+      "enumeratedCount": 0,
+      "endOfRecords": true,
+      "pages": [
+        {
+          "offset": 0,
+          "returnedCount": 0,
+          "endOfRecords": true,
+          "rawResponse": {
+            "path": "raw/calabarzon-cavite-bay-gbif-screen-20261025/ph-wb-canacao-bay-term-2-can-acao-bay-waterBody-offset-0.json",
+            "bytes": 79,
+            "sha256": "16004ddeb6b1eb033e3665fa6082d9cdd36533ce1f36272a2a95f5664f1b9dcd"
+          }
+        }
+      ]
+    },
+    {
+      "field": "locality",
+      "searchValue": "Cañacao Bay",
+      "scopeLeadId": "ph-wb-canacao-bay",
+      "nameRole": "canonical",
+      "httpStatus": 200,
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Ca%C3%B1acao+Bay&limit=0",
+      "parameters": {
+        "country": "PH",
+        "locality": "Cañacao Bay",
+        "limit": 100
+      },
+      "resultCount": 2,
+      "enumeratedCount": 2,
+      "endOfRecords": true,
+      "pages": [
+        {
+          "offset": 0,
+          "returnedCount": 2,
+          "endOfRecords": true,
+          "rawResponse": {
+            "path": "raw/calabarzon-cavite-bay-gbif-screen-20261025/ph-wb-canacao-bay-term-2-can-acao-bay-locality-offset-0.json",
+            "bytes": 6259,
+            "sha256": "986e35d31f4577e0cd8be5dd003dd39d361b553dfea65cf0b285e6fb2b192b58"
+          }
+        }
+      ]
+    },
+    {
+      "field": "waterBody",
+      "searchValue": "Canacao Bay",
+      "scopeLeadId": "ph-wb-canacao-bay",
+      "nameRole": "existing-alias",
+      "httpStatus": 200,
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&waterBody=Canacao+Bay&limit=0",
+      "parameters": {
+        "country": "PH",
+        "waterBody": "Canacao Bay",
+        "limit": 100
+      },
+      "resultCount": 0,
+      "enumeratedCount": 0,
+      "endOfRecords": true,
+      "pages": [
+        {
+          "offset": 0,
+          "returnedCount": 0,
+          "endOfRecords": true,
+          "rawResponse": {
+            "path": "raw/calabarzon-cavite-bay-gbif-screen-20261025/ph-wb-canacao-bay-term-3-canacao-bay-waterBody-offset-0.json",
+            "bytes": 79,
+            "sha256": "16004ddeb6b1eb033e3665fa6082d9cdd36533ce1f36272a2a95f5664f1b9dcd"
+          }
+        }
+      ]
+    },
+    {
+      "field": "locality",
+      "searchValue": "Canacao Bay",
+      "scopeLeadId": "ph-wb-canacao-bay",
+      "nameRole": "existing-alias",
+      "httpStatus": 200,
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Canacao+Bay&limit=0",
+      "parameters": {
+        "country": "PH",
+        "locality": "Canacao Bay",
+        "limit": 100
+      },
+      "resultCount": 2,
+      "enumeratedCount": 2,
+      "endOfRecords": true,
+      "pages": [
+        {
+          "offset": 0,
+          "returnedCount": 2,
+          "endOfRecords": true,
+          "rawResponse": {
+            "path": "raw/calabarzon-cavite-bay-gbif-screen-20261025/ph-wb-canacao-bay-term-3-canacao-bay-locality-offset-0.json",
+            "bytes": 9520,
+            "sha256": "b5cd40a90545be633067335921feb82a52f5f7c8b28bfbda4b8a344359197492"
+          }
+        }
+      ]
+    }
+  ],
+  "datasets": [
+    {
+      "key": "417f4d21-959b-4773-90a2-c38d1822d873",
+      "title": "BMSM Bailey-Matthews National Shell Museum",
+      "type": "OCCURRENCE",
+      "doi": "10.15468/49s45k",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/legalcode",
+      "citation": {
+        "text": "Bailey-Matthews National Shell Museum (BMSM) https://doi.org/10.15468/49s45k accessed via GBIF.org on 2026-10-25.",
+        "citationProvidedBySource": true
+      },
+      "publishingOrganizationKey": "1c8732e1-36b1-4a7c-978e-f69542768ec3",
+      "publishingOrganizationTitle": null,
+      "directDetail": {
+        "httpStatus": 200,
+        "rawResponse": {
+          "path": "raw/calabarzon-cavite-bay-gbif-screen-20261025/dataset-417f4d21-959b-4773-90a2-c38d1822d873.json",
+          "bytes": 9802,
+          "sha256": "98adfcb2e9ebaec1b3a266b86a25ae141da16662e3547d8304b43b5ad08e8321"
+        }
+      }
+    }
+  ],
+  "records": [
+    {
+      "gbifId": "3341043532",
+      "occurrenceId": "816bad1d-896f-4e41-82ed-2466f684bbb7",
+      "scientificName": "Paratapes undulatus (Born, 1778)",
+      "acceptedScientificName": "Paratapes undulatus (Born, 1778)",
+      "taxonRank": "SPECIES",
+      "taxonomicStatus": "ACCEPTED",
+      "kingdom": "Animalia",
+      "phylum": "Mollusca",
+      "class": "Bivalvia",
+      "order": "Venerida",
+      "family": "Veneridae",
+      "genus": "Paratapes",
+      "datasetKey": "417f4d21-959b-4773-90a2-c38d1822d873",
+      "datasetTitle": "BMSM Bailey-Matthews National Shell Museum",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/legalcode",
+      "rightsHolder": null,
+      "basisOfRecord": "PRESERVED_SPECIMEN",
+      "eventDate": "1948",
+      "year": 1948,
+      "waterBody": "Manila Bay",
+      "locality": "Canacao Bay",
+      "stateProvince": "Cavite",
+      "county": "Sangley Point",
+      "municipality": null,
+      "institutionCode": null,
+      "collectionCode": "BMSM",
+      "catalogNumber": "66993",
+      "issues": [
+        "CONTINENT_DERIVED_FROM_COUNTRY",
+        "CONTINENT_INVALID",
+        "INSTITUTION_MATCH_NONE",
+        "RECORDED_DATE_MISMATCH"
+      ],
+      "queryMatches": [
+        {
+          "field": "locality",
+          "searchValue": "Canacao Bay",
+          "scopeLeadId": "ph-wb-canacao-bay",
+          "nameRole": "existing-alias"
+        }
+      ],
+      "directDetail": {
+        "httpStatus": 200,
+        "rawResponse": {
+          "path": "raw/calabarzon-cavite-bay-gbif-screen-20261025/occurrence-3341043532.json",
+          "bytes": 4709,
+          "sha256": "78c85c31f8eb64b3d9ed04d9b1036ade315969a504bb51381ac656682b9b611f"
+        },
+        "matchedSearchIdentity": true
+      },
+      "datasetLicense": "http://creativecommons.org/publicdomain/zero/1.0/legalcode"
+    },
+    {
+      "gbifId": "3341061042",
+      "occurrenceId": "c38d8c3b-73e3-4736-b9de-0de31ee8eb7b",
+      "scientificName": null,
+      "acceptedScientificName": null,
+      "taxonRank": null,
+      "taxonomicStatus": null,
+      "kingdom": null,
+      "phylum": null,
+      "class": null,
+      "order": null,
+      "family": null,
+      "genus": null,
+      "datasetKey": "417f4d21-959b-4773-90a2-c38d1822d873",
+      "datasetTitle": "BMSM Bailey-Matthews National Shell Museum",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/legalcode",
+      "rightsHolder": null,
+      "basisOfRecord": "PRESERVED_SPECIMEN",
+      "eventDate": "1948",
+      "year": 1948,
+      "waterBody": "Philippine Sea",
+      "locality": "Cañacao Bay",
+      "stateProvince": "Cavite",
+      "county": "Cavite City",
+      "municipality": null,
+      "institutionCode": null,
+      "collectionCode": "BMSM",
+      "catalogNumber": "49555",
+      "issues": [
+        "CONTINENT_DERIVED_FROM_COUNTRY",
+        "CONTINENT_INVALID",
+        "INSTITUTION_MATCH_NONE",
+        "RECORDED_DATE_MISMATCH",
+        "TAXON_MATCH_NONE"
+      ],
+      "queryMatches": [
+        {
+          "field": "locality",
+          "searchValue": "Cañacao Bay",
+          "scopeLeadId": "ph-wb-canacao-bay",
+          "nameRole": "canonical"
+        }
+      ],
+      "directDetail": {
+        "httpStatus": 200,
+        "rawResponse": {
+          "path": "raw/calabarzon-cavite-bay-gbif-screen-20261025/occurrence-3341061042.json",
+          "bytes": 1805,
+          "sha256": "2a7851f679cfa4e3d77b75c63cdbbae4c103df0b5bddf7b8811c3bea6632f7e2"
+        },
+        "matchedSearchIdentity": true
+      },
+      "datasetLicense": "http://creativecommons.org/publicdomain/zero/1.0/legalcode"
+    },
+    {
+      "gbifId": "3341067905",
+      "occurrenceId": "e6edcfa0-c3e2-4150-801d-1c7e93318128",
+      "scientificName": "Terebralia sulcata (Born, 1778)",
+      "acceptedScientificName": "Terebralia sulcata (Born, 1778)",
+      "taxonRank": "SPECIES",
+      "taxonomicStatus": "ACCEPTED",
+      "kingdom": "Animalia",
+      "phylum": "Mollusca",
+      "class": "Gastropoda",
+      "order": null,
+      "family": "Potamididae",
+      "genus": "Terebralia",
+      "datasetKey": "417f4d21-959b-4773-90a2-c38d1822d873",
+      "datasetTitle": "BMSM Bailey-Matthews National Shell Museum",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/legalcode",
+      "rightsHolder": null,
+      "basisOfRecord": "PRESERVED_SPECIMEN",
+      "eventDate": "1948",
+      "year": 1948,
+      "waterBody": null,
+      "locality": "Cañacao Bay",
+      "stateProvince": "Cavite",
+      "county": "Manila Bay",
+      "municipality": null,
+      "institutionCode": null,
+      "collectionCode": "BMSM",
+      "catalogNumber": "81655",
+      "issues": [
+        "CONTINENT_DERIVED_FROM_COUNTRY",
+        "CONTINENT_INVALID",
+        "INSTITUTION_MATCH_NONE",
+        "RECORDED_DATE_MISMATCH"
+      ],
+      "queryMatches": [
+        {
+          "field": "locality",
+          "searchValue": "Cañacao Bay",
+          "scopeLeadId": "ph-wb-canacao-bay",
+          "nameRole": "canonical"
+        }
+      ],
+      "directDetail": {
+        "httpStatus": 200,
+        "rawResponse": {
+          "path": "raw/calabarzon-cavite-bay-gbif-screen-20261025/occurrence-3341067905.json",
+          "bytes": 4374,
+          "sha256": "e4819f94e53b47a826652a481efe42bf4db193120b5bcb2b5d90e598c85f6f41"
+        },
+        "matchedSearchIdentity": true
+      },
+      "datasetLicense": "http://creativecommons.org/publicdomain/zero/1.0/legalcode"
+    },
+    {
+      "gbifId": "3341098882",
+      "occurrenceId": "410b772c-8cc2-4ca2-acf0-48ec13de3a47",
+      "scientificName": "Meretrix meretrix (Linnaeus, 1758)",
+      "acceptedScientificName": "Meretrix meretrix (Linnaeus, 1758)",
+      "taxonRank": "SPECIES",
+      "taxonomicStatus": "ACCEPTED",
+      "kingdom": "Animalia",
+      "phylum": "Mollusca",
+      "class": "Bivalvia",
+      "order": "Venerida",
+      "family": "Veneridae",
+      "genus": "Meretrix",
+      "datasetKey": "417f4d21-959b-4773-90a2-c38d1822d873",
+      "datasetTitle": "BMSM Bailey-Matthews National Shell Museum",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/legalcode",
+      "rightsHolder": null,
+      "basisOfRecord": "PRESERVED_SPECIMEN",
+      "eventDate": "1948",
+      "year": 1948,
+      "waterBody": "Manila Bay",
+      "locality": "Canacao Bay",
+      "stateProvince": "Cavite",
+      "county": "Sangley Point",
+      "municipality": null,
+      "institutionCode": null,
+      "collectionCode": "BMSM",
+      "catalogNumber": "66994",
+      "issues": [
+        "CONTINENT_DERIVED_FROM_COUNTRY",
+        "CONTINENT_INVALID",
+        "INSTITUTION_MATCH_NONE",
+        "RECORDED_DATE_MISMATCH"
+      ],
+      "queryMatches": [
+        {
+          "field": "locality",
+          "searchValue": "Canacao Bay",
+          "scopeLeadId": "ph-wb-canacao-bay",
+          "nameRole": "existing-alias"
+        }
+      ],
+      "directDetail": {
+        "httpStatus": 200,
+        "rawResponse": {
+          "path": "raw/calabarzon-cavite-bay-gbif-screen-20261025/occurrence-3341098882.json",
+          "bytes": 4731,
+          "sha256": "f51e4b85612b977d9c2e7e1213cfa106af0ab1bea46f68d38277645839d811c1"
+        },
+        "matchedSearchIdentity": true
+      },
+      "datasetLicense": "http://creativecommons.org/publicdomain/zero/1.0/legalcode"
+    },
+    {
+      "gbifId": "3341109473",
+      "occurrenceId": "5a0517d1-01a2-44d0-8c46-a5a2467f4545",
+      "scientificName": "Littoraria scabra (Linnaeus, 1758)",
+      "acceptedScientificName": "Littoraria scabra (Linnaeus, 1758)",
+      "taxonRank": "SPECIES",
+      "taxonomicStatus": "ACCEPTED",
+      "kingdom": "Animalia",
+      "phylum": "Mollusca",
+      "class": "Gastropoda",
+      "order": "Littorinimorpha",
+      "family": "Littorinidae",
+      "genus": "Littoraria",
+      "datasetKey": "417f4d21-959b-4773-90a2-c38d1822d873",
+      "datasetTitle": "BMSM Bailey-Matthews National Shell Museum",
+      "license": "http://creativecommons.org/publicdomain/zero/1.0/legalcode",
+      "rightsHolder": null,
+      "basisOfRecord": "PRESERVED_SPECIMEN",
+      "eventDate": null,
+      "year": null,
+      "waterBody": "Manila Bay",
+      "locality": "Bacoor Bay",
+      "stateProvince": "Cavite",
+      "county": "Calabarzon",
+      "municipality": null,
+      "institutionCode": null,
+      "collectionCode": "BMSM",
+      "catalogNumber": "78378",
+      "issues": [
+        "CONTINENT_DERIVED_FROM_COUNTRY",
+        "CONTINENT_INVALID",
+        "INSTITUTION_MATCH_NONE"
+      ],
+      "queryMatches": [
+        {
+          "field": "locality",
+          "searchValue": "Bacoor Bay",
+          "scopeLeadId": "ph-wb-bacoor-bay",
+          "nameRole": "canonical"
+        }
+      ],
+      "directDetail": {
+        "httpStatus": 200,
+        "rawResponse": {
+          "path": "raw/calabarzon-cavite-bay-gbif-screen-20261025/occurrence-3341109473.json",
+          "bytes": 4529,
+          "sha256": "6c082e96604a63c413a286c0c1db6ad4ff71bc17532c3914edb6f720d75f0cc1"
+        },
+        "matchedSearchIdentity": true
+      },
+      "datasetLicense": "http://creativecommons.org/publicdomain/zero/1.0/legalcode"
+    }
+  ],
+  "summary": {
+    "queryCount": 6,
+    "successfulQueryCount": 6,
+    "returnedOccurrencesBySearch": 5,
+    "uniqueRecordCount": 5,
+    "recordsByClass": [
+      {
+        "value": "Bivalvia",
+        "count": 2
+      },
+      {
+        "value": "Gastropoda",
+        "count": 2
+      },
+      {
+        "value": "unknown",
+        "count": 1
+      }
+    ],
+    "recordsByPhylum": [
+      {
+        "value": "Mollusca",
+        "count": 4
+      },
+      {
+        "value": "unknown",
+        "count": 1
+      }
+    ],
+    "candidateFishRecordCount": 0,
+    "taxonUnmatchedCount": 1,
+    "directDetailChecks": 5
+  },
+  "decision": {
+    "nonFishRecordsAdmittedAsFish": false,
+    "unresolvedTaxonTreatedAsFish": false,
+    "zeroResultsUsedAsAbsence": false,
+    "speciesAssertionsAdded": 0,
+    "dietClaimsAdded": 0,
+    "geometryOrCoordinatesAdded": false,
+    "publicAppProjectionAdded": false,
+    "publicationApproval": false,
+    "interpretation": "This bounded all-taxon text search surfaced non-fish records and an unresolved taxon row, but no fish-identified candidate. It does not establish that fish are absent, define either bay's boundary, or provide a complete species list. Candidate records retain their source flags and require item/dataset and locality review before any possible use."
+  },
+  "limitations": [
+    "The GBIF waterBody and locality fields are searchable text, not a validated bay polygon or spatial containment test.",
+    "The query covers only the submitted name strings, country PH, and records indexed by GBIF at retrieval time.",
+    "One returned row has no indexed scientific name or class and remains taxonomically unresolved.",
+    "Occurrence and dataset license fields are preserved as source metadata; this review grants no redistribution permission.",
+    "No coordinates are included in this review artifact."
+  ],
+  "provenance": {
+    "retrievedAt": "2026-10-25T14:07:13.832Z",
+    "searchDocumentation": "https://techdocs.gbif.org/en/openapi/v1/occurrence",
+    "apiDocumentation": "https://techdocs.gbif.org/en/openapi/",
+    "rawPath": "raw/calabarzon-cavite-bay-gbif-screen-20261025/"
+  }
+}
