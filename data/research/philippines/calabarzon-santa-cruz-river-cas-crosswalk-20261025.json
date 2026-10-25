@@ -1,0 +1,268 @@
+{
+  "schemaVersion": 1,
+  "batchId": "calabarzon-santa-cruz-river-cas-crosswalk-20261025",
+  "reviewedOn": "2026-10-25",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "regionName": "Region IV-A (CALABARZON)",
+  "status": "three-historical-text-locality-species-assertions-admitted-to-research-ledger;regional-baseline-incomplete",
+  "waterbody": {
+    "id": "ph-wb-santa-cruz-laguna-river",
+    "name": "Sta Cruz River",
+    "matchedAlias": "Santa Cruz River",
+    "kind": "river",
+    "province": "Laguna"
+  },
+  "dataset": {
+    "sourceId": "gbif-cas-ichthyology",
+    "gbifDatasetKey": "5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+    "title": "CAS Ichthyology (ICH)",
+    "publisher": "California Academy of Sciences",
+    "doi": "10.15468/efh2ib",
+    "url": "https://www.gbif.org/dataset/5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+    "license": "CC0-1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "datasetVersion": "150.545",
+    "publishedOn": "2026-10-19",
+    "metadataScope": "The dataset licence is CC0-1.0. This review verifies record-level licence statements on the three exact CAS archive rows; it does not approve unrelated records from the collection."
+  },
+  "queryReview": {
+    "endpoint": "https://api.gbif.org/v1/occurrence/search",
+    "url": "https://api.gbif.org/v1/occurrence/search?datasetKey=5d6c10bd-ea31-4363-8b79-58c96d859f5b&country=PH&basisOfRecord=PRESERVED_SPECIMEN&waterBody=Santa+Cruz+River&limit=100",
+    "parameters": {
+      "datasetKey": "5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+      "country": "PH",
+      "basisOfRecord": "PRESERVED_SPECIMEN",
+      "waterBody": "Santa Cruz River",
+      "limit": 100
+    },
+    "queriedOn": "2026-10-25",
+    "httpStatus": 200,
+    "resultCount": 3,
+    "enumeratedCount": 3,
+    "endOfRecords": true,
+    "candidateGbifIds": [3426421232, 3426460231, 3426465256],
+    "rawResponse": {
+      "path": "raw/calabarzon-santa-cruz-cas-review-20261025/query.json",
+      "bytes": 17560,
+      "sha256": "68aa37a2e417a95ebe5b571f36fc9460bf3fd80db1618947f04967ee615fd072"
+    },
+    "priorSearchCorrection": "The 2026-10-24 screen tested only the registry spelling 'Sta Cruz River' in waterBody and locality and returned zero. The exact alternate spelling 'Santa Cruz River' returns these records. The old zero is therefore limited to that one spelling; it was not evidence of fish absence or an exhaustive synonym search."
+  },
+  "sourceArchiveReview": {
+    "archivePath": "raw/calabarzon-balayan-cas-primary-archive-20261025/cas-ichthyology-archive-current.zip",
+    "archiveBytes": 21381034,
+    "archiveSha256": "3c0c9c0a686590fb6a2c61bf35ed9a7aa68eeb5cad14e13829710198c631ed12",
+    "archiveVersion": "150.545",
+    "matchedOccurrenceRows": 3,
+    "identityJoinFields": ["institutionCode", "collectionCode", "catalogNumber", "occurrenceID"],
+    "reviewedSourceFields": [
+      "institutionCode",
+      "collectionCode",
+      "catalogNumber",
+      "occurrenceID",
+      "basisOfRecord",
+      "scientificName",
+      "family",
+      "taxonRank",
+      "eventDate",
+      "country",
+      "stateProvince",
+      "waterBody",
+      "locality",
+      "recordedBy",
+      "identifiedBy",
+      "license"
+    ],
+    "excludedFields": [
+      "decimalLatitude",
+      "decimalLongitude",
+      "coordinateUncertaintyInMeters",
+      "georeferenceRemarks",
+      "individualCount"
+    ],
+    "coordinateExclusionReason": "The archive georeference remarks say uncertainty includes Laguna Lake and the province of Laguna. Coordinates cannot identify the river reach and are withheld from the tracked evidence and map.",
+    "individualCountExclusionReason": "These are collection-row specimen counts, not river population abundance or fishery catch estimates."
+  },
+  "taxonomyAuthorities": [
+    {
+      "name": "Eschmeyer's Catalog of Fishes: Glossogobius giuris",
+      "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=18735",
+      "use": "Confirms Glossogobius giuris as the valid spelling and records the source-era giurus spelling."
+    },
+    {
+      "name": "Eschmeyer's Catalog of Fishes: Ophiocara aporos",
+      "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=21756",
+      "use": "Current status is synonym of Giuris margaritaceus (Valenciennes, 1837), family Eleotridae."
+    },
+    {
+      "name": "Integrative taxonomic revision of Indo-Pacific freshwater pipefish",
+      "url": "https://doi.org/10.1093/zoolinnean/zlad007",
+      "use": "The 2023 phylogenetic revision treats Oostethus as a synonym of Microphis and lists the species as Microphis jagorii."
+    }
+  ],
+  "records": [
+    {
+      "gbifId": 3426421232,
+      "occurrenceUrl": "https://www.gbif.org/occurrence/3426421232",
+      "sourceRecord": {
+        "institutionCode": "CAS",
+        "collectionCode": "SU(ICH)",
+        "catalogNumber": "38568",
+        "occurrenceID": "urn:catalog:CAS:SU(ICH):38568",
+        "basisOfRecord": "PreservedSpecimen",
+        "scientificName": "Ophiocara aporos",
+        "sourceFamily": "Butidae",
+        "taxonRank": "species",
+        "eventDate": "1941-10-18",
+        "country": "Philippines",
+        "stateProvince": "Laguna",
+        "waterBody": "Santa Cruz River",
+        "locality": "Santa Cruz River",
+        "recordedBy": "Herre, Albert W.",
+        "identifiedBy": "A. W. Herre",
+        "license": "https://creativecommons.org/publicdomain/zero/1.0/"
+      },
+      "gbifCrosswalk": {
+        "datasetKey": "5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+        "eventDate": "1941-10-18",
+        "acceptedScientificName": "Giuris margaritaceus (Valenciennes, 1837)",
+        "taxonomicStatus": "SYNONYM",
+        "taxonRank": "SPECIES",
+        "acceptedTaxonKey": 4285919,
+        "colXrAcceptedName": "Giuris margaritaceus (Valenciennes, 1837)",
+        "colXrAcceptedUsageKey": "3G44C",
+        "license": "http://creativecommons.org/publicdomain/zero/1.0/legalcode",
+        "issues": [
+          "GEODETIC_DATUM_ASSUMED_WGS84",
+          "CONTINENT_INVALID",
+          "CONTINENT_DERIVED_FROM_COORDINATES",
+          "OCCURRENCE_STATUS_INFERRED_FROM_INDIVIDUAL_COUNT"
+        ],
+        "rawResponse": {
+          "path": "raw/calabarzon-santa-cruz-cas-review-20261025/occurrence-3426421232.json",
+          "bytes": 5815,
+          "sha256": "be66c9abebfc28061ce88fd0dc8b203cf45f5d6f411bacd63264e61510638dd1"
+        }
+      },
+      "acceptedName": "Giuris margaritaceus (Valenciennes, 1837)",
+      "acceptedFamily": "Eleotridae",
+      "taxonomyDisposition": "accepted-under-current-Catalog-of-Fishes-synonymy"
+    },
+    {
+      "gbifId": 3426460231,
+      "occurrenceUrl": "https://www.gbif.org/occurrence/3426460231",
+      "sourceRecord": {
+        "institutionCode": "CAS",
+        "collectionCode": "SU(ICH)",
+        "catalogNumber": "38536",
+        "occurrenceID": "urn:catalog:CAS:SU(ICH):38536",
+        "basisOfRecord": "PreservedSpecimen",
+        "scientificName": "Glossogobius giurus",
+        "sourceFamily": "Gobiidae",
+        "taxonRank": "species",
+        "eventDate": "1941-10-18",
+        "country": "Philippines",
+        "stateProvince": "Laguna",
+        "waterBody": "Santa Cruz River",
+        "locality": "Santa Cruz River",
+        "recordedBy": "Herre, Albert W.",
+        "identifiedBy": "A. W. Herre",
+        "license": "https://creativecommons.org/publicdomain/zero/1.0/"
+      },
+      "gbifCrosswalk": {
+        "datasetKey": "5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+        "eventDate": "1941-10-18",
+        "acceptedScientificName": "Glossogobius giuris (Hamilton, 1822)",
+        "taxonomicStatus": "SYNONYM",
+        "taxonRank": "SPECIES",
+        "acceptedTaxonKey": 2378087,
+        "colXrAcceptedName": "Glossogobius giuris (Hamilton, 1822)",
+        "colXrAcceptedUsageKey": "3GDNT",
+        "license": "http://creativecommons.org/publicdomain/zero/1.0/legalcode",
+        "issues": [
+          "GEODETIC_DATUM_ASSUMED_WGS84",
+          "CONTINENT_INVALID",
+          "CONTINENT_DERIVED_FROM_COORDINATES",
+          "OCCURRENCE_STATUS_INFERRED_FROM_INDIVIDUAL_COUNT"
+        ],
+        "rawResponse": {
+          "path": "raw/calabarzon-santa-cruz-cas-review-20261025/occurrence-3426460231.json",
+          "bytes": 5826,
+          "sha256": "302801e2661fcf842fd3a4b20c17505d42ac08fd02dc12107e9c219e74dfe310"
+        }
+      },
+      "acceptedName": "Glossogobius giuris (Hamilton, 1822)",
+      "acceptedFamily": "Gobiidae",
+      "taxonomyDisposition": "accepted-spelling-confirmed-by-Catalog-of-Fishes"
+    },
+    {
+      "gbifId": 3426465256,
+      "occurrenceUrl": "https://www.gbif.org/occurrence/3426465256",
+      "sourceRecord": {
+        "institutionCode": "CAS",
+        "collectionCode": "SU(ICH)",
+        "catalogNumber": "39170",
+        "occurrenceID": "urn:catalog:CAS:SU(ICH):39170",
+        "basisOfRecord": "PreservedSpecimen",
+        "scientificName": "Microphis jagorii",
+        "sourceFamily": "Syngnathidae",
+        "taxonRank": "species",
+        "eventDate": "1941-10-18",
+        "country": "Philippines",
+        "stateProvince": "Laguna",
+        "waterBody": "Santa Cruz River",
+        "locality": "Santa Cruz River",
+        "recordedBy": "Herre, Albert W.",
+        "identifiedBy": "C. E. Dawson",
+        "dateIdentified": "1983-01-01",
+        "license": "https://creativecommons.org/publicdomain/zero/1.0/"
+      },
+      "gbifCrosswalk": {
+        "datasetKey": "5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+        "eventDate": "1941-10-18",
+        "acceptedScientificName": "Oostethus jagorii (Peters, 1868)",
+        "taxonomicStatus": "SYNONYM",
+        "taxonRank": "SPECIES",
+        "acceptedTaxonKey": 7493059,
+        "colXrAcceptedName": "Microphis jagorii Peters, 1868",
+        "colXrAcceptedUsageKey": "4336L",
+        "license": "http://creativecommons.org/publicdomain/zero/1.0/legalcode",
+        "issues": [
+          "GEODETIC_DATUM_ASSUMED_WGS84",
+          "CONTINENT_INVALID",
+          "CONTINENT_DERIVED_FROM_COORDINATES",
+          "OCCURRENCE_STATUS_INFERRED_FROM_INDIVIDUAL_COUNT"
+        ],
+        "rawResponse": {
+          "path": "raw/calabarzon-santa-cruz-cas-review-20261025/occurrence-3426465256.json",
+          "bytes": 5838,
+          "sha256": "7ddbb3e208d636aceaf32d1ca1665959dff7804c1c1cad65bcf2c7db6ea0f57b"
+        }
+      },
+      "acceptedName": "Microphis jagorii Peters, 1868",
+      "acceptedFamily": "Syngnathidae",
+      "taxonomyDisposition": "accepted-under-2023-phylogenetic-revision-of-Microphis"
+    }
+  ],
+  "decision": {
+    "historicalSpeciesAssertionsAdmittedToResearchLedger": 3,
+    "sourceOccurrenceRecords": 3,
+    "publicAppAdmission": false,
+    "mapPointAdmission": false,
+    "coordinatesIncluded": false,
+    "currentPresenceInferred": false,
+    "abundanceInferred": false,
+    "dietOrBaitClaimsAdded": false,
+    "legalOrSafetyClaimsAdded": false,
+    "completeChecklistClaimed": false,
+    "regionalBaselineComplete": false
+  },
+  "limitations": [
+    "The records establish historical preserved-specimen locality text for 18 October 1941 only; they do not establish current presence or population abundance.",
+    "The three CAS catalog rows are distinct museum items but do not establish three independent sampling events or population counts.",
+    "The locality text names Santa Cruz River, but no river reach or coordinate is verified; the source georeference uncertainty spans Laguna Lake and Laguna province.",
+    "The old exact-name zero checked only the abbreviation 'Sta Cruz River'. Alternate spellings and synonyms remain a continuing discovery need.",
+    "This is a selected locality-specific review, not a complete fish checklist, and does not assess catchability, diet, salinity, legal access, safety, or geometry."
+  ]
+}

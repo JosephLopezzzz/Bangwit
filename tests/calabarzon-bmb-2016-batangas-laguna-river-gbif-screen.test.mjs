@@ -66,6 +66,12 @@ test("GBIF screen retains the two candidates and geography conflict without admi
 
   for (const id of review.boundedZeroLeadIds) {
     const lead = leadsById.get(id);
+    if (id === "ph-wb-santa-cruz-laguna-river") {
+      assert.ok(lead.aliases.includes("Santa Cruz River"));
+      assert.match(lead.fishEvidenceStatus, /three historical species-level CAS text-locality assertions/i);
+      assert.match(lead.scopeNote, /alternate spelling crosswalk/i);
+      continue;
+    }
     assert.equal(lead.fishEvidenceStatus, "bounded-COLXR-Actinopterygii-waterBody-and-locality-text-screen-zero; no-fish-absence-inferred");
     assert.equal(lead.reviewStatus, "bounded-COLXR-Actinopterygii-waterBody-and-locality-text-screen-zero-no-absence-inferred");
   }
