@@ -7,15 +7,17 @@
   "status": "checkpoint-published-incomplete-baseline",
   "inputHashes": {
     "scopeSha256": "e8a6c490cae14465a9ccc33b8078cf68f3e4b9fb016072a5c0f0549a2d96d30f",
-    "sourcesSha256": "a4f95d8fc1616e40b93ba61a18e3bc0e58ec8a14972a534dcf7cc4924eab4373",
-    "lagunaMuseumVerificationSha256": "5604848902166f821f9a37eb79c9eb1ffea4e05897739f216189b24762a10509"
+    "sourcesSha256": "d0ff1613eaff25c3d4d99e65d4a7a9df4c836b38f0327106e80a32677e902b29",
+    "lagunaMuseumVerificationSha256": "5604848902166f821f9a37eb79c9eb1ffea4e05897739f216189b24762a10509",
+    "balayanGbifDetailsSha256": "6e466c1df40085b70d314da6af314ecc56ea9cd72da737cc9cf6c1757c80d1e9",
+    "balayanIdigbioCrosscheckSha256": "66b5e92896fed932a02ce75316ce5cb8f8031525fa3923ed8a1d8426983a037f"
   },
   "decision": "Keep CALABARZON visibly in progress. This checkpoint records the current source-backed leads and specific gaps; it is not a complete fish checklist, a completed region, or a public species release.",
   "coverageSummary": {
     "namedWaterbodyLeads": 83,
     "distinctSourceReferencesAssigned": 49,
     "sourceAssignments": 197,
-    "registeredSources": 138,
+    "registeredSources": 139,
     "provincesWithLeads": 5,
     "separateCityCoverageUnits": 1,
     "byWaterbodyKind": {
@@ -184,6 +186,12 @@
       ],
       "reason": "One MZUSP source item is visible in two duplicate SiBBr rows, but its portal interpretation is family-rank and has unresolved locality and reuse-license conflicts. Seventeen CAS catalog items remain unverified while the public portal is offline. The record counts do not establish current presence or a complete checklist.",
       "nextAction": "Recheck CAS catalog numbers when the public catalog is restored; resolve MZUSP taxonomic rank, locality interpretation and record-level reuse through an authorized source route. Keep every unresolved item out of public occurrence projections."
+    },
+    {
+      "id": "balayan-bay-museum-catalog-review",
+      "count": 14,
+      "reason": "Fourteen corrected GBIF candidates group into ten museum catalog identities. iDigBio returned provider-attributed records for nine identities, with CC0 recordset metadata for CAS, Field Museum and USNM; one UMMZ exact identity remains unresolved. The source record for CAS catalog 28340 differs in spelling/name from GBIF, two Field Museum source rows report year-only dates, and one USNM catalog item is represented by five GBIF material-citation rows with a multi-locality description. These source-attributed records are crosswalk evidence, not independent specimens or a complete/current bay checklist.",
+      "nextAction": "Retrieve originating CAS and Field Museum records when their public catalogs are available; resolve the UMMZ catalog query and CAS catalog 28340 name conflict; reconcile the five-to-one USNM citation group and its multi-locality scope; preserve source-reported date precision, locality and per-record/dataset terms; then make explicit row-level historical-only decisions while retaining GBIF quality flags."
     }
   ],
   "waterbodySnapshot": [
@@ -1384,6 +1392,6 @@
   "nextStep": {
     "phaseId": "L1",
     "regionName": "CALABARZON (Region IV-A)",
-    "action": "Continue L1 CALABARZON: expand the historical waterbody crosswalk across Batangas, Laguna, Quezon and Rizal; obtain independent fish, feature-identity, salinity, geometry and item-level reuse evidence. Recheck the 17 CAS catalog candidates when its public portal returns and resolve MZUSP rank, locality and license conflicts through an authorized source route. Selected 2016 Atlas rows are not a complete river inventory. Do not advance to NCR or mark CALABARZON complete."
+    "action": "Continue L1 CALABARZON source and fish review. Reconcile the Balayan Bay museum crosswalk, resolve its UMMZ and taxonomy gaps, and independently review locality, dates, rights and quality flags before any historical-only admission. Continue the waterbody inventory across Batangas, Laguna, Quezon and Rizal; do not advance to NCR or mark CALABARZON complete."
   }
 }

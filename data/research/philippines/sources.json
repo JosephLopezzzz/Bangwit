@@ -3,7 +3,7 @@
   "checkedOn": "2026-10-25",
   "status": "research-only-source-registry",
   "scope": "National acquisition references and CALABARZON/Central Luzon identity/source leads. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 138,
+  "sourceCount": 139,
   "sources": [
     {
       "id": "gbif-col-xr-taxonomy-matching",
@@ -121,19 +121,21 @@
           "calabarzon-bmb-lakes-gbif-screen-20261024.json",
           "calabarzon-bmb-2016-river-gbif-screen-20261024.json",
           "calabarzon-bmb-2016-batangas-laguna-river-gbif-screen-20261024.json",
-      "calabarzon-bmb-2016-visual-followup-river-gbif-screen-20261024.json",
-      "calabarzon-inland-gbif-screen-20261025.json",
-      "calabarzon-laguna-gbif-triage-20261025.json",
-      "calabarzon-laguna-gbif-record-details-20261025.json"
+          "calabarzon-bmb-2016-visual-followup-river-gbif-screen-20261024.json",
+          "calabarzon-inland-gbif-screen-20261025.json",
+          "calabarzon-laguna-gbif-triage-20261025.json",
+          "calabarzon-laguna-gbif-record-details-20261025.json",
+          "calabarzon-balayan-gbif-record-details-20261025.json"
         ],
         "additionalRawPaths": [
           "raw/calabarzon-bmb-gbif-screen-20261024/",
           "raw/calabarzon-bmb-2016-river-gbif-screen-20261024/",
           "raw/calabarzon-bmb-2016-batangas-laguna-gbif-screen-20261024/",
-      "raw/calabarzon-bmb-2016-visual-followup-gbif-20261024/",
-      "raw/calabarzon-inland-gbif-screen-20261025/",
-      "raw/calabarzon-laguna-gbif-triage-20261025/",
-      "raw/calabarzon-laguna-gbif-record-details-20261025/"
+          "raw/calabarzon-bmb-2016-visual-followup-gbif-20261024/",
+          "raw/calabarzon-inland-gbif-screen-20261025/",
+          "raw/calabarzon-laguna-gbif-triage-20261025/",
+          "raw/calabarzon-laguna-gbif-record-details-20261025/",
+          "raw/calabarzon-balayan-gbif-record-details-20261025/"
         ]
       },
       "reuse": {
@@ -3804,6 +3806,38 @@
       },
       "publicationApproval": false,
       "researchStatus": "17-source-items-not-independently-verified-while-public-catalog-is-offline;zero-public-assertions",
+      "license": null
+    },
+    {
+      "id": "idigbio-balayan-catalog-crosscheck",
+      "title": "iDigBio Balayan Bay museum catalog cross-check",
+      "provider": "Integrated Digitized Biocollections (iDigBio)",
+      "url": "https://search.idigbio.org/v2/search/records/",
+      "additionalUrls": [
+        "https://search.idigbio.org/v2/view/records/",
+        "https://github.com/iDigBio/idigbio-search-api/wiki/Query-Format"
+      ],
+      "role": "Cross-reference source catalog identities and source-record context for corrected Balayan Bay GBIF candidates; aggregated provider records are not independent specimen confirmations.",
+      "checkedOn": "2026-10-25",
+      "access": {
+        "status": "public-API-returned-source-records-for-9-of-10-catalog-identities;UMMZ-exact-identity-unmatched",
+        "reviewFiles": [
+          "calabarzon-balayan-gbif-record-details-20261025.json",
+          "calabarzon-balayan-idigbio-catalog-check-20261025.json"
+        ],
+        "additionalRawPaths": [
+          "raw/calabarzon-balayan-idigbio-catalog-check-20261025/"
+        ],
+        "fieldAllowlistOnly": true,
+        "coordinatesRetained": false
+      },
+      "reuse": {
+        "metadata": "iDigBio recordset metadata reports CC0 for CAS Ichthyology, Field Museum Fishes, and USNM sources. The USNM item has no direct item-level license field; its GBIF rows and recordset report CC0. No UMMZ catalog row was found in these bounded searches. Verify provider terms per item before publication.",
+        "raw": "Full API responses are retained only in ignored local research storage. The tracked review contains an allowlist of non-coordinate fields and response hashes.",
+        "content": "iDigBio aggregates provider-contributed records, so the crosswalk helps locate source records but is not independent specimen confirmation. No occurrence was admitted; catalog, locality, taxonomy and quality conflicts remain held."
+      },
+      "publicationApproval": false,
+      "researchStatus": "nine-source-record-crosswalks;one-unresolved-identity;all-candidates-research-only;zero-public-assertions",
       "license": null
     }
   ],
