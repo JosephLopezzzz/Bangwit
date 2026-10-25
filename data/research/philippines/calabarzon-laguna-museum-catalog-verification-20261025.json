@@ -9,7 +9,7 @@
     "name": "Laguna de Bay",
     "kind": "lake"
   },
-  "status": "17-CAS-archive-identities-verified;current-taxonomy-followup-admits-16-historical-assertions;one-taxonomy-hold;MZUSP-conflicts-remain",
+  "status": "17-CAS-archive-identities-verified;current-taxonomy-followup-admits-17-historical-assertions;zero-CAS-taxonomy-holds;MZUSP-conflicts-remain",
   "inputs": [
     {
       "file": "calabarzon-laguna-gbif-record-details-20261025.json",
@@ -21,7 +21,7 @@
     },
     {
       "file": "calabarzon-laguna-cas-taxonomy-followup-20261025.json",
-      "sha256": "549156e3ba60d807eb9ae7fd8173f84f1294c8bb02ef364d45c1fff03eb83389"
+      "sha256": "f4cebe8e7db492c4207c268c3be01d04151c1b09fe6a95aaa3f1e1838c1090b2"
     }
   ],
   "method": {
@@ -54,8 +54,8 @@
       "exactCandidateMatches": 17,
       "sourceLocalityAndDateMatches": 17,
       "sourceCc0Rows": 17,
-      "historicalLedgerAdmissions": 16,
-      "taxonomicHolds": 1,
+      "historicalLedgerAdmissions": 17,
+      "taxonomicHolds": 0,
       "trackedCoordinates": false
     },
     "taxonomyFollowupFile": "calabarzon-laguna-cas-taxonomy-followup-20261025.json",
@@ -255,16 +255,15 @@
       "collectionCode": "SU(ICH)",
       "catalogNumber": "26364",
       "occurrenceId": "urn:catalog:CAS:SU(ICH):26364",
-      "taxonomyDisposition": "hold-for-taxonomic-review",
+      "taxonomyDisposition": "current-catalog-name-crosswalk-supported-with-source-authority-caveat",
       "sourceCatalogStatus": "verified-in-official-CAS-IPT-archive-150.545",
-      "decision": "hold-for-taxonomic-review",
-      "holdReasons": [
-        "The source/GBIF name cites Valenciennes 1837. ITIS lists that author-year combination as valid, but the current WoRMS record found for the same spelling attributes it to Bloch & Schneider 1801 and maps that different name to Taenioides anguillaris; FishBase also flags a non-Schneider use as misapplied. No current Catalog of Fishes result was located for the exact Valenciennes 1837 combination. The author-year conflict means the accepted species mapping is unresolved; retain the exact source record but keep the species assertion held."
-      ],
+      "decision": "admit-historical-source-locality-evidence",
+      "holdReasons": [],
       "sourceArchiveCrosswalkFile": "calabarzon-laguna-cas-archive-crosswalk-20261025.json",
       "taxonomyFollowupFile": "calabarzon-laguna-cas-taxonomy-followup-20261025.json",
-      "currentCatalogNameStatus": "The source/GBIF name cites Valenciennes 1837. ITIS lists that author-year combination as valid, but the current WoRMS record found for the same spelling attributes it to Bloch & Schneider 1801 and maps that different name to Taenioides anguillaris; FishBase also flags a non-Schneider use as misapplied. No current Catalog of Fishes result was located for the exact Valenciennes 1837 combination. The author-year conflict means the accepted species mapping is unresolved; retain the exact source record but keep the species assertion held.",
-      "acceptedTaxonName": null
+      "currentCatalogNameStatus": "Synonym of Taenioides anguillaris (Linnaeus 1758). Oxudercidae: Amblyopinae.",
+      "acceptedTaxonName": "Taenioides anguillaris",
+      "taxonomyCrosswalkNote": "The exact CAS IPT row records the species-rank binomial Taenioides caeculus but has no scientificNameAuthorship or identifiedBy value; the 1837 authorship is assigned in GBIF/older ITIS, not stated in the CAS row. The current Catalog of Fishes query for Taenioides caeculus returns no record, while its current entry for the original Valenciennes combination Amblyopus caeculus maps it as a synonym of Taenioides anguillaris (Linnaeus 1758). WoRMS and FishBase likewise treat the formal Bloch & Schneider 1801 Taenioides caeculus name as T. anguillaris. FishBase/CLOFFA distinguish a separate explicitly non-Schneider misapplication associated with T. cirratus; no source evidence links this CAS item to that misapplication. Use T. anguillaris only as a nomenclatural crosswalk, retain the CAS binomial and GBIF label verbatim, and do not interpret this as specimen re-identification, current presence, or a complete checklist."
     },
     {
       "gbifId": "3426464611",
@@ -459,24 +458,24 @@
   "summary": {
     "candidateRecords": 18,
     "casSourceItemsDirectlyVerified": 17,
-    "casHistoricalAssertionsAdmitted": 16,
-    "casTaxonomyHolds": 1,
+    "casHistoricalAssertionsAdmitted": 17,
+    "casTaxonomyHolds": 0,
     "mzuspPortalRows": 2,
     "mzuspUniqueSourceOccurrences": 1,
     "mzuspSourceIdentityMatches": 1,
     "mzuspRankConflicts": 1,
     "mzuspLicenseConflicts": 1,
     "mzuspLocalityAssertionConflicts": 1,
-    "historicalAssertionsAdmitted": 16,
+    "historicalAssertionsAdmitted": 17,
     "publicRecordsAdded": 0
   },
   "decision": {
-    "occurrenceAssertionsAdmitted": 16,
+    "occurrenceAssertionsAdmitted": 17,
     "publicRecordsAdded": 0,
     "publicAdmission": false,
     "coordinatesIncluded": false,
     "currentPresenceInferred": false,
     "completeSpeciesInventoryClaimed": false,
-    "interpretation": "The official CAS archive verifies 17 exact source identities, Laguna de Bay locality text, source dates and CC0 row licenses. A current Catalog of Fishes follow-up supports four of the five initially held source-name mappings, so 16 CAS records are now admitted only to the historical research ledger and one remains held over a conflicting author-year/taxon mapping. One distinct MZUSP source item remains held for rank, locality interpretation and license conflicts. No public species rows, map points, current-presence claim or complete checklist are added."
+    "interpretation": "The official CAS archive verifies 17 exact source identities, Laguna de Bay locality text, source dates and CC0 row licenses. The current Catalog of Fishes supports all five follow-up source-name crosswalks, including an authorless CAS binomial cautiously mapped through the original Valenciennes combination; all 17 CAS records are admitted only as historical source-locality evidence in the internal research ledger. One distinct MZUSP source item remains held for rank, locality interpretation and license conflicts. No public species rows, map points, current-presence claim or complete checklist are added."
   }
 }

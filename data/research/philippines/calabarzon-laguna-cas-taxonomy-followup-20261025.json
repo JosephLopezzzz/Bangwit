@@ -91,11 +91,10 @@
       "gbifId": "3426462605",
       "catalogNumber": "26364",
       "sourceName": "Taenioides caeculus",
-      "sourceAuthorityAsPublished": "(Valenciennes in Cuvier & Valenciennes, 1837)",
       "gbifAcceptedName": "Taenioides caeculus (Valenciennes, 1837)",
-      "acceptedName": null,
-      "decision": "hold-for-taxonomic-review",
-      "reason": "The source/GBIF name cites Valenciennes 1837. ITIS lists that author-year combination as valid, but the current WoRMS record found for the same spelling attributes it to Bloch & Schneider 1801 and maps that different name to Taenioides anguillaris; FishBase also flags a non-Schneider use as misapplied. No current Catalog of Fishes result was located for the exact Valenciennes 1837 combination. The author-year conflict means the accepted species mapping is unresolved; retain the exact source record but keep the species assertion held.",
+      "acceptedName": "Taenioides anguillaris",
+      "decision": "admit-historical-source-locality-evidence",
+      "reason": "The exact CAS IPT row records the species-rank binomial Taenioides caeculus but has no scientificNameAuthorship or identifiedBy value; the 1837 authorship is assigned in GBIF/older ITIS, not stated in the CAS row. The current Catalog of Fishes query for Taenioides caeculus returns no record, while its current entry for the original Valenciennes combination Amblyopus caeculus maps it as a synonym of Taenioides anguillaris (Linnaeus 1758). WoRMS and FishBase likewise treat the formal Bloch & Schneider 1801 Taenioides caeculus name as T. anguillaris. FishBase/CLOFFA distinguish a separate explicitly non-Schneider misapplication associated with T. cirratus; no source evidence links this CAS item to that misapplication. Use T. anguillaris only as a nomenclatural crosswalk, retain the CAS binomial and GBIF label verbatim, and do not interpret this as specimen re-identification, current presence, or a complete checklist.",
       "authorities": [
         {
           "name": "ITIS",
@@ -110,25 +109,59 @@
           "rawFile": "worms-taenioides-caeculus.json",
           "rawSha256": "ee8138435a418c0d4c5ef22db1e00901835d70569af340509e953efaa58bd4a6",
           "status": "Taenioides caeculus (Bloch & Schneider, 1801) is unaccepted as Taenioides anguillaris (Linnaeus, 1758)"
+        },
+        {
+          "name": "Eschmeyer's Catalog of Fishes",
+          "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Amblyopus&species=caeculus&tbl=species",
+          "rawFile": "amblyopus-caeculus-current.html",
+          "rawSha256": "6193a0bc792c0affd038dc15b81b05f71b395d54a7f754181b2a84b411aa2fd8",
+          "status": "Synonym of Taenioides anguillaris (Linnaeus 1758). Oxudercidae: Amblyopinae."
+        },
+        {
+          "name": "Eschmeyer's Catalog of Fishes",
+          "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Taenioides&species=caeculus&tbl=species",
+          "rawFile": "taenioides-caeculus-current-query.html",
+          "rawSha256": "5542993937182a460d9e2b3fe8f7d7f9c8b41daac4a69b2adc678c52b2e688e9",
+          "status": "No records found for the exact current binomial query."
+        },
+        {
+          "name": "FishBase / CLOFFA",
+          "url": "https://faunafri.africamuseum.be/cloffa/table/taxon2/view?idtaxon%3Aint=3829",
+          "status": "Distinguishes Taenioides caeculus (non Schneider, 1801), a misapplied usage associated with Taenioides cirratus; this usage is not attributed to the CAS record."
         }
-      ]
+      ],
+      "sourceAuthorityInCASArchive": null,
+      "gbifScientificNameAuthorship": "(Valenciennes, 1837)",
+      "sourcePage": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Amblyopus&species=caeculus&tbl=species",
+      "rawFile": "amblyopus-caeculus-current.html",
+      "rawSha256": "6193a0bc792c0affd038dc15b81b05f71b395d54a7f754181b2a84b411aa2fd8",
+      "responseBytes": 9845,
+      "currentCatalogStatus": "Synonym of Taenioides anguillaris (Linnaeus 1758). Oxudercidae: Amblyopinae.",
+      "gbifAcceptedNameMatchesCurrentCatalog": false,
+      "supplementalCatalogQuery": {
+        "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Taenioides&species=caeculus&tbl=species",
+        "rawFile": "taenioides-caeculus-current-query.html",
+        "rawSha256": "5542993937182a460d9e2b3fe8f7d7f9c8b41daac4a69b2adc678c52b2e688e9",
+        "responseBytes": 8862,
+        "status": "No records found for the exact current binomial query."
+      }
     }
   ],
   "summary": {
     "initialTaxonomicHoldsReviewed": 5,
-    "currentCatalogMappingsResolvedForHistoricalLedger": 4,
-    "historicalSourceLocalityAssertionsAdmittedFromThisBatch": 4,
-    "recordsStillHeldForTaxonomicReview": 1,
+    "currentCatalogMappingsResolvedForHistoricalLedger": 5,
+    "historicalSourceLocalityAssertionsAdmittedFromThisBatch": 5,
+    "recordsStillHeldForTaxonomicReview": 0,
     "publicAppRowsAdded": 0,
     "mapPointsAdded": 0,
     "currentPresenceInferred": false,
     "completeChecklistClaimed": false
   },
   "decision": {
-    "admittedToResearchLedgerOnly": 4,
-    "unresolvedTaxonomicHolds": 1,
+    "admittedToResearchLedgerOnly": 5,
+    "unresolvedTaxonomicHolds": 0,
     "publicAppAdmission": false,
     "mapPointAdmission": false,
-    "interpretation": "Four exact source-name mappings are now supported by the current Catalog of Fishes and are admitted only as historical source-locality assertions. Keep their verbatim source names and GBIF crosswalks, including accepted-name differences. Taenioides caeculus remains held because the 1837 and 1801 author-year records are not reconciled. No public checklist or map point is created."
+    "interpretation": "The current Catalog of Fishes supports the fifth source-name crosswalk through Amblyopus caeculus, while preserving the CAS row’s authorless binomial and the older GBIF/ITIS attribution. All 17 exact CAS collection identities now support historical source-locality assertions in the internal research ledger; this is nomenclatural normalization, not specimen re-identification. One MZUSP source item remains held for rank, locality-interpretation and license conflicts. No public species rows, map points, current-presence claim or complete checklist are added."
   }
 }

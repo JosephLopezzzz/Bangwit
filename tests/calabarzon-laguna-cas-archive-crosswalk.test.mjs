@@ -104,14 +104,14 @@ test("registry and CALABARZON checkpoint pin the Laguna CAS review without publi
   assert.equal(gapReport.coverageSummary.regionalBaselineComplete, false);
   const openGap = gapReport.openGaps.find((item) => item.id === "laguna-museum-catalog-conflicts");
   assert.equal(openGap.candidateRecords, 18);
-  assert.equal(openGap.count, 2);
-  assert.equal(openGap.historicalAssertionsAdmittedToResearchLedger, 16);
-  assert.match(openGap.reason, /17 exact collection-qualified.*16 historical.*one CAS name remains held/i);
+  assert.equal(openGap.count, 1);
+  assert.equal(openGap.historicalAssertionsAdmittedToResearchLedger, 17);
+  assert.match(openGap.reason, /17 exact collection-qualified.*all 17.*One unique MZUSP/i);
   const lagoon = gapReport.waterbodySnapshot.find((item) => item.id === "ph-wb-laguna-de-bay");
   assert.equal(lagoon.publicAdmission, false);
   assert.ok(openGap.sourceRefs.includes(source.id));
   assert.ok(openGap.sourceRefs.includes("calabarzon-laguna-mzusp-sibbr-catalog"));
   assert.equal(museum.summary.casSourceItemsDirectlyVerified, 17);
-  assert.equal(museum.summary.historicalAssertionsAdmitted, 16);
+  assert.equal(museum.summary.historicalAssertionsAdmitted, 17);
   assert.equal(museum.summary.publicRecordsAdded, 0);
 });

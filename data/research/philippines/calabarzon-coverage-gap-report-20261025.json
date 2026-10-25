@@ -7,8 +7,8 @@
   "status": "checkpoint-published-incomplete-baseline",
   "inputHashes": {
     "scopeSha256": "e8a6c490cae14465a9ccc33b8078cf68f3e4b9fb016072a5c0f0549a2d96d30f",
-    "sourcesSha256": "5a3fe597254fe0f9eb97d850ed495489e8dbf8142b8391dd997b29473fa1016e",
-    "lagunaMuseumVerificationSha256": "507971ad25cea28b790e4caefc12cb471aeb1e16f801010deb56506f82514e0b",
+    "sourcesSha256": "c3f94b9ab3a9cb4b01cc965ace398941e9238e346c7b2825f16f03f96a35e501",
+    "lagunaMuseumVerificationSha256": "e822b4b2703199198ec1101deda61d3a44795e5b064b359cb48daf3c246c9bff",
     "balayanGbifDetailsSha256": "6e466c1df40085b70d314da6af314ecc56ea9cd72da737cc9cf6c1757c80d1e9",
     "balayanIdigbioCrosscheckSha256": "66b5e92896fed932a02ce75316ce5cb8f8031525fa3923ed8a1d8426983a037f",
     "balayanFieldMuseumSourceSha256": "f75c9104540f467c3f3c94e6018ee67317f68269fc8fafecf52ea89042f6a811",
@@ -21,7 +21,7 @@
     "balayanUmmzRowDecisionsSha256": "4c06195e35cc9cc144f0c12f077dfd1f7f0a90430e34c276fc21f8b18d301563",
     "balayanNmnhStationCrosswalkSha256": "c9d89cb12f8eeb9a34faf20f17a94ace518892f4d1ca266fb7ddceae565321c7",
     "lagunaCasArchiveCrosswalkSha256": "a5f889ad67216f27415b149d581b2ae8c7f3bb2e6352843c27349781a1824e87",
-    "lagunaTaxonomyFollowupSha256": "549156e3ba60d807eb9ae7fd8173f84f1294c8bb02ef364d45c1fff03eb83389"
+    "lagunaTaxonomyFollowupSha256": "f4cebe8e7db492c4207c268c3be01d04151c1b09fe6a95aaa3f1e1838c1090b2"
   },
   "decision": "Keep CALABARZON visibly in progress. This checkpoint records the current source-backed leads and specific gaps; it is not a complete fish checklist, a completed region, or a public species release.",
   "coverageSummary": {
@@ -100,7 +100,7 @@
       },
       {
         "waterbodyId": "ph-wb-laguna-de-bay",
-        "note": "One corrected 2024 preserved-specimen assertion remains research-only under noncommercial CC BY-NC terms; no map point is published. Separately, 12 dated CAS source records (1931 and 1950) with CC0 rights and supported fish-name cross-checks are admitted only to the internal historical research ledger. Five further CAS source records remain held for taxonomic review, and one MZUSP source item remains held for rank, locality and reuse conflicts. No public rows or points were added."
+        "note": "One corrected 2024 preserved-specimen assertion remains research-only under noncommercial CC BY-NC terms; no map point is published. Separately, all 17 dated CAS source records with CC0 rights and supported name crosswalks are admitted only to the internal historical research ledger. One MZUSP source item remains held for rank, locality and reuse conflicts. No public rows or points were added."
       },
       {
         "waterbodyId": "ph-wb-palico-lian-river",
@@ -124,7 +124,7 @@
       "Taal Lake: four exact National Museum GBIF text-field queries for Taal and Amphilophus citrinellus returned zero; this version- and field-bounded discovery result is not evidence of fish absence.",
       "Taal Lake: two coordinate-envelope National Museum specimens match FishBase Taal catalog entries by catalog number, taxon and year, but GBIF lacks locality/waterBody and FishBase is CC BY-NC 4.0; primary catalog verification and reuse remain pending.",
       "Taal Lake: the FishBase FW code for one GBIF/SEAFDEC catalog match conflicts with SEAOBIS institution/collection codes; verify provenance before using either candidate.",
-      "Laguna de Bay museum batch: the official CAS IPT archive directly matched all 17 collection-qualified source items; 12 are admitted only as historical research-ledger evidence and five remain held for taxonomy. One MZUSP item remains held because the portal interprets it at family rank, conflicts on locality assertion and license, and gives no waterBody value. No absence or current-presence claim is inferred."
+      "Laguna de Bay museum batch: the official CAS IPT archive directly matched all 17 collection-qualified source items, and all 17 are admitted only as historical research-ledger evidence. One MZUSP item remains held because the portal interprets it at family rank, conflicts on locality assertion and license, and gives no waterBody value. No absence or current-presence claim is inferred."
     ],
     "zeroResultMeaning": "Exact-locality zeroes are bounded search gaps, not fish-absence findings. Waterbird monitoring and historical common-name lists are not species-level fish presence evidence."
   },
@@ -189,16 +189,16 @@
     },
     {
       "id": "laguna-museum-catalog-conflicts",
-      "status": "one-CAS-taxonomy-hold-and-one-MZUSP-source-conflict",
-      "count": 2,
+      "status": "one-MZUSP-source-conflict",
+      "count": 1,
       "sourceRefs": [
         "calabarzon-laguna-cas-primary-archive-check",
         "calabarzon-laguna-mzusp-sibbr-catalog"
       ],
-      "reason": "The official CAS IPT archive directly matches 17 exact collection-qualified Laguna de Bay source records. A current Catalog of Fishes follow-up supports 16 historical source-locality assertions for the internal research ledger; one CAS name remains held because the author-year mapping is unresolved. One unique MZUSP source item is also held for family-rank interpretation, locality assertion and license conflicts. This batch does not establish current presence or a complete lake checklist.",
-      "nextAction": "Resolve the remaining Taenioides caeculus author-year conflict and obtain authoritative source-level clarification for the MZUSP rank, locality scope and reuse terms. Keep both unresolved items and the entire museum batch out of public occurrence projections.",
+      "reason": "The official CAS IPT archive directly matches 17 exact collection-qualified Laguna de Bay source records, and the current Catalog of Fishes follow-up supports all 17 only as historical source-locality assertions in the internal research ledger. One unique MZUSP source item remains held for family-rank interpretation, locality assertion and license conflicts. This batch does not establish current presence or a complete lake checklist.",
+      "nextAction": "Obtain authoritative source-level clarification for the MZUSP rank, locality scope and reuse terms; keep that item out of public occurrence projections.",
       "candidateRecords": 18,
-      "historicalAssertionsAdmittedToResearchLedger": 16
+      "historicalAssertionsAdmittedToResearchLedger": 17
     },
     {
       "id": "balayan-bay-museum-catalog-review",
@@ -1418,6 +1418,6 @@
   "nextStep": {
     "phaseId": "L1",
     "regionName": "CALABARZON (Region IV-A)",
-    "action": "Continue L1 CALABARZON source and fish review. Laguna now has 16 dated CAS historical source-locality records admitted only to the research ledger; keep one Taenioides author-year/taxonomy hold and the MZUSP rank, locality and license conflict out of public projections. Continue the Balayan museum/taxonomy work and the waterbody inventory across Batangas, Laguna, Quezon and Rizal; do not advance to NCR or mark CALABARZON complete."
+    "action": "Continue L1 CALABARZON source and fish review. Laguna now has 17 dated CAS historical source-locality records admitted only to the research ledger; keep the MZUSP rank, locality and license conflict out of public projections. Continue the Balayan museum/taxonomy work and waterbody inventory across Batangas, Laguna, Quezon and Rizal; do not advance to NCR or mark CALABARZON complete."
   }
 }

@@ -64,16 +64,16 @@ test("CAS archive records final historical decisions while preserving the initia
     casRecords.every((row) => row.sourceCatalogStatus === "verified-in-official-CAS-IPT-archive-150.545"),
   );
   assert.equal(review.method.casArchive.exactCandidateMatches, 17);
-  assert.equal(review.method.casArchive.historicalLedgerAdmissions, 16);
-  assert.equal(review.method.casArchive.taxonomicHolds, 1);
+  assert.equal(review.method.casArchive.historicalLedgerAdmissions, 17);
+  assert.equal(review.method.casArchive.taxonomicHolds, 0);
   assert.match(review.method.casPortal.result, /offline notice/i);
   assert.match(review.method.casPortal.result, /not a specimen-absence finding/i);
 
   const admitted = casRecords.filter((row) => row.decision === "admit-historical-source-locality-evidence");
   const held = casRecords.filter((row) => row.decision === "hold-for-taxonomic-review");
-  assert.equal(admitted.length, 16);
-  assert.equal(held.length, 1);
-  assert.ok(held.every((row) => row.holdReasons.length === 1));
+  assert.equal(admitted.length, 17);
+  assert.equal(held.length, 0);
+  assert.deepEqual(held, []);
   assert.equal(casArchive.summary.exactSourceIdentityMatches, 17);
   assert.equal(casArchive.summary.sourceLocalityOrWaterBodyMentionsLagunaDeBay, 17);
   assert.equal(casArchive.summary.cc0SourceRows, 17);
@@ -87,7 +87,7 @@ test("CAS archive records final historical decisions while preserving the initia
 });
 
 test("museum record verification retains no coordinates and admits no public occurrence rows", () => {
-  assert.equal(review.summary.historicalAssertionsAdmitted, 16);
+  assert.equal(review.summary.historicalAssertionsAdmitted, 17);
   assert.equal(review.summary.publicRecordsAdded, 0);
   assert.equal(review.decision.publicAdmission, false);
   assert.equal(review.decision.coordinatesIncluded, false);
@@ -96,8 +96,8 @@ test("museum record verification retains no coordinates and admits no public occ
   assert.equal(/decimalLatitude|decimalLongitude|coordinateUncertaintyInMeters/i.test(JSON.stringify(review)), false);
   const casRecords = review.records.filter((row) => row.institutionCode === "CAS");
   const mzusp = review.records.find((row) => row.sourceInstitutionCode === "MZUSP");
-  assert.equal(casRecords.filter((row) => row.decision === "admit-historical-source-locality-evidence").length, 16);
-  assert.equal(casRecords.filter((row) => row.decision === "hold-for-taxonomic-review").length, 1);
+  assert.equal(casRecords.filter((row) => row.decision === "admit-historical-source-locality-evidence").length, 17);
+  assert.equal(casRecords.filter((row) => row.decision === "hold-for-taxonomic-review").length, 0);
   assert.equal(mzusp.decision, "hold-no-historical-assertion");
 
   const sourceIds = sourceRegistry.sources.map((source) => source.id);

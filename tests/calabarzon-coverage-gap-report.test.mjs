@@ -71,15 +71,15 @@ test("CALABARZON checkpoint reports its gaps without claiming a complete region"
   assert.match(report.nextStep.action, /do not advance to NCR or mark CALABARZON complete/i);
   assert.ok(report.openGaps.some((gap) => gap.id === "scope-not-exhaustive"));
   const museumGap = report.openGaps.find((gap) => gap.id === "laguna-museum-catalog-conflicts");
-  assert.equal(museumGap.count, 2);
+  assert.equal(museumGap.count, 1);
   assert.equal(museumGap.candidateRecords, 18);
-  assert.equal(museumGap.historicalAssertionsAdmittedToResearchLedger, 16);
+  assert.equal(museumGap.historicalAssertionsAdmittedToResearchLedger, 17);
   assert.deepEqual(museumGap.sourceRefs, [
     "calabarzon-laguna-cas-primary-archive-check",
     "calabarzon-laguna-mzusp-sibbr-catalog",
   ]);
-  assert.match(museumGap.reason, /17 exact collection-qualified.*16 historical.*one CAS name remains held/i);
-  assert.match(museumGap.nextAction, /remaining Taenioides caeculus author-year conflict.*MZUSP/i);
+  assert.match(museumGap.reason, /17 exact collection-qualified.*all 17.*One unique MZUSP/i);
+  assert.match(museumGap.nextAction, /authoritative source-level clarification.*MZUSP/i);
   assert.equal(report.coverageSummary.admittedPublicRecords, 0);
   assert.equal(report.coverageSummary.regionalBaselineComplete, false);
   assert.equal(sweep.regionalGapSummary.regionalBaselineComplete, false);
