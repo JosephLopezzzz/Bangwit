@@ -1,0 +1,1180 @@
+{
+  "schemaVersion": 1,
+  "batchId": "calabarzon-laguna-cas-archive-crosswalk-20261025",
+  "reviewedOn": "2026-10-25",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "waterbody": {
+    "id": "ph-wb-laguna-de-bay",
+    "name": "Laguna de Bay",
+    "kind": "lake"
+  },
+  "status": "direct-CAS-IPT-archive-crosswalk-complete;12-historical-ledger-assertions;5-taxonomic-holds;no-public-records",
+  "provider": {
+    "name": "California Academy of Sciences",
+    "datasetTitle": "CAS Ichthyology (ICH)",
+    "datasetVersion": "150.545",
+    "datasetPage": "https://www.gbif.org/dataset/5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+    "doi": "https://doi.org/10.15468/efh2ib",
+    "resourceUrl": "http://ipt.calacademy.org:8080/resource?r=ich&v=150.545",
+    "archiveUrl": "http://ipt.calacademy.org:8080/archive.do?r=ich"
+  },
+  "inputs": [
+    {
+      "file": "calabarzon-laguna-gbif-triage-20261025.json",
+      "sha256": "2f394e81a412eb87245e13f92eff0b1c8c5cb7b48e5efefa603aaa347f6bf0fb"
+    },
+    {
+      "file": "calabarzon-laguna-gbif-record-details-20261025.json",
+      "sha256": "c11327bc8da9e6e783aea26b948ce6d5a7973cf842de623ccb52f404ddfecdf6"
+    },
+    {
+      "file": "calabarzon-laguna-cof-taxonomy-20261025.json",
+      "sha256": "4e5e79965cacaf9a413bbef9eabfd636a435fa652e10e00241db100355974c9c"
+    }
+  ],
+  "archive": {
+    "rawPath": "raw/calabarzon-balayan-cas-primary-archive-20261025/cas-ichthyology-archive-current.zip",
+    "bytes": 21381034,
+    "sha256": "3c0c9c0a686590fb6a2c61bf35ed9a7aa68eeb5cad14e13829710198c631ed12",
+    "metadataFile": "eml.xml",
+    "emlSha256": "ba14c884a77d34e9802d06bfa2f8de173b7dfb5c5513f1e936a3ab885855388a",
+    "archiveMetadataFile": "meta.xml",
+    "metaSha256": "7ed6b9db07d79ae2b53f22a4ea92ac5c5a43fba3889cfb7d60ce1072c0b2181f",
+    "publishedDate": "2026-10-19",
+    "datasetVersion": "150.545",
+    "occurrenceRows": 220916,
+    "sameCatalogNumberRowsAcrossCasCollections": 34,
+    "exactCandidateIdentityMatches": 17,
+    "otherCollectionNumericCollisions": 17,
+    "coordinateBearingRawArchive": true,
+    "trackedReviewCoordinates": false
+  },
+  "selection": {
+    "joinKey": [
+      "institutionCode",
+      "collectionCode",
+      "catalogNumber",
+      "occurrenceID"
+    ],
+    "candidateCount": 17,
+    "rule": "Match the four source identity fields exactly; numeric catalog number alone is not sufficient because the archive contains same-number CAS rows in a different collection.",
+    "sourceResponseFieldAllowlist": [
+      "institutionCode",
+      "collectionCode",
+      "catalogNumber",
+      "occurrenceID",
+      "basisOfRecord",
+      "scientificName",
+      "family",
+      "taxonRank",
+      "identificationQualifier",
+      "eventDate",
+      "year",
+      "month",
+      "day",
+      "country",
+      "stateProvince",
+      "municipality",
+      "waterBody",
+      "locality",
+      "license"
+    ],
+    "excludedFields": [
+      "decimalLatitude",
+      "decimalLongitude",
+      "coordinateUncertaintyInMeters",
+      "verbatimLatitude",
+      "verbatimLongitude",
+      "geometry"
+    ]
+  },
+  "rights": {
+    "licenseIdentifier": "CC0-1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "metadataStatement": "To the extent possible under law, the publisher has waived all rights to these data and has dedicated them to the Public Domain (CC0 1.0). Users may copy, modify, distribute and use the work, including for commercial purposes, without restriction.",
+    "emlSha256": "ba14c884a77d34e9802d06bfa2f8de173b7dfb5c5513f1e936a3ab885855388a",
+    "everyMatchedDwCRowCarriesCc0": true,
+    "scope": "Dataset metadata and the 17 selected source rows only. This source review does not itself authorize public product use."
+  },
+  "records": [
+    {
+      "gbifId": "473214923",
+      "sourceRecord": {
+        "institutionCode": "CAS",
+        "collectionCode": "ICH",
+        "catalogNumber": "20515",
+        "occurrenceID": "urn:catalog:CAS:ICH:20515",
+        "basisOfRecord": "PreservedSpecimen",
+        "scientificName": "Toxotes jaculatrix",
+        "family": "Toxotidae",
+        "taxonRank": "species",
+        "identificationQualifier": null,
+        "eventDate": "1950-08-10",
+        "year": "1950",
+        "month": "8",
+        "day": "10",
+        "country": "Philippines",
+        "stateProvince": null,
+        "municipality": null,
+        "waterBody": "Laguna de Bay",
+        "locality": "Pasig R., Laguna de Bay, Luzon",
+        "license": "https://creativecommons.org/publicdomain/zero/1.0/"
+      },
+      "gbifCrosswalk": {
+        "datasetKey": "5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+        "occurrenceUrl": "https://www.gbif.org/occurrence/473214923",
+        "basisOfRecord": "PRESERVED_SPECIMEN",
+        "scientificName": "Toxotes jaculatrix (Pallas, 1767)",
+        "acceptedScientificName": "Toxotes jaculatrix (Pallas, 1767)",
+        "eventDate": "1950-08-10",
+        "waterBody": "Laguna de Bay",
+        "locality": "Pasig R., Laguna de Bay, Luzon",
+        "license": "http://creativecommons.org/publicdomain/zero/1.0/legalcode",
+        "qualityFlags": [
+          "CONTINENT_DERIVED_FROM_COORDINATES",
+          "CONTINENT_INVALID",
+          "GEODETIC_DATUM_ASSUMED_WGS84",
+          "OCCURRENCE_STATUS_INFERRED_FROM_INDIVIDUAL_COUNT"
+        ],
+        "identityMatches": true,
+        "eventDateMatches": true,
+        "recordedSpeciesNameMatches": true,
+        "localityTextNamesLagunaDeBay": true,
+        "sourceAndGbifLicenseBothCc0": true
+      },
+      "taxonomicCrosscheck": {
+        "authority": "Eschmeyer’s Catalog of Fishes",
+        "taxonomyDisposition": "independent-name-crosscheck-agrees",
+        "recordedNameCatalogStatus": "Valid as Toxotes jaculatrix (Pallas 1767). Toxotidae.",
+        "acceptedNameCatalogStatus": "Valid as Toxotes jaculatrix (Pallas 1767). Toxotidae.",
+        "gbifAcceptedNameConfirmed": true
+      },
+      "researchLedgerDecision": {
+        "status": "admit-historical-source-locality-evidence",
+        "historicalOnly": true,
+        "publicAppAdmission": false,
+        "mapPointAdmission": false,
+        "currentPresenceInferred": false,
+        "completeChecklistClaimed": false,
+        "reason": "Exact collection-qualified source item, date, Laguna de Bay locality text and CC0 license match. Fish-name cross-check supports the accepted species name."
+      }
+    },
+    {
+      "gbifId": "3426412971",
+      "sourceRecord": {
+        "institutionCode": "CAS",
+        "collectionCode": "SU(ICH)",
+        "catalogNumber": "13543",
+        "occurrenceID": "urn:catalog:CAS:SU(ICH):13543",
+        "basisOfRecord": "PreservedSpecimen",
+        "scientificName": "Arius manillensis",
+        "family": "Ariidae",
+        "taxonRank": "species",
+        "identificationQualifier": null,
+        "eventDate": "1931-05-10",
+        "year": "1931",
+        "month": "5",
+        "day": "10",
+        "country": "Philippines",
+        "stateProvince": null,
+        "municipality": null,
+        "waterBody": null,
+        "locality": "Laguna de Bay",
+        "license": "https://creativecommons.org/publicdomain/zero/1.0/"
+      },
+      "gbifCrosswalk": {
+        "datasetKey": "5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+        "occurrenceUrl": "https://www.gbif.org/occurrence/3426412971",
+        "basisOfRecord": "PRESERVED_SPECIMEN",
+        "scientificName": "Arius manillensis Valenciennes, 1840",
+        "acceptedScientificName": "Arius manillensis Valenciennes, 1840",
+        "eventDate": "1931-05-10",
+        "waterBody": null,
+        "locality": "Laguna de Bay",
+        "license": "http://creativecommons.org/publicdomain/zero/1.0/legalcode",
+        "qualityFlags": [
+          "CONTINENT_DERIVED_FROM_COORDINATES",
+          "CONTINENT_INVALID",
+          "GEODETIC_DATUM_ASSUMED_WGS84",
+          "OCCURRENCE_STATUS_INFERRED_FROM_INDIVIDUAL_COUNT"
+        ],
+        "identityMatches": true,
+        "eventDateMatches": true,
+        "recordedSpeciesNameMatches": true,
+        "localityTextNamesLagunaDeBay": true,
+        "sourceAndGbifLicenseBothCc0": true
+      },
+      "taxonomicCrosscheck": {
+        "authority": "Eschmeyer’s Catalog of Fishes",
+        "taxonomyDisposition": "independent-name-crosscheck-agrees",
+        "recordedNameCatalogStatus": "Valid as Arius manillensis Valenciennes 1840. Ariidae: Ariinae.",
+        "acceptedNameCatalogStatus": "Valid as Arius manillensis Valenciennes 1840. Ariidae: Ariinae.",
+        "gbifAcceptedNameConfirmed": true
+      },
+      "researchLedgerDecision": {
+        "status": "admit-historical-source-locality-evidence",
+        "historicalOnly": true,
+        "publicAppAdmission": false,
+        "mapPointAdmission": false,
+        "currentPresenceInferred": false,
+        "completeChecklistClaimed": false,
+        "reason": "Exact collection-qualified source item, date, Laguna de Bay locality text and CC0 license match. Fish-name cross-check supports the accepted species name."
+      }
+    },
+    {
+      "gbifId": "3426451985",
+      "sourceRecord": {
+        "institutionCode": "CAS",
+        "collectionCode": "SU(ICH)",
+        "catalogNumber": "13600",
+        "occurrenceID": "urn:catalog:CAS:SU(ICH):13600",
+        "basisOfRecord": "PreservedSpecimen",
+        "scientificName": "Arius dispar",
+        "family": "Ariidae",
+        "taxonRank": "species",
+        "identificationQualifier": null,
+        "eventDate": "1931-05-10",
+        "year": "1931",
+        "month": "5",
+        "day": "10",
+        "country": "Philippines",
+        "stateProvince": null,
+        "municipality": null,
+        "waterBody": null,
+        "locality": "Laguna de Bay",
+        "license": "https://creativecommons.org/publicdomain/zero/1.0/"
+      },
+      "gbifCrosswalk": {
+        "datasetKey": "5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+        "occurrenceUrl": "https://www.gbif.org/occurrence/3426451985",
+        "basisOfRecord": "PRESERVED_SPECIMEN",
+        "scientificName": "Arius dispar Herre, 1926",
+        "acceptedScientificName": "Arius dispar Herre, 1926",
+        "eventDate": "1931-05-10",
+        "waterBody": null,
+        "locality": "Laguna de Bay",
+        "license": "http://creativecommons.org/publicdomain/zero/1.0/legalcode",
+        "qualityFlags": [
+          "CONTINENT_DERIVED_FROM_COORDINATES",
+          "CONTINENT_INVALID",
+          "GEODETIC_DATUM_ASSUMED_WGS84",
+          "OCCURRENCE_STATUS_INFERRED_FROM_INDIVIDUAL_COUNT"
+        ],
+        "identityMatches": true,
+        "eventDateMatches": true,
+        "recordedSpeciesNameMatches": true,
+        "localityTextNamesLagunaDeBay": true,
+        "sourceAndGbifLicenseBothCc0": true
+      },
+      "taxonomicCrosscheck": {
+        "authority": "Eschmeyer’s Catalog of Fishes",
+        "taxonomyDisposition": "independent-name-crosscheck-agrees",
+        "recordedNameCatalogStatus": "Valid as Arius dispar Herre 1926. Ariidae: Ariinae.",
+        "acceptedNameCatalogStatus": "Valid as Arius dispar Herre 1926. Ariidae: Ariinae.",
+        "gbifAcceptedNameConfirmed": true
+      },
+      "researchLedgerDecision": {
+        "status": "admit-historical-source-locality-evidence",
+        "historicalOnly": true,
+        "publicAppAdmission": false,
+        "mapPointAdmission": false,
+        "currentPresenceInferred": false,
+        "completeChecklistClaimed": false,
+        "reason": "Exact collection-qualified source item, date, Laguna de Bay locality text and CC0 license match. Fish-name cross-check supports the accepted species name."
+      }
+    },
+    {
+      "gbifId": "3426418612",
+      "sourceRecord": {
+        "institutionCode": "CAS",
+        "collectionCode": "SU(ICH)",
+        "catalogNumber": "26213",
+        "occurrenceID": "urn:catalog:CAS:SU(ICH):26213",
+        "basisOfRecord": "PreservedSpecimen",
+        "scientificName": "Butis butis",
+        "family": "Butidae",
+        "taxonRank": "species",
+        "identificationQualifier": null,
+        "eventDate": "1931-05",
+        "year": "1931",
+        "month": "5",
+        "day": null,
+        "country": "Philippines",
+        "stateProvince": "Rizal",
+        "municipality": null,
+        "waterBody": "Laguna de Bay",
+        "locality": "Laguna de Bay, Philippines.",
+        "license": "https://creativecommons.org/publicdomain/zero/1.0/"
+      },
+      "gbifCrosswalk": {
+        "datasetKey": "5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+        "occurrenceUrl": "https://www.gbif.org/occurrence/3426418612",
+        "basisOfRecord": "PRESERVED_SPECIMEN",
+        "scientificName": "Butis butis (Hamilton, 1822)",
+        "acceptedScientificName": "Butis butis (Hamilton, 1822)",
+        "eventDate": "1931-05",
+        "waterBody": "Laguna de Bay",
+        "locality": "Laguna de Bay, Philippines.",
+        "license": "http://creativecommons.org/publicdomain/zero/1.0/legalcode",
+        "qualityFlags": [
+          "CONTINENT_DERIVED_FROM_COORDINATES",
+          "CONTINENT_INVALID",
+          "GEODETIC_DATUM_ASSUMED_WGS84",
+          "OCCURRENCE_STATUS_INFERRED_FROM_INDIVIDUAL_COUNT"
+        ],
+        "identityMatches": true,
+        "eventDateMatches": true,
+        "recordedSpeciesNameMatches": true,
+        "localityTextNamesLagunaDeBay": true,
+        "sourceAndGbifLicenseBothCc0": true
+      },
+      "taxonomicCrosscheck": {
+        "authority": "Eschmeyer’s Catalog of Fishes",
+        "taxonomyDisposition": "independent-name-crosscheck-agrees",
+        "recordedNameCatalogStatus": "Valid as Butis butis (Hamilton 1822). Butidae.",
+        "acceptedNameCatalogStatus": "Valid as Butis butis (Hamilton 1822). Butidae.",
+        "gbifAcceptedNameConfirmed": true
+      },
+      "researchLedgerDecision": {
+        "status": "admit-historical-source-locality-evidence",
+        "historicalOnly": true,
+        "publicAppAdmission": false,
+        "mapPointAdmission": false,
+        "currentPresenceInferred": false,
+        "completeChecklistClaimed": false,
+        "reason": "Exact collection-qualified source item, date, Laguna de Bay locality text and CC0 license match. Fish-name cross-check supports the accepted species name."
+      }
+    },
+    {
+      "gbifId": "3426459615",
+      "sourceRecord": {
+        "institutionCode": "CAS",
+        "collectionCode": "SU(ICH)",
+        "catalogNumber": "26223",
+        "occurrenceID": "urn:catalog:CAS:SU(ICH):26223",
+        "basisOfRecord": "PreservedSpecimen",
+        "scientificName": "Acentrogobius janthinopterus",
+        "family": "Gobiidae",
+        "taxonRank": "species",
+        "identificationQualifier": null,
+        "eventDate": "1931-05-09",
+        "year": "1931",
+        "month": "5",
+        "day": "9",
+        "country": "Philippines",
+        "stateProvince": "Rizal",
+        "municipality": null,
+        "waterBody": "Laguna de Bay",
+        "locality": "Laguna de Bay, P.I.",
+        "license": "https://creativecommons.org/publicdomain/zero/1.0/"
+      },
+      "gbifCrosswalk": {
+        "datasetKey": "5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+        "occurrenceUrl": "https://www.gbif.org/occurrence/3426459615",
+        "basisOfRecord": "PRESERVED_SPECIMEN",
+        "scientificName": "Acentrogobius janthinopterus (Bleeker, 1853)",
+        "acceptedScientificName": "Acentrogobius janthinopterus (Bleeker, 1853)",
+        "eventDate": "1931-05-09",
+        "waterBody": "Laguna de Bay",
+        "locality": "Laguna de Bay, P.I.",
+        "license": "http://creativecommons.org/publicdomain/zero/1.0/legalcode",
+        "qualityFlags": [
+          "CONTINENT_DERIVED_FROM_COORDINATES",
+          "CONTINENT_INVALID",
+          "GEODETIC_DATUM_ASSUMED_WGS84",
+          "OCCURRENCE_STATUS_INFERRED_FROM_INDIVIDUAL_COUNT"
+        ],
+        "identityMatches": true,
+        "eventDateMatches": true,
+        "recordedSpeciesNameMatches": true,
+        "localityTextNamesLagunaDeBay": true,
+        "sourceAndGbifLicenseBothCc0": true
+      },
+      "taxonomicCrosscheck": {
+        "authority": "Eschmeyer’s Catalog of Fishes",
+        "taxonomyDisposition": "independent-name-crosscheck-agrees",
+        "recordedNameCatalogStatus": "Valid as Acentrogobius janthinopterus (Bleeker 1853). Gobiidae: Gobiinae.",
+        "acceptedNameCatalogStatus": "Valid as Acentrogobius janthinopterus (Bleeker 1853). Gobiidae: Gobiinae.",
+        "gbifAcceptedNameConfirmed": true
+      },
+      "researchLedgerDecision": {
+        "status": "admit-historical-source-locality-evidence",
+        "historicalOnly": true,
+        "publicAppAdmission": false,
+        "mapPointAdmission": false,
+        "currentPresenceInferred": false,
+        "completeChecklistClaimed": false,
+        "reason": "Exact collection-qualified source item, date, Laguna de Bay locality text and CC0 license match. Fish-name cross-check supports the accepted species name."
+      }
+    },
+    {
+      "gbifId": "3426421626",
+      "sourceRecord": {
+        "institutionCode": "CAS",
+        "collectionCode": "SU(ICH)",
+        "catalogNumber": "26272",
+        "occurrenceID": "urn:catalog:CAS:SU(ICH):26272",
+        "basisOfRecord": "PreservedSpecimen",
+        "scientificName": "Glossogobius celebius",
+        "family": "Gobiidae",
+        "taxonRank": "species",
+        "identificationQualifier": null,
+        "eventDate": "1931-05",
+        "year": "1931",
+        "month": "5",
+        "day": null,
+        "country": "Philippines",
+        "stateProvince": "Rizal",
+        "municipality": null,
+        "waterBody": "Laguna de Bay",
+        "locality": "Laguna de Bay, Philippines.",
+        "license": "https://creativecommons.org/publicdomain/zero/1.0/"
+      },
+      "gbifCrosswalk": {
+        "datasetKey": "5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+        "occurrenceUrl": "https://www.gbif.org/occurrence/3426421626",
+        "basisOfRecord": "PRESERVED_SPECIMEN",
+        "scientificName": "Glossogobius celebius (Valenciennes, 1837)",
+        "acceptedScientificName": "Glossogobius celebius (Valenciennes, 1837)",
+        "eventDate": "1931-05",
+        "waterBody": "Laguna de Bay",
+        "locality": "Laguna de Bay, Philippines.",
+        "license": "http://creativecommons.org/publicdomain/zero/1.0/legalcode",
+        "qualityFlags": [
+          "CONTINENT_DERIVED_FROM_COORDINATES",
+          "CONTINENT_INVALID",
+          "GEODETIC_DATUM_ASSUMED_WGS84",
+          "OCCURRENCE_STATUS_INFERRED_FROM_INDIVIDUAL_COUNT"
+        ],
+        "identityMatches": true,
+        "eventDateMatches": true,
+        "recordedSpeciesNameMatches": true,
+        "localityTextNamesLagunaDeBay": true,
+        "sourceAndGbifLicenseBothCc0": true
+      },
+      "taxonomicCrosscheck": {
+        "authority": "Eschmeyer’s Catalog of Fishes",
+        "taxonomyDisposition": "independent-name-crosscheck-agrees",
+        "recordedNameCatalogStatus": "Valid as Glossogobius celebius (Valenciennes 1837). Gobiidae: Gobiinae.",
+        "acceptedNameCatalogStatus": "Valid as Glossogobius celebius (Valenciennes 1837). Gobiidae: Gobiinae.",
+        "gbifAcceptedNameConfirmed": true
+      },
+      "researchLedgerDecision": {
+        "status": "admit-historical-source-locality-evidence",
+        "historicalOnly": true,
+        "publicAppAdmission": false,
+        "mapPointAdmission": false,
+        "currentPresenceInferred": false,
+        "completeChecklistClaimed": false,
+        "reason": "Exact collection-qualified source item, date, Laguna de Bay locality text and CC0 license match. Fish-name cross-check supports the accepted species name."
+      }
+    },
+    {
+      "gbifId": "3426464611",
+      "sourceRecord": {
+        "institutionCode": "CAS",
+        "collectionCode": "SU(ICH)",
+        "catalogNumber": "26282",
+        "occurrenceID": "urn:catalog:CAS:SU(ICH):26282",
+        "basisOfRecord": "PreservedSpecimen",
+        "scientificName": "Glossogobius giurus",
+        "family": "Gobiidae",
+        "taxonRank": "species",
+        "identificationQualifier": null,
+        "eventDate": "1931-05",
+        "year": "1931",
+        "month": "5",
+        "day": null,
+        "country": "Philippines",
+        "stateProvince": "Rizal",
+        "municipality": null,
+        "waterBody": "Laguna de Bay",
+        "locality": "Mayondon, Laguna de Bay, P.I.",
+        "license": "https://creativecommons.org/publicdomain/zero/1.0/"
+      },
+      "gbifCrosswalk": {
+        "datasetKey": "5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+        "occurrenceUrl": "https://www.gbif.org/occurrence/3426464611",
+        "basisOfRecord": "PRESERVED_SPECIMEN",
+        "scientificName": "Glossogobius giurus (Hamilton, 1822)",
+        "acceptedScientificName": "Glossogobius giuris (Hamilton, 1822)",
+        "eventDate": "1931-05",
+        "waterBody": "Laguna de Bay",
+        "locality": "Mayondon, Laguna de Bay, P.I.",
+        "license": "http://creativecommons.org/publicdomain/zero/1.0/legalcode",
+        "qualityFlags": [
+          "CONTINENT_DERIVED_FROM_COORDINATES",
+          "CONTINENT_INVALID",
+          "GEODETIC_DATUM_ASSUMED_WGS84",
+          "OCCURRENCE_STATUS_INFERRED_FROM_INDIVIDUAL_COUNT"
+        ],
+        "identityMatches": true,
+        "eventDateMatches": true,
+        "recordedSpeciesNameMatches": true,
+        "localityTextNamesLagunaDeBay": true,
+        "sourceAndGbifLicenseBothCc0": true
+      },
+      "taxonomicCrosscheck": {
+        "authority": "Eschmeyer’s Catalog of Fishes",
+        "taxonomyDisposition": "hold-for-taxonomic-review",
+        "recordedNameCatalogStatus": null,
+        "acceptedNameCatalogStatus": "Valid as Glossogobius giuris (Hamilton 1822). Gobiidae: Gobiinae.",
+        "gbifAcceptedNameConfirmed": true
+      },
+      "researchLedgerDecision": {
+        "status": "hold-for-taxonomic-review",
+        "historicalOnly": true,
+        "publicAppAdmission": false,
+        "mapPointAdmission": false,
+        "currentPresenceInferred": false,
+        "completeChecklistClaimed": false,
+        "reason": "Exact collection-qualified source item, date, Laguna de Bay locality text and CC0 license match, but the independent fish-name cross-check is unresolved or conflicts with the GBIF accepted name; retain source evidence and hold the species assertion."
+      }
+    },
+    {
+      "gbifId": "3426465616",
+      "sourceRecord": {
+        "institutionCode": "CAS",
+        "collectionCode": "SU(ICH)",
+        "catalogNumber": "26310",
+        "occurrenceID": "urn:catalog:CAS:SU(ICH):26310",
+        "basisOfRecord": "PreservedSpecimen",
+        "scientificName": "Hypseleotris agilis",
+        "family": "Eleotridae",
+        "taxonRank": "species",
+        "identificationQualifier": null,
+        "eventDate": "1931-05",
+        "year": "1931",
+        "month": "5",
+        "day": null,
+        "country": "Philippines",
+        "stateProvince": "Rizal",
+        "municipality": null,
+        "waterBody": "Laguna de Bay",
+        "locality": "Laguna de Bay, Los Banos,  P.I.",
+        "license": "https://creativecommons.org/publicdomain/zero/1.0/"
+      },
+      "gbifCrosswalk": {
+        "datasetKey": "5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+        "occurrenceUrl": "https://www.gbif.org/occurrence/3426465616",
+        "basisOfRecord": "PRESERVED_SPECIMEN",
+        "scientificName": "Hypseleotris agilis Herre, 1927",
+        "acceptedScientificName": "Giuris margaritacea (Valenciennes, 1837)",
+        "eventDate": "1931-05",
+        "waterBody": "Laguna de Bay",
+        "locality": "Laguna de Bay, Los Banos,  P.I.",
+        "license": "http://creativecommons.org/publicdomain/zero/1.0/legalcode",
+        "qualityFlags": [
+          "CONTINENT_DERIVED_FROM_COORDINATES",
+          "CONTINENT_INVALID",
+          "GEODETIC_DATUM_ASSUMED_WGS84",
+          "OCCURRENCE_STATUS_INFERRED_FROM_INDIVIDUAL_COUNT"
+        ],
+        "identityMatches": true,
+        "eventDateMatches": true,
+        "recordedSpeciesNameMatches": true,
+        "localityTextNamesLagunaDeBay": true,
+        "sourceAndGbifLicenseBothCc0": true
+      },
+      "taxonomicCrosscheck": {
+        "authority": "Eschmeyer’s Catalog of Fishes",
+        "taxonomyDisposition": "hold-for-taxonomic-review",
+        "recordedNameCatalogStatus": "Synonym of Giuris laglaizei (Sauvage 1880). Eleotridae.",
+        "acceptedNameCatalogStatus": null,
+        "gbifAcceptedNameConfirmed": false
+      },
+      "researchLedgerDecision": {
+        "status": "hold-for-taxonomic-review",
+        "historicalOnly": true,
+        "publicAppAdmission": false,
+        "mapPointAdmission": false,
+        "currentPresenceInferred": false,
+        "completeChecklistClaimed": false,
+        "reason": "Exact collection-qualified source item, date, Laguna de Bay locality text and CC0 license match, but the independent fish-name cross-check is unresolved or conflicts with the GBIF accepted name; retain source evidence and hold the species assertion."
+      }
+    },
+    {
+      "gbifId": "3426422618",
+      "sourceRecord": {
+        "institutionCode": "CAS",
+        "collectionCode": "SU(ICH)",
+        "catalogNumber": "26316",
+        "occurrenceID": "urn:catalog:CAS:SU(ICH):26316",
+        "basisOfRecord": "PreservedSpecimen",
+        "scientificName": "Mirogobius lacustris",
+        "family": "Gobiidae",
+        "taxonRank": "species",
+        "identificationQualifier": null,
+        "eventDate": "1931-05",
+        "year": "1931",
+        "month": "5",
+        "day": null,
+        "country": "Philippines",
+        "stateProvince": "Rizal",
+        "municipality": null,
+        "waterBody": "Laguna de Bay",
+        "locality": "Laguna de Bay, Philippines.",
+        "license": "https://creativecommons.org/publicdomain/zero/1.0/"
+      },
+      "gbifCrosswalk": {
+        "datasetKey": "5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+        "occurrenceUrl": "https://www.gbif.org/occurrence/3426422618",
+        "basisOfRecord": "PRESERVED_SPECIMEN",
+        "scientificName": "Mirogobius lacustris Herre, 1927",
+        "acceptedScientificName": "Gobiopterus lacustris (Herre, 1927)",
+        "eventDate": "1931-05",
+        "waterBody": "Laguna de Bay",
+        "locality": "Laguna de Bay, Philippines.",
+        "license": "http://creativecommons.org/publicdomain/zero/1.0/legalcode",
+        "qualityFlags": [
+          "CONTINENT_DERIVED_FROM_COORDINATES",
+          "CONTINENT_INVALID",
+          "GEODETIC_DATUM_ASSUMED_WGS84",
+          "OCCURRENCE_STATUS_INFERRED_FROM_INDIVIDUAL_COUNT"
+        ],
+        "identityMatches": true,
+        "eventDateMatches": true,
+        "recordedSpeciesNameMatches": true,
+        "localityTextNamesLagunaDeBay": true,
+        "sourceAndGbifLicenseBothCc0": true
+      },
+      "taxonomicCrosscheck": {
+        "authority": "Eschmeyer’s Catalog of Fishes",
+        "taxonomyDisposition": "independent-name-crosscheck-agrees",
+        "recordedNameCatalogStatus": "Valid as Gobiopterus lacustris (Herre 1927). Oxudercidae: Gobionellinae.",
+        "acceptedNameCatalogStatus": "Valid as Gobiopterus lacustris (Herre 1927). Oxudercidae: Gobionellinae.",
+        "gbifAcceptedNameConfirmed": true
+      },
+      "researchLedgerDecision": {
+        "status": "admit-historical-source-locality-evidence",
+        "historicalOnly": true,
+        "publicAppAdmission": false,
+        "mapPointAdmission": false,
+        "currentPresenceInferred": false,
+        "completeChecklistClaimed": false,
+        "reason": "Exact collection-qualified source item, date, Laguna de Bay locality text and CC0 license match. Fish-name cross-check supports the accepted species name."
+      }
+    },
+    {
+      "gbifId": "3426423630",
+      "sourceRecord": {
+        "institutionCode": "CAS",
+        "collectionCode": "SU(ICH)",
+        "catalogNumber": "26319",
+        "occurrenceID": "urn:catalog:CAS:SU(ICH):26319",
+        "basisOfRecord": "PreservedSpecimen",
+        "scientificName": "Ophiocara aporos",
+        "family": "Butidae",
+        "taxonRank": "species",
+        "identificationQualifier": null,
+        "eventDate": "1931-05",
+        "year": "1931",
+        "month": "5",
+        "day": null,
+        "country": "Philippines",
+        "stateProvince": "Rizal",
+        "municipality": null,
+        "waterBody": "Laguna de Bay",
+        "locality": "Laguna de Bay, Philippines.",
+        "license": "https://creativecommons.org/publicdomain/zero/1.0/"
+      },
+      "gbifCrosswalk": {
+        "datasetKey": "5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+        "occurrenceUrl": "https://www.gbif.org/occurrence/3426423630",
+        "basisOfRecord": "PRESERVED_SPECIMEN",
+        "scientificName": "Ophiocara aporos (Bleeker, 1854)",
+        "acceptedScientificName": "Giuris margaritacea (Valenciennes, 1837)",
+        "eventDate": "1931-05",
+        "waterBody": "Laguna de Bay",
+        "locality": "Laguna de Bay, Philippines.",
+        "license": "http://creativecommons.org/publicdomain/zero/1.0/legalcode",
+        "qualityFlags": [
+          "CONTINENT_DERIVED_FROM_COORDINATES",
+          "CONTINENT_INVALID",
+          "GEODETIC_DATUM_ASSUMED_WGS84",
+          "OCCURRENCE_STATUS_INFERRED_FROM_INDIVIDUAL_COUNT"
+        ],
+        "identityMatches": true,
+        "eventDateMatches": true,
+        "recordedSpeciesNameMatches": true,
+        "localityTextNamesLagunaDeBay": true,
+        "sourceAndGbifLicenseBothCc0": true
+      },
+      "taxonomicCrosscheck": {
+        "authority": "Eschmeyer’s Catalog of Fishes",
+        "taxonomyDisposition": "hold-for-taxonomic-review",
+        "recordedNameCatalogStatus": null,
+        "acceptedNameCatalogStatus": null,
+        "gbifAcceptedNameConfirmed": false
+      },
+      "researchLedgerDecision": {
+        "status": "hold-for-taxonomic-review",
+        "historicalOnly": true,
+        "publicAppAdmission": false,
+        "mapPointAdmission": false,
+        "currentPresenceInferred": false,
+        "completeChecklistClaimed": false,
+        "reason": "Exact collection-qualified source item, date, Laguna de Bay locality text and CC0 license match, but the independent fish-name cross-check is unresolved or conflicts with the GBIF accepted name; retain source evidence and hold the species assertion."
+      }
+    },
+    {
+      "gbifId": "3426462603",
+      "sourceRecord": {
+        "institutionCode": "CAS",
+        "collectionCode": "SU(ICH)",
+        "catalogNumber": "26328",
+        "occurrenceID": "urn:catalog:CAS:SU(ICH):26328",
+        "basisOfRecord": "PreservedSpecimen",
+        "scientificName": "Ophiocara porocephala",
+        "family": "Butidae",
+        "taxonRank": "species",
+        "identificationQualifier": null,
+        "eventDate": "1931-05",
+        "year": "1931",
+        "month": "5",
+        "day": null,
+        "country": "Philippines",
+        "stateProvince": "Rizal",
+        "municipality": null,
+        "waterBody": "Laguna de Bay",
+        "locality": "Laguna de Bay, Philippines.",
+        "license": "https://creativecommons.org/publicdomain/zero/1.0/"
+      },
+      "gbifCrosswalk": {
+        "datasetKey": "5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+        "occurrenceUrl": "https://www.gbif.org/occurrence/3426462603",
+        "basisOfRecord": "PRESERVED_SPECIMEN",
+        "scientificName": "Ophiocara porocephala (Valenciennes, 1837)",
+        "acceptedScientificName": "Ophiocara porocephala (Valenciennes, 1837)",
+        "eventDate": "1931-05",
+        "waterBody": "Laguna de Bay",
+        "locality": "Laguna de Bay, Philippines.",
+        "license": "http://creativecommons.org/publicdomain/zero/1.0/legalcode",
+        "qualityFlags": [
+          "CONTINENT_DERIVED_FROM_COORDINATES",
+          "CONTINENT_INVALID",
+          "GEODETIC_DATUM_ASSUMED_WGS84",
+          "OCCURRENCE_STATUS_INFERRED_FROM_INDIVIDUAL_COUNT"
+        ],
+        "identityMatches": true,
+        "eventDateMatches": true,
+        "recordedSpeciesNameMatches": true,
+        "localityTextNamesLagunaDeBay": true,
+        "sourceAndGbifLicenseBothCc0": true
+      },
+      "taxonomicCrosscheck": {
+        "authority": "Eschmeyer’s Catalog of Fishes",
+        "taxonomyDisposition": "hold-for-taxonomic-review",
+        "recordedNameCatalogStatus": null,
+        "acceptedNameCatalogStatus": null,
+        "gbifAcceptedNameConfirmed": false
+      },
+      "researchLedgerDecision": {
+        "status": "hold-for-taxonomic-review",
+        "historicalOnly": true,
+        "publicAppAdmission": false,
+        "mapPointAdmission": false,
+        "currentPresenceInferred": false,
+        "completeChecklistClaimed": false,
+        "reason": "Exact collection-qualified source item, date, Laguna de Bay locality text and CC0 license match, but the independent fish-name cross-check is unresolved or conflicts with the GBIF accepted name; retain source evidence and hold the species assertion."
+      }
+    },
+    {
+      "gbifId": "3426462605",
+      "sourceRecord": {
+        "institutionCode": "CAS",
+        "collectionCode": "SU(ICH)",
+        "catalogNumber": "26364",
+        "occurrenceID": "urn:catalog:CAS:SU(ICH):26364",
+        "basisOfRecord": "PreservedSpecimen",
+        "scientificName": "Taenioides caeculus",
+        "family": "Gobiidae",
+        "taxonRank": "species",
+        "identificationQualifier": null,
+        "eventDate": "1931-05-14",
+        "year": "1931",
+        "month": "5",
+        "day": "14",
+        "country": "Philippines",
+        "stateProvince": null,
+        "municipality": null,
+        "waterBody": "Laguna de Bay",
+        "locality": "Mayondon, Laguna de Bay.",
+        "license": "https://creativecommons.org/publicdomain/zero/1.0/"
+      },
+      "gbifCrosswalk": {
+        "datasetKey": "5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+        "occurrenceUrl": "https://www.gbif.org/occurrence/3426462605",
+        "basisOfRecord": "PRESERVED_SPECIMEN",
+        "scientificName": "Taenioides caeculus (Valenciennes, 1837)",
+        "acceptedScientificName": "Taenioides caeculus (Valenciennes, 1837)",
+        "eventDate": "1931-05-14",
+        "waterBody": "Laguna de Bay",
+        "locality": "Mayondon, Laguna de Bay.",
+        "license": "http://creativecommons.org/publicdomain/zero/1.0/legalcode",
+        "qualityFlags": [
+          "CONTINENT_DERIVED_FROM_COORDINATES",
+          "CONTINENT_INVALID",
+          "GEODETIC_DATUM_ASSUMED_WGS84",
+          "OCCURRENCE_STATUS_INFERRED_FROM_INDIVIDUAL_COUNT"
+        ],
+        "identityMatches": true,
+        "eventDateMatches": true,
+        "recordedSpeciesNameMatches": true,
+        "localityTextNamesLagunaDeBay": true,
+        "sourceAndGbifLicenseBothCc0": true
+      },
+      "taxonomicCrosscheck": {
+        "authority": "Eschmeyer’s Catalog of Fishes",
+        "taxonomyDisposition": "hold-for-taxonomic-review",
+        "recordedNameCatalogStatus": null,
+        "acceptedNameCatalogStatus": null,
+        "gbifAcceptedNameConfirmed": false
+      },
+      "researchLedgerDecision": {
+        "status": "hold-for-taxonomic-review",
+        "historicalOnly": true,
+        "publicAppAdmission": false,
+        "mapPointAdmission": false,
+        "currentPresenceInferred": false,
+        "completeChecklistClaimed": false,
+        "reason": "Exact collection-qualified source item, date, Laguna de Bay locality text and CC0 license match, but the independent fish-name cross-check is unresolved or conflicts with the GBIF accepted name; retain source evidence and hold the species assertion."
+      }
+    },
+    {
+      "gbifId": "3426458644",
+      "sourceRecord": {
+        "institutionCode": "CAS",
+        "collectionCode": "SU(ICH)",
+        "catalogNumber": "26856",
+        "occurrenceID": "urn:catalog:CAS:SU(ICH):26856",
+        "basisOfRecord": "PreservedSpecimen",
+        "scientificName": "Anguilla mauritiana",
+        "family": "Anguillidae",
+        "taxonRank": "species",
+        "identificationQualifier": null,
+        "eventDate": "1931-05",
+        "year": "1931",
+        "month": "5",
+        "day": null,
+        "country": "Philippines",
+        "stateProvince": "Rizal",
+        "municipality": null,
+        "waterBody": "Laguna de Bay",
+        "locality": "Laguna de Bay, Philippines.",
+        "license": "https://creativecommons.org/publicdomain/zero/1.0/"
+      },
+      "gbifCrosswalk": {
+        "datasetKey": "5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+        "occurrenceUrl": "https://www.gbif.org/occurrence/3426458644",
+        "basisOfRecord": "PRESERVED_SPECIMEN",
+        "scientificName": "Anguilla mauritiana Bennett, 1831",
+        "acceptedScientificName": "Anguilla marmorata Quoy & Gaimard, 1824",
+        "eventDate": "1931-05",
+        "waterBody": "Laguna de Bay",
+        "locality": "Laguna de Bay, Philippines.",
+        "license": "http://creativecommons.org/publicdomain/zero/1.0/legalcode",
+        "qualityFlags": [
+          "CONTINENT_DERIVED_FROM_COORDINATES",
+          "CONTINENT_INVALID",
+          "GEODETIC_DATUM_ASSUMED_WGS84",
+          "OCCURRENCE_STATUS_INFERRED_FROM_INDIVIDUAL_COUNT"
+        ],
+        "identityMatches": true,
+        "eventDateMatches": true,
+        "recordedSpeciesNameMatches": true,
+        "localityTextNamesLagunaDeBay": true,
+        "sourceAndGbifLicenseBothCc0": true
+      },
+      "taxonomicCrosscheck": {
+        "authority": "Eschmeyer’s Catalog of Fishes",
+        "taxonomyDisposition": "independent-name-crosscheck-agrees",
+        "recordedNameCatalogStatus": "Synonym of Anguilla marmorata Quoy & Gaimard 1824. Anguillidae.",
+        "acceptedNameCatalogStatus": "Valid as Anguilla marmorata Quoy & Gaimard 1824. Anguillidae.",
+        "gbifAcceptedNameConfirmed": true
+      },
+      "researchLedgerDecision": {
+        "status": "admit-historical-source-locality-evidence",
+        "historicalOnly": true,
+        "publicAppAdmission": false,
+        "mapPointAdmission": false,
+        "currentPresenceInferred": false,
+        "completeChecklistClaimed": false,
+        "reason": "Exact collection-qualified source item, date, Laguna de Bay locality text and CC0 license match. Fish-name cross-check supports the accepted species name."
+      }
+    },
+    {
+      "gbifId": "3426458682",
+      "sourceRecord": {
+        "institutionCode": "CAS",
+        "collectionCode": "SU(ICH)",
+        "catalogNumber": "27666",
+        "occurrenceID": "urn:catalog:CAS:SU(ICH):27666",
+        "basisOfRecord": "PreservedSpecimen",
+        "scientificName": "Arius dispar",
+        "family": "Ariidae",
+        "taxonRank": "species",
+        "identificationQualifier": null,
+        "eventDate": "1931-05-14",
+        "year": "1931",
+        "month": "5",
+        "day": "14",
+        "country": "Philippines",
+        "stateProvince": null,
+        "municipality": null,
+        "waterBody": "Laguna de Bay",
+        "locality": "Laguna de Bay",
+        "license": "https://creativecommons.org/publicdomain/zero/1.0/"
+      },
+      "gbifCrosswalk": {
+        "datasetKey": "5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+        "occurrenceUrl": "https://www.gbif.org/occurrence/3426458682",
+        "basisOfRecord": "PRESERVED_SPECIMEN",
+        "scientificName": "Arius dispar Herre, 1926",
+        "acceptedScientificName": "Arius dispar Herre, 1926",
+        "eventDate": "1931-05-14",
+        "waterBody": "Laguna de Bay",
+        "locality": "Laguna de Bay",
+        "license": "http://creativecommons.org/publicdomain/zero/1.0/legalcode",
+        "qualityFlags": [
+          "CONTINENT_DERIVED_FROM_COUNTRY",
+          "CONTINENT_INVALID",
+          "OCCURRENCE_STATUS_INFERRED_FROM_INDIVIDUAL_COUNT"
+        ],
+        "identityMatches": true,
+        "eventDateMatches": true,
+        "recordedSpeciesNameMatches": true,
+        "localityTextNamesLagunaDeBay": true,
+        "sourceAndGbifLicenseBothCc0": true
+      },
+      "taxonomicCrosscheck": {
+        "authority": "Eschmeyer’s Catalog of Fishes",
+        "taxonomyDisposition": "independent-name-crosscheck-agrees",
+        "recordedNameCatalogStatus": "Valid as Arius dispar Herre 1926. Ariidae: Ariinae.",
+        "acceptedNameCatalogStatus": "Valid as Arius dispar Herre 1926. Ariidae: Ariinae.",
+        "gbifAcceptedNameConfirmed": true
+      },
+      "researchLedgerDecision": {
+        "status": "admit-historical-source-locality-evidence",
+        "historicalOnly": true,
+        "publicAppAdmission": false,
+        "mapPointAdmission": false,
+        "currentPresenceInferred": false,
+        "completeChecklistClaimed": false,
+        "reason": "Exact collection-qualified source item, date, Laguna de Bay locality text and CC0 license match. Fish-name cross-check supports the accepted species name."
+      }
+    },
+    {
+      "gbifId": "3426422686",
+      "sourceRecord": {
+        "institutionCode": "CAS",
+        "collectionCode": "SU(ICH)",
+        "catalogNumber": "27676",
+        "occurrenceID": "urn:catalog:CAS:SU(ICH):27676",
+        "basisOfRecord": "PreservedSpecimen",
+        "scientificName": "Clarias batrachus",
+        "family": "Clariidae",
+        "taxonRank": "species",
+        "identificationQualifier": null,
+        "eventDate": "1931-05-10",
+        "year": "1931",
+        "month": "5",
+        "day": "10",
+        "country": "Philippines",
+        "stateProvince": null,
+        "municipality": null,
+        "waterBody": "Laguna de Bay",
+        "locality": "Laguna de Bay, Laguna/ Rizal Provinces.",
+        "license": "https://creativecommons.org/publicdomain/zero/1.0/"
+      },
+      "gbifCrosswalk": {
+        "datasetKey": "5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+        "occurrenceUrl": "https://www.gbif.org/occurrence/3426422686",
+        "basisOfRecord": "PRESERVED_SPECIMEN",
+        "scientificName": "Clarias batrachus (Linnaeus, 1758)",
+        "acceptedScientificName": "Clarias batrachus (Linnaeus, 1758)",
+        "eventDate": "1931-05-10",
+        "waterBody": "Laguna de Bay",
+        "locality": "Laguna de Bay, Laguna/ Rizal Provinces.",
+        "license": "http://creativecommons.org/publicdomain/zero/1.0/legalcode",
+        "qualityFlags": [
+          "CONTINENT_DERIVED_FROM_COORDINATES",
+          "CONTINENT_INVALID",
+          "GEODETIC_DATUM_ASSUMED_WGS84",
+          "OCCURRENCE_STATUS_INFERRED_FROM_INDIVIDUAL_COUNT"
+        ],
+        "identityMatches": true,
+        "eventDateMatches": true,
+        "recordedSpeciesNameMatches": true,
+        "localityTextNamesLagunaDeBay": true,
+        "sourceAndGbifLicenseBothCc0": true
+      },
+      "taxonomicCrosscheck": {
+        "authority": "Eschmeyer’s Catalog of Fishes",
+        "taxonomyDisposition": "independent-name-crosscheck-agrees",
+        "recordedNameCatalogStatus": "Valid as Clarias batrachus (Linnaeus 1758). Clariidae.",
+        "acceptedNameCatalogStatus": "Valid as Clarias batrachus (Linnaeus 1758). Clariidae.",
+        "gbifAcceptedNameConfirmed": true
+      },
+      "researchLedgerDecision": {
+        "status": "admit-historical-source-locality-evidence",
+        "historicalOnly": true,
+        "publicAppAdmission": false,
+        "mapPointAdmission": false,
+        "currentPresenceInferred": false,
+        "completeChecklistClaimed": false,
+        "reason": "Exact collection-qualified source item, date, Laguna de Bay locality text and CC0 license match. Fish-name cross-check supports the accepted species name."
+      }
+    },
+    {
+      "gbifId": "3426426722",
+      "sourceRecord": {
+        "institutionCode": "CAS",
+        "collectionCode": "SU(ICH)",
+        "catalogNumber": "28256",
+        "occurrenceID": "urn:catalog:CAS:SU(ICH):28256",
+        "basisOfRecord": "PreservedSpecimen",
+        "scientificName": "Mugil dussumieri",
+        "family": "Mugilidae",
+        "taxonRank": "species",
+        "identificationQualifier": null,
+        "eventDate": "1931-05-14",
+        "year": "1931",
+        "month": "5",
+        "day": "14",
+        "country": "Philippines",
+        "stateProvince": null,
+        "municipality": null,
+        "waterBody": "Laguna de Bay",
+        "locality": "Laguna de Bay",
+        "license": "https://creativecommons.org/publicdomain/zero/1.0/"
+      },
+      "gbifCrosswalk": {
+        "datasetKey": "5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+        "occurrenceUrl": "https://www.gbif.org/occurrence/3426426722",
+        "basisOfRecord": "PRESERVED_SPECIMEN",
+        "scientificName": "Mugil dussumieri Valenciennes, 1836",
+        "acceptedScientificName": "Planiliza subviridis (Valenciennes, 1836)",
+        "eventDate": "1931-05-14",
+        "waterBody": "Laguna de Bay",
+        "locality": "Laguna de Bay",
+        "license": "http://creativecommons.org/publicdomain/zero/1.0/legalcode",
+        "qualityFlags": [
+          "CONTINENT_DERIVED_FROM_COUNTRY",
+          "CONTINENT_INVALID",
+          "OCCURRENCE_STATUS_INFERRED_FROM_INDIVIDUAL_COUNT"
+        ],
+        "identityMatches": true,
+        "eventDateMatches": true,
+        "recordedSpeciesNameMatches": true,
+        "localityTextNamesLagunaDeBay": true,
+        "sourceAndGbifLicenseBothCc0": true
+      },
+      "taxonomicCrosscheck": {
+        "authority": "Eschmeyer’s Catalog of Fishes",
+        "taxonomyDisposition": "independent-name-crosscheck-agrees",
+        "recordedNameCatalogStatus": "Synonym of Planiliza subviridis (Valenciennes 1836). Mugilidae.",
+        "acceptedNameCatalogStatus": "Valid as Planiliza subviridis (Valenciennes 1836). Mugilidae.",
+        "gbifAcceptedNameConfirmed": true
+      },
+      "researchLedgerDecision": {
+        "status": "admit-historical-source-locality-evidence",
+        "historicalOnly": true,
+        "publicAppAdmission": false,
+        "mapPointAdmission": false,
+        "currentPresenceInferred": false,
+        "completeChecklistClaimed": false,
+        "reason": "Exact collection-qualified source item, date, Laguna de Bay locality text and CC0 license match. Fish-name cross-check supports the accepted species name."
+      }
+    },
+    {
+      "gbifId": "3426457753",
+      "sourceRecord": {
+        "institutionCode": "CAS",
+        "collectionCode": "SU(ICH)",
+        "catalogNumber": "29012",
+        "occurrenceID": "urn:catalog:CAS:SU(ICH):29012",
+        "basisOfRecord": "PreservedSpecimen",
+        "scientificName": "Atherinomorus endrachtensis",
+        "family": "Atherinidae",
+        "taxonRank": "species",
+        "identificationQualifier": null,
+        "eventDate": "1931-05-12",
+        "year": "1931",
+        "month": "5",
+        "day": "12",
+        "country": "Philippines",
+        "stateProvince": null,
+        "municipality": null,
+        "waterBody": null,
+        "locality": "Laguna de Bay",
+        "license": "https://creativecommons.org/publicdomain/zero/1.0/"
+      },
+      "gbifCrosswalk": {
+        "datasetKey": "5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+        "occurrenceUrl": "https://www.gbif.org/occurrence/3426457753",
+        "basisOfRecord": "PRESERVED_SPECIMEN",
+        "scientificName": "Atherinomorus endrachtensis (Quoy & Gaimard, 1825)",
+        "acceptedScientificName": "Atherinomorus endrachtensis (Quoy & Gaimard, 1825)",
+        "eventDate": "1931-05-12",
+        "waterBody": null,
+        "locality": "Laguna de Bay",
+        "license": "http://creativecommons.org/publicdomain/zero/1.0/legalcode",
+        "qualityFlags": [
+          "CONTINENT_DERIVED_FROM_COORDINATES",
+          "CONTINENT_INVALID",
+          "GEODETIC_DATUM_ASSUMED_WGS84",
+          "OCCURRENCE_STATUS_INFERRED_FROM_BASIS_OF_RECORD"
+        ],
+        "identityMatches": true,
+        "eventDateMatches": true,
+        "recordedSpeciesNameMatches": true,
+        "localityTextNamesLagunaDeBay": true,
+        "sourceAndGbifLicenseBothCc0": true
+      },
+      "taxonomicCrosscheck": {
+        "authority": "Eschmeyer’s Catalog of Fishes",
+        "taxonomyDisposition": "independent-name-crosscheck-agrees",
+        "recordedNameCatalogStatus": "Valid as Atherinomorus endrachtensis (Quoy & Gaimard 1825). Atherinomoridae.",
+        "acceptedNameCatalogStatus": "Valid as Atherinomorus endrachtensis (Quoy & Gaimard 1825). Atherinomoridae.",
+        "gbifAcceptedNameConfirmed": true
+      },
+      "researchLedgerDecision": {
+        "status": "admit-historical-source-locality-evidence",
+        "historicalOnly": true,
+        "publicAppAdmission": false,
+        "mapPointAdmission": false,
+        "currentPresenceInferred": false,
+        "completeChecklistClaimed": false,
+        "reason": "Exact collection-qualified source item, date, Laguna de Bay locality text and CC0 license match. Fish-name cross-check supports the accepted species name."
+      }
+    }
+  ],
+  "summary": {
+    "candidateCasRecords": 17,
+    "exactSourceIdentityMatches": 17,
+    "occurrenceIdMatches": 17,
+    "eventDatesMatchGbif": 17,
+    "recordedSpeciesNamesMatch": 17,
+    "sourceLocalityOrWaterBodyMentionsLagunaDeBay": 17,
+    "philippinesSourceRows": 17,
+    "cc0SourceRows": 17,
+    "taxonomySupportedHistoricalAssertions": 12,
+    "taxonomyHeldSourceRecords": 5,
+    "uniqueAcceptedTaxaInAdmittedRows": 11,
+    "publicAppRowsAdded": 0,
+    "mapPointsAdded": 0,
+    "coordinatesTracked": false
+  },
+  "decision": {
+    "historicalAssertionsAdmittedToResearchLedger": 12,
+    "recordsHeldForTaxonomicReview": 5,
+    "publicAppAdmission": false,
+    "mapPointAdmission": false,
+    "coordinatesIncluded": false,
+    "currentPresenceInferred": false,
+    "completeSpeciesInventoryClaimed": false,
+    "interpretation": "The official CAS archive directly matches 17 collection-qualified Laguna de Bay specimen items. Twelve have species-name cross-check support and are admitted only to the internal historical research ledger; five remain held for taxonomic review. These dated records do not show current presence, abundance, catchability or a complete lake checklist."
+  }
+}

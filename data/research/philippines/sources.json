@@ -3,7 +3,7 @@
   "checkedOn": "2026-10-25",
   "status": "research-only-source-registry",
   "scope": "National acquisition references and CALABARZON/Central Luzon identity/source leads. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 149,
+  "sourceCount": 150,
   "sources": [
     {
       "id": "gbif-col-xr-taxonomy-matching",
@@ -3791,10 +3791,10 @@
         "https://researcharchive.calacademy.org/research/ichthyology/collection/help.asp",
         "https://researcharchive.calacademy.org/research/ichthyology/collection/index.asp?CatalogNumber=13543&CollectionCode=SU&PageStyle=Single&RecStyle=Full"
       ],
-      "role": "Access-status check for the 17 CAS source catalog items in the Laguna de Bay candidate batch; no item-level occurrence or absence decision.",
+      "role": "Public Monarch and legacy catalog access-status check for the 17 CAS Laguna de Bay candidates; the separate official IPT archive provides the direct source-record crosswalk.",
       "checkedOn": "2026-10-25",
       "access": {
-        "status": "public-Monarch-portal-offline-notice;legacy-page-returns-generic-shell-without-item-data",
+        "status": "public-Monarch-portal-offline-notice;legacy-page-generic-shell;alternative-official-IPT-archive-directly-matched-17-items",
         "reviewFiles": [
           "calabarzon-laguna-museum-catalog-verification-20261025.json"
         ]
@@ -3802,10 +3802,10 @@
       "reuse": {
         "metadata": "CAS catalog help documents search by collection and catalog number; source records could not be retrieved during this check.",
         "raw": "No item-level CAS source response was retained because the public portal did not return one.",
-        "content": "No additional records are approved. The outage is an access limitation and is not evidence that the cited specimens do not exist."
+        "content": "The Monarch access outage remains documented, but the separate official CAS IPT archive directly matched all 17 collection-qualified candidate records. This outage does not imply source-record absence or prevent the archived source crosswalk."
       },
       "publicationApproval": false,
-      "researchStatus": "17-source-items-not-independently-verified-while-public-catalog-is-offline;zero-public-assertions",
+      "researchStatus": "Monarch-portal-offline;official-CAS-IPT-archive-used-as-alternative-source-route;not-absence-evidence",
       "license": null
     },
     {
@@ -4221,6 +4221,51 @@
       "caveats": [
         "Its locality says off northeastern Mindoro, differing from the direct NMNH locality field.",
         "The station number is not stated; do not silently resolve the NMNH D 5115 OR D 5116 field."
+      ]
+    },
+    {
+      "id": "calabarzon-laguna-cas-primary-archive-check",
+      "title": "CAS Ichthyology Laguna de Bay source-record archive crosswalk",
+      "provider": "California Academy of Sciences, Department of Ichthyology",
+      "url": "http://ipt.calacademy.org:8080/archive.do?r=ich",
+      "additionalUrls": [
+        "http://ipt.calacademy.org:8080/resource?r=ich&v=150.545",
+        "https://www.gbif.org/dataset/5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+        "https://doi.org/10.15468/efh2ib"
+      ],
+      "role": "Direct source identity, date, locality and license crosswalk for 17 Laguna de Bay CAS Ichthyology candidates; source-locality evidence only.",
+      "checkedOn": "2026-10-25",
+      "access": {
+        "status": "official-CAS-IPT-release-150.545-downloaded;17-exact-collection-qualified-records-matched",
+        "reviewFiles": [
+          "calabarzon-laguna-cas-archive-crosswalk-20261025.json",
+          "calabarzon-laguna-museum-catalog-verification-20261025.json"
+        ],
+        "additionalRawPaths": [
+          "raw/calabarzon-balayan-cas-primary-archive-20261025/"
+        ],
+        "archiveBytes": 21381034,
+        "archiveSha256": "3c0c9c0a686590fb6a2c61bf35ed9a7aa68eeb5cad14e13829710198c631ed12",
+        "emlSha256": "ba14c884a77d34e9802d06bfa2f8de173b7dfb5c5513f1e936a3ab885855388a",
+        "publishedDate": "2026-10-19",
+        "datasetVersion": "150.545",
+        "exactCandidateMatches": 17,
+        "otherCollectionNumericCollisions": 17,
+        "fieldAllowlistOnly": true,
+        "coordinatesRetained": false
+      },
+      "reuse": {
+        "metadata": "The CAS IPT EML states CC0 1.0 and permits reuse; each selected Darwin Core row carries the CC0 public-domain dedication URL.",
+        "raw": "The downloaded archive contains coordinates and remains only in ignored local research storage. The tracked review keeps an allowlist of non-coordinate fields and archive/metadata hashes.",
+        "content": "All 17 collection-qualified source items directly match the GBIF occurrence IDs, source dates, Philippines country and Laguna de Bay locality text. Twelve pass the independent taxonomic name cross-check and enter the historical research ledger; five remain held for taxonomy. No public app row or map point is added."
+      },
+      "publicationApproval": false,
+      "researchStatus": "17-exact-source-record-matches;12-historical-research-ledger-entries;5-taxonomic-holds;zero-public-rows",
+      "license": "CC0 1.0",
+      "caveats": [
+        "The exact join uses institutionCode, collectionCode, catalogNumber and occurrenceID. Seventeen same-number CAS rows belong to other collections and describe unrelated localities.",
+        "The source archive preserves institution-reported identifications; the independent fish-name review holds five accepted-name links.",
+        "Historical collection records do not establish current presence, abundance, catchability, safety or a complete lake checklist."
       ]
     }
   ],

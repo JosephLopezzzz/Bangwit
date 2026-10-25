@@ -15,12 +15,17 @@ const taxonomyUrl = new URL(
   "../data/research/philippines/calabarzon-laguna-cof-taxonomy-20261025.json",
   import.meta.url,
 );
+const casArchiveUrl = new URL(
+  "../data/research/philippines/calabarzon-laguna-cas-archive-crosswalk-20261025.json",
+  import.meta.url,
+);
 const sourcesUrl = new URL("../data/research/philippines/sources.json", import.meta.url);
 
-const [review, detailsBytes, taxonomyBytes, sourceRegistry] = await Promise.all([
+const [review, detailsBytes, taxonomyBytes, casArchive, sourceRegistry] = await Promise.all([
   readFile(reviewUrl, "utf8").then(JSON.parse),
   readFile(detailsUrl),
   readFile(taxonomyUrl),
+  readFile(casArchiveUrl, "utf8").then(JSON.parse),
   readFile(sourcesUrl, "utf8").then(JSON.parse),
 ]);
 
@@ -52,28 +57,52 @@ test("MZUSP catalog record is matched while duplicate index rows and field confl
   assert.equal(record.decision, "hold-no-historical-assertion");
 });
 
-test("CAS portal outage is recorded as an access gap, not as specimen absence", () => {
+test("CAS archive directly verifies collection-qualified source records and keeps taxonomy holds", () => {
   const casRecords = review.records.filter((row) => row.institutionCode === "CAS");
   assert.equal(casRecords.length, 17);
   assert.ok(
-    casRecords.every((row) => row.sourceCatalogStatus === "not-independently-verified-cas-collection-search-offline"),
+    casRecords.every((row) => row.sourceCatalogStatus === "verified-in-official-CAS-IPT-archive-150.545"),
   );
-  assert.ok(casRecords.every((row) => row.decision === "hold-no-historical-assertion"));
-  assert.match(review.method.casPortal.result, /not evidence that those items do not exist/i);
+  assert.equal(review.method.casArchive.exactCandidateMatches, 17);
+  assert.equal(review.method.casArchive.historicalLedgerAdmissions, 12);
+  assert.equal(review.method.casArchive.taxonomicHolds, 5);
+  assert.match(review.method.casPortal.result, /offline notice/i);
+  assert.match(review.method.casPortal.result, /not a specimen-absence finding/i);
+
+  const admitted = casRecords.filter((row) => row.decision === "admit-historical-source-locality-evidence");
+  const held = casRecords.filter((row) => row.decision === "hold-for-taxonomic-review");
+  assert.equal(admitted.length, 12);
+  assert.equal(held.length, 5);
+  assert.ok(held.every((row) => row.holdReasons.length === 1));
+  assert.equal(casArchive.summary.exactSourceIdentityMatches, 17);
+  assert.equal(casArchive.summary.sourceLocalityOrWaterBodyMentionsLagunaDeBay, 17);
+  assert.equal(casArchive.summary.cc0SourceRows, 17);
+  assert.equal(casArchive.summary.taxonomySupportedHistoricalAssertions, 12);
+  assert.equal(casArchive.summary.taxonomyHeldSourceRecords, 5);
+  assert.equal(casArchive.archive.otherCollectionNumericCollisions, 17);
+  assert.equal(casArchive.decision.publicAppAdmission, false);
+  assert.equal(casArchive.decision.mapPointAdmission, false);
+  assert.equal(casArchive.decision.currentPresenceInferred, false);
+  assert.equal(casArchive.decision.completeSpeciesInventoryClaimed, false);
 });
 
 test("museum record verification retains no coordinates and admits no public occurrence rows", () => {
-  assert.equal(review.summary.historicalAssertionsAdmitted, 0);
+  assert.equal(review.summary.historicalAssertionsAdmitted, 12);
   assert.equal(review.summary.publicRecordsAdded, 0);
   assert.equal(review.decision.publicAdmission, false);
   assert.equal(review.decision.coordinatesIncluded, false);
   assert.equal(review.decision.currentPresenceInferred, false);
   assert.equal(review.decision.completeSpeciesInventoryClaimed, false);
   assert.equal(/decimalLatitude|decimalLongitude|coordinateUncertaintyInMeters/i.test(JSON.stringify(review)), false);
-  assert.ok(review.records.every((row) => row.decision === "hold-no-historical-assertion"));
+  const casRecords = review.records.filter((row) => row.institutionCode === "CAS");
+  const mzusp = review.records.find((row) => row.sourceInstitutionCode === "MZUSP");
+  assert.equal(casRecords.filter((row) => row.decision === "admit-historical-source-locality-evidence").length, 12);
+  assert.equal(casRecords.filter((row) => row.decision === "hold-for-taxonomic-review").length, 5);
+  assert.equal(mzusp.decision, "hold-no-historical-assertion");
 
   const sourceIds = sourceRegistry.sources.map((source) => source.id);
   assert.ok(sourceIds.includes("calabarzon-laguna-mzusp-sibbr-catalog"));
   assert.ok(sourceIds.includes("calabarzon-laguna-cas-monarch-access-check"));
+  assert.ok(sourceIds.includes("calabarzon-laguna-cas-primary-archive-check"));
   assert.equal(sourceRegistry.sourceCount, sourceRegistry.sources.length);
 });
