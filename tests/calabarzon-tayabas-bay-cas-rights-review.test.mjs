@@ -39,7 +39,10 @@ test("Tayabas Bay waterBody search identifies six CAS candidates but not publish
 });
 
 test("Tayabas Bay source lead stays research-only and does not change the scope assignment", () => {
-  assert.ok(registry.sources.some((source) => source.id === review.sourceRegistryId));
+  const source = registry.sources.find((entry) => entry.id === review.sourceRegistryId);
+  assert.ok(source);
+  assert.ok(source.access.reviewFiles.includes("calabarzon-tayabas-bay-cas-rights-review-20261026.json"));
+  assert.ok(source.access.additionalRawPaths.includes("raw/calabarzon-tayabas-bay-gbif-records-20261026/"));
   const bay = scope.waterbodies.find((waterbody) => waterbody.id === review.waterbodyId);
   assert.ok(bay);
   assert.ok(!bay.sourceRefs.includes(review.sourceRegistryId));

@@ -66,7 +66,10 @@ test("Tayabas-only Naturalis specimen remains held without waterbody or species 
 });
 
 test("GBIF source context matches the unchanged incomplete CALABARZON checkpoint", () => {
-  assert.ok(registry.sources.some((source) => source.id === review.sourceRegistryId));
+  const gbif = registry.sources.find((source) => source.id === review.sourceRegistryId);
+  assert.ok(gbif);
+  assert.ok(gbif.access.reviewFiles.includes("calabarzon-tayabas-gbif-specimen-review-20261026.json"));
+  assert.ok(gbif.access.additionalRawPaths.includes("raw/calabarzon-tayabas-gbif-specimen-20261026/"));
   assert.equal(registry.sourceCount, registry.sources.length);
   assert.equal(report.inputHashes.sourcesSha256, hash(sourceBytes));
   assert.equal(report.coverageSummary.registeredSources, registry.sourceCount);
