@@ -994,3 +994,17 @@ Verification for this research-only batch: `npm run test:species:pipeline`, `npm
 - **Updated checkpoint:** 83 selected waterbody/habitat leads, 200 source assignments, 50 distinct source references, and 151 registered sources. The Maragondon River remains without validated geometry and with unknown salinity; the waterbody denominator is unresolved.
 - **Verification:** `tests/calabarzon-maragondon-tilapia-study-review.test.mjs` protects source attribution, genus-rank scope, precise sample period and counts, coordinate exclusion, input hashes, and non-public disposition.
 - **Next:** continue L1 CALABARZON inland and coastal coverage by seeking independently supported species-rank observations with item-level reuse terms. Review primary records rather than resolving `Tilapia sp.` to a species from a common name or a separate source. Do not advance to NCR or claim a complete CALABARZON baseline.
+
+## 99. Lopez marshes: bounded GBIF fish-index screen -- 26 October 2026
+
+- **Scope and method:** queried GBIF's public occurrence search for Kalantasan Marsh, its source-listed shorter name Kalantasan, and Lutang Marsh. Each term was checked in both `waterBody` and `locality`, limited to the Philippines and Catalogue of Life XR Actinopterygii.
+- **Result and disposition:** all six requests returned HTTP 200 with zero records. The raw response hashes and query URLs are recorded in `calabarzon-lopez-marsh-gbif-screen-20261026.json`; raw responses stay in ignored local research storage. No fish absence, wetland boundary, species, or public record is inferred.
+- **Reconciliation:** the two existing Lopez leads now cite the bounded screen while staying research-queued. CALABARZON remains at 83 named leads, 217 source assignments and 59 distinct references, with 11 leads queued, 78 unknown salinity classifications, zero validated geometries and an incomplete baseline.
+- **Next:** seek a dated, locality-resolved fish inventory or rights-cleared specimen evidence for the Lopez marshes. Do not repeat zero-result text queries as evidence of absence.
+
+## 100. Lalaguna Marshland: municipal habitat-context cross-check -- 26 October 2026
+
+- **Source:** reviewed the Municipality of Lopez's 3 March 2026 official wildlife-day page. It names Lalaguna Marshland and gives a general statement about aquatic life in local wetlands, but no fish names, survey details, sampling date, stations, boundary or item-specific reuse terms.
+- **Disposition:** added the municipal page as a source-linked habitat-context reference for the existing Lalaguna lead. It confirms no species identification or fish occurrence; the fish evidence status, unknown salinity, unresolved marsh-versus-lake identity, undelineated boundary, research-only status and zero public admissions remain unchanged.
+- **Updated checkpoint:** CALABARZON has 83 named leads, 217 source assignments, 59 distinct source references and 163 registered sources. Its denominator and fish baseline remain incomplete.
+- **Next:** request any dated fish survey, scientific identifications, locality/station details, item-level reuse terms and authorized extent data for the Lopez marshes from the municipal environment/fisheries offices and BFAR/DENR. Keep this request unsent until the project owner chooses to send it; meanwhile continue L1 with other independent sources.

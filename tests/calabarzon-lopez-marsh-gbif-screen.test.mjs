@@ -50,8 +50,8 @@ test("GBIF query provenance and CALABARZON checkpoint hashes are pinned", () => 
   assert.equal(report.inputHashes.sourcesSha256, sha256(sourceBytes));
   assert.equal(report.inputHashes.lopezMarshGbifScreenSha256, sha256(reviewBytes));
   assert.equal(report.coverageSummary.sourceAssignments, scope.waterbodies.flatMap((row) => row.sourceRefs).length);
-  assert.equal(report.coverageSummary.sourceAssignments, 216);
-  assert.equal(report.coverageSummary.distinctSourceReferencesAssigned, 58);
+  assert.equal(report.coverageSummary.sourceAssignments, 217);
+  assert.equal(report.coverageSummary.distinctSourceReferencesAssigned, 59);
   assert.equal(report.coverageSummary.leadsStillResearchQueued, 11);
   assert.equal(report.coverageSummary.publicAdmission, false);
   assert.equal(report.coverageSummary.regionalBaselineComplete, false);
