@@ -1,0 +1,137 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-26",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "waterbodyId": "ph-wb-tres-cruzes-cavite-lake",
+  "decision": "Retain Lawa ng Tres Cruzes as an incomplete reservoir research lead. Normalize the feature kind from the BMB Water Storage classification and record the source spelling as a search alias. Cavite's dam listing and NIA's repair project corroborate irrigation infrastructure in Tanza, but do not prove that the BMB wetland row and dam records describe one identical impoundment. Keep the actual extent, fish evidence and public admission unresolved.",
+  "sourceIds": [
+    "denr-bmb-philchm-inland-wetlands-2019",
+    "denr-calabarzon-wetlands-2024",
+    "cavite-ecological-profile-2024-fisheries",
+    "nia-calabarzon-tres-cruzes-dam-repair",
+    "gbif-occurrence-downloads"
+  ],
+  "sourceFindings": [
+    {
+      "sourceId": "denr-bmb-philchm-inland-wetlands-2019",
+      "sourceName": "Lawa ng Tres Cruses",
+      "province": "Cavite",
+      "locality": "Tanza",
+      "sourceClass": "Water Storage",
+      "sourceReportedAreaHa": 15.65,
+      "interpretation": "Historical wetland-inventory classification and reported area only; not a current extent or fish record."
+    },
+    {
+      "sourceId": "cavite-ecological-profile-2024-fisheries",
+      "table": "5.8",
+      "sourceName": "Tres Cruzes Dam",
+      "locality": "Tres Cruzes, Tanza, Cavite",
+      "sourceAreaLabel": "Area Covered (In Has.)",
+      "sourceReportedAreaHa": 911.1,
+      "sourceLocationCoordinatePresent": true,
+      "interpretation": "The table also repeats 911.1 for Balagbag Dam and Nagtaob Dam. The area-covered figure is not treated as reservoir surface area, and the dam location coordinate is not used as a polygon or waterbody point."
+    },
+    {
+      "sourceId": "nia-calabarzon-tres-cruzes-dam-repair",
+      "project": "Repair of Tres Cruzes Dam of Tres Cruzes River Irrigation System",
+      "locality": "Tanza, Cavite",
+      "reportedStatus": "Completed",
+      "reportedConstructionDates": "2023-04-26 to 2024-03-14",
+      "interpretation": "Official infrastructure context; the project page does not provide an impoundment boundary, ecological survey or fish list."
+    },
+    {
+      "sourceId": "denr-calabarzon-wetlands-2024",
+      "sourceName": "Lawa ng Tres Cruzes",
+      "locality": "Cavite Province",
+      "interpretation": "Name-level roadmap lead only; it does not establish a unique waterbody boundary or fish presence."
+    }
+  ],
+  "nameAndKindCrosswalk": {
+    "scopeName": "Lawa ng Tres Cruzes",
+    "sourceSpellingAlias": "Lawa ng Tres Cruses",
+    "normalizedKind": "reservoir",
+    "kindBasis": [
+      "BMB source class is Water Storage.",
+      "Cavite's 2024 profile lists a Tres Cruzes Dam in Tanza.",
+      "NIA documents repair work for Tres Cruzes Dam and its River Irrigation System in Tanza."
+    ],
+    "identityStatus": "source-named-research-lead;exact-impoundment-crosswalk-unverified",
+    "boundaryStatus": "not-delineated",
+    "doNotConflate": [
+      "The dam structure and reservoir/impoundment are different spatial features.",
+      "The source-reported 15.65 ha and 911.1 ha figures have different source contexts and neither is adopted as water surface extent.",
+      "A dam coordinate is not an impoundment polygon, shoreline, or validated access point."
+    ]
+  },
+  "gbifScreen": {
+    "sourceId": "gbif-occurrence-downloads",
+    "endpoint": "https://api.gbif.org/v1/occurrence/search",
+    "country": "PH",
+    "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+    "taxonKey": "8VR36",
+    "taxonomy": "Catalogue of Life Extended Release Actinopterygii",
+    "existingCanonicalNameQueries": {
+      "reviewFile": "calabarzon-inland-gbif-screen-20261025.json",
+      "searchValue": "Lawa ng Tres Cruzes",
+      "fields": {
+        "waterBody": 0,
+        "locality": 0
+      }
+    },
+    "sourceSpellingFollowUp": {
+      "searchValue": "Lawa ng Tres Cruses",
+      "queryCount": 2,
+      "queries": [
+        {
+          "field": "waterBody",
+          "url": "https://api.gbif.org/v1/occurrence/search?country=PH&taxonKey=8VR36&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&waterBody=Lawa%20ng%20Tres%20Cruses&limit=100&offset=0",
+          "httpStatus": 200,
+          "resultCount": 0,
+          "enumeratedCount": 0,
+          "endOfRecords": true,
+          "rawResponse": {
+            "path": "raw/calabarzon-inland-gbif-screen-20261025/tres-cruses-waterBody-offset-0.json",
+            "bytes": 79,
+            "sha256": "16004ddeb6b1eb033e3665fa6082d9cdd36533ce1f36272a2a95f5664f1b9dcd"
+          }
+        },
+        {
+          "field": "locality",
+          "url": "https://api.gbif.org/v1/occurrence/search?country=PH&taxonKey=8VR36&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&locality=Lawa%20ng%20Tres%20Cruses&limit=100&offset=0",
+          "httpStatus": 200,
+          "resultCount": 0,
+          "enumeratedCount": 0,
+          "endOfRecords": true,
+          "rawResponse": {
+            "path": "raw/calabarzon-inland-gbif-screen-20261025/tres-cruses-locality-offset-0.json",
+            "bytes": 79,
+            "sha256": "16004ddeb6b1eb033e3665fa6082d9cdd36533ce1f36272a2a95f5664f1b9dcd"
+          }
+        }
+      ]
+    },
+    "interpretation": "These exact indexed-text searches returned no rows; they do not establish fish absence, and they do not exclude records indexed under other names or fields."
+  },
+  "decisionEffects": {
+    "scopeKindChangedFrom": "lake",
+    "scopeKindChangedTo": "reservoir",
+    "sourceSpellingAliasAdded": true,
+    "fishEvidenceStatus": "bounded-GBIF-exact-and-source-spelling-Actinopterygii-text-screens-zero;no-fish-absence-inferred",
+    "speciesAssertionsAdded": 0,
+    "dietClaimsAdded": 0,
+    "publicRecordsAdded": 0,
+    "geometryAdded": false,
+    "reportedAreaAdopted": false,
+    "salinityChanged": false,
+    "publicAdmission": false,
+    "publicationApproval": false
+  },
+  "remainingWork": [
+    "Verify whether the BMB water-storage row, the named Lawa and the NIA Tres Cruzes Dam refer to the same impoundment.",
+    "Obtain a rights-cleared reservoir boundary or authoritative technical description before any map geometry is added.",
+    "Locate and assess primary fish survey, specimen or checklist evidence for this reservoir; GBIF text-screen zeroes are not a substitute.",
+    "Keep current fish presence, salinity, catchability, legal access, safety and diet unasserted until separately sourced."
+  ],
+  "publicationApproval": false
+}

@@ -18,13 +18,17 @@ test("the exact-text screen covers every scoped CALABARZON lake and reservoir na
   assert.equal(review.regionId, scope.regionId);
   assert.equal(review.scopeSnapshot.waterbodyLeadCount, inlandWaterbodies.length);
   assert.equal(review.scopeSnapshot.searchStringCount, expectedStrings.length);
-  // This is the pre-Cavite-screen scope snapshot used for the 23 lake/reservoir leads.
-  assert.equal(review.scopeSnapshot.sha256, "e8a6c490cae14465a9ccc33b8078cf68f3e4b9fb016072a5c0f0549a2d96d30f");
+  // The byte hash pins the reviewed lead kinds and source-derived name spellings.
+  assert.equal(review.scopeSnapshot.sha256, "ef22d378c682a5b346c537248e685c11a5e9f9b3df49ea2802b5b7a03f52c2b8");
   assert.deepEqual(
     new Set(review.searchTerms.map((row) => row.value)),
     new Set(expectedStrings),
     "Every current name and listed alias is screened, but a search string does not confirm an alias.",
   );
+  const tresCruses = review.searchTerms.find((row) => row.value === "Lawa ng Tres Cruses");
+  assert.equal(tresCruses.scopeLeadId, "ph-wb-tres-cruzes-cavite-lake");
+  assert.equal(tresCruses.kind, "reservoir");
+  assert.equal(tresCruses.queryLabel, "scope-alias-string");
   assert.equal(review.queries.length, expectedStrings.length * 2);
   assert.deepEqual(new Set(review.queries.map((row) => row.field)), new Set(["waterBody", "locality"]));
   for (const query of review.queries) {
@@ -44,9 +48,9 @@ test("the exact-text screen covers every scoped CALABARZON lake and reservoir na
 });
 
 test("GBIF candidates retain record-level source and quality fields without coordinate or presence claims", () => {
-  assert.equal(review.summary.queryCount, 68);
-  assert.equal(review.summary.successfulQueries, 68);
-  assert.equal(review.summary.zeroResultQueries, 63);
+  assert.equal(review.summary.queryCount, 70);
+  assert.equal(review.summary.successfulQueries, 70);
+  assert.equal(review.summary.zeroResultQueries, 65);
   assert.equal(review.summary.positiveQueries, 5);
   assert.equal(review.summary.uniqueCandidateRecordCount, 77);
   assert.equal(review.summary.speciesRankRecordCount, 56);

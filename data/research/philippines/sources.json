@@ -3,7 +3,7 @@
   "checkedOn": "2026-10-26",
   "status": "research-only-source-registry",
   "scope": "National acquisition references and CALABARZON/Central Luzon identity/source leads. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 158,
+  "sourceCount": 159,
   "sources": [
     {
       "id": "gbif-col-xr-taxonomy-matching",
@@ -115,7 +115,7 @@
       "role": "Candidate occurrence acquisition using versioned queries/download keys and source citations.",
       "checkedOn": "2026-10-26",
       "access": {
-        "status": "official-documentation-read;selected-public-occurrence-query-record-and-dataset-reviewed;Morong-candidate-held-for-geography-taxonomy-and-terms;Lalaguna-eight-string-Actinopterygii-text-screen-zero",
+        "status": "official-documentation-read;selected-public-occurrence-query-record-and-dataset-reviewed;Morong-candidate-held-for-geography-taxonomy-and-terms;Lalaguna-eight-string-Actinopterygii-text-screen-zero;Tres-Cruzes-canonical-and-source-spelling-Actinopterygii-text-screens-zero-no-absence-inferred",
         "localRawSnapshot": null,
         "reviewFiles": [
           "calabarzon-bmb-lakes-gbif-screen-20261024.json",
@@ -130,7 +130,8 @@
           "calabarzon-tayabas-gbif-specimen-review-20261026.json",
           "calabarzon-cambantoc-gbif-screen-20261026.json",
           "calabarzon-morong-river-gbif-candidate-review-20261026.json",
-          "calabarzon-lalaguna-marsh-gbif-screen-20261026.json"
+          "calabarzon-lalaguna-marsh-gbif-screen-20261026.json",
+          "calabarzon-tres-cruzes-water-storage-crosswalk-20261026.json"
         ],
         "additionalRawPaths": [
           "raw/calabarzon-bmb-gbif-screen-20261024/",
@@ -151,7 +152,7 @@
       "reuse": {
         "metadata": "API documentation is an access reference, not a license for occurrence records.",
         "raw": "Each dataset/record license and download citation must be retained.",
-        "content": "Mixed-source data and media are not blanket-approved; no public occurrence admission from this registry. The Morong River candidate remains unassigned and out of public projections because its geography and identification are unresolved and CAS collection redistribution terms conflict with GBIF CC0 metadata. The Lalaguna Marsh screen covers eight exact/variant text searches for CoL XR Actinopterygii and returned zero; it is not evidence of fish absence."
+        "content": "Mixed-source data and media are not blanket-approved; no public occurrence admission from this registry. The Morong River candidate remains unassigned and out of public projections because its geography and identification are unresolved and CAS collection redistribution terms conflict with GBIF CC0 metadata. The Lalaguna Marsh screen covers eight exact/variant text searches for CoL XR Actinopterygii and returned zero; it is not evidence of fish absence. The Tres Cruzes crosswalk records zero exact-name and source-spelling CoL XR Actinopterygii waterBody/locality results; these are bounded search outcomes, not absence evidence."
       },
       "publicationApproval": false,
       "researchStatus": "public-occurrence-api-screen-used-for-scoped-regional-candidates;record-and-dataset-rights-reviewed-per-row",
@@ -3413,7 +3414,7 @@
       "sourceYear": 2019,
       "caveats": [
         "The inventory is a historical as-of-2019 list and does not establish present-day status, completeness, a legal boundary or fish presence.",
-        "The source reports Lawa ng Tres Cruses as Water Storage, not Lake; do not silently change the existing scope classification.",
+        "The source reports Lawa ng Tres Cruses as Water Storage. A separate review normalizes its scope kind to reservoir, but the waterbody-to-dam identity and extent remain unverified.",
         "Source names and areas are retained as reported; locality and area conflicts require separate identity review."
       ]
     },
@@ -3674,7 +3675,7 @@
         "https://api.gbif.org/v1/occurrence/search?datasetKey=18896efa-22df-4fbd-9782-42f47257e753"
       ],
       "role": "Nationally reusable Philippine fish-specimen dataset; this L1 Manila Bay/Cavite screen found seven administrative-text candidates but did not resolve per-record capture origin from landing, market, port or nearby-sea contexts.",
-      "checkedOn": "2026-10-25",
+      "checkedOn": "2026-10-26",
       "access": {
         "status": "official-IPT-v1.38-archive-and-GBIF-screen-reviewed;seven-Cavite-records-not-waterbody-localized",
         "reviewFiles": [
@@ -4335,18 +4336,19 @@
       "title": "Cavite Ecological Profile 2024",
       "provider": "Provincial Government of Cavite / Office of the Provincial Agriculturist",
       "url": "https://cavite.gov.ph/wp-content/uploads/2026/04/CEP_2024.pdf",
-      "role": "Official provincial municipal-fisheries context: Table 4.25 lists 11 source-reported common catch labels and season/peak/lean periods for Cavite in 2024. It is not taxon-resolved or assigned to individual waters, landing sites or municipalities.",
-      "checkedOn": "2026-10-25",
+      "role": "Official provincial profile: Table 4.25 lists 11 source-reported common catch labels and season/peak/lean periods for Cavite in 2024, without waterbody assignments. Table 5.8 lists Tres Cruzes Dam in Tanza with a source-reported 911.1 ha area-covered figure; this is infrastructure context, not a reservoir outline or fish record.",
+      "checkedOn": "2026-10-26",
       "access": {
-        "status": "official-provincial-PDF; indexed-table-and-attribution-reviewed; direct-viewer-extraction-refused-due-to-content-size",
+        "status": "official-provincial-PDF;indexed-fisheries-and-dam-table-excerpts-reviewed;no-local-copy-or-full-table-extraction",
         "reviewFiles": [
-          "calabarzon-cavite-ecological-profile-fisheries-review-20261025.json"
+          "calabarzon-cavite-ecological-profile-fisheries-review-20261025.json",
+          "calabarzon-tres-cruzes-water-storage-crosswalk-20261026.json"
         ]
       },
       "reuse": {
         "metadata": "The report credits the Office of the Provincial Agriculturist, Trece Martires City, for Table 4.25. No item-specific reuse license was verified.",
         "raw": "No local PDF copy or extracted full table is stored.",
-        "content": "Retain common-name and season labels as research leads only. Do not assign scientific names, individual waterbodies, current presence, or catchability; no app content is approved."
+        "content": "Retain common-name and season labels as research leads only. Do not assign scientific names, individual waterbodies, current presence, or catchability. The dam table is retained only as minimal infrastructure and locality context; its area-covered figure is not adopted as reservoir surface extent. No app content is approved."
       },
       "publicationApproval": false,
       "researchStatus": "official-provincial-municipal-fisheries-context;common-names-only;not-waterbody-resolved;zero-assertions",
@@ -4358,6 +4360,29 @@
         "Some reported catch labels may be broader than species rank; no binomial crosswalk is supported by this source alone.",
         "Do not use the seasonality fields as current forecasts, legal guidance, safety guidance, diet claims or bait advice."
       ]
+    },
+    {
+      "id": "nia-calabarzon-tres-cruzes-dam-repair",
+      "title": "Tres Cruzes River Irrigation System — Repair of Tres Cruzes Dam",
+      "provider": "National Irrigation Administration, CALABARZON Regional Office",
+      "url": "https://region4a.nia.gov.ph/?q=content%2Ftres-cruzes-river-irrigation-system-32",
+      "role": "Official NIA project page documenting a dam-repair project in Tanza, Cavite; infrastructure context only, not reservoir outline, hydrology, fish evidence or access guidance.",
+      "checkedOn": "2026-10-26",
+      "access": {
+        "status": "official-project-page-reviewed;dam-repair-listed-complete;no-map-or-fish-data",
+        "reviewFiles": [
+          "calabarzon-tres-cruzes-water-storage-crosswalk-20261026.json"
+        ],
+        "rawPath": null
+      },
+      "reuse": {
+        "metadata": "Official project-page metadata cited for research provenance; no item-specific reuse license verified.",
+        "raw": "No project document, image or technical drawing copied into tracked files.",
+        "content": "Minimal project title, agency and Tanza locality context only. This record does not grant rights to reproduce source material or establish a waterbody boundary, fish species, safety or public access."
+      },
+      "publicationApproval": false,
+      "researchStatus": "official-dam-repair-page-reviewed;waterbody-extent-and-fish-evidence-unverified",
+      "sourceYear": 2024
     },
     {
       "id": "nfrdi-2020-manila-bay-annual-report",

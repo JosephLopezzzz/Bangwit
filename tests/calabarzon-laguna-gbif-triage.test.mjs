@@ -11,7 +11,7 @@ test("triages Laguna de Bay GBIF records without admitting public occurrences", 
   );
 
   assert.equal(review.status, "dataset-rights-and-COL-XR-crosswalk-reviewed;record-admission-pending");
-  assert.equal(review.screenInput.sha256, "11ea3a1a8f29ace305478099bcebbc37ca730d1db2b2ed4d0af774eee8d5118f");
+  assert.equal(review.screenInput.sha256, "ef46f8c006a8586de2ffbe1146ac354bfa81afb30b503c368c75de2cfbf924f1");
   assert.equal(review.screenInput.sha256, createHash("sha256").update(screenBytes).digest("hex"));
   assert.equal(review.screenInput.uniqueRecordCount, 61);
   assert.equal(review.screenInput.speciesRankRecordCount, 51);
