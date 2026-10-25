@@ -3,7 +3,7 @@
   "checkedOn": "2026-10-25",
   "status": "research-only-source-registry",
   "scope": "National acquisition references and CALABARZON/Central Luzon identity/source leads. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 143,
+  "sourceCount": 145,
   "sources": [
     {
       "id": "gbif-col-xr-taxonomy-matching",
@@ -3987,6 +3987,90 @@
       "caveats": [
         "WoRMS nomenclatural acceptance does not independently verify the identity of the preserved specimen.",
         "The multi-locality source wording and source reuse rights remain unresolved for app publication."
+      ]
+    },
+    {
+      "id": "cas-balayan-primary-archive-check",
+      "title": "CAS Ichthyology current institutional archive check for Balayan Bay SU(ICH) records",
+      "provider": "California Academy of Sciences, Department of Ichthyology",
+      "url": "http://ipt.calacademy.org:8080/archive.do?r=ich",
+      "additionalUrls": [
+        "http://ipt.calacademy.org:8080/resource?r=ich",
+        "https://docent.calacademy.org/scientists/ichthyology"
+      ],
+      "role": "Direct source check for six California Academy / Stanford University Ichthyology (SU(ICH)) Balayan Bay catalog lots; distinguishes same-number CAS ICH lots from other localities. Historical specimen evidence only.",
+      "checkedOn": "2026-10-25",
+      "access": {
+        "status": "official-CAS-IPT-current-archive-downloaded-and-six-exact-SU-ICH-Balayan-records-matched",
+        "reviewFiles": [
+          "calabarzon-balayan-cas-source-records-20261025.json",
+          "calabarzon-balayan-cas-row-decisions-20261025.json"
+        ],
+        "additionalRawPaths": [
+          "raw/calabarzon-balayan-cas-primary-archive-20261025/"
+        ],
+        "archiveBytes": 21381034,
+        "archiveSha256": "3c0c9c0a686590fb6a2c61bf35ed9a7aa68eeb5cad14e13829710198c631ed12",
+        "publishedDate": "2026-10-19",
+        "fieldAllowlistOnly": true,
+        "coordinatesRetained": false
+      },
+      "reuse": {
+        "metadata": "The CAS-hosted archive EML states Creative Commons Zero v1.0 Universal (CC0-1.0); each selected Darwin Core row also carries the CC0 public-domain dedication URL.",
+        "raw": "The compressed source archive contains coordinates and remains only in ignored local research storage. The tracked review preserves an allowlist of non-coordinate fields plus hashes.",
+        "content": "Six SU(ICH) catalog items directly report Balayan Bay as both waterBody and locality, with source dates, CAS/Stanford collection identity, species name and CC0 terms. They are admitted only to the historical research ledger; no public app rows or map points are added."
+      },
+      "publicationApproval": false,
+      "researchStatus": "six-direct-CAS-source-records;historical-only-research-ledger;zero-public-assertions",
+      "license": "CC0 1.0",
+      "caveats": [
+        "The same six numeric catalog numbers also occur in the CAS ICH collection for records from unrelated places; join by institution, collection and catalog number.",
+        "The archive metadata inspected states a publication date but no archive version identifier.",
+        "These historical specimen records do not establish current presence, abundance, catchability, safety or a complete bay checklist."
+      ]
+    },
+    {
+      "id": "worms-balayan-cas-taxonomy-crosscheck",
+      "title": "WoRMS accepted-name checks for six Balayan Bay CAS SU(ICH) records",
+      "provider": "World Register of Marine Species (WoRMS)",
+      "url": "https://www.marinespecies.org/rest/AphiaRecordsByName/Auxis%20thazard?like=false&marine_only=false",
+      "additionalUrls": [
+        "https://www.marinespecies.org/rest/AphiaRecordsByName/Hippocampus%20kuda?like=false&marine_only=false",
+        "https://www.marinespecies.org/rest/AphiaRecordsByName/Liza%20troscheli?like=false&marine_only=false",
+        "https://www.marinespecies.org/rest/AphiaRecordsByName/Liza%20troschelli?like=false&marine_only=false",
+        "https://www.marinespecies.org/rest/AphiaRecordsByName/Lutjanus%20boutton?like=false&marine_only=false",
+        "https://www.marinespecies.org/rest/AphiaRecordsByName/Nemipterus%20hexodon?like=false&marine_only=false",
+        "https://www.marinespecies.org/rest/AphiaRecordsByName/Ophichthus%20grandoculis?like=false&marine_only=false",
+        "https://www.marinespecies.org/aphia.php?p=taxdetails&id=1043424"
+      ],
+      "role": "Nomenclatural checks for the six CAS source names and the one GBIF spelling variant; identifies accepted species names and synonym mapping, not specimen re-identification or locality evidence.",
+      "checkedOn": "2026-10-25",
+      "access": {
+        "status": "five-exact-accepted-species-name-matches-and-one-source-plus-GBIF-synonym-pair-resolved-to-Planiliza-macrolepis",
+        "reviewFiles": [
+          "calabarzon-balayan-cas-source-records-20261025.json",
+          "calabarzon-balayan-cas-row-decisions-20261025.json"
+        ],
+        "additionalRawPaths": [
+          "raw/calabarzon-balayan-cas-primary-archive-20261025/worms-*.json"
+        ],
+        "exactNameQueries": 7,
+        "acceptedNameResponses": 8,
+        "fieldAllowlistOnly": true,
+        "coordinatesRetained": false
+      },
+      "reuse": {
+        "metadata": "WoRMS API responses supply scientific name, authorship, rank and status; item-specific redistribution terms were not established.",
+        "raw": "Raw API responses remain in ignored research storage with SHA-256 values; the tracked review includes only nomenclatural fields.",
+        "content": "Taxonomy cross-check only. Keep current accepted names linked to verbatim source names, and preserve GBIF quality flags."
+      },
+      "publicationApproval": false,
+      "researchStatus": "six-cas-candidates-taxonomy-crosschecked;one-source-and-gbif-synonym-pair-resolved;taxonomy-only",
+      "license": null,
+      "caveats": [
+        "WoRMS accepted status does not independently re-identify the CAS specimens.",
+        "The Liza source and GBIF spelling variants are both unaccepted synonyms of Planiliza macrolepis; the source-reported name remains preserved.",
+        "No locality, current-presence, map or complete-inventory claim follows from the nomenclatural checks."
       ]
     }
   ],
