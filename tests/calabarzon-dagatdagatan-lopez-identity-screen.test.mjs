@@ -4,12 +4,14 @@ import { readFile } from "node:fs/promises";
 import { test } from "node:test";
 
 const base = new URL("../data/research/philippines/", import.meta.url);
-const [review, scope, registry, report, reviewBytes] = await Promise.all([
+const [review, followup, scope, registry, report, reviewBytes, followupBytes] = await Promise.all([
   readFile(new URL("calabarzon-dagatdagatan-lopez-identity-screen-20261026.json", base), "utf8").then(JSON.parse),
+  readFile(new URL("calabarzon-dagatdagatan-lopez-catalog-followup-20261026.json", base), "utf8").then(JSON.parse),
   readFile(new URL("calabarzon-scope.json", base), "utf8").then(JSON.parse),
   readFile(new URL("sources.json", base), "utf8").then(JSON.parse),
   readFile(new URL("calabarzon-coverage-gap-report-20261025.json", base), "utf8").then(JSON.parse),
   readFile(new URL("calabarzon-dagatdagatan-lopez-identity-screen-20261026.json", base)),
+  readFile(new URL("calabarzon-dagatdagatan-lopez-catalog-followup-20261026.json", base)),
 ]);
 const sha256 = (bytes) => createHash("sha256").update(bytes).digest("hex");
 
@@ -52,4 +54,20 @@ test("bibliography and raw-query provenance are registered", () => {
   assert.equal(registry.sourceCount, registry.sources.length);
   assert.equal(report.inputHashes.dagatdagatanLopezIdentityScreenSha256, sha256(reviewBytes));
   assert.equal(report.coverageSummary.registeredSources, registry.sourceCount);
+});
+
+test("official catalog searches preserve the Lopez proceedings lead as unresolved", () => {
+  const source = registry.sources.find((row) => row.id === followup.sourceId);
+  assert.ok(source);
+  assert.equal(followup.citationLead.referenceId, 81470);
+  assert.equal(followup.citationLead.primaryCopyRetrieved, false);
+  assert.equal(followup.retrievalChecks.length, 4);
+  assert.ok(source.access.reviewFiles.includes("calabarzon-dagatdagatan-lopez-catalog-followup-20261026.json"));
+  assert.equal(followup.decision.primaryStudyRetrieved, false);
+  assert.equal(followup.decision.studySiteConfirmed, false);
+  assert.equal(followup.decision.speciesNamesTranscribed, 0);
+  assert.equal(followup.decision.speciesAssertionsAdded, 0);
+  assert.equal(followup.decision.waterbodyAliasAdded, false);
+  assert.equal(followup.decision.publicProjectionAdded, false);
+  assert.equal(report.inputHashes.dagatdagatanLopezCatalogFollowupSha256, sha256(followupBytes));
 });
