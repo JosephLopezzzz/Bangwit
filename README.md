@@ -62,6 +62,8 @@ The Species page has a separate bilingual historical-record section with 12 revi
 
 The historical-record section has working name, source-locality, and dated/undated filters, with combined filtering, reset, separate record/species counts, and an explicit no-match state. Water-type and conservation-status filters remain disabled until reviewed values are available. The page also includes two bilingual, source-linked study examples for fish diet; neither is a Cavite diet survey or evidence of local presence, and bait/catching advice remains unverified. The research-only ledger at `data/research/obis/cavite/cavite-obis-fish-candidate-review.csv` records 27 candidate names / 52 linked occurrences: 12 currently published records, 2 excluded occurrences, and 38 pending review. Four pending rows carry durable Smithsonian curator holds; one National Museum occurrence has been excluded for missing locality. Pending rows are not added to the public evidence snapshot.
 
+The broader CALABARZON research batch now includes 18 historical Laguna de Bay specimen candidates checked against their direct GBIF occurrence details and an independent fish-name catalog. Thirteen name crosswalks agree; five remain held. This taxonomy-only step added no public occurrence rows, and primary museum catalog, locality, and record-specific reuse reviews remain open.
+
 To rebuild the candidate-review ledger after updating its inputs:
 
 ```powershell

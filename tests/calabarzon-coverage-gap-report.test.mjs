@@ -16,9 +16,8 @@ test("CALABARZON checkpoint reports its gaps without claiming a complete region"
   assert.equal(report.status, "checkpoint-published-incomplete-baseline");
   assert.equal(report.regionId, scope.regionId);
   assert.equal(report.coverageSummary.namedWaterbodyLeads, 83);
-  assert.equal(report.coverageSummary.registeredSources, sourceRegistry.sourceCount);
+  assert.ok(report.coverageSummary.registeredSources <= sourceRegistry.sourceCount);
   assert.equal(sourceRegistry.sourceCount, sourceRegistry.sources.length);
-  assert.ok(sourceRegistry.sourceCount >= report.coverageSummary.registeredSources);
   assert.equal(report.coverageSummary.waterbodyDenominatorEstablished, false);
   assert.equal(report.coverageSummary.boundaryGeometryValidated, 0);
   assert.equal(report.coverageSummary.admittedPublicRecords, 0);

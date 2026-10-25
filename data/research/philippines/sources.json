@@ -3,7 +3,7 @@
   "checkedOn": "2026-10-24",
   "status": "research-only-source-registry",
   "scope": "National acquisition references and CALABARZON/Central Luzon identity/source leads. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 135,
+  "sourceCount": 136,
   "sources": [
     {
       "id": "gbif-col-xr-taxonomy-matching",
@@ -3709,6 +3709,39 @@
         "FishBase identifies a Taal locality and an underlying collection citation, but the cited institutional catalog entries were not directly examined in this batch.",
         "The candidates do not establish current presence, abundance, diet, legal catchability, safety, lake-wide completeness or permission to reuse the FishBase-derived locality in a public or commercial app.",
         "FishBase's FW museum code for the tawilis candidate differs from the GBIF SEAOBIS institution/collection codes; verify institutional provenance before relying on that record linkage."
+      ]
+    },
+    {
+      "id": "calabarzon-laguna-cof-taxonomy-crosscheck",
+      "title": "Eschmeyer's Catalog of Fishes Laguna de Bay name cross-check",
+      "provider": "California Academy of Sciences, Institute for Biodiversity Science and Sustainability",
+      "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/",
+      "additionalUrls": [
+        "https://www.calacademy.org/scientists/catalog-of-fishes-help",
+        "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Anguilla&species=mauritiana&tbl=species"
+      ],
+      "role": "Independent nomenclature cross-check for recorded and GBIF-accepted names on 18 Laguna de Bay specimen candidates; not occurrence evidence or specimen re-identification.",
+      "checkedOn": "2026-10-25",
+      "access": {
+        "status": "21-name-result-row-crosscheck;13-candidate-name-links-agree;five-occurrence-rows-held",
+        "reviewFiles": [
+          "calabarzon-laguna-cof-taxonomy-20261025.json"
+        ],
+        "rawPath": "raw/calabarzon-laguna-cof-taxonomy-20261025/",
+        "rawSha256Recorded": true
+      },
+      "reuse": {
+        "metadata": "Official catalog help and individual result pages were reviewed.",
+        "raw": "HTML response snapshots are retained in ignored local research storage with hashes; raw pages are not distributed.",
+        "content": "Only concise name-status matches are recorded. The catalog is used for nomenclature only; source-specific reuse terms were not verified."
+      },
+      "publicationApproval": false,
+      "researchStatus": "taxonomy-only;13-name-links-agree;five-held;zero-public-occurrence-assertions",
+      "license": null,
+      "sourceYear": null,
+      "caveats": [
+        "The catalog cross-check cannot verify identity of the historical CAS or MZUSP specimens, source locality, present-day presence, abundance, legal catchability, safety or completeness.",
+        "Five candidate rows remain held because their name crosswalk is absent, conflicting or unresolved; all 18 records remain outside public occurrence projections."
       ]
     }
   ],
