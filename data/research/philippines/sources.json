@@ -3767,7 +3767,7 @@
       "role": "Direct institution-linked catalog cross-check for the Laguna de Bay MZUSP specimen candidate with catalog number 118522; not blanket occurrence, locality, or publication evidence.",
       "checkedOn": "2026-10-25",
       "access": {
-        "status": "MZUSP-official-page-links-online-SiBBr-catalog;two-portal-rows-resolve-to-one-occurrence-id",
+        "status": "one-source-occurrence-matched;raw-rank-metadata-disagrees;portal-family-interpretation;geospatial-location-missing;reuse-hold",
         "reviewFiles": [
           "calabarzon-laguna-museum-catalog-verification-20261025.json"
         ],
@@ -3777,16 +3777,17 @@
       "reuse": {
         "metadata": "The item response labels the record CC BY-NC 4.0 (Int); the SpeciesLink MZUSP profile says collection-level conditions are not specified and its page reports a 2006 update.",
         "raw": "Full response bodies are not retained; response byte counts and SHA-256 hashes are recorded, and only allowlisted non-coordinate fields are saved.",
-        "content": "The GBIF occurrence record reports a different license. Keep the candidate held until the provider-specific license and intended reuse are resolved; portal availability is not publication permission."
+        "content": "The source detail reports CC BY-NC while the GBIF detail reports CC BY. Preserve the more restrictive source terms for this review; keep the item out of public app projections until the provider clarifies reuse terms. Portal availability alone is not publication permission."
       },
       "publicationApproval": false,
-      "researchStatus": "one-unique-item-found-through-two-index-rows;family-rank-locality-assertion-and-license-conflicts;zero-public-assertions",
+      "researchStatus": "one-unique-item-through-two-index-rows;source-rank-and-portal-rank-disagree;locality-text-present-no-geospatial-location;cc-by-nc-vs-gbif-cc-by;zero-public-assertions",
       "license": "CC-BY-NC 4.0 (Int)",
       "caveats": [
-        "The MZUSP source record preserves Arius dispar and locality Laguna de Bay, while the portal's interpreted occurrence is classified only at family rank and carries higher-rank/missing-rank assertions.",
-        "The raw locality text is present while the portal asserts LOCATION_NOT_SUPPLIED; there is no waterBody field, so waterbody attribution and precision remain held.",
-        "The source portal license conflicts with the GBIF detail license; rights require item-level clarification.",
-        "A record from 1931 cannot establish present-day presence, abundance, catchability, safety, or checklist completeness."
+        "Two portal rows share one MZUSP occurrence ID, collection, catalog number, date, taxon name and locality text; they are duplicate resource entries, not two specimens.",
+        "One source-linked raw classification includes the rank Espécie and the other omits rank; both portal interpretations resolve only to family Ariidae. The current Catalog of Fishes cross-check supports Arius dispar as a valid name but does not re-identify this specimen.",
+        "The source locality string is Laguna de Bay, while the portal reports no geospatial location and the source has no waterBody field. Keep the locality as text only; do not infer a precise point or map assignment.",
+        "The item response reports CC BY-NC while the GBIF detail reports CC BY; rights must be clarified before public reuse.",
+        "A record dated 1931 does not establish present-day presence, abundance, catchability, safety or checklist completeness."
       ]
     },
     {

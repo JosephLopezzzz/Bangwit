@@ -38,23 +38,28 @@ test("MZUSP catalog record is matched while duplicate index rows and field confl
   assert.equal(review.summary.mzuspSourceIdentityMatches, 1);
   assert.equal(review.summary.mzuspRankConflicts, 1);
   assert.equal(review.summary.mzuspLicenseConflicts, 1);
-  assert.equal(review.summary.mzuspLocalityAssertionConflicts, 1);
+  assert.equal(review.summary.mzuspMissingGeospatialLocationAssertions, 1);
 
   const record = review.records.find((row) => row.sourceInstitutionCode === "MZUSP");
   assert.equal(record.catalogNumber, "118522");
   assert.equal(record.occurrenceId, "9d743c1c-b99b-4d99-bde2-8d65a9370534");
   assert.equal(record.sourceRecordTaxon, "Arius dispar");
+  assert.deepEqual(record.sourceClassificationTaxonRanks, ["Espécie"]);
+  assert.equal(record.sourceClassificationRankMetadataDisagrees, true);
   assert.equal(record.sourceLocality, "Laguna de Bay");
+  assert.equal(record.sourceLocalityTextPresent, true);
   assert.equal(record.sourceWaterBodyField, null);
   assert.equal(record.portalInterpretedRank, "family");
-  assert.equal(record.portalLocalityAssertionConflict, true);
-  assert.equal(record.sourceRecordHasSpeciesRank, false);
+  assert.equal(record.sourcePortalRankConflict, true);
+  assert.equal(record.portalMissingGeospatialLocationDespiteLocalityText, true);
+  assert.equal(record.sourceRecordHasSpeciesRank, true);
+  assert.deepEqual(record.sourceRecords.map((row) => row.recordEraFields.taxonRank), [null, "Espécie"]);
   assert.match(record.sourcePortalLicense, /BY-NC/i);
   assert.equal(record.useRightsDisposition.startsWith("hold-conflicting"), true);
   assert.equal(new Set(record.sourcePortalRecordIds).size, 2);
   assert.equal(new Set(record.sourceRecords.map((row) => row.sourceIdentity.occurrenceId)).size, 1);
   assert.ok(record.sourceRecords.every((row) => row.identityMatchesGbif && row.eventDateMatchesGbif));
-  assert.equal(record.decision, "hold-no-historical-assertion");
+  assert.equal(record.decision, "hold-no-public-assertion");
 });
 
 test("CAS archive records final historical decisions while preserving the initial crosswalk snapshot", () => {
@@ -98,7 +103,7 @@ test("museum record verification retains no coordinates and admits no public occ
   const mzusp = review.records.find((row) => row.sourceInstitutionCode === "MZUSP");
   assert.equal(casRecords.filter((row) => row.decision === "admit-historical-source-locality-evidence").length, 17);
   assert.equal(casRecords.filter((row) => row.decision === "hold-for-taxonomic-review").length, 0);
-  assert.equal(mzusp.decision, "hold-no-historical-assertion");
+  assert.equal(mzusp.decision, "hold-no-public-assertion");
 
   const sourceIds = sourceRegistry.sources.map((source) => source.id);
   assert.ok(sourceIds.includes("calabarzon-laguna-mzusp-sibbr-catalog"));

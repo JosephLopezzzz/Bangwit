@@ -9,7 +9,7 @@
     "name": "Laguna de Bay",
     "kind": "lake"
   },
-  "status": "17-CAS-archive-identities-verified;current-taxonomy-followup-admits-17-historical-assertions;zero-CAS-taxonomy-holds;MZUSP-conflicts-remain",
+  "status": "17-CAS-archive-identities-verified;17-CAS-historical-assertions-admitted-research-only;one-MZUSP-rank-and-rights-hold",
   "inputs": [
     {
       "file": "calabarzon-laguna-gbif-record-details-20261025.json",
@@ -18,6 +18,10 @@
     {
       "file": "calabarzon-laguna-cof-taxonomy-20261025.json",
       "sha256": "4e5e79965cacaf9a413bbef9eabfd636a435fa652e10e00241db100355974c9c"
+    },
+    {
+      "file": "calabarzon-laguna-cas-archive-crosswalk-20261025.json",
+      "sha256": "a5f889ad67216f27415b149d581b2ae8c7f3bb2e6352843c27349781a1824e87"
     },
     {
       "file": "calabarzon-laguna-cas-taxonomy-followup-20261025.json",
@@ -36,13 +40,8 @@
       "collectionSearchHelp": "https://researcharchive.calacademy.org/research/ichthyology/collection/help.asp",
       "currentPortalUrl": "https://monarch.calacademy.org/collections/list.php?db=6&reset=1",
       "checkedOn": "2026-10-25",
-      "result": "The CAS Monarch portal displayed an offline notice on 2026-10-25 and the legacy item URL returned only a generic shell. The separate official CAS IPT archive was then checked and matched all 17 candidate items using institution, collection, catalog number and occurrence ID; the portal outage is retained as an access note, not a specimen-absence finding."
+      "result": "The CAS Monarch portal displayed an offline notice stating it had been taken offline on 2026-10-21 while rebuilt. The official CAS IPT archive release 150.545 independently matched 17 exact collection-qualified source records; the portal outage is retained as an access note and is not a specimen-absence finding."
     },
-    "limitations": [
-      "A portal record match does not establish that a specimen was re-identified by an expert or that the reported locality is geographically precise.",
-      "A source/GBIF license conflict is held for rights review; no permission is inferred from availability through a public portal.",
-      "No record establishes present-day presence, abundance, catchability, safety, or a complete Laguna de Bay checklist."
-    ],
     "casArchive": {
       "url": "http://ipt.calacademy.org:8080/archive.do?r=ich",
       "resourceUrl": "http://ipt.calacademy.org:8080/resource?r=ich&v=150.545",
@@ -58,9 +57,11 @@
       "taxonomicHolds": 0,
       "trackedCoordinates": false
     },
-    "taxonomyFollowupFile": "calabarzon-laguna-cas-taxonomy-followup-20261025.json",
-    "taxonomyFollowupSha256": "549156e3ba60d807eb9ae7fd8173f84f1294c8bb02ef364d45c1fff03eb83389",
-    "taxonomyFollowupAuthority": "Eschmeyer’s Catalog of Fishes current pages, with ITIS and WoRMS compared for the unresolved Taenioides author-year conflict"
+    "limitations": [
+      "A portal record match does not establish that a specimen was re-identified by an expert or that the reported locality is geographically precise.",
+      "The MZUSP source linked record reports CC BY-NC while GBIF reports CC BY; keep its content out of public projections pending provider-specific reuse clarification.",
+      "No record establishes present-day presence, abundance, catchability, safety, or a complete Laguna de Bay checklist."
+    ]
   },
   "sourceCollectionSearch": {
     "status": "OK",
@@ -314,10 +315,16 @@
       "sourceNameMatches": true,
       "sourceEventDateMatches": true,
       "sourceLocalityMatches": true,
+      "sourceLocalityTextPresent": true,
       "sourceLocality": "Laguna de Bay",
       "sourceWaterBodyField": null,
       "sourceRecordTaxon": "Arius dispar",
+      "sourceClassificationTaxonRanks": [
+        "Espécie"
+      ],
+      "sourceClassificationRankMetadataDisagrees": true,
       "portalInterpretedRank": "family",
+      "sourcePortalRankConflict": true,
       "portalAssertions": [
         "COORDINATE_UNCERTAINTY_METERS_INVALID",
         "LOCATION_NOT_SUPPLIED",
@@ -330,17 +337,17 @@
         "TAXON_MATCH_HIGHERRANK",
         "sibbrSourceSensitivityChecked"
       ],
-      "sourceRecordHasSpeciesRank": false,
-      "portalLocalityAssertionConflict": true,
+      "sourceRecordHasSpeciesRank": true,
+      "portalMissingGeospatialLocationDespiteLocalityText": true,
       "gbifLicense": "http://creativecommons.org/licenses/by/4.0/legalcode",
       "sourcePortalLicense": "CC-BY-NC 4.0 (Int)",
       "detailLicense": "CC BY-NC",
       "useRightsDisposition": "hold-conflicting-gbif-and-source-record-licenses;collection-profile-use-terms-unspecified",
-      "decision": "hold-no-historical-assertion",
+      "decision": "hold-no-public-assertion",
       "holdReasons": [
-        "The MZUSP portal indexes the original species name but interprets the occurrence only at family rank.",
-        "The source detail contains locality text, but the portal also asserts LOCATION_NOT_SUPPLIED and has no waterBody field; treat locality precision as unresolved.",
-        "The source portal record reports CC BY-NC while the GBIF detail record reports a different license; collection-level reuse conditions are not specified."
+        "The source-linked copies disagree on raw rank metadata: one records Espécie and the other omits rank; both SiBBr portal interpretations resolve only to family Ariidae. The current Catalog of Fishes cross-check supports Arius dispar as a valid name but does not independently identify this specimen.",
+        "The source record includes the locality string Laguna de Bay, while the portal reports that a geospatial location was not supplied and the source has no waterBody field. Preserve the text locality only; do not infer a precise point or map location.",
+        "The source record reports CC BY-NC while GBIF reports CC BY; keep the candidate out of public app projections until the provider-specific reuse terms are clarified."
       ],
       "sourceRecords": [
         {
@@ -355,6 +362,7 @@
           },
           "recordEraFields": {
             "scientificName": "Arius dispar",
+            "taxonRank": null,
             "genus": "Arius",
             "family": "Ariidae",
             "eventDate": "1931-05-14",
@@ -410,6 +418,7 @@
           },
           "recordEraFields": {
             "scientificName": "Arius dispar",
+            "taxonRank": "Espécie",
             "genus": "Arius",
             "family": "Ariidae",
             "eventDate": "1931-05-14",
@@ -450,7 +459,7 @@
           "eventDateMatchesGbif": true,
           "localityMatchesGbif": true,
           "licenseConflictWithGbif": true,
-          "sourceRecordHasSpeciesRank": false
+          "sourceRecordHasSpeciesRank": true
         }
       ]
     }
@@ -465,7 +474,7 @@
     "mzuspSourceIdentityMatches": 1,
     "mzuspRankConflicts": 1,
     "mzuspLicenseConflicts": 1,
-    "mzuspLocalityAssertionConflicts": 1,
+    "mzuspMissingGeospatialLocationAssertions": 1,
     "historicalAssertionsAdmitted": 17,
     "publicRecordsAdded": 0
   },
@@ -476,6 +485,6 @@
     "coordinatesIncluded": false,
     "currentPresenceInferred": false,
     "completeSpeciesInventoryClaimed": false,
-    "interpretation": "The official CAS archive verifies 17 exact source identities, Laguna de Bay locality text, source dates and CC0 row licenses. The current Catalog of Fishes supports all five follow-up source-name crosswalks, including an authorless CAS binomial cautiously mapped through the original Valenciennes combination; all 17 CAS records are admitted only as historical source-locality evidence in the internal research ledger. One distinct MZUSP source item remains held for rank, locality interpretation and license conflicts. No public species rows, map points, current-presence claim or complete checklist are added."
+    "interpretation": "The official CAS archive supports 17 exact historical source-locality assertions, admitted only to the non-public research ledger. One distinct MZUSP source item is matched by collection, catalog number and occurrence ID; its duplicate source-linked copies disagree on rank metadata, and both portal interpretations resolve to family Ariidae despite one raw source classification marking Espécie. The source locality string Laguna de Bay is present, but a geospatial location was not supplied and no waterBody field exists. The source-level CC BY-NC label conflicts with GBIF's CC BY label, so the MZUSP item remains held from public projections pending provider-specific rights clarification. No coordinates, current-presence claim or complete checklist are added."
   }
 }
