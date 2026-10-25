@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-26",
+  "regionId": "0400000000",
+  "waterbodyId": "ph-wb-tayabas-bay",
+  "sourceRegistryId": "gbif-cas-ichthyology",
+  "status": "six-historical-candidates-found;public-reuse-held-pending-source-terms-clarification",
+  "search": {
+    "taxonomicScope": "Catalogue of Life Extended Release Actinopterygii key 8VR36",
+    "country": "PH",
+    "localityQuery": {
+      "filter": "locality=Tayabas Bay",
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&taxonKey=8VR36&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&locality=Tayabas+Bay&limit=300",
+      "returnedRecords": 0,
+      "rawPath": "raw/calabarzon-tayabas-bay-gbif-screen-20261026/query-1.json",
+      "rawSha256": "895e98c4fc942ab7d7a88a36b939ef457d89aa6b53c9aed51a7fd67ff354269a"
+    },
+    "waterBodyQuery": {
+      "filter": "waterBody=Tayabas Bay",
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&taxonKey=8VR36&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&waterBody=Tayabas+Bay&limit=300",
+      "returnedRecords": 6,
+      "datasetKey": "5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+      "rawPath": "raw/calabarzon-tayabas-bay-gbif-screen-20261026/query-2.json",
+      "rawSha256": "d70d4f599a4e525db9a9e63f6f27cb9df239ce3a650d7604cc5c34aefa3bef0a"
+    },
+    "selectedRecordReceiptSet": {
+      "recordCount": 6,
+      "rawPath": "raw/calabarzon-tayabas-bay-gbif-records-20261026/",
+      "fileCount": 13,
+      "algorithm": "SHA-256 of sorted filename-tab-file-SHA256 lines joined with LF",
+      "sha256": "984d2d6d415cbed57c85ec4d8c12a6dda2d42896bdd93a617e3bb57bf0c97a73"
+    }
+  },
+  "dataset": {
+    "title": "CAS Ichthyology (ICH)",
+    "doi": "10.15468/efh2ib",
+    "gbifLicense": "CC0 1.0",
+    "gbifMetadataUrl": "https://api.gbif.org/v1/dataset/5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+    "datasetMetadataSha256": "db19f114d468d0e50eb54fa6fe2b1591aac6537ed2a57295c25d358e03e0bf0d"
+  },
+  "publisherTerms": {
+    "url": "https://www.calacademy.org/scientists/ichthyology-collections",
+    "checkedOn": "2026-10-26",
+    "summary": "The California Academy of Sciences says its collection databases and images are owned or licensed to CAS; use is allowed for basic research, education, and conservation, while commercial use requires written consent and repackaging, resale, or redistribution is prohibited.",
+    "shortQuote": "may not be repackaged, resold, or redistributed in any form",
+    "conflictsWithOpenDatasetLicense": true,
+    "clarificationRequired": "Obtain publisher clarification on whether the dataset-level CC0 dedication covers this batch for redistribution in a public web app despite the collection database terms."
+  },
+  "qualityReview": {
+    "recordLevelResponsesFetched": 6,
+    "allHaveExplicitWaterBodyField": true,
+    "allHaveHistoricalEventDates": true,
+    "allHaveCoordinates": true,
+    "allCarryContinentInvalidFlag": true,
+    "allCarryOccurrenceStatusInferredFromIndividualCountFlag": true,
+    "allCarryGeodeticDatumAssumedWgs84Flag": true,
+    "coordinateUncertaintyMeters": {
+      "range": [6766, 12691],
+      "usedForMapDisplay": false
+    },
+    "recordNamesAndCoordinatesStoredInTrackedReview": false
+  },
+  "decision": {
+    "historicalSpeciesAssertionsAdmitted": 0,
+    "publicProjection": false,
+    "coordinatesPublished": false,
+    "currentPresenceInferred": false,
+    "absenceInferredFromLocalityQueryZero": false,
+    "reason": "The six records have explicit historical waterBody text and dates, but a publisher-level redistribution restriction conflicts with the GBIF dataset CC0 metadata. Keep every row held until CAS clarifies rights. Retain the GBIF coordinate and quality warnings; do not publish points or infer current presence."
+  },
+  "nextAction": "Seek source-terms clarification through an authorized route; if not obtained, keep the six records out of the public app and continue other CALABARZON leads."
+}
