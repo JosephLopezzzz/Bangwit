@@ -3,7 +3,7 @@
   "checkedOn": "2026-10-26",
   "status": "research-only-source-registry",
   "scope": "National acquisition references and CALABARZON/Central Luzon identity/source leads. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 164,
+  "sourceCount": 165,
   "sources": [
     {
       "id": "gbif-col-xr-taxonomy-matching",
@@ -4726,6 +4726,39 @@
         "Tilapia is a common production label; Other fishes is an aggregate and Blue crab is not a fish.",
         "The report does not assign catch categories to rivers, lakes, dams, marshes, sample sites, or municipalities.",
         "Keep this source separate from marine municipal, commercial, and aquaculture production."
+      ]
+    },
+    {
+      "id": "psa-openstat-qifs-inland-production-national",
+      "title": "Inland Municipal Fisheries: Volume of Production by Geolocation, Species, Year and Quarter",
+      "provider": "Philippine Statistics Authority (PSA), OpenSTAT",
+      "url": "https://openstat.psa.gov.ph/Metadata/2E4GVIP0",
+      "additionalUrls": [
+        "https://openstat.psa.gov.ph/PXWeb/pxweb/en/DB/DB__2E__FS/0052E4GVIP0.px/"
+      ],
+      "role": "Nationally available PSA QIFS inland-fisheries production by province/region, species category, year and quarter; discovery/prioritization source only, with no waterbody-level occurrence resolution.",
+      "checkedOn": "2026-10-26",
+      "sourceYear": 2026,
+      "access": {
+        "status": "official-metadata-and-live-table-reviewed-online;query-extraction-not-yet-reproducible;direct-api-request-403",
+        "reviewFiles": [
+          "national-psa-qifs-source-access-review-20261026.json"
+        ],
+        "localRawSnapshot": null
+      },
+      "reuse": {
+        "metadata": "PSA OpenSTAT metadata says content is public domain unless otherwise stated, and the table page marks copyright No. Retain PSA attribution and verify table-specific notices before redistribution.",
+        "raw": "No statistical values, API response, CSV, or table export was acquired or retained in this review.",
+        "content": "Use production labels to prioritize site-level research only. Do not treat province-level statistics as waterbody occurrences, abundance, complete checklists, or public app assertions."
+      },
+      "publicationApproval": false,
+      "researchStatus": "national-QIFS-source-verified;regional-and-provincial-statistics;live-extraction-pending;zero-species-assertions",
+      "license": "Public domain unless otherwise stated (PSA OpenSTAT metadata; verify table-specific notices)",
+      "caveats": [
+        "Metadata says latest available year 2025 while the live table shows 2026 quarter columns and labels Q2 2026 preliminary; reconcile exact populated cells and release status before extraction.",
+        "PSA's 2026 QIFS survey-clearance source says coverage is 80 provinces; coverage must be checked by year.",
+        "No named inland waterbody, station, household, or exact collection locality is provided by the reviewed metadata.",
+        "Common categories and production totals do not support species-rank identity, present local occurrence, abundance, catchability, safety, or diet."
       ]
     }
   ],

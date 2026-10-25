@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-26",
+  "phaseId": "L1",
+  "scope": "Philippines-wide discovery source for inland-fisheries statistics; not a waterbody inventory",
+  "status": "official-PSA-openstat-qifs-source-verified;province-and-region-resolution;live-data-extraction-pending",
+  "sourceId": "psa-openstat-qifs-inland-production-national",
+  "source": {
+    "title": "Inland Municipal Fisheries: Volume of Production by Geolocation, Species, Year and Quarter",
+    "provider": "Philippine Statistics Authority (PSA), OpenSTAT",
+    "matrixId": "2E4GVIP0",
+    "pxwebTableCode": "0052E4GVIP0",
+    "metadataUrl": "https://openstat.psa.gov.ph/Metadata/2E4GVIP0",
+    "tableUrl": "https://openstat.psa.gov.ph/PXWeb/pxweb/en/DB/DB__2E__FS/0052E4GVIP0.px/",
+    "dataDefinition": "Total weight in metric tonnes of species caught in inland bodies of water during the reference quarter.",
+    "unit": "metric tonnes",
+    "updateFrequency": "Quarterly",
+    "publishedResolution": "National, regional, and provincial",
+    "metadataLatestAvailableYear": 2025,
+    "metadataCheckedOn": "2026-10-26",
+    "metadataTerms": "The PSA metadata page states that OpenSTAT content is public domain unless otherwise stated; the table page marks copyright No. Preserve source attribution and re-check table-specific notices before redistribution."
+  },
+  "accessReview": {
+    "metadataPageFindings": {
+      "totalGeolocationValues": 107,
+      "totalSpeciesValues": 38,
+      "totalYearValues": 25,
+      "totalQuarterValues": 5,
+      "maximumCellsPerRequest": 100000,
+      "maximumRowsOnScreen": 1000,
+      "maximumColumnsOnScreen": 50,
+      "survey": "Quarterly Inland Fisheries Survey (QIFS)",
+      "sourceStatus": "Metadata reports latest available year 2025; no values were extracted or retained in this review."
+    },
+    "liveTableFindings": {
+      "visibleYears": [
+        2024,
+        2025,
+        2026
+      ],
+      "visibleQuarters": [
+        1,
+        2,
+        3
+      ],
+      "preliminaryNote": "The interactive table notes that Q2 2026 values are preliminary.",
+      "conflict": "The live table interface exposes 2026 quarter columns while its metadata record says latest available year 2025; confirm exact populated cells and release status through a reproducible export before ingesting any values."
+    },
+    "directApiAttempt": {
+      "endpoint": "https://openstat.psa.gov.ph/api/v1/en/DB/DB__2E__FS/0052E4GVIP0.px",
+      "result": "Direct command-line metadata request returned HTTP 403; this is an access-path limitation, not evidence that the official table/API is unavailable.",
+      "rawSnapshot": null
+    },
+    "crossCoverage": "PSA's 2026 survey-clearance release states QIFS coverage is 80 provinces. The national rollout registry must reconcile the covered geography by year and must not treat unlisted or suppressed values as zero or species absence."
+  },
+  "decision": {
+    "use": "Use QIFS as a fast province/region-level candidate and research-prioritization layer across Luzon, Visayas, and Mindanao, then validate candidates against locality-resolved surveys or specimen records for each named waterbody.",
+    "waterbodyResolution": "No river, lake, reservoir, wetland, marsh, sample station, or household identity is exposed in the reviewed metadata; provincial production is not assignable to a particular waterbody.",
+    "valuesExtracted": 0,
+    "speciesAssertionsAdded": 0,
+    "waterbodyAssignmentsAdded": 0,
+    "scientificNamesAssigned": 0,
+    "publicAppProjectionAdded": false,
+    "publicationApproval": false,
+    "regionalBaselineComplete": false
+  },
+  "limitations": [
+    "The table reports production categories and catches, not a complete fish inventory, occurrence event database, or exhaustive regional species checklist.",
+    "Provincial and regional aggregation cannot identify the river, lake, reservoir, wetland, sampling date, or exact catch location.",
+    "The live-table and metadata latest-year statements conflict and must be reconciled before data are imported.",
+    "PSA 2026 clearance covers 80 provinces for QIFS; exact coverage varies by survey year and requires explicit coverage accounting.",
+    "Common production labels may be broader than species rank; do not assign scientific names from common names alone.",
+    "Production quantity is not abundance, current presence in a specific waterbody, catchability, safety, legal access, or diet evidence."
+  ],
+  "nextAction": "Build a reproducible, versioned QIFS export in province-by-year chunks under the 100,000-cell limit; record exact selected values, suppressed/missing-cell states, query bytes and response hashes. Reconcile coverage for each year, then use the rows only to prioritize locality-level source searches."
+}
