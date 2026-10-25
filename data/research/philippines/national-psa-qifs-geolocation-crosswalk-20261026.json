@@ -1,0 +1,1969 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-26",
+  "phaseId": "L1",
+  "status": "107-geographies-crosswalked-to-current-registry;one-Sulu-legacy-code-held;official-status-symbols-documented",
+  "source": {
+    "title": "PSA OpenSTAT QIFS Geolocation dimension",
+    "endpoint": "https://openstat.psa.gov.ph/PXWeb/api/v1/en/DB/2E/FS/0052E4GVIP0.px",
+    "variableCode": "Geolocation",
+    "liveSchemaSha256": "5696533e41bb5b819882ec531c77c7c525e5737dee2757b32b4dd5a231f0ac14",
+    "rawSchemaSnapshot": "raw/national-qifs-geolocation-schema-20261026.json",
+    "rawSchemaSnapshotIgnoredByGit": true
+  },
+  "administrativeRegistry": {
+    "path": "administrative-registry.json",
+    "sha256": "c741456fbc2cfc9d5d813484a0b661ef206154977959fc27a289ca86732142e8",
+    "scope": {
+      "regions": 18,
+      "provinces": 82
+    }
+  },
+  "method": "PSA country value 608 is the national roll-up; region codes must exactly match current registry region IDs; deepest-level geographies first match administrative-unit PSGC codes, then official correspondence codes. No name-only mapping is applied.",
+  "mappingCounts": {
+    "nationalRollups": 1,
+    "regionsMatched": 18,
+    "provincesMatched": 82,
+    "citiesMatched": 5,
+    "unresolved": 1
+  },
+  "entries": [
+    {
+      "sourceCode": "608",
+      "sourceLabel": "PHILIPPINES",
+      "depth": 0,
+      "matchStatus": "national-rollup",
+      "mappingMethod": "PSA-country-item",
+      "registryId": null,
+      "registryName": "Philippines",
+      "registryRegionId": null,
+      "sourceRegionId": null
+    },
+    {
+      "sourceCode": "1300000000",
+      "sourceLabel": "..National Capital Region (NCR)",
+      "depth": 2,
+      "matchStatus": "matched-current-region",
+      "mappingMethod": "exact-region-id",
+      "registryId": "1300000000",
+      "registryName": "National Capital Region (NCR)",
+      "registryRegionId": "1300000000",
+      "sourceRegionId": null
+    },
+    {
+      "sourceCode": "1400000000",
+      "sourceLabel": "..Cordillera Administrative Region (CAR)",
+      "depth": 2,
+      "matchStatus": "matched-current-region",
+      "mappingMethod": "exact-region-id",
+      "registryId": "1400000000",
+      "registryName": "Cordillera Administrative Region (CAR)",
+      "registryRegionId": "1400000000",
+      "sourceRegionId": null
+    },
+    {
+      "sourceCode": "1400100000",
+      "sourceLabel": "....Abra",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "1400100000",
+      "registryName": "Abra",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "1400000000",
+      "sourceRegionId": "1400000000"
+    },
+    {
+      "sourceCode": "1408100000",
+      "sourceLabel": "....Apayao",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "1408100000",
+      "registryName": "Apayao",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "1400000000",
+      "sourceRegionId": "1400000000"
+    },
+    {
+      "sourceCode": "1401100000",
+      "sourceLabel": "....Benguet",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "1401100000",
+      "registryName": "Benguet",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "1400000000",
+      "sourceRegionId": "1400000000"
+    },
+    {
+      "sourceCode": "1402700000",
+      "sourceLabel": "....Ifugao",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "1402700000",
+      "registryName": "Ifugao",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "1400000000",
+      "sourceRegionId": "1400000000"
+    },
+    {
+      "sourceCode": "1403200000",
+      "sourceLabel": "....Kalinga",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "1403200000",
+      "registryName": "Kalinga",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "1400000000",
+      "sourceRegionId": "1400000000"
+    },
+    {
+      "sourceCode": "1404400000",
+      "sourceLabel": "....Mountain Province",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "1404400000",
+      "registryName": "Mountain Province",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "1400000000",
+      "sourceRegionId": "1400000000"
+    },
+    {
+      "sourceCode": "0100000000",
+      "sourceLabel": "..Region I (Ilocos Region)",
+      "depth": 2,
+      "matchStatus": "matched-current-region",
+      "mappingMethod": "exact-region-id",
+      "registryId": "0100000000",
+      "registryName": "Region I (Ilocos Region)",
+      "registryRegionId": "0100000000",
+      "sourceRegionId": null
+    },
+    {
+      "sourceCode": "0102800000",
+      "sourceLabel": "....Ilocos Norte",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "0102800000",
+      "registryName": "Ilocos Norte",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "0100000000",
+      "sourceRegionId": "0100000000"
+    },
+    {
+      "sourceCode": "0102900000",
+      "sourceLabel": "....Ilocos Sur",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "0102900000",
+      "registryName": "Ilocos Sur",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "0100000000",
+      "sourceRegionId": "0100000000"
+    },
+    {
+      "sourceCode": "0103300000",
+      "sourceLabel": "....La Union",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "0103300000",
+      "registryName": "La Union",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "0100000000",
+      "sourceRegionId": "0100000000"
+    },
+    {
+      "sourceCode": "0105500000",
+      "sourceLabel": "....Pangasinan",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "0105500000",
+      "registryName": "Pangasinan",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "0100000000",
+      "sourceRegionId": "0100000000"
+    },
+    {
+      "sourceCode": "0200000000",
+      "sourceLabel": "..Region II (Cagayan Valley)",
+      "depth": 2,
+      "matchStatus": "matched-current-region",
+      "mappingMethod": "exact-region-id",
+      "registryId": "0200000000",
+      "registryName": "Region II (Cagayan Valley)",
+      "registryRegionId": "0200000000",
+      "sourceRegionId": null
+    },
+    {
+      "sourceCode": "0200900000",
+      "sourceLabel": "....Batanes",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "0200900000",
+      "registryName": "Batanes",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "0200000000",
+      "sourceRegionId": "0200000000"
+    },
+    {
+      "sourceCode": "0201500000",
+      "sourceLabel": "....Cagayan",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "0201500000",
+      "registryName": "Cagayan",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "0200000000",
+      "sourceRegionId": "0200000000"
+    },
+    {
+      "sourceCode": "0203100000",
+      "sourceLabel": "....Isabela",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "0203100000",
+      "registryName": "Isabela",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "0200000000",
+      "sourceRegionId": "0200000000"
+    },
+    {
+      "sourceCode": "0205000000",
+      "sourceLabel": "....Nueva Vizcaya",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "0205000000",
+      "registryName": "Nueva Vizcaya",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "0200000000",
+      "sourceRegionId": "0200000000"
+    },
+    {
+      "sourceCode": "0205700000",
+      "sourceLabel": "....Quirino",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "0205700000",
+      "registryName": "Quirino",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "0200000000",
+      "sourceRegionId": "0200000000"
+    },
+    {
+      "sourceCode": "0300000000",
+      "sourceLabel": "..Region III (Central Luzon)",
+      "depth": 2,
+      "matchStatus": "matched-current-region",
+      "mappingMethod": "exact-region-id",
+      "registryId": "0300000000",
+      "registryName": "Region III (Central Luzon)",
+      "registryRegionId": "0300000000",
+      "sourceRegionId": null
+    },
+    {
+      "sourceCode": "0307700000",
+      "sourceLabel": "....Aurora",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "0307700000",
+      "registryName": "Aurora",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "0300000000",
+      "sourceRegionId": "0300000000"
+    },
+    {
+      "sourceCode": "0300800000",
+      "sourceLabel": "....Bataan",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "0300800000",
+      "registryName": "Bataan",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "0300000000",
+      "sourceRegionId": "0300000000"
+    },
+    {
+      "sourceCode": "0301400000",
+      "sourceLabel": "....Bulacan",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "0301400000",
+      "registryName": "Bulacan",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "0300000000",
+      "sourceRegionId": "0300000000"
+    },
+    {
+      "sourceCode": "0304900000",
+      "sourceLabel": "....Nueva Ecija",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "0304900000",
+      "registryName": "Nueva Ecija",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "0300000000",
+      "sourceRegionId": "0300000000"
+    },
+    {
+      "sourceCode": "0305400000",
+      "sourceLabel": "....Pampanga",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "0305400000",
+      "registryName": "Pampanga",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "0300000000",
+      "sourceRegionId": "0300000000"
+    },
+    {
+      "sourceCode": "0306900000",
+      "sourceLabel": "....Tarlac",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "0306900000",
+      "registryName": "Tarlac",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "0300000000",
+      "sourceRegionId": "0300000000"
+    },
+    {
+      "sourceCode": "0307100000",
+      "sourceLabel": "....Zambales",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "0307100000",
+      "registryName": "Zambales",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "0300000000",
+      "sourceRegionId": "0300000000"
+    },
+    {
+      "sourceCode": "0400000000",
+      "sourceLabel": "..Region IV-A (CALABARZON)",
+      "depth": 2,
+      "matchStatus": "matched-current-region",
+      "mappingMethod": "exact-region-id",
+      "registryId": "0400000000",
+      "registryName": "Region IV-A (CALABARZON)",
+      "registryRegionId": "0400000000",
+      "sourceRegionId": null
+    },
+    {
+      "sourceCode": "0401000000",
+      "sourceLabel": "....Batangas",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "0401000000",
+      "registryName": "Batangas",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "0400000000",
+      "sourceRegionId": "0400000000"
+    },
+    {
+      "sourceCode": "0402100000",
+      "sourceLabel": "....Cavite",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "0402100000",
+      "registryName": "Cavite",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "0400000000",
+      "sourceRegionId": "0400000000"
+    },
+    {
+      "sourceCode": "0403400000",
+      "sourceLabel": "....Laguna",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "0403400000",
+      "registryName": "Laguna",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "0400000000",
+      "sourceRegionId": "0400000000"
+    },
+    {
+      "sourceCode": "0405600000",
+      "sourceLabel": "....Quezon",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "0405600000",
+      "registryName": "Quezon",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "0400000000",
+      "sourceRegionId": "0400000000"
+    },
+    {
+      "sourceCode": "0405800000",
+      "sourceLabel": "....Rizal",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "0405800000",
+      "registryName": "Rizal",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "0400000000",
+      "sourceRegionId": "0400000000"
+    },
+    {
+      "sourceCode": "1700000000",
+      "sourceLabel": "..MIMAROPA Region",
+      "depth": 2,
+      "matchStatus": "matched-current-region",
+      "mappingMethod": "exact-region-id",
+      "registryId": "1700000000",
+      "registryName": "MIMAROPA Region",
+      "registryRegionId": "1700000000",
+      "sourceRegionId": null
+    },
+    {
+      "sourceCode": "1704000000",
+      "sourceLabel": "....Marinduque",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "1704000000",
+      "registryName": "Marinduque",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "1700000000",
+      "sourceRegionId": "1700000000"
+    },
+    {
+      "sourceCode": "1705100000",
+      "sourceLabel": "....Occidental Mindoro",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "1705100000",
+      "registryName": "Occidental Mindoro",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "1700000000",
+      "sourceRegionId": "1700000000"
+    },
+    {
+      "sourceCode": "1705200000",
+      "sourceLabel": "....Oriental Mindoro",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "1705200000",
+      "registryName": "Oriental Mindoro",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "1700000000",
+      "sourceRegionId": "1700000000"
+    },
+    {
+      "sourceCode": "1705300000",
+      "sourceLabel": "....Palawan",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "1705300000",
+      "registryName": "Palawan",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "1700000000",
+      "sourceRegionId": "1700000000"
+    },
+    {
+      "sourceCode": "1705900000",
+      "sourceLabel": "....Romblon",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "1705900000",
+      "registryName": "Romblon",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "1700000000",
+      "sourceRegionId": "1700000000"
+    },
+    {
+      "sourceCode": "1731500000",
+      "sourceLabel": "....City of Puerto Princesa",
+      "depth": 4,
+      "matchStatus": "matched-current-city",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "1731500000",
+      "registryName": "City of Puerto Princesa",
+      "registryLevel": "city",
+      "cityClass": "HUC",
+      "registryRegionId": "1700000000",
+      "sourceRegionId": "1700000000"
+    },
+    {
+      "sourceCode": "0500000000",
+      "sourceLabel": "..Region V (Bicol Region)",
+      "depth": 2,
+      "matchStatus": "matched-current-region",
+      "mappingMethod": "exact-region-id",
+      "registryId": "0500000000",
+      "registryName": "Region V (Bicol Region)",
+      "registryRegionId": "0500000000",
+      "sourceRegionId": null
+    },
+    {
+      "sourceCode": "0500500000",
+      "sourceLabel": "....Albay",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "0500500000",
+      "registryName": "Albay",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "0500000000",
+      "sourceRegionId": "0500000000"
+    },
+    {
+      "sourceCode": "0501600000",
+      "sourceLabel": "....Camarines Norte",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "0501600000",
+      "registryName": "Camarines Norte",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "0500000000",
+      "sourceRegionId": "0500000000"
+    },
+    {
+      "sourceCode": "0501700000",
+      "sourceLabel": "....Camarines Sur",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "0501700000",
+      "registryName": "Camarines Sur",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "0500000000",
+      "sourceRegionId": "0500000000"
+    },
+    {
+      "sourceCode": "0502000000",
+      "sourceLabel": "....Catanduanes",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "0502000000",
+      "registryName": "Catanduanes",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "0500000000",
+      "sourceRegionId": "0500000000"
+    },
+    {
+      "sourceCode": "0504100000",
+      "sourceLabel": "....Masbate",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "0504100000",
+      "registryName": "Masbate",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "0500000000",
+      "sourceRegionId": "0500000000"
+    },
+    {
+      "sourceCode": "056200000",
+      "sourceLabel": "....Sorsogon",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-correspondence-code",
+      "registryId": "0506200000",
+      "registryName": "Sorsogon",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "0500000000",
+      "sourceRegionId": "0500000000"
+    },
+    {
+      "sourceCode": "0600000000",
+      "sourceLabel": "..Region VI (Western Visayas)",
+      "depth": 2,
+      "matchStatus": "matched-current-region",
+      "mappingMethod": "exact-region-id",
+      "registryId": "0600000000",
+      "registryName": "Region VI (Western Visayas)",
+      "registryRegionId": "0600000000",
+      "sourceRegionId": null
+    },
+    {
+      "sourceCode": "060400000",
+      "sourceLabel": "....Aklan",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-correspondence-code",
+      "registryId": "0600400000",
+      "registryName": "Aklan",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "0600000000",
+      "sourceRegionId": "0600000000"
+    },
+    {
+      "sourceCode": "0600600000",
+      "sourceLabel": "....Antique",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "0600600000",
+      "registryName": "Antique",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "0600000000",
+      "sourceRegionId": "0600000000"
+    },
+    {
+      "sourceCode": "0601900000",
+      "sourceLabel": "....Capiz",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "0601900000",
+      "registryName": "Capiz",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "0600000000",
+      "sourceRegionId": "0600000000"
+    },
+    {
+      "sourceCode": "0607900000",
+      "sourceLabel": "....Guimaras",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "0607900000",
+      "registryName": "Guimaras",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "0600000000",
+      "sourceRegionId": "0600000000"
+    },
+    {
+      "sourceCode": "0603000000",
+      "sourceLabel": "....Iloilo",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "0603000000",
+      "registryName": "Iloilo",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "0600000000",
+      "sourceRegionId": "0600000000"
+    },
+    {
+      "sourceCode": "1800000000",
+      "sourceLabel": "..Negros Island Region (NIR)",
+      "depth": 2,
+      "matchStatus": "matched-current-region",
+      "mappingMethod": "exact-region-id",
+      "registryId": "1800000000",
+      "registryName": "Negros Island Region (NIR)",
+      "registryRegionId": "1800000000",
+      "sourceRegionId": null
+    },
+    {
+      "sourceCode": "1804500000",
+      "sourceLabel": "....Negros Occidental",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "1804500000",
+      "registryName": "Negros Occidental",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "1800000000",
+      "sourceRegionId": "1800000000"
+    },
+    {
+      "sourceCode": "1804600000",
+      "sourceLabel": "....Negros Oriental",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "1804600000",
+      "registryName": "Negros Oriental",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "1800000000",
+      "sourceRegionId": "1800000000"
+    },
+    {
+      "sourceCode": "1806100000",
+      "sourceLabel": "....Siquijor",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "1806100000",
+      "registryName": "Siquijor",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "1800000000",
+      "sourceRegionId": "1800000000"
+    },
+    {
+      "sourceCode": "1830200000",
+      "sourceLabel": "....City of Bacolod",
+      "depth": 4,
+      "matchStatus": "matched-current-city",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "1830200000",
+      "registryName": "City of Bacolod",
+      "registryLevel": "city",
+      "cityClass": "HUC",
+      "registryRegionId": "1800000000",
+      "sourceRegionId": "1800000000"
+    },
+    {
+      "sourceCode": "0700000000",
+      "sourceLabel": "..Region VII (Central Visayas)",
+      "depth": 2,
+      "matchStatus": "matched-current-region",
+      "mappingMethod": "exact-region-id",
+      "registryId": "0700000000",
+      "registryName": "Region VII (Central Visayas)",
+      "registryRegionId": "0700000000",
+      "sourceRegionId": null
+    },
+    {
+      "sourceCode": "0701200000",
+      "sourceLabel": "....Bohol",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "0701200000",
+      "registryName": "Bohol",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "0700000000",
+      "sourceRegionId": "0700000000"
+    },
+    {
+      "sourceCode": "0702200000",
+      "sourceLabel": "....Cebu",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "0702200000",
+      "registryName": "Cebu",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "0700000000",
+      "sourceRegionId": "0700000000"
+    },
+    {
+      "sourceCode": "0800000000",
+      "sourceLabel": "..Region VIII (Eastern Visayas)",
+      "depth": 2,
+      "matchStatus": "matched-current-region",
+      "mappingMethod": "exact-region-id",
+      "registryId": "0800000000",
+      "registryName": "Region VIII (Eastern Visayas)",
+      "registryRegionId": "0800000000",
+      "sourceRegionId": null
+    },
+    {
+      "sourceCode": "0807800000",
+      "sourceLabel": "....Biliran",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "0807800000",
+      "registryName": "Biliran",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "0800000000",
+      "sourceRegionId": "0800000000"
+    },
+    {
+      "sourceCode": "0802600000",
+      "sourceLabel": "....Eastern Samar",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "0802600000",
+      "registryName": "Eastern Samar",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "0800000000",
+      "sourceRegionId": "0800000000"
+    },
+    {
+      "sourceCode": "0803700000",
+      "sourceLabel": "....Leyte",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "0803700000",
+      "registryName": "Leyte",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "0800000000",
+      "sourceRegionId": "0800000000"
+    },
+    {
+      "sourceCode": "0804800000",
+      "sourceLabel": "....Northern Samar",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "0804800000",
+      "registryName": "Northern Samar",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "0800000000",
+      "sourceRegionId": "0800000000"
+    },
+    {
+      "sourceCode": "0806000000",
+      "sourceLabel": "....Samar",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "0806000000",
+      "registryName": "Samar",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "0800000000",
+      "sourceRegionId": "0800000000"
+    },
+    {
+      "sourceCode": "0806400000",
+      "sourceLabel": "....Southern Leyte",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "0806400000",
+      "registryName": "Southern Leyte",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "0800000000",
+      "sourceRegionId": "0800000000"
+    },
+    {
+      "sourceCode": "0900000000",
+      "sourceLabel": "..Region IX (Zamboanga Peninsula)",
+      "depth": 2,
+      "matchStatus": "matched-current-region",
+      "mappingMethod": "exact-region-id",
+      "registryId": "0900000000",
+      "registryName": "Region IX (Zamboanga Peninsula)",
+      "registryRegionId": "0900000000",
+      "sourceRegionId": null
+    },
+    {
+      "sourceCode": "0906600000",
+      "sourceLabel": "....Sulu",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "0906600000",
+      "registryName": "Sulu",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "0900000000",
+      "sourceRegionId": "0900000000"
+    },
+    {
+      "sourceCode": "0907200000",
+      "sourceLabel": "....Zamboanga del Norte",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "0907200000",
+      "registryName": "Zamboanga del Norte",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "0900000000",
+      "sourceRegionId": "0900000000"
+    },
+    {
+      "sourceCode": "0907300000",
+      "sourceLabel": "....Zamboanga del Sur",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "0907300000",
+      "registryName": "Zamboanga del Sur",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "0900000000",
+      "sourceRegionId": "0900000000"
+    },
+    {
+      "sourceCode": "0908300000",
+      "sourceLabel": "....Zamboanga Sibugay",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "0908300000",
+      "registryName": "Zamboanga Sibugay",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "0900000000",
+      "sourceRegionId": "0900000000"
+    },
+    {
+      "sourceCode": "0931700000",
+      "sourceLabel": "....City of Zamboanga",
+      "depth": 4,
+      "matchStatus": "matched-current-city",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "0931700000",
+      "registryName": "City of Zamboanga",
+      "registryLevel": "city",
+      "cityClass": "HUC",
+      "registryRegionId": "0900000000",
+      "sourceRegionId": "0900000000"
+    },
+    {
+      "sourceCode": "1000000000",
+      "sourceLabel": "..Region X (Nothern Mindanao)",
+      "depth": 2,
+      "matchStatus": "matched-current-region",
+      "mappingMethod": "exact-region-id",
+      "registryId": "1000000000",
+      "registryName": "Region X (Northern Mindanao)",
+      "registryRegionId": "1000000000",
+      "sourceRegionId": null
+    },
+    {
+      "sourceCode": "1001300000",
+      "sourceLabel": "....Bukidnon",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "1001300000",
+      "registryName": "Bukidnon",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "1000000000",
+      "sourceRegionId": "1000000000"
+    },
+    {
+      "sourceCode": "1001800000",
+      "sourceLabel": "....Camiguin",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "1001800000",
+      "registryName": "Camiguin",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "1000000000",
+      "sourceRegionId": "1000000000"
+    },
+    {
+      "sourceCode": "1003500000",
+      "sourceLabel": "....Lanao del Norte",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "1003500000",
+      "registryName": "Lanao del Norte",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "1000000000",
+      "sourceRegionId": "1000000000"
+    },
+    {
+      "sourceCode": "1004200000",
+      "sourceLabel": "....Misamis Occidental",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "1004200000",
+      "registryName": "Misamis Occidental",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "1000000000",
+      "sourceRegionId": "1000000000"
+    },
+    {
+      "sourceCode": "1004300000",
+      "sourceLabel": "....Misamis Oriental",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "1004300000",
+      "registryName": "Misamis Oriental",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "1000000000",
+      "sourceRegionId": "1000000000"
+    },
+    {
+      "sourceCode": "1100000000",
+      "sourceLabel": "..Region XI (Davao Region)",
+      "depth": 2,
+      "matchStatus": "matched-current-region",
+      "mappingMethod": "exact-region-id",
+      "registryId": "1100000000",
+      "registryName": "Region XI (Davao Region)",
+      "registryRegionId": "1100000000",
+      "sourceRegionId": null
+    },
+    {
+      "sourceCode": "1108200000",
+      "sourceLabel": "....Davao de Oro",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "1108200000",
+      "registryName": "Davao de Oro",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "1100000000",
+      "sourceRegionId": "1100000000"
+    },
+    {
+      "sourceCode": "1102300000",
+      "sourceLabel": "....Davao del Norte",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "1102300000",
+      "registryName": "Davao del Norte",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "1100000000",
+      "sourceRegionId": "1100000000"
+    },
+    {
+      "sourceCode": "1102400000",
+      "sourceLabel": "....Davao del Sur",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "1102400000",
+      "registryName": "Davao del Sur",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "1100000000",
+      "sourceRegionId": "1100000000"
+    },
+    {
+      "sourceCode": "1108600000",
+      "sourceLabel": "....Davao Occidental",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "1108600000",
+      "registryName": "Davao Occidental",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "1100000000",
+      "sourceRegionId": "1100000000"
+    },
+    {
+      "sourceCode": "1102500000",
+      "sourceLabel": "....Davao Oriental",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "1102500000",
+      "registryName": "Davao Oriental",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "1100000000",
+      "sourceRegionId": "1100000000"
+    },
+    {
+      "sourceCode": "1130700000",
+      "sourceLabel": "....City of Davao",
+      "depth": 4,
+      "matchStatus": "matched-current-city",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "1130700000",
+      "registryName": "City of Davao",
+      "registryLevel": "city",
+      "cityClass": "HUC",
+      "registryRegionId": "1100000000",
+      "sourceRegionId": "1100000000"
+    },
+    {
+      "sourceCode": "1200000000",
+      "sourceLabel": "..Region XII (SOCCSKSARGEN)",
+      "depth": 2,
+      "matchStatus": "matched-current-region",
+      "mappingMethod": "exact-region-id",
+      "registryId": "1200000000",
+      "registryName": "Region XII (SOCCSKSARGEN)",
+      "registryRegionId": "1200000000",
+      "sourceRegionId": null
+    },
+    {
+      "sourceCode": "1204700000",
+      "sourceLabel": "....Cotabato",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "1204700000",
+      "registryName": "Cotabato",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "1200000000",
+      "sourceRegionId": "1200000000"
+    },
+    {
+      "sourceCode": "1208000000",
+      "sourceLabel": "....Sarangani",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "1208000000",
+      "registryName": "Sarangani",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "1200000000",
+      "sourceRegionId": "1200000000"
+    },
+    {
+      "sourceCode": "1206300000",
+      "sourceLabel": "....South Cotabato",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "1206300000",
+      "registryName": "South Cotabato",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "1200000000",
+      "sourceRegionId": "1200000000"
+    },
+    {
+      "sourceCode": "1206500000",
+      "sourceLabel": "....Sultan Kudarat",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "1206500000",
+      "registryName": "Sultan Kudarat",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "1200000000",
+      "sourceRegionId": "1200000000"
+    },
+    {
+      "sourceCode": "1600000000",
+      "sourceLabel": "..Region XIII (Caraga)",
+      "depth": 2,
+      "matchStatus": "matched-current-region",
+      "mappingMethod": "exact-region-id",
+      "registryId": "1600000000",
+      "registryName": "Region XIII (Caraga)",
+      "registryRegionId": "1600000000",
+      "sourceRegionId": null
+    },
+    {
+      "sourceCode": "1600200000",
+      "sourceLabel": "....Agusan del Norte",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "1600200000",
+      "registryName": "Agusan del Norte",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "1600000000",
+      "sourceRegionId": "1600000000"
+    },
+    {
+      "sourceCode": "1600300000",
+      "sourceLabel": "....Agusan del Sur",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "1600300000",
+      "registryName": "Agusan del Sur",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "1600000000",
+      "sourceRegionId": "1600000000"
+    },
+    {
+      "sourceCode": "1608500000",
+      "sourceLabel": "....Dinagat Islands",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "1608500000",
+      "registryName": "Dinagat Islands",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "1600000000",
+      "sourceRegionId": "1600000000"
+    },
+    {
+      "sourceCode": "1606700000",
+      "sourceLabel": "....Surigao del Norte",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "1606700000",
+      "registryName": "Surigao del Norte",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "1600000000",
+      "sourceRegionId": "1600000000"
+    },
+    {
+      "sourceCode": "1606800000",
+      "sourceLabel": "....Surigao del Sur",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "1606800000",
+      "registryName": "Surigao del Sur",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "1600000000",
+      "sourceRegionId": "1600000000"
+    },
+    {
+      "sourceCode": "1630400000",
+      "sourceLabel": "....City of Butuan",
+      "depth": 4,
+      "matchStatus": "matched-current-city",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "1630400000",
+      "registryName": "City of Butuan",
+      "registryLevel": "city",
+      "cityClass": "HUC",
+      "registryRegionId": "1600000000",
+      "sourceRegionId": "1600000000"
+    },
+    {
+      "sourceCode": "1900000000",
+      "sourceLabel": "..Bangsamoro Autonomous Region in Muslim Mindanao (BARMM)",
+      "depth": 2,
+      "matchStatus": "matched-current-region",
+      "mappingMethod": "exact-region-id",
+      "registryId": "1900000000",
+      "registryName": "Bangsamoro Autonomous Region In Muslim Mindanao (BARMM)",
+      "registryRegionId": "1900000000",
+      "sourceRegionId": null
+    },
+    {
+      "sourceCode": "1900700000",
+      "sourceLabel": "....Basilan",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "1900700000",
+      "registryName": "Basilan",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "1900000000",
+      "sourceRegionId": "1900000000"
+    },
+    {
+      "sourceCode": "1903600000",
+      "sourceLabel": "....Lanao del Sur",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "1903600000",
+      "registryName": "Lanao del Sur",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "1900000000",
+      "sourceRegionId": "1900000000"
+    },
+    {
+      "sourceCode": "1908700000",
+      "sourceLabel": "....Maguindanao del Norte",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "1908700000",
+      "registryName": "Maguindanao del Norte",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "1900000000",
+      "sourceRegionId": "1900000000"
+    },
+    {
+      "sourceCode": "1908800000",
+      "sourceLabel": "....Maguindanao del Sur",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "1908800000",
+      "registryName": "Maguindanao del Sur",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "1900000000",
+      "sourceRegionId": "1900000000"
+    },
+    {
+      "sourceCode": "1906600000",
+      "sourceLabel": "....Sulu a/",
+      "depth": 4,
+      "matchStatus": "unresolved-duplicate-legacy-region-code",
+      "mappingMethod": null,
+      "registryId": null,
+      "registryName": null,
+      "registryLevel": null,
+      "registryRegionId": null,
+      "sourceRegionId": "1900000000",
+      "candidateSameNameRegistryCode": "0906600000",
+      "note": "The source repeats Sulu under a separate 1906600000 code and BARMM parent; do not merge this series with the current Sulu code without PSA confirmation."
+    },
+    {
+      "sourceCode": "1907000000",
+      "sourceLabel": "....Tawi-tawi",
+      "depth": 4,
+      "matchStatus": "matched-current-province",
+      "mappingMethod": "exact-current-psgc-code",
+      "registryId": "1907000000",
+      "registryName": "Tawi-Tawi",
+      "registryLevel": "province",
+      "cityClass": null,
+      "registryRegionId": "1900000000",
+      "sourceRegionId": "1900000000"
+    }
+  ],
+  "coverageComparison": {
+    "sourceStatement": "PSA 2026 QIFS survey-clearance release reports 80 provinces covered.",
+    "sourceUrl": "https://psa.gov.ph/content/psa-clears-four-2026-quarterly-fisheries-surveys-encourages-participation-data-driven",
+    "tableReadout": "The current crosswalk contains 82 province codes and five separately mapped cities. In preliminary 2026 Quarter 2, 78 province TOTAL rows are numeric and four are marked . (Category not applicable); three city TOTAL rows are numeric and two are marked .; the held legacy Sulu row is marked . (Category not applicable).",
+    "interpretation": "The table footnote defines . as Category not applicable and .. as Data not available; neither marker is zero. PSA separately reports QIFS survey coverage of 80 provinces. The table presents 82 current province codes, of which 78 have numeric Q2 2026 totals and four are category not applicable. The available release does not identify the exact 80-code survey roster, so the survey denominator cannot yet be reconciled. Keep the duplicate 1906600000 Sulu series separate from current Sulu 0906600000 until PSA confirms its treatment."
+  },
+  "periodSummary": [
+    {
+      "period": "2025 Quarter 1",
+      "currentProvinceTotals": {
+        "geographyCount": 82,
+        "numericTotalRows": 78,
+        "categoryNotApplicableTotalRows": 4,
+        "dataNotAvailableTotalRows": 0,
+        "blankTotalRows": 0,
+        "sourceCodesByStatus": {
+          ".": [
+            "0200900000",
+            "1806100000",
+            "0906600000",
+            "1907000000"
+          ],
+          "..": [],
+          "blank": []
+        }
+      },
+      "currentCityTotals": {
+        "geographyCount": 5,
+        "numericTotalRows": 1,
+        "categoryNotApplicableTotalRows": 4,
+        "dataNotAvailableTotalRows": 0,
+        "blankTotalRows": 0,
+        "sourceCodesByStatus": {
+          ".": [
+            "1731500000",
+            "1830200000",
+            "0931700000",
+            "1630400000"
+          ],
+          "..": [],
+          "blank": []
+        }
+      },
+      "unresolvedLegacyGeographyTotals": {
+        "geographyCount": 1,
+        "numericTotalRows": 0,
+        "categoryNotApplicableTotalRows": 1,
+        "dataNotAvailableTotalRows": 0,
+        "blankTotalRows": 0,
+        "sourceCodesByStatus": {
+          ".": [
+            "1906600000"
+          ],
+          "..": [],
+          "blank": []
+        }
+      }
+    },
+    {
+      "period": "2025 Quarter 2",
+      "currentProvinceTotals": {
+        "geographyCount": 82,
+        "numericTotalRows": 78,
+        "categoryNotApplicableTotalRows": 4,
+        "dataNotAvailableTotalRows": 0,
+        "blankTotalRows": 0,
+        "sourceCodesByStatus": {
+          ".": [
+            "0200900000",
+            "1806100000",
+            "0906600000",
+            "1907000000"
+          ],
+          "..": [],
+          "blank": []
+        }
+      },
+      "currentCityTotals": {
+        "geographyCount": 5,
+        "numericTotalRows": 1,
+        "categoryNotApplicableTotalRows": 4,
+        "dataNotAvailableTotalRows": 0,
+        "blankTotalRows": 0,
+        "sourceCodesByStatus": {
+          ".": [
+            "1731500000",
+            "1830200000",
+            "0931700000",
+            "1630400000"
+          ],
+          "..": [],
+          "blank": []
+        }
+      },
+      "unresolvedLegacyGeographyTotals": {
+        "geographyCount": 1,
+        "numericTotalRows": 0,
+        "categoryNotApplicableTotalRows": 1,
+        "dataNotAvailableTotalRows": 0,
+        "blankTotalRows": 0,
+        "sourceCodesByStatus": {
+          ".": [
+            "1906600000"
+          ],
+          "..": [],
+          "blank": []
+        }
+      }
+    },
+    {
+      "period": "2025 Quarter 3",
+      "currentProvinceTotals": {
+        "geographyCount": 82,
+        "numericTotalRows": 78,
+        "categoryNotApplicableTotalRows": 4,
+        "dataNotAvailableTotalRows": 0,
+        "blankTotalRows": 0,
+        "sourceCodesByStatus": {
+          ".": [
+            "0200900000",
+            "1806100000",
+            "0906600000",
+            "1907000000"
+          ],
+          "..": [],
+          "blank": []
+        }
+      },
+      "currentCityTotals": {
+        "geographyCount": 5,
+        "numericTotalRows": 1,
+        "categoryNotApplicableTotalRows": 4,
+        "dataNotAvailableTotalRows": 0,
+        "blankTotalRows": 0,
+        "sourceCodesByStatus": {
+          ".": [
+            "1731500000",
+            "1830200000",
+            "0931700000",
+            "1630400000"
+          ],
+          "..": [],
+          "blank": []
+        }
+      },
+      "unresolvedLegacyGeographyTotals": {
+        "geographyCount": 1,
+        "numericTotalRows": 0,
+        "categoryNotApplicableTotalRows": 1,
+        "dataNotAvailableTotalRows": 0,
+        "blankTotalRows": 0,
+        "sourceCodesByStatus": {
+          ".": [
+            "1906600000"
+          ],
+          "..": [],
+          "blank": []
+        }
+      }
+    },
+    {
+      "period": "2025 Quarter 4",
+      "currentProvinceTotals": {
+        "geographyCount": 82,
+        "numericTotalRows": 78,
+        "categoryNotApplicableTotalRows": 4,
+        "dataNotAvailableTotalRows": 0,
+        "blankTotalRows": 0,
+        "sourceCodesByStatus": {
+          ".": [
+            "0200900000",
+            "1806100000",
+            "0906600000",
+            "1907000000"
+          ],
+          "..": [],
+          "blank": []
+        }
+      },
+      "currentCityTotals": {
+        "geographyCount": 5,
+        "numericTotalRows": 1,
+        "categoryNotApplicableTotalRows": 4,
+        "dataNotAvailableTotalRows": 0,
+        "blankTotalRows": 0,
+        "sourceCodesByStatus": {
+          ".": [
+            "1731500000",
+            "1830200000",
+            "0931700000",
+            "1630400000"
+          ],
+          "..": [],
+          "blank": []
+        }
+      },
+      "unresolvedLegacyGeographyTotals": {
+        "geographyCount": 1,
+        "numericTotalRows": 0,
+        "categoryNotApplicableTotalRows": 1,
+        "dataNotAvailableTotalRows": 0,
+        "blankTotalRows": 0,
+        "sourceCodesByStatus": {
+          ".": [
+            "1906600000"
+          ],
+          "..": [],
+          "blank": []
+        }
+      }
+    },
+    {
+      "period": "2026 Quarter 1",
+      "currentProvinceTotals": {
+        "geographyCount": 82,
+        "numericTotalRows": 77,
+        "categoryNotApplicableTotalRows": 4,
+        "dataNotAvailableTotalRows": 1,
+        "blankTotalRows": 0,
+        "sourceCodesByStatus": {
+          ".": [
+            "0200900000",
+            "1806100000",
+            "0906600000",
+            "1907000000"
+          ],
+          "..": [
+            "1900700000"
+          ],
+          "blank": []
+        }
+      },
+      "currentCityTotals": {
+        "geographyCount": 5,
+        "numericTotalRows": 1,
+        "categoryNotApplicableTotalRows": 4,
+        "dataNotAvailableTotalRows": 0,
+        "blankTotalRows": 0,
+        "sourceCodesByStatus": {
+          ".": [
+            "1731500000",
+            "1830200000",
+            "0931700000",
+            "1630400000"
+          ],
+          "..": [],
+          "blank": []
+        }
+      },
+      "unresolvedLegacyGeographyTotals": {
+        "geographyCount": 1,
+        "numericTotalRows": 0,
+        "categoryNotApplicableTotalRows": 1,
+        "dataNotAvailableTotalRows": 0,
+        "blankTotalRows": 0,
+        "sourceCodesByStatus": {
+          ".": [
+            "1906600000"
+          ],
+          "..": [],
+          "blank": []
+        }
+      }
+    },
+    {
+      "period": "2026 Quarter 2",
+      "currentProvinceTotals": {
+        "geographyCount": 82,
+        "numericTotalRows": 78,
+        "categoryNotApplicableTotalRows": 4,
+        "dataNotAvailableTotalRows": 0,
+        "blankTotalRows": 0,
+        "sourceCodesByStatus": {
+          ".": [
+            "0200900000",
+            "1806100000",
+            "0906600000",
+            "1907000000"
+          ],
+          "..": [],
+          "blank": []
+        }
+      },
+      "currentCityTotals": {
+        "geographyCount": 5,
+        "numericTotalRows": 3,
+        "categoryNotApplicableTotalRows": 2,
+        "dataNotAvailableTotalRows": 0,
+        "blankTotalRows": 0,
+        "sourceCodesByStatus": {
+          ".": [
+            "1731500000",
+            "0931700000"
+          ],
+          "..": [],
+          "blank": []
+        }
+      },
+      "unresolvedLegacyGeographyTotals": {
+        "geographyCount": 1,
+        "numericTotalRows": 0,
+        "categoryNotApplicableTotalRows": 1,
+        "dataNotAvailableTotalRows": 0,
+        "blankTotalRows": 0,
+        "sourceCodesByStatus": {
+          ".": [
+            "1906600000"
+          ],
+          "..": [],
+          "blank": []
+        }
+      }
+    },
+    {
+      "period": "2026 Quarter 3",
+      "currentProvinceTotals": {
+        "geographyCount": 82,
+        "numericTotalRows": 0,
+        "categoryNotApplicableTotalRows": 0,
+        "dataNotAvailableTotalRows": 82,
+        "blankTotalRows": 0,
+        "sourceCodesByStatus": {
+          ".": [],
+          "..": [
+            "1400100000",
+            "1408100000",
+            "1401100000",
+            "1402700000",
+            "1403200000",
+            "1404400000",
+            "0102800000",
+            "0102900000",
+            "0103300000",
+            "0105500000",
+            "0200900000",
+            "0201500000",
+            "0203100000",
+            "0205000000",
+            "0205700000",
+            "0307700000",
+            "0300800000",
+            "0301400000",
+            "0304900000",
+            "0305400000",
+            "0306900000",
+            "0307100000",
+            "0401000000",
+            "0402100000",
+            "0403400000",
+            "0405600000",
+            "0405800000",
+            "1704000000",
+            "1705100000",
+            "1705200000",
+            "1705300000",
+            "1705900000",
+            "0500500000",
+            "0501600000",
+            "0501700000",
+            "0502000000",
+            "0504100000",
+            "056200000",
+            "060400000",
+            "0600600000",
+            "0601900000",
+            "0607900000",
+            "0603000000",
+            "1804500000",
+            "1804600000",
+            "1806100000",
+            "0701200000",
+            "0702200000",
+            "0807800000",
+            "0802600000",
+            "0803700000",
+            "0804800000",
+            "0806000000",
+            "0806400000",
+            "0906600000",
+            "0907200000",
+            "0907300000",
+            "0908300000",
+            "1001300000",
+            "1001800000",
+            "1003500000",
+            "1004200000",
+            "1004300000",
+            "1108200000",
+            "1102300000",
+            "1102400000",
+            "1108600000",
+            "1102500000",
+            "1204700000",
+            "1208000000",
+            "1206300000",
+            "1206500000",
+            "1600200000",
+            "1600300000",
+            "1608500000",
+            "1606700000",
+            "1606800000",
+            "1900700000",
+            "1903600000",
+            "1908700000",
+            "1908800000",
+            "1907000000"
+          ],
+          "blank": []
+        }
+      },
+      "currentCityTotals": {
+        "geographyCount": 5,
+        "numericTotalRows": 0,
+        "categoryNotApplicableTotalRows": 0,
+        "dataNotAvailableTotalRows": 5,
+        "blankTotalRows": 0,
+        "sourceCodesByStatus": {
+          ".": [],
+          "..": [
+            "1731500000",
+            "1830200000",
+            "0931700000",
+            "1130700000",
+            "1630400000"
+          ],
+          "blank": []
+        }
+      },
+      "unresolvedLegacyGeographyTotals": {
+        "geographyCount": 1,
+        "numericTotalRows": 0,
+        "categoryNotApplicableTotalRows": 0,
+        "dataNotAvailableTotalRows": 1,
+        "blankTotalRows": 0,
+        "sourceCodesByStatus": {
+          ".": [],
+          "..": [
+            "1906600000"
+          ],
+          "blank": []
+        }
+      }
+    },
+    {
+      "period": "2026 Quarter 4",
+      "currentProvinceTotals": {
+        "geographyCount": 82,
+        "numericTotalRows": 0,
+        "categoryNotApplicableTotalRows": 0,
+        "dataNotAvailableTotalRows": 82,
+        "blankTotalRows": 0,
+        "sourceCodesByStatus": {
+          ".": [],
+          "..": [
+            "1400100000",
+            "1408100000",
+            "1401100000",
+            "1402700000",
+            "1403200000",
+            "1404400000",
+            "0102800000",
+            "0102900000",
+            "0103300000",
+            "0105500000",
+            "0200900000",
+            "0201500000",
+            "0203100000",
+            "0205000000",
+            "0205700000",
+            "0307700000",
+            "0300800000",
+            "0301400000",
+            "0304900000",
+            "0305400000",
+            "0306900000",
+            "0307100000",
+            "0401000000",
+            "0402100000",
+            "0403400000",
+            "0405600000",
+            "0405800000",
+            "1704000000",
+            "1705100000",
+            "1705200000",
+            "1705300000",
+            "1705900000",
+            "0500500000",
+            "0501600000",
+            "0501700000",
+            "0502000000",
+            "0504100000",
+            "056200000",
+            "060400000",
+            "0600600000",
+            "0601900000",
+            "0607900000",
+            "0603000000",
+            "1804500000",
+            "1804600000",
+            "1806100000",
+            "0701200000",
+            "0702200000",
+            "0807800000",
+            "0802600000",
+            "0803700000",
+            "0804800000",
+            "0806000000",
+            "0806400000",
+            "0906600000",
+            "0907200000",
+            "0907300000",
+            "0908300000",
+            "1001300000",
+            "1001800000",
+            "1003500000",
+            "1004200000",
+            "1004300000",
+            "1108200000",
+            "1102300000",
+            "1102400000",
+            "1108600000",
+            "1102500000",
+            "1204700000",
+            "1208000000",
+            "1206300000",
+            "1206500000",
+            "1600200000",
+            "1600300000",
+            "1608500000",
+            "1606700000",
+            "1606800000",
+            "1900700000",
+            "1903600000",
+            "1908700000",
+            "1908800000",
+            "1907000000"
+          ],
+          "blank": []
+        }
+      },
+      "currentCityTotals": {
+        "geographyCount": 5,
+        "numericTotalRows": 0,
+        "categoryNotApplicableTotalRows": 0,
+        "dataNotAvailableTotalRows": 5,
+        "blankTotalRows": 0,
+        "sourceCodesByStatus": {
+          ".": [],
+          "..": [
+            "1731500000",
+            "1830200000",
+            "0931700000",
+            "1130700000",
+            "1630400000"
+          ],
+          "blank": []
+        }
+      },
+      "unresolvedLegacyGeographyTotals": {
+        "geographyCount": 1,
+        "numericTotalRows": 0,
+        "categoryNotApplicableTotalRows": 0,
+        "dataNotAvailableTotalRows": 1,
+        "blankTotalRows": 0,
+        "sourceCodesByStatus": {
+          ".": [],
+          "..": [
+            "1906600000"
+          ],
+          "blank": []
+        }
+      }
+    }
+  ],
+  "officialTableNotes": {
+    "url": "https://openstat.psa.gov.ph/PXWeb/pxweb/en/DB/DB__2E__FS/0052E4GVIP0.px/",
+    "symbols": {
+      ".": "Category not applicable",
+      "..": "Data not available"
+    },
+    "zeroNotation": "0.00 denotes volume of production is less than two decimal points but not zero.",
+    "preliminaryNote": "Q2 2026 available data is preliminary."
+  }
+}

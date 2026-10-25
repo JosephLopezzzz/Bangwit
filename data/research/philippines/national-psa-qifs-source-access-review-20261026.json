@@ -3,7 +3,7 @@
   "reviewedOn": "2026-10-26",
   "phaseId": "L1",
   "scope": "Philippines-wide discovery source for inland-fisheries statistics; not a waterbody inventory",
-  "status": "official-PSA-openstat-qifs-source-verified;province-and-region-resolution;live-data-extraction-pending",
+  "status": "official-PSA-PXWeb-export-reproduced;107-geographies-crosswalked;legacy-Sulu-and-survey-roster-held;zero-species-claims",
   "sourceId": "psa-openstat-qifs-inland-production-national",
   "source": {
     "title": "Inland Municipal Fisheries: Volume of Production by Geolocation, Species, Year and Quarter",
@@ -30,7 +30,7 @@
       "maximumRowsOnScreen": 1000,
       "maximumColumnsOnScreen": 50,
       "survey": "Quarterly Inland Fisheries Survey (QIFS)",
-      "sourceStatus": "Metadata reports latest available year 2025; no values were extracted or retained in this review."
+      "sourceStatus": "Metadata reports latest available year 2025; the official API returns numeric 2025 totals and 2026 Q1 and preliminary Q2 values, while 2026 Q3/Q4 cells are marked .. (Data not available)."
     },
     "liveTableFindings": {
       "visibleYears": [
@@ -44,25 +44,196 @@
         3
       ],
       "preliminaryNote": "The interactive table notes that Q2 2026 values are preliminary.",
-      "conflict": "The live table interface exposes 2026 quarter columns while its metadata record says latest available year 2025; confirm exact populated cells and release status through a reproducible export before ingesting any values."
+      "conflict": "The official PXWeb schema identifies 2026 as a selectable year and the reproducible national query returns Q1 and Q2 values. Metadata still says latest available year 2025; update the metadata record or confirm its lag. The table marks Q2 2026 preliminary; Q3 and Q4 currently return only the unavailable marker."
     },
     "directApiAttempt": {
-      "endpoint": "https://openstat.psa.gov.ph/api/v1/en/DB/DB__2E__FS/0052E4GVIP0.px",
-      "result": "Direct command-line metadata request returned HTTP 403; this is an access-path limitation, not evidence that the official table/API is unavailable.",
+      "attemptedEndpoint": "https://openstat.psa.gov.ph/api/v1/en/DB/DB__2E__FS/0052E4GVIP0.px",
+      "result": "The preliminary request used an incorrect endpoint path and returned HTTP 403. The canonical PXWeb endpoint below responds successfully; the earlier 403 was not an access restriction.",
       "rawSnapshot": null
     },
-    "crossCoverage": "PSA's 2026 survey-clearance release states QIFS coverage is 80 provinces. The national rollout registry must reconcile the covered geography by year and must not treat unlisted or suppressed values as zero or species absence."
+    "crossCoverage": "PSA reports QIFS coverage of 80 provinces. The crosswalk identifies 82 current province codes, five separately reported cities, and one unresolved duplicate legacy Sulu code. Preliminary 2026 Q2 has 78 numeric province totals and four . (Category not applicable) province totals. The public release does not provide the exact 80-code QIFS roster, so do not infer which codes were surveyed from the aggregate statement.",
+    "successfulApiExport": {
+      "endpoint": "https://openstat.psa.gov.ph/PXWeb/api/v1/en/DB/2E/FS/0052E4GVIP0.px",
+      "retrievedOn": "2026-10-26",
+      "years": [
+        {
+          "label": 2025,
+          "code": "23"
+        },
+        {
+          "label": 2026,
+          "code": "24"
+        }
+      ],
+      "selectedDimensions": {
+        "geolocationCount": 107,
+        "speciesCount": 38,
+        "quarterLabels": [
+          "Quarter 1",
+          "Quarter 2",
+          "Quarter 3",
+          "Quarter 4"
+        ]
+      },
+      "selectedCells": 32528,
+      "maximumCellsPerRequest": 100000,
+      "responseRows": 4066,
+      "responseBytes": 301585,
+      "querySha256": "4458d23649f9cfaf0e4ef701b555cce0a9383406b2a2255d6b68f64f271148c6",
+      "responseSha256": "6e9797a160c786110b2efc4546592f6ff3950d8be366db924e354848a5c2eae1",
+      "localRawSnapshot": "raw/national-qifs-2025-2026-quarterly-openstat.csv",
+      "localRawSnapshotIgnoredByGit": true,
+      "geographyScopeNote": "The 107 geographies include one national total, 18 regions, 82 current provinces, five separately mapped cities, and one unresolved legacy Sulu code (1906600000); current Sulu (0906600000) remains a separate matched province.",
+      "periods": [
+        {
+          "period": "2025 Quarter 1",
+          "leafGeographicRows": 88,
+          "availableCells": 1404,
+          "unavailableCells": 1598,
+          "numericTotalRows": 79,
+          "numericLeafCategoryCells": 1104,
+          "literalZeroDotZeroCells": 28,
+          "categoryNotApplicableCells": 342,
+          "blankCells": 0,
+          "nonNumericStatusCounts": {
+            "..": 1598,
+            ".": 342
+          }
+        },
+        {
+          "period": "2025 Quarter 2",
+          "leafGeographicRows": 88,
+          "availableCells": 1377,
+          "unavailableCells": 1625,
+          "numericTotalRows": 79,
+          "numericLeafCategoryCells": 1083,
+          "literalZeroDotZeroCells": 32,
+          "categoryNotApplicableCells": 342,
+          "blankCells": 0,
+          "nonNumericStatusCounts": {
+            "..": 1625,
+            ".": 342
+          }
+        },
+        {
+          "period": "2025 Quarter 3",
+          "leafGeographicRows": 88,
+          "availableCells": 1374,
+          "unavailableCells": 1628,
+          "numericTotalRows": 79,
+          "numericLeafCategoryCells": 1079,
+          "literalZeroDotZeroCells": 29,
+          "categoryNotApplicableCells": 342,
+          "blankCells": 0,
+          "nonNumericStatusCounts": {
+            "..": 1628,
+            ".": 342
+          }
+        },
+        {
+          "period": "2025 Quarter 4",
+          "leafGeographicRows": 88,
+          "availableCells": 1350,
+          "unavailableCells": 1652,
+          "numericTotalRows": 79,
+          "numericLeafCategoryCells": 1058,
+          "literalZeroDotZeroCells": 19,
+          "categoryNotApplicableCells": 342,
+          "blankCells": 0,
+          "nonNumericStatusCounts": {
+            "..": 1652,
+            ".": 342
+          }
+        },
+        {
+          "period": "2026 Quarter 1",
+          "leafGeographicRows": 88,
+          "availableCells": 1329,
+          "unavailableCells": 1673,
+          "numericTotalRows": 78,
+          "numericLeafCategoryCells": 1043,
+          "literalZeroDotZeroCells": 15,
+          "categoryNotApplicableCells": 342,
+          "blankCells": 0,
+          "nonNumericStatusCounts": {
+            "..": 1673,
+            ".": 342
+          }
+        },
+        {
+          "period": "2026 Quarter 2",
+          "leafGeographicRows": 88,
+          "availableCells": 1386,
+          "unavailableCells": 1692,
+          "numericTotalRows": 81,
+          "numericLeafCategoryCells": 1088,
+          "literalZeroDotZeroCells": 23,
+          "categoryNotApplicableCells": 266,
+          "blankCells": 0,
+          "nonNumericStatusCounts": {
+            "..": 1692,
+            ".": 266
+          }
+        },
+        {
+          "period": "2026 Quarter 3",
+          "leafGeographicRows": 88,
+          "availableCells": 0,
+          "unavailableCells": 3344,
+          "numericTotalRows": 0,
+          "numericLeafCategoryCells": 0,
+          "literalZeroDotZeroCells": 0,
+          "categoryNotApplicableCells": 0,
+          "blankCells": 0,
+          "nonNumericStatusCounts": {
+            "..": 3344
+          }
+        },
+        {
+          "period": "2026 Quarter 4",
+          "leafGeographicRows": 88,
+          "availableCells": 0,
+          "unavailableCells": 3344,
+          "numericTotalRows": 0,
+          "numericLeafCategoryCells": 0,
+          "literalZeroDotZeroCells": 0,
+          "categoryNotApplicableCells": 0,
+          "blankCells": 0,
+          "nonNumericStatusCounts": {
+            "..": 3344
+          }
+        }
+      ],
+      "statusSymbols": {
+        ".": "Category not applicable",
+        "..": "Data not available"
+      },
+      "zeroNotation": "0.00 denotes volume of production is less than two decimal points but not zero.",
+      "crosswalk": {
+        "path": "national-psa-qifs-geolocation-crosswalk-20261026.json",
+        "sha256": "895ae9fb2b62bcab6ccef4630c364d0991ecd1633a680ce96e568a812e7f2d17",
+        "counts": {
+          "nationalRollups": 1,
+          "regionsMatched": 18,
+          "provincesMatched": 82,
+          "citiesMatched": 5,
+          "unresolved": 1
+        }
+      }
+    },
+    "nextAction": "Continue locality-resolved source research for named Luzon rivers, lakes, reservoirs, wetlands and coastal waters, using QIFS only to prioritize searches. Separately request PSA confirmation of the 80-province QIFS roster and the duplicate legacy Sulu code treatment. Preserve . (Category not applicable), .. (Data not available), 0.00, and preliminary Q2 values as distinct source states; do not project provincial totals into waterbody or species claims."
   },
   "decision": {
     "use": "Use QIFS as a fast province/region-level candidate and research-prioritization layer across Luzon, Visayas, and Mindanao, then validate candidates against locality-resolved surveys or specimen records for each named waterbody.",
     "waterbodyResolution": "No river, lake, reservoir, wetland, marsh, sample station, or household identity is exposed in the reviewed metadata; provincial production is not assignable to a particular waterbody.",
-    "valuesExtracted": 0,
     "speciesAssertionsAdded": 0,
     "waterbodyAssignmentsAdded": 0,
     "scientificNamesAssigned": 0,
     "publicAppProjectionAdded": false,
     "publicationApproval": false,
-    "regionalBaselineComplete": false
+    "regionalBaselineComplete": false,
+    "statisticalValuesAddedToSpeciesClaims": 0,
+    "statisticalValuesProjectedToApp": 0
   },
   "limitations": [
     "The table reports production categories and catches, not a complete fish inventory, occurrence event database, or exhaustive regional species checklist.",
@@ -70,7 +241,9 @@
     "The live-table and metadata latest-year statements conflict and must be reconciled before data are imported.",
     "PSA 2026 clearance covers 80 provinces for QIFS; exact coverage varies by survey year and requires explicit coverage accounting.",
     "Common production labels may be broader than species rank; do not assign scientific names from common names alone.",
-    "Production quantity is not abundance, current presence in a specific waterbody, catchability, safety, legal access, or diet evidence."
+    "Production quantity is not abundance, current presence in a specific waterbody, catchability, safety, legal access, or diet evidence.",
+    "The official table footnote defines . as Category not applicable and .. as Data not available; both must remain distinct from numeric zero. 0.00 is explicitly a nonzero production value below the displayed two-decimal precision.",
+    "PSA reports survey coverage of 80 provinces, while the dimension crosswalk contains 82 current province codes and four preliminary 2026 Q2 province totals marked Category not applicable. The exact covered-province roster is not exposed in the reviewed release."
   ],
-  "nextAction": "Build a reproducible, versioned QIFS export in province-by-year chunks under the 100,000-cell limit; record exact selected values, suppressed/missing-cell states, query bytes and response hashes. Reconcile coverage for each year, then use the rows only to prioritize locality-level source searches."
+  "nextAction": "Crosswalk all 107 geography codes to the current administrative registry and the 80-province QIFS coverage statement, resolving city units and the two Sulu-coded entries. Use the existing national fetch script for selected year batches at or below the 100,000-cell cap, preserve every .. unavailable marker and 0.00 note, then rank local river, lake, reservoir, wetland and coastal source searches without assigning provincial production to a waterbody."
 }

@@ -4740,23 +4740,25 @@
       "checkedOn": "2026-10-26",
       "sourceYear": 2026,
       "access": {
-        "status": "official-metadata-and-live-table-reviewed-online;query-extraction-not-yet-reproducible;direct-api-request-403",
+        "status": "official-PSA-PXWeb-national-export-and-geography-crosswalk-verified;one-legacy-Sulu-code-held;waterbody-resolution-unavailable",
         "reviewFiles": [
-          "national-psa-qifs-source-access-review-20261026.json"
+          "national-psa-qifs-source-access-review-20261026.json",
+          "national-psa-qifs-geolocation-crosswalk-20261026.json"
         ],
-        "localRawSnapshot": null
+        "localRawSnapshot": "raw/national-qifs-2025-2026-quarterly-openstat.csv"
       },
       "reuse": {
         "metadata": "PSA OpenSTAT metadata says content is public domain unless otherwise stated, and the table page marks copyright No. Retain PSA attribution and verify table-specific notices before redistribution.",
-        "raw": "No statistical values, API response, CSV, or table export was acquired or retained in this review.",
+        "raw": "The official 2025 and partial 2026 quarterly response is retained only as an ignored local research snapshot; query and response hashes are recorded in the access review. It is not committed as a national production dataset.",
         "content": "Use production labels to prioritize site-level research only. Do not treat province-level statistics as waterbody occurrences, abundance, complete checklists, or public app assertions."
       },
       "publicationApproval": false,
-      "researchStatus": "national-QIFS-source-verified;regional-and-provincial-statistics;live-extraction-pending;zero-species-assertions",
+      "researchStatus": "national-QIFS-quarterly-statistics-2025-and-partial-2026;82-current-provinces-5-cities-crosswalked;one-legacy-Sulu-held;zero-species-claims",
       "license": "Public domain unless otherwise stated (PSA OpenSTAT metadata; verify table-specific notices)",
       "caveats": [
-        "Metadata says latest available year 2025 while the live table shows 2026 quarter columns and labels Q2 2026 preliminary; reconcile exact populated cells and release status before extraction.",
-        "PSA's 2026 QIFS survey-clearance source says coverage is 80 provinces; coverage must be checked by year.",
+        "OpenSTAT metadata says latest available year 2025 while the official API returns 2025 data and 2026 Q1 and preliminary Q2; 2026 Q3 and Q4 are marked .. (Data not available).",
+        "The official table defines . as Category not applicable and .. as Data not available; neither marker means zero. 0.00 is explicitly a nonzero amount below two-decimal display precision.",
+        "The crosswalk maps 82 current provinces and five cities; PSA separately reports 80 covered provinces but the exact roster is not supplied in the reviewed release. The duplicate legacy Sulu code remains separate pending confirmation.",
         "No named inland waterbody, station, household, or exact collection locality is provided by the reviewed metadata.",
         "Common categories and production totals do not support species-rank identity, present local occurrence, abundance, catchability, safety, or diet."
       ]
