@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "title": "Balayan USNM 122919 Albatross station and reuse cross-check",
+  "reviewedOn": "2026-10-25",
+  "catalogIdentity": {
+    "institutionCode": "USNM",
+    "catalogNumber": "122919",
+    "scientificName": "Ventrifossa divergens",
+    "sourceEventDate": "1908-01-20"
+  },
+  "stationTable": {
+    "sourceId": "albatross-philippine-station-table-1910",
+    "title": "Dredging and Hydrographic Records of the U.S. Fisheries Steamer Albatross during the Philippine Expedition, 1907-1910",
+    "publisher": "U.S. Bureau of Fisheries, Document 741",
+    "sourceYear": 1910,
+    "tableHeading": "Balayan Bay and Verde Id. Passage — Continued",
+    "stationDate": "1908-01-20",
+    "stations": [
+      {
+        "station": "D 5115",
+        "stationText": "Sombrero Island bearing N. 49° E., 7.30 miles",
+        "depthMeters": 622
+      },
+      {
+        "station": "D 5116",
+        "stationText": "Sombrero Island bearing N. 69° E., 2.50 miles",
+        "depthMeters": 366
+      }
+    ],
+    "rawOcr": {
+      "path": "raw/calabarzon-balayan-albatross-stations-20261025/dredginghydrogra00unit_djvu.txt",
+      "bytes": 275456,
+      "sha256": "d8348b819e376d7d1df2f5cb3e6693864b3a99911938287e60a666361b925f09",
+      "coordinateBearing": true
+    },
+    "trackedCoordinates": false,
+    "interpretation": "The printed station table groups both rows under Balayan Bay and Verde Island Passage. This establishes the candidate station area, but not an exclusive assignment to Balayan Bay for the specimen."
+  },
+  "laterTaxonomicPublication": {
+    "sourceId": "iwamoto-etal-2015-usnm-122919-depth-crosscheck",
+    "citation": "Iwamoto, T., Nakayama, N., Shao, K.-T. & Ho, H.-C. 2015. Synopsis of the Grenadier Fishes (Gadiformes; Teleostei) of Taiwan. Proceedings of the California Academy of Sciences, Series 4, 62(3): 31–126.",
+    "articleUrl": "https://doi.org/10.5281/zenodo.11512126",
+    "evidencePage": 107,
+    "reportedSpecimen": "USNM 122919",
+    "reportedLocality": "off northeastern Mindoro",
+    "reportedDepthMeters": 623,
+    "stationNumberExplicitlyGiven": false,
+    "role": "Specimen-specific taxonomic literature cross-check; not a primary station log or independent collection event."
+  },
+  "comparison": {
+    "nmnhSourceStationText": "D 5115 OR D 5116",
+    "nmnhSourceDepthRangeMeters": [
+      366,
+      622
+    ],
+    "depthMatch": "The later publication’s 623 m value is consistent with D 5115 at 622 m after rounding and inconsistent with D 5116 at 366 m.",
+    "stationAssignment": "D 5115 is a strong inference, not an explicit crosswalk: the later article does not name a station, and its locality wording (off northeastern Mindoro) differs from the direct NMNH record’s combined Sombrero Island, Balayan Bay and Verde Island Passage text.",
+    "exactWaterbodyAssignment": "Unresolved. The station table groups both candidate positions under Balayan Bay and Verde Island Passage, while the specimen-specific article uses a different broad locality. Do not assign this record exclusively to the Balayan Bay waterbody."
+  },
+  "reuse": {
+    "gbifOccurrenceRows": {
+      "license": "CC0 1.0",
+      "verifiedOnAllFiveRows": true
+    },
+    "nmnhDataset": {
+      "title": "NMNH Extant Specimen Records (USNM, US)",
+      "url": "https://collections.nmnh.si.edu/ipt/resource?r=nmnh_extant_dwc-a",
+      "version": "1.113",
+      "publishedOn": "2026-10-02",
+      "license": "CC0 1.0",
+      "scope": "Dataset-level record metadata; the direct Fishes search record itself exposes no item-level license field."
+    },
+    "decision": "Dataset and GBIF-row metadata reuse terms are verified as CC0. This does not grant any separate rights to specimen images or third-party article text; no image or full-text passage is copied."
+  },
+  "summary": {
+    "oneUniqueCatalogItem": true,
+    "fiveGbifCitationRowsRemainGrouped": true,
+    "historicalOccurrenceAdmitted": false,
+    "publicAppAdmission": false,
+    "mapPointAdmission": false,
+    "currentPresenceInferred": false,
+    "completeChecklistClaimed": false,
+    "trackedCoordinates": false
+  },
+  "decision": {
+    "researchLedger": "hold-single-catalog-record-exact-waterbody-scope-unresolved",
+    "reason": "Rights are verified at the GBIF-row and NMNH dataset levels. Exact station remains inferred rather than explicit, and the locality descriptions do not isolate one waterbody. Preserve one catalog identity, all source wording and GBIF quality flags; admit no Balayan Bay-only occurrence, public row or map point."
+  }
+}

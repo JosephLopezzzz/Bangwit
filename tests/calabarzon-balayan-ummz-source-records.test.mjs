@@ -84,8 +84,8 @@ test("UMMZ taxonomy and GBIF quality flags stay attached to an undated research 
 });
 
 test("UMMZ source and regional gap hashes are current while the five USNM rows stay held", () => {
-  assert.equal(registry.sourceCount, 147);
-  assert.equal(registry.sources.length, 147);
+  assert.equal(registry.sourceCount, 149);
+  assert.equal(registry.sources.length, 149);
   const institution = registry.sources.find((source) => source.id === "ummz-balayan-primary-archive-check");
   const taxonomy = registry.sources.find((source) => source.id === "worms-balayan-sillago-sihama-taxonomy-crosscheck");
   assert.ok(institution && taxonomy);
@@ -93,7 +93,7 @@ test("UMMZ source and regional gap hashes are current while the five USNM rows s
   assert.equal(institution.license, "CC BY 4.0");
   assert.equal(taxonomy.publicationApproval, false);
   assert.equal(taxonomy.license, null);
-  assert.equal(gap.coverageSummary.registeredSources, 147);
+  assert.equal(gap.coverageSummary.registeredSources, 149);
   assert.equal(gap.inputHashes.sourcesSha256, digest(bytes[3]));
   assert.equal(gap.inputHashes.balayanUmmzSourceSha256, digest(bytes[0]));
   assert.equal(gap.inputHashes.balayanUmmzRowDecisionsSha256, digest(bytes[1]));
@@ -101,8 +101,8 @@ test("UMMZ source and regional gap hashes are current while the five USNM rows s
   assert.equal(balayan.count, 14);
   assert.ok(balayan.sourceRefs.includes(institution.id));
   assert.ok(balayan.sourceRefs.includes(taxonomy.id));
-  assert.match(balayan.reason, /eight candidates have dated historical.*one has undated source-locality evidence/i);
-  assert.match(balayan.nextAction, /five remaining.*USNM.*item-level reuse/i);
+  assert.match(balayan.reason, /eight candidates have dated historical locality evidence.*one undated locality candidate/i);
+  assert.match(balayan.nextAction, /rights are no longer the blocker/i);
   assert.equal(gap.coverageSummary.admittedPublicRecords, 0);
   assert.equal(gap.coverageSummary.regionalBaselineComplete, false);
 });

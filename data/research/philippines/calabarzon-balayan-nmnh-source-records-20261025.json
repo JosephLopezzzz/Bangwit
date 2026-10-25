@@ -30,7 +30,7 @@
     "locality": "Sombrero Island; Balayan Bay and Verde Island Passage",
     "expedition": "Albatross Philippine Expedition, 1907-1910",
     "itemLevelLicense": null,
-    "itemLevelLicenseInterpretation": "No item-level license field was present in the retrieved NMNH Fishes search record. iDigBio's recordset-level CC0 metadata is not treated as a substitute for a source-item reuse statement."
+    "itemLevelLicenseInterpretation": "No item-level license field was present in the NMNH Fishes record. Reuse is instead verified from the GBIF occurrence rows (CC0) and the official NMNH Extant Specimen Records dataset (CC0 1.0, version 1.113 published 2026-10-02); do not extend that dataset license to images or third-party article text."
   },
   "taxonomyCrosscheck": {
     "provider": "World Register of Marine Species (WoRMS)",
@@ -52,14 +52,29 @@
   "comparison": {
     "idigbioReview": "calabarzon-balayan-idigbio-catalog-check-20261025.json",
     "idigbioUuid": "17dd5e12-1f3c-49f0-b2d4-60fe6b6c12c9",
-    "gbifCandidateIds": ["4904905416", "4904905469", "4904905541", "4904905801", "4904905907"],
-    "fieldsCompared": ["institutionCode", "catalogNumber", "scientificName", "eventDate", "locality"],
+    "gbifCandidateIds": [
+      "4904905416",
+      "4904905469",
+      "4904905541",
+      "4904905801",
+      "4904905907"
+    ],
+    "fieldsCompared": [
+      "institutionCode",
+      "catalogNumber",
+      "scientificName",
+      "eventDate",
+      "locality"
+    ],
     "institutionAndCatalogIdentityMatch": true,
     "scientificNameMatches": true,
     "sourceEventDateMatches": true,
     "localityTextMatches": true,
     "localityScopeIsSingleSite": false,
-    "interpretation": "Five GBIF MATERIAL_CITATION rows and one iDigBio record resolve to the same NMNH catalog item. Its source locality combines Sombrero Island, Balayan Bay, and Verde Island Passage; it does not identify one exact station or support five independent occurrences."
+    "interpretation": "Five GBIF MATERIAL_CITATION rows and one iDigBio record resolve to the same NMNH catalog item. Its source locality combines Sombrero Island, Balayan Bay, and Verde Island Passage; it does not identify one exact station or support five independent occurrences.",
+    "stationCrosswalkReview": "calabarzon-balayan-usnm-station-crosswalk-20261025.json",
+    "stationAssignment": "D 5115 is a strong depth-based inference from a 2015 taxonomic paper (623 m versus 622 m), not explicitly stated; direct NMNH still says D 5115 OR D 5116.",
+    "geographyConflict": "The 1910 station table groups both choices under Balayan Bay and Verde Island Passage; the 2015 specimen-specific paper says off northeastern Mindoro. Exclusive Bay attribution remains unresolved."
   },
   "summary": {
     "exactInstitutionCatalogRecordMatched": true,
@@ -68,7 +83,9 @@
     "multiLocalityScopeRetained": true,
     "sourceItemLicenseVerified": false,
     "gbifCitationRowsCollapsedToOneCatalogIdentity": true,
-    "coordinatesIncluded": false
+    "coordinatesIncluded": false,
+    "sourceDatasetLicenseVerified": true,
+    "gbifCitationRowsCC0Verified": true
   },
   "decision": {
     "historicalOccurrenceAdmitted": false,
@@ -76,6 +93,14 @@
     "mapPointAdmission": false,
     "currentPresenceInferred": false,
     "completeChecklistClaimed": false,
-    "reason": "The NMNH record verifies USNM catalog 122919, Ventrifossa divergens and the source date 1908-01-20. The verbatim locality combines multiple named places and the retrieved record does not state an item-level reuse license. Keep all five GBIF citations grouped under this single catalog identity and held from occurrence, map and public app claims until locality scope and reuse terms are resolved."
+    "reason": "The direct NMNH record resolves the five GBIF material citations to one dated catalog lot and WoRMS returns the exact accepted species name. Dataset and GBIF-row reuse terms are verified as CC0. The source says D 5115 OR D 5116; the 1910 station table places both in a Balayan Bay/Verde Island Passage area, and a 2015 species paper gives a 623 m off-northeastern-Mindoro locality consistent with D 5115 but does not state the station. Preserve all source wording and GBIF flags. Exact station and exclusive waterbody attribution remain unresolved, so do not add a Balayan Bay-only occurrence, public app row or map point."
+  },
+  "sourceDatasetLicense": {
+    "provider": "National Museum of Natural History, Smithsonian Institution",
+    "url": "https://collections.nmnh.si.edu/ipt/resource?r=nmnh_extant_dwc-a",
+    "version": "1.113",
+    "publishedOn": "2026-10-02",
+    "license": "CC0 1.0",
+    "scope": "Dataset-level metadata; the direct Fishes record has no item-level license field."
   }
 }

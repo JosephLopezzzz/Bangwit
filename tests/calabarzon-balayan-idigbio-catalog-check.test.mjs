@@ -16,8 +16,10 @@ const [
   fieldMuseumBytes,
   nmnhReview,
   nmnhDecision,
+  stationCrosswalk,
   nmnhReviewBytes,
   nmnhDecisionBytes,
+  stationCrosswalkBytes,
 ] = await Promise.all([
   readFile(new URL("calabarzon-balayan-idigbio-catalog-check-20261025.json", base), "utf8").then(JSON.parse),
   readFile(new URL("calabarzon-balayan-gbif-record-details-20261025.json", base), "utf8").then(JSON.parse),
@@ -30,8 +32,10 @@ const [
   readFile(new URL("calabarzon-balayan-fieldmuseum-source-records-20261025.json", base)),
   readFile(new URL("calabarzon-balayan-nmnh-source-records-20261025.json", base), "utf8").then(JSON.parse),
   readFile(new URL("calabarzon-balayan-nmnh-row-decisions-20261025.json", base), "utf8").then(JSON.parse),
+  readFile(new URL("calabarzon-balayan-usnm-station-crosswalk-20261025.json", base), "utf8").then(JSON.parse),
   readFile(new URL("calabarzon-balayan-nmnh-source-records-20261025.json", base)),
   readFile(new URL("calabarzon-balayan-nmnh-row-decisions-20261025.json", base)),
+  readFile(new URL("calabarzon-balayan-usnm-station-crosswalk-20261025.json", base)),
 ]);
 
 function hasCoordinateKey(value) {
@@ -108,17 +112,18 @@ test("source registry and CALABARZON gap snapshot record the iDigBio follow-up",
   const gap = gapReport.openGaps.find((item) => item.id === "balayan-bay-museum-catalog-review");
   assert.ok(gap);
   assert.equal(gap.count, 14);
-  assert.match(gap.nextAction, /USNM.*item-level reuse/i);
+  assert.match(gap.nextAction, /rights are no longer the blocker/i);
   assert.equal(
     gapReport.inputHashes.balayanFieldMuseumSourceSha256,
     createHash("sha256").update(fieldMuseumBytes).digest("hex"),
   );
-  assert.equal(gapReport.coverageSummary.registeredSources, 147);
+  assert.equal(gapReport.coverageSummary.registeredSources, 149);
   assert.match(gap.reason, /two FMNH and six CAS SU\(ICH\) records.*historical research-ledger evidence/i);
-  assert.match(gap.nextAction, /five remaining.*quality flags/i);
+  assert.match(gap.nextAction, /five citations grouped as one item/i);
+  assert.match(gap.nextAction, /D 5115 versus D 5116/i);
 });
 
-test("NMNH directly confirms the grouped USNM catalog identity while locality and reuse stay held", () => {
+test("NMNH crosswalk verifies reuse but holds the grouped USNM item from a bay-specific claim", () => {
   assert.equal(nmnhReview.record.institutionCode, "USNM");
   assert.equal(nmnhReview.record.catalogNumber, "122919");
   assert.equal(nmnhReview.record.scientificName, "Ventrifossa divergens");
@@ -126,6 +131,12 @@ test("NMNH directly confirms the grouped USNM catalog identity while locality an
   assert.equal(nmnhReview.record.verbatimEventDate, "20 Jan 1908");
   assert.equal(nmnhReview.record.locality, "Sombrero Island; Balayan Bay and Verde Island Passage");
   assert.equal(nmnhReview.record.itemLevelLicense, null);
+  assert.equal(nmnhReview.summary.sourceDatasetLicenseVerified, true);
+  assert.equal(nmnhReview.summary.gbifCitationRowsCC0Verified, true);
+  assert.equal(nmnhReview.summary.sourceItemLicenseVerified, false);
+  assert.equal(nmnhReview.sourceDatasetLicense.license, "CC0 1.0");
+  assert.equal(nmnhReview.comparison.stationCrosswalkReview, "calabarzon-balayan-usnm-station-crosswalk-20261025.json");
+  assert.equal(nmnhReview.comparison.localityScopeIsSingleSite, false);
   assert.equal(nmnhReview.summary.exactInstitutionCatalogRecordMatched, true);
   assert.equal(nmnhReview.summary.gbifCitationRowsCollapsedToOneCatalogIdentity, true);
   assert.equal(nmnhReview.decision.historicalOccurrenceAdmitted, false);
@@ -140,6 +151,8 @@ test("NMNH directly confirms the grouped USNM catalog identity while locality an
   assert.equal(nmnhDecision.summary.uniqueInstitutionCatalogIdentities, 1);
   assert.equal(nmnhDecision.summary.historicalOccurrencesAdmitted, 0);
   assert.equal(nmnhDecision.summary.publicAppRowsAdded, 0);
+  assert.equal(nmnhDecision.summary.datasetReuseVerified, true);
+  assert.equal(nmnhDecision.decision.researchLedger, "hold-single-catalog-record-exact-waterbody-scope-review");
   assert.deepEqual(
     nmnhDecision.gbifCitationRows.map(({ gbifId }) => gbifId),
     ["4904905416", "4904905469", "4904905541", "4904905801", "4904905907"],
@@ -153,6 +166,19 @@ test("NMNH directly confirms the grouped USNM catalog identity while locality an
   );
   assert.equal(hasCoordinateKey(nmnhReview), false);
   assert.equal(hasCoordinateKey(nmnhDecision), false);
+  assert.equal(stationCrosswalk.catalogIdentity.catalogNumber, "122919");
+  assert.deepEqual(stationCrosswalk.stationTable.stations.map(({ station, depthMeters }) => [station, depthMeters]), [
+    ["D 5115", 622],
+    ["D 5116", 366],
+  ]);
+  assert.equal(stationCrosswalk.laterTaxonomicPublication.reportedSpecimen, "USNM 122919");
+  assert.equal(stationCrosswalk.laterTaxonomicPublication.reportedDepthMeters, 623);
+  assert.equal(stationCrosswalk.laterTaxonomicPublication.stationNumberExplicitlyGiven, false);
+  assert.match(stationCrosswalk.comparison.stationAssignment, /strong inference, not an explicit crosswalk/i);
+  assert.match(stationCrosswalk.comparison.exactWaterbodyAssignment, /Unresolved/i);
+  assert.equal(stationCrosswalk.summary.historicalOccurrenceAdmitted, false);
+  assert.equal(stationCrosswalk.summary.trackedCoordinates, false);
+  assert.equal(hasCoordinateKey(stationCrosswalk), false);
 
   const nmnhSource = registry.sources.find((source) => source.id === "nmnh-balayan-usnm-122919-primary-record-check");
   const wormsSource = registry.sources.find(
@@ -160,11 +186,13 @@ test("NMNH directly confirms the grouped USNM catalog identity while locality an
   );
   assert.ok(nmnhSource);
   assert.ok(wormsSource);
+  assert.ok(registry.sources.find((source) => source.id === "albatross-philippine-station-table-1910"));
+  assert.ok(registry.sources.find((source) => source.id === "iwamoto-etal-2015-usnm-122919-depth-crosscheck"));
   assert.equal(nmnhSource.publicationApproval, false);
   assert.equal(wormsSource.publicationApproval, false);
-  assert.equal(registry.sourceCount, 147);
+  assert.equal(registry.sourceCount, 149);
   assert.equal(registry.sourceCount, registry.sources.length);
-  assert.equal(gapReport.coverageSummary.registeredSources, 147);
+  assert.equal(gapReport.coverageSummary.registeredSources, 149);
   assert.equal(gapReport.inputHashes.sourcesSha256, createHash("sha256").update(sourceBytes).digest("hex"));
   assert.equal(
     gapReport.inputHashes.balayanNmnhSourceSha256,
@@ -174,9 +202,15 @@ test("NMNH directly confirms the grouped USNM catalog identity while locality an
     gapReport.inputHashes.balayanNmnhRowDecisionsSha256,
     createHash("sha256").update(nmnhDecisionBytes).digest("hex"),
   );
+  assert.equal(
+    gapReport.inputHashes.balayanNmnhStationCrosswalkSha256,
+    createHash("sha256").update(stationCrosswalkBytes).digest("hex"),
+  );
   const gap = gapReport.openGaps.find((item) => item.id === "balayan-bay-museum-catalog-review");
-  assert.match(gap.reason, /NMNH Fishes search confirms USNM 122919/i);
-  assert.match(gap.nextAction, /multi-locality wording and item-level reuse/i);
+  assert.match(gap.reason, /direct NMNH record gives D 5115 OR D 5116/i);
+  assert.match(gap.reason, /CC0.*D 5115 OR D 5116/is);
+  assert.match(gap.nextAction, /rights are no longer the blocker/i);
+  assert.match(gap.nextAction, /station.*broad locality wording/i);
 });
 
 test("Field Museum archive confirms its two Balayan catalog rows without promoting indexed dates", () => {

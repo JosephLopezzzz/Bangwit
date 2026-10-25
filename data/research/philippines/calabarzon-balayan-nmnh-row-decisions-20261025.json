@@ -6,7 +6,7 @@
   "taxonomyProvider": "World Register of Marine Species (WoRMS)",
   "qualityIssueGuidance": "https://techdocs.gbif.org/en/data-use/occurrence-issues-and-flags",
   "inputHashes": {
-    "institutionReview": "376922656f884d0ea50d7df4f48b64608fac8b9b564762b9b17ef2a5bc870f15",
+    "institutionReview": "19d2c8fff8a571b4d3529c74a69374e11efdc1373995c00bf197f14628e4b4ef",
     "gbif": "6e466c1df40085b70d314da6af314ecc56ea9cd72da737cc9cf6c1757c80d1e9"
   },
   "catalogIdentity": {
@@ -105,15 +105,23 @@
     "qualityFlagsPreservedOnEveryRow": true,
     "historicalOccurrencesAdmitted": 0,
     "publicAppRowsAdded": 0,
-    "coordinateRowsAdded": 0
+    "coordinateRowsAdded": 0,
+    "datasetReuseVerified": true,
+    "itemLevelLicenseFieldPresent": false
   },
   "decision": {
-    "researchLedger": "hold-single-catalog-record-locality-and-rights-review",
+    "researchLedger": "hold-single-catalog-record-exact-waterbody-scope-review",
     "historicalOccurrenceAdmitted": false,
     "publicAppAdmission": false,
     "mapPointAdmission": false,
     "currentPresenceInferred": false,
     "completeChecklistClaimed": false,
-    "reason": "The direct NMNH record resolves the five GBIF material citations to one dated catalog lot and WoRMS returns the exact accepted species name. Preserve the source's full multi-locality wording and all GBIF flags. Because the source text does not isolate one collection station within Balayan Bay and no item-level reuse license was returned, do not treat the five rows as independent Balayan occurrences or publish them as a species record yet. Balayan Bay is also outside the current Cavite pilot."
+    "reason": "The NMNH record resolves the five GBIF material citations to one catalog item, and dataset/row reuse terms are verified as CC0. The original catalog says D 5115 OR D 5116; the 1910 station table groups both under Balayan Bay and Verde Island Passage. A 2015 paper reports USNM 122919 at 623 m off northeastern Mindoro, making D 5115 a strong depth-based inference (622 m) but not an explicit station crosswalk. Keep all GBIF quality flags, do not duplicate the five citations, and hold the item from a Balayan Bay-only occurrence, public app row and map point until exact station and waterbody scope are established."
+  },
+  "stationCrosswalkReview": "calabarzon-balayan-usnm-station-crosswalk-20261025.json",
+  "reuseAssessment": {
+    "gbifOccurrenceRows": "All five grouped citation rows expose CC0 1.0.",
+    "nmnhDataset": "Official NMNH IPT resource version 1.113 (published 2026-10-02) specifies CC0 1.0 for the dataset.",
+    "recordLevel": "The direct NMNH Fishes response has no item-level license field; dataset-level terms are documented separately and are not represented as an item-level field."
   }
 }

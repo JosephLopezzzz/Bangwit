@@ -3,7 +3,7 @@
   "checkedOn": "2026-10-25",
   "status": "research-only-source-registry",
   "scope": "National acquisition references and CALABARZON/Central Luzon identity/source leads. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 147,
+  "sourceCount": 149,
   "sources": [
     {
       "id": "gbif-col-xr-taxonomy-matching",
@@ -3924,15 +3924,17 @@
       "url": "https://collections.nmnh.si.edu/search/fishes/?nb=122919",
       "additionalUrls": [
         "https://collections.nmnh.si.edu/search/fishes/",
-        "https://naturalhistory.si.edu/research/idsc/data-access"
+        "https://naturalhistory.si.edu/research/idsc/data-access",
+        "https://collections.nmnh.si.edu/ipt/resource?r=nmnh_extant_dwc-a"
       ],
-      "role": "Direct catalog-source cross-check for the five GBIF material-citation rows grouped under USNM 122919; verifies one NMNH record, its species name, day-precision source date, and full multi-locality wording. Not a field survey or current-presence source.",
+      "role": "Direct catalog-source cross-check for five GBIF material-citation rows grouped under one USNM 122919 record; verifies identity, name, date and the source locality while retaining the exact-station and specific-waterbody ambiguity.",
       "checkedOn": "2026-10-25",
       "access": {
-        "status": "official-NMNH-search-returned-exact-USNM-catalog-record-by-name-query",
+        "status": "official-NMNH-record-crosschecked-with-station-table-and-specimen-specific-taxonomic-literature;station-and-exclusive-waterbody-unresolved",
         "reviewFiles": [
           "calabarzon-balayan-nmnh-source-records-20261025.json",
-          "calabarzon-balayan-nmnh-row-decisions-20261025.json"
+          "calabarzon-balayan-nmnh-row-decisions-20261025.json",
+          "calabarzon-balayan-usnm-station-crosswalk-20261025.json"
         ],
         "additionalRawPaths": [
           "raw/calabarzon-balayan-nmnh-source-check-20261025/"
@@ -3941,17 +3943,18 @@
         "coordinatesRetained": false
       },
       "reuse": {
-        "metadata": "The retrieved NMNH Fishes search record did not return an item-level license field. iDigBio recordset-level CC0 metadata is not treated as a source-item license or reuse authorization.",
-        "raw": "The complete search response is coordinate-bearing and remains in ignored local research storage. The tracked review contains only selected non-coordinate fields and a SHA-256.",
-        "content": "NMNH confirms the USNM 122919 catalog identity, Ventrifossa divergens and 1908-01-20 source date. Its locality field lists Sombrero Island, Balayan Bay and Verde Island Passage together. The five GBIF material citations remain grouped as one source catalog item and held from public occurrence claims pending locality-scope and reuse review."
+        "metadata": "The direct NMNH Fishes result has no item-level license field. The official NMNH Extant Specimen Records IPT resource version 1.113 (published 2026-10-02) specifies CC0 1.0 at dataset level; all five GBIF citation rows also expose CC0 1.0. Do not treat these data terms as rights to specimen images or third-party article text.",
+        "raw": "The complete NMNH search response and Albatross station OCR are coordinate-bearing and remain in ignored local research storage. Tracked reviews omit coordinates and retain selected metadata plus SHA-256 values.",
+        "content": "NMNH confirms one USNM 122919 Ventrifossa divergens record dated 1908-01-20. The source states D 5115 OR D 5116; both candidate stations appear in the 1910 station-table area named Balayan Bay and Verde Island Passage. A 2015 paper reports 623 m off northeastern Mindoro, consistent with D 5115 at 622 m but without an explicit station number. Rights are verified at dataset/GBIF-row scope; specific waterbody assignment remains held."
       },
       "publicationApproval": false,
-      "researchStatus": "one-direct-institution-catalog-match;five-gbif-citations-grouped-as-one;multi-locality-and-item-rights-held;zero-public-assertions",
-      "license": null,
+      "researchStatus": "one-direct-institution-catalog-match;five-gbif-citations-grouped-as-one;dataset-rights-verified;exact-station-and-waterbody-scope-held;zero-public-assertions",
+      "license": "CC0-1.0",
       "caveats": [
-        "NMNH search documentation says its online database includes only a portion of holdings and notes that staff-added geographic retrieval fields may not be geographically accurate.",
-        "The source locality combines multiple named places and does not isolate a single station within Balayan Bay.",
-        "No item-level reuse license was exposed in the retrieved source record; no map point or current-presence claim is admitted."
+        "The NMNH search documentation notes that the online database includes only a portion of holdings and staff-added geographic retrieval fields may not be geographically accurate.",
+        "The direct source lists D 5115 OR D 5116. A later publication makes D 5115 a strong depth-based inference but does not state the station number; preserve this as unresolved.",
+        "The station table places both candidates under Balayan Bay and Verde Island Passage, and the specimen-specific publication uses an off-northeastern-Mindoro locality. Do not assign exclusively to Balayan Bay.",
+        "Reuse is verified at dataset and GBIF-row scope as CC0 1.0; no specimen image or third-party article text is copied, and no map point/current-presence claim is admitted."
       ]
     },
     {
@@ -4151,6 +4154,73 @@
       "caveats": [
         "WoRMS nomenclatural acceptance does not independently re-identify the UMMZ specimen.",
         "No date, current-presence, map or complete-inventory claim follows from the taxonomic record."
+      ]
+    },
+    {
+      "id": "albatross-philippine-station-table-1910",
+      "title": "Dredging and Hydrographic Records of the U.S. Fisheries Steamer Albatross during the Philippine Expedition, 1907-1910",
+      "provider": "U.S. Bureau of Fisheries, Document 741",
+      "url": "https://archive.org/details/dredginghydrogra00unit",
+      "additionalUrls": [
+        "https://archive.org/download/dredginghydrogra00unit/dredginghydrogra00unit_djvu.txt"
+      ],
+      "role": "Primary historical station table for Albatross D 5115 and D 5116 on 1908-01-20; station context only and does not identify which alternative applies to USNM 122919.",
+      "checkedOn": "2026-10-25",
+      "access": {
+        "status": "1910-station-table-OCR-checked-for-D5115-and-D5116",
+        "reviewFiles": [
+          "calabarzon-balayan-usnm-station-crosswalk-20261025.json"
+        ],
+        "additionalRawPaths": [
+          "raw/calabarzon-balayan-albatross-stations-20261025/dredginghydrogra00unit_djvu.txt"
+        ],
+        "fieldAllowlistOnly": true,
+        "coordinatesRetained": false,
+        "rawSha256": "d8348b819e376d7d1df2f5cb3e6693864b3a99911938287e60a666361b925f09"
+      },
+      "reuse": {
+        "metadata": "1910 United States federal Bureau of Fisheries publication; public domain as a U.S. government work. OCR is used only as an access aid; the digitized printed page is the authoritative source.",
+        "raw": "Coordinate-bearing OCR copy remains in ignored local research storage; no coordinates are tracked.",
+        "content": "The station table groups D 5115 and D 5116 under Balayan Bay and Verde Island Passage, dated 1908-01-20. It supplies candidate position descriptions but cannot choose which station is USNM 122919."
+      },
+      "publicationApproval": false,
+      "researchStatus": "primary-historical-station-source;station-crosswalk-candidate-only;zero-occurrence-claims",
+      "license": "Public domain (U.S. federal government work)",
+      "sourceYear": 1910,
+      "caveats": [
+        "The station table establishes station locations, not the link from catalog 122919 to one of the two candidate stations.",
+        "No station coordinates are carried into the tracked review."
+      ]
+    },
+    {
+      "id": "iwamoto-etal-2015-usnm-122919-depth-crosscheck",
+      "title": "Synopsis of the Grenadier Fishes (Gadiformes; Teleostei) of Taiwan",
+      "provider": "Iwamoto, Nakayama, Shao and Ho; Proceedings of the California Academy of Sciences",
+      "url": "https://doi.org/10.5281/zenodo.11512126",
+      "additionalUrls": [
+        "https://www.biodiversitylibrary.org/item/254199"
+      ],
+      "role": "Specimen-specific literature cross-check: lists USNM 122919 as Ventrifossa divergens, 623 m, off northeastern Mindoro. It does not provide the Albatross station number; not treated as a primary station log.",
+      "checkedOn": "2026-10-25",
+      "access": {
+        "status": "published-paper-specimen-catalog-number-and-depth-checked",
+        "reviewFiles": [
+          "calabarzon-balayan-usnm-station-crosswalk-20261025.json"
+        ],
+        "evidencePage": 107,
+        "coordinatesRetained": false
+      },
+      "reuse": {
+        "metadata": "Bibliographic citation and specimen-number/depth facts are recorded as concise factual metadata. No paper text or figure is reproduced, and no separate article license is asserted here.",
+        "content": "Used only to assess the D 5115 versus D 5116 alternative by comparing the specimen-specific reported depth (623 m) with the 1910 station depths (622 m and 366 m). This is a strong inference, not an explicit station identification."
+      },
+      "publicationApproval": false,
+      "researchStatus": "specimen-specific-secondary-crosscheck;supports-D5115-inference;not-an-explicit-station-match",
+      "license": null,
+      "sourceYear": 2015,
+      "caveats": [
+        "Its locality says off northeastern Mindoro, differing from the direct NMNH locality field.",
+        "The station number is not stated; do not silently resolve the NMNH D 5115 OR D 5116 field."
       ]
     }
   ],
