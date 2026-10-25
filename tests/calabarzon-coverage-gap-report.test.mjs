@@ -4,7 +4,7 @@ import { readFile } from "node:fs/promises";
 import { test } from "node:test";
 
 const base = new URL("../data/research/philippines/", import.meta.url);
-const [report, scope, sweep, sourceRegistry, scopeBytes, sourceBytes, museumBytes] = await Promise.all([
+const [report, scope, sweep, sourceRegistry, scopeBytes, sourceBytes, museumBytes, taxonomyFollowupBytes] = await Promise.all([
   readFile(new URL("calabarzon-coverage-gap-report-20261025.json", base), "utf8").then(JSON.parse),
   readFile(new URL("calabarzon-scope.json", base), "utf8").then(JSON.parse),
   readFile(new URL("calabarzon-coverage-source-sweep.json", base), "utf8").then(JSON.parse),
@@ -12,6 +12,7 @@ const [report, scope, sweep, sourceRegistry, scopeBytes, sourceBytes, museumByte
   readFile(new URL("calabarzon-scope.json", base), "utf8"),
   readFile(new URL("sources.json", base), "utf8"),
   readFile(new URL("calabarzon-laguna-museum-catalog-verification-20261025.json", base), "utf8"),
+  readFile(new URL("calabarzon-laguna-cas-taxonomy-followup-20261025.json", base), "utf8"),
 ]);
 
 test("CALABARZON checkpoint reports its gaps without claiming a complete region", () => {
@@ -47,6 +48,10 @@ test("CALABARZON checkpoint reports its gaps without claiming a complete region"
     report.inputHashes.lagunaMuseumVerificationSha256,
     createHash("sha256").update(museumBytes).digest("hex"),
   );
+  assert.equal(
+    report.inputHashes.lagunaTaxonomyFollowupSha256,
+    createHash("sha256").update(taxonomyFollowupBytes).digest("hex"),
+  );
   assert.deepEqual(
     report.waterbodySnapshot,
     scope.waterbodies.map((waterbody) => ({
@@ -66,15 +71,15 @@ test("CALABARZON checkpoint reports its gaps without claiming a complete region"
   assert.match(report.nextStep.action, /do not advance to NCR or mark CALABARZON complete/i);
   assert.ok(report.openGaps.some((gap) => gap.id === "scope-not-exhaustive"));
   const museumGap = report.openGaps.find((gap) => gap.id === "laguna-museum-catalog-conflicts");
-  assert.equal(museumGap.count, 6);
+  assert.equal(museumGap.count, 2);
   assert.equal(museumGap.candidateRecords, 18);
-  assert.equal(museumGap.historicalAssertionsAdmittedToResearchLedger, 12);
+  assert.equal(museumGap.historicalAssertionsAdmittedToResearchLedger, 16);
   assert.deepEqual(museumGap.sourceRefs, [
     "calabarzon-laguna-cas-primary-archive-check",
     "calabarzon-laguna-mzusp-sibbr-catalog",
   ]);
-  assert.match(museumGap.reason, /17 exact collection-qualified.*12 historical.*five remain held/i);
-  assert.match(museumGap.nextAction, /five CAS taxonomy holds.*MZUSP/i);
+  assert.match(museumGap.reason, /17 exact collection-qualified.*16 historical.*one CAS name remains held/i);
+  assert.match(museumGap.nextAction, /remaining Taenioides caeculus author-year conflict.*MZUSP/i);
   assert.equal(report.coverageSummary.admittedPublicRecords, 0);
   assert.equal(report.coverageSummary.regionalBaselineComplete, false);
   assert.equal(sweep.regionalGapSummary.regionalBaselineComplete, false);
