@@ -1,0 +1,475 @@
+{
+  "schemaVersion": 1,
+  "batchId": "calabarzon-laguna-museum-catalog-verification-20261025",
+  "reviewedOn": "2026-10-25",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "waterbody": {
+    "id": "ph-wb-laguna-de-bay",
+    "name": "Laguna de Bay",
+    "kind": "lake"
+  },
+  "status": "partial-institution-linked-catalog-check;all-18-records-held",
+  "inputs": [
+    {
+      "file": "calabarzon-laguna-gbif-record-details-20261025.json",
+      "sha256": "c11327bc8da9e6e783aea26b948ce6d5a7973cf842de623ccb52f404ddfecdf6"
+    },
+    {
+      "file": "calabarzon-laguna-cof-taxonomy-20261025.json",
+      "sha256": "4e5e79965cacaf9a413bbef9eabfd636a435fa652e10e00241db100355974c9c"
+    }
+  ],
+  "method": {
+    "mzuspOfficialCollectionPage": "https://mz.usp.br/pt/laboratorios/ictiologia/",
+    "mzuspCatalogPortal": "https://ala-hub.sibbr.gov.br/ala-hub/occurrence/search?q=collection_uid%3Aco119",
+    "mzuspSearchUrl": "https://ala-hub.sibbr.gov.br/ala-hub/proxy/occurrences/search?q=collection_uid%3Aco119+AND+catalogNumber%3A118522&pageSize=20",
+    "apiDocsUrl": "https://specieslink.net/ws/1.0/",
+    "speciesLinkApiAccess": "The public SpeciesLink API requires an API key; no key was used or included.",
+    "mzuspCollectionProfile": "https://specieslink.net/col/MZUSP/",
+    "mzuspMethod": "MZUSP's official ichthyology page links its online collection to the SiBBr-hosted occurrence catalog. Queried the MZUSP collection UID and source catalog number, then retrieved each portal record by UUID. Only allowlisted non-coordinate fields were retained; response hashes cover the full response bytes.",
+    "casPortal": {
+      "collectionSearchHelp": "https://researcharchive.calacademy.org/research/ichthyology/collection/help.asp",
+      "currentPortalUrl": "https://monarch.calacademy.org/collections/list.php?db=6&reset=1",
+      "checkedOn": "2026-10-25",
+      "result": "The CAS Monarch portal displayed an offline notice stating it had been taken offline on 2026-10-21 while rebuilt. One legacy CAS catalog-number query returned HTTP 200 generic portal shell HTML with no item-level record fields. Seventeen CAS occurrence items therefore remain unverified; this is an access limitation, not evidence that those items do not exist."
+    },
+    "limitations": [
+      "A portal record match does not establish that a specimen was re-identified by an expert or that the reported locality is geographically precise.",
+      "A source/GBIF license conflict is held for rights review; no permission is inferred from availability through a public portal.",
+      "No record establishes present-day presence, abundance, catchability, safety, or a complete Laguna de Bay checklist."
+    ]
+  },
+  "sourceCollectionSearch": {
+    "status": "OK",
+    "totalRecords": 2,
+    "retrievedMatchingRows": 2,
+    "uniqueOccurrenceIds": [
+      "9d743c1c-b99b-4d99-bde2-8d65a9370534"
+    ],
+    "searchResponse": {
+      "bytes": 3092,
+      "sha256": "db75285b57e4aa01b415f2a5f6dd73e3e5fc574fda4988936135c34723764436"
+    }
+  },
+  "records": [
+    {
+      "gbifId": "473214923",
+      "institutionCode": "CAS",
+      "collectionCode": "ICH",
+      "catalogNumber": "20515",
+      "occurrenceId": "urn:catalog:CAS:ICH:20515",
+      "taxonomyDisposition": "independent-name-crosscheck-agrees",
+      "sourceCatalogStatus": "not-independently-verified-cas-collection-search-offline",
+      "decision": "hold-no-historical-assertion",
+      "holdReasons": [
+        "The current public CAS Monarch collection portal displays an offline notice; the legacy catalog URL returned a generic shell without item-level record content.",
+        "No absence claim is made; the source item must be checked when CAS catalog access is restored or by another authorized source route."
+      ]
+    },
+    {
+      "gbifId": "3426412971",
+      "institutionCode": "CAS",
+      "collectionCode": "SU(ICH)",
+      "catalogNumber": "13543",
+      "occurrenceId": "urn:catalog:CAS:SU(ICH):13543",
+      "taxonomyDisposition": "independent-name-crosscheck-agrees",
+      "sourceCatalogStatus": "not-independently-verified-cas-collection-search-offline",
+      "decision": "hold-no-historical-assertion",
+      "holdReasons": [
+        "The current public CAS Monarch collection portal displays an offline notice; the legacy catalog URL returned a generic shell without item-level record content.",
+        "No absence claim is made; the source item must be checked when CAS catalog access is restored or by another authorized source route."
+      ]
+    },
+    {
+      "gbifId": "3426418612",
+      "institutionCode": "CAS",
+      "collectionCode": "SU(ICH)",
+      "catalogNumber": "26213",
+      "occurrenceId": "urn:catalog:CAS:SU(ICH):26213",
+      "taxonomyDisposition": "independent-name-crosscheck-agrees",
+      "sourceCatalogStatus": "not-independently-verified-cas-collection-search-offline",
+      "decision": "hold-no-historical-assertion",
+      "holdReasons": [
+        "The current public CAS Monarch collection portal displays an offline notice; the legacy catalog URL returned a generic shell without item-level record content.",
+        "No absence claim is made; the source item must be checked when CAS catalog access is restored or by another authorized source route."
+      ]
+    },
+    {
+      "gbifId": "3426421626",
+      "institutionCode": "CAS",
+      "collectionCode": "SU(ICH)",
+      "catalogNumber": "26272",
+      "occurrenceId": "urn:catalog:CAS:SU(ICH):26272",
+      "taxonomyDisposition": "independent-name-crosscheck-agrees",
+      "sourceCatalogStatus": "not-independently-verified-cas-collection-search-offline",
+      "decision": "hold-no-historical-assertion",
+      "holdReasons": [
+        "The current public CAS Monarch collection portal displays an offline notice; the legacy catalog URL returned a generic shell without item-level record content.",
+        "No absence claim is made; the source item must be checked when CAS catalog access is restored or by another authorized source route."
+      ]
+    },
+    {
+      "gbifId": "3426422618",
+      "institutionCode": "CAS",
+      "collectionCode": "SU(ICH)",
+      "catalogNumber": "26316",
+      "occurrenceId": "urn:catalog:CAS:SU(ICH):26316",
+      "taxonomyDisposition": "independent-name-crosscheck-agrees",
+      "sourceCatalogStatus": "not-independently-verified-cas-collection-search-offline",
+      "decision": "hold-no-historical-assertion",
+      "holdReasons": [
+        "The current public CAS Monarch collection portal displays an offline notice; the legacy catalog URL returned a generic shell without item-level record content.",
+        "No absence claim is made; the source item must be checked when CAS catalog access is restored or by another authorized source route."
+      ]
+    },
+    {
+      "gbifId": "3426422686",
+      "institutionCode": "CAS",
+      "collectionCode": "SU(ICH)",
+      "catalogNumber": "27676",
+      "occurrenceId": "urn:catalog:CAS:SU(ICH):27676",
+      "taxonomyDisposition": "independent-name-crosscheck-agrees",
+      "sourceCatalogStatus": "not-independently-verified-cas-collection-search-offline",
+      "decision": "hold-no-historical-assertion",
+      "holdReasons": [
+        "The current public CAS Monarch collection portal displays an offline notice; the legacy catalog URL returned a generic shell without item-level record content.",
+        "No absence claim is made; the source item must be checked when CAS catalog access is restored or by another authorized source route."
+      ]
+    },
+    {
+      "gbifId": "3426423630",
+      "institutionCode": "CAS",
+      "collectionCode": "SU(ICH)",
+      "catalogNumber": "26319",
+      "occurrenceId": "urn:catalog:CAS:SU(ICH):26319",
+      "taxonomyDisposition": "hold-for-taxonomic-review",
+      "sourceCatalogStatus": "not-independently-verified-cas-collection-search-offline",
+      "decision": "hold-no-historical-assertion",
+      "holdReasons": [
+        "The current public CAS Monarch collection portal displays an offline notice; the legacy catalog URL returned a generic shell without item-level record content.",
+        "No absence claim is made; the source item must be checked when CAS catalog access is restored or by another authorized source route."
+      ]
+    },
+    {
+      "gbifId": "3426426722",
+      "institutionCode": "CAS",
+      "collectionCode": "SU(ICH)",
+      "catalogNumber": "28256",
+      "occurrenceId": "urn:catalog:CAS:SU(ICH):28256",
+      "taxonomyDisposition": "independent-name-crosscheck-agrees",
+      "sourceCatalogStatus": "not-independently-verified-cas-collection-search-offline",
+      "decision": "hold-no-historical-assertion",
+      "holdReasons": [
+        "The current public CAS Monarch collection portal displays an offline notice; the legacy catalog URL returned a generic shell without item-level record content.",
+        "No absence claim is made; the source item must be checked when CAS catalog access is restored or by another authorized source route."
+      ]
+    },
+    {
+      "gbifId": "3426451985",
+      "institutionCode": "CAS",
+      "collectionCode": "SU(ICH)",
+      "catalogNumber": "13600",
+      "occurrenceId": "urn:catalog:CAS:SU(ICH):13600",
+      "taxonomyDisposition": "independent-name-crosscheck-agrees",
+      "sourceCatalogStatus": "not-independently-verified-cas-collection-search-offline",
+      "decision": "hold-no-historical-assertion",
+      "holdReasons": [
+        "The current public CAS Monarch collection portal displays an offline notice; the legacy catalog URL returned a generic shell without item-level record content.",
+        "No absence claim is made; the source item must be checked when CAS catalog access is restored or by another authorized source route."
+      ]
+    },
+    {
+      "gbifId": "3426457753",
+      "institutionCode": "CAS",
+      "collectionCode": "SU(ICH)",
+      "catalogNumber": "29012",
+      "occurrenceId": "urn:catalog:CAS:SU(ICH):29012",
+      "taxonomyDisposition": "independent-name-crosscheck-agrees",
+      "sourceCatalogStatus": "not-independently-verified-cas-collection-search-offline",
+      "decision": "hold-no-historical-assertion",
+      "holdReasons": [
+        "The current public CAS Monarch collection portal displays an offline notice; the legacy catalog URL returned a generic shell without item-level record content.",
+        "No absence claim is made; the source item must be checked when CAS catalog access is restored or by another authorized source route."
+      ]
+    },
+    {
+      "gbifId": "3426458644",
+      "institutionCode": "CAS",
+      "collectionCode": "SU(ICH)",
+      "catalogNumber": "26856",
+      "occurrenceId": "urn:catalog:CAS:SU(ICH):26856",
+      "taxonomyDisposition": "independent-name-crosscheck-agrees",
+      "sourceCatalogStatus": "not-independently-verified-cas-collection-search-offline",
+      "decision": "hold-no-historical-assertion",
+      "holdReasons": [
+        "The current public CAS Monarch collection portal displays an offline notice; the legacy catalog URL returned a generic shell without item-level record content.",
+        "No absence claim is made; the source item must be checked when CAS catalog access is restored or by another authorized source route."
+      ]
+    },
+    {
+      "gbifId": "3426458682",
+      "institutionCode": "CAS",
+      "collectionCode": "SU(ICH)",
+      "catalogNumber": "27666",
+      "occurrenceId": "urn:catalog:CAS:SU(ICH):27666",
+      "taxonomyDisposition": "independent-name-crosscheck-agrees",
+      "sourceCatalogStatus": "not-independently-verified-cas-collection-search-offline",
+      "decision": "hold-no-historical-assertion",
+      "holdReasons": [
+        "The current public CAS Monarch collection portal displays an offline notice; the legacy catalog URL returned a generic shell without item-level record content.",
+        "No absence claim is made; the source item must be checked when CAS catalog access is restored or by another authorized source route."
+      ]
+    },
+    {
+      "gbifId": "3426459615",
+      "institutionCode": "CAS",
+      "collectionCode": "SU(ICH)",
+      "catalogNumber": "26223",
+      "occurrenceId": "urn:catalog:CAS:SU(ICH):26223",
+      "taxonomyDisposition": "independent-name-crosscheck-agrees",
+      "sourceCatalogStatus": "not-independently-verified-cas-collection-search-offline",
+      "decision": "hold-no-historical-assertion",
+      "holdReasons": [
+        "The current public CAS Monarch collection portal displays an offline notice; the legacy catalog URL returned a generic shell without item-level record content.",
+        "No absence claim is made; the source item must be checked when CAS catalog access is restored or by another authorized source route."
+      ]
+    },
+    {
+      "gbifId": "3426462603",
+      "institutionCode": "CAS",
+      "collectionCode": "SU(ICH)",
+      "catalogNumber": "26328",
+      "occurrenceId": "urn:catalog:CAS:SU(ICH):26328",
+      "taxonomyDisposition": "hold-for-taxonomic-review",
+      "sourceCatalogStatus": "not-independently-verified-cas-collection-search-offline",
+      "decision": "hold-no-historical-assertion",
+      "holdReasons": [
+        "The current public CAS Monarch collection portal displays an offline notice; the legacy catalog URL returned a generic shell without item-level record content.",
+        "No absence claim is made; the source item must be checked when CAS catalog access is restored or by another authorized source route."
+      ]
+    },
+    {
+      "gbifId": "3426462605",
+      "institutionCode": "CAS",
+      "collectionCode": "SU(ICH)",
+      "catalogNumber": "26364",
+      "occurrenceId": "urn:catalog:CAS:SU(ICH):26364",
+      "taxonomyDisposition": "hold-for-taxonomic-review",
+      "sourceCatalogStatus": "not-independently-verified-cas-collection-search-offline",
+      "decision": "hold-no-historical-assertion",
+      "holdReasons": [
+        "The current public CAS Monarch collection portal displays an offline notice; the legacy catalog URL returned a generic shell without item-level record content.",
+        "No absence claim is made; the source item must be checked when CAS catalog access is restored or by another authorized source route."
+      ]
+    },
+    {
+      "gbifId": "3426464611",
+      "institutionCode": "CAS",
+      "collectionCode": "SU(ICH)",
+      "catalogNumber": "26282",
+      "occurrenceId": "urn:catalog:CAS:SU(ICH):26282",
+      "taxonomyDisposition": "hold-for-taxonomic-review",
+      "sourceCatalogStatus": "not-independently-verified-cas-collection-search-offline",
+      "decision": "hold-no-historical-assertion",
+      "holdReasons": [
+        "The current public CAS Monarch collection portal displays an offline notice; the legacy catalog URL returned a generic shell without item-level record content.",
+        "No absence claim is made; the source item must be checked when CAS catalog access is restored or by another authorized source route."
+      ]
+    },
+    {
+      "gbifId": "3426465616",
+      "institutionCode": "CAS",
+      "collectionCode": "SU(ICH)",
+      "catalogNumber": "26310",
+      "occurrenceId": "urn:catalog:CAS:SU(ICH):26310",
+      "taxonomyDisposition": "hold-for-taxonomic-review",
+      "sourceCatalogStatus": "not-independently-verified-cas-collection-search-offline",
+      "decision": "hold-no-historical-assertion",
+      "holdReasons": [
+        "The current public CAS Monarch collection portal displays an offline notice; the legacy catalog URL returned a generic shell without item-level record content.",
+        "No absence claim is made; the source item must be checked when CAS catalog access is restored or by another authorized source route."
+      ]
+    },
+    {
+      "gbifId": "4855963984",
+      "sourceInstitutionCode": "MZUSP",
+      "sourceCollectionCode": "ICT",
+      "institutionCode": null,
+      "collectionCode": null,
+      "catalogNumber": "118522",
+      "occurrenceId": "9d743c1c-b99b-4d99-bde2-8d65a9370534",
+      "taxonomyDisposition": "independent-name-crosscheck-agrees",
+      "sourceCatalogStatus": "institution-linked-catalog-record-retrieved;duplicate-portal-rows-share-one-occurrence-id",
+      "sourcePortalRecordIds": [
+        "7ef2d537-d78d-4069-b73d-08e1efe465ae",
+        "9ebe3d87-d19b-42a6-bd47-5c41b6a507e1"
+      ],
+      "sourceRecordIdentityMatches": true,
+      "sourceCatalogNumberMatches": true,
+      "sourceNameMatches": true,
+      "sourceEventDateMatches": true,
+      "sourceLocalityMatches": true,
+      "sourceLocality": "Laguna de Bay",
+      "sourceWaterBodyField": null,
+      "sourceRecordTaxon": "Arius dispar",
+      "portalInterpretedRank": "family",
+      "portalAssertions": [
+        "COORDINATE_UNCERTAINTY_METERS_INVALID",
+        "LOCATION_NOT_SUPPLIED",
+        "MISSING_GEOREFERENCEDBY",
+        "MISSING_GEOREFERENCEPROTOCOL",
+        "MISSING_GEOREFERENCESOURCES",
+        "MISSING_GEOREFERENCEVERIFICATIONSTATUS",
+        "MISSING_GEOREFERENCE_DATE",
+        "MISSING_TAXONRANK",
+        "TAXON_MATCH_HIGHERRANK",
+        "sibbrSourceSensitivityChecked"
+      ],
+      "sourceRecordHasSpeciesRank": false,
+      "portalLocalityAssertionConflict": true,
+      "gbifLicense": "http://creativecommons.org/licenses/by/4.0/legalcode",
+      "sourcePortalLicense": "CC-BY-NC 4.0 (Int)",
+      "detailLicense": "CC BY-NC",
+      "useRightsDisposition": "hold-conflicting-gbif-and-source-record-licenses;collection-profile-use-terms-unspecified",
+      "decision": "hold-no-historical-assertion",
+      "holdReasons": [
+        "The MZUSP portal indexes the original species name but interprets the occurrence only at family rank.",
+        "The source detail contains locality text, but the portal also asserts LOCATION_NOT_SUPPLIED and has no waterBody field; treat locality precision as unresolved.",
+        "The source portal record reports CC BY-NC while the GBIF detail record reports a different license; collection-level reuse conditions are not specified."
+      ],
+      "sourceRecords": [
+        {
+          "portalRecordId": "7ef2d537-d78d-4069-b73d-08e1efe465ae",
+          "dataResourceUid": "dr185",
+          "sourceIdentity": {
+            "institutionCode": "MZUSP",
+            "collectionCode": "ICT",
+            "catalogNumber": "118522",
+            "occurrenceId": "9d743c1c-b99b-4d99-bde2-8d65a9370534",
+            "basisOfRecord": "PreservedSpecimen"
+          },
+          "recordEraFields": {
+            "scientificName": "Arius dispar",
+            "genus": "Arius",
+            "family": "Ariidae",
+            "eventDate": "1931-05-14",
+            "country": "Philippines",
+            "stateProvince": "Province of Laguna",
+            "county": "Rizal",
+            "locality": "Laguna de Bay",
+            "waterBody": null
+          },
+          "portalInterpretation": {
+            "scientificName": "Ariidae Bleeker, 1862",
+            "taxonRank": "family",
+            "taxonFamily": "Ariidae",
+            "assertions": [
+              "COORDINATE_UNCERTAINTY_METERS_INVALID",
+              "LOCATION_NOT_SUPPLIED",
+              "MISSING_GEOREFERENCEDBY",
+              "MISSING_GEOREFERENCEPROTOCOL",
+              "MISSING_GEOREFERENCESOURCES",
+              "MISSING_GEOREFERENCEVERIFICATIONSTATUS",
+              "MISSING_GEOREFERENCE_DATE",
+              "MISSING_TAXONRANK",
+              "TAXON_MATCH_HIGHERRANK",
+              "sibbrSourceSensitivityChecked"
+            ]
+          },
+          "reuse": {
+            "portalRecordLicense": "CC-BY-NC 4.0 (Int)",
+            "detailLicense": "CC BY-NC"
+          },
+          "recordUrl": "https://ala-hub.sibbr.gov.br/ala-hub/occurrence/index/7ef2d537-d78d-4069-b73d-08e1efe465ae",
+          "detailResponse": {
+            "bytes": 30553,
+            "sha256": "762e50a811a5e63330eb200ff93d761b6e84f1baada2569eeeefbe17f04dd993"
+          },
+          "identityMatchesGbif": true,
+          "catalogNumberMatchesGbif": true,
+          "scientificNameMatchesGbif": true,
+          "eventDateMatchesGbif": true,
+          "localityMatchesGbif": true,
+          "licenseConflictWithGbif": true,
+          "sourceRecordHasSpeciesRank": false
+        },
+        {
+          "portalRecordId": "9ebe3d87-d19b-42a6-bd47-5c41b6a507e1",
+          "dataResourceUid": "dr186",
+          "sourceIdentity": {
+            "institutionCode": "MZUSP",
+            "collectionCode": "ICT",
+            "catalogNumber": "118522",
+            "occurrenceId": "9d743c1c-b99b-4d99-bde2-8d65a9370534",
+            "basisOfRecord": "preservedSpecimen"
+          },
+          "recordEraFields": {
+            "scientificName": "Arius dispar",
+            "genus": "Arius",
+            "family": "Ariidae",
+            "eventDate": "1931-05-14",
+            "country": "Philippines",
+            "stateProvince": "Province of Laguna",
+            "county": "Rizal",
+            "locality": "Laguna de Bay",
+            "waterBody": null
+          },
+          "portalInterpretation": {
+            "scientificName": "Ariidae Bleeker, 1862",
+            "taxonRank": "family",
+            "taxonFamily": "Ariidae",
+            "assertions": [
+              "COORDINATE_UNCERTAINTY_METERS_INVALID",
+              "LOCATION_NOT_SUPPLIED",
+              "MISSING_GEOREFERENCEDBY",
+              "MISSING_GEOREFERENCEPROTOCOL",
+              "MISSING_GEOREFERENCESOURCES",
+              "MISSING_GEOREFERENCEVERIFICATIONSTATUS",
+              "MISSING_GEOREFERENCE_DATE",
+              "TAXON_MATCH_HIGHERRANK",
+              "sibbrSourceSensitivityChecked"
+            ]
+          },
+          "reuse": {
+            "portalRecordLicense": "CC-BY-NC 4.0 (Int)",
+            "detailLicense": "CC BY – NC"
+          },
+          "recordUrl": "https://ala-hub.sibbr.gov.br/ala-hub/occurrence/index/9ebe3d87-d19b-42a6-bd47-5c41b6a507e1",
+          "detailResponse": {
+            "bytes": 30737,
+            "sha256": "17b88e29bde8f181dea6bc471a216ff28055ffd40099e8a6b95be3254880bf53"
+          },
+          "identityMatchesGbif": true,
+          "catalogNumberMatchesGbif": true,
+          "scientificNameMatchesGbif": true,
+          "eventDateMatchesGbif": true,
+          "localityMatchesGbif": true,
+          "licenseConflictWithGbif": true,
+          "sourceRecordHasSpeciesRank": false
+        }
+      ]
+    }
+  ],
+  "summary": {
+    "candidateRecords": 18,
+    "casRowsNotIndependentlyVerified": 17,
+    "mzuspPortalRows": 2,
+    "mzuspUniqueSourceOccurrences": 1,
+    "mzuspSourceIdentityMatches": 1,
+    "mzuspRankConflicts": 1,
+    "mzuspLicenseConflicts": 1,
+    "mzuspLocalityAssertionConflicts": 1,
+    "historicalAssertionsAdmitted": 0,
+    "publicRecordsAdded": 0
+  },
+  "decision": {
+    "occurrenceAssertionsAdmitted": 0,
+    "publicRecordsAdded": 0,
+    "publicAdmission": false,
+    "coordinatesIncluded": false,
+    "currentPresenceInferred": false,
+    "completeSpeciesInventoryClaimed": false,
+    "interpretation": "The MZUSP-linked portal identifies the exact source record but contains unresolved rank and reuse-license conflicts. CAS item records could not be retrieved while the public portal is offline. All 18 records remain research-only pending independent source identity, locality, taxonomy, and rights review."
+  }
+}

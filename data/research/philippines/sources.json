@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "checkedOn": "2026-10-24",
+  "checkedOn": "2026-10-25",
   "status": "research-only-source-registry",
   "scope": "National acquisition references and CALABARZON/Central Luzon identity/source leads. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 136,
+  "sourceCount": 138,
   "sources": [
     {
       "id": "gbif-col-xr-taxonomy-matching",
@@ -3743,6 +3743,68 @@
         "The catalog cross-check cannot verify identity of the historical CAS or MZUSP specimens, source locality, present-day presence, abundance, legal catchability, safety or completeness.",
         "Five candidate rows remain held because their name crosswalk is absent, conflicting or unresolved; all 18 records remain outside public occurrence projections."
       ]
+    },
+    {
+      "id": "calabarzon-laguna-mzusp-sibbr-catalog",
+      "title": "MZUSP ichthyology online collection catalog via SiBBr",
+      "provider": "Museu de Zoologia da Universidade de São Paulo; catalog hosted by SiBBr",
+      "url": "https://mz.usp.br/pt/laboratorios/ictiologia/",
+      "additionalUrls": [
+        "https://ala-hub.sibbr.gov.br/ala-hub/occurrence/search?q=collection_uid%3Aco119",
+        "https://ala-hub.sibbr.gov.br/ala-hub/proxy/occurrences/search?q=collection_uid%3Aco119+AND+catalogNumber%3A118522&pageSize=20",
+        "https://ala-hub.sibbr.gov.br/ala-hub/occurrence/index/7ef2d537-d78d-4069-b73d-08e1efe465ae",
+        "https://specieslink.net/col/MZUSP/"
+      ],
+      "role": "Direct institution-linked catalog cross-check for the Laguna de Bay MZUSP specimen candidate with catalog number 118522; not blanket occurrence, locality, or publication evidence.",
+      "checkedOn": "2026-10-25",
+      "access": {
+        "status": "MZUSP-official-page-links-online-SiBBr-catalog;two-portal-rows-resolve-to-one-occurrence-id",
+        "reviewFiles": [
+          "calabarzon-laguna-museum-catalog-verification-20261025.json"
+        ],
+        "fieldAllowlistOnly": true,
+        "coordinatesRetained": false
+      },
+      "reuse": {
+        "metadata": "The item response labels the record CC BY-NC 4.0 (Int); the SpeciesLink MZUSP profile says collection-level conditions are not specified and its page reports a 2006 update.",
+        "raw": "Full response bodies are not retained; response byte counts and SHA-256 hashes are recorded, and only allowlisted non-coordinate fields are saved.",
+        "content": "The GBIF occurrence record reports a different license. Keep the candidate held until the provider-specific license and intended reuse are resolved; portal availability is not publication permission."
+      },
+      "publicationApproval": false,
+      "researchStatus": "one-unique-item-found-through-two-index-rows;family-rank-locality-assertion-and-license-conflicts;zero-public-assertions",
+      "license": "CC-BY-NC 4.0 (Int)",
+      "caveats": [
+        "The MZUSP source record preserves Arius dispar and locality Laguna de Bay, while the portal's interpreted occurrence is classified only at family rank and carries higher-rank/missing-rank assertions.",
+        "The raw locality text is present while the portal asserts LOCATION_NOT_SUPPLIED; there is no waterBody field, so waterbody attribution and precision remain held.",
+        "The source portal license conflicts with the GBIF detail license; rights require item-level clarification.",
+        "A record from 1931 cannot establish present-day presence, abundance, catchability, safety, or checklist completeness."
+      ]
+    },
+    {
+      "id": "calabarzon-laguna-cas-monarch-access-check",
+      "title": "CAS Ichthyology collection catalog access check",
+      "provider": "California Academy of Sciences",
+      "url": "https://monarch.calacademy.org/collections/list.php?db=6&reset=1",
+      "additionalUrls": [
+        "https://researcharchive.calacademy.org/research/ichthyology/collection/help.asp",
+        "https://researcharchive.calacademy.org/research/ichthyology/collection/index.asp?CatalogNumber=13543&CollectionCode=SU&PageStyle=Single&RecStyle=Full"
+      ],
+      "role": "Access-status check for the 17 CAS source catalog items in the Laguna de Bay candidate batch; no item-level occurrence or absence decision.",
+      "checkedOn": "2026-10-25",
+      "access": {
+        "status": "public-Monarch-portal-offline-notice;legacy-page-returns-generic-shell-without-item-data",
+        "reviewFiles": [
+          "calabarzon-laguna-museum-catalog-verification-20261025.json"
+        ]
+      },
+      "reuse": {
+        "metadata": "CAS catalog help documents search by collection and catalog number; source records could not be retrieved during this check.",
+        "raw": "No item-level CAS source response was retained because the public portal did not return one.",
+        "content": "No additional records are approved. The outage is an access limitation and is not evidence that the cited specimens do not exist."
+      },
+      "publicationApproval": false,
+      "researchStatus": "17-source-items-not-independently-verified-while-public-catalog-is-offline;zero-public-assertions",
+      "license": null
     }
   ],
   "sourcePolicy": {
