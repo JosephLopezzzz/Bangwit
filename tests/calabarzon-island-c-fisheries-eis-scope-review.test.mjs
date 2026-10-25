@@ -41,7 +41,7 @@ test("Island C EIS remains broad Manila Bay context with no species assertions",
   assert.equal(source.publicationApproval, false);
   assert.equal(source.license, null);
   assert.equal(registry.sourceCount, registry.sources.length);
-  assert.equal(registry.sourceCount, 161);
+  assert.equal(registry.sourceCount, 162);
   assert.ok(source.access.reviewFiles.includes("calabarzon-island-c-fisheries-eis-scope-review-20261026.json"));
 
   assert.equal(report.inputHashes.sourcesSha256, sha256(sourceBytes));

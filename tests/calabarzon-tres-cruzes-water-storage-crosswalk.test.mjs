@@ -62,7 +62,7 @@ test("official dam and water-storage figures remain infrastructure context, not 
   assert.match(review.nameAndKindCrosswalk.identityStatus, /unverified/);
   assert.equal(review.publicationApproval, false);
   assert.ok(review.sourceIds.every((sourceId) => registry.sources.some((source) => source.id === sourceId)));
-  assert.equal(registry.sourceCount, 161);
+  assert.equal(registry.sourceCount, 162);
   assert.equal(registry.sourceCount, registry.sources.length);
   assert.equal(registry.sources.find((source) => source.id === "nia-calabarzon-tres-cruzes-dam-repair").publicationApproval, false);
 });

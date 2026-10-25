@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "batchId": "calabarzon-dagatdagatan-lopez-identity-screen-20261026",
+  "reviewedOn": "2026-10-26",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "regionName": "Region IV-A (CALABARZON)",
+  "status": "secondary-fish-study-bibliography-found;candidate-lalaguna-name-crosswalk-unresolved;bounded-gbif-screen-zero",
+  "candidate": {
+    "sourceName": "Dagat-dagatan Lake in Lopez, Quezon",
+    "possibleScopeLeadId": "ph-wb-lalaguna-quezon-marsh",
+    "identityDecision": "candidate-only-not-adopted",
+    "reason": "The title and locality in a FishBase bibliography entry, together with secondary local-name reporting, suggest a possible relationship to Lalaguna Marshland. No primary study copy or authoritative source explicitly crosswalks the names. Do not add an alias or a separate waterbody lead from this evidence alone."
+  },
+  "bibliographicLead": {
+    "sourceId": "fishbase-reference-81470-dagatdagatan-lopez",
+    "referenceId": 81470,
+    "title": "Physico-chemical Assessment and Species Composition of Dagat-dagatan Lake in Lopez, Quezon in Southern Luzon",
+    "authors": ["R. M. Magsino", "A. Aquino", "I. D. Barreno"],
+    "year": 2007,
+    "proceedings": "Proceedings of the 11th Zonal Research and Development Review, 14 November 2007, Cavite State University, Indang, Cavite; CD-ROM; Southern Luzon Zonal Center for Aquatic and Marine R&D, Los Baños, Laguna.",
+    "bibliographyAccess": "FishBase reference-list entry reviewed; no abstract, pages, original paper, table, methods, collection dates, or taxon names retrieved.",
+    "originalStudyRetrieved": false,
+    "reuseLicenseVerified": false
+  },
+  "identityEvidence": [
+    {
+      "sourceId": "quezon-province-tourism-directory",
+      "finding": "The Provincial Government of Quezon directory names Lalaguna Marshland as a point of interest in Lopez. It does not mention Dagat-dagatan or supply a fish inventory or geometry."
+    },
+    {
+      "sourceId": "denr-bmb-philchm-inland-wetlands-2019",
+      "finding": "The historical inventory lists Lalaguna Marsh as a lake in Lopez, separately lists Dagat Dagatan Lake in Tayabas City, and lists Lake Pagatan in San Antonio. These are source rows, not proof that the Lopez bibliography's feature is the same as any one registry row."
+    },
+    {
+      "sourceId": "denr-calabarzon-wetlands-2024",
+      "finding": "The roadmap names Lalaguna Marsh among Quezon wetlands; it does not identify the 2007 Dagat-dagatan study site."
+    },
+    {
+      "sourceId": null,
+      "finding": "A third-party travel-page mirror quotes a visitor account saying residents call Lalaguna Marshland Dagat-Dagatan. The original social post and its authoritativeness were not independently verified; this remains a lead only.",
+      "url": "https://www.tumgik.com/tag/quaintquezon"
+    }
+  ],
+  "gbifScreen": {
+    "endpoint": "https://api.gbif.org/v1/occurrence/search",
+    "scope": {
+      "country": "PH",
+      "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+      "taxonKey": "8VR36",
+      "taxonLabel": "Catalogue of Life Extended Release Actinopterygii",
+      "fields": ["waterBody", "locality"],
+      "searchValue": "Dagat-dagatan Lake"
+    },
+    "queries": [
+      {
+        "field": "waterBody",
+        "url": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&waterBody=Dagat-dagatan+Lake&limit=100",
+        "httpStatus": 200,
+        "resultCount": 0,
+        "enumeratedCount": 0,
+        "endOfRecords": true,
+        "rawResponse": {
+          "path": "raw/calabarzon-dagatdagatan-lopez-screen-20261026/waterBody.json",
+          "bytes": 79,
+          "sha256": "16004ddeb6b1eb033e3665fa6082d9cdd36533ce1f36272a2a95f5664f1b9dcd"
+        }
+      },
+      {
+        "field": "locality",
+        "url": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&locality=Dagat-dagatan+Lake&limit=100",
+        "httpStatus": 200,
+        "resultCount": 0,
+        "enumeratedCount": 0,
+        "endOfRecords": true,
+        "rawResponse": {
+          "path": "raw/calabarzon-dagatdagatan-lopez-screen-20261026/locality.json",
+          "bytes": 79,
+          "sha256": "16004ddeb6b1eb033e3665fa6082d9cdd36533ce1f36272a2a95f5664f1b9dcd"
+        }
+      }
+    ],
+    "interpretation": "Bounded exact-name indexed-text query only; zero results are not fish-absence evidence and do not resolve the waterbody identity."
+  },
+  "decision": {
+    "newSourceRegistryEntryAdded": true,
+    "scopeLeadAdded": false,
+    "scopeAliasAdded": false,
+    "sourceRefsAssignedToScopeLead": false,
+    "speciesNamesTranscribed": 0,
+    "speciesAssertionsAdded": 0,
+    "fishAbsenceInferred": false,
+    "geometryAdded": false,
+    "publicProjectionAdded": false,
+    "publicationApproval": false
+  },
+  "limitations": [
+    "The fish-composition claim is visible only in a secondary bibliography entry; no primary study content was obtained.",
+    "FishBase's bibliographic title does not establish that the study site is Lalaguna Marshland or any other registered waterbody.",
+    "The local-name statement is from an unverified third-party mirror of a visitor account, not an official locality record.",
+    "The GBIF screen covers only the named taxonomic scope and the two exact text fields; it is not an exhaustive literature, specimen, or field survey."
+  ],
+  "nextAction": "Locate the 2007 proceedings CD-ROM or an author/institution-held copy, confirm the exact study site against the Lopez wetland inventory, review the study's methods, collection dates, taxon names and reuse terms, then decide whether a historical source-scoped record is justified."
+}
