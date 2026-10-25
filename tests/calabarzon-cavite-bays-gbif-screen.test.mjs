@@ -103,7 +103,7 @@ test("Cavite bay GBIF text-screen keeps non-fish and unresolved hits out of fish
   assert.equal(report.coverageSummary.sourceAssignments, assignments.length);
   assert.equal(report.coverageSummary.distinctSourceReferencesAssigned, new Set(assignments).size);
   assert.equal(report.coverageSummary.sourceAssignments, 213);
-  assert.equal(report.coverageSummary.leadsStillResearchQueued, 12);
+  assert.equal(report.coverageSummary.leadsStillResearchQueued, 11);
   assert.equal(report.coverageSummary.regionalBaselineComplete, false);
   assert.equal(report.coverageSummary.publicAdmission, false);
   assert.equal(report.nextStep.phaseId, "L1");

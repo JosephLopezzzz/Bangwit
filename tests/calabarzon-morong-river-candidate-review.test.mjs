@@ -62,9 +62,9 @@ test("Morong River GBIF candidate remains held when geography, identity, and rig
   assert.equal(report.inputHashes.sourcesSha256, sha256(sourceBytes));
   assert.equal(report.inputHashes.morongGbifCandidateReviewSha256, sha256(reviewBytes));
   assert.equal(report.coverageSummary.sourceAssignments, 213);
-  assert.equal(report.coverageSummary.distinctSourceReferencesAssigned, 56);
-  assert.equal(report.coverageSummary.registeredSources, 159);
-  assert.equal(report.coverageSummary.leadsStillResearchQueued, 12);
+  assert.equal(report.coverageSummary.distinctSourceReferencesAssigned, 57);
+  assert.equal(report.coverageSummary.registeredSources, 160);
+  assert.equal(report.coverageSummary.leadsStillResearchQueued, 11);
   assert.equal(report.coverageSummary.publicAdmission, false);
   assert.equal(report.coverageSummary.regionalBaselineComplete, false);
 });
