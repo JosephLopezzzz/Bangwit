@@ -4,11 +4,12 @@ import { test } from "node:test";
 import guides from "../src/data/feeding-guides.json" with { type: "json" };
 
 const base = new URL("../data/research/philippines/", import.meta.url);
-const [review, scope, sourceRegistry, midasReview] = await Promise.all([
+const [review, scope, sourceRegistry, midasReview, midasFollowup] = await Promise.all([
   readFile(new URL("calabarzon-taal-tawilis-diet-review-20261024.json", base), "utf8").then(JSON.parse),
   readFile(new URL("calabarzon-scope.json", base), "utf8").then(JSON.parse),
   readFile(new URL("sources.json", base), "utf8").then(JSON.parse),
   readFile(new URL("calabarzon-taal-midas-cichlid-catch-study-rights-review-20261024.json", base), "utf8").then(JSON.parse),
+  readFile(new URL("calabarzon-taal-midas-municipality-discrepancy-followup-20261026.json", base), "utf8").then(JSON.parse),
 ]);
 
 test("publishes one attributed Taal tawilis natural-diet guide without adding an occurrence claim", () => {
@@ -59,4 +60,23 @@ test("tracks the Taal Midas cichlid assessment as historical noncommercial evide
   assert.equal(midasReview.decision.publicAppProjectionAdded, false);
   assert.equal(midasReview.decision.publicationApproval, false);
   assert.equal(midasReview.decision.regionalBaselineComplete, false);
+});
+
+test("pins the Midas municipality discrepancy to the reviewed official PDF and keeps it unresolved", () => {
+  const source = sourceRegistry.sources.find((item) => item.id === midasFollowup.sourceId);
+  assert.ok(source);
+  assert.equal(source.access.localRawSnapshot, midasFollowup.sourceSnapshot.localPath);
+  assert.equal(source.access.localRawSha256, midasFollowup.sourceSnapshot.sha256);
+  assert.ok(source.access.reviewFiles.includes("calabarzon-taal-midas-municipality-discrepancy-followup-20261026.json"));
+  assert.equal(midasFollowup.sourceSnapshot.pdfPageCount, 16);
+  assert.deepEqual(midasFollowup.sourceSnapshot.visuallyReviewedPdfPages, [5, 6]);
+  assert.match(midasFollowup.sourceFindings.tableAndText, /Tanauan by 2015-2016.*eight municipality rows and no Tanauan row/i);
+  assert.match(midasFollowup.sourceFindings.targetedFollowup, /does not prove that none exists/i);
+  assert.equal(midasFollowup.decision.municipalityDiscrepancyResolved, false);
+  assert.equal(midasFollowup.decision.municipalityPresenceClaimsAdded, 0);
+  assert.equal(midasFollowup.decision.speciesAssertionsAdded, 0);
+  assert.equal(midasFollowup.decision.publicAppProjectionAdded, false);
+  assert.equal(midasFollowup.decision.publicationApproval, false);
+  assert.equal(midasFollowup.decision.regionalBaselineComplete, false);
+  assert.match(source.reuse.raw, /ignored local research storage/);
 });
