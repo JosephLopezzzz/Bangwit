@@ -72,12 +72,12 @@
     "limits": "Province plus separate-city starter coverage. Municipalities/component cities and each island/waterbody still require the source-sweep inventory; this is not a completed regional inventory."
   },
   "counts": {
-    "waterbodyResearchLeads": 83,
+    "waterbodyResearchLeads": 84,
     "provincesWithLeads": 5,
     "separateCityCoverageUnits": 1,
     "byKind": {
       "bay": 7,
-      "river": 40,
+      "river": 41,
       "estuary": 2,
       "wetland": 8,
       "lake": 18,
@@ -241,7 +241,7 @@
       "fishEvidenceStatus": "bounded-GBIF-locality-query-zero-no-absence-inferred;historical-genus-level-Tilapia-sampling-confirmed;historical-species-level-Oreochromis-niloticus-claim-unverified;species-identity-unresolved",
       "reviewStatus": "bounded-GBIF-locality-string-checked-no-absence-inferred;genus-level-sampling-reviewed;species-level-claim-held-identification-and-reuse-unverified",
       "publicAdmission": false,
-      "scopeNote": "River identity only; monitored segments do not delimit the entire channel or sanctuary. A 2014 goby barcoding paper is a historical fish lead, but it reports conflicting putative species identities and has no adopted reach geometry; all three species-level claims remain held for independent review. GBIF's exact Maragondon River query returned zero rows, which does not establish fish absence. The DENR-BMB 2016 Atlas Annex 2b also lists this river under Cavite and reports multiple municipalities; these are source-era locality context only and do not delimit the channel. A 2024 primary study reports 48 juvenile Tilapia sp. sampled at upstream, midstream, and downstream Maragondon River stations in April 2023. The authors withheld species resolution due to possible hybridization and gene-pool uncertainty; this is genus-level historical evidence only. It does not establish current presence, catchability, full-river coverage, salinity, or geometry. A 2018 sampling study published in 2019 labels fish samples Oreochromis niloticus, but this review found no independently verifiable specimen identifier or diagnostic identification protocol and no item-specific reuse license. A 2024 study reports Tilapia sp. and withholds species resolution; keep the earlier species-level claim held and do not resolve it to O. niloticus."
+    "scopeNote": "River identity only; monitored segments do not delimit the entire channel or sanctuary. A 2014 goby barcoding paper is a historical fish lead, but it reports conflicting putative species identities and has no adopted reach geometry; all three species-level claims remain held for independent review. GBIF's exact Maragondon River query returned zero rows, which does not establish fish absence. The DENR-BMB 2016 Atlas Annex 2b also lists this river under Cavite and reports multiple municipalities; these are source-era locality context only and do not delimit the channel. A 2024 primary study reports 48 juvenile Tilapia sp. sampled at upstream, midstream, and downstream Maragondon River stations in April 2023. The authors withheld species resolution due to possible hybridization and gene-pool uncertainty; this is genus-level historical evidence only. It does not establish current presence, catchability, full-river coverage, salinity, or geometry. A 2018 sampling study published in 2019 labels fish samples Oreochromis niloticus, but this review found no independently verifiable specimen identifier or diagnostic identification protocol and no item-specific reuse license. A 2024 study reports Tilapia sp. and withholds species resolution; keep the earlier species-level claim held and do not resolve it to O. niloticus. DENR-EMB CALABARZON indexed monitoring information reports that Maragondon River was included in monitoring in 2018 and that its first-half 2020 sampling was conducted in January and February; the indexed source lists Class C. Exact station locations, measurements, and a link between any station and Gapan/Sapang were unavailable. This is historical water-quality context only, not current safety, fish evidence, or channel geometry."
     },
     {
       "id": "ph-wb-maragondon-river-estuary",
@@ -2968,6 +2968,41 @@
       "reviewStatus": "bounded-COLXR-Actinopterygii-waterBody-and-locality-text-screen-zero-no-absence-inferred",
       "publicAdmission": false,
       "scopeNote": "DENR-BMB 2016 Atlas Annex 2b, PDF p.128 (printed p.116), visually confirms Biñan Creek* and source-reported locality context: San Pedro. A separate source row from Biñan River; preserved as a distinct creek/stream lead. No exact reach, geometry, salinity, fish presence, access or legal status is established. A bounded GBIF COL XR Actinopterygii exact-name screen searched waterBody and locality in PH and returned zero for both fields; this is not fish-absence evidence."
+    },
+    {
+      "id": "ph-wb-gapan-sapang-river-ternate",
+      "name": "Gapan River",
+      "aliases": [
+        "Gapan (Sapang) River"
+      ],
+      "kind": "river",
+      "salinity": {
+        "classification": "unknown",
+        "reviewStatus": "not-assessed",
+        "sourceRefs": []
+      },
+      "administrativeAssociations": [
+        {
+          "regionId": "0400000000",
+          "relationship": "source-described-locality",
+          "sourceRefs": [
+            "denr-cavite-adopt-waterbody-gapan-river-2025"
+          ],
+          "provinceId": "0402100000",
+          "locality": "Ternate, Cavite; barangays Bucana and Sapang I are identified as MOA signatories, not as the river boundary."
+        }
+      ],
+      "sourceRefs": [
+        "denr-cavite-adopt-waterbody-gapan-river-2025",
+        "pra-gapan-sapang-adopt-waterbody-2025",
+        "gbif-occurrence-downloads"
+      ],
+      "identityStatus": "officially-source-named-research-lead;name-variant-supported",
+      "boundaryStatus": "not-delineated",
+      "fishEvidenceStatus": "bounded-COLXR-Actinopterygii-six-exact-name-searches-zero; no-fish-absence-inferred",
+      "reviewStatus": "source-identity-reviewed;fish-survey-geometry-and-salinity-pending",
+      "publicAdmission": false,
+      "scopeNote": "DENR CALABARZON identifies a one-kilometer Adopt-a-Waterbody program stretch of Gapan River within Maragondon River System under a 24 February 2025 MOA, with Ternate and barangay Bucana/Sapang I signatories. PRA uses the name variant Gapan (Sapang) River. These sources support a Ternate research lead and source-name variant only; they do not define the full channel or resolve its relationship to the separately named Maragondon River. Six bounded GBIF COL XR Actinopterygii searches across waterBody/locality and three exact spellings returned zero. A bounded official-site web search did not locate a dated fish survey. This is not evidence of fish absence. Full extent, geometry, salinity, fish presence, catchability, access/legal status and reuse terms remain unresolved."
     }
   ],
   "coverageRules": {
@@ -3055,7 +3090,7 @@
       "id": "scope-not-exhaustive",
       "status": "open",
       "count": null,
-      "reason": "Eighty-three selected named water and habitat research leads are seeded across CALABARZON water types. Provincial, municipal, island, stream, pond and reservoir denominators remain unestablished; some leads are habitat/designation names rather than delineated waterbodies. Selected Atlas rows include only a subset of the historical inventory.",
+      "reason": "Eighty-four selected named water and habitat research leads are seeded across CALABARZON water types. Provincial, municipal, island, stream, pond and reservoir denominators remain unestablished; some leads are habitat/designation names rather than delineated waterbodies. Selected Atlas rows include only a subset of the historical inventory.",
       "nextAction": "Continue the source-derived inventory with explicit inclusion criteria and a frozen manifest; resolve unnamed 2021 aggregate river/wetland counts before claiming a regional baseline."
     },
     {
@@ -3090,15 +3125,15 @@
     {
       "id": "fish-coverage",
       "status": "open",
-      "count": 83,
-      "reason": "Regional fish coverage remains incomplete across 83 selected leads. Exact-name GBIF text screens cover selected watercourse leads only; zero results are bounded discovery gaps, and historical candidates remain held where feature identity is uncertain.",
+      "count": 84,
+      "reason": "Regional fish coverage remains incomplete across 84 selected leads. Exact-name GBIF text screens cover selected watercourse leads only; zero results are bounded discovery gaps, and historical candidates remain held where feature identity is uncertain.",
       "nextAction": "Join only independently reviewed evidence at its supported geographic scale."
     },
     {
       "id": "identity-and-geometry",
       "status": "open",
-      "count": 83,
-      "reason": "No validated waterbody geometry or precise point assignment has been created across 83 selected leads. Repeated names, source-era localities, compound river names and habitat-versus-waterbody identity remain under review.",
+      "count": 84,
+      "reason": "No validated waterbody geometry or precise point assignment has been created across 84 selected leads. Repeated names, source-era localities, compound river names and habitat-versus-waterbody identity remain under review.",
       "nextAction": "Reconcile stable identities and source-era/current geography before map display."
     },
     {

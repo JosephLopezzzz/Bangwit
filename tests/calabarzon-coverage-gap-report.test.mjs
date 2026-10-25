@@ -4,7 +4,7 @@ import { readFile } from "node:fs/promises";
 import { test } from "node:test";
 
 const base = new URL("../data/research/philippines/", import.meta.url);
-const [report, scope, sweep, sourceRegistry, scopeBytes, sourceBytes, museumBytes, taxonomyFollowupBytes, caviteBayScreenBytes, midasFollowupBytes, dagatdagatanFollowupBytes, balOnSearchBytes] = await Promise.all([
+const [report, scope, sweep, sourceRegistry, scopeBytes, sourceBytes, museumBytes, taxonomyFollowupBytes, caviteBayScreenBytes, midasFollowupBytes, dagatdagatanFollowupBytes, balOnSearchBytes, gapanSapangReviewBytes] = await Promise.all([
   readFile(new URL("calabarzon-coverage-gap-report-20261025.json", base), "utf8").then(JSON.parse),
   readFile(new URL("calabarzon-scope.json", base), "utf8").then(JSON.parse),
   readFile(new URL("calabarzon-coverage-source-sweep.json", base), "utf8").then(JSON.parse),
@@ -17,12 +17,13 @@ const [report, scope, sweep, sourceRegistry, scopeBytes, sourceBytes, museumByte
   readFile(new URL("calabarzon-taal-midas-municipality-discrepancy-followup-20261026.json", base), "utf8"),
   readFile(new URL("calabarzon-dagatdagatan-lopez-catalog-followup-20261026.json", base), "utf8"),
   readFile(new URL("calabarzon-bal-on-reservoir-retrieval-search-20261026.json", base), "utf8"),
+  readFile(new URL("calabarzon-gapan-sapang-river-source-review-20261026.json", base), "utf8"),
 ]);
 
 test("CALABARZON checkpoint reports its gaps without claiming a complete region", () => {
   assert.equal(report.status, "checkpoint-published-incomplete-baseline");
   assert.equal(report.regionId, scope.regionId);
-  assert.equal(report.coverageSummary.namedWaterbodyLeads, 83);
+  assert.equal(report.coverageSummary.namedWaterbodyLeads, 84);
   assert.equal(report.reviewedOn, "2026-10-26");
   assert.equal(report.coverageSummary.registeredSources, sourceRegistry.sourceCount);
   assert.equal(sourceRegistry.sourceCount, sourceRegistry.sources.length);
@@ -36,12 +37,12 @@ test("CALABARZON checkpoint reports its gaps without claiming a complete region"
     estuary: 2,
     lake: 18,
     reservoir: 5,
-    river: 40,
+    river: 41,
     stream: 3,
     wetland: 8,
   });
   assert.equal(report.coverageSummary.leadsStillResearchQueued, 11);
-  assert.equal(report.coverageSummary.unknownSalinityLeads, 78);
+  assert.equal(report.coverageSummary.unknownSalinityLeads, 79);
   assert.equal(report.coverageSummary.researchProjectionAssertionsImported, 9);
   const sourceRefs = scope.waterbodies.flatMap((waterbody) => waterbody.sourceRefs);
   assert.equal(report.coverageSummary.sourceAssignments, sourceRefs.length);
@@ -52,6 +53,7 @@ test("CALABARZON checkpoint reports its gaps without claiming a complete region"
   assert.equal(report.inputHashes.taalMidasMunicipalityFollowupSha256, createHash("sha256").update(midasFollowupBytes).digest("hex"));
   assert.equal(report.inputHashes.dagatdagatanLopezCatalogFollowupSha256, createHash("sha256").update(dagatdagatanFollowupBytes).digest("hex"));
   assert.equal(report.inputHashes.balOnRetrievalSearchSha256, createHash("sha256").update(balOnSearchBytes).digest("hex"));
+  assert.equal(report.inputHashes.gapanSapangRiverReviewSha256, createHash("sha256").update(gapanSapangReviewBytes).digest("hex"));
   assert.equal(
     report.inputHashes.lagunaMuseumVerificationSha256,
     createHash("sha256").update(museumBytes).digest("hex"),
@@ -76,8 +78,9 @@ test("CALABARZON checkpoint reports its gaps without claiming a complete region"
   );
   assert.equal(report.nextStep.phaseId, "L1");
   assert.equal(report.nextStep.regionName, "CALABARZON (Region IV-A)");
-  assert.match(report.nextStep.action, /next independently sourceable freshwater or river lead/i);
-  assert.match(report.nextStep.action, /do not advance to NCR or mark CALABARZON complete/i);
+  assert.match(report.nextStep.action, /primary monitoring and fish-survey evidence for Gapan/i);
+  assert.match(report.nextStep.action, /do not mark CALABARZON complete/i);
+  assert.ok(report.openGaps.some((gap) => gap.id === "gapan-sapang-river-evidence-and-extent"));
   assert.ok(report.openGaps.some((gap) => gap.id === "scope-not-exhaustive"));
   const museumGap = report.openGaps.find((gap) => gap.id === "laguna-museum-catalog-conflicts");
   assert.equal(museumGap.count, 1);
