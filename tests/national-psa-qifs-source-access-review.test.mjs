@@ -111,7 +111,7 @@ test("QIFS access review is hash-pinned without changing CALABARZON waterbody to
   assert.equal(report.inputHashes.nationalPsaQifsAccessReviewSha256, sha256(reviewBytes));
   assert.equal(report.inputHashes.nationalPsaQifsGeolocationCrosswalkSha256, sha256(crosswalkBytes));
   assert.equal(report.coverageSummary.registeredSources, registry.sourceCount);
-  assert.equal(report.coverageSummary.sourceAssignments, 220);
+  assert.equal(report.coverageSummary.sourceAssignments, 222);
   assert.equal(report.coverageSummary.distinctSourceReferencesAssigned, 61);
   assert.equal(report.coverageSummary.admittedPublicRecords, 0);
   assert.equal(report.coverageSummary.regionalBaselineComplete, false);

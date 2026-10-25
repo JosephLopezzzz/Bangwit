@@ -52,9 +52,9 @@ test("Lalaguna Marsh GBIF screen is bounded and does not infer fish absence", ()
   assert.equal(report.inputHashes.sourcesSha256, sha256(sourceBytes));
   assert.equal(report.inputHashes.lalagunaMarshGbifScreenSha256, sha256(reviewBytes));
   assert.equal(report.coverageSummary.sourceAssignments, scope.waterbodies.flatMap((row) => row.sourceRefs).length);
-  assert.equal(report.coverageSummary.sourceAssignments, 220);
+  assert.equal(report.coverageSummary.sourceAssignments, 222);
   assert.equal(report.coverageSummary.distinctSourceReferencesAssigned, 61);
-  assert.equal(report.coverageSummary.leadsStillResearchQueued, 11);
+  assert.equal(report.coverageSummary.leadsStillResearchQueued, 10);
   assert.equal(report.coverageSummary.unknownSalinityLeads, 79);
   assert.equal(report.coverageSummary.publicAdmission, false);
   assert.equal(report.coverageSummary.regionalBaselineComplete, false);

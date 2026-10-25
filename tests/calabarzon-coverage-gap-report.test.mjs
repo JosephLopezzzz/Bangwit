@@ -41,7 +41,7 @@ test("CALABARZON checkpoint reports its gaps without claiming a complete region"
     stream: 3,
     wetland: 8,
   });
-  assert.equal(report.coverageSummary.leadsStillResearchQueued, 11);
+  assert.equal(report.coverageSummary.leadsStillResearchQueued, 10);
   assert.equal(report.coverageSummary.unknownSalinityLeads, 79);
   assert.equal(report.coverageSummary.researchProjectionAssertionsImported, 9);
   const sourceRefs = scope.waterbodies.flatMap((waterbody) => waterbody.sourceRefs);
@@ -78,9 +78,10 @@ test("CALABARZON checkpoint reports its gaps without claiming a complete region"
   );
   assert.equal(report.nextStep.phaseId, "L1");
   assert.equal(report.nextStep.regionName, "CALABARZON (Region IV-A)");
-  assert.match(report.nextStep.action, /primary monitoring and fish-survey evidence for Gapan/i);
+  assert.match(report.nextStep.action, /station records and a source-backed full-channel trace for Gapan\/Sapang and Tagbac creek/i);
   assert.match(report.nextStep.action, /do not mark CALABARZON complete/i);
   assert.ok(report.openGaps.some((gap) => gap.id === "gapan-sapang-river-evidence-and-extent"));
+  assert.ok(report.openGaps.some((gap) => gap.id === "tagbac-creek-channel-and-name-crosswalk"));
   assert.ok(report.openGaps.some((gap) => gap.id === "scope-not-exhaustive"));
   const museumGap = report.openGaps.find((gap) => gap.id === "laguna-museum-catalog-conflicts");
   assert.equal(museumGap.count, 1);

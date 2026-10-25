@@ -49,7 +49,7 @@ test("municipal citation, scope totals and CALABARZON source hashes are pinned",
   assert.equal(report.inputHashes.sourcesSha256, sha256(sourceBytes));
   assert.equal(report.inputHashes.lalagunaMunicipalHabitatReviewSha256, sha256(reviewBytes));
   assert.equal(report.coverageSummary.sourceAssignments, scope.waterbodies.flatMap((row) => row.sourceRefs).length);
-  assert.equal(report.coverageSummary.sourceAssignments, 220);
+  assert.equal(report.coverageSummary.sourceAssignments, 222);
   assert.equal(report.coverageSummary.distinctSourceReferencesAssigned, 61);
   assert.equal(report.coverageSummary.registeredSources, 167);
   assert.equal(report.coverageSummary.publicAdmission, false);
