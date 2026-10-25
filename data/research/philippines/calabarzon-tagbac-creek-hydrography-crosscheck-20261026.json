@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-26",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "regionName": "Region IV-A (CALABARZON)",
+  "waterbodyId": "ph-wb-tagbac-rizal-creek",
+  "waterbodyName": "Tagbac creek",
+  "sourceIds": [
+    "boothroyd-2023-philippines-river-catchment-geodata",
+    "emb-calabarzon-waterbodies"
+  ],
+  "status": "modelled-network-connectivity-candidate;official-channel-identity-and-geometry-pending",
+  "dataset": {
+    "title": "Philippines_GIS_stream_network_n128",
+    "repositoryUrl": "https://researchdata.gla.ac.uk/1396/",
+    "directFileUrl": "https://researchdata.gla.ac.uk/1396/3/Philippines_GIS_stream_network_n128.zip",
+    "license": "CC BY 4.0",
+    "retrievedOn": "2026-10-26",
+    "bytes": 149447900,
+    "sha256": "58f47df9c8cc90d6734bc7c28db6e2980c52ea17c505561a63405bcd1bf574d2",
+    "rawPath": "raw/boothroyd-1396/Philippines_GIS_stream_network_n128.zip",
+    "shapeType": "Polyline",
+    "crs": "WGS 84 / Pseudo-Mercator (EPSG:3857)",
+    "streamFeatureCount": 107613,
+    "attributeFields": [
+      "area_km2",
+      "elevation",
+      "grad_m_m",
+      "streamord",
+      "dist_out_k",
+      "PID",
+      "Shape__Len"
+    ],
+    "methodNote": "The network was derived from a nationwide 2013 IfSAR DEM; the source paper reports 5 m resolution and 1 m vertical RMSE. It is a modelled hydrology network, not a field-surveyed named-waterbody boundary."
+  },
+  "stationCrosscheck": {
+    "officialSource": "DENR-EMB CALABARZON updated waterbodies table; coordinates were read from the indexed source and not copied into this artifact.",
+    "calculation": "Transform source DMS station locations to EPSG:3857 and calculate the nearest Euclidean point-to-polyline distance against source network line features.",
+    "tagbacCreekStations": [
+      { "station": 1, "nearestFeatureRecord": 59952, "distanceMeters": 302.8 },
+      { "station": 2, "nearestFeatureRecord": 59952, "distanceMeters": 152.1 },
+      { "station": 3, "nearestFeatureRecord": 59952, "distanceMeters": 16.8 }
+    ],
+    "separatelyListedTagbacRiverStations": [
+      { "station": 1, "nearestFeatureRecord": 59951, "distanceMeters": 74.3 },
+      { "station": 2, "nearestFeatureRecord": 59951, "distanceMeters": 20.6 }
+    ],
+    "networkFeatures": [
+      { "record": 59951, "lengthMeters": 2308.4, "pidValue": "1Marikina_Pasig", "catchmentName": "Marikina_Pasig" },
+      { "record": 59952, "lengthMeters": 2155.9, "pidValue": "1Marikina_Pasig", "catchmentName": "Marikina_Pasig" }
+    ],
+    "networkTopology": {
+      "featuresShareExactEndpoint": true,
+      "endpointGapMeters": 0,
+      "interpretation": "The two EMB station clusters are close to adjacent, connected segments in the same modelled Marikina_Pasig catchment network. This supports a hydrological continuity candidate, but does not establish that the separately named adopted stretches are the same official waterbody or define its full extent."
+    }
+  },
+  "decisions": {
+    "officialChannelIdentityConfirmed": false,
+    "fullChannelGeometryAdded": false,
+    "globalTagbacRiverAliasAdded": false,
+    "fishAssertionsAdded": 0,
+    "fishAbsenceInferred": false,
+    "salinityChanged": false,
+    "publicProjectionAdded": false,
+    "publicationApproval": false
+  },
+  "limitations": [
+    "Stream-network lines are modelled from a 2013 elevation dataset and are a candidate cross-check only.",
+    "Distances were measured to station locations in source metadata; the station coordinate values are not redistributed here.",
+    "A connected modelled network is not an authoritative name crosswalk, a verified full-channel trace, or a fishing-access or legal-status determination.",
+    "No fish survey, salinity profile, current water-quality result, or permission to fish was established by this spatial crosscheck."
+  ],
+  "nextAction": "Obtain an authorized official station-to-channel crosswalk or independently validated hydrography trace before resolving Tagbac creek and Tagbac River names or publishing any geometry."
+}

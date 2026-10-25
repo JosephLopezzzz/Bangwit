@@ -7,7 +7,7 @@
   "status": "checkpoint-published-incomplete-baseline",
   "inputHashes": {
     "scopeSha256": "9c90cd10210467caf63eebdd16176480b29a097ef730d83ea63f71b116ae75f5",
-    "sourcesSha256": "5a07ec3ce090abb70334e6bb2b929cbf3127dcefd458516576bf2037c2dcc70c",
+    "sourcesSha256": "9deebe7208541dde2bea92d4bb3ba29ff3235c87161eef7ee14a05c1ed5d5b97",
     "lagunaMuseumVerificationSha256": "bd831366b62effca277bfb281c8b954b88ed44f79ba67ba4824837415d42df2a",
     "balayanGbifDetailsSha256": "6e466c1df40085b70d314da6af314ecc56ea9cd72da737cc9cf6c1757c80d1e9",
     "balayanIdigbioCrosscheckSha256": "66b5e92896fed932a02ce75316ce5cb8f8031525fa3923ed8a1d8426983a037f",
@@ -48,7 +48,8 @@
     "balOnRetrievalSearchSha256": "4fec6dececbcde7b3cef6be3e00f83f6f5f917ffbe5a6b938a8268a568251dae",
     "gapanSapangRiverReviewSha256": "bfc16b697f2403ba6088373fea53e0e8bb3f7f9b90677d6de31a8d837180596a",
     "maragondonEmbMonitoringReviewSha256": "c8b525c636eee82e771d9c6522b0e47165cd88de918d2fc77e91438c2a376b33",
-    "tagbacCreekReviewSha256": "a59a9012c846b5e98ff0aad452a95d5a8dd50205ed80f06deda8c3a641583e88"
+    "tagbacCreekReviewSha256": "a59a9012c846b5e98ff0aad452a95d5a8dd50205ed80f06deda8c3a641583e88",
+    "tagbacHydrographyCrosscheckSha256": "a1965a220fc2d9c4df8893b44140702516dd3c5279734774edf09a6cf15441b4"
   },
   "decision": "Keep CALABARZON visibly in progress. This checkpoint records the current source-backed leads and specific gaps; it is not a complete fish checklist, a completed region, or a public species release.",
   "coverageSummary": {
@@ -324,11 +325,12 @@
       "id": "tagbac-creek-channel-and-name-crosswalk",
       "status": "open",
       "count": 1,
-      "reason": "EMB sources support one matched one-kilometer Tagbac creek/Tagbac River Adopt-a-Waterbody segment for Teresa Marble Corporation, while separately listing other Tagbac River segments with different adopters and lengths. No full-channel geometry or stream-wide identity crosswalk is available.",
-      "nextAction": "Obtain permitted station-level records and a source-backed hydrography trace; keep adopter segments separate until channel identity and extents are confirmed.",
+      "reason": "EMB sources identify two nearby Tagbac program station groups; the 2013 DEM-derived network has adjacent connected lines near those stations, but this modelled continuity does not confirm a single named watercourse or full-channel geometry.",
+      "nextAction": "Obtain a permitted official station-to-channel crosswalk or independently validated hydrography trace before changing the waterbody name, geometry or public map.",
       "sourceRefs": [
         "emb-calabarzon-waterbodies",
-        "emb-calabarzon-annual-report-2024"
+        "emb-calabarzon-annual-report-2024",
+        "boothroyd-2023-philippines-river-catchment-geodata"
       ]
     }
   ],
@@ -1567,6 +1569,6 @@
   "nextStep": {
     "phaseId": "L1",
     "regionName": "CALABARZON (Region IV-A)",
-    "action": "Continue the incomplete CALABARZON baseline by seeking exact station records and a source-backed full-channel trace for Gapan/Sapang and Tagbac creek. Keep each adopted segment distinct from full river geometry; Bal-on locality and fish evidence unresolved. Then proceed to the next independently sourceable freshwater lead. Do not advance to NCR or admit public species claims; do not mark CALABARZON complete until remaining freshwater gaps are reviewed or explicitly bounded."
+    "action": "Continue the incomplete CALABARZON baseline by seeking exact station records and a source-backed full-channel trace for Gapan/Sapang. For Tagbac creek, verify whether adjacent modelled segments correspond to the named EMB watercourse and obtain permitted official channel geometry. Keep each adopted segment distinct from full river geometry; Bal-on locality and fish evidence unresolved. Then proceed to the next independently sourceable freshwater lead. Do not advance to NCR or admit public species claims; do not mark CALABARZON complete until remaining freshwater gaps are reviewed or explicitly bounded."
   }
 }

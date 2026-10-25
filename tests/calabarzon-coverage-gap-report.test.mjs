@@ -78,7 +78,8 @@ test("CALABARZON checkpoint reports its gaps without claiming a complete region"
   );
   assert.equal(report.nextStep.phaseId, "L1");
   assert.equal(report.nextStep.regionName, "CALABARZON (Region IV-A)");
-  assert.match(report.nextStep.action, /station records and a source-backed full-channel trace for Gapan\/Sapang and Tagbac creek/i);
+  assert.match(report.nextStep.action, /station records and a source-backed full-channel trace for Gapan\/Sapang/i);
+  assert.match(report.nextStep.action, /For Tagbac creek, verify whether adjacent modelled segments/i);
   assert.match(report.nextStep.action, /do not mark CALABARZON complete/i);
   assert.ok(report.openGaps.some((gap) => gap.id === "gapan-sapang-river-evidence-and-extent"));
   assert.ok(report.openGaps.some((gap) => gap.id === "tagbac-creek-channel-and-name-crosswalk"));
