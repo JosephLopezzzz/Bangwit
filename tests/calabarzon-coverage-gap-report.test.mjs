@@ -4,7 +4,7 @@ import { readFile } from "node:fs/promises";
 import { test } from "node:test";
 
 const base = new URL("../data/research/philippines/", import.meta.url);
-const [report, scope, sweep, sourceRegistry, scopeBytes, sourceBytes, museumBytes, taxonomyFollowupBytes, caviteBayScreenBytes, midasFollowupBytes, dagatdagatanFollowupBytes] = await Promise.all([
+const [report, scope, sweep, sourceRegistry, scopeBytes, sourceBytes, museumBytes, taxonomyFollowupBytes, caviteBayScreenBytes, midasFollowupBytes, dagatdagatanFollowupBytes, balOnSearchBytes] = await Promise.all([
   readFile(new URL("calabarzon-coverage-gap-report-20261025.json", base), "utf8").then(JSON.parse),
   readFile(new URL("calabarzon-scope.json", base), "utf8").then(JSON.parse),
   readFile(new URL("calabarzon-coverage-source-sweep.json", base), "utf8").then(JSON.parse),
@@ -16,6 +16,7 @@ const [report, scope, sweep, sourceRegistry, scopeBytes, sourceBytes, museumByte
   readFile(new URL("calabarzon-cavite-bay-gbif-screen-20261025.json", base), "utf8"),
   readFile(new URL("calabarzon-taal-midas-municipality-discrepancy-followup-20261026.json", base), "utf8"),
   readFile(new URL("calabarzon-dagatdagatan-lopez-catalog-followup-20261026.json", base), "utf8"),
+  readFile(new URL("calabarzon-bal-on-reservoir-retrieval-search-20261026.json", base), "utf8"),
 ]);
 
 test("CALABARZON checkpoint reports its gaps without claiming a complete region", () => {
@@ -50,6 +51,7 @@ test("CALABARZON checkpoint reports its gaps without claiming a complete region"
   assert.equal(report.inputHashes.caviteBayGbifScreenSha256, createHash("sha256").update(caviteBayScreenBytes).digest("hex"));
   assert.equal(report.inputHashes.taalMidasMunicipalityFollowupSha256, createHash("sha256").update(midasFollowupBytes).digest("hex"));
   assert.equal(report.inputHashes.dagatdagatanLopezCatalogFollowupSha256, createHash("sha256").update(dagatdagatanFollowupBytes).digest("hex"));
+  assert.equal(report.inputHashes.balOnRetrievalSearchSha256, createHash("sha256").update(balOnSearchBytes).digest("hex"));
   assert.equal(
     report.inputHashes.lagunaMuseumVerificationSha256,
     createHash("sha256").update(museumBytes).digest("hex"),
@@ -74,6 +76,7 @@ test("CALABARZON checkpoint reports its gaps without claiming a complete region"
   );
   assert.equal(report.nextStep.phaseId, "L1");
   assert.equal(report.nextStep.regionName, "CALABARZON (Region IV-A)");
+  assert.match(report.nextStep.action, /next independently sourceable freshwater or river lead/i);
   assert.match(report.nextStep.action, /do not advance to NCR or mark CALABARZON complete/i);
   assert.ok(report.openGaps.some((gap) => gap.id === "scope-not-exhaustive"));
   const museumGap = report.openGaps.find((gap) => gap.id === "laguna-museum-catalog-conflicts");

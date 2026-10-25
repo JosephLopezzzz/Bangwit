@@ -70,6 +70,6 @@ test("source registry and CALABARZON checkpoint pin the figure review without ap
     report.inputHashes.seafdecDagatanFigureReviewSha256,
     createHash("sha256").update(reviewBytes).digest("hex"),
   );
-  assert.match(report.nextStep.action, /Bal-on Reservoir/);
+  assert.match(report.nextStep.action, /Bal-on locality and fish evidence unresolved/i);
   assert.equal(report.coverageSummary.regionalBaselineComplete, false);
 });

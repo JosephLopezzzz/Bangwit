@@ -3,8 +3,9 @@ import { readFile } from "node:fs/promises";
 import { test } from "node:test";
 
 const base = new URL("../data/research/philippines/", import.meta.url);
-const [review, scope, registry, report] = await Promise.all([
+const [review, balOnSearch, scope, registry, report] = await Promise.all([
   readFile(new URL("calabarzon-seafdec-nifep-table-review-20261024.json", base), "utf8").then(JSON.parse),
+  readFile(new URL("calabarzon-bal-on-reservoir-retrieval-search-20261026.json", base), "utf8").then(JSON.parse),
   readFile(new URL("calabarzon-scope.json", base), "utf8").then(JSON.parse),
   readFile(new URL("sources.json", base), "utf8").then(JSON.parse),
   readFile(new URL("calabarzon-coverage-gap-report-20261024.json", base), "utf8").then(JSON.parse),
@@ -41,6 +42,22 @@ test("SEAFDEC Table 2 adds only a named Bal-on lead and retains grouped-site lim
   const lagunaDeBay = waterbodiesById.get("ph-wb-laguna-de-bay");
   assert.ok(lagunaDeBay.sourceRefs.includes(sourceId));
   assert.match(lagunaDeBay.scopeNote, /historical management context/i);
+});
+
+test("Bal-on's indexed-web retrieval gap stays separate from fish absence and geometry", () => {
+  assert.equal(balOnSearch.scopeLeadId, "ph-wb-bal-on-reservoir-quezon");
+  assert.equal(balOnSearch.searchFindings.onlyDirectlyMatchingPublicSource.sourceId, sourceId);
+  assert.equal(balOnSearch.searchFindings.independentOfficialLocalityRecordFound, false);
+  assert.equal(balOnSearch.searchFindings.datedSiteResolvedFishSurveyFound, false);
+  assert.equal(balOnSearch.searchFindings.boundaryOrGeometrySourceFound, false);
+  assert.equal(balOnSearch.decision.speciesAssertionsAdded, 0);
+  assert.equal(balOnSearch.decision.fishAbsenceClaimAdded, false);
+  assert.match(balOnSearch.interpretation, /do not establish that the reservoir, fish, surveys or records are absent/i);
+
+  const source = sourcesById.get(sourceId);
+  assert.ok(source.access.reviewFiles.includes("calabarzon-bal-on-reservoir-retrieval-search-20261026.json"));
+  assert.match(source.researchStatus, /no-independent-locality-or-fish-source-found/i);
+  assert.equal(report.coverageSummary.regionalBaselineComplete, false);
 });
 
 test("SEAFDEC stocking and restoration table remains distinct from fish occurrence data", () => {
