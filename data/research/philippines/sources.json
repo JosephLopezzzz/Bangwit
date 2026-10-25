@@ -3,7 +3,7 @@
   "checkedOn": "2026-10-26",
   "status": "research-only-source-registry",
   "scope": "National acquisition references and CALABARZON/Central Luzon identity/source leads. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 156,
+  "sourceCount": 157,
   "sources": [
     {
       "id": "gbif-col-xr-taxonomy-matching",
@@ -115,7 +115,7 @@
       "role": "Candidate occurrence acquisition using versioned queries/download keys and source citations.",
       "checkedOn": "2026-10-26",
       "access": {
-        "status": "official-documentation-read;selected-public-occurrence-query-record-and-dataset-reviewed",
+        "status": "official-documentation-read;selected-public-occurrence-query-record-and-dataset-reviewed;Morong-candidate-held-for-geography-taxonomy-and-terms",
         "localRawSnapshot": null,
         "reviewFiles": [
           "calabarzon-bmb-lakes-gbif-screen-20261024.json",
@@ -128,7 +128,8 @@
           "calabarzon-balayan-gbif-record-details-20261025.json",
           "calabarzon-cavite-bay-gbif-screen-20261025.json",
           "calabarzon-tayabas-gbif-specimen-review-20261026.json",
-          "calabarzon-cambantoc-gbif-screen-20261026.json"
+          "calabarzon-cambantoc-gbif-screen-20261026.json",
+          "calabarzon-morong-river-gbif-candidate-review-20261026.json"
         ],
         "additionalRawPaths": [
           "raw/calabarzon-bmb-gbif-screen-20261024/",
@@ -141,13 +142,14 @@
           "raw/calabarzon-balayan-gbif-record-details-20261025/",
           "raw/calabarzon-cavite-bay-gbif-screen-20261025/",
           "raw/calabarzon-tayabas-gbif-specimen-20261026/",
-          "raw/calabarzon-cambantoc-gbif-screen-20261026/"
+          "raw/calabarzon-cambantoc-gbif-screen-20261026/",
+          "raw/calabarzon-morong-river-gbif-screen-20261026/"
         ]
       },
       "reuse": {
         "metadata": "API documentation is an access reference, not a license for occurrence records.",
         "raw": "Each dataset/record license and download citation must be retained.",
-        "content": "Mixed-source data and media are not blanket-approved; no public occurrence admission from this registry."
+        "content": "Mixed-source data and media are not blanket-approved; no public occurrence admission from this registry. The Morong River candidate remains unassigned and out of public projections because its geography and identification are unresolved and CAS collection redistribution terms conflict with GBIF CC0 metadata."
       },
       "publicationApproval": false,
       "researchStatus": "public-occurrence-api-screen-used-for-scoped-regional-candidates;record-and-dataset-rights-reviewed-per-row",
@@ -1146,22 +1148,24 @@
       "role": "Selected CC0 preserved-specimen rows with explicit GBIF localities support the Molawin Creek projection and three historical Taal Lake assertions; a separate 1925 Quingoa River occurrence remains a Central Luzon research candidate only. The selected Santa Cruz River review contributes three additional historical locality assertions; no current-presence or public-release claim is made.",
       "checkedOn": "2026-10-26",
       "access": {
-        "status": "GBIF-exact-waterbody-query-dataset-metadata-selected-occurrence-and-taxon-records-reviewed;Tayabas-Bay-six-record-rights-conflict-reviewed-and-held",
+        "status": "GBIF-exact-waterbody-query-dataset-metadata-selected-occurrence-and-taxon-records-reviewed;Tayabas-Bay-six-record-rights-conflict-reviewed-and-held;Morong-single-candidate-geography-and-redistribution-conflict-held",
         "reviewFiles": [
           "makiling-gbif-source-review.json",
           "central-luzon-bulacan-gbif-waterbody-screen-20261024.json",
           "calabarzon-taal-cas-gbif-source-review-20261024.json",
           "calabarzon-santa-cruz-river-cas-crosswalk-20261025.json",
-          "calabarzon-tayabas-bay-cas-rights-review-20261026.json"
+          "calabarzon-tayabas-bay-cas-rights-review-20261026.json",
+          "calabarzon-morong-river-gbif-candidate-review-20261026.json"
         ],
         "additionalRawPaths": [
-          "raw/calabarzon-tayabas-bay-gbif-records-20261026/"
+          "raw/calabarzon-tayabas-bay-gbif-records-20261026/",
+          "raw/calabarzon-morong-river-gbif-screen-20261026/"
         ]
       },
       "reuse": {
         "metadata": "The GBIF dataset metadata cites DOI 10.15468/efh2ib and marks the dataset CC0-1.0.",
         "raw": "Only selected occurrence records are normalized across locality-specific reviews; no full dataset download is retained.",
-        "content": "Record-level CC0 supports the selected normalized factual fields. The Quingoa River specimen remains a historical research candidate with its coordinate and taxonomy limitations retained; this entry does not approve other records or current-presence claims. A separate 2026-10-25 review verifies three selected Santa Cruz River source rows as CC0; that is a locality-specific research decision and does not approve other dataset records. A separate Tayabas Bay six-record batch remains held because the CAS collection database terms prohibit redistribution despite GBIF CC0 metadata; no row-level content or app projection is approved for that batch."
+        "content": "Record-level CC0 supports the selected normalized factual fields. The Quingoa River specimen remains a historical research candidate with its coordinate and taxonomy limitations retained; this entry does not approve other records or current-presence claims. A separate 2026-10-25 review verifies three selected Santa Cruz River source rows as CC0; that is a locality-specific research decision and does not approve other dataset records. A separate Tayabas Bay six-record batch remains held because the CAS collection database terms prohibit redistribution despite GBIF CC0 metadata; no row-level content or app projection is approved for that batch. One CALABARZON Morong candidate is held without row-level name or coordinates because the CAS collection restrictions conflict with GBIF CC0 metadata and the occurrence geography is unresolved."
       },
       "publicationApproval": false,
       "researchStatus": "locality-specific-selected-records-reviewed;broader-dataset-not-approved;historical-not-current-presence",
@@ -4478,6 +4482,30 @@
         "The original table provides site presence marks, not per-species counts, exact dates or station coordinates.",
         "GBIF returned zero for eight bounded Iyam/Iyam-Alitaaw waterBody/locality text searches; these results do not establish absence."
       ]
+    },
+    {
+      "id": "calacademy-catalog-morong-candidate-crosscheck",
+      "title": "Eschmeyer's Catalog of Fishes: selected nomenclature cross-check for a Morong River candidate",
+      "provider": "California Academy of Sciences, Institute for Biodiversity Science and Sustainability",
+      "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=21756",
+      "role": "Nomenclatural cross-check for one held GBIF freshwater specimen candidate; it does not verify specimen identity or locality.",
+      "checkedOn": "2026-10-26",
+      "access": {
+        "status": "public-taxonomic-catalog-entry-reviewed;specimen-record-not-verified",
+        "reviewFiles": [
+          "calabarzon-morong-river-gbif-candidate-review-20261026.json"
+        ],
+        "rawPath": null,
+        "rawSha256Recorded": false
+      },
+      "reuse": {
+        "metadata": "A selected current-name and synonym-status entry was reviewed as taxonomic reference only.",
+        "raw": "No catalog page snapshot, prose, or image copied into tracked files.",
+        "content": "The catalog cross-check does not establish the identity, occurrence, locality, current presence, habitat, diet, legal status, or safety of the held specimen candidate."
+      },
+      "publicationApproval": false,
+      "researchStatus": "one-nomenclatural-crosscheck;specimen-identity-unverified;zero-public-assertions",
+      "sourceYear": 2026
     }
   ],
   "sourcePolicy": {

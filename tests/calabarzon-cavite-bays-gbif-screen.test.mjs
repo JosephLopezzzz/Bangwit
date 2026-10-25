@@ -102,8 +102,8 @@ test("Cavite bay GBIF text-screen keeps non-fish and unresolved hits out of fish
   const assignments = scope.waterbodies.flatMap((row) => row.sourceRefs);
   assert.equal(report.coverageSummary.sourceAssignments, assignments.length);
   assert.equal(report.coverageSummary.distinctSourceReferencesAssigned, new Set(assignments).size);
-  assert.equal(report.coverageSummary.sourceAssignments, 206);
-  assert.equal(report.coverageSummary.leadsStillResearchQueued, 14);
+  assert.equal(report.coverageSummary.sourceAssignments, 209);
+  assert.equal(report.coverageSummary.leadsStillResearchQueued, 13);
   assert.equal(report.coverageSummary.regionalBaselineComplete, false);
   assert.equal(report.coverageSummary.publicAdmission, false);
   assert.equal(report.nextStep.phaseId, "L1");
