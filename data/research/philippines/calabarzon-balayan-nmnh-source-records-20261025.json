@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "title": "Balayan Bay USNM Fishes catalog record directly checked against NMNH and WoRMS",
+  "reviewedOn": "2026-10-25",
+  "provider": "Smithsonian National Museum of Natural History (NMNH), Division of Fishes",
+  "collectionPage": "https://collections.nmnh.si.edu/search/fishes/",
+  "searchHelp": "https://collections.nmnh.si.edu/search/fishes/",
+  "catalogRecordUrl": "https://collections.nmnh.si.edu/search/fishes/?nb=122919",
+  "search": {
+    "method": "Public NMNH Fishes search endpoint, queried by the exact scientific name; returned catalog number was checked after trimming its display padding.",
+    "query": "qn Ventrifossa divergens",
+    "resultsReturned": 15,
+    "exactCatalogAndNameMatches": 1,
+    "recordId": 5233456,
+    "rawResponse": {
+      "path": "raw/calabarzon-balayan-nmnh-source-check-20261025/nmnh-fishes-search-v-d-20261025.json",
+      "bytes": 30469,
+      "sha256": "1ea59e5616b23b6791bb53bdbdb3eb5b251b33661e61556b0cc4a0c27586e128",
+      "coordinateBearingRawResponse": true,
+      "trackedReviewCoordinates": false
+    }
+  },
+  "record": {
+    "institutionCode": "USNM",
+    "catalogNumber": "122919",
+    "scientificName": "Ventrifossa divergens",
+    "eventDate": "1908-01-20",
+    "verbatimEventDate": "20 Jan 1908",
+    "waterBody": "North Pacific Ocean",
+    "locality": "Sombrero Island; Balayan Bay and Verde Island Passage",
+    "expedition": "Albatross Philippine Expedition, 1907-1910",
+    "itemLevelLicense": null,
+    "itemLevelLicenseInterpretation": "No item-level license field was present in the retrieved NMNH Fishes search record. iDigBio's recordset-level CC0 metadata is not treated as a substitute for a source-item reuse statement."
+  },
+  "taxonomyCrosscheck": {
+    "provider": "World Register of Marine Species (WoRMS)",
+    "apiUrl": "https://www.marinespecies.org/rest/AphiaRecordsByName/Ventrifossa%20divergens?like=false&marine_only=false",
+    "taxonUrl": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=217789",
+    "scientificName": "Ventrifossa divergens",
+    "authority": "Gilbert & Hubbs, 1920",
+    "rank": "Species",
+    "status": "accepted",
+    "aphiaId": 217789,
+    "exactAcceptedNameMatch": true,
+    "role": "Nomenclatural cross-check only; not a specimen re-identification or occurrence source.",
+    "rawResponse": {
+      "path": "raw/calabarzon-balayan-nmnh-source-check-20261025/worms-ventrifossa-divergens-20261025.json",
+      "bytes": 968,
+      "sha256": "dad23ec8b7c13e1f409b9c3235355bd78fb3fc91a89c1ec726475c05d2a250c0"
+    }
+  },
+  "comparison": {
+    "idigbioReview": "calabarzon-balayan-idigbio-catalog-check-20261025.json",
+    "idigbioUuid": "17dd5e12-1f3c-49f0-b2d4-60fe6b6c12c9",
+    "gbifCandidateIds": ["4904905416", "4904905469", "4904905541", "4904905801", "4904905907"],
+    "fieldsCompared": ["institutionCode", "catalogNumber", "scientificName", "eventDate", "locality"],
+    "institutionAndCatalogIdentityMatch": true,
+    "scientificNameMatches": true,
+    "sourceEventDateMatches": true,
+    "localityTextMatches": true,
+    "localityScopeIsSingleSite": false,
+    "interpretation": "Five GBIF MATERIAL_CITATION rows and one iDigBio record resolve to the same NMNH catalog item. Its source locality combines Sombrero Island, Balayan Bay, and Verde Island Passage; it does not identify one exact station or support five independent occurrences."
+  },
+  "summary": {
+    "exactInstitutionCatalogRecordMatched": true,
+    "acceptedSpeciesNameCrosschecked": true,
+    "eventDateVerifiedAtDayPrecision": true,
+    "multiLocalityScopeRetained": true,
+    "sourceItemLicenseVerified": false,
+    "gbifCitationRowsCollapsedToOneCatalogIdentity": true,
+    "coordinatesIncluded": false
+  },
+  "decision": {
+    "historicalOccurrenceAdmitted": false,
+    "publicAppAdmission": false,
+    "mapPointAdmission": false,
+    "currentPresenceInferred": false,
+    "completeChecklistClaimed": false,
+    "reason": "The NMNH record verifies USNM catalog 122919, Ventrifossa divergens and the source date 1908-01-20. The verbatim locality combines multiple named places and the retrieved record does not state an item-level reuse license. Keep all five GBIF citations grouped under this single catalog identity and held from occurrence, map and public app claims until locality scope and reuse terms are resolved."
+  }
+}

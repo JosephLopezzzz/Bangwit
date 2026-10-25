@@ -4,18 +4,35 @@ import { readFile } from "node:fs/promises";
 import { test } from "node:test";
 
 const base = new URL("../data/research/philippines/", import.meta.url);
-const [review, gbif, registry, gapReport, reviewBytes, gbifBytes, sourceBytes, fieldMuseumReview, fieldMuseumBytes] =
-  await Promise.all([
-    readFile(new URL("calabarzon-balayan-idigbio-catalog-check-20261025.json", base), "utf8").then(JSON.parse),
-    readFile(new URL("calabarzon-balayan-gbif-record-details-20261025.json", base), "utf8").then(JSON.parse),
-    readFile(new URL("sources.json", base), "utf8").then(JSON.parse),
-    readFile(new URL("calabarzon-coverage-gap-report-20261025.json", base), "utf8").then(JSON.parse),
-    readFile(new URL("calabarzon-balayan-idigbio-catalog-check-20261025.json", base)),
-    readFile(new URL("calabarzon-balayan-gbif-record-details-20261025.json", base)),
-    readFile(new URL("sources.json", base)),
-    readFile(new URL("calabarzon-balayan-fieldmuseum-source-records-20261025.json", base), "utf8").then(JSON.parse),
-    readFile(new URL("calabarzon-balayan-fieldmuseum-source-records-20261025.json", base)),
-  ]);
+const [
+  review,
+  gbif,
+  registry,
+  gapReport,
+  reviewBytes,
+  gbifBytes,
+  sourceBytes,
+  fieldMuseumReview,
+  fieldMuseumBytes,
+  nmnhReview,
+  nmnhDecision,
+  nmnhReviewBytes,
+  nmnhDecisionBytes,
+] = await Promise.all([
+  readFile(new URL("calabarzon-balayan-idigbio-catalog-check-20261025.json", base), "utf8").then(JSON.parse),
+  readFile(new URL("calabarzon-balayan-gbif-record-details-20261025.json", base), "utf8").then(JSON.parse),
+  readFile(new URL("sources.json", base), "utf8").then(JSON.parse),
+  readFile(new URL("calabarzon-coverage-gap-report-20261025.json", base), "utf8").then(JSON.parse),
+  readFile(new URL("calabarzon-balayan-idigbio-catalog-check-20261025.json", base)),
+  readFile(new URL("calabarzon-balayan-gbif-record-details-20261025.json", base)),
+  readFile(new URL("sources.json", base)),
+  readFile(new URL("calabarzon-balayan-fieldmuseum-source-records-20261025.json", base), "utf8").then(JSON.parse),
+  readFile(new URL("calabarzon-balayan-fieldmuseum-source-records-20261025.json", base)),
+  readFile(new URL("calabarzon-balayan-nmnh-source-records-20261025.json", base), "utf8").then(JSON.parse),
+  readFile(new URL("calabarzon-balayan-nmnh-row-decisions-20261025.json", base), "utf8").then(JSON.parse),
+  readFile(new URL("calabarzon-balayan-nmnh-source-records-20261025.json", base)),
+  readFile(new URL("calabarzon-balayan-nmnh-row-decisions-20261025.json", base)),
+]);
 
 function hasCoordinateKey(value) {
   if (!value || typeof value !== "object") return false;
@@ -91,14 +108,75 @@ test("source registry and CALABARZON gap snapshot record the iDigBio follow-up",
   const gap = gapReport.openGaps.find((item) => item.id === "balayan-bay-museum-catalog-review");
   assert.ok(gap);
   assert.equal(gap.count, 14);
-  assert.match(gap.nextAction, /UMMZ.*CAS catalog 28340 name conflict.*USNM/i);
+  assert.match(gap.nextAction, /CAS catalog 28340 name conflict.*USNM.*UMMZ/i);
   assert.equal(
     gapReport.inputHashes.balayanFieldMuseumSourceSha256,
     createHash("sha256").update(fieldMuseumBytes).digest("hex"),
   );
-  assert.equal(gapReport.coverageSummary.registeredSources, 141);
+  assert.equal(gapReport.coverageSummary.registeredSources, 143);
   assert.match(gap.reason, /catalog rows 47041 and 90961.*WoRMS/i);
   assert.match(gap.nextAction, /historical-only decisions.*quality/i);
+});
+
+test("NMNH directly confirms the grouped USNM catalog identity while locality and reuse stay held", () => {
+  assert.equal(nmnhReview.record.institutionCode, "USNM");
+  assert.equal(nmnhReview.record.catalogNumber, "122919");
+  assert.equal(nmnhReview.record.scientificName, "Ventrifossa divergens");
+  assert.equal(nmnhReview.record.eventDate, "1908-01-20");
+  assert.equal(nmnhReview.record.verbatimEventDate, "20 Jan 1908");
+  assert.equal(nmnhReview.record.locality, "Sombrero Island; Balayan Bay and Verde Island Passage");
+  assert.equal(nmnhReview.record.itemLevelLicense, null);
+  assert.equal(nmnhReview.summary.exactInstitutionCatalogRecordMatched, true);
+  assert.equal(nmnhReview.summary.gbifCitationRowsCollapsedToOneCatalogIdentity, true);
+  assert.equal(nmnhReview.decision.historicalOccurrenceAdmitted, false);
+  assert.equal(nmnhReview.decision.publicAppAdmission, false);
+  assert.equal(nmnhReview.decision.mapPointAdmission, false);
+  assert.equal(nmnhReview.taxonomyCrosscheck.aphiaId, 217789);
+  assert.equal(nmnhReview.taxonomyCrosscheck.status, "accepted");
+  assert.equal(nmnhReview.taxonomyCrosscheck.rank, "Species");
+
+  assert.equal(nmnhDecision.inputHashes.institutionReview, createHash("sha256").update(nmnhReviewBytes).digest("hex"));
+  assert.equal(nmnhDecision.summary.gbifCitationRows, 5);
+  assert.equal(nmnhDecision.summary.uniqueInstitutionCatalogIdentities, 1);
+  assert.equal(nmnhDecision.summary.historicalOccurrencesAdmitted, 0);
+  assert.equal(nmnhDecision.summary.publicAppRowsAdded, 0);
+  assert.deepEqual(
+    nmnhDecision.gbifCitationRows.map(({ gbifId }) => gbifId),
+    ["4904905416", "4904905469", "4904905541", "4904905801", "4904905907"],
+  );
+  assert.ok(nmnhDecision.gbifCitationRows.every((row) => row.catalogNumber === "USNM 122919"));
+  assert.ok(nmnhDecision.gbifCitationRows.every((row) => row.basisOfRecord === "MATERIAL_CITATION"));
+  assert.ok(
+    nmnhDecision.gbifCitationRows.every((row) =>
+      row.qualityFlags.includes("OCCURRENCE_STATUS_INFERRED_FROM_INDIVIDUAL_COUNT"),
+    ),
+  );
+  assert.equal(hasCoordinateKey(nmnhReview), false);
+  assert.equal(hasCoordinateKey(nmnhDecision), false);
+
+  const nmnhSource = registry.sources.find((source) => source.id === "nmnh-balayan-usnm-122919-primary-record-check");
+  const wormsSource = registry.sources.find(
+    (source) => source.id === "worms-balayan-ventrifossa-divergens-taxonomy-crosscheck",
+  );
+  assert.ok(nmnhSource);
+  assert.ok(wormsSource);
+  assert.equal(nmnhSource.publicationApproval, false);
+  assert.equal(wormsSource.publicationApproval, false);
+  assert.equal(registry.sourceCount, 143);
+  assert.equal(registry.sourceCount, registry.sources.length);
+  assert.equal(gapReport.coverageSummary.registeredSources, 143);
+  assert.equal(gapReport.inputHashes.sourcesSha256, createHash("sha256").update(sourceBytes).digest("hex"));
+  assert.equal(
+    gapReport.inputHashes.balayanNmnhSourceSha256,
+    createHash("sha256").update(nmnhReviewBytes).digest("hex"),
+  );
+  assert.equal(
+    gapReport.inputHashes.balayanNmnhRowDecisionsSha256,
+    createHash("sha256").update(nmnhDecisionBytes).digest("hex"),
+  );
+  const gap = gapReport.openGaps.find((item) => item.id === "balayan-bay-museum-catalog-review");
+  assert.match(gap.reason, /NMNH Fishes search now directly confirms USNM 122919/i);
+  assert.match(gap.nextAction, /multi-locality wording and reuse terms/i);
 });
 
 test("Field Museum archive confirms its two Balayan catalog rows without promoting indexed dates", () => {

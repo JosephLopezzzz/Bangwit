@@ -7,19 +7,21 @@
   "status": "checkpoint-published-incomplete-baseline",
   "inputHashes": {
     "scopeSha256": "e8a6c490cae14465a9ccc33b8078cf68f3e4b9fb016072a5c0f0549a2d96d30f",
-    "sourcesSha256": "8a7e3c0e4706305f13eb7162c6b56778d0d8fab446113d2cd326bd962a52bedd",
+    "sourcesSha256": "22ce7d285ab4126a28eba4c7685336f727134016f355e7fdd0c4e7914aa6dc71",
     "lagunaMuseumVerificationSha256": "5604848902166f821f9a37eb79c9eb1ffea4e05897739f216189b24762a10509",
     "balayanGbifDetailsSha256": "6e466c1df40085b70d314da6af314ecc56ea9cd72da737cc9cf6c1757c80d1e9",
     "balayanIdigbioCrosscheckSha256": "66b5e92896fed932a02ce75316ce5cb8f8031525fa3923ed8a1d8426983a037f",
     "balayanFieldMuseumSourceSha256": "f75c9104540f467c3f3c94e6018ee67317f68269fc8fafecf52ea89042f6a811",
-    "balayanFieldMuseumRowDecisionsSha256": "dc70d39ecd8a7118534362361410bd93f250fa325ed7fd4cc185e0b2be131d11"
+    "balayanFieldMuseumRowDecisionsSha256": "dc70d39ecd8a7118534362361410bd93f250fa325ed7fd4cc185e0b2be131d11",
+    "balayanNmnhSourceSha256": "376922656f884d0ea50d7df4f48b64608fac8b9b564762b9b17ef2a5bc870f15",
+    "balayanNmnhRowDecisionsSha256": "e3fb24a2e521e5647f11cb1447b668b9848a6fa5907fecb509ee5ade4ac0cf54"
   },
   "decision": "Keep CALABARZON visibly in progress. This checkpoint records the current source-backed leads and specific gaps; it is not a complete fish checklist, a completed region, or a public species release.",
   "coverageSummary": {
     "namedWaterbodyLeads": 83,
     "distinctSourceReferencesAssigned": 49,
     "sourceAssignments": 197,
-    "registeredSources": 141,
+    "registeredSources": 143,
     "provincesWithLeads": 5,
     "separateCityCoverageUnits": 1,
     "byWaterbodyKind": {
@@ -192,12 +194,14 @@
     {
       "id": "balayan-bay-museum-catalog-review",
       "count": 14,
-      "reason": "Fourteen corrected GBIF candidates group into ten museum catalog identities. The Field Museum-hosted archive directly confirms FMNH Fishes catalog rows 47041 and 90961, and WoRMS returns an exact accepted species-name match for both; they are admitted only as historical Balayan Bay locality evidence in the research ledger, with year-only dates and all GBIF flags preserved. Twelve other GBIF candidate rows remain to be resolved across the CAS, USNM and UMMZ catalog identities. The CAS 28340 name conflict, UMMZ unresolved identity and USNM five-to-one multi-locality citation remain open; none of these cross-checks establishes a complete or current bay checklist.",
-      "nextAction": "Review the 12 remaining GBIF rows across the eight non-Field-Museum catalog identities: obtain institution-hosted CAS and USNM source records where available, resolve the UMMZ exact identity and CAS catalog 28340 name conflict, reconcile the five-to-one USNM citation and its multi-locality scope, and make per-row historical-only decisions under source-supported taxonomy, locality, date, quality and reuse terms. Keep coordinates and current-presence claims excluded.",
+      "reason": "Fourteen corrected GBIF candidates group into ten museum catalog identities. The Field Museum-hosted archive directly confirms FMNH Fishes catalog rows 47041 and 90961, and WoRMS returns an exact accepted species-name match for both; they are admitted only as historical Balayan Bay locality evidence in the research ledger, with year-only dates and all GBIF flags preserved. The NMNH Fishes search now directly confirms USNM 122919, Ventrifossa divergens and its 1908-01-20 source date; five GBIF material-citation rows therefore remain grouped under one catalog item. That record's locality combines Sombrero Island, Balayan Bay and Verde Island Passage, and no item-level reuse license was returned, so those rows remain held. Six CAS candidate rows and the unmatched UMMZ identity also remain for row-level decisions. No cross-check establishes a complete or current bay checklist.",
+      "nextAction": "Make row-level historical-only decisions for the 12 remaining non-Field-Museum candidate rows: resolve the CAS catalog 28340 name conflict and source rights for the six CAS records; keep the five USNM 122919 citations grouped while seeking institution guidance on the multi-locality wording and reuse terms; and continue the bounded UMMZ 100346 exact-identity search. Keep all GBIF quality flags, exclude coordinates and current-presence claims, and admit no public app row until locality and rights are resolved.",
       "sourceRefs": [
         "idigbio-balayan-catalog-crosscheck",
         "fieldmuseum-balayan-primary-archive-check",
-        "worms-balayan-taxonomy-crosscheck"
+        "worms-balayan-taxonomy-crosscheck",
+        "nmnh-balayan-usnm-122919-primary-record-check",
+        "worms-balayan-ventrifossa-divergens-taxonomy-crosscheck"
       ]
     }
   ],

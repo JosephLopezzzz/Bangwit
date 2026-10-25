@@ -3,7 +3,7 @@
   "checkedOn": "2026-10-25",
   "status": "research-only-source-registry",
   "scope": "National acquisition references and CALABARZON/Central Luzon identity/source leads. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 141,
+  "sourceCount": 143,
   "sources": [
     {
       "id": "gbif-col-xr-taxonomy-matching",
@@ -3915,6 +3915,78 @@
         "WoRMS provides current nomenclatural status, not historical specimen identification or locality confirmation.",
         "The source citation shown by WoRMS references FishBase; treat this as a name cross-check rather than independent taxonomic consensus.",
         "The source names and exact accepted names agree for these two records; GBIF quality flags remain preserved in the separate row review."
+      ]
+    },
+    {
+      "id": "nmnh-balayan-usnm-122919-primary-record-check",
+      "title": "NMNH Division of Fishes direct record check for USNM 122919",
+      "provider": "Smithsonian National Museum of Natural History, Division of Fishes",
+      "url": "https://collections.nmnh.si.edu/search/fishes/?nb=122919",
+      "additionalUrls": [
+        "https://collections.nmnh.si.edu/search/fishes/",
+        "https://naturalhistory.si.edu/research/idsc/data-access"
+      ],
+      "role": "Direct catalog-source cross-check for the five GBIF material-citation rows grouped under USNM 122919; verifies one NMNH record, its species name, day-precision source date, and full multi-locality wording. Not a field survey or current-presence source.",
+      "checkedOn": "2026-10-25",
+      "access": {
+        "status": "official-NMNH-search-returned-exact-USNM-catalog-record-by-name-query",
+        "reviewFiles": [
+          "calabarzon-balayan-nmnh-source-records-20261025.json",
+          "calabarzon-balayan-nmnh-row-decisions-20261025.json"
+        ],
+        "additionalRawPaths": [
+          "raw/calabarzon-balayan-nmnh-source-check-20261025/"
+        ],
+        "fieldAllowlistOnly": true,
+        "coordinatesRetained": false
+      },
+      "reuse": {
+        "metadata": "The retrieved NMNH Fishes search record did not return an item-level license field. iDigBio recordset-level CC0 metadata is not treated as a source-item license or reuse authorization.",
+        "raw": "The complete search response is coordinate-bearing and remains in ignored local research storage. The tracked review contains only selected non-coordinate fields and a SHA-256.",
+        "content": "NMNH confirms the USNM 122919 catalog identity, Ventrifossa divergens and 1908-01-20 source date. Its locality field lists Sombrero Island, Balayan Bay and Verde Island Passage together. The five GBIF material citations remain grouped as one source catalog item and held from public occurrence claims pending locality-scope and reuse review."
+      },
+      "publicationApproval": false,
+      "researchStatus": "one-direct-institution-catalog-match;five-gbif-citations-grouped-as-one;multi-locality-and-item-rights-held;zero-public-assertions",
+      "license": null,
+      "caveats": [
+        "NMNH search documentation says its online database includes only a portion of holdings and notes that staff-added geographic retrieval fields may not be geographically accurate.",
+        "The source locality combines multiple named places and does not isolate a single station within Balayan Bay.",
+        "No item-level reuse license was exposed in the retrieved source record; no map point or current-presence claim is admitted."
+      ]
+    },
+    {
+      "id": "worms-balayan-ventrifossa-divergens-taxonomy-crosscheck",
+      "title": "WoRMS exact accepted-name check for the USNM 122919 fish record",
+      "provider": "World Register of Marine Species (WoRMS)",
+      "url": "https://www.marinespecies.org/rest/AphiaRecordsByName/Ventrifossa%20divergens?like=false&marine_only=false",
+      "additionalUrls": [
+        "https://www.marinespecies.org/aphia.php?p=taxdetails&id=217789"
+      ],
+      "role": "Nomenclatural cross-check for the NMNH source name Ventrifossa divergens; not specimen re-identification or locality evidence.",
+      "checkedOn": "2026-10-25",
+      "access": {
+        "status": "exact-name-API-returned-one-accepted-species-record",
+        "reviewFiles": [
+          "calabarzon-balayan-nmnh-source-records-20261025.json",
+          "calabarzon-balayan-nmnh-row-decisions-20261025.json"
+        ],
+        "additionalRawPaths": [
+          "raw/calabarzon-balayan-nmnh-source-check-20261025/worms-ventrifossa-divergens-20261025.json"
+        ],
+        "fieldAllowlistOnly": true,
+        "coordinatesRetained": false
+      },
+      "reuse": {
+        "metadata": "Used the API response for exact name, authority, rank and status; item-specific redistribution terms were not established.",
+        "raw": "The small API response is retained in ignored local research storage with its SHA-256; only needed nomenclatural fields are tracked.",
+        "content": "This is a name-status check only. Keep specimen identification, locality, occurrence and reuse decisions separate."
+      },
+      "publicationApproval": false,
+      "researchStatus": "one-exact-accepted-species-name-crosscheck;taxonomy-only;zero-occurrence-claims",
+      "license": null,
+      "caveats": [
+        "WoRMS nomenclatural acceptance does not independently verify the identity of the preserved specimen.",
+        "The multi-locality source wording and source reuse rights remain unresolved for app publication."
       ]
     }
   ],
