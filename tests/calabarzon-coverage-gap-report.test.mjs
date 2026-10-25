@@ -4,19 +4,22 @@ import { readFile } from "node:fs/promises";
 import { test } from "node:test";
 
 const base = new URL("../data/research/philippines/", import.meta.url);
-const [report, scope, sweep, sourceRegistry, scopeBytes] = await Promise.all([
-  readFile(new URL("calabarzon-coverage-gap-report-20261024.json", base), "utf8").then(JSON.parse),
+const [report, scope, sweep, sourceRegistry, scopeBytes, sourceBytes, museumBytes] = await Promise.all([
+  readFile(new URL("calabarzon-coverage-gap-report-20261025.json", base), "utf8").then(JSON.parse),
   readFile(new URL("calabarzon-scope.json", base), "utf8").then(JSON.parse),
   readFile(new URL("calabarzon-coverage-source-sweep.json", base), "utf8").then(JSON.parse),
   readFile(new URL("sources.json", base), "utf8").then(JSON.parse),
   readFile(new URL("calabarzon-scope.json", base), "utf8"),
+  readFile(new URL("sources.json", base), "utf8"),
+  readFile(new URL("calabarzon-laguna-museum-catalog-verification-20261025.json", base), "utf8"),
 ]);
 
 test("CALABARZON checkpoint reports its gaps without claiming a complete region", () => {
   assert.equal(report.status, "checkpoint-published-incomplete-baseline");
   assert.equal(report.regionId, scope.regionId);
   assert.equal(report.coverageSummary.namedWaterbodyLeads, 83);
-  assert.ok(report.coverageSummary.registeredSources <= sourceRegistry.sourceCount);
+  assert.equal(report.reviewedOn, "2026-10-25");
+  assert.equal(report.coverageSummary.registeredSources, sourceRegistry.sourceCount);
   assert.equal(sourceRegistry.sourceCount, sourceRegistry.sources.length);
   assert.equal(report.coverageSummary.waterbodyDenominatorEstablished, false);
   assert.equal(report.coverageSummary.boundaryGeometryValidated, 0);
@@ -39,6 +42,11 @@ test("CALABARZON checkpoint reports its gaps without claiming a complete region"
   assert.equal(report.coverageSummary.sourceAssignments, sourceRefs.length);
   assert.equal(report.coverageSummary.distinctSourceReferencesAssigned, new Set(sourceRefs).size);
   assert.equal(report.inputHashes.scopeSha256, createHash("sha256").update(scopeBytes).digest("hex"));
+  assert.equal(report.inputHashes.sourcesSha256, createHash("sha256").update(sourceBytes).digest("hex"));
+  assert.equal(
+    report.inputHashes.lagunaMuseumVerificationSha256,
+    createHash("sha256").update(museumBytes).digest("hex"),
+  );
   assert.deepEqual(
     report.waterbodySnapshot,
     scope.waterbodies.map((waterbody) => ({
@@ -57,5 +65,15 @@ test("CALABARZON checkpoint reports its gaps without claiming a complete region"
   assert.equal(report.nextStep.regionName, "CALABARZON (Region IV-A)");
   assert.match(report.nextStep.action, /do not advance to NCR or mark CALABARZON complete/i);
   assert.ok(report.openGaps.some((gap) => gap.id === "scope-not-exhaustive"));
+  const museumGap = report.openGaps.find((gap) => gap.id === "laguna-museum-catalog-conflicts");
+  assert.equal(museumGap.count, 18);
+  assert.deepEqual(museumGap.sourceRefs, [
+    "calabarzon-laguna-mzusp-sibbr-catalog",
+    "calabarzon-laguna-cas-monarch-access-check",
+  ]);
+  assert.match(museumGap.reason, /family-rank.*locality.*license/i);
+  assert.match(museumGap.nextAction, /recheck CAS.*resolve MZUSP/i);
+  assert.equal(report.coverageSummary.admittedPublicRecords, 0);
+  assert.equal(report.coverageSummary.regionalBaselineComplete, false);
   assert.equal(sweep.regionalGapSummary.regionalBaselineComplete, false);
 });
