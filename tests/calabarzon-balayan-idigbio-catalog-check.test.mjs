@@ -4,15 +4,18 @@ import { readFile } from "node:fs/promises";
 import { test } from "node:test";
 
 const base = new URL("../data/research/philippines/", import.meta.url);
-const [review, gbif, registry, gapReport, reviewBytes, gbifBytes, sourceBytes] = await Promise.all([
-  readFile(new URL("calabarzon-balayan-idigbio-catalog-check-20261025.json", base), "utf8").then(JSON.parse),
-  readFile(new URL("calabarzon-balayan-gbif-record-details-20261025.json", base), "utf8").then(JSON.parse),
-  readFile(new URL("sources.json", base), "utf8").then(JSON.parse),
-  readFile(new URL("calabarzon-coverage-gap-report-20261025.json", base), "utf8").then(JSON.parse),
-  readFile(new URL("calabarzon-balayan-idigbio-catalog-check-20261025.json", base)),
-  readFile(new URL("calabarzon-balayan-gbif-record-details-20261025.json", base)),
-  readFile(new URL("sources.json", base)),
-]);
+const [review, gbif, registry, gapReport, reviewBytes, gbifBytes, sourceBytes, fieldMuseumReview, fieldMuseumBytes] =
+  await Promise.all([
+    readFile(new URL("calabarzon-balayan-idigbio-catalog-check-20261025.json", base), "utf8").then(JSON.parse),
+    readFile(new URL("calabarzon-balayan-gbif-record-details-20261025.json", base), "utf8").then(JSON.parse),
+    readFile(new URL("sources.json", base), "utf8").then(JSON.parse),
+    readFile(new URL("calabarzon-coverage-gap-report-20261025.json", base), "utf8").then(JSON.parse),
+    readFile(new URL("calabarzon-balayan-idigbio-catalog-check-20261025.json", base)),
+    readFile(new URL("calabarzon-balayan-gbif-record-details-20261025.json", base)),
+    readFile(new URL("sources.json", base)),
+    readFile(new URL("calabarzon-balayan-fieldmuseum-source-records-20261025.json", base), "utf8").then(JSON.parse),
+    readFile(new URL("calabarzon-balayan-fieldmuseum-source-records-20261025.json", base)),
+  ]);
 
 function hasCoordinateKey(value) {
   if (!value || typeof value !== "object") return false;
@@ -89,4 +92,64 @@ test("source registry and CALABARZON gap snapshot record the iDigBio follow-up",
   assert.ok(gap);
   assert.equal(gap.count, 14);
   assert.match(gap.nextAction, /UMMZ.*CAS catalog 28340 name conflict.*USNM/i);
+  assert.equal(
+    gapReport.inputHashes.balayanFieldMuseumSourceSha256,
+    createHash("sha256").update(fieldMuseumBytes).digest("hex"),
+  );
+  assert.equal(gapReport.coverageSummary.registeredSources, 140);
+  assert.match(gap.reason, /Field Museum-hosted institutional archive.*47041.*90961/i);
+  assert.match(gap.nextAction, /quality flags.*historical-only decisions/i);
+});
+
+test("Field Museum archive confirms its two Balayan catalog rows without promoting indexed dates", () => {
+  assert.equal(fieldMuseumReview.archiveVersion, "13.13");
+  assert.match(fieldMuseumReview.archive.sha256, /^[a-f0-9]{64}$/);
+  assert.equal(fieldMuseumReview.summary.matchedFieldMuseumRecords, 2);
+  assert.equal(fieldMuseumReview.summary.sourceLocalityMentionsBalayanBay, 2);
+  assert.equal(fieldMuseumReview.summary.allSourceRecordLicensesCc0, true);
+  assert.equal(fieldMuseumReview.summary.exactFieldComparisonsWithIDigBio, 2);
+  assert.equal(fieldMuseumReview.decision.historicalAssertionsAdmitted, 0);
+  assert.equal(fieldMuseumReview.decision.publicAdmission, false);
+  assert.equal(fieldMuseumReview.decision.coordinatesIncluded, false);
+  assert.equal(fieldMuseumReview.decision.currentPresenceInferred, false);
+  assert.equal(fieldMuseumReview.decision.completeSpeciesInventoryClaimed, false);
+  assert.equal(hasCoordinateKey(fieldMuseumReview), false);
+  assert.deepEqual(
+    fieldMuseumReview.records.map(
+      ({ catalogNumber, scientificName, year, sourceDatePrecision, locality, license, idigbioCrosscheck }) => ({
+        catalogNumber,
+        scientificName,
+        year,
+        sourceDatePrecision,
+        locality,
+        license,
+        indexedDateUsedAsSourceDate: idigbioCrosscheck.indexDateUsedAsSourceDate,
+      }),
+    ),
+    [
+      {
+        catalogNumber: "47041",
+        scientificName: "Caracanthus unipinna",
+        year: "1929",
+        sourceDatePrecision: "year",
+        locality: "Balayan Bay",
+        license: "https://creativecommons.org/publicdomain/zero/1.0/",
+        indexedDateUsedAsSourceDate: false,
+      },
+      {
+        catalogNumber: "90961",
+        scientificName: "Lagocephalus lunaris",
+        year: "1926",
+        sourceDatePrecision: "year",
+        locality: "Balayan Bay",
+        license: "https://creativecommons.org/publicdomain/zero/1.0/",
+        indexedDateUsedAsSourceDate: false,
+      },
+    ],
+  );
+  const source = registry.sources.find((entry) => entry.id === "fieldmuseum-balayan-primary-archive-check");
+  assert.ok(source);
+  assert.ok(source.access.reviewFiles.includes("calabarzon-balayan-fieldmuseum-source-records-20261025.json"));
+  assert.equal(source.publicationApproval, false);
+  assert.equal(gapReport.inputHashes.sourcesSha256, createHash("sha256").update(sourceBytes).digest("hex"));
 });

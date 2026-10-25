@@ -3,7 +3,7 @@
   "checkedOn": "2026-10-25",
   "status": "research-only-source-registry",
   "scope": "National acquisition references and CALABARZON/Central Luzon identity/source leads. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 139,
+  "sourceCount": 140,
   "sources": [
     {
       "id": "gbif-col-xr-taxonomy-matching",
@@ -3839,6 +3839,44 @@
       "publicationApproval": false,
       "researchStatus": "nine-source-record-crosswalks;one-unresolved-identity;all-candidates-research-only;zero-public-assertions",
       "license": null
+    },
+    {
+      "id": "fieldmuseum-balayan-primary-archive-check",
+      "title": "Field Museum Fishes institutional archive check for Balayan Bay catalog records",
+      "provider": "Field Museum of Natural History, Division of Fishes",
+      "url": "https://fmipt.fieldmuseum.org/ipt/resource?r=fmnh_fishes",
+      "additionalUrls": [
+        "https://www.fieldmuseum.org/project-narrative/science/fishes-collection",
+        "https://fmipt.fieldmuseum.org/ipt/archive.do?r=fmnh_fishes&v=13.13"
+      ],
+      "role": "Directly cross-check two Field Museum catalog identities (47041 and 90961) previously linked by iDigBio to Balayan Bay GBIF candidates; not an independent survey or evidence of current presence.",
+      "checkedOn": "2026-10-25",
+      "access": {
+        "status": "official-Field-Museum-IPT-archive-directly-matched-two-FMNH-Fishes-catalog-items",
+        "reviewFiles": [
+          "calabarzon-balayan-fieldmuseum-source-records-20261025.json"
+        ],
+        "additionalRawPaths": [
+          "raw/calabarzon-balayan-fieldmuseum-source-check-20261025/"
+        ],
+        "archiveVersion": "13.13",
+        "fieldAllowlistOnly": true,
+        "coordinatesRetained": false
+      },
+      "reuse": {
+        "metadata": "The Field Museum IPT resource metadata states CC0 1.0. Both archive occurrence rows carry the CC0 public-domain dedication URL.",
+        "raw": "The complete 15,082,240-byte Darwin Core Archive is coordinate-bearing and stays in ignored local research storage. The tracked review contains selected non-coordinate fields and an archive SHA-256.",
+        "content": "The official archive confirms provider, collection, catalog number, taxon name, year-level source date, Balayan Bay locality text and item license for two rows. GBIF quality flags and row-level historical-only review remain open; no app reuse or public admission is approved."
+      },
+      "publicationApproval": false,
+      "researchStatus": "two-direct-institution-record-crosschecks;year-only-source-dates;gbif-quality-review-open;zero-public-assertions",
+      "license": "CC0 1.0",
+      "caveats": [
+        "The archive is an institutional Darwin Core publication, not a specimen re-identification or field survey.",
+        "Its source dates provide year precision only; iDigBio indexed dateCollected values are not source evidence.",
+        "Source-locality text says Balayan Bay but gives no waterBody field; GBIF quality flags remain attached to the candidates.",
+        "These 1926 and 1929 records do not establish current presence, abundance, catchability, safety, or a complete bay inventory."
+      ]
     }
   ],
   "sourcePolicy": {
