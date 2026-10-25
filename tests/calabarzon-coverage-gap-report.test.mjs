@@ -33,8 +33,9 @@ test("CALABARZON checkpoint reports its gaps without claiming a complete region"
     stream: 3,
     wetland: 8,
   });
-  assert.equal(report.coverageSummary.leadsStillResearchQueued, 20);
+  assert.equal(report.coverageSummary.leadsStillResearchQueued, 19);
   assert.equal(report.coverageSummary.unknownSalinityLeads, 78);
+  assert.equal(report.coverageSummary.researchProjectionAssertionsImported, 9);
   const sourceRefs = scope.waterbodies.flatMap((waterbody) => waterbody.sourceRefs);
   assert.equal(report.coverageSummary.sourceAssignments, sourceRefs.length);
   assert.equal(report.coverageSummary.distinctSourceReferencesAssigned, new Set(sourceRefs).size);

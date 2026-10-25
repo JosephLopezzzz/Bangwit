@@ -30,6 +30,8 @@ test("cross-file research inventory preserves rollout order, unknown regional co
   assert.equal(status.lagunaDeBaySpecimenRecords, 1);
   assert.equal(status.pansipitGbifAssertionsPrepared, 4);
   assert.equal(status.pansipitGbifOccurrenceRecords, 4);
+  assert.equal(status.taalCasGbifAssertionsPrepared, 3);
+  assert.equal(status.taalCasGbifOccurrenceRecords, 3);
   assert.equal(status.pendingRiverCandidates, 15);
   assert.equal(status.independentRiverIdentityChecks, 5);
   assert.equal(status.brackishSourceLeadsReviewed, 5);
@@ -130,6 +132,12 @@ test("scope references must resolve to the pinned administrative and source regi
     },
     (input) => {
       input.makilingGbifProjection.counts.speciesAssertions = 0;
+    },
+    (input) => {
+      input.taalCasGbifProjection.assertions.pop();
+    },
+    (input) => {
+      input.scope.waterbodies.find((waterbody) => waterbody.id === "ph-wb-taal-lake").sourceRefs.pop();
     },
     (input) => {
       input.scope.administrativeScope.provinces.pop();

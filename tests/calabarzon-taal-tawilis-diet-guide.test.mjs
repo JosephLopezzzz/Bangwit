@@ -35,7 +35,10 @@ test("pins the CC BY source to Taal Lake while keeping the regional species inve
   assert.ok(source.access.reviewFiles.includes("calabarzon-taal-tawilis-diet-review-20261024.json"));
   assert.ok(taal.sourceRefs.includes(review.sourceId));
   assert.equal(taal.publicAdmission, false);
-  assert.equal(taal.fishEvidenceStatus, "not-reviewed");
+  assert.equal(
+    taal.fishEvidenceStatus,
+    "historical-checklist-and-three-CC0-specimen-locality-assertions-reviewed; no-current-presence-inferred",
+  );
   assert.equal(review.decision.regionalBaselineComplete, false);
   assert.equal(review.accessAndRights.excludedMaterial.includes("No table or figure image"), true);
 });

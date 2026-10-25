@@ -1,0 +1,245 @@
+{
+  "schemaVersion": 1,
+  "batchId": "taal-cas-gbif-20261024",
+  "reviewedOn": "2026-10-24",
+  "reviewer": "Source and taxonomic desk review; not expert, legal or field certification",
+  "status": "three-historical-text-locality-species-assertions-reviewed; regional-baseline-incomplete",
+  "waterbody": {
+    "id": "ph-wb-taal-lake",
+    "name": "Taal Lake",
+    "province": "Batangas",
+    "region": "CALABARZON",
+    "kind": "lake"
+  },
+  "dataset": {
+    "id": "gbif-cas-ichthyology",
+    "gbifDatasetKey": "5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+    "title": "CAS Ichthyology (ICH)",
+    "publisher": "California Academy of Sciences",
+    "doi": "10.15468/efh2ib",
+    "metadataUrl": "https://www.gbif.org/dataset/5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+    "license": "CC0-1.0",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "datasetModified": "2026-10-19",
+    "datasetVersion": "150.545",
+    "citation": "California Academy of Sciences. CAS Ichthyology (ICH). Version 150.545. Occurrence dataset https://doi.org/10.15468/efh2ib, accessed through GBIF on 2026-10-24.",
+    "scopeNote": "The electronic catalog of the California Academy of Sciences ichthyology collection. This review applies only to the three selected Taal Lake records, not the entire collection."
+  },
+  "queryReview": {
+    "endpoint": "https://api.gbif.org/v1/occurrence/search",
+    "url": "https://api.gbif.org/v1/occurrence/search?datasetKey=5d6c10bd-ea31-4363-8b79-58c96d859f5b&country=PH&basisOfRecord=PRESERVED_SPECIMEN&waterBody=Lake+Taal&limit=100",
+    "parameters": {
+      "datasetKey": "5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+      "country": "PH",
+      "basisOfRecord": "PRESERVED_SPECIMEN",
+      "waterBody": "Lake Taal",
+      "limit": 100
+    },
+    "httpStatus": 200,
+    "resultCount": 14,
+    "enumeratedCount": 14,
+    "endOfRecords": true,
+    "taxonRankCounts": {
+      "SPECIES": 3,
+      "GENUS": 6,
+      "FAMILY": 5
+    },
+    "candidateRecordIds": [
+      4071332302,
+      4071334301,
+      5945013311,
+      5945013312,
+      5945013314,
+      5945013316,
+      6045658346,
+      6045658348,
+      6045658349,
+      6176834354,
+      6176834355,
+      6176834356,
+      6176834357,
+      3426408976
+    ],
+    "selectedSpeciesRecordIds": [
+      4071332302,
+      4071334301,
+      3426408976
+    ],
+    "rawResponse": {
+      "bytes": 71459,
+      "sha256": "5d651dfe9522476a699ee828a146ade117d1eb6012549b9d30a43ea4aa3b4d6f",
+      "path": "data/research/philippines/raw/calabarzon-taal-cas-gbif-20261024/query.json"
+    }
+  },
+  "taxonomyReview": {
+    "authority": "GBIF taxonomic backbone (Catalogue of Life eXtended Release) as supplied on the source records",
+    "method": "Pinned source taxon key, accepted taxon key, rank, status, canonical name, authorship and family from the GBIF occurrence and taxon APIs. The Microphis jagorii source name is a synonym mapped to Oostethus jagorii. Scatophagus argus is independently listed as valid by Eschmeyer's Catalog of Fishes.",
+    "independentReference": {
+      "name": "Eschmeyer's Catalog of Fishes",
+      "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=19833",
+      "supports": "Scatophagus argus is a valid species name. This nomenclatural check does not re-identify the preserved specimen."
+    },
+    "rawResponses": [
+      {
+        "taxonKey": 5201013,
+        "acceptedTaxonKey": 7493059,
+        "sha256": "df1cbcf896ea3557dcc08ee1383548cc3825c88e8f49ad19dfbc268b7996540c",
+        "path": "data/research/philippines/raw/calabarzon-taal-cas-gbif-20261024/taxon-5201013.json"
+      },
+      {
+        "taxonKey": 7493059,
+        "acceptedTaxonKey": 7493059,
+        "sha256": "72a36d06a73a9d5f05756d91423a956a6711e7d01e6df43bf12304dd36b296fb",
+        "path": "data/research/philippines/raw/calabarzon-taal-cas-gbif-20261024/taxon-7493059.json"
+      },
+      {
+        "taxonKey": 2333068,
+        "acceptedTaxonKey": 2333068,
+        "sha256": "ca9623b3f9d781f4515499400859b6b23efa961f21410b8224e1f554706a1b0e",
+        "path": "data/research/philippines/raw/calabarzon-taal-cas-gbif-20261024/taxon-2333068.json"
+      },
+      {
+        "taxonKey": 2394736,
+        "acceptedTaxonKey": 2394736,
+        "sha256": "bfa171b814ee1c79127adcedd157e21a8fb8a1b32a6119a709b83f901b967897",
+        "path": "data/research/philippines/raw/calabarzon-taal-cas-gbif-20261024/taxon-2394736.json"
+      }
+    ]
+  },
+  "records": [
+    {
+      "gbifId": 4071332302,
+      "occurrenceId": "urn:catalog:CAS:ICH:247642",
+      "scientificName": "Microphis jagorii Peters, 1868",
+      "acceptedName": "Oostethus jagorii (Peters, 1868)",
+      "taxonKey": 5201013,
+      "acceptedTaxonKey": 7493059,
+      "taxonomicStatus": "SYNONYM",
+      "rank": "SPECIES",
+      "family": "Syngnathidae",
+      "basisOfRecord": "PRESERVED_SPECIMEN",
+      "locality": "Alas-As, San Nicolas, Batangas; vegetation.",
+      "waterBody": "Lake Taal",
+      "eventDate": "2011-05-10",
+      "institutionCode": "CAS",
+      "collectionCode": "ICH",
+      "catalogNumber": "247642",
+      "recordedBy": "BV, CP, DC, VK",
+      "coordinateUncertaintyInMeters": null,
+      "coordinatesProjected": false,
+      "license": "CC0-1.0",
+      "issues": [
+        "GEODETIC_DATUM_ASSUMED_WGS84",
+        "CONTINENT_INVALID",
+        "CONTINENT_DERIVED_FROM_COORDINATES",
+        "OCCURRENCE_STATUS_INFERRED_FROM_INDIVIDUAL_COUNT"
+      ],
+      "url": "https://www.gbif.org/occurrence/4071332302",
+      "rawResponse": {
+        "bytes": 5795,
+        "sha256": "a14e2d7b0f500d74274863f5b0188af508ded33efdecabf20bc51bc0ff51f81f",
+        "path": "data/research/philippines/raw/calabarzon-taal-cas-gbif-20261024/occurrence-4071332302.json"
+      }
+    },
+    {
+      "gbifId": 4071334301,
+      "occurrenceId": "urn:catalog:CAS:ICH:247643",
+      "scientificName": "Hippichthys heptagonus Bleeker, 1849",
+      "acceptedName": "Hippichthys heptagonus Bleeker, 1849",
+      "taxonKey": 2333068,
+      "acceptedTaxonKey": 2333068,
+      "taxonomicStatus": "ACCEPTED",
+      "rank": "SPECIES",
+      "family": "Syngnathidae",
+      "basisOfRecord": "PRESERVED_SPECIMEN",
+      "locality": "SSE side of Volcano Island; litoral vegetation.",
+      "waterBody": "Lake Taal",
+      "eventDate": "2011-05-10",
+      "institutionCode": "CAS",
+      "collectionCode": "ICH",
+      "catalogNumber": "247643",
+      "recordedBy": "BV, CP, DC, VK",
+      "coordinateUncertaintyInMeters": null,
+      "coordinatesProjected": false,
+      "license": "CC0-1.0",
+      "issues": [
+        "GEODETIC_DATUM_ASSUMED_WGS84",
+        "CONTINENT_INVALID",
+        "CONTINENT_DERIVED_FROM_COORDINATES",
+        "OCCURRENCE_STATUS_INFERRED_FROM_INDIVIDUAL_COUNT"
+      ],
+      "url": "https://www.gbif.org/occurrence/4071334301",
+      "rawResponse": {
+        "bytes": 5943,
+        "sha256": "181a0ba360db8373ce49d75649709b54e3bc34f7c935f3016e6a904bb8ea5042",
+        "path": "data/research/philippines/raw/calabarzon-taal-cas-gbif-20261024/occurrence-4071334301.json"
+      }
+    },
+    {
+      "gbifId": 3426408976,
+      "occurrenceId": "urn:catalog:CAS:SU(ICH):13541",
+      "scientificName": "Scatophagus argus (Linnaeus, 1766)",
+      "acceptedName": "Scatophagus argus (Linnaeus, 1766)",
+      "taxonKey": 2394736,
+      "acceptedTaxonKey": 2394736,
+      "taxonomicStatus": "ACCEPTED",
+      "rank": "SPECIES",
+      "family": "Scatophagidae",
+      "basisOfRecord": "PRESERVED_SPECIMEN",
+      "locality": "Lake Taal (=Lake Bombon), P.I.",
+      "waterBody": "Lake Taal",
+      "eventDate": "1931-05-25",
+      "institutionCode": "CAS",
+      "collectionCode": "SU(ICH)",
+      "catalogNumber": "13541",
+      "recordedBy": "Herre, Albert W.",
+      "occurrenceRemarks": "(tank 211)",
+      "coordinateUncertaintyInMeters": 12567,
+      "coordinatesProjected": false,
+      "license": "CC0-1.0",
+      "issues": [
+        "GEODETIC_DATUM_ASSUMED_WGS84",
+        "CONTINENT_INVALID",
+        "CONTINENT_DERIVED_FROM_COORDINATES",
+        "OCCURRENCE_STATUS_INFERRED_FROM_INDIVIDUAL_COUNT"
+      ],
+      "url": "https://www.gbif.org/occurrence/3426408976",
+      "rawResponse": {
+        "bytes": 5794,
+        "sha256": "7f1bd2d114d95df4f3a587d5fa4a339ff25d1e7e9e7c2ceaca8ef0d85779090a",
+        "path": "data/research/philippines/raw/calabarzon-taal-cas-gbif-20261024/occurrence-3426408976.json"
+      }
+    }
+  ],
+  "decision": {
+    "status": "admit-three-historical-species-locality-assertions",
+    "speciesAssertions": 3,
+    "sourceOccurrenceRecords": 3,
+    "sourceDatasets": 1,
+    "rationale": "All three selected CAS records are preserved specimens with species rank, a source locality and waterBody Lake Taal, exact collection dates, and a CC0 1.0 record/dataset license. The accepted GBIF names and taxon keys are pinned; the original Microphis jagorii usage remains visible beside its accepted combination Oostethus jagorii. Eleven additional rows in the bounded query resolve only to genus or family rank and are not projected.",
+    "coordinatesIncludedInProjection": false,
+    "publicAdmission": false,
+    "regionalBaselineComplete": false,
+    "publicationApproval": false
+  },
+  "caveats": [
+    "The query is limited to one CAS dataset, one Philippines country filter, preserved-specimen records and the exact waterBody string Lake Taal. It does not represent a complete Taal species inventory.",
+    "The three historical source records have a GBIF CONTINENT_INVALID quality flag; their explicit Lake Taal waterBody and locality text support text-locality evidence only. This flag is retained and no coordinate is shown.",
+    "The two 2011 rows lack coordinate uncertainty. The 1931 Scatophagus argus record reports 12,567 m uncertainty. None is projected as a point or geometry.",
+    "The remaining eleven query rows resolve only to genus or family rank. They are not species assertions and are not interpreted as absence of any species.",
+    "The Microphis jagorii recorded name is mapped by GBIF to accepted Oostethus jagorii; the recorded name and synonym status are retained so the source change is auditable.",
+    "These records do not establish current presence, abundance, a complete lake checklist, diet, catchability, fishing access, legality, safety or presence in any other waterbody."
+  ],
+  "provenance": {
+    "rawDirectory": "data/research/philippines/raw/calabarzon-taal-cas-gbif-20261024/",
+    "querySha256": "5d651dfe9522476a699ee828a146ade117d1eb6012549b9d30a43ea4aa3b4d6f",
+    "datasetMetadataSha256": "d5b1879f193f791ea6ce7af1c5aa721ded021b772a7cd40991065f29e830cacf",
+    "rawReceiptSha256": "db7f53179335d3b0e158bef8fefd81e425d31ef8d83440f27d9b69d9dab5d024"
+  },
+  "nonClaims": [
+    "Three selected database records are three species-locality assertions, not three fish or an abundance estimate.",
+    "A historic museum record is not confirmation of current presence or successful catchability.",
+    "No Taal Lake boundary, sampling reach, safe/unsafe area, legal fishing permission, diet or bait recommendation is inferred.",
+    "The two FishBase-crosswalked National Museum candidates remain held independently and are not included in this CAS batch."
+  ]
+}

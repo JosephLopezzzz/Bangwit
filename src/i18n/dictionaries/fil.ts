@@ -476,6 +476,33 @@ export const filDictionary: Dictionary = {
       "CC0 1.0 ang nakasaad sa metadata ng GBIF dataset para sa mga napiling record. Hindi nito pinahihintulutan ang paggamit sa ibang record o hiwalay na dataset.",
     opensTab: "(magbubukas sa bagong tab)",
   },
+  taalCasGbifEvidence: {
+    title: "Lawa ng Taal · mga makasaysayang museum specimen",
+    description:
+      "Tatlong preserved-specimen record mula sa koleksiyon ng California Academy of Sciences ang may species-level na pagkakakilanlan at tahasang Lake Taal sa waterBody field.",
+    scope: "Lawa ng Taal · Batangas · CALABARZON. Teksto lang ang source locality; walang ipinapakitang map pin.",
+    localityLabel: "Locality sa source",
+    collectionDateLabel: "Petsa ng pagkolekta",
+    catalogNumberLabel: "Catalog number",
+    limits:
+      "Noong 1931 at 2011 ang mga record na ito. Hindi nito pinatutunayan ang kasalukuyang presensya, dami, kumpletong talaan ng lawa, access o legalidad ng pangingisda, kaligtasan kainin, diyeta o bisa ng pain.",
+    sourceDetails: "Mga source record, taxonomy, quality at karapatan",
+    queryNote: "Eksaktong GBIF query para sa waterBody = Lake Taal:",
+    queryResultSuffix: "preserved-specimen row ang sinuri; tatlong species-level row ang ipinapakita.",
+    excludedRowsNote: "Genus o family level lang ang natitirang row kaya hindi isinama:",
+    gbifRecordLabel: "GBIF occurrence",
+    acceptedAsLabel: "tinanggap bilang",
+    recordRemarkLabel: "source remark",
+    qualityFlagsLabel: "GBIF quality flags",
+    datasetCitationLabel: "Citation ng dataset:",
+    licenseLabel: "License ng napiling record at dataset:",
+    coordinateNote:
+      "Hindi ipinapakita ang coordinates. Walang coordinate uncertainty ang dalawang 2011 record; 12,567 m naman ang iniulat sa 1931 record. Pinananatili ang CONTINENT_INVALID sa bawat row. Tahasang waterBody at locality text lang ang batayan dito.",
+    taxonomyLabel: "Mga sanggunian ng taxonomy",
+    gbifTaxonLink: "GBIF",
+    independentTaxonomyLink: "Eschmeyer's Catalog of Fishes",
+    opensTab: "(magbubukas sa bagong tab)",
+  },
   angatGbifEvidence: {
     title: "Angat Dam at Ilog Angat Â· makasaysayang specimen",
     description:

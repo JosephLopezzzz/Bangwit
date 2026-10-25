@@ -48,10 +48,13 @@ test("Taal coordinate hits remain catalog-crosswalk candidates rather than publi
   const taal = scope.waterbodies.find((row) => row.id === "ph-wb-taal-lake");
   assert.ok(taal.sourceRefs.includes(source.id));
   assert.equal(taal.publicAdmission, false);
-  assert.equal(taal.reviewStatus, "research-queued");
-  assert.equal(taal.fishEvidenceStatus, "not-reviewed");
+  assert.equal(taal.reviewStatus, "historical-evidence-reviewed-incomplete");
+  assert.equal(
+    taal.fishEvidenceStatus,
+    "historical-checklist-and-three-CC0-specimen-locality-assertions-reviewed; no-current-presence-inferred",
+  );
   assert.equal(report.coverageSummary.registeredSources, 135);
-  assert.equal(report.coverageSummary.sourceAssignments, 196);
+  assert.equal(report.coverageSummary.sourceAssignments, 197);
   assert.equal(report.coverageSummary.distinctSourceReferencesAssigned, 49);
   assert.equal(report.coverageSummary.regionalBaselineComplete, false);
 });

@@ -83,8 +83,8 @@ test("GBIF screen retains the two candidates and geography conflict without admi
   assert.ok(gbif.access.reviewFiles.includes("calabarzon-bmb-2016-batangas-laguna-river-gbif-screen-20261024.json"));
   assert.ok(gbif.access.additionalRawPaths.includes("raw/calabarzon-bmb-2016-batangas-laguna-gbif-screen-20261024/"));
   assert.equal(report.coverageSummary.namedWaterbodyLeads, 83);
-assert.equal(report.coverageSummary.sourceAssignments, 196);
-  assert.equal(report.coverageSummary.leadsStillResearchQueued, 20);
+assert.equal(report.coverageSummary.sourceAssignments, 197);
+  assert.equal(report.coverageSummary.leadsStillResearchQueued, 19);
   assert.equal(report.coverageSummary.unknownSalinityLeads, 78);
   assert.equal(report.coverageSummary.regionalBaselineComplete, false);
   assert.equal(report.coverageSummary.publicAdmission, false);

@@ -470,6 +470,33 @@ export const enDictionary: Dictionary = {
       "The GBIF dataset metadata marks the selected records CC0 1.0. This does not approve other records or separate datasets.",
     opensTab: "(opens in a new tab)",
   },
+  taalCasGbifEvidence: {
+    title: "Taal Lake · historical museum specimens",
+    description:
+      "Three preserved-specimen records in the California Academy of Sciences collection have species-level identifications and an explicit Lake Taal waterBody field.",
+    scope: "Taal Lake · Batangas · CALABARZON. The source locality is shown as text only; no map pins are shown.",
+    localityLabel: "Source locality",
+    collectionDateLabel: "Collected",
+    catalogNumberLabel: "Catalog number",
+    limits:
+      "These records date to 1931 and 2011. They do not establish current presence, abundance, a complete lake inventory, fishing access or legality, food safety, diet, or bait effectiveness.",
+    sourceDetails: "Source records, taxonomy, quality and rights",
+    queryNote: "Exact GBIF query for waterBody = Lake Taal:",
+    queryResultSuffix: "preserved-specimen rows were enumerated; three species-level rows are shown.",
+    excludedRowsNote: "The remaining rows resolved only to genus or family and are excluded:",
+    gbifRecordLabel: "GBIF occurrence",
+    acceptedAsLabel: "accepted as",
+    recordRemarkLabel: "source remark",
+    qualityFlagsLabel: "GBIF quality flags",
+    datasetCitationLabel: "Dataset citation:",
+    licenseLabel: "Selected record and dataset license:",
+    coordinateNote:
+      "Coordinates are withheld. The two 2011 records have no coordinate uncertainty; the 1931 record reports 12,567 m. CONTINENT_INVALID is retained for each row. Only the explicit waterBody and locality text are used here.",
+    taxonomyLabel: "Taxonomy references",
+    gbifTaxonLink: "GBIF",
+    independentTaxonomyLink: "Eschmeyer's Catalog of Fishes",
+    opensTab: "(opens in a new tab)",
+  },
   angatGbifEvidence: {
     title: "Angat Dam and Angat River Â· historical specimen",
     description: "A CAS Ichthyology collection record reports two Arius dispar individuals collected in 1929.",

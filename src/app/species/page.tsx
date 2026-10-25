@@ -15,6 +15,7 @@ import { PalicoRiverSurveyEvidence } from "@/components/palico-river-survey-evid
 import { PansipitRiverGbifEvidence } from "@/components/pansipit-river-gbif-evidence";
 import { PasigRiverSpeciesEvidence } from "@/components/pasig-river-species-evidence";
 import { TaalChecklistEvidence } from "@/components/taal-checklist-evidence";
+import { TaalCasGbifEvidence } from "@/components/taal-cas-gbif-evidence";
 import evidence from "@/data/cavite-historical-evidence.json";
 import { filterHistoricalEvidence } from "@/lib/species-research";
 
@@ -137,6 +138,7 @@ export default function SpeciesPage() {
 
       <HistoricalSpeciesEvidence records={filteredRecords} />
       <TaalChecklistEvidence />
+      <TaalCasGbifEvidence />
       <PalicoRiverSurveyEvidence />
       <MakilingGbifEvidence />
       <LagunaDeBaySpecimenEvidence />

@@ -10,6 +10,7 @@ import { buildPalicoRiverEvidence, readPalicoRiverInputs } from "./build-palico-
 import { buildMakilingGbifEvidence } from "./build-makiling-gbif-evidence.mjs";
 import { buildLagunaDeBaySpecimenEvidence } from "./build-laguna-de-bay-specimen-evidence.mjs";
 import { buildPansipitRiverGbifEvidence } from "./build-pansipit-river-gbif-evidence.mjs";
+import { buildTaalCasGbifEvidence } from "./build-taal-cas-gbif-evidence.mjs";
 import { buildAngatGbifEvidence } from "./build-angat-gbif-evidence.mjs";
 import { buildBulacanManilaBayEvidence } from "./build-bulacan-manila-bay-gbif-evidence.mjs";
 import { readFieldSourceReviews, validateFieldSourceReviews } from "./check-field-source-reviews.mjs";
@@ -48,6 +49,8 @@ export function buildResearchStatus({
   lagunaDeBayProjection,
   pansipitRiverGbifReview,
   pansipitRiverGbifProjection,
+  taalCasGbifReview,
+  taalCasGbifProjection,
   bulacanAngatGbifReview,
   bulacanAngatGbifProjection,
   bulacanManilaBayGbifReview,
@@ -88,6 +91,12 @@ export function buildResearchStatus({
     pansipitRiverGbifProjection,
     expectedPansipitProjection,
     "Pansipit River projection differs from its reviewed GBIF source ledger",
+  );
+  const expectedTaalCasProjection = buildTaalCasGbifEvidence(taalCasGbifReview, inputHashes.taalCasGbifReview);
+  assert.deepEqual(
+    taalCasGbifProjection,
+    expectedTaalCasProjection,
+    "Taal CAS projection differs from its reviewed GBIF source ledger",
   );
   const expectedAngatProjection = buildAngatGbifEvidence(
     bulacanAngatGbifReview,
@@ -158,8 +167,9 @@ export function buildResearchStatus({
     scope.counts.speciesAssertionsImported,
     expectedMakilingProjection.counts.speciesAssertions +
       expectedLagunaDeBayProjection.counts.speciesAssertions +
-      expectedPansipitProjection.counts.speciesAssertions,
-    "Scoped species assertion count must match the reviewed Makiling, Laguna de Bay and Pansipit projections",
+      expectedPansipitProjection.counts.speciesAssertions +
+      expectedTaalCasProjection.counts.speciesAssertions,
+    "Scoped species assertion count must match reviewed CALABARZON specimen projections",
   );
   assert.equal(scope.counts.waterbodyResearchLeads, scope.waterbodies.length, "Waterbody lead count mismatch");
   const waterbodyIds = unique(scope.waterbodies, "id", "waterbody ID");
@@ -196,6 +206,12 @@ export function buildResearchStatus({
   assert.equal(pansipitWaterbody.salinity.classification, "unknown");
   assert.ok(pansipitWaterbody.evidenceBatchRefs.includes(expectedPansipitProjection.batchId));
   assert.ok(sourceIds.has(expectedPansipitProjection.source.id));
+  const taalLake = scope.waterbodies.find((waterbody) => waterbody.id === "ph-wb-taal-lake");
+  assert.ok(taalLake, "Taal Lake specimen assertions are absent from the CALABARZON scope");
+  assert.equal(taalLake.publicAdmission, false);
+  assert.ok(taalLake.sourceRefs.includes(expectedTaalCasProjection.source.id));
+  assert.ok(taalLake.evidenceBatchRefs.includes(expectedTaalCasProjection.batchId));
+  assert.ok(sourceIds.has(expectedTaalCasProjection.source.id));
   assert.deepEqual(
     scope.administrativeScope.provinces.map((unit) => unit.id).sort(),
     registry.administrativeUnits
@@ -429,6 +445,8 @@ export function buildResearchStatus({
     lagunaDeBaySpecimenRecords: expectedLagunaDeBayProjection.counts.specimenRecords,
     pansipitGbifAssertionsPrepared: expectedPansipitProjection.counts.speciesAssertions,
     pansipitGbifOccurrenceRecords: expectedPansipitProjection.counts.sourceOccurrenceRecords,
+    taalCasGbifAssertionsPrepared: expectedTaalCasProjection.counts.speciesAssertions,
+    taalCasGbifOccurrenceRecords: expectedTaalCasProjection.counts.sourceOccurrenceRecords,
     bulacanAngatGbifAssertionsPrepared: expectedAngatProjection.counts.speciesAssertions,
     bulacanAngatGbifOccurrenceRecords: expectedAngatProjection.counts.sourceOccurrenceRecords,
     bulacanManilaBayGbifAssertionsPrepared: expectedBulacanManilaBayProjection.counts.speciesAssertions,
@@ -442,7 +460,7 @@ export function buildResearchStatus({
     ...fieldSummary,
     reviewedRegionalBaselines: 0,
     interpretation:
-      "Raw candidates/proposals remain immutable research inputs. Four Taal checklist assertions, twelve Palico-Lian river-survey table assertions, one undated text-locality assertion for Molawin Creek, one dated specimen assertion for Laguna de Bay, four historical Pansipit River text-locality assertions, one 1929 Bulacan CAS specimen-locality assertion, and three historical 1982 Bulacan Manila Bay USNM specimen assertions are prepared for the app; these do not establish current presence or completed regional coverage. Null reviewed regional counts are unknown, not absence. This status does not verify deployment.",
+      "Raw candidates/proposals remain immutable research inputs. Four Taal checklist assertions, three historical Taal CAS specimen-locality assertions, twelve Palico-Lian river-survey table assertions, one undated text-locality assertion for Molawin Creek, one dated specimen assertion for Laguna de Bay, four historical Pansipit River text-locality assertions, one 1929 Bulacan CAS specimen-locality assertion, and three historical 1982 Bulacan Manila Bay USNM specimen assertions are prepared for the app; these do not establish current presence or completed regional coverage. Null reviewed regional counts are unknown, not absence. This status does not verify deployment.",
     regions,
   };
 }
@@ -465,6 +483,11 @@ export async function readResearchInputs() {
     lagunaDeBayProjection: new URL("src/data/laguna-de-bay-specimen-evidence.json", root),
     pansipitRiverGbifReview: new URL("data/research/philippines/pansipit-river-gbif-source-review.json", root),
     pansipitRiverGbifProjection: new URL("src/data/pansipit-river-gbif-evidence.json", root),
+    taalCasGbifReview: new URL(
+      "data/research/philippines/calabarzon-taal-cas-gbif-source-review-20261024.json",
+      root,
+    ),
+    taalCasGbifProjection: new URL("src/data/taal-cas-gbif-evidence.json", root),
     bulacanAngatGbifReview: new URL(
       "data/research/philippines/central-luzon-bulacan-angat-gbif-source-review-20261024.json",
       root,

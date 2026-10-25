@@ -409,6 +409,30 @@ export type Dictionary = {
     rightsNote: string;
     opensTab: string;
   };
+  taalCasGbifEvidence: {
+    title: string;
+    description: string;
+    scope: string;
+    localityLabel: string;
+    collectionDateLabel: string;
+    catalogNumberLabel: string;
+    limits: string;
+    sourceDetails: string;
+    queryNote: string;
+    queryResultSuffix: string;
+    excludedRowsNote: string;
+    gbifRecordLabel: string;
+    acceptedAsLabel: string;
+    recordRemarkLabel: string;
+    qualityFlagsLabel: string;
+    datasetCitationLabel: string;
+    licenseLabel: string;
+    coordinateNote: string;
+    taxonomyLabel: string;
+    gbifTaxonLink: string;
+    independentTaxonomyLink: string;
+    opensTab: string;
+  };
   angatGbifEvidence: {
     title: string;
     description: string;
