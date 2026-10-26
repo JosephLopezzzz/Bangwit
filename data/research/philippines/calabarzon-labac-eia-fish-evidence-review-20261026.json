@@ -4,11 +4,12 @@
   "phaseId": "L1",
   "regionId": "0400000000",
   "regionName": "Region IV-A (CALABARZON)",
-  "status": "official-EIA-subsistence-fishery-lead;date-station-method-and-reuse-unresolved",
+  "status": "official-EIA-subsistence-fishery-lead;two-COLXR-exact-name-crosswalks;date-station-method-and-reuse-unresolved",
   "waterbodyId": "ph-wb-labac-river-cavite",
   "sourceIds": [
     "aiib-2023-bcib-final-eia",
-    "gbif-occurrence-downloads"
+    "gbif-occurrence-downloads",
+    "gbif-col-xr-taxonomy-matching"
   ],
   "eia": {
     "sourceId": "aiib-2023-bcib-final-eia",
@@ -150,11 +151,14 @@
     "geometryAdded": false,
     "publicProjectionAdded": false,
     "publicationApproval": false,
-    "regionalBaselineComplete": false
+    "regionalBaselineComplete": false,
+    "sourceNamesCrosswalked": 2,
+    "exactColXrAcceptedNameMatches": 2,
+    "fieldIdentificationsIndependentlyVerified": false
   },
   "scopeSnapshot": {
     "path": "data/research/philippines/calabarzon-scope.json",
-    "sha256": "6006ff5d752eebf2849b2cdb812eff4fa81877821afdbe6ece2a976ee3fa7117"
+    "sha256": "2232c3980f4ba1e1bf47bf06dcdc505a692a9861861cdc51cc0b8bf21ee17ca6"
   },
   "limitations": [
     "The report date does not establish when the fish were caught or observed.",
@@ -164,5 +168,47 @@
     "GBIF searches cover only the specified text fields, candidate strings, country, taxon key and index state; zero results do not establish absence.",
     "Reuse terms remain unverified; no species projection, fishing legality, safety, diet or catchability claim is approved."
   ],
-  "nextAction": "Request authorized copies of the 2014 CvSU Labac fish study and the 2015 Labac-Alemang watershed assessment, plus item-specific reuse terms; verify fish dates, stations, methods, vouchers and identification evidence. The separate official 2018–2020 macroinvertebrate/water-quality project does not validate fish evidence, and an unrelated Scribd thesis's Labac passage is excluded. Keep both EIA names unprojected and continue dated station-level searches for Bacoor and Cavite San Juan."
+  "nextAction": "Request authorized copies of the 2014 CvSU Labac fish study and the 2015 Labac-Alemang watershed assessment, plus item-specific reuse terms; verify fish dates, stations, methods, vouchers and identification evidence. The separate official 2018–2020 macroinvertebrate/water-quality project does not validate fish evidence, and an unrelated Scribd thesis's Labac passage is excluded. Keep both EIA names unprojected and continue dated station-level searches for Bacoor and Cavite San Juan.",
+  "taxonomyReview": {
+    "authority": "Catalogue of Life eXtended Release via GBIF matching API v2",
+    "endpoint": "https://api.gbif.org/v2/species/match",
+    "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+    "selectedChecklist": "Catalogue of Life eXtended Release (CoL XR), identified by the explicit checklistKey in each request",
+    "requestNameParameter": "scientificName",
+    "serviceMetadata": {
+      "endpoint": "https://api.gbif.org/v2/species/match/metadata",
+      "responseSha256": "5fd1e94d3afd876b01dc364991e752799aec2e287c24380abe516b1df39ee41f",
+      "identicalBeforeAndAfter": true,
+      "mainIndexAliasReturned": "GBIF",
+      "mainIndexDatasetKey": "d7dddbf4-2cf0-4f39-9b2a-bb099caae36c",
+      "interpretation": "The metadata endpoint describes the service default/main GBIF index; it does not identify the explicit CoL XR checklist request version. GBIF documentation maps checklistKey 7ddf754f-d193-4cc9-b351-99906754a03b to CoL XR. No selected-checklist build version is asserted."
+    },
+    "matches": [
+      {
+        "sourceName": "Oreochromis niloticus",
+        "queryUrl": "https://api.gbif.org/v2/species/match?scientificName=Oreochromis+niloticus&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b",
+        "acceptedName": "Oreochromis niloticus (Linnaeus, 1758)",
+        "usageKey": "6SSRC",
+        "rank": "SPECIES",
+        "usageStatus": "ACCEPTED",
+        "matchType": "EXACT",
+        "confidence": 98,
+        "responseFile": "raw/calabarzon-labac-eia-col-xr-20261026/match-01.json",
+        "responseSha256": "bdf34105d8df3213ed6c5ffe3b6b417688d2cedbd25026f8a94ebd275713efc4"
+      },
+      {
+        "sourceName": "Mugil cephalus",
+        "queryUrl": "https://api.gbif.org/v2/species/match?scientificName=Mugil+cephalus&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b",
+        "acceptedName": "Mugil cephalus Linnaeus, 1758",
+        "usageKey": "44J42",
+        "rank": "SPECIES",
+        "usageStatus": "ACCEPTED",
+        "matchType": "EXACT",
+        "confidence": 99,
+        "responseFile": "raw/calabarzon-labac-eia-col-xr-20261026/match-02.json",
+        "responseSha256": "798832e9b5d4dc591de359ea49a33282b0be33a6019c8e8dc90d376822daa096"
+      }
+    ],
+    "interpretation": "Both source strings exactly match accepted species names in the explicitly selected CoL XR taxonomy. This crosswalk does not independently confirm the EIA field identification, collection date, location, method, voucher, current presence or waterbody-specific completeness."
+  }
 }
