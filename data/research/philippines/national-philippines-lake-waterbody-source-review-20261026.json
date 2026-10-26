@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-26",
+  "scope": "National freshwater waterbody source discovery; not a Philippines lake extraction, site inventory, or species-occurrence review.",
+  "status": "national-lake-source-verified;philippines-subset-pending;zero-species-assertions",
+  "sourceIds": [
+    "hydrosheds-hydrolakes-v1-philippines-waterbody-framework"
+  ],
+  "dataset": {
+    "title": "HydroLAKES version 1 global lake and reservoir polygons",
+    "provider": "HydroSHEDS / World Wildlife Fund US",
+    "officialProductUrl": "https://www.hydrosheds.org/products/hydrolakes",
+    "version": "1",
+    "publishedReference": "Lehner, B., Messager, M.L. (2016). HydroLAKES: Global Lake and Reservoir Database. Environmental Data Initiative. Nature Communications 7, 13603. DOI: 10.1038/ncomms13603.",
+    "license": "CC BY 4.0",
+    "licenseEvidence": "The official HydroSHEDS HydroLAKES product page states that the database is licensed under a Creative Commons Attribution 4.0 International License.",
+    "coverage": "Global",
+    "statedMinimumLakeAreaHa": 10,
+    "statedPurpose": "Shoreline polygons for global lakes with a surface area of at least 10 hectares; lake records are co-registered to HydroRIVERS reaches and HydroBASINS sub-basins via shared identifiers.",
+    "availableProducts": [
+      {
+        "product": "Global lake polygons with attributes, file geodatabase",
+        "reportedSizeMB": 763,
+        "downloaded": false
+      },
+      {
+        "product": "Global lake polygons with attributes, shapefile",
+        "reportedSizeMB": 820,
+        "downloaded": false
+      },
+      {
+        "product": "Global lake pour points with attributes, file geodatabase",
+        "reportedSizeMB": 81,
+        "downloaded": false
+      },
+      {
+        "product": "Global lake pour points with attributes, shapefile",
+        "reportedSizeMB": 79,
+        "downloaded": false
+      }
+    ],
+    "dataAcquired": false,
+    "philippinesFeatureCount": null,
+    "regionalFeatureCounts": null
+  },
+  "decision": {
+    "use": "Use as a candidate national lake/reservoir discovery layer after extracting a Philippines subset from the official source, recording a source hash, and validating its waterbody names and geometry against Philippine references.",
+    "speciesOccurrenceRows": 0,
+    "regionalFishBaselineContribution": 0,
+    "philippinesSubsetExtracted": false,
+    "regionOverlayCompleted": false,
+    "publicGeometryAdded": false,
+    "publicationApproval": false,
+    "limitations": [
+      "The stated 10-hectare threshold excludes smaller lakes and ponds, so HydroLAKES cannot serve as a complete inland-water inventory.",
+      "The product page describes mostly geometric fields; its records are not fish observations, habitat validation, water-quality measurements, catchability, or fishing-access evidence.",
+      "A global source layer requires a documented Philippines extraction and regional crosswalk before it can support the Luzon-first, then Visayas and Mindanao rollout.",
+      "The CC BY 4.0 source license permits attribution-based reuse under its terms, but this review does not approve any geometry for public application use."
+    ],
+    "next": [
+      "Acquire the official HydroLAKES polygon archive or a documented official subset; record retrieval date and SHA-256.",
+      "Extract Philippines features, report the row count, and identify mapped lakes/reservoirs by name and stable source ID without treating names as fish evidence.",
+      "Crosswalk candidate waterbodies against licensed Philippine administrative and local waterbody sources before assigning rollout regions.",
+      "For each validated lake/reservoir, seek independent site-linked fish sources; keep species records and public assertions separate from the hydrology layer.",
+      "Track waterbodies below 10 hectares and wetlands/ponds through additional national and regional sources."
+    ]
+  },
+  "accessReview": {
+    "checkedOn": "2026-10-26",
+    "officialProductPage": "https://www.hydrosheds.org/products/hydrolakes",
+    "directDownloadSizes": "The official product page lists global polygon downloads of 763 MB (file geodatabase) and 820 MB (shapefile), plus 81 MB and 79 MB pour-point products.",
+    "requestSubmitted": false,
+    "personalDataSubmitted": false,
+    "paymentMade": false,
+    "notes": "The official page supplies direct global archives but no Philippines-only product on the page reviewed. No archive was downloaded, no regional API or third-party mirror was treated as authoritative, and no extract or geometry was produced."
+  }
+}

@@ -2,8 +2,8 @@
   "schemaVersion": 1,
   "checkedOn": "2026-10-26",
   "status": "research-only-source-registry",
-  "scope": "National acquisition references and CALABARZON/Central Luzon identity/source leads. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 175,
+  "scope": "National acquisition references, freshwater spatial-source leads, and CALABARZON/Central Luzon identity/source leads. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
+  "sourceCount": 176,
   "sources": [
     {
       "id": "gbif-col-xr-taxonomy-matching",
@@ -5133,6 +5133,42 @@
         "A land watershed boundary is not a municipal-water boundary or fish occurrence.",
         "The indexed excerpt does not provide GIS deliverables, station coordinates, positional-accuracy results or a full channel crosswalk.",
         "The official library abstract-delivery workflow was identified, but eligibility for an independent external requester has not been verified and no request was sent."
+      ]
+    },
+    {
+      "id": "hydrosheds-hydrolakes-v1-philippines-waterbody-framework",
+      "title": "HydroLAKES version 1 global lake and reservoir polygons",
+      "provider": "HydroSHEDS / World Wildlife Fund US",
+      "url": "https://www.hydrosheds.org/products/hydrolakes",
+      "role": "CC BY 4.0 global spatial discovery source for mapped lakes and reservoirs at least 10 hectares; supports freshwater waterbody inventory planning, not fish occurrence or local access claims.",
+      "checkedOn": "2026-10-26",
+      "sourceYear": 2016,
+      "access": {
+        "status": "official-product-metadata-and-license-reviewed;no-files-downloaded;Philippines-subset-not-extracted",
+        "reviewFiles": [
+          "national-philippines-lake-waterbody-source-review-20261026.json"
+        ],
+        "rawPath": null,
+        "availableProducts": [
+          "Global lake polygons in file geodatabase (763 MB)",
+          "Global lake polygons in shapefile format (820 MB)",
+          "Global lake pour points in file geodatabase (81 MB)",
+          "Global lake pour points in shapefile format (79 MB)"
+        ]
+      },
+      "reuse": {
+        "metadata": "The official HydroSHEDS product page states that HydroLAKES is licensed under Creative Commons Attribution 4.0 International.",
+        "raw": "No HydroLAKES product was downloaded or retained in the project during this review.",
+        "content": "Keep as a waterbody-discovery framework. Preserve CC BY 4.0 attribution if a derived subset is later prepared; do not infer that this review approves public app geometry."
+      },
+      "publicationApproval": false,
+      "researchStatus": "national-lake-source-verified;philippines-subset-pending;zero-species-assertions",
+      "license": "CC BY 4.0",
+      "caveats": [
+        "HydroLAKES aims to include lakes with a surface area of at least 10 hectares; smaller lakes and ponds are outside this source's stated threshold.",
+        "The product page describes mostly geometric attributes; it is not a complete Philippine lake, wetland, reservoir, or inland-water inventory.",
+        "This source does not establish fish presence, current water conditions, fishing access, legal catchability, or local waterbody naming in the Philippines.",
+        "No Philippines subset, regional crosswalk, geometry validation, or application asset was produced in this review."
       ]
     }
   ],
