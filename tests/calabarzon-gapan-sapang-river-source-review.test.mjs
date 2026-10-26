@@ -23,6 +23,11 @@ test("official sources create a bounded Gapan/Sapang river lead without inventin
   assert.deepEqual(review.officialSourceFindings[0].barangaySignatories, ["Bucana", "Sapang I"]);
   assert.equal(review.officialSourceFindings[1].reportedNameVariant, "Gapan (Sapang) River");
   assert.ok(review.officialSourceFindings.every((row) => row.directAccess.startsWith("HTTP 403")));
+  assert.equal(review.hydrographyAccessReview.publicSelfServiceAccess, false);
+  assert.equal(review.hydrographyAccessReview.gapanLayerPresence, "unknown; the restricted system was not accessed");
+  assert.equal(review.hydrographyAccessReview.loginOrAccessBypassAttempted, false);
+  assert.equal(review.hydrographyAccessReview.geometryAdded, false);
+  assert.match(review.hydrographyAccessReview.decision, /authorized public-products inquiry/i);
   assert.equal(review.boundedFishSourceSearch.officialDatedFishSurveyLocated, false);
   assert.equal(review.gbifTextScreen.queries.length, 6);
   assert.ok(review.gbifTextScreen.queries.every((row) => row.httpStatus === 200 && row.occurrenceCount === 0));
@@ -59,7 +64,7 @@ test("CALABARZON checkpoint and source hashes match the reviewed scope", () => {
   assert.equal(report.inputHashes.gapanSapangRiverReviewSha256, sha256(reviewBytes));
   assert.ok(report.waterbodySnapshot.some((row) => row.id === review.scopeLeadId));
   assert.equal(report.coverageSummary.namedWaterbodyLeads, 95);
-  assert.equal(report.coverageSummary.byWaterbodyKind.river, 49);
+  assert.equal(report.coverageSummary.byWaterbodyKind.river, 50);
   assert.equal(report.coverageSummary.sourceAssignments, 243);
   assert.equal(report.coverageSummary.distinctSourceReferencesAssigned, 68);
   assert.equal(report.coverageSummary.registeredSources, 173);
