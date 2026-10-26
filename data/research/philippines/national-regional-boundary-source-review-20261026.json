@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-26",
+  "scope": "Audit candidate administrative region references for a future overlay of the 128 national hydrological catchments; no geometry overlay or species review.",
+  "status": "current-18-region-list-verified;public-polygon-candidate-license-unresolved;no-overlay",
+  "sourceIds": [
+    "psa-psgc-regions-2026-current-list",
+    "dpwh-regional-boundary-arcgis-layer-2025",
+    "hdx-philippines-cod-ab-2018-region-layer",
+    "geoboundaries-phl-adm1-current-api-check"
+  ],
+  "findings": {
+    "currentReference": {
+      "provider": "Philippine Statistics Authority",
+      "url": "https://psa.gov.ph/classification/psgc/regions",
+      "finding": "The current PSA PSGC regions page lists 18 regions, including Negros Island Region and BARMM. The public page provides official codes and names, but not region polygon geometry.",
+      "latestPageUpdateObserved": "The page lists a Third Quarter 2026 PSGC update release; the displayed region list still contains 18 regions."
+    },
+    "dpwhPolygonCandidate": {
+      "provider": "Department of Public Works and Highways, Geospatial Information Authority / Statistics Division Planning Service",
+      "url": "https://services1.arcgis.com/IwZZTMxZCmAmFYvF/ArcGIS/rest/services/Regional_Boundary_for_IA_Validation/FeatureServer/0",
+      "geometryType": "esriGeometryPolygon",
+      "spatialReference": "EPSG:32651",
+      "distinctRegionLabelsQueried": 18,
+      "sourceMetadata": "The service says the source is NAMRIA and PSGC, digitally rectified by DPWH, with a June 2020 source/reference note and additional service update notes through May 2025.",
+      "license": "not stated in the REST metadata",
+      "geometryDownloaded": false
+    },
+    "hdxHistoricCandidate": {
+      "provider": "OCHA Philippines / HDX",
+      "url": "https://data.humdata.org/dataset/caf116df-f984-4deb-85ca-41b349d3f313",
+      "version": "03",
+      "sourceBoundaryDate": "2018-02-09",
+      "statedValidityDate": "2018-03-26",
+      "reviewDate": "2024-04-01",
+      "admin1Units": 17,
+      "license": "CC BY 3.0 IGO",
+      "lastMetadataModification": "2026-08-14",
+      "decision": "Do not use to allocate current 18-region coverage; the later repository modification date does not change the source geography vintage."
+    },
+    "geoBoundariesCrosscheck": {
+      "provider": "geoBoundaries / William & Mary geoLab",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/PHL/ADM1/",
+      "reportedBoundaryYear": "2020",
+      "admin1Units": 17,
+      "sourceUpdateDate": "2023-01-19",
+      "buildDate": "2023-07-05",
+      "sourceLicense": "The API record reports the underlying source license as CC BY 3.0 IGO; geoBoundaries documentation says gbOpen releases are CC BY 4.0 compliant. Resolve the two license layers before use.",
+      "decision": "Does not provide a current 18-region geometry; no boundary file was downloaded."
+    }
+  },
+  "decision": {
+    "currentRegionNamesVerified": true,
+    "currentRegionPolygonLicenseVerified": false,
+    "catchmentRegionOverlayCompleted": false,
+    "speciesOccurrenceRows": 0,
+    "regionalFishBaselineContribution": 0,
+    "geometryDownloaded": false,
+    "publicGeometryAdded": false,
+    "publicationApproval": false,
+    "limitations": [
+      "PSA PSGC provides current administrative names/codes but no polygons in the reviewed page.",
+      "The DPWH ArcGIS candidate has 18 labels and a NAMRIA/PSGC source description, but no explicit reuse, redistribution, or attribution license was found.",
+      "HDX COD-AB and geoBoundaries currently expose 17-unit region layers with 2018/2020 source geography, so they cannot represent the current 18-region configuration without a revised source.",
+      "No hydrological polygons were spatially joined to regions in this review; basin-level spatial coverage remains unassigned."
+    ],
+    "next": [
+      "Obtain written reuse and redistribution terms for the DPWH/NAMRIA regional boundary layer or locate a licensed polygon set matching the current PSA 18-region list.",
+      "Cross-check all polygon labels and boundary vintage against current PSGC codes before spatial overlay.",
+      "Then intersect the licensed region layer with the 128-catchment dataset and report multi-region basins without forcing each basin into one region.",
+      "Keep the region overlay as spatial scope planning only; species presence still requires independent site-linked biological sources."
+    ]
+  },
+  "accessReview": {
+    "checkedOn": "2026-10-26",
+    "dpwhGeometryQueryMade": false,
+    "dpwhDistinctAttributeQueryMade": true,
+    "hdxMetadataApiQueried": true,
+    "geoBoundariesMetadataApiQueried": true,
+    "personalDataSubmitted": false,
+    "requestSent": false,
+    "notes": "No login, paid order, geometry download, email, or contact form was used."
+  }
+}

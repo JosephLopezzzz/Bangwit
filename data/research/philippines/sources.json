@@ -3,7 +3,7 @@
   "checkedOn": "2026-10-26",
   "status": "research-only-source-registry",
   "scope": "National acquisition references, freshwater spatial-source leads, and CALABARZON/Central Luzon identity/source leads. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 176,
+  "sourceCount": 180,
   "sources": [
     {
       "id": "gbif-col-xr-taxonomy-matching",
@@ -5169,6 +5169,133 @@
         "The product page describes mostly geometric attributes; it is not a complete Philippine lake, wetland, reservoir, or inland-water inventory.",
         "This source does not establish fish presence, current water conditions, fishing access, legal catchability, or local waterbody naming in the Philippines.",
         "No Philippines subset, regional crosswalk, geometry validation, or application asset was produced in this review."
+      ]
+    },
+    {
+      "id": "psa-psgc-regions-2026-current-list",
+      "title": "Philippine Standard Geographic Code - Regions",
+      "provider": "Philippine Statistics Authority",
+      "url": "https://psa.gov.ph/classification/psgc/regions",
+      "additionalUrls": [
+        "https://psa.gov.ph/classifications-api/psgc"
+      ],
+      "role": "Official current region names and geographic codes for checking region-level source assignments; the page is tabular, not boundary geometry.",
+      "checkedOn": "2026-10-26",
+      "sourceYear": 2026,
+      "access": {
+        "status": "official-PSGC-region-page-reviewed;18-regions-listed-on-2026-10-26;no-geometry",
+        "reviewFiles": [
+          "national-regional-boundary-source-review-20261026.json"
+        ],
+        "rawPath": null
+      },
+      "reuse": {
+        "metadata": "The PSA website states government site content is licensed CC BY 4.0 unless otherwise stated.",
+        "raw": "No API request or data download was needed; the public PSA regions page was reviewed.",
+        "content": "Use official names and codes with attribution. This reference does not contain polygon geometry and cannot support a spatial overlay by itself."
+      },
+      "publicationApproval": false,
+      "researchStatus": "official-current-region-reference;codes-and-names-only",
+      "license": "CC BY 4.0 unless otherwise stated",
+      "caveats": [
+        "The PSA PSGC classification API documentation specifies a token parameter; this review did not obtain or use an API token.",
+        "Region names and codes do not provide a boundary polygon or resolve the current spatial extent of each region."
+      ]
+    },
+    {
+      "id": "dpwh-regional-boundary-arcgis-layer-2025",
+      "title": "Regional Boundary for IA Validation - DPWH ArcGIS feature layer",
+      "provider": "Department of Public Works and Highways, Geospatial Information Authority / Statistics Division Planning Service",
+      "url": "https://services1.arcgis.com/IwZZTMxZCmAmFYvF/ArcGIS/rest/services/Regional_Boundary_for_IA_Validation/FeatureServer/0",
+      "additionalUrls": [
+        "https://services1.arcgis.com/IwZZTMxZCmAmFYvF/ArcGIS/rest/services/Regional_Boundary_for_IA_Validation/FeatureServer/0?f=pjson"
+      ],
+      "role": "Promising current 18-region polygon crosswalk candidate sourced from NAMRIA/PSGC and digitally rectified by DPWH; not adopted because redistribution and reuse terms are not explicit in the service metadata.",
+      "checkedOn": "2026-10-26",
+      "sourceYear": 2025,
+      "access": {
+        "status": "public-layer-metadata-and-distinct-region-names-queried;geometry-not-downloaded;license-unresolved",
+        "reviewFiles": [
+          "national-regional-boundary-source-review-20261026.json"
+        ],
+        "rawPath": null
+      },
+      "reuse": {
+        "metadata": "The service describes source boundaries from NAMRIA and PSGC, rectified digitally by DPWH; copyright metadata notes June 2020 source/reference and later service updates through May 2025. No explicit dataset license was found.",
+        "raw": "Only service metadata and the distinct REGION attribute values were queried; no geometry was downloaded.",
+        "content": "Do not copy, derive or publish boundary geometry until DPWH/NAMRIA confirms reuse, redistribution and attribution terms."
+      },
+      "publicationApproval": false,
+      "researchStatus": "18-region-current-candidate;geometry-license-and-positional-use-unresolved",
+      "license": null,
+      "caveats": [
+        "The layer reports EPSG:32651 and 18 distinct region labels, including Negros Island Region and BARMM.",
+        "The layer's stated source boundary vintage begins in June 2020; later service updates are listed but do not specify a boundary-version date for every region.",
+        "The REST metadata includes a Use limitations heading but no explicit reuse license or terms text."
+      ]
+    },
+    {
+      "id": "hdx-philippines-cod-ab-2018-region-layer",
+      "title": "Philippines - Subnational Administrative Boundaries (COD-AB), version 03",
+      "provider": "OCHA Philippines; HDX Field Information Services",
+      "url": "https://data.humdata.org/dataset/caf116df-f984-4deb-85ca-41b349d3f313",
+      "additionalUrls": [
+        "https://data.humdata.org/api/3/action/package_show?id=caf116df-f984-4deb-85ca-41b349d3f313"
+      ],
+      "role": "Licensed historic administrative-boundary alternative; excluded from the current 18-region overlay because its metadata lists only 17 Admin 1 units and a 2018 validity date.",
+      "checkedOn": "2026-10-26",
+      "sourceYear": 2018,
+      "access": {
+        "status": "official-HDX-metadata-API-reviewed;17-admin1;source-vintage-2018;not-downloaded",
+        "reviewFiles": [
+          "national-regional-boundary-source-review-20261026.json"
+        ],
+        "rawPath": null
+      },
+      "reuse": {
+        "metadata": "The HDX record labels the dataset Creative Commons Attribution for Intergovernmental Organisations (CC BY-IGO) 3.0.",
+        "raw": "Only the HDX metadata record and package API response were reviewed; no geometry archive was downloaded.",
+        "content": "Not suitable for assigning present-day region boundaries without an updated, validated crosswalk; the stated license is not approval for use in this app."
+      },
+      "publicationApproval": false,
+      "researchStatus": "licensed-historic-boundary-candidate;excluded-from-current-region-crosswalk",
+      "license": "CC BY 3.0 IGO",
+      "caveats": [
+        "The record says the dataset is valid for humanitarian use from March 2018 and was reviewed for accuracy and completeness in April 2024.",
+        "Metadata lists 17 Admin 1 units, while the current PSA PSGC page lists 18 regions as of 2025-07-31.",
+        "A metadata modification date in 2026 does not update the source boundary vintage."
+      ]
+    },
+    {
+      "id": "geoboundaries-phl-adm1-current-api-check",
+      "title": "geoBoundaries Open release - Philippines ADM1 API record",
+      "provider": "geoBoundaries / William & Mary geoLab",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/PHL/ADM1/",
+      "additionalUrls": [
+        "https://www.geoboundaries.org/api.html"
+      ],
+      "role": "Metadata cross-check for a reproducible open ADM1 layer; the current API record resolves to 2020/17-region source data and is not suitable for current region allocation.",
+      "checkedOn": "2026-10-26",
+      "sourceYear": 2020,
+      "access": {
+        "status": "current-geoBoundaries-API-metadata-queried;17-admin1;no-geometry-download",
+        "reviewFiles": [
+          "national-regional-boundary-source-review-20261026.json"
+        ],
+        "rawPath": null
+      },
+      "reuse": {
+        "metadata": "The API record reports the original source license as CC BY 3.0 IGO and points to the HDX Philippines administrative levels record; geoBoundaries documentation describes gbOpen as CC BY 4.0 compliant.",
+        "raw": "Only the public API metadata response was queried; the geometry URL was not opened or downloaded.",
+        "content": "Use the source-provided license and attribution terms only after selecting a boundary vintage that matches the intended regional classification."
+      },
+      "publicationApproval": false,
+      "researchStatus": "open-api-check;source-vintage-2020;excluded-from-current-18-region-overlay",
+      "license": "gbOpen documentation: CC BY 4.0; API boundaryLicense: source CC BY 3.0 IGO",
+      "caveats": [
+        "The API metadata reports 17 ADM1 units, sourceDataUpdateDate January 2023, and buildDate July 2023.",
+        "The reported boundary year is 2020 and the underlying licenseSource is the HDX record.",
+        "The geoBoundaries release documentation and the record's original-source license describe different license layers; resolve terms before use."
       ]
     }
   ],
