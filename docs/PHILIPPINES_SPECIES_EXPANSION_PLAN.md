@@ -1055,3 +1055,11 @@ Verification for this research-only batch: `npm run test:species:pipeline`, `npm
 - **Access and evidence:** direct PDF access returned HTTP 403. The table body, collection dates, station details, methods, vouchers and item-specific reuse terms remain unverified. The reclamation footprint is not treated as fish-survey or bay geometry.
 - **Disposition:** registered as a retrieval lead for Bacoor Bay only. No taxon, historical occurrence assertion, public app row or geometry was added; no absence inference is made.
 - **Next:** obtain authorized full-EIS access, verify table context and rights, then crosswalk only the names and locality details the source supports. Continue the open CALABARZON waterbody, inland-water, station-date and geometry reviews; do not mark the region complete or advance to NCR.
+
+## 107. Rosario Wawa River estuary identity lead -- 26 October 2026
+
+- **Official-source lead:** EMB search-index excerpts from the Island C and Island D EIS reports and the Island D public-hearing report name a Wawa River estuary near proposed Island E in the Rosario coastal project context and expose an actual-fishing table lead. Direct PDF requests returned HTTP 403. No table rows, catch values, species names, survey-station coordinates or item-specific reuse terms were transcribed or verified.
+- **Identity check:** EMB CALABARZON's water-quality page uses the name Wawa River for a feature at Barangay San Rafael, Rodriguez, Rizal. Keep that namesake separate from the Rosario estuary lead. The nearby survey station is not treated as channel geometry or a catch point.
+- **Disposition:** added one source-named estuary lead and kept its identity, salinity, extent, geometry, fish evidence and rights unresolved. No species assertion, absence inference, public app row or geometry was added.
+- **Updated checkpoint:** CALABARZON now has 97 selected waterbody leads, including 3 estuary leads; 189 registered sources; zero public admissions; and an incomplete waterbody denominator and fish baseline.
+- **Next:** obtain authorized direct EIS/hearing-report access, inspect the full actual-fishing and station tables, resolve the Rosario estuary against permitted hydrography, then review taxonomy and item-specific reuse. Continue the other CALABARZON inland and coastal gaps; do not mark the region complete or advance to NCR.

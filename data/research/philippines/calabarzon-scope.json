@@ -72,13 +72,13 @@
     "limits": "Province plus separate-city starter coverage. Municipalities/component cities and each island/waterbody still require the source-sweep inventory; this is not a completed regional inventory."
   },
   "counts": {
-    "waterbodyResearchLeads": 96,
+    "waterbodyResearchLeads": 97,
     "provincesWithLeads": 5,
     "separateCityCoverageUnits": 1,
     "byKind": {
       "bay": 7,
       "river": 51,
-      "estuary": 2,
+      "estuary": 3,
       "wetland": 8,
       "reservoir": 5,
       "lake": 18,
@@ -3403,6 +3403,41 @@
       "reviewStatus": "historical-EIA-table-reviewed;Maalimango-mouth-only;partial-taxonomy;geometry-current-status-and-reuse-pending",
       "publicAdmission": false,
       "scopeNote": "JICA-hosted 2017 EIA Table 4.40 names a 2016 sampling station at the mouth of Maalimango River in Barangay Ligtong I, Rosario, and Table 4.47 reports a historical fishery matrix across four project-area estuarine stations. Only Station 4 is assigned to this river mouth; its source coordinate and station date are retained in the review file, not treated as river geometry. The EIA calls the station brackishwater, not the whole river. Five source species-rank names have exact GBIF Backbone matches (one source spelling is a synonym); three fish rows remain genus-level or alternative-genus labels. Mixed observations/interviews, no vouchers, and unverified reuse rights keep this evidence research-only. No current presence, whole-river salinity, access, legality, geometry or public claim is inferred."
+    },
+    {
+      "id": "ph-wb-wawa-river-estuary-rosario-cavite",
+      "name": "Wawa River estuary (near Island E)",
+      "aliases": [],
+      "kind": "estuary",
+      "salinity": {
+        "classification": "unknown",
+        "reviewStatus": "not-assessed",
+        "sourceRefs": []
+      },
+      "administrativeAssociations": [
+        {
+          "regionId": "0400000000",
+          "relationship": "source-described-locality",
+          "sourceRefs": [
+            "emb-cavite-island-c-eis-2021-fisheries",
+            "emb-cavite-island-d-eis-2021-fisheries",
+            "emb-cavite-island-d-phr-2021-fisheries"
+          ],
+          "provinceId": "0402100000",
+          "locality": "Near proposed Island E; Rosario coastal project context"
+        }
+      ],
+      "sourceRefs": [
+        "emb-cavite-island-c-eis-2021-fisheries",
+        "emb-cavite-island-d-eis-2021-fisheries",
+        "emb-cavite-island-d-phr-2021-fisheries"
+      ],
+      "identityStatus": "source-named-research-lead",
+      "boundaryStatus": "not-delineated",
+      "fishEvidenceStatus": "official-EMB-indexed-historical-catch-context;no-rows-transcribed;no-assertion",
+      "reviewStatus": "source-named-estuary-lead;identity-geometry-and-reuse-pending;direct-PDF-access-403",
+      "publicAdmission": false,
+      "scopeNote": "Official EMB EIS and public-hearing search-index excerpts name a Wawa River estuary near proposed Island E in the Rosario coastal project context and surface an actual-fishing table lead. No table rows or taxa are transcribed. EMB CALABARZON also uses Wawa River for a separate feature at San Rafael, Rodriguez, Rizal; do not merge these names. Estuary extent, channel identity, salinity, access, item-specific reuse and fish evidence remain unresolved. No nearby survey station is treated as catch coordinates or waterbody geometry."
     }
   ],
   "coverageRules": {
@@ -3483,6 +3518,18 @@
         "ph-wb-calibato-lake",
         "ph-wb-palakpakin-lake"
       ]
+    },
+    {
+      "priority": 6,
+      "task": "Resolve the Rosario Wawa River estuary identity and obtain authorized EIS/hearing-report and hydrography access before reviewing indexed fish-catch leads.",
+      "sourceIds": [
+        "emb-cavite-island-c-eis-2021-fisheries",
+        "emb-cavite-island-d-eis-2021-fisheries",
+        "emb-cavite-island-d-phr-2021-fisheries"
+      ],
+      "waterbodyIds": [
+        "ph-wb-wawa-river-estuary-rosario-cavite"
+      ]
     }
   ],
   "gaps": [
@@ -3532,8 +3579,8 @@
     {
       "id": "identity-and-geometry",
       "status": "open",
-      "count": 90,
-      "reason": "No validated waterbody geometry or precise point assignment has been created across 90 selected leads. A historical EIA supports one named Maalimango River mouth station, not the full channel. Repeated names, source-era localities, compound river names and watershed-versus-channel identity remain under review.",
+      "count": 97,
+      "reason": "No validated waterbody geometry or precise point assignment has been created across 97 selected leads. Historical station points and project footprints do not delimit whole waterbodies; repeated names, source-era localities, compound river names and watershed-versus-channel identity remain under review.",
       "nextAction": "Reconcile stable identities and source-era/current geography before map display."
     },
     {
@@ -3551,6 +3598,18 @@
       ],
       "reason": "The provincial profile supports source-named course and reported-length context for Bacoor, Cavite San Juan and Labac Rivers, but provides no station coordinates, fish survey, salinity profile, or reusable channel geometry. A separate Cavite San Juan lead is retained because the current same-name lead covers source-described Laguna and Batangas localities.",
       "nextAction": "Seek dated, station-resolved fish surveys and permitted channel/watershed geometry for the three Cavite river leads; do not interpret source water classifications as current safety, access or fish-presence evidence."
+    },
+    {
+      "id": "wawa-river-estuary-identity-and-evidence",
+      "status": "open",
+      "count": 1,
+      "sourceRefs": [
+        "emb-cavite-island-c-eis-2021-fisheries",
+        "emb-cavite-island-d-eis-2021-fisheries",
+        "emb-cavite-island-d-phr-2021-fisheries"
+      ],
+      "reason": "Official EMB indexed material names a Wawa River estuary near proposed Island E in the Rosario coastal project area, but direct PDF retrieval returned HTTP 403. Exact channel identity, extent, salinity, dated fish evidence, and item-specific reuse remain unresolved; keep the Rizal Wawa River namesake separate.",
+      "nextAction": "Obtain authorized direct EIS/hearing-report access and permitted hydrography, then resolve the estuary identity and review full station/catch context before deriving any species evidence."
     }
   ]
 }
