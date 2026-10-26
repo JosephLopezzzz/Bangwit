@@ -1025,3 +1025,10 @@ Verification for this research-only batch: `npm run test:species:pipeline`, `npm
 - **Disposition and release:** the CALABARZON gap report, source registry and README now preserve the historical source/access states. No species assertion, public app row, current water-quality alert, or complete inventory claim was added. Research commits `61d97c7`, `b4c586d` and `7cca7de` were pushed to `main`.
 - **Verification:** JSON parsing, registry/review hash consistency checks and `git diff --check` passed. No test suite was run for these research-only records.
 - **Next:** ask DLSU Libraries about authorized consultation or scanning of accession TU03120 and the item-specific reuse terms, then inspect its methods/results pages if access is granted. Meanwhile continue independent, station-resolved fish evidence and permitted geometry searches for the other Bacoor watercourses; keep CALABARZON incomplete and do not advance to NCR.
+
+## 103. DLSU thesis access route and unsent inquiry -- 26 October 2026
+
+- **Access lead:** the official DLSU Animo Repository Guide confirms that DLSU Libraries administers the repository. An indexed excerpt of the DLSU Ask LORA FAQ lists `library@dlsu.edu.ph` for inquiries. The FAQ page itself returned HTTP 429 on direct access; the excerpt does not confirm that an external researcher can consult accession TU03120.
+- **Prepared action:** added an unsent draft asking about external access, authorized scanning of the fish methods/results pages, station/date/specimen details and item-specific reuse terms. No email, login, appointment or scan request was submitted.
+- **Disposition:** the Zapote thesis remains a bibliographic lead, with no taxa or survey details extracted and no publication admission. The access route and draft are recorded in `calabarzon-zapote-1984-thesis-access-review-20261026.json` and the source registry.
+- **Next:** the project owner may send the inquiry. Continue independent waterbody-level fish evidence and permitted geometry research for Bacoor while the print thesis access remains unresolved.
