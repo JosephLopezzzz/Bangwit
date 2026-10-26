@@ -49,8 +49,8 @@ test("Island C EIS remains broad Manila Bay context with no species assertions",
   assert.equal(report.inputHashes.islandCFisheriesReviewSha256, sha256(reviewBytes));
   assert.equal(report.coverageSummary.registeredSources, registry.sourceCount);
   assert.equal(report.coverageSummary.namedWaterbodyLeads, 94);
-  assert.equal(report.coverageSummary.sourceAssignments, 241);
-  assert.equal(report.coverageSummary.distinctSourceReferencesAssigned, 66);
+  assert.equal(report.coverageSummary.sourceAssignments, 242);
+  assert.equal(report.coverageSummary.distinctSourceReferencesAssigned, 67);
   assert.equal(report.coverageSummary.admittedPublicRecords, 0);
   assert.equal(report.coverageSummary.regionalBaselineComplete, false);
   assert.equal(palico.snapshotHashes.registry, sha256(sourceBytes));

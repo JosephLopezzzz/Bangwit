@@ -32,11 +32,23 @@ test("JICA's downstream fish summary stays unassigned until a station crosswalk 
   assert.equal(review.decisions.waterbodyAssignmentAdded, false);
   assert.equal(review.decisions.speciesAssertionsAdded, 0);
   assert.equal(review.decisions.publicProjectionAdded, false);
+  assert.deepEqual(review.environmentalContext.waterQualitySurveyDates, ["2016-02-17", "2016-02-18"]);
+  assert.equal(review.environmentalContext.sanJuanMouthSample.siteId, "S1");
+  assert.equal(review.environmentalContext.sanJuanMouthSample.sourceLocality, "Mouth of San Juan River");
+  assert.equal(review.environmentalContext.sanJuanMouthSample.salinity.value, 31800);
+  assert.equal(review.environmentalContext.sanJuanMouthSample.salinity.unit, "mg/L");
+  assert.equal(review.environmentalContext.sanJuanMouthSample.sampleDateWithinSurveyWindow, null);
+  assert.equal(review.environmentalContext.sanJuanMouthSample.coordinates, null);
+  assert.equal(review.environmentalContext.fishSurveyCrosswalkEstablished, false);
+  assert.equal(review.environmentalContext.currentWaterbodySalinityClassEstablished, false);
 
   const sanJuan = scope.waterbodies.find((row) => row.id === review.candidateWaterbodyId);
   assert.ok(sanJuan);
   assert.equal(sanJuan.fishEvidenceStatus, "not-reviewed");
-  assert.deepEqual(sanJuan.sourceRefs, ["cavite-ecological-profile-2024-fisheries"]);
+  assert.equal(sanJuan.salinity.classification, "unknown");
+  assert.equal(sanJuan.salinity.reviewStatus, "historical-point-sample-2016;current-waterbody-class-unresolved");
+  assert.deepEqual(sanJuan.salinity.sourceRefs, [review.sourceId]);
+  assert.deepEqual(sanJuan.sourceRefs, ["cavite-ecological-profile-2024-fisheries", review.sourceId]);
   assert.equal(sanJuan.publicAdmission, false);
 });
 
@@ -51,7 +63,7 @@ test("the source and regional checkpoint preserve the unresolved crosswalk", () 
   assert.equal(report.inputHashes.sanJuanJicaFishReviewSha256, sha256(reviewBytes));
   assert.equal(report.coverageSummary.namedWaterbodyLeads, 94);
   assert.equal(report.coverageSummary.sourceAssignments, scope.waterbodies.flatMap((row) => row.sourceRefs).length);
-  assert.equal(report.coverageSummary.sourceAssignments, 241);
+  assert.equal(report.coverageSummary.sourceAssignments, 242);
   assert.equal(report.coverageSummary.registeredSources, registry.sourceCount);
   assert.equal(report.coverageSummary.publicAdmission, false);
   assert.equal(report.coverageSummary.regionalBaselineComplete, false);

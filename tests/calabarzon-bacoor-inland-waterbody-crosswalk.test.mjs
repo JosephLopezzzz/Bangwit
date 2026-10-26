@@ -61,8 +61,8 @@ test("the source registry and CALABARZON checkpoint pin the new lead while stayi
   assert.equal(source.publicationApproval, false);
   assert.equal(report.coverageSummary.namedWaterbodyLeads, 94);
   assert.equal(report.coverageSummary.sourceAssignments, scope.waterbodies.flatMap((row) => row.sourceRefs).length);
-  assert.equal(report.coverageSummary.sourceAssignments, 241);
-  assert.equal(report.coverageSummary.distinctSourceReferencesAssigned, 66);
+  assert.equal(report.coverageSummary.sourceAssignments, 242);
+  assert.equal(report.coverageSummary.distinctSourceReferencesAssigned, 67);
   assert.equal(report.coverageSummary.unknownSalinityLeads, 89);
   assert.equal(report.coverageSummary.registeredSources, registry.sourceCount);
   assert.equal(registry.sourceCount, 172);

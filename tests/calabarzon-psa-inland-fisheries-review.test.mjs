@@ -43,8 +43,8 @@ test("PSA statistical context is registered without adding waterbody assignments
   assert.match(source.researchStatus, /not-waterbody-resolved/);
   assert.equal(registry.sourceCount, registry.sources.length);
   assert.equal(report.coverageSummary.registeredSources, registry.sourceCount);
-  assert.equal(report.coverageSummary.sourceAssignments, 241);
-  assert.equal(report.coverageSummary.distinctSourceReferencesAssigned, 66);
+  assert.equal(report.coverageSummary.sourceAssignments, 242);
+  assert.equal(report.coverageSummary.distinctSourceReferencesAssigned, 67);
   assert.equal(report.coverageSummary.admittedPublicRecords, 0);
   assert.equal(report.coverageSummary.regionalBaselineComplete, false);
   assert.equal(report.inputHashes.sourcesSha256, sha256(registryBytes));
