@@ -1048,3 +1048,10 @@ Verification for this research-only batch: `npm run test:species:pipeline`, `npm
 - **Disposition:** added the crosswalk to the existing Labac research review and source references. No historical occurrence assertion, current-presence claim, species projection, salinity label or public app row was added. The 2014 CvSU fish study remains only a bibliographic lead, and the unrelated Scribd text stays excluded.
 - **Updated checkpoint:** CALABARZON still has 96 selected waterbody leads, 51 river leads, 186 registered sources, zero public admissions and an incomplete baseline. The crosswalk adds one source assignment.
 - **Next:** continue with source-backed station/date evidence for CALABARZON rivers that can be reviewed from public primary sources; keep Labac EIA claims research-only until the underlying survey details and item-specific reuse conditions are resolved.
+
+## 106. Bacoor Bay Island A EIS access review -- 26 October 2026
+
+- **Lead:** the official EMB index exposes Table 2.2-49, "List of Fish species caught in inner Bacoor bay within Island A," printed page 2.2-157. The public-hearing index places the proposed Island A project along Bacoor Bay and coastal waters of Cavite City and Kawit.
+- **Access and evidence:** direct PDF access returned HTTP 403. The table body, collection dates, station details, methods, vouchers and item-specific reuse terms remain unverified. The reclamation footprint is not treated as fish-survey or bay geometry.
+- **Disposition:** registered as a retrieval lead for Bacoor Bay only. No taxon, historical occurrence assertion, public app row or geometry was added; no absence inference is made.
+- **Next:** obtain authorized full-EIS access, verify table context and rights, then crosswalk only the names and locality details the source supports. Continue the open CALABARZON waterbody, inland-water, station-date and geometry reviews; do not mark the region complete or advance to NCR.
