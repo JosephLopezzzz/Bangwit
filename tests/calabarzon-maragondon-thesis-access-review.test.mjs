@@ -34,7 +34,7 @@ test("DLSU-D thesis access restrictions do not verify or release the Maragondon 
   assert.ok(source.access.reviewFiles.includes("calabarzon-maragondon-thesis-access-review-20261026.json"));
   assert.ok(source.access.reviewFiles.includes("calabarzon-maragondon-oreochromis-claim-review-20261025.json"));
   assert.equal(registry.sourceCount, registry.sources.length);
-  assert.equal(registry.sourceCount, 172);
+  assert.equal(registry.sourceCount, 173);
 
   assert.deepEqual(claim.institutionalAccessReview, {
     reviewFile: "calabarzon-maragondon-thesis-access-review-20261026.json",
@@ -51,6 +51,6 @@ test("DLSU-D thesis access restrictions do not verify or release the Maragondon 
   assert.equal(report.inputHashes.sourcesSha256, sha256(sourceBytes));
   assert.equal(report.inputHashes.maragondonOreochromisClaimReviewSha256, sha256(claimBytes));
   assert.equal(report.inputHashes.maragondonThesisAccessReviewSha256, sha256(reviewBytes));
-  assert.equal(report.coverageSummary.registeredSources, 172);
+  assert.equal(report.coverageSummary.registeredSources, 173);
   assert.match(report.openGaps.find((row) => row.id === "maragondon-species-identification-and-reuse").nextAction, /author-approved full-text access/i);
 });

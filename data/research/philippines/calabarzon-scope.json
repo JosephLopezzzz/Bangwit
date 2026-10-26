@@ -72,16 +72,16 @@
     "limits": "Province plus separate-city starter coverage. Municipalities/component cities and each island/waterbody still require the source-sweep inventory; this is not a completed regional inventory."
   },
   "counts": {
-    "waterbodyResearchLeads": 94,
+    "waterbodyResearchLeads": 95,
     "provincesWithLeads": 5,
     "separateCityCoverageUnits": 1,
     "byKind": {
       "bay": 7,
-      "river": 49,
+      "river": 50,
       "estuary": 2,
       "wetland": 8,
-      "lake": 18,
       "reservoir": 5,
+      "lake": 18,
       "stream": 5
     },
     "geometryValidated": 0,
@@ -3335,6 +3335,39 @@
       "reviewStatus": "official-EIA-fishery-lead-reviewed;site-date-method-geometry-and-salinity-pending",
       "publicAdmission": false,
       "scopeNote": "Cavite Ecological Profile 2024 reports a 30.5 km Labac River with narrative routes involving tributaries/localities in Indang, Mendez and Naic and drainage to Manila Bay. Another table uses “Labac/Labac-Balsahan River”; the slash form is preserved as unresolved name context, not adopted as an alias. Course text is not channel geometry, and no fish evidence, salinity, access, safety or current rule is established. The official 2023 AIIB final EIA indexed excerpt reports subsistence fishing of Oreochromis niloticus and Mugil cephalus under the Labac River heading, without a catch date, station, reach, method or voucher. This is a research lead only; 18 bounded GBIF text searches returned zero, which is not fish-absence evidence. No species assertion, salinity class, geometry or public projection was added."
+    },
+    {
+      "id": "ph-wb-maalimango-river-cavite",
+      "name": "Maalimango River",
+      "aliases": [],
+      "kind": "river",
+      "salinity": {
+        "classification": "unknown",
+        "reviewStatus": "source-describes-brackishwater-at-mouth-station-only;whole-river-class-unresolved",
+        "sourceRefs": [
+          "jica-2017-cavite-flood-mitigation-eia-aquatic-ecology"
+        ]
+      },
+      "administrativeAssociations": [
+        {
+          "regionId": "0400000000",
+          "relationship": "source-described-locality",
+          "sourceRefs": [
+            "jica-2017-cavite-flood-mitigation-eia-aquatic-ecology"
+          ],
+          "provinceId": "0402100000",
+          "locality": "Mouth station in Barangay Ligtong I, Rosario, Cavite"
+        }
+      ],
+      "sourceRefs": [
+        "jica-2017-cavite-flood-mitigation-eia-aquatic-ecology"
+      ],
+      "identityStatus": "official-source-named-river;station-4-mouth-locality-crosswalk-only",
+      "boundaryStatus": "not-delineated",
+      "fishEvidenceStatus": "historical-2016-EIA-station-matrix;Maalimango-mouth-station-4;5-species-rank-names-GBIF-matched;3-genus-level-or-alternative;field-identification-and-reuse-pending;no-current-presence-inferred",
+      "reviewStatus": "historical-EIA-table-reviewed;Maalimango-mouth-only;partial-taxonomy;geometry-current-status-and-reuse-pending",
+      "publicAdmission": false,
+      "scopeNote": "JICA-hosted 2017 EIA Table 4.40 names a 2016 sampling station at the mouth of Maalimango River in Barangay Ligtong I, Rosario, and Table 4.47 reports a historical fishery matrix across four project-area estuarine stations. Only Station 4 is assigned to this river mouth; its source coordinate and station date are retained in the review file, not treated as river geometry. The EIA calls the station brackishwater, not the whole river. Five source species-rank names have exact GBIF Backbone matches (one source spelling is a synonym); three fish rows remain genus-level or alternative-genus labels. Mixed observations/interviews, no vouchers, and unverified reuse rights keep this evidence research-only. No current presence, whole-river salinity, access, legality, geometry or public claim is inferred."
     }
   ],
   "coverageRules": {
@@ -3422,7 +3455,7 @@
       "id": "scope-not-exhaustive",
       "status": "open",
       "count": null,
-      "reason": "Eighty-nine selected named water and habitat research leads are seeded across CALABARZON water types. The official 2024 Cavite profile added three source-named river courses, while their source-reported lengths and route text remain distinct from verified channel geometry. Provincial, municipal, island, stream, pond and reservoir denominators remain unestablished; some leads are habitat/designation names rather than delineated waterbodies.",
+      "reason": "Ninety-five selected named water and habitat research leads are seeded across CALABARZON water types. The official 2024 Cavite profile adds source-named river courses, while reported route text remains distinct from verified channel geometry. A 2017 JICA-hosted EIA adds a historical four-station estuarine fishery matrix and a station at the Maalimango River mouth; it does not provide a complete inventory or channel boundary. Provincial, municipal, island, stream, pond and reservoir denominators remain unestablished; some leads are habitat/designation names rather than delineated waterbodies.",
       "nextAction": "Continue the source-derived inventory with explicit inclusion criteria and a frozen manifest; resolve unnamed 2021 aggregate river/wetland counts before claiming a regional baseline."
     },
     {
@@ -3457,15 +3490,15 @@
     {
       "id": "fish-coverage",
       "status": "open",
-      "count": 89,
-      "reason": "Regional fish coverage remains incomplete across 89 selected leads. Exact-name GBIF text screens cover selected watercourse leads only; zero results are bounded discovery gaps, and historical candidates remain held where feature identity is uncertain. The 2024 Cavite profile adds river-course context but no fish records.",
+      "count": 90,
+      "reason": "Regional fish coverage remains incomplete across 90 selected leads. The Maalimango River lead has a historical, station-specific 2016 EIA fishery matrix with partial taxonomy and unresolved reuse/field identification; this is not a current or complete river list. Exact-name GBIF screens cover selected watercourses only; zero results are bounded discovery gaps, and other historical candidates remain held where feature identity is uncertain.",
       "nextAction": "Join only independently reviewed evidence at its supported geographic scale."
     },
     {
       "id": "identity-and-geometry",
       "status": "open",
-      "count": 89,
-      "reason": "No validated waterbody geometry or precise point assignment has been created across 89 selected leads. Repeated names, source-era localities, compound river names and watershed-versus-channel identity remain under review.",
+      "count": 90,
+      "reason": "No validated waterbody geometry or precise point assignment has been created across 90 selected leads. A historical EIA supports one named Maalimango River mouth station, not the full channel. Repeated names, source-era localities, compound river names and watershed-versus-channel identity remain under review.",
       "nextAction": "Reconcile stable identities and source-era/current geography before map display."
     },
     {

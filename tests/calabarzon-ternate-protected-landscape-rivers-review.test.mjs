@@ -48,10 +48,10 @@ test("the official-source review is registered and reflected in the incomplete c
   assert.equal(report.inputHashes.ternateProtectedLandscapeRiversSha256, sha256(reviewBytes));
   assert.equal(report.inputHashes.scopeSha256, sha256(scopeBytes));
   assert.equal(report.inputHashes.sourcesSha256, sha256(sourceBytes));
-  assert.equal(report.coverageSummary.namedWaterbodyLeads, 94);
+  assert.equal(report.coverageSummary.namedWaterbodyLeads, 95);
   assert.equal(report.coverageSummary.byWaterbodyKind.river, 49);
   assert.equal(report.coverageSummary.leadsStillResearchQueued, 12);
-  assert.equal(report.coverageSummary.unknownSalinityLeads, 89);
+  assert.equal(report.coverageSummary.unknownSalinityLeads, 90);
   assert.equal(report.coverageSummary.publicAdmission, false);
   assert.equal(report.coverageSummary.regionalBaselineComplete, false);
   assert.ok(report.openGaps.some((gap) => gap.id === "ternate-protected-landscape-river-location-and-evidence"));

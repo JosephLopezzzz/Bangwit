@@ -41,7 +41,7 @@ test("Cambantoc GBIF screen is complete, bounded, and does not infer fish absenc
   assert.equal(report.inputHashes.scopeSha256, sha256(scopeBytes));
   assert.equal(report.inputHashes.sourcesSha256, sha256(sourceBytes));
   assert.equal(report.coverageSummary.sourceAssignments, scope.waterbodies.flatMap((row) => row.sourceRefs).length);
-  assert.equal(report.coverageSummary.sourceAssignments, 242);
+  assert.equal(report.coverageSummary.sourceAssignments, 243);
   assert.equal(report.coverageSummary.leadsStillResearchQueued, 12);
   assert.equal(report.coverageSummary.regionalBaselineComplete, false);
 });

@@ -35,7 +35,7 @@ test("Tres Cruzes is normalized as a reservoir lead without asserting a boundary
   assert.ok(!waterbody.administrativeAssociations[0].sourceRefs.includes("jesam-2024-lagadlarin-mangrove-flora"));
   assert.deepEqual(scope.counts.byKind, {
     bay: 7,
-    river: 49,
+    river: 50,
     estuary: 2,
     wetland: 8,
     lake: 18,
@@ -62,7 +62,7 @@ test("official dam and water-storage figures remain infrastructure context, not 
   assert.match(review.nameAndKindCrosswalk.identityStatus, /unverified/);
   assert.equal(review.publicationApproval, false);
   assert.ok(review.sourceIds.every((sourceId) => registry.sources.some((source) => source.id === sourceId)));
-  assert.equal(registry.sourceCount, 172);
+  assert.equal(registry.sourceCount, 173);
   assert.equal(registry.sourceCount, registry.sources.length);
   assert.equal(registry.sources.find((source) => source.id === "nia-calabarzon-tres-cruzes-dam-repair").publicationApproval, false);
 });

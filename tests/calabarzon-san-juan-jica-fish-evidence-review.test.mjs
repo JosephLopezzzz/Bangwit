@@ -57,13 +57,13 @@ test("the source and regional checkpoint preserve the unresolved crosswalk", () 
   assert.ok(source);
   assert.equal(source.publicationApproval, false);
   assert.ok(source.access.reviewFiles.includes(reviewFile));
-  assert.equal(registry.sourceCount, 172);
+  assert.equal(registry.sourceCount, 173);
   assert.equal(registry.sourceCount, registry.sources.length);
   assert.equal(report.inputHashes.sourcesSha256, sha256(sourceBytes));
   assert.equal(report.inputHashes.sanJuanJicaFishReviewSha256, sha256(reviewBytes));
-  assert.equal(report.coverageSummary.namedWaterbodyLeads, 94);
+  assert.equal(report.coverageSummary.namedWaterbodyLeads, 95);
   assert.equal(report.coverageSummary.sourceAssignments, scope.waterbodies.flatMap((row) => row.sourceRefs).length);
-  assert.equal(report.coverageSummary.sourceAssignments, 242);
+  assert.equal(report.coverageSummary.sourceAssignments, 243);
   assert.equal(report.coverageSummary.registeredSources, registry.sourceCount);
   assert.equal(report.coverageSummary.publicAdmission, false);
   assert.equal(report.coverageSummary.regionalBaselineComplete, false);

@@ -41,16 +41,16 @@ test("Island C EIS remains broad Manila Bay context with no species assertions",
   assert.equal(source.publicationApproval, false);
   assert.equal(source.license, null);
   assert.equal(registry.sourceCount, registry.sources.length);
-  assert.equal(registry.sourceCount, 172);
+  assert.equal(registry.sourceCount, 173);
   assert.ok(source.access.reviewFiles.includes("calabarzon-island-c-fisheries-eis-scope-review-20261026.json"));
 
   assert.equal(report.inputHashes.sourcesSha256, sha256(sourceBytes));
   assert.equal(report.inputHashes.scopeSha256, sha256(scopeBytes));
   assert.equal(report.inputHashes.islandCFisheriesReviewSha256, sha256(reviewBytes));
   assert.equal(report.coverageSummary.registeredSources, registry.sourceCount);
-  assert.equal(report.coverageSummary.namedWaterbodyLeads, 94);
-  assert.equal(report.coverageSummary.sourceAssignments, 242);
-  assert.equal(report.coverageSummary.distinctSourceReferencesAssigned, 67);
+  assert.equal(report.coverageSummary.namedWaterbodyLeads, 95);
+  assert.equal(report.coverageSummary.sourceAssignments, 243);
+  assert.equal(report.coverageSummary.distinctSourceReferencesAssigned, 68);
   assert.equal(report.coverageSummary.admittedPublicRecords, 0);
   assert.equal(report.coverageSummary.regionalBaselineComplete, false);
   assert.equal(palico.snapshotHashes.registry, sha256(sourceBytes));

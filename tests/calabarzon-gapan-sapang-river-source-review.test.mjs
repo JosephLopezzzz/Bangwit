@@ -58,13 +58,13 @@ test("CALABARZON checkpoint and source hashes match the reviewed scope", () => {
   assert.equal(report.inputHashes.sourcesSha256, sha256(sourceBytes));
   assert.equal(report.inputHashes.gapanSapangRiverReviewSha256, sha256(reviewBytes));
   assert.ok(report.waterbodySnapshot.some((row) => row.id === review.scopeLeadId));
-  assert.equal(report.coverageSummary.namedWaterbodyLeads, 94);
+  assert.equal(report.coverageSummary.namedWaterbodyLeads, 95);
   assert.equal(report.coverageSummary.byWaterbodyKind.river, 49);
-  assert.equal(report.coverageSummary.sourceAssignments, 242);
-  assert.equal(report.coverageSummary.distinctSourceReferencesAssigned, 67);
-  assert.equal(report.coverageSummary.registeredSources, 172);
+  assert.equal(report.coverageSummary.sourceAssignments, 243);
+  assert.equal(report.coverageSummary.distinctSourceReferencesAssigned, 68);
+  assert.equal(report.coverageSummary.registeredSources, 173);
   assert.equal(report.coverageSummary.leadsStillResearchQueued, 12);
-  assert.equal(report.coverageSummary.unknownSalinityLeads, 89);
+  assert.equal(report.coverageSummary.unknownSalinityLeads, 90);
   assert.equal(report.coverageSummary.publicAdmission, false);
   assert.equal(report.coverageSummary.regionalBaselineComplete, false);
   assert.ok(report.openGaps.some((gap) => gap.id === "gapan-sapang-river-evidence-and-extent"));
