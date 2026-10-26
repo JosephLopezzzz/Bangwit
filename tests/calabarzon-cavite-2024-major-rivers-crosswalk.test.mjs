@@ -37,15 +37,21 @@ test("the official Cavite profile adds source-bounded river leads without invent
     assert.ok(lead, `missing research lead ${id}`);
     assert.equal(lead.kind, "river");
     assert.equal(lead.salinity.classification, "unknown");
-    assert.equal(lead.fishEvidenceStatus, "not-reviewed");
     assert.equal(lead.boundaryStatus, "not-delineated");
     assert.equal(lead.publicAdmission, false);
-    assert.deepEqual(lead.sourceRefs, [review.sourceId]);
   }
+  const bacoor = scope.waterbodies.find((row) => row.id === "ph-wb-bacoor-river-cavite");
+  assert.equal(bacoor.fishEvidenceStatus, "not-reviewed");
+  assert.deepEqual(bacoor.sourceRefs, [review.sourceId, "bacoor-city-clup-ecological-profile-inland-waters"]);
   const caviteSanJuan = scope.waterbodies.find((row) => row.id === "ph-wb-san-juan-river-cavite");
+  assert.equal(caviteSanJuan.fishEvidenceStatus, "not-reviewed");
+  assert.deepEqual(caviteSanJuan.sourceRefs, [review.sourceId]);
   assert.match(caviteSanJuan.scopeNote, /keep this Cavite course separate from the existing Laguna\/Batangas/i);
   assert.ok(scope.waterbodies.find((row) => row.id === "ph-wb-canas-river").aliases.includes("Cañas River"));
-  assert.match(scope.waterbodies.find((row) => row.id === "ph-wb-labac-river-cavite").scopeNote, /not adopted as an alias/i);
+  const labac = scope.waterbodies.find((row) => row.id === "ph-wb-labac-river-cavite");
+  assert.match(labac.scopeNote, /not adopted as an alias/i);
+  assert.match(labac.fishEvidenceStatus, /EIA-reported-subsistence-fishery/);
+  assert.deepEqual(labac.sourceRefs, ["aiib-2023-bcib-final-eia", review.sourceId, "gbif-occurrence-downloads"]);
 });
 
 test("the source and checkpoint pin the reviewed profile and preserve incomplete regional status", () => {
@@ -56,10 +62,10 @@ test("the source and checkpoint pin the reviewed profile and preserve incomplete
   assert.equal(report.inputHashes.cavite2024MajorRiversReviewSha256, sha256(reviewBytes));
   assert.equal(report.inputHashes.scopeSha256, sha256(scopeBytes));
   assert.equal(report.inputHashes.sourcesSha256, sha256(sourceBytes));
-  assert.equal(report.coverageSummary.namedWaterbodyLeads, 89);
-  assert.equal(report.coverageSummary.byWaterbodyKind.river, 46);
-  assert.equal(report.coverageSummary.sourceAssignments, 232);
-  assert.equal(report.coverageSummary.unknownSalinityLeads, 84);
+  assert.equal(report.coverageSummary.namedWaterbodyLeads, 94);
+  assert.equal(report.coverageSummary.byWaterbodyKind.river, 49);
+  assert.equal(report.coverageSummary.sourceAssignments, 241);
+  assert.equal(report.coverageSummary.unknownSalinityLeads, 89);
   assert.equal(report.coverageSummary.boundaryGeometryValidated, 0);
   assert.equal(report.coverageSummary.publicAdmission, false);
   assert.equal(report.coverageSummary.regionalBaselineComplete, false);

@@ -15,7 +15,7 @@ const sourcesById = new Map(registry.sources.map((row) => [row.id, row]));
 test("BMB 2019 rows add historical waterbody leads without implying complete coverage", () => {
   assert.equal(review.status, "historical-bmb-inventory-crosswalked;new-waterbody-leads-added;dagatan-identity-conflict-held");
   assert.equal(review.bmbRows.length, 24);
-  assert.equal(scope.counts.waterbodyResearchLeads, 89);
+  assert.equal(scope.counts.waterbodyResearchLeads, 94);
   assert.equal(report.coverageSummary.namedWaterbodyLeads, 83);
   assert.equal(report.coverageSummary.waterbodyDenominatorEstablished, false);
   assert.equal(report.coverageSummary.regionalBaselineComplete, false);

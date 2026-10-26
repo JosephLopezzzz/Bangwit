@@ -49,9 +49,9 @@ test("municipal citation, scope totals and CALABARZON source hashes are pinned",
   assert.equal(report.inputHashes.sourcesSha256, sha256(sourceBytes));
   assert.equal(report.inputHashes.lalagunaMunicipalHabitatReviewSha256, sha256(reviewBytes));
   assert.equal(report.coverageSummary.sourceAssignments, scope.waterbodies.flatMap((row) => row.sourceRefs).length);
-  assert.equal(report.coverageSummary.sourceAssignments, 232);
-  assert.equal(report.coverageSummary.distinctSourceReferencesAssigned, 64);
-  assert.equal(report.coverageSummary.registeredSources, 169);
+  assert.equal(report.coverageSummary.sourceAssignments, 241);
+  assert.equal(report.coverageSummary.distinctSourceReferencesAssigned, 66);
+  assert.equal(report.coverageSummary.registeredSources, 172);
   assert.equal(report.coverageSummary.publicAdmission, false);
   assert.equal(report.coverageSummary.regionalBaselineComplete, false);
 });

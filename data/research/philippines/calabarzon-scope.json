@@ -72,17 +72,17 @@
     "limits": "Province plus separate-city starter coverage. Municipalities/component cities and each island/waterbody still require the source-sweep inventory; this is not a completed regional inventory."
   },
   "counts": {
-    "waterbodyResearchLeads": 89,
+    "waterbodyResearchLeads": 94,
     "provincesWithLeads": 5,
     "separateCityCoverageUnits": 1,
     "byKind": {
       "bay": 7,
-      "river": 46,
+      "river": 49,
       "estuary": 2,
       "wetland": 8,
       "lake": 18,
       "reservoir": 5,
-      "stream": 3
+      "stream": 5
     },
     "geometryValidated": 0,
     "speciesAssertionsImported": 9,
@@ -2138,7 +2138,8 @@
           "relationship": "source-described-locality",
           "sourceRefs": [
             "denr-bmb-inland-wetlands-atlas-2016",
-            "cavite-ecological-profile-2024-fisheries"
+            "cavite-ecological-profile-2024-fisheries",
+            "bacoor-city-clup-ecological-profile-inland-waters"
           ],
           "provinceId": "0402100000"
         }
@@ -2146,14 +2147,15 @@
       "sourceRefs": [
         "denr-bmb-inland-wetlands-atlas-2016",
         "gbif-occurrence-downloads",
-        "cavite-ecological-profile-2024-fisheries"
+        "cavite-ecological-profile-2024-fisheries",
+        "bacoor-city-clup-ecological-profile-inland-waters"
       ],
       "identityStatus": "source-named-research-lead",
       "boundaryStatus": "not-delineated",
       "fishEvidenceStatus": "bounded-COLXR-Actinopterygii-waterBody-and-locality-text-screen-zero; no-fish-absence-inferred",
       "reviewStatus": "bounded-COLXR-Actinopterygii-waterBody-and-locality-text-screen-zero-no-absence-inferred",
       "publicAdmission": false,
-      "scopeNote": "Historical DENR-BMB 2016 Atlas Annex 2b names this river and reports locality context: City of Bacoor; Kawit; City of Dasmari?as; Silang. This is not channel geometry, a complete reach or fish evidence. Any printed asterisk is unexplained by the reviewed pages and is preserved without interpretation. A bounded GBIF COL XR Actinopterygii exact-name screen searched waterBody and locality in PH and returned zero for both fields; this is not fish-absence evidence. The 2024 provincial profile reports a 38.4 km source-described route to Bacoor Bay; this narrative is not a surveyed channel trace."
+      "scopeNote": "Historical DENR-BMB 2016 Atlas Annex 2b names this river and reports locality context: City of Bacoor; Kawit; City of Dasmariñas; Silang. This is not channel geometry, a complete reach or fish evidence. Any printed asterisk is unexplained by the reviewed pages and is preserved without interpretation. A bounded GBIF COL XR Actinopterygii exact-name screen searched waterBody and locality in PH and returned zero for both fields; this is not fish-absence evidence. The 2024 provincial profile reports a 38.4 km source-described route to Bacoor Bay; this narrative is not a surveyed channel trace. Bacoor City Ecological Profile also describes the Imus River route through Bacoor and upstream localities; this narrative is not surveyed geometry and supplies no fish taxa for this river."
     },
     {
       "id": "ph-wb-ylang-ylang-rio-grande-river",
@@ -2184,7 +2186,7 @@
       "fishEvidenceStatus": "bounded-COLXR-Actinopterygii-waterBody-and-locality-text-screen-zero; no-fish-absence-inferred",
       "reviewStatus": "bounded-COLXR-Actinopterygii-waterBody-and-locality-text-screen-zero-no-absence-inferred",
       "publicAdmission": false,
-      "scopeNote": "Historical DENR-BMB 2016 Atlas Annex 2b names this river and reports locality context: Noveleta; General Trias; Imus; City of Dasmari?as; Silang; slash-form identity unresolved. This is not channel geometry, a complete reach or fish evidence. Any printed asterisk is unexplained by the reviewed pages and is preserved without interpretation. A bounded GBIF COL XR Actinopterygii exact-name screen searched waterBody and locality in PH and returned zero for both fields; this is not fish-absence evidence."
+      "scopeNote": "Historical DENR-BMB 2016 Atlas Annex 2b names this river and reports locality context: Noveleta; General Trias; Imus; City of Dasmariñas; Silang; slash-form identity unresolved. This is not channel geometry, a complete reach or fish evidence. Any printed asterisk is unexplained by the reviewed pages and is preserved without interpretation. A bounded GBIF COL XR Actinopterygii exact-name screen searched waterBody and locality in PH and returned zero for both fields; this is not fish-absence evidence."
     },
     {
       "id": "ph-wb-pagsanjan-river",
@@ -2623,7 +2625,7 @@
             "denr-bmb-inland-wetlands-atlas-2016"
           ],
           "provinceId": "0402100000",
-          "locality": "Dasmari?as; Silang"
+          "locality": "Dasmariñas; Silang"
         }
       ],
       "sourceRefs": [
@@ -2635,7 +2637,7 @@
       "fishEvidenceStatus": "bounded-COLXR-Actinopterygii-waterBody-and-locality-text-screen-zero; no-fish-absence-inferred",
       "reviewStatus": "bounded-COLXR-Actinopterygii-waterBody-and-locality-text-screen-zero-no-absence-inferred",
       "publicAdmission": false,
-      "scopeNote": "DENR-BMB 2016 Atlas Annex 2b visually confirms this row across Laguna and Cavite: City of Santa Rosa; City of Biñan (Laguna); Dasmari?as; Silang (Cavite). No exact reach, geometry, salinity, fish presence or access/legal status is established. The source asterisk is unexplained. A bounded GBIF COL XR Actinopterygii exact-name screen searched waterBody and locality in PH and returned zero for both fields; this is not fish-absence evidence."
+      "scopeNote": "DENR-BMB 2016 Atlas Annex 2b visually confirms this row across Laguna and Cavite: City of Santa Rosa; City of Biñan (Laguna); Dasmariñas; Silang (Cavite). No exact reach, geometry, salinity, fish presence or access/legal status is established. The source asterisk is unexplained. A bounded GBIF COL XR Actinopterygii exact-name screen searched waterBody and locality in PH and returned zero for both fields; this is not fish-absence evidence."
     },
     {
       "id": "ph-wb-san-cristobal-river",
@@ -3080,6 +3082,41 @@
     {
       "id": "ph-wb-bacoor-river-cavite",
       "name": "Bacoor River",
+      "aliases": [
+        "Mestizo River"
+      ],
+      "kind": "river",
+      "salinity": {
+        "classification": "unknown",
+        "reviewStatus": "not-assessed",
+        "sourceRefs": []
+      },
+      "administrativeAssociations": [
+        {
+          "regionId": "0400000000",
+          "relationship": "source-described-locality",
+          "sourceRefs": [
+            "cavite-ecological-profile-2024-fisheries",
+            "bacoor-city-clup-ecological-profile-inland-waters"
+          ],
+          "provinceId": "0402100000",
+          "locality": "Pintong Gubat, Molino through Tanzang Luma, Salinas and Panapaan; source reports drainage to Bacoor Bay."
+        }
+      ],
+      "sourceRefs": [
+        "cavite-ecological-profile-2024-fisheries",
+        "bacoor-city-clup-ecological-profile-inland-waters"
+      ],
+      "identityStatus": "source-named-research-lead;channel-geometry-pending",
+      "boundaryStatus": "not-delineated",
+      "fishEvidenceStatus": "not-reviewed",
+      "reviewStatus": "official-river-profile-reviewed;fish-evidence-geometry-salinity-pending",
+      "publicAdmission": false,
+      "scopeNote": "Cavite Ecological Profile 2024 reports Bacoor River at 12.3 km with a source-described course from Pintong Gubat, Molino through Tanzang Luma, Salinas and Panapaan to Bacoor Bay. These source-reported facts are not a surveyed route or boundary. No fish evidence, salinity, station, access, safety or current rule is established. Bacoor City Ecological Profile independently uses the name Mestizo River for this river and gives city-barangay route context; this remains narrative, not surveyed geometry, and does not resolve a fish taxon to this river."
+    },
+    {
+      "id": "ph-wb-don-cella-river",
+      "name": "Don Cella River",
       "aliases": [],
       "kind": "river",
       "salinity": {
@@ -3092,21 +3129,145 @@
           "regionId": "0400000000",
           "relationship": "source-described-locality",
           "sourceRefs": [
-            "cavite-ecological-profile-2024-fisheries"
+            "bacoor-city-clup-ecological-profile-inland-waters"
           ],
           "provinceId": "0402100000",
-          "locality": "Pintong Gubat, Molino through Tanzang Luma, Salinas and Panapaan; source reports drainage to Bacoor Bay."
+          "locality": "Bacoor City; described as draining the eastern portion of the southern watershed and meeting Molino River at Molino Dam."
         }
       ],
       "sourceRefs": [
-        "cavite-ecological-profile-2024-fisheries"
+        "bacoor-city-clup-ecological-profile-inland-waters"
       ],
-      "identityStatus": "source-named-research-lead;channel-geometry-pending",
+      "identityStatus": "source-named-research-lead",
       "boundaryStatus": "not-delineated",
       "fishEvidenceStatus": "not-reviewed",
-      "reviewStatus": "official-river-profile-reviewed;fish-evidence-geometry-salinity-pending",
+      "reviewStatus": "source-named-locality-research-lead;fish-geometry-salinity-pending",
       "publicAdmission": false,
-      "scopeNote": "Cavite Ecological Profile 2024 reports Bacoor River at 12.3 km with a source-described course from Pintong Gubat, Molino through Tanzang Luma, Salinas and Panapaan to Bacoor Bay. These source-reported facts are not a surveyed route or boundary. No fish evidence, salinity, station, access, safety or current rule is established."
+      "scopeNote": "Bacoor City Ecological Profile supplies the following narrative locality context: Bacoor City; described as draining the eastern portion of the southern watershed and meeting Molino River at Molino Dam. Source-named river lead only; no station or surveyed channel line is supplied. Its general inland-fishery statement is not a species record for this watercourse. Fish taxa, salinity, access, safety, current rules, and public admission remain unresolved."
+    },
+    {
+      "id": "ph-wb-molino-river",
+      "name": "Molino River",
+      "aliases": [],
+      "kind": "river",
+      "salinity": {
+        "classification": "unknown",
+        "reviewStatus": "not-assessed",
+        "sourceRefs": []
+      },
+      "administrativeAssociations": [
+        {
+          "regionId": "0400000000",
+          "relationship": "source-described-locality",
+          "sourceRefs": [
+            "bacoor-city-clup-ecological-profile-inland-waters"
+          ],
+          "provinceId": "0402100000",
+          "locality": "Bacoor City and Dasmariñas City; described as meeting Don Cella River at Molino Dam and spilling into Zapote River."
+        }
+      ],
+      "sourceRefs": [
+        "bacoor-city-clup-ecological-profile-inland-waters"
+      ],
+      "identityStatus": "source-named-research-lead",
+      "boundaryStatus": "not-delineated",
+      "fishEvidenceStatus": "not-reviewed",
+      "reviewStatus": "source-named-locality-research-lead;fish-geometry-salinity-pending",
+      "publicAdmission": false,
+      "scopeNote": "Bacoor City Ecological Profile supplies the following narrative locality context: Bacoor City and Dasmariñas City; described as meeting Don Cella River at Molino Dam and spilling into Zapote River. Source-named cross-city river lead only; no station or surveyed channel line is supplied. Its general inland-fishery statement is not a species record for this watercourse. Fish taxa, salinity, access, safety, current rules, and public admission remain unresolved."
+    },
+    {
+      "id": "ph-wb-zapote-river",
+      "name": "Zapote River",
+      "aliases": [],
+      "kind": "river",
+      "salinity": {
+        "classification": "unknown",
+        "reviewStatus": "not-assessed",
+        "sourceRefs": []
+      },
+      "administrativeAssociations": [
+        {
+          "regionId": "0400000000",
+          "relationship": "source-described-locality",
+          "sourceRefs": [
+            "bacoor-city-clup-ecological-profile-inland-waters"
+          ],
+          "provinceId": "0402100000",
+          "locality": "Bacoor City boundary and adjoining Las Piñas City; the profile names Bacoor barangays along its course."
+        }
+      ],
+      "sourceRefs": [
+        "bacoor-city-clup-ecological-profile-inland-waters"
+      ],
+      "identityStatus": "source-named-research-lead",
+      "boundaryStatus": "not-delineated",
+      "fishEvidenceStatus": "not-reviewed",
+      "reviewStatus": "source-named-locality-research-lead;fish-geometry-salinity-pending",
+      "publicAdmission": false,
+      "scopeNote": "Bacoor City Ecological Profile supplies the following narrative locality context: Bacoor City boundary and adjoining Las Piñas City; the profile names Bacoor barangays along its course. Cross-boundary lead only; the profile does not delimit the full river course or geometry. Its general inland-fishery statement is not a species record for this watercourse. Fish taxa, salinity, access, safety, current rules, and public admission remain unresolved."
+    },
+    {
+      "id": "ph-wb-ilat-creek",
+      "name": "Ilat Creek",
+      "aliases": [],
+      "kind": "stream",
+      "salinity": {
+        "classification": "unknown",
+        "reviewStatus": "not-assessed",
+        "sourceRefs": []
+      },
+      "administrativeAssociations": [
+        {
+          "regionId": "0400000000",
+          "relationship": "source-described-locality",
+          "sourceRefs": [
+            "bacoor-city-clup-ecological-profile-inland-waters"
+          ],
+          "provinceId": "0402100000",
+          "locality": "The profile describes it as a tributary to Zapote River that comes from the Dasmariñas City area."
+        }
+      ],
+      "sourceRefs": [
+        "bacoor-city-clup-ecological-profile-inland-waters"
+      ],
+      "identityStatus": "source-named-research-lead",
+      "boundaryStatus": "not-delineated",
+      "fishEvidenceStatus": "not-reviewed",
+      "reviewStatus": "source-named-locality-research-lead;fish-geometry-salinity-pending",
+      "publicAdmission": false,
+      "scopeNote": "Bacoor City Ecological Profile supplies the following narrative locality context: The profile describes it as a tributary to Zapote River that comes from the Dasmariñas City area. Source-named creek lead only; no station or surveyed channel line is supplied. Its general inland-fishery statement is not a species record for this watercourse. Fish taxa, salinity, access, safety, current rules, and public admission remain unresolved."
+    },
+    {
+      "id": "ph-wb-daang-bukid-creek",
+      "name": "Daang Bukid Creek",
+      "aliases": [],
+      "kind": "stream",
+      "salinity": {
+        "classification": "unknown",
+        "reviewStatus": "not-assessed",
+        "sourceRefs": []
+      },
+      "administrativeAssociations": [
+        {
+          "regionId": "0400000000",
+          "relationship": "source-described-locality",
+          "sourceRefs": [
+            "bacoor-city-clup-ecological-profile-inland-waters"
+          ],
+          "provinceId": "0402100000",
+          "locality": "Bacoor City; the profile describes it as a Bacoor River tributary crossing several coastal barangays."
+        }
+      ],
+      "sourceRefs": [
+        "bacoor-city-clup-ecological-profile-inland-waters"
+      ],
+      "identityStatus": "source-named-research-lead",
+      "boundaryStatus": "not-delineated",
+      "fishEvidenceStatus": "not-reviewed",
+      "reviewStatus": "source-named-locality-research-lead;fish-geometry-salinity-pending",
+      "publicAdmission": false,
+      "scopeNote": "Bacoor City Ecological Profile supplies the following narrative locality context: Bacoor City; the profile describes it as a Bacoor River tributary crossing several coastal barangays. Source-named creek lead only; no station or surveyed channel line is supplied. Its general inland-fishery statement is not a species record for this watercourse. Fish taxa, salinity, access, safety, current rules, and public admission remain unresolved."
     },
     {
       "id": "ph-wb-san-juan-river-cavite",
@@ -3161,14 +3322,16 @@
         }
       ],
       "sourceRefs": [
-        "cavite-ecological-profile-2024-fisheries"
+        "aiib-2023-bcib-final-eia",
+        "cavite-ecological-profile-2024-fisheries",
+        "gbif-occurrence-downloads"
       ],
       "identityStatus": "source-named-research-lead;channel-name-variant-crosswalk-pending",
       "boundaryStatus": "not-delineated",
-      "fishEvidenceStatus": "not-reviewed",
-      "reviewStatus": "official-river-profile-reviewed;fish-evidence-geometry-salinity-pending",
+      "fishEvidenceStatus": "EIA-reported-subsistence-fishery-O.niloticus-and-M.cephalus;date-station-method-unresolved;GBIF-text-screen-zero;no-absence-inferred",
+      "reviewStatus": "official-EIA-fishery-lead-reviewed;site-date-method-geometry-and-salinity-pending",
       "publicAdmission": false,
-      "scopeNote": "Cavite Ecological Profile 2024 reports a 30.5 km Labac River with narrative routes involving tributaries/localities in Indang, Mendez and Naic and drainage to Manila Bay. Another table uses “Labac/Labac-Balsahan River”; the slash form is preserved as unresolved name context, not adopted as an alias. Course text is not channel geometry, and no fish evidence, salinity, access, safety or current rule is established."
+      "scopeNote": "Cavite Ecological Profile 2024 reports a 30.5 km Labac River with narrative routes involving tributaries/localities in Indang, Mendez and Naic and drainage to Manila Bay. Another table uses “Labac/Labac-Balsahan River”; the slash form is preserved as unresolved name context, not adopted as an alias. Course text is not channel geometry, and no fish evidence, salinity, access, safety or current rule is established. The official 2023 AIIB final EIA indexed excerpt reports subsistence fishing of Oreochromis niloticus and Mugil cephalus under the Labac River heading, without a catch date, station, reach, method or voucher. This is a research lead only; 18 bounded GBIF text searches returned zero, which is not fish-absence evidence. No species assertion, salinity class, geometry or public projection was added."
     }
   ],
   "coverageRules": {

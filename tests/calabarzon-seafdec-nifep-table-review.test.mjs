@@ -79,7 +79,7 @@ test("SEAFDEC stocking and restoration table remains distinct from fish occurren
   assert.deepEqual(review.programContext.tableRows.at(-1).scopeLeadIds, []);
   assert.match(review.programContext.tableRows.at(-1).crosswalk, /identity remains unresolved/i);
 
-  assert.equal(scope.counts.waterbodyResearchLeads, 89);
+  assert.equal(scope.counts.waterbodyResearchLeads, 94);
   assert.equal(report.coverageSummary.namedWaterbodyLeads, 83);
   assert.equal(report.coverageSummary.leadsStillResearchQueued, 19);
   assert.equal(report.coverageSummary.unknownSalinityLeads, 78);

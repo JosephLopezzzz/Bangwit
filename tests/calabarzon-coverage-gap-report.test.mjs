@@ -25,7 +25,7 @@ const [report, scope, sweep, sourceRegistry, scopeBytes, sourceBytes, museumByte
 test("CALABARZON checkpoint reports its gaps without claiming a complete region", () => {
   assert.equal(report.status, "checkpoint-published-incomplete-baseline");
   assert.equal(report.regionId, scope.regionId);
-  assert.equal(report.coverageSummary.namedWaterbodyLeads, 89);
+  assert.equal(report.coverageSummary.namedWaterbodyLeads, 94);
   assert.equal(report.reviewedOn, "2026-10-26");
   assert.equal(report.coverageSummary.registeredSources, sourceRegistry.sourceCount);
   assert.equal(sourceRegistry.sourceCount, sourceRegistry.sources.length);
@@ -39,12 +39,12 @@ test("CALABARZON checkpoint reports its gaps without claiming a complete region"
     estuary: 2,
     lake: 18,
     reservoir: 5,
-    river: 46,
-    stream: 3,
+    river: 49,
+    stream: 5,
     wetland: 8,
   });
   assert.equal(report.coverageSummary.leadsStillResearchQueued, 12);
-  assert.equal(report.coverageSummary.unknownSalinityLeads, 84);
+  assert.equal(report.coverageSummary.unknownSalinityLeads, 89);
   assert.equal(report.coverageSummary.researchProjectionAssertionsImported, 9);
   const sourceRefs = scope.waterbodies.flatMap((waterbody) => waterbody.sourceRefs);
   assert.equal(report.coverageSummary.sourceAssignments, sourceRefs.length);
