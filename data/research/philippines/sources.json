@@ -3,7 +3,7 @@
   "checkedOn": "2026-10-26",
   "status": "research-only-source-registry",
   "scope": "National acquisition references, freshwater spatial-source leads, and CALABARZON/Central Luzon identity/source leads. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 184,
+  "sourceCount": 186,
   "sources": [
     {
       "id": "gbif-col-xr-taxonomy-matching",
@@ -5430,6 +5430,70 @@
         "The contact address was visible in an indexed excerpt of the official DLSU Libraries FAQ; direct page access returned HTTP 429.",
         "The FAQ excerpt discusses library help/contact, not specifically external access to the 1984 print thesis.",
         "No library request, email, login or copy order was submitted."
+      ]
+    },
+    {
+      "id": "martinez-2018-ylang-ylang-river-health-index",
+      "title": "Developing a River Health Index: A Study in Ylang-Yang River, Cavite, Philippines",
+      "provider": "Kristine Ann S. Martinez; published by Knowledge E",
+      "url": "https://knepublishing.com/index.php/Kne-Social/article/download/2419/5315",
+      "additionalUrls": [
+        "https://doi.org/10.18502/kss.v3i6.2419"
+      ],
+      "role": "Primary historical source for fish sampling and source-reported taxon labels at three Ylang-Yang River stations; it does not establish current presence, complete river coverage or a mapped channel boundary.",
+      "checkedOn": "2026-10-26",
+      "sourceYear": 2018,
+      "access": {
+        "status": "publisher-PDF-directly-reviewed-and-downloaded;Table-6-and-method-pages-reviewed",
+        "reviewFiles": [
+          "calabarzon-ylang-ylang-river-health-review-20261026.json"
+        ],
+        "rawPath": "raw/calabarzon-ylang-ylang-rhi-2018/martinez-2018-ylang-ylang-river-health-index.pdf"
+      },
+      "reuse": {
+        "metadata": "The PDF states a Creative Commons Attribution License allowing unrestricted redistribution with credit to the original author and source; the license version is not specified in the reviewed PDF text.",
+        "raw": "Publisher PDF downloaded and reviewed; SHA-256 is recorded in the research review artifact.",
+        "content": "Research-only source attribution and faithful taxon-label transcription are supported by the stated license. Public app assertions remain separately unapproved by this review."
+      },
+      "publicationApproval": false,
+      "researchStatus": "historical-river-survey-reviewed;field-date-and-voucher-details-unreported;no-public-assertion",
+      "license": "Creative Commons Attribution License; version not specified in the reviewed PDF text",
+      "caveats": [
+        "The paper reports three station-level taxon lists but no fish collection date, per-taxon counts, station coordinates or voucher/catalog numbers in the reviewed text.",
+        "The publication year is not the observation date; current fish presence is not inferred.",
+        "The study describes a broader Imus-Ylang-Yang-Rio Grande WQMA system, which does not prove that Ylang-Yang River and Rio Grande River are the same waterbody.",
+        "No full-channel geometry, salinity, fishing access, catchability, diet, fishing rules or safety status is established by this source review."
+      ]
+    },
+    {
+      "id": "gbif-col-xr-ylang-yang-study-taxonomy-crosswalk-20261026",
+      "title": "Catalogue of Life eXtended Release name matching for the Ylang-Yang River study",
+      "provider": "GBIF Secretariat / Catalogue of Life",
+      "url": "https://api.gbif.org/v2/species/match",
+      "additionalUrls": [
+        "https://techdocs.gbif.org/en/openapi/v1/species"
+      ],
+      "role": "Reproducible automated nomenclatural crosswalk for the taxon labels printed in the Martinez 2018 Ylang-Yang River table; it does not independently identify study specimens.",
+      "checkedOn": "2026-10-26",
+      "access": {
+        "status": "seven-COL26.6-XR-name-matches-saved;matching-index-metadata-identical-before-and-after",
+        "reviewFiles": [
+          "calabarzon-ylang-ylang-river-health-review-20261026.json"
+        ],
+        "rawPath": "raw/calabarzon-ylang-ylang-rhi-2018-col-xr"
+      },
+      "reuse": {
+        "metadata": "GBIF species-matching API output and checklist identity are documented by the GBIF API reference.",
+        "raw": "All seven JSON responses and before/after checklist metadata are retained under ignored raw research storage and individually SHA-256 hashed in the review artifact.",
+        "content": "Automated output is used only to propose name, rank and synonym crosswalks. It is not a specimen re-identification or public occurrence record."
+      },
+      "publicationApproval": false,
+      "researchStatus": "pinned-COL26.6-XR-crosswalk;automated-name-proposals-only",
+      "license": "API metadata; taxonomic review required before applying a match to a specimen or source assertion",
+      "caveats": [
+        "The seven queries used checklistKey 7ddf754f-d193-4cc9-b351-99906754a03b and the COL26.6 XR index, build 84c77c88ffb12cad1691fc477f1b8856101ce1c4.",
+        "Three names returned exact accepted species usages, one exact synonym usage proposed Oreochromis niloticus, two source spellings returned variants, and one source label matched only at genus rank.",
+        "Automated matches do not validate field identifications or support upgrading the genus-only row to a species."
       ]
     }
   ],
