@@ -64,7 +64,7 @@ test("the source and checkpoint pin the reviewed profile and preserve incomplete
   assert.equal(report.inputHashes.sourcesSha256, sha256(sourceBytes));
   assert.equal(report.coverageSummary.namedWaterbodyLeads, 95);
   assert.equal(report.coverageSummary.byWaterbodyKind.river, 49);
-  assert.equal(report.coverageSummary.sourceAssignments, 244);
+  assert.equal(report.coverageSummary.sourceAssignments, 245);
   assert.equal(report.coverageSummary.unknownSalinityLeads, 90);
   assert.equal(report.coverageSummary.boundaryGeometryValidated, 0);
   assert.equal(report.coverageSummary.publicAdmission, false);
