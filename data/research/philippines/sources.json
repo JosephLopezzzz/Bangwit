@@ -3,7 +3,7 @@
   "checkedOn": "2026-10-26",
   "status": "research-only-source-registry",
   "scope": "National acquisition references, freshwater spatial-source leads, and CALABARZON/Central Luzon identity/source leads. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 180,
+  "sourceCount": 181,
   "sources": [
     {
       "id": "gbif-col-xr-taxonomy-matching",
@@ -5296,6 +5296,44 @@
         "The API metadata reports 17 ADM1 units, sourceDataUpdateDate January 2023, and buildDate July 2023.",
         "The reported boundary year is 2020 and the underlying licenseSource is the HDX record.",
         "The geoBoundaries release documentation and the record's original-source license describe different license layers; resolve terms before use."
+      ]
+    },
+    {
+      "id": "fao-aquastat-rivers-global-2026-wfs",
+      "title": "Rivers (Global - edition 2026), FAO AQUASTAT WFS layer",
+      "provider": "Food and Agriculture Organization of the United Nations, AQUASTAT",
+      "url": "https://data.fao.org/catalog/dataset/e22667af-3977-4e9f-b58b-67fb91b0fa87",
+      "additionalUrls": [
+        "https://data.apps.fao.org/map/gsrv/gsrv1/aquamaps/wms",
+        "https://www.hydrosheds.org/products/hydrorivers",
+        "https://data.hydrosheds.org/file/technical-documentation/HydroSHEDS_TechDoc_v1_4.pdf"
+      ],
+      "role": "Nationwide candidate for modeled river-reach discovery and regional query windows. It is not a fish-occurrence layer, complete stream map, surveyed channel trace or fishing-access source.",
+      "checkedOn": "2026-10-26",
+      "sourceYear": 2026,
+      "access": {
+        "status": "FAO-metadata-and-WFS-GetCapabilities-verified;bbox-GeoJSON-probe-succeeded;no-regional-file-retained",
+        "reviewFiles": [
+          "national-philippines-river-wfs-source-review-20261026.json"
+        ],
+        "rawPath": null,
+        "serviceEndpoint": "https://data.apps.fao.org/map/gsrv/gsrv1/aquamaps/wms",
+        "queryLayer": "aquamaps:river_network"
+      },
+      "reuse": {
+        "metadata": "The FAO catalog identifies the 2026 dataset as CC BY 4.0. HydroRIVERS source data are also described by HydroSHEDS as governed by its own version 1 license agreement; check both sets of terms before redistributing raw or derived geometry.",
+        "raw": "Only WFS capabilities and a three-feature GeoJSON sample were inspected in memory; no geometry file or query result was retained.",
+        "content": "Use for internal waterway discovery with source attribution only. Do not publish a standalone or derived river layer until the interaction between the FAO catalog terms and HydroSHEDS core terms is resolved."
+      },
+      "publicationApproval": false,
+      "researchStatus": "national-river-wfs-query-verified;locality-extraction-pending;zero-species-assertions",
+      "license": "CC BY 4.0 per FAO catalog; HydroSHEDS v1 terms also require review",
+      "caveats": [
+        "The published network is derived from HydroRIVERS/HydroSHEDS and its source grid is 15 arc-seconds; local positional accuracy and completeness are not field-verified.",
+        "The catalog describes a river filter of catchment area at least 10 km² or average flow at least 0.1 m³/s, so small streams may be absent.",
+        "The WFS probe used a rectangular bbox around Cavite rather than a province polygon; its 1,420 matching features are not a Cavite feature count.",
+        "The probe demonstrated service access and MultiLineString output, not a stable service-level agreement, local river-name completeness, or correct feature classifications.",
+        "Perennial/intermittent class attribute semantics require review of the linked FAO technical report before display."
       ]
     }
   ],

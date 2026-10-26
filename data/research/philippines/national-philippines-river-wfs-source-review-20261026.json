@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-26",
+  "scope": "Verify a low-bandwidth, spatially queryable national river-network source for freshwater scope discovery; not a species-occurrence or regional inventory review.",
+  "status": "FAO-river-WFS-query-verified;locality-extraction-pending;zero-species-assertions",
+  "sourceIds": [
+    "fao-aquastat-rivers-global-2026-wfs"
+  ],
+  "dataset": {
+    "title": "Rivers (Global - edition 2026)",
+    "publisher": "FAO AQUASTAT",
+    "catalogUrl": "https://data.fao.org/catalog/dataset/e22667af-3977-4e9f-b58b-67fb91b0fa87",
+    "publicationDate": "2026-06-15",
+    "license": "CC BY 4.0 per FAO catalog; the source HydroRIVERS dataset refers to the separate HydroSHEDS v1 license agreement.",
+    "lineage": "The FAO 2026 rivers layer is derived from HydroRIVERS/HydroSHEDS and adds a perennial/intermittent flow-regime classification described as derived from HydroATLAS indicators.",
+    "sourceResolution": "HydroRIVERS source layers are based on a 15 arc-second DEM.",
+    "sourceNetworkThreshold": "Catchment area at least 10 km2 or average river flow at least 0.1 m3/s, or both.",
+    "notableAttributes": [
+      "HYRIV_ID",
+      "NEXT_DOWN",
+      "ORD_FLOW",
+      "LENGTH_KM",
+      "DIST_UP_KM",
+      "DIST_DN_KM",
+      "UPLAND_SKM",
+      "CATCH_SKM",
+      "DIS_AV_CMS"
+    ],
+    "classificationAttributesObserved": [
+      "CLS_A",
+      "CLS_B",
+      "CLS_C",
+      "CLS_D",
+      "CLS_E",
+      "SMOOTH_50",
+      "SMOOTH_100",
+      "SMOOTH_200"
+    ]
+  },
+  "serviceProbe": {
+    "endpoint": "https://data.apps.fao.org/map/gsrv/gsrv1/aquamaps/wms",
+    "service": "WFS",
+    "version": "2.0.0",
+    "layer": "aquamaps:river_network",
+    "anonymousRequestSucceeded": true,
+    "requestType": "GetFeature",
+    "format": "application/json",
+    "bbox": "120.4,14,121.4,15,CRS:84",
+    "recordsMatchedInBbox": 1420,
+    "recordsReturnedForSchemaSample": 3,
+    "geometryTypeObserved": "MultiLineString",
+    "observedProperties": [
+      "hyriv_id",
+      "next_down",
+      "main_riv",
+      "length_km",
+      "dist_dn_km",
+      "dist_up_km",
+      "catch_skm",
+      "upland_skm",
+      "dis_av_cms",
+      "ord_flow",
+      "hybas_l12",
+      "dis_m3_pmn",
+      "ari_ix_uav",
+      "cls_a",
+      "cls_b",
+      "cls_c",
+      "cls_d",
+      "cls_e",
+      "smooth_50",
+      "smooth_100",
+      "smooth_200"
+    ],
+    "probeFileRetained": false
+  },
+  "decision": {
+    "use": "Use the WFS for targeted research queries by a known region or waterbody envelope, then validate named rivers and geometry against current local sources before any regional assignment.",
+    "speciesOccurrenceRows": 0,
+    "regionalFishBaselineContribution": 0,
+    "caviteFeatureCount": null,
+    "regionSubsetExtracted": false,
+    "publicGeometryAdded": false,
+    "publicationApproval": false,
+    "limitations": [
+      "The bbox sample is not a Cavite boundary or Cavite-only count; the rectangle spans neighboring land and water.",
+      "The network represents modeled reaches and can omit smaller streams below its stated catchment/flow threshold.",
+      "A 15-arc-second source resolution is useful for screening major waterways but does not establish local channel centerlines or positional accuracy.",
+      "The available layer does not establish fish occurrence, present conditions, accessibility, legal catchability, or water safety.",
+      "The FAO catalog's CC BY 4.0 statement and the underlying HydroSHEDS v1 license must both be reviewed before publishing geometry or derived layers.",
+      "The flow-classification field names were observed, but their class meanings have not yet been checked against the technical report."
+    ],
+    "next": [
+      "Review the FAO HydRiver technical report and HydroSHEDS v1 license against the intended use before retaining or publishing any subset.",
+      "Choose a rights-cleared current province/region AOI or use an explicitly labeled bounding-box search with no administrative claims.",
+      "Query a small, bounded study area; save the source response in ignored research storage with retrieval time and a SHA-256 receipt.",
+      "Compare returned reaches and names against official or locally validated waterway references, then document omissions and positional limits.",
+      "Keep species evidence in separate, site-linked source records."
+    ]
+  },
+  "accessReview": {
+    "checkedOn": "2026-10-26",
+    "catalogMetadataRetrieved": true,
+    "getCapabilitiesSucceeded": true,
+    "bboxGetFeatureSucceeded": true,
+    "apiKeyUsed": false,
+    "geometryResponsePersisted": false,
+    "requestSent": false,
+    "personalDataSubmitted": false
+  }
+}
