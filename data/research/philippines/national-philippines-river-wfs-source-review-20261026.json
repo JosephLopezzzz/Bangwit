@@ -37,6 +37,15 @@
       "SMOOTH_200"
     ]
   },
+  "rightsAssessment": {
+    "faoCatalogLicense": "CC BY 4.0",
+    "hydroSHEDSV1TermsReviewed": true,
+    "developmentUse": "HydroSHEDS v1 permits use, reproduction, and display to the extent needed to integrate the material into derivative works.",
+    "endUserDistribution": "HydroSHEDS v1 distribution rights require a written end-user license with protections at least as strong as the HydroSHEDS license; standalone distribution of the licensed material is not allowed.",
+    "attribution": "The license requires the specified WWF copyright and no-warranty statement in prominent documentation or metadata supplied to end users.",
+    "faOAndHydroSHEDSRelationship": "The FAO catalog says CC BY 4.0, while the HydroRIVERS source references HydroSHEDS v1 terms. Whether the FAO WFS redistribution is fully covered by the catalog license for this intended app use has not been confirmed.",
+    "publicationDecision": "No raw or derived river geometry may be distributed to app users until the rights relationship is confirmed and a qualified reviewer approves the required user license and attribution."
+  },
   "serviceProbe": {
     "endpoint": "https://data.apps.fao.org/map/gsrv/gsrv1/aquamaps/wms",
     "service": "WFS",
@@ -88,10 +97,13 @@
       "A 15-arc-second source resolution is useful for screening major waterways but does not establish local channel centerlines or positional accuracy.",
       "The available layer does not establish fish occurrence, present conditions, accessibility, legal catchability, or water safety.",
       "The FAO catalog's CC BY 4.0 statement and the underlying HydroSHEDS v1 license must both be reviewed before publishing geometry or derived layers.",
+      "HydroSHEDS v1 requires integrated derivative use, restrictive written end-user licensing, and a specified attribution/no-warranty notice; Bangwit's current draft terms have not been legally approved against this requirement.",
       "The flow-classification field names were observed, but their class meanings have not yet been checked against the technical report."
     ],
     "next": [
-      "Review the FAO HydRiver technical report and HydroSHEDS v1 license against the intended use before retaining or publishing any subset.",
+      "Ask FAO/WWF to clarify whether the FAO WFS layer may be used in Bangwit under its CC BY 4.0 statement despite the HydroSHEDS v1 end-user-license requirements.",
+      "Have a qualified reviewer compare any proposed Bangwit user terms and attribution against HydroSHEDS v1 before public geometry distribution.",
+      "Review the FAO HydRiver technical report before showing perennial/intermittent classifications.",
       "Choose a rights-cleared current province/region AOI or use an explicitly labeled bounding-box search with no administrative claims.",
       "Query a small, bounded study area; save the source response in ignored research storage with retrieval time and a SHA-256 receipt.",
       "Compare returned reaches and names against official or locally validated waterway references, then document omissions and positional limits.",

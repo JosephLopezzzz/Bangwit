@@ -5321,9 +5321,9 @@
         "queryLayer": "aquamaps:river_network"
       },
       "reuse": {
-        "metadata": "The FAO catalog identifies the 2026 dataset as CC BY 4.0. HydroRIVERS source data are also described by HydroSHEDS as governed by its own version 1 license agreement; check both sets of terms before redistributing raw or derived geometry.",
+        "metadata": "The FAO catalog identifies the 2026 dataset as CC BY 4.0. HydroSHEDS v1 terms allow integration into derivative works, but distribution to end users requires a written license at least as protective as the HydroSHEDS license, forbids standalone redistribution, and requires specified attribution. The relationship between those terms and the FAO WFS release still needs confirmation.",
         "raw": "Only WFS capabilities and a three-feature GeoJSON sample were inspected in memory; no geometry file or query result was retained.",
-        "content": "Use for internal waterway discovery with source attribution only. Do not publish a standalone or derived river layer until the interaction between the FAO catalog terms and HydroSHEDS core terms is resolved."
+        "content": "Use for internal waterway discovery only. Do not distribute raw or derived geometry to app users until the FAO/HydroSHEDS terms are reconciled and a qualified reviewer approves the required end-user license and attribution wording."
       },
       "publicationApproval": false,
       "researchStatus": "national-river-wfs-query-verified;locality-extraction-pending;zero-species-assertions",
@@ -5333,7 +5333,8 @@
         "The catalog describes a river filter of catchment area at least 10 km² or average flow at least 0.1 m³/s, so small streams may be absent.",
         "The WFS probe used a rectangular bbox around Cavite rather than a province polygon; its 1,420 matching features are not a Cavite feature count.",
         "The probe demonstrated service access and MultiLineString output, not a stable service-level agreement, local river-name completeness, or correct feature classifications.",
-        "Perennial/intermittent class attribute semantics require review of the linked FAO technical report before display."
+        "Perennial/intermittent class attribute semantics require review of the linked FAO technical report before display.",
+        "The HydroSHEDS v1 license requires integrated derivative use, end-user license restrictions, and prominent attribution; public geometry is not approved by this source review."
       ]
     }
   ],
