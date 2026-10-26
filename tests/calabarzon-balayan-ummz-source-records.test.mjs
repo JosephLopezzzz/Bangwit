@@ -84,7 +84,7 @@ test("UMMZ taxonomy and GBIF quality flags stay attached to an undated research 
 });
 
 test("UMMZ source and regional gap hashes are current while the five USNM rows stay held", () => {
-  assert.equal(registry.sourceCount, 173);
+  assert.equal(registry.sourceCount, 174);
   assert.equal(registry.sources.length, 172);
   const institution = registry.sources.find((source) => source.id === "ummz-balayan-primary-archive-check");
   const taxonomy = registry.sources.find((source) => source.id === "worms-balayan-sillago-sihama-taxonomy-crosscheck");
@@ -93,7 +93,7 @@ test("UMMZ source and regional gap hashes are current while the five USNM rows s
   assert.equal(institution.license, "CC BY 4.0");
   assert.equal(taxonomy.publicationApproval, false);
   assert.equal(taxonomy.license, null);
-  assert.equal(gap.coverageSummary.registeredSources, 173);
+  assert.equal(gap.coverageSummary.registeredSources, 174);
   assert.equal(gap.inputHashes.sourcesSha256, digest(bytes[3]));
   assert.equal(gap.inputHashes.balayanUmmzSourceSha256, digest(bytes[0]));
   assert.equal(gap.inputHashes.balayanUmmzRowDecisionsSha256, digest(bytes[1]));

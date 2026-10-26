@@ -125,7 +125,7 @@ test("taxonomy source and gap snapshot pin the row-level review without claiming
   assert.ok(source);
   assert.ok(source.access.reviewFiles.includes("calabarzon-balayan-fieldmuseum-row-decisions-20261025.json"));
   assert.equal(source.publicationApproval, false);
-  assert.equal(registry.sourceCount, 173);
+  assert.equal(registry.sourceCount, 174);
   assert.equal(registry.sourceCount, registry.sources.length);
   assert.equal(gap.coverageSummary.registeredSources, registry.sourceCount);
   assert.equal(gap.inputHashes.sourcesSha256, createHash("sha256").update(sourceBytes).digest("hex"));

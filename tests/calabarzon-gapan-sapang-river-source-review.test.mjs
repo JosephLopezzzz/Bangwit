@@ -65,9 +65,9 @@ test("CALABARZON checkpoint and source hashes match the reviewed scope", () => {
   assert.ok(report.waterbodySnapshot.some((row) => row.id === review.scopeLeadId));
   assert.equal(report.coverageSummary.namedWaterbodyLeads, 95);
   assert.equal(report.coverageSummary.byWaterbodyKind.river, 50);
-  assert.equal(report.coverageSummary.sourceAssignments, 243);
-  assert.equal(report.coverageSummary.distinctSourceReferencesAssigned, 68);
-  assert.equal(report.coverageSummary.registeredSources, 173);
+  assert.equal(report.coverageSummary.sourceAssignments, 244);
+  assert.equal(report.coverageSummary.distinctSourceReferencesAssigned, 69);
+  assert.equal(report.coverageSummary.registeredSources, 174);
   assert.equal(report.coverageSummary.leadsStillResearchQueued, 12);
   assert.equal(report.coverageSummary.unknownSalinityLeads, 90);
   assert.equal(report.coverageSummary.publicAdmission, false);
