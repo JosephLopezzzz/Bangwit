@@ -3,7 +3,7 @@
   "checkedOn": "2026-10-30",
   "status": "research-only-source-registry",
   "scope": "National acquisition references, freshwater spatial-source leads, and CALABARZON/Central Luzon identity/source leads. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 200,
+  "sourceCount": 205,
   "sources": [
     {
       "id": "gbif-col-xr-taxonomy-matching",
@@ -5986,10 +5986,11 @@
       "role": "CC BY 4.0 published checklist of described Philippine fish and type material. Use article-body locality statements for attributed historical-literature assertions only; not a current fish survey, complete local inventory, or catchability source.",
       "checkedOn": "2026-10-30",
       "access": {
-        "status": "Open-access article body and publisher XML directly reviewed; expanded the initial Rogo Point crosswalk into a 16-treatment Ragay Gulf/Ragay Bay type-material batch (including entry 766); supplementary species-list file not used.",
+        "status": "Open-access article body and publisher XML directly reviewed; 16-treatment Ragay type-material batch and a separate partial named-locality administrative crosswalk reviewed; supplementary ODbL file not used.",
         "reviewFiles": [
           "ragay-gulf-zookeys-2025-type-locality-review-20261030.json",
-          "ragay-gulf-zookeys-2025-type-locality-batch-review-20261030.json"
+          "ragay-gulf-zookeys-2025-type-locality-batch-review-20261030.json",
+          "ragay-gulf-locality-administrative-crosswalk-20261030.json"
         ],
         "localRawSnapshot": "raw/ragay-gulf-zookeys-2025/fulltext.xml"
       },
@@ -6000,15 +6001,166 @@
         "content": "The initial and batch locality reviews derive facts from the article body only and cite the article and DOI. Its separate supplementary species-list file carries ODbL terms and was not used. Literature-derived historical type material is kept distinct from conflicting GBIF/CAS occurrence data; no blanket permission for other CAS rows is inferred."
       },
       "publicationApproval": false,
-      "researchStatus": "16-treatment-attributed-historical-type-locality-review;15-ColXR-accepted-or-synonym-matches;one-provisional-taxonomy-conflict;uncatalogued-lot-identity-held;Ragay-Gulf-region-side-unresolved;no-public-rows",
+      "researchStatus": "16-treatment-attributed-historical-type-locality-review;partial-named-locality-administrative-crosswalk;most-gulf-side-geography-unresolved;one-provisional-taxonomy-conflict;one-uncatalogued-lot-held;no-public-rows",
       "sourceYear": 2025,
       "license": "CC-BY-4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
       "caveats": [
         "The article is a type-material checklist, not an ecological survey or complete waterbody fish list.",
-        "A gulf-only locality does not resolve a point to Quezon or CALABARZON; no boundary or province is inferred.",
+        "Most gulf-wide/point localities remain unresolved. A separate review crosswalks only selected named localities to administrative context; it does not establish a gulf boundary or specimen coordinates.",
         "One source-name mapping conflicts with the selected CoL XR status and one paratype group is uncatalogued with specimen correspondence unresolved; see the batch review.",
         "No present-day occurrence, abundance, fishing access, legality, safety, diet, or bait suitability follows from a type-locality entry."
+      ]
+    },
+    {
+      "id": "ebert-wilms-zootaxa-2013-pristiophorus-lanae-locality-anchor",
+      "title": "Pristiophorus lanae sp. nov., a new sawshark species from the Western North Pacific, with comments on the genus Pristiophorus Müller & Henle, 1837 (Chondrichthyes: Pristiophoridae)",
+      "provider": "Zootaxa / Magnolia Press",
+      "url": "https://www.biotaxa.org/Zootaxa/article/view/zootaxa.3752.1.7",
+      "additionalUrls": [
+        "https://www.biotaxa.org/Zootaxa/article/download/zootaxa.3752.1.7/51524",
+        "https://doi.org/10.11646/zootaxa.3752.1.7"
+      ],
+      "role": "CC BY 3.0 article used only as an independent named-locality anchor for Siburio Point and a different specimen (CAS 34193). Do not transfer its coordinates, depth, or specimen identity to other CAS lots; not a regional fish checklist or survey.",
+      "checkedOn": "2026-10-30",
+      "access": {
+        "status": "Publisher article/PDF and bibliographic locality text reviewed; no local PDF copied into the repository.",
+        "reviewFiles": [
+          "ragay-gulf-locality-administrative-crosswalk-20261030.json"
+        ],
+        "localRawSnapshot": null
+      },
+      "reuse": {
+        "license": "CC BY 3.0",
+        "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+        "metadata": "Publisher PDF states CC BY 3.0.",
+        "content": "Only the attributed published locality passage for CAS 34193 is used as a locality-name/province anchor. Its coordinate is not applied to CAS 34197 or CAS 47781."
+      },
+      "publicationApproval": false,
+      "researchStatus": "published-locality-anchor-only;distinct-CAS-specimen;no-coordinate-transfer;no-public-row",
+      "sourceYear": 2013,
+      "license": "CC-BY-3.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/",
+      "caveats": [
+        "CAS 34193 is a separate non-type specimen, not a catalog match to the target 2025 checklist lots.",
+        "The paper is used to anchor a named place and province only; no current-presence or abundance inference follows."
+      ]
+    },
+    {
+      "id": "pasacao-lgu-historical-background-2026",
+      "title": "Historical Background of Pasacao",
+      "provider": "Municipal Government of Pasacao, Camarines Sur",
+      "url": "https://pasacao.gov.ph/index.php/historical-background-of-pasacao/",
+      "additionalUrls": [],
+      "role": "Official municipality page used for the named Pasacao/Camarines Sur administrative context and its coast-to-Ragay-Gulf relationship; not a water boundary or fish survey.",
+      "checkedOn": "2026-10-30",
+      "access": {
+        "status": "Official page reviewed; no geometry or dataset downloaded.",
+        "reviewFiles": [
+          "ragay-gulf-locality-administrative-crosswalk-20261030.json"
+        ]
+      },
+      "reuse": {
+        "metadata": "No item-specific content license was relied on for this review.",
+        "content": "Only limited administrative/geographic facts are paraphrased with attribution; no image, page reproduction, or geometry is reused."
+      },
+      "publicationApproval": false,
+      "researchStatus": "official-administrative-place-context-only;no-geometry;no-public-row",
+      "sourceYear": 2026,
+      "license": null,
+      "licenseUrl": null,
+      "caveats": [
+        "A municipality/coast reference does not establish a specimen point or maritime boundary."
+      ]
+    },
+    {
+      "id": "quezon-provincial-government-municipalities-2026",
+      "title": "Cities and Municipalities: Municipality of San Andres",
+      "provider": "Provincial Government of Quezon",
+      "url": "https://quezon.gov.ph/citiesmunicipalities/",
+      "additionalUrls": [],
+      "role": "Official Quezon provincial page used to connect the named Alibijaban Island to the San Andres municipality context; not an offshore location, marine boundary, or fish survey.",
+      "checkedOn": "2026-10-30",
+      "access": {
+        "status": "Official municipality page reviewed; no geometry or dataset downloaded.",
+        "reviewFiles": [
+          "ragay-gulf-locality-administrative-crosswalk-20261030.json"
+        ]
+      },
+      "reuse": {
+        "metadata": "No item-specific content license was relied on for this review.",
+        "content": "Only the named-island/municipality association is paraphrased with attribution; no image, page reproduction, or geometry is reused."
+      },
+      "publicationApproval": false,
+      "researchStatus": "official-named-island-municipality-context-only;alias-and-marine-point-unresolved;no-public-row",
+      "sourceYear": 2026,
+      "license": null,
+      "licenseUrl": null,
+      "caveats": [
+        "The page does not provide specimen coordinates or municipal-water boundaries.",
+        "The article spelling Alinijaban was not equated to Alibijaban."
+      ]
+    },
+    {
+      "id": "psa-psgc-region-iv-a-2026-current-list",
+      "title": "Region IV-A (CALABARZON), Philippine Standard Geographic Code",
+      "provider": "Philippine Statistics Authority",
+      "url": "https://psa.gov.ph/classification/psgc/provinces/0400000000",
+      "additionalUrls": [
+        "https://psa.gov.ph/classification/psgc/regions"
+      ],
+      "role": "Official current Region IV-A name/code and province list; used to place Quezon in CALABARZON. This page supplies administrative text, not boundary geometry.",
+      "checkedOn": "2026-10-30",
+      "sourceYear": 2026,
+      "access": {
+        "status": "Official current PSGC Region IV-A page reviewed; lists Quezon; no geometry downloaded.",
+        "reviewFiles": [
+          "ragay-gulf-locality-administrative-crosswalk-20261030.json"
+        ],
+        "rawPath": null
+      },
+      "reuse": {
+        "metadata": "PSA page states government website data/content are CC BY 4.0 unless otherwise stated.",
+        "raw": "No data download or API request was needed.",
+        "content": "Use only attributed administrative names and codes; no boundary geometry is present or inferred."
+      },
+      "publicationApproval": false,
+      "researchStatus": "official-region-and-province-list;codes-and-names-only;no-geometry",
+      "license": "CC BY 4.0 unless otherwise stated",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "caveats": [
+        "Region membership does not assign offshore specimens to a province or municipal-water boundary."
+      ]
+    },
+    {
+      "id": "psa-psgc-region-v-2026-current-list",
+      "title": "Region V (Bicol Region), Philippine Standard Geographic Code",
+      "provider": "Philippine Statistics Authority",
+      "url": "https://psa.gov.ph/classification/psgc/provinces/0500000000",
+      "additionalUrls": [
+        "https://psa.gov.ph/classification/psgc/regions"
+      ],
+      "role": "Official current Region V name/code and province list; used to place Camarines Sur in the Bicol Region. This page supplies administrative text, not boundary geometry.",
+      "checkedOn": "2026-10-30",
+      "sourceYear": 2026,
+      "access": {
+        "status": "Official current PSGC Region V page reviewed; lists Camarines Sur; no geometry downloaded.",
+        "reviewFiles": [
+          "ragay-gulf-locality-administrative-crosswalk-20261030.json"
+        ],
+        "rawPath": null
+      },
+      "reuse": {
+        "metadata": "PSA page states government website data/content are CC BY 4.0 unless otherwise stated.",
+        "raw": "No data download or API request was needed.",
+        "content": "Use only attributed administrative names and codes; no boundary geometry is present or inferred."
+      },
+      "publicationApproval": false,
+      "researchStatus": "official-region-and-province-list;codes-and-names-only;no-geometry",
+      "license": "CC BY 4.0 unless otherwise stated",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "caveats": [
+        "Region membership does not assign offshore specimens to a province or municipal-water boundary."
       ]
     }
   ],

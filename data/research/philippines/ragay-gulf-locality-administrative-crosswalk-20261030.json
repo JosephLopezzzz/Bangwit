@@ -1,0 +1,221 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-30",
+  "phaseId": "L1",
+  "status": "partial-named-locality-administrative-crosswalk;most-lot-geography-unresolved;research-only",
+  "purpose": "Crosswalk only explicitly named places in the 2025 CC BY checklist to administrative context using official local-government/PSGC pages and an independent published locality anchor. This is not a Ragay Gulf boundary or a complete fish inventory.",
+  "method": {
+    "inputReview": "ragay-gulf-zookeys-2025-type-locality-batch-review-20261030.json",
+    "rules": [
+      "Keep the article locality and historical date/catalog spelling unchanged.",
+      "Use exact municipality or named-feature matches for administrative context; an identical named point in independent literature can anchor the locality name but does not transfer that other specimen’s coordinates.",
+      "Do not turn a broad gulf-only phrase into province/region presence, a georeferenced specimen record, or a legal water boundary.",
+      "Official administrative webpages are cited for names and relationships only; no image, geometry, or bulk page content is reused."
+    ],
+    "geometryCreated": false,
+    "coordinatesAssignedTo2025ChecklistLots": false,
+    "currentPresenceInferred": false
+  },
+  "sourceEvidence": [
+    {
+      "sourceId": "zookeys-2025-philippine-fish-type-localities",
+      "citation": "Balisco, R. A. T. & Liao, T.-Y. (2025). An annotated checklist of fish species described from the Philippines. ZooKeys 1246: 1–287. https://doi.org/10.3897/zookeys.1246.145752",
+      "sourceUrl": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12305098/",
+      "license": "CC BY 4.0; article body only; attributed use. Separate ODbL supplement not used.",
+      "supports": "The historical type-locality text, dates, and catalog groups retained in this review."
+    },
+    {
+      "sourceId": "ebert-wilms-zootaxa-2013-pristiophorus-lanae-locality-anchor",
+      "citation": "Ebert, D. A. & Wilms, H. A. (2013). Pristiophorus lanae sp. nov., a new sawshark species from the Western North Pacific, with comments on the genus Pristiophorus Müller & Henle, 1837 (Chondrichthyes: Pristiophoridae). Zootaxa 3752(1): 86–100. https://doi.org/10.11646/zootaxa.3752.1.7",
+      "sourceUrl": "https://www.biotaxa.org/Zootaxa/article/view/zootaxa.3752.1.7",
+      "fullTextUrl": "https://www.biotaxa.org/Zootaxa/article/download/zootaxa.3752.1.7/51524",
+      "license": "CC BY 3.0; cited locality passage only.",
+      "supports": "Its separate non-type CAS 34193 specimen is listed at Siburio Point, Ragay Gulf, Camarines Sur, ca. 13°33′N, 122°48′E, collected 24 November 1966. It anchors the named point and province context only; its coordinates are not assigned to the checklist’s CAS 34197 or CAS 47781 lots."
+    },
+    {
+      "sourceId": "quezon-provincial-government-municipalities-2026",
+      "citation": "Provincial Government of Quezon. Cities and Municipalities: Municipality of San Andres.",
+      "sourceUrl": "https://quezon.gov.ph/citiesmunicipalities/",
+      "supports": "The official San Andres subsection names Alibijaban Island as a point of interest in the municipality."
+    },
+    {
+      "sourceId": "pasacao-lgu-historical-background-2026",
+      "citation": "Municipal Government of Pasacao, Camarines Sur. Historical Background of Pasacao.",
+      "sourceUrl": "https://pasacao.gov.ph/index.php/historical-background-of-pasacao/",
+      "supports": "The official page identifies Pasacao as part of Camarines Sur and describes its coast as lying along Ragay Gulf."
+    },
+    {
+      "sourceId": "psa-psgc-region-iv-a-2026-current-list",
+      "citation": "Philippine Statistics Authority. Region IV-A (CALABARZON), Philippine Standard Geographic Code.",
+      "sourceUrl": "https://psa.gov.ph/classification/psgc/provinces/0400000000",
+      "supports": "The current PSGC page names Region IV-A (CALABARZON), code 0400000000, and lists Quezon as one of its provinces."
+    },
+    {
+      "sourceId": "psa-psgc-region-v-2026-current-list",
+      "citation": "Philippine Statistics Authority. Region V (Bicol Region), Philippine Standard Geographic Code.",
+      "sourceUrl": "https://psa.gov.ph/classification/psgc/provinces/0500000000",
+      "supports": "The current PSGC page names Region V (Bicol Region), code 0500000000, and lists Camarines Sur as one of its provinces."
+    }
+  ],
+  "localityCrosswalks": [
+    {
+      "localityId": "ragay-pasacao-town-name",
+      "articleEntry": 1155,
+      "sourceName": "Chromis elerae",
+      "articleAcceptedName": "Azurina elerae (Fowler & Bean, 1928)",
+      "catalogGroup": [
+        "USNM 89955",
+        "ANSP 85281 (ex USNM 98717)",
+        "USNM 98720",
+        "USNM 232920 (ex USNM 89955)"
+      ],
+      "articleLocality": "Pasacao, Ragay Gulf, Luzon",
+      "articleDate": "1909-03-09",
+      "administrativeAnchor": {
+        "municipality": "Pasacao",
+        "province": "Camarines Sur",
+        "region": "Region V (Bicol Region)",
+        "regionCode": "0500000000",
+        "status": "supported-at-named-municipality-and-province-context"
+      },
+      "decision": "The exact municipality name and official Pasacao page support a Camarines Sur/Bicol locality-context crosswalk for this historical source locality. No collection coordinate, specimen-specific point, or offshore boundary is supplied.",
+      "heldIssues": [
+        "The checklist has an internal USNM 232920 versus USNM 242920 re-cataloging discrepancy; preserve it.",
+        "The associated lot numbers are not individually confirmed against museum catalogs in this review."
+      ],
+      "coordinates": null,
+      "publicSpeciesRowEligible": false
+    },
+    {
+      "localityId": "ragay-siburio-point-name-anchor",
+      "articleEntries": [
+        757,
+        766
+      ],
+      "sourceNames": [
+        "Callionymus guentheri",
+        "Callionymus octostigmatus"
+      ],
+      "articleCatalogGroups": [
+        "CAS 34197",
+        "CAS 47781"
+      ],
+      "articleLocality": "Siburio Point, Ragay Gulf, Luzon",
+      "independentAnchor": {
+        "catalogNumber": "CAS 34193",
+        "sourceCitation": "Ebert & Wilms 2013, Zootaxa 3752(1): 86–100",
+        "sourceLocality": "Siburio Point, Ragay Gulf, Camarines Sur, Philippines",
+        "sourceDate": "1966-11-24",
+        "sourceCoordinatesAsPrinted": "ca. 13°33′N, 122°48′E",
+        "sourceRole": "independent named-locality/province anchor; separate specimen, not a matching lot"
+      },
+      "administrativeAnchor": {
+        "province": "Camarines Sur",
+        "region": "Region V (Bicol Region)",
+        "regionCode": "0500000000",
+        "status": "supported-at-identical-named-point-context;target-lot-coordinate-withheld"
+      },
+      "decision": "The exact locality string is independently reported with Camarines Sur for a different CAS specimen. Use that only as a named-point administrative anchor for the locality phrase; do not copy CAS 34193 coordinates, depth, or identity to CAS 34197/CAS 47781.",
+      "coordinates": null,
+      "publicSpeciesRowEligible": false
+    },
+    {
+      "localityId": "ragay-alibijaban-island-name-anchor",
+      "articleEntry": 1041,
+      "sourceName": "Heniochus singularius",
+      "catalogGroup": [
+        "USNM 67354"
+      ],
+      "articleLocality": "Alibijaban Island, Ragay Gulf, Luzon",
+      "articleDate": "1909-03-06",
+      "articleDepth": "4–9 m",
+      "administrativeAnchor": {
+        "municipality": "San Andres",
+        "province": "Quezon",
+        "region": "Region IV-A (CALABARZON)",
+        "regionCode": "0400000000",
+        "status": "named-island-to-municipality-context-supported;marine-capture-boundary-unresolved"
+      },
+      "decision": "The Quezon Provincial Government lists Alibijaban Island under its San Andres municipality page. This supports a named-island administrative context only; the checklist provides no specimen coordinates and does not show whether the marine collection point lies within any municipal-water boundary.",
+      "coordinates": null,
+      "publicSpeciesRowEligible": false
+    },
+    {
+      "localityId": "ragay-alibijaban-southeast-offshore",
+      "articleEntry": 757,
+      "sourceName": "Callionymus guentheri",
+      "catalogGroup": [
+        "CAS 34190"
+      ],
+      "articleLocality": "southeast of Alibijaban Island, Ragay Gulf, Luzon",
+      "decision": "Held: the directional phrase has no distance or coordinates; the named-island relationship alone cannot place this offshore lot within Quezon, Region IV-A, or a municipal-water polygon.",
+      "province": null,
+      "region": null,
+      "coordinates": null,
+      "publicSpeciesRowEligible": false
+    },
+    {
+      "localityId": "ragay-alinijaban-spelling-variant",
+      "articleEntry": 1190,
+      "sourceName": "Dampieria melanostigma",
+      "catalogGroup": [
+        "USNM 146422"
+      ],
+      "articleLocality": "Alinijaban Island, Ragay Gulf, Luzon",
+      "decision": "Held: the article spelling differs from the official page’s Alibijaban. No alias authority was found to equate them; do not normalize to the Quezon island by spelling resemblance.",
+      "province": null,
+      "region": null,
+      "coordinates": null,
+      "publicSpeciesRowEligible": false
+    },
+    {
+      "localityId": "ragay-refugio-island-pasacao-anchorage",
+      "articleEntry": 1155,
+      "sourceName": "Chromis elerae",
+      "catalogGroup": [
+        "USNM 98719"
+      ],
+      "articleLocality": "Refugio Island, Pasacao Anchorage, Ragay Gulf, Luzon",
+      "articleDate": "1909-03-09",
+      "decision": "Held at the locality-to-administrative-boundary level: the anchorage name provides Pasacao context, but no reviewed authoritative source here resolves Refugio Island’s identity, the anchorage footprint, or the marine province boundary.",
+      "province": null,
+      "region": null,
+      "coordinates": null,
+      "publicSpeciesRowEligible": false
+    },
+    {
+      "localityId": "ragay-gulf-only-and-unresolved-points",
+      "articleEntries": "remaining source-reported Ragay Gulf/Ragay Bay lots in the 16-treatment batch",
+      "decision": "Held: generic gulf/bay phrases and other named points/islands (including Canmahala/Canmahana, Saboon, Anima Sola, Buri, Pusgo, Caurusan, Nagas, Rogo, and Bantuin) were not assigned to a province or region in this step. No gulf polygon was sourced.",
+      "province": null,
+      "region": null,
+      "coordinates": null,
+      "publicSpeciesRowEligible": false
+    }
+  ],
+  "summary": {
+    "articleTreatmentsReviewed": 16,
+    "reportedLotGroupingsInInputBatch": 25,
+    "localityNameAnchorsWithAdministrativeContext": 3,
+    "explicitOffshoreOrAliasCasesHeld": 3,
+    "genericOrOtherPointLocalitiesHeld": true,
+    "regionsRepresentedBySelectedNameAnchors": [
+      "Region IV-A (CALABARZON)",
+      "Region V (Bicol Region)"
+    ],
+    "wholeRagayGulfAssignedToOneRegion": false,
+    "calabarzonScopeDenominatorChanged": false,
+    "calabarzonSpeciesAssertionsIncremented": false,
+    "publicAppRowsAdded": false,
+    "geometryAdded": false,
+    "currentPresenceEstablished": false
+  },
+  "limitations": [
+    "This is a historical literature locality crosswalk, not an ecological survey, current-presence claim, full local fish checklist, or proof of catchability.",
+    "Named-island/municipality context is not a substitute for marine coordinates, municipal-water boundaries, fishing access, or jurisdiction.",
+    "Siburio Point is anchored by a different CAS specimen in the 2013 paper; no coordinates or measurement from CAS 34193 is transferred to the 2025 checklist lots.",
+    "The 2025 article’s taxonomy conflict, catalog-number discrepancy, and uncatalogued Ostorhinchus parvulus lot identity remain unresolved.",
+    "GBIF/CAS occurrence candidates remain held under their separate record-level reuse and locality review; this CC BY article does not override CAS database terms."
+  ],
+  "nextAction": "Continue with the other locality names only when primary locality or official geographic evidence is available; seek a suitable licensed locality gazetteer/authoritative maritime source before creating points or boundaries. Keep generic gulf-only lots unassigned and continue the freshwater/marine regional inventory in parallel."
+}

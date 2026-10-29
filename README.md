@@ -104,3 +104,8 @@ A CC BY 4.0 article reports a historical *Callionymus octostigmatus* paratype lo
 ### Ragay Gulf checklist batch — 30 October 2026
 
 Expanded the same CC BY 4.0 article-body screen to 16 fish treatments and 25 reported Ragay Gulf/Ragay Bay lot groupings, with species-rank CoL XR matches recorded separately from the article's own taxonomy. One taxonomic status conflict (*Inimicus bifilis* / *Inimicus didactylus*) and one uncatalogued paratype lot remain held. These are historical type-locality statements; the gulf-side/province is unresolved, so no CALABARZON assertion, geometry, current-presence claim, or app row was added. The article's ODbL supplement was not used. See [the batch review](data/research/philippines/ragay-gulf-zookeys-2025-type-locality-batch-review-20261030.json).
+
+
+### Ragay Gulf named-place crosswalk — 30 October 2026
+
+A follow-up review anchors selected historical type-locality names to administrative context: Pasacao and Siburio Point in Camarines Sur/Bicol, and Alibijaban Island in San Andres/Quezon. The Siburio coordinate belongs to a different CAS specimen and was not transferred; the Alibijaban offshore and Alinijaban spelling cases remain held. Most Ragay lots are still geographically unresolved. No public species row, gulf boundary, or CALABARZON assertion was added. Administrative links were checked against the [PSA Region IV-A PSGC](https://psa.gov.ph/classification/psgc/provinces/0400000000) and [PSA Region V PSGC](https://psa.gov.ph/classification/psgc/provinces/0500000000). See the [crosswalk review](data/research/philippines/ragay-gulf-locality-administrative-crosswalk-20261030.json) and [research log](data/research/philippines/README.md).
