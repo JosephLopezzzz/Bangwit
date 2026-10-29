@@ -3,7 +3,7 @@
   "checkedOn": "2026-10-30",
   "status": "research-only-source-registry",
   "scope": "National acquisition references, freshwater spatial-source leads, and CALABARZON/Central Luzon identity/source leads. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 243,
+  "sourceCount": 244,
   "sources": [
     {
       "id": "gbif-col-xr-taxonomy-matching",
@@ -7415,7 +7415,8 @@
       "access": {
         "status": "Original 2022 article PDF and official 2023 erratum PDF directly downloaded from NFRDI, text-extracted and SHA-256 recorded; no raw copies retained. Official NFRDI repository record reviewed for citation and abstract metadata.",
         "reviewFiles": [
-          "national-ibulao-ifugao-fish-survey-erratum-review-20261030.json"
+          "national-ibulao-ifugao-fish-survey-erratum-review-20261030.json",
+          "national-ibulao-sequence-accession-search-20261030.json"
         ],
         "originalPdfSha256": "89f52da5a4df70e06866a9197a5cba0c7ed34f2d0dc62c9f560327bc13655340",
         "erratumPdfSha256": "9b3f764514af97def6370ee9766b39c8a22d990fcc3978b3fbad8c5998ee68be"
@@ -7438,7 +7439,8 @@
         "Three Zenarchopterus philippinus barcode percent-identity entries are 92.11%–94.14%; absent linked sequences/accessions and adequate alignment detail, do not independently interpret or override the published assignment.",
         "The erratum's barcode sample codes are not explicitly mapped to all Table 1 internal sample labels; no automatic linkage by local name is allowed.",
         "The 2019 Kiangan monitoring gap is explicitly attributed to reduced enumerator budget; it is not zero catch or fish absence.",
-        "No diet, current presence, abundance, geometry, legal, safety, catchability or public app claim is admitted by this source review."
+        "No diet, current presence, abundance, geometry, legal, safety, catchability or public app claim is admitted by this source review.",
+        "The erratum Table 2 has a GENBANK column heading but no accession strings were visible in extracted rows; a bounded NCBI Nucleotide/SRA/BioProject search found no Ibulao- or DOI-linked record. This is not proof that sequences do not exist."
       ]
     },
     {
@@ -7474,6 +7476,36 @@
         "Catalog name status does not verify source specimens or local occurrence.",
         "Current Catalog status for Rhinogobius giurinus differs from the explicit COL XR name match; preserve both until qualified taxonomic review.",
         "Carassius carassius is only a possible spelling comparator for two unmatched source strings, not a specimen identification."
+      ]
+    },
+    {
+      "id": "ncbi-eutils-ibulao-sequence-accession-search-20261030",
+      "title": "NCBI E-utilities searches for Ibulao study-linked sequence records",
+      "provider": "National Center for Biotechnology Information, National Library of Medicine",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi",
+      "additionalUrls": [
+        "https://www.ncbi.nlm.nih.gov/home/develop/api/",
+        "https://www.ncbi.nlm.nih.gov/books/NBK25501/"
+      ],
+      "role": "Bounded public-index check for sequence/project records explicitly linked by the Ibulao locality or article DOI; a zero query result is not proof of sequence absence and taxon matches are not sample identity evidence.",
+      "checkedOn": "2026-10-30",
+      "access": {
+        "status": "NCBI ESearch returned no records for free-text Ibulao in Nucleotide, SRA or BioProject, and no Nucleotide result for the study DOI; a Nucleotide taxon positive control returned records.",
+        "localRawSnapshot": "raw/ibulao-ncbi-link-check-20261030/",
+        "reviewFiles": [
+          "national-ibulao-sequence-accession-search-20261030.json"
+        ]
+      },
+      "reuse": {
+        "metadata": "Public API endpoint and exact queries documented in the review artifact.",
+        "raw": "No sequence or occurrence data downloaded; query JSON response snapshots remain in ignored local research storage.",
+        "content": "No sequence data or third-party sequence-derived claims are republished."
+      },
+      "publicationApproval": false,
+      "researchStatus": "bounded-sequence-accession-link-search;zero-study-term-hits;not-proof-of-absence;research-only",
+      "caveats": [
+        "Search was limited to NCBI and exact Ibulao/DOI terms; BOLD was not searched.",
+        "No sequence-to-sample map, DNA alignment or specimen identity was verified."
       ]
     }
   ],
