@@ -96,3 +96,7 @@ Reviewed the official [BFAR/FishCORAL resource](https://www.bfar.da.gov.ph/other
 ### Ragay Gulf GBIF/CAS rights and locality screen — 30 October 2026
 
 A bounded GBIF/CAS historic-specimen screen found candidate records, but the California Academy of Sciences collection terms prohibit redistribution while GBIF dataset metadata labels the source CC0. A targeted cross-check against the 2025 open-access fish checklist also found a catalog-level locality/date disagreement. All candidates remain held pending written rights and source clarification; no taxon rows, identifiers, coordinates, or app records were added. No inquiry was sent. See [the rights review](data/research/philippines/calabarzon-ragay-gulf-gbif-rights-review-20261030.json).
+
+### Ragay Gulf published type-locality crosswalk — 30 October 2026
+
+A CC BY 4.0 article reports a historical *Callionymus octostigmatus* paratype locality at Rogo Point, Ragay Gulf. The crosswalk uses the article body, not the conflicting GBIF/CAS row; it does not assign the record to Quezon/CALABARZON or the public app. The article’s separate ODbL supplement was not used. See [the literature review](data/research/philippines/ragay-gulf-zookeys-2025-type-locality-review-20261030.json).
