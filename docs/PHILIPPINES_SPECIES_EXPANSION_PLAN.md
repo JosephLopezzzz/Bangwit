@@ -1478,3 +1478,11 @@ Verification for this research-only batch: `npm run test:species:pipeline`, `npm
 - **Next:** Prepare an unsent author/NFRDI inquiry requesting corrected counts, the six-center table and site mapping, and the license for the underlying dataset separately from the CC BY article. Continue other freshwater sources in parallel.
 - **Artifacts:** `national-car-asar-nsap-catch-review-20261030.json`; updated `sources.json` (249 references), the research README, and this plan.
 - **Sources:** [Publisher article page and CC BY 4.0 notice](https://www.opastpublishers.com/peer-review/asar-a-distinct-fishing-gear-used-in-the-cordillera-rivers-1887.html), [full article PDF](https://www.opastpublishers.com/open-access-articles/asar-a-distinct-fishing-gear-used-in-the-cordillera-rivers.pdf), [2018 issue listing and DOI](https://www.opastpublishers.com/table-contents/jmsro-volume-1-issue-1-year-2018).
+
+### National rollout step 192: Cordillera asar/NSAP data and count clarification draft — 30 October 2026
+
+- **Preparation:** Drafted a transparent inquiry to the corresponding author email printed in the article. It asks for reconciled fish/prawn counts, the Chico-versus-three-river coverage, the six-center river crosswalk, an available catch table/export with dates and units, taxonomic support, and the underlying NSAP data license.
+- **Project transparency:** The draft identifies Bangwit as an independent early-stage project with a phased Philippines-wide goal, says no asar article-derived rows are live, and discloses possible future revenue generation so that any reuse terms can be assessed against the intended use.
+- **Disposition:** Draft only. No email, form, NSAP data request, or permission inquiry was sent. No app species or catch row was added.
+- **Artifact:** `national-car-asar-author-clarification-draft-20261030.md`; linked from the research README. No new source registry entry was needed.
+- **Source:** [Article PDF and corresponding-author email](https://www.opastpublishers.com/open-access-articles/asar-a-distinct-fishing-gear-used-in-the-cordillera-rivers.pdf).
