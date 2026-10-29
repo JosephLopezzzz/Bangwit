@@ -6,9 +6,9 @@
   "purpose": "Reconcile the current CALABARZON scope denominator and visible evidence gaps; this is not a completeness claim or biological evidence.",
   "provenance": {
     "scopeFile": "calabarzon-scope.json",
-    "scopeSha256": "c0bcd626a57d2cd4100e745373fa92cc99e9bc34d436575fab5846108798fcb7",
+    "scopeSha256": "f0da928b0d620b3f05b7a7afb22fd87399c0b54942defbe666c2b71a1b6ed0ae",
     "sourceRegistryFile": "sources.json",
-    "sourceRegistrySha256": "b1b343e556a1274e57591d161ce7545d1f005df2e6afe36456bac1c081573937",
+    "sourceRegistrySha256": "df7e114e449c2956ca96289bbdea79329669c81bd130ffbee6f15989ced1362d",
     "scopeCheckedOn": "2026-10-30",
     "scopeStatus": "in-progress-incomplete-baseline",
     "batangasBayPosterTaxonomyCrosswalkFile": "calabarzon-batangas-bay-poster-taxonomy-crosswalk-20261029.json",
@@ -16,34 +16,37 @@
     "ragayGulfPosterReviewFile": "calabarzon-ragay-gulf-dominant-species-poster-review-20261030.json",
     "ragayGulfPosterReviewSha256": "1b64e3e6ad3f15dd9509cd3b188f3d3621785217893c25a8c64e97518350f8ff",
     "ragayGulfLocalityAdministrativeCrosswalkFile": "ragay-gulf-locality-administrative-crosswalk-20261030.json",
-    "ragayGulfLocalityAdministrativeCrosswalkSha256": "15cc4380cf77fb95df66feff3e81a2cc6522faf268c8407df193301cb9ab254e"
+    "ragayGulfLocalityAdministrativeCrosswalkSha256": "15cc4380cf77fb95df66feff3e81a2cc6522faf268c8407df193301cb9ab254e",
+    "guinayanganFreshwaterCrosswalkFile": "calabarzon-guinayangan-freshwater-source-crosswalk-20261030.json",
+    "guinayanganFreshwaterCrosswalkSha256": "f6c8ff8e1fd550edd2ead1b8ca9132033489f53e1434be2234181796365ab97b"
   },
   "denominator": {
-    "waterbodyResearchLeads": 99,
+    "waterbodyResearchLeads": 107,
     "byKind": {
       "bay": 7,
-      "river": 51,
+      "river": 52,
       "estuary": 3,
       "wetland": 8,
       "reservoir": 5,
       "lake": 18,
       "stream": 5,
       "gulf": 1,
-      "fishpond": 1
+      "fishpond": 1,
+      "spring": 7
     },
     "provinceUnitsWithLeads": 5,
     "separateCityCoverageUnits": 1,
-    "uniqueSourceReferences": 83,
+    "uniqueSourceReferences": 85,
     "unresolvedSourceReferences": []
   },
   "reviewGaps": {
     "salinity": {
       "freshwater": 4,
       "marine": 1,
-      "unknown": 94
+      "unknown": 102
     },
     "boundary": {
-      "not-delineated": 99
+      "not-delineated": 107
     },
     "fishEvidence": {
       "12-survey-table-assertions-reviewed; 3-family-conflicts-held": 1,
@@ -72,7 +75,7 @@
       "historical-NIFEP-program-context-only; bounded-CoLXR-exact-name-search-zero; no-fish-absence-inferred": 1,
       "historical-seven-lake-survey-described; species-rows-held-for-rights-review": 7,
       "historical-trawl-source-review;2020-aggregate-eight-site-landing-catch-reports-Sardinella-fimbriata;bounded-OBIS-discovery;National-Museum-screen-seven-Cavite-stateProvince-records-without-locality-or-waterBody;no-capture-origin-or-waterbody-assertion": 1,
-      "not-reviewed": 14,
+      "not-reviewed": 22,
       "official-EMB-indexed-historical-catch-context;no-rows-transcribed;no-assertion": 1,
       "one historical Gulaphallus mirabilis locality assertion from three CC0 museum occurrence records; dates and coordinates absent": 1,
       "one-corrected-2024-preserved-specimen-assertion-for-Barbonymus-schwanefeldii": 1,
@@ -97,7 +100,15 @@
       "ph-wb-pansipit-river-estuary",
       "ph-wb-san-juan-river-cavite",
       "ph-wb-zapote-river",
-      "ph-wb-de-guzman-guinayangan-fishpond"
+      "ph-wb-de-guzman-guinayangan-fishpond",
+      "ph-wb-hinabaan-river-quezon",
+      "ph-wb-maulawin-itaas-spring-guinayangan",
+      "ph-wb-maulawin-ibaba-spring-guinayangan",
+      "ph-wb-san-pedro-i-springs-guinayangan",
+      "ph-wb-bahokhok-springs-guinayangan",
+      "ph-wb-sta-cruz-spring-rosales-guinayangan",
+      "ph-wb-sta-cruz-spring-marjes-guinayangan",
+      "ph-wb-san-antonio-spring-guinayangan"
     ],
     "researchQueued": [
       "ph-wb-balayan-bay",
@@ -109,7 +120,15 @@
       "ph-wb-mamba-cacabay-river-protected-landscape",
       "ph-wb-palicpican-river-protected-landscape",
       "ph-wb-ragay-gulf-quezon",
-      "ph-wb-de-guzman-guinayangan-fishpond"
+      "ph-wb-de-guzman-guinayangan-fishpond",
+      "ph-wb-hinabaan-river-quezon",
+      "ph-wb-maulawin-itaas-spring-guinayangan",
+      "ph-wb-maulawin-ibaba-spring-guinayangan",
+      "ph-wb-san-pedro-i-springs-guinayangan",
+      "ph-wb-bahokhok-springs-guinayangan",
+      "ph-wb-sta-cruz-spring-rosales-guinayangan",
+      "ph-wb-sta-cruz-spring-marjes-guinayangan",
+      "ph-wb-san-antonio-spring-guinayangan"
     ]
   },
   "existingScopeCounters": {
@@ -118,20 +137,22 @@
     "publicRecordsAdmitted": 0
   },
   "interpretation": [
-    "The 99 records are named/source-derived research leads in the current file, not proof that every CALABARZON river, lake, reservoir, stream, wetland, estuary, gulf, fishpond, or bay is inventoried.",
-    "All 99 current leads have boundaryStatus not-delineated; no boundary geometry was validated by this audit.",
+    "The 107 records are named/source-derived research leads in the current file, not proof that every CALABARZON river, spring, lake, reservoir, stream, wetland, estuary, gulf, fishpond, or bay is inventoried.",
+    "All 107 current leads have boundaryStatus not-delineated; no boundary geometry was validated by this audit.",
     "Unknown salinity is not freshwater evidence; fish-evidence query gaps or zero search results are not evidence of fish absence.",
     "The October 30 DENR waterbird-site crosswalk adds two aquatic-site leads; the NFRDI Ragay Gulf poster supplies source-reported 2018-2022 species labels but has an image/abstract name conflict and no station-level attribution. No new occurrence assertion, salinity class, geometry, current-presence claim, access claim, or public app record was added.",
     "The Batangas Bay poster crosswalk records nine unconflicted CoL XR species-name matches and one held poster-versus-abstract spelling conflict; these are not independent field identifications, locality assignments, or public species assertions.",
     "The October 30 CC BY fish-checklist batch records 16 historical Ragay Gulf/Ragay Bay type-material treatments and 25 locality groups. A later locality crosswalk anchors only Pasacao, Siburio Point, and Alibijaban Island at place-name context; it transfers no coordinates, does not assign the whole gulf, and adds no CALABARZON species assertion or public row.",
-    "A Smithsonian Canmahala locality-record search was reviewed as a discovery lead, but direct record access failed. The source reference is tracked for follow-up only; no administrative match, geometry, or species assertion was added."
+    "A Smithsonian Canmahala locality-record search was reviewed as a discovery lead, but direct record access failed. The source reference is tracked for follow-up only; no administrative match, geometry, or species assertion was added.",
+    "The Guinayangan Water District 2024 Annex J crosswalk adds one surface-water river and seven named or grouped spring-source leads. It provides barangay-level supply context only: no fish records, coordinates, geometry, ecological status, or safety determinations."
   ],
   "nextWork": [
     "Resolve the remaining Ragay Gulf/Ragay Bay type-locality names: a partial review now anchors Pasacao and Siburio Point in Camarines Sur/Bicol context and Alibijaban Island in San Andres/Quezon context, but leaves most lots, offshore points, aliases, and gulf boundaries unresolved.",
     "Resolve the CAS-versus-GBIF redistribution terms and the one catalog-level locality/date conflict before considering any Ragay Gulf CAS candidate for a research ledger or public app.",
     "Continue the existing CALABARZON queue and source-specific reviews; preserve source dates, station scope, identity, taxonomy, and item-level reuse limits.",
-    "Resolve the 15 fish-evidence-not-reviewed leads and 10 research-queued leads through primary or otherwise reviewable sources; do not convert waterbird monitoring or the gulf-level poster into fish claims for a named subsite without locality-specific evidence.",
+    "Resolve the 23 fish-evidence-not-reviewed leads and 18 research-queued leads through primary or otherwise reviewable sources; do not convert waterbird monitoring, aquaculture fingerling dispersal, or gulf-level summaries into fish claims for a named subsite without locality-specific evidence.",
     "Delineate only where an appropriate authoritative or licensed hydrography source and a verified waterbody identity support it; keep legal municipal-water boundaries separate.",
-    "Expand the denominator from official inventories and province/city sources, deduplicate aliases carefully, and report bounded coverage by freshwater, brackish, coastal, and marine habitat."
+    "Expand the denominator from official inventories and province/city sources, deduplicate aliases carefully, and report bounded coverage by freshwater, brackish, coastal, and marine habitat.",
+    "For the eight new Guinayangan leads, seek station-resolved, reusable fish surveys and independently sourced feature identity/geometry; keep grouped springs grouped and salinity unknown until site-specific evidence is available."
   ]
 }

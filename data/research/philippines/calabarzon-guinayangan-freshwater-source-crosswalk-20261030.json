@@ -1,0 +1,132 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-30",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "provinceId": "0405600000",
+  "status": "official-freshwater-supply-source-crosswalk;fishpond-search-bounded;research-only",
+  "purpose": "Add directly named freshwater source features from the Guinayangan Water District's 2024 report and check whether available aquaculture research supplies fish evidence for the separate De Guzman Fishpond lead.",
+  "sources": [
+    {
+      "sourceId": "guinayangan-water-district-annual-report-2024",
+      "citation": "Guinayangan Water District. Annual Report for Calendar Year 2024, including Annex J, List of Water Sources.",
+      "url": "https://www.guinayangan.com/gwd%20annual%20report%202024.pdf",
+      "reviewedPages": [5, 38],
+      "access": "Official 42-page PDF opened and reviewed through its report text; no local copy or geometry was retained."
+    },
+    {
+      "sourceId": "psa-psgc-guinayangan-barangays-2025",
+      "citation": "Philippine Statistics Authority. Municipality of Guinayangan, PSGC barangay listing (as of 31 July 2025).",
+      "url": "https://psa.gov.ph/classification/psgc/barangays/0405618000",
+      "reviewedLines": "332-365 and relevant subsequent barangay rows",
+      "access": "Official PSA page opened; used only to check that source-named barangays belong to Guinayangan and to record their PSGC names/codes."
+    },
+    {
+      "sourceId": "clsu-guinayangan-small-scale-aquaculture-2024",
+      "citation": "Saturno, A. (2024-01-29). FAC & CF Implement IDRC-funded Small-scale Aquaculture Action Research in Quezon Province. Central Luzon State University.",
+      "url": "https://clsu.edu.ph/news-and-updates/article/fac-cf-implement-idrc-funded-small-scale-aquaculture-action-research-in-quezon-province",
+      "reviewedLines": "47-50",
+      "access": "Official university article opened and reviewed; no item-specific data reuse license was relied on."
+    }
+  ],
+  "method": "Crosswalked Annex J's named water-source rows to the PSA barangay list without assigning coordinates or merging source names. Separately checked the exact De Guzman Fishpond name and reviewed the CLSU article as a possible municipal research lead; only a site is considered a match if the source identifies it explicitly.",
+  "sourceNamedWaterSources": [
+    {
+      "waterbodyId": "ph-wb-hinabaan-river-quezon",
+      "name": "Hinabaan River",
+      "kind": "river",
+      "sourceLocality": "Brgy. Balinarin/Hinabaan, Guinayangan, Quezon",
+      "psgcBarangayCodes": ["0405618005", "0405618027"],
+      "waterDistrictStatus": "Flowing",
+      "decision": "Added as a source-named river lead. The report lists it under surface-water sources; 'Flowing' is the water district's supply-status label, not an ecological flow, safety, or water-quality assessment."
+    },
+    {
+      "waterbodyId": "ph-wb-maulawin-itaas-spring-guinayangan",
+      "name": "Maulawin Itaas Spring",
+      "kind": "spring",
+      "sourceLocality": "Barangay Calimpak/Sisi, Guinayangan, Quezon",
+      "psgcBarangayCodes": ["0405618010", "0405618051"],
+      "waterDistrictStatus": "Yielding",
+      "decision": "Added under the exact report name. Not equated to Maulawin Spring Protected Landscape or to the separately named Maulawin Ibaba Spring."
+    },
+    {
+      "waterbodyId": "ph-wb-maulawin-ibaba-spring-guinayangan",
+      "name": "Maulawin Ibaba Spring",
+      "kind": "spring",
+      "sourceLocality": "Barangay Calimpak/Sisi, Guinayangan, Quezon",
+      "psgcBarangayCodes": ["0405618010", "0405618051"],
+      "waterDistrictStatus": "Yielding",
+      "decision": "Added under the exact report name. Not equated to Maulawin Spring Protected Landscape or to the separately named Maulawin Itaas Spring."
+    },
+    {
+      "waterbodyId": "ph-wb-san-pedro-i-springs-guinayangan",
+      "name": "San Pedro I Springs (2)",
+      "kind": "spring",
+      "sourceLocality": "Barangay San Pedro I, Guinayangan, Quezon",
+      "psgcBarangayCodes": ["0405618044"],
+      "waterDistrictStatus": "Yielding",
+      "identityNote": "The report groups two springs without separate feature names; retained as one grouped research lead, not split into two mapped objects."
+    },
+    {
+      "waterbodyId": "ph-wb-bahokhok-springs-guinayangan",
+      "name": "Bahokhok Springs (2)",
+      "kind": "spring",
+      "sourceLocality": "Barangay Dungawan Paalyunan, Guinayangan, Quezon",
+      "psgcBarangayCodes": ["0405618021"],
+      "waterDistrictStatus": "Yielding",
+      "identityNote": "The report groups two springs without separate feature names; retained as one grouped research lead, not split into two mapped objects."
+    },
+    {
+      "waterbodyId": "ph-wb-sta-cruz-spring-rosales-guinayangan",
+      "name": "Sta. Cruz Spring (Rosales)",
+      "kind": "spring",
+      "sourceLocality": "Barangay Sta. Cruz, Guinayangan, Quezon",
+      "psgcBarangayCodes": ["0405618047"],
+      "waterDistrictStatus": "Yielding",
+      "decision": "Kept distinct from the report's separately named Sta. Cruz Spring (Marjes); exact point identity and boundary remain unresolved."
+    },
+    {
+      "waterbodyId": "ph-wb-sta-cruz-spring-marjes-guinayangan",
+      "name": "Sta. Cruz Spring (Marjes)",
+      "kind": "spring",
+      "sourceLocality": "Barangay Sta. Cruz, Guinayangan, Quezon",
+      "psgcBarangayCodes": ["0405618047"],
+      "waterDistrictStatus": "Yielding",
+      "decision": "Kept distinct from the report's separately named Sta. Cruz Spring (Rosales); exact point identity and boundary remain unresolved."
+    },
+    {
+      "waterbodyId": "ph-wb-san-antonio-spring-guinayangan",
+      "name": "San Antonio Spring",
+      "kind": "spring",
+      "sourceLocality": "Barangay San Antonio, Guinayangan, Quezon",
+      "psgcBarangayCodes": ["0405618037"],
+      "waterDistrictStatus": "Yielding"
+    }
+  ],
+  "deGuzmanFishpondScreen": {
+    "target": "ph-wb-de-guzman-guinayangan-fishpond",
+    "exactNameSearch": "Bounded public web searches for the exact pond name with Guinayangan/Quezon and fish/species terms did not surface an independently retrievable fish survey or species list explicitly tied to this pond. This is not evidence of fish absence.",
+    "clsuContext": "The CLSU article reports a January 2024 municipality-level reconnaissance, visits to local aquaculture farms and seven unnamed lagoons, tilapia fingerling dispersal to smallholders, and a potential Fish Conservation Zone in Maulawin Spring Protected Landscape. It names no De Guzman Fishpond site, fish taxa, sampling stations, or fish survey results; no claim was assigned to the pond.",
+    "speciesAssigned": [],
+    "tilapiaAssignedToDeGuzman": false,
+    "publicRowAdded": false
+  },
+  "scopeDecision": {
+    "waterbodyLeadsBefore": 99,
+    "waterbodyLeadsAfter": 107,
+    "newRiverLeads": 1,
+    "newSpringLeads": 7,
+    "fishAssertionsAdded": 0,
+    "salinityClassificationsAdded": 0,
+    "geometryAdded": false,
+    "publicRowsAdded": 0
+  },
+  "limitations": [
+    "The report's Flowing/Yielding labels are operational water-supply statuses, not ecological flow measurements, potability findings, or safety advice.",
+    "The PSA source confirms administrative barangay names/codes only; neither it nor the water-district report supplies waterbody geometry or precise coordinates.",
+    "The Maulawin Spring Protected Landscape is not crosswalked to either named Maulawin spring source.",
+    "No fish occurrence, diet, catchability, access, or legal-fishing claim follows from water-supply or small-scale aquaculture context.",
+    "This source list is a municipality-level water-supply inventory, not a complete spring, river, lake, or fish inventory for Quezon or CALABARZON."
+  ],
+  "nextAction": "Seek station-resolved, reusable fish surveys for the new river and spring leads; inspect any public Maulawin biodiversity monitoring outputs for fish-specific records; keep the De Guzman pond separate until an exact site/fish source is found."
+}
