@@ -1284,3 +1284,13 @@ Verification for this research-only batch: `npm run test:species:pipeline`, `npm
 - **Next:** Seek an authoritative or independently reusable shoreline crosswalk for the seven lakes and continue the CALABARZON river, reservoir, stream and wetland queues. Keep inland-water inventories distinct from species evidence.
 - **Artifacts:** `calabarzon-seven-lakes-osm-hydrolakes-crosswalk-20261030.json`; updated `sources.json`, research index and CALABARZON coverage-denominator profile.
 - **Sources:** [OpenStreetMap Overpass API](https://overpass-api.de/api/interpreter), [OSM copyright/license](https://www.openstreetmap.org/copyright), [HydroLAKES](https://www.hydrosheds.org/products/hydrolakes), [Zenodo HydroLAKES Asia subset](https://zenodo.org/records/17503891).
+
+### National rollout step 173: San Pablo Seven Lakes GBIF geometry screen — 30 October 2026
+
+- **Queries:** GBIF `country=PH`, `taxonKey=204` (class Actinopterygii), and `hasCoordinate=true` returned zero for a multipolygon of six HydroLAKES candidates (Bunot, Calibato, Palakpakin, Pandin, Yambo and Sampaloc) and zero for a separate OSM polygon query for Mohicap.
+- **Request correction:** GBIF rejected the exact seven-lake OSM multipolygon request with HTTP 400 because the request was oversized. This is recorded as a failed request, not as a zero-result screen.
+- **Interpretation:** The two successful zero-result searches are bounded index screens, not lake checklists, fish surveys, or evidence of fish absence. Records without coordinates or outside the selected source polygons are outside these searches.
+- **Disposition:** Added query/raw receipts to the research log and GBIF source registry. No fish record, species, diet, current-presence claim, or app geometry was added.
+- **Next:** Prioritize independently reusable or rights-cleared Seven Lakes fish survey/checklist sources, then review each candidate's lake locality, sampling date, taxonomy, and item-level reuse terms.
+- **Artifacts:** `calabarzon-seven-lakes-gbif-geometry-screen-20261030.json`; updated GBIF source review references and CALABARZON coverage-denominator profile hashes.
+- **Sources:** [GBIF Occurrence API reference](https://techdocs.gbif.org/en/openapi/v1/occurrence), [HydroLAKES](https://www.hydrosheds.org/products/hydrolakes), [Zenodo HydroLAKES Asia subset](https://zenodo.org/records/17503891), [OSM Mohicap feature](https://www.openstreetmap.org/way/25032575).

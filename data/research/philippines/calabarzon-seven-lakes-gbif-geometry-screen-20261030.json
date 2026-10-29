@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "batchId": "calabarzon-seven-lakes-gbif-geometry-screen-20261030",
+  "reviewedOn": "2026-10-30",
+  "regionId": "0400000000",
+  "provinceId": "0403400000",
+  "waterbodyGroup": "Seven Lakes of San Pablo City",
+  "status": "six-hydrolakes-matched-lake-polygons-gbif-zero;one-mohicap-osm-polygon-gbif-zero;no-fish-absence-inferred",
+  "purpose": "Run bounded coordinate-bearing GBIF searches for Actinopterygii in crosswalked lake polygons and the unmatched Mohicap OSM polygon.",
+  "gbifSource": {
+    "sourceId": "gbif-occurrence-downloads",
+    "endpoint": "https://api.gbif.org/v1/occurrence/search",
+    "documentation": "https://techdocs.gbif.org/en/openapi/v1/occurrence",
+    "sharedFilters": {
+      "country": "PH",
+      "taxonKey": 204,
+      "taxonLabel": "Actinopterygii",
+      "hasCoordinate": true,
+      "limit": 100,
+      "offset": 0
+    }
+  },
+  "screens": [
+    {
+      "screenId": "six-hydrolakes-crosswalked-lakes",
+      "lakeNames": [
+        "Bunot Lake",
+        "Calibato Lake",
+        "Palakpakin Lake",
+        "Pandin Lake",
+        "Yambo Lake",
+        "Sampaloc Lake"
+      ],
+      "hydrolakesIds": [
+        1397812,
+        1397790,
+        1397776,
+        1397769,
+        1397762,
+        1397813
+      ],
+      "geometrySource": "HydroLAKES Asia subset polygons with OSM spatial crosswalks documented in calabarzon-seven-lakes-osm-hydrolakes-crosswalk-20261030.json and calabarzon-sampaloc-osm-hydrolakes-crosswalk-20261030.json.",
+      "geometryRaw": {
+        "path": "raw/hydrolakes-asia-subset-screen-20261030/seven-lakes-hydrolakes-matched-multipolygon-wkt.txt",
+        "sha256": "362dce5ec8fc8f440118d4c5696274637b0c449566842667b00fa79f96cb0110"
+      },
+      "httpStatus": 200,
+      "count": 0,
+      "returnedCount": 0,
+      "endOfRecords": true,
+      "rawResponse": {
+        "path": "raw/hydrolakes-asia-subset-screen-20261030/gbif-seven-lakes-hydrolakes-multipolygon.json",
+        "bytes": 79,
+        "sha256": "16004ddeb6b1eb033e3665fa6082d9cdd36533ce1f36272a2a95f5664f1b9dcd"
+      }
+    },
+    {
+      "screenId": "mohicap-osm-polygon",
+      "lakeName": "Mohicap Lake",
+      "osmObject": "way/25032575",
+      "geometrySource": "OpenStreetMap community-mapped lake outline, relation/feature crosswalk context in calabarzon-seven-lakes-osm-hydrolakes-crosswalk-20261030.json.",
+      "geometryRaw": {
+        "path": "raw/calabarzon-seven-lakes-osm-crosswalk-20261030/mohicap-osm-polygon-wkt.txt",
+        "sha256": "bdd49846e2ea03410dcff02c48d52cc1e720f18664a756d2bf8b90e8f6a88dc9"
+      },
+      "httpStatus": 200,
+      "count": 0,
+      "returnedCount": 0,
+      "endOfRecords": true,
+      "rawResponse": {
+        "path": "raw/calabarzon-seven-lakes-osm-crosswalk-20261030/gbif-mohicap-osm-polygon.json",
+        "bytes": 79,
+        "sha256": "16004ddeb6b1eb033e3665fa6082d9cdd36533ce1f36272a2a95f5664f1b9dcd"
+      }
+    }
+  ],
+  "rejectedRequest": {
+    "geometry": "Exact OSM multipolygon of all seven lakes",
+    "requestUrlLength": 17523,
+    "httpStatus": 400,
+    "interpretation": "GBIF rejected the oversized request; this is not a zero-result query and no occurrence outcome was inferred. Shorter HydroLAKES candidate polygons and a separate Mohicap OSM polygon were queried instead."
+  },
+  "decisions": {
+    "speciesAssertionsAdded": 0,
+    "dietAssertionsAdded": 0,
+    "fishAbsenceInferred": false,
+    "currentPresenceInferred": false,
+    "applicationGeometryAdded": false,
+    "publicationApproval": false
+  },
+  "limitations": [
+    "These are bounded, coordinate-bearing GBIF occurrence searches and not fish surveys, lake checklists, or exhaustive searches of uncoordinated and differently georeferenced records.",
+    "The six matched HydroLAKES shapes are discovery candidates with mapped-source crosswalks, not official or field-validated lake boundaries; Mohicap uses community-mapped OSM geometry because no HydroLAKES polygon intersected in the screen.",
+    "Zero rows do not demonstrate fish absence, current ecological condition, fishing access, or legal catchability.",
+    "No records, names, taxonomic claims, diet statements, or public app rows were added."
+  ],
+  "nextAction": "Shift from further zero-result polygon searches to independently reusable or rights-cleared Seven Lakes fish survey/checklist sources; review species, locality, survey dates, taxonomy, and reuse terms row by row before admission.",
+  "sourceReferences": [
+    "https://techdocs.gbif.org/en/openapi/v1/occurrence",
+    "https://api.gbif.org/v1/occurrence/search",
+    "https://www.hydrosheds.org/products/hydrolakes",
+    "https://zenodo.org/records/17503891",
+    "https://www.openstreetmap.org/way/25032575",
+    "https://www.openstreetmap.org/copyright"
+  ]
+}
