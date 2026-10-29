@@ -3,7 +3,7 @@
   "checkedOn": "2026-10-30",
   "status": "research-only-source-registry",
   "scope": "National acquisition references, freshwater spatial-source leads, and CALABARZON/Central Luzon identity/source leads. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 236,
+  "sourceCount": 238,
   "sources": [
     {
       "id": "gbif-col-xr-taxonomy-matching",
@@ -15,7 +15,7 @@
         "https://api.gbif.org/v2/species/match"
       ],
       "role": "Research-only name/identifier matching proposals against an explicitly selected taxonomy; not Philippine occurrence or locality evidence.",
-      "checkedOn": "2026-10-29",
+      "checkedOn": "2026-10-30",
       "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
       "access": {
         "status": "official-documentation-and-service-probes",
@@ -24,13 +24,15 @@
           "calabarzon-laguna-gbif-triage-20261025.json",
           "calabarzon-labac-eia-fish-evidence-review-20261026.json",
           "calabarzon-batangas-bay-poster-taxonomy-crosswalk-20261029.json",
-          "national-agno-river-basin-fish-survey-review-20261030.json"
+          "national-agno-river-basin-fish-survey-review-20261030.json",
+          "national-agno-pangasinan-taxonomy-crosscheck-20261030.json"
         ],
         "additionalRawPaths": [
           "raw/calabarzon-laguna-gbif-triage-20261025/",
           "raw/calabarzon-labac-eia-col-xr-20261026",
           "raw/batangas-bay-colxr-match-20261029/",
-          "raw/agno-river-dataset-screen-20261030/taxonomy-colxr-20261030/"
+          "raw/agno-river-dataset-screen-20261030/taxonomy-colxr-20261030/",
+          "raw/agno-pangasinan-colxr-crosscheck-20261030/"
         ]
       },
       "reuse": {
@@ -7197,13 +7199,14 @@
         "status": "Publisher article record and full text reviewed; PSU institutional mirror cross-checked. GPS use is described, but no station coordinate values or machine-readable station data were found in reviewed full text.",
         "localRawSnapshot": null,
         "reviewFiles": [
-          "national-agno-pangasinan-macrofauna-review-20261030.json"
+          "national-agno-pangasinan-macrofauna-review-20261030.json",
+          "national-agno-pangasinan-taxonomy-crosscheck-20261030.json"
         ]
       },
       "reuse": {
         "metadata": "The publisher record states CC BY 4.0. Attribute Dantis and Lacap, article title, journal, volume/issue/pages, publisher record and license; identify corrections as modifications.",
         "raw": "No separate raw dataset or station file was found or retained.",
-        "content": "The 23 Table 1 fish-name candidates are recorded as historical source labels under the stated attribution license, not accepted occurrence rows. The source has unresolved count and name inconsistencies, lacks coordinate values, pools five stations, and says Lingayen high tides brought marine species into station 5. Independent taxonomy and station/locality review are still required."
+        "content": "The 23 Table 1 fish-name candidates are recorded as historical source labels under the stated attribution license, not accepted occurrence rows. The source has unresolved count and name inconsistencies, lacks coordinate values, pools five stations, and says Lingayen high tides brought marine species into station 5. The name cross-check is recorded separately; station/locality review remains required. A separate 2026 cross-check records 21 exact accepted CoL XR matches, one variant match and one synonym match; these are name-match proposals only. An unresolved Moolgarda pedaraki cross-authority status conflict remains, and no specimen identification or occurrence is validated."
       },
       "publicationApproval": false,
       "researchStatus": "historical-pooled-five-station-survey;cc-by-4.0;count-and-name-conflicts;coordinate-crosswalk-missing;research-only",
@@ -7214,9 +7217,66 @@
         "Article narrative mentions Trichogaster sp. (blue gourami), absent from Table 1's 23 fish labels; hold separately and do not force reconciliation.",
         "The study covers five stations with three subsites each and reports June, August-September and November 2018 sampling. Exact station coordinates were not available in the reviewed article text.",
         "The paper attributes several marine taxa at station 5 to high tides in Lingayen; do not classify its pooled list as uniformly freshwater.",
-        "Table spelling and author-year errors require independent authority review. A current-name match does not verify specimen identity.",
-        "Zero current-presence, diet, legal, safety, access or public app assertions are admitted by this source review."
+        "Table spelling and author-year discrepancies are recorded in the separate taxonomy cross-check; matching does not verify specimen identity.",
+        "Zero current-presence, diet, legal, safety, access or public app assertions are admitted by this source review.",
+        "GBIF CoL XR matching is nomenclatural only. Sarotherodon melatheron is a variant match, Cyprinus carpio has a likely author-year typo, and Moolgarda pedaraki has unresolved current-status disagreement across authorities."
       ]
+    },
+    {
+      "id": "calacademy-fishcat-agno-pangasinan-taxonomy-20261030",
+      "title": "Eschmeyer’s Catalog of Fishes cross-check for Agno Pangasinan Table 1 labels",
+      "provider": "California Academy of Sciences, Institute for Biodiversity Science and Sustainability",
+      "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Cyprinus&species=carpio&tbl=species",
+      "additionalUrls": [
+        "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Moolgarda&species=tade&tbl=species"
+      ],
+      "role": "Current taxonomic authority/year cross-check for selected name labels in Dantis and Lacap (2021); it does not validate their specimens, identifications, locality, or occurrence.",
+      "checkedOn": "2026-10-30",
+      "access": {
+        "status": "Current 13 August 2026 indexed Catalog entries reviewed; direct page retrieval was limited for selected entries; no raw page copy retained.",
+        "reviewFiles": [
+          "national-agno-pangasinan-taxonomy-crosscheck-20261030.json"
+        ]
+      },
+      "reuse": {
+        "metadata": "Catalog name/status excerpts were checked as cross-reference evidence.",
+        "raw": "No page copy retained.",
+        "content": "Only linked name and authority/status conclusions are summarized; no Catalog prose or images are reproduced and no general redistribution permission is inferred."
+      },
+      "publicationApproval": false,
+      "researchStatus": "selected-name-and-authority-crosscheck;taxonomy-only;no-specimen-or-occurrence-claims",
+      "caveats": [
+        "Catalog name status does not identify the Agno specimens.",
+        "The Moolgarda pedaraki treatment conflicts with the CoL XR and WoRMS accepted-name treatment; no normalization was applied.",
+        "The Cyprinus carpio authority year corroborates a likely source-table typo only."
+      ],
+      "sourceYear": 2026
+    },
+    {
+      "id": "worms-agno-pangasinan-moolgarda-status-20261030",
+      "title": "WoRMS status cross-check for the Agno article’s Moolgarda pedaraki label",
+      "provider": "World Register of Marine Species (WoRMS)",
+      "url": "https://www.marinespecies.org/aphia.php?id=218891&p=taxdetails",
+      "role": "Independent name-status cross-check for one historical Table 1 label; not specimen, locality, occurrence, or habitat evidence.",
+      "checkedOn": "2026-10-30",
+      "access": {
+        "status": "Indexed name-detail result reviewed; direct page retrieval returned 403; no raw page copy retained.",
+        "reviewFiles": [
+          "national-agno-pangasinan-taxonomy-crosscheck-20261030.json"
+        ]
+      },
+      "reuse": {
+        "metadata": "Indexed WoRMS name-status result reviewed.",
+        "raw": "No WoRMS response snapshot retained.",
+        "content": "Name/status reference only; no broader description, media, or occurrence data copied."
+      },
+      "publicationApproval": false,
+      "researchStatus": "single-name-status-check;taxonomy-only;cross-authority-conflict-unresolved",
+      "caveats": [
+        "WoRMS treats the source label as accepted Crenimugil pedaraki; the current Catalog of Fishes treats it as a synonym of Moolgarda tade.",
+        "Do not automatically project either name as the identity of the study specimen."
+      ],
+      "sourceYear": 2026
     }
   ],
   "sourcePolicy": {
