@@ -19,7 +19,7 @@ test("the exact-text screen covers every scoped CALABARZON lake and reservoir na
   assert.equal(review.scopeSnapshot.waterbodyLeadCount, inlandWaterbodies.length);
   assert.equal(review.scopeSnapshot.searchStringCount, expectedStrings.length);
   // The byte hash pins the reviewed lead kinds and source-derived name spellings.
-  assert.equal(review.scopeSnapshot.sha256, "50201270aa0c23cc3769423d0f7993faeac425a47be5be31358c295db2e29d0c");
+  assert.equal(review.scopeSnapshot.sha256, "6006ff5d752eebf2849b2cdb812eff4fa81877821afdbe6ece2a976ee3fa7117");
   assert.deepEqual(
     new Set(review.searchTerms.map((row) => row.value)),
     new Set(expectedStrings),

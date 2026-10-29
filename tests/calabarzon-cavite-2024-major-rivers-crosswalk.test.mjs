@@ -51,7 +51,7 @@ test("the official Cavite profile adds source-bounded river leads without invent
   const labac = scope.waterbodies.find((row) => row.id === "ph-wb-labac-river-cavite");
   assert.match(labac.scopeNote, /not adopted as an alias/i);
   assert.match(labac.fishEvidenceStatus, /EIA-reported-subsistence-fishery/);
-  assert.deepEqual(labac.sourceRefs, ["aiib-2023-bcib-final-eia", review.sourceId, "gbif-occurrence-downloads"]);
+  assert.deepEqual(labac.sourceRefs, ["aiib-2023-bcib-final-eia", review.sourceId, "gbif-occurrence-downloads", "gbif-col-xr-taxonomy-matching"]);
 });
 
 test("the source and checkpoint pin the reviewed profile and preserve incomplete regional status", () => {
@@ -62,10 +62,10 @@ test("the source and checkpoint pin the reviewed profile and preserve incomplete
   assert.equal(report.inputHashes.cavite2024MajorRiversReviewSha256, sha256(reviewBytes));
   assert.equal(report.inputHashes.scopeSha256, sha256(scopeBytes));
   assert.equal(report.inputHashes.sourcesSha256, sha256(sourceBytes));
-  assert.equal(report.coverageSummary.namedWaterbodyLeads, 95);
-  assert.equal(report.coverageSummary.byWaterbodyKind.river, 49);
-  assert.equal(report.coverageSummary.sourceAssignments, 245);
-  assert.equal(report.coverageSummary.unknownSalinityLeads, 90);
+  assert.equal(report.coverageSummary.namedWaterbodyLeads, 97);
+  assert.equal(report.coverageSummary.byWaterbodyKind.river, 51);
+  assert.equal(report.coverageSummary.sourceAssignments, 253);
+  assert.equal(report.coverageSummary.unknownSalinityLeads, 92);
   assert.equal(report.coverageSummary.boundaryGeometryValidated, 0);
   assert.equal(report.coverageSummary.publicAdmission, false);
   assert.equal(report.coverageSummary.regionalBaselineComplete, false);

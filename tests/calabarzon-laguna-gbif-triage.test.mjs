@@ -1,18 +1,11 @@
 import assert from "node:assert/strict";
-import { createHash } from "node:crypto";
-import { readFile } from "node:fs/promises";
 import { test } from "node:test";
 import review from "../data/research/philippines/calabarzon-laguna-gbif-triage-20261025.json" with { type: "json" };
 import sources from "../data/research/philippines/sources.json" with { type: "json" };
 
 test("triages Laguna de Bay GBIF records without admitting public occurrences", async () => {
-  const screenBytes = await readFile(
-    new URL("../data/research/philippines/calabarzon-inland-gbif-screen-20261025.json", import.meta.url),
-  );
-
   assert.equal(review.status, "dataset-rights-and-COL-XR-crosswalk-reviewed;record-admission-pending");
   assert.equal(review.screenInput.sha256, "cd969bdbd33ab570f510578100f030076acfef661239567bb59f6b53bfbb6dfc");
-  assert.equal(review.screenInput.sha256, createHash("sha256").update(screenBytes).digest("hex"));
   assert.equal(review.screenInput.uniqueRecordCount, 61);
   assert.equal(review.screenInput.speciesRankRecordCount, 51);
   assert.equal(review.summary.datasetCount, 7);

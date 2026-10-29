@@ -1063,3 +1063,24 @@ Verification for this research-only batch: `npm run test:species:pipeline`, `npm
 - **Disposition:** added one source-named estuary lead and kept its identity, salinity, extent, geometry, fish evidence and rights unresolved. No species assertion, absence inference, public app row or geometry was added.
 - **Updated checkpoint:** CALABARZON now has 97 selected waterbody leads, including 3 estuary leads; 189 registered sources; zero public admissions; and an incomplete waterbody denominator and fish baseline.
 - **Next:** obtain authorized direct EIS/hearing-report access, inspect the full actual-fishing and station tables, resolve the Rosario estuary against permitted hydrography, then review taxonomy and item-specific reuse. Continue the other CALABARZON inland and coastal gaps; do not mark the region complete or advance to NCR.
+
+## 108. Rosario Wawa bounded GBIF fish search -- 26 October 2026
+
+- **Search:** five CoL XR Actinopterygii searches checked GBIF `waterBody` and `locality` strings for Wawa River, Wawa estuary, Wawa, and Rosario Cavite. All returned HTTP 200 with zero candidates.
+- **Interpretation:** this only means the current GBIF index returned no fish records for these bounded indexed-text searches. It does not establish absence, and it cannot resolve the Rosario estuary against the separately named Wawa River at Rodriguez, Rizal.
+- **Disposition:** recorded raw response files, query parameters and hashes. Added the GBIF source reference to the Wawa research lead, while keeping public admission false and adding no fish assertion, geometry, or absence claim.
+- **Next:** obtain authorized EIS access and visually review the CvSU Cañas-watershed figure that includes coordinates for the Wawa (Rosario) shrimp-sampling site. Crosswalk that site only if the map supports it; do not assume it is the same estuary or channel. Keep CALABARZON incomplete and do not advance to NCR.
+
+## 109. Rosario Wawa and Cañas-study site identity crosswalk -- 26 October 2026
+
+- **CvSU site evidence:** the 2022 article names Wawa (Rosario) as one of four selected Cañas River study sites. The separate research review records 16 shrimp individuals across six source-named taxa at its Wawa site aggregate. The article says selected-site coordinates are included with Figure 1, but no visual figure review or coordinate transcription was completed.
+- **EMB evidence:** official indexed Island E project material names a Wawa River estuary in the Rosario coastal project context and exposes a project-area fishing-table lead; direct EIS retrieval remains blocked with HTTP 403.
+- **Disposition:** the matching name and municipality do not confirm the same physical watercourse or estuary. Keep the CvSU site and EMB estuary as unresolved identity candidates; do not merge with Wawa River in Rodriguez, Rizal. Do not transfer the shrimp count or taxa to the estuary. No fish assertion, geometry, public row, or absence claim was added.
+- **Next:** inspect the CvSU Figure 1 and compare the printed coordinate precision/context with permitted hydrography and authorized EIS station information before making a physical crosswalk. Keep CALABARZON incomplete.
+
+## 110. CvSU Labac thesis-access route audit -- 29 October 2026
+
+- **Official route:** the CvSU thesis explorer redirected to authentication before search. Its official thesis-abstract form requests identity and institutional details, a thesis barcode, and privacy consent. No login, form submission, email, or personal-data transmission occurred.
+- **Applicability:** the 2014 “Identification and Characterization of Fish Species in Labac River” remains a secondary bibliographic lead with uncertain document type. Do not assume a thesis-abstract form can retrieve a conference presentation or full text. The official CvSU 2022 journal bibliography also cites a 2017 Cañas fish-and-crustacean bachelor's thesis, but no catalog match or thesis content was found.
+- **Disposition:** this records a retrieval constraint only. No biological evidence, species assertion, waterbody geometry, public row, absence claim, or publication permission was added. External-request eligibility and item-specific reuse remain unverified.
+- **Next:** continue independently accessible station-resolved fish sources. If the thesis leads are needed, first confirm eligibility and exact catalog identity with the library, then request an authorized copy and separately review reuse terms. Keep CALABARZON incomplete and do not advance to NCR.

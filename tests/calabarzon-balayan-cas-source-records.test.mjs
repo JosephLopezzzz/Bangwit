@@ -110,8 +110,8 @@ test("CAS row decisions preserve GBIF quality flags and admit historical researc
 });
 
 test("registry and gap report pin CAS evidence without implying public coverage", () => {
-  assert.equal(registry.sourceCount, 175);
-  assert.equal(registry.sources.length, 172);
+  assert.equal(registry.sourceCount, 190);
+  assert.equal(registry.sources.length, 190);
   const casSource = registry.sources.find((source) => source.id === "cas-balayan-primary-archive-check");
   const taxonomySource = registry.sources.find((source) => source.id === "worms-balayan-cas-taxonomy-crosscheck");
   assert.ok(casSource && taxonomySource);
@@ -119,7 +119,7 @@ test("registry and gap report pin CAS evidence without implying public coverage"
   assert.equal(casSource.license, "CC0 1.0");
   assert.equal(taxonomySource.publicationApproval, false);
   assert.equal(taxonomySource.license, null);
-  assert.equal(gap.coverageSummary.registeredSources, 175);
+  assert.equal(gap.coverageSummary.registeredSources, 190);
   assert.equal(gap.inputHashes.sourcesSha256, digest(bytes[3]));
   assert.equal(gap.inputHashes.balayanCasSourceSha256, digest(bytes[0]));
   assert.equal(gap.inputHashes.balayanCasRowDecisionsSha256, digest(bytes[1]));

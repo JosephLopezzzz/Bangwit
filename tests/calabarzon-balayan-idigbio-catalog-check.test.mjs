@@ -117,7 +117,7 @@ test("source registry and CALABARZON gap snapshot record the iDigBio follow-up",
     gapReport.inputHashes.balayanFieldMuseumSourceSha256,
     createHash("sha256").update(fieldMuseumBytes).digest("hex"),
   );
-  assert.equal(gapReport.coverageSummary.registeredSources, 175);
+  assert.equal(gapReport.coverageSummary.registeredSources, 190);
   assert.match(gap.reason, /two FMNH and six CAS SU\(ICH\) records.*historical research-ledger evidence/i);
   assert.match(gap.nextAction, /five citations grouped as one item/i);
   assert.match(gap.nextAction, /D 5115 versus D 5116/i);
@@ -190,9 +190,9 @@ test("NMNH crosswalk verifies reuse but holds the grouped USNM item from a bay-s
   assert.ok(registry.sources.find((source) => source.id === "iwamoto-etal-2015-usnm-122919-depth-crosscheck"));
   assert.equal(nmnhSource.publicationApproval, false);
   assert.equal(wormsSource.publicationApproval, false);
-  assert.equal(registry.sourceCount, 175);
+  assert.equal(registry.sourceCount, 190);
   assert.equal(registry.sourceCount, registry.sources.length);
-  assert.equal(gapReport.coverageSummary.registeredSources, 175);
+  assert.equal(gapReport.coverageSummary.registeredSources, 190);
   assert.equal(gapReport.inputHashes.sourcesSha256, createHash("sha256").update(sourceBytes).digest("hex"));
   assert.equal(
     gapReport.inputHashes.balayanNmnhSourceSha256,

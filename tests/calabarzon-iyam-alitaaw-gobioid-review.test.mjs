@@ -82,7 +82,7 @@ test("reuse conflict, waterbody scope, and the CALABARZON checkpoint stay explic
   assert.equal(report.coverageSummary.distinctSourceReferencesAssigned, new Set(scope.waterbodies.flatMap((row) => row.sourceRefs)).size);
   assert.equal(report.inputHashes.scopeSha256, sha256(scopeBytes));
   assert.equal(report.inputHashes.sourcesSha256, sha256(sourceBytes));
-  assert.equal(report.coverageSummary.namedWaterbodyLeads, 95);
+  assert.equal(report.coverageSummary.namedWaterbodyLeads, 97);
   assert.equal(report.coverageSummary.regionalBaselineComplete, false);
   assert.equal(report.coverageSummary.admittedPublicRecords, 0);
 });

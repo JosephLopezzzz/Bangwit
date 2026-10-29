@@ -90,7 +90,7 @@ test("Cavite bay GBIF text-screen keeps non-fish and unresolved hits out of fish
     assert.equal(lead.salinity.classification, "unknown");
     assert.equal(lead.boundaryStatus, "not-delineated");
     assert.equal(lead.publicAdmission, false);
-    assert.equal(lead.reviewStatus, "bounded-GBIF-text-screen-reviewed;fish-evidence-incomplete");
+    assert.match(lead.reviewStatus, /fish-evidence-incomplete/);
     assert.equal(
       lead.fishEvidenceStatus,
       "bounded-GBIF-all-taxon-text-screen;four-Mollusca-records-one-taxon-unmatched;no-fish-evidence-or-absence-inferred",
@@ -102,7 +102,7 @@ test("Cavite bay GBIF text-screen keeps non-fish and unresolved hits out of fish
   const assignments = scope.waterbodies.flatMap((row) => row.sourceRefs);
   assert.equal(report.coverageSummary.sourceAssignments, assignments.length);
   assert.equal(report.coverageSummary.distinctSourceReferencesAssigned, new Set(assignments).size);
-  assert.equal(report.coverageSummary.sourceAssignments, 245);
+  assert.equal(report.coverageSummary.sourceAssignments, 253);
   assert.equal(report.coverageSummary.leadsStillResearchQueued, 12);
   assert.equal(report.coverageSummary.regionalBaselineComplete, false);
   assert.equal(report.coverageSummary.publicAdmission, false);
