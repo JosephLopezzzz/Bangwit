@@ -4,7 +4,7 @@ import { readFile } from "node:fs/promises";
 import { test } from "node:test";
 
 const base = new URL("../data/research/philippines/", import.meta.url);
-const [report, scope, sweep, sourceRegistry, scopeBytes, sourceBytes, museumBytes, taxonomyFollowupBytes, caviteBayScreenBytes, midasFollowupBytes, dagatdagatanFollowupBytes, balOnSearchBytes, gapanSapangReviewBytes, gapanGeoNamesCrosscheckBytes, ternateRiversReviewBytes] = await Promise.all([
+const [report, scope, sweep, sourceRegistry, scopeBytes, sourceBytes, museumBytes, taxonomyFollowupBytes, caviteBayScreenBytes, midasFollowupBytes, dagatdagatanFollowupBytes, balOnSearchBytes, gapanSapangReviewBytes, gapanGeoNamesCrosscheckBytes, ternateRiversReviewBytes, denominatorProfile] = await Promise.all([
   readFile(new URL("calabarzon-coverage-gap-report-20261025.json", base), "utf8").then(JSON.parse),
   readFile(new URL("calabarzon-scope.json", base), "utf8").then(JSON.parse),
   readFile(new URL("calabarzon-coverage-source-sweep.json", base), "utf8").then(JSON.parse),
@@ -20,6 +20,7 @@ const [report, scope, sweep, sourceRegistry, scopeBytes, sourceBytes, museumByte
   readFile(new URL("calabarzon-gapan-sapang-river-source-review-20261026.json", base), "utf8"),
   readFile(new URL("calabarzon-gapan-sapang-geonames-crosscheck-20261026.json", base)),
   readFile(new URL("calabarzon-ternate-protected-landscape-rivers-review-20261026.json", base)),
+  readFile(new URL("calabarzon-coverage-denominator-profile-20261029.json", base), "utf8").then(JSON.parse),
 ]);
 
 test("CALABARZON checkpoint reports its gaps without claiming a complete region", () => {
@@ -102,4 +103,27 @@ test("CALABARZON checkpoint reports its gaps without claiming a complete region"
   assert.equal(report.coverageSummary.admittedPublicRecords, 0);
   assert.equal(report.coverageSummary.regionalBaselineComplete, false);
   assert.equal(sweep.regionalGapSummary.regionalBaselineComplete, false);
+});
+
+test("CALABARZON denominator profile stays pinned to the incomplete 97-lead scope", () => {
+  const sourceRefs = [...new Set(scope.waterbodies.flatMap((waterbody) => waterbody.sourceRefs))];
+  const unresolvedSourceRefs = sourceRefs.filter((sourceRef) => !sourceRegistry.sources.some((source) => source.id === sourceRef));
+
+  assert.equal(denominatorProfile.status, "research-only-coverage-audit");
+  assert.equal(denominatorProfile.provenance.scopeSha256, createHash("sha256").update(scopeBytes).digest("hex"));
+  assert.equal(denominatorProfile.provenance.sourceRegistrySha256, createHash("sha256").update(sourceBytes).digest("hex"));
+  assert.equal(denominatorProfile.denominator.waterbodyResearchLeads, scope.waterbodies.length);
+  assert.equal(denominatorProfile.denominator.waterbodyResearchLeads, 97);
+  assert.deepEqual(denominatorProfile.denominator.byKind, report.coverageSummary.byWaterbodyKind);
+  assert.equal(denominatorProfile.denominator.uniqueSourceReferences, sourceRefs.length);
+  assert.deepEqual(denominatorProfile.denominator.unresolvedSourceReferences, unresolvedSourceRefs);
+  assert.deepEqual(denominatorProfile.reviewGaps.boundary, { "not-delineated": 97 });
+  assert.equal(denominatorProfile.reviewGaps.salinity.unknown, 92);
+  assert.equal(denominatorProfile.reviewGaps.fishEvidenceNotReviewed.length, 17);
+  assert.equal(denominatorProfile.reviewGaps.researchQueued.length, 12);
+  assert.equal(denominatorProfile.existingScopeCounters.geometryValidated, 0);
+  assert.equal(denominatorProfile.existingScopeCounters.speciesAssertionsImported, 9);
+  assert.equal(denominatorProfile.existingScopeCounters.publicRecordsAdmitted, 0);
+  assert.match(denominatorProfile.interpretation[0], /not proof that every CALABARZON/i);
+  assert.match(denominatorProfile.interpretation[3], /adds no species assertion/i);
 });
