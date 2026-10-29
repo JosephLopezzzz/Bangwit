@@ -1,0 +1,325 @@
+{
+  "schemaVersion": 1,
+  "batchId": "calabarzon-santa-cruz-station-gbif-screen-20261029",
+  "reviewedOn": "2026-10-29",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "waterbody": {
+    "id": "ph-wb-santa-cruz-laguna-river",
+    "registryName": "Sta Cruz River",
+    "studyName": "Santa Cruz River System, Laguna"
+  },
+  "status": "eight-exact-locality-waterBody-queries-complete;four-nonfish-records-excluded;no-fish-records-found;bounded-screen-only",
+  "method": {
+    "endpoint": "https://api.gbif.org/v1/occurrence/search",
+    "queryCount": 8,
+    "terms": [
+      "Nagcarlan",
+      "Liliw",
+      "Calumpang",
+      "Sta Cruz"
+    ],
+    "fields": [
+      "locality",
+      "waterBody"
+    ],
+    "filters": {
+      "country": "PH",
+      "stateProvince": "Laguna",
+      "basisOfRecord": "PRESERVED_SPECIMEN"
+    },
+    "pageLimit": 100,
+    "taxonFilter": null,
+    "taxonFilterReason": "A known CAS fish occurrence (3426421232) in this named river has null class and classKey in GBIF; filtering by classKey would suppress known fish evidence. Results were screened after retrieval instead.",
+    "fieldBehavior": "Exact indexed-field text queries, not spatial search or substring search.",
+    "apiDocsUrl": "https://techdocs.gbif.org/en/openapi/v1/occurrence"
+  },
+  "queries": [
+    {
+      "field": "locality",
+      "term": "Nagcarlan",
+      "parameters": {
+        "country": "PH",
+        "stateProvince": "Laguna",
+        "basisOfRecord": "PRESERVED_SPECIMEN",
+        "locality": "Nagcarlan",
+        "limit": "100"
+      },
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&stateProvince=Laguna&basisOfRecord=PRESERVED_SPECIMEN&locality=Nagcarlan&limit=100",
+      "httpStatus": 200,
+      "resultCount": 2,
+      "enumeratedCount": 2,
+      "endOfRecords": true,
+      "rawResponse": {
+        "path": "raw/calabarzon-santa-cruz-station-gbif-screen-20261029/locality-nagcarlan.json",
+        "bytes": 11656,
+        "sha256": "5638ce30f0f03222da653e3a7d263d24ebef1e54161ae6eb27238a3120aa51d8"
+      },
+      "records": [
+        {
+          "gbifId": 3710735598,
+          "scientificName": "Ophioglossum reticulatum L.",
+          "taxonRank": "SPECIES",
+          "kingdom": "Plantae",
+          "class": "Polypodiopsida",
+          "order": "Ophioglossales",
+          "family": "Ophioglossaceae",
+          "taxonKey": 2650137,
+          "locality": "Nagcarlan",
+          "waterBody": null,
+          "stateProvince": "Laguna",
+          "basisOfRecord": "PRESERVED_SPECIMEN",
+          "license": "http://creativecommons.org/licenses/by-nc/4.0/legalcode",
+          "datasetKey": "c8d12f8a-7e39-4e2c-92d7-825d590ad15b",
+          "issues": []
+        },
+        {
+          "gbifId": 3783458402,
+          "scientificName": "Marchantia emarginata Reinw., Blume & Nees",
+          "taxonRank": "SPECIES",
+          "kingdom": "Plantae",
+          "class": "Marchantiopsida",
+          "order": "Marchantiales",
+          "family": "Marchantiaceae",
+          "taxonKey": 7804871,
+          "locality": "Nagcarlan",
+          "waterBody": null,
+          "stateProvince": "Laguna",
+          "basisOfRecord": "PRESERVED_SPECIMEN",
+          "license": "http://creativecommons.org/publicdomain/zero/1.0/legalcode",
+          "datasetKey": "d415c253-4d61-4459-9d25-4015b9084fb0",
+          "issues": [
+            "MODIFIED_DATE_INVALID"
+          ]
+        }
+      ]
+    },
+    {
+      "field": "waterBody",
+      "term": "Nagcarlan",
+      "parameters": {
+        "country": "PH",
+        "stateProvince": "Laguna",
+        "basisOfRecord": "PRESERVED_SPECIMEN",
+        "waterBody": "Nagcarlan",
+        "limit": "100"
+      },
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&stateProvince=Laguna&basisOfRecord=PRESERVED_SPECIMEN&waterBody=Nagcarlan&limit=100",
+      "httpStatus": 200,
+      "resultCount": 0,
+      "enumeratedCount": 0,
+      "endOfRecords": true,
+      "rawResponse": {
+        "path": "raw/calabarzon-santa-cruz-station-gbif-screen-20261029/waterBody-nagcarlan.json",
+        "bytes": 79,
+        "sha256": "16004ddeb6b1eb033e3665fa6082d9cdd36533ce1f36272a2a95f5664f1b9dcd"
+      },
+      "records": []
+    },
+    {
+      "field": "locality",
+      "term": "Liliw",
+      "parameters": {
+        "country": "PH",
+        "stateProvince": "Laguna",
+        "basisOfRecord": "PRESERVED_SPECIMEN",
+        "locality": "Liliw",
+        "limit": "100"
+      },
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&stateProvince=Laguna&basisOfRecord=PRESERVED_SPECIMEN&locality=Liliw&limit=100",
+      "httpStatus": 200,
+      "resultCount": 2,
+      "enumeratedCount": 2,
+      "endOfRecords": true,
+      "rawResponse": {
+        "path": "raw/calabarzon-santa-cruz-station-gbif-screen-20261029/locality-liliw.json",
+        "bytes": 13476,
+        "sha256": "b0346532dc0b184aae163f90cbdeac6c13021105080486f461be9e6fa86ca344"
+      },
+      "records": [
+        {
+          "gbifId": 1270007820,
+          "scientificName": "Bactrocera munda (Bezzi, 1919)",
+          "taxonRank": "SPECIES",
+          "kingdom": "Animalia",
+          "class": "Insecta",
+          "order": "Diptera",
+          "family": "Tephritidae",
+          "taxonKey": 8090828,
+          "locality": "Liliw",
+          "waterBody": null,
+          "stateProvince": "Laguna",
+          "basisOfRecord": "PRESERVED_SPECIMEN",
+          "license": "http://creativecommons.org/publicdomain/zero/1.0/legalcode",
+          "datasetKey": "7e380070-f762-11e1-a439-00145eb45e9a",
+          "issues": [
+            "GEODETIC_DATUM_ASSUMED_WGS84",
+            "RECORDED_DATE_INVALID",
+            "COLLECTION_MATCH_NONE",
+            "INSTITUTION_MATCH_FUZZY"
+          ]
+        },
+        {
+          "gbifId": 4941128758,
+          "scientificName": "Ochterus marginatus insularis Rieger, 1977",
+          "taxonRank": "SUBSPECIES",
+          "kingdom": "Animalia",
+          "class": "Insecta",
+          "order": "Hemiptera",
+          "family": "Ochteridae",
+          "taxonKey": 9636304,
+          "locality": "Liliw",
+          "waterBody": null,
+          "stateProvince": "Laguna",
+          "basisOfRecord": "PRESERVED_SPECIMEN",
+          "license": "http://creativecommons.org/publicdomain/zero/1.0/legalcode",
+          "datasetKey": "8b42bbf1-b287-40a0-ab3a-88fb7928f8e2",
+          "issues": [
+            "CONTINENT_DERIVED_FROM_COORDINATES",
+            "INSTITUTION_COLLECTION_MISMATCH"
+          ]
+        }
+      ]
+    },
+    {
+      "field": "waterBody",
+      "term": "Liliw",
+      "parameters": {
+        "country": "PH",
+        "stateProvince": "Laguna",
+        "basisOfRecord": "PRESERVED_SPECIMEN",
+        "waterBody": "Liliw",
+        "limit": "100"
+      },
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&stateProvince=Laguna&basisOfRecord=PRESERVED_SPECIMEN&waterBody=Liliw&limit=100",
+      "httpStatus": 200,
+      "resultCount": 0,
+      "enumeratedCount": 0,
+      "endOfRecords": true,
+      "rawResponse": {
+        "path": "raw/calabarzon-santa-cruz-station-gbif-screen-20261029/waterBody-liliw.json",
+        "bytes": 79,
+        "sha256": "16004ddeb6b1eb033e3665fa6082d9cdd36533ce1f36272a2a95f5664f1b9dcd"
+      },
+      "records": []
+    },
+    {
+      "field": "locality",
+      "term": "Calumpang",
+      "parameters": {
+        "country": "PH",
+        "stateProvince": "Laguna",
+        "basisOfRecord": "PRESERVED_SPECIMEN",
+        "locality": "Calumpang",
+        "limit": "100"
+      },
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&stateProvince=Laguna&basisOfRecord=PRESERVED_SPECIMEN&locality=Calumpang&limit=100",
+      "httpStatus": 200,
+      "resultCount": 0,
+      "enumeratedCount": 0,
+      "endOfRecords": true,
+      "rawResponse": {
+        "path": "raw/calabarzon-santa-cruz-station-gbif-screen-20261029/locality-calumpang.json",
+        "bytes": 79,
+        "sha256": "16004ddeb6b1eb033e3665fa6082d9cdd36533ce1f36272a2a95f5664f1b9dcd"
+      },
+      "records": []
+    },
+    {
+      "field": "waterBody",
+      "term": "Calumpang",
+      "parameters": {
+        "country": "PH",
+        "stateProvince": "Laguna",
+        "basisOfRecord": "PRESERVED_SPECIMEN",
+        "waterBody": "Calumpang",
+        "limit": "100"
+      },
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&stateProvince=Laguna&basisOfRecord=PRESERVED_SPECIMEN&waterBody=Calumpang&limit=100",
+      "httpStatus": 200,
+      "resultCount": 0,
+      "enumeratedCount": 0,
+      "endOfRecords": true,
+      "rawResponse": {
+        "path": "raw/calabarzon-santa-cruz-station-gbif-screen-20261029/waterBody-calumpang.json",
+        "bytes": 79,
+        "sha256": "16004ddeb6b1eb033e3665fa6082d9cdd36533ce1f36272a2a95f5664f1b9dcd"
+      },
+      "records": []
+    },
+    {
+      "field": "locality",
+      "term": "Sta Cruz",
+      "parameters": {
+        "country": "PH",
+        "stateProvince": "Laguna",
+        "basisOfRecord": "PRESERVED_SPECIMEN",
+        "locality": "Sta Cruz",
+        "limit": "100"
+      },
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&stateProvince=Laguna&basisOfRecord=PRESERVED_SPECIMEN&locality=Sta+Cruz&limit=100",
+      "httpStatus": 200,
+      "resultCount": 0,
+      "enumeratedCount": 0,
+      "endOfRecords": true,
+      "rawResponse": {
+        "path": "raw/calabarzon-santa-cruz-station-gbif-screen-20261029/locality-sta-cruz.json",
+        "bytes": 79,
+        "sha256": "16004ddeb6b1eb033e3665fa6082d9cdd36533ce1f36272a2a95f5664f1b9dcd"
+      },
+      "records": []
+    },
+    {
+      "field": "waterBody",
+      "term": "Sta Cruz",
+      "parameters": {
+        "country": "PH",
+        "stateProvince": "Laguna",
+        "basisOfRecord": "PRESERVED_SPECIMEN",
+        "waterBody": "Sta Cruz",
+        "limit": "100"
+      },
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&stateProvince=Laguna&basisOfRecord=PRESERVED_SPECIMEN&waterBody=Sta+Cruz&limit=100",
+      "httpStatus": 200,
+      "resultCount": 0,
+      "enumeratedCount": 0,
+      "endOfRecords": true,
+      "rawResponse": {
+        "path": "raw/calabarzon-santa-cruz-station-gbif-screen-20261029/waterBody-sta-cruz.json",
+        "bytes": 79,
+        "sha256": "16004ddeb6b1eb033e3665fa6082d9cdd36533ce1f36272a2a95f5664f1b9dcd"
+      },
+      "records": []
+    }
+  ],
+  "summary": {
+    "successfulQueries": 8,
+    "failedQueries": 0,
+    "distinctRecords": 4,
+    "explicitFishClassMatches": 0,
+    "nonFishRecords": 4,
+    "unresolvedTaxonomyRecords": 0,
+    "taxonomicBreakdown": {
+      "Animalia/Insecta": 2,
+      "Plantae/Marchantiopsida": 1,
+      "Plantae/Polypodiopsida": 1
+    },
+    "interpretation": "The four exact-name specimen hits are explicitly recorded as two Plantae and two Insecta taxa. None is a fish; records with missing taxonomic classification would remain unresolved. This is not evidence of fish absence from the sites."
+  },
+  "decision": {
+    "speciesAssertionsAdded": 0,
+    "sourceAssignmentsChanged": false,
+    "waterbodyIdentityResolved": false,
+    "geometryAdded": false,
+    "publicAppProjectionAdded": false,
+    "publicationApproval": false
+  },
+  "limitations": [
+    "These exact strings are place names, not unique station identifiers; matching locality text does not prove that a record belongs to the study station.",
+    "The search covers only country PH, stateProvince Laguna, preserved specimens, four exact strings and two indexed fields; spelling variants and records without these text fields are not covered.",
+    "A zero result or no fish among exact-name hits is not evidence of fish absence.",
+    "The existing three CC0 CAS records named Santa Cruz River date to 18 October 1941 and do not crosswalk to the 2016-2017 study's four station aggregates.",
+    "The 2022 study table remains untranscribed pending permission/reuse review; no taxa were inferred from its aggregate count of 15 species."
+  ],
+  "nextAction": "Seek permission for the 2022 survey's table or obtain independent station-resolved records from an eligible provider; keep the existing 1941 Santa Cruz River evidence as a separate historical line until station identity is supported."
+}
