@@ -18,6 +18,8 @@
 >
 > I also reviewed the 2009 ISSAAS convention abstracts by Apayao State College researchers: one lists fish-and-shell vernacular labels and another names ten rivers, but neither abstract supplies scientific identifications, field dates or station-level records. I do not treat those labels as species records. If the College holds the underlying reports, field records, photos or taxonomic crosswalk, could you point me to them and the applicable terms?
 >
+> I separately reviewed PSA's Apayao Q3 fisheries production report and a provincial tourism page that uses some local fish names in food contexts. PSA's `Igat`, `Biya` and `Dalag` are aggregate statistical categories without scientific or site-level crosswalks; the tourism page's `kiwat`/`Palilang` wording does not resolve the abstract's distinct `kiwat`/`palileng` labels. If your researchers can clarify the relevant language/community context, spellings, any source photographs or vouchers, and whether any names were cross-identified, that would help us avoid treating similar names as the same taxon. I am not requesting that production figures or cuisine-page statements be treated as occurrence data.
+>
 > Could the College advise whether it holds the full report or related project materials? If available, I would be grateful for information on:
 >
 > - the report's complete citation, date/version and any publicly accessible copy;
