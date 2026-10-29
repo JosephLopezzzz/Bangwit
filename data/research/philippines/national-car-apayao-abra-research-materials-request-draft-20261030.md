@@ -16,6 +16,8 @@
 >
 > I also saw the College's 2025 completed-research listing for “Development of Database Covering Agri – Fishery in the Province of Apayao.” The title appears twice on the public page, so I do not assume that it represents two datasets or that the database contains wild-fish species observations. Could you clarify the project authors, intended scope and whether a public or permission-based data-access route exists?
 >
+> I also reviewed the 2009 ISSAAS convention abstracts by Apayao State College researchers: one lists fish-and-shell vernacular labels and another names ten rivers, but neither abstract supplies scientific identifications, field dates or station-level records. I do not treat those labels as species records. If the College holds the underlying reports, field records, photos or taxonomic crosswalk, could you point me to them and the applicable terms?
+>
 > Could the College advise whether it holds the full report or related project materials? If available, I would be grateful for information on:
 >
 > - the report's complete citation, date/version and any publicly accessible copy;
