@@ -4,8 +4,8 @@
   "phaseId": "L1",
   "regionId": "0400000000",
   "waterbodyIds": [
-    "ph-wb-taal-lake",
-    "ph-wb-pansipit-river"
+    "ph-wb-pansipit-river",
+    "ph-wb-taal-lake"
   ],
   "source": {
     "sourceId": "nfrdi-pansipit-taal-migratory-survey",
@@ -14,55 +14,108 @@
       "Eliadora C. Mercene",
       "Aida R. Alzona"
     ],
+    "journal": "The Philippine Journal of Fisheries",
+    "volume": 21,
+    "publicationYear": 1990,
+    "printedPages": "89-95",
     "officialHtmlUrl": "https://www.nfrdi.da.gov.ph/tpjf/vol21/pp89-95.php",
     "officialPdfUrl": "https://nfrdi.da.gov.ph/tpjf/vol21/Survey%20Migratory%20Fishes%20in%20Pansipit%20River%20and%20Taal%20Lake.pdf",
-    "publicationYear": null,
-    "originalPdfAcquired": false,
-    "pdfSha256": null
+    "originalPdfAcquired": true,
+    "pdfReviewMethod": "The six scanned pages were rendered and visually reviewed; text extraction returned no usable article text.",
+    "pdfPages": 6,
+    "pdfBytes": 2059177,
+    "pdfSha256": "982fa91429b3e93f8ba0b180018ace06ea6291af76fce310d047791737825ab2",
+    "temporaryWorkingCopyCommitted": false
   },
   "findings": {
     "officialHtmlPage": {
       "pageTitle": "Survey Migratory Fishes in Pansipit River and Taal Lake",
       "renderedAbstractMismatch": true,
-      "mismatchDescription": "The HTML text describes an analysis of catch, effort, and catch per unit effort for five Tayabas Bay fishing gears over 1983-1988. This content does not match the Pansipit/Taal title.",
-      "source": "Official NFRDI Philippine Journal of Fisheries page pp89-95.php"
+      "mismatchDescription": "The HTML text describes catch, effort, and catch per unit effort for five Tayabas Bay fishing gears over 1983-1988. It is not the abstract for the titled Pansipit/Taal article and was excluded as evidence."
     },
-    "officialPdfSearchIndex": {
-      "result": "Search-indexed PDF text describes a fish-corral survey connecting Taal Lake and Pansipit River, with seven named historical fish records and aggregate production values.",
-      "namedRecords": [
-        "Caranx marginatus",
-        "Caranx sp.",
-        "Caranx ignobilis",
-        "Lutianus argentimaculatus",
-        "Mugil dussumieri",
-        "Mugil ceramensis",
-        "Anguilla mauritiana"
-      ],
+    "reviewedPdf": {
+      "identity": "The PDF cover/article pages confirm the Pansipit River and Taal Lake title, authors, journal volume, and 1990 publication year.",
+      "studyPeriod": "July 1983-June 1984",
+      "methods": "One fish corral in Pansipit River and three separate fish corrals in Taal Lake were monitored daily for catches; two of the Taal corrals were in San Nicolas and one in Agoncillo.",
+      "pansipitTable": {
+        "printedPage": 94,
+        "tableTitle": "Total production (in kg) of Pansipit Fish Corral, July 1983 to June 1984",
+        "samplingUnit": "One fish corral; not a whole-river survey.",
+        "sourceSpelledCatchGroups": [
+          {
+            "name": "Anguilla mauritiana",
+            "reportedKg": 1658.1
+          },
+          {
+            "name": "Caranx marginatus",
+            "reportedKg": 1323.3
+          },
+          {
+            "name": "Mugil sp.",
+            "reportedKg": 14.8
+          },
+          {
+            "name": "Mugil ceramensis",
+            "reportedKg": 44.3
+          },
+          {
+            "name": "Lutianus argentimaculatus",
+            "reportedKg": 107.6
+          }
+        ],
+        "reportedTotalKg": 3148.1
+      },
+      "taalTable": {
+        "printedPage": 94,
+        "tableTitle": "Total production (in kg) of Taal Lake fish corrals, July 1983 to June 1984",
+        "samplingUnit": "Three fish corrals; reported separately from Pansipit River.",
+        "sourceSpelledCatchGroups": [
+          {
+            "name": "Caranx ignobilis",
+            "reportedKg": 769.6
+          },
+          {
+            "name": "Caranx marginatus",
+            "reportedKg": 152.8
+          },
+          {
+            "name": "Caranx sp.",
+            "reportedKg": 1.2
+          },
+          {
+            "name": "Anguilla mauritiana",
+            "reportedKg": 50.5
+          },
+          {
+            "name": "Lutianus argentimaculatus",
+            "reportedKg": 7.0
+          }
+        ],
+        "reportedTotalKg": 981.1
+      },
+      "abstractTableDiscrepancy": "The abstract includes Mugil dussumieri in the combined system name list; the Pansipit table instead reports Mugil sp. No species-level Pansipit assignment is made for the abstract-only name.",
+      "larvalSampling": "The paper separately describes larval/fry sampling in Balayan Bay, 10-15 m from shore near the mouth of Pansipit River. This is retained as a Balayan Bay sampling locality, not assigned to the river or estuary.",
       "limits": [
-        "These are source-spelled names from a search-indexed abstract, not accepted taxonomic matches.",
-        "The abstract does not resolve which named species were caught in each individual waterbody.",
-        "The abstract's catch totals are aggregate historical values and do not establish current abundance or fishery status."
+        "A fish-corral catch sample is not a systematic census of the river or lake.",
+        "The annual production tables are historical catch weights, not current abundance, occupancy, catchability, diet, or safety data.",
+        "Taxon spellings and rank are preserved as printed; no accepted-name crosswalk is part of this review.",
+        "No exact corral coordinates or estuary boundary are reported in the reviewed material."
       ]
-    },
-    "retrieval": {
-      "htmlOpen": "Timed out during direct page open; search-indexed page text was available.",
-      "pdfOpen": "Timed out during direct PDF open; search-indexed text was available.",
-      "download": "No original PDF bytes were downloaded or hashed."
     }
   },
   "decision": {
-    "status": "hold-source-conflict-and-primary-document-access-pending",
+    "status": "primary-pdf-reviewed;historical-catch-context-only;normalized-species-and-redistribution-held",
     "htmlAbstractUse": "rejected-for-this-titled-article",
-    "speciesAssertionsAdmitted": 0,
-    "waterbodyAssignmentsAdmitted": 0,
+    "historicalCatchTablesTranscribedForResearch": true,
+    "newCanonicalSpeciesAssertionsAdmitted": 0,
+    "newCurrentPresenceAssertionsAdmitted": 0,
     "geometryAdmitted": false,
     "publicAppProjection": false,
-    "rights": "No item-specific redistribution permission or license was verified.",
+    "rights": "No item-specific redistribution license was identified in the inspected PDF; do not publish copied table rows until applicable terms are reviewed.",
     "nextEvidenceNeeded": [
-      "Acquire the original issue/PDF through an ordinary authorized route and verify its cover, page numbers, tables, dates, and identity.",
-      "Resolve historical taxon spellings against an authoritative current checklist while preserving the names exactly as printed.",
-      "Check item-specific rights before copying any table or publishing species-level records.",
-      "Keep fish-corral survey evidence, waterbody-specific assignment, and current fish presence as separate claims."
+      "Crosswalk each source-spelled name against an authoritative taxonomic source while preserving the 1990 spelling and rank.",
+      "Check journal/publisher reuse terms before publishing transcribed table data.",
+      "Keep single-corral catch data, whole-waterbody distribution claims, estuary locality, current presence, and larval sampling as separate evidence types."
     ]
   }
 }
