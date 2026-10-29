@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "batchId": "calabarzon-cenro-calauag-2026-awc-site-crosswalk-20261030",
+  "reviewedOn": "2026-10-30",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "regionName": "Region IV-A (CALABARZON)",
+  "source": {
+    "sourceId": "denr-cenro-calauag-2026-asian-waterbird-census",
+    "url": "https://calabarzon.denr.gov.ph/news-events/denr-calauag-monitors-2026-asian-waterbird-populations-across-quezon-provinces-wetlands/",
+    "provider": "DENR CALABARZON / CENRO Calauag",
+    "activity": "Calendar Year 2026 Asian Waterbird Census conducted in January 2026",
+    "access": "Official search-index text reviewed; direct page open returned HTTP 403",
+    "reuseTerms": "Item-specific reuse terms not reviewed; no article prose or images reproduced."
+  },
+  "method": "Crosswalked the official source-named monitoring areas against the existing CALABARZON scope. Added only explicitly named aquatic features, recorded their source-described locality, and did not turn barangays, farms, or islands into waterbody records.",
+  "sourceNamedSites": [
+    {
+      "municipality": "Tagkawayan",
+      "sourceNames": [
+        "Barangay Magsaysay",
+        "Barangay Seguiwan"
+      ],
+      "namedAquaticFeature": null,
+      "disposition": "Administrative monitoring locations only; no distinct waterbody name given."
+    },
+    {
+      "municipality": "Calauag",
+      "sourceNames": [
+        "Forbes Farm",
+        "Barangay Biyan"
+      ],
+      "namedAquaticFeature": null,
+      "disposition": "Farm and barangay site context; no waterbody identified."
+    },
+    {
+      "municipality": "Guinayangan",
+      "sourceNames": [
+        "Barangay Balinarin"
+      ],
+      "namedAquaticFeature": null,
+      "disposition": "Barangay only; no waterbody identified."
+    },
+    {
+      "municipality": "Guinayangan",
+      "sourceNames": [
+        "Bukal-Maligaya (fishpond)"
+      ],
+      "namedAquaticFeature": null,
+      "disposition": "Held as ambiguous source wording: the excerpt does not resolve whether this is a compound locality, one or more barangays, or a named fishpond. No lead added."
+    },
+    {
+      "municipality": "Guinayangan",
+      "sourceNames": [
+        "Ragay Gulf",
+        "De Guzman Fishpond"
+      ],
+      "namedAquaticFeature": [
+        "Ragay Gulf",
+        "De Guzman Fishpond"
+      ],
+      "disposition": "Added as separate source-named coastal-gulf and managed-fishpond research leads, both tied only to the article’s Hinabaan monitoring context; no feature boundaries inferred.",
+      "waterbodyIds": [
+        "ph-wb-ragay-gulf-quezon",
+        "ph-wb-de-guzman-guinayangan-fishpond"
+      ]
+    },
+    {
+      "municipality": "Lopez",
+      "sourceNames": [
+        "Kalantasan Marsh at Barangay Rizal Rural",
+        "Lalaguna Marshland at Barangay Lalaguna",
+        "Lutang Marsh at Barangay Pamampangin"
+      ],
+      "namedAquaticFeature": [
+        "Kalantasan Marsh",
+        "Lalaguna Marshland",
+        "Lutang Marsh"
+      ],
+      "disposition": "Crosswalk confirms existing scope leads and source-described barangay context; no duplicate lead or geometry added.",
+      "existingWaterbodyIds": [
+        "ph-wb-kalantasan-lopez-marsh",
+        "ph-wb-lalaguna-quezon-marsh",
+        "ph-wb-lutang-lopez-marsh"
+      ]
+    },
+    {
+      "municipality": "Perez",
+      "sourceNames": [
+        "Baliscar Island"
+      ],
+      "namedAquaticFeature": null,
+      "disposition": "Island monitoring site; no specific waterbody name or boundary supplied."
+    }
+  ],
+  "result": {
+    "existingLeadsCrosschecked": 3,
+    "newResearchLeads": [
+      "ph-wb-ragay-gulf-quezon",
+      "ph-wb-de-guzman-guinayangan-fishpond"
+    ],
+    "scopeLeadCountBefore": 97,
+    "scopeLeadCountAfter": 99,
+    "speciesAssertionsAdded": 0,
+    "fishEvidenceAssertionsAdded": 0,
+    "dietClaimsAdded": 0,
+    "salinityClassificationsAdded": 0,
+    "geometryAdded": false,
+    "accessOrLegalClaimsAdded": false,
+    "publicRecordsAdmitted": 0
+  },
+  "limitations": [
+    "The article describes waterbird observation and wetland condition, not fish sampling or fish taxonomy.",
+    "The source-named groupings do not provide coordinates, feature polygons, measured salinity, fishpond ownership, public access, or fishing rules.",
+    "Ragay Gulf is a shared coastal waterbody; its mention in Hinabaan does not establish the gulf-wide administrative extent.",
+    "Bukal-Maligaya (fishpond) and the barangay/farm/island names were not converted into waterbody leads because the physical-feature identity is ambiguous or absent.",
+    "Direct page access returned HTTP 403; the official search-index text was available and used conservatively.",
+    "No fish absence is inferred from this source or from the unadded place names."
+  ],
+  "nextAction": "Seek locality-resolved fish surveys or rights-cleared specimen evidence for the new leads; independently verify the Ragay Gulf site context, fishpond identity, and appropriate extent source before adding biological evidence or geometry."
+}

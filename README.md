@@ -78,3 +78,8 @@ npm run test:evidence
 ```
 
 Tests compare the checked-in JSON with the reviewed inputs, so stale output fails the check. Repeat the source and locality review when refreshing data; passing the adapter does not establish present-day presence or fishing permission.
+
+
+### CALABARZON waterbird-site crosswalk — 30 October 2026
+
+The official [DENR CENRO Calauag 2026 Asian Waterbird Census](https://calabarzon.denr.gov.ph/news-events/denr-calauag-monitors-2026-asian-waterbird-populations-across-quezon-provinces-wetlands/) names Ragay Gulf and De Guzman Fishpond in the Hinabaan, Guinayangan monitoring context. They are now separate research-only aquatic-site leads; the bird survey adds no fish evidence, boundary, salinity, ownership, fishing access, or permission claim. Other barangay, farm, and island mentions were not treated as waterbodies, and the three named Lopez marsh leads were cross-checked without duplication. CALABARZON now has 99 named research leads (including one gulf and one fishpond); its waterbody denominator, fish baseline, and geometry coverage remain incomplete. See [the site crosswalk](data/research/philippines/calabarzon-cenro-calauag-2026-awc-site-crosswalk-20261030.json) and [the updated denominator snapshot](data/research/philippines/calabarzon-coverage-denominator-profile-20261030.json).

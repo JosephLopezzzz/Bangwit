@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "checkedOn": "2026-10-29",
+  "checkedOn": "2026-10-30",
   "regionId": "0400000000",
   "regionName": "Region IV-A (CALABARZON)",
   "status": "in-progress-incomplete-baseline",
@@ -72,7 +72,7 @@
     "limits": "Province plus separate-city starter coverage. Municipalities/component cities and each island/waterbody still require the source-sweep inventory; this is not a completed regional inventory."
   },
   "counts": {
-    "waterbodyResearchLeads": 97,
+    "waterbodyResearchLeads": 99,
     "provincesWithLeads": 5,
     "separateCityCoverageUnits": 1,
     "byKind": {
@@ -82,7 +82,9 @@
       "wetland": 8,
       "reservoir": 5,
       "lake": 18,
-      "stream": 5
+      "stream": 5,
+      "gulf": 1,
+      "fishpond": 1
     },
     "geometryValidated": 0,
     "speciesAssertionsImported": 9,
@@ -3450,6 +3452,68 @@
       "reviewStatus": "source-named-estuary-lead;five-term-COLXR-Actinopterygii-GBIF-screen-zero;no-absence-inference;identity-geometry-and-reuse-pending;direct-PDF-access-403",
       "publicAdmission": false,
       "scopeNote": "Official EMB EIS and public-hearing search-index excerpts name a Wawa River estuary near proposed Island E in the Rosario coastal project context and surface an actual-fishing table lead. No table rows or taxa are transcribed. A bounded GBIF CoL XR Actinopterygii screen of five Wawa/Rosario waterBody/locality strings returned no candidates; this is not fish-absence evidence. EMB CALABARZON also uses Wawa River for a separate feature at San Rafael, Rodriguez, Rizal; do not merge these names. Estuary extent, channel identity, salinity, access, item-specific reuse and fish evidence remain unresolved. No nearby survey station is treated as catch coordinates or waterbody geometry."
+    },
+    {
+      "id": "ph-wb-ragay-gulf-quezon",
+      "name": "Ragay Gulf",
+      "aliases": [],
+      "kind": "gulf",
+      "salinity": {
+        "classification": "unknown",
+        "reviewStatus": "not-assessed",
+        "sourceRefs": []
+      },
+      "administrativeAssociations": [
+        {
+          "regionId": "0400000000",
+          "relationship": "source-described-locality",
+          "sourceRefs": [
+            "denr-cenro-calauag-2026-asian-waterbird-census"
+          ],
+          "provinceId": "0405600000",
+          "locality": "Hinabaan, Guinayangan; source-described monitoring context only"
+        }
+      ],
+      "sourceRefs": [
+        "denr-cenro-calauag-2026-asian-waterbird-census"
+      ],
+      "identityStatus": "official-source-named-coastal-gulf;site-association-only",
+      "boundaryStatus": "not-delineated",
+      "fishEvidenceStatus": "waterbird-monitoring-site-only;fish-evidence-not-reviewed",
+      "reviewStatus": "source-named-gulf-lead;extent-shared-jurisdiction-and-fish-evidence-unreviewed",
+      "publicAdmission": false,
+      "scopeNote": "DENR CENRO Calauag’s 2026 Asian Waterbird Census names Ragay Gulf in a parenthetical site grouping for Hinabaan, Guinayangan. This establishes a source-described site context only; it does not delimit the gulf or establish that the entire gulf belongs to Quezon/CALABARZON. Waterbird monitoring is not fish evidence. No salinity, fishing access, legal status, species, or geometry is inferred."
+    },
+    {
+      "id": "ph-wb-de-guzman-guinayangan-fishpond",
+      "name": "De Guzman Fishpond",
+      "aliases": [],
+      "kind": "fishpond",
+      "salinity": {
+        "classification": "unknown",
+        "reviewStatus": "not-assessed",
+        "sourceRefs": []
+      },
+      "administrativeAssociations": [
+        {
+          "regionId": "0400000000",
+          "relationship": "source-described-locality",
+          "sourceRefs": [
+            "denr-cenro-calauag-2026-asian-waterbird-census"
+          ],
+          "provinceId": "0405600000",
+          "locality": "Hinabaan, Guinayangan; source-described monitoring context only"
+        }
+      ],
+      "sourceRefs": [
+        "denr-cenro-calauag-2026-asian-waterbird-census"
+      ],
+      "identityStatus": "official-source-named-managed-aquatic-site;physical-identity-unverified",
+      "boundaryStatus": "not-delineated",
+      "fishEvidenceStatus": "waterbird-monitoring-site-only;fish-evidence-not-reviewed",
+      "reviewStatus": "source-named-fishpond-lead;boundary-ownership-access-and-fish-evidence-unreviewed",
+      "publicAdmission": false,
+      "scopeNote": "DENR CENRO Calauag’s 2026 Asian Waterbird Census names De Guzman Fishpond in a parenthetical site grouping for Hinabaan, Guinayangan. The name supports a managed-aquatic-site research lead only. No pond boundary, owner, public access, fish stock, wild fish presence, salinity, or fishing permission is established."
     }
   ],
   "coverageRules": {
@@ -3541,6 +3605,17 @@
       ],
       "waterbodyIds": [
         "ph-wb-wawa-river-estuary-rosario-cavite"
+      ]
+    },
+    {
+      "priority": 7,
+      "task": "Resolve the physical identity and boundary of the DENR-named Ragay Gulf monitoring context and De Guzman Fishpond, then locate independently reviewable fish evidence; do not use waterbird monitoring as fish evidence.",
+      "sourceIds": [
+        "denr-cenro-calauag-2026-asian-waterbird-census"
+      ],
+      "waterbodyIds": [
+        "ph-wb-ragay-gulf-quezon",
+        "ph-wb-de-guzman-guinayangan-fishpond"
       ]
     }
   ],
