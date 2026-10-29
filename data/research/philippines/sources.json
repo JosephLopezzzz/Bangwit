@@ -3,7 +3,7 @@
   "checkedOn": "2026-10-30",
   "status": "research-only-source-registry",
   "scope": "National acquisition references, freshwater spatial-source leads, and CALABARZON/Central Luzon identity/source leads. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 227,
+  "sourceCount": 228,
   "sources": [
     {
       "id": "gbif-col-xr-taxonomy-matching",
@@ -5415,6 +5415,41 @@
         "No Asia-subset feature is assigned to Lake Sampaloc by name. Hylak_id 1397813 is an unnamed spatial candidate only; its identity and boundary are not independently validated.",
         "A zero-result GBIF geometry query on the unnamed candidate is not evidence of fish absence or a complete biological survey.",
         "No fish occurrence, species, diet, local access, legal status, or application geometry is approved by this source record."
+      ]
+    },
+    {
+      "id": "osm-sampaloc-lake-relation-1557746",
+      "title": "Sampaloc Lake community-mapped water polygon, OpenStreetMap relation 1557746",
+      "provider": "OpenStreetMap contributors",
+      "url": "https://www.openstreetmap.org/relation/1557746",
+      "additionalUrls": [
+        "https://api.openstreetmap.org/api/0.6/relation/1557746/full.json",
+        "https://www.openstreetmap.org/copyright"
+      ],
+      "role": "Community-mapped named lake feature used for a research crosswalk against HydroLAKES and a bounded GBIF discovery query; not an official boundary, survey, or fish source.",
+      "checkedOn": "2026-10-30",
+      "sourceYear": 2026,
+      "access": {
+        "status": "public-osm-api-relation-snapshot;named-waterbody-crosswalk-reviewed;research-only",
+        "reviewFiles": [
+          "calabarzon-sampaloc-osm-hydrolakes-crosswalk-20261030.json"
+        ],
+        "rawPath": "raw/hydrolakes-asia-subset-screen-20261030/osm-relation-1557746-full.json"
+      },
+      "reuse": {
+        "metadata": "OpenStreetMap's copyright page states that its data is licensed under ODbL 1.0 and requires attribution; adapted database distribution has share-alike obligations.",
+        "raw": "The relation snapshot and derived WKT remain in ignored local research storage.",
+        "content": "Crosswalk and discovery use only. Review ODbL compatibility and attribution before any database or geometry distribution; this source record does not approve an app boundary."
+      },
+      "publicationApproval": false,
+      "researchStatus": "community-mapped-sampaloc-name;strong-hydrolakes-spatial-crosswalk;not-authoritative;gbif-fish-screen-zero",
+      "license": "Open Database License (ODbL) 1.0",
+      "licenseUrl": "https://opendatacommons.org/licenses/odbl/1-0/",
+      "caveats": [
+        "A community-contributed name and outline do not establish official lake boundary or positional accuracy.",
+        "Strong overlap with HydroLAKES supports feature identity but is not independent field validation because both are mapped datasets.",
+        "The GBIF geometry query returned zero Actinopterygii occurrences; this is not fish-absence or survey evidence.",
+        "No species, diet, legal access, or public app geometry is admitted."
       ]
     },
     {

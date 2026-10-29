@@ -1,0 +1,131 @@
+{
+  "schemaVersion": 1,
+  "batchId": "calabarzon-sampaloc-osm-hydrolakes-crosswalk-20261030",
+  "reviewedOn": "2026-10-30",
+  "regionId": "0400000000",
+  "provinceId": "0405600000",
+  "waterbodyId": "ph-wb-sampaloc-san-pablo-lake",
+  "status": "named-osm-spatial-crosswalk-strong;community-source-not-authoritative;gbif-actinopterygii-screen-zero;no-app-geometry",
+  "purpose": "Independently compare an unnamed HydroLAKES Asia feature near the approximate Lake Sampaloc locality with a named OpenStreetMap relation, then screen GBIF occurrences using the named community-mapped polygon.",
+  "sources": [
+    {
+      "sourceId": "osm-sampaloc-lake-relation-1557746",
+      "relationId": 1557746,
+      "relationVersion": 15,
+      "relationTimestamp": "2026-04-06T14:00:43Z",
+      "relationUrl": "https://www.openstreetmap.org/relation/1557746",
+      "apiUrl": "https://api.openstreetmap.org/api/0.6/relation/1557746/full.json",
+      "tags": {
+        "name": "Sampaloc Lake",
+        "name:en": "Sampaloc Lake",
+        "name:tl": "Lawa ng Sampalok",
+        "natural": "water",
+        "type": "multipolygon",
+        "water": "lake",
+        "wikidata": "Q7357613"
+      },
+      "license": "Open Database License (ODbL) 1.0",
+      "licenseUrl": "https://www.openstreetmap.org/copyright",
+      "raw": {
+        "path": "raw/hydrolakes-asia-subset-screen-20261030/osm-relation-1557746-full.json",
+        "bytes": 19738,
+        "sha256": "9ce05e924f9c5a0ecceab48a67d59abca198208038710e444f1681345df87be8"
+      }
+    },
+    {
+      "sourceId": "zenodo-hydrolakes-asia-subset-v1",
+      "featureId": 1397813,
+      "featureName": null,
+      "featureNameField": "Lake_name",
+      "license": "CC BY 4.0",
+      "derivedFrom": "HydroLAKES v1",
+      "rawArchiveSha256": "7c610c19d561f84624736081d2bdd95c004812f5c2354afb6cbdc1bc5c411cc2"
+    }
+  ],
+  "geometryComparison": {
+    "method": "Assembled the six OSM outer ways into one polygon; compared it with HydroLAKES Hylak_id 1397813 after projecting both WGS 84 geometries to UTM zone 51N (EPSG:32651).",
+    "tooling": {
+      "shapely": "2.2.0",
+      "pyproj": "3.8.0"
+    },
+    "osm": {
+      "outerWayCount": 6,
+      "polygonCount": 1,
+      "exteriorVertexCount": 97,
+      "areaSquareKm": 0.9381,
+      "boundsWgs84": [
+        121.3246316,
+        14.0730968,
+        121.3353238,
+        14.0835103
+      ]
+    },
+    "hydrolakes": {
+      "areaSquareKm": 0.82446,
+      "boundsWgs84": [
+        121.32490308352925,
+        14.07374721951004,
+        121.3354532137376,
+        14.083273111979508
+      ]
+    },
+    "intersection": {
+      "areaSquareKm": 0.81967,
+      "intersectionOverUnion": 0.86933,
+      "hydrolakesAreaCoveredByOsm": 0.9942,
+      "osmAreaCoveredByHydrolakes": 0.87376,
+      "osmOnlyAreaSquareKm": 0.11843,
+      "hydrolakesOnlyAreaSquareKm": 0.00478
+    },
+    "interpretation": "Strong spatial correspondence supports treating Hylak_id 1397813 as the same mapped waterbody represented by the named OSM relation. OSM is community-maintained, not an authoritative survey or legal boundary; comparison does not establish positional accuracy or app suitability."
+  },
+  "gbifScreen": {
+    "endpoint": "https://api.gbif.org/v1/occurrence/search",
+    "documentation": "https://techdocs.gbif.org/en/openapi/v1/occurrence",
+    "filters": {
+      "country": "PH",
+      "taxonKey": 204,
+      "taxonLabel": "Actinopterygii",
+      "hasCoordinate": true,
+      "geometrySource": "OpenStreetMap relation 1557746, relation version 15",
+      "geometryRawPath": "raw/hydrolakes-asia-subset-screen-20261030/osm-sampaloc-wkt.txt",
+      "geometryRawSha256": "dce7e5f64b724df37192f9ca95a5e58f7bcc054e38a9afabb2147a7d91c2a395",
+      "limit": 100,
+      "offset": 0
+    },
+    "httpStatus": 200,
+    "count": 0,
+    "returnedCount": 0,
+    "endOfRecords": true,
+    "raw": {
+      "path": "raw/hydrolakes-asia-subset-screen-20261030/gbif-osm-sampaloc-polygon.json",
+      "bytes": 79,
+      "sha256": "16004ddeb6b1eb033e3665fa6082d9cdd36533ce1f36272a2a95f5664f1b9dcd"
+    }
+  },
+  "decisions": {
+    "identitySupportedByIndependentNamedSpatialCrosswalk": true,
+    "authoritativeBoundaryValidated": false,
+    "speciesAssertionsAdded": 0,
+    "fishAbsenceInferred": false,
+    "dietAssertionsAdded": 0,
+    "applicationGeometryAdded": false,
+    "publicationApproval": false
+  },
+  "limitations": [
+    "OpenStreetMap is community-contributed. Its feature name and mapped water outline are useful for a crosswalk but do not independently certify the lake boundary or positional accuracy.",
+    "OSM data is ODbL-licensed and requires attribution; distribution of an adapted database has share-alike obligations. No app geometry or adapted public database was produced.",
+    "The HydroLAKES feature is a derivative discovery polygon with a 10-hectare source threshold; other waterbody types and smaller waters are outside its complete coverage.",
+    "A zero-result GBIF query is a bounded indexed-occurrence result, not evidence that Lake Sampaloc has no fish or a complete local fish survey.",
+    "No fish species, diet, current-presence, fishing access, legal status, or app-ready boundary was established."
+  ],
+  "nextAction": "If exact public-app geometry is needed, request a local authoritative map or survey crosswalk and review ODbL compatibility for the planned data distribution. Otherwise keep both polygons as research-only discovery references and continue to other CALABARZON waterbody leads.",
+  "sourceReferences": [
+    "https://www.openstreetmap.org/relation/1557746",
+    "https://api.openstreetmap.org/api/0.6/relation/1557746/full.json",
+    "https://www.openstreetmap.org/copyright",
+    "https://www.hydrosheds.org/products/hydrolakes",
+    "https://zenodo.org/records/17503891",
+    "https://techdocs.gbif.org/en/openapi/v1/occurrence"
+  ]
+}

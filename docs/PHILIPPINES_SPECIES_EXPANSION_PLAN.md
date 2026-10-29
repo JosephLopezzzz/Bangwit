@@ -1263,3 +1263,14 @@ Verification for this research-only batch: `npm run test:species:pipeline`, `npm
 - **Next:** Seek an independent, authoritative or reusable San Pablo waterbody crosswalk before assigning the unnamed polygon. Continue treating HydroLAKES as a discovery layer, including its threshold and omission limits.
 - **Artifacts:** `national-philippines-hydrolakes-asia-subset-screen-20261030.json`; updated `sources.json`, research index and CALABARZON coverage-denominator profile.
 - **Sources:** [HydroLAKES product page](https://www.hydrosheds.org/products/hydrolakes), [Zenodo Asia subset and license](https://zenodo.org/records/17503891), [GBIF Occurrence API reference](https://techdocs.gbif.org/en/openapi/v1/occurrence).
+
+### National rollout step 171: Lake Sampaloc named-geometry crosswalk — 30 October 2026
+
+- **Independent name lead:** OpenStreetMap relation 1557746 is tagged `Sampaloc Lake`, `natural=water`, and `water=lake`; its API snapshot is relation version 15 dated 6 April 2026. The relation has six outer ways that form one polygon.
+- **Spatial comparison:** In EPSG:32651, the OSM polygon overlaps 99.4% of HydroLAKES Hylak_id 1397813; the intersection-over-union is 0.869. The OSM polygon extends beyond the HydroLAKES feature, so their outlines are not identical.
+- **Interpretation and rights:** This is a strong community-map crosswalk for the unnamed HydroLAKES feature, not an official or field-validated boundary. OSM data is ODbL 1.0 and requires attribution, with share-alike obligations for adapted databases. No app geometry was added.
+- **GBIF result:** A country-filtered Actinopterygii search using the named OSM lake polygon returned zero coordinate-bearing occurrences. This bounded result is not evidence of fish absence, a census, or current ecological status.
+- **Disposition:** Added the OSM source and review artifact; retained relation, WKT and raw GBIF response only in ignored research storage. No fish species, diet, legal access, or application record was added.
+- **Next:** If public-app lake geometry is needed, request a local authoritative map/survey crosswalk and assess ODbL compatibility with Bangwit's data distribution. Otherwise continue the CALABARZON freshwater source queue.
+- **Artifacts:** `calabarzon-sampaloc-osm-hydrolakes-crosswalk-20261030.json`; updated `sources.json`, research index and coverage-denominator profile.
+- **Sources:** [OpenStreetMap relation 1557746](https://www.openstreetmap.org/relation/1557746), [OSM copyright/license](https://www.openstreetmap.org/copyright), [HydroLAKES](https://www.hydrosheds.org/products/hydrolakes), [GBIF Occurrence API](https://techdocs.gbif.org/en/openapi/v1/occurrence).
