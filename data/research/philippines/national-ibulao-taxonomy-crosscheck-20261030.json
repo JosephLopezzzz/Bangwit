@@ -1,0 +1,443 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-30",
+  "phaseId": "L1",
+  "regionId": "1400000000",
+  "status": "research-only-taxonomy-crosscheck;carp-source-strings-unmatched;Rhinogobius-cross-authority-conflict;barcode-identities-held",
+  "sourceReview": "national-ibulao-ifugao-fish-survey-erratum-review-20261030.json",
+  "scope": "Name-usage cross-check only for the Ibulao article/erratum fish labels. It does not validate any source specimen, barcode, locality, catch record, presence, diet or origin status.",
+  "method": {
+    "matcher": "GBIF v2 species matching API, explicitly pinned to the Catalogue of Life Extended Release checklist",
+    "endpoint": "https://api.gbif.org/v2/species/match",
+    "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+    "checklistName": "COL26.6 XR",
+    "checklistTitle": "Catalogue of Life",
+    "checklistBuild": "2026-07-18T07:34:50.904Z",
+    "matchingServiceBuildSha": "84c77c88ffb12cad1691fc477f1b8856101ce1c4",
+    "metadataSnapshot": {
+      "path": "raw/ibulao-colxr-crosscheck-20261030/metadata-colxr.json",
+      "sha256": "a250044c47c0f4efb89d860786f920e6fd8fca39df82f697a89796a6ae841b62"
+    },
+    "exactQueryRule": "Submitted verbatim table binomials without geographic or specimen identity parameters. The genus-only row was queried at genus rank after removing the literal sp. marker.",
+    "authorityCrosscheck": "Selected conflicting or barcode-related names were reviewed against Eschmeyer Catalog of Fishes, California Academy of Sciences. The catalog is used for nomenclature, not specimen re-identification.",
+    "limitations": [
+      "Checklist matching outcomes are name-usage proposals, not identifications or occurrence evidence.",
+      "No reported DNA sequence was downloaded or reanalyzed; the erratum review exposes no explicit study accession crosswalk.",
+      "No occurrence, distribution, conservation-status or habitat output from GBIF was used in this step.",
+      "Internal BFARCAR sample-code labels were not passed to taxonomic matching."
+    ]
+  },
+  "sourceLabelCounts": {
+    "originalTableRows": 18,
+    "originalBinomialLabels": 13,
+    "erratumCarpSpellingVariant": 1,
+    "internalSampleCodeLabels": 4,
+    "genusOnlyLabels": 1
+  },
+  "resultSummary": {
+    "sourceBinomialStringsQueried": 14,
+    "exactSpeciesRankAcceptedMatches": 12,
+    "sourceStringsWithNoMatch": 2,
+    "genusOnlyAcceptedUsageMatches": 1,
+    "internalCodeLabelsNotQueried": 4,
+    "additionalComparatorQueries": 2,
+    "automaticReplacements": 0,
+    "appRowsAdded": 0,
+    "interpretation": "All twelve non-carp binomial strings matched exact accepted species usages in this specific COL XR build. Both printed carp variants returned no match. A separate Carassius carassius comparator matched, but this does not authorize correction of the source label or specimen identity. A material conflict exists between the COL XR status for Rhinogobius giurinus and the current Catalog of Fishes status."
+  },
+  "nameCrosschecks": [
+    {
+      "sourceLabel": "Anguilla marmorata",
+      "query": {
+        "scientificName": "Anguilla marmorata",
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b"
+      },
+      "result": {
+        "matchType": "EXACT",
+        "confidence": 99,
+        "usageKey": "66R6D",
+        "matchedName": "Anguilla marmorata Quoy & Gaimard, 1824",
+        "matchedRank": "SPECIES",
+        "matchedStatus": "ACCEPTED",
+        "synonym": false
+      },
+      "rawResponse": {
+        "path": "raw/ibulao-colxr-crosscheck-20261030/01-anguilla-marmorata.json",
+        "sha256": "9ddbdec7d56953ef1efef7a39ca1a55c6dadd22cb94e98c9009e627c2c5b800f"
+      }
+    },
+    {
+      "sourceLabel": "Awaous melanocephalus",
+      "query": {
+        "scientificName": "Awaous melanocephalus",
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b"
+      },
+      "result": {
+        "matchType": "EXACT",
+        "confidence": 99,
+        "usageKey": "5VZ8J",
+        "matchedName": "Awaous melanocephalus (Bleeker, 1849)",
+        "matchedRank": "SPECIES",
+        "matchedStatus": "ACCEPTED",
+        "synonym": false
+      },
+      "rawResponse": {
+        "path": "raw/ibulao-colxr-crosscheck-20261030/02-awaous-melanocephalus.json",
+        "sha256": "784d9b627deb69f7ce7b0a8b18c56f0e05628b911a5912ded380776aeb770a3a"
+      }
+    },
+    {
+      "sourceLabel": "Carracius carracius",
+      "query": {
+        "scientificName": "Carracius carracius",
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b"
+      },
+      "result": {
+        "matchType": "NONE",
+        "confidence": 100,
+        "issues": [],
+        "note": null
+      },
+      "rawResponse": {
+        "path": "raw/ibulao-colxr-crosscheck-20261030/03-carracius-carracius.json",
+        "sha256": "03a43ec2332ba89eb96c0817e2489b560fa62f911df6eb0a270dac07ac05cf04"
+      }
+    },
+    {
+      "sourceLabel": "Carrasius carrasius",
+      "query": {
+        "scientificName": "Carrasius carrasius",
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b"
+      },
+      "result": {
+        "matchType": "NONE",
+        "confidence": 100,
+        "issues": [],
+        "note": "No match because of too little confidence"
+      },
+      "rawResponse": {
+        "path": "raw/ibulao-colxr-crosscheck-20261030/04-carrasius-carrasius.json",
+        "sha256": "0c3b673e466e523649cd1badd42a9cd0ae6bd31ac4d6643bf59073f88d0cad70"
+      }
+    },
+    {
+      "sourceLabel": "Plicofollis magatensis",
+      "query": {
+        "scientificName": "Plicofollis magatensis",
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b"
+      },
+      "result": {
+        "matchType": "EXACT",
+        "confidence": 99,
+        "usageKey": "4KG24",
+        "matchedName": "Plicofollis magatensis (Herre, 1926)",
+        "matchedRank": "SPECIES",
+        "matchedStatus": "ACCEPTED",
+        "synonym": false
+      },
+      "rawResponse": {
+        "path": "raw/ibulao-colxr-crosscheck-20261030/05-plicofollis-magatensis.json",
+        "sha256": "c10cdaed333ef91c4c85a88a8e59ab1697950de5d35e198dec581495a3b31e11"
+      }
+    },
+    {
+      "sourceLabel": "Channa striata",
+      "query": {
+        "scientificName": "Channa striata",
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b"
+      },
+      "result": {
+        "matchType": "EXACT",
+        "confidence": 99,
+        "usageKey": "TM4H",
+        "matchedName": "Channa striata (Bloch, 1793)",
+        "matchedRank": "SPECIES",
+        "matchedStatus": "ACCEPTED",
+        "synonym": false
+      },
+      "rawResponse": {
+        "path": "raw/ibulao-colxr-crosscheck-20261030/06-channa-striata.json",
+        "sha256": "beafa2be2479eebb9d8b0222438d605b2e769cebd073445164df53661f0e1a0c"
+      }
+    },
+    {
+      "sourceLabel": "Clarias batrachus",
+      "query": {
+        "scientificName": "Clarias batrachus",
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b"
+      },
+      "result": {
+        "matchType": "EXACT",
+        "confidence": 99,
+        "usageKey": "VR9G",
+        "matchedName": "Clarias batrachus (Linnaeus, 1758)",
+        "matchedRank": "SPECIES",
+        "matchedStatus": "ACCEPTED",
+        "synonym": false
+      },
+      "rawResponse": {
+        "path": "raw/ibulao-colxr-crosscheck-20261030/07-clarias-batrachus.json",
+        "sha256": "ef62116cbd2f66dde33064d0620c5f9cc12495f8adf5a1b84dbc6b0609fc7624"
+      }
+    },
+    {
+      "sourceLabel": "Clarias gariepinus",
+      "query": {
+        "scientificName": "Clarias gariepinus",
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b"
+      },
+      "result": {
+        "matchType": "EXACT",
+        "confidence": 97,
+        "usageKey": "VRBD",
+        "matchedName": "Clarias gariepinus (Burchell, 1822)",
+        "matchedRank": "SPECIES",
+        "matchedStatus": "ACCEPTED",
+        "synonym": false
+      },
+      "rawResponse": {
+        "path": "raw/ibulao-colxr-crosscheck-20261030/08-clarias-gariepinus.json",
+        "sha256": "044ce165af283feb15c9e88e0f4f72694ec6d8812d511b628a99d0c50abbe977"
+      }
+    },
+    {
+      "sourceLabel": "Cyprinus carpio",
+      "query": {
+        "scientificName": "Cyprinus carpio",
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b"
+      },
+      "result": {
+        "matchType": "EXACT",
+        "confidence": 99,
+        "usageKey": "33HRJ",
+        "matchedName": "Cyprinus carpio Linnaeus, 1758",
+        "matchedRank": "SPECIES",
+        "matchedStatus": "ACCEPTED",
+        "synonym": false
+      },
+      "rawResponse": {
+        "path": "raw/ibulao-colxr-crosscheck-20261030/09-cyprinus-carpio.json",
+        "sha256": "c62997ccff8c116e19fdd7a23e19f065466d4464bfd9b352f567ff1a6dd1fd6d"
+      }
+    },
+    {
+      "sourceLabel": "Gambusia affinis",
+      "query": {
+        "scientificName": "Gambusia affinis",
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b"
+      },
+      "result": {
+        "matchType": "EXACT",
+        "confidence": 99,
+        "usageKey": "6K97T",
+        "matchedName": "Gambusia affinis (Baird & Girard, 1853)",
+        "matchedRank": "SPECIES",
+        "matchedStatus": "ACCEPTED",
+        "synonym": false
+      },
+      "rawResponse": {
+        "path": "raw/ibulao-colxr-crosscheck-20261030/10-gambusia-affinis.json",
+        "sha256": "8c749d5bfa77b13a6c1bcb8294cc91c9f37958e7ba6527e5f17a87e454c779d9"
+      }
+    },
+    {
+      "sourceLabel": "Leiopotherapon plumbeus",
+      "query": {
+        "scientificName": "Leiopotherapon plumbeus",
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b"
+      },
+      "result": {
+        "matchType": "EXACT",
+        "confidence": 99,
+        "usageKey": "3SZHP",
+        "matchedName": "Leiopotherapon plumbeus (Kner, 1864)",
+        "matchedRank": "SPECIES",
+        "matchedStatus": "ACCEPTED",
+        "synonym": false
+      },
+      "rawResponse": {
+        "path": "raw/ibulao-colxr-crosscheck-20261030/11-leiopotherapon-plumbeus.json",
+        "sha256": "46f978bd9e844c751dd5840f21466e31e2010e6ef8926f01f630aa09f66193b0"
+      }
+    },
+    {
+      "sourceLabel": "Oreochromis niloticus",
+      "query": {
+        "scientificName": "Oreochromis niloticus",
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b"
+      },
+      "result": {
+        "matchType": "EXACT",
+        "confidence": 98,
+        "usageKey": "6SSRC",
+        "matchedName": "Oreochromis niloticus (Linnaeus, 1758)",
+        "matchedRank": "SPECIES",
+        "matchedStatus": "ACCEPTED",
+        "synonym": false
+      },
+      "rawResponse": {
+        "path": "raw/ibulao-colxr-crosscheck-20261030/12-oreochromis-niloticus.json",
+        "sha256": "6b259cdc1017fcb57a79125443b5170a9f67a3fd53fa31716ae254cb3ee296e2"
+      }
+    },
+    {
+      "sourceLabel": "Rhinogobius giurinus",
+      "query": {
+        "scientificName": "Rhinogobius giurinus",
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b"
+      },
+      "result": {
+        "matchType": "EXACT",
+        "confidence": 99,
+        "usageKey": "4S8Z9",
+        "matchedName": "Rhinogobius giurinus (Rutter, 1897)",
+        "matchedRank": "SPECIES",
+        "matchedStatus": "ACCEPTED",
+        "synonym": false
+      },
+      "rawResponse": {
+        "path": "raw/ibulao-colxr-crosscheck-20261030/13-rhinogobius-giurinus.json",
+        "sha256": "18af445f6ea415472078f93a85175dcdd9705539a90099e21464e6e370a764fa"
+      }
+    },
+    {
+      "sourceLabel": "Zenarchopterus philippinus",
+      "query": {
+        "scientificName": "Zenarchopterus philippinus",
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b"
+      },
+      "result": {
+        "matchType": "EXACT",
+        "confidence": 99,
+        "usageKey": "5D2CY",
+        "matchedName": "Zenarchopterus philippinus (Peters, 1868)",
+        "matchedRank": "SPECIES",
+        "matchedStatus": "ACCEPTED",
+        "synonym": false
+      },
+      "rawResponse": {
+        "path": "raw/ibulao-colxr-crosscheck-20261030/14-zenarchopterus-philippinus.json",
+        "sha256": "858b04cbec4d1320f2bde636de0605c5fd424292aff7ced298fd76dcb7c13e2c"
+      }
+    }
+  ],
+  "heldLabels": [
+    {
+      "sourceLabel": "Nomorhamphus sp.",
+      "query": {
+        "scientificName": "Nomorhamphus",
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b"
+      },
+      "result": {
+        "matchType": "EXACT",
+        "confidence": 94,
+        "usageKey": "KVLF7",
+        "matchedName": "Nomorhamphus Weber & de Beaufort, 1922",
+        "matchedRank": "GENUS",
+        "matchedStatus": "ACCEPTED"
+      },
+      "rawResponse": {
+        "path": "raw/ibulao-colxr-crosscheck-20261030/15-nomorhamphus.json",
+        "sha256": "3c845f884d0956b4f6c95d5b76a635fc6c8043e519fd04f6e4c1199c78d28d09"
+      },
+      "disposition": "Genus-level result only; retain sp. and do not infer a species."
+    },
+    {
+      "sourceLabel": "BFARCAR_Bunog02_154",
+      "sourceLabelType": "internal BFAR-CAR sample code",
+      "disposition": "Not queried or translated to a taxon; no documented link to erratum samples Ibulao 08 or Ibulao 13."
+    },
+    {
+      "sourceLabel": "BFARCAR_Gourami_041",
+      "sourceLabelType": "internal BFAR-CAR sample code",
+      "disposition": "Not queried or translated to a taxon."
+    },
+    {
+      "sourceLabel": "BFARCAR_Kiwet_009",
+      "sourceLabelType": "internal BFAR-CAR sample code",
+      "disposition": "Not queried or translated to a taxon."
+    },
+    {
+      "sourceLabel": "BFARCAR_Silap_019",
+      "sourceLabelType": "internal BFAR-CAR sample code",
+      "disposition": "Not queried or translated to a taxon."
+    }
+  ],
+  "authorityFindings": [
+    {
+      "sourceLabel": "Rhinogobius giurinus",
+      "colXr": {
+        "matchedName": "Rhinogobius giurinus (Rutter, 1897)",
+        "matchedStatus": "ACCEPTED",
+        "authorityRecord": "https://api.gbif.org/v2/species/match?scientificName=Rhinogobius%20giurinus&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b"
+      },
+      "catalogOfFishes": {
+        "currentStatus": "Synonym of Rhinogobius similis Gill, 1859",
+        "authorityRecord": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=18989"
+      },
+      "colXrComparator": {
+        "matchedName": "Rhinogobius similis Gill, 1859",
+        "matchedStatus": "ACCEPTED",
+        "authorityRecord": "https://api.gbif.org/v2/species/match?scientificName=Rhinogobius%20similis&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b"
+      },
+      "disposition": "Cross-authority status conflict. Preserve the article label; do not replace it with R. similis or interpret the reported 98.00–99.47% sequence identities as resolving the conflict. Hold both name normalization and the two sample identities for qualified review."
+    },
+    {
+      "sourceLabels": [
+        "Carracius carracius",
+        "Carrasius carrasius"
+      ],
+      "colXr": {
+        "bothStringsMatchType": "NONE",
+        "candidateComparator": {
+          "query": "Carassius carassius",
+          "matchedName": "Carassius carassius (Linnaeus, 1758)",
+          "matchedRank": "SPECIES",
+          "matchedStatus": "ACCEPTED",
+          "rawResponse": {
+            "path": "raw/ibulao-colxr-crosscheck-20261030/16-carassius-carassius.json",
+            "sha256": "62ee213458ba34524e8b34b49f3ef98cb564e1337d6e2e21e04c41674e20d455"
+          }
+        }
+      },
+      "catalogOfFishes": {
+        "candidateStatus": "Valid as Carassius carassius (Linnaeus, 1758); catalog summary reports Europe/western Russia and widely introduced elsewhere",
+        "authorityRecord": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=3101"
+      },
+      "disposition": "Carassius carassius is a spelling-based candidate only. Its accepted name and broad range do not establish the Ibulao specimens identity. Preserve both source strings and keep source-reported origin category unchanged pending voucher or author clarification."
+    },
+    {
+      "sourceLabel": "Plicofollis magatensis",
+      "currentCatalogStatus": "Valid as Plicofollis magatensis (Herre, 1926)",
+      "authorityRecord": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=53678",
+      "catalogHistoryNote": "The Catalog also records a past treatment as species inquirenda in Plicofollis; later cited works use Plicofollis magatensis. Its type locality is Magat River at Bagabag, Nueva Vizcaya, which is nomenclatural context only and does not confirm the Ibulao catch.",
+      "disposition": "Name usage is supported, but no local sample identity, current occurrence or river-wide distribution is inferred."
+    },
+    {
+      "sourceLabel": "Zenarchopterus philippinus",
+      "currentCatalogStatus": "Valid as Zenarchopterus philippinus (Peters, 1868)",
+      "authorityRecord": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=31803",
+      "disposition": "The accepted name does not resolve the erratum values of 92.11–94.14% identity. Keep all three barcode assignments held for sequence/accession and alignment review."
+    }
+  ],
+  "disposition": {
+    "sourceLabelsPreserved": 14,
+    "automaticNameReplacements": 0,
+    "sourceSpecimensReidentified": 0,
+    "barcodeRowsValidated": 0,
+    "dietClaimsAdded": 0,
+    "currentPresenceClaimsAdded": 0,
+    "publicAppRowsAdded": 0,
+    "reason": "This step compares nomenclatural usages while the source paper has known spelling, rank, count, sample-code crosswalk and barcode limitations. The R. giurinus authority conflict and unmatched carp spellings prohibit automatic projection."
+  },
+  "nextAction": "Search for linked GenBank/BOLD accession identifiers or an explicit author/NFRDI sequence-to-sample mapping for the six Ibulao barcode rows. If no sequence crosswalk is available, retain the molecular identities as source-reported and unresolved; proceed in parallel with independently reusable CAR freshwater evidence.",
+  "sources": [
+    "https://techdocs.gbif.org/en/data-processing/taxonomy-interpretation",
+    "https://api.gbif.org/v2/species/match",
+    "https://api.gbif.org/v2/species/match/metadata?checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b",
+    "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=18989",
+    "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=3101",
+    "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=53678",
+    "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=31803"
+  ]
+}
