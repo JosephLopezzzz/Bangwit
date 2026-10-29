@@ -3,7 +3,7 @@
   "checkedOn": "2026-10-30",
   "status": "research-only-source-registry",
   "scope": "National acquisition references, freshwater spatial-source leads, and CALABARZON/Central Luzon identity/source leads. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 265,
+  "sourceCount": 266,
   "sources": [
     {
       "id": "psa-car-apayao-fisheries-situation-2019-2021-q3",
@@ -8150,6 +8150,38 @@
       "caveats": [
         "Project/EIA context does not independently validate fish identifications or occurrence.",
         "A public EIS document link is not a grant to republish its content."
+      ]
+    },
+    {
+      "id": "gbif-apayao-gened2-interview-taxon-text-screen-20261030",
+      "title": "GBIF occurrence indexed-field screen for GENED 2 Apayao interview-reported fish names",
+      "provider": "Global Biodiversity Information Facility (GBIF)",
+      "url": "https://api.gbif.org/v1/occurrence/search",
+      "additionalUrls": [
+        "https://api.gbif.org/v1/species/match",
+        "https://techdocs.gbif.org/en/openapi/v1/occurrence"
+      ],
+      "role": "Count-only field-text screening of two source-reported scientific names against Apayao stateProvince and municipal locality labels; zero matches are not absence evidence.",
+      "checkedOn": "2026-10-30",
+      "access": {
+        "status": "Forty GBIF API requests returned HTTP 200 and count zero for the two taxa across Apayao/stateProvince and selected locality text, with and without coordinates; Philippines-wide positive controls returned records.",
+        "reviewFiles": [
+          "national-apayao-gened2-interview-taxon-gbif-field-screen-20261030.json"
+        ]
+      },
+      "reuse": {
+        "metadata": "Document exact API endpoint, accepted taxon keys, parameters, response counts, date and GBIF API documentation.",
+        "raw": "No occurrence payloads were requested or saved; requests used limit=0.",
+        "content": "No GBIF occurrence content was republished. A zero count is not evidence of absence and grants no dataset reuse rights."
+      },
+      "publicationApproval": false,
+      "researchStatus": "count-only-indexed-text-screen;zero-locality-hits;not-absence-evidence;research-only",
+      "license": "No record-level dataset license assessed because no records were retrieved",
+      "licenseUrl": null,
+      "caveats": [
+        "Screen was limited to two EIS interview strings and Apayao administrative/locality text fields.",
+        "No polygon, station coordinates, scientific synonyms, taxonomic relatives, or locality aliases beyond the listed municipality spellings were searched.",
+        "No occurrence records were downloaded or reviewed."
       ]
     }
   ],
