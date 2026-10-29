@@ -88,3 +88,7 @@ The official [DENR CENRO Calauag 2026 Asian Waterbird Census](https://calabarzon
 ### Ragay Gulf fishery poster review — 30 October 2026
 
 Reviewed the official [DA-BFAR/NFRDI Ragay Gulf poster](https://repository.nfrdi.da.gov.ph/items/ee1d42ee-5c27-4034-a7fb-51496abc7d3a), covering 2018–2022. Its image and repository abstract disagree on the splendid ponyfish scientific name; a CoL XR crosswalk leaves the abstract variant at genus rank, so the row is held. The poster footer says the layout is not ranked. Its gulf-level names are not assigned to Hinabaan or De Guzman Fishpond, and no item-specific reuse license is displayed. No species assertion or public app row was added. See [the review](data/research/philippines/calabarzon-ragay-gulf-dominant-species-poster-review-20261030.json).
+
+### Ragay Gulf BFAR/FishCORAL Bicol-side report screen — 30 October 2026
+
+Reviewed the official [BFAR/FishCORAL resource](https://www.bfar.da.gov.ph/other-programs/fishcoral/) and its 2019 Bicol University assessment PDF. The report's household sample is from ten Bicol-side municipalities; its separate aggregate production table includes San Pascual, Masbate, and is not station-resolved. No Quezon-side or Guinayangan/Hinabaan site evidence was assigned. The species table remains held because no item-specific reuse terms were found in the checked material. No species names, occurrence assertions, or app rows were added. See [the source review](data/research/philippines/calabarzon-ragay-gulf-bicol-prsa-source-review-20261030.json).
