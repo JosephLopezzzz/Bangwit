@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-30",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "provinceId": "0405600000",
+  "status": "bounded-fish-survey-discovery-search;no-site-specific-survey-retrieved;research-only",
+  "purpose": "Check whether primary or otherwise reviewable sources provide fish survey results tied to the eight newly named Guinayangan freshwater leads. This records a bounded search, not evidence that fish are absent.",
+  "targetWaterbodyIds": [
+    "ph-wb-hinabaan-river-quezon",
+    "ph-wb-maulawin-itaas-spring-guinayangan",
+    "ph-wb-maulawin-ibaba-spring-guinayangan",
+    "ph-wb-san-pedro-i-springs-guinayangan",
+    "ph-wb-bahokhok-springs-guinayangan",
+    "ph-wb-sta-cruz-spring-rosales-guinayangan",
+    "ph-wb-sta-cruz-spring-marjes-guinayangan",
+    "ph-wb-san-antonio-spring-guinayangan"
+  ],
+  "queries": [
+    "\"Hinabaan River\" fish species Guinayangan",
+    "Guinayangan Quezon freshwater fish survey Maulawin spring fish species",
+    "\"Maulawin Spring Protected Landscape\" fish survey",
+    "site:denr.gov.ph Guinayangan fish species river survey Quezon",
+    "site:bmb.gov.ph \"Maulawin Spring\" fish fauna OR fish species",
+    "site:denr.gov.ph \"Maulawin Spring Protected Landscape\" \"fish\" OR \"ichthyofauna\"",
+    "site:repository.seafdec.org Guinayangan Quezon fish survey river",
+    "\"Hinabaan\" \"fish species\" Quezon river"
+  ],
+  "sourcesReviewed": [
+    {
+      "sourceId": "clsu-guinayangan-small-scale-aquaculture-2024",
+      "result": "Official 2024 article describes a municipality-level reconnaissance, local aquaculture-farm visits, tilapia-fingerling distribution to smallholders, a possible Fish Conservation Zone in Maulawin Spring Protected Landscape, and seven unnamed lagoons. It provides no fish taxa survey, sampling stations, lagoon identities, or record explicitly tied to any target lead.",
+      "decision": "Context/discovery only. Fingerling distribution is not natural wild occurrence; no species assigned to the river, springs, protected landscape, or De Guzman Fishpond."
+    },
+    {
+      "sourceId": "bmb-pais-maulawin-spring-profile-search-lead-2026",
+      "result": "Official BMB Protected Area Information System page appeared in search results. The indexed excerpt lists broad biological-feature sections; direct page retrieval returned HTTP 502, so the detailed profile could not be inspected.",
+      "decision": "Discovery lead only. No species row, absence claim, geometry, or site crosswalk was extracted."
+    },
+    {
+      "sourceId": "guinayangan-water-district-annual-report-2024",
+      "result": "Annex J confirms the source-named river and seven spring-source entries and their barangay-level water-supply context; it contains no fish survey.",
+      "decision": "Retained only as waterbody-name/locality evidence."
+    },
+    {
+      "sourceId": "psa-psgc-guinayangan-barangays-2025",
+      "result": "PSA PSGC confirms the administrative barangay names/codes only.",
+      "decision": "Not biological evidence."
+    }
+  ],
+  "excludedComparator": {
+    "title": "Diversity and distribution of freshwater fish assemblages in Tayabas River, Quezon (Philippines)",
+    "citation": "Paller, V.G.V., Corpuz, M.N.C. & Ocampo, P.P. (2013), Philippine Journal of Science 142(1):55-67.",
+    "url": "https://repository.seafdec.org/handle/20.500.12066/3860?locale-attribute=vi&show=full",
+    "reason": "This is a different named river and was not transferred to Guinayangan; the result does not establish fish presence in the target leads."
+  },
+  "decision": {
+    "siteSpecificFishSurveyRetrieved": false,
+    "speciesAssertionsAdded": 0,
+    "geometryAdded": false,
+    "publicRowsAdded": 0,
+    "fishAbsenceInferred": false,
+    "existingScopeLeadsRemainUnchanged": true
+  },
+  "limitations": [
+    "Search-engine results are discovery aids, not a complete search of all theses, protected-area records, and unpublished monitoring data.",
+    "The BMB PAIS page could not be directly reviewed after an HTTP 502 response; do not infer what its full record contains.",
+    "The CLSU article concerns local aquaculture activity but does not publish a fish inventory or identify its seven visited lagoons.",
+    "The Tayabas River study is not a source for the Hinabaan River or Guinayangan springs."
+  ],
+  "nextAction": "Seek a permitted copy or station-level species list from the Maulawin Spring Protected Landscape PAMO/BMB and the CLSU-IIRR Guinayangan aquaculture research team; require explicit sample locality, date, method, taxonomic rank, and reuse terms before any fish assertion."
+}
