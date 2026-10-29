@@ -46,6 +46,11 @@
       "sourceId": "psa-psgc-guinayangan-barangays-2025",
       "result": "PSA PSGC confirms the administrative barangay names/codes only.",
       "decision": "Not biological evidence."
+    },
+    {
+      "sourceId": "gbif-guinayangan-exact-fish-occurrence-screen-20261030",
+      "result": "Corrected CoL XR Actinopterygii filter: 8 target waterBody names, 8 exact target locality strings, and locality variants Hinabaan, Maulawin, and Guinayangan returned zero. A broader all-taxa Guinayangan locality search returned 129 mixed records; it was not used to assign fish to any target waterbody.",
+      "decision": "Bounded GBIF search gap only. No occurrence row, fish species, geometry, locality assignment, or absence claim added."
     }
   ],
   "excludedComparator": {
@@ -66,7 +71,117 @@
     "Search-engine results are discovery aids, not a complete search of all theses, protected-area records, and unpublished monitoring data.",
     "The BMB PAIS page could not be directly reviewed after an HTTP 502 response; do not infer what its full record contains.",
     "The CLSU article concerns local aquaculture activity but does not publish a fish inventory or identify its seven visited lagoons.",
-    "The Tayabas River study is not a source for the Hinabaan River or Guinayangan springs."
+    "The Tayabas River study is not a source for the Hinabaan River or Guinayangan springs.",
+    "The initial GBIF default-backbone key attempt was invalidated because the retrieved usage key was deleted; only the corrected CoL XR key/checklist search is reported as fish-filtered evidence."
   ],
-  "nextAction": "Seek a permitted copy or station-level species list from the Maulawin Spring Protected Landscape PAMO/BMB and the CLSU-IIRR Guinayangan aquaculture research team; require explicit sample locality, date, method, taxonomic rank, and reuse terms before any fish assertion."
+  "nextAction": "Seek a permitted copy or station-level species list from the Maulawin Spring Protected Landscape PAMO/BMB and the CLSU-IIRR Guinayangan aquaculture research team. In parallel, use GBIF exact text queries only as candidate discovery; require explicit occurrence locality and identity, date, method, taxonomic rank, and record-level terms before any fish assertion.",
+  "gbifOccurrenceScreen": {
+    "apiDocumentation": "https://techdocs.gbif.org/en/openapi/v1/occurrence",
+    "endpoint": "https://api.gbif.org/v1/occurrence/search",
+    "checkedOn": "2026-10-30",
+    "httpStatus": 200,
+    "taxonomy": {
+      "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+      "taxonKey": "8VR36",
+      "label": "Catalogue of Life Extended Release Actinopterygii; same corrected CoL XR filter used in existing project research."
+    },
+    "filters": {
+      "country": "PH",
+      "limit": 1,
+      "fields": "locality and waterBody queried separately"
+    },
+    "exactLocalityQueries": [
+      {
+        "query": "Hinabaan River",
+        "count": 0
+      },
+      {
+        "query": "Maulawin Itaas Spring",
+        "count": 0
+      },
+      {
+        "query": "Maulawin Ibaba Spring",
+        "count": 0
+      },
+      {
+        "query": "San Pedro I Springs (2)",
+        "count": 0
+      },
+      {
+        "query": "Bahokhok Springs (2)",
+        "count": 0
+      },
+      {
+        "query": "Sta. Cruz Spring (Rosales)",
+        "count": 0
+      },
+      {
+        "query": "Sta. Cruz Spring (Marjes)",
+        "count": 0
+      },
+      {
+        "query": "San Antonio Spring",
+        "count": 0
+      },
+      {
+        "query": "Hinabaan",
+        "count": 0
+      },
+      {
+        "query": "Maulawin",
+        "count": 0
+      },
+      {
+        "query": "Guinayangan",
+        "count": 0
+      }
+    ],
+    "exactWaterBodyQueries": [
+      {
+        "query": "Hinabaan River",
+        "count": 0
+      },
+      {
+        "query": "Maulawin Itaas Spring",
+        "count": 0
+      },
+      {
+        "query": "Maulawin Ibaba Spring",
+        "count": 0
+      },
+      {
+        "query": "San Pedro I Springs (2)",
+        "count": 0
+      },
+      {
+        "query": "Bahokhok Springs (2)",
+        "count": 0
+      },
+      {
+        "query": "Sta. Cruz Spring (Rosales)",
+        "count": 0
+      },
+      {
+        "query": "Sta. Cruz Spring (Marjes)",
+        "count": 0
+      },
+      {
+        "query": "San Antonio Spring",
+        "count": 0
+      }
+    ],
+    "broaderAllTaxaQuery": {
+      "filters": {
+        "country": "PH",
+        "locality": "Guinayangan"
+      },
+      "count": 129,
+      "decision": "Not used as fish evidence: all-taxon locality results are mixed and at least one returned sample had stateProvince=Rizal despite locality=Guinayangan. No individual occurrence was admitted."
+    },
+    "invalidatedPreliminaryAttempt": {
+      "note": "An earlier default-backbone taxon filter was not used: GBIF /species/204 reports that usage as deleted 2022-11-23. The fish-filtered screen above instead used the existing project CoL XR checklist/taxon pair.",
+      "queryEvidence": "The default /species/match?name=Actinopterygii returned matchType NONE; no result from that attempt is interpreted."
+    },
+    "interpretation": "All query counts are bounded indexed-text screens. Zero text matches are not evidence that fish are absent and do not replace a field survey or complete occurrence download."
+  }
 }

@@ -3,7 +3,7 @@
   "checkedOn": "2026-10-30",
   "status": "research-only-source-registry",
   "scope": "National acquisition references, freshwater spatial-source leads, and CALABARZON/Central Luzon identity/source leads. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 210,
+  "sourceCount": 211,
   "sources": [
     {
       "id": "gbif-col-xr-taxonomy-matching",
@@ -6312,6 +6312,39 @@
         "Search snippets do not establish the contents of the full BMB PAIS record.",
         "No association is made between the protected landscape and the separately named water-district spring-source leads.",
         "No fish absence, current presence, access, safety, or boundary is inferred."
+      ]
+    },
+    {
+      "id": "gbif-guinayangan-exact-fish-occurrence-screen-20261030",
+      "title": "GBIF Occurrence API exact-locality and waterBody Actinopterygii screen for Guinayangan freshwater leads",
+      "provider": "Global Biodiversity Information Facility",
+      "url": "https://techdocs.gbif.org/en/openapi/v1/occurrence",
+      "additionalUrls": [
+        "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&waterBody=Hinabaan+River&limit=1",
+        "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&locality=Guinayangan&limit=1"
+      ],
+      "role": "Bounded corrected Catalogue of Life XR Actinopterygii query across eight source-named river/spring waterBody terms and eleven locality variants. All returned zero; a broader all-taxon locality query returned mixed records and was not used as fish evidence.",
+      "checkedOn": "2026-10-30",
+      "sourceYear": null,
+      "access": {
+        "status": "Public occurrence search API returned HTTP 200 for all queries; exact query inventory and zero counts are recorded in the linked review.",
+        "reviewFiles": [
+          "calabarzon-guinayangan-fish-survey-search-review-20261030.json"
+        ],
+        "rawPath": null
+      },
+      "reuse": {
+        "metadata": "GBIF API documentation reviewed. No occurrence record was selected or copied.",
+        "content": "Counts only; no individual occurrence, taxon, coordinates or record content reproduced."
+      },
+      "publicationApproval": false,
+      "researchStatus": "bounded-CoLXR-exact-text-screens-zero;all-taxon-city-hit-not-used;no-fish-absence-inferred",
+      "license": null,
+      "licenseUrl": null,
+      "caveats": [
+        "A zero text query is not evidence of fish absence and is limited to GBIF indexed fields and selected names.",
+        "The all-taxon Guinayangan query is not a fish list; mixed records and a stateProvince mismatch were observed.",
+        "A default-backbone key attempt was discarded because that usage was marked deleted; only the existing project CoL XR filter is reported as a fish-filtered screen."
       ]
     }
   ],
