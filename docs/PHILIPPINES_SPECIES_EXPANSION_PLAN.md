@@ -1169,3 +1169,32 @@ Verification for this research-only batch: `npm run test:species:pipeline`, `npm
 - **Next:** Find primary DENR/PAMO or LGU records for watercourse identity and route, then independent station-resolved fish surveys with reviewable reuse terms. Keep the four leads out of public species rows until those gates are met.
 - **Artifacts:** `calabarzon-guinayangan-mspl-tributaries-crosswalk-20261030.json`; updated `calabarzon-scope.json`, `sources.json`, fish-survey search review, and coverage denominator profile.
 - **Source:** [IIRR watershed brief](https://iirr.org/wp-content/uploads/2021/10/Small-Watersheds-and-Landscapes-Engaging-Local-Stakeholders-in-Conservation.pdf).
+
+
+## 122. Guinayangan tributary GBIF indexed-field screen -- 30 October 2026
+
+- **Queries:** Eight GBIF occurrence-search requests across `waterBody` and `locality` for Hiwasayan River, Maulawin River, Prensa Creek, and Sisi Creek; country `PH`; the selected Catalogue of Life Extended Release Actinopterygii checklist and taxon key. All eight returned HTTP 200 and zero indexed records.
+- **Disposition:** Bounded name-field screen only. Zero results do not establish fish absence and do not replace spelling-variant, all-taxon, survey, or station-resolved review. No fish assertion, species, geometry, salinity, access statement, or public row changed.
+- **Artifacts:** `calabarzon-guinayangan-tributary-gbif-screen-20261030.json`; raw API responses are in ignored local storage and represented by tracked hashes/byte receipts.
+- **Next:** Review alternate transliterations and municipality-level discovery separately, and seek a primary, reusable station-resolved fish survey. Do not broaden an unmatched lead into a claim of no fish.
+- **Source:** [GBIF occurrence API](https://techdocs.gbif.org/en/openapi/v1/occurrence).
+
+
+## 123. Kabibihan River System cross-municipality freshwater and tidal-habitat lead -- 30 October 2026
+
+- **Scope:** Added one named river-system research lead for Quezon with study-area associations to Guinayangan and Tagkawayan. The CALABARZON denominator is 112 selected leads (55 rivers); 31 leads remain queued. This is not a complete waterbody inventory.
+- **Evidence:** The 2021 ICFAS/AFSSRN abstract describes 102 gleaners across 11 barangays (six in Guinayangan, five in Tagkawayan) and 15 Mollusca macro-invertebrate species, but supplies no scientific-name list or finfish taxa. EO 78 (1947, effective 1948) names the river as the historical line between the two municipalities. A JICA 1999 report describes 19 historical salinity sampling points along an approximately 15 km route; a 2003 article identifies Kabibihan as a tidal river in a mangrove/salinity study.
+- **Disposition:** The historic route and salinity studies do not establish current reach-wide salinity or river geometry. Two GBIF Actinopterygii indexed-field queries returned zero; this is not absence evidence. No fish/mollusc species assertion, geometry, salinity classification, access claim, or public row was added. No item-specific reuse license was found for the conference abstract or JICA report; no tables, figures or coordinates were republished.
+- **Next:** Seek the underlying SLSU project report and review its station/taxon data and reuse terms; locate current authoritative hydrography before any geometry work.
+- **Artifacts:** `calabarzon-kabibihan-river-system-review-20261030.json`, updated `calabarzon-scope.json`, `sources.json`, and coverage-denominator profile.
+- **Sources:** [ICFAS/AFSSRN Book of Abstracts](https://tbtiphpssfns.upv.edu.ph/wp-content/uploads/2022/11/ICFAS-6-and-AFSSRN-F1-Book-of-Abstract.pdf), [EO 78 text](https://ldr.senate.gov.ph/executive-issuance/executive-order-no-78-s-1947), [JICA 1999 final report](https://openjicareport.jica.go.jp/pdf/11519246_01.pdf), [Toyoda et al. 2003](https://www.jstage.jst.go.jp/article/jjfe/45/2/45_KJ00005291885/_article).
+
+
+### National rollout step 163: Kabibihan SLSU project provenance and report search -- 30 October 2026
+
+- **Sources:** The official SLSU 2019 research-program PDF lists project 49 as completed in 2018–2019 and presented at the 3rd International Academic Summit in November 2019. The official 2021 program lists the same title and authors Jofren R. Moreno, Reynalyn C. Bacay, and Edmar A. Driz. The separate ICFAS/AFSSRN abstract provides the aggregate mollusc-gleaning results.
+- **Search outcome:** Exact-title and author searches surfaced the conference abstract and official institutional program listings, but no publicly accessible full report or species-by-species appendix. Do not treat the institutional listings as the underlying study or as evidence of finfish records.
+- **Disposition:** Added the two SLSU program records as bibliographic provenance. The abstract's 15 Mollusca species remain unnamed at species level in the available source. No taxon assertion, sampling station, geometry, salinity class, reuse permission, or public app row was added.
+- **Next:** Use the university's public research contact route to ask whether the 2018–2019 report and any species appendix are available for review, with reuse terms; continue independent source discovery while awaiting an answer. No request was sent.
+- **Artifacts:** `calabarzon-kabibihan-river-system-review-20261030.json`; updated `sources.json`, coverage denominator profile, and research README.
+- **Sources:** [SLSU Research Program 2019](https://www.slsu.edu.ph/wp-content/uploads/2023/05/Transparency%20Seal2/IV/Research/2019/Research_2019.pdf), [SLSU Research Program 2021](https://www.slsu.edu.ph/wp-content/uploads/2023/05/Transparency%20Seal2/IV/Research/2021/Research_2021.pdf), [ICFAS/AFSSRN Book of Abstracts](https://tbtiphpssfns.upv.edu.ph/wp-content/uploads/2022/11/ICFAS-6-and-AFSSRN-F1-Book-of-Abstract.pdf).

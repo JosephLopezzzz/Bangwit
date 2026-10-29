@@ -72,12 +72,12 @@
     "limits": "Province plus separate-city starter coverage. Municipalities/component cities and each island/waterbody still require the source-sweep inventory; this is not a completed regional inventory."
   },
   "counts": {
-    "waterbodyResearchLeads": 111,
+    "waterbodyResearchLeads": 112,
     "provincesWithLeads": 5,
     "separateCityCoverageUnits": 1,
     "byKind": {
       "bay": 7,
-      "river": 54,
+      "river": 55,
       "estuary": 3,
       "wetland": 8,
       "reservoir": 5,
@@ -3943,6 +3943,57 @@
       "reviewStatus": "official-water-supply-source-crosswalk;fish-evidence-geometry-salinity-pending",
       "publicAdmission": false,
       "scopeNote": "Guinayangan Water District Annual Report 2024 Annex J names this spring source at Barangay San Antonio, Guinayangan, Quezon. The barangay name/code is cross-checked against PSA PSGC. The report's operational source status is water-supply context only. No fish evidence, coordinates, waterbody extent, salinity, fishing access, safety, or permission is established."
+    },
+    {
+      "id": "ph-wb-kabibihan-river-system-quezon",
+      "name": "Kabibihan River System",
+      "aliases": [
+        "Kabibihan River"
+      ],
+      "kind": "river",
+      "salinity": {
+        "classification": "unknown",
+        "reviewStatus": "historical-tidal-gradient-reported;present-whole-reach-classification-not-assessed",
+        "sourceRefs": [
+          "jica-kabibihan-mangrove-salinity-survey-1999",
+          "toyoda-etal-kabibihan-tidal-river-salinity-2003"
+        ]
+      },
+      "administrativeAssociations": [
+        {
+          "regionId": "0400000000",
+          "provinceId": "0405600000",
+          "relationship": "historical-boundary-line-named",
+          "sourceRefs": [
+            "senate-eo-78-1947-kabibihan-boundary"
+          ],
+          "locality": "Executive Order No. 78 (1947; effective 1 January 1948) names the Kabibihan River as the line between Tagkawayan and Guinayangan; this source does not define current or surveyed geometry."
+        },
+        {
+          "regionId": "0400000000",
+          "provinceId": "0405600000",
+          "relationship": "study-area",
+          "sourceRefs": [
+            "slsu-icfas-2021-kabibihan-gleaning-abstract",
+            "psa-calabarzon-directory"
+          ],
+          "locality": "Study described across Guinayangan (six of eleven respondent barangays, names not supplied) and Tagkawayan (five barangays, names not supplied), Quezon."
+        }
+      ],
+      "sourceRefs": [
+        "slsu-icfas-2021-kabibihan-gleaning-abstract",
+        "senate-eo-78-1947-kabibihan-boundary",
+        "jica-kabibihan-mangrove-salinity-survey-1999",
+        "toyoda-etal-kabibihan-tidal-river-salinity-2003",
+        "gbif-occurrence-downloads",
+        "psa-calabarzon-directory"
+      ],
+      "identityStatus": "conference-named-river-system;historical-municipal-boundary-source;extent-not-delineated",
+      "boundaryStatus": "not-delineated",
+      "fishEvidenceStatus": "historical-gleaning-abstract-reports-mollusc-richness;no-finfish-taxa-reported",
+      "reviewStatus": "historical-tidal-salinity-and-mollusc-fishery-context;finfish-evidence-current-salinity-rights-and-geometry-unresolved",
+      "publicAdmission": false,
+      "scopeNote": "The 2021 conference abstract describes a Kabibihan River System gleaning study spanning Guinayangan and Tagkawayan, Quezon: 102 gleaners across eleven barangays and 15 reported Mollusca macro-invertebrate species, but it gives no scientific-name list or finfish taxa. EO 78 names Kabibihan River as the historical line between the municipalities, effective 1 January 1948; no geometry follows from the text. A 1999 JICA mangrove study reports salinity sampling at 19 points along an approximately 15 km upstream route from the lower aerial-coverage limit, and a 2003 paper describes it as a tidal river. Those are historical habitat context, not current salinity for the whole system, fish evidence, or channel geometry. The two GBIF name-field fish queries returned zero; this is not evidence of absence. No access or fishing permission is established."
     }
   ],
   "coverageRules": {
@@ -4070,14 +4121,29 @@
         "ph-wb-sta-cruz-spring-marjes-guinayangan",
         "ph-wb-san-antonio-spring-guinayangan"
       ]
+    },
+    {
+      "id": "kabibihan-river-system-study-and-salinity-followup",
+      "priority": 9,
+      "task": "Seek the underlying Kabibihan gleaning project report and primary river/station data; review exact locality, finfish versus mollusc records, historical/current salinity, reuse terms, and route identity before any species or geography projection.",
+      "sourceIds": [
+        "slsu-icfas-2021-kabibihan-gleaning-abstract",
+        "senate-eo-78-1947-kabibihan-boundary",
+        "jica-kabibihan-mangrove-salinity-survey-1999",
+        "toyoda-etal-kabibihan-tidal-river-salinity-2003",
+        "gbif-occurrence-downloads"
+      ],
+      "waterbodyIds": [
+        "ph-wb-kabibihan-river-system-quezon"
+      ]
     }
   ],
   "gaps": [
     {
       "id": "scope-not-exhaustive",
       "status": "open",
-      "count": 111,
-      "reason": "111 selected named water and habitat research leads are seeded across CALABARZON water types; this selected list is not a complete regional inventory. The official 2024 Cavite profile adds source-named river courses, while reported route text remains distinct from verified channel geometry. The Guinayangan Water District 2024 report adds one river and seven grouped or named spring-source leads by barangay, without fish data or geometry. An IIRR watershed brief adds four source-named Maulawin tributaries, but no fish evidence or surveyed channel routes. A 2017 JICA-hosted EIA adds a historical four-station estuarine fishery matrix and a station at the Maalimango River mouth; it does not provide a complete inventory or channel boundary. Provincial, municipal, island, stream, pond and reservoir denominators remain unestablished; some leads are habitat/designation names rather than delineated waterbodies.",
+      "count": 112,
+      "reason": "112 selected named water and habitat research leads are seeded across CALABARZON water types; this selected list is not a complete regional inventory. The official 2024 Cavite profile adds source-named river courses, while reported route text remains distinct from verified channel geometry. The Guinayangan Water District 2024 report adds one river and seven grouped or named spring-source leads by barangay, without fish data or geometry. An IIRR watershed brief adds four source-named Maulawin tributaries, but no fish evidence or surveyed channel routes. The Kabibihan River System is named in a cross-municipality gleaning abstract and historical tidal mangrove/salinity studies, but these add no finfish list or current geometry. A 2017 JICA-hosted EIA adds a historical four-station estuarine fishery matrix and a station at the Maalimango River mouth; it does not provide a complete inventory or channel boundary. Provincial, municipal, island, stream, pond and reservoir denominators remain unestablished; some leads are habitat/designation names rather than delineated waterbodies.",
       "nextAction": "Continue the source-derived inventory with explicit inclusion criteria and a frozen manifest; resolve unnamed 2021 aggregate river/wetland counts before claiming a regional baseline."
     },
     {

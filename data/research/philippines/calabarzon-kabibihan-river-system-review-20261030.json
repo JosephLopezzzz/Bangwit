@@ -1,0 +1,141 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "calabarzon-kabibihan-river-system-review-20261030",
+  "reviewedOn": "2026-10-30",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "provinceId": "0405600000",
+  "status": "named-river-and-historical-habitat-context-crosswalked;no-finfish-assertion;current-geometry-unresolved",
+  "purpose": "Cross-check a named Quezon river system across historical administrative text, mangrove/salinity field studies, a conference gleaning abstract, and bounded GBIF discovery without inferring current fish presence or geometry.",
+  "waterbodyId": "ph-wb-kabibihan-river-system-quezon",
+  "sourceIds": [
+    "slsu-icfas-2021-kabibihan-gleaning-abstract",
+    "slsu-research-program-2019-kabibihan-gleaning-project",
+    "slsu-research-program-2021-kabibihan-gleaning-project",
+    "senate-eo-78-1947-kabibihan-boundary",
+    "jica-kabibihan-mangrove-salinity-survey-1999",
+    "toyoda-etal-kabibihan-tidal-river-salinity-2003",
+    "gbif-occurrence-downloads",
+    "psa-calabarzon-directory"
+  ],
+  "sourceReviews": [
+    {
+      "sourceId": "slsu-icfas-2021-kabibihan-gleaning-abstract",
+      "title": "ICFAS 6 / AFSSRN F1 Book of Abstracts, 2021",
+      "finding": "The Kabibihan study abstract describes 102 gleaners in eleven barangays across Guinayangan (six) and Tagkawayan (five), reports 15 Mollusca macro-invertebrate species under Bivalvia and Gastropoda, and names seven orders and nine families. It does not list the 15 species by name and does not report finfish taxa.",
+      "decision": "River-system and mollusc-gleaning context only. No finfish assertion or named mollusc record admitted; obtain the underlying report and review rights."
+    },
+    {
+      "sourceId": "slsu-research-program-2019-kabibihan-gleaning-project",
+      "title": "SLSU Research Program 2019, project 49",
+      "finding": "The official institutional listing records the Kabibihan gleaning project as completed from 2018 to 2019 and presented at the 3rd International Academic Summit in Lingayen, Pangasinan, on 27-29 November 2019.",
+      "decision": "Project-status and bibliographic provenance only. It does not provide taxa, methods, sampling stations, coordinates, current fish occurrence, or data reuse permission."
+    },
+    {
+      "sourceId": "slsu-research-program-2021-kabibihan-gleaning-project",
+      "title": "SLSU Research Program 2021, entry 23",
+      "finding": "The SLSU listing corroborates the study title and lists authors Jofren R. Moreno, Reynalyn C. Bacay, and Edmar A. Driz.",
+      "decision": "Title/authorship cross-check only. It provides no underlying report, study methods, sampling stations, taxa, or reuse permission."
+    },
+    {
+      "sourceId": "senate-eo-78-1947-kabibihan-boundary",
+      "title": "Executive Order No. 78, s. 1947",
+      "finding": "The issuance text says Kabibihan River shall be the boundary line between Tagkawayan and Guinayangan after the transfer of Aloneros to Guinayangan, effective 1 January 1948. Senate LRB direct page access returned 403; its indexed text was cross-checked with the reproduced Lawphil issuance.",
+      "decision": "Historical administrative name relationship only. It supplies no coordinates, current surveyed line, waterbody geometry, or municipal-water boundary."
+    },
+    {
+      "sourceId": "jica-kabibihan-mangrove-salinity-survey-1999",
+      "title": "JICA Final Report, July 1999: Mapping and Land Cover Assessment of Mangrove Areas in the Republic of the Philippines",
+      "finding": "The report describes water sampling and mangrove observations on Kabibihan River at 19 points along an approximately 15 km upstream route from the lower end of aerial-photo coverage; lower reaches are described as more saline, with changes upstream. Figure 2-1-35 was not digitized.",
+      "decision": "Historical tidal/salinity habitat context only. No current whole-river salinity classification, fish data, or line geometry admitted."
+    },
+    {
+      "sourceId": "toyoda-etal-kabibihan-tidal-river-salinity-2003",
+      "title": "Toyoda, Balagas and Minematsu, 2003, Japanese Journal of Forest Environment 45(2):65-74",
+      "finding": "The journal abstract identifies Kabibihan River in Quezon as one of three tidal rivers in a mangrove distribution and salinity study.",
+      "decision": "Independent historical habitat context only; not fish evidence or current water conditions."
+    },
+    {
+      "sourceId": "gbif-occurrence-downloads",
+      "title": "GBIF occurrence API selected CoL XR Actinopterygii search",
+      "finding": "Two queries for the value Kabibihan River in waterBody and locality, country PH, selected checklist/taxon filter, each returned HTTP 200 and zero indexed matches.",
+      "decision": "Bounded indexed-text search only. Zero is not fish absence."
+    }
+  ],
+  "gbifScreen": {
+    "endpoint": "https://api.gbif.org/v1/occurrence/search",
+    "documentation": "https://techdocs.gbif.org/en/openapi/v1/occurrence",
+    "taxonomy": {
+      "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+      "taxonKey": "8VR36",
+      "label": "Catalogue of Life Extended Release Actinopterygii"
+    },
+    "filters": {
+      "country": "PH",
+      "limit": 100,
+      "offset": 0
+    },
+    "queries": [
+      {
+        "field": "waterBody",
+        "value": "Kabibihan River",
+        "httpStatus": 200,
+        "count": 0,
+        "returnedCount": 0,
+        "limit": 100,
+        "offset": 0,
+        "raw": {
+          "path": "raw/kabibihan-gbif-screen-20261030/waterBody.json",
+          "bytes": 79,
+          "sha256": "16004ddeb6b1eb033e3665fa6082d9cdd36533ce1f36272a2a95f5664f1b9dcd"
+        }
+      },
+      {
+        "field": "locality",
+        "value": "Kabibihan River",
+        "httpStatus": 200,
+        "count": 0,
+        "returnedCount": 0,
+        "limit": 100,
+        "offset": 0,
+        "raw": {
+          "path": "raw/kabibihan-gbif-screen-20261030/locality.json",
+          "bytes": 79,
+          "sha256": "16004ddeb6b1eb033e3665fa6082d9cdd36533ce1f36272a2a95f5664f1b9dcd"
+        }
+      }
+    ],
+    "rawReceipts": [
+      {
+        "file": "waterBody.json",
+        "bytes": 79,
+        "sha256": "16004ddeb6b1eb033e3665fa6082d9cdd36533ce1f36272a2a95f5664f1b9dcd"
+      },
+      {
+        "file": "locality.json",
+        "bytes": 79,
+        "sha256": "16004ddeb6b1eb033e3665fa6082d9cdd36533ce1f36272a2a95f5664f1b9dcd"
+      }
+    ]
+  },
+  "decisions": {
+    "newScopeLeads": 1,
+    "finfishAssertionsAdded": 0,
+    "molluscSpeciesNamesAdded": 0,
+    "salinityClassificationAdded": 0,
+    "geometryAdded": false,
+    "publicRowsAdded": 0,
+    "publicAdmission": false,
+    "coordinatesProjected": false,
+    "accessOrFishingPermissionInferred": false
+  },
+  "limitations": [
+    "The conference abstract does not identify species names from its aggregate count of mollusc species and is not a finfish survey.",
+    "The 1947 administrative statement is historical and lacks a geometry description; it is not used as a legal or channel boundary.",
+    "The 1999 JICA measurements and 2003 mangrove paper are historical context; no current water salinity or present fish distribution is inferred.",
+    "The JICA route figure is not georeferenced in this review, and the approximate route is not adopted as a centerline.",
+    "The two GBIF zero results are bounded and do not establish fish absence.",
+    "Reuse licensing was not identified for the conference abstract, JICA PDF, or J-STAGE article; no tables, figures, coordinates, or species names were reused."
+  ],
+  "nextAction": "Request or locate the full 2018-2019 SLSU project report through a publicly documented institutional route, then assess identifiers and reuse terms before extracting any records. Obtain a current official hydrographic route source before considering geometry; keep salinity variable/unknown in the app until it is supported at reach and date level."
+}
