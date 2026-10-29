@@ -3,7 +3,7 @@
   "checkedOn": "2026-10-30",
   "status": "research-only-source-registry",
   "scope": "National acquisition references, freshwater spatial-source leads, and CALABARZON/Central Luzon identity/source leads. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 226,
+  "sourceCount": 227,
   "sources": [
     {
       "id": "gbif-col-xr-taxonomy-matching",
@@ -5344,12 +5344,13 @@
       "provider": "HydroSHEDS / World Wildlife Fund US",
       "url": "https://www.hydrosheds.org/products/hydrolakes",
       "role": "CC BY 4.0 global spatial discovery source for mapped lakes and reservoirs at least 10 hectares; supports freshwater waterbody inventory planning, not fish occurrence or local access claims.",
-      "checkedOn": "2026-10-26",
+      "checkedOn": "2026-10-30",
       "sourceYear": 2016,
       "access": {
-        "status": "official-product-metadata-and-license-reviewed;no-files-downloaded;Philippines-subset-not-extracted",
+        "status": "official-product-metadata-reviewed;official-global-archive-not-downloaded;third-party-Asia-subset-reviewed",
         "reviewFiles": [
-          "national-philippines-lake-waterbody-source-review-20261026.json"
+          "national-philippines-lake-waterbody-source-review-20261026.json",
+          "national-philippines-hydrolakes-asia-subset-screen-20261030.json"
         ],
         "rawPath": null,
         "availableProducts": [
@@ -5361,17 +5362,59 @@
       },
       "reuse": {
         "metadata": "The official HydroSHEDS product page states that HydroLAKES is licensed under Creative Commons Attribution 4.0 International.",
-        "raw": "No HydroLAKES product was downloaded or retained in the project during this review.",
-        "content": "Keep as a waterbody-discovery framework. Preserve CC BY 4.0 attribution if a derived subset is later prepared; do not infer that this review approves public app geometry."
+        "raw": "The official global HydroLAKES archive was not downloaded. A separately licensed third-party Asia subset is retained in ignored local raw storage; see its own registry record and hash-verified review.",
+        "content": "Keep as a waterbody-discovery framework. Preserve CC BY 4.0 attribution for derived data; this review does not approve public app geometry."
       },
       "publicationApproval": false,
-      "researchStatus": "national-lake-source-verified;philippines-subset-pending;zero-species-assertions",
+      "researchStatus": "national-lake-source-verified;third-party-asia-subset-screened;zero-species-assertions",
       "license": "CC BY 4.0",
       "caveats": [
         "HydroLAKES aims to include lakes with a surface area of at least 10 hectares; smaller lakes and ponds are outside this source's stated threshold.",
         "The product page describes mostly geometric attributes; it is not a complete Philippine lake, wetland, reservoir, or inland-water inventory.",
         "This source does not establish fish presence, current water conditions, fishing access, legal catchability, or local waterbody naming in the Philippines.",
-        "No Philippines subset, regional crosswalk, geometry validation, or application asset was produced in this review."
+        "The official global archive was not downloaded. The screened third-party subset does not validate local waterbody identity, regional completeness, geometry fitness, or public application reuse."
+      ]
+    },
+    {
+      "id": "zenodo-hydrolakes-asia-subset-v1",
+      "title": "HydroLAKES Asia subset, derived from HydroLAKES v1",
+      "provider": "Daniel Schönberger / Zenodo",
+      "url": "https://zenodo.org/records/17503891",
+      "additionalUrls": [
+        "https://doi.org/10.5281/zenodo.17503891",
+        "https://www.hydrosheds.org/products/hydrolakes"
+      ],
+      "role": "CC BY 4.0 regional discovery copy of HydroLAKES v1, screened to identify Philippines lake/reservoir candidates; not fish evidence or a complete national waterbody inventory.",
+      "checkedOn": "2026-10-30",
+      "sourceYear": 2025,
+      "access": {
+        "status": "zenodo-asia-archive-downloaded-and-md5-sha256-verified;1298-philippines-features-screened;research-only",
+        "reviewFiles": [
+          "national-philippines-hydrolakes-asia-subset-screen-20261030.json"
+        ],
+        "rawPath": "raw/hydrolakes-asia-subset-screen-20261030/",
+        "archive": {
+          "file": "HydroLAKES_Asia.zip",
+          "bytes": 66441239,
+          "md5": "7601d5fad928195d6a91c616adb172ad",
+          "sha256": "7c610c19d561f84624736081d2bdd95c004812f5c2354afb6cbdc1bc5c411cc2"
+        }
+      },
+      "reuse": {
+        "metadata": "Zenodo record declares CC BY 4.0; HydroLAKES attribution remains required.",
+        "raw": "Archive and extracted screening files are retained only in ignored local research storage; they are not committed or served by the app.",
+        "content": "Discovery and crosswalk work only. No feature is approved as an app boundary until identity, positional suitability, attribution, and intended-use review are complete."
+      },
+      "publicationApproval": false,
+      "researchStatus": "asia-subset-hash-verified;philippines-feature-screen-complete;unnamed-sampaloc-candidate-unresolved;zero-species-assertions",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "caveats": [
+        "The subset derives from HydroLAKES v1, whose stated lake threshold is at least 10 hectares; smaller waters and other inland-water types are not comprehensively represented.",
+        "The Philippines country-field screen found 1,298 features but does not establish a complete national waterbody inventory.",
+        "No Asia-subset feature is assigned to Lake Sampaloc by name. Hylak_id 1397813 is an unnamed spatial candidate only; its identity and boundary are not independently validated.",
+        "A zero-result GBIF geometry query on the unnamed candidate is not evidence of fish absence or a complete biological survey.",
+        "No fish occurrence, species, diet, local access, legal status, or application geometry is approved by this source record."
       ]
     },
     {

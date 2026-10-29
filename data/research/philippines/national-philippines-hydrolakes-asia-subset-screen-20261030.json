@@ -1,0 +1,143 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-30",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "provinceId": "0405600000",
+  "status": "cc-by-asia-subset-hash-verified;unnamed-sampaloc-polygon-candidate;bounded-gbif-polygon-screen-zero;no-species-assertion",
+  "purpose": "Test a licensed regional HydroLAKES v1 subset as a faster inland-water discovery layer and screen one unnamed polygon candidate near Lake Sampaloc. This is not a complete Philippine waterbody inventory.",
+  "sources": [
+    {
+      "sourceId": "hydrosheds-hydrolakes-v1-philippines-waterbody-framework",
+      "officialProduct": "https://www.hydrosheds.org/products/hydrolakes",
+      "productVersion": "HydroLAKES v1",
+      "license": "CC BY 4.0",
+      "minimumLakeAreaHa": 10,
+      "publishedReference": "Lehner, B. and Messager, M.L. (2016). HydroLAKES: Global Lake and Reservoir Database. Environmental Data Initiative."
+    },
+    {
+      "sourceId": "zenodo-hydrolakes-asia-subset-v1",
+      "recordUrl": "https://zenodo.org/records/17503891",
+      "doi": "10.5281/zenodo.17503891",
+      "creator": "Daniel Schönberger",
+      "publishedOn": "2025-11-01",
+      "license": "CC BY 4.0",
+      "subsetFile": "HydroLAKES_Asia.zip",
+      "archiveUrl": "https://zenodo.org/api/records/17503891/files/HydroLAKES_Asia.zip/content",
+      "archiveBytes": 66441239,
+      "archiveMd5": "7601d5fad928195d6a91c616adb172ad",
+      "archiveSha256": "7c610c19d561f84624736081d2bdd95c004812f5c2354afb6cbdc1bc5c411cc2",
+      "rawPath": "raw/hydrolakes-asia-subset-screen-20261030/HydroLAKES_Asia.zip",
+      "access": "Downloaded from Zenodo and verified against the record's published MD5. The full official HydroLAKES global archive was not downloaded."
+    }
+  ],
+  "subsetScreen": {
+    "format": "ESRI Shapefile, WGS 84 / EPSG:4326",
+    "featureCount": 250196,
+    "philippinesCountryFieldCount": 1298,
+    "lakeNameFieldSubstring": "Sampaloc",
+    "namedMatchCount": 0,
+    "interpretation": "No polygon has a Lake_name value containing Sampaloc. This is a bounded name-field screen, not evidence that the lake or its polygon is absent."
+  },
+  "localityScreen": {
+    "waterbodyLead": "Lake Sampaloc, San Pablo City, Laguna",
+    "approximateQueryCenter": {
+      "decimalLatitude": 14.079,
+      "decimalLongitude": 121.33,
+      "basis": "Approximate discovery point only; not a source-reported survey coordinate or a validated lake centroid."
+    },
+    "candidateSearchBox": {
+      "west": 121.315,
+      "south": 14.065,
+      "east": 121.345,
+      "north": 14.09
+    },
+    "boundingBoxCandidateCount": 2,
+    "candidates": [
+      {
+        "hylakId": 1397812,
+        "lakeName": "",
+        "country": "Philippines",
+        "polygonSource": "SWBD",
+        "lakeAreaField": 0.27,
+        "bbox": {
+          "west": 121.34129712649815,
+          "south": 14.078480021159237,
+          "east": 121.34678228817336,
+          "north": 14.083705240885763
+        },
+        "identityDecision": "unnamed-nearby-polygon;not-assigned-to-Sampaloc"
+      },
+      {
+        "hylakId": 1397813,
+        "lakeName": "",
+        "country": "Philippines",
+        "polygonSource": "SWBD",
+        "lakeAreaField": 0.83,
+        "bbox": {
+          "west": 121.32490308352925,
+          "south": 14.07374721951004,
+          "east": 121.3354532137376,
+          "north": 14.083273111979508
+        },
+        "ringCount": 1,
+        "vertexCount": 13,
+        "approximateQueryCenterInsidePolygon": true,
+        "identityDecision": "unnamed-spatial-candidate-only;not-a-validated-Lake-Sampaloc-boundary"
+      }
+    ],
+    "geometryCrosswalkLimit": "The approximate point falls inside Hylak_id 1397813, but the source polygon has no lake name and no independent authoritative map crosswalk was established. Neither nearby polygon is assigned to Lake Sampaloc."
+  },
+  "gbifScreen": {
+    "sourceId": "gbif-occurrence-downloads",
+    "endpoint": "https://api.gbif.org/v1/occurrence/search",
+    "documentation": "https://techdocs.gbif.org/en/openapi/v1/occurrence",
+    "filters": {
+      "country": "PH",
+      "taxonKey": 204,
+      "taxonLabel": "Actinopterygii",
+      "taxonRank": "CLASS",
+      "hasCoordinate": true,
+      "decimalLatitude": "14.07374721951004,14.083273111979508",
+      "decimalLongitude": "121.32490308352925,121.3354532137376",
+      "geometry": "POLYGON((121.331842102627 14.073752780491,121.334457526889 14.075796780057,121.335453213738 14.077423706055,121.334818448113 14.080522664388,121.332701341993 14.082631768121,121.331379320509 14.083273111980,121.329457391255 14.082879503039,121.328673971116 14.081264580621,121.325616923590 14.080932413737,121.324903083529 14.079654201932,121.327008932054 14.074743041993,121.330730991516 14.073747219510,121.331842102627 14.073752780491))",
+      "limit": 100,
+      "offset": 0
+    },
+    "queryUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&taxonKey=204&hasCoordinate=true&decimalLatitude=14.07374721951004%2C14.083273111979508&decimalLongitude=121.32490308352925%2C121.3354532137376&geometry=POLYGON%28%28121.331842102627+14.073752780491%2C121.334457526889+14.075796780057%2C121.335453213738+14.077423706055%2C121.334818448113+14.080522664388%2C121.332701341993+14.082631768121%2C121.331379320509+14.083273111980%2C121.329457391255+14.082879503039%2C121.328673971116+14.081264580621%2C121.325616923590+14.080932413737%2C121.324903083529+14.079654201932%2C121.327008932054+14.074743041993%2C121.330730991516+14.073747219510%2C121.331842102627+14.073752780491%29%29&limit=100&offset=0",
+    "httpStatus": 200,
+    "count": 0,
+    "returnedCount": 0,
+    "endOfRecords": true,
+    "raw": {
+      "path": "raw/hydrolakes-asia-subset-screen-20261030/gbif-hylak-1397813-candidate-polygon.json",
+      "bytes": 79,
+      "sha256": "16004ddeb6b1eb033e3665fa6082d9cdd36533ce1f36272a2a95f5664f1b9dcd"
+    }
+  },
+  "decisions": {
+    "sampalocPolygonIdentityValidated": false,
+    "speciesAssertionsAdded": 0,
+    "dietAssertionsAdded": 0,
+    "fishAbsenceInferred": false,
+    "applicationGeometryAdded": false,
+    "publicSpeciesProjectionAdded": false,
+    "publicationApproval": false
+  },
+  "limitations": [
+    "HydroLAKES v1 aims to map lakes and reservoirs at least 10 hectares; smaller lakes, ponds, wetlands and other inland waters are not comprehensively represented.",
+    "This derived Asia subset is a discovery aid, not an official Philippine national waterbody inventory. Its raw archive is retained only in ignored local research storage.",
+    "The two nearby features have empty Lake_name fields. Spatial overlap with an approximate point does not establish the waterbody identity or validate a boundary.",
+    "The GBIF search uses one unnamed candidate polygon and the class Actinopterygii filter. A zero result is not evidence of fish absence, a complete survey, or a complete lake occurrence search.",
+    "No occurrence records, species names, diet claims, current-presence statements, access claims, or app geometry were admitted."
+  ],
+  "attribution": "HydroLAKES v1, HydroSHEDS/HydroRIVERS-HydroBASINS source dataset by Lehner and Messager (2016), CC BY 4.0; Asia subset by Daniel Schönberger (2025), Zenodo DOI 10.5281/zenodo.17503891, CC BY 4.0.",
+  "nextAction": "Crosswalk Hylak_id 1397813 against an independent authoritative or reusable San Pablo map before assigning it to Lake Sampaloc. Keep the polygon research-only unless identity, positional suitability, attribution, and app reuse are reviewed.",
+  "sourceReferences": [
+    "https://www.hydrosheds.org/products/hydrolakes",
+    "https://zenodo.org/records/17503891",
+    "https://zenodo.org/api/records/17503891",
+    "https://techdocs.gbif.org/en/openapi/v1/occurrence",
+    "https://api.gbif.org/v1/occurrence/search?country=PH&taxonKey=204&hasCoordinate=true&decimalLatitude=14.07374721951004%2C14.083273111979508&decimalLongitude=121.32490308352925%2C121.3354532137376&geometry=POLYGON%28%28...%29%29&limit=100&offset=0"
+  ]
+}

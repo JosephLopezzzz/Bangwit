@@ -1252,3 +1252,14 @@ Verification for this research-only batch: `npm run test:species:pipeline`, `npm
 - **Next:** Obtain an authoritative or reusable lake geometry before a geometry-based search; continue to treat any returned occurrence as a candidate requiring record-level geography, identification, date, and reuse review.
 - **Artifacts:** `calabarzon-sampaloc-spatial-gbif-screen-20261030.json`; updated GBIF source registry, research index, and CALABARZON profile hashes.
 - **Sources:** [GBIF Occurrence API reference](https://techdocs.gbif.org/en/openapi/v1/occurrence), [recorded query](https://api.gbif.org/v1/occurrence/search?country=PH&taxonKey=204&hasCoordinate=true&decimalLatitude=14.074,14.084&decimalLongitude=121.325,121.335&limit=100).
+
+### National rollout step 170: HydroLAKES Asia subset and Sampaloc candidate screen — 30 October 2026
+
+- **Source acquisition:** Downloaded the HydroLAKES Asia subset from Zenodo record [10.5281/zenodo.17503891](https://zenodo.org/records/17503891), declared CC BY 4.0, and verified the published MD5 plus a local SHA-256. The official HydroSHEDS page documents the underlying HydroLAKES v1 product and its stated 10-hectare lake threshold; the official global archive was not downloaded.
+- **National screen:** The subset has 250,196 polygons; 1,298 carry `Country=Philippines`. No Philippines feature has a `Lake_name` containing “Sampaloc.” This is a field screen, not a complete national inland-water inventory.
+- **Local candidate:** A point-in-polygon screen places the approximate Sampaloc query center within unnamed Hylak_id 1397813. It is a spatial candidate only; name, identity, positional quality, and boundary were not independently validated. A second nearby unnamed feature, Hylak_id 1397812, is not assigned to the lake.
+- **GBIF screen:** A country-filtered Actinopterygii geometry search against candidate 1397813 returned zero rows. The result is not evidence of fish absence or a lake-wide survey.
+- **Disposition:** Recorded the archive/source hashes and bounded findings in the research artifact and registry. No fish occurrence, species, diet, geometry, access claim, or app record was added. The archive and extracted screening data remain in ignored local research storage; attribution is retained in the source record.
+- **Next:** Seek an independent, authoritative or reusable San Pablo waterbody crosswalk before assigning the unnamed polygon. Continue treating HydroLAKES as a discovery layer, including its threshold and omission limits.
+- **Artifacts:** `national-philippines-hydrolakes-asia-subset-screen-20261030.json`; updated `sources.json`, research index and CALABARZON coverage-denominator profile.
+- **Sources:** [HydroLAKES product page](https://www.hydrosheds.org/products/hydrolakes), [Zenodo Asia subset and license](https://zenodo.org/records/17503891), [GBIF Occurrence API reference](https://techdocs.gbif.org/en/openapi/v1/occurrence).
