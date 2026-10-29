@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-30",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "waterbodyId": "ph-wb-ragay-gulf-quezon",
+  "status": "gbif-cas-candidate-screen-held-pending-source-terms-and-catalog-conflict",
+  "source": {
+    "sourceId": "gbif-cas-ichthyology",
+    "title": "CAS Ichthyology (ICH)",
+    "datasetKey": "5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+    "doi": "10.15468/efh2ib",
+    "datasetVersion": "150.546",
+    "gbifDatasetLicense": "CC0-1.0",
+    "datasetMetadataUrl": "https://api.gbif.org/v1/dataset/5d6c10bd-ea31-4363-8b79-58c96d859f5b"
+  },
+  "search": {
+    "endpoint": "https://api.gbif.org/v1/occurrence/search",
+    "queryUrl": "https://api.gbif.org/v1/occurrence/search?waterBody=Ragay%20Gulf&country=PH&limit=300",
+    "parameters": {
+      "waterBody": "Ragay Gulf",
+      "country": "PH",
+      "limit": 300
+    },
+    "httpStatus": 200,
+    "queriedOn": "2026-10-30",
+    "rawSearch": {
+      "path": "raw/bfar-ragay-gulf-gbif-preview-20261030.json",
+      "bytes": 456245,
+      "sha256": "8090819168d5442c429a4f6d5392a8c65ce9bfbd7460123eaa0de31a5bfd016e"
+    },
+    "rowLevelContentCopiedToTrackedReview": false
+  },
+  "sourceSnapshot": {
+    "path": "raw/calabarzon-balayan-cas-primary-archive-20261025/cas-ichthyology-archive-current.zip",
+    "archiveVersion": "150.545",
+    "publishedOn": "2026-10-19",
+    "bytes": 21381034,
+    "sha256": "3c0c9c0a686590fb6a2c61bf35ed9a7aa68eeb5cad14e13829710198c631ed12",
+    "downloadUrl": "http://ipt.calacademy.org:8080/resource?r=ich&v=150.545"
+  },
+  "taxonomyCrosscheck": {
+    "authoritySourceId": "gbif-col-xr-taxonomy-matching",
+    "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+    "endpoint": "https://api.gbif.org/v2/species/match",
+    "result": "candidate names matched at species rank in the explicit CoL XR checklist; the name-by-name crosswalk is retained only in ignored local research files pending source-rights clarification",
+    "rawReceiptSet": {
+      "directory": "raw/ragay-gulf-colxr-20261030/",
+      "fileCount": 5,
+      "algorithm": "SHA-256 of sorted filename-tab-file-SHA256 lines joined with LF",
+      "sha256": "65f4ab69113cabd653a7710a704d77cf5e84990f8c2b26dfc971d5368a9c176d"
+    }
+  },
+  "literatureCrosscheck": {
+    "title": "An annotated checklist of fish species described from the Philippines",
+    "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12305098/",
+    "doi": "10.3897/zookeys.1246.145752",
+    "license": "CC BY 4.0",
+    "result": "The 2025 paper independently corroborates one CAS catalog locality/date and conflicts with one candidate CAS catalog locality/date. The discrepancy is held for source resolution; it is not silently corrected."
+  },
+  "rightsReview": {
+    "publisherTermsUrl": "https://www.calacademy.org/scientists/ichthyology-collections",
+    "checkedOn": "2026-10-30",
+    "scope": "CAS states its collection databases and data are owned, copyrighted, or licensed to CAS; data are available for basic research, education, and conservation, but may not be repackaged, resold, or redistributed.",
+    "shortQuote": "may not be repackaged, resold, or redistributed in any form",
+    "gbifDatasetLicenseConflict": true,
+    "publicAppRedistributionCleared": false,
+    "writtenClarificationRequested": false
+  },
+  "rawReceipts": {
+    "gbifRecordAndVerbatimDirectory": {
+      "directory": "raw/ragay-gulf-gbif-records-20261030/",
+      "fileCount": 11,
+      "algorithm": "SHA-256 of sorted filename-tab-file-SHA256 lines joined with LF",
+      "sha256": "4f1092be8e6730dde6371a33690c7ba3e349566a528b77ec761b5eb21e2ef85e"
+    }
+  },
+  "decision": {
+    "candidateSetFound": true,
+    "recordNamesOrIdsInTrackedReview": false,
+    "allCandidatesHeldPendingRights": true,
+    "additionalCatalogLocalityDateConflictHeld": true,
+    "historicalAssertionsAdmitted": 0,
+    "coordinatesIncluded": false,
+    "publicAppRowsAdded": 0,
+    "publicProjectionApproved": false,
+    "currentPresenceInferred": false,
+    "abundanceInferred": false,
+    "dietOrBaitClaimsAdded": false,
+    "legalOrSafetyClaimsAdded": false
+  },
+  "limitations": [
+    "A GBIF text match and a taxonomic name match do not establish current fish presence, abundance, capture probability, or completeness.",
+    "Coordinates and item-level identifiers are withheld from the tracked review while the publisher terms conflict remains unresolved.",
+    "One catalog-level locality/date disagreement requires primary-source resolution; no candidate is silently relabeled.",
+    "This review does not delimit Ragay Gulf, establish fishing access or legality, or assign any whole-gulf extent to Quezon/CALABARZON."
+  ],
+  "nextAction": "Continue with independently reusable, locality-resolved evidence for Ragay Gulf and the De Guzman Fishpond. Seek CAS written clarification before distributing CAS-derived row data; no email or request was sent."
+}

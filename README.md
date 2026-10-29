@@ -92,3 +92,7 @@ Reviewed the official [DA-BFAR/NFRDI Ragay Gulf poster](https://repository.nfrdi
 ### Ragay Gulf BFAR/FishCORAL Bicol-side report screen — 30 October 2026
 
 Reviewed the official [BFAR/FishCORAL resource](https://www.bfar.da.gov.ph/other-programs/fishcoral/) and its 2019 Bicol University assessment PDF. The report's household sample is from ten Bicol-side municipalities; its separate aggregate production table includes San Pascual, Masbate, and is not station-resolved. No Quezon-side or Guinayangan/Hinabaan site evidence was assigned. The species table remains held because no item-specific reuse terms were found in the checked material. No species names, occurrence assertions, or app rows were added. See [the source review](data/research/philippines/calabarzon-ragay-gulf-bicol-prsa-source-review-20261030.json).
+
+### Ragay Gulf GBIF/CAS rights and locality screen — 30 October 2026
+
+A bounded GBIF/CAS historic-specimen screen found candidate records, but the California Academy of Sciences collection terms prohibit redistribution while GBIF dataset metadata labels the source CC0. A targeted cross-check against the 2025 open-access fish checklist also found a catalog-level locality/date disagreement. All candidates remain held pending written rights and source clarification; no taxon rows, identifiers, coordinates, or app records were added. No inquiry was sent. See [the rights review](data/research/philippines/calabarzon-ragay-gulf-gbif-rights-review-20261030.json).
