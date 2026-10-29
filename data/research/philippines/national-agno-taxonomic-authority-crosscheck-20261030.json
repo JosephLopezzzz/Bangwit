@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-30",
+  "status": "independent-nomenclatural-crosscheck-complete-for-five-held-labels;specimen-identities-and-publication-held",
+  "purpose": "Cross-check five disputed Agno River Basin fish-name strings against the California Academy of Sciences Eschmeyer's Catalog of Fishes, then compare the authority's current name statuses with the article and released count-file spellings.",
+  "independentAuthority": {
+    "name": "Eschmeyer's Catalog of Fishes",
+    "publisher": "California Academy of Sciences, Institute for Biodiversity Science and Sustainability",
+    "onlineVersionUpdated": "2026-08-13",
+    "scope": "Independent nomenclatural/current-name authority for fishes; this is not specimen-level identification evidence, a locality source, or an occurrence dataset.",
+    "license": "No item-specific open license for republication of catalog text was identified. The review records concise attributed status summaries and links; it does not reproduce catalog text blocks.",
+    "sourceReferences": [
+      "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=22454",
+      "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Oreochromis&species=mossambicus&tbl=species",
+      "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Poecilia&species=reticulata&tbl=species",
+      "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Poecilia&species=sphenops&tbl=species",
+      "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Cyprinus&species=carpio&tbl=species"
+    ]
+  },
+  "comparativeEvidence": {
+    "studyArticle": "https://researchonline.ljmu.ac.uk/id/eprint/28808/1/Diversity%20and%20distribution%20of%20freshwater%20fish%20in%20the%20Agno%20River%20Basin%2C%20northern%20Philippines.pdf",
+    "releasedDataset": "https://researchdata.gla.ac.uk/2287/",
+    "datasetReview": "national-agno-river-basin-fish-survey-review-20261030.json",
+    "comparisonRule": "Keep each released-data string verbatim and preserve article table/figure differences. A taxonomic authority can support a spelling, authorship, or synonym proposal; it cannot validate the survey's specimen identification or rewrite the source row."
+  },
+  "nameDecisions": [
+    {
+      "datasetLabelVerbatim": "Pseudogobius javanicus",
+      "authorityStatus": "Synonym of Pseudogobius poicilosoma (Bleeker, 1849), in the Catalog's current status field; the catalog cites Larson & Hammer (2021) and Parenti (2021) for this treatment.",
+      "articleUse": "The article uses Pseudogobius javanicus in its species list, Table 3, Figure 2 caption and discussion; Table 3 assigns it to ARB2 and ARB6.",
+      "crosscheckResult": "The current synonym treatment agrees with the earlier Catalogue of Life XR synonym proposal. The nomenclatural conflict is resolved in favor of a synonym mapping for research crosswalk purposes.",
+      "disposition": "Retain the original label and its original station-count cells. Pseudogobius poicilosoma is a candidate current-name mapping only; without voucher or author identification review, do not publish a revised species occurrence or claim that the sampled specimens have been reidentified."
+    },
+    {
+      "datasetLabelVerbatim": "Oreochromis mozambicus",
+      "authorityStatus": "Valid as Oreochromis mossambicus (Peters, 1852).",
+      "articleUse": "The released dataset has the spelling mozambicus; the article's abstract, Table 3, Figure 2 caption and results use mossambicus.",
+      "crosscheckResult": "The authority supports the article spelling as the accepted name and indicates that the dataset spelling is a likely typographic variant in this source pair.",
+      "disposition": "Store a corrected-name proposal linked to the verbatim dataset label; preserve original CSV bytes and count values. This does not independently identify the specimens or approve a distribution claim."
+    },
+    {
+      "datasetLabelVerbatim": "Poecilla reticulata",
+      "authorityStatus": "Valid as Poecilia reticulata (Peters, 1859).",
+      "articleUse": "The article spells the name Poecilia reticulata in Table 3 and Figure 2 and Poecilla reticulata in one prose passage; the dataset uses Poecilla reticulata.",
+      "crosscheckResult": "Catalog spelling agrees with the article table/figure and supports a likely source typographical correction from Poecilla to Poecilia.",
+      "disposition": "Retain the verbatim label and count cell; record Poecilia reticulata as a proposed current spelling. No specimen-level identity or app occurrence was approved."
+    },
+    {
+      "datasetLabelVerbatim": "Poecilla sphenops",
+      "authorityStatus": "Valid as Poecilia sphenops (Valenciennes, 1846).",
+      "articleUse": "The article Figure 2 caption uses Poecilia sphenops; its Table 3 and prose use Poecilla sphenops, while Table 3 prints Valenciennes, 1864.",
+      "crosscheckResult": "The authority supports the genus spelling Poecilia and authorship/year Valenciennes, 1846; the source article is internally inconsistent.",
+      "disposition": "Record Poecilia sphenops (Valenciennes, 1846) as a proposed nomenclatural normalization with the table/figure discrepancy attached. Preserve source strings and original count; specimen identity remains unverified."
+    },
+    {
+      "datasetLabelVerbatim": "Cyprinus carpio (Linnaues, 1975)",
+      "authorityStatus": "Valid as Cyprinus carpio Linnaeus, 1758.",
+      "articleUse": "The article Table 3 prints the genus/species with the misspelled author and year “Linnaues, 1975”; its abstract/table species name and Figure 2 use Cyprinus carpio without that authority error.",
+      "crosscheckResult": "The authority supports Linnaeus, 1758 as the nomenclatural authorship/year and confirms the spelling Cyprinus carpio.",
+      "disposition": "Record the corrected authorship as a source-linked nomenclatural proposal. Keep the original article and count label unchanged; this does not validate the source's carp specimen identification."
+    }
+  ],
+  "unresolvedRows": [
+    {
+      "datasetLabelVerbatim": "Awaous sp.",
+      "reason": "Genus-only identification; this five-label authority review did not resolve the genus to species."
+    },
+    {
+      "datasetLabelVerbatim": "Barbodes sp.",
+      "reason": "Genus-only identification; this five-label authority review did not resolve the genus to species."
+    },
+    {
+      "datasetLabelVerbatim": "Rhinogobius sp.",
+      "reason": "Genus-only identification; this five-label authority review did not resolve the genus to species."
+    }
+  ],
+  "decisionSummary": {
+    "disputedLabelsCrossChecked": 5,
+    "nomenclaturalMappingsSupported": 5,
+    "voucherOrSpecimenIdentitiesVerified": 0,
+    "sourceRowsAltered": 0,
+    "speciesAssertionsAdded": 0,
+    "dietClaimsAdded": 0,
+    "currentPresenceClaimsAdded": 0,
+    "publicAppRowsAdded": 0
+  },
+  "limitations": [
+    "Catalog current-name and synonym status does not establish that the authors correctly identified each fish specimen.",
+    "A corrected spelling or authority is a normalization proposal, not an edit to the deposited data or paper.",
+    "Three genus-only source rows remain unresolved, and other binomial labels were not independently re-reviewed in this follow-up.",
+    "Season/date mapping, ARB5 locality, and exact station-to-reach identity remain unresolved; no regional or basin-wide completeness follows from the study.",
+    "Historical sampled counts do not establish present-day presence, catchability, diet, bait suitability, access, legal status, or safety."
+  ],
+  "nextAction": "Keep the five corrected names as research-only linked proposals. Seek author/publisher clarification for the season/date conflict and ARB5 municipality/reach conflict before preparing a historical station assertion batch; no inquiry was sent. Continue the wider freshwater and regional source queue in parallel.",
+  "sourceReferences": [
+    "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=22454",
+    "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Oreochromis&species=mossambicus&tbl=species",
+    "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Poecilia&species=reticulata&tbl=species",
+    "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Poecilia&species=sphenops&tbl=species",
+    "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Cyprinus&species=carpio&tbl=species",
+    "https://researchonline.ljmu.ac.uk/id/eprint/28808/1/Diversity%20and%20distribution%20of%20freshwater%20fish%20in%20the%20Agno%20River%20Basin%2C%20northern%20Philippines.pdf",
+    "https://researchdata.gla.ac.uk/2287/"
+  ]
+}

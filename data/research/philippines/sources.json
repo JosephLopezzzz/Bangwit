@@ -3,7 +3,7 @@
   "checkedOn": "2026-10-30",
   "status": "research-only-source-registry",
   "scope": "National acquisition references, freshwater spatial-source leads, and CALABARZON/Central Luzon identity/source leads. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 232,
+  "sourceCount": 235,
   "sources": [
     {
       "id": "gbif-col-xr-taxonomy-matching",
@@ -7007,7 +7007,9 @@
       "access": {
         "status": "University of Glasgow repository record and complete repository-hosted article PDF read; article front matter states CC BY 4.0. No local PDF retained.",
         "reviewFiles": [
-          "national-agno-river-basin-fish-survey-review-20261030.json"
+          "national-agno-river-basin-fish-survey-review-20261030.json",
+          "national-agno-taxonomic-authority-crosscheck-20261030.json",
+          "national-agno-station-locality-crosswalk-20261030.json"
         ],
         "rawPath": null
       },
@@ -7017,7 +7019,7 @@
         "content": "Article carries CC BY 4.0; preserve attribution and license link, mark changes, and do not imply author endorsement. This source review does not itself approve app publication."
       },
       "publicationApproval": false,
-      "researchStatus": "historical-eight-station-fish-survey;cross-regional;season-date-conflict;taxonomy-and-locality-review-pending;research-only",
+      "researchStatus": "historical-eight-station-fish-survey;independent-name-crosscheck-for-five-labels;ARB5-and-season-date-unresolved;research-only",
       "license": "CC BY 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
       "caveats": [
@@ -7047,7 +7049,9 @@
         "status": "Data archive and README downloaded from University of Glasgow record and extracted locally.",
         "localRawSnapshot": "raw/agno-river-dataset-screen-20261030/",
         "reviewFiles": [
-          "national-agno-river-basin-fish-survey-review-20261030.json"
+          "national-agno-river-basin-fish-survey-review-20261030.json",
+          "national-agno-taxonomic-authority-crosscheck-20261030.json",
+          "national-agno-station-locality-crosswalk-20261030.json"
         ]
       },
       "reuse": {
@@ -7056,7 +7060,7 @@
         "content": "Data and README are CC BY 4.0. Derived historical station/count candidates may be prepared with attribution, but this research review does not constitute public-app admission or source-identity validation."
       },
       "publicationApproval": false,
-      "researchStatus": "cross-regional-historical-station-counts;season-date-conflict;taxonomy-proposals-pending;site-crosswalk-pending;research-only",
+      "researchStatus": "historical-station-counts;independent-name-crosscheck-for-five-labels;ARB5-and-season-date-unresolved;research-only",
       "license": "CC BY 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
       "caveats": [
@@ -7066,6 +7070,109 @@
         "Do not map or interpret season counts as exact dates before resolving the repository-versus-article season mapping conflict.",
         "“Northing/Easting” CSV field labels are reproduced in review alongside article Table 1 N/E headings; points are not reach geometry or legal boundaries.",
         "The dataset does not establish current presence, catchability, diet, access, legal status or safety."
+      ]
+    },
+    {
+      "id": "dpwh-namria-derived-city-municipal-boundaries-2022",
+      "title": "City-Municipal Boundaries Feature Layer",
+      "provider": "Department of Public Works and Highways, Statistics Division, Planning Service, Geospatial Information Application Staff; layer metadata credits the original NAMRIA source, digitally rectified by DPWH as of February 2022",
+      "url": "https://services1.arcgis.com/IwZZTMxZCmAmFYvF/ArcGIS/rest/services/City_Municipal_Boundaries/FeatureServer",
+      "additionalUrls": [
+        "https://services1.arcgis.com/IwZZTMxZCmAmFYvF/ArcGIS/rest/services/City_Municipal_Boundaries/FeatureServer/0"
+      ],
+      "role": "Internal point-in-polygon locality consistency screen for the 2026 Agno River Basin study stations; not a legal boundary authority, fish source, or app geometry.",
+      "checkedOn": "2026-10-30",
+      "access": {
+        "status": "Public ArcGIS REST layer metadata and eight point-intersects queries retrieved; attributes only were requested; geometries were not requested.",
+        "rawPath": "raw/agno-station-admin-crosswalk-20261030/",
+        "reviewFiles": [
+          "national-agno-station-locality-crosswalk-20261030.json"
+        ]
+      },
+      "reuse": {
+        "metadata": "Layer metadata credits original NAMRIA boundaries rectified digitally by DPWH GIS staff as of February 2022; no explicit reusable license was stated in the reviewed layer metadata.",
+        "raw": "Query receipts are ignored local research files; no boundary geometry is redistributed.",
+        "content": "Municipality/province/region attributes are summarized for research cross-check only. Do not treat this derived layer as legal/cadastral boundary truth or publish geometry from it."
+      },
+      "publicationApproval": false,
+      "researchStatus": "public-layer-internal-point-screen;derived-boundary-source;license-not-stated;research-only",
+      "license": null,
+      "licenseUrl": null,
+      "caveats": [
+        "Layer description reports city/municipal extents and DPWH metadata credits NAMRIA-derived features rectified digitally by DPWH as of February 2022.",
+        "Layer metadata does not establish legal boundary status, positional accuracy at survey-station scale, or current boundary changes.",
+        "The layer service geometry was not requested, retained or added to Bangwit."
+      ]
+    },
+    {
+      "id": "openstreetmap-nominatim-reverse-geocoding",
+      "title": "Nominatim reverse geocoding service",
+      "provider": "OpenStreetMap Foundation; underlying OpenStreetMap features are community-contributed",
+      "url": "https://nominatim.openstreetmap.org/reverse",
+      "additionalUrls": [
+        "https://nominatim.org/release-docs/latest/api/Reverse/",
+        "https://operations.osmfoundation.org/policies/nominatim/",
+        "https://www.openstreetmap.org/copyright"
+      ],
+      "role": "One-off reverse-geocoder cross-check of the eight Agno River Basin source coordinates; not fish evidence, a survey-site authority, or a generic app geocoding dependency.",
+      "checkedOn": "2026-10-30",
+      "access": {
+        "status": "Eight one-off WGS84 reverse queries sent serially, at least 1.1 seconds apart, with an identifying User-Agent; zoom 14 and address details enabled.",
+        "rawPath": "raw/agno-station-admin-crosswalk-20261030/",
+        "reviewFiles": [
+          "national-agno-station-locality-crosswalk-20261030.json"
+        ]
+      },
+      "reuse": {
+        "metadata": "Nominatim public-service policy requires an identifying User-Agent, attribution, and no more than one request per second. Underlying OSM data is ODbL 1.0; attribution and share-alike obligations may apply.",
+        "raw": "Response bodies are retained only in ignored research storage with hashes.",
+        "content": "Results identify the closest suitable indexed OSM object, not the exact address or official municipality of an input coordinate. Not redistributed as app content or geometry."
+      },
+      "publicationApproval": false,
+      "researchStatus": "one-off-reverse-geocoder-crosscheck;closest-object-not-exact-address;research-only",
+      "license": "OpenStreetMap data: ODbL 1.0",
+      "licenseUrl": "https://www.openstreetmap.org/copyright",
+      "caveats": [
+        "Nominatim documentation states reverse geocoding selects the closest suitable indexed OSM object and may return an unexpected address.",
+        "The geocoder is a community-map cross-check, not authoritative evidence of an exact sampling location or administrative boundary.",
+        "The public Nominatim endpoint is not used by the app; its single-user rate and usage policy must be followed for any future manual research queries."
+      ]
+    },
+    {
+      "id": "eschmeyer-catalog-agno-taxon-crosscheck-20261030",
+      "title": "Eschmeyer's Catalog of Fishes: Agno River Basin taxon-name cross-check",
+      "provider": "California Academy of Sciences, Institute for Biodiversity Science and Sustainability",
+      "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp",
+      "additionalUrls": [
+        "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=22454",
+        "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Oreochromis&species=mossambicus&tbl=species",
+        "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Poecilia&species=reticulata&tbl=species",
+        "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Poecilia&species=sphenops&tbl=species",
+        "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Cyprinus&species=carpio&tbl=species"
+      ],
+      "role": "Independent nomenclatural/current-name cross-check for five disputed fish-name labels in the 2026 Agno River Basin study; not specimen-identification, locality, or occurrence evidence.",
+      "checkedOn": "2026-10-30",
+      "sourceYear": 2026,
+      "access": {
+        "status": "Five Catalog of Fishes record pages or indexed official Catalog results reviewed; online version identifies update 13 August 2026. No catalog content file downloaded or retained.",
+        "reviewFiles": [
+          "national-agno-taxonomic-authority-crosscheck-20261030.json"
+        ],
+        "rawPath": null
+      },
+      "reuse": {
+        "metadata": "Citation/source-description use only; no item-specific open license for republication of catalog text was identified.",
+        "raw": "No page captures retained in the repository; reviewed findings are concise attributed status summaries with direct record links.",
+        "content": "Nomenclatural crosswalk only. Catalog status does not verify the Agno study specimens, station locality, current presence, diet, or app eligibility."
+      },
+      "publicationApproval": false,
+      "researchStatus": "five-name-nomenclatural-crosscheck;specimen-identification-unverified;research-only",
+      "license": null,
+      "licenseUrl": null,
+      "caveats": [
+        "The Catalog provides current taxonomic and nomenclatural treatments; it does not establish the identity of specimens sampled by Tenio et al.",
+        "Preserve source spellings/authorities alongside proposed normalized names; do not silently alter the article or deposited CSV.",
+        "No app taxon or occurrence assertion was added from this cross-check."
       ]
     }
   ],

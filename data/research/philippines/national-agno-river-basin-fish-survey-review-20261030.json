@@ -1153,7 +1153,7 @@
     "CSV coordinate headings are Northing/Easting; article Table 1 labels them N/E, and README says WGS84. Coordinates are source sampling points only—not reach lines, basin boundaries, access points or navigation directions.",
     "CSV row “Oreochromis mozambicus” conflicts with article Table 4/Figure 2 “Oreochromis mossambicus”; CoL XR returns a variant/synonym proposal. Preserve both verbatim, no silent correction.",
     "CSV has “Poecilla reticulata” and “Poecilla sphenops”; article Table 4/Figure 2 are inconsistent for the latter. GBIF returns variant matches; preserve source spellings pending specimen/author review.",
-    "Article and dataset use Pseudogobius javanicus; the selected CoL XR index treats the name as a synonym of Pseudogobius poicilosoma. This source-era identity conflict remains held.",
+    "Article and dataset use Pseudogobius javanicus; CoL XR and the independent Eschmeyer Catalog both support synonymy with Pseudogobius poicilosoma. The nomenclatural crosswalk is supported, but specimen identification remains unverified and is not projected.",
     "Cyprinus carpio is printed with “Linnaues, 1975” authorship; CoL XR proposes Linnaeus, 1758. Preserve the printed authority pending review.",
     "The article warns that single sampling visits and detectability limit absence inference. A positive historical sample does not establish present-day presence, catchability, diet, bait advice, fishing access, legality or safety.",
     "ARB5 is associated with a source land-use note “San Roque Dam outflow”; this does not establish a reservoir boundary or legal fishing area."
@@ -1175,7 +1175,7 @@
     "publicAppRowsAdded": 0,
     "publicationApproval": false
   },
-  "nextAction": "Resolve the season/date conflict with source authors or a primary source; independently review held taxonomy (especially Pseudogobius javanicus and Oreochromis/Poecilia spellings); verify station points and ARB4/ARB5 locality crosswalk before preparing a distinct historical station-level assertion batch. Keep this shared CAR/Region I/Region III source separate from CALABARZON completion while continuing lake, river, reservoir, stream and wetland evidence acquisition.",
+  "nextAction": "Seek author or primary-source clarification of the wet/dry season-to-month mapping and ARB5 locality/reach; maintain the five supported nomenclatural proposals only as linked research candidates. Three genus-only rows and all other names outside the five-item follow-up remain unresolved. Then prepare a separate historical station-level batch with precise source caveats while continuing CALABARZON and broader freshwater, lake, stream, wetland and coastal evidence acquisition.",
   "sourceReferences": [
     "https://researchdata.gla.ac.uk/2287/",
     "https://researchdata.gla.ac.uk/2287/1/Data_2287.zip",
@@ -1192,5 +1192,15 @@
     "CoL XR matches do not validate author specimen IDs or resolve source-era conflicts.",
     "Fish_count.csv has no exact date per observation; wet/dry date mapping is inconsistent between repository metadata and article methods.",
     "The article table’s common names, conservation status and native/introduced labels are outside this review’s projection."
+  ],
+  "followUpReviews": [
+    {
+      "artifact": "national-agno-station-locality-crosswalk-20261030.json",
+      "finding": "Eight source WGS84 points screened against a DPWH NAMRIA-derived municipal layer and OSM/Nominatim. ARB5 locality conflicts with San Nicolas in both map lookups versus San Roque, San Manuel in the paper; exact assignment remains held."
+    },
+    {
+      "artifact": "national-agno-taxonomic-authority-crosscheck-20261030.json",
+      "finding": "Independent Catalog of Fishes cross-check supports current-name or spelling/authorship proposals for five disputed labels. No specimen identity or source row was changed."
+    }
   ]
 }

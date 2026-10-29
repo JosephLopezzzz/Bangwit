@@ -1,0 +1,344 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-30",
+  "status": "research-only;station-point-admin-crosswalk-screened;ARB5-locality-conflict-held",
+  "purpose": "Compare the eight published Agno River Basin survey coordinates with a NAMRIA-derived municipal-boundary service and a community-map reverse-geocoding service. This is a locality consistency screen, not station relocation, surveyed boundary validation, or app publication approval.",
+  "coordinateSource": {
+    "datasetSourceId": "agno-river-basin-fish-assemblage-dataset-2026",
+    "file": "Sampling_sites.csv",
+    "coordinateFieldNamesVerbatim": [
+      "Northing",
+      "Easting"
+    ],
+    "interpretation": "Repository README explicitly describes the values as geographic WGS84 coordinates. Values were queried as latitude, longitude in EPSG:4326; the field names are retained verbatim because they are not the conventional latitude/longitude names.",
+    "precisionAndAccuracy": "Four decimal places do not establish survey accuracy. The points are the authors' source sampling locations and do not define river reaches, waterbody boundaries, access, or navigation routes."
+  },
+  "references": [
+    {
+      "sourceId": "dpwh-namria-derived-city-municipal-boundaries-2022",
+      "title": "City-Municipal Boundaries Feature Layer",
+      "url": "https://services1.arcgis.com/IwZZTMxZCmAmFYvF/ArcGIS/rest/services/City_Municipal_Boundaries/FeatureServer/0",
+      "metadataUrl": "https://services1.arcgis.com/IwZZTMxZCmAmFYvF/ArcGIS/rest/services/City_Municipal_Boundaries/FeatureServer",
+      "provider": "Department of Public Works and Highways, Statistics Division, Planning Service, Geospatial Information Application Staff; layer metadata credits original NAMRIA source digitally rectified by DPWH as of February 2022",
+      "queryMethod": "Point-intersects query with source coordinates interpreted as EPSG:4326; returned only municipality, province, region and MUN_CODE attributes; no boundary geometries requested or retained.",
+      "limitations": "The service describes city/municipality extents and cites a digitized/rectified source; it does not establish a current legal or cadastral boundary. Service metadata does not state a reusable open license. Used as an internal consistency screen only.",
+      "license": null
+    },
+    {
+      "sourceId": "openstreetmap-nominatim-reverse-geocoding",
+      "title": "Nominatim reverse geocoding service",
+      "url": "https://nominatim.openstreetmap.org/reverse",
+      "policyUrl": "https://operations.osmfoundation.org/policies/nominatim/",
+      "licenseUrl": "https://www.openstreetmap.org/copyright",
+      "provider": "OpenStreetMap Foundation Nominatim service; underlying OpenStreetMap data is community-contributed",
+      "queryMethod": "Eight one-off reverse queries, one thread, at least 1.1 seconds apart, with an identifying User-Agent; zoom 14 and address details enabled.",
+      "limitations": "Nominatim returns a closest suitable indexed OSM object and its address, not an exact administrative determination for the input point. Results may be unexpected. It is not used as sole evidence for any municipality or exact sampling-site identity.",
+      "license": "OpenStreetMap data: ODbL 1.0; attribution and share-alike requirements apply to use of OSM data."
+    }
+  ],
+  "stations": [
+    {
+      "stationId": "ARB1",
+      "catchmentLabel": "Upper Agno",
+      "datasetLocalityVerbatim": "Kabayan, Benguet",
+      "articleLocalityVerbatim": "Kabayan, Benguet",
+      "latitude": 16.635,
+      "longitude": 120.8225,
+      "boundaryScreen": {
+        "municipality": "Kabayan",
+        "province": "Benguet",
+        "region": "Cordillera Administrative Region",
+        "municipalityCode": "141107000",
+        "featureCount": 1
+      },
+      "reverseGeocodeScreen": {
+        "name": "Asokung",
+        "locality": "Gusaran",
+        "province": "Benguet",
+        "region": "Cordillera Administrative Region",
+        "osmType": "node",
+        "osmId": 8244089182
+      },
+      "assessment": "Municipality/province/region agree. Reverse geocoder names a smaller locality; this does not contradict the municipality-level paper label or independently confirm the exact station feature."
+    },
+    {
+      "stationId": "ARB2",
+      "catchmentLabel": "Upper Agno",
+      "datasetLocalityVerbatim": "Bokod, Benguet",
+      "articleLocalityVerbatim": "Bokod, Benguet",
+      "latitude": 16.4781,
+      "longitude": 120.8245,
+      "boundaryScreen": {
+        "municipality": "Bokod",
+        "province": "Benguet",
+        "region": "Cordillera Administrative Region",
+        "municipalityCode": "141104000",
+        "featureCount": 1
+      },
+      "reverseGeocodeScreen": {
+        "name": "Minac",
+        "locality": "Minac",
+        "municipality": "Bokod",
+        "province": "Benguet",
+        "region": "Cordillera Administrative Region",
+        "osmType": "node",
+        "osmId": 4426337840
+      },
+      "assessment": "Municipality/province/region agree. Reverse geocoder names a smaller locality, not a competing municipality."
+    },
+    {
+      "stationId": "ARB3",
+      "catchmentLabel": "Upper Agno",
+      "datasetLocalityVerbatim": "Baloy, Benguet",
+      "articleLocalityVerbatim": "Baloy Bridge, Benguet (methods); Baloy, Benguet (Table 1)",
+      "latitude": 16.3846,
+      "longitude": 120.7224,
+      "boundaryScreen": {
+        "municipality": "Itogon",
+        "province": "Benguet",
+        "region": "Cordillera Administrative Region",
+        "municipalityCode": "141106000",
+        "featureCount": 1
+      },
+      "reverseGeocodeScreen": {
+        "name": "Baloy",
+        "locality": "Baloy",
+        "administrativeLocality": "Tinongdan",
+        "province": "Benguet",
+        "region": "Cordillera Administrative Region",
+        "osmType": "node",
+        "osmId": 10803246612
+      },
+      "assessment": "The reverse-geocoder result includes Baloy and Benguet; the municipal boundary screen places the point in Itogon. This is a plausible locality/municipality crosswalk, not validation of the named bridge or exact sampling reach."
+    },
+    {
+      "stationId": "ARB4",
+      "catchmentLabel": "Upper Agno",
+      "datasetLocalityVerbatim": "Dalapurip, Benguet",
+      "articleLocalityVerbatim": "Dalupirip, Benguet",
+      "latitude": 16.3303,
+      "longitude": 120.7295,
+      "boundaryScreen": {
+        "municipality": "Itogon",
+        "province": "Benguet",
+        "region": "Cordillera Administrative Region",
+        "municipalityCode": "141106000",
+        "featureCount": 1
+      },
+      "reverseGeocodeScreen": {
+        "name": "Casban",
+        "locality": "Casban",
+        "municipality": "Itogon",
+        "province": "Benguet",
+        "region": "Cordillera Administrative Region",
+        "osmType": "node",
+        "osmId": 9497404403
+      },
+      "assessment": "Municipality/province/region agree with Itogon as a broader location, but the data/article Dalapurip/Dalupirip name difference remains. The point-level screen does not validate that Casban and Dalupirip identify the same station."
+    },
+    {
+      "stationId": "ARB5",
+      "catchmentLabel": "Lower Agno",
+      "datasetLocalityVerbatim": "San Roque, San Manuel, Pangasinan",
+      "articleLocalityVerbatim": "San Roque, San Manuel, Pangasinan",
+      "upstreamLandUseNoteVerbatim": "San Roque Dam outflow",
+      "latitude": 16.1056,
+      "longitude": 120.7019,
+      "boundaryScreen": {
+        "municipality": "San Nicolas",
+        "province": "Pangasinan",
+        "region": "Region I",
+        "municipalityCode": "015536000",
+        "featureCount": 1
+      },
+      "reverseGeocodeScreen": {
+        "name": "San Felipe East",
+        "locality": "San Felipe East",
+        "municipality": "San Nicolas",
+        "province": "Pangasinan",
+        "region": "Ilocos Region",
+        "osmType": "node",
+        "osmId": 9003391886
+      },
+      "assessment": "Unresolved municipality-level conflict: both map-based point lookups identify San Nicolas, while the dataset and article label the site San Roque, San Manuel. The San Roque Dam outflow note is not enough to relocate the station or choose a municipality. Hold exact municipality/reach assignment pending station-author clarification or stronger source mapping."
+    },
+    {
+      "stationId": "ARB6",
+      "catchmentLabel": "Lower Agno",
+      "datasetLocalityVerbatim": "Viray, Natividad, Pangasinan",
+      "articleLocalityVerbatim": "Viray, Natividad, Pangasinan",
+      "latitude": 16.0585,
+      "longitude": 120.8345,
+      "boundaryScreen": {
+        "municipality": "Natividad",
+        "province": "Pangasinan",
+        "region": "Region I",
+        "municipalityCode": "015529000",
+        "featureCount": 1
+      },
+      "reverseGeocodeScreen": {
+        "name": "Batchelor East",
+        "locality": "Batchelor East",
+        "municipality": "Natividad",
+        "province": "Pangasinan",
+        "region": "Ilocos Region",
+        "osmType": "node",
+        "osmId": 11188926588
+      },
+      "assessment": "Municipality/province agree. Reverse geocoder selects a smaller locality different from the source locality label Viray; exact site identity remains unverified."
+    },
+    {
+      "stationId": "ARB7",
+      "catchmentLabel": "Lower Agno",
+      "datasetLocalityVerbatim": "Paniqui, Tarlac",
+      "articleLocalityVerbatim": "Paniqui, Tarlac",
+      "latitude": 15.6974,
+      "longitude": 120.4977,
+      "boundaryScreen": {
+        "municipality": "Paniqui",
+        "province": "Tarlac",
+        "region": "Region III",
+        "municipalityCode": "036910000",
+        "featureCount": 1
+      },
+      "reverseGeocodeScreen": {
+        "name": "Mabilang",
+        "locality": "Mabilang",
+        "municipality": "Paniqui",
+        "province": "Tarlac",
+        "region": "Central Luzon",
+        "osmType": "node",
+        "osmId": 9085333470
+      },
+      "assessment": "Municipality/province/region agree. Reverse geocoder returns a smaller locality within the source municipality; exact station feature is not confirmed."
+    },
+    {
+      "stationId": "ARB8",
+      "catchmentLabel": "Lower Agno",
+      "datasetLocalityVerbatim": "Bocboc, San Carlos, Pangasinan",
+      "articleLocalityVerbatim": "Bocboc, San Carlos, Pangasinan",
+      "latitude": 15.8917,
+      "longitude": 120.2536,
+      "boundaryScreen": {
+        "municipality": "San Carlos City",
+        "province": "Pangasinan",
+        "region": "Region I",
+        "municipalityCode": "015532000",
+        "featureCount": 1
+      },
+      "reverseGeocodeScreen": {
+        "name": "Bocboc",
+        "locality": "Bocboc",
+        "city": "San Carlos",
+        "province": "Pangasinan",
+        "region": "Ilocos Region",
+        "osmType": "node",
+        "osmId": 2653803274
+      },
+      "assessment": "Locality, city/province and region are consistent across the source and the two map screens; exact river outlet point and reach boundary remain unverified."
+    }
+  ],
+  "summary": {
+    "pointQueries": 8,
+    "boundaryServiceMunicipalityAgreement": 7,
+    "boundaryServiceMunicipalityConflict": 1,
+    "reverseGeocoderWasTreatedAsAuthoritative": false,
+    "adminBoundaryWasTreatedAsLegalOrCadastral": false,
+    "stationReachGeometryAdded": false,
+    "publicAppRecordsAdded": 0
+  },
+  "sourceReuse": {
+    "dpwhLayer": "Provider metadata does not state a reusable license; results remain internal and are not redistributed as boundary data.",
+    "openStreetMap": "Attribution is required and ODbL share-alike terms apply to OSM data use. Results remain a research cross-check only; this artifact does not package or publish OSM geometry."
+  },
+  "rawSnapshot": {
+    "directory": "raw/agno-station-admin-crosswalk-20261030/",
+    "files": [
+      {
+        "path": "ARB1-dpwh-point-query.json",
+        "sha256": "cfcfe1da302a0ec4c4668429e95167703b304ec6a709cc03a14dea22ca6be7a7"
+      },
+      {
+        "path": "ARB1-nominatim-reverse.json",
+        "sha256": "6dd249e3e3669adc9852d8749da293a97f7489b0e2d57fed2f8842855df3e0e6"
+      },
+      {
+        "path": "ARB2-dpwh-point-query.json",
+        "sha256": "6a66e496b086f6d61d0daa4ffec7f184327587388404e8b669744e1cf6aaf6a8"
+      },
+      {
+        "path": "ARB2-nominatim-reverse.json",
+        "sha256": "d3ed07f8b775703037d4c63d1c7bb047967954a092a4221b7cfb24fa069e3565"
+      },
+      {
+        "path": "ARB3-dpwh-point-query.json",
+        "sha256": "8a37be757c09bd6d1d80acd5a86363463567863385093e26e2613e0b7db9790e"
+      },
+      {
+        "path": "ARB3-nominatim-reverse.json",
+        "sha256": "f9abd4a8852bcff09d067c5efd6918aa2e97da48d57d10dbf3655662e22de03f"
+      },
+      {
+        "path": "ARB4-dpwh-point-query.json",
+        "sha256": "8a37be757c09bd6d1d80acd5a86363463567863385093e26e2613e0b7db9790e"
+      },
+      {
+        "path": "ARB4-nominatim-reverse.json",
+        "sha256": "566726397068de87cf87be957923890e7d7f85d4aa11cd00dd200f9d593195d3"
+      },
+      {
+        "path": "ARB5-dpwh-point-query.json",
+        "sha256": "75c8809925116aaf25c6804f8d09ca92d9c86c554aa1c564909d314721fff08b"
+      },
+      {
+        "path": "ARB5-nominatim-reverse.json",
+        "sha256": "23be5dc1d8bda69190f8f8e3ca6fbf3e9337bd1606c115526fa96f9ced5390b0"
+      },
+      {
+        "path": "ARB6-dpwh-point-query.json",
+        "sha256": "e8233973a23550614502ae70ced5ae96faeee44a09bf4c6c9a8863ec388380eb"
+      },
+      {
+        "path": "ARB6-nominatim-reverse.json",
+        "sha256": "f4a9eed7812405862fde5be5b72313a97450c0eaceda7230d0dd68fad8bb4149"
+      },
+      {
+        "path": "ARB7-dpwh-point-query.json",
+        "sha256": "f3984999469b3744be1b9a6379a17ec261b472fe6d5241dbc5021eb91c015d59"
+      },
+      {
+        "path": "ARB7-nominatim-reverse.json",
+        "sha256": "ef30547839080cbc16560e91ba521ee62763f17fb6eb1e61dc0e0695f49c2eda"
+      },
+      {
+        "path": "ARB8-dpwh-point-query.json",
+        "sha256": "5ee5c35cf854cbb963940efa499732e2dedaa89a0e1548369a1d32cdbfaf8ed1"
+      },
+      {
+        "path": "ARB8-nominatim-reverse.json",
+        "sha256": "9593dbe656c42223604f1f0643a0038a6729309e2315606b179eeb03341ff58c"
+      },
+      {
+        "path": "dpwh-layer-metadata.json",
+        "sha256": "76c5e5e58e7eac2d8ca2f0cc0340260db8a54a237cfae03bdbad88df0ccaeed1"
+      }
+    ],
+    "hashNote": "Hashes cover the downloaded response bodies in the ignored local research cache, not provider-side source bytes. Verify against the local file before relying on a hash."
+  },
+  "disposition": {
+    "speciesAssertionsAdded": 0,
+    "waterbodyGeometryAdded": false,
+    "catchabilityDietSafetyAccessOrLegalClaimsAdded": 0,
+    "publicProjectionApproved": false
+  },
+  "nextAction": "Keep ARB5 municipality/reach assignment and ARB4 name crosswalk unresolved. Proceed to the independent fish-taxonomy authority review; separately pursue author or institutional clarification of the study's conflicting wet/dry month mapping. No contact was sent in this step.",
+  "sourceReferences": [
+    "https://researchdata.gla.ac.uk/2287/",
+    "https://eprints.gla.ac.uk/386293/",
+    "https://services1.arcgis.com/IwZZTMxZCmAmFYvF/ArcGIS/rest/services/City_Municipal_Boundaries/FeatureServer",
+    "https://nominatim.openstreetmap.org/reverse",
+    "https://nominatim.org/release-docs/latest/api/Reverse/",
+    "https://operations.osmfoundation.org/policies/nominatim/",
+    "https://www.openstreetmap.org/copyright"
+  ]
+}
