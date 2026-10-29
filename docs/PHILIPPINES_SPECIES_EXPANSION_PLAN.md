@@ -1486,3 +1486,13 @@ Verification for this research-only batch: `npm run test:species:pipeline`, `npm
 - **Disposition:** Draft only. No email, form, NSAP data request, or permission inquiry was sent. No app species or catch row was added.
 - **Artifact:** `national-car-asar-author-clarification-draft-20261030.md`; linked from the research README. No new source registry entry was needed.
 - **Source:** [Article PDF and corresponding-author email](https://www.opastpublishers.com/open-access-articles/asar-a-distinct-fishing-gear-used-in-the-cordillera-rivers.pdf).
+
+### National rollout step 193: Abra and Ilocos Sur four-river edible-fauna source review — 30 October 2026
+
+- **Source and historical scope:** Reviewed Segismundo and Felicitas (2009), *UNP Research Journal* XVIII:15–26, from the publisher-hosted full PDF and Philippine EJournals record. The article reports a descriptive inventory conducted April–November 2001 in Baay, Malanas and Tineg Rivers (Abra) and Burgos River (Ilocos Sur). It states one collector per river, five days a week for eight months, and that samples were sent to the National Museum Zoological Laboratory for identification.
+- **Reported evidence:** The paper reports 21, 14, 13 and 19 fish, respectively, for Baay, Malanas, Tineg and Burgos, alongside separate edible-invertebrate totals. Those combined edible-fauna richness totals are not fish-only. Some fish were unidentified, and no specimen accession crosswalk was found.
+- **Resolution and rights:** The review found no item-specific open license. The current journal copyright page is not assumed to establish retroactive terms for this 2009 article. The paper supplies no coordinates or site geometry; “Burgos River” is not independently resolved to a unique hydrographic feature. Text-extracted table names need page-image and current-authority verification before any taxon use.
+- **Disposition:** Registered as a historical research lead only. No table or figure was copied; no fish assertion, diet claim, geometry or public app row was added. The study does not establish current presence or full river/catchment coverage.
+- **Next:** Continue the northern-Luzon freshwater evidence sweep with the historical Apayao watershed-mapping and Abra taxonomy abstracts, while seeking contemporary, reusable site-level data in parallel.
+- **Artifacts:** `national-abra-ilocos-2001-river-edible-fauna-review-20261030.json`; updated `sources.json` (250 references), the research README and this plan.
+- **Sources:** [Full article PDF](https://vector.unp.edu.ph/index.php/1/article/download/223/209/1036), [Philippine EJournals record](https://ejournals.ph/article.php?id=6864), [journal submissions and copyright notice](https://vector.unp.edu.ph/index.php/1/about/submissions).
