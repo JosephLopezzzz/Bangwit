@@ -99,4 +99,8 @@ A bounded GBIF/CAS historic-specimen screen found candidate records, but the Cal
 
 ### Ragay Gulf published type-locality crosswalk — 30 October 2026
 
-A CC BY 4.0 article reports a historical *Callionymus octostigmatus* paratype locality at Rogo Point, Ragay Gulf. The crosswalk uses the article body, not the conflicting GBIF/CAS row; it does not assign the record to Quezon/CALABARZON or the public app. The article’s separate ODbL supplement was not used. See [the literature review](data/research/philippines/ragay-gulf-zookeys-2025-type-locality-review-20261030.json).
+A CC BY 4.0 article reports a historical *Callionymus octostigmatus* paratype locality at Rogo Point, Ragay Gulf. The crosswalk uses the article body, not the conflicting GBIF/CAS row; it does not assign the record to Quezon/CALABARZON or the public app. The article’s separate ODbL supplement was not used. See [the initial locality review](data/research/philippines/ragay-gulf-zookeys-2025-type-locality-review-20261030.json).
+
+### Ragay Gulf checklist batch — 30 October 2026
+
+Expanded the same CC BY 4.0 article-body screen to 16 fish treatments and 25 reported Ragay Gulf/Ragay Bay lot groupings, with species-rank CoL XR matches recorded separately from the article's own taxonomy. One taxonomic status conflict (*Inimicus bifilis* / *Inimicus didactylus*) and one uncatalogued paratype lot remain held. These are historical type-locality statements; the gulf-side/province is unresolved, so no CALABARZON assertion, geometry, current-presence claim, or app row was added. The article's ODbL supplement was not used. See [the batch review](data/research/philippines/ragay-gulf-zookeys-2025-type-locality-batch-review-20261030.json).
