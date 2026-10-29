@@ -22,7 +22,7 @@ This is an information and rights inquiry only. I am not requesting new analyses
 
 Thank you for your time.
 
-Joseph Lopez  
+Joseph Lopez
 Bangwit project contact: `tepezzzz070@gmail.com`
 
 ---
