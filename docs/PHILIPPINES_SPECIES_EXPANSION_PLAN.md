@@ -1207,3 +1207,12 @@ Verification for this research-only batch: `npm run test:species:pipeline`, `npm
 - **Next:** Retrieve authoritative DENR-EMB or LGU name/route records to clarify possible overlap with Hinabaan River and locate station-resolved fish surveys with reviewable terms.
 - **Artifacts:** `calabarzon-vinas-river-name-gbif-review-20261030.json`; updated `calabarzon-scope.json`, `sources.json`, and coverage-denominator profile. Raw GBIF responses are ignored locally and represented by byte/hash receipts.
 - **Sources:** [DENR-EMB CALABARZON Monitor, April–June 2005](https://calabarzon.emb.gov.ph/wp-content/uploads/2024/07/CALABARZON-MONITOR-April-June-2005-for-656.pdf), [GBIF occurrence API](https://techdocs.gbif.org/en/openapi/v1/occurrence).
+
+### National rollout step 165: Viñas River official nautical cross-reference — 30 October 2026
+
+- **Source:** NGA Pub. 162, *Sailing Directions (Enroute) Philippine Islands*, 14th edition (2025), independently names Vinas River. Its official indexed entry gives an approximate mouth position and a reach extending roughly four miles northwest from the outer bar. The title page and corrected-to date were verified through official NGA indexed results; the web reader refused the 11 MB PDF as too large, and no page image or local copy was reviewed.
+- **Interpretation:** This is navigation context, not a surveyed centerline, channel boundary, freshwater extent, or current hydrographic survey. The route was not digitized. It does not resolve whether Viñas River and the separate Hinabaan River source lead describe one feature.
+- **Disposition:** Added the NGA reference to the source registry and Viñas crosswalk; retained both leads separately. No coordinates, geometry, species, salinity classification, access claim, or public row was added.
+- **Next:** Seek a local authoritative alias/reach crosswalk and station-resolved fish evidence with reviewable reuse terms before any geometry or species admission.
+- **Artifacts:** `calabarzon-vinas-river-name-gbif-review-20261030.json`; updated `calabarzon-scope.json`, `sources.json`, and coverage-denominator profile.
+- **Sources:** [NGA Pub. 162, Philippine Islands, 14th edition (2025)](https://msi.nga.mil/api/publications/download?key=16694491%2FSFH00000%2FPub162bk.pdf), [NGA Maritime Safety Information](https://msi.nga.mil/Publications).
