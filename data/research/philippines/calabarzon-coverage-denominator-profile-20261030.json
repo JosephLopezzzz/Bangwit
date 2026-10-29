@@ -6,9 +6,9 @@
   "purpose": "Reconcile the current CALABARZON scope denominator and visible evidence gaps; this is not a completeness claim or biological evidence.",
   "provenance": {
     "scopeFile": "calabarzon-scope.json",
-    "scopeSha256": "6f6c1e2bf2153f80083652491db9dd9517bf929feb517414990346f62c7f766c",
+    "scopeSha256": "c7e756bf62111710c6b28dd7a4ad23cc23269a5adbfd3e273a79477a1ae9f1f4",
     "sourceRegistryFile": "sources.json",
-    "sourceRegistrySha256": "d28c67e0e7e54fdd31d594cede5b95ee8f530bd0ee136002c86d3fc2040cec0e",
+    "sourceRegistrySha256": "10ccd4a089acac5ef24ea50b1dd76281a44d43a55f17559095ad047475fa67be",
     "scopeCheckedOn": "2026-10-30",
     "scopeStatus": "in-progress-incomplete-baseline",
     "batangasBayPosterTaxonomyCrosswalkFile": "calabarzon-batangas-bay-poster-taxonomy-crosswalk-20261029.json",
@@ -28,13 +28,15 @@
     "guinayanganTributaryGbifScreenFile": "calabarzon-guinayangan-tributary-gbif-screen-20261030.json",
     "guinayanganTributaryGbifScreenSha256": "5357712026ab106065ceaed6403e8af7b05d65f9edf133020781730c26c31f4f",
     "kabibihanRiverReviewFile": "calabarzon-kabibihan-river-system-review-20261030.json",
-    "kabibihanRiverReviewSha256": "deda617963c85132862943f62229d30ec009441602347983ef44165e1fab522c"
+    "kabibihanRiverReviewSha256": "deda617963c85132862943f62229d30ec009441602347983ef44165e1fab522c",
+    "vinasRiverReviewFile": "calabarzon-vinas-river-name-gbif-review-20261030.json",
+    "vinasRiverReviewSha256": "a8bde524e3819463484a67ff44bbad47a3c7be2aa45733f5a196a00a42cfebe1"
   },
   "denominator": {
-    "waterbodyResearchLeads": 112,
+    "waterbodyResearchLeads": 113,
     "byKind": {
       "bay": 7,
-      "river": 55,
+      "river": 56,
       "estuary": 3,
       "wetland": 8,
       "reservoir": 5,
@@ -46,17 +48,17 @@
     },
     "provinceUnitsWithLeads": 5,
     "separateCityCoverageUnits": 1,
-    "uniqueSourceReferences": 91,
+    "uniqueSourceReferences": 92,
     "unresolvedSourceReferences": []
   },
   "reviewGaps": {
     "salinity": {
-      "unknown": 107,
+      "unknown": 108,
       "freshwater": 4,
       "marine": 1
     },
     "boundary": {
-      "not-delineated": 112
+      "not-delineated": 113
     },
     "fishEvidence": {
       "historical-trawl-source-review;2020-aggregate-eight-site-landing-catch-reports-Sardinella-fimbriata;bounded-OBIS-discovery;National-Museum-screen-seven-Cavite-stateProvince-records-without-locality-or-waterBody;no-capture-origin-or-waterbody-assertion": 1,
@@ -92,7 +94,8 @@
       "official-EMB-indexed-historical-catch-context;no-rows-transcribed;no-assertion": 1,
       "official-2025-NFRDI-poster-review-retained;GBIF-CAS-historical-candidate-screen;publisher-terms-conflict-with-GBIF-CC0;one-catalog-locality-date-disagreement-held;CCBY-2025-checklist-16-historical-type-locality-treatments-reviewed;one-provisional-taxonomy-conflict-and-one-uncatalogued-lot-held;regional-side-unresolved;not-counted-as-CALABARZON-assertion": 1,
       "waterbird-monitoring-site-only;fish-evidence-not-reviewed": 1,
-      "historical-gleaning-abstract-reports-mollusc-richness;no-finfish-taxa-reported": 1
+      "historical-gleaning-abstract-reports-mollusc-richness;no-finfish-taxa-reported": 1,
+      "bounded-COLXR-Actinopterygii-waterBody-and-locality-text-screen-zero;no-fish-absence-inferred": 1
     },
     "fishEvidenceNotReviewed": [
       "ph-wb-maragondon-river-estuary",
@@ -153,7 +156,8 @@
       "ph-wb-taal-lake",
       "ph-wb-tayabas-bay",
       "ph-wb-wawa-river-estuary-rosario-cavite",
-      "ph-wb-yambo-lake"
+      "ph-wb-yambo-lake",
+      "ph-wb-vinas-river-quezon"
     ]
   },
   "existingScopeCounters": {
@@ -162,8 +166,8 @@
     "publicRecordsAdmitted": 0
   },
   "interpretation": [
-    "The 112 records are named/source-derived research leads in the current file, not proof that every CALABARZON river, spring, lake, reservoir, stream, wetland, estuary, gulf, fishpond, or bay is inventoried.",
-    "All 112 current leads have boundaryStatus not-delineated; no boundary geometry was validated by this audit.",
+    "The 113 records are named/source-derived research leads in the current file, not proof that every CALABARZON river, spring, lake, reservoir, stream, wetland, estuary, gulf, fishpond, or bay is inventoried.",
+    "All 113 current leads have boundaryStatus not-delineated; no boundary geometry was validated by this audit.",
     "Unknown salinity is not freshwater evidence; fish-evidence query gaps or zero search results are not evidence of fish absence.",
     "The October 30 DENR waterbird-site crosswalk adds two aquatic-site leads; the NFRDI Ragay Gulf poster supplies source-reported 2018-2022 species labels but has an image/abstract name conflict and no station-level attribution. No new occurrence assertion, salinity class, geometry, current-presence claim, access claim, or public app record was added.",
     "The Batangas Bay poster crosswalk records nine unconflicted CoL XR species-name matches and one held poster-versus-abstract spelling conflict; these are not independent field identifications, locality assignments, or public species assertions.",
@@ -172,17 +176,18 @@
     "An official NGA Geographic Names Server screen returned no exact Rogo Point name for the Philippines. This bounded gazetteer result does not establish absence or resolve the 1966 locality; the point remains unassigned.",
     "The Guinayangan Water District 2024 Annex J crosswalk adds one surface-water river and seven named or grouped spring-source leads. It provides barangay-level supply context only: no fish records, coordinates, geometry, ecological status, or safety determinations.",
     "The October 30 IIRR watershed brief adds four named Maulawin tributary research leads in Guinayangan. It contains no fish survey and does not provide independently traced channel geometry; the denominator update is not a fish-baseline or completeness claim.",
-    "The Kabibihan River System lead is supported by a historical boundary-line issuance, SLSU's 2019 project-completion and 2021 title/authorship listings, a 2021 cross-municipality mollusc-gleaning abstract, and historical mangrove/salinity studies. None adds finfish species, current water salinity, or validated channel geometry."
+    "The Kabibihan River System lead is supported by a historical boundary-line issuance, SLSU's 2019 project-completion and 2021 title/authorship listings, a 2021 cross-municipality mollusc-gleaning abstract, and historical mangrove/salinity studies. The Viñas River is separately named by an official 2005 regional bulletin, but a possible overlap with Hinabaan River is unresolved. Neither lead has added finfish species, current water salinity, or validated channel geometry."
   ],
   "nextWork": [
     "Resolve the remaining Ragay Gulf/Ragay Bay type-locality names: a partial review now anchors Pasacao, Siburio Point, and Canmahala Bay at Camarines Sur/Bicol named-place context and Alibijaban Island in San Andres/Quezon context, but leaves most lots, Rogo Point, offshore points, aliases, and gulf boundaries unresolved.",
     "Resolve the CAS-versus-GBIF redistribution terms and the one catalog-level locality/date conflict before considering any Ragay Gulf CAS candidate for a research ledger or public app.",
     "Continue the existing CALABARZON queue and source-specific reviews; preserve source dates, station scope, identity, taxonomy, and item-level reuse limits.",
-    "Resolve the 26 fish-evidence-not-reviewed leads and 31 research-queued leads through primary or otherwise reviewable sources; do not convert waterbird monitoring, aquaculture fingerling dispersal, or gulf-level summaries into fish claims for a named subsite without locality-specific evidence.",
+    "Resolve the 26 fish-evidence-not-reviewed leads and 32 research-queued leads through primary or otherwise reviewable sources; do not convert waterbird monitoring, aquaculture fingerling dispersal, or gulf-level summaries into fish claims for a named subsite without locality-specific evidence.",
     "Delineate only where an appropriate authoritative or licensed hydrography source and a verified waterbody identity support it; keep legal municipal-water boundaries separate.",
     "Expand the denominator from official inventories and province/city sources, deduplicate aliases carefully, and report bounded coverage by freshwater, brackish, coastal, and marine habitat.",
     "For the eight new Guinayangan leads, seek station-resolved, reusable fish surveys and independently sourced feature identity/geometry; keep grouped springs grouped and salinity unknown until site-specific evidence is available.",
     "For the four IIRR-named Maulawin tributaries, seek primary DENR/PAMO or LGU watercourse identity/route records and independent station-resolved reusable fish surveys; do not infer routes, salinity, or fish occurrence from the watershed brief.",
-    "For Kabibihan River System, locate and rights-review the underlying SLSU gleaning report through a publicly documented institutional route; search current official hydrography and reach-specific fish surveys. The historical salinity work is not a current whole-river classification."
+    "For Kabibihan River System, locate and rights-review the underlying SLSU gleaning report through a publicly documented institutional route; search current official hydrography and reach-specific fish surveys. The historical salinity work is not a current whole-river classification.",
+    "For Viñas River, retrieve authoritative DENR-EMB or LGU name/route records, resolve possible overlap with Hinabaan River, and seek reusable station-resolved fish surveys before geometry or species work."
   ]
 }

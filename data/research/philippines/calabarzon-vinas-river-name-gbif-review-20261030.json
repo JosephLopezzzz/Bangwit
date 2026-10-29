@@ -1,0 +1,147 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "calabarzon-vinas-river-name-gbif-review-20261030",
+  "reviewedOn": "2026-10-30",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "provinceId": "0405600000",
+  "status": "official-indexed-river-name-context;gbif-name-screen-zero;possible-hinabaan-overlap-unresolved;no-geometry-or-fish-assertion",
+  "purpose": "Record a source-named Quezon river lead and a bounded fish occurrence text search without inferring fish absence, river geometry, or equivalence with Hinabaan River.",
+  "waterbodyId": "ph-wb-vinas-river-quezon",
+  "sourceIds": [
+    "emb-calabarzon-monitor-2005-vinas-river",
+    "gbif-occurrence-downloads"
+  ],
+  "sourceReviews": [
+    {
+      "sourceId": "emb-calabarzon-monitor-2005-vinas-river",
+      "title": "CALABARZON Monitor, April-June 2005",
+      "finding": "Indexed text from the official DENR-EMB CALABARZON bulletin names Viñas River with the parenthetical locality Guinayangan-Tagkawayan, Quezon, and contains the statement that fishing is noted as its most beneficial use. Direct PDF access returned HTTP 403, so only this indexed excerpt was reviewed.",
+      "decision": "Add a source-named river research lead only. Do not interpret the beneficial-use statement as a current legal classification, public access right, fish record, or geometry."
+    },
+    {
+      "sourceId": "gbif-occurrence-downloads",
+      "title": "GBIF occurrence API selected CoL XR Actinopterygii search",
+      "finding": "Four requests searched the exact accented and unaccented names in waterBody and locality for country PH with the selected CoL XR Actinopterygii filters. All returned HTTP 200 and zero indexed matches.",
+      "decision": "Bounded indexed-text search only. Zero results do not establish fish absence and do not replace locality variants, all-taxon discovery, or a station-resolved survey."
+    }
+  ],
+  "gbifScreen": {
+    "endpoint": "https://api.gbif.org/v1/occurrence/search",
+    "documentation": "https://techdocs.gbif.org/en/openapi/v1/occurrence",
+    "taxonomy": {
+      "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+      "taxonKey": "8VR36",
+      "label": "Catalogue of Life Extended Release Actinopterygii"
+    },
+    "filters": {
+      "country": "PH",
+      "limit": 100,
+      "offset": 0
+    },
+    "queries": [
+      {
+        "field": "waterBody",
+        "value": "Viñas River",
+        "httpStatus": 200,
+        "count": 0,
+        "returnedCount": 0,
+        "limit": 100,
+        "offset": 0,
+        "raw": {
+          "path": "raw/vinas-river-gbif-screen-20261030/waterBody-accented.json",
+          "bytes": 79,
+          "sha256": "16004ddeb6b1eb033e3665fa6082d9cdd36533ce1f36272a2a95f5664f1b9dcd"
+        }
+      },
+      {
+        "field": "waterBody",
+        "value": "Vinas River",
+        "httpStatus": 200,
+        "count": 0,
+        "returnedCount": 0,
+        "limit": 100,
+        "offset": 0,
+        "raw": {
+          "path": "raw/vinas-river-gbif-screen-20261030/waterBody-plain.json",
+          "bytes": 79,
+          "sha256": "16004ddeb6b1eb033e3665fa6082d9cdd36533ce1f36272a2a95f5664f1b9dcd"
+        }
+      },
+      {
+        "field": "locality",
+        "value": "Viñas River",
+        "httpStatus": 200,
+        "count": 0,
+        "returnedCount": 0,
+        "limit": 100,
+        "offset": 0,
+        "raw": {
+          "path": "raw/vinas-river-gbif-screen-20261030/locality-accented.json",
+          "bytes": 79,
+          "sha256": "16004ddeb6b1eb033e3665fa6082d9cdd36533ce1f36272a2a95f5664f1b9dcd"
+        }
+      },
+      {
+        "field": "locality",
+        "value": "Vinas River",
+        "httpStatus": 200,
+        "count": 0,
+        "returnedCount": 0,
+        "limit": 100,
+        "offset": 0,
+        "raw": {
+          "path": "raw/vinas-river-gbif-screen-20261030/locality-plain.json",
+          "bytes": 79,
+          "sha256": "16004ddeb6b1eb033e3665fa6082d9cdd36533ce1f36272a2a95f5664f1b9dcd"
+        }
+      }
+    ],
+    "rawReceipts": [
+      {
+        "file": "waterBody-accented.json",
+        "bytes": 79,
+        "sha256": "16004ddeb6b1eb033e3665fa6082d9cdd36533ce1f36272a2a95f5664f1b9dcd"
+      },
+      {
+        "file": "waterBody-plain.json",
+        "bytes": 79,
+        "sha256": "16004ddeb6b1eb033e3665fa6082d9cdd36533ce1f36272a2a95f5664f1b9dcd"
+      },
+      {
+        "file": "locality-accented.json",
+        "bytes": 79,
+        "sha256": "16004ddeb6b1eb033e3665fa6082d9cdd36533ce1f36272a2a95f5664f1b9dcd"
+      },
+      {
+        "file": "locality-plain.json",
+        "bytes": 79,
+        "sha256": "16004ddeb6b1eb033e3665fa6082d9cdd36533ce1f36272a2a95f5664f1b9dcd"
+      }
+    ]
+  },
+  "identityCrosswalk": {
+    "candidateRelatedWaterbodyId": "ph-wb-hinabaan-river-quezon",
+    "status": "unresolved; not merged; no alias assigned",
+    "reason": "The official bulletin names Viñas River and Guinayangan-Tagkawayan, while the existing Hinabaan lead is separately source-named at Balinarin/Hinabaan. No authoritative source reviewed here reconciles the names or feature extents."
+  },
+  "decisions": {
+    "newScopeLeads": 1,
+    "finfishAssertionsAdded": 0,
+    "molluscSpeciesNamesAdded": 0,
+    "salinityClassificationAdded": 0,
+    "geometryAdded": false,
+    "publicRowsAdded": 0,
+    "publicAdmission": false,
+    "coordinatesProjected": false,
+    "accessOrFishingPermissionInferred": false
+  },
+  "limitations": [
+    "The official bulletin PDF could not be opened directly; the name and short beneficial-use context are from indexed text only.",
+    "The bulletin excerpt is not a species survey and contains no station-resolved fish record, current condition, coordinates, or channel route.",
+    "The four GBIF zero results are bounded indexed-field searches and do not establish fish absence.",
+    "Possible overlap with Hinabaan River remains unresolved; no alias or geometry is inferred.",
+    "No current salinity, fishing access, legal classification, safety, or reuse permission is established."
+  ],
+  "nextAction": "Seek a retrievable DENR-EMB waterbody classification record or an authoritative LGU/NAMRIA feature-name and route source that can resolve Viñas River identity and possible overlap with Hinabaan; find a station-resolved fish survey with reviewable reuse terms before adding fish evidence."
+}
