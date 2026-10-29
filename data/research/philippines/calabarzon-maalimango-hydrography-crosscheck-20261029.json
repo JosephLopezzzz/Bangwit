@@ -40,8 +40,23 @@
     "networkFeatureLengthMeters": 1221.1,
     "interpretation": "The nearest modeled line is roughly 16 km away and belongs to a different named catchment. This is a poor geographic fit for the Rosario station and means this dataset does not provide a usable Maalimango channel trace at the mouth."
   },
+  "sameNameOsmScreen": {
+    "discoverySource": "https://waterwaymap.org/river/Maalimango%20River%20000654184890/",
+    "sourceData": "OpenStreetMap contributors; ODbL. The derivative WaterwayMap page is CC BY-SA 4.0.",
+    "dataSnapshotDate": "2026-10-25",
+    "namedWays": [
+      "https://www.openstreetmap.org/way/1358996081",
+      "https://www.openstreetmap.org/way/51272143"
+    ],
+    "geometryDownload": "https://waterwaymap.org/river/Maalimango%20River%20000654184890/geometry.geojson",
+    "finding": "WaterwayMap derives a roughly 2 km Maalimango River feature from two OSM ways. The shared node is part of OSM administrative relations Pasong Kawayan I and II; the Pasong Kawayan II relation labels its change context General Trias and both are tagged as barangays. This OSM feature is outside the Rosario station context recorded by the JICA EIA and the EMB Rosario waterbody listing.",
+    "hydrographyRelation": "WaterwayMap's OSM graph reports this feature joining Cañas River; that is a community-map topology and has not been confirmed by an official channel crosswalk.",
+    "identityDisposition": "Same-name candidate only. It may be a distinct reach or an incomplete/misassigned OSM name; do not merge it with the Rosario Maalimango station or use its geometry for the Rosario waterbody until an authoritative connection is established.",
+    "geometryCopied": false
+  },
   "decisions": {
     "datasetAcceptedAsMaalimangoGeometry": false,
+    "osmSameNameCandidateAssignedToRosario": false,
     "fullChannelGeometryAdded": false,
     "stationCoordinateRepublished": false,
     "salinityChanged": false,
@@ -56,5 +71,5 @@
     "This modeled network cannot be used as the named channel boundary or to infer the whole river's extent, salinity, access or legal status.",
     "No coordinates or source map were reproduced, and no species claims were changed."
   ],
-  "nextAction": "Seek permitted, higher-resolution channel geometry from NAMRIA, DENR or another documented source and compare it with the EIA's station-4 locality. Keep the 2016 mouth-station evidence research-only and Maalimango geometry unresolved until the channel trace and datum are independently validated."
+  "nextAction": "Seek permitted, higher-resolution channel geometry from NAMRIA, DENR or another documented source and compare it with the EIA's station-4 locality. Keep the OSM same-name reach separate until an official channel crosswalk establishes whether it connects to the Rosario waterbody. Keep the 2016 mouth-station evidence research-only and Maalimango geometry unresolved until the channel trace and datum are independently validated."
 }
