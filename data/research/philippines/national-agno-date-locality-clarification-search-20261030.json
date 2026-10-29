@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-30",
+  "status": "primary-source-conflict-confirmed;no-correction-or-supplement-found;author-clarification-draft-only",
+  "purpose": "Check whether an official article correction, supplement, or repository notice resolves the Agno survey's wet/dry month mapping and station locality inconsistencies; prepare, but do not send, a focused author inquiry.",
+  "questions": [
+    {
+      "issue": "Wet/dry season to month mapping",
+      "universityOfGlasgowRecord": "The current data-collection description maps wet season to January 2022 and dry season to July 2021.",
+      "datasetReadme": "Also maps wet to January 2022 and dry to July 2021, although it has its own incorrect dry-season filename/date description.",
+      "articleMethods": "Section 2.2 says fish/water sampling took place in July and January, respectively, during the wet and dry seasons, mapping July to wet and January to dry.",
+      "matrix": "Fish_count.csv has only Wet/Dry season labels and no date per count cell.",
+      "disposition": "No exact date may be assigned to a fish-count season until an author or formal primary correction resolves the conflict."
+    },
+    {
+      "issue": "ARB5 station locality and coordinate",
+      "sourceLocation": "San Roque, San Manuel, Pangasinan",
+      "sourceCoordinateWgs84": {"latitude": 16.1056, "longitude": 120.7019},
+      "mapScreens": "Both the DPWH service derived from a NAMRIA source and one Nominatim reverse-geocoder result place the point in San Nicolas, Pangasinan. Neither is treated as authoritative station identity or legal boundary evidence.",
+      "disposition": "Do not relocate the station, assign a different municipality, or attach it to a specific reach without author/primary-source clarification."
+    },
+    {
+      "issue": "ARB4 locality spelling",
+      "datasetSpelling": "Dalapurip, Benguet",
+      "articleSpelling": "Dalupirip, Benguet",
+      "disposition": "Keep both source spellings. A municipality-level point screen does not establish whether they denote the exact same named station."
+    }
+  ],
+  "searchAndAccess": {
+    "officialRepositoryRecord": "University of Glasgow dataset page reviewed; it retains the January-wet/July-dry mapping and the two CC BY 4.0 data/README files. No correction notice or additional data file is linked in the reviewed record. The record provides a 'Request a correction' link; it was not followed or submitted.",
+    "articleRepositoryRecord": "University of Glasgow article record and repository-hosted full text reviewed. The abstract gives July 2021 and January 2022 without a season mapping; section 2.2 supplies the conflicting July-wet/January-dry mapping. The full text has no supplementary-information reference found by text search.",
+    "publisherSearch": "Exact DOI/title web searches did not locate a correction or corrigendum. Direct DOI landing-page access was unavailable in this review, so this is a bounded search rather than proof that no publisher notice exists.",
+    "contact": "The article identifies K. F. C. Tenio as corresponding author and prints kitfelian.tenio@vsu.edu.ph. This is recorded only to prepare a manual draft; no email, correction form or message was sent."
+  },
+  "draftFile": "national-agno-clarification-request-draft-20261030.md",
+  "decision": {
+    "monthSeasonCrosswalkUpdated": false,
+    "stationCoordinateChanged": false,
+    "ARB5LocalityResolved": false,
+    "ARB4AliasAccepted": false,
+    "authorOrPublisherContacted": false,
+    "speciesAssertionsAdded": 0,
+    "appRecordsAdded": 0
+  },
+  "nextAction": "Joseph may review and send the draft to the publicly listed corresponding-author address or use the repository correction link. Continue independent freshwater source acquisition while the source conflicts remain held.",
+  "sourceReferences": [
+    "https://researchdata.gla.ac.uk/2287/",
+    "https://eprints.gla.ac.uk/386293/",
+    "https://researchonline.ljmu.ac.uk/id/eprint/28808/1/Diversity%20and%20distribution%20of%20freshwater%20fish%20in%20the%20Agno%20River%20Basin%2C%20northern%20Philippines.pdf",
+    "https://doi.org/10.1016/j.wsee.2026.05.001"
+  ]
+}
