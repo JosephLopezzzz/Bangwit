@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "batchId": "calabarzon-makiling-alternate-access-rights-review-20261029",
+  "reviewedOn": "2026-10-29",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "regionName": "Region IV-A (CALABARZON)",
+  "sourceId": "paller-2011-makiling-fishes",
+  "status": "alternate-open-access-route-reviewed;structured-table-extraction-held-pending-written-permission",
+  "sourceRoutes": [
+    {
+      "provider": "Philippine Journal of Science / DOST",
+      "articlePage": "https://philjournalsci.dost.gov.ph/freshwater-fish-fauna-in-watersheds-of-mt-makiling-forest-reserve-laguna-philippines/",
+      "currentPdf": "https://philjournalsci.dost.gov.ph/wp-content/uploads/2025/08/Freshwater_Fish_Fauna_in_Watersheds_of_Mt_Makiling.pdf",
+      "evidence": "The official PJS article page is indexed with the title, abstract and article text. A prior direct PDF request returned HTTP 403; the PDF was not downloaded or visually reviewed in this step.",
+      "terms": "PJS describes the journal as open access. Its Authors' Guide says accepted authors sign a copyright-transfer form. No item-level reuse license for this article was located.",
+      "policySources": [
+        "https://philjournalsci.dost.gov.ph/about-pjs/",
+        "https://philjournalsci.dost.gov.ph/authors-guide/"
+      ]
+    },
+    {
+      "provider": "NUS Libraries Digital Gems",
+      "item": "https://digitalgems.nus.edu.sg/view/530385",
+      "terms": "https://digitalgems.nus.edu.sg/Terms_of_Use",
+      "itemAccessLabel": "Open Access; Open",
+      "termsFindings": [
+        "Open Access describes public access without login; it does not by itself grant copyright-free reuse.",
+        "Viewing and website-provided downloads are allowed for private study, non-commercial teaching, and non-commercial scholarly research subject to copyright and other restrictions.",
+        "Without an explicit item/collection reuse license or written permission, the terms prohibit creating derivative works or structured datasets and prohibit text/data mining or computational analysis of Digital Gems content.",
+        "The terms identify NUS Libraries Special Collections as the contact for reuse permissions and computational projects."
+      ]
+    }
+  ],
+  "existingIndependentEvidence": {
+    "reviewFile": "makiling-gbif-source-review.json",
+    "assertionCount": 1,
+    "acceptedName": "Gulaphallus mirabilis Herre, 1925",
+    "site": "Molawin Creek",
+    "recordCount": 3,
+    "datasetCount": 2,
+    "licenses": ["CC0-1.0"],
+    "limits": [
+      "Records lack collection dates and coordinates; the locality is text-only.",
+      "Existing exact-text GBIF searches for Dampalit Falls and Cambantoc River returned zero; these bounded results do not establish absence.",
+      "The records do not substitute for the 2011 survey's multi-site species table or establish a complete Makiling fish inventory."
+    ]
+  },
+  "decision": {
+    "tableRowsTranscribed": 0,
+    "taxonomyMatchesAdded": 0,
+    "speciesAssertionsAdded": 0,
+    "scopeAssignmentsChanged": false,
+    "publicAppProjectionChanged": false,
+    "publicationApproval": false,
+    "rationale": "The NUS item is accessible for reading, but its terms explicitly restrict structured extraction without an item-level reuse license or written permission. PJS open-access status and its author copyright-transfer policy do not establish an item-specific public data-reuse license. Keep the survey table quarantined."
+  },
+  "unsentPermissionInquiry": {
+    "recipient": "NUS Libraries Special Collections (address listed on Digital Gems Terms of Use)",
+    "status": "draft-not-sent",
+    "subject": "Permission inquiry: structured research use of the 2011 Mt. Makiling fish survey table",
+    "body": "I am conducting non-commercial research for Bangwit, an independent Philippines fishing-information project. May I manually transcribe the fish names and the paper's species-by-watershed presence cells from the 2011 Paller et al. article into a cited, non-commercial structured research dataset? The proposed fields would be limited to verbatim taxon label, source-reported sampled watershed, publication citation, and an explicit historical period/unknown-date status. I would not redistribute the article PDF, tables, images, or full text. Please advise whether this use is permitted, any required attribution or access/storage conditions, and whether the relevant rights-holder must also grant permission. No data have been extracted pending your guidance."
+  },
+  "nextAction": "Continue independent, openly licensed, locality-resolved freshwater occurrence discovery in CALABARZON. Keep Molawin as one historical text-locality assertion, and keep Dampalit Falls and Cambantoc River without species rows unless a permitted, independently verifiable source is found."
+}
