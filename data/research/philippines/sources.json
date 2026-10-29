@@ -3,7 +3,7 @@
   "checkedOn": "2026-10-30",
   "status": "research-only-source-registry",
   "scope": "National acquisition references, freshwater spatial-source leads, and CALABARZON/Central Luzon identity/source leads. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 273,
+  "sourceCount": 274,
   "sources": [
     {
       "id": "psa-car-apayao-fisheries-situation-2019-2021-q3",
@@ -8380,7 +8380,7 @@
       "license": "CC BY-NC 4.0 as stated on the article PDF final page; compatibility and any Bangwit reuse remain unapproved",
       "licenseUrl": "https://creativecommons.org/licenses/by-nc/4.0/",
       "caveats": [
-        "The paper uses structured interviews with 59 registered fisherfolk in February–March 2022 and reports catch/production from 2020–2021; these periods must not be conflated.",
+        "The paper uses structured interviews with 59 registered fisherfolk in February–March 2022; Table 3 reports barangay fish production for 2020 and 2021, while Table 4 gives aggregate sanctuary species composition for calendar year 2021. Do not conflate these periods or imply event-level data.",
         "Fish labels are mostly genus-level respondent or secondary-source identifications, without vouchers or diagnostic documentation.",
         "The paper distinguishes buffer-zone fishing from protected/no-take zones but provides no verified sanctuary/buffer geometry or complete ordinance text.",
         "Several genus strings conflict internally; do not silently correct them or assign species-level accepted names.",
@@ -8415,6 +8415,42 @@
         "The notice reports three established freshwater protected-area initiatives and names barangays/sites, but supplies no coordinates, polygons, technical delineation, or ordinance copy.",
         "The planned Pared River Catchment network is a project goal, not an established protected-area boundary or rule.",
         "Do not infer current access, fishing permission, no-take status, or species presence from the notice alone."
+      ]
+    },
+    {
+      "id": "escano-et-al-ludong-molecular-distribution-northern-philippines-2022",
+      "title": "Updates on identification and distribution of the river mullet ludong in Northern Philippines",
+      "provider": "National Fisheries Research and Development Institute; The Philippine Journal of Fisheries",
+      "url": "https://repository.nfrdi.da.gov.ph/items/405e7034-8af9-4801-b8c1-42dff5c103c9",
+      "additionalUrls": [
+        "https://repository.nfrdi.da.gov.ph/bitstreams/9dcc4a58-f0f4-4b61-b14b-ce2ed35640bf/download",
+        "https://doi.org/10.31398/tpjf/29.2.2022A0003",
+        "https://api.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=ON406954,ON406955,ON406953,ON406951,ON406950,ON406949,ON406948,ON406947,ON406946,ON406945,ON406944,ON406943,ON406942,ON406940,ON406939,ON406938,ON406937,ON406936&rettype=gb&retmode=text"
+      ],
+      "role": "Historical COI-barcode study source for a strong Cestraeus goldiei candidate in Cagayan River system localities and one Abra River sample; four paper/GenBank province qualifiers conflict, and no coordinates are available.",
+      "checkedOn": "2026-10-30",
+      "sourceYear": 2022,
+      "access": {
+        "status": "Full ten-page NFRDI article, official item record, and 18 linked GenBank record metadata entries reviewed.",
+        "reviewFiles": [
+          "national-ludong-2022-nfrdi-genbank-crosscheck-20261030.json"
+        ]
+      },
+      "reuse": {
+        "metadata": "Cite Escaño et al. 2022, The Philippine Journal of Fisheries 29(2), 139–148, DOI 10.31398/tpjf/29.2.2022A0003, and link the NFRDI item.",
+        "raw": "No article PDF, table, image, map, or sequence stored. The review retains short sample-code, date, locality and accession metadata needed to document provenance; NCBI sequence payload was not retained.",
+        "content": "The article states CC BY-NC 4.0. No app reuse is approved. Confirm attribution/license compatibility with Bangwit's eventual distribution model and resolve the locality conflicts before public projection. GenBank accessions are linked rather than copied."
+      },
+      "publicationApproval": false,
+      "researchStatus": "full-article-reviewed;coi-species-identification;18-accession-metadata-crosschecked;isabela-locality-conflict;no-coordinates;noncommercial-license;research-only",
+      "license": "CC BY-NC 4.0 for the article, stated in the final PDF page; no Bangwit use approved",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "caveats": [
+        "The paper reports 20 newly collected samples, seven archival samples, 27 initial sequences, and 25 retained analyses; its table links only 18 new sample codes to accessions and does not identify two omitted current-study codes.",
+        "Four linked accessions have a paper locality in Isabela but an NCBI geo_loc_name of Philippines: Cagayan. Preserve both values and do not geocode or silently repair them.",
+        "No lat/long is supplied; sample codes are GenBank specimen_voucher qualifiers, not proof of a permanent museum voucher deposit.",
+        "The molecular records derive from this same study and are a crosswalk check, not independent replication.",
+        "The article's historical mention of a 2013 closed season is not a current legal or fishing advisory; independently verify any rule before app use."
       ]
     }
   ],
