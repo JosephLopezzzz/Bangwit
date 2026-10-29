@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-29",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "waterbodyId": "ph-wb-pansipit-river",
+  "purpose": "Recheck the rights gate on the 2015 Pansipit juvenile-fish diet study and assess an alternative species-interaction index without treating indexed records as automatically reusable.",
+  "primaryDietSource": {
+    "sourceId": "mendoza-2015-pansipit-fish-diet",
+    "officialArticleUrl": "https://ovcre.uplb.edu.ph/journals-uplb/index.php/JESAM/article/view/160",
+    "officialPdfUrl": "https://ovcre.uplb.edu.ph/journals-uplb/index.php/JESAM/article/download/160/142",
+    "accessCheck": {
+      "articlePage": "HTTP 403 from current research access",
+      "pdf": "HTTP 403 from current research access",
+      "indexedText": "Publisher search index exposes article scope and selected text; no full PDF bytes or diet table were obtained for this review."
+    },
+    "scopeRetained": "2012 juvenile-fish gut-content study in the upstream Pansipit River-Lake Taal connection; 12 source-reported species; historical and reach/life-stage limited.",
+    "rightsHolderPolicy": {
+      "source": "UPLB University Knowledge Digital Repository JESAM policies",
+      "url": "https://www.ukdr.uplb.edu.ph/jesam/policies.html",
+      "reviewedLines": "45-56",
+      "finding": "Policy says authors assign article copyright to UKDR subject to stated personal-use exceptions; distribution/use of article material outside the exemption requires a written UKDR agreement and attribution.",
+      "articleCopyrightMetadata": "Ateneo metadata reports Publisher Copyright © 2015, University of the Philippines Los Baños, all rights reserved.",
+      "permissionObtained": false,
+      "permissionRequestSent": false
+    },
+    "decision": "Keep species-by-food-item table, percentages, and app-facing diet claims unextracted pending written permission or a verified applicable reuse license."
+  },
+  "alternativeSourceCheck": {
+    "sourceId": "globi-open-species-interaction-index",
+    "officialDataPage": "https://www.globalbioticinteractions.org/data.html",
+    "apiGuide": "https://www.globalbioticinteractions.org/how-to",
+    "sourcePolicy": "GloBI describes itself as an open interaction-data service and asks users to cite the original data contributors/datasets; it recommends versioned stable data for research and describes the live API as exploratory. Each underlying dataset still needs source-specific provenance and reuse review.",
+    "queryAttempts": [
+      {
+        "taxon": "Anguilla marmorata",
+        "interactionType": "eats",
+        "requestedObservations": true,
+        "result": "HTTP 403 from current research runtime; no rows retrieved."
+      },
+      {
+        "taxon": "Caranx sexfasciatus",
+        "interactionType": "eats",
+        "requestedObservations": true,
+        "result": "HTTP 403 from current research runtime; no rows retrieved."
+      }
+    ],
+    "interpretation": "A 403 is an access limitation of this query environment, not evidence that the taxa have no recorded prey. No GloBI prey record or license has been admitted for Bangwit."
+  },
+  "decision": {
+    "status": "diet-table-held;written-permission-pending;globi-alternative-candidate-only",
+    "dietRowsTranscribed": 0,
+    "dietAssertionsAdded": 0,
+    "speciesAssertionsAdded": 0,
+    "geometryAdded": false,
+    "publicProjectionAdded": false
+  },
+  "nextActions": [
+    "Request written permission from the journal/UKDR or rights holder for the minimal Pansipit species-by-food-item facts and attribution terms; do not send without Joseph review/authorization.",
+    "For any GloBI candidate interaction, locate and review its original dataset citation and license, species/rank mapping, prey/predator direction, life stage, and geography before use.",
+    "Prefer stable, versioned data publications over live API results for any eventual research projection; retain source IDs, versions, and citations.",
+    "If no compatible diet permission or clearly licensed original dataset is found, leave diet as unavailable for those taxa rather than infer prey from broad family descriptions."
+  ]
+}

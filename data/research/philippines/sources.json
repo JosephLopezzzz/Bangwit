@@ -3,7 +3,7 @@
   "checkedOn": "2026-10-29",
   "status": "research-only-source-registry",
   "scope": "National acquisition references, freshwater spatial-source leads, and CALABARZON/Central Luzon identity/source leads. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 194,
+  "sourceCount": 195,
   "sources": [
     {
       "id": "gbif-col-xr-taxonomy-matching",
@@ -3657,26 +3657,27 @@
       "role": "Primary historical fish gut-content and distribution study for juvenile fish in the upper Pansipit River; useful as a candidate natural-diet source, not a current or general species diet guide.",
       "checkedOn": "2026-10-24",
       "access": {
-        "status": "official-indexed-article-text-and-ateneo-metadata-reviewed;direct-pdf-fetch-timeout;not-downloaded",
+        "status": "official-article-and-pdf-403;publisher-indexed-scope-reviewed;rights-policy-reviewed;table-not-retrieved",
         "localRawSnapshot": null,
         "reviewFiles": [
-          "calabarzon-pansipit-diet-study-rights-triage-20261024.json"
+          "calabarzon-pansipit-diet-study-rights-triage-20261024.json",
+          "calabarzon-pansipit-diet-rights-and-globi-alternative-review-20261029.json"
         ]
       },
       "reuse": {
-        "metadata": "No item-specific reuse license was found. JESAM/UKDR policy describes copyright assignment to UKDR; Ateneo metadata reports publisher copyright ? 2015 UPLB, all rights reserved. Treat table reuse as unapproved pending rights-holder clarification.",
-        "raw": "No article PDF, table, or image retained.",
-        "content": "Internal source triage only. Do not reproduce the species-by-diet table or publish extracted diet assertions without written permission or a verified applicable license."
+        "metadata": "UKDR/JESAM policy says copyright is assigned to UKDR subject to stated personal-use exceptions; distribution of article material outside those exceptions requires written agreement and attribution. Ateneo metadata reports publisher copyright 2015 UPLB, all rights reserved.",
+        "raw": "No article bytes or full PDF were retrieved in this follow-up; publisher-indexed text only. No raw article copy retained.",
+        "content": "Keep the species-by-food-item table, percentages, and app-facing diet claims unextracted pending written permission or a verified applicable license."
       },
       "publicationApproval": false,
-      "researchStatus": "historical-2012-juvenile-gut-content-study-identified;diet-table-held-pending-rights-and-taxonomy-review",
+      "researchStatus": "historical-2012-juvenile-gut-content-study-identified;diet-table-held-pending-written-rights-and-taxonomy-review",
       "sourceYear": 2015,
       "citation": "Mendoza, M.U., Legaspi, K.L., Acojido, M.G., Cabais, A.C., de Guzman, J.L.E., Favila, A.M., Lazo, S.M., Rivera, J.B., Briones, J.C.A. and Papa, R.D.S. (2015). Journal of Environmental Science and Management 18(2):1-9. https://doi.org/10.47125/jesam/2015_2/01",
       "caveats": [
         "The article describes juvenile fish from 12 species in the upstream Pansipit River; this is not an all-life-stage species list or the whole river.",
         "The survey monitored fish from April to September 2012 except July; gut contents are historical, location- and life-stage-specific observations, not fixed diets or current abundance.",
-        "No table rows, fish names, prey names, proportions, or map geometry are imported in this research step.",
-        "The study does not establish bait effectiveness, catchability, fishing legality, safety, or diet across other regions or water types."
+        "The study does not establish bait effectiveness, catchability, fishing legality, safety, or diet across other regions or water types.",
+        "The official JESAM article/PDF returned HTTP 403 in the 2026-10-29 review. UKDR policy reviewed for this follow-up requires written agreement for article-material distribution outside stated personal-use exceptions; no permission was obtained or requested."
       ]
     },
     {
@@ -5792,6 +5793,39 @@
         "Accepted name mappings do not re-identify organisms in the historical article.",
         "Two source labels are genus rank only and remain unresolved.",
         "No waterbody occurrence or public app row is added."
+      ]
+    },
+    {
+      "id": "globi-open-species-interaction-index",
+      "title": "Global Biotic Interactions (GloBI) open species-interaction index and stable data products",
+      "provider": "Global Biotic Interactions",
+      "url": "https://www.globalbioticinteractions.org/data.html",
+      "additionalUrls": [
+        "https://www.globalbioticinteractions.org/how-to",
+        "https://www.globalbioticinteractions.org/process.html"
+      ],
+      "role": "Candidate secondary source for natural predator-prey interaction discovery across freshwater, brackish and marine taxa; each underlying dataset citation, taxon mapping, observation context and license must be checked before use.",
+      "checkedOn": "2026-10-29",
+      "access": {
+        "status": "data-and-api-guidance-reviewed;two-fish-taxon-api-queries-http-403;no-interaction-rows-retrieved",
+        "reviewFiles": [
+          "calabarzon-pansipit-diet-rights-and-globi-alternative-review-20261029.json"
+        ],
+        "coordinatesRetained": false
+      },
+      "reuse": {
+        "metadata": "GloBI asks users to attribute the original data contributors and cite the specific datasets; it recommends stable versioned data products for research.",
+        "raw": "No interaction dataset or API response retrieved in this check.",
+        "content": "No blanket license inferred for indexed interactions. Review the original dataset license and citation for each candidate record."
+      },
+      "publicationApproval": false,
+      "researchStatus": "candidate-interaction-index;source-level-rights-and-fish-prey-relevance-unverified",
+      "license": null,
+      "caveats": [
+        "The API 403 in this research runtime is not a zero-result or species-absence finding.",
+        "GloBI interactions can be non-diet relationships; retain interaction type and source evidence.",
+        "A source-indexed interaction does not establish local presence in Cavite or the Philippines.",
+        "No diet, species, catchability, or public app claim was added."
       ]
     }
   ],
