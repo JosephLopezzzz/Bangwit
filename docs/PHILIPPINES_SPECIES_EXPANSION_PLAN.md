@@ -1460,3 +1460,11 @@ Verification for this research-only batch: `npm run test:species:pipeline`, `npm
 - **Next:** Prepare an unsent inquiry to the authors/BSU for the site-to-waterbody crosswalk, capture-versus-interview provenance, voucher/catalogue references, and table/data reuse terms. In parallel, continue reviewing regional freshwater sources with clear, item-level permissions.
 - **Artifacts:** `national-benguet-rivers-bestre-2018-source-review-20261030.json`; updated `sources.json` (248 references), the research README, and this plan.
 - **Sources:** [Full article PDF linked by the official archive](https://www.muzeulbrailei.ro/uploads/img/stiintele-naturii/Volume%208/04JWB2018085985WEB.pdf), [official Journal of Wetlands Biodiversity archive](https://www.muzeulbrailei.ro/stiintele-naturii/publicatii-stiintifice-4/), [journal author instructions](https://www.muzeulbrailei.ro/images/naturale/11InstructiuniEN.pdf).
+
+### National rollout step 190: Benguet river survey author clarification draft — 30 October 2026
+
+- **Preparation:** Drafted a transparent inquiry to the corresponding-author address printed in the article. It asks for the 11-site-to-12-unit crosswalk, captured-specimen versus interview provenance, site/date-resolved evidence, Benguet State University voucher accessions, and the applicable public-app/table/image reuse terms.
+- **Project transparency:** The message says Bangwit is an independent early-stage project with a phased Philippines-wide goal, that no Benguet article-derived rows are published in the app, and that the app may eventually have a revenue-generating model.
+- **Disposition:** Draft only. No email, request form or permission inquiry was sent. No table or image was copied and no app data changed.
+- **Artifact:** `national-benguet-rivers-author-clarification-draft-20261030.md`; linked from the research README. No new source registry entry was needed.
+- **Source:** [Article PDF and corresponding-author email](https://www.muzeulbrailei.ro/uploads/img/stiintele-naturii/Volume%208/04JWB2018085985WEB.pdf).
