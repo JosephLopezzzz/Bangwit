@@ -1234,3 +1234,12 @@ Verification for this research-only batch: `npm run test:species:pipeline`, `npm
 - **Next:** Only reopen the identity question if a voucher/specimen record, author correction, or eligible independent survey is located. Continue the broader CALABARZON queue with independently reusable sources.
 - **Artifacts:** `calabarzon-san-pablo-lakes-source-recheck-20261030.json`; updated `sources.json` and denominator-profile hashes.
 - **Sources:** [NRCP/DOST BRIS project E-224](https://basicresearch.nrcp.dost.gov.ph/supported_programs_and_projects/details/65), [NRCP 2014 programs and projects](https://nrcp.dost.gov.ph/wp-content/uploads/2026/04/TranSeal2014_Programs-and-Projects-2014.pdf).
+
+### National rollout step 168: Independent Lake Sampaloc fish and trophic study — 30 October 2026
+
+- **Source:** Briones et al. (2016), *Tropical Ecology* 57(3), 567-581, is a separate field study limited to Lake Sampaloc. The public author-uploaded article describes rapid gill-net surveys in 2012-2014 and stable-isotope sampling in October 2013; UST's official author profile confirms the citation.
+- **Diet relevance:** The authors infer that tilapine cichlids in Lake Sampaloc primarily graze or exploit littoral periphyton. This is historical, site-specific trophic-production evidence, not an exhaustive diet, a national profile, or bait advice.
+- **Rights and disposition:** The article bears a 2016 copyright notice for the International Society for Tropical Ecology; no open license or item-specific data reuse grant was verified. The species table was not transcribed. No species assertion, diet claim, geometry, or app projection was added. This independent Sampaloc survey does not resolve the Bunot carp identity conflict.
+- **Next:** Seek an eligible reuse grant or independently reusable data before creating Sampaloc species/diet rows; keep location, survey dates, method, and trophic-versus-bait distinctions attached to any future claim.
+- **Artifacts:** `calabarzon-sampaloc-briones-2016-source-review-20261030.json`; updated `sources.json` and coverage-denominator profile hash.
+- **Sources:** [Briones et al. author-uploaded full text](https://www.researchgate.net/publication/295507790_Fish_diversity_and_trophic_interactions_in_LAKE_SAmpaloc_Luzon_Is_Philippines), [UST author bibliography](https://www.ust.edu.ph/profile/papa-rey-donne-s/), [RIHN 2016 annual report](https://www.chikyu.ac.jp/publicity/publications/annual_report/img/2016_eng.pdf).
