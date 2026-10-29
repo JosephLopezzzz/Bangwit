@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-29",
+  "regionId": "0400000000",
+  "waterbodyId": "ph-wb-bal-on-reservoir-quezon",
+  "sourceContext": {
+    "sourceId": "seafdec-palmaa-bartolome-2016-fish-for-the-people",
+    "reviewFile": "calabarzon-seafdec-nifep-table-review-20261024.json",
+    "reportedProgramPeriod": "NIFEP activities as of 2015",
+    "sourceLabel": "Bal-on Reservoir, Quezon Province",
+    "reportedActivity": "habitat restoration",
+    "fishSurveyOrTaxaReportedForThisSite": false,
+    "municipalityOrExtentSpecified": false,
+    "itemSpecificOpenLicenseFound": false
+  },
+  "gbifCheck": {
+    "sourceId": "gbif-bal-on-reservoir-col-xr-exact-fish-text-check",
+    "endpoint": "https://api.gbif.org/v1/occurrence/search",
+    "taxonomy": {
+      "name": "Catalogue of Life eXtended Release (CoL XR)",
+      "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+      "taxonKey": "8VR36",
+      "scientificName": "Actinopterygii",
+      "rank": "GIGACLASS",
+      "scope": "Ray-finned fishes only; this filter does not include sharks and rays or every group commonly called fish."
+    },
+    "queryParameters": {
+      "country": "PH",
+      "taxonKey": "8VR36",
+      "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+      "limit": 0
+    },
+    "queries": [
+      {
+        "field": "waterBody",
+        "value": "Bal-on Reservoir",
+        "url": "https://api.gbif.org/v1/occurrence/search?country=PH&taxonKey=8VR36&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&waterBody=Bal-on%20Reservoir&limit=0",
+        "httpStatus": 200,
+        "resultCount": 0,
+        "responseBytes": 77,
+        "responseSha256": "842e210a1dc11a43b863a7438d0b8ae273f0182c290a7c64e760c176778cc9fa"
+      },
+      {
+        "field": "locality",
+        "value": "Bal-on Reservoir",
+        "url": "https://api.gbif.org/v1/occurrence/search?country=PH&taxonKey=8VR36&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&locality=Bal-on%20Reservoir&limit=0",
+        "httpStatus": 200,
+        "resultCount": 0,
+        "responseBytes": 77,
+        "responseSha256": "842e210a1dc11a43b863a7438d0b8ae273f0182c290a7c64e760c176778cc9fa"
+      }
+    ]
+  },
+  "decision": {
+    "status": "historical-fisheries-program-context-only;bounded-exact-name-occurrence-screen-zero",
+    "speciesAssertionsAdded": 0,
+    "dietClaimsAdded": 0,
+    "publicProjection": false,
+    "fishAbsenceInferred": false,
+    "geometryAdded": false
+  },
+  "limits": [
+    "The SEAFDEC source is a historical program-activity table, not a fish survey or species checklist for Bal-on Reservoir.",
+    "The two GBIF searches cover only records indexed to the exact text Bal-on Reservoir in waterBody or locality, within the specified country and CoL XR taxonomic selection; spelling variants, missing locality fields, other fish groups and unindexed records are not covered.",
+    "Zero exact-name search results do not establish fish absence.",
+    "The source does not resolve the reservoir's municipality, boundaries, current condition, public access, fishing rules, or item-specific reuse rights."
+  ],
+  "nextAction": "Seek a dated fish survey or independently licensed occurrence records with a resolvable Bal-on locality; keep this reservoir separate from similarly named localities and do not publish a species checklist until identity, taxonomy and reuse are reviewed."
+}

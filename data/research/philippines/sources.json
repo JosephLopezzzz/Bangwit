@@ -3,7 +3,7 @@
   "checkedOn": "2026-10-29",
   "status": "research-only-source-registry",
   "scope": "National acquisition references, freshwater spatial-source leads, and CALABARZON/Central Luzon identity/source leads. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 195,
+  "sourceCount": 196,
   "sources": [
     {
       "id": "gbif-col-xr-taxonomy-matching",
@@ -1666,6 +1666,36 @@
       "researchStatus": "poster-visually-reviewed; item-specific-reuse-rights-and-independent-taxonomy-pending; no-species-assertions-admitted",
       "sourceYear": 2025,
       "license": null
+    },
+    {
+      "id": "gbif-bal-on-reservoir-col-xr-exact-fish-text-check",
+      "title": "GBIF Occurrence API exact-name CoL XR Actinopterygii searches for Bal-on Reservoir",
+      "provider": "Global Biodiversity Information Facility",
+      "url": "https://techdocs.gbif.org/en/openapi/v1/occurrence",
+      "additionalUrls": [
+        "https://api.gbif.org/v1/occurrence/search?country=PH&taxonKey=8VR36&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&waterBody=Bal-on%20Reservoir&limit=0",
+        "https://api.gbif.org/v1/occurrence/search?country=PH&taxonKey=8VR36&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&locality=Bal-on%20Reservoir&limit=0"
+      ],
+      "role": "Two bounded exact-text GBIF searches for ray-finned-fish occurrence records associated with Bal-on Reservoir; not an exhaustive inventory or absence assessment.",
+      "checkedOn": "2026-10-29",
+      "access": {
+        "status": "two-http-200-exact-name-searches-zero-results;no-absence-inferred",
+        "reviewFiles": [
+          "calabarzon-bal-on-reservoir-gbif-exact-name-review-20261029.json"
+        ],
+        "responseBytes": 77,
+        "responseSha256": "842e210a1dc11a43b863a7438d0b8ae273f0182c290a7c64e760c176778cc9fa",
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "taxonKey": "8VR36"
+      },
+      "reuse": {
+        "metadata": "Retain exact query terms, checklist/taxon keys, endpoint, response hashes and search limits.",
+        "raw": "Only response counts and SHA-256 are retained in the tracked review; no occurrence rows were returned.",
+        "content": "A zero exact-text search is not evidence of fish absence and does not support a species assertion."
+      },
+      "publicationApproval": false,
+      "researchStatus": "research-only-bounded-zero-result-no-absence-inferred",
+      "sourceYear": null
     },
     {
       "id": "gbif-batangas-bay-exact-fish-locality-check",
