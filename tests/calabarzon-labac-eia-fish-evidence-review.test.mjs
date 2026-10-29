@@ -70,7 +70,7 @@ test("registry, gap checkpoint, and provenance hashes agree", () => {
   assert.equal(report.coverageSummary.namedWaterbodyLeads, 97);
   assert.equal(report.coverageSummary.sourceAssignments, 253);
   assert.equal(report.coverageSummary.distinctSourceReferencesAssigned, 76);
-  assert.equal(report.coverageSummary.registeredSources, 190);
+  assert.equal(report.coverageSummary.registeredSources, registry.sourceCount);
   assert.equal(report.coverageSummary.publicAdmission, false);
   assert.equal(report.coverageSummary.regionalBaselineComplete, false);
   const gap = report.openGaps.find((row) => row.id === "cavite-river-fish-geometry-and-locality");

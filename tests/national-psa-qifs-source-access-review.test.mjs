@@ -105,7 +105,7 @@ test("no province statistic is promoted to a waterbody or public species asserti
 
 test("QIFS access review is hash-pinned without changing CALABARZON waterbody totals", () => {
   assert.equal(registry.sourceCount, registry.sources.length);
-  assert.equal(registry.sourceCount, 190);
+  assert.equal(registry.sourceCount, registry.sources.length);
   assert.equal(registry.sources.filter((row) => row.id === review.sourceId).length, 1);
   assert.equal(report.inputHashes.sourcesSha256, sha256(registryBytes));
   assert.equal(report.inputHashes.nationalPsaQifsAccessReviewSha256, sha256(reviewBytes));

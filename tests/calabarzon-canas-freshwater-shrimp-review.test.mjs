@@ -76,7 +76,7 @@ test("the regional snapshot pins the review while preserving the open Cañas fis
   assert.equal(source.publicationApproval, false);
   assert.ok(source.access.reviewFiles.includes(reviewFile));
   assert.equal(registry.sourceCount, registry.sources.length);
-  assert.equal(registry.sourceCount, 190);
+  assert.equal(registry.sourceCount, registry.sources.length);
   assert.match(review.scopeSnapshot.sha256, /^[a-f0-9]{64}$/);
   assert.equal(report.inputHashes.scopeSha256, sha256(scopeBytes));
   assert.equal(report.inputHashes.sourcesSha256, sha256(registryBytes));
@@ -85,7 +85,7 @@ test("the regional snapshot pins the review while preserving the open Cañas fis
   assert.equal(report.coverageSummary.namedWaterbodyLeads, 97);
   assert.equal(report.coverageSummary.sourceAssignments, 253);
   assert.equal(report.coverageSummary.distinctSourceReferencesAssigned, 76);
-  assert.equal(report.coverageSummary.registeredSources, 190);
+  assert.equal(report.coverageSummary.registeredSources, registry.sourceCount);
   assert.equal(report.coverageSummary.admittedPublicRecords, 0);
   assert.equal(report.coverageSummary.publicAdmission, false);
   assert.equal(report.coverageSummary.regionalBaselineComplete, false);

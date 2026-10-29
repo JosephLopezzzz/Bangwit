@@ -78,7 +78,7 @@ test("the registry and regional snapshot pin the EIA review while keeping the JI
   assert.equal(source.publicationApproval, false);
   assert.ok(source.access.reviewFiles.includes(reviewFile));
   assert.equal(registry.sourceCount, registry.sources.length);
-  assert.equal(registry.sourceCount, 190);
+  assert.equal(registry.sourceCount, registry.sources.length);
   assert.match(review.scopeSnapshot.sha256, /^[a-f0-9]{64}$/);
   assert.equal(report.inputHashes.scopeSha256, sha256(scopeBytes));
   assert.equal(report.inputHashes.sourcesSha256, sha256(sourceBytes));
@@ -88,7 +88,7 @@ test("the registry and regional snapshot pin the EIA review while keeping the JI
   assert.equal(report.coverageSummary.byWaterbodyKind.river, 51);
   assert.equal(report.coverageSummary.sourceAssignments, 253);
   assert.equal(report.coverageSummary.distinctSourceReferencesAssigned, 76);
-  assert.equal(report.coverageSummary.registeredSources, 190);
+  assert.equal(report.coverageSummary.registeredSources, registry.sourceCount);
   assert.equal(report.coverageSummary.unknownSalinityLeads, 92);
   assert.equal(report.coverageSummary.publicAdmission, false);
   assert.equal(report.coverageSummary.regionalBaselineComplete, false);

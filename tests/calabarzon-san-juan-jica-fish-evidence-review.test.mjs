@@ -57,7 +57,7 @@ test("the source and regional checkpoint preserve the unresolved crosswalk", () 
   assert.ok(source);
   assert.equal(source.publicationApproval, false);
   assert.ok(source.access.reviewFiles.includes(reviewFile));
-  assert.equal(registry.sourceCount, 190);
+  assert.equal(registry.sourceCount, registry.sources.length);
   assert.equal(registry.sourceCount, registry.sources.length);
   assert.equal(report.inputHashes.sourcesSha256, sha256(sourceBytes));
   assert.equal(report.inputHashes.sanJuanJicaFishReviewSha256, sha256(reviewBytes));

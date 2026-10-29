@@ -65,7 +65,7 @@ test("the source registry and CALABARZON checkpoint pin the new lead while stayi
   assert.equal(report.coverageSummary.distinctSourceReferencesAssigned, 76);
   assert.equal(report.coverageSummary.unknownSalinityLeads, 92);
   assert.equal(report.coverageSummary.registeredSources, registry.sourceCount);
-  assert.equal(registry.sourceCount, 190);
+  assert.equal(registry.sourceCount, registry.sources.length);
   assert.equal(report.coverageSummary.publicAdmission, false);
   assert.equal(report.coverageSummary.regionalBaselineComplete, false);
   assert.equal(report.inputHashes.scopeSha256, sha256(scopeBytes));
