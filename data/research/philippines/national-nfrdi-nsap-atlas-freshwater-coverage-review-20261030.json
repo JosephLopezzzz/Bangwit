@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-30",
+  "phaseId": "L1",
+  "regionId": "1400000000",
+  "status": "research-only-atlas-scope-and-access-review;freshwater-inland-monitoring-confirmed-separately;no-dataset-acquired",
+  "question": "Can the public NSAP Interactive Atlas currently serve as a reusable freshwater fish inventory or source of Ibulao/CAR river records?",
+  "method": {
+    "checkedOn": "2026-10-30",
+    "primarySources": [
+      "nfrdi-nsap-interactive-atlas-launch",
+      "nfrdi-nsap-program-overview",
+      "nfrdi-inland-fisheries-nsap-expansion-2025"
+    ],
+    "appUrl": "https://nsap.nfrdi.da.gov.ph/",
+    "accessAttempts": [
+      {
+        "method": "web page reader",
+        "result": "request timed out"
+      },
+      {
+        "method": "PowerShell Invoke-WebRequest, 20-second timeout",
+        "result": "request timed out without an HTTP response"
+      }
+    ],
+    "officialDescriptionChecks": [
+      {
+        "url": "https://nfrdi.da.gov.ph/2022/02/14/nsap-interactive-atlas-launched/",
+        "result": "Official NFRDI search-indexed text was available; opening the page returned HTTP 502."
+      },
+      {
+        "url": "https://nfrdi.da.gov.ph/national-stock-assessment-program-nsap/",
+        "result": "Official NFRDI search-indexed text was available; page-reader open timed out."
+      },
+      {
+        "url": "https://nfrdi.da.gov.ph/2025/08/28/feature-sustaining-inland-fisheries-da-nfrdis-science-driven-solutions/",
+        "result": "Official NFRDI search-indexed text was available; page-reader open timed out."
+      }
+    ],
+    "limits": [
+      "A timeout in these access methods does not establish that the atlas is unavailable to a normal browser or user.",
+      "Official launch and program descriptions are not a substitute for inspecting the live atlas, its filters, exports, record-level metadata, current data date, or terms.",
+      "The official inland-fisheries article does not state that its river or lake monitoring outputs are published in the Interactive Atlas.",
+      "No login, access-control bypass, scraping, export, or dataset download was attempted."
+    ]
+  },
+  "findings": {
+    "atlasDescription": "Official NFRDI search-indexed text describes the Interactive Atlas as public access to the latest available monitored landed-catch data, with standardized regional catch information. This is catch-monitoring context, not a complete species-distribution inventory.",
+    "programOverview": "Official NFRDI search-indexed text describes data collection from landing sites and time-series stock assessment by fishing ground. It does not enumerate freshwater sites or establish a complete freshwater dataset.",
+    "freshwaterProgramEvidence": "Official NFRDI search-indexed text from a 2025 inland-fisheries feature says NSAP monitoring expanded to rivers in CAR and Lake Mainit, and identifies Lake Naujan and Lake Bato for focused monitoring in 2025-2026. It does not name Ibulao River, identify monitored stations or taxa, expose raw data, or confirm inclusion in the public atlas.",
+    "license": "No item-specific license or redistribution permission for atlas catch records was verified in the reviewed official descriptions."
+  },
+  "disposition": {
+    "atlasUse": "Discovery and possible future contact route only; not currently an acquired/reusable species dataset.",
+    "publicAppRowsAdded": 0,
+    "speciesOrOccurrenceAssertionsAdded": 0,
+    "catchOrAbundanceClaimsAdded": 0,
+    "geometryAdded": 0,
+    "dietClaimsAdded": 0,
+    "publicationApproval": false,
+    "nextAction": "When atlas access permits, inspect its visible place and date filters and any documented exports without bypassing access controls; ask NFRDI whether CAR inland monitoring outputs and their item-level reuse terms are available. Meanwhile continue with separately sourced inland surveys whose source scope and reuse rights can be checked."
+  },
+  "sources": [
+    {
+      "id": "nfrdi-nsap-interactive-atlas-launch",
+      "url": "https://nfrdi.da.gov.ph/2022/02/14/nsap-interactive-atlas-launched/",
+      "supports": "NFRDI's stated public purpose, landed-catch data description, standardized regional catch context, and continuous-development status at launch."
+    },
+    {
+      "id": "nfrdi-nsap-program-overview",
+      "url": "https://nfrdi.da.gov.ph/national-stock-assessment-program-nsap/",
+      "supports": "Official program description of landing-site collection and fishing-ground stock time-series."
+    },
+    {
+      "id": "nfrdi-inland-fisheries-nsap-expansion-2025",
+      "url": "https://nfrdi.da.gov.ph/2025/08/28/feature-sustaining-inland-fisheries-da-nfrdis-science-driven-solutions/",
+      "supports": "Separate NFRDI report of NSAP expansion into CAR rivers and Lake Mainit and selected 2025-2026 inland-lake monitoring."
+    }
+  ]
+}
