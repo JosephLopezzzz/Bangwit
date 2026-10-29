@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-30",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "waterbodyId": "ph-wb-ragay-gulf-quezon",
+  "status": "official-record-discovery-only;direct-retrieval-blocked;administrative-match-unresolved",
+  "purpose": "Test whether an official Smithsonian locality record could independently resolve the Canmahala Bay locality to a province or region without transferring coordinates or specimen identity.",
+  "candidateSource": {
+    "provider": "Smithsonian Institution / National Museum of Natural History",
+    "recordUrls": [
+      "https://www.si.edu/object/clypeomorus-pellucida%3Anmnhinvertebratezoology_387100",
+      "https://www.si.edu/object/nmnhvz_5324989",
+      "https://collections.si.edu/search/results.htm?q=%22Canmahala%20Bay%22"
+    ],
+    "accessPolicyUrl": "https://naturalhistory.si.edu/research/idsc/data-access",
+    "evidenceClass": "official indexed search-result excerpts identified potential locality-record targets; excerpts are discovery leads only under the repository source policy",
+    "license": null,
+    "metadataReuseReviewed": false
+  },
+  "accessAttempts": [
+    {
+      "method": "web open of official si.edu object records",
+      "result": "Timed out for both target records."
+    },
+    {
+      "method": "direct PowerShell request to official si.edu object page",
+      "result": "HTTP 403 Forbidden."
+    },
+    {
+      "method": "direct PowerShell request to official collections.si.edu search results",
+      "result": "HTTP 403 Forbidden."
+    },
+    {
+      "method": "official NMNH collection-search homepage",
+      "result": "HTTP 200 for the generic search homepage only; target record details were not retrieved."
+    }
+  ],
+  "decision": {
+    "administrativeAnchorAdded": false,
+    "canmahalaAssignedToCamarinesSurOrRegionV": false,
+    "canmahalaEquatedToCanmahana": false,
+    "coordinatesExtractedOrTransferred": false,
+    "speciesAssertionsAdded": 0,
+    "publicRowsAdded": 0,
+    "geometryAdded": false,
+    "currentPresenceInferred": false,
+    "publicationApproval": false,
+    "reason": "The official target records were not successfully retrieved. Search-index excerpts cannot support detailed assertion extraction under the project access-evidence policy. A separate record or locality phrase cannot establish the exact location of the 2025 checklist lots or a maritime administrative boundary."
+  },
+  "limitations": [
+    "No conclusion is made that Canmahala Bay is outside Camarines Sur, Region V, or any other area; the administrative match remains unresolved.",
+    "No coordinates from a separate museum specimen or literature locality may be assigned to any 2025 checklist lot.",
+    "No bay, stream, municipal-water, or provincial-water geometry was sourced.",
+    "The indexed leads do not establish current fish presence, a complete fish inventory, fishing access, legality, safety, diet, or bait suitability."
+  ],
+  "nextAction": "Use a successfully retrievable official NMNH record or a separately licensed gazetteer/map before revisiting the place-name crosswalk. Continue other independently accessible, reusable evidence work in parallel; do not send an access request without separate authorization."
+}
