@@ -3,7 +3,7 @@
   "checkedOn": "2026-10-29",
   "status": "research-only-source-registry",
   "scope": "National acquisition references, freshwater spatial-source leads, and CALABARZON/Central Luzon identity/source leads. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 193,
+  "sourceCount": 194,
   "sources": [
     {
       "id": "gbif-col-xr-taxonomy-matching",
@@ -631,7 +631,11 @@
       "checkedOn": "2026-10-29",
       "access": {
         "status": "official-primary-pdf-acquired-and-visually-reviewed;html-abstract-mismatch",
-        "localRawSnapshot": null
+        "localRawSnapshot": null,
+        "reviewFiles": [
+          "calabarzon-pansipit-migratory-html-pdf-crosscheck-20261029.json",
+          "calabarzon-pansipit-migratory-taxonomy-crosswalk-20261029.json"
+        ]
       },
       "reuse": {
         "metadata": "Research citation and minimal source-description only; field-level redistribution review pending.",
@@ -639,13 +643,13 @@
         "content": "Research-only transcription with page/table attribution. No item-specific reuse license was identified in the inspected PDF; publication of copied tables or row-level records remains pending rights review."
       },
       "publicationApproval": false,
-      "researchStatus": "historical-corral-catch-tables-reviewed; normalized-species-assertions-held-pending-taxonomy-and-rights-review",
+      "researchStatus": "historical-corral-catch-tables-reviewed;historical-name-crosswalk-reviewed;identification-and-rights-held",
       "sourceYear": 1990,
       "caveats": [
         "The official HTML page at pp89-95.php displays an abstract about Tayabas Bay commercial fishing gears, which conflicts with the titled Pansipit/Taal article and must not be attributed to it.",
         "The original official-hosted PDF was acquired and visually reviewed. It is a six-page scan for Philippine Journal of Fisheries volume 21 (1990), printed pages 89-95; the field data shown in the tables cover July 1983-June 1984.",
         "The methods describe one Pansipit River fish corral and three separate Taal Lake corrals. Their production tables are separate catch records, not a whole-river/lake census or current abundance estimate.",
-        "Pansipit Table 1 prints Anguilla mauritiana, Caranx marginatus, Mugil sp., Mugil ceramensis, and Lutianus argentimaculatus, with a total of 3,148.1 kg for the study period. Preserve source spellings and rank; no current accepted-name crosswalk was completed.",
+        "Pansipit Table 1 prints Anguilla mauritiana, Caranx marginatus, Mugil sp., Mugil ceramensis, and Lutianus argentimaculatus, with a total of 3,148.1 kg for the study period. Preserve source spellings and rank; see the separate WoRMS crosswalk for nomenclatural mappings, which do not confirm historical field identifications.",
         "The abstract names Mugil dussumieri among the combined system records, while the Pansipit Table 1 uses Mugil sp.; the table does not support silently assigning the abstract name to the Pansipit catch.",
         "The separate Taal Lake table covers three corrals and totals 981.1 kg; those rows must not be assigned to Pansipit River.",
         "Larval/fry sampling described near the Pansipit mouth took place in Balayan Bay, 10-15 m from shore. Those samples are kept separate from Pansipit River and the estuary absent a precise capture locality.",
@@ -5752,6 +5756,42 @@
         "The report repeats a 35,700 ha Maragondon River mouth MPA figure. This figure is not independently verified and is not adopted as an estuary area, legal boundary, or geometry.",
         "No item-specific permission to reproduce report text, figures, maps, or underlying monitoring data was identified.",
         "The same evaluation associates 15 ha with the Pansipit River Estuary management-plan target and states that it lacked a management plan at the time of the evaluation; this is not a verified physical extent or current management status."
+      ]
+    },
+    {
+      "id": "worms-pansipit-corral-taxonomy-crosswalk-20261029",
+      "title": "WoRMS name crosswalk for historical Pansipit River and Taal Lake corral labels",
+      "provider": "World Register of Marine Species (WoRMS)",
+      "url": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=217457",
+      "additionalUrls": [
+        "https://www.marinespecies.org/aphia.php?p=taxdetails&id=218404",
+        "https://www.marinespecies.org/aphia.php?p=taxdetails&id=218498",
+        "https://www.marinespecies.org/aphia.php?p=taxlist&tName=Mugil",
+        "https://www.marinespecies.org/aphia.php?id=1043426&p=taxdetails",
+        "https://www.marinespecies.org/aphia.php?id=218414&p=taxdetails"
+      ],
+      "role": "Name-status check for eight source labels in one 1990 fish-corral article: six binomial labels mapped to accepted-name records and two genus-only labels left unresolved; not specimen/catch re-identification.",
+      "checkedOn": "2026-10-29",
+      "access": {
+        "status": "six-binomial-labels-crosschecked;two-genus-rank-labels-unresolved",
+        "reviewFiles": [
+          "calabarzon-pansipit-migratory-taxonomy-crosswalk-20261029.json",
+          "calabarzon-pansipit-migratory-html-pdf-crosscheck-20261029.json"
+        ],
+        "coordinatesRetained": false
+      },
+      "reuse": {
+        "metadata": "WoRMS detail pages state CC BY-NC 4.0. This record retains attribution and URLs; no rights to reuse broader taxon descriptions, media or data are inferred.",
+        "raw": "No WoRMS response snapshot committed.",
+        "content": "Taxonomic nomenclature only. Does not establish locality, identification, catch, current presence or species checklist status."
+      },
+      "publicationApproval": false,
+      "researchStatus": "historical-name-crosswalk;taxonomy-only;zero-occurrence-claims",
+      "license": "CC BY-NC 4.0",
+      "caveats": [
+        "Accepted name mappings do not re-identify organisms in the historical article.",
+        "Two source labels are genus rank only and remain unresolved.",
+        "No waterbody occurrence or public app row is added."
       ]
     }
   ],

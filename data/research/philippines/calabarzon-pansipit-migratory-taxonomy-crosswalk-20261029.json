@@ -1,0 +1,130 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-29",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "waterbodyIds": [
+    "ph-wb-pansipit-river",
+    "ph-wb-taal-lake"
+  ],
+  "scope": "Taxonomic-name crosswalk for labels in the Mercene and Alzona (1990) Pansipit/Taal fish-corral paper. This checks nomenclatural status only; it does not re-identify historical catches or establish occurrence/current presence.",
+  "inputReview": "calabarzon-pansipit-migratory-html-pdf-crosscheck-20261029.json",
+  "authority": {
+    "name": "World Register of Marine Species (WoRMS)",
+    "accessedOn": "2026-10-29",
+    "license": "CC BY-NC 4.0 as stated on WoRMS taxon detail pages",
+    "reuseDecision": "Internal attributed research crosswalk only. No public species-row or taxon-detail projection approved; any later publication must satisfy the WoRMS noncommercial terms and attribution requirements.",
+    "taxonPages": {
+      "ang_marmorata": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=217457",
+      "caranx_sexfasciatus": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=218404",
+      "lutjanus_argentimaculatus": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=218498",
+      "mugil_list": "https://www.marinespecies.org/aphia.php?p=taxlist&tName=Mugil",
+      "planiliza_subviridis": "https://www.marinespecies.org/aphia.php?id=1043426&p=taxdetails",
+      "caranx_ignobilis": "https://www.marinespecies.org/aphia.php?id=218414&p=taxdetails"
+    }
+  },
+  "crosswalk": [
+    {
+      "sourceName": "Anguilla mauritiana Bennett, 1831",
+      "reportedIn": [
+        "Pansipit Table 1",
+        "Taal Lake Table 2",
+        "combined-system abstract"
+      ],
+      "status": "unaccepted-synonym",
+      "acceptedName": "Anguilla marmorata Quoy & Gaimard, 1824",
+      "authorityRecord": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=217457"
+    },
+    {
+      "sourceName": "Caranx marginatus (Gill, 1863)",
+      "reportedIn": [
+        "Pansipit Table 1",
+        "Taal Lake Table 2",
+        "combined-system abstract"
+      ],
+      "status": "unaccepted-synonym",
+      "acceptedName": "Caranx sexfasciatus Quoy & Gaimard, 1825",
+      "authorityRecord": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=218404"
+    },
+    {
+      "sourceName": "Lutianus argentimaculatus (Forsskål, 1775)",
+      "reportedIn": [
+        "Pansipit Table 1",
+        "Taal Lake Table 2",
+        "combined-system abstract"
+      ],
+      "status": "unaccepted-source-spelling/misspelling",
+      "acceptedName": "Lutjanus argentimaculatus (Forsskål, 1775)",
+      "authorityRecord": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=218498"
+    },
+    {
+      "sourceName": "Mugil ceramensis Bleeker, 1853",
+      "reportedIn": [
+        "Pansipit Table 1",
+        "combined-system abstract"
+      ],
+      "status": "unaccepted-synonym",
+      "acceptedName": "Planiliza melinoptera (Valenciennes, 1836)",
+      "authorityRecord": "https://www.marinespecies.org/aphia.php?p=taxlist&tName=Mugil"
+    },
+    {
+      "sourceName": "Mugil dussumieri Valenciennes, 1836",
+      "reportedIn": [
+        "combined-system abstract"
+      ],
+      "status": "unaccepted-synonym",
+      "acceptedName": "Planiliza subviridis (Valenciennes, 1836)",
+      "authorityRecord": "https://www.marinespecies.org/aphia.php?id=1043426&p=taxdetails"
+    },
+    {
+      "sourceName": "Caranx ignobilis (Forsskål, 1775)",
+      "reportedIn": [
+        "Taal Lake Table 2",
+        "combined-system abstract"
+      ],
+      "status": "accepted-species-name",
+      "acceptedName": "Caranx ignobilis (Forsskål, 1775)",
+      "authorityRecord": "https://www.marinespecies.org/aphia.php?id=218414&p=taxdetails"
+    },
+    {
+      "sourceName": "Caranx sp.",
+      "reportedIn": [
+        "Taal Lake Table 2",
+        "combined-system abstract"
+      ],
+      "status": "unresolved-genus-rank",
+      "acceptedName": null,
+      "authorityRecord": null
+    },
+    {
+      "sourceName": "Mugil sp.",
+      "reportedIn": [
+        "Pansipit Table 1"
+      ],
+      "status": "unresolved-genus-rank",
+      "acceptedName": null,
+      "authorityRecord": null
+    }
+  ],
+  "summary": {
+    "binomialLabelsMatchedToAnAcceptedName": 6,
+    "synonymOrSourceSpellingMappings": 5,
+    "alreadyAcceptedBinomials": 1,
+    "unresolvedGenusRankLabels": 2,
+    "waterbodyOccurrenceAssertionsAdded": 0,
+    "currentPresenceAssertionsAdded": 0,
+    "publicRowsAdded": 0
+  },
+  "limitations": [
+    "Accepted-name equivalence does not validate identification of the fish reported in a 1983-84 corral catch.",
+    "Mugil dussumieri occurs in the combined-system abstract but not as a species-rank entry in the Pansipit table, which says Mugil sp.; it is not assigned to the Pansipit catch.",
+    "Caranx sp. and Mugil sp. are not resolvable to species from the source names.",
+    "WoRMS taxonomy references are CC BY-NC 4.0; publication rights and noncommercial applicability for Bangwit remain unapproved.",
+    "The 1990 paper catch tables remain historical single-corrals catch data; this crosswalk adds no geography, current presence, ecology, diet, or completeness evidence."
+  ],
+  "decision": {
+    "status": "nomenclature-crosswalk-reviewed;source-identification-and-reuse-still-held",
+    "scopeFileUpdatedWithTaxonomicContext": true,
+    "noOccurrenceOrPublicProjection": true
+  }
+}
