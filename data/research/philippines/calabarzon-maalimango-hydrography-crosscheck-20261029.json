@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-29",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "regionName": "Region IV-A (CALABARZON)",
+  "waterbodyId": "ph-wb-maalimango-river-cavite",
+  "waterbodyName": "Maalimango River",
+  "sourceIds": [
+    "jica-2017-cavite-flood-mitigation-eia-aquatic-ecology",
+    "boothroyd-2023-philippines-river-catchment-geodata"
+  ],
+  "status": "licensed-national-modelled-network-screened;no-local-channel-match;geometry-unresolved",
+  "dataset": {
+    "title": "National-scale geodatabase of catchment characteristics in the Philippines for river management applications",
+    "repositoryUrl": "https://researchdata.gla.ac.uk/1396/",
+    "directFileUrl": "https://researchdata.gla.ac.uk/1396/3/Philippines_GIS_stream_network_n128.zip",
+    "license": "CC BY 4.0",
+    "licenseAndAvailabilityCheckedOn": "2026-10-29",
+    "retrievedOn": "2026-10-26",
+    "bytes": 149447900,
+    "sha256": "58f47df9c8cc90d6734bc7c28db6e2980c52ea17c505561a63405bcd1bf574d2",
+    "rawPath": "raw/boothroyd-1396/Philippines_GIS_stream_network_n128.zip",
+    "shapeType": "Polyline",
+    "crs": "WGS 84 / Pseudo-Mercator (EPSG:3857)",
+    "streamFeatureCount": 107613,
+    "methodNote": "This is a modeled stream network and catchment dataset for 128 Philippine catchments, derived from 2013 IfSAR elevation data. It is not an authoritative named-waterbody boundary or field-surveyed local channel trace."
+  },
+  "stationCrosscheck": {
+    "reviewFile": "calabarzon-cavite-flood-mitigation-eia-aquatic-fisheries-review-20261026.json",
+    "stationId": "4",
+    "sourceLocality": "Mouth of Maalimango River, Barangay Ligtong I, Rosario, Cavite",
+    "coordinateUse": "The station's printed DMS coordinate was transformed for this internal proximity screen. The EIA datum was not established in the reviewed record; WGS 84 was assumed to compare it with the dataset. The coordinate itself is not repeated here.",
+    "calculation": "Transform the source station point to EPSG:3857 and measure planar point-to-polyline distance across the dataset's stream features. Approximate ground distance is the projected distance multiplied by cos(latitude).",
+    "nearestFeatureRecord": 60122,
+    "projectedDistanceMeters": 16824,
+    "approximateGroundDistanceKm": 16.29,
+    "networkCatchment": "Marikina_Pasig",
+    "networkStreamOrder": 1,
+    "networkFeatureLengthMeters": 1221.1,
+    "interpretation": "The nearest modeled line is roughly 16 km away and belongs to a different named catchment. This is a poor geographic fit for the Rosario station and means this dataset does not provide a usable Maalimango channel trace at the mouth."
+  },
+  "decisions": {
+    "datasetAcceptedAsMaalimangoGeometry": false,
+    "fullChannelGeometryAdded": false,
+    "stationCoordinateRepublished": false,
+    "salinityChanged": false,
+    "fishAssertionsAdded": 0,
+    "fishAbsenceInferred": false,
+    "publicProjectionAdded": false,
+    "publicationApproval": false
+  },
+  "limitations": [
+    "The station coordinate datum was not established in the reviewed source record; the WGS 84 transformation is an explicit screening assumption.",
+    "A distant nearest feature in a different catchment demonstrates poor fit for this dataset, not the absence of a local river or fish.",
+    "This modeled network cannot be used as the named channel boundary or to infer the whole river's extent, salinity, access or legal status.",
+    "No coordinates or source map were reproduced, and no species claims were changed."
+  ],
+  "nextAction": "Seek permitted, higher-resolution channel geometry from NAMRIA, DENR or another documented source and compare it with the EIA's station-4 locality. Keep the 2016 mouth-station evidence research-only and Maalimango geometry unresolved until the channel trace and datum are independently validated."
+}
