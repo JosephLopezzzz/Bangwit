@@ -14,12 +14,16 @@
 >
 > I found the 2010 ISSAAS congress abstract titled “Mapping of Potential Fish and Shell Production Areas in Apayao,” which describes four watersheds, 18 upstream/midstream/downstream stations and ten AutoCAD maps. The abstract does not include the station table, maps, full taxon list, field dates or voucher crosswalk.
 >
+> I also saw the College's 2025 completed-research listing for “Development of Database Covering Agri – Fishery in the Province of Apayao.” The title appears twice on the public page, so I do not assume that it represents two datasets or that the database contains wild-fish species observations. Could you clarify the project authors, intended scope and whether a public or permission-based data-access route exists?
+>
 > Could the College advise whether it holds the full report or related project materials? If available, I would be grateful for information on:
 >
 > - the report's complete citation, date/version and any publicly accessible copy;
 > - station names and the station-to-watershed/barangay crosswalk, coordinates and CRS;
 > - available original AutoCAD/GIS files or rendered map copies, with their provenance;
 > - taxa recorded at each station, field dates/methods, identification references, and voucher/accession numbers and custodian; and
+> - for the 2025 agri-fishery database, a data dictionary/sample export, version and update date, and a clear distinction between wild observations, aquaculture/stocking and production/statistical records;
+> - the 2025 database's source provenance, site/date precision, taxonomic authority and any voucher/specimen crosswalk for wild-species entries; and
 > - the separate terms for attribution, redistribution, public display and possible commercial use of the report, maps, station data and taxon data.
 >
 > If the materials are not held by the College, could you point me to the authors or the appropriate archive? This is an availability and permissions inquiry only; please do not begin any paid copying, certification or other service without first confirming its scope and cost.
