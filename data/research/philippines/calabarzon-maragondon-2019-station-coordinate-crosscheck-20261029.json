@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-29",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "regionName": "Region IV-A (CALABARZON)",
+  "waterbodyId": "ph-wb-maragondon-river",
+  "sourceId": "jalandoon-2019-maragondon-oreochromis-claim",
+  "priorReviews": [
+    "calabarzon-maragondon-oreochromis-claim-review-20261025.json",
+    "calabarzon-maragondon-thesis-access-review-20261026.json",
+    "calabarzon-maragondon-tilapia-license-and-station-review-20261026.json"
+  ],
+  "status": "publisher-indexed-2019-station-coordinates-crosschecked-with-2024-upstream-point;source-rights-and-specimen-identity-unresolved;no-gapan-crosswalk",
+  "method": "Reviewed the publisher-indexed Appendix B text of Jalandoon (2019) and compared its source-reported coordinates with the already-reviewed 2024 Limbago et al. station table. The publisher PDF could not be opened directly during this follow-up because the request timed out; no local copy was downloaded or retained. Coordinates are preserved verbatim as displayed in the publisher-indexed table, not converted into app geometry.",
+  "sourceStationCoordinates": {
+    "coordinateRole": "Source-reported sampling substations, not channel vertices or public app points.",
+    "stations": [
+      {
+        "locality": "Barangay Mabato",
+        "sourceLabel": "Upstream",
+        "substations": [
+          { "id": 1, "latitudeDms": "14°14′41.3″ N", "longitudeDms": "120°46′54.7″ E", "sampleLabel": "Sediment/O. niloticus" },
+          { "id": 2, "latitudeDms": "14°14′44.9″ N", "longitudeDms": "120°46′55.6″ E", "sampleLabel": "Sediment/O. niloticus" },
+          { "id": 3, "latitudeDms": "14°14′45.6″ N", "longitudeDms": "120°46′56.7″ E", "sampleLabel": "Sediment/O. niloticus" }
+        ]
+      },
+      {
+        "locality": "Barangay Bucal IV",
+        "sourceLabel": "Midstream",
+        "substations": [
+          { "id": 1, "latitudeDms": "14°16′20.4″ N", "longitudeDms": "120°45′35.9″ E", "sampleLabel": "Sediment/O. niloticus" },
+          { "id": 2, "latitudeDms": "14°16′22.4″ N", "longitudeDms": "120°45′36.6″ E", "sampleLabel": "Sediment/O. niloticus" },
+          { "id": 3, "latitudeDms": "14°16′23.7″ N", "longitudeDms": "120°45′37.1″ E", "sampleLabel": "Sediment/O. niloticus" }
+        ]
+      },
+      {
+        "locality": "Barangay Pinagsanhan",
+        "sourceLabel": "Downstream",
+        "substations": [
+          { "id": 1, "latitudeDms": "14°15′54.5″ N", "longitudeDms": "120°42′45.6″ E", "sampleLabel": "Sediment/O. niloticus" },
+          { "id": 2, "latitudeDms": "14°15′55.3″ N", "longitudeDms": "120°42′44″ E", "sampleLabel": "Sediment/O. niloticus" },
+          { "id": 3, "latitudeDms": "14°15′55.9″ N", "longitudeDms": "120°42′42.5″ E", "sampleLabel": "Sediment/O. niloticus" }
+        ]
+      }
+    ],
+    "samplingPeriod": "January–March 2018, as recorded in the prior source review.",
+    "sourceTable": "Appendix B, Location and Samples Collected at Maragondon River."
+  },
+  "crossStudyComparison": {
+    "comparisonSourceId": "limbago-2024-maragondon-tilapia-sampling",
+    "comparisonReview": "calabarzon-maragondon-tilapia-license-and-station-review-20261026.json",
+    "exactCoordinateMatch": {
+      "2019Site": "Barangay Mabato, upstream, substation 2",
+      "2024Site": "upstream",
+      "latitudeDms": "14°14′44.9″ N",
+      "longitudeDms": "120°46′55.6″ E"
+    },
+    "other2024Stations": "The 2024 midstream and downstream coordinates do not exactly match the 2019 table's corresponding labelled stations.",
+    "interpretation": "The exact upstream-coordinate match supports a shared or reused station coordinate. The 2024 article cites Jalandoon (2018), so this is not independent corroboration of the 2019 fish identification or a separate species record. Keep the 2019 Oreochromis niloticus label held; the 2024 source intentionally reports Tilapia sp."
+  },
+  "gapanCrosswalk": {
+    "confirmed": false,
+    "finding": "These Maragondon River stations do not establish that any point falls on, or corresponds to, the one-kilometer Gapan/Sapang Adopt-a-Waterbody segment. No Gapan channel or station endpoint was supplied by this article."
+  },
+  "decisions": {
+    "researchStationCoordinatesRecorded": 9,
+    "fishSpeciesAssertionsAdded": 0,
+    "fishTaxonomicClaimChanged": false,
+    "publicAppPointsAdded": 0,
+    "riverGeometryAdded": false,
+    "gapanIdentityOrGeometryChanged": false,
+    "currentPresenceInferred": false,
+    "dietOrCatchabilityInferred": false,
+    "reusePermissionVerified": false,
+    "publicationApproval": false
+  },
+  "limitations": [
+    "The 2019 study-derived Oreochromis niloticus label remains unverified at specimen level; no diagnostic identification protocol or voucher/catalog number was independently confirmed.",
+    "The publisher's 2019 issue is marked Open Access but also displays an all-rights-reserved notice; no item-specific reuse permission was verified.",
+    "Direct retrieval of the publisher-hosted PDF timed out in this follow-up. The station table was reviewed through the publisher-indexed PDF text, and no local copy was retained.",
+    "Sampling points do not trace or delimit the river, verify current conditions, establish fishing access, or prove fish absence elsewhere.",
+    "The 2024 paper's exact upstream coordinate match may reflect reuse of the same study locality; it is not an independent taxonomic verification.",
+    "No source crosswalk connects the Maragondon station points to Gapan/Sapang River."
+  ],
+  "nextAction": "Keep all nine coordinates in the internal research record pending rights review. Continue the Gapan/Sapang search for an authorized segment endpoint or station-to-channel crosswalk and waterbody-specific dated fish evidence; do not use this Maragondon River paper to fill the Gapan gap."
+}
