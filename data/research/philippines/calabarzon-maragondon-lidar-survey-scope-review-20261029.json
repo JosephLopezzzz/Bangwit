@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-29",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "regionName": "Region IV-A (CALABARZON)",
+  "waterbodyId": "ph-wb-maragondon-river",
+  "sourceId": "paringit-uy-2017-maragondon-lidar-report",
+  "status": "official-report-obtained;historical-partial-survey-scope-reviewed;no-channel-gis-or-gapan-crosswalk",
+  "source": {
+    "title": "LiDAR Surveys and Flood Mapping of Maragondon River",
+    "editors": ["E.C. Paringit", "F.A. Uy"],
+    "year": 2017,
+    "publisher": "UP Training Center for Applied Geodesy and Photogrammetry, University of the Philippines Diliman",
+    "partner": "Mapúa Institute of Technology",
+    "officialCatalogUrl": "https://dream.upd.edu.ph/news/up-phil-lidar-1-program-technical-reports/index.html",
+    "pdfUrl": "https://dream.upd.edu.ph/assets/Publications/LiDAR-Technical-Reports/MIT/LiDAR-Surveys-and-Flood-Mapping-of-Maragondon-River.pdf",
+    "retrieval": {
+      "directOfficialDownload": true,
+      "pageCount": 240,
+      "fileBytes": 22412547,
+      "sha256": "5679a78b6024078cf68bfe38085f807a405add1986b4fbd633e7a8fc57dea20e",
+      "repositoryRawCopyRetained": false
+    }
+  },
+  "survey": {
+    "fieldDates": "2015-09-13 through 2015-09-25",
+    "sourceNamedWaterbody": "Maragondon River",
+    "lidarValidationSurvey": {
+      "reportedApproximateLengthKm": 12.3,
+      "meaning": "Survey-length context; not a channel boundary or named river total length."
+    },
+    "bathymetricSurvey": {
+      "reportedApproximateLengthKm": 7.96,
+      "sourceReportedFrom": "Barangay Bucal II",
+      "sourceReportedToward": "River mouth in Barangay Sapang I",
+      "sourceReportedMunicipalityForSapangI": "Maragondon, Cavite",
+      "meaning": "Partial bathymetric survey coverage; not a full-river geometry."
+    }
+  },
+  "figureReview": {
+    "figure": 31,
+    "pdfPage": 57,
+    "finding": "The figure gives regional survey context and portrays a partial bathymetric extent and LiDAR validation locations. It does not provide a GIS feature, vertex list, coordinate schedule for the river route, or a defensible full-channel line.",
+    "captionLegendMismatch": "The caption describes a blue line and red survey extent, while the legend labels blue bathymetric points and red LiDAR validation points. Do not digitize the symbolized map as a precise channel trace.",
+    "localityCaveat": "The report calls Sapang I part of the Municipality of Maragondon. DENR's 2025 Gapan Adopt-a-Waterbody notice identifies Sapang I as a Ternate signatory locality. The locality descriptions conflict; no correction or crosswalk is inferred."
+  },
+  "qualityAndReuse": {
+    "documentNotice": "The report states its text may be copied and distributed for research and educational purposes with proper acknowledgement.",
+    "rawLidarOrVectorReuse": "No item-specific license for redistributing raw LiDAR data or derived GIS channel geometry was established from this report notice.",
+    "internalCopyError": "The Maragondon River chapter's GNSS description says the network is for the Imus River Basin, although the surrounding section and report identify a Maragondon River survey. This appears internally inconsistent and was not used to assign river geometry.",
+    "speciesEvidence": "No fish or other species record was extracted from the reviewed survey-scope pages.",
+    "publicationApproval": false
+  },
+  "gapanCrosswalk": {
+    "confirmed": false,
+    "reason": "The report describes a Maragondon River bathymetric survey ending at a mouth locality it labels Sapang I. It does not name Gapan/Gapan (Sapang) River or identify the one-kilometer Adopt-a-Waterbody segment. Shared system or barangay context is not a channel-level crosswalk."
+  },
+  "decisions": {
+    "historicalPartialSurveyContextRecorded": true,
+    "maragondonChannelGeometryAdded": false,
+    "gapanGeometryAdded": false,
+    "speciesAssertionsAdded": 0,
+    "currentPresenceInferred": false,
+    "salinityOrWaterSafetyChanged": false,
+    "accessOrFishingLegalityInferred": false,
+    "publicAppProjectionAdded": false,
+    "regionalBaselineComplete": false
+  },
+  "nextAction": "Retain the report as partial historical survey context for Maragondon River only. Continue seeking a permitted geospatial channel source and an official Gapan segment endpoint or station-to-channel crosswalk; do not use Figure 31 as public geometry."
+}
