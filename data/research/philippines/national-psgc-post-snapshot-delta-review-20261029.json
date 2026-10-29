@@ -1,0 +1,77 @@
+{
+  "reviewDate": "2026-10-29",
+  "baseline": {
+    "directoryHeadingDate": "2025-07-31",
+    "registryFile": "administrative-registry.json",
+    "registryStatus": "research-only-directory-baseline",
+    "coverageUnitCount": 130,
+    "includedLevels": "82 provinces; source-listed HUCs and ICCs; NCR cities and Pateros; separately assigned Isabela City; BARMM Special Geographic Area municipalities. Ordinary component cities, province-contained municipalities, barangays, and geometry are excluded."
+  },
+  "result": "bounded-post-snapshot-delta-crosscheck; exact-workbook-verification-pending",
+  "checks": [
+    {
+      "effectiveDate": "2025-08-29",
+      "source": "https://psa.gov.ph/system/files/scd/Press-Release-July2025PSGC_0.pdf",
+      "change": "Sulu transferred from BARMM to Region IX; its PSGC code changed to 0906600000.",
+      "registryComparison": {
+        "code": "0906600000",
+        "registryRegionId": "0900000000",
+        "result": "matches-current-Region-IX-code-assignment"
+      },
+      "scopeEffect": "directly affects an included province and its regional assignment"
+    },
+    {
+      "effectiveDate": "2025-Q3",
+      "source": "https://psa.gov.ph/system/files/scd/Press-Release-3Q-2025-PSGC.pdf",
+      "change": "Two barangay names were corrected; PSGC reported that the changes only involved name corrections and LGU counts were unchanged.",
+      "scopeEffect": "barangays are outside the current coverage-unit registry"
+    },
+    {
+      "effectiveDate": "2025-Q4",
+      "source": "https://psa.gov.ph/content/fourth-quarter-2025-psgc-updates-correction-names-three-barangays",
+      "change": "Three barangay names were corrected; PSGC reported that other LGU counts remained unchanged.",
+      "scopeEffect": "barangays are outside the current coverage-unit registry"
+    },
+    {
+      "effectiveDate": "2026-Q1",
+      "source": "https://psa.gov.ph/content/first-quarter-2026-psgc-updates-merging-two-barangays-and-correction-names-one-municipality",
+      "change": "One Batangas barangay merger, one ordinary municipality name correction (Sanchez Mira, Cagayan), and seven barangay name corrections.",
+      "scopeEffect": "the affected barangays and province-contained municipality are outside the current coverage-unit registry"
+    },
+    {
+      "effectiveDate": "2026-Q2",
+      "source": "https://psa.gov.ph/classification/psgc/node/1684083815",
+      "change": "San Isidro, Davao del Norte was renamed Sawata; Don Victoriano, Misamis Occidental was corrected from Don Victoriano Chiongbian; a barangay rename and 14 barangay corrections were also listed.",
+      "scopeEffect": "the named municipalities are province-contained municipalities, and barangays are excluded from the current coverage-unit registry"
+    },
+    {
+      "effectiveDate": "2026-Q3",
+      "source": "https://psa.gov.ph/classification/psgc/node/1684084314",
+      "change": "One Bukidnon barangay name was corrected. PSA also added a note that Lucena is treated as an HUC for statistical purposes pending applicable requirements, without making a legal ruling on HUC status.",
+      "registryComparison": {
+        "lucenaCode": "0431200000",
+        "registryClass": "HUC",
+        "registryCaveat": "PSA 3Q 2026 treats Lucena as HUC for statistical purposes, pending applicable RA 7160 requirements. This is not a legal ruling on HUC status.",
+        "result": "classification-and-caveat-match-PSA-notice"
+      },
+      "scopeEffect": "the corrected barangay is excluded; Lucena's statistical treatment is directly relevant and already caveated in the registry"
+    }
+  ],
+  "aggregateControl": {
+    "source": "https://psa.gov.ph/classification/psgc/summary",
+    "asOf": "2026-09-30",
+    "regions": 18,
+    "provinces": 82,
+    "cities": 149,
+    "municipalities": 1493,
+    "barangays": 42010,
+    "note": "PSA aggregate totals are a national sanity check, not validation of all 130 coverage-unit rows."
+  },
+  "limitations": [
+    "No 3Q 2026 XLSX was retrieved; the known request returned HTTP 403 with a Cloudflare challenge.",
+    "No API token was requested and no API call was made; the documented API versions reviewed are older than the target snapshot.",
+    "Quarterly change notices bound known post-snapshot changes but do not prove every code, name, class, or parent in the 130-unit registry against the masterlist workbook.",
+    "The directory capture consists of rendered official web-page text, not original XLSX bytes or a reproducible workbook import."
+  ],
+  "verificationStatus": "pending"
+}
