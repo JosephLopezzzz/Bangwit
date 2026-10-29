@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-30",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "waterbodyId": "ph-wb-ragay-gulf-quezon",
+  "status": "official-geographic-name-screen-no-rogo-point-match;locality-unresolved",
+  "purpose": "Check whether the NGA Geographic Names Server independently resolves the literature locality phrase Rogo Point in the Philippines, without treating a name search as a boundary or fish-occurrence source.",
+  "source": {
+    "sourceId": "nga-gns-rogo-point-gazetteer-screen-2026",
+    "provider": "National Geospatial-Intelligence Agency, Geographic Names Server",
+    "downloadPage": "https://geonames.nga.mil/geonames/GNSData/",
+    "servicesPage": "https://geonames.nga.mil/gns/html/gns_services.html",
+    "restLayer": "https://geonames.nga.mil/geon-ags/rest/services/RESEARCH/GIS_OUTPUT/MapServer/0",
+    "queryEndpoint": "https://geonames.nga.mil/geon-ags/rest/services/RESEARCH/GIS_OUTPUT/MapServer/0/query",
+    "countryFileListedUpdatedOn": "2026-09-24",
+    "foreignGeographicNamesDataFreelyAvailable": true,
+    "citationRecommendation": "Toponymic information is based on the Geographic Names Database, containing official standard names approved by the United States Board on Geographic Names and maintained by the National Geospatial-Intelligence Agency.",
+    "importantDisclaimer": "NGA describes GNS data as guidance/general-public information, notes names may not reflect sovereignty views, and disclaims responsibility for third-party uses of feature coordinates. This is not a Philippine legal or maritime boundary source."
+  },
+  "queries": [
+    {
+      "name": "exact-full-name",
+      "where": "full_name='Rogo Point' AND cc_ft='PHL'",
+      "outFields": [
+        "ufi",
+        "uni",
+        "full_name",
+        "desig_cd",
+        "fc",
+        "cc_ft",
+        "adm1",
+        "nt",
+        "all_names",
+        "gis_notes"
+      ],
+      "returnGeometry": false,
+      "httpStatus": 200,
+      "resultRows": 0,
+      "raw": {
+        "path": "raw/nga-gns-rogo-20261030/exact-full-name.json",
+        "bytes": 1284,
+        "sha256": "f19cada78f2589d96eca8673ae2347b6e3462cc065463dc09548dcce006010ae"
+      }
+    },
+    {
+      "name": "full-name-contains",
+      "where": "full_name LIKE '%Rogo%' AND cc_ft='PHL'",
+      "outFields": [
+        "ufi",
+        "uni",
+        "full_name",
+        "desig_cd",
+        "fc",
+        "cc_ft",
+        "adm1",
+        "nt",
+        "all_names",
+        "gis_notes"
+      ],
+      "returnGeometry": false,
+      "httpStatus": 200,
+      "resultRows": 5,
+      "uniqueDisplayedNames": [
+        "Rogostoco River",
+        "Rogostoco",
+        "Mount Rogostoco",
+        "Rogongon"
+      ],
+      "raw": {
+        "path": "raw/nga-gns-rogo-20261030/full-name-contains.json",
+        "bytes": 2273,
+        "sha256": "18ee4fe24e08e554b56093c26bd7682747561bdff48bc2d10f120a8c5a448200"
+      }
+    },
+    {
+      "name": "all-name-contains",
+      "where": "all_names LIKE '%ROGO%' AND cc_ft='PHL'",
+      "outFields": [
+        "ufi",
+        "uni",
+        "full_name",
+        "desig_cd",
+        "fc",
+        "cc_ft",
+        "adm1",
+        "nt",
+        "all_names",
+        "gis_notes"
+      ],
+      "returnGeometry": false,
+      "httpStatus": 200,
+      "resultRows": 33,
+      "interpretation": "Broad substring matches include unrelated names and multiple name rows for shared features; none is Rogo Point or a Ragay Gulf feature.",
+      "raw": {
+        "path": "raw/nga-gns-rogo-20261030/all-name-contains.json",
+        "bytes": 8660,
+        "sha256": "d072565af7266b33ca5c05d6ef4e5ec860335d4f5b7ef740704df584033ca6ef"
+      }
+    }
+  ],
+  "decision": {
+    "rogoPointMatched": false,
+    "ragayGulfAdministrativeAnchorAdded": false,
+    "coordinatesIncludedInTrackedReview": false,
+    "geometryAdded": false,
+    "speciesAssertionsAdded": 0,
+    "publicRowsAdded": 0,
+    "calabarzonDenominatorChanged": false,
+    "absenceInferred": false,
+    "reason": "The exact-name query returned zero records; broader substring queries returned only unrelated name rows. A missing GNS match cannot establish that Rogo Point does not exist, is not recorded in another source, or lies outside any province."
+  },
+  "limitations": [
+    "GNS is a supplementary geographic-name reference, not a Philippine agency source and not a legal, hydrographic, provincial, or municipal-water boundary dataset.",
+    "The queried name fields do not identify the 1966 CAS 47780 collection position or establish which side of Ragay Gulf the point/locality refers to.",
+    "No coordinates or geometries were requested or included in the tracked review.",
+    "The historical ZooKeys type locality is not current fish-presence evidence, a complete inventory, a catchability statement, or fishing-access guidance."
+  ],
+  "nextAction": "Keep Rogo Point unresolved. Seek the 1966 cruise station log or an appropriate NAMRIA hydrographic chart/source that explicitly names the point; continue independent CALABARZON freshwater and marine evidence work without assigning the whole gulf to one region."
+}

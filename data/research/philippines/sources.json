@@ -3,7 +3,7 @@
   "checkedOn": "2026-10-30",
   "status": "research-only-source-registry",
   "scope": "National acquisition references, freshwater spatial-source leads, and CALABARZON/Central Luzon identity/source leads. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 213,
+  "sourceCount": 214,
   "sources": [
     {
       "id": "gbif-col-xr-taxonomy-matching",
@@ -6408,6 +6408,57 @@
       "caveats": [
         "No email address was visible in the reviewed current directory excerpt.",
         "Do not treat the historical office listing as confirmation that a dataset exists or that a request has been filed."
+      ]
+    },
+    {
+      "id": "nga-gns-rogo-point-gazetteer-screen-2026",
+      "title": "Geographic Names Server Philippines name queries for Rogo Point",
+      "provider": "National Geospatial-Intelligence Agency, Geographic Names Server",
+      "url": "https://geonames.nga.mil/geonames/GNSData/",
+      "additionalUrls": [
+        "https://geonames.nga.mil/gns/html/gns_services.html",
+        "https://geonames.nga.mil/geon-ags/rest/services/RESEARCH/GIS_OUTPUT/MapServer/0/query"
+      ],
+      "role": "Supplementary gazetteer name-resolution screen for the historical Rogo Point locality phrase; not fish evidence, Philippine legal geography, or a boundary source.",
+      "checkedOn": "2026-10-30",
+      "sourceYear": 2026,
+      "access": {
+        "status": "Official GNS ArcGIS REST layer returned HTTP 200 for exact-name and substring queries filtered to country code PHL; exact Rogo Point returned zero rows and broad searches returned unrelated names.",
+        "reviewFiles": [
+          "calabarzon-ragay-rogo-point-geonames-review-20261030.json"
+        ],
+        "rawPath": "raw/nga-gns-rogo-20261030/",
+        "rawReceipts": [
+          {
+            "file": "exact-full-name.json",
+            "bytes": 1284,
+            "sha256": "f19cada78f2589d96eca8673ae2347b6e3462cc065463dc09548dcce006010ae"
+          },
+          {
+            "file": "full-name-contains.json",
+            "bytes": 2273,
+            "sha256": "18ee4fe24e08e554b56093c26bd7682747561bdff48bc2d10f120a8c5a448200"
+          },
+          {
+            "file": "all-name-contains.json",
+            "bytes": 8660,
+            "sha256": "d072565af7266b33ca5c05d6ef4e5ec860335d4f5b7ef740704df584033ca6ef"
+          }
+        ]
+      },
+      "reuse": {
+        "metadata": "The GNS download page says foreign geographic-name data is freely available and recommends attribution. No separate item-specific license was recorded for the REST response.",
+        "raw": "Raw name rows remain in ignored local research storage; do not distribute coordinates or treat names as legal geography.",
+        "content": "Tracked use is limited to documenting the bounded query and its unresolved result; no matched name or geometry is admitted to the app."
+      },
+      "publicationApproval": false,
+      "researchStatus": "official-nga-gns-bounded-name-screen;exact-rogo-point-unmatched;not-absence-evidence",
+      "license": null,
+      "licenseUrl": null,
+      "caveats": [
+        "NGA describes GNS as geographic-name guidance/general-public information and disclaims responsibility for third-party feature-coordinate use.",
+        "A GNS zero-match does not prove that a feature is absent or resolve the historical specimen locality.",
+        "This source supplies no Philippine provincial, municipal-water, or hydrographic boundary."
       ]
     }
   ],
