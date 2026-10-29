@@ -90,6 +90,8 @@ The [Guinayangan Water District 2024 Annual Report, Annex J](https://www.guinaya
 
 A bounded follow-up search found no retrievable fish survey explicitly tied to Hinabaan River or the seven spring leads. Corrected CoL XR fish-filtered GBIF queries returned zero for eight exact `waterBody` names and eleven locality strings/variants; zero indexed results are not evidence of absence. The all-taxon Guinayangan locality search returned 129 mixed records and was not used to assign fish. The [CLSU article](https://clsu.edu.ph/news-and-updates/article/fac-cf-implement-idrc-funded-small-scale-aquaculture-action-research-in-quezon-province) is aquaculture context, and a separate Tayabas River study is not evidence for these sites. The official [BMB PAIS Maulawin profile](https://pais.bmb.gov.ph/home/info/KQHVQSWURSI) appeared in search results but returned HTTP 502 when opened, so no full-page claim was extracted. No species assertion was added. See the [bounded survey search review](data/research/philippines/calabarzon-guinayangan-fish-survey-search-review-20261030.json) and [GBIF Occurrence API docs](https://techdocs.gbif.org/en/openapi/v1/occurrence).
 
+An unsent request draft now asks CLSU for any site-specific survey data and asks CENRO Calauag for the proper PAMO channel. The CLSU FAC page lists its public contact email; the DENR directory page was not directly accessible, so its listed phone should be verified before use. No email or call was sent. See the [request draft](data/research/philippines/guinayangan-freshwater-data-request-draft-20261030.md).
+
 
 ### Ragay Gulf fishery poster review — 30 October 2026
 

@@ -51,6 +51,16 @@
       "sourceId": "gbif-guinayangan-exact-fish-occurrence-screen-20261030",
       "result": "Corrected CoL XR Actinopterygii filter: 8 target waterBody names, 8 exact target locality strings, and locality variants Hinabaan, Maulawin, and Guinayangan returned zero. A broader all-taxa Guinayangan locality search returned 129 mixed records; it was not used to assign fish to any target waterbody.",
       "decision": "Bounded GBIF search gap only. No occurrence row, fish species, geometry, locality assignment, or absence claim added."
+    },
+    {
+      "sourceId": "clsu-freshwater-aquaculture-center-contact-2026",
+      "result": "Official CLSU FAC page lists fac@clsu.edu.ph.",
+      "decision": "Used only as the published destination for an unsent data-access inquiry."
+    },
+    {
+      "sourceId": "denr-calabarzon-cenro-calauag-directory-2026",
+      "result": "DENR CALABARZON directory search excerpt lists CENRO Calauag office location and telephone; direct page open returned HTTP 403 and no current email was visible.",
+      "decision": "Used only as a routing lead; draft says verify contact information before any call or request."
     }
   ],
   "excludedComparator": {
@@ -183,5 +193,17 @@
       "queryEvidence": "The default /species/match?name=Actinopterygii returned matchType NONE; no result from that attempt is interpreted."
     },
     "interpretation": "All query counts are bounded indexed-text screens. Zero text matches are not evidence that fish are absent and do not replace a field survey or complete occurrence download."
+  },
+  "requestDraft": {
+    "file": "guinayangan-freshwater-data-request-draft-20261030.md",
+    "status": "unsent",
+    "emailSent": false,
+    "phoneCallMade": false,
+    "personalReplyEmailIncluded": false,
+    "contactSourceIds": [
+      "clsu-freshwater-aquaculture-center-contact-2026",
+      "denr-calabarzon-cenro-calauag-directory-2026"
+    ],
+    "handling": "Draft routes the CLSU data inquiry to its published FAC contact and proposes that CENRO Calauag supply the current PAMO request channel; verify the CENRO phone and do not infer data access or permission."
   }
 }
