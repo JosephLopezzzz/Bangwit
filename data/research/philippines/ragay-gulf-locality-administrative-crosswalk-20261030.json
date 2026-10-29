@@ -2,13 +2,14 @@
   "schemaVersion": 1,
   "reviewedOn": "2026-10-30",
   "phaseId": "L1",
-  "status": "partial-named-locality-administrative-crosswalk;most-lot-geography-unresolved;research-only",
-  "purpose": "Crosswalk only explicitly named places in the 2025 CC BY checklist to administrative context using official local-government/PSGC pages and an independent published locality anchor. This is not a Ragay Gulf boundary or a complete fish inventory.",
+  "status": "partial-named-locality-context-crosswalk;most-lot-geography-unresolved;research-only",
+  "purpose": "Crosswalk only explicitly named places in the 2025 CC BY checklist to administrative context using official local-government/PSGC pages, an independent published locality anchor, and directly retrieved Smithsonian Open Access metadata. This is not a Ragay Gulf boundary or a complete fish inventory.",
   "method": {
     "inputReview": "ragay-gulf-zookeys-2025-type-locality-batch-review-20261030.json",
     "rules": [
       "Keep the article locality and historical date/catalog spelling unchanged.",
       "Use exact municipality or named-feature matches for administrative context; an identical named point in independent literature can anchor the locality name but does not transfer that other specimen’s coordinates.",
+      "A Smithsonian museum place string can support historical named-feature context only; unrelated invertebrate records do not transfer specimen or taxon data to fish lots or define an administrative boundary.",
       "Do not turn a broad gulf-only phrase into province/region presence, a georeferenced specimen record, or a legal water boundary.",
       "Official administrative webpages are cited for names and relationships only; no image, geometry, or bulk page content is reused."
     ],
@@ -55,6 +56,19 @@
       "citation": "Philippine Statistics Authority. Region V (Bicol Region), Philippine Standard Geographic Code.",
       "sourceUrl": "https://psa.gov.ph/classification/psgc/provinces/0500000000",
       "supports": "The current PSGC page names Region V (Bicol Region), code 0500000000, and lists Camarines Sur as one of its provinces."
+    },
+    {
+      "sourceId": "smithsonian-canmahala-locality-record-leads-2026",
+      "citation": "Smithsonian Institution / National Museum of Natural History. Smithsonian Open Access API records nmnhinvertebratezoology_917000 and nmnhinvertebratezoology_387100; query retrieved 2026-10-30.",
+      "sourceUrl": "https://api.si.edu/openaccess/api/v1.0/search",
+      "apiDocumentationUrl": "https://edan.si.edu/openaccess/apidocs/",
+      "rawReceipt": {
+        "path": "raw/smithsonian-canmahala-20261030/canmahala-camarines-sur-selected.json",
+        "bytes": 9887,
+        "sha256": "ee05b81e38f3d8c299a7ec9d254cd68098b8bec58ef5bd690f6a2bb1a7c63899"
+      },
+      "license": "Selected Smithsonian metadata fields report CC0; https://creativecommons.org/publicdomain/zero/1.0/",
+      "supports": "Two directly retrieved, same-day 1909 invertebrate records report the exact Canmahala Bay feature with Camarines Sur. This is a historical named-feature context anchor only; it supplies no fish occurrence, target-lot coordinates, or bay/provincial boundary."
     }
   ],
   "localityCrosswalks": [
@@ -184,9 +198,64 @@
       "publicSpeciesRowEligible": false
     },
     {
+      "localityId": "ragay-canmahala-bay-feature-context",
+      "articleEntries": [
+        306,
+        353,
+        575,
+        954
+      ],
+      "sourceNamesAsReported": [
+        "Amia diversa",
+        "Siphamia elongata",
+        "Valenciennea parva",
+        "Inimicus bifilis"
+      ],
+      "articleCatalogGroups": [
+        "USNM 70246",
+        "USNM 112045",
+        "USNM 168231",
+        "USNM 258664 (ex USNM 161053)",
+        "USNM 98905"
+      ],
+      "articleLocalityTexts": [
+        "small stream in Canmahala Bay, Ragay Gulf, Luzon",
+        "Canmahala Bay, Ragay Gulf, Luzon",
+        "Canmahala Bay, Ragay Gulf, south of Luzon",
+        "Canmahala Bay, Ragay Gulf, between Burias and Luzon islands"
+      ],
+      "independentAnchor": {
+        "provider": "Smithsonian Institution / National Museum of Natural History",
+        "apiQueryResultCount": 27,
+        "selectedRecordIds": [
+          "nmnhinvertebratezoology_917000",
+          "nmnhinvertebratezoology_387100"
+        ],
+        "selectedRecordCatalogNumbers": [
+          "1100422",
+          "239730"
+        ],
+        "selectedPlaceText": "Luzon Island, Canmahala Bay, Camarines Sur, Philippines, North Pacific Ocean",
+        "selectedCollectionDate": "11 Mar 1909",
+        "recordType": "invertebrate specimens; not fish evidence",
+        "metadataLicense": "CC0 1.0",
+        "receiptPath": "raw/smithsonian-canmahala-20261030/canmahala-camarines-sur-selected.json"
+      },
+      "administrativeAnchor": {
+        "reportedProvinceContext": "Camarines Sur",
+        "regionContext": "Region V (Bicol Region)",
+        "regionCode": "0500000000",
+        "status": "supported-at-exact-named-feature-context-only;no-exclusive-bay-boundary-or-target-lot-assignment"
+      },
+      "decision": "The Smithsonian API independently reports the exact Canmahala Bay name with Camarines Sur for two same-day non-fish collection records. This anchors the historical feature-name context, but does not establish an exclusive province footprint or transfer coordinates, identity, taxa, or exact capture points to the 2025 fish lots. Keep the distinct Canmahana spelling variant unresolved. The small-stream wording in entry 306 does not identify or delineate a stream.",
+      "targetLotProvinceOrRegionAssigned": false,
+      "coordinates": null,
+      "publicSpeciesRowEligible": false
+    },
+    {
       "localityId": "ragay-gulf-only-and-unresolved-points",
       "articleEntries": "remaining source-reported Ragay Gulf/Ragay Bay lots in the 16-treatment batch",
-      "decision": "Held: generic gulf/bay phrases and other named points/islands (including Canmahala/Canmahana, Saboon, Anima Sola, Buri, Pusgo, Caurusan, Nagas, Rogo, and Bantuin) were not assigned to a province or region in this step. No gulf polygon was sourced.",
+      "decision": "Held: generic gulf/bay phrases and unresolved named points/islands (including Canmahana, Saboon, Anima Sola, Buri, Pusgo, Caurusan, Nagas, Rogo, and Bantuin) were not assigned to a province or region in this step. Canmahala Bay has only a separate named-feature context anchor; no gulf polygon was sourced.",
       "province": null,
       "region": null,
       "coordinates": null,
@@ -196,7 +265,7 @@
   "summary": {
     "articleTreatmentsReviewed": 16,
     "reportedLotGroupingsInInputBatch": 25,
-    "localityNameAnchorsWithAdministrativeContext": 3,
+    "localityNameAnchorsWithAdministrativeContext": 4,
     "explicitOffshoreOrAliasCasesHeld": 3,
     "genericOrOtherPointLocalitiesHeld": true,
     "regionsRepresentedBySelectedNameAnchors": [
@@ -214,8 +283,9 @@
     "This is a historical literature locality crosswalk, not an ecological survey, current-presence claim, full local fish checklist, or proof of catchability.",
     "Named-island/municipality context is not a substitute for marine coordinates, municipal-water boundaries, fishing access, or jurisdiction.",
     "Siburio Point is anchored by a different CAS specimen in the 2013 paper; no coordinates or measurement from CAS 34193 is transferred to the 2025 checklist lots.",
+    "Canmahala Bay is reported with Camarines Sur in separate CC0 Smithsonian invertebrate metadata; this is not fish evidence, an exclusive bay boundary, or a province/region assignment for the 2025 checklist fish lots.",
     "The 2025 article’s taxonomy conflict, catalog-number discrepancy, and uncatalogued Ostorhinchus parvulus lot identity remain unresolved.",
     "GBIF/CAS occurrence candidates remain held under their separate record-level reuse and locality review; this CC BY article does not override CAS database terms."
   ],
-  "nextAction": "Continue with the other locality names only when primary locality or official geographic evidence is available; seek a suitable licensed locality gazetteer/authoritative maritime source before creating points or boundaries. Keep generic gulf-only lots unassigned and continue the freshwater/marine regional inventory in parallel."
+  "nextAction": "Resolve Rogo Point and the Canmahana spelling variant only with primary locality or suitable licensed geographic evidence; seek an authoritative maritime source before creating points or boundaries. Keep generic gulf-only fish lots unassigned and continue the freshwater/marine regional inventory in parallel."
 }
