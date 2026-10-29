@@ -3,7 +3,7 @@
   "checkedOn": "2026-10-30",
   "status": "research-only-source-registry",
   "scope": "National acquisition references, freshwater spatial-source leads, and CALABARZON/Central Luzon identity/source leads. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 228,
+  "sourceCount": 229,
   "sources": [
     {
       "id": "gbif-col-xr-taxonomy-matching",
@@ -5450,6 +5450,46 @@
         "Strong overlap with HydroLAKES supports feature identity but is not independent field validation because both are mapped datasets.",
         "The GBIF geometry query returned zero Actinopterygii occurrences; this is not fish-absence or survey evidence.",
         "No species, diet, legal access, or public app geometry is admitted."
+      ]
+    },
+    {
+      "id": "osm-san-pablo-seven-lakes-water-features",
+      "title": "Named OpenStreetMap water features for the six non-Sampaloc San Pablo crater lakes",
+      "provider": "OpenStreetMap contributors",
+      "url": "https://overpass-api.de/api/interpreter",
+      "additionalUrls": [
+        "https://api.openstreetmap.org/api/0.6/way/24821711/full.json",
+        "https://api.openstreetmap.org/api/0.6/way/24821818/full.json",
+        "https://api.openstreetmap.org/api/0.6/way/25032575/full.json",
+        "https://api.openstreetmap.org/api/0.6/relation/6476644/full.json",
+        "https://api.openstreetmap.org/api/0.6/relation/6476645/full.json",
+        "https://api.openstreetmap.org/api/0.6/relation/10521183/full.json",
+        "https://www.openstreetmap.org/copyright"
+      ],
+      "role": "Community-mapped named water features used for a bounded Seven Lakes to HydroLAKES crosswalk; not official shorelines, fish evidence, or a complete San Pablo waterbody inventory.",
+      "checkedOn": "2026-10-30",
+      "sourceYear": 2026,
+      "access": {
+        "status": "bounded-overpass-name-screen;full-api-snapshots-reviewed;five-hydrolakes-crosswalks;one-subset-nonmatch",
+        "reviewFiles": [
+          "calabarzon-seven-lakes-osm-hydrolakes-crosswalk-20261030.json"
+        ],
+        "rawPath": "raw/calabarzon-seven-lakes-osm-crosswalk-20261030/"
+      },
+      "reuse": {
+        "metadata": "OpenStreetMap data is licensed under ODbL 1.0; attribution is required and adapted database distribution carries share-alike obligations.",
+        "raw": "The Overpass result and six full OSM object snapshots remain in ignored local research storage.",
+        "content": "Research crosswalk only. Review ODbL compatibility before distributing any adapted geometry or database; no app geometry is approved."
+      },
+      "publicationApproval": false,
+      "researchStatus": "five-community-map-hydrolakes-crosswalk-candidates;one-hydrolakes-nonmatch;no-species-assertions",
+      "license": "Open Database License (ODbL) 1.0",
+      "licenseUrl": "https://opendatacommons.org/licenses/odbl/1-0/",
+      "caveats": [
+        "The bounded OSM tag/bbox search found seven named Seven Lakes objects; it is not exhaustive of local water features.",
+        "Five of six non-Sampaloc features had strong HydroLAKES spatial candidates. Mohicap did not intersect a Philippines-filtered HydroLAKES feature in this screen; this is not evidence that the lake is absent.",
+        "OSM community mapping and HydroLAKES polygon overlap do not validate official identity, shoreline accuracy, fish occurrence, access, or legal status.",
+        "No species, diet, or app-ready geometry is admitted."
       ]
     },
     {

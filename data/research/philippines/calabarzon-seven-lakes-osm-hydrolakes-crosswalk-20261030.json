@@ -1,0 +1,178 @@
+{
+  "schemaVersion": 1,
+  "batchId": "calabarzon-seven-lakes-osm-hydrolakes-crosswalk-20261030",
+  "reviewedOn": "2026-10-30",
+  "regionId": "0400000000",
+  "provinceId": "0403400000",
+  "waterbodyGroup": "Seven Lakes of San Pablo City",
+  "status": "seven-named-osm-features-screened;six-hydrolakes-spatial-crosswalks;one-subset-nonmatch;community-data-only;no-species-assertions",
+  "purpose": "Screen named OpenStreetMap lake features around San Pablo against the HydroLAKES Asia subset to identify freshwater coverage gaps and crosswalk candidates.",
+  "search": {
+    "service": "Overpass API",
+    "endpoint": "https://overpass-api.de/api/interpreter",
+    "checkedOn": "2026-10-30",
+    "osmDataTimestamp": "2026-10-29T20:14:59Z",
+    "bboxSouthWestNorthEast": [14.05, 121.26, 14.18, 121.41],
+    "query": "[out:json][timeout:30];(relation[\"natural\"=\"water\"][\"water\"=\"lake\"](14.05,121.26,14.18,121.41);way[\"natural\"=\"water\"][\"water\"=\"lake\"](14.05,121.26,14.18,121.41);relation[\"natural\"=\"water\"][\"name\"](14.05,121.26,14.18,121.41);way[\"natural\"=\"water\"][\"name\"](14.05,121.26,14.18,121.41););out tags center;",
+    "returnedElements": 11,
+    "namedSevenLakesObjectsFound": 7,
+    "raw": {
+      "path": "raw/calabarzon-seven-lakes-osm-crosswalk-20261030/overpass-seven-lakes-water-objects.json",
+      "bytes": 4502,
+      "sha256": "5f5e8114bab4dba72f2bc9574ee7abf133d27f9e8f228f49a4abc4598180ec8b"
+    }
+  },
+  "geometryMethod": {
+    "hydrolakesInput": "The Philippines-filtered HydroLAKES Asia features from the hash-verified local archive in national-philippines-hydrolakes-asia-subset-screen-20261030.json.",
+    "osmInputs": "Full OSM API snapshots for six non-Sampaloc objects; the Sampaloc snapshot and crosswalk are documented separately in calabarzon-sampaloc-osm-hydrolakes-crosswalk-20261030.json.",
+    "projection": "EPSG:32651 (WGS 84 / UTM zone 51N)",
+    "tools": {
+      "shapely": "2.2.0",
+      "pyproj": "3.8.0"
+    },
+    "metrics": "Rounded polygon intersection area, intersection-over-union, and the share of each source polygon covered by the other. These measure mapped-shape overlap only, not accuracy against a surveyed shoreline."
+  },
+  "features": [
+    {
+      "name": "Bunot Lake",
+      "osmObject": "way/24821711",
+      "osmVersion": 20,
+      "osmTimestamp": "2026-04-06T14:06:57Z",
+      "osmSnapshot": {
+        "path": "raw/calabarzon-seven-lakes-osm-crosswalk-20261030/osm-bunot-lake-full.json",
+        "bytes": 8397,
+        "sha256": "6d64f399e1b64f0ed8636418a09cbb9a8ac691a503cd734830bf333e24e78645"
+      },
+      "osmPolygonAreaSquareKm": 0.36042,
+      "hydrolakesCandidate": {
+        "hylakId": 1397812,
+        "intersectionSquareKm": 0.26789,
+        "intersectionOverUnion": 0.74096,
+        "osmAreaCovered": 0.74326,
+        "hydrolakesAreaCovered": 0.99583
+      },
+      "identityStatus": "strong-spatial-candidate;not-official-or-survey-validated"
+    },
+    {
+      "name": "Calibato Lake",
+      "osmObject": "way/24821818",
+      "osmVersion": 24,
+      "osmTimestamp": "2026-04-06T15:15:45Z",
+      "osmSnapshot": {
+        "path": "raw/calabarzon-seven-lakes-osm-crosswalk-20261030/osm-calibato-lake-full.json",
+        "bytes": 23786,
+        "sha256": "dc06032aad438edd11b64fce57d514c79a8faa1d88d068d520e70d50331205a7"
+      },
+      "osmPolygonAreaSquareKm": 0.45193,
+      "hydrolakesCandidate": {
+        "hylakId": 1397790,
+        "intersectionSquareKm": 0.35004,
+        "intersectionOverUnion": 0.77362,
+        "osmAreaCovered": 0.77455,
+        "hydrolakesAreaCovered": 0.99846
+      },
+      "identityStatus": "strong-spatial-candidate;not-official-or-survey-validated"
+    },
+    {
+      "name": "Mohicap Lake",
+      "osmObject": "way/25032575",
+      "osmVersion": 16,
+      "osmTimestamp": "2023-09-03T11:06:32Z",
+      "osmSnapshot": {
+        "path": "raw/calabarzon-seven-lakes-osm-crosswalk-20261030/osm-mohicap-lake-full.json",
+        "bytes": 19136,
+        "sha256": "10440654b8c32582dad4d144e77ae55b5f09d79be7c2d1b18e99b02e299b867e"
+      },
+      "osmPolygonAreaSquareKm": 0.18302,
+      "hydrolakesCandidate": null,
+      "identityStatus": "named-osm-water-feature;no-philippines-hydrolakes-feature-intersection-in-screen",
+      "interpretation": "HydroLAKES nonmatch is a source/geometry coverage gap, not evidence that Mohicap Lake is absent. The OSM boundary is not independently validated."
+    },
+    {
+      "name": "Palakpakin Lake",
+      "osmObject": "relation/6476644",
+      "osmVersion": 7,
+      "osmTimestamp": "2026-04-06T14:11:27Z",
+      "osmSnapshot": {
+        "path": "raw/calabarzon-seven-lakes-osm-crosswalk-20261030/osm-palakpakin-lake-full.json",
+        "bytes": 13265,
+        "sha256": "2861beb5c97941e2fcddb15896ea6edd433785ec309c23e275104d2e78e725a5"
+      },
+      "osmPolygonAreaSquareKm": 0.50122,
+      "hydrolakesCandidate": {
+        "hylakId": 1397776,
+        "intersectionSquareKm": 0.35515,
+        "intersectionOverUnion": 0.70487,
+        "osmAreaCovered": 0.70858,
+        "hydrolakesAreaCovered": 0.99263
+      },
+      "identityStatus": "strong-spatial-candidate;not-official-or-survey-validated"
+    },
+    {
+      "name": "Pandin Lake",
+      "osmObject": "relation/10521183",
+      "osmVersion": 5,
+      "osmTimestamp": "2026-04-06T15:56:25Z",
+      "osmSnapshot": {
+        "path": "raw/calabarzon-seven-lakes-osm-crosswalk-20261030/osm-pandin-lake-full.json",
+        "bytes": 14164,
+        "sha256": "d4aedc7c324cc772405e3cc11c66426834caa05874350ad3b663aaa954594ad9"
+      },
+      "osmPolygonAreaSquareKm": 0.22845,
+      "hydrolakesCandidate": {
+        "hylakId": 1397769,
+        "intersectionSquareKm": 0.17836,
+        "intersectionOverUnion": 0.77927,
+        "osmAreaCovered": 0.78072,
+        "hydrolakesAreaCovered": 0.99763
+      },
+      "identityStatus": "strong-spatial-candidate;not-official-or-survey-validated"
+    },
+    {
+      "name": "Yambo Lake",
+      "osmObject": "relation/6476645",
+      "osmVersion": 7,
+      "osmTimestamp": "2026-04-06T16:00:09Z",
+      "osmSnapshot": {
+        "path": "raw/calabarzon-seven-lakes-osm-crosswalk-20261030/osm-yambo-lake-full.json",
+        "bytes": 12778,
+        "sha256": "09f0cd6bd3681c434065af1aaf4dc53afcb17f757b46380e2f8ed07c70f2ee61"
+      },
+      "osmPolygonAreaSquareKm": 0.33823,
+      "hydrolakesCandidate": {
+        "hylakId": 1397762,
+        "intersectionSquareKm": 0.24367,
+        "intersectionOverUnion": 0.71717,
+        "osmAreaCovered": 0.72043,
+        "hydrolakesAreaCovered": 0.99374
+      },
+      "identityStatus": "strong-spatial-candidate;not-official-or-survey-validated"
+    }
+  ],
+  "groupCrosswalk": {
+    "nonSampalocLakeObjectsFoundInOsm": 6,
+    "nonSampalocFeaturesWithHydrolakesSpatialCandidate": 5,
+    "hydrolakesNonmatchingLake": "Mohicap Lake",
+    "sampalocCrosswalkArtifact": "calabarzon-sampaloc-osm-hydrolakes-crosswalk-20261030.json"
+  },
+  "rightsAndLimits": [
+    "OpenStreetMap geometries are community-contributed ODbL 1.0 data. Attribution and share-alike obligations apply to adapted database distribution; these geometries remain research-only.",
+    "HydroLAKES v1 is a CC BY 4.0 discovery framework with a stated 10-hectare lake threshold, not a complete inventory of lakes, ponds, wetlands, reservoirs, or rivers.",
+    "The Overpass bounding-box/tag query is not an exhaustive inventory of the Seven Lakes or of San Pablo inland waters.",
+    "High polygon overlap supports feature crosswalks between mapped datasets but does not establish shoreline accuracy, official identity, survey status, fishing access, or legal boundaries.",
+    "No GBIF search, fish occurrence, species, diet, current-presence claim, or app geometry was added in this batch."
+  ],
+  "nextAction": "Seek an authoritative or independently reusable lake shoreline/map crosswalk and review ODbL compatibility before any app geometry; then continue the CALABARZON river and other inland-water source queues.",
+  "sourceReferences": [
+    "https://overpass-api.de/api/interpreter",
+    "https://api.openstreetmap.org/api/0.6/way/24821711/full.json",
+    "https://api.openstreetmap.org/api/0.6/way/24821818/full.json",
+    "https://api.openstreetmap.org/api/0.6/way/25032575/full.json",
+    "https://api.openstreetmap.org/api/0.6/relation/6476644/full.json",
+    "https://api.openstreetmap.org/api/0.6/relation/6476645/full.json",
+    "https://api.openstreetmap.org/api/0.6/relation/10521183/full.json",
+    "https://www.openstreetmap.org/copyright",
+    "https://www.hydrosheds.org/products/hydrolakes",
+    "https://zenodo.org/records/17503891"
+  ]
+}

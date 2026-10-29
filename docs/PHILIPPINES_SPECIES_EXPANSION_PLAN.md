@@ -1274,3 +1274,13 @@ Verification for this research-only batch: `npm run test:species:pipeline`, `npm
 - **Next:** If public-app lake geometry is needed, request a local authoritative map/survey crosswalk and assess ODbL compatibility with Bangwit's data distribution. Otherwise continue the CALABARZON freshwater source queue.
 - **Artifacts:** `calabarzon-sampaloc-osm-hydrolakes-crosswalk-20261030.json`; updated `sources.json`, research index and coverage-denominator profile.
 - **Sources:** [OpenStreetMap relation 1557746](https://www.openstreetmap.org/relation/1557746), [OSM copyright/license](https://www.openstreetmap.org/copyright), [HydroLAKES](https://www.hydrosheds.org/products/hydrolakes), [GBIF Occurrence API](https://techdocs.gbif.org/en/openapi/v1/occurrence).
+
+### National rollout step 172: San Pablo Seven Lakes spatial crosswalk — 30 October 2026
+
+- **Screen:** A bounded OpenStreetMap water-feature query found named polygons for Bunot, Calibato, Mohicap, Palakpakin, Pandin, Yambo and Sampaloc Lakes. This is not an exhaustive waterbody inventory.
+- **HydroLAKES matches:** Five of the six non-Sampaloc lakes have strong spatial candidates: Bunot (Hylak_id 1397812), Calibato (1397790), Palakpakin (1397776), Pandin (1397769), and Yambo (1397762). Each candidate polygon covers over 99% of its corresponding HydroLAKES feature, while OSM/HydroLAKES polygon IoU ranges from 0.705 to 0.779. Sampaloc was crosswalked separately in step 171.
+- **Coverage gap:** Mohicap's OSM feature has no intersection with a Philippines-filtered HydroLAKES polygon in the screened subset. This may reflect product coverage or geometry differences; it does not imply the lake is absent.
+- **Rights and disposition:** OSM is community-mapped ODbL 1.0 data; attribution and share-alike duties apply. HydroLAKES is CC BY 4.0. No geometry was admitted to the app, and no fish, diet, access, or legal claims were added.
+- **Next:** Seek an authoritative or independently reusable shoreline crosswalk for the seven lakes and continue the CALABARZON river, reservoir, stream and wetland queues. Keep inland-water inventories distinct from species evidence.
+- **Artifacts:** `calabarzon-seven-lakes-osm-hydrolakes-crosswalk-20261030.json`; updated `sources.json`, research index and CALABARZON coverage-denominator profile.
+- **Sources:** [OpenStreetMap Overpass API](https://overpass-api.de/api/interpreter), [OSM copyright/license](https://www.openstreetmap.org/copyright), [HydroLAKES](https://www.hydrosheds.org/products/hydrolakes), [Zenodo HydroLAKES Asia subset](https://zenodo.org/records/17503891).
