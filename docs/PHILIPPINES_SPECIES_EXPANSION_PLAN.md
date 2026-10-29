@@ -1243,3 +1243,12 @@ Verification for this research-only batch: `npm run test:species:pipeline`, `npm
 - **Next:** Seek an eligible reuse grant or independently reusable data before creating Sampaloc species/diet rows; keep location, survey dates, method, and trophic-versus-bait distinctions attached to any future claim.
 - **Artifacts:** `calabarzon-sampaloc-briones-2016-source-review-20261030.json`; updated `sources.json` and coverage-denominator profile hash.
 - **Sources:** [Briones et al. author-uploaded full text](https://www.researchgate.net/publication/295507790_Fish_diversity_and_trophic_interactions_in_LAKE_SAmpaloc_Luzon_Is_Philippines), [UST author bibliography](https://www.ust.edu.ph/profile/papa-rey-donne-s/), [RIHN 2016 annual report](https://www.chikyu.ac.jp/publicity/publications/annual_report/img/2016_eng.pdf).
+
+### National rollout step 169: Lake Sampaloc approximate-box GBIF screen — 30 October 2026
+
+- **Query:** The GBIF Occurrence API search used `country=PH`, `taxonKey=204` (the GBIF species endpoint resolves this key to class Actinopterygii), `hasCoordinate=true`, and a 0.01° latitude by 0.01° longitude box centered on an approximate query point near Lake Sampaloc. It returned `count: 0`.
+- **Interpretation and limits:** The point and box are discovery filters only; they are not sourced coordinates, a verified lake polygon, or proof that the query covers the whole lake. This zero result does not establish fish absence or a complete occurrence search.
+- **Disposition:** No species, diet, geometry, current-presence claim, or public app row was added. The raw response is retained locally in ignored research storage with its SHA-256 receipt.
+- **Next:** Obtain an authoritative or reusable lake geometry before a geometry-based search; continue to treat any returned occurrence as a candidate requiring record-level geography, identification, date, and reuse review.
+- **Artifacts:** `calabarzon-sampaloc-spatial-gbif-screen-20261030.json`; updated GBIF source registry, research index, and CALABARZON profile hashes.
+- **Sources:** [GBIF Occurrence API reference](https://techdocs.gbif.org/en/openapi/v1/occurrence), [recorded query](https://api.gbif.org/v1/occurrence/search?country=PH&taxonKey=204&hasCoordinate=true&decimalLatitude=14.074,14.084&decimalLongitude=121.325,121.335&limit=100).

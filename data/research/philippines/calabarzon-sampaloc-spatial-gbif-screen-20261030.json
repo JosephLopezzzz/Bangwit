@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "batchId": "calabarzon-sampaloc-spatial-gbif-screen-20261030",
+  "reviewedOn": "2026-10-30",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "provinceId": "0405600000",
+  "waterbodyId": "ph-wb-sampaloc-san-pablo-lake",
+  "status": "bounded-approximate-coordinate-box-gbif-screen-zero;no-fish-absence-inferred",
+  "purpose": "A small approximate-coordinate discovery screen for Lake Sampaloc; it is not a lake-boundary search or fish inventory.",
+  "sourceId": "gbif-occurrence-downloads",
+  "endpoints": {
+    "search": "https://api.gbif.org/v1/occurrence/search",
+    "taxon": "https://api.gbif.org/v1/species/204",
+    "documentation": "https://techdocs.gbif.org/en/openapi/v1/occurrence"
+  },
+  "taxonFilter": {
+    "key": 204,
+    "apiScientificName": "Actinopterygii",
+    "rank": "CLASS",
+    "checkResult": "The GBIF species endpoint resolves key 204 to class Actinopterygii."
+  },
+  "spatialScope": {
+    "center": {
+      "decimalLatitude": 14.079,
+      "decimalLongitude": 121.33
+    },
+    "boundingBox": {
+      "south": 14.074,
+      "north": 14.084,
+      "west": 121.325,
+      "east": 121.335
+    },
+    "coordinateBasis": "Approximate query center used only to screen indexed records; it is not a source-reported coordinate, validated lake polygon, or boundary geometry.",
+    "interpretation": "The narrow box is not a complete spatial representation of Lake Sampaloc and must not be interpreted as covering the whole lake."
+  },
+  "query": {
+    "url": "https://api.gbif.org/v1/occurrence/search?country=PH&taxonKey=204&hasCoordinate=true&decimalLatitude=14.074,14.084&decimalLongitude=121.325,121.335&limit=100",
+    "parameters": {
+      "country": "PH",
+      "taxonKey": 204,
+      "hasCoordinate": true,
+      "decimalLatitude": "14.074,14.084",
+      "decimalLongitude": "121.325,121.335",
+      "limit": 100,
+      "offset": 0
+    }
+  },
+  "response": {
+    "httpStatus": 200,
+    "count": 0,
+    "returnedCount": 0,
+    "offset": 0,
+    "limit": 100,
+    "endOfRecords": true,
+    "raw": {
+      "path": "raw/calabarzon-sampaloc-spatial-gbif-screen-20261030/sampaloc-approx-coordinate-bbox.json",
+      "bytes": 79,
+      "sha256": "16004ddeb6b1eb033e3665fa6082d9cdd36533ce1f36272a2a95f5664f1b9dcd"
+    }
+  },
+  "decisions": {
+    "speciesAssertionsAdded": 0,
+    "fishAbsenceInferred": false,
+    "coordinatesProjected": false,
+    "lakeGeometryAdded": false,
+    "publicProjectionAdded": false,
+    "publicationApproval": false
+  },
+  "limitations": [
+    "This is one country-, taxon-, coordinate- and bounding-box-filtered GBIF occurrence search, not a survey or lake checklist.",
+    "The approximate coordinate box is not a verified Lake Sampaloc boundary; occurrences elsewhere in the lake or records without coordinates fall outside this screen.",
+    "A zero result does not establish fish absence, current ecological condition, or absence of records under other names, locations, or filters.",
+    "No species, diet, geometry, current-presence, or public app assertion was admitted."
+  ],
+  "provenance": {
+    "relatedStudyReview": "calabarzon-sampaloc-briones-2016-source-review-20261030.json",
+    "rawSnapshotPath": "raw/calabarzon-sampaloc-spatial-gbif-screen-20261030/",
+    "rawSnapshotSha256": "16004ddeb6b1eb033e3665fa6082d9cdd36533ce1f36272a2a95f5664f1b9dcd"
+  },
+  "nextAction": "Obtain an authoritative or reusable Lake Sampaloc geometry before any geometry-based discovery search; continue to treat occurrence results as candidate records requiring record-level geography, identification, date, and reuse review.",
+  "sourceReferences": [
+    "https://techdocs.gbif.org/en/openapi/v1/occurrence",
+    "https://api.gbif.org/v1/occurrence/search?country=PH&taxonKey=204&hasCoordinate=true&decimalLatitude=14.074,14.084&decimalLongitude=121.325,121.335&limit=100",
+    "https://api.gbif.org/v1/species/204"
+  ]
+}
