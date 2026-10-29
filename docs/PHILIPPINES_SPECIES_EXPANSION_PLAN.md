@@ -1159,3 +1159,13 @@ Verification for this research-only batch: `npm run test:species:pipeline`, `npm
 - **Interpretation:** this is a bounded gazetteer search, not proof that Rogo Point is absent or mislocated. GNS is a supplementary geographic-name reference and does not supply a Philippine legal or maritime boundary. No coordinates or geometry were added to the tracked review.
 - **Disposition:** Rogo Point remains unresolved and the ZooKeys type-locality lot remains unassigned to a province/region. No species assertion, public row, geometry, denominator, current-presence claim, or absence inference was added. See `calabarzon-ragay-rogo-point-geonames-review-20261030.json`.
 - **Next:** seek the historical 1966 cruise station log or a suitable NAMRIA hydrographic source that explicitly names the point; in parallel, continue with the next independently reviewable CALABARZON inland-water lead. Keep the full Ragay Gulf unassigned across regions until its extent is authoritative.
+
+
+## 121. Guinayangan Maulawin tributary waterbody-name crosswalk -- 30 October 2026
+
+- **Source:** IIRR watershed-management brief, pages 4–5 of the 16-page PDF; no publication date or item-specific reuse license was located.
+- **Scope update:** Added Hiwasayan River, Maulawin River, Prensa Creek, and Sisi Creek as four source-named research leads. The CALABARZON denominator is now 111 selected leads (54 rivers, seven streams); the source registry has 215 entries.
+- **Evidence boundary:** The brief estimates a 12 km Hiwasayan route and groups the other three watercourses across Guinayangan barangays. These descriptions are not surveyed channel geometry or proof of current hydrology. The PDF did not yield fish survey evidence. No fish assertion, species, salinity classification, boundary, access claim, or public app row was added.
+- **Next:** Find primary DENR/PAMO or LGU records for watercourse identity and route, then independent station-resolved fish surveys with reviewable reuse terms. Keep the four leads out of public species rows until those gates are met.
+- **Artifacts:** `calabarzon-guinayangan-mspl-tributaries-crosswalk-20261030.json`; updated `calabarzon-scope.json`, `sources.json`, fish-survey search review, and coverage denominator profile.
+- **Source:** [IIRR watershed brief](https://iirr.org/wp-content/uploads/2021/10/Small-Watersheds-and-Landscapes-Engaging-Local-Stakeholders-in-Conservation.pdf).
