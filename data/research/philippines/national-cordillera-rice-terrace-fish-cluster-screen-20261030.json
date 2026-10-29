@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-30",
+  "phaseId": "L1",
+  "regionIds": ["1400000000"],
+  "status": "historical-four-cluster-fish-screen;three-taxonomic-candidates;site-block-only;sampling-date-unknown;license-conflict;research-only",
+  "question": "Can the 2014 four-cluster Cordillera rice-terrace study extend source-reported fish evidence beyond Tanglagan, Apayao?",
+  "sourceId": "globaljournals-ngidlo-baguinon-cordillera-rice-terraces-aquatic-biodiversity-2014",
+  "method": {
+    "sourceTables": ["Table 2: species importance values by site/block", "Table 4: average individuals per plot by site/block"],
+    "samplingAsReported": "Ten randomly selected 1 m by 1 m quadrats per rice-paddy block and ten per irrigation-canal/creek block at each of four study clusters; 80 quadrats in total.",
+    "fieldDate": null,
+    "recordGranularity": "Positive values are used only to flag a study-cluster/block candidate; no numeric value was transcribed. The paper gives no per-quadrat observation record or coordinates.",
+    "zeroInterpretation": "No absence claims are made. The authors explicitly caution that random quadrats may under-sample mobile fish and that zero values do not show absence."
+  },
+  "taxonCrosswalks": [
+    {
+      "commonNameVerbatim": "Jojo fish",
+      "scientificNameVerbatim": "Anquilla japonica",
+      "proposedCurrentName": "Anguilla japonica Temminck & Schlegel, 1846",
+      "crosswalkBasis": "The article methods pair the Jojo fish label with the misspelled Anquilla japonica string. Catalogue of Life XR already contains an exact accepted match for the correctly spelled name (usage key 66R7C); preserve the source spelling and treat the correction as orthographic only, not specimen re-identification.",
+      "reportedPositiveBlocks": [
+        { "site": "Asipulo, Ifugao", "blocks": ["Rice paddy"] },
+        { "site": "Bagumbayan, Kalinga", "blocks": ["Rice paddy", "Irrigation canal/creek"] }
+      ]
+    },
+    {
+      "commonNameVerbatim": "Mosquito carp",
+      "scientificNameVerbatim": "Gambusia affinis",
+      "proposedCurrentName": "Gambusia affinis (Baird & Girard, 1853)",
+      "crosswalkBasis": "The article prints this binomial in its methods; Catalogue of Life XR already contains an exact accepted match (usage key 6K97T). A backbone match does not verify the study animals.",
+      "reportedPositiveBlocks": [
+        { "site": "Natonin, Mountain Province", "blocks": ["Rice paddy"] }
+      ],
+      "sourceOriginLabel": "The paper lists the source row in its exotic-species section; this is retained as the paper's classification only."
+    },
+    {
+      "commonNameVerbatim": "Million fish",
+      "scientificNameVerbatim": "Poecilla reticulata",
+      "proposedCurrentName": "Poecilia reticulata Peters, 1859",
+      "crosswalkBasis": "The article prints this likely misspelling in its methods; Catalogue of Life XR already contains an exact accepted match for the correctly spelled name (usage key 4KSF6). This is a proposed spelling crosswalk, not specimen re-identification.",
+      "reportedPositiveBlocks": [
+        { "site": "Asipulo, Ifugao", "blocks": ["Rice paddy", "Irrigation canal/creek"] },
+        { "site": "Bagumbayan, Kalinga", "blocks": ["Irrigation canal/creek"] },
+        { "site": "Tanglagan, Apayao", "blocks": ["Rice paddy", "Irrigation canal/creek"] }
+      ],
+      "sourceOriginLabel": "The paper lists the source row in its exotic-species section; this is retained as the paper's classification only."
+    }
+  ],
+  "siteLocalityLimits": {
+    "clusters": [
+      { "site": "Asipulo, Ifugao", "administrativePrecision": "study cluster/province text only" },
+      { "site": "Natonin, Mountain Province", "administrativePrecision": "study cluster/province text only" },
+      { "site": "Bagumbayan, Kalinga", "administrativePrecision": "study cluster/province text only" },
+      { "site": "Tanglagan, Apayao", "administrativePrecision": "study cluster/province text only" }
+    ],
+    "notProvided": ["field dates", "coordinates", "named irrigation channel or creek", "per-quadrat taxon data", "voucher identifiers", "photo-to-specimen crosswalk"],
+    "lapatContext": "The paper discusses a community lapat practice around a creek in Tanglagan but supplies no authoritative mapped boundary. Do not infer or publish a protected/community area from the paper; seek community and agency validation before any such mapping."
+  },
+  "rights": {
+    "status": "unresolved-conflicting-displayed-licenses",
+    "journalPage": "CC BY 4.0",
+    "pdfFrontMatter": "CC BY-NC 3.0 Unported",
+    "publisherScholarlyPage": "CC BY-ND-NC 4.0",
+    "handling": "No numeric values, maps, or extensive text reproduced. No public app use or republishing permission inferred."
+  },
+  "disposition": {
+    "clustersScreened": 4,
+    "sourceReportedFishTaxonCandidates": 3,
+    "namedWaterbodyOccurrencesAdded": 0,
+    "speciesAssertionsAdded": 0,
+    "publicAppRowsAdded": 0,
+    "geometryAdded": 0,
+    "dietSafetyOrCatchabilityClaimsAdded": 0,
+    "publicationApproval": false,
+    "reason": "The paper offers positive site/block-level research leads but no dates, precise waterbody identity, coordinates or vouchers; taxonomy spellings need field-level review, quadrat non-detection is not absence, and license statements conflict."
+  },
+  "nextAction": "Request the original field dates, site/block-to-waterbody crosswalk, fish identification references and vouchers/photos, and controlling reuse terms from the article authors/publisher. Keep these as historical cluster-level candidates until independently validated."
+}
