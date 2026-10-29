@@ -1,0 +1,1196 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-30",
+  "status": "cross-regional-freshwater-source-reviewed;taxonomic-and-station-decisions-pending;research-only",
+  "purpose": "Review a reusable freshwater fish assemblage dataset as a shared Agno River Basin lead crossing three Luzon administrative regions; prepare source-bounded records for later station, taxonomy, and product-admission review.",
+  "source": {
+    "dataset": {
+      "sourceId": "agno-river-basin-tenio-2026-data",
+      "title": "Diversity and Distribution of Freshwater Fish in Mineralized Watersheds of the Agno River Basin, Northern Philippines",
+      "citation": "Tenio, K. F., Cui, L., Faustino-Eslava, D., Guotana, J. M. R., Padrones, J., Alejo, K., Casa, M., Gonzalvo, F. I. P., Guevarra, E. J., Areglado, R. L. D., Regalado, M. R., Byrne, P., Williams, R., & Biles, E. (2026). Data collection. University of Glasgow Enlighten Research Data. https://doi.org/10.5525/gla.researchdata.2287",
+      "url": "https://researchdata.gla.ac.uk/2287/",
+      "doi": "10.5525/gla.researchdata.2287",
+      "downloadUrl": "https://researchdata.gla.ac.uk/2287/1/Data_2287.zip",
+      "readmeUrl": "https://researchdata.gla.ac.uk/2287/2/README_2287.txt",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "access": "Dataset archive and README downloaded from the University of Glasgow research-data record; archive extracted locally. Repository page declares both files visible to anyone under CC BY 4.0.",
+      "localRawDirectory": "raw/agno-river-dataset-screen-20261030/",
+      "files": [
+        {
+          "path": "Data_2287.zip",
+          "bytes": 4830,
+          "sha256": "2acd528d5e1a47643bbc80002ed85168b2d7809e23c3de978b176c04983547fb"
+        },
+        {
+          "path": "README_2287.txt",
+          "bytes": 861,
+          "sha256": "bea0dd7258b6cfb6599ba5445b4072fa1df2efbb5017676333b4cdbf3c2e6d89"
+        },
+        {
+          "path": "extracted/Fish_count.csv",
+          "bytes": 1661,
+          "sha256": "5311c271b9f0874c4db44560530077476f3b7740f02859ddff4af7254454806b"
+        },
+        {
+          "path": "extracted/Sampling_sites.csv",
+          "bytes": 851,
+          "sha256": "9c55a2ddc98591a1928555c17b7a07b391314c10a7ce0db4ea0bc5b6ce183e39"
+        },
+        {
+          "path": "extracted/Water_quality_dry_season_July_2021.csv",
+          "bytes": 4300,
+          "sha256": "8e52b1974dcc7b3972123da74ba306e971bb1d79bc6afc78ea9b05b8f5095e4e"
+        },
+        {
+          "path": "extracted/Water_quality_wet_season_January_2022.csv",
+          "bytes": 3952,
+          "sha256": "2042c93f10f455376d3195172f96d94b6245f7e2713027644bc231c46b0d7d2a"
+        }
+      ]
+    },
+    "article": {
+      "sourceId": "agno-river-basin-tenio-2026-article",
+      "citation": "Tenio, K. F. C., et al. (2026). Diversity and distribution of freshwater fish in mineralized watersheds of the Agno River Basin, northern Philippines. Watershed Ecology and the Environment, 8, 248–260. https://doi.org/10.1016/j.wsee.2026.05.001",
+      "url": "https://eprints.gla.ac.uk/386293/",
+      "fullTextUrl": "https://researchonline.ljmu.ac.uk/id/eprint/28808/1/Diversity%20and%20distribution%20of%20freshwater%20fish%20in%20mineralized%20watersheds%20of%20the%20Agno%20River%20Basin%2C%20northern%20Philippines.pdf",
+      "doi": "10.1016/j.wsee.2026.05.001",
+      "license": "CC BY 4.0",
+      "access": "University repository metadata and complete repository-hosted article PDF were read. The article states CC BY 4.0; no PDF retained locally."
+    }
+  },
+  "studyScope": {
+    "waterbodySystem": "Agno River Basin, Northern Luzon; eight source-named sampling stations across Benguet, Pangasinan and Tarlac. This is station-level evidence, not a basin-wide checklist or complete fish inventory.",
+    "administrativeCoverage": [
+      "Cordillera Administrative Region (CAR)",
+      "Region I (Ilocos Region)",
+      "Region III (Central Luzon)"
+    ],
+    "administrativeAssignmentMethod": "Province-to-region association uses the checked-in PSA-based administrative-registry.json; it is a geographic crosswalk, not a station boundary source.",
+    "periodConflict": {
+      "repositoryDatasetMetadata": "Collection period July 2021–January 2022; repository description and README map wet season to January 2022 and dry season to July 2021.",
+      "articleAbstract": "States fish assemblages were sampled in July 2021 and January 2022 without mapping each date to a season.",
+      "articleMethods": "Sections 2.2–2.3 say July was wet and January dry, the opposite of repository season labels.",
+      "matrixLabels": "Fish_count.csv provides only Wet/Dry columns and no per-record dates.",
+      "disposition": "Retain the matrix Wet/Dry labels and both source mappings as a conflict; do not assign exact dates to season-specific counts until resolved."
+    },
+    "samplingDesign": "Article reports one fish-sampling visit per site per season using electrofishing and seine netting along a 100 m riverbank-parallel transect, up to 2 hours per station. Caught specimens were counted and identified morphologically; representative specimens were sent to the UPLB Museum of Natural History for validation. The 10-day window and single visit per season limit temporal inference.",
+    "stationCountArticle": 8,
+    "stationCountFishMatrix": 7,
+    "stationSeasonColumns": 14,
+    "readmeConflicts": [
+      "README cites Tenio et al. (2023) though linked dataset and paper are from 2026.",
+      "README names a dry-season water-quality file ending January_2022, but actual archive has Water_quality_dry_season_July_2021.csv."
+    ],
+    "stations": [
+      {
+        "stationId": "ARB1",
+        "catchmentLocationVerbatim": "Upper Agno",
+        "siteLabelVerbatim": "Kabayan, Benguet",
+        "articleTable1SiteLabel": "Kabayan, Benguet",
+        "province": "Benguet",
+        "provincePsgcCode": "1401100000",
+        "regionId": "1400000000",
+        "regionName": "Cordillera Administrative Region (CAR)",
+        "coordinatesWgs84DecimalDegrees": {
+          "latitude": 16.635,
+          "longitude": 120.8225
+        },
+        "sourceCsvCoordinateFieldLabels": {
+          "latitudeValueField": "Northing",
+          "longitudeValueField": "Easting"
+        },
+        "elevationMasl": 1063,
+        "dominantLandUseUpstreamVerbatim": "Upland agriculture",
+        "fishCountMatrixColumnPresent": true,
+        "stationIdentityNote": null
+      },
+      {
+        "stationId": "ARB2",
+        "catchmentLocationVerbatim": "Upper Agno",
+        "siteLabelVerbatim": "Bokod, Benguet",
+        "articleTable1SiteLabel": "Bokod, Benguet",
+        "province": "Benguet",
+        "provincePsgcCode": "1401100000",
+        "regionId": "1400000000",
+        "regionName": "Cordillera Administrative Region (CAR)",
+        "coordinatesWgs84DecimalDegrees": {
+          "latitude": 16.4781,
+          "longitude": 120.8245
+        },
+        "sourceCsvCoordinateFieldLabels": {
+          "latitudeValueField": "Northing",
+          "longitudeValueField": "Easting"
+        },
+        "elevationMasl": 841,
+        "dominantLandUseUpstreamVerbatim": "Upland agriculture and forest vegetation",
+        "fishCountMatrixColumnPresent": true,
+        "stationIdentityNote": null
+      },
+      {
+        "stationId": "ARB3",
+        "catchmentLocationVerbatim": "Upper Agno",
+        "siteLabelVerbatim": "Baloy, Benguet",
+        "articleTable1SiteLabel": "Baloy Bridge, Benguet",
+        "province": "Benguet",
+        "provincePsgcCode": "1401100000",
+        "regionId": "1400000000",
+        "regionName": "Cordillera Administrative Region (CAR)",
+        "coordinatesWgs84DecimalDegrees": {
+          "latitude": 16.3846,
+          "longitude": 120.7224
+        },
+        "sourceCsvCoordinateFieldLabels": {
+          "latitudeValueField": "Northing",
+          "longitudeValueField": "Easting"
+        },
+        "elevationMasl": 488,
+        "dominantLandUseUpstreamVerbatim": "Active mining area",
+        "fishCountMatrixColumnPresent": false,
+        "stationIdentityNote": "Source and article locality strings differ; retain both pending local feature crosswalk."
+      },
+      {
+        "stationId": "ARB4",
+        "catchmentLocationVerbatim": "Upper Agno",
+        "siteLabelVerbatim": "Dalapurip, Benguet",
+        "articleTable1SiteLabel": "Dalupirip, Benguet",
+        "province": "Benguet",
+        "provincePsgcCode": "1401100000",
+        "regionId": "1400000000",
+        "regionName": "Cordillera Administrative Region (CAR)",
+        "coordinatesWgs84DecimalDegrees": {
+          "latitude": 16.3303,
+          "longitude": 120.7295
+        },
+        "sourceCsvCoordinateFieldLabels": {
+          "latitudeValueField": "Northing",
+          "longitudeValueField": "Easting"
+        },
+        "elevationMasl": 383,
+        "dominantLandUseUpstreamVerbatim": "Upland agriculture and forest vegetation",
+        "fishCountMatrixColumnPresent": true,
+        "stationIdentityNote": "Source and article locality strings differ; retain both pending local feature crosswalk."
+      },
+      {
+        "stationId": "ARB5",
+        "catchmentLocationVerbatim": "Lower Agno",
+        "siteLabelVerbatim": "San Roque, San Manuel, Pangasinan",
+        "articleTable1SiteLabel": "San Roque, Pangasinan",
+        "province": "Pangasinan",
+        "provincePsgcCode": "0105500000",
+        "regionId": "0100000000",
+        "regionName": "Region I (Ilocos Region)",
+        "coordinatesWgs84DecimalDegrees": {
+          "latitude": 16.1056,
+          "longitude": 120.7019
+        },
+        "sourceCsvCoordinateFieldLabels": {
+          "latitudeValueField": "Northing",
+          "longitudeValueField": "Easting"
+        },
+        "elevationMasl": 79,
+        "dominantLandUseUpstreamVerbatim": "San Roque Dam outflow",
+        "fishCountMatrixColumnPresent": true,
+        "stationIdentityNote": "Source and article locality strings differ; retain both pending local feature crosswalk."
+      },
+      {
+        "stationId": "ARB6",
+        "catchmentLocationVerbatim": "Lower Agno",
+        "siteLabelVerbatim": "Viray, Natividad, Pangasinan",
+        "articleTable1SiteLabel": "Viray, Natividad, Pangasinan",
+        "province": "Pangasinan",
+        "provincePsgcCode": "0105500000",
+        "regionId": "0100000000",
+        "regionName": "Region I (Ilocos Region)",
+        "coordinatesWgs84DecimalDegrees": {
+          "latitude": 16.0585,
+          "longitude": 120.8345
+        },
+        "sourceCsvCoordinateFieldLabels": {
+          "latitudeValueField": "Northing",
+          "longitudeValueField": "Easting"
+        },
+        "elevationMasl": 168,
+        "dominantLandUseUpstreamVerbatim": "Mineralized subwatershed without mining activities",
+        "fishCountMatrixColumnPresent": true,
+        "stationIdentityNote": null
+      },
+      {
+        "stationId": "ARB7",
+        "catchmentLocationVerbatim": "Lower Agno",
+        "siteLabelVerbatim": "Paniqui, Tarlac",
+        "articleTable1SiteLabel": "Paniqui, Tarlac",
+        "province": "Tarlac",
+        "provincePsgcCode": "0306900000",
+        "regionId": "0300000000",
+        "regionName": "Region III (Central Luzon)",
+        "coordinatesWgs84DecimalDegrees": {
+          "latitude": 15.6974,
+          "longitude": 120.4977
+        },
+        "sourceCsvCoordinateFieldLabels": {
+          "latitudeValueField": "Northing",
+          "longitudeValueField": "Easting"
+        },
+        "elevationMasl": 12,
+        "dominantLandUseUpstreamVerbatim": "Lowland agriculture",
+        "fishCountMatrixColumnPresent": true,
+        "stationIdentityNote": null
+      },
+      {
+        "stationId": "ARB8",
+        "catchmentLocationVerbatim": "Lower Agno",
+        "siteLabelVerbatim": "Bocboc, San Carlos, Pangasinan",
+        "articleTable1SiteLabel": "Bocboc, San Carlos, Pangasinan",
+        "province": "Pangasinan",
+        "provincePsgcCode": "0105500000",
+        "regionId": "0100000000",
+        "regionName": "Region I (Ilocos Region)",
+        "coordinatesWgs84DecimalDegrees": {
+          "latitude": 15.8917,
+          "longitude": 120.2536
+        },
+        "sourceCsvCoordinateFieldLabels": {
+          "latitudeValueField": "Northing",
+          "longitudeValueField": "Easting"
+        },
+        "elevationMasl": 0,
+        "dominantLandUseUpstreamVerbatim": "Outlet of the Agno River Basin",
+        "fishCountMatrixColumnPresent": true,
+        "stationIdentityNote": null
+      }
+    ]
+  },
+  "fishMatrixReview": {
+    "csvFile": "Fish_count.csv",
+    "headerRows": 2,
+    "taxonLabelRows": 23,
+    "speciesLevelLabelRows": 20,
+    "genusOnlyRows": 3,
+    "stationSeasonColumns": 14,
+    "stationIdsPresent": [
+      "ARB1",
+      "ARB2",
+      "ARB4",
+      "ARB5",
+      "ARB6",
+      "ARB7",
+      "ARB8"
+    ],
+    "nonzeroTaxonStationSeasonCells": 65,
+    "totalIndividualsAcrossMatrix": 2599,
+    "stationSummary": {
+      "ARB1": {
+        "totalIndividuals": 277,
+        "wetIndividuals": 261,
+        "dryIndividuals": 16,
+        "taxonLabelRichness": 4
+      },
+      "ARB2": {
+        "totalIndividuals": 720,
+        "wetIndividuals": 305,
+        "dryIndividuals": 415,
+        "taxonLabelRichness": 3
+      },
+      "ARB4": {
+        "totalIndividuals": 416,
+        "wetIndividuals": 143,
+        "dryIndividuals": 273,
+        "taxonLabelRichness": 9
+      },
+      "ARB5": {
+        "totalIndividuals": 245,
+        "wetIndividuals": 233,
+        "dryIndividuals": 12,
+        "taxonLabelRichness": 10
+      },
+      "ARB6": {
+        "totalIndividuals": 659,
+        "wetIndividuals": 601,
+        "dryIndividuals": 58,
+        "taxonLabelRichness": 3
+      },
+      "ARB7": {
+        "totalIndividuals": 137,
+        "wetIndividuals": 51,
+        "dryIndividuals": 86,
+        "taxonLabelRichness": 10
+      },
+      "ARB8": {
+        "totalIndividuals": 145,
+        "wetIndividuals": 114,
+        "dryIndividuals": 31,
+        "taxonLabelRichness": 6
+      }
+    },
+    "publishedTable5CrossCheck": "For ARB1, ARB2 and ARB4–ARB8, CSV-derived richness/abundance exactly match article Table 5. ARB3 is absent from the CSV matrix; article Table 5 reports n.d. and states no fish samples were found there. This is only the study sampling result, not absence from the station or basin.",
+    "taxa": [
+      {
+        "sourceNameVerbatim": "Awaous sp.",
+        "sourceRank": "genus-unresolved",
+        "nonzeroStationSeasonCells": 3,
+        "individualCountFromSourceMatrix": 262,
+        "nonzeroCounts": [
+          {
+            "stationId": "ARB1",
+            "seasonLabelVerbatim": "wet",
+            "count": 245
+          },
+          {
+            "stationId": "ARB1",
+            "seasonLabelVerbatim": "dry",
+            "count": 5
+          },
+          {
+            "stationId": "ARB6",
+            "seasonLabelVerbatim": "dry",
+            "count": 12
+          }
+        ],
+        "taxonomyProposal": null
+      },
+      {
+        "sourceNameVerbatim": "Arius manillensis (Valenciennes, 1840)",
+        "sourceRank": "species-label",
+        "nonzeroStationSeasonCells": 2,
+        "individualCountFromSourceMatrix": 23,
+        "nonzeroCounts": [
+          {
+            "stationId": "ARB8",
+            "seasonLabelVerbatim": "wet",
+            "count": 1
+          },
+          {
+            "stationId": "ARB8",
+            "seasonLabelVerbatim": "dry",
+            "count": 22
+          }
+        ],
+        "taxonomyProposal": {
+          "matchType": "EXACT",
+          "confidence": 100,
+          "usage": {
+            "key": "GQWT",
+            "name": "Arius manillensis Valenciennes, 1840",
+            "rank": "SPECIES",
+            "status": "ACCEPTED"
+          },
+          "acceptedUsage": null,
+          "synonym": false,
+          "querySha256": "705bdf5c1065d46fdf72b9c8f48c13d763d386c82dbba21be122ba6daa3e8977",
+          "responseSha256": "7c10b9893a89fa51a0a9a24e7781a4b9e0d152bcda26bc859541dc0873a193c5"
+        }
+      },
+      {
+        "sourceNameVerbatim": "Caranx ignobilis (Forsskal, 1775)",
+        "sourceRank": "species-label",
+        "nonzeroStationSeasonCells": 1,
+        "individualCountFromSourceMatrix": 1,
+        "nonzeroCounts": [
+          {
+            "stationId": "ARB7",
+            "seasonLabelVerbatim": "wet",
+            "count": 1
+          }
+        ],
+        "taxonomyProposal": {
+          "matchType": "EXACT",
+          "confidence": 100,
+          "usage": {
+            "key": "R2QF",
+            "name": "Caranx ignobilis (Forsskål, 1775)",
+            "rank": "SPECIES",
+            "status": "ACCEPTED"
+          },
+          "acceptedUsage": null,
+          "synonym": false,
+          "querySha256": "07335c098694c0598985ae7a9b5b52061eb73ac63bff4c6e04d9b019705ebd68",
+          "responseSha256": "ab9e16fcf72718308b4f09641f7b97a53a8c4ac90d260160bf848649ea1336cf"
+        }
+      },
+      {
+        "sourceNameVerbatim": "Channa striata (Bloch, 1793)",
+        "sourceRank": "species-label",
+        "nonzeroStationSeasonCells": 1,
+        "individualCountFromSourceMatrix": 2,
+        "nonzeroCounts": [
+          {
+            "stationId": "ARB5",
+            "seasonLabelVerbatim": "wet",
+            "count": 2
+          }
+        ],
+        "taxonomyProposal": {
+          "matchType": "EXACT",
+          "confidence": 100,
+          "usage": {
+            "key": "TM4H",
+            "name": "Channa striata (Bloch, 1793)",
+            "rank": "SPECIES",
+            "status": "ACCEPTED"
+          },
+          "acceptedUsage": null,
+          "synonym": false,
+          "querySha256": "2532d3a8eefeb7309499795688328e16b7bad29b4412d98581d39cbfdfee75bf",
+          "responseSha256": "7b82d3ec439e9c3dada444cc9e127b9916deb1bdf669dda515f7c22cb3d7926d"
+        }
+      },
+      {
+        "sourceNameVerbatim": "Clarias batrachus (Linnaeus, 1758)",
+        "sourceRank": "species-label",
+        "nonzeroStationSeasonCells": 2,
+        "individualCountFromSourceMatrix": 2,
+        "nonzeroCounts": [
+          {
+            "stationId": "ARB4",
+            "seasonLabelVerbatim": "wet",
+            "count": 1
+          },
+          {
+            "stationId": "ARB5",
+            "seasonLabelVerbatim": "wet",
+            "count": 1
+          }
+        ],
+        "taxonomyProposal": {
+          "matchType": "EXACT",
+          "confidence": 100,
+          "usage": {
+            "key": "VR9G",
+            "name": "Clarias batrachus (Linnaeus, 1758)",
+            "rank": "SPECIES",
+            "status": "ACCEPTED"
+          },
+          "acceptedUsage": null,
+          "synonym": false,
+          "querySha256": "06d10a03348e8513d5aaed4b5f6279051eb9055680bc89d03bfdc2c9e9039011",
+          "responseSha256": "d4103baf8c00bc02bbf81dbeaa632921694d7e48cc07f2d6ac7ccecd4764c3af"
+        }
+      },
+      {
+        "sourceNameVerbatim": "Cyprinus carpio (Linnaues, 1975)",
+        "sourceRank": "species-label",
+        "nonzeroStationSeasonCells": 2,
+        "individualCountFromSourceMatrix": 7,
+        "nonzeroCounts": [
+          {
+            "stationId": "ARB5",
+            "seasonLabelVerbatim": "wet",
+            "count": 1
+          },
+          {
+            "stationId": "ARB7",
+            "seasonLabelVerbatim": "dry",
+            "count": 6
+          }
+        ],
+        "taxonomyProposal": {
+          "matchType": "EXACT",
+          "confidence": 100,
+          "usage": {
+            "key": "33HRJ",
+            "name": "Cyprinus carpio Linnaeus, 1758",
+            "rank": "SPECIES",
+            "status": "ACCEPTED"
+          },
+          "acceptedUsage": null,
+          "synonym": false,
+          "querySha256": "238ba6bd7ae2315ef3d58958d17e7342395ffcfed0ebaf0dde2c28f04a6e209a",
+          "responseSha256": "00eef9d49759b72e1d220f08e0d8ee5a0bae0e633bb819fa49613048bbb91cbc"
+        }
+      },
+      {
+        "sourceNameVerbatim": "Glossogobius aureus (Akihito & Meguro, 1975)",
+        "sourceRank": "species-label",
+        "nonzeroStationSeasonCells": 3,
+        "individualCountFromSourceMatrix": 83,
+        "nonzeroCounts": [
+          {
+            "stationId": "ARB1",
+            "seasonLabelVerbatim": "wet",
+            "count": 3
+          },
+          {
+            "stationId": "ARB5",
+            "seasonLabelVerbatim": "wet",
+            "count": 74
+          },
+          {
+            "stationId": "ARB5",
+            "seasonLabelVerbatim": "dry",
+            "count": 6
+          }
+        ],
+        "taxonomyProposal": {
+          "matchType": "EXACT",
+          "confidence": 100,
+          "usage": {
+            "key": "3GDN8",
+            "name": "Glossogobius aureus Akihito & Meguro, 1975",
+            "rank": "SPECIES",
+            "status": "ACCEPTED"
+          },
+          "acceptedUsage": null,
+          "synonym": false,
+          "querySha256": "324ce3a7c07ae4c611882a092b21a17d09aa19023233ce47f87c09899ff382d0",
+          "responseSha256": "4de62709a003405ab58678202bc1fdea16dd86cc529e9da1760c1b68a238a9bd"
+        }
+      },
+      {
+        "sourceNameVerbatim": "Glossogobius celebius (Valenciennes, 1837)",
+        "sourceRank": "species-label",
+        "nonzeroStationSeasonCells": 7,
+        "individualCountFromSourceMatrix": 302,
+        "nonzeroCounts": [
+          {
+            "stationId": "ARB1",
+            "seasonLabelVerbatim": "wet",
+            "count": 4
+          },
+          {
+            "stationId": "ARB1",
+            "seasonLabelVerbatim": "dry",
+            "count": 7
+          },
+          {
+            "stationId": "ARB2",
+            "seasonLabelVerbatim": "wet",
+            "count": 74
+          },
+          {
+            "stationId": "ARB2",
+            "seasonLabelVerbatim": "dry",
+            "count": 59
+          },
+          {
+            "stationId": "ARB4",
+            "seasonLabelVerbatim": "wet",
+            "count": 89
+          },
+          {
+            "stationId": "ARB4",
+            "seasonLabelVerbatim": "dry",
+            "count": 28
+          },
+          {
+            "stationId": "ARB7",
+            "seasonLabelVerbatim": "wet",
+            "count": 41
+          }
+        ],
+        "taxonomyProposal": {
+          "matchType": "EXACT",
+          "confidence": 100,
+          "usage": {
+            "key": "3GDNH",
+            "name": "Glossogobius celebius (Valenciennes, 1837)",
+            "rank": "SPECIES",
+            "status": "ACCEPTED"
+          },
+          "acceptedUsage": null,
+          "synonym": false,
+          "querySha256": "9859e054f0ebc02de53b43d2208211da4d1fa0af945115825933253e9331287e",
+          "responseSha256": "f72ca0b684fc4073804bcc18133f62ff3d2fda37d4253b4354d4ff13b4cbb89d"
+        }
+      },
+      {
+        "sourceNameVerbatim": "Glossogobius giuris (Hamilton, 1822)",
+        "sourceRank": "species-label",
+        "nonzeroStationSeasonCells": 8,
+        "individualCountFromSourceMatrix": 284,
+        "nonzeroCounts": [
+          {
+            "stationId": "ARB1",
+            "seasonLabelVerbatim": "wet",
+            "count": 9
+          },
+          {
+            "stationId": "ARB1",
+            "seasonLabelVerbatim": "dry",
+            "count": 4
+          },
+          {
+            "stationId": "ARB4",
+            "seasonLabelVerbatim": "wet",
+            "count": 12
+          },
+          {
+            "stationId": "ARB4",
+            "seasonLabelVerbatim": "dry",
+            "count": 194
+          },
+          {
+            "stationId": "ARB5",
+            "seasonLabelVerbatim": "wet",
+            "count": 52
+          },
+          {
+            "stationId": "ARB5",
+            "seasonLabelVerbatim": "dry",
+            "count": 2
+          },
+          {
+            "stationId": "ARB7",
+            "seasonLabelVerbatim": "wet",
+            "count": 4
+          },
+          {
+            "stationId": "ARB8",
+            "seasonLabelVerbatim": "wet",
+            "count": 7
+          }
+        ],
+        "taxonomyProposal": {
+          "matchType": "EXACT",
+          "confidence": 100,
+          "usage": {
+            "key": "3GDNT",
+            "name": "Glossogobius giuris (Hamilton, 1822)",
+            "rank": "SPECIES",
+            "status": "ACCEPTED"
+          },
+          "acceptedUsage": null,
+          "synonym": false,
+          "querySha256": "0711744d47e270e9bb4da1e081ce9c2bb58a8583e750c09d940309c2a6497aa0",
+          "responseSha256": "4c601db7cd2ead4d810ce862383240b618c3e3a06f348dfe77a11e5e89d9af86"
+        }
+      },
+      {
+        "sourceNameVerbatim": "Leiopotherapon plumbeus (Kner, 1864)",
+        "sourceRank": "species-label",
+        "nonzeroStationSeasonCells": 5,
+        "individualCountFromSourceMatrix": 38,
+        "nonzeroCounts": [
+          {
+            "stationId": "ARB4",
+            "seasonLabelVerbatim": "wet",
+            "count": 16
+          },
+          {
+            "stationId": "ARB4",
+            "seasonLabelVerbatim": "dry",
+            "count": 11
+          },
+          {
+            "stationId": "ARB5",
+            "seasonLabelVerbatim": "wet",
+            "count": 4
+          },
+          {
+            "stationId": "ARB7",
+            "seasonLabelVerbatim": "wet",
+            "count": 1
+          },
+          {
+            "stationId": "ARB7",
+            "seasonLabelVerbatim": "dry",
+            "count": 6
+          }
+        ],
+        "taxonomyProposal": {
+          "matchType": "EXACT",
+          "confidence": 100,
+          "usage": {
+            "key": "3SZHP",
+            "name": "Leiopotherapon plumbeus (Kner, 1864)",
+            "rank": "SPECIES",
+            "status": "ACCEPTED"
+          },
+          "acceptedUsage": null,
+          "synonym": false,
+          "querySha256": "96b2171c21e31c9bc17ea387f05994e30d7e376fd7cc240419c4870f0cca44c0",
+          "responseSha256": "d592dc081f53fc7aa82246026a20a8e9dc9042fd5a9803cf8cb25aea0546e548"
+        }
+      },
+      {
+        "sourceNameVerbatim": "Oreochromis mozambicus (Peters, 1852)",
+        "sourceRank": "species-label",
+        "nonzeroStationSeasonCells": 7,
+        "individualCountFromSourceMatrix": 167,
+        "nonzeroCounts": [
+          {
+            "stationId": "ARB4",
+            "seasonLabelVerbatim": "wet",
+            "count": 3
+          },
+          {
+            "stationId": "ARB4",
+            "seasonLabelVerbatim": "dry",
+            "count": 2
+          },
+          {
+            "stationId": "ARB5",
+            "seasonLabelVerbatim": "wet",
+            "count": 42
+          },
+          {
+            "stationId": "ARB5",
+            "seasonLabelVerbatim": "dry",
+            "count": 4
+          },
+          {
+            "stationId": "ARB7",
+            "seasonLabelVerbatim": "wet",
+            "count": 4
+          },
+          {
+            "stationId": "ARB8",
+            "seasonLabelVerbatim": "wet",
+            "count": 105
+          },
+          {
+            "stationId": "ARB8",
+            "seasonLabelVerbatim": "dry",
+            "count": 7
+          }
+        ],
+        "taxonomyProposal": {
+          "matchType": "VARIANT",
+          "confidence": 100,
+          "usage": {
+            "key": "74T3D",
+            "name": "Oreochromis mozambica (Peters, 1852)",
+            "rank": "SPECIES",
+            "status": "SYNONYM"
+          },
+          "acceptedUsage": {
+            "key": "6T53D",
+            "name": "Oreochromis mossambicus (Peters, 1852)",
+            "rank": "SPECIES"
+          },
+          "synonym": true,
+          "querySha256": "f3d3c3768f9b7e6d0c85b9891cef0e26e881d845a18065b243518147fcec5226",
+          "responseSha256": "a7fc0d2ca64797cf70eb3f47c009b35ddb7888ec577be4ce09736814e600dd04"
+        }
+      },
+      {
+        "sourceNameVerbatim": "Oreochromis niloticus (Linnaeus, 1758)",
+        "sourceRank": "species-label",
+        "nonzeroStationSeasonCells": 2,
+        "individualCountFromSourceMatrix": 78,
+        "nonzeroCounts": [
+          {
+            "stationId": "ARB5",
+            "seasonLabelVerbatim": "wet",
+            "count": 49
+          },
+          {
+            "stationId": "ARB7",
+            "seasonLabelVerbatim": "dry",
+            "count": 29
+          }
+        ],
+        "taxonomyProposal": {
+          "matchType": "EXACT",
+          "confidence": 100,
+          "usage": {
+            "key": "6SSRC",
+            "name": "Oreochromis niloticus (Linnaeus, 1758)",
+            "rank": "SPECIES",
+            "status": "ACCEPTED"
+          },
+          "acceptedUsage": null,
+          "synonym": false,
+          "querySha256": "da6aa653c1deb12079f5fc21f008894312f523d1f1dada09d12ba19ad2051fd7",
+          "responseSha256": "09f13f43a92d0d3c7a17567888da0dd2cea2fa054eec6195967eab734d29bcb4"
+        }
+      },
+      {
+        "sourceNameVerbatim": "Pterygoplichthys disjunctivus (Weber, 1991)",
+        "sourceRank": "species-label",
+        "nonzeroStationSeasonCells": 2,
+        "individualCountFromSourceMatrix": 4,
+        "nonzeroCounts": [
+          {
+            "stationId": "ARB5",
+            "seasonLabelVerbatim": "wet",
+            "count": 2
+          },
+          {
+            "stationId": "ARB7",
+            "seasonLabelVerbatim": "dry",
+            "count": 2
+          }
+        ],
+        "taxonomyProposal": {
+          "matchType": "EXACT",
+          "confidence": 100,
+          "usage": {
+            "key": "4Q7BB",
+            "name": "Pterygoplichthys disjunctivus (Weber, 1991)",
+            "rank": "SPECIES",
+            "status": "ACCEPTED"
+          },
+          "acceptedUsage": null,
+          "synonym": false,
+          "querySha256": "e958aef1e7c78e653004199677d880e6a713ba740251cf4704d59d662209a829",
+          "responseSha256": "50213669a5bb0bba89d736c362496675f779b299b7d9685047f55d4c78578777"
+        }
+      },
+      {
+        "sourceNameVerbatim": "Rhinogobius bucculentus (Herre, 1927)",
+        "sourceRank": "species-label",
+        "nonzeroStationSeasonCells": 2,
+        "individualCountFromSourceMatrix": 366,
+        "nonzeroCounts": [
+          {
+            "stationId": "ARB6",
+            "seasonLabelVerbatim": "wet",
+            "count": 344
+          },
+          {
+            "stationId": "ARB6",
+            "seasonLabelVerbatim": "dry",
+            "count": 22
+          }
+        ],
+        "taxonomyProposal": {
+          "matchType": "EXACT",
+          "confidence": 100,
+          "usage": {
+            "key": "4S8YH",
+            "name": "Rhinogobius bucculentus (Herre, 1927)",
+            "rank": "SPECIES",
+            "status": "ACCEPTED"
+          },
+          "acceptedUsage": null,
+          "synonym": false,
+          "querySha256": "f85deb5a738357076ee6baceaffbeafef55f134b68e3095cb621911bd75953dc",
+          "responseSha256": "96550d0693e8308b9fdb46f78930237ce864cc223bf0d1b6ec014ee802046f86"
+        }
+      },
+      {
+        "sourceNameVerbatim": "Sarotherodon melanotheron (Rüppell, 1852)",
+        "sourceRank": "species-label",
+        "nonzeroStationSeasonCells": 3,
+        "individualCountFromSourceMatrix": 46,
+        "nonzeroCounts": [
+          {
+            "stationId": "ARB5",
+            "seasonLabelVerbatim": "wet",
+            "count": 6
+          },
+          {
+            "stationId": "ARB7",
+            "seasonLabelVerbatim": "dry",
+            "count": 39
+          },
+          {
+            "stationId": "ARB8",
+            "seasonLabelVerbatim": "wet",
+            "count": 1
+          }
+        ],
+        "taxonomyProposal": {
+          "matchType": "EXACT",
+          "confidence": 100,
+          "usage": {
+            "key": "79PHB",
+            "name": "Sarotherodon melanotheron Rüppell, 1852",
+            "rank": "SPECIES",
+            "status": "ACCEPTED"
+          },
+          "acceptedUsage": null,
+          "synonym": false,
+          "querySha256": "09436998335538863523dc446cc1d79686d991f83d6294c061b3884b7908af1c",
+          "responseSha256": "1658c7a1676b75b5743043aebfeec9c70d37810c4aea8386f16450bfdd2d6f08"
+        }
+      },
+      {
+        "sourceNameVerbatim": "Scatophagus argus (Linnaeus, 1766)",
+        "sourceRank": "species-label",
+        "nonzeroStationSeasonCells": 1,
+        "individualCountFromSourceMatrix": 1,
+        "nonzeroCounts": [
+          {
+            "stationId": "ARB8",
+            "seasonLabelVerbatim": "dry",
+            "count": 1
+          }
+        ],
+        "taxonomyProposal": {
+          "matchType": "EXACT",
+          "confidence": 100,
+          "usage": {
+            "key": "4V435",
+            "name": "Scatophagus argus (Linnaeus, 1766)",
+            "rank": "SPECIES",
+            "status": "ACCEPTED"
+          },
+          "acceptedUsage": null,
+          "synonym": false,
+          "querySha256": "d0f42d24a0bc3577feb45a4e206a8ca7ce5691ffb9c5a8cd70c7da48f978ece5",
+          "responseSha256": "0233bd2f633e3dddd28b2b2cf0e881815cbf030a699c10ad01329becff342ca6"
+        }
+      },
+      {
+        "sourceNameVerbatim": "Mugil cephalus (Linnaeus, 1758)",
+        "sourceRank": "species-label",
+        "nonzeroStationSeasonCells": 1,
+        "individualCountFromSourceMatrix": 1,
+        "nonzeroCounts": [
+          {
+            "stationId": "ARB8",
+            "seasonLabelVerbatim": "dry",
+            "count": 1
+          }
+        ],
+        "taxonomyProposal": {
+          "matchType": "EXACT",
+          "confidence": 100,
+          "usage": {
+            "key": "44J42",
+            "name": "Mugil cephalus Linnaeus, 1758",
+            "rank": "SPECIES",
+            "status": "ACCEPTED"
+          },
+          "acceptedUsage": null,
+          "synonym": false,
+          "querySha256": "e63f5a85489860605a4e15038e2906deb1a83aa02b1eb191b337810ec295e228",
+          "responseSha256": "4ada9e30d29b94e3db04b3e469c0ddae1c8d08bca3f6804b0802bbcc6184ab14"
+        }
+      },
+      {
+        "sourceNameVerbatim": "Barbodes sp.",
+        "sourceRank": "genus-unresolved",
+        "nonzeroStationSeasonCells": 1,
+        "individualCountFromSourceMatrix": 4,
+        "nonzeroCounts": [
+          {
+            "stationId": "ARB7",
+            "seasonLabelVerbatim": "dry",
+            "count": 4
+          }
+        ],
+        "taxonomyProposal": null
+      },
+      {
+        "sourceNameVerbatim": "Rhinogobius sp.",
+        "sourceRank": "genus-unresolved",
+        "nonzeroStationSeasonCells": 3,
+        "individualCountFromSourceMatrix": 205,
+        "nonzeroCounts": [
+          {
+            "stationId": "ARB2",
+            "seasonLabelVerbatim": "wet",
+            "count": 176
+          },
+          {
+            "stationId": "ARB2",
+            "seasonLabelVerbatim": "dry",
+            "count": 10
+          },
+          {
+            "stationId": "ARB4",
+            "seasonLabelVerbatim": "wet",
+            "count": 19
+          }
+        ],
+        "taxonomyProposal": null
+      },
+      {
+        "sourceNameVerbatim": "Pseudogobius javanicus (Bleeker, 1856)",
+        "sourceRank": "species-label",
+        "nonzeroStationSeasonCells": 4,
+        "individualCountFromSourceMatrix": 682,
+        "nonzeroCounts": [
+          {
+            "stationId": "ARB2",
+            "seasonLabelVerbatim": "wet",
+            "count": 55
+          },
+          {
+            "stationId": "ARB2",
+            "seasonLabelVerbatim": "dry",
+            "count": 346
+          },
+          {
+            "stationId": "ARB6",
+            "seasonLabelVerbatim": "wet",
+            "count": 257
+          },
+          {
+            "stationId": "ARB6",
+            "seasonLabelVerbatim": "dry",
+            "count": 24
+          }
+        ],
+        "taxonomyProposal": {
+          "matchType": "EXACT",
+          "confidence": 100,
+          "usage": {
+            "key": "4NXKB",
+            "name": "Pseudogobius javanicus (Bleeker, 1856)",
+            "rank": "SPECIES",
+            "status": "SYNONYM"
+          },
+          "acceptedUsage": {
+            "key": "4NXKK",
+            "name": "Pseudogobius poicilosoma (Bleeker, 1849)",
+            "rank": "SPECIES"
+          },
+          "synonym": true,
+          "querySha256": "16167f97ac549b5e4c9519c7be515efc1f7b68c8c623be8438911009744ba276",
+          "responseSha256": "867a2af60afd25b40c0e241ff9efb322d9af2afcece3f1e602dc75efe810ff00"
+        }
+      },
+      {
+        "sourceNameVerbatim": "Zenarchopterus philippinus (Peters, 1868)",
+        "sourceRank": "species-label",
+        "nonzeroStationSeasonCells": 2,
+        "individualCountFromSourceMatrix": 6,
+        "nonzeroCounts": [
+          {
+            "stationId": "ARB4",
+            "seasonLabelVerbatim": "wet",
+            "count": 2
+          },
+          {
+            "stationId": "ARB4",
+            "seasonLabelVerbatim": "dry",
+            "count": 4
+          }
+        ],
+        "taxonomyProposal": {
+          "matchType": "EXACT",
+          "confidence": 100,
+          "usage": {
+            "key": "5D2CY",
+            "name": "Zenarchopterus philippinus (Peters, 1868)",
+            "rank": "SPECIES",
+            "status": "ACCEPTED"
+          },
+          "acceptedUsage": null,
+          "synonym": false,
+          "querySha256": "e7d957006a8feba7a01f905a96c2eaa54be9efc6c94c91e5dd1c9817faf478e7",
+          "responseSha256": "9e652743591e2ece29c91ab94236ebb6437dbdaf099e6a91e068a8837c21caf8"
+        }
+      },
+      {
+        "sourceNameVerbatim": "Poecilla reticulata (Peters, 1859)",
+        "sourceRank": "species-label",
+        "nonzeroStationSeasonCells": 2,
+        "individualCountFromSourceMatrix": 18,
+        "nonzeroCounts": [
+          {
+            "stationId": "ARB4",
+            "seasonLabelVerbatim": "wet",
+            "count": 1
+          },
+          {
+            "stationId": "ARB4",
+            "seasonLabelVerbatim": "dry",
+            "count": 17
+          }
+        ],
+        "taxonomyProposal": {
+          "matchType": "VARIANT",
+          "confidence": 95,
+          "usage": {
+            "key": "4KSF6",
+            "name": "Poecilia reticulata Peters, 1859",
+            "rank": "SPECIES",
+            "status": "ACCEPTED"
+          },
+          "acceptedUsage": null,
+          "synonym": false,
+          "querySha256": "c00fe2bd255a9b6856d55dd641aec6c196fc74196b597b076dea11deb43763c2",
+          "responseSha256": "983be9f3c6cc1d17e7a051faa4dbe7463fb039c4be436940b63ef455cde21edd"
+        }
+      },
+      {
+        "sourceNameVerbatim": "Poecilla sphenops",
+        "sourceRank": "species-label",
+        "nonzeroStationSeasonCells": 1,
+        "individualCountFromSourceMatrix": 17,
+        "nonzeroCounts": [
+          {
+            "stationId": "ARB4",
+            "seasonLabelVerbatim": "dry",
+            "count": 17
+          }
+        ],
+        "taxonomyProposal": {
+          "matchType": "VARIANT",
+          "confidence": 89,
+          "usage": {
+            "key": "4KSFJ",
+            "name": "Poecilia sphenops Valenciennes, 1846",
+            "rank": "SPECIES",
+            "status": "ACCEPTED"
+          },
+          "acceptedUsage": null,
+          "synonym": false,
+          "querySha256": "5aa95a99b4a733c6b8030b9956d66282053b0aa63e14d38357509f45f15b2286",
+          "responseSha256": "597a8b5af2faefb178cf8ef9bf1fc619f7490848462059287918da0a5ac47bbc"
+        }
+      }
+    ]
+  },
+  "taxonomyReview": {
+    "method": "GBIF v2 species match API with explicit Catalogue of Life eXtended Release checklistKey; each full source binomial label submitted with kingdom=Animalia. Automated nomenclatural proposals only; not independent specimen identification or expert certification.",
+    "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+    "checklistName": "COL26.6 XR",
+    "checklistBankDatasetKey": "315557",
+    "indexCreatedAtUtc": "2026-07-18T07:34:50.904Z",
+    "indexBuildSha": "84c77c88ffb12cad1691fc477f1b8856101ce1c4",
+    "metadataSha256": "a250044c47c0f4efb89d860786f920e6fd8fca39df82f697a89796a6ae841b62",
+    "metadataRetrievedAtUtc": "2026-10-29T20:42:34.857Z",
+    "queriedBinomialLabels": 20,
+    "proposalsByTypeAndSourceStatus": {
+      "not-queried-genus-only": 3,
+      "exact-accepted": 16,
+      "variant-synonym": 1,
+      "exact-synonym": 1,
+      "variant-accepted": 2
+    },
+    "sourceStatus": "All 20 binomial labels returned HTTP 200. Three genus-only labels were not queried. All matches remain proposals; no taxa were projected."
+  },
+  "qualityAndInterpretation": [
+    "The 23-row matrix contains 20 binomial labels and three genus-only labels (Awaous sp., Barbodes sp., Rhinogobius sp.); it is not 23 resolved species names, despite the article abstract phrase “23 fish species.”",
+    "Dataset and article season/date mappings conflict; do not assign exact season dates to matrix values until authors or another primary source resolve the discrepancy.",
+    "Station ARB4 is “Dalapurip, Benguet” in the CSV and “Dalupirip, Benguet” in the article; retain both spellings pending local station feature crosswalk.",
+    "CSV coordinate headings are Northing/Easting; article Table 1 labels them N/E, and README says WGS84. Coordinates are source sampling points only—not reach lines, basin boundaries, access points or navigation directions.",
+    "CSV row “Oreochromis mozambicus” conflicts with article Table 4/Figure 2 “Oreochromis mossambicus”; CoL XR returns a variant/synonym proposal. Preserve both verbatim, no silent correction.",
+    "CSV has “Poecilla reticulata” and “Poecilla sphenops”; article Table 4/Figure 2 are inconsistent for the latter. GBIF returns variant matches; preserve source spellings pending specimen/author review.",
+    "Article and dataset use Pseudogobius javanicus; the selected CoL XR index treats the name as a synonym of Pseudogobius poicilosoma. This source-era identity conflict remains held.",
+    "Cyprinus carpio is printed with “Linnaues, 1975” authorship; CoL XR proposes Linnaeus, 1758. Preserve the printed authority pending review.",
+    "The article warns that single sampling visits and detectability limit absence inference. A positive historical sample does not establish present-day presence, catchability, diet, bait advice, fishing access, legality or safety.",
+    "ARB5 is associated with a source land-use note “San Roque Dam outflow”; this does not establish a reservoir boundary or legal fishing area."
+  ],
+  "rightsReview": {
+    "datasetAndReadmeLicense": "CC BY 4.0 on both files per University of Glasgow record. Attribute creators, title, source DOI and license; mark modifications; do not imply endorsement.",
+    "articleLicense": "Repository record/article front matter states CC BY 4.0.",
+    "redistributionDecision": "Continue field-level extraction with attribution; this review is not blanket product publication approval."
+  },
+  "decisions": {
+    "sourceRowsIngestedForResearch": 23,
+    "binomialTaxonomyProposals": 20,
+    "genusOnlyRowsResolved": 0,
+    "scientificSpeciesAssertionsAdded": 0,
+    "historicalStationSpeciesAssertionsAdded": 0,
+    "currentPresenceClaimsAdded": 0,
+    "dietAssertionsAdded": 0,
+    "waterbodyGeometryAdded": false,
+    "publicAppRowsAdded": 0,
+    "publicationApproval": false
+  },
+  "nextAction": "Resolve the season/date conflict with source authors or a primary source; independently review held taxonomy (especially Pseudogobius javanicus and Oreochromis/Poecilia spellings); verify station points and ARB4/ARB5 locality crosswalk before preparing a distinct historical station-level assertion batch. Keep this shared CAR/Region I/Region III source separate from CALABARZON completion while continuing lake, river, reservoir, stream and wetland evidence acquisition.",
+  "sourceReferences": [
+    "https://researchdata.gla.ac.uk/2287/",
+    "https://researchdata.gla.ac.uk/2287/1/Data_2287.zip",
+    "https://researchdata.gla.ac.uk/2287/2/README_2287.txt",
+    "https://eprints.gla.ac.uk/386293/",
+    "https://researchonline.ljmu.ac.uk/id/eprint/28808/1/Diversity%20and%20distribution%20of%20freshwater%20fish%20in%20mineralized%20watersheds%20of%20the%20Agno%20River%20Basin%2C%20northern%20Philippines.pdf",
+    "https://creativecommons.org/licenses/by/4.0/",
+    "https://techdocs.gbif.org/en/data-processing/taxonomy-interpretation",
+    "https://api.gbif.org/v2/species/match/metadata?checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b"
+  ],
+  "limitations": [
+    "Source station-level evidence does not establish province-wide or basin-wide completeness, legal or physical boundaries, or all-year distribution.",
+    "Historical 2021–2022 count data do not establish current presence, catchability, feeding behavior or bait suitability.",
+    "CoL XR matches do not validate author specimen IDs or resolve source-era conflicts.",
+    "Fish_count.csv has no exact date per observation; wet/dry date mapping is inconsistent between repository metadata and article methods.",
+    "The article table’s common names, conservation status and native/introduced labels are outside this review’s projection."
+  ]
+}

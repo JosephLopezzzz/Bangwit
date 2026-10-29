@@ -3,7 +3,7 @@
   "checkedOn": "2026-10-30",
   "status": "research-only-source-registry",
   "scope": "National acquisition references, freshwater spatial-source leads, and CALABARZON/Central Luzon identity/source leads. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 230,
+  "sourceCount": 232,
   "sources": [
     {
       "id": "gbif-col-xr-taxonomy-matching",
@@ -23,12 +23,14 @@
         "reviewFiles": [
           "calabarzon-laguna-gbif-triage-20261025.json",
           "calabarzon-labac-eia-fish-evidence-review-20261026.json",
-          "calabarzon-batangas-bay-poster-taxonomy-crosswalk-20261029.json"
+          "calabarzon-batangas-bay-poster-taxonomy-crosswalk-20261029.json",
+          "national-agno-river-basin-fish-survey-review-20261030.json"
         ],
         "additionalRawPaths": [
           "raw/calabarzon-laguna-gbif-triage-20261025/",
           "raw/calabarzon-labac-eia-col-xr-20261026",
-          "raw/batangas-bay-colxr-match-20261029/"
+          "raw/batangas-bay-colxr-match-20261029/",
+          "raw/agno-river-dataset-screen-20261030/taxonomy-colxr-20261030/"
         ]
       },
       "reuse": {
@@ -6988,6 +6990,82 @@
         "The profile heading sometimes says 'fish and other aquatic species'; its listed vernacular labels cannot all be assumed to be fish or mapped to accepted species names without separate evidence.",
         "The companion aquaculture page summarizes San Pablo City LGU and LLDA fish-cage/carrying-capacity information, not a wild-fish occurrence survey.",
         "The DHSUD eFOI search result describes a CLUP release in response to a thesis request, but neither the file nor terms for Bangwit reuse were verified."
+      ]
+    },
+    {
+      "id": "agno-river-basin-fish-survey-article-2026",
+      "title": "Diversity and distribution of freshwater fish in mineralized watersheds of the Agno River Basin, Northern Philippines",
+      "provider": "Watershed Ecology and the Environment / KeAi; repository copy hosted by University of Glasgow and Liverpool John Moores University",
+      "url": "https://eprints.gla.ac.uk/386293/",
+      "additionalUrls": [
+        "https://doi.org/10.1016/j.wsee.2026.05.001",
+        "https://researchonline.ljmu.ac.uk/id/eprint/28808/1/Diversity%20and%20distribution%20of%20freshwater%20fish%20in%20mineralized%20watersheds%20of%20the%20Agno%20River%20Basin%2C%20northern%20Philippines.pdf"
+      ],
+      "role": "Primary 2026 paper describing eight Agno River Basin freshwater sampling stations, fish-sampling methods, station table, source taxon spellings and aggregated species counts; cross-regional historical source for CAR, Region I and Region III, not a complete regional or current fish inventory.",
+      "checkedOn": "2026-10-30",
+      "sourceYear": 2026,
+      "access": {
+        "status": "University of Glasgow repository record and complete repository-hosted article PDF read; article front matter states CC BY 4.0. No local PDF retained.",
+        "reviewFiles": [
+          "national-agno-river-basin-fish-survey-review-20261030.json"
+        ],
+        "rawPath": null
+      },
+      "reuse": {
+        "metadata": "Cite authors, article, journal, DOI and repository source.",
+        "raw": "No article file retained in the repository worktree.",
+        "content": "Article carries CC BY 4.0; preserve attribution and license link, mark changes, and do not imply author endorsement. This source review does not itself approve app publication."
+      },
+      "publicationApproval": false,
+      "researchStatus": "historical-eight-station-fish-survey;cross-regional;season-date-conflict;taxonomy-and-locality-review-pending;research-only",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "caveats": [
+        "The study sampled selected stations once per season in 2021–2022 and cautions that detectability and limited temporal replication constrain absence and temporal inference.",
+        "The article methods map July to wet and January to dry, conflicting with University of Glasgow dataset metadata and README. Retain matrix season labels without assigning dates until resolved.",
+        "An abstract phrase says 23 fish species, but the source matrix has 20 binomial labels and three genus-only labels.",
+        "Source-era taxon identifications and CoL XR synonym/variant proposals require independent fish-taxonomy review.",
+        "Station points do not define river reaches, waterbody boundaries, access, catchability, diet or bait suitability."
+      ]
+    },
+    {
+      "id": "agno-river-basin-fish-assemblage-dataset-2026",
+      "title": "Diversity and Distribution of Freshwater Fish in Mineralized Watersheds of the Agno River Basin, Northern Philippines",
+      "provider": "University of Glasgow Enlighten Research Data; original data authors include VSU, UPLB and Liverpool John Moores University collaborators",
+      "url": "https://researchdata.gla.ac.uk/2287/",
+      "additionalUrls": [
+        "https://doi.org/10.5525/gla.researchdata.2287",
+        "https://researchdata.gla.ac.uk/2287/1/Data_2287.zip",
+        "https://researchdata.gla.ac.uk/2287/2/README_2287.txt",
+        "https://doi.org/10.1016/j.wsee.2026.05.001"
+      ],
+      "role": "CC BY 4.0 station-level fish counts and WGS84 sampling-site data associated with the 2026 Agno River Basin freshwater survey; shared cross-regional research source for Benguet/CAR, Pangasinan/Region I and Tarlac/Region III.",
+      "checkedOn": "2026-10-30",
+      "sourceYear": 2026,
+      "collectionPeriod": "July 2021–January 2022; repository and paper methods conflict on which season maps to each month.",
+      "access": {
+        "status": "Data archive and README downloaded from University of Glasgow record and extracted locally.",
+        "localRawSnapshot": "raw/agno-river-dataset-screen-20261030/",
+        "reviewFiles": [
+          "national-agno-river-basin-fish-survey-review-20261030.json"
+        ]
+      },
+      "reuse": {
+        "metadata": "Attribute the complete creator list, dataset title, University of Glasgow, DOI and CC BY 4.0 link; mark modifications.",
+        "raw": "Archive remains ignored local research storage; do not bundle raw archive or unreviewed response caches in the app.",
+        "content": "Data and README are CC BY 4.0. Derived historical station/count candidates may be prepared with attribution, but this research review does not constitute public-app admission or source-identity validation."
+      },
+      "publicationApproval": false,
+      "researchStatus": "cross-regional-historical-station-counts;season-date-conflict;taxonomy-proposals-pending;site-crosswalk-pending;research-only",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "caveats": [
+        "Archive includes eight station descriptions but fish-count matrix has seven station columns; article reports no fish specimens at ARB3 during the study.",
+        "Twenty binomial labels and three genus-only labels are present; the latter remain unresolved.",
+        "Repository README cites 2023 and has an incorrect dry-season filename/date; the linked data and article record are from 2026.",
+        "Do not map or interpret season counts as exact dates before resolving the repository-versus-article season mapping conflict.",
+        "“Northing/Easting” CSV field labels are reproduced in review alongside article Table 1 N/E headings; points are not reach geometry or legal boundaries.",
+        "The dataset does not establish current presence, catchability, diet, access, legal status or safety."
       ]
     }
   ],
