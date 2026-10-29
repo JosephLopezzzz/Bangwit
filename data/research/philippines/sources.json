@@ -3,8 +3,42 @@
   "checkedOn": "2026-10-30",
   "status": "research-only-source-registry",
   "scope": "National acquisition references, freshwater spatial-source leads, and CALABARZON/Central Luzon identity/source leads. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 254,
+  "sourceCount": 255,
   "sources": [
+    {
+      "id": "gbif-apayao-river-name-occurrence-screen-20261030",
+      "title": "GBIF Actinopterygii occurrence search for historical Apayao river-name leads",
+      "provider": "Global Biodiversity Information Facility (GBIF Secretariat)",
+      "url": "https://api.gbif.org/v1/occurrence/search",
+      "additionalUrls": [
+        "https://techdocs.gbif.org/en/openapi/v1/occurrence",
+        "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&limit=0&waterBody=Laguna+de+Bay"
+      ],
+      "role": "Bounded text-index discovery screen for ten river names from a historical Apayao abstract. Twenty exact waterBody/locality searches returned zero; this is not absence evidence and no records were admitted.",
+      "checkedOn": "2026-10-30",
+      "sourceYear": 2026,
+      "access": {
+        "status": "Twenty GBIF occurrence API requests returned HTTP 200 and count zero; Laguna de Bay query-path control returned count 22. All searches used country PH, CoL XR Actinopterygii taxon key 8VR36, its checklist key and limit=0. No record payload was requested or retained.",
+        "reviewFiles": [
+          "national-apayao-river-name-gbif-field-screen-20261030.json"
+        ]
+      },
+      "reuse": {
+        "metadata": "Exact API endpoint, filters, fields, terms and result counts recorded in the review artifact.",
+        "raw": "No occurrence records or snapshots downloaded.",
+        "content": "Zero-match counts do not support biological absence. No underlying record license was reviewed; any future positive result requires dataset-level license and record/locality assessment before reuse."
+      },
+      "publicationApproval": false,
+      "researchStatus": "bounded-gbif-apayao-river-name-screen;20-zero-text-matches;not-absence-evidence;research-only",
+      "license": "No record-level license assessed; no occurrence records retrieved",
+      "licenseUrl": null,
+      "caveats": [
+        "Exact strings may miss variants and imperfect field placement.",
+        "A positive control validates the request path only; its records are not part of this Apayao screen.",
+        "This Actinopterygii search excludes the abstract’s shellfish and other aquatic groups.",
+        "No scientific name, river identity, occurrence, geometry, safety or catchability assertion is established by this query."
+      ]
+    },
     {
       "id": "issaas-apayao-fish-shell-production-abstract-2009",
       "title": "Fish and shell production practices in Apayao Province",

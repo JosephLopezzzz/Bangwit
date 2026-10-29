@@ -1,0 +1,287 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-30",
+  "phaseId": "L6",
+  "regionIds": [
+    "1400000000"
+  ],
+  "status": "bounded-gbif-waterbody-locality-text-search-complete;20-zero-matches;not-absence-evidence;research-only",
+  "purpose": "Check whether GBIF currently indexes Actinopterygii occurrence records under the ten river names reported in the 2009 Apayao abstracts, without projecting points or treating nonmatches as absence.",
+  "sourceLead": {
+    "sourceId": "issaas-apayao-river-characterization-abstract-2009",
+    "reviewFile": "national-apayao-2009-fish-shell-river-abstracts-review-20261030.json",
+    "riverNames": [
+      "Acutan",
+      "Nabuangan",
+      "Barren",
+      "Cabicungan",
+      "Laco",
+      "Karagawan",
+      "Nagan",
+      "Binuan",
+      "Zumigue",
+      "Ziwanan"
+    ],
+    "riverNameStatus": "Printed names from a historical abstract; exact hydrographic identity, aliases and reach extent remain unresolved."
+  },
+  "endpoint": "https://api.gbif.org/v1/occurrence/search",
+  "taxonomy": {
+    "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+    "taxonKey": "8VR36",
+    "label": "Catalogue of Life Extended Release Actinopterygii",
+    "scope": "Ray-finned fishes only; this does not search the abstract’s shell or other non-fish labels."
+  },
+  "queryMethod": {
+    "parameters": {
+      "country": "PH",
+      "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+      "taxonKey": "8VR36",
+      "limit": 0
+    },
+    "fields": [
+      "waterBody",
+      "locality"
+    ],
+    "queryCount": 20,
+    "coordinatesRequired": false,
+    "matching": "GBIF indexed text search on the selected occurrence field; no geometry or locality equivalence was applied.",
+    "apiDocs": "https://techdocs.gbif.org/en/openapi/v1/occurrence"
+  },
+  "queries": [
+    {
+      "name": "Acutan",
+      "field": "waterBody",
+      "httpStatus": 200,
+      "resultCount": 0,
+      "endOfRecords": true,
+      "returnedRecords": 0,
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&limit=0&waterBody=Acutan"
+    },
+    {
+      "name": "Acutan",
+      "field": "locality",
+      "httpStatus": 200,
+      "resultCount": 0,
+      "endOfRecords": true,
+      "returnedRecords": 0,
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&limit=0&locality=Acutan"
+    },
+    {
+      "name": "Nabuangan",
+      "field": "waterBody",
+      "httpStatus": 200,
+      "resultCount": 0,
+      "endOfRecords": true,
+      "returnedRecords": 0,
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&limit=0&waterBody=Nabuangan"
+    },
+    {
+      "name": "Nabuangan",
+      "field": "locality",
+      "httpStatus": 200,
+      "resultCount": 0,
+      "endOfRecords": true,
+      "returnedRecords": 0,
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&limit=0&locality=Nabuangan"
+    },
+    {
+      "name": "Barren",
+      "field": "waterBody",
+      "httpStatus": 200,
+      "resultCount": 0,
+      "endOfRecords": true,
+      "returnedRecords": 0,
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&limit=0&waterBody=Barren"
+    },
+    {
+      "name": "Barren",
+      "field": "locality",
+      "httpStatus": 200,
+      "resultCount": 0,
+      "endOfRecords": true,
+      "returnedRecords": 0,
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&limit=0&locality=Barren"
+    },
+    {
+      "name": "Cabicungan",
+      "field": "waterBody",
+      "httpStatus": 200,
+      "resultCount": 0,
+      "endOfRecords": true,
+      "returnedRecords": 0,
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&limit=0&waterBody=Cabicungan"
+    },
+    {
+      "name": "Cabicungan",
+      "field": "locality",
+      "httpStatus": 200,
+      "resultCount": 0,
+      "endOfRecords": true,
+      "returnedRecords": 0,
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&limit=0&locality=Cabicungan"
+    },
+    {
+      "name": "Laco",
+      "field": "waterBody",
+      "httpStatus": 200,
+      "resultCount": 0,
+      "endOfRecords": true,
+      "returnedRecords": 0,
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&limit=0&waterBody=Laco"
+    },
+    {
+      "name": "Laco",
+      "field": "locality",
+      "httpStatus": 200,
+      "resultCount": 0,
+      "endOfRecords": true,
+      "returnedRecords": 0,
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&limit=0&locality=Laco"
+    },
+    {
+      "name": "Karagawan",
+      "field": "waterBody",
+      "httpStatus": 200,
+      "resultCount": 0,
+      "endOfRecords": true,
+      "returnedRecords": 0,
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&limit=0&waterBody=Karagawan"
+    },
+    {
+      "name": "Karagawan",
+      "field": "locality",
+      "httpStatus": 200,
+      "resultCount": 0,
+      "endOfRecords": true,
+      "returnedRecords": 0,
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&limit=0&locality=Karagawan"
+    },
+    {
+      "name": "Nagan",
+      "field": "waterBody",
+      "httpStatus": 200,
+      "resultCount": 0,
+      "endOfRecords": true,
+      "returnedRecords": 0,
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&limit=0&waterBody=Nagan"
+    },
+    {
+      "name": "Nagan",
+      "field": "locality",
+      "httpStatus": 200,
+      "resultCount": 0,
+      "endOfRecords": true,
+      "returnedRecords": 0,
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&limit=0&locality=Nagan"
+    },
+    {
+      "name": "Binuan",
+      "field": "waterBody",
+      "httpStatus": 200,
+      "resultCount": 0,
+      "endOfRecords": true,
+      "returnedRecords": 0,
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&limit=0&waterBody=Binuan"
+    },
+    {
+      "name": "Binuan",
+      "field": "locality",
+      "httpStatus": 200,
+      "resultCount": 0,
+      "endOfRecords": true,
+      "returnedRecords": 0,
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&limit=0&locality=Binuan"
+    },
+    {
+      "name": "Zumigue",
+      "field": "waterBody",
+      "httpStatus": 200,
+      "resultCount": 0,
+      "endOfRecords": true,
+      "returnedRecords": 0,
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&limit=0&waterBody=Zumigue"
+    },
+    {
+      "name": "Zumigue",
+      "field": "locality",
+      "httpStatus": 200,
+      "resultCount": 0,
+      "endOfRecords": true,
+      "returnedRecords": 0,
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&limit=0&locality=Zumigue"
+    },
+    {
+      "name": "Ziwanan",
+      "field": "waterBody",
+      "httpStatus": 200,
+      "resultCount": 0,
+      "endOfRecords": true,
+      "returnedRecords": 0,
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&limit=0&waterBody=Ziwanan"
+    },
+    {
+      "name": "Ziwanan",
+      "field": "locality",
+      "httpStatus": 200,
+      "resultCount": 0,
+      "endOfRecords": true,
+      "returnedRecords": 0,
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&limit=0&locality=Ziwanan"
+    }
+  ],
+  "control": {
+    "name": "Laguna de Bay",
+    "field": "waterBody",
+    "httpStatus": 200,
+    "resultCount": 22,
+    "endOfRecords": false,
+    "returnedRecords": 0,
+    "limit": 0,
+    "url": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&limit=0&waterBody=Laguna+de+Bay",
+    "interpretation": "Positive query-path control only. Count is not a reviewed record list and is not included in the Apayao evidence."
+  },
+  "summary": {
+    "successfulQueries": 20,
+    "zeroResultQueries": 20,
+    "positiveApayaoQueries": 0,
+    "uniqueCandidateRecordCount": 0,
+    "fishSpeciesAssertionsAdded": 0,
+    "occurrenceAssertionsAdded": 0,
+    "waterbodyIdentityAssertionsAdded": 0,
+    "geometryAdded": 0,
+    "absenceInferred": false,
+    "publicAdmission": false
+  },
+  "limitations": [
+    "A GBIF count of zero means only that this exact field-text query returned no indexed matches at query time. It does not show that the river lacks fish or that no unindexed, differently spelled or differently georeferenced records exist.",
+    "The source river names have not been reconciled to aliases or authoritative hydrography, so alternate spellings and upstream/downstream naming may be missed.",
+    "The query was restricted to GBIF records interpreted under the CoL XR Actinopterygii taxon key and Philippine country code; it did not search shellfish or other aquatic groups.",
+    "No query used coordinates, an administrative-area polygon, a catchment polygon, date range or local taxonomic labels.",
+    "The Laguna de Bay result count is only a positive API/query control; no control records were retrieved or reviewed.",
+    "No raw records were downloaded, and no dataset-level license or specimen/locality quality was assessed because the Apayao searches returned no records."
+  ],
+  "disposition": {
+    "noRecordsDownloaded": true,
+    "rawSnapshotsRetained": false,
+    "speciesRowsAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "geometryRowsAdded": 0,
+    "publicAppRowsAdded": 0,
+    "publicationApproval": false
+  },
+  "nextAction": "Prioritize ASC-held reports, station tables and taxonomic/photo crosswalks; if new river aliases, coordinates or vouchers are verified, rerun GBIF under those exact variants and inspect every candidate dataset and record before considering an assertion.",
+  "sources": [
+    {
+      "url": "https://techdocs.gbif.org/en/openapi/v1/occurrence",
+      "supports": "Official GBIF Occurrence API documentation, including occurrence search and indexed water-body suggestion/search endpoints."
+    },
+    {
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&limit=0&waterBody=Laguna+de+Bay",
+      "supports": "Exact positive query-path control returned count 22; no control records fetched or interpreted."
+    },
+    {
+      "url": "https://issaasphil.org/wp-content/uploads/2020/02/J-Issaas-v15n2-December-2009-Full-Journal.pdf",
+      "supports": "Historical Apayao abstract that reports the ten names used as query terms; it does not provide verified geometries or scientific taxon identities."
+    }
+  ]
+}
