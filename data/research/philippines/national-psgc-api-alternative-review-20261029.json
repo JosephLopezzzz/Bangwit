@@ -1,0 +1,48 @@
+{
+  "reviewDate": "2026-10-29",
+  "purpose": "Determine whether the PSA PSGC API can independently verify the current 3Q 2026 administrative-registry capture while the official XLSX request is blocked.",
+  "result": "not-a-current-row-level-replacement",
+  "sources": [
+    {
+      "title": "PSA Statistical Classification Systems API Access Guide",
+      "url": "https://psa.gov.ph/classifications-api/access-guide",
+      "observed": [
+        "The guide documents the PSGC API base URL as https://classification.psa.gov.ph/psgc.",
+        "The guide first states that no authentication is required, but its token-access section says requests must include a token and that users receive one by email after submitting the API request form.",
+        "It documents PSGC classification records and JSON responses; it does not document boundary polygon geometry."
+      ]
+    },
+    {
+      "title": "PSA Philippine Standard Geographic Code API Documentation",
+      "url": "https://psa.gov.ph/classifications-api/psgc",
+      "observed": [
+        "The displayed available versions are Q2_2024, April_2024, Q4_2023, and Q2_2021.",
+        "The documented levels include regions, provinces, municipalities/cities, and barangays.",
+        "No 2026 version is listed in the documentation reviewed on this date."
+      ]
+    },
+    {
+      "title": "PSA PSGC Summary",
+      "url": "https://psa.gov.ph/classification/psgc/summary",
+      "observed": [
+        "The page links the latest release, Third Quarter 2026 PSGC Updates, dated 12 October 2026.",
+        "The page labels its publication as Philippine Standard Geographic Code as of 30 September 2026.",
+        "The rendered national aggregate reports 82 provinces, 149 cities, 1,493 municipalities, and 42,010 barangays."
+      ]
+    }
+  ],
+  "assessment": {
+    "whatItCanSupport": [
+      "Current official national aggregate-count sanity checks from the live summary page.",
+      "A future code/name cross-check if PSA confirms an accessible version matching the 30 September 2026 release."
+    ],
+    "whatItCannotCurrentlySupport": [
+      "Exact 3Q 2026 row-by-row comparison of the captured directory against a downloaded workbook.",
+      "A claim that the documented API contains a current 2026 PSGC version.",
+      "Administrative boundary geometry or waterbody geometry."
+    ],
+    "verificationStatus": "pending",
+    "reason": "The workbook request returned HTTP 403 with a Cloudflare challenge. The API docs list older versions and are inconsistent about token requirements; no token was requested and no API request was made. The live summary is an aggregate control, not a row-level substitute.",
+    "reuseNote": "The PSA website states that site content is CC BY 4.0 unless otherwise stated. API-specific terms were not independently verified; confirm before redistributing API output."
+  }
+}
