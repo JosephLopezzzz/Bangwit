@@ -1216,3 +1216,21 @@ Verification for this research-only batch: `npm run test:species:pipeline`, `npm
 - **Next:** Seek a local authoritative alias/reach crosswalk and station-resolved fish evidence with reviewable reuse terms before any geometry or species admission.
 - **Artifacts:** `calabarzon-vinas-river-name-gbif-review-20261030.json`; updated `calabarzon-scope.json`, `sources.json`, and coverage-denominator profile.
 - **Sources:** [NGA Pub. 162, Philippine Islands, 14th edition (2025)](https://msi.nga.mil/api/publications/download?key=16694491%2FSFH00000%2FPub162bk.pdf), [NGA Maritime Safety Information](https://msi.nga.mil/Publications).
+
+### National rollout step 166: San Pablo Seven Lakes source conflict recheck — 30 October 2026
+
+- **Access:** The official publisher page and complete 22-page PDF for Paller et al. (2017) were readable through web extraction. No local copy was retained; the earlier interactive challenge note is superseded for access status. The PDF's appendix identifies a per-lake distribution table, but its cells were not transcribed in this review.
+- **Conflict:** The primary article's narrative and plate label the Bunot carp *Carassius gibelio*. The 2021 review attributes the same survey to Paller et al. (2017a) but calls it *Carassius carassius*. The Catalog of Fishes recognizes both as distinct valid species names, so the specimen identity remains unresolved.
+- **Reuse and disposition:** No item-specific reuse grant was found for either article. The 2017 table remains held; the 2021 review is contextual secondary literature, not an independent occurrence source. No fish assertion, lake checklist, geometry, or app projection was added.
+- **Next:** Seek an author correction, voucher/specimen record, or independent eligible survey plus item-specific reuse permission before revisiting lake-level rows. Continue with independently reusable sources for other CALABARZON waterbodies.
+- **Artifacts:** `calabarzon-san-pablo-lakes-source-recheck-20261030.json`; updated `sources.json` and research index.
+- **Sources:** [Paller et al. 2017](https://asianscientificjournal.com/new/publication/index.php/ajob/article/view/995), [Paller et al. 2021 review](https://www.scienggj.org/2021-158/), [Catalog of Fishes: *C. gibelio*](https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=2013), [Catalog of Fishes: *C. carassius*](https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=3101).
+
+### National rollout step 167: NRCP project metadata cross-check — 30 October 2026
+
+- **Source:** The NRCP/DOST Basic Research Information System records project E-224, led by Vachel Gay Velasco Paller at UPLB, as completed and cleared. It states an administrative period of 1 February 2013–31 January 2015 and describes wild-fish collection from February 2013 through March 2015 across the Seven Lakes. Its summary uses *Carassius carassius*.
+- **Interpretation:** The project and fish-assemblage paper share a lead author and overlapping collection windows, but the page does not establish whether the fish samples or carp identifications are the same. The public record links no final report, voucher detail, or fish-data file. Its copyright footer is not a data reuse license.
+- **Disposition:** This is official project provenance, not independent occurrence evidence and not a resolution of the 2017 *C. gibelio* versus 2021 *C. carassius* conflict. No table, fish list, assertion, geometry, or app projection was added.
+- **Next:** Only reopen the identity question if a voucher/specimen record, author correction, or eligible independent survey is located. Continue the broader CALABARZON queue with independently reusable sources.
+- **Artifacts:** `calabarzon-san-pablo-lakes-source-recheck-20261030.json`; updated `sources.json` and denominator-profile hashes.
+- **Sources:** [NRCP/DOST BRIS project E-224](https://basicresearch.nrcp.dost.gov.ph/supported_programs_and_projects/details/65), [NRCP 2014 programs and projects](https://nrcp.dost.gov.ph/wp-content/uploads/2026/04/TranSeal2014_Programs-and-Projects-2014.pdf).
