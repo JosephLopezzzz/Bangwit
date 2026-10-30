@@ -2431,3 +2431,11 @@ The USFWS Midas-cichlid risk summary provides a secondary diet synthesis specifi
 Added `calabarzon-sampaloc-diet-citation-crosscheck-20261031.json` and four source records (421 registry records total); linked the Agasen abstract to the existing Taal Lake research lead. The CALABARZON denominator remains 113 waterbody leads with 97 distinct assigned source references. No species occurrence, diet assertion, bait recommendation, safety/legal statement, or public-app row was added; no publication approval was granted. Palico-Lian's 12 admitted and 3 held assertions remain unchanged.
 
 **Next:** continue the L1 freshwater, brackish, estuary, and coastal review with the next site-specific, inspectable source. Keep Taal's Jaguar diet as an abstract-only research lead unless full methods and reuse terms are verified; do not transfer it to Lake Sampaloc.
+
+### National rollout step 292 - Bacoor City profile Manila Bay fish-list attribution check
+
+Reviewed section 2.11.12 of the official Bacoor City Ecological Profile. It attributes a displayed fish list to Biodiversity Management Bureau records for important biodiversity areas in Manila Bay, but gives no underlying dataset identifier, collection dates, methods, stations, vouchers, or assignment to Bacoor Bay or the named Bacoor rivers and creeks. The adjacent Bacoor MPA/aquaculture context does not supply that missing waterbody-level link. Several displayed scientific-name strings also have spacing or spelling irregularities; without the cited source records, they were not normalized into candidate occurrences.
+
+Recorded the result in `calabarzon-bacoor-clup-manila-bay-fish-list-context-review-20261031.json` and linked it to the existing city-profile source record. No species, waterbody-specific occurrence, taxonomy, safety, or public-app assertion was added. No region coverage count changed; CALABARZON remains incomplete.
+
+**Next:** continue L1 with the next inspectable primary source that can be tied to a specific inland or coastal waterbody. Keep the profile's Manila Bay list unassigned unless the underlying BMB records and locality basis are recovered.
