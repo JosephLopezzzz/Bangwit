@@ -2053,3 +2053,21 @@ Reviewed the Silliman Journal and PIDS SERP-P records for a 2010 checklist of in
 The journal's copyright policy identifies the journal and authors as copyright holders and requires permission for specified reproductions; no open data license is established. PIDS download is behind a security verification and was not completed. Added `national-visayas-bago-jalaur-introduced-fauna-access-review-20261030.json` and registered the source (340 references). No taxa or app rows were created.
 
 **Next:** continue to an accessible source with full dated fish/site records; prioritize exact localities, methods, taxon rank and usable rights. Do not treat a historical introduced-fauna abstract as current invasive status.
+
+
+### National rollout step 251 - Negros and Siquijor checklist scope review
+
+Reviewed the 2010 Bucol and Carumbana checklist through its author-uploaded ResearchGate full text. It reports 89 species in 45 families across fresh and brackish waters of Negros and Siquijor, but explicitly calls the compiled list tentative. It combines published literature and collections from different years and localities, including Siaton River collections from May 2004–October 2005 and references to Bago River, Siquijor and an ongoing Pagatban survey. The author-upload record warns that content may be subject to copyright; no item-specific reuse license was verified.
+
+Added `national-visayas-negros-siquijor-2010-checklist-scope-review-20261030.json` and one source reference (341 total). No taxa were transcribed. The aggregate 89 is not a site-by-taxon matrix, current distribution or region-completion count; no species assertion, geometry or public-app row was added.
+
+**Next:** prefer an accessible, dated primary study with station-level evidence for a named Visayas waterbody; preserve broader checklists only as discovery leads until their source records and rights are resolved.
+
+
+### National rollout step 252 - Bayawan River dated fish baseline review
+
+Reviewed the publisher-hosted 2019 Bayawan River fish study and its official PDF. The paper reports 670 fish specimens and 28 fish labels across Suba (downstream), Villareal (midstream) and Nangka (upstream), sampled December 2018–February 2019. It describes short gill-net sampling, says most recorded fish are marine-associated visitors to freshwater, and identifies CC BY-NC 4.0 on the journal record. Table 3 labels are transcribed verbatim for internal taxonomy review; `Butis sp.` remains genus-level and apparent source spellings remain unresolved.
+
+The paper prints invalid DMS minute values for the Villareal and Nangka coordinates. Those points are not corrected or mapped. The study is a dated preliminary river-estuary baseline, not current presence, population abundance, catchability, legal fishing advice or safety guidance. Added `national-visayas-negros-bayawan-river-2019-fish-checklist-review-20261030.json` and one source reference (342 total). Public app admission remains on hold; no app species, occurrence or geometry rows were added.
+
+**Next:** build an attributed taxonomy crosswalk over the 28 source labels while retaining each verbatim string, keep the genus-only record unresolved, and separately inspect the full station-by-month abundance table before deriving counts. Resolve the two invalid coordinates from an authoritative correction before mapping; meanwhile continue the inland-lake and other river source sweep for Negros and Siquijor.
