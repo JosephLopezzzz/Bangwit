@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-30",
+  "phaseId": "L7",
+  "regionIds": ["0500000000"],
+  "status": "historical-multihabitat-survey;taxon-identity-conflict;recent-agency-summary;research-only",
+  "question": "What can the 2010 five-habitat Camarines Sur survey support, and how should its Lake Bato sinarapan label be handled alongside separate DNA and recent NFRDI findings?",
+  "sourceIds": [
+    "corpuz-paller-ocampo-2015-camsur-freshwater-five-habitats",
+    "sanchez-et-al-2015-bicol-presumed-sinarapan-dna-samples",
+    "nfrdi-2025-lake-bato-tabyos-preliminary-identity",
+    "nfrdi-2025-lake-buhi-manapao-sinarapan-assessment-summary",
+    "nfrdi-2026-lake-bato-two-year-fisheries-assessment-summary"
+  ],
+  "sourcesReviewed": [
+    {
+      "citation": "Corpuz, M. N. C., Paller, V. G. V., and Ocampo, P. P. (2015). Ichthyofaunal Survey in Selected Freshwater Habitats in Camarines Sur, Philippines. Asian Journal of Biodiversity, 6(1). DOI: 10.7828/ajob.v6i1.69681.",
+      "url": "https://asianscientificjournal.com/new/publication/index.php/ajob/article/view/696",
+      "fullTextUrl": "https://asianscientificjournal.com/new/publication/index.php/ajob/article/download/696/1730",
+      "sourceType": "dated historical field survey"
+    },
+    {
+      "citation": "Sanchez, J. A. C., Buraga, V. B., Mapanao, C. P., Maningas, M. B., and Santos, M. D. (2015). Species Identification of a Commonly Believed Sinarapan Fish Mystichtys luzonensis (Smith, 1902) in Lakes Buhi and Bato of Bicol Region. Journal of Agricultural Science and Technology B, 5, 691-700. DOI: 10.17265/2161-6264/2015.10.006.",
+      "url": "https://www.vliz.be/imisdocs/publications/308819.pdf",
+      "sourceType": "separate DNA-barcoding study of presumed-sinarapan samples"
+    },
+    {
+      "citation": "DA-NFRDI. (2025). Reassessing the catch: Lake Bato's fisheries in focus.",
+      "url": "https://nfrdi.da.gov.ph/2025/09/02/feature-lake-batos-fisheries-in-focus/",
+      "sourceType": "official agency feature; preliminary identity summary"
+    },
+    {
+      "citation": "DA-NFRDI. (2025). Saving Lake Buhi's sinarapan: Safeguarding biodiversity and local livelihoods.",
+      "url": "https://nfrdi.da.gov.ph/2025/09/01/feature-saving-lake-buhis-sinarapan-safeguarding-biodiversity-and-local-livelihoods/",
+      "sourceType": "official summary of 2023-2024 stock assessment"
+    },
+    {
+      "citation": "DA-NFRDI. (2026). NFRDI study shares findings on Lake Bato fisheries, highlights possible endemic tabyos.",
+      "url": "https://nfrdi.da.gov.ph/2026/04/22/nfrdi-study-shares-findings-on-lake-bato-fisheries-highlights-possible-endemic-tabyos/",
+      "sourceType": "official summary of two-year Lake Bato assessment"
+    }
+  ],
+  "survey2010": {
+    "waterbodies": [
+      {"nameAsReported": "Lake Bato", "habitatType": "lake", "scopeNote": "Camarines Sur"},
+      {"nameAsReported": "Agos River", "habitatType": "river/stream", "scopeNote": "The paper describes it as a 4.3 km stream feeding Lake Bato."},
+      {"nameAsReported": "Bagacay Falls", "habitatType": "cataract/pool-and-riffle site", "scopeNote": "The paper also contains an apparent 'Bacagay' typo."},
+      {"nameAsReported": "Lake Baao-Bula", "habitatType": "lake", "scopeNote": "Also shortened to Baao in the paper."},
+      {"nameAsReported": "Pawili River", "habitatType": "river", "scopeNote": "The paper says it drains from Naga City and empties into Baao."}
+    ],
+    "fieldTimingAsReported": "Three-day sampling was carried out in February-March and in July 2010. Do not infer exact dates or whether three days applies per site or window.",
+    "methodsSummary": "The paper reports 16 littoral stations across two lakes, 12 stations across two streams, and three pool plus three riffle stations at Bagacay. Seine nets, backpack electrofishing and hand nets were used according to substrate. It says specimens were identified to the lowest possible taxon using cited identification materials; some were retained live and others preserved. GPS positions were recorded for sampling stations, but no station geometry dataset is included in this review.",
+    "aggregateResults": {"individuals": 8184, "reportedTaxa": 29, "genera": 22, "families": 14, "context": "Historical survey aggregate only; not a current regional checklist or complete inventory."},
+    "identityLead": {
+      "taxonAsReported": "Mistichthys luzonensis",
+      "siteMarkAsReported": "The article's site table marks the name present at Bato and absent at Agos, Bagacay, Baao and Pawili.",
+      "interpretation": "Historical source-reported identification, not a presently verified occurrence or a reviewed voucher determination.",
+      "voucherCrosswalk": "No voucher/accession crosswalk in the reviewed article links this table mark to the later DNA paper's tissue sample or to a current specimen determination."
+    }
+  },
+  "identityCrosscheck": {
+    "dnaStudy": {
+      "collectionDate": "April 2015",
+      "waterbodies": ["Lake Buhi", "Lake Danao", "Lake Manapao", "Lake Bato"],
+      "samples": "The authors report 12 tissue samples, three per lake, but only two successfully sequenced: Lake Buhi L1S1 and Lake Bato L4S1.",
+      "authorReportedResults": "The authors identify the sequenced Buhi sample as Leiopotherapon plumbeus and the Bato sample as Rhinogobius giurinus, not sinarapan. They state that no M. luzonensis reference sequence was available in the online database at the time.",
+      "relationshipTo2010Survey": "A separate presumed-sinarapan sample set. No station, voucher, tissue or specimen crosswalk links it to the 2010 Lake Bato survey record. Do not describe it as a re-identification of that record or a general absence finding.",
+      "limitations": ["Only two of twelve samples were successfully sequenced.", "No specimen/voucher crosswalk to the 2010 survey was found.", "The paper reports no available M. luzonensis reference sequence in its analysis context.", "No sequence or species assertion is imported into Bangwit occurrence data."]
+    },
+    "nfrdi2023to2024Summary": {
+      "scopeAsReported": "An official DA-NFRDI feature summarizes an assessment implemented in 2023-2024 across Lake Buhi and adjacent Buhi Wildlife Sanctuary waters.",
+      "sampledIdentitySummary": "The feature reports verified sinarapan in Lake Manapao and says analyzed suspected samples from Lake Buhi, Lake Bato, Lake Danao, Lake Katugday and Lake Makuao did not yield true sinarapan.",
+      "limitation": "This is an agency feature, not the underlying station-level dataset or complete primary report. The page omits per-waterbody sampling dates, sample counts, vouchers/accessions and detection effort. Treat as a bounded assessment summary, never proof of permanent absence."
+    },
+    "nfrdiLakeBato2025to2026": {
+      "2025Summary": "NFRDI describes preliminary morphology/genetic work on Lake Bato tabyos as suggesting a distinct small goby, with a likely but not fully described Gobiopterus luzonensis batonensis identification. This remains a candidate, not an accepted taxon or a match to the 2010 record.",
+      "2026Summary": "NFRDI reports a two-year Lake Bato fishery assessment with 31 fish species recorded, 19 described as introduced, and a possible endemic tabyos Gobiopterus sp. The summary supplies no full checklist or voucher-level audit.",
+      "limitation": "These agency summaries indicate active monitoring and unresolved tabyos identity. They do not resolve the 2010 survey's Mistichthys label or replace the 2015 study's sample-specific results."
+    },
+    "reconciliation": "Keep the 2010 historical table identification, 2015 DNA sample findings and 2023-2026 NFRDI summaries as separate source-level claims. They concern different sample events and lack a shared voucher/accession crosswalk. This review makes no current presence, absence, synonymy, misidentification or replacement determination."
+  },
+  "qualityAndRights": {
+    "surveyStatus": "Published historical field survey with aggregate methods and site table; not current and not exhaustive of Bicol.",
+    "dnaStatus": "Separate 2015 collection with two of twelve samples sequenced; no link to the 2010 survey vouchers established.",
+    "agencyStatus": "Official summaries are useful leads but do not replace primary sample-level reports, vouchers or full checklists.",
+    "reuseStatus": "No item-specific license or permission verified for the journal articles or NFRDI feature pages. This review retains brief attributed findings only; it reproduces no full species table, figure, map, sequence, dataset or extended source text. No publication approval is granted.",
+    "handling": "Research-only cross-study review. No source PDF or extracted table was added to the repository."
+  },
+  "disposition": {
+    "habitatsScreened": 5,
+    "historicalSurveyTaxaAccepted": 0,
+    "currentSpeciesAssertionsAdded": 0,
+    "taxonomicReidentificationsMade": 0,
+    "occurrenceRowsAdded": 0,
+    "publicAppRowsAdded": 0,
+    "dietOrPredationClaimsAdded": 0,
+    "publicationApproval": false,
+    "reason": "The historical survey table, separate DNA samples and recent agency summaries do not share a specimen/voucher crosswalk. Keep each taxon statement source-attributed and waterbody/date-scoped."
+  },
+  "nextAction": "Locate NFRDI's primary Lake Buhi/Bato reports, complete checklist, voucher/accession crosswalks and sample-effort details. Continue other Bicol river, lake, reservoir, estuary and coastal source screens in parallel; do not mark Bicol complete.",
+  "sources": [
+    {"url": "https://asianscientificjournal.com/new/publication/index.php/ajob/article/view/696", "supports": "Publisher metadata and abstract for the five-habitat Camarines Sur survey and reported aggregates."},
+    {"url": "https://asianscientificjournal.com/new/publication/index.php/ajob/article/download/696/1730", "supports": "Full paper: sites, 2010 sampling/methods and source-reported Mistichthys mark at Lake Bato."},
+    {"url": "https://www.vliz.be/imisdocs/publications/308819.pdf", "supports": "Full 2015 DNA paper: four-lake sampling, two successful sequences, sample-level identifications and limitations."},
+    {"url": "https://nfrdi.da.gov.ph/2025/09/02/feature-lake-batos-fisheries-in-focus/", "supports": "Official NFRDI summary of preliminary Lake Bato tabyos identity work."},
+    {"url": "https://nfrdi.da.gov.ph/2025/09/01/feature-saving-lake-buhis-sinarapan-safeguarding-biodiversity-and-local-livelihoods/", "supports": "Official NFRDI summary of the 2023-2024 assessment and waterbody-bounded results."},
+    {"url": "https://nfrdi.da.gov.ph/2026/04/22/nfrdi-study-shares-findings-on-lake-bato-fisheries-highlights-possible-endemic-tabyos/", "supports": "Official NFRDI summary reporting two-year assessment totals and unresolved possible endemic tabyos."}
+  ]
+}
