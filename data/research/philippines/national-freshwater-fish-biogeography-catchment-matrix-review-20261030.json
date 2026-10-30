@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-30",
+  "phaseId": "NATIONAL",
+  "regionIds": ["0100000000", "0200000000", "0300000000", "0400000000", "0500000000", "0600000000", "0700000000", "0800000000", "0900000000", "1000000000", "1100000000", "1200000000", "1300000000", "1400000000", "1600000000", "1700000000", "1800000000", "1900000000"],
+  "status": "2026-peer-reviewed-national-freshwater-framework;catchment-scale-candidate-matrix;supporting-workbooks-download-blocked;reuse-unresolved;research-only",
+  "question": "Can the 2026 national freshwater-fish biogeography study accelerate the Luzon-to-Visayas-to-Mindanao rollout, and what must be checked before its supplementary catchment matrix is used?",
+  "sourceIds": ["jamandre-et-al-2026-national-freshwater-fish-biogeographic-matrix"],
+  "sourcesReviewed": [
+    {
+      "citation": "Jamandre, B. W., Leander, N. J., Balisco, R. A., & Santiago-Tadeo, F. (2026). Delineating Freshwater Fish Biogeographic Regions in the Philippine Archipelago. Journal of Biogeography, 53(8), e70324. https://doi.org/10.1111/jbi.70324.",
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/jbi.70324",
+      "access": "Official publisher article metadata, abstract, data-availability statement and supporting-information descriptions reviewed. The study reports five freshwater-fish biogeographic provinces and says its supporting information contains a taxon-by-catchment presence matrix, categories, a taxonomic/ecological change log, names/IDs for 32 catchment sites, catchment-centroid/environment variables and per-province completeness estimates. The official supplement download endpoint returned HTTP 403 in both the web reader and a direct fetch; the workbook bytes and their actual cell contents were not inspected.",
+      "reuse": "No item-specific license or reuse permission for the final article's supporting workbooks was verified in the accessible publisher metadata. Do not copy or publish the matrix until the actual files and terms are inspected. Citation/link only; publication approval remains false."
+    },
+    {
+      "citation": "DMMMSU LAKAS repository catalog entry for Jamandre et al. (2026), item fdf4b0b7-4b47-4c5d-8822-c86f03e149c2.",
+      "url": "https://lakasa.dmmmsu.edu.ph/items/fdf4b0b7-4b47-4c5d-8822-c86f03e149c2",
+      "access": "The institutional repository search index lists a 1.28 MB PDF for the article. Direct item-page/API retrieval timed out in this review, so the file itself, its version, supplements and reuse terms were not inspected. This is an alternate acquisition lead, not a successful article or workbook download."
+    }
+  ],
+  "crossSourceAssessment": {
+    "nationalUsefulness": "This is a high-value national freshwater discovery and triage source: its reported presence-by-catchment table could seed a reproducible native-freshwater candidate queue across Luzon, Visayas, Palawan-Mindoro and Mindanao. The methods/data must be inspected before any rows or counts are ingested.",
+    "reportedFramework": "The publisher abstract reports five freshwater fish biogeographic provinces: Northern Luzon, Central/Southern Luzon, Greater Visayas, Mindanao and Palawan-Mindoro. These are ecological analysis groups, not PSA administrative regions or waterbody boundaries. Keep the existing delivery order and PSGC region inventory separate from this ecological framework.",
+    "reportedSupportingFiles": "Publisher metadata describes Table S1 as a freshwater fish checklist with presence data across catchment sites, ecological categories, nativity categories and a change log. Table S2 lists 32 catchment sites and manuscript province assignments; S3 gives catchment centroids/environmental variables; S4 gives climate inputs; S5 summarizes province-level sample coverage and richness estimates.",
+    "coverageLimits": "The 32 catchments are analysis sites, not a verified complete inventory of all Philippine watersheds, rivers, lakes, reservoirs, canals or wetlands. Catchment centroids are not taxon observation coordinates. Study scope is native freshwater fishes; it does not satisfy the plan's introduced-fish, marine, estuarine, full coastal or all-waterbody coverage requirements.",
+    "administrativeCrosswalk": "The supplement description says its province field is the manuscript's province assignment from cluster analysis. Do not assume that this field is a current PSA PSGC region/province assignment. Crosswalk every site and preserve original labels before using it to prioritize the Luzon, Visayas and Mindanao work queues.",
+    "evidenceMeaning": "A presence mark in an analysis matrix may synthesize cited records and indicates catchment-scale evidence in that study. It is not automatically an event-level occurrence, a date, an exact lake/river reach, a currently resident population, fishing permission, catchability, diet, or safety evidence.",
+    "licenseAndIntegrity": "The actual supporting files could not be retrieved from the publisher endpoint (HTTP 403), so the taxon lists, change log, row-level citations, matrix semantics, version integrity and file-specific reuse terms remain unverified. Do not reconstruct cells from the paper abstract or third-party snippets.",
+    "appReadiness": "Research-only national acquisition lead. It can prioritize source review after supplementary workbooks and rights are obtained, but no species assertion, occurrence, geometry, public-app row, diet, legal or safety claim is admitted from the accessible metadata."
+  },
+  "disposition": {
+    "sourceReferencesAdded": 1,
+    "supplementaryFilesRetrieved": 0,
+    "taxonRowsInspected": 0,
+    "catchmentRowsInspected": 0,
+    "crosswalksCreated": 0,
+    "speciesAssertionsAdded": 0,
+    "occurrenceAssertionsAdded": 0,
+    "geometryAdded": 0,
+    "publicAppRowsAdded": 0,
+    "publicationApproval": false,
+    "reason": "The publisher describes a promising national catchment matrix, but the actual spreadsheets and item-specific reuse terms were inaccessible in this review."
+  },
+  "nextAction": "Try the institutional repository's listed article PDF or request an author/institution-provided copy, verify its manuscript version against the final article, and separately retrieve the publisher supplements. Record file hashes and rights, inspect the taxon and catchment sheets/change log, and crosswalk the 32 sites to current PSGC regions and separately identified waterbodies. Continue the regional source sweep in parallel; do not use an uninspected matrix.",
+  "sources": [
+    {
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/jbi.70324",
+      "supports": "Official publisher date, authors, abstract, five freshwater biogeographic groups, data-availability statement and descriptions of the four supporting files including 32 catchment sites, taxon-by-catchment presence data and completeness estimates."
+    },
+    {
+      "url": "https://lakasa.dmmmsu.edu.ph/items/fdf4b0b7-4b47-4c5d-8822-c86f03e149c2",
+      "supports": "DMMMSU LAKAS repository search index lists a 1.28 MB article PDF. Direct retrieval timed out; it does not establish article version, SI availability or reuse permission."
+    },
+    {
+      "url": "https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Fjbi.70324&file=jbi70324-sup-0002-TableS1.xlsx",
+      "supports": "Official Table S1 download endpoint; returned HTTP 403 in the review, so no sheet contents were inspected."
+    },
+    {
+      "url": "https://onlinelibrary.wiley.com/action/downloadSupplement?doi=10.1111%2Fjbi.70324&file=jbi70324-sup-0003-TableS2-S4.xlsx",
+      "supports": "Official Table S2-S4 download endpoint; returned HTTP 403 in the review, so no sheet contents were inspected."
+    }
+  ]
+}
