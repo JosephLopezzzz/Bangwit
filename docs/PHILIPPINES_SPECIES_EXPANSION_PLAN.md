@@ -1820,3 +1820,14 @@ The paper contains count conflicts: prose says 11 taxa were exclusive to Ticao-B
 Added one source reference (316 total) and `national-bicol-sorsogon-market-fish-resources-review-20261030.json`, retaining 77 names as source transcriptions only. Direct publisher retrieval returned 403; no item-specific reuse license was verified. No normalized taxa, occurrences, river/freshwater records, diet/bait claims or public-app rows were added. Bicol coverage remains incomplete.
 
 **Next:** continue the region-and-habitat sweep with separate Sorsogon inland river/lake evidence and coastal surveys; seek a visually verified publisher table or author clarification for the market article's counts before any use of derived subsets.
+
+
+### National rollout step 228 - Prieto Diaz coastal eDNA paper and corrigendum hold
+
+Reviewed publisher-indexed text for Naputo et al.'s 2024 peer-reviewed 12S eDNA study, plus Crossref metadata and the UP Diliman Institute of Biology publication listing. The study reports a July-August 2022 high-tide water campaign across 19 sites: ten PDS-coded sites in Prieto Diaz, Sorsogon, and nine sites in Oriental Mindoro. Habitats include mangrove-recolonized fishponds, natural mangroves, plantations, seagrass, coral reef and open sea. It reports 168 fish MOTUs and 89 species across both regions, not as a Sorsogon-only checklist. The ten Prieto Diaz table rows report salinity from 14.76 to 44.80 ppt for that campaign; these readings do not define a permanent salinity class or substitute for sample coordinates.
+
+The source states its underlying data are available on request. No public sample-to-species crosswalk, site coordinates, sequence/read table or dataset was obtained. eDNA detections are not physical capture/voucher events. Crossref records the version-of-record license as CC BY-NC-ND 4.0. A publisher corrigendum was issued in December 2025 (DOI 10.1016/j.rsma.2025.104565), but its text was not retrieved. Therefore the correction's scope is unknown, and the paper's species totals and taxon-level claims remain unverified for Bangwit use until the corrigendum and any corrected tables are inspected. This is a separate dataset from the already registered 2026 Amihan-monsoon study; no detections were merged.
+
+Added two source references (318 total) and `national-bicol-prieto-diaz-edna-corrigendum-review-20261030.json`. No taxon, occurrence, diet/predation, geometry or public-app row was admitted, and no publication approval was granted. Sorsogon and Bicol regional coverage remain incomplete.
+
+**Next:** obtain the corrigendum/corrected article and a sample-level data crosswalk with rights terms if publicly available; in parallel, continue the Sorsogon inland river/lake and coastal source sweep without treating the eDNA report as freshwater occurrence evidence.
