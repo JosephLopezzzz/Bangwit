@@ -1831,3 +1831,14 @@ The source states its underlying data are available on request. No public sample
 Added two source references (318 total) and `national-bicol-prieto-diaz-edna-corrigendum-review-20261030.json`. No taxon, occurrence, diet/predation, geometry or public-app row was admitted, and no publication approval was granted. Sorsogon and Bicol regional coverage remain incomplete.
 
 **Next:** obtain the corrigendum/corrected article and a sample-level data crosswalk with rights terms if publicly available; in parallel, continue the Sorsogon inland river/lake and coastal source sweep without treating the eDNA report as freshwater occurrence evidence.
+
+
+### National rollout step 229 - Bulusan Lake *Redigobius dispar* sample-site evidence
+
+Reviewed the official journal landing page and full 2017 Alcabedos et al. paper on five Southern Luzon freshwater gobies. The methods describe 434 fish collected at two to four locations in coordination with the Fish Ark Philippines project; UPLB Limnological Station personnel documented samples and made initial identifications. Table 1 assigns 20 *Redigobius dispar* samples to Bulusan Lake, Sorsogon, and 36 to Manapao Lake, Camarines Sur. These are research sample counts, not individual occurrence events or population estimates.
+
+The reviewed paper provides no exact collection dates, station coordinates, sample-level identifier or specimen accession. It mentions live and frozen sample sets but does not expose a voucher-custody crosswalk. Treat the named lake association as historical research evidence only; do not infer current presence, abundance, movement between lakes, lake geometry, catchability, diet, legality or safety. Keep this lake evidence distinct from the separate Bulusan River gobioid survey and do not merge Manapao records into Bulusan.
+
+Added one source reference (319 total) and `national-bicol-bulusan-lake-redigobius-dispar-source-review-20261030.json`. No species/occurrence assertion, geometry, diet, safety/legal claim or public-app row was added. No item-specific reuse license or publication approval was verified. Sorsogon and Bicol coverage remain incomplete.
+
+**Next:** seek the Fish Ark Philippines or UPLB Limnological Research Station sample register, dates and voucher/accession crosswalk for this study; continue independent Sorsogon inland-water screening in parallel, keeping lakes, rivers, estuaries and coastal waters as separate coverage units.
