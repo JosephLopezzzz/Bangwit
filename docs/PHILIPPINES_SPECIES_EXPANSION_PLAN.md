@@ -2035,3 +2035,12 @@ Reviewed Maren Gaulke's “Freshwater fauna of Panay: preliminary survey on fish
 Added `national-visayas-panay-panaycon-freshwater-fauna-discovery-review-20261030.json` and registered the source (338 references). No list of taxa, prose, figures or images was copied; no assertion, geometry or app row was created. Treat this as an internal discovery lead only until permission and a specimen/site crosswalk are available.
 
 **Next:** continue locating independently published, rights-clear, species-by-waterbody sources for Panay and Guimaras; prioritize fully accessible primary studies with dated site/taxon tables or open occurrence data. Keep waterbody and date scope explicit, and do not use the report's aggregate count as a checklist.
+
+
+### National rollout step 249 - Guimaras Sibunag mangrove fish-study access review
+
+Reviewed SEAFDEC/AQD's repository record for a 2012 study of fish habitats in Sibunag mangrove creek, Guimaras. Its abstract reports 475 fish, 3,875 g total weight, and 50 species in 32 families, with community changes from outside to inner creek. The official repository has no full-text file attached. A university-hosted PDF mirror is indexed, but direct retrieval failed, so the taxon table, field methods, sampling date, exact site, and reuse terms remain unverified.
+
+Added `national-visayas-guimaras-sibunag-mangrove-fish-source-access-review-20261030.json` and registered the source (339 references). This is an acquisition lead only. The abstract's “open access” wording describes the creek and is not an article license. No taxa, geometry, occurrence assertion, or app row was created.
+
+**Next:** obtain a legitimate full-text copy and verify the species-by-habitat table, collection dates, creek/site identity, and copyright/reuse terms. Meanwhile, continue the Visayas sweep for accessible, rights-clear sources with site-level fish records; include freshwater lakes and rivers alongside estuaries and coastal waters.
