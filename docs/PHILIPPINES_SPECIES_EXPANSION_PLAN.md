@@ -2355,3 +2355,11 @@ The guide cites three potentially valuable proceedings papers: a 2002 Tubod Rive
 Ran targeted searches of VSU, Annals of Tropical Research and repository domains using the proceedings titles, author, river and year. The public Weliange CV and the 2007 guide's indexed reference list repeat the 2002/2005 bibliography, but neither exposes the papers themselves or a direct catalog/download item. This improves bibliographic confidence but adds no new fish, diet or site evidence. Search-engine non-discovery does not prove the proceedings are absent from an unindexed archive.
 
 Updated the proceedings retrieval record within `national-visayas-eastern-visayas-ormoc-lake-danao-2007-guide-fulltext-review-20261030.json`. No new source row or species/diet claim was added. **Next:** leave the papers as citation-only leads unless a public copy surfaces, and continue Eastern Visayas freshwater work from independently inspectable records; no access inquiry was sent.
+
+### National rollout step 284 - Lawaan poster partial species-table recheck
+
+Rechecked the author-uploaded Lawaan poster's public ResearchGate text extraction. It exposes at least 32 distinct taxon strings in a partial migration/residency table, but the poster abstract reports 41 species for Poblacion River and 15 for Bolusao River. The table appears incomplete or has a different scope; the poster does not reconcile it. Several extracted cells are malformed, so no counts or additional names were copied into the source registry or app data.
+
+Tried to retrieve the poster PDF and preview image for visual verification; ResearchGate returned an access restriction/cache miss. The linked UP Libraries TUKLAS catalog item also could not be independently opened. Updated the existing poster review and source record with this retrieval outcome. No new source record, occurrence, species assertion, geometry, diet, safety/legal/catchability claim, or public-app row was added.
+
+**Next:** continue Eastern Visayas coverage from inspectable sources. Revisit the Lawaan table only if a publicly accessible and rights-cleared high-resolution poster or underlying report provides a complete species-by-river/reach crosswalk, station context, effort, and voucher identifiers; do not send an inquiry without explicit authorization.
