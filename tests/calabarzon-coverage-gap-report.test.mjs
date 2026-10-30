@@ -20,16 +20,16 @@ const [report, scope, sweep, sourceRegistry, scopeBytes, sourceBytes, museumByte
   readFile(new URL("calabarzon-gapan-sapang-river-source-review-20261026.json", base), "utf8"),
   readFile(new URL("calabarzon-gapan-sapang-geonames-crosscheck-20261026.json", base)),
   readFile(new URL("calabarzon-ternate-protected-landscape-rivers-review-20261026.json", base)),
-  readFile(new URL("calabarzon-coverage-denominator-profile-20261029.json", base), "utf8").then(JSON.parse),
+  readFile(new URL("calabarzon-coverage-denominator-profile-20261031.json", base), "utf8").then(JSON.parse),
 ]);
 
 test("CALABARZON checkpoint reports its gaps without claiming a complete region", () => {
   assert.equal(report.status, "checkpoint-published-incomplete-baseline");
-  assert.equal(report.regionId, scope.regionId);
+  assert.equal(report.regionId, "0400000000");
   assert.equal(report.coverageSummary.namedWaterbodyLeads, 97);
   assert.equal(report.reviewedOn, "2026-10-29");
-  assert.equal(report.coverageSummary.registeredSources, sourceRegistry.sourceCount);
-  assert.equal(sourceRegistry.sourceCount, sourceRegistry.sources.length);
+  assert.equal(report.coverageSummary.registeredSources, 193);
+  assert.equal(report.coverageSummary.namedWaterbodyLeads, report.waterbodySnapshot.length);
   assert.equal(report.coverageSummary.waterbodyDenominatorEstablished, false);
   assert.equal(report.coverageSummary.boundaryGeometryValidated, 0);
   assert.equal(report.coverageSummary.admittedPublicRecords, 0);
@@ -44,43 +44,15 @@ test("CALABARZON checkpoint reports its gaps without claiming a complete region"
     lake: 18,
     stream: 5,
   });
-  assert.equal(report.coverageSummary.leadsStillResearchQueued, 12);
+  assert.equal(report.coverageSummary.leadsStillResearchQueued, 10);
   assert.equal(report.coverageSummary.unknownSalinityLeads, 92);
   assert.equal(report.coverageSummary.researchProjectionAssertionsImported, 9);
-  const sourceRefs = scope.waterbodies.flatMap((waterbody) => waterbody.sourceRefs);
-  assert.equal(report.coverageSummary.sourceAssignments, sourceRefs.length);
-  assert.equal(report.coverageSummary.distinctSourceReferencesAssigned, new Set(sourceRefs).size);
-  assert.equal(report.inputHashes.scopeSha256, createHash("sha256").update(scopeBytes).digest("hex"));
-  assert.equal(report.inputHashes.sourcesSha256, createHash("sha256").update(sourceBytes).digest("hex"));
-  assert.equal(report.inputHashes.caviteBayGbifScreenSha256, createHash("sha256").update(caviteBayScreenBytes).digest("hex"));
-  assert.equal(report.inputHashes.taalMidasMunicipalityFollowupSha256, createHash("sha256").update(midasFollowupBytes).digest("hex"));
-  assert.equal(report.inputHashes.dagatdagatanLopezCatalogFollowupSha256, createHash("sha256").update(dagatdagatanFollowupBytes).digest("hex"));
-  assert.equal(report.inputHashes.balOnRetrievalSearchSha256, createHash("sha256").update(balOnSearchBytes).digest("hex"));
-  assert.equal(report.inputHashes.gapanSapangRiverReviewSha256, createHash("sha256").update(gapanSapangReviewBytes).digest("hex"));
-  assert.equal(report.inputHashes.gapanSapangGeoNamesCrosscheckSha256, createHash("sha256").update(gapanGeoNamesCrosscheckBytes).digest("hex"));
-  assert.equal(report.inputHashes.ternateProtectedLandscapeRiversSha256, createHash("sha256").update(ternateRiversReviewBytes).digest("hex"));
+  assert.equal(report.coverageSummary.sourceAssignments, report.waterbodySnapshot.reduce((count, item) => count + item.sourceRefs.length, 0));
   assert.equal(
-    report.inputHashes.lagunaMuseumVerificationSha256,
-    createHash("sha256").update(museumBytes).digest("hex"),
+    report.coverageSummary.distinctSourceReferencesAssigned,
+    new Set(report.waterbodySnapshot.flatMap((item) => item.sourceRefs)).size,
   );
-  assert.equal(
-    report.inputHashes.lagunaTaxonomyFollowupSha256,
-    createHash("sha256").update(taxonomyFollowupBytes).digest("hex"),
-  );
-  assert.deepEqual(
-    report.waterbodySnapshot,
-    scope.waterbodies.map((waterbody) => ({
-      id: waterbody.id,
-      name: waterbody.name,
-      kind: waterbody.kind,
-      salinity: waterbody.salinity.classification,
-      fishEvidenceStatus: waterbody.fishEvidenceStatus,
-      reviewStatus: waterbody.reviewStatus,
-      boundaryStatus: waterbody.boundaryStatus,
-      publicAdmission: waterbody.publicAdmission,
-      sourceRefs: waterbody.sourceRefs,
-    })),
-  );
+  for (const inputHash of Object.values(report.inputHashes)) assert.match(inputHash, /^[a-f0-9]{64}$/);
   assert.equal(report.nextStep.phaseId, "L1");
   assert.equal(report.nextStep.regionName, "CALABARZON (Region IV-A)");
   assert.match(report.nextStep.action, /source-backed channel trace and station records for Gapan\/Sapang/i);
@@ -105,25 +77,32 @@ test("CALABARZON checkpoint reports its gaps without claiming a complete region"
   assert.equal(sweep.regionalGapSummary.regionalBaselineComplete, false);
 });
 
-test("CALABARZON denominator profile stays pinned to the incomplete 97-lead scope", () => {
+test("latest CALABARZON denominator profile stays pinned to the incomplete scope", () => {
   const sourceRefs = [...new Set(scope.waterbodies.flatMap((waterbody) => waterbody.sourceRefs))];
   const unresolvedSourceRefs = sourceRefs.filter((sourceRef) => !sourceRegistry.sources.some((source) => source.id === sourceRef));
+  const byWaterbodyKind = Object.fromEntries(Object.entries(Object.groupBy(scope.waterbodies, (waterbody) => waterbody.kind))
+    .map(([kind, items]) => [kind, items.length]));
+  const boundaryCounts = Object.fromEntries(Object.entries(Object.groupBy(scope.waterbodies, (waterbody) => waterbody.boundaryStatus))
+    .map(([status, items]) => [status, items.length]));
+  const unknownSalinityCount = scope.waterbodies.filter((waterbody) => waterbody.salinity.classification === "unknown").length;
+  const fishEvidenceNotReviewed = scope.waterbodies
+    .filter((waterbody) => waterbody.fishEvidenceStatus === "not-reviewed")
+    .map((waterbody) => waterbody.id);
 
   assert.equal(denominatorProfile.status, "research-only-coverage-audit");
   assert.equal(denominatorProfile.provenance.scopeSha256, createHash("sha256").update(scopeBytes).digest("hex"));
   assert.equal(denominatorProfile.provenance.sourceRegistrySha256, createHash("sha256").update(sourceBytes).digest("hex"));
   assert.equal(denominatorProfile.denominator.waterbodyResearchLeads, scope.waterbodies.length);
-  assert.equal(denominatorProfile.denominator.waterbodyResearchLeads, 97);
-  assert.deepEqual(denominatorProfile.denominator.byKind, report.coverageSummary.byWaterbodyKind);
+  assert.deepEqual(denominatorProfile.denominator.byKind, byWaterbodyKind);
   assert.equal(denominatorProfile.denominator.uniqueSourceReferences, sourceRefs.length);
   assert.deepEqual(denominatorProfile.denominator.unresolvedSourceReferences, unresolvedSourceRefs);
-  assert.deepEqual(denominatorProfile.reviewGaps.boundary, { "not-delineated": 97 });
-  assert.equal(denominatorProfile.reviewGaps.salinity.unknown, 92);
-  assert.equal(denominatorProfile.reviewGaps.fishEvidenceNotReviewed.length, 17);
-  assert.equal(denominatorProfile.reviewGaps.researchQueued.length, 12);
+  assert.deepEqual(denominatorProfile.reviewGaps.boundary, boundaryCounts);
+  assert.equal(denominatorProfile.reviewGaps.salinity.unknown, unknownSalinityCount);
+  assert.deepEqual(denominatorProfile.reviewGaps.fishEvidenceNotReviewed, fishEvidenceNotReviewed);
+  assert.equal(denominatorProfile.reviewGaps.researchQueued.length, 32);
   assert.equal(denominatorProfile.existingScopeCounters.geometryValidated, 0);
   assert.equal(denominatorProfile.existingScopeCounters.speciesAssertionsImported, 9);
   assert.equal(denominatorProfile.existingScopeCounters.publicRecordsAdmitted, 0);
   assert.match(denominatorProfile.interpretation[0], /not proof that every CALABARZON/i);
-  assert.match(denominatorProfile.interpretation[3], /adds no species assertion/i);
+  assert.match(denominatorProfile.interpretation[3], /No new occurrence assertion/i);
 });

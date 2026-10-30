@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "checkedOn": "2026-10-30",
+  "checkedOn": "2026-10-31",
   "status": "research-only-source-registry",
   "scope": "National acquisition references, freshwater spatial-source leads, and CALABARZON/Central Luzon identity/source leads. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 414,
+  "sourceCount": 415,
   "sources": [
     {
       "id": "carumbana-siaton-river-limnology-fishery-report-2006",
@@ -2122,13 +2122,14 @@
       "provider": "Original study publisher / institutional repository",
       "url": "https://doi.org/10.1002/edn3.70273",
       "additionalUrls": [],
-      "role": "Primary four-site national mangrove eDNA study with a Catanduanes sample site; keep its sample-level detections separate from capture records and other-site findings.",
-      "checkedOn": "2026-10-22",
+      "role": "Primary four-site mangrove eDNA study; the Batangas sample site is Olo-Olo in Lobo. Keep site-level eDNA detections separate from captures and other-site findings.",
+      "checkedOn": "2026-10-31",
       "access": {
-        "status": "Full primary publisher-hosted article text reviewed for Batangas, Catanduanes, Aklan and Palawan scope. Publisher-hosted Tables S1-S2 download returned HTTP 403, so sample-to-OTU rows remain uninspected. Crossref DOI metadata acquired HTTP200.",
+        "status": "Full primary publisher article reviewed for Olo-Olo/Batangas and the other named study sites. Official Tables S1-S2 workbook endpoint returned HTTP 403 on 2026-10-31; sample-to-OTU rows remain uninspected. Crossref VOR license metadata and no separate workbook license are recorded in source reviews.",
         "reviewFiles": [
           "calabarzon-brackish-source-review.json",
-          "national-bicol-catanduanes-agojo-mangrove-edna-review-20261030.json"
+          "national-bicol-catanduanes-agojo-mangrove-edna-review-20261030.json",
+          "calabarzon-olo-olo-mangrove-edna-review-20261031.json"
         ]
       },
       "reuse": {
@@ -2137,7 +2138,7 @@
         "content": "Article version of record is recorded as CC BY-NC-ND 4.0 in Crossref metadata; no separate license for the supporting workbook was verified. No Bangwit publication approval. Other source-specific decisions are retained in review files."
       },
       "publicationApproval": false,
-      "researchStatus": "four-region-mangrove-edna;catanduanes-sample-crosswalk-unavailable;cc-by-nc-nd;research-only",
+      "researchStatus": "four-region-mangrove-edna;batangas-olo-olo-site-crosswalk;sample-crosswalk-unavailable;cc-by-nc-nd;research-only",
       "doi": "10.1002/edn3.70273"
     },
     {
@@ -12878,6 +12879,32 @@
         "Cestraeus sp. does not resolve the 2023 Samar abstract conflict between a genus-level label and Cestraeus plicatilis; no voucher or sequence crosswalk is exposed.",
         "Do not use the abstract metrics as validated abundance, stock status, sustainable-harvest guidance, or current legal/conservation advice."
       ]
+    },
+    {
+      "id": "calacademy-catalog-olo-olo-edna-taxonomy",
+      "title": "Eschmeyer's Catalog of Fishes cross-check for Olo-Olo eDNA study taxa",
+      "provider": "California Academy of Sciences, Institute for Biodiversity Science and Sustainability",
+      "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/",
+      "additionalUrls": [
+        "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=15921",
+        "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Hippocampus&tbl=species"
+      ],
+      "role": "Independent name-validity cross-check for the two species named in the Olo-Olo eDNA paper; does not validate local detection, sample rows, or current presence.",
+      "checkedOn": "2026-10-31",
+      "access": {
+        "status": "Ordinary public catalog pages reviewed for name validity only.",
+        "reviewFiles": [
+          "calabarzon-olo-olo-mangrove-edna-review-20261031.json"
+        ]
+      },
+      "reuse": {
+        "metadata": "Taxonomic name-status metadata linked for attribution.",
+        "raw": "No page copy retained.",
+        "content": "No catalog prose or list is reproduced; this is a name cross-check only."
+      },
+      "publicationApproval": false,
+      "researchStatus": "two-name-validity-crosscheck;not-occurrence-evidence;research-only",
+      "sourceYear": 2026
     }
   ],
   "sourcePolicy": {
