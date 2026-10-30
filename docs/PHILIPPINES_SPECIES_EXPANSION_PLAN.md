@@ -1695,3 +1695,12 @@ DA-NFRDI's public summary of its 2023-2024 assessment reports verified sinarapan
 No item-specific reuse permission was verified for the journal articles or agency features. Added five source references (290 total) and national-bicol-camsur-five-inland-habitats-identity-crosscheck-20261030.json. No occurrence/absence record, taxonomic correction, diet/predation assertion, geometry, legal or safety claim, or public-app row was added; no publication approval was granted. Bicol remains incomplete.
 
 **Next:** locate NFRDI's primary Lake Buhi and Lake Bato technical assessments, complete checklists, collection dates, sample counts, voucher/accession identifiers and taxonomic determinations. Continue other Bicol inland-water and coastal source screening in parallel; the primary reports do not block other waterbody work.
+
+
+### National rollout step 217 — NFRDI Lake Buhi risk-assessment and project-status screen
+
+Reviewed the official NFRDI repository metadata for Magistrado et al.'s 2026 Philippine Journal of Fisheries paper on an AS-ISK risk assessment covering Laguna de Bay, Lake Mainit, Lake Naujan, Lake Buhi and Lake Paoay. The paper distinguishes extant and horizon categories; it defines horizon species as not recorded in the assessment during its study period but considered likely to enter or establish later. Therefore a horizon listing or invasive-risk score is not a Lake Buhi occurrence, native-species checklist, or current fishery-availability record. The NFRDI repository abstract and indexed article text were reviewed, but the full article PDF timed out in this research pass; its table and scores were not copied.
+
+The official NFRDI FY 2024 Annual Report lists a broader inland-lakes stock-assessment project naming Lake Buhi, Lake Bato and Naujan Lake, with a planned January 2023–December 2028 duration. This establishes program context only: it does not show that all lakes have completed public species datasets or promise a release date. Added two source references (292 total) and national-bicol-inland-risk-assessment-source-review-20261030.json. No species occurrence, abundance, risk score, legal/safety, diet, or public-app row was added; no publication approval was granted. Bicol remains incomplete.
+
+**Next:** continue the Bicol regional source inventory across river, lake, reservoir, wetland, estuarine and coastal habitats. In parallel, look for public primary checklists or technical reports from the continuing NFRDI assessments; no pending report should block other source work.
