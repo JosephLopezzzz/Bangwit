@@ -2327,3 +2327,13 @@ The named catch groups visible in the abstract are common names only (threespot 
 Added `national-visayas-eastern-visayas-southern-leyte-silago-coastal-fish-profile-review-20261030.json` and one registry record with two source URL references (405 total). No species assertion, occurrence, geometry, diet, safety/legal/catchability claim, or public-app row was added.
 
 **Next:** continue separate Eastern Visayas freshwater, brackish, estuary and marine-source reviews; prioritize inspectable taxon lists and station-level evidence for Leyte, Samar and Biliran. Keep this Silago source as historical fishery context until the table, scientific names, per-barangay allocation and 29/31 discrepancy are independently resolved.
+
+### National rollout step 281 - Leyte Gulf BFAR 2001-2011 landing-assessment review
+
+Reviewed the full BFAR-authored article in the official DA-NFRDI repository. It summarizes NSAP monitored-landing data for 2001-2011 across centers in Leyte and Eastern Samar, with boat landings sampled about every two days (10-11 sampling days per month per area). Its catch tables describe historical gear and catch composition; they are landing/ground fishery data, not exact species coordinates or a complete present-day occurrence inventory.
+
+Table 3 lists selected top-ten source names for 2001, 2006 and 2011. This review retained 17 distinct strings as research leads only, preserving source spellings. It does not promote them to accepted taxa or records: the table includes *Portunus pelagicus* (a crab), prints “Ratsrelliger kanagurta,” and has a family-label typo for *Gazza minuta*. The paper's wording that 142 “families” comprise animal-group counts summing to 125, plus its unclear 809/293 “species caught” numbers, is unresolved. No tables were copied; the article's reuse terms were not established.
+
+Added `national-visayas-eastern-visayas-leyte-gulf-2001-2011-bfar-fishery-review-20261030.json` and one official-source registry record with two URL references (406 total). No species assertion, occurrence, geometry, diet, safety/legal/catchability claim or public-app row was added.
+
+**Next:** keep these historical marine landing data separate from the 2020 trawl assessment and the freshwater records. Continue Eastern Visayas inland-water and brackish/estuary source discovery; independently validate any retained source-name leads before considering an app projection.
