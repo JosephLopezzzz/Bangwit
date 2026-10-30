@@ -3,7 +3,7 @@
   "checkedOn": "2026-10-30",
   "status": "research-only-source-registry",
   "scope": "National acquisition references, freshwater spatial-source leads, and CALABARZON/Central Luzon identity/source leads. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 321,
+  "sourceCount": 324,
   "sources": [
     {
       "id": "emb-r5-2025-bosigon-irrigation-project-eis-fish-source-audit",
@@ -1473,21 +1473,22 @@
       "provider": "Original study publisher / institutional repository",
       "url": "https://doi.org/10.1002/edn3.70273",
       "additionalUrls": [],
-      "role": "Primary CALABARZON source reviewed for river or estuarine evidence; inclusion alone is not fish admission.",
+      "role": "Primary four-site national mangrove eDNA study with a Catanduanes sample site; keep its sample-level detections separate from capture records and other-site findings.",
       "checkedOn": "2026-10-22",
       "access": {
-        "status": "Article text read through primary web result; ordinary HTML returned 403; original supplementary workbook not acquired. Crossref DOI metadata acquired HTTP200.",
+        "status": "Full primary publisher-hosted article text reviewed for Batangas, Catanduanes, Aklan and Palawan scope. Publisher-hosted Tables S1-S2 download returned HTTP 403, so sample-to-OTU rows remain uninspected. Crossref DOI metadata acquired HTTP200.",
         "reviewFiles": [
-          "calabarzon-brackish-source-review.json"
+          "calabarzon-brackish-source-review.json",
+          "national-bicol-catanduanes-agojo-mangrove-edna-review-20261030.json"
         ]
       },
       "reuse": {
         "metadata": "Bibliographic citation, source access and rights-review facts only.",
         "raw": "Originals and receipts remain in the ignored local research cache.",
-        "content": "No blanket publication approval. Palico has a custom publisher copying/distribution grant; candidate identity/reach decisions are separate. Other restrictions and unresolved terms are retained in source reviews."
+        "content": "Article version of record is recorded as CC BY-NC-ND 4.0 in Crossref metadata; no separate license for the supporting workbook was verified. No Bangwit publication approval. Other source-specific decisions are retained in review files."
       },
       "publicationApproval": false,
-      "researchStatus": "source-held-with-documented-gaps",
+      "researchStatus": "four-region-mangrove-edna;catanduanes-sample-crosswalk-unavailable;cc-by-nc-nd;research-only",
       "doi": "10.1002/edn3.70273"
     },
     {
@@ -9859,6 +9860,100 @@
         "The study focuses on native freshwater fish and does not fill introduced-fish, marine, estuarine, full coastal or all-waterbody requirements in Bangwit's national plan.",
         "The publisher download endpoint returned HTTP 403; the institutional article-file route timed out. The actual taxon rows, change log, underlying citations, article version and item-specific reuse terms remain unverified.",
         "No species assertion, occurrence, geometry, public-app row, diet, legal or safety claim is approved from this metadata alone."
+      ]
+    },
+    {
+      "id": "denr-r5-2021-catanduanes-coastal-habitat-assessment",
+      "title": "Coastal Habitat Assessment in Catanduanes",
+      "provider": "DENR Region V (Bicol), Conservation and Development Division / PENRO Catanduanes",
+      "url": "https://r5.denr.gov.ph/news-events/coastal-habitat-assessment-in-catanduanes/",
+      "additionalUrls": ["https://r5.denr.gov.ph/news-events/page/42/"],
+      "role": "Official regional notice confirming a 2021 BAMS-based assessment of reef fish, seagrass and mangrove habitats in Viga and Bato; no species table or field records are available in the notice, so this is a data-acquisition lead only.",
+      "checkedOn": "2026-10-30",
+      "sourceYear": 2021,
+      "citation": "Department of Environment and Natural Resources Region V. (2021, May 5). Coastal Habitat Assessment in Catanduanes. DENR Bicol.",
+      "access": {
+        "status": "Direct official article request returned HTTP 403. Official DENR Bicol archive/index text reviewed for date, assessment scope and BAMS protocol. No technical report, species table, field sheet, station coordinates or map was retrieved.",
+        "reviewFiles": ["national-bicol-catanduanes-denr-coastal-habitat-assessment-lead-20261030.json"],
+        "fullTextRetrieved": false
+      },
+      "reuse": {
+        "metadata": "Official notice title, date, agency, habitat scope and method summary retained.",
+        "raw": "No article text, species table, images, map or assessment data copied.",
+        "content": "No item-specific report/data reuse terms verified. No app publication approval."
+      },
+      "publicationApproval": false,
+      "researchStatus": "official-bams-coastal-assessment;viga-bato;reef-seagrass-mangrove;species-data-unavailable;research-only",
+      "license": "No assessment-data reuse terms verified",
+      "licenseUrl": null,
+      "caveats": [
+        "The notice confirms an assessment activity and records that species composition, richness and abundance were among the parameters; it does not publish its fish taxa or measurements.",
+        "Keep Viga and Bato and the reef, seagrass and mangrove habitats separately identified. The notice does not supply survey dates, site coordinates, habitat polygons or a species-by-site crosswalk.",
+        "Do not infer fishing access, catchability, regulations, current presence or safety from the assessment notice.",
+        "No species assertion, occurrence, geometry, public-app row or publication approval is granted by this source lead."
+      ]
+    },
+    {
+      "id": "olano-et-al-2009-sorsogon-bay-fisheries-assessment",
+      "title": "Assessment of the Fisheries of Sorsogon Bay (Region 5)",
+      "provider": "BFAR National Fisheries Research and Development Institute, Technical Paper Series",
+      "url": "https://www.nfrdi.da.gov.ph/tpjf/etc/assessment_of_the_fisheries_of_sorsogon_bay_region_5.pdf",
+      "additionalUrls": ["https://www.nfrdi.da.gov.ph/tpjf/technical%20bulletins.php"],
+      "role": "Official historical fisheries assessment of Sorsogon Bay using catch, effort and length-frequency data from April 1999 to March 2003; aggregate monitored landings and selected dominant taxa only, not a complete or current occurrence checklist.",
+      "checkedOn": "2026-10-30",
+      "sourceYear": 2009,
+      "citation": "Olaño, V. L., Vergara, M. B., & Gonzales, F. L. (2009, December). Assessment of the Fisheries of Sorsogon Bay (Region 5). BFAR-NFRDI Technical Paper Series, 12(4).",
+      "access": {
+        "status": "Official NFRDI PDF downloaded; abstract, study scope, methods, selected results and conclusions reviewed. The paper reports four years of historical monitoring (April 1999-March 2003), three landing centers, aggregate catch/effort/length-frequency analysis and selected dominant fish/invertebrate taxa. No item-specific reuse terms were verified.",
+        "reviewFiles": ["national-bicol-sorsogon-bay-assessment-2009-review-20261030.json"],
+        "fullTextRetrieved": true
+      },
+      "reuse": {
+        "metadata": "Official citation, provider, scope and access facts retained.",
+        "raw": "Downloaded source PDF remains in the local temporary research folder; it is not included in the repository.",
+        "content": "No item-specific license or reuse permission was verified. Do not redistribute the PDF, reproduce tables, or publish derived Bangwit rows until rights and field-level evidence are reviewed."
+      },
+      "publicationApproval": false,
+      "researchStatus": "historical-sorsogon-bay-fishery-assessment;1999-2003;selected-dominant-taxa;not-current-occurrence;research-only",
+      "license": "No item-specific reuse terms verified",
+      "licenseUrl": null,
+      "caveats": [
+        "The assessment concerns marine fisheries in Sorsogon Bay; it is not a freshwater river or lake inventory and does not complete Bicol or Sorsogon coverage.",
+        "Its sampling sites are landing centers in Cambulaga (Sorsogon), Cawit (Casiguran) and Poblacion (Castilla). These are landing locations, not necessarily capture locations for each fish.",
+        "The report selects 25 dominant fish and 10 dominant invertebrate species by catch consistency and volume; that selected set is not a complete checklist.",
+        "The introduction/methods describe five municipalities and 67 bordering barangays, while the results text refers to 64 barangays; preserve this internal scope discrepancy.",
+        "The monitoring period ended in March 2003. Do not describe the report as current presence, present-day abundance, catchability, diet, native status, safety or fishing permission.",
+        "No event coordinates, specimen-voucher crosswalk, public data table or item-specific reuse permission was verified. No occurrence, catch, geometry, diet or public-app row is approved from this assessment alone."
+      ]
+    },
+    {
+      "id": "bfar-foi-2022-sorsogon-bay-assessment-physical-copy-status",
+      "title": "Resource and Ecological Assessment of Sorsogon Bay, Philippines, Vol. I to III - FOI response",
+      "provider": "Freedom of Information Philippines / Bureau of Fisheries and Aquatic Resources",
+      "url": "https://www.foi.gov.ph/requests/resource-and-ecological-assessment-of-sorsogon-bay-philippines-vol-i-to-iii/",
+      "role": "Historical acquisition-status record for the 1995 BFAR Sorsogon Bay assessment volumes; BFAR reported a physical copy and no softcopy as of its August 2022 response, then directed the requester to the regional fisheries office.",
+      "checkedOn": "2026-10-30",
+      "sourceYear": 2022,
+      "citation": "Bureau of Fisheries and Aquatic Resources. (2022, August 1). Response to FOI request #BFAR-368584142482: Resource and Ecological Assessment of Sorsogon Bay, Philippines, Vol. I to III. Freedom of Information Philippines.",
+      "access": {
+        "status": "Official FOI request-and-response page reviewed. The July 31, 2022 requester sought the 1995 assessment volumes; BFAR's August 1, 2022 response said it held a physical copy, digitization was in progress and a softcopy was unavailable at that time. The response suggested contacting DA-BFAR Regional Fisheries Office.",
+        "reviewFiles": ["national-bicol-sorsogon-1995-bfar-foi-access-lead-review-20261030.json"],
+        "fullTextRetrieved": true
+      },
+      "reuse": {
+        "metadata": "FOI request number, dates and historical access response retained for acquisition planning.",
+        "raw": "No assessment volume or checklist was obtained or copied from this FOI page.",
+        "content": "The response concerns another requester's access request and grants no license or permission to reuse the underlying report or derived data. No Bangwit publication approval."
+      },
+      "publicationApproval": false,
+      "researchStatus": "historical-2022-bfar-access-response;1995-sorsogon-bay-volumes;softcopy-unavailable-at-response-date;acquisition-lead-only",
+      "license": "Not applicable to underlying assessment; reuse terms unverified",
+      "licenseUrl": null,
+      "caveats": [
+        "This is a 2022 response, not confirmation of BFAR's current digitization or holdings status.",
+        "The response confirms the agency reported having a physical copy of Volumes I-III but does not expose the 1995 fish checklist, scan, individual volume contents or exact data rows.",
+        "It does not establish open access, redistribution rights, species-level evidence quality, capture locations or current presence.",
+        "No new FOI request, email, phone call or data request was submitted as part of this review."
       ]
     }
   ],

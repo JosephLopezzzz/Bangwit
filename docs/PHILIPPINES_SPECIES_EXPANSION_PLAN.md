@@ -1864,3 +1864,45 @@ The publisher's Table S1 and S2-S4 download endpoints returned HTTP 403; direct 
 Added one national source reference (321 total) and `national-freshwater-fish-biogeography-catchment-matrix-review-20261030.json`. No species/occurrence assertion, geometry or public-app row was added; no publication approval was granted. The supplement remains a high-priority acquisition lead, not an imported dataset.
 
 **Next:** try the institution-listed article PDF or an author/institution-provided copy, verify its manuscript version against the final article, and obtain the final supplementary files by an accessible official route. Log file hashes and rights, inspect taxon categories and catchment assignments/change history, then crosswalk sites to current PSGC regions and separately named waterbodies. Continue accessible regional source review in parallel if publisher access remains blocked.
+
+
+### National rollout step 232 - Catanduanes Agojo mangrove eDNA evidence boundary
+
+Reopened the already registered 2026 Nob et al. article as a national cross-region source and reviewed its full publisher-hosted text. The Catanduanes sampling site is Agojo Point Fish Sanctuary and Marine Reserve in San Andres, a fringe-mangrove site facing the North Philippine Sea. Sampling occurred during the Amihan window from December 2023 to January 2024, with three landward/middleward/seaward stations about 500 m apart and sample groups reported for flood (n=3) and ebb (n=3) tides. The exact station/sample crosswalk remains in inaccessible Table S1. The paper reports 11-44 OTUs for Catanduanes in its site-richness summary; these are OTUs, not a species count.
+
+The article-wide 276 OTUs and 159 species-level annotations combine four sites (Batangas, Catanduanes, Aklan and Palawan). Table S1 describes sample collection/environment records and Table S2 gives taxonomic OTUs, sequence variants and read counts by site, but the publisher download returned HTTP 403. No Catanduanes taxon rows, sample coordinates or read crosswalk could be inspected. Preserve eDNA detections as method-specific, dated evidence; do not treat them as capture/voucher events, abundance, resident-population proof, catchability, diet or fishing permission. The article version of record is marked CC BY-NC-ND 4.0 in Crossref, and no separate supporting-workbook license was verified.
+
+Reused the existing source reference (registry remains 321) and added `national-bicol-catanduanes-agojo-mangrove-edna-review-20261030.json`. No species/occurrence assertion, geometry or public-app row was added; publication approval remains false. This expands Bicol coastal source coverage but does not complete Catanduanes or Region V.
+
+**Next:** obtain Tables S1-S2 through an accessible author/publisher route, inspect the sample-to-OTU/site crosswalk and file rights, and continue independent Catanduanes reef, river/estuary, lake and inland-water source screening in parallel.
+
+
+### National rollout step 233 - DENR Catanduanes coastal assessment data lead
+
+Reviewed DENR Bicol's official notice, indexed in its archive as published May 5, 2021. DENR Region V and PENRO Catanduanes report that they assessed coral reefs and associated reef fish, seagrass beds, and mangroves in Viga and Bato using DENR BAMS coastal/marine protocols, recording composition, richness, abundance and habitat condition as part of CMEMP technical assistance.
+
+The direct notice page returned HTTP 403, and the accessible notice does not provide named fish, dates, station coordinates, counts, vouchers, maps, a report download or data-reuse terms. Added one official source lead (322 total) and `national-bicol-catanduanes-denr-coastal-habitat-assessment-lead-20261030.json`. No species/occurrence assertion, geometry or public-app row was added; publication approval remains false. Viga and Bato reef, seagrass and mangrove coverage remain unverified individually.
+
+**Next:** locate or request the final BAMS report, fish/habitat tables, station map, identification/voucher details and reuse terms through DENR Region V CRFMS or PENRO Catanduanes. Continue other Catanduanes waterbody and habitat source reviews in parallel.
+
+
+### National rollout step 234 - Sorsogon Bay historical fisheries assessment
+
+Downloaded the official NFRDI *Assessment of the Fisheries of Sorsogon Bay (Region 5)*, Technical Paper Series Vol. 12, No. 4 (December 2009), and reviewed its abstract, study scope, methods, selected results and conclusions. It analyzes four years of catch, effort and length-frequency data from April 1999 to March 2003. Landing monitoring is reported at Cambulaga (Sorsogon), Cawit (Casiguran) and Poblacion (Castilla); a separate boat/gear inventory covers the municipalities around the bay. The assessment describes 25 dominant fish and 10 dominant invertebrate species selected by consistency and catch volume, not a complete regional species checklist.
+
+This source is useful historical aggregate fishery evidence, but a landing site is not necessarily the capture site of each fish. The report's methods refer to 67 bordering barangays while its results say 64; the discrepancy remains unresolved. No event-level landing dataset, fish-to-capture-location crosswalk, voucher accession, or item-specific reuse permission was established. The survey period ended in 2003, so it does not support current presence, present-day abundance, diet, catchability, rules or safety.
+
+Added one source reference (323 total) and `national-bicol-sorsogon-bay-assessment-2009-review-20261030.json`. No taxa were transcribed and no species assertion, occurrence, catch record, geometry, diet claim or public-app row was added; publication approval remains false. Bicol and Sorsogon coverage remain incomplete.
+
+**Next:** locate the 1995 Sorsogon Bay fish checklist cited in the paper or the underlying NSAP landing records, then continue the separate inland-water and coastal-habitat sweep for Bicol. Keep rivers, lakes, reservoirs, estuaries, mangroves, seagrass and reef units distinct.
+
+
+### National rollout step 235 - 1995 Sorsogon Bay assessment access lead
+
+Checked the official FOI Philippines record for an earlier request for the 1995 *Resource and Ecological Assessment of Sorsogon Bay*, Volumes I-III. The requester sought the volumes for research on July 31, 2022. BFAR's August 1, 2022 response reported that it had a physical copy, was still digitizing books and IEC materials, and did not have a softcopy available at that time; it suggested contacting DA-BFAR Regional Fisheries Office. The 2009 NFRDI paper cites the fish checklist in Volume II, pages 79-97.
+
+This archived response is an acquisition lead only, not confirmation of present-day availability. It supplies no 1995 taxa or tables and grants no reuse permission. No new request or message was sent.
+
+Added one access-lead source reference (324 total) and `national-bicol-sorsogon-1995-bfar-foi-access-lead-review-20261030.json`. No taxa, occurrence or geometry assertion, or public-app row was added. The checklist remains unavailable for review and Bicol coverage remains incomplete.
+
+**Next:** if pursuing the old checklist, ask BFAR whether Volume II pages 79-97 can now be inspected or shared and request current access and reuse terms. Continue the Bicol-wide inland and coastal evidence sweep independently; the 2022 response does not need to block work elsewhere.
