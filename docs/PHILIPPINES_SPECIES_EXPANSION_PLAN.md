@@ -2123,3 +2123,11 @@ Retrieved the complete 25-page 2010 Silliman Journal issue PDF from its alternat
 Added national-visayas-negros-bago-river-2010-fish-study-access-review-20261030.json and one source record (347 total). The landing page platform date (2022) is distinguished from the issue date (2010). No species table or station matrix was transcribed; no occurrence, geometry or public app row was added. Silliman Journal copyright terms do not establish open reuse rights for a structured dataset.
 
 **Next:** request guidance/permission before transcribing Table 1. Continue discovery for Pagatban, Ilog-Hilabangan and Siaton sources, and keep river-specific timeframes separate from regional completion counts.
+
+### National rollout step 259 - Ilog-Hilabangan JICA fauna source access review
+
+Reviewed the JICA report catalog, complete January 2010 Part II-B feasibility report, and its official Annex PIIB 9-1 biological survey. The annex describes visual checks of habitats/signs and interviews with residents, then presents five fish entries in a wider fauna table. It does not specify the fish survey date, taxon-specific evidence method, reach/station per label, coordinates, effort, counts or voucher specimens; several entries are genus-level. The main report's statement that there are no fisheries in the river is fisheries/use context and does not establish fish absence.
+
+Added `national-visayas-negros-ilog-hilabangan-jica-fauna-access-review-20261030.json` and one source reference (348 total). No fish names were transcribed, no taxonomy or occurrence assertions were made, no geometry was created, and no app rows were added. The report is a project-site historical lead, not a river-basin inventory or current species baseline. Its public download is not treated as permission to redistribute structured fish data.
+
+**Next:** continue source discovery for the Ilog estuary/diverted channel and Pagatban/Siaton systems. Keep estuary, fishery, aquaculture and upstream freshwater evidence distinct; retain the source-date and reuse holds.
