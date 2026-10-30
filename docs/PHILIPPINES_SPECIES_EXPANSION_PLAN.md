@@ -2071,3 +2071,39 @@ Reviewed the publisher-hosted 2019 Bayawan River fish study and its official PDF
 The paper prints invalid DMS minute values for the Villareal and Nangka coordinates. Those points are not corrected or mapped. The study is a dated preliminary river-estuary baseline, not current presence, population abundance, catchability, legal fishing advice or safety guidance. Added `national-visayas-negros-bayawan-river-2019-fish-checklist-review-20261030.json` and one source reference (342 total). Public app admission remains on hold; no app species, occurrence or geometry rows were added.
 
 **Next:** build an attributed taxonomy crosswalk over the 28 source labels while retaining each verbatim string, keep the genus-only record unresolved, and separately inspect the full station-by-month abundance table before deriving counts. Resolve the two invalid coordinates from an authoritative correction before mapping; meanwhile continue the inland-lake and other river source sweep for Negros and Siquijor.
+
+
+### National rollout step 253 - Bayawan River CoL XR taxonomy proposals
+
+Queried the 27 binomial labels in Quindo et al. (2019) Table 3 against the explicit Catalogue of Life eXtended Release matching index. Metadata hashes matched before and after capture. Results were 18 exact accepted-usage matches, five exact synonym usages with accepted-usage proposals, three variant matches and one higher-rank result. The single genus-only source row, Butis sp., was not queried.
+
+Added national-visayas-negros-bayawan-colxr-taxonomy-crosswalk-20261030.json. The ignored raw API snapshot remains untracked. Article strings are preserved; each decision is pending, and no name, specimen, occurrence, geometry or public-app row was adopted.
+
+**Next:** compare synonym, variant and higher-rank results against specialist fish-taxonomy records; do not treat automated nomenclature matching as specimen re-identification.
+
+
+### National rollout step 254 - Bayawan River independent taxonomy check
+
+Compared the five synonym proposals, three variant matches and one higher-rank result against Eschmeyer's Catalog of Fishes, WoRMS, CSIRO CAAB and the existing NCBI Taxonomy comparator. Four synonym proposals are corroborated as name proposals; Chelon melinopterus remains disputed between WoRMS (Planiliza melinoptera) and NCBI Taxonomy (current name Chelon melinopterus). The three spelling candidates Caranx sexfasciatus, Toxotes jaculatrix and Upeneus moluccensis are supported by the Catalog. Yarica halasoma remains a source-spelling hypothesis: GBIF returned the genus at higher rank, while catalogs support Yarica hyalosoma.
+
+Added national-visayas-negros-bayawan-independent-taxonomy-check-20261030.json and three authority references (345 total, reusing one existing NCBI comparator). The 18 exact accepted-name matches were not independently checked in this focused pass. No field specimen was reidentified, source name overwritten, taxon adopted or app row approved.
+
+**Next:** inspect Table 3 visually and reconcile all 28 rows and nine station-month cells against the paper's reported total before creating an internal ledger.
+
+
+### National rollout step 255 - Bayawan River Table 3 abundance ledger
+
+Visually inspected Table 3 on the publisher PDF page printed 127 (PDF page 10), transcribed all 252 station-month cells for 28 source labels and built national-visayas-negros-bayawan-abundance-ledger-20261030.json. Numeric cells sum to the reported 670 specimens; December sums to 303 and Suba/S1 to 572. Derived station totals are S1/Suba 572, S2/Villareal 28 and S3/Nangka 70. The 28 labels include genus-level Butis sp.
+
+One source inconsistency remains: the prose says January had 24 species, but the visually transcribed Table 3 shows numeric counts for 23 labels. December's 27 and February's 15 table labels agree with the prose. Dashes and blank cells are preserved separately; neither is generalized into ecological absence. No counts were published as population estimates, no current occurrence asserted, and no app row or geometry added.
+
+**Next:** record a separate historical-display eligibility decision. Keep Bayawan out of the public app until the January count discrepancy, invalid Villareal/Nangka coordinates, taxonomy holds, rights conditions and qualified review are resolved.
+
+
+### National rollout step 256 - Bayawan historical display hold
+
+Recorded national-visayas-negros-bayawan-historical-display-eligibility-20261030.json. The ledger remains internal research. Public display, a map projection and app-row admission are held because two printed coordinates have invalid DMS minutes, the January richness statement disagrees with Table 3, Butis sp. is genus-only, two name treatments are held, and no qualified review or publication approval exists.
+
+This decision preserves the study as dated 2018-2019 historical evidence only. It does not claim present-day occupancy, whole-river range, fishability, diet, safety or legal permission. No app species, occurrence, geometry or public row was added.
+
+**Next:** continue the independent freshwater source sweep for Negros and Siquijor in parallel. Revisit Bayawan only if an authoritative coordinate/table correction or qualified taxonomic review becomes available; do not map the invalid coordinates.
