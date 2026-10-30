@@ -1930,3 +1930,14 @@ The 2016 paper cites a 2014 Ticao reef baseline. Its publisher abstract reports 
 Added two source references (327 total) and `national-bicol-masbate-ticao-reef-fish-stock-catch-review-20261030.json`. No taxa were transcribed; no species assertion, occurrence, catch record, geometry or public-app row was added. Ticao and Masbate coverage remain incomplete.
 
 **Next:** seek a permission-cleared species-by-site list or author-held field table for the 2013 census and continue the distinct Masbate mangrove, estuary and inland-water review. Keep any landing-site catch data separate from reef survey observations.
+
+
+### National rollout step 238 - Asid Gulf fish-guide profile inventory
+
+Reviewed the official NFRDI listing and its linked 2019 *Fish Guide: Common Fishes in Asid Gulf*, a BFAR Region V/NFRDI NSAP output. The guide's profile pages (PDF pages 19-81; printed pages 5-67) contain 86 distinct fish profiles with source scientific, English and local names. Its introduction describes the guide's Asid Gulf fishery context, NSAP work beginning in 2007, and landing centers at Milagros, Balud and Placer. The guide situates Asid Gulf in the Visayan Sea across Regions V, VI and VII; that does not make its profiles a complete checklist for any of those regions.
+
+Added `national-visayas-asid-gulf-fish-guide-profile-review-20261030.json` with the 86 names only and PDF/printed page references. No descriptions or photographs were copied. The guide's stated terms permit educational or other non-commercial reproduction with full acknowledgment, while prohibiting resale/commercial reproduction; public-app publication remains unapproved. No per-profile field dates, capture stations, coordinates, event records or vouchers were established. Names remain source strings pending a current taxonomic crosswalk.
+
+Added one official source reference (328 total). No species/occurrence, diet, abundance or geometry assertions and no public-app rows were added. This is a regional marine-fishery source, not freshwater coverage; Asid Gulf and Regions V, VI and VII remain incomplete.
+
+**Next:** crosswalk the source names against current taxonomic authorities while retaining the printed strings, and continue independent freshwater, brackish and coastal evidence sweeps by named waterbody. Keep fish-guide profiles separate from occurrence events and catch records.
