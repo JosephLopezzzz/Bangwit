@@ -1981,3 +1981,12 @@ Reviewed the full 2014 open-access Bugang River article and transcribed its tabl
 This is a historical river-estuary checklist. The authors classify five taxa as migratory and 33 as sporadic visitors and report no primary or secondary freshwater fish in the four sampled sites. Preserve that as the source's 2013-2014 result, not a present-day absence claim or a general property of Panay rivers. The article states a Creative Commons Attribution license (version unstated); credit the authors and source. No current-presence assertion, geometry feature, fishing-rule, safety, diet, public-app row or app publication approval was added. Western Visayas remains incomplete.
 
 **Next:** run a current authoritative taxonomic crosswalk over the 35 binomial source labels while preserving the 38 verbatim rows and genus-only entries; independently validate the reported reach matrix and coordinates before preparing any historical occurrence projection. Continue the distinct inland-freshwater sweep for Panay and Guimaras.
+
+
+### National rollout step 243 - Bugang River CoL XR name proposals
+
+Matched the 35 binomial table labels in one GBIF Species API v2 batch against the explicit Catalogue of Life eXtended Release checklist. All 35 responses were exact and returned in input order; the selected matching-index metadata was stable before and after the request. Twenty-seven source usages are accepted and eight are synonyms with accepted-name proposals; one source family differs from the index (`Zenarchopterus dispar`, source Hemiramphidae vs. CoL XR Zenarchopteridae). Three genus-only source labels were left unqueried. Added `national-visayas-panay-bugang-river-taxonomy-crosswalk-20261030.json`; the source registry remains 333.
+
+These are automated nomenclature proposals only. Every decision remains pending; no source name was overwritten, taxon adopted, occurrence asserted, geometry added or public-app row admitted. The family conflict needs an independent fish-taxonomy review; exact name matching does not re-identify field specimens. The eight synonym proposals likewise require human confirmation before any accepted name is presented as the current taxon.
+
+**Next:** compare the family/name conflict and synonym usages against current authoritative fish taxonomies, then decide whether a dated, reach-scoped historical evidence projection is eligible. Preserve original names, source reach codes, dates and attribution.

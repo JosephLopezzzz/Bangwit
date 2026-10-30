@@ -1,0 +1,1510 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-30",
+  "phaseId": "V1",
+  "regionIds": [
+    "0600000000"
+  ],
+  "status": "bugang-river;35-binomial-taxonomic-crosswalk;col-xr;one-family-conflict;genus-only-held;research-only",
+  "question": "What current CoL XR nomenclature matches can be proposed for the 35 binomial taxa in the historical Bugang River table, without changing the source names or treating taxonomy as field re-identification?",
+  "inputReview": "national-visayas-panay-bugang-river-fish-checklist-review-20261030.json",
+  "authority": {
+    "name": "Catalogue of Life eXtended Release via GBIF Species Matching API v2",
+    "endpoint": "https://api.gbif.org/v2/species/match?checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b",
+    "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+    "metadataUrl": "https://api.gbif.org/v2/species/match/metadata?checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b",
+    "matchingIndex": {
+      "checklistBankDatasetKey": "315557",
+      "datasetAlias": "COL26.6 XR",
+      "datasetTitle": "Catalogue of Life",
+      "created": "2026-07-18T07:34:50.904Z",
+      "buildSha": "84c77c88ffb12cad1691fc477f1b8856101ce1c4"
+    },
+    "metadataBeforeSha256": "a250044c47c0f4efb89d860786f920e6fd8fca39df82f697a89796a6ae841b62",
+    "metadataAfterSha256": "a250044c47c0f4efb89d860786f920e6fd8fca39df82f697a89796a6ae841b62",
+    "indexStableDuringBatch": true,
+    "retrievedAtUtc": "2026-10-30T02:37:02.529Z"
+  },
+  "batch": {
+    "method": "POST",
+    "requestCount": 35,
+    "responseCount": 35,
+    "responsesFollowInputOrder": true,
+    "queryOptions": {
+      "kingdom": "Animalia",
+      "strict": true,
+      "verbose": true
+    },
+    "responseBytes": 70982,
+    "responseSha256": "26d9b8aac8a09fae87db7816fc65f0c9dd96331226b1aefd1c46167db0f62314",
+    "responseRawFileRetainedInRepository": false
+  },
+  "scope": "Automated nomenclatural crosswalk only. Each scientificName is the article source string. The API returns a current CoL XR name usage proposal; it does not verify the 2013-2014 specimen identification, station association, distribution, abundance, habitat, ecological class, present-day occurrence, diet or fishing access.",
+  "counts": {
+    "binomialSourceNames": 35,
+    "genusOnlySourceNamesHeldUnqueried": 3,
+    "queryResponses": 35,
+    "exactMatchType": 35,
+    "acceptedUsages": 27,
+    "synonymUsagesWithAcceptedUsage": 8,
+    "familyAgreements": 34,
+    "familyConflicts": 1,
+    "alternativeCandidateSets": 0,
+    "byClassification": {
+      "exact-accepted-name": 26,
+      "exact-synonym": 8,
+      "family-conflict": 1
+    },
+    "decisionsPending": 35,
+    "adoptedTaxa": 0,
+    "historicalOccurrenceAssertionsAdded": 0,
+    "publicAppRowsAdded": 0
+  },
+  "interpretation": [
+    "All 35 binomial source strings received an exact CoL XR name match in this batch, but eight matched name usages are marked SYNONYM and return a different acceptedUsage; preserve the article spelling in provenance and show accepted names only as review proposals.",
+    "The API currently classifies Zenarchopterus dispar under Zenarchopteridae while the article prints Hemiramphidae. This is a family-level taxonomic conflict for independent fish-taxonomy review, not proof that the source specimen was misidentified.",
+    "The source table has three genus-only labels (Eleotris, Glossogobius, Awaous); they were not queried or expanded to species.",
+    "No GBIF usage key is converted to a legacy numeric ID; keys remain opaque and scoped to the explicit checklistKey and captured index."
+  ],
+  "crosswalk": [
+    {
+      "candidateId": "bugang-taxon-001",
+      "sourceNameVerbatim": "Chanos chanos",
+      "sourceFamilyVerbatim": "Chanidae",
+      "sourceReachCodes": [
+        "DS"
+      ],
+      "queryParameters": {
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "scientificName": "Chanos chanos",
+        "classification": {
+          "kingdom": "Animalia"
+        },
+        "strict": true,
+        "verbose": true
+      },
+      "responseIndex": 0,
+      "batchResponseSha256": "26d9b8aac8a09fae87db7816fc65f0c9dd96331226b1aefd1c46167db0f62314",
+      "usage": {
+        "usageKey": "KV4XR",
+        "scientificName": "Chanos chanos (Fabricius, 1775)",
+        "canonicalName": "Chanos chanos",
+        "authorship": "(Fabricius, 1775)",
+        "rank": "SPECIES",
+        "status": "ACCEPTED"
+      },
+      "acceptedUsage": null,
+      "matchedFamily": "Chanidae",
+      "sourceFamilyMatchesMatchedFamily": true,
+      "matchType": "EXACT",
+      "confidence": 100,
+      "synonym": false,
+      "alternativeCandidateCount": 0,
+      "classification": "exact-accepted-name",
+      "reviewStatus": "pending",
+      "publicationEligible": false,
+      "acceptedTaxonId": null
+    },
+    {
+      "candidateId": "bugang-taxon-002",
+      "sourceNameVerbatim": "Caranx sexfasciatus",
+      "sourceFamilyVerbatim": "Carangidae",
+      "sourceReachCodes": [
+        "LM",
+        "DS"
+      ],
+      "queryParameters": {
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "scientificName": "Caranx sexfasciatus",
+        "classification": {
+          "kingdom": "Animalia"
+        },
+        "strict": true,
+        "verbose": true
+      },
+      "responseIndex": 1,
+      "batchResponseSha256": "26d9b8aac8a09fae87db7816fc65f0c9dd96331226b1aefd1c46167db0f62314",
+      "usage": {
+        "usageKey": "R2TC",
+        "scientificName": "Caranx sexfasciatus Quoy & Gaimard, 1825",
+        "canonicalName": "Caranx sexfasciatus",
+        "authorship": "Quoy & Gaimard, 1825",
+        "rank": "SPECIES",
+        "status": "ACCEPTED"
+      },
+      "acceptedUsage": null,
+      "matchedFamily": "Carangidae",
+      "sourceFamilyMatchesMatchedFamily": true,
+      "matchType": "EXACT",
+      "confidence": 100,
+      "synonym": false,
+      "alternativeCandidateCount": 0,
+      "classification": "exact-accepted-name",
+      "reviewStatus": "pending",
+      "publicationEligible": false,
+      "acceptedTaxonId": null
+    },
+    {
+      "candidateId": "bugang-taxon-003",
+      "sourceNameVerbatim": "Caranx ignobilis",
+      "sourceFamilyVerbatim": "Carangidae",
+      "sourceReachCodes": [
+        "DS"
+      ],
+      "queryParameters": {
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "scientificName": "Caranx ignobilis",
+        "classification": {
+          "kingdom": "Animalia"
+        },
+        "strict": true,
+        "verbose": true
+      },
+      "responseIndex": 2,
+      "batchResponseSha256": "26d9b8aac8a09fae87db7816fc65f0c9dd96331226b1aefd1c46167db0f62314",
+      "usage": {
+        "usageKey": "R2QF",
+        "scientificName": "Caranx ignobilis (Forsskål, 1775)",
+        "canonicalName": "Caranx ignobilis",
+        "authorship": "(Forsskål, 1775)",
+        "rank": "SPECIES",
+        "status": "ACCEPTED"
+      },
+      "acceptedUsage": null,
+      "matchedFamily": "Carangidae",
+      "sourceFamilyMatchesMatchedFamily": true,
+      "matchType": "EXACT",
+      "confidence": 100,
+      "synonym": false,
+      "alternativeCandidateCount": 0,
+      "classification": "exact-accepted-name",
+      "reviewStatus": "pending",
+      "publicationEligible": false,
+      "acceptedTaxonId": null
+    },
+    {
+      "candidateId": "bugang-taxon-004",
+      "sourceNameVerbatim": "Upeneus sulphureus",
+      "sourceFamilyVerbatim": "Mullidae",
+      "sourceReachCodes": [
+        "DS"
+      ],
+      "queryParameters": {
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "scientificName": "Upeneus sulphureus",
+        "classification": {
+          "kingdom": "Animalia"
+        },
+        "strict": true,
+        "verbose": true
+      },
+      "responseIndex": 3,
+      "batchResponseSha256": "26d9b8aac8a09fae87db7816fc65f0c9dd96331226b1aefd1c46167db0f62314",
+      "usage": {
+        "usageKey": "7DM4R",
+        "scientificName": "Upeneus sulphureus Cuvier, 1829",
+        "canonicalName": "Upeneus sulphureus",
+        "authorship": "Cuvier, 1829",
+        "rank": "SPECIES",
+        "status": "ACCEPTED"
+      },
+      "acceptedUsage": null,
+      "matchedFamily": "Mullidae",
+      "sourceFamilyMatchesMatchedFamily": true,
+      "matchType": "EXACT",
+      "confidence": 100,
+      "synonym": false,
+      "alternativeCandidateCount": 0,
+      "classification": "exact-accepted-name",
+      "reviewStatus": "pending",
+      "publicationEligible": false,
+      "acceptedTaxonId": null
+    },
+    {
+      "candidateId": "bugang-taxon-005",
+      "sourceNameVerbatim": "Upeneus vittatus",
+      "sourceFamilyVerbatim": "Mullidae",
+      "sourceReachCodes": [
+        "LM"
+      ],
+      "queryParameters": {
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "scientificName": "Upeneus vittatus",
+        "classification": {
+          "kingdom": "Animalia"
+        },
+        "strict": true,
+        "verbose": true
+      },
+      "responseIndex": 4,
+      "batchResponseSha256": "26d9b8aac8a09fae87db7816fc65f0c9dd96331226b1aefd1c46167db0f62314",
+      "usage": {
+        "usageKey": "7DM6V",
+        "scientificName": "Upeneus vittatus (Forsskål, 1775)",
+        "canonicalName": "Upeneus vittatus",
+        "authorship": "(Forsskål, 1775)",
+        "rank": "SPECIES",
+        "status": "ACCEPTED"
+      },
+      "acceptedUsage": null,
+      "matchedFamily": "Mullidae",
+      "sourceFamilyMatchesMatchedFamily": true,
+      "matchType": "EXACT",
+      "confidence": 100,
+      "synonym": false,
+      "alternativeCandidateCount": 0,
+      "classification": "exact-accepted-name",
+      "reviewStatus": "pending",
+      "publicationEligible": false,
+      "acceptedTaxonId": null
+    },
+    {
+      "candidateId": "bugang-taxon-006",
+      "sourceNameVerbatim": "Chelon subviridis",
+      "sourceFamilyVerbatim": "Mugilidae",
+      "sourceReachCodes": [
+        "HS",
+        "UM",
+        "LM",
+        "DS"
+      ],
+      "queryParameters": {
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "scientificName": "Chelon subviridis",
+        "classification": {
+          "kingdom": "Animalia"
+        },
+        "strict": true,
+        "verbose": true
+      },
+      "responseIndex": 5,
+      "batchResponseSha256": "26d9b8aac8a09fae87db7816fc65f0c9dd96331226b1aefd1c46167db0f62314",
+      "usage": {
+        "usageKey": "TVC9",
+        "scientificName": "Chelon subviridis (Valenciennes, 1836)",
+        "canonicalName": "Chelon subviridis",
+        "authorship": "(Valenciennes, 1836)",
+        "rank": "SPECIES",
+        "status": "SYNONYM"
+      },
+      "acceptedUsage": {
+        "usageKey": "4JJZF",
+        "scientificName": "Planiliza subviridis (Valenciennes, 1836)",
+        "canonicalName": "Planiliza subviridis",
+        "authorship": "(Valenciennes, 1836)",
+        "rank": "SPECIES",
+        "status": null
+      },
+      "matchedFamily": "Mugilidae",
+      "sourceFamilyMatchesMatchedFamily": true,
+      "matchType": "EXACT",
+      "confidence": 100,
+      "synonym": true,
+      "alternativeCandidateCount": 0,
+      "classification": "exact-synonym",
+      "reviewStatus": "pending",
+      "publicationEligible": false,
+      "acceptedTaxonId": null
+    },
+    {
+      "candidateId": "bugang-taxon-007",
+      "sourceNameVerbatim": "Liza macrolepis",
+      "sourceFamilyVerbatim": "Mugilidae",
+      "sourceReachCodes": [
+        "DS"
+      ],
+      "queryParameters": {
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "scientificName": "Liza macrolepis",
+        "classification": {
+          "kingdom": "Animalia"
+        },
+        "strict": true,
+        "verbose": true
+      },
+      "responseIndex": 6,
+      "batchResponseSha256": "26d9b8aac8a09fae87db7816fc65f0c9dd96331226b1aefd1c46167db0f62314",
+      "usage": {
+        "usageKey": "3VQG2",
+        "scientificName": "Liza macrolepis (Smith, 1846)",
+        "canonicalName": "Liza macrolepis",
+        "authorship": "(Smith, 1846)",
+        "rank": "SPECIES",
+        "status": "SYNONYM"
+      },
+      "acceptedUsage": {
+        "usageKey": "4JJZD",
+        "scientificName": "Planiliza macrolepis (Smith, 1846)",
+        "canonicalName": "Planiliza macrolepis",
+        "authorship": "(Smith, 1846)",
+        "rank": "SPECIES",
+        "status": null
+      },
+      "matchedFamily": "Mugilidae",
+      "sourceFamilyMatchesMatchedFamily": true,
+      "matchType": "EXACT",
+      "confidence": 100,
+      "synonym": true,
+      "alternativeCandidateCount": 0,
+      "classification": "exact-synonym",
+      "reviewStatus": "pending",
+      "publicationEligible": false,
+      "acceptedTaxonId": null
+    },
+    {
+      "candidateId": "bugang-taxon-008",
+      "sourceNameVerbatim": "Liza vaigiensis",
+      "sourceFamilyVerbatim": "Mugilidae",
+      "sourceReachCodes": [
+        "HS",
+        "LM",
+        "DS"
+      ],
+      "queryParameters": {
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "scientificName": "Liza vaigiensis",
+        "classification": {
+          "kingdom": "Animalia"
+        },
+        "strict": true,
+        "verbose": true
+      },
+      "responseIndex": 7,
+      "batchResponseSha256": "26d9b8aac8a09fae87db7816fc65f0c9dd96331226b1aefd1c46167db0f62314",
+      "usage": {
+        "usageKey": "3VQHJ",
+        "scientificName": "Liza vaigiensis (Quoy & Gaimard, 1825)",
+        "canonicalName": "Liza vaigiensis",
+        "authorship": "(Quoy & Gaimard, 1825)",
+        "rank": "SPECIES",
+        "status": "SYNONYM"
+      },
+      "acceptedUsage": {
+        "usageKey": "39BX8",
+        "scientificName": "Ellochelon vaigiensis (Quoy & Gaimard, 1825)",
+        "canonicalName": "Ellochelon vaigiensis",
+        "authorship": "(Quoy & Gaimard, 1825)",
+        "rank": "SPECIES",
+        "status": null
+      },
+      "matchedFamily": "Mugilidae",
+      "sourceFamilyMatchesMatchedFamily": true,
+      "matchType": "EXACT",
+      "confidence": 100,
+      "synonym": true,
+      "alternativeCandidateCount": 0,
+      "classification": "exact-synonym",
+      "reviewStatus": "pending",
+      "publicationEligible": false,
+      "acceptedTaxonId": null
+    },
+    {
+      "candidateId": "bugang-taxon-009",
+      "sourceNameVerbatim": "Pentaprion longimanus",
+      "sourceFamilyVerbatim": "Gerreidae",
+      "sourceReachCodes": [
+        "DS"
+      ],
+      "queryParameters": {
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "scientificName": "Pentaprion longimanus",
+        "classification": {
+          "kingdom": "Animalia"
+        },
+        "strict": true,
+        "verbose": true
+      },
+      "responseIndex": 8,
+      "batchResponseSha256": "26d9b8aac8a09fae87db7816fc65f0c9dd96331226b1aefd1c46167db0f62314",
+      "usage": {
+        "usageKey": "76N9C",
+        "scientificName": "Pentaprion longimanus (Cantor, 1849)",
+        "canonicalName": "Pentaprion longimanus",
+        "authorship": "(Cantor, 1849)",
+        "rank": "SPECIES",
+        "status": "ACCEPTED"
+      },
+      "acceptedUsage": null,
+      "matchedFamily": "Gerreidae",
+      "sourceFamilyMatchesMatchedFamily": true,
+      "matchType": "EXACT",
+      "confidence": 100,
+      "synonym": false,
+      "alternativeCandidateCount": 0,
+      "classification": "exact-accepted-name",
+      "reviewStatus": "pending",
+      "publicationEligible": false,
+      "acceptedTaxonId": null
+    },
+    {
+      "candidateId": "bugang-taxon-010",
+      "sourceNameVerbatim": "Gerres filamentosus",
+      "sourceFamilyVerbatim": "Gerreidae",
+      "sourceReachCodes": [
+        "DS"
+      ],
+      "queryParameters": {
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "scientificName": "Gerres filamentosus",
+        "classification": {
+          "kingdom": "Animalia"
+        },
+        "strict": true,
+        "verbose": true
+      },
+      "responseIndex": 9,
+      "batchResponseSha256": "26d9b8aac8a09fae87db7816fc65f0c9dd96331226b1aefd1c46167db0f62314",
+      "usage": {
+        "usageKey": "3FX2R",
+        "scientificName": "Gerres filamentosus Cuvier, 1829",
+        "canonicalName": "Gerres filamentosus",
+        "authorship": "Cuvier, 1829",
+        "rank": "SPECIES",
+        "status": "ACCEPTED"
+      },
+      "acceptedUsage": null,
+      "matchedFamily": "Gerreidae",
+      "sourceFamilyMatchesMatchedFamily": true,
+      "matchType": "EXACT",
+      "confidence": 100,
+      "synonym": false,
+      "alternativeCandidateCount": 0,
+      "classification": "exact-accepted-name",
+      "reviewStatus": "pending",
+      "publicationEligible": false,
+      "acceptedTaxonId": null
+    },
+    {
+      "candidateId": "bugang-taxon-011",
+      "sourceNameVerbatim": "Tetraroge niger",
+      "sourceFamilyVerbatim": "Tetrarogidae",
+      "sourceReachCodes": [
+        "DS"
+      ],
+      "queryParameters": {
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "scientificName": "Tetraroge niger",
+        "classification": {
+          "kingdom": "Animalia"
+        },
+        "strict": true,
+        "verbose": true
+      },
+      "responseIndex": 10,
+      "batchResponseSha256": "26d9b8aac8a09fae87db7816fc65f0c9dd96331226b1aefd1c46167db0f62314",
+      "usage": {
+        "usageKey": "KVVBQ",
+        "scientificName": "Tetraroge niger (Cuvier, 1829)",
+        "canonicalName": "Tetraroge niger",
+        "authorship": "(Cuvier, 1829)",
+        "rank": "SPECIES",
+        "status": "SYNONYM"
+      },
+      "acceptedUsage": {
+        "usageKey": "55S5W",
+        "scientificName": "Tetraroge nigra (Cuvier, 1829)",
+        "canonicalName": "Tetraroge nigra",
+        "authorship": "(Cuvier, 1829)",
+        "rank": "SPECIES",
+        "status": null
+      },
+      "matchedFamily": "Tetrarogidae",
+      "sourceFamilyMatchesMatchedFamily": true,
+      "matchType": "EXACT",
+      "confidence": 100,
+      "synonym": true,
+      "alternativeCandidateCount": 0,
+      "classification": "exact-synonym",
+      "reviewStatus": "pending",
+      "publicationEligible": false,
+      "acceptedTaxonId": null
+    },
+    {
+      "candidateId": "bugang-taxon-012",
+      "sourceNameVerbatim": "Butis butis",
+      "sourceFamilyVerbatim": "Eleotridae",
+      "sourceReachCodes": [
+        "DS"
+      ],
+      "queryParameters": {
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "scientificName": "Butis butis",
+        "classification": {
+          "kingdom": "Animalia"
+        },
+        "strict": true,
+        "verbose": true
+      },
+      "responseIndex": 11,
+      "batchResponseSha256": "26d9b8aac8a09fae87db7816fc65f0c9dd96331226b1aefd1c46167db0f62314",
+      "usage": {
+        "usageKey": "NZ3X",
+        "scientificName": "Butis butis (Hamilton, 1822)",
+        "canonicalName": "Butis butis",
+        "authorship": "(Hamilton, 1822)",
+        "rank": "SPECIES",
+        "status": "ACCEPTED"
+      },
+      "acceptedUsage": null,
+      "matchedFamily": "Eleotridae",
+      "sourceFamilyMatchesMatchedFamily": true,
+      "matchType": "EXACT",
+      "confidence": 100,
+      "synonym": false,
+      "alternativeCandidateCount": 0,
+      "classification": "exact-accepted-name",
+      "reviewStatus": "pending",
+      "publicationEligible": false,
+      "acceptedTaxonId": null
+    },
+    {
+      "candidateId": "bugang-taxon-013",
+      "sourceNameVerbatim": "Ophiocara porocephala",
+      "sourceFamilyVerbatim": "Eleotridae",
+      "sourceReachCodes": [
+        "HS",
+        "UM",
+        "LM"
+      ],
+      "queryParameters": {
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "scientificName": "Ophiocara porocephala",
+        "classification": {
+          "kingdom": "Animalia"
+        },
+        "strict": true,
+        "verbose": true
+      },
+      "responseIndex": 12,
+      "batchResponseSha256": "26d9b8aac8a09fae87db7816fc65f0c9dd96331226b1aefd1c46167db0f62314",
+      "usage": {
+        "usageKey": "49W7Y",
+        "scientificName": "Ophiocara porocephala (Valenciennes, 1837)",
+        "canonicalName": "Ophiocara porocephala",
+        "authorship": "(Valenciennes, 1837)",
+        "rank": "SPECIES",
+        "status": "ACCEPTED"
+      },
+      "acceptedUsage": null,
+      "matchedFamily": "Eleotridae",
+      "sourceFamilyMatchesMatchedFamily": true,
+      "matchType": "EXACT",
+      "confidence": 100,
+      "synonym": false,
+      "alternativeCandidateCount": 0,
+      "classification": "exact-accepted-name",
+      "reviewStatus": "pending",
+      "publicationEligible": false,
+      "acceptedTaxonId": null
+    },
+    {
+      "candidateId": "bugang-taxon-014",
+      "sourceNameVerbatim": "Giuris margaritacea",
+      "sourceFamilyVerbatim": "Eleotridae",
+      "sourceReachCodes": [
+        "HS",
+        "UM"
+      ],
+      "queryParameters": {
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "scientificName": "Giuris margaritacea",
+        "classification": {
+          "kingdom": "Animalia"
+        },
+        "strict": true,
+        "verbose": true
+      },
+      "responseIndex": 13,
+      "batchResponseSha256": "26d9b8aac8a09fae87db7816fc65f0c9dd96331226b1aefd1c46167db0f62314",
+      "usage": {
+        "usageKey": "3G44B",
+        "scientificName": "Giuris margaritacea (Valenciennes, 1837)",
+        "canonicalName": "Giuris margaritacea",
+        "authorship": "(Valenciennes, 1837)",
+        "rank": "SPECIES",
+        "status": "SYNONYM"
+      },
+      "acceptedUsage": {
+        "usageKey": "3G44C",
+        "scientificName": "Giuris margaritaceus (Valenciennes, 1837)",
+        "canonicalName": "Giuris margaritaceus",
+        "authorship": "(Valenciennes, 1837)",
+        "rank": "SPECIES",
+        "status": null
+      },
+      "matchedFamily": "Eleotridae",
+      "sourceFamilyMatchesMatchedFamily": true,
+      "matchType": "EXACT",
+      "confidence": 100,
+      "synonym": true,
+      "alternativeCandidateCount": 0,
+      "classification": "exact-synonym",
+      "reviewStatus": "pending",
+      "publicationEligible": false,
+      "acceptedTaxonId": null
+    },
+    {
+      "candidateId": "bugang-taxon-015",
+      "sourceNameVerbatim": "Oxyeleotris marmorata",
+      "sourceFamilyVerbatim": "Eleotridae",
+      "sourceReachCodes": [
+        "HS"
+      ],
+      "queryParameters": {
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "scientificName": "Oxyeleotris marmorata",
+        "classification": {
+          "kingdom": "Animalia"
+        },
+        "strict": true,
+        "verbose": true
+      },
+      "responseIndex": 14,
+      "batchResponseSha256": "26d9b8aac8a09fae87db7816fc65f0c9dd96331226b1aefd1c46167db0f62314",
+      "usage": {
+        "usageKey": "6TFJV",
+        "scientificName": "Oxyeleotris marmorata (Bleeker, 1852)",
+        "canonicalName": "Oxyeleotris marmorata",
+        "authorship": "(Bleeker, 1852)",
+        "rank": "SPECIES",
+        "status": "ACCEPTED"
+      },
+      "acceptedUsage": null,
+      "matchedFamily": "Eleotridae",
+      "sourceFamilyMatchesMatchedFamily": true,
+      "matchType": "EXACT",
+      "confidence": 100,
+      "synonym": false,
+      "alternativeCandidateCount": 0,
+      "classification": "exact-accepted-name",
+      "reviewStatus": "pending",
+      "publicationEligible": false,
+      "acceptedTaxonId": null
+    },
+    {
+      "candidateId": "bugang-taxon-016",
+      "sourceNameVerbatim": "Belobranchus belobranchus",
+      "sourceFamilyVerbatim": "Eleotridae",
+      "sourceReachCodes": [
+        "HS"
+      ],
+      "queryParameters": {
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "scientificName": "Belobranchus belobranchus",
+        "classification": {
+          "kingdom": "Animalia"
+        },
+        "strict": true,
+        "verbose": true
+      },
+      "responseIndex": 15,
+      "batchResponseSha256": "26d9b8aac8a09fae87db7816fc65f0c9dd96331226b1aefd1c46167db0f62314",
+      "usage": {
+        "usageKey": "LB4K",
+        "scientificName": "Belobranchus belobranchus (Valenciennes, 1837)",
+        "canonicalName": "Belobranchus belobranchus",
+        "authorship": "(Valenciennes, 1837)",
+        "rank": "SPECIES",
+        "status": "ACCEPTED"
+      },
+      "acceptedUsage": null,
+      "matchedFamily": "Eleotridae",
+      "sourceFamilyMatchesMatchedFamily": true,
+      "matchType": "EXACT",
+      "confidence": 100,
+      "synonym": false,
+      "alternativeCandidateCount": 0,
+      "classification": "exact-accepted-name",
+      "reviewStatus": "pending",
+      "publicationEligible": false,
+      "acceptedTaxonId": null
+    },
+    {
+      "candidateId": "bugang-taxon-017",
+      "sourceNameVerbatim": "Exyrias puntang",
+      "sourceFamilyVerbatim": "Gobiidae",
+      "sourceReachCodes": [
+        "HS",
+        "DS"
+      ],
+      "queryParameters": {
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "scientificName": "Exyrias puntang",
+        "classification": {
+          "kingdom": "Animalia"
+        },
+        "strict": true,
+        "verbose": true
+      },
+      "responseIndex": 16,
+      "batchResponseSha256": "26d9b8aac8a09fae87db7816fc65f0c9dd96331226b1aefd1c46167db0f62314",
+      "usage": {
+        "usageKey": "3DQQG",
+        "scientificName": "Exyrias puntang (Bleeker, 1851)",
+        "canonicalName": "Exyrias puntang",
+        "authorship": "(Bleeker, 1851)",
+        "rank": "SPECIES",
+        "status": "ACCEPTED"
+      },
+      "acceptedUsage": null,
+      "matchedFamily": "Gobiidae",
+      "sourceFamilyMatchesMatchedFamily": true,
+      "matchType": "EXACT",
+      "confidence": 100,
+      "synonym": false,
+      "alternativeCandidateCount": 0,
+      "classification": "exact-accepted-name",
+      "reviewStatus": "pending",
+      "publicationEligible": false,
+      "acceptedTaxonId": null
+    },
+    {
+      "candidateId": "bugang-taxon-018",
+      "sourceNameVerbatim": "Periophthalmus argentilineatus",
+      "sourceFamilyVerbatim": "Gobiidae",
+      "sourceReachCodes": [
+        "LM",
+        "DS"
+      ],
+      "queryParameters": {
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "scientificName": "Periophthalmus argentilineatus",
+        "classification": {
+          "kingdom": "Animalia"
+        },
+        "strict": true,
+        "verbose": true
+      },
+      "responseIndex": 17,
+      "batchResponseSha256": "26d9b8aac8a09fae87db7816fc65f0c9dd96331226b1aefd1c46167db0f62314",
+      "usage": {
+        "usageKey": "4F2T2",
+        "scientificName": "Periophthalmus argentilineatus Valenciennes, 1837",
+        "canonicalName": "Periophthalmus argentilineatus",
+        "authorship": "Valenciennes, 1837",
+        "rank": "SPECIES",
+        "status": "ACCEPTED"
+      },
+      "acceptedUsage": null,
+      "matchedFamily": "Gobiidae",
+      "sourceFamilyMatchesMatchedFamily": true,
+      "matchType": "EXACT",
+      "confidence": 100,
+      "synonym": false,
+      "alternativeCandidateCount": 0,
+      "classification": "exact-accepted-name",
+      "reviewStatus": "pending",
+      "publicationEligible": false,
+      "acceptedTaxonId": null
+    },
+    {
+      "candidateId": "bugang-taxon-019",
+      "sourceNameVerbatim": "Kuhlia marginata",
+      "sourceFamilyVerbatim": "Kuhliidae",
+      "sourceReachCodes": [
+        "HS",
+        "UM",
+        "DS"
+      ],
+      "queryParameters": {
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "scientificName": "Kuhlia marginata",
+        "classification": {
+          "kingdom": "Animalia"
+        },
+        "strict": true,
+        "verbose": true
+      },
+      "responseIndex": 18,
+      "batchResponseSha256": "26d9b8aac8a09fae87db7816fc65f0c9dd96331226b1aefd1c46167db0f62314",
+      "usage": {
+        "usageKey": "3RFBY",
+        "scientificName": "Kuhlia marginata (Cuvier, 1829)",
+        "canonicalName": "Kuhlia marginata",
+        "authorship": "(Cuvier, 1829)",
+        "rank": "SPECIES",
+        "status": "ACCEPTED"
+      },
+      "acceptedUsage": null,
+      "matchedFamily": "Kuhliidae",
+      "sourceFamilyMatchesMatchedFamily": true,
+      "matchType": "EXACT",
+      "confidence": 100,
+      "synonym": false,
+      "alternativeCandidateCount": 0,
+      "classification": "exact-accepted-name",
+      "reviewStatus": "pending",
+      "publicationEligible": false,
+      "acceptedTaxonId": null
+    },
+    {
+      "candidateId": "bugang-taxon-020",
+      "sourceNameVerbatim": "Terapon jarbua",
+      "sourceFamilyVerbatim": "Terapontidae",
+      "sourceReachCodes": [
+        "DS"
+      ],
+      "queryParameters": {
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "scientificName": "Terapon jarbua",
+        "classification": {
+          "kingdom": "Animalia"
+        },
+        "strict": true,
+        "verbose": true
+      },
+      "responseIndex": 19,
+      "batchResponseSha256": "26d9b8aac8a09fae87db7816fc65f0c9dd96331226b1aefd1c46167db0f62314",
+      "usage": {
+        "usageKey": "55DL2",
+        "scientificName": "Terapon jarbua (Forsskål, 1775)",
+        "canonicalName": "Terapon jarbua",
+        "authorship": "(Forsskål, 1775)",
+        "rank": "SPECIES",
+        "status": "ACCEPTED"
+      },
+      "acceptedUsage": null,
+      "matchedFamily": "Terapontidae",
+      "sourceFamilyMatchesMatchedFamily": true,
+      "matchType": "EXACT",
+      "confidence": 100,
+      "synonym": false,
+      "alternativeCandidateCount": 0,
+      "classification": "exact-accepted-name",
+      "reviewStatus": "pending",
+      "publicationEligible": false,
+      "acceptedTaxonId": null
+    },
+    {
+      "candidateId": "bugang-taxon-021",
+      "sourceNameVerbatim": "Mesopristes cancellatus",
+      "sourceFamilyVerbatim": "Terapontidae",
+      "sourceReachCodes": [
+        "UM"
+      ],
+      "queryParameters": {
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "scientificName": "Mesopristes cancellatus",
+        "classification": {
+          "kingdom": "Animalia"
+        },
+        "strict": true,
+        "verbose": true
+      },
+      "responseIndex": 20,
+      "batchResponseSha256": "26d9b8aac8a09fae87db7816fc65f0c9dd96331226b1aefd1c46167db0f62314",
+      "usage": {
+        "usageKey": "425GR",
+        "scientificName": "Mesopristes cancellatus (Cuvier, 1829)",
+        "canonicalName": "Mesopristes cancellatus",
+        "authorship": "(Cuvier, 1829)",
+        "rank": "SPECIES",
+        "status": "ACCEPTED"
+      },
+      "acceptedUsage": null,
+      "matchedFamily": "Terapontidae",
+      "sourceFamilyMatchesMatchedFamily": true,
+      "matchType": "EXACT",
+      "confidence": 100,
+      "synonym": false,
+      "alternativeCandidateCount": 0,
+      "classification": "exact-accepted-name",
+      "reviewStatus": "pending",
+      "publicationEligible": false,
+      "acceptedTaxonId": null
+    },
+    {
+      "candidateId": "bugang-taxon-022",
+      "sourceNameVerbatim": "Leiognathus splendens",
+      "sourceFamilyVerbatim": "Leiognathidae",
+      "sourceReachCodes": [
+        "DS"
+      ],
+      "queryParameters": {
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "scientificName": "Leiognathus splendens",
+        "classification": {
+          "kingdom": "Animalia"
+        },
+        "strict": true,
+        "verbose": true
+      },
+      "responseIndex": 21,
+      "batchResponseSha256": "26d9b8aac8a09fae87db7816fc65f0c9dd96331226b1aefd1c46167db0f62314",
+      "usage": {
+        "usageKey": "3SYPL",
+        "scientificName": "Leiognathus splendens (Cuvier, 1829)",
+        "canonicalName": "Leiognathus splendens",
+        "authorship": "(Cuvier, 1829)",
+        "rank": "SPECIES",
+        "status": "SYNONYM"
+      },
+      "acceptedUsage": {
+        "usageKey": "6H4JC",
+        "scientificName": "Eubleekeria splendens (Cuvier, 1829)",
+        "canonicalName": "Eubleekeria splendens",
+        "authorship": "(Cuvier, 1829)",
+        "rank": "SPECIES",
+        "status": null
+      },
+      "matchedFamily": "Leiognathidae",
+      "sourceFamilyMatchesMatchedFamily": true,
+      "matchType": "EXACT",
+      "confidence": 100,
+      "synonym": true,
+      "alternativeCandidateCount": 0,
+      "classification": "exact-synonym",
+      "reviewStatus": "pending",
+      "publicationEligible": false,
+      "acceptedTaxonId": null
+    },
+    {
+      "candidateId": "bugang-taxon-023",
+      "sourceNameVerbatim": "Ambassis interrupta",
+      "sourceFamilyVerbatim": "Ambassidae",
+      "sourceReachCodes": [
+        "HS",
+        "UM",
+        "LM",
+        "DS"
+      ],
+      "queryParameters": {
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "scientificName": "Ambassis interrupta",
+        "classification": {
+          "kingdom": "Animalia"
+        },
+        "strict": true,
+        "verbose": true
+      },
+      "responseIndex": 22,
+      "batchResponseSha256": "26d9b8aac8a09fae87db7816fc65f0c9dd96331226b1aefd1c46167db0f62314",
+      "usage": {
+        "usageKey": "CKRS",
+        "scientificName": "Ambassis interrupta Bleeker, 1853",
+        "canonicalName": "Ambassis interrupta",
+        "authorship": "Bleeker, 1853",
+        "rank": "SPECIES",
+        "status": "ACCEPTED"
+      },
+      "acceptedUsage": null,
+      "matchedFamily": "Ambassidae",
+      "sourceFamilyMatchesMatchedFamily": true,
+      "matchType": "EXACT",
+      "confidence": 100,
+      "synonym": false,
+      "alternativeCandidateCount": 0,
+      "classification": "exact-accepted-name",
+      "reviewStatus": "pending",
+      "publicationEligible": false,
+      "acceptedTaxonId": null
+    },
+    {
+      "candidateId": "bugang-taxon-024",
+      "sourceNameVerbatim": "Ambassis urotaenia",
+      "sourceFamilyVerbatim": "Ambassidae",
+      "sourceReachCodes": [
+        "HS",
+        "UM",
+        "LM",
+        "DS"
+      ],
+      "queryParameters": {
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "scientificName": "Ambassis urotaenia",
+        "classification": {
+          "kingdom": "Animalia"
+        },
+        "strict": true,
+        "verbose": true
+      },
+      "responseIndex": 23,
+      "batchResponseSha256": "26d9b8aac8a09fae87db7816fc65f0c9dd96331226b1aefd1c46167db0f62314",
+      "usage": {
+        "usageKey": "CKT4",
+        "scientificName": "Ambassis urotaenia Bleeker, 1852",
+        "canonicalName": "Ambassis urotaenia",
+        "authorship": "Bleeker, 1852",
+        "rank": "SPECIES",
+        "status": "ACCEPTED"
+      },
+      "acceptedUsage": null,
+      "matchedFamily": "Ambassidae",
+      "sourceFamilyMatchesMatchedFamily": true,
+      "matchType": "EXACT",
+      "confidence": 100,
+      "synonym": false,
+      "alternativeCandidateCount": 0,
+      "classification": "exact-accepted-name",
+      "reviewStatus": "pending",
+      "publicationEligible": false,
+      "acceptedTaxonId": null
+    },
+    {
+      "candidateId": "bugang-taxon-025",
+      "sourceNameVerbatim": "Pomadasys argenteus",
+      "sourceFamilyVerbatim": "Haemulidae",
+      "sourceReachCodes": [
+        "LM",
+        "DS"
+      ],
+      "queryParameters": {
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "scientificName": "Pomadasys argenteus",
+        "classification": {
+          "kingdom": "Animalia"
+        },
+        "strict": true,
+        "verbose": true
+      },
+      "responseIndex": 24,
+      "batchResponseSha256": "26d9b8aac8a09fae87db7816fc65f0c9dd96331226b1aefd1c46167db0f62314",
+      "usage": {
+        "usageKey": "4LQKJ",
+        "scientificName": "Pomadasys argenteus (Forsskål, 1775)",
+        "canonicalName": "Pomadasys argenteus",
+        "authorship": "(Forsskål, 1775)",
+        "rank": "SPECIES",
+        "status": "ACCEPTED"
+      },
+      "acceptedUsage": null,
+      "matchedFamily": "Haemulidae",
+      "sourceFamilyMatchesMatchedFamily": true,
+      "matchType": "EXACT",
+      "confidence": 100,
+      "synonym": false,
+      "alternativeCandidateCount": 0,
+      "classification": "exact-accepted-name",
+      "reviewStatus": "pending",
+      "publicationEligible": false,
+      "acceptedTaxonId": null
+    },
+    {
+      "candidateId": "bugang-taxon-026",
+      "sourceNameVerbatim": "Apogon semilineatus",
+      "sourceFamilyVerbatim": "Apogonidae",
+      "sourceReachCodes": [
+        "LM",
+        "DS"
+      ],
+      "queryParameters": {
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "scientificName": "Apogon semilineatus",
+        "classification": {
+          "kingdom": "Animalia"
+        },
+        "strict": true,
+        "verbose": true
+      },
+      "responseIndex": 25,
+      "batchResponseSha256": "26d9b8aac8a09fae87db7816fc65f0c9dd96331226b1aefd1c46167db0f62314",
+      "usage": {
+        "usageKey": "FSLL",
+        "scientificName": "Apogon semilineatus Temminck & Schlegel, 1843",
+        "canonicalName": "Apogon semilineatus",
+        "authorship": "Temminck & Schlegel, 1843",
+        "rank": "SPECIES",
+        "status": "SYNONYM"
+      },
+      "acceptedUsage": {
+        "usageKey": "6TCRD",
+        "scientificName": "Ostorhinchus semilineatus (Temminck & Schlegel, 1843)",
+        "canonicalName": "Ostorhinchus semilineatus",
+        "authorship": "(Temminck & Schlegel, 1843)",
+        "rank": "SPECIES",
+        "status": null
+      },
+      "matchedFamily": "Apogonidae",
+      "sourceFamilyMatchesMatchedFamily": true,
+      "matchType": "EXACT",
+      "confidence": 100,
+      "synonym": true,
+      "alternativeCandidateCount": 0,
+      "classification": "exact-synonym",
+      "reviewStatus": "pending",
+      "publicationEligible": false,
+      "acceptedTaxonId": null
+    },
+    {
+      "candidateId": "bugang-taxon-027",
+      "sourceNameVerbatim": "Apogon hyalosoma",
+      "sourceFamilyVerbatim": "Apogonidae",
+      "sourceReachCodes": [
+        "LM"
+      ],
+      "queryParameters": {
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "scientificName": "Apogon hyalosoma",
+        "classification": {
+          "kingdom": "Animalia"
+        },
+        "strict": true,
+        "verbose": true
+      },
+      "responseIndex": 26,
+      "batchResponseSha256": "26d9b8aac8a09fae87db7816fc65f0c9dd96331226b1aefd1c46167db0f62314",
+      "usage": {
+        "usageKey": "FSF7",
+        "scientificName": "Apogon hyalosoma Bleeker, 1852",
+        "canonicalName": "Apogon hyalosoma",
+        "authorship": "Bleeker, 1852",
+        "rank": "SPECIES",
+        "status": "SYNONYM"
+      },
+      "acceptedUsage": {
+        "usageKey": "5CR7V",
+        "scientificName": "Yarica hyalosoma (Bleeker, 1852)",
+        "canonicalName": "Yarica hyalosoma",
+        "authorship": "(Bleeker, 1852)",
+        "rank": "SPECIES",
+        "status": null
+      },
+      "matchedFamily": "Apogonidae",
+      "sourceFamilyMatchesMatchedFamily": true,
+      "matchType": "EXACT",
+      "confidence": 100,
+      "synonym": true,
+      "alternativeCandidateCount": 0,
+      "classification": "exact-synonym",
+      "reviewStatus": "pending",
+      "publicationEligible": false,
+      "acceptedTaxonId": null
+    },
+    {
+      "candidateId": "bugang-taxon-028",
+      "sourceNameVerbatim": "Zenarchopterus dispar",
+      "sourceFamilyVerbatim": "Hemiramphidae",
+      "sourceReachCodes": [
+        "LM",
+        "DS"
+      ],
+      "queryParameters": {
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "scientificName": "Zenarchopterus dispar",
+        "classification": {
+          "kingdom": "Animalia"
+        },
+        "strict": true,
+        "verbose": true
+      },
+      "responseIndex": 27,
+      "batchResponseSha256": "26d9b8aac8a09fae87db7816fc65f0c9dd96331226b1aefd1c46167db0f62314",
+      "usage": {
+        "usageKey": "5D2CK",
+        "scientificName": "Zenarchopterus dispar (Valenciennes, 1847)",
+        "canonicalName": "Zenarchopterus dispar",
+        "authorship": "(Valenciennes, 1847)",
+        "rank": "SPECIES",
+        "status": "ACCEPTED"
+      },
+      "acceptedUsage": null,
+      "matchedFamily": "Zenarchopteridae",
+      "sourceFamilyMatchesMatchedFamily": false,
+      "matchType": "EXACT",
+      "confidence": 100,
+      "synonym": false,
+      "alternativeCandidateCount": 0,
+      "classification": "family-conflict",
+      "reviewStatus": "pending",
+      "publicationEligible": false,
+      "acceptedTaxonId": null
+    },
+    {
+      "candidateId": "bugang-taxon-029",
+      "sourceNameVerbatim": "Siganus guttatus",
+      "sourceFamilyVerbatim": "Siganidae",
+      "sourceReachCodes": [
+        "DS"
+      ],
+      "queryParameters": {
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "scientificName": "Siganus guttatus",
+        "classification": {
+          "kingdom": "Animalia"
+        },
+        "strict": true,
+        "verbose": true
+      },
+      "responseIndex": 28,
+      "batchResponseSha256": "26d9b8aac8a09fae87db7816fc65f0c9dd96331226b1aefd1c46167db0f62314",
+      "usage": {
+        "usageKey": "6YMV7",
+        "scientificName": "Siganus guttatus (Bloch, 1787)",
+        "canonicalName": "Siganus guttatus",
+        "authorship": "(Bloch, 1787)",
+        "rank": "SPECIES",
+        "status": "ACCEPTED"
+      },
+      "acceptedUsage": null,
+      "matchedFamily": "Siganidae",
+      "sourceFamilyMatchesMatchedFamily": true,
+      "matchType": "EXACT",
+      "confidence": 100,
+      "synonym": false,
+      "alternativeCandidateCount": 0,
+      "classification": "exact-accepted-name",
+      "reviewStatus": "pending",
+      "publicationEligible": false,
+      "acceptedTaxonId": null
+    },
+    {
+      "candidateId": "bugang-taxon-030",
+      "sourceNameVerbatim": "Hippichthys spicifer",
+      "sourceFamilyVerbatim": "Syngnathidae",
+      "sourceReachCodes": [
+        "LM",
+        "DS"
+      ],
+      "queryParameters": {
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "scientificName": "Hippichthys spicifer",
+        "classification": {
+          "kingdom": "Animalia"
+        },
+        "strict": true,
+        "verbose": true
+      },
+      "responseIndex": 29,
+      "batchResponseSha256": "26d9b8aac8a09fae87db7816fc65f0c9dd96331226b1aefd1c46167db0f62314",
+      "usage": {
+        "usageKey": "3LZDD",
+        "scientificName": "Hippichthys spicifer (Rüppell, 1838)",
+        "canonicalName": "Hippichthys spicifer",
+        "authorship": "(Rüppell, 1838)",
+        "rank": "SPECIES",
+        "status": "ACCEPTED"
+      },
+      "acceptedUsage": null,
+      "matchedFamily": "Syngnathidae",
+      "sourceFamilyMatchesMatchedFamily": true,
+      "matchType": "EXACT",
+      "confidence": 100,
+      "synonym": false,
+      "alternativeCandidateCount": 0,
+      "classification": "exact-accepted-name",
+      "reviewStatus": "pending",
+      "publicationEligible": false,
+      "acceptedTaxonId": null
+    },
+    {
+      "candidateId": "bugang-taxon-031",
+      "sourceNameVerbatim": "Arothron reticularis",
+      "sourceFamilyVerbatim": "Tetraodontidae",
+      "sourceReachCodes": [
+        "DS"
+      ],
+      "queryParameters": {
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "scientificName": "Arothron reticularis",
+        "classification": {
+          "kingdom": "Animalia"
+        },
+        "strict": true,
+        "verbose": true
+      },
+      "responseIndex": 30,
+      "batchResponseSha256": "26d9b8aac8a09fae87db7816fc65f0c9dd96331226b1aefd1c46167db0f62314",
+      "usage": {
+        "usageKey": "GTWZ",
+        "scientificName": "Arothron reticularis (Bloch & Schneider, 1801)",
+        "canonicalName": "Arothron reticularis",
+        "authorship": "(Bloch & Schneider, 1801)",
+        "rank": "SPECIES",
+        "status": "ACCEPTED"
+      },
+      "acceptedUsage": null,
+      "matchedFamily": "Tetraodontidae",
+      "sourceFamilyMatchesMatchedFamily": true,
+      "matchType": "EXACT",
+      "confidence": 100,
+      "synonym": false,
+      "alternativeCandidateCount": 0,
+      "classification": "exact-accepted-name",
+      "reviewStatus": "pending",
+      "publicationEligible": false,
+      "acceptedTaxonId": null
+    },
+    {
+      "candidateId": "bugang-taxon-032",
+      "sourceNameVerbatim": "Arothron manilensis",
+      "sourceFamilyVerbatim": "Tetraodontidae",
+      "sourceReachCodes": [
+        "DS"
+      ],
+      "queryParameters": {
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "scientificName": "Arothron manilensis",
+        "classification": {
+          "kingdom": "Animalia"
+        },
+        "strict": true,
+        "verbose": true
+      },
+      "responseIndex": 31,
+      "batchResponseSha256": "26d9b8aac8a09fae87db7816fc65f0c9dd96331226b1aefd1c46167db0f62314",
+      "usage": {
+        "usageKey": "GTWR",
+        "scientificName": "Arothron manilensis (Marion de Procé, 1822)",
+        "canonicalName": "Arothron manilensis",
+        "authorship": "(Marion de Procé, 1822)",
+        "rank": "SPECIES",
+        "status": "ACCEPTED"
+      },
+      "acceptedUsage": null,
+      "matchedFamily": "Tetraodontidae",
+      "sourceFamilyMatchesMatchedFamily": true,
+      "matchType": "EXACT",
+      "confidence": 100,
+      "synonym": false,
+      "alternativeCandidateCount": 0,
+      "classification": "exact-accepted-name",
+      "reviewStatus": "pending",
+      "publicationEligible": false,
+      "acceptedTaxonId": null
+    },
+    {
+      "candidateId": "bugang-taxon-033",
+      "sourceNameVerbatim": "Arothron immaculatus",
+      "sourceFamilyVerbatim": "Tetraodontidae",
+      "sourceReachCodes": [
+        "DS"
+      ],
+      "queryParameters": {
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "scientificName": "Arothron immaculatus",
+        "classification": {
+          "kingdom": "Animalia"
+        },
+        "strict": true,
+        "verbose": true
+      },
+      "responseIndex": 32,
+      "batchResponseSha256": "26d9b8aac8a09fae87db7816fc65f0c9dd96331226b1aefd1c46167db0f62314",
+      "usage": {
+        "usageKey": "GTWM",
+        "scientificName": "Arothron immaculatus (Bloch & Schneider, 1801)",
+        "canonicalName": "Arothron immaculatus",
+        "authorship": "(Bloch & Schneider, 1801)",
+        "rank": "SPECIES",
+        "status": "ACCEPTED"
+      },
+      "acceptedUsage": null,
+      "matchedFamily": "Tetraodontidae",
+      "sourceFamilyMatchesMatchedFamily": true,
+      "matchType": "EXACT",
+      "confidence": 100,
+      "synonym": false,
+      "alternativeCandidateCount": 0,
+      "classification": "exact-accepted-name",
+      "reviewStatus": "pending",
+      "publicationEligible": false,
+      "acceptedTaxonId": null
+    },
+    {
+      "candidateId": "bugang-taxon-034",
+      "sourceNameVerbatim": "Uropterygius concolor",
+      "sourceFamilyVerbatim": "Muraenidae: Uropterygiinae",
+      "sourceReachCodes": [
+        "LM",
+        "DS"
+      ],
+      "queryParameters": {
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "scientificName": "Uropterygius concolor",
+        "classification": {
+          "kingdom": "Animalia"
+        },
+        "strict": true,
+        "verbose": true
+      },
+      "responseIndex": 33,
+      "batchResponseSha256": "26d9b8aac8a09fae87db7816fc65f0c9dd96331226b1aefd1c46167db0f62314",
+      "usage": {
+        "usageKey": "7DYYX",
+        "scientificName": "Uropterygius concolor Rüppell, 1838",
+        "canonicalName": "Uropterygius concolor",
+        "authorship": "Rüppell, 1838",
+        "rank": "SPECIES",
+        "status": "ACCEPTED"
+      },
+      "acceptedUsage": null,
+      "matchedFamily": "Muraenidae",
+      "sourceFamilyMatchesMatchedFamily": true,
+      "matchType": "EXACT",
+      "confidence": 100,
+      "synonym": false,
+      "alternativeCandidateCount": 0,
+      "classification": "exact-accepted-name",
+      "reviewStatus": "pending",
+      "publicationEligible": false,
+      "acceptedTaxonId": null
+    },
+    {
+      "candidateId": "bugang-taxon-035",
+      "sourceNameVerbatim": "Lutjanus argentimaculatus",
+      "sourceFamilyVerbatim": "Lutjanidae",
+      "sourceReachCodes": [
+        "HS",
+        "LM",
+        "DS"
+      ],
+      "queryParameters": {
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "scientificName": "Lutjanus argentimaculatus",
+        "classification": {
+          "kingdom": "Animalia"
+        },
+        "strict": true,
+        "verbose": true
+      },
+      "responseIndex": 34,
+      "batchResponseSha256": "26d9b8aac8a09fae87db7816fc65f0c9dd96331226b1aefd1c46167db0f62314",
+      "usage": {
+        "usageKey": "3WG7Q",
+        "scientificName": "Lutjanus argentimaculatus (Forsskål, 1775)",
+        "canonicalName": "Lutjanus argentimaculatus",
+        "authorship": "(Forsskål, 1775)",
+        "rank": "SPECIES",
+        "status": "ACCEPTED"
+      },
+      "acceptedUsage": null,
+      "matchedFamily": "Lutjanidae",
+      "sourceFamilyMatchesMatchedFamily": true,
+      "matchType": "EXACT",
+      "confidence": 100,
+      "synonym": false,
+      "alternativeCandidateCount": 0,
+      "classification": "exact-accepted-name",
+      "reviewStatus": "pending",
+      "publicationEligible": false,
+      "acceptedTaxonId": null
+    }
+  ],
+  "disposition": {
+    "sourceTaxaCrosswalked": 35,
+    "sourceStringsOverwritten": 0,
+    "genusOnlyLabelsExpanded": 0,
+    "familyConflictResolved": false,
+    "speciesAssertionsAdded": 0,
+    "occurrenceAssertionsAdded": 0,
+    "geometryAdded": 0,
+    "publicAppRowsAdded": 0,
+    "publicationApproval": false,
+    "reason": "Automatic exact-name matching supplies nomenclature proposals only. The family conflict and source identification remain for human review; no historical claim was projected."
+  },
+  "nextAction": "Review the eight synonym proposals and the Zenarchopteridae/Hemiramphidae conflict against current authoritative fish taxonomy, preserving the article spelling. After taxonomic review, assess whether a dated historical source assertion can be admitted with its four named reach codes and the original CC Attribution credit.",
+  "sources": [
+    {
+      "url": "https://techdocs.gbif.org/en/openapi/v1/species",
+      "supports": "Official GBIF Species API v2 documentation: POST batch matching accepts up to 1000 independent name queries and returns results in input order."
+    },
+    {
+      "url": "https://techdocs.gbif.org/en/data-processing/taxonomy-interpretation",
+      "supports": "GBIF documentation on matching against specific checklists and using the explicit CoL XR checklistKey."
+    },
+    {
+      "url": "https://api.gbif.org/v2/species/match/metadata?checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b",
+      "supports": "Captured match-index metadata and evidence that the selected checklist matching index did not change during this batch."
+    }
+  ]
+}
