@@ -1963,3 +1963,12 @@ Also identified a high-value UP Visayas/DOST-PCAARRD project targeting freshwate
 No site-level taxa, taxonomic crosswalk, occurrence, geometry or public-app rows were added; publication approval remains false. This advances the Panay freshwater evidence queue but does not complete Jalaur River, Panay, Guimaras or Western Visayas coverage.
 
 **Next:** retrieve the Panay reference libraries and final report from UP Visayas/PCAARRD with their site-date, taxon/barcode and voucher crosswalks, marker limitations and reuse terms; separately obtain the full Jalaur article. No inquiry was sent. Continue screening other Panay rivers/lakes and Guimaras inland waters while these access leads are pending.
+
+
+### National rollout step 241 - Tigum River freshwater fish baseline
+
+Added the West Visayas State University repository and Philippine Journal of Science study of fishes in Tigum River, Iloilo. Its abstract reports 10 fish species across eight families sampled from April 2015 to March 2016; WVSU repository metadata indexes eight taxonomic terms. The article PDF was not obtained: the WVSU copy workflow requires login/request, while the public DOST journal PDF endpoint returned HTTP 403. No copy request was sent. Added one source reference (332 total) and `national-visayas-panay-tigum-fish-study-access-review-20261030.json`.
+
+This is a historical research lead, not a current distribution checklist. The complete ten-name list and site-by-taxon crosswalk remain unverified; the repository's indexed `Platycephalus` is genus-level only. No app species/occurrence rows, reach geometry, current-presence claim or publication approval were added.
+
+**Next:** retrieve the article from an authorized open copy and transcribe its ten taxa, methods, sampling reaches/dates, voucher or specimen references, and reuse terms. Keep any observed taxa tied only to the study's 2015-2016 evidence until independently refreshed; continue the Panay/Guimaras freshwater source sweep in parallel.
