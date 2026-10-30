@@ -1972,3 +1972,12 @@ Added the West Visayas State University repository and Philippine Journal of Sci
 This is a historical research lead, not a current distribution checklist. The complete ten-name list and site-by-taxon crosswalk remain unverified; the repository's indexed `Platycephalus` is genus-level only. No app species/occurrence rows, reach geometry, current-presence claim or publication approval were added.
 
 **Next:** retrieve the article from an authorized open copy and transcribe its ten taxa, methods, sampling reaches/dates, voucher or specimen references, and reuse terms. Keep any observed taxa tied only to the study's 2015-2016 evidence until independently refreshed; continue the Panay/Guimaras freshwater source sweep in parallel.
+
+
+### National rollout step 242 - Bugang River historical reach checklist
+
+Reviewed the full 2014 open-access Bugang River article and transcribed its table of 38 source taxa, 30 genera and 20 families with its four source reach codes, reported local/common names and station coordinates into `national-visayas-panay-bugang-river-fish-checklist-review-20261030.json`. Three entries are genus-only (`Eleotris`, `Glossogobius`, `Awaous`); they remain unresolved and are not species names. The survey ran November 2013-March 2014 in Pandan, Antique, where the river meets Pandan Bay. Added one source reference (333 total).
+
+This is a historical river-estuary checklist. The authors classify five taxa as migratory and 33 as sporadic visitors and report no primary or secondary freshwater fish in the four sampled sites. Preserve that as the source's 2013-2014 result, not a present-day absence claim or a general property of Panay rivers. The article states a Creative Commons Attribution license (version unstated); credit the authors and source. No current-presence assertion, geometry feature, fishing-rule, safety, diet, public-app row or app publication approval was added. Western Visayas remains incomplete.
+
+**Next:** run a current authoritative taxonomic crosswalk over the 35 binomial source labels while preserving the 38 verbatim rows and genus-only entries; independently validate the reported reach matrix and coordinates before preparing any historical occurrence projection. Continue the distinct inland-freshwater sweep for Panay and Guimaras.
