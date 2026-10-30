@@ -1763,3 +1763,14 @@ The search window is approximate and is not an official waterbody boundary or ex
 Added six source references (307 total) and `national-bicol-danao-lakelets-sequence-source-review-20261030.json`; cross-checked three registered sources. No species, occurrence, absence, geometry, diet/predation, legal or safety assertion or public-app row was added. No publication approval was granted. Bicol remains incomplete.
 
 **Next:** continue screening Bicol inland waterbodies as separate units, starting with lakelets and named rivers not yet covered by primary evidence. Seek completed SIBA-LADA fish/genetic tables and full lakelet theses without blocking other source work; keep estuary/coastal evidence distinct.
+
+
+### National rollout step 223 - Catanduanes Pajo-Sto. Domingo river fish evidence
+
+Reviewed the full 2022 Masagca, Latorre and Trinidad field paper for the Pajo-Sto. Domingo river system in Virac, Catanduanes. It describes four reaches (headstream, upper midstream, lower midstream and downstream), four fishing gears, and weekly fish sampling described in the methods as November 2017-February 2018. The abstract gives October 2017-February 2018. The authors report 106 fish and 20 taxa, but give no station/date-by-taxon matrix or specimen accession list; representative specimens are said to be stored in the CHED-NAFES SURMABIOCON reference collection.
+
+The reported set includes 18 binomial names and two genus-only identifications; do not treat the paper's 20-species phrase as 20 confirmed species. The tables conflict on Awaous melanocephalus versus A. monocephalus and Osphronemus goramy versus O. gorami. The reported Gobius paganellus has a catalog distribution in the eastern Atlantic and European/adjacent seas; because no Catanduanes voucher accession is supplied, flag it for high-priority identification confirmation, not as a confirmed occurrence. Crenimugil seheli also needs a dated backbone decision before name normalization. The river is described as estuarine-linked, so do not treat every reach or taxon as strictly freshwater.
+
+Added one source reference (308 total) and `national-bicol-catanduanes-pajo-river-review-20261030.json`. No occurrence/species assertion, geometry, diet, legal/safety claim or public-app row was added. The article's Creative Commons Attribution notice does not state a license version in the reviewed text; no separate Bangwit publication approval was granted. Bicol remains incomplete.
+
+**Next:** continue inland-water research across Bicol provinces with a primary-source-first search; prioritize areas that have no dated, station-linked evidence, while keeping river, estuarine, lake and reservoir records separate. Seek vouchers or author clarification for this paper's inconsistent taxa in parallel.

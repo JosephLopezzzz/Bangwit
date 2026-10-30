@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-30",
+  "phaseId": "L7",
+  "regionIds": ["0500000000"],
+  "status": "dated-river-survey;estuarine-link;taxa-reported-not-currently-verified;research-only",
+  "question": "What species-level freshwater evidence is available for Catanduanes rivers, and which records require taxonomic or habitat checks before any app use?",
+  "sourceId": "masagca-2022-pajo-sto-domingo-catanduanes-freshwater-fishes",
+  "study": {
+    "locality": "Pajo-Sto. Domingo River system, Virac, Catanduanes; the authors describe a headstream-to-estuary-linked system ending near Palnab estuary.",
+    "representativeCoordinate": "13 degrees 35 minutes 30 seconds N, 124 degrees 10 minutes 01 seconds E; the paper describes the river location, not per-station coordinates or a geometry.",
+    "samplingSites": ["headstream (HDS)", "upper midstream (UMS)", "lower midstream (LMS)", "downstream (DWS)"],
+    "methods": "Four gears are named: gill net, hook and line, scoop net, and bamboo fish traps. Fish sampling is described as weekly from November 2017 through February 2018, day and night. The abstract instead says fieldwork ran October 2017 through February 2018.",
+    "reportedTotal": "Authors report 106 fish, 12 families, 18 genera and 20 species. Table 2 says representative specimens were retained in the CHED-NAFES SURMABIOCON reference collection, with no specimen accession identifiers.",
+    "license": "The article states Creative Commons Attribution License with source credit, but the version is not named in the article text reviewed."
+  },
+  "reportedTaxa": [
+    "Ambassis interrupta",
+    "Ambassis gymnocephalus",
+    "Anguilla japonica",
+    "Atherinomorus sp.",
+    "Oreochromis niloticus",
+    "Cyprinus carpio",
+    "Cyclocheilichthys armatus",
+    "Barbodes sp.",
+    "Eleotris fusca",
+    "Giuris margaritacea",
+    "Awaous ocellaris",
+    "Awaous melanocephalus (Table 2); Awaous monocephalus (Table 3)",
+    "Gobius paganellus",
+    "Crenimugil seheli",
+    "Planiliza melinoptera",
+    "Mugil cephalus",
+    "Channa striata",
+    "Osphronemus goramy (Table 2); Osphronemus gorami (Table 3)",
+    "Acanthopagrus berda",
+    "Leiopotherapon plumbeus"
+  ],
+  "qualityAndTaxonomyFlags": [
+    {
+      "reportedName": "Gobius paganellus",
+      "flag": "High-priority identification review",
+      "basis": "Eschmeyer's Catalog of Fishes lists the distribution as eastern Atlantic, Mediterranean, Black Sea, southern North Sea and Red Sea. The paper reports the name in Catanduanes but gives no voucher accession for independent re-examination.",
+      "action": "Do not normalize or publish as a Catanduanes occurrence until a catalogued voucher, diagnostic photo or sequence is located and checked."
+    },
+    {
+      "reportedName": "Crenimugil seheli",
+      "flag": "Taxonomy normalization required",
+      "basis": "Eschmeyer's catalog records several accepted generic combinations and currently lists Moolgarda seheli; other fisheries literature still uses Crenimugil seheli.",
+      "action": "Preserve the paper's verbatim name and resolve the accepted-name policy against an explicitly dated taxonomic backbone before any normalized species row."
+    },
+    {
+      "reportedName": "Awaous melanocephalus / A. monocephalus and Osphronemus goramy / O. gorami",
+      "flag": "Internal spelling/name mismatches",
+      "basis": "Table 2 and Table 3 differ for both taxa.",
+      "action": "Do not silently choose a name; check vouchers or author errata."
+    },
+    {
+      "reportedName": "20-species total and 106 fish",
+      "flag": "Source total requires row-level verification",
+      "basis": "The article uses frequency terminology for a table whose species values sum to the stated 106, but supplies no station-by-date matrix or voucher identifiers. Abstract and methods also differ on the first fish-sampling month.",
+      "action": "Treat totals as reported study summaries, not standardized occurrence or abundance data."
+    }
+  ],
+  "habitatDisposition": {
+    "classification": "Riverine reaches with a downstream estuarine connection; not a purely freshwater unit across all sampled reaches.",
+    "separationRule": "Keep the four reach labels and any marine/brackish-affinity taxa separate from lake checklists and from strictly freshwater habitat claims. Do not infer a site-level salinity or freshwater tolerance for an individual taxon without the missing crosswalk."
+  },
+  "appDisposition": {
+    "speciesAssertionsAdded": 0,
+    "occurrenceAssertionsAdded": 0,
+    "geometryAdded": 0,
+    "dietOrPredationClaimsAdded": 0,
+    "legalOrSafetyClaimsAdded": 0,
+    "publicAppRowsAdded": 0,
+    "publicationApproval": false,
+    "reason": "This is a dated, aggregate paper record with unresolved name mismatches, no specimen accessions, incomplete station crosswalk, mixed river-to-estuary habitat, and no verification of current status."
+  },
+  "nextAction": "Continue Bicol river and inland-lake screening in underrepresented provinces and habitats; seek the Pajo-Sto. Domingo voucher catalog or author correction in parallel, and keep freshwater, estuarine, and marine evidence distinct.",
+  "sources": [
+    {
+      "url": "https://www.bioflux.com.ro/docs/2022.878-884.pdf",
+      "supports": "Full seven-page article: field period, gears, four river reaches, reported species table, aggregate totals, statement about reference collection, and open-access attribution notice."
+    },
+    {
+      "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Gobius&species=paganellus&tbl=species",
+      "supports": "Eschmeyer's Catalog of Fishes taxonomic record and Mediterranean type locality for Gobius paganellus; used as a verification flag, not proof that the river record is wrong."
+    },
+    {
+      "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=16936",
+      "supports": "Eschmeyer's Catalog of Fishes entry for seheli, including competing generic combinations and current catalog status as Moolgarda seheli."
+    }
+  ]
+}
