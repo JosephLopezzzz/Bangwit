@@ -2017,3 +2017,12 @@ Built `national-visayas-panay-bugang-historical-reach-taxon-ledger-20261030.json
 The ledger is non-public research provenance, not an app projection. It adds no current-presence or whole-river claim, no species or occurrence assertion, no geometry, and no public-app row. Attribution is preserved; the article's Creative Commons Attribution license version is still unspecified, and publication approval remains false. The ledger is listed in the existing Bugang article's source review files; no source reference was added (337 total).
 
 **Next:** prepare a separate historical-display eligibility decision for this ledger, including taxonomy holds, specimen-identification limits, attribution/version status, date wording and whether four study-site points can be displayed without suggesting a whole-river range. Keep all entries non-public until that decision is complete. Continue Panay/Guimaras inland-water research in parallel so this single study does not become a regional-coverage proxy.
+
+
+### National rollout step 247 - Bugang River historical display eligibility
+
+Recorded an internal display decision for the 2013–2014 Bugang River study. The reach ledger may remain in internal research, but admission to the public app is held. A future limited historical display is conditionally reviewable only after the license/version and attribution are confirmed, a qualified reviewer checks the proposed wording, coordinate/map use is independently reviewed, and taxonomy holds remain visible. Any eventual display must be labeled “Historical study record (2013–2014),” preserve source names and reach flags, and avoid claims about current presence, abundance, diet, bait, catchability, safety, rules or permission. The genus-only rows are not species, `Apogon hyalosoma` remains unresolved, and the source's historical `Hemiramphidae` assignment for `Zenarchopterus dispar` remains verbatim.
+
+Added `national-visayas-panay-bugang-historical-display-eligibility-20261030.json` to the source review files. This does not authorize publication, add app rows or geometry, or resolve specimen identity. No code or legal text changed.
+
+**Next:** resume the independent Panay/Guimaras freshwater-source sweep and identify the next open, primary study with retrievable species-by-waterbody evidence; do not treat Bugang as a regional baseline.
