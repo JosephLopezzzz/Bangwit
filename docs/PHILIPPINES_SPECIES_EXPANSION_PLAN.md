@@ -1809,3 +1809,14 @@ The Magallanes LGU profile independently names Incarizan among tributaries drain
 Added six source references (315 total) and the Incarizan source review. No verified species, occurrence, absence, geometry, diet, native-status, legal/safety claim or public-app row was added. The thesis remains unauthenticated and its content rights unresolved; Bicol coverage remains incomplete.
 
 **Next:** request the original thesis/catalog record and author or SorSU clarification through the Magallanes Campus Library; separately review Sorsogon marine-market evidence as market data, never as river occurrence. Seek the controlling DMC No. 2022-15 before displaying a water classification.
+
+
+### National rollout step 227 - Magallanes market fish list, Sorsogon Bay and Ticao-Burias Pass
+
+Reviewed Malto and Dumilag's peer-reviewed 2023 Philippine Journal of Science research note using its DOST-indexed abstract and a full-text copy uploaded by an author to ResearchGate. The authors report a twice-monthly Magallanes market survey from October 2021 to September 2022, using vendor/peddler interviews and records from LGU/BFAR offices; fish names were identified with gross morphology, regional atlases and FishBase 2022. The table lists 77 taxa and assigns broad source codes to Sorsogon Bay, Ticao-Burias Pass or both. This is market-resource evidence, not an event-level fish occurrence dataset and not evidence for Incarizan River.
+
+The paper contains count conflicts: prose says 11 taxa were exclusive to Ticao-Burias Pass, 4 to Sorsogon Bay and 61 shared (76 total), while manual counting of the 77 table origin codes gives 10, 4 and 63 (77 total). It also says seven common names represent multiple species but lists twelve names. Preserve those discrepancies and do not create local-name species mappings or use the disputed origin subsets until checked against the table image or clarified by the authors. No exact capture coordinates, landing-event/specimen crosswalk or vouchers were located. Market seasonality is explicitly incomplete.
+
+Added one source reference (316 total) and `national-bicol-sorsogon-market-fish-resources-review-20261030.json`, retaining 77 names as source transcriptions only. Direct publisher retrieval returned 403; no item-specific reuse license was verified. No normalized taxa, occurrences, river/freshwater records, diet/bait claims or public-app rows were added. Bicol coverage remains incomplete.
+
+**Next:** continue the region-and-habitat sweep with separate Sorsogon inland river/lake evidence and coastal surveys; seek a visually verified publisher table or author clarification for the market article's counts before any use of derived subsets.
