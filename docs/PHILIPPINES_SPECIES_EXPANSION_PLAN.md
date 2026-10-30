@@ -2349,3 +2349,9 @@ The introduction says food habits were investigated, while several profiles expl
 Added `national-visayas-eastern-visayas-ormoc-lake-danao-2007-guide-fulltext-review-20261030.json` and updated the existing source/catchment records; source count remains 406. No species row, diet card, occurrence, geometry, current-presence, safety/legal/catchability claim, or public-app content was added.
 
 The guide cites three potentially valuable proceedings papers: a 2002 Tubod River feeding-ecology paper and two 2005 Lake Danao/Inawasan freshwater papers. A bounded public search found citation records but no standalone copy of those papers. **Next:** search institutional/library catalogs for those proceedings and inspect the papers if publicly available; keep all citation-only leads out of app data until their text, methods, site attribution, and rights can be checked.
+
+### National rollout step 283 - Lake Danao/Tubod proceedings retrieval check
+
+Ran targeted searches of VSU, Annals of Tropical Research and repository domains using the proceedings titles, author, river and year. The public Weliange CV and the 2007 guide's indexed reference list repeat the 2002/2005 bibliography, but neither exposes the papers themselves or a direct catalog/download item. This improves bibliographic confidence but adds no new fish, diet or site evidence. Search-engine non-discovery does not prove the proceedings are absent from an unindexed archive.
+
+Updated the proceedings retrieval record within `national-visayas-eastern-visayas-ormoc-lake-danao-2007-guide-fulltext-review-20261030.json`. No new source row or species/diet claim was added. **Next:** leave the papers as citation-only leads unless a public copy surfaces, and continue Eastern Visayas freshwater work from independently inspectable records; no access inquiry was sent.
