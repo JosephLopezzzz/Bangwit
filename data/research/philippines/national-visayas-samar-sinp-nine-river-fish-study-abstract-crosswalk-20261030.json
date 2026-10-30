@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "checkedOn": "2026-10-30",
+  "phaseId": "V-EV",
+  "regionIds": ["0800000000"],
+  "status": "primary-conference-abstracts-crosschecked;project-output-unavailable;duplicate-title-conflicting-version-details;taxon-and-river-crosswalk-unresolved;research-only",
+  "question": "Do public Samar Island Natural Park river-fisheries research records expose a verified site-by-taxon freshwater checklist suitable for the national species inventory?",
+  "sourcesReviewed": [
+    {
+      "sourceId": "diocton-et-al-msdi-2023-samar-sinp-nonwadeable-river-fish-stock-assessment-abstracts",
+      "citation": "Diocton, R. C., Gamba, A. M., & Bacnutan, K. (2023). Stock Assessment of Traditionally Fished Aquatic Species in Non-Wadeable Rivers in Samar Island Natural Park. In MSDI 2023 Abstract Proceedings, Fisheries Science, entries PID 2812 and PID 5194.",
+      "access": "Reviewed the publisher-hosted 137-page proceedings PDF and both same-title entries: PID 2812 on printed page 72 and PID 5194 on printed page 77. Both display the same three authors but materially different abstracts.",
+      "abstractCrosswalk": {
+        "pid2812": {
+          "reportedScope": "Survey of diminutive freshwater fishes in three major rivers in Samar Island Natural Park; each river system divided into three stations and fishing gears deployed.",
+          "reportedResults": "Six dominant indigenous fish species plus Cestraeus sp.; the six fish are not named and the three rivers are not identified in this abstract.",
+          "limitations": "No field dates, station names or coordinates, methods/effort detail, voucher numbers, taxon table or species-to-river allocation are provided in the abstract."
+        },
+        "pid5194": {
+          "reportedScope": "Aims at indigenous diminutive freshwater fishes in three SINP study areas; the abstract references isolated crater lakes, mountain streams and waterfalls.",
+          "reportedResults": "Mentions Macrobrachium sp. as dominant downstream aquatic catches and names Cestraeus plicatilis as Ludong, with wording that it was discovered from the ‘deni point’ of the Ulot rapids to Basey, Samar.",
+          "limitations": "The reach phrase ‘deni point’ is preserved verbatim and unresolved. The abstract does not give a station/specimen table or link the named mullet to a specific collection event or river station."
+        }
+      },
+      "crosswalkDecision": "The two entries share title and authors and occur in one proceedings volume, but have different PIDs and different scope/result details. They may be alternate versions or related outputs from the same project; the source does not establish whether they represent one dataset or separate sampling. Do not count them as independent surveys, merge their findings, or treat either abstract as a complete checklist. Preserve Cestraeus sp. in PID 2812 and Cestraeus plicatilis in PID 5194 as conflicting source labels pending voucher-level review.",
+      "reuse": "Bibliographic metadata and short factual summaries only. No structured species list, raw abstract text, figures, or tables copied. No item-specific open license or Bangwit publication permission established."
+    },
+    {
+      "sourceId": "nrcp-e241-samar-sinp-nine-river-stock-assessment-project",
+      "citation": "National Research Council of the Philippines. Project E-241, Stock Assessment of Traditionally ‘Fished’ Aquatic Species in Nonwadeable Rivers and Adjacent Riparian Areas in the Samar Island Natural Park. Project metadata page, accessed 2026-10-30.",
+      "access": "Reviewed the NRCP project detail page. It names a planned nine-river scope: Gandara, Calbiga and Golden in Western Samar; Can-avid Oras, Suribao and Taft in Eastern Samar; Catubig, Catarman and Pambujan in Northern Samar. The listed coverage is 1 July 2020–30 June 2022, while the page still labels the project ‘Ongoing.’",
+      "decision": "Treat river names and period as project-scope metadata, not evidence that every river was sampled or that the project is complete. The stale status field and absence of a linked final report/checklist leave completion and results unverified. Do not assume ‘Golden Rivers’ is a resolved official hydronym or silently normalize the portal wording."
+    },
+    {
+      "sourceId": "nrcp-e240-samar-sinp-river-edna-metabarcoding-project",
+      "citation": "National Research Council of the Philippines. Project E-240, eDNA Metabarcoding for Biomonitoring and Conservation of Indigenous and Threatened Aquatic Species in Major Rivers in the Samar Island Natural Park. Project metadata page, accessed 2026-10-30.",
+      "access": "Reviewed NRCP project metadata naming the University of Eastern Philippines and a different project leader from E-241. The listed period is 1 July 2020–30 June 2022 and the page also retains an ‘Ongoing’ status. Its description refers to a nine-river ecosystem but publishes no sample results, sequence accessions, detections or final report.",
+      "decision": "Keep E-240 separate from SSU's E-241 fish stock-assessment project. eDNA detections, if later published, will need assay, marker/reference database, contamination, sample-location, date and detection-confidence review; the project proposal alone adds no species evidence."
+    },
+    {
+      "sourceId": "ssu-2022-diocton-research-caravan-announcement",
+      "citation": "Samar State University. (2022-12-06). SSU-CFARRD co-hosts Regional Basic Research Caravan, features Prof. Diocton’s research.",
+      "access": "Reviewed the official SSU news page. It confirms the NRCP-funded Diocton research was featured at a December 2022 regional research caravan, but gives no species list, methods, stations, vouchers or final-report link.",
+      "decision": "Use only to corroborate that the project was publicly presented; it is not an independent fish survey or a checklist source."
+    },
+    {
+      "sourceId": "iucn-cestraeus-plicatilis-assessment-2020",
+      "citation": "Hoese, D., Ame, E. C., Torres, A. G., Kesner-Reyes, K., & Angeles, I. J. P. (2021). Cestraeus plicatilis. The IUCN Red List of Threatened Species 2021: e.T196419A162164358. Assessment date: 16 October 2020.",
+      "access": "The IUCN assessment record was reviewed through its indexed result; direct page retrieval was blocked in this pass. It reports the 2020 global assessment as Data Deficient, not Endangered.",
+      "decision": "Do not repeat the conference abstract's ‘endangered’ wording as current conservation status. The IUCN assessment is global and does not validate the Samar identification, population state, legal status or local catch rules."
+    }
+  ],
+  "crossSourceAssessment": {
+    "projectRelationship": "NRCP E-241 (Samar State University, stock assessment) and E-240 (University of Eastern Philippines, eDNA metabarcoding) are distinct projects with different leaders and methods. Their shared 2020–2022 coverage and stale ‘Ongoing’ portal labels do not prove shared samples, completion or results.",
+    "taxonomicConflict": "PID 2812 reports Cestraeus only to genus; PID 5194 names Cestraeus plicatilis. The separate Northern Philippines NFRDI COI study already logged in this repository reports C. goldiei for its analyzed Cagayan/Abra sequences, so ‘Ludong’/C. plicatilis labels require voucher-linked taxonomic resolution and must not be merged across regions or projects.",
+    "habitatAndRegion": "The project metadata gives a Samar-wide nine-river plan, but the conference abstract only says three river systems and does not name them. Ulot/Basey wording occurs only in PID 5194 and is not a station-by-taxon crosswalk. Samar's rivers, crater lakes, streams, waterfalls and downstream reaches should remain separate habitat/site units; the coastal Lawaan river study is not treated as a freshwater-only inventory here.",
+    "appReadiness": "High-value retrieval lead, not a public checklist. The available sources do not establish a complete fish inventory, current occupancy, abundance, diet, catchability, legal access, safety, geometry or permission to publish derivative structured records."
+  },
+  "rightsReview": {
+    "status": "No item-specific data license or permission for the conference abstract's derivative checklist was identified.",
+    "handling": "Only citation metadata and short factual research notes are retained. No report, proceedings pages, table, image, sequence or raw occurrence data were copied.",
+    "publicationApproval": false
+  },
+  "disposition": {
+    "sourceReferencesAdded": 5,
+    "conferenceEntriesCrosswalked": 2,
+    "speciesNamesAddedToResearchChecklist": 0,
+    "speciesAssertionsAdded": 0,
+    "occurrenceAssertionsAdded": 0,
+    "geometryAdded": 0,
+    "dietSafetyOrCatchabilityClaimsAdded": 0,
+    "publicAppRowsAdded": 0,
+    "publicationApproval": false,
+    "reason": "The proceedings abstracts conflict on scope, detail and Cestraeus identification; named river/station/specimen crosswalks and a complete species list are unavailable."
+  },
+  "nextActions": [
+    "Request the final E-241 report, full named list for the six indigenous fish, exact sampled river systems and stations, field dates/effort, specimen catalogue/voucher numbers, taxonomic determinations, size/abundance tables, and reuse terms from Samar State University/CFARRD; do not send an inquiry without explicit authorization.",
+    "Request the E-240 final eDNA report, sampling coordinates/dates, markers and reference database, sequence/assay accessions, controls, detection thresholds and reuse terms from the University of Eastern Philippines/NRCP.",
+    "Ask the authors or SSU whether PID 2812 and PID 5194 are alternate abstracts, different project outputs, or different survey datasets, and resolve ‘Cestraeus sp.’ versus ‘C. plicatilis’ against vouchers; preserve the source phrase ‘deni point’ until clarified.",
+    "Continue to another independently inspectable Eastern Visayas freshwater source; do not mark Samar or Eastern Visayas complete based on project plans or abstracts."
+  ],
+  "sources": [
+    {
+      "url": "https://msdi.ntu.edu.vn/uploads/0/MSDI%202023_Abstract%20proceeding.pdf",
+      "supports": "The MSDI 2023 proceedings, PID 2812 (printed page 72) and PID 5194 (printed page 77): shared title/authors and differences in scope, taxonomic specificity and reported result details."
+    },
+    {
+      "url": "https://basicresearch.nrcp.dost.gov.ph/supported_programs_and_projects/view_details_id/304",
+      "supports": "NRCP E-241 project leader, institution, planned nine river names, covered period and stale ongoing status."
+    },
+    {
+      "url": "https://basicresearch.nrcp.dost.gov.ph/supported_programs_and_projects/details/306",
+      "supports": "Distinct NRCP E-240 eDNA project leader, implementing agency, project period, description and stale ongoing status."
+    },
+    {
+      "url": "https://ssu.edu.ph/2022/12/06/ssu-cfarrd-co-hosts-regl-basic-research-caravan-features-prof-dioctons-research/",
+      "supports": "SSU's official confirmation that the NRCP-funded Diocton project was featured at a December 2022 research caravan; no checklist or results."
+    },
+    {
+      "url": "https://doi.org/10.2305/IUCN.UK.2021-2.RLTS.T196419A162164358.en",
+      "supports": "IUCN indexed assessment result for Cestraeus plicatilis: 2020 assessment date and Data Deficient category, not the conference abstract's endangered wording."
+    },
+    {
+      "url": "https://repository.nfrdi.da.gov.ph/items/405e7034-8af9-4801-b8c1-42dff5c103c9",
+      "supports": "Existing repository source record for the separate 2022 NFRDI COI study, whose analyzed Northern Philippine Ludong sequences were reported as Cestraeus goldiei; used only to flag a taxonomic conflict, not validate a Samar fish."
+    }
+  ]
+}
