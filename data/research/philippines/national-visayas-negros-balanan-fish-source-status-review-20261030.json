@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 1,
+  "checkedOn": "2026-10-30",
+  "status": "no-primary-lake-fish-inventory-located;bounded-gbif-locality-screen-no-fish;research-only",
+  "waterbody": "Lake Balanan, Siaton, Negros Oriental",
+  "sourceIds": [
+    "oracion-hiponia-balanan-lake-community-fishery-context-2009",
+    "gbif-balanan-exact-locality-screen-20261030",
+    "bfar-r7-balanan-water-quality-2019-2021-foi-lead-20261030",
+    "nrcp-balanan-lake-management-context-2025"
+  ],
+  "primaryFishSurveySearch": {
+    "finding": "Targeted searches across GBIF, NFRDI repository indexing, Negros Oriental university/research pages, and fish-inventory/ichthyofauna terms did not locate an accessible, primary Lake Balanan fish survey with an identified taxon list, methods and station-level evidence.",
+    "scope": "Discovery search only; it does not prove that no unpublished survey or agency record exists.",
+    "historicalCommunityStudy": "Oracion and Hiponia's 2009 study remains livelihood and governance context. Its household interviews report common catch labels rather than a taxonomic fish-sampling inventory."
+  },
+  "gbifLocalityScreen": {
+    "endpoint": "https://api.gbif.org/v1/occurrence/search",
+    "queries": [
+      {
+        "parameters": "country=PH; locality=Lake Balanan; limit=300",
+        "total": 27,
+        "classCounts": {
+          "Amphibia": 6,
+          "Squamata": 19,
+          "Aves": 1,
+          "Gastropoda": 1
+        },
+        "fishRecords": 0
+      },
+      {
+        "parameters": "country=PH; locality=Balanan; limit=300",
+        "total": 3,
+        "classCounts": {
+          "Aves": 1,
+          "Gastropoda": 2
+        },
+        "fishRecords": 0
+      },
+      {
+        "parameters": "country=PH; waterBody=Lake Balanan; limit=300",
+        "total": 0,
+        "fishRecords": 0
+      }
+    ],
+    "interpretation": "The 27 records returned for the exact locality phrase were all inspected by their indexed class; none was a fish. These are text-indexed place queries, not coordinate-complete lake sampling. Zero results do not establish fish absence."
+  },
+  "officialWaterQualityLead": {
+    "source": "BFAR Region VII eFOI request titled Water Quality Monitoring Results of Lake Balinsasayao and Lake Balanan 2019-2021.",
+    "finding": "The public eFOI page shows the request was marked successful on 2026-02-12 and describes a request for quarterly 2019-2021 monitoring values, station/date fields and coordinates. This is a water-quality data lead, not a fish inventory, catchability or a current safety result.",
+    "access": "The linked document viewer exposed a Google Storage URL with a signed link dated 2026-08-09 that had expired by this review; direct retrieval of the attachment returned HTTP 403. The attachment contents, actual station count, parameters, coordinates and item-specific terms were not verified.",
+    "responseIntegrity": "The displayed agency reply includes an unrelated sentence saying the request was for the number of FOI users, despite the water-quality request title and attached-file label. Treat whether the attachment fully answers the request as unresolved until the file itself can be inspected."
+  },
+  "lakeManagementContext": {
+    "source": "DOST-NRCP's 2025 lake sustainability event report.",
+    "finding": "The article records stakeholder discussion involving Lake Balanan and local institutions, but it reports no Balanan fish sampling or species results.",
+    "use": "Management context and a possible institutional pathway only; not species evidence."
+  },
+  "decision": {
+    "publicAppAdmission": "hold",
+    "speciesAssertions": "none added",
+    "occurrenceAssertions": "none added",
+    "geometry": "not created",
+    "dietClaims": "none",
+    "currentSafetyAlert": "none",
+    "regionalCompletionCount": "none",
+    "publicationApproval": false,
+    "reason": "No primary taxonomic lake survey or fish occurrence was verified. The open-data screen is a bounded string search; the BFAR result is a water-quality lead whose attachment could not be inspected."
+  },
+  "limitations": [
+    "GBIF locality text may omit spelling variants, coordinate-only records, data not yet indexed by GBIF or unpublished collections.",
+    "The result classes summarize indexed occurrence records, not a systematic survey or a lake checklist.",
+    "The 2009 community interviews' common catch labels cannot be resolved into scientific taxa or dated occurrences.",
+    "The BFAR 2019-2021 file could not be reviewed; do not use it for current water quality, safety warnings or fish-presence claims.",
+    "No fish name, occurrence row, coordinate, geometry, diet row, alert, or public app row was added."
+  ],
+  "disposition": {
+    "primaryBalananFishInventoryLocated": false,
+    "gbifExactLocalityRecordsReviewed": 27,
+    "gbifAlternateLocalityRecordsReviewed": 3,
+    "gbifFishRecordsSelected": 0,
+    "bfarAttachmentRetrieved": false,
+    "speciesNamesAdded": 0,
+    "occurrenceAssertionsAdded": 0,
+    "publicAppRowsAdded": 0,
+    "publicationApproval": false
+  },
+  "nextActions": [
+    "Ask BFAR Region VII or the eFOI requester/portal for a refreshed, inspectable copy of the 2019-2021 water-quality attachment; verify its stations, dates, parameters, coordinates and data terms before use.",
+    "Ask NORSU, BFAR Region VII and the Lake Balanan/PAMB management office whether a fish assemblage survey, species list, station table or voucher register exists; request methods, dates and reuse terms.",
+    "Continue freshwater source discovery for Negros and Siquijor, keeping exact lake, tributary, outlet-river, and community-fishery evidence separate."
+  ],
+  "references": [
+    {
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Lake%20Balanan&limit=300",
+      "supports": "Exact indexed locality query and the 27 records grouped by class; no fish row was present."
+    },
+    {
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Balanan&limit=300",
+      "supports": "Alternate indexed locality phrase returned three non-fish records."
+    },
+    {
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&waterBody=Lake%20Balanan&limit=300",
+      "supports": "Exact waterBody-field query returned zero records; this does not establish absence."
+    },
+    {
+      "url": "https://www.foi.gov.ph/agencies/bfar/water-quality-monitoring-results-of-lake-balinsasayao-and-lake-balanan-2019-2021/",
+      "supports": "BFAR Region VII eFOI request status, requested water-quality fields, response text and attachment listing."
+    },
+    {
+      "url": "https://nrcp.dost.gov.ph/safeguarding-lakes-securing-communities-mmbmp-season-4-visayas-leg-tackles-sustainable-lake-management/",
+      "supports": "2025 lake-governance stakeholder context; it does not report Balanan fish-survey results."
+    }
+  ]
+}

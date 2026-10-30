@@ -3,7 +3,7 @@
   "checkedOn": "2026-10-30",
   "status": "research-only-source-registry",
   "scope": "National acquisition references, freshwater spatial-source leads, and CALABARZON/Central Luzon identity/source leads. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 361,
+  "sourceCount": 364,
   "sources": [
     {
       "id": "carumbana-siaton-river-limnology-fishery-report-2006",
@@ -11231,6 +11231,101 @@
         "NMNH states that only part of its holdings are available online; zero search results do not show that the physical lots are absent.",
         "The source checklist's historical locality and lot references are not a current occurrence or whole-river inventory.",
         "No species, occurrence, coordinate, geometry, diet, safety alert, or app row was added."
+      ]
+    },
+    {
+      "id": "gbif-balanan-exact-locality-screen-20261030",
+      "title": "GBIF exact locality-field discovery screen for Lake Balanan",
+      "provider": "Global Biodiversity Information Facility (GBIF)",
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Lake%20Balanan&limit=300",
+      "additionalUrls": [
+        "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Balanan&limit=300",
+        "https://api.gbif.org/v1/occurrence/search?country=PH&waterBody=Lake%20Balanan&limit=300",
+        "https://techdocs.gbif.org/en/openapi/v1/occurrence"
+      ],
+      "role": "Bounded exact-string biodiversity discovery for a Lake Balanan fish-source review. The exact locality rows were all amphibians, reptiles, one bird and one mollusc; this is not a fish inventory or absence assessment.",
+      "checkedOn": "2026-10-30",
+      "access": {
+        "status": "Exact PH locality Lake Balanan returned 27 rows (6 Amphibia, 19 Squamata, 1 Aves, 1 Gastropoda); alternate locality Balanan returned 3 non-fish rows; exact waterBody Lake Balanan returned zero. All 27 exact-locality classes were inspected.",
+        "reviewFiles": [
+          "national-visayas-negros-balanan-fish-source-status-review-20261030.json"
+        ],
+        "fullTextRetrieved": false
+      },
+      "reuse": {
+        "metadata": "Only query parameters, aggregate class counts, result scope and date are retained.",
+        "raw": "No GBIF occurrence row or raw response is copied into this registry entry.",
+        "content": "No fish occurrence was selected. A zero or non-fish exact-string response is not proof of fish absence, and future individual records require dataset and record rights review."
+      },
+      "publicationApproval": false,
+      "researchStatus": "negros-oriental;lake-balanan;exact-locality-screen;27-nonfish-records;no-fish-row-selected;research-only",
+      "license": "No fish occurrence selected; no fish-content license applies to this search summary",
+      "licenseUrl": null,
+      "caveats": [
+        "Exact text filters do not find coordinate-only records, alternative locality spellings or records not indexed by GBIF.",
+        "No fish species list, occurrence, coordinate, geometry, diet, safety alert, or app row was added."
+      ]
+    },
+    {
+      "id": "bfar-r7-balanan-water-quality-2019-2021-foi-lead-20261030",
+      "title": "BFAR Region VII Lake Balanan 2019-2021 water-quality eFOI response lead",
+      "provider": "Bureau of Fisheries and Aquatic Resources, Region VII; Philippine eFOI portal",
+      "url": "https://www.foi.gov.ph/agencies/bfar/water-quality-monitoring-results-of-lake-balinsasayao-and-lake-balanan-2019-2021/",
+      "additionalUrls": [
+        "https://www.foi.gov.ph/documents/349448/Water_Quality_monitoring_result_Lake_Balinsayao_and_lake_balanan.pdf"
+      ],
+      "role": "Official water-quality data lead for Lake Balanan, separate from the fish inventory. The attachment is currently inaccessible and its contents and applicable terms are not verified.",
+      "checkedOn": "2026-10-30",
+      "sourceYear": 2021,
+      "access": {
+        "status": "Public eFOI thread shows successful status dated 2026-02-12 and an attachment label for 2019-2021 lake water-quality monitoring. The viewer's signed storage URL had expired, and direct attachment retrieval returned HTTP 403. The reply text also contains an apparent unrelated request description; actual attachment contents were not inspected.",
+        "reviewFiles": [
+          "national-visayas-negros-balanan-fish-source-status-review-20261030.json"
+        ],
+        "fullTextRetrieved": false
+      },
+      "reuse": {
+        "metadata": "Only public request title, status, requested parameters and retrieval limitation are retained; personal details from the request thread are omitted.",
+        "raw": "No attachment or water-quality measurement was downloaded or copied.",
+        "content": "The eFOI page's general public-domain footer is not treated as verification of the attachment's completeness, provenance, record-level terms or suitability for republication. Do not use this lead for fish presence or current safety alerts."
+      },
+      "publicationApproval": false,
+      "researchStatus": "lake-balanan;water-quality;2019-2021;public-efoi-lead;attachment-unavailable;not-fish-evidence;research-only",
+      "license": "Attachment terms and contents not verified",
+      "licenseUrl": null,
+      "caveats": [
+        "The requested water-quality parameters are not confirmed as present in the inaccessible attachment.",
+        "A historic water-quality series cannot establish current water safety.",
+        "No fish, occurrence, coordinate, geometry, diet, alert, or public app row was added."
+      ]
+    },
+    {
+      "id": "nrcp-balanan-lake-management-context-2025",
+      "title": "DOST-NRCP lake sustainability forum with Lake Balanan stakeholder context",
+      "provider": "Department of Science and Technology, National Research Council of the Philippines",
+      "url": "https://nrcp.dost.gov.ph/safeguarding-lakes-securing-communities-mmbmp-season-4-visayas-leg-tackles-sustainable-lake-management/",
+      "role": "Official 2025 lake-governance and stakeholder discovery lead. The report mentions Lake Balanan in sustainability discussions but does not provide fish-survey data or a species list.",
+      "checkedOn": "2026-10-30",
+      "sourceYear": 2025,
+      "access": {
+        "status": "Official DOST-NRCP event article reviewed. Its research summaries cover other lakes; the Balanan passage describes stakeholder participation and management discussion only.",
+        "reviewFiles": [
+          "national-visayas-negros-balanan-fish-source-status-review-20261030.json"
+        ],
+        "fullTextRetrieved": true
+      },
+      "reuse": {
+        "metadata": "Bibliographic and factual management-context metadata only.",
+        "raw": "No article text, image, chart or table copied.",
+        "content": "This item supports a discovery/contact pathway, not fish presence, fish inventory, water safety or public species content. No open reuse terms for a derivative were assumed."
+      },
+      "publicationApproval": false,
+      "researchStatus": "lake-balanan;negros-oriental;2025-lake-governance-context;no-fish-survey-results;research-only",
+      "license": "No derivative-content license verified",
+      "licenseUrl": null,
+      "caveats": [
+        "The report does not provide Lake Balanan fish names, field methods, survey dates, stations, vouchers or abundance.",
+        "No species, occurrence, coordinate, geometry, diet, safety alert, or public app row was added."
       ]
     }
   ],
