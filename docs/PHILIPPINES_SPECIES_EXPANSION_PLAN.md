@@ -1842,3 +1842,14 @@ The reviewed paper provides no exact collection dates, station coordinates, samp
 Added one source reference (319 total) and `national-bicol-bulusan-lake-redigobius-dispar-source-review-20261030.json`. No species/occurrence assertion, geometry, diet, safety/legal claim or public-app row was added. No item-specific reuse license or publication approval was verified. Sorsogon and Bicol coverage remain incomplete.
 
 **Next:** seek the Fish Ark Philippines or UPLB Limnological Research Station sample register, dates and voucher/accession crosswalk for this study; continue independent Sorsogon inland-water screening in parallel, keeping lakes, rivers, estuaries and coastal waters as separate coverage units.
+
+
+### National rollout step 230 - Bulusan Lake secondary checklist and endemicity claim audit
+
+Audited a 2019 Maritime Review profile that states Bulusan Lake has 21 freshwater fish species, 15 endemic to the lake and six introduced. It names three examples but supplies no fish checklist, collection dates, methods, taxon references or source for the totals. Its reference list cites a 2017 amphibian/reptile inventory, which does not support a fish checklist. The phrase “endemic to Bulusan Lake” also cannot be silently recast as Philippine-endemic or native status.
+
+Cross-checked the separate primary 2017 goby genetics study: its 20 *Redigobius dispar* samples assigned to Bulusan Lake provide a single-species historical sample-site association, not a complete checklist and neither validation nor contradiction of the 21/15/6 numbers. A protected-area site profile confirms lake/park context but contains no fish inventory. The 2019 counts and all taxa supported only by that paragraph remain held; no occurrence, endemic/introduced status, abundance or public-app row was created.
+
+Added one source reference (320 total) and `national-bicol-bulusan-lake-fish-checklist-claim-audit-20261030.json`. No species assertion, occurrence, geometry, diet, legal/safety statement or public-app row was added. No publication approval was granted. Sorsogon/Bicol coverage remains incomplete.
+
+**Next:** continue the Sorsogon inland-water sweep for primary fish data in other lakes, streams and reservoirs; seek the original Bulusan checklist and definitions in parallel, without allowing the unresolved secondary claim to block other regions.
