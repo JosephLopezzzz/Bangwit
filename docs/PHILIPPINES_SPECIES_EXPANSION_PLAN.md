@@ -2317,3 +2317,13 @@ The paper provides 19 tow start/end coordinates and station-level depth, speed, 
 Added `national-visayas-leyte-gulf-2020-demersal-trawl-stock-assessment-review-20261030.json` and one source reference (404 total). No species assertion, occurrence, geometry, diet, safety/legal/catchability claim, or public-app row was added. This marine assessment remains separate from Leyte/Samar inland-water studies.
 
 **Next:** seek the official BFAR survey dataset or full species-by-station table, identification/voucher details, and data reuse terms; do not send an inquiry without explicit authorization. Continue the Eastern Visayas sweep across freshwater, brackish, estuary, reef, and open-marine sources; the Leyte Gulf trawl does not complete coverage.
+
+### National rollout step 280 - Silago coastal fishery profile evidence review
+
+Reviewed the official Southern Leyte State University journal record and the full 2014 article text. The study reports 71 purposively selected artisanal/municipal fisherfolk respondents across four selected Silago barangays and describes interviews, focus-group discussion, and observation in December 2013. It is a short historical coastal fishery profile, not a standardized station-based species survey. The abstract reports 31 target-fish species, while the Results says 29 commercially important species including finfish and squid; the Conclusion again gives 31 fish and invertebrate species. The article does not resolve that discrepancy in the accessible text.
+
+The named catch groups visible in the abstract are common names only (threespot angelfish, rabbit fish, emperor, grouper, and parrot fish). No scientific-name crosswalk or point-level fishing coordinates were established, so no taxon or occurrence row was normalized. Historical respondent CPUE and views about declining catch are not current catchability, stock-status, safety or legal guidance. The journal record states CC BY 4.0; the full text was inspected via a third-party PDF mirror, and no paper table or article content was copied into app data.
+
+Added `national-visayas-eastern-visayas-southern-leyte-silago-coastal-fish-profile-review-20261030.json` and one registry record with two source URL references (405 total). No species assertion, occurrence, geometry, diet, safety/legal/catchability claim, or public-app row was added.
+
+**Next:** continue separate Eastern Visayas freshwater, brackish, estuary and marine-source reviews; prioritize inspectable taxon lists and station-level evidence for Leyte, Samar and Biliran. Keep this Silago source as historical fishery context until the table, scientific names, per-barangay allocation and 29/31 discrepancy are independently resolved.
