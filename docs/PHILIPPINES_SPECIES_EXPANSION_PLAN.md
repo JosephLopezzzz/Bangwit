@@ -1941,3 +1941,14 @@ Added `national-visayas-asid-gulf-fish-guide-profile-review-20261030.json` with 
 Added one official source reference (328 total). No species/occurrence, diet, abundance or geometry assertions and no public-app rows were added. This is a regional marine-fishery source, not freshwater coverage; Asid Gulf and Regions V, VI and VII remain incomplete.
 
 **Next:** crosswalk the source names against current taxonomic authorities while retaining the printed strings, and continue independent freshwater, brackish and coastal evidence sweeps by named waterbody. Keep fish-guide profiles separate from occurrence events and catch records.
+
+
+### National rollout step 239 - Asid Gulf guide name crosswalk against GBIF Backbone
+
+Matched the 86 source scientific-name strings in one documented GBIF ChecklistBank Species API v2 batch request (`kingdom=Animalia`, `strict=true`, `verbose=true`). The API returned all 86 results in input order. The returned match types were 85 `EXACT` and one `VARIANT`; 84 matched usages were marked accepted and two were marked synonyms. Six results included alternative candidates. The query, selected response fields, classifications and page-linked source strings are recorded in `national-visayas-asid-gulf-fish-guide-profile-review-20261030.json`; the source names were not overwritten.
+
+Nine rows require manual taxonomic review: `Alectis indica`, `Leiognathus equula`, `Mene maculata`, `Moolgarda seheli`, `Mugil cephalus`, `Valamugil buchanani`, `Plotosus lineatus`, `Scomberomorus commerson` and `Sphyraena barracuda`. GBIF marks `Moolgarda seheli` and `Valamugil buchanani` as synonym usages with accepted-name candidates `Crenimugil seheli` and `Crenimugil buchanani`; `Leiognathus equula` returns a variant candidate `Leiognathus equulus`. These remain provisional and need comparison against a second authoritative fish-taxonomy source and the guide's cited authorities.
+
+Added one API source reference (329 total). This is a name crosswalk only; it establishes no Asid Gulf occurrence, local abundance, diet, catchability, legal access or safety. No species/occurrence assertion or public-app row was added, and publication approval remains false.
+
+**Next:** review the nine flagged names against current authoritative fish taxonomies while preserving source strings, then resume the distinct Visayas freshwater, brackish and coastal source sweep by named waterbody.

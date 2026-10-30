@@ -3,8 +3,45 @@
   "checkedOn": "2026-10-30",
   "status": "research-only-source-registry",
   "scope": "National acquisition references, freshwater spatial-source leads, and CALABARZON/Central Luzon identity/source leads. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 328,
+  "sourceCount": 329,
   "sources": [
+    {
+      "id": "gbif-checklistbank-species-match-api-v2",
+      "title": "GBIF ChecklistBank Species Matching API v2 (GBIF Backbone taxonomy)",
+      "provider": "GBIF Secretariat / Global Biodiversity Information Facility",
+      "url": "https://techdocs.gbif.org/en/openapi/v1/species",
+      "additionalUrls": [
+        "https://api.gbif.org/v2/species/match",
+        "https://techdocs.gbif.org/en/openapi/"
+      ],
+      "role": "Taxonomic name-matching reference only; not a source of occurrence or distribution evidence.",
+      "checkedOn": "2026-10-30",
+      "sourceYear": 2026,
+      "citation": "GBIF Secretariat. (2026-10-30 query). ChecklistBank Species Matching API v2, default GBIF Backbone taxonomy. https://api.gbif.org/v2/species/match",
+      "access": {
+        "status": "One documented batch POST matched 86 guide scientific-name strings using kingdom=Animalia, strict=true and verbose=true. HTTP 200 returned 86 results in input order. Match types, usage status, confidence and alternatives are recorded in the Asid Gulf review file.",
+        "reviewFiles": [
+          "national-visayas-asid-gulf-fish-guide-profile-review-20261030.json"
+        ],
+        "fullTextRetrieved": true
+      },
+      "reuse": {
+        "metadata": "Public official API and API documentation identified.",
+        "raw": "Only taxonomic name-match fields and API diagnostics were recorded; no occurrence records were requested.",
+        "content": "Terms for redistribution of API-derived taxonomy output were not separately reviewed. Retain source attribution and re-check terms before public app reuse."
+      },
+      "publicationApproval": false,
+      "researchStatus": "official-gbif-checklistbank-api-v2;86-batch-name-matches;taxonomy-only;manual-review-pending;research-only",
+      "license": "Not assessed for redistribution; consult GBIF terms before public reuse.",
+      "licenseUrl": "https://www.gbif.org/terms",
+      "caveats": [
+        "A Backbone name match is an identifier/taxonomy candidate, not evidence of a species occurrence in Asid Gulf or elsewhere.",
+        "Strict name matching and confidence do not independently validate the source identification or local name.",
+        "Two source strings matched usages marked SYNONYM; one returned a VARIANT; six queries returned alternatives. All nine are flagged for manual review.",
+        "The GBIF Backbone is maintained and can change; these outputs reflect the query date 2026-10-30.",
+        "No public-app publication approval or occurrence claim was created."
+      ]
+    },
     {
       "id": "nfrdi-2019-asid-gulf-fish-guide",
       "title": "Fish Guide: Common Fishes in Asid Gulf",

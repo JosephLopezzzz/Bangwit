@@ -10,7 +10,8 @@
   "status": "asid-gulf;2019-nsap-fish-guide;86-verbatim-profile-names;scope-limited;noncommercial-attribution-only;research-only",
   "question": "What fish profile names does the official Asid Gulf guide document, and what can this source support for regional coverage?",
   "sourceIds": [
-    "nfrdi-2019-asid-gulf-fish-guide"
+    "nfrdi-2019-asid-gulf-fish-guide",
+    "gbif-checklistbank-species-match-api-v2"
   ],
   "studyScopeAsReported": {
     "geographicScope": "The guide is titled for Asid Gulf. Its introduction situates the gulf in the Visayan Sea and describes it across Regions V, VI and VII; this does not mean the guide is a complete checklist for those regions.",
@@ -647,9 +648,17 @@
     "photographsCopied": false,
     "publicAppRowsAdded": 0,
     "publicationApproval": false,
-    "reason": "Useful regionally scoped candidate-name inventory with page citations, but no per-profile date/site/capture crosswalk and public-app publication has not been approved."
+    "reason": "GBIF returned 86 ordered name-matching results. Nine names need manual review because of a variant, synonym usage or alternative candidates; the remaining machine matches are still candidates, not independent verification or occurrence evidence.",
+    "gbifBatchQueries": 86,
+    "gbifBatchResults": 86,
+    "gbifExactMatches": 85,
+    "gbifVariantMatches": 1,
+    "gbifAcceptedUsageResults": 84,
+    "gbifSynonymUsageResults": 2,
+    "gbifAlternativeCandidateSets": 6,
+    "manualTaxonomicReviewRequired": 9
   },
-  "nextAction": "Crosswalk these 86 names against current taxonomic authorities (preserving source strings and recording accepted-name decisions separately), then identify independent freshwater, brackish and coastal sources by named waterbody. Do not convert guide profiles into occurrence events or publish them as complete regional coverage.",
+  "nextAction": "Manually reconcile the nine flagged names with current fish taxonomic authorities and source authorship; preserve the guide names unchanged. Then continue the separate regional freshwater/brackish/coastal source sweep by named waterbody.",
   "sources": [
     {
       "url": "https://nfrdi.da.gov.ph/books/",
@@ -662,6 +671,4359 @@
     {
       "url": "https://nfrdi.da.gov.ph/wp-content/uploads/2025/11/FY-2021-NFRDI-Annual-Report.pdf",
       "supports": "NFRDI report identifies the Asid Gulf guide as one of the BFAR Region V/NFRDI joint NSAP fish guides."
+    },
+    {
+      "url": "https://techdocs.gbif.org/en/openapi/v1/species",
+      "supports": "Official GBIF Species API documentation for the v2 species-match GET and batch POST services, the ChecklistBank taxonomy context, and ordered batch matching."
+    },
+    {
+      "url": "https://api.gbif.org/v2/species/match",
+      "supports": "Live GBIF taxonomic match responses for the 86 source scientific names, queried 2026-10-30 with kingdom=Animalia, strict=true and verbose=true."
     }
-  ]
+  ],
+  "taxonomicCrosswalk": {
+    "authority": "GBIF ChecklistBank species matching service; default GBIF Backbone taxonomy",
+    "endpoint": "https://api.gbif.org/v2/species/match",
+    "documentation": "https://techdocs.gbif.org/en/openapi/v1/species",
+    "queriedOn": "2026-10-30",
+    "requestMethod": "POST",
+    "requestCount": 1,
+    "queryCount": 86,
+    "requestParameters": {
+      "scientificName": "source profile name, unchanged",
+      "kingdom": "Animalia",
+      "strict": true,
+      "verbose": true
+    },
+    "resultCount": 86,
+    "responseOrderMatchesInputOrder": true,
+    "matchTypeCounts": {
+      "EXACT": 85,
+      "VARIANT": 1
+    },
+    "matchedTaxonomicStatusCounts": {
+      "ACCEPTED": 84,
+      "SYNONYM": 2
+    },
+    "alternativeCandidateSetCount": 6,
+    "manualReviewRequiredCount": 9,
+    "manualReviewRequiredNames": [
+      "Alectis indica",
+      "Leiognathus equula",
+      "Mene maculata",
+      "Moolgarda seheli",
+      "Mugil cephalus",
+      "Valamugil buchanani",
+      "Plotosus lineatus",
+      "Scomberomorus commerson",
+      "Sphyraena barracuda"
+    ],
+    "results": [
+      {
+        "sourceScientificNameVerbatim": "Netuma thalassina",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "2345402",
+        "matchedUsageName": "Netuma thalassina (Rüppell, 1837)",
+        "matchedCanonicalName": "Netuma thalassina",
+        "matchedAuthorship": "(Rüppell, 1837)",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "708",
+            "rank": "ORDER",
+            "name": "Siluriformes"
+          },
+          {
+            "usageKey": "4512",
+            "rank": "FAMILY",
+            "name": "Ariidae"
+          },
+          {
+            "usageKey": "2345401",
+            "rank": "GENUS",
+            "name": "Netuma"
+          },
+          {
+            "usageKey": "2345402",
+            "rank": "SPECIES",
+            "name": "Netuma thalassina"
+          }
+        ],
+        "alternatives": [],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; singleMatch=5",
+        "manualReviewRequired": false,
+        "manualReviewReasons": []
+      },
+      {
+        "sourceScientificNameVerbatim": "Abalistes stellaris",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "2407218",
+        "matchedUsageName": "Abalistes stellaris (Bloch & Schneider, 1801)",
+        "matchedCanonicalName": "Abalistes stellaris",
+        "matchedAuthorship": "(Bloch & Schneider, 1801)",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "772",
+            "rank": "ORDER",
+            "name": "Tetraodontiformes"
+          },
+          {
+            "usageKey": "5899",
+            "rank": "FAMILY",
+            "name": "Balistidae"
+          },
+          {
+            "usageKey": "2407215",
+            "rank": "GENUS",
+            "name": "Abalistes"
+          },
+          {
+            "usageKey": "2407218",
+            "rank": "SPECIES",
+            "name": "Abalistes stellaris"
+          }
+        ],
+        "alternatives": [],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; singleMatch=5",
+        "manualReviewRequired": false,
+        "manualReviewReasons": []
+      },
+      {
+        "sourceScientificNameVerbatim": "Alectis indica",
+        "gbifMatchType": "EXACT",
+        "confidence": 98,
+        "matchedUsageKey": "9817213",
+        "matchedUsageName": "Alectis indica (Rüppell, 1830)",
+        "matchedCanonicalName": "Alectis indica",
+        "matchedAuthorship": "(Rüppell, 1830)",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "587",
+            "rank": "ORDER",
+            "name": "Perciformes"
+          },
+          {
+            "usageKey": "4253",
+            "rank": "FAMILY",
+            "name": "Carangidae"
+          },
+          {
+            "usageKey": "2390536",
+            "rank": "GENUS",
+            "name": "Alectis"
+          },
+          {
+            "usageKey": "9817213",
+            "rank": "SPECIES",
+            "name": "Alectis indica"
+          }
+        ],
+        "alternatives": [
+          {
+            "alternativeUsageKey": "2390559",
+            "alternativeName": "Alectis indica (Cuvier, 1833)",
+            "alternativeCanonicalName": "Alectis indica",
+            "alternativeStatus": "SYNONYM",
+            "acceptedUsageKey": "2390537",
+            "acceptedName": "Alectis ciliaris (Bloch, 1787)",
+            "acceptedCanonicalName": "Alectis ciliaris"
+          }
+        ],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; nextMatch=0",
+        "manualReviewRequired": true,
+        "manualReviewReasons": [
+          "GBIF returned alternative match candidates; verify authorship and nomenclatural identity."
+        ]
+      },
+      {
+        "sourceScientificNameVerbatim": "Alepes djedaba",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "2390581",
+        "matchedUsageName": "Alepes djedaba (Forsskål, 1775)",
+        "matchedCanonicalName": "Alepes djedaba",
+        "matchedAuthorship": "(Forsskål, 1775)",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "587",
+            "rank": "ORDER",
+            "name": "Perciformes"
+          },
+          {
+            "usageKey": "4253",
+            "rank": "FAMILY",
+            "name": "Carangidae"
+          },
+          {
+            "usageKey": "2390579",
+            "rank": "GENUS",
+            "name": "Alepes"
+          },
+          {
+            "usageKey": "2390581",
+            "rank": "SPECIES",
+            "name": "Alepes djedaba"
+          }
+        ],
+        "alternatives": [],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; singleMatch=5",
+        "manualReviewRequired": false,
+        "manualReviewReasons": []
+      },
+      {
+        "sourceScientificNameVerbatim": "Atule mate",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "2390522",
+        "matchedUsageName": "Atule mate (Cuvier, 1833)",
+        "matchedCanonicalName": "Atule mate",
+        "matchedAuthorship": "(Cuvier, 1833)",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "587",
+            "rank": "ORDER",
+            "name": "Perciformes"
+          },
+          {
+            "usageKey": "4253",
+            "rank": "FAMILY",
+            "name": "Carangidae"
+          },
+          {
+            "usageKey": "2390521",
+            "rank": "GENUS",
+            "name": "Atule"
+          },
+          {
+            "usageKey": "2390522",
+            "rank": "SPECIES",
+            "name": "Atule mate"
+          }
+        ],
+        "alternatives": [],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; singleMatch=5",
+        "manualReviewRequired": false,
+        "manualReviewReasons": []
+      },
+      {
+        "sourceScientificNameVerbatim": "Carangoides coeruleopinnatus",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "5210547",
+        "matchedUsageName": "Carangoides coeruleopinnatus (Rüppell, 1830)",
+        "matchedCanonicalName": "Carangoides coeruleopinnatus",
+        "matchedAuthorship": "(Rüppell, 1830)",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "587",
+            "rank": "ORDER",
+            "name": "Perciformes"
+          },
+          {
+            "usageKey": "4253",
+            "rank": "FAMILY",
+            "name": "Carangidae"
+          },
+          {
+            "usageKey": "2390889",
+            "rank": "GENUS",
+            "name": "Carangoides"
+          },
+          {
+            "usageKey": "5210547",
+            "rank": "SPECIES",
+            "name": "Carangoides coeruleopinnatus"
+          }
+        ],
+        "alternatives": [],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; singleMatch=5",
+        "manualReviewRequired": false,
+        "manualReviewReasons": []
+      },
+      {
+        "sourceScientificNameVerbatim": "Carangoides hedlandensis",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "5210544",
+        "matchedUsageName": "Carangoides hedlandensis (Whitley, 1934)",
+        "matchedCanonicalName": "Carangoides hedlandensis",
+        "matchedAuthorship": "(Whitley, 1934)",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "587",
+            "rank": "ORDER",
+            "name": "Perciformes"
+          },
+          {
+            "usageKey": "4253",
+            "rank": "FAMILY",
+            "name": "Carangidae"
+          },
+          {
+            "usageKey": "2390889",
+            "rank": "GENUS",
+            "name": "Carangoides"
+          },
+          {
+            "usageKey": "5210544",
+            "rank": "SPECIES",
+            "name": "Carangoides hedlandensis"
+          }
+        ],
+        "alternatives": [],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; singleMatch=5",
+        "manualReviewRequired": false,
+        "manualReviewReasons": []
+      },
+      {
+        "sourceScientificNameVerbatim": "Caranx ignobilis",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "2390805",
+        "matchedUsageName": "Caranx ignobilis (Forsskål, 1775)",
+        "matchedCanonicalName": "Caranx ignobilis",
+        "matchedAuthorship": "(Forsskål, 1775)",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "587",
+            "rank": "ORDER",
+            "name": "Perciformes"
+          },
+          {
+            "usageKey": "4253",
+            "rank": "FAMILY",
+            "name": "Carangidae"
+          },
+          {
+            "usageKey": "2390749",
+            "rank": "GENUS",
+            "name": "Caranx"
+          },
+          {
+            "usageKey": "2390805",
+            "rank": "SPECIES",
+            "name": "Caranx ignobilis"
+          }
+        ],
+        "alternatives": [],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; singleMatch=5",
+        "manualReviewRequired": false,
+        "manualReviewReasons": []
+      },
+      {
+        "sourceScientificNameVerbatim": "Caranx sexfasciatus",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "2390776",
+        "matchedUsageName": "Caranx sexfasciatus Quoy & Gaimard, 1825",
+        "matchedCanonicalName": "Caranx sexfasciatus",
+        "matchedAuthorship": "Quoy & Gaimard, 1825",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "587",
+            "rank": "ORDER",
+            "name": "Perciformes"
+          },
+          {
+            "usageKey": "4253",
+            "rank": "FAMILY",
+            "name": "Carangidae"
+          },
+          {
+            "usageKey": "2390749",
+            "rank": "GENUS",
+            "name": "Caranx"
+          },
+          {
+            "usageKey": "2390776",
+            "rank": "SPECIES",
+            "name": "Caranx sexfasciatus"
+          }
+        ],
+        "alternatives": [],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; singleMatch=5",
+        "manualReviewRequired": false,
+        "manualReviewReasons": []
+      },
+      {
+        "sourceScientificNameVerbatim": "Gnathanodon speciosus",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "2391331",
+        "matchedUsageName": "Gnathanodon speciosus (Forsskål, 1775)",
+        "matchedCanonicalName": "Gnathanodon speciosus",
+        "matchedAuthorship": "(Forsskål, 1775)",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "587",
+            "rank": "ORDER",
+            "name": "Perciformes"
+          },
+          {
+            "usageKey": "4253",
+            "rank": "FAMILY",
+            "name": "Carangidae"
+          },
+          {
+            "usageKey": "2391330",
+            "rank": "GENUS",
+            "name": "Gnathanodon"
+          },
+          {
+            "usageKey": "2391331",
+            "rank": "SPECIES",
+            "name": "Gnathanodon speciosus"
+          }
+        ],
+        "alternatives": [],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; singleMatch=5",
+        "manualReviewRequired": false,
+        "manualReviewReasons": []
+      },
+      {
+        "sourceScientificNameVerbatim": "Megalaspis cordyla",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "5210642",
+        "matchedUsageName": "Megalaspis cordyla (Linnaeus, 1758)",
+        "matchedCanonicalName": "Megalaspis cordyla",
+        "matchedAuthorship": "(Linnaeus, 1758)",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "587",
+            "rank": "ORDER",
+            "name": "Perciformes"
+          },
+          {
+            "usageKey": "4253",
+            "rank": "FAMILY",
+            "name": "Carangidae"
+          },
+          {
+            "usageKey": "2391239",
+            "rank": "GENUS",
+            "name": "Megalaspis"
+          },
+          {
+            "usageKey": "5210642",
+            "rank": "SPECIES",
+            "name": "Megalaspis cordyla"
+          }
+        ],
+        "alternatives": [],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; singleMatch=5",
+        "manualReviewRequired": false,
+        "manualReviewReasons": []
+      },
+      {
+        "sourceScientificNameVerbatim": "Parastromateus niger",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "2391217",
+        "matchedUsageName": "Parastromateus niger (Bloch, 1795)",
+        "matchedCanonicalName": "Parastromateus niger",
+        "matchedAuthorship": "(Bloch, 1795)",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "587",
+            "rank": "ORDER",
+            "name": "Perciformes"
+          },
+          {
+            "usageKey": "4253",
+            "rank": "FAMILY",
+            "name": "Carangidae"
+          },
+          {
+            "usageKey": "2391216",
+            "rank": "GENUS",
+            "name": "Parastromateus"
+          },
+          {
+            "usageKey": "2391217",
+            "rank": "SPECIES",
+            "name": "Parastromateus niger"
+          }
+        ],
+        "alternatives": [],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; singleMatch=5",
+        "manualReviewRequired": false,
+        "manualReviewReasons": []
+      },
+      {
+        "sourceScientificNameVerbatim": "Scomberoides commersonnianus",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "2390863",
+        "matchedUsageName": "Scomberoides commersonnianus Lacepède, 1801",
+        "matchedCanonicalName": "Scomberoides commersonnianus",
+        "matchedAuthorship": "Lacepède, 1801",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "587",
+            "rank": "ORDER",
+            "name": "Perciformes"
+          },
+          {
+            "usageKey": "4253",
+            "rank": "FAMILY",
+            "name": "Carangidae"
+          },
+          {
+            "usageKey": "2390854",
+            "rank": "GENUS",
+            "name": "Scomberoides"
+          },
+          {
+            "usageKey": "2390863",
+            "rank": "SPECIES",
+            "name": "Scomberoides commersonnianus"
+          }
+        ],
+        "alternatives": [],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; singleMatch=5",
+        "manualReviewRequired": false,
+        "manualReviewReasons": []
+      },
+      {
+        "sourceScientificNameVerbatim": "Scomberoides lysan",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "2390871",
+        "matchedUsageName": "Scomberoides lysan (Forsskål, 1775)",
+        "matchedCanonicalName": "Scomberoides lysan",
+        "matchedAuthorship": "(Forsskål, 1775)",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "587",
+            "rank": "ORDER",
+            "name": "Perciformes"
+          },
+          {
+            "usageKey": "4253",
+            "rank": "FAMILY",
+            "name": "Carangidae"
+          },
+          {
+            "usageKey": "2390854",
+            "rank": "GENUS",
+            "name": "Scomberoides"
+          },
+          {
+            "usageKey": "2390871",
+            "rank": "SPECIES",
+            "name": "Scomberoides lysan"
+          }
+        ],
+        "alternatives": [],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; singleMatch=5",
+        "manualReviewRequired": false,
+        "manualReviewReasons": []
+      },
+      {
+        "sourceScientificNameVerbatim": "Scomberoides tala",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "2390860",
+        "matchedUsageName": "Scomberoides tala (Cuvier, 1832)",
+        "matchedCanonicalName": "Scomberoides tala",
+        "matchedAuthorship": "(Cuvier, 1832)",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "587",
+            "rank": "ORDER",
+            "name": "Perciformes"
+          },
+          {
+            "usageKey": "4253",
+            "rank": "FAMILY",
+            "name": "Carangidae"
+          },
+          {
+            "usageKey": "2390854",
+            "rank": "GENUS",
+            "name": "Scomberoides"
+          },
+          {
+            "usageKey": "2390860",
+            "rank": "SPECIES",
+            "name": "Scomberoides tala"
+          }
+        ],
+        "alternatives": [],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; singleMatch=5",
+        "manualReviewRequired": false,
+        "manualReviewReasons": []
+      },
+      {
+        "sourceScientificNameVerbatim": "Selar crumenophthalmus",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "2391007",
+        "matchedUsageName": "Selar crumenophthalmus (Bloch, 1793)",
+        "matchedCanonicalName": "Selar crumenophthalmus",
+        "matchedAuthorship": "(Bloch, 1793)",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "587",
+            "rank": "ORDER",
+            "name": "Perciformes"
+          },
+          {
+            "usageKey": "4253",
+            "rank": "FAMILY",
+            "name": "Carangidae"
+          },
+          {
+            "usageKey": "2391002",
+            "rank": "GENUS",
+            "name": "Selar"
+          },
+          {
+            "usageKey": "2391007",
+            "rank": "SPECIES",
+            "name": "Selar crumenophthalmus"
+          }
+        ],
+        "alternatives": [],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; singleMatch=5",
+        "manualReviewRequired": false,
+        "manualReviewReasons": []
+      },
+      {
+        "sourceScientificNameVerbatim": "Selaroides leptolepis",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "2391226",
+        "matchedUsageName": "Selaroides leptolepis (Cuvier, 1833)",
+        "matchedCanonicalName": "Selaroides leptolepis",
+        "matchedAuthorship": "(Cuvier, 1833)",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "587",
+            "rank": "ORDER",
+            "name": "Perciformes"
+          },
+          {
+            "usageKey": "4253",
+            "rank": "FAMILY",
+            "name": "Carangidae"
+          },
+          {
+            "usageKey": "2391225",
+            "rank": "GENUS",
+            "name": "Selaroides"
+          },
+          {
+            "usageKey": "2391226",
+            "rank": "SPECIES",
+            "name": "Selaroides leptolepis"
+          }
+        ],
+        "alternatives": [],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; singleMatch=5",
+        "manualReviewRequired": false,
+        "manualReviewReasons": []
+      },
+      {
+        "sourceScientificNameVerbatim": "Chirocentrus dorab",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "2413687",
+        "matchedUsageName": "Chirocentrus dorab (Forsskål, 1775)",
+        "matchedCanonicalName": "Chirocentrus dorab",
+        "matchedAuthorship": "(Forsskål, 1775)",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "538",
+            "rank": "ORDER",
+            "name": "Clupeiformes"
+          },
+          {
+            "usageKey": "3381",
+            "rank": "FAMILY",
+            "name": "Chirocentridae"
+          },
+          {
+            "usageKey": "2413686",
+            "rank": "GENUS",
+            "name": "Chirocentrus"
+          },
+          {
+            "usageKey": "2413687",
+            "rank": "SPECIES",
+            "name": "Chirocentrus dorab"
+          }
+        ],
+        "alternatives": [],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; singleMatch=5",
+        "manualReviewRequired": false,
+        "manualReviewReasons": []
+      },
+      {
+        "sourceScientificNameVerbatim": "Sardinella fimbriata",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "2387341",
+        "matchedUsageName": "Sardinella fimbriata (Valenciennes, 1847)",
+        "matchedCanonicalName": "Sardinella fimbriata",
+        "matchedAuthorship": "(Valenciennes, 1847)",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "538",
+            "rank": "ORDER",
+            "name": "Clupeiformes"
+          },
+          {
+            "usageKey": "7332",
+            "rank": "FAMILY",
+            "name": "Clupeidae"
+          },
+          {
+            "usageKey": "2387162",
+            "rank": "GENUS",
+            "name": "Sardinella"
+          },
+          {
+            "usageKey": "2387341",
+            "rank": "SPECIES",
+            "name": "Sardinella fimbriata"
+          }
+        ],
+        "alternatives": [],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; singleMatch=5",
+        "manualReviewRequired": false,
+        "manualReviewReasons": []
+      },
+      {
+        "sourceScientificNameVerbatim": "Sardinella gibbosa",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "2412787",
+        "matchedUsageName": "Sardinella gibbosa (Bleeker, 1849)",
+        "matchedCanonicalName": "Sardinella gibbosa",
+        "matchedAuthorship": "(Bleeker, 1849)",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "538",
+            "rank": "ORDER",
+            "name": "Clupeiformes"
+          },
+          {
+            "usageKey": "7332",
+            "rank": "FAMILY",
+            "name": "Clupeidae"
+          },
+          {
+            "usageKey": "2387162",
+            "rank": "GENUS",
+            "name": "Sardinella"
+          },
+          {
+            "usageKey": "2412787",
+            "rank": "SPECIES",
+            "name": "Sardinella gibbosa"
+          }
+        ],
+        "alternatives": [],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; singleMatch=5",
+        "manualReviewRequired": false,
+        "manualReviewReasons": []
+      },
+      {
+        "sourceScientificNameVerbatim": "Cynoglossus abbreviatus",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "2409656",
+        "matchedUsageName": "Cynoglossus abbreviatus (Gray, 1834)",
+        "matchedCanonicalName": "Cynoglossus abbreviatus",
+        "matchedAuthorship": "(Gray, 1834)",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "588",
+            "rank": "ORDER",
+            "name": "Pleuronectiformes"
+          },
+          {
+            "usageKey": "8610",
+            "rank": "FAMILY",
+            "name": "Cynoglossidae"
+          },
+          {
+            "usageKey": "2409563",
+            "rank": "GENUS",
+            "name": "Cynoglossus"
+          },
+          {
+            "usageKey": "2409656",
+            "rank": "SPECIES",
+            "name": "Cynoglossus abbreviatus"
+          }
+        ],
+        "alternatives": [],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; singleMatch=5",
+        "manualReviewRequired": false,
+        "manualReviewReasons": []
+      },
+      {
+        "sourceScientificNameVerbatim": "Cynoglossus interruptus",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "2409570",
+        "matchedUsageName": "Cynoglossus interruptus Günther, 1880",
+        "matchedCanonicalName": "Cynoglossus interruptus",
+        "matchedAuthorship": "Günther, 1880",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "588",
+            "rank": "ORDER",
+            "name": "Pleuronectiformes"
+          },
+          {
+            "usageKey": "8610",
+            "rank": "FAMILY",
+            "name": "Cynoglossidae"
+          },
+          {
+            "usageKey": "2409563",
+            "rank": "GENUS",
+            "name": "Cynoglossus"
+          },
+          {
+            "usageKey": "2409570",
+            "rank": "SPECIES",
+            "name": "Cynoglossus interruptus"
+          }
+        ],
+        "alternatives": [],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; singleMatch=5",
+        "manualReviewRequired": false,
+        "manualReviewReasons": []
+      },
+      {
+        "sourceScientificNameVerbatim": "Dussumieria acuta",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "2412967",
+        "matchedUsageName": "Dussumieria acuta Valenciennes, 1847",
+        "matchedCanonicalName": "Dussumieria acuta",
+        "matchedAuthorship": "Valenciennes, 1847",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "538",
+            "rank": "ORDER",
+            "name": "Clupeiformes"
+          },
+          {
+            "usageKey": "4964272",
+            "rank": "FAMILY",
+            "name": "Dussumieriidae"
+          },
+          {
+            "usageKey": "2412965",
+            "rank": "GENUS",
+            "name": "Dussumieria"
+          },
+          {
+            "usageKey": "2412967",
+            "rank": "SPECIES",
+            "name": "Dussumieria acuta"
+          }
+        ],
+        "alternatives": [],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; singleMatch=5",
+        "manualReviewRequired": false,
+        "manualReviewReasons": []
+      },
+      {
+        "sourceScientificNameVerbatim": "Stolephorus indicus",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "2414203",
+        "matchedUsageName": "Stolephorus indicus (van Hasselt, 1823)",
+        "matchedCanonicalName": "Stolephorus indicus",
+        "matchedAuthorship": "(van Hasselt, 1823)",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "538",
+            "rank": "ORDER",
+            "name": "Clupeiformes"
+          },
+          {
+            "usageKey": "7334",
+            "rank": "FAMILY",
+            "name": "Engraulidae"
+          },
+          {
+            "usageKey": "2401116",
+            "rank": "GENUS",
+            "name": "Stolephorus"
+          },
+          {
+            "usageKey": "2414203",
+            "rank": "SPECIES",
+            "name": "Stolephorus indicus"
+          }
+        ],
+        "alternatives": [],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; singleMatch=5",
+        "manualReviewRequired": false,
+        "manualReviewReasons": []
+      },
+      {
+        "sourceScientificNameVerbatim": "Gerres erythrourus",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "2369375",
+        "matchedUsageName": "Gerres erythrourus (Bloch, 1791)",
+        "matchedCanonicalName": "Gerres erythrourus",
+        "matchedAuthorship": "(Bloch, 1791)",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "587",
+            "rank": "ORDER",
+            "name": "Perciformes"
+          },
+          {
+            "usageKey": "4273",
+            "rank": "FAMILY",
+            "name": "Gerreidae"
+          },
+          {
+            "usageKey": "2369369",
+            "rank": "GENUS",
+            "name": "Gerres"
+          },
+          {
+            "usageKey": "2369375",
+            "rank": "SPECIES",
+            "name": "Gerres erythrourus"
+          }
+        ],
+        "alternatives": [],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; singleMatch=5",
+        "manualReviewRequired": false,
+        "manualReviewReasons": []
+      },
+      {
+        "sourceScientificNameVerbatim": "Gerres filamentosus",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "2369436",
+        "matchedUsageName": "Gerres filamentosus Cuvier, 1829",
+        "matchedCanonicalName": "Gerres filamentosus",
+        "matchedAuthorship": "Cuvier, 1829",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "587",
+            "rank": "ORDER",
+            "name": "Perciformes"
+          },
+          {
+            "usageKey": "4273",
+            "rank": "FAMILY",
+            "name": "Gerreidae"
+          },
+          {
+            "usageKey": "2369369",
+            "rank": "GENUS",
+            "name": "Gerres"
+          },
+          {
+            "usageKey": "2369436",
+            "rank": "SPECIES",
+            "name": "Gerres filamentosus"
+          }
+        ],
+        "alternatives": [],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; singleMatch=5",
+        "manualReviewRequired": false,
+        "manualReviewReasons": []
+      },
+      {
+        "sourceScientificNameVerbatim": "Gerres oyena",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "2369396",
+        "matchedUsageName": "Gerres oyena (Forsskål, 1775)",
+        "matchedCanonicalName": "Gerres oyena",
+        "matchedAuthorship": "(Forsskål, 1775)",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "587",
+            "rank": "ORDER",
+            "name": "Perciformes"
+          },
+          {
+            "usageKey": "4273",
+            "rank": "FAMILY",
+            "name": "Gerreidae"
+          },
+          {
+            "usageKey": "2369369",
+            "rank": "GENUS",
+            "name": "Gerres"
+          },
+          {
+            "usageKey": "2369396",
+            "rank": "SPECIES",
+            "name": "Gerres oyena"
+          }
+        ],
+        "alternatives": [],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; singleMatch=5",
+        "manualReviewRequired": false,
+        "manualReviewReasons": []
+      },
+      {
+        "sourceScientificNameVerbatim": "Aurigequula fasciata",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "8031079",
+        "matchedUsageName": "Aurigequula fasciata (Lacepède, 1803)",
+        "matchedCanonicalName": "Aurigequula fasciata",
+        "matchedAuthorship": "(Lacepède, 1803)",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "587",
+            "rank": "ORDER",
+            "name": "Perciformes"
+          },
+          {
+            "usageKey": "4283",
+            "rank": "FAMILY",
+            "name": "Leiognathidae"
+          },
+          {
+            "usageKey": "4823770",
+            "rank": "GENUS",
+            "name": "Aurigequula"
+          },
+          {
+            "usageKey": "8031079",
+            "rank": "SPECIES",
+            "name": "Aurigequula fasciata"
+          }
+        ],
+        "alternatives": [],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; singleMatch=5",
+        "manualReviewRequired": false,
+        "manualReviewReasons": []
+      },
+      {
+        "sourceScientificNameVerbatim": "Equulites elongatus",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "2396355",
+        "matchedUsageName": "Equulites elongatus (Günther, 1874)",
+        "matchedCanonicalName": "Equulites elongatus",
+        "matchedAuthorship": "(Günther, 1874)",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "587",
+            "rank": "ORDER",
+            "name": "Perciformes"
+          },
+          {
+            "usageKey": "4283",
+            "rank": "FAMILY",
+            "name": "Leiognathidae"
+          },
+          {
+            "usageKey": "2396324",
+            "rank": "GENUS",
+            "name": "Equulites"
+          },
+          {
+            "usageKey": "2396355",
+            "rank": "SPECIES",
+            "name": "Equulites elongatus"
+          }
+        ],
+        "alternatives": [],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; singleMatch=5",
+        "manualReviewRequired": false,
+        "manualReviewReasons": []
+      },
+      {
+        "sourceScientificNameVerbatim": "Eubleekeria splendens",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "2396304",
+        "matchedUsageName": "Eubleekeria splendens (Cuvier, 1829)",
+        "matchedCanonicalName": "Eubleekeria splendens",
+        "matchedAuthorship": "(Cuvier, 1829)",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "587",
+            "rank": "ORDER",
+            "name": "Perciformes"
+          },
+          {
+            "usageKey": "4283",
+            "rank": "FAMILY",
+            "name": "Leiognathidae"
+          },
+          {
+            "usageKey": "2396301",
+            "rank": "GENUS",
+            "name": "Eubleekeria"
+          },
+          {
+            "usageKey": "2396304",
+            "rank": "SPECIES",
+            "name": "Eubleekeria splendens"
+          }
+        ],
+        "alternatives": [],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; singleMatch=5",
+        "manualReviewRequired": false,
+        "manualReviewReasons": []
+      },
+      {
+        "sourceScientificNameVerbatim": "Gazza achlamys",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "5211394",
+        "matchedUsageName": "Gazza achlamys Jordan & Starks, 1917",
+        "matchedCanonicalName": "Gazza achlamys",
+        "matchedAuthorship": "Jordan & Starks, 1917",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "587",
+            "rank": "ORDER",
+            "name": "Perciformes"
+          },
+          {
+            "usageKey": "4283",
+            "rank": "FAMILY",
+            "name": "Leiognathidae"
+          },
+          {
+            "usageKey": "2396211",
+            "rank": "GENUS",
+            "name": "Gazza"
+          },
+          {
+            "usageKey": "5211394",
+            "rank": "SPECIES",
+            "name": "Gazza achlamys"
+          }
+        ],
+        "alternatives": [],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; singleMatch=5",
+        "manualReviewRequired": false,
+        "manualReviewReasons": []
+      },
+      {
+        "sourceScientificNameVerbatim": "Gazza minuta",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "5211384",
+        "matchedUsageName": "Gazza minuta (Bloch, 1795)",
+        "matchedCanonicalName": "Gazza minuta",
+        "matchedAuthorship": "(Bloch, 1795)",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "587",
+            "rank": "ORDER",
+            "name": "Perciformes"
+          },
+          {
+            "usageKey": "4283",
+            "rank": "FAMILY",
+            "name": "Leiognathidae"
+          },
+          {
+            "usageKey": "2396211",
+            "rank": "GENUS",
+            "name": "Gazza"
+          },
+          {
+            "usageKey": "5211384",
+            "rank": "SPECIES",
+            "name": "Gazza minuta"
+          }
+        ],
+        "alternatives": [],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; singleMatch=5",
+        "manualReviewRequired": false,
+        "manualReviewReasons": []
+      },
+      {
+        "sourceScientificNameVerbatim": "Leiognathus equula",
+        "gbifMatchType": "VARIANT",
+        "confidence": 97,
+        "matchedUsageKey": "5211415",
+        "matchedUsageName": "Leiognathus equulus (Forsskål, 1775)",
+        "matchedCanonicalName": "Leiognathus equulus",
+        "matchedAuthorship": "(Forsskål, 1775)",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "587",
+            "rank": "ORDER",
+            "name": "Perciformes"
+          },
+          {
+            "usageKey": "4283",
+            "rank": "FAMILY",
+            "name": "Leiognathidae"
+          },
+          {
+            "usageKey": "2396256",
+            "rank": "GENUS",
+            "name": "Leiognathus"
+          },
+          {
+            "usageKey": "5211415",
+            "rank": "SPECIES",
+            "name": "Leiognathus equulus"
+          }
+        ],
+        "alternatives": [],
+        "diagnosticNote": "Similarity: name=100; authorship=0; kingdom=0; rank=6; status=1; score=107; singleMatch=5",
+        "manualReviewRequired": true,
+        "manualReviewReasons": [
+          "GBIF match type is VARIANT; review the spelling/name variant."
+        ]
+      },
+      {
+        "sourceScientificNameVerbatim": "Secutor insidiator",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "2396198",
+        "matchedUsageName": "Secutor insidiator (Bloch, 1787)",
+        "matchedCanonicalName": "Secutor insidiator",
+        "matchedAuthorship": "(Bloch, 1787)",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "587",
+            "rank": "ORDER",
+            "name": "Perciformes"
+          },
+          {
+            "usageKey": "4283",
+            "rank": "FAMILY",
+            "name": "Leiognathidae"
+          },
+          {
+            "usageKey": "2396189",
+            "rank": "GENUS",
+            "name": "Secutor"
+          },
+          {
+            "usageKey": "2396198",
+            "rank": "SPECIES",
+            "name": "Secutor insidiator"
+          }
+        ],
+        "alternatives": [],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; singleMatch=5",
+        "manualReviewRequired": false,
+        "manualReviewReasons": []
+      },
+      {
+        "sourceScientificNameVerbatim": "Lethrinus lentjan",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "2374823",
+        "matchedUsageName": "Lethrinus lentjan (Lacepède, 1802)",
+        "matchedCanonicalName": "Lethrinus lentjan",
+        "matchedAuthorship": "(Lacepède, 1802)",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "587",
+            "rank": "ORDER",
+            "name": "Perciformes"
+          },
+          {
+            "usageKey": "8540",
+            "rank": "FAMILY",
+            "name": "Lethrinidae"
+          },
+          {
+            "usageKey": "2374822",
+            "rank": "GENUS",
+            "name": "Lethrinus"
+          },
+          {
+            "usageKey": "2374823",
+            "rank": "SPECIES",
+            "name": "Lethrinus lentjan"
+          }
+        ],
+        "alternatives": [],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; singleMatch=5",
+        "manualReviewRequired": false,
+        "manualReviewReasons": []
+      },
+      {
+        "sourceScientificNameVerbatim": "Lethrinus nebulosus",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "2374885",
+        "matchedUsageName": "Lethrinus nebulosus (Forsskål, 1775)",
+        "matchedCanonicalName": "Lethrinus nebulosus",
+        "matchedAuthorship": "(Forsskål, 1775)",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "587",
+            "rank": "ORDER",
+            "name": "Perciformes"
+          },
+          {
+            "usageKey": "8540",
+            "rank": "FAMILY",
+            "name": "Lethrinidae"
+          },
+          {
+            "usageKey": "2374822",
+            "rank": "GENUS",
+            "name": "Lethrinus"
+          },
+          {
+            "usageKey": "2374885",
+            "rank": "SPECIES",
+            "name": "Lethrinus nebulosus"
+          }
+        ],
+        "alternatives": [],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; singleMatch=5",
+        "manualReviewRequired": false,
+        "manualReviewReasons": []
+      },
+      {
+        "sourceScientificNameVerbatim": "Lutjanus lutjanus",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "2384741",
+        "matchedUsageName": "Lutjanus lutjanus Bloch, 1790",
+        "matchedCanonicalName": "Lutjanus lutjanus",
+        "matchedAuthorship": "Bloch, 1790",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "587",
+            "rank": "ORDER",
+            "name": "Perciformes"
+          },
+          {
+            "usageKey": "8542",
+            "rank": "FAMILY",
+            "name": "Lutjanidae"
+          },
+          {
+            "usageKey": "2356953",
+            "rank": "GENUS",
+            "name": "Lutjanus"
+          },
+          {
+            "usageKey": "2384741",
+            "rank": "SPECIES",
+            "name": "Lutjanus lutjanus"
+          }
+        ],
+        "alternatives": [],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; singleMatch=5",
+        "manualReviewRequired": false,
+        "manualReviewReasons": []
+      },
+      {
+        "sourceScientificNameVerbatim": "Lutjanus malabaricus",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "2384789",
+        "matchedUsageName": "Lutjanus malabaricus (Bloch & Schneider, 1801)",
+        "matchedCanonicalName": "Lutjanus malabaricus",
+        "matchedAuthorship": "(Bloch & Schneider, 1801)",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "587",
+            "rank": "ORDER",
+            "name": "Perciformes"
+          },
+          {
+            "usageKey": "8542",
+            "rank": "FAMILY",
+            "name": "Lutjanidae"
+          },
+          {
+            "usageKey": "2356953",
+            "rank": "GENUS",
+            "name": "Lutjanus"
+          },
+          {
+            "usageKey": "2384789",
+            "rank": "SPECIES",
+            "name": "Lutjanus malabaricus"
+          }
+        ],
+        "alternatives": [],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; singleMatch=5",
+        "manualReviewRequired": false,
+        "manualReviewReasons": []
+      },
+      {
+        "sourceScientificNameVerbatim": "Mene maculata",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "2391421",
+        "matchedUsageName": "Mene maculata (Bloch & Schneider, 1801)",
+        "matchedCanonicalName": "Mene maculata",
+        "matchedAuthorship": "(Bloch & Schneider, 1801)",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "587",
+            "rank": "ORDER",
+            "name": "Perciformes"
+          },
+          {
+            "usageKey": "4285",
+            "rank": "FAMILY",
+            "name": "Menidae"
+          },
+          {
+            "usageKey": "2391420",
+            "rank": "GENUS",
+            "name": "Mene"
+          },
+          {
+            "usageKey": "2391421",
+            "rank": "SPECIES",
+            "name": "Mene maculata"
+          }
+        ],
+        "alternatives": [
+          {
+            "alternativeUsageKey": "2391422",
+            "alternativeName": "Mene maculate (Bloch & Schneider, 1801)",
+            "alternativeCanonicalName": "Mene maculate",
+            "alternativeStatus": "SYNONYM",
+            "acceptedUsageKey": "2391421",
+            "acceptedName": "Mene maculata (Bloch & Schneider, 1801)",
+            "acceptedCanonicalName": "Mene maculata"
+          }
+        ],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; nextMatch=5",
+        "manualReviewRequired": true,
+        "manualReviewReasons": [
+          "GBIF returned alternative match candidates; verify authorship and nomenclatural identity."
+        ]
+      },
+      {
+        "sourceScientificNameVerbatim": "Aluterus monoceros",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "2406708",
+        "matchedUsageName": "Aluterus monoceros (Linnaeus, 1758)",
+        "matchedCanonicalName": "Aluterus monoceros",
+        "matchedAuthorship": "(Linnaeus, 1758)",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "772",
+            "rank": "ORDER",
+            "name": "Tetraodontiformes"
+          },
+          {
+            "usageKey": "5896",
+            "rank": "FAMILY",
+            "name": "Monacanthidae"
+          },
+          {
+            "usageKey": "2406707",
+            "rank": "GENUS",
+            "name": "Aluterus"
+          },
+          {
+            "usageKey": "2406708",
+            "rank": "SPECIES",
+            "name": "Aluterus monoceros"
+          }
+        ],
+        "alternatives": [],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; singleMatch=5",
+        "manualReviewRequired": false,
+        "manualReviewReasons": []
+      },
+      {
+        "sourceScientificNameVerbatim": "Moolgarda seheli",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "2401003",
+        "matchedUsageName": "Moolgarda seheli (Forsskål, 1775)",
+        "matchedCanonicalName": "Moolgarda seheli",
+        "matchedAuthorship": "(Forsskål, 1775)",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "SYNONYM",
+        "synonym": true,
+        "acceptedUsageCandidate": {
+          "key": "9483055",
+          "name": "Crenimugil seheli (Forsskål, 1775)",
+          "canonicalName": "Crenimugil seheli",
+          "authorship": "(Forsskål, 1775)",
+          "rank": "SPECIES"
+        },
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "1067",
+            "rank": "ORDER",
+            "name": "Mugiliformes"
+          },
+          {
+            "usageKey": "8473",
+            "rank": "FAMILY",
+            "name": "Mugilidae"
+          },
+          {
+            "usageKey": "2401006",
+            "rank": "GENUS",
+            "name": "Crenimugil"
+          },
+          {
+            "usageKey": "9483055",
+            "rank": "SPECIES",
+            "name": "Crenimugil seheli"
+          }
+        ],
+        "alternatives": [],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=0; score=116; singleMatch=5",
+        "manualReviewRequired": true,
+        "manualReviewReasons": [
+          "GBIF marks the matched usage as a synonym; review its accepted usage candidate."
+        ]
+      },
+      {
+        "sourceScientificNameVerbatim": "Mugil cephalus",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "8189568",
+        "matchedUsageName": "Mugil cephalus Linnaeus, 1758",
+        "matchedCanonicalName": "Mugil cephalus",
+        "matchedAuthorship": "Linnaeus, 1758",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "1067",
+            "rank": "ORDER",
+            "name": "Mugiliformes"
+          },
+          {
+            "usageKey": "8473",
+            "rank": "FAMILY",
+            "name": "Mugilidae"
+          },
+          {
+            "usageKey": "7822511",
+            "rank": "GENUS",
+            "name": "Mugil"
+          },
+          {
+            "usageKey": "8189568",
+            "rank": "SPECIES",
+            "name": "Mugil cephalus"
+          }
+        ],
+        "alternatives": [
+          {
+            "alternativeUsageKey": "5961127",
+            "alternativeName": "Mugil cephalas Linnaeus, 1758",
+            "alternativeCanonicalName": "Mugil cephalas",
+            "alternativeStatus": "SYNONYM",
+            "acceptedUsageKey": "8189568",
+            "acceptedName": "Mugil cephalus Linnaeus, 1758",
+            "acceptedCanonicalName": "Mugil cephalus"
+          }
+        ],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; nextMatch=5",
+        "manualReviewRequired": true,
+        "manualReviewReasons": [
+          "GBIF returned alternative match candidates; verify authorship and nomenclatural identity."
+        ]
+      },
+      {
+        "sourceScientificNameVerbatim": "Valamugil buchanani",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "2400978",
+        "matchedUsageName": "Valamugil buchanani (Bleeker, 1853)",
+        "matchedCanonicalName": "Valamugil buchanani",
+        "matchedAuthorship": "(Bleeker, 1853)",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "SYNONYM",
+        "synonym": true,
+        "acceptedUsageCandidate": {
+          "key": "9365562",
+          "name": "Crenimugil buchanani (Bleeker, 1853)",
+          "canonicalName": "Crenimugil buchanani",
+          "authorship": "(Bleeker, 1853)",
+          "rank": "SPECIES"
+        },
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "1067",
+            "rank": "ORDER",
+            "name": "Mugiliformes"
+          },
+          {
+            "usageKey": "8473",
+            "rank": "FAMILY",
+            "name": "Mugilidae"
+          },
+          {
+            "usageKey": "2401006",
+            "rank": "GENUS",
+            "name": "Crenimugil"
+          },
+          {
+            "usageKey": "9365562",
+            "rank": "SPECIES",
+            "name": "Crenimugil buchanani"
+          }
+        ],
+        "alternatives": [],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=0; score=116; singleMatch=5",
+        "manualReviewRequired": true,
+        "manualReviewReasons": [
+          "GBIF marks the matched usage as a synonym; review its accepted usage candidate."
+        ]
+      },
+      {
+        "sourceScientificNameVerbatim": "Upeneus moluccensis",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "2396768",
+        "matchedUsageName": "Upeneus moluccensis (Bleeker, 1855)",
+        "matchedCanonicalName": "Upeneus moluccensis",
+        "matchedAuthorship": "(Bleeker, 1855)",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "587",
+            "rank": "ORDER",
+            "name": "Perciformes"
+          },
+          {
+            "usageKey": "4287",
+            "rank": "FAMILY",
+            "name": "Mullidae"
+          },
+          {
+            "usageKey": "2396755",
+            "rank": "GENUS",
+            "name": "Upeneus"
+          },
+          {
+            "usageKey": "2396768",
+            "rank": "SPECIES",
+            "name": "Upeneus moluccensis"
+          }
+        ],
+        "alternatives": [],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; singleMatch=5",
+        "manualReviewRequired": false,
+        "manualReviewReasons": []
+      },
+      {
+        "sourceScientificNameVerbatim": "Upeneus sulphureus",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "2396798",
+        "matchedUsageName": "Upeneus sulphureus Cuvier, 1829",
+        "matchedCanonicalName": "Upeneus sulphureus",
+        "matchedAuthorship": "Cuvier, 1829",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "587",
+            "rank": "ORDER",
+            "name": "Perciformes"
+          },
+          {
+            "usageKey": "4287",
+            "rank": "FAMILY",
+            "name": "Mullidae"
+          },
+          {
+            "usageKey": "2396755",
+            "rank": "GENUS",
+            "name": "Upeneus"
+          },
+          {
+            "usageKey": "2396798",
+            "rank": "SPECIES",
+            "name": "Upeneus sulphureus"
+          }
+        ],
+        "alternatives": [],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; singleMatch=5",
+        "manualReviewRequired": false,
+        "manualReviewReasons": []
+      },
+      {
+        "sourceScientificNameVerbatim": "Upeneus tragula",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "2396757",
+        "matchedUsageName": "Upeneus tragula Richardson, 1846",
+        "matchedCanonicalName": "Upeneus tragula",
+        "matchedAuthorship": "Richardson, 1846",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "587",
+            "rank": "ORDER",
+            "name": "Perciformes"
+          },
+          {
+            "usageKey": "4287",
+            "rank": "FAMILY",
+            "name": "Mullidae"
+          },
+          {
+            "usageKey": "2396755",
+            "rank": "GENUS",
+            "name": "Upeneus"
+          },
+          {
+            "usageKey": "2396757",
+            "rank": "SPECIES",
+            "name": "Upeneus tragula"
+          }
+        ],
+        "alternatives": [],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; singleMatch=5",
+        "manualReviewRequired": false,
+        "manualReviewReasons": []
+      },
+      {
+        "sourceScientificNameVerbatim": "Upeneus vittatus",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "2396762",
+        "matchedUsageName": "Upeneus vittatus (Forsskål, 1775)",
+        "matchedCanonicalName": "Upeneus vittatus",
+        "matchedAuthorship": "(Forsskål, 1775)",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "587",
+            "rank": "ORDER",
+            "name": "Perciformes"
+          },
+          {
+            "usageKey": "4287",
+            "rank": "FAMILY",
+            "name": "Mullidae"
+          },
+          {
+            "usageKey": "2396755",
+            "rank": "GENUS",
+            "name": "Upeneus"
+          },
+          {
+            "usageKey": "2396762",
+            "rank": "SPECIES",
+            "name": "Upeneus vittatus"
+          }
+        ],
+        "alternatives": [],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; singleMatch=5",
+        "manualReviewRequired": false,
+        "manualReviewReasons": []
+      },
+      {
+        "sourceScientificNameVerbatim": "Nemipterus bathybius",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "2380063",
+        "matchedUsageName": "Nemipterus bathybius Snyder, 1911",
+        "matchedCanonicalName": "Nemipterus bathybius",
+        "matchedAuthorship": "Snyder, 1911",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "587",
+            "rank": "ORDER",
+            "name": "Perciformes"
+          },
+          {
+            "usageKey": "4288",
+            "rank": "FAMILY",
+            "name": "Nemipteridae"
+          },
+          {
+            "usageKey": "2379945",
+            "rank": "GENUS",
+            "name": "Nemipterus"
+          },
+          {
+            "usageKey": "2380063",
+            "rank": "SPECIES",
+            "name": "Nemipterus bathybius"
+          }
+        ],
+        "alternatives": [],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; singleMatch=5",
+        "manualReviewRequired": false,
+        "manualReviewReasons": []
+      },
+      {
+        "sourceScientificNameVerbatim": "Nemipterus hexodon",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "2379975",
+        "matchedUsageName": "Nemipterus hexodon (Quoy & Gaimard, 1824)",
+        "matchedCanonicalName": "Nemipterus hexodon",
+        "matchedAuthorship": "(Quoy & Gaimard, 1824)",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "587",
+            "rank": "ORDER",
+            "name": "Perciformes"
+          },
+          {
+            "usageKey": "4288",
+            "rank": "FAMILY",
+            "name": "Nemipteridae"
+          },
+          {
+            "usageKey": "2379945",
+            "rank": "GENUS",
+            "name": "Nemipterus"
+          },
+          {
+            "usageKey": "2379975",
+            "rank": "SPECIES",
+            "name": "Nemipterus hexodon"
+          }
+        ],
+        "alternatives": [],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; singleMatch=5",
+        "manualReviewRequired": false,
+        "manualReviewReasons": []
+      },
+      {
+        "sourceScientificNameVerbatim": "Nemipterus marginatus",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "2379946",
+        "matchedUsageName": "Nemipterus marginatus (Valenciennes, 1830)",
+        "matchedCanonicalName": "Nemipterus marginatus",
+        "matchedAuthorship": "(Valenciennes, 1830)",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "587",
+            "rank": "ORDER",
+            "name": "Perciformes"
+          },
+          {
+            "usageKey": "4288",
+            "rank": "FAMILY",
+            "name": "Nemipteridae"
+          },
+          {
+            "usageKey": "2379945",
+            "rank": "GENUS",
+            "name": "Nemipterus"
+          },
+          {
+            "usageKey": "2379946",
+            "rank": "SPECIES",
+            "name": "Nemipterus marginatus"
+          }
+        ],
+        "alternatives": [],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; singleMatch=5",
+        "manualReviewRequired": false,
+        "manualReviewReasons": []
+      },
+      {
+        "sourceScientificNameVerbatim": "Nemipterus virgatus",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "2380054",
+        "matchedUsageName": "Nemipterus virgatus (Houttuyn, 1782)",
+        "matchedCanonicalName": "Nemipterus virgatus",
+        "matchedAuthorship": "(Houttuyn, 1782)",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "587",
+            "rank": "ORDER",
+            "name": "Perciformes"
+          },
+          {
+            "usageKey": "4288",
+            "rank": "FAMILY",
+            "name": "Nemipteridae"
+          },
+          {
+            "usageKey": "2379945",
+            "rank": "GENUS",
+            "name": "Nemipterus"
+          },
+          {
+            "usageKey": "2380054",
+            "rank": "SPECIES",
+            "name": "Nemipterus virgatus"
+          }
+        ],
+        "alternatives": [],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; singleMatch=5",
+        "manualReviewRequired": false,
+        "manualReviewReasons": []
+      },
+      {
+        "sourceScientificNameVerbatim": "Pentapodus setosus",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "2379924",
+        "matchedUsageName": "Pentapodus setosus (Valenciennes, 1830)",
+        "matchedCanonicalName": "Pentapodus setosus",
+        "matchedAuthorship": "(Valenciennes, 1830)",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "587",
+            "rank": "ORDER",
+            "name": "Perciformes"
+          },
+          {
+            "usageKey": "4288",
+            "rank": "FAMILY",
+            "name": "Nemipteridae"
+          },
+          {
+            "usageKey": "2375003",
+            "rank": "GENUS",
+            "name": "Pentapodus"
+          },
+          {
+            "usageKey": "2379924",
+            "rank": "SPECIES",
+            "name": "Pentapodus setosus"
+          }
+        ],
+        "alternatives": [],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; singleMatch=5",
+        "manualReviewRequired": false,
+        "manualReviewReasons": []
+      },
+      {
+        "sourceScientificNameVerbatim": "Scolopsis taenioptera",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "2380080",
+        "matchedUsageName": "Scolopsis taenioptera (Cuvier, 1830)",
+        "matchedCanonicalName": "Scolopsis taenioptera",
+        "matchedAuthorship": "(Cuvier, 1830)",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "587",
+            "rank": "ORDER",
+            "name": "Perciformes"
+          },
+          {
+            "usageKey": "4288",
+            "rank": "FAMILY",
+            "name": "Nemipteridae"
+          },
+          {
+            "usageKey": "2369316",
+            "rank": "GENUS",
+            "name": "Scolopsis"
+          },
+          {
+            "usageKey": "2380080",
+            "rank": "SPECIES",
+            "name": "Scolopsis taenioptera"
+          }
+        ],
+        "alternatives": [],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; singleMatch=5",
+        "manualReviewRequired": false,
+        "manualReviewReasons": []
+      },
+      {
+        "sourceScientificNameVerbatim": "Pseudorhombus arsius",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "2408813",
+        "matchedUsageName": "Pseudorhombus arsius (Hamilton, 1822)",
+        "matchedCanonicalName": "Pseudorhombus arsius",
+        "matchedAuthorship": "(Hamilton, 1822)",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "588",
+            "rank": "ORDER",
+            "name": "Pleuronectiformes"
+          },
+          {
+            "usageKey": "5082",
+            "rank": "FAMILY",
+            "name": "Paralichthyidae"
+          },
+          {
+            "usageKey": "2408403",
+            "rank": "GENUS",
+            "name": "Pseudorhombus"
+          },
+          {
+            "usageKey": "2408813",
+            "rank": "SPECIES",
+            "name": "Pseudorhombus arsius"
+          }
+        ],
+        "alternatives": [],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; singleMatch=5",
+        "manualReviewRequired": false,
+        "manualReviewReasons": []
+      },
+      {
+        "sourceScientificNameVerbatim": "Pseudorhombus cinnamoneus",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "2408827",
+        "matchedUsageName": "Pseudorhombus cinnamoneus (Temminck & Schlegel, 1846)",
+        "matchedCanonicalName": "Pseudorhombus cinnamoneus",
+        "matchedAuthorship": "(Temminck & Schlegel, 1846)",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "588",
+            "rank": "ORDER",
+            "name": "Pleuronectiformes"
+          },
+          {
+            "usageKey": "5082",
+            "rank": "FAMILY",
+            "name": "Paralichthyidae"
+          },
+          {
+            "usageKey": "2408403",
+            "rank": "GENUS",
+            "name": "Pseudorhombus"
+          },
+          {
+            "usageKey": "2408827",
+            "rank": "SPECIES",
+            "name": "Pseudorhombus cinnamoneus"
+          }
+        ],
+        "alternatives": [],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; singleMatch=5",
+        "manualReviewRequired": false,
+        "manualReviewReasons": []
+      },
+      {
+        "sourceScientificNameVerbatim": "Platycephalus indicus",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "5201390",
+        "matchedUsageName": "Platycephalus indicus (Linnaeus, 1758)",
+        "matchedCanonicalName": "Platycephalus indicus",
+        "matchedAuthorship": "(Linnaeus, 1758)",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "590",
+            "rank": "ORDER",
+            "name": "Scorpaeniformes"
+          },
+          {
+            "usageKey": "5101",
+            "rank": "FAMILY",
+            "name": "Platycephalidae"
+          },
+          {
+            "usageKey": "2335846",
+            "rank": "GENUS",
+            "name": "Platycephalus"
+          },
+          {
+            "usageKey": "5201390",
+            "rank": "SPECIES",
+            "name": "Platycephalus indicus"
+          }
+        ],
+        "alternatives": [],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; singleMatch=5",
+        "manualReviewRequired": false,
+        "manualReviewReasons": []
+      },
+      {
+        "sourceScientificNameVerbatim": "Plotosus lineatus",
+        "gbifMatchType": "EXACT",
+        "confidence": 98,
+        "matchedUsageKey": "7965247",
+        "matchedUsageName": "Plotosus lineatus (Thunberg, 1787)",
+        "matchedCanonicalName": "Plotosus lineatus",
+        "matchedAuthorship": "(Thunberg, 1787)",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "708",
+            "rank": "ORDER",
+            "name": "Siluriformes"
+          },
+          {
+            "usageKey": "5164",
+            "rank": "FAMILY",
+            "name": "Plotosidae"
+          },
+          {
+            "usageKey": "2341900",
+            "rank": "GENUS",
+            "name": "Plotosus"
+          },
+          {
+            "usageKey": "7965247",
+            "rank": "SPECIES",
+            "name": "Plotosus lineatus"
+          }
+        ],
+        "alternatives": [
+          {
+            "alternativeUsageKey": "2341901",
+            "alternativeName": "Plotosus lineatus Valenciennes, 1840",
+            "alternativeCanonicalName": "Plotosus lineatus",
+            "alternativeStatus": "SYNONYM",
+            "acceptedUsageKey": "7965247",
+            "acceptedName": "Plotosus lineatus (Thunberg, 1787)",
+            "acceptedCanonicalName": "Plotosus lineatus"
+          }
+        ],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; nextMatch=0",
+        "manualReviewRequired": true,
+        "manualReviewReasons": [
+          "GBIF returned alternative match candidates; verify authorship and nomenclatural identity."
+        ]
+      },
+      {
+        "sourceScientificNameVerbatim": "Eleutheronema tetradactylum",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "2393382",
+        "matchedUsageName": "Eleutheronema tetradactylum (Shaw, 1804)",
+        "matchedCanonicalName": "Eleutheronema tetradactylum",
+        "matchedAuthorship": "(Shaw, 1804)",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "587",
+            "rank": "ORDER",
+            "name": "Perciformes"
+          },
+          {
+            "usageKey": "8592",
+            "rank": "FAMILY",
+            "name": "Polynemidae"
+          },
+          {
+            "usageKey": "2393379",
+            "rank": "GENUS",
+            "name": "Eleutheronema"
+          },
+          {
+            "usageKey": "2393382",
+            "rank": "SPECIES",
+            "name": "Eleutheronema tetradactylum"
+          }
+        ],
+        "alternatives": [],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; singleMatch=5",
+        "manualReviewRequired": false,
+        "manualReviewReasons": []
+      },
+      {
+        "sourceScientificNameVerbatim": "Priacanthus hamrur",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "2375011",
+        "matchedUsageName": "Priacanthus hamrur (Forsskål, 1775)",
+        "matchedCanonicalName": "Priacanthus hamrur",
+        "matchedAuthorship": "(Forsskål, 1775)",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "587",
+            "rank": "ORDER",
+            "name": "Perciformes"
+          },
+          {
+            "usageKey": "8593",
+            "rank": "FAMILY",
+            "name": "Priacanthidae"
+          },
+          {
+            "usageKey": "2375006",
+            "rank": "GENUS",
+            "name": "Priacanthus"
+          },
+          {
+            "usageKey": "2375011",
+            "rank": "SPECIES",
+            "name": "Priacanthus hamrur"
+          }
+        ],
+        "alternatives": [],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; singleMatch=5",
+        "manualReviewRequired": false,
+        "manualReviewReasons": []
+      },
+      {
+        "sourceScientificNameVerbatim": "Priacanthus macracanthus",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "2375008",
+        "matchedUsageName": "Priacanthus macracanthus Cuvier, 1829",
+        "matchedCanonicalName": "Priacanthus macracanthus",
+        "matchedAuthorship": "Cuvier, 1829",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "587",
+            "rank": "ORDER",
+            "name": "Perciformes"
+          },
+          {
+            "usageKey": "8593",
+            "rank": "FAMILY",
+            "name": "Priacanthidae"
+          },
+          {
+            "usageKey": "2375006",
+            "rank": "GENUS",
+            "name": "Priacanthus"
+          },
+          {
+            "usageKey": "2375008",
+            "rank": "SPECIES",
+            "name": "Priacanthus macracanthus"
+          }
+        ],
+        "alternatives": [],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; singleMatch=5",
+        "manualReviewRequired": false,
+        "manualReviewReasons": []
+      },
+      {
+        "sourceScientificNameVerbatim": "Priacanthus tayenus",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "2375019",
+        "matchedUsageName": "Priacanthus tayenus Richardson, 1846",
+        "matchedCanonicalName": "Priacanthus tayenus",
+        "matchedAuthorship": "Richardson, 1846",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "587",
+            "rank": "ORDER",
+            "name": "Perciformes"
+          },
+          {
+            "usageKey": "8593",
+            "rank": "FAMILY",
+            "name": "Priacanthidae"
+          },
+          {
+            "usageKey": "2375006",
+            "rank": "GENUS",
+            "name": "Priacanthus"
+          },
+          {
+            "usageKey": "2375019",
+            "rank": "SPECIES",
+            "name": "Priacanthus tayenus"
+          }
+        ],
+        "alternatives": [],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; singleMatch=5",
+        "manualReviewRequired": false,
+        "manualReviewReasons": []
+      },
+      {
+        "sourceScientificNameVerbatim": "Psettodes erumei",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "2409818",
+        "matchedUsageName": "Psettodes erumei (Bloch & Schneider, 1801)",
+        "matchedCanonicalName": "Psettodes erumei",
+        "matchedAuthorship": "(Bloch & Schneider, 1801)",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "588",
+            "rank": "ORDER",
+            "name": "Pleuronectiformes"
+          },
+          {
+            "usageKey": "5083",
+            "rank": "FAMILY",
+            "name": "Psettodidae"
+          },
+          {
+            "usageKey": "2409815",
+            "rank": "GENUS",
+            "name": "Psettodes"
+          },
+          {
+            "usageKey": "2409818",
+            "rank": "SPECIES",
+            "name": "Psettodes erumei"
+          }
+        ],
+        "alternatives": [],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; singleMatch=5",
+        "manualReviewRequired": false,
+        "manualReviewReasons": []
+      },
+      {
+        "sourceScientificNameVerbatim": "Scatophagus argus",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "2394736",
+        "matchedUsageName": "Scatophagus argus (Linnaeus, 1766)",
+        "matchedCanonicalName": "Scatophagus argus",
+        "matchedAuthorship": "(Linnaeus, 1766)",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "587",
+            "rank": "ORDER",
+            "name": "Perciformes"
+          },
+          {
+            "usageKey": "4505",
+            "rank": "FAMILY",
+            "name": "Scatophagidae"
+          },
+          {
+            "usageKey": "2394730",
+            "rank": "GENUS",
+            "name": "Scatophagus"
+          },
+          {
+            "usageKey": "2394736",
+            "rank": "SPECIES",
+            "name": "Scatophagus argus"
+          }
+        ],
+        "alternatives": [],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; singleMatch=5",
+        "manualReviewRequired": false,
+        "manualReviewReasons": []
+      },
+      {
+        "sourceScientificNameVerbatim": "Rastrelliger brachysoma",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "2374336",
+        "matchedUsageName": "Rastrelliger brachysoma (Bleeker, 1851)",
+        "matchedCanonicalName": "Rastrelliger brachysoma",
+        "matchedAuthorship": "(Bleeker, 1851)",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "587",
+            "rank": "ORDER",
+            "name": "Perciformes"
+          },
+          {
+            "usageKey": "8596",
+            "rank": "FAMILY",
+            "name": "Scombridae"
+          },
+          {
+            "usageKey": "2374316",
+            "rank": "GENUS",
+            "name": "Rastrelliger"
+          },
+          {
+            "usageKey": "2374336",
+            "rank": "SPECIES",
+            "name": "Rastrelliger brachysoma"
+          }
+        ],
+        "alternatives": [],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; singleMatch=5",
+        "manualReviewRequired": false,
+        "manualReviewReasons": []
+      },
+      {
+        "sourceScientificNameVerbatim": "Rastrelliger faughni",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "2374337",
+        "matchedUsageName": "Rastrelliger faughni Matsui, 1967",
+        "matchedCanonicalName": "Rastrelliger faughni",
+        "matchedAuthorship": "Matsui, 1967",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "587",
+            "rank": "ORDER",
+            "name": "Perciformes"
+          },
+          {
+            "usageKey": "8596",
+            "rank": "FAMILY",
+            "name": "Scombridae"
+          },
+          {
+            "usageKey": "2374316",
+            "rank": "GENUS",
+            "name": "Rastrelliger"
+          },
+          {
+            "usageKey": "2374337",
+            "rank": "SPECIES",
+            "name": "Rastrelliger faughni"
+          }
+        ],
+        "alternatives": [],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; singleMatch=5",
+        "manualReviewRequired": false,
+        "manualReviewReasons": []
+      },
+      {
+        "sourceScientificNameVerbatim": "Rastrelliger kanagurta",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "2374317",
+        "matchedUsageName": "Rastrelliger kanagurta (Cuvier, 1816)",
+        "matchedCanonicalName": "Rastrelliger kanagurta",
+        "matchedAuthorship": "(Cuvier, 1816)",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "587",
+            "rank": "ORDER",
+            "name": "Perciformes"
+          },
+          {
+            "usageKey": "8596",
+            "rank": "FAMILY",
+            "name": "Scombridae"
+          },
+          {
+            "usageKey": "2374316",
+            "rank": "GENUS",
+            "name": "Rastrelliger"
+          },
+          {
+            "usageKey": "2374317",
+            "rank": "SPECIES",
+            "name": "Rastrelliger kanagurta"
+          }
+        ],
+        "alternatives": [],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; singleMatch=5",
+        "manualReviewRequired": false,
+        "manualReviewReasons": []
+      },
+      {
+        "sourceScientificNameVerbatim": "Scomberomorus commerson",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "2374255",
+        "matchedUsageName": "Scomberomorus commerson (Lacepède, 1800)",
+        "matchedCanonicalName": "Scomberomorus commerson",
+        "matchedAuthorship": "(Lacepède, 1800)",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "587",
+            "rank": "ORDER",
+            "name": "Perciformes"
+          },
+          {
+            "usageKey": "8596",
+            "rank": "FAMILY",
+            "name": "Scombridae"
+          },
+          {
+            "usageKey": "2374232",
+            "rank": "GENUS",
+            "name": "Scomberomorus"
+          },
+          {
+            "usageKey": "2374255",
+            "rank": "SPECIES",
+            "name": "Scomberomorus commerson"
+          }
+        ],
+        "alternatives": [
+          {
+            "alternativeUsageKey": "2374263",
+            "alternativeName": "Scomberomorus commersonii (Lacepède, 1800)",
+            "alternativeCanonicalName": "Scomberomorus commersonii",
+            "alternativeStatus": "SYNONYM",
+            "acceptedUsageKey": "2374255",
+            "acceptedName": "Scomberomorus commerson (Lacepède, 1800)",
+            "acceptedCanonicalName": "Scomberomorus commerson"
+          }
+        ],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; nextMatch=5",
+        "manualReviewRequired": true,
+        "manualReviewReasons": [
+          "GBIF returned alternative match candidates; verify authorship and nomenclatural identity."
+        ]
+      },
+      {
+        "sourceScientificNameVerbatim": "Scomberomorus guttatus",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "2374233",
+        "matchedUsageName": "Scomberomorus guttatus (Bloch & Schneider, 1801)",
+        "matchedCanonicalName": "Scomberomorus guttatus",
+        "matchedAuthorship": "(Bloch & Schneider, 1801)",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "587",
+            "rank": "ORDER",
+            "name": "Perciformes"
+          },
+          {
+            "usageKey": "8596",
+            "rank": "FAMILY",
+            "name": "Scombridae"
+          },
+          {
+            "usageKey": "2374232",
+            "rank": "GENUS",
+            "name": "Scomberomorus"
+          },
+          {
+            "usageKey": "2374233",
+            "rank": "SPECIES",
+            "name": "Scomberomorus guttatus"
+          }
+        ],
+        "alternatives": [],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; singleMatch=5",
+        "manualReviewRequired": false,
+        "manualReviewReasons": []
+      },
+      {
+        "sourceScientificNameVerbatim": "Cephalopholis argus",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "2388891",
+        "matchedUsageName": "Cephalopholis argus Schneider, 1801",
+        "matchedCanonicalName": "Cephalopholis argus",
+        "matchedAuthorship": "Schneider, 1801",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "587",
+            "rank": "ORDER",
+            "name": "Perciformes"
+          },
+          {
+            "usageKey": "8597",
+            "rank": "FAMILY",
+            "name": "Serranidae"
+          },
+          {
+            "usageKey": "2388808",
+            "rank": "GENUS",
+            "name": "Cephalopholis"
+          },
+          {
+            "usageKey": "2388891",
+            "rank": "SPECIES",
+            "name": "Cephalopholis argus"
+          }
+        ],
+        "alternatives": [],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; singleMatch=5",
+        "manualReviewRequired": false,
+        "manualReviewReasons": []
+      },
+      {
+        "sourceScientificNameVerbatim": "Cephalopholis boenak",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "2388825",
+        "matchedUsageName": "Cephalopholis boenak (Bloch, 1790)",
+        "matchedCanonicalName": "Cephalopholis boenak",
+        "matchedAuthorship": "(Bloch, 1790)",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "587",
+            "rank": "ORDER",
+            "name": "Perciformes"
+          },
+          {
+            "usageKey": "8597",
+            "rank": "FAMILY",
+            "name": "Serranidae"
+          },
+          {
+            "usageKey": "2388808",
+            "rank": "GENUS",
+            "name": "Cephalopholis"
+          },
+          {
+            "usageKey": "2388825",
+            "rank": "SPECIES",
+            "name": "Cephalopholis boenak"
+          }
+        ],
+        "alternatives": [],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; singleMatch=5",
+        "manualReviewRequired": false,
+        "manualReviewReasons": []
+      },
+      {
+        "sourceScientificNameVerbatim": "Epinephelus sexfasciatus",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "2388602",
+        "matchedUsageName": "Epinephelus sexfasciatus (Valenciennes, 1828)",
+        "matchedCanonicalName": "Epinephelus sexfasciatus",
+        "matchedAuthorship": "(Valenciennes, 1828)",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "587",
+            "rank": "ORDER",
+            "name": "Perciformes"
+          },
+          {
+            "usageKey": "8597",
+            "rank": "FAMILY",
+            "name": "Serranidae"
+          },
+          {
+            "usageKey": "2335319",
+            "rank": "GENUS",
+            "name": "Epinephelus"
+          },
+          {
+            "usageKey": "2388602",
+            "rank": "SPECIES",
+            "name": "Epinephelus sexfasciatus"
+          }
+        ],
+        "alternatives": [],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; singleMatch=5",
+        "manualReviewRequired": false,
+        "manualReviewReasons": []
+      },
+      {
+        "sourceScientificNameVerbatim": "Siganus canaliculatus",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "2390233",
+        "matchedUsageName": "Siganus canaliculatus (Park, 1797)",
+        "matchedCanonicalName": "Siganus canaliculatus",
+        "matchedAuthorship": "(Park, 1797)",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "587",
+            "rank": "ORDER",
+            "name": "Perciformes"
+          },
+          {
+            "usageKey": "5066",
+            "rank": "FAMILY",
+            "name": "Siganidae"
+          },
+          {
+            "usageKey": "2390168",
+            "rank": "GENUS",
+            "name": "Siganus"
+          },
+          {
+            "usageKey": "2390233",
+            "rank": "SPECIES",
+            "name": "Siganus canaliculatus"
+          }
+        ],
+        "alternatives": [],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; singleMatch=5",
+        "manualReviewRequired": false,
+        "manualReviewReasons": []
+      },
+      {
+        "sourceScientificNameVerbatim": "Siganus guttatus",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "2390286",
+        "matchedUsageName": "Siganus guttatus (Bloch, 1787)",
+        "matchedCanonicalName": "Siganus guttatus",
+        "matchedAuthorship": "(Bloch, 1787)",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "587",
+            "rank": "ORDER",
+            "name": "Perciformes"
+          },
+          {
+            "usageKey": "5066",
+            "rank": "FAMILY",
+            "name": "Siganidae"
+          },
+          {
+            "usageKey": "2390168",
+            "rank": "GENUS",
+            "name": "Siganus"
+          },
+          {
+            "usageKey": "2390286",
+            "rank": "SPECIES",
+            "name": "Siganus guttatus"
+          }
+        ],
+        "alternatives": [],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; singleMatch=5",
+        "manualReviewRequired": false,
+        "manualReviewReasons": []
+      },
+      {
+        "sourceScientificNameVerbatim": "Sillago aeolus",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "2391963",
+        "matchedUsageName": "Sillago aeolus Jordan & Evermann, 1902",
+        "matchedCanonicalName": "Sillago aeolus",
+        "matchedAuthorship": "Jordan & Evermann, 1902",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "587",
+            "rank": "ORDER",
+            "name": "Perciformes"
+          },
+          {
+            "usageKey": "5067",
+            "rank": "FAMILY",
+            "name": "Sillaginidae"
+          },
+          {
+            "usageKey": "8146631",
+            "rank": "GENUS",
+            "name": "Sillago"
+          },
+          {
+            "usageKey": "2391963",
+            "rank": "SPECIES",
+            "name": "Sillago aeolus"
+          }
+        ],
+        "alternatives": [],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; singleMatch=5",
+        "manualReviewRequired": false,
+        "manualReviewReasons": []
+      },
+      {
+        "sourceScientificNameVerbatim": "Sillago sihama",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "2391929",
+        "matchedUsageName": "Sillago sihama (Forsskål, 1775)",
+        "matchedCanonicalName": "Sillago sihama",
+        "matchedAuthorship": "(Forsskål, 1775)",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "587",
+            "rank": "ORDER",
+            "name": "Perciformes"
+          },
+          {
+            "usageKey": "5067",
+            "rank": "FAMILY",
+            "name": "Sillaginidae"
+          },
+          {
+            "usageKey": "8146631",
+            "rank": "GENUS",
+            "name": "Sillago"
+          },
+          {
+            "usageKey": "2391929",
+            "rank": "SPECIES",
+            "name": "Sillago sihama"
+          }
+        ],
+        "alternatives": [],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; singleMatch=5",
+        "manualReviewRequired": false,
+        "manualReviewReasons": []
+      },
+      {
+        "sourceScientificNameVerbatim": "Sphyraena barracuda",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "9784990",
+        "matchedUsageName": "Sphyraena barracuda (Edwards, 1771)",
+        "matchedCanonicalName": "Sphyraena barracuda",
+        "matchedAuthorship": "(Edwards, 1771)",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "587",
+            "rank": "ORDER",
+            "name": "Perciformes"
+          },
+          {
+            "usageKey": "5069",
+            "rank": "FAMILY",
+            "name": "Sphyraenidae"
+          },
+          {
+            "usageKey": "2369201",
+            "rank": "GENUS",
+            "name": "Sphyraena"
+          },
+          {
+            "usageKey": "9784990",
+            "rank": "SPECIES",
+            "name": "Sphyraena barracuda"
+          }
+        ],
+        "alternatives": [
+          {
+            "alternativeUsageKey": "2394281",
+            "alternativeName": "Sphyraena baracuda (Walbaum, 1792)",
+            "alternativeCanonicalName": "Sphyraena baracuda",
+            "alternativeStatus": "SYNONYM",
+            "acceptedUsageKey": "9784990",
+            "acceptedName": "Sphyraena barracuda (Edwards, 1771)",
+            "acceptedCanonicalName": "Sphyraena barracuda"
+          }
+        ],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; nextMatch=5",
+        "manualReviewRequired": true,
+        "manualReviewReasons": [
+          "GBIF returned alternative match candidates; verify authorship and nomenclatural identity."
+        ]
+      },
+      {
+        "sourceScientificNameVerbatim": "Sphyraena jello",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "2394208",
+        "matchedUsageName": "Sphyraena jello Cuvier, 1829",
+        "matchedCanonicalName": "Sphyraena jello",
+        "matchedAuthorship": "Cuvier, 1829",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "587",
+            "rank": "ORDER",
+            "name": "Perciformes"
+          },
+          {
+            "usageKey": "5069",
+            "rank": "FAMILY",
+            "name": "Sphyraenidae"
+          },
+          {
+            "usageKey": "2369201",
+            "rank": "GENUS",
+            "name": "Sphyraena"
+          },
+          {
+            "usageKey": "2394208",
+            "rank": "SPECIES",
+            "name": "Sphyraena jello"
+          }
+        ],
+        "alternatives": [],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; singleMatch=5",
+        "manualReviewRequired": false,
+        "manualReviewReasons": []
+      },
+      {
+        "sourceScientificNameVerbatim": "Sphyraena forsteri",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "2394213",
+        "matchedUsageName": "Sphyraena forsteri Cuvier, 1829",
+        "matchedCanonicalName": "Sphyraena forsteri",
+        "matchedAuthorship": "Cuvier, 1829",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "587",
+            "rank": "ORDER",
+            "name": "Perciformes"
+          },
+          {
+            "usageKey": "5069",
+            "rank": "FAMILY",
+            "name": "Sphyraenidae"
+          },
+          {
+            "usageKey": "2369201",
+            "rank": "GENUS",
+            "name": "Sphyraena"
+          },
+          {
+            "usageKey": "2394213",
+            "rank": "SPECIES",
+            "name": "Sphyraena forsteri"
+          }
+        ],
+        "alternatives": [],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; singleMatch=5",
+        "manualReviewRequired": false,
+        "manualReviewReasons": []
+      },
+      {
+        "sourceScientificNameVerbatim": "Sphyraena obtusata",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "2394249",
+        "matchedUsageName": "Sphyraena obtusata Cuvier, 1829",
+        "matchedCanonicalName": "Sphyraena obtusata",
+        "matchedAuthorship": "Cuvier, 1829",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "587",
+            "rank": "ORDER",
+            "name": "Perciformes"
+          },
+          {
+            "usageKey": "5069",
+            "rank": "FAMILY",
+            "name": "Sphyraenidae"
+          },
+          {
+            "usageKey": "2369201",
+            "rank": "GENUS",
+            "name": "Sphyraena"
+          },
+          {
+            "usageKey": "2394249",
+            "rank": "SPECIES",
+            "name": "Sphyraena obtusata"
+          }
+        ],
+        "alternatives": [],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; singleMatch=5",
+        "manualReviewRequired": false,
+        "manualReviewReasons": []
+      },
+      {
+        "sourceScientificNameVerbatim": "Pampus argenteus",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "2397682",
+        "matchedUsageName": "Pampus argenteus (Euphrasen, 1788)",
+        "matchedCanonicalName": "Pampus argenteus",
+        "matchedAuthorship": "(Euphrasen, 1788)",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "587",
+            "rank": "ORDER",
+            "name": "Perciformes"
+          },
+          {
+            "usageKey": "5070",
+            "rank": "FAMILY",
+            "name": "Stromateidae"
+          },
+          {
+            "usageKey": "2397670",
+            "rank": "GENUS",
+            "name": "Pampus"
+          },
+          {
+            "usageKey": "2397682",
+            "rank": "SPECIES",
+            "name": "Pampus argenteus"
+          }
+        ],
+        "alternatives": [],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; singleMatch=5",
+        "manualReviewRequired": false,
+        "manualReviewReasons": []
+      },
+      {
+        "sourceScientificNameVerbatim": "Saurida tumbil",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "2401145",
+        "matchedUsageName": "Saurida tumbil (Bloch, 1795)",
+        "matchedCanonicalName": "Saurida tumbil",
+        "matchedAuthorship": "(Bloch, 1795)",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "497",
+            "rank": "ORDER",
+            "name": "Aulopiformes"
+          },
+          {
+            "usageKey": "2967",
+            "rank": "FAMILY",
+            "name": "Synodontidae"
+          },
+          {
+            "usageKey": "2401132",
+            "rank": "GENUS",
+            "name": "Saurida"
+          },
+          {
+            "usageKey": "2401145",
+            "rank": "SPECIES",
+            "name": "Saurida tumbil"
+          }
+        ],
+        "alternatives": [],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; singleMatch=5",
+        "manualReviewRequired": false,
+        "manualReviewReasons": []
+      },
+      {
+        "sourceScientificNameVerbatim": "Pelates quadrilineatus",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "5208652",
+        "matchedUsageName": "Pelates quadrilineatus (Bloch, 1790)",
+        "matchedCanonicalName": "Pelates quadrilineatus",
+        "matchedAuthorship": "(Bloch, 1790)",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "587",
+            "rank": "ORDER",
+            "name": "Perciformes"
+          },
+          {
+            "usageKey": "5072",
+            "rank": "FAMILY",
+            "name": "Terapontidae"
+          },
+          {
+            "usageKey": "2374582",
+            "rank": "GENUS",
+            "name": "Pelates"
+          },
+          {
+            "usageKey": "5208652",
+            "rank": "SPECIES",
+            "name": "Pelates quadrilineatus"
+          }
+        ],
+        "alternatives": [],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; singleMatch=5",
+        "manualReviewRequired": false,
+        "manualReviewReasons": []
+      },
+      {
+        "sourceScientificNameVerbatim": "Terapon jarbua",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "2374521",
+        "matchedUsageName": "Terapon jarbua (Forsskål, 1775)",
+        "matchedCanonicalName": "Terapon jarbua",
+        "matchedAuthorship": "(Forsskål, 1775)",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "587",
+            "rank": "ORDER",
+            "name": "Perciformes"
+          },
+          {
+            "usageKey": "5072",
+            "rank": "FAMILY",
+            "name": "Terapontidae"
+          },
+          {
+            "usageKey": "2374520",
+            "rank": "GENUS",
+            "name": "Terapon"
+          },
+          {
+            "usageKey": "2374521",
+            "rank": "SPECIES",
+            "name": "Terapon jarbua"
+          }
+        ],
+        "alternatives": [],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; singleMatch=5",
+        "manualReviewRequired": false,
+        "manualReviewReasons": []
+      },
+      {
+        "sourceScientificNameVerbatim": "Terapon puta",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "2374540",
+        "matchedUsageName": "Terapon puta Cuvier, 1829",
+        "matchedCanonicalName": "Terapon puta",
+        "matchedAuthorship": "Cuvier, 1829",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "587",
+            "rank": "ORDER",
+            "name": "Perciformes"
+          },
+          {
+            "usageKey": "5072",
+            "rank": "FAMILY",
+            "name": "Terapontidae"
+          },
+          {
+            "usageKey": "2374520",
+            "rank": "GENUS",
+            "name": "Terapon"
+          },
+          {
+            "usageKey": "2374540",
+            "rank": "SPECIES",
+            "name": "Terapon puta"
+          }
+        ],
+        "alternatives": [],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; singleMatch=5",
+        "manualReviewRequired": false,
+        "manualReviewReasons": []
+      },
+      {
+        "sourceScientificNameVerbatim": "Terapon theraps",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "2374535",
+        "matchedUsageName": "Terapon theraps Cuvier, 1829",
+        "matchedCanonicalName": "Terapon theraps",
+        "matchedAuthorship": "Cuvier, 1829",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "587",
+            "rank": "ORDER",
+            "name": "Perciformes"
+          },
+          {
+            "usageKey": "5072",
+            "rank": "FAMILY",
+            "name": "Terapontidae"
+          },
+          {
+            "usageKey": "2374520",
+            "rank": "GENUS",
+            "name": "Terapon"
+          },
+          {
+            "usageKey": "2374535",
+            "rank": "SPECIES",
+            "name": "Terapon theraps"
+          }
+        ],
+        "alternatives": [],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; singleMatch=5",
+        "manualReviewRequired": false,
+        "manualReviewReasons": []
+      },
+      {
+        "sourceScientificNameVerbatim": "Trichiurus lepturus",
+        "gbifMatchType": "EXACT",
+        "confidence": 99,
+        "matchedUsageKey": "2389407",
+        "matchedUsageName": "Trichiurus lepturus Linnaeus, 1758",
+        "matchedCanonicalName": "Trichiurus lepturus",
+        "matchedAuthorship": "Linnaeus, 1758",
+        "matchedRank": "SPECIES",
+        "matchedTaxonomicStatus": "ACCEPTED",
+        "synonym": false,
+        "acceptedUsageCandidate": null,
+        "classification": [
+          {
+            "usageKey": "1",
+            "rank": "KINGDOM",
+            "name": "Animalia"
+          },
+          {
+            "usageKey": "44",
+            "rank": "PHYLUM",
+            "name": "Chordata"
+          },
+          {
+            "usageKey": "587",
+            "rank": "ORDER",
+            "name": "Perciformes"
+          },
+          {
+            "usageKey": "8600",
+            "rank": "FAMILY",
+            "name": "Trichiuridae"
+          },
+          {
+            "usageKey": "2389398",
+            "rank": "GENUS",
+            "name": "Trichiurus"
+          },
+          {
+            "usageKey": "2389407",
+            "rank": "SPECIES",
+            "name": "Trichiurus lepturus"
+          }
+        ],
+        "alternatives": [],
+        "diagnosticNote": "Similarity: name=110; authorship=0; kingdom=0; rank=6; status=1; score=117; singleMatch=5",
+        "manualReviewRequired": false,
+        "manualReviewReasons": []
+      }
+    ],
+    "interpretation": "Automated name-to-backbone crosswalk candidates only. A match does not establish Asid Gulf presence, a dated occurrence, local abundance, diet, catchability, or permission to fish. Preserve the guide spelling separately; do not treat API status as independent taxonomic validation."
+  }
 }
