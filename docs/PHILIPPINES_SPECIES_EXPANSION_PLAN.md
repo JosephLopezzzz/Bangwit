@@ -2131,3 +2131,11 @@ Reviewed the JICA report catalog, complete January 2010 Part II-B feasibility re
 Added `national-visayas-negros-ilog-hilabangan-jica-fauna-access-review-20261030.json` and one source reference (348 total). No fish names were transcribed, no taxonomy or occurrence assertions were made, no geometry was created, and no app rows were added. The report is a project-site historical lead, not a river-basin inventory or current species baseline. Its public download is not treated as permission to redistribute structured fish data.
 
 **Next:** continue source discovery for the Ilog estuary/diverted channel and Pagatban/Siaton systems. Keep estuary, fishery, aquaculture and upstream freshwater evidence distinct; retain the source-date and reuse holds.
+
+### National rollout step 260 - Pagatban River mullet study and unpublished checklist lead
+
+Reviewed the complete publisher-hosted 2012 Silliman Journal mullet study and the official university news item describing Bucol and Carumbana's unpublished 2010 Pagatban survey. The 2012 paper reports monthly Pagatban sampling in 2011 as part of a ten-taxon, fourteen-locality mullet study; its discussion distinguishes upper-midstream river evidence from taxa observed only in the downstream estuary. It is not a whole-river species inventory and contains no diet evidence. A Silliman University news item reports 61 species from the 2010 survey, but the primary report and species-by-site data were not found, so that number remains a discovery lead rather than a verified checklist or coverage count.
+
+Added `national-visayas-negros-pagatban-mullet-source-access-review-20261030.json` and two source references (350 total). The Silliman Journal copyright policy is not an open reuse license; structured public reuse remains unapproved. No species table, map geometry, diet claim, occurrence assertion or app row was added.
+
+**Next:** seek the original 2010 Pagatban report from the authors/NORSU or Silliman, then review Ilog estuary/diverted-channel and Siaton freshwater sources independently. Keep mullet morphometrics, whole-river richness, estuarine evidence and diet claims in separate evidence lanes.
