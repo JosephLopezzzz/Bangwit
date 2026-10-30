@@ -2287,3 +2287,13 @@ The proceedings contain two PID entries with the exact same stock-assessment tit
 Added `national-visayas-samar-sinp-nine-river-fish-study-abstract-crosswalk-20261030.json` and five source records (399 total). No species checklist row, occurrence, geometry, diet, safety/legal/catchability claim or public-app content was added. No source materials beyond bibliographic metadata and short research summaries were copied; publication remains unapproved.
 
 **Next:** seek the final E-241 and E-240 reports, taxon-by-river/station tables, dates, effort, vouchers/sequence accessions and reuse terms through SSU/CFARRD and UEP/NRCP. Do not send inquiries without explicit authorization. Continue the Eastern Visayas freshwater sweep; the Samar-wide project plan and these abstracts do not complete the region.
+
+### National rollout step 277 - Isabel Dupon River reconnaissance abstract review
+
+Reviewed the 2019 DLSAU-hosted congress abstract book and its Dupon River entry for Isabel, Leyte. The abstract reports 13 fish species across 11 families and four reaches—estuary, downstream, midstream and upstream—but gives no field dates, gear/effort, named stations, species list, reach-by-taxon counts or voucher identifiers. It prints “Eliotridae” as one of the most represented families; preserve that source spelling rather than silently normalizing it. Because the survey includes an estuary, its aggregate is not a freshwater-only checklist.
+
+The only reported species-level string in the abstract is “Ambacis miops,” assigned to “Centropomidae,” and reported as 53.65% of total catch. Eschmeyer's Catalog lists *Ambassis miops* as valid in Ambassidae and includes the Philippines in its broad Indo-West Pacific range; the catalog also lists *Ambassis* in Ambassidae and treats *Ambasis* as an unjustified emendation. This makes *Ambassis miops* a plausible intended spelling, but does not authenticate the survey specimen or its local identification. Preserve the abstract's string and family verbatim; do not add a corrected taxon or occurrence row. No item-specific structured-data reuse permission was found.
+
+Added `national-visayas-eastern-visayas-leyte-dupon-river-fish-abstract-review-20261030.json` and three source references (402 total). No species assertion, occurrence, geometry, diet, safety/legal/catchability claim or public-app row was added.
+
+**Next:** seek the full Dupon paper and ask its author to confirm the printed taxon string against diagnostics or vouchers, with dates, effort, reach-by-taxon results and reuse terms. Keep estuary and upstream freshwater evidence separate; continue the Eastern Visayas freshwater sweep.
