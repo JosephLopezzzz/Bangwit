@@ -1952,3 +1952,14 @@ Nine rows require manual taxonomic review: `Alectis indica`, `Leiognathus equula
 Added one API source reference (329 total). This is a name crosswalk only; it establishes no Asid Gulf occurrence, local abundance, diet, catchability, legal access or safety. No species/occurrence assertion or public-app row was added, and publication approval remains false.
 
 **Next:** review the nine flagged names against current authoritative fish taxonomies while preserving source strings, then resume the distinct Visayas freshwater, brackish and coastal source sweep by named waterbody.
+
+
+### National rollout step 240 - Western Visayas Panay freshwater acquisition leads
+
+Reviewed two strong inland-water leads for V1 (Western Visayas). The CPU repository and Silliman Journal abstracts for the Jalaur River system report July-November 2009 sampling across upper, middle and lower areas, with 51 fish overall: 14 freshwater-affinity, 36 marine/brackish-affinity and one catadromous fish (*Anguilla marmorata*); the abstract reports nine exotic fish. These are aggregate abstract claims, not a species-by-reach checklist. The repository page timed out and the Silliman PDF endpoint returned HTTP 502, so tables, station coordinates, species identities beyond the abstract example and rights were not reviewed.
+
+Also identified a high-value UP Visayas/DOST-PCAARRD project targeting freshwater fish and invertebrate diversity on Panay, with planned DNA and biodiversity reference libraries, vouchers, protocols, manuscripts and LGU outputs. Two official PCAARRD 2025 records agree on a project window of 2024-05-01 through 2026-04-30 and ONGOING status as of 2025-12-31. The planned end date has passed, but no final report or dataset was found in the records reviewed; actual completion and public availability remain unverified. Added `national-visayas-panay-freshwater-project-jalaur-access-review-20261030.json` and two source references (331 total).
+
+No site-level taxa, taxonomic crosswalk, occurrence, geometry or public-app rows were added; publication approval remains false. This advances the Panay freshwater evidence queue but does not complete Jalaur River, Panay, Guimaras or Western Visayas coverage.
+
+**Next:** retrieve the Panay reference libraries and final report from UP Visayas/PCAARRD with their site-date, taxon/barcode and voucher crosswalks, marker limitations and reuse terms; separately obtain the full Jalaur article. No inquiry was sent. Continue screening other Panay rivers/lakes and Guimaras inland waters while these access leads are pending.
