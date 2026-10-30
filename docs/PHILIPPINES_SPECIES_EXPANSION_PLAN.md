@@ -1752,3 +1752,14 @@ HERDIN's abstract for Baquiran's 2011 Lake Buhi thesis reports October and Decem
 Added four source references (301 registry references) and `national-bicol-lake-buhi-assessment-evidence-review-20261030.json`. No species, occurrence, absence, native-status, geometry, diet, legal or safety assertion and no public-app row was added. The primary NFRDI assessment tables, full Baquiran thesis and cited DENR 2015 material remain unavailable; Bicol remains incomplete.
 
 **Next:** screen Lake Danao (Polangui, Albay) and the Buhi lakelets as separate freshwater units; continue other Bicol inland/coastal coverage in parallel while seeking the primary assessment and thesis records.
+
+
+### National rollout step 222 - Lake Danao sequence crosswalk and Buhi lakelet leads
+
+Queried GBIF's occurrence API in a small rectangular window around Lake Danao, Polangui, Albay. The window returned 44 rows across three datasets: 21 INSDC sequence records, 21 iBOL/BOLD rows, and two Southern Luzon copepod specimens. Matched the 21 fish sample codes one-to-one between INSDC and iBOL; treat them as 21 sample labels, not 42 independent specimens. Three accepted fish names are sequence-linked research candidates: Anguilla marmorata (2 samples), Oreochromis niloticus (5), and Rhinogobius similis (14). The BOLD identifiers are BINs, not separate species identifications. The copepod records remain outside the fish list.
+
+The search window is approximate and is not an official waterbody boundary or exhaustive locality search. All fish rows share a single coordinate, have no coordinate uncertainty or verbatim locality, and lack a verified physical voucher repository and identification-method crosswalk. Bicol University's 2023 SIBA-LADA procurement entries establish planned or commissioned fish-inventory/genetic work but not results or a link to these accessions. A 2024 Lake Danao abstract reports local fish names and knowledge, not a taxonomic checklist. HERDIN's 2011 Manapao/Katugday abstract describes plankton and water-quality sampling with unnamed taxa, not fish species. Historical IUCN range, NFRDI sample-level non-detection, and the 2015 unidentified Danao tissue samples are kept as distinct evidence with their separate scope and dates.
+
+Added six source references (307 total) and `national-bicol-danao-lakelets-sequence-source-review-20261030.json`; cross-checked three registered sources. No species, occurrence, absence, geometry, diet/predation, legal or safety assertion or public-app row was added. No publication approval was granted. Bicol remains incomplete.
+
+**Next:** continue screening Bicol inland waterbodies as separate units, starting with lakelets and named rivers not yet covered by primary evidence. Seek completed SIBA-LADA fish/genetic tables and full lakelet theses without blocking other source work; keep estuary/coastal evidence distinct.

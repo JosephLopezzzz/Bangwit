@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-30",
+  "phaseId": "L7",
+  "regionIds": ["0500000000"],
+  "status": "danao-sequence-linked-species-candidates;lakelet-plankton-lead;waterbody-geography-held;research-only",
+  "question": "What public Bicol freshwater evidence can support candidate species and separate lakelets without treating incomplete sequences or local-name reports as a complete checklist?",
+  "sourceIds": [
+    "gbif-insdc-sequences-lake-danao-albay-records",
+    "gbif-ibol-lake-danao-barcode-records",
+    "gbif-ust-southern-luzon-calanoid-copepod-dataset",
+    "bicol-university-2023-siba-lada-procurement-record",
+    "bicol-university-2024-lake-danao-biophysical-ik-abstract",
+    "herdin-alda-2011-manapao-katugday-plankton-thesis",
+    "nfrdi-2025-lake-buhi-manapao-sinarapan-assessment-summary",
+    "iucn-2021-mistichthys-luzonensis-bicol-range-assessment",
+    "sanchez-et-al-2015-bicol-presumed-sinarapan-dna-samples"
+  ],
+  "query": {
+    "endpoint": "https://api.gbif.org/v1/occurrence/search",
+    "parameters": {
+      "country": "PH",
+      "limit": 100,
+      "geometry": "POLYGON((123.568 13.355,123.579 13.355,123.579 13.364,123.568 13.364,123.568 13.355))"
+    },
+    "queryUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&limit=100&geometry=POLYGON%28%28123.568%2013.355%2C123.579%2013.355%2C123.579%2013.364%2C123.568%2013.364%2C123.568%2013.355%29%29",
+    "resultCount": 44,
+    "datasetCounts": [
+      {"datasetKey": "040c5662-da76-4782-a48e-cdea1892d14c", "title": "International Barcode of Life project (iBOL)", "records": 21, "doi": "10.15468/inygc6", "license": "CC BY 4.0"},
+      {"datasetKey": "d8cd16ba-bb74-4420-821e-083f2bac17c2", "title": "INSDC Sequences", "records": 21, "doi": "10.15468/sbmztx", "license": "CC BY 4.0"},
+      {"datasetKey": "3833ef8b-ac61-43a8-a513-0dfe1d4a69e8", "title": "Freshwater Calanoid Copepods in Southern Luzon, Philippines", "records": 2, "doi": "10.15468/qwhdjn", "license": "CC BY 4.0"}
+    ],
+    "spatialBasis": "A small search window around the approximate Lake Danao, Polangui, Albay location, used only to retrieve leads. It is not an official lake polygon or administrative boundary.",
+    "limits": [
+      "The rectangular query finds georeferenced GBIF results only; it is not a locality-text search or exhaustive lake inventory.",
+      "All fish sequence rows share one coordinate (13.359, 123.574), have null coordinate uncertainty and null verbatim locality; the source labels are sample codes ending in Danao.",
+      "The public metadata does not expose exact stations, the taxonomic identification method or a physical voucher repository."
+    ]
+  },
+  "sampleCrosswalk": [
+    {"sampleCode": "A10_Danao", "ena": "PX381193", "boldBin": "BOLD:AAC9904", "boldRecord": "GBAAH9722-25", "name": "Oreochromis niloticus"},
+    {"sampleCode": "A6_Danao", "ena": "PX381189", "boldBin": "BOLD:AAA8511", "boldRecord": "GBAAH9845-25", "name": "Oreochromis niloticus"},
+    {"sampleCode": "A7_Danao", "ena": "PX381190", "boldBin": "BOLD:AAA8511", "boldRecord": "GBAAH9654-25", "name": "Oreochromis niloticus"},
+    {"sampleCode": "A8_Danao", "ena": "PX381191", "boldBin": "BOLD:AAA8511", "boldRecord": "GBAAH9752-25", "name": "Oreochromis niloticus"},
+    {"sampleCode": "A9_Danao", "ena": "PX381192", "boldBin": "BOLD:AAA8511", "boldRecord": "GBAAH9706-25", "name": "Oreochromis niloticus"},
+    {"sampleCode": "AS_1_Danao", "ena": "PX381172", "boldBin": "BOLD:AAI0449", "boldRecord": "GBAAH9779-25", "name": "Rhinogobius similis"},
+    {"sampleCode": "AS_2_Danao", "ena": "PX381173", "boldBin": "BOLD:AAI0449", "boldRecord": "GBAAH9655-25", "name": "Rhinogobius similis"},
+    {"sampleCode": "AS_3_Danao", "ena": "PX381174", "boldBin": "BOLD:AAI0449", "boldRecord": "GBAAH9643-25", "name": "Rhinogobius similis"},
+    {"sampleCode": "AS_4_Danao", "ena": "PX381202", "boldBin": "BOLD:AAD2092", "boldRecord": "GBAAH9792-25", "name": "Anguilla marmorata"},
+    {"sampleCode": "AS_5_Danao", "ena": "PX381203", "boldBin": "BOLD:AAD2092", "boldRecord": "GBAAH9667-25", "name": "Anguilla marmorata"},
+    {"sampleCode": "JS_1_Danao", "ena": "PX381183", "boldBin": "BOLD:AAI0449", "boldRecord": "GBAAH9739-25", "name": "Rhinogobius similis"},
+    {"sampleCode": "JS_2_Danao", "ena": "PX381184", "boldBin": "BOLD:AAI0449", "boldRecord": "GBAAH9676-25", "name": "Rhinogobius similis"},
+    {"sampleCode": "JS_3_Danao", "ena": "PX381185", "boldBin": "BOLD:AAI0449", "boldRecord": "GBAAH9701-25", "name": "Rhinogobius similis"},
+    {"sampleCode": "P10_Danao", "ena": "PX381182", "boldBin": "BOLD:AAI0449", "boldRecord": "GBAAH9807-25", "name": "Rhinogobius similis"},
+    {"sampleCode": "P6_Danao", "ena": "PX381178", "boldBin": "BOLD:AAI0449", "boldRecord": "GBAAH9816-25", "name": "Rhinogobius similis"},
+    {"sampleCode": "P7_Danao", "ena": "PX381179", "boldBin": "BOLD:AAI0449", "boldRecord": "GBAAH9796-25", "name": "Rhinogobius similis"},
+    {"sampleCode": "P8_Danao", "ena": "PX381180", "boldBin": "BOLD:AAI0449", "boldRecord": "GBAAH9754-25", "name": "Rhinogobius similis"},
+    {"sampleCode": "P9_Danao", "ena": "PX381181", "boldBin": "BOLD:AAI0449", "boldRecord": "GBAAH9690-25", "name": "Rhinogobius similis"},
+    {"sampleCode": "PS_1_Danao", "ena": "PX381175", "boldBin": "BOLD:AAI0449", "boldRecord": "GBAAH9671-25", "name": "Rhinogobius similis"},
+    {"sampleCode": "PS_2_Danao", "ena": "PX381176", "boldBin": "BOLD:AAI0449", "boldRecord": "GBAAH9753-25", "name": "Rhinogobius similis"},
+    {"sampleCode": "PS_3_Danao", "ena": "PX381177", "boldBin": "BOLD:AAI0449", "boldRecord": "GBAAH9836-25", "name": "Rhinogobius similis"}
+  ],
+  "candidateSpecies": [
+    {"name": "Anguilla marmorata Quoy & Gaimard, 1824", "taxonomyUrl": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=59338", "sampleCount": 2, "sampleCodes": ["AS_4_Danao", "AS_5_Danao"], "enaAccessions": ["PX381202", "PX381203"], "note": "Sequence-linked candidate only; accession count is not abundance."},
+    {"name": "Oreochromis niloticus (Linnaeus, 1758)", "taxonomyUrl": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Oreochromis&species=niloticus&tbl=species", "sampleCount": 5, "sampleCodes": ["A10_Danao", "A6_Danao", "A7_Danao", "A8_Danao", "A9_Danao"], "enaAccessions": ["PX381193", "PX381189", "PX381190", "PX381191", "PX381192"], "note": "Sequence-linked candidate only; accession count is not abundance."},
+    {"name": "Rhinogobius similis Gill, 1859", "taxonomyUrl": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=20257", "sampleCount": 14, "sampleCodes": ["AS_1_Danao", "AS_2_Danao", "AS_3_Danao", "JS_1_Danao", "JS_2_Danao", "JS_3_Danao", "P10_Danao", "P6_Danao", "P7_Danao", "P8_Danao", "P9_Danao", "PS_1_Danao", "PS_2_Danao", "PS_3_Danao"], "enaAccessions": ["PX381172", "PX381173", "PX381174", "PX381183", "PX381184", "PX381185", "PX381182", "PX381178", "PX381179", "PX381180", "PX381181", "PX381175", "PX381176", "PX381177"], "note": "Sequence-linked candidate only; accession count is not abundance."}
+  ],
+  "otherFreshwaterEvidence": {
+    "sibaLada": "Bicol University’s 2023 procurement ledger records laboratory work for an ichthyofaunal inventory and genetic fingerprinting under SIBA-LADA, but gives no results or link to these accessions.",
+    "danaoLocalKnowledge": "A 2024 proceedings abstract reports 2023 biophysical/ethnographic work and local claims of abundant sinarapan; fish names are broad vernacular groups, not a taxonomic checklist.",
+    "buhiLakelets": "HERDIN’s 2011 Alda abstract reports three stations each in Manapao and Katugday, October 2010 and January 2011 plankton/water-quality sampling, and 23 unnamed plankton species total; it is not fish evidence.",
+    "copepods": "Two 2013-05-20 Arctodiaptomus dorsalis preserved-specimen records (USTZRC-0353-0070A and USTZRC-0353-0069B) are kept separate from fish; no diet or complete plankton claim is made."
+  },
+  "crossSourceAssessment": {
+    "duplicateFeeds": "All 21 INSDC/ENA records match one-to-one with 21 iBOL/BOLD rows on sample code; BOLD names are BIN IDs and provide genus context, not independent species identifications. Treat as 21 sample labels, not 42 specimens or independent surveys.",
+    "sinarapanEvidence": "The existing IUCN 2021 assessment (assessed 2020-09-07) includes Danao Lake, Polangui, Albay in its broader range narrative. NFRDI’s 2023-2024 summary reports no true sinarapan among analyzed Danao samples but gives no waterbody-level effort or detection sensitivity. The existing Sanchez et al. 2015 paper collected presumed-sinarapan Danao tissues that did not yield an identified sequence. The local-knowledge statement in the 2024 abstract is a separate evidence class. None establishes permanent presence or absence.",
+    "lakeIdentity": "Lake Danao, Polangui, Albay is separate from the fish-survey Lake Danao in Ormoc City, Leyte. The NFRDI Leyte paper is not included in Bicol candidate records.",
+    "appReadiness": "Three species names are sequence-linked research candidates only. The single-date/single-coordinate data, null uncertainty/locality, unverified voucher/method, incomplete spatial query, unresolved SIBA-LADA linkage and unapproved public reuse prevent app admission. No abundance, current persistence, diet, invasive status, legal catchability, safety or geometry is inferred."
+  },
+  "disposition": {
+    "sourceReferencesAdded": 6,
+    "existingSourcesCrossChecked": 3,
+    "candidateSpeciesIdentified": 3,
+    "candidateSampleRecords": 21,
+    "duplicateFeedRowsDeduplicated": 21,
+    "copepodRecordsKeptSeparate": 2,
+    "speciesAssertionsAdded": 0,
+    "occurrenceAssertionsAdded": 0,
+    "absenceAssertionsAdded": 0,
+    "geometryAdded": 0,
+    "dietOrPredationClaimsAdded": 0,
+    "publicAppRowsAdded": 0,
+    "publicationApproval": false,
+    "reason": "The records are useful sample-level candidates, but their shared low-resolution point, missing locality/uncertainty/voucher/method details, unresolved project link, limited query scope and unapproved app reuse prevent publication."
+  },
+  "nextAction": "Continue Bicol inland-water screening across lakes, lakelets, rivers and reservoirs as separate waterbody units; seek the completed SIBA-LADA fish/genetic tables and primary checklists while continuing estuary/coastal coverage in parallel.",
+  "sources": [
+    {"url": "https://api.gbif.org/v1/occurrence/search?country=PH&limit=100&geometry=POLYGON%28%28123.568%2013.355%2C123.579%2013.355%2C123.579%2013.364%2C123.568%2013.364%2C123.568%2013.355%29%29", "supports": "44 georeferenced query-window rows from three GBIF datasets and the 21 matched fish sample codes; the window is not a lake boundary."},
+    {"url": "https://doi.org/10.15468/sbmztx", "supports": "INSDC dataset metadata, sequence-record names, and dataset-level CC BY 4.0."},
+    {"url": "https://doi.org/10.15468/inygc6", "supports": "iBOL dataset metadata and matching barcode BIN records."},
+    {"url": "https://doi.org/10.15468/qwhdjn", "supports": "Southern Luzon copepod dataset metadata and two dated specimen records."},
+    {"url": "https://bicol-u.edu.ph/wp-content/uploads/2023/07/Bicol-University-PMR-1st-Sem-2023-v2.pdf", "supports": "Official SIBA-LADA procurement entries for fish inventory and genetic-fingerprinting work, not study results."},
+    {"url": "https://uz.edu.ph/wp-content/uploads/2024/11/PBOA-2nd-National-Research-Congress-2024-v3.pdf", "supports": "Indexed abstract for 2023 Lake Danao biophysical/local-knowledge work; full proceedings not retrieved."},
+    {"url": "https://www.herdin.ph/index.php?cid=82138&view=research", "supports": "Alda 2011 methods, sampling dates/stations, unnamed plankton count, and print-only full-text access."},
+    {"url": "https://nfrdi.da.gov.ph/2025/09/01/feature-saving-lake-buhis-sinarapan-safeguarding-biodiversity-and-local-livelihoods/", "supports": "Existing NFRDI summary of bounded Danao sinarapan non-detection and its method-detail limits."},
+    {"url": "https://dx.doi.org/10.2305/IUCN.UK.2021-2.RLTS.T13586A117405712.en", "supports": "Existing IUCN time-bounded Bicol range assessment naming Danao Lake, Polangui, Albay."},
+    {"url": "https://www.vliz.be/imisdocs/publications/308819.pdf", "supports": "Existing 2015 presumed-sinarapan DNA paper; Danao tissue samples were not identified in its sequence results."},
+    {"url": "https://www.nfrdi.da.gov.ph/tpjf/vol30_2/research-article-romero-30220230009", "supports": "Namesake safeguard only: the separate 2023 fish study is Lake Danao, Ormoc City, Leyte, not Bicol."},
+    {"url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=59338", "supports": "Eschmeyer’s Catalog of Fishes cross-check for Anguilla marmorata."},
+    {"url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Oreochromis&species=niloticus&tbl=species", "supports": "Eschmeyer’s Catalog of Fishes cross-check for Oreochromis niloticus."},
+    {"url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=20257", "supports": "Eschmeyer’s Catalog of Fishes cross-check for Rhinogobius similis."}
+  ]
+}
