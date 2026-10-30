@@ -1774,3 +1774,14 @@ The reported set includes 18 binomial names and two genus-only identifications; 
 Added one source reference (308 total) and `national-bicol-catanduanes-pajo-river-review-20261030.json`. No occurrence/species assertion, geometry, diet, legal/safety claim or public-app row was added. The article's Creative Commons Attribution notice does not state a license version in the reviewed text; no separate Bangwit publication approval was granted. Bicol remains incomplete.
 
 **Next:** continue inland-water research across Bicol provinces with a primary-source-first search; prioritize areas that have no dated, station-linked evidence, while keeping river, estuarine, lake and reservoir records separate. Seek vouchers or author clarification for this paper's inconsistent taxa in parallel.
+
+
+### National rollout step 224 - Bulusan River gobioid crosswalk
+
+Extended the existing 2015 southern Luzon gobioid source review to its Bulusan River, Sorsogon site instead of registering a duplicate source. The paper's site table reports 10 Bulusan rows and its results report 422 specimens from the river. Nine table rows are binomial names and one is genus-only (Eleotris sp.); the authors call all ten species. The study is limited to gobioids, so it is not a complete fish inventory. It sampled twelve longitudinal stations during wet-season campaigns in August 2010 and July 2011, with a downstream connection to estuarine waters. Although station GPS positions were recorded in the study, no per-taxon station coordinates or reusable geometry were recovered.
+
+Preserved the source's verbatim taxa and flagged its Bostrychus sinesis table spelling versus B. sinensis in prose, plus the unresolved Oxyeleotris lineonata spelling. No silent taxonomic correction was made. The existing source record also has an unresolved rights conflict: Zenodo declares CC BY 4.0 while the journal's current terms describe non-commercial downloading and retained publisher copyright. Keep the rows out of the public app until that conflict is clarified.
+
+Added `national-bicol-bulusan-river-gobioid-review-20261030.json` and linked it to the existing source reference; registry count remains 308. No historical occurrence assertion, current occurrence, geometry, diet, safety, legal or public-app row was added. Bicol remains incomplete.
+
+**Next:** continue the Bicol waterbody sweep across lake, river, reservoir, wetland, estuary and coastal units; prioritize primary evidence that adds new locality coverage and keep the habitat and evidence classes separate.
