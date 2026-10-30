@@ -1796,3 +1796,16 @@ Table 2-10 lists scientific fish names and invertebrates under freshwater biota 
 Added one official-source reference (309 total) and `national-bicol-camnorte-bosigon-labo-eis-fish-review-20261030.json`. No species/occurrence/absence assertion, geometry, diet, status, or public-app row was added. No item-specific reuse terms were verified. Camarines Norte freshwater coverage remains incomplete.
 
 **Next:** continue screening other Bicol inland and estuarine waters with primary field evidence; seek a specimen-backed survey for Labo and Bosigon rivers from public datasets or published sources while keeping interviews, EIS compilations and field surveys separate.
+
+
+### National rollout step 226 - Incarizan River, Magallanes, Sorsogon source and classification audit
+
+Reviewed the available text of a 62-page thesis copy titled *Diversity and Abundance of Fish in Incarizan River*, attributed to Melvin L. Cal and Daryll Bañares and labeled AY 2019-2020. The only located copy is a third-party Scribd upload marked All Rights Reserved; no SorSU repository accession, original file, author copy or institutional confirmation was located. The title page uses the Sorsogon State University name, while the university's official history dates its declaration ceremony to 2021. That metadata needs SorSU confirmation; it does not by itself establish authenticity or inauthenticity.
+
+The thesis says 715 fish were surveyed and claims 26 genera in 21 families. Its abstract says six sampling sites, while methods/results describe seven; the extracted table has 26 row-like entries, including three genus-only/incomplete rows, and several suspect or inconsistent spellings. It combines direct gear catches and fisher-provided fish without a taxon-by-method crosswalk. Exact collection dates, event coordinates, vouchers and a per-taxon station matrix were not recovered. Its downstream discussion includes estuarine/marine-connected taxa, so do not label the inventory wholly freshwater. The 26 source-transcribed names are retained only as restricted research leads in `national-bicol-sorsogon-incarizan-river-thesis-review-20261030.json`; none was normalized or promoted to a species/occurrence assertion.
+
+The Magallanes LGU profile independently names Incarizan among tributaries draining toward Sorsogon Bay and Ticao Pass, but supplies no river geometry or fish records. EMB Region V annual-report entries conflict: the 2019 report says Class C, the 2022 report table says Class C in 2022, while the 2024 report lists Class B, year 2019, under DMC No. 2022-15. The controlling circular was not retrieved. Do not publish a current class, safety or legal-use statement from these conflicting summaries.
+
+Added six source references (315 total) and the Incarizan source review. No verified species, occurrence, absence, geometry, diet, native-status, legal/safety claim or public-app row was added. The thesis remains unauthenticated and its content rights unresolved; Bicol coverage remains incomplete.
+
+**Next:** request the original thesis/catalog record and author or SorSU clarification through the Magallanes Campus Library; separately review Sorsogon marine-market evidence as market data, never as river occurrence. Seek the controlling DMC No. 2022-15 before displaying a water classification.
