@@ -2337,3 +2337,15 @@ Table 3 lists selected top-ten source names for 2001, 2006 and 2011. This review
 Added `national-visayas-eastern-visayas-leyte-gulf-2001-2011-bfar-fishery-review-20261030.json` and one official-source registry record with two URL references (406 total). No species assertion, occurrence, geometry, diet, safety/legal/catchability claim or public-app row was added.
 
 **Next:** keep these historical marine landing data separate from the 2020 trawl assessment and the freshwater records. Continue Eastern Visayas inland-water and brackish/estuary source discovery; independently validate any retained source-name leads before considering an app projection.
+
+### National rollout step 282 - Ormoc Lake Danao and Tubod River 2007 guide full-text review
+
+Retrieved and visually reviewed all 27 pages of the official VSU guide. The source prints 21 freshwater-fish names. Sixteen profiles explicitly give one or more localities; five do not. The printed abstract assigns 18 species to Tubod River, four to Lake Danao and one to Inawasan River, which totals 23 site incidences. The species profiles explicitly mention Lake Danao for five names, so the article does not reconcile its own site counts. Preserve those statements separately; do not infer disjoint inventories or select one count as corrected.
+
+The guide's full name list does not include *Cyprinus carpio*, despite the 2023 Lake Danao study citing it as a 2007 source for carp context. The guide's *Clarias batrachus* profile names Tubod River, not Lake Danao. This remains a source-citation mismatch, not a confirmed carp record or Lake Danao catfish locality. Printed coordinates are malformed in places, and the guide has no specimen-voucher crosswalk or individual capture dates, so no geometry or occurrence row was added.
+
+The introduction says food habits were investigated, while several profiles explicitly cite FishBase for diet notes. Provenance is mixed or unclear; the notes remain historical diet leads and are not local bait recommendations. The item record displays CC BY-NC-SA 4.0, while the journal footer displays CC BY-NC-ND. No prose, figures, or PDF pages were copied, and publication remains on hold pending rights clarification.
+
+Added `national-visayas-eastern-visayas-ormoc-lake-danao-2007-guide-fulltext-review-20261030.json` and updated the existing source/catchment records; source count remains 406. No species row, diet card, occurrence, geometry, current-presence, safety/legal/catchability claim, or public-app content was added.
+
+The guide cites three potentially valuable proceedings papers: a 2002 Tubod River feeding-ecology paper and two 2005 Lake Danao/Inawasan freshwater papers. A bounded public search found citation records but no standalone copy of those papers. **Next:** search institutional/library catalogs for those proceedings and inspect the papers if publicly available; keep all citation-only leads out of app data until their text, methods, site attribution, and rights can be checked.
