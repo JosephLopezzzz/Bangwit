@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "checkedOn": "2026-10-30",
+  "status": "negros-oriental;valencia-molecular-fish-lead;possible-range-conflict;waterbody-link-unresolved;research-only",
+  "question": "Do public molecular sequence records and research-report metadata verify Barbodes tumba in Malaunay River, and can any of them be admitted as a waterbody-level occurrence?",
+  "sourceIds": [
+    "sacnas-abstracts-2022-negros-freshwater-goby-malaunay",
+    "tamucc-bird-cv-barbodes-tumba-malaunay-2022",
+    "silliman-btlpn-bioconup-monitoring-status-2023",
+    "ncbi-genbank-mt646827-valencia-negros-oriental",
+    "ncbi-genbank-mt646828-valencia-negros-oriental",
+    "ncbi-genbank-mt646829-valencia-negros-oriental",
+    "ncbi-genbank-mt646830-valencia-negros-oriental",
+    "calacademy-catalog-barbodes-tumba-taxonomy-20261030",
+    "abdulmalik-labe-quilang-barbodes-tumba-mindanao-2019",
+    "emb-r7-ocoy-malaunay-spillway-classification-2021"
+  ],
+  "sourceUrls": {
+    "sacnasAbstractBook": "https://www.sacnas.org/hubfs/AbstractBook2022.pdf",
+    "birdCv": "https://bss-prod.tamucc.edu/hb2504/cv/Bird_Chr.pdf",
+    "sillimanAnnualReport": "https://su.edu.ph/wp-content/uploads/2024/06/annual-report-2023-final-for-web.pdf",
+    "genbankRecords": [
+      "https://www.ncbi.nlm.nih.gov/nuccore/MT646827.1",
+      "https://www.ncbi.nlm.nih.gov/nuccore/MT646828.1",
+      "https://www.ncbi.nlm.nih.gov/nuccore/MT646829.1",
+      "https://www.ncbi.nlm.nih.gov/nuccore/MT646830.1"
+    ],
+    "catalogOfFishes": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=31676",
+    "peerReviewedMindanaoStudy": "https://www.threatenedtaxa.org/index.php/JoTT/article/view/4851",
+    "embWaterbodyClassification": "https://r7.emb.gov.ph/wp-content/uploads/2024/02/OFFICIALLY-CLASSIFIED-WATERBODIES-IN-REGION-VII-AS-OF-DECEMBER-2021.pdf",
+    "ncbiExactTaxonLocalitySearch": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=nuccore&term=%22Barbodes%20tumba%22%5BOrganism%5D%20AND%20%22Negros%20Oriental%22%5BAll%20Fields%5D&retmode=json&retmax=500"
+  },
+  "findings": {
+    "gobyStudyLead": {
+      "source": "SACNAS 2022 abstract book, printed pages 239-240",
+      "reportedScope": "An abstract describes 40 morphologically distinct freshwater gobies collected in Malaunay River and planned/ongoing comparison using COI, Cyt-b and 16S markers.",
+      "taxaReported": [],
+      "resultsAvailableInAbstract": false,
+      "decision": "Keep as a separate Malaunay freshwater-goby research lead. Do not merge with the Barbodes tumba presentation or infer species identities from the abstract."
+    },
+    "barbodesResearchProject": {
+      "sillimanAnnualReport": "Indexed official Silliman University 2023 Annual Report text describes a student research endeavor titled DNA Barcoding of a Freshwater Barb, Barbodes tumba, in Valencia, Negros Oriental, Philippines, conducted June-August 2022. The indexed text spells the student name Kohaman; the conference CV spells it Kohama. The large PDF was not retrieved in this review.",
+      "conferenceCv": "Christopher E. Bird's CV lists a 2022 NDiSTEM presentation titled New record of Barbodes tumba in Malaunay River, Negros Island using three mtDNA markers, with Karen Kohama, David Gauthier, Christopher Bird, P. Seines and R. Guino-o.",
+      "limits": [
+        "The CV is a presentation citation, not the poster, sequence analysis, voucher list or primary report.",
+        "The abstract book's Malaunay project concerns gobies and lists no Barbodes taxon; these are not treated as one study.",
+        "No full presentation/poster, publication, specimen voucher, or accession crosswalk for the 2022 Barbodes project was located."
+      ]
+    },
+    "genbankRecords": {
+      "queryResultCountForBarbodesTumbaAndNegrosOrientalAllFields": 4,
+      "records": [
+        { "accession": "MT646827.1", "isolate": "B_tum_VAL_02", "lengthBp": 655 },
+        { "accession": "MT646828.1", "isolate": "B_tum_VAL_03", "lengthBp": 655 },
+        { "accession": "MT646829.1", "isolate": "B_tum_VAL_04", "lengthBp": 655 },
+        { "accession": "MT646830.1", "isolate": "B_tum_VAL_05", "lengthBp": 655 }
+      ],
+      "recordMetadata": "All four GenBank flat files label the organism Barbodes tumba, identify a partial mitochondrial COX1 gene, give geo_loc_name Philippines: Valencia, Negros Oriental, and name Guino-o, Sienes and Abesamis as submitters. They state a submission date of 21 June 2020.",
+      "notProvidedInInspectedRecords": [
+        "collection date",
+        "named river or lake",
+        "coordinates or datum",
+        "specimen voucher or museum catalog number",
+        "a project identifier linking these sequences to the 2022 Valencia student project or Malaunay presentation",
+        "the Cyt-b and 16S accessions mentioned by the separate conference titles"
+      ],
+      "decision": "These accessions are genuine public sequence metadata with a municipal locality label, but the date and authorship do not establish that they are the 2022 Malaunay project specimens. They cannot be assigned to Malaunay River or another waterbody from the reviewed fields."
+    },
+    "taxonomicRangeConflict": {
+      "catalogOfFishes": "The current California Academy of Sciences Catalog of Fishes lists Barbodes tumba as valid and gives its distribution as Mindanao, Philippines, endemic.",
+      "peerReviewedComparator": "Abdulmalik-Labe and Quilang (2019) describe the taxon as endemic to Mindanao and report specimens from Lake Lanao and three other Mindanao sites: Nunungan Lake, Dagoyanan Lake and Pulangi River.",
+      "interpretation": "The Valencia sequence and presentation leads could represent a significant range extension, a specimen/name issue, or a project/accession crosswalk mismatch. The Mindanao references do not disprove a new Negros record; the public metadata reviewed here is insufficient to resolve it. Hold for primary voucher and sequence-project crosswalk."
+    },
+    "waterbodyCrosswalk": "An indexed official EMB Region VII classified-waterbody table names Ocoy River, Sibulan and uses Malaunay Spillway, Valencia as a class boundary. Its direct PDF returned HTTP 403. This administrative water-quality entry does not establish that the Malaunay River in the research presentation is the same mapped feature as Ocoy River, nor provide fish occurrence geometry."
+  },
+  "accessAndReuse": {
+    "sacnas": "Official abstract-book PDF was reviewed. No item-specific open-data license was verified; only limited attributed bibliographic facts and a concise research-lead summary are retained.",
+    "sillimanReport": "Only indexed official text for the relevant passage was reviewed; the full report could not be retrieved. No report tables or text are reproduced.",
+    "birdCv": "Official university-hosted CV was reviewed for presentation metadata only; no poster or underlying data were retrieved.",
+    "genbank": "Four public accession records were fetched/read as metadata. No nucleotide sequences were copied into Bangwit or included in this review artifact.",
+    "journal": "The 2019 Journal of Threatened Taxa article page identifies a CC BY 4.0 license; it is used only as an attributed regional comparator.",
+    "emb": "Official indexed excerpt was reviewed because direct PDF retrieval was denied. No waterbody boundary or geometry was extracted.",
+    "publicationApproval": false
+  },
+  "decision": {
+    "speciesAssertions": "none added",
+    "occurrenceAssertions": "none added",
+    "waterbodyAssignment": "held; Valencia locality cannot be crosswalked to Malaunay River from the inspected accession fields",
+    "geometry": "not created",
+    "dietClaims": "none",
+    "catchabilityLegalOrSafetyClaims": "none",
+    "publicAppAdmission": "hold",
+    "reason": "A notable out-of-known-range presentation claim is not supported by a retrieved primary poster/report with voucher IDs, full sequence marker/accession crosswalk, collection dates and a river-level site link. Four COX1 records provide only a 2020 municipality-level locality and cannot safely be equated to the 2022 Malaunay presentation."
+  },
+  "limitations": [
+    "The 2022 goby abstract reports planned/presented phylogenetic work but no species results in the accessible abstract.",
+    "An indexed search result or conference-title entry is a discovery lead, not a complete occurrence record.",
+    "GenBank organism and locality qualifiers are not independent taxonomic verification or proof of wild capture; no voucher was included in these four inspected records.",
+    "Mindanao endemism in earlier references makes the Negros title notable but is not evidence that a range extension is impossible.",
+    "A municipal water-classification entry cannot resolve the river-name crosswalk or supply a fish locality geometry.",
+    "No current presence, abundance, fishing permission, safety, diet or bait claim is made."
+  ],
+  "nextActions": [
+    "Continue regional freshwater source discovery while retaining this as a priority access lead.",
+    "If a presentation PDF, thesis, article or museum record is found, reconcile its voucher identifiers and all three marker accessions against the 2020 GenBank records before linking the project to Malaunay River.",
+    "Resolve whether the study locality is Malaunay River, the Malaunay Spillway/Ocoy River reach, or a different Valencia waterbody using a primary site description or voucher label.",
+    "Keep the record research-only until the out-of-range taxonomic identification and collection provenance receive qualified review."
+  ]
+}
