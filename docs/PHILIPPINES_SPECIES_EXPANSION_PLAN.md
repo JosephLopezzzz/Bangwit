@@ -2107,3 +2107,19 @@ Recorded national-visayas-negros-bayawan-historical-display-eligibility-20261030
 This decision preserves the study as dated 2018-2019 historical evidence only. It does not claim present-day occupancy, whole-river range, fishability, diet, safety or legal permission. No app species, occurrence, geometry or public row was added.
 
 **Next:** continue the independent freshwater source sweep for Negros and Siquijor in parallel. Revisit Bayawan only if an authoritative coordinate/table correction or qualified taxonomic review becomes available; do not map the invalid coordinates.
+
+### National rollout step 257 - Señora River historical fish-study source review
+
+Reviewed the publisher record and complete 14-page Silliman Journal PDF for Bucol and Catid’s Señora River study. The issue is Volume 52(2), July–December 2011 and the fieldwork ran February–May 2011; the article page also shows a later 2022 platform date. Three named stations span a headwater tributary at Capalasanan, the middle reach near Canclaran, and the estuarine reach at Simacolong. Coordinates are retained only as verbatim source metadata because no datum is stated.
+
+The abstract and Table 1 footer report 33 fish species, but the Results paragraph reports 34. The river and estuary stations also must not be blended into one freshwater occurrence layer. Silliman Journal’s policy identifies the journal and authors as copyright holders; no open structured-data reuse license was found. Added national-visayas-siquijor-senora-river-fish-study-access-review-20261030.json and one source record (346 total). No fish names were transcribed, no geometry or app rows were added, and publication approval remains false.
+
+**Next:** seek permission or written guidance before transcribing Table 1. Meanwhile review the publisher-hosted Bago River study and Pagatban River source separately, keeping their sites, dates, rights and evidence scope distinct.
+
+### National rollout step 258 - Bago River historical fish study access review
+
+Retrieved the complete 25-page 2010 Silliman Journal issue PDF from its alternate official host after the article-page download URL returned 404. The paper describes wet-season sampling in July–September 2009 and dry-season sampling in February–April 2010 at four selected Bago River stations. Table 1 links historical source-name labels to source-era ecological categories and station-by-season marks. The primary abstract text says 55 fishes; a 2014 Bugang River paper independently cites Bago as 55 species in 33 families, while the 2011 Señora River paper cites 56. The 55 figure is corroborated but the discrepancy remains unresolved.
+
+Added national-visayas-negros-bago-river-2010-fish-study-access-review-20261030.json and one source record (347 total). The landing page platform date (2022) is distinguished from the issue date (2010). No species table or station matrix was transcribed; no occurrence, geometry or public app row was added. Silliman Journal copyright terms do not establish open reuse rights for a structured dataset.
+
+**Next:** request guidance/permission before transcribing Table 1. Continue discovery for Pagatban, Ilog-Hilabangan and Siaton sources, and keep river-specific timeframes separate from regional completion counts.
