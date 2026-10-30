@@ -1785,3 +1785,14 @@ Preserved the source's verbatim taxa and flagged its Bostrychus sinesis table sp
 Added `national-bicol-bulusan-river-gobioid-review-20261030.json` and linked it to the existing source reference; registry count remains 308. No historical occurrence assertion, current occurrence, geometry, diet, safety, legal or public-app row was added. Bicol remains incomplete.
 
 **Next:** continue the Bicol waterbody sweep across lake, river, reservoir, wetland, estuary and coastal units; prioritize primary evidence that adds new locality coverage and keep the habitat and evidence classes separate.
+
+
+### National rollout step 225 - Camarines Norte Labo-Bosigon EIS evidence audit
+
+Reviewed indexed extracts from EMB Region V's official Social Environmental Impact Assessment Report for the Bosigon Irrigation Project in Labo, Paracale and Vinzons, Camarines Norte. Direct PDF fetch was blocked, so the full report, methods and bibliography were not independently inspected. The extracted fisheries narrative says no fish were captured during the field sampling because of inclement weather; nearby residents reported common names including Banak, Palos, Tilapia, Dalag and Hipon. The report also mentions an unspecified prior River halfbeak sighting and online articles, without a citation-to-specimen crosswalk.
+
+Table 2-10 lists scientific fish names and invertebrates under freshwater biota but supplies no per-row dates, stations, gear, vouchers, coordinates or underlying source. It is not a field-capture checklist. Its Crenimugil seheli row is labeled Endemic without stating the geographic scale, despite the fish catalog's broad Indo-West Pacific range; Hemigrapsus sanguineus is a marine shore crab, not a freshwater fish; and Ophiocephalus striatus is a historical name in the Channa striata group while the table's Introduced label remains unverified for these rivers. Kept the table as verbatim research leads only.
+
+Added one official-source reference (309 total) and `national-bicol-camnorte-bosigon-labo-eis-fish-review-20261030.json`. No species/occurrence/absence assertion, geometry, diet, status, or public-app row was added. No item-specific reuse terms were verified. Camarines Norte freshwater coverage remains incomplete.
+
+**Next:** continue screening other Bicol inland and estuarine waters with primary field evidence; seek a specimen-backed survey for Labo and Bosigon rivers from public datasets or published sources while keeping interviews, EIS compilations and field surveys separate.
