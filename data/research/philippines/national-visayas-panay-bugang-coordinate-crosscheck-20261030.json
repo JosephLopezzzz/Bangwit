@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-30",
+  "phaseId": "V1",
+  "regionId": "0600000000",
+  "status": "research-only;source-dms-converted;one-near-coincident-emb-station;datum-unspecified;no-line-geometry",
+  "question": "Are the four 2013-2014 fish-study station coordinates internally coherent and independently compatible with official Bugang monitoring-station records?",
+  "fishStudySourceId": "bioflux-2014-bugang-river-fish-inventory",
+  "independentComparatorSourceId": "denr-emb6-pandan-bugang-monitoring-stations-2021",
+  "method": {
+    "fishStudyCoordinateSource": "The publisher PDF describes four GPS-located sampling sites and prints their latitude and longitude in degrees plus decimal minutes, with N/E hemispheres.",
+    "decimalConversion": "decimal degrees = degrees + decimal minutes / 60; N and E remain positive.",
+    "embCoordinateSource": "DENR EMB Region VI reports give four Malumpati-Bugang River station eastings and northings and label the grid zone as 51 P.",
+    "provisionalEmbTransform": "For comparison only, transform the EMB values as UTM zone 51 north / WGS84 (EPSG:32651) to decimal degrees, then calculate great-circle distances using the haversine formula. The EMB source does not state its horizontal datum, so these transformed values and distances are approximate and not survey-grade.",
+    "independentValidationBoundary": "No source map or GIS vector was used to digitize river banks, channel centerline, reach limits, or a waterbody polygon. The official report's station table is a location comparator, not a legal or biological boundary."
+  },
+  "fishStudySites": [
+    {
+      "siteCode": "HS",
+      "siteAsReported": "Headstream",
+      "coordinatesAsReported": "11°46.3873′ N, 122°04.5826′ E",
+      "latitudeDecimalDegrees": 11.7731216667,
+      "longitudeDecimalDegrees": 122.0763766667,
+      "nearestEmbStationNumber": 1,
+      "nearestEmbDistanceMetresApprox": 545
+    },
+    {
+      "siteCode": "UM",
+      "siteAsReported": "Upper midstream",
+      "coordinatesAsReported": "11°46.0306′ N, 122°04.6109′ E",
+      "latitudeDecimalDegrees": 11.7671766667,
+      "longitudeDecimalDegrees": 122.0768483333,
+      "nearestEmbStationNumber": 2,
+      "nearestEmbDistanceMetresApprox": 6,
+      "note": "Near-coincident with EMB's Downstream of Malumpati Cold Spring station under the provisional transform. This does not prove that the two campaigns sampled the identical spot."
+    },
+    {
+      "siteCode": "LM",
+      "siteAsReported": "Lower midstream",
+      "coordinatesAsReported": "11°45.2164′ N, 122°04.4699′ E",
+      "latitudeDecimalDegrees": 11.7536066667,
+      "longitudeDecimalDegrees": 122.0744983333,
+      "nearestEmbStationNumber": 3,
+      "nearestEmbDistanceMetresApprox": 941
+    },
+    {
+      "siteCode": "DS",
+      "siteAsReported": "Downstream",
+      "coordinatesAsReported": "11°44.9157′ N, 122°04.3585′ E",
+      "latitudeDecimalDegrees": 11.748595,
+      "longitudeDecimalDegrees": 122.0726416667,
+      "nearestEmbStationNumber": 3,
+      "nearestEmbDistanceMetresApprox": 453
+    }
+  ],
+  "embMonitoringStations": [
+    {
+      "stationNumber": 1,
+      "locationAsReported": "Bugang River, Upstream of Malumpati Cold Spring & Pandan Water District",
+      "gridZoneAsReported": "51 P",
+      "eastingMetres": 399278.4,
+      "northingMetres": 1301096.96,
+      "transformedLatitudeDecimalDegreesAssumingWgs84": 11.7682847612,
+      "transformedLongitudeDecimalDegreesAssumingWgs84": 122.0755716065
+    },
+    {
+      "stationNumber": 2,
+      "locationAsReported": "Bugang River, Downstream of Malumpati Cold Spring",
+      "gridZoneAsReported": "51 P",
+      "eastingMetres": 399423.48,
+      "northingMetres": 1300974.52,
+      "transformedLatitudeDecimalDegreesAssumingWgs84": 11.7671819295,
+      "transformedLongitudeDecimalDegreesAssumingWgs84": 122.0769067303
+    },
+    {
+      "stationNumber": 3,
+      "locationAsReported": "Bugang River, Upstream of Naranjo Waterpark",
+      "gridZoneAsReported": "51 P",
+      "eastingMetres": 398519.78,
+      "northingMetres": 1298784.06,
+      "transformedLatitudeDecimalDegreesAssumingWgs84": 11.7473480745,
+      "transformedLongitudeDecimalDegreesAssumingWgs84": 122.0686799032
+    },
+    {
+      "stationNumber": 4,
+      "locationAsReported": "Bugang River, Downstream of Naranjo Waterpark",
+      "gridZoneAsReported": "51 P",
+      "eastingMetres": 398349.67,
+      "northingMetres": 1298660.42,
+      "transformedLatitudeDecimalDegreesAssumingWgs84": 11.7462249842,
+      "transformedLongitudeDecimalDegreesAssumingWgs84": 122.0671226488
+    }
+  ],
+  "nearestStationComparison": {
+    "distanceMatrixMetresApprox": {
+      "HS": [545, 663, 2986, 3156],
+      "UM": [186, 6, 2377, 2559],
+      "LM": [1636, 1532, 941, 1148],
+      "DS": [2213, 2118, 453, 656]
+    },
+    "finding": "The source coordinates parse as valid north/east positions in the Pandan area and progress from headstream toward the downstream mouth. The upper-midstream point nearly coincides with the EMB station downstream of Malumpati Cold Spring under the provisional transform; the other article points are within approximately 0.45-0.94 km of the nearest EMB stations. This supports corridor-level spatial plausibility but does not independently verify each 2013-2014 sampling point or map the whole river.",
+    "uncertainty": "The datum and source map-control details for the EMB projected coordinates were not available in the inspected text; nearest-distance values should be treated as approximate."
+  },
+  "disposition": {
+    "sourceCoordinateStringsOverwritten": 0,
+    "studyStationPointsAddedToAppGeometry": 0,
+    "riverCenterlineAdded": false,
+    "riverBoundaryAdded": false,
+    "occurrenceAssertionsAdded": 0,
+    "publicAppRowsAdded": 0,
+    "publicationApproval": false,
+    "result": "Coordinates are usable as source-reported historical station points in a research record, with original strings retained and approximate position caveat. They are not validated as a river line, legal reach, fishing area, or current occurrence."
+  },
+  "limitations": [
+    "The four fish-study points are historical sampling coordinates from November 2013 to March 2014, not contemporary occupancy locations.",
+    "The independent comparator describes water-quality monitoring stations, not the biological study's four sites; similar or nearby coordinates do not merge the two campaigns.",
+    "The EMB table labels UTM zone 51 P but does not specify a horizontal datum in the reviewed material.",
+    "The inspected EMB access surfaced tabular station coordinates and a map description, not a licensed GIS line or surveyed channel polygon.",
+    "No government water-quality class, water-quality result, article statement, or tourist description is represented as fishing safety, legal access, permission, or a recommendation."
+  ],
+  "nextAction": "Keep the four station points and table flags as historical research evidence only. Do not add an app geometry or map whole-river extent from these points. Next, assemble a source-faithful, non-public reach-by-taxon ledger for the four article sites with the original table names, source-date and pending taxonomy fields; separately continue Panay/Guimaras river, lake, estuary and wetland coverage.",
+  "sources": [
+    {
+      "sourceId": "bioflux-2014-bugang-river-fish-inventory",
+      "url": "https://bioflux.com.ro/docs/2014.396-404.pdf",
+      "supports": "Four GPS-described 2013-2014 sampling sites, exact degree-and-decimal-minute coordinates, reach descriptions, article map, and source taxon-by-reach matrix."
+    },
+    {
+      "sourceId": "denr-emb6-pandan-bugang-monitoring-stations-2021",
+      "url": "https://r6.emb.gov.ph/wp-content/uploads/2021/08/RECREATIONAL-WATERS.pdf",
+      "additionalUrl": "https://r6.emb.gov.ph/wp-content/uploads/2023/02/RSOBER-2021-WESTERN-VISAYAS.pdf",
+      "supports": "Official Malumpati-Bugang River water-quality monitoring-station labels, grid-zone text and coordinate pairs; independent place check only, not fish occurrence or river boundary."
+    }
+  ]
+}
