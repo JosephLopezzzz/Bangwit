@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "checkedOn": "2026-10-30",
+  "phaseId": "V-EV",
+  "regionIds": ["0800000000"],
+  "status": "eastern-visayas;eastern-samar;lawaan;historical-aggregate-counts;scope-conflict-unresolved;underlying-source-access-gated;research-only",
+  "question": "Can the reported Lawaan fish-species counts from project summaries and a two-river poster be reconciled into one inventory?",
+  "waterbody": {
+    "name": "Lawaan freshwater systems, plus separately reported Poblacion and Bolusao Rivers",
+    "administrativeArea": "Lawaan, Eastern Samar",
+    "identityContext": "The Lawaan Integrated Ecosystems Conservation Project spans interconnected forest, watershed, river, coastal, mangrove, reef, and seagrass settings. Do not assume all project-level fish counts refer to the same waterbodies, stations, or survey period.",
+    "geometryDecision": "No waterbody boundaries or sampling stations added; none of the aggregate sources supplies a usable site crosswalk."
+  },
+  "sourcesReviewed": [
+    {
+      "sourceId": "philchm-denr-region8-sixth-national-report-documentation-2018",
+      "citation": "Department of Environment and Natural Resources, Biodiversity Management Bureau. (2018, June). Preparation of the 6th National Report to the Convention on Biological Diversity and Localization of the Philippine Biodiversity Strategy and Action Plan: Region 8 Consultation/Workshop Documentation Report.",
+      "url": "https://www.philchm.ph/wp-content/uploads/2019/04/region8-1.pdf",
+      "access": "The public 31-page report was opened and its Lawaan project section reviewed. It reports that a GDFI project representative described Lawaan's freshwater systems as home to 45 fish species. This is a workshop report of a presentation, not the underlying fish technical report or species table.",
+      "reportedResults": {
+        "fishCount": 45,
+        "scopeAsReported": "Several freshwater systems in Lawaan; specific rivers, stations, dates, methods, fish names, and vouchers are not given in the workshop text.",
+        "sourceChain": "The report attributes the project results to a presentation by GDFI project assistant Racelle Rescordado during the Region 8 consultation.",
+        "samplingDates": null,
+        "taxonList": null
+      },
+      "decision": "Retain 45 as a dated, secondhand project-level aggregate only. It is not a species list, current occupancy measure, complete inventory, or independently auditable occurrence dataset."
+    },
+    {
+      "sourceId": "denr-fasps-lawaan-biodiversity-participation-conference-presentation-2017",
+      "citation": "de la Cruz, M. T. (2017, November 28). Promoting Participation and Partnerships in the Biodiversity Conservation in Lawaan, Eastern Samar. Presentation at the 2nd Samar Hub Annual Conference; FASPS E-Library record.",
+      "url": "https://faspselib.denr.gov.ph/Materials/Detail/d9c37667-71ed-4090-9181-bb45fad82363",
+      "access": "The public FASPS record and its search-indexed summary report 23 fish species in Lawaan freshwater systems. The document itself is behind a login/register and survey gate; it was not opened or downloaded. The summary does not expose a fish list, methods, stations, sampling period, or vouchers.",
+      "reportedResults": {
+        "fishCount": 23,
+        "scopeAsReported": "Freshwater systems in Lawaan, without named sites or survey-level details in the public summary.",
+        "eventDate": "2017-11-28",
+        "taxonList": null
+      },
+      "decision": "Treat 23 as a public metadata-summary claim, not a verified primary inventory. Do not infer whether it predates, overlaps, or uses a narrower scope than the later 45-fish summary or the two-river poster."
+    },
+    {
+      "sourceId": "denr-fasps-lawaan-liecp-accomplishment-report-metadata-2017",
+      "citation": "de la Cruz, M. T., de la Cruz, J. O., & Yaona, Y. D. C. (2017, March 14). SGP-5 Lawaan Integrated Ecosystems Conservation Project Accomplishment Report; FASPS E-Library record.",
+      "url": "https://faspselib.denr.gov.ph/Materials/Detail/21705e68-20f6-4d86-b861-03deff2e42af",
+      "access": "Only the public report-metadata page was reviewed. It reports that, at the presentation date, preparation of the freshwater-systems technical report was 15% complete and that finalization/packaging was a future action. The underlying report requires login/register and survey completion to view or download; it was not accessed.",
+      "reportedResults": {
+        "freshwaterTechnicalReportProgress": "15% as reported in March 2017",
+        "scope": "Project accomplishment/status summary; not a fish count or inventory",
+        "fishCount": null
+      },
+      "decision": "Use only as a dated project-document status point. It cannot explain later counts or establish the final technical report's availability, contents, or completion."
+    },
+    {
+      "sourceId": "gacura-2018-lawaan-bolusao-poblacion-river-fish-poster",
+      "citation": "Gacura, J. R. L. (2018, May). Fish Composition and Distribution in the Rivers of Lawaan, Eastern Samar, Philippines. Poster presented at the 5th Undergraduate Research Symposium; author-uploaded poster hosted by ResearchGate.",
+      "url": "https://www.researchgate.net/publication/369658922_FISH_COMPOSITION_AND_DISTRIBUTION_IN_THE_RIVERS_OF_LAWAAN_EASTERN_SAMAR_PHILIPPINES",
+      "access": "Existing review found the abstract and partial extracted poster text; direct poster retrieval was blocked and the complete table was not visually verified.",
+      "reportedResults": {
+        "poblacionRiverRichness": 41,
+        "bolusaoRiverRichness": 15,
+        "uniqueCombinedRichness": null,
+        "scope": "Two named rivers only; the poster says Lawaan has seven river systems.",
+        "samplingWindow": "October-November 2017 and January-February 2018"
+      },
+      "decision": "Keep river-specific richness values separate. Do not add 41 and 15 as a unique combined count or assume the poster's study shares a species list, stations, or sampling basis with project-level summaries."
+    }
+  ],
+  "crossSourceAssessment": {
+    "countDiscrepancy": "The project presentation metadata says 23 fish species; a June 2018 regional workshop report summarizes 45 fish species for Lawaan freshwater systems; the separate two-river poster reports 41 species for Poblacion and 15 for Bolusao. The values differ in date, source chain, aggregation, and potentially survey/site scope. No source provides the full crosswalk needed to determine whether these are changing interim/final results, overlapping studies, or different inventories.",
+    "statusProgressContext": "The March 2017 project accomplishment metadata says freshwater technical-report preparation was 15% complete at that reporting point. That status is earlier context only; it does not validate or refute any later count.",
+    "habitatScope": "Project summaries use the phrase freshwater systems, but the poster lacks station coordinates and salinity/tidal context and discusses migratory groups. Keep freshwater-only assignment unresolved for the poster's individual sites and taxa.",
+    "accessAndRights": "FASPS public metadata summaries can be reviewed without obtaining the gated files, but the underlying documents require login/register and survey completion. No item-specific license or derivative-data reuse permission was established for those documents. Do not bypass the gate or reproduce their underlying tables.",
+    "inventoryReadiness": "Aggregate and poster figures are discovery/context evidence only. There is no verified complete fish-name list, survey/station crosswalk, collection method/effort package, voucher list, or resolved count basis.",
+    "appReadiness": "Not ready for app-facing species inventory, occurrence, current presence, diet, catchability, safety, legal, or geography records."
+  },
+  "disposition": {
+    "newSourceReferencesAdded": 3,
+    "existingPosterSourceCrossReferenced": true,
+    "aggregateCountsRecordedAsResearchOnly": 3,
+    "normalizedTaxaAdded": 0,
+    "speciesAssertionsAdded": 0,
+    "occurrenceAssertionsAdded": 0,
+    "geometryAdded": 0,
+    "dietSafetyOrCatchabilityClaimsAdded": 0,
+    "publicAppRowsAdded": 0,
+    "publicationApproval": false,
+    "reason": "The available sources contain unresolved project-level and river-level richness counts, incomplete source access, no complete site-by-taxon dataset, and no established reuse permission."
+  },
+  "nextActions": [
+    "If a non-gated, rights-cleared final Lawaan freshwater technical report becomes available, reconcile its fish list and station/site scope against the 23- and 45-fish summaries and the Poblacion/Bolusao poster before normalizing any taxon.",
+    "Continue the Eastern Visayas freshwater sweep with distinct, openly inspectable waterbody studies; keep Leyte, Samar, and Biliran coverage states separate.",
+    "Do not submit a FASPS survey, create an account, or request restricted files without the user's explicit direction."
+  ],
+  "sources": [
+    {
+      "url": "https://www.philchm.ph/wp-content/uploads/2019/04/region8-1.pdf",
+      "supports": "Region 8 report pages 8-9: GDFI project context and the 45-fish aggregate attributed to the Lawaan freshwater systems presentation."
+    },
+    {
+      "url": "https://faspselib.denr.gov.ph/Materials/Detail/d9c37667-71ed-4090-9181-bb45fad82363",
+      "supports": "Public FASPS metadata/search-indexed summary of the 2017 conference presentation and its 23-fish freshwater-systems figure; underlying document remains authentication/survey gated."
+    },
+    {
+      "url": "https://faspselib.denr.gov.ph/Materials/Detail/21705e68-20f6-4d86-b861-03deff2e42af",
+      "supports": "Public FASPS metadata summary for the 2017 Lawaan project report, including the then-current 15% freshwater-report progress figure and gated preview/download."
+    },
+    {
+      "url": "https://www.researchgate.net/publication/369658922_FISH_COMPOSITION_AND_DISTRIBUTION_IN_THE_RIVERS_OF_LAWAAN_EASTERN_SAMAR_PHILIPPINES",
+      "supports": "Separate poster's two named river richness values and previously reviewed partial extracted table; not a complete visually verified crosswalk."
+    }
+  ]
+}
