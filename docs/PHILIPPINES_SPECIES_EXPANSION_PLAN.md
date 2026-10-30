@@ -2391,3 +2391,11 @@ Reviewed BFAR Region 8's inland-fisheries campaign article. It names six 2025 BA
 Added the six names as source-bounded discovery leads only in `national-visayas-eastern-visayas-bfar8-basil-inland-waters-2025-discovery-20261030.json` and registered one official source (413 total). No fish presence, species, geometry, stocking, safety/legal status, or public-app row was inferred. The absence of a named Southern Leyte target in this specific list does not indicate absence of inland waters or fish evidence there.
 
 **Next:** seek inspectable BFAR resource profiles or final monitoring outputs for the six sites, then review species and freshwater/brackish reach context separately. Keep the full six-province regional waterbody inventory open; these 2025 program targets are not a complete inventory.
+
+### National rollout step 288 - Ulot River Ludong repository-record crosswalk
+
+Found a Samar State University research-repository record for a 2025 study titled *Population Parameters of River Mullet “Ludong” (Cestraeus sp.) in Ulot River, Paranas, Samar, Philippines*. The searchable Gov-AIdeaS mirror exposes metadata and a truncated abstract that mentions FiSAT length-frequency analysis, but its canonical SSU-hosted URL could not be retrieved in this review and the complete details/file require registration according to the mirror. No account was created and no gated file was requested or downloaded.
+
+The record reports *Cestraeus* only to genus, so it does not resolve the 2023 Samar abstract conflict between *Cestraeus* sp. and *C. plicatilis*. Sampling dates/reaches, salinity context, effort, vouchers, uncertainty, the full analysis and reuse terms remain unknown. Logged it as a low-confidence bibliographic lead in `national-visayas-eastern-samar-ulot-cestraeus-population-research-lead-20261030.json` and the Samar crosswalk; registered one source reference (414 total). No species, occurrence, population-status, harvest, legal/safety, geometry or public-app claim was added.
+
+**Next:** verify the record through an independently confirmed SSU route and determine whether it is E-241's final report or a separate output. Continue the Eastern Visayas waterbody sweep while leaving the metadata and FiSAT claims research-only; do not register for gated details without explicit authorization.
