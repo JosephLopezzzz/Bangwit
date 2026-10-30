@@ -2179,3 +2179,11 @@ Ran a bounded GBIF occurrence search for the exact locality phrase `Lake Balanan
 Found an official BFAR Region VII eFOI lead titled for 2019–2021 Lake Balanan/Balinsasayao water-quality results, but its linked signed attachment had expired and direct retrieval returned HTTP 403. The public thread's reply also contains an apparent unrelated request description. Since the PDF itself could not be inspected, its data fields, completeness and terms remain unverified; it is not fish evidence or current safety information. A 2025 DOST-NRCP lake forum mentions Balanan stakeholder management discussions but supplies no fish survey results. Added `national-visayas-negros-balanan-fish-source-status-review-20261030.json` and three source references (364 total). No species, occurrence, coordinate, geometry, diet, safety alert, public app row, or completion count was added.
 
 **Next:** obtain an inspectable copy of the BFAR attachment and ask NORSU, BFAR Region VII or Lake Balanan/PAMB managers whether a fish assemblage survey, station list or voucher record exists. Keep water-quality, fish-presence and current-safety evidence separate.
+
+### National rollout step 266 - Lake Balanan iDigBio cross-provider screen
+
+Queried iDigBio's record API using its documented full-text field syntax. The `locality` search for “balanan” returned 159 rows (30 amphibians, 85 birds, 7 gastropods, 7 mammals and 30 reptiles). The all-fields search for “Lake Balanan” returned 67 rows (30 amphibians, 6 birds, 1 gastropod and 30 reptiles). No returned row was a fish. This provides no fish occurrence evidence and does not establish fish absence. iDigBio states its records stopped updating on 8 May 2026, so the index is also time-bounded.
+
+Added `national-visayas-negros-balanan-idigbio-locality-screen-20261030.json` and one source reference (365 total). No specimen row, species, occurrence, coordinate, geometry, diet, safety alert, public app row or completion count was added.
+
+**Next:** keep seeking a primary Balanan lake fish survey through public university, BFAR and protected-area sources; prioritize reports with dates, stations, methods, taxon identifications and voucher links. Continue the Negros/Siquijor freshwater source sweep without turning text-search zeros into biological absence claims.

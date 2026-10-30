@@ -3,7 +3,7 @@
   "checkedOn": "2026-10-30",
   "status": "research-only-source-registry",
   "scope": "National acquisition references, freshwater spatial-source leads, and CALABARZON/Central Luzon identity/source leads. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 364,
+  "sourceCount": 365,
   "sources": [
     {
       "id": "carumbana-siaton-river-limnology-fishery-report-2006",
@@ -11326,6 +11326,39 @@
       "caveats": [
         "The report does not provide Lake Balanan fish names, field methods, survey dates, stations, vouchers or abundance.",
         "No species, occurrence, coordinate, geometry, diet, safety alert, or public app row was added."
+      ]
+    },
+    {
+      "id": "idigbio-balanan-locality-specimen-screen-20261030",
+      "title": "iDigBio locality and all-fields specimen search for Lake Balanan",
+      "provider": "Integrated Digitized Biocollections (iDigBio)",
+      "url": "https://search.idigbio.org/v2/search/records/",
+      "additionalUrls": [
+        "https://github.com/iDigBio/idigbio-search-api/wiki/Query-Format",
+        "https://portal.idigbio.org/portal/search"
+      ],
+      "role": "Second-provider, bounded discovery search for digitized specimen records with Balanan locality text; not a fish survey, lake absence assessment or current inventory.",
+      "checkedOn": "2026-10-30",
+      "access": {
+        "status": "Locality full-text balanan returned 159 rows, all classed Amphibia, Aves, Gastropoda, Mammalia or Squamata; all-fields full-text Lake Balanan returned 67 rows, all non-fish. The portal says its records have not been updated since 2026-05-08.",
+        "reviewFiles": [
+          "national-visayas-negros-balanan-idigbio-locality-screen-20261030.json"
+        ],
+        "fullTextRetrieved": false
+      },
+      "reuse": {
+        "metadata": "Only API filters, result counts by indexed class, portal update notice and search limits are retained.",
+        "raw": "No specimen row or image is copied into the registry entry.",
+        "content": "No fish record was selected. Individual future specimen records require their own provider, dataset, record and rights review."
+      },
+      "publicationApproval": false,
+      "researchStatus": "negros-oriental;lake-balanan;idigbio-search;159-locality-text;67-all-fields-text;no-fish-row-selected;stale-after-2026-05-08;research-only",
+      "license": "No fish record selected; no fish-content license applies to this search summary",
+      "licenseUrl": null,
+      "caveats": [
+        "iDigBio's portal says its data are no longer updated after 2026-05-08, although its API was expected to remain operational through 2026.",
+        "Bounded text search is not a complete specimen inventory and a zero fish count is not biological absence.",
+        "No fish, occurrence, coordinate, geometry, diet, safety alert, or app row was added."
       ]
     }
   ],

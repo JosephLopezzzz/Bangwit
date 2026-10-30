@@ -1,0 +1,88 @@
+{
+  "schemaVersion": 1,
+  "checkedOn": "2026-10-30",
+  "status": "idigbio-bounded-locality-search-no-fish-records;research-only",
+  "waterbody": "Lake Balanan, Siaton, Negros Oriental",
+  "sourceIds": [
+    "gbif-balanan-exact-locality-screen-20261030",
+    "idigbio-balanan-locality-specimen-screen-20261030"
+  ],
+  "queries": [
+    {
+      "endpoint": "https://search.idigbio.org/v2/search/records/",
+      "query": "locality fulltext = balanan",
+      "total": 159,
+      "retrieved": 159,
+      "classCounts": {
+        "amphibia": 30,
+        "aves": 85,
+        "gastropoda": 7,
+        "mammalia": 7,
+        "squamata": 30
+      },
+      "fishRows": 0
+    },
+    {
+      "endpoint": "https://search.idigbio.org/v2/search/records/",
+      "query": "all indexed fields fulltext = Lake Balanan",
+      "total": 67,
+      "retrieved": 67,
+      "classCounts": {
+        "amphibia": 30,
+        "aves": 6,
+        "gastropoda": 1,
+        "squamata": 30
+      },
+      "fishRows": 0
+    }
+  ],
+  "interpretation": "Both bounded text searches returned only non-fish classes. A portal record for a historical CAS herpetology specimen independently demonstrates the exact locality phrase is used in iDigBio, but no fish record appeared in the reviewed query sets. This is not a fish-absence result or an exhaustive survey.",
+  "dataStatus": "The iDigBio portal announced that its records stopped being updated on 2026-05-08, while its API was expected to remain operational through 2026. These queries are a frozen discovery screen, not current or complete collection coverage.",
+  "decision": {
+    "publicAppAdmission": "hold",
+    "speciesAssertions": "none added",
+    "occurrenceAssertions": "none added",
+    "geometry": "not created",
+    "dietClaims": "none",
+    "safetyAlerts": "none",
+    "publicationApproval": false
+  },
+  "limitations": [
+    "Text-query results only reflect the indexed locality/all-fields strings and the iDigBio data snapshot available on the check date.",
+    "Coordinate-only, differently spelled, unindexed and post-snapshot specimens were not evaluated.",
+    "Records from different collection providers may be mirrored or duplicated; no row-level cross-provider reconciliation was performed because no fish row was found.",
+    "No fish names, occurrence records, coordinates, geometry, diet, safety alert or public app row was added."
+  ],
+  "disposition": {
+    "localityQueryRowsReviewed": 159,
+    "allFieldsQueryRowsReviewed": 67,
+    "fishRowsSelected": 0,
+    "speciesNamesAdded": 0,
+    "occurrenceAssertionsAdded": 0,
+    "publicAppRowsAdded": 0,
+    "publicationApproval": false
+  },
+  "nextActions": [
+    "Continue searches of primary university, BFAR and protected-area sources for an actual Lake Balanan fish assemblage or voucher list.",
+    "Treat any future nearby coordinates as candidate discovery only until the source locality, receiving waterbody and coordinate uncertainty are independently verified.",
+    "Do not convert this zero-fish text search into a lake absence claim."
+  ],
+  "references": [
+    {
+      "url": "https://search.idigbio.org/v2/search/records/",
+      "supports": "iDigBio record-query API used for the two bounded locality/all-fields text searches."
+    },
+    {
+      "url": "https://github.com/iDigBio/idigbio-search-api/wiki/Query-Format",
+      "supports": "Official API query syntax and AND behavior for field queries."
+    },
+    {
+      "url": "https://portal.idigbio.org/portal/search",
+      "supports": "Portal notice that the dataset stopped updating on 2026-05-08 and that API services were expected to remain operational through 2026."
+    },
+    {
+      "url": "https://portal.idigbio.org/portal/records/b4493388-f3da-43e1-8f52-a5f3f983b8d3",
+      "supports": "A CAS herpetology specimen record with locality Lake Balanan; it is not fish evidence."
+    }
+  ]
+}
