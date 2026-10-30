@@ -2267,3 +2267,13 @@ Found one additional taxon-level lead in a FishBase user-contributed photo: *Glo
 Added `national-visayas-eastern-visayas-leyte-macarthur-lake-bito-occurrence-leads-20261030.json` and two source records (392 total). No confirmed occurrence, species row, geometry, diet card or public-app content was added.
 
 **Next:** continue the public institutional search for the full Lake Bito thesis and its vouchers. If the species table remains inaccessible, move to other independently documented Leyte/Samar freshwater sites while preserving the *G. giuris* image only as an unresolved lead; do not infer the missing species from an aggregate count or stocked-aquaculture context.
+
+### National rollout step 275 - Burauen Lake Mahagnao historical fish-evidence review
+
+Reviewed the full 2001 SEAFDEC proceedings paper *Bathymetry and hydrobiology of Lake Mahagnao, Leyte*. It describes 122 GPS stations for bathymetry and plankton sampling at nine stations, not fish sampling. Its fish note is explicitly based on resident interviews and names broad catch groups—tilapia, freshwater eel, carp and mudfish—along with snails and freshwater shrimp. These are not scientific taxon names, counts, dated captures or vouchers. The paper calls for future fish-stock and fishing-effort research; its statement about annual fish kills and its tilapia-stocking discussion are historical source claims, not current safety or stocking advice.
+
+Screened every result in a GBIF occurrence query around the paper's Lake Mahagnao locator (1,331 records across five pages). The returned records covered birds, reptiles, insects, plants, invertebrates, mammals, amphibians, fungi and other non-fish groups; no record was classified as a fish. The search rectangle is not a lake/park boundary, and this limited database result is not evidence of fish absence. The 2013 SEAFDEC three-lake abstract also provides only historical monthly hydrology context, with no fish checklist.
+
+Added `national-visayas-eastern-visayas-leyte-burauen-lake-mahagnao-fish-evidence-review-20261030.json` and two new source records (394 total), and linked the 2013 three-lake record to this review. No scientific fish name, occurrence, geometry, diet card, current safety/legal claim or public-app row was added.
+
+**Next:** continue the Eastern Visayas freshwater sweep at distinct Leyte and Samar rivers/lakes. Revisit Lake Mahagnao only if an inspectable fish survey, scientific species list, or voucher crosswalk is found; do not turn its historical interview terms into taxonomic identifications.

@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "checkedOn": "2026-10-30",
+  "phaseId": "V4",
+  "regionId": "0800000000",
+  "status": "eastern-visayas;leyte;burauen-lake-mahagnao;historical-freshwater-fishery-lead;no-taxonomic-inventory;gbif-screened;research-only",
+  "question": "What fish-specific information can be responsibly extracted from the Lake Mahagnao literature and public occurrence screen?",
+  "sourceIds": [
+    "francisco-et-al-lake-mahagnao-bathymetry-hydrobiology-2001",
+    "jocson-costim-leyte-lakes-hydrology-seafdec-2013",
+    "gbif-lake-mahagnao-approximate-envelope-occurrence-screen-20261030"
+  ],
+  "waterbody": {
+    "name": "Lake Mahagnao",
+    "administrativeArea": "Burauen, Leyte, Eastern Visayas (Region VIII)",
+    "identityContext": "The lake is within the Mahagnao Volcano Natural Park area. Keep this lake and its catchment distinct from Lake Bito in MacArthur, Lake Danao in Ormoc City, and similarly named Mahagnao/Malagsum/Matigbao waterbodies.",
+    "coordinateAsPublished": "10° 52.15' N, 124° 51.32' E",
+    "coordinateRole": "The 2001 paper identifies a lake-level locator and says 122 GPS bathymetry stations were established; the inspected text does not give a fish-sampling station or fish occurrence point.",
+    "geometryDecision": "No occurrence geometry or lake polygon generated from the locator or the paper's map."
+  },
+  "primaryStudy": {
+    "citation": "Francisco, R. A., Pundavela, M. R., Granali, J. M., Tumabiene, L. A., Alpino, J. P., & Elmido, V. V. (2001). Bathymetry and hydrobiology of Lake Mahagnao, Leyte. In Conservation and Ecological Management of Philippine Lakes in Relation to Fisheries and Aquaculture, pp. 41-47. SEAFDEC Aquaculture Department, PCAMRD-DOST, and BFAR.",
+    "scopeAndMethods": "The authors describe lake topography/bathymetry and plankton diversity. They established 122 stations for lake bathymetry and collected plankton at nine stations; they did not conduct a fish taxonomic survey in the described methods.",
+    "fishInformation": "The paper says, explicitly based on interviews, that catches from the lake include tilapia, freshwater eel, carp, mudfish, snails and freshwater shrimps. These are broad common-name groups, not scientific identifications; the list does not give fish counts, capture dates, fishing locations, specimen vouchers or gear. Snails and shrimps are not fish.",
+    "additionalSourceClaim": "The article says annual fish kills were experienced at the time of the historical paper and recommends future fish-stock and fishing-effort work. Its recommendation is evidence of a research gap in that source, not a present-day fish-kill alert or current stock assessment.",
+    "taxonomicHold": "The 2001 paper also asserts that there are no endemic fishes and discusses stocking tilapia. This review does not adopt that blanket historical assertion as verified absence evidence or use it as modern stocking advice."
+  },
+  "2013HydrologyContext": {
+    "citation": "Jocson, T. C., & Costim, E. Y. (2013). Hydrological features of Lakes Bito, Mahagnao, and Danao in Leyte. LakeCon2011 proceedings, pp. 298-300. PCAARRD-DOST.",
+    "evidenceAvailable": "The SEAFDEC abstract includes Lake Mahagnao among three Leyte lakes in a one-year preliminary hydrology study with monthly depth, transparency, pH, temperature and dissolved oxygen measurements. It identifies Mahagnao as open-water fishery and gives historical summary ranges, but no fish names or fish sampling method.",
+    "limit": "Historical limnological measurements are not current water-quality or safety monitoring and do not establish a fish checklist."
+  },
+  "occurrenceScreen": {
+    "queryEnvelope": "POLYGON((124.82 10.83,124.89 10.83,124.89 10.90,124.82 10.90,124.82 10.83))",
+    "envelopeBasis": "A rectangular discovery window around the lake-level locator published in the SEAFDEC paper; not an official lake or park boundary.",
+    "recordsReturned": 1331,
+    "recordsExamined": 1331,
+    "classes": {
+      "Squamata": 129,
+      "Aves": 421,
+      "Insecta": 451,
+      "Liliopsida": 4,
+      "Gastropoda": 54,
+      "Magnoliopsida": 36,
+      "Arachnida": 7,
+      "Mammalia": 87,
+      "Marchantiopsida": 1,
+      "Bivalvia": 2,
+      "Lycopodiopsida": 32,
+      "Polypodiopsida": 70,
+      "Agaricomycetes": 7,
+      "Amphibia": 23,
+      "Malacostraca": 3,
+      "Gammaproteobacteria": 2,
+      "Lecanoromycetes": 1,
+      "Florideophyceae": 1
+    },
+    "fishClassRecordsReturned": 0,
+    "interpretation": "All 1,331 returned records in the bounded query were screened; none had a returned fish-class value. This is a GBIF search result only, not evidence that fish are absent from the lake or region and not an exhaustive record search."
+  },
+  "decision": {
+    "scientificFishNamesExtracted": 0,
+    "commonNameFishGroupsReportedSecondhand": [
+      "tilapia",
+      "freshwater eel",
+      "carp",
+      "mudfish"
+    ],
+    "invertebrateCatchGroupsNotedSeparately": [
+      "snails",
+      "freshwater shrimps"
+    ],
+    "independentSpeciesRowsAdded": 0,
+    "currentPresence": "not established",
+    "diet": "not studied for fish in these sources",
+    "geometry": "not created",
+    "currentSafetyOrLegalAdvice": "none",
+    "publicAppAdmission": "hold",
+    "publicationApproval": false,
+    "reason": "The fish names are interview-based common-name groups without taxa or vouchers; the 2001 field methods targeted bathymetry/plankton, while the later source and GBIF screen do not expose fish species records."
+  },
+  "limitations": [
+    "The interview-based catch names may refer to multiple species, stocked fish or local vernacular categories; no species mapping is made.",
+    "The historic annual fish-kill statement and old water-quality measurements cannot be presented as a current condition or warning.",
+    "The GBIF search uses a broad rectangular envelope, not a lake boundary, and a zero-fish result is not absence evidence.",
+    "No public taxonomic checklist, fish voucher collection, fish-specific station data or current survey was found in this pass."
+  ],
+  "nextAction": "Continue Eastern Visayas freshwater screening at separately identified Leyte and Samar rivers/lakes. Seek newer official fish survey/voucher evidence for Lake Mahagnao; do not convert the 2001 interview terms into species names or use the old tilapia-stocking discussion as advice."
+}
