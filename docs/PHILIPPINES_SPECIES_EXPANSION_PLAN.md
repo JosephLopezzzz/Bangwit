@@ -2227,3 +2227,23 @@ Cross-checked the 2021 ICFAS 6/AFSSRN F1 abstract, which reports an earlier Marc
 Added `national-visayas-eastern-visayas-ormoc-lake-danao-fish-assemblage-review-20261030.json` and two source records (380 total). No species assertion, occurrence row, current-presence claim, lake geometry, diet card, legal/safety guidance or public-app row was added. Ormoc's Lake Danao remains separate from Lake Danao in Polangui, Albay and Lake Danao on Pacijan Island, Cebu.
 
 **Next:** continue the freshwater sweep across the remaining Eastern Visayas lakes, rivers and streams, then reconcile sources by the region manifests. Crosswalk this study's eight names and search for newer fish sampling and voucher records; keep the 2021 conference abstract linked as a possible preliminary version, not an independent sample set.
+
+### National rollout step 271 - Lake Danao eight-name nomenclatural cross-check
+
+Cross-checked the article's eight printed scientific names against the current Eschmeyer's Catalog of Fishes. All eight names have valid current usages in the Catalog, so no source spelling or accepted-name string was changed. This only checks nomenclature; no specimen or Lake Danao occurrence was re-identified.
+
+Two source claims remain specifically held. The article calls *Clarias batrachus* native, while the Catalog says its known native range is Java and notes it is introduced elsewhere; this is a material locality/origin conflict that needs its voucher and expert review. The article calls *Cyprinus rubrofuscus* “koi”; CAS and WoRMS list *C. rubrofuscus* as valid, but USGS documents the complex, changing taxonomy of domesticated koi, so the article's common name cannot identify the voucher by itself. The paper's *Oreochromis niloticus* introduction-year discrepancy remains a separate historical-source issue.
+
+Added `national-visayas-eastern-visayas-lake-danao-eight-name-taxonomy-crosscheck-20261030.json` and three authority references (383 total). No article name was overwritten, no origin claim or specimen identity was approved, and no species, occurrence, diet or public-app row was added.
+
+**Next:** pursue the higher-risk voucher and origin questions for the Lake Danao *Clarias* and koi records, then resume the Eastern Visayas freshwater discovery sweep. Keep taxa with accepted names in the source ledger but out of the public projection until evidence and reuse review are complete.
+
+### National rollout step 272 - Ormoc Lake Danao catchment and overlapping-study audit
+
+Reviewed the official VSU landing page for the 2007 freshwater guide titled for Tubod River, Lake Danao and the Inawasan River outlet. Its abstract reports 21 fish species, including 18 in Tubod River and one in Inawasan River, but does not expose the full list or allocate the other species by waterbody. The 2023 Lake Danao paper cites that guide for historical *Cyprinus carpio* and *Clarias batrachus* presence; because the primary guide PDF and its species-by-site details were not retrievable in this pass, those remain secondary cross-citations rather than independently checked occurrence rows. The guide's VSU record displays CC BY-NC-SA 4.0; no article content was copied.
+
+Reviewed the full 2025 *Glossogobius giuris* population study. It reports 867 fish from landed catches sampled in March 2021-February 2022, a period overlapping the 2023 Lake Danao study, and shares three authors with that article. The publications are distinct, but no specimen crosswalk proves independent samples; do not combine 867 with the 1,462 catch total or count it as a second independent locality survey. The paper's locator coordinate is not a station-level species location, and its diet statements are sourced discussion rather than a new Lake Danao gut-content analysis.
+
+Also found a completed FiBRe project listing at UP Tacloban and a DOST-NRCP page that still says “Ongoing” despite listing a 2020-2022 project period. Neither reviewed page exposed the final fish dataset or voucher catalog. Added `national-visayas-eastern-visayas-ormoc-lake-danao-catchment-and-overlap-review-20261030.json` and four source records (387 total). No current presence, new species row, combined catch count, diet, geometry, or public-app record was added.
+
+**Next:** search official institutional repositories and public collection catalogs for the full 2007 guide, the completed FiBRe report, and voucher accessions. Keep the Ormoc Lake Danao cluster distinct from same-named lakes elsewhere, then continue to the next Eastern Visayas freshwater waterbody with inspectable source data.
