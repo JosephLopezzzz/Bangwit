@@ -2307,3 +2307,13 @@ The source highlights selected names and migration/distribution claims, includin
 ResearchGate flags that poster content may be subject to copyright; no item-specific reuse permission was found. Added `national-visayas-eastern-visayas-eastern-samar-lawaan-river-fish-poster-review-20261030.json` and one source reference (403 total). No species assertion, occurrence, geometry, diet, safety/legal/catchability claim, or public-app row was added.
 
 **Next:** seek the full author-approved species list, exact station/reach and salinity context, field effort, voucher identifiers, and reuse terms; keep Poblacion and Bolusao separate. Continue the Eastern Visayas sweep across Leyte, Samar, and Biliran waters; this two-river poster does not complete Samar or Eastern Visayas coverage.
+
+### National rollout step 279 - Leyte Gulf 2020 demersal trawl assessment
+
+Reviewed the 2024 BFAR-authored journal article and full PDF. Its survey sampled 19 marine trawl stations in Leyte Gulf from 24 April to 8 May 2020, across waters by Leyte and Eastern Samar. The paper reports 4.22 tonnes and about 33,839 individuals; its 230 identified species include 202 fishes plus cephalopods, crustaceans, echinoderms, and molluscs. Fourteen samples (5.74%) remained unidentified. Selected leading fish names include *Photopectoralis bindus* (25.49%), *Gazza minuta* (7.42%), and *Pentaprion longimanus* (5.80%).
+
+The paper provides 19 tow start/end coordinates and station-level depth, speed, and drag duration, but these are research tow tracks—not municipal-water limits or suggested fishing spots. The survey is short, historical, marine, demersal, and gear-specific. The article page says downloadable data are not yet available; a full fish species-by-station machine-readable table was not located. The article carries a CC BY-NC 4.0 license; no raw dataset terms were available. Its discussion of older trawl rules is not used as a current legal statement.
+
+Added `national-visayas-leyte-gulf-2020-demersal-trawl-stock-assessment-review-20261030.json` and one source reference (404 total). No species assertion, occurrence, geometry, diet, safety/legal/catchability claim, or public-app row was added. This marine assessment remains separate from Leyte/Samar inland-water studies.
+
+**Next:** seek the official BFAR survey dataset or full species-by-station table, identification/voucher details, and data reuse terms; do not send an inquiry without explicit authorization. Continue the Eastern Visayas sweep across freshwater, brackish, estuary, reef, and open-marine sources; the Leyte Gulf trawl does not complete coverage.
