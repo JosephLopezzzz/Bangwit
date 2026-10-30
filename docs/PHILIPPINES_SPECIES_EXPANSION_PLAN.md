@@ -2297,3 +2297,13 @@ The only reported species-level string in the abstract is “Ambacis miops,” a
 Added `national-visayas-eastern-visayas-leyte-dupon-river-fish-abstract-review-20261030.json` and three source references (402 total). No species assertion, occurrence, geometry, diet, safety/legal/catchability claim or public-app row was added.
 
 **Next:** seek the full Dupon paper and ask its author to confirm the printed taxon string against diagnostics or vouchers, with dates, effort, reach-by-taxon results and reuse terms. Keep estuary and upstream freshwater evidence separate; continue the Eastern Visayas freshwater sweep.
+
+### National rollout step 278 - Lawaan Poblacion and Bolusao Rivers poster review
+
+Reviewed Jonh Rey L. Gacura's author-uploaded poster record for the 5th Undergraduate Research Symposium (May 2018). It describes sampling in Poblacion and Bolusao Rivers, Lawaan, Eastern Samar, during October-November 2017 and January-February 2018, using double gill nets, spears, and hooks-and-lines. The poster reports 205 individuals and 41 species for Poblacion, and 54 individuals and 15 species for Bolusao, with a between-river similarity index of 0.39. Do not add those separate richness values into a unique combined species count.
+
+The source highlights selected names and migration/distribution claims, including *Eubleekeria jonesi* and *Ambassis interrupta*, but this pass did not validate a complete species-by-river list, reach crosswalk, field effort, or vouchers. The poster says Lawaan has seven river systems but reports only these two. Although the poster frames its work as freshwater research, it gives no station coordinates or salinity/tidal context and discusses migratory categories including oceanodromous; therefore do not treat every reported fish as confirmed freshwater-only. This is a separate Lawaan study, not part of the Samar Island Natural Park nine-river project.
+
+ResearchGate flags that poster content may be subject to copyright; no item-specific reuse permission was found. Added `national-visayas-eastern-visayas-eastern-samar-lawaan-river-fish-poster-review-20261030.json` and one source reference (403 total). No species assertion, occurrence, geometry, diet, safety/legal/catchability claim, or public-app row was added.
+
+**Next:** seek the full author-approved species list, exact station/reach and salinity context, field effort, voucher identifiers, and reuse terms; keep Poblacion and Bolusao separate. Continue the Eastern Visayas sweep across Leyte, Samar, and Biliran waters; this two-river poster does not complete Samar or Eastern Visayas coverage.
