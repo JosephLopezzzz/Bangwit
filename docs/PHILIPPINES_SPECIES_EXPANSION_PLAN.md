@@ -2008,3 +2008,12 @@ Re-read the publisher article's four GPS site coordinates and converted its degr
 Added `national-visayas-panay-bugang-coordinate-crosscheck-20261030.json` and one official EMB reference (337 total). The record retains all original coordinate strings and marks converted EMB positions as datum-uncertain. No river line, reach polygon, occurrence, or public-app feature was added. This verifies coordinate parsing and supplies a useful independent place check, but not survey-grade validation, a complete river geometry, current species presence, or fishing suitability.
 
 **Next:** build a non-public, source-faithful reach-by-taxon ledger for the four Bugang article sites, preserving original names, dates, taxon rank, site flags and pending classification fields. Do not infer a species occurrence outside those sampled reaches or current presence. Continue the separate Panay and Guimaras river, lake, estuary and wetland source sweep.
+
+
+### National rollout step 246 - Bugang River historical reach-by-taxon ledger
+
+Built `national-visayas-panay-bugang-historical-reach-taxon-ledger-20261030.json` from the reviewed article table, its CoL XR crosswalk, the independent taxonomy check and the station-coordinate check. The ledger keeps all 38 source names, the three genus-only entries and all 67 taxon/reach links. Its per-site counts reconcile to the article's HS 13, UM 8, LM 16 and DS 30. Each taxonomy proposal is explicitly separate from the source identification; the Apogon hyalosoma genus conflict remains held, and the family wording printed for Zenarchopterus dispar remains unchanged.
+
+The ledger is non-public research provenance, not an app projection. It adds no current-presence or whole-river claim, no species or occurrence assertion, no geometry, and no public-app row. Attribution is preserved; the article's Creative Commons Attribution license version is still unspecified, and publication approval remains false. The ledger is listed in the existing Bugang article's source review files; no source reference was added (337 total).
+
+**Next:** prepare a separate historical-display eligibility decision for this ledger, including taxonomy holds, specimen-identification limits, attribution/version status, date wording and whether four study-site points can be displayed without suggesting a whole-river range. Keep all entries non-public until that decision is complete. Continue Panay/Guimaras inland-water research in parallel so this single study does not become a regional-coverage proxy.
