@@ -3,7 +3,7 @@
   "checkedOn": "2026-10-30",
   "status": "research-only-source-registry",
   "scope": "National acquisition references, freshwater spatial-source leads, and CALABARZON/Central Luzon identity/source leads. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 359,
+  "sourceCount": 361,
   "sources": [
     {
       "id": "carumbana-siaton-river-limnology-fishery-report-2006",
@@ -11167,6 +11167,70 @@
         "The 2018 paper attributes waste and sewage context to this study, but its findings must not be generalized to current water quality or to all of Ilog-Hilabangan.",
         "Do not use this citation alone as a species list, occurrence record, current safety alert, or regional completion count.",
         "No species names, occurrence assertions, map geometry, diet, or public app rows were added."
+      ]
+    },
+    {
+      "id": "siaton-usnm-catalog-number-gbif-crosscheck-20261030",
+      "title": "GBIF exact institution and catalogue-number cross-check for 15 Siaton USNM lots",
+      "provider": "Global Biodiversity Information Facility (GBIF)",
+      "url": "https://api.gbif.org/v1/occurrence/search",
+      "additionalUrls": [
+        "https://techdocs.gbif.org/en/openapi/v1/occurrence"
+      ],
+      "role": "Bounded exact-pair search to reconcile 15 numeric USNM catalogue identifiers cited in the Siaton section of the 2010 Negros–Siquijor checklist. It does not establish specimen absence or fish absence.",
+      "checkedOn": "2026-10-30",
+      "access": {
+        "status": "15 exact institutionCode=USNM and catalogNumber searches returned HTTP 200 and zero records each; unfiltered numeric catalogue-number matches were unrelated and excluded.",
+        "reviewFiles": [
+          "national-visayas-negros-siaton-usnm-catalog-crosscheck-20261030.json"
+        ],
+        "fullTextRetrieved": false
+      },
+      "reuse": {
+        "metadata": "Documented endpoint, exact filter fields, checked date and aggregate result counts.",
+        "raw": "No GBIF record or raw response was selected or republished.",
+        "content": "Zero-result API evidence is not a species occurrence, a biological absence record, or a license for checklist content. Any future GBIF match requires record- and dataset-level review."
+      },
+      "publicationApproval": false,
+      "researchStatus": "negros-oriental;siaton-river;usnm-catalog-number-audit;15-exact-pair-queries;zero-gbif-matches;research-only",
+      "license": "No occurrence record selected; no content license applies to this negative query result",
+      "licenseUrl": null,
+      "caveats": [
+        "Numeric catalogue numbers alone are not globally unique; unfiltered numeric hits returned unrelated records.",
+        "A zero result reflects GBIF's indexed fields and sources only, not collection or biological absence.",
+        "No species, occurrence, coordinate, geometry, diet, safety alert, or app row was added."
+      ]
+    },
+    {
+      "id": "siaton-usnm-fishes-collection-search-20261030",
+      "title": "Smithsonian NMNH Division of Fishes online search for 15 Siaton USNM lots",
+      "provider": "Smithsonian National Museum of Natural History, Division of Fishes",
+      "url": "https://collections.nmnh.si.edu/search/fishes/",
+      "additionalUrls": [
+        "https://naturalhistory.si.edu/research/idsc/data-access"
+      ],
+      "role": "Official public-catalog cross-check of 15 numeric USNM catalogue identifiers cited in the Siaton section of the 2010 Negros–Siquijor checklist; no record content was returned.",
+      "checkedOn": "2026-10-30",
+      "access": {
+        "status": "Official NMNH Fishes search returned zero records for the combined 15-number query and the single-number 385600 check. The catalog explicitly notes incomplete online holdings.",
+        "reviewFiles": [
+          "national-visayas-negros-siaton-usnm-catalog-crosscheck-20261030.json"
+        ],
+        "fullTextRetrieved": false
+      },
+      "reuse": {
+        "metadata": "Only search procedure, catalogue identifiers, result count and the official catalog's coverage caveat are retained.",
+        "raw": "No catalog record was returned, selected or copied.",
+        "content": "No specimen-level license or publication approval is inferred from an empty catalog query; future records require item- and field-level rights review."
+      },
+      "publicationApproval": false,
+      "researchStatus": "siaton-river;usnm-catalog-audit;nmnh-public-search-zero;hold-unindexed-lots-possible;research-only",
+      "license": "No specimen record selected; no content license verified",
+      "licenseUrl": null,
+      "caveats": [
+        "NMNH states that only part of its holdings are available online; zero search results do not show that the physical lots are absent.",
+        "The source checklist's historical locality and lot references are not a current occurrence or whole-river inventory.",
+        "No species, occurrence, coordinate, geometry, diet, safety alert, or app row was added."
       ]
     }
   ],

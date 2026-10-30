@@ -2163,3 +2163,11 @@ Reviewed the cited 2006 Carumbana Siaton River report through later publications
 For Lake Balanan, reviewed Oracion and Hiponia's 2009 community/ecotourism paper. Its nonprobability household interviews report local fishing and common catch categories, but do not provide taxonomic identifications, sampling stations, effort, dates by taxon or vouchers. This is livelihood context, not a fish inventory. Added `national-visayas-negros-siaton-balanan-fish-source-status-review-20261030.json` and two source records (359 total); corrected one source record and the earlier checklist access note. No species names, occurrence, geometry, diet, safety alert or app row was added.
 
 **Next:** obtain the Carumbana 2006 report if available; otherwise reconcile named Siaton USNM lots in the 2010 checklist against museum/GBIF records. Seek a separate primary fish survey for Lake Balanan and keep household catch labels out of the species inventory.
+
+### National rollout step 264 - Siaton USNM catalogue-number cross-check
+
+Screened 15 numeric USNM lot identifiers cited in the Siaton section of the publisher-hosted 2010 Negros–Siquijor checklist against GBIF and the official Smithsonian NMNH Division of Fishes catalog. Fifteen GBIF queries using the exact pair `institutionCode=USNM` plus one `catalogNumber` each returned zero records. An unfiltered number-only check returned unrelated non-fish occurrences for the same numeric values, confirming that a numeric catalog number cannot be used alone as a match. The official NMNH Fishes query returned zero online records for the 15-number batch and for a single-number control.
+
+This is a bounded negative online-index result, not specimen or biological absence: NMNH warns that its online catalog covers only part of its collection. Added `national-visayas-negros-siaton-usnm-catalog-crosscheck-20261030.json` and two source references (361 total). No fish list, occurrence, coordinates, geometry, diet, safety alert, public app row, or regional completion count was added. No checklist reuse right was established.
+
+**Next:** request a direct NMNH lot confirmation and the original Carumbana 2006 Siaton report/crosswalk from NORSU or the author. In parallel, locate a primary Lake Balanan fish survey or BFAR/DENR fisheries source; continue keeping household catch labels separate from scientific species evidence.

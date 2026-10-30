@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "checkedOn": "2026-10-30",
+  "status": "bounded-catalog-crosscheck-no-online-record-matches-research-only",
+  "scope": "Cross-check of 15 numeric USNM catalogue identifiers explicitly listed in the Siaton material of the 2010 Negros–Siquijor checklist. This is an online-index check, not confirmation that the physical lots do not exist.",
+  "sourceIds": [
+    "bucol-carumbana-2010-negros-siquijor-fresh-brackish-checklist",
+    "siaton-usnm-catalog-number-gbif-crosscheck-20261030",
+    "siaton-usnm-fishes-collection-search-20261030"
+  ],
+  "catalogueBatch": {
+    "catalogNumbers": [
+      "385600",
+      "385602",
+      "385461",
+      "385603",
+      "385443",
+      "385444",
+      "385605",
+      "385606",
+      "385450",
+      "385455",
+      "384350",
+      "385449",
+      "385460",
+      "385457",
+      "385453"
+    ],
+    "checklistScope": "The publisher-hosted checklist lists selected Siaton collection/catalogue numbers from a four-station collection made May 2004 to October 2005. The published numbers are retained here only to make the bounded search reproducible.",
+    "gbif": {
+      "endpoint": "https://api.gbif.org/v1/occurrence/search",
+      "parametersPerRequest": "institutionCode=USNM, catalogNumber=<one exact numeric ID>, limit=10",
+      "requests": 15,
+      "httpStatus": 200,
+      "resultCountByRequest": 0,
+      "totalMatchedRecords": 0,
+      "interpretation": "No GBIF result matched the exact USNM institution-code and catalogue-number pair for any of the 15 requests. A search on catalogue number alone is ambiguous: for example, unfiltered GBIF searches for 385600 and 385602 returned unrelated non-fish occurrences with the same numeric catalogNumber. Those rows were excluded."
+    },
+    "nmnh": {
+      "endpoint": "https://collections.nmnh.si.edu/search/fishes/",
+      "query": "One official NMNH query-string search for all 15 catalogue numbers, followed by a single-number check for 385600.",
+      "httpStatus": 200,
+      "totalRecords": 0,
+      "interpretation": "The official online Division of Fishes search returned no digitized record for this exact batch. NMNH cautions that its online catalog contains only part of its holdings, so zero online matches do not show that the cited physical specimens are absent from the collection."
+    }
+  },
+  "decision": {
+    "museumReconciliation": "unresolved; no online record matched",
+    "use": "Retain the 2010 checklist's cited catalogue numbers as historical acquisition leads only. Ask the authors/NORSU or NMNH staff for a report-to-voucher crosswalk or catalog confirmation if the primary 2006 Siaton report remains unavailable.",
+    "publicAppAdmission": "hold",
+    "speciesAssertions": "none added",
+    "occurrenceAssertions": "none added",
+    "geometry": "not created",
+    "dietClaims": "none",
+    "currentSafetyAlert": "none",
+    "regionalCompletionCount": "none",
+    "publicationApproval": false,
+    "reason": "GBIF's exact institution/catalogue-number searches and NMNH's public fish catalog did not expose records for this bounded batch. The 2010 checklist is a secondary publication relative to the cited lots and is not a rights-cleared or independently reconciled current inventory."
+  },
+  "limitations": [
+    "The numeric catalogue identifier is not unique by itself; unfiltered GBIF matches can refer to unrelated institutions, taxa and countries.",
+    "Zero GBIF indexed matches are not evidence that the physical specimens do not exist or that fish are absent from Siaton River.",
+    "The NMNH online search covers only a portion of holdings; unindexed, legacy, differently formatted or not-yet-digitized lots may not appear.",
+    "Historical specimen dates and checklist locality labels do not establish current presence, abundance, catchability, legality, diet, safety or whole-river range.",
+    "No species-name list, occurrence row, coordinate, geometry, diet row, alert or public app row was added; the numeric batch exists only as a reconciliation audit.",
+    "No reuse license or publication approval was established for the 2010 checklist or any structured derivative."
+  ],
+  "disposition": {
+    "catalogueNumbersScreened": 15,
+    "gbifExactPairRequests": 15,
+    "gbifExactPairMatches": 0,
+    "nmnhOnlineMatches": 0,
+    "unfilteredGbifNumbersUsedAsEvidence": 0,
+    "speciesNamesAdded": 0,
+    "occurrenceAssertionsAdded": 0,
+    "publicAppRowsAdded": 0,
+    "publicationApproval": false
+  },
+  "nextActions": [
+    "If possible, request NMNH staff confirmation of the 15 lots by numeric USNM catalogue number and their associated locality labels; the online database is incomplete.",
+    "Ask NORSU PREXIL and the author for Carumbana's 2006 Siaton report and its voucher-number crosswalk.",
+    "Continue a separate search for primary Lake Balanan fish survey or BFAR/DENR fisheries material; do not convert household catch labels into taxon occurrences."
+  ],
+  "references": [
+    {
+      "url": "https://asianscientificjournal.com/new/publication/index.php/ajob/article/download/104/1780",
+      "supports": "The publisher-hosted 2010 checklist and its selected Siaton locality/catalogue-number statements."
+    },
+    {
+      "url": "https://techdocs.gbif.org/en/openapi/v1/occurrence",
+      "supports": "GBIF Occurrence API indexed occurrence search and catalogue/institution fields used for the exact-pair queries."
+    },
+    {
+      "url": "https://collections.nmnh.si.edu/search/fishes/",
+      "supports": "Official Smithsonian Division of Fishes search syntax and its notice that only part of the holdings are listed online."
+    }
+  ]
+}
