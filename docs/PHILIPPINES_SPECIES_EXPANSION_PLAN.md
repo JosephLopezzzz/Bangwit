@@ -2257,3 +2257,13 @@ The accessible thesis-index entry and conference abstract give aggregate results
 Added `national-visayas-eastern-visayas-leyte-macarthur-lake-bito-study-crosswalk-20261030.json` and three source records (390 total). No species names, occurrence rows, current-presence claims, diet cards, geometry or public-app records were added. Item-specific reuse terms for the thesis and conference abstract were not established; publication remains unapproved.
 
 **Next:** search official VSU and UPLB repositories and public specimen catalogs for the full Lake Bito thesis, taxon list, methods and voucher accessions. Keep the nine-species aggregate as an unresolved study lead; continue other Leyte/Samar freshwater screening without converting the abstract into a checklist.
+
+### National rollout step 274 - Lake Bito public occurrence and photo-lead screen
+
+Ran a bounded GBIF occurrence API query for a rectangular discovery envelope around Lake Bito (68 records, limited to the returned page). The results were 59 birds, four insects, two flowering plants, one gastropod, one fern and one arachnid; none was classified in the fish groups screened. This is a narrow database/query result, not evidence that Lake Bito has no fish. The rectangle is not an official lake polygon or a survey boundary.
+
+Found one additional taxon-level lead in a FishBase user-contributed photo: *Glossogobius giuris*, locality listed as Lake Bito, Macarthur, Leyte, uploaded by the 2023 thesis author. The FishBase page says identification is supplied by the uploader. It gives no collection date, length, specimen accession or crosswalk to the thesis study; the contributor match makes it a useful retrieval clue, not independent identification or a confirmed species row. No image was copied, and individual image terms were not cleared.
+
+Added `national-visayas-eastern-visayas-leyte-macarthur-lake-bito-occurrence-leads-20261030.json` and two source records (392 total). No confirmed occurrence, species row, geometry, diet card or public-app content was added.
+
+**Next:** continue the public institutional search for the full Lake Bito thesis and its vouchers. If the species table remains inaccessible, move to other independently documented Leyte/Samar freshwater sites while preserving the *G. giuris* image only as an unresolved lead; do not infer the missing species from an aggregate count or stocked-aquaculture context.

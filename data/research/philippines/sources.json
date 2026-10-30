@@ -3,7 +3,7 @@
   "checkedOn": "2026-10-30",
   "status": "research-only-source-registry",
   "scope": "National acquisition references, freshwater spatial-source leads, and CALABARZON/Central Luzon identity/source leads. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 390,
+  "sourceCount": 392,
   "sources": [
     {
       "id": "carumbana-siaton-river-limnology-fishery-report-2006",
@@ -12093,6 +12093,72 @@
         "Nile tilapia fish pens/cages in the historical lake-use description do not establish a wild occurrence record or the identity of fish in the later thesis study.",
         "The one-year historical hydrology observations are not current water-quality or safety monitoring.",
         "No species row, diet, occurrence geometry, legal guidance, catchability advice or public-app content was added."
+      ]
+    },
+    {
+      "id": "gbif-lake-bito-approximate-envelope-occurrence-screen-20261030",
+      "title": "GBIF occurrence API search for an approximate Lake Bito discovery envelope",
+      "provider": "Global Biodiversity Information Facility",
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&geometry=POLYGON%28%28124.95%2010.76%2C125.02%2010.76%2C125.02%2010.82%2C124.95%2010.82%2C124.95%2010.76%29%29&limit=300",
+      "role": "Bounded discovery screen of GBIF occurrence records around Lake Bito; returned 68 mixed-taxon records and no fish-class records in the selected response, so it is a search log rather than evidence of fish absence.",
+      "checkedOn": "2026-10-30",
+      "sourceYear": 2026,
+      "citation": "Global Biodiversity Information Facility. Occurrence search API, query for country PH and rectangular envelope 124.95-125.02 E, 10.76-10.82 N, reviewed 30 October 2026.",
+      "access": {
+        "status": "API query retrieved directly. The 68 returned records were screened by the returned taxonomic class fields; classes were Aves (59), Insecta (4), Magnoliopsida (2), Gastropoda (1), Polypodiopsida (1) and Arachnida (1); no screened fish-class record appeared.",
+        "reviewFiles": [
+          "national-visayas-eastern-visayas-leyte-macarthur-lake-bito-occurrence-leads-20261030.json"
+        ],
+        "fullTextRetrieved": true
+      },
+      "reuse": {
+        "metadata": "Query parameters, response count and taxonomic-class summary retained for a reproducible discovery note.",
+        "raw": "No GBIF occurrence payload or media copied into the app or public species files.",
+        "content": "No record-level dataset license was evaluated because no fish occurrence row was selected; any future record reuse requires record- and dataset-level license review."
+      },
+      "publicationApproval": false,
+      "researchStatus": "eastern-visayas;leyte;macarthur-lake-bito;gbif-bounded-screen;zero-fish-in-query;not-absence-evidence;research-only",
+      "license": "GBIF API discovery query; record-level licenses vary by dataset and were not applicable to a selected fish record in this screen",
+      "licenseUrl": "https://www.gbif.org/terms",
+      "caveats": [
+        "The rectangle is a discovery window, not an official lake or watershed polygon and not a station-level search boundary.",
+        "No fish returned in this one query is not evidence of absence or a complete Lake Bito inventory.",
+        "No species, occurrence, current presence, geometry, diet, safety, legal catchability or app row was added."
+      ]
+    },
+    {
+      "id": "fishbase-glossogobius-giuris-lake-bito-tenio-photo-lead",
+      "title": "FishBase user-contributed photo locality lead for Glossogobius giuris at Lake Bito",
+      "provider": "FishBase",
+      "url": "https://fishbase.se/photos/UploadedBy.php?autoctr=40991&win=uploaded",
+      "additionalUrls": [
+        "https://www.fishbase.se/photos/thumbnailssummary.php?ID=4833"
+      ],
+      "role": "Undated, user-contributed photograph page labels the fish Glossogobius giuris and gives Lake Bito, Macarthur, Leyte as its locality; the page attributes the identification to the uploader, not independent expert validation.",
+      "checkedOn": "2026-10-30",
+      "sourceYear": null,
+      "citation": "FishBase photo record (autoctr 40991), species gallery for Glossogobius giuris; locality and contributor metadata reviewed 30 October 2026.",
+      "access": {
+        "status": "Search-indexed photo metadata and the FishBase species gallery entry reviewed. The locality is Lake Bito, Macarthur, Leyte; uploader is Kit Felian C. Tenio, also the lead author of the Lake Bito thesis index and conference abstract. No date, length, voucher/catalogue number or crosswalk to the thesis sampling event was displayed.",
+        "reviewFiles": [
+          "national-visayas-eastern-visayas-leyte-macarthur-lake-bito-occurrence-leads-20261030.json"
+        ],
+        "fullTextRetrieved": false
+      },
+      "reuse": {
+        "metadata": "Taxon label, locality, contributor attribution and missing-field caveats retained as a research lead.",
+        "raw": "No image downloaded, copied, embedded or distributed.",
+        "content": "The photo-page text describes noncommercial reuse with attribution, while gallery metadata identifies an individual-photo license link; exact image terms and Bangwit compatibility were not resolved."
+      },
+      "publicationApproval": false,
+      "researchStatus": "eastern-visayas;leyte;lake-bito;glossogobius-giuris;user-contributed-photo;uploader-identification;undated;voucher-unresolved;research-only",
+      "license": "Individual image rights not cleared; photo page includes noncommercial and attribution language; no image reuse approved",
+      "licenseUrl": null,
+      "caveats": [
+        "FishBase notes that photo identification is provided by the uploader; the record is not an independent taxonomic validation or a physical specimen voucher.",
+        "No collection date, fish length, accession number or link to Tenio's nine-species thesis dataset was found.",
+        "Do not treat this user image alone as a confirmed waterbody occurrence or add Glossogobius giuris to the public app checklist.",
+        "The photograph itself was not reused; no current presence, diet, geometry, safety, legal or catchability claim was generated."
       ]
     }
   ],

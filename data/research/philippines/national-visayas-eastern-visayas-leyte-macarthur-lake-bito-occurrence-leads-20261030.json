@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "checkedOn": "2026-10-30",
+  "phaseId": "V4",
+  "regionId": "0800000000",
+  "status": "eastern-visayas;leyte;macarthur-lake-bito;occurrence-discovery-screen;user-photo-taxonomy-lead;not-confirmed;research-only",
+  "question": "Do public occurrence and image indexes expose inspectable species-level Lake Bito evidence beyond the aggregate study abstract?",
+  "sourceIds": [
+    "gbif-lake-bito-approximate-envelope-occurrence-screen-20261030",
+    "fishbase-glossogobius-giuris-lake-bito-tenio-photo-lead"
+  ],
+  "searches": {
+    "gbif": {
+      "endpoint": "https://api.gbif.org/v1/occurrence/search",
+      "queryParameters": {
+        "country": "PH",
+        "geometry": "POLYGON((124.95 10.76,125.02 10.76,125.02 10.82,124.95 10.82,124.95 10.76))",
+        "limit": 300
+      },
+      "resultCount": 68,
+      "resultClassCounts": {
+        "Aves": 59,
+        "Insecta": 4,
+        "Magnoliopsida": 2,
+        "Gastropoda": 1,
+        "Polypodiopsida": 1,
+        "Arachnida": 1
+      },
+      "fishClassRecordsReturned": 0,
+      "interpretation": "The selected rectangular discovery envelope returned a mixed set of 68 records and no records classified in the fish groups screened. This is only the output of this bounded GBIF query, not evidence of fish absence, a lake inventory or a statement about the wider Lake Bito watershed.",
+      "geometryBoundary": "The WKT is a search window only. It is not an official Lake Bito polygon, sampling boundary, municipal boundary or environmental/legal boundary."
+    },
+    "fishbasePhoto": {
+      "taxonAsListed": "Glossogobius giuris",
+      "localityAsListed": "Lake Bito, Macarthur, Leyte, Philippines",
+      "contributor": "Kit Felian C. Tenio, also first author of the 2023 thesis listing and 2025 conference abstract",
+      "dateAndLength": null,
+      "voucherOrAccession": null,
+      "identificationAuthority": "The FishBase photo page states that identification is given by the photo uploader; this is not independent expert verification or a specimen re-identification.",
+      "relationshipToThesis": "The author match and locality make the image a plausible clue to a taxon represented in the author's Lake Bito fieldwork, but the page provides no date or explicit project/sample crosswalk. Do not claim it is one of the nine thesis taxa without primary confirmation.",
+      "imageReuse": "No image was downloaded or reused. The photo-page text describes noncommercial copying with attribution; the applicable individual-image terms and Bangwit's reuse compatibility remain unresolved."
+    }
+  },
+  "decision": {
+    "newConfirmedFishOccurrences": 0,
+    "taxonSpecificResearchLeads": 1,
+    "speciesRowsAdded": 0,
+    "geometryAdded": 0,
+    "publicAppAdmission": "hold",
+    "publicationApproval": false,
+    "reason": "The GBIF envelope yielded no fish records, while the single taxon-labelled image is user-contributed, undated, lacks voucher details and has no demonstrated relation to the thesis sampling event."
+  },
+  "limitations": [
+    "A no-result or non-fish result from one GBIF rectangle is not evidence of absence; records may be missing, georeferenced differently, stored in other repositories or outside the selected envelope.",
+    "The rectangle is intentionally broader than a point but is not an authoritative hydrological or municipal-water boundary.",
+    "FishBase displays the photo identification as the uploader's identification and omits a collection date, length and voucher/catalogue identifier for this locality entry.",
+    "The photo's contributor is also the thesis author, but no document crosswalk says that the photo depicts a specimen from the thesis study.",
+    "The exact thesis taxon list, species-level effort, voucher accessions and current-presence evidence remain unavailable from the reviewed public records."
+  ],
+  "nextAction": "Continue seeking the full UPLB SESAM thesis and specimen crosswalk through accessible public institutional catalogs. If they remain unavailable, retain the Glossogobius image as a non-confirmed lead and move to independently documented Lake Bito/Leyte and Samar river or lake surveys; do not infer the other eight species from aggregate counts, stocked-culture context or photos."
+}
