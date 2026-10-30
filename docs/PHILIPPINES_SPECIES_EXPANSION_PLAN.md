@@ -2187,3 +2187,11 @@ Queried iDigBio's record API using its documented full-text field syntax. The `l
 Added `national-visayas-negros-balanan-idigbio-locality-screen-20261030.json` and one source reference (365 total). No specimen row, species, occurrence, coordinate, geometry, diet, safety alert, public app row or completion count was added.
 
 **Next:** keep seeking a primary Balanan lake fish survey through public university, BFAR and protected-area sources; prioritize reports with dates, stations, methods, taxon identifications and voucher links. Continue the Negros/Siquijor freshwater source sweep without turning text-search zeros into biological absence claims.
+
+### National rollout step 267 - Bayawan City Nature Reserve undergraduate thesis access review
+
+Reviewed the Foundation University Library catalog record for Ted Hubert Kent C. Gomez's 2024, 53-page Biology undergraduate thesis on freshwater fish occurrence and physicochemical parameters at Bayawan City Nature Reserve. Catalog metadata describes July-August 2024 sampling at three sites (61, 113 and 180 m elevation) and names `Barbodes sp.` and `Sicyopus zosterophorus`. The first remains genus-level; the second is currently valid according to Eschmeyer's Catalog of Fishes, but that name status does not verify the thesis specimen identification or local occurrence. The catalog says fish occurred at Sites 2 and 3 and none at Site 1 but does not map taxa to sites. Its summary gives conflicting p-value statements. The full thesis, station coordinates, methods/effort, vouchers and item-specific reuse terms were not retrieved. Foundation University's public archive description concerns theses/dissertations and does not confirm access terms for this particular undergraduate item.
+
+Added `national-visayas-negros-bayawan-nature-reserve-2024-thesis-access-review-20261030.json` and two source records (367 total). No species assertion, occurrence, geometry, diet, safety claim, or app row was added; the thesis remains a research lead pending full-text and rights review.
+
+**Next:** continue to an accessible, source-described inland-water fish study in Negros/Siquijor. If an institutional inquiry is later authorized, request methods, taxon-by-site evidence, voucher references and reuse terms for the Bayawan Nature Reserve thesis; do not send an inquiry without explicit authorization.
