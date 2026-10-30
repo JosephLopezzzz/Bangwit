@@ -2044,3 +2044,12 @@ Reviewed SEAFDEC/AQD's repository record for a 2012 study of fish habitats in Si
 Added `national-visayas-guimaras-sibunag-mangrove-fish-source-access-review-20261030.json` and registered the source (339 references). This is an acquisition lead only. The abstract's “open access” wording describes the creek and is not an article license. No taxa, geometry, occurrence assertion, or app row was created.
 
 **Next:** obtain a legitimate full-text copy and verify the species-by-habitat table, collection dates, creek/site identity, and copyright/reuse terms. Meanwhile, continue the Visayas sweep for accessible, rights-clear sources with site-level fish records; include freshwater lakes and rivers alongside estuaries and coastal waters.
+
+
+### National rollout step 250 - Bago and Jalaur introduced-fauna checklist lead
+
+Reviewed the Silliman Journal and PIDS SERP-P records for a 2010 checklist of introduced aquatic fauna in Bago River (Negros Occidental) and Jalaur River (Iloilo, Panay). The abstract reports 16 mixed aquatic taxa, including 11 fish, and names three candidate fish records without assigning them to each river. Search-indexed excerpts from the publisher PDF show four Bago and three Jalaur stations, but the full methods, taxon table and station figure were not retrievable. The publisher page's 2022 date conflicts with the 2010 journal issue and PIDS record; use 2010 as the bibliographic year and note the platform date as metadata only.
+
+The journal's copyright policy identifies the journal and authors as copyright holders and requires permission for specified reproductions; no open data license is established. PIDS download is behind a security verification and was not completed. Added `national-visayas-bago-jalaur-introduced-fauna-access-review-20261030.json` and registered the source (340 references). No taxa or app rows were created.
+
+**Next:** continue to an accessible source with full dated fish/site records; prioritize exact localities, methods, taxon rank and usable rights. Do not treat a historical introduced-fauna abstract as current invasive status.
