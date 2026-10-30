@@ -1906,3 +1906,14 @@ This archived response is an acquisition lead only, not confirmation of present-
 Added one access-lead source reference (324 total) and `national-bicol-sorsogon-1995-bfar-foi-access-lead-review-20261030.json`. No taxa, occurrence or geometry assertion, or public-app row was added. The checklist remains unavailable for review and Bicol coverage remains incomplete.
 
 **Next:** if pursuing the old checklist, ask BFAR whether Volume II pages 79-97 can now be inspected or shared and request current access and reuse terms. Continue the Bicol-wide inland and coastal evidence sweep independently; the 2022 response does not need to block work elsewhere.
+
+
+### National rollout step 236 - Masbate Aroroy River rapid-assessment evidence screen
+
+Reviewed the publisher-hosted 2025 rapid assessment for a 150-m Aroroy River segment in Barangay Matalang-Talang, Aroroy, Masbate. It reports three stations about 50 m apart and a field period of April-June 2025. Its fish table lists two upstream labels: *Sillago* sp. and *Mugil cephalus*. The reported method is direct observation with limited hand-netting; no fish counts, diagnostic key, specimen accession, voucher or fish-image crosswalk was found in the article.
+
+The station coordinate statements are not internally consistent: the PDF provides a central Masbate coordinate and upstream/downstream UTM values, but prints the midstream point as 51°36′23.2″N, 138°40′26.0″E. This conflicts with the stated study locality, so no station geometry was created. The genus-only label and source-only observations remain held for review, not current or verified presence. The paper's CC BY-NC-ND notice has no version stated in the PDF; no separate raw-data rights or publication approval was verified. Water-quality comparison against Class C criteria does not prove official classification or safety.
+
+Added one source reference (325 total) and `national-bicol-masbate-aroroy-river-rapid-assessment-review-20261030.json`. No occurrence, geometry, abundance, diet, safety/legal claim or public-app row was added. This adds one Masbate river source lead; Bicol and Masbate species coverage remain incomplete.
+
+**Next:** seek correction of the midstream coordinate, taxonomic identification details and voucher/count crosswalk from the authors, while screening separate Masbate rivers, lakes, estuaries and coastal sites. Do not let this source's station-coordinate issue block independent Bicol waterbody research.
