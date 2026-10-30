@@ -1917,3 +1917,16 @@ The station coordinate statements are not internally consistent: the PDF provide
 Added one source reference (325 total) and `national-bicol-masbate-aroroy-river-rapid-assessment-review-20261030.json`. No occurrence, geometry, abundance, diet, safety/legal claim or public-app row was added. This adds one Masbate river source lead; Bicol and Masbate species coverage remain incomplete.
 
 **Next:** seek correction of the midstream coordinate, taxonomic identification details and voucher/count crosswalk from the authors, while screening separate Masbate rivers, lakes, estuaries and coastal sites. Do not let this source's station-coordinate issue block independent Bicol waterbody research.
+
+
+### National rollout step 237 - Masbate Ticao reef fish survey and baseline access audit
+
+Reviewed the official Silliman Journal issue containing a 2013 fish visual census at two Ticao Island reefs: Baladingan (V-1), Barangay Famosa, Monreal; and Tacdugan (V-2), Barangay Tacdugan, San Jacinto. The paper reports 52 fish species at V-1 and 47 at V-2, using three 50-m transects per site and a fish visual census. Its taxonomic guide references are described, but no species-by-site list was found in the reviewed results. The coordinate ranges identify survey-site/transect localities, not reef polygons.
+
+The article separately reports Famosa landing monitoring for 46 days across June-December 2013. Most catches came from coastal waters around Famosa and Tacdugan; they cannot be assigned to the Baladingan transect as exact occurrence events. The article's OJS page gives a 2022 online publication date while its bound issue identifies April-June 2016; the 2016 issue date is retained with the discrepancy noted. The PDF says all rights reserved and requires written permission for reproduction.
+
+The 2016 paper cites a 2014 Ticao reef baseline. Its publisher abstract reports a 100-ha patchy reef and 69 fish species, but the full paper is advertised for USD 20 and its taxa list was not available here. These are different studies and counts; they were not merged or treated as a complete Ticao checklist.
+
+Added two source references (327 total) and `national-bicol-masbate-ticao-reef-fish-stock-catch-review-20261030.json`. No taxa were transcribed; no species assertion, occurrence, catch record, geometry or public-app row was added. Ticao and Masbate coverage remain incomplete.
+
+**Next:** seek a permission-cleared species-by-site list or author-held field table for the 2013 census and continue the distinct Masbate mangrove, estuary and inland-water review. Keep any landing-site catch data separate from reef survey observations.
