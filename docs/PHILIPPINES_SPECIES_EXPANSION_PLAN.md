@@ -2026,3 +2026,12 @@ Recorded an internal display decision for the 2013–2014 Bugang River study. Th
 Added `national-visayas-panay-bugang-historical-display-eligibility-20261030.json` to the source review files. This does not authorize publication, add app rows or geometry, or resolve specimen identity. No code or legal text changed.
 
 **Next:** resume the independent Panay/Guimaras freshwater-source sweep and identify the next open, primary study with retrievable species-by-waterbody evidence; do not treat Bugang as a regional baseline.
+
+
+### National rollout step 248 - PanayCon freshwater survey acquisition lead
+
+Reviewed Maren Gaulke's “Freshwater fauna of Panay: preliminary survey on fish and shrimps” in the PanayCon Seventeenth Report (report covers 2014; front matter dated January 2015). It describes roughly 40 fish species across 15 families from short-term surveys in north and northwest Panay, but some taxa were unidentified and the reviewed section does not map taxa to individual rivers. It names 11 river/stream survey areas that can guide source discovery; those are not species occurrences. The report explicitly requires written permission from PanayCon Management or the PhilinCon Board for any part to be used.
+
+Added `national-visayas-panay-panaycon-freshwater-fauna-discovery-review-20261030.json` and registered the source (338 references). No list of taxa, prose, figures or images was copied; no assertion, geometry or app row was created. Treat this as an internal discovery lead only until permission and a specimen/site crosswalk are available.
+
+**Next:** continue locating independently published, rights-clear, species-by-waterbody sources for Panay and Guimaras; prioritize fully accessible primary studies with dated site/taxon tables or open occurrence data. Keep waterbody and date scope explicit, and do not use the report's aggregate count as a checklist.
