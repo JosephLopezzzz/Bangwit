@@ -1715,3 +1715,14 @@ Siares and Bradecina's CBSUA paper describes wet/dry-season assessment of Tigman
 Added two source references (294 total) and `national-bicol-rivers-survey-evidence-review-20261030.json`. No scientific species assertion, occurrence, geometry, diet, legal/safety claim or public-app row was added. Treat both as dated literature leads, not current records or complete Bicol coverage; keep freshwater and downstream estuary evidence separate. Bicol remains incomplete.
 
 **Next:** screen the 2021 Bicol River target/non-target catch-shift study for exact dates and locations, and determine whether its evidence represents fisher landings rather than direct river occurrences. Continue separate lake and tributary research across Lake Bato, Lake Baao-Bula, Pawili/Agos and other Bicol inland waters.
+
+
+### National rollout step 219 — Bicol River historical catch-monitoring evidence
+
+Reviewed Biag and Alberto's 2021 AACL Bioflux study, which covers September 2019–August 2020 catch monitoring and fisher/resident interviews along upstream, midstream and downstream Bicol River stations and landing sites in Camarines Norte and Camarines Sur. The authors report six municipalities, 27 fishing barangays and 350 purposively sampled respondents. They say sampling sites were geotagged, but do not publish a taxon-by-site, month-by-taxon, voucher or machine-readable coordinate crosswalk. The reported catch categories are vernacular and combine fish with mollusks/crustaceans; they cannot be mapped directly to scientific species records.
+
+The article says it uses a Creative Commons Attribution License; the journal describes CC-BY, without a version specified in the reviewed article. The paper's COVID/ECQ narrative contains date conflicts, so detailed month-to-policy comparisons are not suitable for reuse without clarification. The paper acknowledges the BFAR Region 5 BASIL Bicol River project also associated with the 2022 Bigueja et al. paper; no survey-event crosswalk shows that these are independent datasets. No article table or figure was copied.
+
+Added one source reference (295 total) and `national-bicol-river-pandemic-catch-survey-review-20261030.json`. No taxonomic species, occurrence, catch, geometry, diet, legal/safety or public-app row was added. Keep fisher-reported catches separate from biological occurrence and do not present historical preferences as current fishing advice. Bicol remains incomplete.
+
+**Next:** continue the Bicol inland-water sweep with Lake Bato and Baao-Bula fish studies. Prioritize dated sampling methods, exact site/taxon crosswalks, vouchers and explicit reuse terms; preserve catch reports as a separate evidence class.
