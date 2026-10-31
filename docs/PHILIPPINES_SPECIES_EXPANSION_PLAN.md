@@ -2568,3 +2568,12 @@ Queried the public GBIF Occurrence API using the current Catalogue of Life Exten
 Recorded the bounded screen in `calabarzon-pasong-camachile-gbif-screen-20261031.json` and linked it to the Pasong Camachile research lead. It adds no species assertions, geometry, or public-app rows. The zero results do not establish fish absence and do not cover aliases, nearby coordinate records, or non-ray-finned fishes. No spatial-box query was attempted because there is no verified channel or sampling-station geometry.
 
 **Next:** continue looking for the completed CvSU/DENR-PENRO watershed outputs or a separate reusable, station-resolved fish survey. Keep the source's planned project period separate from actual completion and fish results.
+
+
+### National rollout step 306 - Cañas River fish-thesis abstract access review - 31 October 2026
+
+Located the exact 2017 Erce and Quiñones thesis record in the official CvSU Integrated Library System (record 11186) and retrieved its linked 16-page scan, labeled thesis abstract and table of contents. The abstract reports a May 2016-February 2017 watershed study with 11 sampling stations and an aggregate of 23 fish taxa (13 classified as indigenous and 10 as introduced by the thesis authors); it also reports seven crustacean taxa. The PDF does not include the fish-species table, station-to-taxon assignments, or station coordinates. Its contents list the fish and station tables on thesis pages 35 and 26, respectively, and station figures on pages 80-85.
+
+Added `cvsu-2017-canas-fish-crustacean-thesis-abstract` to the source registry and recorded `calabarzon-canas-2017-fish-thesis-abstract-review-20261031.json`. Linked it to the existing Cañas River watershed research lead and refreshed the source registry/scope hashes and denominator profile: 116 waterbody leads, 58 rivers, and 110 unique assigned source references. The historical aggregate is research-only; no species names, species assertions, current-presence claims, site-level assignments, geometry, public rows, or reuse approval were added. The thesis authors' indigenous/introduced classifications remain unverified. The catalog attachment is not the full thesis, and no request was submitted.
+
+**Next:** seek authorized access to the full thesis or the specific methods/station/species-table pages, confirm station-to-waterbody assignments and identification support, and resolve item-specific reuse rights. Do not convert the watershed-level total to 23 species rows or attribute all watershed taxa to an individual Cañas River reach.
