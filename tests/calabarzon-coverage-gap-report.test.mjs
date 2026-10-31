@@ -99,7 +99,7 @@ test("latest CALABARZON denominator profile stays pinned to the incomplete scope
   assert.deepEqual(denominatorProfile.reviewGaps.boundary, boundaryCounts);
   assert.equal(denominatorProfile.reviewGaps.salinity.unknown, unknownSalinityCount);
   assert.deepEqual(denominatorProfile.reviewGaps.fishEvidenceNotReviewed, fishEvidenceNotReviewed);
-  assert.equal(denominatorProfile.reviewGaps.researchQueued.length, 32);
+  assert.equal(denominatorProfile.reviewGaps.researchQueued.length, 37);
   assert.equal(denominatorProfile.existingScopeCounters.geometryValidated, 0);
   assert.equal(denominatorProfile.existingScopeCounters.speciesAssertionsImported, 9);
   assert.equal(denominatorProfile.existingScopeCounters.publicRecordsAdmitted, 0);
