@@ -3,7 +3,7 @@
   "checkedOn": "2026-10-31",
   "status": "research-only-source-registry",
   "scope": "National acquisition references, freshwater spatial-source leads, and CALABARZON/Central Luzon identity/source leads. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 480,
+  "sourceCount": 481,
   "sources": [
     {
       "id": "carumbana-siaton-river-limnology-fishery-report-2006",
@@ -15097,7 +15097,7 @@
       "citation": "Ojao, M. D., Manatad, E. E., Logronio, P. A., Raz, J. T., Cudal, M. G., & Gracia, A. G. (2021). Physico-chemical Properties and Fish Composition of Ihawan Spring Community Watershed, Tandag, Surigao del Sur, Philippines. Journal of Tropical Life Science, 11(3), 367-374. https://doi.org/10.11594/jtls.11.03.13",
       "access": {
         "status": "publisher-pdf-full-text-reviewed;historical-2018-three-station-survey;23-source-labels;taxonomy-name-screened;measurement-and-index-conflicts;coordinates-not-admitted;research-only",
-        "reviewFiles": ["national-caraga-ihawan-spring-fish-survey-review-20261031.json", "national-caraga-ihawan-spring-fish-taxonomy-crosscheck-20261031.json"],
+        "reviewFiles": ["national-caraga-ihawan-spring-fish-survey-review-20261031.json", "national-caraga-ihawan-spring-fish-taxonomy-crosscheck-20261031.json", "national-caraga-ihawan-spring-voucher-discovery-screen-20261031.json"],
         "fullTextRetrieved": true
       },
       "reuse": {
@@ -15153,6 +15153,45 @@
         "No occurrence, diet, safety, legal or public app record was created."
       ],
       "researchStatus": "caraga;ihawan-spring;taxonomy-crosscheck;23-source-labels;four-locality-habitat-flags;specimen-identities-unverified;research-only"
+    },
+    {
+      "id": "gbif-idigbio-ihawan-voucher-discovery-screen-20261031",
+      "title": "GBIF and iDigBio bounded voucher-discovery screen for four Ihawan Spring labels",
+      "provider": "Global Biodiversity Information Facility; Integrated Digitized Biocollections",
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Ihawan%20Spring%20Community%20Watershed&limit=300",
+      "additionalUrls": [
+        "https://www.gbif.org/dataset/ddd46c4c-1c7a-49d6-8420-0c8b34a94a53",
+        "https://api.gbif.org/v1/occurrence/search?country=PH&scientificName=Bostrychus%20expatria&limit=300",
+        "https://api.gbif.org/v1/occurrence/search?country=PH&scientificName=Diodon%20holocanthus&limit=300",
+        "https://api.gbif.org/v1/occurrence/search?country=PH&scientificName=Archamia%20bleekeri&limit=300",
+        "https://api.gbif.org/v1/occurrence/search?country=PH&scientificName=Suezichthys%20gracilis&limit=300",
+        "https://github.com/iDigBio/idigbio-search-api/wiki",
+        "https://search.idigbio.org/v2/search/records/"
+      ],
+      "role": "Bounded country-name and locality-field screen for Bostrychus expatria, Diodon holocanthus, Archamia bleekeri and Suezichthys gracilis. GBIF returned four Ihawan rows, all MATERIAL_CITATION records from the same MOBIOS+ literature compilation and original Ojao et al. paper, with the same watershed point and no institution/catalog identifiers. iDigBio returned no Tandag/Ihawan locality matches. No independent local voucher was found; this is not an absence finding.",
+      "checkedOn": "2026-10-31",
+      "sourceYear": 2026,
+      "citation": "GBIF occurrence API, MOBIOS+ dataset DOI 10.15468/rtedgk, and iDigBio Search API; bounded queries reviewed 31 October 2026.",
+      "access": {
+        "status": "gbif-four-source-derived-literature-citations;idigbio-no-site-match;no-independent-voucher;research-only",
+        "reviewFiles": ["national-caraga-ihawan-spring-voucher-discovery-screen-20261031.json"],
+        "fullTextRetrieved": false
+      },
+      "reuse": {
+        "metadata": "The GBIF dataset displays CC BY-NC 4.0; iDigBio contributing record rights vary and no blanket data license was inferred.",
+        "raw": "Read-only queries were made to the public APIs; no bulk download or raw snapshot is retained.",
+        "content": "Only a concise query/result summary, record links and source provenance are retained. The dataset license does not resolve reuse of the underlying journal article."
+      },
+      "publicationApproval": false,
+      "license": "Underlying article terms unverified; no source-derived Bangwit publication approval",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "caveats": [
+        "Four GBIF local matches are MATERIAL_CITATION rows from one literature-compilation dataset, not independent specimen vouchers.",
+        "The four rows share one watershed-level coordinate and lack institutionCode, catalogNumber and station assignment.",
+        "iDigBio country-level records yielded no Tandag/Ihawan match; this bounded, aging index is not a collection census or absence test.",
+        "The GBIF data license does not grant rights to the underlying Ojao et al. article or its table."
+      ],
+      "researchStatus": "caraga;ihawan-spring;four-flagged-taxa;gbif-material-citations;idigbio-screen;no-local-vouchers;research-only"
     }
   ],
   "sourcePolicy": {

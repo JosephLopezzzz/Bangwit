@@ -2961,3 +2961,12 @@ Prioritized four records for source follow-up: `Bostrychus expatria` (Catalog di
 Added `national-caraga-ihawan-spring-fish-taxonomy-crosscheck-20261031.json` and one Catalog/taxonomy registry source; source count is 480. The survey review now marks the name-status screen complete while keeping voucher identity unverified.
 
 **Next:** seek voucher accession details, station-level photographs or author clarification for the four flagged labels. In parallel, continue the Caraga inland-water queue with the next independently reviewable primary fish source; do not treat the Ihawan list as a regional baseline.
+
+
+### National rollout step 350 - Ihawan flagged-taxa voucher discovery screen - 31 October 2026
+
+Queried GBIF for all four names in the Philippines and checked returned records for the Ihawan/Tandag locality. Each flagged taxon has one site-labelled GBIF row, but all four are `MATERIAL_CITATION` records from the same MOBIOS+ literature-compilation dataset and point to the same 2018 watershed-level coordinate. The records provide no museum/institution code, catalog number, voucher repository or sampling-station crosswalk. They repeat Ojao et al.'s paper and are not independent voucher evidence. The GBIF dataset displays CC BY-NC 4.0; that dataset license does not settle reuse of the separately published paper.
+
+The bounded iDigBio country-name searches returned 0 `Bostrychus expatria`, 30 `Diodon holocanthus`, 2 `Archamia bleekeri` and 1 `Suezichthys gracilis` records; none matched Tandag, Ihawan, Awasian or Surigao locality fields. iDigBio's data index was no longer being updated after 8 May 2026. Neither the locality zeroes nor the presence of records elsewhere prove absence or validate the Ihawan identifications. No voucher was independently verified, no point or geometry was added, and no species/app claim was promoted. See `national-caraga-ihawan-spring-voucher-discovery-screen-20261031.json`; research registry count is 481.
+
+**Next:** keep the four taxa flagged and the 23-name checklist research-only. Continue with another independently reviewable Caraga inland-water primary study; do not treat aggregator literature citations as specimen validation.
