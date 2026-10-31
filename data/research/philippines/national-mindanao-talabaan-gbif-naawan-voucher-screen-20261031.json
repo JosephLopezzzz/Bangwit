@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "checkedOn": "2026-10-31",
+  "phaseId": "M2",
+  "regionIds": ["1000000000"],
+  "regionName": "Mindanao - Region X (Northern Mindanao)",
+  "status": "gbif-api-bounded-search;talabaan-locality-zero;naawan-nonfish-only;11-historical-museum-records;no-talabaan-voucher-crosswalk;research-only",
+  "question": "Does the GBIF index expose any of the Talabaan paper's fish names as Talabaan/Naawan museum records, and what do nearby-province name matches actually document?",
+  "sourceId": "gbif-talabaan-naawan-voucher-screen-20261031",
+  "surveyReviewFile": "national-mindanao-talabaan-2021-fish-survey-review-20261031.json",
+  "taxonomyCrosscheckFile": "national-mindanao-talabaan-2021-fish-taxonomy-crosscheck-20261031.json",
+  "query": {
+    "apiBase": "https://api.gbif.org/v1",
+    "checkedAtUtc": "2026-10-31T14:12:35.953Z",
+    "authentication": "No authentication used for read-only occurrence searches.",
+    "localityQueries": [
+      { "parameters": { "country": "PH", "locality": "Talabaan", "limit": 100 }, "returnedCount": 0 },
+      { "parameters": { "country": "PH", "locality": "Naawan", "limit": 100 }, "returnedCount": 10 }
+    ],
+    "taxonQueries": {
+      "parameters": "One occurrence/search request per source/candidate binomial, using country=PH, stateProvince=Misamis Oriental, and limit=100.",
+      "totalReturnedAcrossQueries": 11,
+      "matchedLocalityHitsForTalabaanOrNaawan": 0,
+      "results": [
+        { "queriedName": "Rhyacichthys aspro", "count": 3 },
+        { "queriedName": "Sicyopterus lagocephalus", "count": 4 },
+        { "queriedName": "Anguilla marmorata", "count": 0 },
+        { "queriedName": "Giuris margaritaceus", "count": 0 },
+        { "queriedName": "Glossogobius giuris", "count": 2 },
+        { "queriedName": "Glossogobius celebius", "count": 1 },
+        { "queriedName": "Xiphophorus hellerii", "count": 0 },
+        { "queriedName": "Oreochromis niloticus", "count": 0 },
+        { "queriedName": "Gerres limbatus", "count": 0 },
+        { "queriedName": "Awaous melanocephalus", "count": 0 },
+        { "queriedName": "Mesopristes cancellatus", "count": 1 }
+      ]
+    },
+    "localityInterpretation": "The ten broad Naawan results are nine Odonata records and one crab record; no fish is among the returned items. A zero Talabaan locality result and zero Talabaan/Naawan matches among the eleven provincial name-query results describe only this GBIF API snapshot and query fields. They are not evidence that the taxa are absent or that no collection exists outside GBIF."
+  },
+  "historicalMisamisVoucherLeads": [
+    { "gbifKey": 3426467230, "gbifVerbatimName": "Rhyacichthys aspro", "institutionCode": "CAS", "collectionCode": "SU(ICH)", "catalogNumber": "38656", "verbatimLocality": "Cagayan", "verbatimWaterBody": "Cagayan R.", "verbatimEventDate": "1940-04-27", "georeferenceUncertaintyMeters": 6571, "georeferenceNote": "GBIF verbatim remarks say the mapped polygon covers Cagayan River around Cagayan; this is not a Talabaan station." },
+    { "gbifKey": 3426459228, "gbifVerbatimName": "Rhyacichthys aspro", "institutionCode": "CAS", "collectionCode": "SU(ICH)", "catalogNumber": "38655", "verbatimLocality": "Tagaloan R.", "verbatimWaterBody": "Tagaloan R.", "verbatimEventDate": "1940-08", "georeferenceUncertaintyMeters": 67910, "georeferenceNote": "Large uncertainty; preserve the historical Tagaloan locality and do not use the point as a site or river boundary." },
+    { "gbifKey": 666663420, "gbifVerbatimName": "Rhyacichthys aspro", "institutionCode": "FMNH", "collectionCode": "Fishes", "catalogNumber": "40543", "verbatimLocality": "Cagayan River", "verbatimWaterBody": null, "verbatimEventDate": null, "georeferenceUncertaintyMeters": null, "georeferenceNote": "The indexed museum record does not expose a date or coordinate uncertainty in the reviewed response." },
+    { "gbifKey": 3426464216, "gbifVerbatimName": "Sicyopterus extraneus", "institutionCode": "CAS", "collectionCode": "SU(ICH)", "catalogNumber": "38606", "verbatimLocality": "Cagayan.", "verbatimWaterBody": "Cagayan River", "verbatimEventDate": "1940-02-13", "georeferenceUncertaintyMeters": 14494, "georeferenceNote": "GBIF name query for Sicyopterus lagocephalus returned this different provider-supplied name; do not silently synonymize or reidentify." },
+    { "gbifKey": 3426419225, "gbifVerbatimName": "Sicyopterus lagocephalus", "institutionCode": "CAS", "collectionCode": "SU(ICH)", "catalogNumber": "38607", "verbatimLocality": "Cagayan R.", "verbatimWaterBody": "Cagayan R.", "verbatimEventDate": "1940-07-29", "georeferenceUncertaintyMeters": null, "georeferenceNote": "Provider record has no coordinate uncertainty in the reviewed verbatim response." },
+    { "gbifKey": 3426425224, "gbifVerbatimName": "Sicyopterus extraneus", "institutionCode": "CAS", "collectionCode": "SU(ICH)", "catalogNumber": "38608", "verbatimLocality": "Cagayan de Misamis.", "verbatimWaterBody": null, "verbatimEventDate": "1940-08", "georeferenceUncertaintyMeters": 7783, "georeferenceNote": "GBIF verbatim remarks say the coordinates are at Cagayan de Oro, Mindanao; preserve the source locality and name." },
+    { "gbifKey": 3426466228, "gbifVerbatimName": "Sicyopterus extraneus", "institutionCode": "CAS", "collectionCode": "SU(ICH)", "catalogNumber": "38605", "verbatimLocality": "Cagayan.", "verbatimWaterBody": "Cagayan River", "verbatimEventDate": "1940-08-01", "georeferenceUncertaintyMeters": 14494, "georeferenceNote": "GBIF verbatim remarks describe a polygon over Cagayan de Oro River; no Talabaan linkage is present." },
+    { "gbifKey": 3426461227, "gbifVerbatimName": "Glossogobius giurus", "institutionCode": "CAS", "collectionCode": "SU(ICH)", "catalogNumber": "38537", "verbatimLocality": "Mangrove swamp beside the fisheries experiment station at Cagayan de Misamis.", "verbatimWaterBody": null, "verbatimEventDate": "1940-08-20", "georeferenceUncertaintyMeters": 6440, "georeferenceNote": "GBIF verbatim remarks interpret historic Cagayan de Misamis as present-day Cagayan de Oro and a polygon covering nearby swamp areas; this does not identify Talabaan." },
+    { "gbifKey": 3426460387, "gbifVerbatimName": "Glossogobius giurus", "institutionCode": "CAS", "collectionCode": "SU(ICH)", "catalogNumber": "21689", "verbatimLocality": "Cagayan.", "verbatimWaterBody": null, "verbatimEventDate": null, "georeferenceUncertaintyMeters": 6571, "georeferenceNote": "GBIF verbatim remarks say the mapped polygon covers Cagayan River around Cagayan; event date is not exposed in the reviewed verbatim response." },
+    { "gbifKey": 3426462209, "gbifVerbatimName": "Glossogobius celebius", "institutionCode": "CAS", "collectionCode": "SU(ICH)", "catalogNumber": "38521", "verbatimLocality": "Cagayan River", "verbatimWaterBody": "Cagayan River", "verbatimEventDate": "1940-08-19", "georeferenceUncertaintyMeters": 67910, "georeferenceNote": "Large georeference uncertainty; not a Talabaan station." },
+    { "gbifKey": 3426467257, "gbifVerbatimName": "Therapon cancellatus", "institutionCode": "CAS", "collectionCode": "SU(ICH)", "catalogNumber": "39213", "verbatimLocality": "Mangrove swamp beside the fisheries experiment station at Cagayan de Misamis.", "verbatimWaterBody": null, "verbatimEventDate": "1940-08-20", "georeferenceUncertaintyMeters": 6440, "georeferenceNote": "GBIF name query for Mesopristes cancellatus returned the provider's historical combination Therapon cancellatus. Preserve this verbatim form; no Talabaan crosswalk exists." }
+  ],
+  "datasets": [
+    { "key": "5d6c10bd-ea31-4363-8b79-58c96d859f5b", "title": "CAS Ichthyology (ICH)", "doi": "10.15468/efh2ib", "gbifLicense": "CC0 1.0 as stated in GBIF dataset metadata", "recordCountFromScreen": 10 },
+    { "key": "afc30a94-6107-488a-b9c0-ba9c4fa68b7c", "title": "Field Museum of Natural History (Zoology) Fish Collection", "doi": "10.15468/alz7wu", "gbifLicense": "CC0 1.0 as stated in GBIF dataset metadata", "recordCountFromScreen": 1 }
+  ],
+  "interpretation": {
+    "vouchers": "The eleven name-query hits are preserved-specimen records from CAS Ichthyology (ten) and the Field Museum (one), all historical 1940 records with Cagayan/Cagayan de Misamis/Cagayan River or Tagaloan River source-locality text. They are nearby-province historical leads only, not Talabaan survey vouchers and not contemporary presence evidence.",
+    "names": "Some name queries returned distinct provider-supplied names or combinations: Sicyopterus extraneus, Glossogobius giurus, and Therapon cancellatus. Do not silently treat these as the Talabaan paper's identifications. GBIF's indexed name matching is not a specimen re-identification.",
+    "georeferencing": "Several CAS points are historical map polygons with reported uncertainty from roughly 6.4 km to 67.9 km; one record reports no uncertainty and the FMNH response had no event date or uncertainty. Coordinates are omitted from this artifact and must not be used to draw Talabaan geometry.",
+    "absenceLimit": "A bounded GBIF query returned no Talabaan fish voucher hit. GBIF index coverage, locality transcription, name resolution, and this query snapshot are incomplete; this is not proof of absence or proof that the 2021 paper's specimens were never deposited.",
+    "disposition": "Do not merge these historic Cagayan/Tagaloan records with the Talabaan 2021 sample, do not add public species or occurrence rows, and do not infer current abundance, diet, safety, native status, fishing access, or geometry."
+  },
+  "disposition": {
+    "TalabaanLocalityMatches": 0,
+    "NaawanFishMatchesInBroadLocalityQuery": 0,
+    "historicalMisamisVoucherRecordsReviewed": 11,
+    "CASRecords": 10,
+    "FieldMuseumRecords": 1,
+    "sourceSurveyVoucherCrosswalks": 0,
+    "publicSpeciesRowsAdded": 0,
+    "publicOccurrenceRowsAdded": 0,
+    "geometryAdded": 0,
+    "publicationApproval": false
+  },
+  "references": [
+    { "url": "https://api.gbif.org/v1/occurrence/search", "supports": "Read-only bounded occurrence queries and returned GBIF name/locality summaries; zero results are limited to these parameters and this API snapshot." },
+    { "url": "https://techdocs.gbif.org/en/openapi/v1/occurrence", "supports": "Official GBIF Occurrence API search and record-access documentation." },
+    { "url": "https://api.gbif.org/v1/dataset/5d6c10bd-ea31-4363-8b79-58c96d859f5b", "supports": "GBIF dataset metadata for the CAS Ichthyology collection, dataset DOI and displayed license." },
+    { "url": "https://api.gbif.org/v1/dataset/afc30a94-6107-488a-b9c0-ba9c4fa68b7c", "supports": "GBIF dataset metadata for the Field Museum Fishes collection, dataset DOI and displayed license." },
+    { "url": "https://api.gbif.org/v1/occurrence/3426467230/verbatim", "supports": "One representative GBIF provider-supplied Darwin Core record showing preserved-specimen basis, CAS catalog number, 1940 event date, Cagayan locality, and a georeference polygon remark; other IDs are listed in this artifact." },
+    { "url": "https://doi.org/10.22271/fish.2022.v10.i4a.2700", "supports": "Talabaan source labels used for the bounded name queries; no record was linked to the paper's collected specimens." }
+  ]
+}

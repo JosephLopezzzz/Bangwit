@@ -3242,3 +3242,30 @@ For the Banak conflict, the 2022 NFRDI-led CO1 study reports all 25 sampled Nort
 Added `national-mindanao-pulang-pulangi-2024-fish-taxonomy-crosscheck-20261031.json` and the Catalog and NFRDI references to the source registry. No specimen was reidentified and no public species, occurrence, native/introduced status, diet, safety, legal, geometry, or app row was added.
 
 **Next:** search for another distinct Mindanao inland-water source, prioritizing an official or peer-reviewed source with vouchers, molecular IDs, or a readable taxon-by-site matrix. Keep the Pulang/Pulangi study research-only until the abstract/table conflict and site evidence are resolved.
+
+
+### National rollout step 381 - Talabaan River 2021 fish-survey review - 31 October 2026
+
+Reviewed Vedra et al.'s publisher-hosted full text for a single August 2021 collection in three barangays/reach categories of Talabaan River, Naawan, Misamis Oriental. Table 1 reports 150 fish, 11 source-name taxa, and counts allocated to Lubilan (upstream), Tagbalogo (midstream), and Patag (downstream). The source's family count is inconsistent: six in the abstract, seven in a Results sentence that names eight families, and eight in Table 2. Methods say collection happened once and lasted under three hours; no exact station coordinate values, datum, or public specimen accessions were identified. The article's “indigenous” title and blanket “Non-endemic”/“Least Concern” table labels were not independently verified; its habitat and pollution discussion is not current safety evidence. The PDF prints © 2022 IJFAS and no item-specific republication permission was verified.
+
+Added `national-mindanao-talabaan-2021-fish-survey-review-20261031.json` and one source-registry record, bringing the source registry to 519 unique entries. All 11 source labels and their barangay-level counts remain research-only; no current occurrence, public species row, diet, safety, legal, geometry, or app claim was added.
+
+**Next:** cross-check all 11 source name forms against a recognized fish-name authority and then run a bounded voucher search for Talabaan/Naawan. Keep nomenclature, specimen identification, current local presence, and app publication as separate decisions.
+
+
+### National rollout step 382 - Talabaan fish-name taxonomy cross-check - 31 October 2026
+
+Checked all 11 source binomials against selected Eschmeyer's Catalog of Fishes records. Ten retain the same candidate spelling; the source's *Giuris margaritacea* is kept verbatim with *Giuris margaritaceus* as the current candidate. Keith and Mennesson's 2020 integrative revision recognizes eight Indo-Pacific *Giuris* species based on genetic and morphometric distinctions, so the Talabaan paper's species-level ID remains particularly uncertain without vouchers. The Catalog's native-range context places *Xiphophorus hellerii* in southern North/Central America and *Oreochromis niloticus* in Africa, with both introduced elsewhere; if those source IDs are correct, the paper's blanket “indigenous” framing does not apply to every row, but this check does not establish local introduction. *Glossogobius celebius* and *Gerres limbatus* have histories of synonym or uncertain treatments despite being listed as valid in the current Catalog. The Catalog also places *Sicyopterus* and *Awaous* in Oxudercidae rather than the source paper's Gobiidae grouping.
+
+Added `national-mindanao-talabaan-2021-fish-taxonomy-crosscheck-20261031.json` and two source-registry entries for the Catalog and the *Giuris* integrative revision, bringing the registry to 521 unique entries. No specimen was reidentified; no native/introduced local assertion, occurrence, species, diet, safety, geometry, or public-app row was added.
+
+**Next:** run a bounded GBIF search for Talabaan/Naawan and the eleven source/candidate names, retaining record basis, publisher, catalog identifier, locality verbatim, and geospatial flags. Search non-matches are not evidence of absence, and GBIF name-matched occurrence entries cannot validate this study's specimens without a source crosswalk.
+
+
+### National rollout step 383 - Talabaan/Naawan GBIF museum-record screen - 31 October 2026
+
+Queried the read-only GBIF Occurrence API for the exact locality strings Talabaan and Naawan, then queried each of the 11 source/candidate names within the Philippines and Misamis Oriental. Talabaan returned zero records; Naawan returned ten broad results, all nine Odonata and one crab, not fish. The eleven fish-name hits are ten CAS Ichthyology and one Field Museum preserved-specimen record. GBIF provider-supplied verbatim fields show source localities Cagayan/Cagayan de Misamis/Cagayan River or Tagaloan River, mostly in 1940; no record links to Talabaan or to the paper's 2021 catch. Searches for *Sicyopterus lagocephalus*, *Glossogobius giuris*, and *Mesopristes cancellatus* surfaced other provider name forms (*S. extraneus*, *G. giurus*, and *Therapon cancellatus*); these are not silently synonymized or specimen-reidentified. Several CAS records have 6.4-67.9 km georeference uncertainty, including broad river polygons. No coordinates were copied or used for geometry.
+
+Added `national-mindanao-talabaan-gbif-naawan-voucher-screen-20261031.json` and three registry entries for the GBIF query and its two museum datasets, bringing the source registry to 524 unique entries. This is a bounded index snapshot, not absence evidence or a Talabaan survey-voucher crosswalk. No occurrence, public species, geometry, diet, safety, fishing-law, or app row was added.
+
+**Next:** continue the Mindanao regional freshwater scan with a distinct, accessible fish source or a direct museum-catalog crosswalk. Keep the Talabaan paper historical and research-only unless a specimen, tissue, or author crosswalk is located.

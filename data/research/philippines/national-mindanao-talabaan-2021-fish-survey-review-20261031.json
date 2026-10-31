@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-31",
+  "phaseId": "M2",
+  "regionIds": ["1000000000"],
+  "regionName": "Mindanao - Region X (Northern Mindanao)",
+  "status": "historical-river-survey;single-2021-collection;11-reported-taxa;family-count-conflict;barangay-level-table;research-only",
+  "question": "What can the Talabaan River fish survey support without treating one short historical collection as a verified or current river inventory?",
+  "sourceId": "vedra-et-al-2022-talabaan-river-fish-survey",
+  "source": {
+    "citation": "Vedra, S. A., Padilla, R. F. Q., & Vicente, R. J. (2022). Indigenous fishes inhabiting the Talabaan river system of Naawan, Misamis Oriental, Northern Mindanao, Philippines. International Journal of Fisheries and Aquatic Studies, 10(4), 23-27. https://doi.org/10.22271/fish.2022.v10.i4a.2700.",
+    "publisherPdfUrl": "https://www.fisheriesjournal.com/archives/2022/vol10issue4/PartA/10-4-8-204.pdf",
+    "doiUrl": "https://doi.org/10.22271/fish.2022.v10.i4a.2700",
+    "access": "The complete publisher-hosted PDF was reviewed. The article itself states copyright 2022 IJFAS; no item-specific open license or permission to republish its table, figures, or images was verified. Only brief attributed findings and links are recorded here."
+  },
+  "studyContext": {
+    "sampleWindow": "One collection event in August 2021.",
+    "reportedWaterbody": "Talabaan River system, Naawan, Misamis Oriental. The paper describes Brgy. Lubilan as upstream, Brgy. Tagbalogo as midstream, and Brgy. Patag as downstream near the estuary. This is the source's locality description, not a surveyed waterbody boundary.",
+    "samplingSites": [
+      { "label": "Lubilan", "barangay": "Lubilan", "reach": "Upstream" },
+      { "label": "Tagbalogo", "barangay": "Tagbalogo", "reach": "Midstream" },
+      { "label": "Patag", "barangay": "Patag", "reach": "Downstream; described as nearer the estuary" }
+    ],
+    "effortAndGear": "The Methods say specimens were collected once in August 2021, with fishing for less than three hours while cruising the sampled barangays. A 3 m by 1.5 m hand-held seine with 3.5 mm mesh is described; a cast net was used downstream. The paper does not state a repeated-season design or a clear per-site effort allocation.",
+    "taxonBySiteCounts": [
+      { "sourceLabel": "Rhyacichthys aspro", "Lubilan": 8, "Tagbalogo": 0, "Patag": 0, "total": 8 },
+      { "sourceLabel": "Sicyopterus lagocephalus", "Lubilan": 23, "Tagbalogo": 7, "Patag": 0, "total": 30 },
+      { "sourceLabel": "Anguilla marmorata", "Lubilan": 3, "Tagbalogo": 0, "Patag": 0, "total": 3 },
+      { "sourceLabel": "Giuris margaritacea", "Lubilan": 0, "Tagbalogo": 2, "Patag": 10, "total": 12 },
+      { "sourceLabel": "Glossogobius giuris", "Lubilan": 0, "Tagbalogo": 0, "Patag": 4, "total": 4 },
+      { "sourceLabel": "Glossogobius celebius", "Lubilan": 0, "Tagbalogo": 0, "Patag": 10, "total": 10 },
+      { "sourceLabel": "Xiphophorus hellerii", "Lubilan": 12, "Tagbalogo": 48, "Patag": 7, "total": 67 },
+      { "sourceLabel": "Oreochromis niloticus", "Lubilan": 0, "Tagbalogo": 0, "Patag": 4, "total": 4 },
+      { "sourceLabel": "Gerres limbatus", "Lubilan": 0, "Tagbalogo": 0, "Patag": 2, "total": 2 },
+      { "sourceLabel": "Awaous melanocephalus", "Lubilan": 0, "Tagbalogo": 0, "Patag": 8, "total": 8 },
+      { "sourceLabel": "Mesopristes cancellatus", "Lubilan": 0, "Tagbalogo": 0, "Patag": 2, "total": 2 }
+    ],
+    "geospatialLimits": "Figure 1 maps S1-S3 by barangay/reach but the reviewed text supplies no station coordinate values or datum. The table supports only the paper's barangay-level allocation. No coordinate, line, catchment, or river geometry was derived.",
+    "voucherLimits": "The article refers to collected specimens and identification, but no public institution, collection, catalog, or sequence accession crosswalk is provided in the reviewed paper. The identification key or independent diagnostic workflow is not sufficiently documented here to reidentify the specimens."
+  },
+  "reportedFindings": {
+    "abstractClaim": "The abstract reports 150 fish and 11 taxa, while stating six families. It lists the same 11 binomials as the paper's figure caption and reports relative-abundance percentages.",
+    "sourceNameForms": [
+      "Rhyacichthys aspro",
+      "Sicyopterus lagocephalus",
+      "Anguilla marmorata",
+      "Giuris margaritacea",
+      "Glossogobius giuris",
+      "Glossogobius celebius",
+      "Xiphophorus hellerii",
+      "Oreochromis niloticus",
+      "Gerres limbatus",
+      "Awaous melanocephalus",
+      "Mesopristes cancellatus"
+    ],
+    "reportedCounts": {
+      "totalFish": 150,
+      "speciesRows": 11,
+      "siteTotals": { "Lubilan": 46, "Tagbalogo": 57, "Patag": 47 },
+      "recomputedSpeciesTotal": 150
+    },
+    "internalConflicts": [
+      "The abstract says six families; the Results prose says seven while enumerating eight family names; Table 2 states eight families. Keep the family count unresolved rather than choosing one section.",
+      "The title and abstract frame the survey as indigenous fish, but Table 2 labels every listed fish Non-endemic and assigns Least Concern to all of them without item-level authority citations in the table. These biogeographic and conservation claims were not independently validated.",
+      "The Methods describe the evenness denominator S as the total number of goby species even though the indices are presented for the fish assemblage. The reported index outputs should not be reused as validated derived metrics without clarification.",
+      "Table 2 spells the Anguillidae family as Anguilidae. The source spelling is retained as a table issue; it does not change the species-name transcription.",
+      "The one-time survey duration and effort do not support a complete seasonal or river-wide checklist, and zero counts in the three table columns are not evidence of absence outside that brief collection."
+    ]
+  },
+  "qualityAndRights": {
+    "temporalScope": "Historical sampling in August 2021; it does not establish current presence or abundance.",
+    "spatialScope": "Three barangays/reach categories are named and table counts are assigned to them, but exact station coordinates and a surveyed river boundary were not available in the reviewed text.",
+    "taxonomy": "The 11 paper labels are transcribed without independent taxonomic cross-check. Article-level taxon names do not establish specimen identity; the title's indigenous framing and unsupported table status labels require separate review.",
+    "environmentalClaims": "Statements about pollution, habitat quality, and threats are the authors' discussion, not a current water-quality, health, or fish-safety assessment.",
+    "reuse": "The PDF prints © 2022 IJFAS. No item-specific Creative Commons grant or permission to republish the species table, figures, photographs, or raw data was verified. Only concise attributed facts and source links are retained."
+  },
+  "disposition": {
+    "researchTaxonLabelsRecorded": 11,
+    "publicSpeciesRowsAdded": 0,
+    "historicalOccurrenceRowsAdded": 0,
+    "stationPointsPublished": 0,
+    "riverGeometryAdded": 0,
+    "dietOrBaitClaimsAdded": 0,
+    "waterQualityOrSafetyClaimsAdded": 0,
+    "sourceNamesSilentlyCorrected": false,
+    "publicationApproval": false,
+    "reason": "A one-time 2021 catch table gives 11 barangay-level source labels and counts, but the paper's family totals conflict, exact coordinates and public vouchers are unavailable, and the source's indigenous/status claims are not independently substantiated."
+  },
+  "nextAction": "Cross-check the 11 source name forms against a recognized fish-name authority, keeping nomenclatural matches separate from specimen identity. Then run a bounded local voucher search for Talabaan/Naawan; do not treat non-matches as evidence of absence.",
+  "references": [
+    {
+      "url": "https://www.fisheriesjournal.com/archives/2022/vol10issue4/PartA/10-4-8-204.pdf",
+      "supports": "Official publisher-hosted full text: study dates and gear, three barangay/reach sites, source-name list, Tables 1-3, family-count conflict, paper-stated ecology claims, and displayed copyright line."
+    },
+    {
+      "url": "https://doi.org/10.22271/fish.2022.v10.i4a.2700",
+      "supports": "Article DOI and bibliographic identity."
+    }
+  ]
+}
