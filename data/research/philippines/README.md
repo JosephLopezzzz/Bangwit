@@ -1142,3 +1142,8 @@ Jumawan and Seronay report 2014-2015 fish sampling across eight named floodplain
 ## Lake Oro and Lake Dakong Napo fish survey -- 31 October 2026
 
 Reviewed the accessible publisher-hosted 2019 FishTaxa article by Cuadrado et al. It reports 12 source-identified taxa from a September-October 2017 assessment; the table codes 7 taxa for Lake Dakong Napo and 10 for Lake Oro. Samples were either caught or purchased from local fishers, with no row-level acquisition flag or voucher accessions. The text varies between *Trichogaster trichopterus* and *Trichopodus trichopterus*. The article states all rights reserved and no item-specific reuse grant was found. No table names, coordinates, geometry, natural-diet claim, or public-app row was added. See `national-caraga-lake-oro-dakong-napo-fish-survey-review-20261031.json` and National rollout step 332.
+
+
+## Lake Oro and Lake Dakong Napo taxonomy cross-check -- 31 October 2026
+
+Cross-checked the 12 table binomials in Cuadrado et al. (2019) against Eschmeyer’s Catalog of Fishes. All 12 table names are listed as valid as printed in the accessed indexed records; the paper’s prose form *Trichogaster trichopterus* is a synonym of the table’s *Trichopodus trichopterus*. The catalog also treats *Clarias batrachus* as valid as printed; its range note does not identify the sampled specimens. The Catalog’s exact pages returned 403/502 on normal opens, so this review used indexed excerpts without bypassing access controls. This is a nomenclatural crosswalk only: no specimens were reidentified and no lake occurrences or public rows were added. See `national-caraga-lake-oro-dakong-napo-taxonomy-crosscheck-20261031.json` and National rollout step 333.
