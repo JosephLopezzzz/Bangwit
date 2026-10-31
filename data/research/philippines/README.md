@@ -1137,3 +1137,8 @@ The official NFRDI paper covers 2014-2016 monitored landings from four centers i
 ## Agusan Marsh eight floodplain lakes fish survey -- 31 October 2026
 
 Jumawan and Seronay report 2014-2015 fish sampling across eight named floodplain lakes, with samples caught by fisher partners or purchased from local buyers. Their table pools taxa across lakes and does not separate purchased from directly caught fish by taxon. A same-title NAST abstract and the PJS article give different length-weight summaries. The article's statement about residents' diet is human food use, not natural prey. The publisher and third-party pages returned HTTP 403 on direct request; indexed third-party text and the NAST abstract were reviewed without bypassing a challenge. Article reuse terms remain unverified. No species, lake-specific presence, diet claim, geometry, or public row was added. See `national-caraga-agusan-eight-floodplain-lakes-fish-survey-review-20261031.json` and National rollout step 331.
+
+
+## Lake Oro and Lake Dakong Napo fish survey -- 31 October 2026
+
+Reviewed the accessible publisher-hosted 2019 FishTaxa article by Cuadrado et al. It reports 12 source-identified taxa from a September-October 2017 assessment; the table codes 7 taxa for Lake Dakong Napo and 10 for Lake Oro. Samples were either caught or purchased from local fishers, with no row-level acquisition flag or voucher accessions. The text varies between *Trichogaster trichopterus* and *Trichopodus trichopterus*. The article states all rights reserved and no item-specific reuse grant was found. No table names, coordinates, geometry, natural-diet claim, or public-app row was added. See `national-caraga-lake-oro-dakong-napo-fish-survey-review-20261031.json` and National rollout step 332.
