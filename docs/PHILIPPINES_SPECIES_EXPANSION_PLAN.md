@@ -2978,4 +2978,13 @@ Reviewed Vedra et al.'s publisher-hosted 2024 article, based on field periods in
 
 Table 4 prints 11 fish labels, including seven binomials and four family/genus-only labels, but has no station/waterbody column. Methods describe opportunistic survey and kick-net samples, while the fish-results section says locals captured specimens; fish-specific effort and voucher chain are unresolved. Figure 4 shows ruler photographs but no accession, diagnostic crosswalk or photo-to-station metadata. The title, abstract and figures name Claver, Surigao del Norte, while the Table 1, 3 and 4 captions say Surigao del Sur. This internal geography conflict prevents safe station-level attribution. No taxon name was normalized, no current or site-specific presence, diet, safety, legal, geometry or app claim was added, and item-specific reuse terms remain unverified. Added `national-caraga-claver-river-aquatic-fauna-review-20261031.json`; source registry count is 482.
 
-**Next:** taxonomically screen the seven printed binomials and keep the province-caption conflict and missing station crosswalk explicit; do not publish species-to-river records unless source evidence resolves both.
+**Next:** keep the province-caption conflict and missing station crosswalk explicit; do not publish species-to-river records unless source evidence resolves both.
+
+
+### National rollout step 352 - Claver river fish-name cross-check - 31 October 2026
+
+Screened all seven Table 4 binomials against Eschmeyer's Catalog of Fishes and corroborating nomenclature sources. Four are valid as printed in the checked references. Three candidate crosswalks are recorded without changing the article labels: `Apogon lateralis` to `Fibramia lateralis`, `Siganus jarvus` to `Siganus javus`, and `Terapon jarboa` to `Terapon jarbua`. The four family/genus-only labels remain unresolved. ITIS is the bounded source for `Alepes melanoptera` and cites the Catalog version dated 2 April 2024; this does not establish specimen identity.
+
+No specimen was reidentified, no label was linked to any Claver station or named waterbody, and no current presence, natural diet, safety, legal, geometry or public-app claim was added. The Claver/Surigao del Norte versus Surigao del Sur caption conflict and article rights remain unresolved. Added `national-caraga-claver-river-taxonomy-crosscheck-20261031.json`; source registry count is 483.
+
+**Next:** retain this paper as a research-only river/estuary source. The next evidence task is to check for independently published corrections, publicly available museum vouchers or station-to-photo/specimen crosswalks. A no-result in any index must not be treated as absence or as disproof of the paper's report.
