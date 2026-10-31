@@ -2780,3 +2780,11 @@ Reviewed the official 2015 JEAR publisher record and a public author-uploaded co
 The publisher page says all rights reserved and no item-specific reuse grant was found. Added `national-caraga-lake-mainit-aquatic-biodiversity-review-20261031.json` and the source record. The registry now has 456 entries. No table rows, current-presence claims, lake/river-specific assertions, geometry, diet or public-app data were added.
 
 **Next:** continue Caraga freshwater screening with a later primary study that supplies taxon-by-site specimen evidence or accessible voucher/photo documentation. Keep the pooled historical inventory research-only and do not treat it as current lake or river coverage.
+
+### National rollout step 330 - Agusan Marsh historical fishery assessment audit - 31 October 2026
+
+Reviewed the official NFRDI full paper on fishery monitoring from May 2014 through December 2016 at four landing centers in Lapaz and Talacogon. Its catch-composition results are aggregated by municipality, without a taxon-to-capture-waterbody or taxon-to-landing-center crosswalk. The source's claimed 18 fish species are not independently reconciled: the 18-row table includes genus-level *Macrobrachium* (a freshwater prawn), and it prints unresolved *Trichopodus/Trichogaster pectoralis* and *Osphronemus laticlavius/lacticlavius* variants. The municipal richness figures (12 and 17) are not additive.
+
+The current Philippine Journal of Fisheries policy states that submitted articles are licensed CC BY-NC 4.0, but the reviewed 2020 article PDF and repository metadata do not display an item-specific license statement; applicability to this item remains unverified. Added `national-caraga-agusan-marsh-2014-2016-fishery-review-20261031.json` and one NFRDI source record. Registry count is now 457. No taxon rows, capture geometry, current-presence claim, diet advice, safety/legal guidance, or public-app row was added.
+
+**Next:** continue Caraga inland coverage with station- or voucher-resolved primary evidence that separates marsh, lake, and river locations. Keep historical landing data out of capture-origin maps and current species presence.
