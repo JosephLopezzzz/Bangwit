@@ -72,12 +72,12 @@
     "limits": "Province plus separate-city starter coverage. Municipalities/component cities and each island/waterbody still require the source-sweep inventory; this is not a completed regional inventory."
   },
   "counts": {
-    "waterbodyResearchLeads": 115,
+    "waterbodyResearchLeads": 116,
     "provincesWithLeads": 5,
     "separateCityCoverageUnits": 1,
     "byKind": {
       "bay": 7,
-      "river": 57,
+      "river": 58,
       "estuary": 3,
       "wetland": 8,
       "reservoir": 5,
@@ -2162,7 +2162,8 @@
       "sourceRefs": [
         "denr-bmb-inland-wetlands-atlas-2016",
         "gbif-occurrence-downloads",
-        "aiib-2023-bcib-final-eia"
+        "aiib-2023-bcib-final-eia",
+        "cvsu-timalan-pasong-camachile-watershed-project-2017"
       ],
       "identityStatus": "source-named-research-lead",
       "boundaryStatus": "not-delineated",
@@ -2170,6 +2171,41 @@
       "reviewStatus": "official-EIA-main-stem-and-west-branch-review;fish-names-source-reported-or-observed;field-identification-and-station-allocation-unverified;reach-geometry-pending",
       "publicAdmission": false,
       "scopeNote": "The DENR-BMB 2016 Atlas Annex 2b names the river and gives locality context: Tanza; Naic; source spelling: Trece Martirez City. The 2023 AIIB-hosted EIA reports a 2021-2022 stream-ecology assessment with six main-stem stations and one unnamed west-branch station. Its main-stem summary lists three binomial fish names and two family-level groups as reported or observed, but gives no fish-name-by-station allocation, fish-specific date, identification protocol, or voucher. The west-branch summary says no fish or fishing was documented at or near its one selected location; this is not evidence of absence from the branch or main stem. The EIA describes upstream freshwater and downstream estuarine conditions, so no whole-river salinity class is assigned. No channel geometry, current safety status, occurrence record, or public species row is adopted. A bounded GBIF COL XR Actinopterygii exact-name screen returned zero for the indexed waterBody/locality fields; that is not fish-absence evidence."
+    },
+    {
+      "id": "ph-wb-pasong-camachile-river",
+      "name": "Pasong Camachile River",
+      "aliases": [],
+      "kind": "river",
+      "salinity": {
+        "classification": "unknown",
+        "reviewStatus": "not-assessed;watershed-and-river-course-sources-do-not-measure-whole-river-salinity",
+        "sourceRefs": []
+      },
+      "administrativeAssociations": [
+        {
+          "regionId": "0400000000",
+          "relationship": "source-described-locality",
+          "sourceRefs": [
+            "cvsu-timalan-pasong-camachile-watershed-project-2017",
+            "emb-calax-cavite-section-eis-2018-fish-context",
+            "cavite-ecological-profile-2024-fisheries"
+          ],
+          "provinceId": "0402100000",
+          "locality": "Cavite; profile route narrative starts at Santiago and passes San Gabriel; exact municipalities and full channel extent unresolved"
+        }
+      ],
+      "sourceRefs": [
+        "cvsu-timalan-pasong-camachile-watershed-project-2017",
+        "emb-calax-cavite-section-eis-2018-fish-context",
+        "cavite-ecological-profile-2024-fisheries"
+      ],
+      "identityStatus": "source-named-research-lead",
+      "boundaryStatus": "not-delineated",
+      "fishEvidenceStatus": "historical-multi-river-EIS-fish-context;fish-method-and-waterbody-attribution-unresolved;no-species-assertion;2017-watershed-project-results-unlocated",
+      "reviewStatus": "official-river-and-watershed-context-reviewed;2017-project-deliverables-unlocated;fish-attribution-unresolved;channel-geometry-pending",
+      "publicAdmission": false,
+      "scopeNote": "The official EMB CALAX EIS names Pasong Camachile River and reports a source-era 10.22 km² catchment for Pasong Camachile River Basin; it describes Pasong Camachile and San Juan Main Stream as components of the wider San Juan River Basin. The Cavite Ecological Profile 2024 gives a narrative course from Santiago through San Gabriel to San Juan River, not a surveyed centerline. CvSU’s official February 2017 newsletter announces a DENR-PENRO/CvSU watershed profiling and management-planning project for Pasong Camachile and Timalan, but no completed plan, fish results, method, station, or geometry was located. The EIS fish context remains multi-river and unassigned to Pasong Camachile. Keep its river identity distinct from the larger Camachile-Ylang-Ylang watershed grouping unless an authoritative crosswalk supports a merge. Salinity is unknown; no species assertion, geometry, safety/access claim, or public app row is adopted."
     },
     {
       "id": "ph-wb-timbugan-creek",
@@ -4280,8 +4316,8 @@
     {
       "id": "scope-not-exhaustive",
       "status": "open",
-      "count": 113,
-      "reason": "113 selected named water and habitat research leads are seeded across CALABARZON water types; this selected list is not a complete regional inventory. The official 2024 Cavite profile adds source-named river courses, while reported route text remains distinct from verified channel geometry. The Guinayangan Water District 2024 report adds one river and seven grouped or named spring-source leads by barangay, without fish data or geometry. An IIRR watershed brief adds four source-named Maulawin tributaries, but no fish evidence or surveyed channel routes. The Kabibihan River System is named in a cross-municipality gleaning abstract and historical tidal mangrove/salinity studies, but these add no finfish list or current geometry. A 2017 JICA-hosted EIA adds a historical four-station estuarine fishery matrix and a station at the Maalimango River mouth; it does not provide a complete inventory or channel boundary. Provincial, municipal, island, stream, pond and reservoir denominators remain unestablished; some leads are habitat/designation names rather than delineated waterbodies.",
+      "count": 116,
+      "reason": "116 selected named water and habitat research leads are seeded across CALABARZON water types; this selected list is not a complete regional inventory. The official 2024 Cavite profile adds source-named river courses, while reported route text remains distinct from verified channel geometry. The Guinayangan Water District 2024 report adds one river and seven grouped or named spring-source leads by barangay, without fish data or geometry. An IIRR watershed brief adds four source-named Maulawin tributaries, but no fish evidence or surveyed channel routes. The Kabibihan River System is named in a cross-municipality gleaning abstract and historical tidal mangrove/salinity studies, but these add no finfish list or current geometry. A 2017 JICA-hosted EIA adds a historical four-station estuarine fishery matrix and a station at the Maalimango River mouth; it does not provide a complete inventory or channel boundary. Provincial, municipal, island, stream, pond and reservoir denominators remain unestablished; some leads are habitat/designation names rather than delineated waterbodies.",
       "nextAction": "Continue the source-derived inventory with explicit inclusion criteria and a frozen manifest; resolve unnamed 2021 aggregate river/wetland counts before claiming a regional baseline."
     },
     {
@@ -4316,15 +4352,15 @@
     {
       "id": "fish-coverage",
       "status": "open",
-      "count": 98,
-      "reason": "Regional fish evidence remains incomplete across 98 selected leads without a fish evidence review. The Maalimango River lead has a historical, station-specific 2016 EIA fishery matrix with partial taxonomy and unresolved reuse/field identification; this is not a current or complete river list. The new Guinayangan river/spring source crosswalk contains no fish records. Exact-name database screens cover selected watercourses only; zero results are bounded discovery gaps, not evidence of fish absence.",
+      "count": 99,
+      "reason": "Regional fish evidence remains incomplete across 99 selected leads without a fish evidence review. The Maalimango River lead has a historical, station-specific 2016 EIA fishery matrix with partial taxonomy and unresolved reuse/field identification; this is not a current or complete river list. The new Guinayangan river/spring source crosswalk contains no fish records. Exact-name database screens cover selected watercourses only; zero results are bounded discovery gaps, not evidence of fish absence.",
       "nextAction": "Join only independently reviewed evidence at its supported geographic scale."
     },
     {
       "id": "identity-and-geometry",
       "status": "open",
-      "count": 105,
-      "reason": "No validated waterbody geometry or precise point assignment has been created for 105 selected leads. The eight newly added Guinayangan water-supply features have barangay-level context only; grouped springs are not split into mapped points. Historical station points and project footprints do not delimit whole waterbodies; repeated names, source-era localities, compound river names and watershed-versus-channel identity remain under review.",
+      "count": 116,
+      "reason": "No validated waterbody geometry or precise point assignment has been created for 116 selected leads. The eight newly added Guinayangan water-supply features have barangay-level context only; grouped springs are not split into mapped points. Historical station points and project footprints do not delimit whole waterbodies; repeated names, source-era localities, compound river names and watershed-versus-channel identity remain under review.",
       "nextAction": "Reconcile stable identities and source-era/current geography before map display."
     },
     {
