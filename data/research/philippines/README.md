@@ -1121,3 +1121,7 @@ The official NFRDI paper describes 2015-2017 fishery landings at six North Cotab
 ## Liguasan Marsh gut-content paper access audit -- 31 October 2026
 
 The 2021 publisher abstract says eight freshwater fishes were assigned across five broad feeding guilds, but it does not identify named taxa's food items. A normal request to its linked full-text PDF returned HTTP 403. The full article and its item-specific reuse terms remain unverified; no diet card or bait recommendation was added. See `national-mindanao-ligawasan-diet-paper-access-review-20261031.json` and National rollout step 327.
+
+## Six Mindanao small lakes fish survey -- 31 October 2026
+
+Reviewed the full 2022 AACL Bioflux article covering Lakewood, Apo, Napalit, Holon/Maughan, Tiktikan, and Kanlunes. It reports a 2017 collection period, but its Table 4 presence code mixes fish “collected” with records “reported by the locals” without a taxon-by-lake evidence distinction. The abstract says 59 species, results text says 60, and the table includes an “Unknown” row. Tiktikan is connected to a lagoon with seawater entry and includes marine/brackish taxa, so this is not a uniform freshwater inventory. The article states a Creative Commons Attribution License but names no version. No presence row, coordinate, water-quality value, diet claim, or public-app entry was added. See `national-mindanao-six-small-lakes-fish-survey-review-20261031.json` and National rollout step 328.

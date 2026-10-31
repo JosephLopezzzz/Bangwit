@@ -2763,4 +2763,12 @@ Reviewed the 2021 publisher metadata and abstract for Fabay et al. The abstract 
 
 Added `national-mindanao-ligawasan-diet-paper-access-review-20261031.json` and the publisher metadata/access record. No diet assertion, bait advice, occurrence, geometry, or public-app row was added. The registry now contains 454 entries. The paper remains a lead for a later ordinary-access retry, not a source for species-specific diet cards from its abstract.
 
-**Next:** continue Mindanao freshwater coverage with an accessible primary source. Retry this paper only if its full text and item-specific reuse terms become normally available; do not bypass publisher access controls.
+**Next:** continue Mindanao freshwater coverage with an accessible primary source. Retry the Fabay paper only if its full text and item-specific reuse terms become normally available; do not bypass publisher access controls.
+
+### National rollout step 328 - Six Mindanao small-lake fish survey review - 31 October 2026
+
+Reviewed the full 2022 AACL Bioflux paper on Lakewood, Apo, Napalit, Holon/Maughan, Tiktikan, and Kanlunes lakes using the publisher PDF. It describes four-day collection periods per lake between January and May 2017, but Table 4 defines a presence mark as “collected and as reported by the locals,” so it does not distinguish specimen-backed collection from local report for each taxon/lake cell. The abstract says 59 species while results text says 60, and the table includes an “Unknown” row. The abstract calls the lakes isolated even though it also says five are open/connected; Tiktikan is described as lagoon-connected with seawater entry and includes marine/brackish habitat labels. The lake-level water-quality table does not include Tiktikan, and 2017 measurements are not current safety data.
+
+The article states a Creative Commons Attribution License, but does not name a version. Added `national-mindanao-six-small-lakes-fish-survey-review-20261031.json` and a source-registry entry; source count is now 455. No species/presence rows, water-quality claims, diet notes, lake coordinates, geometry, table content, or public-app entries were added. The author’s middle initial also differs between the first-page author line and the final-page citation and is preserved as a bibliographic uncertainty.
+
+**Next:** continue the Mindanao freshwater queue with a primary source that separates specimens from community reports at the taxon-site level. Keep this paper as an openly licensed, historical research lead; do not import its mixed presence matrix as a verified checklist.
