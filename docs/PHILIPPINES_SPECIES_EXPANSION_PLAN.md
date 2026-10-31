@@ -3547,3 +3547,12 @@ Cross-checks surfaced the historical Ternate Ordinance No. 04 S-2005 and Resolut
 Added `calabarzon-bfar4a-2020-fish-sanctuary-rra-review-20261101.json` as a supplement to the existing 2020 report source record. No species assertion, scope reference, new waterbody, geometry, or public-app row was added; CALABARZON counts remain unchanged and incomplete.
 
 **Next:** seek the actual BFAR RRA tables and the 2005/2008 Bulaklakin Reef reports through a documented public source. Resolve the reef-name/station crosswalks and reuse terms before considering any taxon records or scope links.
+
+
+### National rollout step 410 - BFAR IV-A RRA data-request draft - 1 November 2026
+
+Prepared `calabarzon-bfar4a-fish-sanctuary-rra-data-request-draft-20261101.md` for the official BFAR IV-A Cavite Provincial Fisheries Office. It asks for the existing 2020 RRA records for Senemento Reef and Patungan Reef, the cited 2005/2008 Bulaklakin Reef assessments, site/station crosswalks, dates, methods, fish taxa and identification support, public access routes, and item-specific reuse conditions. It explains Bangwit’s Cavite pilot and planned national expansion, and explicitly avoids merging Patungan Reef with Patungan Munti or the Maragondon River/Estuary.
+
+The draft is unsent, includes no personal email address, and does not authorize the recipient to create new data or endorse the app. No agency was contacted. It is linked in the coverage-profile provenance; the waterbody denominator, source-reference count, scope, and source registry remain unchanged. No species assertion, geometry, or public-app row was added.
+
+**Next:** Joseph can review and decide whether to send the draft through the official PFO Cavite contact. Meanwhile, continue searching independent public CALABARZON sources; do not wait on a reply before other research proceeds.
