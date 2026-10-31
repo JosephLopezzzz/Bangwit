@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "calabarzon-palanas-name-crosswalk-review-20261031",
+  "reviewedOn": "2026-10-31",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "regionName": "Region IV-A (CALABARZON)",
+  "waterbodyIds": [
+    "ph-wb-palanas-river",
+    "ph-wb-palanas-river-naic-cavite",
+    "ph-wb-timalan-river"
+  ],
+  "sourceIds": [
+    "pagulayan-1999-pansipit-palanas-fish-composition",
+    "bfar-fao-12-1-1947-palanas-creek-lemery",
+    "emb-calabarzon-monitor-palanas-naic-2006"
+  ],
+  "question": "Do the similarly named Palanas water features in the 1998 fish-survey abstract, the historical Lemery fisheries order, and the Naic/Timalan monitoring bulletin refer to one physical watercourse?",
+  "sourceFindings": [
+    {
+      "sourceId": "pagulayan-1999-pansipit-palanas-fish-composition",
+      "sourceDate": 1999,
+      "evidence": "The NAST proceedings abstract reports a 1998 survey at one Palanas River site and describes that study feature as a diverging branch of Pansipit with a separate outlet to Balayan Bay about 3 km from the Pansipit mouth.",
+      "limits": "One-page abstract only; it supplies no coordinates, municipality for the Palanas site, route, map, species list or station records."
+    },
+    {
+      "sourceId": "bfar-fao-12-1-1947-palanas-creek-lemery",
+      "sourceDate": 1947,
+      "evidence": "The BFAR-hosted historical Fisheries Administrative Order names Palanas Creek within Lemery, Batangas, and describes tidal waters and tributaries extending to a junction with Pansipit River.",
+      "limits": "Historical scanned order with imperfect OCR. The named creek may or may not be the same feature as the 1998 Palanas River site. This review does not treat the order as current fishing law, access permission, or a present-day route definition."
+    },
+    {
+      "sourceId": "emb-calabarzon-monitor-palanas-naic-2006",
+      "sourceDate": 2006,
+      "evidence": "The indexed text of the official DENR-EMB CALABARZON quarterly bulletin names Palanas River (Naic) among tributaries of Timalan River and places Timalan in Naic and Tanza, Cavite.",
+      "limits": "Direct PDF retrieval returned HTTP 403; only the official indexed excerpt was reviewed. It supplies no Palanas channel geometry or fish survey. Its 2006 water-classification context is not adopted as a current legal classification."
+    }
+  ],
+  "identityAssessment": {
+    "pansipitStudyFeature": {
+      "waterbodyId": "ph-wb-palanas-river",
+      "status": "source-named-research-lead;route-and-municipality-unresolved",
+      "decision": "Keep the 1998 NAST study lead separate from both the Naic/Timalan tributary lead and the 1947 Palanas Creek name until a modern hydrography/LGU crosswalk resolves the relationship."
+    },
+    "naicTimalanTributary": {
+      "waterbodyId": "ph-wb-palanas-river-naic-cavite",
+      "status": "official-source-named;channel-not-delineated;fish-evidence-not-reviewed",
+      "decision": "Record as a distinct Cavite research lead because the 2006 bulletin explicitly supplies Naic and Timalan drainage context; do not transfer the historical Batangas fish richness to it."
+    },
+    "historicalLemeryCreek": {
+      "status": "historical-name-and-jurisdiction-context-only;crosswalk-unresolved",
+      "decision": "Retain as a comparison source for the Batangas study lead, not as proof of present route, legal status or identity with the Naic feature."
+    }
+  },
+  "disposition": {
+    "addedCaviteResearchLead": true,
+    "mergedPalanasFeatures": false,
+    "channelGeometryAdded": false,
+    "salinityChanged": false,
+    "fishEvidenceAdded": false,
+    "speciesAssertionsAdded": 0,
+    "currentPresenceOrAbsenceInferred": false,
+    "legalOrSafetyClaimAdded": false,
+    "publicAppRowsAdded": 0,
+    "publicationApproval": false
+  },
+  "nextActions": [
+    "Seek a modern official Cavite/LGU hydrography or watershed source that maps Palanas River (Naic) into Timalan River and verifies its channel identity; do not infer geometry from a tributary list.",
+    "Seek an official Lemery/Batangas river or cadastral crosswalk to determine whether the 1947 Palanas Creek and 1998 study Palanas River are related; preserve the historical source-era wording and do not rely on the order for current fishing rules.",
+    "For the 1998 Palanas fish aggregate, locate an independently licensed, site-resolved species source or written reuse permission before transcribing taxa."
+  ],
+  "status": "official-name-crosswalk-review;Naic-and-Pansipit-study-leads-kept-distinct;historical-Lemery-creek-relationship-unresolved;no-fish-assertion-or-geometry"
+}
