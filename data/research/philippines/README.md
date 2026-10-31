@@ -1167,3 +1167,7 @@ GBIF returned six fish `MATERIAL_CITATION` rows for “Bega watershed”; all si
 ## Lower Agusan River to Butuan Bay salinity-gradient fish study -- 31 October 2026
 
 The publisher's 2020 EnvironmentAsia paper reports nine fish table labels sampled across freshwater, brackish, and marine stations in April-May 2018. The station coordinates are retained verbatim only; no datum, uncertainty, or specimen-to-map-point crosswalk was established. Source trophic labels are not natural-diet or bait data. Historical metal measurements are not current safety information. The journal-wide open-access policy was reviewed, but an article-specific Creative Commons license/version and Bangwit publication approval remain unresolved. No species assertion or public app row was added. See `national-caraga-lower-agusan-bay-2018-salinity-fish-survey-review-20261031.json` and National rollout step 338.
+
+## Lower Agusan fish-name cross-check -- 31 October 2026
+
+All nine 2020 source-table binomials are listed as valid as printed in indexed excerpts from Eschmeyer's Catalog of Fishes. Direct access to selected exact-name pages was incomplete, and no access controls were bypassed. This checks nomenclature only; specimen identity and current local presence remain unverified. No occurrence or public app row was added. See `national-caraga-lower-agusan-fish-taxonomy-crosscheck-20261031.json` and National rollout step 339.
