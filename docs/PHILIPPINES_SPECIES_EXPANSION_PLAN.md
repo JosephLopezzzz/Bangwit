@@ -2586,3 +2586,12 @@ Reviewed the official CvSU ILS catalog record and its linked 15-page abstract/co
 Added `cvsu-2018-timalan-fish-crustacean-thesis-abstract` to the source registry, recorded `calabarzon-timalan-2018-fish-thesis-abstract-review-20261031.json`, linked the source to the Timalan River watershed research lead, and refreshed the denominator profile and hashes. CALABARZON remains at 116 selected waterbody leads (58 rivers) and 111 distinct linked source references. The 26-fish/4-crustacean result is historical watershed-level context only; it is not assigned to the Timalan main stem or any individual river. No species names/assertions, current-presence or absence claim, water-quality/safety conclusion, geometry, public row, or reuse approval was added.
 
 **Next:** seek authorized access to thesis Tables 2-4, Figure 13, and relevant appendix pages; verify species identifications and site/season attribution, then review reuse rights. Keep the thesis aggregate separate from the EIA's main-stem taxa and west-branch non-observation, and do not infer current conditions from the historical water-quality study.
+
+
+### National rollout step 308 - Timalan full-thesis public-access follow-up - 31 October 2026
+
+Followed up the CvSU catalog record through the official Theses Xplorer service route and bounded exact-title/author web searches. The catalog lists the 151-page physical thesis as room-use only and exposes the 15-page abstract/contents attachment. The unauthenticated Xplorer URL returned the general CvSU ILS service page, with Google sign-in offered and guest sign-in disabled; it did not expose a Timalan full-text result. Exact-title and author searches did not locate a public mirror. This is a bounded retrieval gap, not proof that the university has no authorized access path.
+
+Added the query scope and access outcome to `calabarzon-timalan-2018-fish-thesis-abstract-review-20261031.json` and refreshed its denominator-profile hash. No sign-in, thesis request, species assertion, or publication decision was made. The abstract remains historical multi-river aggregate evidence only.
+
+**Next:** continue with the next independently reviewable CALABARZON fish source; retain the CvSU results tables and station crosswalk as an unresolved retrieval task rather than repeating the same public search route.
