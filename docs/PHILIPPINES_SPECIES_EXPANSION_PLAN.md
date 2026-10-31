@@ -3343,7 +3343,7 @@ Searched the publisher article and publicly indexed fish-collection results usin
 
 Added `national-mindanao-mandulog-2024-public-voucher-screen-20261031.json` and two catalog-coverage source records. The 2023 article still has no public voucher/accession crosswalk in the reviewed text. No specimen identity, species/occurrence assertion, geometry, or app row was added; source registry count is 535 unique entries.
 
-**Next:** steps 391-392 reviewed the 2019 COI and 2023 cyt-b studies. The latter's 62 Lake Lanao records may overlap with nine 2019 voucher-coded samples; confirm this candidate crosswalk before treating the studies as independent counts. Step 393 reviews the 2019 *Barbodes tumba* population-genetics study across Lake Lanao, Nunungan Lake, Dagoyanan Lake, and Pulangi River.
+**Next:** steps 391-393 reviewed the Lake Lanao *Glossogobius* genetics studies and the 2019 *Barbodes tumba* population-genetics study across four inland waters. Five Lake Lanao *B. tumba* vouchers probably overlap across the two studies; their physical identity remains unconfirmed. Step 394 returns to the unresolved Valencia/Malaunay River range-extension lead.
 
 
 ### National rollout step 391 - Lake Lanao 2019 fish DNA-barcode and GenBank crosswalk review - 31 October 2026
@@ -3354,7 +3354,7 @@ The article itself documents important identity limits. Twelve *Glossogobius* se
 
 This is valuable historical molecular and voucher-code evidence for Lake Lanao, not a current inventory or 2026 occurrence dataset. No sequence, table, figure, or image was copied. The publisher states CC BY 4.0, but no current app species, occurrence, diet, safety, legal, geometry, or public-app row was added. Added `national-mindanao-lake-lanao-2019-dna-barcode-review-20261031.json` and two source references; registry count is 537 unique entries.
 
-**Next:** step 392 completed the later multi-lake cyt-b study review and found nine candidate sample overlaps with the 2019 COI records. Continue with step 393's independent Lake Lanao/river *Barbodes tumba* genetics study; keep sites, sampling periods, and voucher records distinct.
+**Next:** steps 392-393 reviewed the later Lake Lanao goby cyt-b study and the 2019 *Barbodes tumba* four-waterbody population-genetics paper. Five *B. tumba* samples probably overlap across the two marker datasets. Step 394 returns to the unresolved Valencia/Malaunay River range-extension source trail.
 
 
 ### National rollout step 392 - Lake Lanao 2023 Glossogobius cyt-b lineage and sample-overlap review - 31 October 2026
@@ -3365,4 +3365,15 @@ Compared the 12 earlier Lake Lanao COI records from step 391 with the cyt-b reco
 
 The 62 accessions contain five coordinate values; the paper says fish were bought from vendors/fishermen and does not link each fish to a capture event. Treat those coordinates as archive metadata, not public occurrence points. No sequence strings, figures, or tables were copied. The publisher states CC BY 4.0. No app species/occurrence row, geometry, diet, safety, legal, or current-presence assertion was added. Added `national-mindanao-lake-lanao-2023-glossogobius-lineage-review-20261031.json` and two source references; source registry count: 539 unique entries.
 
-**Next:** step 393 reviews the 2019 *Barbodes tumba* population-genetics study covering Lake Lanao, Nunungan Lake, Dagoyanan Lake, and Pulangi River. Extract each waterbody's collection dates and accession/voucher mapping; investigate possible reuse of samples across papers before counting records independently.
+**Next:** step 394 revisits the reported Valencia, Negros Oriental *Barbodes tumba* range extension. Find the primary 2022 poster, thesis, or specimen record and reconcile its Malaunay River locality and three markers to the existing 2020 COI accessions before admitting a Visayas occurrence.
+
+
+### National rollout step 393 - *Barbodes tumba* four-waterbody population genetics and GenBank crosswalk - 31 October 2026
+
+Reviewed the full Abdulmalik-Labe and Quilang (2019) paper, which reports 122 mitochondrial control-region sequences from four Mindanao inland waters: Lake Lanao (30), Nunungan Lake (30), Dagoyanan Lake (30), and Pulangi River at Poblacion 1, Valencia City, Bukidnon (32). All 122 accessions in MG663328-MG663449 were retrieved from GenBank and carry submitter voucher codes. Archived dates fall in June-November 2016. Study-locality coordinate batches match the four waterbodies, but the study obtained fish from fishers/vendors; the rounded archive coordinates are not treated as per-fish capture geometry.
+
+Compared the five Lake Lanao *B. tumba* COI accessions in the earlier 2019 barcode paper with the 122 control-region records. Five pairs share the voucher suffix, collector, Lake Lanao locality, and exact 29 June 2016 date: MG407354/MG663341 (ABT16), MG407355/MG663333 (ABT7), MG407356/MG663334 (ABT8), MG407357/MG663335 (ABT10), and MG407358/MG663340 (ABT15). This is strong evidence that those five fish were sequenced at two mitochondrial loci, but not a physical voucher-catalog confirmation. Do not count them as independent individuals or add the paper sample totals.
+
+The article reports 87 haplotypes and differentiated population structure; these are historical genetic findings, not current abundance or catchability. It does not establish 2026 presence, a complete inventory, or exact fishing sites. No sequences, tables, or figures were copied. No current occurrence, geometry, diet, safety, legal, or app row was added. Added `national-mindanao-barbodes-tumba-four-sites-genbank-crosswalk-review-20261031.json` and one GenBank source; updated the existing article source entry; registry count is 540 unique entries.
+
+**Next:** step 394 returns to the reported Valencia, Negros Oriental range extension. Locate the primary 2022 poster, thesis, or specimen record and reconcile its claimed Malaunay River locality and three molecular markers to the existing GenBank records before considering a Visayas occurrence.

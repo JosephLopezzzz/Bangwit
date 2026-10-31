@@ -1,0 +1,130 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-31",
+  "phaseId": "M2",
+  "regionIds": ["1000000000", "1900000000"],
+  "regionName": "Mindanao (Region X and BARMM)",
+  "waterbodies": ["Lake Lanao", "Nunungan Lake", "Dagoyanan Lake", "Pulangi River"],
+  "status": "research-only-historical-population-genetics;four-inland-waterbodies;probable-cross-study-sample-overlap;not-current-occurrence-evidence",
+  "question": "What waterbody-specific Barbodes tumba sample evidence is recoverable from the 2019 Mindanao population-genetics study and its GenBank records, and does that study share specimens with the earlier Lake Lanao COI barcode paper?",
+  "study": {
+    "citation": "Abdulmalik-Labe, O. P., & Quilang, J. P. (2019). Genetic diversity among the endemic barb Barbodes tumba (Teleostei: Cyprinidae) populations from Mindanao, Philippines. Journal of Threatened Taxa, 11(7), 13822-13832.",
+    "doi": "10.11609/jott.4851.11.7.13822-13832",
+    "published": "2019-05-26",
+    "license": "CC BY 4.0, stated by the publisher",
+    "method": "Mitochondrial DNA control-region (D-loop) sequencing and population-genetic analyses.",
+    "articleReportedSequences": 122,
+    "genbankAccessionRange": "MG663328-MG663449",
+    "genbankRecordsRetrieved": 122,
+    "genbankOrganismLabel": "All 122 returned GenBank records are submitted as Barbodes tumba. These submitter labels are not independent taxonomic re-identifications.",
+    "sampleProvenance": "The article says 30-32 fish per site were obtained from fishermen and fish vendors. The publication does not provide a specimen-to-market/fisher transaction crosswalk or identify an institutional museum catalog for the GenBank voucher codes.",
+    "siteSamples": [
+      {
+        "waterbody": "Lake Lanao",
+        "articleLocality": "Lake Lanao, Lanao del Sur; samples collected near the source of Agus River in Marawi City",
+        "currentAdministrativeRegion": "Bangsamoro Autonomous Region in Muslim Mindanao (BARMM)",
+        "sampleCount": 30,
+        "accessionRange": "MG663328-MG663357",
+        "genbankCollectionDates": {"2016-06-29": 17, "2016-06-30": 7, "2016-07-01": 6},
+        "genbankArchiveCoordinate": "8.00 N, 124.29 E",
+        "articleLakeCoordinate": "8.0000 N, 124.2880 E",
+        "genbankVoucherPrefixes": ["ABT", "ABTF", "BT", "BTF"]
+      },
+      {
+        "waterbody": "Nunungan Lake (also called Gadongan)",
+        "articleLocality": "Nunungan, Lanao del Norte, Region X",
+        "currentAdministrativeRegion": "Region X (Northern Mindanao)",
+        "sampleCount": 30,
+        "accessionRange": "MG663420-MG663449",
+        "genbankCollectionDates": {"2016-11-01": 30},
+        "genbankArchiveCoordinate": "7.82 N, 123.95 E",
+        "articleLakeCoordinate": "7.8190 N, 123.9500 E",
+        "genbankVoucherPrefixes": ["NBT"]
+      },
+      {
+        "waterbody": "Dagoyanan Lake (also spelled Dagianan)",
+        "articleLocality": "Madalum, Lanao del Sur",
+        "currentAdministrativeRegion": "Bangsamoro Autonomous Region in Muslim Mindanao (BARMM)",
+        "sampleCount": 30,
+        "accessionRange": "MG663390-MG663419",
+        "genbankCollectionDates": {"2016-10-28": 30},
+        "genbankArchiveCoordinate": "7.88 N, 124.03 E",
+        "genbankVoucherPrefixes": ["DBT"]
+      },
+      {
+        "waterbody": "Pulangi River",
+        "articleLocality": "Poblacion 1, Valencia City, Bukidnon",
+        "currentAdministrativeRegion": "Region X (Northern Mindanao)",
+        "sampleCount": 32,
+        "accessionRange": "MG663358-MG663389",
+        "genbankCollectionDates": {"2016-11-09": 32},
+        "genbankArchiveCoordinate": "7.90 N, 125.10 E",
+        "genbankVoucherPrefixes": ["BBB"]
+      }
+    ],
+    "populationGeneticsSummary": {
+      "totalHaplotypes": 87,
+      "articleReportedAmongPopulationVariationPercent": 66.70,
+      "articleReportedOverallFst": 0.62718,
+      "interpretation": "The study reports substantial population differentiation among its four sampled freshwater sites. These genetic statistics are historical study results, not current abundance or local catchability estimates."
+    },
+    "coordinateCaveat": "GenBank repeats one rounded coordinate across each site's sample batch. Because specimens were obtained from fishers and fish vendors and the records do not link each fish to a verified capture event, these archive coordinates are treated as study-locality metadata, not individual capture points or map geometry.",
+    "voucherCaveat": "All 122 GenBank records expose a submitter specimen_voucher code, but the qualifiers do not identify a physical collection or provide an independently checked museum catalog crosswalk."
+  },
+  "candidateOverlapWith2019LakeLanaoCoIStudy": {
+    "comparisonArtifact": "national-mindanao-lake-lanao-2019-dna-barcode-review-20261031.json",
+    "basis": "All five Lake Lanao Barbodes tumba COI records in MG407354-MG407358 share the same voucher suffix (after the BLF- prefix), collector, and exact 2016-06-29 collection date with five control-region records in MG663328-MG663357. The rounded coordinates differ slightly: 8.00 N, 124.30 E vs 8.00 N, 124.29 E.",
+    "matches": [
+      {"coiAccession": "MG407354", "controlRegionAccession": "MG663341", "voucherSuffix": "ABT16", "collectionDate": "2016-06-29"},
+      {"coiAccession": "MG407355", "controlRegionAccession": "MG663333", "voucherSuffix": "ABT7", "collectionDate": "2016-06-29"},
+      {"coiAccession": "MG407356", "controlRegionAccession": "MG663334", "voucherSuffix": "ABT8", "collectionDate": "2016-06-29"},
+      {"coiAccession": "MG407357", "controlRegionAccession": "MG663335", "voucherSuffix": "ABT10", "collectionDate": "2016-06-29"},
+      {"coiAccession": "MG407358", "controlRegionAccession": "MG663340", "voucherSuffix": "ABT15", "collectionDate": "2016-06-29"}
+    ],
+    "assessment": "The five exact voucher-suffix/date matches, common research group and shared Lake Lanao locality make these probable same-sample records across two mitochondrial loci. They are not physically confirmed against a museum catalog or author-held specimen ledger.",
+    "independentReplicateCountEstablished": false,
+    "sampleTotalsMayBeAdded": false
+  },
+  "interpretation": [
+    "The paper and GenBank archive provide historical molecular-sample evidence from four named inland waters in Mindanao. They do not constitute a current survey or comprehensive fish inventory for any waterbody.",
+    "The 2016 archive dates are historical and do not establish 2026 presence, abundance, catchability, or population trend.",
+    "Five Lake Lanao records likely overlap with the earlier COI study; do not add the two papers' Lake Lanao sample counts as independent individuals.",
+    "Market/fisher provenance and rounded site-batch coordinates do not support precise public fish-occurrence pins.",
+    "The article's species identification and genetic population analysis are documented as reported by the authors; this review did not inspect physical vouchers or independently re-identify specimens."
+  ],
+  "disposition": {
+    "articleReportedSequences": 122,
+    "genbankRecordsRetrieved": 122,
+    "recordsWithSubmitterVoucherQualifier": 122,
+    "recordsWithPhysicalMuseumCatalogCrosswalkVerified": 0,
+    "waterbodyBatches": 4,
+    "candidateSameSampleCrossStudyMatches": 5,
+    "crossStudyPhysicalSampleIdentityConfirmed": false,
+    "currentPresenceAssertionsAdded": 0,
+    "preciseOccurrenceGeometryAdded": 0,
+    "dietAssertionsAdded": 0,
+    "safetyOrFishingRulesAdded": 0,
+    "appRowsAdded": 0,
+    "publicationApproval": false,
+    "conclusion": "This source strengthens the historical research record for Barbodes tumba across Lake Lanao, Nunungan Lake, Dagoyanan Lake and Pulangi River. The 122 records are separated by site and date; five Lake Lanao vouchers probably overlap the earlier COI paper, so cross-paper totals must not be added. No current species presence or precise occurrence geometry is asserted."
+  },
+  "nextAction": "National rollout step 394: revisit the reported Barbodes tumba range extension to Valencia, Negros Oriental. Search for the primary 2022 poster, thesis, or specimen record; reconcile its claimed Malaunay River locality and three markers to the existing 2020 COI accessions before any Visayas occurrence is accepted.",
+  "sources": [
+    {
+      "url": "https://threatenedtaxa.org/index.php/JoTT/article/view/4851",
+      "additionalUrl": "https://pdfs.semanticscholar.org/a3d2/3b0152b22cff957d1ec7e63d7068b41af97a.pdf",
+      "doi": "10.11609/jott.4851.11.7.13822-13832",
+      "supports": "2019 publication, CC BY 4.0, collection provenance, four study localities, reported site sample sizes, population-genetics findings, and the MG663328-MG663449 accession range."
+    },
+    {
+      "url": "https://www.ncbi.nlm.nih.gov/nuccore/?term=MG663328%3AMG663449%5BACCN%5D",
+      "additionalUrl": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=nuccore&term=MG663328%3AMG663449%5BACCN%5D&retmode=json&retmax=500",
+      "supports": "All 122 records, submitted organism labels, voucher codes, collection dates, collector qualifiers and rounded batch coordinates. No nucleotide sequence strings were copied."
+    },
+    {
+      "url": "https://www.ncbi.nlm.nih.gov/nuccore/?term=MG407354%3AMG407358%5BACCN%5D",
+      "additionalUrl": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=nuccore&term=MG407354%3AMG407358%5BACCN%5D&retmode=json&retmax=20",
+      "supports": "The five earlier Lake Lanao COI voucher/date records compared with the control-region records."
+    }
+  ]
+}
