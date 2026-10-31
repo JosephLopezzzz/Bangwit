@@ -3,7 +3,7 @@
   "checkedOn": "2026-10-31",
   "status": "research-only-source-registry",
   "scope": "National acquisition references, freshwater spatial-source leads, and CALABARZON/Central Luzon identity/source leads. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 486,
+  "sourceCount": 488,
   "sources": [
     {
       "id": "carumbana-siaton-river-limnology-fishery-report-2006",
@@ -15391,6 +15391,82 @@
         "No occurrence, diet, geometry, legal, safety or public-app assertion was added."
       ],
       "researchStatus": "caraga;butuan;15-source-binomials;taxonomy-crosscheck;three-author-year-discrepancies;specimen-identity-unverified;research-only"
+    },
+    {
+      "id": "gbif-butuan-market-voucher-discovery-screen-20261031",
+      "title": "GBIF bounded locality and museum-record screen for the Butuan market-study names",
+      "provider": "Global Biodiversity Information Facility (GBIF)",
+      "url": "https://techdocs.gbif.org/en/openapi/v1/occurrence",
+      "additionalUrls": [
+        "https://api.gbif.org/v1/occurrence/3426420228",
+        "https://api.gbif.org/v1/occurrence/666627608",
+        "https://api.gbif.org/v1/dataset/5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+        "https://api.gbif.org/v1/dataset/afc30a94-6107-488a-b9c0-ba9c4fa68b7c",
+        "https://api.gbif.org/v1/dataset/ddd46c4c-1c7a-49d6-8420-0c8b34a94a53"
+      ],
+      "role": "Read-only GBIF query for the 15 Butuan market-paper names in the Philippines, using five vendor-reported locality terms. Retrieved 12 matches: two historical Lake Mainit preserved-specimen records for Glossogobius material and ten Lake Mainit MATERIAL_CITATION rows from MOBIOS+. The literature citations are not independently identified museum vouchers. Research-only; no waterbody or app assertion admitted.",
+      "checkedOn": "2026-10-31",
+      "sourceYear": 2026,
+      "citation": "Global Biodiversity Information Facility. Occurrence Search API v1; 15 fish names and five locality variants, accessed 31 October 2026.",
+      "access": {
+        "status": "15-name-five-locality-query;12-results-complete;two-historical-preserved-records;ten-material-citations;no-current-presence;research-only",
+        "reviewFiles": [
+          "national-caraga-butuan-market-voucher-discovery-20261031.json"
+        ],
+        "fullTextRetrieved": true
+      },
+      "reuse": {
+        "metadata": "CAS and Field Museum occurrences show CC0 dataset/record metadata; MOBIOS+ shows CC BY-NC 4.0. Underlying literature rights and app publication remain separate and unapproved.",
+        "raw": "One bounded 12-result search and selected record/dataset metadata were retrieved; no bulk export was downloaded.",
+        "content": "Only occurrence identifiers and concise provenance/quality summaries are retained. No specimen images, article text or coordinates are used as app geometry."
+      },
+      "publicationApproval": false,
+      "license": "Mixed source-record metadata: CC0 for the two collection datasets; CC BY-NC 4.0 for MOBIOS+ material citations; no app rows approved",
+      "licenseUrl": null,
+      "caveats": [
+        "The ten MOBIOS+ rows have no institution or catalog identifier and are secondary literature-derived citations.",
+        "The two preserved Glossogobius records are historical (1940 and 1941); taxon identity needs review because of the composite-species/type-history caveat.",
+        "Coordinate uncertainty is 3.791 km for CAS record 38533 and absent for Field Museum catalog 40585; neither point is promoted to geometry.",
+        "No record links the museum material or MOBIOS+ citations to the Butuan market paper, vendors or 2023 sale samples."
+      ],
+      "researchStatus": "caraga;butuan;gbif;voucher-discovery;two-historical-glossogobius-records;ten-literature-material-citations;not-market-sample-identification;research-only"
+    },
+    {
+      "id": "idigbio-butuan-market-voucher-discovery-screen-20261031",
+      "title": "iDigBio bounded Philippines collection-record screen for the Butuan market-study names",
+      "provider": "Integrated Digitized Biocollections (iDigBio)",
+      "url": "https://search.idigbio.org/v2/search/records/",
+      "additionalUrls": [
+        "https://github.com/iDigBio/idigbio-search-api/wiki/Query-Format",
+        "https://portal.idigbio.org/",
+        "https://search.idigbio.org/v2/view/records/6d4c3039-4629-466e-abb7-b69a2f057b11"
+      ],
+      "role": "Queried all 15 exact source names as an OR list with country=Philippines; all 396 matching indexed records fit in one response page. Filtering the returned locality, verbatim locality, waterBody, county, stateProvince, higherGeography and occurrenceRemarks found one local candidate: CAS Channa striata catalog 21711, locality Agusan R. This is the same occurrence as the GBIF row already reviewed for Lower Agusan, not a second voucher or a link to the Butuan market source. Research-only.",
+      "checkedOn": "2026-10-31",
+      "sourceYear": 2026,
+      "citation": "Integrated Digitized Biocollections. Search API v2; 15 exact names and country=Philippines, with locality fields filtered across all 396 results, accessed 31 October 2026.",
+      "access": {
+        "status": "15-name-philippines-screen;396-results-fully-retrieved;one-existing-CAS-Agusan-R-record;no-new-independent-local-voucher;index-stale;research-only",
+        "reviewFiles": [
+          "national-caraga-butuan-market-voucher-discovery-20261031.json"
+        ],
+        "fullTextRetrieved": true
+      },
+      "reuse": {
+        "metadata": "iDigBio is a collection-record index; underlying collection record licenses govern reuse and are not a blanket app-publication approval.",
+        "raw": "One finite Philippines query result set of 396 records was inspected; no bulk data or media export was saved.",
+        "content": "Only one existing occurrence identifier and concise locality/deduplication findings are retained."
+      },
+      "publicationApproval": false,
+      "license": "No additional voucher or public-app row admitted",
+      "licenseUrl": null,
+      "caveats": [
+        "The portal states that its data stopped updating after 8 May 2026; new or not-yet-indexed records may be absent.",
+        "The single Agusan R. record has generic locality and no verified crosswalk to Lower Agusan study stations or the Butuan market supply chain.",
+        "The iDigBio CAS occurrenceID matches the GBIF record, so cross-portal duplication must not be counted as independent corroboration.",
+        "Zero matches for other place-name variants are not fish-absence evidence."
+      ],
+      "researchStatus": "caraga;butuan;idigbio;bounded-collection-search;396-records;one-duplicate-CAS-record;stale-index;not-absence-evidence;research-only"
     }
   ],
   "sourcePolicy": {
