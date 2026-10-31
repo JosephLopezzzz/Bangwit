@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-31",
+  "phaseId": "M2",
+  "regionIds": ["1600000000"],
+  "regionName": "Region XIII (Caraga)",
+  "status": "historical-freshwater-type-series-lead;simulao-locality-crosswalk-unresolved;type-status-disputed;museum-records-indexed-not-directly-fetched;rights-mixed;research-only",
+  "question": "Do published taxonomic sources and the MNHN type-series records independently support a fish occurrence in the Simulao River, and what may safely be said about the locality and type specimens?",
+  "sourceIds": [
+    "balisco-liao-2025-philippine-fish-described-checklist",
+    "hui-husana-2021-barbodes-pyrpholeos-montanoi-redescription",
+    "mnhn-montanoi-type-series-catalog-records"
+  ],
+  "taxonLead": {
+    "originalNameAsPublished": "Puntius montanoi Sauvage, 1881",
+    "nameCrosswalkIn2025Checklist": "Barbodes montanoi (Sauvage, 1881)",
+    "mnhnDisplayedName": "Barbus montanoi (Sauvage, 1881)",
+    "interpretation": "Names are retained as each source displays them. This review is not a fresh taxonomic determination or a complete current-name reconciliation."
+  },
+  "evidence": {
+    "2025AnnotatedChecklist": {
+      "sourceId": "balisco-liao-2025-philippine-fish-described-checklist",
+      "citation": "Balisco, R. A. T., & Liao, T.-Y. (2025). An annotated checklist of fish species described from the Philippines. ZooKeys, 1246, 1-287. https://doi.org/10.3897/zookeys.1246.145752.",
+      "reportedTypeLocality": "Simulao River, a tributary of Agusan, Mindanao, 1881.",
+      "reportedTypeSeries": [
+        {"catalogNumber": "MNHN A-3398", "labelInChecklist": "Holotype", "specimenCount": 1, "reportedLength": "90.0 mm TL"},
+        {"catalogNumber": "MNHN A-3399", "labelInChecklist": "Paratype", "specimenCount": 12, "localityRelation": "Same data as holotype"}
+      ],
+      "typeStatusNote": "The checklist says the MNHN records indicate holotype and paratypes, and notes that Tan and Husana (2021) referred to the types as syntypes."
+    },
+    "2021Redescription": {
+      "sourceId": "hui-husana-2021-barbodes-pyrpholeos-montanoi-redescription",
+      "citation": "Hui, T. H., & Husana, D. E. M. (2021). Barbodes pyrpholeos, new species, the first cave-dwelling cyprinid fish in the Philippines, with redescription of B. montanoi (Teleostei: Cyprinidae). Raffles Bulletin of Zoology, 69, 309-323. https://doi.org/10.26107/RBZ-2021-0054.",
+      "typeLocalityStatement": "The authors state that the type locality is Simulao River in central Mindanao, correcting the spelling Simulac River used by Fricke et al. (2021).",
+      "typeStatusStatement": "The authors say the original description was based on 13 individuals and, because Sauvage did not explicitly designate a holotype and no lectotype was designated, they treat the 13 specimens as syntypes under ICZN Article 72.1. They note that MNHN catalogue labels show one holotype and 12 paratypes.",
+      "separateRecentSpecimens": "The specimens examined for the redescription were collected from pools at Ugnop and Enchanted Falls; the authors say they likely represent true B. montanoi. They are not the 1881 type series, and this review does not assign those pools to the type locality.",
+      "distributionCaution": "The paper says further surveys are needed to clarify the species' true distribution."
+    },
+    "mnhnCatalogRecords": {
+      "sourceId": "mnhn-montanoi-type-series-catalog-records",
+      "accessMethod": "Official MNHN record pages were returned with detailed indexed page content by web search. Direct page opens returned a cache-miss error during this review, so page content was not independently re-rendered in the browser tool.",
+      "a3398": {
+        "url": "https://science.mnhn.fr/institution/mnhn/collection/ic/item/a-3398",
+        "recordedIdentity": "MNHN-IC-A-3398; single specimen; label reads holotype of Puntius montanoi; displayed taxon Barbus montanoi.",
+        "originFieldsAsDisplayed": {"country": "Philippines", "locality": "mindanao", "waterBody": "lag.limao", "collector": "montano", "collectionDate": "1881"}
+      },
+      "a3399": {
+        "url": "https://science.mnhn.fr/institution/mnhn/collection/ic/item/a-3399",
+        "recordedIdentity": "MNHN-IC-A-3399; set of 12 specimens; labels read paratypes of Puntius montanoi; displayed taxon Barbus montanoi.",
+        "originFieldsAsDisplayed": {"country": "Philippines", "locality": "mindanao", "waterBody": "lag.limao", "collector": "montano", "collectionDate": "1881"}
+      },
+      "crosswalkLimit": "The catalog records do not themselves name Simulao River or provide coordinates. The string 'lag.limao' is preserved verbatim; it is not normalized to a lake, lagoon, river or Simulao site."
+    }
+  },
+  "reconciliation": {
+    "locality": "The 2021 redescription and 2025 checklist attribute the historical type locality to Simulao River. The MNHN indexed object records expose Mindanao and the waterbody string 'lag.limao', without coordinates or a river name. The site-level crosswalk is therefore unresolved; the sources do not justify turning the catalog strings into a Simulao River geometry or an exact collection point.",
+    "typeStatus": "The 2021 authors' nomenclatural argument treats all 13 original specimens collectively as syntypes. MNHN catalogue labels and the 2025 checklist describe A-3398 as holotype and A-3399 as 12 paratypes. Both source positions are preserved; this review does not adjudicate the type status.",
+    "recentRedescriptionMaterial": "The Ugnop and Enchanted Falls pools are later redescription material, not evidence that every named Simulao reach or the entire Agusan basin has current occupancy."
+  },
+  "findings": {
+    "namedHistoricalTaxonLead": true,
+    "typeSeriesSpecimensReported": 13,
+    "independentlyGeoreferencedSpecimens": 0,
+    "resolvedSpecimenToSimulaoCrosswalk": false,
+    "currentPresenceEstablished": false,
+    "completeRiverOrBasinInventoryEstablished": false,
+    "naturalDietOrBaitClaimsAdded": 0,
+    "safetyOrLegalClaimsAdded": 0,
+    "waterbodyGeometryAdded": 0,
+    "publicAppRowsAdded": 0,
+    "publicationApproval": false
+  },
+  "scopeLimits": [
+    "This is historical taxonomic type-locality evidence from 1881, not a contemporary occurrence or abundance survey.",
+    "The type locality does not provide a capture coordinate, station, river reach boundary or usable fishing location.",
+    "The record does not establish fish presence throughout Simulao River, the Agusan River, or Region XIII.",
+    "The type series and later redescription specimens are distinct evidence and must not be combined as one collection event.",
+    "No natural diet, bait, habitat suitability, water quality, safety, catchability, fishing regulation or conservation-status claim is inferred.",
+    "The indexed museum records' displayed labels and locality strings are recorded as source metadata; direct-page retrieval was unavailable in the browser tool.",
+    "No author, museum, publisher or agency was contacted. No article image, text, table, specimen photograph, bulk dataset or museum media was copied into the repository."
+  ],
+  "references": [
+    {"url": "https://zookeys.pensoft.net/article/145752/download/pdf/", "supports": "2025 annotated checklist, CC BY 4.0 notice, type-series entries and note contrasting its MNHN labels with the 2021 syntype treatment."},
+    {"url": "https://lkcnhm.nus.edu.sg/wp-content/uploads/sites/10/2021/09/RBZ-2021-0054.pdf", "supports": "2021 redescription statements on Simulao type locality, original 13-specimen series, syntype argument, separate later specimens and need for further distribution surveys."},
+    {"url": "https://science.mnhn.fr/institution/mnhn/collection/ic/item/a-3398", "supports": "Indexed MNHN A-3398 record content, catalogue label and verbatim Mindanao/lag.limao origin fields; direct open was unavailable during this review."},
+    {"url": "https://science.mnhn.fr/institution/mnhn/collection/ic/item/a-3399", "supports": "Indexed MNHN A-3399 record content, set of 12 specimens and verbatim Mindanao/lag.limao origin fields; direct open was unavailable during this review."}
+  ],
+  "nextAction": "Continue the Caraga inland-water sweep with another independently reviewable primary fish survey or voucher-backed source from a distinct named river, lake or marsh. If pursuing this historical lead, seek an independently cataloged source that explicitly reconciles 'lag.limao' with Simulao and states the basis for the type locality; do not add a site geometry or public occurrence from these records alone."
+}
