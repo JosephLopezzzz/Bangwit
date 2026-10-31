@@ -3153,3 +3153,12 @@ Retrieved and reviewed the official Asian Fisheries Society PDF for Talde et al.
 The 2008 paper shares authors, lakes and overlapping dates with Talde et al.'s 2004 gut-content study. That may indicate overlapping samples, but no field-log crosswalk was found; do not combine totals or count the papers as independent surveys. The lake named “Dinagat” is in Agusan Marsh, not Dinagat Islands province. No article-specific reuse license was located; no full table, image, geometry, diet recommendation, legal rule or app row was added. Added `national-caraga-agusan-marsh-talde-2008-three-lake-fishery-source-review-20261031.json` and one source-registry record; source count is 505.
 
 **Next:** continue Caraga freshwater coverage with a primary survey or collection record from another named inland waterbody, preferably with current dates, vouchers and a taxon-to-site link. Keep the 1998-1999 three-lake matrix historical and research-only.
+
+
+### National rollout step 372 - Mahucdam and Pagusi Lakes thesis abstract access review - 31 October 2026
+
+Reviewed the UPLB repository record for Quisagan's 2012 MS Environmental Science thesis and the abstract reproduced in the official SESAM library thesis-list PDF. The repository record currently says that the document is unavailable there. The abstract reports six fish species in Mahucdam Lake and seven in Pagusi Lake, sampled with traditional fishing methods across two periods, but does not expose the full fish list, dates, per-lake counts, stations, vouchers or coordinates. It names `Tilapia zilli`, `Oreochromis sp.`, `Giuris margaritacea` and `Glossogobius giuris`; source spellings are preserved without taxonomic adjudication.
+
+The abstract's malformed statistical strings are not interpreted. Its summary of physicochemical parameters is not current water-quality evidence; fisher-perception statements are not a measured trend. No species, geometry, diet, safety, legal or public-app row was added. No item-specific reuse terms were found. Added `national-caraga-mahucdam-pagusi-quisagan-2012-thesis-abstract-access-review-20261031.json` and two institutional source records; source count is 507.
+
+**Next:** continue Caraga inland-water coverage with a directly accessible primary survey or a specimen-linked dataset from a distinct river, lake, spring or wetland. Revisit the Mahucdam/Pagusi thesis only if the full text becomes available through normal authorized access; do not infer its complete species checklist from the abstract.
