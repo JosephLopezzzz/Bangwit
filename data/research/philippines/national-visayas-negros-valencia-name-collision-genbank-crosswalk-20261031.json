@@ -1,0 +1,141 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-31",
+  "nationalStep": 394,
+  "status": "research-only;valencia-name-collision-disambiguated;pulangi-cross-locus-candidates;negros-malaunay-link-unresolved",
+  "question": "Does the NCBI Valencia search result support the claimed Barbodes tumba record in Valencia, Negros Oriental, and do the existing Negros accessions resolve the 2022 Malaunay River presentation?",
+  "boundedSearch": {
+    "database": "NCBI Nucleotide (nuccore), E-utilities ESearch and ESummary/EFetch",
+    "checkedOn": "2026-10-31",
+    "queries": [
+      {
+        "term": "\"Barbodes tumba\"[Organism] AND Valencia[All Fields]",
+        "resultCount": 38,
+        "interpretation": "The unqualified place name Valencia combines distinct localities. Thirty-four records belong to the Pulangi River/Bukidnon sample set: 32 control-region records MG663358-MG663389 plus two COI records MG220325-MG220326. The other four are the separately labelled Negros Oriental COI records MT646827-MT646830."
+      },
+      {
+        "term": "\"Barbodes tumba\"[Organism] AND \"Negros Oriental\"[All Fields]",
+        "resultCount": 4,
+        "accessions": ["MT646827.1", "MT646828.1", "MT646829.1", "MT646830.1"]
+      },
+      {
+        "term": "\"Barbodes tumba\"[Organism] AND Malaunay[All Fields]",
+        "resultCount": 0,
+        "interpretation": "No indexed Nucleotide record matched this text query. This is a bounded index-search outcome, not evidence that the fish is absent from Malaunay River."
+      }
+    ],
+    "limits": [
+      "These are text-index searches; locality labels and taxon identifications are submitter supplied.",
+      "A zero-result query does not establish biological absence or prove that unpublished data do not exist.",
+      "No SRA, BioProject, BioSample, or sequence data were added to the app."
+    ]
+  },
+  "pulangiValenciaBukidnonCrossLocusRecords": {
+    "articleLocality": "Pulangi River, Poblacion 1, Valencia City, Bukidnon, Mindanao",
+    "coiAccessions": [
+      {
+        "accession": "MG220325.1",
+        "specimenVoucher": "BBT-BBB65",
+        "collectionDate": "2016-11-09",
+        "locality": "Pulangi River, Poblacion 1, Valencia City, Bukidnon",
+        "coordinatesAsSubmitted": "7.9027 N, 125.095 E",
+        "lengthBp": 652,
+        "locus": "COI"
+      },
+      {
+        "accession": "MG220326.1",
+        "specimenVoucher": "BBT-BBB64",
+        "collectionDate": "2016-11-09",
+        "locality": "Pulangi River, Poblacion 1, Valencia City, Bukidnon",
+        "coordinatesAsSubmitted": "7.9027 N, 125.095 E",
+        "lengthBp": 652,
+        "locus": "COI"
+      }
+    ],
+    "controlRegionMatches": [
+      {
+        "coiAccession": "MG220325.1",
+        "controlRegionAccession": "MG663389.1",
+        "coiVoucher": "BBT-BBB65",
+        "controlRegionVoucher": "BBB65",
+        "collectionDate": "2016-11-09"
+      },
+      {
+        "coiAccession": "MG220326.1",
+        "controlRegionAccession": "MG663388.1",
+        "coiVoucher": "BBT-BBB64",
+        "controlRegionVoucher": "BBB64",
+        "collectionDate": "2016-11-09"
+      }
+    ],
+    "assessment": "Both COI records identify the Pulangi River site and have the same collection date, collectors, and voucher suffixes as two of the 32 Pulangi control-region records. They are strong same-sample cross-locus candidates, but a physical specimen or author-held voucher ledger was not checked; do not count the marker records as separate fish.",
+    "coordinateCaveat": "These are submitter archive coordinates for fish obtained through the study's fisher/vendor sampling. They are retained as source metadata and are not emitted as individual capture points or public map geometry."
+  },
+  "negrosOrientalRangeExtensionLead": {
+    "annualReport": "The official Silliman University 2023 Annual Report says an undergraduate project titled DNA Barcoding of a Freshwater Barb, Barbodes tumba, in Valencia, Negros Oriental, Philippines was conducted June-August 2022.",
+    "conferenceCitation": "Christopher E. Bird's CV lists a 2022 NDiSTEM presentation titled New record of Barbodes tumba in Malaunay River, Negros Island using three mtDNA markers.",
+    "negrosAccessions": {
+      "records": [
+        { "accession": "MT646827.1", "isolate": "B_tum_VAL_02", "lengthBp": 655 },
+        { "accession": "MT646828.1", "isolate": "B_tum_VAL_03", "lengthBp": 655 },
+        { "accession": "MT646829.1", "isolate": "B_tum_VAL_04", "lengthBp": 655 },
+        { "accession": "MT646830.1", "isolate": "B_tum_VAL_05", "lengthBp": 655 }
+      ],
+      "submittedLocality": "Philippines: Valencia, Negros Oriental",
+      "submissionDate": "2020-06-21",
+      "locus": "partial mitochondrial COX1",
+      "notPresentInInspectedRecords": [
+        "collection date",
+        "named river or lake",
+        "coordinates",
+        "specimen voucher",
+        "project or poster identifier linking these records to the June-August 2022 project",
+        "the Cyt-b and 16S accessions implied by the conference title"
+      ]
+    },
+    "primaryMaterialSearch": "The official Silliman annual report and TAMU-CC CV confirm project and presentation bibliographic details, but no poster, thesis text, specimen ledger, or three-marker accession crosswalk was located in this bounded search.",
+    "assessment": "The four MT646827-MT646830 records are distinct from the older Pulangi River records in Valencia City, Bukidnon. Their municipality-level Negros Oriental label does not identify Malaunay River. Their June 2020 submission predates the 2022 project described in the annual report, so the accession-to-project link remains unresolved; this chronology does not rule out unpublished or earlier preliminary sampling.",
+    "waterbodyCrosswalk": "The existing DENR-EMB Region VII table lead mentions Malaunay Spillway as a class boundary for Ocoy River, Sibulan; that water-quality classification wording does not establish that the presentation's Malaunay River is the same reach or provide fish occurrence geometry."
+  },
+  "decision": {
+    "taxonomy": "No independent taxonomic re-identification performed; accession names remain submitter labels.",
+    "historicalResearchEvidence": "Retain the Mindanao Pulangi COI/D-loop marker links as probable same-sample archive crosswalks and retain the Negros Oriental accessions as a separate municipality-level molecular lead.",
+    "visayasOccurrence": "Not admitted. No retrieved primary record links a verified voucher, collection date, Malaunay River site, and the claimed three markers.",
+    "waterbodyGeometry": "None created.",
+    "publicAppRows": 0,
+    "dietSafetyLegalOrCatchabilityClaims": "None added.",
+    "publicationApproval": false
+  },
+  "sourceIds": [
+    "tamucc-bird-cv-barbodes-tumba-malaunay-2022",
+    "silliman-btlpn-bioconup-monitoring-status-2023",
+    "ncbi-genbank-mt646827-valencia-negros-oriental",
+    "ncbi-genbank-mt646828-valencia-negros-oriental",
+    "ncbi-genbank-mt646829-valencia-negros-oriental",
+    "ncbi-genbank-mt646830-valencia-negros-oriental",
+    "ncbi-genbank-mg220325-pulangi-bukidnon-coi",
+    "ncbi-genbank-mg220326-pulangi-bukidnon-coi",
+    "ncbi-genbank-barbodes-tumba-control-region-mg663328-449-20261031",
+    "abdulmalik-labe-quilang-barbodes-tumba-mindanao-2019",
+    "calacademy-catalog-barbodes-tumba-taxonomy-20261030"
+  ],
+  "sourceUrls": {
+    "sillimanAnnualReport": "https://su.edu.ph/wp-content/uploads/2024/06/annual-report-2023-final-for-web.pdf",
+    "conferenceCv": "https://bss-prod.tamucc.edu/hb2504/cv/Bird_Chr.pdf",
+    "mindanaoStudy": "https://www.threatenedtaxa.org/index.php/JoTT/article/view/4851",
+    "ncbiValenciaQuery": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=nuccore&term=%22Barbodes%20tumba%22%5BOrganism%5D%20AND%20Valencia%5BAll%20Fields%5D&retmode=json&retmax=200",
+    "ncbiNegrosQuery": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=nuccore&term=%22Barbodes%20tumba%22%5BOrganism%5D%20AND%20%22Negros%20Oriental%22%5BAll%20Fields%5D&retmode=json&retmax=200",
+    "ncbiMalaunayQuery": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=nuccore&term=%22Barbodes%20tumba%22%5BOrganism%5D%20AND%20Malaunay%5BAll%20Fields%5D&retmode=json&retmax=200",
+    "coiRecords": [
+      "https://www.ncbi.nlm.nih.gov/nuccore/MG220325.1",
+      "https://www.ncbi.nlm.nih.gov/nuccore/MG220326.1",
+      "https://www.ncbi.nlm.nih.gov/nuccore/MT646827.1",
+      "https://www.ncbi.nlm.nih.gov/nuccore/MT646828.1",
+      "https://www.ncbi.nlm.nih.gov/nuccore/MT646829.1",
+      "https://www.ncbi.nlm.nih.gov/nuccore/MT646830.1"
+    ],
+    "pulangiControlRegionRecords": "https://www.ncbi.nlm.nih.gov/nuccore/?term=MG663358%3AMG663389%5BACCN%5D",
+    "denrEmbWaterbodyClassification": "https://r7.emb.gov.ph/wp-content/uploads/2024/02/OFFICIALLY-CLASSIFIED-WATERBODIES-IN-REGION-VII-AS-OF-DECEMBER-2021.pdf"
+  },
+  "nextAction": "National rollout step 395: move to the next documented freshwater source review while keeping the Malaunay/Negros claim in the research-only access queue. Revisit it if an accessible primary poster, thesis, voucher ledger, or author-confirmed accession crosswalk appears."
+}
