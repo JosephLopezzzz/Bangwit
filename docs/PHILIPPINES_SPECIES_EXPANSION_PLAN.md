@@ -3429,3 +3429,14 @@ For Pansipit River, the report gives an estimated 1,419.33 kg landed catch acros
 The official PDF states “Copyright © 2024. DA-NFRDI. All rights reserved.” No open license or separate reuse approval for the report's data was found. No report file, full species table, image, or article prose was copied; no catch, occurrence, diet, geometry, or app rows were added. The underlying source was already registered and linked to both waterbodies, so the source registry remains at 543 unique entries. See `national-calabarzon-nfrdi-taal-pansipit-fy2023-catch-summary-review-20261101.json`.
 
 **Next:** step 398 seeks a species-by-date and landing-site extract with authorized reuse, or an independently reusable primary CALABARZON inland-water survey. Keep the annual-report names in the historical catch lane until each species, waterbody, time window, taxonomy, and permitted use are adequately supported.
+
+
+### National rollout step 398 - Laguna de Bay NFRDI risk-assessment crosswalk and license check - 1 November 2026
+
+Read the full official NFRDI PDF for Magistrado et al. (2026), “Risk Assessment of Introduced Species in Five Lakes in the Philippines,” through the publisher's web PDF reader. Laguna de Bay is one of the five assessment lakes. The article's screening table covers 15 non-native taxa there, categorized as five “extant” and ten “horizon.” These are AS-ISK risk-screening categories, not a complete lake checklist or dated catch/occurrence events; the horizon category does not establish observed presence, and this review did not independently verify the extant labels against event-level records.
+
+The PDF explicitly states CC BY-NC 4.0. The official NFRDI repository metadata and PDF are recorded in the source ledger; the official PDF was read online and no local copy, table, taxa list, score, figure, or app row was retained. The license is noncommercial, and Bangwit's future commercial/publication status remains unresolved, so public-app reuse is not approved.
+
+Added `national-calabarzon-laguna-de-bay-risk-assessment-crosswalk-20261101.json`, updated the existing NFRDI source entry and its older Bicol review, and linked the assessment as risk-screening context to the Laguna de Bay waterbody record. The source registry remains at 543 unique references. No species, occurrence, catch, diet, geometry, safety/legal assertion or public-app row was added; CALABARZON remains incomplete.
+
+**Next:** continue L1 CALABARZON by seeking a primary, site- and date-resolved inland-water fish survey or an extract with explicit authorized reuse. Keep risk-screen categories separate from observed species records and do not advance to NCR before the regional inventory and gaps are bounded.
