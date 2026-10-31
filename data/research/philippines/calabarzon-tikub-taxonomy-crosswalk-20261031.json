@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "calabarzon-tikub-taxonomy-crosswalk-20261031",
+  "reviewedOn": "2026-10-31",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "regionName": "Region IV-A (CALABARZON)",
+  "waterbodyId": "ph-wb-ticub-quezon-lake",
+  "sourceId": "ajob-2014-tikub-freshwater-fish",
+  "question": "What nomenclatural changes or source-name conflicts appear when the 2014 Tikub Lake survey labels are compared with the current Catalogue of Life Extended Release?",
+  "sourceContext": {
+    "bibliography": "Labatos, B. V. Jr., and Briones, N. D. (2014). Freshwater Fishes of Tikub Lake, Tiaong, Quezon, Philippines. Asian Journal of Biodiversity, 5(1), 41-53. https://doi.org/10.7828/ajob.v5i1.480",
+    "authorUpload": "https://www.researchgate.net/publication/267335974_Freshwater_Fishes_of_Tikub_Lake_Tiaong_Quezon_Philippines",
+    "accessAndRights": "The public author upload displays a copyright warning. No item-specific license or permission for the checklist was identified. This review records only a minimal set of nomenclatural deltas and does not reproduce either source table.",
+    "sourceSeparation": "The article distinguishes nine collected taxa from four additional reported-only taxa. Those evidence classes remain separate; a checklist name match does not change either class."
+  },
+  "taxonomyReference": {
+    "provider": "Catalogue of Life via ChecklistBank API",
+    "release": "2026-10-16 XR",
+    "issued": "2026-10-16",
+    "datasetKey": "316691",
+    "apiPattern": "https://api.checklistbank.org/dataset/316691/match/nameusage?q={URL-encoded-name}&type=exact",
+    "documentation": "https://www.catalogueoflife.org/tools/api",
+    "matchingDocumentation": "https://www.catalogueoflife.org/tools/matching",
+    "queryMode": "exact",
+    "queriesReviewed": 15,
+    "rawReceipt": {
+      "path": "raw/calabarzon-tikub-colxr-crosswalk-20261031/colxr-name-matches.json",
+      "storage": "ignored-local-research-cache",
+      "bytes": 89583,
+      "sha256": "d6da366117f291f49ee9a96fe2e01e6fae90f9d426e1e80fcee5e4ea53c7f739"
+    },
+    "limits": [
+      "Catalogue of Life name matching proposes nomenclatural mappings; it does not validate the 2014 authors' specimens or identifications.",
+      "Checklist content and match results can change between releases; these values are pinned to the stated 2026-10-16 XR dataset.",
+      "No occurrence search or distribution inference was performed in this crosswalk."
+    ]
+  },
+  "crosswalkFindings": {
+    "summary": "Of the 13 collected-or-reported source taxa, nine names matched accepted species-rank usages without a changed species name, three collected source labels returned synonym usages mapping to accepted species names, and the red-tilapia hybrid remains unresolved because the abstract and table disagree on one parent label. A separate parent-name match maps Oreochromis hornorum to Oreochromis urolepis; that synonym does not determine the identity of the reported hybrid.",
+    "sourceNameDeltas": [
+      {
+        "sourceNameAsPrinted": "Giuris margaritacea",
+        "matchedNameUsageId": "3G44B",
+        "matchedUsageStatus": "synonym",
+        "acceptedNameCandidate": "Giuris margaritaceus",
+        "acceptedNameUsageId": "3G44C",
+        "rank": "species",
+        "responseType": "variant",
+        "decision": "Preserve the source spelling in the historical record; retain the CoL XR candidate as a nomenclatural crosswalk only."
+      },
+      {
+        "sourceNameAsPrinted": "Cyprinus carpio carpio",
+        "matchedNameUsageId": "7JMZD",
+        "matchedUsageStatus": "synonym",
+        "acceptedNameCandidate": "Cyprinus carpio",
+        "acceptedNameUsageId": "33HRJ",
+        "rank": "subspecies to species",
+        "responseType": "variant",
+        "decision": "Preserve the source trinomial; do not promote the source identification or imply that the checklist resolved specimen identity."
+      },
+      {
+        "sourceNameAsPrinted": "Oreochromis niloticus niloticus",
+        "matchedNameUsageId": "7KHG8",
+        "matchedUsageStatus": "synonym",
+        "acceptedNameCandidate": "Oreochromis niloticus",
+        "acceptedNameUsageId": "6SSRC",
+        "rank": "subspecies to species",
+        "responseType": "variant",
+        "decision": "Preserve the source trinomial; this is a nomenclatural mapping and not a verification of the specimens."
+      }
+    ],
+    "hybridConflict": {
+      "sourceCommonLabel": "red tilapia",
+      "abstractParentNames": [
+        "Oreochromis niloticus",
+        "Oreochromis hornorum"
+      ],
+      "tableParentNames": [
+        "Oreochromis mossambicus",
+        "Oreochromis hornorum"
+      ],
+      "parentNameCrosswalk": {
+        "Oreochromis niloticus": {
+          "status": "accepted",
+          "usageId": "6SSRC"
+        },
+        "Oreochromis mossambicus": {
+          "status": "accepted",
+          "usageId": "6T53D"
+        },
+        "Oreochromis hornorum": {
+          "status": "synonym",
+          "acceptedNameCandidate": "Oreochromis urolepis",
+          "acceptedUsageId": "6T4SZ"
+        }
+      },
+      "decision": "Do not resolve the hybrid to either parent combination or treat it as an independently identified species. Preserve the abstract/table discrepancy and source term."
+    },
+    "reportedOnlyDisposition": "The four taxa that the article lists as reported rather than collected remain in that separate source category. Their nomenclatural matches do not turn them into survey captures or site-level occurrence rows."
+  },
+  "reuseAndEvidenceDecision": {
+    "itemSpecificReuseResolved": false,
+    "sourceTablesReproduced": false,
+    "allSourceNamesPublishedAsChecklist": false,
+    "speciesAssertionsAdded": 0,
+    "historicalRowsAdded": 0,
+    "publicAppRowsAdded": 0,
+    "currentPresenceInferred": false,
+    "absenceInferred": false,
+    "nativeOrIntroducedStatusesReassessed": false,
+    "geometryAdded": false,
+    "publicationApproval": false,
+    "reason": "The crosswalk resolves only three synonym-name deltas and documents one hybrid-parent conflict. The article's item-specific reuse terms remain unverified, the species tables were not copied, and CoL XR cannot validate the source specimens, locality assignments, survey recency, or collection status."
+  },
+  "nextAction": "Seek item-specific reuse clarification for the 2014 article before considering any source-derived occurrence rows. Keep the collected-versus-reported distinction, original name labels, hybrid discrepancy, and historical survey date explicit; do not infer current presence or lake-wide completeness."
+}
