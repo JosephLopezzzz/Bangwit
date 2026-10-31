@@ -1109,3 +1109,15 @@ Reviewed the full 2024 NFRDI-hosted paper on its August 2022 rapid survey of a 2
 ## Mt. Hamiguitan three-river fish study audit, Davao Oriental -- 31 October 2026
 
 Reviewed the publisher-hosted 2021 paper for Dumagooc, Maug, and Banahaw rivers. The source conflicts internally: its abstract claims 31 taxa and 121 individuals, its results/table give 25 taxon rows and 122 individuals, and its status totals also disagree; a barb name appears under both *Barbodes* and *Puntius*. Although the paper says vouchers were deposited at the CMU museum, it supplies no accession numbers. No taxon rows, station coordinates, water-quality claims, or public-app entries were imported. The publisher page states CC BY-NC-SA 4.0, so public reuse is unapproved. See `national-mindanao-hamiguitan-three-river-fish-audit-20261031.json` and National rollout step 324.
+
+## Hamiguitan 2016 two-river paper access audit -- 31 October 2026
+
+The cited 2016 Quimpang et al. publisher page returned HTTP 403 with a Cloudflare challenge. No access control was bypassed, and later papers' comparisons were not used as a substitute for the original. The cited page range conflicts between 95-111 and 96-111. No taxa, counts, geometry, current-presence claim, or public row were extracted; reuse terms remain unknown. See `national-mindanao-hamiguitan-2016-study-access-review-20261031.json` and National rollout step 325.
+
+## Liguasan Marsh fishery assessment, North Cotabato -- 31 October 2026
+
+The official NFRDI paper describes 2015-2017 fishery landings at six North Cotabato centers. Its 13-row table includes a freshwater prawn, and its abstract, row labels, and footer disagree on native/introduced counts. Source labels also vary between *Puntius* and *Barbodes sirang*, and between *Trichogaster* and *Trichopodus pectoralis*. Landing centers are not capture locations; the source does not provide a taxon-to-capture-coordinate crosswalk in its composition table. The PDF states CC BY-NC 4.0; no species assertion or public row was added. See `national-mindanao-ligawasan-marsh-landing-fishery-review-20261031.json` and National rollout step 326.
+
+## Liguasan Marsh gut-content paper access audit -- 31 October 2026
+
+The 2021 publisher abstract says eight freshwater fishes were assigned across five broad feeding guilds, but it does not identify named taxa's food items. A normal request to its linked full-text PDF returned HTTP 403. The full article and its item-specific reuse terms remain unverified; no diet card or bait recommendation was added. See `national-mindanao-ligawasan-diet-paper-access-review-20261031.json` and National rollout step 327.

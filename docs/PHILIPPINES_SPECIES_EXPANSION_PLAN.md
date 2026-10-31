@@ -2739,4 +2739,28 @@ The evidence is internally inconsistent: the abstract claims 31 taxa and 121 ind
 
 The publisher page states CC BY-NC-SA 4.0. Added `national-mindanao-hamiguitan-three-river-fish-audit-20261031.json` and the source-registry entry; reconciled the registry count to 451. Public-app reuse remains unapproved pending noncommercial/share-alike and project-use review.
 
-**Next:** independently review the cited 2016 two-river Hamiguitan study and compare it with this paper only after its own sampling scope, taxon names, voucher trail, internal consistency, and reuse terms are checked. Do not treat a previous inventory as a correction of the 2021 paper unless the authors' source evidence supports that reconciliation.
+**Next:** try the cited 2016 two-river Hamiguitan study through its normal publisher or repository routes, then keep the Mindanao inland-water source queue moving with independently accessible primary sources. Do not treat a previous inventory as a correction of the 2021 paper unless the authors' source evidence supports that reconciliation.
+
+### National rollout step 325 - Hamiguitan 2016 two-river source access audit - 31 October 2026
+
+Attempted a normal read of the 2016 Quimpang et al. publisher article page for the Dumagooc and Maug rivers. The journal endpoint returned HTTP 403 with a Cloudflare challenge; no challenge, login, or access control was bypassed. Later papers cite the study, but those citations are not substitutes for its original methods, taxon table, vouchers, or reuse terms. Citation page spans also conflict: the 2021 publisher paper gives 96-111, while a 2024 NFRDI bibliography gives 95-111.
+
+Added `national-mindanao-hamiguitan-2016-study-access-review-20261031.json` and a metadata-only source record. No full text, taxon, count, geometry, occurrence, current-presence claim, or app row was extracted; item-specific rights remain unknown. The source registry now contains 452 entries.
+
+**Next:** use another normally accessible primary Mindanao source while leaving this access challenge unresolved. Do not substitute the 2021 comparison for a review of the 2016 original.
+
+### National rollout step 326 - Liguasan Marsh historical fishery assessment - 31 October 2026
+
+Reviewed the full NFRDI paper on BFAR-12/NSAP fishery data from January 2015 through December 2017 at six North Cotabato landing centers. Its composition table has 13 rows, including *Macrobrachium rosenbergii*, a freshwater prawn rather than a fish. Status counts do not reconcile: the abstract says 10 introduced and 3 native; counting Table 3 labels gives 8 introduced and 5 native; the table footer says 9 introduced and 5 native. The paper also varies between *Puntius sirang* and *Barbodes sirang*, and between *Trichogaster pectoralis* and *Trichopodus pectoralis* across table and figure labels.
+
+The data are historical landing records, not species-specific capture coordinates or evidence of current occupancy. The article reports fishing-ground data were gathered, but its pooled species table does not crosswalk taxa to particular origins. The PDF states CC BY-NC 4.0; project-use and publication approval remain unresolved. Added `national-mindanao-ligawasan-marsh-landing-fishery-review-20261031.json` and the NFRDI source record. No species assertion, diet note, capture geometry, or public-app row was added. Source registry: 453 entries.
+
+**Next:** review the separate Liguasan gut-content study only from normally accessible primary text, and keep any diet observation separate from bait suggestions and broader species behavior.
+
+### National rollout step 327 - Liguasan Marsh gut-content paper access audit - 31 October 2026
+
+Reviewed the 2021 publisher metadata and abstract for Fabay et al. The abstract says the study examined eight freshwater fishes and classified diets into algae, fish, crustaceans, detritus, and mollusks, but it does not map named taxa to those food categories or give sample-level context. A normal request to the publisher-linked PDF returned HTTP 403. No gate, challenge, or login was bypassed; the full paper and any taxon-specific table were not reviewed. The publisher landing-page footer says the site is all rights reserved, and no article-specific reuse license was verified.
+
+Added `national-mindanao-ligawasan-diet-paper-access-review-20261031.json` and the publisher metadata/access record. No diet assertion, bait advice, occurrence, geometry, or public-app row was added. The registry now contains 454 entries. The paper remains a lead for a later ordinary-access retry, not a source for species-specific diet cards from its abstract.
+
+**Next:** continue Mindanao freshwater coverage with an accessible primary source. Retry this paper only if its full text and item-specific reuse terms become normally available; do not bypass publisher access controls.
