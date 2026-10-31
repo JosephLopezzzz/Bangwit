@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-31",
+  "phaseId": "M2",
+  "regionIds": ["1200000000"],
+  "regionName": "Mindanao - Region XII (SOCCSKSARGEN)",
+  "status": "historical-river-survey;2024-sampling;148-reported-catch;abstract-table-taxon-conflict;site-method-ambiguity;pairwise-total-conflict;research-only",
+  "question": "What can the 2025 Pulang/Pulangi River paper support without treating its source labels and derived statistics as a verified species inventory?",
+  "sourceId": "corpuz-et-al-2025-pulang-pulangi-river-fish-survey",
+  "source": {
+    "citation": "Corpuz, O. S., Genso, Z. T., Abas, E. L., Lumapenet, H. T., Alamada, J. R. C., Gabini, L. A. P., Salik, M. B., Loquere, J. P., Akmad, D. M., Corpuz, O. J. S., Usop, R. M., & Dilangalen, F. C. (2025). Inland Fish Diversity and Conservation Challenges in Pulang River, Central Mindanao, Philippines. Annual Research & Review in Biology, 40(4), 82-95. https://doi.org/10.9734/arrb/2025/v40i42224.",
+    "publisherArticleUrl": "https://journalarrb.com/index.php/ARRB/article/view/2224",
+    "publisherPdfUrl": "https://journalarrb.com/index.php/ARRB/article/download/2224/4570/4143",
+    "access": "Official article page and full publisher PDF reviewed. The paper's title says Pulang River while the abstract and body use pulangi/Pulangi River; no independent geographic source was used to equate these labels."
+  },
+  "studyContext": {
+    "sampleWindow": "September and December 2024, according to the abstract and Results.",
+    "reportedWaterbody": "The article title says Pulang River; body text calls it Pulangi River and places the described sites in Cotabato. Preserve the source variants without making a river-name crosswalk.",
+    "reportedMunicipalities": ["Carmen", "President Roxas", "Matalam"],
+    "siteDescriptionIssues": "The Methods first says three distinct sites, then describes an upper-stream site in President Roxas, several midstream locations in Matalam, President Roxas, and Carmen, and a lower-stream location in Carmen. It names Sitio Kaminuangan/Barangay Kisupaan, Barangay Arakan, Sitio Lebpas/Barangay Tuael, Barangay Manili, and Sitio Lumayong/Barangay Ugalingan. It does not provide a clear site-to-sample crosswalk.",
+    "samplingEffort": "Methods state that ten fish stations were established per barangay and fish were sampled twice. The relationship among the five named barangays, the 'three distinct sites', and the frequency values in Table 2 is not clearly explained.",
+    "gearAndIdentification": ["Fish trap", "Gill net", "Cast net", "Man-push net", "Identification reportedly used a fish guide from MSU-Maguindanao; the guide is not named or cited in the reviewed article."],
+    "coordinates": "The PDF captions Figure 2 as coordinates of sampling fish stations, but no coordinate values or datum were transcribed into this review. No map geometry or station points are derived from the article. No public voucher/accession crosswalk was identified."
+  },
+  "reportedFindings": {
+    "abstractClaim": "The abstract reports 148 fish and nine identified inland-fish species from three municipal sites, using four capture methods.",
+    "abstractNameForms": ["Labeo rohita", "Cyprinus carpio", "Barbose binotatus", "Pterygoplichthys disjunctivus", "Cestraeus plicatilis", "Osphronemus goramy", "Anguilla marmorata", "Glossogobius giuris", "Oreochromis niloticus"],
+    "table1NameFormsAndCounts": [
+      { "sourceLabel": "Labeo rohita", "count": 86 },
+      { "sourceLabel": "Cyprinus carpio", "count": 19 },
+      { "sourceLabel": "Barbose binotatus", "count": 8 },
+      { "sourceLabel": "Pteygoplichthys disjunctivus", "count": 8 },
+      { "sourceLabel": "Planiliza subviridis", "count": 1 },
+      { "sourceLabel": "Osphronemus goramy", "count": 2 },
+      { "sourceLabel": "Anguilla marmorata", "count": 12 },
+      { "sourceLabel": "Glossogobius giuris", "count": 2 },
+      { "sourceLabel": "Oreochromis niloticus", "count": 10 }
+    ],
+    "internalConflicts": [
+      "The abstract names Cestraeus plicatilis for Banak; Table 1 instead identifies the single Banak as Planiliza subviridis. Preserve both labels and do not choose one without specimen evidence.",
+      "The abstract spells the barb name Barbose binotatus; the tables repeat that spelling. Table 1 spells Pterygoplichthys as Pteygoplichthys, while Table 2 prints Pteygoplichthys isjunctivus. Keep each source form distinct in the taxonomy review.",
+      "Table 1 counts sum to 148. Recomputing the displayed ni(ni-1) row values gives 7,990; the table total and prose both state 7,982. This arithmetic mismatch is unresolved.",
+      "Table 2 frequency values are multiples of 0.2 and sum to 4.8, but the denominator and mapping to the stated number of barangays/stations are not explained clearly enough to infer per-site occupancy.",
+      "The Results prose has malformed family and species text, including LOCARIDAE and COBIDAE, and cannot independently resolve the taxon labels or identification quality."
+    ],
+    "countChecks": {
+      "tableCountsSum": 148,
+      "publishedPairwiseTotal": 7982,
+      "recomputedDisplayedPairwiseRowsTotal": 7990,
+      "pairwiseDifference": 8
+    }
+  },
+  "qualityAndRights": {
+    "temporalScope": "The paper describes field sampling in 2024; it is not a current, complete river inventory.",
+    "siteScope": "The narrative names municipalities and barangays but does not give an unambiguous sampled-station, catch, and species crosswalk. The coordinate figure was not transcribed.",
+    "taxonomy": "The paper provides no public specimen accessions or independent identification guide citation. Abstract/table conflict, source spelling errors, and family-text errors remain unresolved.",
+    "environmentalClaims": "The paper's pollution, water-quality, and threat statements are source claims only. They do not establish current environmental conditions, public-health risk, fish safety, or cause at a named station.",
+    "reuse": "The PDF states that the article is distributed under the Creative Commons Attribution License (CC BY 4.0). The review stores concise attributed facts and links only; it does not copy article tables, figures, photographs, or raw data. License status does not resolve identity, evidence-quality, or app-admission requirements."
+  },
+  "disposition": {
+    "publicSpeciesRowsAdded": 0,
+    "historicalStudyRowsAddedToPublicInventory": 0,
+    "stationPointsPublished": 0,
+    "riverGeometryAdded": 0,
+    "dietOrBaitClaimsAdded": 0,
+    "waterQualityOrSafetyClaimsAdded": 0,
+    "sourceNamesSilentlyCorrected": false,
+    "publicationApproval": false,
+    "reason": "Historical sampling only; the abstract and table disagree on the Banak species, methods/site denominators are unclear, no public voucher crosswalk was identified, and one derived total does not equal its displayed row sum."
+  },
+  "nextAction": "Cross-check all source name forms against the Catalog of Fishes and a relevant Philippine molecular identification study. Keep name authority separate from specimen identity, and retain the Cestraeus/Planiliza conflict until voucher or sequence evidence resolves it.",
+  "references": [
+    {
+      "url": "https://journalarrb.com/index.php/ARRB/article/view/2224",
+      "supports": "Official title, authors, DOI, publication date, abstract, and source-reported nine-name claim."
+    },
+    {
+      "url": "https://journalarrb.com/index.php/ARRB/article/download/2224/4570/4143",
+      "supports": "Full-text methods, site narrative, figure captions, Tables 1-3, 2024 collection dates, source-label conflicts, arithmetic review, and the article's CC BY 4.0 statement."
+    }
+  ]
+}

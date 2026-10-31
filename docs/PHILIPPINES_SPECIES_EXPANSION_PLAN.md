@@ -3220,3 +3220,25 @@ Cross-checked ten distinct name forms across the 2020 and 2021 Sawaga reports ag
 The 2020 Amatitlania color forms correspond to one accepted species name, but no specimen was reidentified and the paper's eight-species versus seven-visible-name discrepancy remains unresolved. *N. pectoralis* versus *N. philippinus* and *P. pardalis* versus *P. disjunctivus* are distinct names; the later paper does not supply a voucher crosswalk to the earlier samples. This check does not verify local presence, native/introduced status, habitat assignment, diet, safety, fishing rules or article reuse. No counts were combined and no public species, occurrence or geometry rows were added. Added `national-mindanao-sawaga-fish-taxonomy-crosscheck-20261031.json` and one Catalog/checklist source-registry record; source registry count is 514 unique entries.
 
 **Next:** continue with a distinct Mindanao inland-water fish source, preferably one with accessible specimen identifiers and a taxon-by-site table. Keep Sawaga as historical research-only evidence unless original table cells or specimen documentation resolve its conflicts.
+
+
+### National rollout step 379 - Pulang/Pulangi River 2024 fish-survey review - 31 October 2026
+
+Reviewed Corpuz et al.'s official publisher page and full 2025 PDF for a survey reporting 148 inland fish collected in September and December 2024 from Cotabato sites. The title says “Pulang River,” while the abstract and body say “pulangi/Pulangi River”; no separate hydrological source was used to reconcile those names. The abstract lists nine taxa, but the table calls its single Banak specimen *Planiliza subviridis* rather than the abstract's *Cestraeus plicatilis*. The paper prints `Barbose binotatus`, `Pteygoplichthys disjunctivus`, and `Pteygoplichthys isjunctivus`; source spellings are preserved.
+
+Table 1 sample counts sum to 148, but its displayed `ni(ni-1)` row values sum to 7,990 while the stated total in both table and prose is 7,982. Methods describe three municipal sites, five barangays, and ten fish stations per barangay, but do not make the station/frequency denominator crosswalk clear. Figure 2 is captioned as sampling-station coordinates; no values or datum were transcribed, and no geometry was inferred. No public specimen accessions or species-to-station matrix were identified. The article states CC BY 4.0, but public species admission remains unapproved; its pollution and water-quality prose is not current safety evidence.
+
+Added `national-mindanao-pulang-pulangi-2024-fish-survey-review-20261031.json` and one source-registry record. The next name check added the Catalog, IUCN, and NFRDI references, bringing the registry to 518 unique entries. No source name was silently corrected, and no occurrence, geometry, diet, safety, legal, bait, or public-app species row was added.
+
+**Next:** cross-check the source labels against fish-name authorities and a relevant Philippine molecular identification study. Preserve the abstract/table mullet conflict and treat name status separately from specimen identity.
+
+
+### National rollout step 380 - Pulang/Pulangi survey name-authority cross-check - 31 October 2026
+
+Checked all nine abstract binomials and the paper's notable spelling variants against selected Eschmeyer's Catalog of Fishes records. The Catalog supports valid name candidates for *Barbodes binotatus*, *Pterygoplichthys disjunctivus*, *Planiliza subviridis*, *Labeo rohita*, *Cyprinus carpio*, *Osphronemus goramy*, *Anguilla marmorata*, *Glossogobius giuris*, and *Oreochromis niloticus*. The source strings `Barbose`, `Pteygoplichthys`, and `isjunctivus` remain unchanged in the source review. Catalog name status does not verify these survey specimens. The Catalog describes *P. disjunctivus* as South American in origin and introduced elsewhere, which warrants voucher-level caution for the reported Cotabato identification.
+
+For the Banak conflict, the 2022 NFRDI-led CO1 study reports all 25 sampled Northern Philippine “ludong” as *Cestraeus goldiei* and states that a *C. plicatilis* reference sequence was unavailable. This is relevant identification context, but it is from Cagayan/Abra and cannot identify or exclude a *Cestraeus* in Central Mindanao. Therefore the 2025 abstract's *C. plicatilis* and Table 1's *Planiliza subviridis* remain unresolved source labels; neither the local name nor a name authority substitutes for the missing specimen evidence.
+
+Added `national-mindanao-pulang-pulangi-2024-fish-taxonomy-crosscheck-20261031.json` and the Catalog and NFRDI references to the source registry. No specimen was reidentified and no public species, occurrence, native/introduced status, diet, safety, legal, geometry, or app row was added.
+
+**Next:** search for another distinct Mindanao inland-water source, prioritizing an official or peer-reviewed source with vouchers, molecular IDs, or a readable taxon-by-site matrix. Keep the Pulang/Pulangi study research-only until the abstract/table conflict and site evidence are resolved.
