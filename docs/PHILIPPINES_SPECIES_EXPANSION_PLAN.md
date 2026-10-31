@@ -3343,7 +3343,7 @@ Searched the publisher article and publicly indexed fish-collection results usin
 
 Added `national-mindanao-mandulog-2024-public-voucher-screen-20261031.json` and two catalog-coverage source records. The 2023 article still has no public voucher/accession crosswalk in the reviewed text. No specimen identity, species/occurrence assertion, geometry, or app row was added; source registry count is 535 unique entries.
 
-**Next:** step 391 reviewed Abdulmalik-Labe and Quilang's Lake Lanao DNA-barcode study and retrieved all 75 linked GenBank records. Continue with the later peer-reviewed Glossogobius lake-genetics study, checking its own sampling dates and voucher/accession crosswalk without merging it with the 2016-2017 samples.
+**Next:** steps 391-392 reviewed the 2019 COI and 2023 cyt-b studies. The latter's 62 Lake Lanao records may overlap with nine 2019 voucher-coded samples; confirm this candidate crosswalk before treating the studies as independent counts. Step 393 reviews the 2019 *Barbodes tumba* population-genetics study across Lake Lanao, Nunungan Lake, Dagoyanan Lake, and Pulangi River.
 
 
 ### National rollout step 391 - Lake Lanao 2019 fish DNA-barcode and GenBank crosswalk review - 31 October 2026
@@ -3354,4 +3354,15 @@ The article itself documents important identity limits. Twelve *Glossogobius* se
 
 This is valuable historical molecular and voucher-code evidence for Lake Lanao, not a current inventory or 2026 occurrence dataset. No sequence, table, figure, or image was copied. The publisher states CC BY 4.0, but no current app species, occurrence, diet, safety, legal, geometry, or public-app row was added. Added `national-mindanao-lake-lanao-2019-dna-barcode-review-20261031.json` and two source references; registry count is 537 unique entries.
 
-**Next:** step 392 will review Abdulmalik-Labe et al. (2023), the multi-lake *Glossogobius* genetics follow-up. Extract Lake Lanao sample counts, dates, specimen vouchers and sequence accessions separately; check whether the authors resolve the 2019 eight-sequence cluster. Do not merge the studies or infer present-day Lake Lanao presence.
+**Next:** step 392 completed the later multi-lake cyt-b study review and found nine candidate sample overlaps with the 2019 COI records. Continue with step 393's independent Lake Lanao/river *Barbodes tumba* genetics study; keep sites, sampling periods, and voucher records distinct.
+
+
+### National rollout step 392 - Lake Lanao 2023 Glossogobius cyt-b lineage and sample-overlap review - 31 October 2026
+
+Reviewed Abdulmalik-Labe, Eduardo, and Quilang's 2023 PLOS ONE study and queried all 62 Lake Lanao GenBank records in OQ032698-OQ032759. The article reports 62 fish obtained from vendors and fishermen in Marawi City, Marantao, Taraka, and Ditsaan-Ramain. It reports 15 specimens with at least 99% cyt-b similarity to *Glossogobius aureus* references and 47 Lake Lanao specimens with about 95% similarity, designated *G. cf. aureus*. The latter is an unresolved lineage label, not a formally described new species. GenBank metadata dates this Lake Lanao subset from 27 June 2016 through 28 March 2017. The article says specimens were deposited as vouchers at the UP Diliman Institute of Biology, but none of the 62 GenBank records exposes a `specimen_voucher` qualifier.
+
+Compared the 12 earlier Lake Lanao COI records from step 391 with the cyt-b records. Nine have the same voucher/isolate suffix and exact date; one candidate pair, Gsp2, has conflicting submitted labels (*G. cf. aureus* in the COI record and *G. aureus* in the cyt-b record). These are strong candidate same-specimen links, but the physical voucher-to-isolate mapping was not confirmed by the authors or repository. Do not count the 2019 and 2023 samples as independent or pool their sample totals until that crosswalk is verified. This larger study supports a historical divergent Lake Lanao lineage but does not settle it taxonomically or establish current 2026 presence.
+
+The 62 accessions contain five coordinate values; the paper says fish were bought from vendors/fishermen and does not link each fish to a capture event. Treat those coordinates as archive metadata, not public occurrence points. No sequence strings, figures, or tables were copied. The publisher states CC BY 4.0. No app species/occurrence row, geometry, diet, safety, legal, or current-presence assertion was added. Added `national-mindanao-lake-lanao-2023-glossogobius-lineage-review-20261031.json` and two source references; source registry count: 539 unique entries.
+
+**Next:** step 393 reviews the 2019 *Barbodes tumba* population-genetics study covering Lake Lanao, Nunungan Lake, Dagoyanan Lake, and Pulangi River. Extract each waterbody's collection dates and accession/voucher mapping; investigate possible reuse of samples across papers before counting records independently.

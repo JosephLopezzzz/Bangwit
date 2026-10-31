@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-31",
+  "phaseId": "M2",
+  "regionIds": ["1000000000"],
+  "regionName": "Mindanao - Region X (Northern Mindanao)",
+  "waterbody": "Lake Lanao",
+  "status": "research-only-historical-genetic-lineage-review;sample-crosswalk-likely-overlap;taxonomy-unresolved;not-current-occurrence-evidence",
+  "question": "Does the 2023 multi-lake Glossogobius study add distinct Lake Lanao evidence to the 2019 COI barcode study, and can its samples be tied to archived voucher/accession metadata?",
+  "study": {
+    "citation": "Abdulmalik-Labe, O. P., Eduardo, A. J. L., & Quilang, J. P. (2023). Genetic diversity and divergence among native and translocated populations of the golden flathead goby Glossogobius aureus (Gobiiformes: Gobiidae) in Philippine lakes. PLOS ONE, 18(12), e0293076.",
+    "doi": "10.1371/journal.pone.0293076",
+    "published": "2023-12-14",
+    "license": "CC BY 4.0",
+    "method": "Morphological identification plus mitochondrial cytochrome-b sequencing and comparison with GenBank reference sequences.",
+    "scope": "The paper reports 307 fish from nine Philippine lakes. This artifact extracts only Lake Lanao records; other lake populations are not merged into this regional sample review.",
+    "lakeLanaoArticleSampleCount": 62,
+    "lakeLanaoCollectionLocalities": ["Marawi City", "Marantao", "Taraka", "Ditsaan-Ramain", "Lanao del Sur"],
+    "sampleAcquisition": "The paper says fish were purchased from fish vendors and fishermen and were already dead. It states that specimens were fixed in 10% formalin and deposited as vouchers at the UP Diliman Institute of Biology. It does not publish a per-GenBank-accession physical catalog-number crosswalk.",
+    "genbankLakeLanaoAccessionRange": "OQ032698-OQ032759",
+    "genbankLakeLanaoRecordsRetrieved": 62,
+    "genbankTaxonLabels": [
+      {"submittedName": "Glossogobius aureus", "records": 15, "accessions": ["OQ032698", "OQ032699", "OQ032702", "OQ032707", "OQ032708", "OQ032711", "OQ032712", "OQ032724", "OQ032725", "OQ032729", "OQ032738", "OQ032742", "OQ032748", "OQ032755", "OQ032757"]},
+      {"submittedName": "Glossogobius cf. aureus", "records": 47, "accessions": "All remaining accessions in OQ032698-OQ032759"}
+    ],
+    "studyInterpretation": "The article reports 15 of 62 Lake Lanao specimens with at least 99% cyt-b similarity to G. aureus reference sequences. The other 47 showed about 95% similarity and were designated G. cf. aureus because they fit the morphology but were genetically divergent. This supports a distinct, unresolved lineage, not a formally identified or newly named species.",
+    "collectionDateRangeFromGenBank": "2016-06-27/2017-03-28",
+    "genbankGeoreferencing": "The 62 records carry five coordinate values, one rounded lake-scale coordinate and four more detailed coordinates. Because the study purchased fish from vendors and fishermen and does not map each specimen's capture event to those metadata points, none is treated as precise public occurrence geometry.",
+    "perRecordVoucherMetadata": "No /specimen_voucher value was present in any of the 62 retrieved Lake Lanao GenBank records. This does not contradict the article's statement that physical vouchers were deposited; it means the public sequence records do not expose the accession-to-physical-voucher link."
+  },
+  "candidateOverlapWith2019CoIStudy": {
+    "comparisonArtifact": "national-mindanao-lake-lanao-2019-dna-barcode-review-20261031.json",
+    "basis": "Compared the 12 2019 Lake Lanao Glossogobius COI records (voucher codes MG407393-MG407404) with the 62 2023 Lake Lanao cyt-b records (OQ032698-OQ032759). Nine records share the same isolate/voucher suffix and exact GenBank collection date.",
+    "candidateMatches": [
+      {"coiAccession": "MG407393", "physicalVoucherLabel": "BLF-Gsp1", "cytBAccession": "OQ032698", "cytBIsolate": "Gsp1", "date": "2016-06-27", "coiSubmittedLabel": "Glossogobius aureus", "cytBSubmittedLabel": "Glossogobius aureus"},
+      {"coiAccession": "MG407394", "physicalVoucherLabel": "BLF-Gsp5", "cytBAccession": "OQ032702", "cytBIsolate": "Gsp5", "date": "2016-06-27", "coiSubmittedLabel": "Glossogobius aureus", "cytBSubmittedLabel": "Glossogobius aureus"},
+      {"coiAccession": "MG407396", "physicalVoucherLabel": "BLF-Gsp4", "cytBAccession": "OQ032701", "cytBIsolate": "Gsp4", "date": "2016-06-27", "coiSubmittedLabel": "Glossogobius cf. aureus JPQ-2018", "cytBSubmittedLabel": "Glossogobius cf. aureus"},
+      {"coiAccession": "MG407397", "physicalVoucherLabel": "BLF-Gsp6", "cytBAccession": "OQ032703", "cytBIsolate": "Gsp6", "date": "2016-06-27", "coiSubmittedLabel": "Glossogobius cf. aureus JPQ-2018", "cytBSubmittedLabel": "Glossogobius cf. aureus"},
+      {"coiAccession": "MG407398", "physicalVoucherLabel": "BLF-Gsp7", "cytBAccession": "OQ032704", "cytBIsolate": "Gsp7", "date": "2016-06-27", "coiSubmittedLabel": "Glossogobius cf. aureus JPQ-2018", "cytBSubmittedLabel": "Glossogobius cf. aureus"},
+      {"coiAccession": "MG407399", "physicalVoucherLabel": "BLF-LGsp3", "cytBAccession": "OQ032710", "cytBIsolate": "LGsp3", "date": "2017-03-24", "coiSubmittedLabel": "Glossogobius cf. aureus JPQ-2018", "cytBSubmittedLabel": "Glossogobius cf. aureus"},
+      {"coiAccession": "MG407402", "physicalVoucherLabel": "BLF-LGsp2", "cytBAccession": "OQ032709", "cytBIsolate": "LGsp2", "date": "2017-03-24", "coiSubmittedLabel": "Glossogobius cf. aureus JPQ-2018", "cytBSubmittedLabel": "Glossogobius cf. aureus"},
+      {"coiAccession": "MG407403", "physicalVoucherLabel": "BLF-Gsp2", "cytBAccession": "OQ032699", "cytBIsolate": "Gsp2", "date": "2016-06-27", "coiSubmittedLabel": "Glossogobius cf. aureus JPQ-2018", "cytBSubmittedLabel": "Glossogobius aureus"},
+      {"coiAccession": "MG407404", "physicalVoucherLabel": "BLF-Gsp3", "cytBAccession": "OQ032700", "cytBIsolate": "Gsp3", "date": "2016-06-27", "coiSubmittedLabel": "Glossogobius cf. aureus JPQ-2018", "cytBSubmittedLabel": "Glossogobius cf. aureus"}
+    ],
+    "interpretation": "These are strong candidate same-sample matches because identifier suffix and collection date align across different mitochondrial loci and the same research group. They are not treated as confirmed physical specimen matches until authors or the UPD repository confirm the voucher/isolate crosswalk. One candidate (Gsp2) carries different submitted taxon labels between the COI and cyt-b records, so the name conflict remains unresolved.",
+    "independentReplicationClaim": false,
+    "countsMayBePooled": false
+  },
+  "interpretation": [
+    "The later study expands the number of Lake Lanao goby sequences and reports a 15/47 split, but nine candidate specimen links to the 2019 COI study mean the datasets may not be independent. Do not count 2019 and 2023 sample totals as separate individuals without a specimen-level crosswalk.",
+    "The 47 records are retained by the authors as Glossogobius cf. aureus. The paper does not formally describe a new species or resolve the divergent lineage to a fully identified species.",
+    "The study and Lake Lanao collection dates are historical (2016-2017). They do not establish 2026 presence, abundance, catchability, or current distribution.",
+    "The five coordinates in GenBank are archival metadata tied to vendor/fisher-sourced specimens, not verified fish capture points; they are not used for map geometry or occurrence pins."
+  ],
+  "disposition": {
+    "articleReportedLakeLanaoSamples": 62,
+    "genbankLakeLanaoRecordsRetrieved": 62,
+    "genbankLakeLanaoVoucherFieldsPresent": 0,
+    "candidate2019CrosswalkMatches": 9,
+    "crosswalkAuthorConfirmed": false,
+    "independentSameSpecimenReplicationEstablished": false,
+    "taxaFormallyDescribedByThisReview": 0,
+    "currentPresenceAssertionsAdded": 0,
+    "occurrenceAssertionsAdded": 0,
+    "appRowsAdded": 0,
+    "publicationApproval": false,
+    "conclusion": "The 2023 study strengthens historical evidence for a genetically divergent Lake Lanao Glossogobius cf. aureus lineage, but the taxon remains unresolved and much of the sample set may overlap with the 2019 COI study. The nine candidate crosswalks and the Gsp2 name discrepancy should be confirmed with authors or repository catalog records before counting independent samples or publishing a species-level occurrence."
+  },
+  "nextAction": "National rollout step 393: review the 2019 Barbodes tumba population-genetics paper for Lake Lanao, Nunungan Lake, Dagoyanan Lake, and Pulangi River. Extract its sample dates, waterbody-specific voucher and accession crosswalk, and keep each inland waterbody's evidence separate; check whether its sample metadata also overlaps with other published Lanao records.",
+  "sources": [
+    {
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0293076",
+      "additionalUrl": "https://doi.org/10.1371/journal.pone.0293076",
+      "supports": "Study date, 307 fish across nine lakes, Lake Lanao sample count and named localities, purchase from vendors/fishers, voucher repository statement, 15/47 cyt-b identity split, accession ranges, and CC BY 4.0 license."
+    },
+    {
+      "url": "https://www.ncbi.nlm.nih.gov/nuccore/?term=OQ032698%3AOQ032759%5BACCN%5D",
+      "additionalUrl": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=nuccore&term=OQ032698%3AOQ032759%5BACCN%5D&retmode=json&retmax=100",
+      "supports": "All 62 Lake Lanao accession records; submitted taxon labels, isolate IDs, collection dates, coordinates, and lack of specimen_voucher qualifiers in this accession subset."
+    },
+    {
+      "url": "https://www.ncbi.nlm.nih.gov/nuccore/?term=MG407393%3AMG407404%5BACCN%5D",
+      "additionalUrl": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=nuccore&term=MG407393%3AMG407404%5BACCN%5D&retmode=json&retmax=100",
+      "supports": "The 12 earlier COI records and their author voucher codes, dates, and submitted labels used for the candidate cross-study sample-ID comparison."
+    }
+  ]
+}
