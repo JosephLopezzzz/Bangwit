@@ -2950,3 +2950,14 @@ The abstract and Results give different Shannon and Simpson values. Table 1 labe
 Added `national-caraga-ihawan-spring-fish-survey-review-20261031.json` and one research-only registry entry; registry count is 479. No taxonomy crosswalk, occurrence assertion, diet, safety, legal rule, coordinate, geometry or public app row was added. Item-specific reuse terms remain unverified.
 
 **Next:** cross-check the 23 printed names against Eschmeyer's Catalog of Fishes, preserving source spellings and treating range flags only as voucher-review priorities. Then continue the Caraga inland-water evidence queue; do not convert this historical study into current species coverage.
+
+
+### National rollout step 349 - Ihawan Spring fish-name cross-check - 31 October 2026
+
+Screened all 23 Table 2 labels against Eschmeyer's Catalog of Fishes, with WoRMS/NCBI corroboration where needed. Preserved the printed forms and recorded candidate nomenclature crosswalks only: `Puntius binotatus` to `Barbodes binotatus`, `Giuris margaritacea` to `Giuris margaritaceus`, the apparent typo `Liza vaigeinsis` to candidate `Ellochelon vaigiensis`, and `Doryichthys boaja` to `Microphis boaja`. No source label was silently corrected and no specimen was reidentified.
+
+Prioritized four records for source follow-up: `Bostrychus expatria` (Catalog distribution summarized as endemic to Lake Manguao, Palawan, unlike Tandag), and the marine `Diodon holocanthus`, `Archamia bleekeri` and `Suezichthys gracilis` in a watershed checklist without salinity or station-level voucher crosswalk. These range/habitat differences warrant checking original vouchers, diagnostic photos and station assignment; they do not establish absence or make the paper false. No current-presence, diet, safety, legal, geometry or public-app assertion was added. All 23 remain historical research-only labels; the article's reuse terms remain unverified.
+
+Added `national-caraga-ihawan-spring-fish-taxonomy-crosscheck-20261031.json` and one Catalog/taxonomy registry source; source count is 480. The survey review now marks the name-status screen complete while keeping voucher identity unverified.
+
+**Next:** seek voucher accession details, station-level photographs or author clarification for the four flagged labels. In parallel, continue the Caraga inland-water queue with the next independently reviewable primary fish source; do not treat the Ihawan list as a regional baseline.
