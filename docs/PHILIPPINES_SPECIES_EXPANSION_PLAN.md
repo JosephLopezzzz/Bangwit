@@ -3556,3 +3556,14 @@ Prepared `calabarzon-bfar4a-fish-sanctuary-rra-data-request-draft-20261101.md` f
 The draft is unsent, includes no personal email address, and does not authorize the recipient to create new data or endorse the app. No agency was contacted. It is linked in the coverage-profile provenance; the waterbody denominator, source-reference count, scope, and source registry remain unchanged. No species assertion, geometry, or public-app row was added.
 
 **Next:** Joseph can review and decide whether to send the draft through the official PFO Cavite contact. Meanwhile, continue searching independent public CALABARZON sources; do not wait on a reply before other research proceeds.
+
+
+### National rollout step 411 - Cavite 2023 fishery labels and taxonomic ambiguity - 1 November 2026
+
+Reviewed Tables 4.29-4.31 in the official Cavite Ecological Profile 2023 and cross-checked its municipal-fishery common labels against the BFAR/NFRDI 1999 *Common and Local Names of Marine Fishes of the Philippines*. The profile provides nine province-level municipal catch labels and season/peak/lean columns, but no sample method, diagnostic basis, or label-to-city/ground/waterbody assignment. Its “fish species” list also includes squid, blue crab, and *Acetes*, so it is a mixed aquatic-catch list rather than a fish-only inventory.
+
+The NFRDI reference cautions that local names can be generic or overlap among taxa. Region IV entries associate labels such as Tunsoy, Bisugo, Espada, and Lapu-lapu with multiple fish taxa; the appendix's named localities do not include Cavite. It is a name-ambiguity cross-check only and does not resolve the profile's catch labels to scientific taxa. The source's 2023 commercial-fisheries narrative reports 4,889.34 metric tons, while Table 4.31's displayed municipal rows sum to 10,260.98 metric tons and differ in Naic/Tanza values. That discrepancy is unresolved.
+
+Added `calabarzon-cavite-ecological-profile-2023-fisheries-review-20261101.json` and two source-registry entries. No seasonal row values were copied; no scientific names, species assertions, waterbody references, geometry, or public-app rows were added. The source registry now has 550 records; CALABARZON remains at 118 research leads and 123 direct source references, with the regional baseline incomplete.
+
+**Next:** seek the underlying monthly fisheries records and clarification of the commercial-table discrepancy through an authorized public route. Keep independent freshwater and site-resolved survey discovery moving, and do not present these province-level labels as current wild presence, waterbody distribution, fish diet, catchability, or fishing rules.
