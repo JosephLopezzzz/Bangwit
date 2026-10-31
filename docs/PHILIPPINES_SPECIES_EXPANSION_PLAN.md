@@ -3467,3 +3467,12 @@ Cross-checked the publisher-hosted *Asian Journal of Biology Education* (2022) j
 The journal issue front matter states Copyright ©2004 by the AJBE Editing and Publishing Office, All rights reserved. No item-specific reuse permission was found. Updated the existing `caliraya-lumot-aabe-source-review.json`, source record and scope notes for both reservoirs. The source was already registered and linked, so the source registry remains at 545 entries, the direct waterbody-source-reference denominator remains 123, and no new assertion or app row was added. The Caliraya and Lumot leads remain historical and incomplete.
 
 **Next:** seek the underlying full species table, field dates and reuse permission from an authorized author/institution route; do not count the two abstract copies as separate evidence or infer current reservoir presence.
+
+
+### National rollout step 402 - Pugad Baboy Mangrove fish-sample full-text recheck - 1 November 2026
+
+Re-read the complete PUP Journal of Science and Technology paper by Gacilos et al. (2024) from the publisher's working PDF route after the previously recorded version route failed. The paper says three GI samples came from a local-fisher catch at Pugad Baboy Mangrove, Kawit, and calls the fish spotted scat (“kitang”); two microplastic particles were isolated from the fish samples. It does not report a scientific name, voucher, exact sampling date, or capture station/reach, and does not link the fish catch to one of the three sediment stations. This is a small pollution-method study, not a checklist.
+
+The publisher's policy specifies CC BY-NC 4.0. Because the project has no unrestricted reuse basis for this source and the fish identity, catch provenance, and salinity are unresolved, no fish assertion or public app row was admitted. Updated the existing source review and registry URL/access record. The source was already registered; scope reference counts and the 545-source registry total do not change. No email was sent and no PDF was retained locally.
+
+**Next:** obtain author-confirmed scientific identification or voucher, exact capture date/reach/station, and any measured salinity or an independently reusable fish record. Keep “kitang” as an unverified common-name lead until then.
