@@ -3144,3 +3144,12 @@ Reviewed Kottelat's 2013 *Fishes of the Inland Waters of Southeast Asia* catalog
 The catalogue is historical taxonomic evidence, not a contemporary survey or present-day distribution record. Digital Gems labels the item Open Access, but the PDF states copyright National University of Singapore and the author; no specific Creative Commons reuse terms were verified. Added `national-caraga-simulao-kottelat-2013-type-catalog-crosscheck-20261031.json` and one registry source; source count is 504. No public app row, geometry, image, diet, safety or legal claim was added.
 
 **Next:** continue Caraga freshwater coverage with an independently reviewable primary fish survey or voucher-backed source from a different named river, lake or marsh. Keep Simulao as a historical type-locality lead until an authoritative source resolves the MNHN `lag.limao` string or supplies defensible locality coordinates.
+
+
+### National rollout step 371 - Agusan Marsh three-lake historical fishery source review - 31 October 2026
+
+Retrieved and reviewed the official Asian Fisheries Society PDF for Talde et al. (2008). The article reports a 764-fish table for Agusan Marsh lakes Ticgon, Dinagat and Mihaba, with 14 source taxon labels and a lake-presence matrix. It does not report per-lake catch counts, exact coordinates, vouchers or a current inventory. Methods state monthly sampling October 1998-November 1999, while the Table 1 caption gives November 1998-October 1999; both are retained. The table's two genus-level labels remain unresolved, and narrative fishers' reports are kept separate from the table total.
+
+The 2008 paper shares authors, lakes and overlapping dates with Talde et al.'s 2004 gut-content study. That may indicate overlapping samples, but no field-log crosswalk was found; do not combine totals or count the papers as independent surveys. The lake named “Dinagat” is in Agusan Marsh, not Dinagat Islands province. No article-specific reuse license was located; no full table, image, geometry, diet recommendation, legal rule or app row was added. Added `national-caraga-agusan-marsh-talde-2008-three-lake-fishery-source-review-20261031.json` and one source-registry record; source count is 505.
+
+**Next:** continue Caraga freshwater coverage with a primary survey or collection record from another named inland waterbody, preferably with current dates, vouchers and a taxon-to-site link. Keep the 1998-1999 three-lake matrix historical and research-only.
