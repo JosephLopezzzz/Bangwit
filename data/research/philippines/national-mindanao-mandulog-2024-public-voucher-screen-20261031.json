@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-31",
+  "phaseId": "M2",
+  "regionIds": ["1000000000"],
+  "regionName": "Mindanao - Region X (Northern Mindanao)",
+  "status": "bounded-public-voucher-screen;no-linked-accession-found-in-accessible-results;api-retrieval-incomplete;not-absence-evidence",
+  "question": "Can a publicly indexed museum/voucher record be tied explicitly to Sanchez et al.'s 2023 Mandulog fish collection at Digkilaan, Upper Hinaplanon, or Bayug Island?",
+  "studyReviewFile": "national-mindanao-mandulog-2024-fish-fauna-survey-review-20261031.json",
+  "scope": {
+    "study": "Sanchez et al. 2024 article describing August-October 2023 fish collections at three Mandulog sites.",
+    "targetLocations": ["Digkilaan (upstream)", "Upper Hinaplanon (midstream)", "Bayug Island (downstream/delta)"],
+    "matchRule": "Count a record as linked only if its public metadata explicitly identifies the 2023 article, its author collection, or one of the article's named collection events/sites with a specimen/accession identifier. Same species elsewhere, historical Mandulog records, and unrelated records at place-name matches do not qualify."
+  },
+  "searches": [
+    {
+      "provider": "INNSPUB publisher-hosted article and PDF",
+      "query": "Reviewed the full study methods, Table 2 and linked publisher metadata for collection/voucher/accession references.",
+      "result": "The article describes collection by hired local fishers and expert verification but does not report a museum, voucher, catalog, accession, sequence, or specimen-to-name crosswalk.",
+      "sourceUrl": "https://innspub.net/current-fish-fauna-in-mandulog-river-iligan-city-lanao-del-norte-philippines/"
+    },
+    {
+      "provider": "Public web-indexed search",
+      "queries": [
+        "Mandulog fish museum specimen voucher",
+        "Mandulog River fish voucher",
+        "Mandulog ichthyology collection",
+        "Upper Hinaplanon fish specimen",
+        "Mandulog River catalogNumber fish",
+        "Digkilaan fish museum specimen",
+        "Bayug Island fish specimen collection Iligan",
+        "site:portal.idigbio.org/portal/records Mandulog fish"
+      ],
+      "result": "No linked public fish voucher/catalog record surfaced in the returned results. Results were chiefly the publisher study or unrelated/locality-name material; search indexing is not an exhaustive catalog query.",
+      "linkedVoucherRecordsFound": 0,
+      "interpretation": "Zero linked records in these accessible search results only; this does not establish that no voucher exists."
+    },
+    {
+      "provider": "GBIF occurrence API",
+      "endpoint": "https://api.gbif.org/v1/occurrence/search",
+      "query": "country=PH&taxonKey=204&locality=Mandulog&limit=10",
+      "result": "The request timed out after 20 seconds in this environment. No response body or result count was obtained.",
+      "queryCompleted": false,
+      "resultCount": null
+    },
+    {
+      "provider": "iDigBio Portal/API",
+      "portalUrl": "https://portal.idigbio.org/portal/search",
+      "result": "The API request could not be retrieved through the available web/API access in this environment; no query response or result count was obtained. The official portal notes that data stopped updating on 8 May 2026, while portal/API services were expected to remain operational through 2026.",
+      "queryCompleted": false,
+      "resultCount": null
+    },
+    {
+      "provider": "Smithsonian NMNH Museum Collection Search",
+      "portalUrl": "https://collections.nmnh.si.edu/",
+      "result": "The portal's own notice says its electronic data do not represent the full museum collection or all electronic/currently digitized specimen records. No complete or authoritative non-match inference can be made from this catalog alone.",
+      "recordQueryCompleted": false
+    }
+  ],
+  "excludedLeads": [
+    "A publicly indexed 1938 botanical collection label mentioning the Mandulog system is not a fish specimen.",
+    "The 2013, 2014, and 2015 Mandulog fish studies are separate historical research and are not vouchers for the 2023 collection.",
+    "Fish records for the 14 names from elsewhere in the Philippines do not validate the Mandulog collection."
+  ],
+  "disposition": {
+    "linkedVoucherRecordsLocated": 0,
+    "gbifApiResponseRetrieved": false,
+    "idigbioApiResponseRetrieved": false,
+    "catalogCoverageComplete": false,
+    "absenceClaim": false,
+    "specimenIdentityResolved": false,
+    "speciesAssertionsAdded": 0,
+    "occurrenceAssertionsAdded": 0,
+    "appRowsAdded": 0,
+    "publicationApproval": false,
+    "conclusion": "No public voucher linkage was located in the accessible bounded search, and the two live occurrence/catalog API responses were not retrieved. The specimen-identity question remains unresolved; request the authors' specimen repository/accession list or repeat direct catalog queries when access is available."
+  },
+  "nextAction": "Set aside the unvouchered 2023 species list as historical research-only evidence. Continue Northern Mindanao/Lanao freshwater coverage with an independent study or dataset that exposes a specimen, voucher, or sequence crosswalk and exact waterbody/site provenance; assess Lake Lanao and nearby inland waters without treating historical names as current presence.",
+  "sources": [
+    {
+      "url": "https://innspub.net/current-fish-fauna-in-mandulog-river-iligan-city-lanao-del-norte-philippines/",
+      "additionalUrl": "https://www.innspub.net/wp-content/uploads/2025/01/JBES-V25-No6-p32-39.pdf",
+      "supports": "Study methods, named sites and the absence of a reported public specimen/accession crosswalk in the reviewed article."
+    },
+    {
+      "url": "https://portal.idigbio.org/portal/search",
+      "supports": "Official specimen search portal and its note that records are searchable by locality and specimen fields; the portal also reports the data update pause effective 8 May 2026."
+    },
+    {
+      "url": "https://collections.nmnh.si.edu/",
+      "supports": "Smithsonian NMNH collection-search entry point and its warning that electronic records do not represent the full collection or all digitized records."
+    },
+    {
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&taxonKey=204&locality=Mandulog&limit=10",
+      "supports": "Exact attempted GBIF query URL; request timed out and returned no result count."
+    }
+  ]
+}

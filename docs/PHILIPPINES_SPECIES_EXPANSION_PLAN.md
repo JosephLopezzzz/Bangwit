@@ -3334,4 +3334,13 @@ Compared the 14 verbatim labels in the 2024 Mandulog fish-fauna article with sel
 
 The paper reports no specimen accession or taxon-to-voucher crosswalk, and the publisher page still has conflicting license statements. No fish was reidentified; no current presence, status, diet, geometry, water-safety, fishing-law, or public-app assertion was added. Added `national-mindanao-mandulog-2024-fish-taxonomy-crosscheck-20261031.json` and three authority/reference registry entries, bringing the registry to 533 unique entries.
 
-**Next:** conduct a bounded museum/voucher search for public catalog records explicitly linked to the 2023 article, its authors, or its three site names. Keep name-only regional records separate; a nonmatch is not evidence of absence. If no vouchers surface, close the specimen-identity lead as unresolved and move to a separate, better-vouchered freshwater source.
+**Next:** step 390 completed the bounded accessible search without finding a linked voucher; API responses could not be retrieved. The specimen identity remains unresolved. Move to an independent Northern Mindanao/Lanao freshwater study with specimen, voucher, or sequence crosswalks, keeping study dates and waterbody/site provenance distinct.
+
+
+### National rollout step 390 - Mandulog 2023 public voucher and catalog screen - 31 October 2026
+
+Searched the publisher article and publicly indexed fish-collection results using the Mandulog River, Digkilaan, Upper Hinaplanon, and Bayug Island names. No specimen/accession explicitly tied to the 2023 article or its collection events surfaced in accessible results. This is a bounded search outcome, not a complete catalog census. A GBIF locality query timed out before returning any body; an iDigBio API request could not be retrieved through this environment. Neither has a result count and neither is evidence of a zero-record result. iDigBio's portal reports that its data stopped updating on 8 May 2026; Smithsonian NMNH's own notice says electronic records do not represent its full collection. Do not infer specimen absence.
+
+Added `national-mindanao-mandulog-2024-public-voucher-screen-20261031.json` and two catalog-coverage source records. The 2023 article still has no public voucher/accession crosswalk in the reviewed text. No specimen identity, species/occurrence assertion, geometry, or app row was added; source registry count is 535 unique entries.
+
+**Next:** continue with an independent Lanao/Northern Mindanao freshwater study that reports collection dates, named waterbodies, and genetic or specimen provenance. Keep evidence separate from the 2023 Mandulog survey, and distinguish local observation from national range and present-day coverage.
