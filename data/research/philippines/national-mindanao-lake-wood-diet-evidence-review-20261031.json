@@ -1,0 +1,144 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-31",
+  "phaseId": "M5",
+  "regionIds": ["0900000000"],
+  "regionName": "Region IX (Zamboanga Peninsula)",
+  "status": "historical-lake-gut-content-study;species-and-waterbody-specific-diet-evidence;sample-count-conflict;noncommercial-license;research-only",
+  "question": "What local natural-diet observations does the 2025 Lake Wood gut-content study report, and which limits block a general species diet profile or public app entry?",
+  "sourceId": "nfrdi-tpjf-2025-lake-wood-fish-diet",
+  "source": {
+    "citation": "Gonzaga-Torino, F. M., Gonzaga, A. M. Jr., Gonzaga, F. M., Tahiluddin, A. B., and Pedroso, F. L. (2025). Gut Content Analysis of Freshwater Fishes in Lake Wood, Zamboanga del Sur, Philippines. The Philippine Journal of Fisheries, 32(2), 245-255. https://doi.org/10.31398/tpjf/32.2.2024-0026",
+    "url": "https://www.nfrdi.da.gov.ph/tpjf/vol32_2/shortcomm_gonzaga_torino_et_al_32220240026.pdf",
+    "repositoryUrl": "https://repository.nfrdi.da.gov.ph/items/944eebad-4945-43a9-8483-b96ee46f28d6/full",
+    "policyUrl": "https://www.nfrdi.da.gov.ph/tpjf/policy",
+    "access": "Official NFRDI-hosted article PDF and NFRDI repository item metadata reviewed. The PDF footer explicitly identifies CC BY-NC 4.0; the journal policy also describes the noncommercial reuse condition. The repository's attached license.txt is a generic sample-license placeholder and is not treated as the article license. The repository item metadata lists four authors while the article PDF lists five; this review cites the version-of-record author list. No PDF copy is retained.",
+    "studyContext": {
+      "waterbodyAsReported": "Lake Wood, Municipality of Lakewood, Zamboanga del Sur, Philippines",
+      "sampleCollection": "The methods say fish were obtained from local fishers who used cast nets, spear guns, and fishing rods in Lake Wood. Fish were identified morphologically using external characters and checked against FishBase; gut material was inspected microscopically and food items were identified from morphological fragments and references.",
+      "studyDate": null,
+      "voucherOrAccession": null,
+      "coordinates": "The article maps the general study area in GCS WGS 1984 but does not provide species-specific capture coordinates or gut-sample station links. No geometry is extracted.",
+      "identityLimits": "Oreochromis sp. remains unresolved and the authors note possible hybrid or introduced-strain identity without genetic confirmation. The paper retains Rasbora sp.; its discussion notes disagreement in other literature over R. everetti versus R. philippina, so this study does not settle that identity."
+    }
+  },
+  "sampleCountAudit": {
+    "abstractClaimedStomachSamples": 144,
+    "table1SpeciesStomachCounts": {
+      "Oreochromis niloticus": 7,
+      "Oreochromis sp.": 4,
+      "Oreochromis aureus": 1,
+      "Cyprinus carpio": 5,
+      "Barbodes binotatus": 3,
+      "Rasbora sp.": 54,
+      "Channa striata": 11,
+      "Clarias batrachus": 1,
+      "Anabas testudineus": 1
+    },
+    "table1CountSum": 87,
+    "reconciled": false,
+    "note": "The nine Table 1 species-level stomach counts sum to 87, not the abstract's 144 examined stomach samples. The paper does not reconcile the difference in the reviewed text. This review does not select a denominator or recalculate the source indices."
+  },
+  "dietEvidence": [
+    {
+      "taxonAsReported": "Oreochromis niloticus",
+      "table1Stomachs": 7,
+      "studySpecificFoodItems": ["algae", "fish remains"],
+      "sourceNarrativeFrequencies": {"algae": "100%", "fish remains": "42.9%"},
+      "summary": "Algae was the most important reported item; fish remains were also recorded, consistent with opportunistic piscivory in this Lake Wood sample."
+    },
+    {
+      "taxonAsReported": "Oreochromis sp.",
+      "table1Stomachs": 4,
+      "studySpecificFoodItems": ["algae", "mollusks", "insects", "shrimp"],
+      "sourceNarrativeFrequencies": {"algae": "100%", "mollusks": "75%", "insects": "25%", "shrimp": "25%"},
+      "summary": "Mollusks ranked highest in the paper's reported diet indices, with algae also present in every sample; taxonomic identity of this tilapia group is unresolved."
+    },
+    {
+      "taxonAsReported": "Oreochromis aureus",
+      "table1Stomachs": 1,
+      "studySpecificFoodItems": ["algae"],
+      "sourceNarrativeFrequencies": {"algae": "100%"},
+      "summary": "Algae was recorded in the single Table 1 specimen; this sample size cannot establish a species-wide diet."
+    },
+    {
+      "taxonAsReported": "Cyprinus carpio",
+      "table1Stomachs": 5,
+      "studySpecificFoodItems": ["algae", "mollusks", "fish remains", "shrimp", "sand"],
+      "sourceNarrativeFrequencies": {"algae": "100%", "mollusks": "40%", "fish remains": "20%", "shrimp": "20%", "sand": "20%"},
+      "summary": "The paper describes a broad, omnivorous gut-content profile. Sand is recorded as ingested material, not nutritional prey."
+    },
+    {
+      "taxonAsReported": "Barbodes binotatus",
+      "table1Stomachs": 3,
+      "studySpecificFoodItems": ["algae", "mollusks", "sand"],
+      "sourceNarrativeFrequencies": {"algae": "100%", "mollusks": "33.3%", "sand": "33.3%"},
+      "summary": "Algae dominated the reported items; sand is not food, and the paper's small sample limits broader inference."
+    },
+    {
+      "taxonAsReported": "Rasbora sp.",
+      "table1Stomachs": 54,
+      "studySpecificFoodItems": ["algae"],
+      "sourceNarrativeFrequencies": {"algae": "100%"},
+      "summary": "The source reports algae in all examined porang samples but leaves the fish at genus-level identity; do not project the profile to a named Rasbora species."
+    },
+    {
+      "taxonAsReported": "Anabas testudineus",
+      "table1Stomachs": 1,
+      "studySpecificFoodItems": ["algae", "sand"],
+      "sourceNarrativeFrequencies": {"algae": "100%", "sand": "100%"},
+      "summary": "Algae and sand were present in the single sample. Sand is ingested material, not food."
+    },
+    {
+      "taxonAsReported": "Clarias batrachus",
+      "table1Stomachs": 1,
+      "studySpecificFoodItems": ["algae", "sand"],
+      "sourceNarrativeFrequencies": {"algae": "100%", "sand": "100%"},
+      "summary": "Algae and sand were present in the single sample. Sand is ingested material, not food."
+    },
+    {
+      "taxonAsReported": "Channa striata",
+      "table1Stomachs": 11,
+      "studySpecificFoodItems": ["algae", "insects"],
+      "sourceNarrativeFrequencies": {"algae": "100%", "insects": "30%"},
+      "summary": "The article reports algae in all examined samples and insects in a subset, and describes opportunistic predation. Its table does not report fish prey for this sample; this cannot be read as evidence that dalag never eats fish."
+    }
+  ],
+  "interpretation": {
+    "safeSummary": "This 2025 Lake Wood gut-content study reports algae as common in the sampled fish community and records fish remains in the Nile tilapia, common carp, and other food categories by taxon. Diet evidence is waterbody- and study-specific; the sample-count conflict, very small n for several taxa, missing collection dates/vouchers, and unresolved Oreochromis/Rasbora identities limit generalization.",
+    "productUseIfRightsAndReviewAreResolved": "A future diet detail could show source-reported food categories with lake, study date if later confirmed, method, sample count and identity confidence; show species-level records only for taxa resolved at species rank. Keep diet observations separate from bait recommendations, catchability and natural-range claims.",
+    "notSupported": [
+      "A universal or nationwide diet profile for any fish species based on this one lake study.",
+      "A fishing bait or lure recommendation, catch probability or guarantee of response.",
+      "A conclusion that tilapia are never piscivorous or that Channa striata never eats fish.",
+      "A species-level diet card for Oreochromis sp. or Rasbora sp.",
+      "A current presence, abundance trend, complete Lake Wood checklist or lake geometry."
+    ]
+  },
+  "qualityAndRights": {
+    "evidenceLevel": "Primary gut-content short communication with method-described laboratory analysis; exact fish collection dates and voucher accessions are absent, and abstract/sample-table totals conflict.",
+    "reuseStatus": "Article PDF states CC BY-NC 4.0; attribution is required and reuse is restricted to noncommercial purposes. The repository's attached license.txt is a generic sample, not item-specific permission. Public-app suitability remains unapproved pending project-use classification and review.",
+    "handling": "This file contains short attributed research summaries, not reproduced article tables or figures. No article PDF, image, raw stomach data, species assertion or public-app row is retained or admitted. Sand is labeled as non-food ingested material.",
+    "safetyAndDietBoundary": "Gut contents document observed stomach material in a sampled waterbody and time window; they are not bait advice, current-fishery guidance, or proof of a species' fixed diet."
+  },
+  "disposition": {
+    "taxaWithStudySpecificDietNotes": 9,
+    "taxaResolvedToSpeciesRankInSource": 7,
+    "genusLevelOrUnresolvedTaxa": 2,
+    "sourceTableReproduced": false,
+    "sourceSampleCountConflictResolved": false,
+    "sourceDietClaimsRecordedAsResearchOnly": 9,
+    "speciesAssertionsAdded": 0,
+    "dietAssertionsAdded": 0,
+    "geometryAdded": 0,
+    "publicAppRowsAdded": 0,
+    "publicationApproval": false,
+    "reason": "The article supports narrowly attributed historical diet notes but its abstract and Table 1 counts do not reconcile, multiple taxa have very small samples, exact catch dates/vouchers are absent, and CC BY-NC suitability for Bangwit's future public use has not been reviewed."
+  },
+  "nextAction": "Keep these diet notes research-only until Bangwit's use is confirmed compatible with CC BY-NC 4.0 and the study's sample-count discrepancy is resolved or explicitly carried forward. Continue the Mindanao inland-water and natural-diet source sweep in parallel; do not wait for an author response or turn this into bait guidance.",
+  "sources": [
+    {"url": "https://www.nfrdi.da.gov.ph/tpjf/vol32_2/shortcomm_gonzaga_torino_et_al_32220240026.pdf", "supports": "Full article, species sample labels, gut-content method, Table 1 sample counts, narrative diet results, authors' identity cautions and article-footer CC BY-NC 4.0 license."},
+    {"url": "https://repository.nfrdi.da.gov.ph/items/944eebad-4945-43a9-8483-b96ee46f28d6/full", "supports": "Official NFRDI repository item metadata, abstract, PDF and license-bundle listing; the listed attached license file is a generic sample placeholder."},
+    {"url": "https://www.nfrdi.da.gov.ph/tpjf/policy", "supports": "Current Philippine Journal of Fisheries policy describing author retention of copyright and CC BY-NC 4.0 noncommercial reuse terms."}
+  ]
+}
