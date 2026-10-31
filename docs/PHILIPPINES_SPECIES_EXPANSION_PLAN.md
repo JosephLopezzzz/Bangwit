@@ -3269,3 +3269,14 @@ Queried the read-only GBIF Occurrence API for the exact locality strings Talabaa
 Added `national-mindanao-talabaan-gbif-naawan-voucher-screen-20261031.json` and three registry entries for the GBIF query and its two museum datasets, bringing the source registry to 524 unique entries. This is a bounded index snapshot, not absence evidence or a Talabaan survey-voucher crosswalk. No occurrence, public species, geometry, diet, safety, fishing-law, or app row was added.
 
 **Next:** continue the Mindanao regional freshwater scan with a distinct, accessible fish source or a direct museum-catalog crosswalk. Keep the Talabaan paper historical and research-only unless a specimen, tissue, or author crosswalk is located.
+
+
+### National rollout step 384 - Mandulog River historical goby survey review - 31 October 2026
+
+Reviewed Vedra et al.'s publisher-hosted 2013 article and UPLB repository record. The paper reports quarterly February, May, August, and November 2011 collections from Rogongon (upstream), Digkilaan (midstream), and Hinaplanon (downstream), with five reported stations per barangay. Tables 2-3 list ten goby name forms and seasonal/reach counts totaling 1,590: 895 in the February-May dry-season table and 695 in the August-November wet-season table. Summed reach totals are 288 upstream, 931 midstream, and 371 downstream.
+
+A separate 2012 dissertation abstract reports the same ten taxa and matching seasonal/reach totals, so the thesis and article are treated as possible overlapping reports of one survey rather than two independent data sets. The article prints 15 coordinate/elevation entries but does not state a CRS/datum and some coordinate degree symbols are malformed; no point data or river geometry was derived. No public voucher or accession crosswalk was found. The article does not use direct diet analysis: hook-and-line earthworm is bait, and its narrative diet/ecology statements are not promoted as Bangwit diet records. Respondent accounts about pollution, fishing and conservation describe 2011 perceptions, not current safety, laws, access, or population status. The conclusion prints *Periophthalmus barbarous* while the tables and other text use *P. barbarus*; the source discrepancy is retained.
+
+Added `national-mindanao-mandulog-2011-goby-survey-review-20261031.json` and one publisher source entry; the registry now contains 525 unique sources. No app species, historical occurrence, diet, safety, law, geometry or station point was added. The paper's item-specific republication license was not verified.
+
+**Next:** cross-check the ten source-name labels against a recognized fish-name authority, retaining the source typo and separating nomenclatural candidates from specimen identity. Then review the separate 2014 Mandulog fishery paper and 2015 gut-content paper independently for what they can support; do not combine sample totals across the possible 2012/2013 survey pair or infer current presence.
