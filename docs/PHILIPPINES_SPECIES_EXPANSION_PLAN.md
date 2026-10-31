@@ -3279,4 +3279,15 @@ A separate 2012 dissertation abstract reports the same ten taxa and matching sea
 
 Added `national-mindanao-mandulog-2011-goby-survey-review-20261031.json` and one publisher source entry; the registry now contains 525 unique sources. No app species, historical occurrence, diet, safety, law, geometry or station point was added. The paper's item-specific republication license was not verified.
 
-**Next:** cross-check the ten source-name labels against a recognized fish-name authority, retaining the source typo and separating nomenclatural candidates from specimen identity. Then review the separate 2014 Mandulog fishery paper and 2015 gut-content paper independently for what they can support; do not combine sample totals across the possible 2012/2013 survey pair or infer current presence.
+**Follow-up:** the targeted name-authority cross-check is recorded in step 385. Next, review the separate 2014 Mandulog fishery paper and 2015 gut-content paper independently for what they can support; do not combine sample totals across the possible 2012/2013 survey pair or infer current presence.
+
+
+### National rollout step 385 - Mandulog goby name-authority cross-check - 31 October 2026
+
+Checked all ten Mandulog article name forms against selected records in Eschmeyer's Catalog of Fishes (online version updated 13 August 2026). Nine retain their source spelling as the Catalog's current candidate; the 2013 paper's *Giuris margaritacea* is preserved verbatim with *G. margaritaceus* as the Catalog's current spelling candidate. A previously reviewed 2020 integrative revision recognizes multiple Indo-Pacific *Giuris* species using genetic and morphometric evidence; species-level identity still requires diagnostic vouchers.
+
+Current Catalog family placements move *Oxyeleotris lineolata* from the paper's Eleotridae to Butidae and place *Awaous*, *Periophthalmus*, and *Sicyopterus* in Oxudercidae rather than the source's Gobiidae grouping. Two range descriptions are notable identification conflicts: the selected *O. lineolata* record lists northern Australia and New Guinea, while *Periophthalmus barbarus* is listed from the eastern Atlantic, Morocco to Angola; neither selected record lists the Philippines. These are voucher-review priorities, not evidence of absence or automatic proof that the local specimens were misidentified. No source label was silently replaced and no fish was reidentified.
+
+Added `national-mindanao-mandulog-fish-taxonomy-crosscheck-20261031.json` and one Catalog source entry, bringing the registry to 526 unique sources. No public species, occurrence, diet, safety, legal, or geometry row was added.
+
+**Next:** review the separate 2014 Mandulog goby-fishery paper and 2015 fish gut-content paper independently, prioritizing whether their methods support any natural diet facts. Keep historical sample counts, local reports, natural diet, and bait recommendations distinct; do not combine the possibly overlapping 2012/2013 survey datasets.
