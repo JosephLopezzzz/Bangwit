@@ -2559,3 +2559,12 @@ Added `ph-wb-pasong-camachile-river` as a distinct river research lead, linked t
 The bounded search did not locate the completed watershed plan or a fish-specific dataset; this is a retrieval gap, not evidence of fish absence or project non-completion. CALABARZON now has 116 selected waterbody research leads (58 rivers) and 109 distinct linked source references; the regional denominator remains incomplete.
 
 **Next:** seek the completed 2017 CvSU/DENR-PENRO watershed plans or fish-survey deliverables through public repositories; inspect dates, methods, species identification, station-to-river attribution, and reuse rights before considering any fish rows. Keep watershed polygons separate from river channels and continue the freshwater/marine source queue.
+
+
+### National rollout step 305 - Pasong Camachile bounded GBIF screen - 31 October 2026
+
+Queried the public GBIF Occurrence API using the current Catalogue of Life Extended Release Actinopterygii checklist selection (key `8VR36`, checklist `7ddf754f-d193-4cc9-b351-99906754a03b`). Three indexed-field queries—`waterBody=Pasong Camachile River`, `waterBody=Pasong Camachile`, and `locality=Pasong Camachile`—each returned HTTP 200 with zero matching records. The retired GBIF key 204 was not used.
+
+Recorded the bounded screen in `calabarzon-pasong-camachile-gbif-screen-20261031.json` and linked it to the Pasong Camachile research lead. It adds no species assertions, geometry, or public-app rows. The zero results do not establish fish absence and do not cover aliases, nearby coordinate records, or non-ray-finned fishes. No spatial-box query was attempted because there is no verified channel or sampling-station geometry.
+
+**Next:** continue looking for the completed CvSU/DENR-PENRO watershed outputs or a separate reusable, station-resolved fish survey. Keep the source's planned project period separate from actual completion and fish results.
