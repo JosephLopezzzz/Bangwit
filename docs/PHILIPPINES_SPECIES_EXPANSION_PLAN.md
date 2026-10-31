@@ -2486,3 +2486,14 @@ Reviewed the official EMB search-index excerpts for the 2021 Avalar seabed-dredg
 This is a distinct EIS from the previously reviewed Island C report, but the source data and survey independence have not been compared. It is linked only as historical shared Manila Bay context. No fish taxon names, species assertions, diet, geometry, safety/legal statement or public app row were added. No item-specific reuse terms were verified; publication approval remains false. CALABARZON remains at 114 waterbody/habitat leads with 103 distinct assigned source references; the fish baseline is incomplete. See calabarzon-avalar-manila-bay-eis-fisheries-review-20261031.json.
 
 **Next:** seek authorized access to the full Avalar EIS and compare its station-to-catch materials with the Island C and NFRDI Manila Bay sources; only then assess species identity, site attribution and reuse. Continue the inland-water source sweep in parallel; do not infer current presence or absences from these historical project documents.
+
+
+### National rollout step 298 - Tayabas River 2013 full-text and methods follow-up — 31 October 2026
+
+The official PJS PDF for Paller et al. (2013) is now readable in the journal's web text viewer. Its methods describe a 2010 survey with three reaches, three stations per reach, three runs per station, and 18 samples. The paper reports 1,070 collected individuals and 15 species in aggregate. It describes the river as approximately 8.5–9 km through Tayabas and Lucena to Tayabas Bay; no station coordinate list or verified channel geometry was added.
+
+The methods assign February 2010 to wet season and September to dry season, but the study-site section says the site is dry from November through April and wet in the remaining months. Retain the source conflict and do not map season-specific results to those months. PJS describes itself as open access, and its current author guide describes a copyright-transfer form for accepted manuscripts; neither establishes the article-specific reuse rights for this 2013 item. No species table entries were transcribed, no taxonomy crosswalk or species assertion was added, and no public app row was approved. The historical 15-species aggregate is not a current inventory. See `calabarzon-tayabas-river-fulltext-review-20261031.json`.
+
+Updated the existing source record, Tayabas scope status and denominator provenance. CALABARZON remains at 114 named waterbody/habitat leads and 103 distinct source references; fish evidence remains incomplete. Palico-Lian assertions were not changed.
+
+**Next:** seek item-specific permission or independently reusable Quezon freshwater evidence; continue the CALABARZON inland, brackish and coastal sweep in parallel. Keep Tayabas study taxa, station placement, month-season association, and geometry unresolved pending rights and source-level crosswalks.
