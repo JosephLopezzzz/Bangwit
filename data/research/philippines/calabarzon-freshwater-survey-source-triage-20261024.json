@@ -4,24 +4,24 @@
   "phaseId": "L1",
   "regionId": "0400000000",
   "regionName": "Region IV-A (CALABARZON)",
-  "status": "two-primary-laguna-survey-leads-confirmed;Santa-Cruz-fulltext-read;field-level-species-data-held-pending-rights-date-station-crosswalk-taxonomy-and-reuse-review",
+  "status": "two-primary-laguna-survey-leads-confirmed;both-fulltext-web-views-read;field-level-species-data-held-pending-rights-date-station-crosswalk-taxonomy-and-reuse-review",
   "sourceIds": [
     "paller-2011-makiling-fishes",
     "cui-2022-santa-cruz-river-fish"
   ],
-  "method": "Reviewed official publisher and UPLB repository text and reuse policies. On 2026-11-01 the official JESAM PDF's full text became readable in the web-text view although a direct PDF open returned HTTP 403. The PDF screenshot endpoint returned a cache miss, so the Santa Cruz table was not visually verified or transcribed; no local copy was retained.",
+  "method": "Reviewed official publisher and UPLB repository text and reuse policies. On 2026-11-01, the full JESAM and PJS PDFs were readable in their official web-text views although prior direct fetches returned HTTP 403. Both screenshot endpoints returned cache misses, so no table cell or species-by-site matrix was visually verified or transcribed; no local copies were retained.",
   "surveys": [
     {
       "sourceId": "paller-2011-makiling-fishes",
       "published": 2011,
       "siteNames": ["Molawin Creek", "Dampalit Falls", "Cambantoc River"],
-      "sourceReports": "A field survey of three named Makiling Forest Reserve watersheds; the indexed abstract reports site richness of 12, 12 and 9 species, and the indexed Table 1 lists 16 taxa across the three sites.",
+      "sourceReports": "The official full-text web view reports 16 source-classified taxa, 13 genera, 10 families and 4,920 individuals from three Makiling Forest Reserve sites; site richness is 12 at Dampalit Falls, 12 at Molawin Creek and 9 at Cambantoc River. One results sentence incorrectly calls 4,920 'species'; Table 1 includes a genus-level Rhinogobius sp. entry.",
       "collectionDate": null,
       "dateLimit": "The paper's received date is 2010-04-29; no collection date was established from the accessible primary indexed text.",
       "waterbodyScope": "The names match existing Makiling research leads, but this batch does not change their scope assignments.",
-      "taxonomy": "Names and native/introduced labels are historical source classifications; no current accepted-name review was completed.",
+      "taxonomy": "The paper cites FishBase 2010 and Catalogue of Fishes 2011. Current accepted names/statuses were not crosschecked; Rhinogobius sp. is genus-level, and spellings including Poecilia latippina and Xiphophorus helleri remain source strings.",
       "reuse": "PJS describes the journal as open access, while its author guide says accepted authors sign a copyright-transfer form. No article-level open reuse license was found. No table or taxa rows are redistributed in this review.",
-      "access": "Official PJS indexed text was readable; direct article and PDF requests returned HTTP 403. No local raw copy or visual table review."
+      "access": "Official PJS full text was read in its web-text view on 2026-11-01; earlier direct article/PDF requests returned HTTP 403, and the PDF screenshot endpoint returned cache miss. No local copy or visual table review."
     },
     {
       "sourceId": "cui-2022-santa-cruz-river-fish",
@@ -65,9 +65,10 @@
   },
   "limitations": [
     "The Santa Cruz table extraction is not visually verified and is not suitable for transcribing fine-grained station cells.",
-    "The Paller survey's collection date is unresolved; the article's publication/received dates are not collection dates.",
+    "The Paller survey's collection date is unresolved; its 2010 received date and 2011 publication date are not collection dates.",
     "The Santa Cruz River System's sites may not be equivalent to the scope registry's single Sta Cruz River lead; the methods' Magdalena label conflicts with the table's Calumpang label.",
-    "The source result is restricted to diminutive fishes below the authors' 100 mm standard-adult-length threshold, rather than all fish in the river system.",
+    "The Santa Cruz result is restricted to diminutive fishes below the authors' 100 mm standard-adult-length threshold, rather than all fish in the river system.",
+    "The Paller paper's full text reports no field dates, and its source table was not visually checked. Its hook-and-line earthworm method is not diet evidence or a general bait recommendation.",
     "Neither study establishes present-day species presence, abundance, catchability, natural diet, safety or fishing legality."
   ],
   "nextAction": "Request an author or UPLB Museum of Natural History station crosswalk and specimen accession details. If species-level reuse is needed, obtain written permission, visually inspect the table, reconcile source identifications with current taxonomy, and keep the historical size-selected survey separate from present-day evidence. Continue independently reusable CALABARZON freshwater research in parallel."

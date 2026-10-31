@@ -3487,3 +3487,14 @@ The PDF was readable through the publisher web-text view although a direct PDF r
 The UKDR policy assigns article copyright to UKDR and allows only specified personal-use cases without further permission. No article data license or public-app reuse permission was verified. Updated the source record, prior triage, coverage-profile provenance and directory index. The existing source was already registered; the registry remains at 545 unique sources, the direct waterbody-source-reference denominator remains 123, and no species assertion, scope source reference, geometry or public app row was added. CALABARZON remains incomplete.
 
 **Next:** seek an author/UPLB museum station crosswalk and accession details; request written reuse permission before transcribing the table; continue independently reusable CALABARZON inland-water research in parallel.
+
+
+### National rollout step 404 - Makiling Forest Reserve 2011 full-text review - 1 November 2026
+
+Re-read Paller et al. (2011) from the official Philippine Journal of Science PDF's web-text view. It reports a historical survey of Molawin Creek, Dampalit Falls and Cambantoc River: 16 source-classified taxa, 13 genera, 10 families and 4,920 individuals, with per-site richness of 12, 12 and 9. The article has no field dates in the text reviewed; its received date of 29 April 2010 is not a collection date. The methods describe vouchers deposited at the UPLB Limnological Research Station but give no accessions.
+
+The PDF screenshot route returned a cache miss, so the species table was not visually verified or transcribed. A results sentence calls 4,920 “species,” while the conclusion and Table 4 describe individuals; Table 1 includes genus-level *Rhinogobius* sp. The historical name/status classifications and source spellings require current taxonomic review. The methods mention earthworms used as hook-and-line bait, which is not natural-diet evidence or generalized bait advice. PJS's author guide requires copyright transfer; no article-level data reuse permission was found.
+
+Updated the existing source entry, freshwater triage, Molawin/Cambantoc scope notes, coverage profile, and directory index. The source was already registered and linked to Molawin and Cambantoc; the denominator remains 545 unique sources and 123 direct waterbody-source references. No Dampalit Falls scope unit was created because its feature crosswalk is unresolved. No species assertion, table-derived app row, geometry or water-safety/legal claim was added. CALABARZON remains incomplete.
+
+**Next:** seek voucher/accession and field-date details from UPLB; clarify whether Dampalit Falls maps to a separate waterbody unit; continue independently reusable CALABARZON inland-water research while keeping the published table held pending written permission.
