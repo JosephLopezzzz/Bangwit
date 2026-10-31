@@ -2524,3 +2524,14 @@ Followed up the official 2022 SCS SAP evaluation, which says biodiversity monito
 Added `calabarzon-maragondon-estuary-fish-results-search-review-20261031.json` and linked it to the existing SCS SAP source record. This is a retrieval gap only, not evidence that monitoring did not occur or that fish are absent. CALABARZON remains at 114 named leads, 105 distinct source references, and zero validated geometry; 24 leads remain in the fish-evidence-not-reviewed list. No fish assertion, river-to-estuary transfer, geometry, salinity update, or public-app row was added.
 
 **Next:** seek completed BMS/BAMS reports through an official Ternate Marine Park/PAMO or Cavite PENRO channel. Request station-to-habitat linkage, survey dates, methods, taxon rank and identification support, and reuse terms. This remains an unsent research inquiry; no contact was made.
+
+
+### National rollout step 302 - Naic-Rosario (Wawa) River historical catch review — 31 October 2026
+
+Re-reviewed the official EMB Island C EIS through its actual-fishing table and figure. AFE4 is described near proposed Island E at Wawa River, with an approximately 5 kg “Tilapia” catch inside Wawa River over four hours (reported CPUE 1.25 kg/hour). The report also names a Naic-Rosario (Wawa) River in its project-area plankton context. This supports a source-named river research lead distinct from the nearby Wawa River estuary, but does not delineate the reach or establish that AFE4 lies inside the estuary feature.
+
+The EIS table heading says November 2018, while the figure caption spans November 2018 and February 2019; its narrative, table and figure also differ in encounter count/labels. No exact AFE4 date is inferred. The catch row identifies only “Tilapia”; a separate broad fish list is not crosswalked to AFE4, so no scientific species or species assertion is assigned. Exact encounter coordinates were withheld. Item-specific reuse terms remain unresolved, and the catch is not a current-presence claim, standardized inventory, or public app record.
+
+Added `ph-wb-naic-rosario-wawa-river` as a separate source-named research lead and `calabarzon-naic-rosario-wawa-river-island-c-catch-review-20261031.json`; linked the reviewed source and refreshed the denominator profile and hashes. CALABARZON now has 115 named waterbody/habitat leads, 57 river leads, 105 unique source references, 24 fish-evidence-not-reviewed leads, zero validated geometries, 9 imported species assertions and zero public records. The regional baseline remains incomplete.
+
+**Next:** resolve the AFE4 reach/date, “Tilapia” identification and source reuse terms; do not merge this river with the Wawa estuary or Cañas watershed Wawa sampling site by name alone. Continue independent freshwater and coastal source review while those identity and rights questions remain open.
