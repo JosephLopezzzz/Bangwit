@@ -2922,3 +2922,20 @@ Reviewed Hegde's 2013 Goa University thesis, which includes primary direct stoma
 The study is from Goa, India, so it cannot establish prey composition in Agusan, Caraga or the Philippines. The university repository PDF did not provide a verified open reuse license. Added `national-caraga-johnius-borneensis-goa-thesis-diet-review-20261031.json` and one source reference; the registry now contains 476 entries. No local prey assertion, bait guidance, current occurrence, geometry or public app row was added.
 
 **Next:** continue the Caraga freshwater evidence queue with a separate river or lake survey review. Keep diet studies species-specific and local where possible; do not make comparative sources look like Philippine records.
+
+
+### National rollout step 346 - Daniog River fish inventory source review - 31 October 2026
+
+Reviewed Estal-Mercado's 2018 publisher-hosted article for Daniog River, Lanuza, Surigao del Sur. It reports a three-site survey described as upper, middle and lower stream, with 13 table labels and mixed local-fisher gears. The abstract dates sampling June 2016-December 2017, but Table 2 says July-December 2017. The narrative reports 205 fish at Site 1 while Table 2 gives 225; no reconciliation is available. Two labels stop at genus, several printed names/families require taxonomy review, and the paper supplies only one study-area coordinate without hemisphere, datum, uncertainty or station crosswalk. The freshwater label is not supported by salinity measurements, and the source does not detail effort or verified vouchers.
+
+The 13 source labels remain research-only. No species row, geometry, diet claim, current safety guidance or public app data was added. Item-specific reuse terms were not verified. Added `national-caraga-daniog-river-fish-inventory-review-20261031.json` and one source-registry reference; the registry now contains 477 entries.
+
+**Next:** cross-check the 11 binomial labels against a current authoritative taxonomy source, keep `Ambassis sp.` and `Mogurnda` unresolved, and flag any unexpected name/locality combinations. Do not admit claims or correct the source table without a separate evidence-based decision.
+
+### National rollout step 347 - Daniog River fish-name cross-check - 31 October 2026
+
+Cross-checked the 11 Daniog Table 2 binomial labels against Eschmeyer's Catalog of Fishes, using its indexed records; for `Alepes macrurus`, the FAO Western Central Pacific guide explicitly supplies the synonym crosswalk to `Alepes vari`. `Puntius binotatus` is treated as `Barbodes binotatus`; `Trichogaster trichopterus` as `Trichopodus trichopterus`; `Gerres abbreviatus` is currently listed as a synonym of `Gerres erythrourus`; and the article's `Channa striate` remains unchanged with `Channa striata` only a candidate spelling. `Ambassis sp.` and `Mogurnda` remain genus-only.
+
+The Catalog's summarized ranges create major locality mismatches for `Mugil curema` (Atlantic/eastern Pacific summary) and `Proterorhinus semilunaris` (Eastern Europe/Black Sea summary). `Trichopodus trichopterus` is described as native to mainland Southeast Asia and introduced elsewhere. These flags prioritize voucher/depository or diagnostic-photo review; they do not prove absence or invalidate any record. No specimen was reidentified, no source label was rewritten, and no occurrence, geometry, diet, safety, legal or public app claim was added. Added `national-caraga-daniog-river-taxonomy-crosscheck-20261031.json` and one registry reference; registry count is 478.
+
+**Next:** seek the Daniog paper's vouchers/depository details or author clarification, especially for `Mugil curema`, `Proterorhinus semilunaris`, and `Channa striate`. If none are available, keep every label research-only and continue to a separate Caraga freshwater primary-source lead.

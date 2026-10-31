@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-31",
+  "phaseId": "M2",
+  "regionIds": ["1600000000"],
+  "regionName": "Region XIII (Caraga)",
+  "status": "historical-river-inventory;date-and-count-conflicts;two-genus-only-labels;nomenclature-crosschecked;specimen-identities-unverified;research-only",
+  "purpose": "Review Estal-Mercado's Daniog River inventory as a potential freshwater source for Caraga. Preserve the printed labels and sampling scope while recording internal conflicts and withholding unverified taxon/site assertions.",
+  "studySource": {
+    "author": "Rozette Estal-Mercado",
+    "title": "A Freshwater Fish Inventory of Daniog River, Lanuza, Surigao del Sur, Philippines",
+    "citation": "Estal-Mercado, R. (2018). A Freshwater Fish Inventory of Daniog River, Lanuza, Surigao del Sur, Philippines. Science International (Lahore), 30(1), 141-145.",
+    "journalPdfUrl": "https://www.sci-int.com/pdf/636541574473448742.edited.pdf",
+    "studyArea": "Daniog River, Municipality of Lanuza, Surigao del Sur, Caraga, Philippines. The paper describes upper, middle and lower stream study sites.",
+    "studyAreaCoordinateVerbatim": "Latitude 9°13'59.99\" and longitude 126°3'0.01\"",
+    "coordinateUse": "One locator for the study area, not three station coordinates. The article does not print hemisphere, datum, uncertainty or a taxon-to-point crosswalk; no geometry is derived.",
+    "samplingPeriodConflict": {
+      "abstract": "June 2016 through December 2017",
+      "speciesTableHeading": "July through December 2017",
+      "decision": "Keep both source statements; do not normalize to one sampling period without clarification."
+    }
+  },
+  "methods": {
+    "reported": "The abstract says local fishers used net fishing, scoop net, harpooning, traps, cast nets and angling at three river sites. The paper reports pH, dissolved oxygen and water temperature measurements.",
+    "notReportedOrUnclear": [
+      "Sampling effort, number of visits, and effort per gear/site are not adequately specified in the reviewed text.",
+      "No salinity measurements are reported, so the paper's freshwater characterization does not resolve whether all three reaches are fresh or include tidal/brackish influence.",
+      "No specimen voucher accessions, collection repository, diagnostic identification protocol, or specimen-to-site crosswalk are reported; the table only cites FishBase and an aquarium/breeding reference as identification resources.",
+      "One study-area coordinate is supplied without hemispheres, datum, uncertainty, or site-level mapping precision."
+    ]
+  },
+  "sourceTable": {
+    "tableHeading": "List of fish species and abundance of the three representative site of Daniog River during July to December, 2017.",
+    "sourceTaxonLabels": [
+      "Mugil curema",
+      "Puntius binotatus",
+      "Proterorhinus semilunaris",
+      "Trichogaster trichopterus",
+      "Channa striate",
+      "Ambassis sp.",
+      "Glossogobius giuris",
+      "Mogurnda",
+      "Anguilla marmorata",
+      "Scatophagus argus",
+      "Alepes macrurus",
+      "Gerres abbreviatus",
+      "Oreochromis niloticus"
+    ],
+    "labelCount": 13,
+    "binomialLabelCount": 11,
+    "genusOnlyLabels": ["Ambassis sp.", "Mogurnda"],
+    "sourceSpellingFlags": [
+      "Channa striate is retained verbatim; the spelling is not silently corrected.",
+      "Several family names are misspelled or outdated in the source table; no family-level normalization is made in this source review."
+    ],
+    "abundanceCountConflict": {
+      "narrativeSite1Total": 205,
+      "tableSite1Total": 225,
+      "site2Total": 61,
+      "site3Total": 242,
+      "decision": "Do not use the conflicting Site 1 count as an admitted or reconciled observation. The table describes means per sampling for species rows but does not explain the site-total aggregation clearly."
+    }
+  },
+  "evidenceDecision": {
+    "localityEvidence": "Historical source-level report that fish were collected at a three-site Daniog River survey in 2016-2017; no independently verified voucher or precise station records are available in this review.",
+    "taxonEvidence": "A separate bounded CAS Catalog cross-check proposes name/synonym/spelling crosswalks for the 11 binomials and flags two major locality mismatches; no specimen was reidentified. Retain all 13 original table labels as research candidates only.",
+    "dietEvidence": "None. The article does not present stomach-content or prey-composition results.",
+    "waterQualityEvidence": "Historical pH, dissolved oxygen and temperature measurements only; not current water quality or a safety advisory.",
+    "legalOrCatchabilityEvidence": "None. The paper does not establish current fishing permissions, legal size/season rules or catchability.",
+    "rights": "No item-specific open license or Bangwit publication permission was verified."
+  },
+  "decision": {
+    "sourceTaxonLabelsReviewed": 13,
+    "speciesRowsAdmitted": 0,
+    "currentPresenceAssertionsAdded": 0,
+    "dietClaimsAdded": 0,
+    "safetyClaimsAdded": 0,
+    "geometryAdded": 0,
+    "publicAppRowsAdded": 0,
+    "publicationApproval": false
+  },
+  "limitations": [
+    "The study is historical and a single river survey; it does not provide a current, complete Daniog River checklist.",
+    "Sampling-period statements conflict between the abstract and Table 2 heading.",
+    "Site 1 totals conflict between narrative text and the table (205 versus 225 individuals).",
+    "Two labels stop at genus; a separate name-status review flags likely spelling/synonym changes and two major locality mismatches, but all specimens remain unverified.",
+    "No salinity is given; the paper's freshwater wording cannot be generalized across a potentially tidal river reach.",
+    "No sample effort, station-level coordinates, vouchers, or detailed identification protocol were found in the reviewed text.",
+    "No diet, bait, current safety, legal rule, current presence or public app claim is supported by this source alone."
+  ],
+  "nextAction": "Seek voucher/depository details or author clarification for Mugil curema, Proterorhinus semilunaris and the printed Channa striate label; otherwise keep all 13 labels research-only and continue with a separate Daniog-area primary source review.",
+  "references": [
+    { "url": "https://www.sci-int.com/pdf/636541574473448742.edited.pdf", "supports": "Publisher-hosted primary article text, abstract, one study-area locator, three site labels, method summary, Table 2 labels/counts and internal date/count conflicts." },
+    { "url": "https://doi.org/10.13140/RG.2.2.32289.68963", "supports": "Author-upload discovery record only; this repository DOI is not treated as the journal article DOI or a license." }
+  ]
+}
