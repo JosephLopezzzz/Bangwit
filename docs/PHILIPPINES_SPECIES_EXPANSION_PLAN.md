@@ -2772,3 +2772,11 @@ Reviewed the full 2022 AACL Bioflux paper on Lakewood, Apo, Napalit, Holon/Maugh
 The article states a Creative Commons Attribution License, but does not name a version. Added `national-mindanao-six-small-lakes-fish-survey-review-20261031.json` and a source-registry entry; source count is now 455. No species/presence rows, water-quality claims, diet notes, lake coordinates, geometry, table content, or public-app entries were added. The author’s middle initial also differs between the first-page author line and the final-page citation and is preserved as a bibliographic uncertainty.
 
 **Next:** continue the Mindanao freshwater queue with a primary source that separates specimens from community reports at the taxon-site level. Keep this paper as an openly licensed, historical research lead; do not import its mixed presence matrix as a verified checklist.
+
+### National rollout step 329 - Lake Mainit and Kalinawan River historical inventory audit - 31 October 2026
+
+Reviewed the official 2015 JEAR publisher record and a public author-uploaded copy of the paper by Uy et al. The methods say the fish inventory was conducted in August-November 2007, while Table 1 captions the finfish catches as August-November 2008. Methods describe field collection, fisher interviews and local-market surveys, including voucher collection and separately listed reports without vouchers; however, the pooled 41-entry finfish table has no per-row evidence-type flag or voucher accession numbers. It covers Lake Mainit and Kalinawan River together and does not consistently assign each taxon to a lake or outlet reach. The source also says four additional finfish types were unidentified and describes many listed fish as migratory or marine-influenced.
+
+The publisher page says all rights reserved and no item-specific reuse grant was found. Added `national-caraga-lake-mainit-aquatic-biodiversity-review-20261031.json` and the source record. The registry now has 456 entries. No table rows, current-presence claims, lake/river-specific assertions, geometry, diet or public-app data were added.
+
+**Next:** continue Caraga freshwater screening with a later primary study that supplies taxon-by-site specimen evidence or accessible voucher/photo documentation. Keep the pooled historical inventory research-only and do not treat it as current lake or river coverage.
