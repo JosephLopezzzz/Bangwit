@@ -3567,3 +3567,12 @@ The NFRDI reference cautions that local names can be generic or overlap among ta
 Added `calabarzon-cavite-ecological-profile-2023-fisheries-review-20261101.json` and two source-registry entries. No seasonal row values were copied; no scientific names, species assertions, waterbody references, geometry, or public-app rows were added. The source registry now has 550 records; CALABARZON remains at 118 research leads and 123 direct source references, with the regional baseline incomplete.
 
 **Next:** seek the underlying monthly fisheries records and clarification of the commercial-table discrepancy through an authorized public route. Keep independent freshwater and site-resolved survey discovery moving, and do not present these province-level labels as current wild presence, waterbody distribution, fish diet, catchability, or fishing rules.
+
+
+### National rollout step 412 - Manila Bay Sardinella pacifica type-series and label crosswalk - 1 November 2026
+
+Reviewed Hata and Motomura's 2019 taxonomic description, Balisco and Liao's 2025 Philippine type-locality checklist, and the current Eschmeyer's Catalog of Fishes entry. The primary paper describes 21 Philippine specimens and names the holotype locality as Manila Harbor, Manila Bay, Luzon. The 2025 checklist records several paratype lots from Manila Bay, notes that most type specimens were previously identified as Sardinella fimbriata, and says the original description did not state collection dates. The Catalog treats S. pacifica as valid.
+
+Added `national-calabarzon-manila-bay-sardinella-pacifica-type-series-review-20261101.json`, two source registry entries, and a shared-Manila-Bay research-source link. The 2014 NFRDI ring-net sample remains under its verbatim S. fimbriata label: no sample/voucher crosswalk connects that pooled nine-landing-site fishery data to the later type series. No species assertion was imported into the public ledger; no current presence, collection date, coordinates, Cavite-specific assignment, geometry, or app row was added. The registry now contains 552 source entries; CALABARZON remains at 118 waterbody research leads and 125 unique direct source references, with no public records admitted.
+
+**Next:** seek 2014 NFRDI voucher/sample identifiers and their determination history if an authorized archive exists; meanwhile continue independently sourced CALABARZON fish evidence reviews and keep historical type-locality evidence separate from current waterbody presence.
