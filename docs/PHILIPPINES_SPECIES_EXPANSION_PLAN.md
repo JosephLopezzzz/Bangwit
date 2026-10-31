@@ -2904,3 +2904,21 @@ Soe et al. (2022) sampled Pattani Bay, Thailand along 2, 4 and 6 m depth contour
 These are distinct estuaries, periods, samples and diet indices; the numerical indices are not directly comparable. Together they reinforce that a useful natural-diet view should show the cited locality, date, life-stage/sample context, prey categories and evidence type. Neither study establishes a Caraga, Pagatpatan or Philippines-specific diet. Added `national-caraga-johnius-borneensis-comparative-gut-diet-review-20261031.json` and two source-registry entries; the registry now contains 473 references. No Philippine-local prey claim, bait suggestion, occurrence assertion or public app row was added.
 
 **Next:** search primary Philippine diet studies for *Johnius borneensis* or other Caraga taxa. If no local prey study is found in the bounded search, keep this species' published diet as comparative-only and continue the region's habitat/species evidence review.
+
+
+### National rollout step 344 - Bounded Philippine *Johnius borneensis* diet search - 31 October 2026
+
+Searched the exact scientific and local names with stomach-content, gut-content, prey, feeding, diet, Agusan and Philippines terms. Reviewed three related Caraga papers: Solania and Seronay (2017; 223 Agusan Estuary fish, reproductive measures), Tagarao et al. (2020; 304 Lower Agusan fish, length-weight and reproductive measures), and the 2016 Pagatpatan capture/contaminant paper. The first two do not report stomach-content prey results; the 2016 paper's piscivory statement cites Sasaki (2001) and is not local prey analysis.
+
+No Philippine primary gut-content study was located in this bounded search. This is not an exhaustive claim that no such Philippine study exists. Added `national-caraga-johnius-borneensis-philippine-diet-search-review-20261031.json` and two screened source references; the registry now contains 475 entries. No Philippine prey assertion, bait guidance, current-presence claim or public-app row was added.
+
+**Next:** review the discovered 2013 Goa University primary stomach-content thesis. Keep the locality and %FO metric explicit, and retain the result as comparison only.
+
+
+### National rollout step 345 - Goa *Johnius borneensis* primary diet study - 31 October 2026
+
+Reviewed Hegde's 2013 Goa University thesis, which includes primary direct stomach-content analysis of sciaenids. Across its diet chapter, 1,284 stomachs from ten species were examined. The thesis says *Johnius borneensis* preferred zooplankton and reports 78.36% frequency of occurrence; it discusses mysis and prawn larvae. The thesis defines %FO as occurrence across non-empty stomachs, so it is not diet biomass share. Its text-extracted table header/value alignment could not be visually verified, and the species-specific denominator was therefore left unresolved.
+
+The study is from Goa, India, so it cannot establish prey composition in Agusan, Caraga or the Philippines. The university repository PDF did not provide a verified open reuse license. Added `national-caraga-johnius-borneensis-goa-thesis-diet-review-20261031.json` and one source reference; the registry now contains 476 entries. No local prey assertion, bait guidance, current occurrence, geometry or public app row was added.
+
+**Next:** continue the Caraga freshwater evidence queue with a separate river or lake survey review. Keep diet studies species-specific and local where possible; do not make comparative sources look like Philippine records.
