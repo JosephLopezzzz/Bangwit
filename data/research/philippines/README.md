@@ -1058,3 +1058,7 @@ Anastacio and Brillo's 2020 article page states that it is licensed CC BY 4.0 an
 ## San Juan River CALAX EIS context -- 31 October 2026
 
 The official [CALAX Cavite-section EIS](https://eia.emb.gov.ph/wp-content/uploads/2018/03/EIS-CALAX-final.pdf) locates the project corridor in the San Juan River watershed and separately gives genus-level or broader fish context for rivers in the study area. The general fauna-method section mentions field techniques and informal interviews, but the report does not identify fish-specific sampling, collection dates, vouchers, or waterbody/station assignments. Its water-quality stations are not treated as fish stations. Linked only as historical watershed/study-area context; no species assertion, geometry, safety claim, or public-app row was added. See `calabarzon-san-juan-calax-multiriver-context-review-20261031.json`.
+
+## Maragondon River Estuary BMS/BAMS results search -- 31 October 2026
+
+The 2022 SCS SAP evaluation reports only that Ternate Marine Park biodiversity monitoring was planned at four BMS stations twice yearly and BAMS every three years. A bounded public web-index search did not locate completed fish-result reports tied to Maragondon River Estuary; no monitoring output or estuary fish record is inferred. Province-wide fisheries or broader Ternate habitat mentions are not transferred to the estuary. This retrieval gap is not evidence of fish absence. See `calabarzon-maragondon-estuary-fish-results-search-review-20261031.json`.

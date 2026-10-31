@@ -2515,3 +2515,12 @@ Reviewed the official [EMB-hosted CALAX Cavite-section EIS](https://eia.emb.gov.
 Added `calabarzon-san-juan-calax-multiriver-context-review-20261031.json` and one official EIS source record (430 total). Linked the source to San Juan River only as watershed/study-area context and changed the lead from `not-reviewed` to an explicitly unassigned, historical multi-river fish-context status. CALABARZON remains at 114 named leads and 105 distinct linked source references; 25 leads remain in the fish-evidence-not-reviewed list. No species assertion, current presence, water-quality/safety conclusion, geometry, diet, or public-app row was added; item-specific reuse terms remain unverified.
 
 **Next:** keep seeking an inspectable, fish-focused and station-resolved source for San Juan River, including the detailed survey cited by the JICA summary. Continue regional source screening in parallel; do not turn broad EIS wording into waterbody-level species records.
+
+
+### National rollout step 301 - Maragondon River Estuary BMS/BAMS results search — 31 October 2026
+
+Followed up the official 2022 SCS SAP evaluation, which says biodiversity monitoring at Ternate Marine Park was planned for four BMS stations twice yearly and BAMS every three years. It does not document that those visits occurred or provide dates, station coordinates, fish taxa, or results. A bounded public web-index search of DENR, CALABARZON, Cavite, and Ternate terms surfaced the same plan and broader coastal-habitat material, but no completed fish-results report attributable to Maragondon River Estuary. The official Cavite Ecological Profile 2024 provides provincial fisheries and coastal-habitat context, not a fish station-to-estuary crosswalk.
+
+Added `calabarzon-maragondon-estuary-fish-results-search-review-20261031.json` and linked it to the existing SCS SAP source record. This is a retrieval gap only, not evidence that monitoring did not occur or that fish are absent. CALABARZON remains at 114 named leads, 105 distinct source references, and zero validated geometry; 24 leads remain in the fish-evidence-not-reviewed list. No fish assertion, river-to-estuary transfer, geometry, salinity update, or public-app row was added.
+
+**Next:** seek completed BMS/BAMS reports through an official Ternate Marine Park/PAMO or Cavite PENRO channel. Request station-to-habitat linkage, survey dates, methods, taxon rank and identification support, and reuse terms. This remains an unsent research inquiry; no contact was made.
