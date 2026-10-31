@@ -3415,4 +3415,6 @@ The article reports spatial and seasonal differences in family-level larval and 
 
 Added national-calabarzon-taal-2021-ichthyoplankton-family-level-review-20261101.json and one source-registry entry; the registry now contains 543 unique references. CALABARZON remains incomplete at species level. Tests were not run.
 
+The Taal study and its review are now linked from the Taal waterbody entry and the CALABARZON coverage denominator profile. The profile still counts 118 waterbody research leads and now resolves 120 unique source references; this does not change regional completion status or add species evidence.
+
 **Next:** step 397 continues the L1 CALABARZON inland-water sweep with a primary source that identifies fish to species and links each name to a dated lake, river or reach. Keep this study as family-level historical ecological context only; do not infer species identities or current legal zones.
