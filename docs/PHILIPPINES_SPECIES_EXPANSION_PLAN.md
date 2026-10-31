@@ -2497,3 +2497,12 @@ The methods assign February 2010 to wet season and September to dry season, but 
 Updated the existing source record, Tayabas scope status and denominator provenance. CALABARZON remains at 114 named waterbody/habitat leads and 103 distinct source references; fish evidence remains incomplete. Palico-Lian assertions were not changed.
 
 **Next:** seek item-specific permission or independently reusable Quezon freshwater evidence; continue the CALABARZON inland, brackish and coastal sweep in parallel. Keep Tayabas study taxa, station placement, month-season association, and geometry unresolved pending rights and source-level crosswalks.
+
+
+### National rollout step 299 - Tikub/Ticub Lake name-variant crosswalk — 31 October 2026
+
+Reviewed the publisher page for Anastacio and Brillo (2020), “Potentials for Ecotourism Development at the Tikub Lake.” The page supplies the exact keyword wording “Tikub Lake (or Tikob, Ticob, Ticub Lake),” locates the lake in Tiaong, Quezon, cites the separate 2014 fish survey, and states CC BY 4.0. The article page, abstract, keywords, references and license were reviewed; its PDF and XML export were not retrieved.
+
+Added `Tikob` and `Ticob` as source-spelled aliases to the existing `Ticub Lake` research lead, registered the 2020 source and `calabarzon-tikub-lake-identity-review-20261031.json`, and refreshed denominator and Palico provenance. CALABARZON remains at 114 named waterbody/habitat leads; distinct linked source references increased from 103 to 104. This article adds identity context only. The separate 2014 fish survey remains a historical lead with nine species reported in its abstract; its full text is login/registration-gated and item-specific reuse terms remain unresolved. No species table data, taxonomy, current presence, water-quality/access assertion, geometry, public app row or publication approval was added.
+
+**Next:** continue source screening for the remaining CALABARZON freshwater, brackish and marine leads. Prioritize rights-cleared fish evidence and resolve the 2014 Tikub fish survey's access and reuse basis without treating its abstract as a complete or current checklist.
