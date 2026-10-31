@@ -3071,3 +3071,12 @@ The paper's Present Study column reports fish scales/fragments among *Channa str
 The article's methods say sampling ran November 1998-December 1999, but the gut-content tables say November 1998-October 1999. Lake spellings vary (Ticgon/Tigcon/Ticcon), and the reviewed tables do not provide a complete fish-by-lake sample crosswalk. Added `national-caraga-agusan-marsh-talde-2004-diet-source-review-20261031.json` and one source-registry entry; source count is 492. No species, diet, bait, occurrence, geometry or app row was added.
 
 **Next:** check the current accepted-name crosswalk for the paper's printed taxa while preserving the original 2004 names. Keep diet claims dated and lake-scoped; do not create app rows until taxonomy, provenance, and item-level reuse are resolved.
+
+
+### National rollout step 362 - Agusan Marsh diet-paper accepted-name crosswalk - 31 October 2026
+
+Cross-checked all 12 fish names in Table 1 of Talde et al. (2004) against the California Academy of Sciences' Eschmeyer's Catalog of Fishes (online version updated 13 August 2026). The Catalog recognizes the current combinations *Trichopodus pectoralis*, *Trichopodus trichopterus*, and *Barbodes binotatus* for three names printed under older genera; it also accepts the ending *Ophiocara porocephalum* for the paper's *O. porocephala*. The other eight binomials remain the same in this authority.
+
+This is a name-level crosswalk only. It does not re-identify the historical specimens, validate the paper's determinations, change the gut observations, establish present-day occurrence, resolve the paper's waterbody spellings, or clear rights for app display. Original source names remain preserved with each mapping. The count of 12 also corrects the first diet-review artifact's mistaken count of 11; that artifact now records the corrected Table 1 count. Added `national-caraga-agusan-marsh-talde-2004-taxonomy-crosswalk-20261031.json` and one authority registry entry; source count is 493. No species, occurrence, diet or public-app row was added.
+
+**Next:** continue Caraga freshwater research with an accessible primary source that links fish names to a specific inland waterbody or sampling station. Keep taxonomy, locality, natural diet, safety and reuse decisions as separate evidence checks.
