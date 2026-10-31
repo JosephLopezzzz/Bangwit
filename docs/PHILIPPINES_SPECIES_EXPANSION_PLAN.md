@@ -3290,4 +3290,15 @@ Current Catalog family placements move *Oxyeleotris lineolata* from the paper's 
 
 Added `national-mindanao-mandulog-fish-taxonomy-crosscheck-20261031.json` and one Catalog source entry, bringing the registry to 526 unique sources. No public species, occurrence, diet, safety, legal, or geometry row was added.
 
-**Next:** review the separate 2014 Mandulog goby-fishery paper and 2015 fish gut-content paper independently, prioritizing whether their methods support any natural diet facts. Keep historical sample counts, local reports, natural diet, and bait recommendations distinct; do not combine the possibly overlapping 2012/2013 survey datasets.
+**Follow-up:** the separate 2015 Mandulog gut-content paper review is recorded in step 386. Next, review the 2014 Mandulog goby-fishery paper for possible study overlap, sample provenance, and direct natural-diet evidence. Keep historical sample counts, local reports, natural diet, and bait recommendations distinct; do not combine the possibly overlapping 2012/2013 survey datasets.
+
+
+### National rollout step 386 - Mandulog 2015 fish gut-content and diet evidence review - 31 October 2026
+
+Reviewed the AENSI publisher issue listing and the public full-text author-content upload for De Guzman et al. The article describes fish collected by hired fishers at five Mandulog River system sites in May-June 2014, with 114 fish across 18 source taxon labels. Methods say digestive tracts were cut lengthwise and examined under a compound microscope with illustrations as references. The publisher-linked PDF returned HTTP 403; the full article text reviewed here came from the ResearchGate co-author upload, which prints © 2015 AENSI Publisher, all rights reserved.
+
+The article gives brief taxon-associated observations, including phytoplankton/algal material, insect and larval fragments, crustacean fragments, worms, zooplankton, and small fish. It explicitly reports small *Glossogobius celebius* in the gut contents of *Antennarius* sp. and *G. celebius*. Some taxa are genus-only. The study does not state stomach sample counts by taxon, a prey-identification key, or quantitative diet methods; the 114 figure is the catch total, not a verified gut denominator. Sand and detritus are recorded separately as non-prey material, while shell, scale, and spicule significance remains unclear. A dry/rainy-season comparison in the discussion is not supported by a clearly described seasonal design alongside the stated May-June one-month collection.
+
+Added `national-mindanao-mandulog-2014-gut-content-diet-review-20261031.json` and one research-only source-registry record, bringing the registry to 527 unique sources. The notes are historical and local, not fixed or nationwide species diets or bait advice. No species, occurrence, diet, safety, legal, geometry, or public-app row was added; item-specific republication permission was not verified.
+
+**Next:** review the separate 2014 Mandulog goby-fishery paper for possible study overlap, independent sample provenance, and direct diet method. Do not combine it with the 2015 gut-content paper or the possibly overlapping 2012/2013 goby survey without a documented crosswalk.
