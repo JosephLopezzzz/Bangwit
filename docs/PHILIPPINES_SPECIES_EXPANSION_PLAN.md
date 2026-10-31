@@ -3536,3 +3536,14 @@ Reviewed the official Cavite Ecological Profiles for 2018, 2021, and 2024, plus 
 The lead is genus-level, historical with no exact observation date, and lacks method, effort, vouchers, coordinates, and item-specific reuse terms. The 2024 profile separately says Maragondon municipal-water reef status was “For Assessment” in a 2022 table; no current reef condition or current fish presence is inferred. Added `calabarzon-patungan-munti-reef-fish-lead-review-20261101.json`. No species assertion, public app row, geometry, or scope source reference was added. The site remains a candidate coastal-reef feature, distinct from Maragondon River and Maragondon River Estuary; existing CALABARZON denominator counts remain unchanged and the regional baseline is incomplete.
 
 **Next:** locate the underlying PENRO/BFAR fish survey or an independently reviewable site-specific dataset, including the observation date, method, identification/vouchers, site crosswalk, and reuse terms. Only then decide whether to add a dedicated coastal-reef scope feature and any genus- or species-rank research assertions.
+
+
+### National rollout step 409 - BFAR CALABARZON 2020 fish-sanctuary RRA follow-up - 1 November 2026
+
+Reviewed the official BFAR CALABARZON Annual Report 2020. It says 11 fish-sanctuary sites received Rapid Resource Assessment assistance and Table 8 names Ternate / Senemento Reef and Maragondon / Patungan Reef among the monitored or assessed sites. A separate row lists monitoring of an artificial reef in Ternate but does not establish whether that was the same site or activity. The report has no taxa, site-level survey dates, methods, station coordinates, vouchers, or fish results.
+
+Cross-checks surfaced the historical Ternate Ordinance No. 04 S-2005 and Resolution No. 17 S-2005 for Bulaklakin Reef, plus a GEF SGP project excerpt saying that the reef had a rapid risk assessment in April 2005 and a BFAR survey in 2008. The SGP page was not directly accessible in this review; these are report-retrieval leads, not present-day ecological or legal claims. The 2023 Cavite profile map spells the Ternate label “Sementeno,” so the Senemento/Sementeno name crosswalk remains open. Maragondon Patungan Reef is not merged with Sitio Patungan Munti or the Maragondon River/Estuary.
+
+Added `calabarzon-bfar4a-2020-fish-sanctuary-rra-review-20261101.json` as a supplement to the existing 2020 report source record. No species assertion, scope reference, new waterbody, geometry, or public-app row was added; CALABARZON counts remain unchanged and incomplete.
+
+**Next:** seek the actual BFAR RRA tables and the 2005/2008 Bulaklakin Reef reports through a documented public source. Resolve the reef-name/station crosswalks and reuse terms before considering any taxon records or scope links.
