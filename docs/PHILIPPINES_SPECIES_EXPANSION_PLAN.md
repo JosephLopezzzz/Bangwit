@@ -2625,3 +2625,14 @@ Reviewed the official indexed text of the DENR-EMB CALABARZON [fourth-quarter 20
 Added `ph-wb-palanas-river-naic-cavite` as a separate Cavite research lead and registered the 2006 EMB bulletin and 1947 BFAR order as name-context sources. CALABARZON now has 118 selected leads (60 rivers) and 115 distinct linked source references. Neither route is delineated; fish evidence for the Naic lead remains unreviewed. No feature was merged, and no species assertion, current-presence/absence claim, legal/safety conclusion, geometry, salinity, or public-app row was added. See `calabarzon-palanas-name-crosswalk-review-20261031.json`.
 
 **Next:** obtain a modern official Cavite/LGU hydrography crosswalk for Palanas River (Naic), and a modern Lemery/Batangas crosswalk for the historical Palanas Creek versus the 1998 study feature. Keep those identity tasks separate from the rights-cleared species-list search.
+
+
+### National rollout step 312 - Palanas water-body layer availability and feature-probe review - 31 October 2026
+
+Reviewed the official [Geoportal Data Inventory](https://geoportal.gov.ph/gpresources/GP_DataInventory.pdf), which lists the Water Body 1:10,000 and 1:50,000 layers as uploaded, metadata available and Open under Memorandum Order No. 008, series of 2022, while marking downloads temporarily disabled for updating. The public GeoServer WMS GetCapabilities endpoint returned HTTP 200 and advertised both layers as queryable in EPSG:4683 and CRS:84. This confirms a catalog/service lead, not a local river trace.
+
+Bounded WMS GetFeatureInfo probes returned HTTP 200 but empty FeatureCollections for the secondary Tatlong Balon/Palanas point and a Taal control point. Since the control also returned no feature, this is an indeterminate identify result, not evidence that a waterbody is absent. The unauthenticated WFS capabilities endpoint returned HTTP 401; no sign-in or access bypass was attempted. A secondary map page calls Tatlong Balon River “Palanas River,” but it does not establish that this is the official 2006 EMB Palanas River (Naic) or the separate Pansipit/Balayan Bay study feature.
+
+Registered the Geoportal catalog/WMS and the secondary locator, updated the Palanas crosswalk and denominator hashes, and retained the Naic, Lemery, and 1998 study leads as separate. CALABARZON remains at 118 named waterbody research leads (60 rivers), 115 unique source references assigned to those leads, and 442 source-registry entries. No channel geometry, fish evidence, species assertion, presence/absence conclusion, current safety/legal claim, or public-app row was added.
+
+**Next:** seek authorized current feature-level Geoportal/NAMRIA or LGU hydrography metadata/data that identifies the Naic Palanas channel and Timalan connection; separately find a modern Lemery crosswalk for the historical Palanas Creek. Continue with fish-specific sources only when identity, station linkage and reuse are supportable.

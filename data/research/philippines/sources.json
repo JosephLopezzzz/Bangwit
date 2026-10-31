@@ -3,7 +3,7 @@
   "checkedOn": "2026-10-31",
   "status": "research-only-source-registry",
   "scope": "National acquisition references, freshwater spatial-source leads, and CALABARZON/Central Luzon identity/source leads. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 440,
+  "sourceCount": 442,
   "sources": [
     {
       "id": "carumbana-siaton-river-limnology-fishery-report-2006",
@@ -13780,6 +13780,77 @@
         "The indexed excerpt identifies Palanas River (Naic) as a Timalan tributary; it does not provide a channel route, coordinates, fish survey or station linkage.",
         "The bulletin is from 2006. Its water-classification discussion is not adopted as a current legal or safety status.",
         "Keep this Naic feature separate from the 1998 Pansipit/Balayan Bay study lead with the same generic name."
+      ]
+    },
+    {
+      "id": "geoportal-ph-waterbody-layer-catalog-20261031",
+      "title": "Geoportal Philippines Water Body 1:10,000 and 1:50,000 layer catalog and WMS",
+      "provider": "Geoportal Philippines / NAMRIA Geospatial Information Services Division",
+      "url": "https://geoportal.gov.ph/gpresources/GP_DataInventory.pdf",
+      "additionalUrls": [
+        "https://geoserver.geoportal.gov.ph/geoserver/wms?service=WMS&request=GetCapabilities",
+        "https://geoportal.gov.ph/"
+      ],
+      "role": "Official layer-availability and service-metadata source only. The data inventory lists Water Body 1:10,000 and 1:50,000 as uploaded with metadata and marks them Open under Memorandum Order No. 008, series of 2022, while noting downloads are temporarily disabled for updating. The live WMS capabilities expose both layer names, but this does not verify a Palanas feature, channel route, or usable geometry.",
+      "checkedOn": "2026-10-31",
+      "sourceYear": null,
+      "citation": "Geoportal Philippines. Data Inventory and public GeoServer WMS GetCapabilities, checked 2026-10-31.",
+      "access": {
+        "status": "official-inventory-and-live-public-WMS-capabilities-reviewed;layer-metadata-only;GetFeatureInfo-probes-indeterminate;WFS-capabilities-returned-401",
+        "reviewFiles": [
+          "calabarzon-palanas-name-crosswalk-review-20261031.json"
+        ],
+        "fullTextRetrieved": true,
+        "rawLocalSnapshot": null
+      },
+      "reuse": {
+        "metadata": "Layer names and access-status facts summarized with attribution.",
+        "raw": "No raster, vector, feature geometry, or bulk layer extract retained.",
+        "content": "The inventory snapshot marks the two water-body layers Open under NAMRIA Memorandum Order No. 008, series of 2022, but also states downloading is temporarily disabled for updating. No feature-level reuse or publication decision was made; confirm current layer terms and attribution before any later data use."
+      },
+      "publicationApproval": false,
+      "license": "The Geoportal inventory snapshot marks these layers Open under Memorandum Order No. 008, series of 2022; downloads are listed as temporarily disabled for updating. Current feature-level conditions were not independently verified.",
+      "licenseUrl": "https://geoportal.gov.ph/gpresources/GP_DataInventory.pdf",
+      "caveats": [
+        "The inventory is a catalog snapshot and does not identify Palanas River or prove a local route.",
+        "WMS GetCapabilities advertised geoportal:waterbody10k and geoportal:waterbody50k as queryable and advertised CRS EPSG:4683 and CRS:84; capability metadata is not a channel crosswalk.",
+        "WMS GetFeatureInfo returned empty FeatureCollections at the secondary-map candidate point and a Taal control point. Because the control also returned no feature, the probe is indeterminate and is not fish, waterbody, or geographic absence evidence.",
+        "The unauthenticated WFS GetCapabilities request returned HTTP 401; no sign-in or access bypass was attempted.",
+        "No geometry, coordinates, fish occurrence, present water quality, salinity, legal status, safety advice, or public-app row was added."
+      ]
+    },
+    {
+      "id": "mapcarta-tatlong-balon-palanas-secondary-locator",
+      "title": "Tatlong Balon River map page (secondary Palanas name/location lead)",
+      "provider": "Mapcarta; page credits OpenStreetMap, Mapbox and Maxar for map imagery",
+      "url": "https://mapcarta.com/15711160",
+      "additionalUrls": [
+        "https://www.openstreetmap.org/"
+      ],
+      "role": "Secondary locator consulted only to choose a WMS identify-probe point. The page labels Tatlong Balon River and lists Palanas River as an alternative name with approximate coordinates; this is not official hydrography and is not sufficient to identify the feature with EMB’s Palanas River (Naic).",
+      "checkedOn": "2026-10-31",
+      "sourceYear": null,
+      "citation": "Mapcarta. “Tatlong Balon River Map - Stream - Cavite, Calabarzon, Philippines.” Accessed 2026-10-31.",
+      "access": {
+        "status": "secondary-map-page-name-and-approximate-locator-reviewed;not-an-authoritative-hydrography-crosswalk",
+        "reviewFiles": [
+          "calabarzon-palanas-name-crosswalk-review-20261031.json"
+        ],
+        "fullTextRetrieved": true,
+        "rawLocalSnapshot": null
+      },
+      "reuse": {
+        "metadata": "Name/approximate point used only to define a bounded identify probe.",
+        "raw": "No map image, vector geometry, or feature data retained.",
+        "content": "No item-specific data reuse terms were assessed. Do not republish its geometry or treat this page as authoritative identity evidence."
+      },
+      "publicationApproval": false,
+      "license": null,
+      "licenseUrl": null,
+      "caveats": [
+        "The page is a secondary map aggregation, not a government/LGU source.",
+        "Its alternate-name claim and approximate coordinates do not establish identity with the officially indexed Palanas River (Naic) or with the 1998 Pansipit/Balayan Bay survey site.",
+        "Used only as an input point for a WMS FeatureInfo probe that returned no feature; no location assertion or geometry was adopted."
       ]
     }
   ],

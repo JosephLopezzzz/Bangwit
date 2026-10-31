@@ -13,7 +13,9 @@
   "sourceIds": [
     "pagulayan-1999-pansipit-palanas-fish-composition",
     "bfar-fao-12-1-1947-palanas-creek-lemery",
-    "emb-calabarzon-monitor-palanas-naic-2006"
+    "emb-calabarzon-monitor-palanas-naic-2006",
+    "geoportal-ph-waterbody-layer-catalog-20261031",
+    "mapcarta-tatlong-balon-palanas-secondary-locator"
   ],
   "question": "Do the similarly named Palanas water features in the 1998 fish-survey abstract, the historical Lemery fisheries order, and the Naic/Timalan monitoring bulletin refer to one physical watercourse?",
   "sourceFindings": [
@@ -34,6 +36,18 @@
       "sourceDate": 2006,
       "evidence": "The indexed text of the official DENR-EMB CALABARZON quarterly bulletin names Palanas River (Naic) among tributaries of Timalan River and places Timalan in Naic and Tanza, Cavite.",
       "limits": "Direct PDF retrieval returned HTTP 403; only the official indexed excerpt was reviewed. It supplies no Palanas channel geometry or fish survey. Its 2006 water-classification context is not adopted as a current legal classification."
+    },
+    {
+      "sourceId": "geoportal-ph-waterbody-layer-catalog-20261031",
+      "sourceDate": null,
+      "evidence": "The official Geoportal Data Inventory lists Water Body 1:10,000 and Water Body 1:50,000 as uploaded with metadata and Open under Memorandum Order No. 008, series of 2022; the inventory also says downloads are temporarily disabled for updating. On 2026-10-31 the public GeoServer WMS GetCapabilities endpoint returned HTTP 200 and advertised geoportal:waterbody10k and geoportal:waterbody50k as queryable, with CRS EPSG:4683 and CRS:84 and extents covering Cavite.",
+      "limits": "This is catalog/service availability evidence, not proof of a Palanas River feature or route. FeatureInfo probes returned empty collections at a secondary locator and a Taal control, so the identification result is indeterminate. The unauthenticated WFS capabilities endpoint returned HTTP 401. No vector features or geometry were retrieved or retained."
+    },
+    {
+      "sourceId": "mapcarta-tatlong-balon-palanas-secondary-locator",
+      "sourceDate": null,
+      "evidence": "The secondary page lists Tatlong Balon River and “Palanas River” as an alternative name and gives an approximate point at 14.35 N, 120.78333 E; that point was used only for a Geoportal WMS FeatureInfo probe.",
+      "limits": "The page is not an official source and does not establish that this feature is the same as the 2006 EMB Palanas River (Naic), the 1998 Pansipit/Balayan Bay study feature, or the historical Lemery Palanas Creek. The WMS probe returned no feature; no geometry or identity was adopted."
     }
   ],
   "identityAssessment": {
@@ -62,12 +76,75 @@
     "currentPresenceOrAbsenceInferred": false,
     "legalOrSafetyClaimAdded": false,
     "publicAppRowsAdded": 0,
-    "publicationApproval": false
+    "publicationApproval": false,
+    "geoportalCatalogReviewed": true,
+    "liveWmsCapabilitiesReviewed": true,
+    "palanasFeatureIdentityVerifiedByGeoportal": false
   },
   "nextActions": [
-    "Seek a modern official Cavite/LGU hydrography or watershed source that maps Palanas River (Naic) into Timalan River and verifies its channel identity; do not infer geometry from a tributary list.",
+    "Seek current official Geoportal/NAMRIA or LGU feature-level metadata/data that identifies the Palanas River (Naic) channel and its Timalan connection. The catalog marks 1:10,000/1:50,000 water-body layers Open but downloads temporarily disabled; live WMS feature-info did not resolve a feature, so neither the catalog nor empty point probes can substitute for an official crosswalk.",
     "Seek an official Lemery/Batangas river or cadastral crosswalk to determine whether the 1947 Palanas Creek and 1998 study Palanas River are related; preserve the historical source-era wording and do not rely on the order for current fishing rules.",
     "For the 1998 Palanas fish aggregate, locate an independently licensed, site-resolved species source or written reuse permission before transcribing taxa."
   ],
-  "status": "official-name-crosswalk-review;Naic-and-Pansipit-study-leads-kept-distinct;historical-Lemery-creek-relationship-unresolved;no-fish-assertion-or-geometry"
+  "status": "official-waterbody-layer-catalog-and-live-WMS-reviewed;Palanas-feature-identity-and-route-unresolved;no-geometry-or-fish-assertion",
+  "geoportalLayerAssessment": {
+    "checkedOn": "2026-10-31",
+    "inventory": {
+      "url": "https://geoportal.gov.ph/gpresources/GP_DataInventory.pdf",
+      "catalogStatus": "Both Water Body 1:10,000 and Water Body 1:50,000 are listed as Uploaded with metadata Yes and restriction Open under Memorandum Order No. 008, series of 2022; downloads are marked temporarily disabled for updating.",
+      "interpretation": "Catalog snapshot only; does not identify the Palanas feature or guarantee that the live vector is currently downloadable."
+    },
+    "liveWms": {
+      "capabilitiesUrl": "https://geoserver.geoportal.gov.ph/geoserver/wms?service=WMS&request=GetCapabilities",
+      "response": "HTTP 200",
+      "layers": [
+        {
+          "name": "geoportal:waterbody10k",
+          "title": "Water Body 1:10,000",
+          "queryable": true,
+          "crs": [
+            "EPSG:4683",
+            "CRS:84"
+          ]
+        },
+        {
+          "name": "geoportal:waterbody50k",
+          "title": "Water Body 1:50,000",
+          "queryable": true,
+          "crs": [
+            "EPSG:4683",
+            "CRS:84"
+          ]
+        }
+      ],
+      "featureInfoProbes": [
+        {
+          "layer": "geoportal:waterbody10k",
+          "pointPurpose": "secondary Mapcarta Tatlong Balon/Palanas locator, approximate 14.35 N, 120.78333 E",
+          "httpStatus": 200,
+          "numberReturned": 0,
+          "interpretation": "Indeterminate; not absence evidence."
+        },
+        {
+          "layer": "geoportal:waterbody50k",
+          "pointPurpose": "secondary Mapcarta Tatlong Balon/Palanas locator, approximate 14.35 N, 120.78333 E",
+          "httpStatus": 200,
+          "numberReturned": 0,
+          "interpretation": "Indeterminate; not absence evidence."
+        },
+        {
+          "layer": "geoportal:waterbody50k",
+          "pointPurpose": "Taal Lake control point, approximate 14.0 N, 121.0 E",
+          "httpStatus": 200,
+          "numberReturned": 0,
+          "interpretation": "The empty control means this identify probe did not validate feature identification; no absence conclusion."
+        }
+      ],
+      "unauthenticatedWfsCapabilities": {
+        "httpStatus": 401,
+        "interpretation": "No authenticated access or bypass attempted; no WFS feature data acquired."
+      }
+    },
+    "disposition": "Potential official display/reference layer; not a verified Palanas route or adopted geometry. Obtain current metadata or an authorized feature/data path and independently crosswalk the named river before use."
+  }
 }
