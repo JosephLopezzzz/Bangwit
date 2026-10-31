@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "checkedOn": "2026-10-30",
+  "checkedOn": "2026-10-31",
   "regionId": "0400000000",
   "regionName": "Region IV-A (CALABARZON)",
   "status": "in-progress-incomplete-baseline",
@@ -72,7 +72,7 @@
     "limits": "Province plus separate-city starter coverage. Municipalities/component cities and each island/waterbody still require the source-sweep inventory; this is not a completed regional inventory."
   },
   "counts": {
-    "waterbodyResearchLeads": 113,
+    "waterbodyResearchLeads": 114,
     "provincesWithLeads": 5,
     "separateCityCoverageUnits": 1,
     "byKind": {
@@ -82,7 +82,7 @@
       "wetland": 8,
       "reservoir": 5,
       "lake": 18,
-      "stream": 7,
+      "stream": 8,
       "gulf": 1,
       "fishpond": 1,
       "spring": 7
@@ -2130,29 +2130,66 @@
       "kind": "river",
       "salinity": {
         "classification": "unknown",
-        "reviewStatus": "not-assessed",
-        "sourceRefs": []
+        "reviewStatus": "EIA-describes-upstream-freshwater-and-downstream-estuarine-conditions;whole-river-salinity-unknown",
+        "sourceRefs": [
+          "aiib-2023-bcib-final-eia"
+        ]
       },
       "administrativeAssociations": [
         {
           "regionId": "0400000000",
           "relationship": "source-described-locality",
           "sourceRefs": [
-            "denr-bmb-inland-wetlands-atlas-2016"
+            "denr-bmb-inland-wetlands-atlas-2016",
+            "aiib-2023-bcib-final-eia"
           ],
           "provinceId": "0402100000"
         }
       ],
       "sourceRefs": [
         "denr-bmb-inland-wetlands-atlas-2016",
-        "gbif-occurrence-downloads"
+        "gbif-occurrence-downloads",
+        "aiib-2023-bcib-final-eia"
       ],
       "identityStatus": "source-named-research-lead",
       "boundaryStatus": "not-delineated",
-      "fishEvidenceStatus": "bounded-COLXR-Actinopterygii-waterBody-and-locality-text-screen-zero; no-fish-absence-inferred",
-      "reviewStatus": "bounded-COLXR-Actinopterygii-waterBody-and-locality-text-screen-zero-no-absence-inferred",
+      "fishEvidenceStatus": "2021-2022-EIA-main-stem-reports-or-observes-3-binomial-taxa-and-2-family-level-groups;6-ecology-stations-without-fish-taxon-allocation;west-branch-one-site-no-fish-observed;no-current-presence-or-absence-inferred",
+      "reviewStatus": "official-EIA-main-stem-and-west-branch-review;fish-names-source-reported-or-observed;field-identification-and-station-allocation-unverified;reach-geometry-pending",
       "publicAdmission": false,
-      "scopeNote": "Historical DENR-BMB 2016 Atlas Annex 2b names this river and reports locality context: Tanza; Naic; source spelling: Trece Martirez City. This is not channel geometry, a complete reach or fish evidence. Any printed asterisk is unexplained by the reviewed pages and is preserved without interpretation. A bounded GBIF COL XR Actinopterygii exact-name screen searched waterBody and locality in PH and returned zero for both fields; this is not fish-absence evidence."
+      "scopeNote": "The DENR-BMB 2016 Atlas Annex 2b names the river and gives locality context: Tanza; Naic; source spelling: Trece Martirez City. The 2023 AIIB-hosted EIA reports a 2021-2022 stream-ecology assessment with six main-stem stations and one unnamed west-branch station. Its main-stem summary lists three binomial fish names and two family-level groups as reported or observed, but gives no fish-name-by-station allocation, fish-specific date, identification protocol, or voucher. The west-branch summary says no fish or fishing was documented at or near its one selected location; this is not evidence of absence from the branch or main stem. The EIA describes upstream freshwater and downstream estuarine conditions, so no whole-river salinity class is assigned. No channel geometry, current safety status, occurrence record, or public species row is adopted. A bounded GBIF COL XR Actinopterygii exact-name screen returned zero for the indexed waterBody/locality fields; that is not fish-absence evidence."
+    },
+    {
+      "id": "ph-wb-timbugan-creek",
+      "name": "Timbugan Creek",
+      "aliases": [],
+      "kind": "stream",
+      "salinity": {
+        "classification": "unknown",
+        "reviewStatus": "EIA-describes-mostly-estuarine-conditions;single-survey-location;whole-creek-class-not-adopted",
+        "sourceRefs": [
+          "aiib-2023-bcib-final-eia"
+        ]
+      },
+      "administrativeAssociations": [
+        {
+          "regionId": "0400000000",
+          "relationship": "source-described-locality",
+          "sourceRefs": [
+            "aiib-2023-bcib-final-eia"
+          ],
+          "provinceId": "0402100000",
+          "locality": "Naic, Cavite; lower segment in the BCIB study area; full channel extent unresolved"
+        }
+      ],
+      "sourceRefs": [
+        "aiib-2023-bcib-final-eia"
+      ],
+      "identityStatus": "official-source-named-research-lead",
+      "boundaryStatus": "not-delineated",
+      "fishEvidenceStatus": "2021-2022-EIA-one-lower-segment-station-no-fish-or-fishing-observed-or-reported;upstream-not-surveyed;no-fish-absence-inferred",
+      "reviewStatus": "official-EIA-single-segment-nonobservation-reviewed;upstream-fish-evidence-and-geometry-pending",
+      "publicAdmission": false,
+      "scopeNote": "The official 2023 BCIB EIA names Timbugan Creek in Naic, Cavite and describes the creek as mostly estuarine. One lower segment was included in the 2021-2022 stream ecology assessment; the report says no fish or fishing was observed or reported there, and explicitly says upstream segments were not surveyed. This bounded non-observation is not evidence that fish are absent from the creek. A source-era dissolved-oxygen value of 1.2 mg/L is not a current safety or fishing advisory. No channel geometry, current salinity classification, fish occurrence, or public app row is adopted."
     },
     {
       "id": "ph-wb-imus-river",
@@ -3395,10 +3432,10 @@
       ],
       "identityStatus": "source-named-research-lead;channel-name-variant-crosswalk-pending",
       "boundaryStatus": "not-delineated",
-      "fishEvidenceStatus": "EIA-reported-subsistence-fishery-O.niloticus-and-M.cephalus;two-COLXR-exact-accepted-name-matches;date-station-method-identification-unverified;GBIF-text-screen-zero;no-absence-inferred",
-      "reviewStatus": "official-EIA-fishery-lead-reviewed;two-COLXR-exact-name-matches;field-date-site-method-geometry-salinity-pending",
+      "fishEvidenceStatus": "2021-2022-EIA-reports-subsistence-fishery-O.niloticus-and-M.cephalus;one-river-ecology-station-but-fish-labels-not-assigned-to-it;fish-date-identification-and-voucher-unresolved;research-only",
+      "reviewStatus": "official-full-text-EIA-fishery-context-reviewed;two-prior-COLXR-name-matches;fish-station-date-and-method-unresolved;no-occurrence-or-public-row",
       "publicAdmission": false,
-      "scopeNote": "Cavite Ecological Profile 2024 reports a 30.5 km Labac River with narrative routes involving tributaries/localities in Indang, Mendez and Naic and drainage to Manila Bay. Another table uses “Labac/Labac-Balsahan River”; the slash form is preserved as unresolved name context, not adopted as an alias. Course text is not channel geometry and does not establish salinity, access, safety or current rules. The official 2023 AIIB final EIA indexed excerpt reports subsistence fishing of Oreochromis niloticus and Mugil cephalus under the Labac River heading, without a catch date, station, reach, method or voucher. This is a research lead only; 18 bounded GBIF text searches returned zero, which is not fish-absence evidence. No species assertion, salinity class, geometry or public projection was added. The two EIA scientific-name labels have exact accepted-name matches in a request explicitly keyed to the COL XR checklist; this verifies nomenclature only, not the fish identities reported by the EIA. No observation date, station, method or vouchers are supplied, so no occurrence assertion is added."
+      "scopeNote": "Cavite Ecological Profile 2024 reports a 30.5 km Labac River with narrative routes through Indang, Mendez and Naic and drainage to Manila Bay. Another table uses “Labac/Labac-Balsahan River”; the slash form remains unresolved name context, not an adopted alias. The 2023 AIIB EIA says its stream ecology assessment included one Labac River station and reports Oreochromis niloticus and Mugil cephalus as subsistence-fished in the river, but does not link either fish label to that station or give a fish date, exact reach, field-identification method, or voucher. This is historical fishery context, not a dated occurrence or complete inventory. The EIA describes lower-river modified habitat and mangrove patches; it supplies no channel geometry or current safety/legal advice. Prior exact CoL XR name matches verify nomenclature only, not the local identifications. Bounded GBIF text screens returned zero; this is not fish-absence evidence."
     },
     {
       "id": "ph-wb-maalimango-river-cavite",
