@@ -2595,3 +2595,15 @@ Followed up the CvSU catalog record through the official Theses Xplorer service 
 Added the query scope and access outcome to `calabarzon-timalan-2018-fish-thesis-abstract-review-20261031.json` and refreshed its denominator-profile hash. No sign-in, thesis request, species assertion, or publication decision was made. The abstract remains historical multi-river aggregate evidence only.
 
 **Next:** continue with the next independently reviewable CALABARZON fish source; retain the CvSU results tables and station crosswalk as an unresolved retrieval task rather than repeating the same public search route.
+
+### National rollout step 309 - Pansipit River historical assemblage source review - 31 October 2026
+
+Reviewed the official UKDR metadata page, official UPLB JESAM article text, and the UKDR/JESAM rights policy for Corpuz, Paller and Ocampo (2016). The paper describes a 2011 fish-assemblage survey of the Lake Taal inlet rivers (Looc and Magapi) and outlet (Pansipit); the abstract reports 37 species pooled across the three rivers, including richness of 36 in Pansipit and 21 in each inlet. This is a historical study result, not current presence or a present-day complete checklist.
+
+The methods describe 12 stations across three rivers, three runs per station and 48 samples described as 24 sampling sites across two seasons. The methods sentence reverses the abstract's January/dry and July/wet labels, and the stated station/run/sample denominator is unclear. The abstract and results text also differ on total individuals (3,342 versus 3,346). These conflicts are retained; no seasonal or individual-total result is adopted. The paper says some vouchers were deposited at UPLB Museum of Natural History but the reviewed passage provides no catalog identifiers.
+
+UKDR/JESAM policy states that article copyright is assigned to UKDR and use beyond the listed personal-use exceptions requires a written agreement and attribution. No item-specific open license or Bangwit permission was verified. The species-by-site and feeding-habit table remains untranscribed pending rights review.
+
+Added `corpuz-2016-taal-river-fish-assemblage` and `calabarzon-pansipit-2011-fish-assemblage-review-20261031.json`; linked the source only to `ph-wb-pansipit-river`, refreshed the denominator profile and hashes. The separate Pansipit River Estuary record remains unchanged because no station-to-estuary crosswalk was found. CALABARZON remains at 116 named waterbody/habitat leads, 58 rivers, and 112 unique linked source references. No species or diet assertion, current-presence or absence claim, geometry, salinity, or public-app row was added.
+
+**Next:** seek written reuse permission or an independently licensed, station-resolved source before transcribing species-by-site or feeding-habit results. Resolve the paper's season/sample wording and verify taxon identifications and any voucher catalog numbers; keep river observations separate from the estuary and do not infer current conditions.
