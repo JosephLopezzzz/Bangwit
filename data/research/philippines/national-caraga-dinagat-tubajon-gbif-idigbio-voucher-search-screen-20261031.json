@@ -1,0 +1,193 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-31",
+  "phaseId": "M2",
+  "regionIds": ["1600000000"],
+  "regionName": "Region XIII (Caraga)",
+  "status": "bounded-occurrence-api-cross-check;taxon-key-verified;no-exact-dinagat-records-returned;caraga-results-are-material-citations;not-an-absence-proof;research-only",
+  "question": "Do public GBIF or iDigBio occurrence searches independently expose a Tubajon/Dinagat Islands occurrence or specimen voucher for the Tubajon thesis abstract's Puntius binotatus lead?",
+  "sourceId": "gbif-idigbio-dinagat-tubajon-puntius-voucher-screen",
+  "searchSnapshot": {
+    "reviewedOn": "2026-10-31",
+    "scope": "One named taxon reported by the Tubajon thesis abstract; exact province and stateProvince filters; searches are reproducible snapshots, not evidence that records do not exist outside these databases or indexed fields.",
+    "gbifTaxonomy": {
+      "nameAsPrintedInThesis": "Puntius binotatus",
+      "matchKey": 2363839,
+      "matchStatus": "SYNONYM",
+      "acceptedKey": 2363847,
+      "acceptedName": "Barbodes binotatus (Valenciennes, 1842)",
+      "interpretation": "Used the GBIF Backbone accepted taxon key for occurrence searches; retained the thesis spelling as the source-reported name. This taxonomy crosswalk does not re-identify a thesis specimen."
+    },
+    "gbifQueries": [
+      {
+        "url": "https://api.gbif.org/v1/occurrence/search?country=PH&stateProvince=Dinagat%20Islands&taxonKey=2363847&limit=50",
+        "filters": {
+          "country": "PH",
+          "stateProvince": "Dinagat Islands",
+          "taxonKey": 2363847,
+          "limit": 50
+        },
+        "resultCount": 0,
+        "interpretation": "No indexed occurrence matched the accepted GBIF taxon and exact stateProvince filter in this snapshot. Not an absence proof; records can be missing, un-georeferenced, labeled differently, or not indexed under this province string."
+      },
+      {
+        "url": "https://api.gbif.org/v1/occurrence/search?country=PH&taxonKey=2363847&limit=0&facet=stateProvince&facetLimit=100",
+        "filters": {
+          "country": "PH",
+          "taxonKey": 2363847,
+          "limit": 0,
+          "facet": "stateProvince",
+          "facetLimit": 100
+        },
+        "resultCount": 146,
+        "relevantFacet": {
+          "field": "STATE_PROVINCE",
+          "name": "Caraga",
+          "count": 4
+        },
+        "interpretation": "The snapshot returned 146 Philippine records for the accepted taxon, with four records in the Caraga facet. The province facet did not identify Dinagat Islands as a separate value. The four Caraga results were inspected individually below."
+      },
+      {
+        "url": "https://api.gbif.org/v1/occurrence/search?country=PH&stateProvince=Caraga&taxonKey=2363847&limit=100",
+        "filters": {
+          "country": "PH",
+          "stateProvince": "Caraga",
+          "taxonKey": 2363847,
+          "limit": 100
+        },
+        "resultCount": 4,
+        "basisOfRecordForAllReturnedRecords": "MATERIAL_CITATION",
+        "interpretation": "These are citation records, not directly cataloged fish specimens in the returned occurrence rows. The rows have no institution, collection, or catalog number. Their locality strings do not name Tubajon or Dinagat Islands."
+      }
+    ],
+    "gbifCaragaCitationRows": [
+      {
+        "gbifOccurrenceKey": 4523549235,
+        "basisOfRecord": "MATERIAL_CITATION",
+        "eventDate": "2018",
+        "county": "Surigao del Sur",
+        "municipality": "Tandag City",
+        "locality": "Ihawan Spring Community Watershed",
+        "datasetKey": "ddd46c4c-1c7a-49d6-8420-0c8b34a94a53",
+        "institutionCode": null,
+        "collectionCode": null,
+        "catalogNumber": null
+      },
+      {
+        "gbifOccurrenceKey": 4523542698,
+        "basisOfRecord": "MATERIAL_CITATION",
+        "eventDate": "2007/2008",
+        "county": "Surigao del Norte/Agusan del Sur",
+        "municipality": "Mainit/Alegria/Kitcharao/Jabonga",
+        "locality": "Lake Mainit",
+        "datasetKey": "ddd46c4c-1c7a-49d6-8420-0c8b34a94a53",
+        "institutionCode": null,
+        "collectionCode": null,
+        "catalogNumber": null,
+        "note": "Lake Mainit is already covered in the prior Caraga research review; this GBIF row is a cross-reference, not a new site-level fish assertion."
+      },
+      {
+        "gbifOccurrenceKey": 4523545443,
+        "basisOfRecord": "MATERIAL_CITATION",
+        "eventDate": "2016/2017",
+        "county": "Surigao del Sur",
+        "municipality": "Lanuza",
+        "locality": "Daniog river",
+        "datasetKey": "ddd46c4c-1c7a-49d6-8420-0c8b34a94a53",
+        "institutionCode": null,
+        "collectionCode": null,
+        "catalogNumber": null
+      },
+      {
+        "gbifOccurrenceKey": 4523547263,
+        "basisOfRecord": "MATERIAL_CITATION",
+        "eventDate": "2014/2015",
+        "county": "Agusan del Sur",
+        "municipality": null,
+        "locality": "Agusan Marsh Wildlife Sanctuary",
+        "datasetKey": "ddd46c4c-1c7a-49d6-8420-0c8b34a94a53",
+        "institutionCode": null,
+        "collectionCode": null,
+        "catalogNumber": null
+      }
+    ],
+    "idigbioQueries": [
+      {
+        "url": "https://search.idigbio.org/v2/search/records/?rq=%7B%22scientificname%22%3A%22Puntius%20binotatus%22%2C%22country%22%3A%22Philippines%22%2C%22stateprovince%22%3A%22Dinagat%20Islands%22%7D&limit=100",
+        "exactRecordFields": {
+          "scientificname": "Puntius binotatus",
+          "country": "Philippines",
+          "stateprovince": "Dinagat Islands"
+        },
+        "recordFieldCombination": "AND",
+        "resultCount": 0
+      },
+      {
+        "url": "https://search.idigbio.org/v2/search/records/?rq=%7B%22scientificname%22%3A%22Barbodes%20binotatus%22%2C%22country%22%3A%22Philippines%22%2C%22stateprovince%22%3A%22Dinagat%20Islands%22%7D&limit=100",
+        "exactRecordFields": {
+          "scientificname": "Barbodes binotatus",
+          "country": "Philippines",
+          "stateprovince": "Dinagat Islands"
+        },
+        "recordFieldCombination": "AND",
+        "resultCount": 0
+      }
+    ],
+    "idigbioCoverageCaveat": "The iDigBio portal states that its data stopped updating on 2026-05-08. The search is therefore a bounded cross-check of that index snapshot, not a current exhaustive inventory.",
+    "queryQuality": "An initial broad class-term exploration was excluded after returned rows included non-fish taxa. Final GBIF counts use the accepted species key, and only those taxon-key-filtered results are summarized here."
+  },
+  "interpretation": {
+    "safeSummary": "The public occurrence indexes reviewed on 2026-10-31 did not return a taxon-key-matched GBIF record or an exact-field iDigBio record for Barbodes/Puntius binotatus in Dinagat Islands. GBIF did return four Caraga-level records, but all were MATERIAL_CITATION rows without institution, collection, or catalog numbers; their listed localities were elsewhere in Caraga. These results do not independently verify the Tubajon abstract's fish occurrence or provide a voucher for it.",
+    "materialCitationBoundary": "GBIF defines Material Citation as a reference to or citation of specimen material in scholarly publications or field notes. It is not equivalent to an occurrence row documenting an accessible, cataloged fish voucher. Publisher data can have classification nuances, so verify the cited primary source before using any specific occurrence assertion.",
+    "notSupported": [
+      "That Barbodes binotatus is absent from Dinagat Islands or Tubajon.",
+      "That the thesis abstract's reported Tubajon occurrence is disproven.",
+      "A complete list of the eight fish named in the thesis abstract or catchment-specific taxon assignments.",
+      "A verified Tubajon specimen, catalog number, station coordinate, catchment geometry or current local presence.",
+      "Current abundance, diet, bait suitability, water quality, fish safety, legal catchability or fishing restrictions.",
+      "App publication rights for source literature or source occurrence data."
+    ]
+  },
+  "disposition": {
+    "speciesAssertionsAdded": 0,
+    "voucherAssertionsAdded": 0,
+    "catchmentSpeciesAssertionsAdded": 0,
+    "geometryRowsAdded": 0,
+    "dietRowsAdded": 0,
+    "safetyOrLegalRowsAdded": 0,
+    "publicAppRowsAdded": 0,
+    "publicationApproval": false,
+    "reason": "GBIF exact-province search returned zero accepted-taxon hits and its four broader Caraga records were literature citations without voucher metadata or Tubajon localities. iDigBio exact-field searches returned zero and its indexed data are not current. These negative search results are not absence evidence."
+  },
+  "references": [
+    {
+      "url": "https://thesis.msugensan.edu.ph/node/1060",
+      "supports": "The source-reported Puntius binotatus lead that motivated this bounded voucher search."
+    },
+    {
+      "url": "https://api.gbif.org/v1/species/match?name=Puntius%20binotatus&strict=true",
+      "supports": "GBIF Backbone name match; the queried name resolves as a synonym."
+    },
+    {
+      "url": "https://api.gbif.org/v1/species/2363839/related",
+      "supports": "GBIF Backbone related-name response showing accepted taxon key 2363847 and accepted name Barbodes binotatus (Valenciennes, 1842)."
+    },
+    {
+      "url": "https://techdocs.gbif.org/en/openapi/v1/occurrence",
+      "supports": "GBIF occurrence API search and paging interface."
+    },
+    {
+      "url": "https://docs.gbif.org/course-data-use/en/basis-of-record.html",
+      "supports": "GBIF definition and caveats for Material Citation versus specimen/observation records."
+    },
+    {
+      "url": "https://github.com/iDigBio/idigbio-search-api/wiki/Query-Format",
+      "supports": "iDigBio query structure; multiple query fields are combined with AND."
+    },
+    {
+      "url": "https://portal.idigbio.org/portal/search",
+      "supports": "The iDigBio portal notice that data stopped updating on 2026-05-08."
+    }
+  ],
+  "nextAction": "Continue the Caraga sweep with a distinct, directly accessible freshwater fish survey or primary voucher-backed study from a named waterbody; do not present these occurrence API search results as proof of local absence."
+}

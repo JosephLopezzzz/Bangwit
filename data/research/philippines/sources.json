@@ -3,7 +3,7 @@
   "checkedOn": "2026-10-31",
   "status": "research-only-source-registry",
   "scope": "National acquisition references, freshwater spatial-source leads, and CALABARZON/Central Luzon identity/source leads. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 497,
+  "sourceCount": 498,
   "sources": [
     {
       "id": "carumbana-siaton-river-limnology-fishery-report-2006",
@@ -15799,6 +15799,52 @@
         "No current occurrence, abundance, natural diet, bait, legal fishing rule, geometry or public-app row is inferred."
       ],
       "researchStatus": "caraga;dinagat-islands;tubajon;freshwater-thesis;abstract-only;puntius-binotatus-lead;catchment-crosswalk-missing;water-quality-index-limits;rights-unverified;research-only"
+    },
+    {
+      "id": "gbif-idigbio-dinagat-tubajon-puntius-voucher-screen",
+      "title": "GBIF and iDigBio occurrence cross-check for the Tubajon Puntius binotatus thesis lead",
+      "provider": "GBIF and iDigBio occurrence search APIs",
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&stateProvince=Dinagat%20Islands&taxonKey=2363847&limit=50",
+      "additionalUrls": [
+        "https://api.gbif.org/v1/occurrence/search?country=PH&taxonKey=2363847&limit=0&facet=stateProvince&facetLimit=100",
+        "https://api.gbif.org/v1/occurrence/search?country=PH&stateProvince=Caraga&taxonKey=2363847&limit=100",
+        "https://search.idigbio.org/v2/search/records/?rq=%7B%22scientificname%22%3A%22Puntius%20binotatus%22%2C%22country%22%3A%22Philippines%22%2C%22stateprovince%22%3A%22Dinagat%20Islands%22%7D&limit=100",
+        "https://search.idigbio.org/v2/search/records/?rq=%7B%22scientificname%22%3A%22Barbodes%20binotatus%22%2C%22country%22%3A%22Philippines%22%2C%22stateprovince%22%3A%22Dinagat%20Islands%22%7D&limit=100",
+        "https://api.gbif.org/v1/species/match?name=Puntius%20binotatus&strict=true",
+        "https://api.gbif.org/v1/species/2363839/related",
+        "https://techdocs.gbif.org/en/openapi/v1/occurrence",
+        "https://docs.gbif.org/course-data-use/en/basis-of-record.html",
+        "https://github.com/iDigBio/idigbio-search-api/wiki/Query-Format",
+        "https://portal.idigbio.org/portal/search"
+      ],
+      "role": "Research-only, bounded exact-taxon occurrence search prompted by the public Tubajon thesis abstract. GBIF Backbone maps the thesis name Puntius binotatus (key 2363839, synonym) to accepted Barbodes binotatus (key 2363847). The accepted-taxon GBIF query returns 0 for stateProvince Dinagat Islands; the Philippine query returns 146 records and four in the broad Caraga facet. All four Caraga rows are MATERIAL_CITATION records with no institution, collection or catalog number, and none names Tubajon. Exact-field iDigBio queries for both names and Dinagat Islands return 0. This bounded index result is not proof of absence, does not verify the thesis lead with a voucher, and admits no app assertion.",
+      "checkedOn": "2026-10-31",
+      "sourceYear": null,
+      "citation": "GBIF occurrence and taxonomy APIs; iDigBio Search API. Queries recorded in national-caraga-dinagat-tubajon-gbif-idigbio-voucher-search-screen-20261031.json.",
+      "access": {
+        "status": "public-read-api-search;accepted-taxonomy-key-used;exact-locality-filter-returned-no-matches;broader-regional-records-are-citations;research-only",
+        "reviewFiles": [
+          "national-caraga-dinagat-tubajon-gbif-idigbio-voucher-search-screen-20261031.json"
+        ],
+        "fullTextRetrieved": false
+      },
+      "reuse": {
+        "metadata": "This is a query/screen artifact; no occurrence raw archive or publication-ready dataset was imported.",
+        "raw": "Only concise query parameters, counts and occurrence identifiers are retained. iDigBio's portal reports that its data stopped updating on 2026-05-08.",
+        "content": "Do not interpret search non-matches as absence or publish source records as verified local species occurrences without item-level record and rights review."
+      },
+      "publicationApproval": false,
+      "license": null,
+      "licenseUrl": null,
+      "caveats": [
+        "GBIF's exact Dinagat Islands stateProvince query returned no accepted-taxon matches in the snapshot; unindexed, georeferencing, alternative-locality or administrative-name variation remains possible.",
+        "The four broader GBIF Caraga responses are MATERIAL_CITATION records; the basis-of-record category is a citation reference, and none includes catalog metadata in the returned rows.",
+        "The Lake Mainit Caraga citation duplicates an already screened site and adds no new site-level fish assertion.",
+        "An exploratory broad class-term response was discarded after it included taxonomically non-matching plant records; final GBIF summaries use the accepted taxon key.",
+        "The iDigBio service is a static historical cross-check because its portal reports no updates after 2026-05-08.",
+        "No species presence/absence, abundance, voucher identity, diet, safety, legal catchability, geometry or app row is established."
+      ],
+      "researchStatus": "caraga;dinagat-islands;tubajon;gbif;idigbio;accepted-taxon-key;material-citation-only;no-exact-indexed-match;not-absence-proof;research-only"
     }
   ],
   "sourcePolicy": {
