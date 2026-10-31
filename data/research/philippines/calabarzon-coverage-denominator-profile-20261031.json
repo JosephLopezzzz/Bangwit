@@ -6,9 +6,9 @@
   "purpose": "Reconcile the current CALABARZON scope denominator and visible evidence gaps; this is not a completeness claim or biological evidence.",
   "provenance": {
     "scopeFile": "calabarzon-scope.json",
-    "scopeSha256": "78313d5f488cb2d37c4e4c18b297fe25604beead9ff1693fd8b5f8eec9ddbf1f",
+    "scopeSha256": "90a520dd9998935978ff7f70fe3f741dd1226f9c88c0b5ca127584f0274f7de4",
     "sourceRegistryFile": "sources.json",
-    "sourceRegistrySha256": "885510d414bf085f88581ee850dd18b20a7f92b628025d9841513bac8f318a5b",
+    "sourceRegistrySha256": "25091240afa7ce2de2ac07cd42f658f41ecbf9531db3bd0095a77332d33033b5",
     "sampalocBriones2016SourceReviewFile": "calabarzon-sampaloc-briones-2016-source-review-20261030.json",
     "sampalocBriones2016SourceReviewSha256": "0c7dc13dcc13e611f57d5191178e879e4ffd28ef53f77f90c2618cebf1074b55",
     "sanPabloLakesSourceRecheckFile": "calabarzon-san-pablo-lakes-source-recheck-20261030.json",
@@ -94,7 +94,9 @@
     "palanasGbifScreenReviewFile": "calabarzon-palanas-gbif-screen-20261031.json",
     "palanasGbifScreenReviewSha256": "49ff2dce121fcebbc4e78474e2419195b5db16b35a9d1e53cc5fc25ee2097c25",
     "manilaBayCelsiorReviewFile": "calabarzon-manila-bay-stolephorus-celsior-gbif-review-20261031.json",
-    "manilaBayCelsiorReviewSha256": "b24cc06df5d89dd8be2d0c498300d22e380736409ceecccb6687098ab11cd46a"
+    "manilaBayCelsiorReviewSha256": "8e711baaaf34e3a9279cefbd72413c238827581534fde7bd873b643d0fe99503",
+    "manilaBayObisArchiveSourceReviewFile": "calabarzon-manila-bay-stolephorus-celsior-gbif-review-20261031.json",
+    "manilaBayObisArchiveSourceReviewSha256": "8e711baaaf34e3a9279cefbd72413c238827581534fde7bd873b643d0fe99503"
   },
   "denominator": {
     "waterbodyResearchLeads": 118,
@@ -112,7 +114,7 @@
     },
     "provinceUnitsWithLeads": 6,
     "separateCityCoverageUnits": 1,
-    "uniqueSourceReferences": 117,
+    "uniqueSourceReferences": 118,
     "unresolvedSourceReferences": []
   },
   "reviewGaps": {
@@ -268,7 +270,8 @@
     "The October 31 Palanas-name crosswalk distinguishes the 2006 EMB-indexed Palanas River (Naic), a Timalan tributary, from the 1998 Pansipit/Balayan Bay study lead. A 1947 BFAR-hosted Palanas Creek in Lemery may relate to the Batangas study feature, but the identity is unresolved. No route, current legal status, fish evidence or species assertion was added.",
     "The October 31 Geoportal review found publicly described Water Body 1:10,000 and 1:50,000 WMS layers, while the inventory says downloads are temporarily disabled. Empty FeatureInfo responses also occurred at a Taal control point, so no route, feature identity, geometry, or absence conclusion is adopted for Palanas River (Naic).",
     "The 2026-10-31 Palanas River (Naic) GBIF COL XR screen found zero across seven fielded text queries while the Cavite control returned 582; this is not evidence of fish absence, and the river route remains unresolved.",
-    "One dated USNM GBIF record for Stolephorus celsior reports Manila Bay, Naic as locality and Manila Bay as waterBody. It is recorded only as a historical shared-bay association, without coordinates or current-presence inference, and is explicitly not assigned to Palanas River."
+    "One dated USNM GBIF record for Stolephorus celsior reports Manila Bay, Naic as locality and Manila Bay as waterBody. It is recorded only as a historical shared-bay association, without coordinates or current-presence inference, and is explicitly not assigned to Palanas River.",
+    "A separate 2018 OBIS NMNH Fishes archive was checked by exact catalogNumber and otherCatalogNumbers: USNM 204231 was not present in that snapshot. The partial historical archive is not evidence that the specimen is absent from the collection and does not override the distinct 2026 GBIF record."
   ],
   "nextWork": [
     "For Imus River, the 2020 PEMSEA baseline says no detailed study existed as of publication; its nearby-watershed fish summary is unassigned. The 2022 ASEANO map report provides watershed context but no fish inventory. CvSU lists a 2020-2021 biophysical-characterization project, whose report and fish results remain unlocated. Seek those deliverables and reconcile source-specific area/length definitions; do not transfer nearby fish, aquaculture tonnage, or watershed maps into fish rows or channel geometry.",
@@ -299,6 +302,7 @@
     "For Pansipit River, the 1999 NAST proceedings and 2016 UPLB study report historical richness aggregates of 33 and 36, respectively; the species tables remain rights-held and no current presence follows. Seek licensed station-resolved evidence, clarify item-specific reuse, and keep both river sources separate from the estuary.",
     "For the 1998 Pansipit/Balayan Bay Palanas study lead, resolve whether the historical 1947 Lemery Palanas Creek is the same feature using modern official hydrography/LGU sources; keep the official 2006 Palanas River (Naic), Timalan tributary, as a separate lead. Seek rights-cleared, site-resolved fish evidence and do not infer current legal status or channel geometry.",
     "For the separate Palanas River (Naic) lead, obtain current feature-level Geoportal/NAMRIA or LGU metadata and an official route crosswalk. The Geoportal catalog lists water-body layers but says downloads are temporarily disabled; live identify probes were indeterminate. A seven-string GBIF COL XR fielded text screen returned zero with a 582-record Cavite control, which is not absence evidence. The 2006 EMB name remains identity context, not fish evidence or current water classification.",
-    "For shared Manila Bay, independently compare the NMNH collection label for USNM 204231 with its GBIF fields if the catalog interface becomes readable; keep the Stolephorus celsior record historical and research-only, without coordinates or transfer to a named river."
+    "For shared Manila Bay, independently compare the NMNH collection label for USNM 204231 with its GBIF fields if the catalog interface becomes readable; keep the Stolephorus celsior record historical and research-only, without coordinates or transfer to a named river.",
+    "The 2018 OBIS NMNH Fishes archive did not list USNM 204231, but it is a partial historic snapshot; obtain direct NMNH catalog label confirmation if needed and do not infer collection absence."
   ]
 }

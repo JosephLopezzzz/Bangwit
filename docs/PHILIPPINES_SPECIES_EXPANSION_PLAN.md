@@ -2646,3 +2646,13 @@ Separately reviewed GBIF occurrence 1318874346: a CC0-indexed USNM preserved spe
 Added `calabarzon-palanas-gbif-screen-20261031.json` and `calabarzon-manila-bay-stolephorus-celsior-gbif-review-20261031.json`; registered the primary taxonomy source and linked the reviews to the relevant GBIF, NMNH, Manila Bay and Palanas records. Refreshed the CALABARZON scope and denominator hashes. The region remains at 118 named waterbody research leads (60 rivers), 117 unique source references, and 443 source-registry entries. No Palanas fish assertion, coordinates, geometry, salinity, current safety/legal claim, or public-app row was added.
 
 **Next:** seek official feature-level Naic/Timalan route data and fish-specific river evidence. If the NMNH collection interface becomes readable, compare the USNM 204231 catalog label to the GBIF record; retain the species only in historical shared-Manila-Bay research unless a primary source supports a narrower site.
+
+### National rollout step 314 - Historical OBIS/NMNH archive check for USNM 204231 - 31 October 2026
+
+Followed the OBIS IPT link to its separately published NMNH Vertebrate Zoology Fishes resource, version 1.0 (published 10 October 2018). Its page reports 114,408 occurrence rows and a CC BY 4.0 license; its description warns that the online listing was partial at the time. Downloaded the 11,214,609-byte archive to ignored local research storage and recorded its SHA-256.
+
+Streamed `occurrence.txt` and checked the exact `catalogNumber` field plus the bounded `otherCatalogNumbers` field for `204231`; no row matched. This is a result about that partial 2018 OBIS snapshot only. It is not evidence that the USNM specimen is absent from the current NMNH collection and does not override or independently verify the distinct 2026 GBIF-indexed `USNM 204231` record.
+
+Added `obis-nmnh-vzfishes-dwc-2018` to the source registry and recorded the archive check in `calabarzon-manila-bay-stolephorus-celsior-gbif-review-20261031.json`. Manila Bay remains a historical, research-only association with no coordinates, no current-presence inference, and no public-app row. CALABARZON remains at 118 named waterbody research leads (60 rivers), 118 unique linked source references, and 444 source-registry entries.
+
+**Next:** seek direct NMNH record-label confirmation if the collection interface becomes readable. In parallel, continue the Naic/Timalan route and fish-survey search; the older OBIS archive cannot resolve either question.

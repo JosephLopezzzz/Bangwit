@@ -10,7 +10,8 @@
   "sources": [
     "gbif-occurrence-downloads",
     "gbif-nmnh-usnm-extant-specimens",
-    "hata-motomura-2021-stolephorus-celsior"
+    "hata-motomura-2021-stolephorus-celsior",
+    "obis-nmnh-vzfishes-dwc-2018"
   ],
   "record": {
     "gbifId": 1318874346,
@@ -74,5 +75,23 @@
     "currentPresenceInferred": false,
     "reason": "This dated, CC0 GBIF-indexed preserved specimen is identified as an accepted species by H. Hata and explicitly reports Manila Bay as its waterBody. Retain it as a historical source-reported association with the shared bay. The direct NMNH catalog page could not be independently read, there are no coordinates, and neither the record nor the taxonomic paper links it to Palanas River (Naic)."
   },
-  "nextAction": "If the NMNH collection interface becomes readable, compare the catalog entry and original locality label for USNM 204231. Keep the record attached only to shared Manila Bay unless that primary record contradicts GBIF fields; never transfer it to Palanas River on the basis of Naic locality alone."
+  "nextAction": "If the NMNH collection interface becomes readable, compare the catalog entry and original locality label for USNM 204231. Keep the record attached only to shared Manila Bay unless that primary record contradicts GBIF fields; never transfer it to Palanas River on the basis of Naic locality alone.",
+  "secondaryArchiveCrosscheck": {
+    "sourceId": "obis-nmnh-vzfishes-dwc-2018",
+    "datasetUuid": "d6d6fe4c-425f-4ce7-bf28-7a6befaeb413",
+    "publishedVersion": "1.0;2018-10-10",
+    "archiveDownloadUrl": "https://ipt.obis.org/nonode/archive.do?r=nmnh-vzfishes&v=1.0",
+    "archiveBytes": 11214609,
+    "archiveSha256": "2b244fe7fc13634b337f8bacb8af1857be86c9838a7f75dae9b001ecae8f3e3a",
+    "archiveLicense": "CC-BY-4.0",
+    "archiveRecordCountReported": 114408,
+    "archiveOccurrenceFieldsChecked": [
+      "catalogNumber",
+      "otherCatalogNumbers"
+    ],
+    "targetValue": "204231",
+    "matchingRows": 0,
+    "method": "Streamed the v1.0 occurrence.txt table and compared the catalogNumber field to exact string 204231 and the otherCatalogNumbers field to a bounded token match.",
+    "interpretation": "This older OBIS snapshot does not contain the target catalog number in those fields. It is a separate 2018 dataset/version and its metadata says only slightly over half of NMNH holdings were listed at the time; no inference about current or total museum holdings follows. It neither validates nor negates the distinct GBIF-indexed 2026 USNM record."
+  }
 }
