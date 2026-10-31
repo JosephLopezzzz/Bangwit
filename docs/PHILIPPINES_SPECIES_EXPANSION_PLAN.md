@@ -3290,7 +3290,7 @@ Current Catalog family placements move *Oxyeleotris lineolata* from the paper's 
 
 Added `national-mindanao-mandulog-fish-taxonomy-crosscheck-20261031.json` and one Catalog source entry, bringing the registry to 526 unique sources. No public species, occurrence, diet, safety, legal, or geometry row was added.
 
-**Follow-up:** the separate 2015 Mandulog gut-content paper review is recorded in step 386. Next, review the 2014 Mandulog goby-fishery paper for possible study overlap, sample provenance, and direct natural-diet evidence. Keep historical sample counts, local reports, natural diet, and bait recommendations distinct; do not combine the possibly overlapping 2012/2013 survey datasets.
+**Follow-up:** the 2015 Mandulog gut-content paper and separate 2014 goby-fishery abstract are recorded in steps 386 and 387. The latter is household respondent-derived and does not identify predator fish or use a direct diet method. Keep survey/household records, gut contents, natural diet, and bait recommendations separate; do not combine the possibly overlapping 2012/2013 survey datasets without a documented respondent crosswalk.
 
 
 ### National rollout step 386 - Mandulog 2015 fish gut-content and diet evidence review - 31 October 2026
@@ -3301,4 +3301,15 @@ The article gives brief taxon-associated observations, including phytoplankton/a
 
 Added `national-mindanao-mandulog-2014-gut-content-diet-review-20261031.json` and one research-only source-registry record, bringing the registry to 527 unique sources. The notes are historical and local, not fixed or nationwide species diets or bait advice. No species, occurrence, diet, safety, legal, geometry, or public-app row was added; item-specific republication permission was not verified.
 
-**Next:** review the separate 2014 Mandulog goby-fishery paper for possible study overlap, independent sample provenance, and direct diet method. Do not combine it with the 2015 gut-content paper or the possibly overlapping 2012/2013 goby survey without a documented crosswalk.
+**Follow-up:** the separate 2014 Mandulog household fishery survey is reviewed in step 387. Its six “preferred prey” goby labels have no named predator taxa or direct diet method in the publisher abstract, and possible overlap with the 2012/2013 community research is unresolved.
+
+
+### National rollout step 387 - Mandulog 2014 household goby-fishery and prey-source review - 31 October 2026
+
+Reviewed the official SEARCA AJAD publisher page and June 2014 issue entry for Vedra and Ocampo's article. The abstract describes a household survey along Mandulog River and calls six goby source labels “preferred prey species”: *Sicyopterus lagocephalus*, *Oxyeleotris lineolata*, *Awaous melanocephalus*, *A. ocellaris*, *Giuris margaritacea*, and *Rhyacichthys aspro*. It names no predator fish species and the available abstract does not give respondent count, field date, questionnaire, prey-identification procedure, or gut-content/feeding method. The term is therefore retained as a historical respondent/fishery lead, not a confirmed predator-specific diet fact or bait suggestion.
+
+The publisher abstract also reports goby use as household food, sale of fry, net/trap fishing about five times yearly, and historical catch/market/income values. These are abstract-level historical reports, not current livelihood figures, catchability guidance, or fishing rules. The 2014 household respondent sample may overlap with the same lead author's 2012 dissertation and 2013 Mandulog community survey, which reports 273 respondents; the 2014 abstract has no sample count/date to establish a crosswalk. The 2015 gut-content article is a separate fish-sampling study and does not validate the 2014 survey's preferred-prey statement. No sample totals were combined.
+
+The publisher's free full-text download uses an interactive reCAPTCHA and was not retrieved. An AgEcon Search PDF path with the same title redirected to an unrelated German dissertation and was excluded. Added `national-mindanao-mandulog-2014-fishery-prey-survey-review-20261031.json`, one AJAD source entry, and one SEARCA dissertation-abstract registry entry; the source registry now contains 529 unique references. No occurrence, diet, fishery, bait, safety, legal, geometry, or public-app row was added; no item-specific reuse license was verified.
+
+**Next:** review the separate 2024 Mandulog fish-fauna article as a new source. Check its field dates, sampling and site methods, taxonomic evidence, voucher availability, and reuse terms; do not treat “current” in its title as proof of fish presence in 2026.
