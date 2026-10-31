@@ -3,7 +3,7 @@
   "checkedOn": "2026-10-31",
   "status": "research-only-source-registry",
   "scope": "National acquisition references, freshwater spatial-source leads, and CALABARZON/Central Luzon identity/source leads. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 467,
+  "sourceCount": 469,
   "sources": [
     {
       "id": "carumbana-siaton-river-limnology-fishery-report-2006",
@@ -14699,6 +14699,81 @@
         "The 2018 sample, station coordinate, diet, safety, and app-publication decisions remain unchanged."
       ],
       "researchStatus": "caraga;lower-agusan;9-table-binomials;catalog-name-status-crosscheck;specimen-identity-unverified;research-only"
+    },
+    {
+      "id": "gbif-lower-agusan-nine-taxa-voucher-screen-20261031",
+      "title": "GBIF bounded locality and waterbody voucher screen for Lower Agusan study taxa",
+      "provider": "Global Biodiversity Information Facility (GBIF)",
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&scientificName=Channa%20striata&waterBody=Agusan%20R.&limit=25",
+      "additionalUrls": [
+        "https://api.gbif.org/v1/occurrence/3426419381",
+        "https://api.gbif.org/v1/dataset/5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+        "https://techdocs.gbif.org/en/openapi/v1/occurrence"
+      ],
+      "role": "Bounded search for nine source taxa across Agusan del Norte and six station/locality terms, plus the generic waterBody term Agusan R. Found one Channa striata preserved-specimen row with CAS occurrenceID urn:catalog:CAS:SU(ICH):21711; its iDigBio record is the same specimen. No station-specific voucher or independent current record was established.",
+      "checkedOn": "2026-10-31",
+      "sourceYear": 2026,
+      "citation": "Global Biodiversity Information Facility. Occurrence Search API v1; 72 bounded taxon/place filter queries for the nine Lower Agusan source labels, accessed 2026-10-31.",
+      "access": {
+        "status": "72-bounded-queries;one-generic-Agusan-R-Channa-specimen;GBIF-iDigBio-same-occurrenceID;no-station-point",
+        "reviewFiles": [
+          "national-caraga-lower-agusan-voucher-discovery-screen-20261031.json"
+        ],
+        "fullTextRetrieved": true
+      },
+      "reuse": {
+        "metadata": "The CAS Ichthyology dataset and occurrence record display CC0 metadata in GBIF. This does not establish Bangwit publication approval or station/current-presence fitness.",
+        "raw": "Bounded query counts and one selected occurrence record were inspected; no bulk dataset was downloaded.",
+        "content": "Only source attribution and record identifiers/metadata needed to evaluate provenance are retained. No occurrence point, geometry or public app assertion is admitted."
+      },
+      "publicationApproval": false,
+      "license": "CC0 as displayed in CAS dataset/GBIF record metadata; app publication not approved",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/legalcode",
+      "caveats": [
+        "All six locality terms and the Agusan del Norte stateProvince filter returned zero for all nine taxa in the queried fields; this is not absence evidence.",
+        "The one Agusan R. record lacks eventDate, coordinates, coordinate uncertainty, municipality and stateProvince.",
+        "Its exact occurrenceID and CAS catalog number match the iDigBio record; those two portals do not represent independent specimens.",
+        "The generic river locality cannot be assigned to any Lower Agusan study station or to the 2018 collection event."
+      ],
+      "researchStatus": "caraga;lower-agusan;gbif-voucher-screen;one-CAS-Channa-record;idigbio-mirror;station-unresolved;research-only"
+    },
+    {
+      "id": "idigbio-lower-agusan-nine-taxa-voucher-screen-20261031",
+      "title": "iDigBio country-record and Agusan locality screen for Lower Agusan study taxa",
+      "provider": "Integrated Digitized Biocollections (iDigBio)",
+      "url": "https://search.idigbio.org/v2/search/records/",
+      "additionalUrls": [
+        "https://search.idigbio.org/v2/view/records/6d4c3039-4629-466e-abb7-b69a2f057b11",
+        "https://www.idigbio.org/portal/records/6d4c3039-4629-466e-abb7-b69a2f057b11",
+        "https://github.com/iDigBio/idigbio-search-api/wiki/Query-Format",
+        "https://api.gbif.org/v1/occurrence/3426419381"
+      ],
+      "role": "Exact scientific-name plus Philippines queries for nine Lower Agusan source taxa were fully retrieved and filtered through locality, waterBody and administrative fields for six station/region terms. One CAS Channa striata record uses generic locality Agusan R.; its occurrenceID matches the GBIF record, so it is one catalog specimen, not independent cross-provider corroboration.",
+      "checkedOn": "2026-10-31",
+      "sourceYear": 2026,
+      "citation": "Integrated Digitized Biocollections. Search API v2 and view-record endpoint; nine taxon-filtered Philippines screens and bounded Agusan term check, accessed 2026-10-31.",
+      "access": {
+        "status": "all-nine-country-query-pages-retrieved;one-CAS-preserved-specimen;no-date-or-point;index-frozen-after-2026-05-08",
+        "reviewFiles": [
+          "national-caraga-lower-agusan-voucher-discovery-screen-20261031.json"
+        ],
+        "fullTextRetrieved": true
+      },
+      "reuse": {
+        "metadata": "The CAS collection record's dcterms:license and iDigBio attribution report CC0. This is source-record metadata and is not a legal determination for publishing a Bangwit species or occurrence row.",
+        "raw": "Nine bounded species/country result sets and one selected CAS record were inspected; no collection export or image was downloaded.",
+        "content": "Only a short attributed description of the one generic Agusan River candidate and its provenance metadata is recorded; no specimen image or collection content was copied."
+      },
+      "publicationApproval": false,
+      "license": "CC0 as displayed in the CAS/iDigBio record metadata; no Bangwit app row approved",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "caveats": [
+        "The CAS record has no eventDate, coordinates, coordinate uncertainty, municipality, county or stateProvince.",
+        "The catalog's record-modified date is not a collection date.",
+        "No link to the 2018 Lower Agusan study's undocumented triplicate samples was located; crosswalk remains unresolved.",
+        "The portal stated that its data index stopped updating on 2026-05-08; zeroes do not establish fish absence or complete digitization."
+      ],
+      "researchStatus": "caraga;lower-agusan;idigbio-voucher-screen;CAS-SU-ICH-21711;generic-Agusan-R-locality;no-station-crosswalk;research-only"
     }
   ],
   "sourcePolicy": {

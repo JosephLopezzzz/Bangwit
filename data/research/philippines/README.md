@@ -1171,3 +1171,7 @@ The publisher's 2020 EnvironmentAsia paper reports nine fish table labels sample
 ## Lower Agusan fish-name cross-check -- 31 October 2026
 
 All nine 2020 source-table binomials are listed as valid as printed in indexed excerpts from Eschmeyer's Catalog of Fishes. Direct access to selected exact-name pages was incomplete, and no access controls were bypassed. This checks nomenclature only; specimen identity and current local presence remain unverified. No occurrence or public app row was added. See `national-caraga-lower-agusan-fish-taxonomy-crosscheck-20261031.json` and National rollout step 339.
+
+## Lower Agusan voucher discovery screen -- 31 October 2026
+
+The GBIF and iDigBio screens returned the same CAS *Channa striata* record (catalog 21711; locality “Agusan R.”; collector Alvin Seale). It lacks collection date and coordinates and cannot be assigned to the 2018 study's named stations. The two indexes are mirrors of one specimen. No station-level voucher, point, current-presence claim, or public app row was added; query zeroes are not absence findings. See `national-caraga-lower-agusan-voucher-discovery-screen-20261031.json` and National rollout step 340.

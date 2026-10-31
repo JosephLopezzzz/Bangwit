@@ -1,0 +1,181 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-31",
+  "phaseId": "M2",
+  "regionIds": [
+    "1600000000"
+  ],
+  "regionName": "Region XIII (Caraga)",
+  "status": "bounded-gbif-idigbio-voucher-screen;one-broad-agusan-river-cas-record;gbif-and-idigbio-are-same-specimen;station-crosswalk-unresolved;research-only",
+  "purpose": "Search for independent digitized collection evidence matching the nine Lower Agusan study taxa and station/locality variants, then determine whether candidate records can be linked to the 2018 sampling stations without mistaking aggregator mirrors for independent specimens.",
+  "studySource": {
+    "sourceId": "cabuga-et-al-2020-lower-agusan-salinity-fish-metals",
+    "reviewFile": "national-caraga-lower-agusan-bay-2018-salinity-fish-survey-review-20261031.json",
+    "taxonomyReviewFile": "national-caraga-lower-agusan-fish-taxonomy-crosscheck-20261031.json",
+    "articleUrl": "https://www.tshe.org/ea/pdf/EA13%282%29_07.pdf",
+    "samplingPeriod": "April-May 2018",
+    "stationNames": [
+      "Barangay Buhangin, Butuan City",
+      "Barangay Pagatpatan, Butuan City",
+      "Barangay Dahekan, Magallanes"
+    ]
+  },
+  "taxaSearched": [
+    "Oreochromis niloticus",
+    "Cyprinus carpio",
+    "Channa striata",
+    "Johnius borneensis",
+    "Pseudocaranx dentex",
+    "Scatophagus argus",
+    "Lutjanus malabaricus",
+    "Nemipterus japonicus",
+    "Selar crumenophthalmus"
+  ],
+  "method": {
+    "retrievalDate": "2026-10-31",
+    "gbif": {
+      "service": "GBIF Occurrence Search API v1",
+      "documentationUrl": "https://techdocs.gbif.org/en/openapi/v1/occurrence",
+      "requestType": "Read-only paged occurrence searches; no bulk download requested.",
+      "filterSets": [
+        {
+          "country": "PH",
+          "stateProvince": "Agusan del Norte",
+          "taxa": 9,
+          "queryCount": 9,
+          "totalMatches": 0
+        },
+        {
+          "country": "PH",
+          "localityTerms": [
+            "Butuan",
+            "Magallanes",
+            "Agusan",
+            "Pagatpatan",
+            "Buhangin",
+            "Dahekan"
+          ],
+          "taxa": 9,
+          "queryCount": 54,
+          "totalMatches": 0
+        },
+        {
+          "country": "PH",
+          "waterBody": "Agusan R.",
+          "taxa": 9,
+          "queryCount": 9,
+          "totalMatches": 1,
+          "matchingTaxon": "Channa striata",
+          "matchingOccurrenceId": "urn:catalog:CAS:SU(ICH):21711"
+        }
+      ],
+      "uniqueMatchingRecords": 1,
+      "recordDetailsUrl": "https://api.gbif.org/v1/occurrence/3426419381",
+      "datasetUrl": "https://api.gbif.org/v1/dataset/5d6c10bd-ea31-4363-8b79-58c96d859f5b"
+    },
+    "idigbio": {
+      "service": "iDigBio Search API v2",
+      "endpoint": "https://search.idigbio.org/v2/search/records/",
+      "queryDocumentationUrl": "https://github.com/iDigBio/idigbio-search-api/wiki/Query-Format",
+      "queryForm": "For each exact species label, query country=Philippines and scientificname, retrieve the full returned page, then filter locality, waterBody, municipality, county, stateProvince, verbatimLocality and higherGeography for Agusan, Butuan, Buhangin, Pagatpatan, Dahekan and Magallanes. A species-plus-country full-text search for Agusan was also run for each label.",
+      "returnedCounts": [
+        { "taxon": "Oreochromis niloticus", "count": 2, "retrieved": 2, "matchingAgusanStationLocalities": 0 },
+        { "taxon": "Cyprinus carpio", "count": 4, "retrieved": 4, "matchingAgusanStationLocalities": 0 },
+        { "taxon": "Channa striata", "count": 90, "retrieved": 90, "matchingAgusanStationLocalities": 1 },
+        { "taxon": "Johnius borneensis", "count": 5, "retrieved": 5, "matchingAgusanStationLocalities": 0 },
+        { "taxon": "Pseudocaranx dentex", "count": 0, "retrieved": 0, "matchingAgusanStationLocalities": 0 },
+        { "taxon": "Scatophagus argus", "count": 123, "retrieved": 123, "matchingAgusanStationLocalities": 0 },
+        { "taxon": "Lutjanus malabaricus", "count": 31, "retrieved": 31, "matchingAgusanStationLocalities": 0 },
+        { "taxon": "Nemipterus japonicus", "count": 45, "retrieved": 45, "matchingAgusanStationLocalities": 0 },
+        { "taxon": "Selar crumenophthalmus", "count": 51, "retrieved": 51, "matchingAgusanStationLocalities": 0 }
+      ],
+      "agusanFullTextHits": [
+        {
+          "taxon": "Channa striata",
+          "count": 1,
+          "uuid": "6d4c3039-4629-466e-abb7-b69a2f057b11"
+        }
+      ],
+      "recordDetailsUrl": "https://search.idigbio.org/v2/view/records/6d4c3039-4629-466e-abb7-b69a2f057b11",
+      "portalRecordUrl": "https://www.idigbio.org/portal/records/6d4c3039-4629-466e-abb7-b69a2f057b11",
+      "dataIndexNote": "iDigBio's portal previously stated that its record index stopped updating on 2026-05-08. This is a discovery screen of that indexed collection, not a current or complete census."
+    }
+  },
+  "candidateRecord": {
+    "taxon": "Channa striata",
+    "basisOfRecord": "PreservedSpecimen",
+    "occurrenceID": "urn:catalog:CAS:SU(ICH):21711",
+    "iDigBioUuid": "6d4c3039-4629-466e-abb7-b69a2f057b11",
+    "gbifID": "3426419381",
+    "gbifDatasetKey": "5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+    "datasetTitle": "CAS Ichthyology (ICH)",
+    "datasetDoi": "10.15468/efh2ib",
+    "datasetLicenseMetadata": "CC0",
+    "collectionAttribution": "CAS Ichthyology (ICH), California Academy of Sciences",
+    "collector": "Seale, Alvin",
+    "fieldNumber": "AS-AGUSAN",
+    "catalogNumber": "21711",
+    "collectionCode": "SU(ICH)",
+    "localityVerbatim": "Agusan R.",
+    "waterBodyVerbatim": "Agusan R.",
+    "islandVerbatim": "Mindanao I.",
+    "eventDate": null,
+    "decimalLatitude": null,
+    "decimalLongitude": null,
+    "coordinateUncertaintyInMeters": null,
+    "municipality": null,
+    "county": null,
+    "stateProvince": null,
+    "recordModifiedDate": "1997-11-25",
+    "decision": "One cataloged preserved-specimen record is a broad Agusan River historical lead. Its GBIF and iDigBio entries share the exact occurrenceID and CAS catalog number, so they count as one specimen. No collection/event date, station, province-level field, or point is available; record-modified dates are not substituted for collection dates. The record cannot presently be cross-walked to the 2018 study's triplicate samples or assigned to one of its three stations."
+  },
+  "interpretation": {
+    "museumSpecimenCandidates": 1,
+    "sameSpecimenAggregatorMirrors": 1,
+    "stationSpecificVoucherCorroboration": 0,
+    "crosswalkTo2018Study": "unresolved",
+    "independentCurrentPresenceAssertions": 0,
+    "acceptedCoordinates": 0,
+    "geometryAdded": 0,
+    "speciesAssertionsAdded": 0,
+    "dietClaimsAdded": 0,
+    "safetyClaimsAdded": 0,
+    "publicAppRowsAdded": 0,
+    "publicationApproval": false,
+    "note": "A museum voucher with a generic Agusan River locality is useful research evidence, but without collection date or station details it does not establish a current occurrence or validate the 2018 study's individual samples. GBIF and iDigBio are two indexes of one CAS catalog record, not independent specimens."
+  },
+  "limitations": [
+    "GBIF text and taxon searches may miss alternate spelling, unindexed waterBody/locality fields, and specimens not digitized by participating collections; zeroes are limited-query outcomes, not absence findings.",
+    "The exact CAS specimen record omits eventDate, coordinates, coordinate uncertainty, municipality, county and stateProvince.",
+    "The record's dcterms:modified date and aggregator ingest/update dates are metadata-change dates, not collection dates.",
+    "The CAS specimen candidate cannot be matched to or excluded from the 2018 study's undocumented vouchers without accession/date clarification.",
+    "The CC0 value is the collection record's metadata; it does not authorize copying the source paper's content or make the record suitable as current app coverage."
+  ],
+  "nextAction": "Request or locate the CAS collection's original catalog label/image and event-date/georeference metadata for SU(ICH) 21711. Keep any curator inquiry as an unsent draft unless the user explicitly authorizes sending. In parallel, continue with a separate Caraga primary source that has station-specific fish sampling and verifiable voucher links.",
+  "references": [
+    {
+      "url": "https://techdocs.gbif.org/en/openapi/v1/occurrence",
+      "supports": "Official GBIF occurrence search API and field query documentation."
+    },
+    {
+      "url": "https://api.gbif.org/v1/occurrence/3426419381",
+      "supports": "GBIF preserved-specimen record 3426419381 and its shared CAS occurrenceID, missing collection date/coordinates, locality and catalog metadata."
+    },
+    {
+      "url": "https://api.gbif.org/v1/dataset/5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+      "supports": "CAS Ichthyology (ICH) dataset identity, DOI and CC0 dataset metadata."
+    },
+    {
+      "url": "https://github.com/iDigBio/idigbio-search-api/wiki/Query-Format",
+      "supports": "Official iDigBio query JSON, exact field matching and full-text query syntax."
+    },
+    {
+      "url": "https://search.idigbio.org/v2/view/records/6d4c3039-4629-466e-abb7-b69a2f057b11",
+      "supports": "Original iDigBio-indexed CAS record, collector, field number, collection/cat. no., generic Agusan R. locality, absent event date/coordinates, and CC0 metadata."
+    },
+    {
+      "url": "https://www.tshe.org/ea/pdf/EA13%282%29_07.pdf",
+      "supports": "2018 study source labels, three station groupings and sampling period against which the voucher candidate was screened."
+    }
+  ]
+}
