@@ -3,7 +3,7 @@
   "checkedOn": "2026-10-31",
   "status": "research-only-source-registry",
   "scope": "National acquisition references, freshwater spatial-source leads, and CALABARZON/Central Luzon identity/source leads. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 463,
+  "sourceCount": 465,
   "sources": [
     {
       "id": "carumbana-siaton-river-limnology-fishery-report-2006",
@@ -14540,6 +14540,83 @@
         "Short range notes that omit the Philippines are not treated as absence evidence."
       ],
       "researchStatus": "2026-EcoF-entry-crosscheck;four-species-name-labels-valid;two-genus-only-labels-unresolved;local-identifications-and-status-unverified;research-only"
+    },
+    {
+      "id": "gbif-bega-watershed-locality-voucher-screen-20261031",
+      "title": "GBIF bounded locality screen for Bega watershed fish-voucher corroboration",
+      "provider": "Global Biodiversity Information Facility (GBIF)",
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Bega%20watershed&limit=300",
+      "additionalUrls": [
+        "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Bega%20Falls&limit=100",
+        "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Enchanted%20Falls&limit=100",
+        "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Tiger%20Falls&limit=100",
+        "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Malipaga%20River&limit=100",
+        "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Malipaga&limit=100",
+        "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Prosperidad&limit=300",
+        "https://api.gbif.org/v1/dataset/ddd46c4c-1c7a-49d6-8420-0c8b34a94a53",
+        "https://techdocs.gbif.org/en/openapi/v1/occurrence"
+      ],
+      "role": "Bounded locality discovery screen for independent Bega watershed fish voucher evidence. The six fish material citations returned for Bega watershed all cite Visto et al. (2015) and are records mirrored through the literature-compilation MOBIOS+ dataset; they are not independent voucher confirmations.",
+      "checkedOn": "2026-10-31",
+      "sourceYear": 2026,
+      "citation": "Global Biodiversity Information Facility. Occurrence Search API v1; bounded Bega watershed, waterfall, Malipaga and Prosperidad locality queries, accessed 2026-10-31.",
+      "access": {
+        "status": "148 Bega watershed results retrieved; six fish MATERIAL_CITATION records all cite the same 2015 study and share one unresolved point. Bega Falls: 18 non-fish records; Enchanted Falls: six mammals; Tiger Falls and Malipaga variants: zero; all 363 Prosperidad locality results retrieved and classed as insect or plant records.",
+        "reviewFiles": [
+          "national-caraga-bega-watershed-gbif-idigbio-locality-screen-20261031.json"
+        ],
+        "fullTextRetrieved": true
+      },
+      "reuse": {
+        "metadata": "GBIF search counts and selected record metadata retained as research provenance only.",
+        "raw": "No GBIF bulk archive or raw occurrence export was retained.",
+        "content": "The MOBIOS+ dataset displays CC BY-NC 4.0, while the source article has its own CC BY 4.0 statements. These separate terms do not constitute Bangwit public-app reuse approval; no record content was admitted."
+      },
+      "publicationApproval": false,
+      "license": "CC BY-NC 4.0 as displayed for the MOBIOS+ dataset; underlying-source rights reviewed separately",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "caveats": [
+        "All six fish records returned for Bega watershed cite the same primary 2015 study; they do not independently validate species identities or vouchers.",
+        "The two genus-only table labels remain unresolved; their GBIF names remain genus-level.",
+        "All six fish records repeat one coordinate despite malformed primary-paper site coordinates. No point is admitted.",
+        "Text-query zeroes do not establish fish absence, and exact localities may be unindexed or differently spelled."
+      ],
+      "researchStatus": "caraga;bega-watershed;gbif-locality-search;6-same-source-material-citations;no-independent-vouchers;shared-coordinate-unresolved;research-only"
+    },
+    {
+      "id": "idigbio-bega-watershed-locality-specimen-screen-20261031",
+      "title": "iDigBio exact and full-text locality screen for the Bega watershed survey sites",
+      "provider": "Integrated Digitized Biocollections (iDigBio)",
+      "url": "https://search.idigbio.org/v2/search/records/",
+      "additionalUrls": [
+        "https://github.com/iDigBio/idigbio-search-api/wiki/Query-Format",
+        "https://portal.idigbio.org/portal/search"
+      ],
+      "role": "Second-provider bounded discovery screen for digitized specimen records matching Bega watershed, its reported sites, and Prosperidad; not a fish-absence test or complete collection census.",
+      "checkedOn": "2026-10-31",
+      "sourceYear": 2026,
+      "citation": "Integrated Digitized Biocollections. Search API v2 exact indexed locality and locality full-text queries, filtered to country=Philippines, accessed 2026-10-31.",
+      "access": {
+        "status": "No Bega watershed, Bega Falls, Enchanted Falls or Malipaga locality rows appeared in exact/full-text queries. Tiger Falls full-text produced four off-target non-fish rows with no matching locality fields. Prosperidad produced two non-fish records. Single-token Bega full-text returned 11 false-positive lichen rows whose returned locality fields did not contain the term.",
+        "reviewFiles": [
+          "national-caraga-bega-watershed-gbif-idigbio-locality-screen-20261031.json"
+        ],
+        "fullTextRetrieved": true
+      },
+      "reuse": {
+        "metadata": "Query scope, result counts and off-target class summary retained.",
+        "raw": "No specimen record, image or dataset export was retained.",
+        "content": "No fish record was selected; no specimen-level rights review applies to an admitted record."
+      },
+      "publicationApproval": false,
+      "license": "No record selected; no specimen-content reuse terms verified",
+      "licenseUrl": null,
+      "caveats": [
+        "The iDigBio portal states its record index stopped updating on 2026-05-08; this is a frozen discovery screen.",
+        "Full-text matching returned false positives; result rows were checked against locality, verbatim locality, waterbody and municipality fields.",
+        "No result or zero-result query is evidence of fish absence or a complete lack of digitized vouchers."
+      ],
+      "researchStatus": "caraga;bega-watershed;idigbio-locality-screen;frozen-index;offtarget-text-matches;no-fish-row-selected;research-only"
     }
   ],
   "sourcePolicy": {

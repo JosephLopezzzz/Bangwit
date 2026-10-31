@@ -1,0 +1,306 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-31",
+  "phaseId": "M2",
+  "regionIds": [
+    "1600000000"
+  ],
+  "regionName": "Region XIII (Caraga)",
+  "status": "bounded-gbif-idigbio-locality-screen;six-gbif-fish-citations-mirror-primary-study;no-independent-vouchers;coordinates-unresolved;idigbio-offtarget-results;research-only",
+  "purpose": "Search bounded GBIF and iDigBio locality records for fish vouchers that could independently corroborate the 2015 Bega watershed survey, without treating literature-mirrored citations or nearby records as independent specimens.",
+  "studySource": {
+    "sourceId": "visto-et-al-2015-bega-watershed-ichthyofauna",
+    "reviewFile": "national-caraga-bega-watershed-fish-survey-review-20261031.json",
+    "articleUrl": "https://innspub.net/wp-content/uploads/2022/12/JBES-V7-No1-p262-271.pdf",
+    "zenodoUrl": "https://zenodo.org/records/8344353",
+    "coordinateIssue": "The article's printed coordinate strings contain minute values above 59 and remain malformed or ambiguous; they cannot be used to validate the shared GBIF point."
+  },
+  "method": {
+    "retrievalDate": "2026-10-31",
+    "gbif": {
+      "service": "GBIF Occurrence Search API v1",
+      "documentationUrl": "https://techdocs.gbif.org/en/openapi/v1/occurrence",
+      "requestType": "Bounded paged searches; no asynchronous bulk download was requested.",
+      "queries": [
+        {
+          "locality": "Bega watershed",
+          "url": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Bega%20watershed&limit=300",
+          "total": 148,
+          "retrieved": 148,
+          "classCounts": {
+            "unclassified fish material citations": 6,
+            "Squamata": 16,
+            "Aves": 83,
+            "Amphibia": 13,
+            "Mammalia": 9,
+            "Insecta": 21
+          }
+        },
+        {
+          "locality": "Bega Falls",
+          "url": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Bega%20Falls&limit=100",
+          "total": 18,
+          "retrieved": 18,
+          "classCounts": {
+            "Insecta": 14,
+            "Mammalia": 4
+          },
+          "fishRecords": 0
+        },
+        {
+          "locality": "Enchanted Falls",
+          "url": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Enchanted%20Falls&limit=100",
+          "total": 6,
+          "retrieved": 6,
+          "classCounts": {
+            "Mammalia": 6
+          },
+          "fishRecords": 0
+        },
+        {
+          "locality": "Tiger Falls",
+          "url": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Tiger%20Falls&limit=100",
+          "total": 0,
+          "retrieved": 0,
+          "interpretation": "Bounded text-search zero only; not evidence of fish absence."
+        },
+        {
+          "locality": "Malipaga River",
+          "url": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Malipaga%20River&limit=100",
+          "total": 0,
+          "retrieved": 0,
+          "interpretation": "Bounded text-search zero only; not evidence of fish absence."
+        },
+        {
+          "locality": "Malipaga",
+          "url": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Malipaga&limit=100",
+          "total": 0,
+          "retrieved": 0,
+          "interpretation": "Short locality variant; zero results do not establish absence."
+        },
+        {
+          "locality": "Prosperidad",
+          "url": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Prosperidad&limit=300",
+          "pagination": [
+            "offset=0&limit=300",
+            "offset=300&limit=100"
+          ],
+          "total": 363,
+          "retrieved": 363,
+          "classCounts": {
+            "Insecta": 1,
+            "Magnoliopsida": 280,
+            "Liliopsida": 82
+          },
+          "fishRecords": 0,
+          "interpretation": "Complete for this bounded text-query result set only; the Bega watershed fish citations use a different locality string."
+        }
+      ]
+    },
+    "idigbio": {
+      "service": "iDigBio Search API v2",
+      "endpoint": "https://search.idigbio.org/v2/search/records/",
+      "queryDocumentationUrl": "https://github.com/iDigBio/idigbio-search-api/wiki/Query-Format",
+      "queryForm": "Each locality search combined country=Philippines with either an exact indexed locality value or a locality full-text query; result rows were checked in locality, verbatimLocality, waterbody and municipality fields.",
+      "queries": [
+        {
+          "locality": "Bega watershed",
+          "exactCount": 0,
+          "fullTextCount": 0
+        },
+        {
+          "locality": "Bega Falls",
+          "exactCount": 0,
+          "fullTextCount": 0
+        },
+        {
+          "locality": "Enchanted Falls",
+          "exactCount": 0,
+          "fullTextCount": 0
+        },
+        {
+          "locality": "Tiger Falls",
+          "exactCount": 0,
+          "fullTextCount": 4,
+          "fullTextClassCounts": {
+            "unclassified": 1,
+            "Magnoliopsidae": 1,
+            "Monocotyledonae": 1,
+            "Gastropoda": 1
+          },
+          "rowsWithTheSearchedTextInLocalityFields": 0
+        },
+        {
+          "locality": "Malipaga River",
+          "exactCount": 0,
+          "fullTextCount": 0
+        },
+        {
+          "locality": "Malipaga",
+          "exactCount": 0,
+          "fullTextCount": 0
+        },
+        {
+          "locality": "Prosperidad",
+          "exactCount": 2,
+          "fullTextCount": 2,
+          "matchedRows": [
+            "Derris ferruginea (plant; no fish class)",
+            "Rhyssota otaheitana (Gastropoda)"
+          ],
+          "fishRows": 0
+        },
+        {
+          "locality": "Bega",
+          "mode": "single-token locality full-text false-positive check",
+          "fullTextCount": 11,
+          "classes": [
+            "Lecanoromycetes"
+          ],
+          "rowsContainingBegaInReturnedLocalityFields": 0,
+          "interpretation": "Returned records had unrelated locality text (including Bontoc, Benguet, Camarines Sur and Negros); excluded as locality matches."
+        }
+      ],
+      "dataStatus": "The portal states its record index stopped updating on 2026-05-08. This is a frozen discovery screen, not a current or complete collections inventory.",
+      "portalStatusUrl": "https://portal.idigbio.org/portal/search"
+    }
+  },
+  "gbifRecordAudit": {
+    "matchingBegaFishRows": 6,
+    "basisOfRecord": "MATERIAL_CITATION",
+    "sharedDatasetKey": "ddd46c4c-1c7a-49d6-8420-0c8b34a94a53",
+    "sharedDatasetTitle": "The MOBIOS+: A FAIR (Findable, Accessible, Interoperable, and Reusable) Database for Mindanao's Terrestrial Biodiversity",
+    "sharedDatasetDoi": "10.15468/rtedgk",
+    "sharedDatasetLicense": "CC BY-NC 4.0 as displayed in GBIF dataset metadata; this separate dataset license does not establish public-app reuse rights for the underlying source paper.",
+    "datasetMetadataUrl": "https://api.gbif.org/v1/dataset/ddd46c4c-1c7a-49d6-8420-0c8b34a94a53",
+    "provenance": "All six records have locality Bega watershed, eventDate 2014, municipality Prosperidad, county Agusan del Sur, stateProvince Caraga, and associatedReferences citing Visto, Nuñeza and Magdamit (2015), the same primary study reviewed in steps 335-336. The dataset description says it collates records from published studies. These entries mirror that study; they are not independent sampling or voucher evidence.",
+    "records": [
+      {
+        "gbifID": "4523542145",
+        "occurrenceID": "MOBIOS-012695",
+        "name": "Dermogenys pusilla Kuhl & van Hasselt, 1823",
+        "sourceLabelResolution": "binomial label; local specimen identity remains unverified"
+      },
+      {
+        "gbifID": "4523542148",
+        "occurrenceID": "MOBIOS-012694",
+        "name": "Dermogenys Kuhl & van Hasselt, 1823",
+        "sourceLabelResolution": "genus-only source label; no species resolution"
+      },
+      {
+        "gbifID": "4523542150",
+        "occurrenceID": "MOBIOS-012697",
+        "name": "Sicyopterus micrurus (Bleeker, 1853)",
+        "sourceLabelResolution": "binomial label; local specimen identity remains unverified"
+      },
+      {
+        "gbifID": "4523542153",
+        "occurrenceID": "MOBIOS-012696",
+        "name": "Oreochromis niloticus (Linnaeus, 1758)",
+        "sourceLabelResolution": "binomial label; local specimen identity remains unverified"
+      },
+      {
+        "gbifID": "4523542202",
+        "occurrenceID": "MOBIOS-012693",
+        "name": "Channa striata (Bloch, 1793)",
+        "sourceLabelResolution": "binomial label; local specimen identity remains unverified"
+      },
+      {
+        "gbifID": "4523542204",
+        "occurrenceID": "MOBIOS-012692",
+        "name": "Barbodes Bleeker, 1859",
+        "sourceLabelResolution": "genus-only source label; no species resolution"
+      }
+    ],
+    "sharedPoint": {
+      "decimalLatitude": 8.3167,
+      "decimalLongitude": 125.8667,
+      "appliesToAllSixRecords": true,
+      "institutionCodeOrCatalogNumber": "No collection institution or catalog number was supplied in the six returned occurrence records.",
+      "decision": "Do not accept as a site pin. A single repeated watershed point does not resolve the primary paper's malformed site-coordinate strings or identify a sampling station."
+    }
+  },
+  "interpretation": {
+    "independentVoucherBackedFishRecordsFound": 0,
+    "sameStudyFishMaterialCitationsFound": 6,
+    "otherBegaLocalityRecords": "Exact Bega Falls and Enchanted Falls queries returned only insects and mammals, respectively; no fish records. Tiger Falls and Malipaga text searches returned zero in GBIF. The complete Prosperidad locality query returned only insect and plant classes.",
+    "idigbioFishRowsFound": 0,
+    "absenceInference": false,
+    "note": "The matched GBIF fish rows do not add independent evidence because their associated citation points to the same 2015 survey. Search zeroes and off-target text matches are limited to the queried record index and fields."
+  },
+  "decision": {
+    "sourceLabelsChanged": 0,
+    "voucherIdentificationsVerified": 0,
+    "independentFishOccurrencesAdded": 0,
+    "acceptedCoordinates": 0,
+    "geometryAdded": 0,
+    "speciesAssertionsAdded": 0,
+    "dietClaimsAdded": 0,
+    "safetyClaimsAdded": 0,
+    "publicAppRowsAdded": 0,
+    "publicationApproval": false
+  },
+  "limitations": [
+    "GBIF and iDigBio locality text is a discovery method, not an exhaustive survey; spelling variants, coordinates without matching locality text, unindexed collections and specimens not digitized online may be missed.",
+    "The six GBIF fish material citations repeat the same 2015 paper and do not expose voucher institution/catalog identifiers; they cannot independently validate specimen identity or species-level resolution of the two genus labels.",
+    "All six GBIF fish rows reuse one coordinate, while the source paper's printed site coordinates remain malformed; neither source supplies a validated station geometry here.",
+    "The GBIF dataset CC BY-NC 4.0 metadata is separate from the underlying article's declared CC BY 4.0 terms; no legal/publication review authorizes app reuse of copied GBIF records or source text.",
+    "The iDigBio index is frozen after 2026-05-08 and cannot serve as a current collection census.",
+    "No search result or zero result is a fish-absence finding."
+  ],
+  "nextAction": "Continue Caraga freshwater evidence work with a separate primary source that resolves fish names to named lakes/rivers and identifiable capture or voucher evidence. In parallel, seek author or MSU-Naawan clarification on Bega sample accessions and corrected station coordinates; do not infer these from the GBIF mirror or unrelated insect/mammal records.",
+  "references": [
+    {
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Bega%20watershed&limit=300",
+      "supports": "Complete bounded Bega watershed locality result set and its six literature-mirrored fish material citations."
+    },
+    {
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Bega%20Falls&limit=100",
+      "supports": "Exact Bega Falls locality result count and returned non-fish taxonomic classes."
+    },
+    {
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Enchanted%20Falls&limit=100",
+      "supports": "Enchanted Falls query count and mammal-only class results."
+    },
+    {
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Tiger%20Falls&limit=100",
+      "supports": "Bounded Tiger Falls zero-result query; not an absence inference."
+    },
+    {
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Malipaga%20River&limit=100",
+      "supports": "Bounded Malipaga River zero-result query; not an absence inference."
+    },
+    {
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Malipaga&limit=100",
+      "supports": "Short Malipaga locality variant; not an absence inference."
+    },
+    {
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Prosperidad&limit=300",
+      "supports": "Prosperidad query first page; use offset=300&limit=100 for the final 63 records."
+    },
+    {
+      "url": "https://api.gbif.org/v1/dataset/ddd46c4c-1c7a-49d6-8420-0c8b34a94a53",
+      "supports": "MOBIOS+ dataset title, description of literature collation, DOI and CC BY-NC 4.0 metadata."
+    },
+    {
+      "url": "https://techdocs.gbif.org/en/openapi/v1/occurrence",
+      "supports": "Official GBIF occurrence-search API documentation."
+    },
+    {
+      "url": "https://search.idigbio.org/v2/search/records/",
+      "supports": "Bounded iDigBio record queries summarized above."
+    },
+    {
+      "url": "https://github.com/iDigBio/idigbio-search-api/wiki/Query-Format",
+      "supports": "Official iDigBio JSON query format for field and full-text record searches."
+    },
+    {
+      "url": "https://portal.idigbio.org/portal/search",
+      "supports": "Portal notice that data updates stopped on 2026-05-08."
+    },
+    {
+      "url": "https://innspub.net/wp-content/uploads/2022/12/JBES-V7-No1-p262-271.pdf",
+      "supports": "Primary Bega watershed fish survey citation against which the GBIF associatedReferences were compared."
+    }
+  ]
+}
