@@ -3,7 +3,7 @@
   "checkedOn": "2026-10-31",
   "status": "research-only-source-registry",
   "scope": "National acquisition references, freshwater spatial-source leads, and CALABARZON/Central Luzon identity/source leads. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 460,
+  "sourceCount": 461,
   "sources": [
     {
       "id": "carumbana-siaton-river-limnology-fishery-report-2006",
@@ -14422,6 +14422,48 @@
         "The Clarias batrachus range note is not used to infer local presence or absence."
       ],
       "researchStatus": "2026-10-overview;12-table-binomials-current-name-check;trichogaster-prose-synonym;specimen-identity-unverified;research-only"
+    },
+    {
+      "id": "gbif-mobios-lake-oro-dakong-napo-occurrence-crosscheck-20261031",
+      "title": "GBIF MOBIOS+ locality occurrence cross-check for Lake Oro and Lake Dakong Napo",
+      "provider": "Global Biodiversity Information Facility; dataset originator Krizler Tanalgo and Ecology and Conservation Research Laboratory, University of Southern Mindanao; hosted by ZooKeys / Pensoft Data Publishing Center",
+      "url": "https://www.gbif.org/dataset/ddd46c4c-1c7a-49d6-8420-0c8b34a94a53",
+      "additionalUrls": [
+        "https://api.gbif.org/v1/dataset/ddd46c4c-1c7a-49d6-8420-0c8b34a94a53",
+        "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Lake%20Oro&limit=100",
+        "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Dakong%20Napo&limit=100",
+        "https://api.gbif.org/v1/occurrence/4523543680",
+        "https://api.gbif.org/v1/occurrence/4523543676",
+        "https://techdocs.gbif.org/en/openapi/v1/occurrence",
+        "https://www.biotaxa.org/ft/article/download/4-1-1/50103/0"
+      ],
+      "role": "Bounded GBIF locality search found 17 fish MATERIAL_CITATION records that cite the same Cuadrado et al. (2019) paper, packaged in the broader MOBIOS+ literature-compiled dataset; they are not independent corroboration. GBIF records contain mismatched lake-taxon assignments and repeated points roughly 40 km from the paper's named-lake locators, with GADM divisions inconsistent with the stated municipality. Research-only; no point or species row is admitted.",
+      "checkedOn": "2026-10-31",
+      "sourceYear": 2023,
+      "citation": "Tanalgo, K. (2023). The MOBIOS+: A FAIR (Findable, Accessible, Interoperable, and Reusable) Database for Mindanao's Terrestrial Biodiversity. Biodiversity Data Journal. GBIF occurrence dataset DOI 10.15468/rtedgk, accessed 2026-10-31.",
+      "access": {
+        "status": "official-GBIF-dataset-metadata-and-bounded-occurrence-API-reviewed;17-same-paper-material-citations;taxon-lake-and-georeference-conflicts;research-only",
+        "reviewFiles": [
+          "national-caraga-lake-oro-dakong-napo-gbif-locality-crosscheck-20261031.json"
+        ],
+        "fullTextRetrieved": false
+      },
+      "reuse": {
+        "metadata": "GBIF dataset and occurrence records declare CC BY-NC 4.0. This is recorded as dataset metadata, not as a legal determination for Bangwit. The underlying FishTaxa article separately states all rights reserved; its reuse status remains unresolved.",
+        "raw": "Four bounded occurrence-search requests and the single dataset metadata/representative occurrence endpoints were queried. No bulk archive or full dataset was downloaded.",
+        "content": "The search results reproduce material-citation records for the same source paper and show conflicting lake assignments and georeferences. No species, geometry, or occurrence row is approved for public app reuse."
+      },
+      "publicationApproval": false,
+      "license": "GBIF dataset metadata: CC BY-NC 4.0; underlying article reuse unresolved",
+      "licenseUrl": "http://creativecommons.org/licenses/by-nc/4.0/legalcode",
+      "caveats": [
+        "The MOBIOS+ dataset description says it compiles published studies; matching records cite the same 2019 paper and are not independent biological observations.",
+        "GBIF returns Trichopodus trichopterus under Lake Oro although the article's Table 2 assigns it to Lake Dakong Napo; the Lake Oro query omits Trichopodus pectoralis although the article assigns it to both lakes.",
+        "All fish records under each locality share one point. GBIF GADM places the points in La Paz/Angeles and San Luis/Binicalan while the records state municipality Esperanza; each point is about 40 km from the corresponding source-paper lake locator.",
+        "A zero-result locality or waterBody query is not evidence of biological absence or a complete lack of records.",
+        "The source article's all-rights-reserved statement is not superseded by the dataset's non-commercial metadata license."
+      ],
+      "researchStatus": "mobios-plus-literature-mirror;lake-oro-10-and-dakong-napo-7-material-citations;CC-BY-NC;taxon-lake-conflicts;georeference-conflict;no-independent-corroboration;no-public-rows"
     }
   ],
   "sourcePolicy": {

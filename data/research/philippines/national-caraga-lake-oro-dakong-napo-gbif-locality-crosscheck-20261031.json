@@ -1,0 +1,181 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-31",
+  "phaseId": "M2",
+  "regionIds": [
+    "1600000000"
+  ],
+  "regionName": "Region XIII (Caraga)",
+  "status": "bounded-gbif-locality-screen;same-source-literature-mirror;taxon-lake-conflicts;coordinate-locality-conflicts;CC-BY-NC-dataset;research-only",
+  "purpose": "Screen GBIF for independently reusable or corroborating records for the Lake Oro and Lake Dakong Napo fish study, and check whether matched records resolve to the study's lake-coded evidence.",
+  "studySource": {
+    "sourceId": "cuadrado-et-al-2019-lake-oro-dakong-napo-fish-survey",
+    "reviewFile": "national-caraga-lake-oro-dakong-napo-fish-survey-review-20261031.json",
+    "articleUrl": "https://www.biotaxa.org/ft/article/download/4-1-1/50103/0",
+    "reuseStatus": "The article first page states all rights reserved; no item-specific reuse permission was verified. This remains separate from the GBIF dataset metadata license."
+  },
+  "independentDataset": {
+    "provider": "Global Biodiversity Information Facility (GBIF)",
+    "datasetKey": "ddd46c4c-1c7a-49d6-8420-0c8b34a94a53",
+    "title": "The MOBIOS+: A FAIR (Findable, Accessible, Interoperable, and Reusable) Database for Mindanao's Terrestrial Biodiversity",
+    "doi": "10.15468/rtedgk",
+    "datasetType": "OCCURRENCE",
+    "datasetPage": "https://www.gbif.org/dataset/ddd46c4c-1c7a-49d6-8420-0c8b34a94a53",
+    "apiMetadata": "https://api.gbif.org/v1/dataset/ddd46c4c-1c7a-49d6-8420-0c8b34a94a53",
+    "publicationYear": 2023,
+    "registeredOn": "2024-02-20",
+    "licenseAsDisplayedByGBIF": "CC BY-NC 4.0",
+    "licenseUrl": "http://creativecommons.org/licenses/by-nc/4.0/legalcode",
+    "scopeAndProvenance": "The dataset description says it collates occurrence records from published studies and describes terrestrial and freshwater ecosystems across the Mindanao faunal region. GBIF metadata reports 12,814 georeferenced species occurrences and 176 Actinopterygii species. The matching 2019 records cite Cuadrado et al. and are MATERIAL_CITATION records, so they mirror the same study rather than independently corroborate it.",
+    "citation": "Tanalgo, K. (2023). The MOBIOS+: A FAIR (Findable, Accessible, Interoperable, and Reusable) Database for Mindanao's Terrestrial Biodiversity. Biodiversity Data Journal. Occurrence dataset, https://doi.org/10.15468/rtedgk, accessed via GBIF on 2026-10-31.",
+    "publisherAndOriginator": "Hosted by ZooKeys / Pensoft Data Publishing Center; dataset originator Krizler Tanalgo, Ecology and Conservation Research Laboratory, Department of Biological Sciences, University of Southern Mindanao."
+  },
+  "method": {
+    "service": "GBIF Occurrence Search API v1",
+    "documentationUrl": "https://techdocs.gbif.org/en/openapi/v1/occurrence",
+    "retrievalDate": "2026-10-31",
+    "retrievalType": "Four bounded GET occurrence-search requests; no bulk download or archive was requested.",
+    "queries": [
+      {
+        "filter": "country=PH&locality=Lake Oro",
+        "url": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Lake%20Oro&limit=100",
+        "matchedRecords": 15,
+        "fishMaterialCitations": 10,
+        "otherMaterialCitations": 5,
+        "otherRecordScope": "Three crustacean records and two mollusk records; not counted as fish."
+      },
+      {
+        "filter": "country=PH&locality=Dakong Napo",
+        "url": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Dakong%20Napo&limit=100",
+        "matchedRecords": 7,
+        "fishMaterialCitations": 7
+      },
+      {
+        "filter": "country=PH&locality=Esperanza Agusan",
+        "url": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Esperanza%20Agusan&limit=100",
+        "matchedRecords": 0,
+        "interpretation": "A bounded text query only; it does not establish absence."
+      },
+      {
+        "filter": "country=PH&waterBody=Lake Oro",
+        "url": "https://api.gbif.org/v1/occurrence/search?country=PH&waterBody=Lake%20Oro&limit=100",
+        "matchedRecords": 0,
+        "interpretation": "The matching records use locality rather than waterBody; this zero-result query does not establish absence."
+      }
+    ],
+    "representativeRecordUrls": [
+      "https://api.gbif.org/v1/occurrence/4523543680",
+      "https://api.gbif.org/v1/occurrence/4523543676"
+    ]
+  },
+  "recordAudit": {
+    "lakeOroFishRecords": 10,
+    "dakongNapoFishRecords": 7,
+    "basisOfRecordForMatchedFish": "MATERIAL_CITATION",
+    "sharedDatasetKey": "ddd46c4c-1c7a-49d6-8420-0c8b34a94a53",
+    "sharedSourceCitation": "Cuadrado et al. (2019), the same two-lake FishTaxa article reviewed in the source audit.",
+    "recordLicense": "CC BY-NC 4.0 as returned in GBIF occurrence records; this does not change the underlying article's all-rights-reserved statement or establish Bangwit's reuse rights.",
+    "lakeOroCoordinateAndAdministrativeConflict": {
+      "gbifRecordKeysReviewed": [
+        4523543680,
+        4523543683,
+        4523543685,
+        4523543692,
+        4523543698,
+        4523543700,
+        4523543735,
+        4523543757,
+        4523543758,
+        4523543761
+      ],
+      "recordsShareOnePoint": true,
+      "gbifPoint": {
+        "decimalLatitude": 8.3468,
+        "decimalLongitude": 125.411
+      },
+      "recordLocality": "Lake Oro",
+      "recordMunicipality": "Esperanza",
+      "gbifGadmLevels": [
+        "Agusan del Sur",
+        "La Paz",
+        "Angeles"
+      ],
+      "comparison": "The repeated GBIF point maps to a different municipality/barangay in GBIF's GADM fields than the record's stated municipality. Compared with the source paper's Lake Oro locator coordinate, the straight-line point separation is approximately 39.6 km. The paper locator is not treated as a surveyed lake boundary or a verified fish station."
+    },
+    "dakongNapoCoordinateAndAdministrativeConflict": {
+      "gbifRecordKeysReviewed": [
+        4523543676,
+        4523543687,
+        4523543694,
+        4523543704,
+        4523543732,
+        4523543763,
+        4523543766
+      ],
+      "recordsShareOnePoint": true,
+      "gbifPoint": {
+        "decimalLatitude": 8.3892,
+        "decimalLongitude": 125.3922
+      },
+      "recordLocality": "Dakong Napo",
+      "recordMunicipality": "Esperanza",
+      "gbifGadmLevels": [
+        "Agusan del Sur",
+        "San Luis",
+        "Binicalan"
+      ],
+      "comparison": "The repeated GBIF point maps to a different municipality/barangay in GBIF's GADM fields than the record's stated municipality. Compared with the source paper's Lake Dakong Napo locator coordinate, the straight-line point separation is approximately 40.7 km. The paper locator is not treated as a surveyed lake boundary or a verified fish station."
+    },
+    "taxonToLakeCrosscheck": {
+      "sourceTableLakeTaxonAssignmentsReconciled": false,
+      "conflicts": [
+        "GBIF returns Trichopodus trichopterus under Lake Oro, while the 2019 paper's Table 2 assigns that table label to Lake Dakong Napo.",
+        "The 2019 paper's Table 2 assigns Trichopodus pectoralis to both lakes; the Lake Oro locality search returns no corresponding record."
+      ],
+      "interpretation": "The GBIF material-citation set does not faithfully reproduce all source table lake assignments. Do not use it to repair, expand, or replace the source's historical lake-coded results."
+    },
+    "georeferencedByField": "Cuadrado et al. is named as georeferencer, but the repeated GBIF points and GBIF GADM locality results conflict with the source's lake locator coordinates and stated study locality. No occurrence coordinate is accepted as a verified lake station."
+  },
+  "decision": {
+    "independentCorroboratingRecordsFound": 0,
+    "sameSourceMaterialCitationRecordsFound": 17,
+    "otherTaxonomicGroupsExcludedFromFishCount": 5,
+    "coordinatesAdmitted": 0,
+    "lakeGeometryAdded": 0,
+    "publicSpeciesRowsAdded": 0,
+    "currentPresenceClaimsAdded": 0,
+    "dietClaimsAdded": 0,
+    "publicationApproval": false,
+    "reason": "All matching fish entries are material citations from the same source article, carry a non-commercial GBIF dataset license, and contain lake-assignment and georeferencing conflicts. The source article's separate rights statement remains unresolved."
+  },
+  "limitations": [
+    "GBIF text searches are discovery screens; a zero result does not prove biological absence or a complete lack of records.",
+    "The GBIF dataset aggregates records from published studies and is not an independent sampling event for this paper.",
+    "The points are repeated GBIF record coordinates, not verified lake boundaries or taxon-specific sampling stations.",
+    "The GBIF CC BY-NC 4.0 statement is recorded as dataset metadata only; legal compatibility with public app use and the source article's separate rights are not resolved here.",
+    "No voucher specimen or sample accession was independently linked or reidentified."
+  ],
+  "nextAction": "Seek genuinely independent, reusable voucher-backed collection records or author/institution clarification on the GBIF taxon-to-lake and coordinate fields. Meanwhile continue the Caraga freshwater source queue using separately accessible primary evidence; do not promote this GBIF mirror to app data.",
+  "sources": [
+    {
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Lake%20Oro&limit=100",
+      "supports": "Bounded GBIF locality query and returned match count, taxonomic groups, material-citation basis, dataset key, repeated point, and dataset license."
+    },
+    {
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Dakong%20Napo&limit=100",
+      "supports": "Bounded GBIF locality query and returned Dakong Napo material citations, record fields, shared dataset, and repeated point."
+    },
+    {
+      "url": "https://api.gbif.org/v1/dataset/ddd46c4c-1c7a-49d6-8420-0c8b34a94a53",
+      "supports": "GBIF dataset title, DOI, dataset license, description, originator/publisher, date, and literature-aggregation method."
+    },
+    {
+      "url": "https://techdocs.gbif.org/en/openapi/v1/occurrence",
+      "supports": "Official documentation for occurrence searches, supported locality/waterBody search endpoints, and record retrieval."
+    },
+    {
+      "url": "https://www.biotaxa.org/ft/article/download/4-1-1/50103/0",
+      "supports": "Primary paper's lake-coded table and locator coordinates used for discrepancy comparison; no table content or source coordinate is reproduced in this audit."
+    }
+  ]
+}
