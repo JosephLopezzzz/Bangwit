@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-31",
+  "phaseId": "M2",
+  "regionIds": ["1600000000"],
+  "regionName": "Region XIII (Caraga)",
+  "status": "two-gbif-verbatim-records-reviewed;distinct-historical-field-numbers;museum-detail-pages-not-independently-retrieved;taxonomy-unresolved;research-only",
+  "purpose": "Inspect the verbatim Darwin Core fields for two Lake Mainit Glossogobius museum-catalog records without treating their aggregator snapshots as a fresh specimen examination or releasing a species occurrence to the app.",
+  "discoverySource": {
+    "reviewFile": "national-caraga-butuan-market-voucher-discovery-20261031.json",
+    "studySourceId": "libot-et-al-2024-butuan-freshwater-market-inventory",
+    "relatedTaxonomyReview": "national-caraga-butuan-market-taxonomy-crosscheck-20261031.json",
+    "selectedRecordCount": 2
+  },
+  "access": {
+    "method": "Retrieved GBIF Occurrence API verbatim endpoints, which expose the original provider-supplied Darwin Core values indexed for the selected records.",
+    "checkedOn": "2026-10-31",
+    "casCollectionPortal": {
+      "url": "https://researcharchive.calacademy.org/research/Ichthyology/collection/index.asp",
+      "outcome": "The Specify portal shell loaded, but this review did not retrieve the detail page for catalog 38533 or verify its record inside the CAS collection database."
+    },
+    "fieldMuseumCollectionPortal": {
+      "url": "https://collections-zoology.fieldmuseum.org/list?f%5B0%5D=ss_CatCatalog%3A%22Fishes%22",
+      "outcome": "The Fishes collection search request returned bot-detection HTML rather than a catalog record. No challenge or access control was bypassed."
+    },
+    "limitations": "The two GBIF verbatim objects are provider-supplied snapshots, not independent museum-page confirmation. No curator was contacted and no physical specimen, image, jar label or loan file was examined."
+  },
+  "records": [
+    {
+      "institution": "California Academy of Sciences, Ichthyology",
+      "gbifKey": 3426420228,
+      "verbatimEndpoint": "https://api.gbif.org/v1/occurrence/3426420228/verbatim",
+      "occurrenceId": "urn:catalog:CAS:SU(ICH):38533",
+      "catalogNumber": "38533",
+      "collectionCode": "SU(ICH)",
+      "scientificNameVerbatim": "Glossogobius giurus",
+      "identifiedByVerbatim": "A. W. Herre",
+      "recordedByVerbatim": "Herre, Albert W.",
+      "fieldNumberVerbatim": "AWH IV-40",
+      "localityVerbatim": "Lake Mainit",
+      "waterBodyVerbatim": "Lake Mainit",
+      "eventDateVerbatim": "1941-10",
+      "individualCountVerbatim": "9",
+      "georeferenceProtocolVerbatim": "FishNet Collaborative Georeferencing Project",
+      "coordinate": {
+        "decimalLatitude": 9.779869,
+        "decimalLongitude": 125.496855,
+        "coordinateUncertaintyInMeters": 3791
+      },
+      "verbatimLicense": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "interpretation": "The source record reports a 9-count lot, field number AWH IV-40, and Lake Mainit locality. The coordinate is a georeferenced point with 3,791 m uncertainty, not a precise shoreline, station, or market-supply location. The record's source identification has not been re-examined."
+    },
+    {
+      "institution": "Field Museum of Natural History, Fishes",
+      "gbifKey": 666627608,
+      "verbatimEndpoint": "https://api.gbif.org/v1/occurrence/666627608/verbatim",
+      "occurrenceId": "4be15225-2ceb-48fc-92e8-e90cf75e5b13",
+      "catalogNumber": "40585",
+      "collectionCode": "Fishes",
+      "scientificNameVerbatim": "Glossogobius giurus",
+      "identifiedByVerbatim": null,
+      "recordedByVerbatim": "A. W. C. T. Herre",
+      "fieldNumberVerbatim": "AWH1940-9",
+      "localityVerbatim": "Lake Mainit",
+      "waterBodyVerbatim": null,
+      "higherGeographyVerbatim": "Pacific, Asia, Philippines, Philippine Islands, Mindanao: Lake Mainit. [LL]",
+      "stateProvinceVerbatim": "Surigao",
+      "eventDateVerbatim": "1940-04",
+      "individualCountVerbatim": "2",
+      "georeferenceProtocolVerbatim": null,
+      "coordinate": {
+        "decimalLatitude": 9.435295,
+        "decimalLongitude": 125.520537,
+        "coordinateUncertaintyInMeters": null
+      },
+      "verbatimLicense": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "verbatimAccessRights": "https://www.fieldmuseum.org/field-museum-natural-history-conditions-and-suggested-norms-use-collections-data-and-images",
+      "interpretation": "The source record reports a 2-count lot, field number AWH1940-9, locality Lake Mainit, and historical state label Surigao. Its point has no recorded uncertainty or georeference protocol, and the normalized GBIF record flags institution/collection matching issues. Do not promote the point or infer a precise catch station."
+    }
+  ],
+  "crossRecordAssessment": {
+    "identity": "The records carry different catalog numbers, field numbers and event months/years. Both name the historical collector as Herre, with different source strings. This supports two distinct catalog-record leads; the jars and lot contents have not been inspected.",
+    "taxonomy": "Both provider-supplied names are Glossogobius giurus; GBIF currently interprets them as Glossogobius giuris (Hamilton, 1822). Eschmeyer's Catalog notes a composite-species/type-history issue. No independent expert identification was obtained.",
+    "locality": "CAS has Lake Mainit as both locality and waterBody. Field Museum provides Lake Mainit in locality and higherGeography but leaves waterBody empty. Neither source supplies a link to the 2023 Butuan market survey or its vendor-reported fish.",
+    "rights": "Both provider records display CC0 metadata. The Field Museum record separately links its collections-data norms. License metadata does not establish taxon validity, a current ecological record, or app admission.",
+    "decision": "Retain two historical museum-record leads for further curation; add no current or historical species assertion, coordinate, geometry, or public-app row."
+  },
+  "decision": {
+    "providerVerbatimRecordsInspected": 2,
+    "museumDetailPagesIndependentlyRetrieved": 0,
+    "physicalSpecimensInspected": 0,
+    "curatorsContacted": 0,
+    "taxaIndependentlyReidentified": 0,
+    "waterbodyPresenceAssertionsAdded": 0,
+    "coordinatesOrGeometryAdded": 0,
+    "publicAppRowsAdded": 0,
+    "publicationApproval": false
+  },
+  "nextAction": "Keep both lots held until a fish curator or original museum collection database confirms the label, identification history and lot details. Continue with the next direct-sampling freshwater Caraga source; do not make a curator email or app release a dependency for the national research queue.",
+  "references": [
+    {
+      "url": "https://api.gbif.org/v1/occurrence/3426420228/verbatim",
+      "supports": "CAS catalog 38533 provider-supplied verbatim fields, including field number, lot count, date, waterBody, georeference protocol and uncertainty."
+    },
+    {
+      "url": "https://api.gbif.org/v1/occurrence/666627608/verbatim",
+      "supports": "Field Museum catalog 40585 provider-supplied verbatim fields, including field number, lot count, date, locality, historical province and missing uncertainty/protocol."
+    },
+    {
+      "url": "https://researcharchive.calacademy.org/research/Ichthyology/collection/index.asp",
+      "supports": "Official CAS Ichthyology collection database portal. This review accessed the portal shell but did not retrieve an individual lot page."
+    },
+    {
+      "url": "https://collections-zoology.fieldmuseum.org/list?f%5B0%5D=ss_CatCatalog%3A%22Fishes%22",
+      "supports": "Official Field Museum Fishes collection search entry. The automated request returned bot-detection HTML, not the selected record."
+    },
+    {
+      "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Glossogobius&species=giuris&tbl=species",
+      "supports": "Current Glossogobius name and type-history caveat from the taxonomy cross-check."
+    }
+  ]
+}
