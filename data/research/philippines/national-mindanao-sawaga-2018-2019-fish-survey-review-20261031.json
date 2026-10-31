@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-31",
+  "phaseId": "M2",
+  "regionIds": ["1000000000"],
+  "regionName": "Mindanao - Region X (Northern Mindanao)",
+  "status": "historical-river-survey;2018-2019;reported-292-catch;species-count-conflict;station-coordinates-no-taxon-crosswalk;research-only",
+  "question": "What can the 2020 Sawaga River survey and a separate 2021 preliminary report support without treating a historical study as a present-day or complete river inventory?",
+  "sourceId": "lubos-et-al-2020-sawaga-river-fish-survey",
+  "source": {
+    "citation": "Lubos, L. C., Barroso, C. J. V., Tantoy, O. A., Cuenco, M. A. T., & Lubos, L. C. (2020). Diversity of Freshwater Fish in Sawaga River, Malaybalay City, Bukidnon, Philippines. Asian Journal of Biodiversity, 11(1), 125-136. https://doi.org/10.7828/ajob.v11i1.1391.",
+    "publisherUrl": "https://asianscientificjournal.com/new/publication/index.php/ajob/article/view/1391",
+    "publisherPdfUrl": "https://asianscientificjournal.com/new/publication/index.php/ajob/article/download/1391/2022",
+    "reviewedFullTextUrl": "https://www.researchgate.net/publication/358045258_Diversity_of_Freshwater_Fish_in_Sawaga_River_Malaybalay_City_Bukidnon_Philippines",
+    "access": "The publisher article metadata and abstract were reviewed. Its publisher PDF download returned a Cloudflare JavaScript/cookie challenge and was not bypassed. The text of the author-uploaded ResearchGate full text was reviewed; ResearchGate marks it as author content that may be subject to copyright. The extracted text omits the Table 1 cells, so no table-only station allocations or names were transcribed."
+  },
+  "studyContext": {
+    "sampleWindow": "July 2018-December 2019, as reported in the abstract.",
+    "reportedWaterbody": "Sawaga River, Malaybalay City, Bukidnon. The article describes the river as flowing through several Malaybalay barangays and meeting the Manupali River; those narrative reach descriptions are not a surveyed river geometry.",
+    "samplingStations": [
+      { "label": "Station 1", "description": "Near the diversion-road bridge at Barangay Sumpong", "latitude": 8.1616, "longitude": 125.1180 },
+      { "label": "Station 2", "description": "Near BukSU Main Campus at Fortich Street", "latitude": 8.1558, "longitude": 125.1229 },
+      { "label": "Station 3", "description": "City Slaughterhouse, Barangay 9", "latitude": 8.1426, "longitude": 125.1294 }
+    ],
+    "coordinateLimitations": "The paper prints these decimal-degree station coordinates but does not state a datum/CRS or precision method. The accessible text does not expose a complete taxon-by-station matrix; do not attach all reported taxa to every point or infer a river line/polygon from three stations.",
+    "samplingMethods": ["Gill nets, cast nets, and drag nets, reportedly 100 m long and 2 m wide", "Local fishing methods and hired fishers", "Fish purchased from fishers on site"],
+    "effortAndProvenance": "The methods describe overnight net sets of at least 12 hours and state live fish were released after field identification and measurement. Purchased fish are not linked to a specific capture station in the accessible text. No specimen accessions or specimen-level images/metadata are reported in the reviewed text.",
+    "permitAndEthics": "The article states that university ethics standards and necessary permits were followed; no permit identifier or current public fishing/access permission is established by that statement."
+  },
+  "reportedFindings": {
+    "abstractClaim": "The abstract reports 292 individual freshwater fish from three stations, identified as eight species belonging to seven genera and seven families.",
+    "resultsProseCounts": [
+      { "sourceLabel": "Poecilia reticulata", "count": 78 },
+      { "sourceLabel": "Amatitlania nigrofasciata (black-striped form)", "count": 51 },
+      { "sourceLabel": "Trichopodus trichopterus", "count": 43 },
+      { "sourceLabel": "Nomorhamphus pectoralis", "count": 39 },
+      { "sourceLabel": "Amatitlania nigrofasciata (yellowish form)", "count": 31 },
+      { "sourceLabel": "Xiphophorous hellerii (source spelling)", "count": 27 },
+      { "sourceLabel": "Cyprinus carpio", "count": 18 },
+      { "sourceLabel": "Pterygoplichthys pardalis", "count": 5 }
+    ],
+    "countInterpretation": "The eight count categories sum to 292, matching the article's stated total. The accessible Results prose exposes only seven distinct binomial strings because it lists A. nigrofasciata twice as black-striped and yellowish forms; it does not reconcile this with the abstract's eight-species claim. The extracted author-uploaded copy omits Table 1 cells, preventing a direct inspection of whether another table label or row explains the discrepancy. Preserve the source claim and all count categories without converting the variants into separate taxa.",
+    "otherInternalIssues": ["The article describes an eight-species, seven-genus result, but the accessible prose name list contains seven distinct genera as well as seven distinct binomials.", "The source writes Xiphophorous hellerii in its Results prose; a later Sawaga paper uses Xiphophorus hellerii. Preserve both source spellings pending specimen review.", "The methods describe calculating mortality, exploitation, and recruitment/spawning patterns from standard length with FISAT, but the reviewed methods text does not describe the additional biological parameters needed to substantiate those outputs. Do not reuse such outputs as validated population metrics."]
+  },
+  "relatedStudyComparison": {
+    "sourceId": "lubos-bucol-2021-sawaga-fish-report",
+    "comparison": "A separate 2021 publisher-hosted preliminary report records two A. nigrofasciata caught opportunistically at Barangay Bangcud on 5 December 2020 and 11 N. philippinus from two visits (10 December 2020 and 22 February 2021). It also discusses photographs/observations of other Sawaga fishes, including Pterygoplichthys disjunctivus and Ophisternon bengalensis. This is later evidence from separate dates, not a correction or specimen crosswalk for the 2018-2019 survey.",
+    "taxonConflicts": "The 2020 Results prose names N. pectoralis and P. pardalis, while the 2021 report describes N. philippinus and P. disjunctivus. These are different source identifications; no specimens or 2020 vouchers were available to resolve them. The 2021 report's yellowish A. nigrofasciata individual also shows color variation within the later authors' identification, but does not independently establish what the 2020 duplicate table categories represent.",
+    "overlapStatus": "Different reported sampling periods are stated, but no direct sample crosswalk is provided. Keep reported study observations and counts separate; do not combine them into a single richness total or claim a trend."
+  },
+  "qualityAndRights": {
+    "temporalScope": "Historical reports from 2018-2019 and a separate 2020-2021 preliminary report do not establish current river-wide presence or abundance.",
+    "stationScope": "Three survey stations are listed, but a complete taxon-by-station matrix was not available in the reviewed extracted text. Fish bought from fishers lack a verified station-level provenance.",
+    "geometry": "Station coordinates are source-reported only. They are not republished as current map points and do not define a river corridor or boundary.",
+    "taxonomy": "Source spellings and counts are retained. The separate targeted name-authority cross-check is in national-mindanao-sawaga-fish-taxonomy-crosscheck-20261031.json; it cannot reidentify historical specimens.",
+    "reuse": "No item-specific open license or republication permission was verified for the 2020 article. The author-uploaded copy is marked as potentially subject to copyright. The separately cited 2021 publisher PDF has no reuse license established in this review."
+  },
+  "disposition": {
+    "publicSpeciesRowsAdded": 0,
+    "currentOccurrenceRowsAdded": 0,
+    "stationPointsPublished": 0,
+    "riverGeometryAdded": 0,
+    "dietOrBaitClaimsAdded": 0,
+    "waterQualityOrSafetyClaimsAdded": 0,
+    "studiesCombined": false,
+    "publicationApproval": false,
+    "reason": "Historical reach-level study; reported richness conflicts with its accessible distinct-name list; exact table rows and station-by-taxon crosswalk were unavailable; later paper gives differing fish identifications; current presence and reuse terms remain unverified."
+  },
+  "nextAction": "Continue to a distinct Mindanao freshwater river or lake survey with a direct source and better voucher or taxon-to-site evidence. Keep the Sawaga source names and count discrepancy research-only unless original table cells, vouchers, or author crosswalks become accessible.",
+  "references": [
+    {
+      "url": "https://asianscientificjournal.com/new/publication/index.php/ajob/article/view/1391",
+      "supports": "Official publisher title, authors, abstract, journal issue, and DOI."
+    },
+    {
+      "url": "https://www.researchgate.net/publication/358045258_Diversity_of_Freshwater_Fish_in_Sawaga_River_Malaybalay_City_Bukidnon_Philippines",
+      "supports": "Author-uploaded full-text extraction for 2018-2019 sampling dates, station coordinates/descriptions, methods, prose count categories and internal text inconsistencies; table cells were absent from the extracted text."
+    },
+    {
+      "url": "https://asianscientificjournal.com/new/publication/index.php/ajob/article/download/1399/2030",
+      "supports": "Separate December 2020/February 2021 Sawaga report, two A. nigrofasciata captures, reported N. philippinus samples, and its distinct source labels for other photographed/reported fish."
+    }
+  ]
+}
