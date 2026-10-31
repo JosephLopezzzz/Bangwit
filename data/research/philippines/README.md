@@ -1038,3 +1038,8 @@ Reviewed Escaño et al.'s full 2022 NFRDI article and checked the 18 GenBank acc
 - **Sources:** [SEAFDEC/AQD repository record](https://repository.seafdec.org.ph/handle/10862/829?locale-attribute=en), [linked full paper](https://repository.seafdec.org.ph/bitstream/10862/829/1/cemplrfa_p113-122.pdf).
 
 **Next implementation batch:** continue Bicol's inland-water source sweep across Lake Buhi, Bato, Baao, Danao and the Bicol River, while independently seeking the cited 1995 thesis. Preserve historical/locality evidence tiers and do not wait on the thesis to screen other sources.
+
+
+### Avalar Manila Bay EISR fishery-context review -- 31 October 2026
+
+The official EMB search index exposes a 2021 EISR with marine-ecology and actual fishing documentation dated 20 and 22 May. Its fishery table combines two documented swimming-crab catches with interview-reported fish context; a separate broad fish list groups Rosario, Noveleta, Cavite City, Kawit and San Nicolas Shoal without a per-taxon station or municipality crosswalk. Direct PDF access returned HTTP 403, and item-specific reuse rights remain unverified. This is linked only to shared Manila Bay research context; no taxon names, species assertions, diet, geometry, safety/legal claim or public row were added. Possible overlap with nearby EIS evidence is unresolved, so the reports are not counted as independent species confirmations. See calabarzon-avalar-manila-bay-eis-fisheries-review-20261031.json and the 31 October denominator profile.
