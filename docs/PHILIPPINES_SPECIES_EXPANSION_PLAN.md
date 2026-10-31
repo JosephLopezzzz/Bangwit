@@ -3417,4 +3417,15 @@ Added national-calabarzon-taal-2021-ichthyoplankton-family-level-review-20261101
 
 The Taal study and its review are now linked from the Taal waterbody entry and the CALABARZON coverage denominator profile. The profile still counts 118 waterbody research leads and now resolves 120 unique source references; this does not change regional completion status or add species evidence.
 
-**Next:** step 397 continues the L1 CALABARZON inland-water sweep with a primary source that identifies fish to species and links each name to a dated lake, river or reach. Keep this study as family-level historical ecological context only; do not infer species identities or current legal zones.
+**Next:** step 397 reviewed the NFRDI FY 2023 Taal/Pansipit catch summary. Keep this study as family-level historical ecological context only; do not infer species identities or current legal zones.
+
+
+### National rollout step 397 - NFRDI FY 2023 Taal Lake and Pansipit River catch-summary review - 1 November 2026
+
+Reviewed the official NFRDI annual report record and the institute's PDF text for its Lake Taal and Pansipit River stock-assessment summary. The report covers NFRDI work during 2023 and states a Lake Taal estimated landed catch of 387.89 metric tons. Its species-total line reads “Forty-one (49) aquatic species,” while the same sentence reports 46 finfishes and three other aquatic taxa, so the lake-wide count is inconsistent and remains unresolved. The report names five dominant Lake Taal fishes but does not give their individual capture dates or a complete species table.
+
+For Pansipit River, the report gives an estimated 1,419.33 kg landed catch across five landing centers from February through September 2023 and reports 38 mixed aquatic taxa: 32 finfish, two molluscs and four crustaceans, in 29 families. It names five dominant finfishes and gives aggregate catch weights and shares. The summary does not provide the full list, methods, species-by-center records, or capture-site coordinates. Landing centers cannot be used as exact capture points; these are historical catch records and not proof of current wild presence or a complete species inventory.
+
+The official PDF states “Copyright © 2024. DA-NFRDI. All rights reserved.” No open license or separate reuse approval for the report's data was found. No report file, full species table, image, or article prose was copied; no catch, occurrence, diet, geometry, or app rows were added. The underlying source was already registered and linked to both waterbodies, so the source registry remains at 543 unique entries. See `national-calabarzon-nfrdi-taal-pansipit-fy2023-catch-summary-review-20261101.json`.
+
+**Next:** step 398 seeks a species-by-date and landing-site extract with authorized reuse, or an independently reusable primary CALABARZON inland-water survey. Keep the annual-report names in the historical catch lane until each species, waterbody, time window, taxonomy, and permitted use are adequately supported.
