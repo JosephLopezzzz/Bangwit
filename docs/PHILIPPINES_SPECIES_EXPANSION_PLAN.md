@@ -2690,3 +2690,11 @@ Reviewed the full 2017 NFRDI article and its site map, methods and results. It a
 Added `nfrdi-2017-manila-bay-small-pelagic-ringnet` and `calabarzon-manila-bay-nfrdi-2014-ringnet-review-20261031.json`; linked only to shared Manila Bay research context and the four source-described Cavite landing localities. The PDF is hash-pinned in ignored local research storage. No species table or figure was copied, item-specific reuse remains unresolved, and no species assertion, capture-site assignment, geometry, current-presence claim, or public-app row was added. The denominator now has 119 unique assigned source references; CALABARZON remains at 118 selected waterbody leads, 60 river leads, 9 imported assertions and zero public rows. The source registry has 447 entries.
 
 **Next:** continue the independent coastal/freshwater source queue. If NFRDI responds, request taxon-by-site or capture-area linkage and item-specific reuse terms; do not infer capture origin from landing locations.
+
+### National rollout step 319 - Tikub Lake 2014 fish-survey full-text access review - 31 October 2026
+
+The publisher page for Labatos and Briones (2014) exposes its abstract but gates the full article behind login/registration. A public ResearchGate author-upload page identifies author Bonifacio V. Labatos Jr. and exposes the article text; the platform warns that content may be subject to copyright. The article reports 221 fish and nine collected taxa, while a separate section/table lists four additional reported-only taxa. Its methods describe ten lake sampling points and several gears. Do not merge reported-only mentions with captures or treat this 2014 survey as current presence.
+
+Added `calabarzon-tikub-2014-fish-fulltext-review-20261031.json`, refreshed the existing source record and CALABARZON denominator pins, and linked the review to the Ticub Lake research lead. No item-specific reuse license was found; neither checklist table was copied, no taxon assertion or public row was added, and no sampling coordinates or geometry were adopted. The Ticub lead remains research-only.
+
+**Next:** seek item-specific reuse clarification and independently verify the historical source taxonomy before considering the nine collected names. Continue the wider freshwater/coastal source queue in parallel; an author upload is access for review, not a reuse license.
