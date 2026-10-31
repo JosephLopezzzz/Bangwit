@@ -1,15 +1,15 @@
 {
   "schemaVersion": 1,
-  "reviewedOn": "2026-10-24",
+  "reviewedOn": "2026-11-01",
   "phaseId": "L1",
   "regionId": "0400000000",
   "regionName": "Region IV-A (CALABARZON)",
-  "status": "two-primary-laguna-survey-leads-confirmed;field-level-species-data-held-pending-rights-date-and-taxonomy-review",
+  "status": "two-primary-laguna-survey-leads-confirmed;Santa-Cruz-fulltext-read;field-level-species-data-held-pending-rights-date-station-crosswalk-taxonomy-and-reuse-review",
   "sourceIds": [
     "paller-2011-makiling-fishes",
     "cui-2022-santa-cruz-river-fish"
   ],
-  "method": "Reviewed official publisher and UPLB repository indexed article text, including the publisher-indexed table descriptions. Direct PDF/page fetches returned HTTP 403, so no local copy was retained and no table, figure or species-by-site matrix was transcribed. Checked the first-party journal/repository reuse policies separately.",
+  "method": "Reviewed official publisher and UPLB repository text and reuse policies. On 2026-11-01 the official JESAM PDF's full text became readable in the web-text view although a direct PDF open returned HTTP 403. The PDF screenshot endpoint returned a cache miss, so the Santa Cruz table was not visually verified or transcribed; no local copy was retained.",
   "surveys": [
     {
       "sourceId": "paller-2011-makiling-fishes",
@@ -28,12 +28,12 @@
       "published": 2022,
       "siteName": "Santa Cruz River System, Laguna",
       "surveyPeriod": "Three quarters during 2016-2017",
-      "sourceReports": "The indexed article reports 1,474 specimens, 15 species, and sampling across upstream, midstream and downstream parts of the river system; identified specimens were sent to the UPLB Museum of Natural History for verification.",
+      "sourceReports": "The full-text web view reports 1,474 individuals and 15 taxa for the selected diminutive-fish survey across a multi-area river system. Representative specimens were sent to the UPLB Museum of Natural History for verification; no accession numbers are supplied in the text reviewed.",
       "collectionDate": "2016-2017; exact visit dates not established",
-      "waterbodyScope": "The system-level article name may be broader than the existing single Sta Cruz River lead; no assignment or alias was added.",
-      "taxonomy": "The article includes a species table, but no rows were transcribed or checked against a current taxonomic authority in this batch.",
+      "waterbodyScope": "The source describes Nagcarlan and Liliw upstream, Magdalena midstream, and Sta. Cruz downstream, while Table 1 labels the four sites Nagcarlan, Liliw, Calumpang, and Sta. Cruz. The Magdalena/Calumpang difference and correspondence to the single Sta Cruz River scope lead remain unresolved; no assignment or alias was added.",
+      "taxonomy": "The table's searchable text is column-disordered and could not be visually verified. Source strings including Glossogobius cf. illimis and Micropis brachyurus brachyurus, plus the paper's first-Philippine-record statement for Dawkinsia arulius, require source/specimen and current-authority review; no name was normalized.",
       "reuse": "The UKDR policy says authors assign article copyright to UKDR, subject to enumerated personal-use exceptions. No open reuse license for this article was identified. No table or taxa rows are redistributed in this review.",
-      "access": "Official UPLB JESAM publisher-indexed text was readable; direct PDF open returned HTTP 403. No local raw copy or visual table review."
+      "access": "Official UPLB JESAM full text was read in its web-text view on 2026-11-01; direct PDF open returned HTTP 403 and PDF screenshot returned cache miss. No local copy or visual table review."
     }
   ],
   "rightsPolicySources": [
@@ -64,10 +64,11 @@
     "publicationApproval": false
   },
   "limitations": [
-    "Search-indexed primary article text is not a substitute for a retained, visually reviewed source copy when validating fine-grained table cells.",
+    "The Santa Cruz table extraction is not visually verified and is not suitable for transcribing fine-grained station cells.",
     "The Paller survey's collection date is unresolved; the article's publication/received dates are not collection dates.",
-    "The Santa Cruz River System's sites may not be equivalent to the scope registry's single Sta Cruz River lead.",
+    "The Santa Cruz River System's sites may not be equivalent to the scope registry's single Sta Cruz River lead; the methods' Magdalena label conflicts with the table's Calumpang label.",
+    "The source result is restricted to diminutive fishes below the authors' 100 mm standard-adult-length threshold, rather than all fish in the river system.",
     "Neither study establishes present-day species presence, abundance, catchability, natural diet, safety or fishing legality."
   ],
-  "nextAction": "Prioritize independently reusable GBIF/OBIS specimen records and rights-cleared government or author-supplied data for these rivers; if the survey tables are needed for public use, request written reuse permission, then visually verify table rows and reconcile every name with current taxonomy before making historical app entries."
+  "nextAction": "Request an author or UPLB Museum of Natural History station crosswalk and specimen accession details. If species-level reuse is needed, obtain written permission, visually inspect the table, reconcile source identifications with current taxonomy, and keep the historical size-selected survey separate from present-day evidence. Continue independently reusable CALABARZON freshwater research in parallel."
 }

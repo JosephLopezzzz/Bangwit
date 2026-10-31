@@ -3476,3 +3476,14 @@ Re-read the complete PUP Journal of Science and Technology paper by Gacilos et a
 The publisher's policy specifies CC BY-NC 4.0. Because the project has no unrestricted reuse basis for this source and the fish identity, catch provenance, and salinity are unresolved, no fish assertion or public app row was admitted. Updated the existing source review and registry URL/access record. The source was already registered; scope reference counts and the 545-source registry total do not change. No email was sent and no PDF was retained locally.
 
 **Next:** obtain author-confirmed scientific identification or voucher, exact capture date/reach/station, and any measured salinity or an independently reusable fish record. Keep “kitang” as an unverified common-name lead until then.
+
+
+### National rollout step 403 - Santa Cruz River System 2022 full-text review - 1 November 2026
+
+Re-read Cui et al. (2022) from the official JESAM PDF's web-text view. It reports 1,474 individuals, nine families, 12 genera and 15 taxa for a size-selected survey of diminutive freshwater fishes across three quarters from December 2016 to June 2017. It is not a whole-fish inventory. The article describes four areas as Nagcarlan and Liliw headwaters, Magdalena midstream and Santa Cruz downstream, but Table 1 labels the four sites Nagcarlan, Liliw, Calumpang and Sta. Cruz. The station-name mismatch remains unresolved, as does the relation to the scope registry's single Sta Cruz River lead.
+
+The PDF was readable through the publisher web-text view although a direct PDF request returned 403. The PDF screenshot endpoint returned a cache miss, so the species-by-station cells were not visually verified or transcribed. The searchable table contains names requiring taxonomic review, including *Glossogobius cf. illimis* and *Micropis brachyurus brachyurus*; the paper's claimed first Philippine record of *Dawkinsia arulius* also needs specimen and current-authority confirmation. The abstract and results give conflicting Shannon-Weiner ranges. UPLB Museum of Natural History verification is described, but no specimen accession numbers are supplied in the text reviewed.
+
+The UKDR policy assigns article copyright to UKDR and allows only specified personal-use cases without further permission. No article data license or public-app reuse permission was verified. Updated the source record, prior triage, coverage-profile provenance and directory index. The existing source was already registered; the registry remains at 545 unique sources, the direct waterbody-source-reference denominator remains 123, and no species assertion, scope source reference, geometry or public app row was added. CALABARZON remains incomplete.
+
+**Next:** seek an author/UPLB museum station crosswalk and accession details; request written reuse permission before transcribing the table; continue independently reusable CALABARZON inland-water research in parallel.
