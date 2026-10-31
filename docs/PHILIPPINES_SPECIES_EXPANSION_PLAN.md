@@ -3181,4 +3181,24 @@ Cross-checked three source labels against selected Eschmeyer's Catalog of Fishes
 
 The Catalog pages are dynamic; selected official results were reviewed through indexed excerpts where direct access failed. No specimen was reidentified and no current presence, species, waterbody, diet, safety, legal, geometry or public-app assertion was added. No item-specific republication permission was verified. Added `national-mindanao-lter-2015-multimountain-fish-taxonomy-crosscheck-20261031.json` and one Catalog source record; source registry count is 509.
 
-**Next:** search for voucher accession numbers or author/repository material that could resolve the two *Puntius* labels and duplicated *Sicyopterus* rows. In parallel, continue to a distinct freshwater primary survey from Mindanao and keep the current paper research-only until source identity, site precision and reuse conditions are addressed.
+**Next:** keep both Duminagat studies separate and continue to a distinct Mindanao freshwater survey. Revisit voucher searches only if public collection identifiers or an authorized field-log path becomes available; do not assume these papers are independent.
+
+
+### National rollout step 375 - Lake Duminagat historical fish survey review - 31 October 2026
+
+Reviewed Quimpang et al.'s publisher-hosted 2018 full text and its official issue listing. The paper reports a May 2013 survey of Lake Duminagat and its southwestern outlet stream and lists six fish labels with relative abundance percentages. Results prose specifically says *Xiphophorus helleri* and *X. maculatus* were isolated only in the outlet stream; the remaining four table taxa are not fully allocated between lake and outlet. The paper does not print a total catch N alongside the table or provide public voucher accessions. It gives a rounded water-edge coordinate (8°18′N, 123°37′E) without a stated datum or sampling-station crosswalk; this is not a usable occurrence point or waterbody geometry.
+
+The paper's water measurements are from nine lake points in May 2013, not the outlet; they cannot support current water quality or safety. It reports consent and a gratuitous research permit for the original fieldwork, not present public access or fishing permission. No item-specific reuse license was found. The paper falls within the broad 2012-2013 sampling window of the overlapping-authors 2015 LTER paper, whose Lake Duminagat column reports 41 individuals. Temporal/authorship overlap does not establish shared or independent fish samples; do not combine study totals or count them as independent surveys without field logs or specimen crosswalks.
+
+No present-day species occurrence, lake/outlet app row, diet, water-quality/safety claim, geometry or coordinates were added. Added `national-mindanao-lake-duminagat-2013-fish-survey-review-20261031.json` and its publisher source record. Corrected the registry's stale declared count (507) to the 509 unique entries already present, then added this source; count before the taxonomy record is 510.
+
+**Next:** cross-check the paper's six printed name labels while preserving its `Xiphophorus helleri` table spelling and Figure 3's `X. hellerii` variant. Do not use a name authority to infer specimen identity or current local presence.
+
+
+### National rollout step 376 - Lake Duminagat fish-name taxonomy cross-check - 31 October 2026
+
+Cross-checked the six labels against selected records in Eschmeyer's Catalog of Fishes. *Anguilla marmorata*, *Barbodes binotatus*, *Xiphophorus maculatus*, *Xiphophorus hellerii* (the paper's Figure 3 spelling) and *Poecilia reticulata* are represented as valid binomials in the selected Catalog records. The source's *Cyprinus carpio carpio* is preserved; the Catalog accepts *C. carpio* at species level and notes the subspecies form is used in some literature. Table 3 prints *Xiphophorus helleri* while Figure 3 prints *X. hellerii*; this is a source spelling variant, not a specimen re-identification.
+
+Selected records were reviewed through official Catalog indexed excerpts; direct opens of some records were unavailable. The check establishes nomenclatural candidates only. It does not verify the paper's 2013 specimens, its native/non-indigenous assignments, outlet-only claims, locality, current presence, diet, water safety, legal status or reuse rights. No public app row was added. Added `national-mindanao-lake-duminagat-2013-fish-taxonomy-crosscheck-20261031.json` and one Catalog source record; the source registry now contains 511 unique entries, and its declared count is reconciled to 511.
+
+**Next:** continue with a distinct, independently reviewable Mindanao river or lake fish survey, favoring public voucher IDs and complete taxon-to-waterbody links. Keep the two Duminagat papers historical and research-only unless their sample overlap and specimen provenance can be resolved.
