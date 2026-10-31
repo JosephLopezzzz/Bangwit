@@ -3,7 +3,7 @@
   "checkedOn": "2026-10-31",
   "status": "research-only-source-registry",
   "scope": "National acquisition references, freshwater spatial-source leads, and CALABARZON/Central Luzon identity/source leads. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 483,
+  "sourceCount": 484,
   "sources": [
     {
       "id": "carumbana-siaton-river-limnology-fishery-report-2006",
@@ -15265,6 +15265,44 @@
         "No occurrence, natural-diet, safety, legal or public-app claim was added."
       ],
       "researchStatus": "caraga;claver;river-estuary;taxonomy-crosscheck;seven-binomial-labels;three-candidate-crosswalks;four-partial-labels;specimen-identities-unverified;research-only"
+    },
+    {
+      "id": "gbif-claver-voucher-screen-20261031",
+      "title": "GBIF locality and occurrence-index screen for Claver river fish labels",
+      "provider": "Global Biodiversity Information Facility (GBIF)",
+      "url": "https://techdocs.gbif.org/en/openapi/v1/occurrence",
+      "additionalUrls": [
+        "https://techdocs.gbif.org/en/data-use/download-formats",
+        "https://api.gbif.org/v1/occurrence/search?country=PH&q=Claver&limit=300&offset=0",
+        "https://api.gbif.org/v1/occurrence/search?country=PH&q=Claver&limit=300&offset=300"
+      ],
+      "role": "Bounded occurrence-index screen for seven candidate current names from the Claver river/estuary paper. Exact locality=Claver and stateProvince=Surigao del Norte searches returned no target rows; all 458 results of the country-wide q=Claver query were paged and contained no target-name match. This finds no independent local voucher in the checked index paths, but is not an absence finding or proof that no voucher exists.",
+      "checkedOn": "2026-10-31",
+      "sourceYear": 2026,
+      "citation": "GBIF Occurrence API, read-only searches accessed 31 October 2026; query details and interpretation in national-caraga-claver-gbif-voucher-screen-20261031.json.",
+      "access": {
+        "status": "seven-name-bounded-screen;claver-locality-zero;surigao-del-norte-field-zero;claver-free-text-458-paged;no-target-match;no-independent-voucher-verified;research-only",
+        "reviewFiles": [
+          "national-caraga-claver-gbif-voucher-screen-20261031.json"
+        ],
+        "fullTextRetrieved": false
+      },
+      "reuse": {
+        "metadata": "GBIF API documentation and occurrence search were publicly accessible; item-specific rights for any underlying Claver journal source are unchanged and unverified.",
+        "raw": "Read-only API queries only; no occurrence records, bulk download or raw snapshot is retained for this zero-match screen.",
+        "content": "Only query parameters, result counts, concise findings and official documentation links are retained."
+      },
+      "publicationApproval": false,
+      "license": "GBIF API documentation and query receipt are attribution references; no article-derived public app content is approved",
+      "licenseUrl": null,
+      "caveats": [
+        "GBIF index search is not a census of physical collections; zero results do not establish absence.",
+        "The q=Surigao probe returned 38,568 rows and was not exhaustively paged; it supports no target-taxon finding.",
+        "No target occurrence was returned, so there are no collection identifiers to assess for this screen.",
+        "The source article's province conflict and incomplete station mapping remain unresolved.",
+        "No current presence, diet, safety, legal, geometry or public-app assertion was added."
+      ],
+      "researchStatus": "caraga;claver;gbif;voucher-discovery;bounded-index-search;zero-target-matches;not-absence-evidence;research-only"
     }
   ],
   "sourcePolicy": {

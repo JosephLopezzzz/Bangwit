@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-10-31",
+  "phaseId": "M2",
+  "regionIds": ["1600000000"],
+  "regionName": "Region XIII (Caraga)",
+  "status": "bounded-gbif-locality-and-text-screen-no-target-records;no-independent-voucher-verified;research-only",
+  "purpose": "Check whether GBIF exposes independent collection records for the seven candidate current names from the Claver river/estuary article, with locality evidence and catalog/institution identifiers. This does not validate the paper's specimen identifications or resolve its province conflict.",
+  "studySource": {
+    "sourceId": "vedra-et-al-2024-claver-river-aquatic-fauna",
+    "reviewFile": "national-caraga-claver-river-aquatic-fauna-review-20261031.json",
+    "taxonomyReviewFile": "national-caraga-claver-river-taxonomy-crosscheck-20261031.json",
+    "sourceDetailReviewFile": "national-caraga-claver-source-detail-screen-20261031.json",
+    "doi": "10.7828/ajob.v15i1.1650"
+  },
+  "screen": {
+    "taxa": [
+      "Fibramia lateralis",
+      "Oreochromis aureus",
+      "Oreochromis niloticus",
+      "Siganus guttatus",
+      "Siganus javus",
+      "Terapon jarbua",
+      "Alepes melanoptera"
+    ],
+    "checkedOn": "2026-10-31",
+    "exactLocalityQuery": "For each name, queried GBIF occurrence search with exact scientificName, country=PH, locality=Claver, limit=20. Each returned count=0.",
+    "exactProvinceQuery": "For each name, queried exact stateProvince=Surigao del Norte with country=PH. Each returned count=0. Two initial requests were rate-limited (HTTP 429) and were retried sequentially; the retry results were also zero.",
+    "freeTextQuery": "Queried country=PH&q=Claver using limit=300 at offsets 0 and 300. GBIF reported 458 total results; both pages were retrieved (endOfRecords=true at offset 300). Checked scientificName, acceptedScientificName and verbatimScientificName against all seven names; no target-name match was returned.",
+    "deferredQuery": "A separate country=PH&q=Surigao request reported 38,568 results with limit=1. Only its count and one unrelated sample row were inspected; the result set was not enumerated and is not used as evidence for or against any target taxon.",
+    "recordFieldsReviewed": [
+      "scientificName",
+      "acceptedScientificName",
+      "verbatimScientificName",
+      "locality",
+      "stateProvince",
+      "basisOfRecord",
+      "institutionCode",
+      "collectionCode",
+      "catalogNumber",
+      "datasetKey",
+      "eventDate",
+      "occurrenceID"
+    ],
+    "limits": [
+      "This is a bounded GBIF-index screen, not a census of Philippine collections or of all records under alternate names and spellings.",
+      "A zero exact-field or text-search result is not evidence of absence, does not disprove the article, and does not show that a physical specimen does not exist.",
+      "GBIF indexing, provider verbatim names, incomplete locality fields and taxonomic backbones can affect search results.",
+      "The Claver article's Surigao del Norte versus Surigao del Sur conflict and missing station-by-taxon crosswalk remain unresolved.",
+      "No author, publisher, institution or collection was contacted."
+    ]
+  },
+  "queryUrls": {
+    "exactLocalityTemplate": "https://api.gbif.org/v1/occurrence/search?scientificName={URL_ENCODED_NAME}&country=PH&locality=Claver&limit=20",
+    "exactProvinceTemplate": "https://api.gbif.org/v1/occurrence/search?scientificName={URL_ENCODED_NAME}&country=PH&stateProvince=Surigao%20del%20Norte&limit=20",
+    "freeTextPage1": "https://api.gbif.org/v1/occurrence/search?country=PH&q=Claver&limit=300&offset=0",
+    "freeTextPage2": "https://api.gbif.org/v1/occurrence/search?country=PH&q=Claver&limit=300&offset=300",
+    "uncompletedSurigaoCountProbe": "https://api.gbif.org/v1/occurrence/search?country=PH&q=Surigao&limit=1"
+  },
+  "findings": {
+    "exactLocalityTargetMatches": 0,
+    "exactProvinceTargetMatches": 0,
+    "freeTextClaverTotalRecords": 458,
+    "freeTextClaverPagesFetched": 2,
+    "freeTextClaverTargetNameMatches": 0,
+    "independentLocalVoucherRecordsFound": 0,
+    "voucherIdentifiersVerified": 0,
+    "currentPresenceAssertionsAdded": 0,
+    "stationSpecificFishAssertionsAdded": 0,
+    "naturalDietClaimsAdded": 0,
+    "safetyOrLegalClaimsAdded": 0,
+    "coordinatesOrGeometryAdded": 0,
+    "publicAppRowsAdded": 0,
+    "publicationApproval": false
+  },
+  "interpretation": "No GBIF record matching the seven checked crosswalk names was returned by the tested Claver locality, Surigao del Norte stateProvince, or completely paged Philippines-wide Claver free-text searches. Therefore this screen found no independent local voucher; it does not establish absence or invalidate the article. Without a matched occurrence carrying usable collection identifiers, no GBIF record can be treated as a specimen-level corroboration. The article remains research-only.",
+  "references": [
+    {
+      "url": "https://techdocs.gbif.org/en/openapi/v1/occurrence",
+      "supports": "Official GBIF occurrence API reference, including occurrence search and its page limit."
+    },
+    {
+      "url": "https://techdocs.gbif.org/en/data-use/download-formats",
+      "supports": "Official Darwin Core term descriptions for locality and stateProvince, and definitions for collection/institution identifiers."
+    },
+    {
+      "url": "https://asianscientificjournal.com/new/publication/index.php/ajob/article/view/1650",
+      "supports": "Publisher landing page for the source article reviewed in the Claver evidence chain."
+    }
+  ]
+}
