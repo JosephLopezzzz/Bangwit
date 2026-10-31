@@ -3498,3 +3498,14 @@ The PDF screenshot route returned a cache miss, so the species table was not vis
 Updated the existing source entry, freshwater triage, Molawin/Cambantoc scope notes, coverage profile, and directory index. The source was already registered and linked to Molawin and Cambantoc; the denominator remains 545 unique sources and 123 direct waterbody-source references. No Dampalit Falls scope unit was created because its feature crosswalk is unresolved. No species assertion, table-derived app row, geometry or water-safety/legal claim was added. CALABARZON remains incomplete.
 
 **Next:** seek voucher/accession and field-date details from UPLB; clarify whether Dampalit Falls maps to a separate waterbody unit; continue independently reusable CALABARZON inland-water research while keeping the published table held pending written permission.
+
+
+### National rollout step 405 - Fish Ark Southern Luzon photoguide access review - 1 November 2026
+
+Reviewed the official DOST-PCAARRD Fish Ark article, which reports a UPLB photoguide featuring 72 native freshwater fish species from a three-year survey across 28 Southern Luzon sites. The article names broad areas including Mt. Makiling, Mt. Banahaw, Mt. Asog/Malinao-Masaraga, Bulusan Volcano National Park and Taal Lake tributaries; it does not provide the guide's species list, exact site roster, dates, or site-by-taxon assignments. It says some vouchers were deposited at UPLB but supplies no accession numbers.
+
+Cross-checked two access leads: UPLB's repository lists Paolo P. Ocampo's 2011 Fish Ark terminal report but says the document is unavailable there; a DOST-STII bibliography cites a 91-page 2011 UPLB Limnological Research Station publication, *Freshwater Fishes of Southern Luzon, Philippines*, but the current PDF route could not be retrieved in this turn. The bibliography item, terminal report and PCAARRD-described photoguide are kept separate until their relationship is documented.
+
+Added `national-luzon-southern-luzon-fish-ark-photoguide-access-review-20261101.json` and three source records. No species names, occurrence claims, scope links, geometry, or public-app rows were added; exact waterbody mapping, vouchers, full text and reuse rights remain unresolved. The source registry contains 548 entries; the CALABARZON direct-waterbody source-reference count remains 123 because this broad source lead was not attached to any individual waterbody. No request was sent; CALABARZON remains incomplete.
+
+**Next:** seek the photoguide and the exact 28-site/taxon table through an authorized UPLB route, including methods, collection dates, voucher-accession crosswalk, bibliographic relationship to the terminal report, and reuse terms. Review each waterbody crosswalk and taxon independently before using the source in regional species coverage.
