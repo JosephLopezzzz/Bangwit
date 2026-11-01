@@ -1685,3 +1685,12 @@ Reviewed the 2017 author-uploaded Luzon preprint on Pterygoplichthys. It reports
 Added two distinct source-named river research leads and one source record. The spelling/feature match between “MalaquingIlog” in the preprint and “MalakingIlog” in the Quezon profile remains unresolved, so the leads stay separate. CALABARZON now has 133 selected leads (69 rivers), 151 distinct scope references, and 614 registry sources. No species assertions, public records, geometry, current-presence claims, or app rows were added. See the [preprint review](calabarzon-sariaya-pterygoplichthys-preprint-review-20261101.json) and [author-uploaded preprint](https://www.researchgate.net/publication/331903996_Invasion_Status_of_Pterygoplichthys_spp_Pisces_Loricariidae_in_the_Luzon_Island_Philippines_and_its_Policy_Implications).
 
 **Next:** resolve the name/feature crosswalk, confirm publication and reuse status, and seek dated site-linked vouchers or independent surveys.
+
+
+### National rollout step 456 - Quezon flood-advisory watercourse candidate inventory - 1 November 2026
+
+Reviewed Quezon Provincial Government Flood Advisory No. 14, issued 7 August 2026. It names 23 watercourse labels, including Upper Umiray, Lower Bolbok (Lawaya), Malaking-Ilog, Iyam, Pagsanjan, Agos, and other Quezon names. Some may be reach names, compound/alternate labels, or homonyms of existing scope entries; no routes or stable feature identifiers are supplied.
+
+Added one official source and a 23-name crosswalk queue, but no waterbody records. CALABARZON remains at 133 selected leads (69 rivers), 151 distinct lead source references, and 615 registered sources. The old advisory is not current hazard guidance; no fish evidence, geometry, or safety claim was added. See the [official advisory](https://quezon.gov.ph/general-flood-advisory-no-14-issued-600am-august-7-2026/) and [candidate review](calabarzon-quezon-2026-flood-advisory-watercourse-candidates-20261101.json).
+
+**Next:** resolve these candidate names against official hydrography/LGU sources before creating or merging stable leads; search fish-specific studies separately.
