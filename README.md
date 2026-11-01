@@ -134,3 +134,7 @@ PEMSEA’s public ASEANO CvSU Subproject 1 report is a probable component of the
 ### CvSU ASEANO Study 4 crosswalk — 1 November 2026
 
 CvSU’s January 2021 newsletter confirms that its Imus watershed-mapping work was ASEANO Study 4; PEMSEA’s public mapping report matches that Study 4 title. This confirms a component output, not the complete parent-project deliverable. No fish survey or GIS vector for Bangwit was verified. See the [crosswalk review](data/research/philippines/calabarzon-imus-cvsu-aseano-study4-explicit-crosswalk-20261101.json) and [research log](data/research/philippines/README.md).
+
+### ASEANO five-study output inventory — 1 November 2026
+
+Crosswalked all five studies listed in CvSU’s January 2021 newsletter to official PEMSEA report candidates. Studies 1–3 match DLSU-D community/pollution reports by title and scope; Studies 4–5 match CvSU watershed and plastic-source mapping reports. PEMSEA’s subproject numbering is kept distinct from the overall five-study numbering. The accessible Social Implications PDF is marked “ROUGH DRAFT.” These are plastic-pollution and socioeconomic outputs, not an Imus fish checklist: no taxon, specimen table, site-resolved fish observation, or fish survey was verified. No app row, occurrence, diet, water-safety claim, or geometry was added; the separate Bacoor fish-tissue lead remains unresolved. See the [five-study crosswalk](data/research/philippines/calabarzon-imus-aseano-five-study-output-crosswalk-20261101.json) and [research log](data/research/philippines/README.md).
