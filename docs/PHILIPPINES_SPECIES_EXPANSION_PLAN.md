@@ -3805,3 +3805,14 @@ Updated the two existing source records and the literature crosswalk; no new sou
 See the [Quezon Provincial Government directory](https://quezon.gov.ph/citiesmunicipalities/), the [DENR-hosted Dagatan Lake watershed plan](https://faspselib.denr.gov.ph/uploads/materials/3a7fd3f9-4f68-40b4-a1cf-f35bcc6c3fd8/8d50fb5a-0067-41ca-a03a-7e6807ab1d88.pdf), the [2019 BMB inland wetlands inventory](https://www.philchm.ph/wp-content/uploads/2019/06/inland-wetlands-as-of-1st-qtr-2019-for-chm-2.pdf), and the [public-records recheck](../data/research/philippines/calabarzon-quezon-dagatan-pagatan-public-records-recheck-20261101.json).
 
 **Next:** continue independent, locality-resolved CALABARZON fish studies; keep the Dagatan/Pagatan crosswalk open until an official map, site-code table, or site-specific DENR/LGU record resolves it.
+
+
+### National rollout step 434 - UPLB Tayabas subwatershed Project 3.2 fish-assessment lead - 1 November 2026
+
+Reviewed the official [UPLB Knowledge Repository record](https://www.ukdr.uplb.edu.ph/reports/1056/) for the 2023 Project 3.2 report on watershed landscape patterns and water quality. Its abstract says six stations were sampled in the Tayabas subwatershed and reports 72 wet-season plus 404 dry-season fish, 12 species in seven families, with five native and seven introduced species and Gobiidae predominant. The repository identifies a 44-leaf report but says the document is currently unavailable. The accessible record does not name species, stations, individual waterbodies, or station-level results. It is a useful retrieval lead, not a species table or a feature-level Tayabas River record.
+
+Added one source-registry entry and an access review. Registry total: 589. CALABARZON remains at 119 named waterbody leads and 131 distinct source IDs referenced by its scope; no scope reference was added because the six stations are not mapped to individual features. No species assertion, geometry, current-presence claim, or public-app record was added, and no UPLB request was sent.
+
+See the [UPLB repository record](https://www.ukdr.uplb.edu.ph/reports/1056/) and the [Project 3.2 access review](../data/research/philippines/calabarzon-tayabas-subwatershed-uplb-project32-review-20261101.json).
+
+**Next:** continue the public-source search for the Project 3.2 report, station names, and any companion fish-taxonomy paper. If the record remains unavailable, request Joseph's authorization before contacting UPLB for the report, station/taxon crosswalk, dates and gear, voucher support, and item-specific reuse terms.
