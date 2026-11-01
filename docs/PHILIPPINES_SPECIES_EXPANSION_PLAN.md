@@ -3827,3 +3827,14 @@ Added `calabarzon-tayabas-project32-public-retrieval-followup-20261101.json` and
 See the [UPLB Project 3.2 repository record](https://www.ukdr.uplb.edu.ph/reports/1056/), the [UPLB 2023 repository index](https://www.ukdr.uplb.edu.ph/2023.html), the separate [Tayabas River article record](https://www.ukdr.uplb.edu.ph/journal-articles/2086/), and the [public retrieval follow-up](../data/research/philippines/calabarzon-tayabas-project32-public-retrieval-followup-20261101.json).
 
 **Next:** continue independent, locality-resolved CALABARZON freshwater source discovery. The prepared UPLB report request remains unsent and requires Joseph's authorization; do not let that retrieval dependency pause work on other public sources.
+
+
+### National rollout step 436 - NFRDI 2024 Nasugbu Bay gear-catch label transcription - 1 November 2026
+
+Visually transcribed the Nasugbu Bay blocks in the handbook's surface gill-net, handline, and multiple-handline tables (printed pages 30, 58, and 60). The three blocks contain 13 distinct verbatim scientific-name labels. A strict GBIF Backbone name screen returned 11 exact accepted species-rank matches, one exact accepted subspecies, and one no-match label (`Selar hoops`); its non-strict result resolves only to genus *Selar*. `Decapterus tabl` is retained exactly as printed and matched as an accepted species name. These name matches do not validate source field identifications.
+
+Added `calabarzon-nasugbu-bay-nfrdi-gear-catch-label-transcription-20261101.json`, linked the follow-up to the NFRDI source record, and refreshed the CALABARZON denominator profile. Registry total: 590; CALABARZON remains at 120 named waterbody leads and 132 distinct scope source references. The handbook gives no per-row capture date, station, capture origin, voucher, sampling effort, or identification method. No occurrence/species assertion, complete inventory, geometry, diet/bait guidance, current-presence claim, or public-app row was added; no agency request was sent.
+
+See the [NFRDI repository item](https://repository.nfrdi.da.gov.ph/items/023ccf69-0767-457e-9309-0fdeaa75e2b8), [GBIF Species API documentation](https://techdocs.gbif.org/en/openapi/v1/species), and the [Nasugbu transcription review](../data/research/philippines/calabarzon-nasugbu-bay-nfrdi-gear-catch-label-transcription-20261101.json).
+
+**Next:** transcribe the remaining source-named bay/gulf blocks, one locality grouping at a time. Do not split the handbook's compound “Balayan/Calatagan Bay” labels without independent locality evidence. Continue other freshwater source work in parallel; the UPLB report request remains unsent and requires Joseph's authorization.
