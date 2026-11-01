@@ -3636,3 +3636,14 @@ The ASEANO forum proceedings contain a separate retrieval lead: CvSU reportedly 
 Added `calabarzon-imus-aseano-public-output-review-20261101.json` and registered two official source records. The registry now has 560 records. CALABARZON remains at 119 research leads and 127 direct source references; no scope link was added. No species, occurrence, diet, geometry, or public-app row was added, and regional baseline remains incomplete.
 
 **Next:** use public institutional records to identify the Bacoor fish-tissue study and locate any remaining Imus vulnerability/pollution deliverable. Require site/date/method/taxon linkage, voucher or identification support, and reuse terms before a species assertion. Keep watershed and channel length discrepancies unresolved until their measurement definitions can be compared.
+
+
+### National rollout step 419 - Maragondon Estuary CvSU microplastics conference-paper lead - 1 November 2026
+
+Reviewed the official CvSU September 2024 newsletter announcement that Patrique Erika Cancel presented “Detection and Characterization of Microplastics in Mullet Fish (Mugil cephalus) in Maragondon Estuary” at the 11th International Conference on Fisheries and Aquaculture 2024. The newsletter summarizes microplastics in scales, gills and guts and mentions particle forms and polymer findings. The underlying paper/abstract, sample size, collection dates, stations/coordinates, methods, fish-identification support, and item-specific reuse terms were not located. The newsletter is a secondary research announcement; do not convert the named species/site to current occurrence, diet, catchability, safety, or complete-inventory evidence.
+
+Added `calabarzon-maragondon-estuary-mugil-microplastics-study-lead-review-20261101.json`, registered the CvSU newsletter source, linked it as a research lead to Maragondon River Estuary, and refreshed the CALABARZON denominator/profile hashes. The source registry now contains 561 records. The region remains at 119 waterbody research leads and 128 unique direct source references. No species occurrence, diet assertion, boundary, salinity, public-app row, or external request was added.
+
+This paper is not identified as the separate CvSU fish-tissue microplastics study in Bacoor mentioned in the ASEANO forum proceedings. Keep the leads separate.
+
+**Next:** locate the underlying Maragondon conference paper and its station crosswalk, identify the Bacoor fish-tissue study independently, and continue retrieving completed Ternate Marine Park BMS/BAMS results. Validate methods, dates, taxonomic support and reuse terms before any occurrence-level use. No external request has been sent.
