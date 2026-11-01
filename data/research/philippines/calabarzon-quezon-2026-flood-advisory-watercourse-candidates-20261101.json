@@ -4,7 +4,7 @@
   "reviewedOn": "2026-11-01",
   "phaseId": "L1",
   "regionId": "0400000000",
-  "status": "official-historical-hazard-advisory-reviewed;Iyam-and-Macalelon-name-crosswalked;Lower-Bolbok-and-Malaking-Ilog-basin-crosswalked;19-other-labels-held-for-crosswalk",
+  "status": "official-historical-hazard-advisory-reviewed;Iyam-Macalelon-and-Catanauan-river-name-crosswalked;Lower-Bolbok-and-Malaking-Ilog-basin-crosswalked;18-other-labels-held-for-crosswalk",
   "question": "Which Quezon watercourse names does the official 7 August 2026 flood advisory provide, and can they be safely reconciled with existing CALABARZON leads?",
   "purpose": "Preserve a useful official watercourse-name inventory while preventing duplicate or invented river identities and separating historical hazard context from fish or current safety data.",
   "sourceIds": [
@@ -61,8 +61,11 @@
     },
     {
       "sourceLabel": "Catanauan",
-      "potentialExistingLeadIds": [],
-      "disposition": "unresolved Quezon watercourse name; do not create a physical feature until identity is crosswalked"
+      "potentialExistingLeadIds": [
+        "ph-wb-catanauan-river-quezon"
+      ],
+      "disposition": "strong official river-name/locality match to Catanauan River; exact advisory reach remains unknown",
+      "crosswalkReviewId": "calabarzon-quezon-catanauan-advisory-crosswalk-20261101"
     },
     {
       "sourceLabel": "Silongin Lagda",
@@ -157,8 +160,8 @@
   ],
   "reconciliation": {
     "sourceLabelCount": 23,
-    "potentiallyMatchingExistingLeadCount": 7,
-    "stableLeadsAdded": 2,
+    "potentiallyMatchingExistingLeadCount": 8,
+    "stableLeadsAdded": 3,
     "possibleDuplicatesOrCompoundLabels": [
       "Upper Umiray may be a reach of Umiray River.",
       "Lower Bolbok (Lawaya) may combine a reach and alternate name.",
@@ -168,10 +171,11 @@
       "Lower Bolbok (Lawaya) is crosswalked to the principal-basin name only; the lower reach route remains unresolved.",
       "Malaking-Ilog is crosswalked at basin-name level; its exact relationship to the Malaquing Ilog channel remains unverified.",
       "Iyam is crosswalked to the official Iyam River name within its WQMA system, but the advisory does not identify a reach.",
-      "Macalelon crosswalks to separate source-named river and principal-basin leads at drainage-system level; the advisory reach and exact channel-to-basin topology remain unverified."
+      "Macalelon crosswalks to separate source-named river and principal-basin leads at drainage-system level; the advisory reach and exact channel-to-basin topology remain unverified.",
+      "Catanauan is crosswalked to the official river name and locality, but no specific flood-advisory reach is established."
     ],
-    "reason": "The advisory supplies 23 official watercourse labels. Iyam and Macalelon now have official river-name/system crosswalks, and Malaking-Ilog and Lower Bolbok have basin-name crosswalks. These do not verify advisory reaches or routes. The remaining 19 labels require source checks, and the queue is not a count of 23 unique physical rivers.",
-    "resolvedSourceNameCrosswalks": 4,
+    "reason": "The advisory supplies 23 official watercourse labels. Iyam and Macalelon now have official river-name/system crosswalks, and Malaking-Ilog and Lower Bolbok have basin-name crosswalks. These do not verify advisory reaches or routes. The remaining 18 labels require source checks; five source-name or basin-name crosswalks still do not verify exact advisory reaches or routes, and the queue is not a count of 23 unique physical rivers.",
+    "resolvedSourceNameCrosswalks": 5,
     "verifiedAdvisoryReachRoutes": 0
   },
   "disposition": {
@@ -184,7 +188,7 @@
     "publicationApproval": false
   },
   "nextActions": [
-    "Crosswalk the 19 remaining source labels with official DENR/Geoportal/LGU hydrography or a second source before creating or merging stable waterbody leads.",
+    "Crosswalk the 18 remaining source labels with official DENR/Geoportal/LGU hydrography or a second source before creating or merging stable waterbody leads.",
     "Keep reach qualifiers and compound names separate in the evidence log until their feature relationship is established.",
     "Never reuse this dated notice as current hazard, access, water quality, or fishing-safety advice.",
     "Seek fish-specific studies separately; the advisory is not fish evidence."
@@ -192,7 +196,7 @@
   "nonClaims": [
     "The 23 entries are source-named candidates, not 23 verified unique waterbody entities.",
     "No river route, geometry, fish presence/absence, salinity, legal status, access, or current flood risk is inferred.",
-    "The advisory-label crosswalk does not determine the exact Iyam reach or channel geometry.",
+    "The advisory-label crosswalk does not determine the exact Iyam or Catanauan reach or channel geometry.",
     "The Macalelon river and principal-basin leads are separate and have no validated route or boundary geometry."
   ]
 }
