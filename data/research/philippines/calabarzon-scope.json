@@ -72,7 +72,7 @@
     "limits": "Province plus separate-city starter coverage. Municipalities/component cities and each island/waterbody still require the source-sweep inventory; this is not a completed regional inventory."
   },
   "counts": {
-    "waterbodyResearchLeads": 122,
+    "waterbodyResearchLeads": 123,
     "provincesWithLeads": 5,
     "separateCityCoverageUnits": 1,
     "byKind": {
@@ -87,7 +87,7 @@
       "fishpond": 1,
       "spring": 7,
       "fish-sanctuary": 1,
-      "reef": 1
+      "reef": 2
     },
     "geometryValidated": 0,
     "speciesAssertionsImported": 9,
@@ -4398,11 +4398,9 @@
       "scopeNote": "The 2004 CRMP directory names Nabangka Fish Sanctuary at Capuluan Central, and the former municipal ordinance index lists Ordinance No. 7-2000 under that name with an approval date of 15 December 2000. The full ordinance, amendments, current legal status, boundary, fish taxa, and survey evidence were not retrieved."
     },
     {
-      "id": "ph-wb-palad-reef-guinayangan",
-      "name": "Palad Reef",
-      "aliases": [
-        "Capuluan Reef"
-      ],
+      "id": "ph-wb-capuluan-reef-guinayangan",
+      "name": "Capuluan Reef",
+      "aliases": [],
       "kind": "reef",
       "salinity": {
         "classification": "unknown",
@@ -4415,11 +4413,11 @@
           "relationship": "source-described-locality",
           "sourceRefs": [
             "guinayangan-crmp-2004-crm-learning-destinations",
-            "guinayangan-lgu-tourism-hinabaan-falls",
+            "nga-pub162-2025-philippine-islands-sailing-directions-ragay-reefs",
             "psa-psgc-guinayangan-barangays-2025"
           ],
           "provinceId": "0405600000",
-          "locality": "Barangay Capuluan Central, Guinayangan, Quezon",
+          "locality": "Capuluan Central / offshore Capuluan Point locality context; reef boundary not delineated",
           "psgcBarangayCodes": [
             "0405618011"
           ]
@@ -4428,14 +4426,51 @@
       "sourceRefs": [
         "guinayangan-crmp-2004-crm-learning-destinations",
         "guinayangan-lgu-tourism-hinabaan-falls",
-        "psa-psgc-guinayangan-barangays-2025"
+        "psa-psgc-guinayangan-barangays-2025",
+        "slsu-jeseg-2022-ragay-gulf-slipper-lobster-study",
+        "nga-pub162-2025-philippine-islands-sailing-directions-ragay-reefs"
       ],
-      "identityStatus": "historical-directory-and-legacy-municipal-tourism-named-reef;boundary-unverified",
+      "identityStatus": "NGA-and-CRMP-Capuluan-Reef;2022-study-Kapuluan-name-locality-context;Palad-equivalence-rejected;exact-study-spelling-crosswalk-pending",
       "boundaryStatus": "not-delineated",
-      "fishEvidenceStatus": "generic-aquarium-fish-description-only;no-site-specific-taxa-or-survey;no-absence-inferred",
-      "reviewStatus": "Capuluan-Reef-Palad-Reef-alias-and-barangay-crosswalk-reviewed;fish-survey-and-boundary-pending",
+      "fishEvidenceStatus": "historical-2022-slipper-lobster-fishery-locality-context;no-reef-specific-finfish-taxa-or-survey;no-absence-inferred",
+      "reviewStatus": "reef-name-crosswalk-corrected;Capuluan-Central-context-retained;Kapuluan-spelling-normalization-pending;no-finfish-survey-or-boundary",
       "publicAdmission": false,
-      "scopeNote": "The 2004 CRMP directory equates Capuluan Reef and Palad Reef. The legacy municipal tourism page locates it at Capuluan Central and says it was proposed as another municipal fish sanctuary; it does not identify taxa or establish declaration, current status, or boundary. Kept separate from Nabangka Fish Sanctuary."
+      "scopeNote": "The 2004 CRMP directory and 2025 NGA Sailing Directions name Capuluan Reef; the latter places it east of Capuluan Point. The 2022 study spells a reef Kapuluan and situates it between Guinayangan and Buenavista, but the exact spelling/feature normalization is not encoded as an alias. The 2004 directory’s Capuluan Reef/Palad Reef equivalence is contradicted by the 2022 study and NGA description; the tourism page’s Palad-at-Capuluan-Central claim remains a conflicting legacy locality. No finfish taxa, survey, legal boundary, geometry, or current sanctuary status is established."
+    },
+    {
+      "id": "ph-wb-palad-reef-ragay-gulf-quezon",
+      "name": "Palad Reef",
+      "aliases": [],
+      "kind": "reef",
+      "salinity": {
+        "classification": "unknown",
+        "reviewStatus": "not-assessed",
+        "sourceRefs": []
+      },
+      "administrativeAssociations": [
+        {
+          "regionId": "0400000000",
+          "relationship": "source-described-locality",
+          "sourceRefs": [
+            "slsu-jeseg-2022-ragay-gulf-slipper-lobster-study",
+            "nga-pub162-2025-philippine-islands-sailing-directions-ragay-reefs"
+          ],
+          "provinceId": "0405600000",
+          "locality": "Ragay Gulf; 2022 study says between San Narciso and San Andres, Quezon; no precise LGU overlay or boundary"
+        }
+      ],
+      "sourceRefs": [
+        "slsu-jeseg-2022-ragay-gulf-slipper-lobster-study",
+        "nga-pub162-2025-philippine-islands-sailing-directions-ragay-reefs",
+        "guinayangan-crmp-2004-crm-learning-destinations",
+        "guinayangan-lgu-tourism-hinabaan-falls"
+      ],
+      "identityStatus": "2022-study-and-2025-NGA-separately-name-Palad-Reef-near-Alibijaban;legacy-Capuluan-locality-conflicts;boundary-unverified",
+      "boundaryStatus": "not-delineated",
+      "fishEvidenceStatus": "historical-2022-slipper-lobster-fishery-locality-context;no-reef-specific-finfish-taxa-or-survey;no-absence-inferred",
+      "reviewStatus": "separate-source-named-Ragay-Gulf-reef;legacy-Capuluan-alias-rejected;no-finfish-survey-or-boundary",
+      "publicAdmission": false,
+      "scopeNote": "The 2022 study describes Palad Reef between San Narciso and San Andres as a historical slipper-lobster fishery locality; NGA Pub. 162 separately describes Palad Reef near Alibijaban Island and distinguishes it from Capuluan Reef. The older CRMP directory and municipal tourism page conflict by linking Palad to Capuluan Central; they remain documented as historical claims only. No reef-specific finfish taxa, legal boundary, geometry, current presence, or sanctuary status is established."
     }
   ],
   "coverageRules": {

@@ -1,0 +1,140 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-11-01",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "provinceId": "0405600000",
+  "status": "corrected-reef-name-crosswalk;two-source-distinguished-reef-leads;no-reef-specific-finfish-taxa;research-only",
+  "purpose": "Resolve the historical Guinayangan Capuluan Reef/Palad Reef name conflict using a later Ragay Gulf study and current official nautical reference. This is not a reef survey, legal boundary validation, finfish inventory, or navigation advice.",
+  "targetWaterbodyIds": [
+    "ph-wb-nabangka-fish-sanctuary-guinayangan",
+    "ph-wb-capuluan-reef-guinayangan",
+    "ph-wb-palad-reef-ragay-gulf-quezon",
+    "ph-wb-ragay-gulf-quezon"
+  ],
+  "searchMethod": "Bounded public-web retrieval on 2026-11-01 of the full 2022 open-access article, official 2025 NGA Pub. 162 (corrected through 2026-03-07), the 2004 CRMP directory, legacy Guinayangan tourism page, and PSA PSGC barangay listing. This source crosswalk does not establish a complete geographic or legal record.",
+  "searchQueries": [
+    "\"Palad Reef\" \"Capuluan Reef\" Ragay Gulf",
+    "\"Palad Reef\" \"San Narciso\" \"San Andres\"",
+    "\"Kapuluan Reef\" Guinayangan Buenavista",
+    "site:msi.nga.mil \"Palad Reef\" \"Capuluan Reef\""
+  ],
+  "sourcesReviewed": [
+    {
+      "sourceId": "slsu-jeseg-2022-ragay-gulf-slipper-lobster-study",
+      "citation": "Gordula, R. P., Lampos Jr., F. B., & Favor, C. C. (2022). Socio-Economic Assessment of the Slipper Lobster (Thenus orientalis, Lund, 1793) fishery in Ragay Gulf. Journal of Ecosystem Science and Eco-Governance, 4(Special Issue), 33-37. https://doi.org/10.54610/jeseg/4.Special_Issue.2022.004",
+      "url": "https://journals.carsu.edu.ph/JESEG/article/download/56/63/102",
+      "reviewedLocation": "Printed pages 33-37; study-area text at p.34.",
+      "result": "The article describes four Ragay Gulf reef localities: Acha between Guinayangan and Tagkawayan; Kapuluan between Guinayangan and Buenavista; Palad between San Narciso and San Andres; and Ugtok southwest of Ragay, Camarines Sur. Its study lasted November 2017-October 2018 and used purposive interviews of 120 slipper-lobster fishers across four towns/gears. The article states these reefs were areas where fishers captured slipper lobsters, but reports no finfish taxa or site-resolved biological sample list. Printed p.33 identifies a Creative Commons Attribution license; version not independently verified.",
+      "decision": "Strong source evidence that the study treats Kapuluan and Palad as separate named places. Historical lobster fishery locality context only; no finfish presence, abundance, boundary, current conditions, or fishing advice."
+    },
+    {
+      "sourceId": "nga-pub162-2025-philippine-islands-sailing-directions-ragay-reefs",
+      "citation": "National Geospatial-Intelligence Agency. 2025. Pub. 162, Sailing Directions (Enroute): Philippine Islands. 14th ed., corrected through 7 March 2026.",
+      "url": "https://msi.nga.mil/api/publications/download?key=16694491%2FSFH00000%2FPub162bk.pdf",
+      "reviewedLocation": "Printed p.71 for Palad Reef; printed p.72 for Capuluan Reef and Guinayangan; front matter p.ii for publication statement.",
+      "result": "The official publication separately describes Palad Reef at 13°27′N, 122°42′E, 4.75 nautical miles north of Alibijaban Island and extending about 2 miles NNW; it separately describes Capuluan Reef at 13°49′N, 122°34′E, about 2 miles east of Capuluan Point. It identifies Guinayangan town separately near Capuluan Point. Front matter says no copyright is claimed under Title 17 U.S.C. and notes correction through 7 March 2026.",
+      "decision": "Independent official navigational description distinguishes the reef names and their locations. Coordinates are recorded only to explain the identity decision; they are not imported as Bangwit geometry or a Philippine legal boundary."
+    },
+    {
+      "sourceId": "guinayangan-crmp-2004-crm-learning-destinations",
+      "citation": "Coastal Resource Management Project of DENR and USAID. 2004. Directory of CRM Learning Destinations in the Philippines.",
+      "url": "https://oneocean.org/download/db_files/directory_of_crm_learning_destinations.pdf",
+      "reviewedLocation": "Printed p.69; PDF p.78.",
+      "result": "The directory entry names Nabangka Fish Sanctuary at Capuluan Central and states Capuluan Reef is also known as Palad Reef. It describes itself as a quick guide from entries submitted by LGUs.",
+      "decision": "Retain its Reef equivalence only as a historical name claim; later 2022 and 2025 sources independently distinguish the features. Its separate Nabangka locality remains unchanged."
+    },
+    {
+      "sourceId": "guinayangan-lgu-tourism-hinabaan-falls",
+      "citation": "Municipality of Guinayangan. Legacy tourism page, Natures Wonder / Palad Reef.",
+      "url": "https://www.guinayangan.com/tournature.htm",
+      "reviewedLocation": "Legacy page lines 28-35.",
+      "result": "The page places Palad Reef at Barangay Capuluan Central, describes coral and aquarium fishes generically, and says it was proposed as another sanctuary.",
+      "decision": "This is a contradictory legacy locality claim, not a finfish survey or evidence that a sanctuary was declared. Do not merge Palad with Capuluan Reef."
+    },
+    {
+      "sourceId": "psa-psgc-guinayangan-barangays-2025",
+      "citation": "Philippine Statistics Authority. Guinayangan, Quezon PSGC barangay listing as of 31 July 2025.",
+      "url": "https://psa.gov.ph/classification/psgc/barangays/0405618000",
+      "reviewedLocation": "Capuluan Central barangay row.",
+      "result": "Capuluan Central is listed as barangay code 0405618011.",
+      "decision": "Administrative name and code check only; it does not resolve the Palad Reef locality claim or delineate a marine feature."
+    }
+  ],
+  "siteCrosswalk": [
+    {
+      "waterbodyId": "ph-wb-capuluan-reef-guinayangan",
+      "sourceNames": [
+        "Capuluan Reef",
+        "Kapuluan Reef"
+      ],
+      "sourceRefs": [
+        "guinayangan-crmp-2004-crm-learning-destinations",
+        "slsu-jeseg-2022-ragay-gulf-slipper-lobster-study",
+        "nga-pub162-2025-philippine-islands-sailing-directions-ragay-reefs",
+        "psa-psgc-guinayangan-barangays-2025"
+      ],
+      "outcome": "Capuluan Reef is retained as the canonical source-backed lead from the 2004 directory and 2025 NGA description. The 2022 study spells Kapuluan and gives nearby intermunicipal context; the spelling/feature crosswalk is plausible but not normalized as a formal alias. The historical Capuluan Reef/Palad Reef equivalence is rejected."
+    },
+    {
+      "waterbodyId": "ph-wb-palad-reef-ragay-gulf-quezon",
+      "sourceNames": [
+        "Palad Reef"
+      ],
+      "sourceRefs": [
+        "slsu-jeseg-2022-ragay-gulf-slipper-lobster-study",
+        "nga-pub162-2025-philippine-islands-sailing-directions-ragay-reefs"
+      ],
+      "outcome": "Palad Reef is retained as a separate Ragay Gulf research lead. The study places it between San Narciso and San Andres; NGA describes it near Alibijaban Island, separately from Capuluan Reef. Neither source supplies a legal boundary or a validated geometry."
+    },
+    {
+      "waterbodyId": "ph-wb-nabangka-fish-sanctuary-guinayangan",
+      "sourceRefs": [
+        "guinayangan-crmp-2004-crm-learning-destinations",
+        "guinayangan-lgu-legacy-ordinance-index-nabangka",
+        "psa-psgc-guinayangan-barangays-2025"
+      ],
+      "outcome": "Nabangka remains a separate historical sanctuary name at Capuluan Central; the full ordinance, current status, legal boundary, and fish survey remain unverified."
+    },
+    {
+      "waterbodyId": "ph-wb-ragay-gulf-quezon",
+      "sourceRefs": [
+        "slsu-jeseg-2022-ragay-gulf-slipper-lobster-study"
+      ],
+      "outcome": "The 2022 article adds historical gulf-wide lobster-fishery interview context only; it does not resolve the 13 old vernacular finfish labels or assign any finfish label to a reef."
+    }
+  ],
+  "geometryAndLegalStatus": {
+    "geometryAdded": false,
+    "coordinatesImportedToScope": false,
+    "navigationalCoordinatesDocumentedForIdentityReview": true,
+    "marineBoundaryValidated": false,
+    "currentSanctuaryStatusVerified": false,
+    "ordinanceFullTextRetrieved": false,
+    "salinityChanged": false,
+    "note": "No source provides a Philippine legal technical description for these reef leads. NGA coordinates are navigation-reference evidence only and are not app geometry."
+  },
+  "decision": {
+    "previousPaladReefGuinayanganLeadRenamed": "ph-wb-capuluan-reef-guinayangan",
+    "separatePaladReefResearchLeadAdded": "ph-wb-palad-reef-ragay-gulf-quezon",
+    "oldCapuluanPaladAliasRetained": false,
+    "legacyAliasClaimsMarkedAsConflicting": true,
+    "fishAssertionsAdded": 0,
+    "finfishTaxaAdded": 0,
+    "finfishSurveyRetrieved": false,
+    "currentPresenceInferred": false,
+    "fishAbsenceInferred": false,
+    "geometryOrCoordinatesImported": 0,
+    "publicRowsAdded": 0,
+    "publicAdmission": false,
+    "accessOrFishingPermissionInferred": false
+  },
+  "limitations": [
+    "The 2004 CRMP directory and municipal tourism page are historical and contain locality claims contradicted by later sources.",
+    "The 2022 study concerns slipper-lobster fishery interviews, not finfish sampling; no reef-specific finfish taxa are reported.",
+    "The 2025 NGA publication is a navigational reference, not a Philippine cadastre, reef survey, or safety/permission source.",
+    "The exact normalization of study spelling Kapuluan to NGA/CRMP spelling Capuluan is not formalized as an alias.",
+    "No legal sanctuary boundary, current sanctuary status, finfish species list, current presence/absence, catchability, diet, safety, or public-app data is established."
+  ],
+  "nextAction": "Continue the Guinayangan source queue with a primary freshwater fish-survey retrieval or an official reef/fish-sanctuary document. Keep Nabangka, Capuluan Reef, and Palad Reef separate; seek dated station-resolved finfish evidence and rights review without waiting for the municipal-water inquiry."
+}

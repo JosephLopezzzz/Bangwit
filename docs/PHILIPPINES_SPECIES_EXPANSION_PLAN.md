@@ -3925,3 +3925,14 @@ Added two research-only spatial leads, linked the legacy municipal catch-label s
 See the [2004 CRMP directory](https://oneocean.org/download/db_files/directory_of_crm_learning_destinations.pdf), [Guinayangan ordinance index](https://www.guinayangan.com/aboutexisting.htm), [Palad Reef page](https://www.guinayangan.com/tournature.htm), [municipal fishery page](https://www.guinayangan.com/aboutmarine.htm), and [review JSON](../data/research/philippines/calabarzon-guinayangan-nabangka-palad-marine-source-review-20261101.json).
 
 **Next:** seek the full Ordinance No. 7-2000 and any technical sanctuary boundary; continue pursuing dated, station-resolved, rights-cleared fish survey evidence for Nabangka and Palad Reef. Keep the 13 old Ragay Gulf vernacular labels unresolved.
+
+
+### National rollout step 445 - Guinayangan Capuluan/Palad Reef identity crosswalk correction - 1 November 2026
+
+Corrected the tentative reef alias from step 444 after reviewing the full 2022 Ragay Gulf slipper-lobster study and the official NGA Pub. 162 (2025 edition, corrected through 7 March 2026). The study describes Kapuluan Reef between Guinayangan and Buenavista and Palad Reef between San Narciso and San Andres as separate lobster-fishery localities. NGA separately describes Capuluan Reef east of Capuluan Point and Palad Reef near Alibijaban Island. The 2004 CRMP directory and legacy municipal tourism page contain conflicting Capuluan/Palad name or locality claims, retained only as historical source statements.
+
+Renamed the former ph-wb-palad-reef-guinayangan lead to ph-wb-capuluan-reef-guinayangan, removed the Palad alias, and added ph-wb-palad-reef-ragay-gulf-quezon as a separate research lead. The study’s Kapuluan/Capuluan spelling normalization remains unresolved. Added the crosswalk review and two sources; refreshed the scope denominator and provenance hashes. CALABARZON now has 123 named leads, including two reef leads, and 139 distinct scope references; the source registry has 600 entries. No finfish taxa, fish assertions, geometry, imported coordinates, legal boundary, current-presence claim, or public row was added.
+
+See the [2022 SLSU Ragay Gulf study](https://journals.carsu.edu.ph/JESEG/article/download/56/63/102), [official NGA Pub. 162](https://msi.nga.mil/api/publications/download?key=16694491%2FSFH00000%2FPub162bk.pdf), [crosswalk review](../data/research/philippines/calabarzon-guinayangan-capuluan-palad-reef-crosswalk-review-20261101.json), and the refreshed [CALABARZON profile](../data/research/philippines/calabarzon-coverage-denominator-profile-20261031.json).
+
+**Next:** continue with a primary Guinayangan freshwater fish-survey retrieval or official sanctuary instrument, keeping Nabangka, Capuluan Reef, and Palad Reef separate and leaving the old Ragay Gulf vernacular catch labels unresolved.

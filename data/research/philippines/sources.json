@@ -3,7 +3,7 @@
   "checkedOn": "2026-11-01",
   "status": "research-only-source-registry",
   "scope": "National acquisition references, freshwater spatial-source leads, CALABARZON/Central Luzon identity/source leads, and Mindanao regional freshwater survey reviews. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 598,
+  "sourceCount": 600,
   "sources": [
     {
       "id": "carumbana-siaton-river-limnology-fishery-report-2006",
@@ -18325,11 +18325,11 @@
       "provider": "Municipality of Guinayangan, Quezon",
       "url": "https://www.guinayangan.com/tournature.htm",
       "additionalUrls": [],
-      "role": "Legacy municipal tourism page naming Hinabaan Falls and locating Palad Reef in Barangay Capuluan Central; it calls Palad a proposed second sanctuary but provides no fish survey or boundary.",
+      "role": "Legacy municipal tourism page naming Hinabaan Falls and locating Palad Reef in Barangay Capuluan Central; it calls Palad a proposed second sanctuary, but its reef locality crosswalk conflicts with the 2022 Ragay Gulf study and 2025 NGA Sailing Directions and remains an unresolved historical claim.",
       "checkedOn": "2026-11-01",
       "access": {
         "status": "official-municipality-tourism-page-directly-read;Hinabaan-Falls-lines-52-57;no-local-copy",
-        "reviewFiles": ["calabarzon-hinabaan-river-fish-search-followup-20261101.json", "calabarzon-guinayangan-nabangka-palad-marine-source-review-20261101.json"],
+        "reviewFiles": ["calabarzon-hinabaan-river-fish-search-followup-20261101.json", "calabarzon-guinayangan-nabangka-palad-marine-source-review-20261101.json", "calabarzon-guinayangan-capuluan-palad-reef-crosswalk-review-20261101.json"],
         "rawPath": null
       },
       "reuse": {
@@ -18337,13 +18337,14 @@
         "content": "Only the minimal attributed feature-name and barangay text are paraphrased; no image or page layout is copied."
       },
       "publicationApproval": false,
-      "researchStatus": "official-tourism-page-names-Hinabaan-Falls;context-only;no-fish-data;Palad-Reef-location-and-proposed-sanctuary-context-reviewed;no-taxa-or-geometry",
+      "researchStatus": "legacy-tourism-page-names-Hinabaan-Falls;context-only;no-fish-data;Palad-Reef-locality-conflicts-with-2022-study-and-2025-NGA;proposed-sanctuary-claim-unverified;no-taxa-or-geometry",
       "license": null,
       "licenseUrl": null,
       "caveats": [
         "The page names a waterfall in the barangay but does not establish that it is part of the water-district source-named Hinabaan River.",
         "No fish species, survey, geometry, salinity, water quality, safety, public access, or fishing permission is established.",
-        "The page is a legacy municipal tourism page; current feature conditions were not checked."
+        "The page is a legacy municipal tourism page; current feature conditions were not checked.",
+        "Its claim that Palad Reef is in Capuluan Central conflicts with the 2022 study and 2025 NGA navigational description; do not use that locality to merge Palad Reef with Capuluan Reef."
       ]
     },
     {
@@ -18446,13 +18447,14 @@
       "provider": "Coastal Resource Management Project of DENR and USAID",
       "url": "https://oneocean.org/download/db_files/directory_of_crm_learning_destinations.pdf",
       "additionalUrls": [],
-      "role": "Historical CRMP directory from submitted LGU CRM-learning entries; names Nabangka Fish Sanctuary at Capuluan Central and Capuluan Reef/Palad Reef; locality context only.",
+      "role": "Historical CRMP directory from submitted LGU CRM-learning entries; names Nabangka Fish Sanctuary at Capuluan Central and contains a Capuluan Reef/Palad Reef equivalence claim now contradicted by later geographically specific sources; retain that equivalence as a historical claim only.",
       "checkedOn": "2026-11-01",
       "sourceYear": 2004,
       "access": {
         "status": "Direct public PDF text reviewed at printed pages 2 and 69; no local copy retained.",
         "reviewFiles": [
-          "calabarzon-guinayangan-nabangka-palad-marine-source-review-20261101.json"
+          "calabarzon-guinayangan-nabangka-palad-marine-source-review-20261101.json",
+          "calabarzon-guinayangan-capuluan-palad-reef-crosswalk-review-20261101.json"
         ],
         "rawPath": null
       },
@@ -18461,12 +18463,12 @@
         "content": "Short attributed site names/locality only; no maps, photos, tables, or long passages reproduced."
       },
       "publicationApproval": false,
-      "researchStatus": "historical-CRM-directory;source-submitted-LGU-entry;Nabangka-and-Palad-locality-context;no-fish-taxa;no-geometry",
+      "researchStatus": "historical-CRM-directory;source-submitted-LGU-entry;Nabangka-locality-context;reef-name-equivalence-contradicted-by-2022-study-and-2025-NGA;no-fish-taxa;no-geometry",
       "license": "Reproduction or quotation with proper reference per printed page 2; broader structured-data terms not identified.",
       "licenseUrl": null,
       "caveats": [
         "Directory describes itself as a quick guide based on entries submitted by about 80 LGUs, not a current survey or legal boundary.",
-        "Names Nabangka at Capuluan Central and Capuluan Reef also known as Palad Reef; gives no coordinates, taxa, or current sanctuary status."
+        "Its Capuluan Reef/Palad Reef equivalence is contradicted by the 2022 Ragay Gulf study and 2025 NGA Sailing Directions; keep the alias only as a historical source claim. The directory itself gives no coordinates, taxa, or current sanctuary status."
       ]
     },
     {
@@ -18525,6 +18527,70 @@
       "caveats": [
         "No catch dates, fishing grounds, gear, species identities, specimens, or identification method.",
         "Labels are not assigned to Nabangka, Palad Reef, a station, or a specific location within Ragay Gulf."
+      ]
+    },
+    {
+      "id": "slsu-jeseg-2022-ragay-gulf-slipper-lobster-study",
+      "title": "Socio-Economic Assessment of the Slipper Lobster (Thenus orientalis, Lund, 1793) fishery in Ragay Gulf",
+      "provider": "Reydante P. Gordula, Felix B. Lampos Jr., and Cherry C. Favor; Southern Luzon State University; Journal of Ecosystem Science and Eco-Governance, Caraga State University",
+      "url": "https://journals.carsu.edu.ph/JESEG/article/download/56/63/102",
+      "additionalUrls": [
+        "https://journals.carsu.edu.ph/JESEG/article/view/56",
+        "https://doi.org/10.54610/jeseg/4.Special_Issue.2022.004"
+      ],
+      "role": "Source-reported Ragay Gulf study area and named reef localities plus historical slipper-lobster fishery interview context; not a finfish survey or reef-specific fish-taxon list.",
+      "checkedOn": "2026-11-01",
+      "sourceYear": 2022,
+      "citation": "Gordula, R. P., Lampos Jr., F. B., & Favor, C. C. (2022). Socio-Economic Assessment of the Slipper Lobster (Thenus orientalis, Lund, 1793) fishery in Ragay Gulf. Journal of Ecosystem Science and Eco-Governance, 4(Special Issue), 33-37. https://doi.org/10.54610/jeseg/4.Special_Issue.2022.004",
+      "access": {
+        "status": "Full open-access article PDF reviewed at printed pages 33-37; published 30 November 2022.",
+        "reviewFiles": [
+          "calabarzon-guinayangan-capuluan-palad-reef-crosswalk-review-20261101.json"
+        ],
+        "rawPath": null
+      },
+      "reuse": {
+        "metadata": "The article printed page 33 identifies a Creative Commons Attribution license permitting reuse with proper attribution; the license version was not independently confirmed.",
+        "content": "Short locality and study-design facts summarized with attribution; no tables, figures, respondent data, or article text reproduced."
+      },
+      "publicationApproval": false,
+      "researchStatus": "historical-2017-2018-slipper-lobster-fishery-interviews;four-reef-locality-context;no-finfish-survey-or-reef-specific-taxa;no-current-presence-inferred",
+      "license": "Creative Commons Attribution (version not confirmed in reviewed article copy).",
+      "licenseUrl": "https://journals.carsu.edu.ph/JESEG/article/view/56",
+      "caveats": [
+        "The study reports purposive interviews with 120 slipper-lobster fishers from four towns for November 2017 through October 2018; it is not a finfish survey.",
+        "It names four reefs and describes where fishers captured slipper lobsters but does not provide reef-specific biological samples, fish taxa, station coordinates, or reef boundaries.",
+        "Its study-area wording distinguishes Kapuluan Reef between Guinayangan and Buenavista from Palad Reef between San Narciso and San Andres; this locality context is not a legal or cadastral boundary."
+      ]
+    },
+    {
+      "id": "nga-pub162-2025-philippine-islands-sailing-directions-ragay-reefs",
+      "title": "Pub. 162 Sailing Directions (Enroute): Philippine Islands, Fourteenth Edition",
+      "provider": "National Geospatial-Intelligence Agency (NGA), United States",
+      "url": "https://msi.nga.mil/api/publications/download?key=16694491%2FSFH00000%2FPub162bk.pdf",
+      "additionalUrls": [],
+      "role": "Official navigational-name and relative-location context distinguishing Palad Reef near Alibijaban Island from Capuluan Reef east of Capuluan Point; not fish evidence, a cadastral source, or geometry input.",
+      "checkedOn": "2026-11-01",
+      "sourceYear": 2025,
+      "access": {
+        "status": "Official NGA PDF reviewed at front matter and printed pages 71-72; publication states it was subsequently corrected through 7 March 2026.",
+        "reviewFiles": [
+          "calabarzon-guinayangan-capuluan-palad-reef-crosswalk-review-20261101.json"
+        ],
+        "rawPath": null
+      },
+      "reuse": {
+        "metadata": "The front matter states \"No copyright claimed under Title 17 U.S.C.\"; only short factual names and navigation-description context are summarized.",
+        "content": "No chart, map, geometry, or coordinates imported; source-reported navigation coordinates are documented only as identity-check evidence in the cited research review."
+      },
+      "publicationApproval": false,
+      "researchStatus": "official-2025-NGA-navigation-reference-corrected-2026-03-07;two-separately-named-reef-features;identity-context-only;no-geometry-or-fish-data",
+      "license": "United States Government publication; front matter states no copyright claimed under Title 17 U.S.C.",
+      "licenseUrl": "https://msi.nga.mil/api/publications/download?key=16694491%2FSFH00000%2FPub162bk.pdf",
+      "caveats": [
+        "Sailing Directions are navigational descriptions, not a Philippine legal boundary, cadastre, reef survey, or fish inventory.",
+        "The publication places Palad Reef in a separate description from Capuluan Reef; source coordinates are not imported as Bangwit geometry.",
+        "This source contains no fish taxa, survey method, catchability, safety, or current legal fishing advice."
       ]
     }
   ],
