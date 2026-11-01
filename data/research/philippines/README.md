@@ -1820,3 +1820,15 @@ Added one research-only Quezon upper-reach lead and one PAGASA Region V source r
 The University of Glasgow open research geodatabase contains a modeled `Kilbay_Catabangan` catchment (270.28 km²) and 230 generalized stream segments. It provides an independent name/geometry candidate, but not official hydrography, an exact route for the 2025 PAGASA upper/lower labels, or a verified province allocation. DPWH's 285 km² value is a separate source attribute; neither number is a surveyed boundary. No fish, current presence, water quality, safety, salinity, or public geometry was added.
 
 See `calabarzon-quezon-kilbay-catabangan-modeled-catchment-review-20261101.json` and [the dataset record](https://researchdata.gla.ac.uk/1396/).
+
+### National rollout step 477: Quezon Silongin Lagda advisory-recurrence review — 2 November 2026
+
+Quezon's directly reviewed 2022 and 2026 flood-advisory pages both use the compound label “Silongin Lagda.” An NDRRMC 2018 search result appears to repeat it, but the PDF returned HTTP 403 and remains unverified. EMB separately names Silongin River in San Francisco; no source explains “Lagda” or establishes that the advisory label refers to that river. A DPWH-styled Kanguinsa River design plan appeared only in a third-party Scribd upload; it was not admitted or treated as geometry.
+
+No waterbody lead, fish assertion, geometry, or public-app row was added. See `calabarzon-quezon-silongin-lagda-advisory-recurrence-review-20261102.json`, [Quezon 2022 advisory](https://quezon.gov.ph/general-flood-advisory-1-issued-at-600am-december-09-2022/), [Quezon 2026 advisory](https://quezon.gov.ph/general-flood-advisory-no-14-issued-600am-august-7-2026/), and [EMB report](https://air.emb.gov.ph/wp-content/uploads/2025/01/NSOBER-2016-2021-fin-1-1.pdf).
+
+### National rollout step 478: Silongin River bounded fish-evidence discovery — 2 November 2026
+
+GBIF CoL XR Actinopterygii queries for the indexed locality “Silongin” and waterBody “Silongin River” each returned zero rows. A targeted public-web search also located no site-resolved fish survey; a 2023 MSEUF resident survey on Celebes Maru Sanctuary is unrelated biological evidence. Zero results do not establish fish absence.
+
+No species assertion or public record was added. CALABARZON remains at 152 leads (88 rivers), 166 distinct direct source references, and 630 registered sources. See `calabarzon-silongin-river-fish-survey-discovery-review-20261102.json` and [GBIF Occurrence API documentation](https://techdocs.gbif.org/en/openapi/v1/occurrence).

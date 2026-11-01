@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "calabarzon-silongin-river-fish-survey-discovery-review-20261102",
+  "reviewedOn": "2026-11-02",
+  "phaseId": "luzon-calabarzon-freshwater-fish-evidence",
+  "regionId": "0400000000",
+  "provinceId": "0405600000",
+  "waterbodyId": "ph-wb-silongin-river-san-francisco-quezon",
+  "status": "bounded-source-discovery-complete;no-site-resolved-fish-survey-or-occurrence-rows-found;not-absence-evidence",
+  "question": "Did bounded public GBIF searches or web discovery identify any site-resolved fish evidence for Silongin River, San Francisco, Quezon?",
+  "purpose": "Screen an officially named Quezon river for indexed occurrence and published fish-survey leads without converting a zero-result search into an absence claim.",
+  "sourceIds": [
+    "gbif-silongin-river-actinopterygii-screen-20261102",
+    "emb-national-sober-2016-2021-silongin-river",
+    "quezon-province-tourism-directory"
+  ],
+  "methods": {
+    "gbif": {
+      "endpoint": "https://api.gbif.org/v1/occurrence/search",
+      "queryTaxonomy": "Catalogue of Life Extended Release Actinopterygii",
+      "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+      "taxonKey": "8VR36",
+      "queries": [
+        {
+          "term": "locality=Silongin",
+          "url": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&locality=Silongin&limit=100",
+          "resultCount": 0
+        },
+        {
+          "term": "waterBody=Silongin River",
+          "url": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&waterBody=Silongin%20River&limit=100",
+          "resultCount": 0
+        }
+      ],
+      "resultHandling": "No rows were available to review. The API searches GBIF-indexed metadata only; non-retrieval does not show that fish are absent or that no survey exists."
+    },
+    "webSearch": {
+      "searchedOn": "2026-11-02",
+      "queryPhrases": [
+        "\"Silongin River\" fish Quezon",
+        "\"Silongin\" fish \"San Francisco\" Quezon river",
+        "Quezon fish survey \"San Francisco\" Silongin river"
+      ],
+      "result": "No station-resolved fish survey or fish occurrence source for Silongin River was identified in the bounded public-web search."
+    }
+  },
+  "findings": [
+    {
+      "sourceId": "gbif-silongin-river-actinopterygii-screen-20261102",
+      "evidence": "The GBIF occurrence API returned zero rows for both the indexed locality term “Silongin” and waterBody term “Silongin River,” filtered to Philippines and CoL XR Actinopterygii.",
+      "supports": [
+        "only that these two bounded indexed queries returned zero on 2026-11-02"
+      ],
+      "doesNotSupport": [
+        "fish absence",
+        "absence of surveys",
+        "all locality/name variants",
+        "records outside GBIF or with different verbatim locality",
+        "a complete river checklist"
+      ]
+    },
+    {
+      "sourceId": "emb-national-sober-2016-2021-silongin-river",
+      "evidence": "The EMB report names Silongin River at municipality-level but is a historical water-classification table, not fish sampling.",
+      "supports": [
+        "waterbody identity context"
+      ],
+      "doesNotSupport": [
+        "fish species or habitat suitability"
+      ]
+    },
+    {
+      "sourceId": "quezon-province-tourism-directory",
+      "evidence": "The provincial directory confirms a barangay named Silongin in San Francisco, but does not provide fish records.",
+      "supports": [
+        "locality context"
+      ],
+      "doesNotSupport": [
+        "fish occurrence"
+      ]
+    }
+  ],
+  "excludedSearchFindings": [
+    {
+      "title": "Fish Sanctuary Conservation Program: Potential and Challenges (MSEUF, 2023)",
+      "url": "https://portal.mseuf.edu.ph/research/index.php/search/details/2126",
+      "reason": "The abstract concerns evaluation of the Celebes Maru Sanctuary in San Francisco and an online resident survey; it does not report biological fish sampling or link to Silongin River."
+    }
+  ],
+  "disposition": {
+    "siteResolvedFishSurveyFound": false,
+    "gbifLocalityCount": 0,
+    "gbifWaterBodyCount": 0,
+    "fishAbsenceInferred": false,
+    "speciesAssertionsAdded": 0,
+    "publicRecordsAdmitted": 0,
+    "publicAppRowsAdded": 0,
+    "identityChanged": false,
+    "geometryAdded": false,
+    "publicationApproval": false
+  },
+  "nextActions": [
+    "Keep the fish-evidence status as unknown; do not label Silongin fishless from zero API results.",
+    "Search authorized BFAR IV-A, Quezon LGU, EMB, and university repositories for dated sampling tables, stations, identification methods, vouchers, and reuse terms.",
+    "Continue the name and route work for Silongin Lagda and Kanguinsa as separate tasks; do not transfer any future records across names without locality/station crosswalk."
+  ],
+  "nonClaims": [
+    "This was a bounded discovery screen, not an exhaustive literature or museum-catalog search.",
+    "No GBIF data row, scientific-name assertion, current presence/absence, diet, salinity, water quality, safety, access, or fishing rule was established."
+  ]
+}
