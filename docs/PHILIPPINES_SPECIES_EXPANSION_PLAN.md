@@ -3739,3 +3739,23 @@ The mapping report contains watershed/hydrology outputs only in the reviewed tex
 See [CvSU’s January 2021 newsletter](https://cvsu.edu.ph/wp-content/uploads/2021/03/RE_NEWSLETTER_v4_is1.pdf), [CvSU Research Center listing](https://cvsu.edu.ph/research-center), [PEMSEA’s mapping report](https://pemsea.org/sites/default/files/2024-06/ASEANO%20CvSU%20Subproject%201.pdf), and the [crosswalk review](../data/research/philippines/calabarzon-imus-cvsu-aseano-study4-explicit-crosswalk-20261101.json).
 
 **Next:** continue public retrieval for any remaining parent-project outputs and the separate Bacoor fish-tissue study. Keep all fish-specific claims unassigned until primary study data and reuse conditions are verified.
+
+### National rollout step 428 - Crosswalk all five CvSU-listed ASEANO studies - 1 November 2026
+
+Matched all five studies listed in CvSU’s January 2021 newsletter to official PEMSEA public report candidates. The newsletter assigns Studies 1–3 to DLSU-D and Studies 4–5 to CvSU; the matching PEMSEA reports use institution-specific “Subproject 1/2/3” labels, which are recorded separately from the overall study numbers. Study 4 and Study 5 have explicit newsletter title assignments; Studies 1–3 are crosswalked through matching titles and scopes. The accessible Social Implications PDF is marked “ROUGH DRAFT.”
+
+The five outputs cover community KAP/economic valuation, litter survey, social implications, watershed mapping, and plastic-source/hotspot mapping. No fish taxon, specimen table, site-resolved Imus fish occurrence, or fish survey was verified. The KAP report’s fish-harvest valuation variable is not taxonomic evidence. No species, safety, geometry, or app row was added. Added `calabarzon-imus-aseano-five-study-output-crosswalk-20261101.json` and three PEMSEA sources. Registry total: 582; CALABARZON remains 119 research leads and 130 unique direct scope-source references.
+
+See CvSU’s [five-study newsletter](https://cvsu.edu.ph/wp-content/uploads/2021/03/RE_NEWSLETTER_v4_is1.pdf), PEMSEA’s [ASEANO report inventory](https://pemsea.org/what-we-do/aseano), and the [crosswalk review](../data/research/philippines/calabarzon-imus-aseano-five-study-output-crosswalk-20261101.json).
+
+**Next:** continue the separate search for the unnamed CvSU Bacoor fish-tissue study and the complete Imus biophysical-characterization deliverable.
+
+### National rollout step 429 - Bacoor fish-tissue lead near-match screening and inquiry draft - 1 November 2026
+
+Expanded official/institutional searches did not locate the titled CvSU fish-tissue study mentioned at the 2022 ASEANO forum. A 2026 DLSU-D Research Portal paper is a near-match by topic only: its abstract says it characterizes microplastics in surface-water samples from Pulvorista, Kawit, and San Rafael IV, Noveleta. It is not tissue sampling, does not list fish taxa, and does not identify itself as the CvSU work. The Manila–Bacoor Bay title does not assign either site to Bacoor City. The 2020 shell-study note and 2021/2023 bivalve papers remain separate from the unidentified finfish-tissue lead.
+
+Updated `calabarzon-bacoor-fish-tissue-microplastics-lead-disambiguation-review-20261101.json`, registered one DLSU-D portal source, and prepared `calabarzon-cvsu-bacoor-fish-tissue-data-inquiry-draft-20261101.md`. The draft has no verified recipient address or contact email and was not sent. Registry total: 583; CALABARZON remains 119 research leads and 130 unique direct scope-source references. No fish assertion, safety statement, geometry, scope link, or app row was added.
+
+See the [DLSU-D Research Portal article record](https://portal.dlsud.edu.ph/research/DetailView.aspx?ContentID=8154), the [2022 ASEANO proceedings](https://seaknowledgebank.net/sites/default/files/2024-02/Proceedings_ASEANO%20End%20of%20Project%2020220720.pdf), and the [unsent inquiry draft](../data/research/philippines/calabarzon-cvsu-bacoor-fish-tissue-data-inquiry-draft-20261101.md).
+
+**Next:** continue public institutional searches for the complete Imus biophysical-characterization output and preserve the Bacoor fish-tissue lead as unresolved until primary study identity and sample metadata are found. Joseph may review and choose whether to send the draft.
