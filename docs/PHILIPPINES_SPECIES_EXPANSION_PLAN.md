@@ -3914,3 +3914,14 @@ Added calabarzon-mspl-profile-and-bms-fish-source-review-20261101.json, three so
 See the [legacy municipal-linked MSPL profile](https://www.guinayangan.com/MSPL%20Profile.doc), [BMB PAIS profile](https://pais.bmb.gov.ph/home/info/KQHVQSWURSI), [2023 BMS report](https://www.bandilyo.ph/pagtaas-ng-bilang-ng-flora-at-fauna-naobserbahan-sa-protected-area-sa-guinayangan-quezon/), and [DENR CALABARZON stewardship update](https://calabarzon.denr.gov.ph/news-events/cenro-calauag-partners-assess-community-stewardship-in-maulawin-spring-protected-landscape/).
 
 **Next:** continue the remaining Guinayangan spring/tributary queue with a distinct public source, prioritize station-resolved fish data and retain the Prenza/Frenza/Prensa name crosswalk as unresolved.
+
+
+### National rollout step 444 - Guinayangan Nabangka, Palad Reef, and municipal catch-label source review - 1 November 2026
+
+Reviewed the 2004 CRMP/DENR CRM-learning directory, Guinayangan's legacy municipal ordinance index, tourism page and marine-products page, plus the PSA barangay listing. The directory localizes Nabangka Fish Sanctuary to Capuluan Central and identifies Capuluan Reef as Palad Reef. The municipal index lists Ordinance No. 7-2000 and its stated approval date, but not the instrument, technical boundary, amendments, or present enforceability. Palad's legacy page says it was proposed as another sanctuary; it is not merged with Nabangka. The old Ragay Gulf page lists 13 vernacular fish-catch labels without scientific identities, dates, stations, or grounds.
+
+Added two research-only spatial leads, linked the legacy municipal catch-label source to Ragay Gulf, registered three sources, and updated the coverage denominator. CALABARZON now has 122 named leads and 136 distinct source references; the registry has 598 sources. No fish/species assertion, geometry, current-presence claim, legal/access advice, or public app row was added. No ordinance request or email was sent.
+
+See the [2004 CRMP directory](https://oneocean.org/download/db_files/directory_of_crm_learning_destinations.pdf), [Guinayangan ordinance index](https://www.guinayangan.com/aboutexisting.htm), [Palad Reef page](https://www.guinayangan.com/tournature.htm), [municipal fishery page](https://www.guinayangan.com/aboutmarine.htm), and [review JSON](../data/research/philippines/calabarzon-guinayangan-nabangka-palad-marine-source-review-20261101.json).
+
+**Next:** seek the full Ordinance No. 7-2000 and any technical sanctuary boundary; continue pursuing dated, station-resolved, rights-cleared fish survey evidence for Nabangka and Palad Reef. Keep the 13 old Ragay Gulf vernacular labels unresolved.
