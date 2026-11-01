@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-11-01",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "provinceId": "0405600000",
+  "status": "bounded-MSPL-profile-and-BMS-review;no-site-specific-fish-taxa-or-river-stations-retrieved;research-only",
+  "purpose": "Review public Maulawin Spring Protected Landscape profile and biodiversity-monitoring context for river identity and fish evidence. This is a bounded source review, not a complete literature search or evidence that fish are absent.",
+  "sourcesReviewed": [
+    {
+      "sourceId": "guinayangan-lgu-mspl-protected-area-profile-legacy-doc",
+      "result": "The former municipal Environment page links a 193536-byte MSPL profile DOC. Direct retrieval returned HTTP 200; SHA-256 1acdc1b6a8a36b278e2304d908b9724ed05a5daf8146b69396d79e03e7ee1623. The undated profile includes a five-year physical work plan for CY 2001-2005. It names Maulawin River and Hiwasayan River in PA context. It also names Prenza River in one section and Frenza River in another; no equivalent crosswalk to IIRR Prensa Creek was found. The visible Wildlife Encountered table did not yield fish taxa or fish-survey methods.",
+      "decision": "Use only as legacy watercourse-name and protected-area context for Maulawin River and Hiwasayan River. Do not assign the Prenza/Frenza labels to the separate Prensa Creek row."
+    },
+    {
+      "sourceId": "bandilyo-mspl-bms-fauna-summary-2023",
+      "result": "A March 30, 2023 local-news report says the MSPL PAMO conducted first-quarter BMS work on 14 established stations/transects in Strict Protection and Multiple-Use Zones. It describes transect walks, field diaries, photo documentation, and environmental-condition recording; it reports aggregate fauna counts increasing from 59 to 85. It supplies no fish taxa, methods for fish, station names, or waterbody-by-station crosswalk.",
+      "decision": "Secondary PA-wide monitoring context only. Do not treat the fauna aggregate as a fish count or attribute results to any river."
+    },
+    {
+      "sourceId": "bmb-pais-maulawin-spring-profile-search-lead-2026",
+      "result": "The official PAIS profile text is readable in the indexed rendering. It describes broad PA biological and physical features, notes that some rivers and creeks dry in summer, and shows research/reference sections without surfaced fish taxa or fish stations. Direct page retrieval timed out. PAIS states its database may lag actual conditions while updates and validation are ongoing.",
+      "decision": "PA-wide environmental context only. No current hydrology, fish presence/absence, taxon, river route, or geometry is inferred."
+    },
+    {
+      "sourceId": "denr-calabarzon-mspl-pacbrma-monitoring-2026",
+      "result": "The official DENR CALABARZON page reports a September 16, 2026 community-based resource-management agreement monitoring activity in Barangay Himbubulo Weste involving CENRO, PAMO, PAMB and PENRO. Direct page retrieval returned HTTP 403; the official indexed article text was reviewed. It reports no fish survey or taxa.",
+      "decision": "Recent protected-area management context only; not biological evidence."
+    },
+    {
+      "sourceId": "clsu-guinayangan-small-scale-aquaculture-2024",
+      "result": "The reviewed CLSU article describes municipality-level aquaculture reconnaissance, tilapia fingerling dispersal and seven unnamed lagoons, but no wild fish inventory or site-level taxon record.",
+      "decision": "Keep as aquaculture context only."
+    },
+    {
+      "sourceId": "iirr-guinayangan-watershed-tributaries-brief",
+      "result": "The reviewed IIRR watershed brief names Hiwasayan River and Maulawin River as MSPL tributaries and separately names Prensa Creek. It does not provide fish-survey evidence or individual channel geometry.",
+      "decision": "Retain only as watershed name/context evidence; do not resolve the Prenza/Frenza versus Prensa spelling/kind discrepancy."
+    }
+  ],
+  "searchQueries": [
+    "Maulawin Spring Protected Landscape fish species fish survey ichthyofauna",
+    "Guinayangan Quezon Maulawin River fish survey species",
+    "Hiwasayan River Guinayangan fish species survey",
+    "site:denr.gov.ph Maulawin Spring fish survey taxa",
+    "site:bmb.gov.ph Maulawin Spring fish species",
+    "Maulawin Spring Protected Landscape Biodiversity Monitoring System fish taxa stations",
+    "Guinayangan MSPL Profile Maulawin Hiwasayan Prenza Frenza rivers"
+  ],
+  "featureCrosswalk": [
+    {
+      "waterbodyId": "ph-wb-maulawin-river-guinayangan",
+      "outcome": "Official municipal-linked legacy profile and secondary watershed brief independently name Maulawin River in MSPL context. This does not delineate its channel."
+    },
+    {
+      "waterbodyId": "ph-wb-hiwasayan-river-guinayangan",
+      "outcome": "Official municipal-linked legacy profile and secondary watershed brief independently name Hiwasayan River in MSPL context. This does not validate the route or delineate its channel."
+    },
+    {
+      "waterbodyId": "ph-wb-prensa-creek-guinayangan",
+      "outcome": "No alias or merge. IIRR says Prensa Creek; the legacy profile says Prenza River and elsewhere Frenza River. Spelling and feature-kind relationship remain unresolved."
+    },
+    {
+      "waterbodyId": "ph-wb-sisi-creek-guinayangan",
+      "outcome": "No source crosswalk or update in this review."
+    }
+  ],
+  "geometryAndSalinity": {
+    "geometryAdded": false,
+    "salinityChanged": false,
+    "note": "The legacy profile has protected-area boundary descriptions, not traced channel centerlines for the named rivers. The PAIS seasonal-drying note is broad and does not establish current flow or freshwater/brackish limits at a river reach."
+  },
+  "decision": {
+    "newWaterbodyLeads": 0,
+    "sourceReferencesAdded": 1,
+    "fishAssertionsAdded": 0,
+    "speciesNamesAdded": 0,
+    "siteSpecificFishSurveyRetrieved": false,
+    "publicRowsAdded": 0,
+    "publicAdmission": false,
+    "fishAbsenceInferred": false,
+    "currentPresenceInferred": false,
+    "fishingAccessOrPermissionInferred": false
+  },
+  "limitations": [
+    "The linked municipal profile is legacy and undated; its internal five-year work plan covers CY 2001-2005 and is not a current fish baseline.",
+    "The 2023 BMS result is a PA-wide aggregate relayed by secondary local news and lacks its species list and station-to-waterbody crosswalk.",
+    "The BMB PAIS direct page request timed out; the indexed rendering itself says the system can be delayed or undergoing validation.",
+    "No station-resolved fish taxa, field dates/gear, voucher details, item-specific reuse terms, or fish monitoring dataset was retrieved.",
+    "No source establishes a current feature route, channel geometry, salinity, fishing access, water safety, or complete inventory.",
+    "The legacy profile spells a watercourse Prenza River and elsewhere Frenza River, while IIRR names Prensa Creek; do not merge or alias these records without an authoritative crosswalk."
+  ],
+  "nextAction": "Continue the Guinayangan freshwater source queue with a distinct lead and seek public station-resolved fish evidence; keep the Maulawin/Hiwasayan names research-only and retain the unresolved Prenza/Frenza/Prensa crosswalk."
+}

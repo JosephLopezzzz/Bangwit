@@ -3,7 +3,7 @@
   "checkedOn": "2026-11-01",
   "status": "research-only-source-registry",
   "scope": "National acquisition references, freshwater spatial-source leads, CALABARZON/Central Luzon identity/source leads, and Mindanao regional freshwater survey reviews. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 592,
+  "sourceCount": 595,
   "sources": [
     {
       "id": "carumbana-siaton-river-limnology-fishery-report-2006",
@@ -7878,7 +7878,8 @@
       "access": {
         "status": "Official university article directly opened and reviewed; no underlying dataset or fish survey obtained.",
         "reviewFiles": [
-          "calabarzon-guinayangan-freshwater-source-crosswalk-20261030.json"
+          "calabarzon-guinayangan-freshwater-source-crosswalk-20261030.json",
+          "calabarzon-mspl-profile-and-bms-fish-source-review-20261101.json"
         ],
         "rawPath": null
       },
@@ -7901,28 +7902,29 @@
       "provider": "Biodiversity Management Bureau, DENR",
       "url": "https://pais.bmb.gov.ph/home/info/KQHVQSWURSI",
       "additionalUrls": [],
-      "role": "Official protected-area information-system discovery lead surfaced in a bounded search for fish monitoring records; direct page retrieval failed and no detailed taxa or geometry were extracted.",
-      "checkedOn": "2026-10-30",
+      "role": "Official PAIS profile reviewed for broad Maulawin Spring Protected Landscape environmental context; its indexed rendering exposes no site-specific fish taxa or river stations, and direct retrieval timed out.",
+      "checkedOn": "2026-11-01",
       "sourceYear": null,
       "access": {
-        "status": "Indexed search result reviewed; direct page open returned HTTP 502. Discovery-only; full profile not reviewed.",
+        "status": "Official profile text reviewed in the indexed rendering on 2026-11-01; direct page retrieval timed out. PAIS notes that data can lag actual conditions while updates and validation are ongoing.",
         "reviewFiles": [
-          "calabarzon-guinayangan-fish-survey-search-review-20261030.json"
+          "calabarzon-guinayangan-fish-survey-search-review-20261030.json",
+          "calabarzon-mspl-profile-and-bms-fish-source-review-20261101.json"
         ],
         "rawPath": null
       },
       "reuse": {
         "metadata": "No item-specific license or reuse terms reviewed.",
-        "content": "No page text, taxa, coordinates, geometry, or media reproduced."
+        "content": "Internal attributed summary of broad PA-level context only; no taxa, coordinates, geometry, media, or derived occurrence rows reproduced."
       },
       "publicationApproval": false,
-      "researchStatus": "discovery-only;direct-access-failed-http-502;no-fish-evidence-extracted",
+      "researchStatus": "official-PAIS-profile-indexed-rendering-reviewed;no-site-specific-fish-taxa-or-river-stations;direct-fetch-timeout",
       "license": null,
       "licenseUrl": null,
       "caveats": [
-        "Search snippets do not establish the contents of the full BMB PAIS record.",
-        "No association is made between the protected landscape and the separately named water-district spring-source leads.",
-        "No fish absence, current presence, access, safety, or boundary is inferred."
+        "The direct page request timed out; the current detailed text was readable through the indexed rendering.",
+        "PAIS says its database may not reflect actual or real-time conditions while updates and validation are ongoing.",
+        "No fish absence, current presence, river identity, route geometry, access, safety, or salinity is inferred."
       ]
     },
     {
@@ -8078,7 +8080,8 @@
       "access": {
         "status": "IIRR-hosted 16-page PDF opened and pages 4–5 reviewed directly; the publication date was not visible in the reviewed pages.",
         "reviewFiles": [
-          "calabarzon-guinayangan-mspl-tributaries-crosswalk-20261030.json"
+          "calabarzon-guinayangan-mspl-tributaries-crosswalk-20261030.json",
+          "calabarzon-mspl-profile-and-bms-fish-source-review-20261101.json"
         ],
         "rawPath": null
       },
@@ -18343,6 +18346,100 @@
         "The page names a waterfall in the barangay but does not establish that it is part of the water-district source-named Hinabaan River.",
         "No fish species, survey, geometry, salinity, water quality, safety, public access, or fishing permission is established.",
         "The page is a legacy municipal tourism page; current feature conditions were not checked."
+      ]
+    },
+    {
+      "id": "guinayangan-lgu-mspl-protected-area-profile-legacy-doc",
+      "title": "Profile of Protected Area: Maulawin Spring Protected Landscape (legacy DOC)",
+      "provider": "Municipality of Guinayangan, Quezon; linked from the former municipal Environment page",
+      "url": "https://www.guinayangan.com/MSPL%20Profile.doc",
+      "additionalUrls": [
+        "https://www.guinayangan.com/aboutenvi.htm"
+      ],
+      "role": "Official municipal-linked legacy profile naming Maulawin River and Hiwasayan River in protected-area context and containing an unresolved Prenza/Frenza spelling conflict; not fish evidence or channel geometry.",
+      "checkedOn": "2026-11-01",
+      "sourceYear": null,
+      "access": {
+        "status": "Direct DOC retrieval returned HTTP 200; 193536 bytes; SHA-256 1acdc1b6a8a36b278e2304d908b9724ed05a5daf8146b69396d79e03e7ee1623. Opened read-only; profile date not established.",
+        "reviewFiles": [
+          "calabarzon-mspl-profile-and-bms-fish-source-review-20261101.json"
+        ],
+        "rawPath": null
+      },
+      "reuse": {
+        "metadata": "No item-specific reuse license or redistribution permission was found.",
+        "raw": "The downloaded DOC was reviewed transiently and is not stored in the tracked repository.",
+        "content": "Use is limited to a factual, attributed internal summary of named watercourse context; no document text, tables, maps, or derived geometry are reproduced."
+      },
+      "publicationApproval": false,
+      "researchStatus": "legacy-official-municipal-linked-profile;watercourse-name-context;no-fish-taxa;no-channel-geometry;spelling-conflict-held",
+      "license": "Unknown; item-specific reuse terms not found",
+      "licenseUrl": null,
+      "caveats": [
+        "The former municipal Environment page links to the file, and the linked profile has no confirmed publication date.",
+        "The profile contains a five-year physical work plan for CY 2001-2005, which does not date every section or make its ecological statements current.",
+        "It uses Prenza River in one passage and Frenza River elsewhere; do not treat either as the IIRR-named Prensa Creek without an authoritative crosswalk.",
+        "No fish inventory, fish survey method, station-level taxon assignment, channel centerline, current salinity, access permission, or safety result is established."
+      ]
+    },
+    {
+      "id": "bandilyo-mspl-bms-fauna-summary-2023",
+      "title": "Pagtaas ng bilang ng Flora at Fauna, naobserbahan sa protected area sa Guinayangan, Quezon",
+      "provider": "Bandilyo; report by Jen Carbonnel",
+      "url": "https://www.bandilyo.ph/pagtaas-ng-bilang-ng-flora-at-fauna-naobserbahan-sa-protected-area-sa-guinayangan-quezon/",
+      "additionalUrls": [],
+      "role": "Secondary local-news report on first-quarter 2023 MSPL Biodiversity Monitoring System, with a PA-wide fauna aggregate and 14 stations/transects; no fish taxon list or waterbody crosswalk.",
+      "checkedOn": "2026-11-01",
+      "sourceYear": 2023,
+      "citation": "Carbonnel, J. (2023, March 30). Pagtaas ng bilang ng Flora at Fauna, naobserbahan sa protected area sa Guinayangan, Quezon. Bandilyo.",
+      "access": {
+        "status": "Article directly opened and reviewed on 2026-11-01; lines 27-47 describe the first-quarter BMS activity and aggregate fauna count.",
+        "reviewFiles": [
+          "calabarzon-mspl-profile-and-bms-fish-source-review-20261101.json"
+        ],
+        "rawPath": null
+      },
+      "reuse": {
+        "metadata": "No item-specific reuse license was identified.",
+        "content": "Attributed factual summary only; no article text, images, tables, species list, or derived occurrence row reproduced."
+      },
+      "publicationApproval": false,
+      "researchStatus": "secondary-2023-PA-wide-BMS-context;aggregate-fauna-count-only;no-fish-taxa-or-river-stations",
+      "license": null,
+      "licenseUrl": null,
+      "caveats": [
+        "The article is secondary reporting and does not publish the underlying BMS data or named taxa.",
+        "The reported fauna total is not a fish count and is not assigned to any river or station.",
+        "No present-day fish presence, absence, abundance, safe conditions, or fishing permission follows."
+      ]
+    },
+    {
+      "id": "denr-calabarzon-mspl-pacbrma-monitoring-2026",
+      "title": "CENRO Calauag, Partners Assess Community Stewardship in Maulawin Spring Protected Landscape",
+      "provider": "DENR CALABARZON",
+      "url": "https://calabarzon.denr.gov.ph/news-events/cenro-calauag-partners-assess-community-stewardship-in-maulawin-spring-protected-landscape/",
+      "additionalUrls": [],
+      "role": "Official 2026 protected-area community-stewardship monitoring context in Barangay Himbubulo Weste; no fish survey or taxa.",
+      "checkedOn": "2026-11-01",
+      "sourceYear": 2026,
+      "access": {
+        "status": "Official indexed article text reviewed; direct page request returned HTTP 403.",
+        "reviewFiles": [
+          "calabarzon-mspl-profile-and-bms-fish-source-review-20261101.json"
+        ],
+        "rawPath": null
+      },
+      "reuse": {
+        "metadata": "No item-specific content reuse terms were relied on.",
+        "content": "Factual activity/date/locality summary only; no article text, photographs, or derived biological data reproduced."
+      },
+      "publicationApproval": false,
+      "researchStatus": "official-2026-PA-stewardship-context;no-fish-survey-or-taxa",
+      "license": null,
+      "licenseUrl": null,
+      "caveats": [
+        "The reported activity is community agreement implementation monitoring, not biodiversity or fish monitoring.",
+        "The report does not provide river geometry, fish presence, salinity, safety, or access permission."
       ]
     }
   ],
