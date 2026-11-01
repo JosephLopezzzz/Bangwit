@@ -3816,3 +3816,14 @@ Added one source-registry entry and an access review. Registry total: 589. CALAB
 See the [UPLB repository record](https://www.ukdr.uplb.edu.ph/reports/1056/) and the [Project 3.2 access review](../data/research/philippines/calabarzon-tayabas-subwatershed-uplb-project32-review-20261101.json).
 
 **Next:** continue the public-source search for the Project 3.2 report, station names, and any companion fish-taxonomy paper. If the record remains unavailable, request Joseph's authorization before contacting UPLB for the report, station/taxon crosswalk, dates and gear, voucher support, and item-specific reuse terms.
+
+
+### National rollout step 435 - UPLB Tayabas Project 3.2 public retrieval follow-up - 1 November 2026
+
+Extended the public search across the official UPLB 2023 repository index and relevant fish-study records. The Project 3.2 entry still exposes only the abstract and says its 44-leaf report is unavailable. Search also surfaced the separate Paller et al. Tayabas River survey: the existing publisher review identifies it as a 2010 field survey reported in 2013, with nine stations and 15 species. No reviewed record identifies that earlier river study as a companion output of the 2023 watershed project, so it does not disclose Project 3.2's 12 species or its six station locations.
+
+Added `calabarzon-tayabas-project32-public-retrieval-followup-20261101.json` and linked it to the existing Project 3.2 source/review. Corrected the registry's stored count from 587 to the actual 589 source entries and refreshed its profile hash; CALABARZON remains at 119 named waterbody leads and 131 distinct source IDs referenced by its scope. No species assertions, scope links, geometry, or app rows were added, and no institutional request was sent.
+
+See the [UPLB Project 3.2 repository record](https://www.ukdr.uplb.edu.ph/reports/1056/), the [UPLB 2023 repository index](https://www.ukdr.uplb.edu.ph/2023.html), the separate [Tayabas River article record](https://www.ukdr.uplb.edu.ph/journal-articles/2086/), and the [public retrieval follow-up](../data/research/philippines/calabarzon-tayabas-project32-public-retrieval-followup-20261101.json).
+
+**Next:** continue independent, locality-resolved CALABARZON freshwater source discovery. The prepared UPLB report request remains unsent and requires Joseph's authorization; do not let that retrieval dependency pause work on other public sources.
