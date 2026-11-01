@@ -3882,3 +3882,14 @@ Added the Batangas transcription review, linked it to the existing bay lead and 
 See the [NFRDI repository item](https://repository.nfrdi.da.gov.ph/items/023ccf69-0767-457e-9309-0fdeaa75e2b8), [GBIF Species API documentation](https://techdocs.gbif.org/en/openapi/v1/species), and the [Batangas transcription review](../data/research/philippines/calabarzon-batangas-bay-nfrdi-gear-catch-label-transcription-20261101.json).
 
 **Next:** transcribe the combined Balayan/Calatagan Bay tables as a single source grouping. Do not assign their labels to either physical bay without independent locality evidence.
+
+
+### National rollout step 441 - NFRDI compound Balayan/Calatagan Bay catch-label transcription - 1 November 2026
+
+Visually transcribed eight tables under the exact combined heading “Balayan/Calatagan Bay,” covering 40 fish-taxon label rows and 26 distinct printed scientific-name strings. These include 25 binomial fish labels and one family-level label (Gobiidae). Strict GBIF name matching returned 24 exact accepted species-rank usages, one exact species-rank synonym, and one accepted family-rank usage. The source does not allocate any catch label to either physical bay.
+
+The compound review remains separate from both individual waterbody records; no scope row, species assertion, occurrence, geometry, current-presence claim, safety/legal claim, diet/bait advice, or public-app row was added. The NFRDI 2024 handbook sweep now totals 189 fish-taxon label rows across 42 gear blocks for the six named groupings. It does not form current or complete bay checklists.
+
+See the [NFRDI repository item](https://repository.nfrdi.da.gov.ph/items/023ccf69-0767-457e-9309-0fdeaa75e2b8), [GBIF Species API documentation](https://techdocs.gbif.org/en/openapi/v1/species), and the [compound-area transcription review](../data/research/philippines/calabarzon-balayan-calatagan-compound-bay-nfrdi-gear-catch-label-transcription-20261101.json).
+
+**Next:** continue the remaining Quezon/CALABARZON freshwater source queue; do not wait for the separate municipal-water-boundary inquiry to proceed with source research.
