@@ -3647,3 +3647,12 @@ Added `calabarzon-maragondon-estuary-mugil-microplastics-study-lead-review-20261
 This paper is not identified as the separate CvSU fish-tissue microplastics study in Bacoor mentioned in the ASEANO forum proceedings. Keep the leads separate.
 
 **Next:** locate the underlying Maragondon conference paper and its station crosswalk, identify the Bacoor fish-tissue study independently, and continue retrieving completed Ternate Marine Park BMS/BAMS results. Validate methods, dates, taxonomic support and reuse terms before any occurrence-level use. No external request has been sent.
+
+
+### National rollout step 420 - Bacoor fish-tissue microplastics lead disambiguation - 1 November 2026
+
+The 2022 ASEANO end-project proceedings say CvSU reported microplastics research in fish tissues in Bacoor, but do not identify the study title, species, exact site, dates, methods, data, or vouchers. A bounded public search did not locate the fish-tissue deliverable. Separate primary/institutional records were found: PEMSEA’s 2020 inception workshop lists a CvSU microplastic study in shells in Bacoor; Bilugan et al. (2021) study cultured green mussels (*Perna viridis*) from inner, middle, and outer Bacoor Bay (n=63); Creencia et al. (2023) study mussels from Bacoor City and Manila clams from Calatagan. No reviewed source cross-identifies these bivalve outputs as the later fish-tissue study. The 2023 Bacoor City shellfish samples are not assigned to a named waterbody.
+
+Added `calabarzon-bacoor-fish-tissue-microplastics-lead-disambiguation-review-20261101.json` and three source records. Linked only the directly named 2021 Bacoor Bay mussel study as local bivalve environmental research. The Bacoor fish-tissue study remains an unresolved retrieval lead. No finfish occurrence, diet, current safety claim, geometry, or public-app row was added; no inquiry was sent. Source registry is 564; CALABARZON remains 119 leads and has 129 unique direct source references.
+
+**Next:** continue public-source retrieval for the CvSU fish-tissue study identity and the remaining Imus vulnerability/pollution deliverable; keep bivalve research separate and require species/site/date/method and rights crosswalks before any species-level app use.
