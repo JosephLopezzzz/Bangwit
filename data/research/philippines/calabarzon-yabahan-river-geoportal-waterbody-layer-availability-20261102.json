@@ -1,0 +1,146 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "calabarzon-yabahan-river-geoportal-waterbody-layer-availability-20261102",
+  "reviewedOn": "2026-11-02",
+  "phaseId": "luzon-calabarzon-freshwater-source-crosswalk",
+  "regionId": "0400000000",
+  "provinceId": "0405600000",
+  "status": "official-geoportal-layer-metadata-reviewed;quezon-in-1-50k-coverage;feature-and-download-unverified;not-route-geometry",
+  "question": "Does NAMRIA Geoportal provide a reusable, Yabahan-specific route geometry through its Water Body layers?",
+  "purpose": "Check official public hydrography metadata and current viewer access for a possible route source while keeping broad layer coverage separate from an identified river feature.",
+  "waterbodyId": "ph-wb-yabahan-river-quezon",
+  "sourceIds": [
+    "namria-geoportal-waterbody-50000-yabahan-availability-20261102"
+  ],
+  "findings": [
+    {
+      "sourceId": "namria-geoportal-waterbody-50000-yabahan-availability-20261102",
+      "evidence": "The public Geoportal Water Body 1:50,000 layer metadata identifies NAMRIA as originator, publication date 2013-01-02 and metadata date 2015-10-28. It describes polygon features (2,593) and includes the attributes name, type, watercours, linkid, and shape measurements. Its listed extent spans 117.286817–126.359336°E and 4.672792–18.498825°N, and its place keywords include Quezon in Region IV-A. This establishes broad layer coverage only, not a Yabahan feature or route.",
+      "supports": [
+        "an official NAMRIA waterbody layer visible in the public Geoportal viewer",
+        "broad regional metadata coverage that includes Quezon",
+        "a candidate source for further feature-level investigation if the data can be obtained and reviewed"
+      ],
+      "doesNotSupport": [
+        "a Yabahan River feature match or exact reach crosswalk",
+        "a river centerline or field-verified channel route; the metadata describes polygon features",
+        "navigation, fishing access, fish presence, water quality, safety, or fishing rules"
+      ]
+    },
+    {
+      "sourceId": "namria-geoportal-waterbody-50000-yabahan-availability-20261102",
+      "evidence": "The same metadata abstract says the assigned coordinate system is GCS WGS84, while its geodetic model names D Philippine Reference System 1992 and the Clarke 1866 ellipsoid. These fields conflict and require clarification before geometry processing.",
+      "supports": [
+        "a documented coordinate-reference ambiguity in the published metadata"
+      ],
+      "doesNotSupport": [
+        "a resolved CRS, datum transformation, or accurate overlay"
+      ]
+    },
+    {
+      "sourceId": "namria-geoportal-waterbody-50000-yabahan-availability-20261102",
+      "evidence": "The Water Body 1:10,000 metadata is a local subset with 564 polygon features and place keywords for selected localities; Quezon is not among the listed places. The broad bounding box alone does not show that an individual river is represented.",
+      "supports": [
+        "a reason not to use the 1:10,000 metadata as proof of Yabahan coverage"
+      ],
+      "doesNotSupport": [
+        "absence of a Yabahan feature from the actual layer"
+      ]
+    },
+    {
+      "sourceId": "namria-geoportal-waterbody-50000-yabahan-availability-20261102",
+      "evidence": "The Geoportal Data Inventory dated October 2025 lists both Water Body layers as Open under Memorandum Order No. 008, series of 2022, while also noting that downloading was temporarily disabled for updating. In the live viewer on 2 November 2026, the download selector offered no layer choices while the Water Body 1:50,000 layer was loaded. No personal information was entered, no form was submitted, and no file was downloaded.",
+      "supports": [
+        "a historical open-data classification and a documented download limitation in the inventory",
+        "the current viewer did not offer a downloadable layer during this check"
+      ],
+      "doesNotSupport": [
+        "current successful file access or current item-level redistribution terms",
+        "that the layer can never be requested through NAMRIA"
+      ]
+    },
+    {
+      "sourceId": "namria-geoportal-waterbody-50000-yabahan-availability-20261102",
+      "evidence": "A Geoportal location search for “Yabahan River, San Andres, Quezon” returned a popup labeled “Alibijaban Protected Landscape and Seascape,” not a Yabahan River feature. This search result was not used as a route or locality crosswalk.",
+      "supports": [
+        "that this viewer search did not identify the named river"
+      ],
+      "doesNotSupport": [
+        "that the river is on Alibijaban Island or that the two names refer to the same feature"
+      ]
+    }
+  ],
+  "dataExtraction": {
+    "waterBody50000": {
+      "publicationDate": "2013-01-02",
+      "metadataDate": "2015-10-28",
+      "featureCount": 2593,
+      "metadataGeometryDescription": "GT-polygon composed of chains",
+      "bounds": {
+        "west": 117.286817,
+        "east": 126.359336,
+        "south": 4.672792,
+        "north": 18.498825
+      },
+      "placeKeywordsIncludeQuezon": true,
+      "attributes": [
+        "name",
+        "type",
+        "watercours",
+        "linkid",
+        "shape_leng",
+        "shape_area",
+        "area"
+      ],
+      "coordinateReferenceText": [
+        "Abstract: assigned coordinate system is GCS WGS84",
+        "Geodetic model: D Philippine Reference System 1992; Clarke 1866 ellipsoid"
+      ]
+    },
+    "waterBody10000": {
+      "featureCount": 564,
+      "metadataGeometryDescription": "GT-polygon composed of chains",
+      "bounds": {
+        "west": 120.3,
+        "east": 121.959488,
+        "south": 11.912551,
+        "north": 16.050001
+      },
+      "quezonInPlaceKeywords": false,
+      "coordinateReferenceConflictAlsoPresent": true
+    },
+    "liveViewer": {
+      "accessedOn": "2026-11-02",
+      "waterBody50000Visible": true,
+      "downloadableChoicesDisplayed": false,
+      "exactRiverFeatureIdentified": false,
+      "personalInformationEntered": false,
+      "requestSubmitted": false,
+      "rawFileDownloaded": false
+    },
+    "publicGeometryImported": false
+  },
+  "disposition": {
+    "namriaLayerMetadataReviewed": true,
+    "broadQuezonCoverageListed": true,
+    "exactYabahanFeatureVerified": false,
+    "routeGeometryVerified": false,
+    "coordinateReferenceResolved": false,
+    "currentDownloadAvailabilityVerified": false,
+    "speciesAssertionsAdded": 0,
+    "publicRecordsAdmitted": 0,
+    "publicGeometryImported": false,
+    "publicAppRowsAdded": 0,
+    "publicationApproval": false
+  },
+  "nextActions": [
+    "Seek an authorized route to obtain the Water Body 1:50,000 layer or an item-level Yabahan feature extract, including a clarified CRS, version, metadata, and reuse terms.",
+    "If the official layer remains unavailable, review a separately licensed community or research hydrography source as a candidate only, then cross-check waterbody identity without presenting it as official or field-verified.",
+    "Continue the Yabahan fish survey search independently; route coverage does not establish fish presence."
+  ],
+  "nonClaims": [
+    "Broad Quezon coverage and a region-wide bounding box do not identify Yabahan River in the dataset.",
+    "No route coordinates, geometry, fish presence or absence, salinity, current water quality, safety, access, fishing permission, or diet/bait guidance is established.",
+    "The 2025 open-data inventory is not evidence that a file was retrievable in the 2026 viewer session or that every derived distribution right was reviewed."
+  ]
+}
