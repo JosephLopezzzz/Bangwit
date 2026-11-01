@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "calabarzon-quezon-upper-kilbay-cross-region-name-crosswalk-20261101",
+  "reviewedOn": "2026-11-01",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "provinceId": "0405600000",
+  "status": "partial-cross-region-name-candidate;Quezon-upper-and-Camarines-Sur-lower-labels;channel-continuity-unverified",
+  "question": "Does Quezon advisory label “Upper Kilbay – Catabangan” refer to the same cross-region river system as the Bicol “Lower Kilbay Catabangan” watercourse and Kilbay-Catabangan principal basin?",
+  "purpose": "Cross-check the Quezon advisory label against official PAGASA, DPWH, and EMB Bicol records while retaining exact route, continuity, and basin boundaries as unresolved.",
+  "waterbodyId": "ph-wb-upper-kilbay-catabangan-quezon-reach",
+  "sourceIds": [
+    "quezon-pdrrmo-2026-flood-advisory-14-watercourses",
+    "pagasa-calabarzon-gfa-7-2025-upper-lower-bolbok-lawaya",
+    "pagasa-bicol-gfa-8-2025-lower-kilbay-catabangan",
+    "dpwh-2022-principal-river-basins-annex-d2",
+    "emb-r5-2024-sober-incarizan-class-b"
+  ],
+  "findings": [
+    {
+      "sourceId": "quezon-pdrrmo-2026-flood-advisory-14-watercourses",
+      "evidence": "Quezon General Flood Advisory No. 14, issued 7 August 2026, lists “Upper Kilbay – Catabangan” among watercourses under Quezon. The advisory is time-bounded and has no route or geometry.",
+      "supports": [
+        "official historical Quezon label"
+      ],
+      "doesNotSupport": [
+        "exact reach or channel route",
+        "connection to the Camarines Sur watercourse",
+        "current flood status or fish occurrence"
+      ]
+    },
+    {
+      "sourceId": "pagasa-calabarzon-gfa-7-2025-upper-lower-bolbok-lawaya",
+      "evidence": "Official PAGASA indexed PDF text for Region IV-A General Flood Advisory No. 7 (26 November 2025) lists “Upper Kilbay - Catabangan” under Quezon. The live PDF URL returned a later 2026 notice on 2026-11-01, so the historical text is not reproducible from the current file at that URL.",
+      "supports": [
+        "independent official upper-reach wording and Quezon grouping"
+      ],
+      "doesNotSupport": [
+        "channel geometry or reach boundaries",
+        "identity with the Bicol lower reach",
+        "current hazard or fish evidence"
+      ]
+    },
+    {
+      "sourceId": "pagasa-bicol-gfa-8-2025-lower-kilbay-catabangan",
+      "evidence": "Official PAGASA indexed PDF text for Region V General Flood Advisory No. 8 (Final, 27 November 2025) lists “Lower Kilbay Catabangan” under Camarines Sur and says watercourses were no longer to be affected in that event. The live PDF URL returned a later 2026 notice on 2026-11-01, so the historical text is not reproducible from the current file at that URL.",
+      "supports": [
+        "official lower-reach wording and Camarines Sur grouping",
+        "historical cross-region name comparison"
+      ],
+      "doesNotSupport": [
+        "connection to the Quezon upper reach",
+        "a present hazard status",
+        "fish evidence or route geometry"
+      ]
+    },
+    {
+      "sourceId": "dpwh-2022-principal-river-basins-annex-d2",
+      "evidence": "Annex D-2 row 170 lists “Kilbay-Catabangan” as a Region V principal river basin with reported area 285 sq km.",
+      "supports": [
+        "Bicol-region basin-name context",
+        "reported area as source metadata"
+      ],
+      "doesNotSupport": [
+        "basin polygon or channel centerline",
+        "Quezon allocation",
+        "upper/lower reach topology",
+        "fish evidence"
+      ]
+    },
+    {
+      "sourceId": "emb-r5-2024-sober-incarizan-class-b",
+      "evidence": "EMB Region V 2024 SoBER Table 4.3 lists “Kilbay-Katabanagan” in Camarines Sur as Class B, classified 1998 under DMC No. 1999-18. The EMB R5 official waterbody listing search text further names Del Gallego, Camarines Sur; the listing page was not directly accessible in this review.",
+      "supports": [
+        "official Bicol spelling variant and historical classification context",
+        "Camarines Sur locality context from the EMB listing"
+      ],
+      "doesNotSupport": [
+        "equivalence with DPWH basin or Quezon upper reach",
+        "current water quality",
+        "channel route or geometry",
+        "fish evidence"
+      ]
+    }
+  ],
+  "crosswalk": {
+    "advisoryLabel": "Upper Kilbay – Catabangan",
+    "candidateLeadId": "ph-wb-upper-kilbay-catabangan-quezon-reach",
+    "resolutionLevel": "partial cross-region system-name candidate only; no reviewed source verifies channel continuity, exact reaches, or boundaries"
+  },
+  "disposition": {
+    "sourceNamedQuezonUpperReachLeadAdded": true,
+    "BicolLowerReachNameCandidateRecorded": true,
+    "crossRegionSystemIdentityVerified": false,
+    "advisoryCrosswalkResolved": false,
+    "exactReachRouteVerified": false,
+    "basinBoundaryVerified": false,
+    "speciesAssertionsAdded": 0,
+    "publicRecordsAdmitted": 0,
+    "currentPresenceInferred": false,
+    "currentWaterQualityClaimed": false,
+    "currentHazardClaimed": false,
+    "salinityClassificationAdded": false,
+    "geometryAdded": false,
+    "publicOccurrenceRowsAdded": 0,
+    "publicationApproval": false
+  },
+  "nextActions": [
+    "Seek route-scale official hydrography or an authorized basin technical description spanning the Quezon–Camarines Sur context before linking the upper/lower labels as one mapped system.",
+    "Review dated, station-resolved fish evidence for any verified reaches separately; do not transfer Camarines Sur observations to Quezon."
+  ],
+  "nonClaims": [
+    "The DPWH-reported 285 sq km is not a basin polygon or river geometry.",
+    "The upper/lower naming and similar Bicol basin/waterbody names are a partial candidate, not proof that the reaches form one continuous mapped feature.",
+    "The 2025 PAGASA advisories are historical and are not current warnings.",
+    "No fish presence or absence, complete checklist, salinity, current water quality, safety, access, fishing permission, or diet/bait guidance is asserted."
+  ]
+}
