@@ -4023,3 +4023,12 @@ Reviewed the official Quezon profile page. It lists a 2025 six-volume ecological
 Added four source-named river research leads and one registry source. CALABARZON now has 131 selected leads, including 67 rivers, six province units, and 150 distinct scope source references; the registry has 613 entries. The existing Kaliwa-Kanan-Agos system remains separate, and its aggregate fish table was not assigned to Agos River. No species assertions, occurrence records, geometry, salinity classifications, current-presence claims, or app rows were added. See the [official Quezon 2025 Ecological Profile page](https://quezon.gov.ph/sep/) and [research review](../data/research/philippines/calabarzon-quezon-2025-ecological-profile-river-leads-20261101.json).
 
 **Next:** retrieve the profile volumes through an authorized route; seek site-resolved fish surveys and independently verified channel identity/geometry for the four leads.
+
+
+### National rollout step 455 - Sariaya Pterygoplichthys preprint locality review - 1 November 2026
+
+Reviewed the 2017 author-uploaded Luzon preprint on Pterygoplichthys. It reports interview-based net catches near MalaquingIlog Bridge and two “SACs” observed near Maasin River Bridge in Sariaya. The Sariaya field date, site-linked voucher, and species-level identification are not provided in those passages; the source labels itself a preprint, may not have been peer reviewed, and gives no open reuse license.
+
+Added two distinct source-named river research leads and one source record. The spelling/feature match between “MalaquingIlog” in the preprint and “MalakingIlog” in the Quezon profile remains unresolved, so the leads stay separate. CALABARZON now has 133 selected leads (69 rivers), 151 distinct scope references, and 614 registry sources. No species assertions, public records, geometry, current-presence claims, or app rows were added. See the [preprint review](../data/research/philippines/calabarzon-sariaya-pterygoplichthys-preprint-review-20261101.json) and [author-uploaded preprint](https://www.researchgate.net/publication/331903996_Invasion_Status_of_Pterygoplichthys_spp_Pisces_Loricariidae_in_the_Luzon_Island_Philippines_and_its_Policy_Implications).
+
+**Next:** resolve the name/feature crosswalk, confirm publication and reuse status, and seek dated site-linked vouchers or independent surveys.
