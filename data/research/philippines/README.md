@@ -1832,3 +1832,9 @@ No waterbody lead, fish assertion, geometry, or public-app row was added. See `c
 GBIF CoL XR Actinopterygii queries for the indexed locality “Silongin” and waterBody “Silongin River” each returned zero rows. A targeted public-web search also located no site-resolved fish survey; a 2023 MSEUF resident survey on Celebes Maru Sanctuary is unrelated biological evidence. Zero results do not establish fish absence.
 
 No species assertion or public record was added. CALABARZON remains at 152 leads (88 rivers), 166 distinct direct source references, and 630 registered sources. See `calabarzon-silongin-river-fish-survey-discovery-review-20261102.json` and [GBIF Occurrence API documentation](https://techdocs.gbif.org/en/openapi/v1/occurrence).
+
+### National rollout step 479: Quezon Yabahan River bounded fish-evidence discovery — 2 November 2026
+
+Four GBIF CoL XR Actinopterygii searches for the Philippines using locality “Yabahan,” locality “Yabahaan,” waterBody “Yabahan River,” and waterBody “Yabahaan” each returned zero indexed rows. Bounded public-web discovery found no site-resolved fish survey. A Tayabas River survey and Tikub Lake survey concern different waterbodies; a user-generated fishing page reports no logged catches; and a reported coastal grouper catch near San Andres is not a river sample. These sources were not transferred to Yabahan River, and zero results do not establish fish absence.
+
+Updated the existing lead and registered one GBIF screen reference. CALABARZON remains at 152 leads (88 rivers), with 167 distinct direct source references and 631 registered sources. No species assertion or public record was added. See `calabarzon-yabahan-river-fish-survey-discovery-review-20261102.json` and [GBIF Occurrence API documentation](https://techdocs.gbif.org/en/openapi/v1/occurrence).

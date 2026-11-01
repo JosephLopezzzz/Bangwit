@@ -1,0 +1,160 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "calabarzon-yabahan-river-fish-survey-discovery-review-20261102",
+  "reviewedOn": "2026-11-02",
+  "phaseId": "luzon-calabarzon-freshwater-fish-evidence",
+  "regionId": "0400000000",
+  "provinceId": "0405600000",
+  "waterbodyId": "ph-wb-yabahan-river-quezon",
+  "status": "bounded-source-discovery-complete;no-site-resolved-fish-survey-or-occurrence-rows-found;not-absence-evidence",
+  "question": "Did bounded public GBIF searches and public-web discovery identify site-resolved fish evidence for Yabahan River, Quezon?",
+  "purpose": "Screen the officially named Yabahan River and Quezon advisory spelling variant Yabahaan for indexed fish occurrences or site-resolved surveys without converting non-retrieval into an absence claim.",
+  "sourceIds": [
+    "gbif-yabahan-river-actinopterygii-screen-20261102",
+    "denr-dao-2025-28-classified-waterbodies",
+    "emb-national-sober-2016-2021-silongin-river",
+    "quezon-pdrrmo-2026-flood-advisory-14-watercourses"
+  ],
+  "methods": {
+    "gbif": {
+      "endpoint": "https://api.gbif.org/v1/occurrence/search",
+      "queryTaxonomy": "Catalogue of Life Extended Release Actinopterygii",
+      "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+      "taxonKey": "8VR36",
+      "queries": [
+        {
+          "field": "locality",
+          "value": "Yabahan",
+          "url": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&limit=100&locality=Yabahan",
+          "resultCount": 0
+        },
+        {
+          "field": "locality",
+          "value": "Yabahaan",
+          "url": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&limit=100&locality=Yabahaan",
+          "resultCount": 0
+        },
+        {
+          "field": "waterBody",
+          "value": "Yabahan River",
+          "url": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&limit=100&waterBody=Yabahan+River",
+          "resultCount": 0
+        },
+        {
+          "field": "waterBody",
+          "value": "Yabahaan",
+          "url": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&limit=100&waterBody=Yabahaan",
+          "resultCount": 0
+        }
+      ],
+      "resultHandling": "All four indexed queries returned zero rows. GBIF indexes occurrence metadata; these exact field-term filters do not show that fish are absent, that no survey exists, or that records do not use other locality terms."
+    },
+    "webSearch": {
+      "searchedOn": "2026-11-02",
+      "queryPhrases": [
+        "\"Yabahan River\" fish survey species",
+        "\"Yabahaan\" river fish species Quezon",
+        "\"San Andres, Quezon\" fish ichthyofauna river survey",
+        "freshwater fish Quezon Province rivers survey San Andres"
+      ],
+      "result": "No site-resolved fish survey or specimen/occurrence evidence for Yabahan River was identified in this bounded public-web search. Search results included surveys for different waterbodies and unstructured fishing pages, which were not transferred to this river."
+    }
+  },
+  "findings": [
+    {
+      "sourceId": "gbif-yabahan-river-actinopterygii-screen-20261102",
+      "evidence": "Direct GBIF occurrence API fetches on 2026-11-02 returned zero rows for Philippines plus CoL XR Actinopterygii in four separate indexed searches: locality=Yabahan, locality=Yabahaan, waterBody=Yabahan River, and waterBody=Yabahaan.",
+      "supports": [
+        "only that the four bounded GBIF field-term queries returned zero on 2026-11-02"
+      ],
+      "doesNotSupport": [
+        "fish absence",
+        "absence of surveys",
+        "all spelling/locality variants",
+        "records outside GBIF or indexed under other fields",
+        "a complete river checklist",
+        "current fish presence"
+      ]
+    },
+    {
+      "sourceId": "denr-dao-2025-28-classified-waterbodies",
+      "evidence": "DENR DAO 2025-28 names Yabahan River in San Andres, Quezon and lists upstream/downstream monitoring stations with a regulatory B classification. Those stations and the classification are not fish sampling results or a fish checklist.",
+      "supports": [
+        "official waterbody name and locality context"
+      ],
+      "doesNotSupport": [
+        "fish taxa or fish sampling",
+        "current ambient water quality",
+        "a river route or boundary"
+      ]
+    },
+    {
+      "sourceId": "emb-national-sober-2016-2021-silongin-river",
+      "evidence": "EMB Table 3.3 lists Yabahan River with San Andres and San Francisco locality context and historical 2020 classification metadata; it is a water-classification table, not fish sampling.",
+      "supports": [
+        "historical official name/locality context"
+      ],
+      "doesNotSupport": [
+        "fish taxa",
+        "current presence or absence",
+        "route geometry",
+        "current water quality"
+      ]
+    },
+    {
+      "sourceId": "quezon-pdrrmo-2026-flood-advisory-14-watercourses",
+      "evidence": "Quezon General Flood Advisory No. 14, issued 7 August 2026, uses the spelling “Yabahaan” as a historical watercourse label. It does not report fish observations.",
+      "supports": [
+        "the advisory spelling variant used for the river-name crosswalk"
+      ],
+      "doesNotSupport": [
+        "fish taxa",
+        "current hazard status",
+        "exact reach or river route"
+      ]
+    }
+  ],
+  "excludedSearchFindings": [
+    {
+      "title": "Diversity and Distribution of Freshwater Fish Assemblages in Tayabas River, Quezon (Philippines)",
+      "url": "https://philjournalsci.dost.gov.ph/images/pdf/pjs_pdf/vol142no1/pdf/Diversity_and_Distribution_of_Freshwater_Fish.pdf",
+      "reason": "A real fish survey was identified, but its sampling sites are on Tayabas River, a different named waterbody; none of its fish records were assigned to Yabahan River."
+    },
+    {
+      "title": "Freshwater Fishes of Tikub Lake, Tiaong, Quezon, Philippines",
+      "url": "https://ejournals.ph/article.php?id=1509",
+      "reason": "A fish survey for Tikub Lake is a different waterbody; no species were transferred to Yabahan River."
+    },
+    {
+      "title": "Yabahaan River fishing reports",
+      "url": "https://fishbrain.com/fishing-waters/ZvIYtuxc/yabahaan-river",
+      "reason": "The page is a user-generated fishing platform and reports no logged catches; it does not provide biological sampling, voucher evidence, or a fish list."
+    },
+    {
+      "title": "Giant Lapu-Lapu fish caught in San Andres, Quezon",
+      "url": "https://www.gmanetwork.com/news/scitech/science/789818/giant-lapu-lapu-fish-caught-in-san-andres-quezon/story/",
+      "reason": "The article describes a reported coastal catch near Barangay Inanuran, not a sample from Yabahan River; it is not assigned to this river lead."
+    }
+  ],
+  "disposition": {
+    "siteResolvedFishSurveyFound": false,
+    "gbifQueryCount": 4,
+    "gbifZeroResultQueryCount": 4,
+    "fishAbsenceInferred": false,
+    "speciesAssertionsAdded": 0,
+    "publicRecordsAdmitted": 0,
+    "publicAppRowsAdded": 0,
+    "identityChanged": false,
+    "geometryAdded": false,
+    "publicationApproval": false
+  },
+  "nextActions": [
+    "Keep fish evidence and current presence unknown; do not infer fishlessness from zero results.",
+    "Seek dated, station-resolved sampling tables from BFAR IV-A, Quezon LGU, EMB, or university repositories, with methods, identification evidence/vouchers, and reuse terms.",
+    "Obtain permitted route-scale hydrography separately before assigning any fish survey station or advisory reach to the Yabahan River route."
+  ],
+  "nonClaims": [
+    "This was a bounded discovery screen, not an exhaustive literature, museum-catalog, or occurrence-provider search.",
+    "No species, diet, current presence/absence, salinity, water quality, safety, access, fishing rule, river route, or geometry is established."
+  ]
+}
