@@ -152,3 +152,8 @@ Added a research-only transcription of 36 finfish label rows across eight 2024 h
 ### Lamon Bay NFRDI catch-label review - 1 November 2026
 
 Added a research-only transcription of 44 finfish label rows across ten handbook gear tables. The 39 distinct printed names include 35 exact accepted species-rank matches, one subspecies, two variant matches, and one species-level no-match. Nineteen non-fish labels were excluded. These historical gear labels do not establish dated/current occurrences or a complete checklist. See [the review](data/research/philippines/calabarzon-lamon-bay-nfrdi-gear-catch-label-transcription-20261101.json).
+
+
+### Ragay Gulf NFRDI catch-label review - 1 November 2026
+
+Added a research-only transcription of 33 finfish label rows across eight 2024 handbook gear tables. The 26 distinct names yielded 24 exact accepted species-rank matches, one synonym, and one species-level no-match; ten non-fish labels were excluded. The handbook labels remain historical fishery context, separate from other held Ragay sources and not evidence of current occurrences or a complete checklist. See [the review](data/research/philippines/calabarzon-ragay-gulf-nfrdi-gear-catch-label-transcription-20261101.json).
