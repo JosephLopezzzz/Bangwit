@@ -3936,3 +3936,14 @@ Renamed the former ph-wb-palad-reef-guinayangan lead to ph-wb-capuluan-reef-guin
 See the [2022 SLSU Ragay Gulf study](https://journals.carsu.edu.ph/JESEG/article/download/56/63/102), [official NGA Pub. 162](https://msi.nga.mil/api/publications/download?key=16694491%2FSFH00000%2FPub162bk.pdf), [crosswalk review](../data/research/philippines/calabarzon-guinayangan-capuluan-palad-reef-crosswalk-review-20261101.json), and the refreshed [CALABARZON profile](../data/research/philippines/calabarzon-coverage-denominator-profile-20261031.json).
 
 **Next:** continue with a primary Guinayangan freshwater fish-survey retrieval or official sanctuary instrument, keeping Nabangka, Capuluan Reef, and Palad Reef separate and leaving the old Ragay Gulf vernacular catch labels unresolved.
+
+
+### National rollout step 446 - Ragay Gulf 2003 WWF reef-census aggregate review - 1 November 2026
+
+Reviewed the WWF-Philippines Sulu-Sulawesi Marine Ecoregion assessment. It reports a historical fish visual-census aggregate of 296 species in 18 families for Ragay Gulf and names Alibijaban and Acha Reef as sanctuary context, but provides no taxa checklist, survey dates/stations, method detail, site allocation, or direct citation for that aggregate. Appendix 5 is recorded as historical MPA terminology only and does not establish current designation, legal restrictions, or boundaries. The separate 329-species figure belongs to the preceding Balayan Bay paragraph; its cited 1982 bibliography item is titled Sombrero Island Marine Park, leaving that Balayan citation/locality crosswalk unresolved. It is not used as Ragay evidence.
+
+Registered one research-only source and linked the review to ph-wb-ragay-gulf-quezon. CALABARZON remains at 123 named leads and 140 distinct scope references; source registry: 601 records. No species/occurrence assertion, sanctuary-level assignment, geometry, current-presence/legal claim, or public row was added. The report was reviewed through a third-party university-hosted mirror and no item-specific open reuse terms were found.
+
+See the [WWF-Philippines report](https://ftp.cs.ru.nl/toinesmits/Lecture_8_12/TWM%20philippines/Digital%20information/Reports/WWF-Philippines%2C%202003%20A%20Biophysical%20assessment.pdf) and [research review](../data/research/philippines/calabarzon-ragay-gulf-wwf-2003-reef-census-review-20261101.json).
+
+**Next:** pursue the original Ragay Gulf visual-census checklist/station records or an independently rights-cleared station-resolved survey. Continue searching for the official Ordinance No. 7-2000 instrument and current sanctuary boundary as a distinct legal-data task; do not merge fish evidence with sanctuary legality.\n
