@@ -3717,3 +3717,15 @@ Added `calabarzon-imus-sorb-public-index-followup-20261101.json` and three offic
 See the official [Newsletter Edition 6 page](https://pemsea.org/resources/publications/magazines-and-newsletters/integrated-river-basin-management-project-4), [IRBM Components page](https://irbm.seaknowledgebank.net/components), and [IRBM Reports index](https://irbm.seaknowledgebank.net/resources/publications/reports).
 
 **Next:** continue independent CALABARZON fish-source discovery. Keep the SORB, the separate CvSU Imus watershed project deliverable, and the unnamed Bacoor fish-tissue lead distinct; do not infer fish absence from an index gap.
+
+### National rollout step 426 - CvSU Imus ASEANO Subproject 1 deliverable crosswalk - 1 November 2026
+
+Crosswalked the CvSU 2020–2021 project listing with PEMSEA’s full public “ASEANO 2020–2021, Subproject 1: Mapping and Characterization of Imus River Watershed Using GIS and Remote Sensing Technology” report. The author, institution, funder, period and topic strongly align; this is a probable associated component output, but the different titles and the absence of an explicit cross-reference mean the report is not confirmed as the complete deliverable for the broader CvSU project. PEMSEA’s 2023 story says ASEANO technical reports were turned over to Cavite Government, without naming the report inventory.
+
+The PDF documents watershed and stream characterization, land use, settlement/population mapping and historic hydroclimatic data. Bounded full-text checks for “species,” “fisheries,” “fish sampling” and “aquatic biota” found no match; “fishpond” appears as a land-use class only. The report contains printed watershed maps, but no reusable vector GIS file or spatial reuse terms were found. Do not treat these maps or watershed measurements as fishing-area geometry.
+
+Added `calabarzon-imus-cvsu-aseano-subproject1-deliverable-crosswalk-20261101.json` and one official PEMSEA provenance record; source registry now contains 578 sources. No fish taxon, occurrence, diet, water-safety claim, geometry, waterbody-scope link or app row was added, and no external request was sent.
+
+See the official [CvSU listing](https://cvsu.edu.ph/research-center), [PEMSEA ASEANO Subproject 1 PDF](https://pemsea.org/sites/default/files/2024-06/ASEANO%20CvSU%20Subproject%201.pdf), and [PEMSEA–CvSU project story](https://pemsea.org/index.php/resources/news/pemsea-recognized-integrated-coastal-management-partnership-cavite-state-university).
+
+**Next:** continue independent CALABARZON fish-source discovery. Keep the probable mapping component, the complete CvSU project deliverable, the IYRR SORB and the unnamed Bacoor fish-tissue lead as separate evidence questions.

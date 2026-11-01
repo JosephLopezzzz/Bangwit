@@ -126,3 +126,7 @@ The official [DENR-FASPS 2025 Annual Portfolio Report](https://faspselib.denr.go
 ### IYRR SORB publication-index follow-up — 1 November 2026
 
 PEMSEA's Q1 2025 newsletter reports validation workshops for the Imus–Ylang Ylang and Rio Grande SORB reports; its Components page lists SORB reports as a project output. The public Reports index reviewed for Bangwit lists other reports but does not expose the IYRR SORB. That bounded index result is not proof of nonpublication or missing fish data. No fish, safety, or geometry claim was added. See the [review](data/research/philippines/calabarzon-imus-sorb-public-index-followup-20261101.json) and [research log](data/research/philippines/README.md).
+
+### CvSU Imus ASEANO report crosswalk — 1 November 2026
+
+PEMSEA’s public ASEANO CvSU Subproject 1 report is a probable component of the similarly timed CvSU Imus watershed project listing, based on the shared lead researcher, institution, funder and scope. No source explicitly confirms it as the full final deliverable. The report contains watershed maps and historic hydrology context, but the reviewed text has no fish inventory or named taxa; no reusable vector boundary was found. No app claim was added. See the [review](data/research/philippines/calabarzon-imus-cvsu-aseano-subproject1-deliverable-crosswalk-20261101.json) and [research log](data/research/philippines/README.md).
