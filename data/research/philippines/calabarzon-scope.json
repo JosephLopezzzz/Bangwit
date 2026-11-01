@@ -72,7 +72,7 @@
     "limits": "Province plus separate-city starter coverage. Municipalities/component cities and each island/waterbody still require the source-sweep inventory; this is not a completed regional inventory."
   },
   "counts": {
-    "waterbodyResearchLeads": 123,
+    "waterbodyResearchLeads": 124,
     "provincesWithLeads": 5,
     "separateCityCoverageUnits": 1,
     "byKind": {
@@ -87,7 +87,7 @@
       "fishpond": 1,
       "spring": 7,
       "fish-sanctuary": 1,
-      "reef": 2
+      "reef": 3
     },
     "geometryValidated": 0,
     "speciesAssertionsImported": 9,
@@ -3748,7 +3748,9 @@
         "smithsonian-canmahala-locality-record-leads-2026",
         "nfrdi-bfar4a-2024-common-fishing-gears-major-bays-handbook",
         "guinayangan-lgu-marine-products-catch-list-legacy",
-        "wwf-philippines-ssme-2003-biophysical-assessment-ragay-fish-summary"
+        "wwf-philippines-ssme-2003-biophysical-assessment-ragay-fish-summary",
+        "depdev-calabarzon-rpfp-2004-2030-vol2",
+        "philreefs-atlas-philippine-coral-reefs-2002"
       ],
       "identityStatus": "official-source-named-coastal-gulf;site-association-only",
       "boundaryStatus": "not-delineated",
@@ -3756,6 +3758,41 @@
       "reviewStatus": "NFRDI-poster-name-and-reuse-issues-held;GBIF-CAS-screened;source-rights-conflict-and-catalog-locality-date-disagreement-held;2025-CCBY-type-material-batch-reviewed;taxonomic-conflict-and-lot-identity-held;Canmahala-official-record-access-blocked;no-public-assertions;regional-side-unresolved;no-public-row;NFRDI-2024-gear-handbook-reviewed;8-gear-blocks-transcribed;taxonomy-screened;field-identification-and-reuse-review-pending;legacy-municipal-catch-labels-reviewed;no-taxa-admitted;WWF-2003-aggregate-reviewed;no-species-or-current-presence-inferred",
       "publicAdmission": false,
       "scopeNote": "DENR CENRO Calauag’s 2026 Asian Waterbird Census names Ragay Gulf in a parenthetical site grouping for Hinabaan, Guinayangan. This establishes a source-described site context only; it does not delimit the gulf or establish that the entire gulf belongs to Quezon/CALABARZON. Waterbird monitoring is not fish evidence. No salinity, fishing access, legal status, species, or geometry is inferred. The official 2025 DA-BFAR/NFRDI/NSAP IV-A poster and repository abstract describe a 2018–2022 Ragay Gulf top-species source list (nine finfish and one crab); the footer says the displayed arrangement is not ranked and the illustrated fish sizes are based on maximum length. The image labels Eubleekeria splendens, while the abstract says Equulites splendens; an explicit CoL XR match supports the image spelling as exact species rank but only maps the abstract spelling to genus, so keep this conflict held. The poster has no visible item-specific reuse license, stations, method, or capture coordinates. Its gulf-level labels are not assigned to Hinabaan, the De Guzman Fishpond, or any exact catch location. No field identification, current presence, or public assertion is established. A 2026-10-30 GBIF/CAS historical-fish screen found candidate records, but the CAS collection terms prohibit redistribution while GBIF metadata marks the dataset CC0. A targeted 2025 checklist cross-check also revealed one catalog-level locality/date disagreement. Keep the candidate set held; no taxon rows, coordinates, or public app records were added, and this does not establish current presence or the gulf boundary. Balisco and Liao (2025, CC BY 4.0) report 16 fish taxon treatments with 25 historical Ragay Gulf/Ragay Bay lot groupings in the article body. A separate CoL XR crosswalk records exact species-rank matches, with one source-name status conflict and one uncatalogued paratype group whose lot identity remains unresolved. These literature statements are kept separate from conflicting GBIF/CAS candidate rows; only the CC BY article body is used. The gulf-side/province and point geometry remain unresolved, so none is counted as a CALABARZON assertion or projected to the app. A separate visual transcription of the 2024 NFRDI handbook records 33 finfish label rows across eight Ragay Gulf gear blocks and 26 distinct printed names: 24 strict exact accepted species-rank matches, one species-rank synonym, and one species-level no-match whose non-strict fallback is genus-only. Ten shrimp/crab/cephalopod labels across five gear tables were excluded. These fishery labels have no per-row date, station, catch origin, voucher, or identification method and do not resolve gulf boundaries or province attribution; they are not current-presence claims, complete checklists, or public assertions. See calabarzon-ragay-gulf-nfrdi-gear-catch-label-transcription-20261101.json. A former municipal fishery page lists 13 vernacular labels as some fish catch in Guinayangan municipal waters; it gives no catch dates, sites, methods, or scientific identities, so the labels remain unresolved and are not assigned to Nabangka or Palad Reef. A 2003 WWF-Philippines assessment reports a Ragay Gulf fish visual-census aggregate of 296 species in 18 families and names Alibijaban and Acha Reef as sanctuary context. It gives no species list, census dates/stations, supporting citation for the aggregate, or allocation to either sanctuary. Treat it as historical gulf-level context only; no current presence, sanctuary status, or boundary is inferred. See calabarzon-ragay-gulf-wwf-2003-reef-census-review-20261101.json."
+    },
+    {
+      "id": "ph-wb-acha-reef-tagkawayan",
+      "name": "Acha Reef",
+      "aliases": [
+        "Acha Reef Fish Sanctuary"
+      ],
+      "kind": "reef",
+      "salinity": {
+        "classification": "unknown",
+        "reviewStatus": "not-assessed",
+        "sourceRefs": []
+      },
+      "administrativeAssociations": [
+        {
+          "regionId": "0400000000",
+          "relationship": "source-described-locality",
+          "sourceRefs": [
+            "depdev-calabarzon-rpfp-2004-2030-vol2"
+          ],
+          "provinceId": "0405600000",
+          "locality": "Ragay Gulf, Tagkawayan, Quezon; the 2004-2030 regional plan reports 500 hectares"
+        }
+      ],
+      "sourceRefs": [
+        "depdev-calabarzon-rpfp-2004-2030-vol2",
+        "philreefs-atlas-philippine-coral-reefs-2002",
+        "wwf-philippines-ssme-2003-biophysical-assessment-ragay-fish-summary"
+      ],
+      "identityStatus": "cross-source-named-reef;historical-fish-sanctuary-label;current-designation-unverified",
+      "boundaryStatus": "not-delineated",
+      "fishEvidenceStatus": "no-site-resolved-finfish-checklist-or-stations-retrieved;2003-gulf-aggregate-not-allocated-to-acha",
+      "reviewStatus": "place-crosswalk-reviewed;atlas-chapter-unavailable;no-finfish-assertions;no-current-status-or-boundary",
+      "publicAdmission": false,
+      "scopeNote": "The official 2004-2030 CALABARZON framework plan identifies Acha Reef in Ragay Gulf, Tagkawayan, Quezon and reports an area of 500 hectares. The plan passage provides no validated geometry or technical boundary. A DOST-hosted copy of the 2002 PhilReefs atlas contents lists an Acha Reef Fish Sanctuary chapter, but the available PDF copy contains only front matter and contents; the chapter was not reviewed. WWF-Philippines reports a 2003 Ragay Gulf fish-census aggregate but does not allocate it to Acha Reef. These sources do not establish reef-specific fish taxa, current sanctuary designation, legal rules, access, safety, or current fish presence."
     },
     {
       "id": "ph-wb-de-guzman-guinayangan-fishpond",

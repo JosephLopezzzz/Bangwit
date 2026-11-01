@@ -3946,4 +3946,14 @@ Registered one research-only source and linked the review to ph-wb-ragay-gulf-qu
 
 See the [WWF-Philippines report](https://ftp.cs.ru.nl/toinesmits/Lecture_8_12/TWM%20philippines/Digital%20information/Reports/WWF-Philippines%2C%202003%20A%20Biophysical%20assessment.pdf) and [research review](../data/research/philippines/calabarzon-ragay-gulf-wwf-2003-reef-census-review-20261101.json).
 
-**Next:** pursue the original Ragay Gulf visual-census checklist/station records or an independently rights-cleared station-resolved survey. Continue searching for the official Ordinance No. 7-2000 instrument and current sanctuary boundary as a distinct legal-data task; do not merge fish evidence with sanctuary legality.\n
+**Next:** pursue the original Ragay Gulf visual-census checklist/station records or an independently rights-cleared station-resolved survey. Continue searching for the official Ordinance No. 7-2000 instrument and current sanctuary boundary as a distinct legal-data task; do not merge fish evidence with sanctuary legality.
+
+### National rollout step 447 - Acha Reef Tagkawayan place crosswalk - 1 November 2026
+
+The official CALABARZON Regional Physical Framework Plan 2004-2030, Volume 2, identifies Acha Reef in Ragay Gulf, Tagkawayan, Quezon and reports an area of 500 hectares. This provides a source-described locality and reported planning area, not a validated geometry or legal water boundary. The plan condition and illegal-fishing statements are historical context only.
+
+The 2002 PhilReefs *Atlas of Philippine Coral Reefs* contents list Ragay Gulf (p. 64), Acha Reef Fish Sanctuary (p. 69), and Alibijaban Fish Sanctuary (p. 71). The accessible DOST-NAST PDF copy contains only 13 front-matter/contents pages, so the Acha chapter and any fish data could not be inspected. The atlas states all rights reserved and requires publisher permission for reproduction. The 2003 WWF gulf-level aggregate is not assigned to Acha.
+
+Added a distinct Acha Reef research lead, a bounded place-crosswalk review, and two source records. CALABARZON now has 124 named leads, including three reefs, 142 distinct source references, and 603 registry sources. No species/occurrence assertion, site-level census assignment, current sanctuary/legal status, geometry, or public row was added. See the [place-crosswalk review](../data/research/philippines/calabarzon-ragay-gulf-acha-reef-place-crosswalk-20261101.json), [CALABARZON regional plan](https://calabarzon.depdev.gov.ph/wp-content/uploads/2014/06/rpfp2004-2030.completewbookmarks-vol2pdf.pdf), and [PhilReefs atlas copy](https://nast.dost.gov.ph/images/pdf%20files/Publications/Outstanding-Awardees%20BOOKS/2005/Atlas%20of%20the%20Philippine%20Coral%20Reefs.pdf).
+
+**Next:** seek authorized access to the Acha Reef chapter or a separate dated, station-resolved, rights-cleared fish source. Verify present-day sanctuary designation and technical boundary from an official legal source as a separate task. Do not use the reported 500 hectares as geometry.
