@@ -4105,3 +4105,11 @@ Quezon’s historical flood advisory lists “Yabahaan.” DENR DAO 2025-28 name
 Added one research-only river lead and one DENR order source. CALABARZON now has 139 selected leads (75 river/system/basin units), 160 distinct source references, and 622 registry sources. No fish assertion, public record, geometry, salinity, current hazard/water-quality claim, or app row was added; publication admission remains false. See [review](../data/research/philippines/calabarzon-quezon-yabahaan-yabahan-river-crosswalk-20261101.json) and [DENR DAO 2025-28](https://r6.emb.gov.ph/wp-content/uploads/2026/01/DAO-2025-28.pdf).
 
 **Next:** continue the 17 unresolved Quezon advisory labels and review fish/route evidence separately.
+
+### National rollout step 466 - Quezon advisory river names cross-checked against BMB and DPWH lists - 1 November 2026
+
+Crosswalked seven bare Quezon advisory labels—Bigol, Guinhalinan, Calauag, Pandanan, Sta. Lucia, Maapon and Tignoan—to matching 2014 BMB-DENR Atlas river names at province level. The Atlas gives broad grid and outflow context; DPWH Annex D-2 lists separate same-named principal basins. These records do not establish exact advisory reaches, channel-to-basin topology, fish presence or route geometry.
+
+Added seven research-only river leads and one source record. CALABARZON now has 146 selected leads (82 river/system/basin units), 161 distinct source references and 623 registered sources. No species assertion, public record, geometry, salinity class, current water-quality/hazard claim or app row was added. See the [crosswalk review](../data/research/philippines/calabarzon-quezon-watercourse-atlas-basin-crosswalk-20261101.json), [BMB-DENR Atlas](https://www.ramsar.org/sites/default/files/documents/library/atlas_inland_wetland_mainland_luzon_philippines_2014_e.pdf), [DPWH Annex D-2](https://dpwh.gov.ph/dpwh/sites/default/files/issuances/DO_047_s2022.pdf), and [Quezon advisory](https://quezon.gov.ph/general-flood-advisory-no-14-issued-600am-august-7-2026/).
+
+**Next:** crosswalk the 10 advisory labels still lacking a full source-name/locality match; continue route and fish-evidence checks separately.

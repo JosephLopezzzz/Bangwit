@@ -1,0 +1,201 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "calabarzon-quezon-watercourse-atlas-basin-crosswalk-20261101",
+  "reviewedOn": "2026-11-01",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "status": "seven-Quezon-advisory-labels-crosswalked-to-BMB-river-names-and-DPWH-basin-names-at-source-name-province-level;exact-reaches-unverified",
+  "question": "Do seven labels in Quezon’s flood advisory match river names in the BMB-DENR Atlas and same-named principal basins in DPWH Annex D-2?",
+  "purpose": "Record bounded official source-name/province matches while keeping river channels, principal basins, advisory reaches, fish evidence and geometry distinct.",
+  "sourceIds": [
+    "quezon-pdrrmo-2026-flood-advisory-14-watercourses",
+    "denr-bmb-luzon-inland-wetlands-atlas-2014",
+    "dpwh-2022-principal-river-basins-annex-d2"
+  ],
+  "findings": [
+    {
+      "sourceId": "quezon-pdrrmo-2026-flood-advisory-14-watercourses",
+      "evidence": "Quezon Provincial Government General Flood Advisory No. 14 (7 August 2026) lists Bigol, Guinhalinan, Calauag, Pandanan, Sta. Lucia, Maapon and Tignoan as watercourses/river tributaries likely affected by that forecast.",
+      "supports": [
+        "official historical advisory spellings",
+        "Quezon province context"
+      ],
+      "doesNotSupport": [
+        "current flood status",
+        "exact river reach",
+        "route geometry",
+        "fish evidence"
+      ]
+    },
+    {
+      "sourceId": "denr-bmb-luzon-inland-wetlands-atlas-2014",
+      "evidence": "The 2014 BMB-DENR Atlas Table 2 lists Bigol River (P-30, Ragay Gulf), Guinhalinan River (P-29, Ragay Gulf), Calauag River (O-27, Lamon Bay), Pandanan River (O-27, Lamon Bay), Sta. Lucia River (L-26/L-27, Lamon Bay), Maapon River (L-26, Lamon Bay) and Tignoan River (K-24, Lamon Bay), each under Region IV-A and Quezon.",
+      "supports": [
+        "official river-name and province matches",
+        "source-reported grid/outflow context"
+      ],
+      "doesNotSupport": [
+        "municipality-level identity",
+        "complete channel route or geometry",
+        "exact advisory reach",
+        "fish occurrence or current conditions"
+      ]
+    },
+    {
+      "sourceId": "dpwh-2022-principal-river-basins-annex-d2",
+      "evidence": "DPWH Department Order 47 (2022), Annex D-2, separately lists same-named Region IV-A principal basins: Bigol row 92, 89 sq km; Guinhalinan row 93, 149 sq km; Calauag row 95, 163 sq km; Pandanan row 96, 154 sq km; Sta. Lucia row 97, 94 sq km; Maapon row 99, 201 sq km; and Tignoan row 102, 86 sq km.",
+      "supports": [
+        "official principal-basin names and reported areas",
+        "name-level corroboration"
+      ],
+      "doesNotSupport": [
+        "river-channel boundaries",
+        "channel-to-basin topology",
+        "advisory reach identity",
+        "fish evidence or current conditions"
+      ]
+    }
+  ],
+  "crosswalks": [
+    {
+      "advisoryLabel": "Bigol",
+      "officialRiverName": "Bigol River",
+      "riverLeadId": "ph-wb-bigol-river-quezon",
+      "atlasGrid": "P-30",
+      "atlasOutflow": "Ragay Gulf",
+      "dpwhBasin": {
+        "row": 92,
+        "region": "4A",
+        "reportedAreaSqKm": 89
+      },
+      "resolutionLevel": "source-name and province level; exact advisory reach and channel-to-basin relationship unverified",
+      "decision": "Add a separate research-only river-name lead; retain the DPWH principal basin as same-name context and do not merge basin extent into river geometry."
+    },
+    {
+      "advisoryLabel": "Guinhalinan",
+      "officialRiverName": "Guinhalinan River",
+      "riverLeadId": "ph-wb-guinhalinan-river-quezon",
+      "atlasGrid": "P-29",
+      "atlasOutflow": "Ragay Gulf",
+      "dpwhBasin": {
+        "row": 93,
+        "region": "4A",
+        "reportedAreaSqKm": 149
+      },
+      "resolutionLevel": "source-name and province level; exact advisory reach and channel-to-basin relationship unverified",
+      "decision": "Add a separate research-only river-name lead; retain the DPWH principal basin as same-name context and do not merge basin extent into river geometry."
+    },
+    {
+      "advisoryLabel": "Calauag",
+      "officialRiverName": "Calauag River",
+      "riverLeadId": "ph-wb-calauag-river-quezon",
+      "atlasGrid": "O-27",
+      "atlasOutflow": "Lamon Bay",
+      "dpwhBasin": {
+        "row": 95,
+        "region": "4A",
+        "reportedAreaSqKm": 163
+      },
+      "resolutionLevel": "source-name and province level; exact advisory reach and channel-to-basin relationship unverified",
+      "decision": "Add a separate research-only river-name lead; retain the DPWH principal basin as same-name context and do not merge basin extent into river geometry."
+    },
+    {
+      "advisoryLabel": "Pandanan",
+      "officialRiverName": "Pandanan River",
+      "riverLeadId": "ph-wb-pandanan-river-quezon",
+      "atlasGrid": "O-27",
+      "atlasOutflow": "Lamon Bay",
+      "dpwhBasin": {
+        "row": 96,
+        "region": "4A",
+        "reportedAreaSqKm": 154
+      },
+      "resolutionLevel": "source-name and province level; exact advisory reach and channel-to-basin relationship unverified",
+      "decision": "Add a separate research-only river-name lead; retain the DPWH principal basin as same-name context and do not merge basin extent into river geometry."
+    },
+    {
+      "advisoryLabel": "Sta. Lucia",
+      "officialRiverName": "Sta. Lucia River",
+      "riverLeadId": "ph-wb-sta-lucia-river-quezon",
+      "atlasGrid": "L-26, L-27",
+      "atlasOutflow": "Lamon Bay",
+      "dpwhBasin": {
+        "row": 97,
+        "region": "4A",
+        "reportedAreaSqKm": 94
+      },
+      "resolutionLevel": "source-name and province level; exact advisory reach and channel-to-basin relationship unverified",
+      "decision": "Add a separate research-only river-name lead; retain the DPWH principal basin as same-name context and do not merge basin extent into river geometry."
+    },
+    {
+      "advisoryLabel": "Maapon",
+      "officialRiverName": "Maapon River",
+      "riverLeadId": "ph-wb-maapon-river-quezon",
+      "atlasGrid": "L-26",
+      "atlasOutflow": "Lamon Bay",
+      "dpwhBasin": {
+        "row": 99,
+        "region": "4A",
+        "reportedAreaSqKm": 201
+      },
+      "resolutionLevel": "source-name and province level; exact advisory reach and channel-to-basin relationship unverified",
+      "decision": "Add a separate research-only river-name lead; retain the DPWH principal basin as same-name context and do not merge basin extent into river geometry."
+    },
+    {
+      "advisoryLabel": "Tignoan",
+      "officialRiverName": "Tignoan River",
+      "riverLeadId": "ph-wb-tignoan-river-quezon",
+      "atlasGrid": "K-24",
+      "atlasOutflow": "Lamon Bay",
+      "dpwhBasin": {
+        "row": 102,
+        "region": "4A",
+        "reportedAreaSqKm": 86
+      },
+      "resolutionLevel": "source-name and province level; exact advisory reach and channel-to-basin relationship unverified",
+      "decision": "Add a separate research-only river-name lead; retain the DPWH principal basin as same-name context and do not merge basin extent into river geometry."
+    }
+  ],
+  "scopeChanges": {
+    "newRiverLeads": [
+      "ph-wb-bigol-river-quezon",
+      "ph-wb-guinhalinan-river-quezon",
+      "ph-wb-calauag-river-quezon",
+      "ph-wb-pandanan-river-quezon",
+      "ph-wb-sta-lucia-river-quezon",
+      "ph-wb-maapon-river-quezon",
+      "ph-wb-tignoan-river-quezon"
+    ],
+    "newSourceRegistryRecords": 1,
+    "newSourceReferences": 21,
+    "selectedLeadCount": 146,
+    "riverSystemAndBasinUnitCount": 82,
+    "distinctScopeSourceReferences": 161,
+    "registeredSourceCount": 623
+  },
+  "disposition": {
+    "advisoryNameProvinceCrosswalksResolved": 7,
+    "exactAdvisoryReachVerified": 0,
+    "channelToBasinTopologyVerified": 0,
+    "speciesAssertionsAdded": 0,
+    "publicRecordsAdmitted": 0,
+    "currentPresenceInferred": false,
+    "currentWaterQualityClaimed": false,
+    "currentHazardClaimed": false,
+    "salinityClassificationAdded": false,
+    "geometryAdded": false,
+    "publicOccurrenceRowsAdded": 0,
+    "publicationApproval": false
+  },
+  "reuseAndLimitations": [
+    "The BMB-DENR Atlas copyright page permits educational/non-profit reproduction with acknowledgement; it does not establish public-app or derived-database reuse.",
+    "The DPWH principal-basin table has no item-specific open-data license located; only minimal factual names and areas are retained.",
+    "The Atlas grid labels and outflow names are not route geometry; DPWH basin areas are not channel lengths or delineations.",
+    "The advisory is historical and not current hazard guidance.",
+    "No fish checklist, occurrence, current presence/absence, salinity, access, fishing rule, safety advice or geometry is established."
+  ],
+  "nextActions": [
+    "Obtain permitted route-scale hydrography to determine whether each advisory label identifies the exact source-named river reach and how it relates to its same-name principal basin.",
+    "Search site-resolved fish surveys separately for all seven rivers; do not infer fish presence from waterbody identity or classification."
+  ]
+}
