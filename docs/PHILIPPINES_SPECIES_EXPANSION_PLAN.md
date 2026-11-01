@@ -3978,3 +3978,12 @@ A bounded exact-name search did not retrieve an Acha-specific finfish checklist 
 See the [NGA Sailing Directions](https://msi.nga.mil/api/publications/download?key=16694491%2FSFH00000%2FPub162bk.pdf), [NOAA CoRIS place index](https://www.coris.noaa.gov/data/keywords/pacific_ocean.pdf), and the [bounded follow-up review](../data/research/philippines/calabarzon-acha-reef-public-source-search-followup-20261101.json).
 
 **Next:** move to the next independent CALABARZON freshwater fish-source lead while leaving Acha's authorized chapter, current sanctuary instrument, and station-resolved survey as separate retrieval gates.
+
+
+### National rollout step 450 - Tagkawayan freshwater river identity and fish-source search - 1 November 2026
+
+Reviewed indexed text from the official Tagkawayan Water District history page, which separately names Sakang River and Tagkawayan River and describes Sakang flowing through creeks to the latter. Its page date/refresh and the reported 25 L/s discharge date are unknown, so the narrative is not treated as current utility status, a flow measurement, or geometry. An official LGU news index independently names Sakang River in Barangay San Vicente in a 25 March 2026 community tree-planting notice; this is locality context, not aquatic research.
+
+A bounded public search did not retrieve a site-specific finfish survey for either river. Added two distinct freshwater research leads and two source records, preserving unknown salinity and undelineated channels. CALABARZON now has 126 named leads, including 62 rivers, 148 unique scope references, and 609 registered sources. No species/occurrence assertion, current water-use or flow claim, geometry, legal/safety claim, or public-app row was added. See the [Tagkawayan freshwater source review](../data/research/philippines/calabarzon-taghawayan-sakang-river-fish-search-review-20261101.json), [Tagkawayan Water District history](https://www.tagkawayanwaterdistrict.gov.ph/index.php/about-tagkawayan-water-district/history-of-tagkawayan-wd), and [LGU local-news index](https://tagkawayan.gov.ph/localnews/page/12/).
+
+**Next:** seek dated, station-resolved, rights-cleared fish evidence and official channel routes for both rivers; continue the freshwater queue independently of pending institutional replies.

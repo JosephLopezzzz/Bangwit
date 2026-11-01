@@ -72,12 +72,12 @@
     "limits": "Province plus separate-city starter coverage. Municipalities/component cities and each island/waterbody still require the source-sweep inventory; this is not a completed regional inventory."
   },
   "counts": {
-    "waterbodyResearchLeads": 124,
-    "provincesWithLeads": 5,
+    "waterbodyResearchLeads": 126,
+    "provincesWithLeads": 6,
     "separateCityCoverageUnits": 1,
     "byKind": {
       "bay": 8,
-      "river": 60,
+      "river": 62,
       "estuary": 3,
       "wetland": 8,
       "reservoir": 5,
@@ -3805,6 +3805,70 @@
       "scopeNote": "The official 2004-2030 CALABARZON framework plan identifies Acha Reef in Ragay Gulf, Tagkawayan, Quezon and reports an area of 500 hectares. The plan passage provides no validated geometry or technical boundary. A DOST-hosted copy of the 2002 PhilReefs atlas contents lists an Acha Reef Fish Sanctuary chapter, but the available PDF copy contains only front matter and contents; the chapter was not reviewed. WWF-Philippines reports a 2003 Ragay Gulf fish-census aggregate but does not allocate it to Acha Reef. These sources do not establish reef-specific fish taxa, current sanctuary designation, legal rules, access, safety, or current fish presence. A 2000 preliminary list names Candalapdap but is explicitly not ground-truthed; a 2022 study describes Acha between Guinayangan and Tagkawayan as a slipper-lobster fishing area. The old plan reports 500 ha, while an unauthenticated CLWUP preview reports 6 ha; the LGU said in April 2026 that final plan approvals were still ahead. The 2025 NGA Sailing Directions give a relative east-of-Guinayangan navigation description and report a depth of 0.6 m, while a 2016 NOAA CoRIS place index lists the reef under Ragay Gulf; neither supplies a validated polygon or legal boundary. The CLWUP preview's general Tagkawayan marine-resource labels are not assigned to Acha. Keep both areas unresolved and out of geometry."
     },
     {
+      "id": "ph-wb-sakang-river-tagkawayan",
+      "name": "Sakang River",
+      "aliases": [],
+      "kind": "river",
+      "salinity": {
+        "classification": "unknown",
+        "reviewStatus": "not-assessed",
+        "sourceRefs": []
+      },
+      "administrativeAssociations": [
+        {
+          "regionId": "0400000000",
+          "relationship": "source-described-locality",
+          "sourceRefs": [
+            "tagkawayan-water-district-history-sakang-river",
+            "tagkawayan-lgu-2026-sakang-river-community-action"
+          ],
+          "provinceId": "0405600000",
+          "locality": "Tagkawayan, Quezon; undated Water District text places a source area approximately 3 km north of Poblacion and describes flow toward Tagkawayan River; a 2026 LGU notice names Sakang River in Barangay San Vicente; route not delineated"
+        }
+      ],
+      "sourceRefs": [
+        "tagkawayan-water-district-history-sakang-river",
+        "tagkawayan-lgu-2026-sakang-river-community-action"
+      ],
+      "identityStatus": "official-water-district-and-2026-LGU-name-context;route-unverified",
+      "boundaryStatus": "not-delineated",
+      "fishEvidenceStatus": "not-reviewed",
+      "reviewStatus": "source-name-and-context-reviewed;site-specific-fish-evidence-not-retrieved;not-delineated",
+      "publicAdmission": false,
+      "scopeNote": "The undated Tagkawayan Water District history page calls Sakang River its surface-water source and describes southeast flow via creeks into Tagkawayan River; its page age/refresh and reported 25 L/s discharge date are unknown, so do not treat that discharge as a current measurement. A 25 March 2026 LGU notice reports a tree-planting activity on Sakang River in Barangay San Vicente, supporting name/locality context only. A bounded search did not retrieve a site-specific fish survey. No fish presence or absence, current abstraction status, water quality/safety, salinity, fishing rule, or geometry is established."
+    },
+    {
+      "id": "ph-wb-tagkawayan-river-quezon",
+      "name": "Tagkawayan River",
+      "aliases": [],
+      "kind": "river",
+      "salinity": {
+        "classification": "unknown",
+        "reviewStatus": "not-assessed",
+        "sourceRefs": []
+      },
+      "administrativeAssociations": [
+        {
+          "regionId": "0400000000",
+          "relationship": "source-described-locality",
+          "sourceRefs": [
+            "tagkawayan-water-district-history-sakang-river"
+          ],
+          "provinceId": "0405600000",
+          "locality": "Tagkawayan, Quezon; named by the undated Water District description as the receiving river for Sakang; the channel route and feature extent are unverified"
+        }
+      ],
+      "sourceRefs": [
+        "tagkawayan-water-district-history-sakang-river"
+      ],
+      "identityStatus": "official-water-district-receiving-river-name;route-unverified",
+      "boundaryStatus": "not-delineated",
+      "fishEvidenceStatus": "not-reviewed",
+      "reviewStatus": "source-name-context-reviewed;site-specific-fish-evidence-not-retrieved;not-delineated",
+      "publicAdmission": false,
+      "scopeNote": "The undated Tagkawayan Water District history page names Tagkawayan River as the downstream receiving river for its described Sakang River flow. The source does not supply a route map, current flow measurement, fish survey, water-quality evidence, salinity, legal fishing rule, or validated geometry. The two source-named rivers are retained separately without an inferred mapped connection."
+    },
+    {
       "id": "ph-wb-de-guzman-guinayangan-fishpond",
       "name": "De Guzman Fishpond",
       "aliases": [],
@@ -4686,14 +4750,26 @@
         "ph-wb-palanas-river",
         "ph-wb-timalan-river"
       ]
+    },
+    {
+      "priority": 12,
+      "task": "Find dated, station-resolved fish evidence for Sakang River and Tagkawayan River; verify their separate channel identities and source-to-receiving-water crosswalk with official hydrography. Treat the undated Water District narrative as identity context, not geometry, a current discharge measurement, or fish evidence.",
+      "sourceIds": [
+        "tagkawayan-water-district-history-sakang-river",
+        "tagkawayan-lgu-2026-sakang-river-community-action"
+      ],
+      "waterbodyIds": [
+        "ph-wb-sakang-river-tagkawayan",
+        "ph-wb-tagkawayan-river-quezon"
+      ]
     }
   ],
   "gaps": [
     {
       "id": "scope-not-exhaustive",
       "status": "open",
-      "count": 120,
-      "reason": "120 selected named water and habitat research leads are seeded across CALABARZON water types; this selected list is not a complete regional inventory. The official NFRDI 2024 handbook now has separate historical gear-label transcriptions for Nasugbu, Tayabas, Lamon, Ragay, and Batangas Bays/Gulf: 13, 36, 44, 33, and 23 finfish source-label rows, respectively. Taxonomic screens are recorded by source-named area, but field identification, dates, capture origin, and product-use review remain pending. The official 2024 Cavite profile adds source-named river courses, while reported route text remains distinct from verified channel geometry. Provincial, municipal, island, stream, pond and reservoir denominators remain incomplete; some leads are habitat/designation names rather than delineated waterbodies.",
+      "count": 126,
+      "reason": "126 selected named water and habitat research leads are seeded across CALABARZON water types; this selected list is not a complete regional inventory. The official NFRDI 2024 handbook now has separate historical gear-label transcriptions for Nasugbu, Tayabas, Lamon, Ragay, and Batangas Bays/Gulf: 13, 36, 44, 33, and 23 finfish source-label rows, respectively. Taxonomic screens are recorded by source-named area, but field identification, dates, capture origin, and product-use review remain pending. The official 2024 Cavite profile adds source-named river courses, while reported route text remains distinct from verified channel geometry. Provincial, municipal, island, stream, pond and reservoir denominators remain incomplete; some leads are habitat/designation names rather than delineated waterbodies.",
       "nextAction": "Continue the source-derived inventory with explicit inclusion criteria and a frozen manifest; resolve unnamed 2021 aggregate river/wetland counts before claiming a regional baseline."
     },
     {
@@ -4728,15 +4804,15 @@
     {
       "id": "fish-coverage",
       "status": "open",
-      "count": 101,
-      "reason": "Regional species coverage remains incomplete across 101 selected leads without sufficient accepted species-level evidence for a complete place-specific checklist. The new Naic Palanas River lead has name-only indexed context and no fish evidence. The Maalimango River lead has a historical, station-specific 2016 EIA fishery matrix with partial taxonomy and unresolved reuse/field identification; this is not a current or complete river list. The new Guinayangan river/spring source crosswalk contains no fish records. Exact-name database screens cover selected watercourses only; zero results are bounded discovery gaps, not evidence of fish absence. Nasugbu has 13 labels across three blocks (11 exact accepted species-rank matches, one subspecies, one unmatched); Tayabas has 36 labels across eight blocks (30 exact accepted species-rank matches); Lamon has 44 labels across ten blocks and 39 distinct names (35 exact accepted species-rank matches, one subspecies, two variants, one unmatched); Ragay has 33 labels across eight blocks and 26 names (24 exact accepted species-rank matches, one synonym, one unmatched); Batangas has 23 labels across five blocks and 17 distinct names, including 11 species-level exact matches and six genus-level labels. These historical gear crosswalks do not verify field identification, dated capture occurrence, or complete/current checklists.",
+      "count": 103,
+      "reason": "Regional species coverage remains incomplete across 103 selected leads without sufficient accepted species-level evidence for a complete place-specific checklist. The new Sakang and Tagkawayan River leads have no site-specific fish evidence. The new Naic Palanas River lead has name-only indexed context and no fish evidence. The Maalimango River lead has a historical, station-specific 2016 EIA fishery matrix with partial taxonomy and unresolved reuse/field identification; this is not a current or complete river list. The new Guinayangan river/spring source crosswalk contains no fish records. Exact-name database screens cover selected watercourses only; zero results are bounded discovery gaps, not evidence of fish absence. Nasugbu has 13 labels across three blocks (11 exact accepted species-rank matches, one subspecies, one unmatched); Tayabas has 36 labels across eight blocks (30 exact accepted species-rank matches); Lamon has 44 labels across ten blocks and 39 distinct names (35 exact accepted species-rank matches, one subspecies, two variants, one unmatched); Ragay has 33 labels across eight blocks and 26 names (24 exact accepted species-rank matches, one synonym, one unmatched); Batangas has 23 labels across five blocks and 17 distinct names, including 11 species-level exact matches and six genus-level labels. These historical gear crosswalks do not verify field identification, dated capture occurrence, or complete/current checklists.",
       "nextAction": "Join only independently reviewed evidence at its supported geographic scale."
     },
     {
       "id": "identity-and-geometry",
       "status": "open",
-      "count": 120,
-      "reason": "No validated waterbody geometry or precise point assignment has been created for 120 selected leads. Nasugbu Bay is a source-named fishing-ground lead only; the NFRDI handbook does not provide a boundary or capture coordinates. Existing grouped springs remain unsplit, historical station points and project footprints do not delimit whole waterbodies, and repeated names, compound river names, source-era localities, and watershed-versus-channel identity remain under review.",
+      "count": 126,
+      "reason": "No validated waterbody geometry or precise point assignment has been created for 126 selected leads. Sakang and Tagkawayan River are source-named freshwater leads only; the Water District narrative does not provide a verified route. Nasugbu Bay is a source-named fishing-ground lead only; the NFRDI handbook does not provide a boundary or capture coordinates. Existing grouped springs remain unsplit, historical station points and project footprints do not delimit whole waterbodies, and repeated names, compound river names, source-era localities, and watershed-versus-channel identity remain under review.",
       "nextAction": "Reconcile stable identities and source-era/current geography before map display."
     },
     {

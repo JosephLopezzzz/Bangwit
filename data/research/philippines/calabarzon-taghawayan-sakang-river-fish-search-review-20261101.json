@@ -1,0 +1,56 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "calabarzon-taghawayan-sakang-river-fish-search-review-20261101",
+  "reviewedOn": "2026-11-01",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "provinceId": "0405600000",
+  "status": "two-freshwater-river-name-leads-added;official-route-context-only;no-site-specific-fish-study-retrieved",
+  "question": "Do public official sources support separate Sakang River and Tagkawayan River research leads, and did a bounded public search retrieve river-specific fish evidence?",
+  "purpose": "Extend the CALABARZON freshwater denominator from source-backed river names while keeping water-district route descriptions, fish presence, current water use, and geometry separate.",
+  "targetWaterbodyIds": [
+    "ph-wb-sakang-river-tagkawayan",
+    "ph-wb-tagkawayan-river-quezon"
+  ],
+  "searchMethod": "On 2026-11-01, searched public indexes for Sakang River/Tagkawayan fish, freshwater fish surveys in Tagkawayan, and CvSU-library thesis records. Checked official Tagkawayan Water District history text and the official LGU local-news index. The Water District page returned a search-index excerpt but a direct open check failed with a cache-miss error; the LGU index returned HTTP 403. This bounded search is not evidence of fish absence or of no unpublished study.",
+  "sourceIds": [
+    "tagkawayan-water-district-history-sakang-river",
+    "tagkawayan-lgu-2026-sakang-river-community-action"
+  ],
+  "findings": {
+    "sakangIdentity": "The undated Tagkawayan Water District history page names Sakang River as a surface-water source, describes its origin as approximately 3 km north of Poblacion, and says it flows southeast, joining creeks and emptying into Tagkawayan River. The page also reports a 25 L/s discharge without a measurement date. Treat these as undated source descriptions, not current utility status, a verified route, or a current flow value.",
+    "tagkawayanRiverIdentity": "The same Water District description separately names Tagkawayan River as the receiving watercourse. Sakang River and Tagkawayan River are therefore retained as separate source-named leads; no mapped connection or full channel extent is inferred.",
+    "recentLocalityContext": "The official Tagkawayan LGU local-news index reports a 25 March 2026 tree-planting activity on Sakang River in Barangay San Vicente. This supports recent use of the feature name and barangay context, not fish sampling, river geometry, or water quality.",
+    "fishEvidenceSearch": "The bounded public search did not retrieve a Sakang- or Tagkawayan-River-specific finfish survey or checklist. Results included unrelated municipal marine-fishery material and a national freshwater checklist, neither of which is assigned to these rivers. This does not establish fish absence or checklist completeness.",
+    "waterAndSafetyLimits": "No dated fish observation, field-identification method, voucher, station crosswalk, salinity reading, current abstraction status, water-quality/safety result, legal fishing rule, or verified geometry was retrieved."
+  },
+  "accessAndRights": {
+    "waterDistrict": "Official Tagkawayan Water District history page; page date/refresh and item-specific reuse terms were not established. Direct open check returned a cache-miss error; only the indexed source text was reviewed.",
+    "lgu": "Official Municipality of Tagkawayan local-news index; the 25 March 2026 excerpt was reviewed, while direct page access returned HTTP 403. No item-specific reuse terms were identified.",
+    "rawRetention": "No page copies, map images, coordinates, route data, or survey tables were retained."
+  },
+  "decision": {
+    "researchLeadsAdded": 2,
+    "speciesAssertionsAdded": 0,
+    "occurrenceAssertionsAdded": 0,
+    "geometryAdded": false,
+    "currentFlowMeasurementInferred": false,
+    "currentWaterUseInferred": false,
+    "currentPresenceOrAbsenceInferred": false,
+    "safetyOrLegalAdviceAdded": false,
+    "publicRowsAdded": 0,
+    "publicationApproval": false,
+    "regionalBaselineComplete": false
+  },
+  "nextAction": "Seek dated, station-resolved, rights-cleared freshwater fish evidence for both river leads and an official route/map source for each channel. Do not convert the Water District narrative into GIS geometry or the reported 25 L/s into a current measurement.",
+  "sources": [
+    {
+      "url": "https://www.tagkawayanwaterdistrict.gov.ph/index.php/about-tagkawayan-water-district/history-of-tagkawayan-wd",
+      "supports": "Water District indexed history text for Sakang River name, approximate source location/flow narrative, receiving Tagkawayan River name, and undated reported discharge."
+    },
+    {
+      "url": "https://tagkawayan.gov.ph/localnews/page/12/",
+      "supports": "Official LGU indexed local-news item dated 25 March 2026 naming Sakang River in Barangay San Vicente during a tree-planting activity."
+    }
+  ]
+}
