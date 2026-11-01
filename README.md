@@ -142,3 +142,8 @@ Crosswalked all five studies listed in CvSU’s January 2021 newsletter to offic
 ### Bacoor fish-tissue lead follow-up — 1 November 2026
 
 A 2026 DLSU-D portal article about microplastics in surface water at Kawit and Noveleta is a separate coastal-pollution source, not the unidentified CvSU fish-tissue study mentioned in ASEANO proceedings. Prepared an unsent, source-specific inquiry draft for Joseph to review. No species, occurrence, or safety claim was added and no inquiry was sent. See the [updated disambiguation review](data/research/philippines/calabarzon-bacoor-fish-tissue-microplastics-lead-disambiguation-review-20261101.json) and [draft inquiry](data/research/philippines/calabarzon-cvsu-bacoor-fish-tissue-data-inquiry-draft-20261101.md).
+
+
+### Tayabas Bay NFRDI catch-label review - 1 November 2026
+
+Added a research-only transcription of 36 finfish label rows across eight 2024 handbook gear tables; all 30 distinct printed names matched accepted GBIF species-rank names exactly. Nine shrimp, crab and squid labels from five other gear blocks were excluded. These historical gear labels do not establish dated/current occurrences or a complete checklist. See [the review](data/research/philippines/calabarzon-tayabas-bay-nfrdi-gear-catch-label-transcription-20261101.json).

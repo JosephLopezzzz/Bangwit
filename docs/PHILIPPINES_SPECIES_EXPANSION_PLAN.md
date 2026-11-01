@@ -3838,3 +3838,14 @@ Added `calabarzon-nasugbu-bay-nfrdi-gear-catch-label-transcription-20261101.json
 See the [NFRDI repository item](https://repository.nfrdi.da.gov.ph/items/023ccf69-0767-457e-9309-0fdeaa75e2b8), [GBIF Species API documentation](https://techdocs.gbif.org/en/openapi/v1/species), and the [Nasugbu transcription review](../data/research/philippines/calabarzon-nasugbu-bay-nfrdi-gear-catch-label-transcription-20261101.json).
 
 **Next:** transcribe the remaining source-named bay/gulf blocks, one locality grouping at a time. Do not split the handbook's compound “Balayan/Calatagan Bay” labels without independent locality evidence. Continue other freshwater source work in parallel; the UPLB report request remains unsent and requires Joseph's authorization.
+
+
+### National rollout step 437 - NFRDI 2024 Tayabas Bay gear-catch label transcription - 1 November 2026
+
+Visually transcribed eight Tayabas Bay finfish catch blocks in the handbook (printed pages 28, 30, 50, 56, 58, 60, 80, and 82). The tables contain 36 verbatim source-label rows and 30 distinct printed scientific names. A strict GBIF Backbone screen returned 30 accepted species-rank exact matches. Five additional reviewed gear blocks contained nine shrimp, crab, or cephalopod labels and were excluded from the finfish count. Taxonomic name matches do not validate field identifications.
+
+Added the Tayabas transcription review, linked it to the existing Tayabas Bay lead and the NFRDI source record, updated the handbook review and CALABARZON coverage profile. Together, the Nasugbu and Tayabas sub-batches record 49 finfish label rows across 11 gear blocks. Registry total remains 590; CALABARZON remains at 120 named waterbody research leads and 132 distinct scope source references. The handbook supplies no per-row date, station, capture origin, voucher, sampling effort, or identification method. No occurrence/species assertion, complete inventory, geometry, diet/bait guidance, current-presence claim, or public-app row was added; no agency request was sent.
+
+See the [NFRDI repository item](https://repository.nfrdi.da.gov.ph/items/023ccf69-0767-457e-9309-0fdeaa75e2b8), [GBIF Species API documentation](https://techdocs.gbif.org/en/openapi/v1/species), and the [Tayabas transcription review](../data/research/philippines/calabarzon-tayabas-bay-nfrdi-gear-catch-label-transcription-20261101.json).
+
+**Next:** continue with Lamon Bay, Ragay Gulf, the compound Balayan/Calatagan Bay heading, and Batangas Bay, one source locality at a time. Keep the compound heading unresolved without independent locality evidence; continue other freshwater source work as well.
