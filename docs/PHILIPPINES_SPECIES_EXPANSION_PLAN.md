@@ -4014,3 +4014,12 @@ Reviewed the official JICA 2003 final report, Volume V supporting report, Annex 
 Added one multi-river system research lead and one review. CALABARZON now has 127 named leads, including 63 rivers, 149 distinct source references, and 612 registered sources. JICA's site policy does not grant general public structured reuse; the table and figures were not copied. No species assertions, public records, geometry, current-presence claims, or app rows were added. See the [JICA catalog record](https://openjicareport.jica.go.jp/617/617/617_118_11721966.html), [EIA annex](https://openjicareport.jica.go.jp/pdf/11721966_13.pdf), [JICA site policy](https://www.jica.go.jp/english/policy/), and [source review](../data/research/philippines/calabarzon-kaliwa-kanan-agos-2003-jica-fish-review-20261101.json).
 
 **Next:** look for newer, independently reusable, station-resolved fish evidence for the named river system; keep the historical table out of public data until reuse and taxonomy are resolved.
+
+
+### National rollout step 454 - Quezon 2025 ecological profile river leads - 1 November 2026
+
+Reviewed the official Quezon profile page. It lists a 2025 six-volume ecological profile and names Umiray, Agos, and Nakar Rivers in the Infanta-General Nakar area, plus “MalakingIlog” in Sariaya, described as a central river basin. The page gives province-level inland-fisheries common-name context but no river-to-taxon crosswalk. Volume II and IV links redirected to request forms during review; no form was submitted and the volumes were not retrieved.
+
+Added four source-named river research leads and one registry source. CALABARZON now has 131 selected leads, including 67 rivers, six province units, and 150 distinct scope source references; the registry has 613 entries. The existing Kaliwa-Kanan-Agos system remains separate, and its aggregate fish table was not assigned to Agos River. No species assertions, occurrence records, geometry, salinity classifications, current-presence claims, or app rows were added. See the [official Quezon 2025 Ecological Profile page](https://quezon.gov.ph/sep/) and [research review](../data/research/philippines/calabarzon-quezon-2025-ecological-profile-river-leads-20261101.json).
+
+**Next:** retrieve the profile volumes through an authorized route; seek site-resolved fish surveys and independently verified channel identity/geometry for the four leads.
