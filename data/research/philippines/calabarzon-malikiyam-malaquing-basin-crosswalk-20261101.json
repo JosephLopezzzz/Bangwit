@@ -1,0 +1,137 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "calabarzon-malikiyam-malaquing-basin-crosswalk-20261101",
+  "reviewedOn": "2026-11-01",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "status": "official-Malaking-Ilog-principal-basin-crosswalked;Malaquing-Ilog-channel-related-at-system-level;channel-route-unverified",
+  "question": "Do the Quezon profile name MalakingIlog, DPWH principal basin Malaking-Ilog, and DENR-BMB/preprint Malaquing Ilog name refer to one basin system, and can the river channel be merged with the basin lead?",
+  "purpose": "Resolve the strongest official basin-name relationship while keeping basin and named-channel research units distinct unless route-scale evidence supports a feature merge.",
+  "sourceIds": [
+    "dpwh-2022-principal-river-basins-annex-d2",
+    "quezon-province-2025-ecological-profile",
+    "depdev-calabarzon-rdip-2023-2028-cluster-2-malikiyam",
+    "denr-bmb-inland-wetlands-atlas-2016",
+    "chavez-carandang-2017-pterygoplichthys-luzon-preprint"
+  ],
+  "findings": [
+    {
+      "sourceId": "dpwh-2022-principal-river-basins-annex-d2",
+      "evidence": "Department Order No. 47, s. 2022, Annex D-2 row 85 lists the Malaking-Ilog principal river basin in Region IV-A with a reported area of 781 sq km.",
+      "supports": [
+        "official principal-basin spelling",
+        "Region IV-A classification",
+        "reported basin area"
+      ],
+      "doesNotSupport": [
+        "basin polygon or channel route",
+        "municipality-by-municipality channel assignment",
+        "fish records",
+        "current hazard or water condition"
+      ]
+    },
+    {
+      "sourceId": "quezon-province-2025-ecological-profile",
+      "evidence": "The official Quezon profile page names “MalakingIlog” in Sariaya and describes it as a central river basin attributed to DENR; the accessible page gives no route map or feature identifier.",
+      "supports": [
+        "Quezon profile spelling",
+        "Sariaya locality",
+        "basin-level description"
+      ],
+      "doesNotSupport": [
+        "channel trace or boundary",
+        "fish taxa",
+        "a direct channel-to-principal-basin topology"
+      ]
+    },
+    {
+      "sourceId": "depdev-calabarzon-rdip-2023-2028-cluster-2-malikiyam",
+      "evidence": "The official regional investment-plan table names a proposed Cluster 2 River Basin Office for the Malaking Ilog and Iyam-Dumacaa River Basin, with a 2–3 province footprint and Quezon, Laguna, and Batangas listed. It provides a combined municipality list for the two-basin cluster; the table does not split each municipality between the two basins.",
+      "supports": [
+        "regional planning recognition of the Malaking Ilog basin name",
+        "multi-province Cluster 2 planning context"
+      ],
+      "doesNotSupport": [
+        "exclusive municipality assignments to Malaking Ilog alone",
+        "a channel route or basin boundary",
+        "evidence that the planned office is operational"
+      ]
+    },
+    {
+      "sourceId": "denr-bmb-inland-wetlands-atlas-2016",
+      "evidence": "Annex 2b row BJ 83 on printed page 117 (PDF page 129) lists “Malaquing Ilog River” in Quezon, including Sariaya, and gives Tayabas Bay as outflow. The same table row continues into Batangas and Laguna locality entries, but this inventory does not trace the river.",
+      "supports": [
+        "historical source-named river",
+        "Sariaya locality",
+        "Tayabas Bay source-listed outflow"
+      ],
+      "doesNotSupport": [
+        "verified linkage to the DPWH basin polygon",
+        "exact cross-province channel route",
+        "fish occurrence or geometry"
+      ]
+    },
+    {
+      "sourceId": "chavez-carandang-2017-pterygoplichthys-luzon-preprint",
+      "evidence": "The author-uploaded preprint uses “MalaquingIlog River” for a Sariaya bridge-area locality and reports fishers’ interview statements, without a site-linked identified voucher or fish-specific event date.",
+      "supports": [
+        "source-name/locality match to the atlas spelling with spacing normalized"
+      ],
+      "doesNotSupport": [
+        "species-level occurrence",
+        "current presence",
+        "basin/channel route identity",
+        "peer-review or open-reuse status"
+      ]
+    }
+  ],
+  "crosswalkDecision": {
+    "quezonProfileToDpwhBasin": {
+      "relationship": "Crosswalked at basin name and classification level: Quezon’s “MalakingIlog” central basin corresponds to the Region IV-A “Malaking-Ilog” principal basin name.",
+      "confidence": "strong name/locality and basin-category match; no spatial boundary checked",
+      "scopeLeadId": "ph-wb-malakingilog-river-sariaya-quezon",
+      "reportedAreaSqKm": 781,
+      "areaIsGeometry": false
+    },
+    "atlasChannelToPrincipalBasin": {
+      "relationship": "Likely related members of the same named drainage system, inferred from the closely matching names, shared Sariaya locality, atlas-listed Tayabas Bay outflow, and regional basin context.",
+      "confidence": "basin/system-level inference only; no official master-plan map or route-scale hydrography was reviewed",
+      "basinLeadId": "ph-wb-malakingilog-river-sariaya-quezon",
+      "channelLeadId": "ph-wb-malaquingilog-river-sariaya-quezon",
+      "mergeDecision": "Keep the basin and source-named river leads distinct. Do not assign the 781 sq km basin area as channel geometry or claim an exact route/topology."
+    },
+    "preprintToAtlasName": {
+      "relationship": "Source-name/locality crosswalk established in the prior review: MalaquingIlog River (preprint) and Malaquing Ilog River (atlas) are the same Sariaya source-named research lead, with spacing normalized.",
+      "reviewId": "calabarzon-sariaya-malaquing-ilog-atlas-crosswalk-20261101"
+    }
+  },
+  "scopeChanges": {
+    "newWaterbodyLeads": 0,
+    "existingBasinLeadUpdated": "ph-wb-malakingilog-river-sariaya-quezon",
+    "existingChannelLeadUpdated": "ph-wb-malaquingilog-river-sariaya-quezon",
+    "newSourceRecord": "depdev-calabarzon-rdip-2023-2028-cluster-2-malikiyam",
+    "selectedLeadCount": 134,
+    "distinctScopeSourceReferences": 155,
+    "registeredSourceCount": 618
+  },
+  "disposition": {
+    "speciesAssertionsAdded": 0,
+    "publicRecordsAdmitted": 0,
+    "currentPresenceInferred": false,
+    "geometryAdded": false,
+    "salinityClassificationAdded": false,
+    "currentHazardClaimed": false,
+    "publicationApproval": false
+  },
+  "reuseAndLimitations": [
+    "No item-specific open license or public derived-database approval was identified for the DPWH or DEPDev planning records; record only the reported names, classifications, footprint, and area as internal research metadata.",
+    "The BMB atlas terms in the source registry permit educational/non-profit reproduction with acknowledgement; fit for public app and derived database remains unreviewed.",
+    "The preprint has no verified open license and its interview statements remain historical research context only.",
+    "No channel or basin geometry, fish checklist, current presence, salinity, safety, access, fishing regulation, or current hazard is inferred."
+  ],
+  "nextActions": [
+    "Obtain the authorized Cluster 2/Malaking Ilog-Iyam-Dumacaa master-plan maps or permitted official hydrography to verify basin boundaries and the Malaquing Ilog channel route.",
+    "Keep the profile/basin and atlas/preprint channel records distinct until route-level feature identity is verified.",
+    "Review dated, site-linked fish surveys and preprint publication/reuse separately; do not promote the historical interview statements to species records."
+  ]
+}
