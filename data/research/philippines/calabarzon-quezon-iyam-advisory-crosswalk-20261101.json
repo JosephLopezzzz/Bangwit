@@ -1,0 +1,100 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "calabarzon-quezon-iyam-advisory-crosswalk-20261101",
+  "reviewedOn": "2026-11-01",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "status": "official-advisory-name-crosswalked-to-Iyam-River;shared-WQMA-system-context;advisory-reach-and-channel-geometry-unverified",
+  "question": "Can the bare Quezon advisory label Iyam be crosswalked to the official Iyam River lead while keeping it distinct from Dumacaa River and the shared management-area polygon?",
+  "purpose": "Resolve the advisory's river-name candidate using official EMB waterbody evidence without importing old water-quality results as current conditions, fish observations, or river geometry.",
+  "sourceIds": [
+    "quezon-pdrrmo-2026-flood-advisory-14-watercourses",
+    "emb-calabarzon-annual-report-2024",
+    "emb-iyam-dumacaa-profile"
+  ],
+  "findings": [
+    {
+      "sourceId": "quezon-pdrrmo-2026-flood-advisory-14-watercourses",
+      "evidence": "Quezon Provincial Government General Flood Advisory No. 14, issued 7 August 2026, includes the bare watercourse label “Iyam” in its Quezon list.",
+      "supports": [
+        "the advisory's source-name label",
+        "Quezon province context"
+      ],
+      "doesNotSupport": [
+        "a specific reach or municipality",
+        "current flood status",
+        "fish records",
+        "route geometry"
+      ]
+    },
+    {
+      "sourceId": "emb-calabarzon-annual-report-2024",
+      "evidence": "The EMB CALABARZON annual report describes the Iyam-Dumacaa River System WQMA as covering the two rivers' watershed. It says Iyam and Dumacaa drain the southern portion of Lucban from Mt. Banahaw through Tayabas and Lucena, converge at Barangay Cotta in Lucena, and outfall to Tayabas Bay.",
+      "supports": [
+        "official distinction of Iyam and Dumacaa as two rivers",
+        "shared watershed-management context",
+        "reported corridor and convergence/outfall narrative"
+      ],
+      "doesNotSupport": [
+        "a surveyed route or channel centerline",
+        "an advisory reach boundary",
+        "a basin polygon or WQMA boundary usable as river geometry",
+        "fish records or present hazard"
+      ]
+    },
+    {
+      "sourceId": "emb-iyam-dumacaa-profile",
+      "evidence": "The official CY2020 EMB table separately lists Iyam River stations IY 1–3 and Dumacaa River stations D 1–5, with Quezon locality text naming Lucban, Lucena and Tayabas. The review uses only the river labels and locality/system context; it does not reproduce station coordinates or water-quality values.",
+      "supports": [
+        "separate official source-named river records",
+        "consistent municipality/city context"
+      ],
+      "doesNotSupport": [
+        "current water quality",
+        "fish presence or absence",
+        "reusable station geometry",
+        "exact advisory-reach assignment"
+      ]
+    }
+  ],
+  "crosswalk": {
+    "advisoryLabel": "Iyam",
+    "existingLeadId": "ph-wb-iyam-lucena-river",
+    "resolutionLevel": "official river-name and shared-system/locality match; exact advisory reach unresolved",
+    "confidence": "Strong name/system match: the Quezon advisory uses Iyam, while EMB documents a named Iyam River in Quezon within the Iyam-Dumacaa system. The advisory supplies no reach or station identifier.",
+    "riverRelationship": "Iyam River and Dumacaa River remain separate named channel leads. EMB reports that they converge at Barangay Cotta, Lucena City, before the Tayabas Bay outfall.",
+    "managementAreaRelationship": "Iyam-Dumacaa WQMA is a management area for the watershed; it is not a third river and its polygon is not a substitute for either river's geometry."
+  },
+  "scopeChanges": {
+    "newWaterbodyLeads": 0,
+    "existingIyamLeadUpdated": "ph-wb-iyam-lucena-river",
+    "directAdvisorySourceRefAdded": 1,
+    "sourceRegistryRecordsAdded": 0,
+    "selectedLeadCount": 134,
+    "distinctScopeSourceReferences": 155,
+    "registeredSourceCount": 618,
+    "uniqueSourceReferencesAdded": 0
+  },
+  "disposition": {
+    "speciesAssertionsAdded": 0,
+    "publicRecordsAdmitted": 0,
+    "currentPresenceInferred": false,
+    "currentWaterQualityClaimed": false,
+    "currentHazardClaimed": false,
+    "salinityClassificationAdded": false,
+    "geometryAdded": false,
+    "stationCoordinatesCopied": false,
+    "publicationApproval": false
+  },
+  "reuseAndLimitations": [
+    "The Quezon advisory is a historical, time-bounded hazard notice; it is not a current warning.",
+    "The EMB CY2020 file contains station coordinates and quality measurements, but none are reproduced or adopted here; present conditions cannot be inferred.",
+    "No item-specific public reuse approval was established for copying EMB station data, maps, or geometry.",
+    "No fish checklist, occurrence, current presence or absence, access, fishing rule, safety advice, or salinity classification follows from this crosswalk."
+  ],
+  "nextActions": [
+    "Crosswalk the remaining 22 Quezon advisory labels against official hydrography or LGU sources, keeping reach-level geometry separate.",
+    "Seek authorized, route-scale Iyam-Dumacaa hydrography with reuse terms if a map feature is needed; do not derive a river line from the WQMA polygon or station points.",
+    "Review fish surveys and their source rights as a separate evidence lane."
+  ]
+}

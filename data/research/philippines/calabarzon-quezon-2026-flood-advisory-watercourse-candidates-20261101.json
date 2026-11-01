@@ -4,7 +4,7 @@
   "reviewedOn": "2026-11-01",
   "phaseId": "L1",
   "regionId": "0400000000",
-  "status": "official-historical-hazard-advisory-reviewed;23-watercourse-candidates-held-for-crosswalk",
+  "status": "official-historical-hazard-advisory-reviewed;Iyam-river-name-crosswalked;22-other-labels-held-for-crosswalk",
   "question": "Which Quezon watercourse names does the official 7 August 2026 flood advisory provide, and can they be safely reconciled with existing CALABARZON leads?",
   "purpose": "Preserve a useful official watercourse-name inventory while preventing duplicate or invented river identities and separating historical hazard context from fish or current safety data.",
   "sourceIds": [
@@ -43,7 +43,8 @@
       "potentialExistingLeadIds": [
         "ph-wb-iyam-lucena-river"
       ],
-      "disposition": "possible-name/reach match only; exact feature crosswalk pending"
+      "disposition": "official river-name/system/locality crosswalk resolved to existing Iyam River lead; advisory reach and geometry unspecified",
+      "crosswalkReviewId": "calabarzon-quezon-iyam-advisory-crosswalk-20261101"
     },
     {
       "sourceLabel": "Macalelon",
@@ -154,12 +155,14 @@
       "Upper Umiray may be a reach of Umiray River.",
       "Lower Bolbok (Lawaya) may combine a reach and alternate name.",
       "Malaking-Ilog may correspond to the Quezon profile lead but has no local crosswalk in this advisory.",
-      "Iyam matches an existing name but the advisory does not identify a municipality/reach.",
+      "The advisory's Iyam label is crosswalked to the official Iyam River name within the Iyam-Dumacaa system, but it does not identify an exact reach.",
       "Pagsanjan matches an existing name but may refer to a different watercourse than the current lead.",
       "Agos may refer to the individual river and/or the separate JICA system research unit.",
       "Bucal (Lalangan), Lugan Malaybalay, and Upper Kilbay – Catabangan are retained verbatim as compound labels pending parsing."
     ],
-    "reason": "The source is sufficient to retain 23 official watercourse labels as research candidates, but not sufficient to assert 23 unique physical rivers or merge names into existing geometry."
+    "reason": "The advisory supplies 23 official watercourse labels. One label is now crosswalked to an existing official river name/system, but the advisory still identifies no exact reach and no route geometry; the other 22 labels need their own name/feature checks. No duplicate river records are created.",
+    "resolvedSourceNameCrosswalks": 1,
+    "verifiedAdvisoryReachRoutes": 0
   },
   "disposition": {
     "fishAssertionsAdded": 0,
@@ -178,6 +181,7 @@
   ],
   "nonClaims": [
     "The 23 entries are source-named candidates, not 23 verified unique waterbody entities.",
-    "No river route, geometry, fish presence/absence, salinity, legal status, access, or current flood risk is inferred."
+    "No river route, geometry, fish presence/absence, salinity, legal status, access, or current flood risk is inferred.",
+    "The advisory-label crosswalk does not determine the exact Iyam reach or channel geometry."
   ]
 }
