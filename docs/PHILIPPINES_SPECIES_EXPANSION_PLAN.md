@@ -3616,3 +3616,12 @@ The official *Journal of ISSAAS* Vol. 25 No. 2 (2019) contents do not list the t
 Added `calabarzon-canas-fish-study-bibliographic-crosswalk-review-20261101.json`, corrected the earlier bibliographic review, registered the profile and journal contents as limited bibliographic sources, and refreshed the coverage-profile provenance hashes.
 
 **Next:** seek authorized access to thesis pages 24-45 and appendix station figures on pages 80-85. Confirm that an independent project is eligible before using CvSU's request route; obtain item-specific reuse terms and verify methods, identifications, vouchers, and any site-to-taxon mapping before considering species rows. Meanwhile continue independent CALABARZON freshwater, brackish, coastal, and marine source review. Do not infer presentation absence from the journal contents or convert the watershed aggregate into reach-level taxa.
+
+
+### National rollout step 417 - Cañas CvSU thesis access route and eligibility inquiry - 1 November 2026
+
+Reviewed CvSU's current Online Library Services page. Its thesis abstract workflow delivers an abstract, while its Online Printed Book Delivery Program is stated to be exclusive to currently enrolled CvSU students, faculty, and staff and permits 5-10 scanned pages. The page does not establish eligibility for an independent Bangwit project or a route for a full thesis copy. The abstract/contents scan already available is not the species-summary page, methods, station table, or appendix.
+
+Prepared `calabarzon-canas-thesis-eligibility-inquiry-draft-20261101.md` asking whether library consultation or a limited authorized excerpt may be available, especially the species-summary and station-table pages. The draft is unsent; no form, email, login, or personal data was submitted. The existing research review is recorded in `calabarzon-canas-cvsu-thesis-access-route-review-20261101.json`. No taxa, waterbody assignment, geometry, species assertion, or public row was added. Source registry remains at 558 entries; CALABARZON remains at 119 leads and 127 direct source references.
+
+**Next:** Joseph may send the draft through an official library channel after reviewing it. Meanwhile continue independent CALABARZON evidence work without waiting for a response; do not treat a request or the abstract's 23-fish aggregate as species-level or reach-level evidence.
