@@ -130,3 +130,7 @@ PEMSEA's Q1 2025 newsletter reports validation workshops for the Imus–Ylang Yl
 ### CvSU Imus ASEANO report crosswalk — 1 November 2026
 
 PEMSEA’s public ASEANO CvSU Subproject 1 report is a probable component of the similarly timed CvSU Imus watershed project listing, based on the shared lead researcher, institution, funder and scope. No source explicitly confirms it as the full final deliverable. The report contains watershed maps and historic hydrology context, but the reviewed text has no fish inventory or named taxa; no reusable vector boundary was found. No app claim was added. See the [review](data/research/philippines/calabarzon-imus-cvsu-aseano-subproject1-deliverable-crosswalk-20261101.json) and [research log](data/research/philippines/README.md).
+
+### CvSU ASEANO Study 4 crosswalk — 1 November 2026
+
+CvSU’s January 2021 newsletter confirms that its Imus watershed-mapping work was ASEANO Study 4; PEMSEA’s public mapping report matches that Study 4 title. This confirms a component output, not the complete parent-project deliverable. No fish survey or GIS vector for Bangwit was verified. See the [crosswalk review](data/research/philippines/calabarzon-imus-cvsu-aseano-study4-explicit-crosswalk-20261101.json) and [research log](data/research/philippines/README.md).

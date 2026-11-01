@@ -3729,3 +3729,13 @@ Added `calabarzon-imus-cvsu-aseano-subproject1-deliverable-crosswalk-20261101.js
 See the official [CvSU listing](https://cvsu.edu.ph/research-center), [PEMSEA ASEANO Subproject 1 PDF](https://pemsea.org/sites/default/files/2024-06/ASEANO%20CvSU%20Subproject%201.pdf), and [PEMSEA–CvSU project story](https://pemsea.org/index.php/resources/news/pemsea-recognized-integrated-coastal-management-partnership-cavite-state-university).
 
 **Next:** continue independent CALABARZON fish-source discovery. Keep the probable mapping component, the complete CvSU project deliverable, the IYRR SORB and the unnamed Bacoor fish-tissue lead as separate evidence questions.
+
+### National rollout step 427 - Explicit CvSU ASEANO Study 4 mapping crosswalk - 1 November 2026
+
+CvSU’s January 2021 newsletter explicitly names the Imus watershed parent project and says CvSU will conduct Study 4, “Mapping and Characterization of Imus River Watershed Using GIS and RS.” PEMSEA’s public report has the matching mapping title and CvSU authorship. The mapping report is therefore confirmed as one ASEANO Study 4 output, improving on the earlier probable crosswalk; it is not established as the complete output of the wider biophysical/vulnerability/pollution project. CvSU’s newsletter says January-June 2021, while its Research Center listing says November 2020-April 2021; this timing discrepancy remains unresolved.
+
+The mapping report contains watershed/hydrology outputs only in the reviewed text and materials; no fish survey, taxa, occurrence table, reusable vector GIS, or spatial reuse terms were verified. No biological or app assertion was added. Added file calabarzon-imus-cvsu-aseano-study4-explicit-crosswalk-20261101.json and one official CvSU provenance record; registry total: 579. No species, occurrence, diet, safety, geometry, scope link, or app row was added; no external request was sent.
+
+See [CvSU’s January 2021 newsletter](https://cvsu.edu.ph/wp-content/uploads/2021/03/RE_NEWSLETTER_v4_is1.pdf), [CvSU Research Center listing](https://cvsu.edu.ph/research-center), [PEMSEA’s mapping report](https://pemsea.org/sites/default/files/2024-06/ASEANO%20CvSU%20Subproject%201.pdf), and the [crosswalk review](../data/research/philippines/calabarzon-imus-cvsu-aseano-study4-explicit-crosswalk-20261101.json).
+
+**Next:** continue public retrieval for any remaining parent-project outputs and the separate Bacoor fish-tissue study. Keep all fish-specific claims unassigned until primary study data and reuse conditions are verified.
