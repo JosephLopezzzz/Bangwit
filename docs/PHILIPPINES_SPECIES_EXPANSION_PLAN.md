@@ -3707,3 +3707,13 @@ Added `calabarzon-imus-irbm-sorb-public-output-crosscheck-20261101.json`, three 
 See the official [CvSU project listing](https://cvsu.edu.ph/research-center), [PEMSEA IYRR site profile](https://www.pemsea.org/sites/default/files/2025-11/IRBM%20IYRR%20Site%20Profile.pdf), [PEMSEA mid-term review](https://pemsea.org/sites/default/files/2025-12/MTR%20SDS-SEA%20IP%20Annex%201_0.pdf), and [DENR-FASPS 2025 Annual Portfolio Report](https://faspselib.denr.gov.ph/uploads/materials/ad68955a-b187-4d55-aec3-2b7518d4722f/1f48a98a-4ba0-47d8-8b39-dc6bd398733b.pdf).
 
 **Next:** continue public-source retrieval for the underlying Imus vulnerability/pollution deliverable and IYRR SORB, and identify the separate Bacoor fish-tissue study. Keep all three research threads distinct and do not infer fish absence from missing public reports.
+
+### National rollout step 425 - IYRR SORB publication-index follow-up - 1 November 2026
+
+Reviewed PEMSEA's Q1 2025 Newsletter Edition 6, current project Components page, and public Reports index. The newsletter page states that stakeholder validation workshops for the Imus–Ylang Ylang and Rio Grande Rivers SORB reports occurred during Q1 2025. The Components page lists SORB reports as an Outcome 1 output. The Reports index page view reviewed here lists three other reports and does not expose an IYRR SORB entry. This only narrows the public discovery result: it does not prove that the IYRR SORB is unpublished, unavailable via another route, or devoid of fish evidence.
+
+Added `calabarzon-imus-sorb-public-index-followup-20261101.json` and three official PEMSEA provenance records; source registry now contains 577 records. No fish taxon, occurrence, diet, safety/legal claim, geometry, waterbody scope link, or app row was added; no external request was sent. The newsletter PDF was not retrieved; its official publication page contains the Q1 validation statement.
+
+See the official [Newsletter Edition 6 page](https://pemsea.org/resources/publications/magazines-and-newsletters/integrated-river-basin-management-project-4), [IRBM Components page](https://irbm.seaknowledgebank.net/components), and [IRBM Reports index](https://irbm.seaknowledgebank.net/resources/publications/reports).
+
+**Next:** continue independent CALABARZON fish-source discovery. Keep the SORB, the separate CvSU Imus watershed project deliverable, and the unnamed Bacoor fish-tissue lead distinct; do not infer fish absence from an index gap.
