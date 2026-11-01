@@ -3682,3 +3682,14 @@ Added `calabarzon-bulaklakin-reef-survey-boundary-retrieval-review-20261101.json
 See the [Cavite coastal-assessment inventory](https://www.pemsea.org/sites/default/files/2023-12/SOC%20Cavite%20%28full%29%20web.pdf), the [UNDP GEF SGP Bulaklakin project record](https://www.sgp.undp.org/spacial-itemid-projects-landing-page/spacial-itemid-project-search-results/spacial-itemid-project-detailpage.html?id=15532&view=projectdetail), the [public BMB boundary request](https://www.foi.gov.ph/requests/geographical-coordinates-of-bulaklakin-reef-fish-sanctuary-in-ternate-cavite/), and the [Cavite Ecological Profile 2024](https://cavite.gov.ph/wp-content/uploads/2026/04/CEP_2024.pdf).
 
 **Next:** continue public-source discovery for the underlying Bulaklakin and Senemento/Sementeno assessments, the Maragondon conference paper, and the unresolved Bacoor/Imus research outputs. Keep all reef names, survey years, fish occurrence, and boundary evidence separate until a primary source supports the crosswalk.
+
+
+### National rollout step 423 - Maragondon Estuary ICFA proceedings cross-check - 1 November 2026
+
+Cross-checked CvSU's September 2024 newsletter announcement against the official ICFA proceedings archive and publisher policy page. CvSU reports Patrique Erika Cancel presented “Detection and Characterization of Microplastics in Mullet Fish (*Mugil cephalus*) in Maragondon Estuary.” The proceedings issue for Vol. 11 No. 1 lists three different full papers and not this title. The publisher says proceedings papers are separately submitted after the conference and reviewed, so the conference presentation is not proof of publication. The linked past-abstract-books resource redirected to Microsoft sign-in and was not reviewed. The title's non-listing here does not establish that no separate abstract or later manuscript exists.
+
+Added `calabarzon-maragondon-estuary-icfa-proceedings-crosscheck-20261101.json` and two official publisher records. Registry total: 571. CALABARZON remains at 119 waterbody research leads and 130 unique direct scope-source references. No species occurrence, diet, geometry, safety/legal claim or public-app row was added; no request was sent. The underlying research remains a secondary institutional announcement without sample size, collection dates, station coordinates, methods, identification/voucher support, per-fish data or item-specific reuse terms.
+
+See the [CvSU newsletter](https://cvsu.edu.ph/wp-content/uploads/2026/06/RE_NEWSLETTER_v7_is9.pdf), [ICFA 2024 proceedings issue](https://proceedings.tiikmpublishing.com/index.php/icfa/issue/view/139), and [publisher's proceedings policy](https://proceedings.tiikmpublishing.com/index.php/icfa/about).
+
+**Next:** continue public retrieval for the separate Bacoor fish-tissue study and the final Imus River watershed vulnerability/pollution report. Do not merge the studies or infer species presence from an announcement alone.
