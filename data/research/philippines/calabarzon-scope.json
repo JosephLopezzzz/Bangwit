@@ -72,22 +72,22 @@
     "limits": "Province plus separate-city starter coverage. Municipalities/component cities and each island/waterbody still require the source-sweep inventory; this is not a completed regional inventory."
   },
   "counts": {
-    "waterbodyResearchLeads": 137,
+    "waterbodyResearchLeads": 138,
     "provincesWithLeads": 6,
     "separateCityCoverageUnits": 1,
     "byKind": {
       "bay": 8,
-      "river": 73,
+      "river": 74,
       "estuary": 3,
       "wetland": 8,
       "reservoir": 5,
       "lake": 18,
       "stream": 9,
       "gulf": 1,
+      "reef": 3,
       "fishpond": 1,
       "spring": 7,
-      "fish-sanctuary": 1,
-      "reef": 3
+      "fish-sanctuary": 1
     },
     "geometryValidated": 0,
     "speciesAssertionsImported": 9,
@@ -5008,6 +5008,42 @@
       "evidenceBatchRefs": [
         "calabarzon-quezon-catanauan-advisory-crosswalk-20261101"
       ]
+    },
+    {
+      "id": "ph-wb-silongin-river-san-francisco-quezon",
+      "name": "Silongin River",
+      "aliases": [],
+      "kind": "river",
+      "salinity": {
+        "classification": "unknown",
+        "reviewStatus": "not-assessed",
+        "sourceRefs": []
+      },
+      "administrativeAssociations": [
+        {
+          "regionId": "0400000000",
+          "provinceId": "0405600000",
+          "relationship": "official-EMB-waterbody-name-and-municipality-context",
+          "sourceRefs": [
+            "emb-national-sober-2016-2021-silongin-river",
+            "quezon-province-tourism-directory"
+          ],
+          "locality": "EMB lists Silongin River under San Francisco, Quezon; the provincial directory lists Silongin among the barangays of San Francisco."
+        }
+      ],
+      "sourceRefs": [
+        "emb-national-sober-2016-2021-silongin-river",
+        "quezon-province-tourism-directory"
+      ],
+      "identityStatus": "official-EMB-source-named-river-and-municipality-context;advisory-compound-label-not-resolved",
+      "boundaryStatus": "not-delineated",
+      "fishEvidenceStatus": "not-reviewed",
+      "reviewStatus": "historical-waterbody-classification-name-locality-review;fish-evidence-not-reviewed;advisory-label-partial-only",
+      "publicAdmission": false,
+      "scopeNote": "DENR-EMB’s National State of the Brown Environment Report 2016–2021, Table 3.3, lists Silongin River under San Francisco, Quezon; the row reports B/C and year classified 2019. This is historical classification metadata, not current water quality or habitat suitability. Quezon’s provincial directory lists a barangay named Silongin in San Francisco. The provincial flood advisory uses the separate compound label “Silongin Lagda”; no reviewed source explains “Lagda” or proves that this label refers to this river, so the advisory is not linked to this lead. No route, channel boundary, fish taxa, current presence/absence, salinity, water quality/hazard, access, fishing rule, or geometry is inferred.",
+      "evidenceBatchRefs": [
+        "calabarzon-quezon-silongin-lagda-partial-crosswalk-20261101"
+      ]
     }
   ],
   "coverageRules": {
@@ -5230,15 +5266,29 @@
     },
     {
       "priority": 16,
-      "task": "Continue the Quezon advisory crosswalk for the remaining 22 labels. Lower Bolbok (Lawaya) is now linked to an official Region IV-A principal-basin lead only; keep its upper/lower channel route unresolved and the separate DENR-atlas Lawaya River (San Juan/Rosario) and Bolbok River (Calaca) features distinct until official hydrography resolves them.",
+      "task": "Continue crosswalking the 18 Quezon advisory labels still unresolved at source-name/reach level. Silongin River is independently source-named in San Francisco, but the advisory compound “Silongin Lagda” remains partially matched because no reviewed source explains “Lagda”; do not link it to the river until resolved. Lower Bolbok (Lawaya) remains a basin-name crosswalk only, with upper/lower route topology unresolved.",
       "sourceIds": [
         "quezon-pdrrmo-2026-flood-advisory-14-watercourses",
         "pagasa-calabarzon-gfa-7-2025-upper-lower-bolbok-lawaya",
         "dpwh-2022-principal-river-basins-annex-d2",
-        "denr-bmb-inland-wetlands-atlas-2016"
+        "denr-bmb-inland-wetlands-atlas-2016",
+        "emb-national-sober-2016-2021-silongin-river"
       ],
       "waterbodyIds": [
-        "ph-wb-bolbok-lawaya-principal-basin-4a"
+        "ph-wb-bolbok-lawaya-principal-basin-4a",
+        "ph-wb-silongin-river-san-francisco-quezon"
+      ]
+    },
+    {
+      "priority": 17,
+      "task": "For Silongin River, search site-resolved fish surveys and route-scale hydrography as separate evidence tasks; first seek an official explanation of “Lagda” before linking the Quezon advisory label.",
+      "sourceIds": [
+        "emb-national-sober-2016-2021-silongin-river",
+        "quezon-province-tourism-directory",
+        "quezon-pdrrmo-2026-flood-advisory-14-watercourses"
+      ],
+      "waterbodyIds": [
+        "ph-wb-silongin-river-san-francisco-quezon"
       ]
     }
   ],

@@ -4,7 +4,7 @@
   "reviewedOn": "2026-11-01",
   "phaseId": "L1",
   "regionId": "0400000000",
-  "status": "official-historical-hazard-advisory-reviewed;Iyam-Macalelon-and-Catanauan-river-name-crosswalked;Lower-Bolbok-and-Malaking-Ilog-basin-crosswalked;18-other-labels-held-for-crosswalk",
+  "status": "official-historical-hazard-advisory-reviewed;Iyam-Macalelon-and-Catanauan-river-name-crosswalked;Lower-Bolbok-and-Malaking-Ilog-basin-crosswalked;Silongin-Lagda-partial-match-held;18-labels-without-full-crosswalk",
   "question": "Which Quezon watercourse names does the official 7 August 2026 flood advisory provide, and can they be safely reconciled with existing CALABARZON leads?",
   "purpose": "Preserve a useful official watercourse-name inventory while preventing duplicate or invented river identities and separating historical hazard context from fish or current safety data.",
   "sourceIds": [
@@ -69,8 +69,11 @@
     },
     {
       "sourceLabel": "Silongin Lagda",
-      "potentialExistingLeadIds": [],
-      "disposition": "unresolved Quezon watercourse name; do not create a physical feature until identity is crosswalked"
+      "potentialExistingLeadIds": [
+        "ph-wb-silongin-river-san-francisco-quezon"
+      ],
+      "disposition": "partial source-name/locality association only: EMB names Silongin River in San Francisco, but no reviewed source explains whether “Lagda” is a second feature or part of the same name; advisory label remains unresolved",
+      "crosswalkReviewId": "calabarzon-quezon-silongin-lagda-partial-crosswalk-20261101"
     },
     {
       "sourceLabel": "Pagsanjan",
@@ -160,7 +163,7 @@
   ],
   "reconciliation": {
     "sourceLabelCount": 23,
-    "potentiallyMatchingExistingLeadCount": 8,
+    "potentiallyMatchingExistingLeadCount": 9,
     "stableLeadsAdded": 3,
     "possibleDuplicatesOrCompoundLabels": [
       "Upper Umiray may be a reach of Umiray River.",
@@ -172,11 +175,14 @@
       "Malaking-Ilog is crosswalked at basin-name level; its exact relationship to the Malaquing Ilog channel remains unverified.",
       "Iyam is crosswalked to the official Iyam River name within its WQMA system, but the advisory does not identify a reach.",
       "Macalelon crosswalks to separate source-named river and principal-basin leads at drainage-system level; the advisory reach and exact channel-to-basin topology remain unverified.",
-      "Catanauan is crosswalked to the official river name and locality, but no specific flood-advisory reach is established."
+      "Catanauan is crosswalked to the official river name and locality, but no specific flood-advisory reach is established.",
+      "Silongin Lagda remains a compound advisory label: the EMB-listed Silongin River is not linked until an official source explains “Lagda”."
     ],
-    "reason": "The advisory supplies 23 official watercourse labels. Iyam and Macalelon now have official river-name/system crosswalks, and Malaking-Ilog and Lower Bolbok have basin-name crosswalks. These do not verify advisory reaches or routes. The remaining 18 labels require source checks; five source-name or basin-name crosswalks still do not verify exact advisory reaches or routes, and the queue is not a count of 23 unique physical rivers.",
+    "reason": "The advisory supplies 23 official watercourse labels. Five source-name or basin-name crosswalks are resolved at their stated level, but no exact advisory reach/routes are verified. The Silongin River is now independently source-named in San Francisco, yet the compound advisory label “Silongin Lagda” remains unresolved because the reviewed official sources do not explain “Lagda.” Eighteen labels remain without a full crosswalk; the queue is not a count of 23 unique physical rivers.",
     "resolvedSourceNameCrosswalks": 5,
-    "verifiedAdvisoryReachRoutes": 0
+    "verifiedAdvisoryReachRoutes": 0,
+    "partialNameLocalityReviews": 1,
+    "sourceNamedLeadsAddedWithoutAdvisoryCrosswalk": 1
   },
   "disposition": {
     "fishAssertionsAdded": 0,
@@ -188,7 +194,7 @@
     "publicationApproval": false
   },
   "nextActions": [
-    "Crosswalk the 18 remaining source labels with official DENR/Geoportal/LGU hydrography or a second source before creating or merging stable waterbody leads.",
+    "Crosswalk the 18 labels still without full resolution against official DENR/Geoportal/LGU hydrography or a second source; resolve the “Lagda” portion before linking the partial Silongin name/locality match.",
     "Keep reach qualifiers and compound names separate in the evidence log until their feature relationship is established.",
     "Never reuse this dated notice as current hazard, access, water quality, or fishing-safety advice.",
     "Seek fish-specific studies separately; the advisory is not fish evidence."

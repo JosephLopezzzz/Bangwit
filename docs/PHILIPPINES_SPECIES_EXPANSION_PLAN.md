@@ -4089,3 +4089,11 @@ Quezon's 7 August 2026 flood advisory lists the bare label “Catanauan.” The 
 Added one source-named river lead and one DPWH source record. CALABARZON now has 137 selected leads (73 river/system/basin units), 157 distinct direct source references, and 620 registered sources. Fish evidence, salinity, geometry, current hazard/water quality, and public-app admission remain unreviewed. See the [crosswalk review](calabarzon-quezon-catanauan-advisory-crosswalk-20261101.json), [BMB-DENR atlas](https://www.philchm.ph/wp-content/uploads/2019/03/Atlas-of-Philippine-Inland-Wetlands-and-Classsified-Caves-2016_BMB_DENR.pdf), [DPWH Contract 25DM0076](https://www.dpwh.gov.ph/DPWH/sites/default/files/webform/civil_works/advertisement/25dm0076_re-ads.pdf), and [Quezon Advisory No. 14](https://quezon.gov.ph/general-flood-advisory-no-14-issued-600am-august-7-2026/).
 
 **Next:** crosswalk the remaining 18 Quezon advisory labels; keep exact reach mapping and fish evidence separate.
+
+### National rollout step 463 - Quezon Silongin River source-name review - 1 November 2026
+
+Added the independently source-named Silongin River in San Francisco, Quezon, from the official EMB 2016–2021 report. The source-reported B/C class and 2019 classification year are historical metadata only. The provincial directory lists a barangay named Silongin in San Francisco. Quezon's advisory says “Silongin Lagda”; because no reviewed official source explains “Lagda,” the compound advisory label remains unresolved and is not associated with the new river lead.
+
+CALABARZON now has 138 selected leads (74 river/system/basin units), 159 distinct source references, and 621 registry sources. The lead is research-only; no fish claim, public record, geometry, salinity, current water-quality/hazard statement, or app row was added. Reuse of the EMB report outside educational/non-profit acknowledged use and public-app/derived-database projection is not approved. See [review](../data/research/philippines/calabarzon-quezon-silongin-lagda-partial-crosswalk-20261101.json) and [official EMB report](https://air.emb.gov.ph/wp-content/uploads/2025/01/NSOBER-2016-2021-fin-1-1.pdf).
+
+**Next:** resolve the “Lagda” advisory text from an official source; separately seek fish surveys and route-scale hydrography for Silongin River.
