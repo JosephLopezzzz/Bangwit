@@ -1,0 +1,108 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "calabarzon-sariaya-malaquing-ilog-atlas-crosswalk-20261101",
+  "reviewedOn": "2026-11-01",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "status": "atlas-source-name-locality-crosswalked;Quezon-profile-alias-unresolved;route-and-public-claims-held",
+  "question": "Does the Sariaya MalaquingIlog source name in the 2017 preprint match a DENR-BMB atlas watercourse entry, and does that resolve the separate Quezon profile name MalakingIlog?",
+  "purpose": "Crosswalk source-named waterbody identity at the name/locality level without treating a historical interview report as a verified fish occurrence or inferring a channel route.",
+  "sourceIds": [
+    "denr-bmb-inland-wetlands-atlas-2016",
+    "chavez-carandang-2017-pterygoplichthys-luzon-preprint",
+    "quezon-province-2025-ecological-profile"
+  ],
+  "sourceReceipt": {
+    "atlasPdfUrl": "https://www.philchm.ph/wp-content/uploads/2019/03/Atlas-of-Philippine-Inland-Wetlands-and-Classsified-Caves-2016_BMB_DENR.pdf",
+    "localPath": "data/research/philippines/raw/philchm/atlas-philippine-inland-wetlands-classified-caves-2016.pdf",
+    "bytes": 61473809,
+    "sha256": "39fb2731b45612143b7543d3afb1217673106bb97846ccc81019988e9d869768",
+    "pdfPage": 129,
+    "printedPage": 117,
+    "visualReview": true
+  },
+  "findings": [
+    {
+      "sourceId": "denr-bmb-inland-wetlands-atlas-2016",
+      "evidence": "Annex 2b row BJ 83 on PDF page 129 (printed page 117) visually reads “Malaquing Ilog River”; the row lists Region IV-A, Quezon, locality including Sariaya, and Tayabas Bay outflow.",
+      "supports": [
+        "official historical atlas source-name entry",
+        "Sariaya locality association",
+        "source-listed outflow label"
+      ],
+      "doesNotSupport": [
+        "surveyed river route or reach endpoints",
+        "channel geometry or watershed boundary",
+        "current water condition",
+        "fish occurrence or checklist",
+        "reuse approval for a public derived database"
+      ]
+    },
+    {
+      "sourceId": "chavez-carandang-2017-pterygoplichthys-luzon-preprint",
+      "evidence": "The Sariaya section names “MalaquingIlog River” and the vicinity of MalaquingIlog Bridge. It reports fisher interviews about suckermouth-armored catfish catches, but the passage provides no site-linked identified voucher or fish-specific event date.",
+      "supports": [
+        "same source-name wording apart from spacing",
+        "Sariaya source locality context"
+      ],
+      "doesNotSupport": [
+        "species-level river occurrence",
+        "current presence",
+        "verified connection between the bridge and a mapped atlas channel",
+        "peer-review or open-reuse status"
+      ]
+    },
+    {
+      "sourceId": "quezon-province-2025-ecological-profile",
+      "evidence": "The official profile index names “MalakingIlog” in Sariaya and describes it as a central river basin; the accessible page does not map it or cross-reference the BMB atlas spelling.",
+      "supports": [
+        "distinct official profile spelling and basin-level description"
+      ],
+      "doesNotSupport": [
+        "that MalakingIlog is an alias of Malaquing Ilog",
+        "a channel-level identity crosswalk",
+        "river route or fish records"
+      ]
+    }
+  ],
+  "crosswalkDecision": {
+    "preprintName": "MalaquingIlog River",
+    "atlasName": "Malaquing Ilog River",
+    "relationship": "Crosswalked to the same source-named Sariaya research unit at name/locality level; the spelling differs only by spacing in the reviewed sources.",
+    "scopeLeadId": "ph-wb-malaquingilog-river-sariaya-quezon",
+    "resolutionLevel": "source-name and municipality locality only",
+    "malakingIlogProfileLeadId": "ph-wb-malakingilog-river-sariaya-quezon",
+    "malakingIlogDecision": "Keep separate. The profile uses a different spelling and calls it a central river basin; no source reviewed here proves whether it is the same feature, alias, basin, or channel.",
+    "geometryAdded": false
+  },
+  "scopeChanges": {
+    "newWaterbodyLeads": 0,
+    "existingLeadUpdated": "ph-wb-malaquingilog-river-sariaya-quezon",
+    "sourceRefAdded": "denr-bmb-inland-wetlands-atlas-2016",
+    "exactSpacingAliasAdded": "Malaquing Ilog River",
+    "malakingIlogLeadMerged": false,
+    "selectedLeadCountUnchanged": 134,
+    "distinctScopeSourceReferences": 154
+  },
+  "disposition": {
+    "speciesAssertionsAdded": 0,
+    "publicRecordsAdmitted": 0,
+    "currentPresenceInferred": false,
+    "fishChecklistAdded": false,
+    "dietOrBaitClaimsAdded": 0,
+    "salinityClassificationAdded": false,
+    "geometryAdded": false,
+    "publicationApproval": false
+  },
+  "reuseAndLimitations": [
+    "The BMB atlas copyright page permits educational/non-profit reproduction with acknowledgement; fit for this public app and derived-database reuse remains unreviewed. No atlas table, map, image, or geometry is reproduced here.",
+    "The 2017 item is an author-uploaded preprint with no verified open license; interview statements are retained only as historical research context.",
+    "The 2016 atlas locality and outflow fields are inventory context, not a route, legal boundary, or current condition.",
+    "No fish absence, current presence, safety, access, water quality, fishability, or legal status is inferred."
+  ],
+  "nextActions": [
+    "Resolve whether the Quezon profile spelling “MalakingIlog” denotes this atlas-listed Malaquing Ilog River or a basin-level feature using an authorized profile volume, official hydrography, or LGU source.",
+    "Separately verify peer-review/publication and item-specific reuse terms for the preprint; seek dated, site-linked vouchers or an independent fish survey before any species assertion.",
+    "Obtain permitted route-scale geometry and independent reach/salinity evidence before map display or classification."
+  ]
+}
