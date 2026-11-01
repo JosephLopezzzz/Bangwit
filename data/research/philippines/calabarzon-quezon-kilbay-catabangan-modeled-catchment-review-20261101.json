@@ -1,0 +1,163 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "calabarzon-quezon-kilbay-catabangan-modeled-catchment-review-20261101",
+  "reviewedOn": "2026-11-01",
+  "phaseId": "luzon-calabarzon-freshwater-source-crosswalk",
+  "regionId": "0400000000",
+  "provinceId": "0405600000",
+  "status": "modeled-cross-region-catchment-candidate;not-official-hydrography-or-advisory-route-verification",
+  "question": "Does the public national catchment geodatabase provide independent route-scale support for the Upper Kilbay–Catabangan / Lower Kilbay Catabangan cross-region name candidate?",
+  "purpose": "Check whether an openly licensed modeled catchment and associated stream network can strengthen the research crosswalk while keeping official reach, boundary, and fish claims separate.",
+  "waterbodyId": "ph-wb-upper-kilbay-catabangan-quezon-reach",
+  "sourceIds": [
+    "glasgow-philippines-catchments-stream-network-2023",
+    "namria-isportal-maris-access",
+    "dpwh-2022-principal-river-basins-annex-d2",
+    "pagasa-calabarzon-gfa-7-2025-upper-lower-bolbok-lawaya",
+    "pagasa-bicol-gfa-8-2025-lower-kilbay-catabangan",
+    "quezon-pdrrmo-2026-flood-advisory-14-watercourses",
+    "emb-r5-2024-sober-incarizan-class-b"
+  ],
+  "findings": [
+    {
+      "sourceId": "glasgow-philippines-catchments-stream-network-2023",
+      "evidence": "The University of Glasgow research-data record offers a 128-catchment Philippine GIS geodatabase and stream-network shapefiles; its record states files are visible to anyone under CC BY 4.0. The associated 2023 peer-reviewed paper describes catchments larger than 250 km², delineated using TopoToolbox V2 from a nationwide IfSAR DEM acquired in 2013. The README says stream lines are generalized to 1 km segments.",
+      "supports": [
+        "publicly accessible, attributable research-data source",
+        "modeled stream and catchment geometry for a candidate name"
+      ],
+      "doesNotSupport": [
+        "official NAMRIA geometry or legal boundary",
+        "field-surveyed channel alignment, current conditions, or fish occurrence"
+      ]
+    },
+    {
+      "sourceId": "glasgow-philippines-catchments-stream-network-2023",
+      "evidence": "Downloaded archives from the University of Glasgow record and inspected the shapefile attributes. The catchment polygon feature New_Name=Kilbay_Catabangan reports Catch_area=270.28 km², EPSG:3857, one polygon part and 13,487 vertices. Its EPSG:3857 bounding box converts approximately to 122.524228–122.767595°E, 13.902918–14.072672°N. The matching stream-network PID has 230 generalized segments, with Strahler orders 1–4; the longest reported distance-to-outlet field is 41.555541 km.",
+      "supports": [
+        "a modeled catchment and stream-network feature using the combined Kilbay_Catabangan name",
+        "a candidate geometry for internal source cross-checking"
+      ],
+      "doesNotSupport": [
+        "exact mapping of PAGASA upper/lower labels onto modeled segments",
+        "provincial or municipal boundary intersection without an authoritative overlay",
+        "use as a navigation, fishing access, safety, flood-warning, or public-app boundary layer"
+      ]
+    },
+    {
+      "sourceId": "dpwh-2022-principal-river-basins-annex-d2",
+      "evidence": "DPWH Annex D-2 row 170 reports a Region V Kilbay-Catabangan principal basin of 285 km². This differs from the research geodatabase attribute (270.28 km²); the different values are source-specific model/table attributes, not surveyed boundary determinations.",
+      "supports": [
+        "matching basin-name context in an official DPWH table",
+        "a documented area difference between two products"
+      ],
+      "doesNotSupport": [
+        "that either reported area defines a surveyed boundary",
+        "that the advisory labels identify the same delineation"
+      ]
+    },
+    {
+      "sourceId": "namria-isportal-maris-access",
+      "evidence": "NAMRIA’s Information System Portal describes MarIS as a store/view/share/download platform for Hydrography Branch data, but states that access is restricted to the Hydrography Branch and NAMRIA network. The public portal does not itself provide a public download path for official geometry.",
+      "supports": [
+        "the public-access limitation for this official data route"
+      ],
+      "doesNotSupport": [
+        "that no official hydrography exists",
+        "that the modeled research geometry is official"
+      ]
+    },
+    {
+      "sourceId": "pagasa-calabarzon-gfa-7-2025-upper-lower-bolbok-lawaya",
+      "evidence": "Official PAGASA indexed PDF text for Region IV-A GFA No. 7 (26 November 2025) lists Upper Kilbay - Catabangan under Quezon. The live PDF endpoint returned a later notice when opened on 2026-11-01; the historic text is not reproducible from the current file at that URL.",
+      "supports": [
+        "historical official upper-reach name and Quezon attribution"
+      ],
+      "doesNotSupport": [
+        "the exact reach geometry or equivalence with the modeled catchment",
+        "current hazard status"
+      ]
+    },
+    {
+      "sourceId": "pagasa-bicol-gfa-8-2025-lower-kilbay-catabangan",
+      "evidence": "Official PAGASA indexed PDF text for Region V GFA No. 8 (Final, 27 November 2025) lists Lower Kilbay Catabangan under Camarines Sur. The live PDF endpoint returned a later notice when opened on 2026-11-01; the historic text is not reproducible from the current file at that URL.",
+      "supports": [
+        "historical official lower-reach name and Camarines Sur attribution"
+      ],
+      "doesNotSupport": [
+        "the exact reach geometry or equivalence with the Quezon upper label",
+        "current hazard status"
+      ]
+    }
+  ],
+  "dataExtraction": {
+    "catchmentArchive": {
+      "filename": "Philippines_GIS_catchments_n128.zip",
+      "bytes": 22590206,
+      "sha256": "AF854C4551DF89F1DA7FE80275960BE417CAFC212AFF545050D2EA6C38AF0AE6",
+      "sourceUrl": "https://researchdata.gla.ac.uk/1396/2/Philippines_GIS_catchments_n128.zip"
+    },
+    "streamNetworkArchive": {
+      "filename": "Philippines_GIS_stream_network_n128.zip",
+      "bytes": 149447900,
+      "sha256": "58F47DF9C8CC90D6734BC7C28DB6E2980C52EA17C505561A63405BCD1BF574D2",
+      "sourceUrl": "https://researchdata.gla.ac.uk/1396/3/Philippines_GIS_stream_network_n128.zip"
+    },
+    "featureName": "Kilbay_Catabangan",
+    "catchmentAreaKm2": 270.28,
+    "catchmentCoordinateReferenceSystem": "EPSG:3857",
+    "catchmentPolygonParts": 1,
+    "catchmentPolygonVertices": 13487,
+    "catchmentBoundsWgs84Approximate": {
+      "west": 122.524228,
+      "south": 13.902918,
+      "east": 122.767595,
+      "north": 14.072672,
+      "derivation": "Inverse Web Mercator from the published polygon bounding box; approximate locator only."
+    },
+    "matchingStreamNetworkFeatureCount": 230,
+    "streamNetworkSegmentLength": "1 km generalized segments per dataset README",
+    "streamOrderCounts": {
+      "1": 153,
+      "2": 50,
+      "3": 11,
+      "4": 16
+    },
+    "rawArchivesRetainedInRepository": false,
+    "publicGeometryImported": false
+  },
+  "crosswalk": {
+    "advisoryUpperLabel": "Upper Kilbay – Catabangan",
+    "advisoryLowerLabel": "Lower Kilbay Catabangan",
+    "modeledFeatureName": "Kilbay_Catabangan",
+    "resolutionLevel": "partial modeled catchment/name correspondence only; official route, exact advisory reach mapping, and administrative boundary remain unverified"
+  },
+  "disposition": {
+    "modeledCatchmentFeatureFound": true,
+    "matchingModeledStreamNetworkFound": true,
+    "academicResearchDatasetCCBY4": true,
+    "crossRegionSystemNameCandidateStrengthened": true,
+    "officialHydrographyVerified": false,
+    "exactAdvisoryReachRoutesVerified": false,
+    "administrativeBoundaryVerified": false,
+    "fishAssertionsAdded": 0,
+    "publicRecordsAdmitted": 0,
+    "publicGeometryImported": false,
+    "currentPresenceInferred": false,
+    "currentWaterQualityClaimed": false,
+    "currentHazardClaimed": false,
+    "salinityClassificationAdded": false,
+    "publicationApproval": false
+  },
+  "nextActions": [
+    "Request an official NAMRIA Hydrography Branch river/basin line or technical description, with datum, scale, version, and reuse terms, for the Tagkawayan–Del Gallego Kilbay-Catabangan candidate.",
+    "If official administrative geometry becomes available, compare it with the modeled catchment before describing cross-province extent or assigning advisory reaches.",
+    "Search station-resolved fish surveys separately; do not transfer species observations across this modeled basin."
+  ],
+  "nonClaims": [
+    "The 270.28 km² modeled area and DPWH 285 km² principal-basin area are different source attributes, not competing surveyed boundaries.",
+    "The 2023 geodatabase is research-derived from a 2013 IfSAR DEM and is not official hydrography, a legal boundary, field-verified route, or current hazard layer.",
+    "The advisory reach labels have not been spatially assigned to the modeled stream segments.",
+    "No fish presence or absence, complete checklist, water quality, salinity, safety, access, fishing permission, or diet/bait guidance is asserted."
+  ]
+}
