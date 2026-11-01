@@ -3693,3 +3693,17 @@ Added `calabarzon-maragondon-estuary-icfa-proceedings-crosscheck-20261101.json` 
 See the [CvSU newsletter](https://cvsu.edu.ph/wp-content/uploads/2026/06/RE_NEWSLETTER_v7_is9.pdf), [ICFA 2024 proceedings issue](https://proceedings.tiikmpublishing.com/index.php/icfa/issue/view/139), and [publisher's proceedings policy](https://proceedings.tiikmpublishing.com/index.php/icfa/about).
 
 **Next:** continue public retrieval for the separate Bacoor fish-tissue study and the final Imus River watershed vulnerability/pollution report. Do not merge the studies or infer species presence from an announcement alone.
+
+
+
+### National rollout step 424 - Imus–Ylang Ylang–Rio Grande SORB and CvSU deliverable cross-check - 1 November 2026
+
+Cross-checked CvSU's official listing for the separate 2020-2021 *Bio-physical Characterization, Vulnerability and Pollution Assessment in Imus River Watershed* project against PEMSEA's 2025 public IYRR profile and mid-term review, plus the official DENR-FASPS 2025 Annual Portfolio Report. PEMSEA's mid-term excerpt says that, as of June 2025, the IYRR SORB report was undergoing final review. DENR's 2025 portfolio report says the IYRR SORB was drafted and validation workshops were conducted, and separately notes that the WEFE analysis report was finalized. The available status sources do not establish the 2026 final/public release of the SORB or make it the CvSU project deliverable.
+
+The public IYRR profile cites the SORB for aggregate basin facts and includes a river ranger's historical recollection of fish abundance, but the reviewed profile text names no fish taxa. The profile's fecal-coliform figure is secondary-reported without a sample date or station-level methods in the passage; it cannot support current safety advice. A basin catchment map is not a reusable channel or fishing-area geometry. The full SORB and CvSU deliverable were not retrieved, which does not prove they contain no fish evidence.
+
+Added `calabarzon-imus-irbm-sorb-public-output-crosscheck-20261101.json`, three source-registry records, and updated the denominator-profile provenance hashes. The registry now contains 574 sources. CALABARZON remains at 119 named research leads and 130 direct source references. No occurrence or species assertion, diet, safety/legal claim, geometry, waterbody scope link, or app row was added; no external request was sent. The downloaded DENR portfolio report remains in ignored local storage and was not committed.
+
+See the official [CvSU project listing](https://cvsu.edu.ph/research-center), [PEMSEA IYRR site profile](https://www.pemsea.org/sites/default/files/2025-11/IRBM%20IYRR%20Site%20Profile.pdf), [PEMSEA mid-term review](https://pemsea.org/sites/default/files/2025-12/MTR%20SDS-SEA%20IP%20Annex%201_0.pdf), and [DENR-FASPS 2025 Annual Portfolio Report](https://faspselib.denr.gov.ph/uploads/materials/ad68955a-b187-4d55-aec3-2b7518d4722f/1f48a98a-4ba0-47d8-8b39-dc6bd398733b.pdf).
+
+**Next:** continue public-source retrieval for the underlying Imus vulnerability/pollution deliverable and IYRR SORB, and identify the separate Bacoor fish-tissue study. Keep all three research threads distinct and do not infer fish absence from missing public reports.
