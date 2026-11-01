@@ -3893,3 +3893,14 @@ The compound review remains separate from both individual waterbody records; no 
 See the [NFRDI repository item](https://repository.nfrdi.da.gov.ph/items/023ccf69-0767-457e-9309-0fdeaa75e2b8), [GBIF Species API documentation](https://techdocs.gbif.org/en/openapi/v1/species), and the [compound-area transcription review](../data/research/philippines/calabarzon-balayan-calatagan-compound-bay-nfrdi-gear-catch-label-transcription-20261101.json).
 
 **Next:** continue the remaining Quezon/CALABARZON freshwater source queue; do not wait for the separate municipal-water-boundary inquiry to proceed with source research.
+
+
+### National rollout step 442 - Hinabaan River fish-survey source search follow-up - 1 November 2026
+
+Ran 15 bounded public searches using the exact Hinabaan River/Falls names, freshwater fish/ichthyofauna terms, municipality-level study terms, and UPLB, SEAFDEC, and BMB domain filters. No site-specific fish survey or taxon list was retrieved. The 2024 Guinayangan Water District report confirms the source-named river and barangay-level supply context only; the 2026 DENR item is a waterbird census, and the municipal tourism page identifies Hinabaan Falls without a river crosswalk. The earlier exact CoL XR Actinopterygii GBIF text screen returned zero for the supplied Hinabaan strings; no fish-absence inference follows.
+
+Updated the research-only Hinabaan scope status and CALABARZON review profile, registered the municipal tourism page as locality context, and linked the follow-up to the reviewed water-district and DENR sources. No species assertion, geometry, salinity, current-presence, safety/access claim, or public-app row was added. No request or email was sent.
+
+See the [Hinabaan search follow-up](../data/research/philippines/calabarzon-hinabaan-river-fish-search-followup-20261101.json), [Guinayangan Water District 2024 report](https://www.guinayangan.com/gwd%20annual%20report%202024.pdf), [DENR CENRO Calauag 2026 waterbird census](https://calabarzon.denr.gov.ph/news-events/denr-calauag-monitors-2026-asian-waterbird-populations-across-quezon-provinces-wetlands/), and [Guinayangan municipal tourism page](https://www.guinayangan.com/tournature.htm).
+
+**Next:** continue the remaining Guinayangan spring and tributary sources, prioritizing primary Maulawin Spring Protected Landscape fish-monitoring outputs. Keep the separate Hinabaan and Viñas River leads unmerged until an authoritative feature crosswalk is found.
