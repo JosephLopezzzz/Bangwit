@@ -72,12 +72,12 @@
     "limits": "Province plus separate-city starter coverage. Municipalities/component cities and each island/waterbody still require the source-sweep inventory; this is not a completed regional inventory."
   },
   "counts": {
-    "waterbodyResearchLeads": 126,
+    "waterbodyResearchLeads": 127,
     "provincesWithLeads": 6,
     "separateCityCoverageUnits": 1,
     "byKind": {
       "bay": 8,
-      "river": 62,
+      "river": 63,
       "estuary": 3,
       "wetland": 8,
       "reservoir": 5,
@@ -4585,6 +4585,48 @@
       "reviewStatus": "separate-source-named-Ragay-Gulf-reef;legacy-Capuluan-alias-rejected;no-finfish-survey-or-boundary",
       "publicAdmission": false,
       "scopeNote": "The 2022 study describes Palad Reef between San Narciso and San Andres as a historical slipper-lobster fishery locality; NGA Pub. 162 separately describes Palad Reef near Alibijaban Island and distinguishes it from Capuluan Reef. The older CRMP directory and municipal tourism page conflict by linking Palad to Capuluan Central; they remain documented as historical claims only. No reef-specific finfish taxa, legal boundary, geometry, current presence, or sanctuary status is established."
+    },
+    {
+      "id": "ph-wb-kaliwa-kanan-agos-river-system",
+      "name": "Kaliwa-Kanan-Agos River System",
+      "aliases": [],
+      "kind": "river",
+      "salinity": {
+        "classification": "unknown",
+        "reviewStatus": "historical-Agos-estuary-context-only;whole-system-classification-not-assessed",
+        "sourceRefs": [
+          "jica-2003-agos-river-basin-aquatic-ecology-eia"
+        ]
+      },
+      "administrativeAssociations": [
+        {
+          "regionId": "0400000000",
+          "provinceId": "0405600000",
+          "relationship": "study-area",
+          "sourceRefs": [
+            "jica-2003-agos-river-basin-aquatic-ecology-eia"
+          ],
+          "locality": "The 2003 feasibility-study EIA names the Agos, Kaliwa, and Kanan river system and provides station/locality descriptions; fish findings are system-level."
+        },
+        {
+          "regionId": "0400000000",
+          "provinceId": "0405800000",
+          "relationship": "study-area",
+          "sourceRefs": [
+            "jica-2003-agos-river-basin-aquatic-ecology-eia"
+          ],
+          "locality": "The EIA states that Kaliwa River drains part of the Rizal watershed; this is watershed context, not a mapped channel or administrative boundary."
+        }
+      ],
+      "sourceRefs": [
+        "jica-2003-agos-river-basin-aquatic-ecology-eia"
+      ],
+      "identityStatus": "official-JICA-EIA-named-multi-river-system;individual-channel-crosswalk-not-delineated",
+      "boundaryStatus": "not-delineated",
+      "fishEvidenceStatus": "historical-2002-EIA-mixed-interview-and-collection-table;system-level-only;taxa-not-individually-river-attributed;taxonomy-and-rights-pending;no-current-presence-inferred",
+      "reviewStatus": "official-JICA-2003-Volume-V-Annex-D-reviewed;10-stations-named-across-three-rivers;fish-table-system-level;public-reuse-not-approved",
+      "publicAdmission": false,
+      "scopeNote": "The official 2003 JICA feasibility-study EIA names ten aquatic stations across the Agos (five), Kaliwa (three), and Kanan (two) Rivers and presents a 2002 fish table based on mixed interviews and collected samples. The table is system-level and does not crosswalk each fish entry to an individual river or station; several source entries lack scientific names. The source separately reports some local-name fish groups as more abundant in Kanan, but gives no standardized river-by-river abundance table. The report describes high-tide marine influence reaching the Agos at Pinaglapatan; this is historical context only. The referenced station map was not converted to coordinates or geometry. JICA site-policy terms do not approve public structured reuse. No current presence, complete checklist, current salinity, access, fishing legality/safety, or diet advice is inferred; see calabarzon-kaliwa-kanan-agos-2003-jica-fish-review-20261101.json."
     }
   ],
   "coverageRules": {
@@ -4764,14 +4806,24 @@
         "ph-wb-sakang-river-tagkawayan",
         "ph-wb-tagkawayan-river-quezon"
       ]
+    },
+    {
+      "priority": 13,
+      "task": "Find a newer, independently reusable fish survey with taxon-to-station evidence for the Kaliwa-Kanan-Agos system. Keep the 2002 JICA EIA aggregate table held for public reuse, and do not assign its rows to individual rivers without a source crosswalk.",
+      "sourceIds": [
+        "jica-2003-agos-river-basin-aquatic-ecology-eia"
+      ],
+      "waterbodyIds": [
+        "ph-wb-kaliwa-kanan-agos-river-system"
+      ]
     }
   ],
   "gaps": [
     {
       "id": "scope-not-exhaustive",
       "status": "open",
-      "count": 126,
-      "reason": "126 selected named water and habitat research leads are seeded across CALABARZON water types; this selected list is not a complete regional inventory. The official NFRDI 2024 handbook now has separate historical gear-label transcriptions for Nasugbu, Tayabas, Lamon, Ragay, and Batangas Bays/Gulf: 13, 36, 44, 33, and 23 finfish source-label rows, respectively. Taxonomic screens are recorded by source-named area, but field identification, dates, capture origin, and product-use review remain pending. The official 2024 Cavite profile adds source-named river courses, while reported route text remains distinct from verified channel geometry. Provincial, municipal, island, stream, pond and reservoir denominators remain incomplete; some leads are habitat/designation names rather than delineated waterbodies.",
+      "count": 127,
+      "reason": "127 selected named water and habitat research leads are seeded across CALABARZON water types; this selected list is not a complete regional inventory. The official NFRDI 2024 handbook now has separate historical gear-label transcriptions for Nasugbu, Tayabas, Lamon, Ragay, and Batangas Bays/Gulf: 13, 36, 44, 33, and 23 finfish source-label rows, respectively. Taxonomic screens are recorded by source-named area, but field identification, dates, capture origin, and product-use review remain pending. The official 2024 Cavite profile adds source-named river courses, while reported route text remains distinct from verified channel geometry. Provincial, municipal, island, stream, pond and reservoir denominators remain incomplete; some leads are habitat/designation names rather than delineated waterbodies.",
       "nextAction": "Continue the source-derived inventory with explicit inclusion criteria and a frozen manifest; resolve unnamed 2021 aggregate river/wetland counts before claiming a regional baseline."
     },
     {
@@ -4806,15 +4858,15 @@
     {
       "id": "fish-coverage",
       "status": "open",
-      "count": 103,
-      "reason": "Regional species coverage remains incomplete across 103 selected leads without sufficient accepted species-level evidence for a complete place-specific checklist. The new Sakang and Tagkawayan River leads have no site-specific fish evidence. The new Naic Palanas River lead has name-only indexed context and no fish evidence. The Maalimango River lead has a historical, station-specific 2016 EIA fishery matrix with partial taxonomy and unresolved reuse/field identification; this is not a current or complete river list. The new Guinayangan river/spring source crosswalk contains no fish records. Exact-name database screens cover selected watercourses only; zero results are bounded discovery gaps, not evidence of fish absence. Nasugbu has 13 labels across three blocks (11 exact accepted species-rank matches, one subspecies, one unmatched); Tayabas has 36 labels across eight blocks (30 exact accepted species-rank matches); Lamon has 44 labels across ten blocks and 39 distinct names (35 exact accepted species-rank matches, one subspecies, two variants, one unmatched); Ragay has 33 labels across eight blocks and 26 names (24 exact accepted species-rank matches, one synonym, one unmatched); Batangas has 23 labels across five blocks and 17 distinct names, including 11 species-level exact matches and six genus-level labels. These historical gear crosswalks do not verify field identification, dated capture occurrence, or complete/current checklists.",
+      "count": 104,
+      "reason": "Regional species coverage remains incomplete across 104 selected leads without sufficient accepted species-level evidence for a complete place-specific checklist. The new Sakang and Tagkawayan River leads have no site-specific fish evidence. The new Naic Palanas River lead has name-only indexed context and no fish evidence. The Maalimango River lead has a historical, station-specific 2016 EIA fishery matrix with partial taxonomy and unresolved reuse/field identification; this is not a current or complete river list. The new Guinayangan river/spring source crosswalk contains no fish records. Exact-name database screens cover selected watercourses only; zero results are bounded discovery gaps, not evidence of fish absence. Nasugbu has 13 labels across three blocks (11 exact accepted species-rank matches, one subspecies, one unmatched); Tayabas has 36 labels across eight blocks (30 exact accepted species-rank matches); Lamon has 44 labels across ten blocks and 39 distinct names (35 exact accepted species-rank matches, one subspecies, two variants, one unmatched); Ragay has 33 labels across eight blocks and 26 names (24 exact accepted species-rank matches, one synonym, one unmatched); Batangas has 23 labels across five blocks and 17 distinct names, including 11 species-level exact matches and six genus-level labels. These historical gear crosswalks do not verify field identification, dated capture occurrence, or complete/current checklists. The Kaliwa-Kanan-Agos EIA contributes only historical system-level mixed interview/collection context; its taxa are not assigned to individual rivers or current presence.",
       "nextAction": "Join only independently reviewed evidence at its supported geographic scale."
     },
     {
       "id": "identity-and-geometry",
       "status": "open",
-      "count": 126,
-      "reason": "No validated waterbody geometry or precise point assignment has been created for 126 selected leads. Sakang and Tagkawayan River are source-named freshwater leads only; the Water District narrative does not provide a verified route. Nasugbu Bay is a source-named fishing-ground lead only; the NFRDI handbook does not provide a boundary or capture coordinates. Existing grouped springs remain unsplit, historical station points and project footprints do not delimit whole waterbodies, and repeated names, compound river names, source-era localities, and watershed-versus-channel identity remain under review.",
+      "count": 127,
+      "reason": "No validated waterbody geometry or precise point assignment has been created for 127 selected leads. Sakang and Tagkawayan River are source-named freshwater leads only; the Water District narrative does not provide a verified route. Nasugbu Bay is a source-named fishing-ground lead only; the NFRDI handbook does not provide a boundary or capture coordinates. Existing grouped springs remain unsplit, historical station points and project footprints do not delimit whole waterbodies, and repeated names, compound river names, source-era localities, and watershed-versus-channel identity remain under review. The Kaliwa-Kanan-Agos research unit is source-named at system scale but has no validated system/channel geometry or station coordinates.",
       "nextAction": "Reconcile stable identities and source-era/current geography before map display."
     },
     {

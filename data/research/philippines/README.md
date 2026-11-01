@@ -1660,3 +1660,10 @@ Queried PSA OpenSTAT directly for all 38 Quezon QIFS rows in the 2024 and 2025 A
 This is province-level inland municipal catch production, not a river/lake survey or species checklist. “Other” is aggregated, common-name labels are not taxonomic determinations, and `..` is not zero. Nothing is assigned to Tagkawayan River, Sakang River, Maulawin River, Hiwasayan River, or another specific inland water. No scientific taxa, occurrences, geometry, current-presence claims, or app rows were added. See the [PSA OpenSTAT QIFS table](https://openstat.psa.gov.ph/Metadata/2E4GVIP0), the [official Quezon 2025 release](https://rsso04a.psa.gov.ph/content/fisheries-production-quezon-2025), and the [cross-check profile](calabarzon-quezon-2025-qifs-statistical-profile-20261101.json).
 
 **Next:** continue independent, site-resolved CALABARZON freshwater evidence and route research; use these provincial statistics only to prioritize where to search.
+
+
+## Kaliwa-Kanan-Agos 2002 JICA EIA review -- 1 November 2026
+
+The official JICA 2003 feasibility-study Volume V, Annex D describes ten aquatic stations across Agos, Kaliwa, and Kanan Rivers and a historical fish table based on both interviews and collected samples. The fish table is system-level; it does not assign each entry to a river or station, and several entries have incomplete scientific names. JICA's site policy does not grant general public structured reuse, so the fish table remains held pending applicable permission and taxonomic review.
+
+Added one multi-river research lead and source review. No species assertions, public records, station coordinates, geometry, current-presence claims, or app rows were added. See the [JICA catalog record](https://openjicareport.jica.go.jp/617/617/617_118_11721966.html), [EIA annex](https://openjicareport.jica.go.jp/pdf/11721966_13.pdf), [JICA site policy](https://www.jica.go.jp/english/policy/), and [research review](calabarzon-kaliwa-kanan-agos-2003-jica-fish-review-20261101.json).
