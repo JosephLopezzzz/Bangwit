@@ -25,6 +25,8 @@ If the study is not publicly shareable, a citation, abstract, public contact per
 
 Thank you for your guidance.
 
-Joseph Lopez  
-Bangwit project  
+Joseph Lopez
+
+Bangwit project
+
 `[contact email to be supplied if and when Joseph chooses to send]`
