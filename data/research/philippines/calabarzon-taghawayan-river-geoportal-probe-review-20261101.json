@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "calabarzon-taghawayan-river-geoportal-probe-review-20261101",
+  "reviewedOn": "2026-11-01",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "provinceId": "0405600000",
+  "status": "public-waterbody-wms-layers-queryable;tagkawayan-point-probes-empty-and-indeterminate;no-route-or-geometry",
+  "question": "Can the public Geoportal Water Body WMS identify a feature at a secondary Tagkawayan River locator point and support a verified channel route?",
+  "purpose": "Check whether an official water-body map service can help crosswalk the source-named Tagkawayan River lead without treating a point query as proof of identity, geometry, or absence.",
+  "targetWaterbodyIds": [
+    "ph-wb-tagkawayan-river-quezon"
+  ],
+  "sourceIds": [
+    "geoportal-ph-waterbody-layer-catalog-20261031",
+    "fishbrain-taghawayan-river-secondary-locator-20261101"
+  ],
+  "sourceFindings": [
+    {
+      "sourceId": "geoportal-ph-waterbody-layer-catalog-20261031",
+      "evidence": "On 2026-11-01, the public GeoServer WMS 1.3.0 GetCapabilities endpoint returned HTTP 200 and advertised geoportal:waterbody10k and geoportal:waterbody50k as queryable. The official Data Inventory snapshot lists both as uploaded, with metadata and Open under NAMRIA Memorandum Order No. 008, series of 2022, while stating downloading is temporarily disabled for updating.",
+      "limits": "The Data Inventory is dated March 2025 and is a catalog snapshot, not current feature-level access terms. WMS layer availability does not identify a Tagkawayan feature or provide a route."
+    },
+    {
+      "sourceId": "fishbrain-taghawayan-river-secondary-locator-20261101",
+      "evidence": "An indexed secondary fishing-water page was used only to choose an approximate point near the source-named Tagkawayan River. The locator gives 13.959611 N, 122.528000 E; the page itself could not be fetched during this review.",
+      "limits": "This is not an official hydrography source, and its approximate point does not establish river identity, channel geometry, fish observations, catches, access, water quality, or fishing status."
+    }
+  ],
+  "wmsProbe": {
+    "checkedOn": "2026-11-01",
+    "capabilitiesUrl": "https://geoserver.geoportal.gov.ph/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities",
+    "capabilitiesHttpStatus": 200,
+    "layers": [
+      {
+        "name": "geoportal:waterbody10k",
+        "queryable": true
+      },
+      {
+        "name": "geoportal:waterbody50k",
+        "queryable": true
+      }
+    ],
+    "request": {
+      "operation": "GetFeatureInfo",
+      "version": "1.3.0",
+      "crs": "CRS:84",
+      "bbox": [
+        122.5265,
+        13.9581,
+        122.5295,
+        13.9611
+      ],
+      "imageSize": [
+        101,
+        101
+      ],
+      "pixel": [
+        50,
+        50
+      ],
+      "featureCount": 10,
+      "infoFormat": "application/json",
+      "pointBasis": "Approximate secondary locator only; not adopted as a river coordinate or geometry."
+    },
+    "responses": [
+      {
+        "layer": "geoportal:waterbody10k",
+        "httpStatus": 200,
+        "numberReturned": 0,
+        "serverTimestamp": "2026-11-01T10:11:34.605Z"
+      },
+      {
+        "layer": "geoportal:waterbody50k",
+        "httpStatus": 200,
+        "numberReturned": 0,
+        "serverTimestamp": "2026-11-01T10:11:34.705Z"
+      }
+    ],
+    "interpretation": "Both responses were empty. No positive-control feature was returned in the same identify path, so the probe is indeterminate; it does not establish that the river or mapped feature is absent."
+  },
+  "decision": {
+    "waterbodyIdentityVerified": false,
+    "channelRouteVerified": false,
+    "geometryAdded": false,
+    "fishEvidenceAdded": false,
+    "speciesAssertionsAdded": 0,
+    "currentPresenceOrAbsenceInferred": false,
+    "waterQualityOrSalinityInferred": false,
+    "legalOrSafetyClaimAdded": false,
+    "publicRowsAdded": 0,
+    "publicationApproval": false,
+    "regionalBaselineComplete": false
+  },
+  "nextAction": "Seek a current official or authorized feature-level hydrography extract, a NAMRIA map sheet with usable route context, or a Quezon/LGU crosswalk. Keep the Geoportal layer catalog as availability context only until a feature is independently identified and reuse terms are confirmed.",
+  "sources": [
+    {
+      "sourceId": "geoportal-ph-waterbody-layer-catalog-20261031",
+      "url": "https://www.geoportal.gov.ph/resources/GP_DataInventory.pdf",
+      "supports": "Official catalog snapshot of Water Body 1:10,000/1:50,000 access and restriction labels; March 2025 snapshot only."
+    },
+    {
+      "sourceId": "geoportal-ph-waterbody-layer-catalog-20261031",
+      "url": "https://geoserver.geoportal.gov.ph/geoserver/ows?service=WMS&version=1.3.0&request=GetCapabilities",
+      "supports": "Public service capabilities and queryable layer names observed on 2026-11-01."
+    },
+    {
+      "sourceId": "fishbrain-taghawayan-river-secondary-locator-20261101",
+      "url": "https://fishbrain.com/fishing-waters/liRiR9if/tagkawayan-river",
+      "supports": "Secondary approximate locator used only to select a WMS probe point; direct page retrieval failed during this review."
+    }
+  ]
+}
