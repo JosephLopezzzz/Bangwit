@@ -3794,3 +3794,14 @@ Refreshed the CALABARZON denominator profile: registry total 588, 119 named wate
 See the [BMB Atlas of Inland Wetlands in Mainland Luzon](https://www.ramsar.org/sites/default/files/documents/library/atlas_inland_wetland_mainland_luzon_philippines_2014_e.pdf), [2019 BMB inland wetlands inventory](https://www.philchm.ph/wp-content/uploads/2019/06/inland-wetlands-as-of-1st-qtr-2019-for-chm-2.pdf), the [DENR CALABARZON 2024 wetland roadmap](https://calabarzon.denr.gov.ph/news-events/denr-crafts-5-year-conservation-roadmap-for-calabarzon-inland-wetlands/), and the [Dagatan/Pagatan cross-check](../data/research/philippines/calabarzon-bmb-2014-wetland-atlas-dagatan-pagatan-crosscheck-20261101.json).
 
 **Next:** continue independently sourced, locality-resolved freshwater and coastal study review. Seek a municipality/site-code crosswalk for the two 2024 roadmap phrases through public DENR or Quezon LGU records; do not treat the atlas as current GIS geometry or species evidence.
+
+
+### National rollout step 433 - Quezon public-records Dagatan locality recheck - 1 November 2026
+
+Rechecked public Quezon and DENR records for the 2024 roadmap's Quezon entries. The Quezon provincial directory currently describes a man-made Dagatan Lake in San Antonio and lists it as a point of interest. A DENR-hosted watershed plan describes a separate Dagatan Lake at Sitio Busal, Barangay Ibabang Palale, Tayabas City, with a historical area of 2 ha. The latter conflicts with BMB's 24.38 ha historical Dagat Dagatan Lake entry; neither area is current geometry. BMB's 2014/2019 inventories separately list a 3.22 ha Lake Pagatan in San Antonio, but the provincial page does not state whether that is the same lake as San Antonio's man-made Dagatan Lake.
+
+Updated the two existing source records and the literature crosswalk; no new source-registry ID or scope reference was required. CALABARZON remains at 588 registry entries, 119 named waterbody leads, and 131 distinct source IDs referenced by the scope. No features were merged, no alias or geometry was added, and the 2024 roadmap's 30-versus-31 count remains unresolved. No fish claim, public-app record, or agency request was added or sent.
+
+See the [Quezon Provincial Government directory](https://quezon.gov.ph/citiesmunicipalities/), the [DENR-hosted Dagatan Lake watershed plan](https://faspselib.denr.gov.ph/uploads/materials/3a7fd3f9-4f68-40b4-a1cf-f35bcc6c3fd8/8d50fb5a-0067-41ca-a03a-7e6807ab1d88.pdf), the [2019 BMB inland wetlands inventory](https://www.philchm.ph/wp-content/uploads/2019/06/inland-wetlands-as-of-1st-qtr-2019-for-chm-2.pdf), and the [public-records recheck](../data/research/philippines/calabarzon-quezon-dagatan-pagatan-public-records-recheck-20261101.json).
+
+**Next:** continue independent, locality-resolved CALABARZON fish studies; keep the Dagatan/Pagatan crosswalk open until an official map, site-code table, or site-specific DENR/LGU record resolves it.
