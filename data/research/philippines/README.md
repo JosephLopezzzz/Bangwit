@@ -1694,3 +1694,7 @@ Reviewed Quezon Provincial Government Flood Advisory No. 14, issued 7 August 202
 Added one official source and a 23-name crosswalk queue, but no waterbody records. CALABARZON remains at 133 selected leads (69 rivers), 151 distinct lead source references, and 615 registered sources. The old advisory is not current hazard guidance; no fish evidence, geometry, or safety claim was added. See the [official advisory](https://quezon.gov.ph/general-flood-advisory-no-14-issued-600am-august-7-2026/) and [candidate review](calabarzon-quezon-2026-flood-advisory-watercourse-candidates-20261101.json).
 
 **Next:** resolve these candidate names against official hydrography/LGU sources before creating or merging stable leads; search fish-specific studies separately.
+
+### Bolbok (Lawaya) principal-basin crosswalk — 1 November 2026
+
+DPWH lists a 105 sq km Region IV-A principal basin named Bolbok (Lawaya); PAGASA's 2025 advisory places Upper and Lower labels under Batangas and Quezon. A basin-level lead was added, but the channel route and reach topology remain unresolved. The DENR-BMB atlas lists separate Lawaya (San Juan/Rosario, Tayabas Bay) and Bolbok (Calaca, Balayan Bay) river entries; they are not merged. No fish assertion, public record, geometry, or current hazard claim was added. See [the crosswalk review](calabarzon-bolbok-lawaya-principal-basin-crosswalk-20261101.json) and [the rollout plan](../../../docs/PHILIPPINES_SPECIES_EXPANSION_PLAN.md#national-rollout-step-457---bolbok-lawaya-principal-basin-crosswalk---1-november-2026).

@@ -72,12 +72,12 @@
     "limits": "Province plus separate-city starter coverage. Municipalities/component cities and each island/waterbody still require the source-sweep inventory; this is not a completed regional inventory."
   },
   "counts": {
-    "waterbodyResearchLeads": 133,
+    "waterbodyResearchLeads": 134,
     "provincesWithLeads": 6,
     "separateCityCoverageUnits": 1,
     "byKind": {
       "bay": 8,
-      "river": 69,
+      "river": 70,
       "estuary": 3,
       "wetland": 8,
       "reservoir": 5,
@@ -4831,6 +4831,53 @@
       "evidenceBatchRefs": [
         "calabarzon-sariaya-pterygoplichthys-preprint-review-20261101"
       ]
+    },
+    {
+      "id": "ph-wb-bolbok-lawaya-principal-basin-4a",
+      "name": "Bolbok (Lawaya) Principal River Basin",
+      "aliases": [],
+      "kind": "river",
+      "salinity": {
+        "classification": "unknown",
+        "reviewStatus": "not-assessed",
+        "sourceRefs": []
+      },
+      "administrativeAssociations": [
+        {
+          "regionId": "0400000000",
+          "provinceId": "0401000000",
+          "relationship": "source-named-upper-reach-context",
+          "sourceRefs": [
+            "pagasa-calabarzon-gfa-7-2025-upper-lower-bolbok-lawaya"
+          ],
+          "locality": "PAGASA's 26 November 2025 advisory lists Upper Bolbok (Lawaya) under Batangas; exact channel segment is not identified."
+        },
+        {
+          "regionId": "0400000000",
+          "provinceId": "0405600000",
+          "relationship": "source-named-lower-reach-context",
+          "sourceRefs": [
+            "pagasa-calabarzon-gfa-7-2025-upper-lower-bolbok-lawaya",
+            "quezon-pdrrmo-2026-flood-advisory-14-watercourses"
+          ],
+          "locality": "PAGASA's 26 November 2025 advisory and Quezon's 7 August 2026 advisory list Lower Bolbok (Lawaya) under Quezon; exact channel segment is not identified."
+        }
+      ],
+      "sourceRefs": [
+        "dpwh-2022-principal-river-basins-annex-d2",
+        "pagasa-calabarzon-gfa-7-2025-upper-lower-bolbok-lawaya",
+        "quezon-pdrrmo-2026-flood-advisory-14-watercourses",
+        "denr-bmb-inland-wetlands-atlas-2016"
+      ],
+      "identityStatus": "official-DPWH-principal-basin-listed;PAGASA-upper-Batangas-lower-Quezon-labels-crosswalked-at-basin-level;channel-route-unresolved",
+      "boundaryStatus": "not-delineated",
+      "fishEvidenceStatus": "not-reviewed",
+      "reviewStatus": "official-principal-basin-name-and-advisory-crosswalk-reviewed;homonymous-Batangas-rivers-held-separate;no-channel-geometry",
+      "publicAdmission": false,
+      "scopeNote": "DPWH Annex D-2 lists one Region IV-A principal river basin named Bolbok (Lawaya), with a reported area of 105 sq km. PAGASA's 26 November 2025 advisory lists Upper Bolbok (Lawaya) under Batangas and Lower Bolbok (Lawaya) under Quezon, and the Quezon 2026 advisory repeats the lower label; this supports a basin-level name crosswalk, but the reach topology and channel route remain unverified. The DENR-BMB inland-wetlands atlas separately lists Lawaya River in San Juan and Rosario, Batangas, with Tayabas Bay as outflow, and Bolbok River in Calaca, Batangas, with Balayan Bay as outflow. Neither atlas entry is merged into this basin lead without a direct route crosswalk. No geometry, fish evidence, current hazard, current presence/absence, salinity, safety, access, or fishing advice is inferred.",
+      "evidenceBatchRefs": [
+        "calabarzon-bolbok-lawaya-principal-basin-crosswalk-20261101"
+      ]
     }
   ],
   "coverageRules": {
@@ -5049,19 +5096,24 @@
     },
     {
       "priority": 16,
-      "task": "Crosswalk the 23 Quezon watercourse labels in the 7 August 2026 provincial flood advisory against official hydrography/LGU sources. Resolve Upper Umiray, Lower Bolbok/Lawaya, Malaking-Ilog, Iyam, Pagsanjan, Agos, and compound names before creating or merging waterbody leads; do not infer current hazard or fish evidence.",
+      "task": "Continue the Quezon advisory crosswalk for the remaining 22 labels. Lower Bolbok (Lawaya) is now linked to an official Region IV-A principal-basin lead only; keep its upper/lower channel route unresolved and the separate DENR-atlas Lawaya River (San Juan/Rosario) and Bolbok River (Calaca) features distinct until official hydrography resolves them.",
       "sourceIds": [
-        "quezon-pdrrmo-2026-flood-advisory-14-watercourses"
+        "quezon-pdrrmo-2026-flood-advisory-14-watercourses",
+        "pagasa-calabarzon-gfa-7-2025-upper-lower-bolbok-lawaya",
+        "dpwh-2022-principal-river-basins-annex-d2",
+        "denr-bmb-inland-wetlands-atlas-2016"
       ],
-      "waterbodyIds": []
+      "waterbodyIds": [
+        "ph-wb-bolbok-lawaya-principal-basin-4a"
+      ]
     }
   ],
   "gaps": [
     {
       "id": "scope-not-exhaustive",
       "status": "open",
-      "count": 133,
-      "reason": "133 selected named water and habitat research leads are seeded across CALABARZON water types; this selected list is not a complete regional inventory. The official NFRDI 2024 handbook now has separate historical gear-label transcriptions for Nasugbu, Tayabas, Lamon, Ragay, and Batangas Bays/Gulf: 13, 36, 44, 33, and 23 finfish source-label rows, respectively. Taxonomic screens are recorded by source-named area, but field identification, dates, capture origin, and product-use review remain pending. The official 2024 Cavite profile adds source-named river courses, while reported route text remains distinct from verified channel geometry. Provincial, municipal, island, stream, pond and reservoir denominators remain incomplete; some leads are habitat/designation names rather than delineated waterbodies.",
+      "count": 134,
+      "reason": "134 selected named water and habitat research leads are seeded across CALABARZON water types; this selected list is not a complete regional inventory. The official NFRDI 2024 handbook now has separate historical gear-label transcriptions for Nasugbu, Tayabas, Lamon, Ragay, and Batangas Bays/Gulf: 13, 36, 44, 33, and 23 finfish source-label rows, respectively. Taxonomic screens are recorded by source-named area, but field identification, dates, capture origin, and product-use review remain pending. The official 2024 Cavite profile adds source-named river courses, while reported route text remains distinct from verified channel geometry. Provincial, municipal, island, stream, pond and reservoir denominators remain incomplete; some leads are habitat/designation names rather than delineated waterbodies.",
       "nextAction": "Continue the source-derived inventory with explicit inclusion criteria and a frozen manifest; resolve unnamed 2021 aggregate river/wetland counts before claiming a regional baseline."
     },
     {
@@ -5096,15 +5148,15 @@
     {
       "id": "fish-coverage",
       "status": "open",
-      "count": 110,
-      "reason": "Regional species coverage remains incomplete across 108 selected leads without sufficient accepted species-level evidence for a complete place-specific checklist. The new Sakang and Tagkawayan River leads have no site-specific fish evidence. The new Naic Palanas River lead has name-only indexed context and no fish evidence. The Maalimango River lead has a historical, station-specific 2016 EIA fishery matrix with partial taxonomy and unresolved reuse/field identification; this is not a current or complete river list. The new Guinayangan river/spring source crosswalk contains no fish records. Exact-name database screens cover selected watercourses only; zero results are bounded discovery gaps, not evidence of fish absence. Nasugbu has 13 labels across three blocks (11 exact accepted species-rank matches, one subspecies, one unmatched); Tayabas has 36 labels across eight blocks (30 exact accepted species-rank matches); Lamon has 44 labels across ten blocks and 39 distinct names (35 exact accepted species-rank matches, one subspecies, two variants, one unmatched); Ragay has 33 labels across eight blocks and 26 names (24 exact accepted species-rank matches, one synonym, one unmatched); Batangas has 23 labels across five blocks and 17 distinct names, including 11 species-level exact matches and six genus-level labels. These historical gear crosswalks do not verify field identification, dated capture occurrence, or complete/current checklists. The Kaliwa-Kanan-Agos EIA contributes only historical system-level mixed interview/collection context; its taxa are not assigned to individual rivers or current presence. The Quezon 2025 Ecological Profile page also names Umiray, Agos, Nakar, and MalakingIlog but provides no river-specific fish taxa or survey. The 2017 author-uploaded preprint adds historical interview/observation leads for MalaquingIlog and Maasin Rivers in Sariaya, but peer-review, field date, site-linked voucher, taxonomy, and public reuse remain unresolved.",
+      "count": 111,
+      "reason": "Regional species coverage remains incomplete across 111 selected leads without sufficient accepted species-level evidence for a complete place-specific checklist. The new Sakang and Tagkawayan River leads have no site-specific fish evidence. The new Naic Palanas River lead has name-only indexed context and no fish evidence. The Maalimango River lead has a historical, station-specific 2016 EIA fishery matrix with partial taxonomy and unresolved reuse/field identification; this is not a current or complete river list. The new Guinayangan river/spring source crosswalk contains no fish records. Exact-name database screens cover selected watercourses only; zero results are bounded discovery gaps, not evidence of fish absence. Nasugbu has 13 labels across three blocks (11 exact accepted species-rank matches, one subspecies, one unmatched); Tayabas has 36 labels across eight blocks (30 exact accepted species-rank matches); Lamon has 44 labels across ten blocks and 39 distinct names (35 exact accepted species-rank matches, one subspecies, two variants, one unmatched); Ragay has 33 labels across eight blocks and 26 names (24 exact accepted species-rank matches, one synonym, one unmatched); Batangas has 23 labels across five blocks and 17 distinct names, including 11 species-level exact matches and six genus-level labels. These historical gear crosswalks do not verify field identification, dated capture occurrence, or complete/current checklists. The Kaliwa-Kanan-Agos EIA contributes only historical system-level mixed interview/collection context; its taxa are not assigned to individual rivers or current presence. The Quezon 2025 Ecological Profile page also names Umiray, Agos, Nakar, and MalakingIlog but provides no river-specific fish taxa or survey. The 2017 author-uploaded preprint adds historical interview/observation leads for MalaquingIlog and Maasin Rivers in Sariaya, but peer-review, field date, site-linked voucher, taxonomy, and public reuse remain unresolved.",
       "nextAction": "Join only independently reviewed evidence at its supported geographic scale."
     },
     {
       "id": "identity-and-geometry",
       "status": "open",
-      "count": 133,
-      "reason": "No validated waterbody geometry or precise point assignment has been created for 131 selected leads. Sakang and Tagkawayan River are source-named freshwater leads only; the Water District narrative does not provide a verified route. Nasugbu Bay is a source-named fishing-ground lead only; the NFRDI handbook does not provide a boundary or capture coordinates. Existing grouped springs remain unsplit, historical station points and project footprints do not delimit whole waterbodies, and repeated names, compound river names, source-era localities, and watershed-versus-channel identity remain under review. The Kaliwa-Kanan-Agos research unit is source-named at system scale but has no validated system/channel geometry or station coordinates. Four Quezon profile river-name leads were added without channel traces or precise reach crosswalks. The Sariaya preprint names MalaquingIlog and Maasin River but does not establish route geometry; MalaquingIlog/MalakingIlog equivalence remains unresolved.",
+      "count": 134,
+      "reason": "No validated waterbody geometry or precise point assignment has been created for 134 selected leads. Sakang and Tagkawayan River are source-named freshwater leads only; the Water District narrative does not provide a verified route. Nasugbu Bay is a source-named fishing-ground lead only; the NFRDI handbook does not provide a boundary or capture coordinates. Existing grouped springs remain unsplit, historical station points and project footprints do not delimit whole waterbodies, and repeated names, compound river names, source-era localities, and watershed-versus-channel identity remain under review. The Kaliwa-Kanan-Agos research unit is source-named at system scale but has no validated system/channel geometry or station coordinates. Four Quezon profile river-name leads were added without channel traces or precise reach crosswalks. The Sariaya preprint names MalaquingIlog and Maasin River but does not establish route geometry; MalaquingIlog/MalakingIlog equivalence remains unresolved.",
       "nextAction": "Reconcile stable identities and source-era/current geography before map display."
     },
     {
@@ -5138,12 +5190,14 @@
     {
       "id": "quezon-2026-flood-advisory-watercourse-crosswalk",
       "status": "open",
-      "count": 23,
+      "count": 22,
       "sourceRefs": [
-        "quezon-pdrrmo-2026-flood-advisory-14-watercourses"
+        "quezon-pdrrmo-2026-flood-advisory-14-watercourses",
+        "pagasa-calabarzon-gfa-7-2025-upper-lower-bolbok-lawaya",
+        "dpwh-2022-principal-river-basins-annex-d2"
       ],
-      "reason": "The official 7 August 2026 Quezon flood advisory names 23 watercourse labels. Several include reach qualifiers, compound/alternate names, or homonyms that may overlap existing leads; the advisory provides no routes or stable feature identifiers. These are candidate names, not 23 verified waterbody entities.",
-      "nextAction": "Crosswalk labels with official hydrography or independent LGU sources before adding or merging stable leads; do not treat the dated advisory as current hazard or fish evidence."
+      "reason": "The official 7 August 2026 Quezon advisory names 23 watercourse labels. Lower Bolbok (Lawaya) now has a cross-province, source-named principal-basin match, but its exact reach/channel remains unresolved; the other 22 labels still need crosswalks. None of the advisory names supplies route geometry, fish evidence, or current hazard status.",
+      "nextAction": "Crosswalk the remaining 22 Quezon advisory labels against official hydrography or independent LGU sources. For Lower Bolbok (Lawaya), seek official route/tributary mapping before assigning geometry or merging the separate DENR-atlas Lawaya River (San Juan/Rosario) and Bolbok River (Calaca) entries; keep the dated advisories out of current hazard guidance."
     }
   ]
 }

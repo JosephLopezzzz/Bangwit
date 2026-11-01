@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "calabarzon-bolbok-lawaya-principal-basin-crosswalk-20261101",
+  "reviewedOn": "2026-11-01",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "status": "official-principal-basin-crosswalked;lower-reach-route-unresolved;distinct-Batangas-river-homonyms-held",
+  "question": "Does Quezon's Lower Bolbok (Lawaya) advisory label correspond to an officially named CALABARZON basin, and can it be merged with atlas-listed Batangas river features?",
+  "purpose": "Resolve the advisory label only to the strongest supported hydrologic research unit while keeping physical channel identity, geometry, fish evidence, and similarly named rivers separate.",
+  "sourceIds": [
+    "dpwh-2022-principal-river-basins-annex-d2",
+    "pagasa-calabarzon-gfa-7-2025-upper-lower-bolbok-lawaya",
+    "quezon-pdrrmo-2026-flood-advisory-14-watercourses",
+    "denr-bmb-inland-wetlands-atlas-2016"
+  ],
+  "findings": [
+    {
+      "sourceId": "dpwh-2022-principal-river-basins-annex-d2",
+      "evidence": "DPWH Department Order No. 47, s. 2022, Annex D-2 row 84 lists Region 4A, Bolbok (Lawaya), with an area of 105 sq km.",
+      "supports": "Official principal-basin name and reported basin area.",
+      "doesNotSupport": [
+        "channel trace",
+        "reach endpoints",
+        "municipality-level boundaries",
+        "fish records",
+        "current water conditions"
+      ]
+    },
+    {
+      "sourceId": "pagasa-calabarzon-gfa-7-2025-upper-lower-bolbok-lawaya",
+      "evidence": "The 26 November 2025 Region IV-A advisory lists Upper Bolbok (Lawaya) under Batangas and Lower Bolbok (Lawaya) under Quezon; it was valid only until the next advisory at 6:00 a.m. the following day.",
+      "supports": "Dated upper/lower label and province context consistent with one regional basin name.",
+      "doesNotSupport": [
+        "verified hydrologic continuity",
+        "exact route",
+        "current flood status",
+        "fish occurrence",
+        "geometry"
+      ]
+    },
+    {
+      "sourceId": "quezon-pdrrmo-2026-flood-advisory-14-watercourses",
+      "evidence": "Quezon Provincial Government's 7 August 2026 advisory lists Lower Bolbok (Lawaya) under Quezon.",
+      "supports": "A second dated Quezon source-name mention for the lower label.",
+      "doesNotSupport": [
+        "channel location",
+        "current hazard status",
+        "fish occurrence",
+        "geometry"
+      ]
+    },
+    {
+      "sourceId": "denr-bmb-inland-wetlands-atlas-2016",
+      "evidence": "The atlas separately lists Lawaya River in San Juan and Rosario, Batangas, with Tayabas Bay as outflow, and Bolbok River in Calaca, Batangas, with Balayan Bay as outflow.",
+      "supports": "Locality/outflow distinction for two atlas entries sharing Bolbok/Lawaya name parts.",
+      "doesNotSupport": [
+        "identity of either entry with the Lower Bolbok advisory reach",
+        "a complete route for the 105 sq km principal basin"
+      ]
+    }
+  ],
+  "crosswalk": {
+    "advisoryLabel": "Lower Bolbok (Lawaya)",
+    "basinLeadId": "ph-wb-bolbok-lawaya-principal-basin-4a",
+    "resolutionLevel": "principal-basin name only",
+    "inference": "The matching official basin name and PAGASA's paired Upper/Lower province labels are consistent with the Quezon advisory label referring to the lower portion of the Region IV-A Bolbok (Lawaya) basin. This is a basin-level crosswalk, not a verified channel or reach topology.",
+    "confidenceLimit": "No official route, tributary map, endpoints, or watercourse identifier was retrieved to verify hydrologic continuity or delineate the lower reach."
+  },
+  "similarlyNamedFeatures": [
+    {
+      "name": "Lawaya River",
+      "locality": "San Juan and Rosario, Batangas",
+      "outflow": "Tayabas Bay",
+      "decision": "Retain as a separate atlas-named physical-river lead; do not alias or merge with the basin or Lower reach without a direct hydrography crosswalk."
+    },
+    {
+      "name": "Bolbok River",
+      "locality": "Calaca, Batangas",
+      "outflow": "Balayan Bay",
+      "decision": "Retain as a separate atlas-named physical-river lead; its locality and outflow differ, and no direct evidence links it to the Lower Bolbok (Lawaya) reach."
+    }
+  ],
+  "scopeChanges": {
+    "basinLeadAdded": "ph-wb-bolbok-lawaya-principal-basin-4a",
+    "physicalChannelLeadsAdded": 0,
+    "advisoryCandidatesStillUnresolved": 22,
+    "fishAssertionsAdded": 0,
+    "publicRecordsAdmitted": 0,
+    "currentPresenceInferred": false,
+    "currentHazardClaimed": false,
+    "geometryAdded": false,
+    "salinityClassificationAdded": false,
+    "publicationApproval": false
+  },
+  "reuseAndLimitations": [
+    "No item-specific open reuse terms were found for the DPWH and PAGASA documents; factual research metadata only, no reproduced table or artwork.",
+    "The BMB atlas source record retains its existing educational/non-profit and attribution limitation; no atlas text, map, or geometry was reproduced.",
+    "The PAGASA notice is historical and was valid only until its next issuance; it is not an active flood advisory.",
+    "No fish checklist, occurrence, current water quality, access, safety, fishing legality, salinity, or geometry is established."
+  ],
+  "nextActions": [
+    "Obtain official route-scale hydrography or an LGU/DENR crosswalk for the Bolbok (Lawaya) basin and its upper/lower reaches.",
+    "Continue the remaining 22 Quezon advisory-name crosswalks without treating hazard labels as fish evidence."
+  ]
+}
