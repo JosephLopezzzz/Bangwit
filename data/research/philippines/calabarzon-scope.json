@@ -72,12 +72,12 @@
     "limits": "Province plus separate-city starter coverage. Municipalities/component cities and each island/waterbody still require the source-sweep inventory; this is not a completed regional inventory."
   },
   "counts": {
-    "waterbodyResearchLeads": 134,
+    "waterbodyResearchLeads": 136,
     "provincesWithLeads": 6,
     "separateCityCoverageUnits": 1,
     "byKind": {
       "bay": 8,
-      "river": 70,
+      "river": 72,
       "estuary": 3,
       "wetland": 8,
       "reservoir": 5,
@@ -4893,6 +4893,82 @@
       "scopeNote": "DPWH Annex D-2 lists one Region IV-A principal river basin named Bolbok (Lawaya), with a reported area of 105 sq km. PAGASA's 26 November 2025 advisory lists Upper Bolbok (Lawaya) under Batangas and Lower Bolbok (Lawaya) under Quezon, and the Quezon 2026 advisory repeats the lower label; this supports a basin-level name crosswalk, but the reach topology and channel route remain unverified. The DENR-BMB inland-wetlands atlas separately lists Lawaya River in San Juan and Rosario, Batangas, with Tayabas Bay as outflow, and Bolbok River in Calaca, Batangas, with Balayan Bay as outflow. Neither atlas entry is merged into this basin lead without a direct route crosswalk. No geometry, fish evidence, current hazard, current presence/absence, salinity, safety, access, or fishing advice is inferred.",
       "evidenceBatchRefs": [
         "calabarzon-bolbok-lawaya-principal-basin-crosswalk-20261101"
+      ]
+    },
+    {
+      "id": "ph-wb-macalelon-river-quezon",
+      "name": "Macalelon River",
+      "aliases": [],
+      "kind": "river",
+      "salinity": {
+        "classification": "unknown",
+        "reviewStatus": "not-assessed",
+        "sourceRefs": []
+      },
+      "administrativeAssociations": [
+        {
+          "regionId": "0400000000",
+          "provinceId": "0405600000",
+          "relationship": "atlas-source-name-and-province-context",
+          "sourceRefs": [
+            "denr-bmb-atlas-luzon-2014",
+            "quezon-2023-macalelon-river-watershed-management-council",
+            "quezon-pdrrmo-2026-flood-advisory-14-watercourses"
+          ],
+          "locality": "The BMB-DENR Luzon wetland atlas lists Macalelon River in Quezon at grid N-29 and gives Tayabas Bay as outflow; the province's 2023 SP page names the Macalelon River Watershed Management Council."
+        }
+      ],
+      "sourceRefs": [
+        "denr-bmb-atlas-luzon-2014",
+        "quezon-2023-macalelon-river-watershed-management-council",
+        "quezon-pdrrmo-2026-flood-advisory-14-watercourses"
+      ],
+      "identityStatus": "BMB-DENR-atlas-river-name-crosswalked-to-Quezon-advisory-label-at-name/system-level;route-unverified",
+      "boundaryStatus": "not-delineated",
+      "fishEvidenceStatus": "not-reviewed",
+      "reviewStatus": "source-name-and-outflow-crosswalk-only;no-fish-evidence-added",
+      "publicAdmission": false,
+      "scopeNote": "The 2014 BMB-DENR Luzon wetlands atlas table lists Macalelon River (grid N-29) in Quezon and gives Tayabas Bay as outflow. Quezon's 2026 advisory uses the bare label “Macalelon,” and the province's 2023 SP report refers to the Macalelon River Watershed Management Council. This supports a source-name/system crosswalk only; no reach, channel route, or geometry is supplied. The DPWH-listed Macalelon principal basin remains a separate research lead with a reported area, not a channel boundary. No fish taxa, current presence/absence, salinity, current water quality/hazard, access, fishing rule, or geometry is inferred.",
+      "evidenceBatchRefs": [
+        "calabarzon-quezon-macalelon-advisory-crosswalk-20261101"
+      ]
+    },
+    {
+      "id": "ph-wb-macalelon-principal-basin-4a",
+      "name": "Macalelon Principal River Basin",
+      "aliases": [],
+      "kind": "river",
+      "salinity": {
+        "classification": "unknown",
+        "reviewStatus": "not-assessed",
+        "sourceRefs": []
+      },
+      "administrativeAssociations": [
+        {
+          "regionId": "0400000000",
+          "provinceId": "0405600000",
+          "relationship": "official-principal-basin-and-river-watershed-name-context",
+          "sourceRefs": [
+            "dpwh-2022-principal-river-basins-annex-d2",
+            "quezon-2023-macalelon-river-watershed-management-council",
+            "quezon-pdrrmo-2026-flood-advisory-14-watercourses"
+          ],
+          "locality": "DPWH Annex D-2 lists a Region IV-A principal basin named Macalelon; Quezon's 2023 SP report refers to a Macalelon River Watershed Management Council. No technical boundary or municipality allocation is given."
+        }
+      ],
+      "sourceRefs": [
+        "dpwh-2022-principal-river-basins-annex-d2",
+        "quezon-2023-macalelon-river-watershed-management-council",
+        "quezon-pdrrmo-2026-flood-advisory-14-watercourses"
+      ],
+      "identityStatus": "official-DPWH-principal-basin-listed;Quezon-River-WMC-name-context;likely-shared-Macalelon-drainage-system;exact-channel-basin-topology-unverified",
+      "boundaryStatus": "not-delineated",
+      "fishEvidenceStatus": "not-reviewed",
+      "reviewStatus": "principal-basin-name-and-advisory-crosswalk-reviewed;no-channel-geometry",
+      "publicAdmission": false,
+      "scopeNote": "DPWH Department Order No. 47, s. 2022, Annex D-2 row 87 lists the Region IV-A Macalelon principal river basin and reports 165 sq km. Quezon's 2023 SP page records authorization for the Governor to enter an agreement with DENR Region IV-A and DPWH Quezon concerning formation of a Macalelon River Watershed Management Council; it does not prove the council became operational or provide its boundary. The BMB-DENR atlas separately names Macalelon River in Quezon with Tayabas Bay outflow. Shared names and governance context indicate a likely related drainage system, but the basin and channel stay separate until route-scale hydrography establishes their relationship. The reported area is not geometry. No fish, current presence/absence, salinity, current hazard, access, fishing rule, or geometry is inferred.",
+      "evidenceBatchRefs": [
+        "calabarzon-quezon-macalelon-advisory-crosswalk-20261101"
       ]
     }
   ],
