@@ -3871,3 +3871,14 @@ Added the Ragay transcription review, linked it to the existing gulf research le
 See the [NFRDI repository item](https://repository.nfrdi.da.gov.ph/items/023ccf69-0767-457e-9309-0fdeaa75e2b8), [GBIF Species API documentation](https://techdocs.gbif.org/en/openapi/v1/species), and the [Ragay transcription review](../data/research/philippines/calabarzon-ragay-gulf-nfrdi-gear-catch-label-transcription-20261101.json).
 
 **Next:** transcribe Batangas Bay and the compound Balayan/Calatagan Bay heading as separate source localities, without allocating the compound labels to either bay. Continue freshwater source work as well.
+
+
+### National rollout step 440 - NFRDI 2024 Batangas Bay gear-catch label transcription - 1 November 2026
+
+Visually transcribed five Batangas Bay finfish catch blocks (printed pages 28, 30, 56, 58, and 60): 23 verbatim label rows and 17 distinct names. Eleven labels matched accepted GBIF species-rank usages exactly; six labels printed with sp. resolved only to accepted genus-level usages and remain genus-only. Do not upgrade them to species.
+
+Added the Batangas transcription review, linked it to the existing bay lead and NFRDI source, updated the source-family review, and refreshed the regional coverage profile. Nasugbu, Tayabas, Lamon, Ragay, and Batangas now total 149 finfish label rows across 34 gear blocks. The registry remains at 590 sources; CALABARZON remains at 120 named leads and 132 distinct source references. No per-row dates, stations, capture origin, vouchers, or field-identification methods are supplied. No occurrence/species assertions, current-presence claim, complete checklist, geometry, diet/bait advice, safety/legal claim, or public-app row was added.
+
+See the [NFRDI repository item](https://repository.nfrdi.da.gov.ph/items/023ccf69-0767-457e-9309-0fdeaa75e2b8), [GBIF Species API documentation](https://techdocs.gbif.org/en/openapi/v1/species), and the [Batangas transcription review](../data/research/philippines/calabarzon-batangas-bay-nfrdi-gear-catch-label-transcription-20261101.json).
+
+**Next:** transcribe the combined Balayan/Calatagan Bay tables as a single source grouping. Do not assign their labels to either physical bay without independent locality evidence.
