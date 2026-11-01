@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "calabarzon-quezon-yabahaan-yabahan-river-crosswalk-20261101",
+  "reviewedOn": "2026-11-01",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "status": "Quezon-advisory-Yabahaan-crosswalked-to-official-Yabahan-River-name-and-San-Andres-locality;exact-reach-unverified",
+  "question": "Does the Quezon flood-advisory label “Yabahaan” correspond to the official Yabahan River in San Andres, Quezon?",
+  "purpose": "Cross-check the advisory spelling against DENR classification sources and record a name/locality match without treating monitoring-station coordinates or a classification as river geometry, fish evidence, or current water quality.",
+  "sourceIds": [
+    "quezon-pdrrmo-2026-flood-advisory-14-watercourses",
+    "denr-dao-2025-28-classified-waterbodies",
+    "emb-national-sober-2016-2021-silongin-river"
+  ],
+  "findings": [
+    {
+      "sourceId": "quezon-pdrrmo-2026-flood-advisory-14-watercourses",
+      "evidence": "Quezon Provincial Government General Flood Advisory No. 14, issued 7 August 2026, lists the bare label “Yabahaan” among Quezon rivers and tributaries likely to be affected.",
+      "supports": [
+        "official historical advisory label",
+        "Quezon province context"
+      ],
+      "doesNotSupport": [
+        "a specific river reach",
+        "current flood status",
+        "fish records",
+        "route geometry"
+      ]
+    },
+    {
+      "sourceId": "denr-dao-2025-28-classified-waterbodies",
+      "evidence": "DENR Administrative Order No. 2025-28, dated 12 September 2025, lists “Yabahan River” in San Andres, Quezon, with source-reported class B and upstream/downstream monitoring stations. The order’s stations are points and are not reproduced here.",
+      "supports": [
+        "official Yabahan River name",
+        "San Andres, Quezon locality",
+        "official waterbody classification context"
+      ],
+      "doesNotSupport": [
+        "a full river centerline or boundary",
+        "the exact reach meant by the 2026 advisory",
+        "fish records or current ambient water quality"
+      ]
+    },
+    {
+      "sourceId": "emb-national-sober-2016-2021-silongin-river",
+      "evidence": "EMB’s National State of the Brown Environment Report 2016–2021, Table 3.3, lists “YABAHAN RIVER,” classification B, year classified 2020, and locality “SAN ANDRES AND SAN FRANCISCO, QUEZNON” (as printed). This independently repeats the river spelling and includes San Andres; the province text contains a typographic error.",
+      "supports": [
+        "historical official source-name cross-check",
+        "San Andres locality context",
+        "older Quezon-wide river listing"
+      ],
+      "doesNotSupport": [
+        "exact reach topology",
+        "a route or geometry",
+        "fish presence",
+        "current water conditions"
+      ]
+    }
+  ],
+  "crosswalk": {
+    "advisoryLabel": "Yabahaan",
+    "officialRiverName": "Yabahan River",
+    "riverLeadId": "ph-wb-yabahan-river-quezon",
+    "resolutionLevel": "official river-name spelling variant and San Andres locality crosswalk; exact advisory reach and river route unverified",
+    "confidence": "The advisory uses Yabahaan; DENR DAO 2025-28 names Yabahan River in San Andres, Quezon; and EMB’s earlier national report independently lists Yabahan River including San Andres. The one-letter spelling variant is therefore treated as a source name variant at river/locality level, not a reach identifier.",
+    "mergeDecision": "Add one source-named Yabahan River research lead with “Yabahaan” retained as the advisory spelling alias. Link the advisory at name/locality level only; do not adopt DAO monitoring points as a river route, infer fish presence/current water quality, or infer the exact advisory reach."
+  },
+  "scopeChanges": {
+    "newWaterbodyLeads": 1,
+    "newRiverLead": "ph-wb-yabahan-river-quezon",
+    "newSourceRegistryRecords": 1,
+    "sourceReferencesLinkedToLead": 3,
+    "selectedLeadCount": 139,
+    "riverSystemAndBasinUnitCount": 75,
+    "distinctScopeSourceReferences": 160,
+    "registeredSourceCount": 622
+  },
+  "disposition": {
+    "advisoryNameLocalityCrosswalkResolved": true,
+    "exactAdvisoryReachVerified": false,
+    "speciesAssertionsAdded": 0,
+    "publicRecordsAdmitted": 0,
+    "currentPresenceInferred": false,
+    "currentWaterQualityClaimed": false,
+    "currentHazardClaimed": false,
+    "salinityClassificationAdded": false,
+    "geometryAdded": false,
+    "publicOccurrenceRowsAdded": 0,
+    "publicationApproval": false
+  },
+  "reuseAndLimitations": [
+    "DAO 2025-28 is an official administrative order; no item-specific open-data license for its station tables was identified. The order’s coordinates are not copied and do not define river geometry.",
+    "The DAO’s class B is a regulatory waterbody classification, not a current ambient water-quality result or fish-habitat/availability statement.",
+    "The 2016–2021 report is historical; its locality prints “QUEZNON,” retained verbatim in this review.",
+    "The flood advisory is historical, not current hazard guidance.",
+    "No fish checklist, occurrence, current presence/absence, salinity, access, fishing rule, safety advice, or route is established."
+  ],
+  "nextActions": [
+    "Obtain permitted route-scale hydrography before mapping the Yabahan River or assigning a reach to the advisory.",
+    "Search site-resolved fish studies separately; do not use classification tables as fish evidence."
+  ]
+}

@@ -3,7 +3,7 @@
   "checkedOn": "2026-11-01",
   "status": "research-only-source-registry",
   "scope": "National acquisition references, freshwater spatial-source leads, CALABARZON/Central Luzon identity/source leads, and Mindanao regional freshwater survey reviews. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 621,
+  "sourceCount": 622,
   "sources": [
     {
       "id": "carumbana-siaton-river-limnology-fishery-report-2006",
@@ -18997,7 +18997,8 @@
           "calabarzon-quezon-iyam-advisory-crosswalk-20261101.json",
           "calabarzon-quezon-macalelon-advisory-crosswalk-20261101.json",
           "calabarzon-quezon-catanauan-advisory-crosswalk-20261101.json",
-          "calabarzon-quezon-silongin-lagda-partial-crosswalk-20261101.json"
+          "calabarzon-quezon-silongin-lagda-partial-crosswalk-20261101.json",
+          "calabarzon-quezon-yabahaan-yabahan-river-crosswalk-20261101.json"
         ]
       },
       "reuse": {
@@ -19169,11 +19170,11 @@
     },
     {
       "id": "emb-national-sober-2016-2021-silongin-river",
-      "title": "National State of the Brown Environment Report 2016–2021 (Silongin River table entry)",
+      "title": "National State of the Brown Environment Report 2016–2021 (CALABARZON Quezon river entries)",
       "provider": "Department of Environment and Natural Resources, Environmental Management Bureau",
       "url": "https://air.emb.gov.ph/wp-content/uploads/2025/01/NSOBER-2016-2021-fin-1-1.pdf",
       "additionalUrls": [],
-      "role": "Official EMB national report Table 3.3 names Silongin River under San Francisco, Quezon; the row reports class B/C and classification year 2019. Used as a historical name/locality lead only, not current water quality, fish evidence, or route geometry.",
+      "role": "Official EMB national report Table 3.3 names the Silongin and Yabahan rivers in Quezon localities; used for historical source-name/locality leads only, not current water quality, fish evidence, or route geometry.",
       "checkedOn": "2026-11-01",
       "sourceYear": 2022,
       "citation": "Department of Environment and Natural Resources, Environmental Management Bureau. (2022). National State of the Brown Environment Report 2016–2021.",
@@ -19186,7 +19187,16 @@
         "sourceReportedClassification": "B/C",
         "sourceReportedClassificationYear": 2019,
         "reviewFiles": [
-          "calabarzon-quezon-silongin-lagda-partial-crosswalk-20261101.json"
+          "calabarzon-quezon-silongin-lagda-partial-crosswalk-20261101.json",
+          "calabarzon-quezon-yabahaan-yabahan-river-crosswalk-20261101.json"
+        ],
+        "additionalTableRows": [
+          {
+            "sourceReportedWaterbody": "YABAHAN RIVER",
+            "sourceReportedLocality": "SAN ANDRES AND SAN FRANCISCO, QUEZNON (as printed)",
+            "sourceReportedClassification": "B",
+            "sourceReportedClassificationYear": 2020
+          }
         ]
       },
       "reuse": {
@@ -19194,14 +19204,54 @@
         "content": "Only minimal factual river-name and locality metadata are retained. The historic classification is recorded as source context, not a current environmental claim."
       },
       "publicationApproval": false,
-      "researchStatus": "official-EMB-river-name-locality-source-reviewed;advisory-compound-label-not-resolved;no-current-quality-or-fish-claims",
+      "researchStatus": "official-EMB-Quezon-river-name-and-locality-rows-reviewed;historical-classification-metadata-only;no-current-quality-or-fish-claims",
       "license": "Educational/non-profit reproduction with source acknowledgement per report copyright page; other reuse not established.",
       "licenseUrl": null,
       "caveats": [
-        "The report covers 2016–2021 environmental context; its class B/C and year 2019 are historical classification metadata, not current water-quality measurements or fish habitat status.",
+        "The report covers 2016–2021 environmental context; Silongin's B/C class (2019) and Yabahan's B class (2020) are historical classification metadata, not current water-quality measurements or fish habitat status.",
         "A municipality association is not a channel trace, route, or boundary.",
         "The report names Silongin River; the Quezon advisory uses “Silongin Lagda.” The reviewed sources do not explain Lagda or establish that the two labels identify the same feature.",
         "No fish, salinity, catchability, current hazard, safety, access, or geometry claim is made."
+      ]
+    },
+    {
+      "id": "denr-dao-2025-28-classified-waterbodies",
+      "title": "DENR Administrative Order No. 2025-28: List of Classified/Reclassified Water Bodies in 2025",
+      "provider": "Department of Environment and Natural Resources; official copy hosted by Environmental Management Bureau Region VI",
+      "url": "https://r6.emb.gov.ph/wp-content/uploads/2026/01/DAO-2025-28.pdf",
+      "additionalUrls": [],
+      "role": "Official DENR order dated 12 September 2025; Annex waterbody table names Yabahan River in San Andres, Quezon and gives a regulatory class and station locations. Used for source-name/locality crosswalk only; station coordinates are not river geometry, fish data, or current ambient measurements.",
+      "checkedOn": "2026-11-01",
+      "sourceYear": 2025,
+      "citation": "Department of Environment and Natural Resources. (2025). DENR Administrative Order No. 2025-28: List of Classified/Reclassified Water Bodies in 2025.",
+      "access": {
+        "status": "Official DENR Administrative Order PDF hosted by EMB Region VI; title, date, scope, definitions, and Quezon waterbody rows reviewed online.",
+        "reviewedOnline": true,
+        "issueDate": "2025-09-12",
+        "sourceReportedWaterbody": "Yabahan River",
+        "sourceReportedMunicipality": "San Andres",
+        "sourceReportedProvince": "Quezon",
+        "sourceReportedClass": "B",
+        "sourceReportedStationTypes": [
+          "Upstream",
+          "Downstream"
+        ],
+        "reviewFiles": [
+          "calabarzon-quezon-yabahaan-yabahan-river-crosswalk-20261101.json"
+        ]
+      },
+      "reuse": {
+        "metadata": "Official order is public. No item-specific open-data license for tabular station information was identified; only factual name/locality and classification context are retained.",
+        "content": "Station coordinates are not copied or redistributed. No map, station table, or geometry is reproduced."
+      },
+      "publicationApproval": false,
+      "researchStatus": "official-DENR-2025-river-name-and-locality-reviewed;station-points-not-imported;no-fish-or-current-quality-claims",
+      "license": "No item-specific open-data license identified.",
+      "licenseUrl": null,
+      "caveats": [
+        "The DAO implements waterbody classification and effluent-standard requirements; class B is not a current ambient water-quality measurement or fish-suitability claim.",
+        "Upstream/downstream station points do not define the full river route or the exact advisory reach.",
+        "No fish occurrence, current presence/absence, salinity, access, fishing rule, safety, or geometry claim is made."
       ]
     }
   ],

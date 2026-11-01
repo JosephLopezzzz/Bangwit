@@ -72,12 +72,12 @@
     "limits": "Province plus separate-city starter coverage. Municipalities/component cities and each island/waterbody still require the source-sweep inventory; this is not a completed regional inventory."
   },
   "counts": {
-    "waterbodyResearchLeads": 138,
+    "waterbodyResearchLeads": 139,
     "provincesWithLeads": 6,
     "separateCityCoverageUnits": 1,
     "byKind": {
       "bay": 8,
-      "river": 74,
+      "river": 75,
       "estuary": 3,
       "wetland": 8,
       "reservoir": 5,
@@ -5044,6 +5044,46 @@
       "evidenceBatchRefs": [
         "calabarzon-quezon-silongin-lagda-partial-crosswalk-20261101"
       ]
+    },
+    {
+      "id": "ph-wb-yabahan-river-quezon",
+      "name": "Yabahan River",
+      "aliases": [
+        "Yabahaan"
+      ],
+      "kind": "river",
+      "salinity": {
+        "classification": "unknown",
+        "reviewStatus": "not-assessed",
+        "sourceRefs": []
+      },
+      "administrativeAssociations": [
+        {
+          "regionId": "0400000000",
+          "provinceId": "0405600000",
+          "relationship": "official-river-name-locality-crosswalked-to-advisory-at-San-Andres-level;older-report-also-lists-San-Francisco",
+          "sourceRefs": [
+            "denr-dao-2025-28-classified-waterbodies",
+            "emb-national-sober-2016-2021-silongin-river",
+            "quezon-pdrrmo-2026-flood-advisory-14-watercourses"
+          ],
+          "locality": "DENR DAO 2025-28 lists Yabahan River in San Andres, Quezon; EMB’s 2016–2021 report also lists San Francisco, with the province printed as “QUEZNON”."
+        }
+      ],
+      "sourceRefs": [
+        "denr-dao-2025-28-classified-waterbodies",
+        "emb-national-sober-2016-2021-silongin-river",
+        "quezon-pdrrmo-2026-flood-advisory-14-watercourses"
+      ],
+      "identityStatus": "official-river-name-spelling-variant-and-San-Andres-locality-crosswalked-to-advisory;exact-reach-unverified",
+      "boundaryStatus": "not-delineated",
+      "fishEvidenceStatus": "not-reviewed",
+      "reviewStatus": "historical-regulatory-name-locality-crosswalk-only;fish-evidence-not-reviewed",
+      "publicAdmission": false,
+      "scopeNote": "Quezon’s 7 August 2026 advisory uses “Yabahaan.” DENR Administrative Order 2025-28 names Yabahan River in San Andres, Quezon; its class B designation and upstream/downstream sampling points are regulatory classification context, not current water quality or a channel route. EMB’s 2016–2021 report independently lists Yabahan River in San Andres and San Francisco but prints the province as “QUEZNON.” The spelling is crosswalked at name/locality level; no exact advisory reach, complete route, fish taxa, current presence/absence, salinity, current water quality/hazard, access, fishing rule, or geometry is inferred.",
+      "evidenceBatchRefs": [
+        "calabarzon-quezon-yabahaan-yabahan-river-crosswalk-20261101"
+      ]
     }
   ],
   "coverageRules": {
@@ -5266,17 +5306,19 @@
     },
     {
       "priority": 16,
-      "task": "Continue crosswalking the 18 Quezon advisory labels still unresolved at source-name/reach level. Silongin River is independently source-named in San Francisco, but the advisory compound “Silongin Lagda” remains partially matched because no reviewed source explains “Lagda”; do not link it to the river until resolved. Lower Bolbok (Lawaya) remains a basin-name crosswalk only, with upper/lower route topology unresolved.",
+      "task": "Continue crosswalking the 17 Quezon advisory labels without a full source-name/locality match. Yabahaan now maps to the official Yabahan River name at San Andres locality level, but its exact advisory reach remains unknown. Silongin Lagda remains unresolved; Lower Bolbok (Lawaya) remains a basin-name crosswalk only, with route topology unresolved.",
       "sourceIds": [
         "quezon-pdrrmo-2026-flood-advisory-14-watercourses",
         "pagasa-calabarzon-gfa-7-2025-upper-lower-bolbok-lawaya",
         "dpwh-2022-principal-river-basins-annex-d2",
         "denr-bmb-inland-wetlands-atlas-2016",
-        "emb-national-sober-2016-2021-silongin-river"
+        "emb-national-sober-2016-2021-silongin-river",
+        "denr-dao-2025-28-classified-waterbodies"
       ],
       "waterbodyIds": [
         "ph-wb-bolbok-lawaya-principal-basin-4a",
-        "ph-wb-silongin-river-san-francisco-quezon"
+        "ph-wb-silongin-river-san-francisco-quezon",
+        "ph-wb-yabahan-river-quezon"
       ]
     },
     {
@@ -5289,6 +5331,18 @@
       ],
       "waterbodyIds": [
         "ph-wb-silongin-river-san-francisco-quezon"
+      ]
+    },
+    {
+      "priority": 18,
+      "task": "For Yabahan River, seek site-resolved fish surveys and permitted route-scale hydrography separately; keep DENR water classification and station points out of fish-presence and full-route claims.",
+      "sourceIds": [
+        "denr-dao-2025-28-classified-waterbodies",
+        "emb-national-sober-2016-2021-silongin-river",
+        "quezon-pdrrmo-2026-flood-advisory-14-watercourses"
+      ],
+      "waterbodyIds": [
+        "ph-wb-yabahan-river-quezon"
       ]
     }
   ],

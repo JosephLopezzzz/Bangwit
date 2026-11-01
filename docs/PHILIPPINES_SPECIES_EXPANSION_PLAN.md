@@ -4097,3 +4097,11 @@ Added the independently source-named Silongin River in San Francisco, Quezon, fr
 CALABARZON now has 138 selected leads (74 river/system/basin units), 159 distinct source references, and 621 registry sources. The lead is research-only; no fish claim, public record, geometry, salinity, current water-quality/hazard statement, or app row was added. Reuse of the EMB report outside educational/non-profit acknowledged use and public-app/derived-database projection is not approved. See [review](../data/research/philippines/calabarzon-quezon-silongin-lagda-partial-crosswalk-20261101.json) and [official EMB report](https://air.emb.gov.ph/wp-content/uploads/2025/01/NSOBER-2016-2021-fin-1-1.pdf).
 
 **Next:** resolve the “Lagda” advisory text from an official source; separately seek fish surveys and route-scale hydrography for Silongin River.
+
+### National rollout step 464 - Quezon Yabahaan/Yabahan River name crosswalk - 1 November 2026
+
+Quezon’s historical flood advisory lists “Yabahaan.” DENR DAO 2025-28 names Yabahan River in San Andres, Quezon, and the EMB 2016–2021 report independently lists the same river name in San Andres and San Francisco, with “QUEZNON” printed in its province field. The spelling variant is crosswalked at name/locality level only; the exact advisory reach and full river course are unknown. The DAO’s class B and monitoring points are regulatory context, not current water-quality readings or river geometry.
+
+Added one research-only river lead and one DENR order source. CALABARZON now has 139 selected leads (75 river/system/basin units), 160 distinct source references, and 622 registry sources. No fish assertion, public record, geometry, salinity, current hazard/water-quality claim, or app row was added; publication admission remains false. See [review](../data/research/philippines/calabarzon-quezon-yabahaan-yabahan-river-crosswalk-20261101.json) and [DENR DAO 2025-28](https://r6.emb.gov.ph/wp-content/uploads/2026/01/DAO-2025-28.pdf).
+
+**Next:** continue the 17 unresolved Quezon advisory labels and review fish/route evidence separately.

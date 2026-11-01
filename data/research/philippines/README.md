@@ -1737,7 +1737,7 @@ Quezon's 7 August 2026 flood advisory lists the bare label “Catanauan.” The 
 
 Added one source-named river lead and one DPWH source record. CALABARZON now has 137 selected leads (73 river/system/basin units), 157 distinct direct source references, and 620 registered sources. Fish evidence, salinity, geometry, current hazard/water quality, and public-app admission remain unreviewed. See the [crosswalk review](calabarzon-quezon-catanauan-advisory-crosswalk-20261101.json), [BMB-DENR atlas](https://www.philchm.ph/wp-content/uploads/2019/03/Atlas-of-Philippine-Inland-Wetlands-and-Classsified-Caves-2016_BMB_DENR.pdf), [DPWH Contract 25DM0076](https://www.dpwh.gov.ph/DPWH/sites/default/files/webform/civil_works/advertisement/25dm0076_re-ads.pdf), and [Quezon Advisory No. 14](https://quezon.gov.ph/general-flood-advisory-no-14-issued-600am-august-7-2026/).
 
-**Next:** crosswalk the remaining 18 Quezon advisory labels; keep exact reach mapping and fish evidence separate.
+**Next:** crosswalk the remaining 17 Quezon advisory labels without a full source-name/locality match; keep exact reach mapping and fish evidence separate.
 
 ### National rollout step 463 - Quezon Silongin River source-name review - 1 November 2026
 
@@ -1746,3 +1746,11 @@ DENR-EMB's National State of the Brown Environment Report 2016–2021, Table 3.3
 Added one independent research-only river lead and one EMB source record. CALABARZON now has 138 selected leads (74 river/system/basin units), 159 distinct direct source references, and 621 registry sources. No fish assertion, public occurrence, geometry, salinity, current water-quality/hazard claim, or app row was added; public admission remains false. See the [partial crosswalk review](calabarzon-quezon-silongin-lagda-partial-crosswalk-20261101.json), [EMB report](https://air.emb.gov.ph/wp-content/uploads/2025/01/NSOBER-2016-2021-fin-1-1.pdf), [Quezon provincial directory](https://quezon.gov.ph/citiesmunicipalities/), and [historical Quezon advisory](https://quezon.gov.ph/general-flood-advisory-no-14-issued-600am-august-7-2026/).
 
 **Next:** find an official explanation for “Lagda” before linking the compound advisory label; review fish evidence and route-scale hydrography for Silongin River separately.
+
+### National rollout step 464 - Quezon Yabahaan/Yabahan River name crosswalk - 1 November 2026
+
+Quezon’s 7 August 2026 advisory lists “Yabahaan.” DENR Administrative Order 2025-28 names Yabahan River in San Andres, Quezon; EMB’s 2016–2021 report independently lists Yabahan River including San Andres and San Francisco (its province field is printed “QUEZNON”). The spelling variant is crosswalked at name/locality level, but the specific advisory reach and river route remain unverified. DAO class B and its station points are regulatory classification context, not current water quality or river geometry.
+
+Added one research-only river lead and one DENR order source. CALABARZON now has 139 selected leads (75 river/system/basin units), 160 distinct direct source references, and 622 registry sources. No fish assertion, public record, geometry, salinity, current water-quality/hazard claim, or app row was added. See the [crosswalk review](calabarzon-quezon-yabahaan-yabahan-river-crosswalk-20261101.json), [DENR DAO 2025-28](https://r6.emb.gov.ph/wp-content/uploads/2026/01/DAO-2025-28.pdf), [EMB report](https://air.emb.gov.ph/wp-content/uploads/2025/01/NSOBER-2016-2021-fin-1-1.pdf), and [Quezon advisory](https://quezon.gov.ph/general-flood-advisory-no-14-issued-600am-august-7-2026/).
+
+**Next:** continue the 17 labels still lacking a full crosswalk; review Yabahan fish evidence and route hydrography as separate tasks.
