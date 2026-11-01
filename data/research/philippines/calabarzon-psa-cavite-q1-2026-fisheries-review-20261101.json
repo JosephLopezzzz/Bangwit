@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "calabarzon-psa-cavite-q1-2026-fisheries-review-20261101",
+  "reviewedOn": "2026-11-01",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "regionName": "Region IV-A (CALABARZON)",
+  "province": "Cavite",
+  "status": "official-preliminary-quarterly-fisheries-production-context;common-labels-only;province-level;not-waterbody-occurrence-data",
+  "sources": [
+    {
+      "sourceId": "psa-cavite-q1-2026-fisheries-preliminary",
+      "title": "Cavite Fisheries Preliminary Situation Report: 1st Quarter 2026",
+      "provider": "Philippine Statistics Authority, Cavite Provincial Statistical Office",
+      "referenceNumber": "2026-SR-041",
+      "releaseDate": "2026-07-29",
+      "referencePeriod": "2026-01-01/2026-03-31",
+      "url": "https://rsso04a.psa.gov.ph/content/cavite-fisheries-preliminary-situation-report-1st-quarter-2026",
+      "relatedAttachments": [
+        "https://rsso04a.psa.gov.ph/sites/default/files/attachment-dir/2026-SR-041%20Technical%20Notes.pdf",
+        "https://rsso04a.psa.gov.ph/sites/default/files/attachment-dir/2026-SR-041%20Annex%20A.pdf",
+        "https://rsso04a.psa.gov.ph/sites/default/files/attachment-dir/%28Special%20Release%29%20Cavite%20Fisheries%20Preliminary%20Situation%20Report%20First%20Quarter%202026.pdf"
+      ],
+      "accessStatus": "Official release page and linked technical-notes PDF text reviewed online. The release PDF returned a cache miss and Annex A timed out in the browsing tool; no attachment was downloaded or retained.",
+      "reuseStatus": "The release page footer states CC BY 4.0 unless otherwise stated. Attachment-specific terms were not independently checked; this review does not grant app publication approval."
+    },
+    {
+      "sourceId": "psa-cavite-commercial-fisheries-q1-2026",
+      "title": "Cavite Commercial Fisheries Preliminary Situation Report: 1st Quarter 2026",
+      "provider": "Philippine Statistics Authority, Cavite Provincial Statistical Office",
+      "referenceNumber": "2026-SR-049",
+      "releaseDate": "2026-09-15",
+      "referencePeriod": "2026-01-01/2026-03-31",
+      "url": "https://rsso04a.psa.gov.ph/content/cavite-commercial-fisheries-preliminary-situation-report-1st-quarter-2026",
+      "accessStatus": "Official release page text reviewed online. Linked technical notes and Annex A and B returned cache misses; no attachments were downloaded or retained.",
+      "reuseStatus": "The landing page carries the PSA CALABARZON CC BY 4.0 default footer unless otherwise stated. Attachment-specific terms remain unverified; no derived species assertion is approved for the app."
+    }
+  ],
+  "findings": {
+    "coverageAndMethods": {
+      "reportingUnit": "Cavite Province",
+      "surveyComponents": [
+        "Quarterly Commercial Fisheries Survey (QCFS)",
+        "Quarterly Municipal Fisheries Survey (QMFS)",
+        "Quarterly Inland Fisheries Survey (QIFS)",
+        "Quarterly Aquaculture Survey (QAqS)"
+      ],
+      "reportedSubsectorProductionMetricTonsPreliminary": {
+        "marineMunicipal": 1802.84,
+        "commercial": 1270.84,
+        "aquaculture": 132.45,
+        "inlandMunicipal": 9.04,
+        "total": 3215.17
+      },
+      "commercialSurveyContext": "The related QCFS release says commercial vessels operate beyond municipal waters and describes estimates by species and fishing ground. The accessible narrative provides province-level production and selected common labels; no fishing-ground-specific values or locality geometry were reviewed.",
+      "preliminaryStatus": "The technical notes state that current-quarter data are preliminary and may be revised after additional reports and validation. Details may differ from totals because of rounding or statistical disclosure control."
+    },
+    "sourceReportedCatchLabels": {
+      "marineMunicipal": [
+        "Roundscad (Galunggong)",
+        "Squid (Pusit)",
+        "Threadfin bream (Bisugo)",
+        "Skipjack (Gulyasan)",
+        "Yellowfin tuna (Tambakol/Bariles)"
+      ],
+      "inlandMunicipal": [
+        {
+          "label": "Tilapia",
+          "reportedProductionMetricTons": 6.29,
+          "resolution": "Common category; no scientific species name or specimen identification supplied."
+        },
+        {
+          "label": "Mullet (Kapak)",
+          "reportedProductionMetricTons": 1.12,
+          "resolution": "Common/local label; no scientific species name or specimen identification supplied."
+        },
+        {
+          "label": "Mud Crab (Alimango)",
+          "reportedProductionMetricTons": 0.63,
+          "resolution": "Crustacean, not a fish; common category, not species-level identification."
+        }
+      ],
+      "commercialLeaders": [
+        "Roundscad (Galunggong)",
+        "Yellowfin tuna (Tambakol/Bariles)",
+        "Skipjack (Gulyasan)",
+        "Frigate tuna (Tulingan)",
+        "Fimbriated sardines (Tunsoy)"
+      ],
+      "labelPolicy": "Retain PSA source wording as fishery-production labels. Do not resolve broad common names to binomials or treat these labels as a checklist. Squid and mud crab are aquatic catch categories but not fish."
+    },
+    "inlandDefinitionCrosscheck": {
+      "CaviteTechnicalNotesWording": "Inland municipal fisheries refer to municipal fishing activities conducted in inland brackish waters.",
+      "PSAQIFSCollectionWording": "The PSA QIFS catalog describes inland waters including lakes, rivers, dams, marshes, swamps, irrigation canals, and creeks.",
+      "decision": "The difference in wording is unresolved. Do not assign the Cavite inland-production categories to a particular freshwater lake, river, reservoir, or brackish site from this release."
+    },
+    "spatialAndTaxonomicResolution": {
+      "siteSpecificWaterbodyNamed": false,
+      "samplingStationOrCoordinatesPublishedInReviewedNarrative": false,
+      "municipalityOrLandingCenterLinkedToEachCatchLabel": false,
+      "scientificNamesOrVouchersProvided": false,
+      "occurrenceEventsProvided": false,
+      "interpretation": "Official provincial catch production helps prioritize follow-up but does not identify a fish occurrence in a named waterbody, current local presence, ecological abundance, catchability, diet, safety, legal access, or geometry."
+    }
+  },
+  "decision": {
+    "use": "Current official Cavite fisheries-production context and a search-prioritization hint for separate site-resolved sources. Keep subsectors distinct and labels verbatim.",
+    "speciesAssertionsAdded": 0,
+    "scientificNamesAssigned": 0,
+    "waterbodyAssignmentsAdded": 0,
+    "occurrenceRecordsAdded": 0,
+    "publicAppRowsAdded": 0,
+    "statisticsProjectedToOccurrenceOrAbundance": false,
+    "publicationApproval": false,
+    "regionalBaselineComplete": false
+  },
+  "nextAction": "Continue locality-resolved research for named CALABARZON rivers, lakes, reservoirs, wetlands, estuaries and coastal sites. Use PSA production categories only to prioritize candidate source searches; obtain site, date, identification basis, and reuse terms before considering any waterbody species claim."
+}

@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "national-psa-qifs-2021-microdata-terms-review-20261101",
+  "reviewedOn": "2026-11-01",
+  "phaseId": "L1",
+  "scope": "National inland-fisheries microdata access and reuse screen; separate from the public PSA OpenSTAT aggregate table",
+  "status": "official-survey-metadata-and-use-terms-reviewed;sample-household-fields-and-geographic-level-need-clarification;no-datafile-downloaded",
+  "sources": [
+    {
+      "sourceId": "psa-qifs-2021-study-catalog-terms",
+      "title": "Quarterly Inland Fisheries Survey 2021",
+      "provider": "Philippine Statistics Authority (PSA), PSADA Data Archive",
+      "referenceId": "PHL-PSA-QIFS-2021-v1",
+      "catalogUrl": "https://psada.psa.gov.ph/catalog/233",
+      "collectionAndTermsUrl": "https://psada.psa.gov.ph/catalog/QIFS/about",
+      "dataDictionaryUrl": "https://psada.psa.gov.ph/catalog/233/data-dictionary/F5",
+      "dataFileDescription": "QIFS2021Q1 Sample Data; catalog dictionary reports 164 cases and 142 variables.",
+      "accessStatus": "PSA metadata and collection use terms were opened. The official data-dictionary result was reviewed as indexed text; the page itself returned a cache miss. No data file was downloaded and no terms were accepted.",
+      "reuseStatus": "The catalog terms authorize use only for the client/data user, forbid copying or redistribution of data or parts, and limit use to statistical/scientific research and aggregated reporting. No permission to redistribute microdata or use its row-level content in a public app was identified."
+    }
+  ],
+  "findings": {
+    "surveyPurpose": "PSA describes QIFS as collecting inland fish catch by species and producing quarterly volume/value estimates at province, regional and national levels. Its collection page includes lakes, rivers, dams, marshes, swamps, irrigation canals and creeks in the inland-water definition.",
+    "geographicAndVariableMetadata": {
+      "catalogGeographicUnit": "The 2021 study metadata says province is the lowest geographic level of disaggregation.",
+      "dataDictionaryFieldsReported": [
+        "REGION",
+        "PROVINCE",
+        "MUNICIPALITY",
+        "BARANGAY",
+        "HH_CODE",
+        "NAME_OF_HOUSE_HEAD",
+        "NAME_OF_RESP",
+        "FISH_GROUND",
+        "SPECIES_NAME fields",
+        "monthly catch volume and price fields"
+      ],
+      "resolutionIssue": "The dictionary exposes municipality/barangay and fishing-ground fields while the study-level metadata states province is the lowest geographic disaggregation. The relationship between sample microdata fields, released anonymization, and publishable statistical geography is unresolved; a FISH_GROUND text field alone does not establish a verified waterbody or coordinate."
+    },
+    "privacyAndUseTerms": {
+      "versionNote": "The catalog labels Version 1.0 as edited for preliminary computation and anonymized.",
+      "instrumentNote": "The study metadata says the questionnaire records names of the household head and respondent and uses household-level catch reporting. The reviewed variable dictionary also lists those name fields.",
+      "terms": [
+        "Authorization is granted only to the client/data user.",
+        "Copying, reproducing, distributing, selling or lending the data or any parts is prohibited except as authorized by PSA.",
+        "Use is limited to statistical/scientific research and reporting aggregated information.",
+        "No attempt may be made to re-identify a person, establishment or sampling unit or link datasets to do so."
+      ],
+      "decision": "The apparent anonymization note does not override the explicit access/use terms. Do not download, accept terms, publish, or ingest row-level QIFS microdata for Bangwit without separately confirmed PSA authorization and a privacy-safe, appropriately aggregated product."
+    },
+    "separationFromOpenstat": "This PSADA household-survey catalog is not the same artifact or license as the PSA OpenSTAT province/region aggregate table. The existing OpenSTAT review remains the usable discovery layer; it does not resolve specific rivers, lakes, stations, or exact capture locations."
+  },
+  "decision": {
+    "dataFileDownloaded": false,
+    "termsAccepted": false,
+    "householdRowsStored": 0,
+    "speciesAssertionsAdded": 0,
+    "waterbodyAssignmentsAdded": 0,
+    "publicAppRowsAdded": 0,
+    "publicationApproval": false,
+    "regionalBaselineComplete": false
+  },
+  "nextAction": "If a waterbody-safe QIFS output would materially help the inland inventory, ask PSA whether it can provide an authorized aggregated result with suppressed small cells, explicit waterbody/reporting geography, survey year, taxonomic category definitions, and redistribution terms. Do not send a request or accept microdata terms without the project owner's separate choice."
+}
