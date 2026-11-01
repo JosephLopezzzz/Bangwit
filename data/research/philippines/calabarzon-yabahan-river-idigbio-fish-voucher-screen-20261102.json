@@ -1,0 +1,171 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "calabarzon-yabahan-river-idigbio-fish-voucher-screen-20261102",
+  "reviewedOn": "2026-11-02",
+  "phaseId": "luzon-calabarzon-freshwater-fish-evidence",
+  "regionId": "0400000000",
+  "provinceId": "0405600000",
+  "waterbodyId": "ph-wb-yabahan-river-quezon",
+  "status": "bounded-idigbio-screen-complete;no-locality-waterBody-or-fulltext-matches;not-absence-evidence;index-stale",
+  "question": "Did iDigBio return indexed fish specimen records for Yabahan River or its advisory spelling Yabahaan?",
+  "purpose": "Cross-check GBIF and literature discovery with a second specimen index while keeping the index-update pause and non-retrieval limits explicit.",
+  "sourceIds": [
+    "idigbio-yabahan-river-locality-voucher-screen-20261102",
+    "denr-dao-2025-28-classified-waterbodies",
+    "emb-national-sober-2016-2021-silongin-river"
+  ],
+  "methods": {
+    "provider": "iDigBio Search API v2",
+    "endpoint": "https://search.idigbio.org/v2/search/records/",
+    "queryFormat": "JSON rq dictionary; multiple fields are combined with AND. Field-value and data fulltext searches are separate bounded screens.",
+    "documentation": "https://github.com/iDigBio/idigbio-search-api/wiki/Query-Format",
+    "queries": [
+      {
+        "type": "field",
+        "field": "locality",
+        "value": "Yabahan",
+        "country": "Philippines",
+        "query": {
+          "country": "Philippines",
+          "locality": "Yabahan"
+        },
+        "itemCount": 0,
+        "returned": 0,
+        "url": "https://search.idigbio.org/v2/search/records/?rq=%7B%22country%22%3A%22Philippines%22%2C%22locality%22%3A%22Yabahan%22%7D&limit=100"
+      },
+      {
+        "type": "field",
+        "field": "locality",
+        "value": "Yabahaan",
+        "country": "Philippines",
+        "query": {
+          "country": "Philippines",
+          "locality": "Yabahaan"
+        },
+        "itemCount": 0,
+        "returned": 0,
+        "url": "https://search.idigbio.org/v2/search/records/?rq=%7B%22country%22%3A%22Philippines%22%2C%22locality%22%3A%22Yabahaan%22%7D&limit=100"
+      },
+      {
+        "type": "field",
+        "field": "waterbody",
+        "value": "Yabahan River",
+        "country": "Philippines",
+        "query": {
+          "country": "Philippines",
+          "waterbody": "Yabahan River"
+        },
+        "itemCount": 0,
+        "returned": 0,
+        "url": "https://search.idigbio.org/v2/search/records/?rq=%7B%22country%22%3A%22Philippines%22%2C%22waterbody%22%3A%22Yabahan+River%22%7D&limit=100"
+      },
+      {
+        "type": "field",
+        "field": "waterbody",
+        "value": "Yabahaan",
+        "country": "Philippines",
+        "query": {
+          "country": "Philippines",
+          "waterbody": "Yabahaan"
+        },
+        "itemCount": 0,
+        "returned": 0,
+        "url": "https://search.idigbio.org/v2/search/records/?rq=%7B%22country%22%3A%22Philippines%22%2C%22waterbody%22%3A%22Yabahaan%22%7D&limit=100"
+      },
+      {
+        "type": "all-fields-fulltext",
+        "field": "data",
+        "value": "Yabahan",
+        "country": "Philippines",
+        "query": {
+          "country": "Philippines",
+          "data": {
+            "type": "fulltext",
+            "value": "Yabahan"
+          }
+        },
+        "itemCount": 0,
+        "returned": 0,
+        "url": "https://search.idigbio.org/v2/search/records/?rq=%7B%22country%22%3A%22Philippines%22%2C%22data%22%3A%7B%22type%22%3A%22fulltext%22%2C%22value%22%3A%22Yabahan%22%7D%7D&limit=100"
+      },
+      {
+        "type": "all-fields-fulltext",
+        "field": "data",
+        "value": "Yabahaan",
+        "country": "Philippines",
+        "query": {
+          "country": "Philippines",
+          "data": {
+            "type": "fulltext",
+            "value": "Yabahaan"
+          }
+        },
+        "itemCount": 0,
+        "returned": 0,
+        "url": "https://search.idigbio.org/v2/search/records/?rq=%7B%22country%22%3A%22Philippines%22%2C%22data%22%3A%7B%22type%22%3A%22fulltext%22%2C%22value%22%3A%22Yabahaan%22%7D%7D&limit=100"
+      }
+    ],
+    "indexStatus": {
+      "portalNotice": "iDigBio states that data on its site stopped updating on 8 May 2026; the portal and API were expected to remain operational through 2026.",
+      "sourceUrl": "https://portal.idigbio.org/portal/search",
+      "interpretation": "This is a frozen, time-bounded discovery index, not a current or complete census of collection records."
+    }
+  },
+  "findings": [
+    {
+      "sourceId": "idigbio-yabahan-river-locality-voucher-screen-20261102",
+      "evidence": "Six iDigBio API queries restricted to country=Philippines returned itemCount 0: locality=Yabahan, locality=Yabahaan, waterbody=Yabahan River, waterbody=Yabahaan, all-fields data fulltext Yabahan, and all-fields data fulltext Yabahaan. No occurrence rows were available for taxon-level inspection.",
+      "supports": [
+        "only that these six queries returned no indexed records in the iDigBio snapshot accessed 2 November 2026"
+      ],
+      "doesNotSupport": [
+        "fish absence",
+        "absence of museum specimens or studies",
+        "other spellings and locality terms",
+        "post-8-May-2026 data",
+        "a complete checklist",
+        "current fish presence"
+      ]
+    },
+    {
+      "sourceId": "denr-dao-2025-28-classified-waterbodies",
+      "evidence": "The DENR order names Yabahan River in San Andres, Quezon; its regulatory monitoring stations are not fish specimen records.",
+      "supports": [
+        "waterbody name and administrative locality context"
+      ],
+      "doesNotSupport": [
+        "fish presence, vouchers, or species identification"
+      ]
+    },
+    {
+      "sourceId": "emb-national-sober-2016-2021-silongin-river",
+      "evidence": "EMB Table 3.3 lists Yabahan River in historical waterbody classification metadata, not a specimen inventory.",
+      "supports": [
+        "historical source-name context"
+      ],
+      "doesNotSupport": [
+        "fish species or absence"
+      ]
+    }
+  ],
+  "disposition": {
+    "queryCount": 6,
+    "zeroResultQueryCount": 6,
+    "fishRowsSelected": 0,
+    "fishAbsenceInferred": false,
+    "speciesAssertionsAdded": 0,
+    "publicRecordsAdmitted": 0,
+    "publicAppRowsAdded": 0,
+    "geometryAdded": false,
+    "publicationApproval": false
+  },
+  "nextActions": [
+    "Retain fish presence as unknown; the iDigBio index is not current after 8 May 2026 and these zeroes do not establish absence.",
+    "Continue seeking authorized, dated Yabahan River sampling or collection records with station/reach linkage, methods, identification evidence, voucher identifiers, and reuse terms.",
+    "Keep route-scale hydrography and the fish-evidence search as separate work items."
+  ],
+  "nonClaims": [
+    "This was a bounded index screen, not an exhaustive museum-catalog search.",
+    "No fish species, diet, current presence/absence, route, geometry, water quality, safety, access, or fishing rule is established."
+  ]
+}
