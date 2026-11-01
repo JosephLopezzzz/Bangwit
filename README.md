@@ -147,3 +147,8 @@ A 2026 DLSU-D portal article about microplastics in surface water at Kawit and N
 ### Tayabas Bay NFRDI catch-label review - 1 November 2026
 
 Added a research-only transcription of 36 finfish label rows across eight 2024 handbook gear tables; all 30 distinct printed names matched accepted GBIF species-rank names exactly. Nine shrimp, crab and squid labels from five other gear blocks were excluded. These historical gear labels do not establish dated/current occurrences or a complete checklist. See [the review](data/research/philippines/calabarzon-tayabas-bay-nfrdi-gear-catch-label-transcription-20261101.json).
+
+
+### Lamon Bay NFRDI catch-label review - 1 November 2026
+
+Added a research-only transcription of 44 finfish label rows across ten handbook gear tables. The 39 distinct printed names include 35 exact accepted species-rank matches, one subspecies, two variant matches, and one species-level no-match. Nineteen non-fish labels were excluded. These historical gear labels do not establish dated/current occurrences or a complete checklist. See [the review](data/research/philippines/calabarzon-lamon-bay-nfrdi-gear-catch-label-transcription-20261101.json).
