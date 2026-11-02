@@ -1891,3 +1891,11 @@ Reviewed the publisher abstract for a 2026 systematic review of 23 freshwater-go
 Registered one national source. No waterbody source references, species assertions, occurrence records, geometry, or public app rows were added. CALABARZON remains at 153 leads (89 river/system/basin units), 174 distinct direct source references, and 639 registered sources; the registry's stored count now matches its 639 entries. See `national-freshwater-goby-research-synthesis-review-20261102.json` and the [publisher page](https://limnolfwbiol.com/index.php/LFWB/en/article/view/1498).
 
 **Next:** continue primary-source research for freshwater waterbodies and validate each cited study separately; do not use the synthesis as a substitute for locality-specific evidence.
+
+### National rollout step 488: Quezon Malagaylay unidentified-goby conference abstract lead — 2 November 2026
+
+DOST-STII's SPHERES bibliography cites a 2009 conference abstract titled “Evaluation of Some Biological Parameters of an Unidentified Goby Fish Collected from Malagaylay, Quezon Province.” ResearchGate provides matching citation metadata but reports no full text. A third-party copy of a 2012 Tayabas planning document places Malagaylay Falls in Barangay Lalo, but no reviewed source connects that site to the goby collection locality. The source title gives no species identity, methods, date of collection, station, voucher, or reuse terms.
+
+Registered one research-only abstract citation. No waterbody lead or link, species/occurrence assertion, geometry, or public app row was added. CALABARZON remains at 153 research leads (89 river/system/basin units), 174 distinct direct source references, and 640 registered sources. See `calabarzon-malagaylay-unidentified-goby-abstract-review-20261102.json`, the [DOST-STII bibliography](https://spheres.dost.gov.ph/images/issues/spheresDecember2018.pdf), and the [metadata-only conference entry](https://www.researchgate.net/publication/324106672_Evaluation_of_Some_Biological_Parameters_of_an_Unidentified_Goby_Fish_Collected_from_Malagaylay_Quezon_Province).
+
+**Next:** prioritize a recoverable primary survey/report with site, collection-event, taxonomic, and reuse details; seek an official Tayabas copy before attempting any Malagaylay waterbody crosswalk.
