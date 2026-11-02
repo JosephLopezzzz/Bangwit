@@ -72,14 +72,14 @@
     "limits": "Province plus separate-city starter coverage. Municipalities/component cities and each island/waterbody still require the source-sweep inventory; this is not a completed regional inventory."
   },
   "counts": {
-    "waterbodyResearchLeads": 153,
+    "waterbodyResearchLeads": 156,
     "provincesWithLeads": 6,
     "separateCityCoverageUnits": 1,
     "byKind": {
       "bay": 8,
       "river": 89,
       "estuary": 3,
-      "wetland": 8,
+      "wetland": 11,
       "reservoir": 5,
       "lake": 18,
       "stream": 9,
@@ -5660,6 +5660,117 @@
       "evidenceBatchRefs": [
         "calabarzon-quezon-upper-kilbay-cross-region-name-crosswalk-20261101.json",
         "calabarzon-quezon-kilbay-catabangan-modeled-catchment-review-20261101.json"
+      ]
+    },
+    {
+      "id": "ph-wb-pagbilao-mangrove-fish-survey-locality",
+      "name": "Pagbilao Mangroves (Historical Fish Survey Locality)",
+      "aliases": [],
+      "kind": "wetland",
+      "salinity": {
+        "classification": "unknown",
+        "reviewStatus": "not-assessed",
+        "sourceRefs": []
+      },
+      "administrativeAssociations": [
+        {
+          "regionId": "0400000000",
+          "provinceId": "0405600000",
+          "relationship": "source-named-Pagbilao-locality;administrative-context-only",
+          "sourceRefs": [
+            "pinto-1987-pagbilao-juvenile-fish-survey",
+            "pinto-1988-pagbilao-mangrove-fish-community",
+            "ronnback-et-al-1999-pagbilao-mangrove-microhabitat-study",
+            "psa-calabarzon-directory"
+          ],
+          "locality": "Historical source wording identifies mangroves at Pagbilao, Quezon; no station coordinates or exact feature boundary."
+        }
+      ],
+      "sourceRefs": [
+        "pinto-1987-pagbilao-juvenile-fish-survey",
+        "pinto-1988-pagbilao-mangrove-fish-community",
+        "ronnback-et-al-1999-pagbilao-mangrove-microhabitat-study",
+        "gbif-backbone-pagbilao-mangrove-abstract-taxonomy-match-20261102"
+      ],
+      "identityStatus": "source-named-locality-level-research-lead;not-crosswalked-to-experimental-forest-or-Palsabangon-site",
+      "boundaryStatus": "not-delineated",
+      "fishEvidenceStatus": "historical-1987-and-1988-abstracts-report-aggregate-128-species;1999-abstract-reports-three-source-name-candidates;no-current-presence;taxonomy-held",
+      "reviewStatus": "historical-abstracts-reviewed;1999-sampling-context-limited;taxonomy-crosswalk-held;exact-site-and-rights-pending",
+      "publicAdmission": false,
+      "scopeNote": "Pinto (1987, 1988) report aggregate fish richness in the mangroves of Pagbilao; the 1987 abstract names Ambassis kopsi as most abundant. Rönnbäck et al. (1999) sampled four small mangrove microhabitats over two consecutive spring tides and its abstract names three fish-community taxa. These historical abstract statements do not provide a full site-resolved checklist, calendar dates, station coordinates, or voucher crosswalk. Do not link this locality to the Pagbilao Experimental Mangrove Forest, Palsabangon Mangrove Forest, a named river/creek/bay, or a boundary without direct site evidence. GBIF name matching is taxonomy-only; one source name is a fuzzy match and another a synonym. No current presence, abundance, diet/bait advice, or public record is inferred.",
+      "evidenceBatchRefs": [
+        "calabarzon-pagbilao-mangrove-fish-evidence-review-20261102.json"
+      ]
+    },
+    {
+      "id": "ph-wb-pagbilao-experimental-mangrove-forest",
+      "name": "Pagbilao Experimental Mangrove Forest",
+      "aliases": [],
+      "kind": "wetland",
+      "salinity": {
+        "classification": "unknown",
+        "reviewStatus": "not-assessed",
+        "sourceRefs": []
+      },
+      "administrativeAssociations": [
+        {
+          "regionId": "0400000000",
+          "provinceId": "0405600000",
+          "relationship": "official-publication-names-Pagbilao;PSA-administrative-context-only",
+          "sourceRefs": [
+            "janssen-padilla-1997-pagbilao-experimental-mangrove-study",
+            "psa-calabarzon-directory"
+          ],
+          "locality": "The 1997 IIED case-study page names the Pagbilao experimental mangrove forest in the Philippines; the exact site boundary is not supplied."
+        }
+      ],
+      "sourceRefs": [
+        "janssen-padilla-1997-pagbilao-experimental-mangrove-study"
+      ],
+      "identityStatus": "source-named-site-research-lead;not-crosswalked-to-Pagbilao-mangrove-fish-survey-locality",
+      "boundaryStatus": "not-delineated",
+      "fishEvidenceStatus": "not-reviewed-at-this-exact-site;fish-survey-locality-crosswalk-pending",
+      "reviewStatus": "historical-site-name-reviewed;no-boundary-or-fish-site-crosswalk",
+      "publicAdmission": false,
+      "scopeNote": "IIED (1997) names the Pagbilao experimental mangrove forest as a case-study area. This supports a historical site-name lead only, not a present boundary or hydrological geometry. Fish papers that say “mangroves of Pagbilao” have not been crosswalked to this exact forest. No fish inventory, salinity, access, safety, or fishing rule is inferred.",
+      "evidenceBatchRefs": [
+        "calabarzon-pagbilao-mangrove-fish-evidence-review-20261102.json"
+      ]
+    },
+    {
+      "id": "ph-wb-palsabangon-mangrove-forest",
+      "name": "Palsabangon Mangrove Forest",
+      "aliases": [],
+      "kind": "wetland",
+      "salinity": {
+        "classification": "unknown",
+        "reviewStatus": "not-assessed",
+        "sourceRefs": []
+      },
+      "administrativeAssociations": [
+        {
+          "regionId": "0400000000",
+          "provinceId": "0405600000",
+          "relationship": "source-described-locality",
+          "sourceRefs": [
+            "muhadiono-1986-palsabangon-mangrove-flora-thesis-abstract",
+            "bmb-efoi-palsabangon-mangrove-species-request-2023"
+          ],
+          "locality": "The SEARCA thesis abstract names Palsabangon, Pagbilao, Quezon; the BMB eFOI response record names Palsabangon Mangrove Forest in Pagbilao, Quezon."
+        }
+      ],
+      "sourceRefs": [
+        "muhadiono-1986-palsabangon-mangrove-flora-thesis-abstract",
+        "bmb-efoi-palsabangon-mangrove-species-request-2023"
+      ],
+      "identityStatus": "two-official-research-and-government-records-name-site;relationship-to-Pagbilao-experimental-forest-unverified",
+      "boundaryStatus": "not-delineated",
+      "fishEvidenceStatus": "bmb-attachment-named-but-inaccessible;thesis-abstract-is-flora-only;no-fish-assertion",
+      "reviewStatus": "historical-flora-abstract-reviewed;BMB-eFOI-response-page-reviewed;attachment-not-retrieved;site-identity-and-boundary-pending",
+      "publicAdmission": false,
+      "scopeNote": "SEARCA indexes an abstract for a 1986 UPLB mangrove-plant study in Palsabangon, Pagbilao, Quezon; it reports plant-community research, not fish. A BMB eFOI page records approval of a request for a list of plants and animals and names an attachment, but the attachment fetch failed and its contents were not reviewed. Do not infer that attachment provides fish taxa. The feature remains a habitat-name lead with no boundary, geometry, current fish evidence, or public app data. Its identity with Pagbilao Experimental Mangrove Forest is not established.",
+      "evidenceBatchRefs": [
+        "calabarzon-pagbilao-mangrove-fish-evidence-review-20261102.json"
       ]
     }
   ],

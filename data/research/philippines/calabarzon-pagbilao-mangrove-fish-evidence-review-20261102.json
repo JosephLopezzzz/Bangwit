@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "calabarzon-pagbilao-mangrove-fish-evidence-review-20261102",
+  "reviewedOn": "2026-11-02",
+  "nationalStep": 490,
+  "phaseId": "luzon-calabarzon-coastal-and-wetland-source-review",
+  "regionId": "0400000000",
+  "provinceId": "0405600000",
+  "question": "What do historical fish papers and government/research records establish about mangrove fish evidence and named mangrove sites in Pagbilao, and what remains unavailable?",
+  "findings": {
+    "pinto1987": "Springer abstract for Pinto (1987) reports 128 fish species from the mangroves of Pagbilao, with Ambassis kopsi as the most abundant. The page is subscription content and does not expose the species table or station coordinates.",
+    "pinto1988": "Wiley-indexed abstract for Pinto (1988) also reports 128 fish species from the mangroves of Pagbilao. Direct publisher access returned HTTP 403 in this review; no table or full text was retrieved.",
+    "ronnback1999": "The SEAFDEC/AQD repository abstract for Rönnbäck et al. (1999) describes four Pagbilao mangrove microhabitats of 89–258 m² sampled over two consecutive spring tides with stake nets. The abstract reports Ambassis kopsi, A. urotaenia, and Atherinomorus balabacensis among dominant fish. It does not provide calendar dates or station coordinates; the item page says document request is not available.",
+    "taxonomicCrosswalk": [
+      {
+        "sourceName": "Ambassis kopsi",
+        "match": "Ambassis kopsii",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "matchType": "FUZZY",
+        "confidence": 96,
+        "interpretation": "Keep source spelling; fuzzy proposal only, manual review required."
+      },
+      {
+        "sourceName": "Ambassis urotaenia",
+        "match": "Ambassis urotaenia",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "matchType": "EXACT",
+        "confidence": 99,
+        "interpretation": "Exact name match only; does not validate the survey specimen."
+      },
+      {
+        "sourceName": "Atherinomorus balabacensis",
+        "match": "Atherinomorus duodecimalis",
+        "rank": "SPECIES",
+        "status": "SYNONYM",
+        "matchType": "EXACT",
+        "confidence": 98,
+        "interpretation": "GBIF Backbone returns the source name as a synonym; do not silently replace the historical source label."
+      }
+    ],
+    "experimentalForest": "The IIED (1997) publication page names the Pagbilao experimental mangrove forest as the case-study area. It establishes a historical site-name lead only; the fish papers’ generic “mangroves of Pagbilao” locality is not crosswalked to this exact forest.",
+    "palsabangon": "The SEARCA abstract identifies an M.S. thesis about mangrove plant communities in Palsabangon, Pagbilao, Quezon and reports plant-only research. A BMB eFOI response page marks a request for plants and animals in Palsabangon Mangrove Forest successful and lists an attachment. The attachment returned HTTP 503 through web retrieval and HTTP 403 through direct fetch in this review; its contents and terms were not inspected.",
+    "rights": "No item-specific open data reuse license was verified for the historical journals, thesis, IIED report, or inaccessible BMB attachment. Bibliographic and short abstract-level facts are kept as research leads only; no full tables, images, raw data, or lists are copied."
+  },
+  "interpretation": [
+    "The two historical fish-study abstracts and the 1999 abstract support that fish research was conducted in mangroves described at Pagbilao, but they do not establish a current or complete regional fish checklist.",
+    "Keep the source-named Pagbilao mangrove survey locality, Pagbilao Experimental Mangrove Forest, and Palsabangon Mangrove Forest as distinct research leads until a primary source provides an explicit site crosswalk.",
+    "Treat the three 1999 fish names and GBIF Backbone matches as historical source-label and taxonomy leads only; no species, occurrence, or current-presence assertion is admitted.",
+    "The BMB attachment filename does not establish what species it contains. Do not use, summarize, or publish the inaccessible attachment contents.",
+    "Mangrove association and ecological microhabitat results are not bait recommendations, fishing access, safety, or legal fishing advice."
+  ],
+  "disposition": {
+    "registeredSourceRecordsAdded": 7,
+    "waterbodyLeadsAdded": 3,
+    "waterbodySourceRefsAdded": 7,
+    "siteCrosswalksAdded": 0,
+    "sourceReportedTaxonNamesLogged": 3,
+    "speciesAssertionsAdded": 0,
+    "occurrenceAssertionsAdded": 0,
+    "catchOrAbundanceRowsAdded": 0,
+    "geometryAdded": 0,
+    "dietOrBaitClaimsAdded": 0,
+    "publicAppRowsAdded": 0,
+    "publicationApproval": false,
+    "calabarzonWaterbodyLeads": 156,
+    "calabarzonWetlandLeads": 11,
+    "calabarzonRiverSystemBasinUnits": 89,
+    "calabarzonDistinctDirectSourceRefs": 181,
+    "sourceRegistryEntries": 648
+  },
+  "nextActions": [
+    "Seek a permitted copy of Pinto (1988) and the 1999 paper, then record sampling dates, exact station descriptions, voucher data, complete taxon lists, and item-specific reuse terms without inferring current presence.",
+    "Retry the BMB eFOI attachment only through its public portal or an authorized response path; do not bypass access controls. Review species content and item-level terms before any transcription.",
+    "Find official site maps or technical boundary data for each named mangrove lead and resolve whether Pagbilao Experimental Mangrove Forest and Palsabangon Mangrove Forest refer to distinct or related sites.",
+    "Continue the Luzon region-by-region inventory with separate evidence lanes for marine, brackish, freshwater, habitat, fishery landings, safety, and legal status."
+  ],
+  "sources": [
+    {
+      "sourceId": "pinto-1987-pagbilao-juvenile-fish-survey",
+      "url": "https://link.springer.com/article/10.1007/BF00008709",
+      "supports": "Publisher abstract, aggregate historical fish survey count, source-reported common taxon, article date, and subscription access."
+    },
+    {
+      "sourceId": "pinto-1988-pagbilao-mangrove-fish-community",
+      "url": "https://onlinelibrary.wiley.com/doi/abs/10.1111/j.1095-8649.1988.tb05556.x",
+      "supports": "Publisher-indexed title, citation, and abstract-level aggregate claim; the full article was inaccessible."
+    },
+    {
+      "sourceId": "ronnback-et-al-1999-pagbilao-mangrove-microhabitat-study",
+      "url": "https://repository.seafdec.org.ph/handle/10862/1849",
+      "supports": "Official SEAFDEC/AQD repository abstract, microhabitat sampling description, and three historical fish-name labels."
+    },
+    {
+      "sourceId": "janssen-padilla-1997-pagbilao-experimental-mangrove-study",
+      "url": "https://www.iied.org/8095iied",
+      "supports": "IIED title, authors, publication metadata, and Pagbilao experimental mangrove forest case-study locality."
+    },
+    {
+      "sourceId": "muhadiono-1986-palsabangon-mangrove-flora-thesis-abstract",
+      "url": "https://www.searca.org/pubs/abstracts-theses-dissertations/database/view?absid=675",
+      "supports": "SEARCA thesis-abstract metadata and Palsabangon, Pagbilao, Quezon locality; the study concerns mangrove flora."
+    },
+    {
+      "sourceId": "bmb-efoi-palsabangon-mangrove-species-request-2023",
+      "url": "https://www.foi.gov.ph/requests/species-in-palsabangon-mangrove-forest-in-pagbilao-quezon/",
+      "supports": "BMB eFOI response status and listed attachment name; not the attachment contents."
+    },
+    {
+      "sourceId": "gbif-backbone-pagbilao-mangrove-abstract-taxonomy-match-20261102",
+      "url": "https://api.gbif.org/v1/species/match?name=Ambassis%20kopsi&rank=SPECIES",
+      "supports": "Exact bounded GBIF Backbone name-match response for Ambassis kopsi; the other two query URLs and responses are recorded in the source registry."
+    }
+  ]
+}
