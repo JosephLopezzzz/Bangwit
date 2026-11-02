@@ -1883,3 +1883,11 @@ Cross-checked the 15 taxon labels reported for Paller et al.'s 2010 Tayabas Rive
 PJS is open access, but the current author guide describes copyright transfer; no item-specific reuse license was found. The survey stays historical and rights-held: no table cells, occurrence rows, species assertions, or public app records were added. CALABARZON has 153 leads (89 river/system/basin units), 174 distinct direct source references, and 638 registered sources. See `calabarzon-tayabas-river-taxonomy-crosswalk-20261102.json`, [the PJS article](https://philjournalsci.dost.gov.ph/diversity-and-distribution-of-freshwater-fish-assemblages-in-tayabas-river-quezon-philippines/), and [the Catalog of Fishes](https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=32640).
 
 **Next:** pursue an independent, rights-cleared Tayabas freshwater source or ask the UPLB Museum of Natural History for public voucher identifiers. Keep any later taxon match separated from current-presence claims.
+
+### National rollout step 487: Philippine freshwater goby literature-synthesis discovery review — 2 November 2026
+
+Reviewed the publisher abstract for a 2026 systematic review of 23 freshwater-goby studies from 2010–2022. Its authors report that most studies were conducted in Luzon and encourage additional research in Visayas and Mindanao. The publisher marks the article CC BY-NC 4.0, but its PDF timed out during retrieval, so the study/site table was not transcribed. This is a bibliography lead, not a complete freshwater-fish census, occurrence dataset, or species checklist.
+
+Registered one national source. No waterbody source references, species assertions, occurrence records, geometry, or public app rows were added. CALABARZON remains at 153 leads (89 river/system/basin units), 174 distinct direct source references, and 639 registered sources; the registry's stored count now matches its 639 entries. See `national-freshwater-goby-research-synthesis-review-20261102.json` and the [publisher page](https://limnolfwbiol.com/index.php/LFWB/en/article/view/1498).
+
+**Next:** continue primary-source research for freshwater waterbodies and validate each cited study separately; do not use the synthesis as a substitute for locality-specific evidence.

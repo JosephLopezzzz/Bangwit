@@ -4253,3 +4253,13 @@ Cross-checked the 15 taxon labels reported for Paller et al.'s 2010 Tayabas Rive
 PJS is open access, but the current author guide describes copyright transfer; no item-specific reuse license was found. The survey stays historical and rights-held: no table cells, occurrence rows, species assertions, or public app records were added. CALABARZON has 153 leads (89 river/system/basin units), 174 distinct direct source references, and 638 registered sources. See the [crosswalk review](../data/research/philippines/calabarzon-tayabas-river-taxonomy-crosswalk-20261102.json), [the PJS article](https://philjournalsci.dost.gov.ph/diversity-and-distribution-of-freshwater-fish-assemblages-in-tayabas-river-quezon-philippines/), [GBIF species matching API](https://techdocs.gbif.org/en/openapi/v1/species), and [the Catalog of Fishes](https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=32640).
 
 **Next:** pursue an independent, rights-cleared Tayabas freshwater source or ask the UPLB Museum of Natural History for public voucher identifiers. Keep any later taxon match separated from current-presence claims.
+
+### National rollout step 487: Philippine freshwater goby literature-synthesis discovery review — 2 November 2026
+
+Reviewed the publisher abstract for a 2026 systematic review of 23 freshwater-goby studies from 2010–2022. The authors report that most reviewed studies were conducted in Luzon and encourage more biodiversity research in the Visayas and Mindanao. The publisher page states CC BY-NC 4.0. The linked PDF timed out during retrieval, so no study/site table was extracted. The paper is a goby-literature discovery aid, not a complete freshwater-fish inventory or site-level species evidence.
+
+Added one registry source and a short access review. No waterbody links, species assertions, occurrence rows, geometry, or public app data were added. CALABARZON remains at 153 leads (89 river/system/basin units), 174 distinct direct source references, and 639 registered sources; the stored registry count was corrected to match the 639 entries.
+
+See the [publisher page](https://limnolfwbiol.com/index.php/LFWB/en/article/view/1498), [DOI](https://doi.org/10.31951/2658-3518-2026-A-3-135), and [review record](../data/research/philippines/national-freshwater-goby-research-synthesis-review-20261102.json).
+
+**Next:** continue primary-source research for freshwater waterbodies. Verify each study's locality, date, methods, identification evidence, and reuse terms independently; do not substitute the synthesis for those records.
