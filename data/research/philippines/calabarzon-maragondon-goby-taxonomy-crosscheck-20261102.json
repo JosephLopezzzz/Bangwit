@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "calabarzon-maragondon-goby-taxonomy-crosscheck-20261102",
+  "reviewedOn": "2026-11-02",
+  "nationalStep": 493,
+  "sourceId": "ijcs-2014-maragondon-goby-barcoding",
+  "waterbodyId": "ph-wb-maragondon-river",
+  "status": "publisher-full-text-crosschecked;three-phenotypes;taxonomic-conflicts-remain;bounded-sequence-search-found-no-accession;research-only",
+  "purpose": "Check whether the 2014 Maragondon River goby paper or an indexed public nucleotide record supplies enough independent evidence to resolve its three conflicting species-level labels.",
+  "source": {
+    "bibliography": "Bayot, F. A. A., Joya, K. N. A., & Jacinto, W. R. (2014). Phylogenetic analysis and barcoding of gobies in Maragondon River, Cavite, Philippines. International Journal of Current Science, 12, E50-E56.",
+    "publisherLandingUrl": "https://rjpn.org/ijcspub/viewpaperforall.php?paper=IJCSP10A1190",
+    "fullTextUrl": "https://rjpn.org/ijcspub/papers/IJCSP10A1190.pdf",
+    "publisherLicenseStatement": "The landing page declares CC BY 4.0. This does not resolve the identification conflicts or independently validate the samples.",
+    "samplingContext": "The article describes three pre-collected goby phenotypes caught in Maragondon River during summer 2010 and 2011, citing an unpublished 2011 source. It says a voucher for each phenotype was sent to the Philippine National Museum for verification, but reports no verification outcome or catalogue number.",
+    "sequenceContext": "The article says sequences were matched to GenBank-derived COI records. The reviewed article does not provide accession numbers for the three query sequences, a specimen catalogue crosswalk, or publicly retrievable sequence data.",
+    "sequenceSearch": {
+      "provider": "NCBI Nucleotide Entrez ESearch",
+      "checkedOn": "2026-11-02",
+      "boundedQueries": [
+        {
+          "query": "\"Maragondon\"[All Fields] AND goby[All Fields] AND COI[All Fields]",
+          "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=nuccore&term=%22Maragondon%22%5BAll%20Fields%5D%20AND%20goby%5BAll%20Fields%5D%20AND%20COI%5BAll%20Fields%5D&retmode=json",
+          "resultCount": 0
+        },
+        {
+          "query": "\"IJCSP10A1190\"",
+          "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=nuccore&term=%22IJCSP10A1190%22&retmode=json",
+          "resultCount": 0
+        }
+      ],
+      "limit": "These exact bounded searches found no NCBI nucleotide records. This is not proof that no related sequence exists under another name or identifier, and it does not rule out an unindexed or unpublished sequence."
+    }
+  },
+  "phenotypeReview": [
+    {
+      "phenotype": "A1",
+      "articleClaims": [
+        "Morphology section: Gnatholepis puntangoides / Exyrias puntang.",
+        "BLAST table: Amblygobius sphynx at 95%.",
+        "Discussion: also mentions Exyrias belissimus at 93%; later calls the molecular result putative Amblygobius and says it should be verified."
+      ],
+      "decision": "hold-species-level-identification"
+    },
+    {
+      "phenotype": "B2",
+      "articleClaims": [
+        "Morphology section: Glossogobius biocellatus.",
+        "BLAST table: Glossogobius giuris at 83%.",
+        "Phylogenetic discussion includes Glossogobius giuris and Psammogobius biocellatus with only 40% bootstrap support; later prose retains Glossogobius sp. and recommends sequence verification."
+      ],
+      "decision": "hold-species-level-identification;genus-level-label-is-also-source-reported-not-independently-verified"
+    },
+    {
+      "phenotype": "D4",
+      "articleClaims": [
+        "Abstract: D4 forms a clade with genus Oxyurichthys opthalmonema.",
+        "BLAST table: Oxyurichthys ophthalmonema at 92%.",
+        "Phylogenetic prose reports 69% bootstrap support; the conclusion uses a stronger species-level label despite the abstract's more cautious wording."
+      ],
+      "decision": "hold-species-level-identification-pending-voucher-or-sequence-review"
+    }
+  ],
+  "crossChecks": [
+    "The abstract reports a 655 bp COI sequence length, while the BLAST table lists 713 bp for A1 and B2 and 708 bp for D4; the difference is not reconciled in the article.",
+    "Morphological labels, BLAST similarity labels, phylogenetic relationships, and the article's final wording do not form a consistent identification for A1 or B2; D4 also has differing confidence language and an inconsistent spelling of the taxon name.",
+    "The paper says vouchers were sent to the Philippine National Museum and a clarification was sent to CBOL, but neither verification outcome nor accession/case identifier is reported in the reviewed text.",
+    "The article is a historical record of three goby phenotypes, not a complete inventory, current-presence assessment, or exact-reach survey. No coordinates or specimen catalog numbers were available in the review."
+  ],
+  "decision": {
+    "speciesAssertionsAdmitted": 0,
+    "occurrenceAssertionsAdmitted": 0,
+    "publicAppRowsAdded": 0,
+    "geometryAdded": false,
+    "dietOrBaitClaimsAdded": 0,
+    "decisionLabel": "keep-three-phenotype-lead-research-only;do-not-map-the-three-candidates-as-confirmed-species",
+    "reason": "The source contains internal identification and sequence-length discrepancies, reports putative matches, gives no accession crosswalk, and supplies no museum verification outcome. The bounded NCBI search did not provide independent sequence evidence."
+  },
+  "nextAction": "Continue the regional freshwater and coastal evidence sweep. For this lead, only a traceable accession-to-phenotype sequence record or a reported museum voucher determination can resolve the held species names; do not send an inquiry or publish a species row without separate authorization and evidence review."
+}
