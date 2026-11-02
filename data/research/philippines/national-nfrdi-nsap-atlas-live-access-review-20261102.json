@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "national-nfrdi-nsap-atlas-live-access-review-20261102",
+  "reviewedOn": "2026-11-02",
+  "nationalStep": 483,
+  "phaseId": "national-enabling-source",
+  "question": "What can an ordinary unauthenticated visitor currently verify in the NSAP Interactive Atlas, and can its live explorer provide freshwater fish records for Bangwit?",
+  "status": "public-site-and-guest-region-explorer-verified;database-date-visible;freshwater-biome-filter-under-validation;no-export-or-dataset-acquired;research-only",
+  "method": {
+    "access": "Read-only browser inspection of the public NSAP home page, public publications listing, region selector, and guest explorer. The user had the NSAP homepage open. The disclaimer was dismissed and CAR selected in the region selector; no credentials or personal details were entered.",
+    "pages": [
+      "https://nsap.nfrdi.da.gov.ph/",
+      "https://nsap.nfrdi.da.gov.ph/select_region",
+      "https://nsap.nfrdi.da.gov.ph/explorer-light"
+    ],
+    "otherView": "NSAP public publications listing opened through the site’s navigation; exact route not recorded.",
+    "selectedRegion": "CAR",
+    "accountState": "Guest; no sign-in performed",
+    "databaseUpdateShown": "2025-12-31",
+    "observedExplorerMenu": [
+      "Active Landing Sites",
+      "Region Quick Info",
+      "Regional Landing Sites Data",
+      "Catch Data by Species",
+      "Catch Data by Gear",
+      "Top List",
+      "Fisheries Management Areas"
+    ],
+    "speciesCatchMenuState": {
+      "perRegion": "available in menu",
+      "perLandingSite": "available in menu",
+      "perProvince": "marked under validation",
+      "perMunicipality": "marked under validation",
+      "Aquatic Biome": "marked under validation; marine/freshwater suboptions were not opened"
+    },
+    "attemptedDataView": "Selecting Start data exploring reached the region selector. Selecting CAR opened /explorer-light. The first explorer DOM read timed out while the page was initializing; a later read showed the guest dashboard and its menu. No catch report was opened, exported, or downloaded.",
+    "limits": [
+      "The guest explorer exposes catch-monitoring navigation, not a complete ecological fish-distribution inventory.",
+      "The site’s landing-page notice says the displayed values represent latest available catches for monitored fisheries and do not reflect total fishery production.",
+      "The landing page shows the Species reference table as Available soon and Landing Centers as current to April 23, 2026; neither display supplies a verified freshwater species checklist.",
+      "The site footer says all content is public domain unless otherwise stated and links CC BY-NC-SA 4.0; the relationship between these statements and item-level catch-data reuse was not resolved.",
+      "A visible catch count or landing-center label would not establish a fish’s capture waterbody, ecological presence, abundance, habitat, or diet."
+    ]
+  },
+  "findings": {
+    "landingPage": "The public home page describes an NSAP Interactive Atlas and shows Quick Reports, an Interactive Map, downloadable reports, a Species reference card marked Available soon, and a Landing Centers reference dated April 23, 2026.",
+    "catchScopeNotice": "The displayed-data notice limits the dashboard to latest available catches for monitored fisheries and says it does not reflect total production.",
+    "guestExplorer": "The public explorer allowed a visitor to select CAR without signing in. Its interface shows a database update date of December 31, 2025 and catch-report menus by species and gear, alongside active landing sites and region quick information.",
+    "freshwaterAvailability": "The catch-by-species menu visibly marks the Aquatic Biome category as under validation. The nested Marine/Freshwater controls were not opened, and no freshwater-specific data result was verified.",
+    "reuse": "No item-specific catch-record reuse or republication terms were verified. Public visibility and the footer statements are not treated as a data-reuse grant."
+  },
+  "interpretation": {
+    "atlasRole": "Useful public discovery/context for monitored fisheries and landing-site catch reporting. It is not presently a verified freshwater occurrence/checklist source for Bangwit.",
+    "dataModelBoundary": "Keep NSAP landed catch, landing site, fishing ground, capture origin, ecological occurrence, and current presence as distinct evidence fields. Never transfer a landing-site catch to a named river or lake without a source-supported capture-origin crosswalk.",
+    "reuseBoundary": "Do not copy/export data into Bangwit until current item-level access and reuse terms are clear."
+  },
+  "disposition": {
+    "speciesOrOccurrenceAssertionsAdded": 0,
+    "catchOrAbundanceRowsAdded": 0,
+    "waterbodyLinksAdded": 0,
+    "geometryAdded": 0,
+    "dietClaimsAdded": 0,
+    "appRowsAdded": 0,
+    "datasetAcquired": false,
+    "loginOrAccountCreated": false,
+    "exportOrDownloadPerformed": false,
+    "publicationApproval": false,
+    "nextAction": "Continue Quezon/CALABARZON primary freshwater-survey discovery independently. Revisit NSAP when the freshwater biome menu is validated or NFRDI provides a station-resolved inland extract and written item-level reuse terms."
+  },
+  "sources": [
+    {
+      "sourceId": "nfrdi-nsap-interactive-atlas-launch",
+      "url": "https://nsap.nfrdi.da.gov.ph/",
+      "supports": "Observed public landing-page notice, guest region selector, CAR explorer menu, displayed database date, and visible under-validation state for the Aquatic Biome catch category."
+    },
+    {
+      "sourceId": "nfrdi-inland-fisheries-nsap-expansion-2025",
+      "url": "https://nfrdi.da.gov.ph/2025/08/28/feature-sustaining-inland-fisheries-da-nfrdis-science-driven-solutions/",
+      "supports": "Separate official reporting of inland NSAP monitoring; it does not confirm that those outputs are included in the guest Atlas."
+    }
+  ]
+}
