@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "calabarzon-tayabas-river-taxonomy-crosswalk-20261102",
+  "reviewedOn": "2026-11-02",
+  "regionId": "0400000000",
+  "waterbodyId": "ph-wb-tayabas-river",
+  "sourceId": "paller-2013-tayabas-river-fish",
+  "question": "Do the 2010 Tayabas River survey's taxon labels align with current fish-name backbones, and are any labels ambiguous?",
+  "sourceContext": {
+    "bibliography": "Paller, V. G. V., Corpuz, M. N. C., & Ocampo, P. P. (2013). Diversity and distribution of freshwater fish assemblages in Tayabas River, Quezon (Philippines). Philippine Journal of Science, 142(1), 55-67.",
+    "primaryArticle": "https://philjournalsci.dost.gov.ph/diversity-and-distribution-of-freshwater-fish-assemblages-in-tayabas-river-quezon-philippines/",
+    "primaryPdf": "https://philjournalsci.dost.gov.ph/images/pdf/pjs_pdf/vol142no1/pdf/Diversity_and_Distribution_of_Freshwater_Fish.pdf",
+    "studyScope": "The paper reports a 2010 survey of nine stations across upstream, midstream and downstream reaches, sampled during three-day periods in February and September. It reports 15 taxa in aggregate. It does not provide a station-by-taxon-to-current-municipality crosswalk in the reviewed table text.",
+    "sourceTextCaveat": "Only minimal name-status deltas are recorded here. The complete species table and its abundance/station cells are not reproduced. The text extraction reads one pipefish label as Dorichthys martensii; direct PDF download was blocked by an anti-bot challenge, so that spelling was not visually verified from a locally rendered page.",
+    "seasonConflict": "The article assigns February to wet season and September to dry season, while also describing November-April as the dry period. Season-specific results remain unmapped to months."
+  },
+  "taxonomyReferences": [
+    {
+      "provider": "GBIF Backbone Taxonomy, species matching API v1",
+      "documentation": "https://techdocs.gbif.org/en/openapi/v1/species",
+      "queryEndpoint": "https://api.gbif.org/v1/species/match",
+      "checkedOn": "2026-11-02",
+      "queryMode": "strict exact-name matching",
+      "sourceLabelQueries": 15,
+      "responses": 15,
+      "localRawDirectory": "raw/calabarzon-tayabas-colxr-crosswalk-20261102/",
+      "localRawManifest": "raw/calabarzon-tayabas-colxr-crosswalk-20261102/manifest.json",
+      "localRawManifestSha256": "2a81d54d47dfe0c45a494ca8bb0922d0c5138d52166c9e957423ee5f094eb3d5",
+      "limits": [
+        "The GBIF Backbone is continuously maintained; this match snapshot is not tied to a fixed release.",
+        "A strict name match does not validate the source authors' fish identification, voucher, locality, habitat, or collection status."
+      ]
+    },
+    {
+      "provider": "Eschmeyer's Catalog of Fishes, California Academy of Sciences",
+      "catalogEntryForBinotatus": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=31005",
+      "catalogEntryForPipefish": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=32640",
+      "catalogVersion": "Online version updated 2026-08-13",
+      "accessReview": "Search-indexed catalog excerpts were available; direct page open returned HTTP 403.",
+      "role": "Independent nomenclatural cross-check only; not local occurrence evidence or specimen validation."
+    }
+  ],
+  "findings": {
+    "sourceTaxonLabelCount": 15,
+    "exactSpeciesRankMatchesMarkedAcceptedByGbif": 12,
+    "sourceNamesMarkedSynonymByGbif": 1,
+    "unmatchedBinomialLikeSourceStrings": 1,
+    "genusLevelSourceLabelsNotResolvedToSpecies": 1,
+    "minimalDeltas": [
+      {
+        "sourceName": "Puntius binotatus",
+        "gbifUsageKey": 2363839,
+        "gbifStatus": "SYNONYM",
+        "gbifAcceptedUsageKey": 2363847,
+        "acceptedNameCandidate": "Barbodes binotatus",
+        "catalogCrossCheck": "The Catalog of Fishes lists the current status as valid as Barbodes binotatus.",
+        "decision": "Keep the article's historical name attached to the 2010 source record; retain Barbodes binotatus only as a nomenclatural candidate. This does not re-identify specimens."
+      },
+      {
+        "sourceTextName": "Dorichthys martensii",
+        "sourceSpellingVisuallyVerified": false,
+        "strictGbifMatch": "No usage returned for the text-extracted spelling.",
+        "nearbyGbifCandidate": {
+          "queriedName": "Doryichthys martensii",
+          "usageKey": 2332730,
+          "status": "ACCEPTED"
+        },
+        "catalogCurrentNameForDoryichthysEntry": "Microphis martensii",
+        "catalogSource": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=32640",
+        "gbifCandidateCrossCheck": "A strict GBIF query for Microphis martensii returned no usage, while Doryichthys martensii matched as accepted.",
+        "decision": "Do not silently correct the source label or choose a current combination. Resolve the table spelling visually and reconcile the different backbone treatments before any species-level projection."
+      },
+      {
+        "sourceName": "Sycopus sp.",
+        "gbifResult": "No strict usage returned for the genus-plus-spelling qualifier.",
+        "decision": "Retain as an unresolved genus-level source label; do not assign it to a species."
+      }
+    ],
+    "otherExactMatches": "The remaining 12 source-name queries returned accepted species-rank GBIF usages with confidence values of 98-99. They remain name matches only; individual source table cells are not transcribed here."
+  },
+  "rightsAndEvidenceDecision": {
+    "journalAccess": "PJS describes its online journal as open access, but its current author guide says accepted authors sign a copyright-transfer form.",
+    "itemSpecificReuseLicenseFound": false,
+    "itemSpecificReuseAgreementVerified": false,
+    "fullTableReproduced": false,
+    "stationOrAbundanceCellsCopied": false,
+    "speciesAssertionsAdded": 0,
+    "historicalOccurrenceRowsAdded": 0,
+    "publicAppRowsAdded": 0,
+    "currentPresenceInferred": false,
+    "absenceInferred": false,
+    "geometryAdded": false,
+    "dietOrBaitClaimsAdded": false,
+    "publicationApproval": false,
+    "reason": "The crosswalk identifies nomenclatural candidates but cannot verify fish specimens, site-level allocation, current presence, or source reuse rights. The historical survey remains research context only."
+  },
+  "decision": "taxonomy-only-review-complete;historical-2010-source;12-exact-accepted-name-matches;one-synonym;one-unmatched-source-string;one-genus-only-label;doryichthys-microphis-backbone-disagreement;reuse-rights-unresolved;no-app-admission",
+  "nextActions": [
+    "Seek item-specific reuse terms before extracting the source table into a project checklist.",
+    "Ask the UPLB Museum of Natural History whether this survey's deposited vouchers have catalog numbers and a public record crosswalk; no inquiry has been sent.",
+    "If permission and voucher identities are confirmed, reconcile the pipefish spelling and taxonomy, then map only source-supported reach/date cells without inferring current presence."
+  ]
+}

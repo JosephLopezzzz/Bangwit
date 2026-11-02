@@ -2216,21 +2216,22 @@
         "https://philjournalsci.dost.gov.ph/images/pdf/pjs_pdf/vol142no1/pdf/Diversity_and_Distribution_of_Freshwater_Fish.pdf",
         "https://repository.seafdec.org.ph/handle/10862/2236?show=full"
       ],
-      "role": "Primary 2010 Tayabas River freshwater survey. Official full text is now readable; the 15-species result remains a historical aggregate and table rows are held pending item-specific rights and taxonomy review.",
-      "checkedOn": "2026-10-31",
+      "role": "Primary 2010 Tayabas River freshwater survey. Official full text is readable; its aggregate remains historical, a taxonomy-only name crosswalk is recorded, and the source table remains held pending item-specific reuse rights.",
+      "checkedOn": "2026-11-02",
       "access": {
         "status": "official-publisher-pdf-readable-in-web-text-viewer;full-text-reviewed-online;no-local-binary;item-specific-reuse-rights-unverified",
         "reviewFiles": [
           "calabarzon-coverage-source-sweep.json",
           "calabarzon-tayabas-river-source-review-20261024.json",
-          "calabarzon-tayabas-river-fulltext-review-20261031.json"
+          "calabarzon-tayabas-river-fulltext-review-20261031.json",
+          "calabarzon-tayabas-river-taxonomy-crosswalk-20261102.json"
         ],
         "filterCorrectionFile": "gbif-actinopterygii-retired-key-correction-20261024.json"
       },
       "reuse": {
         "metadata": "Bibliographic citation, publisher full-text access, survey methods and historical aggregate facts only; no table content reproduced.",
         "raw": "On 2026-10-31 the official PJS PDF rendered in the journal web text viewer. No local binary was retained. The 2026-10-24 direct-download failure is superseded for access status only.",
-        "content": "PJS describes the online journal as open access, while its current author guide says accepted authors sign a Copyright Transfer form. No item-specific license or agreement for this 2013 article was verified; its species table remains untranscribed and no species assertions are admitted. The earlier legacy GBIF locality-zero query used deleted taxon key 204 and remains invalid; see gbif-actinopterygii-retired-key-correction-20261024.json."
+        "content": "PJS describes the online journal as open access, while its current author guide says accepted authors sign a Copyright Transfer form. No item-specific license or agreement for this 2013 article was verified; its species table remains untranscribed and no species assertions are admitted. A separate taxonomy-only crosswalk records a synonym and source-name conflicts without validating fish identifications. The earlier legacy GBIF locality-zero query used deleted taxon key 204 and remains invalid; see gbif-actinopterygii-retired-key-correction-20261024.json."
       },
       "publicationApproval": false,
       "researchStatus": "primary-full-text-and-methods-reviewed;historical-aggregate-only;species-table-held-rights-and-taxonomy-unresolved;february-season-label-conflict;no-current-presence-inferred;legacy-gbif-query-invalidated-retired-key",
@@ -19858,6 +19859,100 @@
         "The announced watershed spans Catanauan, General Luna, Buenavista, and Lopez; the public source does not supply a boundary or river route.",
         "The linked newsletter mirror corroborates the announcement text but does not provide the complete WCVA report or data-reuse permission."
       ]
+    },
+    {
+      "id": "gbif-calabarzon-quezon-river-exact-waterbody-screen-20261102",
+      "title": "GBIF Occurrence API exact waterBody screen for six Quezon rivers",
+      "provider": "Global Biodiversity Information Facility",
+      "url": "https://techdocs.gbif.org/en/openapi/v1/occurrence",
+      "additionalUrls": [
+        "https://api.gbif.org/v1/occurrence/search?country=PH&taxonKey=8VR36&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&waterBody=Tayabas%20River&limit=1",
+        "https://api.gbif.org/v1/occurrence/search?country=PH&taxonKey=8VR36&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&waterBody=Sakang%20River&limit=1",
+        "https://api.gbif.org/v1/occurrence/search?country=PH&taxonKey=8VR36&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&waterBody=Tagkawayan%20River&limit=1",
+        "https://api.gbif.org/v1/occurrence/search?country=PH&taxonKey=8VR36&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&waterBody=Macalelon%20River&limit=1",
+        "https://api.gbif.org/v1/occurrence/search?country=PH&taxonKey=8VR36&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&waterBody=Catanauan%20River&limit=1",
+        "https://api.gbif.org/v1/occurrence/search?country=PH&taxonKey=8VR36&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&waterBody=Tignoan%20River&limit=1"
+      ],
+      "role": "Six bounded exact-waterBody-text searches for CoL XR Actinopterygii records in named Quezon rivers; not an exhaustive inventory or biological absence assessment.",
+      "checkedOn": "2026-11-02",
+      "access": {
+        "status": "six-http-200-exact-waterBody-queries-zero-results;no-absence-inferred",
+        "reviewFiles": [
+          "calabarzon-quezon-river-gbif-waterbody-screen-20261102.json"
+        ],
+        "rawPath": "raw/calabarzon-quezon-river-gbif-screen-20261102/",
+        "responses": 6,
+        "responseBytesEach": 77,
+        "responseSha256Each": "f80b70551e630bf92a4f2d087f549acf03489da01c639913da79a1d4f34520b9",
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "taxonKey": "8VR36"
+      },
+      "reuse": {
+        "metadata": "Public GBIF occurrence API documentation and exact query filters recorded.",
+        "raw": "Six empty count responses are retained in ignored local research storage and pinned by SHA-256.",
+        "content": "Zero exact-field results do not establish fish absence and do not override source-specific historical surveys."
+      },
+      "publicationApproval": false,
+      "researchStatus": "bounded-exact-waterbody-zero-search;no-biological-absence-inferred",
+      "sourceYear": null
+    },
+    {
+      "id": "gbif-calabarzon-tayabas-river-taxonomy-match-20261102",
+      "title": "GBIF Backbone exact-name taxonomy matches for the 2010 Tayabas River survey",
+      "provider": "Global Biodiversity Information Facility",
+      "url": "https://techdocs.gbif.org/en/openapi/v1/species",
+      "additionalUrls": [
+        "https://api.gbif.org/v1/species/match"
+      ],
+      "role": "Bounded exact-name nomenclatural crosswalk for source taxon labels; not independent specimen identification or river occurrence evidence.",
+      "checkedOn": "2026-11-02",
+      "access": {
+        "status": "15-strict-source-name-queries-http-200;12-accepted-species-rank;one-synonym;one-unmatched-string;one-genus-level-unresolved",
+        "reviewFiles": [
+          "calabarzon-tayabas-river-taxonomy-crosswalk-20261102.json"
+        ],
+        "rawPath": "raw/calabarzon-tayabas-colxr-crosswalk-20261102/",
+        "responseManifestSha256": "2a81d54d47dfe0c45a494ca8bb0922d0c5138d52166c9e957423ee5f094eb3d5"
+      },
+      "reuse": {
+        "metadata": "GBIF Backbone exact-match results are recorded for the query date; no occurrence records were requested for the taxonomy review.",
+        "raw": "Matching responses and a manifest are retained in ignored local research storage.",
+        "content": "Name matches do not verify specimen identity, local presence, station assignment, current occurrence, or the article's item-level reuse rights. Re-check before public use."
+      },
+      "publicationApproval": false,
+      "researchStatus": "taxonomy-only;one-synonym-and-source-string-conflicts-held;no-occurrence-inference",
+      "license": "GBIF terms apply to API use; derived-data redistribution not separately approved for this project.",
+      "licenseUrl": "https://www.gbif.org/terms",
+      "sourceYear": 2026
+    },
+    {
+      "id": "calacademy-catalog-tayabas-river-crosswalk-20261102",
+      "title": "Eschmeyer's Catalog of Fishes cross-check for selected Tayabas River survey names",
+      "provider": "California Academy of Sciences, Institute for Biodiversity Science and Sustainability",
+      "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/",
+      "additionalUrls": [
+        "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=31005",
+        "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=32640"
+      ],
+      "role": "Independent nomenclatural cross-check for two source-name deltas; not occurrence evidence or independent validation of the 2010 specimens.",
+      "checkedOn": "2026-11-02",
+      "access": {
+        "status": "search-indexed-catalog-excerpts-reviewed;direct-entry-open-returned-403",
+        "reviewFiles": [
+          "calabarzon-tayabas-river-taxonomy-crosswalk-20261102.json"
+        ],
+        "catalogVersion": "Online version updated 2026-08-13"
+      },
+      "reuse": {
+        "metadata": "Only current-name status and historical combination facts are noted; no descriptions or images are reproduced.",
+        "raw": "No local Catalog page snapshots were retained.",
+        "content": "Catalog nomenclature cannot resolve the source table's text-layer spelling or validate a specimen identification; source-specific redistribution terms were not reviewed."
+      },
+      "publicationApproval": false,
+      "researchStatus": "selected-current-name-crosscheck;pipefish-backbone-disagreement-held;research-only",
+      "license": "Not assessed for redistribution; consult Catalog of Fishes terms before public reuse.",
+      "licenseUrl": "https://researcharchive.calacademy.org/research/ichthyology/catalog/",
+      "sourceYear": 2026
     }
   ],
   "sourcePolicy": {
