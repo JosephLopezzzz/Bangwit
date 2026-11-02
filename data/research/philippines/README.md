@@ -1917,3 +1917,11 @@ Added distinct research-only leads for Pagbilao mangroves (historical fish-study
 See `calabarzon-pagbilao-mangrove-fish-evidence-review-20261102.json`, [Pinto 1987](https://link.springer.com/article/10.1007/BF00008709), [Rönnbäck et al. 1999](https://repository.seafdec.org.ph/handle/10862/1849), [IIED 1997](https://www.iied.org/8095iied), [SEARCA thesis abstract](https://www.searca.org/pubs/abstracts-theses-dissertations/database/view?absid=675), and the [BMB eFOI response page](https://www.foi.gov.ph/requests/species-in-palsabangon-mangrove-forest-in-pagbilao-quezon/).
 
 **Next:** seek authorized copies and exact station/voucher details, retry the BMB attachment through its public portal, and find official site-boundary sources before joining or mapping these leads.
+
+### National rollout step 491: Pagbilao historical gut-content thesis leads — 2 November 2026
+
+The official DLSU repository identifies Veronica Julia J. Leonardo’s 1984 B.S. thesis, *Gut content of some Mangrove fishes from Pagbilao, Quezon* (TU03117), as a print-format record of 78 leaves in the DLSU archive; the thesis is not available online and the page has no abstract or feeding results. Pinto (1987) cites a separate S. M. Meijar 1984 thesis on gut contents of five Pagbilao fish species, 51 pages; its exact repository record was not found in this bounded search. Keep the two theses distinct.
+
+Registered two research-only diet-source leads and linked them to the historical Pagbilao mangrove fish-study locality. No prey item, diet claim, species assertion, occurrence, geometry, bait suggestion, or public app row was added. CALABARZON remains at 156 leads with 183 distinct direct source references and 650 registered sources. See `calabarzon-pagbilao-mangrove-fish-diet-thesis-review-20261102.json`, [Leonardo thesis catalog record](https://animorepository.dlsu.edu.ph/etd_bachelors/244/), and [Pinto 1987](https://link.springer.com/article/10.1007/BF00008709).
+
+**Next:** only use species-specific diet information after authorized full-text review verifies the fish, sample, place/date, gut-content method, prey labels, uncertainty, and reuse terms; keep those results separate from bait advice.
