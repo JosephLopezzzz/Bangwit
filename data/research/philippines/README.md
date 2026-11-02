@@ -1899,3 +1899,11 @@ DOST-STII's SPHERES bibliography cites a 2009 conference abstract titled “Eval
 Registered one research-only abstract citation. No waterbody lead or link, species/occurrence assertion, geometry, or public app row was added. CALABARZON remains at 153 research leads (89 river/system/basin units), 174 distinct direct source references, and 640 registered sources. See `calabarzon-malagaylay-unidentified-goby-abstract-review-20261102.json`, the [DOST-STII bibliography](https://spheres.dost.gov.ph/images/issues/spheresDecember2018.pdf), and the [metadata-only conference entry](https://www.researchgate.net/publication/324106672_Evaluation_of_Some_Biological_Parameters_of_an_Unidentified_Goby_Fish_Collected_from_Malagaylay_Quezon_Province).
 
 **Next:** prioritize a recoverable primary survey/report with site, collection-event, taxonomic, and reuse details; seek an official Tayabas copy before attempting any Malagaylay waterbody crosswalk.
+
+### National rollout step 489: Pagbilao rock-goby thesis abstract review — 2 November 2026
+
+The UPLB Knowledge Repository abstract for April Rose M. Sales's 2010 undergraduate thesis reports 20 *Glossogobius celebius* collected in Pagbilao during July 2009 for reproductive-biology analysis. The thesis file is unavailable on the repository page. The abstract gives no named waterbody, station, coordinates, voucher, or reuse license, so this remains historical municipal-level source evidence and does not attach to Pagbilao Bay or another waterbody.
+
+Registered one research-only source. No waterbody lead/link, species or occurrence assertion, geometry, diet claim, or app row was added. CALABARZON remains at 153 research leads (89 river/system/basin units), 174 distinct direct source references, and 641 registered sources. See `calabarzon-pagbilao-glossogobius-celebius-thesis-abstract-review-20261102.json` and the [UPLB repository record](https://www.ukdr.uplb.edu.ph/etd-undergrad/1558/).
+
+**Next:** continue with Quezon sources that name sampled waterbodies and preserve station-level or voucher details; keep Pagbilao municipality, bay, and freshwater sites distinct.
