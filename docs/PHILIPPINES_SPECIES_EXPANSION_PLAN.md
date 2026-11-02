@@ -4263,3 +4263,47 @@ Added one registry source and a short access review. No waterbody links, species
 See the [publisher page](https://limnolfwbiol.com/index.php/LFWB/en/article/view/1498), [DOI](https://doi.org/10.31951/2658-3518-2026-A-3-135), and [review record](../data/research/philippines/national-freshwater-goby-research-synthesis-review-20261102.json).
 
 **Next:** continue primary-source research for freshwater waterbodies. Verify each study's locality, date, methods, identification evidence, and reuse terms independently; do not substitute the synthesis for those records.
+
+### National rollout step 488: Quezon Malagaylay unidentified-goby conference abstract lead — 2 November 2026
+
+DOST-STII's SPHERES bibliography cites a 2009 conference abstract titled “Evaluation of Some Biological Parameters of an Unidentified Goby Fish Collected from Malagaylay, Quezon Province.” The full text was not located, and no source establishes that the named collection locality is Malagaylay Falls or another specific waterbody. The title supplies no species identity, collection date, method, station, voucher, or reuse terms.
+
+Registered one research-only abstract citation. No waterbody lead/link, species or occurrence assertion, geometry, or app row was added. CALABARZON remains at 153 waterbody leads (89 river/system/basin units), 174 direct source references, and 640 registered sources. See `calabarzon-malagaylay-unidentified-goby-abstract-review-20261102.json`, [the DOST-STII bibliography](https://spheres.dost.gov.ph/images/issues/spheresDecember2018.pdf), and [metadata-only conference entry](https://www.researchgate.net/publication/324106672_Evaluation_of_Some_Biological_Parameters_of_an_Unidentified_Goby_Fish_Collected_from_Quezon_Province).
+
+**Next:** seek a recoverable primary survey/report with site, collection-event, taxonomic, and reuse details; seek an official Tayabas copy before making any Malagaylay waterbody crosswalk.
+
+### National rollout step 489: Quezon Pagbilao rock-goby thesis abstract review — 2 November 2026
+
+The UPLB Knowledge Repository abstract for April Rose M. Sales's 2010 undergraduate thesis reports 20 *Glossogobius celebius* collected in Pagbilao during July 2009 for reproductive-biology analysis. The thesis file is unavailable; the abstract names no waterbody, station, coordinates, voucher, or reuse license. This is historical municipal-level source evidence only and is not attached to Pagbilao Bay or a freshwater site.
+
+Registered one research-only source. No waterbody lead/link, species or occurrence assertion, geometry, diet claim, or app row was added. CALABARZON remains at 153 waterbody leads (89 river/system/basin units), 174 direct source references, and 641 registered sources. See `calabarzon-pagbilao-glossogobius-celebius-thesis-abstract-review-20261102.json` and the [UPLB repository record](https://www.ukdr.uplb.edu.ph/etd-undergrad/1558/).
+
+**Next:** continue with Quezon sources that name sampled waterbodies and preserve station-level or voucher details; keep Pagbilao municipality, bay, and freshwater sites distinct.
+
+### National rollout step 490: Quezon Pagbilao mangrove fish-source and site-identity review — 2 November 2026
+
+Historical publisher abstracts report fish surveys in mangroves described at Pagbilao: Pinto (1987) and Pinto (1988) each report an aggregate 128 species; Rönnbäck et al. (1999) describe four small mangrove microhabitats and name three fish-community taxa in its abstract. These do not provide a complete station-resolved checklist or current presence. GBIF Backbone matching returned one accepted fuzzy match, one exact accepted name, and one source name treated as a synonym; these remain taxonomy proposals, not specimen validations.
+
+Added research-only leads for Pagbilao mangroves (historical fish-study locality), Pagbilao Experimental Mangrove Forest, and Palsabangon Mangrove Forest. The names were not crosswalked to each other, a bay, creek, river, or boundary. SEARCA's Palsabangon thesis abstract concerns plants only. A BMB eFOI page shows an approved request and an attachment title, but retrieval returned 503/403; attachment contents were not reviewed. Registered seven source records and three wetland leads. CALABARZON now has 156 leads (89 river/system/basin units), 181 direct source references, and 648 registered sources. No species or occurrence assertion, catch row, geometry, diet/bait claim, or public app row was added; public admission remains false.
+
+See `calabarzon-pagbilao-mangrove-fish-evidence-review-20261102.json`, [Pinto 1987](https://link.springer.com/article/10.1007/BF00008709), [Rönnbäck et al. 1999](https://repository.seafdec.org.ph/handle/10862/1849), [IIED 1997](https://www.iied.org/8095iied), [SEARCA thesis abstract](https://www.searca.org/pubs/abstracts-theses-dissertations/database/view?absid=675), and [the BMB eFOI response page](https://www.foi.gov.ph/requests/species-in-palsabangon-mangrove-forest-in-pagbilao-quezon/).
+
+**Next:** seek authorized copies and exact station/voucher details, retry the BMB attachment through its public portal, and find official site-boundary sources before joining or mapping these leads.
+
+### National rollout step 491: Pagbilao historical gut-content thesis leads — 2 November 2026
+
+The official DLSU repository identifies Veronica Julia J. Leonardo's 1984 B.S. thesis, *Gut content of some Mangrove fishes from Pagbilao, Quezon* (TU03117), as a print-format record of 78 leaves in the DLSU archive; the thesis is not available online and the page has no abstract or feeding results. Pinto (1987) cites a separate S. M. Meijar 1984 thesis on gut contents of five Pagbilao fish species, 51 pages; its exact repository record was not found in the bounded search. The theses remain distinct.
+
+Registered two research-only diet-source leads and linked them to the historical Pagbilao mangrove fish-study locality. No prey item, diet claim, species assertion, occurrence, geometry, bait suggestion, or public app row was added. CALABARZON remains at 156 leads, 183 direct source references, and 650 registered sources. See `calabarzon-pagbilao-mangrove-fish-diet-thesis-review-20261102.json`, [Leonardo's thesis catalog record](https://animorepository.dlsu.edu.ph/etd_bachelors/244/), and [Pinto 1987](https://link.springer.com/article/10.1007/BF00008709).
+
+**Next:** only use species-specific diet information after authorized full-text review verifies the fish, sample, place/date, gut-content method, prey labels, uncertainty, and reuse terms; keep results separate from bait advice.
+
+### National rollout step 492: Philippine dalag and Nile tilapia natural-diet cross-study review — 2 November 2026
+
+Cross-reviewed four existing Philippine primary study records for *Channa striata* and *Oreochromis niloticus* across Lake Mainit, Lake Wood, Pampanga River at Cabiao, and Lake Manguao. Lake Mainit reports shrimp and fish as broad food categories for *C. striata* but does not identify the fish prey; Cabiao reports unspecified whole prey at one unnamed site; Lake Wood reports algae and insects in its limited *C. striata* sample. None of these reviewed records identifies a conspecific prey, so cannibalism is not established. Nile tilapia stomach-content/report evidence includes cyanobacteria/algae, plant particles and phytoplankton in Lake Manguao/Cabiao, plus fish remains in the seven-stomach Lake Wood record. Insects and shrimp for unresolved *Oreochromis* sp. are not transferred to *O. niloticus*.
+
+Differences in source dates, methods, sites, sample sizes, incomplete taxon identification, and two source-count/date conflicts prevent a pooled or universal diet profile. Exact items absent from one study are not treated as absent from the species' diet. Item-specific reuse is restricted, ambiguous, or unresolved across the four source records; publication approval remains false.
+
+Added `national-dalag-tilapia-site-diet-cross-study-review-20261102.json` and a README receipt only. Registry remains at 650; no new source record, waterbody lead, species/diet/occurrence assertion, geometry, bait recommendation, or public-app row was added. See the [Lake Mainit publisher record](https://journal.usep.edu.ph/index.php/Southeastern_Philippines_Journal/article/view/135), the [Lake Wood NFRDI article](https://nfrdi.da.gov.ph/tpjf/vol32_2/shortcomm_gonzaga_torino_et_al_32220240026.pdf), the [Cabiao survey](https://www.fisheriesjournal.com/archives/2019/vol7issue5/PartA/7-4-47-858.pdf), and the [Lake Manguao project report](https://www.conservationleadershipprogramme.org/wp-content/uploads/2024/12/0347311_Philippines_FinalReport_endemic-fishes.pdf).
+
+**Next:** continue the region-by-region freshwater and coastal source sweep. Any future public diet card needs a resolved fish identity and waterbody, method/date/size/sample context, source and rights review; keep documented natural diet separate from bait advice.
