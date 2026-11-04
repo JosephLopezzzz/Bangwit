@@ -1,0 +1,175 @@
+{
+  "schemaVersion": 1,
+  "batchId": "calabarzon-cas-provider-voucher-followup-20261105",
+  "reviewedOn": "2026-11-05",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "purpose": "Cross-check selected historical Molawin Creek and Pansipit River CAS-SU fish records against the provider collection portal, disambiguate overlapping CAS and SU catalog sequences, and preserve the records as research-only evidence.",
+  "source": {
+    "id": "calacademy-cas-ichthyology-gbif-dataset-efh2ib",
+    "provider": "California Academy of Sciences, Department of Ichthyology",
+    "datasetKey": "5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+    "datasetLicense": "CC0-1.0 as displayed in GBIF dataset metadata",
+    "providerPortal": "https://specify-portal.calacademy.org/ich/",
+    "providerHelp": "https://researcharchive.calacademy.org/research/ichthyology/collection/help.asp",
+    "gbifDataset": "https://www.gbif.org/dataset/5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+    "rightsCaveat": "The GBIF dataset metadata displays CC0-1.0. This record-level research review does not approve additional public-app publication."
+  },
+  "queries": [
+    {
+      "system": "California Academy of Sciences public Specify collection search",
+      "method": "GET",
+      "expression": "catalogNumber:(26511 OR 30720 OR 35958 OR 35959)",
+      "url": "https://specify-portal.calacademy.org/ich/select?indent=on&version=2.2&fq=&rows=500&fl=*%2Cscore&wt=json&q=catalogNumber%3A%2826511%20OR%2030720%20OR%2035958%20OR%2035959%29",
+      "resultCount": 8,
+      "resultAssessment": "Four CAS-SU lots match the Philippine taxon/locality candidates. Four CAS-ICH records reuse the same numeric catalog values for unrelated taxa and localities and are excluded. The collection code, not catalog number alone, disambiguates these lots."
+    },
+    {
+      "system": "GBIF Occurrence API",
+      "method": "GET",
+      "url": "https://api.gbif.org/v1/occurrence/search?datasetKey=5d6c10bd-ea31-4363-8b79-58c96d859f5b&country=PH&basisOfRecord=PRESERVED_SPECIMEN&waterBody=Molawin%20Creek&limit=100",
+      "waterBody": "Molawin Creek",
+      "resultCount": 80,
+      "assessment": "The query contains species-rank records and genus/family-level rows. Only the three selected Gulaphallus mirabilis catalog lots are summarized here; the other rows are not being promoted by this follow-up."
+    },
+    {
+      "system": "GBIF Occurrence API",
+      "method": "GET",
+      "url": "https://api.gbif.org/v1/occurrence/search?datasetKey=5d6c10bd-ea31-4363-8b79-58c96d859f5b&country=PH&basisOfRecord=PRESERVED_SPECIMEN&waterBody=Pansipit%20River&limit=100",
+      "waterBody": "Pansipit River",
+      "resultCount": 1,
+      "assessment": "One CAS-SU record, catalog 26511, is returned."
+    },
+    {
+      "system": "iDigBio Search API v2",
+      "method": "GET",
+      "query": {
+        "waterbody": "Pansipit River"
+      },
+      "url": "https://search.idigbio.org/v2/search/records/?rq=%7B%22waterbody%22%3A%22Pansipit%20River%22%7D&limit=100",
+      "itemCount": 1,
+      "assessment": "The result has the same CAS-SU collection code, catalog number, scientific name and event month as GBIF, so it is an aggregator view of the same catalog lot, not an independent specimen record. iDigBio reports that its index stopped updating on 2026-05-08; this is a frozen-index cross-check."
+    }
+  ],
+  "records": [
+    {
+      "waterbodyId": "ph-wb-molawin-makiling-creek",
+      "waterbodyName": "Molawin Creek",
+      "gbifId": 3426421104,
+      "gbifOccurrenceUrl": "https://www.gbif.org/occurrence/3426421104",
+      "occurrenceId": "urn:catalog:CAS:SU(ICH):35958",
+      "providerRecordId": "33364b21-257d-11ed-aace-005056be1b7a",
+      "collectionCode": "CAS-SU",
+      "catalogNumber": "35958",
+      "sourceName": "Gulaphallus mirabilis Herre, 1925",
+      "providerName": "Gulaphallus mirabilis",
+      "country": "Philippines",
+      "state": null,
+      "providerLocality": "Molawin Cr., Los Banos, Luzon I., Philippines",
+      "gbifWaterBody": "Molawin Creek",
+      "eventDate": "1928-03",
+      "providerFieldNumber": "DVV III-28",
+      "georeferenceUncertaintyM": 3973,
+      "coordinatesRetained": false,
+      "reviewNote": "Provider and GBIF taxon strings and collection identity agree. This is a historical locality record; no exact point or present-day presence is inferred."
+    },
+    {
+      "waterbodyId": "ph-wb-molawin-makiling-creek",
+      "waterbodyName": "Molawin Creek",
+      "gbifId": 3426424115,
+      "gbifOccurrenceUrl": "https://www.gbif.org/occurrence/3426424115",
+      "occurrenceId": "urn:catalog:CAS:SU(ICH):35959",
+      "providerRecordId": "33364ec5-257d-11ed-aace-005056be1b7a",
+      "collectionCode": "CAS-SU",
+      "catalogNumber": "35959",
+      "sourceName": "Gulaphallus mirabilis Herre, 1925",
+      "providerName": "Gulaphallus mirabilis",
+      "country": "Philippines",
+      "state": null,
+      "providerLocality": "Molawin Cr., Los Banos, Luzon I., Philippines",
+      "gbifWaterBody": "Molawin Creek",
+      "eventDate": "1927-04",
+      "providerFieldNumber": "DM IV-27MC",
+      "georeferenceUncertaintyM": 3973,
+      "coordinatesRetained": false,
+      "reviewNote": "Provider and GBIF taxon strings and collection identity agree. This is a historical locality record; no exact point or present-day presence is inferred."
+    },
+    {
+      "waterbodyId": "ph-wb-molawin-makiling-creek",
+      "waterbodyName": "Molawin Creek",
+      "gbifId": 3426419841,
+      "gbifOccurrenceUrl": "https://www.gbif.org/occurrence/3426419841",
+      "occurrenceId": "urn:catalog:CAS:SU(ICH):30720",
+      "providerRecordId": "32d2999b-257d-11ed-aace-005056be1b7a",
+      "collectionCode": "CAS-SU",
+      "catalogNumber": "30720",
+      "sourceName": "Gulaphallus mirabilis Herre, 1925",
+      "providerName": "Gulaphallus mirabilis",
+      "country": "Philippines",
+      "state": "Laguna",
+      "providerLocality": "Molawin Creek",
+      "gbifWaterBody": "Molawin Creek",
+      "eventDate": null,
+      "providerFieldNumber": "Z130720",
+      "georeferenceUncertaintyM": null,
+      "coordinatesRetained": false,
+      "alreadyInAppEvidence": true,
+      "reviewNote": "Existing evidence record cross-checked against the provider lot; neither the provider result nor GBIF supplies a collection date in the reviewed fields."
+    },
+    {
+      "waterbodyId": "ph-wb-pansipit-river",
+      "waterbodyName": "Pansipit River",
+      "gbifId": 3426424621,
+      "gbifOccurrenceUrl": "https://www.gbif.org/occurrence/3426424621",
+      "idigbioRecordId": "62d39a3e-3013-44cb-bae5-0c510649b600",
+      "occurrenceId": "urn:catalog:CAS:SU(ICH):26511",
+      "providerRecordId": "32756fc6-257d-11ed-aace-005056be1b7a",
+      "collectionCode": "CAS-SU",
+      "catalogNumber": "26511",
+      "sourceName": "Toxotes chatareus (Hamilton, 1822)",
+      "providerName": "Toxotes chatareus",
+      "acceptedNameCrosscheck": {
+        "status": "valid",
+        "authority": "Eschmeyer's Catalog of Fishes",
+        "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=38048"
+      },
+      "country": "Philippines",
+      "state": "Batangas",
+      "providerLocality": "Lemery, P.I.",
+      "gbifWaterBody": "Pansipit River",
+      "idigbioWaterBody": "Pansipit River",
+      "eventDate": "1923-01",
+      "providerFieldNumber": "DVV I-23",
+      "georeferenceUncertaintyM": 4515,
+      "coordinatesRetained": false,
+      "candidateCrosswalk": {
+        "sourceId": "jamandre-2023-plazi-freshwater",
+        "candidateId": "jamandre-2023-plazi-freshwater:c86aeedbcd20c1a27c16",
+        "relation": "The checklist candidate cites CAS-SU 26510-11; this provider-verified lot is CAS-SU 26511. The candidate's Philippines-wide river/stream statement is not treated as a site-specific modern observation."
+      },
+      "reviewNote": "The provider confirms the taxon, CAS-SU collection code, Lemery locality and month-level date. The Pansipit River waterBody value is present in GBIF/iDigBio but was not returned in the provider portal fields reviewed. The 4515 m uncertainty prevents exact-point use."
+    }
+  ],
+  "decision": {
+    "status": "provider-catalog-followup-complete;historical-research-only",
+    "molawinDateFollowup": "Two additional CAS-SU Gulaphallus mirabilis lots extend the source-reported historical collection months to April 1927 and March 1928. They do not change the existing app projection or prove current presence.",
+    "pansipitVoucherLead": "One CAS-SU Toxotes chatareus lot is cross-identified by catalog number and collection code in GBIF, iDigBio and the CAS provider portal. The aggregator views refer to the same lot. It strengthens a historical Pansipit River research lead only.",
+    "publicSpeciesRowsAdded": 0,
+    "publicOccurrenceRowsAdded": 0,
+    "mapPointsAdded": 0,
+    "coordinatesRetained": false,
+    "publicationApproval": false,
+    "reasonsHeld": [
+      "The source registry has not approved additional CAS record publication in Bangwit, despite the CC0 label shown in GBIF dataset metadata.",
+      "Collection records and waterBody/locality text are historical specimen evidence, not present-day occurrence, abundance, catchability or a complete waterbody inventory.",
+      "Generalized georeference uncertainty (3973 m for the dated Molawin lots; 4515 m for the Pansipit lot) is unsuitable for fishing-point geometry.",
+      "The CAS and Stanford University catalog sequences overlap numerically; collection code must remain attached to each catalog number."
+    ]
+  },
+  "nonClaims": [
+    "No specimen was physically examined or reidentified.",
+    "No current presence, population size, native status, habitat condition, legal catchability, safety status or diet is inferred.",
+    "The 15 species-rank GBIF Molawin rows are not a complete Molawin Creek checklist; this review selects only three Gulaphallus lots.",
+    "The CAS provider portal's public record search is corroboration, not a separate reuse grant."
+  ]
+}
