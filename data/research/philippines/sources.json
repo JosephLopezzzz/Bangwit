@@ -3,7 +3,7 @@
   "checkedOn": "2026-11-04",
   "status": "research-only-source-registry",
   "scope": "National acquisition references, freshwater spatial-source leads, CALABARZON/Central Luzon identity/source leads, and Mindanao regional freshwater survey reviews. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 655,
+  "sourceCount": 656,
   "sources": [
     {
       "id": "denr-bmb-philippines-7th-national-report-cbd",
@@ -5885,12 +5885,12 @@
       "provider": "Provincial Government of Cavite / Office of the Provincial Agriculturist, Trece Martires City",
       "url": "https://cavite.gov.ph/wp-content/uploads/2026/04/CEP_2023.pdf",
       "additionalUrls": [],
-      "role": "Official provincial fisheries-reporting context: Table 4.29 lists nine municipal-catch common labels with seasonal columns; Tables 4.30-4.31 give separate municipal/commercial reporting but no taxon-by-capture-site records. Table 4.29 includes non-fish catch groups, and the commercial narrative total conflicts with Table 4.31.",
-      "checkedOn": "2026-11-01",
+      "role": "Official provincial fisheries-reporting context: Table 4.29 lists nine municipal-catch common labels with seasonal columns; Tables 4.30-4.31 give separate municipal/commercial reporting but no taxon-by-capture-site records. Table 4.29 includes non-fish catch groups, and the commercial narrative total conflicts with Table 4.31. The same official profile also names Labac among Cavite's six major rivers and supplies Tables 2.15-2.16 on major watersheds and classified surface-water bodies; Table 2.15 omits a Labac/Labac-Alemang-named watershed, while Table 2.16 retains unresolved slash-delimited river-name strings. This is waterbody context only, not fish evidence or reusable geometry.",
+      "checkedOn": "2026-11-04",
       "sourceYear": 2023,
       "access": {
-        "status": "Official provincial PDF; indexed full text for Tables 4.29-4.31 and surrounding source attribution reviewed. No local copy or full seasonal table extract retained.",
-        "reviewFiles": ["calabarzon-cavite-ecological-profile-2023-fisheries-review-20261101.json"]
+        "status": "Official provincial PDF; indexed full text for Tables 4.29-4.31 and source attribution reviewed. For the waterbody crosswalk, ordinary HTTPS retrieval succeeded; printed page 26 (PDF page 46) was visually reviewed and indexed text for Tables 2.14-2.16 checked. The temporary PDF and page renders remain in local untracked tmp storage and are not part of this commit.",
+        "reviewFiles": ["calabarzon-cavite-ecological-profile-2023-fisheries-review-20261101.json", "calabarzon-cavite-ecological-profile-2023-waterbody-crosswalk-review-20261104.json"]
       },
       "reuse": {
         "metadata": "Tables credit the Office of the Provincial Agriculturist, Trece Martires City. No item-specific reuse license was verified.",
@@ -5898,14 +5898,18 @@
         "content": "Keep only minimal source-reported catch-label context in research. Do not assign scientific taxa, individual waterbodies, current presence, trends, catchability, diet or legal status. No public app content is approved."
       },
       "publicationApproval": false,
-      "researchStatus": "official-provincial-fishery-context;common-labels-only;mixed-fish-and-nonfish-catch;commercial-total-conflict;zero-assertions",
+      "researchStatus": "official-provincial-fishery-and-waterbody-context;surface-water-classification;watershed-list-crosswalk-gap;common-labels-only;research-only",
       "license": null,
       "caveats": [
         "Table 4.29 is province-level and does not map labels or month categories to a specific waterbody or municipality.",
         "The title 'fish species' includes squid, blue crab and Acetes catch labels.",
         "The commercial production narrative and Table 4.31 have conflicting totals and municipal values.",
         "The report does not expose specimen-level identification, vouchers, or a monthly sampling method in the reviewed tables.",
-        "Do not treat seasonal labels as a forecast, fishing regulation, or present-day catch recommendation."
+        "Do not treat seasonal labels as a forecast, fishing regulation, or present-day catch recommendation.",
+        "The profile names Labac as a major river but its Table 2.15 list of 12 major watersheds does not identify Labac or Labac-Alemang; Caisobo is not assumed equivalent.",
+        "Table 2.16 retains slash-delimited river labels and does not resolve their components as aliases or separate channel identities.",
+        "Class C is a beneficial-use classification and is not current water-quality, safety, legal-access, or fish-presence evidence.",
+        "The profile tables provide no river-channel geometry, CRS, or station-resolved biology."
       ]
     },
     {
@@ -20512,6 +20516,39 @@
         "The partial contributor line does not establish complete authorship or author roles.",
         "The listing gives no sampling dates, sites/reaches, method, fish names, vouchers, or taxonomic determinations.",
         "The name Labac River does not resolve whether the study sampled a channel reach or the broader Labac-Alemang watershed."
+      ]
+    },
+    {
+      "id": "dost-stii-psta-2013-labac-crustacean-bioindicator",
+      "title": "Crustaceans as bioindicators of water in Labac River of Cavite",
+      "provider": "Department of Science and Technology - Science and Technology Information Institute (DOST-STII); Transactions of the National Academy of Science and Technology",
+      "url": "https://stii.dost.gov.ph/images/jdownloads/pdf_files/psta/PSTA_2013_July-Dec.pdf",
+      "additionalUrls": [],
+      "role": "Official DOST STII proceedings-index abstract for a historical crustacean and water-characterization study of Labac River. The abstract reports eight Western Labac and nine Eastern Labac sampling sites but does not name crustacean taxa or expose station-level results; it is not fish occurrence evidence.",
+      "checkedOn": "2026-11-04",
+      "sourceYear": 2013,
+      "citation": "Dimero, D. N., and Rint, J. R. (2013 listing). Crustaceans as bioindicators of water in Labac River of Cavite. Transactions of the National Academy of Science and Technology, 33(1), 91, item 0148. DOST STII PSTA July-December 2013 index.",
+      "access": {
+        "status": "Official DOST STII-hosted indexed proceedings text and author-supplied abstract reviewed; full proceedings article and underlying data not retrieved.",
+        "localRawSnapshot": null,
+        "reviewFiles": ["calabarzon-labac-2013-crustacean-bioindicator-abstract-review-20261104.json"],
+        "fullTextRetrieved": false
+      },
+      "reuse": {
+        "metadata": "The bibliographic entry and abstract are hosted in the official DOST STII publication index. No item-specific open license or redistribution permission was verified.",
+        "raw": "No local copy of the proceedings PDF or underlying sampling table is retained.",
+        "content": "Retain only minimal, attributed abstract-level research context. Do not infer or publish species, station-specific occurrences, current conditions, or public-app records."
+      },
+      "publicationApproval": false,
+      "researchStatus": "2013-labac-crustacean-bioindicator-abstract;17-sites-aggregate;taxa-and-station-crosswalk-unavailable;not-fish-evidence;research-only",
+      "license": null,
+      "licenseUrl": null,
+      "caveats": [
+        "The abstract concerns crustaceans and water-quality bioindication, not a fish inventory.",
+        "It gives only aggregate Western/Eastern Labac site counts and no crustacean names, exact station names, coordinates, specimen vouchers, or per-site results.",
+        "Western/Eastern Labac are not crosswalked to Labac-Alemang watershed boundaries or the 2014 CvSU fish-presentation sample area.",
+        "Historical abstract-level measurements are not current water quality, safety, fish presence, catchability, or legal advice.",
+        "The proceedings item and underlying content have not been reviewed for item-specific reuse permission."
       ]
     }
   ],

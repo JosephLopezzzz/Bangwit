@@ -1,0 +1,51 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "calabarzon-cavite-ecological-profile-2023-waterbody-crosswalk-review-20261104",
+  "checkedOn": "2026-11-04",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "regionName": "Region IV-A (CALABARZON)",
+  "waterbodyId": "ph-wb-labac-river-cavite",
+  "status": "official-provincial-waterbody-name-and-classification-context;watershed-table-does-not-crosswalk-labac-basin;research-only",
+  "question": "What does the Cavite Ecological Profile 2023 establish about Labac River identity, tributary labels and watershed coverage?",
+  "source": {
+    "sourceId": "cavite-ecological-profile-2023-fisheries",
+    "title": "Cavite Ecological Profile 2023",
+    "provider": "Provincial Government of Cavite; the reviewed waterbody table credits the Office of the Provincial Environment and Natural Resources Officer, Cavite",
+    "url": "https://cavite.gov.ph/wp-content/uploads/2026/04/CEP_2023.pdf",
+    "locators": [
+      "Printed page 24, narrative and Table 2.14, Major Rivers in Cavite",
+      "Printed page 26, Tables 2.15 and 2.16"
+    ],
+    "access": "Official PDF obtained through ordinary HTTPS and visually reviewed at printed page 26 (PDF page 46); indexed text for the same section was also checked. The temporary PDF and rendered pages remain in local untracked tmp storage and are not part of this commit.",
+    "reuse": "No item-specific open license or redistribution permission was verified. Only limited source-attributed findings are recorded; no table image or full table transcription is retained."
+  },
+  "findings": {
+    "majorRiverNarrative": "The profile names Labac River as one of six major Cavite rivers and says 12 major river watersheds occur within the province.",
+    "watershedTable": {
+      "table": "Table 2.15, Major River Watersheds in Cavite",
+      "finding": "The table lists 12 entries, including Caisobo River Watershed, but does not list a watershed named Labac or Labac-Alemang. This conflicts with the narrative's major-river framing and does not establish that Caisobo is the Labac-Alemang watershed.",
+      "decision": "Do not use this table as a complete watershed denominator, geometry, or Labac-Alemang name crosswalk."
+    },
+    "surfaceWaterClassification": {
+      "table": "Table 2.16, List of Surface Water Bodies by Receiving Water Body, Province of Cavite: 2022",
+      "finding": "The table lists 'Labac/ Labac-Balsahan River' as a Class C principal river. In the Labac River group it lists Haboling River and Caisobo/Obispo River under Indang, and 'Saging/ Cyalinmang/ Alemang/ Kay-Allamang River' under Naic as a Class C tributary.",
+      "nameHandling": "The slash-delimited strings are retained verbatim. Their components are not promoted to aliases or merged waterbodies without an independent name and route crosswalk.",
+      "classificationMeaning": "The profile defines Class C in terms of beneficial uses, including fishery-water use for propagation and growth of fish and other aquatic resources. This is a classification entry, not evidence of a sampled fish, current water quality, safety, access, or fishing permission."
+    },
+    "geometry": "No route geometry, CRS, station coordinates, or channel boundary is provided by the reviewed tables."
+  },
+  "decision": {
+    "sourceReferenceAddedToExistingLabacLead": true,
+    "newWaterbodyLeadsAdded": 0,
+    "aliasesPromoted": 0,
+    "watershedEquivalenceAssertionsAdded": 0,
+    "speciesAssertionsAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "geometryAdded": false,
+    "currentWaterQualityOrSafetyClaimAdded": false,
+    "publicAppRowsAdded": 0,
+    "publicationApproval": false
+  },
+  "nextAction": "Seek a source-backed route and watershed crosswalk for Labac River, Labac-Alemang River Watershed, Caisobo/Obispo River and the Naic slash-delimited tributary label. Keep the Table 2.15 watershed denominator unresolved and continue the fish-study retrieval separately."
+}
