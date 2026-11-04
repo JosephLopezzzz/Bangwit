@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "calabarzon-labac-caisobo-denr-fmb-watershed-geometry-review-20261104",
+  "checkedOn": "2026-11-04",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "regionName": "Region IV-A (CALABARZON)",
+  "waterbodyIds": [
+    "ph-wb-labac-river-cavite"
+  ],
+  "status": "official-denr-fmb-polygons-returned-for-exact-names;watershed-unit-and-area-crosswalk-unresolved;rights-unverified;research-only",
+  "question": "Does the DENR FMB Redelineated Watersheds Feb2025 polygon layer provide validated boundaries for the DA/CvSU-reported Labac-Alemang and Caisobo units?",
+  "sourceId": "denr-fmb-redelineated-watersheds-feb2025-labac-caisobo",
+  "source": {
+    "title": "Redelineated Watersheds Feb2025 (CWS_Merge_2425_WGS)",
+    "provider": "Department of Environment and Natural Resources, Forest Management Bureau (FMB)",
+    "serviceItemId": "259b471fa28b48a2a5abf5cae94db8fb",
+    "serviceUrl": "https://fmbfsd.denr.gov.ph/server/rest/services/Hosted/Redelineated_Watersheds_Feb2025/FeatureServer",
+    "layerUrl": "https://fmbfsd.denr.gov.ph/server/rest/services/Hosted/Redelineated_Watersheds_Feb2025/FeatureServer/0",
+    "layerId": 0,
+    "layerName": "CWS_Merge_2425_WGS",
+    "serviceNameDateText": "Feb2025",
+    "exactDelineationDate": null,
+    "geometryType": "esriGeometryPolygon",
+    "nativeSpatialReferenceWkid": 32651,
+    "maximumRecordCount": 2000,
+    "supportedQueryFormats": [
+      "JSON",
+      "geoJSON",
+      "PBF"
+    ],
+    "description": "Blank in reviewed REST service and layer metadata.",
+    "copyrightText": "Blank in reviewed REST service and layer metadata.",
+    "layerMetadataEndpoint": "https://fmbfsd.denr.gov.ph/server/rest/services/Hosted/Redelineated_Watersheds_Feb2025/FeatureServer/0/metadata"
+  },
+  "access": {
+    "method": "Reviewed the official DENR FMB REST directory, service metadata, and polygon layer fields; queried exact w_name values with returnGeometry=true in the native spatial reference.",
+    "query": {
+      "where": "w_name IN ('Caisobo River Watershed','Labac-Alemang River Watershed')",
+      "outFields": [
+        "objectid",
+        "w_name",
+        "region",
+        "area_ha",
+        "area",
+        "provinces",
+        "ws_name",
+        "ws_name_up",
+        "nis",
+        "nia_moa"
+      ],
+      "returnGeometry": true,
+      "outputSpatialReferenceWkid": 32651,
+      "returnedFeatureCount": 2
+    },
+    "rawGeometryRetained": false,
+    "licenseOrRedistributionTermsFound": false
+  },
+  "features": [
+    {
+      "objectId": 54,
+      "watershedName": "Caisobo River Watershed",
+      "region": "CALABARZON",
+      "areaHa": 1819.151416,
+      "polygonAreaCalculatedFromReturnedRingHa": 1819.151,
+      "nis": "Culong-Culong RIS",
+      "niaMoa": "2002",
+      "ringCount": 1,
+      "ringCoordinateCount": 220,
+      "bboxWgs84": [
+        120.84072,
+        14.09911,
+        120.93072,
+        14.23814
+      ],
+      "sourceMatch": "The name matches the current DA 2022 watershed-name field but the polygon area is far below the DA row’s 9,917 ha aggregate; unit equivalence is not established."
+    },
+    {
+      "objectId": 89,
+      "watershedName": "Labac-Alemang River Watershed",
+      "region": "CALABARZON",
+      "areaHa": 4046.106539,
+      "polygonAreaCalculatedFromReturnedRingHa": 4046.107,
+      "nis": "Sahing RIS",
+      "niaMoa": "2002",
+      "ringCount": 1,
+      "ringCoordinateCount": 258,
+      "bboxWgs84": [
+        120.80518,
+        14.13541,
+        120.92352,
+        14.30541
+      ],
+      "sourceMatch": "The name matches the DA/RPFP and CvSU study label, but the polygon area is below the CvSU 2019 study-area value of 9,086 ha; unit equivalence is not established."
+    }
+  ],
+  "findings": {
+    "layerEvidence": "The official service marks layer 0 as a polygon feature layer in EPSG:32651, with fields including w_name, region, area_ha, nis and nia_moa, and supports Query.",
+    "returnedGeometry": "Exact-name queries returned one polygon for each label. Calculated ring areas match area_ha to rounding; this is an arithmetic check, not validation of boundary meaning or lineage.",
+    "scopeConflict": "DA 2022 describes a 9,917 ha aggregate management unit named Caisobo with Labac-Alemang and Caisobo listed as subwatersheds; the 2019 CvSU Labac-Alemang study reports 9,086 ha. The FMB layer returns 1,819.151 ha and 4,046.107 ha for the exact-name polygons. These different areas could represent different delineation units, but the layer supplies no crosswalk to resolve them.",
+    "irrigationAttributes": "The feature attributes associate Caisobo with Culong-Culong RIS and Labac-Alemang with Sahing RIS. This makes irrigation-catchment scope a plausible interpretation, not a confirmed layer definition.",
+    "sourceLineage": "The layer/service names contain Feb2025, but no precise creation or delineation date, method, input data, positional accuracy, or boundary-version lineage was found in reviewed metadata.",
+    "reuse": "The REST metadata has blank Description and Copyright Text fields; no item-specific open license or reuse permission was found. Queryability alone does not grant redistribution rights."
+  },
+  "decisions": {
+    "sourceRegistered": true,
+    "existingWaterbodySourceAssigned": true,
+    "newWaterbodyLeadsAdded": 0,
+    "riverAliasAdded": false,
+    "geometryRetrievedFromService": true,
+    "localRawGeometryRetained": false,
+    "watershedBoundaryAdopted": false,
+    "speciesAssertionsAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "currentPresenceInferred": false,
+    "publicProjectionAdded": false,
+    "publicationApproval": false
+  },
+  "nextAction": "Request or locate the FMB layer’s full metadata, method/version and reuse terms, then compare its polygons with the official DA/CvSU delineation units. Keep these queryable polygons out of public map layers and do not conflate them with Labac River channel geometry or fish evidence."
+}

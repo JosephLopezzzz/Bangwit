@@ -3,7 +3,7 @@
   "checkedOn": "2026-11-04",
   "status": "research-only-source-registry",
   "scope": "National acquisition references, freshwater spatial-source leads, CALABARZON/Central Luzon identity/source leads, and Mindanao regional freshwater survey reviews. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 661,
+  "sourceCount": 663,
   "sources": [
     {
       "id": "denr-bmb-philippines-7th-national-report-cbd",
@@ -20732,6 +20732,83 @@
         "Western/Eastern Labac are not crosswalked to Labac-Alemang watershed boundaries or the 2014 CvSU fish-presentation sample area.",
         "Historical abstract-level measurements are not current water quality, safety, fish presence, catchability, or legal advice.",
         "The proceedings item and underlying content have not been reviewed for item-specific reuse permission."
+      ]
+    },
+    {
+      "id": "denr-fmb-redelineated-watersheds-feb2025-labac-caisobo",
+      "title": "Redelineated Watersheds Feb2025 (CWS_Merge_2425_WGS)",
+      "provider": "Department of Environment and Natural Resources, Forest Management Bureau (FMB) hosted FeatureServer",
+      "url": "https://fmbfsd.denr.gov.ph/server/rest/services/Hosted/Redelineated_Watersheds_Feb2025/FeatureServer",
+      "additionalUrls": [
+        "https://fmbfsd.denr.gov.ph/server/rest/services/Hosted/Redelineated_Watersheds_Feb2025/FeatureServer/0"
+      ],
+      "role": "Officially hosted, publicly queryable polygon layer. A CALABARZON query returned 29 watershed features; exact normalized-name screening identified possible matches to several existing waterbody leads, while exact Caisobo and Labac-Alemang features were reviewed separately. All remain research-only candidates because delineation lineage, date, feature-to-waterbody relationship and reuse terms are unresolved.",
+      "checkedOn": "2026-11-04",
+      "access": {
+        "status": "Official DENR FMB REST service and polygon layer metadata reviewed; exact-name feature query returned both named polygons and geometry. No raw geometry was retained locally.",
+        "serviceItemId": "259b471fa28b48a2a5abf5cae94db8fb",
+        "layerId": 0,
+        "layerName": "CWS_Merge_2425_WGS",
+        "geometryType": "esriGeometryPolygon",
+        "spatialReferenceWkid": 32651,
+        "supportsQuery": true,
+        "descriptionField": "Blank in reviewed REST metadata.",
+        "copyrightTextField": "Blank in reviewed REST metadata.",
+        "reviewFiles": [
+          "calabarzon-labac-caisobo-denr-fmb-watershed-geometry-review-20261104.json",
+        "calabarzon-denr-fmb-watersheds-lead-name-crosswalk-review-20261104.json"
+        ],
+        "featureGeometryReturned": true,
+        "localRawGeometryRetained": false
+      },
+      "reuse": {
+        "metadata": "The layer can be queried, but the REST service/layer exposes no description or copyright text and no item-specific license or redistribution terms were found.",
+        "raw": "No service response or geometry file retained.",
+        "content": "Do not reproduce or publish the polygons or derived boundaries until source lineage, delineation date/accuracy, feature scope, and reuse permission are confirmed. A land watershed polygon is not a river-channel route, municipal-water boundary, fish occurrence, access point, or current safety information."
+      },
+      "publicationApproval": false,
+      "researchStatus": "official-denr-fmb-feature-layer-reviewed;exact-name-candidate-polygons-queried;area-conflict-with-other-source-units;lineage-and-reuse-unverified;research-only",
+      "license": null,
+      "licenseUrl": null,
+      "caveats": [
+        "The FeatureServer service name contains “Feb2025,” but the reviewed layer metadata does not specify its creation date, delineation date, method, source lineage, or positional accuracy.",
+        "The exact-name features have NIS attributes (Culong-Culong RIS and Sahing RIS), and their polygon areas are much smaller than the DA aggregate and CvSU study-area figures respectively. The sources do not establish that the area figures refer to directly comparable units.",
+        "The layer area_ha values match areas calculated from returned polygon rings; this checks arithmetic only, not feature identity or authoritative boundary scope.",
+        "The layer does not establish a Caisobo/Labac-Alemang river-channel alias, full drainage-basin extent, fish presence, species completeness, water quality, legal access, or fishing safety.",
+        "No species assertion, occurrence, app-ready boundary, or public map geometry is admitted."
+      ]
+    },
+    {
+      "id": "denr-calabarzon-labac-alemang-draft-iwmp-workshop",
+      "title": "DENR CALABARZON draft Integrated Watershed Management Plan review/workshop announcement",
+      "provider": "Department of Environment and Natural Resources (DENR) CALABARZON, Conservation and Development Division",
+      "url": "https://calabarzon.denr.gov.ph/news-events/denr-calabarzon-conducts-workshop-for-the-integrated-watershed-management-plans/",
+      "role": "Official indexed announcement says DENR CALABARZON facilitated review/workshop of draft Integrated Watershed Management Plans for Labac-Alemang, Lagnas and Macalelon watersheds, and a watershed characterization/vulnerability assessment for Camachile Ylang-Ylang. This is a document-retrieval lead only; the draft plans and any boundary annexes were not retrieved.",
+      "checkedOn": "2026-11-04",
+      "access": {
+        "status": "Official DENR CALABARZON search-index summary reviewed; direct page retrieval returned HTTP 403. No attachment, plan text or GIS data was retrieved.",
+        "directPageHttpStatus": 403,
+        "indexedExcerptReviewed": true,
+        "fullPlanRetrieved": false,
+        "attachmentsRetrieved": false,
+        "reviewFiles": [
+          "calabarzon-labac-alemang-denr-iwmp-retrieval-lead-review-20261104.json"
+        ]
+      },
+      "reuse": {
+        "metadata": "No draft plan or underlying map/data was reviewed; item-specific access and reuse terms are unknown.",
+        "raw": "No local copy retained.",
+        "content": "Use only as a retrieval lead. Do not infer watershed area, boundary, species, fish presence, access, safety or legal status from the announcement."
+      },
+      "publicationApproval": false,
+      "researchStatus": "official-denr-calabarzon-announcement-indexed;draft-iwmp-existence-and-retrieval-lead;page-403;no-plan-or-geometry-reviewed;research-only",
+      "license": null,
+      "licenseUrl": null,
+      "caveats": [
+        "The indexed announcement does not expose a publication/event date that was independently verified in this review.",
+        "The announcement says draft plans were reviewed in a workshop; it does not provide the plans, boundary geometry, methods, versions, positional accuracy, fish surveys or reuse terms.",
+        "A draft IWMP is a watershed management source, not a river channel, aquatic species inventory, current safety/advisory, legal-access, or fishing source.",
+        "No agency communication or access request was sent."
       ]
     }
   ],

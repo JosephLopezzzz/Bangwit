@@ -1,0 +1,439 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "calabarzon-denr-fmb-watersheds-lead-name-crosswalk-review-20261104",
+  "checkedOn": "2026-11-04",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "regionName": "Region IV-A (CALABARZON)",
+  "status": "official-fmb-region-query-reviewed;29-watershed-features;normalized-name-candidates-screened;no-alias-or-geometry-adopted;research-only",
+  "question": "Can the official DENR FMB redelineated-watershed service rapidly identify watershed geometry candidates among existing CALABARZON waterbody research leads?",
+  "sourceId": "denr-fmb-redelineated-watersheds-feb2025-labac-caisobo",
+  "query": {
+    "url": "https://fmbfsd.denr.gov.ph/server/rest/services/Hosted/Redelineated_Watersheds_Feb2025/FeatureServer/0/query",
+    "where": "region='CALABARZON'",
+    "outFields": [
+      "objectid",
+      "w_name",
+      "region",
+      "area_ha",
+      "nis",
+      "nia_moa"
+    ],
+    "returnGeometry": false,
+    "returnedFeatureCount": 29
+  },
+  "matchingMethod": "Compared each source w_name with current scope waterbody name/aliases after removing diacritics, punctuation, and generic words river/watershed/system/basin. This is a name-only screening rule, not a spatial, hydrological, or identity crosswalk.",
+  "normalizedNameCandidates": [
+    {
+      "objectId": 10,
+      "name": "Macalelon Watershed",
+      "areaHa": 3797.818518,
+      "nis": "Macalelon SRIP",
+      "waterbodyLeadCandidates": [
+        {
+          "id": "ph-wb-macalelon-river-quezon",
+          "name": "Macalelon River"
+        }
+      ]
+    },
+    {
+      "objectId": 66,
+      "name": "Maragondon River Watershed",
+      "areaHa": 7678.305938,
+      "nis": "Balayungan RIS",
+      "waterbodyLeadCandidates": [
+        {
+          "id": "ph-wb-maragondon-river",
+          "name": "Maragondon River"
+        }
+      ]
+    },
+    {
+      "objectId": 212,
+      "name": "Zapote Watershed",
+      "areaHa": 1606.77888379,
+      "nis": "Molino",
+      "waterbodyLeadCandidates": [
+        {
+          "id": "ph-wb-zapote-river",
+          "name": "Zapote River"
+        }
+      ]
+    },
+    {
+      "objectId": 92,
+      "name": "San Cristobal River Watershed",
+      "areaHa": 12247.25009,
+      "nis": "Cabuyao East PIS, San Cristobal and Diezmo RIS",
+      "waterbodyLeadCandidates": [
+        {
+          "id": "ph-wb-san-cristobal-river",
+          "name": "San Cristobal River"
+        }
+      ]
+    },
+    {
+      "objectId": 88,
+      "name": "Canas River Watershed",
+      "areaHa": 9985.829638,
+      "nis": "Plucena-Bayan RIS",
+      "waterbodyLeadCandidates": [
+        {
+          "id": "ph-wb-canas-river",
+          "name": "Canas River"
+        }
+      ]
+    },
+    {
+      "objectId": 93,
+      "name": "San Juan River Watershed",
+      "areaHa": 18651.95183,
+      "nis": "San Juan RIS",
+      "waterbodyLeadCandidates": [
+        {
+          "id": "ph-wb-san-juan-calabarzon-river",
+          "name": "San Juan River"
+        },
+        {
+          "id": "ph-wb-san-juan-river-cavite",
+          "name": "San Juan River"
+        }
+      ]
+    },
+    {
+      "objectId": 94,
+      "name": "Sta. Cruz River Watershed",
+      "areaHa": 10785.00432,
+      "nis": "Sta Cruz RIS",
+      "waterbodyLeadCandidates": [
+        {
+          "id": "ph-wb-santa-cruz-laguna-river",
+          "name": "Sta Cruz River"
+        }
+      ]
+    },
+    {
+      "objectId": 207,
+      "name": "Timalan Watershed",
+      "areaHa": 1102.36721111,
+      "nis": "Tres Cruses Dam",
+      "waterbodyLeadCandidates": [
+        {
+          "id": "ph-wb-timalan-river",
+          "name": "Timalan River"
+        }
+      ]
+    }
+  ],
+  "features": [
+    {
+      "objectId": 158,
+      "name": "Imus-Embarcadero Watershed",
+      "areaHa": 1596.1182116,
+      "nis": "Embarcadero Dam",
+      "niaMoa": "2002",
+      "normalizedNameCandidates": []
+    },
+    {
+      "objectId": 159,
+      "name": "Imus-Julain Watershed",
+      "areaHa": 1372.05108916,
+      "nis": "Julain Dam",
+      "niaMoa": "2002",
+      "normalizedNameCandidates": []
+    },
+    {
+      "objectId": 160,
+      "name": "Imus-Luksuhin Watershed",
+      "areaHa": 1340.70758476,
+      "nis": "Luksuhin",
+      "niaMoa": "2002",
+      "normalizedNameCandidates": []
+    },
+    {
+      "objectId": 161,
+      "name": "Imus-Makuling Watershed",
+      "areaHa": 2567.52336408,
+      "nis": "Makuling",
+      "niaMoa": "2002",
+      "normalizedNameCandidates": []
+    },
+    {
+      "objectId": 9,
+      "name": "Mayor Watershed",
+      "areaHa": 4614.646956,
+      "nis": "Mayor RIS",
+      "niaMoa": "2019",
+      "normalizedNameCandidates": []
+    },
+    {
+      "objectId": 10,
+      "name": "Macalelon Watershed",
+      "areaHa": 3797.818518,
+      "nis": "Macalelon SRIP",
+      "niaMoa": "2019",
+      "normalizedNameCandidates": [
+        {
+          "id": "ph-wb-macalelon-river-quezon",
+          "name": "Macalelon River"
+        }
+      ]
+    },
+    {
+      "objectId": 164,
+      "name": "Janagdong Watershed",
+      "areaHa": 1201.73435582,
+      "nis": "Hanagdong RIS",
+      "niaMoa": "2002",
+      "normalizedNameCandidates": []
+    },
+    {
+      "objectId": 26,
+      "name": "Malaunod-Quipot Watershed",
+      "areaHa": 20037.45978,
+      "nis": "Malaunod RIS & Quipot irrigation Project",
+      "niaMoa": "2019",
+      "normalizedNameCandidates": []
+    },
+    {
+      "objectId": 24,
+      "name": "Kay-Akle Watershed",
+      "areaHa": 11057.95551,
+      "nis": "Kay-Akle RIS",
+      "niaMoa": "2019",
+      "normalizedNameCandidates": []
+    },
+    {
+      "objectId": 170,
+      "name": "Llano Watershed",
+      "areaHa": 4614.6480521,
+      "nis": "Mayor RIS",
+      "niaMoa": "2002",
+      "normalizedNameCandidates": []
+    },
+    {
+      "objectId": 79,
+      "name": "Ylang-ylang River Watershed",
+      "areaHa": 5177.199527,
+      "nis": "Pasong Kastila Dam, Butas Marcelo Dam, San Agustin Dam, Butas Navarro Dam",
+      "niaMoa": "2002",
+      "normalizedNameCandidates": []
+    },
+    {
+      "objectId": 80,
+      "name": "Lagnas River Watershed",
+      "areaHa": 3574.443743,
+      "nis": "Lagnas RIS",
+      "niaMoa": "2002",
+      "normalizedNameCandidates": []
+    },
+    {
+      "objectId": 172,
+      "name": "Mabacan Watershed",
+      "areaHa": 4819.77739177,
+      "nis": "Mabacan RIS",
+      "niaMoa": "2002",
+      "normalizedNameCandidates": []
+    },
+    {
+      "objectId": 173,
+      "name": "Macabling Watershed",
+      "areaHa": 3602.50978336,
+      "nis": "Laguna FLIS-Macabling RIS",
+      "niaMoa": "2002",
+      "normalizedNameCandidates": []
+    },
+    {
+      "objectId": 54,
+      "name": "Caisobo River Watershed",
+      "areaHa": 1819.151416,
+      "nis": "Culong-Culong RIS",
+      "niaMoa": "2002",
+      "normalizedNameCandidates": []
+    },
+    {
+      "objectId": 66,
+      "name": "Maragondon River Watershed",
+      "areaHa": 7678.305938,
+      "nis": "Balayungan RIS",
+      "niaMoa": "2002",
+      "normalizedNameCandidates": [
+        {
+          "id": "ph-wb-maragondon-river",
+          "name": "Maragondon River"
+        }
+      ]
+    },
+    {
+      "objectId": 68,
+      "name": "Palico River Watershed",
+      "areaHa": 17504.94102,
+      "nis": "Palico RIS",
+      "niaMoa": "2002",
+      "normalizedNameCandidates": []
+    },
+    {
+      "objectId": 212,
+      "name": "Zapote Watershed",
+      "areaHa": 1606.77888379,
+      "nis": "Molino",
+      "niaMoa": "2002",
+      "normalizedNameCandidates": [
+        {
+          "id": "ph-wb-zapote-river",
+          "name": "Zapote River"
+        }
+      ]
+    },
+    {
+      "objectId": 92,
+      "name": "San Cristobal River Watershed",
+      "areaHa": 12247.25009,
+      "nis": "Cabuyao East PIS, San Cristobal and Diezmo RIS",
+      "niaMoa": "2002",
+      "normalizedNameCandidates": [
+        {
+          "id": "ph-wb-san-cristobal-river",
+          "name": "San Cristobal River"
+        }
+      ]
+    },
+    {
+      "objectId": 86,
+      "name": "Balanac River Watershed",
+      "areaHa": 12549.51722,
+      "nis": "Balanac RIS",
+      "niaMoa": "2002",
+      "normalizedNameCandidates": []
+    },
+    {
+      "objectId": 88,
+      "name": "Canas River Watershed",
+      "areaHa": 9985.829638,
+      "nis": "Plucena-Bayan RIS",
+      "niaMoa": "2002",
+      "normalizedNameCandidates": [
+        {
+          "id": "ph-wb-canas-river",
+          "name": "Canas River"
+        }
+      ]
+    },
+    {
+      "objectId": 89,
+      "name": "Labac-Alemang River Watershed",
+      "areaHa": 4046.106539,
+      "nis": "Sahing RIS",
+      "niaMoa": "2002",
+      "normalizedNameCandidates": []
+    },
+    {
+      "objectId": 93,
+      "name": "San Juan River Watershed",
+      "areaHa": 18651.95183,
+      "nis": "San Juan RIS",
+      "niaMoa": "2002",
+      "normalizedNameCandidates": [
+        {
+          "id": "ph-wb-san-juan-calabarzon-river",
+          "name": "San Juan River"
+        },
+        {
+          "id": "ph-wb-san-juan-river-cavite",
+          "name": "San Juan River"
+        }
+      ]
+    },
+    {
+      "objectId": 94,
+      "name": "Sta. Cruz River Watershed",
+      "areaHa": 10785.00432,
+      "nis": "Sta Cruz RIS",
+      "niaMoa": "2002",
+      "normalizedNameCandidates": [
+        {
+          "id": "ph-wb-santa-cruz-laguna-river",
+          "name": "Sta Cruz River"
+        }
+      ]
+    },
+    {
+      "objectId": 152,
+      "name": "Dumacao Watershed",
+      "areaHa": 1246.52128786,
+      "nis": "Dumacao RIS",
+      "niaMoa": "2002",
+      "normalizedNameCandidates": []
+    },
+    {
+      "objectId": 177,
+      "name": "Marikina Watershed",
+      "areaHa": 27896.182758,
+      "nis": "Wawa Dam",
+      "niaMoa": "2002",
+      "normalizedNameCandidates": []
+    },
+    {
+      "objectId": 179,
+      "name": "Mongpong Watershed",
+      "areaHa": 27574.5936328,
+      "nis": "Mongpong RIS",
+      "niaMoa": "2002",
+      "normalizedNameCandidates": []
+    },
+    {
+      "objectId": 197,
+      "name": "San Antonio Watershed",
+      "areaHa": 2297.68004557,
+      "nis": "Sta. Maria RIS",
+      "niaMoa": "2002",
+      "normalizedNameCandidates": []
+    },
+    {
+      "objectId": 207,
+      "name": "Timalan Watershed",
+      "areaHa": 1102.36721111,
+      "nis": "Tres Cruses Dam",
+      "niaMoa": "2002",
+      "normalizedNameCandidates": [
+        {
+          "id": "ph-wb-timalan-river",
+          "name": "Timalan River"
+        }
+      ]
+    }
+  ],
+  "findings": {
+    "candidateRows": 8,
+    "candidateWaterbodyLeadIds": [
+      "ph-wb-macalelon-river-quezon",
+      "ph-wb-maragondon-river",
+      "ph-wb-zapote-river",
+      "ph-wb-san-cristobal-river",
+      "ph-wb-canas-river",
+      "ph-wb-san-juan-calabarzon-river",
+      "ph-wb-san-juan-river-cavite",
+      "ph-wb-santa-cruz-laguna-river",
+      "ph-wb-timalan-river"
+    ],
+    "ambiguousName": "San Juan River Watershed matches two distinct existing waterbody leads with the same name and cannot be assigned from this query alone.",
+    "subwatershedScope": "Four features are explicitly named Imus-Embarcadero, Imus-Julain, Imus-Luksuhin, and Imus-Makuling. They are not merged into the broader Imus River lead.",
+    "unresolvedNames": "The exact-name screen did not link Ylang-ylang River Watershed to the two differently spelled Ylang-ylang/Rio Grande and Ylang-Yang leads; did not link Palico River Watershed to Palico-Lian River; and found no Caisobo or Labac-Alemang channel lead. Non-matches are not evidence that no related waterbody exists.",
+    "irrigationContext": "The queried feature rows carry NIS and NIA_MOA attributes, often naming irrigation systems or dams. Their operational meaning and relationship to the polygon delineations are not documented in the reviewed layer metadata.",
+    "reuseAndGeometry": "This inventory query requested attributes only. It does not validate feature geometry, lineage, positional accuracy, or reuse permission. Queryability alone is not approval to reproduce polygons."
+  },
+  "decisions": {
+    "sourceRegistered": true,
+    "existingLeadNameCandidates": 8,
+    "exactLeadAssignments": 0,
+    "sourceRefsAddedFromNameScreen": 0,
+    "aliasesAdded": 0,
+    "geometryRequested": false,
+    "geometryAdopted": false,
+    "speciesAssertionsAdded": 0,
+    "occurrencesAdded": 0,
+    "publicProjectionAdded": false,
+    "publicationApproval": false
+  },
+  "nextAction": "Resolve the layer’s methods, delineation lineage, feature definitions and reuse terms before querying any additional polygon geometry. Then verify each candidate against an independent watershed boundary or authoritative locality evidence; keep all watershed and channel entities distinct until that crosswalk is supported."
+}
