@@ -4337,3 +4337,13 @@ The report names Palsabangon River and Sukol Creek in the Pagbilao experimental-
 Updated the existing 1997 IIED source review and added two research-only waterway leads: Palsabangon River and Sukol Creek. CALABARZON now has 158 waterbody leads (90 river and basin units; 10 stream leads); the source registry remains at 651. No occurrence/diet assertion, geometry, or public-app row was added. See `calabarzon-pagbilao-1997-fisheries-chapter-review-20261104.json`, the [IIED catalogue page](https://www.iied.org/8095iied), and the [full report](https://www.iied.org/sites/default/files/pdfs/migrate/8095IIED.pdf).
 
 **Next:** continue the CALABARZON inland-water sweep with independently recoverable lake and river surveys; keep the Pinto, Bagarinao, and Ong–Padilla original records as retrieval leads pending full methods and reuse review.
+
+### National rollout step 496: Pinto 1985 dissertation archival access review — 4 November 2026
+
+The official Philippine eLib record hosted by the UP Diliman Main Library confirms M. Leonard Pinto's 1985 PhD dissertation, *Community Structure and Population Dynamics of Mangrove Fishes of Pagbilao, Quezon, Philippines*. The record lists 167 [4] leaves, call number LG 996 1985 Z6 P55, UP Diliman Archives, reference-room use only, and “Digital Copy: Not Available.” DOST-NAST bibliography also cites the dissertation title and UP Diliman affiliation.
+
+This resolves the existence and retrieval location of the historical thesis, not its study methods or findings. It does not show the sampling sites, species table, stomach-content method, prey items, or whether it is the exact source intended by the 1997 report's “Pinta (1985)” table line. The 1996 working paper prints “Pinto (1985),” but the original pages remain unavailable and diet-table attribution is unresolved.
+
+Registered the archival record as one research-only source and linked it to the general Pagbilao mangrove fish-survey locality, without merging it into the experimental-forest, Palsabangon, or Sukol Creek identities. The registry is now at 652 sources; CALABARZON remains at 158 leads. No species, occurrence, diet, geometry, or public-app row was added. See `calabarzon-pagbilao-pinto-1985-dissertation-catalog-review-20261104.json` and the [UP Diliman Archives catalog record](https://www.elib.gov.ph/details.php?uid=20c028b9bcacced43789fe696a9ec5a7).
+
+**Next:** continue the CALABARZON inland-water source sweep; use the call number only as an archival consultation lead if the thesis tables become necessary, and keep the diet table out of public content until the original is reviewed.

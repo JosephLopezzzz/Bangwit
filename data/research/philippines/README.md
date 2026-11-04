@@ -1957,3 +1957,11 @@ Reviewed IIED's official record and full 258-page 1997 report. Chapter 5 identif
 Updated the existing 1997 source and added two research-only waterway leads. CALABARZON now has 158 leads: 90 river/basin units and 10 stream leads. The source registry remains at 651. No taxa, occurrence, diet, geometry, safety, legal, or public-app records were admitted. See `calabarzon-pagbilao-1997-fisheries-chapter-review-20261104.json` and [the IIED report](https://www.iied.org/8095iied).
 
 **Next:** continue the CALABARZON inland-water sweep with independently recoverable lake and river surveys; preserve the unresolved source and name questions.
+
+### National rollout step 496: Pinto 1985 dissertation archival access review — 4 November 2026
+
+The UP Diliman Main Library-hosted Philippine eLib record confirms M. Leonard Pinto's 1985 Pagbilao mangrove-fish PhD dissertation. It lists 167 [4] leaves, call number LG 996 1985 Z6 P55, reference-room use only, and no digital copy. DOST-NAST provides a second bibliographic citation. Neither source provides the dissertation's content.
+
+Added one research-only source and linked it to the broad Pagbilao mangrove survey locality. This confirms where the thesis is cataloged, but not its sampled waterbodies, fish identities, diet data, or its exact relationship to the “Pinta/Pinto (1985)” appendix attribution. Registry: 652; CALABARZON leads: 158. No species, diet, occurrence, geometry, or app row was added. See `calabarzon-pagbilao-pinto-1985-dissertation-catalog-review-20261104.json` and [the catalog record](https://www.elib.gov.ph/details.php?uid=20c028b9bcacced43789fe696a9ec5a7).
+
+**Next:** continue the CALABARZON inland-water source sweep and keep the original diet/table attribution pending archival review.
