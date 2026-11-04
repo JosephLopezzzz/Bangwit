@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "calabarzon-labac-caisobo-watershed-hierarchy-review-20261104",
+  "checkedOn": "2026-11-04",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "regionName": "Region IV-A (CALABARZON)",
+  "waterbodyIds": [
+    "ph-wb-labac-river-cavite"
+  ],
+  "status": "official-watershed-management-crosswalk-reviewed;aggregate-name-change-and-subwatershed-list-documented;channel-alias-unresolved;research-only",
+  "question": "Do official watershed-management tables establish that Labac-Alemang and Caisobo are the same waterbody or resolve the Labac River channel name?",
+  "sources": [
+    {
+      "sourceId": "da-2022-cadp-labac-alemang-caisobo-watershed-crosswalk",
+      "title": "CADP Manual of Operations 2022",
+      "year": 2022,
+      "url": "https://ncisrd.da.gov.ph/wp-content/uploads/2023/01/CADP-Manops-fin-for-online.pdf",
+      "table": "Region IV-A row: Previous Name / Watershed Name / 143 Priority Critical Watersheds Supporting NIS (subwatersheds)",
+      "reportedRow": {
+        "previousName": "Labac-Alemang-Caisobo River Watershed",
+        "currentName": "Caisobo River Watershed",
+        "areaHa": 9917,
+        "municipalities": [
+          "Indang",
+          "Maragondon",
+          "Mendez",
+          "Naic",
+          "Tagaytay City",
+          "Tanza",
+          "Trece Martires City"
+        ],
+        "namedSubwatersheds": [
+          "Labac-Alemang River Watershed",
+          "Caisobo River Watershed"
+        ]
+      }
+    },
+    {
+      "sourceId": "calabarzon-rpfp-2017-2046-critical-watersheds-table-3-11",
+      "title": "Regional Physical Framework Plan 2017-2046",
+      "year": 2020,
+      "postedCopyDate": "2020-12-22",
+      "url": "https://calabarzon.depdev.gov.ph/wp-content/uploads/2020/12/RPFPDec222020.pdf",
+      "table": "Table 3.11, Critical Watersheds Supporting National Irrigation System",
+      "reportedRows": [
+        {
+          "watershed": "Caisobo River Watershed",
+          "supportedFacility": "Culong-culong Dam",
+          "municipality": "Indang",
+          "irrigationServiceAreaHa": 611,
+          "municipalityLabelInOtherProfile": "Mendez-Nuñez",
+          "municipalityLabelInDA": "Mendez"
+        },
+        {
+          "watershed": "Labac-Alemang River Watershed",
+          "supportedFacility": "Sahing Dam",
+          "municipality": "Naic",
+          "irrigationServiceAreaHa": 467
+        },
+        {
+          "watershed": "Labac-Alemang River Watershed",
+          "supportedFacility": "Bancud Dam",
+          "municipality": "Indang",
+          "irrigationServiceAreaHa": 506
+        }
+      ],
+      "planHorizon": "2017-2046"
+    },
+    {
+      "sourceId": "cavite-ecological-profile-2023-fisheries",
+      "title": "Cavite Ecological Profile 2023",
+      "year": 2023,
+      "url": "https://cavite.gov.ph/wp-content/uploads/2026/04/CEP_2023.pdf",
+      "tables": [
+        "2.15",
+        "2.16"
+      ],
+      "reportedContext": "Table 2.15 names Caisobo River Watershed, gives approximate area 99.1721 sq km and a matching seven-unit municipality roster, with the profile writing Mendez-Nuñez where the DA table writes Mendez. Table 2.16 separately lists Caisobo/Obispo River as a minor river under a Labac River heading; this channel-level table does not define watershed boundaries."
+    },
+    {
+      "sourceId": "cvsu-2019-labac-alemang-pollution-load-study",
+      "title": "Estimation of Pollution Load in the Rivers of Labac-Alemang Watershed, Cavite, Philippines",
+      "year": 2019,
+      "url": "https://ovpre.cvsu.edu.ph/crj/articles/1.%20Estimation%20of%20Pollution%20Load%20in%20the%20Rivers%20of%20Labac-Alemang%20Watershed%2C%20Cavite%2C%20Philippines-2019.pdf",
+      "reportedContext": "Reports 9,086 ha and describes two cities plus Mendez, Indang, Tanza and Naic; Maragondon is not included in that stated list. This is a study-specific delineation, not a current polygon."
+    }
+  ],
+  "findings": {
+    "managementLevelCrosswalk": "The DA 2022 row explicitly treats Labac-Alemang-Caisobo as a previous aggregate watershed name and Caisobo as the current aggregate name, while listing Labac-Alemang and Caisobo separately as subwatersheds. This supports an aggregate management-unit rename/hierarchy in that table; it does not make Labac-Alemang an alias of Caisobo.",
+    "separatePlanningUnits": "The 2020 CALABARZON planning table separately names Caisobo and Labac-Alemang as critical watersheds supporting irrigation systems. The accompanying hectare figures are irrigation service areas and cannot be read as watershed boundaries.",
+    "areaAndMunicipalityComparison": "DA 2022 reports 9,917 ha and seven municipalities; the 2023 Cavite profile reports 99.1721 sq km and a matching seven-unit roster, with the profile spelling Mendez-Nuñez where the DA row says Mendez. This is strong scale and roster consistency, but without versioned boundary files it does not prove polygon identity or containment. The 2019 CvSU Labac-Alemang paper instead reports 9,086 ha and a six-city/municipality list that excludes Maragondon. The sources refer to different dates and planning units.",
+    "channelNames": "The Cavite profile's Caisobo/Obispo River entry under a Labac River heading is a river-network naming statement, not a watershed identity crosswalk. The slash form is not promoted as a river alias.",
+    "geometry": "No GIS polygon, CRS, boundary date, or crosswalk geometries were retrieved from these sources."
+  },
+  "disposition": {
+    "sourceRecordsAdded": [
+      "da-2022-cadp-labac-alemang-caisobo-watershed-crosswalk",
+      "calabarzon-rpfp-2017-2046-critical-watersheds-table-3-11"
+    ],
+    "existingWaterbodyLeadsUpdated": [
+      "ph-wb-labac-river-cavite"
+    ],
+    "newWaterbodyLeadsAdded": 0,
+    "aliasesAdded": 0,
+    "speciesAssertionsAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "geometryAdded": false,
+    "publicAppRowsAdded": 0,
+    "publicationApproval": false
+  },
+  "rightsAndUse": {
+    "decision": "No item-specific license or permission to reuse watershed maps was verified. Preserve the official table statements in the internal research ledger only. No map is reproduced or published."
+  },
+  "nextAction": "Keep the aggregate DA management-unit rename and the RPFP irrigation-supporting units as distinct source-scoped relationships. Seek versioned official watershed geometry or metadata before establishing spatial hierarchy; keep Labac River channel aliases unresolved."
+}
