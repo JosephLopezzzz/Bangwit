@@ -72,17 +72,17 @@
     "limits": "Province plus separate-city starter coverage. Municipalities/component cities and each island/waterbody still require the source-sweep inventory; this is not a completed regional inventory."
   },
   "counts": {
-    "waterbodyResearchLeads": 156,
+    "waterbodyResearchLeads": 158,
     "provincesWithLeads": 6,
     "separateCityCoverageUnits": 1,
     "byKind": {
       "bay": 8,
-      "river": 89,
+      "river": 90,
       "estuary": 3,
       "wetland": 11,
       "reservoir": 5,
       "lake": 18,
-      "stream": 9,
+      "stream": 10,
       "gulf": 1,
       "reef": 3,
       "fishpond": 1,
@@ -5734,14 +5734,71 @@
       ],
       "identityStatus": "source-named-site-research-lead;not-crosswalked-to-Pagbilao-mangrove-fish-survey-locality",
       "boundaryStatus": "not-delineated",
-      "fishEvidenceStatus": "1996-report-summarizes-about-45-species-in-25-families-at-the-named-experimental-forest;complete-list-unavailable;11-source-spelled-resident-name-leads;no-current-presence",
-      "reviewStatus": "historical-fishery-component-summary-reviewed;full-taxonomic-table-and-vouchers-unavailable;diet-table-secondary-to-Pinto-1985;reuse-unresolved",
+      "fishEvidenceStatus": "1997-report-reviews-historical-studies-reporting-26-to-128-species-with-effort-dependent-counts;1996-component-summary-about-45-species-in-25-families;no-current-presence",
+      "reviewStatus": "historical-fisheries-chapter-reviewed;Bagarinao-1995-Sukol-Creek-sampling-context;A3-cross-study-matrix;A4-general-food-table-source-spelling-conflict;reuse-unresolved",
       "publicAdmission": false,
-      "scopeNote": "IIED (1996) identifies the Pagbilao experimental mangrove forest as its study site and says its fisheries component identified about 45 species in 25 families; it presents only selected groups, not the complete list. Eleven fish labels are named in a resident-species discussion linked to Sukol Creek/Pagbilao Bay waterways, but the paper gives no complete site/station crosswalk, exact survey dates, or vouchers. Appendix Table A3 aggregates older studies; Appendix A4 is a secondary diet table attributed to Pinto (1985), whose dissertation was not retrieved. The IIED catalogue says January 1996 while the PDF cover says October 1996. The exact site boundary remains unknown. General “mangroves of Pagbilao” studies and Palsabangon Mangrove Forest remain separate leads. No current presence, validated taxon, public species/diet row, salinity, safety, access, or fishing rule is inferred.",
+      "scopeNote": "IIED's 1996 working paper says its fisheries component identified about 45 species in 25 families but presents only selected resident/transient groups; its 1997 final report embeds a fisheries chapter that says Bagarinao's 1995 data came from Sukol Creek and compares several historical surveys whose counts vary with effort and method. The 1997 Appendix A3 is a cross-study matrix, not the complete 1996 component list. Appendix A4 is a generalized food-items table whose source is printed as Pinta (1985), while the 1996 working paper says Pinto (1985); the original thesis and spelling conflict are unresolved, so no diet claim is adopted. The 1997 report describes Palsabangon River and Sukol Creek as waterways in the area, and uses both Nalahian and Nahalinan spellings for another river; no variant merger or channel boundary is inferred. The 1996 catalogue says January 1996 while its PDF cover says October 1996. This experimental-forest site remains separate from general Pagbilao mangrove-study and Palsabangon Mangrove Forest leads. No current presence, validated taxon, public species/diet row, salinity, safety, access, or fishing rule is inferred.",
       "evidenceBatchRefs": [
         "calabarzon-pagbilao-mangrove-fish-evidence-review-20261102.json",
-        "calabarzon-pagbilao-1996-fishery-component-review-20261104.json"
+        "calabarzon-pagbilao-1996-fishery-component-review-20261104.json",
+        "calabarzon-pagbilao-1997-fisheries-chapter-review-20261104.json"
       ]
+    },
+    {
+      "id": "ph-wb-pagbilao-palsabangon-river",
+      "name": "Palsabangon River (Pagbilao mangrove-study locality)",
+      "aliases": [],
+      "kind": "river",
+      "salinity": {
+        "classification": "unknown",
+        "reviewStatus": "not-assessed",
+        "sourceRefs": []
+      },
+      "administrativeAssociations": [
+        {
+          "regionId": "0400000000",
+          "provinceId": "0405600000",
+          "relationship": "source-named-waterway-in-Pagbilao-study-context",
+          "sourceRefs": ["janssen-padilla-1997-pagbilao-experimental-mangrove-study"],
+          "locality": "The report places the river east of the Pagbilao experimental mangrove reserve; this source-described relationship does not define the channel extent."
+        }
+      ],
+      "sourceRefs": ["janssen-padilla-1997-pagbilao-experimental-mangrove-study"],
+      "identityStatus": "source-named-waterway-research-lead",
+      "boundaryStatus": "not-delineated",
+      "fishEvidenceStatus": "named-as-waterway-in-the-historical-study-area;individual-fish-records-not-assigned-to-this-river",
+      "reviewStatus": "historical-site-context-reviewed;length-and-width-figures-are-not-channel-geometry",
+      "publicAdmission": false,
+      "scopeNote": "The 1997 IIED report names Palsabangon River in the Pagbilao experimental mangrove study context and gives historical approximate length/width figures. Those figures are not an adopted channel trace, legal boundary, current condition, or fish occurrence. Fishery analysis is specifically tied to Bagarinao's sampling at Sukol Creek; no individual fish result is assigned to this river.",
+      "evidenceBatchRefs": ["calabarzon-pagbilao-1997-fisheries-chapter-review-20261104.json"]
+    },
+    {
+      "id": "ph-wb-pagbilao-sukol-creek",
+      "name": "Sukol Creek (Pagbilao mangrove-study locality)",
+      "aliases": [],
+      "kind": "stream",
+      "salinity": {
+        "classification": "unknown",
+        "reviewStatus": "not-assessed",
+        "sourceRefs": []
+      },
+      "administrativeAssociations": [
+        {
+          "regionId": "0400000000",
+          "provinceId": "0405600000",
+          "relationship": "source-named-sampling-waterway-in-Pagbilao-study-context",
+          "sourceRefs": ["janssen-padilla-1997-pagbilao-experimental-mangrove-study"],
+          "locality": "The report identifies Sukol Creek in the Pagbilao experimental mangrove reserve study area; exact stations and channel extent remain unknown."
+        }
+      ],
+      "sourceRefs": ["janssen-padilla-1997-pagbilao-experimental-mangrove-study"],
+      "identityStatus": "source-named-waterway-research-lead",
+      "boundaryStatus": "not-delineated",
+      "fishEvidenceStatus": "1997-chapter-identifies-Bagarinao-1995-sampling-at-Sukol-Creek;historical-sample-context-only;no-current-presence",
+      "reviewStatus": "historical-sampling-locality-reviewed;field-date-stations-and-vouchers-unresolved;reuse-unresolved",
+      "publicAdmission": false,
+      "scopeNote": "The 1997 IIED chapter says the analyzed fisheries data came from Bagarinao's sampling at Sukol Creek and that estimates were extrapolated beyond the sampled creek using assumptions. It does not establish present-day occurrence, full-channel coverage, exact sampling dates/stations, a verified boundary, or public reuse rights. Keep this creek separate from the experimental mangrove-forest footprint and from the unresolved Nalahian/Nahalinan river-name variants.",
+      "evidenceBatchRefs": ["calabarzon-pagbilao-1997-fisheries-chapter-review-20261104.json"]
     },
     {
       "id": "ph-wb-palsabangon-mangrove-forest",
