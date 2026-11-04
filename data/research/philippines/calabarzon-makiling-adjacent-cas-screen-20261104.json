@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "batchId": "calabarzon-makiling-adjacent-cas-screen-20261104",
+  "reviewedOn": "2026-11-04",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "source": {
+    "id": "calacademy-cas-ichthyology-gbif-dataset-efh2ib",
+    "datasetKey": "5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+    "provider": "California Academy of Sciences, Department of Ichthyology via GBIF",
+    "licenseShownByDatasetMetadata": "CC0-1.0",
+    "apiDocumentation": "https://techdocs.gbif.org/en/openapi/v1/occurrence"
+  },
+  "purpose": "Bounded exact-field discovery for CAS preserved-fish records associated with two other named sites in the 2011 Makiling freshwater survey.",
+  "studySiteContext": {
+    "sourceId": "paller-2011-makiling-fishes",
+    "publicationYear": 2011,
+    "sourceNames": ["Dampalit Falls", "Cambantoc River"],
+    "scopeAssignments": {
+      "Cambantoc River": "Existing CALABARZON source-named freshwater research lead ph-wb-cambantoc-makiling-river.",
+      "Dampalit Falls": "Source-named survey site only; no separate scope lead or official site-boundary crosswalk was added in this screen."
+    },
+    "limitations": "The query screen does not review or redistribute the Paller survey table, establish the exact study-site coordinates, or resolve its item-specific reuse terms."
+  },
+  "queryMethod": {
+    "method": "GET to GBIF Occurrence Search",
+    "sharedParameters": {
+      "country": "PH",
+      "stateProvince": "Laguna",
+      "basisOfRecord": "PRESERVED_SPECIMEN",
+      "datasetKey": "5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+      "limit": 100
+    },
+    "queries": [
+      {"field":"waterBody","value":"Dampalit Falls","url":"https://api.gbif.org/v1/occurrence/search?country=PH&stateProvince=Laguna&basisOfRecord=PRESERVED_SPECIMEN&datasetKey=5d6c10bd-ea31-4363-8b79-58c96d859f5b&waterBody=Dampalit%20Falls&limit=100","count":0,"returned":0},
+      {"field":"waterBody","value":"Dampalit","url":"https://api.gbif.org/v1/occurrence/search?country=PH&stateProvince=Laguna&basisOfRecord=PRESERVED_SPECIMEN&datasetKey=5d6c10bd-ea31-4363-8b79-58c96d859f5b&waterBody=Dampalit&limit=100","count":0,"returned":0},
+      {"field":"locality","value":"Dampalit","url":"https://api.gbif.org/v1/occurrence/search?country=PH&stateProvince=Laguna&basisOfRecord=PRESERVED_SPECIMEN&datasetKey=5d6c10bd-ea31-4363-8b79-58c96d859f5b&locality=Dampalit&limit=100","count":0,"returned":0},
+      {"field":"waterBody","value":"Cambantoc River","url":"https://api.gbif.org/v1/occurrence/search?country=PH&stateProvince=Laguna&basisOfRecord=PRESERVED_SPECIMEN&datasetKey=5d6c10bd-ea31-4363-8b79-58c96d859f5b&waterBody=Cambantoc%20River&limit=100","count":0,"returned":0},
+      {"field":"waterBody","value":"Cambantoc","url":"https://api.gbif.org/v1/occurrence/search?country=PH&stateProvince=Laguna&basisOfRecord=PRESERVED_SPECIMEN&datasetKey=5d6c10bd-ea31-4363-8b79-58c96d859f5b&waterBody=Cambantoc&limit=100","count":0,"returned":0},
+      {"field":"locality","value":"Cambantoc","url":"https://api.gbif.org/v1/occurrence/search?country=PH&stateProvince=Laguna&basisOfRecord=PRESERVED_SPECIMEN&datasetKey=5d6c10bd-ea31-4363-8b79-58c96d859f5b&locality=Cambantoc&limit=100","count":0,"returned":0}
+    ],
+    "totalIndexedMatches": 0,
+    "interpretation": "These are bounded zero-result text-field screens in this dataset snapshot only. They do not establish that fish are absent from either site or that other datasets lack records."
+  },
+  "decision": {
+    "status": "research-only-exact-field-index-gap",
+    "scopeLeadUpdates": ["ph-wb-cambantoc-makiling-river"],
+    "newWaterbodyLeads": 0,
+    "speciesAssertionsAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "geometryAdded": false,
+    "publicAppRowsAdded": 0,
+    "currentPresenceInferred": false,
+    "nonClaims": [
+      "A zero result in six bounded queries is not evidence of fish absence.",
+      "No fish names, abundance, capture station, date, coordinates, diet, catchability, safety or legal claim is inferred.",
+      "Dampalit Falls remains a source-named study site; no separate scope feature or geometry is added from this query alone."
+    ]
+  }
+}

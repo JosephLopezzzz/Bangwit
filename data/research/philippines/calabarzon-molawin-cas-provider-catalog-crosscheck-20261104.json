@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "batchId": "calabarzon-molawin-cas-provider-catalog-crosscheck-20261104",
+  "reviewedOn": "2026-11-04",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "waterbody": {
+    "id": "ph-wb-molawin-makiling-creek",
+    "name": "Molawin Creek",
+    "province": "Laguna",
+    "region": "CALABARZON",
+    "kind": "stream"
+  },
+  "source": {
+    "id": "calacademy-cas-ichthyology-gbif-dataset-efh2ib",
+    "provider": "California Academy of Sciences, Department of Ichthyology",
+    "portalUrl": "https://specify-portal.calacademy.org/ich/",
+    "searchHelpUrl": "https://researcharchive.calacademy.org/research/ichthyology/collection/help.asp",
+    "gbifDatasetKey": "5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+    "gbifDatasetLicense": "CC0-1.0",
+    "rightsCaveat": "GBIF dataset metadata displays CC0-1.0. The provider portal search is a second source check, not a separate permission grant; app publication remains unapproved."
+  },
+  "purpose": "Cross-check the twelve new GBIF-indexed Molawin Creek CAS records against the provider's public collection portal by catalog number and collection code, then compare provider taxon labels and locality fields.",
+  "query": {
+    "method": "GET",
+    "endpoint": "https://specify-portal.calacademy.org/ich/select",
+    "expression": "catalogNumber:(37691 OR 37636 OR 39171 OR 38903 OR 28479 OR 26251 OR 26239 OR 28488 OR 26321 OR 26265 OR 26267 OR 26284)",
+    "url": "https://specify-portal.calacademy.org/ich/select?indent=on&version=2.2&fq=&rows=500&fl=*%2Cscore&qt=&wt=json&explainOther=&hl.fl=&q=catalogNumber%3A%2837691%20OR%2037636%20OR%2039171%20OR%2038903%20OR%2028479%20OR%2026251%20OR%2026239%20OR%2028488%20OR%2026321%20OR%2026265%20OR%2026267%20OR%2026284%29",
+    "providerHelpSemantics": "The CAS help page says catalog-number searches return integer lots and the collection code identifies CAS versus Stanford (SU) records. The same catalog numbers therefore must not be matched without checking the collection code.",
+    "resultCount": 24,
+    "resultSelection": "The response contains twelve CAS-SU records that match the GBIF catalog numbers, Philippines, Laguna and College of Agriculture locality. Provider taxon names agree except for Dermogenys viviparus versus the GBIF-indexed Dermogenys vivipara spelling. The other twelve are CAS-ICH lots with colliding catalog numbers from unrelated localities.",
+    "pageComplete": true
+  },
+  "records": [
+    {"gbifId":"3426419611","providerRecordId":"32717631-257d-11ed-aace-005056be1b7a","collectionCode":"CAS-SU","catalogNumber":"26239","gbifSourceName":"Ctenogobius criniger (Valenciennes, 1837)","providerName":"Ctenogobius criniger","eventDate":"1931-05-10","fieldNumber":"AWH 10-V-31"},
+    {"gbifId":"3426417612","providerRecordId":"32719781-257d-11ed-aace-005056be1b7a","collectionCode":"CAS-SU","catalogNumber":"26251","gbifSourceName":"Eleotris fusca (Forster, 1801)","providerName":"Eleotris fusca","eventDate":"1931-05","fieldNumber":"AWH V-31-CA"},
+    {"gbifId":"3426462601","providerRecordId":"3271e6fe-257d-11ed-aace-005056be1b7a","collectionCode":"CAS-SU","catalogNumber":"26265","gbifSourceName":"Glossogobius biocellatus (Valenciennes, 1837)","providerName":"Glossogobius biocellatus","eventDate":"1931-05","fieldNumber":"AWH V-31-CA"},
+    {"gbifId":"3426463605","providerRecordId":"3271f6be-257d-11ed-aace-005056be1b7a","collectionCode":"CAS-SU","catalogNumber":"26267","gbifSourceName":"Glossogobius celebius (Valenciennes, 1837)","providerName":"Glossogobius celebius","eventDate":"1931-05","fieldNumber":"AWH V-31-CA"},
+    {"gbifId":"3426465615","providerRecordId":"32722f56-257d-11ed-aace-005056be1b7a","collectionCode":"CAS-SU","catalogNumber":"26284","gbifSourceName":"Glossogobius giurus (Hamilton, 1822)","providerName":"Glossogobius giurus","eventDate":"1931-05","fieldNumber":"AWH V-31-CA"},
+    {"gbifId":"3426457618","providerRecordId":"32728ebe-257d-11ed-aace-005056be1b7a","collectionCode":"CAS-SU","catalogNumber":"26321","gbifSourceName":"Ophiocara aporos (Bleeker, 1854)","providerName":"Ophiocara aporos","eventDate":"1931-05","fieldNumber":"AWH V-31-CA"},
+    {"gbifId":"3426464721","providerRecordId":"329d3a01-257d-11ed-aace-005056be1b7a","collectionCode":"CAS-SU","catalogNumber":"28479","gbifSourceName":"Dermogenys vivipara (Peters, 1865)","providerName":"Dermogenys viviparus","eventDate":"1931-04","fieldNumber":"AWH IV-31B","nameDifference":"GBIF source string ends in vivipara; provider collection record displays viviparus. Preserve both; no specimen re-identification is inferred."},
+    {"gbifId":"3426420728","providerRecordId":"329d5903-257d-11ed-aace-005056be1b7a","collectionCode":"CAS-SU","catalogNumber":"28488","gbifSourceName":"Zenarchopterus philippinus (Peters, 1868)","providerName":"Zenarchopterus philippinus","eventDate":"1931-05","fieldNumber":"AWH V-31-CA"},
+    {"gbifId":"3426425180","providerRecordId":"3354f82e-257d-11ed-aace-005056be1b7a","collectionCode":"CAS-SU","catalogNumber":"37636","gbifSourceName":"Dermogenys pectoralis Fowler, 1934","providerName":"Dermogenys pectoralis","eventDate":"1940-10-17","fieldNumber":"AWH 17-X-40B"},
+    {"gbifId":"3426418182","providerRecordId":"33560d1d-257d-11ed-aace-005056be1b7a","collectionCode":"CAS-SU","catalogNumber":"37691","gbifSourceName":"Zenarchopterus philippinus (Peters, 1868)","providerName":"Zenarchopterus philippinus","eventDate":"1941-10-12","fieldNumber":"AWH 12-X-41"},
+    {"gbifId":"3426464233","providerRecordId":"336d0b70-257d-11ed-aace-005056be1b7a","collectionCode":"CAS-SU","catalogNumber":"38903","gbifSourceName":"Gulaphallus mirabilis Herre, 1925","providerName":"Gulaphallus mirabilis","eventDate":"1940-10-17","fieldNumber":"AWH 17-X-40B"},
+    {"gbifId":"3426463242","providerRecordId":"3371ad53-257d-11ed-aace-005056be1b7a","collectionCode":"CAS-SU","catalogNumber":"39171","gbifSourceName":"Microphis jagorii Peters, 1868","providerName":"Microphis jagorii","eventDate":"1940-10-17","fieldNumber":"AWH 17-X-41 C","dateConflict":"The 1940-10-17 collection date conflicts with 1941 in the collector's field number; preserve both. No date correction is made."}
+  ],
+  "sharedProviderFields": {
+    "waterBodyText": "Molawin Creek",
+    "locality": "College of Agriculture.",
+    "country": "Philippines",
+    "state": "Laguna",
+    "georeferenceUncertaintyM": 809,
+    "georeferenceInterpretation": "Generalized UPLB campus point whose provider note says the polygon includes Molawin Creek; not an exact capture point. Coordinates are intentionally not copied into this artifact."
+  },
+  "summary": {
+    "providerMatches": 12,
+    "distinctProviderNameStrings": 11,
+    "catalogNumberCollisionsFromOtherCollectionCode": 12,
+    "waterBodyTextConfirmedByProvider": true,
+    "taxaReidentified": 0,
+    "physicalSpecimensExamined": 0,
+    "currentPresenceInferred": false,
+    "completeChecklistClaimed": false,
+    "coordinatesCopied": false
+  },
+  "decision": {
+    "status": "provider-catalog-crosscheck-complete;historical-research-only",
+    "publicSpeciesRowsAdded": 0,
+    "publicOccurrenceRowsAdded": 0,
+    "mapPointsAdded": 0,
+    "reason": "All twelve GBIF record IDs cross-match CAS-SU provider lots by catalog number and collection code; Philippines, Laguna and College of Agriculture locality fields corroborate the candidate lots. The provider also supplies waterBody=Molawin Creek and date/field-number values. A generalized 809 m campus georeference, a name-ending difference for Dermogenys vivipara/viviparus, the Microphis jagorii date/field-number conflict and unresolved independent taxonomy prevent specimen re-identification or public point/species admission.",
+    "nonClaims": [
+      "A source-reported waterBody value and generalized campus georeference do not establish an exact capture point or current fish presence.",
+      "The 12 lots are not a complete Molawin Creek checklist, abundance estimate, or independent survey count.",
+      "Catalog-number matches without collection code can return unrelated CAS-ICH records; preserve the CAS-SU code in every crosswalk.",
+      "CC0 shown by GBIF metadata does not approve a public app row or resolve other provider-specific reuse conditions."
+    ]
+  }
+}
