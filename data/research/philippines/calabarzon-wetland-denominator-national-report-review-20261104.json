@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "calabarzon-wetland-denominator-national-report-review-20261104",
+  "checkedOn": "2026-11-04",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "regionName": "Region IV-A (CALABARZON)",
+  "status": "official-national-wetland-counts-reviewed;regional-denominator-unresolved",
+  "sourceId": "denr-bmb-philippines-7th-national-report-cbd",
+  "source": {
+    "title": "7th National Report of the Philippines to the Convention on Biological Diversity",
+    "reportingAuthority": "Department of Environment and Natural Resources - Biodiversity Management Bureau",
+    "url": "https://ort.cbd.int/database/record?documentID=292757",
+    "locator": "Wetlands section and Table 5 of the CBD Online Reporting Tool record",
+    "reviewNotes": "The report says it summarizes PBSAP implementation from 2018 to 2024 and gives national wetland status figures; the reviewed section is not a CALABARZON site list."
+  },
+  "reportedMetrics": [
+    {
+      "metric": "DENR identified inland wetland sites",
+      "reportedTotal": 956,
+      "reportedWithinProtectedAreas": 186,
+      "reportedAssessed": 334,
+      "reportedWithManagementPlans": 141,
+      "reportedUnassessed": 618,
+      "reportedNeedingManagementPlans": 811,
+      "sourceDescription": "National DENR report figures; site-level inventory and regional breakdown were not present in the reviewed section."
+    },
+    {
+      "metric": "PHILCHM inland wetlands, non-riverine",
+      "reportedTotal": 314,
+      "reportedAreaHectares": 381777,
+      "islandGroupCounts": {
+        "Luzon": 129,
+        "Visayas": 56,
+        "Mindanao": 129
+      },
+      "includedTypesAsDescribed": [
+        "lakes",
+        "freshwater swamps",
+        "marshes",
+        "peatlands"
+      ],
+      "explicitExclusions": [
+        "rivers",
+        "streams"
+      ],
+      "sourceDescription": "The report attributes this table to PHILCHM and cites a 6 December 2025 retrieval."
+    }
+  ],
+  "consistencyChecks": [
+    {
+      "check": "956 identified minus 334 assessed",
+      "arithmeticResult": 622,
+      "reportStates": "618 unassessed",
+      "disposition": "unresolved-source-arithmetic-difference-of-four;do-not-correct-or-infer-denominator"
+    },
+    {
+      "check": "956 identified minus 141 with management plans",
+      "arithmeticResult": 815,
+      "reportStates": "811 need plans",
+      "disposition": "unresolved-source-arithmetic-difference-of-four;do-not-correct-or-infer-denominator"
+    },
+    {
+      "check": "PHILCHM page total versus island-group sum",
+      "philmchPageTotalAsOfFirstQuarter2019": 342,
+      "reportedIslandGroupValues": [
+        129,
+        56,
+        129
+      ],
+      "islandGroupSum": 314,
+      "reportTable5Total": 314,
+      "disposition": "inventory-version-or-category-difference-unresolved;do-not-combine"
+    }
+  ],
+  "calabarzonCrosswalk": {
+    "regionalDevelopmentPlan2021Figures": "19 inland wetlands (16 lakes and three water-storage areas), 116320.22 hectares, and 354 river systems are previously reported regional aggregates; no site roster was read in this review.",
+    "roadmap2024Figures": "The official CALABARZON roadmap states 30 wetlands but enumerates 31 mixed site/habitat phrases; exact count and feature identity remain unresolved.",
+    "regionalCountEstablished": false,
+    "siteIdentityReconciled": false,
+    "geometryAdded": false
+  },
+  "decisions": {
+    "waterbodyLeadsAdded": 0,
+    "waterbodySourceLinksAdded": 0,
+    "speciesAssertionsAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "geometryAdded": false,
+    "publicAppRowsAdded": 0,
+    "publicationApproval": false
+  },
+  "limitations": [
+    "The two national counts refer to differently described data products and cannot be combined into one total.",
+    "The national report gives no CALABARZON site roster or CALABARZON-specific share in the reviewed section.",
+    "The presence of a dataset title in DENR DPCAS or an ENR report table outline does not mean its underlying rows were accessible or reviewed.",
+    "No fish occurrence, current wetland condition, access, legal status, or regional inventory completeness follows from these counts."
+  ],
+  "nextAction": "Retrieve the public DENR DPCAS Summary of Assessed Critical Wetlands as of December 2024 and the underlying CALABARZON ENR Statistical Report Table 8 through normal access; compare definitions and dates before revising the CALABARZON denominator."
+}

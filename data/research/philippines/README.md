@@ -1965,3 +1965,11 @@ The UP Diliman Main Library-hosted Philippine eLib record confirms M. Leonard Pi
 Added one research-only source and linked it to the broad Pagbilao mangrove survey locality. This confirms where the thesis is cataloged, but not its sampled waterbodies, fish identities, diet data, or its exact relationship to the “Pinta/Pinto (1985)” appendix attribution. Registry: 652; CALABARZON leads: 158. No species, diet, occurrence, geometry, or app row was added. See `calabarzon-pagbilao-pinto-1985-dissertation-catalog-review-20261104.json` and [the catalog record](https://www.elib.gov.ph/details.php?uid=20c028b9bcacced43789fe696a9ec5a7).
 
 **Next:** continue the CALABARZON inland-water source sweep and keep the original diet/table attribution pending archival review.
+
+### National rollout step 497: CALABARZON wetland denominator and national-report consistency review — 4 November 2026
+
+The official Philippine 7th National Report to the CBD reports 956 identified inland wetland sites, 334 assessed and 141 with management plans, but gives residual counts (618 unassessed and 811 needing plans) that differ by four from arithmetic on the reported totals. Separately, its PHILCHM-sourced table reports 314 non-riverine inland wetlands (129 Luzon, 56 Visayas, 129 Mindanao; rivers and streams excluded). PHILCHM's page also states 342 total inland wetlands as of Q1 2019, while the island-group values sum to 314. The definitions and source versions remain unresolved; no CALABARZON site roster or denominator follows from these national counts.
+
+Registered one national research-only source and updated the open denominator risk. Registry: 653 sources; CALABARZON remains at 158 leads. No waterbody source link, species/occurrence row, geometry, or public app projection was added. See `calabarzon-wetland-denominator-national-report-review-20261104.json`, [the official report](https://ort.cbd.int/database/record?documentID=292757), and [PHILCHM wetlands](https://www.philchm.ph/wetlands/).
+
+**Next:** access the DENR DPCAS assessed-wetlands summary and underlying CALABARZON ENR Table 8, then reconcile version, definitions and site identities before using any regional count.
