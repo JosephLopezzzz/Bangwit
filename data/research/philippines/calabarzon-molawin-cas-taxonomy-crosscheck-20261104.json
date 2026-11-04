@@ -1,0 +1,50 @@
+{
+  "schemaVersion": 1,
+  "batchId": "calabarzon-molawin-cas-taxonomy-crosscheck-20261104",
+  "reviewedOn": "2026-11-04",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "waterbody": {
+    "id": "ph-wb-molawin-makiling-creek",
+    "name": "Molawin Creek",
+    "province": "Laguna",
+    "region": "CALABARZON",
+    "kind": "stream"
+  },
+  "input": "calabarzon-molawin-cas-waterbody-field-screen-20261104.json",
+  "authority": {
+    "name": "Eschmeyer's Catalog of Fishes",
+    "publisher": "California Academy of Sciences",
+    "versionShownOnReviewedPages": "Online Version updated 20 October 2026",
+    "method": "Queried each CAS/GBIF occurrence name against the searchable Catalog and retained its current-status text, exact query URL and response-text hash. The response text was joined with LF before hashing.",
+    "limitation": "Name-level crosswalk only. It does not inspect or re-identify the CAS specimen, verify a collection event, establish current presence, or determine fishery relevance. A no-result exact-name query is not evidence of species absence."
+  },
+  "taxonChecks": [
+    {"sourceName":"Zenarchopterus philippinus (Peters, 1868)","gbifAcceptedName":"Zenarchopterus philippinus (Peters, 1868)","catalogStatus":"Valid as Zenarchopterus philippinus (Peters 1868).","catalogQueryUrl":"https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Zenarchopterus&species=philippinus&tbl=species","responseBytes":11544,"responseTextSha256":"396d12a00b1461b6d4cce2c26f9fc40bd60204b763c034b9d65a11de41dc038a","disposition":"name-crosswalk-agrees; retain source spelling"},
+    {"sourceName":"Dermogenys pectoralis Fowler, 1934","gbifAcceptedName":"Nomorhamphus pectoralis (Fowler, 1934)","catalogStatus":"Valid as Nomorhamphus pectoralis (Fowler 1934).","catalogQueryUrl":"https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Dermogenys&species=pectoralis&tbl=species","responseBytes":9843,"responseTextSha256":"3fdcaa485fd45357b2d8d1b796681d2dbf4561eea9b4f13d9711a23178671244","disposition":"GBIF and Catalog agree on the accepted combination; preserve the CAS/GBIF source name"},
+    {"sourceName":"Microphis jagorii Peters, 1868","gbifAcceptedName":"Oostethus jagorii (Peters, 1868)","catalogStatus":"Valid as Microphis jagorii Peters 1868.","catalogQueryUrl":"https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Microphis&species=jagorii&tbl=species","responseBytes":10249,"responseTextSha256":"dc7277ddb00f79638490636db649993b18de834bc1a4ff05a4e0d7dc0028163b","disposition":"hold; current Catalog genus placement conflicts with GBIF Backbone accepted combination; the specimen date also conflicts with its fieldNumber year"},
+    {"sourceName":"Gulaphallus mirabilis Herre, 1925","gbifAcceptedName":"Gulaphallus mirabilis Herre, 1925","catalogStatus":"Valid as Gulaphallus mirabilis Herre 1925.","catalogQueryUrl":"https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Gulaphallus&species=mirabilis&tbl=species","responseBytes":9583,"responseTextSha256":"c96f548fdbe2a61f3dc4b60a0a627df6540710ecb16b5929ffa94e35f6834acb","disposition":"name-crosswalk-agrees; this species was already admitted to the internal historical Molawin evidence review"},
+    {"sourceName":"Dermogenys vivipara (Peters, 1865)","gbifAcceptedName":"Nomorhamphus vivipara (Peters, 1865)","catalogStatus":"No records found for exact Dermogenys vivipara query; the exact Nomorhamphus vivipara query also returned no records.","catalogQueryUrl":"https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Dermogenys&species=vivipara&tbl=species","responseBytes":8711,"responseTextSha256":"3603c9b86216c0e86ab9f245186779e5fe6ae20edeca7f9cc3e9d8e6edeceb8c","disposition":"hold; GBIF Backbone mapping is not independently confirmed by the exact Catalog searches"},
+    {"sourceName":"Eleotris fusca (Forster, 1801)","gbifAcceptedName":"Eleotris fusca (Forster, 1801)","catalogStatus":"The Forster 1801 name is treated as a synonym of Eleotris fusca (Bloch & Schneider 1801); the latter is the valid current combination.","catalogQueryUrl":"https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Eleotris&species=fusca&tbl=species","responseBytes":25973,"responseTextSha256":"d518764b0b9f333fa374edf3bf58624f9c0815f539fcfea9cb9d74dfe667caf1","disposition":"hold for source-record name attribution; GBIF flags TAXON_MATCH_FUZZY and the author string differs"},
+    {"sourceName":"Ctenogobius criniger (Valenciennes, 1837)","gbifAcceptedName":"Yongeichthys criniger (Valenciennes, 1837)","catalogStatus":"No records found for exact Ctenogobius criniger or Yongeichthys criniger queries.","catalogQueryUrl":"https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Ctenogobius&species=criniger&tbl=species","responseBytes":8712,"responseTextSha256":"d39bfe3eb208e3d8f4f66ff71cb1c9976d56062b5be86af0088dbdd48717a055","disposition":"hold; Backbone combination remains unverified in the current Catalog search"},
+    {"sourceName":"Ophiocara aporos (Bleeker, 1854)","gbifAcceptedName":"Giuris margaritacea (Valenciennes, 1837)","catalogStatus":"No record found for the exact Ophiocara aporos query. The earlier Laguna CAS cross-check maps this source form to Giuris margaritaceus; GBIF uses the differing ending margaritacea.","catalogQueryUrl":"https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Ophiocara&species=aporos&tbl=species","responseBytes":8708,"responseTextSha256":"2a4d9b1f81c35876bdded417d491f751e27c7c14ed12e43bddde4f1ffb98b71a","relatedReview":"calabarzon-laguna-cas-taxonomy-followup-20261025.json","disposition":"hold; preserve the spelling conflict and do not re-identify the specimen"},
+    {"sourceName":"Glossogobius biocellatus (Valenciennes, 1837)","gbifAcceptedName":"Psammogobius biocellatus (Valenciennes, 1837)","catalogStatus":"No exact Glossogobius biocellatus entry was found. The current Psammogobius biocellatus entry is valid as that name.","catalogQueryUrl":"https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Glossogobius&species=biocellatus&tbl=species","acceptedNameQueryUrl":"https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Psammogobius&species=biocellatus&tbl=species","acceptedNameResponseTextSha256":"a2cbad6df56aa74455bc34d9fcef046512506a1084faf84e5dcf9f9ef035614a","disposition":"partial name-level crosswalk; preserve the original source binomial and do not call this specimen re-identified"},
+    {"sourceName":"Glossogobius celebius (Valenciennes, 1837)","gbifAcceptedName":"Glossogobius celebius (Valenciennes, 1837)","catalogStatus":"Valid as Glossogobius celebius (Valenciennes 1837); the page also cites an older synonym treatment under G. giuris.","catalogQueryUrl":"https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Glossogobius&species=celebius&tbl=species","responseBytes":11662,"responseTextSha256":"cfc451c6505632cd179723deac4816dfe23902490f82758b1e2368114dea50c6","disposition":"GBIF and current Catalog name treatment agree; retain the recorded name and historical source context"},
+    {"sourceName":"Glossogobius giurus (Hamilton, 1822)","gbifAcceptedName":"Glossogobius giuris (Hamilton, 1822)","catalogStatus":"No record found for the exact giurus query. The prior Laguna CAS cross-check confirmed the current Catalog treatment Glossogobius giuris and documented giurus as an older usage.","catalogQueryUrl":"https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Glossogobius&species=giurus&tbl=species","responseBytes":8711,"responseTextSha256":"063444c301f3e994792a274dc08951ac58045201d028a236cfa0ec0ae63dbf72","relatedReview":"calabarzon-laguna-cas-taxonomy-followup-20261025.json","disposition":"name-level crosswalk supported by earlier authority review; not a new specimen identification"}
+  ],
+  "summary": {
+    "sourceNameLabelsReviewed": 11,
+    "GBIFAcceptedNameCombinationsRecorded": 11,
+    "sourceNamesWithCurrentCatalogTreatment": 6,
+    "exactNameQueriesWithoutCatalogRecord": 5,
+    "nameCrosswalkConflictsOrHolds": 6,
+    "specimensPhysicallyExamined": 0,
+    "publicRowsAdded": 0,
+    "currentPresenceInferred": false
+  },
+  "decision": {
+    "status": "partial-name-crosswalk-complete;all-new-records-remain-research-only",
+    "reason": "The Catalog supports several GBIF combinations but conflicts with or does not resolve other historical names. Keep the CAS scientificName, GBIF acceptedName, authority status and occurrence metadata separate. No record-level identification or current-presence claim follows from a database name crosswalk.",
+    "next": "Verify selected CAS catalog numbers against the provider's current collection catalog where ordinary access permits; otherwise retain these as GBIF-indexed historical candidates and move to the next independent CALABARZON freshwater source."
+  }
+}

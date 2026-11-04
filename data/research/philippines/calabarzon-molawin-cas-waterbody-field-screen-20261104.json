@@ -1,0 +1,112 @@
+{
+  "schemaVersion": 1,
+  "batchId": "calabarzon-molawin-cas-waterbody-field-screen-20261104",
+  "reviewedOn": "2026-11-04",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "waterbody": {
+    "id": "ph-wb-molawin-makiling-creek",
+    "name": "Molawin Creek",
+    "province": "Laguna",
+    "region": "CALABARZON",
+    "kind": "stream"
+  },
+  "purpose": "Review GBIF-indexed CAS fish specimens carrying an explicit Molawin Creek waterBody value; preserve historical source labels and caveats for research only.",
+  "source": {
+    "id": "calacademy-cas-ichthyology-gbif-dataset-efh2ib",
+    "datasetTitle": "CAS Ichthyology (ICH)",
+    "publisher": "California Academy of Sciences",
+    "datasetKey": "5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+    "doi": "10.15468/efh2ib",
+    "versionShownOnDatasetPage": "150.546",
+    "license": "CC0-1.0",
+    "datasetUrl": "https://www.gbif.org/dataset/5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+    "apiDocsUrl": "https://techdocs.gbif.org/en/openapi/v1/occurrence",
+    "note": "GBIF describes CAS Ichthyology as the California Academy of Sciences electronic fish catalog. CC0 applies to the dataset, but this review does not approve Bangwit publication."
+  },
+  "query": {
+    "method": "GET",
+    "url": "https://api.gbif.org/v1/occurrence/search?country=PH&stateProvince=Laguna&basisOfRecord=PRESERVED_SPECIMEN&waterBody=Molawin%20Creek&limit=100",
+    "parameters": {
+      "country": "PH",
+      "stateProvince": "Laguna",
+      "basisOfRecord": "PRESERVED_SPECIMEN",
+      "waterBody": "Molawin Creek",
+      "limit": 100
+    },
+    "resultCount": 13,
+    "returnedCount": 13,
+    "pageComplete": true,
+    "semantics": "GBIF documents waterBody as the name of the water body in which the location occurs. This is an indexed text-field search, not a spatial search or independent validation of a capture station."
+  },
+  "locationReview": {
+    "summary": "Twelve records give locality as College of Agriculture and share the same generalized campus georeference with 809 m uncertainty. Its georeference remark says the polygon includes Molawain Creek within the University of the Philippines, Los Banos. One record gives direct Molawin Creek locality but no date or coordinates and was already reviewed in makiling-gbif-source-review.json.",
+    "coordinatePolicy": "No decimal coordinates copied. The 809 m campus georeference is not an exact capture point.",
+    "interpretation": "Historical provider-indexed waterbody association only; exact collection site remains generalized.",
+    "commonGbifIssuesForTheTwelveCampusRecords": [
+      "GEODETIC_DATUM_ASSUMED_WGS84",
+      "CONTINENT_INVALID",
+      "CONTINENT_DERIVED_FROM_COORDINATES",
+      "OCCURRENCE_STATUS_INFERRED_FROM_INDIVIDUAL_COUNT"
+    ],
+    "additionalGbifIssue": {
+      "recordId": "3426417612",
+      "issue": "TAXON_MATCH_FUZZY"
+    },
+    "issuesForTheAlreadyReviewedDirectLocalityRecord": [
+      "CONTINENT_INVALID",
+      "CONTINENT_DERIVED_FROM_COUNTRY",
+      "OCCURRENCE_STATUS_INFERRED_FROM_BASIS_OF_RECORD"
+    ]
+  },
+  "taxonomyMethod": {
+    "authority": "GBIF Species API",
+    "endpointPattern": "https://api.gbif.org/v1/species/{taxonKey}",
+    "interpretation": "Keep occurrence scientificName verbatim and record the Backbone accepted name separately. Synonym mappings are nomenclatural crosswalks, not specimen re-identifications. A partial independent Catalog of Fishes check is recorded in calabarzon-molawin-cas-taxonomy-crosscheck-20261104.json."
+  },
+  "records": [
+    {"gbifId":"3426418182","scientificName":"Zenarchopterus philippinus (Peters, 1868)","taxonKey":2368769,"status":"ACCEPTED","acceptedName":"Zenarchopterus philippinus (Peters, 1868)","acceptedKey":2368769,"locality":"College of Agriculture.","eventDate":"1941-10-12","catalogNumber":"37691","fieldNumber":"AWH 12-X-41","waterBody":"Molawin Creek","uncertaintyM":809},
+    {"gbifId":"3426425180","scientificName":"Dermogenys pectoralis Fowler, 1934","taxonKey":2369037,"status":"SYNONYM","acceptedName":"Nomorhamphus pectoralis (Fowler, 1934)","acceptedKey":2369045,"locality":"College of Agriculture.","eventDate":"1940-10-17","catalogNumber":"37636","fieldNumber":"AWH 17-X-40B","waterBody":"Molawin Creek","uncertaintyM":809},
+    {"gbifId":"3426463242","scientificName":"Microphis jagorii Peters, 1868","taxonKey":5201013,"status":"SYNONYM","acceptedName":"Oostethus jagorii (Peters, 1868)","acceptedKey":7493059,"locality":"College of Agriculture.","eventDate":"1940-10-17","catalogNumber":"39171","fieldNumber":"AWH 17-X-41 C","waterBody":"Molawin Creek","uncertaintyM":809,"hold":"eventDate year 1940 conflicts with the 1941 year embedded in fieldNumber; preserve both."},
+    {"gbifId":"3426464233","scientificName":"Gulaphallus mirabilis Herre, 1925","taxonKey":2412092,"status":"ACCEPTED","acceptedName":"Gulaphallus mirabilis Herre, 1925","acceptedKey":2412092,"locality":"College of Agriculture.","eventDate":"1940-10-17","catalogNumber":"38903","fieldNumber":"AWH 17-X-40B","waterBody":"Molawin Creek","uncertaintyM":809,"note":"Additional CAS catalog item; this taxon was already represented in the previous Molawin review."},
+    {"gbifId":"3426464721","scientificName":"Dermogenys vivipara (Peters, 1865)","taxonKey":2369033,"status":"SYNONYM","acceptedName":"Nomorhamphus vivipara (Peters, 1865)","acceptedKey":2369032,"locality":"College of Agriculture.","eventDate":"1931-04","catalogNumber":"28479","fieldNumber":"AWH IV-31B","waterBody":"Molawin Creek","uncertaintyM":809},
+    {"gbifId":"3426417612","scientificName":"Eleotris fusca (Forster, 1801)","taxonKey":2386106,"status":"ACCEPTED","acceptedName":"Eleotris fusca (Forster, 1801)","acceptedKey":2386106,"locality":"College of Agriculture.","eventDate":"1931-05","catalogNumber":"26251","fieldNumber":"AWH V-31-CA","waterBody":"Molawin Creek","uncertaintyM":809,"issues":["TAXON_MATCH_FUZZY"],"hold":"GBIF flags a fuzzy match; the authorship differs from the current Catalog of Fishes treatment."},
+    {"gbifId":"3426419611","scientificName":"Ctenogobius criniger (Valenciennes, 1837)","taxonKey":2378112,"status":"SYNONYM","acceptedName":"Yongeichthys criniger (Valenciennes, 1837)","acceptedKey":2378108,"locality":"College of Agriculture.","eventDate":"1931-05-10","catalogNumber":"26239","fieldNumber":"AWH 10-V-31","waterBody":"Molawin Creek","uncertaintyM":809},
+    {"gbifId":"3426420728","scientificName":"Zenarchopterus philippinus (Peters, 1868)","taxonKey":2368769,"status":"ACCEPTED","acceptedName":"Zenarchopterus philippinus (Peters, 1868)","acceptedKey":2368769,"locality":"College of Agriculture.","eventDate":"1931-05","catalogNumber":"28488","fieldNumber":"AWH V-31-CA","waterBody":"Molawin Creek","uncertaintyM":809},
+    {"gbifId":"3426457618","scientificName":"Ophiocara aporos (Bleeker, 1854)","taxonKey":2386213,"status":"SYNONYM","acceptedName":"Giuris margaritacea (Valenciennes, 1837)","acceptedKey":4285919,"locality":"College of Agriculture.","eventDate":"1931-05","catalogNumber":"26321","fieldNumber":"AWH V-31-CA","waterBody":"Molawin Creek","uncertaintyM":809,"hold":"Earlier Catalog of Fishes review mapped Ophiocara aporos to Giuris margaritaceus; GBIF uses margaritacea. Keep this crosswalk unresolved."},
+    {"gbifId":"3426462601","scientificName":"Glossogobius biocellatus (Valenciennes, 1837)","taxonKey":2378085,"status":"SYNONYM","acceptedName":"Psammogobius biocellatus (Valenciennes, 1837)","acceptedKey":2378083,"locality":"College of Agriculture.","eventDate":"1931-05","catalogNumber":"26265","fieldNumber":"AWH V-31-CA","waterBody":"Molawin Creek","uncertaintyM":809},
+    {"gbifId":"3426463605","scientificName":"Glossogobius celebius (Valenciennes, 1837)","taxonKey":2379433,"status":"ACCEPTED","acceptedName":"Glossogobius celebius (Valenciennes, 1837)","acceptedKey":2379433,"locality":"College of Agriculture.","eventDate":"1931-05","catalogNumber":"26267","fieldNumber":"AWH V-31-CA","waterBody":"Molawin Creek","uncertaintyM":809},
+    {"gbifId":"3426465615","scientificName":"Glossogobius giurus (Hamilton, 1822)","taxonKey":2379406,"status":"SYNONYM","acceptedName":"Glossogobius giuris (Hamilton, 1822)","acceptedKey":2378087,"locality":"College of Agriculture.","eventDate":"1931-05","catalogNumber":"26284","fieldNumber":"AWH V-31-CA","waterBody":"Molawin Creek","uncertaintyM":809},
+    {"gbifId":"3426419841","scientificName":"Gulaphallus mirabilis Herre, 1925","taxonKey":2412092,"status":"ACCEPTED","acceptedName":"Gulaphallus mirabilis Herre, 1925","acceptedKey":2412092,"locality":"Molawin Creek","eventDate":null,"catalogNumber":"30720","fieldNumber":"Z130720","waterBody":"Molawin Creek","uncertaintyM":null,"alreadyReviewed":true}
+  ],
+  "summary": {
+    "recordsReturned": 13,
+    "newRecordIdsAfterDeduplicatingPriorReview": 12,
+    "distinctSpeciesRankNameStrings": 11,
+    "additionalNameStringsBeyondThePriorGulaphallusReview": 10,
+    "historicalRecordCandidatesOnly": true,
+    "currentPresenceInferred": false,
+    "individualAbundanceInferred": false,
+    "completeInventoryClaimed": false,
+    "coordinatesCopied": false
+  },
+  "decision": {
+    "status": "research-only-historical-source-waterbody-candidates;partial-taxonomic-crosswalk-complete",
+    "publicSpeciesRowsAdded": 0,
+    "publicOccurrenceRowsAdded": 0,
+    "mapPointsAdded": 0,
+    "reason": "The CC0 CAS dataset gives twelve new specimen records with waterBody=Molawin Creek, but their locality is College of Agriculture and the common georeference is a campus point with 809 m uncertainty. Several historical binomials map to different GBIF Backbone names, one match is flagged fuzzy, one date conflicts with its field number, and one name has an unresolved independent-authority spelling conflict. Preserve them as historical research candidates pending taxonomic and source-catalog cross-checks.",
+    "nonClaims": [
+      "No current fish presence, abundance, catchability, or complete Molawin Creek checklist is claimed.",
+      "Multiple catalog records are not counted as independent surveys or as a species abundance estimate.",
+      "The generalized campus georeference is not a capture point or fishing-location geometry.",
+      "No structured extraction is made from the separate Makiling article table while item-level reuse permission remains unverified."
+    ]
+  },
+  "relatedReviews": [
+    "makiling-gbif-source-review.json",
+    "calabarzon-laguna-cas-taxonomy-followup-20261025.json",
+    "calabarzon-laguna-cof-taxonomy-20261025.json",
+    "calabarzon-molawin-cas-taxonomy-crosscheck-20261104.json"
+  ]
+}

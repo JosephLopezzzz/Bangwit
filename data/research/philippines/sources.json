@@ -5245,7 +5245,7 @@
     },
     {
       "id": "calabarzon-laguna-cof-taxonomy-crosscheck",
-      "title": "Eschmeyer's Catalog of Fishes Laguna de Bay name cross-check",
+      "title": "Eschmeyer's Catalog of Fishes Laguna freshwater name cross-check",
       "provider": "California Academy of Sciences, Institute for Biodiversity Science and Sustainability",
       "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/",
       "additionalUrls": [
@@ -5256,13 +5256,14 @@
         "https://fishbase.se/Summary/FamilySummary.php?ID=405",
         "https://faunafri.africamuseum.be/cloffa/table/taxon2/view?idtaxon%3Aint=3829"
       ],
-      "role": "Independent nomenclature cross-check for recorded and GBIF-accepted names on Laguna de Bay specimen candidates, including current-source follow-up; not occurrence evidence or specimen re-identification.",
-      "checkedOn": "2026-10-25",
+      "role": "Independent nomenclature cross-checks for historical Laguna de Bay and Molawin fish source names; not occurrence evidence or specimen re-identification.",
+      "checkedOn": "2026-11-04",
       "access": {
-        "status": "original-crosswalk-had-five-held-CAS-rows;current-Catalog-followup-supports-all-five-mappings;zero-CAS-taxonomy-holds",
+        "status": "Laguna de Bay CAS crosswalk plus partial Molawin historical-name crosscheck;specimens-not-reidentified;research-only",
         "reviewFiles": [
           "calabarzon-laguna-cof-taxonomy-20261025.json",
-          "calabarzon-laguna-cas-taxonomy-followup-20261025.json"
+          "calabarzon-laguna-cas-taxonomy-followup-20261025.json",
+          "calabarzon-molawin-cas-taxonomy-crosscheck-20261104.json"
         ],
         "rawPath": "raw/calabarzon-laguna-cof-taxonomy-20261025/",
         "rawSha256Recorded": true,
@@ -5274,7 +5275,7 @@
         "content": "Only concise name-status matches are recorded. The catalog is used for nomenclature only; source-specific reuse terms were not verified."
       },
       "publicationApproval": false,
-      "researchStatus": "taxonomy-only;17-CAS-historical-source-name-mappings-supported;zero-CAS-taxonomic-holds;one-MZUSP-source-hold;zero-public-occurrence-assertions",
+      "researchStatus": "taxonomy-only;laguna-cas-name-crosswalk;molawin-partial-name-crosscheck;specimens-not-reidentified;research-only",
       "license": null,
       "sourceYear": null,
       "caveats": [
@@ -16602,17 +16603,17 @@
       "provider": "California Academy of Sciences, Institute for Biodiversity Science and Sustainability",
       "url": "https://api.gbif.org/v1/dataset/5d6c10bd-ea31-4363-8b79-58c96d859f5b",
       "additionalUrls": ["https://doi.org/10.15468/efh2ib", "http://www.calacademy.org/scientists/ichthyology-collections/"],
-      "role": "Provider dataset containing ten 1940 historical CAS preserved-specimen records surfaced by the bounded Misamis Oriental fish-name query. Reviewed only as a GBIF indexed museum collection lead; the records' Cagayan/Cagayan River/Tagaloan locality text does not connect them to Talabaan.",
-      "checkedOn": "2026-10-31",
+      "role": "CC0 provider dataset used for bounded regional historical fish-specimen screens; interpret each record only with its source-specific locality, date, taxonomy and georeference evidence.",
+      "checkedOn": "2026-11-04",
       "sourceYear": null,
-      "citation": "California Academy of Sciences. CAS Ichthyology (ICH), GBIF dataset DOI https://doi.org/10.15468/efh2ib, selected indexed records checked 31 October 2026.",
-      "access": {"status": "gbif-dataset-metadata-and-indexed-records-reviewed;historical-1940;ten-cas-hits;not-talabaan", "reviewFiles": ["national-mindanao-talabaan-gbif-naawan-voucher-screen-20261031.json"], "fullTextRetrieved": false},
+      "citation": "Fong J (2026). CAS Ichthyology (ICH). Version 150.546. California Academy of Sciences. Occurrence dataset. https://doi.org/10.15468/efh2ib accessed via GBIF.org on 2026-11-04.",
+      "access": {"status": "gbif-dataset-metadata-and-indexed-records-reviewed;regional-historical-specimen-screens;molawin-waterbody-query-13-results;research-only", "reviewFiles": ["national-mindanao-talabaan-gbif-naawan-voucher-screen-20261031.json", "calabarzon-molawin-cas-waterbody-field-screen-20261104.json"], "fullTextRetrieved": false},
       "reuse": {"metadata": "GBIF dataset metadata displays CC0 1.0. This does not substitute for verifying source specimen pages or an app evidence crosswalk.", "raw": "No bulk export or coordinates copied.", "content": "Concise attributed historical record identifiers and locality notes only; no public-app use approved."},
       "publicationApproval": false,
       "license": "GBIF dataset metadata displays CC0 1.0; publication not approved",
       "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
-      "caveats": ["GBIF indexing is not an independent physical specimen examination.", "The records' historic Cagayan and Tagaloan localities are not Talabaan occurrences.", "Coordinate uncertainty and source georeference remarks limit any map use; no geometry was derived."],
-      "researchStatus": "california-academy-sciences;ichthyology;gbif-dataset;historical-cagayan-tagaloan;voucher-lead;research-only"
+      "caveats": ["GBIF indexing is not an independent physical specimen examination.", "The records' historic Cagayan and Tagaloan localities are not Talabaan occurrences.", "The Molawin waterBody query returned twelve records with locality College of Agriculture and one previously reviewed direct-locality record; the campus georeference has 809 m uncertainty, so no point geometry or current-presence claim follows.", "Coordinate uncertainty and source georeference remarks limit map use; no geometry was derived."],
+      "researchStatus": "california-academy-sciences;ichthyology;gbif-dataset;historical-cagayan-tagaloan;historical-molawin-creek;voucher-lead;research-only"
     },
     {
       "id": "field-museum-fishes-gbif-dataset-alz7wu",
