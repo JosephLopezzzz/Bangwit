@@ -1975,27 +1975,3 @@ The official Philippine 7th National Report to the CBD reports 956 identified in
 Registered one national research-only source and updated the open denominator risk. Registry: 653 sources; CALABARZON remains at 158 leads. No waterbody source link, species/occurrence row, geometry, or public app projection was added. See `calabarzon-wetland-denominator-national-report-review-20261104.json`, [the official report](https://ort.cbd.int/database/record?documentID=292757), and [PHILCHM wetlands](https://www.philchm.ph/wetlands/).
 
 **Next:** access the DENR DPCAS assessed-wetlands summary and underlying CALABARZON ENR Table 8, then reconcile version, definitions and site identities before using any regional count.
-
-### National rollout step 498: Taal Lake DNA-barcoding GenBank metadata review — 5 November 2026
-
-Reviewed PubMed's article abstract and retrieved the NCBI GenBank metadata for HQ654650-HQ654762. The 113-record range contains 23 source organism-name annotations, each with Taal locality text, collection date, voucher and identifier fields. The abstract reports 118 individuals across 23 species. Five separate HQ231 *Sardinella tawilis* accessions cite both this article and a second 2011 paper; their linkage to the article's sample was not resolved, so they remain separate and do not count as another species.
-
-All 113 core records also include coordinates. A broad, nonofficial plausibility screen puts 88 outside its Taal envelope; the remaining 25 have not been checked against exact localities. All coordinates are withheld. The 23 source names still need an authoritative taxonomy crosswalk, and the article's item-level reuse terms are unresolved. The GenBank raw snapshot is ignored and not committed. Registry: 665 references. No species assertion, geometry, diet claim, or public-app row was added. See `calabarzon-taal-aquilino-2011-genbank-record-review-20261105.json`, [PubMed abstract](https://pubmed.ncbi.nlm.nih.gov/21676192/), [example GenBank record](https://www.ncbi.nlm.nih.gov/nuccore/HQ654655), and [NCBI GenBank data-use statement](https://www.ncbi.nlm.nih.gov/genbank/about/).
-
-**Next:** crosswalk the 23 exact GenBank organism-name strings against current authoritative fish taxonomy, then review specimen and reuse eligibility before considering any historical text-locality assertion.
-
-### National rollout step 499: Taal barcoding names crosschecked against the Catalog of Fishes — 5 November 2026
-
-Queried all 23 exact GenBank name strings against the California Academy of Sciences' Catalog of Fishes. Twenty-two map to the same current name; the source name *Apogon hyalosoma* maps to *Yarica hyalosoma*. One family conflict remains: the Catalog of Fishes reports Oxudercidae for *Oligolepis acutipennis*, while GBIF Backbone Taxonomy reports Gobiidae. Keep both source values visible in research and do not present a family label as resolved.
-
-This is a nomenclature crosswalk only. It does not independently identify the sequenced specimens, verify the suspect coordinates, establish current Taal Lake presence, or clear the article/metadata for public redistribution. No app species assertion was added. See `calabarzon-taal-aquilino-2011-taxonomy-crosswalk-20261105.json`, [Catalog of Fishes](https://researcharchive.calacademy.org/research/ichthyology/catalog/), and [GBIF Backbone record for *Oligolepis acutipennis*](https://www.gbif.org/species/5208855).
-
-**Next:** review the five tawilis accession relationships against the cited source publications and inspect publisher rights/available specimen documentation; then decide whether any of the 113 historical records can be admitted as text-locality evidence.
-
-### National rollout step 500: Taal barcoding publisher-access and reuse gate — 5 November 2026
-
-Reviewed Wiley's official article page and Terms of Use. The page confirms the article citation and abstract, but says its hosted full text is unavailable due to technical difficulties; no article-specific open license was displayed. Wiley's terms reserve rights outside their stated permissions and applicable open licenses. NCBI separately warns that GenBank submitters may claim rights that NCBI cannot grant. This does not establish a reuse right for a public species table.
-
-The 113 accession metadata records remain research leads. Keep their coordinates withheld, preserve the unresolved *Oligolepis acutipennis* family conflict, and do not project a species batch without a documented item-specific rights basis and specimen-level review. No email or permission request was sent. See the rights section in `calabarzon-taal-aquilino-2011-genbank-record-review-20261105.json`, [Wiley article page](https://onlinelibrary.wiley.com/doi/10.1111/j.1755-0998.2011.03000.x), [Wiley Terms of Use](https://onlinelibrary.wiley.com/terms-and-conditions), and [NCBI GenBank data-use statement](https://www.ncbi.nlm.nih.gov/genbank/about/).
-
-**Next:** prioritize separate, explicitly reusable museum or government occurrence records and open-licensed regional surveys; keep the Aquilino-derived public projection held unless the source authors or publisher clarify reuse and the voucher/coordinate issues are independently resolved.
