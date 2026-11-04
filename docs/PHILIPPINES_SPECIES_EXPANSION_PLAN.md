@@ -4357,3 +4357,19 @@ The report separately presents a PHILCHM-sourced total of 314 non-riverine inlan
 Added one research-only national source and updated the open wetland-denominator risk. Registry: 653 sources; CALABARZON remains at 158 leads. No new waterbody or source links, species/occurrence rows, geometry, or app projections were added. See `calabarzon-wetland-denominator-national-report-review-20261104.json`, [the Philippines 7th National Report](https://ort.cbd.int/database/record?documentID=292757), and [PHILCHM's wetlands page](https://www.philchm.ph/wetlands/).
 
 **Next:** retrieve the active DENR DPCAS “Summary of Assessed Critical Wetlands as of December 2024” and the underlying CALABARZON ENR Statistical Report Table 8 through normal public access; compare dates, definitions and site identities before changing the regional denominator.
+
+### National rollout step 498: DENR wetland denominator retrieval access review — 4 November 2026
+
+The official search index lists the DENR DPCAS dataset “Summary of Assessed Critical Wetlands as of December 2024” as active, and the CALABARZON 2025 ENR report outline confirms “Table 8. Inland Wetland in the Region.” The underlying DPCAS page showed a browser certificate-date warning; it was not bypassed. The 2025 report index and its ordinary WordPress REST page query returned HTTP 403. No dataset rows, download or wetland denominator were obtained. The national and regional wetland-count differences therefore remain unresolved.
+
+Added `calabarzon-wetland-denominator-retrieval-followup-20261104.json` and registered the DPCAS listing as a research-only retrieval lead. No wetland rows, waterbody leads, species/occurrence assertions, geometry, or public app data were added. See the [DENR DPCAS portal](https://dpcas.denr.gov.ph/) and [CALABARZON 2025 ENR report index](https://calabarzon.denr.gov.ph/enr-statistics/2025-enr-statistical-report/).
+
+**Next:** keep this denominator unresolved and continue with an independently accessible, site-specific fish source; revisit the DENR data only through ordinary trusted access or an authorized official copy.
+
+### National rollout step 499: Labac River 2014 CvSU fish-study retrieval lead — 4 November 2026
+
+A secondary research listing mirrored by FlipBuilder names a 2014 CvSU paper presentation, “Identification and Characterization of Fish Species in Labac River,” and prints the contributor line “With Panizales, J.N. and Rodil, S.” The original presentation/report, full citation, sampling methods, exact sites, fish names and item-specific reuse terms were not located. An ordinary public query of the CvSU library catalog timed out. This is a discovery lead only, not fish-presence evidence, and the title does not resolve a channel reach versus the wider Labac-Alemang watershed.
+
+Registered the listing and linked it to the existing Labac River research lead with a retrieval task. CALABARZON remains at 158 waterbody leads; the source registry is now at 655. No species assertions, occurrence rows, geometry or public app data were added. See the [CvSU research listing, page 222](https://online.flipbuilder.com/pddx/srze/files/basic-html/page222.html) and [NIA CALABARZON's 2024 watershed-management notice](https://region4a.nia.gov.ph/?q=content%2Fnia-region-iv-partners-government-agencies-integrated-watershed-management).
+
+**Next:** obtain an authorized copy and verify site identity, methods, taxonomic determinations and reuse terms before considering any Labac fish claims.

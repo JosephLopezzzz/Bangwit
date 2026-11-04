@@ -3,7 +3,7 @@
   "checkedOn": "2026-11-04",
   "status": "research-only-source-registry",
   "scope": "National acquisition references, freshwater spatial-source leads, CALABARZON/Central Luzon identity/source leads, and Mindanao regional freshwater survey reviews. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 653,
+  "sourceCount": 655,
   "sources": [
     {
       "id": "denr-bmb-philippines-7th-national-report-cbd",
@@ -1587,13 +1587,14 @@
       "provider": "DENR CALABARZON",
       "url": "https://calabarzon.denr.gov.ph/enr-statistics/2025-enr-statistical-report/",
       "role": "Official report index lists a Table 8 titled Inland Wetland in the Region; table content is not present in the readable indexed outline and direct access returned 403.",
-      "checkedOn": "2026-10-24",
+      "checkedOn": "2026-11-04",
       "sourceYear": 2025,
       "access": {
-        "status": "official-indexed-report-outline-read-direct-fetch-403",
+        "status": "official-indexed-report-outline-read;normal-https-and-wordpress-rest-403;table-content-not-acquired",
         "localRawSnapshot": null,
         "reviewFiles": [
-          "calabarzon-wetland-roadmap-count-review-20261024.json"
+          "calabarzon-wetland-roadmap-count-review-20261024.json",
+          "calabarzon-wetland-denominator-retrieval-followup-20261104.json"
         ],
         "tableContentRead": false
       },
@@ -1603,7 +1604,7 @@
         "content": "Table existence does not resolve the 2024 roadmap's list count, feature identity or complete wetland denominator. No data rows or public projection are approved."
       },
       "publicationApproval": false,
-      "researchStatus": "table-title-confirmed;table-content-and-rights-unavailable"
+      "researchStatus": "table-title-confirmed;ordinary-access-403;table-content-and-rights-unavailable"
     },
     {
       "id": "llda-annual-report-2022",
@@ -20447,6 +20448,70 @@
       "caveats": [
         "Do not merge with Leonardo (1984); the titles, author names, and stated thesis lengths differ.",
         "The DLSU 1984 index page did not expose this exact item in the reviewed results; this is not evidence that no catalog record exists."
+      ]
+    },
+    {
+      "id": "denr-dpcas-assessed-critical-wetlands-2024",
+      "title": "Summary of Assessed Critical Wetlands as of December 2024",
+      "provider": "Department of Environment and Natural Resources - Data Portal Clientele Access System",
+      "url": "https://dpcas.denr.gov.ph/",
+      "role": "Official portal listing for the active DENR critical-wetland summary dataset; the listing is a retrieval lead, not a reviewed site table or regional wetland denominator.",
+      "checkedOn": "2026-11-04",
+      "sourceYear": 2024,
+      "access": {
+        "status": "official-search-index-lists-active-dataset;ordinary-browser-navigation-certificate-date-invalid;underlying-data-not-retrieved",
+        "localRawSnapshot": null,
+        "reviewFiles": [
+          "calabarzon-wetland-denominator-retrieval-followup-20261104.json"
+        ],
+        "tableContentRead": false
+      },
+      "reuse": {
+        "metadata": "The official portal title and active listing status are retained as discovery metadata only.",
+        "raw": "No dataset rows, download, or portal export were acquired.",
+        "content": "Dataset visibility does not establish a license or permission to reproduce a structured inventory; no rows or denominator are approved."
+      },
+      "publicationApproval": false,
+      "researchStatus": "official-DPCAS-title-indexed-active;table-not-accessed;regional-denominator-unresolved;research-only",
+      "license": "Unknown; underlying dataset terms were not accessible",
+      "licenseUrl": null,
+      "caveats": [
+        "The browser displayed a certificate-date warning on the portal; it was not bypassed.",
+        "A title in search results is not the underlying dataset or a verified CALABARZON site roster.",
+        "No wetland count, feature identity, geometry, fish record, or public-app row follows from this source lead."
+      ]
+    },
+    {
+      "id": "cvsu-2014-labac-river-fish-characterization-presentation",
+      "title": "Identification and Characterization of Fish Species in Labac River",
+      "provider": "Cavite State University research presentation (secondary listing mirrored by FlipBuilder)",
+      "url": "https://online.flipbuilder.com/pddx/srze/files/basic-html/page222.html",
+      "role": "Secondary bibliographic lead to a listed 2014 fish-focused presentation; the original presentation/report has not been located and no findings are available.",
+      "checkedOn": "2026-11-04",
+      "sourceYear": 2014,
+      "citation": "Title as listed on page 222 of Area VI Parameter A; entry says 2014 paper presentation at the CvSU Administrative Council, Lasap Hall, CvSU, Indang, Cavite, and 'With Panizales, J.N. and Rodil, S.'",
+      "access": {
+        "status": "secondary-research-listing-read;original-not-located;ordinary-cvsu-library-catalog-query-timed-out",
+        "localRawSnapshot": null,
+        "reviewFiles": [
+          "calabarzon-labac-2014-fish-presentation-retrieval-review-20261104.json"
+        ],
+        "fullTextRetrieved": false
+      },
+      "reuse": {
+        "metadata": "Only the listed title, year, presentation venue and partial contributor line are recorded as a retrieval lead.",
+        "raw": "No original presentation, species list, sample records, or derived table acquired.",
+        "content": "No item-specific reuse permission was found; do not reproduce or publish content unless the original and its terms are reviewed."
+      },
+      "publicationApproval": false,
+      "researchStatus": "unverified-primary-fish-study-lead;no-species-or-station-data;rights-unknown;research-only",
+      "license": "Unknown; original presentation not located",
+      "licenseUrl": null,
+      "caveats": [
+        "The mirrored page is secondary listing evidence, not the research presentation itself.",
+        "The partial contributor line does not establish complete authorship or author roles.",
+        "The listing gives no sampling dates, sites/reaches, method, fish names, vouchers, or taxonomic determinations.",
+        "The name Labac River does not resolve whether the study sampled a channel reach or the broader Labac-Alemang watershed."
       ]
     }
   ],

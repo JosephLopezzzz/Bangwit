@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "calabarzon-wetland-denominator-retrieval-followup-20261104",
+  "checkedOn": "2026-11-04",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "regionName": "Region IV-A (CALABARZON)",
+  "status": "official-dataset-titles-verified-in-search-index;underlying-regional-data-not-accessed",
+  "question": "Could the active DENR DPCAS wetland summary or the 2025 CALABARZON ENR Table 8 be read through ordinary public access?",
+  "accessAttempts": [
+    {
+      "sourceId": "denr-dpcas-assessed-critical-wetlands-2024",
+      "url": "https://dpcas.denr.gov.ph/",
+      "method": "ordinary browser navigation",
+      "result": "The browser returned net::ERR_CERT_DATE_INVALID before the public portal could be read.",
+      "handling": "Stopped at the browser certificate warning; did not bypass or work around TLS validation. The search index lists the dataset title as active, but no table rows or download link were inspected."
+    },
+    {
+      "sourceId": "denr-calabarzon-enr-statistical-report-2025",
+      "url": "https://calabarzon.denr.gov.ph/enr-statistics/2025-enr-statistical-report/",
+      "method": "search-index lookup, web page reader, and ordinary HTTPS GET",
+      "result": "The search index confirms a Table 8 titled 'Inland Wetland in the Region'; the web reader and ordinary HTTPS GET returned 403. The public WordPress REST page query also returned 403.",
+      "handling": "No alternate host, credential, or access-control bypass was attempted; no table content was obtained."
+    }
+  ],
+  "indexedMetadata": {
+    "dpcasDatasetTitle": "Summary of Assessed Critical Wetlands as of December 2024",
+    "dpcasStatusShownBySearchIndex": "Active",
+    "calabarzonReport": "2025 ENR Statistical Report",
+    "tableTitleShownBySearchIndex": "Table 8. Inland Wetland in the Region"
+  },
+  "limitations": [
+    "Search-indexed titles do not expose the underlying site rows, definitions, assessment date per site, or a CALABARZON denominator.",
+    "The previously reviewed national wetland totals remain non-comparable and do not replace the missing regional roster.",
+    "No wetland identity, count, geometry, fish assertion, current status, legal status, or app data is inferred from these access attempts."
+  ],
+  "disposition": {
+    "wetlandRowsAdded": 0,
+    "waterbodyLeadsAdded": 0,
+    "speciesAssertionsAdded": 0,
+    "geometryAdded": false,
+    "publicAppRowsAdded": 0,
+    "regionalDenominatorEstablished": false,
+    "publicationApproval": false
+  },
+  "nextAction": "Keep the CALABARZON wetland denominator open. Revisit only through ordinary trusted access or an authorized official copy; meanwhile continue with independently accessible, site-specific fish sources."
+}
