@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "mimaropa-san-agustin-range-followup-20261105",
+  "checkedOn": "2026-11-05",
+  "phaseId": "L8",
+  "regionId": "1700000000",
+  "regionName": "MIMAROPA",
+  "purpose": "Continue the focused range screen of the 2025 San Agustin estuary/tributary paper: add one high-priority geographic outlier and distinguish it from an independently cited Philippine record for Belobranchus segura.",
+  "relatedReviews": [
+    "mimaropa-san-agustin-2022-estuary-tributary-survey-integrity-review-20261105.json",
+    "mimaropa-san-agustin-gbif-name-crosswalk-20261105.json",
+    "mimaropa-san-agustin-priority-range-authority-triage-20261105.json",
+    "mimaropa-tablas-2018-2019-freshwater-survey-integrity-rights-review-20261105.json"
+  ],
+  "method": {
+    "scope": "Focused check of the malformed Scorpaenacardinalis source label and a separate Philippine distribution cross-check for Belobranchus segura; this is not a complete review of the remaining labels.",
+    "distinction": "GBIF name matching, published range accounts, and separate Philippine survey records answer different questions. A spelling candidate or a regional record does not identify the specimens in the San Agustin 2022 survey.",
+    "evidenceLimit": "A range conflict prioritizes voucher review but does not prove absence, rule out an introduced or stray fish, or correct the source label. A separate regional record does not validate another survey's specimens or exact waterbody assignment."
+  },
+  "findings": [
+    {
+      "sourceLabel": "Scorpaenacardinalis",
+      "candidateName": "Scorpaena cardinalis",
+      "gbifResult": "The verbatim no-space label had no strict species match. The separately queried spacing candidate returned an exact accepted species-rank match (GBIF usage key 2334612); this resolves only a name string.",
+      "independentAuthority": "Eschmeyer's Catalog of Fishes lists Scorpaena cardinalis as valid and gives its distribution as the southwestern Pacific, from New Zealand to Lord Howe, Norfolk and Kermadec islands.",
+      "philippinesEvidence": "No Philippine range source or specimen-level record for this candidate was verified in this focused review.",
+      "conflict": "The cited range is geographically far from the source paper's San Agustin, Romblon estuary/tributary context.",
+      "priority": "high",
+      "action": "Request the specimen accession and diagnostic photographs, preserve the malformed source label verbatim, and ask the authors to confirm the intended taxon before any name normalization or occurrence projection."
+    },
+    {
+      "sourceLabel": "Belobranchus segura",
+      "separatePhilippineContext": "Balisco et al. (2025) discuss a Tablas Island, Romblon specimen record cited to Gonzalez et al. (2023), and report additional Philippine distribution records. This supports regional plausibility for the species name, not the identity of the specimens in the distinct 2022 San Agustin estuary/tributary survey.",
+      "specimenLinkage": "The 2023 Tablas freshwater survey review reports no voucher accession numbers, and no accession crosswalk linking its material to the 2022 San Agustin survey was found.",
+      "disposition": "Retain the San Agustin label for voucher-level review; do not flag it as a range outlier solely on geography, and do not transfer the Tablas record to a San Agustin waterbody."
+    }
+  ],
+  "disposition": {
+    "newRangeMismatchesFlagged": 1,
+    "separatePhilippineDistributionContextChecked": 1,
+    "specimenIdentitiesResolved": 0,
+    "occurrenceAssertions": 0,
+    "waterbodyAssertions": 0,
+    "coordinatesOrGeometryAdded": false,
+    "publicAppRows": 0,
+    "contactSent": false
+  },
+  "nextAction": "Screen the remaining 34 of the 39 source labels for range and current-authority conflicts, then request voucher/accession details for the four priority outliers and unresolved spellings. Keep all records research-only until specimen and locality evidence is resolved.",
+  "sources": [
+    {
+      "url": "https://mbimph.com/index.php/UPJOZ/article/view/4989",
+      "supports": "The 2025 article, its 39 verbatim taxon labels, and its reported San Agustin, Romblon estuary/tributary survey context."
+    },
+    {
+      "url": "https://api.gbif.org/v1/species/match?name=Scorpaena%20cardinalis&strict=true",
+      "supports": "The separately queried spacing candidate's accepted GBIF Backbone name match; not the specimen identity or Philippine range."
+    },
+    {
+      "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=42175",
+      "supports": "Eschmeyer's Catalog of Fishes nomenclatural record and type locality for Scorpaena cardinalis."
+    },
+    {
+      "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Scorpaena&tbl=species",
+      "supports": "Eschmeyer's Catalog of Fishes current valid status and southwestern-Pacific distribution statement for Scorpaena cardinalis."
+    },
+    {
+      "url": "https://lkcnhm.nus.edu.sg/wp-content/uploads/sites/11/2025/12/RBZ-2025-0043.pdf",
+      "supports": "Balisco et al. (2025) cite the Tablas Island, Romblon record of Belobranchus segura to Gonzalez et al. (2023), discuss Philippine distribution records, and describe separate examined river specimens from Palawan, Aurora and Bislig."
+    },
+    {
+      "url": "https://doi.org/10.15625/2615-9023/17521",
+      "supports": "The separate 2018-2019 Tablas freshwater survey reviewed as the source cited for the Romblon Belobranchus segura context."
+    }
+  ]
+}
