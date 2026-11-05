@@ -4632,3 +4632,15 @@ The full document is unavailable in the UPLB repository. The page gives UPLB Mai
 See the [UPLB thesis record](https://www.ukdr.uplb.edu.ph/etd-grad/4167/), [GBIF record for *Siganus fuscescens*](https://www.gbif.org/taxon/6YN6R), and [GBIF record for *Siganus guttatus*](https://www.gbif.org/taxon/6YMV7).
 
 **Next:** pursue the Calapan 2012 survey and the UPLB thesis as separate library-access leads, while continuing the MIMAROPA freshwater and coastal-water source sweep.
+
+### National rollout step 529: Tablas Island freshwater survey integrity and rights review — 5 November 2026
+
+Reviewed the full publisher PDF for Gonzalez, Gado and Mantes's 2018–2019 Tablas Island survey. It spans nine municipalities and running- and standing-water habitats, including rivers, streams, creeks, irrigation, marshes and idle fishponds; the paper says GPS markers were used and specimens were stored at the Romblon State University-San Agustin Campus Biological Repository. Its species table associates taxa with municipalities, not named waterbodies or published station coordinates.
+
+The reported counts conflict: the abstract, results and conclusion say 44 species, while the discussion says 51; the genus and creek counts also differ between sections/figures. The table's “Local Name” column contains native/introduced status labels, and several taxon spellings vary within the article. The discussion names *Barbodes hemictenus* from Patu-o River as a new locality record, but supplies no voucher accession or coordinate; this remains a priority verification lead. Human food-use labels are not prey/diet evidence.
+
+The journal's stated license is CC BY-NC-ND 4.0. No rights-holder permission for a transformed app dataset was obtained. Added `mimaropa-tablas-2018-2019-freshwater-survey-integrity-rights-review-20261105.json` and one source record; registry count is now 682. No species-by-waterbody row, coordinate, diet claim or public-app projection was added; publication approval remains false.
+
+See the [publisher article PDF](https://vjs.ac.vn/vjbio/article/download/17521/2543254801/2543259561), [article DOI](https://doi.org/10.15625/2615-9023/17521), and [journal license policy](https://vjs.ac.vn/index.php/vjbio/about).
+
+**Next:** review the separate San Agustin wetland study and search for independently reusable inland-water records from Marinduque and Mindoro; do not merge separate survey periods or let the Tablas count discrepancy become a checklist total.

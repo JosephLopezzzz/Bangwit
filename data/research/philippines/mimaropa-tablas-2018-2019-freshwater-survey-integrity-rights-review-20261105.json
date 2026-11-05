@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "mimaropa-tablas-2018-2019-freshwater-survey-integrity-rights-review-20261105",
+  "checkedOn": "2026-11-05",
+  "regionId": "1700000000",
+  "question": "Can the Tablas Island freshwater-fish survey support a reliable, waterbody-specific public species batch?",
+  "source": {
+    "sourceId": "gonzalez-gado-mantes-2023-tablas-freshwater-ichthyofauna",
+    "title": "Freshwater ichthyofauna of wetlands in Tablas Island, Romblon, the Philippines",
+    "authors": [
+      "Jeric B. Gonzalez",
+      "Vincent Jay H. Gado",
+      "Bernie G. Mantes"
+    ],
+    "publication": "Academia Journal of Biology, 45(1), 121-138 (2023)",
+    "doi": "10.15625/2615-9023/17521",
+    "url": "https://vjs.ac.vn/vjbio/article/download/17521/2543254801/2543259561",
+    "landingPage": "https://vjs.ac.vn/index.php/vjbio/article/view/17521",
+    "license": "CC BY-NC-ND 4.0 under the journal's stated Open Access policy",
+    "licenseUrl": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "access": "The full publisher-hosted PDF and the journal-wide Open Access policy were reviewed. The PDF states copyright 2023 Vietnam Academy of Science and Technology. The policy permits noncommercial sharing of the cited work but applies a NoDerivatives condition; no permission for a transformed, table-derived public-app dataset was obtained."
+  },
+  "studyScope": {
+    "waterbody": "Tablas Island, Romblon",
+    "municipalities": [
+      "Looc",
+      "Santa Fe",
+      "Alcantara",
+      "Santa Maria",
+      "San Agustin",
+      "Calatrava",
+      "San Andres",
+      "Odiongan",
+      "Ferrol"
+    ],
+    "studyPeriod": "2018-08 to 2019-05",
+    "habitatTypesAsReported": [
+      "stream",
+      "river",
+      "creek",
+      "irrigation",
+      "marsh",
+      "idle fishpond"
+    ],
+    "georeferencingAsReported": "The article says selected sites were GPS-marked and shows a site map, but publishes no coordinate table or named individual waterbodies. Table 1 associates taxa with municipal abbreviations rather than river/stream identities.",
+    "gearAsReported": [
+      "modified hoop net",
+      "set gill net",
+      "scoop net",
+      "hook and line"
+    ],
+    "specimenHandlingAsReported": "The article says preserved specimens were stored at the Romblon State University-San Agustin Campus Biological Repository; it gives no catalog or accession numbers in the reviewed text."
+  },
+  "integrityFindings": {
+    "abstractReportedSpecies": 44,
+    "abstractReportedGenera": 36,
+    "abstractReportedFamilies": 19,
+    "resultsReportedSpecimens": 2957,
+    "resultsReportedSpecies": 44,
+    "resultsReportedGenera": 35,
+    "resultsReportedFamilies": 19,
+    "discussionReportedSpecies": 51,
+    "discussionReportedFamilies": 22,
+    "conclusionReportedSpecies": 44,
+    "status": "Unresolved internal count conflict: 44 species is reported in the abstract, results and conclusion, while the discussion says 51 species and 22 families. The results also disagree between 35 and 36 genera. The counts are not reconciled by this review.",
+    "habitatCountConflict": "The prose says eight species occurred in creeks, while Figure 3 shows seven; no corrected value inferred.",
+    "taxonomicAndColumnIssues": [
+      "The paper alternates spellings for taxa including Gambusia/Gambossia affinis and Giuris/Guriris/Guiris margaritaceus; do not silently normalize source strings.",
+      "Table 1 labels a column 'Local Name' but its values are Native or Introduced, which are origin categories rather than local vernacular names.",
+      "The paper reports Barbodes hemictenus as a new Tablas locality record and specifically names Patu-o River, Odiongan, in the discussion, but no specimen accession or coordinate is supplied; this needs expert and voucher cross-checking.",
+      "The paper's food-use table concerns human use, not natural prey or diet; it is not a bait or feeding recommendation source."
+    ]
+  },
+  "limits": [
+    "Taxon-to-municipality associations do not establish presence in a named stream, river, lake, or reach.",
+    "The study combines running and standing waters and acknowledges marine fish records; habitat and salinity assignments need separate verification.",
+    "GPS mapping is mentioned, but the paper does not provide station coordinates or a station-by-taxon crosswalk.",
+    "No voucher accession identifiers were retrieved to audit the new Patu-o River record or the other identifications.",
+    "The CC BY-NC-ND 4.0 license and unresolved internal counts block publishing a normalized species-by-waterbody table without further rights and data-quality review.",
+    "The 2018-2019 survey cannot establish current presence, abundance, catchability, fishing rules, or water safety."
+  ],
+  "priorityTaxonLeads": [
+    {
+      "nameAsPrinted": "Barbodes hemictenus",
+      "reportedLocality": "Patu-o River, Odiongan, Romblon (as stated in discussion)",
+      "disposition": "High-priority research lead only; verify identification, island-range claim, specimen voucher and exact locality before any occurrence assertion."
+    },
+    {
+      "nameAsPrinted": "Gambusia affinis",
+      "reportedContext": "Article reports it as the dominant fish and 1,420 of 2,957 specimens, while the discussion also prints the spelling Gambossia.",
+      "disposition": "Research lead only; verify the count and name spelling against the source specimens/table."
+    }
+  ],
+  "admission": {
+    "researchTaxonCandidates": 2,
+    "speciesAssertions": 0,
+    "waterbodyOccurrenceRows": 0,
+    "catchRows": 0,
+    "coordinatesOrGeometryAdded": false,
+    "dietAssertions": 0,
+    "ruleOrSafetyAssertions": 0,
+    "publicAppRows": 0,
+    "publicationApproval": false
+  },
+  "followUp": {
+    "surveyTableCopied": false,
+    "fullPdfCommitted": false,
+    "voucherCatalogCrosswalkRetrieved": false,
+    "rightsHolderContacted": false,
+    "requestSent": false,
+    "nextAction": "Seek permission or an explicitly licensed derived-data release if using the municipality-level table; ask RSU-San Agustin for voucher accession details and the Patu-o River specimen crosswalk. Continue with independent Marinduque and Mindoro evidence rather than treating this paper as a complete Romblon checklist."
+  }
+}
