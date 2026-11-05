@@ -4600,3 +4600,13 @@ Added `mimaropa-naujan-2011-mbcfi-profile-scope-rights-review-20261105.json` and
 See the [MBCFI report PDF](https://www.mbcfi.org.ph/wp-content/uploads/2022/03/6_Naujan_Lake_National_Park_Profile.pdf) and the [NFRDI repository record for its later Lake Naujan feature](https://repository.nfrdi.da.gov.ph/items/0213ccc2-8bb5-4a4f-8eb3-676fc611143c).
 
 **Next:** seek clarification of the conflicting lake totals, fish-survey dates and voucher accessions from MBCFI/UPLB, and verify content reuse terms before publishing table-derived data. Continue screening for openly reusable MIMAROPA lake, river, wetland and coastal sources in parallel.
+
+### National rollout step 526: Caluangan Lake saline-fish assessment abstract review — 5 November 2026
+
+Reviewed the official SEAFDEC/AQD repository record for Cui et al.'s PCAARRD-DOST LakeCon proceedings chapter (2013, pp. 102–132). The source describes saline Lake Caluangan, five littoral and three limnetic stations, and multiple fishing gears. The abstract reports 18 fish species and a Siganus sp. CPUE value, but lists only three binomials (*Mugil cephalus*, *Terapon jarbua*, *Chanos chanos*) among its displayed identifications; the remaining labels are at genus or family rank. Repository taxonomic subject terms include additional names that are not established as article identifications by the abstract. Do not turn those metadata terms into source records or treat “18 species” as 18 resolved binomials.
+
+The official record has no attached file and says the proceedings remain for sale in print, with PDF requests restricted while on sale. Added `mimaropa-caluangan-2013-seafdec-abstract-review-20261105.json` and one source-registry entry; the registry now contains 678 unique sources. No full chapter, station-by-taxon table, voucher IDs, field dates or coordinates were obtained; no purchase or contact was made. Three binomials are retained only as research candidates from the abstract; no species assertion, occurrence, catch row, geometry, diet, rule, safety or public-app row was added. Publication approval remains false.
+
+See the [official SEAFDEC/AQD repository record](https://repository.seafdec.org.ph/handle/10862/5848).
+
+**Next:** continue MIMAROPA screening with Calapan River and other Oriental Mindoro/Palawan inland-water sources, preferring complete and clearly reusable evidence over repository abstracts.
