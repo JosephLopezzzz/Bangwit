@@ -4644,3 +4644,13 @@ The journal's stated license is CC BY-NC-ND 4.0. No rights-holder permission for
 See the [publisher article PDF](https://vjs.ac.vn/vjbio/article/download/17521/2543254801/2543259561), [article DOI](https://doi.org/10.15625/2615-9023/17521), and [journal license policy](https://vjs.ac.vn/index.php/vjbio/about).
 
 **Next:** review the separate San Agustin wetland study and search for independently reusable inland-water records from Marinduque and Mindoro; do not merge separate survey periods or let the Tablas count discrepancy become a checklist total.
+
+### National rollout step 530: Mogpog River fish-tissue taxon and locality review — 5 November 2026
+
+Reviewed Gigantone et al.'s 2020 *Journal of Health and Pollution* paper on mine-waste impacts in the Mogpog River. Its fauna table reports *Poecilia sphenops*—called “guppy” by the paper—at Paadjao Falls and Bocboc. The article says Bocboc fish migrated from Paadjao Falls and that the sampling area is near where their waters meet. It describes roughly ten fish dried together for a composite tissue sample. This was a pollution assessment, not an inventory or angling survey; the reviewed text gives no fish collection date, gear/effort, coordinates or voucher identifiers.
+
+The scientific-name/common-name combination conflicts with GBIF Backbone/Catalogue of Life and NCBI Taxonomy records, which identify *P. sphenops* as a molly. That name match does not verify the field specimen. The article states CC BY 3.0, but the quality and locality problems make these fish rows unsuitable as public occurrence assertions. Its historical copper measurements are not current water tests, safety advice or fishing restrictions.
+
+Added `mimaropa-mogpog-river-2020-fish-tissue-taxonomy-review-20261105.json` and two source-registry records; the registry now contains 684 unique sources. No occurrence, catch, coordinate, diet, pollution alert or public-app row was added; publication approval remains false. See the [PMC article](https://pmc.ncbi.nlm.nih.gov/articles/PMC7269319/), [article DOI](https://doi.org/10.5696/2156-9614-10.26.200611), [GBIF taxon record](https://www.gbif.org/taxon/4KSFJ) and [NCBI Taxonomy record](https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?name=Poecilia+sphenops).
+
+**Next:** review the separate Marinduque State College thesis on common fish and fishing practices across Boac streams if its full text can be accessed. The MarSU research page lists it as an unpublished 2024 bachelor's thesis and links a Google Drive file that returned 401 here; no thesis content was retrieved. Continue the Mindoro and Marinduque freshwater/coastal source sweep independently.
