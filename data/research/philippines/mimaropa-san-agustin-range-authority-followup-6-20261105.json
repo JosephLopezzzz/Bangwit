@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "mimaropa-san-agustin-range-authority-followup-6-20261105",
+  "checkedOn": "2026-11-05",
+  "phaseId": "L8",
+  "regionId": "1700000000",
+  "regionName": "MIMAROPA",
+  "purpose": "Screen two additional San Agustin Table 1 labels against current taxonomic authority and Philippine voucher or market-provenance context.",
+  "relatedReviews": [
+    "mimaropa-san-agustin-2022-estuary-tributary-survey-integrity-review-20261105.json",
+    "mimaropa-san-agustin-gbif-name-crosswalk-20261105.json",
+    "mimaropa-san-agustin-range-authority-followup-5-20261105.json"
+  ],
+  "method": {
+    "scope": "Focused review of Exyrias puntang and Fibramia lateralis, two printed labels in Table 1 of the 2025 San Agustin article.",
+    "distinction": "A current broad range, a voucher from another Philippine locality, and market-sourced fish records are contextual evidence only. None identifies the 2022 San Agustin survey specimens or assigns them to a named waterbody or reach.",
+    "evidenceLimit": "The survey article provides no voucher accession crosswalk, diagnostic images, meristic data, sequence, station coordinates, or individual reach-to-specimen link. The Fibramia market records do not independently establish capture location; the Smithsonian entry preserves a vendor-reported origin.",
+    "sourceReuse": "Only concise attributed findings and direct source links are retained. No specimen image, market dataset, occurrence export, taxonomic table, sequence, coordinate, or transformed app row was copied. Public-app reuse approval was not assessed or granted."
+  },
+  "findings": [
+    {
+      "sourceLabel": "Exyrias puntang",
+      "nameCrosswalk": "The existing strict GBIF Backbone crosswalk returned an exact accepted species-rank name match (usage key 2375825; confidence 99). This is a name match only and does not identify the San Agustin specimen.",
+      "currentAuthority": "Eschmeyer's Catalog of Fishes online version updated 14 April 2026 treats Exyrias puntang as valid and summarizes an Indo-West Pacific range from Kerala and Sri Lanka east to Vanuatu and New Caledonia, north to Taiwan and the Ryukyu Islands; listed habitats are brackish and marine. The summarized range does not explicitly enumerate the Philippines.",
+      "philippineContext": "The California Academy of Sciences collection catalog lists voucher CAS-ICH 51479, collected 26 October 1958 at Barrio Banago, 1 km east of Siaton, Negros Oriental, from a mangrove swamp, identified as Exyrias puntang. This is a separate Philippine museum voucher and not a San Agustin fish or a present-day occurrence.",
+      "disposition": "The current accepted-name treatment and separate Negros Oriental voucher support Philippine context; no new range-authority discrepancy or voucher-priority mismatch is added. Retain the San Agustin label as regionally plausible but locally unresolved pending the RSU voucher/accession crosswalk and diagnostic comparison.",
+      "priority": "routine; request the RSU voucher/accession crosswalk and compare diagnostic characters before assigning this label to a San Agustin site or reach"
+    },
+    {
+      "sourceLabel": "Fibramia lateralis",
+      "nameCrosswalk": "The existing strict GBIF Backbone crosswalk returned an exact accepted species-rank name match (usage key 8203848; confidence 99). WoRMS AphiaID 1043449 also currently returns Fibramia lateralis with accepted status. Neither name result identifies the San Agustin specimen.",
+      "currentAuthority": "The 2017 Panay fish guide lists Fibramia lateralis (Valenciennes, 1832), gives an Indo-West Pacific distribution from eastern Africa to Japan and Samoa, and describes coastal-reef habitat. The entry shows voucher KAUM-I. 57198. The guide's project introduction says researchers surveyed fish markets and adjacent landing sites on Panay's south coast from 2012 to 2016 and collected or purchased about 3,000 specimens; its species entry does not provide this voucher's individual capture locality.",
+      "philippineContext": "The Smithsonian NMNH catalog lists USNM 435612 (field number VIS-265), identified as Fibramia lateralis and collected on 3 February 2015 at Mabini market, Bohol. The record says the vendor claimed the fish came from Mabini, Cogtong Bay. This is market-voucher context with a vendor-reported origin, not a directly verified capture coordinate. The Panay guide likewise supplies regional market-survey context, not an individual capture site.",
+      "disposition": "The accepted name and Philippine market-voucher context make the label nationally plausible, but neither market record independently establishes the exact capture site or identifies the San Agustin fish. No new range-authority discrepancy or voucher-priority mismatch is added. Keep the source label locally unresolved and do not turn market location or vendor testimony into a San Agustin occurrence.",
+      "priority": "routine; request the RSU voucher/accession crosswalk and retain collection origin and station mapping as unresolved"
+    }
+  ],
+  "disposition": {
+    "sourceLabelsReviewed": 2,
+    "newRangeAuthorityDiscrepanciesNotCountedAsOutliers": 0,
+    "newVoucherPriorityRangeMismatchesFlagged": 0,
+    "totalVoucherPriorityRangeMismatchesAfterReview": 6,
+    "totalRangeAuthorityDiscrepanciesNotCountedAsOutliersAfterReview": 4,
+    "sourceLabelsReviewedOf39": 24,
+    "sourceLabelsRemainingForRangeAndAuthorityScreen": 15,
+    "specimenIdentitiesResolved": 0,
+    "occurrenceAssertions": 0,
+    "waterbodyAssertions": 0,
+    "coordinatesOrGeometryAdded": false,
+    "publicAppRows": 0,
+    "publicationApproval": false,
+    "contactSent": false
+  },
+  "nextAction": "Continue the current-authority and range screen for the remaining 15 of 39 Table 1 labels. Keep six voucher-priority mismatch labels in the verification queue and retain four separate range-authority discrepancies: Tridentiger trigonocephalus, Hypseleotris cyprinoides, Eleotris mauritiana, and Awaous guamensis. Then seek the RSU voucher/accession crosswalk and resolve the paper's station/locality conflicts before considering occurrence rows.",
+  "sources": [
+    {
+      "url": "https://mbimph.com/index.php/UPJOZ/article/view/4989",
+      "supports": "The original 2025 San Agustin article, its Table 1 labels, survey scope, and limitations."
+    },
+    {
+      "url": "https://api.gbif.org/v1/species/match?name=Exyrias%20puntang&strict=true",
+      "supports": "Existing strict GBIF Backbone exact accepted species-rank match for Exyrias puntang only."
+    },
+    {
+      "url": "https://api.gbif.org/v1/species/match?name=Fibramia%20lateralis&strict=true",
+      "supports": "Existing strict GBIF Backbone exact accepted species-rank match for Fibramia lateralis only."
+    },
+    {
+      "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=18614",
+      "supports": "Eschmeyer's Catalog of Fishes current valid status, broad range summary, and brackish/marine habitat for Exyrias puntang; page online version updated 14 April 2026."
+    },
+    {
+      "url": "https://monarch.calacademy.org/collections/list.php?db=6&reset=1&taxa=Exyrias&taxontype=2",
+      "supports": "California Academy of Sciences collection voucher CAS-ICH 51479, Exyrias puntang, from the Negros Oriental mangrove locality; this separate specimen does not establish San Agustin presence."
+    },
+    {
+      "url": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=1043449",
+      "supports": "WoRMS Aphia record 1043449; direct WoRMS API response retrieved during this review returns Fibramia lateralis with accepted status."
+    },
+    {
+      "url": "https://www.museum.kagoshima-u.ac.jp/publications/pdf_images/PhilippineFG_lowres.pdf",
+      "supports": "Motomura et al. (eds.) (2017), Commercial and bycatch market fishes of Panay Island: Fibramia lateralis species account and KAUM-I. 57198 voucher, plus the book's 2012–2016 Panay market-survey and collection context."
+    },
+    {
+      "url": "https://n2t.net/ark:/65665/3da1571d7-5599-474d-9007-1de421ebd2cc",
+      "supports": "Smithsonian NMNH USNM 435612, field number VIS-265: Fibramia lateralis collected at Mabini market, Bohol; vendor-reported origin is Mabini, Cogtong Bay."
+    }
+  ]
+}
