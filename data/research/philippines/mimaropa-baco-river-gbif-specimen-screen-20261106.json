@@ -1,0 +1,137 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "mimaropa-baco-river-gbif-specimen-screen-20261106",
+  "checkedOn": "2026-11-06",
+  "phaseId": "L8",
+  "regionId": "1700000000",
+  "waterbody": {
+    "name": "Baco River",
+    "province": "Oriental Mindoro",
+    "region": "MIMAROPA",
+    "identityBasis": "GBIF CAS specimen fields state waterBody and locality as Baco River; no reach geometry or station crosswalk reviewed"
+  },
+  "question": "Does a public museum-backed record provide a fish occurrence lead for Baco River, and is its location specific enough for a public waterbody row?",
+  "queryReview": {
+    "provider": "GBIF Occurrence API v1; CAS Ichthyology dataset",
+    "documentationUrl": "https://techdocs.gbif.org/en/openapi/v1/occurrence",
+    "queriedOn": "2026-11-06",
+    "method": "Read-only GBIF searches using country=PH and exact waterBody/locality strings, followed by accepted-taxon and collection-record checks. No bulk download was requested.",
+    "queries": [
+      {
+        "value": "waterBody=Baco River",
+        "resultCount": 1,
+        "url": "https://api.gbif.org/v1/occurrence/search?country=PH&waterBody=Baco%20River&limit=5"
+      },
+      {
+        "value": "waterBody=Baco River and accepted Scatophagus argus taxon key 2394736",
+        "resultCount": 1,
+        "url": "https://api.gbif.org/v1/occurrence/search?country=PH&waterBody=Baco%20River&taxonKey=2394736&limit=5"
+      },
+      {
+        "value": "waterBody=Baco River and classKey 204",
+        "resultCount": 0,
+        "url": "https://api.gbif.org/v1/occurrence/search?country=PH&waterBody=Baco%20River&classKey=204&limit=5"
+      },
+      {
+        "value": "locality=Baco River, all indexed taxa",
+        "resultCount": 76,
+        "url": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Baco%20River&limit=5",
+        "handling": "The broad result includes multiple taxonomic groups; only the specifically selected CAS fish record was assessed. It is not a fish checklist."
+      }
+    ],
+    "occurrence": {
+      "gbifID": "3426454963",
+      "recordUrl": "https://www.gbif.org/occurrence/3426454963",
+      "datasetKey": "5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+      "datasetTitle": "CAS Ichthyology (ICH)",
+      "datasetDoi": "10.15468/efh2ib",
+      "basisOfRecord": "PRESERVED_SPECIMEN",
+      "institutionCode": "CAS",
+      "collectionCode": "SU(ICH)",
+      "catalogNumber": "13154",
+      "occurrenceID": "urn:catalog:CAS:SU(ICH):13154",
+      "recordedBy": "Seale, Alvin",
+      "identifiedBy": null,
+      "scientificNameAsIndexed": "Ephippus argus (Linnaeus, 1766)",
+      "acceptedScientificNameAsIndexed": "Scatophagus argus (Linnaeus, 1766)",
+      "taxonKey": 5211299,
+      "acceptedTaxonKey": 2394736,
+      "acceptedNameRank": "SPECIES",
+      "taxonomicStatusOfAcceptedName": "ACCEPTED",
+      "locality": "Baco River",
+      "waterBody": "Baco River",
+      "stateProvince": "Mindoro",
+      "eventDate": null,
+      "year": null,
+      "coordinateUncertaintyInMeters": 12245,
+      "coordinatesRetained": false,
+      "classKeyOrClassFieldPresent": false,
+      "license": "CC0 1.0"
+    },
+    "taxonomicAndIndexingNotes": [
+      "GBIF maps its indexed name Ephippus argus to accepted Scatophagus argus; ITIS also lists Ephippus argus as a synonym of Scatophagus argus.",
+      "The specimen record has no class or classKey field. The accepted species is independently classified as a fish (Actinopterygii) by the Australian Museum species profile, while the GBIF classKey=204 query fails to retrieve this record. Do not use that class-filter zero as evidence of no fish records."
+    ],
+    "dataset": {
+      "title": "CAS Ichthyology (ICH)",
+      "doi": "10.15468/efh2ib",
+      "license": "CC0 1.0",
+      "url": "https://www.gbif.org/dataset/5d6c10bd-ea31-4363-8b79-58c96d859f5b"
+    }
+  },
+  "interpretation": {
+    "result": "GBIF exposes one CAS preserved-fish specimen whose occurrence record labels both locality and waterBody as Baco River. Its verbatim name is Ephippus argus, crosswalked by GBIF to accepted Scatophagus argus.",
+    "habitatContext": "The Australian Museum profile says Scatophagus argus occurs in freshwater, inshore, and estuarine waters. This general species context does not establish which habitat or river reach the CAS specimen came from.",
+    "candidateDisposition": "Retain as one historical, specimen-backed Baco River occurrence candidate for manual follow-up. The occurrence date is absent, the coordinates carry 12,245 m uncertainty, and no station/reach or original label image was reviewed; it is not suitable for a precise map pin or a current-presence assertion.",
+    "taxonomicUse": "The indexed synonym can be normalized to the GBIF accepted taxon for research indexing, but no new app species or occurrence row is approved by this screen."
+  },
+  "limitations": [
+    "The specimen's original CAS label or catalog image was not independently inspected; the locality and waterBody strings are GBIF-published metadata.",
+    "The GBIF record supplies no collection date, year, or identifiedBy value, so its age and identification history cannot be confirmed from this response.",
+    "The reported coordinate uncertainty of 12,245 m prevents assigning this record to a particular Baco River reach, inland segment, estuary, or shoreline point; coordinates were not copied into the artifact.",
+    "GBIF's classKey filter returned zero because the occurrence response lacks a class/classKey field even though the accepted taxon is a fish. Taxon-key searches recovered the same record; class-filter zeros are therefore not completeness evidence.",
+    "A historical museum specimen does not demonstrate present-day abundance, fishability, diet, fishing rules, public access, or water safety.",
+    "General habitat descriptions from outside the Philippines are contextual only and do not establish local habitat or local fishery use."
+  ],
+  "admission": {
+    "researchOccurrenceCandidates": 1,
+    "speciesAssertionsAdded": 0,
+    "waterbodyOccurrenceRows": 0,
+    "coordinatesOrGeometryAdded": false,
+    "dietAssertions": 0,
+    "ruleOrSafetyAssertions": 0,
+    "publicAppRows": 0,
+    "publicationApproval": false
+  },
+  "followUp": {
+    "nextAction": "Keep this record as a research-only historical candidate. If a Baco River app row is considered later, first inspect the CAS-SU 13154 catalog/label record, establish the collection date and original locality wording, review the specimen determination, and assess whether the 12.245 km coordinate uncertainty can be resolved without inventing reach precision.",
+    "bulkDownloadRequested": false,
+    "contactsMade": false
+  },
+  "sources": [
+    {
+      "url": "https://techdocs.gbif.org/en/openapi/v1/occurrence",
+      "supports": "Official GBIF Occurrence API documentation."
+    },
+    {
+      "url": "https://api.gbif.org/v1/occurrence/3426454963",
+      "supports": "GBIF record fields for the CAS preserved specimen, including indexed and accepted names, locality, waterBody, collector, catalog number, date/coordinate completeness, and license."
+    },
+    {
+      "url": "https://api.gbif.org/v1/dataset/5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+      "supports": "CAS Ichthyology dataset identity, DOI, description, and CC0 1.0 license."
+    },
+    {
+      "url": "https://api.gbif.org/v1/species/2394736",
+      "supports": "GBIF accepted species record for Scatophagus argus."
+    },
+    {
+      "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=170321",
+      "supports": "ITIS lists Ephippus argus among the synonyms of Scatophagus argus."
+    },
+    {
+      "url": "https://australian.museum/learn/animals/fishes/spotted-scat-scatophagus-argus/",
+      "supports": "Species profile classifies Scatophagus argus as Actinopterygii and describes its general freshwater, inshore, and estuarine habitat context."
+    }
+  ]
+}

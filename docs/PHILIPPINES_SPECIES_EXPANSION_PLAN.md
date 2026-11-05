@@ -5062,3 +5062,13 @@ This screen provides no Boac River fish record and is not evidence that fish are
 See the [GBIF API documentation](https://techdocs.gbif.org/en/openapi/v1/occurrence), [exact locality query](https://api.gbif.org/v1/occurrence/search?country=PH&locality=Boac%20River&limit=5), [Actinopterygii query](https://api.gbif.org/v1/occurrence/search?country=PH&locality=Boac%20River&classKey=204&limit=5), and the [research review](../data/research/philippines/mimaropa-boac-river-gbif-occurrence-screen-20261106.json).
 
 **Next:** continue the MIMAROPA source sweep with a separate, independently documented inland fish survey or specimen-backed dataset for a named river, lake, wetland, or reservoir. Return to Boac if its full fish baseline or another dated, site-specific fish collection becomes accessible.
+
+### National rollout step 571: Baco River CAS specimen occurrence screen — 6 November 2026
+
+GBIF returns one CAS Ichthyology preserved specimen with exact `locality=Baco River` and `waterBody=Baco River`; catalog number CAS-SU 13154. Its verbatim name *Ephippus argus* is crosswalked by GBIF to accepted *Scatophagus argus*. The dataset states CC0 1.0. The API record has no event date, year, determiner, or classKey and reports coordinate uncertainty of 12,245 m; its original museum label was not independently inspected.
+
+The record is retained as a single historical research candidate, not a precise reach, current-presence claim, or public-app row. A `classKey=204` query misses the record because the class field is absent, while the taxon-key search returns it. The Australian Museum describes the species generally in freshwater, inshore, and estuarine settings; this is not a habitat assignment for this specimen. Added the research review and one registry entry; total: 734. No coordinates, occurrence rows, public species claims, habitat geometry, diet, rules, or safety content were added.
+
+See the [GBIF specimen record](https://www.gbif.org/occurrence/3426454963), [CAS dataset](https://doi.org/10.15468/efh2ib), [GBIF accepted taxon](https://www.gbif.org/taxon/4V435), [ITIS synonym crosswalk](https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=170321), and [research review](../data/research/philippines/mimaropa-baco-river-gbif-specimen-screen-20261106.json).
+
+**Next:** inspect the original CAS specimen catalog/label and date if available; then continue MIMAROPA with another distinct, rights-cleared, waterbody-specific fish dataset.

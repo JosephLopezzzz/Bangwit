@@ -2181,3 +2181,13 @@ These are non-fish specimen records, not a Boac River fish survey. Exact-field q
 See the [GBIF Occurrence API documentation](https://techdocs.gbif.org/en/openapi/v1/occurrence), [exact locality response](https://api.gbif.org/v1/occurrence/search?country=PH&locality=Boac%20River&limit=5), [Actinopterygii-filtered response](https://api.gbif.org/v1/occurrence/search?country=PH&locality=Boac%20River&classKey=204&limit=5), [UF Invertebrate Zoology dataset](https://doi.org/10.15468/sm6qo6), and [research screen](mimaropa-boac-river-gbif-occurrence-screen-20261106.json).
 
 **Next:** continue MIMAROPA with a distinct, independently documented inland fish survey or specimen-backed dataset for a named river, lake, wetland, or reservoir. Revisit Boac River if a dated fish baseline becomes accessible.
+
+### National rollout step 517: Baco River CAS specimen occurrence screen — 6 November 2026
+
+GBIF indexes one California Academy of Sciences preserved fish specimen with both locality and waterBody set to “Baco River.” The museum catalog number is CAS-SU 13154. GBIF maps the record's name *Ephippus argus* to accepted *Scatophagus argus*. Its CAS Ichthyology dataset states CC0 1.0. The occurrence response has no collection date/year or classKey and gives 12,245 m coordinate uncertainty; the original specimen label was not reviewed.
+
+This is a useful historical occurrence candidate, but not a precise reach or current-presence record. The exact GBIF `classKey=204` query missed it because class fields are absent, even though taxon-key search returns it; class-filter zeroes cannot be read as fish absence. The species is generally described as using freshwater, inshore, and estuarine waters, but that does not resolve this specimen's habitat. Added `mimaropa-baco-river-gbif-specimen-screen-20261106.json` and one source-registry entry; total: 734. No public species/occurrence row, coordinate, geometry, diet, safety, legal, or catchability claim was added. No bulk download or contact occurred.
+
+See the [GBIF occurrence record](https://www.gbif.org/occurrence/3426454963), [CAS Ichthyology dataset](https://doi.org/10.15468/efh2ib), [GBIF accepted taxon](https://www.gbif.org/taxon/4V435), [ITIS synonym record](https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=170321), [Australian Museum species profile](https://australian.museum/learn/animals/fishes/spotted-scat-scatophagus-argus/), and [research screen](mimaropa-baco-river-gbif-specimen-screen-20261106.json).
+
+**Next:** keep the candidate pending until its CAS label/catalog page, collection date, and locality precision are checked; continue MIMAROPA with another distinct waterbody survey or rights-cleared specimen dataset.

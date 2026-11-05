@@ -3,7 +3,7 @@
   "checkedOn": "2026-11-06",
   "status": "research-only-source-registry",
   "scope": "National acquisition references, freshwater spatial-source leads, MIMAROPA/CALABARZON/Central Luzon identity and inland-water source reviews, and Mindanao regional freshwater survey reviews. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 733,
+  "sourceCount": 734,
   "sources": [
     {
       "id": "aquilino-2011-taal-dna-barcoding-genbank",
@@ -23516,6 +23516,48 @@
         "The zero-result exact Actinopterygii query is not evidence that fish are absent from Boac River.",
         "The three records are classified as Gastropoda and lack occurrence dates, years, and coordinates in the API responses reviewed; locality labels were not crosswalked to a mapped river reach.",
         "The occurrence screen is not a biological survey and provides no support for species occurrence, diet, catchability, safety, legal access, or waterbody boundaries."
+      ]
+    },
+    {
+      "id": "gbif-mimaropa-baco-river-cas-specimen-screen-20261106",
+      "title": "CAS Ichthyology specimen occurrence record for Baco River",
+      "provider": "California Academy of Sciences Ichthyology Collection, indexed by GBIF",
+      "url": "https://api.gbif.org/v1/occurrence/3426454963",
+      "additionalUrls": [
+        "https://api.gbif.org/v1/occurrence/search?country=PH&waterBody=Baco%20River&limit=5",
+        "https://api.gbif.org/v1/dataset/5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+        "https://api.gbif.org/v1/species/2394736",
+        "https://doi.org/10.15468/efh2ib"
+      ],
+      "role": "One CAS preserved-fish specimen is indexed with locality and waterBody both set to Baco River. GBIF maps its record name Ephippus argus to accepted Scatophagus argus. The record lacks collection date/year and classKey and reports 12,245 m coordinate uncertainty; keep it research-only, not a precise reach or current-presence claim.",
+      "checkedOn": "2026-11-06",
+      "sourceYear": null,
+      "citation": "GBIF Occurrence API record 3426454963; California Academy of Sciences, CAS Ichthyology (ICH) dataset DOI 10.15468/efh2ib, checked 6 November 2026.",
+      "access": {
+        "status": "public-GBIF-CAS-preserved-specimen;exact-waterBody-text;historical-date-unknown;research-candidate",
+        "reviewFiles": ["mimaropa-baco-river-gbif-specimen-screen-20261106.json"],
+        "gbifID": "3426454963",
+        "occurrenceID": "urn:catalog:CAS:SU(ICH):13154",
+        "acceptedName": "Scatophagus argus (Linnaeus, 1766)",
+        "coordinateUncertaintyM": 12245,
+        "eventDateAvailable": false,
+        "classKeyAvailable": false
+      },
+      "reuse": {
+        "metadata": "GBIF dataset metadata states CC0 1.0 for the CAS Ichthyology dataset and its occurrence record.",
+        "raw": "No bulk download or raw coordinate copy was retained; the review preserves record identifiers and the reported coordinate uncertainty only.",
+        "content": "The record is a historical occurrence candidate. No public species or occurrence row, habitat assignment, safety, diet, catchability, or legal claim is admitted by this review."
+      },
+      "publicationApproval": false,
+      "researchStatus": "baco-river-cas-specimen;scatophagus-argus-accepted-name;date-unknown;12.245km-coordinate-uncertainty;class-key-missing;research-only",
+      "license": "CC0 1.0 stated in GBIF CAS Ichthyology dataset metadata",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "caveats": [
+        "The original CAS specimen label and a direct collection catalog image were not inspected; locality details are those transcribed into GBIF.",
+        "No event date, year, or determiner is present in the API record.",
+        "The coordinate uncertainty is 12,245 m and does not resolve the specimen to a particular river reach, estuary, or shoreline point.",
+        "The exact classKey=204 search misses the fish record because its occurrence response has no classKey/class field; use validated accepted-taxon queries and do not interpret the class-filter zero as absence.",
+        "The species' general freshwater/estuarine habitat description does not identify the habitat of this specific specimen."
       ]
     }
   ],
