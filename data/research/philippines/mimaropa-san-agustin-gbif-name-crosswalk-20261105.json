@@ -1,0 +1,620 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "mimaropa-san-agustin-gbif-name-crosswalk-20261105",
+  "checkedOn": "2026-11-05",
+  "phaseId": "L8",
+  "regionId": "1700000000",
+  "regionName": "MIMAROPA",
+  "purpose": "Name-only GBIF Backbone crosswalk of the 39 verbatim taxon labels in Table 1 of the 2025 San Agustin estuary and tributary survey.",
+  "relatedSourceReview": "mimaropa-san-agustin-2022-estuary-tributary-survey-integrity-review-20261105.json",
+  "method": {
+    "authority": "GBIF Backbone Taxonomy via Species Matching API v1",
+    "endpoint": "https://api.gbif.org/v1/species/match",
+    "query": "Each Table 1 string was queried with strict=true; match rows retain usageKey, canonicalName, rank, status, matchType, confidence and family. Synonym accepted keys were resolved via https://api.gbif.org/v1/species/{usageKey}.",
+    "documentation": "https://techdocs.gbif.org/en/openapi/v1/species",
+    "interpretationGuidance": "https://techdocs.gbif.org/en/data-processing/taxonomy-interpretation",
+    "limits": [
+      "A name match does not identify a preserved specimen or establish Philippine range, collection locality, habitat, current presence, abundance, catchability, or source-table correctness.",
+      "A strict no-match is only an endpoint result, not evidence that a name is invalid or a species absent.",
+      "GBIF's Backbone uses Catalogue of Life content, so agreement with another Catalogue of Life representation may not be independent."
+    ]
+  },
+  "summary": {
+    "sourceLabelCount": 39,
+    "exactSpeciesRankMatches": 34,
+    "exactAcceptedSpeciesMatches": 32,
+    "exactSynonymSpeciesMatches": 2,
+    "genusOnlyMatches": 1,
+    "strictNoMatches": 4,
+    "synonymResolutions": [
+      {
+        "sourceName": "Leiognathus splendens",
+        "usageKey": 5211431,
+        "acceptedKey": 2396304,
+        "acceptedName": "Eubleekeria splendens"
+      },
+      {
+        "sourceName": "Ophiocara ophicephalus",
+        "usageKey": 10913313,
+        "acceptedKey": 2386201,
+        "acceptedName": "Ophiocara porocephala"
+      }
+    ],
+    "spellingVariantSuggestionsNotApplied": 12
+  },
+  "strictMatches": [
+    {
+      "sourceName": "Ambassis interrupta",
+      "usageKey": 2387290,
+      "canonicalName": "Ambassis interrupta",
+      "rank": "SPECIES",
+      "status": "ACCEPTED",
+      "matchType": "EXACT",
+      "confidence": 99,
+      "family": "Ambassidae"
+    },
+    {
+      "sourceName": "Awaous guamensis",
+      "usageKey": 5208791,
+      "canonicalName": "Awaous guamensis",
+      "rank": "SPECIES",
+      "status": "ACCEPTED",
+      "matchType": "EXACT",
+      "confidence": 99,
+      "family": "Gobiidae"
+    },
+    {
+      "sourceName": "Belobranchus segura",
+      "usageKey": 8272494,
+      "canonicalName": "Belobranchus segura",
+      "rank": "SPECIES",
+      "status": "ACCEPTED",
+      "matchType": "EXACT",
+      "confidence": 99,
+      "family": "Eleotridae"
+    },
+    {
+      "sourceName": "Butis amboinensis",
+      "usageKey": 2386085,
+      "canonicalName": "Butis amboinensis",
+      "rank": "SPECIES",
+      "status": "ACCEPTED",
+      "matchType": "EXACT",
+      "confidence": 99,
+      "family": "Eleotridae"
+    },
+    {
+      "sourceName": "Carangoides talamparoides",
+      "usageKey": 5210525,
+      "canonicalName": "Carangoides talamparoides",
+      "rank": "SPECIES",
+      "status": "ACCEPTED",
+      "matchType": "EXACT",
+      "confidence": 99,
+      "family": "Carangidae"
+    },
+    {
+      "sourceName": "Chanos chanos",
+      "usageKey": 2406374,
+      "canonicalName": "Chanos chanos",
+      "rank": "SPECIES",
+      "status": "ACCEPTED",
+      "matchType": "EXACT",
+      "confidence": 99,
+      "family": "Chanidae"
+    },
+    {
+      "sourceName": "Dussumieria acuta",
+      "usageKey": 2412967,
+      "canonicalName": "Dussumieria acuta",
+      "rank": "SPECIES",
+      "status": "ACCEPTED",
+      "matchType": "EXACT",
+      "confidence": 99,
+      "family": "Dussumieriidae"
+    },
+    {
+      "sourceName": "Eleotris mauritiana",
+      "usageKey": 2386107,
+      "canonicalName": "Eleotris mauritiana",
+      "rank": "SPECIES",
+      "status": "ACCEPTED",
+      "matchType": "EXACT",
+      "confidence": 99,
+      "family": "Eleotridae"
+    },
+    {
+      "sourceName": "Eleotris fusca",
+      "usageKey": 2386106,
+      "canonicalName": "Eleotris fusca",
+      "rank": "SPECIES",
+      "status": "ACCEPTED",
+      "matchType": "EXACT",
+      "confidence": 99,
+      "family": "Eleotridae"
+    },
+    {
+      "sourceName": "Exyrias puntang",
+      "usageKey": 2375825,
+      "canonicalName": "Exyrias puntang",
+      "rank": "SPECIES",
+      "status": "ACCEPTED",
+      "matchType": "EXACT",
+      "confidence": 99,
+      "family": "Gobiidae"
+    },
+    {
+      "sourceName": "Fibramia lateralis",
+      "usageKey": 8203848,
+      "canonicalName": "Fibramia lateralis",
+      "rank": "SPECIES",
+      "status": "ACCEPTED",
+      "matchType": "EXACT",
+      "confidence": 99,
+      "family": "Apogonidae"
+    },
+    {
+      "sourceName": "Glossogobius aureus",
+      "usageKey": 2379425,
+      "canonicalName": "Glossogobius aureus",
+      "rank": "SPECIES",
+      "status": "ACCEPTED",
+      "matchType": "EXACT",
+      "confidence": 99,
+      "family": "Gobiidae"
+    },
+    {
+      "sourceName": "Guiris margaritaceus",
+      "usageKey": null,
+      "canonicalName": null,
+      "rank": null,
+      "status": null,
+      "matchType": "NONE",
+      "confidence": 100,
+      "family": null
+    },
+    {
+      "sourceName": "Hypseleotris cyprinoides",
+      "usageKey": 2386337,
+      "canonicalName": "Hypseleotris cyprinoides",
+      "rank": "SPECIES",
+      "status": "ACCEPTED",
+      "matchType": "EXACT",
+      "confidence": 99,
+      "family": "Eleotridae"
+    },
+    {
+      "sourceName": "Leiognathus splendens",
+      "usageKey": 5211431,
+      "canonicalName": "Leiognathus splendens",
+      "rank": "SPECIES",
+      "status": "SYNONYM",
+      "matchType": "EXACT",
+      "confidence": 99,
+      "family": "Leiognathidae"
+    },
+    {
+      "sourceName": "Lutjanus johnii",
+      "usageKey": 2384936,
+      "canonicalName": "Lutjanus johnii",
+      "rank": "SPECIES",
+      "status": "ACCEPTED",
+      "matchType": "EXACT",
+      "confidence": 99,
+      "family": "Lutjanidae"
+    },
+    {
+      "sourceName": "Microphis brachyurus",
+      "usageKey": 5712324,
+      "canonicalName": "Microphis brachyurus",
+      "rank": "SPECIES",
+      "status": "ACCEPTED",
+      "matchType": "EXACT",
+      "confidence": 99,
+      "family": "Syngnathidae"
+    },
+    {
+      "sourceName": "Monodactylus argenteus",
+      "usageKey": 5211117,
+      "canonicalName": "Monodactylus argenteus",
+      "rank": "SPECIES",
+      "status": "ACCEPTED",
+      "matchType": "EXACT",
+      "confidence": 99,
+      "family": "Monodactylidae"
+    },
+    {
+      "sourceName": "Mugil cephalus",
+      "usageKey": 8189568,
+      "canonicalName": "Mugil cephalus",
+      "rank": "SPECIES",
+      "status": "ACCEPTED",
+      "matchType": "EXACT",
+      "confidence": 99,
+      "family": "Mugilidae"
+    },
+    {
+      "sourceName": "Ophiocara porocephala",
+      "usageKey": 2386201,
+      "canonicalName": "Ophiocara porocephala",
+      "rank": "SPECIES",
+      "status": "ACCEPTED",
+      "matchType": "EXACT",
+      "confidence": 99,
+      "family": "Eleotridae"
+    },
+    {
+      "sourceName": "Ophiocara ophicephalus",
+      "usageKey": 10913313,
+      "canonicalName": "Ophiocara ophicephalus",
+      "rank": "SPECIES",
+      "status": "SYNONYM",
+      "matchType": "EXACT",
+      "confidence": 99,
+      "family": "Eleotridae"
+    },
+    {
+      "sourceName": "Oreochromis niloticus",
+      "usageKey": 4285694,
+      "canonicalName": "Oreochromis niloticus",
+      "rank": "SPECIES",
+      "status": "ACCEPTED",
+      "matchType": "EXACT",
+      "confidence": 98,
+      "family": "Cichlidae"
+    },
+    {
+      "sourceName": "Oxyurichthys ophthalmonema",
+      "usageKey": 2377994,
+      "canonicalName": "Oxyurichthys ophthalmonema",
+      "rank": "SPECIES",
+      "status": "ACCEPTED",
+      "matchType": "EXACT",
+      "confidence": 99,
+      "family": "Gobiidae"
+    },
+    {
+      "sourceName": "Periophthalmus barbarus",
+      "usageKey": 2376966,
+      "canonicalName": "Periophthalmus barbarus",
+      "rank": "SPECIES",
+      "status": "ACCEPTED",
+      "matchType": "EXACT",
+      "confidence": 99,
+      "family": "Gobiidae"
+    },
+    {
+      "sourceName": "Poecilia reticulata",
+      "usageKey": 2350050,
+      "canonicalName": "Poecilia reticulata",
+      "rank": "SPECIES",
+      "status": "ACCEPTED",
+      "matchType": "EXACT",
+      "confidence": 99,
+      "family": "Poeciliidae"
+    },
+    {
+      "sourceName": "Pomatoschistus minutus",
+      "usageKey": 2379300,
+      "canonicalName": "Pomatoschistus minutus",
+      "rank": "SPECIES",
+      "status": "ACCEPTED",
+      "matchType": "EXACT",
+      "confidence": 99,
+      "family": "Gobiidae"
+    },
+    {
+      "sourceName": "Rhinogobius sp.",
+      "usageKey": 2377576,
+      "canonicalName": "Rhinogobius",
+      "rank": "GENUS",
+      "status": "ACCEPTED",
+      "matchType": "HIGHERRANK",
+      "confidence": 95,
+      "family": "Gobiidae"
+    },
+    {
+      "sourceName": "Rhynchorhampos georgii",
+      "usageKey": null,
+      "canonicalName": null,
+      "rank": null,
+      "status": null,
+      "matchType": "NONE",
+      "confidence": 100,
+      "family": null
+    },
+    {
+      "sourceName": "Schismatogobius risdawatiae",
+      "usageKey": 9799488,
+      "canonicalName": "Schismatogobius risdawatiae",
+      "rank": "SPECIES",
+      "status": "ACCEPTED",
+      "matchType": "EXACT",
+      "confidence": 99,
+      "family": "Gobiidae"
+    },
+    {
+      "sourceName": "Scorpaenacardinalis",
+      "usageKey": null,
+      "canonicalName": null,
+      "rank": null,
+      "status": null,
+      "matchType": "NONE",
+      "confidence": 100,
+      "family": null
+    },
+    {
+      "sourceName": "Siganus guttatus",
+      "usageKey": 2390286,
+      "canonicalName": "Siganus guttatus",
+      "rank": "SPECIES",
+      "status": "ACCEPTED",
+      "matchType": "EXACT",
+      "confidence": 99,
+      "family": "Siganidae"
+    },
+    {
+      "sourceName": "Siganus spinus",
+      "usageKey": 2390216,
+      "canonicalName": "Siganus spinus",
+      "rank": "SPECIES",
+      "status": "ACCEPTED",
+      "matchType": "EXACT",
+      "confidence": 99,
+      "family": "Siganidae"
+    },
+    {
+      "sourceName": "Stenogobius genivittatus",
+      "usageKey": 2377230,
+      "canonicalName": "Stenogobius genivittatus",
+      "rank": "SPECIES",
+      "status": "ACCEPTED",
+      "matchType": "EXACT",
+      "confidence": 99,
+      "family": "Gobiidae"
+    },
+    {
+      "sourceName": "Stiphodon atroporporeus",
+      "usageKey": null,
+      "canonicalName": null,
+      "rank": null,
+      "status": null,
+      "matchType": "NONE",
+      "confidence": 100,
+      "family": null
+    },
+    {
+      "sourceName": "Strongylura marina",
+      "usageKey": 5208028,
+      "canonicalName": "Strongylura marina",
+      "rank": "SPECIES",
+      "status": "ACCEPTED",
+      "matchType": "EXACT",
+      "confidence": 99,
+      "family": "Belonidae"
+    },
+    {
+      "sourceName": "Terapon jarbua",
+      "usageKey": 2374521,
+      "canonicalName": "Terapon jarbua",
+      "rank": "SPECIES",
+      "status": "ACCEPTED",
+      "matchType": "EXACT",
+      "confidence": 99,
+      "family": "Terapontidae"
+    },
+    {
+      "sourceName": "Tetraodon lineatus",
+      "usageKey": 5213591,
+      "canonicalName": "Tetraodon lineatus",
+      "rank": "SPECIES",
+      "status": "ACCEPTED",
+      "matchType": "EXACT",
+      "confidence": 99,
+      "family": "Tetraodontidae"
+    },
+    {
+      "sourceName": "Toxotes jaculatrix",
+      "usageKey": 2382436,
+      "canonicalName": "Toxotes jaculatrix",
+      "rank": "SPECIES",
+      "status": "ACCEPTED",
+      "matchType": "EXACT",
+      "confidence": 99,
+      "family": "Toxotidae"
+    },
+    {
+      "sourceName": "Tridentiger trigonocephalus",
+      "usageKey": 2376462,
+      "canonicalName": "Tridentiger trigonocephalus",
+      "rank": "SPECIES",
+      "status": "ACCEPTED",
+      "matchType": "EXACT",
+      "confidence": 99,
+      "family": "Gobiidae"
+    }
+  ],
+  "variantQueryMethod": "Fuzzy spelling candidates were checked without strict=true; the spacing candidate Scorpaena cardinalis was separately checked with strict=true.",
+  "spellingVariantSuggestions": [
+    {
+      "sourceVariant": "Guiris margaritaceus",
+      "context": "Table 1/narrative",
+      "matchType": "FUZZY",
+      "canonicalName": "Giuris margaritacea",
+      "rank": "SPECIES",
+      "status": "ACCEPTED",
+      "usageKey": 4285919,
+      "confidence": 85,
+      "family": "Eleotridae",
+      "decision": "review-only;do-not-auto-correct"
+    },
+    {
+      "sourceVariant": "Guiris margararitaceus",
+      "context": "Table 2",
+      "matchType": "NONE",
+      "canonicalName": null,
+      "rank": null,
+      "status": null,
+      "usageKey": null,
+      "confidence": 100,
+      "family": null,
+      "decision": "retain-verbatim;no-candidate"
+    },
+    {
+      "sourceVariant": "Rhynchorhampos georgii",
+      "context": "Table 1",
+      "matchType": "NONE",
+      "canonicalName": null,
+      "rank": null,
+      "status": null,
+      "usageKey": null,
+      "confidence": 100,
+      "family": null,
+      "decision": "retain-verbatim;no-candidate"
+    },
+    {
+      "sourceVariant": "Rhynchorhamphos georgii",
+      "context": "Plate caption",
+      "matchType": "FUZZY",
+      "canonicalName": "Rhynchorhamphus georgii",
+      "rank": "SPECIES",
+      "status": "ACCEPTED",
+      "usageKey": 2368937,
+      "confidence": 85,
+      "family": "Hemiramphidae",
+      "decision": "review-only;do-not-auto-correct"
+    },
+    {
+      "sourceVariant": "Scorpaena cardinalis",
+      "context": "Spacing candidate for Table 1 Scorpaenacardinalis",
+      "matchType": "EXACT",
+      "canonicalName": "Scorpaena cardinalis",
+      "rank": "SPECIES",
+      "status": "ACCEPTED",
+      "usageKey": 2334612,
+      "confidence": 99,
+      "family": "Scorpaenidae",
+      "decision": "spacing-only-candidate;retain-source-string"
+    },
+    {
+      "sourceVariant": "Carangoides taramparoides",
+      "context": "Table 2 variant",
+      "matchType": "FUZZY",
+      "canonicalName": "Carangoides talamparoides",
+      "rank": "SPECIES",
+      "status": "ACCEPTED",
+      "usageKey": 5210525,
+      "confidence": 95,
+      "family": "Carangidae",
+      "decision": "review-only;authority-conflict-remains"
+    },
+    {
+      "sourceVariant": "Periophthalmus barbarous",
+      "context": "Table/plate spelling variant",
+      "matchType": "EXACT",
+      "canonicalName": "Periophthalmus barbarous",
+      "rank": "SPECIES",
+      "status": "SYNONYM",
+      "usageKey": 6168448,
+      "confidence": 98,
+      "family": "Gobiidae",
+      "acceptedKey": 2376966,
+      "acceptedName": "Periophthalmus barbarus",
+      "decision": "review-only;do-not-auto-correct"
+    },
+    {
+      "sourceVariant": "Poecilia reticulate",
+      "context": "Plate caption",
+      "matchType": "EXACT",
+      "canonicalName": "Poecilia reticulate",
+      "rank": "SPECIES",
+      "status": "SYNONYM",
+      "usageKey": 5203776,
+      "confidence": 98,
+      "family": "Poeciliidae",
+      "acceptedKey": 2350050,
+      "acceptedName": "Poecilia reticulata",
+      "decision": "review-only;do-not-auto-correct"
+    },
+    {
+      "sourceVariant": "Stiphodon atroporporeus",
+      "context": "Table 1 source label",
+      "matchType": "FUZZY",
+      "canonicalName": "Stiphodon atropurpureus",
+      "rank": "SPECIES",
+      "status": "ACCEPTED",
+      "usageKey": 2376130,
+      "confidence": 93,
+      "family": "Gobiidae",
+      "decision": "review-only;voucher-priority"
+    },
+    {
+      "sourceVariant": "Stiphodon artropurpureus",
+      "context": "Table 2",
+      "matchType": "HIGHERRANK",
+      "canonicalName": "Stiphodon",
+      "rank": "GENUS",
+      "status": "ACCEPTED",
+      "usageKey": 2376093,
+      "confidence": 94,
+      "family": "Gobiidae",
+      "decision": "genus-only;do-not-promote-to-species"
+    },
+    {
+      "sourceVariant": "Stiphodon atropurporeus",
+      "context": "Plate caption",
+      "matchType": "FUZZY",
+      "canonicalName": "Stiphodon atropurpureus",
+      "rank": "SPECIES",
+      "status": "ACCEPTED",
+      "usageKey": 2376130,
+      "confidence": 95,
+      "family": "Gobiidae",
+      "decision": "review-only;voucher-priority"
+    },
+    {
+      "sourceVariant": "Oxyuricthys opthalmonema",
+      "context": "Possible plate/OCR variant; Table 1 differs",
+      "matchType": "FUZZY",
+      "canonicalName": "Oxyurichthys opthalmonemus",
+      "rank": "SPECIES",
+      "status": "SYNONYM",
+      "usageKey": 6168297,
+      "confidence": 84,
+      "family": "Gobiidae",
+      "decision": "do-not-auto-correct;Table-1-has-separate-exact-match"
+    }
+  ],
+  "admission": {
+    "speciesAssertions": 0,
+    "occurrenceAssertions": 0,
+    "waterbodyAssertions": 0,
+    "coordinatesAdded": false,
+    "publicAppRows": 0,
+    "publicationApproval": false
+  },
+  "nextActions": [
+    "Compare spelling/taxonomy proposals with independent fish authorities and the source plates.",
+    "Prioritize voucher verification for Belobranchus segura and Stiphodon atroporporeus; the article gives no accession numbers.",
+    "Check Philippine biogeographic plausibility independently of GBIF name matching.",
+    "Seek the RSU voucher/accession crosswalk and station coordinates before considering any public occurrence rows."
+  ],
+  "sources": [
+    {
+      "url": "https://mbimph.com/index.php/UPJOZ/article/view/4989",
+      "supports": "Source article record and the Table 1 strings crosswalked."
+    },
+    {
+      "url": "https://api.gbif.org/v1/species/match",
+      "supports": "Read-only name match responses; default GBIF Backbone."
+    },
+    {
+      "url": "https://techdocs.gbif.org/en/openapi/v1/species",
+      "supports": "Official Species API documentation."
+    },
+    {
+      "url": "https://techdocs.gbif.org/en/data-processing/taxonomy-interpretation",
+      "supports": "GBIF guidance on name interpretation and matching limits."
+    }
+  ]
+}

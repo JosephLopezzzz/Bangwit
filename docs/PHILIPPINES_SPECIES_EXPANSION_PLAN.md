@@ -4893,4 +4893,14 @@ Added `mimaropa-san-agustin-2022-estuary-tributary-survey-integrity-review-20261
 
 See the [publisher record](https://mbimph.com/index.php/UPJOZ/article/view/4989), [DOI](https://doi.org/10.56557/upjoz/2025/v46i104989), [author-uploaded full text](https://www.researchgate.net/publication/391875073_Composition_and_Longitudinal_Distribution_of_Fish_Assemblages_in_the_Estuary_and_Tributary_Systems_in_RSU_San_Agustin_Romblon_Philippines), and [research review](data/research/philippines/mimaropa-san-agustin-2022-estuary-tributary-survey-integrity-review-20261105.json).
 
-**Next:** independently cross-check the 39 printed labels against current taxonomic authorities and Philippine range evidence; keep those name matches separate from specimen identity. Request no accessions or station coordinates unless the published records or public catalogues cannot resolve the evidence gap.
+**Next:** compare the name-only GBIF proposals with independent fish taxonomic authorities and biogeographic evidence; then seek the RSU voucher/accession crosswalk and exact station coordinates before considering any public occurrence rows.
+
+### National rollout step 555: San Agustin 39-label GBIF name crosswalk — 5 November 2026
+
+Queried all 39 verbatim Table 1 labels against the GBIF Species Matching API v1 with `strict=true`. The responses returned 34 species-rank exact matches: 32 accepted-name matches and two synonyms (`Leiognathus splendens` → `Eubleekeria splendens`; `Ophiocara ophicephalus` → `Ophiocara porocephala`). `Rhinogobius sp.` matched only to genus rank, and four strings had no strict match. A separate fuzzy pass documented possible spelling variants, but none was applied to the article's source strings. A GBIF backbone match is a nomenclatural crosswalk, not specimen identification, range confirmation, or a local occurrence record.
+
+Added `mimaropa-san-agustin-gbif-name-crosswalk-20261105.json` and one source-registry entry; registry total: 704. Updated the integrity review's next action. No taxon, waterbody occurrence, coordinates, diet, legal, safety, or public-app row was added; no author or institution was contacted.
+
+See [GBIF Species API documentation](https://techdocs.gbif.org/en/openapi/v1/species), [GBIF taxonomy interpretation guidance](https://techdocs.gbif.org/en/data-processing/taxonomy-interpretation), and the [crosswalk artifact](data/research/philippines/mimaropa-san-agustin-gbif-name-crosswalk-20261105.json).
+
+**Next:** use independent fish authorities and biogeographic references to prioritize which of the 39 labels warrant voucher follow-up; do not promote name matches into a species-by-waterbody list.
