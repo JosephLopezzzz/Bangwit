@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "mimaropa-san-agustin-range-authority-followup-20261105",
+  "checkedOn": "2026-11-05",
+  "phaseId": "L8",
+  "regionId": "1700000000",
+  "regionName": "MIMAROPA",
+  "purpose": "Screen two additional accepted San Agustin Table 1 names against current taxonomy and published geographic-range evidence.",
+  "relatedReviews": [
+    "mimaropa-san-agustin-2022-estuary-tributary-survey-integrity-review-20261105.json",
+    "mimaropa-san-agustin-gbif-name-crosswalk-20261105.json",
+    "mimaropa-san-agustin-priority-range-authority-triage-20261105.json",
+    "mimaropa-san-agustin-range-name-followup-20261105.json"
+  ],
+  "method": {
+    "scope": "Focused current-authority and range check of Tridentiger trigonocephalus and Schismatogobius risdawatiae, both printed in the 2025 article's Table 1.",
+    "distinction": "Accepted-name matches and published range accounts do not identify the San Agustin survey specimens. Conflicting or geographically narrow range accounts prioritize primary-record and voucher checks; they do not establish absence or misidentification.",
+    "evidenceLimit": "No RSU voucher catalogue/accession crosswalk, diagnostic photographs, or author clarification was obtained. Neither name was assigned to any of the survey's six reach labels.",
+    "sourceReuse": "Only concise research notes and source links are retained. No article table, image, occurrence export, or coordinate was copied into Bangwit; article reuse approval remains separate from research review."
+  },
+  "findings": [
+    {
+      "sourceLabel": "Tridentiger trigonocephalus",
+      "nameCrosswalk": "The existing strict GBIF Backbone crosswalk returned an exact accepted species-rank match. This confirms a name match only.",
+      "currentAuthority": "Eschmeyer's Catalog of Fishes, online version updated 10 June 2026, treats Tridentiger trigonocephalus as valid and summarizes its range as the northwestern Pacific from northern Vietnam and China north to Korea and Japan.",
+      "rangeConflict": "A 1970 Smithsonian Contributions to Zoology synthesis describes the species as occurring from coastal China near Hong Kong and the northern Philippines northward to Japan, Korea, and the Amur River. The two published range summaries therefore differ on Philippine inclusion. The older passage provides no Philippine specimen locality or voucher in the cited statement; neither summary independently locates the species at San Agustin, Romblon.",
+      "disposition": "Retain as an unresolved range-authority discrepancy, not as a confirmed outlier and not as a verified San Agustin record. The older northern-Philippines wording cannot be spatially extended to the Romblon survey sites without a primary locality record.",
+      "priority": "medium; seek the underlying Philippine source and specimen record before deciding whether this is a range conflict for Romblon"
+    },
+    {
+      "sourceLabel": "Schismatogobius risdawatiae",
+      "nameCrosswalk": "The existing strict GBIF Backbone crosswalk returned an exact accepted species-rank match. WoRMS currently lists Schismatogobius risdawatiae Keith, Darhuddin, Sukmono and Hubert, 2017 as a named species; these taxonomic records do not verify the survey specimen.",
+      "independentRange": "The original 2017 description reports the species as known from Sumatra and documents examined type and additional material from Sumatra. FishBase's linked summary independently presents Indonesia (Sumatra) as the reported distribution.",
+      "philippinesContext": "The same 2017 paper distinguishes other Philippine congeners, including Schismatogobius marmoratus described from Samar and S. roxasi described from the Philippines. Those records do not support S. risdawatiae in the Philippines and make voucher-level discrimination important.",
+      "conflict": "The reported Romblon survey locality is outside the currently retrieved Sumatra-only account for S. risdawatiae.",
+      "priority": "high; sixth voucher-priority range mismatch in this review series",
+      "action": "Preserve the printed name verbatim and request the RSU voucher/accession and diagnostic photographs. Compare diagnostic characters with S. risdawatiae and Philippine congeners before any name correction or occurrence projection."
+    }
+  ],
+  "disposition": {
+    "sourceLabelsReviewed": 2,
+    "rangeAuthorityDiscrepanciesNotCountedAsOutliers": 1,
+    "newVoucherPriorityRangeMismatchesFlagged": 1,
+    "totalVoucherPriorityRangeMismatchesAfterReview": 6,
+    "sourceLabelsReviewedOf39": 14,
+    "sourceLabelsRemainingForRangeAndAuthorityScreen": 25,
+    "specimenIdentitiesResolved": 0,
+    "occurrenceAssertions": 0,
+    "waterbodyAssertions": 0,
+    "coordinatesOrGeometryAdded": false,
+    "publicAppRows": 0,
+    "contactSent": false
+  },
+  "nextAction": "Continue the current-authority and range screen for the remaining 25 of 39 Table 1 labels. Keep six range-mismatch labels in the voucher queue and retain Tridentiger trigonocephalus as a separate range-authority discrepancy pending its underlying Philippine record. Then seek the RSU voucher/accession crosswalk and resolve the paper's station/locality conflicts before considering any occurrence rows.",
+  "sources": [
+    {
+      "url": "https://mbimph.com/index.php/UPJOZ/article/view/4989",
+      "supports": "The 2025 source article, its verbatim Table 1 labels, and reported San Agustin, Romblon survey context."
+    },
+    {
+      "url": "https://api.gbif.org/v1/species/match?name=Tridentiger%20trigonocephalus&strict=true",
+      "supports": "Existing strict GBIF Backbone accepted species-rank name match; not a range, voucher, or occurrence determination."
+    },
+    {
+      "url": "https://api.gbif.org/v1/species/match?name=Schismatogobius%20risdawatiae&strict=true",
+      "supports": "Existing strict GBIF Backbone accepted species-rank name match; not a range, voucher, or occurrence determination."
+    },
+    {
+      "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=19020",
+      "supports": "Eschmeyer's Catalog of Fishes indexed current-valid status and northwestern-Pacific distribution excerpt for Tridentiger trigonocephalus; direct page retrieval was blocked."
+    },
+    {
+      "url": "https://repository.si.edu/bitstreams/b1138333-3bb1-43b7-a97a-8777bc367e3f/download",
+      "supports": "Lachner, Robins and Courtenay (1970), Smithsonian Contributions to Zoology 59, page 13: historical published range wording includes coastal China and the northern Philippines; the passage does not provide a Philippine voucher locality."
+    },
+    {
+      "url": "https://sfi-cybium.fr/sites/default/files/pdfs-cybium/10-Keith%20%5BCybium%202017%2C%20412%5D195-211.pdf",
+      "supports": "Keith et al. (2017), original description of Schismatogobius risdawatiae, its examined Sumatra material, Sumatra-only reported distribution, and distinctions from Philippine congeners."
+    },
+    {
+      "url": "https://www.marinespecies.org/aphia.php?p=taxlist&tName=Schismatogobius",
+      "supports": "Current WoRMS taxon list includes Schismatogobius risdawatiae and identifies the name as a recognized taxon; its species-detail page returned HTTP 403."
+    },
+    {
+      "url": "https://www.fishbase.se/summary/Schismatogobius-risdawatiae",
+      "supports": "Secondary cross-check for the Sumatra distribution and diagnostic characters, citing Keith et al. (2017)."
+    }
+  ]
+}
