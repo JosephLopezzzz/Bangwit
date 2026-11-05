@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "mimaropa-san-agustin-range-name-followup-20261105",
+  "checkedOn": "2026-11-05",
+  "phaseId": "L8",
+  "regionId": "1700000000",
+  "regionName": "MIMAROPA",
+  "purpose": "Check Philippine range and taxonomic context for three remaining San Agustin labels with source spelling variants.",
+  "relatedReviews": [
+    "mimaropa-san-agustin-2022-estuary-tributary-survey-integrity-review-20261105.json",
+    "mimaropa-san-agustin-gbif-name-crosswalk-20261105.json",
+    "mimaropa-san-agustin-priority-range-authority-triage-20261105.json",
+    "mimaropa-san-agustin-range-followup-20261105.json",
+    "mimaropa-san-agustin-current-name-followup-20261105.json"
+  ],
+  "method": {
+    "scope": "Focused review of Periophthalmus barbarus, Poecilia reticulata, and Oxyurichthys ophthalmonema plus the spelling variants retained from Tables 1-2 and the plate.",
+    "distinction": "Taxonomic validity, broad range summaries, introduced-species context, and identification of the San Agustin specimens are separate claims. An out-of-range label prioritizes voucher review but does not prove absence or misidentification.",
+    "evidenceLimit": "No voucher/accession crosswalk, diagnostic image review, or author clarification was obtained. The source spellings remain verbatim; no candidate was applied to occurrence or app data.",
+    "authorityAccess": "Catalog of Fishes records were reviewed through indexed current-status excerpts; the Periophthalmus page returned HTTP 403 on direct open. The Smithsonian repository chapter and Plazi treatment were retrieved; the Zootaxa issue page shows the journal PDF requires subscription or fee.",
+    "sourceReuse": "The Zootaxa issue page marks the checklist PDF as subscription/fee access. The accessible Plazi treatment supplies the concise checklist text used here; no item-specific public-app reuse permission was established."
+  },
+  "findings": [
+    {
+      "sourceLabel": "Periophthalmus barbarus",
+      "withinPaperVariants": [
+        {
+          "label": "Periophthalmus barbarous",
+          "location": "Table/plate variant"
+        }
+      ],
+      "nameCrosswalk": "The Table 1 name matched GBIF exactly as an accepted species. The separate spelling Periophthalmus barbarous is a GBIF synonym pointing to P. barbarus; this resolves a spelling candidate only.",
+      "currentAuthority": "Eschmeyer’s Catalog of Fishes lists P. barbarus as valid with an Eastern Atlantic range from Morocco south to Angola, including Gulf of Guinea islands. Murdy and colleagues’ Smithsonian-hosted mudskipper synthesis likewise describes this as the single Periophthalmus species on the tropical west African coast. FishBase flags reports from the Philippines as needing confirmation.",
+      "conflict": "The accepted range sources do not include the Philippines, in contrast with the San Agustin, Romblon context reported by the source article.",
+      "priority": "high; fifth range mismatch in this focused review",
+      "action": "Preserve the source name and request the RSU voucher/accession, diagnostic photographs and author confirmation. Do not infer absence, misidentification, or a corrected local occurrence from range data alone."
+    },
+    {
+      "sourceLabel": "Poecilia reticulata",
+      "withinPaperVariants": [
+        {
+          "label": "Poecilia reticulate",
+          "location": "Plate caption"
+        }
+      ],
+      "nameCrosswalk": "The Table 1 name matched GBIF exactly as accepted. The plate form Poecilia reticulate is a separate GBIF synonym mapped to P. reticulata; keep the printed variant until the source image/table is confirmed.",
+      "philippinesContext": "Jamandre’s 2023 provisional checklist marks P. reticulata as introduced and reports introduction to river basins across the Philippines, citing Guerrero (2014). This is broad national introduced-species context, not confirmation of the San Agustin survey specimen, reach, or current local population.",
+      "disposition": "No geographic outlier is flagged from this national context. Do not label the San Agustin record native, established, abundant, or current based on this cross-check."
+    },
+    {
+      "sourceLabel": "Oxyurichthys ophthalmonema",
+      "withinPaperVariants": [
+        {
+          "label": "Oxyuricthys opthalmonema",
+          "location": "Possible plate/OCR variant; Table 1 differs"
+        }
+      ],
+      "nameCrosswalk": "The Table 1 name matched GBIF exactly as accepted. The possible plate/OCR form returned a fuzzy synonym suggestion for Oxyurichthys opthalmonemus; it is not a safe automatic correction.",
+      "currentAuthority": "Eschmeyer’s Catalog of Fishes lists O. ophthalmonema as valid and gives a broad Indo-West Pacific distribution extending east to Micronesia and Fiji. A Smithsonian NMNH record under this name is associated with a 2013 Philippines survey but gives San Jose Market, Antique as its place; market provenance is not a natural capture site or San Agustin locality.",
+      "disposition": "The Table 1 name is taxonomically supported, while the secondary variant remains unresolved. The separate museum record provides only contextual name/provenance evidence; no local survey occurrence is transferred."
+    }
+  ],
+  "disposition": {
+    "sourceLabelsReviewed": 3,
+    "broadPhilippineRangeOrIntroductionContextChecked": 2,
+    "newRangeOutliersFlagged": 1,
+    "totalPriorityRangeOutliersAfterReview": 5,
+    "specimenIdentitiesResolved": 0,
+    "occurrenceAssertions": 0,
+    "waterbodyAssertions": 0,
+    "coordinatesOrGeometryAdded": false,
+    "publicAppRows": 0,
+    "contactSent": false
+  },
+  "nextAction": "Continue the range and current-authority screen for the remaining 27 of 39 Table 1 labels. Keep the five range outliers and unresolved spelling variants in the voucher-verification queue; do not turn national range, introduction context, or a GBIF name match into a San Agustin occurrence claim.",
+  "sources": [
+    {
+      "url": "https://mbimph.com/index.php/UPJOZ/article/view/4989",
+      "supports": "The 2025 source article, Table 1 names, internal table/plate spellings and reported San Agustin, Romblon survey context."
+    },
+    {
+      "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=45663",
+      "supports": "Eschmeyer’s Catalog of Fishes indexed current-valid status and Eastern Atlantic distribution excerpt for Periophthalmus barbarus; direct record fetch was blocked."
+    },
+    {
+      "url": "https://repository.si.edu/server/api/core/bitstreams/dc4fe4a0-e3ba-4a94-93c0-1759df1e1ef5/content",
+      "supports": "Parenti and Jaafar’s 2017 Smithsonian-hosted chapter, The Natural Distribution of Mudskippers, describing P. barbarus as the West African Periophthalmus species."
+    },
+    {
+      "url": "https://repository.si.edu/items/6002621e-235d-4528-afab-71186b1b35a8/full",
+      "supports": "Chapter metadata and authorship: Parenti and Jaafar (2017), The Natural Distribution of Mudskippers, pp. 37-68."
+    },
+    {
+      "url": "https://www.fishbase.se/summary/Periophthalmus_barbarus.html",
+      "supports": "Secondary range summary states Philippine reports need confirmation; this is a verification lead, not a local occurrence determination."
+    },
+    {
+      "url": "https://doi.org/10.11646/zootaxa.5301.2.1",
+      "supports": "Jamandre’s 2023 provisional checklist of Philippine freshwater fishes; Plazi treatment records P. reticulata as introduced to river basins across the Philippines."
+    },
+    {
+      "url": "https://zenodo.org/records/8038100",
+      "supports": "Open Plazi taxonomic treatment extracted from Jamandre (2023), explicitly identifying Poecilia reticulata as introduced across Philippine river basins."
+    },
+    {
+      "url": "https://mapress.com/zt/issue/view/zootaxa.5301.2",
+      "supports": "Official Zootaxa issue page lists the Jamandre checklist and marks its full PDF as subscription/fee access."
+    },
+    {
+      "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=21869",
+      "supports": "Eschmeyer’s Catalog of Fishes indexed valid status and broad distribution for Oxyurichthys ophthalmonema."
+    },
+    {
+      "url": "https://www.si.edu/object/oxyurichthys-ophthalmonema%3Anmnhvz_11028503",
+      "supports": "Smithsonian NMNH catalog metadata for a 2013 Philippines-survey specimen labeled O. ophthalmonema, with place recorded as San Jose Market, Antique; it is not assigned to a natural capture site."
+    }
+  ]
+}
