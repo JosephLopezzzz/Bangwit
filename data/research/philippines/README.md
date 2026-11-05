@@ -2225,3 +2225,11 @@ Reviewed the official Nagao Natural Environment Foundation report for its 10–1
 See the [Nagao Foundation 2026 report](https://www.nagaofoundation.or.jp/comprehensive/documents/260507maeda.pdf), [project page](https://www.nagaofoundation.or.jp/e/comprehensive/philippine-fish.html), and the [research review](mimaropa-palawan-nagao-2026-northern-field-survey-review-20261106.json).
 
 **Next:** continue the MIMAROPA freshwater sweep with another independently documented named lake/river survey; revisit this lead only if a voucher list, site-by-taxon table, or rights terms are published.
+
+### National rollout step 522: 2026 freshwater-fish biogeography supporting-data access follow-up — 6 November 2026
+
+Rechecked the official Wiley page for Jamandre et al. (2026). It describes a 299-species full analysis and 79 obligate primary-freshwater subset in Figure S2, plus Table S1's taxon-by-catchment matrix/change log and Tables S2–S4's 32 catchment sites and environmental fields. The publisher's two spreadsheet endpoints returned HTTP 403 in both the web reader and direct HTTP fetch. The DMMMSU repository page lists one article PDF and no supplementary workbooks. No workbook was downloaded or inspected; no cells, taxa, catchments, or derived rows were copied. Wiley displays an all-rights-reserved notice, and no supplement-specific license or public-app permission was established. The five biogeographic provinces remain ecological groupings, not administrative regions or waterbody boundaries. Registry source count remains 741; no species assertions or app rows were added and no author was contacted.
+
+See the [official article and supporting-file descriptions](https://onlinelibrary.wiley.com/doi/10.1111/jbi.70324), the [DMMMSU repository item](https://lakasa.dmmmsu.edu.ph/items/fdf4b0b7-4b47-4c5d-8822-c86f03e149c2), the [access follow-up](national-freshwater-fish-biogeography-supporting-data-access-followup-20261106.json), and the [unsent request draft](national-freshwater-fish-biogeography-supporting-data-request-draft-20261106.md).
+
+**Next:** seek the official workbook/version and written terms using the unsent draft; meanwhile continue with openly accessible, rights-cleared freshwater sources and named-waterbody surveys in the Luzon-first sequence. Do not wait for this source or use its unseen matrix as local occurrence evidence.
