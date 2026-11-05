@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "mimaropa-san-agustin-range-authority-followup-8-20261105",
+  "checkedOn": "2026-11-05",
+  "phaseId": "L8",
+  "regionId": "1700000000",
+  "regionName": "MIMAROPA",
+  "purpose": "Screen two additional San Agustin Table 1 fish labels against current taxonomy and Philippine voucher or freshwater-range evidence.",
+  "relatedReviews": [
+    "mimaropa-san-agustin-2022-estuary-tributary-survey-integrity-review-20261105.json",
+    "mimaropa-san-agustin-gbif-name-crosswalk-20261105.json",
+    "mimaropa-san-agustin-range-authority-followup-7-20261105.json"
+  ],
+  "method": {
+    "scope": "Focused review of Lutjanus johnii and Microphis brachyurus, two printed labels in Table 1 of the 2025 San Agustin article.",
+    "distinction": "Philippine market vouchers, North Luzon barcodes, and national freshwater checklist entries provide range or identification context only. They do not identify the preserved San Agustin survey specimens or assign them to any waterbody or reach.",
+    "evidenceLimit": "The North Luzon barcode paper's main table lists accession numbers but says per-sample collection detail is in supplementary tables; the sample-level source locality was not resolved here. The San Agustin paper still has no voucher accession crosswalk, diagnostic images, meristic data, sequences, coordinates, or individual reach-to-specimen link.",
+    "sourceReuse": "Only concise attributed findings and direct source links are retained. No specimen image, market dataset, occurrence export, supplementary workbook, sequence, coordinate, or transformed app row was copied. Public-app reuse approval was not assessed or granted."
+  },
+  "findings": [
+    {
+      "sourceLabel": "Lutjanus johnii",
+      "nameCrosswalk": "The existing strict GBIF Backbone crosswalk returned an exact accepted species-rank match (usage key 2384936; confidence 99). This nomenclatural match does not identify the San Agustin specimen.",
+      "currentAuthority": "Eschmeyer's Catalog of Fishes treats Lutjanus johnii (Bloch, 1792) as valid and gives an Indo-West Pacific range extending east to the Philippines and Fiji; it lists brackish and marine habitat. The Panay fish guide describes juveniles in brackish waters and illustrates a UPVMI 1512 voucher (169.9 mm SL).",
+      "philippineContext": "A 2025 North Luzon DNA-barcode paper includes Lutjanus johnii accessions COI PP460037 and 12S PP554435 in a voucher-linked dataset of 1,513 samples gathered from markets, landing sites, and rivers. The article directs sample-level locality details to supplementary tables; the source locality of this species' voucher was not extracted here. Separately, Smithsonian NMNH USNM 423648 (field label PHI-234) is cataloged as L. johnii from a 2013 Philippines market survey, with a Tacloban City Market locality string; FDA's reference library links PHI-234 to COI accession OQ387612. These are identification and market-provenance records, not capture-point evidence.",
+      "disposition": "The accepted name, Philippine market vouchers, and Panay guide make the label nationally plausible in coastal/brackish context. None confirms the survey specimen or its San Agustin reach. No new range-authority discrepancy or voucher-priority mismatch is added.",
+      "priority": "routine; compare the RSU voucher with diagnostic characters for L. johnii and retain a specimen-to-sequence link before assigning a reach"
+    },
+    {
+      "sourceLabel": "Microphis brachyurus",
+      "nameCrosswalk": "The existing strict GBIF Backbone crosswalk returned an exact accepted species-rank match (usage key 5712324; confidence 99). This nomenclatural match does not identify the San Agustin specimen.",
+      "currentAuthority": "Jamandre's 2023 provisional freshwater-fish checklist treats Microphis brachyurus as native in Philippine river basins and cites Philippine material including voucher USNM 102599. WoRMS and the 2023 integrative revision use M. brachyurus as an accepted name. A 2025 phylogeographic study analyzed 91 COI sequences and found West- and Central-Pacific population groups while retaining one nominal M. brachyurus; its sampled localities do not provide a San Agustin or Philippine voucher identification.",
+      "philippineContext": "The North Luzon DNA-barcode paper also lists M. brachyurus accessions COI PP422986-PP422987 and 12S PP515699 in its voucher-linked dataset, but its main table does not identify this voucher's individual collection site. FishBase attributes reports from Calbiga-a Creek, Lagu Lagu Creek, and Ambacan River at Baybay, Leyte to Kottelat's 1993 technical report; only the bibliographic record and a compiled summary were retrieved, not the full report. Treat those as a historical source lead, not a rechecked specimen record.",
+      "disposition": "The national checklist and historical freshwater-report lead support Philippine river-basin plausibility, but do not establish MIMAROPA presence or identify the San Agustin specimen. The 2025 population-structure study is a reason to retain specimen-level sequence context, not a basis for splitting the survey name. No new range-authority discrepancy or voucher-priority mismatch is added.",
+      "priority": "routine; request the RSU voucher, locality/station mapping, and any linked sequence before asserting a local river or estuary record"
+    }
+  ],
+  "disposition": {
+    "sourceLabelsReviewed": 2,
+    "newRangeAuthorityDiscrepanciesNotCountedAsOutliers": 0,
+    "newVoucherPriorityRangeMismatchesFlagged": 0,
+    "totalVoucherPriorityRangeMismatchesAfterReview": 6,
+    "totalRangeAuthorityDiscrepanciesNotCountedAsOutliersAfterReview": 4,
+    "sourceLabelsReviewedOf39": 28,
+    "sourceLabelsRemainingForRangeAndAuthorityScreen": 11,
+    "specimenIdentitiesResolved": 0,
+    "occurrenceAssertions": 0,
+    "waterbodyAssertions": 0,
+    "coordinatesOrGeometryAdded": false,
+    "publicAppRows": 0,
+    "publicationApproval": false,
+    "contactSent": false
+  },
+  "nextAction": "Continue the current-authority and range screen for the remaining 11 of 39 Table 1 labels. Keep six voucher-priority mismatch labels in the verification queue and retain four separate range-authority discrepancies: Tridentiger trigonocephalus, Hypseleotris cyprinoides, Eleotris mauritiana, and Awaous guamensis. Then seek the RSU voucher/accession crosswalk and resolve the paper's station/locality conflicts before considering occurrence rows.",
+  "sources": [
+    {
+      "url": "https://mbimph.com/index.php/UPJOZ/article/view/4989",
+      "supports": "The original 2025 San Agustin article, Table 1 labels, survey scope, and specimen/locality limitations."
+    },
+    {
+      "url": "https://api.gbif.org/v1/species/match?name=Lutjanus%20johnii&strict=true",
+      "supports": "Existing strict GBIF Backbone exact accepted species-rank match for Lutjanus johnii only."
+    },
+    {
+      "url": "https://api.gbif.org/v1/species/match?name=Microphis%20brachyurus&strict=true",
+      "supports": "Existing strict GBIF Backbone exact accepted species-rank match for Microphis brachyurus only."
+    },
+    {
+      "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Lutjanus&tbl=species",
+      "supports": "Eschmeyer's Catalog of Fishes current valid status and Indo-West Pacific distribution for Lutjanus johnii."
+    },
+    {
+      "url": "https://www.museum.kagoshima-u.ac.jp/publications/pdf_images/PhilippineFG_lowres.pdf",
+      "supports": "Motomura et al. (eds.) (2017): UPVMI 1512 Lutjanus johnii voucher, stated range/habitat, and market/landing-site sampling context."
+    },
+    {
+      "url": "https://collections.si.edu/search/results.htm?fq=tax_family%3A%22Lutjanidae%22&q=%22Apollo+Lizano%22",
+      "supports": "Smithsonian NMNH record for Lutjanus johnii voucher USNM 423648, PHI-234, and its Tacloban City Market locality string."
+    },
+    {
+      "url": "https://hfpappexternal.fda.gov/scripts/fdcc/index.cfm?id=PHI-234&set=RSSL_seafood_barcode_data",
+      "supports": "FDA reference library record PHI-234 linking USNM 423648 to Lutjanus johnii and GenBank OQ387612; market-survey source."
+    },
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12475234/",
+      "supports": "Dimaquibo et al. (2025), North Luzon barcode dataset: voucher-linked COI/12S accessions for both labels; 1,513 specimens from markets, landing sites, and rivers; detailed sample localities are in supplementary material and were not resolved in this follow-up."
+    },
+    {
+      "url": "https://doi.org/10.11646/zootaxa.5301.2.1",
+      "supports": "Jamandre (2023), Freshwater fishes of the Philippines: a provisional checklist; native Philippine river-basin context and cited specimen USNM 102599 for Microphis brachyurus."
+    },
+    {
+      "url": "https://zenodo.org/records/8038353",
+      "supports": "Published Syngnathidae checklist treatment of Microphis brachyurus as native across Philippine river basins with voucher/source citations."
+    },
+    {
+      "url": "https://fishbase.net.br/references/FBRefSummary.php?ID=7223&database=FB",
+      "supports": "Bibliographic record for Kottelat (1993), Technical report on the fishes from fresh and brackish waters of Leyte, Philippines; full report was not retrieved."
+    },
+    {
+      "url": "https://www.fishbase.se/country/CountrySpeciesSummary.php?c_code=608&id=2481",
+      "supports": "Compiled Philippine freshwater report lead naming Calbiga-a Creek, Lagu Lagu Creek, and Ambacan River at Baybay, Leyte, attributed to Kottelat (1993); not treated as an independently rechecked voucher record."
+    },
+    {
+      "url": "https://onlinelibrary.wiley.com/doi/10.1111/jfb.15981",
+      "supports": "Haÿ et al. (2025), phylogeography of 91 M. brachyurus COI sequences, West/Central Pacific lineages, and continued treatment as one nominal species."
+    },
+    {
+      "url": "https://academic.oup.com/zoolinnean/article/198/4/923/7190493",
+      "supports": "Haÿ et al. (2023), integrative taxonomic revision of Indo-Pacific freshwater pipefishes."
+    }
+  ]
+}
