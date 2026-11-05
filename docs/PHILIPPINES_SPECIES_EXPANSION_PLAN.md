@@ -4610,3 +4610,15 @@ The official record has no attached file and says the proceedings remain for sal
 See the [official SEAFDEC/AQD repository record](https://repository.seafdec.org.ph/handle/10862/5848).
 
 **Next:** continue MIMAROPA screening with Calapan River and other Oriental Mindoro/Palawan inland-water sources, preferring complete and clearly reusable evidence over repository abstracts.
+
+### National rollout step 527: Calapan River survey evidence and access leads — 5 November 2026
+
+Reviewed Bonifacio V. Labatos Jr.'s 2017 Calapan River article record and accessible abstract. The abstract describes an 11-km river, nine survey stations, three consecutive sampling days, seine nets in shallow areas and bottom-set gill nets in deeper portions. It reports 22 fish species (two endemic, 12 native, eight alien) and one native plus four introduced island records, but names none of those taxa in the available abstract. The precise field dates, station coordinates, voucher identifiers and species-by-station table were not retrieved. A 2017 publication date is not treated as the survey date.
+
+The National Museum library catalog identifies the 2017 print issue and lists five physical holdings; no digital article is attached. ResearchGate labels an author-uploaded full text public, but the PDF endpoint returned 404 and its read-text endpoint returned 403 during this review. The author-upload record warns the content may be subject to copyright; no article-specific open license or app reuse permission was verified. No taxa, occurrence rows or coordinates were added.
+
+The DOST-STII SPHERES 2018 bibliography separately lists Labatos's 2012, 60-page *Fish Taxonomic Survey of Calapan River*, attributed to the City of Calapan and BioNetwork Consultants. That report was not located; its data are not merged with the 2017 article. Added `mimaropa-calapan-river-2017-abstract-and-2012-report-lead-review-20261105.json` and two source records. The registry now contains 680 unique sources. No contact or acquisition request was sent, and publication approval remains false.
+
+See the [National Museum catalog](https://library.nationalmuseum.gov.ph/cgi-bin/koha/opac-detail.pl?biblionumber=778), [author-uploaded abstract record](https://www.researchgate.net/publication/319179091_Fishes_of_Calapan_River_City_of_Calapan_Oriental_Mindoro_Philippines), and [official DOST-SPHERES bibliography](https://spheres.dost.gov.ph/images/issues/spheresDecember2018.pdf).
+
+**Next:** follow the 2012 Calapan survey and the UPLB Caluangan Lake–Baruyan River thesis as separate access leads; screen other MIMAROPA inland waters in parallel.
