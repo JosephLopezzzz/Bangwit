@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "mimaropa-san-agustin-range-authority-followup-2-20261105",
+  "checkedOn": "2026-11-05",
+  "phaseId": "L8",
+  "regionId": "1700000000",
+  "regionName": "MIMAROPA",
+  "purpose": "Screen two additional San Agustin Table 1 labels against current taxonomic authority, integrative revisions, and Philippine specimen/barcode evidence.",
+  "relatedReviews": [
+    "mimaropa-san-agustin-2022-estuary-tributary-survey-integrity-review-20261105.json",
+    "mimaropa-san-agustin-gbif-name-crosswalk-20261105.json",
+    "mimaropa-san-agustin-range-authority-followup-20261105.json"
+  ],
+  "method": {
+    "scope": "Focused review of Hypseleotris cyprinoides and Eleotris mauritiana, both printed in the 2025 San Agustin article's Table 1.",
+    "distinction": "A country-level historical specimen or barcode dataset may challenge a narrow published range, but does not identify a different survey's specimens. Name acceptance, synonymy, sequence accessions, and distribution summaries are kept distinct.",
+    "evidenceLimit": "No San Agustin voucher accession, diagnostic photograph, sequence, station crosswalk, or author clarification was obtained. The North Luzon barcode paper's supplementary workbook and voucher-image file were not retrieved; no sample-specific locality was inferred from its regional scope.",
+    "sourceReuse": "Only concise original research notes and links are retained. The North Luzon article is CC BY-NC-ND 4.0; no supplement, sequence, image, article table, or occurrence row was copied or transformed for app publication."
+  },
+  "findings": [
+    {
+      "sourceLabel": "Hypseleotris cyprinoides",
+      "nameCrosswalk": "The existing strict GBIF Backbone crosswalk returned an exact accepted species-rank match. This is a name match only.",
+      "currentAuthority": "The 2023 integrative revision recognizes H. cyprinoides but restricts its reported range to South Africa, Madagascar, Réunion, Comoros, Bangladesh, and the western Sunda Islands. The 2026 Catalog of Fishes excerpt gives a similar Indian Ocean distribution.",
+      "philippineEvidence": "The 2005 Australian Museum revision lists examined Philippine museum material from Tobuan Creek, Lingayen Bay (AMS I.21896-004), Batangas Province (AMS I.21924-002), and Lagonoy River (AMS I.25047-001), and explicitly discusses the taxon as occurring in the Philippines. A 2025 North Luzon barcode dataset also lists H. cyprinoides with COI accessions PP423024–PP423027 and 12S accession PP576115. The article describes its study as 1,513 voucher specimens collected in Aurora, Cagayan, and Zambales and says its taxonomic workflow combined morphology, DNA, and voucher review. Its supplementary sample-level workbook was not retrieved, and the sequences were not independently re-evaluated against the 2023 revision.",
+      "conflict": "The current narrowed range and the older Philippine museum material and 2025 Philippine barcode identifications disagree. The recent revision also separates previously lumped Hypseleotris names, making older and barcode-based identifications candidates for re-examination rather than proof that the Romblon survey specimen is correctly named.",
+      "disposition": "Keep as an unresolved taxonomic/range-authority discrepancy, not a confirmed Philippine absence and not a verified San Agustin occurrence. Queue the survey specimen and relevant North Luzon vouchers/sequences for comparison with the 2023 diagnostic treatment.",
+      "priority": "high; request the San Agustin voucher and, if sample-level metadata are needed, retrieve the North Luzon supplement and compare diagnostic characters and sequences"
+    },
+    {
+      "sourceLabel": "Eleotris mauritiana",
+      "nameCrosswalk": "The existing strict GBIF Backbone crosswalk returned an exact accepted species-rank match. This does not settle whether the survey's taxon concept matches current authorities.",
+      "currentAuthority": "The 2026 Catalog of Fishes treats E. mauritiana as uncertain and summarizes a western Indian Ocean distribution. A 2019 integrative study compared morphology, types, and mitochondrial evidence, found E. mauritiana and E. acanthopoma specimens grouped with 0.6% COI divergence, and treated them as the same Indo-Pacific species. A 2022 annotated checklist likewise lists E. mauritiana under E. acanthopoma as a junior synonym. The Catalog records competing treatments, including synonymy with E. acanthopomus and E. fusca, before retaining uncertain status.",
+      "philippineContext": "The 2025 North Luzon barcode dataset lists E. acanthopomus with COI accession PP430701 and 12S accession PP515695 among its voucher-linked records. That is Philippine context for a competing name concept, not evidence that the San Agustin specimen is E. acanthopomus or that all treatments of E. mauritiana are interchangeable.",
+      "disposition": "Keep as an unresolved name-authority and synonymy discrepancy, not a new geographic outlier. Do not automatically rename the Romblon label to E. acanthopomus or E. fusca without the RSU voucher and diagnostic review.",
+      "priority": "high; request the San Agustin voucher/accession and compare it with the competing Eleotris treatments"
+    }
+  ],
+  "disposition": {
+    "sourceLabelsReviewed": 2,
+    "newRangeAuthorityDiscrepanciesNotCountedAsOutliers": 2,
+    "newVoucherPriorityRangeMismatchesFlagged": 0,
+    "totalVoucherPriorityRangeMismatchesAfterReview": 6,
+    "totalRangeAuthorityDiscrepanciesNotCountedAsOutliersAfterReview": 3,
+    "sourceLabelsReviewedOf39": 16,
+    "sourceLabelsRemainingForRangeAndAuthorityScreen": 23,
+    "specimenIdentitiesResolved": 0,
+    "occurrenceAssertions": 0,
+    "waterbodyAssertions": 0,
+    "coordinatesOrGeometryAdded": false,
+    "publicAppRows": 0,
+    "contactSent": false
+  },
+  "nextAction": "Continue the current-authority and range screen for the remaining 23 of 39 Table 1 labels. Keep six voucher-priority mismatch labels in the verification queue and retain three separate authority discrepancies: Tridentiger trigonocephalus, Hypseleotris cyprinoides, and Eleotris mauritiana. Then seek the RSU voucher/accession crosswalk and resolve the paper's station/locality conflicts before considering occurrence rows.",
+  "sources": [
+    {
+      "url": "https://mbimph.com/index.php/UPJOZ/article/view/4989",
+      "supports": "The 2025 San Agustin source article, its verbatim Table 1 labels, and reported Romblon survey context."
+    },
+    {
+      "url": "https://api.gbif.org/v1/species/match?name=Hypseleotris%20cyprinoides&strict=true",
+      "supports": "Existing strict GBIF Backbone accepted species-rank name match only."
+    },
+    {
+      "url": "https://api.gbif.org/v1/species/match?name=Eleotris%20mauritiana&strict=true",
+      "supports": "Existing strict GBIF Backbone accepted species-rank name match only."
+    },
+    {
+      "url": "https://academic.oup.com/zoolinnean/article/198/4/1035/7150892",
+      "supports": "Keith and Mennesson (2023) integrative Hypseleotris revision, revised species boundaries, and the narrowed published range for H. cyprinoides. The publisher's indexed article text was retrieved; direct full-page retrieval was blocked."
+    },
+    {
+      "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Hypseleotris&tbl=species",
+      "supports": "2026 Catalog of Fishes indexed current-valid status and Indian Ocean distribution excerpt for H. cyprinoides; direct page retrieval was blocked."
+    },
+    {
+      "url": "https://journals.australian.museum/media/Uploads/Journals/18010/1436_complete.pdf",
+      "supports": "Thacker and Unmack (2005), historical museum material from named Philippine localities and their treatment of H. cyprinoides as Philippine; this predates the 2023 revision."
+    },
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12475234/",
+      "supports": "North Luzon 2025 barcode dataset: regional survey scope, voucher and morphology/DNA methods, H. cyprinoides and E. acanthopomus accession rows, and CC BY-NC-ND 4.0 license."
+    },
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12475234/bin/41597_2025_5758_MOESM2_ESM.xlsx",
+      "supports": "Supplementary sample-level fish list and collection metadata; access was blocked by a browser check, so no sample-specific locality or voucher metadata was extracted."
+    },
+    {
+      "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=49180",
+      "supports": "2026 Catalog of Fishes indexed uncertain status, western Indian range, and competing taxonomic treatments for E. mauritiana; direct page retrieval was blocked."
+    },
+    {
+      "url": "https://borea.mnhn.fr/sites/default/files/Mennesson_Maeda_and_Keith_2019.pdf",
+      "supports": "Mennesson, Maeda, and Keith (2019), type/morphological and molecular comparison of Eleotris, sampled range for the E. mauritiana name, and proposed synonymy with E. acanthopoma."
+    },
+    {
+      "url": "https://doi.org/10.1111/zsc.12366",
+      "supports": "Persistent DOI for the 2019 Eleotris integrative study."
+    },
+    {
+      "url": "https://sfi-cybium.fr/sites/default/files/supplementary-files/2-Fermon%201184%20Appendix%20%5BCybium%202022%2C%20462-3%5D.pdf",
+      "supports": "Fermon et al. (2022) annotated checklist treatment listing E. mauritiana as a junior synonym of E. acanthopoma; this contrasts with the current Catalog's uncertain status."
+    }
+  ]
+}
