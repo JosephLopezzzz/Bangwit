@@ -3,7 +3,7 @@
   "checkedOn": "2026-11-06",
   "status": "research-only-source-registry",
   "scope": "National acquisition references, freshwater spatial-source leads, MIMAROPA/CALABARZON/Central Luzon identity and inland-water source reviews, and Mindanao regional freshwater survey reviews. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 726,
+  "sourceCount": 727,
   "sources": [
     {
       "id": "aquilino-2011-taal-dna-barcoding-genbank",
@@ -23243,6 +23243,49 @@
         "Nile Tilapia is the common name attached to Oreochromis sp.; it does not establish Oreochromis niloticus.",
         "The EIS diet paragraph summarizes cited secondary literature and is not a local diet observation or bait guide.",
         "No waterbody occurrence, coordinates, species assertion, diet, safety, legal, or public-app row was added."
+      ]
+    },
+    {
+      "id": "gbif-caluangan-waterbody-locality-screen-20261106",
+      "title": "GBIF occurrence search for Caluangan Lake fish locality candidates",
+      "provider": "Global Biodiversity Information Facility; iNaturalist observations indexed by GBIF",
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&waterBody=Caluangan%20Lake&limit=100",
+      "additionalUrls": [
+        "https://api.gbif.org/v1/occurrence/search?country=PH&waterBody=Caluangan&limit=100",
+        "https://api.gbif.org/v1/occurrence/search?country=PH&waterBody=Calaungan&limit=100",
+        "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Caluangan&limit=100",
+        "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Calaungan&limit=100",
+        "https://api.gbif.org/v1/occurrence/search?country=PH&stateProvince=Oriental%20Mindoro&scientificName=Siganus%20fuscescens&limit=100",
+        "https://api.gbif.org/v1/occurrence/search?country=PH&stateProvince=Oriental%20Mindoro&scientificName=Siganus%20guttatus&limit=100",
+        "https://techdocs.gbif.org/en/openapi/v1/occurrence"
+      ],
+      "role": "Research-only, read-only locality screen for the two Caluangan siganid names. Exact waterBody/locality queries returned zero; province-plus-taxon queries returned 2 and 13 iNaturalist human observations, all without GBIF waterBody, locality, or municipality fields. These are not lake or river records.",
+      "checkedOn": "2026-11-06",
+      "access": {
+        "exactWaterBodyQueryCounts": [0, 0, 0],
+        "exactLocalityQueryCounts": [0, 0],
+        "provinceTaxonQueryCounts": {
+          "Siganus fuscescens": 2,
+          "Siganus guttatus": 13
+        },
+        "allProvinceTaxonResultsAreHumanObservations": true,
+        "waterBodyLocalityMunicipalityPresent": false,
+        "bulkDownloadRequested": false
+      },
+      "reuse": {
+        "metadata": "Retain query scope and result counts only; GBIF's exact-field zero results do not establish species absence.",
+        "raw": "No occurrence identifiers, coordinates, or images retained.",
+        "content": "Research-only. Per-record licenses in the queried observation results are mixed; no observation is admitted to public app data."
+      },
+      "publicationApproval": false,
+      "researchStatus": "exact-waterbody-and-locality-query-zero;province-observations-not-waterbody-resolved;zero-public-app-rows;research-only",
+      "license": null,
+      "licenseUrl": null,
+      "caveats": [
+        "GBIF's API indexes contributed records and searchable metadata; exact-name query results are bounded by those indexed fields and spellings.",
+        "The province-level records do not crosswalk to the 2013 conference assessment or 2015 UPLB dissertation specimens.",
+        "The candidate source describes Lake Caluangan as saline; it is not grouped with freshwater-lake records in the app plan.",
+        "No observation coordinates were reviewed, copied, or used for a map overlay."
       ]
     }
   ],

@@ -1,0 +1,126 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "mimaropa-caluangan-gbif-locality-screen-20261106",
+  "checkedOn": "2026-11-06",
+  "phaseId": "L8",
+  "regionId": "1700000000",
+  "waterbody": {
+    "name": "Lake Caluangan",
+    "province": "Oriental Mindoro",
+    "region": "MIMAROPA",
+    "kindAsReported": "saline lake ecosystem"
+  },
+  "question": "Do GBIF-indexed records for the two Caluangan siganid research candidates provide independent, waterbody-specific locality evidence?",
+  "queryReview": {
+    "provider": "GBIF Occurrence API v1",
+    "documentationUrl": "https://techdocs.gbif.org/en/openapi/v1/occurrence",
+    "queriedOn": "2026-11-06",
+    "method": "Read-only indexed occurrence searches using country=PH, exact waterBody or locality strings, and a separate province-plus-scientificName screen. Results were limited to the API response; no bulk download was requested.",
+    "exactWaterBodyQueries": [
+      {
+        "value": "Caluangan Lake",
+        "resultCount": 0,
+        "url": "https://api.gbif.org/v1/occurrence/search?country=PH&waterBody=Caluangan%20Lake&limit=100"
+      },
+      {
+        "value": "Caluangan",
+        "resultCount": 0,
+        "url": "https://api.gbif.org/v1/occurrence/search?country=PH&waterBody=Caluangan&limit=100"
+      },
+      {
+        "value": "Calaungan",
+        "resultCount": 0,
+        "url": "https://api.gbif.org/v1/occurrence/search?country=PH&waterBody=Calaungan&limit=100"
+      }
+    ],
+    "exactLocalityQueries": [
+      {
+        "value": "Caluangan",
+        "resultCount": 0,
+        "url": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Caluangan&limit=100"
+      },
+      {
+        "value": "Calaungan",
+        "resultCount": 0,
+        "url": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Calaungan&limit=100"
+      }
+    ],
+    "provinceTaxonQueries": [
+      {
+        "scientificName": "Siganus fuscescens",
+        "provinceFilter": "Oriental Mindoro",
+        "resultCount": 2,
+        "humanObservationCount": 2,
+        "recordsWithWaterBodyLocalityOrMunicipality": 0,
+        "eventYearSpan": "2022-2025",
+        "url": "https://api.gbif.org/v1/occurrence/search?country=PH&stateProvince=Oriental%20Mindoro&scientificName=Siganus%20fuscescens&limit=100"
+      },
+      {
+        "scientificName": "Siganus guttatus",
+        "provinceFilter": "Oriental Mindoro",
+        "resultCount": 13,
+        "humanObservationCount": 13,
+        "recordsWithWaterBodyLocalityOrMunicipality": 0,
+        "eventYearSpan": "2007-2025",
+        "url": "https://api.gbif.org/v1/occurrence/search?country=PH&stateProvince=Oriental%20Mindoro&scientificName=Siganus%20guttatus&limit=100"
+      }
+    ],
+    "recordHandling": "The 15 province-filtered results were all indexed as iNaturalist human observations. Their GBIF waterBody, locality, and municipality fields were null. Individual identifiers, coordinates, and images are not retained in this review. The per-record licenses are mixed (CC BY-NC 4.0, CC BY 4.0, and CC0)."
+  },
+  "interpretation": {
+    "sourceCandidateNames": [
+      "Siganus fuscescens",
+      "Siganus guttatus"
+    ],
+    "candidateOrigin": "The names are reported in the 2015 UPLB dissertation abstract as identified in the young Lake Caluangan; that abstract does not provide the station, voucher, or river-specific crosswalk.",
+    "decision": "The GBIF province-level observations do not independently locate either candidate in Lake Caluangan or Baruyan River. Exact-field zero results describe only the GBIF index and query strings; they are not fish-absence evidence.",
+    "habitatBoundary": "Keep the source's saline-lake description separate from freshwater-lake evidence. Do not infer a Baruyan River occurrence from the thesis title or province-level GBIF observations."
+  },
+  "limitations": [
+    "GBIF indexes contributed records and searchable metadata; exact waterBody/locality matches can miss alternate spellings, missing fields, unindexed collections, or source records outside GBIF.",
+    "Province-level human observations are not linked to the thesis specimens, the saline lake, or the river, even when the same taxon name appears.",
+    "No observation coordinates were inspected or copied; no coordinate-based lake overlay was performed.",
+    "The human-observation records have mixed licenses and are not admitted to Bangwit public data by this screen.",
+    "The 2013 conference chapter and 2015 dissertation remain abstract-level sources with incomplete station, voucher, and reuse evidence."
+  ],
+  "admission": {
+    "speciesAssertionsAdded": 0,
+    "waterbodyOccurrenceRows": 0,
+    "coordinatesOrGeometryAdded": false,
+    "dietAssertions": 0,
+    "ruleOrSafetyAssertions": 0,
+    "publicAppRows": 0,
+    "publicationApproval": false
+  },
+  "followUp": {
+    "nextAction": "Continue MIMAROPA discovery with a distinct named river, lake, wetland, or reservoir source whose taxon-by-site evidence can be reviewed. Keep Caluangan candidates research-only until the full source, voucher, locality crosswalk, and reuse terms are available.",
+    "bulkDownloadRequested": false,
+    "contactsMade": false
+  },
+  "sources": [
+    {
+      "url": "https://techdocs.gbif.org/en/openapi/v1/occurrence",
+      "supports": "Official GBIF documentation for occurrence search and its waterBody/locality fields."
+    },
+    {
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&waterBody=Caluangan%20Lake&limit=100",
+      "supports": "Read-only exact-name waterBody query; zero indexed results returned on 2026-11-06."
+    },
+    {
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&stateProvince=Oriental%20Mindoro&scientificName=Siganus%20fuscescens&limit=100",
+      "supports": "Read-only province-plus-taxon query; two broad iNaturalist human observations returned, with null waterBody/locality/municipality fields."
+    },
+    {
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&stateProvince=Oriental%20Mindoro&scientificName=Siganus%20guttatus&limit=100",
+      "supports": "Read-only province-plus-taxon query; thirteen broad iNaturalist human observations returned, with null waterBody/locality/municipality fields."
+    },
+    {
+      "url": "https://www.ukdr.uplb.edu.ph/etd-grad/4167/",
+      "supports": "UPLB dissertation abstract source for the two candidate names and its limited Lake Caluangan phrasing; the document is not available from the repository record."
+    },
+    {
+      "url": "https://repository.seafdec.org.ph/handle/10862/5848",
+      "supports": "SEAFDEC/AQD abstract-level source that calls Lake Caluangan saline and reports incomplete taxonomic resolution; no full chapter file is attached."
+    }
+  ]
+}

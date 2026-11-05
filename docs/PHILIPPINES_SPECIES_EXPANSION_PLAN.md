@@ -4986,3 +4986,13 @@ Reviewed the EMB MIMAROPA-hosted February 2023 second-draft EIS for the Amnay Ri
 The 2021 fish list is not tied to a named sampling station or voucher roster. The habitat/diet paragraph cites secondary references and is not local gut-content evidence or bait guidance. No explicit reuse license was found. Added `mimaropa-amnay-river-eis-fish-survey-scope-review-20261106.json` and one source-registry entry; registry total: 726. No public species, occurrence, geometry, diet, safety, legal, or app row was added; no contact was sent. See the [EIS](https://mimaropa.emb.gov.ph/wp-content/uploads/2023/03/Executive-Summary-Amnay-River-Restoration-and.pdf) and [review artifact](../data/research/philippines/mimaropa-amnay-river-eis-fish-survey-scope-review-20261106.json).
 
 **Next:** continue MIMAROPA with independent named-waterbody fish surveys or voucher-backed records. Keep Amnay's 2021 river catches separate from its 2022 estuary/offshore sample, and require a station/identity crosswalk and reuse review before any projection.
+
+### National rollout step 564: Caluangan Lake GBIF locality cross-check — 6 November 2026
+
+Queried GBIF for exact `waterBody` values “Caluangan Lake,” “Caluangan,” and “Calaungan,” and exact `locality` spellings “Caluangan” and “Calaungan”; all returned zero indexed records. Province-filtered searches for the two names in the 2015 Caluangan siganid thesis returned 2 *Siganus fuscescens* and 13 *S. guttatus* human observations from the iNaturalist dataset. None had GBIF waterBody, locality, or municipality text. Their coordinates and record identifiers were not retained.
+
+The provincial observations are not crosswalked to Lake Caluangan or Baruyan River, and exact-field zero results are not absence evidence. The underlying 2013 SEAFDEC source calls the lake saline, so keep it separate from freshwater lakes. Added `mimaropa-caluangan-gbif-locality-screen-20261106.json` and one source-registry entry; total: 727. No public species, occurrence, geometry, diet, rule, safety, or app row was added; no bulk download or contact was made.
+
+See the [GBIF Occurrence API](https://techdocs.gbif.org/en/openapi/v1/occurrence), [research review](../data/research/philippines/mimaropa-caluangan-gbif-locality-screen-20261106.json), [UPLB dissertation record](https://www.ukdr.uplb.edu.ph/etd-grad/4167/), and [SEAFDEC/AQD abstract](https://repository.seafdec.org.ph/handle/10862/5848).
+
+**Next:** continue the MIMAROPA sweep with a distinct named inland waterbody dataset, preserving freshwater, saline/brackish, and province-only evidence as separate classes.
