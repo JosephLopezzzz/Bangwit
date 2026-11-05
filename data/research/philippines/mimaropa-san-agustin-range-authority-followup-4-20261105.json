@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "mimaropa-san-agustin-range-authority-followup-4-20261105",
+  "checkedOn": "2026-11-05",
+  "phaseId": "L8",
+  "regionId": "1700000000",
+  "regionName": "MIMAROPA",
+  "purpose": "Screen two additional San Agustin Table 1 labels against current taxonomic authority and Philippine ecological records.",
+  "relatedReviews": [
+    "mimaropa-san-agustin-2022-estuary-tributary-survey-integrity-review-20261105.json",
+    "mimaropa-san-agustin-gbif-name-crosswalk-20261105.json",
+    "mimaropa-san-agustin-range-authority-followup-3-20261105.json"
+  ],
+  "method": {
+    "scope": "Focused review of Butis amboinensis and Chanos chanos, both printed in the 2025 San Agustin article's Table 1.",
+    "distinction": "Country-level range, a historical type locality under a currently synonymized name, and a separate Philippine wild-habitat study are contextual evidence. None identifies or re-evaluates the preserved San Agustin survey fish.",
+    "evidenceLimit": "The article provides no accession crosswalk, diagnostic images, meristic data, sequence, station coordinates, or individual reach-to-specimen link. No voucher identity or San Agustin reach assignment was inferred.",
+    "sourceReuse": "Only concise attributed findings and direct source links are retained. No survey table, taxonomic revision table, image, sequence, occurrence export, diet statement, or transformed app row was copied. Public-app reuse approval was not assessed or granted."
+  },
+  "findings": [
+    {
+      "sourceLabel": "Butis amboinensis",
+      "nameCrosswalk": "The existing strict GBIF Backbone crosswalk returned an exact accepted species-rank name match. This is a name match only; GBIF places it in Eleotridae, whereas the current Eschmeyer's Catalog of Fishes places it in Butidae.",
+      "currentAuthority": "The Catalog of Fishes online version updated 10 June 2026 treats Butis amboinensis as valid and gives an Indo-West Pacific distribution that explicitly includes the Philippines; it lists freshwater, brackish, and marine habitat. A 2023 integrative review of Butis identifies genetic and morphomeristic evidence as part of its species-level review. The family-placement difference is a higher-classification discrepancy and does not overturn the accepted species-name match or its Philippine range in the specialist Catalog.",
+      "philippineContext": "The Catalog also treats Butis leucurus, described from Negros with holotype USNM 51953, as a synonym of B. amboinensis; an earlier synonym citation is marked with question, so this is retained as qualified nomenclatural context. The Negros type-locality record and broad Philippines range do not identify a specimen from the separate San Agustin survey.",
+      "disposition": "The Philippine range is supported by the current specialist Catalog, so no new range-authority discrepancy or voucher-priority mismatch is added. Keep the source label as regionally plausible but locally unresolved. Preserve the GBIF-versus-Catalog family placement note separately; do not promote either the country range or the Negros type locality into a San Agustin occurrence.",
+      "priority": "routine; request the RSU voucher/accession crosswalk and retain the family-placement difference for any future taxonomic display"
+    },
+    {
+      "sourceLabel": "Chanos chanos",
+      "nameCrosswalk": "The existing strict GBIF Backbone crosswalk returned an exact accepted species-rank name match. This does not identify the San Agustin specimen.",
+      "currentAuthority": "FAO's milkfish species profile describes a broad tropical distribution and a life cycle that includes coastal wetlands, mangroves, estuaries, coastal lagoons, and occasional movement into freshwater lakes. This describes species ecology, not evidence that every inland or estuarine site has a wild population; Philippine aquaculture and fry stocking also make locality and origin important.",
+      "philippineContext": "Kumagai, Bagarinao, and Unggui (1985) documented juvenile milkfish in a natural mangrove lagoon on Naburut Island in central Philippines. This is a separate historical locality and study, not a record from Romblon or the San Agustin survey sites.",
+      "disposition": "The label is ecologically and nationally plausible, but neither broad milkfish biology nor the Naburut lagoon study verifies the survey's identification, wild origin, current presence, or reach assignment. No new discrepancy or voucher-priority mismatch is added; retain it as an unresolved historical survey label pending the RSU specimen crosswalk.",
+      "priority": "routine; confirm the San Agustin voucher, collection origin, and station mapping before any waterbody-specific assertion"
+    }
+  ],
+  "disposition": {
+    "sourceLabelsReviewed": 2,
+    "newRangeAuthorityDiscrepanciesNotCountedAsOutliers": 0,
+    "newVoucherPriorityRangeMismatchesFlagged": 0,
+    "totalVoucherPriorityRangeMismatchesAfterReview": 6,
+    "totalRangeAuthorityDiscrepanciesNotCountedAsOutliersAfterReview": 4,
+    "sourceLabelsReviewedOf39": 20,
+    "sourceLabelsRemainingForRangeAndAuthorityScreen": 19,
+    "specimenIdentitiesResolved": 0,
+    "occurrenceAssertions": 0,
+    "waterbodyAssertions": 0,
+    "coordinatesOrGeometryAdded": false,
+    "publicAppRows": 0,
+    "publicationApproval": false,
+    "contactSent": false
+  },
+  "nextAction": "Continue the current-authority and range screen for the remaining 19 of 39 Table 1 labels. Keep six voucher-priority mismatch labels in the verification queue and retain four separate range-authority discrepancies: Tridentiger trigonocephalus, Hypseleotris cyprinoides, Eleotris mauritiana, and Awaous guamensis. Then seek the RSU voucher/accession crosswalk and resolve the paper's station/locality conflicts before considering occurrence rows.",
+  "sources": [
+    {
+      "url": "https://mbimph.com/index.php/UPJOZ/article/view/4989",
+      "supports": "The 2025 San Agustin source article, its Table 1 labels, survey scope, and source limitations."
+    },
+    {
+      "url": "https://api.gbif.org/v1/species/match?name=Butis%20amboinensis&strict=true",
+      "supports": "Existing strict GBIF Backbone exact accepted species-rank name match; the returned family placement is recorded separately from the specialist Catalog."
+    },
+    {
+      "url": "https://api.gbif.org/v1/species/match?name=Chanos%20chanos&strict=true",
+      "supports": "Existing strict GBIF Backbone exact accepted species-rank name match only."
+    },
+    {
+      "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=18549",
+      "supports": "Eschmeyer's Catalog of Fishes current valid status, Butidae placement, Philippines-inclusive distribution, and habitat summary for Butis amboinensis."
+    },
+    {
+      "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=48607",
+      "supports": "Catalog treatment of Butis leucurus, its Negros type locality and holotype USNM 51953, and its current synonym status under B. amboinensis."
+    },
+    {
+      "url": "https://doi.org/10.26028/cybium/2023-034",
+      "supports": "Keith and Mennesson (2023) integrative review of Butis species using genetic and morphomeristic approaches; publisher abstract and citation metadata only were reviewed here."
+    },
+    {
+      "url": "https://www.fao.org/fishery/docs/CDrom/aquaculture/I1129m/file/en/en_milkfish.htm",
+      "supports": "FAO species profile for Chanos chanos, including broad tropical distribution and natural coastal, estuarine, lagoon, mangrove, and occasional freshwater-lake life stages."
+    },
+    {
+      "url": "https://repository.seafdec.org.ph/handle/10862/1165?show=full",
+      "supports": "SEAFDEC/AQD repository metadata and abstract for Kumagai, Bagarinao, and Unggui (1985), documenting juvenile Chanos chanos in a natural mangrove lagoon on Naburut Island, central Philippines."
+    }
+  ]
+}
