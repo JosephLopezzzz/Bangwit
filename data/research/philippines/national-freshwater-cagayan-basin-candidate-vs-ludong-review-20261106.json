@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-11-06",
+  "phaseId": "L1",
+  "regionIds": [
+    "0200000000",
+    "1400000000"
+  ],
+  "status": "cagayan-basin-candidate-compared-to-local-molecular-study;candidate-list-not-complete;research-only;no-app-rows",
+  "question": "Does the 2024-updated global freshwater basin candidate list capture the study-reported Cagayan River system identification of Cestraeus goldiei?",
+  "sourcesReviewed": [
+    {
+      "sourceId": "ding-2026-global-freshwater-fish-drainage-basin-dataset-2024",
+      "artifact": "national-freshwater-fish-basin-candidate-extract-20261106.json",
+      "datasetBasinId": "B0380",
+      "datasetBasinName": "Cagayan",
+      "country": "Philippines",
+      "uniqueCandidateCount": 8,
+      "candidateScientificNames": [
+        "Mugil cephalus",
+        "Nomorhamphus rossi",
+        "Ilogton ilogton",
+        "Stigmatogobius elegans",
+        "Stenogobius kyphosus",
+        "Glossogobius biorbitalis",
+        "Neostethus villadolidi",
+        "Anguilla luzonensis"
+      ],
+      "dataUpdatedTo": "2024-11-24",
+      "sourceDatasetLicense": "CC BY 4.0"
+    },
+    {
+      "sourceId": "escano-et-al-ludong-molecular-distribution-northern-philippines-2022",
+      "citation": "Escaño, V. M. C., Rey, J. T. S., Ame, E. C., Gaerlan, R. S., Tauli, M., Encarnacion, A. B., & Santos, M. D. (2022). Updates on identification and distribution of the river mullet ludong in Northern Philippines. The Philippine Journal of Fisheries, 29(2), 139–148. https://doi.org/10.31398/tpjf/29.2.2022A0003",
+      "studyReviewArtifact": "national-ludong-2022-nfrdi-genbank-crosscheck-20261030.json",
+      "sourceResult": "The article reports all 25 retained COI sequences as Cestraeus goldiei and states that 24/25 came from the Cagayan River and its tributaries; one came from the Abra River.",
+      "sampleScope": "The article describes 20 newly collected fish plus seven archived sequences, 27 initially and 25 retained. Its final table links 18 new sample/accession rows and seven older rows; two newly sequenced samples are not identified in the final table.",
+      "linkedAccessionReview": "The existing review cross-checks 18 new sample/accession metadata records. Four article-labelled Isabela samples have GenBank geo_loc_name values of Cagayan. Exact tributary/reach and coordinates remain unavailable.",
+      "articleLicense": "CC BY-NC 4.0; no Bangwit/app reuse approved"
+    }
+  ],
+  "comparison": {
+    "result": "Cestraeus goldiei is absent from the eight scientific names associated with the dataset basin label Cagayan.",
+    "exactBinomialMatch": false,
+    "meaning": "This is a bounded cross-source coverage gap, not a species absence statement, a proven dataset error, or a complete Cagayan checklist. The dataset source-reference IDs for this basin have not been resolved, and its basin geometry has not been overlaid against the study localities."
+  },
+  "interpretation": [
+    "Use the global dataset as a discovery queue only; independent local primary studies can expose omissions in a basin-level candidate list.",
+    "The study supports a historical study-level molecular identity candidate, not a continuous or current distribution, exact river reach, abundance, diet, catchability, or fishing permission.",
+    "Preserve the four Isabela paper/GenBank locality conflicts and the two unlinked newly sequenced samples from the earlier cross-check. Do not use the global basin label to resolve them.",
+    "Do not merge the global Cagayan basin row with the study record as a geometry-confirmed match."
+  ],
+  "disposition": {
+    "publicSpeciesRowsAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "geometryAdded": false,
+    "dietOrBaitClaimsAdded": 0,
+    "legalOrSafetyClaimsAdded": 0,
+    "publicationApproval": false,
+    "reason": "Cross-source validation only. The global source is basin-level and the NFRDI article has CC BY-NC 4.0 terms, unresolved locality issues, and no approved public-app reuse."
+  },
+  "sources": [
+    {
+      "url": "https://zenodo.org/records/19511163",
+      "supports": "Dataset scope, version, basin-level association model and file descriptions."
+    },
+    {
+      "url": "https://zenodo.org/api/records/19511163",
+      "supports": "Zenodo record license metadata (CC BY 4.0)."
+    },
+    {
+      "url": "https://repository.nfrdi.da.gov.ph/items/405e7034-8af9-4801-b8c1-42dff5c103c9",
+      "supports": "Official NFRDI article record and abstract."
+    },
+    {
+      "url": "https://nfrdi.da.gov.ph/tpjf/vol29_2/Updates%20on%20Identification%20and%20Distribution%20of%20the%20River%20Mullet%20Ludong%20in%20Northern%20Philippines.pdf",
+      "supports": "Full 2022 article, Table 1 locality/date/accession details, molecular results and CC BY-NC 4.0 notice."
+    },
+    {
+      "artifact": "national-ludong-2022-nfrdi-genbank-crosscheck-20261030.json",
+      "supports": "Prior 18-accession crosswalk, four Isabela locality conflicts and locality-resolution limits."
+    }
+  ]
+}
