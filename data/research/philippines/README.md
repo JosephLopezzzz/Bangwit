@@ -2171,3 +2171,13 @@ The official EMB hearing index also lists the project, but direct access returne
 See the [EMB executive summary](https://mimaropa.emb.gov.ph/wp-content/uploads/2024/04/EXECUTIVE-SUMMARY-REHABILITATION-IMPROVEMENT-OF-RIVERBED-AND-NAVIGATIONAL-SEA-CHANNEL-OF-BOAC-RIVER.pdf), [EMB hearing index](https://mimaropa.emb.gov.ph/public-hearingconsultation/), and [access review](mimaropa-boac-river-2024-eis-fish-baseline-access-review-20261106.json).
 
 **Next:** continue with a distinct MIMAROPA waterbody survey or specimen-backed source. If the full Boac EIS becomes available, inspect its fish-baseline annex before drawing species conclusions.
+
+### National rollout step 516: Boac River GBIF exact-locality screen — 6 November 2026
+
+Queried GBIF for exact `waterBody` and `locality` text. `waterBody=Boac River` and `waterBody=Boac` returned zero; `locality=Boac River` returned three preserved specimens, all classified by GBIF as Gastropoda. The exact-locality Actinopterygii query (GBIF class key 204) returned zero. The three specimen records have no coordinates, event date, or year in the API responses reviewed.
+
+These are non-fish specimen records, not a Boac River fish survey. Exact-field query misses, incomplete data publishing, and unindexed collections remain possible, so the zero fish result is not evidence of biological absence. Added `mimaropa-boac-river-gbif-occurrence-screen-20261106.json` and one source-registry entry; total: 733. No fish occurrence, waterbody boundary, habitat, diet, safety, legality, or public-app row was added. No bulk download or contact occurred.
+
+See the [GBIF Occurrence API documentation](https://techdocs.gbif.org/en/openapi/v1/occurrence), [exact locality response](https://api.gbif.org/v1/occurrence/search?country=PH&locality=Boac%20River&limit=5), [Actinopterygii-filtered response](https://api.gbif.org/v1/occurrence/search?country=PH&locality=Boac%20River&classKey=204&limit=5), [UF Invertebrate Zoology dataset](https://doi.org/10.15468/sm6qo6), and [research screen](mimaropa-boac-river-gbif-occurrence-screen-20261106.json).
+
+**Next:** continue MIMAROPA with a distinct, independently documented inland fish survey or specimen-backed dataset for a named river, lake, wetland, or reservoir. Revisit Boac River if a dated fish baseline becomes accessible.

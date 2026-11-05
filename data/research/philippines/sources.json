@@ -3,7 +3,7 @@
   "checkedOn": "2026-11-06",
   "status": "research-only-source-registry",
   "scope": "National acquisition references, freshwater spatial-source leads, MIMAROPA/CALABARZON/Central Luzon identity and inland-water source reviews, and Mindanao regional freshwater survey reviews. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 732,
+  "sourceCount": 733,
   "sources": [
     {
       "id": "aquilino-2011-taal-dna-barcoding-genbank",
@@ -23477,6 +23477,45 @@
         "The executive summary mentions comparing future fish/crustacean populations with baseline data but does not provide the baseline or its methods, locations, dates, or metrics.",
         "A search-indexed/public-index result that exposes only the executive summary does not prove the full EIS is unavailable through another channel.",
         "No current water-quality, safety, fish presence/absence, geometry, diet, catchability, or public-app claim is supported by this screen."
+      ]
+    },
+    {
+      "id": "gbif-mimaropa-boac-river-exact-locality-screen-20261106",
+      "title": "GBIF occurrence screen for exact Boac River locality records",
+      "provider": "GBIF Secretariat; Florida Museum of Natural History, UF Invertebrate Zoology dataset",
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Boac%20River&limit=5",
+      "additionalUrls": [
+        "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Boac%20River&classKey=204&limit=5",
+        "https://api.gbif.org/v1/occurrence/search?country=PH&waterBody=Boac%20River&limit=5",
+        "https://www.gbif.org/dataset/85b1cfb6-f762-11e1-a439-00145eb45e9a",
+        "https://doi.org/10.15468/sm6qo6"
+      ],
+      "role": "Read-only exact-locality screen of GBIF-indexed records for Boac River. Three preserved gastropod specimens were returned; the exact Actinopterygii class query returned zero. Research-only screen, not a fish survey or absence finding.",
+      "checkedOn": "2026-11-06",
+      "sourceYear": null,
+      "citation": "GBIF Occurrence API v1; Florida Museum of Natural History: UF Invertebrate Zoology, dataset DOI 10.15468/sm6qo6, checked 6 November 2026.",
+      "access": {
+        "status": "public-read-only-occurrence-api;exact-locality-screen;three-nonfish-specimens;research-only",
+        "reviewFiles": ["mimaropa-boac-river-gbif-occurrence-screen-20261106.json"],
+        "exactLocalityRecords": 3,
+        "actinopterygiiExactLocalityRecords": 0,
+        "returnedRecordsHaveCoordinates": false,
+        "returnedRecordsHaveEventDateOrYear": false
+      },
+      "reuse": {
+        "metadata": "GBIF dataset metadata identifies the UF Invertebrate Zoology dataset and DOI 10.15468/sm6qo6.",
+        "raw": "No bulk download or occurrence payload archive was retained; the review records the three GBIF occurrence links and only the fields needed for the bounded assessment.",
+        "content": "The dataset/records state CC BY-NC 4.0. No fish occurrence, ecological habitat conclusion, or public-app row is admitted by this review; commercial reuse is not inferred."
+      },
+      "publicationApproval": false,
+      "researchStatus": "boac-river-exact-locality;three-gastropod-specimens;zero-indexed-actinopterygii-matches;not-absence-evidence;research-only",
+      "license": "CC BY-NC 4.0 stated in GBIF dataset metadata",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "caveats": [
+        "Exact text-field searches can miss alternate spellings, records with missing or inconsistent locality fields, unindexed collections, and records not contributed to GBIF.",
+        "The zero-result exact Actinopterygii query is not evidence that fish are absent from Boac River.",
+        "The three records are classified as Gastropoda and lack occurrence dates, years, and coordinates in the API responses reviewed; locality labels were not crosswalked to a mapped river reach.",
+        "The occurrence screen is not a biological survey and provides no support for species occurrence, diet, catchability, safety, legal access, or waterbody boundaries."
       ]
     }
   ],

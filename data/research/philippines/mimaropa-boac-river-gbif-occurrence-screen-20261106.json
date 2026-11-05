@@ -1,0 +1,165 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "mimaropa-boac-river-gbif-occurrence-screen-20261106",
+  "checkedOn": "2026-11-06",
+  "phaseId": "L8",
+  "regionId": "1700000000",
+  "waterbody": {
+    "name": "Boac River",
+    "province": "Marinduque",
+    "region": "MIMAROPA",
+    "identityBasis": "exact GBIF locality text only; no independent waterbody geometry crosswalk reviewed"
+  },
+  "question": "Does GBIF's occurrence index provide exact-locality fish records for Boac River that could independently support a fish occurrence claim?",
+  "queryReview": {
+    "provider": "GBIF Occurrence API v1",
+    "documentationUrl": "https://techdocs.gbif.org/en/openapi/v1/occurrence",
+    "queriedOn": "2026-11-06",
+    "method": "Read-only country=PH searches of exact waterBody and locality strings. A separate classKey query used the GBIF backbone key for Actinopterygii. Search responses were limited to five records; all three exact-locality records were reviewed via the single-record API. No bulk download was requested.",
+    "exactWaterBodyQueries": [
+      {
+        "value": "Boac River",
+        "resultCount": 0,
+        "url": "https://api.gbif.org/v1/occurrence/search?country=PH&waterBody=Boac%20River&limit=5"
+      },
+      {
+        "value": "Boac",
+        "resultCount": 0,
+        "url": "https://api.gbif.org/v1/occurrence/search?country=PH&waterBody=Boac&limit=5"
+      }
+    ],
+    "exactLocalityQueries": [
+      {
+        "value": "Boac River",
+        "resultCount": 3,
+        "url": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Boac%20River&limit=5"
+      }
+    ],
+    "fishClassQuery": {
+      "className": "Actinopterygii",
+      "classKey": 204,
+      "classRank": "CLASS",
+      "taxonUrl": "https://api.gbif.org/v1/species/204",
+      "resultCount": 0,
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Boac%20River&classKey=204&limit=5"
+    },
+    "records": [
+      {
+        "gbifID": "899583292",
+        "scientificName": "Neritina coromandeliana Sowerby, 1832",
+        "taxonomicClass": "Gastropoda",
+        "basisOfRecord": "PRESERVED_SPECIMEN",
+        "locality": "Boac River",
+        "stateProvince": "Marinduque Island",
+        "institutionCode": "UF",
+        "collectionCode": "Invertebrate Zoology",
+        "catalogNumber": "412471-Mollusca",
+        "eventDate": null,
+        "year": null,
+        "hasCoordinates": false,
+        "datasetKey": "85b1cfb6-f762-11e1-a439-00145eb45e9a",
+        "license": "CC BY-NC 4.0",
+        "url": "https://www.gbif.org/occurrence/899583292"
+      },
+      {
+        "gbifID": "899583324",
+        "scientificName": "Neritina communis Quay & Gaimard, 1832",
+        "taxonomicClass": "Gastropoda",
+        "basisOfRecord": "PRESERVED_SPECIMEN",
+        "locality": "Boac River",
+        "stateProvince": "Marinduque Island",
+        "institutionCode": "UF",
+        "collectionCode": "Invertebrate Zoology",
+        "catalogNumber": "412523-Mollusca",
+        "eventDate": null,
+        "year": null,
+        "hasCoordinates": false,
+        "datasetKey": "85b1cfb6-f762-11e1-a439-00145eb45e9a",
+        "license": "CC BY-NC 4.0",
+        "url": "https://www.gbif.org/occurrence/899583324"
+      },
+      {
+        "gbifID": "899583339",
+        "scientificName": "Clithon corona (Linnaeus, 1758)",
+        "taxonomicClass": "Gastropoda",
+        "basisOfRecord": "PRESERVED_SPECIMEN",
+        "locality": "Boac River",
+        "stateProvince": "Marinduque Island",
+        "institutionCode": "UF",
+        "collectionCode": "Invertebrate Zoology",
+        "catalogNumber": "412527-Mollusca",
+        "eventDate": null,
+        "year": null,
+        "hasCoordinates": false,
+        "datasetKey": "85b1cfb6-f762-11e1-a439-00145eb45e9a",
+        "license": "CC BY-NC 4.0",
+        "url": "https://www.gbif.org/occurrence/899583339"
+      }
+    ],
+    "dataset": {
+      "title": "UF Invertebrate Zoology",
+      "datasetKey": "85b1cfb6-f762-11e1-a439-00145eb45e9a",
+      "doi": "10.15468/sm6qo6",
+      "license": "CC BY-NC 4.0",
+      "url": "https://www.gbif.org/dataset/85b1cfb6-f762-11e1-a439-00145eb45e9a",
+      "citation": "Florida Museum of Natural History: UF Invertebrate Zoology, GBIF dataset DOI 10.15468/sm6qo6."
+    },
+    "recordHandling": "The exact-locality records are preserved specimens identified by GBIF as Gastropoda, not fish. Their returned occurrence records contain no eventDate, year, or coordinates. Record identifiers and non-sensitive citation metadata are retained; no occurrence payload or coordinate data was copied into app datasets."
+  },
+  "interpretation": {
+    "result": "The GBIF index returned three specimen records with locality exactly 'Boac River'; all three are gastropods. The exact-locality Actinopterygii query returned zero indexed records.",
+    "scope": "This is a text-field screen of records indexed by GBIF as of 2026-11-06. It is not a river survey and does not establish fish presence or absence in Boac River.",
+    "taxonomicUse": "The three indexed records do not support a Bangwit fish-species entry. No fish taxonomy, waterbody occurrence, diet, catchability, safety, or legal claim is inferred."
+  },
+  "limitations": [
+    "Exact waterBody/locality searches can miss alternate spellings, absent or inconsistent Darwin Core fields, unindexed collections, records outside GBIF, and specimens whose collection site was not transcribed.",
+    "A zero-result class-filtered index query is not evidence that Actinopterygii are absent from the river.",
+    "The specimen locality string was not independently reconciled to a mapped river reach; the records have no coordinates, event dates, or years in the GBIF responses reviewed.",
+    "The records are gastropods and do not constitute fish-survey coverage; their exact locality labels alone do not establish a habitat-specific ecological relationship.",
+    "The dataset and occurrence records state CC BY-NC 4.0. This screen does not add any occurrence to Bangwit's public app data or establish permission for commercial reuse."
+  ],
+  "admission": {
+    "fishSpeciesAssertionsAdded": 0,
+    "waterbodyFishOccurrenceRows": 0,
+    "coordinatesOrGeometryAdded": false,
+    "dietAssertions": 0,
+    "ruleOrSafetyAssertions": 0,
+    "publicAppRows": 0,
+    "publicationApproval": false
+  },
+  "followUp": {
+    "nextAction": "Continue MIMAROPA discovery with an independently documented inland fish survey or specimen-backed dataset for a named river, lake, wetland, or reservoir. Revisit Boac River if a site-specific fish baseline or other dated fish collection becomes accessible.",
+    "bulkDownloadRequested": false,
+    "contactsMade": false
+  },
+  "sources": [
+    {
+      "url": "https://techdocs.gbif.org/en/openapi/v1/occurrence",
+      "supports": "Official GBIF Occurrence API documentation."
+    },
+    {
+      "url": "https://api.gbif.org/v1/species/204",
+      "supports": "GBIF backbone record identifying taxon key 204 as Actinopterygii, rank CLASS."
+    },
+    {
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Boac%20River&limit=5",
+      "supports": "Read-only exact-locality query returning three indexed occurrences, each reviewed as a preserved Gastropoda specimen."
+    },
+    {
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Boac%20River&classKey=204&limit=5",
+      "supports": "Read-only exact-locality query restricted to the GBIF Actinopterygii class key; zero indexed results returned on 2026-11-06."
+    },
+    {
+      "url": "https://api.gbif.org/v1/dataset/85b1cfb6-f762-11e1-a439-00145eb45e9a",
+      "supports": "Dataset title, DOI, and stated CC BY-NC 4.0 license for UF Invertebrate Zoology."
+    },
+    {
+      "url": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "supports": "Creative Commons Attribution-NonCommercial 4.0 license linked by the GBIF dataset and occurrence records."
+    },
+    {
+      "url": "https://doi.org/10.15468/sm6qo6",
+      "supports": "Persistent dataset DOI for Florida Museum of Natural History: UF Invertebrate Zoology."
+    }
+  ]
+}

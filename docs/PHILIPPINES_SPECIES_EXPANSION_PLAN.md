@@ -5052,3 +5052,13 @@ Added `mimaropa-boac-river-2024-eis-fish-baseline-access-review-20261106.json` a
 See the [EMB executive summary](https://mimaropa.emb.gov.ph/wp-content/uploads/2024/04/EXECUTIVE-SUMMARY-REHABILITATION-IMPROVEMENT-OF-RIVERBED-AND-NAVIGATIONAL-SEA-CHANNEL-OF-BOAC-RIVER.pdf), [public hearing index](https://mimaropa.emb.gov.ph/public-hearingconsultation/), and [research review](../data/research/philippines/mimaropa-boac-river-2024-eis-fish-baseline-access-review-20261106.json).
 
 **Next:** continue MIMAROPA with a distinct named-waterbody fish survey or specimen-backed dataset; revisit the Boac baseline only if the full EIS or aquatic annex can be reviewed.
+
+### National rollout step 570: Boac River GBIF exact-locality occurrence screen — 6 November 2026
+
+The GBIF Occurrence API returned three exact `locality=Boac River` preserved specimens; all are classified as Gastropoda. Exact `waterBody=Boac River` and `waterBody=Boac` searches returned zero, and the exact-locality Actinopterygii search (GBIF backbone class key 204) returned zero. The three returned records contain no coordinates, event dates, or years in the API responses reviewed.
+
+This screen provides no Boac River fish record and is not evidence that fish are absent. Exact locality text, GBIF contribution coverage, and available record fields limit the query. Added the research-only screen and one source entry; registry total: 733. No fish occurrence, biological habitat, geometry, diet, rules, safety, or app data was added.
+
+See the [GBIF API documentation](https://techdocs.gbif.org/en/openapi/v1/occurrence), [exact locality query](https://api.gbif.org/v1/occurrence/search?country=PH&locality=Boac%20River&limit=5), [Actinopterygii query](https://api.gbif.org/v1/occurrence/search?country=PH&locality=Boac%20River&classKey=204&limit=5), and the [research review](../data/research/philippines/mimaropa-boac-river-gbif-occurrence-screen-20261106.json).
+
+**Next:** continue the MIMAROPA source sweep with a separate, independently documented inland fish survey or specimen-backed dataset for a named river, lake, wetland, or reservoir. Return to Boac if its full fish baseline or another dated, site-specific fish collection becomes accessible.
