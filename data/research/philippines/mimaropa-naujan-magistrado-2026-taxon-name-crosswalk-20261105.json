@@ -1,0 +1,215 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "mimaropa-naujan-magistrado-2026-taxon-name-crosswalk-20261105",
+  "checkedOn": "2026-11-05",
+  "phaseId": "L8",
+  "regionId": "1700000000",
+  "regionName": "MIMAROPA",
+  "question": "How do the ten Naujan names in Magistrado et al. (2026) match GBIF and Catalog of Fishes, and how do the source sets compare with the separate 2024 and 2011 reviews?",
+  "sourceReview": "mimaropa-naujan-magistrado-2026-risk-screen-review-20261105.json",
+  "status": "10-exact-species-rank-accepted-gbif-matches;9-catalog-valid-statuses;third-authority-audit-complete;one-conflict-held;source-set-comparison-complete;research-only",
+  "authority": {
+    "catalogOfFishes": {
+      "name": "Eschmeyer's Catalog of Fishes: Genera, Species, References",
+      "publisher": "California Academy of Sciences, Institute for Biodiversity Science and Sustainability",
+      "onlineVersionUpdated": "2026-08-13",
+      "accessedOn": "2026-11-05",
+      "accessMethod": "Official Catalog search results exposed current-status excerpts for all ten names. Direct record-page requests returned HTTP 403 in this environment; full record pages were not retrieved.",
+      "interpretation": "Nomenclatural cross-check only. It cannot identify the fish assessed by the article or establish their presence at Naujan."
+    },
+    "gbifSpeciesApi": {
+      "name": "GBIF Species API v1 match endpoint",
+      "publisher": "GBIF Secretariat",
+      "documentationUrl": "https://techdocs.gbif.org/en/openapi/v1/species",
+      "endpointTemplate": "https://api.gbif.org/v1/species/match?name={URL_ENCODED_BINOMIAL}",
+      "accessedOn": "2026-11-05",
+      "retrieval": "Each of the ten direct Species API requests returned HTTP 200, EXACT match type, species rank and ACCEPTED status; confidence was 99 for each result.",
+      "interpretation": "GBIF Backbone matches are nomenclatural results, not specimen re-identifications, occurrence records, current presence, or evidence of establishment. GBIF uses the Catalogue of Life Extended Release as its current taxonomic framework, so these two services are not fully independent evidence."
+    },
+    "catalogueOfLifeExtendedRelease": {
+      "name": "Catalogue of Life Extended Release (COL XR)",
+      "publisher": "Catalogue of Life; ChecklistBank",
+      "release": "2026-10-16 XR",
+      "datasetKey": 316691,
+      "accessedOn": "2026-11-05",
+      "accessMethod": "The public ChecklistBank API search for Cichlasoma trimaculatum returned an accepted species usage in the 2026-10-16 XR, with a source link to the WoRMS taxon record.",
+      "interpretation": "COL XR agrees with GBIF on the Cichlasoma combination, but it is also the taxonomic framework used by GBIF and is not an independent third authority against the Catalog of Fishes."
+    },
+    "itis": {
+      "name": "Integrated Taxonomic Information System",
+      "publisher": "ITIS partnership",
+      "accessedOn": "2026-11-05",
+      "recordUrl": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?print_version=PRT&search_topic=TSN&search_value=169804&source=to_print",
+      "recordForCichlasoma": "ITIS lists Cichlasoma trimaculatum as valid and Amphilophus trimaculatus as its synonym.",
+      "sourceProvenance": "The ITIS record identifies its Catalog of Fishes source as the 13 May 2004 website (version 10 May 2004), acquired in 2004.",
+      "interpretation": "This is a useful legacy comparison but not an independent current resolution; its stated source predates the Catalog's 2024/2026 treatment."
+    }
+  },
+  "crosswalk": [
+    {
+      "nameAsReported": "Anabas testudineus",
+      "catalogAcceptedName": "Anabas testudineus (Bloch 1792)",
+      "catalogCurrentStatus": "valid",
+      "authorityConsensus": "agreement",
+      "catalogRecord": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Anabas&species=testudineus&tbl=species",
+      "catalogAccess": "official-indexed-current-status-excerpt",
+      "gbif": {"canonicalName": "Anabas testudineus", "scientificName": "Anabas testudineus (Bloch, 1792)", "rank": "SPECIES", "status": "ACCEPTED", "matchType": "EXACT", "confidence": 99, "usageKey": 2391579, "matchUrl": "https://api.gbif.org/v1/species/match?name=Anabas%20testudineus"}
+    },
+    {
+      "nameAsReported": "Atractosteus spatula",
+      "catalogAcceptedName": "Atractosteus spatula (Lacepède 1803)",
+      "catalogCurrentStatus": "valid",
+      "authorityConsensus": "agreement",
+      "catalogRecord": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Atractosteus&species=spatula&tbl=species",
+      "catalogAccess": "official-indexed-current-status-excerpt",
+      "gbif": {"canonicalName": "Atractosteus spatula", "scientificName": "Atractosteus spatula (Lacepède, 1803)", "rank": "SPECIES", "status": "ACCEPTED", "matchType": "EXACT", "confidence": 99, "usageKey": 2346754, "matchUrl": "https://api.gbif.org/v1/species/match?name=Atractosteus%20spatula"}
+    },
+    {
+      "nameAsReported": "Channa striata",
+      "catalogAcceptedName": "Channa striata (Bloch 1793)",
+      "catalogCurrentStatus": "valid",
+      "authorityConsensus": "agreement",
+      "catalogRecord": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Channa&species=striata&tbl=species",
+      "catalogAccess": "official-indexed-current-status-excerpt",
+      "gbif": {"canonicalName": "Channa striata", "scientificName": "Channa striata (Bloch, 1793)", "rank": "SPECIES", "status": "ACCEPTED", "matchType": "EXACT", "confidence": 99, "usageKey": 2391463, "matchUrl": "https://api.gbif.org/v1/species/match?name=Channa%20striata"}
+    },
+    {
+      "nameAsReported": "Cichlasoma trimaculatum",
+      "catalogAcceptedName": "Amphilophus trimaculatus (Günther 1867)",
+      "catalogCurrentStatus": "synonym-of-Amphilophus-trimaculatus",
+      "authorityConsensus": "conflict-held",
+      "catalogRecord": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Cichlasoma&species=trimaculatum&tbl=species",
+      "catalogAccess": "official-indexed-current-status-excerpt",
+      "taxonomicNote": "Catalog of Fishes treats Cichlasoma trimaculatum as a synonym and lists Amphilophus trimaculatus as valid. GBIF and current COL XR return the source binomial as accepted; COL XR is GBIF's framework and its relevant name usage links to WoRMS. ITIS also lists Cichlasoma as valid, but its record cites a 2004 Catalog of Fishes snapshot and cannot independently resolve the newer difference. Preserve the article spelling and do not select an app display name until this authority difference is independently reviewed.",
+      "itis": {"taxonomicStatus": "valid", "acceptedName": "Cichlasoma trimaculatum (Günther, 1867)", "synonym": "Amphilophus trimaculatus (Günther, 1867)", "taxonomicSerialNumber": 169804, "catalogSourceVersion": "Catalog of Fishes version 10-May-2004", "sourceAcquired": 2004, "recordUrl": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?print_version=PRT&search_topic=TSN&search_value=169804&source=to_print"},
+      "catalogueOfLifeExtendedRelease": {"status": "accepted", "scientificName": "Cichlasoma trimaculatum (Günther, 1867)", "usageId": "V7X9", "datasetKey": 316691, "release": "2026-10-16 XR", "linkedSource": "WoRMS taxon 991205", "searchUrl": "https://api.checklistbank.org/dataset/3LXR/nameusage/search?q=Cichlasoma%20trimaculatum&type=exact&rank=species"},
+      "gbifBackboneRecord": {"datasetKey": "d7dddbf4-2cf0-4f39-9b2a-bb099caae36c", "sourceTaxonKey": 175938270, "lastCrawled": "2023-08-22T23:20:59.545+00:00", "lastInterpreted": "2023-08-22T22:21:01.783+00:00", "recordUrl": "https://api.gbif.org/v1/species/2371925"},
+      "gbif": {"canonicalName": "Cichlasoma trimaculatum", "scientificName": "Cichlasoma trimaculatum Günther, 1867", "rank": "SPECIES", "status": "ACCEPTED", "matchType": "EXACT", "confidence": 99, "usageKey": 2371925, "matchUrl": "https://api.gbif.org/v1/species/match?name=Cichlasoma%20trimaculatum"}
+    },
+    {
+      "nameAsReported": "Cyprinus carpio",
+      "catalogAcceptedName": "Cyprinus carpio Linnaeus 1758",
+      "catalogCurrentStatus": "valid",
+      "authorityConsensus": "agreement",
+      "catalogRecord": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Cyprinus&species=carpio&tbl=species",
+      "catalogAccess": "official-indexed-current-status-excerpt",
+      "gbif": {"canonicalName": "Cyprinus carpio", "scientificName": "Cyprinus carpio Linnaeus, 1758", "rank": "SPECIES", "status": "ACCEPTED", "matchType": "EXACT", "confidence": 99, "usageKey": 4286975, "matchUrl": "https://api.gbif.org/v1/species/match?name=Cyprinus%20carpio"}
+    },
+    {
+      "nameAsReported": "Pangasianodon hypophthalmus",
+      "catalogAcceptedName": "Pangasianodon hypophthalmus (Sauvage 1878)",
+      "catalogCurrentStatus": "valid",
+      "authorityConsensus": "agreement",
+      "catalogRecord": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Pangasianodon&species=hypophthalmus&tbl=species",
+      "catalogAccess": "official-indexed-current-status-excerpt",
+      "gbif": {"canonicalName": "Pangasianodon hypophthalmus", "scientificName": "Pangasianodon hypophthalmus (Sauvage, 1878)", "rank": "SPECIES", "status": "ACCEPTED", "matchType": "EXACT", "confidence": 99, "usageKey": 2340714, "matchUrl": "https://api.gbif.org/v1/species/match?name=Pangasianodon%20hypophthalmus"}
+    },
+    {
+      "nameAsReported": "Parachromis managuensis",
+      "catalogAcceptedName": "Parachromis managuensis (Günther 1867)",
+      "catalogCurrentStatus": "valid",
+      "authorityConsensus": "agreement",
+      "catalogRecord": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Parachromis&species=managuensis&tbl=species",
+      "catalogAccess": "official-indexed-current-status-excerpt",
+      "gbif": {"canonicalName": "Parachromis managuensis", "scientificName": "Parachromis managuensis (Günther, 1867)", "rank": "SPECIES", "status": "ACCEPTED", "matchType": "EXACT", "confidence": 99, "usageKey": 5208202, "matchUrl": "https://api.gbif.org/v1/species/match?name=Parachromis%20managuensis"}
+    },
+    {
+      "nameAsReported": "Poecilia reticulata",
+      "catalogAcceptedName": "Poecilia reticulata Peters 1859",
+      "catalogCurrentStatus": "valid",
+      "authorityConsensus": "agreement",
+      "catalogRecord": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Poecilia&species=reticulata&tbl=species",
+      "catalogAccess": "official-indexed-current-status-excerpt",
+      "gbif": {"canonicalName": "Poecilia reticulata", "scientificName": "Poecilia reticulata Peters, 1859", "rank": "SPECIES", "status": "ACCEPTED", "matchType": "EXACT", "confidence": 99, "usageKey": 2350050, "matchUrl": "https://api.gbif.org/v1/species/match?name=Poecilia%20reticulata"}
+    },
+    {
+      "nameAsReported": "Pterygoplichthys disjunctivus",
+      "catalogAcceptedName": "Pterygoplichthys disjunctivus (Weber 1991)",
+      "catalogCurrentStatus": "valid",
+      "authorityConsensus": "agreement",
+      "catalogRecord": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Pterygoplichthys&species=disjunctivus&tbl=species",
+      "catalogAccess": "official-indexed-current-status-excerpt",
+      "gbif": {"canonicalName": "Pterygoplichthys disjunctivus", "scientificName": "Pterygoplichthys disjunctivus (Weber, 1991)", "rank": "SPECIES", "status": "ACCEPTED", "matchType": "EXACT", "confidence": 99, "usageKey": 2340003, "matchUrl": "https://api.gbif.org/v1/species/match?name=Pterygoplichthys%20disjunctivus"}
+    },
+    {
+      "nameAsReported": "Trichopodus pectoralis",
+      "catalogAcceptedName": "Trichopodus pectoralis Regan 1910",
+      "catalogCurrentStatus": "valid",
+      "authorityConsensus": "agreement",
+      "catalogRecord": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Trichopodus&species=pectoralis&tbl=species",
+      "catalogAccess": "official-indexed-current-status-excerpt",
+      "gbif": {"canonicalName": "Trichopodus pectoralis", "scientificName": "Trichopodus pectoralis Regan, 1910", "rank": "SPECIES", "status": "ACCEPTED", "matchType": "EXACT", "confidence": 99, "usageKey": 5211177, "matchUrl": "https://api.gbif.org/v1/species/match?name=Trichopodus%20pectoralis"}
+    }
+  ],
+  "sourceComparison": {
+    "gillesEtAl2024": {
+      "2024Names": 13,
+      "2026Names": 10,
+      "overlap": [
+        {"name": "Anabas testudineus", "2026Category": "extant", "2024Assessment": "listed among taxa reported as currently present"},
+        {"name": "Channa striata", "2026Category": "extant", "2024Assessment": "listed among taxa reported as currently present"},
+        {"name": "Cyprinus carpio", "2026Category": "extant", "2024Assessment": "listed among taxa reported as currently present"},
+        {"name": "Poecilia reticulata", "2026Category": "horizon", "2024Assessment": "listed among taxa reported as currently present", "interpretation": "Study-level disagreement; it does not establish an absence, decline, disappearance, or population change."},
+        {"name": "Pterygoplichthys disjunctivus", "2026Category": "extant", "2024Assessment": "listed among taxa reported as currently present"},
+        {"name": "Trichopodus pectoralis", "2026Category": "extant", "2024Assessment": "listed among taxa reported as currently present"}
+      ],
+      "2026NamesOutsideThe2024List": ["Atractosteus spatula", "Cichlasoma trimaculatum", "Pangasianodon hypophthalmus", "Parachromis managuensis"],
+      "2024NamesOutsideThe2026List": ["Carassius auratus", "Clarias batrachus", "Coptodon zillii", "Leiopotherapon plumbeus", "Oreochromis niloticus", "Poecilia sphenops", "Trichopodus trichopterus"],
+      "interpretation": "The two articles are separate risk assessments with different reported taxon sets and assessment categories; their overlap is not a time-series survey or evidence of local population change."
+    },
+    "mbcfi2011": {
+      "crosswalkScope": "The reviewed 2011 comparison crosswalks the 13 names in the 2024 article, not a complete 2011 taxon list. Only the six shared names below have a 2011 table comparison in that artifact.",
+      "sharedNames": [
+        {"name": "Anabas testudineus", "2011LakeButasTable": "historical source-name match", "2011TributaryTable": "not listed among the 2011 tributary-table taxa"},
+        {"name": "Channa striata", "2011LakeButasTable": "historical source-name match", "2011TributaryTable": "one or more positive markers"},
+        {"name": "Cyprinus carpio", "2011LakeButasTable": "historical infraspecific-name crosswalk from Cyprinus carpio carpio", "2011TributaryTable": "not listed among the 2011 tributary-table taxa"},
+        {"name": "Poecilia reticulata", "2011LakeButasTable": "historical source-name match", "2011TributaryTable": "one or more positive markers"},
+        {"name": "Pterygoplichthys disjunctivus", "2011LakeButasTable": "not listed in the reviewed 2011 fish tables; bounded table result only", "2011TributaryTable": "not listed in the reviewed table", "laterEvidence": "The separate 2023 survey note reports one bycatch individual; it is not a present-day population estimate."},
+        {"name": "Trichopodus pectoralis", "2011LakeButasTable": "historical source-name match", "2011TributaryTable": "one or more positive markers"}
+      ],
+      "interpretation": "Historical table markers are not current occurrence records. The 2011 prose/table fish totals conflict and remain unresolved; no full tributary cell matrix was copied."
+    }
+  },
+  "summary": {
+    "sourceNameCount": 10,
+    "exactSpeciesRankAcceptedGbifMatches": 10,
+    "gbifConfidenceRange": [99, 99],
+    "catalogCurrentValidStatuses": 9,
+    "catalogGbifAuthorityConflicts": 1,
+    "sharedTaxaWithGilles2024": 6,
+    "sharedTaxaWithReviewedMbcfi2011Crosswalk": 6,
+    "specimenIdentitiesVerified": 0,
+    "currentNaujanPresenceIndependentlyVerified": 0
+  },
+  "decision": {
+    "nameLevelReviewComplete": true,
+    "authorityConsensusAcrossAllNames": false,
+    "heldAuthorityConflicts": ["Cichlasoma trimaculatum / Amphilophus trimaculatus"],
+    "sourceCategoryComparisonComplete": true,
+    "sitePresenceIndependentlyVerified": false,
+    "speciesRowsAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "publicAppRowsAdded": 0,
+    "riskOrInvasiveBadgesAdded": 0,
+    "publicationApproval": false,
+    "reason": "Nine names have matching current-name treatments in GBIF and the official Catalog. For Cichlasoma trimaculatum, GBIF and its current Catalogue of Life framework accept the source combination, while the specialist Catalog of Fishes treats it as a synonym of Amphilophus trimaculatus. ITIS agrees with the source combination but cites a 2004 Catalog snapshot and is not a current independent vote. The GBIF Backbone record's 2023 interpretation date may be relevant but does not explain or resolve the difference. The cross-study name/category comparison does not independently validate specimens or current occurrence; all source-reported spellings and categories remain attributed and research-only."
+  },
+  "limitations": [
+    "Catalog of Fishes direct record pages returned HTTP 403; current-status findings use official indexed result excerpts, not retrieved full records.",
+    "GBIF Backbone match status does not re-identify article specimens or establish local occurrence, introduction history, establishment, abundance, catchability, or national nativeness; GBIF uses Catalogue of Life XR as its current taxonomic framework, so those services do not constitute independent corroboration.",
+    "The Cichlasoma trimaculatum treatment differs: GBIF and COL XR returned the source combination as accepted, while the Catalog of Fishes lists Amphilophus trimaculatus as valid. ITIS also lists Cichlasoma as valid but relies on its Catalog record acquired from the 2004 Catalog website. The GBIF Backbone record was last interpreted in 2023. Do not normalize or publish this name until the conflict is resolved.",
+    "The 2024 article is a separate risk-assessment synthesis and the 2026 article is a separate stakeholder/expert screening. Their assessment categories are not comparable survey observations or a time series.",
+    "The MBCFI 2011 crosswalk covers the 2024 article's 13 names only; names outside that comparison are not thereby absent from the 2011 tables or the lake.",
+    "No taxon-specific dates, stations, coordinates, vouchers, abundance, fishery availability, legal status, diet, bait, or safety claim is established by this name-level review."
+  ],
+  "sources": [
+    {"url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatmain.asp", "supports": "Official Catalog of Fishes indexed current-status excerpts; direct record pages returned HTTP 403 in this environment."},
+    {"url": "https://techdocs.gbif.org/en/openapi/v1/species", "supports": "Official documentation for the GBIF Species API match endpoint."},
+    {"url": "https://www.catalogueoflife.org/data/browse", "supports": "Official COL XR release page; it identifies the current 2026-10-16 dataset used as GBIF's taxonomic framework."},
+    {"url": "https://api.checklistbank.org/dataset/3LXR/nameusage/search?q=Cichlasoma%20trimaculatum&type=exact&rank=species", "supports": "COL XR name-usage result for Cichlasoma trimaculatum, with a WoRMS source link."},
+    {"url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?print_version=PRT&search_topic=TSN&search_value=169804&source=to_print", "supports": "ITIS lists Cichlasoma trimaculatum as valid but cites Catalog of Fishes from 2004; this does not resolve its newer treatment."},
+    {"url": "https://api.gbif.org/v1/species/match?name=Cichlasoma%20trimaculatum", "supports": "Direct name-match result for the one source binomial whose GBIF treatment differs from the Catalog."},
+    {"url": "https://philjournalsci.dost.gov.ph/new-locality-record-of-the-invasive-pterygoplichthys-disjunctivus-weber-1991-on-ramsar-listed-lake-naujan-the-philippines/", "supports": "Separate 2023 Lake Naujan survey report for one Pterygoplichthys disjunctivus bycatch individual; not a current abundance estimate."}
+  ],
+  "nextAction": "Seek a current independent fish-taxonomy review of the Cichlasoma trimaculatum / Amphilophus trimaculatus combination; ITIS is not current independent evidence because it relies on a 2004 Catalog snapshot. Preserve the article spelling until resolved. Separately request NFRDI's 2025-2026 stock-assessment taxon/station records and item-specific reuse terms; do not project the five-lake risk-screen rows into the public app."
+}
