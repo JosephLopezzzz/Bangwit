@@ -5008,3 +5008,13 @@ Added the research review and one source-registry entry; total: 728. The existin
 See the [2007 original description](https://lkcnhm.nus.edu.sg/app/uploads/2017/06/55rbz141-145.pdf), the [2025 type checklist](https://doi.org/10.3897/zookeys.1246.145752), [Kottelat 2013](https://lkcnhm.nus.edu.sg/app/uploads/2017/04/rbz_S27.pdf), the [IUCN assessment record](https://doi.org/10.2305/IUCN.UK.2021-2.RLTS.T90999908A162164632.en), and [the review artifact](../data/research/philippines/mimaropa-palawan-cyclocheilichthys-schoppeae-river-voucher-diet-review-20261106.json).
 
 **Next:** leave this candidate as research-only until the type count, PNM/WPU-PPC holdings, Babuyan crosswalk, source rights, and locality-sensitivity review are resolved; continue MIMAROPA coverage with another independent river, lake, wetland, or reservoir dataset.
+
+### National rollout step 566: MIMAROPA Marinduque Boac streams thesis access screen — 6 November 2026
+
+The Marinduque State College College of Environmental Studies public research list identifies a 2024 unpublished bachelor's thesis by R.M. Lamac and D.T.L. Logmao titled “Assessment of Physicochemical Parameters, Common Fish Species, and Fishing Practices Across Streams of Boac, Marinduque, Philippines.” The page lists no abstract, taxon names, sampled streams, field dates, methods, vouchers, or public full-text link; the title does not itself substantiate a fish occurrence.
+
+Added an access-screen review and one institutional-listing registry entry; total: 729. No thesis file or data was obtained, and no species, occurrence, waterbody, geometry, diet, fishing advice, safety, or public-app row was added. Reuse permission is unknown and no contact was sent.
+
+See the [MarSU research listing](https://sites.google.com/mscmarinduque.edu.ph/marsu-ces/research-and-extension) and the [research review](../data/research/philippines/mimaropa-marinduque-boac-2024-fish-thesis-access-screen-20261106.json).
+
+**Next:** obtain an authorized thesis copy and written reuse conditions before reviewing its site-by-taxon evidence; continue the MIMAROPA inventory with open river, lake, wetland, or reservoir sources in parallel.

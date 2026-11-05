@@ -2131,3 +2131,13 @@ Added mimaropa-palawan-cyclocheilichthys-schoppeae-river-voucher-diet-review-202
 See the [2007 original description](https://lkcnhm.nus.edu.sg/app/uploads/2017/06/55rbz141-145.pdf), the [2025 annotated type checklist](https://doi.org/10.3897/zookeys.1246.145752), [Kottelat's 2013 catalogue](https://lkcnhm.nus.edu.sg/app/uploads/2017/04/rbz_S27.pdf), and the [research review](mimaropa-palawan-cyclocheilichthys-schoppeae-river-voucher-diet-review-20261106.json).
 
 **Next:** retain this candidate as research-only until the paratype count, museum holdings, and Babuyan evidence trail are resolved; continue MIMAROPA with another distinct, independently documented inland-water dataset.
+
+### National rollout step 512: MIMAROPA Marinduque Boac streams thesis access screen — 6 November 2026
+
+The Marinduque State College College of Environmental Studies public research list identifies a 2024 unpublished bachelor's thesis by R.M. Lamac and D.T.L. Logmao titled “Assessment of Physicochemical Parameters, Common Fish Species, and Fishing Practices Across Streams of Boac, Marinduque, Philippines.” The page provides no abstract, fish names, sampled-stream list, dates, methods, vouchers, or thesis file. No species or locality claim can be extracted from the title.
+
+Added mimaropa-marinduque-boac-2024-fish-thesis-access-screen-20261106.json and one access-lead registry entry; total: 729. No thesis content was downloaded, no species/occurrence/waterbody/diet/fishing-practice/geometry/safety or public-app row was added, and no contact was sent. Treat the thesis as an access lead until an authorized copy, permission terms, and fish-to-site evidence can be reviewed.
+
+See the [MarSU research listing](https://sites.google.com/mscmarinduque.edu.ph/marsu-ces/research-and-extension) and the [access-screen review](mimaropa-marinduque-boac-2024-fish-thesis-access-screen-20261106.json).
+
+**Next:** pursue an authorized copy and reuse conditions if this thesis is needed, while continuing with open, independently reviewed inland-water sources across MIMAROPA.
