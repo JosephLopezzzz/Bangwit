@@ -1,0 +1,82 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "mimaropa-san-agustin-priority-range-authority-triage-20261105",
+  "checkedOn": "2026-11-05",
+  "phaseId": "L8",
+  "regionId": "1700000000",
+  "regionName": "MIMAROPA",
+  "purpose": "Prioritize three San Agustin source labels whose reported Romblon locality conflicts with the independently documented geographic ranges reviewed.",
+  "relatedReviews": [
+    "mimaropa-san-agustin-2022-estuary-tributary-survey-integrity-review-20261105.json",
+    "mimaropa-san-agustin-gbif-name-crosswalk-20261105.json"
+  ],
+  "method": {
+    "scope": "Focused range-and-authority triage of Pomatoschistus minutus, Strongylura marina and Tetraodon lineatus. This is not a complete 39-label range review.",
+    "distinction": "GBIF name matches resolve name strings in its backbone; the cited taxonomic and regional references are used separately for geographic context.",
+    "evidenceLimit": "A published range mismatch raises an identification question but does not prove absence, rule out an introduction, or identify the specimens."
+  },
+  "candidates": [
+    {
+      "sourceLabel": "Pomatoschistus minutus",
+      "gbifUsageKey": 2379300,
+      "gbifMatch": "Exact accepted species-rank match; nomenclatural result only.",
+      "independentRange": "The specialist Fishes of the Northeastern Atlantic and Mediterranean account gives the eastern Atlantic from Tromsø, Norway to Spain, plus the Mediterranean and Black Sea (distribution may be discontinuous).",
+      "philippinesEvidence": "No Philippine-range source or specimen-level record was verified in this focused review.",
+      "conflict": "The reported Romblon estuary/tributary locality lies far outside the cited European range.",
+      "priority": "high",
+      "action": "Request the voucher/catalog number and diagnostic photographs; keep the source locality and label verbatim until reviewed."
+    },
+    {
+      "sourceLabel": "Strongylura marina",
+      "gbifUsageKey": 5208028,
+      "gbifMatch": "Exact accepted species-rank match; nomenclatural result only.",
+      "independentRange": "Eschmeyer's Catalog of Fishes lists the species as valid and gives the Western Atlantic, from Massachusetts south to southern Brazil.",
+      "philippinesEvidence": "No Philippine-range source or specimen-level record was verified in this focused review.",
+      "conflict": "The reported Romblon locality is outside the cited Western Atlantic range.",
+      "priority": "high",
+      "action": "Request the voucher/catalog number and diagnostic photographs; check for confusion with a western-Pacific needlefish before any occurrence projection."
+    },
+    {
+      "sourceLabel": "Tetraodon lineatus",
+      "gbifUsageKey": 5213591,
+      "gbifMatch": "Exact accepted species-rank match; nomenclatural result only.",
+      "independentRange": "Eschmeyer's Catalog of Fishes gives North and Central Africa and freshwater/brackish habitat.",
+      "philippinesEvidence": "The 1999 BFAR Common and Local Names of Marine Fishes of the Philippines prints Tetraodon lineatus with the local name Coral butterfly in its regional name lists, including a Palawan entry. Its methods describe eliciting local names using illustrated forms with fishers and market vendors, plus information from institutions; this is not a specimen survey and supplies no voucher validation for the Romblon label.",
+      "conflict": "The African range and freshwater ecology conflict strongly with a Romblon estuary/tributary identification, while the BFAR local-name record shows the name has also been used in Philippine fisheries reference material. Neither source establishes the identity of the surveyed specimens.",
+      "priority": "high",
+      "action": "Treat as unresolved taxonomic/name-use conflict; seek the actual voucher and collection photographs before making a presence or nonnative claim."
+    }
+  ],
+  "disposition": {
+    "rangeMismatchesFlagged": 3,
+    "specimenIdentitiesResolved": 0,
+    "occurrenceAssertions": 0,
+    "waterbodyAssertions": 0,
+    "coordinatesOrGeometryAdded": false,
+    "publicAppRows": 0,
+    "contactSent": false
+  },
+  "nextAction": "Continue the remaining 36-label range and authority screen, then prioritize voucher follow-up for the three outliers and the paper's Belobranchus segura and Stiphodon spelling variants. Do not convert range mismatch or database nonmatch into a species absence claim.",
+  "sources": [
+    {
+      "url": "https://mbimph.com/index.php/UPJOZ/article/view/4989",
+      "supports": "The 2025 survey's reported San Agustin, Romblon estuary and tributary study context and source taxon labels."
+    },
+    {
+      "url": "https://fishes-fnam.linnaeus.naturalis.nl/linnaeus_ng/app/views/species/taxon.php?epi=141&id=109417",
+      "supports": "Pomatoschistus minutus specialist account and its eastern Atlantic/Mediterranean/Black Sea distribution."
+    },
+    {
+      "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Strongylura&tbl=species",
+      "supports": "Eschmeyer's Catalog of Fishes current status and Western Atlantic distribution for Strongylura marina."
+    },
+    {
+      "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Tetraodon&tbl=species",
+      "supports": "Eschmeyer's Catalog of Fishes current status, North/Central African distribution and habitat for Tetraodon lineatus."
+    },
+    {
+      "url": "https://repository.nfrdi.da.gov.ph/items/0bc0e276-842e-470a-911d-182f97baf0a3/full",
+      "supports": "BFAR 1999 local-name reference. The title, date, name-elicitation method and Philippine regional listing provide fisheries name-use context, not voucher-based occurrence evidence."
+    }
+  ]
+}

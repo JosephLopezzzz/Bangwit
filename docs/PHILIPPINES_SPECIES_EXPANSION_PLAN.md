@@ -4904,3 +4904,15 @@ Added `mimaropa-san-agustin-gbif-name-crosswalk-20261105.json` and one source-re
 See [GBIF Species API documentation](https://techdocs.gbif.org/en/openapi/v1/species), [GBIF taxonomy interpretation guidance](https://techdocs.gbif.org/en/data-processing/taxonomy-interpretation), and the [crosswalk artifact](data/research/philippines/mimaropa-san-agustin-gbif-name-crosswalk-20261105.json).
 
 **Next:** use independent fish authorities and biogeographic references to prioritize which of the 39 labels warrant voucher follow-up; do not promote name matches into a species-by-waterbody list.
+
+### National rollout step 556: San Agustin priority range and authority triage — 5 November 2026
+
+Compared three high-priority survey labels with independent range references. *Pomatoschistus minutus* is documented from the eastern Atlantic through European waters; *Strongylura marina* is documented in the Western Atlantic; and *Tetraodon lineatus* is documented from North and Central Africa. These ranges make each reported Romblon label a substantial identification question, but do not prove absence or rule out a stray or introduction.
+
+Found a useful qualification for *T. lineatus*: the 1999 BFAR *Common and Local Names of Marine Fishes of the Philippines* lists it with local name “Coral butterfly” in a Palawan name list. The book's methods describe collecting common/local names through illustrated forms with fishers and market vendors, plus institutional information; it does not provide a voucher for the 2022 Romblon survey. The historical Philippine name-use entry therefore cannot resolve specimen identity or establish an occurrence.
+
+Added `mimaropa-san-agustin-priority-range-authority-triage-20261105.json` and one source-registry entry; registry total: 705. Linked the existing BFAR reference to this review. No occurrence, species-by-waterbody row, geometry, absence claim, or public-app data was added; no contact was sent.
+
+See the [Naturalis specialist account](https://fishes-fnam.linnaeus.naturalis.nl/linnaeus_ng/app/views/species/taxon.php?epi=141&id=109417), [Catalog of Fishes on *Strongylura marina*](https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Strongylura&tbl=species), [Catalog of Fishes on *Tetraodon lineatus*](https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Tetraodon&tbl=species), the [1999 BFAR reference](https://repository.nfrdi.da.gov.ph/items/0bc0e276-842e-470a-911d-182f97baf0a3/full), and the [triage artifact](data/research/philippines/mimaropa-san-agustin-priority-range-authority-triage-20261105.json).
+
+**Next:** screen the remaining 36 article labels for geographic outliers and current accepted combinations; preserve unresolved source spellings and request no public occurrence projection without specimen evidence.
