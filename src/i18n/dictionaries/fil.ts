@@ -489,8 +489,11 @@ export const filDictionary: Dictionary = {
     specimenCountLabel: "Mga specimen ayon sa source",
     voucherLabel: "Mga voucher reference",
     limits:
-      "Makasaysayang koleksiyon mula 1985–2015 ito, hindi patunay ng kasalukuyang presensya o dami. Gaya ng nailathala noong 2015 ang pangalan. Hindi nito pinatutunayan ang access o legalidad ng pangingisda, kaligtasan, diyeta o bisa ng pain; hindi ito kumpletong talaan ng isda sa Palawan.",
+      "Makasaysayang koleksiyon mula 1985–2015 ito, hindi patunay ng kasalukuyang presensya o dami. Hindi nito pinatutunayan ang access o legalidad ng pangingisda, kaligtasan, diyeta o bisa ng pain; hindi ito kumpletong talaan ng isda sa Palawan.",
     sourceDetails: "Citation, source at terms sa paggamit",
+    taxonomyLabel: "Kasalukuyang status ng pangalan",
+    taxonomyCaveat: "Hindi nito muling tinutukoy ang mga makasaysayang specimen o pinatutunayan ang presensya ngayon sa mga lugar na ito.",
+    taxonomyLink: "Catalog of Fishes",
     articleLink: "Artikulo ng publisher",
     pdfLink: "Buong PDF",
     licenseLink: "CC BY 3.0",

@@ -483,8 +483,11 @@ export const enDictionary: Dictionary = {
     specimenCountLabel: "Source-listed specimens",
     voucherLabel: "Voucher references",
     limits:
-      "Historical collections from 1985–2015, not current-presence or abundance estimates. The name is shown as published in 2015. These entries do not establish fishing access, legality, safety, diet, or bait effectiveness; this is not a complete Palawan fish list.",
+      "Historical collections from 1985–2015, not current-presence or abundance estimates. These entries do not establish fishing access, legality, safety, diet, or bait effectiveness; this is not a complete Palawan fish list.",
     sourceDetails: "Citation, source and reuse terms",
+    taxonomyLabel: "Current name status",
+    taxonomyCaveat: "This name check does not re-identify the historical specimens or show current presence at these sites.",
+    taxonomyLink: "Catalog of Fishes",
     articleLink: "Publisher article",
     pdfLink: "Full text PDF",
     licenseLink: "CC BY 3.0",

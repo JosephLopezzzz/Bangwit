@@ -79,6 +79,14 @@ export function PalawanStiphodonEvidence() {
           <ChevronDown aria-hidden="true" size={18} className="shrink-0 group-open:rotate-180" />
         </summary>
         <p className="mt-1 max-w-[75ch] text-sm leading-relaxed text-muted">{evidence.source.citation}</p>
+        <p className="mt-2 max-w-[75ch] text-sm leading-relaxed text-muted">
+          {copy.taxonomyLabel}: {evidence.taxonomy.currentStatus}. {copy.taxonomyCaveat}{" "}
+          <a href={evidence.taxonomy.catalogUrl} target="_blank" rel="noopener noreferrer" className={linkClass}>
+            {copy.taxonomyLink}
+            <ArrowUpRight aria-hidden="true" size={15} />
+            <span className="sr-only">{copy.opensTab}</span>
+          </a>
+        </p>
         <ul className="mt-3 flex flex-wrap gap-x-5 gap-y-1">
           {[
             [evidence.source.articleUrl, copy.articleLink],

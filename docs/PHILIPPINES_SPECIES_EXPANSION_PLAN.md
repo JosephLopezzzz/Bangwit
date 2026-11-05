@@ -4756,3 +4756,11 @@ The article PDF states CC BY 3.0. Added one attributed, scope-limited Species-pa
 Added `mimaropa-palawan-stiphodon-streams-2015-review-20261105.json` and one source-registry entry; registry total: 693. See the [publisher article and abstract](https://mapress.com/zt/article/view/zootaxa.4018.3.3), [full article PDF](https://mapress.com/zt/article/download/zootaxa.4018.3.3/37431/38815), and [CC BY 3.0 terms](https://creativecommons.org/licenses/by/3.0/).
 
 **Next:** independently cross-check the name and expand the Palawan freshwater inventory across additional lakes, rivers and streams; continue MIMAROPA province-by-province without treating this site list as complete.
+
+### National rollout step 541: Palawan *Stiphodon palawanensis* current-name cross-check — 5 November 2026
+
+Checked the Palawan goby name against the current online Eschmeyer's Catalog of Fishes entry. The Catalog reports “Valid as *Stiphodon palawanensis* Maeda & Palla 2015” and cites later taxonomic references. This independently supports the name status used in the 2015 article; it does not re-identify the article's vouchers or confirm fish at the collection sites today.
+
+Updated the research review, scoped projection metadata and Species-page attribution. Registry remains at 693 sources because the Catalog citation is linked as a cross-check for the already registered article review, not counted as a new Palawan survey source. No occurrence, coordinate, abundance, diet, safety, rule, or additional species row was added. See the [Catalog of Fishes entry](https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=73937) and [2015 article](https://mapress.com/zt/article/view/zootaxa.4018.3.3).
+
+**Next:** add other source-reported Palawan field observations only after distinguishing collected specimens from visual observations and independently checking each scientific name; continue the province-wide freshwater survey sweep in parallel.

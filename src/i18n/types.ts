@@ -358,6 +358,9 @@ export type Dictionary = {
     limits: string;
     coordinateNote: string;
     sourceDetails: string;
+    taxonomyLabel: string;
+    taxonomyCaveat: string;
+    taxonomyLink: string;
     articleLink: string;
     licenseLink: string;
     taxonomyNote: string;
