@@ -3,7 +3,7 @@
   "checkedOn": "2026-11-06",
   "status": "research-only-source-registry",
   "scope": "National acquisition references, freshwater spatial-source leads, MIMAROPA/CALABARZON/Central Luzon identity and inland-water source reviews, and Mindanao regional freshwater survey reviews. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 741,
+  "sourceCount": 742,
   "sources": [
     {
       "id": "aquilino-2011-taal-dna-barcoding-genbank",
@@ -23821,6 +23821,67 @@
         "Lake Manguao's two Barbodes are unnamed; Boroda specimens are not given species-level or voucher-level crosswalks.",
         "Pterocryptis taytayensis is mentioned without an individual waterbody or voucher assignment.",
         "The field report does not state that it is related to the WPU 2025 subterranean-river abstract."
+      ]
+    },
+    {
+      "id": "ding-2026-global-freshwater-fish-drainage-basin-dataset-2024",
+      "title": "A global geospatial dataset of freshwater fish species at the drainage-basin scale (updated to December 2024)",
+      "provider": "Liuyong Ding; Zenodo",
+      "url": "https://zenodo.org/records/19511163",
+      "additionalUrls": [
+        "https://zenodo.org/api/records/19511163",
+        "https://doi.org/10.1038/sdata.2017.141"
+      ],
+      "role": "A licensed global freshwater-fish species–drainage-basin discovery source used to prioritize Philippine freshwater waterbody research across the Luzon-first national rollout. Its basin associations are not local waterbody occurrence records.",
+      "checkedOn": "2026-11-06",
+      "sourceYear": 2026,
+      "citation": "Ding, L. (2026). A global geospatial dataset of freshwater fish species at the drainage-basin scale (updated to December 2024) [Data set]. Zenodo. https://doi.org/10.5281/zenodo.19511163. Original framework: Tedesco, P. A. et al. (2017). A global database on freshwater fish species occurrence in drainage basins. Scientific Data, 4, 170141. https://doi.org/10.1038/sdata.2017.141.",
+      "access": {
+        "status": "public-zenodo-record-and-api-reviewed;cc-by-4.0-api-verified;selected-xlsx-and-dbf-downloaded-and-hash-verified;philippine-and-shared-basin-extract-created;research-only",
+        "reviewFiles": [
+          "national-freshwater-fish-basin-candidate-extract-20261106.json"
+        ],
+        "dataUpdatedTo": "2024-11-24",
+        "globalBasinCount": 3364,
+        "globalSpeciesCount": 18821,
+        "extractedBasinCount": 31,
+        "philippinesOnlyBasinCount": 29,
+        "sharedCountryBasinNames": [
+          "Sandakan",
+          "Sulu"
+        ],
+        "extractedSpeciesBasinAssociations": 311,
+        "extractedUniqueScientificNames": 189,
+        "internalBasinCountReconciliations": "31/31",
+        "extractedFiles": [
+          {
+            "name": "cas_freshwater_202412.xlsx",
+            "sha256": "DED2A75B558005DF11A5548F8CC17DB1DEDB72265A8F68C240F61EE67B18832D"
+          },
+          {
+            "name": "Basin_202412_3364.dbf",
+            "sha256": "6EE8C1ACE22FB96D33137C5A9D9031E68596F993260AF073A8931288CEB4887A"
+          }
+        ]
+      },
+      "reuse": {
+        "metadata": "Zenodo API record metadata identifies the dataset license as CC BY 4.0. Attribute Ding (2026), include DOI, and cite the original Tedesco et al. (2017) framework when reusing the dataset.",
+        "raw": "Only the selected workbook and basin attribute table were downloaded to temporary storage for extraction; the raw global archives are not committed.",
+        "content": "The research extract retains concise structured fields (valid name, authorship, taxonomic fields, basin ID/name/country and source reference IDs) from the licensed dataset. Catalogue of Fishes narrative text is not copied. Source reference IDs are not a substitute for reviewing the underlying studies or their separate terms."
+      },
+      "publicationApproval": false,
+      "researchStatus": "national-freshwater;global-dataset;2024-data-cutoff;cc-by-4.0;basin-level-discovery;31-philippine-or-shared-basins;research-only;no-public-app-projection",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "caveats": [
+        "The extracted records are synthesized species–drainage-basin associations, not dated specimen or observation events.",
+        "The dataset provides no exact river reach, lake, wetland, reservoir, sampling station, event date, method, or basin-to-PSA-region crosswalk for these records.",
+        "Twenty-nine listed basins are labeled Philippines-only; Sandakan and Sulu are shared-country basin rows that also include Malaysia and must not be treated as Philippines-only.",
+        "The 31 represented basin rows are not a complete inventory of Philippine basins or surface waters.",
+        "The dataset has no native/introduced status field and broad basin associations may include brackish or marine-influenced taxa.",
+        "All 31 extracted per-basin unique-name counts reconcile to the basin attribute n_specs values in the same Zenodo record. This is an internal file-consistency check, not independent validation of taxonomy, geometry, or local species presence.",
+        "The workbook source reference IDs have not been resolved and audited against the underlying literature for each species–basin association.",
+        "No public species or occurrence rows, diet, bait, catchability, legal, safety, or waterbody geometry claims are admitted from this extract."
       ]
     }
   ],
