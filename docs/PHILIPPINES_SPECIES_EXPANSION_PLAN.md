@@ -5018,3 +5018,13 @@ Added an access-screen review and one institutional-listing registry entry; tota
 See the [MarSU research listing](https://sites.google.com/mscmarinduque.edu.ph/marsu-ces/research-and-extension) and the [research review](../data/research/philippines/mimaropa-marinduque-boac-2024-fish-thesis-access-screen-20261106.json).
 
 **Next:** obtain an authorized thesis copy and written reuse conditions before reviewing its site-by-taxon evidence; continue the MIMAROPA inventory with open river, lake, wetland, or reservoir sources in parallel.
+
+### National rollout step 567: Marinduque inland-fisheries production cross-check — 6 November 2026
+
+Cross-checked the PSA MIMAROPA release's 2023 and preliminary 2024 inland municipal production totals against the official PSA OpenSTAT QIFS API. Provincial totals match at 26.04 and 19.90 metric tons, and the fish-group totals match at 14.90 and 5.27 metric tons; 38 reporting rows (76 annual cells) were reviewed. PSA's technical note says inland municipal fishing includes lakes, rivers, dams, and marshes, but the statistics do not map categories to any named waterbody, municipality, or sampling station.
+
+The reporting labels are catch categories and common names, not scientific taxonomy. The release narrative calls spade fish production zero in 2024, while its Table 3 uses a dash and defines dash as “No Data”; preserve it as unavailable, not zero or absence. Keep these province-level production totals separate from marine and aquaculture data. Added a research review and one PSA source-register entry; registry total: 730. No species occurrence, waterbody, geometry, catchability, diet, legal, safety, or app data was added. 2024 figures remain preliminary.
+
+See the [PSA release](https://rssomimaropa.psa.gov.ph/content/2024-fisheries-statistics-volume-fisheries-production-marinduque), the [official PDF](https://rssomimaropa.psa.gov.ph/system/files/attachment-dir/2026SR-01-007_2024P-Fisheries-Statistics-Volume-of-Fisheries-Production-in-Marinduque_signed.pdf), [PSA OpenSTAT](https://openstat.psa.gov.ph/PXWeb/api/v1/en/DB/2E/FS/0052E4GVIP0.px), and the [source cross-check](../data/research/philippines/mimaropa-marinduque-2024-qifs-category-crosscheck-20261106.json).
+
+**Next:** prioritize waterbody-resolved, dated fish surveys for Marinduque rivers and lakes; use provincial PSA catch labels only for discovery, never as occurrence rows.

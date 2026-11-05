@@ -3,7 +3,7 @@
   "checkedOn": "2026-11-06",
   "status": "research-only-source-registry",
   "scope": "National acquisition references, freshwater spatial-source leads, MIMAROPA/CALABARZON/Central Luzon identity and inland-water source reviews, and Mindanao regional freshwater survey reviews. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 729,
+  "sourceCount": 730,
   "sources": [
     {
       "id": "aquilino-2011-taal-dna-barcoding-genbank",
@@ -6448,7 +6448,8 @@
         "reviewFiles": [
           "national-psa-qifs-source-access-review-20261026.json",
           "national-psa-qifs-geolocation-crosswalk-20261026.json",
-          "calabarzon-quezon-2025-qifs-statistical-profile-20261101.json"
+          "calabarzon-quezon-2025-qifs-statistical-profile-20261101.json",
+          "mimaropa-marinduque-2024-qifs-category-crosscheck-20261106.json"
         ],
         "localRawSnapshot": "raw/national-qifs-2025-2026-quarterly-openstat.csv"
       },
@@ -23358,6 +23359,46 @@
         "Separate fish occurrence claims from water-quality measurements and any interview-based fishing-practice information.",
         "Do not request or publish respondent-level or personally identifying data.",
         "No access inquiry or other contact was sent."
+      ]
+    },
+    {
+      "id": "psa-rssomimaropa-2024-fisheries-production-marinduque",
+      "title": "2024P Fisheries Statistics: Volume of Fisheries Production in Marinduque",
+      "provider": "Philippine Statistics Authority, MIMAROPA Regional Statistical Services Office and Marinduque Provincial Statistical Office",
+      "url": "https://rssomimaropa.psa.gov.ph/content/2024-fisheries-statistics-volume-fisheries-production-marinduque",
+      "additionalUrls": [
+        "https://rssomimaropa.psa.gov.ph/system/files/attachment-dir/2026SR-01-007_2024P-Fisheries-Statistics-Volume-of-Fisheries-Production-in-Marinduque_signed.pdf",
+        "https://openstat.psa.gov.ph/PXWeb/api/v1/en/DB/2E/FS/0052E4GVIP0.px"
+      ],
+      "role": "Official PSA provincial release of 2023 and preliminary 2024 fisheries production; inland annual totals and 38 PSA category rows were crosschecked with OpenSTAT. Use only as province-level fishery production context, not as species occurrence or named-waterbody evidence.",
+      "checkedOn": "2026-11-06",
+      "sourceYear": 2026,
+      "dataYears": [2023, 2024],
+      "releaseDate": "2026-01-26",
+      "referenceNumber": "2026SR-01-007",
+      "citation": "Philippine Statistics Authority, MIMAROPA Regional Statistical Services Office and Marinduque Provincial Statistical Office. (2026). 2024P Fisheries Statistics: Volume of Fisheries Production in Marinduque. Special Release No. 2026SR-01-007, 26 January 2026.",
+      "access": {
+        "status": "official-PSA-release-and-PDF-reviewed;2023-2024-annual-OpenSTAT-crosscheck-matched;province-level-only",
+        "reviewFiles": ["mimaropa-marinduque-2024-qifs-category-crosscheck-20261106.json"],
+        "geolocationCode": "1704000000",
+        "apiRowsReviewed": 38,
+        "selectedCells": 76,
+        "namedWaterbodyLocationsProvided": false
+      },
+      "reuse": {
+        "metadata": "The official PSA release page footer states site data and content are CC BY 4.0 unless otherwise stated; retain PSA attribution and check item-specific terms before redistribution.",
+        "raw": "No raw API response or household-level survey data is retained. The public query and response hashes are recorded in the linked research review.",
+        "content": "Use the source's aggregate production categories only as inland-fisheries research prioritization context. No scientific-name crosswalk, waterbody occurrence, or public-app permission is inferred."
+      },
+      "publicationApproval": false,
+      "researchStatus": "2023-2024-marinduque-inland-municipal-fishery-production-crosschecked;province-level;common-category-only;zero-waterbody-occurrences",
+      "license": "CC BY 4.0 stated in official PSA release page footer, unless otherwise stated",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "caveats": [
+        "The release defines inland municipal fishing broadly across inland waters such as lakes, rivers, dams, and marshes but assigns no category to a named Marinduque waterbody, municipality, household, landing site, or station.",
+        "Fish rows use vernacular/common production categories rather than verified species-rank scientific identifications; Other fishes is an aggregate.",
+        "The 2024 values are preliminary, and missing or dash-marked values are not zero or evidence of absence. The narrative's statement that spade fish dropped to zero conflicts with the table footnote defining its dash as No Data.",
+        "Keep inland municipal catches separate from marine municipal, commercial, and aquaculture production."
       ]
     }
   ],
