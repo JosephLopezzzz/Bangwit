@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "mimaropa-san-agustin-range-authority-followup-9-20261105",
+  "checkedOn": "2026-11-05",
+  "phaseId": "L8",
+  "regionId": "1700000000",
+  "regionName": "MIMAROPA",
+  "purpose": "Screen two additional San Agustin Table 1 fish labels against current name authority, regional freshwater sampling, and Philippine specimen context.",
+  "relatedReviews": [
+    "mimaropa-san-agustin-2022-estuary-tributary-survey-integrity-review-20261105.json",
+    "mimaropa-san-agustin-gbif-name-crosswalk-20261105.json",
+    "mimaropa-san-agustin-range-authority-followup-8-20261105.json"
+  ],
+  "method": {
+    "scope": "Focused screen of Monodactylus argenteus and Mugil cephalus, two verbatim labels in Table 1 of the 2025 San Agustin article.",
+    "distinction": "Regional river surveys, molecular range studies, and museum vouchers provide independent Philippine-context evidence only. None identifies the San Agustin survey specimens or links them to an individual station or waterbody.",
+    "evidenceLimit": "The 2024 Bataan river survey reports these taxa from sampled Talisay and/or Bagac River systems, but its article provides no museum voucher catalogue numbers. Smithsonian vouchers are market-survey acquisitions with vendor-reported source localities. The San Agustin paper still lacks an RSU voucher/accession crosswalk and sequence-to-site evidence.",
+    "sourceReuse": "Only concise attributed findings and direct source links are retained. No image, sequence, coordinate, market dataset, source-table extract, or transformed app row was copied. Public-app reuse approval was not assessed or granted."
+  },
+  "findings": [
+    {
+      "sourceLabel": "Monodactylus argenteus",
+      "nameCrosswalk": "The existing strict GBIF Backbone crosswalk returned an exact accepted species-rank match (usage key 5211117; confidence 99). The match is nomenclatural and does not identify the San Agustin specimen.",
+      "currentAuthority": "ITIS lists Monodactylus argenteus (Linnaeus, 1758) as a valid species; WoRMS also lists the name as accepted. These name authorities do not establish Philippine occurrence or identify a collected fish.",
+      "philippineContext": "Corpuz et al. (2024) sampled Talisay and Bagac river systems in Bataan from December 2020 to November 2021 using backpack electrofishing, seine nets, and cast nets. Their species table reports M. argenteus in Bagac but not Talisay, and labels it native; the paper says collected specimens were identified and either retained for documentation or released, but publishes no museum voucher numbers. Smithsonian NMNH USNM 407081 is a separate 2012 market-survey specimen purchased at Gubat Public Market, Sorsogon; the vendor stated it was caught near Gubat, so that source locality is not independently verified.",
+      "disposition": "The independent Bataan river survey and Philippine museum-market specimen support Philippine range context for the name. They do not verify the Romblon survey specimen or its reach. No new voucher-priority range mismatch or range-authority discrepancy is added.",
+      "priority": "routine; request the RSU voucher/catalogue number, diagnostic photographs, and any linked sequence before assigning a San Agustin reach"
+    },
+    {
+      "sourceLabel": "Mugil cephalus",
+      "nameCrosswalk": "The existing strict GBIF Backbone crosswalk returned an exact accepted species-rank match (usage key 8189568; confidence 99). The match is nomenclatural and does not resolve the taxonomic concept of a specimen.",
+      "currentAuthority": "The 2026 Catalog of Fishes lists M. cephalus as valid and nearly circumglobal in temperate and tropical seas and estuaries, but notes that the name may represent a species complex and that true M. cephalus may have a narrower range. Jamandre et al. (2009) analyzed mitochondrial control-region sequences from 126 north-west Pacific mullets, including 16 from Luzon estuaries; the Philippine samples formed lineage 2. The authors reported that lineage structure did not by itself settle the taxonomic status and called for further work. Retain the printed name without promoting a lineage or applying a replacement name.",
+      "philippineContext": "The Bataan river survey reports M. cephalus in both Talisay and Bagac Rivers and labels it native. Jamandre et al. (2009) provides molecular Philippine estuary context, not a San Agustin specimen crosswalk. Smithsonian NMNH USNM 405775 (field label RP-258) is a COI-barcoded specimen (GenBank OQ386362) purchased at Santa Teresita market in Cagayan; the vendor-reported nearby capture locality is not a verified capture point. FDA identifies the voucher as part of the Smithsonian Philippine market survey.",
+      "disposition": "Philippine river and estuary context is documented, but the species-complex caveat means an accepted binomial alone is not a diagnostic identification. This is recorded as a taxonomic-concept caveat, not a fifth geographic range-authority discrepancy; no local San Agustin identity or occurrence is resolved.",
+      "priority": "routine but voucher-sensitive; retrieve the RSU specimen record and diagnostics, and require a sequence-to-voucher link before making a species-level San Agustin claim"
+    }
+  ],
+  "disposition": {
+    "sourceLabelsReviewed": 2,
+    "newRangeAuthorityDiscrepanciesNotCountedAsOutliers": 0,
+    "newVoucherPriorityRangeMismatchesFlagged": 0,
+    "totalVoucherPriorityRangeMismatchesAfterReview": 6,
+    "totalRangeAuthorityDiscrepanciesNotCountedAsOutliersAfterReview": 4,
+    "sourceLabelsReviewedOf39": 30,
+    "sourceLabelsRemainingForRangeAndAuthorityScreen": 9,
+    "specimenIdentitiesResolved": 0,
+    "occurrenceAssertions": 0,
+    "waterbodyAssertions": 0,
+    "coordinatesOrGeometryAdded": false,
+    "publicAppRows": 0,
+    "publicationApproval": false,
+    "contactSent": false
+  },
+  "nextAction": "Continue the current-authority and range screen for the remaining 9 of 39 Table 1 labels. Keep the six voucher-priority mismatch labels in the verification queue and retain four separate range-authority discrepancies: Tridentiger trigonocephalus, Hypseleotris cyprinoides, Eleotris mauritiana, and Awaous guamensis. Then seek the RSU voucher/accession crosswalk and resolve the paper's station/locality conflicts before considering occurrence rows.",
+  "sources": [
+    {
+      "url": "https://mbimph.com/index.php/UPJOZ/article/view/4989",
+      "supports": "The original 2025 San Agustin article, verbatim Table 1 labels, and specimen/locality limitations."
+    },
+    {
+      "url": "https://api.gbif.org/v1/species/match?name=Monodactylus%20argenteus&strict=true",
+      "supports": "Existing strict GBIF Backbone exact accepted species-rank match for Monodactylus argenteus only."
+    },
+    {
+      "url": "https://api.gbif.org/v1/species/match?name=Mugil%20cephalus&strict=true",
+      "supports": "Existing strict GBIF Backbone exact accepted species-rank match for Mugil cephalus only."
+    },
+    {
+      "url": "https://www.biodiversityjournal.com/images/pubblicazioni/biodiversity-journal-2024/biodiversity-journal-2024-15-03/biodiversity-journal-2024-15-03_649-658.pdf",
+      "supports": "Corpuz et al. (2024): fish collection methods and the Talisay/Bagac River records for both labels; the article does not publish museum voucher identifiers for these species."
+    },
+    {
+      "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=169467",
+      "supports": "ITIS taxonomic standing for Monodactylus argenteus as a valid species; its cited source set includes an older Catalog of Fishes edition."
+    },
+    {
+      "url": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=218695",
+      "supports": "WoRMS accepted-name treatment for Monodactylus argenteus."
+    },
+    {
+      "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Mugil&tbl=species",
+      "supports": "Current Catalog of Fishes status, broad range treatment, freshwater/brackish/marine habitats, and explicit Mugil cephalus species-complex caveat."
+    },
+    {
+      "url": "https://scholars.lib.ntu.edu.tw/server/api/core/bitstreams/7afd7cad-5636-4908-88f9-c344e70ca90f/content",
+      "supports": "Jamandre, Durand and Tzeng (2009): 126 north-west Pacific specimens, including 16 from Luzon estuaries; Philippine lineage-2 context and unresolved taxonomic status."
+    },
+    {
+      "url": "https://collections.si.edu/search/results.htm?fq=name%3A%22Potenciana%2C+T.%22&q=%22Apollo+Lizano%22",
+      "supports": "Smithsonian NMNH voucher USNM 407081 (RP-201), M. argenteus, purchased at Gubat market with vendor-reported nearby capture area."
+    },
+    {
+      "url": "https://collections.si.edu/search/results.htm?fq=place%3A%22Cagayan%22&q=%22Apollo+Lizano%22",
+      "supports": "Smithsonian NMNH voucher USNM 405775 (RP-258), M. cephalus, purchased at Santa Teresita market with vendor-reported nearby capture area."
+    },
+    {
+      "url": "https://hfpappexternal.fda.gov/scripts/fdcc/?id=RP-258&set=RSSL_seafood_barcode_data",
+      "supports": "FDA RSSL record links market-survey sample RP-258 to M. cephalus, Smithsonian voucher USNM 405775, and GenBank accession OQ386362."
+    }
+  ]
+}
