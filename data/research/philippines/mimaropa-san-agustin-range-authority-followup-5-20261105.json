@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "mimaropa-san-agustin-range-authority-followup-5-20261105",
+  "checkedOn": "2026-11-05",
+  "phaseId": "L8",
+  "regionId": "1700000000",
+  "regionName": "MIMAROPA",
+  "purpose": "Screen two additional San Agustin Table 1 labels against current taxonomic authority and Philippine voucher context.",
+  "relatedReviews": [
+    "mimaropa-san-agustin-2022-estuary-tributary-survey-integrity-review-20261105.json",
+    "mimaropa-san-agustin-gbif-name-crosswalk-20261105.json",
+    "mimaropa-san-agustin-range-authority-followup-4-20261105.json"
+  ],
+  "method": {
+    "scope": "Focused review of Dussumieria acuta and Eleotris fusca, two printed labels in the 2025 San Agustin article Table 1.",
+    "distinction": "A broad country-level range or separately cataloged Philippine museum specimen is context only; it does not identify the San Agustin survey fish or connect it to a named site or reach.",
+    "evidenceLimit": "The survey article provides no voucher accession crosswalk, diagnostic images, meristic data, sequence, station coordinates, or individual reach-to-specimen link. The examined Eleotris fusca paper lists a Philippine voucher under that species but does not include it among the paper's DNA tissue samples.",
+    "sourceReuse": "Only concise attributed findings and direct source links are retained. No specimen image, occurrence export, sequence, taxonomic table, coordinates, or transformed app row was copied. Public-app reuse approval was not assessed or granted."
+  },
+  "findings": [
+    {
+      "sourceLabel": "Dussumieria acuta",
+      "nameCrosswalk": "The existing strict GBIF Backbone crosswalk returned an exact accepted species-rank name match. This is a name match only; it does not establish the identity of the San Agustin specimen.",
+      "currentAuthority": "The Eschmeyer's Catalog of Fishes online version updated 13 August 2026 treats Dussumieria acuta as valid and gives an Indo-West Pacific range from East Africa, Oman, the Persian Gulf, and Madagascar east to Vietnam and the Philippines, north to Taiwan; habitat is marine. Hata, Lavoué, and Motomura (2025) summarize recent redescription and resurrection of nominal Dussumieria species. Their comparative COI table includes a D. acuta sample from Ha Long Bay, Vietnam, which is a taxonomic study sample and not a San Agustin or Philippine occurrence.",
+      "philippineContext": "The 2025 study also examines Philippine Dussumieria material assigned to other named congeners, including D. albulina specimens from Palawan and Iloilo/Panay and D. elopsoides material from Manila Bay. This illustrates why a genus-level lookalike or an older label needs a voucher-level diagnostic crosswalk; it does not contradict the Catalog's broad Philippine range for D. acuta and does not identify the survey fish.",
+      "disposition": "The current specialist Catalog supports broad Philippine range context, so no new range-authority discrepancy or voucher-priority mismatch is added. Keep the San Agustin label regionally plausible but locally unresolved pending the RSU voucher/accession crosswalk; do not turn the Catalog range or separate Philippine congener records into a local occurrence.",
+      "priority": "routine; request the RSU accession and diagnostic crosswalk before assigning this label to a San Agustin site or reach"
+    },
+    {
+      "sourceLabel": "Eleotris fusca",
+      "nameCrosswalk": "The existing strict GBIF Backbone crosswalk returned an exact accepted species-rank name match. This does not identify the San Agustin specimen.",
+      "currentAuthority": "The Catalog of Fishes online version updated 13 August 2026 treats Eleotris fusca as valid, summarizes an Indo-Pacific distribution, and lists freshwater, brackish, and marine habitat. Mennesson and Keith (2017) discuss a cryptic Indian Ocean lineage within the E. fusca group and revalidate E. klunzingerii for that lineage, so historical names and identification context require care.",
+      "philippineContext": "In its material examined under E. fusca, Mennesson and Keith list MNHN 2015-0375, a 71 mm male from Alegre, Philippines, collected 5 February 2014. The paper's separate DNA tissue-sample table does not include this Philippine voucher; it is published specimen context, not genetic confirmation of that specimen and not evidence from San Agustin.",
+      "disposition": "The current broad range and separately cataloged Philippine specimen support national context, so no new range-authority discrepancy or voucher-priority mismatch is added. The individual San Agustin fish and any waterbody or reach assignment remain unresolved until its RSU voucher and station crosswalk are available.",
+      "priority": "routine; request the RSU accession and compare diagnostic characters before assigning this label to a San Agustin site or reach"
+    }
+  ],
+  "disposition": {
+    "sourceLabelsReviewed": 2,
+    "newRangeAuthorityDiscrepanciesNotCountedAsOutliers": 0,
+    "newVoucherPriorityRangeMismatchesFlagged": 0,
+    "totalVoucherPriorityRangeMismatchesAfterReview": 6,
+    "totalRangeAuthorityDiscrepanciesNotCountedAsOutliersAfterReview": 4,
+    "sourceLabelsReviewedOf39": 22,
+    "sourceLabelsRemainingForRangeAndAuthorityScreen": 17,
+    "specimenIdentitiesResolved": 0,
+    "occurrenceAssertions": 0,
+    "waterbodyAssertions": 0,
+    "coordinatesOrGeometryAdded": false,
+    "publicAppRows": 0,
+    "publicationApproval": false,
+    "contactSent": false
+  },
+  "nextAction": "Continue the current-authority and range screen for the remaining 17 of 39 Table 1 labels. Keep six voucher-priority mismatch labels in the verification queue and retain four separate range-authority discrepancies: Tridentiger trigonocephalus, Hypseleotris cyprinoides, Eleotris mauritiana, and Awaous guamensis. Then seek the RSU voucher/accession crosswalk and resolve the paper's station/locality conflicts before considering occurrence rows.",
+  "sources": [
+    {
+      "url": "https://mbimph.com/index.php/UPJOZ/article/view/4989",
+      "supports": "The original 2025 San Agustin article and the verbatim Table 1 species labels; the article remains the source of the local survey labels."
+    },
+    {
+      "url": "https://api.gbif.org/v1/species/match?name=Dussumieria%20acuta&strict=true",
+      "supports": "Existing strict GBIF Backbone exact accepted species-rank name match only."
+    },
+    {
+      "url": "https://api.gbif.org/v1/species/match?name=Eleotris%20fusca&strict=true",
+      "supports": "Existing strict GBIF Backbone exact accepted species-rank name match only."
+    },
+    {
+      "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=1185",
+      "supports": "Current Catalog of Fishes valid status, broad Philippines-inclusive Indo-West Pacific distribution, and marine habitat for Dussumieria acuta; page online version updated 13 August 2026."
+    },
+    {
+      "url": "https://doi.org/10.1643/i2024023",
+      "supports": "Hata, Lavoué, and Motomura (2025) taxonomic reassessment of Dussumieria; comparative COI table and Philippine congener material provide taxonomic context, not San Agustin occurrence evidence."
+    },
+    {
+      "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Eleotris&species=fusca&tbl=species",
+      "supports": "Current Catalog of Fishes valid status, broad Indo-Pacific range summary, and freshwater, brackish, and marine habitat for Eleotris fusca; page online version updated 13 August 2026."
+    },
+    {
+      "url": "https://doi.org/10.26028/cybium/2017-412-011",
+      "supports": "Mennesson and Keith (2017) taxonomic treatment; its E. fusca material examined lists MNHN 2015-0375 from Alegre, Philippines, while the separate DNA tissue-sample table does not list that voucher."
+    }
+  ]
+}
