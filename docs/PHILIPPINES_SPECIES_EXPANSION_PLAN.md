@@ -4622,3 +4622,13 @@ The DOST-STII SPHERES 2018 bibliography separately lists Labatos's 2012, 60-page
 See the [National Museum catalog](https://library.nationalmuseum.gov.ph/cgi-bin/koha/opac-detail.pl?biblionumber=778), [author-uploaded abstract record](https://www.researchgate.net/publication/319179091_Fishes_of_Calapan_River_City_of_Calapan_Oriental_Mindoro_Philippines), and [official DOST-SPHERES bibliography](https://spheres.dost.gov.ph/images/issues/spheresDecember2018.pdf).
 
 **Next:** follow the 2012 Calapan survey and the UPLB Caluangan Lake–Baruyan River thesis as separate access leads; screen other MIMAROPA inland waters in parallel.
+
+### National rollout step 528: Caluangan Lake–Baruyan River siganid thesis abstract — 5 November 2026
+
+Reviewed UPLB's repository record for Marius L. Panahon's 2015 PhD dissertation. Its abstract says the assessment covered Lake Caluangan and Baruyan River from June 2013 to May 2014, and identifies *Siganus fuscescens* and *Siganus guttatus* in the young lake. The abstract does not say these two taxa were found in Baruyan River, so they remain Lake Caluangan research candidates only. GBIF's Catalogue of Life backbone recognizes both name strings as accepted species names; that normalizes taxonomy but does not validate the thesis identifications.
+
+The full document is unavailable in the UPLB repository. The page gives UPLB Main Library Special Collections as the physical location and call number LG 996 2015 E8 P36. Fish-specific dates, stations, methods, counts, coordinates and voucher identifiers are not present in the abstract. No full text, contact or scan request was obtained, and no thesis-specific reuse license was found. Added `mimaropa-caluangan-baruyan-2015-uplb-thesis-abstract-review-20261105.json` and one source record; the registry now contains 681 unique sources. Two names are retained as research candidates only; no lake/river occurrence, species assertion, catch, diet, rule, safety or public-app row was added. Publication approval remains false.
+
+See the [UPLB thesis record](https://www.ukdr.uplb.edu.ph/etd-grad/4167/), [GBIF record for *Siganus fuscescens*](https://www.gbif.org/taxon/6YN6R), and [GBIF record for *Siganus guttatus*](https://www.gbif.org/taxon/6YMV7).
+
+**Next:** pursue the Calapan 2012 survey and the UPLB thesis as separate library-access leads, while continuing the MIMAROPA freshwater and coastal-water source sweep.
