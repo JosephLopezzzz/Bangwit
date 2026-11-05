@@ -3,7 +3,7 @@
   "checkedOn": "2026-11-05",
   "status": "research-only-source-registry",
   "scope": "National acquisition references, freshwater spatial-source leads, MIMAROPA/CALABARZON/Central Luzon identity and inland-water source reviews, and Mindanao regional freshwater survey reviews. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 697,
+  "sourceCount": 698,
   "sources": [
     {
       "id": "aquilino-2011-taal-dna-barcoding-genbank",
@@ -22007,8 +22007,48 @@
       "caveats": [
         "The GBIF backbone taxonomic match does not identify the study's fish specimens or establish their locality.",
         "Catalog of Fishes direct pages returned HTTP 403 in this review environment; current-status confirmation is limited to official indexed result excerpts.",
-        "No comparison was made against source-name rows in the 2011 MBCFI tables; the NFRDI 2025-2026 summary lists 43 aquatic taxa but does not publish their names.",
+        "The separate MBCFI historical crosswalk is summarized in mimaropa-naujan-2011-gilles-2024-locality-crosswalk-20261105.json; it is not a full cell matrix or station crosswalk. The NFRDI 2025-2026 stock-assessment summary lists 43 aquatic taxa but does not publish their names; the 2026 five-lake risk article is a separate risk-screen source, not that stock-assessment taxon list.",
         "No species, occurrence, map, risk, invasive-status, diet, legal or safety claims were added to the public application."
+      ]
+    },
+    {
+      "id": "nfrdi-magistrado-five-lakes-2026-risk-assessment",
+      "title": "Risk Assessment of Introduced Species in Five Lakes in the Philippines",
+      "provider": "National Fisheries Research and Development Institute; The Philippine Journal of Fisheries",
+      "url": "https://repository.nfrdi.da.gov.ph/items/c96db1a2-576f-43ea-b3c1-299f288f8a9a",
+      "additionalUrls": [
+        "https://repository.nfrdi.da.gov.ph/bitstreams/c4e8debb-dd72-4ebf-8f38-f4042a3aaea8/download",
+        "https://doi.org/10.31398/tpjf/33.1.2025A0003",
+        "https://creativecommons.org/licenses/by-nc/4.0/"
+      ],
+      "role": "Full-text NFRDI AS-ISK risk assessment with five extant and five horizon taxa listed for Lake Naujan, plus BRA and BRA+CCA screening outcomes. It is a risk-assessment source, not a fresh systematic catch survey or a complete species checklist.",
+      "checkedOn": "2026-11-05",
+      "sourceYear": 2026,
+      "citation": "Magistrado, M. L., Merilles, M. L. D., Muyot, M. C., & Mutia, M. T. (2026). Risk Assessment of Introduced Species in Five Lakes in the Philippines. The Philippine Journal of Fisheries, 33(1), 153-170. https://doi.org/10.31398/tpjf/33.1.2025A0003.",
+      "access": {
+        "status": "official-repository-full-pdf-and-license-notice-reviewed;10-naujan-risk-rows;taxonomic-crosswalk-pending",
+        "reviewFiles": [
+          "mimaropa-naujan-magistrado-2026-risk-screen-review-20261105.json"
+        ],
+        "fullTextRetrieved": true,
+        "riskTablePage": 160
+      },
+      "reuse": {
+        "metadata": "Article states CC BY-NC 4.0 on its final page; cite authors, journal, DOI and license for permitted noncommercial reuse.",
+        "raw": "No PDF copy is stored in the repository. The linked repository license.txt is a generic placeholder sample and is not used as rights evidence.",
+        "content": "Ten source-reported Lake Naujan risk-screen rows are retained in an attributed research review. They are not public species-distribution, current-catch, legal, or safety claims. Commercial reuse is not cleared."
+      },
+      "publicationApproval": false,
+      "researchStatus": "naujan-2026-risk-screen;5-extant;5-horizon;cc-by-nc-4.0;poecilia-reticulata-source-conflict;taxonomy-pending",
+      "doi": "10.31398/tpjf/33.1.2025A0003",
+      "license": "CC BY-NC 4.0, stated on the final page of the article PDF.",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "caveats": [
+        "Extant and horizon are author-defined assessment-period categories based on a stakeholder/expert risk-screening process; they are not a new standardized survey for each taxon.",
+        "Poecilia reticulata is categorized as horizon here but included among taxa reported present by the separate 2024 Naujan assessment; preserve the discrepancy.",
+        "Lake Naujan BRA threshold is printed as >39 and BRA+CCA as >35, while Trichopodus pectoralis scores 39 and 35 are labeled High in Table 5; keep the printed outcomes and flag the boundary inconsistency.",
+        "The source is a five-lake assessment, not a national freshwater checklist. Risk categories do not establish measured abundance, local harm, catchability, legal restriction, diet, or bait advice.",
+        "Taxonomic source spellings have not yet been independently cross-checked; no public app projection is approved."
       ]
     }
   ],
