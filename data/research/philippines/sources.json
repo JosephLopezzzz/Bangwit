@@ -3,7 +3,7 @@
   "checkedOn": "2026-11-05",
   "status": "research-only-source-registry",
   "scope": "National acquisition references, freshwater spatial-source leads, MIMAROPA/CALABARZON/Central Luzon identity and inland-water source reviews, and Mindanao regional freshwater survey reviews. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 691,
+  "sourceCount": 692,
   "sources": [
     {
       "id": "aquilino-2011-taal-dna-barcoding-genbank",
@@ -5283,7 +5283,8 @@
         "reviewFiles": [
           "calabarzon-taal-national-museum-gbif-screen-20261024.json",
           "calabarzon-manila-bay-national-museum-gbif-screen-20261025.json",
-          "calabarzon-nmp-acb-caliraya-lumot-locality-screen-20261105.json"
+          "calabarzon-nmp-acb-caliraya-lumot-locality-screen-20261105.json",
+          "mimaropa-palawan-gbif-manguao-locality-triage-20261105.json"
         ],
         "rawPath": "raw/calabarzon-manila-bay-nmp-primary-archive-20261025/",
         "archiveSha256": "63bbcf7a9842538913e602f69c41f802be5d056b5909f98768267a14a90d9bbf",
@@ -21765,6 +21766,42 @@
         "The article reports species and conservation-status information, but this source alone does not establish present-day occurrence, catchability, legal access, fishing rules, safety, natural diet or bait recommendations.",
         "CC BY-NC 4.0 does not establish permission for commercial use. No public app row or transformed checklist data is approved until Bangwit's reuse context and attribution are reviewed."
       ]
+    },
+    {
+      "id": "gbif-inaturalist-palawan-freshwater-observation-screen-20261105",
+      "title": "iNaturalist Palawan freshwater-taxon coordinate and Lake Manguao locality screen via GBIF",
+      "provider": "iNaturalist via Global Biodiversity Information Facility",
+      "url": "https://api.gbif.org/v1/dataset/50c9509d-22c7-4a22-a47d-8c48425ef4a7",
+      "additionalUrls": [
+        "https://api.gbif.org/v1/occurrence/search?scientificName=Bostrychus%20expatria&country=PH&hasCoordinate=true&limit=20",
+        "https://api.gbif.org/v1/occurrence/search?scientificName=Dermogenys%20palawanensis&country=PH&hasCoordinate=true&limit=20"
+      ],
+      "role": "A bounded discovery screen for two Palawan freshwater-name leads. Three coordinate-bearing human observations per name are indexed, but uncertainty is around 31 km and no Lake Manguao locality is returned. This is not a waterbody occurrence dataset or complete regional checklist.",
+      "checkedOn": "2026-11-05",
+      "citation": "iNaturalist contributors, iNaturalist (2026). iNaturalist Research-grade Observations. iNaturalist.org. Occurrence dataset https://doi.org/10.15468/ab3s5x; accessed via GBIF.org on 2026-11-05.",
+      "access": {
+        "status": "gbif-coordinate-query-screened;three-palawan-results-per-taxon;approx-31km-uncertainty;lake-manguao-locality-count-zero;research-only",
+        "reviewFiles": [
+          "mimaropa-palawan-gbif-manguao-locality-triage-20261105.json"
+        ],
+        "fullTextRetrieved": false
+      },
+      "reuse": {
+        "metadata": "GBIF dataset metadata declares CC BY-NC 4.0. The sampled occurrences also declare CC BY-NC 4.0; verify the individual record license before any reuse.",
+        "raw": "Read-only GBIF API searches; no bulk download, observation identifiers, coordinates, or photographs retained in the tracked review.",
+        "content": "The broad provincial labels and approximately 31 km coordinate uncertainty do not establish a named lake or stream. No occurrence content is approved for public app reuse."
+      },
+      "publicationApproval": false,
+      "datasetKey": "50c9509d-22c7-4a22-a47d-8c48425ef4a7",
+      "license": "CC BY-NC 4.0 at dataset metadata; sampled records individually reviewed as CC BY-NC 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "caveats": [
+        "Research Grade is a community observation quality grade, not proof of a wild fish capture or a site-specific expert determination.",
+        "A broad coordinate with about 31 km uncertainty cannot identify Lake Manguao, a river reach, or a fishing location.",
+        "An occurrence query returning no Lake Manguao locality match is a bounded index result, not evidence of fish absence.",
+        "CC BY-NC terms and platform attribution do not independently establish Bangwit's permitted commercial or other publication context."
+      ],
+      "researchStatus": "mimaropa-palawan;inaturalist;freshwater-taxon-discovery;coarse-location;license-review;no-waterbody-row;research-only"
     }
   ],
   "sourcePolicy": {

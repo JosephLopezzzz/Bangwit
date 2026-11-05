@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "mimaropa-palawan-gbif-manguao-locality-triage-20261105",
+  "checkedOn": "2026-11-05",
+  "regionId": "1700000000",
+  "question": "Do current GBIF coordinate-bearing occurrence searches independently place the Lake Manguao fish leads at Lake Manguao or its named tributary?",
+  "sourceIds": [
+    "asean-cb-national-museum-fish-collection-gbif",
+    "gbif-idigbio-ihawan-voucher-discovery-screen-20261031",
+    "gbif-inaturalist-palawan-freshwater-observation-screen-20261105"
+  ],
+  "method": {
+    "provider": "GBIF Occurrence API v1",
+    "speciesQuery": "For each listed taxon, queried /v1/occurrence/search with scientificName, country=PH, hasCoordinate=true and limit=20.",
+    "localityQuery": "For each listed taxon, repeated the search with locality=Lake Manguao.",
+    "recordSelection": "Reviewed the returned count and a small sample of record fields for accepted name, basisOfRecord, dataset, date, locality, province, coordinate uncertainty, catalog identifier and license. No bulk download was requested.",
+    "limits": "These are indexed name/locality queries, not a complete collection census. Locality matching, broad country or province labels, coordinates, Research Grade, and a taxonomic backbone match do not independently verify a waterbody, wild capture, specimen identification, current presence or catchability. A zero named-locality result is not evidence of fish absence."
+  },
+  "queryFindings": [
+    {
+      "scientificName": "Pterocryptis taytayensis",
+      "coordinateQueryUrl": "https://api.gbif.org/v1/occurrence/search?scientificName=Pterocryptis%20taytayensis&country=PH&hasCoordinate=true&limit=20",
+      "localityQueryUrl": "https://api.gbif.org/v1/occurrence/search?scientificName=Pterocryptis%20taytayensis&country=PH&hasCoordinate=true&locality=Lake%20Manguao&limit=20",
+      "philippinesCoordinateBearingCount": 10,
+      "lakeManguaoLocalityCount": 0,
+      "reviewedResultContext": "One National Museum collection record is identified as a preserved specimen and has a broad Palawan stateProvince value, but no locality or waterBody text. The dataset description says its samples come from landing sites, markets of commercial ports and nearby seas, so this record does not identify Lake Manguao or a river capture. Other sampled records include named Busuanga localities, not Lake Manguao.",
+      "disposition": "No lake, stream or river occurrence admitted."
+    },
+    {
+      "scientificName": "Bostrychus expatria",
+      "coordinateQueryUrl": "https://api.gbif.org/v1/occurrence/search?scientificName=Bostrychus%20expatria&country=PH&hasCoordinate=true&limit=20",
+      "localityQueryUrl": "https://api.gbif.org/v1/occurrence/search?scientificName=Bostrychus%20expatria&country=PH&hasCoordinate=true&locality=Lake%20Manguao&limit=20",
+      "philippinesCoordinateBearingCount": 3,
+      "lakeManguaoLocalityCount": 0,
+      "reviewedResultContext": "Two iNaturalist Research-grade observations carry broad Palawan coordinates with coordinate uncertainty around 31 km and no named waterbody locality. A third result is a MOBIOS+ MATERIAL_CITATION from Ihawan Spring Community Watershed in Caraga, not a Palawan lake record; the same literature-derived row family was reviewed in the existing Ihawan screen.",
+      "disposition": "No waterbody occurrence admitted; keep the Caraga literature mirror separate from the Palawan lead."
+    },
+    {
+      "scientificName": "Dermogenys palawanensis",
+      "coordinateQueryUrl": "https://api.gbif.org/v1/occurrence/search?scientificName=Dermogenys%20palawanensis&country=PH&hasCoordinate=true&limit=20",
+      "localityQueryUrl": "https://api.gbif.org/v1/occurrence/search?scientificName=Dermogenys%20palawanensis&country=PH&hasCoordinate=true&locality=Lake%20Manguao&limit=20",
+      "philippinesCoordinateBearingCount": 3,
+      "lakeManguaoLocalityCount": 0,
+      "reviewedResultContext": "The three sampled results are iNaturalist human observations with Palawan-level context and coordinate uncertainty around 31 km; none provides Lake Manguao locality text.",
+      "disposition": "No lake, stream or river occurrence admitted."
+    },
+    {
+      "scientificName": "Barbodes manguaoensis",
+      "coordinateQueryUrl": "https://api.gbif.org/v1/occurrence/search?scientificName=Barbodes%20manguaoensis&country=PH&hasCoordinate=true&limit=20",
+      "localityQueryUrl": "https://api.gbif.org/v1/occurrence/search?scientificName=Barbodes%20manguaoensis&country=PH&hasCoordinate=true&locality=Lake%20Manguao&limit=20",
+      "philippinesCoordinateBearingCount": 1,
+      "lakeManguaoLocalityCount": 0,
+      "reviewedResultContext": "The single result is a 2018 MOBIOS+ MATERIAL_CITATION labeled Bayog watershed, Zamboanga Peninsula. MOBIOS+ describes itself as a machine-readable compilation of records from published studies. Its CC BY-NC 4.0 dataset license does not establish independent voucher evidence, transfer the record to Palawan, or clear the underlying publication for app reuse.",
+      "disposition": "Do not use as a Lake Manguao occurrence; retain as a literature-derived locality/taxonomy quality flag."
+    }
+  ],
+  "reuseAndPrivacy": {
+    "nationalMuseumDataset": "GBIF metadata reports CC BY 4.0. This record's capture-origin context remains insufficient for Lake Manguao assignment; no record coordinates or specimen details are copied into app data.",
+    "mobiosPlusDataset": "GBIF metadata reports CC BY-NC 4.0 and describes a compilation of published-study records. The dataset metadata does not grant rights to underlying articles or resolve Bangwit's publication context.",
+    "iNaturalistDataset": "The reviewed iNaturalist observations report CC BY-NC 4.0. The dataset-level license is not a blanket license for all observations; check each record and applicable privacy treatment before any later reuse. Broad uncertainty is recorded without retaining or publishing coordinates, observation identifiers, or images.",
+    "publicationApproval": false
+  },
+  "admission": {
+    "speciesAssertionsAdded": 0,
+    "waterbodyOccurrenceRows": 0,
+    "coordinatesOrGeometryAdded": false,
+    "dietAssertions": 0,
+    "ruleOrSafetyAssertions": 0,
+    "publicAppRows": 0,
+    "publicationApproval": false
+  },
+  "followUp": {
+    "nextAction": "Continue Palawan inland-water discovery with independently documented station or voucher sources and current taxonomy. Prioritize a specimen-accession/custodian crosswalk for the historical Manguao thesis material and separately review the Nagao Foundation lake/stream/estuary report. Keep broad province observations and commercial landing records out of waterbody-level assertions.",
+    "contactsMade": false,
+    "bulkDownloadRequested": false
+  },
+  "sources": [
+    {
+      "url": "https://techdocs.gbif.org/en/openapi/v1/occurrence",
+      "supports": "Official GBIF Occurrence API documentation for indexed occurrence searches and searchable fields."
+    },
+    {
+      "url": "https://api.gbif.org/v1/occurrence/search?scientificName=Pterocryptis%20taytayensis&country=PH&hasCoordinate=true&limit=20",
+      "supports": "Read-only Pterocryptis coordinate-bearing query; count and small result sample reviewed on 2026-11-05."
+    },
+    {
+      "url": "https://api.gbif.org/v1/occurrence/search?scientificName=Bostrychus%20expatria&country=PH&hasCoordinate=true&limit=20",
+      "supports": "Read-only Bostrychus coordinate-bearing query; count and small result sample reviewed on 2026-11-05."
+    },
+    {
+      "url": "https://api.gbif.org/v1/occurrence/search?scientificName=Dermogenys%20palawanensis&country=PH&hasCoordinate=true&limit=20",
+      "supports": "Read-only Dermogenys coordinate-bearing query; count and small result sample reviewed on 2026-11-05."
+    },
+    {
+      "url": "https://api.gbif.org/v1/occurrence/search?scientificName=Barbodes%20manguaoensis&country=PH&hasCoordinate=true&limit=20",
+      "supports": "Read-only Barbodes coordinate-bearing query; count and small result sample reviewed on 2026-11-05."
+    },
+    {
+      "url": "https://api.gbif.org/v1/dataset/18896efa-22df-4fbd-9782-42f47257e753",
+      "supports": "National Museum dataset title, CC BY 4.0 metadata and description of landing-site, market and nearby-sea sampling."
+    },
+    {
+      "url": "https://api.gbif.org/v1/dataset/ddd46c4c-1c7a-49d6-8420-0c8b34a94a53",
+      "supports": "MOBIOS+ dataset metadata, CC BY-NC 4.0 license and literature-compilation description."
+    },
+    {
+      "url": "https://api.gbif.org/v1/dataset/50c9509d-22c7-4a22-a47d-8c48425ef4a7",
+      "supports": "iNaturalist Research-grade Observations dataset metadata and dataset license."
+    }
+  ]
+}
