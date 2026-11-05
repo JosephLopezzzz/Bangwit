@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-11-06",
+  "status": "catalog-crosswalk-to-2024-original-description;historical-type-locality;no-coordinate-overlay;research-only",
+  "purpose": "Cross-check the Cagayan basin candidate Glossogobius biorbitalis against the current Catalog of Fishes entry and record its reported type locality without converting a text locality to coordinates.",
+  "candidate": {
+    "sourceArtifact": "national-freshwater-fish-basin-candidate-extract-20261106.json",
+    "basinId": "B0380",
+    "basinName": "Cagayan",
+    "scientificName": "Glossogobius biorbitalis",
+    "globalDatasetRole": "Basin-level discovery candidate; numeric bibliography referenceIds are not a citation-to-basin crosswalk."
+  },
+  "taxonomicSourceCrosswalk": {
+    "source": "Eschmeyer's Catalog of Fishes, online version updated August 2026",
+    "indexedCatalogRecord": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Glossogobius&tbl=species",
+    "originalDescriptionReference": "Endruweit, M. 2024. Fishes of the Red River - Perciformes, Synbranchiformes. Endruweit, Isernhagen: 1-282. Catalog reference 41040.",
+    "referenceRecord": "https://research.calacademy.org/research/ichthyology/catalog/getref.asp?id=41040",
+    "catalogReportedTreatment": {
+      "page": 199,
+      "figures": "110, 294-295",
+      "status": "Valid as Glossogobius biorbitalis Endruweit 2024",
+      "typeLocality": "Bua River, Cagayan River drainage, Dupax Del Norte County, Nueva Vizcaya Province, Luzon Island, Philippines",
+      "holotype": "PNM 15688",
+      "paratypes": "PNM and SEAFDEC; catalog excerpt gives no lot numbers"
+    },
+    "retrievalLimit": "The official Catalog of Fishes search index returned the species and reference excerpt. Direct page retrieval returned HTTP 403 during this review; the original 2024 book and specimen labels were not directly inspected."
+  },
+  "localityResolution": {
+    "reportedWaterbody": "Bua River",
+    "reportedDrainage": "Cagayan River drainage; upper Cagayan River drainage",
+    "administrativeText": "Dupax Del Norte, Nueva Vizcaya, Luzon",
+    "coordinate": null,
+    "pointInPolygon": null,
+    "basinCrosswalk": "The Catalog explicitly names the Cagayan River drainage, textually linking the reported type locality to the same drainage-basin system as B0380. No coordinates were available for a point-in-polygon overlay.",
+    "evidenceClass": "Historical type-locality reported by a current taxonomic catalog; not a dated event record with a reviewed specimen label or coordinate."
+  },
+  "gbifCrossCheck": {
+    "reviewArtifact": "national-freshwater-cagayan-b0380-geometry-gbif-locality-screen-20261106.json",
+    "result": "The bounded coordinate search produced a higher-rank match only for the exact candidate name; no species-rank coordinate row was used.",
+    "interpretation": "The GBIF result is a scoped indexing outcome. It does not contradict the Catalog's type-locality report and does not establish absence."
+  },
+  "interpretation": [
+    "A current taxonomic catalog reports a type locality for G. biorbitalis at Bua River in the Cagayan drainage, making this a stronger Cagayan-specific lead than a name-only basin candidate.",
+    "The evidence is traceable to the Catalog's citation of the Endruweit 2024 book, but the book and PNM/SEAFDEC specimen labels were not reviewed directly.",
+    "The locality supports a historical taxonomic type-locality association only; it does not establish current presence, abundance, distribution throughout B0380, catchability, legal status, or fishing safety.",
+    "Do not map the catalog locality as a point or exact reach without coordinates and a separate Bua River geometry crosswalk."
+  ],
+  "disposition": {
+    "candidateEvidenceStatus": "historical-type-locality-lead;source-original-and-coordinate-review-pending",
+    "publicSpeciesRowsAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "waterbodyGeometryAdded": false,
+    "dietOrBaitClaimsAdded": 0,
+    "legalOrSafetyClaimsAdded": 0,
+    "publicationApproval": false
+  },
+  "sources": [
+    {
+      "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Glossogobius&tbl=species",
+      "supports": "Indexed Catalog of Fishes entry for Glossogobius biorbitalis: accepted status, Endruweit 2024 citation, Bua River type locality, and holotype PNM 15688."
+    },
+    {
+      "url": "https://research.calacademy.org/research/ichthyology/catalog/getref.asp?id=41040",
+      "supports": "Catalog bibliography record for Endruweit 2024, Fishes of the Red River - Perciformes, Synbranchiformes."
+    },
+    {
+      "url": "https://api.gbif.org/v1/species/match?name=Glossogobius%20biorbitalis&strict=true",
+      "supports": "Strict GBIF name/rank matching result, which returned a higher-rank match rather than a species-level locality record."
+    }
+  ]
+}

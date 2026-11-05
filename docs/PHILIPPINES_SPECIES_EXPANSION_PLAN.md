@@ -5136,7 +5136,7 @@ Inspected the global dataset workbook's `Note` sheet. It defines `references` as
 
 See the [dataset workbook record](https://zenodo.org/records/19511163), [CAS reference 25599](https://researcharchive.calacademy.org/research/ichthyology/catalog/getref.asp?id=25599), and the [field provenance audit](../data/research/philippines/national-freshwater-cagayan-reference-field-provenance-audit-20261106.json).
 
-**Next:** verify the original 2024 description and type material for *Ilogton ilogton*, then inspect the cited original sources for the remaining Cagayan candidates. Keep each historical record tied to its own locality, source rights, and precision; do not infer current presence or promote the global basin list as a complete checklist.
+**Next:** review the remaining Cagayan-basin names against independently dated local surveys and voucher evidence, then separately crosswalk basin geometry to study localities. Do not use the global list as a complete checklist or merge it with the NFRDI specimens without verified locality/geometry evidence.
 
 ### National rollout step 580: Cagayan basin B0380 geometry and bounded GBIF locality screen — 6 November 2026
 
@@ -5148,4 +5148,14 @@ Added one geometry/locality review and two source-registry entries; registry tot
 
 See the [Zenodo basin dataset](https://zenodo.org/records/19511163), [GBIF occurrence API](https://techdocs.gbif.org/en/openapi/v1/occurrence), [DDBJ accession AB469437.1](https://getentry.ddbj.nig.ac.jp/getentry/na/AB469437/?filetype=html), [Smithsonian USNM 333262 catalog result](https://collections.si.edu/search/results.htm?q=%22Meisner%2C+A.%22), and the [review artifact](../data/research/philippines/national-freshwater-cagayan-b0380-geometry-gbif-locality-screen-20261106.json).
 
-**Next:** verify the original 2024 description and type material for *Ilogton ilogton*, then inspect the cited original sources for the remaining Cagayan candidates. Keep each historical record tied to its own locality, source rights, and precision; do not infer current presence or promote the global basin list as a complete checklist.
+**Next:** cross-check *Glossogobius biorbitalis* against the current Catalog of Fishes type-locality entry and determine whether the reported Bua River locality can be independently resolved. Keep the catalog claim historical and uncoordinated until the original source or specimen record is reviewed.
+
+### National rollout step 581: *Glossogobius biorbitalis* Bua River type-locality crosswalk — 6 November 2026
+
+The GBIF screen returned only a higher-rank match for the exact candidate name. A separate Catalog of Fishes indexed excerpt reports *Glossogobius biorbitalis* as valid, cites Endruweit (2024:199, figs. 110, 294–295), and gives the type locality as Bua River, Cagayan River drainage, Dupax Del Norte, Nueva Vizcaya, Luzon. It lists holotype PNM 15688 and paratypes at PNM and SEAFDEC without lot numbers. The official catalog page returned HTTP 403 when reopened, and the original book and specimen label were not retrieved. The textual drainage match links this type-locality report to the Cagayan basin, but no coordinate or exact reach geometry was available.
+
+This is historical taxonomic locality evidence, not a current-presence or basin-wide distribution claim. No occurrence, species, geometry, diet, catchability, legal, safety, or app row was added. Added one source-registry entry; registry total: 745. Publication approval remains false.
+
+See the [Catalog of Fishes indexed species entry](https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Glossogobius&tbl=species), its [Endruweit 2024 reference record](https://research.calacademy.org/research/ichthyology/catalog/getref.asp?id=41040), and the [research crosswalk](../data/research/philippines/national-freshwater-cagayan-glossogobius-biorbitalis-type-locality-20261106.json).
+
+**Next:** retrieve the original 2024 book page and PNM 15688 catalog/label for *Glossogobius biorbitalis* if accessible; then verify the original description and type material for *Ilogton ilogton*. Keep each locality tied to its source and precision; do not infer current presence or promote the global basin list as a complete checklist.
