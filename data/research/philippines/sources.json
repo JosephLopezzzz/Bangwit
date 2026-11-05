@@ -3,7 +3,7 @@
   "checkedOn": "2026-11-06",
   "status": "research-only-source-registry",
   "scope": "National acquisition references, freshwater spatial-source leads, MIMAROPA/CALABARZON/Central Luzon identity and inland-water source reviews, and Mindanao regional freshwater survey reviews. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 742,
+  "sourceCount": 744,
   "sources": [
     {
       "id": "aquilino-2011-taal-dna-barcoding-genbank",
@@ -10528,16 +10528,16 @@
       "url": "https://www.gbif.org/dataset/d8cd16ba-bb74-4420-821e-083f2bac17c2",
       "additionalUrls": ["https://doi.org/10.15468/sbmztx", "https://api.gbif.org/v1/dataset/d8cd16ba-bb74-4420-821e-083f2bac17c2"],
       "role": "Sequence-derived occurrence metadata with 21 sample codes labelled Danao in the Lake Danao, Polangui, Albay search window; candidate records, not a complete lake checklist or population estimate.",
-      "checkedOn": "2026-10-30",
+      "checkedOn": "2026-11-06",
       "sourceYear": 2026,
-      "citation": "European Bioinformatics Institute (EMBL-EBI), GBIF Helpdesk. (2026). INSDC Sequences, Version 1.191. European Nucleotide Archive. Occurrence dataset https://doi.org/10.15468/sbmztx, accessed through GBIF on 2026-10-30.",
-      "access": {"status": "GBIF metadata and all 21 fish rows in a bounded spatial query reviewed. Records carry 2023-07-27, one shared coordinate (13.359, 123.574), Danao-labelled sample codes and recordedBy Regala, J.A. and Paet, J.M.Q. Verbatim locality and coordinate uncertainty are absent; sequence accessions are present.", "reviewFiles": ["national-bicol-danao-lakelets-sequence-source-review-20261030.json"], "fullTextRetrieved": false},
-      "reuse": {"metadata": "Dataset metadata identifies DOI 10.15468/sbmztx, Version 1.191 and CC BY 4.0. Cite the dataset, DOI and access date.", "raw": "No full query response or sequence file is stored in the repository.", "content": "Dataset-level CC BY 4.0 is recorded, but does not grant blanket approval for sequence files, derived identifications or public-app display."},
+      "citation": "European Bioinformatics Institute (EMBL-EBI), GBIF Helpdesk. (2026). INSDC Sequences, Version 1.192. European Nucleotide Archive. Occurrence dataset https://doi.org/10.15468/sbmztx, metadata accessed through GBIF on 2026-11-05; bounded Cagayan occurrence review accessed 2026-11-06.",
+      "access": {"status": "GBIF metadata and 21 Lake Danao rows were previously reviewed; a separate bounded northern Luzon query found 35 distinct eel sequence accessions across 36 coordinate-bearing feed rows, including one AB469437 duplicate across INSDC and the NCBI-mined feed.", "reviewFiles": ["national-bicol-danao-lakelets-sequence-source-review-20261030.json", "national-freshwater-cagayan-b0380-geometry-gbif-locality-screen-20261106.json"], "fullTextRetrieved": false},
+      "reuse": {"metadata": "GBIF dataset metadata identified DOI 10.15468/sbmztx, Version 1.192 and CC BY 4.0 at the 2026-11-05 check. Cite the dataset, DOI and access date.", "raw": "No full query response or sequence file is stored in the repository.", "content": "Dataset-level CC BY 4.0 is recorded, but does not grant blanket approval for sequence files, derived identifications or public-app display."},
       "publicationApproval": false,
       "researchStatus": "gbif-occurrence-api;ena-sequence-linked;2023-sample-candidates;approximate-danao-window;research-only",
       "license": "CC BY 4.0 as stated in GBIF dataset metadata",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/legalcode",
-      "caveats": ["This was a small geospatial query, not an official Lake Danao polygon or exhaustive locality search.", "All fish rows share one coordinate with null uncertainty and null verbatimLocality; do not map as exact stations.", "The same 21 sample codes also occur in the iBOL/BOLD feed; do not count those duplicate sequence feeds as 42 specimens.", "The adapter labels them PRESERVED_SPECIMEN, but the physical voucher repository and identification method were not verified.", "No Mistichthys record in this query is not evidence of absence from the lake."]
+      "caveats": ["This was a small geospatial query, not an official Lake Danao polygon or exhaustive locality search.", "All Lake Danao fish rows share one coordinate with null uncertainty and null verbatimLocality; do not map as exact stations.", "The same 21 Lake Danao sample codes also occur in the iBOL/BOLD feed; do not count those duplicate sequence feeds as 42 specimens.", "The adapter labels them PRESERVED_SPECIMEN, but the physical voucher repository and identification method were not verified.", "The Cagayan eel window contains one record duplicate across NCBI-mined and INSDC feeds; do not count it as an additional sequence accession or independent specimen.", "No Mistichthys record in the Lake Danao query is not evidence of absence from the lake."]
     },
     {
       "id": "gbif-ibol-lake-danao-barcode-records",
@@ -23842,7 +23842,8 @@
         "reviewFiles": [
           "national-freshwater-fish-basin-candidate-extract-20261106.json",
           "national-freshwater-cagayan-basin-candidate-vs-ludong-review-20261106.json",
-          "national-freshwater-cagayan-reference-field-provenance-audit-20261106.json"
+          "national-freshwater-cagayan-reference-field-provenance-audit-20261106.json",
+          "national-freshwater-cagayan-b0380-geometry-gbif-locality-screen-20261106.json"
         ],
         "dataUpdatedTo": "2024-11-24",
         "globalBasinCount": 3364,
@@ -23884,7 +23885,84 @@
         "The dataset has no native/introduced status field and broad basin associations may include brackish or marine-influenced taxa.",
         "All 31 extracted per-basin unique-name counts reconcile to the basin attribute n_specs values in the same Zenodo record. This is an internal file-consistency check, not independent validation of taxonomy, geometry, or local species presence.",
         "The workbook defines referenceIds as Catalogue of Fishes bibliography for species descriptions or taxonomic assignments, not as basin-specific citations; underlying studies still require independent review before any species–basin link is used.",
+        "The B0380 Cagayan polygon is a northern Luzon drainage-basin feature; it is not an administrative boundary or municipal-water limit. The accompanying bounded GBIF screen does not make the basin candidate list exhaustive.",
         "No public species or occurrence rows, diet, bait, catchability, legal, safety, or waterbody geometry claims are admitted from this extract."
+      ]
+    },
+    {
+      "id": "ddbj-anguilla-luzonensis-ab469437-cagayan-sequence",
+      "title": "DDBJ nucleotide accession AB469437.1 for Anguilla luzonensis",
+      "provider": "DNA Data Bank of Japan (DDBJ), National Institute of Genetics",
+      "url": "https://getentry.ddbj.nig.ac.jp/getentry/na/AB469437/?filetype=html",
+      "additionalUrls": [
+        "https://www.gbif.org/occurrence/3346179802",
+        "https://www.gbif.org/dataset/d8cd16ba-bb74-4420-821e-083f2bac17c2"
+      ],
+      "role": "Primary submitter metadata for one historical A. luzonensis mitochondrial-genome accession with a Cagayan River System locality string. This is sequence-locality context, not a physical voucher or precise river-reach occurrence.",
+      "checkedOn": "2026-11-06",
+      "sourceYear": 2008,
+      "citation": "Minegishi, Y., Aoyama, J., Watanabe, S., & Tsukamoto, K. (2008). DDBJ accession AB469437.1, Anguilla luzonensis mitochondrial DNA, complete genome. Direct submission; collection date 2008-02-08.",
+      "access": {
+        "status": "primary-sequence-accession-reviewed;locality-and-collection-date-present;physical-voucher-not-specified;research-only",
+        "reviewFiles": ["national-freshwater-cagayan-b0380-geometry-gbif-locality-screen-20261106.json"],
+        "accession": "AB469437.1",
+        "submitted": "2008-11-06",
+        "collectionDate": "2008-02-08",
+        "reportedLocality": "Philippines:Luzon, Kagayan River System",
+        "reportedCoordinate": "17.61 N, 121.76 E",
+        "identifiedBy": "Shun Watanabe",
+        "physicalVoucherCatalogNumber": null
+      },
+      "reuse": {
+        "metadata": "The accession record is cited as an external source. No item-specific sequence reuse assessment was performed.",
+        "raw": "No nucleotide sequence or complete source response is copied into the repository.",
+        "content": "Only short locality/date/identification metadata are summarized for research traceability; no public-app projection is approved."
+      },
+      "publicationApproval": false,
+      "researchStatus": "cagayan-basin;anguilla-luzonensis;historical-sequence-locality;coarse-shared-coordinate;no-voucher-anchor;research-only",
+      "license": "No item-specific sequence reuse terms reviewed",
+      "licenseUrl": null,
+      "caveats": [
+        "The accession provides a Cagayan River System locality and one coordinate but no exact sampling reach or physical voucher catalog number.",
+        "The same accession is duplicated in two GBIF sequence-derived feeds; it is one underlying accession, not two independent samples.",
+        "A point falling inside the global basin polygon does not validate the dataset's species-basin association or establish current distribution."
+      ]
+    },
+    {
+      "id": "smithsonian-usnm-333262-nomorhamphus-rossi-type-locality",
+      "title": "Smithsonian NMNH holotype record USNM 333262 for Nomorhamphus rossi",
+      "provider": "Smithsonian National Museum of Natural History, Division of Fishes",
+      "url": "https://collections.si.edu/search/results.htm?q=%22Meisner%2C+A.%22",
+      "additionalUrls": [
+        "http://n2t.net/ark:/65665/35f61106b-05e2-469d-a59b-19c3ecb4d7b1",
+        "https://collections.nmnh.si.edu/search/fishes/"
+      ],
+      "role": "Official museum-catalog type-locality evidence for a historical N. rossi holotype from Intel River, Baggao, Cagayan. It has textual locality and a date, but no coordinate reviewed for polygon overlay.",
+      "checkedOn": "2026-11-06",
+      "sourceYear": 1989,
+      "citation": "Smithsonian National Museum of Natural History, Vertebrate Zoology Fishes Division. USNM 333262, Nomorhamphus rossi Meisner, holotype; collection date 1989-05-05; catalog record accessed 2026-11-06.",
+      "access": {
+        "status": "official-indexed-record-details-reviewed;holotype-and-type-locality-reported;coordinate-not-reviewed;research-only",
+        "reviewFiles": ["national-freshwater-cagayan-b0380-geometry-gbif-locality-screen-20261106.json"],
+        "catalogNumber": "USNM 333262",
+        "typeStatus": "Holotype",
+        "collectionDate": "1989-05-05",
+        "reportedLocality": "Intel River, pool at Barangay Hot Springs, Baggao, Cagayan, Philippines",
+        "coordinate": null
+      },
+      "reuse": {
+        "metadata": "The indexed official record details were reviewed. No item-specific license for this record was verified.",
+        "raw": "No specimen image, complete API response, or coordinate is stored.",
+        "content": "Only attributed catalog facts needed for this evidence review are summarized; no image or public-app occurrence is approved."
+      },
+      "publicationApproval": false,
+      "researchStatus": "luzon-cagayan;nomorhamphus-rossi;historical-holotype-locality;no-coordinate-overlay;research-only",
+      "license": "No item-specific reuse terms verified",
+      "licenseUrl": null,
+      "caveats": [
+        "A type locality documents where the type series is reported from; it does not establish present-day population status or occurrence throughout the drainage basin.",
+        "The catalog locality has no coordinate used in the polygon screen; no geometry overlay is claimed.",
+        "The GBIF bounding-box query returned no coordinate-bearing rows for this name; that bounded zero result does not imply absence."
       ]
     }
   ],

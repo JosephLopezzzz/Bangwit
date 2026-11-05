@@ -1,0 +1,199 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-11-06",
+  "status": "cagayan-b0380-geometry-screened;gbif-window-bounded;research-only;no-public-app-rows",
+  "purpose": "Crosswalk the global dataset's Cagayan drainage-basin geometry with independently sourced locality evidence and a bounded GBIF coordinate search. This is not a complete Cagayan fish inventory.",
+  "basinGeometry": {
+    "sourceId": "ding-2026-global-freshwater-fish-drainage-basin-dataset-2024",
+    "record": "https://zenodo.org/records/19511163",
+    "basinId": "B0380",
+    "basinName": "Cagayan",
+    "country": "Philippines",
+    "interpretation": "A northern Luzon drainage-basin polygon. It is not Cagayan de Misamis in Mindanao, a municipal boundary, or a coastal municipal-water boundary.",
+    "geometry": {
+      "file": "Basin_202412_3364.shp",
+      "shapeType": "Polygon",
+      "partCount": 6,
+      "pointCount": 863,
+      "crs": "WGS 84 geographic coordinates (EPSG:4326)",
+      "boundingBox": {
+        "west": 121.5285491942899,
+        "south": 17.10833333311679,
+        "east": 122.45000000000002,
+        "north": 18.59647623658891
+      },
+      "attributeCentroid": {
+        "longitude": 121.9519440592244,
+        "latitude": 17.76197846057519,
+        "note": "Dataset attribute centroid, not a verified sampling locality."
+      },
+      "geometryFileChecksums": {
+        "Basin_202412_3364.shp": "MD5 524bcf9cdbbba4c886931612a7430313",
+        "Basin_202412_3364.shx": "MD5 03b74759c28322fd716b7f2e4d9e23a2",
+        "Basin_202412_3364.dbf": "MD5 802aecd5af4b7d7e0f908990bc414ab4",
+        "Basin_202412_3364.prj": "MD5 c742bee3d4edfc2948a2ad08de1790a5"
+      },
+      "method": "Downloaded the four basin shapefile components to ignored temporary storage and matched the DBF record B0380 to the polygon record. Candidate points were checked against the polygon rings with an even-odd point-in-polygon test; the input files were checksum-verified against the Zenodo API metadata. The polygon was not copied into the app or repository."
+    }
+  },
+  "candidateSet": {
+    "sourceArtifact": "national-freshwater-fish-basin-candidate-extract-20261106.json",
+    "candidateCount": 8,
+    "scientificNames": [
+      "Mugil cephalus",
+      "Nomorhamphus rossi",
+      "Ilogton ilogton",
+      "Stigmatogobius elegans",
+      "Stenogobius kyphosus",
+      "Glossogobius biorbitalis",
+      "Neostethus villadolidi",
+      "Anguilla luzonensis"
+    ],
+    "meaning": "These names are source-dataset basin-level candidates. The extract's referenceIds are taxonomic-bibliography identifiers, not a verified citation-to-basin crosswalk."
+  },
+  "gbifScreen": {
+    "source": "GBIF Occurrence API",
+    "screenedOn": "2026-11-06",
+    "queryParameters": {
+      "country": "PH",
+      "hasCoordinate": true,
+      "decimalLatitude": "17.108333,18.596477",
+      "decimalLongitude": "121.528549,122.45",
+      "limit": 300,
+      "taxa": "Each of the eight candidate names was queried separately. A strict species match/taxon key was used where available; otherwise an exact scientific-name query was used. The bounding-box screen is broader than the polygon; positive coordinates were separately checked against B0380."
+    },
+    "queryTemplate": "https://api.gbif.org/v1/occurrence/search?country=PH&hasCoordinate=true&decimalLatitude=17.108333,18.596477&decimalLongitude=121.528549,122.45&scientificName={url-encoded-name}&limit=300",
+    "results": [
+      {
+        "scientificName": "Anguilla luzonensis",
+        "gbifTaxonKey": 5853944,
+        "coordinateBearingRows": 36,
+        "distinctSequenceAccessions": 35,
+        "duplicateFeedRecord": "AB469437 appears once in the NCBI-mined feed and once in the INSDC Sequences feed.",
+        "coordinateEvidence": {
+          "distinctCoordinates": 1,
+          "sharedCoordinate": "17.61 N, 121.76 E",
+          "pointInB0380": true,
+          "recordTimeRange": ["2008-02-08", "2008-12-15"],
+          "catalogNumbersPresent": 0,
+          "coordinateUncertaintyValuesPresent": 0
+        },
+        "localityInterpretation": "GBIF rows report Luzon/Cagayan River-system text, but all 36 rows share the same coarse coordinate. The DDBJ source accession AB469437 independently records the same shared point and a 2008-02-08 collection date, but supplies no physical voucher/catalog number or exact sampling reach. This is one historical sequence-locality lead, not 36 independent specimen locations or a precise station. A GBIF example is https://www.gbif.org/occurrence/3346179802."
+      },
+      {
+        "scientificName": "Nomorhamphus rossi",
+        "gbifCoordinateRowsInBoundingBox": 0,
+        "independentLocalityEvidence": "Smithsonian NMNH holotype USNM 333262 is catalogued from Intel River, a pool at Barangay Hot Springs, Baggao, Cagayan; collection date 1989-05-05. The record has no coordinate used in this overlay, so it is a historical textual voucher locality, not a point-in-polygon result.",
+        "recordUrl": "http://n2t.net/ark:/65665/35f61106b-05e2-469d-a59b-19c3ecb4d7b1"
+      },
+      {
+        "scientificName": "Mugil cephalus",
+        "gbifCoordinateBearingRows": 6,
+        "distinctMuseumCatalogNumbers": 2,
+        "specimens": [
+          {
+            "catalogNumber": "USNM 407402",
+            "gbifOccurrence": "https://www.gbif.org/occurrence/1317370724",
+            "eventDate": "2012-06-04",
+            "coordinate": "17.9761 N, 121.614 E",
+            "coordinateUncertaintyMeters": 250,
+            "pointInB0380": false,
+            "localityType": "Market purchase; vendor-reported catch vicinity."
+          },
+          {
+            "catalogNumber": "USNM 405775",
+            "gbifOccurrence": "https://www.gbif.org/occurrence/1318933075",
+            "eventDate": "2012-06-04",
+            "coordinate": "18.2471 N, 121.909 E",
+            "coordinateUncertaintyMeters": 2600,
+            "pointInB0380": true,
+            "localityType": "Market purchase; vendor-reported catch vicinity."
+          }
+        ],
+        "interpretation": "The six GBIF rows represent two museum catalog numbers duplicated across occurrence/material-sample feed records. Market coordinates and vendor-reported nearby catch areas do not establish precise capture stations or a verified basin occurrence."
+      },
+      {
+        "scientificName": "Ilogton ilogton",
+        "gbifSpeciesMatch": "No exact GBIF species-rank match in the reviewed query.",
+        "interpretation": "The basin candidate remains unresolved pending direct review of the 2024 original description and its specimen/type-locality details. Third-party name summaries were not promoted to locality evidence."
+      },
+      {
+        "scientificName": "Stigmatogobius elegans",
+        "gbifCoordinateRowsInBoundingBox": 0,
+        "interpretation": "A zero-result bounded search does not establish absence."
+      },
+      {
+        "scientificName": "Stenogobius kyphosus",
+        "gbifCoordinateRowsInBoundingBox": 0,
+        "interpretation": "A zero-result bounded search does not establish absence."
+      },
+      {
+        "scientificName": "Glossogobius biorbitalis",
+        "gbifSpeciesMatch": "Higher-rank match only; exact-name query returned zero species-rank records in the screen.",
+        "interpretation": "A separate Glossogobius giuris market record is not G. biorbitalis. Its vendor-reported Northern Cagayan vicinity and market-geocoded coordinate do not establish either species identity or a precise natural capture locality."
+      },
+      {
+        "scientificName": "Neostethus villadolidi",
+        "gbifTaxonKey": 2412116,
+        "gbifCoordinateRowsInBoundingBox": 0,
+        "independentTypeLocalityEvidence": "The California Academy of Sciences Primary Types Imagebase gives the holotype locality as Cagayan de Misamis, Misamis Oriental, Mindanao.",
+        "interpretation": "The shared place-name Cagayan creates a basin-name ambiguity for this Luzon candidate; the Mindanao type locality does not prove the taxon is absent from northern Luzon. No zero-result inference is made."
+      }
+    ],
+    "limitations": [
+      "A rectangular query window is not a polygon query; only returned coordinates were tested against the basin polygon.",
+      "GBIF coordinate rows can be duplicated across datasets or feed representations and may georeference a market or generalized locality rather than a collection station.",
+      "Missing, higher-rank, or zero-result matches do not prove taxonomic or biological absence.",
+      "A basin association and a historical type locality do not imply continuous, current, or fishable distribution throughout the basin."
+    ]
+  },
+  "interpretation": [
+    "The dataset's B0380 Cagayan geometry is a northern Luzon drainage-basin polygon; the identical place-name in Cagayan de Misamis is in Mindanao and is a separate locality.",
+    "The strongest independently localized leads in this screen are the textual USNM 333262 type locality for Nomorhamphus rossi and the historical sequence locality for Anguilla luzonensis. Only the eel's coarse shared coordinate was tested within the polygon; it is not a precise sampling reach.",
+    "The market-based Mugil and Glossogobius records remain vendor-vicinity claims, not exact basin collection localities.",
+    "The eight-name basin candidate set remains discovery-only and incomplete. Review each taxon's underlying primary source separately and keep Cagayan River reaches, tributaries, lakes, reservoirs, and administrative areas distinct."
+  ],
+  "disposition": {
+    "basinGeometryAddedToApp": false,
+    "publicSpeciesRowsAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "dietOrBaitClaimsAdded": 0,
+    "legalOrSafetyClaimsAdded": 0,
+    "publicationApproval": false,
+    "reason": "This review resolves a source geometry identifier and screens locality evidence; it does not provide sufficiently precise, independently licensed public occurrence rows or exact waterbody geometry for the app."
+  },
+  "sources": [
+    {
+      "url": "https://zenodo.org/records/19511163",
+      "supports": "Basin dataset scope, shapefile components, WGS 84 CRS and source record."
+    },
+    {
+      "url": "https://zenodo.org/api/records/19511163",
+      "supports": "File metadata, checksums and dataset license."
+    },
+    {
+      "url": "https://techdocs.gbif.org/en/openapi/v1/occurrence",
+      "supports": "GBIF occurrence API query semantics."
+    },
+    {
+      "url": "https://getentry.ddbj.nig.ac.jp/getentry/na/AB469437/?filetype=html",
+      "supports": "Primary accession AB469437.1, sequence submitter metadata, collection date, locality text, shared coordinates and identification note."
+    },
+    {
+      "url": "https://www.gbif.org/dataset/d8cd16ba-bb74-4420-821e-083f2bac17c2",
+      "supports": "INSDC Sequences dataset metadata associated with the GBIF occurrence feed."
+    },
+    {
+      "url": "https://collections.si.edu/search/results.htm?q=%22Meisner%2C+A.%22",
+      "supports": "Indexed official Smithsonian NMNH record details for holotype USNM 333262, its type locality and collection date."
+    },
+    {
+      "url": "https://researcharchive.calacademy.org/research/ichthyology/types/index.asp?Family=Phallostethidae&OrderBy=Family%2C+TypeName%2C+CatNum&PageStyle=Multiple&RecStyle=Full&xAction=Search",
+      "supports": "California Academy of Sciences Primary Types Imagebase result for the Neostethus villadolidi holotype locality."
+    },
+    {
+      "url": "https://www.gbif.org/occurrence/3346179802",
+      "supports": "Example GBIF occurrence row associated with eel sequence accession AB469437."
+    }
+  ]
+}
