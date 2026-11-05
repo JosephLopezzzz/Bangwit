@@ -4860,3 +4860,15 @@ Kept these aggregates separate from NFRDI's later July 2025–June 2026 stock as
 Added `mimaropa-naujan-nfrdi-2025-community-inventory-review-20261105.json`, linked it from the assessment access review, and registered the repository source; the registry now contains 700 unique entries. No request was sent. See the [official NFRDI repository record](https://repository.nfrdi.da.gov.ph/items/0213ccc2-8bb5-4a4f-8eb3-676fc611143c), [full two-page article](https://repository.nfrdi.da.gov.ph/bitstreams/ab506f5d-0733-4653-a4b2-d6ccf65150ae/download), and the [separate stock-assessment summary](https://nfrdi.da.gov.ph/2026/10/13/nfrdi-assessment-provides-scientific-baseline-for-sustainable-management-of-lake-naujan-fisheries/).
 
 **Next:** continue independent freshwater source discovery across MIMAROPA while the NFRDI assessment-data inquiry remains unsent. Seek a public taxon/site list and methods from an openly reusable source; keep article context and historical names out of occurrence data.
+
+### National rollout step 552: Naujan Lake 1995–1996 commercial-catch chapter review — 5 November 2026
+
+Located and retrieved Pasumbal and Perez's full nine-page 2001 chapter from the SEAFDEC institutional repository. It summarizes landing surveys from May 1995 to December 1996 at four Naujan Lake landing centers, with actual catch observations and interviews reportedly sampled ten days per month. The chapter includes monthly catch totals and aggregate catch-by-gear tables, but no taxon-by-landing-center matrix, station coordinates, vouchers, or individual collection-event records.
+
+Held a material source inconsistency: the abstract and narrative assign 16% of catch to “therapon,” while the extracted Table 2 assigns 16% to “pla salid”; the narrative also identifies “pla salid” with *Trichogaster* spp. at 2%. Preserve source labels and percentages without normalization. Many other groups are genus-level or common-name labels; a fish species name is not established solely by matching those aggregate categories.
+
+Added `mimaropa-naujan-pasumbal-perez-2001-commercial-fisheries-review-20261105.json` and one source-register entry; the registry now contains 701 unique entries. The SEAFDEC item page provides a PDF link but says library document requests are restricted while the print publication is for sale. No item-specific reuse license was found, and public PDF availability was not treated as reuse approval. No species, occurrence, catch, map, legal, diet, safety, or public-app row was added. No file, table, email, or purchase request was sent.
+
+See the [SEAFDEC repository record](https://repository.seafdec.org/handle/20.500.12066/5143?locale-attribute=in), [full chapter PDF](https://repository.seafdec.org.ph/bitstream/10862/827/1/cemplrfa_p099-107.pdf), and [research review](data/research/philippines/mimaropa-naujan-pasumbal-perez-2001-commercial-fisheries-review-20261105.json).
+
+**Next:** continue MIMAROPA freshwater source discovery with named river and lake surveys; only compare this historical aggregate chapter to later species lists after a taxonomic and locality crosswalk, and keep current/pilot claims separate.
