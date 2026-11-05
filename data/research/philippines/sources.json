@@ -3,7 +3,7 @@
   "checkedOn": "2026-11-05",
   "status": "research-only-source-registry",
   "scope": "National acquisition references, freshwater spatial-source leads, MIMAROPA/CALABARZON/Central Luzon identity and inland-water source reviews, and Mindanao regional freshwater survey reviews. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 696,
+  "sourceCount": 697,
   "sources": [
     {
       "id": "aquilino-2011-taal-dna-barcoding-genbank",
@@ -21944,9 +21944,10 @@
       "sourceYear": 2024,
       "citation": "Gilles, A. S. Jr., Bate, J.-M. B., Solomon, M. A. K. H., Peralta, E. M., Pavia, R. T. B. Jr., & Vilizzi, L. (2024). Quantifying the Current and Future Risk of Invasiveness of the Non-native Fishes in Ramsar-listed Lake Naujan, Philippines. The Philippine Journal of Fisheries, 31(2), 348–355. https://doi.org/10.31398/tpjf/31.2.2023-0083.",
       "access": {
-        "status": "official-full-article-and-as-isk-supplement-reviewed;13-source-listed-taxa;local-introduction-context-crosschecked-for-leiopotherapon-plumbeus",
+        "status": "official-full-article-and-as-isk-supplement-reviewed;13-source-listed-taxa;taxonomic-name-crosswalk-completed;locality-and-publication-review-pending",
         "reviewFiles": [
-          "mimaropa-naujan-gilles-2024-nonnative-risk-list-review-20261105.json"
+          "mimaropa-naujan-gilles-2024-nonnative-risk-list-review-20261105.json",
+          "mimaropa-naujan-gilles-2024-taxon-name-crosswalk-20261105.json"
         ],
         "fullTextRetrieved": true,
         "supplementRetrieved": true
@@ -21954,10 +21955,10 @@
       "reuse": {
         "metadata": "Article states open access under CC BY-NC 4.0. Attribute the authors, journal, DOI, and license for any permitted reuse.",
         "raw": "No article or supplementary PDF, figure, coordinate, risk questionnaire, or source table is stored in the repository.",
-        "content": "The 13 source-listed names are recorded only as research candidates with attribution. No public app projection or transformed risk badge is approved; confirm the app's noncommercial context and complete taxonomic/locality crosswalk first."
+        "content": "The 13 source-listed names are recorded only as research candidates with attribution. Their name-level GBIF crosswalk is complete; no public app projection or transformed risk badge is approved until local evidence and rights are reviewed."
       },
       "publicationApproval": false,
-      "researchStatus": "naujan-freshwater;13-source-reported-taxa;site-introduction-context;cc-by-nc-4.0;taxonomic-and-publication-review-pending",
+      "researchStatus": "naujan-freshwater;13-source-reported-taxa;site-introduction-context;cc-by-nc-4.0;taxonomic-crosswalk-complete;locality-and-publication-review-pending",
       "doi": "10.31398/tpjf/31.2.2023-0083",
       "license": "CC BY-NC 4.0, stated on the final page of the official article PDF.",
       "licenseUrl": "https://creativecommons.org/licenses/by-nc/4.0/",
@@ -21967,6 +21968,42 @@
         "The study used a calibrated threshold borrowed from Lake Taal because the Naujan sample count was small; medium-risk false-positive/false-negative evaluation was not applied.",
         "Risk scores are not legal fishing rules, occurrence certainty, population abundance, catchability, natural diet, or bait advice.",
         "The 2011 MBCFI inventory has a separate historical scope, inconsistent lake totals and unresolved reuse terms; do not merge its counts with this article's list."
+      ]
+    },
+    {
+      "id": "calacademy-gbif-naujan-2024-taxon-name-crosswalk-20261105",
+      "title": "Catalog of Fishes and GBIF Species API cross-check for the Lake Naujan risk-assessment taxa",
+      "provider": "California Academy of Sciences, Institute for Biodiversity Science and Sustainability; GBIF Secretariat",
+      "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatmain.asp",
+      "additionalUrls": [
+        "https://techdocs.gbif.org/en/openapi/v1/species",
+        "https://api.gbif.org/v1/species/match?name=Anabas%20testudineus"
+      ],
+      "role": "Name-level cross-check for the 13 binomials in Gilles et al. (2024). Direct GBIF Species API matches were exact and accepted at species rank; official Catalog of Fishes indexed current-status excerpts agreed. Neither authority establishes Lake Naujan presence or fish identity.",
+      "checkedOn": "2026-11-05",
+      "sourceYear": 2026,
+      "citation": "California Academy of Sciences. Eschmeyer's Catalog of Fishes, online version updated 13 August 2026; GBIF Secretariat. Species API v1 and Species API documentation. Name matches queried 5 November 2026.",
+      "access": {
+        "status": "13-direct-gbif-api-matches-http-200;catalog-status-index-excerpts-reviewed;catalog-record-fetches-http-403",
+        "reviewFiles": [
+          "mimaropa-naujan-gilles-2024-taxon-name-crosswalk-20261105.json"
+        ],
+        "gbifExactAcceptedSpeciesMatches": 13,
+        "catalogIndexStatusExcerpts": 13,
+        "catalogDirectRecordPagesRetrieved": false
+      },
+      "reuse": {
+        "metadata": "Record only source names, accepted-name/authorship strings, match metadata and identifiers for research provenance.",
+        "raw": "No Catalog export or full GBIF response archive is stored.",
+        "content": "This is a research-only nomenclature cross-check. It does not grant reuse rights for Gilles et al. (2024), the MBCFI profile or NFRDI assessment data and does not approve public projection."
+      },
+      "publicationApproval": false,
+      "researchStatus": "naujan-2024-risk-list;13-exact-accepted-gbif-matches;catalog-index-excerpts;locality-and-rights-review-pending",
+      "caveats": [
+        "The GBIF backbone taxonomic match does not identify the study's fish specimens or establish their locality.",
+        "Catalog of Fishes direct pages returned HTTP 403 in this review environment; current-status confirmation is limited to official indexed result excerpts.",
+        "No comparison was made against source-name rows in the 2011 MBCFI tables; the NFRDI 2025-2026 summary lists 43 aquatic taxa but does not publish their names.",
+        "No species, occurrence, map, risk, invasive-status, diet, legal or safety claims were added to the public application."
       ]
     }
   ],

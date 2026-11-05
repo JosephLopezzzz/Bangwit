@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "mimaropa-naujan-gilles-2024-taxon-name-crosswalk-20261105",
+  "checkedOn": "2026-11-05",
+  "phaseId": "L8",
+  "regionId": "1700000000",
+  "regionName": "MIMAROPA",
+  "question": "Do the 13 binomials in the 2024 Lake Naujan risk assessment map to currently accepted fish names?",
+  "sourceReview": "mimaropa-naujan-gilles-2024-nonnative-risk-list-review-20261105.json",
+  "status": "13-exact-accepted-gbif-species-matches;catalog-index-excerpts-agree;locality-crosswalk-pending;research-only",
+  "authority": {
+    "catalogOfFishes": {
+      "name": "Eschmeyer's Catalog of Fishes: Genera, Species, References",
+      "publisher": "California Academy of Sciences, Institute for Biodiversity Science and Sustainability",
+      "onlineVersionUpdated": "2026-08-13",
+      "accessedOn": "2026-11-05",
+      "accessMethod": "Official Catalog search results exposed the exact record names and current-status excerpts. Direct requests for the record pages returned HTTP 403 in this environment; the full record pages were not retrieved.",
+      "interpretation": "Nomenclatural corroboration only. Catalog indexed excerpts do not identify or re-identify Naujan specimens."
+    },
+    "gbifSpeciesApi": {
+      "name": "GBIF Species API v1 match endpoint",
+      "publisher": "GBIF Secretariat",
+      "documentationUrl": "https://techdocs.gbif.org/en/openapi/v1/species",
+      "endpointTemplate": "https://api.gbif.org/v1/species/match?name={URL_ENCODED_BINOMIAL}",
+      "accessedOn": "2026-11-05",
+      "retrieval": "Each of the 13 name-match requests returned HTTP 200 directly from the API. All results were exact, species-rank and ACCEPTED; confidence ranged from 97 to 99.",
+      "interpretation": "GBIF Backbone match results corroborate the names, not the identity of sampled fish, local occurrence, or introduction history."
+    }
+  },
+  "crosswalk": [
+    {"nameAsReported":"Anabas testudineus","catalogAcceptedName":"Anabas testudineus (Bloch 1792)","catalogCurrentStatus":"valid","catalogRecord":"https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Anabas&species=testudineus&tbl=species","catalogAccess":"official-indexed-record-excerpt","gbif":{"canonicalName":"Anabas testudineus","scientificName":"Anabas testudineus (Bloch, 1792)","rank":"SPECIES","status":"ACCEPTED","matchType":"EXACT","confidence":99,"usageKey":2391579,"matchUrl":"https://api.gbif.org/v1/species/match?name=Anabas%20testudineus"}},
+    {"nameAsReported":"Carassius auratus","catalogAcceptedName":"Carassius auratus (Linnaeus 1758)","catalogCurrentStatus":"valid","catalogRecord":"https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Carassius&species=auratus&tbl=species","catalogAccess":"official-indexed-record-excerpt","gbif":{"canonicalName":"Carassius auratus","scientificName":"Carassius auratus (Linnaeus, 1758)","rank":"SPECIES","status":"ACCEPTED","matchType":"EXACT","confidence":99,"usageKey":4286942,"matchUrl":"https://api.gbif.org/v1/species/match?name=Carassius%20auratus"}},
+    {"nameAsReported":"Channa striata","catalogAcceptedName":"Channa striata (Bloch 1793)","catalogCurrentStatus":"valid","catalogRecord":"https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=19505","catalogAccess":"official-indexed-record-excerpt","gbif":{"canonicalName":"Channa striata","scientificName":"Channa striata (Bloch, 1793)","rank":"SPECIES","status":"ACCEPTED","matchType":"EXACT","confidence":99,"usageKey":2391463,"matchUrl":"https://api.gbif.org/v1/species/match?name=Channa%20striata"}},
+    {"nameAsReported":"Clarias batrachus","catalogAcceptedName":"Clarias batrachus (Linnaeus 1758)","catalogCurrentStatus":"valid","catalogRecord":"https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=4642","catalogAccess":"official-indexed-record-excerpt","gbif":{"canonicalName":"Clarias batrachus","scientificName":"Clarias batrachus (Linnaeus, 1758)","rank":"SPECIES","status":"ACCEPTED","matchType":"EXACT","confidence":99,"usageKey":5202683,"matchUrl":"https://api.gbif.org/v1/species/match?name=Clarias%20batrachus"}},
+    {"nameAsReported":"Coptodon zillii","catalogAcceptedName":"Coptodon zillii (Gervais 1848)","catalogCurrentStatus":"valid","catalogRecord":"https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Coptodon&species=zillii&tbl=species","catalogAccess":"official-indexed-record-excerpt","gbif":{"canonicalName":"Coptodon zillii","scientificName":"Coptodon zillii (Gervais, 1848)","rank":"SPECIES","status":"ACCEPTED","matchType":"EXACT","confidence":99,"usageKey":2370703,"matchUrl":"https://api.gbif.org/v1/species/match?name=Coptodon%20zillii"}},
+    {"nameAsReported":"Cyprinus carpio","catalogAcceptedName":"Cyprinus carpio Linnaeus 1758","catalogCurrentStatus":"valid","catalogRecord":"https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=3028","catalogAccess":"official-indexed-record-excerpt","gbif":{"canonicalName":"Cyprinus carpio","scientificName":"Cyprinus carpio Linnaeus, 1758","rank":"SPECIES","status":"ACCEPTED","matchType":"EXACT","confidence":99,"usageKey":4286975,"matchUrl":"https://api.gbif.org/v1/species/match?name=Cyprinus%20carpio"}},
+    {"nameAsReported":"Leiopotherapon plumbeus","catalogAcceptedName":"Leiopotherapon plumbeus (Kner 1864)","catalogCurrentStatus":"valid","catalogRecord":"https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=22356","catalogAccess":"official-indexed-record-excerpt","gbif":{"canonicalName":"Leiopotherapon plumbeus","scientificName":"Leiopotherapon plumbeus (Kner, 1864)","rank":"SPECIES","status":"ACCEPTED","matchType":"EXACT","confidence":99,"usageKey":2374507,"matchUrl":"https://api.gbif.org/v1/species/match?name=Leiopotherapon%20plumbeus"}},
+    {"nameAsReported":"Oreochromis niloticus","catalogAcceptedName":"Oreochromis niloticus (Linnaeus 1758)","catalogCurrentStatus":"valid","catalogRecord":"https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Oreochromis&species=niloticus&tbl=species","catalogAccess":"official-indexed-record-excerpt","gbif":{"canonicalName":"Oreochromis niloticus","scientificName":"Oreochromis niloticus (Linnaeus, 1758)","rank":"SPECIES","status":"ACCEPTED","matchType":"EXACT","confidence":97,"usageKey":4285694,"matchUrl":"https://api.gbif.org/v1/species/match?name=Oreochromis%20niloticus"}},
+    {"nameAsReported":"Poecilia reticulata","catalogAcceptedName":"Poecilia reticulata Peters 1859","catalogCurrentStatus":"valid","catalogRecord":"https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Poecilia&species=reticulata&tbl=species","catalogAccess":"official-indexed-record-excerpt","gbif":{"canonicalName":"Poecilia reticulata","scientificName":"Poecilia reticulata Peters, 1859","rank":"SPECIES","status":"ACCEPTED","matchType":"EXACT","confidence":99,"usageKey":2350050,"matchUrl":"https://api.gbif.org/v1/species/match?name=Poecilia%20reticulata"}},
+    {"nameAsReported":"Poecilia sphenops","catalogAcceptedName":"Poecilia sphenops Valenciennes 1846","catalogCurrentStatus":"valid","catalogRecord":"https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Poecilia&species=sphenops&tbl=species","catalogAccess":"official-indexed-record-excerpt","gbif":{"canonicalName":"Poecilia sphenops","scientificName":"Poecilia sphenops Valenciennes, 1846","rank":"SPECIES","status":"ACCEPTED","matchType":"EXACT","confidence":99,"usageKey":5203748,"matchUrl":"https://api.gbif.org/v1/species/match?name=Poecilia%20sphenops"}},
+    {"nameAsReported":"Pterygoplichthys disjunctivus","catalogAcceptedName":"Pterygoplichthys disjunctivus (Weber 1991)","catalogCurrentStatus":"valid","catalogRecord":"https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=58209","catalogAccess":"official-indexed-record-excerpt","gbif":{"canonicalName":"Pterygoplichthys disjunctivus","scientificName":"Pterygoplichthys disjunctivus (Weber, 1991)","rank":"SPECIES","status":"ACCEPTED","matchType":"EXACT","confidence":99,"usageKey":2340003,"matchUrl":"https://api.gbif.org/v1/species/match?name=Pterygoplichthys%20disjunctivus"}},
+    {"nameAsReported":"Trichopodus pectoralis","catalogAcceptedName":"Trichopodus pectoralis Regan 1910","catalogCurrentStatus":"valid","catalogRecord":"https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=19479","catalogAccess":"official-indexed-record-excerpt","gbif":{"canonicalName":"Trichopodus pectoralis","scientificName":"Trichopodus pectoralis Regan, 1910","rank":"SPECIES","status":"ACCEPTED","matchType":"EXACT","confidence":99,"usageKey":5211177,"matchUrl":"https://api.gbif.org/v1/species/match?name=Trichopodus%20pectoralis"}},
+    {"nameAsReported":"Trichopodus trichopterus","catalogAcceptedName":"Trichopodus trichopterus (Pallas 1770)","catalogCurrentStatus":"valid","catalogRecord":"https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=42008","catalogAccess":"official-indexed-record-excerpt","gbif":{"canonicalName":"Trichopodus trichopterus","scientificName":"Trichopodus trichopterus (Pallas, 1770)","rank":"SPECIES","status":"ACCEPTED","matchType":"EXACT","confidence":99,"usageKey":5211169,"matchUrl":"https://api.gbif.org/v1/species/match?name=Trichopodus%20trichopterus"}}
+  ],
+  "summary": {
+    "sourceNameCount": 13,
+    "exactSpeciesRankAcceptedGbifMatches": 13,
+    "gbifConfidenceRange": [97, 99],
+    "catalogValidStatusExcerpts": 13,
+    "sourceBinomialMatchesAcceptedBinomial": 13,
+    "acceptedNameOrCombinationChanges": 0,
+    "specimenIdentitiesVerified": 0,
+    "naujanLocalityRecordsIndependentlyCrosswalked": 0
+  },
+  "decision": {
+    "nameLevelCrosswalkComplete": true,
+    "sitePresenceIndependentlyVerified": false,
+    "speciesRowsAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "publicAppRowsAdded": 0,
+    "riskOrInvasiveBadgesAdded": 0,
+    "publicationApproval": false,
+    "reason": "All source binomials matched accepted species-rank names in direct GBIF Backbone API responses, and the official Catalog's indexed current-status excerpts agreed. A name match cannot verify the article's fish identifications or their occurrence at Naujan. The 2024 paper remains a risk-assessment synthesis; site-level evidence and reuse permission must be considered separately."
+  },
+  "limitations": [
+    "Direct requests for the Catalog of Fishes record pages returned HTTP 403; its status checks here use official indexed excerpts, not direct page retrieval.",
+    "GBIF usage keys and accepted-name matches are taxonomic-backbone results, not independent occurrence records or specimen identifications.",
+    "The crosswalk does not compare the 13 names against the 2011 MBCFI tables; the existing MBCFI review flags inconsistent totals, unreviewed source-name issues and unresolved reuse terms.",
+    "The 2025-2026 NFRDI announcement reports 43 aquatic taxa but publishes no list in the reviewed summary, so it cannot yet be crosswalked name by name.",
+    "No taxon-specific capture dates, station, abundance, catchability, Philippine-wide nativeness, fishing law, diet, bait, or safety claim is established here."
+  ],
+  "sources": [
+    {"url":"https://www.nfrdi.da.gov.ph/tpjf/vol31_2/research_article_gilles_et_al_31220230083.pdf","supports":"Source spelling and the 13-taxon Naujan risk-assessment set; this is not a new field inventory."},
+    {"url":"https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatmain.asp","supports":"Catalog of Fishes indexed current-status excerpts; direct species-page retrieval returned 403 in this environment."},
+    {"url":"https://techdocs.gbif.org/en/openapi/v1/species","supports":"Official documentation for the GBIF Species API matching service."},
+    {"url":"https://api.gbif.org/v1/species/match?name=Oreochromis%20niloticus","supports":"Example direct GBIF API response; all 13 source-name match endpoints returned HTTP 200, exact species rank and accepted status on 2026-11-05."}
+  ],
+  "nextAction": "Compare source spellings with the 2011 MBCFI Naujan/Butas/tributary tables under a separate historical-source review, and request the taxon/station table plus reuse terms for NFRDI's 2025-2026 assessment. Do not merge source totals or project the 13 names until source-level locality and rights decisions are made."
+}
