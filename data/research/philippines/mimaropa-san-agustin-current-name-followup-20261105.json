@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "mimaropa-san-agustin-current-name-followup-20261105",
+  "checkedOn": "2026-11-05",
+  "phaseId": "L8",
+  "regionId": "1700000000",
+  "regionName": "MIMAROPA",
+  "purpose": "Review two San Agustin survey labels with spelling and current-combination issues against current taxonomic sources.",
+  "relatedReviews": [
+    "mimaropa-san-agustin-2022-estuary-tributary-survey-integrity-review-20261105.json",
+    "mimaropa-san-agustin-gbif-name-crosswalk-20261105.json",
+    "mimaropa-san-agustin-priority-range-authority-triage-20261105.json",
+    "mimaropa-san-agustin-range-followup-20261105.json",
+    "mimaropa-san-agustin-philippine-range-name-followup-20261105.json"
+  ],
+  "method": {
+    "scope": "Focused name-authority check for the source strings Guiris margaritaceus / Guiris margararitaceus and Carangoides talamparoides / Carangoides taramparoides.",
+    "distinction": "GBIF Backbone matches, current taxonomic combinations, broad Philippine range summaries, and specimen identification are separate evidence. These checks do not identify the San Agustin specimens or their sampling reaches.",
+    "evidenceLimit": "No diagnostic specimen review, voucher/accession lookup, or source-author clarification was completed. The article spelling variants remain verbatim; no matching candidate was applied to occurrence data.",
+    "authorityAccess": "The Giuris journal publisher page and indexed IUCN/WoRMS taxon excerpts were reviewed; direct IUCN and WoRMS page retrieval returned HTTP 403 in this review environment. The full 2022 generic revision was not inspected."
+  },
+  "findings": [
+    {
+      "sourceLabel": "Guiris margaritaceus",
+      "withinPaperVariants": [
+        {
+          "label": "Guiris margararitaceus",
+          "location": "Table 2"
+        }
+      ],
+      "nameCrosswalk": "The verbatim Table 1 genus spelling had no strict GBIF match. A separate fuzzy candidate in the retained crosswalk is Giuris margaritacea (GBIF usage key 4285919); the Table 2 misspelling also had no strict match. Neither suggestion was applied.",
+      "currentAuthority": "The 2020 journal publisher record says eight Indo-Pacific Giuris species are recognized using genetic and morphomeristic evidence. The 2025 IUCN assessment’s indexed range summary includes the Philippines and cautions that many records need confirmation following recognition of additional species. This supports broad Philippine range context only; the IUCN page itself could not be opened here.",
+      "disposition": "The source label is plausibly intended as Giuris margaritaceus, but spelling, historical synonymy and the genus’s recently revised species limits warrant voucher-level confirmation. Do not transfer broad Philippine records to the San Agustin survey or assert its exact species identity."
+    },
+    {
+      "sourceLabel": "Carangoides talamparoides",
+      "withinPaperVariants": [
+        {
+          "label": "Carangoides taramparoides",
+          "location": "Table 2"
+        }
+      ],
+      "nameCrosswalk": "The Table 1 source combination matched GBIF’s Backbone exactly as Carangoides talamparoides; the Table 2 spelling variant was a fuzzy candidate for that combination. The accepted GBIF name does not resolve the current generic placement or identify the specimen.",
+      "currentAuthority": "WoRMS’s indexed taxon record classifies Carangoides talamparoides as an unaccepted superseded combination and gives Platycaranx talamparoides as accepted; the direct record page could not be opened here. Kimura, Takeuchi and Yadome published a 2022 generic revision of the former Carangoides group, but its full text was not inspected in this check. Older sources may retain Carangoides.",
+      "disposition": "Treat this as a current-name crosswalk issue, not evidence of a geographic mismatch. Preserve the article’s original name and the newer combination side by side in research metadata; do not rewrite the source or create a San Agustin occurrence row."
+    }
+  ],
+  "disposition": {
+    "sourceLabelsReviewed": 2,
+    "labelsWithBroadPhilippineRangeContextChecked": 1,
+    "currentCombinationChangesFlagged": 1,
+    "newRangeOutliersFlagged": 0,
+    "specimenIdentitiesResolved": 0,
+    "occurrenceAssertions": 0,
+    "waterbodyAssertions": 0,
+    "coordinatesOrGeometryAdded": false,
+    "publicAppRows": 0,
+    "contactSent": false
+  },
+  "nextAction": "Continue the range and current-authority screen for the remaining 30 of 39 Table 1 labels. Keep all four range outliers and unresolved name variants in the voucher-verification queue; do not convert national range or a name match into a San Agustin occurrence claim.",
+  "sources": [
+    {
+      "url": "https://mbimph.com/index.php/UPJOZ/article/view/4989",
+      "supports": "The 2025 article and its Table 1/Table 2 source labels; retained verbatim in the separate crosswalk."
+    },
+    {
+      "url": "https://doi.org/10.26028/cybium/2020-444-004",
+      "supports": "Keith and Mennesson’s 2020 integrative review of Giuris, recognizing multiple Indo-Pacific species using genetic and morphometric evidence."
+    },
+    {
+      "url": "https://sfi-cybium.fr/en/review-giuris-teleostei-eleotridae-indo-pacific-islands-description-three-new-species",
+      "supports": "Publisher record and abstract for the 2020 Giuris integrative review; eight Indo-Pacific species recognized using genetic and morphomeristic approaches."
+    },
+    {
+      "url": "https://doi.org/10.2305/IUCN.UK.2025-1.RLTS.T274979439A246550801.en",
+      "supports": "2025 assessment indexed range excerpt for Giuris margaritaceus, including the Philippines and a caveat that many records need confirmation following recognition of other species; the direct page was not retrievable here."
+    },
+    {
+      "url": "https://www.marinespecies.org/aphia.php?id=218389&p=taxdetails",
+      "supports": "WoRMS indexed taxon result marks Carangoides talamparoides as a superseded combination and Platycaranx talamparoides as accepted; direct page retrieval returned HTTP 403."
+    },
+    {
+      "url": "https://doi.org/10.1007/s10228-021-00850-1",
+      "supports": "Primary generic-revision citation identified for follow-up; full paper not inspected in this review."
+    },
+    {
+      "url": "https://api.gbif.org/v1/species/match?name=Carangoides%20talamparoides&strict=true",
+      "supports": "The exact GBIF Backbone name match retained in the separate 39-label crosswalk; not specimen identification or the final current combination."
+    }
+  ]
+}

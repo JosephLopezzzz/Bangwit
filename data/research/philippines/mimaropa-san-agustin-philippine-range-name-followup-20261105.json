@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "mimaropa-san-agustin-philippine-range-name-followup-20261105",
+  "checkedOn": "2026-11-05",
+  "phaseId": "L8",
+  "regionId": "1700000000",
+  "regionName": "MIMAROPA",
+  "purpose": "Cross-check two internally inconsistent San Agustin source labels against current fish-name authorities and independent Philippine distribution references.",
+  "relatedReviews": [
+    "mimaropa-san-agustin-2022-estuary-tributary-survey-integrity-review-20261105.json",
+    "mimaropa-san-agustin-gbif-name-crosswalk-20261105.json",
+    "mimaropa-san-agustin-priority-range-authority-triage-20261105.json",
+    "mimaropa-san-agustin-range-followup-20261105.json"
+  ],
+  "method": {
+    "scope": "Focused nomenclature and country-range context for the Stiphodon atroporporeus and Rhynchorhampos georgii Table 1 labels and their within-paper spelling variants.",
+    "distinction": "The GBIF candidate matches and Catalog of Fishes accepted-name records are nomenclatural evidence. Independent Philippine distribution papers support geographic plausibility only; they do not confirm the San Agustin specimens or exact sampling reaches.",
+    "evidenceLimit": "No new inspection of diagnostic specimen characters, specimen images, or repository vouchers was performed. The paper reports no accession identifiers, and spellings vary among its tables and caption."
+  },
+  "findings": [
+    {
+      "sourceLabel": "Stiphodon atroporporeus",
+      "withinPaperVariants": [
+        { "label": "Stiphodon artropurpureus", "location": "Table 2" },
+        { "label": "Stiphodon atropurporeus", "location": "plate caption" }
+      ],
+      "candidateName": "Stiphodon atropurpureus",
+      "nomenclature": "The source spellings are inconsistent; the GBIF crosswalk recorded fuzzy candidates for the Table 1 and caption forms, while the Table 2 form matched only to genus. Eschmeyer's Catalog of Fishes lists Stiphodon atropurpureus as valid and gives a range extending from Malaysia, Vietnam and Indonesia east to the Philippines and north to Japan.",
+      "independentPhilippinesContext": "Maeda and Palla (2015) list S. atropurpureus among three valid Philippine Stiphodon species, document its Philippine type-history and voucher material from Leyte and Palawan, and describe it as likely common in Luzon and the Visayan Islands. The article also cautions that precise Philippine distribution information is incomplete.",
+      "disposition": "Philippine range is plausible, but the exact San Agustin specimens and site-level occurrences remain unverified. Preserve all source strings and prioritize the RSU accession crosswalk and diagnostic material."
+    },
+    {
+      "sourceLabel": "Rhynchorhampos georgii",
+      "withinPaperVariants": [
+        { "label": "Rhynchorhamphos georgii", "location": "plate caption" }
+      ],
+      "candidateName": "Rhynchorhamphus georgii",
+      "nomenclature": "The crosswalk recorded a fuzzy species-rank candidate for the plate-caption variant; Eschmeyer's Catalog of Fishes lists Rhynchorhamphus georgii as valid and gives an Indo-West Pacific range extending east to the Philippines.",
+      "independentPhilippinesContext": "The authority range is consistent with Philippine regional presence, but does not identify the reported San Agustin fish or associate it with a specific estuary/river reach.",
+      "disposition": "No new range outlier flagged. Retain the Table 1 and caption spellings verbatim until the voucher or diagnostic material is checked."
+    }
+  ],
+  "disposition": {
+    "labelsWithPhilippineRangeContextChecked": 2,
+    "newRangeOutliersFlagged": 0,
+    "specimenIdentitiesResolved": 0,
+    "occurrenceAssertions": 0,
+    "waterbodyAssertions": 0,
+    "coordinatesOrGeometryAdded": false,
+    "publicAppRows": 0,
+    "contactSent": false
+  },
+  "nextAction": "A follow-up checks current-name issues for Guiris margaritaceus and Carangoides talamparoides. Continue the range and current-authority screen for the remaining 30 Table 1 labels; keep the four outliers and inconsistent names in the voucher-verification queue, and do not turn national distribution into a San Agustin occurrence claim. See mimaropa-san-agustin-current-name-followup-20261105.json.",
+  "sources": [
+    {
+      "url": "https://mbimph.com/index.php/UPJOZ/article/view/4989",
+      "supports": "The 2025 San Agustin article and its Table 1/Table 2/plate spelling variants for the two labels."
+    },
+    {
+      "url": "https://api.gbif.org/v1/species/match?name=Stiphodon%20atropurpureus&strict=true",
+      "supports": "Accepted-name candidate metadata context retained in the separate 39-label GBIF crosswalk; does not establish local specimens or occurrence."
+    },
+    {
+      "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Stiphodon&tbl=species",
+      "supports": "Eschmeyer's Catalog of Fishes indexed current valid status and range snippet for Stiphodon atropurpureus; direct page retrieval returned HTTP 403 in this review environment."
+    },
+    {
+      "url": "https://doi.org/10.11646/zootaxa.4018.3.3",
+      "supports": "Maeda and Palla (2015) primary Philippine Stiphodon taxonomy and distribution context, including the paper's stated limit on precise distribution knowledge."
+    },
+    {
+      "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=14119",
+      "supports": "Eschmeyer's Catalog of Fishes current accepted status and Indo-West Pacific distribution of Rhynchorhamphus georgii."
+    }
+  ]
+}
