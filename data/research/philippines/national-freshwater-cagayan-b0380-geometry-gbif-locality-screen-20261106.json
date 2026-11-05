@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "reviewedOn": "2026-11-06",
-  "status": "cagayan-b0380-geometry-screened;gbif-window-bounded;neostethus-locality-crosswalk-reviewed;mugil-historical-cagayan-river-report-reviewed;nomorhamphus-rossi-locality-crosswalk-reviewed;research-only;no-public-app-rows",
+  "status": "cagayan-b0380-geometry-screened;gbif-window-bounded;neostethus-locality-crosswalk-reviewed;mugil-historical-cagayan-river-report-reviewed;nomorhamphus-rossi-locality-crosswalk-reviewed;anguilla-ab469437-feed-duplicate-crosswalk-reviewed;research-only;no-public-app-rows",
   "purpose": "Crosswalk the global dataset's Cagayan drainage-basin geometry with independently sourced locality evidence and a bounded GBIF coordinate search. This is not a complete Cagayan fish inventory.",
   "basinGeometry": {
     "sourceId": "ding-2026-global-freshwater-fish-drainage-basin-dataset-2024",
@@ -69,7 +69,8 @@
         "gbifTaxonKey": 5853944,
         "coordinateBearingRows": 36,
         "distinctSequenceAccessions": 35,
-        "duplicateFeedRecord": "AB469437 appears once in the NCBI-mined feed and once in the INSDC Sequences feed.",
+        "duplicateFeedRecord": "GBIF records 2250110210 (iBOL/BOLD record GBMNA14387-19, mined from GenBank) and 3346179802 (INSDC/ENA occurrenceID AB469437) both resolve to accession AB469437.1. The 1,590-bp BOLD COI-5P sequence is an exact substring of that accession's mitochondrial genome. Treat them as two feed representations of one accession, not independent fish records.",
+        "feedDuplicateCrosswalkArtifact": "national-freshwater-cagayan-anguilla-luzonensis-ab469437-feed-duplicate-crosswalk-20261106.json",
         "coordinateEvidence": {
           "distinctCoordinates": 1,
           "sharedCoordinate": "17.61 N, 121.76 E",
@@ -81,7 +82,7 @@
           "catalogNumbersPresent": 0,
           "coordinateUncertaintyValuesPresent": 0
         },
-        "localityInterpretation": "GBIF rows report Luzon/Cagayan River-system text, but all 36 rows share the same coarse coordinate. The DDBJ source accession AB469437 independently records the same shared point and a 2008-02-08 collection date, but supplies no physical voucher/catalog number or exact sampling reach. This is one historical sequence-locality lead, not 36 independent specimen locations or a precise station. A GBIF example is https://www.gbif.org/occurrence/3346179802."
+        "localityInterpretation": "The primary accession reports Philippines:Luzon, Kagayan River System, collection date 2008-02-08, and coordinate 17.61 N, 121.76 E. Both matching GBIF rows repeat that date and coordinate; the DDBJ/BOLD/ENA records provide no physical museum voucher or exact sampling reach. This is one historical sequence-locality lead, not 36 independent specimen locations or a precise station. GBIF assumes WGS84 and reports no coordinate uncertainty."
       },
       {
         "scientificName": "Nomorhamphus rossi",
@@ -184,7 +185,7 @@
   },
   "interpretation": [
     "The dataset’s B0380 Cagayan geometry is a northern Luzon drainage-basin polygon; the similar name Cagayan de Misamis in Mindanao refers to a separate locality.",
-    "For Nomorhamphus rossi, a co-located herpetofauna site coordinate falls within an independent modeled Cagayan catchment polygon, but it is not the fish voucher coordinate and was not tested against B0380's polygon. The Anguilla luzonensis shared coordinate was tested within B0380 but is not a precise sampling reach.",
+    "For Nomorhamphus rossi, a co-located herpetofauna site coordinate falls within an independent modeled Cagayan catchment polygon, but it is not the fish voucher coordinate and was not tested against B0380's polygon. For Anguilla luzonensis, the two GBIF rows resolve to one accession and share a coarse coordinate that falls within B0380; this is not an exact sampling reach or independent voucher evidence.",
     "The market-based Mugil and Glossogobius records remain vendor-vicinity claims, not exact basin collection localities.",
     "The eight-name basin candidate set remains discovery-only and incomplete. Review each taxon's underlying source separately and keep Cagayan River reaches, tributaries, lakes, reservoirs, and administrative areas distinct.",
     "For Neostethus villadolidi, the historical type locality “Cagayan de Misamis” is in Mindanao. Parenti (1989) gives a broad national range phrase but no B0380-specific locality in the reviewed material. No absence is inferred from missing locality detail or the bounded GBIF zero."
@@ -230,6 +231,11 @@
     {
       "url": "https://www.gbif.org/occurrence/3346179802",
       "supports": "Example GBIF occurrence row associated with eel sequence accession AB469437."
+    },
+    {
+      "sourceId": "bold-gbmna14387-19-ab469437-sequence-crosswalk",
+      "url": "https://portal.boldsystems.org/record/GBMNA14387-19",
+      "supports": "BOLD GBMNA14387-19 is labeled as mined from GenBank and links to AB469437; its barcode is an exact substring of the DDBJ complete mitochondrial genome."
     },
     {
       "sourceId": "brown-et-al-2013-northern-sierra-madre-herpetofauna-via-hot-springs-coordinate",

@@ -1,0 +1,201 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-11-06",
+  "status": "historical-sequence-accession-crosswalk-reviewed;two-gbif-feed-rows-resolve-to-one-accession;exact-bold-coi-subsequence-match;coarse-locality-only;no-physical-voucher;research-only;no-public-app-rows",
+  "purpose": "Reconcile the two coordinate-bearing GBIF feed records associated with Anguilla luzonensis accession AB469437 and determine whether they are independent specimen/locality evidence.",
+  "candidate": {
+    "sourceArtifact": "national-freshwater-fish-basin-candidate-extract-20261106.json",
+    "basinScreenArtifact": "national-freshwater-cagayan-b0380-geometry-gbif-locality-screen-20261106.json",
+    "basinId": "B0380",
+    "basinName": "Cagayan",
+    "scientificName": "Anguilla luzonensis",
+    "gbifTaxonKey": 5853944,
+    "candidateRole": "Discovery candidate only; the global dataset reference list is not a verified source-to-basin evidence chain."
+  },
+  "primaryAccession": {
+    "sourceId": "ddbj-anguilla-luzonensis-ab469437-cagayan-sequence",
+    "database": "DNA Data Bank of Japan / INSDC",
+    "accession": "AB469437.1",
+    "definition": "Anguilla luzonensis mitochondrial DNA, complete genome",
+    "lengthBasePairs": 16635,
+    "submitted": "2008-11-06",
+    "collectionDate": "2008-02-08",
+    "reportedLocality": "Philippines:Luzon, Kagayan River System",
+    "reportedCoordinates": "17.61 N, 121.76 E",
+    "identifiedBy": "Shun Watanabe",
+    "collectedBy": "Jun Aoyama",
+    "physicalVoucherCatalogNumber": null,
+    "interpretation": "Primary submitter metadata documents a historical sequence collection locality at broad river-system scale. The accession does not identify a physical voucher or an exact reach in the reviewed fields."
+  },
+  "gbifQuery": {
+    "endpoint": "https://api.gbif.org/v1/occurrence/search",
+    "parameters": {
+      "scientificName": "Anguilla luzonensis",
+      "hasCoordinate": true,
+      "decimalLatitude": "17.5,17.7",
+      "decimalLongitude": "121.6,121.9",
+      "limit": 300
+    },
+    "checkedOn": "2026-11-06",
+    "returnedRows": 36,
+    "rowsMatchedToAccession": [2250110210, 3346179802],
+    "responseStored": false
+  },
+  "gbifFeedRows": [
+    {
+      "gbifId": 2250110210,
+      "sourceId": "gbif-ibol-lake-danao-barcode-records",
+      "datasetKey": "040c5662-da76-4782-a48e-cdea1892d14c",
+      "datasetTitle": "International Barcode of Life project (iBOL)",
+      "publisher": "International Barcode of Life Consortium / BOLD Data Systems",
+      "occurrenceId": "GBMNA14387-19",
+      "boldProcessId": "GBMNA14387-19",
+      "boldSampleId": "AB469437",
+      "boldFieldId": "AB469437",
+      "boldMuseumId": null,
+      "gbifScientificName": "BOLD:AAJ2678",
+      "gbifTaxonRank": "UNRANKED",
+      "gbifSpeciesField": "Anguilla luzonensis",
+      "gbifIssues": [
+        "TAXON_CONCEPT_ID_NOT_FOUND",
+        "TAXON_ID_NOT_FOUND"
+      ],
+      "basisOfRecord": "MATERIAL_SAMPLE",
+      "eventDate": "2008-02-08",
+      "decimalLatitude": 17.61,
+      "decimalLongitude": 121.76,
+      "coordinateUncertaintyInMeters": null,
+      "locality": null,
+      "associatedSequence": "https://www.ncbi.nlm.nih.gov/nuccore/AB469437",
+      "boldRecord": "https://portal.boldsystems.org/record/GBMNA14387-19",
+      "boldRecordDetails": {
+        "identification": "Anguilla luzonensis",
+        "marker": "COI-5P",
+        "sequenceLengthBasePairs": 1590,
+        "sequenceRunSite": "Mined from GenBank, NCBI",
+        "specimenDepository": "Mined from GenBank, NCBI",
+        "site": null,
+        "coordAccuracy": null,
+        "associatedSpecimens": null,
+        "voucherType": null,
+        "museumId": null
+      },
+      "interpretation": "This BOLD/iBOL feed row is a GenBank-mined barcode representation of accession AB469437. Its GBIF indexed scientificName is an unranked BIN, while the BOLD record has a species identification. It is not a second physical fish record."
+    },
+    {
+      "gbifId": 3346179802,
+      "sourceId": "gbif-insdc-sequences-lake-danao-albay-records",
+      "datasetKey": "d8cd16ba-bb74-4420-821e-083f2bac17c2",
+      "datasetTitle": "INSDC Sequences",
+      "publisher": "European Nucleotide Archive (EMBL-EBI)",
+      "occurrenceId": "AB469437",
+      "basisOfRecord": "MATERIAL_SAMPLE",
+      "datasetCategory": "eDNA",
+      "scientificName": "Anguilla luzonensis Watanabe, Aoyama & Tsukamoto, 2009",
+      "eventDate": "2008-02-08",
+      "decimalLatitude": 17.61,
+      "decimalLongitude": 121.76,
+      "coordinateUncertaintyInMeters": null,
+      "locality": "Luzon, Kagayan River System",
+      "gbifIssues": [
+        "GEODETIC_DATUM_ASSUMED_WGS84",
+        "CONTINENT_DERIVED_FROM_COORDINATES",
+        "TAXON_CONCEPT_ID_NOT_FOUND",
+        "TAXON_ID_NOT_FOUND"
+      ],
+      "associatedSequence": "https://www.ebi.ac.uk/ena/browser/api/embl/AB469437",
+      "interpretation": "This is the sequence-accession feed representation for the same accession. The eDNA dataset-category field is a GBIF dataset label and is not, by itself, verified evidence of environmental sampling method for this animal mitochondrial genome."
+    }
+  ],
+  "sequenceCrossCheck": {
+    "boldSourceId": "bold-gbmna14387-19-ab469437-sequence-crosswalk",
+    "boldRecord": "GBMNA14387-19",
+    "accession": "AB469437.1",
+    "boldMarker": "COI-5P",
+    "boldSequenceLengthBasePairs": 1590,
+    "accessionLengthBasePairs": 16635,
+    "accessionCoIFeature": "DDBJ annotation positions 5500..7092 (1593 bp)",
+    "exactMatch": {
+      "accessionStartPositionOneBased": 5500,
+      "accessionEndPositionOneBased": 7089,
+      "matchedBasePairs": 1590,
+      "mismatches": 0,
+      "exactSubstring": true
+    },
+    "method": "Fetched the BOLD Portal record/API output for process ID GBMNA14387-19 and the public ENA FASTA mirror for AB469437.1 into transient process memory, then compared the 1590-base BOLD COI-5P sequence against the DDBJ-annotated COI region. The BOLD sequence exactly matches accession positions 5500 through 7089. No full sequence, API response, or sequence file was written to the repository.",
+    "interpretation": "The barcode sequence is directly derived from the same INSDC mitochondrial-genome accession rather than an independently sequenced specimen record."
+  },
+  "localityAndGeometry": {
+    "sharedCoordinate": {
+      "latitude": 17.61,
+      "longitude": 121.76,
+      "printedPrecisionDegrees": 2,
+      "coordinateUncertaintyMeters": null,
+      "datum": "GBIF reports WGS84 as assumed; DDBJ submitter field does not state a datum.",
+      "distinctCoordinatesTestedAgainstB0380": 1,
+      "pointInB0380Polygon": true
+    },
+    "localityString": "Luzon, Kagayan River System",
+    "spatialInterpretation": "The coordinate falls within B0380 in the previously documented polygon test, but it is shared by sequence-feed records, rounded to two decimal degrees, and has no reported uncertainty. It supports only a coarse historical sequence-locality lead; it is not a surveyed station, exact reach, or independently verified fish-voucher point.",
+    "duplicateInterpretation": "The two feed rows repeat the same accession, collection date, and coordinate. Together with the exact sequence-substring match and BOLD's GenBank-mined label, they represent one accession lineage, not two independent fish occurrences."
+  },
+  "limitations": [
+    "No physical museum or institutional voucher number was found in the DDBJ/BOLD fields reviewed; BOLD's internal specimen identifier is not treated as a museum catalog number.",
+    "The broad Kagayan River System locality does not resolve a sampling reach, tributary, or point on the river network.",
+    "The repeated coordinate has no reported uncertainty; GBIF notes that WGS84 was assumed during interpretation.",
+    "The BOLD GBIF row has unranked BIN scientificName and GBIF taxon-identifier issues despite a species field and BOLD identification; do not treat its indexed name as a clean independent species determination.",
+    "The INSDC GBIF row carries datasetCategory=eDNA, but that dataset-level label alone does not establish the collection or sequencing method for this record.",
+    "The historical accession does not establish current presence, abundance, basin-wide distribution, catchability, or access."
+  ],
+  "disposition": {
+    "twoFeedRowsAreIndependentFishRecords": false,
+    "oneSharedAccessionConfirmed": true,
+    "physicalVoucherEstablished": false,
+    "exactReachEstablished": false,
+    "pointInB0380Polygon": true,
+    "currentPresenceEstablished": false,
+    "publicSpeciesRowsAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "geometryAdded": false,
+    "dietOrBaitClaimsAdded": 0,
+    "legalOrSafetyClaimsAdded": 0,
+    "publicationApproval": false,
+    "reason": "Both GBIF feed rows point to one sequence accession and repeat its coordinate/date. The geographic point is coarse and lacks voucher or exact-reach anchors; this remains historical research-only evidence."
+  },
+  "sources": [
+    {
+      "sourceId": "ddbj-anguilla-luzonensis-ab469437-cagayan-sequence",
+      "url": "https://getentry.ddbj.nig.ac.jp/getentry/na/AB469437/?filetype=html",
+      "supports": "Primary accession version, full mitochondrial-genome description, submitter locality, coordinate, collection date, collectors, and identification."
+    },
+    {
+      "sourceId": "bold-gbmna14387-19-ab469437-sequence-crosswalk",
+      "url": "https://portal.boldsystems.org/record/GBMNA14387-19",
+      "supports": "BOLD process/sample/field IDs, GenBank-mined provenance, species identification, COI-5P length, lack of museum ID and exact site, and the sequence compared with AB469437.1."
+    },
+    {
+      "sourceId": "gbif-ibol-lake-danao-barcode-records",
+      "url": "https://www.gbif.org/occurrence/2250110210",
+      "supports": "GBIF record ID, iBOL dataset assignment, BIN-valued indexed name, species field, coordinate, event date, sequence link, and quality issues."
+    },
+    {
+      "sourceId": "gbif-insdc-sequences-lake-danao-albay-records",
+      "url": "https://www.gbif.org/occurrence/3346179802",
+      "supports": "GBIF INSDC record ID, accession occurrence ID, locality, date, coordinate and ENA sequence link."
+    },
+    {
+      "sourceId": "ding-2026-global-freshwater-fish-drainage-basin-dataset-2024",
+      "url": "https://zenodo.org/records/19511163",
+      "supports": "Global dataset basin B0380 Cagayan polygon previously tested against the rounded sequence-locality coordinate."
+    }
+  ],
+  "sourcePolicy": {
+    "registryFile": "sources.json",
+    "registryEntriesAdded": 1,
+    "registryCountBefore": 757,
+    "registryCountAfter": 758,
+    "rawSequencesStored": false,
+    "fullApiResponsesStored": false,
+    "reuseReview": "The GBIF iBOL and INSDC dataset metadata lists CC BY 4.0. No separate BOLD record-level sequence license review or public-app reuse approval was performed."
+  }
+}
