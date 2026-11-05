@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "mimaropa-san-agustin-range-authority-followup-13-20261106",
+  "checkedOn": "2026-11-06",
+  "phaseId": "L8",
+  "regionId": "1700000000",
+  "regionName": "MIMAROPA",
+  "purpose": "Screen the final two pending San Agustin Table 1 labels, Stenogobius genivittatus and Terapon jarbua, against the existing strict GBIF crosswalk, current fish authority, and Philippine inland-water context.",
+  "relatedReviews": [
+    "mimaropa-san-agustin-2022-estuary-tributary-survey-integrity-review-20261105.json",
+    "mimaropa-san-agustin-gbif-name-crosswalk-20261105.json",
+    "mimaropa-san-agustin-range-authority-followup-12-20261106.json"
+  ],
+  "method": {
+    "scope": "Name, current-authority, and Philippines freshwater/brackish context screen for the two verbatim source labels.",
+    "distinction": "The strict GBIF crosswalk returns exact accepted species-rank matches for both labels. Independent Philippine river/lake sources support national and inland-water context, but do not identify either specimen in the separate 2025 RSU San Agustin survey.",
+    "evidenceLimit": "A 2023 integrative revision synonymized the Philippine river goby name Stenogobius kyphosus under S. genivittatus; an aggregator also indexes an older NMI specimen as S. genivittatus from Pajo River, Virac. These historical/aggregated records are separate from the 2025 survey material. Terapon jarbua appears in a Taal Lake fishery resource list, but that list is not a voucher-linked specimen record from the San Agustin survey.",
+    "sourceReuse": "Retain attributed summaries, source labels, and links only. No specimen images, sequence data, coordinates, or copied source tables are included. Research-only; no public-app publication or derived checklist is approved."
+  },
+  "findings": [
+    {
+      "sourceLabel": "Stenogobius genivittatus",
+      "nameCrosswalk": "The existing strict GBIF Backbone crosswalk returned an exact accepted species-rank match (usage key 2377230; confidence 99). Preserve the printed label; a name match does not verify a specimen.",
+      "currentAuthority": "Causse et al. (2023) revised the S. genivittatus complex using morphology and COI and treated 12 nominal names as synonyms of S. genivittatus. The current Catalog of Fishes records S. kyphosus, described from Mahinog River, Camiguin with USNM type material, as a synonym of S. genivittatus. A later revision distinguishes Luzon type material of S. lacrymosus under S. ophthalmoporus; do not conflate that congener with the source label.",
+      "philippineContext": "Philippine freshwater context exists: the Catalog records the Camiguin river type series under the historical name S. kyphosus, now synonymized with S. genivittatus. FishBase's museum-occurrence index separately lists NMI 11910 from Pajo River, Sto. Domingo, Virac, collected 2 July 1981 under S. genivittatus. The FishBase record attributes its entry to an older secondary reference; it is an indexed museum record, not a direct retrieval of the NMI catalogue and not the RSU specimen.",
+      "disposition": "Retain the printed name as an accepted-name crosswalk. Philippine river records make the name biogeographically plausible, but neither the historical type series nor the secondary-indexed museum record identifies the 2025 San Agustin fish or its reach. No new range-authority discrepancy or voucher-priority mismatch is added.",
+      "priority": "obtain the 2025 RSU voucher/catalogue identifier and diagnostic or linked sequence evidence before treating the printed name as a verified site occurrence"
+    },
+    {
+      "sourceLabel": "Terapon jarbua",
+      "nameCrosswalk": "The existing strict GBIF Backbone crosswalk returned an exact accepted species-rank match (usage key 2374521; confidence 99). Preserve the printed spelling; this does not identify the San Agustin specimen.",
+      "currentAuthority": "The current Catalog of Fishes treats Terapon jarbua as valid and gives freshwater, brackish, and marine habitat. Its abbreviated range summary does not explicitly name the Philippines; that omission is not evidence of absence and is not counted as a range discrepancy.",
+      "philippineContext": "A Philippine Journal of Fisheries article on Lake Taal fishery resources lists T. jarbua (local name Bagaong) among the lake's fishes and classifies it as migratory. This is inland-water resource context, not a voucher-linked modern survey at the RSU sites. A separate Philippine population-genetics study sampled fish obtained through fishers and vendors in nine coastal localities, including Balayan, Batangas; its landing/market sampling does not fix every fish's capture reach.",
+      "disposition": "Retain the source label as an accepted-name crosswalk. The Lake Taal account supports Philippine inland-water context, while the separate coastal study supports broader Philippine context; neither identifies the 2025 San Agustin specimen or reach. No new range-authority discrepancy or voucher-priority mismatch is added.",
+      "priority": "obtain the 2025 RSU voucher/catalogue identifier and reach crosswalk before assigning a local occurrence"
+    }
+  ],
+  "disposition": {
+    "sourceLabelsReviewed": 2,
+    "newRangeAuthorityDiscrepanciesNotCountedAsOutliers": 0,
+    "newVoucherPriorityRangeMismatchesFlagged": 0,
+    "totalVoucherPriorityRangeMismatchesAfterReview": 6,
+    "totalRangeAuthorityDiscrepanciesNotCountedAsOutliersAfterReview": 5,
+    "sourceLabelsReviewedOf39": 38,
+    "sourceLabelsRemainingForRangeAndAuthorityScreen": 1,
+    "specimenIdentitiesResolved": 0,
+    "occurrenceAssertions": 0,
+    "waterbodyAssertions": 0,
+    "coordinatesOrGeometryAdded": false,
+    "publicAppRows": 0,
+    "publicationApproval": false,
+    "contactSent": false
+  },
+  "nextAction": "Screen the final Table 1 label, Toxotes jaculatrix, against current fish authorities and Philippine freshwater field evidence; then search for the RSU voucher/accession crosswalk and resolve the survey's station/locality conflicts before considering occurrence rows.",
+  "sources": [
+    {
+      "url": "https://mbimph.com/index.php/UPJOZ/article/view/4989",
+      "supports": "The 2025 San Agustin survey's verbatim Table 1 label, reported specimen repository, and the absence of published specimen accession numbers and a station-by-waterbody coordinate crosswalk."
+    },
+    {
+      "url": "https://api.gbif.org/v1/species/match?name=Stenogobius%20genivittatus&strict=true",
+      "supports": "Existing strict GBIF accepted species-rank match for Stenogobius genivittatus (usage key 2377230; confidence 99)."
+    },
+    {
+      "url": "https://api.gbif.org/v1/species/match?name=Terapon%20jarbua&strict=true",
+      "supports": "Existing strict GBIF accepted species-rank match for Terapon jarbua (usage key 2374521; confidence 99)."
+    },
+    {
+      "url": "https://sfi-cybium.fr/en/stenogobius-teleostei-gobioidei-indian-pacific-island-rivers",
+      "supports": "Causse et al. (2023), morphology/COI revision of Stenogobius and synonymization of 12 nominal names under S. genivittatus."
+    },
+    {
+      "url": "https://research.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=59895",
+      "supports": "Catalog of Fishes treatment of Stenogobius kyphosus, including the Mahinog River, Camiguin type locality and its current synonymy under S. genivittatus."
+    },
+    {
+      "url": "https://fishbase.net.br/museum/SpecOccurrences.php?catnum2=101732",
+      "supports": "FishBase-indexed museum occurrence NMI 11910 for S. genivittatus from Pajo River, Sto. Domingo, Virac, dated 2 July 1981; the record cites an older secondary reference."
+    },
+    {
+      "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=19627",
+      "supports": "Current Catalog of Fishes status and freshwater/brackish/marine habitat for Terapon jarbua; its abbreviated range paragraph does not explicitly name the Philippines."
+    },
+    {
+      "url": "https://nfrdi.da.gov.ph/tpjf/vol25/Status%20of%20Taal%20Lake%20Fishery%20Resources%20with%20Emphasis%20on%20the%20Endemic%20Freshwater%20Sardine%2C%20Sardinella%20tawilis%20%28Herre%2C%201927%29.pdf",
+      "supports": "Philippine Journal of Fisheries Lake Taal fishery resource list identifying T. jarbua (Bagaong) and classifying it as migratory; not a voucher-linked RSU record."
+    },
+    {
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S2352485522003814",
+      "supports": "Boquiren and Quilang (2023), Philippine T. jarbua population study based on fish obtained from fishers/vendors in nine coastal localities, including Balayan, Batangas; source-provenance caveat retained."
+    }
+  ]
+}
