@@ -1,0 +1,159 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "mimaropa-naujan-2011-gilles-2024-locality-crosswalk-20261105",
+  "checkedOn": "2026-11-05",
+  "phaseId": "L8",
+  "regionId": "1700000000",
+  "regionName": "MIMAROPA",
+  "question": "What independent historical locality support exists for the 13 taxa listed by the 2024 Lake Naujan risk assessment?",
+  "assessmentReview": "mimaropa-naujan-gilles-2024-nonnative-risk-list-review-20261105.json",
+  "status": "2011-historical-table-crosswalk-reviewed;11-of-13-source-name-matches;9-tributary-table-leads;one-genus-only-match-held;one-separate-2023-field-record;research-only",
+  "method": {
+    "historicalSource": "Downloaded the publisher-hosted MBCFI PDF and visually checked the fish tables on PDF pages 150-151 (printed pages 130-131); text extraction was used only as a transcription cross-check.",
+    "pdfSha256": "75025060DAAD2DFEDC7DB129B60205EDDE033990CB254E5D7A0516D542E254B3",
+    "tableHandling": "The 2011 tables' full rows, exact presence-cell matrix, and station locations are not reproduced in this artifact. The crosswalk stores only the requested source-name match outcomes and aggregate tributary-match count.",
+    "taxonomicHandling": "Source names are cross-referenced to the already-reviewed 2024 GBIF/Catalog name crosswalk. A backbone match does not re-identify a historical specimen.",
+    "scope": "Historical 2011 survey tables for Naujan Lake, Butas River, and 15 named tributaries. Fish-specific campaign dates and voucher accession identifiers were not verified."
+  },
+  "source": {
+    "sourceId": "mbcfi-2011-naujan-lake-national-park-profile",
+    "title": "Naujan Lake National Park Site Assessment and Profile Updating",
+    "publisher": "Mindoro Biodiversity Conservation Foundation Inc.",
+    "publicationYear": 2011,
+    "url": "https://www.mbcfi.org.ph/wp-content/uploads/2022/03/6_Naujan_Lake_National_Park_Profile.pdf",
+    "checkedPages": {
+      "pdfPages": [150, 151],
+      "printedPages": [130, 131],
+      "tables": ["3.2.3.1.1", "3.2.3.1.2"]
+    },
+    "reuse": {
+      "sourceNotice": "All rights reserved. The profile says reproduction for resale or other commercial purposes requires express written permission.",
+      "appReusePermissionVerified": false,
+      "fullTableReproduced": false
+    }
+  },
+  "comparison": {
+    "assessmentTaxa": 13,
+    "taxaListedBySourceNameOrCurrentTaxonomicCombinationInThe2011LakeButasTable": 11,
+    "taxaWithOneOrMorePositiveMarkersInThe2011TributaryTable": 9,
+    "genusOnlyMatchInsufficientForSpeciesIdentity": 1,
+    "notListedInTheReviewed2011FishTables": 1,
+    "historicalCellMatrixStored": false,
+    "stationCoordinatesOrGeometryAvailableFromTheseTables": false,
+    "richnessTotalsMerged": false,
+    "countConflict": "The profile prose says 20 fish species were documented in Naujan Lake, while its lake/Butas table totals 25 lake and 22 Butas River detections. The source-internal difference remains unresolved."
+  },
+  "taxonCrosswalk": [
+    {
+      "assessmentName": "Anabas testudineus",
+      "historicalTableName": "Anabas testudineus",
+      "result": "historical-source-name-match",
+      "tributaryTable": "not listed among the 2011 tributary-table taxa"
+    },
+    {
+      "assessmentName": "Carassius auratus",
+      "historicalTableName": "Carassius sp.",
+      "result": "held-genus-only-match",
+      "tributaryTable": "not listed among the 2011 tributary-table taxa",
+      "note": "The 2011 genus-only entry does not establish that the fish was C. auratus. The profile's separate local-name explanation is not a specimen identification."
+    },
+    {
+      "assessmentName": "Channa striata",
+      "historicalTableName": "Channa striata",
+      "result": "historical-source-name-match",
+      "tributaryTable": "one-or-more-positive-markers"
+    },
+    {
+      "assessmentName": "Clarias batrachus",
+      "historicalTableName": "Clarias batrachus",
+      "result": "historical-source-name-match",
+      "tributaryTable": "one-or-more-positive-markers"
+    },
+    {
+      "assessmentName": "Coptodon zillii",
+      "historicalTableName": "Tilapia zillii",
+      "result": "historical-name-combination-crosswalk",
+      "tributaryTable": "one-or-more-positive-markers",
+      "note": "Retain the 2011 source combination. The current-name crosswalk does not independently verify the fish identification."
+    },
+    {
+      "assessmentName": "Cyprinus carpio",
+      "historicalTableName": "Cyprinus carpio carpio",
+      "result": "historical-infraspecific-name-crosswalk",
+      "tributaryTable": "not listed among the 2011 tributary-table taxa",
+      "note": "The source uses a trinomial; retain its rank and spelling rather than treating it as a new specimen identification."
+    },
+    {
+      "assessmentName": "Leiopotherapon plumbeus",
+      "historicalTableName": "Leiopotherapon plumbeus",
+      "result": "historical-source-name-match",
+      "tributaryTable": "one-or-more-positive-markers",
+      "note": "The 2024 paper frames this as introduced to Lake Naujan; it is endemic to the Philippines. Do not label it nationally non-native."
+    },
+    {
+      "assessmentName": "Oreochromis niloticus",
+      "historicalTableName": "Oreochromis niloticus niloticus",
+      "result": "historical-infraspecific-name-crosswalk",
+      "tributaryTable": "one-or-more-positive-markers",
+      "note": "The source's subspecific form is a name crosswalk only; it does not re-identify the historical specimens."
+    },
+    {
+      "assessmentName": "Poecilia reticulata",
+      "historicalTableName": "Poecilia reticulata",
+      "result": "historical-source-name-match",
+      "tributaryTable": "one-or-more-positive-markers"
+    },
+    {
+      "assessmentName": "Poecilia sphenops",
+      "historicalTableName": "Poecilia sphenops",
+      "result": "historical-source-name-match",
+      "tributaryTable": "one-or-more-positive-markers"
+    },
+    {
+      "assessmentName": "Pterygoplichthys disjunctivus",
+      "historicalTableName": null,
+      "result": "not-listed-in-reviewed-2011-fish-tables",
+      "tributaryTable": "not listed among the 2011 tributary-table taxa",
+      "note": "This is a bounded table result, not evidence of absence from the lake or park. See the separate 2023 survey record below."
+    },
+    {
+      "assessmentName": "Trichopodus pectoralis",
+      "historicalTableName": "Trichopodus pectoralis",
+      "result": "historical-source-name-match",
+      "tributaryTable": "one-or-more-positive-markers"
+    },
+    {
+      "assessmentName": "Trichopodus trichopterus",
+      "historicalTableName": "Trichopodus trichopterus",
+      "result": "historical-source-name-match",
+      "tributaryTable": "one-or-more-positive-markers"
+    }
+  ],
+  "separateLaterFieldRecord": {
+    "sourceId": "pjs-bate-et-al-pterygoplichthys-naujan-2025",
+    "title": "New Locality Record of the Invasive Pterygoplichthys disjunctivus (Weber, 1991) on RAMSAR-listed Lake Naujan, the Philippines",
+    "officialArticleUrl": "https://philjournalsci.dost.gov.ph/new-locality-record-of-the-invasive-pterygoplichthys-disjunctivus-weber-1991-on-ramsar-listed-lake-naujan-the-philippines/",
+    "doi": "https://doi.org/10.56899/154.04.02",
+    "fullTextAccess": "Publisher article page returned HTTP 403 in this review environment; an author-uploaded full-text copy was used to check the survey details. Official PJS metadata confirms the article, authors, issue and DOI.",
+    "surveyDates": "2023-03-18/2023-03-20",
+    "reportedObservation": "The authors report one Pterygoplichthys disjunctivus individual unintentionally caught as gill-net bycatch during the survey and identified morphologically by UST researchers. The figure caption identifies Bayani, Lake Naujan; no capture coordinates or museum accession number were found in the reviewed copy.",
+    "fisherReports": "The authors separately report local fishers' statements about other sightings. These are interview reports, not additional independently documented captures.",
+    "inferenceLimits": [
+      "One fish in a 2023 survey is not an abundance estimate, current-presence confirmation, population estimate, or catchability claim.",
+      "The single survey record is not a substitute for the 2011 source table and is not evidence that the species was absent in 2011.",
+      "The article-specific reuse license was not verified; do not project its text, image, or transformed observation into the app without rights review."
+    ]
+  },
+  "decision": {
+    "historicalResearchCrosswalkOnly": true,
+    "publicSpeciesRowsAdded": 0,
+    "publicOccurrenceRowsAdded": 0,
+    "coordinatesOrGeometryAdded": false,
+    "currentPresenceOrAbundanceInferred": false,
+    "riskBadgeOrInvasiveWarningAdded": false,
+    "dietOrBaitAdviceAdded": false,
+    "legalOrSafetyClaimAdded": false,
+    "publicationApproval": false
+  },
+  "nextAction": "Request the NFRDI 2025-2026 taxon/station tables and reuse terms through the previously prepared unsent inquiry draft; separately ask MBCFI/UPLB to clarify fish-specific survey dates, voucher accession access, the 20-versus-25 lake count, and permission for any future app use. Do not send a request or publish data without explicit authorization and rights review."
+}
