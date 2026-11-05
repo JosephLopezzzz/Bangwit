@@ -5276,13 +5276,14 @@
         "https://www.gbif.org/dataset/18896efa-22df-4fbd-9782-42f47257e753",
         "https://api.gbif.org/v1/occurrence/search?datasetKey=18896efa-22df-4fbd-9782-42f47257e753"
       ],
-      "role": "Nationally reusable Philippine fish-specimen dataset; this L1 Manila Bay/Cavite screen found seven administrative-text candidates but did not resolve per-record capture origin from landing, market, port or nearby-sea contexts.",
-      "checkedOn": "2026-10-26",
+      "role": "Nationally reusable Philippine fish-specimen dataset; the L1 Manila Bay/Cavite screen found seven administrative-text candidates without resolving capture origin, while a version 1.38 literal screen found no Caliraya, Lumot, or Lumban locality text.",
+      "checkedOn": "2026-11-05",
       "access": {
-        "status": "official-IPT-v1.38-archive-and-GBIF-screen-reviewed;seven-Cavite-records-not-waterbody-localized",
+        "status": "official-IPT-v1.38-archive-and-GBIF-screen-reviewed;seven-Cavite-records-not-waterbody-localized;caliraya-lumot-locality-text-screen-no-matches",
         "reviewFiles": [
           "calabarzon-taal-national-museum-gbif-screen-20261024.json",
-          "calabarzon-manila-bay-national-museum-gbif-screen-20261025.json"
+          "calabarzon-manila-bay-national-museum-gbif-screen-20261025.json",
+          "calabarzon-nmp-acb-caliraya-lumot-locality-screen-20261105.json"
         ],
         "rawPath": "raw/calabarzon-manila-bay-nmp-primary-archive-20261025/",
         "archiveSha256": "63bbcf7a9842538913e602f69c41f802be5d056b5909f98768267a14a90d9bbf",
@@ -5295,11 +5296,12 @@
         "content": "Dataset and selected occurrence records are CC BY 4.0 with attribution. Seven rows have sourceStateProvince=Cavite but no locality or waterBody text; source methods mix landing sites, markets, commercial ports and nearby seas without per-row capture-origin rules. No local waterbody occurrence or public projection is approved."
       },
       "publicationApproval": false,
-      "researchStatus": "CC-BY-4.0-primary-archive-crosschecked;seven-Cavite-stateProvince-candidates-held-for-capture-origin;no-waterbody-assertions",
+      "researchStatus": "CC-BY-4.0-primary-archive-crosschecked;seven-Cavite-stateProvince-candidates-held-for-capture-origin;caliraya-lumot-locality-text-screen-no-matches;research-only",
       "datasetKey": "18896efa-22df-4fbd-9782-42f47257e753",
       "license": "CC-BY-4.0",
       "caveats": [
         "The national collection's broad geographic metadata does not establish that an individual specimen came from Taal Lake.",
+        "A literal text screen of archive version 1.38 found no Caliraya, Lumot, or Lumban strings; this does not establish fish absence or lack of records under alternate names or coordinates.",
         "The exact waterBody, locality and scientificName zeroes are limited to the reviewed version and fields; alternate spellings, coordinates, records not indexed in GBIF, and other datasets were not covered.",
         "A zero-result query is not evidence of fish absence and does not support a complete lake checklist, conservation, diet, catchability, legal, safety or abundance claim."
       ]

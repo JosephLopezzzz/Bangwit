@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "calabarzon-nmp-acb-caliraya-lumot-locality-screen-20261105",
+  "checkedOn": "2026-11-05",
+  "regionId": "0400000000",
+  "question": "Does the reusable National Museum fish-specimen dataset contain text-locality records naming Caliraya, Lumot, or Lumban?",
+  "source": {
+    "sourceId": "asean-cb-national-museum-fish-collection-gbif",
+    "title": "Fish Specimen Collection of National Museum, Philippines",
+    "provider": "ASEAN Centre for Biodiversity / National Museum of the Philippines via GBIF",
+    "datasetKey": "18896efa-22df-4fbd-9782-42f47257e753",
+    "doi": "10.15468/qdw6v3",
+    "version": "1.38",
+    "published": "2026-09-11",
+    "license": "CC-BY-4.0",
+    "archivePath": "raw/calabarzon-manila-bay-nmp-primary-archive-20261025/nmp-fish-collection-v1.38.zip",
+    "archiveSha256": "63bbcf7a9842538913e602f69c41f802be5d056b5909f98768267a14a90d9bbf",
+    "coreRecordCount": 8225,
+    "datasetDescription": "The publisher describes an updated National Museum collection of common and commercial fish, with samples collected at landing sites, markets of commercial ports, and nearby seas."
+  },
+  "screen": {
+    "archiveMember": "occurrence.txt",
+    "method": "Case-insensitive literal search across every occurrence row for the strings Caliraya, Lumot, and Lumban.",
+    "searchTerms": [
+      "Caliraya",
+      "Lumot",
+      "Lumban"
+    ],
+    "matchingRows": 0,
+    "recordIds": [],
+    "decision": "no-matching-locality-text-in-this-dataset-version"
+  },
+  "limits": [
+    "This is a bounded literal-text search of version 1.38, not a complete search of every National Museum catalogue record or every dataset.",
+    "The screen does not cover coordinate-only records, alternate place names, undocumented field values, or records not included in this version.",
+    "A zero-match result does not establish fish absence, lack of historical sampling, or lack of records in another collection.",
+    "No record coordinates were reviewed or retained, and no capture locality, specimen, or taxon was assessed in this screen.",
+    "The dataset license permits reuse with attribution, but does not resolve biological identity or capture origin for records whose descriptions mix landing sites, markets, ports, and nearby seas."
+  ],
+  "admission": {
+    "speciesAssertions": 0,
+    "occurrenceRows": 0,
+    "coordinatesOrGeometryAdded": false,
+    "dietAssertions": 0,
+    "publicAppRows": 0,
+    "publicationApproval": false
+  },
+  "nextAction": "Continue the Caliraya-Lumot source sweep with an independently accessible, waterbody-resolved fish survey or voucher record; keep the aggregate 2022 abstract and historical stocking/catch summaries separate from current occurrence claims."
+}
