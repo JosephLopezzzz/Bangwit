@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "mimaropa-san-agustin-rsu-accession-crosswalk-public-search-20261106",
+  "checkedOn": "2026-11-06",
+  "phaseId": "L8",
+  "regionId": "1700000000",
+  "regionName": "MIMAROPA",
+  "purpose": "Check whether public sources expose a specimen voucher/accession crosswalk or a named-waterbody and coordinate crosswalk for the six stations in the 2025 RSU San Agustin fish survey; prepare a transparent author inquiry if the missing metadata is not publicly available.",
+  "relatedReviews": [
+    "mimaropa-san-agustin-2022-estuary-tributary-survey-integrity-review-20261105.json",
+    "mimaropa-san-agustin-gbif-name-crosswalk-20261105.json",
+    "mimaropa-san-agustin-range-authority-followup-14-20261106.json"
+  ],
+  "method": {
+    "scope": "Read the public full-text article and publisher record, inspect the browser-readable peer-review-history page, and check the related 2023 Tablas freshwater study for a public 2025 voucher or station crosswalk.",
+    "distinction": "The 2025 article reports that preserved specimens were held at the RSU San Agustin Campus Biological Repository. It gives Table 2 station codes A-F and reach labels, but does not publish a specimen catalogue/accession list, individually named tributary rivers, or a coordinate for each station. The methods also print approximately 12.6010, 122.1924 and a conflicting parenthetical coordinate string. Do not normalize these into mapped station geometry.",
+    "accessLimit": "The publisher's open-review page exposes links to reviewer reports, a revised Word manuscript, and a ZIP feedback file. The web source viewer rejected those Word/ZIP files as unsupported content types, so their contents were not examined. No conclusion is made about what those uninspected files may contain. A separate 2023 Tablas freshwater article says its own specimens were held at the same RSU repository; it does not crosswalk those distinct specimens to the 2025 survey.",
+    "sourceReuse": "Only concise attributed findings and direct links are retained. No reviewer file, full article, specimen image, sequence, or coordinates were copied into this review. The attached inquiry is a draft only and was not sent."
+  },
+  "findings": [
+    {
+      "question": "Are voucher or accession identifiers publicly linked to the 2025 Table 1 labels?",
+      "finding": "No voucher catalogue number or specimen-to-label crosswalk is visible in the reviewed full text, publisher record, or browser-readable peer-review-history page. The paper states that specimens were preserved and stored at RSU San Agustin Campus for identification. This is a bounded public-source search, not proof that the repository has no catalogue or that the inaccessible reviewer attachments contain no additional metadata.",
+      "disposition": "Keep all 39 taxon rows as source labels only. None is verified as a specimen-level occurrence by this review."
+    },
+    {
+      "question": "Can the A-F stations be mapped to individually named rivers or exact coordinates?",
+      "finding": "Table 2 maps A to river mouth/estuary, B and C to River 1 lower/middle reaches, and D, E, and F to River 2 lower/middle/upper reaches. The article does not provide official river names or per-station coordinates. Its general locality coordinates are inconsistent: `12.6010, 122.1924` and `12.36' North 122.8 East` are both printed without a station-by-station link.",
+      "disposition": "Do not create a waterbody geometry, snap the survey to a public river line, or assign station presence to a named river until the coordinate format and station crosswalk are authoritatively clarified."
+    },
+    {
+      "question": "Does the related 2023 Tablas freshwater paper resolve the 2025 samples?",
+      "finding": "No. The 2023 paper reports a separate island-wide freshwater survey and states its own specimens were stored at the RSU San Agustin Campus Biological Repository. It does not provide a 2025 survey voucher or A-F station crosswalk; shared repository custody does not establish that two surveys' samples are the same.",
+      "disposition": "Use the 2023 records only in their separately attributed review; do not use them as a substitute for the requested 2025 crosswalk."
+    }
+  ],
+  "requestDraft": {
+    "path": "mimaropa-san-agustin-rsu-crosswalk-inquiry-draft-20261106.md",
+    "status": "prepared-not-sent",
+    "recipient": "Corresponding author using the contact published with the article; no message has been sent.",
+    "asksFor": [
+      "whether specimens remain in the repository and any accession or voucher IDs linked to source labels",
+      "A-F station-to-waterbody/reach names and a station map or coordinates",
+      "the intended coordinate format, datum, and whether the published coordinate is a campus point or sampling station",
+      "diagnostic or sequence-to-voucher evidence for uncertain labels",
+      "attribution, permission, and reuse terms for the crosswalk metadata"
+    ],
+    "projectDisclosure": "The draft states Bangwit is an independent personal project with intended Philippines-wide scope and a Cavite pilot, is not affiliated with RSU, and has not added these article rows to public maps.",
+    "personalEmailIncluded": false
+  },
+  "disposition": {
+    "publicVoucherCrosswalkLocated": false,
+    "publicStationCoordinateCrosswalkLocated": false,
+    "peerReviewAttachmentsInspected": false,
+    "specimenIdentitiesResolved": 0,
+    "occurrenceAssertions": 0,
+    "waterbodyAssertions": 0,
+    "coordinatesOrGeometryAdded": false,
+    "publicAppRows": 0,
+    "publicationApproval": false,
+    "contactSent": false,
+    "sourceLabelsScreenedOf39": 39,
+    "totalVoucherPriorityRangeMismatchesStillUnresolved": 6,
+    "totalRangeAuthorityDiscrepanciesStillUnresolved": 5
+  },
+  "nextAction": "The prepared author inquiry is not sent. The user can send it using the contact listed with the paper. Until a response supplies verifiable specimen and station links and reuse conditions, do not admit the San Agustin study as species-by-waterbody occurrence rows. Continue independent regional data work that does not depend on this response.",
+  "sources": [
+    {
+      "url": "https://www.researchgate.net/publication/391875073_Composition_and_Longitudinal_Distribution_of_Fish_Assemblages_in_the_Estuary_and_Tributary_Systems_in_RSU_San_Agustin_Romblon_Philippines",
+      "supports": "Public author-uploaded full text reviewed for repository custody, sample preservation, general coordinate notation, Table 2 A-F reach labels, and the absence of per-specimen accession identifiers in the main paper."
+    },
+    {
+      "url": "https://mbimph.com/index.php/UPJOZ/article/view/4989",
+      "supports": "Publisher record for the 2025 paper; title, authors, date, DOI, and article/review-history links."
+    },
+    {
+      "url": "https://prh.mbimph.com/review-history/4880",
+      "supports": "Browser-readable peer-review page listing reviewer reports and revised Word/ZIP attachments. The files are linked but were not readable through the current web source tool, so their contents are not represented as reviewed."
+    },
+    {
+      "url": "https://ajb.vast.vn/vjbio/article/download/17521/2543254801/2543259561",
+      "supports": "Separate 2023 Tablas freshwater survey, including its own RSU repository statement; not a 2025 voucher or station crosswalk."
+    }
+  ]
+}

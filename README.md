@@ -177,3 +177,7 @@ Added a research-only transcription of 44 finfish label rows across ten handbook
 ### Ragay Gulf NFRDI catch-label review - 1 November 2026
 
 Added a research-only transcription of 33 finfish label rows across eight 2024 handbook gear tables. The 26 distinct names yielded 24 exact accepted species-rank matches, one synonym, and one species-level no-match; ten non-fish labels were excluded. The handbook labels remain historical fishery context, separate from other held Ragay sources and not evidence of current occurrences or a complete checklist. See [the review](data/research/philippines/calabarzon-ragay-gulf-nfrdi-gear-catch-label-transcription-20261101.json).
+
+### San Agustin crosswalk status — 6 November 2026
+
+The 39-label San Agustin name/range screen is complete, but it is not a verified occurrence list. A bounded public-source review did not locate a voucher/accession or A-F station crosswalk; reviewer Word/ZIP attachments could not be read and remain unreviewed. A transparent inquiry is drafted but has not been sent. The six voucher-priority mismatches and five authority issues remain unresolved. See the [crosswalk review](data/research/philippines/mimaropa-san-agustin-rsu-accession-crosswalk-public-search-20261106.json) and [unsent inquiry draft](data/research/philippines/mimaropa-san-agustin-rsu-crosswalk-inquiry-draft-20261106.md).
