@@ -409,6 +409,24 @@ export type Dictionary = {
     rightsNote: string;
     opensTab: string;
   };
+  palawanStiphodonEvidence: {
+    title: string;
+    description: string;
+    scope: string;
+    articleCountLabel: string;
+    namedSitesSummary: string;
+    localityOnlySummary: string;
+    collectionDateLabel: string;
+    specimenCountLabel: string;
+    voucherLabel: string;
+    limits: string;
+    sourceDetails: string;
+    articleLink: string;
+    pdfLink: string;
+    licenseLink: string;
+    licenseNote: string;
+    opensTab: string;
+  };
   taalCasGbifEvidence: {
     title: string;
     description: string;

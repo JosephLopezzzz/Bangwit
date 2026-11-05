@@ -476,6 +476,28 @@ export const filDictionary: Dictionary = {
       "CC0 1.0 ang nakasaad sa metadata ng GBIF dataset para sa mga napiling record. Hindi nito pinahihintulutan ang paggamit sa ibang record o hiwalay na dataset.",
     opensTab: "(magbubukas sa bagong tab)",
   },
+  palawanStiphodonEvidence: {
+    title: "Mga batis sa Palawan · makasaysayang goby specimen",
+    description:
+      "May 57 preserved Stiphodon palawanensis specimen sa isang taxonomic paper noong 2015; 48 ang iniugnay ng teksto sa walong pinangalanang anyong-tubig.",
+    scope: "Palawan · MIMAROPA. Mga locality lang ito ayon sa source; walang coordinates o map pin.",
+    articleCountLabel: "Mga specimen sa artikulo",
+    namedSitesSummary: "mula sa walong pinangalanang batis, ilog o talon.",
+    localityOnlySummary:
+      "pa ang inilista mula Tagbariri, pero walang pinangalanang anyong-tubig para sa grupong ito; hindi ito iniuugnay sa batis, ilog o lawa.",
+    collectionDateLabel: "Petsa ng pagkolekta",
+    specimenCountLabel: "Mga specimen ayon sa source",
+    voucherLabel: "Mga voucher reference",
+    limits:
+      "Makasaysayang koleksiyon mula 1985–2015 ito, hindi patunay ng kasalukuyang presensya o dami. Gaya ng nailathala noong 2015 ang pangalan. Hindi nito pinatutunayan ang access o legalidad ng pangingisda, kaligtasan, diyeta o bisa ng pain; hindi ito kumpletong talaan ng isda sa Palawan.",
+    sourceDetails: "Citation, source at terms sa paggamit",
+    articleLink: "Artikulo ng publisher",
+    pdfLink: "Buong PDF",
+    licenseLink: "CC BY 3.0",
+    licenseNote:
+      "Inangkop mula sa material-examined list ng artikulo: pinagsama rito ayon sa locality ang pangalan ng lugar, petsa, voucher at bilang ng specimen. Walang teksto ng artikulo, figure, litrato, coordinates o map geometry na kinopya.",
+    opensTab: "(magbubukas sa bagong tab)",
+  },
   taalCasGbifEvidence: {
     title: "Lawa ng Taal · mga makasaysayang museum specimen",
     description:

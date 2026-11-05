@@ -13,6 +13,7 @@ import { MakilingGbifEvidence } from "@/components/makiling-gbif-evidence";
 import { ManilaBaySharedGbifEvidence } from "@/components/manila-bay-shared-gbif-evidence";
 import { PalicoRiverSurveyEvidence } from "@/components/palico-river-survey-evidence";
 import { PansipitRiverGbifEvidence } from "@/components/pansipit-river-gbif-evidence";
+import { PalawanStiphodonEvidence } from "@/components/palawan-stiphodon-evidence";
 import { PasigRiverSpeciesEvidence } from "@/components/pasig-river-species-evidence";
 import { TaalChecklistEvidence } from "@/components/taal-checklist-evidence";
 import { TaalCasGbifEvidence } from "@/components/taal-cas-gbif-evidence";
@@ -147,6 +148,7 @@ export default function SpeciesPage() {
       <BulacanManilaBayGbifEvidence />
       <PasigRiverSpeciesEvidence />
       <ManilaBaySharedGbifEvidence />
+      <PalawanStiphodonEvidence />
       <FeedingGuides />
 
       <section id="speciesNotice" className="ui-card mt-5" aria-labelledby="species-status-heading">

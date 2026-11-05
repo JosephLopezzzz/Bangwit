@@ -470,6 +470,28 @@ export const enDictionary: Dictionary = {
       "The GBIF dataset metadata marks the selected records CC0 1.0. This does not approve other records or separate datasets.",
     opensTab: "(opens in a new tab)",
   },
+  palawanStiphodonEvidence: {
+    title: "Palawan streams · historical goby specimens",
+    description:
+      "A 2015 taxonomic paper lists 57 preserved Stiphodon palawanensis specimens from Palawan freshwater sites; 48 are tied by text to eight named aquatic features.",
+    scope: "Palawan · MIMAROPA. These are source localities only; no coordinates or map pins are provided.",
+    articleCountLabel: "Specimens listed in the article",
+    namedSitesSummary: "across eight named stream, river, or falls localities.",
+    localityOnlySummary:
+      "more are listed from Tagbariri, but the article does not name a waterbody for that group; it is not assigned to a stream, river, or lake.",
+    collectionDateLabel: "Collected",
+    specimenCountLabel: "Source-listed specimens",
+    voucherLabel: "Voucher references",
+    limits:
+      "Historical collections from 1985–2015, not current-presence or abundance estimates. The name is shown as published in 2015. These entries do not establish fishing access, legality, safety, diet, or bait effectiveness; this is not a complete Palawan fish list.",
+    sourceDetails: "Citation, source and reuse terms",
+    articleLink: "Publisher article",
+    pdfLink: "Full text PDF",
+    licenseLink: "CC BY 3.0",
+    licenseNote:
+      "Adapted from the article's material-examined list: locality, date, voucher and specimen-count facts are grouped here. No article prose, figures, photographs, coordinates or map geometry are reproduced.",
+    opensTab: "(opens in a new tab)",
+  },
   taalCasGbifEvidence: {
     title: "Taal Lake · historical museum specimens",
     description:
