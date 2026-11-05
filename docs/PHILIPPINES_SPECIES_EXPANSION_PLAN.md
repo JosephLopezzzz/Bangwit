@@ -4560,3 +4560,13 @@ The University of the Philippines System's official library-catalog page links t
 Added `calabarzon-balite-uplb-library-acquisition-route-review-20261105.json` and two source-registry records. The registry now contains 672 unique source records, with `sourceCount` aligned; CALABARZON remains at 158 waterbody leads. No message or form was sent, no fee was approved, and no scan, species record, occurrence, geometry, or app row was added.
 
 **Next:** Joseph can send the inquiry summarized in the research artifact to `universitylibrary.uplb@up.edu.ph`; continue reviewing accessible CALABARZON waters while any library response is pending.
+
+### National rollout step 522: Caliraya historical carp text-locality source — 5 November 2026
+
+Reviewed the official NFRDI-hosted PDF for Guevara, Abella and Marfori's “Utilization and Processing of Carp,” published in *The Philippine Journal of Fisheries* Vol. 12, Issues 1–2, pp. 75–91. The FAO/APFIC catalog identifies the article as 1976; the PDF says it was read at a Fisheries Forum on 17 June 1975. Its introduction names *Cyprinus carpio* and states that carps were found in “Caliraya Dams” in that historical context.
+
+The article is about processing, not field sampling. Its experimental carp samples came from commercial markets and are not tied to Caliraya; no lake station, collection date, gear, voucher or abundance is reported. “Caliraya Dams” is retained verbatim without creating an alias to Caliraya-Lumot, and Lumot is not mentioned. The statement is a historical source lead only, with no verified current-presence or reuse basis.
+
+Added `calabarzon-caliraya-1976-carp-text-locality-review-20261105.json` and one source-registry entry. The registry now contains 673 unique sources; CALABARZON remains at 158 waterbody leads. No species assertion, occurrence, coordinate, geometry, diet, or public-app row was added. See the [official NFRDI PDF](https://www.nfrdi.da.gov.ph/tpjf/vol12/UTILIZATION%20AND%20PROCESSING%20OF%20CARP.pdf) and [FAO/APFIC 1976 listing](https://www.fao.org/apfic/technical-reports/trade-post-harvest-nutrition/24/en).
+
+**Next:** continue the CALABARZON sweep for a dated Caliraya/Lumot survey or voucher-linked capture record; keep market-origin samples and historical text mentions out of current species and fishing advice.
