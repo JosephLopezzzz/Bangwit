@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "reviewedOn": "2026-11-06",
-  "status": "cagayan-b0380-geometry-screened;gbif-window-bounded;neostethus-locality-crosswalk-reviewed;research-only;no-public-app-rows",
+  "status": "cagayan-b0380-geometry-screened;gbif-window-bounded;neostethus-locality-crosswalk-reviewed;mugil-historical-cagayan-river-report-reviewed;research-only;no-public-app-rows",
   "purpose": "Crosswalk the global dataset's Cagayan drainage-basin geometry with independently sourced locality evidence and a bounded GBIF coordinate search. This is not a complete Cagayan fish inventory.",
   "basinGeometry": {
     "sourceId": "ding-2026-global-freshwater-fish-drainage-basin-dataset-2024",
@@ -113,7 +113,19 @@
             "localityType": "Market purchase; vendor-reported catch vicinity."
           }
         ],
-        "interpretation": "The six GBIF rows represent two museum catalog numbers duplicated across occurrence/material-sample feed records. Market coordinates and vendor-reported nearby catch areas do not establish precise capture stations or a verified basin occurrence."
+          "independentHistoricalRiverReport": {
+            "sourceArtifact": "national-freshwater-cagayan-mugil-cephalus-market-voucher-crosswalk-20261106.json",
+            "source": "Guino-o et al. (2017) conference paper",
+            "reportedWaterbody": "Cagayan River, North Philippines",
+            "studySite": "Camalaniugan, Cagayan Valley; 18°17′38″N, 121°40′59″E; collection date 2011-12-28",
+            "voucherCodes": [
+              "Phil-CAG1",
+              "Phil-CAG2",
+              "Phil-CAG3"
+            ],
+            "interpretation": "Supports a historical basin-scale report separate from the two market lots. The site coordinate is not treated as specimen-point geometry; repository, exact station, current presence, local sequence accession, and item-level reuse remain unresolved."
+          },
+          "interpretation": "The six GBIF rows represent two museum catalog numbers duplicated across occurrence/material-sample feeds; their market coordinates/vendor vicinity do not establish capture stations. Separately, the 2017 conference paper explicitly reports M. cephalus from Cagayan River and associates three study voucher codes with the Camalaniugan site. This supports a historical basin-level lead, not current presence or precise geometry."
       },
       {
         "scientificName": "Ilogton ilogton",
@@ -163,7 +175,7 @@
     "The dataset’s B0380 Cagayan geometry is a northern Luzon drainage-basin polygon; the similar name Cagayan de Misamis in Mindanao refers to a separate locality.",
     "The strongest independently localized leads in this screen are the textual USNM 333262 type locality for Nomorhamphus rossi and the historical sequence locality for Anguilla luzonensis. Only the eel's coarse shared coordinate was tested within the polygon; it is not a precise sampling reach.",
     "The market-based Mugil and Glossogobius records remain vendor-vicinity claims, not exact basin collection localities.",
-    "The eight-name basin candidate set remains discovery-only and incomplete. Review each taxon's underlying primary source separately and keep Cagayan River reaches, tributaries, lakes, reservoirs, and administrative areas distinct.",
+    "The eight-name basin candidate set remains discovery-only and incomplete. Review each taxon's underlying source separately and keep Cagayan River reaches, tributaries, lakes, reservoirs, and administrative areas distinct.",
     "For Neostethus villadolidi, the historical type locality “Cagayan de Misamis” is in Mindanao. Parenti (1989) gives a broad national range phrase but no B0380-specific locality in the reviewed material. No absence is inferred from missing locality detail or the bounded GBIF zero."
   ],
   "disposition": {
@@ -173,7 +185,7 @@
     "dietOrBaitClaimsAdded": 0,
     "legalOrSafetyClaimsAdded": 0,
     "publicationApproval": false,
-    "reason": "This review resolves a source geometry identifier and screens locality evidence; it does not provide sufficiently precise, independently licensed public occurrence rows or exact waterbody geometry for the app."
+    "reason": "This review resolves the basin geometry identifier and screens locality evidence. The new M. cephalus report is a historical conference-paper lead without verified voucher repository, item-level reuse rights, current presence, or specimen-point precision; it does not create an app-ready occurrence row or exact waterbody geometry."
   },
   "sources": [
     {

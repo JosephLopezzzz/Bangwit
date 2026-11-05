@@ -1,0 +1,133 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-11-06",
+  "status": "historical-cagayan-river-report-found;study-vouchers-not-repository-crosswalked;market-vouchers-vendor-vicinity-only;research-only;no-public-app-rows",
+  "purpose": "Separate two GBIF-indexed Philippine market vouchers for Mugil cephalus from a distinct historical Cagayan River study report; assess what each source can support for the B0380 basin candidate.",
+  "basin": {
+    "id": "B0380",
+    "name": "Cagayan",
+    "sourceArtifact": "national-freshwater-cagayan-b0380-geometry-gbif-locality-screen-20261106.json",
+    "meaning": "Northern Luzon Cagayan drainage candidate; not Cagayan de Misamis in Mindanao and not a precise river-reach geometry."
+  },
+  "taxon": {
+    "nameAsReported": "Mugil cephalus",
+    "taxonomicCaveat": "The 2009 northwest-Pacific phylogeography paper describes strongly divergent geographic lineages and says global taxonomic status needs further study. This review keeps the source name and assigns no lineage or replacement species name.",
+    "sourceIdForExistingTaxonomyAndMarketContext": "san-agustin-range-authority-followup-9-20261105"
+  },
+  "findings": [
+    {
+      "id": "cagayan-river-conference-study",
+      "sourceId": "guino-o-et-al-2017-philippine-mullets-cagayan-river-report-20261106",
+      "sourceType": "2017 conference paper; full text reviewed from an author-uploaded ResearchGate copy; conference-paper citation also appears in an NFRDI journal article bibliography.",
+      "reportedTaxon": "Mugil cephalus (Linnaeus, 1758)",
+      "reportedWaterbody": "Cagayan River, North Philippines",
+      "collectionSiteTable": {
+        "siteAsPrinted": "Cagayan, N. Luzon, Philippines",
+        "siteNamedInMethods": "Camalaniugan in Cagayan Valley",
+        "coordinateAsPrinted": "18°17′38″N, 121°40′59″E",
+        "coordinateDecimal": {
+          "latitude": 18.2938889,
+          "longitude": 121.6830556
+        },
+        "reportedCollectionDate": "2011-12-28",
+        "coordinateLimit": "The coordinate is a study-site value. The paper gives no datum, coordinate uncertainty, or voucher-specific capture point; it is not used here as exact specimen geometry."
+      },
+      "voucherCodes": [
+        "Phil-CAG1",
+        "Phil-CAG2",
+        "Phil-CAG3"
+      ],
+      "voucherLimit": "The paper says representative specimens were preserved as vouchers, and its table associates three Cagayan codes with the taxon. It does not name a public repository or provide institutional catalog numbers that were independently checked.",
+      "methodLimit": "The general methods describe seine-net collections at thirteen sites and complementary fish-market surveys. The species account says this taxon was collected in Cagayan River, but the method is not itemized per voucher code.",
+      "sequenceInterpretation": "The table and discussion associate the Cagayan samples with an exact-match COI comparison to GenBank accession JQ060553, isolate 358. The conference paper calls that comparator a Pearl River sequence 'in Taiwan'; a 2020 UFAL doctoral-thesis sequence table maps JQ060553 / isolate 358 to Pearl River, China. The NCBI accession page was not directly retrieved, so the locality mismatch remains an accession-level follow-up. No separate public sequence accession linked to Phil-CAG1–3 was verified; the comparator is not treated as a Cagayan specimen record.",
+      "basinInterpretation": "This is a direct historical, basin-scale Cagayan River report and materially strengthens the B0380 discovery candidate beyond the market vouchers. It does not establish current presence, abundance, an exact station/reach, or public-app-ready geometry."
+    },
+    {
+      "id": "smithsonian-market-vouchers",
+      "sourceType": "Two distinct NMNH voucher catalog numbers exposed through GBIF occurrence/material-sample feeds; the six indexed rows are duplicate feed representations, not six independent capture records.",
+      "specimens": [
+        {
+          "catalogNumber": "USNM 405775",
+          "fieldNumber": "RP-258",
+          "eventDate": "2012-06-04",
+          "gbifOccurrence": "https://www.gbif.org/occurrence/1318933075",
+          "coordinateAsPublishedByGbif": "18.2471 N, 121.909 E",
+          "coordinateUncertaintyMeters": 2600,
+          "pointInB0380": true,
+          "sourceLocality": "Smithsonian metadata says purchased at Santa Teresita market; vendor stated capture was in the vicinity of Santa Teresita, Cagayan Province, Luzon.",
+          "interpretation": "The polygon hit is for the published coordinate, while the specimen was a market purchase and the vendor-reported catch vicinity was not independently verified as a capture station."
+        },
+        {
+          "catalogNumber": "USNM 407402",
+          "fieldNumber": "RP-272",
+          "eventDate": "2012-06-04",
+          "gbifOccurrence": "https://www.gbif.org/occurrence/1317370724",
+          "coordinateAsPublishedByGbif": "17.9761 N, 121.614 E",
+          "coordinateUncertaintyMeters": 250,
+          "pointInB0380": false,
+          "sourceLocality": "FDA confirms the voucher is from the Philippines 2012 NMNH market survey. No exact capture locality was verified in this review.",
+          "interpretation": "A GBIF coordinate and market-survey voucher do not identify the fish's capture point or establish a Cagayan-basin catch locality."
+        }
+      ],
+      "overallInterpretation": "Neither market coordinate is used as an exact catch point. The 405775 vendor vicinity is a separate, less precise lead; it is not merged with the Cagayan River conference-study samples."
+    }
+  ],
+  "disposition": {
+    "historicalCagayanRiverAssociation": "Supported by one conference-paper report with three study voucher codes, date, and a site coordinate; independent museum re-examination and voucher-repository linkage remain outstanding.",
+    "marketVouchersProveB0380Catch": false,
+    "currentPresenceEstablished": false,
+    "exactReachGeometryEstablished": false,
+    "publicSpeciesRowsAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "dietOrBaitClaimsAdded": 0,
+    "legalOrSafetyClaimsAdded": 0,
+    "publicationApproval": false,
+    "reason": "The conference report is a meaningful historical basin-level lead but its voucher repository and item-level reuse rights are unresolved, its site coordinate is not specimen-point precision, and the cited GenBank comparator is not a local sample accession. Market records report purchases and vendor vicinity rather than verified capture points."
+  },
+  "sources": [
+    {
+      "url": "https://www.researchgate.net/publication/321423870_DNA_Barcoding_of_Philippine_Mullets_Using_CO1_Gene",
+      "supports": "Author-uploaded conference-paper full text: named Cagayan River report, Cagayan/Camalaniugan site, coordinate, collection date, voucher codes, methods, and the JQ060553 comparator wording."
+    },
+    {
+      "url": "https://nfrdi.da.gov.ph/tpjf/vol29_2/Updates%20on%20Identification%20and%20Distribution%20of%20the%20River%20Mullet%20Ludong%20in%20Northern%20Philippines.pdf",
+      "supports": "Independent bibliographic citation of the 2017 item as a conference paper; not a second verification of its sample data."
+    },
+    {
+      "url": "https://scholars.lib.ntu.edu.tw/server/api/core/bitstreams/7afd7cad-5636-4908-88f9-c344e70ca90f/content",
+      "supports": "Jamandre et al. (2009): Pearl River is in southern China; Luzon samples were estuarine; the paper discusses divergent geographic lineages and unresolved species limits."
+    },
+    {
+      "url": "https://www.repositorio.ufal.br/bitstream/riufal/7643/1/Diversidade%20e%20conserva%C3%A7%C3%A3o%20de%20tainhas%20%28Actinopterygil%20-%20Mugilidae%29%20na%20prov%C3%ADncia%20atl%C3%A2ntico%20sudoeste%20tropical%20-%20uma%20abordagem%20integrativa.pdf",
+      "supports": "Neves (2020) doctoral-thesis Table S4.2 independently cross-references JQ060553 to Mugil cephalus isolate 358 from Pearl River, China; this is a secondary accession crosswalk, not evidence about the Cagayan sample."
+    },
+    {
+      "url": "https://hfpappexternal.fda.gov/scripts/fdcc/?id=RP-258&set=RSSL_seafood_barcode_data",
+      "supports": "FDA link between sample RP-258, voucher USNM 405775, accession OQ386362, and the Philippines NMNH market survey."
+    },
+    {
+      "url": "https://hfpappexternal.fda.gov/scripts/fdcc/index.cfm?id=RP-272&set=RSSL_seafood_barcode_data",
+      "supports": "FDA link between sample RP-272, voucher USNM 407402, accession OQ386147, and the Philippines NMNH market survey."
+    },
+    {
+      "url": "https://collections.si.edu/search/results.htm?fq=place%3A%22Cagayan%22&q=%22Apollo+Lizano%22",
+      "supports": "Smithsonian indexed market/vendor wording for USNM 405775 / RP-258."
+    },
+    {
+      "url": "https://www.gbif.org/occurrence/1318933075",
+      "supports": "GBIF-indexed coordinate, event date, uncertainty and catalog number for USNM 405775."
+    },
+    {
+      "url": "https://www.gbif.org/occurrence/1317370724",
+      "supports": "GBIF-indexed coordinate, event date, uncertainty and catalog number for USNM 407402."
+    },
+    {
+      "url": "https://doi.org/10.1038/s41597-023-02306-9",
+      "supports": "Market-survey methodology and the distinction between mapped market location and vendor-reported nearby catch waters."
+    },
+    {
+      "url": "https://zenodo.org/records/19511163",
+      "supports": "B0380 Cagayan freshwater drainage dataset record; basin context only."
+    }
+  ]
+}
