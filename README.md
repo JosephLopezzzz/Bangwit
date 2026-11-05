@@ -181,3 +181,7 @@ Added a research-only transcription of 33 finfish label rows across eight 2024 h
 ### San Agustin crosswalk status — 6 November 2026
 
 The 39-label San Agustin name/range screen is complete, but it is not a verified occurrence list. A bounded public-source review did not locate a voucher/accession or A-F station crosswalk; reviewer Word/ZIP attachments could not be read and remain unreviewed. A transparent inquiry is drafted but has not been sent. The six voucher-priority mismatches and five authority issues remain unresolved. See the [crosswalk review](data/research/philippines/mimaropa-san-agustin-rsu-accession-crosswalk-public-search-20261106.json) and [unsent inquiry draft](data/research/philippines/mimaropa-san-agustin-rsu-crosswalk-inquiry-draft-20261106.md).
+
+### Mindoro inland-water source review - 6 November 2026
+
+Reviewed MBCP's 1999 Mindoro report as a historical source lead. It mentions fish around Naujan Lake and tributaries, an unresolved barb reported from Anahawin River, and a general mullet movement statement involving the Butas River estuary. The broad report dates are not fish collection dates, and its map does not resolve fish markers to waterbodies. The source has no fish-specific effort or voucher crosswalk and states all rights reserved, so no species or occurrence was promoted to the app. See the [research review](data/research/philippines/mimaropa-mindoro-mbcp-1999-freshwater-fish-source-review-20261106.json) and the [MBCFI report](https://www.mbcfi.org.ph/wp-content/uploads/2022/03/8_Mindoro_Island_Wide_Survey.pdf).
