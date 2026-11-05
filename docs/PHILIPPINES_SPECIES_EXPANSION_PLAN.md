@@ -4552,3 +4552,11 @@ The original Balite chapter was not found in the bounded indexed-source searches
 No taxa were assigned to Caliraya or Lumot from grouped stocking context. No species assertion, occurrence, catch row, coordinate, geometry, diet claim or public-app row was added; publication approval remains false. See `calabarzon-caliraya-lumot-fao-reservoir-stocking-context-20261105.json`, [FAO's chapter](https://www.fao.org/4/w8514e/W8514E23.htm), [FAO volume details](https://www.fao.org/4/w8514e/W8514E00.htm), and [Guerrero's 2022 NAST article](https://transactions.nast.ph/wp-content/uploads/2023/01/2022_RD-Guerrero.pdf).
 
 **Next:** try an authorized library or agency catalog route for the original proceedings, while continuing the CALABARZON sweep for an accessible, dated, waterbody-resolved fish table with item-level reuse terms.
+
+### National rollout step 521: UPLB catalog and non-UP acquisition route for Balite proceedings — 5 November 2026
+
+The University of the Philippines System's official library-catalog page links to UPLB Koha. A read-only exact-ISBN catalog request returned HTTP 403 over both HTTP and HTTPS in this environment, so holdings remain unknown. The revised 2024 UPLB Citizen's Charter lists a Main Library Article Request Service available to Non-UP clients; its route can involve partner-library searching, scanning, and fees. The library's 2024 booklet lists its public contact details. Because the service is described for articles, the library must first confirm that the proceedings chapter qualifies and give current terms.
+
+Added `calabarzon-balite-uplb-library-acquisition-route-review-20261105.json` and two source-registry records. The registry now contains 672 unique source records, with `sourceCount` aligned; CALABARZON remains at 158 waterbody leads. No message or form was sent, no fee was approved, and no scan, species record, occurrence, geometry, or app row was added.
+
+**Next:** Joseph can send the inquiry summarized in the research artifact to `universitylibrary.uplb@up.edu.ph`; continue reviewing accessible CALABARZON waters while any library response is pending.
