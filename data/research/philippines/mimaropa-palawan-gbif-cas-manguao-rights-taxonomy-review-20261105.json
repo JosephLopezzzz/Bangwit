@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "mimaropa-palawan-gbif-cas-manguao-rights-taxonomy-review-20261105",
+  "reviewedOn": "2026-11-05",
+  "phaseId": "L1",
+  "regionId": "1700000000",
+  "waterbody": {
+    "name": "Lake Manguao",
+    "province": "Palawan",
+    "region": "MIMAROPA",
+    "kind": "lake"
+  },
+  "question": "Do GBIF-indexed, species-rank fish records with Lake Manguao waterBody text support a historical locality assertion that can be reused in Bangwit?",
+  "status": "two-historical-cas-records-held-pending-taxonomy-and-redistribution-clarification",
+  "queryReview": {
+    "endpoint": "https://api.gbif.org/v1/occurrence/search",
+    "discoveryQueryUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&waterBody=Lake%20Manguao&limit=100",
+    "discoveryResultCount": 9,
+    "discoveryResultComposition": {
+      "speciesRankPreservedFishRecordsInCasDataset": 2,
+      "genusRankFishRecords": 2,
+      "nonFishRecords": 5
+    },
+    "casDatasetQueryUrl": "https://api.gbif.org/v1/occurrence/search?datasetKey=5d6c10bd-ea31-4363-8b79-58c96d859f5b&country=PH&waterBody=Lake%20Manguao&basisOfRecord=PRESERVED_SPECIMEN&limit=100",
+    "casDatasetResultCount": 2,
+    "classFilterCrossCheck": {
+      "queryUrl": "https://api.gbif.org/v1/occurrence/search?datasetKey=5d6c10bd-ea31-4363-8b79-58c96d859f5b&country=PH&waterBody=Lake%20Manguao&basisOfRecord=PRESERVED_SPECIMEN&classKey=204&limit=1",
+      "resultCount": 0,
+      "comparison": "The same dataset, country, waterBody and preserved-specimen query without classKey returns two records. The classKey-filtered zero is an indexing/filter limitation, not a fish-absence result. Do not use classKey=204 alone to screen this waterbody."
+    },
+    "queriedOn": "2026-11-05",
+    "method": "Read-only GBIF search and selected record/dataset metadata review; no bulk download. The exact CAS occurrence names, record identifiers, catalog numbers and source-row text are intentionally not copied into this tracked review while provider redistribution terms conflict with GBIF CC0 metadata."
+  },
+  "candidateAssessment": {
+    "selectedRecords": 2,
+    "basisOfRecord": "PRESERVED_SPECIMEN",
+    "rank": "SPECIES",
+    "reportedWaterBody": "Lake Manguao",
+    "reportedLocality": "Lake Manguao",
+    "eventDatePrecision": "month",
+    "eventDate": "1913-05",
+    "coordinatesPresent": false,
+    "recordLicenseShownByGbif": "CC0-1.0",
+    "gbifDatasetKey": "5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+    "gbifDatasetDoi": "10.15468/efh2ib",
+    "limitations": [
+      "These are historic specimen records and do not establish current presence, abundance, catchability, or a complete lake checklist.",
+      "No coordinates are present; no map point, shoreline, sampling station, or geometry can be inferred.",
+      "The GBIF occurrence backbone treats the indexed row name at species rank, while the current Catalog of Fishes crosswalk places the related historical bantolanensis name in synonymy with valid Barbodes manguaoensis. This is a nomenclatural crosswalk only and is not a re-identification of either specimen.",
+      "The public CAS collection terms conflict with GBIF's CC0 metadata on redistribution. No row-level CAS data is admitted to a public app pending written clarification or a separately qualified reuse determination."
+    ]
+  },
+  "rightsReview": {
+    "gbifDatasetMetadataLicense": "CC0-1.0",
+    "providerTermsUrl": "https://www.calacademy.org/scientists/ichthyology-collections",
+    "providerTermsSummary": "CAS says its collection databases and data are owned, copyrighted, or licensed to CAS; they may be used for basic research, education and conservation, but may not be repackaged, resold, or redistributed in any form. Commercial or for-profit use requires express written consent.",
+    "conflict": true,
+    "publicAppRedistributionCleared": false,
+    "writtenClarificationRequested": false
+  },
+  "decision": {
+    "historicalLocalityAssertionsAdmitted": 0,
+    "candidateRecordsHeld": 2,
+    "coordinatesIncluded": false,
+    "publicAppRowsAdded": 0,
+    "publicationApproval": false,
+    "currentPresenceInferred": false,
+    "abundanceOrCatchabilityInferred": false,
+    "dietRuleOrSafetyClaimsAdded": false
+  },
+  "sources": [
+    {
+      "url": "https://techdocs.gbif.org/en/openapi/v1/occurrence",
+      "supports": "GBIF occurrence search and record API behavior."
+    },
+    {
+      "url": "https://api.gbif.org/v1/dataset/5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+      "supports": "CAS Ichthyology dataset metadata and CC0 license displayed by GBIF."
+    },
+    {
+      "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=33356",
+      "supports": "Catalog of Fishes synonym treatment for the bantolanensis name and the Lake Manguao type locality; not specimen re-identification evidence."
+    },
+    {
+      "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=31327",
+      "supports": "Catalog of Fishes current status and type-locality context for Barbodes manguaoensis."
+    },
+    {
+      "url": "https://www.calacademy.org/scientists/ichthyology-collections",
+      "supports": "CAS Ichthyology collection terms restricting redistribution of collection database data."
+    }
+  ],
+  "followUp": {
+    "nextAction": "Continue Palawan inland-water discovery using independently reusable surveys or voucher evidence. If this CAS batch becomes necessary for public coverage, seek clarification about redistribution rights and the taxonomic treatment before projection.",
+    "contactsMade": false,
+    "bulkDownloadRequested": false
+  }
+}
