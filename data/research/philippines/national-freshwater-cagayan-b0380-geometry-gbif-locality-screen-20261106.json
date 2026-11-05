@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "reviewedOn": "2026-11-06",
-  "status": "cagayan-b0380-geometry-screened;gbif-window-bounded;research-only;no-public-app-rows",
+  "status": "cagayan-b0380-geometry-screened;gbif-window-bounded;neostethus-locality-crosswalk-reviewed;research-only;no-public-app-rows",
   "purpose": "Crosswalk the global dataset's Cagayan drainage-basin geometry with independently sourced locality evidence and a bounded GBIF coordinate search. This is not a complete Cagayan fish inventory.",
   "basinGeometry": {
     "sourceId": "ding-2026-global-freshwater-fish-drainage-basin-dataset-2024",
@@ -74,7 +74,10 @@
           "distinctCoordinates": 1,
           "sharedCoordinate": "17.61 N, 121.76 E",
           "pointInB0380": true,
-          "recordTimeRange": ["2008-02-08", "2008-12-15"],
+          "recordTimeRange": [
+            "2008-02-08",
+            "2008-12-15"
+          ],
           "catalogNumbersPresent": 0,
           "coordinateUncertaintyValuesPresent": 0
         },
@@ -144,8 +147,9 @@
         "scientificName": "Neostethus villadolidi",
         "gbifTaxonKey": 2412116,
         "gbifCoordinateRowsInBoundingBox": 0,
-        "independentTypeLocalityEvidence": "The California Academy of Sciences Primary Types Imagebase gives the holotype locality as Cagayan de Misamis, Misamis Oriental, Mindanao.",
-        "interpretation": "The shared place-name Cagayan creates a basin-name ambiguity for this Luzon candidate; the Mindanao type locality does not prove the taxon is absent from northern Luzon. No zero-result inference is made."
+        "independentTypeLocalityEvidence": "The CC BY 4.0 Balisco & Liao (2025) type checklist reports holotype CAS-SU 36537 from a mangrove swamp beside the Fishery Experiment Station at Cagayan de Misamis, Mindanao; CAS official indexed type catalog independently identifies the same catalog number and Mindanao locality.",
+        "interpretation": "The global dataset supplies a basin-level candidate but does not link its bibliography reference IDs to the Cagayan basin association. Cagayan de Misamis is a Mindanao type locality; a taxonomic revision also uses a broad nonlocality-specific “throughout Philippines” phrase. Reviewed vouchers and explicit island-level localities do not name a northern Luzon Cagayan River sampling site. This source gap and the bounded GBIF zero do not prove absence.",
+        "additionalRangeEvidence": "Parenti (1989:269) uses the broad phrase “throughout Philippines”; its species-level material and locality statement (p.271) name Mindanao, Cuyo, Mactan, Negros Oriental, and Leyte, without a specific northern Luzon/Cagayan River record. The 2021 IUCN assessment lists Cagayan de Oro, Cuyo, Mactan, “Dumague and Siaton” (IUCN spelling), and Leyte and assigns Data Deficient."
       }
     ],
     "limitations": [
@@ -156,10 +160,11 @@
     ]
   },
   "interpretation": [
-    "The dataset's B0380 Cagayan geometry is a northern Luzon drainage-basin polygon; the identical place-name in Cagayan de Misamis is in Mindanao and is a separate locality.",
+    "The dataset’s B0380 Cagayan geometry is a northern Luzon drainage-basin polygon; the similar name Cagayan de Misamis in Mindanao refers to a separate locality.",
     "The strongest independently localized leads in this screen are the textual USNM 333262 type locality for Nomorhamphus rossi and the historical sequence locality for Anguilla luzonensis. Only the eel's coarse shared coordinate was tested within the polygon; it is not a precise sampling reach.",
     "The market-based Mugil and Glossogobius records remain vendor-vicinity claims, not exact basin collection localities.",
-    "The eight-name basin candidate set remains discovery-only and incomplete. Review each taxon's underlying primary source separately and keep Cagayan River reaches, tributaries, lakes, reservoirs, and administrative areas distinct."
+    "The eight-name basin candidate set remains discovery-only and incomplete. Review each taxon's underlying primary source separately and keep Cagayan River reaches, tributaries, lakes, reservoirs, and administrative areas distinct.",
+    "For Neostethus villadolidi, the historical type locality “Cagayan de Misamis” is in Mindanao. Parenti (1989) gives a broad national range phrase but no B0380-specific locality in the reviewed material. No absence is inferred from missing locality detail or the bounded GBIF zero."
   ],
   "disposition": {
     "basinGeometryAddedToApp": false,
@@ -197,11 +202,31 @@
     },
     {
       "url": "https://researcharchive.calacademy.org/research/ichthyology/types/index.asp?Family=Phallostethidae&OrderBy=Family%2C+TypeName%2C+CatNum&PageStyle=Multiple&RecStyle=Full&xAction=Search",
-      "supports": "California Academy of Sciences Primary Types Imagebase result for the Neostethus villadolidi holotype locality."
+      "supports": "CAS official indexed primary-types entry for holotype CAS-SU 36537 and the historical Cagayan de Misamis, Mindanao locality."
     },
     {
       "url": "https://www.gbif.org/occurrence/3346179802",
       "supports": "Example GBIF occurrence row associated with eel sequence accession AB469437."
+    },
+    {
+      "url": "https://doi.org/10.3897/zookeys.1246.145752",
+      "supports": "Balisco and Liao 2025 CC BY 4.0 article, entry 647 (page 140), reports the holotype, paratype, locality and collection date."
+    },
+    {
+      "url": "https://dx.doi.org/10.2305/IUCN.UK.2021-1.RLTS.T90985656A90985660.en",
+      "supports": "2021 IUCN assessment range locality list and Data Deficient status; its absence of a northern Luzon site is not an absence finding."
+    },
+    {
+      "url": "https://api.gbif.org/v1/species/match?name=Neostethus%20villadolidi&strict=true",
+      "supports": "Current exact GBIF accepted-species usage key for the search."
+    },
+    {
+      "url": "https://api.gbif.org/v1/occurrence/search?taxonKey=2412116&country=PH&hasCoordinate=true&decimalLatitude=17.108333%2C18.596477&decimalLongitude=121.528549%2C122.45&limit=0",
+      "supports": "Count-only bounded coordinate query over the Cagayan B0380 bounding rectangle; zero is not absence evidence."
+    },
+    {
+      "url": "https://biostor.org/reference/77844",
+      "supports": "Parenti 1989 taxonomic revision: pp. 269, 271; broad range phrase and island-level examined localities."
     }
   ]
 }

@@ -1,0 +1,233 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-11-06",
+  "status": "accepted-taxonomy-match;mindanao-cagayan-locality-disambiguated;generic-philippine-range-statement;no-specific-b0380-locality-reviewed;gbif-zero-not-absence;research-only",
+  "purpose": "Crosswalk the global freshwater drainage-basin dataset candidate Neostethus villadolidi for northern Luzon Cagayan basin B0380 against the historical type locality, a published Philippine type checklist, the 2021 IUCN range assessment, and a bounded GBIF query.",
+  "candidate": {
+    "sourceArtifact": "national-freshwater-fish-basin-candidate-extract-20261106.json",
+    "basinScreenArtifact": "national-freshwater-cagayan-b0380-geometry-gbif-locality-screen-20261106.json",
+    "basinId": "B0380",
+    "basinName": "Cagayan",
+    "basinScope": "Northern Luzon drainage basin; its polygon is not Cagayan de Misamis in Mindanao.",
+    "scientificNameInCandidateExtract": "Neostethus villadolidi",
+    "candidateReferenceIds": [
+      "2134",
+      "12291",
+      "13486",
+      "23544",
+      "24784",
+      "25122",
+      "32989",
+      "33268",
+      "40455"
+    ],
+    "globalDatasetRole": "Basin-level distribution candidate only. The source workbook defines referenceIds as taxonomic bibliography but does not map each reference to a basin association; this is not a dated specimen record or basin-specific citation crosswalk."
+  },
+  "taxonomicCrosscheck": {
+    "source": "GBIF Species Match API",
+    "query": "https://api.gbif.org/v1/species/match?name=Neostethus%20villadolidi&strict=true",
+    "retrieval": "Direct API response retrieved 2026-11-06; raw response saved in ignored research storage.",
+    "matchType": "EXACT",
+    "canonicalName": "Neostethus villadolidi",
+    "scientificName": "Neostethus villadolidi Herre, 1942",
+    "rank": "SPECIES",
+    "status": "ACCEPTED",
+    "usageKey": 2412116,
+    "confidence": 99,
+    "interpretation": "The exact GBIF name match supplies a query key only; it is not an independent taxonomic review or occurrence assertion."
+  },
+  "typeLocalityCrosswalk": {
+    "sourceId": "balisco-liao-2025-philippine-fish-described-checklist",
+    "citation": "Balisco, R. A. T., & Liao, T.-Y. (2025). An annotated checklist of fish species described from the Philippines. ZooKeys 1246: 1–287. https://doi.org/10.3897/zookeys.1246.145752.",
+    "articleEntry": 647,
+    "page": 140,
+    "articleLicense": "CC BY 4.0 (article body)",
+    "taxon": "Neostethus villadolidi Herre, 1942",
+    "holotype": {
+      "catalogNumber": "CAS-SU 36537",
+      "locality": "Mangrove swamp beside Fishery Experiment Station at Cagayan de Misamis, Mindanao",
+      "collectionDate": "1940-08-20"
+    },
+    "paratypes": {
+      "catalogNumber": "CAS-SU 36538",
+      "reportedCount": 58,
+      "locality": "Same data as holotype"
+    },
+    "sourceRetrieval": "Publisher PDF full text reviewed via the direct PDF result; entry 647 is directly readable in the article.",
+    "casCatalogCrosscheck": {
+      "sourceId": "cas-ichthyology-primary-types-neostethus-villadolidi-20261106",
+      "catalogNumber": "CAS-SU 36537",
+      "indexedLocality": "Cagayan de Misamis, Oriental Misamis Province, Mindanao, Philippines",
+      "retrieval": "Official CAS search-indexed type entry reviewed; direct page fetch was unavailable in the web reader."
+    },
+    "originalDescriptionLimit": "Herre 1942 is cited by the 2025 checklist and CAS catalog, but the original article itself was not retrieved for this crosswalk."
+  },
+  "distributionAssessment": {
+    "sourceId": "iucn-2021-neostethus-villadolidi-assessment-20261106",
+    "citation": "Torres, A. G., Leander, N. J. S., & Kesner-Reyes, K. (2021). Neostethus villadolidi. The IUCN Red List of Threatened Species 2021: e.T90985656A90985660. https://doi.org/10.2305/IUCN.UK.2021-1.RLTS.T90985656A90985660.en.",
+    "assessmentDate": "2020-08-10",
+    "publishedYear": 2021,
+    "rangeLocalitiesAsListed": [
+      "Cagayan de Oro, Misamis Oriental",
+      "Cuyo, Palawan",
+      "Mactan Island, Cebu",
+      "Dumague and Siaton, Negros Oriental (spelling retained as in assessment)",
+      "Leyte"
+    ],
+    "conservationCategory": "Data Deficient",
+    "sourceRetrieval": "Assessment full text was reviewed from a ResearchGate-hosted copy; official DOI and IUCN landing page were retained. No assessment PDF or map is stored in this repository.",
+    "scopeLimit": "This is the assessment’s locality summary citing Parenti (1989), not a current field survey or complete watershed checklist. The assessment is Data Deficient; omission of northern Luzon does not establish absence.",
+    "rangeStatementCaveat": "The IUCN locality list reflects the 2020 assessment and is not exhaustive proof of where the species can or cannot occur. “Dumague” is retained as spelled in the assessment and is not normalized to another locality here."
+  },
+  "gbifCrossCheck": {
+    "checkedOn": "2026-11-06",
+    "strictCandidateNameMatch": {
+      "url": "https://api.gbif.org/v1/species/match?name=Neostethus%20villadolidi&strict=true",
+      "matchType": "EXACT",
+      "canonicalName": "Neostethus villadolidi",
+      "scientificName": "Neostethus villadolidi Herre, 1942",
+      "rank": "SPECIES",
+      "status": "ACCEPTED",
+      "usageKey": 2412116,
+      "confidence": 99,
+      "responseBytes": 439,
+      "responseSha256": "0cee4afe78caa4f4ac426e64cb8f1f5fe7a11a904ccb43c81676302d02a2350e"
+    },
+    "boundedCoordinateQuery": {
+      "url": "https://api.gbif.org/v1/occurrence/search?taxonKey=2412116&country=PH&hasCoordinate=true&decimalLatitude=17.108333%2C18.596477&decimalLongitude=121.528549%2C122.45&limit=0",
+      "searchArea": "B0380 bounding rectangle; not the polygon itself",
+      "returnedCoordinateBearingRecordCount": 0,
+      "responseHttpStatus": 200,
+      "responseBytes": 77,
+      "responseSha256": "842e210a1dc11a43b863a7438d0b8ae273f0182c290a7c64e760c176778cc9fa"
+    },
+    "rawResponseDirectory": "raw/cagayan-neostethus-villadolidi-20261106/",
+    "interpretation": "GBIF returned zero coordinates for this exact taxon key in the selected rectangle. This is a bounded index count at the checked time, not an absence assessment and not a complete B0380 search."
+  },
+  "localityResolution": {
+    "localityNameCollision": "The shared word Cagayan in Cagayan de Misamis/Cagayan de Oro refers to a Mindanao locality in the reviewed type and assessment sources. B0380 is the separate Cagayan drainage basin in northern Luzon.",
+    "reviewedNorthernLuzonLocality": null,
+    "reviewedB0380OccurrenceRecord": null,
+    "basinAssociation": "Unverified. No reviewed source provides a Neostethus villadolidi specimen/event explicitly located in the northern Luzon Cagayan drainage or links the global dataset bibliography IDs to B0380.",
+    "absenceConclusion": "None. A locality missing from a range summary and a zero-result GBIF query do not show absence from Cagayan basin or Luzon.",
+    "placeNameCollision": "Cagayan de Misamis in the type series is a Mindanao locality, distinct from the northern Luzon Cagayan basin. Parenti (1989) also gives the broad phrase “throughout Philippines”, but its examined material and explicit island-level distribution are not a Cagayan River or northern Luzon sampling record."
+  },
+  "interpretation": [
+    "The basin dataset’s eight-name list is a discovery screen, not a complete inventory; its reference IDs are not linked to individual basins.",
+    "GBIF returns an exact accepted name key, but that is a search key rather than an independent taxonomic or occurrence assertion.",
+    "The Cagayan de Misamis type locality is in Mindanao. Parenti (1989) uses a broad “throughout Philippines” range phrase, while its examined vouchers/locality statements name Mindanao, Negros Oriental, Mactan/Cebu, Cuyo/Palawan, and Leyte without a specific northern Luzon locality.",
+    "The 2021 IUCN assessment lists named localities across the same islands and is Data Deficient. Neither its omissions nor the broader historical phrase establish presence or absence in B0380.",
+    "The basin-specific source association remains unverified because the global dataset does not map its bibliography references to individual basins.",
+    "No public species row, occurrence, basin geometry, diet, bait, catchability, legal, safety, or app content was added."
+  ],
+  "disposition": {
+    "candidateEvidenceStatus": "basin-citation-crosswalk-unverified;mindanao-place-name-crosswalk-supported;generic-national-range-phrase-not-locality;no-specific-northern-luzon-voucher-reviewed;research-only",
+    "publicSpeciesRowsAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "waterbodyGeometryAdded": false,
+    "dietOrBaitClaimsAdded": 0,
+    "legalOrSafetyClaimsAdded": 0,
+    "publicationApproval": false
+  },
+  "sources": [
+    {
+      "sourceId": "balisco-liao-2025-philippine-fish-described-checklist",
+      "url": "https://doi.org/10.3897/zookeys.1246.145752",
+      "supports": "CC BY 4.0 article entry 647 type series and Mindanao locality."
+    },
+    {
+      "sourceId": "cas-ichthyology-primary-types-neostethus-villadolidi-20261106",
+      "url": "https://researcharchive.calacademy.org/research/ichthyology/types/index.asp?Family=Phallostethidae&OrderBy=Family%2C+TypeName%2C+CatNum&PageStyle=Multiple&RecStyle=Full&xAction=Search",
+      "supports": "CAS official indexed type entry, catalog number and Mindanao locality."
+    },
+    {
+      "sourceId": "iucn-2021-neostethus-villadolidi-assessment-20261106",
+      "url": "https://dx.doi.org/10.2305/IUCN.UK.2021-1.RLTS.T90985656A90985660.en",
+      "supports": "Published range locality summary and Data Deficient status; omissions do not establish absence."
+    },
+    {
+      "sourceId": "gbif-cagayan-neostethus-villadolidi-b0380-screen-20261106",
+      "url": "https://techdocs.gbif.org/en/openapi/v1/occurrence",
+      "supports": "Exact accepted usage key and bounded count-only coordinate query."
+    },
+    {
+      "url": "https://techdocs.gbif.org/en/openapi/v1/occurrence",
+      "supports": "Official GBIF occurrence search API documentation."
+    },
+    {
+      "sourceId": "parenti-1989-phallostethid-revision-neostethus-villadolidi-20261106",
+      "url": "https://biostor.org/reference/77844",
+      "supports": "Parenti 1989 pp. 269 and 271; broad range phrase, examined vouchers, and species-level locality statement."
+    }
+  ],
+  "sourcePolicy": {
+    "registryFile": "sources.json",
+    "registryEntriesAdded": 4,
+    "registryCountBefore": 751,
+    "registryCountAfter": 755,
+    "reuseReview": "No occurrence rows, images, coordinates, or assessment maps were copied. Research-only factual notes; no public-app admission."
+  },
+  "taxonomicRevision": {
+    "sourceId": "parenti-1989-phallostethid-revision-neostethus-villadolidi-20261106",
+    "citation": "Parenti, L. R. (1989). A phylogenetic revision of the phallostethid fishes (Atherinomorpha, Phallostethidae). Proceedings of the California Academy of Sciences, 46(11), 243–277.",
+    "articlePages": {
+      "genericCompositionSummary": 269,
+      "speciesTreatmentAndMaterial": 271
+    },
+    "access": "Full PDF retrieved via BioStor/Internet Archive and directly reviewed; local private copy SHA-256 pinned in sources.json. BHL metadata lists CC BY-NC-SA 3.0 and in-copyright digitized-with-permission status.",
+    "broadSummary": "Page 269 gives the nonlocality-specific phrase “throughout Philippines” for N. villadolidi.",
+    "examinedMaterial": {
+      "typeSeries": {
+        "holotype": "CAS-SU 36537",
+        "paratypes": "CAS-SU 36538",
+        "locality": "Cagayan de Misamis, Misamis Oriental Province, Mindanao",
+        "date": "1940-08-20",
+        "habitatText": "Mangrove swamp next to the Fishery Experiment Station"
+      },
+      "otherMaterialLocalities": [
+        {
+          "area": "Negros Oriental",
+          "catalogLots": [
+            "CAS-SU 52344",
+            "CAS-SU 36566",
+            "CAS-SU 32355",
+            "CAS 60258",
+            "MNHN 38-15",
+            "ROM 54986",
+            "ROM 54987",
+            "ROM 54988",
+            "ROM 50489",
+            "ROM 51854"
+          ]
+        },
+        {
+          "area": "Mactan Island, Cebu",
+          "catalogLots": [
+            "AMS I.21938-016"
+          ]
+        },
+        {
+          "area": "Northern end of Cuyo, Palawan",
+          "catalogLots": [
+            "CAS 54645"
+          ]
+        },
+        {
+          "area": "Leyte",
+          "catalogLots": [
+            "USNM 98836",
+            "USNM 98837"
+          ]
+        }
+      ],
+      "distributionStatement": [
+        "Mindanao",
+        "Cuyo",
+        "Mactan",
+        "Negros Oriental",
+        "Leyte"
+      ]
+    },
+    "interpretationLimit": "The broad “throughout Philippines” phrase does not identify a sampling site. Page 271’s examined material and specific distribution paragraph do not name northern Luzon or Cagayan River; this is a source-scope observation, not evidence of absence."
+  }
+}
