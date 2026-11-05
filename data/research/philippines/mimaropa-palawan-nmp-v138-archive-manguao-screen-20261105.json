@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "mimaropa-palawan-nmp-v138-archive-manguao-screen-20261105",
+  "checkedOn": "2026-11-05",
+  "regionId": "1700000000",
+  "question": "Does the primary National Museum fish-collection archive v1.38 provide a named Lake Manguao locality or waterbody crosswalk for its Palawan records and selected Manguao-related taxon labels?",
+  "sourceIds": [
+    "asean-cb-national-museum-fish-collection-gbif"
+  ],
+  "archive": {
+    "version": "1.38",
+    "publicationDate": "2026-09-11",
+    "archivePath": "raw/calabarzon-manila-bay-nmp-primary-archive-20261025/nmp-fish-collection-v1.38.zip",
+    "archiveSha256": "63bbcf7a9842538913e602f69c41f802be5d056b5909f98768267a14a90d9bbf",
+    "coreRecords": 8225,
+    "parsedFile": "occurrence.txt",
+    "encodingAndDelimiter": "UTF-8 with optional BOM; tab-separated Darwin Core occurrence table",
+    "archiveAccess": "Existing local research copy was read directly from the ZIP; it was not extracted to a new tracked file or re-downloaded."
+  },
+  "method": {
+    "localityFields": [
+      "locality",
+      "waterBody",
+      "municipality",
+      "verbatimLocality"
+    ],
+    "textSearch": "Case-insensitive literal substring search for Manguao across all occurrence fields, followed by scoped Palawan stateProvince and scientificName counts.",
+    "limits": "This checks one archived dataset version and literal field values only. Alternative locality spellings, uncatalogued collections, other datasets, and records whose labels or taxon determinations differ are not covered. A no-match is not evidence of biological absence."
+  },
+  "findings": {
+    "palawanStateProvinceRows": 963,
+    "distinctScientificNameValuesAmongPalawanRows": 713,
+    "palawanRowsWithLocalityText": 0,
+    "palawanRowsWithWaterBodyText": 0,
+    "archiveRowsWithManguaoAnywhere": 0,
+    "selectedPalawanNameStrings": [
+      {
+        "scientificName": "Hito taytayensis",
+        "rows": 1,
+        "localityOrWaterBodyRows": 0
+      },
+      {
+        "scientificName": "Puntius binotatus",
+        "rows": 4,
+        "localityOrWaterBodyRows": 0
+      },
+      {
+        "scientificName": "Puntius binotatus palavanensis",
+        "rows": 1,
+        "localityOrWaterBodyRows": 0
+      },
+      {
+        "scientificName": "Puntius quinquemaculatus",
+        "rows": 3,
+        "localityOrWaterBodyRows": 0
+      },
+      {
+        "scientificName": "Puntius sp.",
+        "rows": 1,
+        "localityOrWaterBodyRows": 0
+      }
+    ],
+    "focalExactScientificNameStringsNotFound": [
+      "Pterocryptis taytayensis",
+      "Barbodes manguaoensis",
+      "Puntius bantolanensis",
+      "Puntius manguaoensis",
+      "Bostrychus expatria",
+      "Dermogenys palawanensis"
+    ],
+    "interpretation": "The 963 Palawan rows are administrative-province labels only in this archive: none contains locality or waterBody text. The single Hito taytayensis and several Puntius name rows cannot be assigned to Lake Manguao, Manguao Stream, or any named Palawan river. The Puntius rows do not establish a specimen-code or taxonomic crosswalk to Matillano's thesis. The archive description says sampling includes landings, markets of commercial ports and nearby seas, further limiting any inference of inland-water origin."
+  },
+  "reuse": {
+    "datasetLicense": "CC BY 4.0 as declared in the official dataset metadata; attribute the provider and preserve record-specific terms if using any record.",
+    "trackedContent": "Only aggregate counts, literal name strings and the archived source version/hash are recorded. No coordinates, catalog numbers, images, specimen-level data or full occurrence rows are copied here.",
+    "publicationApproval": false
+  },
+  "admission": {
+    "speciesAssertionsAdded": 0,
+    "waterbodyOccurrenceRows": 0,
+    "coordinatesOrGeometryAdded": false,
+    "dietAssertions": 0,
+    "ruleOrSafetyAssertions": 0,
+    "publicAppRows": 0,
+    "publicationApproval": false
+  },
+  "followUp": {
+    "nextAction": "Continue looking for independently documented Lake Manguao, Manguao Stream and northern Palawan river station/voucher evidence; keep province-only National Museum rows out of waterbody-level species coverage. If a public accession crosswalk is needed, identify the collection custodian first and ask about original determination, locality precision, collection date, accession linkage and reuse terms before contacting or requesting data.",
+    "contactMade": false,
+    "rawArchiveChanged": false
+  },
+  "sources": [
+    {
+      "url": "https://ipt.aseanbiodiversity.org/resource?r=ph_fish_collection_museum_b1&request_locale=en&v=1.38",
+      "supports": "Official IPT archive version 1.38, publication date, record count and reuse metadata."
+    },
+    {
+      "url": "https://api.gbif.org/v1/dataset/18896efa-22df-4fbd-9782-42f47257e753",
+      "supports": "Dataset title, CC BY 4.0 metadata and provider description of landing-site, market and nearby-sea sampling."
+    },
+    {
+      "url": "https://www.gbif.org/dataset/18896efa-22df-4fbd-9782-42f47257e753",
+      "supports": "Public GBIF dataset landing record for the archived National Museum dataset."
+    }
+  ]
+}

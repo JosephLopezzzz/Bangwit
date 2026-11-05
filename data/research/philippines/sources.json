@@ -5276,15 +5276,16 @@
         "https://www.gbif.org/dataset/18896efa-22df-4fbd-9782-42f47257e753",
         "https://api.gbif.org/v1/occurrence/search?datasetKey=18896efa-22df-4fbd-9782-42f47257e753"
       ],
-      "role": "Nationally reusable Philippine fish-specimen dataset; the L1 Manila Bay/Cavite screen found seven administrative-text candidates without resolving capture origin, while a version 1.38 literal screen found no Caliraya, Lumot, or Lumban locality text.",
+      "role": "Nationally reusable Philippine fish-specimen dataset; Manila Bay/Cavite candidates remain unresolved, and archive v1.38 literal screens found no Caliraya, Lumot, Lumban, or Manguao locality text. Palawan stateProvince rows have no locality/waterBody values in this archive version.",
       "checkedOn": "2026-11-05",
       "access": {
-        "status": "official-IPT-v1.38-archive-and-GBIF-screen-reviewed;seven-Cavite-records-not-waterbody-localized;caliraya-lumot-locality-text-screen-no-matches",
+        "status": "official-IPT-v1.38-archive-and-GBIF-screen-reviewed;seven-Cavite-records-not-waterbody-localized;caliraya-lumot-locality-text-screen-no-matches;palawan-963-rows-no-locality-waterbody;no-Manguao-string",
         "reviewFiles": [
           "calabarzon-taal-national-museum-gbif-screen-20261024.json",
           "calabarzon-manila-bay-national-museum-gbif-screen-20261025.json",
           "calabarzon-nmp-acb-caliraya-lumot-locality-screen-20261105.json",
-          "mimaropa-palawan-gbif-manguao-locality-triage-20261105.json"
+          "mimaropa-palawan-gbif-manguao-locality-triage-20261105.json",
+          "mimaropa-palawan-nmp-v138-archive-manguao-screen-20261105.json"
         ],
         "rawPath": "raw/calabarzon-manila-bay-nmp-primary-archive-20261025/",
         "archiveSha256": "63bbcf7a9842538913e602f69c41f802be5d056b5909f98768267a14a90d9bbf",
@@ -5303,6 +5304,7 @@
       "caveats": [
         "The national collection's broad geographic metadata does not establish that an individual specimen came from Taal Lake.",
         "A literal text screen of archive version 1.38 found no Caliraya, Lumot, or Lumban strings; this does not establish fish absence or lack of records under alternate names or coordinates.",
+        "A direct literal screen of archived version 1.38 found 963 stateProvince=Palawan rows but zero locality/waterBody text among them and zero Manguao strings across the archive. This is a bounded archive coverage result, not absence evidence; Palawan-only museum rows are not assigned to a lake, stream, river, or marine waterbody.",
         "The exact waterBody, locality and scientificName zeroes are limited to the reviewed version and fields; alternate spellings, coordinates, records not indexed in GBIF, and other datasets were not covered.",
         "A zero-result query is not evidence of fish absence and does not support a complete lake checklist, conservation, diet, catchability, legal, safety or abundance claim."
       ]
