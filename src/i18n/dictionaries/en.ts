@@ -471,19 +471,22 @@ export const enDictionary: Dictionary = {
     opensTab: "(opens in a new tab)",
   },
   palawanStiphodonEvidence: {
-    title: "Palawan streams · historical goby specimens",
+    title: "Palawan streams · historical Stiphodon evidence",
     description:
-      "A 2015 taxonomic paper lists 57 preserved Stiphodon palawanensis specimens from Palawan freshwater sites; 48 are tied by text to eight named aquatic features.",
+      "A 2015 taxonomic paper lists 57 preserved Stiphodon palawanensis specimens from Palawan freshwater sites; 48 are tied by text to eight named aquatic features. It also reports field observations of three other Stiphodon species.",
     scope: "Palawan · MIMAROPA. These are source localities only; no coordinates or map pins are provided.",
     articleCountLabel: "Specimens listed in the article",
     namedSitesSummary: "across eight named stream, river, or falls localities.",
     localityOnlySummary:
       "more are listed from Tagbariri, but the article does not name a waterbody for that group; it is not assigned to a stream, river, or lake.",
+    additionalEvidenceTitle: "Other Stiphodon reported in the same paper",
+    recordDateLabel: "Source date",
+    evidenceSummaryLabel: "Evidence reported",
     collectionDateLabel: "Collected",
     specimenCountLabel: "Source-listed specimens",
     voucherLabel: "Voucher references",
     limits:
-      "Historical collections from 1985–2015, not current-presence or abundance estimates. These entries do not establish fishing access, legality, safety, diet, or bait effectiveness; this is not a complete Palawan fish list.",
+      "Historical collections and field observations from 1985–2015, not current-presence or standardized abundance estimates. A field observation is distinct from a preserved specimen, and qualitative wording is not a numeric count. These entries do not establish fishing access, legality, safety, or bait effectiveness; this is not a complete Palawan fish list.",
     sourceDetails: "Citation, source and reuse terms",
     taxonomyLabel: "Current name status",
     taxonomyCaveat: "This name check does not re-identify the historical specimens or show current presence at these sites.",
@@ -492,7 +495,7 @@ export const enDictionary: Dictionary = {
     pdfLink: "Full text PDF",
     licenseLink: "CC BY 3.0",
     licenseNote:
-      "Adapted from the article's material-examined list: locality, date, voucher and specimen-count facts are grouped here. No article prose, figures, photographs, coordinates or map geometry are reproduced.",
+      "Two scope-limited adaptations are shown: locality/date/voucher/count facts from the material-examined list, and paraphrased field observations including the specific algae-feeding behavior described in the article. No article prose, figures, photographs, coordinates or map geometry are reproduced.",
     opensTab: "(opens in a new tab)",
   },
   taalCasGbifEvidence: {
@@ -631,7 +634,7 @@ export const enDictionary: Dictionary = {
   feedingGuides: {
     title: "What it eats",
     description:
-      "Short, sourced examples of documented diet. The study location and conditions matter, and a prey record does not prove a useful bait.",
+      "Sourced examples of reported diets and observed feeding behavior. Study location and conditions matter; a food record does not prove a useful bait.",
     searchLabel: "Search feeding notes",
     searchPlaceholder: "Search a species or food item",
     foodFilterLabel: "Documented food group",
@@ -649,7 +652,8 @@ export const enDictionary: Dictionary = {
     resultsSummary: "{count} species guide(s)",
     noMatches: "No feeding notes match those filters.",
     studyContextLabel: "Where this was studied",
-    foodsLabel: "Food items reported",
+    foodsLabel: "Foods reported or observed",
+    evidenceTypeLabel: "Evidence type",
     sourcesLabel: "Sources",
     sourceDetails: "Source details",
     baitPendingTitle: "Bait and catching advice are not verified yet",

@@ -113,6 +113,12 @@ export function FeedingGuides() {
                   <p className="text-xs font-bold uppercase tracking-wide text-muted">{copy.studyContextLabel}</p>
                   <p className="mt-1 text-[14px] leading-relaxed text-muted">{guide.studyContext[lang]}</p>
                 </div>
+                {guide.evidenceType ? (
+                  <p className="mt-3 text-sm leading-relaxed text-muted">
+                    <strong className="text-ink">{copy.evidenceTypeLabel}: </strong>
+                    {guide.evidenceType[lang]}
+                  </p>
+                ) : null}
                 <div className="mt-3">
                   <p className="text-xs font-bold uppercase tracking-wide text-muted">{copy.foodsLabel}</p>
                   <ul className="mt-2 flex flex-wrap gap-2" aria-label={copy.foodsLabel}>

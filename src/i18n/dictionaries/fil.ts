@@ -477,19 +477,22 @@ export const filDictionary: Dictionary = {
     opensTab: "(magbubukas sa bagong tab)",
   },
   palawanStiphodonEvidence: {
-    title: "Mga batis sa Palawan · makasaysayang goby specimen",
+    title: "Mga batis sa Palawan · makasaysayang ebidensiya ng Stiphodon",
     description:
-      "May 57 preserved Stiphodon palawanensis specimen sa isang taxonomic paper noong 2015; 48 ang iniugnay ng teksto sa walong pinangalanang anyong-tubig.",
+      "May 57 preserved Stiphodon palawanensis specimen sa isang taxonomic paper noong 2015; 48 ang iniugnay ng teksto sa walong pinangalanang anyong-tubig. Iniulat din nito ang field observations ng tatlong iba pang Stiphodon species.",
     scope: "Palawan · MIMAROPA. Mga locality lang ito ayon sa source; walang coordinates o map pin.",
     articleCountLabel: "Mga specimen sa artikulo",
     namedSitesSummary: "mula sa walong pinangalanang batis, ilog o talon.",
     localityOnlySummary:
       "pa ang inilista mula Tagbariri, pero walang pinangalanang anyong-tubig para sa grupong ito; hindi ito iniuugnay sa batis, ilog o lawa.",
+    additionalEvidenceTitle: "Iba pang Stiphodon na iniulat sa parehong papel",
+    recordDateLabel: "Petsa ayon sa source",
+    evidenceSummaryLabel: "Iniulat na ebidensiya",
     collectionDateLabel: "Petsa ng pagkolekta",
     specimenCountLabel: "Mga specimen ayon sa source",
     voucherLabel: "Mga voucher reference",
     limits:
-      "Makasaysayang koleksiyon mula 1985–2015 ito, hindi patunay ng kasalukuyang presensya o dami. Hindi nito pinatutunayan ang access o legalidad ng pangingisda, kaligtasan, diyeta o bisa ng pain; hindi ito kumpletong talaan ng isda sa Palawan.",
+      "Makasaysayang koleksiyon at field observation mula 1985–2015 ito, hindi patunay ng presensya ngayon o standardized na pagtatantiya ng dami. Magkaiba ang field observation at preserved specimen; hindi ginagawang bilang ang salitang kwalitatibo. Hindi nito pinatutunayan ang access o legalidad ng pangingisda, kaligtasan o bisa ng pain; hindi ito kumpletong talaan ng isda sa Palawan.",
     sourceDetails: "Citation, source at terms sa paggamit",
     taxonomyLabel: "Kasalukuyang status ng pangalan",
     taxonomyCaveat: "Hindi nito muling tinutukoy ang mga makasaysayang specimen o pinatutunayan ang presensya ngayon sa mga lugar na ito.",
@@ -498,7 +501,7 @@ export const filDictionary: Dictionary = {
     pdfLink: "Buong PDF",
     licenseLink: "CC BY 3.0",
     licenseNote:
-      "Inangkop mula sa material-examined list ng artikulo: pinagsama rito ayon sa locality ang pangalan ng lugar, petsa, voucher at bilang ng specimen. Walang teksto ng artikulo, figure, litrato, coordinates o map geometry na kinopya.",
+      "Dalawang limitadong adaptation ang ipinapakita: pangalan ng locality, petsa, voucher at bilang mula sa material-examined list, at paraphrased field observations kasama ang espesipikong nakita nilang pagkain ng algae. Walang teksto ng artikulo, figure, litrato, coordinates o map geometry na kinopya.",
     opensTab: "(magbubukas sa bagong tab)",
   },
   taalCasGbifEvidence: {
@@ -638,7 +641,7 @@ export const filDictionary: Dictionary = {
   feedingGuides: {
     title: "Ano ang kinakain?",
     description:
-      "Maiikling halimbawa ng diet na may source. Mahalaga ang lokasyon at kondisyon ng pag-aaral; hindi patunay ng epektibong pain ang prey record.",
+      "Mga halimbawa ng diet at naobserbahang asal sa pagkain na may source. Mahalaga ang lokasyon at kondisyon ng pag-aaral; hindi patunay ng epektibong pain ang tala ng pagkain.",
     searchLabel: "Hanapin sa feeding notes",
     searchPlaceholder: "Hanapin ang species o pagkain",
     foodFilterLabel: "Naitalang pangkat ng pagkain",
@@ -656,7 +659,8 @@ export const filDictionary: Dictionary = {
     resultsSummary: "{count} species guide",
     noMatches: "Walang feeding note na tugma sa filters.",
     studyContextLabel: "Saan ito pinag-aralan",
-    foodsLabel: "Mga pagkaing iniulat",
+    foodsLabel: "Mga pagkaing iniulat o naobserbahan",
+    evidenceTypeLabel: "Uri ng ebidensiya",
     sourcesLabel: "Mga source",
     sourceDetails: "Detalye ng source",
     baitPendingTitle: "Hindi pa verified ang pain at paraan ng panghuhuli",

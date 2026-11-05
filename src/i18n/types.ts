@@ -419,6 +419,9 @@ export type Dictionary = {
     articleCountLabel: string;
     namedSitesSummary: string;
     localityOnlySummary: string;
+    additionalEvidenceTitle: string;
+    recordDateLabel: string;
+    evidenceSummaryLabel: string;
     collectionDateLabel: string;
     specimenCountLabel: string;
     voucherLabel: string;
@@ -569,6 +572,7 @@ export type Dictionary = {
     noMatches: string;
     studyContextLabel: string;
     foodsLabel: string;
+    evidenceTypeLabel: string;
     sourcesLabel: string;
     sourceDetails: string;
     baitPendingTitle: string;

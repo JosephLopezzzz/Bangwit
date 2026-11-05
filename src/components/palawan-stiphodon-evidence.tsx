@@ -71,6 +71,52 @@ export function PalawanStiphodonEvidence() {
         ))}
       </ul>
 
+      <section className="mt-5 border-t border-line pt-4" aria-labelledby="palawan-stiphodon-observations-heading">
+        <h3 id="palawan-stiphodon-observations-heading" className="font-semibold text-ink">
+          {copy.additionalEvidenceTitle}
+        </h3>
+        <ul className="mt-3 grid gap-3">
+          {evidence.additionalSpeciesObservations.map((observation) => (
+            <li key={observation.id} className="rounded-xl border border-line bg-canvas/50 p-4">
+              <article>
+                <h4 lang="en" className="font-semibold italic text-ink">
+                  {observation.speciesName}
+                </h4>
+                <p lang="en" className="mt-1 text-sm leading-relaxed text-muted">
+                  {observation.locality}
+                </p>
+                <dl className="mt-3 grid gap-y-2 text-sm leading-relaxed sm:grid-cols-[170px_minmax(0,1fr)] sm:gap-x-4">
+                  <div className="contents">
+                    <dt className="font-semibold text-ink">{copy.recordDateLabel}</dt>
+                    <dd className="text-muted">{observation.date}</dd>
+                  </div>
+                  <div className="contents">
+                    <dt className="font-semibold text-ink">{copy.evidenceSummaryLabel}</dt>
+                    <dd className="text-muted">{observation.evidenceSummary[lang]}</dd>
+                  </div>
+                  <div className="contents">
+                    <dt className="font-semibold text-ink">{copy.taxonomyLabel}</dt>
+                    <dd className="text-muted">
+                      {observation.currentStatus}. {copy.taxonomyCaveat} {" "}
+                      <a
+                        href={observation.catalogUrl}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className={linkClass}
+                      >
+                        {copy.taxonomyLink}
+                        <ArrowUpRight aria-hidden="true" size={15} />
+                        <span className="sr-only">{copy.opensTab}</span>
+                      </a>
+                    </dd>
+                  </div>
+                </dl>
+              </article>
+            </li>
+          ))}
+        </ul>
+      </section>
+
       <p className="mt-3 max-w-[75ch] text-sm leading-relaxed text-muted">{copy.limits}</p>
 
       <details className="group mt-3">

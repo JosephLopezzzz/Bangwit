@@ -70,6 +70,7 @@ export type FeedingGuide = {
   commonName: { en: string; fil: string };
   summary: { en: string; fil: string };
   studyContext: { en: string; fil: string };
+  evidenceType?: { en: string; fil: string };
   foods: { category: string; en: string; fil: string }[];
 };
 
