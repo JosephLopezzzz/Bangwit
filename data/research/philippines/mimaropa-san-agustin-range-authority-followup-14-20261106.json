@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "mimaropa-san-agustin-range-authority-followup-14-20261106",
+  "checkedOn": "2026-11-06",
+  "phaseId": "L8",
+  "regionId": "1700000000",
+  "regionName": "MIMAROPA",
+  "purpose": "Screen the final San Agustin Table 1 label, Toxotes jaculatrix, against the existing strict GBIF crosswalk, current fish authority, and independent Philippine freshwater field records.",
+  "relatedReviews": [
+    "mimaropa-san-agustin-2022-estuary-tributary-survey-integrity-review-20261105.json",
+    "mimaropa-san-agustin-gbif-name-crosswalk-20261105.json",
+    "mimaropa-san-agustin-range-authority-followup-13-20261106.json"
+  ],
+  "method": {
+    "scope": "Focused current-name and inland Philippine locality context screen for the verbatim source label Toxotes jaculatrix.",
+    "distinction": "The strict GBIF crosswalk returns an exact accepted species-rank match. A freshwater river-system field study and an NFRDI Lake Taal fishery list document separate Philippine context; neither identifies a fish from the 2025 RSU San Agustin survey.",
+    "evidenceLimit": "The UPLB field study sampled Looc, Magapi, and Pansipit rivers around Lake Taal in 2011 and reports T. jaculatrix at Pansipit sites. The NFRDI Lake Taal account is a separate fishery-resource list. Neither source contains the San Agustin specimen voucher or station crosswalk.",
+    "sourceReuse": "Retain concise attributed findings and direct citations only. No specimen images, sequence, coordinates, or copied source-table extract is included. Research-only; no public-app publication or derived checklist is approved."
+  },
+  "findings": [
+    {
+      "sourceLabel": "Toxotes jaculatrix",
+      "nameCrosswalk": "The existing strict GBIF Backbone crosswalk returned an exact accepted species-rank match (usage key 2382436; confidence 99). Preserve the printed source spelling; the name match does not verify a specimen.",
+      "currentAuthority": "The Catalog of Fishes online version updated 13 August 2026 treats Toxotes jaculatrix (Pallas, 1767) as valid, includes the Philippines in its Indo-West Pacific range, and gives freshwater and brackish habitat.",
+      "philippineContext": "Corpuz, Paller, and Ocampo (2016) surveyed three Lake Taal river systems—Looc and Magapi inlets and the Pansipit outlet—during wet and dry seasons in 2011. Their results list T. jaculatrix among abundant species at Pansipit and report it across Pansipit sampling sites. A separate NFRDI Lake Taal fishery-resource table lists T. jaculatrix (Kataba) as migratory. These are independent historical Philippine records in inland waters, not the RSU San Agustin fish.",
+      "disposition": "Retain the printed name as an accepted-name crosswalk with freshwater/brackish habitat context. No new range-authority discrepancy or voucher-priority mismatch is added. The identity, reach, date-specific presence, and condition of the 2025 San Agustin specimen remain unresolved.",
+      "priority": "seek the 2025 RSU voucher/catalogue identifier and station-to-waterbody crosswalk before assigning a site-level occurrence"
+    }
+  ],
+  "disposition": {
+    "sourceLabelsReviewed": 1,
+    "newRangeAuthorityDiscrepanciesNotCountedAsOutliers": 0,
+    "newVoucherPriorityRangeMismatchesFlagged": 0,
+    "totalVoucherPriorityRangeMismatchesAfterReview": 6,
+    "totalRangeAuthorityDiscrepanciesNotCountedAsOutliersAfterReview": 5,
+    "sourceLabelsReviewedOf39": 39,
+    "sourceLabelsRemainingForRangeAndAuthorityScreen": 0,
+    "specimenIdentitiesResolved": 0,
+    "occurrenceAssertions": 0,
+    "waterbodyAssertions": 0,
+    "coordinatesOrGeometryAdded": false,
+    "publicAppRows": 0,
+    "publicationApproval": false,
+    "contactSent": false
+  },
+  "nextAction": "All 39 source labels have received a focused name/range/current-authority screen. Do not convert this screen into a verified occurrence batch. Search for a public RSU voucher/accession and station/locality crosswalk; if unavailable, prepare a direct request for the authors or repository and keep the six voucher-priority mismatches and five authority issues unresolved pending evidence.",
+  "sources": [
+    {
+      "url": "https://mbimph.com/index.php/UPJOZ/article/view/4989",
+      "supports": "The 2025 San Agustin source label, study context, and reported RSU biological-repository holding; the published record does not expose an accession crosswalk or site coordinates."
+    },
+    {
+      "url": "https://api.gbif.org/v1/species/match?name=Toxotes%20jaculatrix&strict=true",
+      "supports": "Existing strict GBIF accepted species-rank match for Toxotes jaculatrix (usage key 2382436; confidence 99)."
+    },
+    {
+      "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=20124",
+      "supports": "Catalog of Fishes accepted status, Philippine-inclusive Indo-West Pacific range, and freshwater/brackish habitat summary for T. jaculatrix."
+    },
+    {
+      "url": "https://ovcre.uplb.edu.ph/journals-uplb/index.php/JESAM/article/download/158/140/",
+      "supports": "Corpuz, Paller, and Ocampo (2016), freshwater fish assemblage sampling in Lake Taal inlet/outlet rivers in 2011; the results identify T. jaculatrix at Pansipit sampling sites."
+    },
+    {
+      "url": "https://nfrdi.da.gov.ph/tpjf/vol25/Status%20of%20Taal%20Lake%20Fishery%20Resources%20with%20Emphasis%20on%20the%20Endemic%20Freshwater%20Sardine%2C%20Sardinella%20tawilis%20%28Herre%2C%201927%29.pdf",
+      "supports": "Separate NFRDI Lake Taal fishery-resource list of T. jaculatrix (Kataba), classified as migratory."
+    }
+  ]
+}
