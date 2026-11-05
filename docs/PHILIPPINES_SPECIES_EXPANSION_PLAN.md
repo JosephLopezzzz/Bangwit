@@ -4872,3 +4872,13 @@ Added `mimaropa-naujan-pasumbal-perez-2001-commercial-fisheries-review-20261105.
 See the [SEAFDEC repository record](https://repository.seafdec.org/handle/20.500.12066/5143?locale-attribute=in), [full chapter PDF](https://repository.seafdec.org.ph/bitstream/10862/827/1/cemplrfa_p099-107.pdf), and [research review](data/research/philippines/mimaropa-naujan-pasumbal-perez-2001-commercial-fisheries-review-20261105.json).
 
 **Next:** continue MIMAROPA freshwater source discovery with named river and lake surveys; only compare this historical aggregate chapter to later species lists after a taxonomic and locality crosswalk, and keep current/pilot claims separate.
+
+### National rollout step 553: Butas River migratory-fish survey abstract and access review — 5 November 2026
+
+Reviewed SEAFDEC's metadata record and the SEARCA proceedings catalogue for Alcanices (2005). The abstract describes monthly gill-net samples from April to December 2003 at four Butas River stations labeled by barangay: Melgar A, Concepcion, Dao, and Bayani. It reports mullet, milkfish, and caranx at Stations 1 and 4. No scientific names, counts, vouchers, coordinates, or species-by-station table are exposed. The repository item has no associated file; the full five-page paper was not obtained.
+
+Added `mimaropa-naujan-alcanices-2005-butas-river-migratory-fish-review-20261105.json` and one source-register entry; the registry now contains 702 unique entries. The abstract remains a historical, common-name-only lead. No species, occurrence, catch, geometry, diet, legal, safety, or public-app row was added. No full-text purchase or scan request was made; item-specific reuse terms are unknown.
+
+See the [SEAFDEC abstract record](https://repository.seafdec.org.ph/handle/10862/6118), [proceedings contents](https://repository.seafdec.org.ph/handle/10862/6159), [SEARCA proceedings catalogue](https://www.searca.org/pubs/proceeding-workshop-reports?pid=145), and [research review](data/research/philippines/mimaropa-naujan-alcanices-2005-butas-river-migratory-fish-review-20261105.json).
+
+**Next:** continue MIMAROPA inland-water coverage with full-text, site-resolved studies; seek an authorized copy of this conference paper only if its station/species details would change the evidence picture.
