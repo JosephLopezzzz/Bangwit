@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "mimaropa-san-agustin-range-authority-followup-7-20261105",
+  "checkedOn": "2026-11-05",
+  "phaseId": "L8",
+  "regionId": "1700000000",
+  "regionName": "MIMAROPA",
+  "purpose": "Screen two additional San Agustin Table 1 labels against current taxonomy and Philippine lake or market-provenance evidence.",
+  "relatedReviews": [
+    "mimaropa-san-agustin-2022-estuary-tributary-survey-integrity-review-20261105.json",
+    "mimaropa-san-agustin-gbif-name-crosswalk-20261105.json",
+    "mimaropa-san-agustin-range-authority-followup-6-20261105.json"
+  ],
+  "method": {
+    "scope": "Focused review of Glossogobius aureus and Leiognathus splendens, two printed labels in Table 1 of the 2025 San Agustin article.",
+    "distinction": "Philippine lake-study specimens and market-voucher records from other localities are context only. They do not identify the preserved San Agustin survey specimens or assign them to a waterbody or reach.",
+    "evidenceLimit": "The survey article provides no voucher accession crosswalk, diagnostic images, meristic data, sequence, station coordinates, or individual reach-to-specimen link. A separate Philippine lake study also reports a divergent Glossogobius cf. aureus group, while the ponyfish record is market-associated.",
+    "sourceReuse": "Only concise attributed findings and direct source links are retained. No specimen image, market dataset, occurrence export, taxonomic table, sequence, coordinate, or transformed app row was copied. Public-app reuse approval was not assessed or granted."
+  },
+  "findings": [
+    {
+      "sourceLabel": "Glossogobius aureus",
+      "nameCrosswalk": "The existing strict GBIF Backbone crosswalk returned an exact accepted species-rank name match (usage key 2379425; confidence 99). This is a nomenclatural match and does not identify the San Agustin specimen.",
+      "currentAuthority": "A 2023 primary study describes Glossogobius aureus as native in the Philippines and amphidromous. It obtained 307 morphologically identified specimens from nine Philippine lakes and sequenced mitochondrial cytochrome b. Of these, 260 had at least 99% sequence similarity to the G. aureus reference; 47 from Lake Lanao were designated Glossogobius cf. aureus and treated separately. The paper also notes that G. aureus and G. giuris are morphologically similar and often confused.",
+      "philippineContext": "The study includes samples from Lake Naujan, Oriental Mindoro, collected at Bayani, Naujan, as well as Laguna de Bay, Taal, Lanao, Buluan, Bato, Buhi, Paoay, and Sebu lakes. The published Naujan material is national/regional context from a separate lake study, not evidence for the San Agustin estuary or its tributaries.",
+      "disposition": "The Philippine native-range and lake-study context make the label regionally plausible, but the article's acknowledged lookalike confusion and the divergent Lake Lanao group reinforce the need for the actual RSU voucher and station crosswalk. No new range-authority discrepancy or voucher-priority mismatch is added; the San Agustin identity and reach remain unresolved.",
+      "priority": "routine; compare the RSU voucher with diagnostic characters for G. aureus and G. giuris and retain any sequence-to-voucher link before assigning a reach"
+    },
+    {
+      "sourceLabel": "Leiognathus splendens",
+      "nameCrosswalk": "The existing strict GBIF Backbone crosswalk returned an exact species-rank match to Leiognathus splendens (usage key 5211431; confidence 99), but its status is SYNONYM. WoRMS lists Leiognathus splendens as unaccepted and returns Eubleekeria splendens (AphiaID 398527) as the accepted name. This current-combination mapping does not identify the San Agustin specimen.",
+      "currentAuthority": "WoRMS accepts Eubleekeria splendens (Cuvier, 1829). The 2017 Panay fish guide uses that accepted combination, lists Indo-West Pacific distribution from western India to Japan and Australia, and describes shallow coastal muddy-bottom habitat; its illustrated voucher is KAUM-I. 62962.",
+      "philippineContext": "Smithsonian NMNH catalog voucher USNM 445236 (field number LUZ-019) is identified as Eubleekeria splendens, 69 mm standard length, collected on 24 October 2017. Its locality is Lucena City central market, Dalahican port, Tayabas Bay. This is a market-associated museum record; the catalog does not establish a precise capture point. The Panay guide voucher is also published in a market-survey guide without an individual capture site.",
+      "disposition": "The source spelling maps cleanly as a synonym to the current accepted combination Eubleekeria splendens, so no new name discrepancy, range-authority discrepancy, or voucher-priority mismatch is added. Philippine market-voucher context makes the taxon nationally plausible, but does not identify the San Agustin fish or its collection reach.",
+      "priority": "routine; record the accepted combination as a research crosswalk only and request the RSU voucher/accession and station mapping before any local assertion"
+    }
+  ],
+  "disposition": {
+    "sourceLabelsReviewed": 2,
+    "newRangeAuthorityDiscrepanciesNotCountedAsOutliers": 0,
+    "newVoucherPriorityRangeMismatchesFlagged": 0,
+    "totalVoucherPriorityRangeMismatchesAfterReview": 6,
+    "totalRangeAuthorityDiscrepanciesNotCountedAsOutliersAfterReview": 4,
+    "sourceLabelsReviewedOf39": 26,
+    "sourceLabelsRemainingForRangeAndAuthorityScreen": 13,
+    "specimenIdentitiesResolved": 0,
+    "occurrenceAssertions": 0,
+    "waterbodyAssertions": 0,
+    "coordinatesOrGeometryAdded": false,
+    "publicAppRows": 0,
+    "publicationApproval": false,
+    "contactSent": false
+  },
+  "nextAction": "Continue the current-authority and range screen for the remaining 13 of 39 Table 1 labels. Keep six voucher-priority mismatch labels in the verification queue and retain four separate range-authority discrepancies: Tridentiger trigonocephalus, Hypseleotris cyprinoides, Eleotris mauritiana, and Awaous guamensis. Then seek the RSU voucher/accession crosswalk and resolve the paper's station/locality conflicts before considering occurrence rows.",
+  "sources": [
+    {
+      "url": "https://mbimph.com/index.php/UPJOZ/article/view/4989",
+      "supports": "The original 2025 San Agustin article, its Table 1 labels, survey scope, and limitations."
+    },
+    {
+      "url": "https://api.gbif.org/v1/species/match?name=Glossogobius%20aureus&strict=true",
+      "supports": "Existing strict GBIF Backbone exact accepted species-rank match for Glossogobius aureus only."
+    },
+    {
+      "url": "https://api.gbif.org/v1/species/match?name=Leiognathus%20splendens&strict=true",
+      "supports": "Existing strict GBIF Backbone exact species-rank match to the source name Leiognathus splendens; its returned status is synonym, not accepted."
+    },
+    {
+      "url": "https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0293076",
+      "supports": "Abdulmalik-Labe, Eduardo, and Quilang (2023): Philippine native-range context; nine-lake sampling, voucher and cyt b methods; 260 of 307 sequences at least 99% similar to the reference; 47 Lake Lanao samples treated as Glossogobius cf. aureus; and similarity between G. aureus and G. giuris."
+    },
+    {
+      "url": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=218461",
+      "supports": "WoRMS record for Leiognathus splendens, unaccepted combination, and its accepted name Eubleekeria splendens."
+    },
+    {
+      "url": "https://www.marinespecies.org/aphia.php?p=taxdetails&id=398527",
+      "supports": "WoRMS accepted taxon Eubleekeria splendens (Cuvier, 1829)."
+    },
+    {
+      "url": "https://www.museum.kagoshima-u.ac.jp/publications/pdf_images/PhilippineFG_lowres.pdf",
+      "supports": "Motomura et al. (eds.) (2017), Commercial and bycatch market fishes of Panay Island: Eubleekeria splendens account, distribution/habitat summary, voucher KAUM-I. 62962, and market-survey context."
+    },
+    {
+      "url": "https://n2t.net/ark:/65665/3cb05f14f-39f0-4be1-adb8-c5cf9d3f1c9a",
+      "supports": "Smithsonian NMNH voucher USNM 445236, Eubleekeria splendens, collected at Lucena City central market, Dalahican port, Tayabas Bay, Quezon, on 24 October 2017; market locality is not a capture-point determination."
+    }
+  ]
+}
