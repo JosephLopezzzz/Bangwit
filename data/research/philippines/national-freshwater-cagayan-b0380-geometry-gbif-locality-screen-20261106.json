@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "reviewedOn": "2026-11-06",
-  "status": "cagayan-b0380-geometry-screened;gbif-window-bounded;neostethus-locality-crosswalk-reviewed;mugil-historical-cagayan-river-report-reviewed;research-only;no-public-app-rows",
+  "status": "cagayan-b0380-geometry-screened;gbif-window-bounded;neostethus-locality-crosswalk-reviewed;mugil-historical-cagayan-river-report-reviewed;nomorhamphus-rossi-locality-crosswalk-reviewed;research-only;no-public-app-rows",
   "purpose": "Crosswalk the global dataset's Cagayan drainage-basin geometry with independently sourced locality evidence and a bounded GBIF coordinate search. This is not a complete Cagayan fish inventory.",
   "basinGeometry": {
     "sourceId": "ding-2026-global-freshwater-fish-drainage-basin-dataset-2024",
@@ -86,8 +86,19 @@
       {
         "scientificName": "Nomorhamphus rossi",
         "gbifCoordinateRowsInBoundingBox": 0,
-        "independentLocalityEvidence": "Smithsonian NMNH holotype USNM 333262 is catalogued from Intel River, a pool at Barangay Hot Springs, Baggao, Cagayan; collection date 1989-05-05. The record has no coordinate used in this overlay, so it is a historical textual voucher locality, not a point-in-polygon result.",
-        "recordUrl": "http://n2t.net/ark:/65665/35f61106b-05e2-469d-a59b-19c3ecb4d7b1"
+        "independentLocalityEvidence": "Smithsonian NMNH holotype USNM 333262 is catalogued from Intel River, a pool at Barangay Hot Springs, Baggao, Cagayan; collection date 1989-05-05. A separate 2013 herpetofauna site table reports a GPS coordinate for the vicinity of hot springs on the bank of Ital River in Barrio Via, Baggao. That co-located locality coordinate falls inside the University of Glasgow modeled Cagayan catchment polygon, but it is not a coordinate for the fish voucher. The Intel/Ital spelling and exact watercourse identity remain unresolved.",
+        "recordUrl": "http://n2t.net/ark:/65665/35f61106b-05e2-469d-a59b-19c3ecb4d7b1",
+        "localityCrosswalkArtifact": "national-freshwater-cagayan-nomorhamphus-rossi-intel-river-locality-crosswalk-20261106.json",
+        "independentCatchmentGeometryCheck": {
+          "sourceId": "boothroyd-2023-philippines-river-catchment-geodata",
+          "coordinateSourceId": "brown-et-al-2013-northern-sierra-madre-herpetofauna-via-hot-springs-coordinate",
+          "coordinateAsPrinted": "17.887N, 121.986E",
+          "coordinateIsFishVoucherCoordinate": false,
+          "catchmentName": "Cagayan",
+          "pointInCatchmentPolygon": true,
+          "directPointInB0380PolygonTested": false,
+          "interpretation": "A co-located place coordinate supports historical association with an independently modeled Cagayan catchment. It does not locate USNM 333262 precisely or prove that the independent polygon exactly matches B0380."
+        }
       },
       {
         "scientificName": "Mugil cephalus",
@@ -173,7 +184,7 @@
   },
   "interpretation": [
     "The dataset’s B0380 Cagayan geometry is a northern Luzon drainage-basin polygon; the similar name Cagayan de Misamis in Mindanao refers to a separate locality.",
-    "The strongest independently localized leads in this screen are the textual USNM 333262 type locality for Nomorhamphus rossi and the historical sequence locality for Anguilla luzonensis. Only the eel's coarse shared coordinate was tested within the polygon; it is not a precise sampling reach.",
+    "For Nomorhamphus rossi, a co-located herpetofauna site coordinate falls within an independent modeled Cagayan catchment polygon, but it is not the fish voucher coordinate and was not tested against B0380's polygon. The Anguilla luzonensis shared coordinate was tested within B0380 but is not a precise sampling reach.",
     "The market-based Mugil and Glossogobius records remain vendor-vicinity claims, not exact basin collection localities.",
     "The eight-name basin candidate set remains discovery-only and incomplete. Review each taxon's underlying source separately and keep Cagayan River reaches, tributaries, lakes, reservoirs, and administrative areas distinct.",
     "For Neostethus villadolidi, the historical type locality “Cagayan de Misamis” is in Mindanao. Parenti (1989) gives a broad national range phrase but no B0380-specific locality in the reviewed material. No absence is inferred from missing locality detail or the bounded GBIF zero."
@@ -185,7 +196,7 @@
     "dietOrBaitClaimsAdded": 0,
     "legalOrSafetyClaimsAdded": 0,
     "publicationApproval": false,
-    "reason": "This review resolves the basin geometry identifier and screens locality evidence. The new M. cephalus report is a historical conference-paper lead without verified voucher repository, item-level reuse rights, current presence, or specimen-point precision; it does not create an app-ready occurrence row or exact waterbody geometry."
+    "reason": "The M. cephalus report remains a historical conference-paper lead without verified voucher repository, item-level reuse rights, current presence, or specimen-point precision. The N. rossi coordinate belongs to a co-located herpetofauna locality, not its fish voucher, and the independent modeled catchment is not a direct B0380 polygon overlay. Neither creates an app-ready occurrence row or exact waterbody geometry."
   },
   "sources": [
     {
@@ -219,6 +230,16 @@
     {
       "url": "https://www.gbif.org/occurrence/3346179802",
       "supports": "Example GBIF occurrence row associated with eel sequence accession AB469437."
+    },
+    {
+      "sourceId": "brown-et-al-2013-northern-sierra-madre-herpetofauna-via-hot-springs-coordinate",
+      "url": "https://doi.org/10.3897/zookeys.266.3982",
+      "supports": "Table 1 locality 15: GPS coordinate for the vicinity of hot springs on the bank of Ital River, Barrio Via, Baggao; a co-located place coordinate, not a fish-voucher point."
+    },
+    {
+      "sourceId": "boothroyd-2023-philippines-river-catchment-geodata",
+      "url": "https://researchdata.gla.ac.uk/1396/",
+      "supports": "CC BY 4.0 modeled national catchment polygons; the co-located locality coordinate falls in the Cagayan polygon."
     },
     {
       "url": "https://doi.org/10.3897/zookeys.1246.145752",
