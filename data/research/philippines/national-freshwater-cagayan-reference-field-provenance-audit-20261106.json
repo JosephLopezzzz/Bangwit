@@ -1,0 +1,58 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-11-06",
+  "status": "workbook-reference-field-semantics-reviewed;not-basin-specific-citation-crosswalk;research-only;no-app-rows",
+  "question": "Do numeric references in the Cagayan species rows cite evidence for the Cagayan basin association?",
+  "source": {
+    "sourceId": "ding-2026-global-freshwater-fish-drainage-basin-dataset-2024",
+    "record": "https://zenodo.org/records/19511163",
+    "file": "cas_freshwater_202412.xlsx",
+    "sheet": "Note",
+    "relevantFieldDefinitions": {
+      "cas_info": "Raw data from the Catalogue of Fishes, including original taxonomic and bibliographic information.",
+      "references": "Bibliographic references supporting the species description or taxonomic assignment.",
+      "basin": "Name of the freshwater drainage basin where the species occurs."
+    }
+  },
+  "observations": {
+    "cagayanDatasetBasinId": "B0380",
+    "cagayanCandidateTaxa": 8,
+    "referenceIdEntriesAcrossThoseTaxa": 306,
+    "distinctReferenceIdsAcrossThoseTaxa": 292,
+    "example": {
+      "scientificName": "Nomorhamphus rossi",
+      "referenceId": "25599",
+      "catalogRecord": "https://researcharchive.calacademy.org/research/ichthyology/catalog/getref.asp?id=25599",
+      "catalogRecordSummary": "Meisner (2001), a systematic study of the viviparous halfbeak genera Dermogenys and Nomorhamphus.",
+      "interpretation": "An example of a taxonomic bibliography record; the workbook does not identify it as evidence for the Cagayan basin association."
+    },
+    "missingAssociationEvidence": [
+      "No workbook field maps a bibliography record to a particular species–basin association.",
+      "The workbook does not provide basin-specific specimen identifiers, collection events, sampling sites, coordinates, or citation page/figure anchors for these candidate rows."
+    ]
+  },
+  "interpretation": [
+    "Treat referenceIds as taxonomic bibliography leads, not as verified citations for the basin association.",
+    "An individual reference may contain relevant distribution or locality evidence, but that must be checked in the work itself and tied to the exact taxon, waterbody, and record before use.",
+    "The field definitions do not establish that any of the eight candidate taxa were sampled in the Cagayan basin or at a particular river, lake, tributary, or reach.",
+    "This audit clarifies workbook metadata only; it does not independently verify taxonomy, source literature, basin geometry, species presence, or completeness."
+  ],
+  "disposition": {
+    "referenceIdsPromotedToBasinEvidence": 0,
+    "publicSpeciesRowsAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "geometryAdded": false,
+    "publicationApproval": false,
+    "reason": "The workbook defines the bibliography field as supporting species description or taxonomic assignment and supplies no citation-to-basin crosswalk."
+  },
+  "sources": [
+    {
+      "url": "https://zenodo.org/records/19511163",
+      "supports": "Source dataset and workbook version."
+    },
+    {
+      "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/getref.asp?id=25599",
+      "supports": "Example CAS reference record associated with a Cagayan candidate's taxonomy bibliography."
+    }
+  ]
+}
