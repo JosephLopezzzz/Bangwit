@@ -1,0 +1,918 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "mimaropa-marinduque-2025p-qifs-category-crosscheck-20261106",
+  "reviewedOn": "2026-11-06",
+  "phaseId": "L8",
+  "regionId": "1700000000",
+  "provinceId": "1704000000",
+  "province": "Marinduque",
+  "status": "official-2025-preliminary-inland-production-crosschecked;province-level-only;not-species-occurrence-data",
+  "question": "Can PSA MIMAROPA’s preliminary 2025 Marinduque inland-fisheries table be reproduced from OpenSTAT, and does it identify fish by named river or lake?",
+  "purpose": "Cross-check the latest Marinduque inland-fisheries production release to prioritize future waterbody survey research while keeping production categories separate from species occurrences.",
+  "sourceIds": [
+    "psa-openstat-qifs-inland-production-national",
+    "psa-rssomimaropa-2025p-fisheries-production-marinduque"
+  ],
+  "apiQuery": {
+    "endpoint": "https://openstat.psa.gov.ph/PXWeb/api/v1/en/DB/2E/FS/0052E4GVIP0.px",
+    "metadataUrl": "https://openstat.psa.gov.ph/Metadata/2E4GVIP0",
+    "apiGuideUrl": "https://openstat.psa.gov.ph/API-Documentation",
+    "query": {
+      "geolocationCode": "1704000000",
+      "speciesCodes": [
+        "000",
+        "100",
+        "101",
+        "102",
+        "103",
+        "104",
+        "105",
+        "106",
+        "107",
+        "108",
+        "109",
+        "110",
+        "111",
+        "112",
+        "113",
+        "114",
+        "115",
+        "116",
+        "117",
+        "118",
+        "199",
+        "200",
+        "201",
+        "202",
+        "203",
+        "204",
+        "205",
+        "206",
+        "207",
+        "208",
+        "299",
+        "300",
+        "301",
+        "302",
+        "303",
+        "304",
+        "305",
+        "399"
+      ],
+      "yearCodes": {
+        "2024": "22",
+        "2025": "23"
+      },
+      "annualPeriodCode": "4",
+      "format": "csv"
+    },
+    "querySha256": "b95d09c6768131d241cf0bbc75bc82e7be1a917daae4e7d9273eea4a2e4c854f",
+    "responseSha256": "8997f8d225babe0ebfdaae4e68a38034a296fe97a9c0498c9db42c2135006f05",
+    "responseBytes": 1894,
+    "responseRows": 38,
+    "selectedCells": 76,
+    "geographyLabel": "....Marinduque",
+    "unit": "metric tons",
+    "footnotes": {
+      ".": "Category not applicable",
+      "..": "Data not available",
+      "0.00": "A nonzero amount below displayed two-decimal precision, not zero"
+    }
+  },
+  "releaseCrosscheck": {
+    "sourceId": "psa-rssomimaropa-2025p-fisheries-production-marinduque",
+    "pageReleaseDate": "2026-06-05",
+    "pdfPrintedReleaseDate": "2026-06-04",
+    "releaseDateDifferenceNote": "The official page and attached PDF differ by one calendar day; both dates are retained.",
+    "referenceNumber": "2026SR-06-022",
+    "preliminaryYear": 2025,
+    "inlandMunicipalProductionMetricTons": {
+      "2024": 19.9,
+      "2025": 31.9
+    },
+    "apiAnnualTotalsMatchRelease": true,
+    "fishGroupMetricTons": {
+      "2024": 5.27,
+      "2025": 30.56
+    },
+    "apiFishGroupTotalsMatchReleaseTable3": true,
+    "leafCategoryValuesMatchPublishedTable3": true,
+    "publishedKeyFishChangesPct": {
+      "tilapia": 515.94,
+      "mudfishDalag": 6594.44,
+      "catfishHito": 4280,
+      "freshwaterGobyBiya": -40.29,
+      "eelIgat": -92.86,
+      "gourami": -87.5
+    },
+    "reportedTotalChangePct": 60.31,
+    "computedFromDisplayedApiTotalsPct": 60.3,
+    "totalChangeRoundingNote": "The PSA release prints +60.31%, while recalculation from the displayed rounded totals 19.90 and 31.90 yields +60.30%. Preserve the published figure; underlying unrounded values are not available here.",
+    "milkfishAndCarpConflict": "The narrative says no production was recorded for Milkfish and Carp in 2025, but Table 3 marks both with a dash defined as “No Data,” and the OpenSTAT API returns “..” (Data not available). Preserve both as unavailable, not zero or absence.",
+    "comparison": "The 2024 and preliminary 2025 annual TOTAL and FISH group values in the official PSA release match the OpenSTAT API. The six fish leaf categories with numeric 2025 values match Table 3; missing categories remain unavailable. The release separates inland municipal production from marine municipal fisheries and aquaculture."
+  },
+  "categoryRows": [
+    {
+      "code": "000",
+      "type": "grand-total",
+      "sourceLabel": "TOTAL",
+      "reportedName": "TOTAL",
+      "valuesMetricTons": {
+        "2024": 19.9,
+        "2025": 31.9
+      },
+      "sourceValues": {
+        "2024": "19.90",
+        "2025": "31.90"
+      },
+      "sourceStatus": {
+        "2024": "",
+        "2025": ""
+      },
+      "changeMetricTons": 12,
+      "changeStatus": "computed-from-displayed-annual-values"
+    },
+    {
+      "code": "100",
+      "type": "group-total",
+      "sourceLabel": "..FISH",
+      "reportedName": "FISH",
+      "valuesMetricTons": {
+        "2024": 5.27,
+        "2025": 30.56
+      },
+      "sourceValues": {
+        "2024": "5.27",
+        "2025": "30.56"
+      },
+      "sourceStatus": {
+        "2024": "",
+        "2025": ""
+      },
+      "changeMetricTons": 25.29,
+      "changeStatus": "computed-from-displayed-annual-values"
+    },
+    {
+      "code": "101",
+      "type": "reported-catch-category",
+      "sourceLabel": "....Carp",
+      "reportedName": "Carp",
+      "valuesMetricTons": {
+        "2024": 0.02,
+        "2025": null
+      },
+      "sourceValues": {
+        "2024": "0.02",
+        "2025": ".."
+      },
+      "sourceStatus": {
+        "2024": "",
+        "2025": ".."
+      },
+      "changeMetricTons": null,
+      "changeStatus": "not-computable-data-unavailable"
+    },
+    {
+      "code": "102",
+      "type": "reported-catch-category",
+      "sourceLabel": "....Catfish (Hito)",
+      "reportedName": "Catfish (Hito)",
+      "valuesMetricTons": {
+        "2024": 0.05,
+        "2025": 2.19
+      },
+      "sourceValues": {
+        "2024": "0.05",
+        "2025": "2.19"
+      },
+      "sourceStatus": {
+        "2024": "",
+        "2025": ""
+      },
+      "changeMetricTons": 2.14,
+      "changeStatus": "computed-from-displayed-annual-values"
+    },
+    {
+      "code": "103",
+      "type": "reported-catch-category",
+      "sourceLabel": "....Catfish (Kanduli)",
+      "reportedName": "Catfish (Kanduli)",
+      "valuesMetricTons": {
+        "2024": null,
+        "2025": null
+      },
+      "sourceValues": {
+        "2024": "..",
+        "2025": ".."
+      },
+      "sourceStatus": {
+        "2024": "..",
+        "2025": ".."
+      },
+      "changeMetricTons": null,
+      "changeStatus": "not-computable-data-unavailable"
+    },
+    {
+      "code": "104",
+      "type": "reported-catch-category",
+      "sourceLabel": "....Climbing perch (Martiniko)",
+      "reportedName": "Climbing perch (Martiniko)",
+      "valuesMetricTons": {
+        "2024": null,
+        "2025": null
+      },
+      "sourceValues": {
+        "2024": "..",
+        "2025": ".."
+      },
+      "sourceStatus": {
+        "2024": "..",
+        "2025": ".."
+      },
+      "changeMetricTons": null,
+      "changeStatus": "not-computable-data-unavailable"
+    },
+    {
+      "code": "105",
+      "type": "reported-catch-category",
+      "sourceLabel": "....Eel (Igat)",
+      "reportedName": "Eel (Igat)",
+      "valuesMetricTons": {
+        "2024": 0.7,
+        "2025": 0.05
+      },
+      "sourceValues": {
+        "2024": "0.70",
+        "2025": "0.05"
+      },
+      "sourceStatus": {
+        "2024": "",
+        "2025": ""
+      },
+      "changeMetricTons": -0.65,
+      "changeStatus": "computed-from-displayed-annual-values"
+    },
+    {
+      "code": "106",
+      "type": "reported-catch-category",
+      "sourceLabel": "....Freshwater goby (Biya)",
+      "reportedName": "Freshwater goby (Biya)",
+      "valuesMetricTons": {
+        "2024": 1.34,
+        "2025": 0.8
+      },
+      "sourceValues": {
+        "2024": "1.34",
+        "2025": "0.80"
+      },
+      "sourceStatus": {
+        "2024": "",
+        "2025": ""
+      },
+      "changeMetricTons": -0.54,
+      "changeStatus": "computed-from-displayed-annual-values"
+    },
+    {
+      "code": "107",
+      "type": "reported-catch-category",
+      "sourceLabel": "....Gourami",
+      "reportedName": "Gourami",
+      "valuesMetricTons": {
+        "2024": 0.08,
+        "2025": 0.01
+      },
+      "sourceValues": {
+        "2024": "0.08",
+        "2025": "0.01"
+      },
+      "sourceStatus": {
+        "2024": "",
+        "2025": ""
+      },
+      "changeMetricTons": -0.07,
+      "changeStatus": "computed-from-displayed-annual-values"
+    },
+    {
+      "code": "108",
+      "type": "reported-catch-category",
+      "sourceLabel": "....Milkfish (Bangus)",
+      "reportedName": "Milkfish (Bangus)",
+      "valuesMetricTons": {
+        "2024": 0.4,
+        "2025": null
+      },
+      "sourceValues": {
+        "2024": "0.40",
+        "2025": ".."
+      },
+      "sourceStatus": {
+        "2024": "",
+        "2025": ".."
+      },
+      "changeMetricTons": null,
+      "changeStatus": "not-computable-data-unavailable"
+    },
+    {
+      "code": "109",
+      "type": "reported-catch-category",
+      "sourceLabel": "....Mudfish (Dalag)",
+      "reportedName": "Mudfish (Dalag)",
+      "valuesMetricTons": {
+        "2024": 0.18,
+        "2025": 12.05
+      },
+      "sourceValues": {
+        "2024": "0.18",
+        "2025": "12.05"
+      },
+      "sourceStatus": {
+        "2024": "",
+        "2025": ""
+      },
+      "changeMetricTons": 11.87,
+      "changeStatus": "computed-from-displayed-annual-values"
+    },
+    {
+      "code": "110",
+      "type": "reported-catch-category",
+      "sourceLabel": "....Mullet (Kapak)",
+      "reportedName": "Mullet (Kapak)",
+      "valuesMetricTons": {
+        "2024": null,
+        "2025": null
+      },
+      "sourceValues": {
+        "2024": "..",
+        "2025": ".."
+      },
+      "sourceStatus": {
+        "2024": "..",
+        "2025": ".."
+      },
+      "changeMetricTons": null,
+      "changeStatus": "not-computable-data-unavailable"
+    },
+    {
+      "code": "111",
+      "type": "reported-catch-category",
+      "sourceLabel": "....Mullet (Ludong)",
+      "reportedName": "Mullet (Ludong)",
+      "valuesMetricTons": {
+        "2024": null,
+        "2025": null
+      },
+      "sourceValues": {
+        "2024": "..",
+        "2025": ".."
+      },
+      "sourceStatus": {
+        "2024": "..",
+        "2025": ".."
+      },
+      "changeMetricTons": null,
+      "changeStatus": "not-computable-data-unavailable"
+    },
+    {
+      "code": "112",
+      "type": "reported-catch-category",
+      "sourceLabel": "....Sardines (Tawilis)",
+      "reportedName": "Sardines (Tawilis)",
+      "valuesMetricTons": {
+        "2024": null,
+        "2025": null
+      },
+      "sourceValues": {
+        "2024": "..",
+        "2025": ".."
+      },
+      "sourceStatus": {
+        "2024": "..",
+        "2025": ".."
+      },
+      "changeMetricTons": null,
+      "changeStatus": "not-computable-data-unavailable"
+    },
+    {
+      "code": "113",
+      "type": "reported-catch-category",
+      "sourceLabel": "....Silver perch (Ayungin)",
+      "reportedName": "Silver perch (Ayungin)",
+      "valuesMetricTons": {
+        "2024": null,
+        "2025": null
+      },
+      "sourceValues": {
+        "2024": "..",
+        "2025": ".."
+      },
+      "sourceStatus": {
+        "2024": "..",
+        "2025": ".."
+      },
+      "changeMetricTons": null,
+      "changeStatus": "not-computable-data-unavailable"
+    },
+    {
+      "code": "114",
+      "type": "reported-catch-category",
+      "sourceLabel": "....Spade fish (Kitang)",
+      "reportedName": "Spade fish (Kitang)",
+      "valuesMetricTons": {
+        "2024": null,
+        "2025": null
+      },
+      "sourceValues": {
+        "2024": "..",
+        "2025": ".."
+      },
+      "sourceStatus": {
+        "2024": "..",
+        "2025": ".."
+      },
+      "changeMetricTons": null,
+      "changeStatus": "not-computable-data-unavailable"
+    },
+    {
+      "code": "115",
+      "type": "reported-catch-category",
+      "sourceLabel": "....Starry goby (Dulong)",
+      "reportedName": "Starry goby (Dulong)",
+      "valuesMetricTons": {
+        "2024": null,
+        "2025": null
+      },
+      "sourceValues": {
+        "2024": "..",
+        "2025": ".."
+      },
+      "sourceStatus": {
+        "2024": "..",
+        "2025": ".."
+      },
+      "changeMetricTons": null,
+      "changeStatus": "not-computable-data-unavailable"
+    },
+    {
+      "code": "116",
+      "type": "reported-catch-category",
+      "sourceLabel": "....Tarpon (Buan Buan)",
+      "reportedName": "Tarpon (Buan Buan)",
+      "valuesMetricTons": {
+        "2024": null,
+        "2025": null
+      },
+      "sourceValues": {
+        "2024": "..",
+        "2025": ".."
+      },
+      "sourceStatus": {
+        "2024": "..",
+        "2025": ".."
+      },
+      "changeMetricTons": null,
+      "changeStatus": "not-computable-data-unavailable"
+    },
+    {
+      "code": "117",
+      "type": "reported-catch-category",
+      "sourceLabel": "....Tilapia",
+      "reportedName": "Tilapia",
+      "valuesMetricTons": {
+        "2024": 2.51,
+        "2025": 15.46
+      },
+      "sourceValues": {
+        "2024": "2.51",
+        "2025": "15.46"
+      },
+      "sourceStatus": {
+        "2024": "",
+        "2025": ""
+      },
+      "changeMetricTons": 12.95,
+      "changeStatus": "computed-from-displayed-annual-values"
+    },
+    {
+      "code": "118",
+      "type": "reported-catch-category",
+      "sourceLabel": "....Big head carp",
+      "reportedName": "Big head carp",
+      "valuesMetricTons": {
+        "2024": null,
+        "2025": null
+      },
+      "sourceValues": {
+        "2024": "..",
+        "2025": ".."
+      },
+      "sourceStatus": {
+        "2024": "..",
+        "2025": ".."
+      },
+      "changeMetricTons": null,
+      "changeStatus": "not-computable-data-unavailable"
+    },
+    {
+      "code": "199",
+      "type": "reported-catch-category",
+      "sourceLabel": "....Other fishes",
+      "reportedName": "Other fishes",
+      "valuesMetricTons": {
+        "2024": null,
+        "2025": null
+      },
+      "sourceValues": {
+        "2024": "..",
+        "2025": ".."
+      },
+      "sourceStatus": {
+        "2024": "..",
+        "2025": ".."
+      },
+      "changeMetricTons": null,
+      "changeStatus": "not-computable-data-unavailable"
+    },
+    {
+      "code": "200",
+      "type": "group-total",
+      "sourceLabel": "..CRUSTACEANS",
+      "reportedName": "CRUSTACEANS",
+      "valuesMetricTons": {
+        "2024": 10.61,
+        "2025": 1.21
+      },
+      "sourceValues": {
+        "2024": "10.61",
+        "2025": "1.21"
+      },
+      "sourceStatus": {
+        "2024": "",
+        "2025": ""
+      },
+      "changeMetricTons": -9.4,
+      "changeStatus": "computed-from-displayed-annual-values"
+    },
+    {
+      "code": "201",
+      "type": "reported-catch-category",
+      "sourceLabel": "....Blue crab (Alimasag)",
+      "reportedName": "Blue crab (Alimasag)",
+      "valuesMetricTons": {
+        "2024": 1.12,
+        "2025": null
+      },
+      "sourceValues": {
+        "2024": "1.12",
+        "2025": ".."
+      },
+      "sourceStatus": {
+        "2024": "",
+        "2025": ".."
+      },
+      "changeMetricTons": null,
+      "changeStatus": "not-computable-data-unavailable"
+    },
+    {
+      "code": "202",
+      "type": "reported-catch-category",
+      "sourceLabel": "....Endeavor prawn (Suahe)",
+      "reportedName": "Endeavor prawn (Suahe)",
+      "valuesMetricTons": {
+        "2024": null,
+        "2025": null
+      },
+      "sourceValues": {
+        "2024": "..",
+        "2025": ".."
+      },
+      "sourceStatus": {
+        "2024": "..",
+        "2025": ".."
+      },
+      "changeMetricTons": null,
+      "changeStatus": "not-computable-data-unavailable"
+    },
+    {
+      "code": "203",
+      "type": "reported-catch-category",
+      "sourceLabel": "....Freshwater crab (Talangka)",
+      "reportedName": "Freshwater crab (Talangka)",
+      "valuesMetricTons": {
+        "2024": 0.01,
+        "2025": 0.13
+      },
+      "sourceValues": {
+        "2024": "0.01",
+        "2025": "0.13"
+      },
+      "sourceStatus": {
+        "2024": "",
+        "2025": ""
+      },
+      "changeMetricTons": 0.12,
+      "changeStatus": "computed-from-displayed-annual-values"
+    },
+    {
+      "code": "204",
+      "type": "reported-catch-category",
+      "sourceLabel": "....Freshwater shrimp (Hipon)",
+      "reportedName": "Freshwater shrimp (Hipon)",
+      "valuesMetricTons": {
+        "2024": 4.41,
+        "2025": 0.99
+      },
+      "sourceValues": {
+        "2024": "4.41",
+        "2025": "0.99"
+      },
+      "sourceStatus": {
+        "2024": "",
+        "2025": ""
+      },
+      "changeMetricTons": -3.42,
+      "changeStatus": "computed-from-displayed-annual-values"
+    },
+    {
+      "code": "205",
+      "type": "reported-catch-category",
+      "sourceLabel": "....Lobster (Ulang)",
+      "reportedName": "Lobster (Ulang)",
+      "valuesMetricTons": {
+        "2024": null,
+        "2025": null
+      },
+      "sourceValues": {
+        "2024": "..",
+        "2025": ".."
+      },
+      "sourceStatus": {
+        "2024": "..",
+        "2025": ".."
+      },
+      "changeMetricTons": null,
+      "changeStatus": "not-computable-data-unavailable"
+    },
+    {
+      "code": "206",
+      "type": "reported-catch-category",
+      "sourceLabel": "....Mud crab (Alimango)",
+      "reportedName": "Mud crab (Alimango)",
+      "valuesMetricTons": {
+        "2024": 0.22,
+        "2025": null
+      },
+      "sourceValues": {
+        "2024": "0.22",
+        "2025": ".."
+      },
+      "sourceStatus": {
+        "2024": "",
+        "2025": ".."
+      },
+      "changeMetricTons": null,
+      "changeStatus": "not-computable-data-unavailable"
+    },
+    {
+      "code": "207",
+      "type": "reported-catch-category",
+      "sourceLabel": "....Tiger prawn (Sugpo)",
+      "reportedName": "Tiger prawn (Sugpo)",
+      "valuesMetricTons": {
+        "2024": 1.21,
+        "2025": 0.09
+      },
+      "sourceValues": {
+        "2024": "1.21",
+        "2025": "0.09"
+      },
+      "sourceStatus": {
+        "2024": "",
+        "2025": ""
+      },
+      "changeMetricTons": -1.12,
+      "changeStatus": "computed-from-displayed-annual-values"
+    },
+    {
+      "code": "208",
+      "type": "reported-catch-category",
+      "sourceLabel": "....White shrimp (Hipong Puti)",
+      "reportedName": "White shrimp (Hipong Puti)",
+      "valuesMetricTons": {
+        "2024": 3.64,
+        "2025": 0.01
+      },
+      "sourceValues": {
+        "2024": "3.64",
+        "2025": "0.01"
+      },
+      "sourceStatus": {
+        "2024": "",
+        "2025": ""
+      },
+      "changeMetricTons": -3.63,
+      "changeStatus": "computed-from-displayed-annual-values"
+    },
+    {
+      "code": "299",
+      "type": "reported-catch-category",
+      "sourceLabel": "....Other crustaceans",
+      "reportedName": "Other crustaceans",
+      "valuesMetricTons": {
+        "2024": null,
+        "2025": null
+      },
+      "sourceValues": {
+        "2024": "..",
+        "2025": ".."
+      },
+      "sourceStatus": {
+        "2024": "..",
+        "2025": ".."
+      },
+      "changeMetricTons": null,
+      "changeStatus": "not-computable-data-unavailable"
+    },
+    {
+      "code": "300",
+      "type": "group-total",
+      "sourceLabel": "..MOLLUSCS",
+      "reportedName": "MOLLUSCS",
+      "valuesMetricTons": {
+        "2024": 4.02,
+        "2025": 0.13
+      },
+      "sourceValues": {
+        "2024": "4.02",
+        "2025": "0.13"
+      },
+      "sourceStatus": {
+        "2024": "",
+        "2025": ""
+      },
+      "changeMetricTons": -3.89,
+      "changeStatus": "computed-from-displayed-annual-values"
+    },
+    {
+      "code": "301",
+      "type": "reported-catch-category",
+      "sourceLabel": "....Clams (Kabibi)",
+      "reportedName": "Clams (Kabibi)",
+      "valuesMetricTons": {
+        "2024": null,
+        "2025": null
+      },
+      "sourceValues": {
+        "2024": "..",
+        "2025": ".."
+      },
+      "sourceStatus": {
+        "2024": "..",
+        "2025": ".."
+      },
+      "changeMetricTons": null,
+      "changeStatus": "not-computable-data-unavailable"
+    },
+    {
+      "code": "302",
+      "type": "reported-catch-category",
+      "sourceLabel": "....Freshwater clams (Tulya)",
+      "reportedName": "Freshwater clams (Tulya)",
+      "valuesMetricTons": {
+        "2024": null,
+        "2025": null
+      },
+      "sourceValues": {
+        "2024": "..",
+        "2025": ".."
+      },
+      "sourceStatus": {
+        "2024": "..",
+        "2025": ".."
+      },
+      "changeMetricTons": null,
+      "changeStatus": "not-computable-data-unavailable"
+    },
+    {
+      "code": "303",
+      "type": "reported-catch-category",
+      "sourceLabel": "....Oyster (Talaba)",
+      "reportedName": "Oyster (Talaba)",
+      "valuesMetricTons": {
+        "2024": null,
+        "2025": null
+      },
+      "sourceValues": {
+        "2024": "..",
+        "2025": ".."
+      },
+      "sourceStatus": {
+        "2024": "..",
+        "2025": ".."
+      },
+      "changeMetricTons": null,
+      "changeStatus": "not-computable-data-unavailable"
+    },
+    {
+      "code": "304",
+      "type": "reported-catch-category",
+      "sourceLabel": "....Shell (Kuhol)",
+      "reportedName": "Shell (Kuhol)",
+      "valuesMetricTons": {
+        "2024": null,
+        "2025": null
+      },
+      "sourceValues": {
+        "2024": "..",
+        "2025": ".."
+      },
+      "sourceStatus": {
+        "2024": "..",
+        "2025": ".."
+      },
+      "changeMetricTons": null,
+      "changeStatus": "not-computable-data-unavailable"
+    },
+    {
+      "code": "305",
+      "type": "reported-catch-category",
+      "sourceLabel": "....Snail (Suso)",
+      "reportedName": "Snail (Suso)",
+      "valuesMetricTons": {
+        "2024": 4.02,
+        "2025": 0.13
+      },
+      "sourceValues": {
+        "2024": "4.02",
+        "2025": "0.13"
+      },
+      "sourceStatus": {
+        "2024": "",
+        "2025": ""
+      },
+      "changeMetricTons": -3.89,
+      "changeStatus": "computed-from-displayed-annual-values"
+    },
+    {
+      "code": "399",
+      "type": "reported-catch-category",
+      "sourceLabel": "....Other molluscs",
+      "reportedName": "Other molluscs",
+      "valuesMetricTons": {
+        "2024": null,
+        "2025": null
+      },
+      "sourceValues": {
+        "2024": "..",
+        "2025": ".."
+      },
+      "sourceStatus": {
+        "2024": "..",
+        "2025": ".."
+      },
+      "changeMetricTons": null,
+      "changeStatus": "not-computable-data-unavailable"
+    }
+  ],
+  "scopeAndQualityLimits": [
+    "PSA defines inland municipal fishing to cover inland waters such as lakes, rivers, dams, and marshes, but the release assigns no production category to a named waterbody, municipality, household, landing site, or sampling station.",
+    "The 38 OpenSTAT rows contain 34 leaf reporting categories plus group and grand totals; leaf labels are PSA production categories, not validated scientific species names, and some rows are aggregates.",
+    "Production statistics are not a biodiversity checklist, specimen occurrence, sampling event, abundance estimate, current-presence survey, or waterbody-specific catchability measure.",
+    "Keep inland municipal catches separate from marine municipal, commercial, and aquaculture production.",
+    "The 2025 values are preliminary. The API returns “..” for unavailable data; do not convert missing categories into zero or absence.",
+    "The PSA release and API do not provide named-waterbody, station, or coordinate information."
+  ],
+  "accessAndRights": {
+    "psaReleaseLicense": "The official PSA release page footer states website data and content are CC BY 4.0 unless otherwise stated; retain PSA attribution and inspect item-specific terms before redistribution.",
+    "apiAccess": "A public OpenSTAT PXWeb POST query returned 38 reporting rows and 76 annual cells for Marinduque, 2024-2025.",
+    "rawResponseRetained": false,
+    "publicationApproval": false
+  },
+  "decision": {
+    "sourceRowsRecorded": 38,
+    "leafReportingCategories": 34,
+    "scientificTaxaCrosswalked": 0,
+    "waterbodyOccurrencesAdded": 0,
+    "speciesAssertionsAdded": 0,
+    "geometryAdded": false,
+    "currentPresenceOrAbsenceInferred": false,
+    "publicationApproval": false,
+    "appProjectionRowsAdded": 0,
+    "regionalBaselineComplete": false,
+    "reason": "This source is useful for inland-fisheries prioritization only. It does not resolve common-name categories to scientific taxa or assign catches to a named lake or river."
+  },
+  "nextStep": "Continue MIMAROPA with dated, named-waterbody fish surveys or specimen-backed datasets, especially independent Marinduque rivers and lakes; use the PSA province totals only as search-priority context.",
+  "sources": [
+    {
+      "url": "https://rssomimaropa.psa.gov.ph/content/2025p-fisheries-statistics-volume-fisheries-production-marinduque",
+      "supports": "Official PSA release page, reported publication date, 2024 and preliminary 2025 aggregate totals, percentage changes, inland-fisheries technical notes, prose statement about Milkfish/Carp, and CC BY 4.0 site footer."
+    },
+    {
+      "url": "https://rssomimaropa.psa.gov.ph/system/files/attachment-dir/2026SR-06-022%202025P%20Fisheries%20Statistics%20Volume%20of%20Fisheries%20Production%20in%20Marinduque_Signed.pdf",
+      "supports": "Signed 9-page PSA release, PDF-printed 4 June release date, preliminary marker, Table 3 inland municipal category values and footnote defining dash as No Data."
+    },
+    {
+      "url": "https://openstat.psa.gov.ph/PXWeb/api/v1/en/DB/2E/FS/0052E4GVIP0.px",
+      "supports": "OpenSTAT metadata/query table and 38-row annual response for Marinduque 2024-2025; response SHA-256 stored above."
+    }
+  ]
+}
