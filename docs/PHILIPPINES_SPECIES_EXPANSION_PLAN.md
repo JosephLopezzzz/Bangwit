@@ -4588,3 +4588,15 @@ Keep the 43 taxa count and aggregate figures as attributed assessment context on
 See the [official NFRDI assessment announcement](https://nfrdi.da.gov.ph/2026/10/13/nfrdi-assessment-provides-scientific-baseline-for-sustainable-management-of-lake-naujan-fisheries) and its [separate 2025 fisher and gear inventory feature](https://nfrdi.da.gov.ph/2025/09/03/feature-preserving-lake-naujan-a-call-for-sustainable-management/).
 
 **Next:** Joseph can review and send the draft request if desired; in parallel, continue MIMAROPA's other lake, river, wetland, and coastal sources rather than waiting on unpublished assessment tables.
+
+### National rollout step 525: Naujan Lake National Park 2011 fish-survey scope and rights review — 5 November 2026
+
+Reviewed the full MBCFI-hosted *Naujan Lake National Park Site Assessment and Profile Updating* (2011), whose aquatic study was led by Bonifacio V. Labatos, Jr. The report describes sampling at 13 Naujan Lake points, three Butas River sites and 15 tributaries, using active and passive gears, fisher interviews and landing-area visits. It says collected vouchers were deposited at the UPLB Museum of Natural History. Macatoc River was mapped but not sampled because high water prevented fieldwork.
+
+The report summarizes 29 fish species across the park and contains lake/Butas and tributary tables, but its lake count is inconsistent: prose says 20 while the table lists 25 lake detections (and 22 for Butas River). Its fish-specific campaign dates, specimen accession identifiers, and taxon-linked coordinates were not confirmed. It also lists a feeding-habit table; the underlying evidence was not reviewed, so no diet or bait claim is drawn from it. These are historical survey records, not current presence, catchability, legal or safety advice. The report's front matter says © MBCFI, all rights reserved, with express permission required for reproduction for resale or other commercial purposes; no open license or public-app reuse permission was found.
+
+Added `mimaropa-naujan-2011-mbcfi-profile-scope-rights-review-20261105.json` and one source-registry entry; the registry now contains 677 sources. No source table or species list was copied, and no species assertion, occurrence, catch row, coordinate, diet, rule, safety claim or public-app row was added. Publication approval remains false. This 2011 profile is kept separate from the 2025–2026 NFRDI assessment.
+
+See the [MBCFI report PDF](https://www.mbcfi.org.ph/wp-content/uploads/2022/03/6_Naujan_Lake_National_Park_Profile.pdf) and the [NFRDI repository record for its later Lake Naujan feature](https://repository.nfrdi.da.gov.ph/items/0213ccc2-8bb5-4a4f-8eb3-676fc611143c).
+
+**Next:** seek clarification of the conflicting lake totals, fish-survey dates and voucher accessions from MBCFI/UPLB, and verify content reuse terms before publishing table-derived data. Continue screening for openly reusable MIMAROPA lake, river, wetland and coastal sources in parallel.
