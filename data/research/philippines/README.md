@@ -2119,3 +2119,15 @@ These province-level observations do not verify either thesis candidate in Lake 
 See [GBIF Occurrence API documentation](https://techdocs.gbif.org/en/openapi/v1/occurrence), the [GBIF query review](mimaropa-caluangan-gbif-locality-screen-20261106.json), the [UPLB thesis record](https://www.ukdr.uplb.edu.ph/etd-grad/4167/), and the [SEAFDEC/AQD assessment record](https://repository.seafdec.org.ph/handle/10862/5848).
 
 **Next:** continue MIMAROPA with a distinct named-waterbody dataset from another river, lake, wetland, or reservoir. Keep province-level observations and saline/brackish systems separate from waterbody-resolved freshwater records.
+
+### National rollout step 511: MIMAROPA Palawan river voucher and diet evidence review — 6 November 2026
+
+Reviewed Cervancia and Kottelat's 2007 original description of the already-listed freshwater candidate *Cyclocheilichthys schoppeae* and cross-checked the specimen series against the 2025 CC BY 4.0 Philippine type checklist. The original paper reports type material from northern Palawan river basins and gut contents from three non-type specimens: shrimp, worms, insect larvae, detritus, and sand. This small sample is natural-diet evidence, not a complete diet or bait recommendation.
+
+The source has unresolved evidence limits: its material list enumerates 16 paratypes while Table 1 says 14; it names Babuyan in the distribution text without a Babuyan specimen in the reviewed material list; and Iwahig is only a hypothesis based on a 1963 specimen the authors did not examine. The 2025 checklist prints a spelling variant and says WPU-PPC staff could not confirm deposition of the uncatalogued type specimens. No precise coordinates, map, figure, or specimen image were retained; the official IUCN search result indicates an Endangered assessment, while direct assessment access returned 403. The original paper states copyright © National University of Singapore, with no open license verified.
+
+Added mimaropa-palawan-cyclocheilichthys-schoppeae-river-voucher-diet-review-20261106.json and one original-description source entry; registry total: 728. The existing freshwater candidate remains pending. No occurrence, waterbody, geometry, diet, safety, legal, or public-app row was added; no contact was sent.
+
+See the [2007 original description](https://lkcnhm.nus.edu.sg/app/uploads/2017/06/55rbz141-145.pdf), the [2025 annotated type checklist](https://doi.org/10.3897/zookeys.1246.145752), [Kottelat's 2013 catalogue](https://lkcnhm.nus.edu.sg/app/uploads/2017/04/rbz_S27.pdf), and the [research review](mimaropa-palawan-cyclocheilichthys-schoppeae-river-voucher-diet-review-20261106.json).
+
+**Next:** retain this candidate as research-only until the paratype count, museum holdings, and Babuyan evidence trail are resolved; continue MIMAROPA with another distinct, independently documented inland-water dataset.
