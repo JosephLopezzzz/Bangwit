@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "mimaropa-san-agustin-range-authority-followup-10-20261105",
+  "checkedOn": "2026-11-05",
+  "phaseId": "L8",
+  "regionId": "1700000000",
+  "regionName": "MIMAROPA",
+  "purpose": "Screen two San Agustin Table 1 fish labels against current taxonomy and independent Philippine evidence.",
+  "relatedReviews": [
+    "mimaropa-san-agustin-2022-estuary-tributary-survey-integrity-review-20261105.json",
+    "mimaropa-san-agustin-gbif-name-crosswalk-20261105.json",
+    "mimaropa-san-agustin-range-authority-followup-9-20261105.json"
+  ],
+  "method": {
+    "scope": "Focused current-name and Philippine-range review of the verbatim labels Ophiocara porocephala and Ophiocara ophicephalus.",
+    "distinction": "Taxonomic authorities disagree about whether Pacific O. ophicephalus is a synonym of O. porocephala. The current Catalog of Fishes and a type-based 2021 revision treat them as separate, while the GBIF Backbone maps the latter label to the former. Independent Philippine eDNA and sequence records are country-level context only; none identifies a San Agustin fish or reach.",
+    "evidenceLimit": "Naputo et al. (2024) reported O. porocephala detections in Philippine mangrove eDNA but described incomplete and sometimes incorrect fish reference sequences, unusually concentrated read counts, and possible cross-contamination. Keith and Mennesson (2021) list four Philippines-labeled O. ophicephalus COI accessions without island, river, or collection-site details. The San Agustin article supplies no repository accession numbers for its specimens.",
+    "sourceReuse": "Only concise attributed findings and direct citations are retained. No eDNA reads, sequences, coordinates, images, or source-table extracts were copied. Research-only; no app publication or derived checklist is approved."
+  },
+  "findings": [
+    {
+      "sourceLabel": "Ophiocara porocephala",
+      "nameCrosswalk": "The strict GBIF Backbone query returned an exact accepted species-rank match (usage key 2386201; confidence 99) for Ophiocara porocephala. The current Catalog of Fishes records Eleotris porocephala as valid in the combination Ophiocara porocephalum and gives that taxon an Indian Ocean range that does not include the Philippines. Preserve the source spelling; do not silently apply a taxonomic combination.",
+      "currentAuthority": "The Catalog of Fishes online version updated 13 August 2026 treats Ophiocara porocephalum (Valenciennes, 1837) as valid and lists its range across the Indian Ocean, including eastern Africa, western Indonesia and western Indian Ocean islands. Its species account lists no Philippine range. This range summary is not proof of absence.",
+      "philippineContext": "Naputo et al. (2024) report an eDNA detection under O. porocephala in mangrove sites from Sorsogon and Oriental Mindoro, with the label occurring at 68% of sites. They note unusually high read counts concentrated at one site and identify incomplete Philippine fish reference libraries, incorrect database sequences, and possible cross-contamination as limitations. This is a qualified molecular signal, not a verified specimen or exact capture location.",
+      "disposition": "Flag one unresolved taxonomy/range-authority issue for this Ophiocara name group: the current Catalog's Indian Ocean range conflicts with the Philippine eDNA label, whose authors also report taxonomic and contamination limitations. Do not treat this as a confirmed outlier or occurrence; require specimen or sequence review.",
+      "priority": "voucher-priority; obtain the RSU catalogue/accession number, diagnostic images or character data, and any sequence-to-voucher link, then compare against the type-based revision"
+    },
+    {
+      "sourceLabel": "Ophiocara ophicephalus",
+      "nameCrosswalk": "The strict GBIF Backbone query returned an exact species-rank match as a synonym (usage key 10913313; accepted usage key 2386201, Ophiocara porocephala; confidence 99). The current Catalog of Fishes instead recognizes Ophiocara ophicephalus as valid. Do not collapse this San Agustin source label to O. porocephala without an explicit taxonomic decision.",
+      "currentAuthority": "The Catalog of Fishes online version updated 13 August 2026 treats O. ophicephalus (Valenciennes, 1837) as valid, with an eastern Indian Ocean/western Pacific range extending from Indonesia east to the Philippines and north to Taiwan and Japan. Keith and Mennesson's 2021 type-based review distinguishes O. ophicephalus from O. porocephala using type material, morphology, and COI clades.",
+      "philippineContext": "Keith and Mennesson (2021) list Philippines-labeled COI accessions JN021235, JN021236, JN021237, and JN021238 under O. ophicephalus, but their table gives no island, river, capture locality, or linked museum catalogue number. They support country-level nomenclatural context only and do not identify San Agustin specimens.",
+      "disposition": "Philippine range is consistent with the current Catalog treatment, but the GBIF synonym mapping conflicts with the specialist type-based review and current Catalog. Preserve the source label separately; local identity and reach remain unresolved.",
+      "priority": "voucher-sensitive; inspect the RSU specimens and the original sequence/accession crosswalk before assigning either Ophiocara label to a site or current species record"
+    }
+  ],
+  "disposition": {
+    "sourceLabelsReviewed": 2,
+    "newRangeAuthorityDiscrepanciesNotCountedAsOutliers": 1,
+    "newVoucherPriorityRangeMismatchesFlagged": 0,
+    "totalVoucherPriorityRangeMismatchesAfterReview": 6,
+    "totalRangeAuthorityDiscrepanciesNotCountedAsOutliersAfterReview": 5,
+    "sourceLabelsReviewedOf39": 32,
+    "sourceLabelsRemainingForRangeAndAuthorityScreen": 7,
+    "specimenIdentitiesResolved": 0,
+    "occurrenceAssertions": 0,
+    "waterbodyAssertions": 0,
+    "coordinatesOrGeometryAdded": false,
+    "publicAppRows": 0,
+    "publicationApproval": false,
+    "contactSent": false
+  },
+  "nextAction": "Screen the remaining 7 Table 1 labels against current fish authorities and locality-resolved Philippine sources. Keep the six existing voucher-priority mismatch labels and five unresolved authority/range issues in their separate queues. Then seek the RSU voucher/accession crosswalk and resolve the survey's station/locality conflicts before considering occurrence rows.",
+  "sources": [
+    {
+      "url": "https://mbimph.com/index.php/UPJOZ/article/view/4989",
+      "supports": "The 2025 San Agustin survey labels, stated repository holding, missing public specimen accession identifiers, and survey-locality limitations."
+    },
+    {
+      "url": "https://api.gbif.org/v1/species/match?name=Ophiocara%20porocephala&strict=true",
+      "supports": "Strict GBIF Backbone accepted species-rank match for Ophiocara porocephala (usage key 2386201; confidence 99)."
+    },
+    {
+      "url": "https://api.gbif.org/v1/species/match?name=Ophiocara%20ophicephalus&strict=true",
+      "supports": "Strict GBIF Backbone synonym match for Ophiocara ophicephalus (usage key 10913313; accepted usage key 2386201; confidence 99)."
+    },
+    {
+      "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=18589",
+      "supports": "Current Catalog of Fishes valid treatment as Ophiocara porocephalum and its Indian Ocean range summary."
+    },
+    {
+      "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=50049",
+      "supports": "Current Catalog of Fishes valid status and Philippine-inclusive range for Ophiocara ophicephalus."
+    },
+    {
+      "url": "https://www.sfi-cybium.fr/sites/default/files/pdfs-cybium/4-Keith%25201185%2520%255Bcybium%25202021%252C%2520452%255D.pdf",
+      "supports": "Keith and Mennesson (2021), Review of Ophiocara from Indo-Pacific Islands: type-based taxonomic distinction, morphology and COI clades; Philippines-labeled accessions JN021235-JN021238."
+    },
+    {
+      "url": "https://doi.org/10.1016/j.rsma.2024.103642",
+      "supports": "Naputo et al. (2024) Philippine mangrove eDNA detections under O. porocephala and explicit limitations involving reference-library gaps, concentrated reads, and possible cross-contamination."
+    },
+    {
+      "url": "https://www.sciencedirect.com/science/article/pii/S2352485524002755",
+      "supports": "Full-text indexed content for the Naputo et al. (2024) eDNA findings and limitations."
+    }
+  ]
+}
