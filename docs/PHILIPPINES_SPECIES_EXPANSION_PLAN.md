@@ -5040,3 +5040,15 @@ Added `mimaropa-marinduque-2025p-qifs-category-crosscheck-20261106.json` and one
 See the [PSA release](https://rssomimaropa.psa.gov.ph/content/2025p-fisheries-statistics-volume-fisheries-production-marinduque), [signed PDF](https://rssomimaropa.psa.gov.ph/system/files/attachment-dir/2026SR-06-022%202025P%20Fisheries%20Statistics%20Volume%20of%20Fisheries%20Production%20in%20Marinduque_Signed.pdf), [OpenSTAT API](https://openstat.psa.gov.ph/PXWeb/api/v1/en/DB/2E/FS/0052E4GVIP0.px), and [research review](../data/research/philippines/mimaropa-marinduque-2025p-qifs-category-crosscheck-20261106.json).
 
 **Next:** resume MIMAROPA’s named-waterbody source sweep and prioritize dated fish surveys or specimen-backed freshwater records for Marinduque rivers and lakes. Keep province-level catch statistics as search-priority context only.
+
+### National rollout step 569: Boac River 2024 EIS fish-baseline access screen — 6 November 2026
+
+Reviewed the official EMB MIMAROPA-hosted 28-page executive summary for the Boac River dredging/navigation project. The EIA team table names a freshwater/marine ecology-baseline assessment, and the mitigation matrix refers to later monitoring against baseline data, but the public summary contains no fish baseline results, taxa, fish-specific dates, station-to-taxon crosswalk, sampling protocol, or vouchers. Its general restocking and impact statements are not evidence of local fish occurrences. Tilapia, pompano, and snappers are named in cage-culture guidance, not in a wild river-catch table.
+
+The EMB public hearing index separately names the project and links the executive summary; the index page returned HTTP 403 here, and the full EIS was not retrieved. This is a bounded access result, not proof that the complete EIS is unavailable through another route. No open license or item-specific public-app reuse terms were found in the summary.
+
+Added `mimaropa-boac-river-2024-eis-fish-baseline-access-review-20261106.json` and one registry entry; total: 732. No scientific occurrence, waterbody assignment, geometry, diet, current safety/water-quality claim, rule, or public-app row was added. No contact was sent.
+
+See the [EMB executive summary](https://mimaropa.emb.gov.ph/wp-content/uploads/2024/04/EXECUTIVE-SUMMARY-REHABILITATION-IMPROVEMENT-OF-RIVERBED-AND-NAVIGATIONAL-SEA-CHANNEL-OF-BOAC-RIVER.pdf), [public hearing index](https://mimaropa.emb.gov.ph/public-hearingconsultation/), and [research review](../data/research/philippines/mimaropa-boac-river-2024-eis-fish-baseline-access-review-20261106.json).
+
+**Next:** continue MIMAROPA with a distinct named-waterbody fish survey or specimen-backed dataset; revisit the Boac baseline only if the full EIS or aquatic annex can be reviewed.
