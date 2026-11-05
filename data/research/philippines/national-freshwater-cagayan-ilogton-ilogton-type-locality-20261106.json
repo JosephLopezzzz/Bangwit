@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-11-06",
+  "status": "official-catalog-page-directly-retrieved;historical-type-locality;no-coordinate-overlay;research-only",
+  "purpose": "Verify the Cagayan basin candidate Ilogton ilogton against the directly retrieved Catalog of Fishes treatment and record its type locality and type series without turning a text locality into occurrence geometry.",
+  "candidate": {
+    "sourceArtifact": "national-freshwater-fish-basin-candidate-extract-20261106.json",
+    "basinId": "B0380",
+    "basinName": "Cagayan",
+    "scientificName": "Ilogton ilogton",
+    "globalDatasetRole": "Basin-level discovery candidate; numeric bibliography referenceIds are not a citation-to-basin crosswalk."
+  },
+  "taxonomicSourceCrosswalk": {
+    "source": "California Academy of Sciences, Eschmeyer's Catalog of Fishes",
+    "catalogUrl": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Ilogton&tbl=species",
+    "retrieval": "Direct HTTPS GET returned HTTP 200 on 2026-11-06.",
+    "originalDescriptionReference": "Endruweit, M. 2024. Fishes of the Red River - Perciformes, Synbranchiformes. Endruweit, Isernhagen: 1-282. Catalog reference 41040.",
+    "referenceRecord": "https://research.calacademy.org/research/ichthyology/catalog/getref.asp?id=41040",
+    "catalogReportedTreatment": {
+      "page": 204,
+      "figures": "112, 298-299",
+      "acceptedName": "Ilogton ilogton Endruweit 2024",
+      "typeLocality": "Cagayan River, Muta village, Kasibu County, Nueva Vizcaya Province, Luzon Island, Philippines",
+      "holotype": "PNM 15678",
+      "paratypes": [
+        "PNM 15679-15681 (3)",
+        "PNM 15682-15685 (4)",
+        "SEAFDEC 7765-7772 (8)"
+      ],
+      "catalogReportedDistribution": "Cagayan River drainage, Nueva Vizcaya Province, Luzon Island, Philippines",
+      "catalogReportedHabitat": "freshwater"
+    },
+    "retrievalLimit": "The official Catalog of Fishes species treatment was retrieved directly. The original 2024 book pages and PNM/SEAFDEC specimen labels or collection records were not retrieved; the type-series details are catalog-reported."
+  },
+  "localityResolution": {
+    "reportedWaterbody": "Cagayan River",
+    "reportedLocality": "Muta village, Kasibu, Nueva Vizcaya, Luzon",
+    "reportedDrainage": "Cagayan River drainage",
+    "coordinate": null,
+    "pointInPolygon": null,
+    "basinCrosswalk": "The catalog explicitly names both Cagayan River and the Cagayan River drainage, textually matching the northern Luzon B0380 basin name. No coordinate or named reach geometry was available for a spatial overlay.",
+    "evidenceClass": "Historical type locality reported by the current taxonomic catalog; not a dated event record with a directly reviewed specimen label or coordinate."
+  },
+  "gbifCrossCheck": {
+    "reviewedOn": "2026-11-06",
+    "strictSpeciesMatchUrl": "https://api.gbif.org/v1/species/match?name=Ilogton%20ilogton&strict=true",
+    "strictSpeciesMatch": "matchType NONE; no GBIF taxon key returned for the exact name.",
+    "philippinesOccurrenceQueryUrl": "https://api.gbif.org/v1/occurrence/search?scientificName=Ilogton%20ilogton&country=PH&limit=0",
+    "philippinesOccurrenceCount": 0,
+    "interpretation": "These exact-name API queries are bounded indexing outcomes and do not contradict the Catalog of Fishes type-locality record or establish biological absence."
+  },
+  "interpretation": [
+    "The official catalog directly reports a 2024 species description and a Cagayan River/Muta type locality, providing a traceable historical taxonomic lead for the Cagayan drainage candidate.",
+    "The catalog reports one holotype and 15 paratypes across PNM and SEAFDEC; those lots were not independently checked against collection labels or records.",
+    "Textual drainage agreement does not supply coordinates, an exact river reach, current presence, abundance, or distribution throughout the B0380 basin.",
+    "The GBIF strict-name and Philippines occurrence searches returned no match/records in the checked responses; this is not evidence of species absence."
+  ],
+  "disposition": {
+    "candidateEvidenceStatus": "official-catalog-historical-type-locality;original-book-and-specimen-record-review-pending",
+    "publicSpeciesRowsAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "waterbodyGeometryAdded": false,
+    "dietOrBaitClaimsAdded": 0,
+    "legalOrSafetyClaimsAdded": 0,
+    "publicationApproval": false
+  },
+  "sources": [
+    {
+      "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Ilogton&tbl=species",
+      "supports": "Directly retrieved Catalog of Fishes species treatment: accepted name, Endruweit 2024 page/figures, Cagayan River/Muta type locality, reported holotype and paratypes, drainage and habitat."
+    },
+    {
+      "url": "https://research.calacademy.org/research/ichthyology/catalog/getref.asp?id=41040",
+      "supports": "Catalog bibliography record for Endruweit 2024, Fishes of the Red River - Perciformes, Synbranchiformes."
+    },
+    {
+      "url": "https://api.gbif.org/v1/species/match?name=Ilogton%20ilogton&strict=true",
+      "supports": "Strict GBIF API name matching; response returned matchType NONE."
+    },
+    {
+      "url": "https://api.gbif.org/v1/occurrence/search?scientificName=Ilogton%20ilogton&country=PH&limit=0",
+      "supports": "Exact-name GBIF Philippines occurrence count in the checked API response: zero."
+    }
+  ],
+  "sourcePolicy": {
+    "publicAdmissionDefault": false,
+    "rightsReview": "No item-specific reuse terms for the original book, catalog content, or underlying specimen records were verified.",
+    "qualityReview": "Historical type-locality evidence alone does not establish current fish presence, catchability, legal status, or safety.",
+    "accessEvidence": "The official Catalog of Fishes page was retrieved directly; original book pages and PNM/SEAFDEC specimen records remain unavailable in this review."
+  }
+}
