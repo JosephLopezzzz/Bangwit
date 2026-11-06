@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
-  "reviewedOn": "2026-10-30",
+  "reviewedOn": "2026-11-06",
   "phaseId": "L1",
   "regionIds": [
     "0200000000"
   ],
-  "status": "historical-baggao-sanctuary-catch-and-community-report;genus-only-labels;buffer-zone-versus-ntz-distinction;noncommercial-license;research-only",
+  "status": "historical-baggao-sanctuary-catch-and-telemetry-evidence;genus-and-species-evidence-separate;site-crosswalk-and-rights-open;research-only",
   "question": "Can the NFRDI Baggao freshwater-sanctuary catch report provide safe, spatially precise, species-level fish records for Cagayan Valley?",
   "sourcesReviewed": [
     {
@@ -49,25 +49,49 @@
       "access": "Official BFAR Region 2 public notice reviewed.",
       "reportedScope": "The notice says three freshwater protected areas were established in Baggao and gives barangay/name associations for Bluewater Falls, Duba Cave and Hot Spring; it describes a broader project goal for a network along the Pared River Catchment.",
       "limits": "The notice supplies no sanctuary polygon, technical boundary, ordinance copy, coordinates, species checklist, or current site-specific access rule. It is a management/status lead only."
+    },
+    {
+      "sourceId": "piper-2022-pared-river-anguilla-telemetry-baggao",
+      "citation": "Piper, A., Belen, A., Villanueva, B., & Gollock, M. (2022). Residence, activity patterns and behaviour of the giant mottled eel Anguilla marmorata in two freshwater protected areas in the Philippines. Aquatic Conservation: Marine and Freshwater Ecosystems, 32(10), 1606–1617. https://doi.org/10.1002/aqc.3870",
+      "access": "Wiley full-text article reviewed for species evidence, sampling dates, study site names and methods.",
+      "reportedScope": {
+        "studyAreasAsReported": ["Hot Springs freshwater protected area", "Duba freshwater protected area"],
+        "parentWatercourse": "Near the headwaters of Pared River, a tributary of the Cagayan River",
+        "studyPeriod": "2018-03-29 to 2020-05-18",
+        "method": "Capture and tagging with acoustic telemetry and passive integrated transponder tags, with tracking in the two protected-area reaches.",
+        "speciesFinding": "The paper reports catches within the protected areas were almost exclusively Anguilla marmorata; only two Anguilla bicolor individuals were encountered."
+      },
+      "taxonomicAndEvidenceLimits": {
+        "reportedSpeciesNames": ["Anguilla marmorata", "Anguilla bicolor"],
+        "interpretation": "Historical, direct species-level evidence for the sampled protected-area reaches only. It is not a whole-river checklist, abundance estimate for today, or current catchability/safety status.",
+        "siteCrosswalk": "The paper uses Hot Springs and Duba but does not name their barangays. They are plausible matches to the Baggao Hot Spring and Duba Cave sites in the other sources, but the exact administrative/site crosswalk remains unverified.",
+        "coordinatesAndGeometry": "The paper includes site-location information, but no coordinates or geometry were copied into Bangwit."
+      },
+      "rights": {
+        "license": "The publisher page labels the article Open Access, but this review did not capture its item-specific reuse license. Verify the exact license before copying article content or admitting article-derived records.",
+        "handling": "Only concise bibliographic and evidence-limit metadata are summarized. No paper table, figure, coordinate, telemetry data or article text is copied into Bangwit."
+      }
     }
   ],
   "crossSourceAssessment": {
     "nameCrosswalk": "The three site names in the 2023 article and 2025 BFAR notice broadly correspond, but spelling/branding varies (Blue Water Falls/Bluewater Falls and sanctuary/protected-area terms). Preserve source names and do not infer exact boundaries or legal equivalence from the name match alone.",
-    "spatialResolution": "Three named sanctuary sites and associated barangays are reported, with approximate distances to the town center in the article. The aggregate species-composition table is site-level, but no exact stream/reach, coordinates, or authoritative no-take/buffer polygon is available in the reviewed sources.",
+    "spatialResolution": "The 2023 survey names three sanctuary sites and associated barangays but gives no authoritative boundaries. The 2022 telemetry paper samples two protected-area reaches named Hot Springs and Duba near Pared River headwaters; it does not name barangays. Treat the cross-source site-name match as plausible but not fully verified, and do not infer a no-take/buffer polygon.",
+    "piper2022SpeciesEvidence": "The telemetry study provides direct, historical species-level evidence of Anguilla marmorata and a small number of Anguilla bicolor in the sampled Hot Springs and Duba protected areas during 2018–2020. It does not establish current presence or a complete Pared River fish checklist.",
     "habitatCoverage": "Inland freshwater sanctuaries, waterfall/cave/spring settings and associated buffer zones. This is a named-site lead, not coverage of all Baggao waters or the Pared River Catchment."
   },
   "disposition": {
-    "sourceReferencesAdded": 2,
+    "sourceReferencesAdded": 3,
     "sourceReportedGenusLabelsScreened": 13,
     "speciesAssertionsAdded": 0,
+    "historicalSpeciesEvidenceLeadsRecordedForResearch": 2,
     "occurrenceAssertionsAdded": 0,
     "geometryAdded": 0,
     "publicAppRowsAdded": 0,
     "dietSafetyOrCatchabilityClaimsAdded": 0,
     "publicationApproval": false,
-    "reason": "The main article is based on interviews and secondary records with genus-level and internally inconsistent labels, the survey and catch reference periods differ, no voucher or event-level spatial crosswalk is published, sanctuary boundaries are not available, and the article's CC BY-NC 4.0 terms do not establish permission for Bangwit reuse."
+    "reason": "The 2023 article relies partly on interviews and secondary records with genus-level and internally inconsistent labels, distinct survey/catch periods, and no voucher or event-level crosswalk. The 2022 telemetry study adds historical species-level eel evidence, but the exact site crosswalk and item-specific reuse license remain unverified. No authoritative sanctuary boundaries or public reuse permission are available."
   },
-  "nextAction": "Continue the Region II inland-water sweep using independently accessible primary surveys and official waterbody inventories. For Baggao, seek the 2016 barangay ordinance and technical sanctuary/buffer-zone boundaries, validated by BFAR/LGU and community managers; do not show fishing permissions, no-take polygons, or species-level rows until those source crosswalks and rights are independently reviewed.",
+  "nextAction": "Continue the Region II inland-water sweep using independently accessible primary surveys and official waterbody inventories. For Baggao, verify whether the telemetry paper's Hot Springs and Duba reaches are exactly the same as the named Asinga-Via and San Miguel sanctuaries; seek the 2016 barangay ordinance and technical sanctuary/buffer-zone boundaries, and obtain a rights decision before any public use of article-derived evidence. Do not show fishing permissions, no-take polygons, or public species rows until those source crosswalks and rights are independently reviewed.",
   "sources": [
     {
       "url": "https://repository.nfrdi.da.gov.ph/items/4897f5c1-7cf4-4909-b8a3-e3cb132f5263",
@@ -80,6 +104,11 @@
     {
       "url": "https://region2.bfar.da.gov.ph/2025/02/19/uk-ambassador-zsl-and-bfar-visit-conservation-site-in-baggao-cagayan/",
       "supports": "Official BFAR Region 2 notice about three Baggao freshwater protected areas and the Pared River Catchment project."
+    },
+    {
+      "sourceId": "piper-2022-pared-river-anguilla-telemetry-baggao",
+      "url": "https://onlinelibrary.wiley.com/doi/full/10.1002/aqc.3870",
+      "supports": "Peer-reviewed telemetry study of Hot Springs and Duba protected-area reaches near Pared River headwaters; reports historical Anguilla marmorata dominance and two Anguilla bicolor individuals, with no public polygon or exact barangay crosswalk."
     }
   ]
 }
