@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "reviewedOn": "2026-11-06",
-  "status": "official-bfar-and-nia-sources-reviewed;named-inland-water-leads;natural-aquaculture-and-infrastructure-separated;no-geometry-or-species-rows;research-only",
+  "status": "official-bfar-and-nia-sources-reviewed;named-inland-water-leads;magat-historical-catch-and-sample-leads-reviewed;natural-aquaculture-and-infrastructure-separated;no-new-geometry-or-species-rows;research-only",
   "purpose": "Start a Region II inland-water source inventory that expands beyond the Cagayan B0380 basin and separates rivers, natural lakes, reservoirs, small water impounding projects, irrigation structures, aquaculture and fishery observations.",
   "regionScope": {
     "name": "Cagayan Valley / Region II",
@@ -183,6 +183,17 @@
       "wildOccurrenceRowsAdded": 0,
       "geometryAdded": false,
       "publicationApproval": false
+    },
+    {
+      "artifact": "national-freshwater-region02-magat-reservoir-fishery-evidence-review-20261106.json",
+      "reviewedOn": "2026-11-06",
+      "siteLeads": ["Magat Reservoir / Magat Dam Reservoir, Isabela–Ifugao boundary area"],
+      "finding": "NAST sources report historical open-water catch labels and landings (1987–1988 and 1984–1991); ISU reports a 2022 Clarias gariepinus sample-study lead with wild-versus-cage origin unresolved. BFAR cage and unread production-spreadsheet data remain separate from wild observations. NIA and NAST reservoir area/depth values conflict and need reconciliation.",
+      "fishSpeciesRowsAdded": 0,
+      "wildOccurrenceRowsAdded": 0,
+      "aquacultureRowsAdded": 0,
+      "geometryAdded": false,
+      "publicationApproval": false
     }
   ],
   "priorityFollowUps": [
@@ -201,8 +212,9 @@
     },
     {
       "priority": 3,
-      "task": "For Magat Reservoir, separately seek open fishery survey/catch composition evidence and a reusable shoreline polygon; retain fish-cage/aquaculture data in a separate layer from wild observations.",
-      "doNotInfer": "Fish cage counts, farmed production or reservoir size do not establish wild fish presence, abundance or catchability."
+      "task": "For Magat Reservoir, retrieve the original de los Triños 1993 proceedings chapter, Ortiz thesis and BFAR 2019–2022 production spreadsheet; reconcile the NAST/NIA area and depth conflict; seek a recent standardized open-water fish survey and a stage-aware reusable shoreline source. Keep cages and aquaculture separate from wild catch.",
+      "doNotInfer": "Historical catch shares, cage counts, farmed production, contaminant-study samples or reservoir size do not establish current wild presence, abundance, safety, catchability, or a fixed shoreline.",
+      "relatedReviewArtifact": "national-freshwater-region02-magat-reservoir-fishery-evidence-review-20261106.json"
     },
     {
       "priority": 4,
@@ -213,6 +225,8 @@
   "disposition": {
     "namedWaterbodyLeads": 13,
     "sourceCountAddedToRegistry": 4,
+    "followupSourceCountAddedToRegistry": 20,
+    "lastReviewSourceCountAddedToRegistry": 5,
     "speciesRowsAdded": 0,
     "occurrenceRowsAdded": 0,
     "geometryAdded": false,
@@ -245,6 +259,26 @@
     {
       "artifact": "national-cagayan-baggao-freshwater-sanctuary-catch-review-20261030.json",
       "supports": "Existing NFRDI/BFAR review for three Baggao freshwater sanctuaries, catch statistics, genus-level labels, and the limits on occurrence and geometry claims."
+    },
+    {
+      "artifact": "national-freshwater-region02-magat-reservoir-fishery-evidence-review-20261106.json",
+      "supports": "Magat historical catch sources, an ISU sample-study lead, source-reported reservoir measurement conflict, and the inaccessible BFAR production attachment; no current wild checklist or geometry."
+    },
+    {
+      "url": "https://nast.dost.gov.ph/images/pdf%20files/Publications/NAST%20Transactions/NAST%201991%20Transactions%20Volume%2013/Plenary%20II%201%20.%20The%20Conservation%20and%20Management%20of%20Our%20Freshwater%20Ecosystems%20Rafael%20D.%20guerrero%20III.pdf",
+      "supports": "Official NAST indexed excerpt reports Magat 1987–1988 fishery landings and source-reported catch labels; full 93 MB PDF remains to be checked."
+    },
+    {
+      "url": "https://transactions.nast.ph/wp-content/uploads/2023/01/2022_RD-Guerrero.pdf",
+      "supports": "2022 NAST review summarizes historic Magat fishery catch composition and 1984–1991 decline, citing older sources."
+    },
+    {
+      "url": "https://isu.edu.ph/bs-fisheries-and-aquatic-sciences-conducts-an-assessment-at-magat-dam-reservoir/",
+      "supports": "ISU's 2022 study announcement names Clarias gariepinus and Corbicula fluminea samples at Magat stations; origin is unresolved and this is not a standardized wild-fish assessment."
+    },
+    {
+      "url": "https://www.foi.gov.ph/requests/request-for-data-in-the-fisheries-sector-of-magat-dam-from-2015-to-2022/",
+      "supports": "Public BFAR response lists a Magat production spreadsheet, but the xlsx returned HTTP 503 and its contents were not reviewed."
     },
     {
       "url": "https://api.gbif.org/v1/occurrence/search",

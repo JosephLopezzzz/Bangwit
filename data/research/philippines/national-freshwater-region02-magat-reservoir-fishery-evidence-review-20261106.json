@@ -1,0 +1,125 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-11-06",
+  "status": "magat-reservoir-historical-catch-leads-and-isabela-sample-study-reviewed;current-wild-checklist-geometry-and-reuse-unresolved;research-only",
+  "purpose": "Review open Magat Reservoir fishery sources, distinguish historic open-water landings and a sample-study lead from fish-cage/aquaculture evidence, and record unresolved identity, taxonomy, geometry and access issues.",
+  "waterbody": {
+    "name": "Magat Reservoir / Magat Dam Reservoir",
+    "type": "man-made reservoir",
+    "reportedLocality": "Ramon, Isabela; the dam is at the Isabela–Ifugao provincial boundary",
+    "geometryAvailable": false,
+    "geometrySource": null,
+    "identityAndExtentNotes": [
+      "NIA-MARIIS reports 45 km² (4,500 ha) at full supply level and 15 km² at its listed minimum supply level; this is stage-dependent reservoir surface area, not a permanent shoreline polygon.",
+      "A 1991 NAST article reports 4,460 ha and maximum depth 80.5 m. These older source-reported values are close to NIA's 4,500-ha full-supply figure but do not supply a reusable boundary.",
+      "The 2022 NAST review reports 11,700 ha and depth 193 m. The review does not reconcile this much larger area with NIA's full-supply figure; 193 m also matches the NIA page's full-supply elevation. Retain as a source discrepancy, not a resolved reservoir area or depth."
+    ]
+  },
+  "historicalOpenWaterFisheryEvidence": [
+    {
+      "sourceId": "guerrero-1991-nast-conservation-freshwater-ecosystems",
+      "sourceReportedPeriod": "1987–1988",
+      "sourceReportedMethodContext": "The indexed excerpt reports landings by about 700 fishers using gill nets, hooks and lines, traps, and cast nets; no full methods or station-level table was reviewed.",
+      "reportedTotalLandingsMt": {
+        "1987": 1785,
+        "1988": 1713
+      },
+      "sourceReportedCatchComposition": [
+        { "verbatimLabel": "Nile tilapia (Oreochromis niloticus)", "reportedSharePercent": 31.8 },
+        { "verbatimLabel": "ayungin (Therapon plumbeus)", "reportedSharePercent": null },
+        { "verbatimLabel": "catfish (Arius magatensis)", "reportedSharePercent": null },
+        { "verbatimLabel": "carps", "reportedSharePercent": null },
+        { "verbatimLabel": "goby", "reportedSharePercent": null },
+        { "verbatimLabel": "mudfish", "reportedSharePercent": null },
+        { "verbatimLabel": "eel", "reportedSharePercent": null },
+        { "verbatimLabel": "shrimps", "reportedSharePercent": null }
+      ],
+      "accessLimit": "The official NAST-hosted 1991 PDF is approximately 93 MB and could not be opened by the web reader. The quoted values and labels were visible in its indexed excerpt; retain as a lead until the full article and pages are checked.",
+      "interpretation": "Historic fishery landings, not a modern standardized biodiversity survey, current presence list, or estimate of catchability. The text also discusses cage culture, so do not merge cultured output with open-water catch."
+    },
+    {
+      "sourceId": "guerrero-2022-nast-commercially-caught-freshwater-fishes-review",
+      "sourceReportedPeriod": "Historic Magat fishery data summarized in a 2022 review; the review attributes the catch decline series to de los Triños (1993).",
+      "sourceReportedCatchComposition": [
+        { "verbatimLabel": "Nile tilapia", "reportedSharePercent": 31.8 },
+        { "verbatimLabel": "silver perch", "reportedSharePercent": 19.6 },
+        { "verbatimLabel": "white goby", "reportedSharePercent": 14.2 },
+        { "verbatimLabel": "common carp", "reportedSharePercent": 8.4 },
+        { "verbatimLabel": "Manila catfish", "reportedSharePercent": 7.7 }
+      ],
+      "reportedCatchDeclineKg": {
+        "1984": 393478,
+        "1991": 54823,
+        "sourceReportedChangePercent": -86
+      },
+      "interpretation": "A secondary synthesis of historical fishery records, not a current survey. The article does not assign each percentage to a sampling station or provide specimen identifiers in the reviewed passage. Preserve its common-name labels and cited historical context; do not silently normalize ambiguous vernacular or legacy taxonomy."
+    }
+  ],
+  "sampleStudyLead": {
+    "sourceId": "isabela-state-university-2022-magat-heavy-metal-study-announcement",
+    "reportedStudyDate": "2022-05-30",
+    "reportedPurpose": "Undergraduate study of Cd, As and Pb in Corbicula fluminea and Clarias gariepinus at Magat Dam Reservoir.",
+    "reportedLocations": ["Baligatan", "Halag 1"],
+    "samplingStationBasis": "The university announcement says stations were selected using information from residents and fishers fishing and farming around the reservoir.",
+    "fishTaxonVerbatim": "Clarias gariepinus",
+    "taxonEvidenceDisposition": "A study-sample lead only. The announcement gives no specimen count, exact coordinates, capture method, voucher/accession, or evidence distinguishing wild capture from aquaculture/cage origin. It does not establish a wild or self-sustaining reservoir population.",
+    "nonFishTaxon": "Corbicula fluminea",
+    "notAnApprovedSafetyClaim": true
+  },
+  "unretrievedPrimaryMaterial": [
+    {
+      "sourceId": "ortiz-1993-magat-reservoir-fishery-assessment-thesis-lead",
+      "displayTitle": "Environmental assessment of fishery resources in Magat Reservoir",
+      "authorAsCataloged": "Eufronio A. Ortiz, Jr.",
+      "sourceYear": 1993,
+      "availableEvidence": "UPLB/SEARCA catalog and abstract summaries describe environmental and fishery-productivity assessment, including impacts after the 1990 earthquake and changes in catch/productivity.",
+      "fullTextRetrieved": false,
+      "useLimit": "Bibliographic lead only; no thesis tables, species records, methods, stations, vouchers or reuse terms were reviewed."
+    },
+    {
+      "sourceId": "foi-bfar-magat-fisheries-production-2015-2022-public-response",
+      "displayTitle": "Request for Data in the Fisheries Sector of Magat Dam from 2015 to 2022",
+      "availableEvidence": "The public FOI page says BFAR supplied a 2019–2022 Magat production comparison spreadsheet, notes and transmittal; an addendum gives Isabela-wide cultured species and aquaculture production context.",
+      "attachmentRetrieval": "The xlsx attachment request returned HTTP 503 in this review; its cells were not read. The Isabela-wide cultured-species addendum is not a Magat Reservoir species list.",
+      "useLimit": "Keep production, municipal/open-water catch and aquaculture in separate datasets. Do not assert any figures from the unread attachment."
+    }
+  ],
+  "sourceAndReuseReview": {
+    "rawDatasetsCopied": false,
+    "itemSpecificReuseTermsVerified": false,
+    "sourceTextReproduced": false,
+    "decision": "Retain concise research notes and bibliographic leads only. No source tables, maps, images or records were copied into app data. Seek the source terms and the original 1993 proceedings/thesis before any public projection."
+  },
+  "boundedSearches": {
+    "gbifApiScreenPerformed": false,
+    "reason": "No exact search batch was completed in this review; no zero-result or absence statement is made."
+  },
+  "disposition": {
+    "researchCatchLabelsRecorded": 13,
+    "speciesRowsAdded": 0,
+    "wildOccurrenceRowsAdded": 0,
+    "aquacultureRowsAdded": 0,
+    "geometryAdded": false,
+    "dietOrBaitClaimsAdded": 0,
+    "legalOrSafetyClaimsAdded": 0,
+    "publicAppProjection": false,
+    "publicationApproval": false,
+    "status": "research-only;historical-catch-and-sample-study-leads;no-current-wild-checklist"
+  },
+  "limits": [
+    "The 1987–1988 landings and 1984–1991 catch series are historical and are not current occurrence records.",
+    "The reported shares in the 2022 review do not provide a station-level survey or taxon-specific coordinates.",
+    "The 1991 indexed excerpt and the 2022 review use different reservoir size/depth values; the conflict remains unresolved.",
+    "The 2022 Clarias gariepinus sample's origin, specimen count, exact sampling coordinates and voucher are not stated in the reviewed announcement.",
+    "The FOI spreadsheet attachment was not accessible in this review, and Isabela-wide FishR cultured species cannot be assigned to Magat Reservoir.",
+    "No current fish presence, abundance, water quality, safety, fishing legality, catchability, diet, or reusable reservoir geometry is established."
+  ],
+  "nextAction": "Review the full primary 2015–2019 Ibulao River fish survey next, keeping the tributary river evidence separate from Magat Reservoir catch and cage records. Separately seek the original de los Triños (1993) proceedings chapter, Ortiz thesis, and an accessible copy of the BFAR production spreadsheet before resolving Magat species and fishery strata.",
+  "sources": [
+    { "sourceId": "guerrero-1991-nast-conservation-freshwater-ecosystems", "supports": "Indexed excerpt from an official NAST-hosted 1991 article with historical Magat landings and raw catch labels; full PDF retrieval was blocked by its size." },
+    { "sourceId": "guerrero-2022-nast-commercially-caught-freshwater-fishes-review", "supports": "Peer-reviewed NAST 2022 review's Magat historical catch composition and 1984–1991 decline figures, attributed to older sources." },
+    { "sourceId": "isabela-state-university-2022-magat-heavy-metal-study-announcement", "supports": "ISU announcement of a 2022 contaminant study sampling Corbicula fluminea and Clarias gariepinus at named Magat stations; not a wild-fish inventory or safety determination." },
+    { "sourceId": "ortiz-1993-magat-reservoir-fishery-assessment-thesis-lead", "supports": "UPLB and SEARCA bibliographic/abstract lead to an unretrieved 1993 Magat Reservoir fishery assessment thesis." },
+    { "sourceId": "foi-bfar-magat-fisheries-production-2015-2022-public-response", "supports": "Public FOI response page lists a BFAR spreadsheet attachment; the attachment was not retrievable and its values are not used." }
+  ]
+}
