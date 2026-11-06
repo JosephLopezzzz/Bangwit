@@ -3,7 +3,7 @@
   "checkedOn": "2026-11-06",
   "status": "research-only-source-registry",
   "scope": "National acquisition references, freshwater spatial-source leads, MIMAROPA/CALABARZON/Central Luzon identity and inland-water source reviews, and Mindanao regional freshwater survey reviews. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 771,
+  "sourceCount": 774,
   "sources": [
     {
       "id": "aquilino-2011-taal-dna-barcoding-genbank",
@@ -24922,6 +24922,110 @@
       "caveats": [
         "The overview gives system and service-area context, not hydrographic network geometry.",
         "Irrigation system membership does not establish fish occurrence, waterbody connectivity at a particular reach, fishing access, safety or legal status."
+      ]
+    },
+    {
+      "id": "ncca-talapamana-mapannao-lake-locality-20261106",
+      "title": "Talapamana Cultural Property Database Mapannao Lake entry",
+      "provider": "National Commission for Culture and the Arts; Talapamana",
+      "url": "https://www.talapamana.ncca.gov.ph/index.php/talapamana/cultural-property-database/talapamana",
+      "additionalUrls": [],
+      "role": "Official cultural-property database entry naming Mapannao Lake as a natural lake at Sto. Domingo, Piat, Cagayan; the entry provides no fish checklist, coordinates or reusable polygon and is not linked to the BFAR NIFEP Piat Lake target.",
+      "checkedOn": "2026-11-06",
+      "sourceYear": null,
+      "citation": "National Commission for Culture and the Arts. Talapamana Cultural Property Database, “Lawa ng Mapannao / Mapannao Lake,” Piat, Cagayan; accessed 6 November 2026.",
+      "access": {
+        "status": "official-cultural-property-database-entry-directly-reviewed;site-name-context-only;research-only",
+        "reviewFiles": [
+          "national-freshwater-region02-piat-mapannao-site-identity-fish-evidence-review-20261106.json"
+        ],
+        "reportedLocation": "Sto. Domingo, Piat, Cagayan",
+        "reportedClass": "Natural lake",
+        "coordinatesOrPolygonProvided": false
+      },
+      "reuse": {
+        "metadata": "Cite the NCCA Talapamana database and the Mapannao Lake entry.",
+        "raw": "No page content, photographs or geometry retained in the repository.",
+        "content": "No item-specific reuse license was verified. Only a concise attributed name/locality summary is retained for research; no public-app reuse is approved."
+      },
+      "publicationApproval": false,
+      "researchStatus": "mapannao-lake-name-locality-context;not-nifep-crosswalk;not-fish-survey;research-only",
+      "license": "No item-specific reuse terms verified",
+      "licenseUrl": null,
+      "caveats": [
+        "The database entry does not state that Mapannao Lake is the BFAR NIFEP target called Piat Lake.",
+        "The listed shoreline length and elevation/discharge figures have no stated measurement method in the entry and do not constitute a shoreline geometry.",
+        "The entry does not name fish taxa or provide a dated fish survey."
+      ]
+    },
+    {
+      "id": "csu-piat-campus-proposed-manmade-lake-2019-app-20261106",
+      "title": "Cagayan State University 2019 Annual Procurement Plan, Piat Campus",
+      "provider": "Cagayan State University",
+      "url": "https://csu.edu.ph/docs/transparency/2019%20APP%20Non-CSE.pdf",
+      "additionalUrls": [],
+      "role": "Official procurement-plan entry lists a “Man made lake for boating” under PIAT campus. This is a project-planning lead only; it does not verify construction or connect the proposed feature to the BFAR NIFEP Piat Lake target.",
+      "checkedOn": "2026-11-06",
+      "sourceYear": 2019,
+      "citation": "Cagayan State University, Annual Procurement Plan 2019, Piat Campus, p. 36 of 102; accessed 6 November 2026.",
+      "access": {
+        "status": "official-university-procurement-plan-pdf-directly-reviewed;planned-facility-only;research-only",
+        "reviewFiles": [
+          "national-freshwater-region02-piat-mapannao-site-identity-fish-evidence-review-20261106.json"
+        ],
+        "page": 36,
+        "completionVerified": false
+      },
+      "reuse": {
+        "metadata": "Cite Cagayan State University, Annual Procurement Plan 2019, Piat Campus and page.",
+        "raw": "No PDF page image or other page content retained.",
+        "content": "No item-specific reuse license was verified. Only a concise attributed project-name summary is retained for research; no public-app reuse is approved."
+      },
+      "publicationApproval": false,
+      "researchStatus": "piat-campus-planned-water-feature;completion-unverified;not-nifep-crosswalk;research-only",
+      "license": "No item-specific reuse terms verified",
+      "licenseUrl": null,
+      "caveats": [
+        "A procurement plan is not proof that the project was built or remains present.",
+        "The plan gives no coordinates, boundary or fish information.",
+        "The plan does not link the project to BFAR’s NIFEP Piat Lake target."
+      ]
+    },
+    {
+      "id": "gbif-piat-mapannao-actinopterygii-bounded-search-20261106",
+      "title": "GBIF occurrence API bounded indexed-field search for Piat/Mapannao fish locality candidates",
+      "provider": "Global Biodiversity Information Facility; GBIF occurrence index",
+      "url": "https://api.gbif.org/v1/occurrence/search",
+      "additionalUrls": [
+        "https://techdocs.gbif.org/en/openapi/v1/occurrence"
+      ],
+      "role": "Read-only bounded searches of indexed waterBody/locality fields for exact and short Piat/Mapannao names. All nine queries returned zero results under their respective filters; this is not fish-absence evidence.",
+      "checkedOn": "2026-11-06",
+      "sourceYear": null,
+      "citation": "GBIF Occurrence API, search results for Piat and Mapannao waterBody/locality strings, checked 6 November 2026; API documentation accessed same date.",
+      "access": {
+        "status": "read-only-occurrence-api-queries-http-200;bounded-indexed-field-screen;research-only",
+        "reviewFiles": [
+          "national-freshwater-region02-piat-mapannao-site-identity-fish-evidence-review-20261106.json"
+        ],
+        "queryCount": 9,
+        "http200Count": 9,
+        "zeroResultQueryCount": 9,
+        "bulkDownloadRequested": false
+      },
+      "reuse": {
+        "metadata": "Retain only query URLs, filters and aggregate result counts.",
+        "raw": "No occurrence IDs, coordinates or media were retained.",
+        "content": "A zero-result search is not evidence of absence. No occurrence is admitted to public app data."
+      },
+      "publicationApproval": false,
+      "researchStatus": "bounded-locality-text-screen-zero;not-absence-evidence;research-only",
+      "license": null,
+      "licenseUrl": null,
+      "caveats": [
+        "Searches cover only indexed waterBody/locality values matching the queried spellings and the supplied filters.",
+        "Five queries selected CoL XR Actinopterygii and do not cover fish groups outside that selection; the four full-name queries used no taxonomic filter but still require the exact indexed name.",
+        "Records with missing locality values, spelling variants, unindexed observations and independent surveys are outside this screen."
       ]
     }
   ],

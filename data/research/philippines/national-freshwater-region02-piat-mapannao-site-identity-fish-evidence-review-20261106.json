@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-11-06",
+  "status": "nifep-piat-lake-vs-mapannao-identity-unresolved;bounded-fish-record-search-zero;no-site-specific-fish-survey-retrieved;research-only",
+  "purpose": "Check whether the 2018 BFAR NIFEP target called Piat Lake can be identified with the natural Mapannao Lake listed by NCCA, and look for fish evidence that is explicitly site-specific.",
+  "programLead": {
+    "name": "Piat Lake",
+    "locality": "Piat, Cagayan",
+    "sourceId": "bfar-region02-2018-nifep-inland-water-site-list",
+    "sourcePage": 22,
+    "reportedStatus": "2018 target for enhancement/restoration; the report does not verify completion",
+    "fishChecklistOrSiteSpecificStocking": false,
+    "geometryOrBarangay": null
+  },
+  "candidateWaterbodyCrosswalk": [
+    {
+      "name": "Mapannao Lake / Lawa ng Mapannao",
+      "sourceId": "ncca-talapamana-mapannao-lake-locality-20261106",
+      "reportedLocality": "Sto. Domingo, Piat, Cagayan",
+      "reportedClass": "natural lake",
+      "sourceDescriptionMetrics": {
+        "reportedAltitudeMeters": 40,
+        "reportedShoreLengthKilometers": 10,
+        "reportedAverageDischargeCubicMetersPerSecond": 0.29
+      },
+      "metricsCaveat": "The NCCA database entry gives these values but does not state their measurement method or provide a dated survey, coordinates or a lake polygon; they are recorded here as source-reported context only.",
+      "relationshipToNifepPiatLake": "unresolved; the NIFEP report gives only Piat municipality and does not name Mapannao or Sto. Domingo"
+    },
+    {
+      "name": "Proposed man-made lake for boating at CSU Piat Campus",
+      "sourceId": "csu-piat-campus-proposed-manmade-lake-2019-app-20261106",
+      "sourceYear": 2019,
+      "reportedStatus": "listed as a procurement-plan project; construction or completion was not verified",
+      "relationshipToNifepPiatLake": "unresolved; the procurement entry does not connect this planned facility to the BFAR NIFEP target"
+    }
+  ],
+  "fishEvidenceSearch": {
+    "officialRepositorySearches": [
+      {
+        "scope": "NFRDI repository, BFAR Region II and SEAFDEC indexed pages",
+        "terms": ["Piat Lake Cagayan fish", "Piat Lake fish species", "Mapannao Lake fish", "Mapannao Cagayan fisheries"],
+        "result": "No site-specific fish survey or checklist was retrieved in these bounded searches.",
+        "interpretation": "Retrieval gap only; it does not establish that no survey or fish records exist."
+      }
+    ],
+    "gbifOccurrenceApi": {
+      "endpoint": "https://api.gbif.org/v1/occurrence/search",
+      "checkedOn": "2026-11-06",
+      "fullNameQueries": {
+        "filters": {"country": "PH", "limit": 5},
+        "queries": [
+          {"field": "waterBody", "value": "Mapannao Lake", "httpStatus": 200, "resultCount": 0, "url": "https://api.gbif.org/v1/occurrence/search?country=PH&waterBody=Mapannao%20Lake&limit=5"},
+          {"field": "locality", "value": "Mapannao Lake", "httpStatus": 200, "resultCount": 0, "url": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Mapannao%20Lake&limit=5"},
+          {"field": "waterBody", "value": "Piat Lake", "httpStatus": 200, "resultCount": 0, "url": "https://api.gbif.org/v1/occurrence/search?country=PH&waterBody=Piat%20Lake&limit=5"},
+          {"field": "locality", "value": "Piat Lake", "httpStatus": 200, "resultCount": 0, "url": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Piat%20Lake&limit=5"}
+        ],
+        "taxonomyFilter": "none"
+      },
+      "fishNameVariantQueries": {
+        "filters": {
+          "country": "PH",
+          "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+          "taxonKey": "8VR36",
+          "taxonName": "Actinopterygii",
+          "limit": 0
+        },
+        "queries": [
+          {"field": "waterBody", "value": "Mapannao", "httpStatus": 200, "resultCount": 0, "url": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&waterBody=Mapannao&limit=0"},
+          {"field": "locality", "value": "Mapannao", "httpStatus": 200, "resultCount": 0, "url": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&locality=Mapannao&limit=0"},
+          {"field": "waterBody", "value": "Piat", "httpStatus": 200, "resultCount": 0, "url": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&waterBody=Piat&limit=0"},
+          {"field": "locality", "value": "Piat", "httpStatus": 200, "resultCount": 0, "url": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&locality=Piat&limit=0"},
+          {"field": "locality", "value": "Sto. Domingo", "httpStatus": 200, "resultCount": 0, "url": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&locality=Sto.+Domingo&limit=0"}
+        ],
+        "scopeLimit": "Only indexed GBIF waterBody/locality text matching these values and the specified CoL XR Actinopterygii selection was checked. This excludes unindexed/missing locality values, other spellings and taxa outside the selected taxon.",
+        "interpretation": "Zero indexed matches are not evidence of fish absence or survey absence."
+      }
+    }
+  },
+  "identityDecision": {
+    "status": "nifep-name-not-crosswalked-to-mapannao-or-campus-project",
+    "reason": "The NIFEP source names only Piat municipality, while NCCA separately identifies Mapannao Lake in Sto. Domingo and a CSU Piat procurement plan lists a proposed man-made boating lake. Neither source links its site to the NIFEP target.",
+    "coordinates": null,
+    "geometry": null
+  },
+  "disposition": {
+    "speciesAssertionsAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "geometryAdded": false,
+    "dietOrBaitClaimsAdded": 0,
+    "legalOrSafetyClaimsAdded": 0,
+    "publicAppProjection": false,
+    "publicationApproval": false,
+    "status": "site-identity-and-fish-evidence-open;research-only"
+  },
+  "limits": [
+    "The BFAR NIFEP report is a program and target-site source, not a Piat Lake fish checklist; its general discussion of tilapia fingerling stocking is not assigned to this site.",
+    "The NCCA Mapannao entry establishes a separately named natural-lake lead in Piat but does not establish it is the NIFEP Piat Lake, nor provide a reusable boundary or fish taxa.",
+    "The CSU procurement plan lists a proposed man-made boating lake but does not verify construction, location geometry or a connection to NIFEP.",
+    "Bounded indexed searches do not establish absence of fish, species surveys, or other records."
+  ],
+  "nextAction": "Ask for or locate a site map/project completion record that identifies the BFAR NIFEP Piat Lake, then seek a dated fish assessment with methods, taxonomic determinations and vouchers. Do not merge Mapannao or the proposed CSU campus lake into the NIFEP waterbody without a direct crosswalk."
+}
