@@ -238,6 +238,20 @@
       "waterQualityOrSafetyClaimsAdded": 0,
       "legalOrProtectedAreaClaimsAdded": 0,
       "publicationApproval": false
+    },
+    {
+      "artifact": "national-luzon-north-luzon-teleost-dna-barcode-dataset-source-review-20261106.json",
+      "reviewedOn": "2026-11-06",
+      "siteLeads": ["North Luzon rivers and market/landing sites in Aurora, Cagayan and Zambales; one Cagayan site table label is ‘Buguey’ and type ‘river’"],
+      "finding": "The 2025 peer-reviewed paper reports 1,513 vouchers and 323 species across three provinces and 27 mixed market/landing and river sites. Its supplementary XLSX with specimen, species, sampling-area, date and collection-method fields was retrieved, but no Cagayan specimen row uses ‘Buguey’ as its sampling-area label. The article's Buguey river site therefore has no resolved voucher/taxon crosswalk; article reuse terms are CC BY-NC-ND 4.0 and supplement/data rights need separate review.",
+      "sourceReportedSpeciesAcrossAllProvinces": 323,
+      "supplementarySpecimenTablesRetrieved": true,
+      "bugueySiteTaxonCrosswalkResolved": false,
+      "fishSpeciesRowsAdded": 0,
+      "fishOccurrenceRowsAdded": 0,
+      "coordinatesStored": 0,
+      "geometryAdded": false,
+      "publicationApproval": false
     }
   ],
   "priorityFollowUps": [
@@ -271,6 +285,13 @@
       "task": "For Buguey Lagoon, obtain the full 2015 Urmeneta/Romias proceedings or checklist and the complete dataset behind CSU's 56-fin-fish 2026 brief; resolve its relationship to Pascua (2024), field dates, station/taxon crosswalk, source spellings, vouchers, reuse terms, and official lagoon geometry. Then continue the northeast, northwest and Pacific-draining Cagayan watersheds outside the Cagayan Riverine Zone.",
       "doNotInfer": "The 2015 abstract is search-indexed only and reports 43 finfishes; the 2026 brief reports 56 but does not publish a full checklist. Do not merge their counts or names, infer a current species inventory, promote a protected-area recommendation as enacted law, or infer water quality or safety.",
       "relatedReviewArtifact": "national-freshwater-region02-cagayan-buguey-lagoon-fish-survey-source-review-20261106.json"
+    },
+    {
+      "priority": 6,
+      "task": "Ask the corresponding author to reconcile the article's main-table Buguey river site with the retrieved supplementary Tables S1a–S1c: no Cagayan specimen row uses Buguey as a sampling-area label. Clarify whether no sequenced specimens came from that site or whether another sampling-area label was used; obtain explicit rights terms before reusing any site/specimen data. Then continue site-by-site research for northeast/northwest Cagayan and Pacific-draining Isabela watersheds.",
+      "doNotInfer": "The aggregate 323-species count is not a checklist for any single province or site. Do not treat market fish as local wild occurrences, join generic or differently named Cagayan river rows to the Buguey point, map it to Buguey Lagoon, or adapt/re-publish CC BY-NC-ND material without an explicit rights decision.",
+      "relatedReviewArtifact": "national-luzon-north-luzon-teleost-dna-barcode-dataset-source-review-20261106.json",
+      "additionalReviewArtifacts": ["national-freshwater-region02-cagayan-buguey-lagoon-fish-survey-source-review-20261106.json"]
     }
   ],
   "disposition": {
@@ -279,6 +300,7 @@
     "followupSourceCountAddedToRegistry": 23,
     "lastReviewSourceCountAddedToRegistry": 3,
     "bugueyReviewSourceCountAddedToRegistry": 4,
+    "northLuzonBarcodeReviewSourceCountAddedToRegistry": 1,
     "followupWaterbodyLeadsAdded": 1,
     "speciesRowsAdded": 0,
     "occurrenceRowsAdded": 0,
@@ -400,6 +422,26 @@
     {
       "url": "https://api.gbif.org/v1/occurrence/search?country=PH&waterBody=Buguey%20Lagoon&limit=20",
       "supports": "One exact GBIF waterBody query returned count zero; this is not evidence of absence."
+    },
+    {
+      "artifact": "national-luzon-north-luzon-teleost-dna-barcode-dataset-source-review-20261106.json",
+      "supports": "Peer-reviewed North Luzon barcode dataset and supplement review; supplement retrieval exposed a Buguey site/specimen mismatch, with data reuse rights pending; no species, occurrence, coordinate or geometry projection."
+    },
+    {
+      "url": "https://www.nature.com/articles/s41597-025-05758-3",
+      "supports": "Dimaquibo et al. 2025 article describing the North Luzon voucher-linked barcode dataset, mixed river and market sampling, Cagayan site labels, cited supplementary tables and CC BY-NC-ND 4.0 article license."
+    },
+    {
+      "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41597-025-05758-3/MediaObjects/41597_2025_5758_MOESM2_ESM.xlsx",
+      "supports": "Publisher-hosted supplementary XLSX with specimen-level Tables S1a–S1c; no Cagayan sampling-area row is labeled Buguey, so the article's Buguey site remains unlinked to specimen/taxon records."
+    },
+    {
+      "url": "https://www.ncbi.nlm.nih.gov/bioproject/PRJNA1294862",
+      "supports": "First BioProject cited by the 2025 barcode article; no Buguey site-to-accession link established in this review."
+    },
+    {
+      "url": "https://www.ncbi.nlm.nih.gov/bioproject/PRJNA1294866",
+      "supports": "Second BioProject cited by the 2025 barcode article; no Buguey site-to-accession link established in this review."
     }
   ]
 }

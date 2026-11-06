@@ -1,0 +1,105 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-11-06",
+  "status": "peer-reviewed-north-luzon-barcode-dataset-and-supplement-reviewed;buguey-site-specimen-crosswalk-unresolved;research-only",
+  "purpose": "Assess a voucher-linked North Luzon fish barcode dataset and its specimen tables without transferring market or unmatched locality records to individual waterbodies.",
+  "source": {
+    "sourceId": "dimaquibo-2025-north-luzon-teleost-dna-barcode-dataset",
+    "citation": "Dimaquibo, A. C., Jhuang, W.-C., Huang, W.-C., Encarnacion, A. B., Villarao, M. C., Yutuc, R. V., & Liao, T.-Y. (2025). DNA Barcoding of Teleost Fishes from North Luzon, Philippines: A Dataset for Ichthyofaunal Diversity Assessment. Scientific Data, 12, 1571. https://doi.org/10.1038/s41597-025-05758-3",
+    "coverage": "Aurora, Cagayan and Zambales, Luzon; 27 sampling sites across market/landing areas and rivers.",
+    "sourceReportedCounts": {
+      "voucherSpecimens": 1513,
+      "speciesAcrossAllThreeProvinces": 323,
+      "genera": 187,
+      "families": 83,
+      "orders": 37,
+      "specimensOnlyIdentifiedToGenus": 11,
+      "successfulSequences": {
+        "COI": 707,
+        "12S": 343
+      },
+      "collectionPeriods": [
+        "2023-01-10 to 2023-01-20",
+        "2023-06-13 to 2023-06-25"
+      ],
+      "fieldDays": 24,
+      "marketOrLandingSites": 12,
+      "freshwaterRiverSites": 15
+    },
+    "publishedDataPaths": [
+      "The article says GenBank sequences are deposited under BioProjects PRJNA1294862 and PRJNA1294866.",
+      "The publisher provides a supplementary XLSX with Tables S1a–S1c and specimen-level catalog numbers, species, sampling areas, dates, methods, accessions and status fields.",
+      "The main article's Table 1 lists ten Cagayan collection-site labels; its Buguey row is labeled only ‘Buguey’ and classified as ‘river’."
+    ],
+    "license": "Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International (CC BY-NC-ND 4.0) for the article. The supplementary tables and underlying GenBank metadata require separate field-level review before reuse.",
+    "licenseUrl": "https://creativecommons.org/licenses/by-nc-nd/4.0/"
+  },
+  "bugueySiteLead": {
+    "sourceReportedLabel": "Buguey",
+    "sourceReportedProvince": "Cagayan",
+    "sourceReportedSiteType": "river",
+    "publishedCoordinatePresent": true,
+    "exactCoordinateStored": false,
+    "cagayanSupplementRowsWithSamplingAreaLabelBuguey": 0,
+    "interpretationLimit": "The main article labels the site ‘Buguey’ and classifies it as a river, but no Cagayan specimen row in the supplementary XLSX uses Buguey as its sampling-area label. The article does not name the watercourse in that row or identify it as Buguey Lagoon. Do not join taxa to this site, map it to a named river or lagoon, or use its published point as a waterbody boundary without author clarification."
+  },
+  "evidenceQualityAndScope": [
+    "This is a specimen-based DNA barcoding data descriptor that combines fish purchased from markets/landing areas with fish collected from rivers. The market-catch specimens are not local wild-occurrence records for their market coordinates.",
+    "The article reports 323 species across three provinces. Its supplementary XLSX contains specimen-level species and sampling-area fields for Cagayan, Aurora and Zambales. The Cagayan sheet has river and market/landing records, with collection method recorded separately; no Cagayan row is labeled Buguey, so the main article's Buguey site cannot be linked to a fish record from this supplement.",
+    "The main article identifies 15 freshwater river sites across the three provinces and ten Cagayan sites, but does not establish the completeness of any province or river checklist.",
+    "The paper says 11 specimens remain genus-only because of identification or reference limitations. Those labels cannot be promoted to species-level claims.",
+    "The article reports voucher specimens and molecular/morphological validation. These are stronger identification sources than unlabeled market terms, but a taxon still must be joined to its specimen and collection locality before a site claim is made."
+  ],
+  "accessReview": {
+    "fullArticle": "Publisher-hosted PDF reviewed for the abstract, Table 1, methods, Data Records and license statement.",
+    "supplementaryTables": "Publisher-hosted XLSX retrieved and reviewed in read-only mode. It contains Tables S1a–S1c, organized by Cagayan, Aurora and Zambales, with specimen catalog, species, sampling area, date, field number, collection method and accession/status columns. No Cagayan record has a sampling-area value containing ‘Buguey’; generic or differently named river rows are not reassigned to the main-table Buguey point.",
+    "localRawSnapshot": {
+      "path": "data/research/philippines/raw/41597_2025_5758_MOESM2_ESM.xlsx",
+      "ignoredByGit": true,
+      "committed": false,
+      "bytes": 85445,
+      "sha256": "7004383BF7069BAB34D5F82FE78778CB0A9F630755A150D42B517EB2370F06CA"
+    },
+    "genbank": "The article lists two BioProjects. A read-only NCBI lookup confirmed the first BioProject and that a sample accession links to it, but GenBank records inspected here did not expose the site crosswalk; no accession-to-Buguey assignment was made.",
+    "licenseLimit": "The article is CC BY-NC-ND 4.0. Do not redistribute an adapted species-by-site dataset from the paper or its supplement without explicit permission; record only source metadata and research leads pending review."
+  },
+  "followUp": [
+    "Ask the corresponding author to reconcile the main-table ‘Buguey’ river site with the supplementary tables: no Cagayan specimen row uses Buguey as its sampling-area label. Ask whether the site produced no sequenced specimens or whether its samples were recorded under another area label, and request a documented site-to-catalog/accession crosswalk.",
+    "Before any external redistribution or app use, obtain a rights decision for the supplementary tables and underlying data; the article is CC BY-NC-ND 4.0 and no derived species-by-site table is published in Bangwit.",
+    "If reuse is explicitly authorized, crosswalk only the documented voucher/accession records to the article's actual collection site, field date, specimen ID, method and taxonomic name; keep market/landing purchases separate from river collections.",
+    "Resolve whether the source-reported Buguey river point identifies a named watercourse, then validate the site against authoritative hydrography and administrative geography. Do not equate it to Buguey Lagoon from municipality name alone.",
+    "Retain genus-only or taxonomically disputed specimens at their documented rank; independently reconcile species names against an accepted authority before any future app admission.",
+    "Obtain a publication and derivative-data rights decision before placing specimen-level taxa or metadata in Bangwit's public source/data package."
+  ],
+  "disposition": {
+    "sourceReportedCagayanSamplingSitesReviewed": 10,
+    "cagayanSupplementarySpecimenTableRetrieved": true,
+    "bugueySiteTaxonCrosswalkResolved": false,
+    "fishSpeciesRowsAdded": 0,
+    "fishOccurrenceRowsAdded": 0,
+    "marketCatchRowsAssignedToSamplingLocalities": 0,
+    "coordinatesStored": 0,
+    "geometryAdded": false,
+    "publicationApproval": false,
+    "publicAppProjection": false,
+    "status": "important-region-wide-source-lead;buguey-site-crosswalk-and-reuse-review-pending"
+  },
+  "sources": [
+    {
+      "sourceId": "dimaquibo-2025-north-luzon-teleost-dna-barcode-dataset",
+      "url": "https://www.nature.com/articles/s41597-025-05758-3",
+      "pdfUrl": "https://www.nature.com/articles/s41597-025-05758-3.pdf",
+      "supplementUrl": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41597-025-05758-3/MediaObjects/41597_2025_5758_MOESM2_ESM.xlsx",
+      "doi": "https://doi.org/10.1038/s41597-025-05758-3",
+      "supports": "Peer-reviewed voucher-linked barcode dataset and publisher supplement, North Luzon scope, 2023 sampling periods, mixed market/river sampling design, Cagayan site labels, specimen-table fields, GenBank project links and CC BY-NC-ND 4.0 article terms."
+    },
+    {
+      "url": "https://www.ncbi.nlm.nih.gov/bioproject/PRJNA1294862",
+      "supports": "NCBI BioProject cited by the paper for deposited barcode sequences; no site-specific Buguey accession was identified."
+    },
+    {
+      "url": "https://www.ncbi.nlm.nih.gov/bioproject/PRJNA1294866",
+      "supports": "Second NCBI BioProject cited by the paper; no site-specific Buguey accession was identified."
+    }
+  ]
+}
