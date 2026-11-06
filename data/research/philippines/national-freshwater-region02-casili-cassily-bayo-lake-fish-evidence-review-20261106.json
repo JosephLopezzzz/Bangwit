@@ -1,0 +1,297 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-11-06",
+  "status": "nifep-casili-cassily-and-bayo-lake-leads-reviewed;nonfish-locality-and-coordinate-context;no-site-specific-fish-survey-retrieved;research-only",
+  "purpose": "Cross-check BFAR Region II NIFEP lake names Casili Lake and Bayo/Bayolake against independent inland-water and local-government evidence; search for site-specific fish evidence without inferring from program-level stocking or unrelated waterbodies.",
+  "candidateWaterbodies": [
+    {
+      "candidateId": "casili-cassily-tuao",
+      "nifepReportedName": "Casili Lake",
+      "reportedLocality": "Tuao, Cagayan, Region II",
+      "programEvidence": [
+        {
+          "sourceId": "bfar-region02-2016-nifep-casili-bayo-proposals",
+          "reportedName": "Casili Lake",
+          "reportedStatus": "2016 NIFEP proposed-area lead"
+        },
+        {
+          "sourceId": "bfar-region02-kalap-v18n1-nifep-casili-bayo-leads",
+          "reportedName": "Casili Lake",
+          "reportedStatus": "identified for NIFEP rehabilitation"
+        },
+        {
+          "sourceId": "bfar-region02-2018-nifep-inland-water-site-list",
+          "reportedName": "Casili Lake",
+          "reportedStatus": "2018 report says restored and enhanced in 2016"
+        }
+      ],
+      "independentLocalityEvidence": [
+        {
+          "sourceId": "pascual-et-al-2014-lake-cassily-cladocera-locality",
+          "reportedName": "Lake Cassily",
+          "reportedMunicipality": "Tuao",
+          "reportedProvince": "Cagayan",
+          "ustZrcLocalityReferences": "176–177",
+          "reportedTaxon": "Diaphanosoma excisum",
+          "reportedSpecimenIds": [
+            "UST-ZRC 0110",
+            "UST-ZRC 0111"
+          ],
+          "organismGroup": "freshwater cladoceran microcrustacean; not a fish",
+          "exactCollectionYear": null
+        },
+        {
+          "sourceId": "tuao-lgu-cassily-lake-resort-place-name-2013",
+          "reportedFacilityName": "LGU Cassily Lake Resort",
+          "reportedFacilityLocality": "Naruangan, Tuao-East",
+          "pagePublished": "2013-04-27",
+          "coordinatesOrBoundaryProvided": false
+        }
+      ],
+      "coordinateLead": {
+        "sourceId": "legaspi-et-al-2015-cassily-lake-coordinate-lead",
+        "reportedName": "Cassily",
+        "reportedCoordinateDms": "17°40′19″ N, 121°30′48″ E",
+        "coordinateUncertaintySpecified": false,
+        "useLimit": "Historical lake-level point for cross-check only; not a fish event coordinate or shoreline polygon."
+      },
+      "identityDecision": "The shared Tuao/Cagayan locality and Cassily/Casili spellings make Lake Cassily a plausible crosswalk candidate for NIFEP Casili Lake, but no reviewed source directly states that these are the same waterbody. Keep formal identity unresolved pending a site map or direct LGU/BFAR confirmation.",
+      "fishEvidence": "No site-specific fish survey or checklist was retrieved in bounded official-source searches. This is a retrieval gap, not evidence that fish or surveys are absent."
+    },
+    {
+      "candidateId": "bayo-bayolake-iguig",
+      "nifepReportedNames": [
+        "Lake Bayo",
+        "Bayo Lake",
+        "Bayolake"
+      ],
+      "reportedLocality": "Iguig, Cagayan, Region II",
+      "programEvidence": [
+        {
+          "sourceId": "bfar-region02-2016-nifep-casili-bayo-proposals",
+          "reportedName": "Lake Bayo",
+          "reportedStatus": "2016 NIFEP proposed-area lead"
+        },
+        {
+          "sourceId": "bfar-region02-kalap-v18n1-nifep-casili-bayo-leads",
+          "reportedName": "Bayo Lake",
+          "reportedStatus": "identified for NIFEP rehabilitation"
+        },
+        {
+          "sourceId": "bfar-region02-2018-nifep-inland-water-site-list",
+          "reportedName": "Bayolake",
+          "reportedStatus": "2018 report says restored and enhanced in 2016"
+        }
+      ],
+      "nameCrosswalk": "The same Iguig locality appears with Bayo Lake/Bayolake spellings across BFAR publications; treat this as a likely spelling/reporting variant for research triage while preserving each source spelling. Exact official name, waterbody identity and mapped footprint are not independently resolved.",
+      "fishEvidence": "No site-specific fish survey or checklist was retrieved in bounded searches; the BFAR sources are program records, not taxon-by-site surveys."
+    }
+  ],
+  "programStockingContext": {
+    "sourceId": "bfar-region02-kalap-v18n1-nifep-casili-bayo-leads",
+    "finding": "The newsletter reports 5,000 mixed carp-species and tilapia fingerlings at the separate 1-ha Quirino State University reservoir. In the same article, Bayo Lake and Casili Lake are named as other rehabilitation areas.",
+    "doNotInfer": "Do not transfer QSU reservoir taxa, quantity, catch or stocking event to Casili or Bayo Lake."
+  },
+  "officialRepositorySearches": {
+    "checkedOn": "2026-11-06",
+    "queries": [
+      "site:nsap.nfrdi.da.gov.ph \"Casili\" Tuao fish",
+      "site:region2.bfar.da.gov.ph \"Casili Lake\" fish OR \"Bayo Lake\" fisheries",
+      "site:repository.seafdec.org \"Lake Cassily\" fish OR \"Casili Lake\" fish",
+      "\"Lake Cassily\" fish survey Cagayan"
+    ],
+    "result": "No site-specific fish survey or lake-specific fish checklist was retrieved in these bounded searches.",
+    "interpretation": "Search/retrieval limitation only; it does not establish absence of fish, surveys or unpublished agency records."
+  },
+  "boundedGbifScreen": {
+    "sourceId": "gbif-casili-cassily-bayo-bounded-locality-screen-20261106",
+    "endpoint": "https://api.gbif.org/v1/occurrence/search",
+    "checkedOn": "2026-11-06",
+    "filters": {
+      "country": "PH",
+      "taxonFilter": "none"
+    },
+    "fields": [
+      "waterBody",
+      "locality"
+    ],
+    "queries": [
+      {
+        "field": "waterBody",
+        "value": "Casili Lake",
+        "filters": {
+          "country": "PH"
+        },
+        "httpStatus": 200,
+        "resultCount": 0,
+        "url": "https://api.gbif.org/v1/occurrence/search?country=PH&waterBody=Casili+Lake&limit=0"
+      },
+      {
+        "field": "locality",
+        "value": "Casili Lake",
+        "filters": {
+          "country": "PH"
+        },
+        "httpStatus": 200,
+        "resultCount": 0,
+        "url": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Casili+Lake&limit=0"
+      },
+      {
+        "field": "waterBody",
+        "value": "Lake Cassily",
+        "filters": {
+          "country": "PH"
+        },
+        "httpStatus": 200,
+        "resultCount": 0,
+        "url": "https://api.gbif.org/v1/occurrence/search?country=PH&waterBody=Lake+Cassily&limit=0"
+      },
+      {
+        "field": "locality",
+        "value": "Lake Cassily",
+        "filters": {
+          "country": "PH"
+        },
+        "httpStatus": 200,
+        "resultCount": 0,
+        "url": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Lake+Cassily&limit=0"
+      },
+      {
+        "field": "waterBody",
+        "value": "Cassily Lake",
+        "filters": {
+          "country": "PH"
+        },
+        "httpStatus": 200,
+        "resultCount": 0,
+        "url": "https://api.gbif.org/v1/occurrence/search?country=PH&waterBody=Cassily+Lake&limit=0"
+      },
+      {
+        "field": "locality",
+        "value": "Cassily Lake",
+        "filters": {
+          "country": "PH"
+        },
+        "httpStatus": 200,
+        "resultCount": 0,
+        "url": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Cassily+Lake&limit=0"
+      },
+      {
+        "field": "waterBody",
+        "value": "Bayo Lake",
+        "filters": {
+          "country": "PH"
+        },
+        "httpStatus": 200,
+        "resultCount": 0,
+        "url": "https://api.gbif.org/v1/occurrence/search?country=PH&waterBody=Bayo+Lake&limit=0"
+      },
+      {
+        "field": "locality",
+        "value": "Bayo Lake",
+        "filters": {
+          "country": "PH"
+        },
+        "httpStatus": 200,
+        "resultCount": 0,
+        "url": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Bayo+Lake&limit=0"
+      },
+      {
+        "field": "waterBody",
+        "value": "Bayolake",
+        "filters": {
+          "country": "PH"
+        },
+        "httpStatus": 200,
+        "resultCount": 0,
+        "url": "https://api.gbif.org/v1/occurrence/search?country=PH&waterBody=Bayolake&limit=0"
+      },
+      {
+        "field": "locality",
+        "value": "Bayolake",
+        "filters": {
+          "country": "PH"
+        },
+        "httpStatus": 200,
+        "resultCount": 0,
+        "url": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Bayolake&limit=0"
+      },
+      {
+        "field": "waterBody",
+        "value": "Lake Bayo",
+        "filters": {
+          "country": "PH"
+        },
+        "httpStatus": 200,
+        "resultCount": 0,
+        "url": "https://api.gbif.org/v1/occurrence/search?country=PH&waterBody=Lake+Bayo&limit=0"
+      },
+      {
+        "field": "locality",
+        "value": "Lake Bayo",
+        "filters": {
+          "country": "PH"
+        },
+        "httpStatus": 200,
+        "resultCount": 0,
+        "url": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Lake+Bayo&limit=0"
+      }
+    ],
+    "summary": {
+      "queryCount": 12,
+      "http200Count": 12,
+      "zeroResultQueryCount": 12
+    },
+    "interpretation": "The 12 zero results apply only to exact indexed text in the queried fields with country=PH. They do not show species absence or absence of source records; alternate spelling, unindexed or blank locality fields and other datasets remain outside scope."
+  },
+  "disposition": {
+    "fishSpeciesRowsAdded": 0,
+    "fishOccurrenceRowsAdded": 0,
+    "nonfishOccurrencesAddedToFishData": 0,
+    "siteCoordinateAddedToApp": false,
+    "geometryAdded": false,
+    "dietOrBaitClaimsAdded": 0,
+    "legalOrSafetyClaimsAdded": 0,
+    "publicAppProjection": false,
+    "publicationApproval": false,
+    "status": "research-only;site-identity-and-fish-evidence-open"
+  },
+  "limits": [
+    "A BFAR NIFEP restoration/enhancement entry is not a fish occurrence record or a current fish checklist.",
+    "The cladoceran locality and specimens are non-fish evidence; the exact sample collection year is unresolved in the article.",
+    "The published Cassily coordinate is a point without stated uncertainty and is not a boundary.",
+    "No source reviewed here provides a reusable polygon or a direct Casili↔Cassily or Bayo↔Bayolake official gazetteer crosswalk.",
+    "Reuse conditions for the scientific paper and BFAR source materials have not been approved for app projection."
+  ],
+  "nextAction": "Seek NIFEP completion records/site maps for Casili and Bayo, then find corresponding lake-specific fishery assessments, stocking inventories and voucher records. Ask for UST-ZRC field metadata to resolve the Cassily sample year and locality. Keep each fish list separate by waterbody and wild-versus-stocked provenance.",
+  "sources": [
+    {
+      "sourceId": "bfar-region02-2016-nifep-casili-bayo-proposals",
+      "supports": "NIFEP proposal-area names and municipalities; no site-specific fish taxa."
+    },
+    {
+      "sourceId": "bfar-region02-kalap-v18n1-nifep-casili-bayo-leads",
+      "supports": "Bayo/Casili rehabilitation leads and the separate QSU reservoir stocking context."
+    },
+    {
+      "sourceId": "bfar-region02-2018-nifep-inland-water-site-list",
+      "supports": "Reported restoration/enhancement status of the two NIFEP lakes in 2016."
+    },
+    {
+      "sourceId": "pascual-et-al-2014-lake-cassily-cladocera-locality",
+      "supports": "Historical Lake Cassily microcrustacean specimens and Tuao locality references; not fish."
+    },
+    {
+      "sourceId": "tuao-lgu-cassily-lake-resort-place-name-2013",
+      "supports": "Official municipal resort name and Naruangan/Tuao-East facility context."
+    },
+    {
+      "sourceId": "legaspi-et-al-2015-cassily-lake-coordinate-lead",
+      "supports": "Historical Cassily lake-level coordinate; no uncertainty or polygon."
+    },
+    {
+      "sourceId": "gbif-casili-cassily-bayo-bounded-locality-screen-20261106",
+      "supports": "Twelve reproducible read-only GBIF text-field query counts."
+    }
+  ]
+}
