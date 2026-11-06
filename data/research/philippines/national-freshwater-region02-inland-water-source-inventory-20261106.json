@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "reviewedOn": "2026-11-06",
-  "status": "official-bfar-and-nia-sources-reviewed;named-inland-water-leads;isabela-and-abuan-source-leads-reviewed;batanes-itbayat-lake-aquaculture-lead-reviewed;natural-aquaculture-and-infrastructure-separated;no-new-geometry-or-wild-species-rows;research-only",
+  "status": "official-bfar-and-nia-sources-reviewed;named-inland-water-leads;isabela-and-abuan-source-leads-reviewed;batanes-itbayat-lake-aquaculture-lead-reviewed;buguey-lagoon-fish-surveys-reviewed;natural-aquaculture-and-infrastructure-separated;no-new-geometry-or-wild-species-rows;research-only",
   "purpose": "Start a Region II inland-water source inventory that expands beyond the Cagayan B0380 basin and separates rivers, natural lakes, reservoirs, small water impounding projects, irrigation structures, aquaculture and fishery observations.",
   "regionScope": {
     "name": "Cagayan Valley / Region II",
@@ -225,6 +225,19 @@
       "aquacultureRowsAdded": 1,
       "geometryAdded": false,
       "publicationApproval": false
+    },
+    {
+      "artifact": "national-freshwater-region02-cagayan-buguey-lagoon-fish-survey-source-review-20261106.json",
+      "reviewedOn": "2026-11-06",
+      "siteLeads": ["Buguey Lagoon, Cagayan; Villa Leonora, Centro and Cabaritan study-site leads"],
+      "finding": "A 2026 CSU brief reports 56 finfish species and names a few, while a 2024 article from the same author has similar sites/method but no checklist or field-date range. A search-indexed 2015 abstract reports 43 finfish plus crustaceans, but its primary PDF and site list remain unavailable. The campaign crosswalk, taxon spellings, reuse rights and lagoon geometry remain unresolved.",
+      "sourceReportedTaxonLabelsRecordedForResearch": 7,
+      "fishSpeciesRowsAdded": 0,
+      "fishOccurrenceRowsAdded": 0,
+      "geometryAdded": false,
+      "waterQualityOrSafetyClaimsAdded": 0,
+      "legalOrProtectedAreaClaimsAdded": 0,
+      "publicationApproval": false
     }
   ],
   "priorityFollowUps": [
@@ -252,6 +265,12 @@
       "task": "Crosswalk Isabela's municipality-submitted wetland counts to named rivers, lakes, SWIPs, reservoirs and wetlands and to official feature maps. Resolve duplicate Jones/San Mariano rows; for Batanes, confirm the Kayaywan/unnamed-lake name and geometry and seek a wild-fish survey. Then continue with the northeast/northwest Cagayan watersheds outside the Cagayan Riverine Zone.",
       "doNotInfer": "The Cagayan River basin polygon is not a Region II inland-water boundary. Municipal counts, DOST's possible ludong-fishing-ground labels, household resource-use lists, aquaculture and provincial lake-area totals do not establish named wild species occurrences or feature geometry.",
       "relatedReviewArtifact": "national-freshwater-region02-isabela-inland-wetlands-and-abuan-river-source-review-20261106.json"
+    },
+    {
+      "priority": 5,
+      "task": "For Buguey Lagoon, obtain the full 2015 Urmeneta/Romias proceedings or checklist and the complete dataset behind CSU's 56-fin-fish 2026 brief; resolve its relationship to Pascua (2024), field dates, station/taxon crosswalk, source spellings, vouchers, reuse terms, and official lagoon geometry. Then continue the northeast, northwest and Pacific-draining Cagayan watersheds outside the Cagayan Riverine Zone.",
+      "doNotInfer": "The 2015 abstract is search-indexed only and reports 43 finfishes; the 2026 brief reports 56 but does not publish a full checklist. Do not merge their counts or names, infer a current species inventory, promote a protected-area recommendation as enacted law, or infer water quality or safety.",
+      "relatedReviewArtifact": "national-freshwater-region02-cagayan-buguey-lagoon-fish-survey-source-review-20261106.json"
     }
   ],
   "disposition": {
@@ -259,6 +278,8 @@
     "sourceCountAddedToRegistry": 4,
     "followupSourceCountAddedToRegistry": 23,
     "lastReviewSourceCountAddedToRegistry": 3,
+    "bugueyReviewSourceCountAddedToRegistry": 4,
+    "followupWaterbodyLeadsAdded": 1,
     "speciesRowsAdded": 0,
     "occurrenceRowsAdded": 0,
     "geometryAdded": false,
@@ -355,6 +376,30 @@
     {
       "url": "https://api.gbif.org/v1/occurrence/search",
       "supports": "Twelve bounded exact GBIF waterBody/locality queries and counts for Quirino NIFEP reservoir names are recorded in the linked research artifact."
+    },
+    {
+      "artifact": "national-freshwater-region02-cagayan-buguey-lagoon-fish-survey-source-review-20261106.json",
+      "supports": "Buguey Lagoon fish-survey source crosswalk, 2015/2024/2026 aggregate discrepancies, site and rights limits, and a bounded GBIF exact-field search; no species or occurrence projection."
+    },
+    {
+      "url": "https://csu.org.ph/policybrief/article/view/Conservation-Fish-Species-Buguey",
+      "supports": "CSU 2026 policy brief reports 56 finfish species in 40 families and a few named taxa, but no full checklist or collection-date range; license page/PDF conflict remains unresolved."
+    },
+    {
+      "url": "https://csu.org.ph/policybrief/article/download/Conservation-Fish-Species-Buguey/105/880",
+      "supports": "Full six-page CSU Policy Brief reviewed for aggregate findings, site/method summary, future compendium recommendation and conflicting PDF reuse notice."
+    },
+    {
+      "url": "https://innspub.net/wp-content/uploads/2024/06/JBES-V24-No3-p135-141.pdf",
+      "supports": "Full 2024 Buguey fish-diversity paper reviewed for study sites and method; no named checklist or sampling-date range found."
+    },
+    {
+      "url": "https://www.ilec.or.jp/wp-content/uploads/wlc/wlc16_abstract.pdf",
+      "supports": "Search-indexed 2015 study abstract lead reports 43 finfish and 12 shrimp/crab species; the PDF was inaccessible and the data remain provisional."
+    },
+    {
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&waterBody=Buguey%20Lagoon&limit=20",
+      "supports": "One exact GBIF waterBody query returned count zero; this is not evidence of absence."
     }
   ]
 }
