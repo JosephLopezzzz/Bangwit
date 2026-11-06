@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "reviewedOn": "2026-11-06",
-  "status": "official-bfar-and-nia-sources-reviewed;named-inland-water-leads;isabela-and-abuan-source-leads-reviewed;batanes-itbayat-lake-aquaculture-lead-reviewed;buguey-lagoon-fish-surveys-reviewed;baggao-2022-eel-telemetry-and-2018-tagging-maps-reviewed;natural-aquaculture-and-infrastructure-separated;no-new-geometry-or-wild-species-rows;research-only",
+  "status": "official-bfar-and-nia-sources-reviewed;named-inland-water-leads;isabela-and-abuan-source-leads-reviewed;batanes-itbayat-lake-aquaculture-lead-reviewed;buguey-lagoon-fish-surveys-reviewed;baggao-2022-eel-telemetry-and-2018-tagging-maps-reviewed;magapuy-paitan-ecology-and-water-quality-sites-reviewed;natural-aquaculture-and-infrastructure-separated;no-new-geometry-or-wild-species-rows;research-only",
   "purpose": "Start a Region II inland-water source inventory that expands beyond the Cagayan B0380 basin and separates rivers, natural lakes, reservoirs, small water impounding projects, irrigation structures, aquaculture and fishery observations.",
   "regionScope": {
     "name": "Cagayan Valley / Region II",
@@ -35,6 +35,17 @@
       "limits": [
         "The matching area figures do not supply a downloadable reservoir polygon or the seasonal shoreline geometry.",
         "This is water-infrastructure metadata, not a fish survey or permission to fish."
+      ]
+    },
+    "niaMagapuyPaitan": {
+      "ecologySurvey": "https://region2.nia.gov.ph/node/186",
+      "waterQualitySampling": "https://region2.nia.gov.ph/content/baseline-water-quality-sampling-magapuy-paitan-pre-feasibility-study",
+      "finding": "NIA Region II reports a 2025 freshwater ecology survey in Bayombong barangays Magapuy and Paitan, with net sampling on May 28 and fish collection using traditional traps on June 11. A separate February 27, 2026 pre-feasibility water-quality event reports four station labels: Bansing Creek, Magat River, Abian River Intake area, and San Fernando River watershed area in Bambang. The pages provide no fish taxa, survey results, station coordinates or geometry.",
+      "limits": [
+        "The 2025 article says further survey work was planned; the reviewed public page does not publish the final report or fish identifications.",
+        "The 2026 article says water samples would undergo laboratory testing but does not give results; it is not a current water-safety assessment.",
+        "The station labels are source-reported monitoring context, not validated waterbody boundaries or fish occurrence locations.",
+        "The irrigation project is described as proposed/pre-feasibility; the pages do not establish construction or a completed reservoir."
       ]
     },
     "cagayanRiverinePlan": {
@@ -270,6 +281,20 @@
       "coordinatesStored": 0,
       "geometryAdded": false,
       "publicationApproval": false
+    },
+    {
+      "artifact": "national-freshwater-region02-nueva-vizcaya-magapuy-paitan-ecology-survey-review-20261106.json",
+      "reviewedOn": "2026-11-06",
+      "siteLeads": [
+        "Magapuy and Paitan barangays, Bayombong: 2025 freshwater ecology fish-collection lead",
+        "Bansing Creek, Magat River, Abian River Intake area and San Fernando River watershed area, Bayombong/Bambang: 2026 pre-feasibility water-quality stations"
+      ],
+      "finding": "NIA Region II reports net sampling in May 2025 and fish collection using traditional traps in June 2025, then separate water sampling at four named stations in February 2026. The reviewed pages contain no fish taxa, fish-survey results, water-quality results, station coordinates or geometry. Treat this as a high-value primary-data lead, not a checklist or safety finding.",
+      "fishSpeciesRowsAdded": 0,
+      "fishOccurrenceRowsAdded": 0,
+      "waterQualityResultsAdded": 0,
+      "geometryAdded": false,
+      "publicationApproval": false
     }
   ],
   "priorityFollowUps": [
@@ -316,6 +341,12 @@
       "task": "For the Pared River eel telemetry lead, obtain the 2016 barangay ordinance and authoritative sanctuary/buffer boundary geometry, compare those boundaries to the 2018 ZSL receiver/tagging maps and the study's 1 km reaches, review whether CC BY-NC-ND 4.0 permits any proposed Bangwit use, and seek current site-resolved fish monitoring.",
       "doNotInfer": "The ZSL/BFAR source crosswalk does not convert illustrated tagging maps into authoritative sanctuary polygons. Crossref reports CC BY-NC-ND 4.0, not blanket permission to adapt or commercially reuse the paper. The 2018–2020 catches do not establish current presence, river-wide distribution, a complete checklist, or fishing permission. Do not copy coordinates or digitize map geometry for public use.",
       "relatedReviewArtifact": "national-cagayan-baggao-freshwater-sanctuary-catch-review-20261030.json"
+    },
+    {
+      "priority": 8,
+      "task": "Request or locate NIA-NVIMO's completed Magapuy-Paitan freshwater ecology survey, species determinations, collection dates, methods, vouchers/photos and station-to-waterbody crosswalk; obtain the February 2026 laboratory results and sample/station coordinates for Bansing Creek, Magat River, Abian River Intake and the San Fernando River watershed. Verify data reuse terms and whether the proposed irrigation project has since advanced.",
+      "doNotInfer": "The NIA public notices establish that fish were collected and water was sampled, but disclose neither taxa nor results. A project lead, sampling station, or water-quality baseline is not a fish checklist, current safety status, catch permission, or reusable geometry.",
+      "relatedReviewArtifact": "national-freshwater-region02-nueva-vizcaya-magapuy-paitan-ecology-survey-review-20261106.json"
     }
   ],
   "disposition": {
@@ -328,6 +359,7 @@
     "paredRiverReviewSourceCountAddedToRegistry": 1,
     "bfarFma1CrosswalkSourceCountAddedToRegistry": 1,
     "zslBaggaoTelemetryMapSourceCountAddedToRegistry": 1,
+    "magapuyPaitanNiaSurveySourceCountAddedToRegistry": 2,
     "followupWaterbodyLeadsAdded": 1,
     "speciesRowsAdded": 0,
     "occurrenceRowsAdded": 0,
@@ -465,6 +497,18 @@
     {
       "url": "https://www.darwininitiative.org.uk/documents/DAR24016/24699/24-016%20AR1%20-%20edited.pdf",
       "supports": "ZSL/Darwin Initiative 2018 year-one report identifies Hot Springs FS and Duba Cave FS as the Baggao tagging sites and includes receiver/tagging-area maps labeled for Asinga-Via and San Miguel; the maps are not authoritative GIS boundary data."
+    },
+    {
+      "artifact": "national-freshwater-region02-nueva-vizcaya-magapuy-paitan-ecology-survey-review-20261106.json",
+      "supports": "Review of NIA Region II's 2025 Magapuy-Paitan freshwater ecology fish-collection notice and separate 2026 pre-feasibility water-quality station notice; species and results were not published on the reviewed pages."
+    },
+    {
+      "url": "https://region2.nia.gov.ph/node/186",
+      "supports": "NIA Region II reports 2025 freshwater ecology sampling in Magapuy and Paitan, Bayombong, including nets on May 28 and fish collection by traditional traps on June 11; no taxa or results are published in the notice."
+    },
+    {
+      "url": "https://region2.nia.gov.ph/content/baseline-water-quality-sampling-magapuy-paitan-pre-feasibility-study",
+      "supports": "NIA Region II reports February 27, 2026 pre-feasibility water-quality sampling in Bayombong and Bambang at four named station areas; no lab values, coordinates or geometry are published in the notice."
     },
     {
       "url": "https://www.nature.com/articles/s41597-025-05758-3",
