@@ -1,8 +1,8 @@
 {
   "schemaVersion": 1,
   "reviewedOn": "2026-11-06",
-  "status": "original-description-directly-reviewed;official-museum-indexed-record-crosschecked;historical-voucher-locality;no-coordinate-overlay;basin-match-unresolved;research-only",
-  "purpose": "Crosswalk the Cagayan B0380 basin candidate Stigmatogobius elegans to its original species description, type series, Smithsonian holotype record, and later Philippine type checklist, while preserving the missing coordinates and unresolved hydrological-basin match.",
+  "status": "original-description-directly-reviewed;official-museum-indexed-record-crosschecked;historical-voucher-locality;indirect-pared-cagayan-hydrology-context;exact-imurung-link-and-coordinate-unresolved;research-only",
+  "purpose": "Crosswalk the Cagayan B0380 basin candidate Stigmatogobius elegans to its original species description, type series, Smithsonian holotype record, later Philippine type checklist, and newly reviewed local Pared/Cagayan hydrology context without treating that context as an exact type-site coordinate.",
   "candidate": {
     "sourceArtifact": "national-freshwater-fish-basin-candidate-extract-20261106.json",
     "basinId": "B0380",
@@ -69,8 +69,23 @@
     "reportedLocality": "Barrio San Miguel, Baggao Municipality, Cagayan Province, Luzon",
     "coordinate": null,
     "pointInB0380": null,
-    "basinCrosswalk": "The primary description and Smithsonian record identify the province and Imurung River, but the inspected locality text does not explicitly name the Cagayan River drainage and supplies no coordinate. Membership in the global B0380 polygon is therefore not asserted.",
+    "basinCrosswalk": "The primary description and Smithsonian record identify Imurung River, Barrio San Miguel, Cagayan Province, but supply no coordinate. The NCCA Duba Rivers and Caves entry says local waters flow to Pared River and support irrigation in San Miguel and Imurung; the Cagayan Riverine Zone Development Framework Plan identifies Pared River as a major Cagayan River tributary. This provides indirect local network context consistent with the Cagayan basin, but no reviewed source explicitly connects the Imurung type reach itself to Pared or locates that reach. Exact membership in global polygon B0380 remains unverified.",
     "evidenceClass": "Historical voucher/type-locality record, georeferenced only to named river and administrative locality in the reviewed sources."
+  },
+  "hydrologyCrosswalk": {
+    "reviewedOn": "2026-11-06",
+    "localContext": {
+      "source": "National Commission for Culture and the Arts, Talapamana entry for Duba Rivers and Caves, Baggao",
+      "sourceUrl": "https://www.talapamana.ncca.gov.ph/index.php/talapamana/cultural-property-database/talapamana",
+      "reportedConnection": "The entry says running water from the Duba cave system goes to Pared River and describes Pared River as the irrigation source for rice lands in San Miguel, Imurung, San Francisco, and San Jose."
+    },
+    "parentBasinContext": {
+      "source": "Cagayan Riverine Zone Development Framework Plan 2005-2030, NEDA Region II/DEPDev Region II",
+      "sourceUrl": "https://neda.rdc2.gov.ph/wp-content/uploads/2015/12/Cagayan-Riverine-Zone-Development-Framework-Plan-2005_2030.pdf",
+      "reportedConnection": "The plan includes Pared River among the major tributaries in the Cagayan Riverine Zone and explicitly notes that some northeast/northwest Cagayan watersheds do not drain through the Cagayan River."
+    },
+    "interpretation": "The local and parent-basin sources support a plausible Pared-to-Cagayan hydrological context near the administrative locality, but they do not document the Imurung type reach's direct confluence path or exact position. Province, barangay, and nearby water-system references are not substitutes for a georeferenced fish voucher.",
+    "geometryAction": "No coordinate or point-in-polygon result added; exact Imurung-to-Pared link and B0380 membership remain pending."
   },
   "recentSurveyLead": {
     "sourceId": "nagao-maeda-luzon-freshwater-estuarine-field-survey-2026",
@@ -101,12 +116,13 @@
   "interpretation": [
     "The primary description and official Smithsonian catalog record independently anchor the species' historical type series to the Imurung River in Cagayan Province, with a collection date of 2 May 1989.",
     "A separate 2026 Nagao Foundation report says the species was observed in Cagayan, but provides only province-level locality and no taxon-specific date, exact waterbody, coordinate, or specimen accession; it is not linked to the 1989 type series.",
-    "Neither the historic nor recent source provides coordinates or an explicit Cagayan River-drainage crosswalk for the named Imurung type locality, so B0380 membership is unresolved.",
+    "NCCA describes Duba waters going to Pared River and supporting irrigation for San Miguel/Imurung lands; the regional Cagayan Riverine Zone plan includes Pared among Cagayan River tributaries. This supports indirect local basin context but does not explicitly connect the Imurung type reach to Pared.",
+    "No reviewed source gives a type-site coordinate or exact Imurung-to-Pared connection, so point-in-polygon testing and exact B0380 membership remain unresolved. Cagayan Province alone is insufficient because the regional plan notes some Cagayan watersheds do not drain through the Cagayan River.",
     "The global basin candidate remains a discovery lead; this review does not claim the Imurung type locality lies inside B0380 or that the taxon is currently present there.",
     "No species, occurrence, geometry, diet, bait, catchability, legal, safety, or public-app row is created by this research crosswalk."
   ],
   "disposition": {
-    "candidateEvidenceStatus": "historical-imurung-type-series-plus-2026-province-level-observation-lead;B0380-membership-unresolved;research-only",
+    "candidateEvidenceStatus": "historical-imurung-type-series-plus-2026-province-level-observation-lead;indirect-pared-cagayan-hydrology-context;exact-imurung-link-and-B0380-membership-unresolved;research-only",
     "publicSpeciesRowsAdded": 0,
     "occurrenceRowsAdded": 0,
     "waterbodyGeometryAdded": false,
@@ -132,6 +148,14 @@
       "supports": "Official 2026 survey report's Cagayan-level Stigmatogobius elegans observation and pending material examination; it does not supply exact site/date/accession crosswalk."
     },
     {
+      "url": "https://www.talapamana.ncca.gov.ph/index.php/talapamana/cultural-property-database/talapamana",
+      "supports": "NCCA Talapamana entry for Duba Rivers and Caves: water goes to Pared River, which supports irrigation for rice lands in San Miguel and Imurung. This is local context, not a direct Imurung type-reach coordinate or connection record."
+    },
+    {
+      "url": "https://neda.rdc2.gov.ph/wp-content/uploads/2015/12/Cagayan-Riverine-Zone-Development-Framework-Plan-2005_2030.pdf",
+      "supports": "Regional government framework plan identifies Pared River among Cagayan River major tributaries and notes that some northeast/northwest Cagayan watersheds do not drain through Cagayan."
+    },
+    {
       "url": "https://api.gbif.org/v1/species/match?name=Stigmatogobius%20elegans&strict=true",
       "supports": "Strict GBIF taxonomic match and accepted usage key."
     },
@@ -144,6 +168,6 @@
     "publicAdmissionDefault": false,
     "rightsReview": "The original paper is copyrighted by the publisher and no item-specific reuse grant was verified. The 2025 checklist is CC BY 4.0. The 2026 report has no item-specific reuse terms in the reviewed source note. No derived public app row is approved.",
     "qualityReview": "The type series anchors a historical event and locality; the 2026 report adds only a province-level observation lead. Neither establishes exact coordinates, B0380 membership, abundance, catchability, legal status, or safety.",
-    "accessEvidence": "The original publisher PDF and peer-reviewed checklist were directly read. Smithsonian item details came from its official indexed search record; a full museum record and coordinate were not retrieved. The 2026 project report was directly reviewed in an earlier source assessment."
+    "accessEvidence": "The original publisher PDF and peer-reviewed checklist were directly read. Smithsonian item details came from its official indexed search record; a full museum record and coordinate were not retrieved. The 2026 project report was directly reviewed in an earlier source assessment. NCCA's local Duba-to-Pared description and the regional Cagayan Riverine Zone plan were directly reviewed for indirect hydrological context; neither supplies the type-site coordinate or explicit Imurung-to-Pared linkage."
   }
 }
