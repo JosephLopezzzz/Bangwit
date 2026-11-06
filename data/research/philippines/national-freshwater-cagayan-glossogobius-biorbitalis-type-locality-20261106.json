@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "reviewedOn": "2026-11-06",
-  "status": "official-catalog-page-directly-retrieved;historical-type-locality;no-coordinate-overlay;research-only",
+  "status": "official-catalog-page-directly-retrieved;historical-type-locality;museum-dataset-bounded-crosscheck;exact-bua-river-gazetteer-unresolved;no-coordinate-overlay;research-only",
   "purpose": "Cross-check the Cagayan basin candidate Glossogobius biorbitalis against the current Catalog of Fishes entry and record its reported type locality without converting a text locality to coordinates.",
   "candidate": {
     "sourceArtifact": "national-freshwater-fish-basin-candidate-extract-20261106.json",
@@ -39,14 +39,40 @@
     "result": "The bounded coordinate search produced a higher-rank match only for the exact candidate name; no species-rank coordinate row was used.",
     "interpretation": "The GBIF result is a scoped indexing outcome. It does not contradict the Catalog's type-locality report and does not establish absence."
   },
+  "museumDatasetCrossCheck": {
+    "reviewedOn": "2026-11-06",
+    "resource": "Fish Specimen Collection of National Museum, Philippines",
+    "publisher": "ASEAN Centre for Biodiversity",
+    "resourceUrl": "https://ipt.aseanbiodiversity.org/resource?r=ph_fish_collection_museum_b1&request_locale=en",
+    "gbifDatasetKey": "18896efa-22df-4fbd-9782-42f47257e753",
+    "reportedDatasetSize": 8225,
+    "reportedLicense": "CC-BY 4.0",
+    "descriptionScope": "Resource metadata describes common and commercial Philippine fish collection samples from landing sites and markets of commercial ports and nearby seas.",
+    "query": {
+      "purpose": "Bounded query for the candidate name and the Catalog-reported PNM holotype catalog number",
+      "url": "https://api.gbif.org/v1/occurrence/search?datasetKey=18896efa-22df-4fbd-9782-42f47257e753&catalogNumber=15688&scientificName=Glossogobius%20biorbitalis&limit=5",
+      "count": 0
+    },
+    "interpretation": "No matching row was returned from this indexed resource. The resource scope is not a complete type-series register, so this is not evidence that PNM 15688 is absent from the physical collection or from non-indexed records."
+  },
+  "gazetteerCrossCheck": {
+    "reviewedOn": "2026-11-06",
+    "provider": "OpenStreetMap Nominatim search service",
+    "query": "Bua River, Dupax del Norte, Nueva Vizcaya, Philippines",
+    "queryUrl": "https://nominatim.openstreetmap.org/search?q=Bua%20River%2C%20Dupax%20del%20Norte%2C%20Nueva%20Vizcaya%2C%20Philippines&format=jsonv2&countrycodes=ph",
+    "resultCount": 0,
+    "interpretation": "The exact-name query returned no mapped feature. This does not establish that the river is absent; it means this gazetteer lookup did not independently resolve the catalog-reported Bua River or provide geometry."
+  },
   "interpretation": [
     "A current taxonomic catalog reports a type locality for G. biorbitalis at Bua River in the Cagayan drainage, making this a stronger Cagayan-specific lead than a name-only basin candidate.",
     "The evidence is traceable to the Catalog's citation of the Endruweit 2024 book, but the book and PNM/SEAFDEC specimen labels were not reviewed directly.",
+    "The indexed National Museum fish-collection resource returned no row for the combined name and holotype-number query; its metadata does not establish that it contains all type lots.",
+    "An exact-name OpenStreetMap Nominatim query did not return a mapped Bua River feature for Dupax del Norte, so the waterbody was not independently resolved to geometry.",
     "The locality supports a historical taxonomic type-locality association only; it does not establish current presence, abundance, distribution throughout B0380, catchability, legal status, or fishing safety.",
     "Do not map the catalog locality as a point or exact reach without coordinates and a separate Bua River geometry crosswalk."
   ],
   "disposition": {
-    "candidateEvidenceStatus": "historical-type-locality-lead;source-original-and-coordinate-review-pending",
+    "candidateEvidenceStatus": "historical-type-locality-lead;museum-dataset-query-no-row;exact-bua-river-geometry-unresolved;source-original-and-coordinate-review-pending",
     "publicSpeciesRowsAdded": 0,
     "occurrenceRowsAdded": 0,
     "waterbodyGeometryAdded": false,
@@ -62,6 +88,14 @@
     {
       "url": "https://research.calacademy.org/research/ichthyology/catalog/getref.asp?id=41040",
       "supports": "Catalog bibliography record for Endruweit 2024, Fishes of the Red River - Perciformes, Synbranchiformes."
+    },
+    {
+      "url": "https://ipt.aseanbiodiversity.org/resource?r=ph_fish_collection_museum_b1&request_locale=en",
+      "supports": "ASEAN Centre for Biodiversity metadata for the National Museum fish collection resource, including its reported size, CC-BY 4.0 license, and common/commercial landing-site sampling scope; the related GBIF dataset returned zero for the bounded candidate/catalog-number query."
+    },
+    {
+      "url": "https://nominatim.openstreetmap.org/search?q=Bua%20River%2C%20Dupax%20del%20Norte%2C%20Nueva%20Vizcaya%2C%20Philippines&format=jsonv2&countrycodes=ph",
+      "supports": "Bounded exact-name OpenStreetMap gazetteer lookup returned no mapped feature; this is not evidence that Bua River does not exist."
     },
     {
       "url": "https://api.gbif.org/v1/species/match?name=Glossogobius%20biorbitalis&strict=true",

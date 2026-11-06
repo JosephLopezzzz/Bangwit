@@ -3,7 +3,7 @@
   "checkedOn": "2026-11-06",
   "status": "research-only-source-registry",
   "scope": "National acquisition references, freshwater spatial-source leads, MIMAROPA/CALABARZON/Central Luzon identity and inland-water source reviews, and Mindanao regional freshwater survey reviews. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 761,
+  "sourceCount": 762,
   "sources": [
     {
       "id": "aquilino-2011-taal-dna-barcoding-genbank",
@@ -24090,28 +24090,31 @@
       ]
     },
     {
-      "id": "acb-national-museum-fish-collection-ilogton-bounded-check-20261106",
-      "title": "National Museum fish specimen collection resource cross-check for Ilogton ilogton",
+      "id": "acb-national-museum-fish-collection-bounded-check-20261106",
+      "title": "National Museum fish specimen collection resource bounded cross-checks",
       "provider": "ASEAN Centre for Biodiversity; collection identified as National Museum of the Philippines",
       "url": "https://ipt.aseanbiodiversity.org/resource?r=ph_fish_collection_museum_b1&request_locale=en",
       "additionalUrls": [
         "https://www.gbif.org/dataset/18896efa-22df-4fbd-9782-42f47257e753",
         "https://api.gbif.org/v1/occurrence/search?datasetKey=18896efa-22df-4fbd-9782-42f47257e753&scientificName=Ilogton%20ilogton&limit=10",
-        "https://api.gbif.org/v1/occurrence/search?datasetKey=18896efa-22df-4fbd-9782-42f47257e753&catalogNumber=15678&limit=5"
+        "https://api.gbif.org/v1/occurrence/search?datasetKey=18896efa-22df-4fbd-9782-42f47257e753&catalogNumber=15678&limit=5",
+        "https://api.gbif.org/v1/occurrence/search?datasetKey=18896efa-22df-4fbd-9782-42f47257e753&catalogNumber=15688&scientificName=Glossogobius%20biorbitalis&limit=5"
       ],
-      "role": "Published specimen dataset metadata and bounded GBIF cross-check. The resource metadata reports 8,225 records, CC-BY 4.0, and common/commercial fish samples from landing sites and markets; exact-name and PNM holotype-number queries returned zero in that dataset. This does not establish physical collection absence or verify the type lot.",
+      "role": "Published specimen dataset metadata and bounded GBIF cross-checks for Ilogton ilogton (PNM 15678) and Glossogobius biorbitalis (PNM 15688). The resource metadata reports 8,225 records, CC-BY 4.0, and common/commercial fish samples from landing sites and markets; bounded candidate-name/holotype-number queries returned zero. This does not establish physical collection absence or verify either type lot.",
       "checkedOn": "2026-11-06",
       "sourceYear": 2026,
       "citation": "ASEAN Centre for Biodiversity. Fish Specimen Collection of National Museum, Philippines. IPT resource, current metadata version retrieved 6 November 2026; GBIF registered dataset UUID 18896efa-22df-4fbd-9782-42f47257e753.",
       "access": {
         "status": "published-resource-metadata-directly-reviewed;bounded-gbif-queries-return-zero;not-type-lot-verification;research-only",
         "reviewFiles": [
-          "national-freshwater-cagayan-ilogton-ilogton-type-locality-20261106.json"
+          "national-freshwater-cagayan-ilogton-ilogton-type-locality-20261106.json",
+          "national-freshwater-cagayan-glossogobius-biorbitalis-type-locality-20261106.json"
         ],
         "reportedRecordCount": 8225,
         "reportedLicense": "CC-BY 4.0",
         "exactScientificNameQueryCount": 0,
-        "catalogNumber15678QueryCount": 0
+        "catalogNumber15678QueryCount": 0,
+        "glossogobiusBiorbitalisCatalogNumber15688QueryCount": 0
       },
       "reuse": {
         "metadata": "The dataset resource metadata states CC-BY 4.0 for this published resource. That license statement is not applied to the original taxonomic book or unreviewed specimen labels.",
@@ -24119,13 +24122,43 @@
         "content": "Only resource metadata and bounded API query outcomes are summarized for research triage; no public-app projection is approved."
       },
       "publicationApproval": false,
-      "researchStatus": "luzon-cagayan;ilogton-ilogton;national-museum-dataset-crosscheck;bounded-zero;research-only",
+      "researchStatus": "luzon-cagayan;ilogton-ilogton;glossogobius-biorbitalis;national-museum-dataset-crosscheck;bounded-zero;research-only",
       "license": "CC-BY 4.0 for the published IPT resource, as stated by its metadata; underlying original book and unreviewed specimen labels are not covered by this inference",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
       "caveats": [
         "The dataset metadata describes common and commercial fish samples from landing sites and markets of commercial ports and nearby seas; it does not claim to be a complete type-series register.",
-        "Zero query results mean no matching row was returned by the checked GBIF dataset query, not that PNM 15678 is absent from the physical collection or from non-indexed records.",
+        "Zero query results mean no matching row was returned by the checked GBIF dataset query, not that PNM 15678 or PNM 15688 is absent from the physical collection or from non-indexed records.",
         "The original 2024 description and PNM/SEAFDEC labels or collection records remain unreviewed."
+      ]
+    },
+    {
+      "id": "osm-nominatim-bua-river-dupax-del-norte-bounded-no-result-20261106",
+      "title": "OpenStreetMap Nominatim exact-name search for Bua River, Dupax del Norte",
+      "provider": "OpenStreetMap Nominatim public search endpoint",
+      "url": "https://nominatim.openstreetmap.org/search?q=Bua%20River%2C%20Dupax%20del%20Norte%2C%20Nueva%20Vizcaya%2C%20Philippines&format=jsonv2&countrycodes=ph",
+      "role": "A bounded exact-name gazetteer search returned zero mapped features for the catalog-reported Bua River locality. This records search coverage only; it does not establish that the waterbody is absent or contradict the Catalog of Fishes type-locality text.",
+      "checkedOn": "2026-11-06",
+      "citation": "OpenStreetMap Nominatim search endpoint, query 'Bua River, Dupax del Norte, Nueva Vizcaya, Philippines'; accessed 6 November 2026.",
+      "access": {
+        "status": "bounded-exact-name-gazetteer-query-returned-zero;no-feature-or-geometry-retrieved;research-only",
+        "reviewFiles": [
+          "national-freshwater-cagayan-glossogobius-biorbitalis-type-locality-20261106.json"
+        ],
+        "query": "Bua River, Dupax del Norte, Nueva Vizcaya, Philippines",
+        "resultCount": 0
+      },
+      "reuse": {
+        "metadata": "No feature record was returned; no geospatial feature data was reused.",
+        "raw": "No map geometry or feature properties were copied into the repository.",
+        "content": "Only the bounded query and zero-result outcome are recorded to make the unresolved name search reproducible."
+      },
+      "publicationApproval": false,
+      "researchStatus": "luzon-cagayan;bua-river;dupax-del-norte;bounded-gazetteer-zero;not-absence-evidence;research-only",
+      "license": "No feature returned; no data item reused",
+      "licenseUrl": null,
+      "caveats": [
+        "A zero geocoder result is not evidence that Bua River does not exist.",
+        "No coordinate, river line, or exact reach was obtained, and the catalog's historical drainage statement remains separately attributed."
       ]
     },
     {
