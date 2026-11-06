@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-11-06",
+  "status": "isabela-municipal-wetland-counts-and-abuan-monitoring-sites-reviewed;fish-evidence-not-established;research-only",
+  "purpose": "Use Isabela's 2024 ENRO report and related DOST project summaries to expand Region II inland-water discovery beyond the Cagayan-basin fish list without treating municipal counts or water-quality stations as fish occurrences.",
+  "coverageContext": {
+    "region": "Region II / Cagayan Valley",
+    "province": "Isabela",
+    "outsideBasinWarning": "The provincial report is not a hydrologic crosswalk. The listed municipal wetlands cannot be assumed to drain to the Cagayan River; eastern/Pacific-draining waters need individual catchment assignment.",
+    "sourceTypeWarning": "The ENRO inventory is a municipality-submitted count list with no waterbody names for most rows. It is a discovery baseline, not a complete feature inventory or fish survey."
+  },
+  "municipalWetlandCountRows": [
+    { "row": 1, "municipality": "Cabagan", "sourceText": "3 Lakes; 4 Rivers; and 2 Falls" },
+    { "row": 2, "municipality": "San Guillermo", "sourceText": "3 Rivers; 8 Creeks; 2 SWIPs; 2 Falls; 26 Barangays-Rice fields; and 26 Barangays Homemade/Aquaculture ponds" },
+    { "row": 3, "municipality": "Sta. Maria", "sourceText": "2 Lakes and 1 Bird Ground and Sanctuary" },
+    { "row": 4, "municipality": "Tumauini", "sourceText": "3 Rivers; 4 Creeks; and 3 Falls" },
+    { "row": 5, "municipality": "San Mariano", "sourceText": "1 Lake and 2 Rivers" },
+    { "row": 6, "municipality": "Ramon", "sourceText": "1 Reservoir/Dam and 4 Creeks" },
+    { "row": 7, "municipality": "Palanan", "sourceText": "2 Rivers; 1 Lagoon; 2 Lakes; 1 Mangrove Forest or Intertidal Wetland; and 1 Intertidal Wetland Flat with Coral Beds/Sea Grasses" },
+    { "row": 8, "municipality": "Cauayan City", "sourceText": "2 Ponds" },
+    { "row": 9, "municipality": "Angadanan", "sourceText": "1 Pond" },
+    { "row": 10, "municipality": "Divilacan", "sourceText": "2 Rivers; 1 Coastal Wetland; and 1 Lake" },
+    { "row": 11, "municipality": "San Isidro", "sourceText": "1 SWIP; 4 Creeks; and 1 SWIP/Reservoir" },
+    { "row": 12, "municipality": "Jones", "sourceText": "1 Lake and 1 SWIP" },
+    { "row": 13, "municipality": "Quirino", "sourceText": "2 Reservoir/SWIP and 1 River" },
+    { "row": 14, "municipality": "Dinapigue", "sourceText": "2 Rivers" },
+    { "row": 15, "municipality": "Delfin Albano", "sourceText": "1 SWIP (Bird Breeding Ground and Sanctuary)" },
+    { "row": 16, "municipality": "Echague", "sourceText": "7 Creeks and 4 Rivers" },
+    { "row": 17, "municipality": "Cordon", "sourceText": "4 Rivers; 1 Lake; 6 Creeks; and 2 SWIP" },
+    { "row": 18, "municipality": "Jones", "sourceText": "15 Waterfalls; 28 Creeks; and 5 Rivers" },
+    { "row": 19, "municipality": "San Mariano", "sourceText": "2 SWIP; 1 Lake; 6 Rivers; and 1 Creek" },
+    { "row": 20, "municipality": "San Pablo", "sourceText": "3 Rivers and 1 Lake" }
+  ],
+  "inventoryQualityNotes": [
+    "The report says this table was submitted by municipalities; it does not provide names, coordinates, counts by named feature, methods, dates for the local inventories, or hydrographic catchments.",
+    "Jones and San Mariano each appear twice. The report does not explain whether the rows are separate submissions, corrections or distinct local inventories; preserve them separately and do not sum them as unique features.",
+    "The categories mix natural waterbodies, waterfalls, irrigation SWIPs/reservoirs, rice fields, aquaculture ponds, bird habitat and intertidal/coastal areas. Keep these classes distinct in Bangwit's waterbody catalog.",
+    "A count such as '3 lakes' is not a three-feature identity list and cannot support species assignment or geometry."
+  ],
+  "abuanRiverMonitoring": {
+    "sourceId": "province-isabela-enro-2024-inland-wetlands-abuan-water-monitoring",
+    "reportedEventDate": "2024-06-07",
+    "reportedLocality": "Cabisera 10, City of Ilagan, Isabela",
+    "purpose": "Joint ENRO and DENR-EMB ambient water-quality monitoring; not a fish sampling survey.",
+    "stations": [
+      {
+        "station": 1,
+        "sourceLabel": "Upstream",
+        "coordinateDms": "17°04'35\"N, 122°01'16\"E",
+        "sourceDescription": "Approximately 0.700 km away from Abuan Bridge, Cabisera 10, City of Ilagan, Isabela",
+        "sourceFinding": "Boating, diving, and swimming spot (recreational activities site)"
+      },
+      {
+        "station": 2,
+        "sourceLabel": "Midstream",
+        "coordinateDms": "17°04'49\"N, 122°00'47\"E",
+        "sourceDescription": "Approximately 0.080 km away from Abuan Bridge, Cabisera 10, City of Ilagan, Isabela",
+        "sourceFinding": "American buffalo bathing site and cloth laundry site"
+      },
+      {
+        "station": 3,
+        "sourceLabel": "Downstream",
+        "coordinateDms": "17°05'10\"N, 122°00'06\"E",
+        "sourceDescription": "Approximately 2.8 km away from the mouth of Pinacanauan de Ilagan River, Cabisera 10, City of Ilagan, Isabela",
+        "sourceFinding": "Charcoal burning, agricultural land (cornfield), quarry operation, and American buffalo bathing site"
+      }
+    ],
+    "coordinateLimits": [
+      "Coordinates are source-reported environmental monitoring stations, not fish capture locations.",
+      "No coordinate datum or positional uncertainty is stated in the report; preserve the printed DMS and do not infer a river centerline or boundary from the three points."
+    ],
+    "resultLimits": "The report includes 2024 field and laboratory water measurements, but they are a dated snapshot and do not establish current water or food safety. No values were copied into the app or treated as a recreational advisory."
+  },
+  "additionalFisheryResearchLeads": [
+    {
+      "sourceId": "dost-science-for-change-2021-ludong-potential-fishing-grounds-feature",
+      "programLabel": "Conservation and artificial spawning of 'ludong' lobed river mullet (Cestraeus sp.)",
+      "sourceReportedStatus": "A DOST magazine feature says a research project identified 11 municipalities that could be fishing grounds for ludong; it is a potential-site lead, not a published species-by-site survey.",
+      "IsabelaSourceLabels": [
+        { "municipalityAsPrinted": "Ilagan", "waterbodyTextAsPrinted": "Abuan River in Cabisera 10 and Ilagis River" },
+        { "municipalityAsPrinted": "Maconacon", "waterbodyTextAsPrinted": "Blues River in Reina Mercedes", "issue": "The printed municipality and river locality conflict internally; the preceding text instead says Aetas surveyed possible grounds in 'Blue River, Isabela'. Do not crosswalk without project confirmation." },
+        { "municipalityAsPrinted": "Palanan", "waterbodyTextAsPrinted": "Dialaoayo, Pinacanauan River in Didiuan and Ilaya", "issue": "The source does not clearly delimit each named waterbody or assign the full phrase to a mapped feature." },
+        { "municipalityAsPrinted": "Tumauini", "waterbodyTextAsPrinted": "Lapogan", "issue": "No river/creek qualifier, coordinates, station or catchment is given." }
+      ],
+      "taxonLimit": "The feature names the project target only as Cestraeus sp. and does not give an exact ludong species, voucher, capture date, abundance or waterbody-specific specimen record.",
+      "disposition": "Preserve as a research/contact lead. Do not create wild occurrence, species, fishing-ground access or geometry records from this magazine sidebar."
+    }
+  ],
+  "otherAbuanWatershedSummary": {
+    "sourceId": "pcaarrd-dost-2022-abuan-watershed-characterization-summary",
+    "finding": "The public summary describes social, physical and biodiversity characterization and reports upstream/downstream tree counts; it does not provide a fish checklist in the reviewed summary.",
+    "limits": "This is a project summary, not the complete Abuan watershed technical report. No inference is made that no fish survey exists in the full project outputs."
+  },
+  "disposition": {
+    "municipalInventorySourceRowsRecorded": 20,
+    "uniqueNamedWaterbodiesResolved": 0,
+    "environmentalMonitoringStationLeadsRecorded": 3,
+    "fishSpeciesRowsAdded": 0,
+    "fishOccurrenceRowsAdded": 0,
+    "geometryAdded": false,
+    "waterQualityOrSafetyClaimsAdded": 0,
+    "dietOrBaitClaimsAdded": 0,
+    "legalClaimsAdded": 0,
+    "publicAppProjection": false,
+    "publicationApproval": false,
+    "status": "regional-waterbody-discovery-baseline;fish-identity-and-geometry-unresolved;research-only"
+  },
+  "nextAction": "Crosswalk the municipality-submitted counts to named Isabela rivers, lakes, SWIPs, reservoirs and wetlands using official LGU/NIA/EMB or provincial maps, resolving duplicate Jones/San Mariano rows. Seek the underlying Abuan fish-survey outputs and primary support for the DOST potential-ludong locations. Keep water-quality sites and fish occurrences in separate evidence layers, then continue with Batanes and the Cagayan watersheds outside the Cagayan River basin.",
+  "sources": [
+    { "sourceId": "province-isabela-enro-2024-inland-wetlands-abuan-water-monitoring", "supports": "Municipality-submitted Isabela inland-wetland counts and three dated Abuan River environmental-monitoring station coordinates; not a fish survey or current safety advisory." },
+    { "sourceId": "pcaarrd-dost-2022-abuan-watershed-characterization-summary", "supports": "Project-summary context for Abuan watershed characterization; the public summary reports tree biodiversity but no fish checklist." },
+    { "sourceId": "dost-science-for-change-2021-ludong-potential-fishing-grounds-feature", "supports": "DOST magazine project lead on possible ludong fishing grounds and source-reported Isabela river names; locality errors and lack of fish-site records prevent occurrence projection." }
+  ]
+}
