@@ -1,0 +1,129 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-11-06",
+  "status": "historical-site-specific-catch-study-reviewed;table-qa-issues;post-restoration-context;no-current-checklist-or-geometry;research-only",
+  "purpose": "Review the historical site-specific fish catch table for Bangalao Lake / Laguna de Cagayan, distinguish reported catches from a current lake checklist, and establish the next verification tasks for Region II freshwater coverage.",
+  "waterbody": {
+    "names": ["Bangalao Lake", "Laguna de Cagayan Lake"],
+    "documentedAlias": "The 2018 fish study and 2020 lake ecology article treat Laguna de Cagayan and Bangalao Lake as the same named waterbody; a 2026 PIA article also calls Laguna de Cagayan a historical name for Bangalao Lake.",
+    "nifepSpellingVariant": {
+      "name": "Bangagalo Lake",
+      "sourceId": "bfar-region02-2018-nifep-inland-water-site-list",
+      "crosswalkStatus": "probable-spelling-variant-same-locality;formal-name-authority-not-reviewed",
+      "reason": "BFAR's 2018 NIFEP report uses Bangagalo Lake, Santa Teresita, while the BFAR project news, fish paper and later sources use Bangalao Lake at the same municipality/locality. Preserve each source's spelling in provenance."
+    },
+    "reportedLocality": "Barangay Luga / Sitio Bangalao, Santa Teresita, Cagayan, Region II",
+    "sourceReportedLakeArea": [
+      {"value": 200, "unit": "hectares", "sourceId": "urmeneta-2018-wlc17-bangalao-catch-table", "description": "The fish paper calls this an estimated lake area.", "methodOrGeometryProvided": false},
+      {"value": 92.5, "unit": "hectares", "sourceId": "catulin-torio-2020-bangalao-lake-reference-area", "description": "The plant and water-quality study calls this a bathymetric area.", "methodOrGeometryProvided": false}
+    ],
+    "areaInterpretation": "These differently described source-reported areas are not reconciled or assumed to measure the same thing. Neither is a shoreline polygon or a basis for public geometry.",
+    "coordinateLead": {
+      "sourceId": "catulin-torio-2020-bangalao-lake-reference-area",
+      "reportedText": "18°14′24″ N, 121°54′35″ E",
+      "use": "Place-level location reported for the lake/article; not a fish sampling station, catch coordinate or shoreline geometry.",
+      "datumOrUncertaintySpecified": false,
+      "usedForSpatialOverlay": false
+    }
+  },
+  "primaryFishStudy": {
+    "sourceId": "urmeneta-2018-wlc17-bangalao-catch-table",
+    "citation": "Urmeneta, W. S. (2018). Diversity of Fishes in Laguna de Cagayan Lake, Philippines: Status and Conservation Needs. 17th World Lake Conference proceedings, P1-13.",
+    "studyPeriod": "2017-09 through 2018-03",
+    "reportedTotalIndividuals": 1714,
+    "reportedTaxonRows": 14,
+    "samplingDesign": {
+      "sites": [
+        {"name": "Sitio Bangalao", "reportedSamplingPoints": 3, "reportedIndividuals": 186, "reportedTaxa": 8},
+        {"name": "Barangay Luga", "reportedSamplingPoints": 3, "reportedIndividuals": 1528, "reportedTaxa": 14}
+      ],
+      "methodSummary": "The paper reports random specimens from catches of cooperating fishers using a shallow fish corral, gill nets and hook-and-line; the latter gears were used at reported depths of 5–10 m. Sampling was described as three times a month at landing sites, 6:00–8:00 AM, from September 2017 to March 2018. It says only two fishers had skiff boats, fish were counted and weighed, and some iced specimens were brought to the CSU Aparri fisheries laboratory for further identification.",
+      "taxonTreatment": "The paper says fish were classified to the lowest possible taxon and checked using FishBase 2018. Names and 2018 IUCN categories below are transcribed as reported, with abbreviated genera expanded only where unambiguous from the immediately preceding table genus.",
+      "notReported": ["Exact collection dates for individual specimens", "Fish capture or station coordinates and station-level taxon/count crosswalk", "Museum or university voucher/catalog numbers for the listed fish", "Which individuals, if any, were from stocked cohorts", "A standardized effort denominator linking each catch to gear, fisher and sample event"]
+    },
+    "reportedTaxa": [
+      {"nameAsPrintedExpanded": "Anguilla celebesensis", "count": 94, "reportedPercent": 5.47, "reportedIucnCategoryInPaper": "NT"},
+      {"nameAsPrintedExpanded": "Anguilla bicolor pacifica", "count": 25, "reportedPercent": 1.46, "reportedIucnCategoryInPaper": "NT"},
+      {"nameAsPrintedExpanded": "Anguilla marmorata", "count": 2, "reportedPercent": 0.16, "reportedIucnCategoryInPaper": "LC"},
+      {"nameAsPrintedExpanded": "Clarias macrocephalus", "count": 9, "reportedPercent": 0.53, "reportedIucnCategoryInPaper": "NT"},
+      {"nameAsPrintedExpanded": "Clarias batrachus", "count": 95, "reportedPercent": 5.54, "reportedIucnCategoryInPaper": "LC"},
+      {"nameAsPrintedExpanded": "Cyprinus carpio", "count": 19, "reportedPercent": 1.1, "reportedIucnCategoryInPaper": "VU"},
+      {"nameAsPrintedExpanded": "Ctenopharyngodon idella", "count": 80, "reportedPercent": 4.66, "reportedIucnCategoryInPaper": "NE"},
+      {"nameAsPrintedExpanded": "Trichogaster trichopterus", "count": 117, "reportedPercent": 6.83, "reportedIucnCategoryInPaper": "LC"},
+      {"nameAsPrintedExpanded": "Trichopodus pectoralis", "count": 719, "reportedPercent": 41.94, "reportedIucnCategoryInPaper": "LC"},
+      {"nameAsPrintedExpanded": "Oreochromis niloticus", "count": 420, "reportedPercent": 24.5, "reportedIucnCategoryInPaper": "NE"},
+      {"nameAsPrintedExpanded": "Channa striata", "count": 121, "reportedPercent": 7.06, "reportedIucnCategoryInPaper": "LC"},
+      {"nameAsPrintedExpanded": "Anabas testudineus", "count": 11, "reportedPercent": 0.63, "reportedIucnCategoryInPaper": "DD"},
+      {"nameAsPrintedExpanded": "Acanthopagrus latus", "count": 1, "reportedPercent": 0.06, "reportedIucnCategoryInPaper": "DD", "paperEcologicalNote": "The authors describe this single individual as a transient species from nearby brackish Buguey Lagoon."},
+      {"nameAsPrintedExpanded": "Leiopotherapon plumbeus", "count": 1, "reportedPercent": 0.06, "reportedIucnCategoryInPaper": "NE"}
+    ],
+    "tableQualityChecks": {
+      "countsSumToReportedTotal": true,
+      "tableReportedPercentSum": 100,
+      "tablePercentCountMismatchesUsingStandardRoundingToTwoDecimals": [
+        {"name": "Anguilla celebesensis", "reportedPercent": 5.47, "calculatedFromCount": 5.48},
+        {"name": "Anguilla marmorata", "reportedPercent": 0.16, "calculatedFromCount": 0.12},
+        {"name": "Cyprinus carpio", "reportedPercent": 1.1, "calculatedFromCount": 1.11},
+        {"name": "Ctenopharyngodon idella", "reportedPercent": 4.66, "calculatedFromCount": 4.67},
+        {"name": "Trichopodus pectoralis", "reportedPercent": 41.94, "calculatedFromCount": 41.95},
+        {"name": "Anabas testudineus", "reportedPercent": 0.63, "calculatedFromCount": 0.64}
+      ],
+      "abstractTableMismatch": {"name": "Oreochromis niloticus", "abstractPercent": 24.05, "tablePercent": 24.5, "calculatedFrom420Of1714": 24.5},
+      "additionalReportedMetricIssue": "The paper reports a Sorensen similarity index of 2.67 in the table, outside the standard 0–1 proportion scale; no correction is inferred.",
+      "interpretation": "The abundance counts reconcile to 1,714; percentage and diversity-index inconsistencies are retained as source QA issues rather than silently corrected."
+    },
+    "historicalStatusLimit": "The IUCN categories are cited by the paper against the 2018 Red List and are not current status assessments. No present-day taxonomic or conservation-status reconciliation was done in this review."
+  },
+  "fisheryInterventionContext": {
+    "sourceIds": ["bfar-region02-2017-bangalao-nifep-project-launch", "bfar-region02-2018-nifep-inland-water-site-list"],
+    "finding": "BFAR describes a restoration/enhancement project at Bangalao Lake, including a brush park and breeder/fingerling release, beginning in the 2015–2016 program period. The public news item does not identify the fish taxa stocked. The 2017–2018 fish sampling therefore occurred after the intervention began, but the paper does not distinguish stocked from naturally occurring fish.",
+    "interpretation": "Do not label the table wild-only, native-only, introduced-only, or as evidence of current population status."
+  },
+  "boundedGbifScreen": {
+    "sourceId": "gbif-bangalao-laguna-cagayan-bounded-occurrence-screen-20261106",
+    "endpoint": "https://api.gbif.org/v1/occurrence/search",
+    "checkedOn": "2026-11-06",
+    "queries": [
+      {"field": "waterBody", "value": "Bangalao Lake", "filters": {"country": "PH"}, "httpStatus": 200, "resultCount": 0, "url": "https://api.gbif.org/v1/occurrence/search?country=PH&waterBody=Bangalao+Lake&limit=0"},
+      {"field": "locality", "value": "Bangalao Lake", "filters": {"country": "PH"}, "httpStatus": 200, "resultCount": 0, "url": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Bangalao+Lake&limit=0"},
+      {"field": "waterBody", "value": "Bangagalo Lake", "filters": {"country": "PH"}, "httpStatus": 200, "resultCount": 0, "url": "https://api.gbif.org/v1/occurrence/search?country=PH&waterBody=Bangagalo+Lake&limit=0"},
+      {"field": "locality", "value": "Bangagalo Lake", "filters": {"country": "PH"}, "httpStatus": 200, "resultCount": 0, "url": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Bangagalo+Lake&limit=0"},
+      {"field": "waterBody", "value": "Laguna de Cagayan", "filters": {"country": "PH"}, "httpStatus": 200, "resultCount": 0, "url": "https://api.gbif.org/v1/occurrence/search?country=PH&waterBody=Laguna+de+Cagayan&limit=0"},
+      {"field": "locality", "value": "Laguna de Cagayan", "filters": {"country": "PH"}, "httpStatus": 200, "resultCount": 0, "url": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Laguna+de+Cagayan&limit=0"},
+      {"field": "locality", "value": "Bangalao", "filters": {"country": "PH", "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b", "taxonKey": "8VR36"}, "httpStatus": 200, "resultCount": 0, "url": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Bangalao&limit=0&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36"},
+      {"field": "locality", "value": "Laguna de Cagayan", "filters": {"country": "PH", "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b", "taxonKey": "8VR36"}, "httpStatus": 200, "resultCount": 0, "url": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Laguna+de+Cagayan&limit=0&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36"}
+    ],
+    "scopeLimit": "This searched only exact indexed waterBody/locality strings and the specified CoL XR Actinopterygii filter for two short locality variants. Missing or differently spelled locality fields, unindexed data and any other source are outside the search.",
+    "interpretation": "Zero indexed matches do not establish fish absence, absence of survey data, or contradiction of the published fish study."
+  },
+  "reviewDecision": {
+    "historicalCatchEvidence": "The paper is a traceable site-specific historical catch-composition source for 2017–2018, with pooled counts and a limited sampling-method description.",
+    "currentChecklist": false,
+    "siteSpecificCurrentPresenceRows": 0,
+    "speciesRowsAddedToApp": 0,
+    "occurrenceRowsAddedToApp": 0,
+    "coordinatesAddedToApp": 0,
+    "geometryAdded": false,
+    "dietOrBaitClaimsAdded": 0,
+    "legalOrSafetyClaimsAdded": 0,
+    "publicAppProjection": false,
+    "publicationApproval": false,
+    "rawPdfOrOccurrenceDataStored": false,
+    "researchStatus": "historical-catch-table-only;identity-and-taxa-not-currently-validated;reuse-unverified;research-only"
+  },
+  "openTasks": [
+    "Ask the authors or CSU Aparri whether field sheets or supporting records exist; if so, seek exact sampling dates, gear-by-event data, taxon-to-site counts, voucher/catalog numbers and determiner notes. Do not treat access to supporting records as permission to publish them.",
+    "Check accepted names and current conservation assessments against current authoritative sources, while retaining the paper's original labels and historical categories.",
+    "Ask BFAR/LGU whether any later fish surveys or restocking inventories exist and which species were stocked; keep fishery enhancement data distinct from wild occurrences.",
+    "Find an authoritative, licensed lake shoreline geometry and reconcile the differently described 200-ha estimate and 92.5-ha bathymetric area before spatial publication.",
+    "For Casili Lake and Bayolake, seek separate dated fish surveys and site maps; do not transfer Bangalao observations to them."
+  ],
+  "sources": [
+    {"sourceId": "urmeneta-2018-wlc17-bangalao-catch-table", "supports": "Historical Bangalao/Laguna de Cagayan catch taxa, pooled abundance counts, the 2017–2018 sampling design, reported locality/area and the table/abstract discrepancies."},
+    {"sourceId": "bfar-region02-2017-bangalao-nifep-project-launch", "supports": "Government report of lake restoration, brush-park and breeder/fingerling intervention; taxa not identified in this item."},
+    {"sourceId": "catulin-torio-2020-bangalao-lake-reference-area", "supports": "Alias, place-level coordinate, and a separate reported 92.5-ha bathymetric area; article is a plant/water-quality study, not fish evidence."},
+    {"sourceId": "pia-bangalao-laguna-de-cagayan-alias-2026", "supports": "Recent government-news usage of Bangalao Lake and Laguna de Cagayan as current/historical names."},
+    {"sourceId": "gbif-bangalao-laguna-cagayan-bounded-occurrence-screen-20261106", "supports": "Eight reproducible, read-only GBIF queries that returned zero under the specified exact text filters."},
+    {"sourceId": "bfar-region02-2018-nifep-inland-water-site-list", "supports": "The Bangagalo spelling variant and Santa Teresita NIFEP waterbody lead."}
+  ]
+}
