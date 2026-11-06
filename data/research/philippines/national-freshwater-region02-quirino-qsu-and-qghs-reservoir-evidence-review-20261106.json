@@ -1,0 +1,239 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-11-06",
+  "status": "quirino-diffun-nifep-qsu-reservoir-probable-project-crosswalk;stocking-context-separated-from-wild-occurrence;qghs-cabarroguis-target-unverified;research-only",
+  "purpose": "Cross-check the 2018 NIFEP names Quirino Reservoir in Diffun and Quirino General High School Reservoir in Cabarroguis against the BFAR account of the QSU reservoir, and keep documented stocking separate from wild fish observations.",
+  "reservoirs": [
+    {
+      "candidateId": "quirino-reservoir-qsu-diffun",
+      "nifepName": "Quirino Reservoir",
+      "nifepLocality": "Diffun, Quirino, Region II",
+      "nifepProgramEvidence": {
+        "sourceId": "bfar-region02-2018-nifep-inland-water-site-list",
+        "sourceReportedStatus": "2018 annual report retrospectively says a Quirino Reservoir in Diffun was among the two bodies being restored in 2015."
+      },
+      "independentProjectEvidence": {
+        "sourceId": "bfar-region02-kalap-v18n1-nifep-casili-bayo-leads",
+        "nameInArticle": "QSU reservoir / reservoir within the Quirino State University compound",
+        "locality": "Diffun, Quirino",
+        "sourceReportedNifepContext": "BFAR Region II approached QSU in late 2015 to revive the waterbody; a photo caption calls it the NIFEP-revived reservoir.",
+        "reportedAreaHa": 1,
+        "coordinatesOrPolygonProvided": false
+      },
+      "identityDecision": "A strong probable program-site crosswalk: same Diffun locality, same 2015 NIFEP start period, and the BFAR caption explicitly calls the QSU reservoir NIFEP-revived. No formal feature ID, exact coordinates or shoreline polygon ties the report wording Quirino Reservoir to the campus waterbody, so preserve the source names and keep physical geometry unresolved.",
+      "documentedStockingEvent": {
+        "sourceId": "bfar-region02-kalap-v18n1-nifep-casili-bayo-leads",
+        "reportedEventDate": "2016-02-07",
+        "reportedTotalFingerlings": 5000,
+        "reportedTaxa": [
+          "different carp species (species not specified)",
+          "tilapia (species not specified)"
+        ],
+        "eventType": "culture-based stocking at an enhanced man-made reservoir",
+        "wildOccurrenceInferenceAllowed": false,
+        "standardizedFishSurvey": false,
+        "voucherRecordsReported": false,
+        "catchBreakdownByTaxon": false,
+        "interpretation": "The newsletter documents a stocking event, not naturally occurring or currently present fish. Keep carp and tilapia out of a wild-occurrence checklist unless an independent, dated assessment establishes the taxon and origin."
+      },
+      "otherReportedContext": [
+        "The report says BFAR approached QSU in late 2015 and rehabilitation work included clearing, civil works and filtration.",
+        "The newsletter says the school opened the reservoir to fishing eight months after the project launch and gives an approximate aggregate production anecdote; it provides no standardized effort or species-specific catch table.",
+        "The newsletter reports that a drainage canal from a nearby public market flowed into the reservoir; this is not a current water-quality measurement or a safety determination."
+      ]
+    },
+    {
+      "candidateId": "quirino-general-high-school-reservoir-cabarroguis",
+      "nifepName": "Quirino General High School Reservoir",
+      "nifepLocality": "Cabarroguis, Quirino, Region II",
+      "sourceId": "bfar-region02-2018-nifep-inland-water-site-list",
+      "sourceReportedStatus": "Listed as a 2018 NIFEP target for enhancement/restoration.",
+      "completionVerified": false,
+      "fishSurveyRetrieved": false,
+      "speciesStockingEventRetrieved": false,
+      "geometryOrCoordinates": null,
+      "identityDecision": "Keep as a distinct Cabarroguis site. It is not the QSU campus reservoir in Diffun; the 2018 NIFEP report does not establish completion, fish taxa or a mapped footprint."
+    }
+  ],
+  "fishSurveySearch": {
+    "checkedOn": "2026-11-06",
+    "queries": [
+      "\"QSU reservoir\" fish species Diffun Quirino",
+      "\"Quirino Reservoir\" fish diversity Diffun",
+      "site:qsu.edu.ph reservoir fish Diffun Quirino",
+      "\"Quirino General High School Reservoir\" Cabarroguis fish"
+    ],
+    "result": "No independent site-specific fish diversity survey or taxon-by-site catch table was retrieved in these bounded searches.",
+    "interpretation": "A retrieval gap only. The BFAR newsletter documents a stocking project but is not a validated wild-fish checklist."
+  },
+  "boundedGbifScreen": {
+    "sourceId": "gbif-quirino-qsu-qghs-reservoir-bounded-screen-20261106",
+    "endpoint": "https://api.gbif.org/v1/occurrence/search",
+    "checkedOn": "2026-11-06",
+    "filters": {
+      "country": "PH",
+      "taxonFilter": "none"
+    },
+    "queries": [
+      {
+        "field": "waterBody",
+        "value": "Quirino Reservoir",
+        "filters": {
+          "country": "PH"
+        },
+        "httpStatus": 200,
+        "resultCount": 0,
+        "url": "https://api.gbif.org/v1/occurrence/search?country=PH&waterBody=Quirino+Reservoir&limit=0"
+      },
+      {
+        "field": "locality",
+        "value": "Quirino Reservoir",
+        "filters": {
+          "country": "PH"
+        },
+        "httpStatus": 200,
+        "resultCount": 0,
+        "url": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Quirino+Reservoir&limit=0"
+      },
+      {
+        "field": "waterBody",
+        "value": "QSU reservoir",
+        "filters": {
+          "country": "PH"
+        },
+        "httpStatus": 200,
+        "resultCount": 0,
+        "url": "https://api.gbif.org/v1/occurrence/search?country=PH&waterBody=QSU+reservoir&limit=0"
+      },
+      {
+        "field": "locality",
+        "value": "QSU reservoir",
+        "filters": {
+          "country": "PH"
+        },
+        "httpStatus": 200,
+        "resultCount": 0,
+        "url": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=QSU+reservoir&limit=0"
+      },
+      {
+        "field": "waterBody",
+        "value": "Quirino State University reservoir",
+        "filters": {
+          "country": "PH"
+        },
+        "httpStatus": 200,
+        "resultCount": 0,
+        "url": "https://api.gbif.org/v1/occurrence/search?country=PH&waterBody=Quirino+State+University+reservoir&limit=0"
+      },
+      {
+        "field": "locality",
+        "value": "Quirino State University reservoir",
+        "filters": {
+          "country": "PH"
+        },
+        "httpStatus": 200,
+        "resultCount": 0,
+        "url": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Quirino+State+University+reservoir&limit=0"
+      },
+      {
+        "field": "waterBody",
+        "value": "Quirino General High School Reservoir",
+        "filters": {
+          "country": "PH"
+        },
+        "httpStatus": 200,
+        "resultCount": 0,
+        "url": "https://api.gbif.org/v1/occurrence/search?country=PH&waterBody=Quirino+General+High+School+Reservoir&limit=0"
+      },
+      {
+        "field": "locality",
+        "value": "Quirino General High School Reservoir",
+        "filters": {
+          "country": "PH"
+        },
+        "httpStatus": 200,
+        "resultCount": 0,
+        "url": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Quirino+General+High+School+Reservoir&limit=0"
+      },
+      {
+        "field": "waterBody",
+        "value": "Cabarroguis reservoir",
+        "filters": {
+          "country": "PH"
+        },
+        "httpStatus": 200,
+        "resultCount": 0,
+        "url": "https://api.gbif.org/v1/occurrence/search?country=PH&waterBody=Cabarroguis+reservoir&limit=0"
+      },
+      {
+        "field": "locality",
+        "value": "Cabarroguis reservoir",
+        "filters": {
+          "country": "PH"
+        },
+        "httpStatus": 200,
+        "resultCount": 0,
+        "url": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Cabarroguis+reservoir&limit=0"
+      },
+      {
+        "field": "waterBody",
+        "value": "Diffun reservoir",
+        "filters": {
+          "country": "PH"
+        },
+        "httpStatus": 200,
+        "resultCount": 0,
+        "url": "https://api.gbif.org/v1/occurrence/search?country=PH&waterBody=Diffun+reservoir&limit=0"
+      },
+      {
+        "field": "locality",
+        "value": "Diffun reservoir",
+        "filters": {
+          "country": "PH"
+        },
+        "httpStatus": 200,
+        "resultCount": 0,
+        "url": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Diffun+reservoir&limit=0"
+      }
+    ],
+    "summary": {
+      "queryCount": 12,
+      "http200Count": 12,
+      "zeroResultQueryCount": 12
+    },
+    "interpretation": "Only exact indexed waterBody/locality text for these six phrases and country=PH was queried. Zero results do not establish fish absence, survey absence or absence of data with different locality wording."
+  },
+  "disposition": {
+    "fishSpeciesRowsAdded": 0,
+    "wildOccurrenceRowsAdded": 0,
+    "stockingEventRowsAddedToPublicData": 0,
+    "geometryAdded": false,
+    "dietOrBaitClaimsAdded": 0,
+    "legalOrSafetyClaimsAdded": 0,
+    "publicAppProjection": false,
+    "publicationApproval": false,
+    "status": "research-only;QSU-stocking-event-documented;QGHS-status-open"
+  },
+  "limits": [
+    "Fingerlings reported stocked at the QSU reservoir cannot be used as evidence of a wild population or current species presence.",
+    "The article does not identify the carp species, tilapia species, voucher numbers, survey dates or a taxon-specific catch table.",
+    "The QSU/Quirino Reservoir crosswalk is probable at the NIFEP project level but has no feature ID or reusable geometry.",
+    "The Quirino General High School Reservoir is only a 2018 program target in reviewed sources; later completion and ecology remain unverified.",
+    "No current water quality, fishing legality, safety, catchability or diet statement is made."
+  ],
+  "nextAction": "Seek a dated BFAR/QSU completion record and stocking manifest for the Diffun site, then ask whether fish surveys, voucher specimens or taxon-specific catch logs exist. Separately verify whether the Cabarroguis high-school target was built/restored and seek its site map and assessment. Continue with named NIFEP SWIPs only after preserving these sites as separate records.",
+  "sources": [
+    {
+      "sourceId": "bfar-region02-2018-nifep-inland-water-site-list",
+      "supports": "NIFEP program status and distinct report names/localities for the Diffun and Cabarroguis reservoir leads."
+    },
+    {
+      "sourceId": "bfar-region02-kalap-v18n1-nifep-casili-bayo-leads",
+      "supports": "QSU Diffun reservoir identity context, 2015 NIFEP revival, February 2016 stocking report and limits of the stocking/catch account."
+    },
+    {
+      "sourceId": "gbif-quirino-qsu-qghs-reservoir-bounded-screen-20261106",
+      "supports": "Twelve reproducible read-only exact-text GBIF query counts."
+    }
+  ]
+}

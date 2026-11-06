@@ -3,7 +3,7 @@
   "checkedOn": "2026-11-06",
   "status": "research-only-source-registry",
   "scope": "National acquisition references, freshwater spatial-source leads, MIMAROPA/CALABARZON/Central Luzon identity and inland-water source reviews, and Mindanao regional freshwater survey reviews. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 785,
+  "sourceCount": 786,
   "sources": [
     {
       "id": "aquilino-2011-taal-dna-barcoding-genbank",
@@ -25405,6 +25405,43 @@
       "caveats": [
         "Only exact queried values in GBIF-indexed waterBody/locality fields with country=PH were tested.",
         "Other spellings, missing locality fields, unindexed records and other data sources are outside the screen."
+      ]
+    },
+    {
+      "id": "gbif-quirino-qsu-qghs-reservoir-bounded-screen-20261106",
+      "title": "GBIF occurrence API bounded waterBody/locality screen for Quirino NIFEP reservoir names",
+      "provider": "Global Biodiversity Information Facility; GBIF occurrence index",
+      "url": "https://api.gbif.org/v1/occurrence/search",
+      "additionalUrls": [
+        "https://techdocs.gbif.org/en/openapi/v1/occurrence"
+      ],
+      "role": "Twelve read-only exact-text searches across indexed waterBody/locality fields, country=PH and no taxon filter returned HTTP 200 and zero records. This bounded screen does not establish fish absence or absence of surveys.",
+      "checkedOn": "2026-11-06",
+      "sourceYear": null,
+      "citation": "GBIF Occurrence API, twelve exact waterBody/locality searches for Quirino Reservoir, QSU and Quirino General High School reservoir strings, checked 6 November 2026; API documentation accessed same date.",
+      "access": {
+        "status": "read-only-occurrence-api-queries-http-200;bounded-exact-locality-screen;research-only",
+        "reviewFiles": [
+          "national-freshwater-region02-quirino-qsu-and-qghs-reservoir-evidence-review-20261106.json"
+        ],
+        "queryCount": 12,
+        "http200Count": 12,
+        "zeroResultQueryCount": 12,
+        "taxonFilter": "none",
+        "bulkDownloadRequested": false
+      },
+      "reuse": {
+        "metadata": "Retain query parameters, check date and aggregate result counts.",
+        "raw": "No record-level occurrence data were retained.",
+        "content": "A zero-result screen is not evidence of absence; no occurrence is admitted to app data."
+      },
+      "publicationApproval": false,
+      "researchStatus": "bounded-locality-text-screen-zero;not-absence-evidence;research-only",
+      "license": null,
+      "licenseUrl": null,
+      "caveats": [
+        "Only exact queried values in GBIF-indexed waterBody/locality fields with country=PH were tested.",
+        "Other spellings, missing locality values, unindexed records and other data sources are outside the screen."
       ]
     }
   ],
