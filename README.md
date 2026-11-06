@@ -195,3 +195,7 @@ The EMB-hosted second-draft EIS lists ten labels from opportunistic local catche
 The eight-name B0380 Cagayan basin candidate set and the separate *Cestraeus goldiei* (ludong) study lead are now consolidated in a research-only crosswalk. Historical localities and coordinate-bearing records are kept distinct: no exact fish-voucher coordinate is ready for public mapping, and the rounded *Anguilla luzonensis* sequence coordinate is one accession duplicated across two GBIF feeds. This is a northern Luzon hydrologic basin review, not a complete Cagayan Valley or Philippines checklist. Lakes, reservoirs, wetlands, adjacent drainages and coastal waters still need their own source inventory. No public species or occurrence rows were added.
 
 See the [Cagayan B0380 synthesis](data/research/philippines/national-freshwater-cagayan-b0380-region-synthesis-20261106.json) and the [research log](data/research/philippines/README.md).
+
+### Cagayan *Ilogton* source access review — 6 November 2026
+
+The original *Ilogton ilogton* description and holotype label were not located in the bounded public search. The National Museum of the Philippines publishes a Zoology Division contact for animal taxonomy questions; an inquiry is drafted but has not been sent. No coordinate or public occurrence was added. See the [access review](data/research/philippines/national-freshwater-cagayan-ilogton-primary-source-access-review-20261106.json) and [unsent inquiry](data/research/philippines/national-freshwater-cagayan-ilogton-pnm-15678-inquiry-draft-20261106.md).
