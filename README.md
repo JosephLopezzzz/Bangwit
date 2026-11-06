@@ -189,3 +189,9 @@ Reviewed MBCP's 1999 Mindoro report as a historical source lead. It mentions fis
 ### Amnay River EIS source review - 6 November 2026
 
 The EMB-hosted second-draft EIS lists ten labels from opportunistic local catches along the Amnay River project stretch in August 2021. Six are genus-only, and the list is not linked to fish stations or vouchers. A separate August 2022 table covers estuary and surrounding waters about 16 km offshore, so it is kept apart from the freshwater river list. The report's diet paragraph summarizes secondary literature rather than measured Amnay feeding behavior, and reuse permission is unverified. No species or public app row was added. See the [review](data/research/philippines/mimaropa-amnay-river-eis-fish-survey-scope-review-20261106.json) and [EIS PDF](https://mimaropa.emb.gov.ph/wp-content/uploads/2023/03/Executive-Summary-Amnay-River-Restoration-and.pdf).
+
+### Cagayan freshwater basin synthesis — 6 November 2026
+
+The eight-name B0380 Cagayan basin candidate set and the separate *Cestraeus goldiei* (ludong) study lead are now consolidated in a research-only crosswalk. Historical localities and coordinate-bearing records are kept distinct: no exact fish-voucher coordinate is ready for public mapping, and the rounded *Anguilla luzonensis* sequence coordinate is one accession duplicated across two GBIF feeds. This is a northern Luzon hydrologic basin review, not a complete Cagayan Valley or Philippines checklist. Lakes, reservoirs, wetlands, adjacent drainages and coastal waters still need their own source inventory. No public species or occurrence rows were added.
+
+See the [Cagayan B0380 synthesis](data/research/philippines/national-freshwater-cagayan-b0380-region-synthesis-20261106.json) and the [research log](data/research/philippines/README.md).

@@ -1,0 +1,210 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-11-06",
+  "phaseId": "L1",
+  "status": "cagayan-basin-crosswalk-synthesized;candidate-set-incomplete;research-only;no-app-rows",
+  "scope": {
+    "hydrologicUnit": {
+      "basinId": "B0380",
+      "name": "Cagayan",
+      "sourceArtifact": "national-freshwater-cagayan-b0380-geometry-gbif-locality-screen-20261106.json",
+      "description": "Northern Luzon drainage-basin candidate polygon; this is a hydrologic unit, not Cagayan Province, the entire Cagayan Valley administrative region, or Cagayan de Misamis in Mindanao."
+    },
+    "candidateUniverse": "Eight names from one global freshwater fish basin dataset, plus one separately reviewed local molecular-study lead. This is not a complete regional fish inventory.",
+    "excludedCoverage": [
+      "Other Cagayan Valley and Cordillera watersheds not draining to the Cagayan River",
+      "Coastal and marine waters, which require separate marine/coastal sources",
+      "Unscreened rivers, tributaries, lakes, reservoirs, wetlands, and other inland waters"
+    ]
+  },
+  "summary": {
+    "datasetCandidatesReviewed": 8,
+    "supplementalHistoricalStudyLeads": 1,
+    "exactFishVoucherPointsReadyForPublicMapping": 0,
+    "publicSpeciesRowsAdded": 0,
+    "publicOccurrenceRowsAdded": 0,
+    "geometryAdded": false,
+    "finding": "The basin dataset is a discovery queue, not a complete checklist or a verified citation-to-basin evidence chain. Several names have historical locality leads, but none of the coordinate evidence reviewed here is an exact, independently verified fish-voucher point suitable for public occurrence mapping."
+  },
+  "candidateCrosswalk": [
+    {
+      "scientificName": "Anguilla luzonensis",
+      "classification": "historical-sequence-locality-lead;single-accession-duplicate-feed",
+      "evidence": "DDBJ accession AB469437.1 reports a 2008 collection from the Kagayan River System on Luzon. Two GBIF feed rows resolve to this one accession and share the same coordinate, 17.61 N, 121.76 E; the rounded point falls inside B0380.",
+      "coordinateAssessment": "One coarse sequence-locality coordinate, not an exact sampling reach or voucher point; no physical voucher or coordinate uncertainty was reported. The two feed rows are not independent fish records.",
+      "nextEvidenceNeeded": "Resolve the collection reach and voucher/sample documentation before considering occurrence mapping.",
+      "inputArtifacts": [
+        "national-freshwater-cagayan-anguilla-luzonensis-ab469437-feed-duplicate-crosswalk-20261106.json",
+        "national-freshwater-cagayan-b0380-geometry-gbif-locality-screen-20261106.json"
+      ]
+    },
+    {
+      "scientificName": "Nomorhamphus rossi",
+      "classification": "historical-type-locality;nearby-place-coordinate-only;channel-name-unresolved",
+      "evidence": "Smithsonian NMNH records holotype USNM 333262 from Intel River near Barangay Hot Springs, Baggao, collected in 1989. A separate herpetofauna paper gives 17.887 N, 121.986 E for the vicinity of hot springs on Ital River; that place coordinate falls in an independently modeled Cagayan catchment.",
+      "coordinateAssessment": "The coordinate belongs to a nearby herpetofauna locality, not the fish voucher. Intel/Ital spelling and exact watercourse identity remain unresolved, and the point was not tested against B0380 itself.",
+      "nextEvidenceNeeded": "Resolve the Intel/Ital channel identity and obtain a fish-voucher-linked locality or a direct, source-backed reach crosswalk.",
+      "inputArtifacts": [
+        "national-freshwater-cagayan-nomorhamphus-rossi-intel-river-locality-crosswalk-20261106.json",
+        "national-freshwater-cagayan-b0380-geometry-gbif-locality-screen-20261106.json"
+      ]
+    },
+    {
+      "scientificName": "Mugil cephalus",
+      "classification": "historical-cagayan-river-study-report;voucher-and-station-link-unresolved",
+      "evidence": "A 2017 conference paper reports the species from Cagayan River and lists a Camalaniugan study site, a date in 2011, and three study voucher codes. Six GBIF feed rows for two Smithsonian market vouchers are separate market-purchase records; their vendor-vicinity coordinates do not establish capture stations.",
+      "coordinateAssessment": "The paper's site coordinate is a study-site locality, not an individual specimen point. Market voucher geocodes are not verified capture locations. The comparator accession's locality is also unresolved and is not assigned to the Cagayan samples.",
+      "nextEvidenceNeeded": "Identify the study voucher repository and sample-level accession/site links, then review reuse rights and species-complex identity.",
+      "inputArtifacts": [
+        "national-freshwater-cagayan-mugil-cephalus-market-voucher-crosswalk-20261106.json",
+        "national-freshwater-cagayan-b0380-geometry-gbif-locality-screen-20261106.json"
+      ]
+    },
+    {
+      "scientificName": "Ilogton ilogton",
+      "classification": "historical-type-locality-lead;exact-reach-unresolved",
+      "evidence": "The Catalog of Fishes reports the type locality as Cagayan River, Muta village, Kasibu, Nueva Vizcaya, and lists holotype PNM 15678 with paratypes. This is a traceable historical taxonomic lead.",
+      "coordinateAssessment": "The catalog locality has no coordinates or exact reach geometry. The original 2024 description and the collection labels were not directly reviewed; bounded database non-matches do not establish that the specimens are absent.",
+      "nextEvidenceNeeded": "Retrieve the original description and request or locate the PNM/SEAFDEC type-label and catalog documentation; then resolve Muta and the river reach.",
+      "inputArtifacts": [
+        "national-freshwater-cagayan-ilogton-ilogton-type-locality-20261106.json",
+        "national-freshwater-cagayan-b0380-geometry-gbif-locality-screen-20261106.json"
+      ]
+    },
+    {
+      "scientificName": "Stigmatogobius elegans",
+      "classification": "historical-imurung-type-locality;indirect-parent-basin-context;exact-link-unresolved",
+      "evidence": "The original description and an indexed museum record anchor the type series to Imurung River, Cagayan. NCCA and NEDA sources support a nearby Duba-to-Pared and Pared-to-Cagayan hydrologic context.",
+      "coordinateAssessment": "No type-site coordinate was found. The reviewed sources do not explicitly connect the Imurung type reach to Pared, so B0380 membership and point-in-polygon status remain unresolved.",
+      "nextEvidenceNeeded": "Find a primary map or hydrologic source identifying the exact Imurung reach and its downstream connection; obtain a voucher-linked coordinate if available.",
+      "inputArtifacts": [
+        "national-freshwater-cagayan-stigmatogobius-elegans-imurung-type-locality-20261106.json",
+        "national-freshwater-cagayan-basin-candidate-vs-ludong-review-20261106.json"
+      ]
+    },
+    {
+      "scientificName": "Stenogobius kyphosus",
+      "classification": "taxonomy-conflict;basin-association-unvalidated",
+      "evidence": "The current Catalog of Fishes and a 2023 revision treat S. kyphosus as a synonym of S. genivittatus, while GBIF still accepts S. kyphosus. Reviewed type localities include Camiguin, Mindanao, and Leyte; no reviewed source ties this candidate to Cagayan.",
+      "coordinateAssessment": "No Cagayan coordinate evidence was found in the bounded screen. A zero-result search is not evidence of absence.",
+      "nextEvidenceNeeded": "Resolve the taxonomic concept and inspect the global dataset's underlying Cagayan association evidence before carrying this name forward.",
+      "inputArtifacts": [
+        "national-freshwater-cagayan-stenogobius-kyphosus-taxonomic-locality-crosswalk-20261106.json",
+        "national-freshwater-cagayan-b0380-geometry-gbif-locality-screen-20261106.json"
+      ]
+    },
+    {
+      "scientificName": "Glossogobius biorbitalis",
+      "classification": "historical-bua-river-type-locality-lead;geometry-and-source-label-unresolved",
+      "evidence": "The Catalog of Fishes reports Bua River in the Cagayan drainage as the type locality and PNM 15688 as holotype. The underlying 2024 book and specimen labels were not directly reviewed; an exact-name gazetteer search did not resolve a mapped river feature.",
+      "coordinateAssessment": "No coordinate or exact reach geometry. A separate G. giuris market record is not evidence for G. biorbitalis.",
+      "nextEvidenceNeeded": "Review Endruweit's 2024 description and PNM 15688 label; search authoritative hydrography for Bua River in Dupax del Norte.",
+      "inputArtifacts": [
+        "national-freshwater-cagayan-glossogobius-biorbitalis-type-locality-20261106.json",
+        "national-freshwater-cagayan-b0380-geometry-gbif-locality-screen-20261106.json"
+      ]
+    },
+    {
+      "scientificName": "Neostethus villadolidi",
+      "classification": "basin-association-unvalidated;similarly-named-mindanao-type-locality-disambiguated",
+      "evidence": "The type locality Cagayan de Misamis is in Mindanao, not northern Luzon. A broad phrase about distribution throughout the Philippines is not a site-level record. The global candidate's bibliography references are not mapped to its basin association.",
+      "coordinateAssessment": "No reviewed source supplies a northern Luzon Cagayan River occurrence. Bounded GBIF zero results and omissions in named localities do not establish absence.",
+      "nextEvidenceNeeded": "Inspect the basin dataset's taxon-to-basin source trail or a voucher-backed northern Luzon record; do not use the Cagayan de Misamis type locality as one.",
+      "inputArtifacts": [
+        "national-freshwater-cagayan-neostethus-villadolidi-type-locality-crosswalk-20261106.json",
+        "national-freshwater-cagayan-b0380-geometry-gbif-locality-screen-20261106.json"
+      ]
+    }
+  ],
+  "supplementalLeadOutsideCandidateSet": {
+    "scientificName": "Cestraeus goldiei",
+    "commonName": "ludong",
+    "classification": "historical-molecular-study-lead;not-in-eight-name-basin-candidate-set",
+    "evidence": "The 2022 NFRDI study reports 24 of 25 retained COI sequences from the Cagayan River and its tributaries and one from the Abra River. This independent study lead shows why the eight-name global candidate list cannot be treated as complete.",
+    "limitations": [
+      "The article's sequence/site crosswalk has four Isabela locality conflicts and two newly sequenced samples not identified in the final table.",
+      "The reviewed localities do not identify exact tributary reaches or a coordinate-ready occurrence set.",
+      "The article is CC BY-NC 4.0; this review does not grant public-app reuse permission."
+    ],
+    "inputArtifact": "national-freshwater-cagayan-basin-candidate-vs-ludong-review-20261106.json"
+  },
+  "mapReadiness": {
+    "verifiedFishVoucherCoordinates": 0,
+    "coarseSequenceLocalityCoordinates": [
+      {
+        "taxon": "Anguilla luzonensis",
+        "coordinate": "17.61 N, 121.76 E",
+        "pointInB0380": true,
+        "mapDisposition": "research-only;single shared accession coordinate;no physical voucher or exact reach"
+      }
+    ],
+    "nearbyNonFishPlaceCoordinate": {
+      "taxonLead": "Nomorhamphus rossi",
+      "coordinate": "17.887 N, 121.986 E",
+      "sourceType": "herpetofauna hot-springs locality",
+      "mapDisposition": "not a fish occurrence; tested against a separate modeled catchment, not B0380"
+    },
+    "marketAndStudySiteCoordinates": "Mugil market-lot and study-site coordinates are retained as contextual source locations only; they are not treated as specimen capture points.",
+    "decision": "Do not create public occurrence points, range polygons, or exact waterbody geometries from these crosswalks."
+  },
+  "nextResearchQueue": [
+    "Obtain the original Ilogton description and PNM/SEAFDEC label crosswalk; resolve Muta and the type reach.",
+    "Retrieve Endruweit 2024 and the PNM 15688 label; identify the correct Bua River and geometry.",
+    "Resolve Imurung-to-Pared connectivity with a primary hydrographic source and type-site location evidence.",
+    "Resolve Intel/Ital River naming and seek fish-voucher-specific locality evidence for Nomorhamphus rossi.",
+    "Crosswalk the three Mugil study voucher codes to repositories, exact site records, and sample-specific sequences; review reuse rights.",
+    "Inspect the global basin dataset's source basis for every candidate; particularly resolve Stenogobius kyphosus and Neostethus villadolidi assignments.",
+    "Build separate source inventories for Cagayan basin tributaries, lakes, reservoirs, wetlands, and adjacent non-Cagayan drainages; do not let a river-basin screen stand in for regional completeness."
+  ],
+  "disposition": {
+    "publicSpeciesRowsAdded": 0,
+    "publicOccurrenceRowsAdded": 0,
+    "geometryAdded": false,
+    "dietOrBaitClaimsAdded": 0,
+    "legalOrSafetyClaimsAdded": 0,
+    "publicationApproval": false,
+    "reason": "This is a source crosswalk, not a validated checklist. Coordinate and locality evidence is historical, indirect, duplicated, coarse, or taxonomically unresolved; content reuse is not approved for all sources."
+  },
+  "sources": [
+    {
+      "artifact": "national-freshwater-cagayan-b0380-geometry-gbif-locality-screen-20261106.json",
+      "supports": "B0380 geometry metadata, eight-name candidate set, bounded GBIF screen, and point/locality limitations."
+    },
+    {
+      "artifact": "national-freshwater-cagayan-basin-candidate-vs-ludong-review-20261106.json",
+      "supports": "Independent Cestraeus goldiei study comparison, study locality conflicts, and rights limitations."
+    },
+    {
+      "artifact": "national-freshwater-cagayan-anguilla-luzonensis-ab469437-feed-duplicate-crosswalk-20261106.json",
+      "supports": "One accession represented by two GBIF feed rows and a coarse sequence-locality coordinate."
+    },
+    {
+      "artifact": "national-freshwater-cagayan-nomorhamphus-rossi-intel-river-locality-crosswalk-20261106.json",
+      "supports": "Historical fish type locality and separate nearby herpetofauna coordinate/catchment comparison."
+    },
+    {
+      "artifact": "national-freshwater-cagayan-mugil-cephalus-market-voucher-crosswalk-20261106.json",
+      "supports": "Historical river-study report, study voucher codes, market-voucher distinction, and locality limits."
+    },
+    {
+      "artifact": "national-freshwater-cagayan-ilogton-ilogton-type-locality-20261106.json",
+      "supports": "Catalog-reported historical type locality, holotype and unresolved reach."
+    },
+    {
+      "artifact": "national-freshwater-cagayan-stigmatogobius-elegans-imurung-type-locality-20261106.json",
+      "supports": "Imurung type locality and indirect Pared-Cagayan hydrology crosswalk."
+    },
+    {
+      "artifact": "national-freshwater-cagayan-stenogobius-kyphosus-taxonomic-locality-crosswalk-20261106.json",
+      "supports": "Taxonomy disagreement and reviewed non-Cagayan historical localities."
+    },
+    {
+      "artifact": "national-freshwater-cagayan-glossogobius-biorbitalis-type-locality-20261106.json",
+      "supports": "Catalog-reported Bua River type locality and bounded museum/gazetteer lookups."
+    },
+    {
+      "artifact": "national-freshwater-cagayan-neostethus-villadolidi-type-locality-crosswalk-20261106.json",
+      "supports": "Cagayan de Misamis name disambiguation, historical range review, and no-absence caveat."
+    }
+  ]
+}
