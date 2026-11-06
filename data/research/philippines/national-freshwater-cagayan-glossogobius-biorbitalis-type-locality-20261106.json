@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "reviewedOn": "2026-11-06",
-  "status": "official-catalog-page-directly-retrieved;historical-type-locality;museum-dataset-bounded-crosscheck;exact-bua-river-gazetteer-unresolved;no-coordinate-overlay;research-only",
+  "status": "official-catalog-page-directly-retrieved;historical-type-locality;museum-dataset-bounded-crosscheck;exact-bua-river-gazetteer-unresolved;no-coordinate-overlay;research-only;official-admin-crosswalk-open",
   "purpose": "Cross-check the Cagayan basin candidate Glossogobius biorbitalis against the current Catalog of Fishes entry and record its reported type locality without converting a text locality to coordinates.",
   "candidate": {
     "sourceArtifact": "national-freshwater-fish-basin-candidate-extract-20261106.json",
@@ -32,7 +32,12 @@
     "coordinate": null,
     "pointInPolygon": null,
     "basinCrosswalk": "The Catalog explicitly names the Cagayan River drainage, textually linking the reported type locality to the same drainage-basin system as B0380. No coordinates were available for a point-in-polygon overlay.",
-    "evidenceClass": "Historical type-locality reported by a current taxonomic catalog; not a dated event record with a reviewed specimen label or coordinate."
+    "evidenceClass": "Historical type-locality reported by a current taxonomic catalog; not a dated event record with a reviewed specimen label or coordinate.",
+    "administrativeContextReview": {
+      "reviewArtifact": "national-freshwater-cagayan-glossogobius-bua-administrative-context-review-20261106.json",
+      "finding": "PSA lists Barangay Bua under Kasibu (0205009006), while its 15-barangay Dupax del Norte list has no Bua and includes Macabenga (0205007022). A PIA report describes a road from Bua, Kasibu to Macabenga, Dupax del Norte.",
+      "limit": "This distinguishes current administrative contexts but does not identify which river is meant by the Catalog type-locality wording or resolve a reach/coordinate."
+    }
   },
   "gbifCrossCheck": {
     "reviewArtifact": "national-freshwater-cagayan-b0380-geometry-gbif-locality-screen-20261106.json",
@@ -69,10 +74,11 @@
     "The indexed National Museum fish-collection resource returned no row for the combined name and holotype-number query; its metadata does not establish that it contains all type lots.",
     "An exact-name OpenStreetMap Nominatim query did not return a mapped Bua River feature for Dupax del Norte, so the waterbody was not independently resolved to geometry.",
     "The locality supports a historical taxonomic type-locality association only; it does not establish current presence, abundance, distribution throughout B0380, catchability, legal status, or fishing safety.",
-    "Do not map the catalog locality as a point or exact reach without coordinates and a separate Bua River geometry crosswalk."
+    "Do not map the catalog locality as a point or exact reach without coordinates and a separate Bua River geometry crosswalk.",
+    "A current PSA/PIA administrative cross-check shows Barangay Bua is in Kasibu, while Dupax del Norte has no Bua barangay; this does not identify the Catalog-reported river or resolve its exact reach."
   ],
   "disposition": {
-    "candidateEvidenceStatus": "historical-type-locality-lead;museum-dataset-query-no-row;exact-bua-river-geometry-unresolved;source-original-and-coordinate-review-pending",
+    "candidateEvidenceStatus": "historical-type-locality-lead;museum-dataset-query-no-row;exact-bua-river-geometry-unresolved;source-original-and-coordinate-review-pending;official-admin-crosswalk-open",
     "publicSpeciesRowsAdded": 0,
     "occurrenceRowsAdded": 0,
     "waterbodyGeometryAdded": false,
@@ -100,6 +106,18 @@
     {
       "url": "https://api.gbif.org/v1/species/match?name=Glossogobius%20biorbitalis&strict=true",
       "supports": "Strict GBIF name/rank matching result, which returned a higher-rank match rather than a species-level locality record."
+    },
+    {
+      "url": "https://psa.gov.ph/classification/psgc/barangays/0205009000",
+      "supports": "PSA PSGC page places Barangay Bua under Kasibu, Nueva Vizcaya; this is administrative context only and does not resolve the type-locality river."
+    },
+    {
+      "url": "https://psa.gov.ph/classification/psgc/barangays/0205007000",
+      "supports": "PSA PSGC page lists the 15 barangays of Dupax del Norte with no Bua barangay; this does not prove that a Bua-named watercourse is absent."
+    },
+    {
+      "url": "https://pia.gov.ph/news/luzon/cv/nueva-vizcaya-among-10-top-performing-lgus-for-local-governance-nationwide/",
+      "supports": "PIA describes the road from Barangay Bua in Kasibu to Barangay Macabenga in Dupax del Norte; it does not identify the type-locality river."
     }
   ]
 }
