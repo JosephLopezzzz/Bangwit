@@ -49,14 +49,38 @@
     "philippinesOccurrenceCount": 0,
     "interpretation": "These exact-name API queries are bounded indexing outcomes and do not contradict the Catalog of Fishes type-locality record or establish biological absence."
   },
+  "museumDatasetCrossCheck": {
+    "reviewedOn": "2026-11-06",
+    "resource": "Fish Specimen Collection of National Museum, Philippines",
+    "publisher": "ASEAN Centre for Biodiversity",
+    "resourceUrl": "https://ipt.aseanbiodiversity.org/resource?r=ph_fish_collection_museum_b1&request_locale=en",
+    "gbifDatasetKey": "18896efa-22df-4fbd-9782-42f47257e753",
+    "reportedDatasetSize": 8225,
+    "reportedLicense": "CC-BY 4.0",
+    "descriptionScope": "The resource metadata describes common and commercial Philippine fish collection samples gathered at landing sites and markets of commercial ports and nearby seas.",
+    "queries": [
+      {
+        "purpose": "Exact-name lookup within this dataset",
+        "url": "https://api.gbif.org/v1/occurrence/search?datasetKey=18896efa-22df-4fbd-9782-42f47257e753&scientificName=Ilogton%20ilogton&limit=10",
+        "count": 0
+      },
+      {
+        "purpose": "Holotype catalog-number lookup within this dataset",
+        "url": "https://api.gbif.org/v1/occurrence/search?datasetKey=18896efa-22df-4fbd-9782-42f47257e753&catalogNumber=15678&limit=5",
+        "count": 0
+      }
+    ],
+    "interpretation": "Neither bounded query found an indexed row in this dataset. This does not establish that PNM 15678 is absent from the physical collection or from non-indexed records. The dataset's stated scope also does not show that it is the type-series catalog."
+  },
   "interpretation": [
     "The official catalog directly reports a 2024 species description and a Cagayan River/Muta type locality, providing a traceable historical taxonomic lead for the Cagayan drainage candidate.",
     "The catalog reports one holotype and 15 paratypes across PNM and SEAFDEC; those lots were not independently checked against collection labels or records.",
+    "A published National Museum fish-collection resource under ASEAN Centre for Biodiversity reports 8,225 records and CC-BY 4.0, but bounded GBIF queries found no exact-name or holotype-number row in that resource; this is not evidence that the physical type lot is absent.",
     "Textual drainage agreement does not supply coordinates, an exact river reach, current presence, abundance, or distribution throughout the B0380 basin.",
     "The GBIF strict-name and Philippines occurrence searches returned no match/records in the checked responses; this is not evidence of species absence."
   ],
   "disposition": {
-    "candidateEvidenceStatus": "official-catalog-historical-type-locality;original-book-and-specimen-record-review-pending",
+    "candidateEvidenceStatus": "official-catalog-historical-type-locality;published-national-museum-resource-cross-checked-no-indexed-exact-row;original-book-and-specimen-record-review-pending",
     "publicSpeciesRowsAdded": 0,
     "occurrenceRowsAdded": 0,
     "waterbodyGeometryAdded": false,
@@ -74,6 +98,10 @@
       "supports": "Catalog bibliography record for Endruweit 2024, Fishes of the Red River - Perciformes, Synbranchiformes."
     },
     {
+      "url": "https://ipt.aseanbiodiversity.org/resource?r=ph_fish_collection_museum_b1&request_locale=en",
+      "supports": "ASEAN Centre for Biodiversity metadata for the National Museum of the Philippines fish specimen collection resource; reports 8,225 records, a CC-BY 4.0 license, and a common/commercial fish sampling scope. The related GBIF dataset returned zero for the bounded exact-name and catalog-number queries recorded above."
+    },
+    {
       "url": "https://api.gbif.org/v1/species/match?name=Ilogton%20ilogton&strict=true",
       "supports": "Strict GBIF API name matching; response returned matchType NONE."
     },
@@ -86,6 +114,6 @@
     "publicAdmissionDefault": false,
     "rightsReview": "No item-specific reuse terms for the original book, catalog content, or underlying specimen records were verified.",
     "qualityReview": "Historical type-locality evidence alone does not establish current fish presence, catchability, legal status, or safety.",
-    "accessEvidence": "The official Catalog of Fishes page was retrieved directly; original book pages and PNM/SEAFDEC specimen records remain unavailable in this review."
+    "accessEvidence": "The official Catalog of Fishes page was retrieved directly. The ASEAN Centre for Biodiversity metadata for a published National Museum fish collection resource was reviewed and its GBIF dataset returned zero for the bounded exact-name and PNM catalog-number queries. Original book pages and PNM/SEAFDEC specimen records remain unavailable in this review."
   }
 }
