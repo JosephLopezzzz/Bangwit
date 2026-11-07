@@ -86,9 +86,27 @@
       "capability": "bulk request submission, status polling and ETag/Range-resumable archive transfer",
       "authentication": "account credentials required only when submitting a new bulk request",
       "fishQuery": "not yet pinned; validate the fish taxon selection before submitting"
+    },
+    {
+      "provider": "GBIF taxonomy candidate resolver",
+      "script": "scripts/species/national/resolve-gbif-fish-taxon-candidates.mjs",
+      "capability": "review-only candidate class roots and Catalogue of Life name-match comparison",
+      "submissionStatus": "candidate scope unresolved; not ready to submit"
+    },
+    {
+      "provider": "OBIS first-region triage",
+      "script": "scripts/species/national/build-obis-regional-triage.mjs",
+      "capability": "integrity-checked text-label triage, rights shortlist and local-only sanitized candidate partition",
+      "publicationApproval": "never automatic"
     }
   ],
   "firstIntegratedRegion": "CALABARZON",
+  "regionalTriage": {
+    "regionId": "CALABARZON",
+    "administrativeField": "stateProvince",
+    "provinceTextLabels": ["Batangas", "Cavite", "Laguna", "Quezon", "Rizal"],
+    "matchingRule": "case-insensitive exact text only; does not assert a boundary-based regional assignment"
+  },
   "habitatTracks": ["freshwater", "brackish", "marine"],
   "regionSequence": ["Luzon", "Visayas", "Mindanao"]
 }
