@@ -136,6 +136,22 @@
       "authentication": "none; public country extract, no API key",
       "reuseConditions": "CC BY 4.0 attribution required; gazetteer points are discovery leads only, not river lines, lake shorelines, wetland polygons or fish records",
       "publicationApproval": "never automatic"
+    },
+    {
+      "provider": "GeoNames point versus geoBoundaries Philippine ADM2 screening",
+      "script": "scripts/species/national/review-geonames-ph-hydrography-geoboundaries.py",
+      "capability": "hash-verified coarse point-in-polygon context screen with exact row results kept Git-ignored",
+      "authentication": "none; reuses the pinned local GeoNames candidate and boundary files",
+      "reuseConditions": "geoBoundaries CC BY 3.0 IGO attribution; land polygons are only a review aid and never assign waterbody or marine boundaries",
+      "publicationApproval": "never automatic"
+    },
+    {
+      "provider": "GeoNames first-region hydrographic candidate review",
+      "script": "scripts/species/national/build-geonames-calabarzon-hydrographic-candidates.py",
+      "capability": "hash-checked CALABARZON local queue grouped by source feature codes and province-polygon point context",
+      "authentication": "none; reuses pinned local candidates and screening artifacts",
+      "reuseConditions": "GeoNames CC BY 4.0 attribution; source-code groups do not assert salinity or waterbody identity",
+      "publicationApproval": "never automatic"
     }
   ],
   "firstIntegratedRegion": "CALABARZON",

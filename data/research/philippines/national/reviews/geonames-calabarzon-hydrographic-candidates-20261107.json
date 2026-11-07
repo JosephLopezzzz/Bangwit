@@ -1,0 +1,176 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "geonames-calabarzon-hydrographic-candidates-20261107",
+  "generatedOn": "2026-11-07",
+  "status": "regional-discovery-queue-built;source-code-groupings-only;waterbody-and-species-review-pending",
+  "scope": {
+    "regionReviewScope": "CALABARZON",
+    "provincePolygonNames": [
+      "Batangas",
+      "Cavite",
+      "Laguna",
+      "Quezon",
+      "Rizal"
+    ],
+    "selectionRule": "only records whose GeoNames point fell inside exactly one pinned simplified province polygon named in the first-region manifest",
+    "overlayReview": "data/research/philippines/national/reviews/geonames-ph-hydrography-geoboundaries-overlay-20261107.json",
+    "overlayQueueSha256": "d413a93dbbb68e860ffa76f9874a327d5580b4c93c08843f5cfb010f760b396d",
+    "allPhilippinesOverlayRows": 13513
+  },
+  "source": {
+    "provider": "GeoNames Gazetteer Philippines country extract",
+    "featureClass": "H",
+    "featureCodeDefinitions": "https://www.geonames.org/export/codes.html",
+    "license": "CC BY 4.0",
+    "attribution": "GeoNames Gazetteer (https://www.geonames.org/), country extract PH, downloaded 2026-11-07; CC BY 4.0."
+  },
+  "featureCodeGroups": {
+    "stream_channel_or_waterfall": {
+      "codes": [
+        "FLLS",
+        "RVN",
+        "STM",
+        "STMC",
+        "STMD",
+        "STMI",
+        "STMX",
+        "WTRC"
+      ],
+      "rows": 783,
+      "meaning": "GeoNames source-feature labels grouped for review; not habitat, salinity, species, or access conclusions"
+    },
+    "lake_reservoir_or_pool": {
+      "codes": [
+        "LK",
+        "LKS",
+        "POOL",
+        "RSV"
+      ],
+      "rows": 17,
+      "meaning": "GeoNames source-feature labels grouped for review; not habitat, salinity, species, or access conclusions"
+    },
+    "hot_spring": {
+      "codes": [
+        "SPNT"
+      ],
+      "rows": 1,
+      "meaning": "GeoNames source-feature labels grouped for review; not habitat, salinity, species, or access conclusions"
+    },
+    "artificial_canal": {
+      "codes": [
+        "CNL"
+      ],
+      "rows": 3,
+      "meaning": "GeoNames source-feature labels grouped for review; not habitat, salinity, species, or access conclusions"
+    },
+    "other_hydrographic_context": {
+      "codes": [
+        "AIRS",
+        "ANCH",
+        "BAY"
+      ],
+      "rows": 7,
+      "meaning": "GeoNames source-feature labels grouped for review; not habitat, salinity, species, or access conclusions"
+    }
+  },
+  "results": {
+    "candidateRows": 811,
+    "distinctNormalizedNameStrings": 775,
+    "candidateRowsByProvincePolygonContext": {
+      "Batangas": 126,
+      "Cavite": 67,
+      "Laguna": 129,
+      "Quezon": 445,
+      "Rizal": 44
+    },
+    "candidateRowsByProvinceAndFeatureCode": {
+      "Batangas": {
+        "BAY": 4,
+        "LK": 2,
+        "LKS": 1,
+        "SPNT": 1,
+        "STM": 113,
+        "STMI": 1,
+        "WTRC": 4
+      },
+      "Cavite": {
+        "AIRS": 1,
+        "RVN": 3,
+        "STM": 63
+      },
+      "Laguna": {
+        "FLLS": 3,
+        "LK": 8,
+        "POOL": 1,
+        "RSV": 2,
+        "STM": 106,
+        "STMC": 2,
+        "STMD": 2,
+        "STMI": 2,
+        "STMX": 3
+      },
+      "Quezon": {
+        "ANCH": 1,
+        "BAY": 1,
+        "CNL": 1,
+        "LK": 3,
+        "STM": 356,
+        "STMI": 78,
+        "STMX": 3,
+        "WTRC": 2
+      },
+      "Rizal": {
+        "CNL": 2,
+        "STM": 40,
+        "STMC": 1,
+        "WTRC": 1
+      }
+    },
+    "candidateRowsByFeatureCode": {
+      "AIRS": 1,
+      "ANCH": 1,
+      "BAY": 5,
+      "CNL": 3,
+      "FLLS": 3,
+      "LK": 13,
+      "LKS": 1,
+      "POOL": 1,
+      "RSV": 2,
+      "RVN": 3,
+      "SPNT": 1,
+      "STM": 678,
+      "STMC": 3,
+      "STMD": 2,
+      "STMI": 81,
+      "STMX": 6,
+      "WTRC": 7
+    },
+    "regionAssignmentsAdded": 0,
+    "waterbodyIdentitiesValidated": 0,
+    "speciesAssertionsAdded": 0,
+    "publicGeometryAdded": false
+  },
+  "localReviewQueue": {
+    "path": "data/research/philippines/raw/national/geonames-ph-20261107/calabarzon-hydrographic-candidates.jsonl",
+    "rows": 811,
+    "bytes": 378027,
+    "sha256": "3b104459534ab8eb1f0fdb3b45d66c67f44954be863073dddee8ecd5cab8969a",
+    "gitIgnored": true,
+    "appBundleIncluded": false,
+    "containsExactCoordinates": true,
+    "containsNamesAndIdentifiers": true
+  },
+  "privacy": {
+    "exactCoordinatesInTrackedReport": false,
+    "candidateNamesInTrackedReport": false,
+    "perRecordIdsInTrackedReport": false
+  },
+  "limitations": [
+    "A GeoNames feature point inside a province polygon is coarse point context, not a verified waterbody-to-province or region assignment.",
+    "GeoNames source-feature codes and these groupings do not establish freshwater/brackish/marine salinity, waterbody identity, ecology, fishing access, or present condition.",
+    "Some rows represent stream sections, falls, channels, or artificial watercourses rather than distinct waterbodies; repeated names and features are not deduplicated into unique sites.",
+    "The 2020 simplified land polygons may be outdated and do not describe coastal or municipal-water boundaries.",
+    "This queue has no fish observations. No species records or public map geometry were created.",
+    "Exact candidate names, IDs, coordinates and source administrative codes remain in Git-ignored local storage."
+  ]
+}
