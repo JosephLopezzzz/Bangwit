@@ -152,6 +152,18 @@
       "authentication": "none; reuses pinned local candidates and screening artifacts",
       "reuseConditions": "GeoNames CC BY 4.0 attribution; source-code groups do not assert salinity or waterbody identity",
       "publicationApproval": "never automatic"
+    },
+    {
+      "provider": "GeoNames CALABARZON candidate names versus HydroLAKES and prior OSM lake crosswalks",
+      "script": "scripts/species/national/review-geonames-calabarzon-hydrolakes-crosswalk.py",
+      "capability": "hash-pinned generic-token name comparison and nearest HydroLAKES pour-point review queue; exact row data remain Git-ignored",
+      "authentication": "none; reuses local GeoNames, HydroLAKES, Seven Lakes, and Sampaloc review artifacts",
+      "reuseConditions": "GeoNames and HydroLAKES attribution required; OSM is ODbL; name/proximity candidates do not establish identity and are not app inputs",
+      "outputs": {
+        "aggregateReport": "data/research/philippines/national/reviews/geonames-calabarzon-hydrolakes-proximity-crosswalk-20261108.json",
+        "localQueue": "data/research/philippines/raw/national/geonames-ph-20261107/calabarzon-hydrolakes-nearest-review.jsonl"
+      },
+      "publicationApproval": "never automatic"
     }
   ],
   "firstIntegratedRegion": "CALABARZON",

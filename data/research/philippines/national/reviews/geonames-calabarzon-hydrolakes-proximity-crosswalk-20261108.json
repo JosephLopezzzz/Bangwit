@@ -1,0 +1,119 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "geonames-calabarzon-hydrolakes-proximity-crosswalk-20261108",
+  "generatedOn": "2026-11-08",
+  "status": "local-name-and-pour-point-proximity-crosswalk-built;all-pairs-candidate-only;manual-identity-review-pending",
+  "scope": {
+    "regionId": "0400000000",
+    "candidateFeatureGroup": "lake_reservoir_or_pool",
+    "candidateSelection": "17 GeoNames CALABARZON records classified by the GeoNames source feature-code grouping in the pinned region queue",
+    "comparisonInputs": [
+      "data/research/philippines/raw/national/geonames-ph-20261107/calabarzon-hydrographic-candidates.jsonl",
+      "data/research/philippines/raw/national/hydrolakes-philippines-v1-waterbody-candidates.jsonl",
+      "data/research/philippines/calabarzon-seven-lakes-osm-hydrolakes-crosswalk-20261030.json",
+      "data/research/philippines/calabarzon-sampaloc-osm-hydrolakes-crosswalk-20261030.json"
+    ],
+    "nameMatching": "case-folded Unicode normalization; punctuation collapsed; generic English lake/lakes tokens removed; no fuzzy spelling match",
+    "spatialMatching": "Haversine distance between GeoNames gazetteer points and HydroLAKES pour points; nearest point is a review lead, not polygon overlap or identity evidence"
+  },
+  "provenance": {
+    "data/research/philippines/raw/national/geonames-ph-20261107/calabarzon-hydrographic-candidates.jsonl": {
+      "sha256": "3b104459534ab8eb1f0fdb3b45d66c67f44954be863073dddee8ecd5cab8969a",
+      "bytes": 378027
+    },
+    "data/research/philippines/raw/national/hydrolakes-philippines-v1-waterbody-candidates.jsonl": {
+      "sha256": "357a30e95c8580a64a295a2bb329026aff15612b7b9c0b084d72552249134030",
+      "bytes": 410371
+    },
+    "data/research/philippines/calabarzon-seven-lakes-osm-hydrolakes-crosswalk-20261030.json": {
+      "sha256": "998b2d28f7e18e4e252daa705b0c5dec9ad9e26f195048f139ca2065f58a5ac3",
+      "bytes": 8621
+    },
+    "data/research/philippines/calabarzon-sampaloc-osm-hydrolakes-crosswalk-20261030.json": {
+      "sha256": "42fba383027fc2a3d06c5be218cc1e04e361ec1e6bd784f16a59a7844ba129f7",
+      "bytes": 5851
+    }
+  },
+  "existingReviewContext": {
+    "sevenLakesCrosswalk": {
+      "path": "data/research/philippines/calabarzon-seven-lakes-osm-hydrolakes-crosswalk-20261030.json",
+      "status": "seven-named-osm-features-screened;six-hydrolakes-spatial-crosswalks;one-subset-nonmatch;community-data-only;no-species-assertions",
+      "namedOsmFeatures": 6,
+      "featuresWithHydrolakesSpatialCandidate": 5
+    },
+    "sampalocCrosswalk": {
+      "path": "data/research/philippines/calabarzon-sampaloc-osm-hydrolakes-crosswalk-20261030.json",
+      "status": "named-osm-spatial-crosswalk-strong;community-source-not-authoritative;gbif-actinopterygii-screen-zero;no-app-geometry"
+    },
+    "knownHydrolakesIdsInExistingOsmSpatialCrosswalks": [
+      1397762,
+      1397769,
+      1397776,
+      1397790,
+      1397812,
+      1397813
+    ]
+  },
+  "results": {
+    "geonamesCalabarzonCandidatesCompared": 17,
+    "hydrolakesPhilippinesCandidatesSearched": 1298,
+    "geonamesRowsWithExactCanonicalNameMatch": 7,
+    "canonicalNameMatchEvidenceRowsBySourceKind": {
+      "existing-osm-lake-crosswalk": 5,
+      "hydrolakes-source-name": 2
+    },
+    "canonicalNameMatchedHydrolakesIdAgreesWithNearest": 6,
+    "canonicalNameMatchedHydrolakesIdDiffersFromNearest": 1,
+    "geonamesRowsWithNearestHydrolakesWithinDistanceKm": {
+      "1": 12,
+      "5": 16,
+      "10": 17,
+      "25": 17
+    },
+    "geonamesRowsWhoseNearestHydrolakesIdAppearsInExistingOsmSpatialCrosswalk": 7,
+    "distinctNearestCrosswalkHydrolakesIds": [
+      1397762,
+      1397769,
+      1397776,
+      1397790,
+      1397812,
+      1397813
+    ],
+    "nearestHydrolakesRowsWithSourceName": 1,
+    "geonamesRowsByFeatureCode": {
+      "LK": 13,
+      "LKS": 1,
+      "POOL": 1,
+      "RSV": 2
+    },
+    "waterbodyIdentitiesValidated": 0,
+    "regionAssignmentsAdded": 0,
+    "speciesAssertionsAdded": 0,
+    "publicGeometryAdded": false,
+    "publicationApproval": false
+  },
+  "localReviewQueue": {
+    "path": "data/research/philippines/raw/national/geonames-ph-20261107/calabarzon-hydrolakes-nearest-review.jsonl",
+    "rows": 17,
+    "bytes": 17887,
+    "sha256": "a25b8299c9e810bbe9960855b0a3ea9bd76f890bfb6c91c733a4b8ed5ffb0720",
+    "gitIgnored": true,
+    "appBundleIncluded": false,
+    "containsExactCoordinates": true,
+    "containsNamesAndIdentifiers": true
+  },
+  "privacy": {
+    "exactCoordinatesInTrackedReport": false,
+    "candidateNamesInTrackedReport": false,
+    "perRecordIdsInTrackedReport": false
+  },
+  "limitations": [
+    "GeoNames point locations and HydroLAKES pour points can refer to different places on the same water system; distance alone does not establish identity.",
+    "HydroLAKES pour points are outlets, not lake centers or shorelines; this run did not compare polygons.",
+    "Canonical name matches remove only generic English lake/lakes tokens. No fuzzy matching, translated-name equivalence, or alias resolution was attempted.",
+    "The existing Seven Lakes and Sampaloc spatial crosswalks rely on community-mapped OSM geometries and explicitly are not official or survey-validated boundaries; ODbL terms apply to OSM-derived data.",
+    "HydroLAKES v1 targets lakes of at least 10 ha and omits river and wetland polygons; unmatched names and absent candidates do not establish waterbody absence.",
+    "This is local research only. No species, habitat, fishing-access, legal-boundary, water-quality, or safety claim was added to the app."
+  ],
+  "nextAction": "Manually compare the local queue against named independent maps, literature and reusable non-OSM sources; keep every pair unverified until a source explicitly supports the same waterbody, then review locality-specific fish evidence separately."
+}
