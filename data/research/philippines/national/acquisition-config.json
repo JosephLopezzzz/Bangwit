@@ -189,6 +189,18 @@
         "localNearestLineQueue": "data/research/philippines/raw/national/fao-hydrorivers-calabarzon-wfs-20261108/calabarzon-geonames-stream-nearest-hydrorivers.jsonl"
       },
       "publicationApproval": "never automatic"
+    },
+    {
+      "provider": "HydroRIVERS modeled reaches versus CALABARZON GeoNames-to-scope name leads",
+      "script": "scripts/species/national/review-hydrorivers-calabarzon-stream-scope-priority.py",
+      "capability": "hash-pinned join of local stream name-scope pairs to nearest modeled-reach screens with exact IDs restricted to ignored local storage",
+      "authentication": "none; reuses pinned local GeoNames, scope crosswalk and HydroRIVERS screen outputs",
+      "reuseConditions": "Research prioritization only; name equality, province context and line proximity do not validate watercourse identity; HydroSHEDS distribution terms still require review",
+      "outputs": {
+        "aggregateReport": "data/research/philippines/national/reviews/fao-hydrorivers-calabarzon-stream-scope-priority-20261108.json",
+        "localQueue": "data/research/philippines/raw/national/fao-hydrorivers-calabarzon-wfs-20261108/stream-scope-nearest-line-review.jsonl"
+      },
+      "publicationApproval": "never automatic"
     }
   ],
   "firstIntegratedRegion": "CALABARZON",

@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "fao-hydrorivers-calabarzon-stream-scope-priority-20261108",
+  "generatedOn": "2026-11-08",
+  "status": "scope-name-leads-joined-to-modeled-line-proximity;manual-source-review-required;no-identity-validation",
+  "inputs": {
+    "data/research/philippines/raw/national/geonames-ph-20261107/calabarzon-stream-scope-review.jsonl": {
+      "sha256": "5b535f6d65872f224b72c2d1f300b3d9b08ee8d076b041af00a2c8acaa76c454",
+      "rows": 45
+    },
+    "data/research/philippines/raw/national/fao-hydrorivers-calabarzon-wfs-20261108/calabarzon-geonames-stream-nearest-hydrorivers.jsonl": {
+      "sha256": "711f20be9d195a258eb770354d94ba123934922fbe3be337bfdfd6ceadd5fbee",
+      "rows": 783
+    },
+    "data/research/philippines/national/reviews/fao-hydrorivers-calabarzon-wfs-screen-20261108.json": {
+      "sha256": "adfbb8610c0311155b6fed4ae1d7eb320bdb20222ecce6cc3675c94c9fb27138"
+    }
+  },
+  "results": {
+    "geoNamesScopeMatchRows": 45,
+    "nameToScopeLeadPairs": 46,
+    "distinctScopeLeadIds": 38,
+    "provinceContextPairCounts": {
+      "province-context-conflict": 11,
+      "province-context-overlap": 35
+    },
+    "candidatePointRowsWithMultipleScopeLeads": 1,
+    "matchedCandidatePointsWithoutNearestModeledLine": 0,
+    "distinctNearestHydroRiversIdsForMatchedPoints": 43,
+    "candidatePointRowsWithinDistanceKm": {
+      "1": 43,
+      "5": 45,
+      "10": 45,
+      "25": 45,
+      "50": 45
+    },
+    "nameToScopeLeadPairsWithinDistanceByContext": {
+      "province-context-conflict:10Km": 11,
+      "province-context-conflict:1Km": 11,
+      "province-context-conflict:25Km": 11,
+      "province-context-conflict:50Km": 11,
+      "province-context-conflict:5Km": 11,
+      "province-context-overlap:10Km": 35,
+      "province-context-overlap:1Km": 33,
+      "province-context-overlap:25Km": 35,
+      "province-context-overlap:50Km": 35,
+      "province-context-overlap:5Km": 35
+    },
+    "watercourseIdentitiesValidated": 0,
+    "regionAssignmentsAdded": 0,
+    "speciesAssertionsAdded": 0,
+    "appGeometryAdded": false,
+    "publicationApproval": false
+  },
+  "localQueue": {
+    "path": "data/research/philippines/raw/national/fao-hydrorivers-calabarzon-wfs-20261108/stream-scope-nearest-line-review.jsonl",
+    "rows": 46,
+    "sha256": "095bd645f09efe081350099d030d242003a041d1f79fdca0f04f9208875ab211",
+    "gitIgnored": true,
+    "containsNamesOrCoordinates": false,
+    "containsExactProviderIds": true
+  },
+  "limitations": [
+    "The exact normalized-name matches are cross-source discovery leads, not verified watercourse identities.",
+    "The HydroRIVERS nearest-line distance is a coarse regional projection screen and cannot confirm that a modeled reach is the named scope lead.",
+    "Province context comes from simplified land polygons and source scope associations; conflicts need review and do not invalidate either source automatically.",
+    "The FAO WFS bounding rectangle includes adjacent areas and is not an exact CALABARZON feature subset.",
+    "HydroRIVERS omits smaller networks under its published threshold and is not field-verified current channel geometry.",
+    "Raw rows, names, coordinates and exact source IDs stay in Git-ignored local research storage; nothing is admitted to app data."
+  ],
+  "nextAction": "Review local rows with province-context conflicts and multiple scope leads against primary maps, source descriptions and study locality evidence; record an identity decision only when independent evidence supports it, while separately resolving HydroSHEDS distribution terms."
+}
