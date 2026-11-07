@@ -164,6 +164,18 @@
         "localQueue": "data/research/philippines/raw/national/geonames-ph-20261107/calabarzon-hydrolakes-nearest-review.jsonl"
       },
       "publicationApproval": "never automatic"
+    },
+    {
+      "provider": "GeoNames CALABARZON stream names versus existing regional research-scope leads",
+      "script": "scripts/species/national/review-geonames-calabarzon-stream-scope-crosswalk.py",
+      "capability": "hash-pinned exact normalized-name comparison with province-context conflict flags and source references in a local review queue",
+      "authentication": "none; reuses the local GeoNames candidate queue and CALABARZON scope registry",
+      "reuseConditions": "GeoNames CC BY 4.0 attribution; scope names remain source-linked leads; name equality and province context do not validate river reach identity or authorize app inclusion",
+      "outputs": {
+        "aggregateReport": "data/research/philippines/national/reviews/geonames-calabarzon-stream-scope-crosswalk-20261108.json",
+        "localQueue": "data/research/philippines/raw/national/geonames-ph-20261107/calabarzon-stream-scope-review.jsonl"
+      },
+      "publicationApproval": "never automatic"
     }
   ],
   "firstIntegratedRegion": "CALABARZON",

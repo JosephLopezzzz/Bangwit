@@ -1,0 +1,79 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "geonames-calabarzon-stream-scope-crosswalk-20261108",
+  "generatedOn": "2026-11-08",
+  "status": "exact-normalized-name-candidate-crosswalk-built;scope-lead-and-point-context-only;identity-review-pending",
+  "scope": {
+    "regionId": "0400000000",
+    "candidateRows": "GeoNames CALABARZON stream_channel_or_waterfall source-code group",
+    "scopeRows": "current CALABARZON research-scope waterbody leads and aliases",
+    "matchingRule": "case-folded Unicode normalization, diacritics removed, punctuation collapsed, generic English hydrography terms removed; no fuzzy spelling matching",
+    "administrativeRule": "compares GeoNames point-in-polygon province label to province IDs already attached to a scope lead; context comparison only, never assignment",
+    "sourceLimit": "the scope is a selected research-lead list, not an exhaustive river catalogue; matching against it does not replace source-level identity review"
+  },
+  "provenance": {
+    "data/research/philippines/raw/national/geonames-ph-20261107/calabarzon-hydrographic-candidates.jsonl": {
+      "sha256": "3b104459534ab8eb1f0fdb3b45d66c67f44954be863073dddee8ecd5cab8969a",
+      "bytes": 378027
+    },
+    "data/research/philippines/calabarzon-scope.json": {
+      "sha256": "f1b8d069671bce5a8ca8d5df4b2c3a8516d32b421e4bfbf1eb4341fda19b4ec7",
+      "bytes": 377263
+    }
+  },
+  "results": {
+    "geonamesStreamGroupRows": 783,
+    "calabarzonScopeWaterbodyRows": 158,
+    "geonamesRowsWithExactNormalizedNameLead": 45,
+    "uniqueWaterbodyScopeLeadsMatched": 38,
+    "candidateToScopeLeadPairs": 46,
+    "candidateRowsWithMultipleDistinctScopeLeadMatches": 1,
+    "candidateScopePairsByProvinceContext": {
+      "province-context-conflict": 11,
+      "province-context-overlap": 35
+    },
+    "candidateRowsWithAtLeastOneProvinceContextOverlap": 35,
+    "candidateRowsWithAtLeastOneProvinceContextConflict": 11,
+    "candidateRowsWithBothOverlapAndConflict": 1,
+    "candidateRowsByFeatureCode": {
+      "FLLS": 3,
+      "RVN": 3,
+      "STM": 678,
+      "STMC": 3,
+      "STMD": 2,
+      "STMI": 81,
+      "STMX": 6,
+      "WTRC": 7
+    },
+    "waterbodyIdentitiesValidated": 0,
+    "regionAssignmentsAdded": 0,
+    "speciesAssertionsAdded": 0,
+    "publicGeometryAdded": false,
+    "publicationApproval": false
+  },
+  "localReviewQueue": {
+    "path": "data/research/philippines/raw/national/geonames-ph-20261107/calabarzon-stream-scope-review.jsonl",
+    "rows": 45,
+    "candidateToScopeLeadPairs": 46,
+    "bytes": 42991,
+    "sha256": "5b535f6d65872f224b72c2d1f300b3d9b08ee8d076b041af00a2c8acaa76c454",
+    "gitIgnored": true,
+    "appBundleIncluded": false,
+    "containsExactCoordinates": true,
+    "containsCandidateAndScopeNames": true,
+    "containsSourceReferences": true
+  },
+  "privacy": {
+    "exactCoordinatesInTrackedReport": false,
+    "candidateNamesInTrackedReport": false,
+    "perRecordIdsInTrackedReport": false
+  },
+  "limitations": [
+    "GeoNames stream/channel/waterfall feature codes and name points are discovery candidates, not river lines or exact reaches.",
+    "The CALABARZON scope contains selected named research leads, not a complete waterbody inventory; unmatched names do not prove absence.",
+    "Removing generic watercourse words can surface homonyms and spelling variants; normalized-name equality is not evidence that two records describe the same site.",
+    "Province context derives from a coarse point-in-land-polygon screen and source-described scope associations; agreement or conflict does not verify geography or source identity.",
+    "No candidate was merged into the scope, no region assignment or geometry was added, and no fish presence or habitat claim was created."
+  ],
+  "nextAction": "Review the local queue against the linked source references. Resolve the province-context conflicts and homonym collisions first; require a named primary map, study locality or independently reusable route source before linking a candidate to a scope waterbody."
+}
