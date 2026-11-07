@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "obis-cas-ich-calabarzon-geoboundaries-20261107",
+  "generatedOn": "2026-11-07",
+  "status": "coarse-boundary-crosscheck-complete; regional-and-waterbody-validation-pending",
+  "boundarySource": {
+    "provider": "geoBoundaries gbOpen",
+    "apiMetadataUrl": "https://www.geoboundaries.org/api/current/gbOpen/PHL/ADM2/",
+    "boundaryID": "PHL-ADM2-2640588",
+    "countryCode": "PHL",
+    "administrativeLevel": "ADM2",
+    "canonicalLevelName": "Provinces",
+    "representedYear": "2020",
+    "sourceAgencies": "National Mapping and Resource Information Authority (NAMRIA), Philippines Statistics Authority (PSA), OCHA Philippines",
+    "sourceDataUpdateDate": "Thu Jan 19 07:31:04 2023",
+    "geoBoundariesBuildDate": "Jul 05, 2023",
+    "boundaryLicense": "Creative Commons Attribution 3.0 Intergovernmental Organisations (CC BY 3.0 IGO)",
+    "licenseSourceUrl": "data.humdata.org/about/license",
+    "geometryUrl": "https://github.com/wmgeolab/geoBoundaries/raw/41af8f1/releaseData/gbOpen/PHL/ADM2/geoBoundaries-PHL-ADM2_simplified.geojson",
+    "geometryUrlPinnedCommit": "41af8f1",
+    "featureCount": 87,
+    "featureNameProperty": "shapeName",
+    "simplifiedGeometry": true,
+    "geometryBytes": 3140454,
+    "geometrySha256": "fa77b9f17db2e419acaae714a935f7812be4409e2983675d34020e8426a3e189",
+    "geometryLocalPath": "data/research/philippines/raw/national/geoboundaries-phl-adm2-2020/geoBoundaries-PHL-ADM2_simplified-41af8f1.geojson",
+    "geometryGitIgnored": true,
+    "geometryReusedFromLocalCache": true,
+    "attribution": "geoBoundaries (2023), PHL ADM2, based on NAMRIA, Philippines Statistics Authority, and OCHA Philippines; CC BY 3.0 IGO."
+  },
+  "sourceOccurrences": {
+    "datasetId": "d6af0fac-8a21-4d77-8872-f10d471fc0cf",
+    "datasetVersion": "150.547",
+    "candidateRows": 3268,
+    "candidatePartitionSha256": "5cd1c8da0f43f90681ce249323dc03773cdb2e8c20b243cb1ce01a479ed7b231",
+    "provinceTextCounts": {
+      "Batangas": 2938,
+      "Cavite": 157,
+      "Laguna": 2,
+      "Quezon": 101,
+      "Rizal": 70
+    },
+    "localBoundaryReviewQueue": {
+      "path": "data/research/philippines/raw/national/obis-cas-calabarzon-boundary-review-queue-v1.jsonl",
+      "rows": 72,
+      "bytes": 50670,
+      "sha256": "b307ddb940431c3adbd2a68a45d15066e42118cfeec5cc0e4d3db9a50d424351",
+      "gitIgnored": true,
+      "appBundleIncluded": false,
+      "personalObserverOrDeterminerFieldsIncluded": false
+    }
+  },
+  "spatialMethod": {
+    "algorithm": "point-in-polygon against simplified WGS 84 GeoJSON province polygons; polygon edges count as inside",
+    "use": "coarse consistency screen only; not a validated regional or marine-water assignment",
+    "uncertaintyUsedForAssignment": false,
+    "outsideLandPolygonInterpretation": "can reflect a valid coastal/marine specimen coordinate and is not by itself a locality error",
+    "boundaryYearLimit": "2020 boundaries, source data integrated 2023; not a current legal or municipal-water boundary"
+  },
+  "results": {
+    "rowsWithValidCoordinate": 3268,
+    "insideReportedProvinceRows": 320,
+    "insideDifferentProvinceRows": 72,
+    "insideDifferentProvinceWithCoordinateUncertaintyRows": 72,
+    "insideDifferentProvinceWithoutCoordinateUncertaintyRows": 0,
+    "uncertaintyRadiusReachesReportedProvinceBoundaryRows": 2,
+    "uncertaintyRadiusDoesNotReachReportedProvinceBoundaryRows": 70,
+    "outsideEveryLandPolygonRows": 2876,
+    "multipleProvincePolygonRows": 0,
+    "statusCountsByReportedProvince": {
+      "Batangas": {
+        "outside-all-land-polygons": 2641,
+        "inside-reported-province": 280,
+        "inside-different-province": 17
+      },
+      "Cavite": {
+        "outside-all-land-polygons": 156,
+        "inside-reported-province": 1
+      },
+      "Quezon": {
+        "inside-reported-province": 39,
+        "outside-all-land-polygons": 62
+      },
+      "Rizal": {
+        "inside-different-province": 53,
+        "outside-all-land-polygons": 17
+      },
+      "Laguna": {
+        "inside-different-province": 2
+      }
+    },
+    "admittedRows": 0
+  },
+  "limitations": [
+    "This check compares source province text with a point in a simplified 2020 land-administration polygon; it does not establish which municipality or waterbody a marine record belongs to.",
+    "Coastal and offshore points can be outside every land polygon without being erroneous. Coordinate-uncertainty radii were compared with approximate planar distance to the reported province boundary only for a review hint, not used to reassign any point.",
+    "Potential province mismatches remain a local manual review queue and are not automatic exclusions.",
+    "The simplified geometry is used only for screening; any future map or legal use needs a current, source-authorized geometry and exact-version review."
+  ],
+  "privacy": {
+    "exactCoordinatesIncluded": false,
+    "localityStringsIncluded": false,
+    "occurrenceIdentifiersIncluded": false,
+    "perRecordProvinceAssignmentsIncluded": false
+  }
+}
