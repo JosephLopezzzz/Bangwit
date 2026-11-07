@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "status": "research-orchestration-only",
+  "preparedOn": "2026-11-07",
+  "policy": {
+    "rawDirectory": "data/research/philippines/raw/",
+    "rawDirectoryGitIgnored": true,
+    "publicationRequires": [
+      "source and record reuse review",
+      "taxonomic review",
+      "geographic scope review",
+      "duplicate review",
+      "documented admission decision"
+    ],
+    "credentialsInReceipts": false,
+    "rawDataInAppBundle": false
+  },
+  "existingSnapshots": [
+    {
+      "sourceId": "jamandre-2023-plazi-freshwater",
+      "provider": "Plazi / GBIF dataset registry",
+      "rawReceipt": "data/research/philippines/raw/freshwater-download-receipt.json",
+      "rawArchive": "data/research/philippines/raw/jamandre-2023-dwca.zip",
+      "candidateArtifact": "data/research/philippines/freshwater-checklist-candidates.json",
+      "candidateCount": 374,
+      "status": "existing-research-candidates-only",
+      "publicationEligible": false
+    },
+    {
+      "sourceId": "obis-cavite-occurrences-2026-10",
+      "provider": "UNESCO-IOC OBIS",
+      "rawData": "data/research/obis/cavite/cavite-obis-occurrences.csv",
+      "recordCount": 160,
+      "distinctSpeciesNameCount": 78,
+      "status": "existing-locality-and-dataset-rights-review-required",
+      "publicationEligible": false
+    },
+    {
+      "sourceId": "obis-philippines-area-actinopterygii-discovery",
+      "provider": "UNESCO-IOC OBIS",
+      "reviewArtifact": "data/research/philippines/calabarzon-obis-philippines-area-review-20261024.json",
+      "areaId": "191",
+      "taxonId": 10194,
+      "taxonName": "Actinopterygii",
+      "previouslyObservedRecordCount": 128352,
+      "latestSnapshot": {
+        "jobReceipt": "data/research/philippines/national/jobs/obis-ph-actinopterygii-area-191-v1.json",
+        "retrievedOn": "2026-11-07",
+        "retrievedRecordCount": 128365,
+        "rawDataDirectory": "data/research/philippines/raw/national/obis-ph-actinopterygii-area-191-v1/"
+      },
+      "status": "snapshot-downloaded; 46 dataset metadata records inventoried; per-dataset rights and locality review required",
+      "publicationEligible": false
+    }
+  ],
+  "adapters": [
+    {
+      "provider": "OBIS",
+      "script": "scripts/species/national/obis-occurrence-snapshot.mjs",
+      "capability": "resumable cursor-paged occurrence snapshot",
+      "authentication": "none for public read",
+      "datasetRights": "must be reviewed per contributing dataset"
+    },
+    {
+      "provider": "OBIS dataset metadata",
+      "script": "scripts/species/national/build-obis-dataset-rights-inventory.mjs",
+      "capability": "group occurrence records by source dataset and retrieve sanitized rights/citation metadata",
+      "personalContactFields": "excluded from retained metadata projections",
+      "publicationApproval": "never automatic"
+    },
+    {
+      "provider": "OBIS occurrence taxonomy",
+      "script": "scripts/species/national/build-obis-taxon-candidates.mjs",
+      "capability": "research-only species-rank candidate grouping with provider identifiers retained separately",
+      "acceptedTaxonomy": "not asserted; follow-up crosswalk required"
+    },
+    {
+      "provider": "GBIF",
+      "script": "scripts/species/import-freshwater-checklist.py",
+      "capability": "existing pinned Plazi/DwC-A retrieval and deterministic candidate build",
+      "authentication": "none for the pinned metadata/archive source"
+    },
+    {
+      "provider": "GBIF occurrence downloads",
+      "script": "scripts/species/national/gbif-download.mjs",
+      "capability": "bulk request submission, status polling and ETag/Range-resumable archive transfer",
+      "authentication": "account credentials required only when submitting a new bulk request",
+      "fishQuery": "not yet pinned; validate the fish taxon selection before submitting"
+    }
+  ],
+  "firstIntegratedRegion": "CALABARZON",
+  "habitatTracks": ["freshwater", "brackish", "marine"],
+  "regionSequence": ["Luzon", "Visayas", "Mindanao"]
+}

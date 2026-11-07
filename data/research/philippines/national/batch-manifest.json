@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "batchId": "philippines-self-service-bootstrap-2026-11",
+  "createdOn": "2026-11-07",
+  "status": "acquisition-in-progress; no new public species assertions",
+  "scope": {
+    "countryCode": "PH",
+    "deliverySequence": ["Luzon", "Visayas", "Mindanao"],
+    "firstIntegratedRegion": "CALABARZON",
+    "habitatLanes": [
+      { "id": "freshwater", "includes": ["rivers", "streams", "lakes", "reservoirs", "wetlands"] },
+      { "id": "brackish", "includes": ["estuaries", "tidal rivers", "mangroves", "lagoons"] },
+      { "id": "marine", "includes": ["coasts", "bays", "offshore study areas"] }
+    ]
+  },
+  "nationalAcquisitions": [
+    {
+      "id": "obis-ph-actinopterygii-area-191-v1",
+      "provider": "OBIS",
+      "adapter": "scripts/species/national/obis-occurrence-snapshot.mjs",
+      "areaId": 191,
+      "areaLabel": "Philippines (OBIS area; discovery scope only)",
+      "taxonId": 10194,
+      "taxonLabel": "Actinopterygii (ray-finned fishes)",
+      "habitatLane": "marine-and-estuarine-discovery",
+      "queryCountFrom": "2026-10-24 source review; refreshed by adapter before acquisition",
+      "previousCount": 128352,
+      "rightsReview": "per-dataset review required",
+      "taxonomicLimit": "does not include all fish groups",
+      "geographicLimit": "OBIS country area is not a legal or waterbody boundary",
+      "jobReceipt": "data/research/philippines/national/jobs/obis-ph-actinopterygii-area-191-v1.json",
+      "snapshotRetrievedOn": "2026-11-07",
+      "retrievedRows": 128365,
+      "rightsInventoryScript": "scripts/species/national/build-obis-dataset-rights-inventory.mjs",
+      "rightsInventory": "data/research/philippines/national/reviews/obis-ph-actinopterygii-dataset-rights-20261107.json",
+      "taxonCandidateScript": "scripts/species/national/build-obis-taxon-candidates.mjs",
+      "taxonCandidateIndex": "data/research/philippines/national/reviews/obis-ph-actinopterygii-taxon-candidates-20261107.json",
+      "speciesRankRows": 66283,
+      "speciesRankCandidateGroups": 2746,
+      "candidatePublicationEligible": 0,
+      "datasetMetadataRetrieved": 46,
+      "rowsWithMissingOrUnresolvedRecordLicense": 45133,
+      "rowsInMixedRecordLicenseDatasets": 43190,
+      "rowsWithResolvedDatasetRecordLicenseMismatch": 0,
+      "publicationEligibleRows": 0,
+      "status": "taxon-candidates-indexed; rights and identity review pending"
+    },
+    {
+      "id": "plazi-ph-freshwater-checklist-2023",
+      "provider": "Plazi / GBIF dataset registry",
+      "existingReceipt": "data/research/philippines/raw/freshwater-download-receipt.json",
+      "existingCandidateArtifact": "data/research/philippines/freshwater-checklist-candidates.json",
+      "status": "already-imported; candidate names only"
+    }
+  ],
+  "regionalBatches": [
+    {
+      "id": "L1-calabarzon-v1",
+      "region": "CALABARZON",
+      "habitatLanes": ["freshwater", "brackish", "marine"],
+      "reuseExistingReviews": true,
+      "publishOnlyAfter": ["rights review", "taxonomy and locality review", "batch audit", "package generation"],
+      "status": "next-after-national-acquisition-adapter"
+    }
+  ],
+  "countReconciliation": {
+    "requiredStages": ["provider total", "retrieved rows", "unique record ids", "dataset-rights reviewed", "admitted", "held", "excluded"],
+    "absenceRule": "a zero result or unreturned record is not evidence of species absence"
+  }
+}
