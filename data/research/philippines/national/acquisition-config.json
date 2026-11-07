@@ -104,6 +104,14 @@
       "script": "scripts/species/national/review-obis-calabarzon-cas-partition.mjs",
       "capability": "hash-checked aggregate profile of CAS taxon identifiers, province labels, locality and coordinate completeness without copying sensitive row values",
       "publicationApproval": "never automatic"
+    },
+    {
+      "provider": "WoRMS Aphia taxonomic crosswalk",
+      "script": "scripts/species/national/fetch-obis-cas-worms-crosswalk.mjs",
+      "capability": "resumable local-only batch lookup of up to 50 provider AphiaIDs per request and aggregate identity-status review",
+      "authentication": "none for public REST reads",
+      "reuseConditions": "internal candidate review only; cite and link, refresh at least quarterly if distributing WoRMS content, do not redistribute the full database, and re-review terms before app integration",
+      "publicationApproval": "never automatic"
     }
   ],
   "firstIntegratedRegion": "CALABARZON",
