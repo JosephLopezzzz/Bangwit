@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "hydrolakes-philippines-candidate-extract-20261107",
+  "generatedOn": "2026-11-07",
+  "status": "philippines-waterbody-attributes-extracted;candidate-review-only;no-fish-assertions",
+  "source": {
+    "product": "HydroLAKES v1",
+    "officialProductUrl": "https://www.hydrosheds.org/products/hydrolakes",
+    "technicalDocumentationUrl": "https://data.hydrosheds.org/file/technical-documentation/HydroLAKES_TechDoc_v10.pdf",
+    "sourceVersion": "v1",
+    "originalProductLicense": "CC BY 4.0",
+    "subsetRepository": "Zenodo",
+    "subsetRecordUrl": "https://zenodo.org/records/17503891",
+    "subsetDoi": "10.5281/zenodo.17503891",
+    "subsetCreator": "Daniel Schönberger",
+    "subsetVersion": "v1",
+    "subsetLicense": "CC BY 4.0 (cc-by-4.0), confirmed from Zenodo record metadata",
+    "licenseMetadataApi": "https://zenodo.org/api/records/17503891",
+    "licenseVerifiedOn": "2026-11-07",
+    "subsetFile": "HydroLAKES_Asia.zip",
+    "retrieval": "Reused existing local archive; this run made no network request",
+    "publishedMd5": "7601d5fad928195d6a91c616adb172ad",
+    "verifiedMd5": "7601d5fad928195d6a91c616adb172ad",
+    "verifiedSha256": "7c610c19d561f84624736081d2bdd95c004812f5c2354afb6cbdc1bc5c411cc2",
+    "attribution": "HydroLAKES v1 by Lehner and Messager; Asia subset by Daniel Schönberger (2025), Zenodo DOI 10.5281/zenodo.17503891; CC BY 4.0."
+  },
+  "sourceTable": {
+    "dbfMember": "HydroLAKES_Asia.dbf",
+    "dbfUncompressedBytes": 103581850,
+    "declaredRows": 250196,
+    "activeRows": 250196,
+    "recordLengthBytes": 414,
+    "philippinesCandidateRows": 1298,
+    "namedCandidateRows": 6,
+    "unnamedCandidateRows": 1292,
+    "distinctNormalizedNonEmptyNames": 6,
+    "lakeTypeCodeCounts": {
+      "1": 1290,
+      "2": 8
+    },
+    "missingPourPointRows": 0,
+    "areaBelowProductThresholdRows": 0,
+    "areaField": "Lake_area, km2, per HydroLAKES technical documentation"
+  },
+  "localOutput": {
+    "path": "data/research/philippines/raw/national/hydrolakes-philippines-v1-waterbody-candidates.jsonl",
+    "rows": 1298,
+    "bytes": 410371,
+    "sha256": "357a30e95c8580a64a295a2bb329026aff15612b7b9c0b084d72552249134030",
+    "gitIgnored": true,
+    "appBundleIncluded": false,
+    "containsCandidateNames": true,
+    "containsPourPointCoordinates": true,
+    "containsPolygons": false
+  },
+  "decisions": {
+    "waterbodyIdentityValidated": false,
+    "regionAssignmentsAdded": 0,
+    "speciesAssertionsAdded": 0,
+    "publicGeometryAdded": false,
+    "publicationApproval": false
+  },
+  "limitations": [
+    "This is a source-derived candidate index, not a complete Philippine lake inventory or a fish occurrence dataset.",
+    "HydroLAKES v1 targets lakes with surface area of at least 10 ha, includes reservoirs and some saline lakes, and explicitly omits river and wetland polygons; smaller lakes, ponds, wetlands, rivers and streams need separate sources.",
+    "The source populates names only for selected larger lakes and named reservoirs; blank Lake_name values are not evidence that a waterbody is unnamed locally.",
+    "Country is assigned by HydroLAKES using the lake pour point, which can be arbitrary for boundary cases; no candidate was assigned to a Philippine region or province in this extraction.",
+    "Lake_type code 1 is a default that can include unidentified smaller reservoirs or regulated lakes; type codes are retained as source indicators, not independently verified waterbody classifications.",
+    "Pour points are outlet coordinates, not lake centroids or shoreline polygons. The local candidate output is excluded from Git and the app bundle.",
+    "Use required CC BY 4.0 attribution for any future redistribution and review positional accuracy and source version before map use."
+  ]
+}
