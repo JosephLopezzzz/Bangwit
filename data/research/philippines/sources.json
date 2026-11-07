@@ -7200,23 +7200,25 @@
       "additionalUrls": [
         "https://data.apps.fao.org/map/gsrv/gsrv1/aquamaps/wms",
         "https://www.hydrosheds.org/products/hydrorivers",
-        "https://data.hydrosheds.org/file/technical-documentation/HydroSHEDS_TechDoc_v1_4.pdf"
+        "https://data.hydrosheds.org/file/technical-documentation/HydroSHEDS_TechDoc_v1_4.pdf",
+        "https://data.hydrosheds.org/file/technical-documentation/HydroRIVERS_TechDoc_v10.pdf"
       ],
       "role": "Nationwide candidate for modeled river-reach discovery and regional query windows. It is not a fish-occurrence layer, complete stream map, surveyed channel trace or fishing-access source.",
-      "checkedOn": "2026-10-26",
+      "checkedOn": "2026-11-08",
       "sourceYear": 2026,
       "access": {
-        "status": "FAO-metadata-and-WFS-GetCapabilities-verified;bbox-GeoJSON-probe-succeeded;no-regional-file-retained",
+        "status": "FAO-metadata-and-WFS-verified;4719-reach-bounding-box-snapshot-stored-locally;783-GeoNames-points-screened-by-line-proximity;not-an-administrative-subset;publication-not-approved",
         "reviewFiles": [
-          "national-philippines-river-wfs-source-review-20261026.json"
+          "national-philippines-river-wfs-source-review-20261026.json",
+          "national/reviews/fao-hydrorivers-calabarzon-wfs-screen-20261108.json"
         ],
-        "rawPath": null,
+        "rawPath": "raw/national/fao-hydrorivers-calabarzon-wfs-20261108/",
         "serviceEndpoint": "https://data.apps.fao.org/map/gsrv/gsrv1/aquamaps/wms",
         "queryLayer": "aquamaps:river_network"
       },
       "reuse": {
         "metadata": "The FAO catalog identifies the 2026 dataset as CC BY 4.0. HydroSHEDS v1 terms allow integration into derivative works, but distribution to end users requires a written license at least as protective as the HydroSHEDS license, forbids standalone redistribution, and requires specified attribution. The relationship between those terms and the FAO WFS release still needs confirmation.",
-        "raw": "Only WFS capabilities and a three-feature GeoJSON sample were inspected in memory; no geometry file or query result was retained.",
+        "raw": "Capabilities, hit count and all bounded GeoJSON pages are retained only in Git-ignored research storage; nearest-point rows are also local-only and are not app inputs.",
         "content": "Use for internal waterway discovery only. Do not distribute raw or derived geometry to app users until the FAO/HydroSHEDS terms are reconciled and a qualified reviewer approves the required end-user license and attribution wording."
       },
       "publicationApproval": false,
@@ -7225,7 +7227,7 @@
       "caveats": [
         "The published network is derived from HydroRIVERS/HydroSHEDS and its source grid is 15 arc-seconds; local positional accuracy and completeness are not field-verified.",
         "The catalog describes a river filter of catchment area at least 10 km² or average flow at least 0.1 m³/s, so small streams may be absent.",
-        "The WFS probe used a rectangular bbox around Cavite rather than a province polygon; its 1,420 matching features are not a Cavite feature count.",
+        "An earlier WFS probe used a smaller rectangular bbox around Cavite and returned 1,420 features; the current CALABARZON query returned 4,719 features in a box covering all five province polygons plus adjacent areas. Neither is an exact administrative subset or province feature count.",
         "The probe demonstrated service access and MultiLineString output, not a stable service-level agreement, local river-name completeness, or correct feature classifications.",
         "Perennial/intermittent class attribute semantics require review of the linked FAO technical report before display.",
         "The HydroSHEDS v1 license requires integrated derivative use, end-user license restrictions, and prominent attribution; public geometry is not approved by this source review."
