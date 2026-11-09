@@ -213,6 +213,18 @@
         "localRawDirectory": "data/research/philippines/raw/national/osm-calabarzon-waterway-name-crosscheck-20261108/"
       },
       "publicationApproval": "never automatic"
+    },
+    {
+      "provider": "CALABARZON GeoNames, HydroRIVERS and OSM waterway priority join",
+      "script": "scripts/species/national/review-calabarzon-waterway-three-source-priority.py",
+      "capability": "hash-pinned join of local name-scope pairs to HydroRIVERS and OSM same-name distance screens; exact IDs stay ignored locally",
+      "authentication": "none; reuses pinned local review outputs",
+      "reuseConditions": "A multi-source proximity pattern is prioritization only; it does not establish watercourse identity or occurrence and inherits ODbL/HydroSHEDS distribution review gates",
+      "outputs": {
+        "aggregateReport": "data/research/philippines/national/reviews/calabarzon-waterway-three-source-priority-20261109.json",
+        "localQueue": "data/research/philippines/raw/national/osm-calabarzon-waterway-name-crosscheck-20261108/three-source-priority-20261109.jsonl"
+      },
+      "publicationApproval": "never automatic"
     }
   ],
   "firstIntegratedRegion": "CALABARZON",

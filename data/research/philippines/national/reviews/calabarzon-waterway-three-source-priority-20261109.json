@@ -1,0 +1,63 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "calabarzon-waterway-three-source-priority-20261109",
+  "generatedOn": "2026-11-09",
+  "status": "geoNames-hydrorivers-osm-screens-joined;manual-evidence-review-required;no-identities-validated",
+  "inputs": {
+    "data/research/philippines/raw/national/geonames-ph-20261107/calabarzon-stream-scope-review.jsonl": {
+      "sha256": "5b535f6d65872f224b72c2d1f300b3d9b08ee8d076b041af00a2c8acaa76c454",
+      "rows": 45
+    },
+    "data/research/philippines/raw/national/fao-hydrorivers-calabarzon-wfs-20261108/stream-scope-nearest-line-review.jsonl": {
+      "sha256": "095bd645f09efe081350099d030d242003a041d1f79fdca0f04f9208875ab211",
+      "rows": 46
+    },
+    "data/research/philippines/raw/national/osm-calabarzon-waterway-name-crosscheck-20261108/candidate-crosscheck.jsonl": {
+      "sha256": "530c93fa4b226861c75c8e04791ac553b765abdd1a49c304531dfbecebbc169d",
+      "rows": 45
+    }
+  },
+  "results": {
+    "geoNamesCandidatePoints": 45,
+    "geoNamesToScopeLeadPairs": 46,
+    "pairCountsByProvinceContext": {
+      "province-context-conflict": 11,
+      "province-context-overlap": 35
+    },
+    "candidatePointsWithSameNormalizedNameOsmWaterway": 24,
+    "candidatePointsWithSameNameOsmFeatureWithin1Km": 17,
+    "candidatePointsWithSameNameOsmFeatureWithin5Km": 21,
+    "pairRowsWithHydroRiversLineWithin1Km": 44,
+    "pairRowsWithBothSameNameOsmFeatureAndHydroRiversLineWithin1Km": 18,
+    "distinctCandidatePointsWithBothSourcesWithin1Km": 17,
+    "pairConcurrenceAt1Km": {
+      "province-context-conflict:both-within-1km": 2,
+      "province-context-conflict:hydrorivers-only-within-1km": 9,
+      "province-context-overlap:both-within-1km": 16,
+      "province-context-overlap:hydrorivers-only-within-1km": 17,
+      "province-context-overlap:neither-within-1km": 2
+    },
+    "watercourseIdentitiesValidated": 0,
+    "regionalAssignmentsAdded": 0,
+    "speciesAssertionsAdded": 0,
+    "appDataOrGeometryAdded": false,
+    "publicationApproval": false
+  },
+  "localReviewQueue": {
+    "path": "data/research/philippines/raw/national/osm-calabarzon-waterway-name-crosscheck-20261108/three-source-priority-20261109.jsonl",
+    "rows": 46,
+    "sha256": "8986bc47666ee7b873f581239bc8defbf754bc119f7d908cd700b065449d862b",
+    "gitIgnored": true,
+    "containsExactProviderIds": true,
+    "namesAndCoordinatesCopied": false
+  },
+  "limitations": [
+    "The join is a prioritization tool: GeoNames, OSM and HydroRIVERS may contain matching names while referring to different features.",
+    "OSM is community-maintained; HydroRIVERS is a modeled network; neither source is a field survey.",
+    "Distance uses the earlier regional equirectangular screens and is not a geodetic identity test.",
+    "Province-context overlap/conflict is inherited from a separate name-to-scope comparison and simplified land context; it does not validate or invalidate source identities.",
+    "No occurrence, current habitat, water quality, access, safety, legal boundary, or species presence claim is produced.",
+    "Exact source IDs stay in ignored local storage; no geometry or candidate is admitted to the application."
+  ],
+  "nextAction": "Review the local pairs marked both-within-1km or province-context-conflict against independent study locality descriptions and source-backed maps; record identities only when independent primary evidence supports them, and keep the ODbL/HydroSHEDS public-use gates unresolved until reviewed."
+}
