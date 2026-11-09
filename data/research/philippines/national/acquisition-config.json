@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "status": "research-orchestration-only",
-  "preparedOn": "2026-11-07",
+  "preparedOn": "2026-11-09",
   "policy": {
     "rawDirectory": "data/research/philippines/raw/",
     "rawDirectoryGitIgnored": true,
@@ -199,6 +199,18 @@
       "outputs": {
         "aggregateReport": "data/research/philippines/national/reviews/fao-hydrorivers-calabarzon-stream-scope-priority-20261108.json",
         "localQueue": "data/research/philippines/raw/national/fao-hydrorivers-calabarzon-wfs-20261108/stream-scope-nearest-line-review.jsonl"
+      },
+      "publicationApproval": "never automatic"
+    },
+    {
+      "provider": "OpenStreetMap named waterways versus CALABARZON GeoNames stream-scope candidates",
+      "script": "scripts/species/national/fetch-osm-calabarzon-waterway-name-crosscheck.py",
+      "capability": "one bounded Overpass query for exact candidate-name waterway elements, followed by a local normalized-name and point-to-feature proximity screen",
+      "authentication": "none for this public query; no API key",
+      "reuseConditions": "OpenStreetMap data are ODbL 1.0; retain the exact response locally and review attribution/share-alike obligations before any public dataset or geometry use",
+      "outputs": {
+        "aggregateReport": "data/research/philippines/national/reviews/osm-calabarzon-waterway-name-crosscheck-20261108.json",
+        "localRawDirectory": "data/research/philippines/raw/national/osm-calabarzon-waterway-name-crosscheck-20261108/"
       },
       "publicationApproval": "never automatic"
     }

@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "checkedOn": "2026-11-07",
+  "checkedOn": "2026-11-09",
   "status": "research-only-source-registry",
   "scope": "National acquisition references, freshwater spatial-source leads, MIMAROPA/CALABARZON/Central Luzon identity and inland-water source reviews, and Mindanao regional freshwater survey reviews. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 827,
+  "sourceCount": 828,
   "sources": [
     {
       "id": "aquilino-2011-taal-dna-barcoding-genbank",
@@ -26692,6 +26692,43 @@
         "GeoNames aggregates records from many sources; mirrored or overlapping entries are not independent confirmations.",
         "Feature class H and a place-name point do not verify waterbody identity, water type, salinity, fish presence, fishing access or legal boundaries.",
         "The data are provided as-is; no absent feature should be treated as proof of absence."
+      ]
+    },
+    {
+      "id": "osm-calabarzon-waterway-name-crosscheck-20261108",
+      "title": "CALABARZON named waterway features queried from OpenStreetMap for candidate cross-checking",
+      "provider": "OpenStreetMap contributors via Overpass API",
+      "url": "https://overpass-api.de/api/interpreter",
+      "additionalUrls": [
+        "https://wiki.openstreetmap.org/wiki/Overpass_API",
+        "https://www.openstreetmap.org/copyright",
+        "https://opendatacommons.org/licenses/odbl/1-0/"
+      ],
+      "role": "Secondary community-mapped river and stream name/geometry cross-check for selected CALABARZON GeoNames candidates; not an official hydrographic survey, species occurrence source, or complete inventory.",
+      "checkedOn": "2026-11-08",
+      "sourceYear": 2026,
+      "access": {
+        "status": "one-bounded-overpass-query-completed;251-named-waterway-elements-returned;row-level-data-retained-locally",
+        "reviewFiles": [
+          "national/reviews/osm-calabarzon-waterway-name-crosscheck-20261108.json"
+        ],
+        "rawPath": "raw/national/osm-calabarzon-waterway-name-crosscheck-20261108/"
+      },
+      "reuse": {
+        "metadata": "OpenStreetMap data are offered under ODbL 1.0; public use requires attribution and may trigger share-alike duties for databases or derived databases.",
+        "raw": "The Overpass response and exact candidate/name/geometry crosswalk remain in Git-ignored local research storage.",
+        "content": "Research cross-check only. Name matches and point-to-feature proximity do not verify watercourse identity or fish occurrence. No OSM geometry or derived data are approved for app distribution pending qualified ODbL review."
+      },
+      "publicationApproval": false,
+      "researchStatus": "community-mapped-waterway-name-cross-check;candidate-prioritization-only;zero-identity-and-species-assertions",
+      "license": "Open Database License 1.0 (ODbL)",
+      "licenseUrl": "https://opendatacommons.org/licenses/odbl/1-0/",
+      "caveats": [
+        "The query matched selected candidate name strings in a broad CALABARZON-covering bounding box with margin and adjacent areas; it is not a province-clipped or complete hydrography extract.",
+        "OpenStreetMap is community-maintained and has uneven geographic and feature coverage; its mapped elements are not field-verified by this review.",
+        "The 24 same-normalized-name candidate points and their distances are screening leads only; no watercourse identities were validated.",
+        "A missing OSM feature is not evidence that a watercourse or species is absent.",
+        "No OSM geometry, legal boundary, habitat, access, safety, or species claim was added to the application."
       ]
     }
   ],
