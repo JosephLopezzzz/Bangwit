@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "geonames-hydrolakes-region02-nifep-crosswalk-20261109",
+  "generatedOn": "2026-11-09",
+  "status": "region02-nifep-name-crosswalk-screened;candidate-only;no-identity-or-species-assertions",
+  "purpose": "Screen 13 BFAR Region II NIFEP named lake/reservoir/SWIP leads against already downloaded GeoNames hydrographic names/points and HydroLAKES v1 name/outlet candidates.",
+  "sourceSnapshots": {
+    "regionalInventory": {
+      "path": "data/research/philippines/national-freshwater-region02-inland-water-source-inventory-20261106.json",
+      "sha256": "80547f0822cdccf676783c5e6a60b09806b86f50c960fe1ceb17d060fa1f80ee"
+    },
+    "geoNames": {
+      "path": "data/research/philippines/raw/national/geonames-ph-20261107/hydrographic-candidates.jsonl",
+      "sha256": "ee3de278b4443ba7b7e441ce75275d2d8c8aebf757a77dea2be1c7fb8d7c33f4",
+      "reviewArtifact": "geonames-ph-hydrography-extract-20261107.json"
+    },
+    "geoNamesAdminOverlay": {
+      "path": "data/research/philippines/raw/national/geonames-ph-20261107/point-admin-overlay-review.jsonl",
+      "sha256": "d413a93dbbb68e860ffa76f9874a327d5580b4c93c08843f5cfb010f760b396d"
+    },
+    "hydroLakes": {
+      "path": "data/research/philippines/raw/national/hydrolakes-philippines-v1-waterbody-candidates.jsonl",
+      "sha256": "357a30e95c8580a64a295a2bb329026aff15612b7b9c0b084d72552249134030",
+      "reviewArtifact": "hydrolakes-philippines-candidate-extract-20261107.json"
+    }
+  },
+  "searchMethod": {
+    "regionalLeadCount": 13,
+    "matchRules": [
+      "Case/diacritic/punctuation-normalized whole-name equality across GeoNames primary and alternate labels.",
+      "Base-name equality with compatible or unspecified feature type is retained as a weaker name candidate; explicit lake/river/stream/reservoir/SWIP type conflicts are reported separately.",
+      "Curated source spelling and alias variants retain their explicit relationship status; unresolved variants are not treated as aliases.",
+      "Province overlay context and nearest HydroLAKES pour-point distances are triage only, never identity evidence."
+    ],
+    "geonamesCandidateFeatureCount": 13513,
+    "hydrolakesCandidateCount": 1298,
+    "nearestOutletThresholdKm": 10
+  },
+  "summary": {
+    "leadsWithGeonamesNameMatches": 0,
+    "geonamesNameFeatureMatches": 0,
+    "matchesInExpectedProvinceContext": 0,
+    "differentWaterTypeNameCollisions": 5,
+    "leadsWithDifferentWaterTypeNameCollisions": 3,
+    "leadsWithHydrolakesNameMatches": 0,
+    "hydrolakesNameMatches": 0,
+    "geonamesMatchesWithHydrolakesOutletWithin10Km": 0,
+    "waterbodyIdentitiesValidated": 0,
+    "speciesAssertions": 0,
+    "publicGeometryAdded": false,
+    "publicationApproval": false
+  },
+  "localOutput": {
+    "path": "data/research/philippines/raw/national/geonames-region02-nifep-hydrolakes-crosswalk-20261109.jsonl",
+    "rows": 13,
+    "sha256": "38c72a3d7a8079028928614a31b57d4d2333e36b6d56fbe65f54cc664b9ad6f0",
+    "gitIgnored": true,
+    "appBundleIncluded": false
+  },
+  "limitations": [
+    "This is a source-name and point crosswalk for a limited BFAR NIFEP lead list, not a complete Region II lake/reservoir/SWIP inventory.",
+    "GeoNames points can identify settlements, landmarks, or generalized features and do not provide shorelines; HydroLAKES pour points are outlets, not lake centers or polygons.",
+    "HydroLAKES v1 targets waterbodies at least 10 hectares and may include reservoirs; it omits river and wetland polygons and has only a small number of named Philippine rows.",
+    "The same spelling, nearby point, province context, or HydroLAKES type code does not confirm a waterbody identity, project status, fish presence, access, or legal boundary.",
+    "Missing name matches are not evidence that a feature or species is absent.",
+    "Prior source reviews identify unresolved Casili/Cassily identity and Piat/Mapannao identity; these remain unresolved here.",
+    "No occurrence, species, habitat, salinity, diet, catchability, legal, safety, or public-app claim is made."
+  ]
+}

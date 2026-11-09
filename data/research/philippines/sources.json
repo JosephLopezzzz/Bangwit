@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "checkedOn": "2026-11-09",
+  "checkedOn": "2026-11-10",
   "status": "research-only-source-registry",
   "scope": "National acquisition references, freshwater spatial-source leads, MIMAROPA/CALABARZON/Central Luzon identity and inland-water source reviews, and Mindanao regional freshwater survey reviews. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 829,
+  "sourceCount": 836,
   "sources": [
     {
       "id": "aquilino-2011-taal-dna-barcoding-genbank",
@@ -6963,7 +6963,8 @@
         "reviewFiles": [
           "national-philippines-hydrolakes-asia-subset-screen-20261030.json",
           "national/reviews/hydrolakes-philippines-candidate-extract-20261107.json",
-          "national/reviews/geonames-calabarzon-hydrolakes-proximity-crosswalk-20261108.json"
+          "national/reviews/geonames-calabarzon-hydrolakes-proximity-crosswalk-20261108.json",
+          "national/reviews/geonames-hydrolakes-region02-nifep-crosswalk-20261109.json"
         ],
         "rawPath": "raw/hydrolakes-asia-subset-screen-20261030/",
         "archive": {
@@ -26673,8 +26674,12 @@
         "reviewFiles": [
           "national/reviews/geonames-ph-hydrography-extract-20261107.json",
           "national/reviews/geonames-ph-hydrography-geoboundaries-overlay-20261107.json",
+          "national/reviews/geonames-region02-hydrographic-candidate-extract-20261109.json",
+          "national/reviews/geonames-region02-major-river-name-crosswalk-20261109.json",
+          "national/reviews/geonames-region02-dost-ludong-site-crosswalk-20261109.json",
           "national/reviews/geonames-calabarzon-hydrographic-candidates-20261107.json",
           "national/reviews/geonames-calabarzon-hydrolakes-proximity-crosswalk-20261108.json",
+          "national/reviews/geonames-hydrolakes-region02-nifep-crosswalk-20261109.json",
           "national/reviews/geonames-calabarzon-stream-scope-crosswalk-20261108.json",
           "national/reviews/calabarzon-waterway-three-source-priority-20261109.json"
         ],
@@ -26766,6 +26771,256 @@
         "The phrase 'throughout Philippines' is not accompanied here by a N. villadolidi station, date, voucher, or named Cagayan River locality.",
         "A broad historical range summary does not confirm current presence in any specific Luzon watershed.",
         "The source does not establish habitat salinity, diet, catchability, fishing rules, safety, or exact geometry."
+      ]
+    },
+    {
+      "id": "nfrdi-tauli-2022-ibulao-river-fish-composition",
+      "title": "Fish species composition and distribution from 2015 to 2019 in the Ibulao River, Ifugao, Cordillera, Philippines",
+      "provider": "Tauli et al.; Bureau of Fisheries and Aquatic Resources - Cordillera Administrative Region; National Fisheries Research and Development Institute; The Philippine Journal of Fisheries",
+      "url": "https://nfrdi.da.gov.ph/tpjf/vol29/Fish%20Species%20Composition%20and%20Distribution%20from%202015%20to%202019%20in%20the%20Ibulao%20River%20Ifugao%20Cordillera%20Philippines.pdf",
+      "additionalUrls": [
+        "https://doi.org/10.31398/tpjf/29.1.2020C0016",
+        "https://creativecommons.org/licenses/by-nc/4.0/"
+      ],
+      "role": "Open, historical landed-catch fish composition study for the Ibulao River in Ifugao, an upstream system that the paper says drains to Magat Dam. It is adjacent CAR context, not a Region II-local occurrence dataset or full-basin checklist.",
+      "checkedOn": "2026-11-09",
+      "sourceYear": 2022,
+      "citation": "Tauli, M. P., Garcia, M. P. C., Podeque, J. R. P., Signey, L. L., Sarmiento, K., & Santos, M. D. (2022). Fish Species Composition and Distribution from 2015 to 2019 in the Ibulao River, Ifugao, Cordillera, Philippines. The Philippine Journal of Fisheries, 29(1), 90-95. https://doi.org/10.31398/tpjf/29.1.2020C0016",
+      "access": {
+        "status": "official-nfrdi-fulltext-downloaded-and-table-license-visually-reviewed;source-table-conflicts-recorded;research-only",
+        "reviewFiles": [
+          "national-freshwater-region02-adjacent-ibulao-river-tauli-2022-review-20261109.json"
+        ],
+        "relevantPages": [90, 91, 92, 95],
+        "localRawSnapshot": "raw/national/adjacent-ibulao-river-tauli-2022/tauli-et-al-2022-ibulao-river-fish-composition.pdf",
+        "localRawSha256": "89F52DA5A4DF70E06866A9197A5CBA0C7ED34F2D0DC62C9F560327BC13655340"
+      },
+      "reuse": {
+        "metadata": "The article states CC BY-NC 4.0; attribute the authors and journal and check the noncommercial condition for any later use.",
+        "raw": "The full PDF remains in Git-ignored research storage and is not redistributed from this repository.",
+        "content": "A short attributed research note preserves source labels and quality conflicts only. The fish table is not copied into app data. No app/publication permission is granted; Bangwit's future commercial status is unresolved."
+      },
+      "publicationApproval": false,
+      "researchStatus": "historical-ibulao-landed-catch-survey;adjacent-to-region02-magat-system;no-sample-coordinate-or-voucher-crosswalk",
+      "license": "Creative Commons Attribution-NonCommercial 4.0 International (CC BY-NC 4.0)",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "caveats": [
+        "The paper reports catches from Ifugao landing centers Lamut, Kiangan and Lagawe, not fish-level capture stations; no coordinates, voucher catalog numbers, or sequence accessions were located.",
+        "The paper conflicts internally on family counts, a common-carp spelling, and one landing-center label; preserve verbatim labels until resolved.",
+        "Four BFARCAR identifiers and one genus-level fish label are unresolved; source status labels have not been independently audited.",
+        "No Isabela locality is assigned to a fish record, and hydrologic connection to Magat Dam does not transfer these records into Region II.",
+        "A missing Kiangan 2019 sample due to staffing is not evidence of absence.",
+        "No public app row, occurrence, geometry, diet, access, legal, or safety claim is approved."
+      ]
+    },
+    {
+      "id": "dost-science-for-change-2021-isabela-freshwater-fisheries-center-site-leads",
+      "title": "DOST Science for Change account of Isabela State University's Freshwater Fisheries R&D Center and possible ludong fishing grounds",
+      "provider": "Department of Science and Technology, Philippines",
+      "url": "https://www.dost.gov.ph/phocadownload/Downloads/Resources/Publications/2021/Science-For-Change.pdf",
+      "role": "Program-level source for candidate river/place labels associated with a DOST account of possible ludong fishing grounds in 11 municipalities; not a species checklist, occurrence table, or legal fishing-rule source.",
+      "checkedOn": "2026-11-09",
+      "sourceYear": 2021,
+      "access": {
+        "status": "official-dost-publication-readable;program-account-and-visual-site-panel-reviewed;research-leads-only",
+        "reviewFiles": [
+          "national-freshwater-region02-dost-isabela-ludong-river-site-leads-20261109.json",
+          "national/reviews/geonames-region02-dost-ludong-site-crosswalk-20261109.json"
+        ],
+        "relevantPrintedPages": [25, 26, 27]
+      },
+      "reuse": {
+        "metadata": "The publication is cited as an official DOST source; no item-specific dataset or image reuse license was established in this review.",
+        "raw": "No source image or raw dataset is copied into the project.",
+        "content": "Only concise attributed program context and source-spelled place leads are retained for research. Do not treat the 11-municipality statement as site-resolved fish occurrence or publish the leads as verified locations."
+      },
+      "publicationApproval": false,
+      "researchStatus": "program-level-ludong-habitat-leads;11-municipalities;18-place-strings-including-locality-qualifiers;site-crosswalk-and-underlying-data-pending",
+      "caveats": [
+        "The account says the locations could be fishing grounds; it provides no site-specific fish sampling dates, methods, effort, voucher IDs, or coordinates.",
+        "The paper names Cestraeus sp. for the project and does not establish a species-level taxon for each location.",
+        "The source pairs Maconacon with Reina Mercedes and has an ambiguous Palanan location string; preserve both as unresolved.",
+        "The separate mention of Blue River is not linked to the panel's Blues River label.",
+        "A quoted statement about where ludong may be fished is not a legal rule or proof of site presence.",
+        "No geometry, current presence, species, diet, catchability, access, safety, or public app claim is approved."
+      ]
+    },
+    {
+      "id": "gbif-region02-river-field-counts-20261109",
+      "title": "GBIF Catalogue of Life XR Actinopterygii waterBody/locality candidate review for Region II rivers",
+      "provider": "Global Biodiversity Information Facility (GBIF) occurrence search API",
+      "url": "https://api.gbif.org/v1/occurrence/search",
+      "additionalUrls": [
+        "https://www.gbif.org/occurrence/search",
+        "https://www.gbif.org/terms",
+        "https://techdocs.gbif.org/en/data-processing/taxonomy-interpretation",
+        "https://techdocs.gbif.org/en/data-use/api-downloads"
+      ],
+      "role": "Public API triage and bounded occurrence retrieval for source-reported Region II river names and DOST site strings; retrieved rows remain in ignored local research storage pending source, taxonomy, locality, and rights review.",
+      "checkedOn": "2026-11-09",
+      "sourceYear": 2026,
+      "access": {
+        "status": "public-api-col-xr-actinopterygii-screen-and-row-source-crosswalk-completed;waterbody-and-locality-fields;research-only;unsupported-class-attempt-discarded",
+        "reviewFiles": [
+          "national/reviews/gbif-region02-river-field-counts-col-filtered-20261109.json",
+          "national/reviews/gbif-region02-river-record-candidate-review-col-filtered-20261109.json",
+          "national/reviews/gbif-region02-river-candidate-source-review-20261109.json",
+          "national/reviews/region02-cagayan-magat-fish-taxonomy-crosswalk-20261110.json"
+        ],
+        "rawPath": "raw/national/gbif-region02-river-field-counts-col-filtered-20261109/, raw/national/gbif-region02-river-records-col-filtered-20261109/, and source metadata/BOLD sanitized snapshots under raw/national/"
+      },
+      "reuse": {
+        "metadata": "Each GBIF query response records its exact query URL and response hash in the review artifact.",
+        "raw": "Count responses and bounded occurrence search responses are retained in Git-ignored research storage; the coordinate-free row review is also local-only.",
+        "content": "Counts prioritize follow-up only. Twelve BOLD process IDs were cross-checked against BOLD metadata and the Catalog of Fishes; five CAS Magat vouchers and other locality-conflicted rows remain research candidates. Liza accepted-name and Rhinogobius family conflicts remain held. No candidate is admitted to the public app."
+      },
+      "publicationApproval": false,
+      "researchStatus": "region02-COL-XR-Actinopterygii-record-source-crosswalk;Cagayan-two-historical-taxa;Magat-five-vouchers-held;site-conflicts-preserved;unsupported-class-only-output-discarded;zero-absence-inference",
+      "caveats": [
+        "The corrected count screen uses country=PH, Catalogue of Life XR Actinopterygii taxonKey=8VR36, and checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b. This selected taxonomy scope is not a complete inventory of all fish lineages.",
+        "An earlier unsupported free-text class=Actinopterygii attempt was ignored by GBIF and returned mixed taxa; its counts and rows were discarded and are not evidence.",
+        "Overlapping waterBody and locality result counts cannot be summed as unique occurrence records.",
+        "The two Cagayan BOLD taxa are supported by historical BOLD specimen metadata and primary literature, but their site fields have no coordinate accuracy and do not supply reach geometry or current-presence evidence.",
+        "Five Magat records have historical CAS collection text for Bayombong, Nueva Vizcaya; 3,257 m coordinate uncertainty and record-quality flags preclude point mapping and current-presence claims.",
+        "Cagayan River homonyms in Misamis Oriental, adjacent Ifugao records, a Philippine Sea/Cagayan locality conflict, one high-uncertainty Aparri record, and a genus-level NHM record remain excluded or held as documented in the source review.",
+        "A zero result is not evidence that a river, site, or fish is absent.",
+        "No geometry, species presence, diet, catchability, habitat, access, safety, legal, or public-app claim is approved."
+      ]
+    },
+    {
+      "id": "bold-region02-cagayan-river-catfish-records-20261109",
+      "title": "BOLD/iBOL Cagayan River catfish specimen and barcode records",
+      "provider": "International Barcode of Life project (iBOL); Barcode of Life Data Systems (BOLD); University of the Philippines Diliman Institute of Biology",
+      "url": "https://portal.boldsystems.org/",
+      "additionalUrls": [
+        "https://www.boldsystems.org/data/api/",
+        "https://portal.boldsystems.org/api",
+        "https://doi.org/10.15468/inygc6"
+      ],
+      "role": "Twelve BOLD sample/process records were retrieved from the GBIF iBOL dataset crosswalk. The BOLD records name seven Plicofollis magatensis and five Clarias macrocephalus samples from Cagayan River, Cagayan, with 2011 dates, morphology-based identifications, identifier Jonas P. Quilang, and GenBank accessions. Historical research evidence only; no current-presence or map point is inferred.",
+      "checkedOn": "2026-11-10",
+      "sourceYear": 2011,
+      "access": {
+        "status": "public-BOLD-portal-API-record-metadata-retrieved;12-processIDs;sequence-strings-not-retained;Catalog-name-family-crosscheck-completed;sample-reidentification-and-rights-review-pending",
+        "reviewFiles": [
+          "national/reviews/gbif-region02-river-candidate-source-review-20261109.json",
+          "national/reviews/region02-cagayan-magat-fish-taxonomy-crosswalk-20261110.json"
+        ],
+        "rawPath": "raw/national/bold-region02-cagayan-river-catfish-records-20261109/ (sanitized metadata only)"
+      },
+      "reuse": {
+        "metadata": "The GBIF iBOL occurrence dataset reports CC BY 4.0 and DOI 10.15468/inygc6. Each BOLD process ID, sample ID, date, taxon name, locality string, identifier, method, and accession is preserved with a source URL in the review report.",
+        "raw": "No nucleotide sequence or exact coordinate is retained. The report records coordinate accuracy as not supplied.",
+        "content": "The separate Philippine Journal of Science study is a primary cross-reference but its article-specific reuse terms were not verified. No app publication approval is granted by this record."
+      },
+      "publicationApproval": false,
+      "researchStatus": "Cagayan-River-2011-two-species-twelve-BOLD-process-records;historical-only;no-coordinate-accuracy;research-only",
+      "caveats": [
+        "BOLD's Cagayan River site string and Cagayan province are source metadata, not a verified sampling reach or river geometry.",
+        "All twelve records are historical 2011 samples and do not show current presence, abundance, catchability, or legal access.",
+        "The two source names and family placements were cross-checked against the Catalog of Fishes; that nomenclatural check does not independently re-identify the BOLD specimens.",
+        "The primary article's two-per-species phylogenetic subset must not be conflated with all twelve BOLD process records.",
+        "No diet, safety, salinity, habitat suitability, or public app claim is approved."
+      ]
+    },
+    {
+      "id": "yu-quilang-2014-philippines-catfish-phylogeny-cagayan-records",
+      "title": "Molecular Phylogeny of Catfishes in the Philippines using mitochondrial and nuclear genes",
+      "provider": "Yu and Quilang; Philippine Journal of Science; Department of Science and Technology",
+      "url": "https://philjournalsci.dost.gov.ph/molecular-phylogeny-of-catfishes-teleostei-siluriformes-in-the-philippines-using-the-mitochondrial-genes-coi-cyt-b-16s-rrna-and-the-nuclear-genes-rag1-and-rag2/",
+      "additionalUrls": [
+        "https://philjournalsci.dost.gov.ph/images/pdf/pjs_pdf/vol143no2/pdf/Molecular_phylogency_of_catfishes.pdf"
+      ],
+      "role": "Primary Philippine study of eleven catfish taxa using morphology and genetic markers. Its table includes Cagayan-area Clarias macrocephalus and Plicofollis magatensis sample/voucher/accession context. It is used as historical source context and a taxonomic-source lead, not as a full Region II checklist or current occurrence claim.",
+      "checkedOn": "2026-11-09",
+      "sourceYear": 2014,
+      "citation": "Yu, S. C. S., & Quilang, J. P. (2014). Molecular Phylogeny of Catfishes (Teleostei: Siluriformes) in the Philippines Using the Mitochondrial Genes COI, Cyt b, 16S rRNA, and the Nuclear Genes Rag1 and Rag2. Philippine Journal of Science, 143(2), 187-198.",
+      "access": {
+        "status": "publisher-primary-article-text-reviewed;direct-PDF-request-returned-403;publication-rights-terms-not-verified",
+        "reviewFiles": [
+          "national/reviews/gbif-region02-river-candidate-source-review-20261109.json"
+        ],
+        "rawPath": null
+      },
+      "reuse": {
+        "metadata": "Bibliographic and brief factual metadata are attributed. Article-specific reuse license was not established.",
+        "raw": "No article PDF, tables, figures, or sequence strings are bundled in the repository.",
+        "content": "Do not project article-derived text, figure, table, or full checklist content into the app until reuse terms and taxonomy are reviewed."
+      },
+      "publicationApproval": false,
+      "researchStatus": "Cagayan-catfish-primary-study-cross-reference;two-species-context;historical-only;reuse-and-scope-review-pending",
+      "caveats": [
+        "The paper's phylogenetic subset contains two specimens per species; this subset is not the same as all BOLD process records returned by the API.",
+        "Source collection-site strings are not precise river reach geometries.",
+        "The paper does not establish current presence, abundance, diet, catchability, legal access, safety, or a complete river species checklist."
+      ]
+    },
+    {
+      "id": "calacademy-catalog-region02-cagayan-magat-taxonomy-crosswalk-20261110",
+      "title": "Eschmeyer's Catalog of Fishes direct-record cross-check for Cagayan and Magat river candidates",
+      "provider": "California Academy of Sciences, Eschmeyer's Catalog of Fishes",
+      "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/",
+      "additionalUrls": [
+        "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=4662",
+        "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=53678",
+        "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=18734",
+        "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=33583",
+        "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=43687",
+        "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=31803",
+        "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=45369"
+      ],
+      "role": "Direct taxonomic-name and family cross-check for the two Cagayan River BOLD/iBOL source labels and four CAS Magat River voucher labels; one Magat-associated synonym/type-locality page is recorded as historical context only. Not a re-identification or occurrence source.",
+      "checkedOn": "2026-11-10",
+      "sourceYear": 2026,
+      "access": {
+        "status": "seven-direct-Catalog-record-pages-returned-HTTP-200;online-version-updated-2026-10-20;two-authority-conflicts-held;research-only",
+        "reviewFiles": [
+          "national/reviews/region02-cagayan-magat-fish-taxonomy-crosswalk-20261110.json"
+        ],
+        "rawPath": "raw/national/region02-cagayan-magat-catalog-taxonomy-20261110/ (Git-ignored local HTML snapshots)"
+      },
+      "reuse": {
+        "metadata": "Direct record IDs and short status/family statements are cited in the research report.",
+        "raw": "Full HTML snapshots are retained only in Git-ignored local research storage.",
+        "content": "No item-specific reuse terms were established; no Catalog page text, images, or bulk dataset is approved for app projection. Preserve unresolved names and family conflicts pending expert review."
+      },
+      "publicationApproval": false,
+      "researchStatus": "six-source-name-crosschecks;four-no-recorded-conflict;Liza-Chelon-Planiliza-conflict;Rhinogobius-family-conflict;Zenarchopterus-magatensis-synonym-type-locality-context;research-only",
+      "caveats": [
+        "The Catalog cross-check does not independently verify specimen identification or collection locality.",
+        "GBIF uses Planiliza melinopterus for the CAS name Liza melinopterus; WoRMS uses Planiliza melinoptera; the current Catalog entry uses Chelon melinopterus. Hold the preferred display name.",
+        "GBIF places Rhinogobius bucculentus in Gobiidae while the Catalog places it in Oxudercidae: Gobionellinae. Preserve both and hold family normalization.",
+        "No current-presence, abundance, diet, catchability, access, rules, safety, geometry, or public app claim follows from taxonomy status."
+      ]
+    },
+    {
+      "id": "worms-region02-magat-liza-name-conflict-20261110",
+      "title": "WoRMS name relation for the Magat River Liza melinopterus candidate",
+      "provider": "World Register of Marine Species (WoRMS)",
+      "url": "https://www.marinespecies.org/aphia.php?p=taxlist&tName=Liza",
+      "additionalUrls": [
+        "https://www.marinespecies.org/aphia.php?id=1509596&p=taxdetails"
+      ],
+      "role": "Independent marine-name-register cross-check for the old CAS source label Liza melinopterus; WoRMS lists it as Planiliza melinoptera, differing from GBIF's Planiliza melinopterus and the current Catalog of Fishes combination Chelon melinopterus. Taxonomy only; not specimen identification or Magat locality evidence.",
+      "checkedOn": "2026-11-10",
+      "sourceYear": 2026,
+      "access": {
+        "status": "official-WoRMS-name-list-page-reviewed;source-page-generated-2026-10-05;direct-taxon-detail-returned-403;research-only",
+        "reviewFiles": [
+          "national/reviews/region02-cagayan-magat-fish-taxonomy-crosswalk-20261110.json"
+        ],
+        "rawPath": null
+      },
+      "reuse": {
+        "metadata": "The taxon-list entry and its link were reviewed; no item-specific data reuse terms were assessed.",
+        "raw": "No raw WoRMS response is bundled.",
+        "content": "This entry documents a taxonomy disagreement only. It is not approval to publish copied WoRMS text, data, or imagery."
+      },
+      "publicationApproval": false,
+      "researchStatus": "Liza-melinopterus-listed-as-Planiliza-melinoptera;conflict-with-GBIF-and-Catalog;research-only",
+      "caveats": [
+        "The underlying CAS specimen remains identified under its source-recorded name and is not re-identified by this name-list page.",
+        "Do not choose among competing genus/species spellings without a documented taxonomic decision."
       ]
     }
   ],

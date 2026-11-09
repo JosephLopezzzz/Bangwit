@@ -1,0 +1,172 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "geonames-region02-major-river-name-crosswalk-20261109",
+  "generatedOn": "2026-11-09",
+  "status": "region02-major-river-name-crosswalk-screened;candidate-only;no-identity-or-species-assertions",
+  "purpose": "Screen the Cagayan Riverine Zone plan's main river and named major tributaries against the already extracted Region II GeoNames hydrography point queue.",
+  "sourceSnapshots": {
+    "regionalInventory": {
+      "path": "data/research/philippines/national-freshwater-region02-inland-water-source-inventory-20261106.json",
+      "sha256": "80547f0822cdccf676783c5e6a60b09806b86f50c960fe1ceb17d060fa1f80ee"
+    },
+    "geoNamesRegion02Candidates": {
+      "path": "data/research/philippines/raw/national/geonames-region02-hydrographic-candidates-20261109.jsonl",
+      "sha256": "f08eb07108c8033c3c78b35b4506e8f31e3f45516025e15118c0df7e63498345"
+    }
+  },
+  "searchMethod": {
+    "planRiverLeadCount": 9,
+    "nameRule": "Case/diacritic/punctuation-normalized whole-label equality after removing generic river/creek/stream terms; primary and alternate labels are distinguished.",
+    "componentRule": "The source composite Siffu-Mallig is also screened as two separate component names; component hits are not counted as a match to the composite name.",
+    "specificBranchRule": "Names beginning with Pinacanauan plus another specific locality term are reported as related-name candidates, not exact matches.",
+    "candidateRowsSearched": 602,
+    "provinceContext": "Retained as a source point-overlay label for triage; no expected-province conflict is inferred because the planning text does not assign a province to each river lead."
+  },
+  "summary": {
+    "leadsWithNormalizedNameCandidates": 7,
+    "normalizedNameLeadCandidateRows": 9,
+    "uniqueNormalizedNameGeonameIds": 8,
+    "compositeLeadsWithDirectNameMatch": 0,
+    "compositeComponentCandidateRows": 2,
+    "relatedSpecificPinacanauanCandidateRows": 2,
+    "waterbodyIdentitiesValidated": 0,
+    "speciesAssertions": 0,
+    "publicGeometryAdded": false,
+    "publicationApproval": false
+  },
+  "leadResults": {
+    "Cagayan River": {
+      "candidateRows": 0,
+      "primaryLabelMatches": 0,
+      "alternateLabelMatches": 0,
+      "featureCodeCounts": {},
+      "provinceContextCounts": {},
+      "status": "no-normalized-name-candidate-in-this-snapshot"
+    },
+    "Addalam": {
+      "candidateRows": 1,
+      "primaryLabelMatches": 1,
+      "alternateLabelMatches": 0,
+      "featureCodeCounts": {
+        "STM": 1
+      },
+      "provinceContextCounts": {
+        "Isabela": 1
+      },
+      "status": "normalized-name-candidates-found"
+    },
+    "Magat": {
+      "candidateRows": 1,
+      "primaryLabelMatches": 1,
+      "alternateLabelMatches": 0,
+      "featureCodeCounts": {
+        "STM": 1
+      },
+      "provinceContextCounts": {
+        "Isabela": 1
+      },
+      "status": "normalized-name-candidates-found"
+    },
+    "Ilagan": {
+      "candidateRows": 1,
+      "primaryLabelMatches": 0,
+      "alternateLabelMatches": 1,
+      "featureCodeCounts": {
+        "STM": 1
+      },
+      "provinceContextCounts": {
+        "Isabela": 1
+      },
+      "status": "normalized-name-candidates-found"
+    },
+    "Siffu-Mallig": {
+      "candidateRows": 0,
+      "primaryLabelMatches": 0,
+      "alternateLabelMatches": 0,
+      "featureCodeCounts": {},
+      "provinceContextCounts": {},
+      "status": "no-normalized-name-candidate-in-this-snapshot"
+    },
+    "Dummun": {
+      "candidateRows": 1,
+      "primaryLabelMatches": 1,
+      "alternateLabelMatches": 0,
+      "featureCodeCounts": {
+        "STM": 1
+      },
+      "provinceContextCounts": {
+        "Cagayan": 1
+      },
+      "status": "normalized-name-candidates-found"
+    },
+    "Pared": {
+      "candidateRows": 1,
+      "primaryLabelMatches": 1,
+      "alternateLabelMatches": 0,
+      "featureCodeCounts": {
+        "STM": 1
+      },
+      "provinceContextCounts": {
+        "Cagayan": 1
+      },
+      "status": "normalized-name-candidates-found"
+    },
+    "Pinacanauan": {
+      "candidateRows": 3,
+      "primaryLabelMatches": 3,
+      "alternateLabelMatches": 0,
+      "featureCodeCounts": {
+        "STM": 3
+      },
+      "provinceContextCounts": {
+        "Isabela": 3
+      },
+      "status": "normalized-name-candidates-found"
+    },
+    "Chico": {
+      "candidateRows": 1,
+      "primaryLabelMatches": 1,
+      "alternateLabelMatches": 0,
+      "featureCodeCounts": {
+        "STM": 1
+      },
+      "provinceContextCounts": {
+        "Cagayan": 1
+      },
+      "status": "normalized-name-candidates-found"
+    }
+  },
+  "compositeNameResults": {
+    "Siffu-Mallig": {
+      "compositeNameMatch": false,
+      "components": [
+        "Siffu",
+        "Mallig"
+      ],
+      "componentCandidateRows": 2,
+      "interpretation": "Component labels are separate discovery leads; this does not resolve whether the source composite denotes one river system or linked rivers."
+    }
+  },
+  "relatedNameResults": {
+    "Pinacanauan": {
+      "exactBaseNameCandidateRows": 3,
+      "specificCompoundCandidateRows": 2,
+      "interpretation": "Specific locality-qualified labels are kept separate; point gazetteer names do not establish whether they are branches, reaches, or distinct rivers."
+    }
+  },
+  "localOutput": {
+    "path": "data/research/philippines/raw/national/geonames-region02-major-river-name-crosswalk-20261109.jsonl",
+    "rows": 13,
+    "sha256": "f449c2cb4a416b212aa28c12925df9075e569e7f8d8a9756203623aaec467340",
+    "gitIgnored": true,
+    "appBundleIncluded": false
+  },
+  "limitations": [
+    "The planning source is a 2005-2030 regional framework, not a current hydrographic inventory or fish survey.",
+    "GeoNames feature-H points and labels are heterogeneous gazetteer candidates, not river centerlines, basin boundaries, verified tributary topology, or current waterbody conditions.",
+    "A normalized name or alternate label may refer to a settlement, reach, branch, historical name, or ambiguous feature; no identity or hydrologic connection is confirmed.",
+    "No per-river expected province was established from the plan, so overlay province labels are context only and are not conflict findings.",
+    "A missing candidate is not evidence that a river is absent; the candidate list excludes unresolved points outside one land-province polygon and has uneven source coverage.",
+    "No fish occurrence, habitat, access, salinity, legal, safety, or public-app claim is made."
+  ]
+}

@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "geonames-region02-hydrographic-candidate-extract-20261109",
+  "generatedOn": "2026-11-09",
+  "status": "region02-geonames-water-feature-points-extracted;candidate-only;no-waterbody-or-species-validation",
+  "purpose": "Create a source-reproducible discovery queue of GeoNames hydrographic name/point records whose approximate WGS84 point falls inside one provincial polygon for a Region II province.",
+  "regionScope": {
+    "name": "Cagayan Valley / Region II",
+    "provinces": [
+      "Batanes",
+      "Cagayan",
+      "Isabela",
+      "Nueva Vizcaya",
+      "Quirino"
+    ],
+    "selectionRule": "GeoNames feature class H candidate joined by geonameId to the existing point-to-admin overlay; overlayProvinceNameCandidate in Region II provinces and coarseOverlayStatus inside-one-land-admin2-polygon."
+  },
+  "sourceSnapshots": {
+    "geoNamesHydrographicCandidates": {
+      "path": "data/research/philippines/raw/national/geonames-ph-20261107/hydrographic-candidates.jsonl",
+      "sha256": "ee3de278b4443ba7b7e441ce75275d2d8c8aebf757a77dea2be1c7fb8d7c33f4"
+    },
+    "geoNamesAdminOverlay": {
+      "path": "data/research/philippines/raw/national/geonames-ph-20261107/point-admin-overlay-review.jsonl",
+      "sha256": "d413a93dbbb68e860ffa76f9874a327d5580b4c93c08843f5cfb010f760b396d"
+    }
+  },
+  "summary": {
+    "philippinesGeoNamesHydrographicCandidates": 13513,
+    "philippinesOverlayRows": 13513,
+    "region02ProvincePointCandidates": 602,
+    "namedCandidates": 602,
+    "provinceCounts": {
+      "Batanes": 2,
+      "Cagayan": 316,
+      "Isabela": 184,
+      "Nueva Vizcaya": 74,
+      "Quirino": 26
+    },
+    "featureCodeCounts": {
+      "ANCH": 1,
+      "BAY": 1,
+      "CHNM": 1,
+      "CNL": 5,
+      "FLLS": 2,
+      "LGN": 1,
+      "LK": 12,
+      "SPNG": 18,
+      "STM": 551,
+      "STMA": 1,
+      "STMI": 5,
+      "STMX": 3,
+      "WTRC": 1
+    },
+    "provinceFeatureCodeCounts": {
+      "Batanes|ANCH": 1,
+      "Batanes|STM": 1,
+      "Cagayan|BAY": 1,
+      "Cagayan|CHNM": 1,
+      "Cagayan|CNL": 5,
+      "Cagayan|FLLS": 1,
+      "Cagayan|LGN": 1,
+      "Cagayan|LK": 6,
+      "Cagayan|SPNG": 10,
+      "Cagayan|STM": 283,
+      "Cagayan|STMA": 1,
+      "Cagayan|STMI": 5,
+      "Cagayan|STMX": 1,
+      "Cagayan|WTRC": 1,
+      "Isabela|FLLS": 1,
+      "Isabela|LK": 5,
+      "Isabela|SPNG": 7,
+      "Isabela|STM": 171,
+      "Nueva Vizcaya|LK": 1,
+      "Nueva Vizcaya|SPNG": 1,
+      "Nueva Vizcaya|STM": 71,
+      "Nueva Vizcaya|STMX": 1,
+      "Quirino|STM": 25,
+      "Quirino|STMX": 1
+    },
+    "waterbodyIdentitiesValidated": 0,
+    "speciesAssertions": 0,
+    "publicGeometryAdded": false,
+    "publicationApproval": false
+  },
+  "localOutput": {
+    "path": "data/research/philippines/raw/national/geonames-region02-hydrographic-candidates-20261109.jsonl",
+    "rows": 602,
+    "sha256": "f08eb07108c8033c3c78b35b4506e8f31e3f45516025e15118c0df7e63498345",
+    "gitIgnored": true,
+    "appBundleIncluded": false
+  },
+  "limitations": [
+    "GeoNames is a heterogeneous gazetteer of water-related feature names and points, not official river lines, lake shorelines, wetland polygons, reservoir boundaries, or fish records.",
+    "The province overlay uses approximate source points and land administrative polygons; the result is a candidate attribution, not a verified hydrologic or administrative crosswalk.",
+    "The selection excludes features whose points fall outside a single land-province polygon, including offshore and unresolved boundary candidates; it is not a complete Region II hydrography list.",
+    "Feature-code labels and names do not independently verify channel identity, feature type, present-day condition, salinity, fish presence, access, or legal status.",
+    "Batanes has only two candidate points in this snapshot. This is a source-coverage observation, not evidence that inland waters are absent.",
+    "A missing feature or species is not evidence of absence. No candidate geometry or species claim is approved for app publication."
+  ]
+}

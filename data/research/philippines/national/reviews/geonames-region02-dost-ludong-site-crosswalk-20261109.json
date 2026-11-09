@@ -1,0 +1,294 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "geonames-region02-dost-ludong-site-crosswalk-20261109",
+  "generatedOn": "2026-11-09",
+  "status": "dost-site-labels-screened-against-region02-geonames;candidate-only;no-place-or-species-validation",
+  "purpose": "Name-screen the DOST publication's reported possible ludong fishing-ground place strings against the existing Region II GeoNames hydrographic-point queue.",
+  "sourceSnapshots": {
+    "dostSiteLeadReview": {
+      "path": "data/research/philippines/national-freshwater-region02-dost-isabela-ludong-river-site-leads-20261109.json",
+      "sha256": "cb85be517fb95aedface38b7e6811395980c139658cb45870558907685a1ba82"
+    },
+    "geoNamesRegion02Candidates": {
+      "path": "data/research/philippines/raw/national/geonames-region02-hydrographic-candidates-20261109.jsonl",
+      "sha256": "f08eb07108c8033c3c78b35b4506e8f31e3f45516025e15118c0df7e63498345"
+    }
+  },
+  "searchMethod": {
+    "sourceMunicipalityRows": 11,
+    "sourcePlaceStringsIncludingLocalityQualifiers": 18,
+    "candidateFeatureRowsSearched": 602,
+    "matchRule": "Case/diacritic/punctuation-normalized whole-name equality across GeoNames primary and alternate labels, after removing generic hydrographic terms.",
+    "relationshipRule": "Primary-name matches and alternate-name matches are kept separate. Source municipality and place strings are preserved but do not establish that a candidate belongs to that municipality or is a waterbody.",
+    "provinceContext": "GeoNames point-overlay province is retained for triage only; no municipality conflict is inferred from a source string without exact source station geometry."
+  },
+  "summary": {
+    "placeStringsWithNameCandidates": 3,
+    "normalizedNameCandidateRows": 5,
+    "uniqueGeoNamesIds": 5,
+    "waterbodyIdentitiesValidated": 0,
+    "speciesAssertions": 0,
+    "publicGeometryAdded": false,
+    "publicationApproval": false
+  },
+  "leadResults": [
+    {
+      "sourceMunicipalityLabel": "Ilagan",
+      "sourceLocationText": "Abuan River in Cabisera 10 and Ilagis River",
+      "sourcePlaceLabel": "Abuan River",
+      "candidateRows": 1,
+      "status": "normalized-name-candidates-found",
+      "featureCodeCounts": {
+        "STM": 1
+      },
+      "provinceContextCounts": {
+        "Isabela": 1
+      },
+      "candidateNameSummary": [
+        {
+          "candidateName": "Aduan River",
+          "matchedLabels": [
+            "Abuan",
+            "Abuan River"
+          ],
+          "relationship": "alternate-label-normalized-name-match",
+          "featureCode": "STM",
+          "provinceContext": "Isabela"
+        }
+      ]
+    },
+    {
+      "sourceMunicipalityLabel": "Ilagan",
+      "sourceLocationText": "Abuan River in Cabisera 10 and Ilagis River",
+      "sourcePlaceLabel": "Cabisera 10",
+      "candidateRows": 0,
+      "status": "no-normalized-name-candidate-in-this-snapshot",
+      "featureCodeCounts": {},
+      "provinceContextCounts": {},
+      "candidateNameSummary": []
+    },
+    {
+      "sourceMunicipalityLabel": "Ilagan",
+      "sourceLocationText": "Abuan River in Cabisera 10 and Ilagis River",
+      "sourcePlaceLabel": "Ilagis River",
+      "candidateRows": 0,
+      "status": "no-normalized-name-candidate-in-this-snapshot",
+      "featureCodeCounts": {},
+      "provinceContextCounts": {},
+      "candidateNameSummary": []
+    },
+    {
+      "sourceMunicipalityLabel": "Maconacon",
+      "sourceLocationText": "Blues River in Reina Mercedes",
+      "sourcePlaceLabel": "Blues River",
+      "candidateRows": 0,
+      "status": "no-normalized-name-candidate-in-this-snapshot",
+      "featureCodeCounts": {},
+      "provinceContextCounts": {},
+      "candidateNameSummary": []
+    },
+    {
+      "sourceMunicipalityLabel": "Maconacon",
+      "sourceLocationText": "Blues River in Reina Mercedes",
+      "sourcePlaceLabel": "Reina Mercedes",
+      "candidateRows": 0,
+      "status": "no-normalized-name-candidate-in-this-snapshot",
+      "featureCodeCounts": {},
+      "provinceContextCounts": {},
+      "candidateNameSummary": []
+    },
+    {
+      "sourceMunicipalityLabel": "Palanan",
+      "sourceLocationText": "Dialaoayo, Pinacanauan River in Didiuan and Ilaya",
+      "sourcePlaceLabel": "Dialaoayo",
+      "candidateRows": 0,
+      "status": "no-normalized-name-candidate-in-this-snapshot",
+      "featureCodeCounts": {},
+      "provinceContextCounts": {},
+      "candidateNameSummary": []
+    },
+    {
+      "sourceMunicipalityLabel": "Palanan",
+      "sourceLocationText": "Dialaoayo, Pinacanauan River in Didiuan and Ilaya",
+      "sourcePlaceLabel": "Pinacanauan River",
+      "candidateRows": 3,
+      "status": "normalized-name-candidates-found",
+      "featureCodeCounts": {
+        "STM": 3
+      },
+      "provinceContextCounts": {
+        "Isabela": 3
+      },
+      "candidateNameSummary": [
+        {
+          "candidateName": "Pinacanauan River",
+          "matchedLabels": [
+            "Pinacanauan River",
+            "Pinacanauan"
+          ],
+          "relationship": "primary-label-normalized-name-match",
+          "featureCode": "STM",
+          "provinceContext": "Isabela"
+        },
+        {
+          "candidateName": "Pinacanauan River",
+          "matchedLabels": [
+            "Pinacanauan River",
+            "Pinacanauan"
+          ],
+          "relationship": "primary-label-normalized-name-match",
+          "featureCode": "STM",
+          "provinceContext": "Isabela"
+        },
+        {
+          "candidateName": "Pinacanauan River",
+          "matchedLabels": [
+            "Pinacanauan River",
+            "Pinacanauan"
+          ],
+          "relationship": "primary-label-normalized-name-match",
+          "featureCode": "STM",
+          "provinceContext": "Isabela"
+        }
+      ]
+    },
+    {
+      "sourceMunicipalityLabel": "Palanan",
+      "sourceLocationText": "Dialaoayo, Pinacanauan River in Didiuan and Ilaya",
+      "sourcePlaceLabel": "Didiuan",
+      "candidateRows": 0,
+      "status": "no-normalized-name-candidate-in-this-snapshot",
+      "featureCodeCounts": {},
+      "provinceContextCounts": {},
+      "candidateNameSummary": []
+    },
+    {
+      "sourceMunicipalityLabel": "Palanan",
+      "sourceLocationText": "Dialaoayo, Pinacanauan River in Didiuan and Ilaya",
+      "sourcePlaceLabel": "Ilaya",
+      "candidateRows": 0,
+      "status": "no-normalized-name-candidate-in-this-snapshot",
+      "featureCodeCounts": {},
+      "provinceContextCounts": {},
+      "candidateNameSummary": []
+    },
+    {
+      "sourceMunicipalityLabel": "Tumauini",
+      "sourceLocationText": "Lapogan",
+      "sourcePlaceLabel": "Lapogan",
+      "candidateRows": 0,
+      "status": "no-normalized-name-candidate-in-this-snapshot",
+      "featureCodeCounts": {},
+      "provinceContextCounts": {},
+      "candidateNameSummary": []
+    },
+    {
+      "sourceMunicipalityLabel": "Cabbaroguis",
+      "sourceLocationText": "Eden",
+      "sourcePlaceLabel": "Eden",
+      "candidateRows": 0,
+      "status": "no-normalized-name-candidate-in-this-snapshot",
+      "featureCodeCounts": {},
+      "provinceContextCounts": {},
+      "candidateNameSummary": []
+    },
+    {
+      "sourceMunicipalityLabel": "Nagtipunan",
+      "sourceLocationText": "Siitan River",
+      "sourcePlaceLabel": "Siitan River",
+      "candidateRows": 0,
+      "status": "no-normalized-name-candidate-in-this-snapshot",
+      "featureCodeCounts": {},
+      "provinceContextCounts": {},
+      "candidateNameSummary": []
+    },
+    {
+      "sourceMunicipalityLabel": "Alcala",
+      "sourceLocationText": "Afusing Batu",
+      "sourcePlaceLabel": "Afusing Batu",
+      "candidateRows": 0,
+      "status": "no-normalized-name-candidate-in-this-snapshot",
+      "featureCodeCounts": {},
+      "provinceContextCounts": {},
+      "candidateNameSummary": []
+    },
+    {
+      "sourceMunicipalityLabel": "Amulong",
+      "sourceLocationText": "Dugayung",
+      "sourcePlaceLabel": "Dugayung",
+      "candidateRows": 0,
+      "status": "no-normalized-name-candidate-in-this-snapshot",
+      "featureCodeCounts": {},
+      "provinceContextCounts": {},
+      "candidateNameSummary": []
+    },
+    {
+      "sourceMunicipalityLabel": "Gattaran",
+      "sourceLocationText": "Nassiping",
+      "sourcePlaceLabel": "Nassiping",
+      "candidateRows": 1,
+      "status": "normalized-name-candidates-found",
+      "featureCodeCounts": {
+        "STM": 1
+      },
+      "provinceContextCounts": {
+        "Cagayan": 1
+      },
+      "candidateNameSummary": [
+        {
+          "candidateName": "Nassiping Creek",
+          "matchedLabels": [
+            "Nassiping Creek"
+          ],
+          "relationship": "primary-label-normalized-name-match",
+          "featureCode": "STM",
+          "provinceContext": "Cagayan"
+        }
+      ]
+    },
+    {
+      "sourceMunicipalityLabel": "Lallo",
+      "sourceLocationText": "Catayuan",
+      "sourcePlaceLabel": "Catayuan",
+      "candidateRows": 0,
+      "status": "no-normalized-name-candidate-in-this-snapshot",
+      "featureCodeCounts": {},
+      "provinceContextCounts": {},
+      "candidateNameSummary": []
+    },
+    {
+      "sourceMunicipalityLabel": "Santo Niño",
+      "sourceLocationText": "Dungao and Matalao",
+      "sourcePlaceLabel": "Dungao",
+      "candidateRows": 0,
+      "status": "no-normalized-name-candidate-in-this-snapshot",
+      "featureCodeCounts": {},
+      "provinceContextCounts": {},
+      "candidateNameSummary": []
+    },
+    {
+      "sourceMunicipalityLabel": "Santo Niño",
+      "sourceLocationText": "Dungao and Matalao",
+      "sourcePlaceLabel": "Matalao",
+      "candidateRows": 0,
+      "status": "no-normalized-name-candidate-in-this-snapshot",
+      "featureCodeCounts": {},
+      "provinceContextCounts": {},
+      "candidateNameSummary": []
+    }
+  ],
+  "localOutput": {
+    "path": "data/research/philippines/raw/national/geonames-region02-dost-ludong-site-crosswalk-20261109.jsonl",
+    "rows": 5,
+    "sha256": "9ba249c21e50f1190f86ae6289e2a22607c05505e8a53dd7959104eda3067a57",
+    "gitIgnored": true,
+    "appBundleIncluded": false
+  },
+  "limitations": [
+    "The DOST source provides a program-level statement about possible fishing grounds, not site-level sampling, methods, vouchers, exact stations, or species-by-place records.",
+    "GeoNames points are gazetteer candidates and do not define river courses, verify source locations, or validate the DOST municipality pairing.",
+    "Names such as Eden, Reina Mercedes, Cabisera 10, Didiuan and Ilaya may be locality/context labels rather than waterbody names; the screen does not classify them as waterbodies.",
+    "The Maconacon/Reina Mercedes and Palanan/Pinacanauan/Didiuan/Ilaya source strings remain unresolved regardless of name candidates.",
+    "A missing candidate is not evidence that a place, fishery, or species is absent. No species presence, geometry, access, legal, or safety assertion is made."
+  ]
+}
