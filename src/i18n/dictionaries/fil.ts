@@ -84,7 +84,7 @@ export const filDictionary: Dictionary = {
     steps: [
       {
         title: "Pumili ng lugar na titingnan",
-        text: "Pumili ng Cavite area para mag-browse. Hindi nito kinukumpirma ang pahintulot mangisda o legal na hangganan ng katubigan. Maaaring wala pang beripikadong lokal na species o tuntunin.",
+        text: "Maghanap ng rehiyon, lalawigan o suportadong anyong-tubig at buksan ang tala ng species. Bahagya ang saklaw; hindi nito kinukumpirma ang kasalukuyang presensya, access o pahintulot mangisda.",
       },
       {
         title: "Basahin ang status at coverage",
@@ -495,7 +495,8 @@ export const filDictionary: Dictionary = {
       "Makasaysayang koleksiyon at field observation mula 1985–2015 ito, hindi patunay ng presensya ngayon o standardized na pagtatantiya ng dami. Magkaiba ang field observation at preserved specimen; hindi ginagawang bilang ang salitang kwalitatibo. Hindi nito pinatutunayan ang access o legalidad ng pangingisda, kaligtasan o bisa ng pain; hindi ito kumpletong talaan ng isda sa Palawan.",
     sourceDetails: "Citation, source at terms sa paggamit",
     taxonomyLabel: "Kasalukuyang status ng pangalan",
-    taxonomyCaveat: "Hindi nito muling tinutukoy ang mga makasaysayang specimen o pinatutunayan ang presensya ngayon sa mga lugar na ito.",
+    taxonomyCaveat:
+      "Hindi nito muling tinutukoy ang mga makasaysayang specimen o pinatutunayan ang presensya ngayon sa mga lugar na ito.",
     taxonomyLink: "Catalog of Fishes",
     articleLink: "Artikulo ng publisher",
     pdfLink: "Buong PDF",

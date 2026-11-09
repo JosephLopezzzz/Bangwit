@@ -3,7 +3,7 @@
 
 import { defaultCache } from "@serwist/turbopack/worker";
 import type { PrecacheEntry, SerwistGlobalConfig } from "serwist";
-import { NetworkOnly, Serwist } from "serwist";
+import { CacheFirst, ExpirationPlugin, NetworkOnly, Serwist } from "serwist";
 
 declare global {
   interface WorkerGlobalScope extends SerwistGlobalConfig {
@@ -20,6 +20,13 @@ const serwist = new Serwist({
   clientsClaim: false,
   navigationPreload: true,
   runtimeCaching: [
+    {
+      matcher: ({ url, sameOrigin }) => sameOrigin && /^\/assets\/species\/[^/]+\.[a-f0-9]+\.webp$/.test(url.pathname),
+      handler: new CacheFirst({
+        cacheName: "bangwit-species-art-v1",
+        plugins: [new ExpirationPlugin({ maxEntries: 24, maxAgeSeconds: 30 * 24 * 60 * 60, purgeOnQuotaError: true })],
+      }),
+    },
     {
       matcher: ({ url, sameOrigin }) => sameOrigin && url.pathname === "/api/advisories",
       handler: new NetworkOnly(),

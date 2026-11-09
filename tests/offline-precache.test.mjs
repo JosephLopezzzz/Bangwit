@@ -82,6 +82,15 @@ test("does not precache source, environment files, or private research/storage f
   ]);
 });
 
+test("optional habitat art never increases the journal precache", async (t) => {
+  const directory = fixture(t);
+  const before = await manifest(directory);
+  mkdirSync(join(directory, "public/assets/species"), { recursive: true });
+  writeFileSync(join(directory, "public/assets/species/tilapia.1234abcd.webp"), "optional illustration");
+  const after = await manifest(directory);
+  assert.deepEqual(after, before);
+});
+
 test("keeps document revisions independent of glob enumeration order", async (t) => {
   const directory = fixture(t);
   const entries = await manifest(directory);

@@ -350,7 +350,7 @@ Keyboard focus uses a 3px aqua outline with a 3px offset. Honor reduced-motion p
 - **Treatment:** Keep language accessible through its native select, and retain accessible labels on icon-only theme, guide and close controls. Preserve the existing route and state behavior when changing layout.
 
 ### Province Selection
-- **Shape:** Use the source province polygons with thin pale strokes. Do not add numbered dots or pulse animation.
+- **Shape:** Use the source province polygons with thin pale strokes. The species explorer may overlay static, labeled counts of distinct eligible taxa; these are not abundance, rankings or warning severity. Do not add pulse animation. Missing coverage has no numeric zero marker.
 - **Hover / focus:** Highlight unknown or clear regions in soft sage with a thin polygon outline. Active warnings keep their hazard fill. Keyboard focus uses a visible 3px polygon stroke without a rectangular browser focus box.
 - **Selected:** Synchronize the searchable dropdown and detail panel. Use the sage selected tokens and thin outline for regions without active hazards; preserve every active warning fill. Show only the province name as unboxed anchored text.
 - **Dismiss / restore:** The panel X, heading toolbar toggle, or Escape within the map workspace hides the whole region sidebar and urgent callout. Expand the map to the available width and return focus to the heading toggle. That toggle reopens details; selecting a province by map, dropdown or callout also reopens them. Preserve selected province and camera state when dismissing.
@@ -370,6 +370,14 @@ Keyboard focus uses a 3px aqua outline with a 3px offset. Honor reduced-motion p
 - **Controls:** One searchable dropdown, province paths, and the detail panel share one selected-province state. Focus selected frames the chosen province; Fit Philippines restores the national overview without changing selection. Zoom and pan affect only the camera and never imply navigation or GPS.
 - **Caption:** Show the 2020 outline year, source/license attribution, and non-navigation limitation. Keep the coverage notice beside the selected province and Cavite water area choices.
 - **Dark theme:** Use the dedicated night canvas, sage selection and hazard tokens with clear pale borders. Preserve active warning fills and indicate their selection with a thin polygon outline.
+
+### Species Explorer
+- Keep the approved place search, geographic breadcrumbs, water/group filters, map and compact illustrated gallery in Bangwit's existing visual system. Use four cards initially, with an explicit expansion action and a native species-detail dialog.
+- National and region navigation use their own state; they do not clear the existing Cavite area preference. Region groups describe the same 2020 source era as the map. Shared waterbodies are many-to-many navigation links, not evidence attribution rules.
+- Counts describe distinct species in explicitly eligible reviewed records. Label historical and survey scope; show unavailable coverage separately from no filter matches. Representative habitat scenes never establish water type or local occurrence.
+- On mobile, selecting a province or waterbody brings results forward and collapses the map behind Show map / Hide map. Keep urgent warning callouts, coverage status and warning access visible outside the collapsed map.
+- The dialog starts with Fishing guide, followed by About this species. Show only independently reviewed method/bait/steps and current applicable rule context; otherwise use an honest unavailable state. Illustrations remain text-free, retain the whole animal, and match the exact canonical identity.
+- Retain shared controls, native keyboard behavior, full modal focus containment and focus return, English/Filipino copy and light/dark tokens. Optional image caching is bounded and separate from the offline journal shell.
 
 ### Province Selector and Cavite Water Areas
 - **Rows:** Native radio inputs sit beside a compact numbered badge, bold location name and muted subtitle. Rows are 60px high; selection uses a teal border and sea-glass/white mix.

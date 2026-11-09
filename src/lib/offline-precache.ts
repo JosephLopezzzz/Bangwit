@@ -8,6 +8,8 @@ export const offlinePrecacheOptions = {
     ".next/static/**/*.{js,css,html,ico,apng,png,avif,jpg,jpeg,jfif,pjpeg,pjp,gif,svg,webp,json,webmanifest}",
     "public/**/*",
   ],
+  // Habitat artwork is optional and loaded on demand, outside the journal shell.
+  globIgnores: ["public/assets/species/**"],
   // Source changes cover HTML changes; asset revisions cover the chunks it references.
   templatedURLs: Object.fromEntries(offlineDocuments.map((url) => [url, ["src/**/*.{ts,tsx,css}"]])),
   manifestTransforms: [
@@ -21,4 +23,4 @@ export const offlinePrecacheOptions = {
       };
     },
   ],
-} satisfies Pick<InjectManifestOptions, "globPatterns" | "templatedURLs" | "manifestTransforms">;
+} satisfies Pick<InjectManifestOptions, "globPatterns" | "globIgnores" | "templatedURLs" | "manifestTransforms">;

@@ -84,7 +84,7 @@ export const enDictionary: Dictionary = {
     steps: [
       {
         title: "Choose an area to explore",
-        text: "Choose a Cavite area to browse. The map does not confirm fishing access or legal water boundaries, and verified local species or rules may be unavailable.",
+        text: "Search a region, province or supported waterbody, then open a species record. Coverage is partial; records do not confirm current presence, fishing access or permission.",
       },
       {
         title: "Review status and coverage",
@@ -489,7 +489,8 @@ export const enDictionary: Dictionary = {
       "Historical collections and field observations from 1985–2015, not current-presence or standardized abundance estimates. A field observation is distinct from a preserved specimen, and qualitative wording is not a numeric count. These entries do not establish fishing access, legality, safety, or bait effectiveness; this is not a complete Palawan fish list.",
     sourceDetails: "Citation, source and reuse terms",
     taxonomyLabel: "Current name status",
-    taxonomyCaveat: "This name check does not re-identify the historical specimens or show current presence at these sites.",
+    taxonomyCaveat:
+      "This name check does not re-identify the historical specimens or show current presence at these sites.",
     taxonomyLink: "Catalog of Fishes",
     articleLink: "Publisher article",
     pdfLink: "Full text PDF",

@@ -3,9 +3,9 @@
 import { ArrowUpRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import { AreaExplorer } from "@/components/area-explorer";
 import { useBangwit } from "@/components/bangwit-provider";
 import { CaviteFisheriesEvidence } from "@/components/cavite-fisheries-evidence";
+import { SpeciesExplorer } from "@/components/explore/species-explorer";
 import { CAVITE_PROVINCE_ID } from "@/data/phl-provinces";
 
 export default function ExplorePage() {
@@ -23,7 +23,7 @@ export default function ExplorePage() {
         <p className="explore-subtitle">{dict.home.subtitle}</p>
       </header>
 
-      <AreaExplorer />
+      <SpeciesExplorer />
 
       {selectedProvince === CAVITE_PROVINCE_ID && <CaviteFisheriesEvidence />}
 

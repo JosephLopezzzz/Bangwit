@@ -4,6 +4,7 @@ import {
   ArrowUpRight,
   ChevronDown,
   LocateFixed,
+  Map as MapIcon,
   MapPin,
   Minus,
   PanelRightClose,
@@ -58,6 +59,23 @@ type MapCamera = {
   centerY: number;
   zoom: number;
   targetProvinceId: ProvinceId | null;
+  scopeBounds?: MapBounds;
+};
+
+type MapBounds = { x: number; y: number; width: number; height: number };
+
+export type SpeciesMapOptions = {
+  activeProvinceId: ProvinceId | null;
+  bounds?: MapBounds;
+  provinceIds: readonly ProvinceId[];
+  onProvinceSelect: (provinceId: ProvinceId) => void;
+  markers: { id: string; x: number; y: number; count: number; label: string; onSelect: () => void }[];
+  mapOpen: boolean;
+  onMapOpenChange: (open: boolean) => void;
+  showMapLabel: string;
+  hideMapLabel: string;
+  mapLabel: string;
+  focusLocationLabel: string;
 };
 
 function provinceBoundsCenter(province: (typeof PHILIPPINE_PROVINCES)[number]) {
@@ -129,12 +147,13 @@ function LocationOptions({ group }: { group: string }) {
   );
 }
 
-export function AreaExplorer() {
+export function AreaExplorer({ explorer }: { explorer?: SpeciesMapOptions } = {}) {
   const { selectedArea, selectedProvince, setSelectedProvince, dict, lang } = useBangwit();
   const liveAdvisories = useMapAdvisories();
   const [demoScenario, setDemoScenario] = useState<AdvisoryDemoScenario | null>(null);
   const [hazardFilter, setHazardFilter] = useState<HazardType | "all">("all");
   const [regionDetailsOpen, setRegionDetailsOpen] = useState(true);
+  const [warningDetailsExpanded, setWarningDetailsExpanded] = useState(false);
   const [dismissedCalloutKey, setDismissedCalloutKey] = useState<string | null>(null);
   const workspaceRef = useRef<HTMLDivElement>(null);
   const detailsToggleRef = useRef<HTMLButtonElement>(null);
@@ -205,13 +224,13 @@ export function AreaExplorer() {
   const aspect = stageSize.width > 0 && stageSize.height > 0 ? stageSize.width / stageSize.height : 1.2;
   const fitBounds = targetProvinceData
     ? targetProvinceData.bounds
-    : {
+    : (camera.scopeBounds ?? {
         x: mapBounds.left,
         y: mapBounds.top,
         width: mapBounds.right - mapBounds.left,
         height: mapBounds.bottom - mapBounds.top,
-      };
-  const fitPadding = targetProvinceData ? 1.45 : 1.08;
+      });
+  const fitPadding = targetProvinceData || camera.scopeBounds ? 1.45 : 1.08;
   const baseViewWidth = Math.max(fitBounds.width * fitPadding, fitBounds.height * aspect * fitPadding);
   const baseViewHeight = baseViewWidth / aspect;
   const viewWidth = baseViewWidth / camera.zoom;
@@ -234,6 +253,26 @@ export function AreaExplorer() {
     labelProvince.bounds.y < viewY + viewHeight &&
     labelProvince.bounds.y + labelProvince.bounds.height > viewY;
 
+  const scopeX = explorer?.bounds?.x;
+  const scopeY = explorer?.bounds?.y;
+  const scopeWidth = explorer?.bounds?.width;
+  const scopeHeight = explorer?.bounds?.height;
+  const enhanced = Boolean(explorer);
+  useEffect(() => {
+    if (!enhanced) return;
+    const bounds =
+      scopeX === undefined || scopeY === undefined || scopeWidth === undefined || scopeHeight === undefined
+        ? undefined
+        : { x: scopeX, y: scopeY, width: scopeWidth, height: scopeHeight };
+    setCamera({
+      centerX: bounds ? bounds.x + bounds.width / 2 : mapCenter.x,
+      centerY: bounds ? bounds.y + bounds.height / 2 : mapCenter.y,
+      zoom: 1,
+      targetProvinceId: null,
+      scopeBounds: bounds,
+    });
+  }, [enhanced, scopeX, scopeY, scopeWidth, scopeHeight]);
+
   useEffect(() => {
     const stage = stageRef.current;
     if (!stage) return;
@@ -247,6 +286,7 @@ export function AreaExplorer() {
   useEffect(() => {
     const onEscape = (event: KeyboardEvent) => {
       if (
+        enhanced ||
         event.key !== "Escape" ||
         event.defaultPrevented ||
         !(event.target instanceof Node) ||
@@ -262,7 +302,7 @@ export function AreaExplorer() {
     };
     document.addEventListener("keydown", onEscape);
     return () => document.removeEventListener("keydown", onEscape);
-  }, [regionDetailsOpen, visibleCalloutKey]);
+  }, [enhanced, regionDetailsOpen, visibleCalloutKey]);
 
   useEffect(() => {
     const mapSvg = mapSvgRef.current;
@@ -316,6 +356,7 @@ export function AreaExplorer() {
     setKeyboardProvinceId(provinceId);
     setHoveredProvince(null);
     setRegionDetailsOpen(true);
+    explorer?.onProvinceSelect(provinceId);
   }
 
   function dismissRegionDetails() {
@@ -334,6 +375,18 @@ export function AreaExplorer() {
 
   function fitPhilippines() {
     setCamera({ centerX: mapCenter.x, centerY: mapCenter.y, zoom: 1, targetProvinceId: null });
+  }
+
+  function focusSelectedLocation() {
+    if (!explorer) return focusProvince(selectedProvince);
+    const bounds = explorer.bounds;
+    setCamera({
+      centerX: bounds ? bounds.x + bounds.width / 2 : mapCenter.x,
+      centerY: bounds ? bounds.y + bounds.height / 2 : mapCenter.y,
+      zoom: 1,
+      targetProvinceId: null,
+      scopeBounds: bounds,
+    });
   }
 
   function changeZoom(direction: 1 | -1) {
@@ -422,63 +475,131 @@ export function AreaExplorer() {
     }
   }
 
+  const warningCallout =
+    visibleCalloutKey && urgentProvince?.warning?.alerts[0] ? (
+      <WarningCallout
+        provinceId={urgentProvince.province.id}
+        provinceName={urgentProvince.province.name}
+        alert={urgentProvince.warning.alerts[0]}
+        stale={urgentProvince.warning.stale}
+        demo={Boolean(demoScenario)}
+        onDismiss={() => {
+          setDismissedCalloutKey(warningCalloutKey);
+          const control = [...(workspaceRef.current?.querySelectorAll<HTMLButtonElement>("button") ?? [])].find(
+            (button) => button.getClientRects().length > 0 && !button.disabled,
+          );
+          control?.focus({ preventScroll: true });
+        }}
+        onSelect={() => {
+          selectProvince(urgentProvince.province.id);
+          focusProvince(urgentProvince.province.id);
+        }}
+      />
+    ) : null;
+
   return (
-    <div ref={workspaceRef} className="explore-workspace" data-details-open={regionDetailsOpen}>
+    <div
+      ref={workspaceRef}
+      className={`explore-workspace${explorer ? " explore-workspace--species" : ""}`}
+      data-details-open={regionDetailsOpen}
+      data-mobile-map-open={explorer?.mapOpen ?? true}
+      data-warning-expanded={warningDetailsExpanded}
+    >
       <section aria-labelledby="area-heading" className="explore-map-panel ui-card">
         <div className="explore-map-heading">
-          <h2 id="area-heading">{dict.areaExplorer.heading}</h2>
-          <div className="explore-map-heading-actions">
-            <DropdownSelect
-              id="province-select"
-              label={dict.areaExplorer.provinceSelectLabel}
-              value={selectedProvince}
-              onValueChange={(province) => {
-                const provinceId = province as ProvinceId;
-                selectProvince(provinceId);
-                focusProvince(provinceId);
-              }}
-              options={provinceOptions}
-              searchable={{
-                placeholder: dict.areaExplorer.provinceSearchLabel,
-                noResults: dict.areaExplorer.provinceNoResults,
-                resultCountLabel: dict.areaExplorer.provinceResultsCount,
-              }}
-              className="dropdown-select--compact explore-province-select"
-            />
+          <h2 id="area-heading">{explorer?.mapLabel ?? dict.areaExplorer.heading}</h2>
+          {explorer ? (
             <button
               ref={detailsToggleRef}
               type="button"
-              className="ui-button ui-button--secondary ui-button--icon"
-              aria-expanded={regionDetailsOpen}
-              aria-controls="areaPicker"
-              aria-label={
-                regionDetailsOpen ? dict.areaExplorer.hideProvinceDetails : dict.areaExplorer.showProvinceDetails
-              }
-              title={regionDetailsOpen ? dict.areaExplorer.hideProvinceDetails : dict.areaExplorer.showProvinceDetails}
-              onClick={() => (regionDetailsOpen ? dismissRegionDetails() : setRegionDetailsOpen(true))}
+              className="ui-button ui-button--secondary species-map-toggle"
+              aria-expanded={explorer.mapOpen}
+              aria-controls="species-map-canvas"
+              onClick={() => explorer.onMapOpenChange(!explorer.mapOpen)}
             >
-              {regionDetailsOpen ? (
-                <PanelRightClose aria-hidden="true" size={17} />
-              ) : (
-                <PanelRightOpen aria-hidden="true" size={17} />
-              )}
+              <MapIcon aria-hidden="true" size={16} />
+              {explorer.mapOpen ? explorer.hideMapLabel : explorer.showMapLabel}
             </button>
-          </div>
+          ) : (
+            <div className="explore-map-heading-actions">
+              <DropdownSelect
+                id="province-select"
+                label={dict.areaExplorer.provinceSelectLabel}
+                value={selectedProvince}
+                onValueChange={(province) => {
+                  const provinceId = province as ProvinceId;
+                  selectProvince(provinceId);
+                  focusProvince(provinceId);
+                }}
+                options={provinceOptions}
+                searchable={{
+                  placeholder: dict.areaExplorer.provinceSearchLabel,
+                  noResults: dict.areaExplorer.provinceNoResults,
+                  resultCountLabel: dict.areaExplorer.provinceResultsCount,
+                }}
+                className="dropdown-select--compact explore-province-select"
+              />
+              <button
+                ref={detailsToggleRef}
+                type="button"
+                className="ui-button ui-button--secondary ui-button--icon"
+                aria-expanded={regionDetailsOpen}
+                aria-controls="areaPicker"
+                aria-label={
+                  regionDetailsOpen ? dict.areaExplorer.hideProvinceDetails : dict.areaExplorer.showProvinceDetails
+                }
+                title={
+                  regionDetailsOpen ? dict.areaExplorer.hideProvinceDetails : dict.areaExplorer.showProvinceDetails
+                }
+                onClick={() => (regionDetailsOpen ? dismissRegionDetails() : setRegionDetailsOpen(true))}
+              >
+                {regionDetailsOpen ? (
+                  <PanelRightClose aria-hidden="true" size={17} />
+                ) : (
+                  <PanelRightOpen aria-hidden="true" size={17} />
+                )}
+              </button>
+            </div>
+          )}
         </div>
 
-        <WarningToolbar
-          demo={demoScenario}
-          onDemoChange={(scenario) => {
-            setDemoScenario(scenario);
-            setHazardFilter("all");
-            setDismissedCalloutKey(null);
-          }}
-          connection={liveAdvisories.connection}
-          refreshing={liveAdvisories.refreshing}
-          onRefresh={() => void liveAdvisories.refresh()}
-          snapshot={liveAdvisories.snapshot}
-        />
+        {explorer && (
+          <div className="species-map-compact-status">
+            <p>
+              {demoScenario && <strong>{dict.mapWarnings.demoBadge} · </strong>}
+              {warningSnapshot ? dict.mapWarnings.count(affectedCount) : dict.mapWarnings.coverageUnavailable}
+              {[...warningsByProvince.values()].some((warning) => warning.stale && warning.alerts.length > 0) &&
+                ` · ${dict.mapWarnings.stale}`}
+            </p>
+            <button
+              type="button"
+              className="ui-button ui-button--quiet"
+              aria-expanded={warningDetailsExpanded}
+              aria-controls="species-warning-context"
+              onClick={() => setWarningDetailsExpanded(!warningDetailsExpanded)}
+            >
+              {dict.mapWarnings.legend}
+              <ChevronDown aria-hidden="true" size={15} />
+            </button>
+          </div>
+        )}
+        <div className={explorer ? "species-map-warning-toolbar" : undefined}>
+          <WarningToolbar
+            demo={demoScenario}
+            onDemoChange={(scenario) => {
+              setDemoScenario(scenario);
+              setHazardFilter("all");
+              setDismissedCalloutKey(null);
+            }}
+            connection={liveAdvisories.connection}
+            refreshing={liveAdvisories.refreshing}
+            onRefresh={() => void liveAdvisories.refresh()}
+            snapshot={liveAdvisories.snapshot}
+          />
+        </div>
+        {explorer && <div className="species-map-alert">{warningCallout}</div>}
         <fieldset
+          id={explorer ? "species-map-canvas" : undefined}
           className="explore-map"
           aria-labelledby="area-heading"
           aria-describedby="province-map-description map-warning-description"
@@ -540,8 +661,9 @@ export function AreaExplorer() {
                       dict.mapWarnings.levels[filteredWarnings.get(province.id)?.level ?? "unknown"]) +
                     (filteredWarnings.get(province.id)?.stale ? `. ${dict.mapWarnings.stale}` : "")
                   }
-                  aria-pressed={selectedProvince === province.id}
-                  data-selected={selectedProvince === province.id}
+                  aria-pressed={(explorer ? explorer.activeProvinceId : selectedProvince) === province.id}
+                  data-selected={(explorer ? explorer.activeProvinceId : selectedProvince) === province.id}
+                  data-outside-scope={explorer ? !explorer.provinceIds.includes(province.id) : undefined}
                   data-hovered={hoveredProvince === province.id}
                   data-warning-level={filteredWarnings.get(province.id)?.level ?? "unknown"}
                   data-warning-stale={filteredWarnings.get(province.id)?.stale ?? false}
@@ -572,7 +694,25 @@ export function AreaExplorer() {
                 ))}
               </g>
             </svg>
-            {labelInView && (regionDetailsOpen || hoveredProvince !== null) && (
+            {explorer?.markers.map((marker) => {
+              const left = ((marker.x - viewX) / viewWidth) * 100;
+              const top = ((marker.y - viewY) / viewHeight) * 100;
+              if (left < 0 || left > 100 || top < 0 || top > 100) return null;
+              return (
+                <button
+                  key={marker.id}
+                  type="button"
+                  className="species-count-marker"
+                  style={{ left: `${left}%`, top: `${top}%` }}
+                  aria-label={marker.label}
+                  title={marker.label}
+                  onClick={marker.onSelect}
+                >
+                  <span className="species-count-marker-value">{marker.count}</span>
+                </button>
+              );
+            })}
+            {labelInView && (explorer ? hoveredProvince !== null : regionDetailsOpen || hoveredProvince !== null) && (
               <span
                 className="province-map-label"
                 aria-hidden="true"
@@ -586,31 +726,15 @@ export function AreaExplorer() {
             )}
           </div>
 
-          {visibleCalloutKey && urgentProvince?.warning?.alerts[0] && (
-            <WarningCallout
-              provinceId={urgentProvince.province.id}
-              provinceName={urgentProvince.province.name}
-              alert={urgentProvince.warning.alerts[0]}
-              stale={urgentProvince.warning.stale}
-              demo={Boolean(demoScenario)}
-              onDismiss={() => {
-                setDismissedCalloutKey(warningCalloutKey);
-                detailsToggleRef.current?.focus({ preventScroll: true });
-              }}
-              onSelect={() => {
-                selectProvince(urgentProvince.province.id);
-                focusProvince(urgentProvince.province.id);
-              }}
-            />
-          )}
+          {!explorer && warningCallout}
           {demoScenario && <span className="map-warning-demo-watermark">{dict.mapWarnings.demoBadge}</span>}
           <div className="explore-map-controls">
             <div className="explore-map-view-controls">
               <button
                 type="button"
-                onClick={() => focusProvince(selectedProvince)}
-                aria-label={dict.areaExplorer.focusSelectedProvince}
-                title={dict.areaExplorer.focusSelectedProvince}
+                onClick={focusSelectedLocation}
+                aria-label={explorer?.focusLocationLabel ?? dict.areaExplorer.focusSelectedProvince}
+                title={explorer?.focusLocationLabel ?? dict.areaExplorer.focusSelectedProvince}
               >
                 <LocateFixed aria-hidden="true" size={18} strokeWidth={1.75} />
               </button>
@@ -646,98 +770,125 @@ export function AreaExplorer() {
           </div>
         </fieldset>
 
-        <WarningLegend
-          filter={hazardFilter}
-          onFilterChange={setHazardFilter}
-          count={affectedCount}
-          available={Boolean(warningSnapshot)}
-          filteredCount={affectedProvinces.length}
-          calloutHidden={Boolean(warningCalloutKey && !visibleCalloutKey)}
-          onRestoreCallout={() => setDismissedCalloutKey(null)}
-          stale={[...warningsByProvince.values()].some((warning) => warning.stale && warning.alerts.length > 0)}
-        />
-        <p className="explore-map-note">
-          <span className="explore-map-zoom-hint">{dict.areaExplorer.mapZoomHint}</span>
-          <span>{dict.areaExplorer.mapSourceNote}</span>
-          <a
-            href="https://github.com/wmgeolab/geoBoundaries/raw/41af8f1/releaseData/gbOpen/PHL/ADM2/geoBoundaries-PHL-ADM2_simplified.geojson"
-            target="_blank"
-            rel="noreferrer"
+        <div
+          id={explorer ? "species-warning-context" : undefined}
+          className={explorer ? "species-map-warning-context" : undefined}
+        >
+          <WarningLegend
+            filter={hazardFilter}
+            onFilterChange={setHazardFilter}
+            count={affectedCount}
+            available={Boolean(warningSnapshot)}
+            filteredCount={affectedProvinces.length}
+            calloutHidden={Boolean(warningCalloutKey && !visibleCalloutKey)}
+            onRestoreCallout={() => setDismissedCalloutKey(null)}
+            stale={[...warningsByProvince.values()].some((warning) => warning.stale && warning.alerts.length > 0)}
+          />
+          <p className="explore-map-note">
+            <span className="explore-map-zoom-hint">{dict.areaExplorer.mapZoomHint}</span>
+            <span>{dict.areaExplorer.mapSourceNote}</span>
+            <a
+              href="https://github.com/wmgeolab/geoBoundaries/raw/41af8f1/releaseData/gbOpen/PHL/ADM2/geoBoundaries-PHL-ADM2_simplified.geojson"
+              target="_blank"
+              rel="noreferrer"
+            >
+              {dict.areaExplorer.mapSourceLinkLabel}
+              <ArrowUpRight aria-hidden="true" size={13} />
+            </a>
+          </p>
+        </div>
+        {explorer?.activeProvinceId && (
+          <div
+            className="species-map-selected-warning"
+            data-has-alerts={Boolean(warningsByProvince.get(explorer.activeProvinceId)?.alerts.length)}
           >
-            {dict.areaExplorer.mapSourceLinkLabel}
-            <ArrowUpRight aria-hidden="true" size={13} />
-          </a>
-        </p>
+            <WarningDetails
+              warning={
+                warningsByProvince.get(explorer.activeProvinceId) ??
+                getProvinceWarning(null, explorer.activeProvinceId, warningNow)
+              }
+              provinceId={explorer.activeProvinceId}
+              snapshot={warningSnapshot}
+              demo={Boolean(demoScenario)}
+            />
+          </div>
+        )}
       </section>
 
-      <div id="areaPicker" className="explore-location-picker" hidden={!regionDetailsOpen}>
-        <aside className="explore-location-panel ui-card" aria-labelledby="location-heading">
-          <div className="explore-location-heading">
-            <div>
-              <p className="explore-section-tag">{isCavite ? dict.areaExplorer.pilotTag : dict.areaExplorer.sideTag}</p>
-              <h2 id="location-heading">{selectedProvinceData.name}</h2>
-              <p className="explore-location-summary-status">
-                {isCavite ? dict.areaExplorer.pendingReviewTitle : dict.areaExplorer.unsupportedTitle}
-              </p>
-            </div>
-            <div className="explore-location-actions">
-              <button
-                type="button"
-                className="ui-button ui-button--secondary explore-details-toggle"
-                aria-expanded={detailsExpanded}
-                aria-controls="explore-location-details"
-                aria-label={
-                  detailsExpanded ? dict.areaExplorer.hideProvinceDetails : dict.areaExplorer.showProvinceDetails
-                }
-                onClick={() => setDetailsExpanded((expanded) => !expanded)}
-              >
-                <ChevronDown aria-hidden="true" size={18} />
-              </button>
-              <button
-                type="button"
-                className="ui-button ui-button--quiet ui-button--icon"
-                aria-label={dict.areaExplorer.hideProvinceDetails}
-                title={dict.areaExplorer.hideProvinceDetails}
-                onClick={dismissRegionDetails}
-              >
-                <X aria-hidden="true" size={17} />
-              </button>
-            </div>
-          </div>
-
-          <WarningDetails
-            warning={warningsByProvince.get(selectedProvince) ?? getProvinceWarning(null, selectedProvince, warningNow)}
-            provinceId={selectedProvince}
-            snapshot={warningSnapshot}
-            demo={Boolean(demoScenario)}
-          />
-          <div id="explore-location-details" className="explore-location-content" data-expanded={detailsExpanded}>
-            <p className="explore-location-description">{dict.areaExplorer.sideDesc}</p>
-
-            {isHistoricalMaguindanao && (
-              <p className="explore-historical-note">{dict.areaExplorer.historicalBoundaryNote}</p>
-            )}
-
-            {isCavite && (
-              <>
-                <p className="explore-location-description explore-pilot-description">
-                  {dict.areaExplorer.pilotDescription}
+      {!explorer && (
+        <div id="areaPicker" className="explore-location-picker" hidden={!regionDetailsOpen}>
+          <aside className="explore-location-panel ui-card" aria-labelledby="location-heading">
+            <div className="explore-location-heading">
+              <div>
+                <p className="explore-section-tag">
+                  {isCavite ? dict.areaExplorer.pilotTag : dict.areaExplorer.sideTag}
                 </p>
-                <LocationOptions group="explore-location" />
-              </>
-            )}
+                <h2 id="location-heading">{selectedProvinceData.name}</h2>
+                <p className="explore-location-summary-status">
+                  {isCavite ? dict.areaExplorer.pendingReviewTitle : dict.areaExplorer.unsupportedTitle}
+                </p>
+              </div>
+              <div className="explore-location-actions">
+                <button
+                  type="button"
+                  className="ui-button ui-button--secondary explore-details-toggle"
+                  aria-expanded={detailsExpanded}
+                  aria-controls="explore-location-details"
+                  aria-label={
+                    detailsExpanded ? dict.areaExplorer.hideProvinceDetails : dict.areaExplorer.showProvinceDetails
+                  }
+                  onClick={() => setDetailsExpanded((expanded) => !expanded)}
+                >
+                  <ChevronDown aria-hidden="true" size={18} />
+                </button>
+                <button
+                  type="button"
+                  className="ui-button ui-button--quiet ui-button--icon"
+                  aria-label={dict.areaExplorer.hideProvinceDetails}
+                  title={dict.areaExplorer.hideProvinceDetails}
+                  onClick={dismissRegionDetails}
+                >
+                  <X aria-hidden="true" size={17} />
+                </button>
+              </div>
+            </div>
 
-            <section className="explore-coverage" aria-live="polite">
-              <h3>
-                {isCavite
-                  ? `${selectedArea} · ${dict.areaExplorer.pendingReviewTitle}`
-                  : `${selectedProvinceData.name} · ${dict.areaExplorer.unsupportedTitle}`}
-              </h3>
-              <p>{isCavite ? dict.areaExplorer.pendingReviewDesc : dict.areaExplorer.unsupportedDesc}</p>
-            </section>
-          </div>
-        </aside>
-      </div>
+            <WarningDetails
+              warning={
+                warningsByProvince.get(selectedProvince) ?? getProvinceWarning(null, selectedProvince, warningNow)
+              }
+              provinceId={selectedProvince}
+              snapshot={warningSnapshot}
+              demo={Boolean(demoScenario)}
+            />
+            <div id="explore-location-details" className="explore-location-content" data-expanded={detailsExpanded}>
+              <p className="explore-location-description">{dict.areaExplorer.sideDesc}</p>
+
+              {isHistoricalMaguindanao && (
+                <p className="explore-historical-note">{dict.areaExplorer.historicalBoundaryNote}</p>
+              )}
+
+              {isCavite && (
+                <>
+                  <p className="explore-location-description explore-pilot-description">
+                    {dict.areaExplorer.pilotDescription}
+                  </p>
+                  <LocationOptions group="explore-location" />
+                </>
+              )}
+
+              <section className="explore-coverage" aria-live="polite">
+                <h3>
+                  {isCavite
+                    ? `${selectedArea} · ${dict.areaExplorer.pendingReviewTitle}`
+                    : `${selectedProvinceData.name} · ${dict.areaExplorer.unsupportedTitle}`}
+                </h3>
+                <p>{isCavite ? dict.areaExplorer.pendingReviewDesc : dict.areaExplorer.unsupportedDesc}</p>
+              </section>
+            </div>
+          </aside>
+        </div>
+      )}
     </div>
   );
 }
