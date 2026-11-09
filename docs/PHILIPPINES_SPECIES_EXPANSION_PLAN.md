@@ -5321,3 +5321,13 @@ This is a secondary, historical discovery lead, not a primary survey. The plan g
 See the [NEDA Region II framework plan](https://neda.rdc2.gov.ph/wp-content/uploads/2015/12/Cagayan-Riverine-Zone-Development-Framework-Plan-2005_2030.pdf) and the [research review](../data/research/philippines/national/reviews/region02-cagayan-riverine-plan-2006-fish-list-review-20261110.json). The same plan is separately cited for tributary context; that map/river-network context does not make this table site-specific.
 
 **Next:** locate the underlying BFAR Region II Profile 2006 or other primary sources behind Table 9, and prioritize newer, site-linked inland fish surveys for the Cagayan River basin and its tributaries. Keep this 2006 compilation out of app data unless a primary source and taxonomic crosswalk resolve its labels and scope.
+
+### National rollout step 599: Cross-check the BFAR list through the 2023 JICA report — 10 November 2026
+
+Reviewed JICA's July 2023 detailed planning survey report, including the Cagayan Basin section and Table 10-2-1. It explicitly says the table is based on BFAR Region II's 2006 survey and describes BFAR 2013 star annotations for a subset of endemic taxa associated with threatened/endangered status, economic importance, or both. Its table repeats the historical list with added family/local-name annotations and an additional prawn entry. This confirms a stronger source chain for the 2006 compilation but is not a second fish survey; the JICA and NEDA tables share BFAR provenance.
+
+The BFAR 2006 profile and underlying 2013 source were not located. The JICA report does not supply sample dates, methods, stations, coordinates, vouchers, or event-level observations. Its 2013 stars are not evidence of current legal protection, open/closed seasons, or catch rules. No species list/table, species/occurrence rows, geometry, current conservation/legal claim, or app content was added; reuse terms remain unverified and publication approval remains false. One secondary source entry was added; registry total is 841.
+
+See the [JICA library record](https://openjicareport.jica.go.jp/617/617/617_118_1000051770.html), the [2023 JICA report PDF](https://openjicareport.jica.go.jp/pdf/1000051770.pdf), and the [research review](../data/research/philippines/national/reviews/region02-jica-cagayan-bfar-fish-list-crosscheck-20261110.json).
+
+**Next:** continue searching accessible archives for the original BFAR Region II Profile 2006 and its 2013 conservation/importance source. In parallel, prioritize new site-linked fish surveys for inland Cagayan Valley rivers, lakes, reservoirs, wetlands, estuaries, and brackish waters; keep repeated secondary lists from being counted as independent evidence.
