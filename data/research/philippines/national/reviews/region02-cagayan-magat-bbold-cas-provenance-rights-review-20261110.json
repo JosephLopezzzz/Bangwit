@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "region02-cagayan-magat-bbold-cas-provenance-rights-review-20261110",
+  "generatedOn": "2026-11-10",
+  "status": "cagayan-bold-metadata-attribution-terms-checked;cas-magat-metadata-cc0;historical-locality-only;article-reuse-unverified;research-only",
+  "purpose": "Complete the source-provenance and record-metadata rights pass for the two Cagayan River BOLD taxa and five Magat River CAS vouchers without treating historical records as current range or app-ready map points.",
+  "input": {
+    "candidateReview": "data/research/philippines/national/reviews/gbif-region02-river-candidate-source-review-20261109.json",
+    "taxonomyReview": "data/research/philippines/national/reviews/region02-cagayan-magat-fish-taxonomy-crosswalk-20261110.json",
+    "gbifRecordReview": "data/research/philippines/national/reviews/gbif-region02-river-record-candidate-review-col-filtered-20261109.json"
+  },
+  "cagayanRiverBOLD": {
+    "dataset": {
+      "name": "International Barcode of Life project (iBOL)",
+      "doi": "https://doi.org/10.15468/inygc6",
+      "datasetLicense": "CC BY 4.0, as exposed in the retrieved GBIF dataset/occurrence metadata",
+      "recordCount": 12,
+      "taxonLabels": ["Clarias macrocephalus", "Plicofollis magatensis"],
+      "collectionDateLabels": ["2011-11-19", "2011-12-28"],
+      "sourceWaterbodyLabel": "Cagayan River",
+      "sourceProvinceLabel": "Cagayan",
+      "coordinates": null,
+      "coordinateAccuracy": null
+    },
+    "recordTrace": "The 12 BOLD process IDs are linked in the source review to sample IDs, morphology-based identifications by Jonas P. Quilang, and GenBank accession metadata. Five records are labelled Clarias macrocephalus and seven Plicofollis magatensis. These are 12 database records grouped into two historical taxon/site evidence sets, not 12 species or independent survey events.",
+    "citationAndReuse": "Current BOLD citation guidance asks users to cite a single record by SampleID or ProcessID and specimen depository with the BOLD access date; for multiple records it asks for the corresponding identifiers/depositories and access date. The review retains the process IDs and dataset DOI. The CC BY 4.0 deed requires appropriate credit, a link to the license, and an indication of changes. The item-level depository field was not independently confirmed for every process record, so attribution must preserve each process ID and not invent a depository.",
+    "disposition": "Keep the factual source metadata as research evidence with the dataset citation and per-record IDs. No exact coordinates, sequence strings, images, article table, full checklist, or present-day occurrence claim is approved."
+  },
+  "cagayanCatfishArticle": {
+    "citation": "Yu, S. C. S., and Quilang, J. P. (2014). Molecular Phylogeny of Catfishes (Teleostei: Siluriformes) in the Philippines Using the Mitochondrial Genes COI, Cyt b, 16S rRNA, and the Nuclear Genes Rag1 and Rag2. Philippine Journal of Science 143(2):187-198.",
+    "provenanceRole": "Primary article cross-reference for catfish sample, voucher, and accession context; it is not the same thing as all twelve BOLD process records. The previously reviewed article indicates a smaller phylogenetic subset and provides no basis to scale that subset into abundance or a complete checklist.",
+    "rights": "No item-specific article reuse license was verified. Cite the article and retain only brief attributed facts in research notes; do not reproduce its table, figure, sequence, or full taxon list in the app."
+  },
+  "magatRiverCAS": {
+    "dataset": {
+      "name": "CAS Ichthyology (ICH)",
+      "doi": "https://doi.org/10.15468/efh2ib",
+      "datasetLicense": "CC0 1.0, as stated by the current GBIF dataset record",
+      "recordCount": 5,
+      "catalogNumbers": ["38528", "38600", "38916", "26366", "37686"],
+      "sourceWaterbodyLabel": "Magat River",
+      "sourceLocalityLabel": "Bayombong.",
+      "collectionDateLabels": ["1931-05-27", "1940-05-31"],
+      "coordinateUncertaintyInMeters": 3257
+    },
+    "taxonLabelsAsRecorded": [
+      "Glossogobius celebius",
+      "Rhinogobius bucculentus",
+      "Liza melinopterus",
+      "Zenarchopterus philippinus"
+    ],
+    "recordTrace": "The five GBIF records identify the CAS Ichthyology dataset, CAS:SU(ICH) catalog numbers, historical collection dates, and printed Magat River/Bayombong locality. The 3,257 m coordinate uncertainty and GBIF coordinate quality flags make the generalized coordinates unsuitable for reach placement. Use the textual waterbody/locality only as historical source wording.",
+    "citationAndReuse": "The GBIF CAS dataset record declares CC0 1.0. Retain dataset DOI, CAS catalog number/occurrence identifier, and source citation as scholarly provenance even though CC0 does not require copyright attribution.",
+    "disposition": "Retain as historical voucher-backed locality candidates in research files. Do not plot the GBIF generalized coordinates, infer current presence, or merge the historical name labels into app taxonomy before the outstanding nomenclatural conflicts are resolved."
+  },
+  "limits": [
+    "The BOLD source label Cagayan River does not identify an exact reach; no coordinate or coordinate accuracy is supplied.",
+    "The 2011 records are historical and do not establish current presence, abundance, catchability, access, habitat preference, or legal status.",
+    "The five CAS rows are historical vouchers from 1931/1940, and their generalized coordinate has 3,257 m uncertainty; it must not be shown as a precise river location.",
+    "The taxonomy crosswalk records unresolved scientific-name/family conflicts; no voucher was physically re-examined and no specimen was reidentified in this step.",
+    "Dataset metadata rights do not grant reuse of article text, images, figures, sequence strings, or third-party content. Article-specific reuse remains unverified.",
+    "No species/occurrence app rows, map point, geometry, diet, safety, catchability, or legal-rule claim was added; publication approval remains false."
+  ],
+  "nextAction": "Continue Region II inland-water discovery beyond the Cagayan and Magat River candidates. Prioritize unreviewed named lakes, reservoirs, wetlands, and brackish systems from the existing Region II waterbody inventory; fetch exact-waterbody occurrence records, then trace each candidate to its source dataset, voucher or study, locality confidence, taxonomy, and record-level terms before any app admission.",
+  "references": [
+    { "title": "BOLD citation guidance", "url": "https://v5.boldsystems.org/about/citation/" },
+    { "title": "GBIF iBOL dataset", "url": "https://www.gbif.org/dataset/040c5662-da76-4782-a48e-cdea1892d14c" },
+    { "title": "GBIF CAS Ichthyology dataset", "url": "https://www.gbif.org/dataset/5d6c10bd-ea31-4363-8b79-58c96d859f5b" },
+    { "title": "Creative Commons Attribution 4.0 deed", "url": "https://creativecommons.org/licenses/by/4.0/" },
+    { "title": "Philippine Journal of Science catfish article", "url": "https://philjournalsci.dost.gov.ph/molecular-phylogeny-of-catfishes-teleostei-siluriformes-in-the-philippines-using-the-mitochondrial-genes-coi-cyt-b-16s-rrna-and-the-nuclear-genes-rag1-and-rag2/" }
+  ]
+}
