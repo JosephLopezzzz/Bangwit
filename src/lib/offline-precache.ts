@@ -4,6 +4,9 @@ import type { InjectManifestOptions } from "@serwist/turbopack";
 const offlineDocuments = ["/~offline", "/catches"];
 
 export const offlinePrecacheOptions = {
+  // Species photography can grow with national coverage; let the bounded image
+  // runtime cache retain only recently viewed files instead of installing all of them.
+  globIgnores: ["public/assets/species/**/*"],
   globPatterns: [
     ".next/static/**/*.{js,css,html,ico,apng,png,avif,jpg,jpeg,jfif,pjpeg,pjp,gif,svg,webp,json,webmanifest}",
     "public/**/*",
@@ -21,4 +24,4 @@ export const offlinePrecacheOptions = {
       };
     },
   ],
-} satisfies Pick<InjectManifestOptions, "globPatterns" | "templatedURLs" | "manifestTransforms">;
+} satisfies Pick<InjectManifestOptions, "globIgnores" | "globPatterns" | "templatedURLs" | "manifestTransforms">;

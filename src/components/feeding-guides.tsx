@@ -4,8 +4,10 @@ import { ArrowUpRight, ChevronDown, Info, Layers, Search } from "lucide-react";
 import { useState } from "react";
 import { useBangwit } from "@/components/bangwit-provider";
 import { DropdownSelect } from "@/components/dropdown-select";
+import { SpeciesImage } from "@/components/species-image";
 import guides from "@/data/feeding-guides.json";
 import { filterFeedingGuides } from "@/lib/species-research";
+import { speciesImageRegistry } from "@/lib/species-images";
 
 const foodCategories = [
   "fish",
@@ -108,10 +110,26 @@ export function FeedingGuides() {
                     <span className="sr-only">{dict.historicalEvidence.opensTab}</span>
                   </a>
                 </div>
-                <p className="mt-3 max-w-[75ch] text-[14px] leading-relaxed text-ink">{guide.summary[lang]}</p>
-                <div className="mt-3 rounded-xl bg-slate-50 px-4 py-3">
-                  <p className="text-xs font-bold uppercase tracking-wide text-muted">{copy.studyContextLabel}</p>
-                  <p className="mt-1 text-[14px] leading-relaxed text-muted">{guide.studyContext[lang]}</p>
+                <div className="mt-3 grid min-w-0 gap-4 sm:grid-cols-[minmax(0,220px)_minmax(0,1fr)] sm:items-start">
+                  <SpeciesImage
+                    image={speciesImageRegistry[`worms:${guide.aphiaId}`]}
+                    labels={{
+                      unavailable: copy.imageUnavailable,
+                      source: copy.imageSourceLabel,
+                      creator: copy.imageCreatorLabel,
+                      license: copy.imageLicenseLabel,
+                      identification: copy.imageIdentificationLabel,
+                    }}
+                    sizes="(max-width: 640px) 100vw, 220px"
+                    className="w-full max-w-[220px]"
+                  />
+                  <div className="min-w-0">
+                    <p className="max-w-[75ch] text-[14px] leading-relaxed text-ink">{guide.summary[lang]}</p>
+                    <div className="mt-3 rounded-xl bg-slate-50 px-4 py-3">
+                      <p className="text-xs font-bold uppercase tracking-wide text-muted">{copy.studyContextLabel}</p>
+                      <p className="mt-1 text-[14px] leading-relaxed text-muted">{guide.studyContext[lang]}</p>
+                    </div>
+                  </div>
                 </div>
                 {guide.evidenceType ? (
                   <p className="mt-3 text-sm leading-relaxed text-muted">

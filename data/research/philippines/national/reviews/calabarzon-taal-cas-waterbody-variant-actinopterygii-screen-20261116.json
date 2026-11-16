@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "calabarzon-taal-cas-waterbody-variant-actinopterygii-screen-20261116",
+  "checkedOn": "2026-11-16",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "regionName": "Region IV-A (CALABARZON)",
+  "waterbodyIds": [
+    "ph-wb-taal-lake",
+    "ph-wb-pansipit-river"
+  ],
+  "purpose": "Screen literal GBIF waterBody-name variants for ray-finned-fish occurrence candidates, then retain only aggregate counts while the CAS redistribution conflict remains unresolved.",
+  "query": {
+    "endpoint": "https://api.gbif.org/v1/occurrence/search",
+    "country": "PH",
+    "taxon": {
+      "name": "Actinopterygii",
+      "taxonKey": "8VR36",
+      "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+      "checklist": "Catalogue of Life (XR)"
+    },
+    "nameVariantCounts": [
+      {
+        "waterBody": "Lake Taal",
+        "url": "https://api.gbif.org/v1/occurrence/search?country=PH&waterBody=Lake%20Taal&taxonKey=8VR36&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&limit=0",
+        "resultCount": 14,
+        "datasetKey": "5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+        "basisOfRecord": "PRESERVED_SPECIMEN"
+      },
+      {
+        "waterBody": "Taal Lake",
+        "url": "https://api.gbif.org/v1/occurrence/search?country=PH&waterBody=Taal%20Lake&taxonKey=8VR36&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&limit=0",
+        "resultCount": 2,
+        "datasetKey": "5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+        "basisOfRecord": "PRESERVED_SPECIMEN"
+      },
+      {
+        "waterBody": "Pansipit River",
+        "url": "https://api.gbif.org/v1/occurrence/search?country=PH&waterBody=Pansipit%20River&taxonKey=8VR36&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&limit=0",
+        "resultCount": 1,
+        "datasetKey": "5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+        "basisOfRecord": "PRESERVED_SPECIMEN"
+      }
+    ],
+    "allTaxaControl": {
+      "waterBody": "Lake Taal",
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&waterBody=Lake%20Taal&limit=300",
+      "resultCount": 79,
+      "recordsReturned": 79,
+      "distinctDatasetCount": 4,
+      "assessment": "The unfiltered result mixes multiple collection datasets and taxonomic groups. It is not a fish checklist; only the 14 CAS records matched the selected Actinopterygii key in this query."
+    },
+    "assessment": "The three literal Actinopterygii searches returned 17 query hits across their separate waterBody values; they were not deduplicated across query variants. All hits indexed to the CAS Ichthyology dataset. The query is bounded by GBIF indexed fields and the selected taxon backbone; it is neither a complete waterbody inventory nor a current-presence assessment."
+  },
+  "rightsReview": {
+    "gbifDatasetKey": "5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+    "datasetTitle": "CAS Ichthyology (ICH)",
+    "datasetVersion": "150.548",
+    "gbifDatasetLicense": "CC0-1.0",
+    "providerTermsUrl": "https://blog.calacademy.org/scientists/ichthyology-collections",
+    "providerTermsFinding": "The California Academy of Sciences states that collection data may be used for basic research, education and conservation, but prohibits commercial or for-profit use without express written consent and prohibits repackaging, resale or redistribution in any form.",
+    "assessment": "The GBIF CC0 dataset label and the provider's no-redistribution terms conflict for these CAS-sourced records. No item-level clarification or separate permission was found. Hold every candidate from row-level tracked files, derived species assertions, images, maps and public-app projection."
+  },
+  "decision": {
+    "rowLevelNamesCopied": false,
+    "recordIdentifiersCopied": false,
+    "coordinatesCopied": false,
+    "speciesAssertionsAdded": 0,
+    "imageFilesAdded": 0,
+    "scopeAssignmentsChanged": false,
+    "publicAppProjectionChanged": false,
+    "publicationApproval": false,
+    "rationale": "A discovery query can identify candidate sources without clearing their reuse terms. Preserve only aggregate search evidence until the provider resolves the conflict or an independently reusable source verifies the same facts."
+  },
+  "nextActions": [
+    "Continue with independently reusable fish records and surveys for Taal Lake and Pansipit River; do not treat the CAS candidates as approved app inputs.",
+    "Pursue only an ordinary accessible Dryad download route for Aquilino et al.'s CC0 archive; do not bypass the 403 response.",
+    "Keep image assessment separate: no CAS or Dryad photo may enter the app until each image is linked to a verified specimen/taxon and passes the image-source and reuse checks."
+  ],
+  "nonClaims": [
+    "The zero or positive indexed counts do not establish absence, completeness, abundance, catchability, current presence, safety, access, legality, habitat geometry or diet.",
+    "A dataset-level GBIF license label does not by itself resolve a provider's contradictory collection terms.",
+    "No physical specimen was examined and no taxon was reidentified."
+  ]
+}

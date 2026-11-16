@@ -1,0 +1,311 @@
+{
+  "schemaVersion": 1,
+  "snapshotDate": "2026-11-16",
+  "phase": "Luzon",
+  "status": "in-progress; no region is baseline-reviewed",
+  "purpose": "Consolidated work tracker for the Luzon delivery phase. This is not a species checklist, complete waterbody inventory, release manifest, or claim of biological absence.",
+  "administrativeBasis": {
+    "source": "data/research/philippines/administrative-registry.json",
+    "snapshotDate": "2026-09-30",
+    "limitations": [
+      "The registry supplies the pinned regional and province baseline plus separately represented independent cities; it does not enumerate every municipality and component city as a waterbody coverage denominator.",
+      "MIMAROPA is included in the Luzon delivery phase by project convention; administrative membership, island group, drainage basin, and marine study area remain separate relationships."
+    ]
+  },
+  "baselineReviewedDefinition": "Use the completion gates in docs/PHILIPPINES_SPECIES_EXPANSION_PLAN.md section 3. A region is baseline-reviewed only after its complete administrative and source-derived waterbody scope is reconciled, source searches and candidate decisions are accounted for, evidence and reuse checks pass, every waterbody has an explicit coverage result, and counts reconcile.",
+  "completionGates": [
+    {
+      "id": "administrative-scope",
+      "status": "open",
+      "requirement": "Account for all current provinces, applicable NCR units, independent cities, and needed lower-level locality crosswalks in the pinned administrative snapshot."
+    },
+    {
+      "id": "waterbody-scope",
+      "status": "open",
+      "requirement": "Reconcile source-derived marine, brackish, and inland waters, including rivers, tributaries, streams, natural lakes, reservoirs, wetlands, ponds, and islands where applicable."
+    },
+    {
+      "id": "source-sweep",
+      "status": "open",
+      "requirement": "Process each agreed source/search or record the access, rights, or evidence gap with attempted alternatives and a follow-up owner."
+    },
+    {
+      "id": "candidate-decisions",
+      "status": "open",
+      "requirement": "Give each snapshot candidate an evidence-backed admit, exclude, or hold decision. A hold is triage, not coverage."
+    },
+    {
+      "id": "evidence-and-rights",
+      "status": "open",
+      "requirement": "Validate taxon identity, locality, date, provenance, item and dataset reuse terms, and citation before public projection."
+    },
+    {
+      "id": "waterbody-coverage-results",
+      "status": "open",
+      "requirement": "Show a coverage result per inventoried waterbody; no usable record is a visible gap, never a species-absence claim."
+    },
+    {
+      "id": "count-reconciliation",
+      "status": "open",
+      "requirement": "Reconcile raw, normalized, mirrored, admitted, excluded, and held counts and list remaining gaps in each regional manifest."
+    }
+  ],
+  "regions": [
+    {
+      "rolloutKey": "L1",
+      "regionId": "0400000000",
+      "name": "Region IV-A (CALABARZON)",
+      "expectedProvinceCount": 5,
+      "provinces": ["Batangas", "Cavite", "Laguna", "Quezon", "Rizal"],
+      "separatelyRepresentedUnitsInPinnedRegistry": ["City of Lucena"],
+      "workStatus": "acquiring",
+      "evidenceCoverage": "partial",
+      "baselineReviewed": false,
+      "scopeFrozen": false,
+      "waterbodyLeadCount": 158,
+      "waterbodyLeadCountSourceSnapshotDate": "2026-11-04",
+      "appFacingResearchProjection": {
+        "evidenceFile": "src/data/palico-river-survey-evidence.json",
+        "component": "src/components/palico-river-survey-evidence.tsx",
+        "sourceTableAssertionsDisplayed": 12,
+        "sourceRowsHeld": 3,
+        "scope": "Attributed, historical Palico-Lian survey-table assertions with unknown observation date; not a current checklist, abundance estimate, or complete regional baseline."
+      },
+      "evidenceRefs": [
+        "data/research/philippines/calabarzon-scope.json",
+        "data/research/philippines/national/batch-manifest.json",
+        "data/research/philippines/national/reviews/calabarzon-taal-cas-waterbody-variant-actinopterygii-screen-20261116.json",
+        "data/research/philippines/national/reviews/calabarzon-taal-aquilino-dryad-dataset-access-review-20261116.json",
+        "data/research/philippines/national/reviews/calabarzon-llda-laguna-de-bay-biodiversity-page-review-20261116.json",
+        "data/research/philippines/national/reviews/calabarzon-santa-cruz-cas-occurrence-refresh-20261116.json",
+        "data/research/philippines/national/reviews/calabarzon-laguna-de-bay-llrn-eis-fish-baseline-review-20261116.json",
+        "data/research/philippines/national/reviews/calabarzon-manila-bay-national-museum-obis-refresh-20261116.json",
+        "data/research/philippines/national/reviews/philippine-freshwater-goby-systematic-review-lead-screen-20261116.json"
+      ],
+      "openWork": [
+        "Expand the selected 158-lead list into a reconciled province, island, municipality/city, and named-waterbody inventory; the current scope file itself calls the baseline incomplete.",
+        "Keep source-specific survey assertions distinct from the scope file's waterbody/public-admission counters when reconciling CALABARZON counts.",
+        "Keep Manila Bay shared with NCR and Central Luzon while maintaining one canonical waterbody identity and source-specific locality scope.",
+        "Keep the three historical CAS Santa Cruz River records held from public projection and redistributed packages until the Academy clarifies its no-redistribution terms versus GBIF CC0 metadata.",
+        "Keep the Laguna Lakeshore Road Network EIS as a West Bay retrieval lead; its mixed 2014/2020 fish summaries lack a verified adult-fish site/date/voucher crosswalk and item-specific reuse approval.",
+        "Use independently reusable, site-resolved sources for other CALABARZON inland waters while Taal CAS redistribution terms and Dryad file access remain unresolved.",
+        "Reconcile the wetlands denominator, unnamed river/wetland counts, and modeled stream identities before claiming complete coverage."
+      ],
+      "requiredHabitatLanes": ["freshwater", "brackish", "marine"]
+    },
+    {
+      "rolloutKey": "L2",
+      "regionId": "1300000000",
+      "name": "National Capital Region (NCR)",
+      "expectedProvinceCount": 0,
+      "provinces": [],
+      "separatelyRepresentedUnitsInPinnedRegistry": [
+        "City of Caloocan",
+        "City of Las Piñas",
+        "City of Makati",
+        "City of Malabon",
+        "City of Mandaluyong",
+        "City of Manila",
+        "City of Marikina",
+        "City of Muntinlupa",
+        "City of Navotas",
+        "City of Parañaque",
+        "Pasay City",
+        "City of Pasig",
+        "Quezon City",
+        "City of San Juan",
+        "City of Taguig",
+        "City of Valenzuela",
+        "Pateros"
+      ],
+      "workStatus": "reviewing",
+      "evidenceCoverage": "partial",
+      "baselineReviewed": false,
+      "scopeFrozen": false,
+      "evidenceRefs": [
+        "data/research/philippines/ncr-species-coverage-review-20261024.json",
+        "data/research/philippines/ncr-manila-bay-gbif-record-triage-20261024.json",
+        "data/research/philippines/national/reviews/ncr-pasig-biodiversity-report-refresh-20261116.json",
+        "data/research/philippines/national/reviews/ncr-marikina-river-fish-hosts-crosswalk-20261116.json",
+        "data/research/philippines/national/reviews/ncr-la-mesa-reservoir-fish-host-crosswalk-20261116.json",
+        "data/research/philippines/national/reviews/calabarzon-manila-bay-national-museum-obis-refresh-20261116.json"
+      ],
+      "openWork": [
+        "Reconcile the 17 NCR administrative units and source-named waters into an explicit versioned inventory.",
+        "Extend the 18 named-waterbody leads and bounded occurrence screens without treating candidate hits as validated capture sites.",
+        "Keep Pasig-Marikina reaches, tidal/brackish waters, Manila Bay, and Laguna de Bay connections distinct; reconcile shared Manila Bay sources with L1 and L3.",
+        "The DENR-NCR report remains a system-scope and narrative lead without fish-by-site rows; the Marikina preprint remains an eight-taxon research crosswalk. La Mesa Reservoir has five historical host-fish candidates from a 1989-1990 parasite study (234 examined across taxa), not an abundance estimate; hold its Therapon date conflict and Arius/Netuma identity concern. Lopez (1992) is identified through a 2001 secondary citation, but the original proceedings and its methods, dates, denominators, and vouchers remain unverified. Continue freshwater, brackish, and marine source searches and reconcile all candidates against the incomplete waterbody scope."
+      ],
+      "requiredHabitatLanes": ["freshwater", "brackish", "marine"]
+    },
+    {
+      "rolloutKey": "L3",
+      "regionId": "0300000000",
+      "name": "Region III (Central Luzon)",
+      "expectedProvinceCount": 7,
+      "provinces": ["Aurora", "Bataan", "Bulacan", "Nueva Ecija", "Pampanga", "Tarlac", "Zambales"],
+      "separatelyRepresentedUnitsInPinnedRegistry": ["City of Angeles", "City of Olongapo"],
+      "workStatus": "reviewing",
+      "evidenceCoverage": "partial",
+      "baselineReviewed": false,
+      "scopeFrozen": false,
+      "evidenceRefs": [
+        "data/research/philippines/central-luzon-discovery-checkpoint-20261024.json",
+        "data/research/philippines/central-luzon-bataan-historical-evidence-ledger-20261024.json",
+        "data/research/philippines/central-luzon-candaba-inventory-review-20261024.json",
+        "data/research/philippines/national/reviews/central-luzon-candaba-mallari-2020-source-refresh-20261116.json",
+        "data/research/philippines/central-luzon-pampanga-estuary-fish-study-review-20261024.json",
+        "data/research/philippines/national/reviews/central-luzon-minalin-publisher-media-refresh-20261116.json",
+        "data/research/philippines/national/reviews/central-luzon-bagac-roque-2019-source-review-20261116.json",
+        "data/research/philippines/national/reviews/central-luzon-bagac-roque-2022-source-review-20261116.json",
+        "data/research/philippines/national/reviews/central-luzon-angat-cablitas-2024-diet-risk-review-20261116.json",
+        "data/research/philippines/national/reviews/philippine-freshwater-goby-systematic-review-lead-screen-20261116.json",
+        "data/research/philippines/national/reviews/calabarzon-manila-bay-national-museum-obis-refresh-20261116.json"
+      ],
+      "openWork": [
+        "Replace the RDP's source-reported 168 mixed wetland grouping with a reconciled, named waterbody denominator; it is not yet a verified inventory.",
+        "Complete separate evidence and coverage results for Pampanga River reaches, Angat and Pantabangan reservoirs, Candaba wetland, tributaries, coast and estuaries.",
+        "The refreshed 2020 Candaba source reports one representative specimen per species group deposited at PSAU, but no accession numbers, field dates, site matrix, or item-specific reuse license; keep it research-only pending independent checks.",
+        "The 2019 Bagac conference paper is now identified and its 17/5 totals match the goby synthesis. Keep it separate from the 2022 15-taxon survey and later three-river surveys until field dates, possible sample overlap, and reuse are resolved.",
+        "The 2024 Angat ASH abstract names five fish and broad gut-content categories, but has no dated fish-to-site matrix, voucher crosswalk, quantitative prey rows, or item-specific reuse license; retain as research-only and seek an author-hosted full paper or data supplement.",
+        "Reconcile shared Manila Bay records with L1 and L2 and keep Bataan, Zambales, and Aurora coastal scopes distinct."
+      ],
+      "requiredHabitatLanes": ["freshwater", "brackish", "marine"]
+    },
+    {
+      "rolloutKey": "L4",
+      "regionId": "0100000000",
+      "name": "Region I (Ilocos Region)",
+      "expectedProvinceCount": 4,
+      "provinces": ["Ilocos Norte", "Ilocos Sur", "La Union", "Pangasinan"],
+      "separatelyRepresentedUnitsInPinnedRegistry": ["City of Dagupan"],
+      "workStatus": "queued",
+      "evidenceCoverage": "partial",
+      "baselineReviewed": false,
+      "scopeFrozen": false,
+      "evidenceRefs": [
+        "data/research/philippines/national-abra-ilocos-2001-river-edible-fauna-review-20261030.json",
+        "data/research/philippines/national-agno-pangasinan-macrofauna-review-20261030.json",
+        "data/research/philippines/national/reviews/philippine-freshwater-goby-systematic-review-lead-screen-20261116.json"
+      ],
+      "openWork": [
+        "Build the region's waterbody manifest across Lower Agno, Abra, tributaries, Lingayen Gulf, coast and estuaries.",
+        "Keep Dantis and Lacap's five-station 2018 Agno macrofauna source research-only until its locality and table/taxonomy conflicts are resolved; the goby synthesis row is a bibliography lead only.",
+        "Keep the 2001 four-river edible-fauna paper held for unresolved taxonomy, site resolution, and reuse; search for independently reusable, dated river and coastal evidence.",
+        "Reconcile source-supported reach relationships with CAR without extending a reach-specific record across an entire basin."
+      ],
+      "requiredHabitatLanes": ["freshwater", "brackish", "marine"]
+    },
+    {
+      "rolloutKey": "L5",
+      "regionId": "0200000000",
+      "name": "Region II (Cagayan Valley)",
+      "expectedProvinceCount": 5,
+      "provinces": ["Batanes", "Cagayan", "Isabela", "Nueva Vizcaya", "Quirino"],
+      "separatelyRepresentedUnitsInPinnedRegistry": ["City of Santiago"],
+      "workStatus": "acquiring",
+      "evidenceCoverage": "partial",
+      "baselineReviewed": false,
+      "scopeFrozen": false,
+      "evidenceRefs": [
+        "data/research/philippines/national-freshwater-region02-inland-water-source-inventory-20261106.json",
+        "data/research/philippines/national/reviews/north-luzon-2025-teleost-dna-barcode-cagayan-river-crosswalk-review-20261111.json",
+        "data/research/philippines/national/reviews/region02-wangag-aunugay-watershed-crosswalk-review-20261112.json"
+      ],
+      "openWork": [
+        "Continue the waterbody and fish-source sweep outside the Cagayan Riverine Zone, including Pacific-draining Isabela, Batanes islands, and separate Quirino and Nueva Vizcaya waters.",
+        "Keep barcode field labels, market-purchase labels, coordinates, and drainage crosswalks held until specimen, date, site, and reuse checks resolve.",
+        "Reconcile coastal, estuarine, river, reservoir, lake, wetland, aquaculture, and infrastructure records as separate evidence contexts."
+      ],
+      "requiredHabitatLanes": ["freshwater", "brackish", "marine"]
+    },
+    {
+      "rolloutKey": "L6",
+      "regionId": "1400000000",
+      "name": "Cordillera Administrative Region (CAR)",
+      "expectedProvinceCount": 6,
+      "provinces": ["Abra", "Apayao", "Benguet", "Ifugao", "Kalinga", "Mountain Province"],
+      "separatelyRepresentedUnitsInPinnedRegistry": ["City of Baguio"],
+      "workStatus": "reviewing",
+      "evidenceCoverage": "partial",
+      "baselineReviewed": false,
+      "scopeFrozen": false,
+      "evidenceRefs": [
+        "data/research/philippines/national-car-apayao-abra-institutional-archive-screen-20261030.json",
+        "data/research/philippines/national-apayao-gened2-freshwater-baseline-access-review-20261030.json",
+        "data/research/philippines/national-car-abra-river-fishcore-2026-goby-catch-review-20261106.json",
+        "data/research/philippines/national-car-mountain-province-weather-loach-ricefield-review-20261106.json",
+        "data/research/philippines/national-freshwater-region02-adjacent-ibulao-river-tauli-2022-review-20261109.json",
+        "data/research/philippines/national/reviews/philippine-freshwater-goby-systematic-review-lead-screen-20261116.json"
+      ],
+      "openWork": [
+        "Create a six-province inland waterbody inventory for rivers, headwaters, streams, lakes, reservoirs, rice terraces and wetlands; marine coverage is not applicable.",
+        "The Ibulao landing-center paper is an Ifugao/CAR source, not an Isabela occurrence dataset; resolve its downstream Magat connection only with station-level evidence.",
+        "Keep local/common-name interviews, fishery reports, and unverified taxonomy in research-only status until waterbody, specimen or study, date, and reuse context are adequate.",
+        "Resolve shared Abra and upper-Agno/Abra reach relationships with L4 and L5 from evidence, not region labels alone."
+      ],
+      "requiredHabitatLanes": ["freshwater", "brackish where documented"],
+      "marineLane": "not-applicable"
+    },
+    {
+      "rolloutKey": "L7",
+      "regionId": "0500000000",
+      "name": "Region V (Bicol Region)",
+      "expectedProvinceCount": 6,
+      "provinces": ["Albay", "Camarines Norte", "Camarines Sur", "Catanduanes", "Masbate", "Sorsogon"],
+      "separatelyRepresentedUnitsInPinnedRegistry": ["City of Naga"],
+      "workStatus": "reviewing",
+      "evidenceCoverage": "partial",
+      "baselineReviewed": false,
+      "scopeFrozen": false,
+      "evidenceRefs": [
+        "data/research/philippines/national-bicol-rivers-survey-evidence-review-20261030.json",
+        "data/research/philippines/national-bicol-bato-baao-lakes-source-screen-20261030.json",
+        "data/research/philippines/national-bicol-inland-risk-assessment-source-review-20261030.json",
+        "data/research/philippines/national-bicol-catanduanes-pajo-river-review-20261030.json",
+        "data/research/philippines/national/reviews/philippine-freshwater-goby-systematic-review-lead-screen-20261116.json"
+      ],
+      "openWork": [
+        "Resolve conflicting scope and totals in the Bicol River study before considering any site-level projection.",
+        "Build separate fish evidence and coverage for Bicol River reaches, Buhi/Bato/Baao lakes, tributaries, San Miguel Bay, and the island/coastal provinces.",
+        "Keep the project inventory separate from aquaculture, seafood market, and risk-assessment sources; perform taxon-specific sensitivity review."
+      ],
+      "requiredHabitatLanes": ["freshwater", "brackish", "marine"]
+    },
+    {
+      "rolloutKey": "L8",
+      "regionId": "1700000000",
+      "name": "MIMAROPA Region",
+      "expectedProvinceCount": 5,
+      "provinces": ["Marinduque", "Occidental Mindoro", "Oriental Mindoro", "Palawan", "Romblon"],
+      "separatelyRepresentedUnitsInPinnedRegistry": ["City of Puerto Princesa"],
+      "workStatus": "acquiring",
+      "evidenceCoverage": "partial",
+      "baselineReviewed": false,
+      "scopeFrozen": false,
+      "evidenceRefs": [
+        "data/research/philippines/mimaropa-naujan-2011-mbcfi-profile-scope-rights-review-20261105.json",
+        "data/research/philippines/mimaropa-amnay-river-eis-fish-survey-scope-review-20261106.json",
+        "data/research/philippines/mimaropa-palawan-ppsr-two-season-aquatic-fauna-2025-review-20261106.json",
+        "data/research/philippines/mimaropa-boac-river-2024-eis-fish-baseline-access-review-20261106.json"
+      ],
+      "openWork": [
+        "Expand beyond Naujan Lake and Palawan with distinct, dated freshwater surveys or voucher-backed records for Marinduque, Occidental Mindoro, and Romblon.",
+        "Audit every island and province across marine, brackish, and inland lanes; mainland or Palawan-only coverage cannot stand in for the region.",
+        "Keep inaccessible or rights-unclear theses, reports, and occurrence mirrors held while pursuing other public and reusable sources."
+      ],
+      "requiredHabitatLanes": ["freshwater", "brackish", "marine"]
+    }
+  ],
+  "phaseExit": {
+    "status": "not-met",
+    "requirements": [
+      "Eight versioned regional scope manifests reviewed and their current administrative units accounted for.",
+      "Shared waters reconciled across regions without duplicating or widening source-specific locality claims.",
+      "Supported evidence integrated only after identity, geography, date, citation, and reuse checks.",
+      "Visible per-waterbody coverage results and unresolved research gaps published in the regional manifests.",
+      "No nationwide-complete or all-species-complete claim."
+    ]
+  },
+  "nextExecution": "Proceed with the Luzon source-first sweep by choosing the next independently reusable, named-waterbody evidence source. Do not wait on government correspondence or promote any research-only candidate into the app without passing the project's evidence and rights gates."
+}

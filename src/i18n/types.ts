@@ -570,6 +570,11 @@ export type Dictionary = {
     };
     resultsSummary: string;
     noMatches: string;
+    imageUnavailable: string;
+    imageSourceLabel: string;
+    imageCreatorLabel: string;
+    imageLicenseLabel: string;
+    imageIdentificationLabel: string;
     studyContextLabel: string;
     foodsLabel: string;
     evidenceTypeLabel: string;

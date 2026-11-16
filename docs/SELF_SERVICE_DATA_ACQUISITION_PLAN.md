@@ -104,6 +104,8 @@ Literature extraction order: accessible original study and supplement -> indepen
 
 ## 6. Concrete implementation backlog
 
+For the current Luzon sequence, use the [Luzon completion implementation plan](LUZON_COMPLETION_IMPLEMENTATION_PLAN.md). It accounts for the acquisition tools and reviews already present, then prioritizes evidence reconciliation, frozen regional scopes, decisions/coverage, shared packages, and release acceptance. The milestones below remain the underlying engineering backlog; they are not all pending or all complete merely because source research has advanced.
+
 All new paths and commands in this section are **proposed**. Existing files are identified explicitly. Implement the smallest complete vertical slice first; do not refactor every historical generator before proving it.
 
 | Milestone | Work and concrete deliverable | Completion gate | Planning estimate |

@@ -1,0 +1,149 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "north-luzon-2025-teleost-dna-barcode-cagayan-river-crosswalk-review-20261111",
+  "generatedOn": "2026-11-11",
+  "followUpReviewedOn": "2026-11-12",
+  "status": "open-access-voucher-dataset-reviewed;three-province-field-and-market-rows-separated;173-genbank-coi-records-screened;voucher-and-date-mismatches;cagayan-field-area-labels-audited;site-coordinate-crosswalk-unresolved;reuse-restricted;research-only",
+  "purpose": "Assess a recent voucher-backed North Luzon fish barcode dataset for Cagayan freshwater evidence, separate river field samples from market purchases, cross-check deposited accession metadata, and record its geographic and reuse limits.",
+  "sourcesReviewed": [
+    {
+      "id": "dimaquibo-et-al-2025-north-luzon-teleost-barcode-dataset",
+      "title": "DNA Barcoding of Teleost Fishes from North Luzon, Philippines: A Dataset for Ichthyofaunal Diversity Assessment",
+      "citation": "Dimaquibo, A. C., Jhuang, W.-C., Huang, W.-C., Encarnacion, A. B., Villarao, M. C., Yutuc, R. V., et al. (2025). Scientific Data, 12, 1571. https://doi.org/10.1038/s41597-025-05758-3",
+      "url": "https://www.nature.com/articles/s41597-025-05758-3",
+      "reviewedSections": "Abstract; site table; sample collection; data records; technical validation; rights statement; Cagayan, Aurora, and Zambales supplementary sheets S1a–S1c.",
+      "reuse": "The article states CC BY-NC-ND 4.0. No separate supplement-specific reuse terms were verified. The workbook was read only from a temporary download and was not retained in the repository; do not reproduce or adapt its specimen table or images without rights clarification."
+    },
+    {
+      "id": "north-luzon-2025-teleost-barcode-supplementary-table-s1",
+      "title": "Supplementary Table S1a: Cagayan voucher and barcode metadata",
+      "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41597-025-05758-3/MediaObjects/41597_2025_5758_MOESM2_ESM.xlsx",
+      "reviewedUse": "Read-only audit of 274 Cagayan voucher rows. The table distinguishes 101 field-collected records from 173 market purchases and includes voucher, taxon, sampling-area, date, and accession fields. No table rows or sequence strings were retained."
+    },
+    {
+      "id": "genbank-pp417740-pp417741-sicyopus-cagayan-vouchers",
+      "title": "NCBI GenBank COI records PP417740.1 and PP417741.1",
+      "provider": "National Center for Biotechnology Information, GenBank",
+      "queryUrl": "https://www.ncbi.nlm.nih.gov/nuccore/?term=PP417740%3APP417741%5BACCN%5D",
+      "recordUrls": [
+        "https://www.ncbi.nlm.nih.gov/nuccore/PP417740.1",
+        "https://www.ncbi.nlm.nih.gov/nuccore/PP417741.1"
+      ],
+      "reviewedFields": "Accession, organism, specimen_voucher, collection_date, geo_loc_name, locality, and lat_lon.",
+      "reviewedUse": "Both records report Sicyopus zosterophorus, vouchers DOS09243-1 and DOS09243-2, and 18-Jan-2023. Both provide only Philippines as geo_loc_name and have no locality or lat_lon field. They corroborate voucher identity/date but do not independently verify the Cagayan River site label."
+    }
+  ],
+  "study": {
+    "reportedScope": "The article reports 1,513 voucher specimens from 27 sites across Aurora, Cagayan, and Zambales, collected during January and June 2023. It reports 323 fish taxa for the full three-province dataset, 707 COI sequences, 343 12S rRNA sequences, and 11 specimens identified only to genus level. Those totals are not a freshwater-only or Cagayan-only checklist.",
+    "cagayanSupplement": {
+      "voucherRows": 274,
+      "fieldCollectedRows": 101,
+      "marketPurchaseRows": 173,
+      "uniqueCoiAccessionsScreened": 101,
+      "genbankRecordsReturned": 101,
+      "voucherLabelMatchesAfterWhitespaceNormalization": 97,
+      "collectionDateMatches": 90,
+      "accessionRowsWithAtLeastOneVoucherOrDateMismatch": 11,
+      "genbankRecordsWithLatLonOrLocality": 0,
+      "genbankGeoLocNameValues": ["Philippines"],
+      "fieldRowsDateRange": "2023-01-10 through 2023-01-20"
+    },
+    "cagayanFieldAreaLabelAudit": {
+      "fieldCollectedRowsReviewed": 61,
+      "exactSamplingAreaLabelStrings": 12,
+      "caseOnlyVariantPairsKeptSeparate": 2,
+      "caseOnlyVariantPairsMerged": 0,
+      "siteCoordinateCrosswalkResolved": false,
+      "marketPurchaseRowsAlsoAppearUnderSomeWatercourseOrPlaceLabels": true,
+      "disposition": "Aggregate audit only. Do not reproduce the supplement's label/taxon rows or map these strings to the article's coordinate table; exact site identities remain unresolved."
+    },
+    "voucherPhotoSupplement": {
+      "title": "Supplementary Figure S1: voucher specimen photographs",
+      "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41597-025-05758-3/MediaObjects/41597_2025_5758_MOESM1_ESM.docx",
+      "captionFinding": "The caption identifies voucher specimen photographs with COI and 12S accession numbers.",
+      "individualImagesVisuallyReviewed": false,
+      "photoAssetsCopied": 0,
+      "supplementSpecificReuseTermsVerified": false,
+      "publicationApproval": false
+    },
+    "provinceBreakdown": {
+      "Cagayan": {
+        "sequencedVoucherRows": 274,
+        "fieldCollectedRows": 101,
+        "marketPurchaseRows": 173
+      },
+      "Aurora": {
+        "sequencedVoucherRows": 198,
+        "uniqueVoucherLabels": 197,
+        "fieldCollectedRows": 46,
+        "marketPurchaseRows": 152,
+        "duplicateVoucherLabel": {
+          "label": "DOS 09712-1",
+          "conflictingSourceTaxa": 2,
+          "method": "Purchased at market",
+          "resolution": "Unresolved; do not treat either row as an independently georeferenced site occurrence."
+        }
+      },
+      "Zambales": {
+        "sequencedVoucherRows": 235,
+        "fieldCollectedRows": 26,
+        "marketPurchaseRows": 209
+      },
+      "allThreeProvinces": {
+        "sequencedVoucherRows": 707,
+        "fieldCollectedRows": 173,
+        "marketPurchaseRows": 534,
+        "uniqueFieldCoiAccessionsScreened": 173,
+        "genbankRecordsReturned": 173,
+        "voucherLabelMatchesAfterWhitespaceNormalization": 168,
+        "collectionDateMatches": 154,
+        "accessionRowsWithAtLeastOneVoucherOrDateMismatch": 19,
+        "voucherLabelMismatchRows": 5,
+        "collectionDateMismatchRows": 19,
+        "genbankRecordsWithLatLonOrLocality": 0,
+        "genbankGeoLocNameValues": ["Philippines"]
+      }
+    },
+    "cagayanRiverCandidate": {
+      "sourceReportedTaxon": "Sicyopus zosterophorus",
+      "voucherLabels": ["DOS 09243-1", "DOS 09243-2"],
+      "accessions": ["PP417740", "PP417741"],
+      "sourceReportedDate": "2023-01-18",
+      "evidenceInterpretation": "The supplementary sheet labels these two voucher rows Cagayan River; the matching NCBI records confirm taxon, voucher, and date but omit a site-level locality or coordinates. This is a historical, source-reported river candidate, not an independently georeferenced or current occurrence."
+    },
+    "siteCoordinateCrosswalk": "The article's main site table lists 27 named points with coordinates, while the supplementary specimen sheets use finer and additional sampling-area labels. Their row-to-coordinate crosswalk is not established. Some labels are municipal or market names, not waterbodies; the Zambales supplement also includes a field-collected row labeled Subic market. Keep specimen site labels and the main-table coordinates separate; do not map specimens or assign coordinates from the nearest municipality.",
+    "fieldMarketSeparation": "Market-purchased specimens are not aquatic-site occurrence records. The study's province-level 323-taxon total includes market, landing-area, and freshwater sampling; only source-labeled field samples can be considered as freshwater candidates, and those still require row-level provenance and rights checks.",
+    "interpretation": "Useful as a recent lead for voucher-linked freshwater diversity research in Cagayan and other North Luzon provinces. It is not a complete basin inventory, abundance survey, species-by-waterbody map, catchability guide, diet source, safety assessment, or legal fishing source."
+  },
+  "qualityAndReuseLimits": [
+    "The article's rights notice states Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International; separate rights terms for its supplementary workbook were not verified. Do not copy or adapt the workbook table, images, or full checklist into public Bangwit data without rights review.",
+    "The supplementary DOCX caption identifies accession-keyed voucher photographs in Figure S1, but individual images were not visually verified or copied. Separate supplement-specific reuse terms were not verified; no source photo is approved for Bangwit.",
+    "The Cagayan supplement contains 274 voucher rows but mixes 101 field-collected records with 173 market purchases; market records cannot be assigned to the named water where a fish was caught.",
+    "The follow-up audit found 61 field-collected Cagayan rows under 12 exact sampling-area label strings; two capitalization-only variant pairs remain distinct. Some labels also occur on market-purchase rows. This aggregate audit does not resolve a label-to-coordinate or label-to-waterbody crosswalk.",
+    "Across the three supplementary province sheets, 173 field-row COI accessions were queried in GenBank and all 173 records were returned. After whitespace normalization, 168 voucher labels and 154 dates matched; 19 accession rows had at least one voucher/date discrepancy, including five voucher-label mismatches. No queried record included lat_lon or locality, and all reported only Philippines as geo_loc_name.",
+    "The two Cagayan River Sicyopus voucher records have matching voucher and collection-date fields, but their GenBank locality is country-only; site verification depends on the supplementary table.",
+    "The article's broad coordinate table and specimen-level sampling-area labels do not establish a row-to-point crosswalk. One Aurora voucher label is duplicated across two market taxa, and one Zambales label describes Subic market despite a field-collection method. No coordinate, geometry, or pinpoint is approved.",
+    "No raw workbook, sequence string, full species table, current conservation status, presence/absence statement, catchability, diet, safety, legal claim, or app content is approved."
+  ],
+  "dispositionSummary": {
+    "researchSourceUseful": true,
+    "siteLinkedFreshwaterCandidates": 1,
+    "cagayanRiverVoucherCandidateCount": 2,
+    "threeProvinceSupplementCrosswalksAudited": true,
+    "fieldCoiAccessionsAudited": 173,
+    "voucherOrDateDiscrepancyRows": 19,
+    "cagayanFieldAreaLabelRowsAudited": 61,
+    "cagayanExactFieldAreaLabelStrings": 12,
+    "cagayanCaseOnlyVariantPairsMerged": 0,
+    "voucherPhotoAssetsCopied": 0,
+    "fieldMarketSeparated": true,
+    "genbankCrosswalkComplete": false,
+    "specimenLocalityIndependentlyVerified": false,
+    "coordinateCrosswalkResolved": false,
+    "publicationApproval": false,
+    "appOccurrenceRowsAdded": 0,
+    "speciesRowsAdded": 0,
+    "geometryOrCoordinatesAdded": 0
+  },
+  "nextAction": "Keep the Cagayan River voucher pair research-only. Ask the authors to crosswalk the 12 exact field-area label strings to named sites and the article coordinate table, clarify labels that also contain market purchases, reconcile the 11 Cagayan accession discrepancies, and state reuse terms for the workbook and Figure S1 photos. Until then, do not copy specimen rows/photos, infer coordinates, or publish app claims; continue other named rivers, lakes, reservoirs, and wetlands using independently reusable sources."
+}

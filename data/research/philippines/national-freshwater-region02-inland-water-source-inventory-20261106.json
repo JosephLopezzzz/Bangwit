@@ -1,11 +1,17 @@
 {
   "schemaVersion": 1,
-  "reviewedOn": "2026-11-06",
-  "status": "official-bfar-and-nia-sources-reviewed;named-inland-water-leads;isabela-and-abuan-source-leads-reviewed;batanes-itbayat-lake-aquaculture-lead-reviewed;buguey-lagoon-fish-surveys-reviewed;baggao-2022-eel-telemetry-and-2018-tagging-maps-reviewed;magapuy-paitan-ecology-and-water-quality-sites-reviewed;cagayan-river-bayrus-lusog-ilog-project-lead-reviewed;natural-aquaculture-and-infrastructure-separated;no-new-geometry-or-wild-species-rows;research-only",
+  "reviewedOn": "2026-11-12",
+  "status": "official-bfar-and-nia-sources-reviewed;named-inland-water-leads;isabela-and-abuan-source-leads-reviewed;batanes-itbayat-lake-aquaculture-lead-reviewed;batanes-basco-GBIF-USNM-historical-freshwater-eel-specimen-reviewed;buguey-lagoon-fish-surveys-reviewed;baggao-2022-eel-telemetry-and-2018-tagging-maps-reviewed;magapuy-paitan-ecology-and-water-quality-sites-reviewed;cagayan-river-bayrus-lusog-ilog-project-lead-reviewed;wangag-gonzaga-glass-eel-thesis-source-reviewed;natural-aquaculture-and-infrastructure-separated;no-public-species-or-occurrence-rows-or-geometry;research-only;third-party-wangag-station-name-lead-reviewed;research-only;gonzaga-2026-fisheries-ordinance-reviewed;ordinance-currentness-and-implementation-unverified",
   "purpose": "Start a Region II inland-water source inventory that expands beyond the Cagayan B0380 basin and separates rivers, natural lakes, reservoirs, small water impounding projects, irrigation structures, aquaculture and fishery observations.",
   "regionScope": {
     "name": "Cagayan Valley / Region II",
-    "provincesNamedByBfar2022": ["Batanes", "Cagayan", "Isabela", "Quirino", "Nueva Vizcaya"],
+    "provincesNamedByBfar2022": [
+      "Batanes",
+      "Cagayan",
+      "Isabela",
+      "Quirino",
+      "Nueva Vizcaya"
+    ],
     "coverageWarning": "This is a first source-discovery tranche, not a complete regional waterbody or fish inventory. The Cagayan Riverine Zone plan excludes the northeast/northwest Cagayan watersheds that do not drain through the Cagayan River and eastern Isabela watersheds that drain to the Pacific. B0380 therefore cannot stand in for all Region II inland waters.",
     "boundarySourceYear": 2005
   },
@@ -78,6 +84,35 @@
         "The BFAR report says ten potential sites but includes eleven locality mentions; named-site granularity is unresolved.",
         "Annex 9 assessment and Annex 12 digital maps are referenced but were not in the reviewed public project download list; item-specific data/map reuse rights were not verified."
       ]
+    },
+    "batanesBascoUsnmFreshwaterEel": {
+      "gbifDataset": "https://www.gbif.org/dataset/821cc27a-e3bb-4bc5-ac34-89ada245069d",
+      "occurrence": "https://www.gbif.org/occurrence/1320849822",
+      "finding": "One GBIF-indexed USNM preserved-specimen record (USNM 331725) is identified by the record as Anguilla marmorata, collected 1985-06-10, with the locality text 'Freshwater eel, Basco, 1 kilometer south of' and sourceProvince Batanes. This adds a historical freshwater-labeled Batan/Basco specimen lead separate from the Itbayat cage-culture and vocabulary records.",
+      "limits": [
+        "The record does not identify a named stream, lake, spring, wetland, or exact collection site; waterBody is null.",
+        "The decimal coordinates have two decimal places, no coordinate uncertainty, and GBIF issue GEODETIC_DATUM_ASSUMED_WGS84; do not use them for a public map or infer a waterbody polygon.",
+        "One 1985 preserved specimen is historical evidence, not a current status, abundance estimate, complete Batanes inventory, or fishing recommendation.",
+        "Do not connect the Basco record to Itbayat, Kayaywan/Kavaywan Lake, the Reale/Raele lead, or the unnamed 22-hectare Batanes lake without independent evidence.",
+        "The coordinate-bearing COL XR Actinopterygii screen returned 1,730 Batanes records; bounded q text searches returned one Freshwater hit (USNM 331725) and zero river/lake/stream text hits. This is not a complete fish or freshwater survey and does not establish absence."
+      ],
+      "broaderFishScreen": {
+        "taxonomy": "Catalogue of Life eXtended Release Actinopterygii, key 8VR36",
+        "coordinateBearingRecordsAtReview": 1730,
+        "qTextCounts": {
+          "Freshwater": 1,
+          "river": 0,
+          "lake": 0,
+          "stream": 0
+        },
+        "reviewArtifact": "national/reviews/region02-batanes-usnm-331725-freshwater-eel-review-20261112.json",
+        "absenceInferred": false
+      },
+      "reviewArtifact": "national/reviews/region02-batanes-usnm-331725-freshwater-eel-review-20261112.json",
+      "speciesRowsAdded": 0,
+      "occurrenceRowsAdded": 0,
+      "geometryAdded": false,
+      "publicationApproval": false
     }
   },
   "namedNifepWaterbodyLeads": [
@@ -221,7 +256,9 @@
     {
       "artifact": "national-freshwater-region02-magat-reservoir-fishery-evidence-review-20261106.json",
       "reviewedOn": "2026-11-06",
-      "siteLeads": ["Magat Reservoir / Magat Dam Reservoir, Isabela–Ifugao boundary area"],
+      "siteLeads": [
+        "Magat Reservoir / Magat Dam Reservoir, Isabela–Ifugao boundary area"
+      ],
       "finding": "NAST sources report historical open-water catch labels and landings (1987–1988 and 1984–1991); ISU reports a 2022 Clarias gariepinus sample-study lead with wild-versus-cage origin unresolved. BFAR cage and unread production-spreadsheet data remain separate from wild observations. NIA and NAST reservoir area/depth values conflict and need reconciliation.",
       "fishSpeciesRowsAdded": 0,
       "wildOccurrenceRowsAdded": 0,
@@ -232,7 +269,11 @@
     {
       "artifact": "national-freshwater-region02-isabela-inland-wetlands-and-abuan-river-source-review-20261106.json",
       "reviewedOn": "2026-11-06",
-      "siteLeads": ["Isabela municipality-submitted inland-wetland counts", "Abuan River, Cabisera 10, Ilagan", "Potential ludong river-fishing leads in Ilagan, Maconacon, Palanan and Tumauini"],
+      "siteLeads": [
+        "Isabela municipality-submitted inland-wetland counts",
+        "Abuan River, Cabisera 10, Ilagan",
+        "Potential ludong river-fishing leads in Ilagan, Maconacon, Palanan and Tumauini"
+      ],
       "finding": "The Isabela ENRO report gives 20 municipal count rows, including duplicate Jones and San Mariano submissions without explanation, and three dated Abuan water-monitoring stations. A DOST magazine lists potential ludong grounds but supplies no fish-site survey; one locality conflicts internally. These are waterbody and research leads only.",
       "fishSpeciesRowsAdded": 0,
       "fishOccurrenceRowsAdded": 0,
@@ -242,7 +283,9 @@
     {
       "artifact": "national-freshwater-region02-abuan-bintacan-household-fish-resource-use-review-20261106.json",
       "reviewedOn": "2026-11-06",
-      "siteLeads": ["Bintacan River, Abuan Watershed, Isabela"],
+      "siteLeads": [
+        "Bintacan River, Abuan Watershed, Isabela"
+      ],
       "finding": "A 2020 household resource-use article abstract lists river-product labels attributed to Bintacan River, including tilapia and several unresolved local terms. It is not a fish survey; dates, scientific identities, vouchers and precise capture locations are unavailable in the abstract.",
       "fishSpeciesRowsAdded": 0,
       "fishOccurrenceRowsAdded": 0,
@@ -252,8 +295,10 @@
     {
       "artifact": "national-freshwater-region02-batanes-itbayat-kayaywan-lake-aquaculture-review-20261106.json",
       "reviewedOn": "2026-11-06",
-      "siteLeads": ["Kayaywan Lake / Itbayat freshwater lake; source spelling and provincial lake crosswalk unresolved"],
-      "finding": "BFAR reports a tilapia cage-culture demonstration and 312 kg four-month managed harvest at Kayaywan Lake; its 2024 Batanes profile lists one unnamed 22-ha lake. PIA reports an Itbayat hatchery beside an unnamed freshwater lake in Reale. These do not establish wild fish presence, natural lake stocking, or a verified shoreline identity.",
+      "siteLeads": [
+        "Kayaywan Lake / Kavaywan Lake; possible spelling/name variant, identity unresolved; Itbayat freshwater lake and provincial 22-ha lake crosswalk unresolved"
+      ],
+      "finding": "BFAR reports tilapia cage-culture activity in Kayaywan Lake and, in a separate 2024 report, fingerlings for a fish cage at Kavaywan Lake, Raele; this is a possible name/spelling crosswalk, not a resolved feature identity or wild-fish record. The 2024 provincial profile lists one unnamed 22-ha lake. PIA reports an Itbayat hatchery beside an unnamed freshwater lake in Reale. Yamada's 1967 ethnographic vocabulary article separately records island-level fish labels without naming a waterbody. None of these sources resolves lake geometry or establishes a contemporary lake fish inventory.",
       "fishSpeciesRowsAdded": 0,
       "wildOccurrenceRowsAdded": 0,
       "aquacultureRowsAdded": 1,
@@ -261,9 +306,23 @@
       "publicationApproval": false
     },
     {
+      "artifact": "national/reviews/region02-batanes-usnm-331725-freshwater-eel-review-20261112.json",
+      "reviewedOn": "2026-11-12",
+      "siteLeads": [
+        "Basco, Batanes; locality says freshwater eel, but no named waterbody"
+      ],
+      "finding": "One GBIF-indexed USNM preserved specimen is identified as Anguilla marmorata and dated 1985-06-10. The locality reads 'Freshwater eel, Basco, 1 kilometer south of'; coordinates have no uncertainty value and a GBIF datum-assumption issue. Historical specimen evidence only; do not map or associate with Itbayat waterbodies.",
+      "fishSpeciesRowsAdded": 0,
+      "fishOccurrenceRowsAdded": 0,
+      "geometryAdded": false,
+      "publicationApproval": false
+    },
+    {
       "artifact": "national-freshwater-region02-cagayan-buguey-lagoon-fish-survey-source-review-20261106.json",
       "reviewedOn": "2026-11-06",
-      "siteLeads": ["Buguey Lagoon, Cagayan; Villa Leonora, Centro and Cabaritan study-site leads"],
+      "siteLeads": [
+        "Buguey Lagoon, Cagayan; Villa Leonora, Centro and Cabaritan study-site leads"
+      ],
       "finding": "A 2026 CSU brief reports 56 finfish species and names a few, while a 2024 article from the same author has similar sites/method but no checklist or field-date range. A search-indexed 2015 abstract reports 43 finfish plus crustaceans, but its primary PDF and site list remain unavailable. The campaign crosswalk, taxon spellings, reuse rights and lagoon geometry remain unresolved.",
       "sourceReportedTaxonLabelsRecordedForResearch": 7,
       "fishSpeciesRowsAdded": 0,
@@ -276,7 +335,9 @@
     {
       "artifact": "national-luzon-north-luzon-teleost-dna-barcode-dataset-source-review-20261106.json",
       "reviewedOn": "2026-11-06",
-      "siteLeads": ["North Luzon rivers and market/landing sites in Aurora, Cagayan and Zambales; one Cagayan site table label is ‘Buguey’ and type ‘river’"],
+      "siteLeads": [
+        "North Luzon rivers and market/landing sites in Aurora, Cagayan and Zambales; one Cagayan site table label is ‘Buguey’ and type ‘river’"
+      ],
       "finding": "The 2025 peer-reviewed paper reports 1,513 vouchers and 323 species across three provinces and 27 mixed market/landing and river sites. Its supplementary XLSX with specimen, species, sampling-area, date and collection-method fields was retrieved, but no Cagayan specimen row uses ‘Buguey’ as its sampling-area label. The article's Buguey river site therefore has no resolved voucher/taxon crosswalk; article reuse terms are CC BY-NC-ND 4.0 and supplement/data rights need separate review.",
       "sourceReportedSpeciesAcrossAllProvinces": 323,
       "supplementarySpecimenTablesRetrieved": true,
@@ -348,6 +409,76 @@
         "darwin-initiative-31-005-2025-annual-report-pared-biological-survey",
         "darwin-initiative-31-005-2025-hyr2-pared-fish-tagging-update"
       ]
+    },
+    {
+      "artifact": "national/reviews/region02-wangag-glass-eel-thesis-review-20261112.json",
+      "reviewedOn": "2026-11-12",
+      "siteLeads": [
+        "Wangag River, Cagayan: NTU 2013 thesis reports 2008-2009 glass-eel samples identified as Anguilla luzonensis and Anguilla marmorata; separate EPRMP describes Wangag as a major Gonzaga river"
+      ],
+      "finding": "The thesis supplies historical named-river evidence and monthly sample tables, including a source-reported 1,247 A. luzonensis samples from Wangag. It gives no exact station coordinates or sample-to-sequence accessions. The Cagayan River summary has an internal count conflict; Wangag's exact collection reach and basin boundary remain unresolved. No abundance, current-presence, geometry or app claim is inferred.",
+      "fishSpeciesRowsAdded": 0,
+      "fishOccurrenceRowsAdded": 0,
+      "coordinatesAdded": 0,
+      "geometryAdded": false,
+      "publicationApproval": false,
+      "sourceIds": [
+        "lo-2013-ntuthesis-anguilla-luzonensis-north-luzon",
+        "jdvc-2021-eprmp-gonzaga-wangag-waterbody-context"
+      ]
+    },
+    {
+      "artifact": "national/reviews/region02-wangag-aunugay-watershed-crosswalk-review-20261112.json",
+      "reviewedOn": "2026-11-12",
+      "siteLeads": [
+        "Aunugay/Wangag River in Gonzaga and Lal-lo; 2017 UP DREAM/ISU report directly states the local name alias and maps a stream network/HEC-HMS model domain; separate Pateng Bridge hydrology and Riverview Hotel lower-stream recreational-water monitoring contexts; NTU thesis station remains unlocated",
+        "EMB National Water Quality Status Report 2014-2019 gives a historical aggregate BOD/DO/TSS compliance summary for Wangag River; it is environmental context only and does not locate fish sampling.",
+        "EMB 2016 Region II item 48 explicitly labels Wangag (Anungay)*, Cagayan, Class B; item 5 separately lists Anungay, Class B, leaving a separate-row ambiguity.",
+        "EMB R02 indexed post says annual Wangag recreational-water results were presented at a June 30, 2023 meeting; no values or underlying presentation retrieved.",
+        "Undated third-party Scribd mirror of an EMB R02-attributed deck names River View Hotel, Centro; River Control, Brgy. Pateng; and Purok 2, Brgy. Sta. Clara as Wangag recreational-water monitoring stations; no coordinates or Wangag values, official original/date, or reuse terms verified.",
+        "Official NEDA/RDC II-hosted 2017-2022 investment-program table lists a River Control (Gabion) project at Wangag River, Pateng, Gonzaga; place/infrastructure context only, not a confirmed EMB station coordinate.",
+        "Gonzaga Ordinance No. 03, s. 2026 states a three-year ban on harvesting ipon, elvers, and crablets in municipal waters including rivers, streams, coastal areas, and inland waters; current status/implementation not independently verified."
+      ],
+      "finding": "The 2017 UP DREAM/Isabela State University report explicitly states Aunugay River is locally known as Wangag River, extends from Gonzaga into Lal-lo, and includes a static stream-network map with a shaded HEC-HMS model domain. The DA table separately crosswalks the previous Wangaga River Watershed name to Aunugay River Watershed (11,110 ha; Gonzaga and Lal-lo). The official 2023-2028 regional plan says Wangag is monitored as a priority recreational water body; a 2022 report-draft mirror names Riverview Hotel in Centro as a lower-stream sampling station, but supplies no coordinates or Wangag-specific numerical results in the reviewed passage. The report's Pateng Bridge hydrology station and Riverview station are not linked to the NTU thesis eel samples. The 6,992 ha reserve and 11,110 ha management watershed remain unreconciled; no downloadable catchment vector or thesis station location was found. LiPAD flood-hazard layers are not catchment boundaries and were not downloaded. The official 2014-2019 national water-quality report adds historical aggregate compliance ratings for Wangag River (Class B; BOD 100% Good, DO 98.6% Good, TSS 100% Good), based on consolidated EMB Central Office records and at least four sampling events. An EMB 2016 list adds the spelling Anungay for a Cagayan water body but does not establish the alias alone. An EMB R02 indexed post says annual Wangag recreational-water results were presented at a June 30, 2023 meeting; the presentation and results were not retrieved. None of these sources supplies current station-level water-quality values or safety status. An undated third-party copy of an EMB R02-attributed presentation names three Wangag monitoring stations—River View Hotel in Centro, River Control in Brgy. Pateng, and Purok 2 in Brgy. Sta. Clara—but provides no coordinates or Wangag-specific measured values in the inspected text; its official original/date and reuse terms remain unverified. Do not merge these labels with the separate Riverview Hotel and Resort draft-mirror label or Pateng Bridge hydrology station, and do not infer that any is the eel site. An official NEDA/RDC II-hosted planning table also names a River Control (Gabion) project at Wangag River, Pateng, Gonzaga; this corroborates a place/infrastructure label but does not confirm that it is the EMB water-quality station or provide station coordinates. EMB 2016 item 48 explicitly prints Wangag (Anungay)*, while item 5 separately lists Anungay, Cagayan, Class B; this supports the parenthetical name crosswalk but leaves the separate row unresolved. Gonzaga Ordinance No. 03, s. 2026 states a June 1, 2026 effective date and a three-year ban on harvesting ipon, elvers, and crablets across municipal waters including rivers, streams, coast, and inland waters; the public copy includes a May 6 letter forwarding it for provincial review, and the outcome/current implementation were not checked. This is legal-source context only, not an app alert.",
+      "fishSpeciesRowsAdded": 0,
+      "fishOccurrenceRowsAdded": 0,
+      "coordinatesAdded": 0,
+      "geometryAdded": false,
+      "publicationApproval": false,
+      "sourceIds": [
+        "da-2022-cadp-wangaga-aunugay-watershed-crosswalk",
+        "updream-2017-aunungay-wangag-lidar-report",
+        "rdc2-2023-2028-cagayan-valley-plan-wangag-recreational-water",
+        "emb-r02-2022-annual-report-draft-wangag-lower-monitoring-station-mirror",
+        "dizon-castillo-2016-baua-wangag-watershed-reserve-context",
+        "lawphil-1987-proclamation-107-wangag-reserve-boundary",
+        "isu-aunugay-river-basin-lidar-flood-advisory-feature",
+        "lipad-2017-aunugay-flood-hazard-layer-listing",
+        "emb-r02-2018-classified-rivers-wangag-gonzaga",
+        "emb-national-wqsr-2014-2019-wangag-river-compliance-summary",
+        "emb-2016-classified-water-bodies-anungay-cagayan",
+        "emb-r02-2023-wangag-annual-recreational-water-results-meeting",
+        "scribd-emb-r02-environmental-framework-wangag-stations-undated",
+        "neda-rdc2-2017-2022-rdip-wangag-pateng-river-control-project",
+        "gonzaga-ordinance-2026-03-three-year-fisheries-protection"
+      ]
+    },
+    {
+      "artifact": "national/reviews/north-luzon-2025-teleost-dna-barcode-cagayan-river-crosswalk-review-20261111.json",
+      "reviewedOn": "2026-11-12",
+      "siteLeads": [
+        "North Luzon 2025 voucher dataset; Cagayan field-sample area labels and voucher-photo supplement"
+      ],
+      "finding": "Follow-up audit of the Cagayan supplement found 61 field-collected rows under 12 exact sampling-area label strings; two capitalization-only variant pairs remain separate. The labels do not crosswalk to the article's coordinate table, and some labels also appear on market-purchase rows. Supplementary Figure S1 has accession-keyed voucher photographs, but individual images were not visually verified or copied and separate supplement reuse terms remain unverified. The prior two-record Cagayan River voucher candidate remains research-only; no new site-level taxon or coordinate is established.",
+      "fieldAreaLabelRowsAudited": 61,
+      "exactFieldAreaLabelStrings": 12,
+      "caseOnlyVariantPairsMerged": 0,
+      "voucherPhotoAssetsCopied": 0,
+      "fishSpeciesRowsAdded": 0,
+      "fishOccurrenceRowsAdded": 0,
+      "coordinatesStored": 0,
+      "geometryAdded": false,
+      "publicationApproval": false
     }
   ],
   "priorityFollowUps": [
@@ -356,13 +487,18 @@
       "task": "Resolve whether NIFEP Piat Lake refers to Mapannao Lake or another site and seek a site-specific assessment. For Bangagalo/Bangalao, verify the historical table's vouchers, taxonomy, post-restoration stocking context and reuse terms, seek current monitoring and a reusable shoreline polygon. For Casili Lake and Bayolake, obtain separate dated site-specific surveys, methods, vouchers and usable geometry.",
       "doNotInfer": "Piat and Mapannao are not crosswalked by municipality alone. Bangalao's 2017–2018 landed catch table is not a current/resident checklist; the source does not distinguish stocked fish, and it cannot be transferred to Casili or Bayolake.",
       "relatedReviewArtifact": "national-freshwater-region02-piat-mapannao-site-identity-fish-evidence-review-20261106.json",
-      "additionalReviewArtifacts": ["national-freshwater-region02-bangalao-laguna-cagayan-historical-fish-catch-review-20261106.json", "national-freshwater-region02-casili-cassily-bayo-lake-fish-evidence-review-20261106.json"]
+      "additionalReviewArtifacts": [
+        "national-freshwater-region02-bangalao-laguna-cagayan-historical-fish-catch-review-20261106.json",
+        "national-freshwater-region02-casili-cassily-bayo-lake-fish-evidence-review-20261106.json"
+      ]
     },
     {
       "priority": 2,
       "task": "Crosswalk the named Quirino reservoirs and SWIPs with current LGU/NIA/BFAR sources; confirm exact names, status, boundaries and whether each is a natural lake, man-made reservoir or irrigation impoundment.",
       "doNotInfer": "Regional aggregate SWIP counts do not identify individual sites or their fish assemblages.",
-      "additionalReviewArtifacts": ["national-freshwater-region02-quirino-qsu-and-qghs-reservoir-evidence-review-20261106.json"]
+      "additionalReviewArtifacts": [
+        "national-freshwater-region02-quirino-qsu-and-qghs-reservoir-evidence-review-20261106.json"
+      ]
     },
     {
       "priority": 3,
@@ -372,9 +508,13 @@
     },
     {
       "priority": 4,
-      "task": "Crosswalk Isabela's municipality-submitted wetland counts to named rivers, lakes, SWIPs, reservoirs and wetlands and to official feature maps. Resolve duplicate Jones/San Mariano rows; for Batanes, confirm the Kayaywan/unnamed-lake name and geometry and seek a wild-fish survey. Then continue with the northeast/northwest Cagayan watersheds outside the Cagayan Riverine Zone.",
-      "doNotInfer": "The Cagayan River basin polygon is not a Region II inland-water boundary. Municipal counts, DOST's possible ludong-fishing-ground labels, household resource-use lists, aquaculture and provincial lake-area totals do not establish named wild species occurrences or feature geometry.",
-      "relatedReviewArtifact": "national-freshwater-region02-isabela-inland-wetlands-and-abuan-river-source-review-20261106.json"
+      "task": "Authenticate the undated Scribd copy of the EMB R02-attributed Wangag presentation against an official dated deck. Verify the three station labels (River View Hotel, River Control in Brgy. Pateng, and Purok 2 in Brgy. Sta. Clara), exact station identifiers/coordinates, sampling dates, parameters, methods, values, QA notes, and reuse terms. Compare River Control with the official NEDA/RDC II table listing a River Control (Gabion) project at Wangag River, Pateng, but treat them as distinct until coordinates or technical records establish identity. Reconcile River View Hotel with the separate draft-mirror Riverview Hotel and Resort label only with evidence. Retrieve the June 2023 meeting deck or underlying official annual report. Separately seek an openly reusable Aunugay/Wangag basin/model-domain vector with CRS and lineage; if none is open, consider a clearly labelled research-only delineation from documented elevation data, cross-checked against the report map. Seek NTU thesis sampling logs or independent site-linked fish evidence. Continue public fish-literature, repository, museum and biodiversity-index screening across northeast/northwest Cagayan and Pacific/Babuyan-draining Isabela.",
+      "doNotInfer": "The 2017 report resolves Aunugay/Wangag as local river names but does not locate the thesis station or provide an app-ready boundary. Public monitoring context and the mirrored report-draft station lead provide no current values or fish data; the recreational-water stations are not the eel station. The 11,110 ha management watershed and 6,992 ha reserve are not reconciled, and the legal reserve description separately mentions an Augunay-Wangag junction. Flood-hazard polygons and static report figures are not reusable river/catchment vectors. The Cagayan River basin polygon is not a Region II inland-water boundary; municipal counts, aquaculture, and empty searches do not establish species absence or occurrence. The EMB report's 2014-2019 aggregate compliance percentages are historical and are not current water-quality or safety status. The EMB R02 2023 indexed post does not publish the annual results it says were presented, and EMB 2016 item 48 parenthetically labels Wangag (Anungay), but item 5 separately lists Anungay, so a separate-row ambiguity remains and exact reaches are not resolved. The three station names occur only in an undated third-party copy; they provide no coordinates, sampling results, fish records, or reuse permission. Do not equate River Control with Pateng Bridge, or River View Hotel with Riverview Hotel and Resort, without verification. An official regional investment-program table names River Control (Gabion) at Wangag River, Pateng, but this does not prove it is the same EMB monitoring station or give its coordinates.",
+      "relatedReviewArtifact": "national/reviews/region02-wangag-aunugay-watershed-crosswalk-review-20261112.json",
+      "additionalReviewArtifacts": [
+        "national/reviews/region02-wangag-glass-eel-thesis-review-20261112.json",
+        "national-freshwater-region02-isabela-inland-wetlands-and-abuan-river-source-review-20261106.json"
+      ]
     },
     {
       "priority": 5,
@@ -384,10 +524,13 @@
     },
     {
       "priority": 6,
-      "task": "Ask the corresponding author to reconcile the article's main-table Buguey river site with the retrieved supplementary Tables S1a–S1c: no Cagayan specimen row uses Buguey as a sampling-area label. Clarify whether no sequenced specimens came from that site or whether another sampling-area label was used; obtain explicit rights terms before reusing any site/specimen data. Then continue site-by-site research for northeast/northwest Cagayan and Pacific-draining Isabela watersheds.",
-      "doNotInfer": "The aggregate 323-species count is not a checklist for any single province or site. Do not treat market fish as local wild occurrences, join generic or differently named Cagayan river rows to the Buguey point, map it to Buguey Lagoon, or adapt/re-publish CC BY-NC-ND material without an explicit rights decision.",
+      "task": "Ask the corresponding author to reconcile the article's main-table Buguey river site with the supplementary Tables S1a–S1c, where no Cagayan row is labeled Buguey; crosswalk all 12 exact Cagayan field-area label strings to named sites and Table 1 coordinates; clarify labels also used for market purchases; reconcile the 11 Cagayan accession discrepancies; and provide explicit reuse terms for the workbook and Figure S1 voucher photos. Then continue site-by-site research for northeast/northwest Cagayan and Pacific-draining Isabela watersheds.",
+      "doNotInfer": "The aggregate 323-species count is not a checklist for any single site. Do not treat market fish as local wild occurrences, join generic or differently named Cagayan river rows to the Buguey point, map it to Buguey Lagoon, infer sample coordinates from nearby points, copy voucher photos, or adapt/re-publish CC BY-NC-ND material without an explicit rights decision.",
       "relatedReviewArtifact": "national-luzon-north-luzon-teleost-dna-barcode-dataset-source-review-20261106.json",
-      "additionalReviewArtifacts": ["national-freshwater-region02-cagayan-buguey-lagoon-fish-survey-source-review-20261106.json"]
+      "additionalReviewArtifacts": [
+        "national-freshwater-region02-cagayan-buguey-lagoon-fish-survey-source-review-20261106.json",
+        "national/reviews/north-luzon-2025-teleost-dna-barcode-cagayan-river-crosswalk-review-20261111.json"
+      ]
     },
     {
       "priority": 7,
@@ -412,8 +555,19 @@
       "task": "Locate or request Darwin Initiative project 31-005 Annex 9 and the Pared River Catchment ecological assessment; seek the accepted fish checklist, native/invasive category, sampling dates and methods, per-municipality/station crosswalk, voucher/photo IDs, effort, coordinate/generalization policy, data dictionary, and written reuse terms. Separately obtain Annex 12 maps/CRS and authorized geometry; reconcile the annual report’s 6/15/8 municipal aquatic counts with its 10 native + 4 invasive fish total, and clarify BFAR’s 10 proposed sanctuary count versus 11 named locality mentions.",
       "doNotInfer": "Aggregate counts do not establish any taxon identity, station-level occurrence, current presence/absence, sanctuary legal boundary or fishing rule. Tagged individuals are not individual species records. Do not add taxa or digitize geometry before underlying evidence and reuse rights are reviewed.",
       "relatedReviewArtifact": "national-freshwater-region02-pared-river-zsl-biological-survey-review-20261106.json",
-      "additionalReviewArtifacts": ["national-freshwater-region02-pared-river-annex-availability-review-20261106.json"],
+      "additionalReviewArtifacts": [
+        "national-freshwater-region02-pared-river-annex-availability-review-20261106.json"
+      ],
       "requestDraft": "national-freshwater-region02-pared-river-data-request-draft-20261106.md"
+    },
+    {
+      "priority": 5,
+      "task": "Before adding a Gonzaga rule to Bangwit, verify current certified text and status of Municipal Ordinance No. 03, s. 2026: provincial review outcome, required publication/posting, amendments, repeal, any extension or lifting, and Municipal Agriculture Office/BFAR implementation guidance. Record dates only after authoritative confirmation; do not generalize to other municipalities.",
+      "doNotInfer": "The public copy states June 1, 2026 as effectivity and a three-year harvest prohibition on goby fries (ipon), elvers, and crablets in Gonzaga municipal waters. It does not prove current status/enforcement, define boundaries, identify adult-fish restrictions, or apply outside Gonzaga.",
+      "relatedReviewArtifact": "national/reviews/region02-wangag-aunugay-watershed-crosswalk-review-20261112.json",
+      "sourceIds": [
+        "gonzaga-ordinance-2026-03-three-year-fisheries-protection"
+      ]
     }
   ],
   "disposition": {
@@ -596,7 +750,15 @@
     },
     {
       "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41597-025-05758-3/MediaObjects/41597_2025_5758_MOESM2_ESM.xlsx",
-      "supports": "Publisher-hosted supplementary XLSX with specimen-level Tables S1a–S1c; no Cagayan sampling-area row is labeled Buguey, so the article's Buguey site remains unlinked to specimen/taxon records."
+      "supports": "Publisher-hosted supplementary XLSX with specimen-level Tables S1a–S1c; the follow-up Cagayan audit found 61 field rows under 12 exact sampling-area labels, without a resolved label-to-coordinate crosswalk. No Cagayan sampling-area row is labeled Buguey, so the article's Buguey site remains unlinked to specimen/taxon records."
+    },
+    {
+      "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41597-025-05758-3/MediaObjects/41597_2025_5758_MOESM1_ESM.docx",
+      "supports": "Supplementary Figure S1 caption identifies voucher photographs keyed to COI and 12S accessions. Individual photos were not visually verified or copied; separate supplement-specific reuse terms remain unverified."
+    },
+    {
+      "artifact": "national/reviews/north-luzon-2025-teleost-dna-barcode-cagayan-river-crosswalk-review-20261111.json",
+      "supports": "Follow-up audit of Cagayan field-area labels and the accession-keyed voucher-photo supplement; no new species, occurrence, coordinate, geometry, or photo assets approved."
     },
     {
       "url": "https://www.ncbi.nlm.nih.gov/bioproject/PRJNA1294862",
@@ -617,6 +779,68 @@
     {
       "url": "https://www.darwininitiative.org.uk/documents/DAR31005/28097/31-005%20HYR2%20-%20edited.pdf",
       "supports": "Project progress update for April–September 2025 stating that 172 fish individuals from eight native species were VIE-tagged; no species names or individual capture records are published."
+    },
+    {
+      "url": "https://tdr.lib.ntu.edu.tw/bitstream/123456789/5966/1/ntu-102-1.pdf",
+      "supports": "Lo's 2013 NTU master's thesis reporting 2008-2009 glass-eel sampling and river-level sample tables for Cagayan, Abulug and Wangag rivers; no exact sample stations or sequence-accession crosswalk."
+    },
+    {
+      "url": "https://eia.emb.gov.ph/wp-content/uploads/2021/11/JDVC-EPRMP-Main-Report-11122021.pdf",
+      "supports": "The EPRMP says Wangag and Baua are Gonzaga's two major rivers; contextual hydrography only, not fish evidence or a catchment polygon."
+    },
+    {
+      "artifact": "national/reviews/region02-wangag-aunugay-watershed-crosswalk-review-20261112.json",
+      "supports": "Public-source watershed-name crosswalk for Wangaga/Aunugay, reserve-versus-watershed area discrepancy, legal Augunay-Wangag junction, LiPAD flood-map discovery, and explicit limits; no station, species row or geometry added."
+    },
+    {
+      "url": "https://ncisrd.da.gov.ph/wp-content/uploads/2023/01/CADP-Manops-fin-for-online.pdf",
+      "supports": "DA CADP Manual of Operations 2022, printed page 135, crosswalks previous Wangaga River Watershed to Aunugay River Watershed and lists 11,110 ha and Gonzaga/Lal-Lo; no polygon or fish data."
+    },
+    {
+      "url": "https://www.ukdr.uplb.edu.ph/journal-articles/5638/",
+      "supports": "UPLB bibliographic record for Dizon and Castillo (2016), whose article describes a 6,992 ha Wangag reserve extending to Lal-Lo; this is not a georeferenced catchment or fish source."
+    },
+    {
+      "url": "https://lawphil.net/executive/proc/proc1987/proc_107_1987.html",
+      "supports": "Proclamation No. 107 legal boundary description for the Wangag reserve and a stated Augunay-Wangag junction; not a hydrological catchment polygon or thesis-station location."
+    },
+    {
+      "url": "https://isu.edu.ph/research-feature-lidar-based-flood-advisory-system-in-aunugay-river-basin-gonzaga-cagayan/",
+      "supports": "Isabela State University page confirms an Aunugay River Basin LiDAR flood-advisory project name, but does not publish fish records or the underlying GIS boundary."
+    },
+    {
+      "url": "https://lipad-fmc.dream.upd.edu.ph/search/?category__identifier__in=geoscientificInformation",
+      "supports": "LiPAD search-indexed listings for Aunugay 5-, 25-, and 100-year flood-hazard shapefiles; the item page was not retrieved, no layer downloaded, and the products are not watershed geometry."
+    },
+    {
+      "url": "https://r2.emb.gov.ph/wp-content/uploads/2018/10/list-of-classified-waterbodies.pdf",
+      "supports": "Official EMB Region II list names Wangag River in Gonzaga with a historical 2003 Class B entry; not current water quality or fish data."
+    },
+    {
+      "url": "https://emb.gov.ph/wp-content/uploads/2022/08/Final-National-WQSR-2014-2019_12Oct2020.pdf",
+      "supports": "Official historical summary of Wangag River BOD, dissolved oxygen, and total suspended solids compliance ratings; water-quality context only, not raw measurements, current status, fish occurrence, or fishing/safety advice."
+    },
+    {
+      "url": "https://water.emb.gov.ph/wp-content/uploads/2016/07/Classified-WB-2016.pdf",
+      "supports": "Official 2016 list: Region II item 48 is Wangag (Anungay)*, Class B; item 5 separately lists Anungay, Class B. Parenthetical label supports name crosswalk; separate-row ambiguity remains. Not current water quality, fish evidence, or geometry."
+    },
+    {
+      "url": "https://r2.emb.gov.ph/trails-for-clean-recreational-waters/",
+      "supports": "Official indexed 2023 EMB R02 post says annual Wangag recreational-water results were presented at a June 30, 2023 meeting; the underlying values, methods, station data, and presentation were not retrieved, and direct page fetch returned HTTP 403."
+    },
+    {
+      "url": "https://es.scribd.com/document/483664136/1-Envt-l-Framework",
+      "supports": "Third-party undated Scribd mirror of an EMB R02-attributed presentation names three Wangag recreational-water monitoring stations; original/date, coordinates, results and reuse rights remain unverified. Not fish or app data."
+    },
+    {
+      "url": "https://neda.rdc2.gov.ph/wp-content/uploads/RDIP/Chapter%2019.pdf",
+      "supports": "Official NEDA/RDC II-hosted planning table lists a River Control (Gabion) project at Wangag River, Pateng, Gonzaga; infrastructure/place context only, not confirmation of the EMB monitoring station, station coordinates, measured values, fish evidence, GIS geometry, or app reuse rights."
+    },
+    {
+      "id": "gonzaga-ordinance-2026-03-three-year-fisheries-protection",
+      "url": "https://www.gonzaga.gov.ph/documents/4b69ae74-7c8e-4bff-a040-f4225041cfd7/download",
+      "additionalUrl": "https://www.gonzaga.gov.ph/documents?type=ordinance",
+      "supports": "Official Gonzaga municipal ordinance text states a three-year harvest ban on ipon, elvers, and crablets in municipal waters including rivers, streams, coast, and inland waters; current legal validity and implementation require verification."
     }
   ]
 }

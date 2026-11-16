@@ -1,0 +1,251 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-11-12",
+  "phaseId": "L1",
+  "regionIds": [
+    "0200000000"
+  ],
+  "status": "public-source-river-alias-supported;static-hydrology-map-reviewed;separate-recreational-water-monitoring-context-found;historical-national-wq-compliance-summary-found;official-anungay-name-variant-found;2023-wangag-results-presentation-lead-found;eel-sample-station-and-outlet-unresolved;watershed-area-conflict;flood-hazard-layers-not-downloaded;map-and-data-reuse-limited;research-only;third-party-wangag-monitoring-station-labels-found;station-coordinates-and-results-unresolved;official-parenthetical-anungay-crosswalk-found;separate-anungay-row-ambiguity;gonzaga-2026-fisheries-ordinance-reviewed;ordinance-currentness-unverified",
+  "question": "Do independently accessible public sources resolve the Wangag River thesis locality to the Aunugay/Wangaga watershed, and can they establish the exact sample reach, river outlet, or basin geometry?",
+  "sourcesReviewed": [
+    {
+      "sourceId": "da-2022-cadp-wangaga-aunugay-watershed-crosswalk",
+      "citation": "Department of Agriculture. (2022). CADP Manual of Operations 2022. NCISRD-hosted PDF, Region II watershed table, printed p. 135.",
+      "access": "Public official manual table reviewed online.",
+      "finding": "The table labels the previous watershed name as Wangaga River Watershed and the current name as Aunugay River Watershed; it reports 11,110 ha and municipalities Gonzaga and Lal-Lo, Cagayan.",
+      "limit": "This is a watershed-management name and municipal-coverage table, not a channel inventory, legal catchment polygon, sample-station map, or fish source."
+    },
+    {
+      "sourceId": "updream-2017-aunungay-wangag-lidar-report",
+      "citation": "UP Training Center for Applied Geodesy and Photogrammetry / Isabela State University. (2017). LiDAR Surveys and Flood Mapping of Aunugay River, in E. C. Paringit (Ed.), Flood Hazard Mapping of the Philippines Using LIDAR, 201 pp.",
+      "access": "Full public report downloaded from the UP DREAM technical-reports index and reviewed locally; printed pp. 2, 63-64, 158, and 160 inspected.",
+      "finding": "Printed p. 2 explicitly says Aunugay River is locally known as Wangag River and extends from Gonzaga to Lal-lo. Figure 1 maps a stream network and a shaded HEC-HMS model domain with coordinate ticks and scale. The text lists basin barangays in Gonzaga, Santa Teresita, and Lal-lo. The report also documents hydrologic measurements at Pateng Bridge in 2016; this is a hydrology station, not the thesis's glass-eel station.",
+      "limit": "The figure is a static report map, not a supplied GIS boundary or station coordinate file. It does not locate Lo's 2008-2009 eel collections, name the river outlet, or establish that the model domain is a reusable natural-catchment polygon. The report's text reuse notice does not grant map, figure, LiDAR, or model-data reuse for an app."
+    },
+    {
+      "sourceId": "rdc2-2023-2028-cagayan-valley-plan-wangag-recreational-water",
+      "citation": "Regional Development Council Region II. (2023). Cagayan Valley Regional Development Plan 2023-2028, Chapter 4, printed p. 4-18.",
+      "access": "Public official regional-plan PDF reviewed online.",
+      "finding": "The plan identifies Wangag River as a priority recreational water body monitored by EMB because Gonzaga declared it an ecotourism site, and states its intended beneficial use is primary-contact recreation.",
+      "limit": "This is program and intended-use context, not current test results, fish evidence, safety clearance, exact station coordinates, or legal fishing guidance. The nearby statement about fecal-coliform, dissolved-oxygen, pH, and temperature monitoring refers to bathing beaches; it is not attributed specifically to Wangag in that passage."
+    },
+    {
+      "sourceId": "emb-r02-2022-annual-report-draft-wangag-lower-monitoring-station-mirror",
+      "citation": "Environmental Management Bureau Region II. (2022). Annual Report Draft, printed p. 54; public third-party mirror at AnyFlip.",
+      "access": "Text of a report draft reviewed in an online third-party mirror; original EMB-hosted file and final status not verified.",
+      "finding": "The draft says Wangag was included in the Priority Recreational Waterbody Program and identifies Riverview Hotel and Resort in Centro, Gonzaga as the lower-stream sampling station. This is a separate environmental/recreational-water monitoring location, not the NTU thesis's glass-eel station.",
+      "limit": "The reviewed passage gives no station coordinates, fish data, or Wangag-specific measured values. Because the available copy is an unverified third-party mirror labelled draft, verify it against an official final report before relying on detailed results or station metadata."
+    },
+    {
+      "sourceId": "dizon-castillo-2016-baua-wangag-watershed-reserve-context",
+      "citation": "Dizon, J. T., & Castillo, M. L. (2016). Threats assessment and management of the Baua-Wangag Watershed Forest Reserve in Gonzaga, Cagayan Province, Philippines. Asia Life Sciences, 25(1), 367-378.",
+      "access": "UPLB repository record reviewed; public author-uploaded full text reviewed online.",
+      "finding": "The article describes separate Baua and Wangag watershed-reserve systems, reports a 6,992 ha Wangag reserve, and says its southern tip extends into Lal-Lo.",
+      "limit": "The reported reserve extent is not demonstrated to be identical to the 11,110 ha management-table watershed extent. The article's location map is not a georeferenced catchment dataset."
+    },
+    {
+      "sourceId": "lawphil-1987-proclamation-107-wangag-reserve-boundary",
+      "citation": "Republic of the Philippines. (1987). Proclamation No. 107, s. 1987: Establishing a watershed reserve in Gonzaga and Lai-Lo, Cagayan.",
+      "access": "Public legal text reviewed online.",
+      "finding": "The proclamation defines a 6,992 ha reserve boundary by bearings and distances and names a junction of Augunay River and Wangag River as its beginning point.",
+      "limit": "This is a protected-reserve boundary description, not a natural catchment outline or the glass-eel study station. The text encoding of the stated starting coordinate is ambiguous in the retrieved page; no coordinate or geometry was derived."
+    },
+    {
+      "sourceId": "isu-aunugay-river-basin-lidar-flood-advisory-feature",
+      "citation": "Isabela State University. Research feature: Lidar-Based Flood Advisory System in Aunugay River Basin, Gonzaga, Cagayan.",
+      "access": "Official university research-feature page reviewed online.",
+      "finding": "The university describes a basin-wide LiDAR flood-advisory project under the Aunugay River Basin name.",
+      "limit": "The page is project context, not the underlying flood model, channel geometry, fish survey, or downloadable basin boundary."
+    },
+    {
+      "sourceId": "lipad-2017-aunugay-flood-hazard-layer-listing",
+      "citation": "UP Training Center for Applied Geodesy and Photogrammetry / DOST-UP DREAM Phil-LiDAR. LiPAD portal listings: Aunugay 5-, 25-, and 100-year Flood Hazard Maps (2017); LiPAD User Guide.",
+      "access": "Search-indexed portal layer listings and the user guide reviewed. The Aunugay layer item page could not be retrieved; no shapefile or raster was downloaded and no EULA was accepted.",
+      "finding": "The portal lists 10 m Aunugay flood-hazard shapefile products for 5-, 25-, and 100-year rainfall-return scenarios. Its guide distinguishes flood-hazard-map downloads from other layers that require owner permission and an EULA.",
+      "limit": "Modelled flood-inundation extents are not river-channel or catchment boundaries, fish observations, current flood conditions, or a safety clearance. Item-level metadata and reuse conditions remain unverified."
+    },
+    {
+      "sourceId": "emb-r02-2018-classified-rivers-wangag-gonzaga",
+      "citation": "Environmental Management Bureau Region II. (2018). List of Classified Rivers in Region 2 as of August 2018.",
+      "access": "Public official PDF reviewed online.",
+      "finding": "The list names Wangag River in Gonzaga, Cagayan and records a 2003 Class B classification.",
+      "limit": "A historical classification entry is not a current water-quality result, fish occurrence, catchability statement, or geometry."
+    },
+    {
+      "sourceId": "emb-national-wqsr-2014-2019-wangag-river-compliance-summary",
+      "citation": "Environmental Management Bureau. (2020). National Water Quality Status Report 2014-2019. Table 7-1, Inland Surface Waters included in the Compliance Rating Assessment for BOD, DO, and TSS, 2014-2019.",
+      "access": "Official public PDF reviewed online; Table 7-1 and its note inspected.",
+      "finding": "The 2014-2019 national report lists Wangag River, Region II, Class B, with BOD compliance 100% (Good), DO 98.6% (Good), and TSS 100% (Good). The assessment used consolidated EMB Central Office results and included only water bodies meeting at least four sampling events.",
+      "limit": "This is an aggregate historical compliance rating, not raw station measurements or a current condition/safety statement. The table gives no Wangag station coordinates or fish evidence."
+    },
+    {
+      "sourceId": "emb-2016-classified-water-bodies-anungay-cagayan",
+      "citation": "Environmental Management Bureau. (2016). List of Classified Water Bodies, Region II items 5 and 48: Anungay and Wangag (Anungay), Cagayan, Class B.",
+      "access": "Official public PDF reviewed online; Region II entry inspected.",
+      "finding": "Region II item 48 explicitly lists Wangag (Anungay)*, Class B; the parenthetical label supports a Wangag/Anungay crosswalk at entry-name level. Item 5 separately lists Anungay, Cagayan, Class B, leaving an unresolved row-level ambiguity. The footnote defines * as Principal River.",
+      "limit": "The table does not explain whether item 5 is a duplicate, distinct water body, or clerical inconsistency. Neither entry identifies an exact reach, coordinates, catchment, current measurements, fish data, or geometry."
+    },
+    {
+      "sourceId": "emb-r02-2023-wangag-annual-recreational-water-results-meeting",
+      "citation": "Environmental Management Bureau Region II. (2023, August 18). Trails for Clean Recreational Waters.",
+      "access": "Official page text was available in search indexing; direct page retrieval returned HTTP 403.",
+      "finding": "The official indexed post says annual recreational-water monitoring results for Wangag River, Gonzaga, were presented at a June 30, 2023 inter-agency meeting.",
+      "limit": "The indexed text does not expose the presented values, sampling dates, methods, station coordinates, or attached dataset; direct page fetch returned HTTP 403."
+    },
+    {
+      "sourceId": "scribd-emb-r02-environmental-framework-wangag-stations-undated",
+      "citation": "Lingan, F. T., Jr. (n.d.). Framework of Environmental Regulations in the Philippines & EMB Mandates and Programs [undated presentation attributed to DENR-EMB-R02]. Third-party copy uploaded by Christine Dhianne Flores to Scribd.",
+      "access": "Online text of a third-party Scribd copy reviewed; the title slide attributes the deck to DENR-EMB-R02, but the official original and date were not verified. Scribd identifies the uploader and displays All Rights Reserved.",
+      "finding": "The deck labels Wangag River (Class B) as a priority recreational-water body and names three monitoring stations: River View Hotel, Centro; River Control, Brgy. Pateng; and Purok 2, Brgy. Sta. Clara, all in Gonzaga, Cagayan.",
+      "limit": "The station labels are an undated third-party-source lead only. No coordinates, CRS, sampling dates, methods, Wangag-specific measured values, fish observations, or reuse grant were verified. Do not merge River View Hotel with the separate draft-mirror Riverview Hotel and Resort label or assume River Control is the Pateng Bridge hydrology station. These are not the NTU eel station."
+    },
+    {
+      "sourceId": "neda-rdc2-2017-2022-rdip-wangag-pateng-river-control-project",
+      "citation": "National Economic and Development Authority Regional Development Council Region II. (n.d.). Updated 2017-2022 Regional Development Investment Program as Input to the Fiscal Year 2020 Budget Preparation. Chapter 19, item 21.",
+      "access": "Official NEDA/RDC II-hosted 2017-2022 regional investment-program PDF reviewed online; Chapter 19 item 21 inspected.",
+      "finding": "The table lists River Control (Gabion), Wangag River, Pateng, Gonzaga, Cagayan, as a DPWH project.",
+      "limit": "This establishes a named infrastructure project and place label only; it does not prove identity with the EMB water-quality monitoring station or Pateng Bridge hydrology station and gives no coordinates, monitoring data, fish evidence, or app reuse terms."
+    },
+    {
+      "sourceId": "gonzaga-ordinance-2026-03-three-year-fisheries-protection",
+      "citation": "Municipality of Gonzaga, Cagayan. (2026, May 4). Municipal Ordinance No. 03, s. 2026, Three-Year Fisheries Protection Ordinance of Gonzaga, Cagayan, Sections 3-7 and 12.",
+      "access": "Official Gonzaga municipal documents page and linked four-page PDF reviewed visually; ordinance body and approval page inspected.",
+      "finding": "Sections 3-5 define Gonzaga municipal waters to include rivers, streams, coastal areas, and inland waters, and state a three-year prohibition on catching or gathering goby fries (ipon), elvers around 5 cm and no longer than 15 cm, and crablets under FAO No. 264-2020. Section 12 states June 1, 2026 as effectivity. Section 6 allows permitted scientific, research, or conservation activities in coordination with BFAR.",
+      "limit": "The public copy includes a May 6, 2026 letter forwarding it to the Provincial Sangguniang Panlalawigan for review. Outcome, publication/posting record, amendments/repeals, and current implementation were not checked. This is one municipality-specific rule, not an app alert or legal advice."
+    }
+  ],
+  "crosswalk": {
+    "supportedAtRiverAndWatershedNameLevel": "The 2017 UP DREAM/ISU report says Aunugay River is locally known as Wangag River and extends through Gonzaga to Lal-lo. The DA manual crosswalks Wangaga River Watershed to Aunugay River Watershed (11,110 ha). EMB 2016 item 48 labels a Class B water body Wangag (Anungay)*, supporting a parenthetical name for Wangag at table-entry level; item 5 separately lists Anungay, Cagayan, Class B, leaving a row ambiguity. This supports a source-specific Wangag/Aunugay/Anungay name crosswalk, not identical reaches, the thesis station, catchment, or geometry.",
+    "riverNameEvidence": [
+      "The 2013 glass-eel thesis uses the exact label Wangag River for a historical collection locality.",
+      "The 2017 UP DREAM/Isabela State University report directly says Aunugay River is locally known as Wangag River; the 2018 EMB Region II list independently names Wangag River in Gonzaga.",
+      "Proclamation 107 separately names Augunay River and Wangag River at a junction. The report supports Aunugay/Wangag as local names for the mapped river, but does not resolve whether the proclamation's Augunay spelling refers to the same channel or a tributary.",
+      "The official EMB 2016 table lists item 48 as Wangag (Anungay)*, Cagayan, Region II, Class B; the asterisk means Principal River. This supports a Wangag/Anungay parenthetical name crosswalk at entry-label level. Item 5 separately lists Anungay, Cagayan, Class B; duplicate, separate body, or clerical inconsistency remains unresolved."
+    ],
+    "areaDiscrepancyHa": {
+      "daCadpManagementWatershed": 11110,
+      "dizonCastilloWangagReserve": 6992,
+      "proclamation107Reserve": 6992,
+      "resolution": "Unresolved. The sources may describe different management and legally proclaimed reserve extents; do not select one as the natural hydrological catchment area."
+    },
+    "municipalExtent": "The primary 2017 report says Aunugay/Wangag extends from Gonzaga into Lal-lo and lists basin barangays in Gonzaga, Santa Teresita, and Lal-lo. DA and the 2016 reserve paper provide separate watershed/reserve coverage context. None locates the NTU thesis sample station or identifies a precise named outlet.",
+    "geometry": "No vector channel, watershed, reserve, outlet, or sampling-station geometry was retrieved, calculated, simplified, or created. UP DREAM Figure 1 is a static map with a stream network, coordinate ticks, scale, and shaded HEC-HMS model domain, but no accompanying downloadable boundary vector, CRS metadata, or item-level reuse grant was identified. Do not digitize the image for app use.",
+    "samplingStation": "The NTU thesis identifies Wangag River and Cagayan Province only. UP DREAM gives a separate 2016 hydrology measurement site at Pateng Bridge, Gonzaga, and a 2022 report-draft mirror identifies Riverview Hotel and Resort, Centro, as a lower-stream recreational-water monitoring station. An undated third-party Scribd copy of a presentation attributed to EMB R02 names River View Hotel in Centro, River Control in Brgy. Pateng, and Purok 2 in Brgy. Sta. Clara as Wangag monitoring stations, but gives no coordinates or dataset. Do not merge the differently worded hotel labels or equate River Control with Pateng Bridge without confirmation. None of these sites is linked to the thesis’s 2008-2009 eel samples. The thesis still has no station coordinate, named collection reach, voucher, or sample-to-sequence accession crosswalk. A separate official NEDA/RDC II-hosted regional investment-program row lists a DPWH River Control (Gabion) project at Wangag River, Pateng, Gonzaga. This supports an infrastructure/place-name lead only; it does not prove the project site is the EMB sampling station and gives no station coordinates.",
+    "recreationalWaterMonitoringContext": "The EMB National Water Quality Status Report 2014-2019 gives a historical aggregate compliance summary for Wangag River (Class B; BOD 100% Good, DO 98.6% Good, TSS 100% Good). Its note says the assessment uses consolidated Central Office monitoring records and includes water bodies with at least four sampling events. This does not identify station-level values or current conditions and must not be presented as a present safety assessment. An official EMB R02 post's indexed text also says annual recreational-water monitoring results for Wangag River, Gonzaga, were presented at a June 30, 2023 inter-agency meeting. The direct page fetch returned 403 and no presentation, values, station coordinates, or dataset were retrieved; this is a lead to locate the underlying official material, not evidence of the results. An undated third-party Scribd copy of a presentation attributed to EMB R02 names River View Hotel (Centro), River Control (Brgy. Pateng), and Purok 2 (Brgy. Sta. Clara), all in Gonzaga, as Wangag monitoring stations. The copy’s date/original are unverified, provides no coordinates or Wangag measurements in the inspected text, and its station labels are not tied to the eel thesis. Scribd displays All Rights Reserved; do not reuse these labels or slide content in the app without verification and permission. An official NEDA/RDC II-hosted investment-program table separately lists a River Control (Gabion) project at Wangag River, Pateng, Gonzaga. It is place/infrastructure context, not confirmation of the EMB station location, measurements, or current water condition."
+  },
+  "researchAndReuseLimits": [
+    "The report resolves the Aunugay/Wangag local river-name alias, but does not prove where the NTU thesis station lies along that river or within the illustrated HEC-HMS model domain.",
+    "The Riverview Hotel and Pateng Bridge locations are environmental/hydrologic monitoring contexts only; neither is evidence for the NTU thesis's fish station or a fish occurrence.",
+    "The 11,110 ha management watershed and 6,992 ha proclaimed reserve figures are retained separately because their boundaries and definitions were not reconciled.",
+    "LiPAD flood-hazard layers are model outputs, not watershed or river boundaries. No layer was downloaded or used for fish distribution, safety, or app claims.",
+    "The UP DREAM report permits copying/distribution of its text for research and educational purposes with proper acknowledgement. No separate reuse permission was verified for its map/figures, underlying LiDAR/model data, the DA manual's geographic information, the journal article, the legal reserve boundary, or LiPAD layers; app publication approval remains false.",
+    "Publicly accessible official and academic pages were used as research sources; this review did not send a request, log in, accept an EULA, or contact a government office.",
+    "The EMB national report provides dated 2014-2019 aggregate compliance ratings only. It does not provide the Wangag station-level measurements, current status, fish evidence, or an app safety clearance; no separate open reuse grant was verified.",
+    "EMB 2016 item 48 explicitly labels Wangag (Anungay)*, supporting a parenthetical crosswalk at entry-label level; item 5 separately lists Anungay, so a duplicate/separate-row ambiguity remains and the list does not identify the exact channel reach.",
+    "The official EMB R02 2023 indexed post confirms that annual Wangag recreational-water results were presented at a meeting, but its values and underlying presentation/report were not retrieved; no current condition or safety claim follows.",
+    "An undated third-party Scribd copy of a presentation attributed to EMB R02 names three Wangag monitoring-station labels (River View Hotel, River Control in Brgy. Pateng, and Purok 2 in Brgy. Sta. Clara), but its official original/date, coordinates, methods, Wangag values, and reuse permission remain unverified. Do not merge River View Hotel with the separate “Riverview Hotel and Resort” draft-mirror label, equate River Control with the Pateng Bridge hydrology site, attribute adjacent charts to Wangag, or treat these stations as the eel collection point or fish evidence.",
+    "An official NEDA/RDC II-hosted regional investment-program row lists River Control (Gabion), Wangag River, Pateng, Gonzaga. This corroborates an infrastructure/place-name lead only; it does not establish the water-quality station coordinate, link the project to Pateng Bridge or the eel sample point, or provide monitoring/fish data. Public PDF access is not an app reuse grant.",
+    "Gonzaga Ordinance No. 03, s. 2026 is local legal context only. Its text states June 1, 2026 as effectivity, but current validity and implementation were not independently verified; do not extrapolate it beyond Gonzaga or publish an app alert without current authoritative review."
+  ],
+  "disposition": {
+    "sourceReferencesAdded": 15,
+    "watershedNameCrosswalksAdded": 1,
+    "speciesAssertionsAdded": 0,
+    "occurrenceAssertionsAdded": 0,
+    "coordinatesAdded": 0,
+    "geometryAdded": 0,
+    "publicAppRowsAdded": 0,
+    "dietSafetyOrCatchabilityClaimsAdded": 0,
+    "publicationApproval": false,
+    "reason": "The 2017 primary report resolves Aunugay/Wangag as local river names and EMB 2016 item 48 explicitly labels Wangag (Anungay), while separate Anungay item 5 leaves a table-row ambiguity. Public plans and EMB sources establish monitoring context and historical aggregate compliance; a 2023 announcement points to Wangag results but does not expose them. The thesis station, current station-level values, outlet, digital catchment, and watershed/reserve area reconciliation remain unresolved. A third-party presentation adds unauthenticated station-name leads and the official NEDA table gives infrastructure context. Gonzaga Ordinance No. 03, s. 2026 documents local juvenile-harvest restrictions across municipal waters, but current legal status and implementation were not verified; no app legal alert was added. No species/occurrence rows, coordinates, geometry, or public-app content were approved."
+  },
+  "nextAction": "Authenticate the undated Scribd slide deck against an official dated EMB R02 original; verify the three station labels, station identifiers/coordinates, sampling dates, parameters, methods, numerical results, QA notes, and reuse terms. Compare the River Control, Brgy. Pateng monitoring label with the NEDA/RDC II planning row for a River Control (Gabion) project at Wangag River, Pateng, while treating these as potentially distinct until station coordinates or project documents establish identity. Resolve whether River View Hotel is the same site as the separate Riverview Hotel and Resort draft-mirror label. Do not infer results from the announcement or adjacent presentation charts. Seek an openly reusable basin/model-domain vector with CRS and lineage, or independently delineate a clearly labelled research-only approximation from documented elevation data after checking it against the report map. Separately seek the NTU sampling log or independent site-linked fish survey to locate the eel station. Continue public fish-literature and biodiversity-index screening in northeast and northwest Cagayan without inferring absence from empty searches. Separately verify Gonzaga Ordinance No. 03, s. 2026 against a certified/current local copy and provincial review/publication record before using it in Bangwit; keep it scoped to Gonzaga and check amendments or extensions.",
+  "sources": [
+    {
+      "id": "da-2022-cadp-wangaga-aunugay-watershed-crosswalk",
+      "url": "https://ncisrd.da.gov.ph/wp-content/uploads/2023/01/CADP-Manops-fin-for-online.pdf",
+      "supports": "Printed page 135 watershed table maps previous Wangaga River Watershed name to current Aunugay River Watershed, 11,110 ha, Gonzaga and Lal-Lo; no polygon or fish data."
+    },
+    {
+      "id": "updream-2017-aunungay-wangag-lidar-report",
+      "url": "https://dream.upd.edu.ph/assets/Publications/LiDAR-Technical-Reports/ISU/LiDAR-Surveys-and-Flood-Mapping-of-Aunungay-River.pdf",
+      "additionalUrl": "https://dream.upd.edu.ph/up-phil-lidar-1-program-technical-reports/",
+      "supports": "2017 UP DREAM/Isabela State University report printed p. 2 directly states Aunugay River is locally known as Wangag River, describes its Gonzaga-to-Lal-lo extent, and shows a static stream network/HEC-HMS model-domain map; separate Pateng Bridge hydrology station is not the NTU eel station. No GIS file or figure reuse license was obtained."
+    },
+    {
+      "id": "rdc2-2023-2028-cagayan-valley-plan-wangag-recreational-water",
+      "url": "https://rdc.rdc2.gov.ph/wp-content/uploads/Copy-of-Final-CVRDP-2023-2028-for-Website.pdf",
+      "supports": "Official Regional Development Plan identifies Wangag River as a priority recreational water body monitored by EMB and states intended primary-contact recreational use; it provides no Wangag fish checklist, station coordinates, or measured water-quality results in the cited passage."
+    },
+    {
+      "id": "emb-r02-2022-annual-report-draft-wangag-lower-monitoring-station-mirror",
+      "url": "https://anyflip.com/odhhw/ojom/basic/51-100",
+      "supports": "Third-party mirror of an EMB R02 Annual Report Draft says Wangag was under the Priority Recreational Waterbody Program and names Riverview Hotel and Resort in Centro, Gonzaga as the lower-stream sampling station; final report, coordinates, fish data, and Wangag-specific measured results are unverified."
+    },
+    {
+      "id": "dizon-castillo-2016-baua-wangag-watershed-reserve-context",
+      "url": "https://www.ukdr.uplb.edu.ph/journal-articles/5638/",
+      "additionalUrl": "https://www.researchgate.net/publication/299425487_Threats_assessment_and_management_of_the_Baua-Wangag_Watershed_Forest_Reserve_in_Gonzaga_Cagayan_Province_Philippines",
+      "supports": "Bibliographic record and public author-uploaded article describe distinct Baua and Wangag reserve systems, 6,992 ha Wangag reserve, and extension to Lal-Lo; article map is not GIS geometry."
+    },
+    {
+      "id": "lawphil-1987-proclamation-107-wangag-reserve-boundary",
+      "url": "https://lawphil.net/executive/proc/proc1987/proc_107_1987.html",
+      "supports": "Legal reserve boundary description and its stated Augunay-Wangag river junction; no digitized polygon or thesis-station location."
+    },
+    {
+      "id": "isu-aunugay-river-basin-lidar-flood-advisory-feature",
+      "url": "https://isu.edu.ph/research-feature-lidar-based-flood-advisory-system-in-aunugay-river-basin-gonzaga-cagayan/",
+      "supports": "Official university page establishes an Aunugay River Basin LiDAR flood-advisory project name, not fish or boundary data."
+    },
+    {
+      "id": "lipad-2017-aunugay-flood-hazard-layer-listing",
+      "url": "https://lipad-fmc.dream.upd.edu.ph/search/?category__identifier__in=geoscientificInformation",
+      "additionalUrl": "https://lipad-fmc.dream.upd.edu.ph/help/",
+      "supports": "Portal search listings for Aunugay 5-, 25-, and 100-year flood-hazard shapefiles and data-access procedure; no layer was downloaded, no terms were accepted, and products are not catchment geometry."
+    },
+    {
+      "id": "emb-r02-2018-classified-rivers-wangag-gonzaga",
+      "url": "https://r2.emb.gov.ph/wp-content/uploads/2018/10/list-of-classified-waterbodies.pdf",
+      "supports": "Official Region II classified-river list names Wangag River in Gonzaga, Cagayan; historical classification is not current water quality or fish evidence."
+    },
+    {
+      "id": "emb-national-wqsr-2014-2019-wangag-river-compliance-summary",
+      "url": "https://emb.gov.ph/wp-content/uploads/2022/08/Final-National-WQSR-2014-2019_12Oct2020.pdf",
+      "supports": "Official EMB National Water Quality Status Report Table 7-1 lists Wangag River, Region II, Class B, with historical 2014-2019 BOD 100% Good, DO 98.6% Good, and TSS 100% Good compliance ratings; its assessment note describes the consolidated dataset and minimum sampling requirement. This is not raw/current station data, a safety clearance, fish evidence, or geometry."
+    },
+    {
+      "id": "emb-2016-classified-water-bodies-anungay-cagayan",
+      "url": "https://water.emb.gov.ph/wp-content/uploads/2016/07/Classified-WB-2016.pdf",
+      "supports": "Official 2016 list: Region II item 48 is Wangag (Anungay)*, Class B; item 5 separately lists Anungay, Class B. Parenthetical label supports name crosswalk; separate-row ambiguity remains. Not current water quality, fish evidence, or geometry."
+    },
+    {
+      "id": "emb-r02-2023-wangag-annual-recreational-water-results-meeting",
+      "url": "https://r2.emb.gov.ph/trails-for-clean-recreational-waters/",
+      "supports": "Official indexed 2023 EMB R02 post says annual Wangag recreational-water results were presented at a June 30, 2023 meeting; the underlying values, methods, station data, and presentation were not retrieved, and direct page fetch returned HTTP 403."
+    },
+    {
+      "id": "scribd-emb-r02-environmental-framework-wangag-stations-undated",
+      "url": "https://es.scribd.com/document/483664136/1-Envt-l-Framework",
+      "supports": "Third-party, undated Scribd copy of a presentation attributed to EMB R02 names three Wangag monitoring stations (River View Hotel, River Control in Brgy. Pateng, and Purok 2 in Brgy. Sta. Clara); official original/date, coordinates, Wangag values, methods, and reuse permission are unverified. Not fish data, eel station, or app-ready material."
+    },
+    {
+      "id": "neda-rdc2-2017-2022-rdip-wangag-pateng-river-control-project",
+      "url": "https://neda.rdc2.gov.ph/wp-content/uploads/RDIP/Chapter%2019.pdf",
+      "supports": "Official NEDA/RDC II-hosted regional investment-program table lists a River Control (Gabion) project at Wangag River, Pateng, Gonzaga. Infrastructure/place-name context only; does not identify EMB water-quality station or provide coordinates, monitoring values, fish data, geometry, or app reuse terms."
+    },
+    {
+      "id": "gonzaga-ordinance-2026-03-three-year-fisheries-protection",
+      "url": "https://www.gonzaga.gov.ph/documents/4b69ae74-7c8e-4bff-a040-f4225041cfd7/download",
+      "additionalUrl": "https://www.gonzaga.gov.ph/documents?type=ordinance",
+      "supports": "Official Gonzaga Ordinance No. 03, s. 2026 states a three-year harvest prohibition on ipon, elvers, and crablets in municipal waters including rivers, streams, coast, and inland water; current legal status and implementation require verification."
+    }
+  ],
+  "relatedLocalLegalContext": {
+    "sourceId": "gonzaga-ordinance-2026-03-three-year-fisheries-protection",
+    "documentedText": "Gonzaga Municipal Ordinance No. 03, s. 2026 states a three-year prohibition covering municipal waters including rivers, streams, coastal areas, and inland bodies; it names ipon, elvers, and crablets.",
+    "effectivityAsStated": "2026-06-01",
+    "currentStatus": "Not independently verified. The public copy includes a May 6, 2026 forwarding letter for Provincial Sangguniang Panlalawigan review; outcome, publication/posting, amendments/repeals, and implementation were not checked.",
+    "appUse": "Research context only; no app legal-alert or fishing-rule row added."
+  }
+}

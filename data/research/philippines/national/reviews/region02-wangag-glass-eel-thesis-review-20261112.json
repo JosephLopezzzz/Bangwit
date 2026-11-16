@@ -1,0 +1,103 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-11-12",
+  "phaseId": "L1",
+  "regionIds": ["0200000000"],
+  "status": "ntu-masters-thesis-full-text-reviewed;named-river-glass-eel-evidence;source-reports-Anguilla-luzonensis;Wangag-Gonzaga-waterbody-context-crosschecked;Cagayan-count-conflict;no-station-coordinates-or-accessions;rights-unverified;research-only",
+  "question": "Does the NTU thesis provide site- and time-linked fish evidence for a northern Cagayan river outside the main Cagayan Riverine Zone?",
+  "sourcesReviewed": [
+    {
+      "sourceId": "lo-2013-ntuthesis-anguilla-luzonensis-north-luzon",
+      "citation": "Lo, M.-J. (2013). Biogeographic distributions of Anguilla luzonensis in Taiwan and Philippines [Master's thesis, National Taiwan University, Institute of Fisheries Science]. NTU Theses and Dissertations Repository.",
+      "access": "Public full-text thesis PDF from the NTU repository; cover, methods, results, tables, and appendix reviewed.",
+      "studyDesign": {
+        "sampling": "The methods state that glass eels were collected monthly from May 2008 through September 2009 from Cagayan River, Abulug River, and Wangag River, all in Cagayan Province, using a fyke net dipped to the river bottom.",
+        "identification": "The thesis reports morphological measurements and pigmentation checks. It says samples with overlapping fin-difference values around 12–13% for Anguilla marmorata and A. luzonensis were identified with molecular methods using cytochrome-b sequencing. A sample-to-sequence accession crosswalk was not found in the full text.",
+        "evidenceType": "Historical study-level glass-eel sample composition at named rivers; not an effort-standardized abundance estimate or contemporary population assessment."
+      }
+    },
+    {
+      "sourceId": "jdvc-2021-eprmp-gonzaga-wangag-waterbody-context",
+      "citation": "JDVC Resources Corporation. (2021). Environmental Performance Report and Management Plan (EPRMP): Proposed increased extraction volume of the Cagayan Offshore Magnetite Mining Project, municipalities of Aparri, Buguey, and Gonzaga, Cagayan. EMB EIA Portal.",
+      "access": "Public EPRMP PDF reviewed for its waterbody description of Gonzaga only; no fish results or project survey data were used.",
+      "role": "Contextual waterbody-name and municipality cross-check only. The report describes Wangag and Baua as Gonzaga's two major rivers; it does not locate the thesis sampling station or establish the river's exact outlet or catchment boundary."
+    }
+  ],
+  "siteEvidence": [
+    {
+      "waterbodyLabel": "Wangag River",
+      "sourceTaxonLabel": "Anguilla luzonensis",
+      "sourceReportedSampleCount": 1247,
+      "collectionPeriod": "2008-2009",
+      "support": "Table 6 reports 1,247 A. luzonensis samples from Wangag River; the monthly appendix entries also sum to 1,247.",
+      "locationResolution": "Named river; no collection station, reach, coordinate, or voucher/accession crosswalk was found. The thesis says Cagayan Province. The separate EPRMP supports Wangag as a major Gonzaga river but does not prove the thesis sample station was within a particular Gonzaga reach."
+    },
+    {
+      "waterbodyLabel": "Abulug River",
+      "sourceTaxonLabel": "Anguilla luzonensis",
+      "sourceReportedSampleCount": 1153,
+      "collectionPeriod": "2008-2009",
+      "support": "Table 6 and the monthly appendix report 1,153 samples.",
+      "locationResolution": "Named river in Cagayan Province; no collection station, reach, coordinate, or voucher/accession crosswalk was found."
+    },
+    {
+      "waterbodyLabel": "Cagayan River",
+      "sourceTaxonLabel": "Anguilla luzonensis",
+      "sourceReportedSampleCount": null,
+      "conflictingSourceReportedCounts": {
+        "table6Summary": 1181,
+        "monthlyCompositionTable1Sum": 1151,
+        "appendixMonthlyRowsSum": 1181
+      },
+      "collectionPeriod": "2008-2009",
+      "support": "The thesis's Table 6 and its appendix sum to 1,181, while the A. luzonensis monthly composition values in Table 1 sum to 1,151. Both source values are retained; no corrected count is selected."
+    }
+  ],
+  "taxonomicScope": {
+    "sourceReportedSpecies": ["Anguilla luzonensis", "Anguilla marmorata"],
+    "caveat": "The thesis discusses four Anguilla species across its broader Taiwan-and-Luzon comparison. The northern Cagayan site table analyzed here provides counts for A. luzonensis and A. marmorata; no additional species is assigned to Wangag from the broad study statement. The paper's name is retained verbatim and its identification is not independently re-evaluated here."
+  },
+  "waterbodyCrosswalk": {
+    "regionalLead": "Wangag River is a named northern Cagayan waterbody and a candidate for the next outside-main-Cagayan-Riverine-Zone screen.",
+    "municipalityContext": "The EPRMP identifies Wangag River as one of two major rivers of Gonzaga, Cagayan.",
+    "unresolved": "The thesis gives only Cagayan Province for its collection localities. Neither source ties the thesis's sampling point to a specific reach, outlet, watershed polygon, or confirmed position outside basin B0380. No geometry is inferred or created."
+  },
+  "qualityAndReuseLimits": [
+    "The study is historical; 2008-2009 glass-eel catches do not establish current presence, current abundance, a complete river checklist, or catchability.",
+    "The thesis describes fyke-net collection but the reviewed tables do not provide standardized effort needed to interpret sample totals as population abundance.",
+    "Table 1's Cagayan River A. luzonensis monthly composition sums to 1,151, while Table 6 and the appendix sum to 1,181; preserve this internal discrepancy.",
+    "No sample-level sequence accession, permanent museum voucher, exact station coordinates, or river-reach crosswalk was identified in the thesis.",
+    "The NTU repository PDF exposed no item-specific reuse license during this review. The EPRMP is used only for concise waterbody-name context. Public access is not treated as a reuse grant."
+  ],
+  "rights": {
+    "thesisLicense": "No item-specific license identified in the reviewed repository PDF/metadata.",
+    "eprmpLicense": "No item-specific open reuse license verified.",
+    "handling": "The repository stores bibliographic metadata and concise analytical notes only. No thesis table, map, image, fish photo, or raw sample record was copied.",
+    "publicationApproval": false
+  },
+  "disposition": {
+    "sourceReferencesAdded": 2,
+    "researchWaterbodyEvidenceLeads": 3,
+    "speciesAssertionsAdded": 0,
+    "occurrenceAssertionsAdded": 0,
+    "coordinatesAdded": 0,
+    "geometryAdded": 0,
+    "publicAppRowsAdded": 0,
+    "dietSafetyOrCatchabilityClaimsAdded": 0,
+    "publicationApproval": false,
+    "reason": "The thesis adds historical, named-river evidence, including a valuable Wangag lead, but station-level locality, accession linkage, reuse terms, and the Wangag drainage crosswalk are unresolved; its Cagayan count table also conflicts internally."
+  },
+  "nextAction": "Resolve the Wangag thesis locality and drainage outlet from independent public hydrography, preserving it as a named-river research lead until its station and catchment are crosswalked. Continue literature, repository, museum, and biodiversity-index screening across other northeastern and northwestern Cagayan watersheds without inferring absence from empty searches.",
+  "sources": [
+    {
+      "id": "lo-2013-ntuthesis-anguilla-luzonensis-north-luzon",
+      "url": "https://tdr.lib.ntu.edu.tw/bitstream/123456789/5966/1/ntu-102-1.pdf",
+      "supports": "NTU master's thesis cover, northern Luzon fish collection methods, species-identification methods, river-level sample tables, and appendix."
+    },
+    {
+      "id": "jdvc-2021-eprmp-gonzaga-wangag-waterbody-context",
+      "url": "https://eia.emb.gov.ph/wp-content/uploads/2021/11/JDVC-EPRMP-Main-Report-11122021.pdf",
+      "supports": "The EPRMP states that Wangag and Baua are the two major rivers of Gonzaga; used only as municipality-level waterbody context, not as a fish or sample-station source."
+    }
+  ]
+}

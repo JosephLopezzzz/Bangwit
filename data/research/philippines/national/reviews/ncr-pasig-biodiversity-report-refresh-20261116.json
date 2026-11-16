@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "ncr-pasig-biodiversity-report-refresh-20261116",
+  "reviewedOn": "2026-11-16",
+  "phaseId": "L2",
+  "regionId": "1300000000",
+  "regionName": "National Capital Region (NCR)",
+  "sourceId": "denr-ncr-pasig-river-biodiversity-2024",
+  "question": "Does the official DENR-NCR 2025 Annual Report add usable species-by-waterbody data for the 2024 Pasig River system biodiversity assessment?",
+  "source": {
+    "publisher": "Department of Environment and Natural Resources - National Capital Region",
+    "title": "DENR-NCR Annual Report 2025",
+    "url": "https://ncr.denr.gov.ph/wp-content/uploads/2026/01/ANNUAL-REPORT-2025.pdf",
+    "officialListing": "https://ncr.denr.gov.ph/e-library-category/annual-report/",
+    "reportSection": "3.2.8 Biodiversity Assessment Study of the Pasig River",
+    "reportPages": "237-239",
+    "accessCheckedOn": "2026-11-16",
+    "accessFinding": "The official search index returned the report section text; a direct PDF fetch from the official PDF URL returned HTTP 403 in this check. No access control was bypassed and no local PDF copy was saved.",
+    "licenseFinding": "No item-specific open-data license or republication permission was identified in the reviewed report text."
+  },
+  "scopeFindings": {
+    "assessmentYear": 2024,
+    "seasons": ["dry", "wet"],
+    "mainPasigRiverSamplingPoints": ["Delpan", "Hulo", "Napindan", "Bambang", "PUP"],
+    "majorTributaries": ["Taguig-Pateros River", "Marikina River", "San Juan River"],
+    "minorManilaEsteros": ["Aviles", "San Miguel", "Sampaloc", "Uli-Uli", "Quiapo", "Paco", "Estero de Magdalena"],
+    "interpretation": "The report describes a 2024 assessment of the Pasig River system, names five main-river sampling points, three major tributaries, and minor Manila esteros. The listed rivers/esteros are the reported survey scope, not a complete NCR waterbody inventory or a species-by-site crosswalk."
+  },
+  "fishFindings": {
+    "reportNarrativeNames": [
+      {
+        "nameAsPublished": "Arius manillensis",
+        "reportContext": "Named in the high-level native-fish narrative; the reviewed section provides no species-by-station count, capture date, specimen identifier, or separate method crosswalk."
+      },
+      {
+        "nameAsPublished": "Monopterus albus",
+        "reportContext": "Named in the high-level native-fish narrative; the reviewed section provides no species-by-station count, capture date, specimen identifier, or separate method crosswalk."
+      },
+      {
+        "nameAsPublished": "Valamugil seheli",
+        "currentTaxonomyNote": "Eschmeyer's Catalog of Fishes recognizes Moolgarda seheli as the valid name; retain the report's original spelling in source notes and do not infer a particular collection record from this name change.",
+        "taxonomyAuthority": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=16936",
+        "reportContext": "Named in the high-level native-fish narrative; the reviewed section provides no species-by-station count, capture date, specimen identifier, or separate method crosswalk."
+      },
+      {
+        "nameAsPublished": "janitor fish",
+        "interpretation": "Common-name-only text; not taxonomically resolved to one or more species."
+      }
+    ],
+    "tableAvailability": "The reviewed section provides a narrative but no fish table that maps these names to a station, tributary, date, count, specimen, or voucher.",
+    "fishRowsAdmitted": 0
+  },
+  "scopeAndReuseDecision": {
+    "decision": "Official assessment-scope and high-level narrative lead only; no site-level fish assertions or app projection.",
+    "newSpeciesAssertions": 0,
+    "newOccurrenceRows": 0,
+    "geometryAdded": false,
+    "publicAppProjection": false,
+    "reason": "The report does not give the required site-by-species mapping, the source PDF was not directly retrievable in this check, and item-specific redistribution terms were not verified. A high-level regional narrative cannot be assigned to individual rivers or esteros."
+  },
+  "nonClaims": [
+    "The report's named tributaries and esteros do not establish that every listed fish was collected at each waterbody.",
+    "A source-reported native-fish narrative is not an independently verified native-status assessment or species-by-site occurrence record.",
+    "The report's water-quality or contaminant discussion is not a food-safety advisory or personal consumption recommendation.",
+    "The listed rivers, points, and esteros do not settle NCR's complete waterbody denominator or establish fishing access, legal rules, or a complete fish checklist."
+  ],
+  "nextActions": [
+    "Use the report to guide future searches for the underlying 2024 fish assessment tables, stations, methods, and specimen records through lawfully accessible sources.",
+    "Keep the source names and native-status wording explicitly attributed to DENR-NCR until a taxon-by-site dataset and its reuse terms are independently reviewed.",
+    "Continue NCR and the remaining Luzon region baselines; this report refresh does not mark any region complete."
+  ]
+}

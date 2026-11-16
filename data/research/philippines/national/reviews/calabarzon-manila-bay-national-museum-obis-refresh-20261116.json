@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "calabarzon-manila-bay-national-museum-obis-refresh-20261116",
+  "checkedOn": "2026-11-16",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "regionName": "Region IV-A (CALABARZON)",
+  "waterbodyId": "ph-wb-manila-bay",
+  "sharedWaterRegions": [
+    {"rolloutKey": "L1", "name": "Region IV-A (CALABARZON)"},
+    {"rolloutKey": "L2", "name": "National Capital Region"},
+    {"rolloutKey": "L3", "name": "Region III (Central Luzon)"}
+  ],
+  "status": "bounded-current-OBIS-refresh-site-fields-unavailable-no-waterbody-assignment",
+  "purpose": "Refresh the separately licensed National Museum fish collection in OBIS for the shared Manila Bay named-area screen and check whether its current record payload supplies per-record capture locality or waterbody context.",
+  "source": {
+    "sourceRegistryId": "asean-cb-national-museum-fish-collection-gbif",
+    "title": "Fish Specimen Collection of National Museum, Philippines",
+    "datasetKey": "18896efa-22df-4fbd-9782-42f47257e753",
+    "obisDatasetId": "288e63af-5f94-43d4-a039-f238b432129c",
+    "provider": "National Museum of the Philippines / ASEAN Centre for Biodiversity",
+    "priorReview": "calabarzon-manila-bay-national-museum-gbif-screen-20261025.json",
+    "priorDatasetLicenseEvidence": "The reviewed official IPT and GBIF metadata for dataset version 1.38 state CC BY 4.0. The current OBIS occurrence payload returned no per-record license field; the dataset-level license does not supply missing locality or capture-origin evidence.",
+    "metadataUrl": "https://www.gbif.org/dataset/18896efa-22df-4fbd-9782-42f47257e753",
+    "providerRecordUrl": "https://ipt.aseanbiodiversity.org/resource?r=ph_fish_collection_museum_b1&request_locale=en&v=1.38"
+  },
+  "query": {
+    "endpoint": "https://api.obis.org/v3/occurrence",
+    "datasetId": "288e63af-5f94-43d4-a039-f238b432129c",
+    "queryDate": "2026-11-16",
+    "geometrySource": "Existing exploratory Marine Regions MRGID 31579 named-bay polygon, CRS84; not an official boundary or a Bangwit navigation or fishing geometry.",
+    "geometryMethod": "Query the polygon bounding rectangle, then point-in-multipolygon ray-cast against the unchanged three-component, eleven-ring polygon. No simplification or topology repair.",
+    "boundingRectangleWkt": "POLYGON ((120.48462617 14.1335057, 121.01483047 14.1335057, 121.01483047 14.86550355, 120.48462617 14.86550355, 120.48462617 14.1335057))",
+    "recordCount": 524,
+    "returnedRows": 524,
+    "responseBytes": 773173,
+    "responseSha256": "7c0fa27ec613225f79facf36bd735d4922d4c38044d41e9a9cc20be6ebd740f0",
+    "rawSnapshot": "raw/ncr-manila-bay-national-museum-refresh-20261116/obis-occurrences.json",
+    "singleRecordDetailCheck": "One occurrence detail endpoint was opened to check whether the fields omitted from the search payload were available on the detail record. That preserved-specimen record also returned no locality, waterBody, eventDate, or coordinate-uncertainty value; its identifier and coordinates are intentionally not repeated here."
+  },
+  "screen": {
+    "recordsInsideNamedBayPolygon": 507,
+    "distinctScientificNameStrings": 230,
+    "distinctSpeciesFieldValues": 222,
+    "basisOfRecord": "All 524 returned rows are PreservedSpecimen records.",
+    "yearRange": [1946, 2003],
+    "sourceStateProvinceCountsInsidePolygon": {
+      "National Capital Region": 470,
+      "Rizal": 18,
+      "Cavite": 4,
+      "Bulacan": 4,
+      "Bataan": 2,
+      "Manila": 1,
+      "Luzon": 1,
+      "Benguet": 1,
+      "missing": 6
+    },
+    "rowsWithoutReturnedLocalityField": 524,
+    "rowsWithoutReturnedWaterBodyField": 524,
+    "rowsWithoutReturnedEventDateField": 524,
+    "rowsWithoutReturnedCoordinateUncertaintyField": 524,
+    "interpretation": "The counts describe a bounded coordinate screen of preserved-specimen records, not 222 validated Manila Bay species. Coordinates fall inside a research-only named-bay polygon, while the current response lacks per-record locality, waterBody, full eventDate, and coordinate uncertainty. Source metadata describes collection contexts that include landing sites, markets, ports, and nearby seas, without a per-record capture-origin rule. Do not turn coordinate containment or sourceStateProvince into a Manila Bay or Cavite capture-site assertion."
+  },
+  "imageReview": {
+    "associatedMediaReturned": false,
+    "speciesPhotoAssetsAdded": 0,
+    "decision": "No fish photo or image-rights record was returned with this occurrence refresh. No canonical image was added or changed."
+  },
+  "decision": {
+    "newSpeciesAssertions": 0,
+    "newOccurrenceRows": 0,
+    "waterbodyAssignments": 0,
+    "mapPointsAdded": 0,
+    "geometryAdded": false,
+    "dietOrBaitClaimsAdded": 0,
+    "safetyOrFishingRuleClaimsAdded": 0,
+    "publicAppProjection": false,
+    "publicationApproval": false,
+    "reason": "The dataset has a documented CC BY 4.0 source license in the previously reviewed version, but this refreshed payload still does not establish capture locality or waterbody for its coordinate matches. A historical point inside an exploratory bay polygon is not enough to resolve the source's market, landing-site, port, and nearby-sea context."
+  },
+  "nonClaims": [
+    "The 507 geometry-filtered rows are not a complete Manila Bay checklist and do not prove current presence or absence.",
+    "The 230 scientific-name strings and 222 species-field values are not independently taxonomy-validated species totals.",
+    "The four rows with sourceStateProvince Cavite are not assigned to Cavite waters because the refreshed response has no per-record locality or waterBody.",
+    "No museum location, market, port, landing-site, or collection coordinate is assumed to be a capture coordinate.",
+    "The Marine Regions polygon is a research query area only and has no legal, navigation, municipal-water, or fishing-ground meaning."
+  ],
+  "nextActions": [
+    "Keep this refresh linked to the existing National Museum dataset record; do not create a duplicate source or count it as a new species batch.",
+    "Prefer independently reusable records or studies with a documented capture locality, date, and record-level provenance for the shared bay and the region's rivers, lakes, estuaries, and wetlands.",
+    "Keep L1, L2, and L3 baseline reviews open until their full waterbody and candidate ledgers reconcile."
+  ]
+}

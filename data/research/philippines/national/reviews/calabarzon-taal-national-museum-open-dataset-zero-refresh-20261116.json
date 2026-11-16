@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "calabarzon-taal-national-museum-open-dataset-zero-refresh-20261116",
+  "checkedOn": "2026-11-16",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "regionName": "Region IV-A (CALABARZON)",
+  "waterbodyIds": [
+    "ph-wb-taal-lake",
+    "ph-wb-pansipit-river"
+  ],
+  "purpose": "Screen a separately licensed National Museum fish-occurrence dataset for exact Taal Lake and Pansipit River waterBody values as an alternative to CAS records held under conflicting reuse terms.",
+  "source": {
+    "id": "asean-cb-national-museum-fish-collection-gbif",
+    "datasetKey": "18896efa-22df-4fbd-9782-42f47257e753",
+    "title": "Fish Specimen Collection of National Museum, Philippines",
+    "provider": "ASEAN Centre for Biodiversity / National Museum of the Philippines via GBIF",
+    "archiveVersion": "1.38",
+    "archivePublished": "2026-09-11",
+    "license": "CC-BY-4.0",
+    "metadataUrl": "https://www.gbif.org/dataset/18896efa-22df-4fbd-9782-42f47257e753",
+    "providerRecordUrl": "https://ipt.aseanbiodiversity.org/resource?r=ph_fish_collection_museum_b1&request_locale=en&v=1.38"
+  },
+  "screen": {
+    "endpoint": "https://api.gbif.org/v1/occurrence/search",
+    "queries": [
+      {
+        "waterBody": "Taal Lake",
+        "url": "https://api.gbif.org/v1/occurrence/search?datasetKey=18896efa-22df-4fbd-9782-42f47257e753&country=PH&waterBody=Taal%20Lake&limit=100",
+        "httpStatus": 200,
+        "resultCount": 0
+      },
+      {
+        "waterBody": "Lake Taal",
+        "url": "https://api.gbif.org/v1/occurrence/search?datasetKey=18896efa-22df-4fbd-9782-42f47257e753&country=PH&waterBody=Lake%20Taal&limit=100",
+        "httpStatus": 200,
+        "resultCount": 0
+      },
+      {
+        "waterBody": "Pansipit River",
+        "url": "https://api.gbif.org/v1/occurrence/search?datasetKey=18896efa-22df-4fbd-9782-42f47257e753&country=PH&waterBody=Pansipit%20River&limit=100",
+        "httpStatus": 200,
+        "resultCount": 0
+      }
+    ],
+    "matchingRecordsInspected": 0,
+    "assessment": "The independently licensed National Museum dataset returned no records for these three literal waterBody filters. The zeroes apply only to these exact indexed fields and this dataset version. The provider description says much of the collection is from landing sites, markets, ports and nearby seas, so broad provincial or coordinate-only records would still need capture-origin and locality review."
+  },
+  "decision": {
+    "speciesLocalityAssertionsAdded": 0,
+    "scopeFileChanged": false,
+    "publicAppProjectionChanged": false,
+    "coordinatesRetained": false,
+    "publicationApproval": false,
+    "rationale": "This is a bounded discovery screen, not a complete inventory or evidence of absence. It does not resolve the CAS terms conflict and does not justify transferring a record from a landing site or market to either inland waterbody."
+  },
+  "nonClaims": [
+    "The zero result counts do not establish that fish are absent from Taal Lake or Pansipit River.",
+    "No alternate spelling, locality text, unindexed source archive, physical museum catalog, or non-GBIF source was exhaustively searched in this refresh.",
+    "No current presence, abundance, diet, catchability, fishing access, safety, regulation, boundary, or geometry is inferred."
+  ],
+  "nextActions": [
+    "Continue with separately licensed, location-resolved freshwater surveys or independently documented museum records in the Luzon-first sequence.",
+    "Keep the two CAS Taal candidates held unless the provider resolves the no-redistribution versus GBIF CC0 conflict in writing."
+  ]
+}

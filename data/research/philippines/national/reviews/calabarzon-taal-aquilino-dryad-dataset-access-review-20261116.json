@@ -1,0 +1,117 @@
+{
+  "schemaVersion": 1,
+  "reportId": "calabarzon-taal-aquilino-dryad-dataset-access-review-20261116",
+  "checkedOn": "2026-11-16",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "regionName": "Region IV-A (CALABARZON)",
+  "sourceId": "aquilino-2011-taal-dna-barcoding-dryad-dataset",
+  "scope": "Review the independently archived Taal Lake DNA-barcoding dataset, its published files, current Dryad reuse terms, and retrievability. This does not transcribe the dataset or approve app content.",
+  "dataset": {
+    "title": "Data from: DNA barcoding of the ichthyofauna of Taal Lake, Philippines",
+    "authors": [
+      "Sean Vincent L. Aquilino",
+      "Jazzlyn M. Tango",
+      "Ian Kendrich C. Fontanilla",
+      "Roberto C. Pagulayan",
+      "Zubaida U. Basiao",
+      "Perry S. Ong",
+      "Jonas P. Quilang"
+    ],
+    "doi": "10.5061/dryad.8416",
+    "landingPage": "https://datadryad.org/dataset/doi:10.5061/dryad.8416",
+    "publishedOnDryad": "2011-01-20",
+    "pageVersion": "2011-01-20",
+    "filesListed": [
+      {
+        "name": "SpecimenData.xlsx",
+        "reportedSize": "669.52 KB",
+        "pageDescription": "Voucher information, taxonomy, specimen details, and collection data"
+      },
+      {
+        "name": "ImageData.xls",
+        "reportedSize": "83.97 KB",
+        "pageDescription": "Standard lengths and BOLD process IDs"
+      },
+      {
+        "name": "Image Data.rar",
+        "reportedSize": "13.56 MB",
+        "pageDescription": "Images of fishes collected from Taal Lake, Philippines"
+      },
+      {
+        "name": "consensus sequences.txt",
+        "reportedSize": "78.20 KB",
+        "pageDescription": "Consensus sequences of the COI barcodes"
+      },
+      {
+        "name": "Trace Files.zip",
+        "reportedSize": "29.86 MB",
+        "pageDescription": "Trace files for COI sequences"
+      }
+    ],
+    "landingPageAbstract": "The Dryad abstract reports 118 barcoded individuals and 23 native, endemic, and introduced fishes. Those are study-level summary counts, not a verified species list or 118 distinct taxa."
+  },
+  "rightsReview": {
+    "sources": [
+      {
+        "url": "https://dev.datadryad.org/help/guides/reuse",
+        "finding": "Dryad's current data-reuse guidance states that all datasets published on Dryad are available under CC0 and encourages citation as scholarly courtesy."
+      },
+      {
+        "url": "https://datadryad.org/terms",
+        "finding": "End User Terms updated 2025-05-20 say submitters grant Dryad permission to publish datasets under CC0 and that dataset reuse is permitted; the terms expect scholarly citation."
+      },
+      {
+        "url": "https://datadryad.org/dataset/doi:10.5061/dryad.8416",
+        "finding": "The record identifies the 2011 dataset and lists its files, but the accessible landing-page rendering does not expose a per-file license field."
+      }
+    ],
+    "licenseAssessment": "Dryad's current platform-wide policy identifies published datasets as CC0. The specific archived 2011 file metadata could not be retrieved independently in this check; retain the policy evidence and DOI together, cite the dataset, and do not represent this review as legal advice or a review of each file's contents.",
+    "license": "CC0 1.0 Universal (Dryad platform policy for published datasets)",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "photoDecision": "The image archive is listed as a file in the Dryad dataset, but no individual image was obtained, visually checked, matched to a specimen/process ID, or assessed against Bangwit's taxon-specific image standard. No image is approved for the app."
+  },
+  "accessReview": {
+    "method": "Read the official Dryad landing page, current reuse guide, and End User Terms. Attempted the public dataset metadata endpoint and direct file links for the specimen workbook, image table, and image archive. Also clicked the labeled SpecimenData.xlsx download link on the official dataset page; it returned HTTP 403 in the research reader.",
+    "landingPageRetrieved": true,
+    "metadataApi": "Timed out after 25 seconds; no API response was retained.",
+    "fileAttempts": [
+      {
+        "name": "SpecimenData.xlsx",
+        "result": "The Dryad public file-stream link returned HTTP 403 in the research reader; file contents not accessed."
+      },
+      {
+        "name": "ImageData.xls",
+        "result": "The Dryad public file-stream link returned HTTP 403 in the research reader; file contents not accessed."
+      },
+      {
+        "name": "Image Data.rar",
+        "result": "The Dryad public file-stream link returned HTTP 403 in the research reader; file contents not accessed."
+      }
+    ],
+    "blockedAccessWasNotBypassed": true,
+    "ordinaryDatasetPageLinkReturned403": true
+  },
+  "decision": {
+    "datasetSourceRegistered": true,
+    "specimenRowsTranscribed": 0,
+    "imageFilesInspected": 0,
+    "speciesAssertionsAdded": 0,
+    "scopeAssignmentsChanged": false,
+    "geometryAdded": false,
+    "publicAppProjectionChanged": false,
+    "publicationApproval": false,
+    "rationale": "This is a promising independently archived freshwater dataset with voucher and collection-data files and Dryad's CC0 dataset policy. File contents could not be accessed, so the 23-taxon summary, specimen identities, locality/date fields, taxonomy, sequence links, and any image-to-taxon matches have not been independently checked. No data or photo projection is approved."
+  },
+  "nextActions": [
+    "Acquire the listed files through an ordinary accessible Dryad download route; do not bypass the file-stream denial.",
+    "Inspect the specimen workbook's column definitions and rows; crosswalk each specimen and BOLD process ID to its voucher, date, verbatim locality, and the existing GenBank review.",
+    "Resolve current accepted names and preserve unresolved family/specimen identity conflicts before considering any scoped assertion.",
+    "Only if the image archive is lawfully retrieved, inspect each candidate image and its taxon/voucher linkage individually; add nothing to the species-image registry until the image standard's identity, provenance, rights, hash, and credit checks pass."
+  ],
+  "nonClaims": [
+    "The study's 23-species abstract count is not an extracted checklist and is not projected to Bangwit.",
+    "No current presence, abundance, lake-wide completeness, diet, catchability, legal status, safety, or habitat geometry is inferred.",
+    "No fish photograph was viewed or approved."
+  ]
+}

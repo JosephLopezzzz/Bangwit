@@ -1,0 +1,133 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "philippine-freshwater-goby-systematic-review-lead-screen-20261116",
+  "reviewedOn": "2026-11-16",
+  "phaseIds": ["L1", "L3", "L4", "L6", "L7"],
+  "status": "full-text-literature-discovery-screened;primary-source-crosswalk-partial;research-only",
+  "question": "Can the 2026 Philippine freshwater goby synthesis help find existing and missing Luzon primary sources without being treated as occurrence evidence?",
+  "source": {
+    "sourceId": "philippine-freshwater-goby-systematic-review-2026",
+    "citation": "Baron, C. T., & Garces, J. J. C. (2026). A decade of Philippine freshwater goby research (2010–2022): a systematic review and meta-analysis of ichthyofaunal surveys. Limnology and Freshwater Biology, 2026(3), 135–147. https://doi.org/10.31951/2658-3518-2026-A-3-135",
+    "publisherPage": "https://limnolfwbiol.com/index.php/LFWB/en/article/view/1498",
+    "rightsPage": "https://limnolfwbiol.com/index.php/LFWB/en/Rights_Permissions",
+    "license": "CC BY-NC 4.0 International",
+    "localResearchCopy": {
+      "path": "raw/national/freshwater-goby-review-2026/philippine-freshwater-goby-review-2026.pdf",
+      "bytes": 844780,
+      "sha256": "B8A4E476A3A56E34B2B776EE85575C768DAFBF2F753C271DA7C499E1A5ED3BA4",
+      "storage": "Ignored local research storage; not an application or public data-package asset."
+    }
+  },
+  "screeningMethod": {
+    "access": "The official publisher PDF and the publisher's article-level license statement were reviewed. The article's tables were read only to identify study and waterbody leads, then cross-checked against primary-source reviews already in the repository.",
+    "reproductionBoundary": "This review stores a short, attributed bibliographic crosswalk and discrepancy notes. It does not reproduce the synthesis tables, figures, species lists, diversity values, or underlying primary-study data.",
+    "sourceScope": "The article summarizes freshwater-goby research from 2010–2022. It is a literature-discovery aid, not a fish occurrence dataset, a complete freshwater-fish literature census, or a current regional checklist."
+  },
+  "crosswalkFindings": [
+    {
+      "issue": "Study-table denominator",
+      "finding": "The abstract says 23 studies were assessed; Table 1 contains 23 publication rows, while Table 2 contains 27 study-summary rows. The article does not reconcile the difference or explain all additional rows.",
+      "decision": "Do not use either table as a complete regional denominator or treat its summary values as a validated set of independent studies."
+    },
+    {
+      "issue": "Minalin publication year",
+      "finding": "The synthesis labels Baysa et al. as 2022. The cited primary Minalin article and its DOI metadata identify the paper as published in 2019; the existing source-table review records its 2018 field seasons.",
+      "decision": "Use the 2019 primary citation and preserve the mismatch as a secondary-review transcription discrepancy."
+    },
+    {
+      "issue": "Bagac River citation and richness",
+      "finding": "Table 2 includes a Bagac River row attributed to Roque et al. 2019 that is absent from Table 1. The author-uploaded full text of the distinct 2019 conference paper was located; it reports 17 source taxa and five Gobiidae taxa, matching Table 2. The 2022 primary paper is separate and reports 15 taxa.",
+      "decision": "The 2019 citation identity and 17/5 summary are supported by the located primary paper. Keep the 2019 and 2022 studies separate because their field dates and sample overlap are unresolved. Table 1's omission and the synthesis's 23-versus-27 study-row denominator remain open."
+    },
+    {
+      "issue": "Agno River lead",
+      "finding": "Table 2 names an Agno River study by Dantis and Lacap (2021). Its primary source and separate station/taxonomy review are already in the research registry; their station coordinate and table inconsistencies remain documented there.",
+      "decision": "Link to the existing L4 review rather than duplicate the source or treat the meta-review row as new evidence."
+    }
+  ],
+  "regionalLeadCrosswalk": [
+    {
+      "rolloutKey": "L1",
+      "leadAreas": ["Taal Lake and Pansipit River", "Santa Cruz River System", "Mt. Makiling watersheds", "San Pablo lakes", "Tikub Lake", "Tayabas River"],
+      "existingReviewRefs": [
+        "data/research/philippines/calabarzon-pansipit-2011-fish-assemblage-review-20261031.json",
+        "data/research/philippines/national-calabarzon-santa-cruz-river-system-2022-fulltext-review-20261101.json",
+        "data/research/philippines/national-calabarzon-makiling-forest-reserve-2011-fulltext-review-20261101.json",
+        "data/research/philippines/calabarzon-san-pablo-lakes-source-recheck-20261030.json",
+        "data/research/philippines/calabarzon-tikub-2014-fish-fulltext-review-20261031.json",
+        "data/research/philippines/calabarzon-tayabas-river-fulltext-review-20261031.json"
+      ],
+      "disposition": "Existing lead sources remain under their source-specific evidence and rights decisions; this secondary bibliography adds no coverage credit."
+    },
+    {
+      "rolloutKey": "L3",
+      "leadAreas": ["Minalin Channel", "Candaba Wetland", "Bagac River"],
+      "existingReviewRefs": [
+        "data/research/philippines/central-luzon-minalin-channel-fish-table-review-20261024.json",
+        "data/research/philippines/central-luzon-candaba-inventory-review-20261024.json",
+        "data/research/philippines/national/reviews/central-luzon-bagac-roque-2019-source-review-20261116.json",
+        "data/research/philippines/national/reviews/central-luzon-bagac-roque-2022-source-review-20261116.json"
+      ],
+      "disposition": "Candaba's full primary table and reuse remain unresolved. The Bagac 2019 conference paper is now identified and its 17/5 totals match the synthesis; the 2022 survey remains separate because possible sample overlap and dates are unresolved."
+    },
+    {
+      "rolloutKey": "L4",
+      "leadAreas": ["Agno River, Pangasinan"],
+      "existingReviewRefs": ["data/research/philippines/national-agno-pangasinan-macrofauna-review-20261030.json"],
+      "disposition": "The existing five-station mixed macrofauna source remains research-only; see its station, taxonomy, and river/estuary context caveats."
+    },
+    {
+      "rolloutKey": "L6",
+      "leadAreas": ["Benguet rivers and Ambuklao Dam"],
+      "existingReviewRefs": [
+        "data/research/philippines/national-benguet-rivers-bestre-2018-source-review-20261030.json",
+        "data/research/philippines/national-freshwater-region02-adjacent-ibulao-river-tauli-2022-review-20261109.json"
+      ],
+      "disposition": "The synthesis cites the Benguet paper. The separate Ifugao Ibulao study is linked for CAR scope but is not a study listed in the synthesis and does not establish Isabela capture sites."
+    },
+    {
+      "rolloutKey": "L7",
+      "leadAreas": ["Lake Bato, Agos River, Bagacay Falls, Lake Baao-Bula, Pawili River, and Pajo–Sto. Domingo River"],
+      "existingReviewRefs": [
+        "data/research/philippines/national-bicol-rivers-survey-evidence-review-20261030.json",
+        "data/research/philippines/national-bicol-catanduanes-pajo-river-review-20261030.json"
+      ],
+      "disposition": "The multi-waterbody study has unresolved scope and total conflicts; keep it separate from the Catanduanes review and regional completeness claims."
+    }
+  ],
+  "imageReview": {
+    "articleFigures": "The reviewed synthesis figures are analytical graphics rather than taxon-identified fish profile photographs; no canonical image candidate was admitted.",
+    "disposition": "No image asset, taxon image link, or public app image record was added."
+  },
+  "disposition": {
+    "sourceRegistryRecordsAddedFromPrimaryCrosswalk": 3,
+    "newPrimarySourceReviewsAdded": 2,
+    "existingPrimarySourceRefreshesAdded": 1,
+    "speciesAssertionsAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "geometryAdded": false,
+    "imagesAdded": 0,
+    "publicAppRowsAdded": 0,
+    "publicationApproval": false,
+    "regionalBaselinesCompleted": 0
+  },
+  "nextAction": "Use this bibliography only to check off source leads. Resolve each primary source independently, prioritizing the 2019 Bagac citation trail and full Candaba table access, while continuing source searches across Luzon's other provinces and marine, brackish, lake, reservoir, river, and wetland lanes.",
+  "sources": [
+    {
+      "url": "https://limnolfwbiol.com/index.php/LFWB/en/article/view/1498",
+      "supports": "Publisher article identity, publication date, abstract-reported 23-study count, PDF link, and article-level CC BY-NC 4.0 license."
+    },
+    {
+      "url": "https://limnolfwbiol.com/index.php/LFWB/en/Rights_Permissions",
+      "supports": "Journal reuse terms and author-retained copyright."
+    },
+    {
+      "url": "https://www.recentscientific.com/sites/default/files/13985-A-2019.pdf",
+      "supports": "Baysa et al. primary paper title, 2019 date, 2018 Minalin sampling, and article-level CC BY statement."
+    },
+    {
+      "url": "https://www.bioflux.com.ro/docs/2022.2870-2880.pdf",
+      "supports": "Roque et al. primary Bagac paper, 2022 publication, abstract-reported 15 fish taxa, and CC BY license statement."
+    }
+  ]
+}

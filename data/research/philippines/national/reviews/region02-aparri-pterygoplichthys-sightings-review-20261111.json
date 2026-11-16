@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "region02-aparri-pterygoplichthys-sightings-review-20261111",
+  "generatedOn": "2026-11-11",
+  "status": "historical-aparri-sighting-unverified;publisher-paper-and-author-preprint-reviewed;gbif-negative-locality-screen;research-only",
+  "purpose": "Trace the historical Aparri, Cagayan janitor-fish sighting claim through its cited taxonomic paper, a later author-uploaded Luzon survey, the unavailable DLSU proceeding, and a bounded GBIF occurrence-index search.",
+  "sourcesReviewed": [
+    {
+      "id": "chavez-et-al-2006-zootaxa-pterygoplichthys-laguna-basin-aparri-report",
+      "title": "New Philippine record of South American sailfin catfishes (Pisces: Loricariidae)",
+      "citation": "Chavez JM, De La Paz RM, Manohar SK, Pagulayan RC, Carandang VI. 2006. Zootaxa 1109(1):57-68. DOI: 10.11646/zootaxa.1109.1.6.",
+      "url": "https://www.mapress.com/zootaxa/2006f/zt01109p068.pdf",
+      "articleRecord": "https://www.mapress.com/zt/article/view/zootaxa.1109.1.6/0",
+      "reviewedSections": "Methods; species identification and specimen counts; discussion of range beyond Laguna de Bay",
+      "reuse": "Copyright 2006 Magnolia Press; no open reuse license was identified in the reviewed article."
+    },
+    {
+      "id": "chavez-carandang-2017-pterygoplichthys-luzon-preprint",
+      "title": "Invasion Status of Pterygoplichthys spp. (Pisces: Loricariidae) in the Luzon Island, Philippines and its Policy Implications",
+      "citation": "Joel M. Chavez and Jose Santos R. Carandang VI. Author-uploaded preprint, manuscript record dated July 2017; uploaded to ResearchGate in 2019. DOI: 10.13140/RG.2.2.19353.06243.",
+      "url": "https://www.researchgate.net/publication/331903996_Invasion_Status_of_Pterygoplichthys_spp_Pisces_Loricariidae_in_the_Luzon_Island_Philippines_and_its_Policy_Implications",
+      "reviewedSections": "ResearchGate publication metadata; introduction; study-area description and methods",
+      "reuse": "The hosting page identifies the work as a preprint, warns that early-stage research may not have been peer reviewed, and notes that the uploaded content may be subject to copyright; no open reuse license was identified."
+    },
+    {
+      "id": "dlsu-chavez-carandang-pterygoplichthys-luzon-2014",
+      "title": "Invasion stages of Pterygoplichthys spp. (Pisces: Loricariidae) in the Luzon Island, Philippines",
+      "url": "https://animorepository.dlsu.edu.ph/faculty_research/11198/",
+      "reviewedSections": "Official repository metadata and abstract only; repository says the full upload is unavailable.",
+      "reuse": "No item-specific reuse license was identified."
+    },
+    {
+      "id": "gbif-api-pterygoplichthys-ph-cagayan-locality-screen-20261111",
+      "title": "GBIF occurrence API screen: Pterygoplichthys in the Philippines",
+      "url": "https://api.gbif.org/v1/occurrence/search?taxonKey=2339954&country=PH&limit=300",
+      "taxonMatchUrl": "https://api.gbif.org/v1/species/match?name=Pterygoplichthys",
+      "reviewedOn": "2026-11-11",
+      "reuse": "Live API response screened for discovery only; no response archive or occurrence records were retained in this review. Record-level licenses may vary."
+    }
+  ],
+  "reviewedEvidence": {
+    "lagunaBasinSpecimens": "The 2006 article documents 193 examined Pterygoplichthys specimens representing P. disjunctivus and P. pardalis from five named sites within and around the Laguna de Bay basin: Marikina River, Pasig River, Catmon Creek, Banilad Creek, and Laguna de Bay at San Pedro. The methods describe cataloguing in the De La Salle University Zoological Collection-Fishes. None of these sample sites is in Cagayan.",
+    "aparriClaim": "The 2006 article separately says the authors had received reports of janitor-fish sightings in streams and rivers in Aparri, Cagayan, and Zamboanga City. It does not name the Aparri waterbody, date, observer, collection event, species, voucher/accession, or coordinates. This is a historical, second-hand lead—not a specimen-based record.",
+    "laterLuzonPreprint": "The author-uploaded preprint calls the prior Aparri and Zamboanga sightings unconfirmed. Its own follow-up investigation describes surveyed provinces as Bulacan, Batangas, Quezon, and Metro Manila; it does not list Cagayan as a survey province or report an Aparri specimen. It therefore does not independently validate the Aparri lead.",
+    "2014Proceeding": "The DLSU repository record describes an eight-site Luzon study but the full proceeding is unavailable at that record. The accessible abstract and metadata do not establish that the proceeding is the same work as the later preprint and do not provide an Aparri-specific observation or specimen table.",
+    "gbifScreen": "The GBIF species match resolved the genus to accepted GBIF usage key 2339954. The Philippines occurrence query returned 109 records total. Screening all returned rows' indexed stateProvince and locality text found no match for Aparri, Cagayan, or Cagayan Valley. This bounded query is a discovery screen only: administrative fields may be blank, differently spelled, or misassigned, and GBIF does not cover all collections or publications.",
+    "communityLeadCrosswalk": "The separate ZSL/Darwin reports already reviewed in this rollout mention basin-level or community-monitoring janitor-fish leads, but do not publish an Aparri waterbody, dated event, specimen crosswalk, or dataset that independently resolves this 2006 report."
+  },
+  "qualityAndReuseLimits": [
+    "Do not create a Cagayan or Aparri occurrence from the 2006 sentence: it is an unlocalized report received by the authors, without a dated collection event or traceable specimen.",
+    "The two species identified from Laguna de Bay specimens cannot be assigned to Aparri by proximity, common name, or inference.",
+    "The 2017 author-uploaded preprint is not an independent Aparri validation and is not identified as peer reviewed on its hosting page.",
+    "The DLSU 2014 abstract-only repository record cannot be used to infer that Aparri was among its sites.",
+    "A zero textual locality match in the 109-record GBIF response is not evidence of absence; it only records what this bounded API response exposed on the review date.",
+    "The 2006 article is copyrighted and no open reuse license was verified. Do not reproduce its figures, tables, text, or images.",
+    "No species/occurrence row, survey event, coordinate, geometry, invasive-status assertion, safety/legal/diet claim, or app content is approved from this review."
+  ],
+  "dispositionSummary": {
+    "researchOnlySourceRecordsAdded": 2,
+    "existingDlsu2014AndPreprintSourcesCrossReferenced": true,
+    "historicalAparriLead": 1,
+    "speciesVerifiedAparriOccurrencesAdded": 0,
+    "coordinatesOrGeometryAdded": false,
+    "publicationApproval": false
+  },
+  "nextAction": "Keep Aparri unresolved. Search publicly accessible museum catalogues, BOLD/GenBank records, university theses, and other primary freshwater surveys for an independently dated Cagayan specimen or named-waterbody event; check voucher/accession, source locality, taxonomic basis, and reuse terms before treating any result as a candidate record."
+}

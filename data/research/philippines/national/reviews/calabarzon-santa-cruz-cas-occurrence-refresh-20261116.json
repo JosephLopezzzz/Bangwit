@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "calabarzon-santa-cruz-cas-occurrence-refresh-20261116",
+  "checkedOn": "2026-11-16",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "regionName": "Region IV-A (CALABARZON)",
+  "waterbodyId": "ph-wb-santa-cruz-laguna-river",
+  "sourceId": "gbif-cas-ichthyology",
+  "purpose": "Refresh the previously reviewed CAS Ichthyology Santa Cruz River search and reassess whether its occurrence records can be redistributed.",
+  "query": {
+    "endpoint": "https://api.gbif.org/v1/occurrence/search",
+    "parameters": {
+      "datasetKey": "5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+      "country": "PH",
+      "basisOfRecord": "PRESERVED_SPECIMEN",
+      "waterBody": "Santa Cruz River",
+      "limit": 100
+    },
+    "url": "https://api.gbif.org/v1/occurrence/search?datasetKey=5d6c10bd-ea31-4363-8b79-58c96d859f5b&country=PH&basisOfRecord=PRESERVED_SPECIMEN&waterBody=Santa+Cruz+River&limit=100",
+    "httpStatus": 200,
+    "resultCount": 3,
+    "enumeratedCount": 3,
+    "endOfRecords": true,
+    "interpretation": "The exact query still returns the three records in the existing crosswalk. This bounded dataset/field query is not a complete river inventory or absence search. Row-level details are not repeated in this refresh."
+  },
+  "datasetMetadata": {
+    "datasetKey": "5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+    "title": "CAS Ichthyology (ICH)",
+    "doi": "10.15468/efh2ib",
+    "datasetLicense": "CC0-1.0",
+    "modified": "2026-11-10T13:25:44.169+00:00",
+    "metadataUrl": "https://www.gbif.org/dataset/5d6c10bd-ea31-4363-8b79-58c96d859f5b"
+  },
+  "rightsReview": {
+    "providerTermsUrl": "https://www.calacademy.org/scientists/ichthyology-collections",
+    "finding": "The California Academy of Sciences' Ichthyology Collections Terms of Use say collection database data may be used for basic research, education, and conservation but may not be repackaged, resold, or redistributed in any form. This conflicts with the GBIF dataset's CC0 metadata for downstream redistribution.",
+    "decision": "Hold the selected Santa Cruz records from public-app projection and republication in redistributed data packages until the rights holder clarifies which terms govern these specific records. Do not infer that GBIF's dataset-level CC0 resolves the provider-terms conflict.",
+    "clarificationRequested": false,
+    "publicationApproval": false
+  },
+  "taxonomyReview": {
+    "finding": "The current GBIF occurrence response contains one accepted-name field that differs from the earlier source crosswalk's specialist-catalogue-based crosswalk. Eschmeyer's Catalog of Fishes currently supports the earlier accepted-name decision. Exact record and name details remain in the existing review artifact and are not duplicated here while redistribution terms are unresolved.",
+    "authorityUrl": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=49102",
+    "taxonomyCrosswalkChanged": false
+  },
+  "scopeAndReuseDecision": {
+    "newSpeciesAssertions": 0,
+    "existingResearchCrosswalkReclassified": "rights-review-hold-for-redistribution",
+    "coordinatesRetained": false,
+    "geometryAdded": false,
+    "currentPresenceInferred": false,
+    "publicAppProjection": false,
+    "reason": "The records remain historical, dated text-locality evidence with no delineated river reach. The provider's non-redistribution terms conflict with the GBIF CC0 metadata; the earlier internal research crosswalk is retained as the audit source but is not approved for public projection or redistribution pending clarification."
+  },
+  "nonClaims": [
+    "The query does not create a complete Santa Cruz River checklist and does not show fish absence.",
+    "The 1941 locality text does not establish present-day occurrence, abundance, catchability, diet, fishing legality, safety, or river geometry.",
+    "A current GBIF accepted-name field is not treated as the sole fish-taxonomy authority where it conflicts with the reviewed specialist catalogue."
+  ],
+  "nextActions": [
+    "Seek item-specific clarification from the California Academy of Sciences if these selected records are needed in a public release; no inquiry was sent.",
+    "Keep this lead outside the public species projection while rights remain unresolved.",
+    "Continue the Luzon source sweep with independently reusable, location-resolved data."
+  ]
+}

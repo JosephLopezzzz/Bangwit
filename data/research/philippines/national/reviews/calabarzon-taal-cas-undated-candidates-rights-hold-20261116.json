@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "reportId": "calabarzon-taal-cas-undated-candidates-rights-hold-20261116",
+  "checkedOn": "2026-11-16",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "regionName": "Region IV-A (CALABARZON)",
+  "waterbodyId": "ph-wb-taal-lake",
+  "waterbodyName": "Taal Lake",
+  "purpose": "Resolve whether two newly screened CAS specimen candidates can be added to the Taal research-scope file. Do not reproduce occurrence-level fields while source reuse terms conflict.",
+  "source": {
+    "id": "calacademy-cas-ichthyology-gbif-dataset-efh2ib",
+    "gbifDatasetKey": "5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+    "title": "CAS Ichthyology (ICH)",
+    "datasetVersion": "150.548",
+    "datasetModified": "2026-11-10T13:25:44.169+00:00",
+    "gbifMetadataLicense": "CC0-1.0",
+    "gbifMetadataUrl": "https://www.gbif.org/dataset/5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+    "providerTermsUrl": "https://blog.calacademy.org/scientists/ichthyology-collections",
+    "providerPortalHelpUrl": "https://researcharchive.calacademy.org/research/ichthyology/collection/help.asp"
+  },
+  "screen": {
+    "gbifOccurrenceQuery": "https://api.gbif.org/v1/occurrence/search?datasetKey=5d6c10bd-ea31-4363-8b79-58c96d859f5b&country=PH&basisOfRecord=PRESERVED_SPECIMEN&waterBody=Taal%20Lake&limit=100",
+    "gbifHttpStatus": 200,
+    "gbifResultCount": 2,
+    "providerPortalHttpStatus": 200,
+    "providerCatalogNumericMatchCount": 4,
+    "assessment": "The bounded GBIF screen returned two additional candidate records. A targeted provider catalog check returned four numeric catalog matches, including two Taal-labeled CAS-SU lots and two unrelated CAS-ICH lots. Collection code matters because catalog-number sequences overlap. Taxon names and record identifiers are intentionally not reproduced in this report."
+  },
+  "rightsReview": {
+    "gbifMetadataStatement": "GBIF dataset metadata marks the dataset CC0-1.0.",
+    "providerTermsStatement": "The current CAS Ichthyology collection terms say its databases and data are owned/copyrighted by, or licensed to, CAS; allow basic research, education, and conservation use; and prohibit repackaging, resale, or redistribution in any form. Commercial or for-profit use requires express written consent.",
+    "conflict": "The provider's no-redistribution terms conflict with the broader GBIF CC0 dataset label for these provider-sourced records. No item-specific clarification was found that resolves the conflict for the two candidates.",
+    "disposition": "Hold both candidates from tracked row-level research files, species assertions, public projections, map geometry, and reuse. Keep only this aggregate access/rights note until the provider clarifies the conflicting terms or an independent reusable source supports the same facts."
+  },
+  "decision": {
+    "speciesLocalityAssertionsAdded": 0,
+    "taxonomicCandidatesHeld": 2,
+    "scopeFileChanged": false,
+    "publicAppProjectionChanged": false,
+    "coordinatesRetained": false,
+    "publicationApproval": false,
+    "rationale": "Accuracy alone does not resolve redistribution rights. The project repository and any public app are not approved destinations for row-level CAS collection data while the provider-versus-GBIF terms conflict remains unresolved."
+  },
+  "provenance": {
+    "localRawDirectory": "data/research/philippines/raw/calabarzon-taal-cas-undated-specimen-followup-20261116/",
+    "rawDirectoryIsIgnored": true,
+    "receiptPath": "data/research/philippines/raw/calabarzon-taal-cas-undated-specimen-followup-20261116/receipt.json",
+    "note": "Raw responses were retained in ignored local research storage only. No row-level names or identifiers are included in this tracked report."
+  },
+  "nextActions": [
+    "Continue with independently licensed museum records or openly reusable freshwater surveys; do not wait on the CAS terms conflict.",
+    "Revisit these candidates only if CAS clarifies the terms for records distributed through GBIF or issues a written reuse grant."
+  ],
+  "nonClaims": [
+    "The bounded query is not a Taal Lake checklist and its result count does not establish completeness.",
+    "No current presence, abundance, diet, catchability, safety, fishing access, legality, or geometry is inferred.",
+    "No specimen was physically examined or reidentified."
+  ]
+}

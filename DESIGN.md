@@ -344,6 +344,12 @@ Keyboard focus uses a 3px aqua outline with a 3px offset. Honor reduced-motion p
 - When a screen needs a new size or behavior, add a named variant to the shared component and its token-based styles. Avoid recreating the base card, dropdown, calendar, or field styles in a page stylesheet.
 - This rule keeps new cards, dropdowns, and calendars aligned automatically through the shared primitives and global tokens.
 
+### Species Photography
+- Route every canonical species image through `SpeciesImage` and `src/lib/species-images.ts`; registry entries require a local asset path, media source, explicit cleared rights, and an independent identification source.
+- Use a quiet 4:3 bay-mist frame, 1px line, 8px corners, and `object-fit: contain` so the whole animal remains visible. Keep the image itself unmodified unless the recorded rights allow a derivative. Do not add decorative shadows, species clip art, or AI-generated images as biological references.
+- Show photo source/creator, license or permission label, and identification reference below the image. Describe visible traits in alt text. If there is no cleared, identified photo, show the explicit localized fallback; never use another species or the Bilog mascot as a substitute.
+- Personal catch photos stay in the private catch journal and `My Species` collection; they are not canonical reference images. Keep species assets out of the install precache; the bounded runtime image cache may retain recently viewed images only. See [Species Image Standard](docs/SPECIES_IMAGE_STANDARD.md).
+
 ### Navigation
 - **Style:** A labeled sidebar contains Explore, Species, My Catches, My Species and Settings. Language, theme and guide controls sit at the bottom, below a fine divider. Smaller widths expose the same navigation through a visible Menu button and a native drawer.
 - **States:** Desktop navigation expands to 212px or collapses to a 64px icon rail; the first desktop visit starts expanded, and the choice persists. Navigation rows are 40px, with 18px Lucide icons and 13px labels. The active link uses a mixed sea-glass/white fill, deep-current text and a 600 weight. Inactive links use muted ink; hover introduces a lighter sea-glass mix. Tablet defaults to the icon rail; below 768px the same routes live in a floating native dialog drawer.
