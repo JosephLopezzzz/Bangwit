@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "snapshotId": "luzon-evidence-audit-20261117",
-  "status": "generated-read-only-audit;review-linkage-complete;phase-key-and-publication-exceptions-open",
+  "status": "generated-read-only-audit;review-linkage-complete;phase-id-namespace-separated;publication-exceptions-open",
   "purpose": "Reconcile existing regional review artifacts and their explicit JSON reference chains; this index does not admit research rows or change regional completion status.",
   "inputs": [
     {
@@ -2916,15 +2916,14 @@
       "national-context-only": 2,
       "shared-across-regions": 48
     },
-    "brokenOrUnresolvedJsonReferences": 19,
+    "brokenOrUnresolvedJsonReferences": 0,
     "missingSourceIdLinks": 0,
-    "localRawReferenceCount": 818,
-    "localRawReferencesAvailable": 818,
+    "localRawReferenceCount": 836,
+    "localRawReferencesAvailable": 836,
     "localRawReferencesUnresolved": 0,
     "localRawHashMismatchReferences": 0,
     "localRawNonmatchingBasenameCandidates": 3,
-    "uniqueLocalRawInputsMatched": 780,
-    "phaseRegionConflicts": 2,
+    "uniqueLocalRawInputsMatched": 798,
     "manuallyReviewedRegionalAssociations": 32,
     "nationalContextArtifacts": 3,
     "unlinkedManualAssociations": 0,
@@ -6188,103 +6187,11 @@
     }
   ],
   "findings": {
-    "unresolvedJsonReferences": [
-      {
-        "from": "data/research/philippines/calabarzon-laguna-cas-taxonomy-followup-20261025.json",
-        "field": "$.records[4].authorities[1].rawFile",
-        "reference": "worms-taenioides-caeculus.json"
-      },
-      {
-        "from": "data/research/philippines/national-agno-station-locality-crosswalk-20261030.json",
-        "field": "$.rawSnapshot.files[0].path",
-        "reference": "ARB1-dpwh-point-query.json"
-      },
-      {
-        "from": "data/research/philippines/national-agno-station-locality-crosswalk-20261030.json",
-        "field": "$.rawSnapshot.files[1].path",
-        "reference": "ARB1-nominatim-reverse.json"
-      },
-      {
-        "from": "data/research/philippines/national-agno-station-locality-crosswalk-20261030.json",
-        "field": "$.rawSnapshot.files[10].path",
-        "reference": "ARB6-dpwh-point-query.json"
-      },
-      {
-        "from": "data/research/philippines/national-agno-station-locality-crosswalk-20261030.json",
-        "field": "$.rawSnapshot.files[11].path",
-        "reference": "ARB6-nominatim-reverse.json"
-      },
-      {
-        "from": "data/research/philippines/national-agno-station-locality-crosswalk-20261030.json",
-        "field": "$.rawSnapshot.files[12].path",
-        "reference": "ARB7-dpwh-point-query.json"
-      },
-      {
-        "from": "data/research/philippines/national-agno-station-locality-crosswalk-20261030.json",
-        "field": "$.rawSnapshot.files[13].path",
-        "reference": "ARB7-nominatim-reverse.json"
-      },
-      {
-        "from": "data/research/philippines/national-agno-station-locality-crosswalk-20261030.json",
-        "field": "$.rawSnapshot.files[14].path",
-        "reference": "ARB8-dpwh-point-query.json"
-      },
-      {
-        "from": "data/research/philippines/national-agno-station-locality-crosswalk-20261030.json",
-        "field": "$.rawSnapshot.files[15].path",
-        "reference": "ARB8-nominatim-reverse.json"
-      },
-      {
-        "from": "data/research/philippines/national-agno-station-locality-crosswalk-20261030.json",
-        "field": "$.rawSnapshot.files[16].path",
-        "reference": "dpwh-layer-metadata.json"
-      },
-      {
-        "from": "data/research/philippines/national-agno-station-locality-crosswalk-20261030.json",
-        "field": "$.rawSnapshot.files[2].path",
-        "reference": "ARB2-dpwh-point-query.json"
-      },
-      {
-        "from": "data/research/philippines/national-agno-station-locality-crosswalk-20261030.json",
-        "field": "$.rawSnapshot.files[3].path",
-        "reference": "ARB2-nominatim-reverse.json"
-      },
-      {
-        "from": "data/research/philippines/national-agno-station-locality-crosswalk-20261030.json",
-        "field": "$.rawSnapshot.files[4].path",
-        "reference": "ARB3-dpwh-point-query.json"
-      },
-      {
-        "from": "data/research/philippines/national-agno-station-locality-crosswalk-20261030.json",
-        "field": "$.rawSnapshot.files[5].path",
-        "reference": "ARB3-nominatim-reverse.json"
-      },
-      {
-        "from": "data/research/philippines/national-agno-station-locality-crosswalk-20261030.json",
-        "field": "$.rawSnapshot.files[6].path",
-        "reference": "ARB4-dpwh-point-query.json"
-      },
-      {
-        "from": "data/research/philippines/national-agno-station-locality-crosswalk-20261030.json",
-        "field": "$.rawSnapshot.files[7].path",
-        "reference": "ARB4-nominatim-reverse.json"
-      },
-      {
-        "from": "data/research/philippines/national-agno-station-locality-crosswalk-20261030.json",
-        "field": "$.rawSnapshot.files[8].path",
-        "reference": "ARB5-dpwh-point-query.json"
-      },
-      {
-        "from": "data/research/philippines/national-agno-station-locality-crosswalk-20261030.json",
-        "field": "$.rawSnapshot.files[9].path",
-        "reference": "ARB5-nominatim-reverse.json"
-      },
-      {
-        "from": "data/research/philippines/national-apayao-tanglagan-rice-terrace-aquatic-study-review-20261030.json",
-        "field": "$.fishCandidate.taxonomicCrosswalk.authority",
-        "reference": "Catalogue of Life Extended Release, matching record already retained in freshwater-taxonomy-matches.json"
-      }
-    ],
+    "unresolvedJsonReferences": [],
+    "phaseIdInterpretation": {
+      "comparedToManifestRolloutKey": false,
+      "reason": "Review phaseId and manifest rolloutKey are separate fields with no documented shared namespace; regional linkage uses explicit region IDs and manifest evidence references."
+    },
     "localRawInputAvailability": [
       {
         "from": "data/research/philippines/calabarzon-balayan-cas-row-decisions-20261025.json",
@@ -10416,6 +10323,19 @@
         "nonmatchingCandidates": []
       },
       {
+        "from": "data/research/philippines/calabarzon-laguna-cas-taxonomy-followup-20261025.json",
+        "field": "$.records[4].authorities[1].rawFile",
+        "referencedPath": "worms-taenioides-caeculus.json",
+        "availability": "available-unpinned",
+        "matchedFiles": [
+          {
+            "path": "data/research/philippines/raw/calabarzon-laguna-taxonomy-followup-20261025/worms-taenioides-caeculus.json",
+            "sha256": "ee8138435a418c0d4c5ef22db1e00901835d70569af340509e953efaa58bd4a6"
+          }
+        ],
+        "nonmatchingCandidates": []
+      },
+      {
         "from": "data/research/philippines/calabarzon-laguna-gbif-record-details-20261025.json",
         "field": "$.records[0].rawResponse.path",
         "referencedPath": "raw/calabarzon-laguna-gbif-record-details-20261025/occurrence-473214923.json",
@@ -13783,6 +13703,227 @@
         "nonmatchingCandidates": []
       },
       {
+        "from": "data/research/philippines/national-agno-station-locality-crosswalk-20261030.json",
+        "field": "$.rawSnapshot.files[0].path",
+        "referencedPath": "ARB1-dpwh-point-query.json",
+        "availability": "available-and-hash-verified",
+        "matchedFiles": [
+          {
+            "path": "data/research/philippines/raw/agno-station-admin-crosswalk-20261030/ARB1-dpwh-point-query.json",
+            "sha256": "cfcfe1da302a0ec4c4668429e95167703b304ec6a709cc03a14dea22ca6be7a7"
+          }
+        ],
+        "nonmatchingCandidates": []
+      },
+      {
+        "from": "data/research/philippines/national-agno-station-locality-crosswalk-20261030.json",
+        "field": "$.rawSnapshot.files[1].path",
+        "referencedPath": "ARB1-nominatim-reverse.json",
+        "availability": "available-and-hash-verified",
+        "matchedFiles": [
+          {
+            "path": "data/research/philippines/raw/agno-station-admin-crosswalk-20261030/ARB1-nominatim-reverse.json",
+            "sha256": "6dd249e3e3669adc9852d8749da293a97f7489b0e2d57fed2f8842855df3e0e6"
+          }
+        ],
+        "nonmatchingCandidates": []
+      },
+      {
+        "from": "data/research/philippines/national-agno-station-locality-crosswalk-20261030.json",
+        "field": "$.rawSnapshot.files[10].path",
+        "referencedPath": "ARB6-dpwh-point-query.json",
+        "availability": "available-and-hash-verified",
+        "matchedFiles": [
+          {
+            "path": "data/research/philippines/raw/agno-station-admin-crosswalk-20261030/ARB6-dpwh-point-query.json",
+            "sha256": "e8233973a23550614502ae70ced5ae96faeee44a09bf4c6c9a8863ec388380eb"
+          }
+        ],
+        "nonmatchingCandidates": []
+      },
+      {
+        "from": "data/research/philippines/national-agno-station-locality-crosswalk-20261030.json",
+        "field": "$.rawSnapshot.files[11].path",
+        "referencedPath": "ARB6-nominatim-reverse.json",
+        "availability": "available-and-hash-verified",
+        "matchedFiles": [
+          {
+            "path": "data/research/philippines/raw/agno-station-admin-crosswalk-20261030/ARB6-nominatim-reverse.json",
+            "sha256": "f4a9eed7812405862fde5be5b72313a97450c0eaceda7230d0dd68fad8bb4149"
+          }
+        ],
+        "nonmatchingCandidates": []
+      },
+      {
+        "from": "data/research/philippines/national-agno-station-locality-crosswalk-20261030.json",
+        "field": "$.rawSnapshot.files[12].path",
+        "referencedPath": "ARB7-dpwh-point-query.json",
+        "availability": "available-and-hash-verified",
+        "matchedFiles": [
+          {
+            "path": "data/research/philippines/raw/agno-station-admin-crosswalk-20261030/ARB7-dpwh-point-query.json",
+            "sha256": "f3984999469b3744be1b9a6379a17ec261b472fe6d5241dbc5021eb91c015d59"
+          }
+        ],
+        "nonmatchingCandidates": []
+      },
+      {
+        "from": "data/research/philippines/national-agno-station-locality-crosswalk-20261030.json",
+        "field": "$.rawSnapshot.files[13].path",
+        "referencedPath": "ARB7-nominatim-reverse.json",
+        "availability": "available-and-hash-verified",
+        "matchedFiles": [
+          {
+            "path": "data/research/philippines/raw/agno-station-admin-crosswalk-20261030/ARB7-nominatim-reverse.json",
+            "sha256": "ef30547839080cbc16560e91ba521ee62763f17fb6eb1e61dc0e0695f49c2eda"
+          }
+        ],
+        "nonmatchingCandidates": []
+      },
+      {
+        "from": "data/research/philippines/national-agno-station-locality-crosswalk-20261030.json",
+        "field": "$.rawSnapshot.files[14].path",
+        "referencedPath": "ARB8-dpwh-point-query.json",
+        "availability": "available-and-hash-verified",
+        "matchedFiles": [
+          {
+            "path": "data/research/philippines/raw/agno-station-admin-crosswalk-20261030/ARB8-dpwh-point-query.json",
+            "sha256": "5ee5c35cf854cbb963940efa499732e2dedaa89a0e1548369a1d32cdbfaf8ed1"
+          }
+        ],
+        "nonmatchingCandidates": []
+      },
+      {
+        "from": "data/research/philippines/national-agno-station-locality-crosswalk-20261030.json",
+        "field": "$.rawSnapshot.files[15].path",
+        "referencedPath": "ARB8-nominatim-reverse.json",
+        "availability": "available-and-hash-verified",
+        "matchedFiles": [
+          {
+            "path": "data/research/philippines/raw/agno-station-admin-crosswalk-20261030/ARB8-nominatim-reverse.json",
+            "sha256": "9593dbe656c42223604f1f0643a0038a6729309e2315606b179eeb03341ff58c"
+          }
+        ],
+        "nonmatchingCandidates": []
+      },
+      {
+        "from": "data/research/philippines/national-agno-station-locality-crosswalk-20261030.json",
+        "field": "$.rawSnapshot.files[16].path",
+        "referencedPath": "dpwh-layer-metadata.json",
+        "availability": "available-and-hash-verified",
+        "matchedFiles": [
+          {
+            "path": "data/research/philippines/raw/agno-station-admin-crosswalk-20261030/dpwh-layer-metadata.json",
+            "sha256": "76c5e5e58e7eac2d8ca2f0cc0340260db8a54a237cfae03bdbad88df0ccaeed1"
+          }
+        ],
+        "nonmatchingCandidates": []
+      },
+      {
+        "from": "data/research/philippines/national-agno-station-locality-crosswalk-20261030.json",
+        "field": "$.rawSnapshot.files[2].path",
+        "referencedPath": "ARB2-dpwh-point-query.json",
+        "availability": "available-and-hash-verified",
+        "matchedFiles": [
+          {
+            "path": "data/research/philippines/raw/agno-station-admin-crosswalk-20261030/ARB2-dpwh-point-query.json",
+            "sha256": "6a66e496b086f6d61d0daa4ffec7f184327587388404e8b669744e1cf6aaf6a8"
+          }
+        ],
+        "nonmatchingCandidates": []
+      },
+      {
+        "from": "data/research/philippines/national-agno-station-locality-crosswalk-20261030.json",
+        "field": "$.rawSnapshot.files[3].path",
+        "referencedPath": "ARB2-nominatim-reverse.json",
+        "availability": "available-and-hash-verified",
+        "matchedFiles": [
+          {
+            "path": "data/research/philippines/raw/agno-station-admin-crosswalk-20261030/ARB2-nominatim-reverse.json",
+            "sha256": "d3ed07f8b775703037d4c63d1c7bb047967954a092a4221b7cfb24fa069e3565"
+          }
+        ],
+        "nonmatchingCandidates": []
+      },
+      {
+        "from": "data/research/philippines/national-agno-station-locality-crosswalk-20261030.json",
+        "field": "$.rawSnapshot.files[4].path",
+        "referencedPath": "ARB3-dpwh-point-query.json",
+        "availability": "available-and-hash-verified",
+        "matchedFiles": [
+          {
+            "path": "data/research/philippines/raw/agno-station-admin-crosswalk-20261030/ARB3-dpwh-point-query.json",
+            "sha256": "8a37be757c09bd6d1d80acd5a86363463567863385093e26e2613e0b7db9790e"
+          }
+        ],
+        "nonmatchingCandidates": []
+      },
+      {
+        "from": "data/research/philippines/national-agno-station-locality-crosswalk-20261030.json",
+        "field": "$.rawSnapshot.files[5].path",
+        "referencedPath": "ARB3-nominatim-reverse.json",
+        "availability": "available-and-hash-verified",
+        "matchedFiles": [
+          {
+            "path": "data/research/philippines/raw/agno-station-admin-crosswalk-20261030/ARB3-nominatim-reverse.json",
+            "sha256": "f9abd4a8852bcff09d067c5efd6918aa2e97da48d57d10dbf3655662e22de03f"
+          }
+        ],
+        "nonmatchingCandidates": []
+      },
+      {
+        "from": "data/research/philippines/national-agno-station-locality-crosswalk-20261030.json",
+        "field": "$.rawSnapshot.files[6].path",
+        "referencedPath": "ARB4-dpwh-point-query.json",
+        "availability": "available-and-hash-verified",
+        "matchedFiles": [
+          {
+            "path": "data/research/philippines/raw/agno-station-admin-crosswalk-20261030/ARB4-dpwh-point-query.json",
+            "sha256": "8a37be757c09bd6d1d80acd5a86363463567863385093e26e2613e0b7db9790e"
+          }
+        ],
+        "nonmatchingCandidates": []
+      },
+      {
+        "from": "data/research/philippines/national-agno-station-locality-crosswalk-20261030.json",
+        "field": "$.rawSnapshot.files[7].path",
+        "referencedPath": "ARB4-nominatim-reverse.json",
+        "availability": "available-and-hash-verified",
+        "matchedFiles": [
+          {
+            "path": "data/research/philippines/raw/agno-station-admin-crosswalk-20261030/ARB4-nominatim-reverse.json",
+            "sha256": "566726397068de87cf87be957923890e7d7f85d4aa11cd00dd200f9d593195d3"
+          }
+        ],
+        "nonmatchingCandidates": []
+      },
+      {
+        "from": "data/research/philippines/national-agno-station-locality-crosswalk-20261030.json",
+        "field": "$.rawSnapshot.files[8].path",
+        "referencedPath": "ARB5-dpwh-point-query.json",
+        "availability": "available-and-hash-verified",
+        "matchedFiles": [
+          {
+            "path": "data/research/philippines/raw/agno-station-admin-crosswalk-20261030/ARB5-dpwh-point-query.json",
+            "sha256": "75c8809925116aaf25c6804f8d09ca92d9c86c554aa1c564909d314721fff08b"
+          }
+        ],
+        "nonmatchingCandidates": []
+      },
+      {
+        "from": "data/research/philippines/national-agno-station-locality-crosswalk-20261030.json",
+        "field": "$.rawSnapshot.files[9].path",
+        "referencedPath": "ARB5-nominatim-reverse.json",
+        "availability": "available-and-hash-verified",
+        "matchedFiles": [
+          {
+            "path": "data/research/philippines/raw/agno-station-admin-crosswalk-20261030/ARB5-nominatim-reverse.json",
+            "sha256": "23be5dc1d8bda69190f8f8e3ca6fbf3e9337bd1606c115526fa96f9ced5390b0"
+          }
+        ],
+        "nonmatchingCandidates": []
+      },
+      {
         "from": "data/research/philippines/national-ibulao-sequence-accession-search-20261030.json",
         "field": "$.ncbiSearches[0].rawResponse.path",
         "referencedPath": "raw/ibulao-ncbi-link-check-20261030/nuccore-ibulao-free-text.json",
@@ -17100,6 +17241,91 @@
         "referenceCount": 1
       },
       {
+        "path": "data/research/philippines/raw/agno-station-admin-crosswalk-20261030/ARB1-dpwh-point-query.json",
+        "sha256": "cfcfe1da302a0ec4c4668429e95167703b304ec6a709cc03a14dea22ca6be7a7",
+        "referenceCount": 1
+      },
+      {
+        "path": "data/research/philippines/raw/agno-station-admin-crosswalk-20261030/ARB1-nominatim-reverse.json",
+        "sha256": "6dd249e3e3669adc9852d8749da293a97f7489b0e2d57fed2f8842855df3e0e6",
+        "referenceCount": 1
+      },
+      {
+        "path": "data/research/philippines/raw/agno-station-admin-crosswalk-20261030/ARB2-dpwh-point-query.json",
+        "sha256": "6a66e496b086f6d61d0daa4ffec7f184327587388404e8b669744e1cf6aaf6a8",
+        "referenceCount": 1
+      },
+      {
+        "path": "data/research/philippines/raw/agno-station-admin-crosswalk-20261030/ARB2-nominatim-reverse.json",
+        "sha256": "d3ed07f8b775703037d4c63d1c7bb047967954a092a4221b7cfb24fa069e3565",
+        "referenceCount": 1
+      },
+      {
+        "path": "data/research/philippines/raw/agno-station-admin-crosswalk-20261030/ARB3-dpwh-point-query.json",
+        "sha256": "8a37be757c09bd6d1d80acd5a86363463567863385093e26e2613e0b7db9790e",
+        "referenceCount": 1
+      },
+      {
+        "path": "data/research/philippines/raw/agno-station-admin-crosswalk-20261030/ARB3-nominatim-reverse.json",
+        "sha256": "f9abd4a8852bcff09d067c5efd6918aa2e97da48d57d10dbf3655662e22de03f",
+        "referenceCount": 1
+      },
+      {
+        "path": "data/research/philippines/raw/agno-station-admin-crosswalk-20261030/ARB4-dpwh-point-query.json",
+        "sha256": "8a37be757c09bd6d1d80acd5a86363463567863385093e26e2613e0b7db9790e",
+        "referenceCount": 1
+      },
+      {
+        "path": "data/research/philippines/raw/agno-station-admin-crosswalk-20261030/ARB4-nominatim-reverse.json",
+        "sha256": "566726397068de87cf87be957923890e7d7f85d4aa11cd00dd200f9d593195d3",
+        "referenceCount": 1
+      },
+      {
+        "path": "data/research/philippines/raw/agno-station-admin-crosswalk-20261030/ARB5-dpwh-point-query.json",
+        "sha256": "75c8809925116aaf25c6804f8d09ca92d9c86c554aa1c564909d314721fff08b",
+        "referenceCount": 1
+      },
+      {
+        "path": "data/research/philippines/raw/agno-station-admin-crosswalk-20261030/ARB5-nominatim-reverse.json",
+        "sha256": "23be5dc1d8bda69190f8f8e3ca6fbf3e9337bd1606c115526fa96f9ced5390b0",
+        "referenceCount": 1
+      },
+      {
+        "path": "data/research/philippines/raw/agno-station-admin-crosswalk-20261030/ARB6-dpwh-point-query.json",
+        "sha256": "e8233973a23550614502ae70ced5ae96faeee44a09bf4c6c9a8863ec388380eb",
+        "referenceCount": 1
+      },
+      {
+        "path": "data/research/philippines/raw/agno-station-admin-crosswalk-20261030/ARB6-nominatim-reverse.json",
+        "sha256": "f4a9eed7812405862fde5be5b72313a97450c0eaceda7230d0dd68fad8bb4149",
+        "referenceCount": 1
+      },
+      {
+        "path": "data/research/philippines/raw/agno-station-admin-crosswalk-20261030/ARB7-dpwh-point-query.json",
+        "sha256": "f3984999469b3744be1b9a6379a17ec261b472fe6d5241dbc5021eb91c015d59",
+        "referenceCount": 1
+      },
+      {
+        "path": "data/research/philippines/raw/agno-station-admin-crosswalk-20261030/ARB7-nominatim-reverse.json",
+        "sha256": "ef30547839080cbc16560e91ba521ee62763f17fb6eb1e61dc0e0695f49c2eda",
+        "referenceCount": 1
+      },
+      {
+        "path": "data/research/philippines/raw/agno-station-admin-crosswalk-20261030/ARB8-dpwh-point-query.json",
+        "sha256": "5ee5c35cf854cbb963940efa499732e2dedaa89a0e1548369a1d32cdbfaf8ed1",
+        "referenceCount": 1
+      },
+      {
+        "path": "data/research/philippines/raw/agno-station-admin-crosswalk-20261030/ARB8-nominatim-reverse.json",
+        "sha256": "9593dbe656c42223604f1f0643a0038a6729309e2315606b179eeb03341ff58c",
+        "referenceCount": 1
+      },
+      {
+        "path": "data/research/philippines/raw/agno-station-admin-crosswalk-20261030/dpwh-layer-metadata.json",
+        "sha256": "76c5e5e58e7eac2d8ca2f0cc0340260db8a54a237cfae03bdbad88df0ccaeed1",
+        "referenceCount": 1
+      },
+      {
         "path": "data/research/philippines/raw/batangas-bay-colxr-match-20261029/01-sardinella-lemuru.json",
         "sha256": "ea9cdd1afadcc5d9741bd9e2c6ec9c90f27ab43ffbb616f2eef220569ae6c430",
         "referenceCount": 1
@@ -18882,6 +19108,11 @@
       {
         "path": "data/research/philippines/raw/calabarzon-laguna-gbif-triage-20261025/taxonomy-laguna-gbif-fe779d654f8d86dfa580.json",
         "sha256": "fae01abb279dc70e3a9a304edd22986c17932c820ec234641fbf00602816464c",
+        "referenceCount": 1
+      },
+      {
+        "path": "data/research/philippines/raw/calabarzon-laguna-taxonomy-followup-20261025/worms-taenioides-caeculus.json",
+        "sha256": "ee8138435a418c0d4c5ef22db1e00901835d70569af340509e953efaa58bd4a6",
         "referenceCount": 1
       },
       {
@@ -20881,22 +21112,6 @@
       }
     ],
     "missingSourceIds": [],
-    "phaseRegionConflicts": [
-      {
-        "path": "data/research/philippines/national/reviews/region02-wangag-aunugay-watershed-crosswalk-review-20261112.json",
-        "phaseId": "L1",
-        "declaredRegionIds": [
-          "0200000000"
-        ]
-      },
-      {
-        "path": "data/research/philippines/national/reviews/region02-wangag-glass-eel-thesis-review-20261112.json",
-        "phaseId": "L1",
-        "declaredRegionIds": [
-          "0200000000"
-        ]
-      }
-    ],
     "unlinkedManualAssociations": [],
     "manifestReferenceProblems": [],
     "supersessionDisposition": "Only explicit successor fields are listed. No review is inferred to be superseded from dates, filenames, or content similarity.",

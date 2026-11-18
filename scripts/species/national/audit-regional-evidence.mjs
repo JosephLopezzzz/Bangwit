@@ -61,6 +61,15 @@ function listLocalRawFiles() {
 
 function rawReferenceCandidates(reference) {
   const { from, field, referencedPath } = reference;
+  const snapshotFile = field.match(/^\$\.rawSnapshot\.files\[(\d+)\]\.path$/);
+  if (snapshotFile) {
+    const snapshot = documents.get(from)?.value?.rawSnapshot;
+    const file = snapshot?.files?.[Number(snapshotFile[1])];
+    if (typeof snapshot?.directory !== "string") return [];
+    const absolute = path.resolve(root, researchRoot, snapshot.directory, referencedPath);
+    return [{ path: repositoryPath(absolute), expectedSha256: file?.sha256 ?? null }];
+  }
+
   const sourceReceipt = field.match(/^\$\.sources\[(\d+)\]\.access\.rawReceipts\[(\d+)\]\.file$/);
   if (from === sourcesPath && sourceReceipt) {
     const source = sourceRegistry.sources[Number(sourceReceipt[1])];
@@ -107,14 +116,21 @@ function collectJsonReferences(value, fromPath, keyPath = "$", rows = []) {
     for (const [key, entry] of Object.entries(value)) {
       collectJsonReferences(entry, fromPath, `${keyPath}.${key}`, rows);
     }
-  } else if (typeof value === "string" && !/^https?:\/\//i.test(value) && /\.json(?:$|#)/i.test(value.trim())) {
+  } else if (
+    typeof value === "string"
+    && !/^https?:\/\//i.test(value)
+    && !/\s/.test(value.trim())
+    && /\.json(?:$|#)/i.test(value.trim())
+  ) {
     const raw = value.trim().replace(/#.*$/, "");
     const normalized = slash(raw);
     const localRaw = normalized.includes("/raw/")
       || normalized.startsWith("raw/")
       || keyPath.includes(".rawReceipts[")
+      || keyPath.includes(".rawSnapshot.files[")
       || keyPath.includes(".pageResponses[");
-    rows.push({ field: keyPath, raw, resolvedPath: resolveReference(raw, fromPath), localRaw });
+    const isRawFileField = keyPath.endsWith(".rawFile");
+    rows.push({ field: keyPath, raw, resolvedPath: resolveReference(raw, fromPath), localRaw: localRaw || isRawFileField });
   }
   return rows;
 }
@@ -153,7 +169,6 @@ const manifest = readJson(manifestPath);
 const sourceRegistry = readJson(sourcesPath);
 const sourceRegistryIds = new Set(sourceRegistry.sources.map((source) => source.id));
 const regionById = new Map(manifest.regions.map((region) => [region.regionId, region]));
-const regionByKey = new Map(manifest.regions.map((region) => [region.rolloutKey, region]));
 const reviewPaths = readdirSync(path.join(root, reviewsRoot))
   .filter((name) => name.endsWith(".json") && !isGeneratedAuditIndex(name))
   .map((name) => `${reviewsRoot}/${name}`)
@@ -374,10 +389,6 @@ const reviews = reviewPaths.map((relativePath) => {
     ...declaredRegionIds,
     ...(manualAssociation?.regionIds ?? []),
   ])].sort();
-  const phaseRegion = regionByKey.get(value.phaseId);
-  const phaseConflict = Boolean(
-    phaseRegion && declaredRegionIds.length && !declaredRegionIds.includes(phaseRegion.regionId),
-  );
   const sourceIds = sourceIdsIn(value);
   const missingSourceIds = sourceIds.filter((id) => !sourceRegistryIds.has(id));
   let classification;
@@ -431,13 +442,6 @@ const reviewClassifications = Object.fromEntries(
     .sort()
     .map((classification) => [classification, reviews.filter((review) => review.classification === classification).length]),
 );
-const phaseConflicts = reviews
-  .filter((review) => {
-    const value = documents.get(review.path)?.value;
-    const phaseRegion = regionByKey.get(value?.phaseId);
-    return phaseRegion && review.declaredRegionIds.length && !review.declaredRegionIds.includes(phaseRegion.regionId);
-  })
-  .map((review) => ({ path: review.path, phaseId: review.phaseId, declaredRegionIds: review.declaredRegionIds }));
 const sourceIdFindings = reviews
   .filter((review) => review.missingSourceIds.length)
   .map(({ path: reviewPath, missingSourceIds }) => ({ path: reviewPath, missingSourceIds }));
@@ -556,7 +560,7 @@ const publicProjections = [...publicProjectionComponents.entries()].map(([name, 
 const index = {
   schemaVersion: 1,
   snapshotId: "luzon-evidence-audit-20261117",
-  status: "generated-read-only-audit;review-linkage-complete;phase-key-and-publication-exceptions-open",
+  status: "generated-read-only-audit;review-linkage-complete;phase-id-namespace-separated;publication-exceptions-open",
   purpose: "Reconcile existing regional review artifacts and their explicit JSON reference chains; this index does not admit research rows or change regional completion status.",
   inputs: [...inputPaths]
     .filter((relativePath) => existsSync(path.join(root, relativePath)))
@@ -576,7 +580,6 @@ const index = {
     localRawHashMismatchReferences: [...localRawReferences.values()].filter((reference) => reference.availability === "local-hash-mismatch").length,
     localRawNonmatchingBasenameCandidates: [...localRawReferences.values()].reduce((count, reference) => count + reference.nonmatchingCandidates.length, 0),
     uniqueLocalRawInputsMatched: localRawInputs.size,
-    phaseRegionConflicts: phaseConflicts.length,
     manuallyReviewedRegionalAssociations: reviewedRegionalAssociations.size,
     nationalContextArtifacts: nationalContextDispositions.size,
     unlinkedManualAssociations: unlinkedManualAssociations.length,
@@ -588,10 +591,13 @@ const index = {
   publicProjections,
   findings: {
     unresolvedJsonReferences: [...missingReferences.values()].sort((a, b) => `${a.from}|${a.field}`.localeCompare(`${b.from}|${b.field}`)),
+    phaseIdInterpretation: {
+      comparedToManifestRolloutKey: false,
+      reason: "Review phaseId and manifest rolloutKey are separate fields with no documented shared namespace; regional linkage uses explicit region IDs and manifest evidence references.",
+    },
     localRawInputAvailability: [...localRawReferences.values()].sort((a, b) => `${a.from}|${a.field}`.localeCompare(`${b.from}|${b.field}`)),
     localRawInputs: [...localRawInputs.values()].sort((a, b) => a.path.localeCompare(b.path)),
     missingSourceIds: sourceIdFindings,
-    phaseRegionConflicts: phaseConflicts,
     unlinkedManualAssociations,
     manifestReferenceProblems: graphFindings,
     supersessionDisposition: "Only explicit successor fields are listed. No review is inferred to be superseded from dates, filenames, or content similarity.",
@@ -612,5 +618,5 @@ console.log(`Review artifacts scanned: ${index.summary.reviewArtifactsScanned}`)
 console.log(`Review classifications: ${JSON.stringify(reviewClassifications)}`);
 console.log(`Unresolved JSON references: ${missingReferences.size}; missing source IDs: ${sourceIdFindings.length}`);
 console.log(`Local-only raw references: ${index.summary.localRawReferenceCount}; available: ${index.summary.localRawReferencesAvailable}; unresolved or mismatched: ${index.summary.localRawReferencesUnresolved}; unique files: ${index.summary.uniqueLocalRawInputsMatched}`);
-console.log(`Phase/region conflicts: ${phaseConflicts.length}`);
+console.log("Phase ID / regional rollout-key comparison: skipped (no shared namespace is defined)");
 console.log(`Manifest reference problems: ${graphFindings.length}`);

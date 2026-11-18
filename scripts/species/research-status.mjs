@@ -703,7 +703,7 @@ export function buildResearchStatus({
       unresolved: luzonEvidenceIndex.summary.localRawReferencesUnresolved,
       uniqueLocalFiles: luzonEvidenceIndex.summary.uniqueLocalRawInputsMatched,
     },
-    phaseRegionKeyMismatches: luzonEvidenceIndex.summary.phaseRegionConflicts,
+    phaseIdInterpretation: luzonEvidenceIndex.findings.phaseIdInterpretation,
     publicProjections: {
       inventoried: luzonEvidenceIndex.summary.publicProjectionFiles,
       rightsExceptions: luzonEvidenceIndex.publicProjections
