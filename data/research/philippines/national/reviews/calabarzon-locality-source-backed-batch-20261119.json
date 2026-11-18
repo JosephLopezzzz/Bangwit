@@ -1,0 +1,195 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "calabarzon-locality-source-backed-batch-20261119",
+  "reviewedOn": "2026-11-19",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "status": "source-described-localities-linked-to-psgc;scope-not-frozen;geometry-unverified",
+  "question": "Can six exact-name Laguna Seven Lakes rows in the official BMB 2019 wetland inventory be linked to the current City of San Pablo PSGC code?",
+  "sourceIds": [
+    "denr-bmb-philchm-inland-wetlands-2019",
+    "psa-calabarzon-cities-list"
+  ],
+  "inputs": [
+    "data/research/philippines/calabarzon-scope.json",
+    "data/research/philippines/calabarzon-bmb-2019-wetland-inventory-crosswalk-20261024.json",
+    "data/research/philippines/administrative-registry.json",
+    "data/research/philippines/national/reviews/calabarzon-administrative-denominator-reconciliation-20261117.json",
+    "data/research/philippines/national/reviews/calabarzon-locality-source-backed-batch-20261118-03.json"
+  ],
+  "snapshotHashes": {
+    "scopeBeforeBatch": "6e2ae63ffc3bc7d6e907510a7dd5fade82732bbc54811a463f2ec4b6a18156f7",
+    "calabarzonScope": "90efac60b5d04f1b0b835a337586df4e95e4c1b88fba93c2bc0d23029c5fe159",
+    "bmb2019WetlandCrosswalk": "3c7ca91e892100e4d67b264e8fcc454445d7b9fa2ea60cb5ff585e3fea37f7e1",
+    "administrativeRegistry": "c741456fbc2cfc9d5d813484a0b661ef206154977959fc27a289ca86732142e8",
+    "administrativeDenominator": "0688d4bf58dd848571c23cbc09f2bbb71244aace0f5842bb59ee473f483f7ce0",
+    "previousLocalityBatch": "1cb29ede66cf81821476c003293a32ecad242297176250b0211f95a204340d2f"
+  },
+  "method": "Rendered and visually reviewed the original DENR-BMB inland-wetlands PDF page 3, then checked its six exact lake-name rows and printed locality. Matched only the explicit “San Pablo City” label to the PSA CALABARZON city directory code. Updated the existing source-described associations; did not use the historical inventory area values as current measurements or geometry.",
+  "sourcePage": 3,
+  "sourceRows": [
+    "Lake Palakpakin | Region IV-A | Laguna | San Pablo City | Lake | 51.98",
+    "Lake Yambo | Region IV-A | Laguna | San Pablo City | Lake | 35.12",
+    "Lake Pandin | Region IV-A | Laguna | San Pablo City | Lake | 24.83 | 2016",
+    "Lake Calibato | Region IV-A | Laguna | San Pablo City | Lake | 47.58",
+    "Lake Bunot | Region IV-A | Laguna | San Pablo City | Lake | 36.82",
+    "Sampaloc Lake | Region IV-A | Laguna | San Pablo City | Lake | 99.58"
+  ],
+  "counts": {
+    "waterbodyResearchLeadsBefore": 164,
+    "waterbodyResearchLeadsAfter": 164,
+    "leadsUpdated": 6,
+    "cityCodeAssignments": 6,
+    "additionalAssociationRows": 0,
+    "administrativeAssociationRowsBefore": 202,
+    "administrativeAssociationRowsAfter": 202,
+    "leadsWithCityOrMunicipalityCodeAfter": 71,
+    "leadsWithProvinceCodeButNoCityOrMunicipalityCodeAfter": 89,
+    "leadsWithoutAnyLocalityCodeAfter": 4,
+    "cityCodedLeadsAfter": 22,
+    "municipalityCodedLeadsAfter": 54,
+    "cityCodesPresentAfter": 14,
+    "cityCodeDenominator": 22,
+    "municipalityCodesPresentAfter": 30,
+    "municipalityCodeDenominator": 120,
+    "geometryValidated": 0,
+    "speciesAssertionsAdded": 0,
+    "publicRecordsAdmitted": 0,
+    "scopeFrozen": false
+  },
+  "assignments": [
+    {
+      "waterbodyId": "ph-wb-palakpakin-lake",
+      "sourceId": "denr-bmb-philchm-inland-wetlands-2019",
+      "sourcePath": "data/research/philippines/calabarzon-bmb-2019-wetland-inventory-crosswalk-20261024.json",
+      "sourcePage": 3,
+      "sourceRow": "Lake Palakpakin | Region IV-A | Laguna | San Pablo City",
+      "sourceLocality": "San Pablo City, Laguna",
+      "codes": [
+        {
+          "level": "city",
+          "psgcCode": "0403424000",
+          "name": "City of San Pablo",
+          "locality": "San Pablo City, Laguna",
+          "sourceId": "psa-calabarzon-cities-list"
+        }
+      ],
+      "limit": "Source-described city context only; the PSGC code is not a lake boundary, coordinate, access right, fish record, or public admission."
+    },
+    {
+      "waterbodyId": "ph-wb-yambo-lake",
+      "sourceId": "denr-bmb-philchm-inland-wetlands-2019",
+      "sourcePath": "data/research/philippines/calabarzon-bmb-2019-wetland-inventory-crosswalk-20261024.json",
+      "sourcePage": 3,
+      "sourceRow": "Lake Yambo | Region IV-A | Laguna | San Pablo City",
+      "sourceLocality": "San Pablo City, Laguna",
+      "codes": [
+        {
+          "level": "city",
+          "psgcCode": "0403424000",
+          "name": "City of San Pablo",
+          "locality": "San Pablo City, Laguna",
+          "sourceId": "psa-calabarzon-cities-list"
+        }
+      ],
+      "limit": "Source-described city context only; the PSGC code is not a lake boundary, coordinate, access right, fish record, or public admission."
+    },
+    {
+      "waterbodyId": "ph-wb-pandin-laguna-lake",
+      "sourceId": "denr-bmb-philchm-inland-wetlands-2019",
+      "sourcePath": "data/research/philippines/calabarzon-bmb-2019-wetland-inventory-crosswalk-20261024.json",
+      "sourcePage": 3,
+      "sourceRow": "Lake Pandin | Region IV-A | Laguna | San Pablo City | Lake | 24.83 | 2016",
+      "sourceLocality": "San Pablo City, Laguna",
+      "codes": [
+        {
+          "level": "city",
+          "psgcCode": "0403424000",
+          "name": "City of San Pablo",
+          "locality": "San Pablo City, Laguna",
+          "sourceId": "psa-calabarzon-cities-list"
+        }
+      ],
+      "limit": "The printed 2016 source year is retained as inventory context, not treated as a current area or measurement date. The PSGC code is not lake geometry or public admission."
+    },
+    {
+      "waterbodyId": "ph-wb-calibato-lake",
+      "sourceId": "denr-bmb-philchm-inland-wetlands-2019",
+      "sourcePath": "data/research/philippines/calabarzon-bmb-2019-wetland-inventory-crosswalk-20261024.json",
+      "sourcePage": 3,
+      "sourceRow": "Lake Calibato | Region IV-A | Laguna | San Pablo City",
+      "sourceLocality": "San Pablo City, Laguna",
+      "codes": [
+        {
+          "level": "city",
+          "psgcCode": "0403424000",
+          "name": "City of San Pablo",
+          "locality": "San Pablo City, Laguna",
+          "sourceId": "psa-calabarzon-cities-list"
+        }
+      ],
+      "limit": "Source-described city context only; the PSGC code is not a lake boundary, coordinate, access right, fish record, or public admission."
+    },
+    {
+      "waterbodyId": "ph-wb-bunot-lake",
+      "sourceId": "denr-bmb-philchm-inland-wetlands-2019",
+      "sourcePath": "data/research/philippines/calabarzon-bmb-2019-wetland-inventory-crosswalk-20261024.json",
+      "sourcePage": 3,
+      "sourceRow": "Lake Bunot | Region IV-A | Laguna | San Pablo City",
+      "sourceLocality": "San Pablo City, Laguna",
+      "codes": [
+        {
+          "level": "city",
+          "psgcCode": "0403424000",
+          "name": "City of San Pablo",
+          "locality": "San Pablo City, Laguna",
+          "sourceId": "psa-calabarzon-cities-list"
+        }
+      ],
+      "limit": "Source-described city context only; the PSGC code is not a lake boundary, coordinate, access right, fish record, or public admission."
+    },
+    {
+      "waterbodyId": "ph-wb-sampaloc-san-pablo-lake",
+      "sourceId": "denr-bmb-philchm-inland-wetlands-2019",
+      "sourcePath": "data/research/philippines/calabarzon-bmb-2019-wetland-inventory-crosswalk-20261024.json",
+      "sourcePage": 3,
+      "sourceRow": "Sampaloc Lake | Region IV-A | Laguna | San Pablo City",
+      "sourceLocality": "San Pablo City, Laguna",
+      "codes": [
+        {
+          "level": "city",
+          "psgcCode": "0403424000",
+          "name": "City of San Pablo",
+          "locality": "San Pablo City, Laguna",
+          "sourceId": "psa-calabarzon-cities-list"
+        }
+      ],
+      "limit": "Source-described city context only; the PSGC code is not a lake boundary, coordinate, access right, fish record, or public admission."
+    }
+  ],
+  "heldRelatedRow": {
+    "sourceName": "Lake Mojicap",
+    "scopeLeadId": "ph-wb-mohicap-lake",
+    "decision": "Not assigned in this batch. The existing review retains the Mojicap/Mohicap identity as unresolved, so the BMB row's San Pablo City locality is not transferred to the differently spelled scope lead."
+  },
+  "limitations": [
+    "The 2019 BMB inventory is a historical, selected wetlands compilation rather than a complete or current lake inventory. The reported areas are not adopted as current measurements or geometry.",
+    "The locality label is administrative context. A city code is not a lake boundary, shoreline, precise location, access condition, fishing ground, or legal boundary.",
+    "Lake Mojicap and Mohicap Lake remain a held spelling/identity crosswalk and are deliberately excluded from these assignments.",
+    "No fish presence or absence, species assertion, salinity, hazard, safety, access, fishing rule, or public-app record is created."
+  ],
+  "decisions": [
+    {
+      "waterbodyIds": [
+        "ph-wb-palakpakin-lake",
+        "ph-wb-yambo-lake",
+        "ph-wb-pandin-laguna-lake",
+        "ph-wb-calibato-lake",
+        "ph-wb-bunot-lake",
+        "ph-wb-sampaloc-san-pablo-lake"
+      ],
+      "decision": "Retain the six existing leads and add source-described San Pablo City context from the exact BMB 2019 table rows, matched to the PSA code."
+    }
+  ],
+  "nextAction": "Continue the locality-gap queue with exact source-named localities; keep the Mohicap spelling hold, all lake geometry, and fish-site coverage separate."
+}
