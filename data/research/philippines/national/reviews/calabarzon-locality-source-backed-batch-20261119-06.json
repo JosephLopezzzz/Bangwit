@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "calabarzon-locality-source-backed-batch-20261119-06",
+  "reviewedOn": "2026-11-19",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "status": "working-name-alias-supported-by-two-LLDA-enumerations;source-described-locality-linked-to-psgc;geometry-unverified;scope-not-frozen",
+  "question": "Do the LLDA 2015 “Mojicap Lake” entry and current LLDA “Mohicap Lake” list support matching the BMB Lake Mojicap row to the existing Mohicap Lake lead and its San Pablo City locality?",
+  "sourceIds": [
+    "denr-bmb-philchm-inland-wetlands-2019",
+    "llda-annual-report-2015",
+    "llda-seven-crater-lakes-page",
+    "psa-calabarzon-cities-list"
+  ],
+  "inputs": [
+    "data/research/philippines/calabarzon-scope.json",
+    "data/research/philippines/calabarzon-bmb-2019-wetland-inventory-crosswalk-20261024.json",
+    "data/research/philippines/sources.json",
+    "data/research/philippines/administrative-registry.json",
+    "data/research/philippines/national/reviews/calabarzon-administrative-denominator-reconciliation-20261117.json",
+    "data/research/philippines/national/reviews/calabarzon-locality-source-backed-batch-20261119-05.json"
+  ],
+  "snapshotHashes": {
+    "scopeBeforeBatch": "499f622ff38509f5b098d91b7faf69fcd62637031297deec0583476fc03adf1a",
+    "calabarzonScope": "86daa9a1b7ed357ed632dbba1f16d43cbf0fbc1a5e647746ebbc3770e1a6740a",
+    "bmb2019WetlandCrosswalk": "3c7ca91e892100e4d67b264e8fcc454445d7b9fa2ea60cb5ff585e3fea37f7e1",
+    "administrativeRegistry": "c741456fbc2cfc9d5d813484a0b661ef206154977959fc27a289ca86732142e8",
+    "administrativeDenominator": "0688d4bf58dd848571c23cbc09f2bbb71244aace0f5842bb59ee473f483f7ce0",
+    "previousLocalityBatch": "fec01b2a5b2390442712b961b0e66a24477207672b5a6bb0f5cef185179c004e",
+    "sourceRegistryBefore": "155b2498963266754c90bf379e4c7ec093644ce8349da13bb24d21f400d252ae",
+    "sourceRegistry": "cef814f98b1b5deefe8c48371f3741478ff1e4b072e2b4effe45c0c5a7774307"
+  },
+  "method": "Compared the BMB 2019 “Lake Mojicap” row (San Pablo City) with LLDA’s 2015 annual-report table headed “7 Lakes of San Pablo”, which lists “Mojicap Lake”, and LLDA’s current Seven Crater Lakes page, which lists “Mohicap Lake” in its seven-lake roster. Their matching seven-lake set supports a working spelling-alias crosswalk to the existing Mohicap lead; preserve the source spelling and do not claim an official name-change ruling. Link the printed city locality to the PSA City of San Pablo code. No reported fingerling quantity is reused as species evidence.",
+  "sourcePage": 3,
+  "sourceRows": [
+    "Lake Mojicap | Region IV-A | Laguna | San Pablo City | Lake | 18.68"
+  ],
+  "aliasAssessment": {
+    "sourceName": "Lake Mojicap",
+    "scopeName": "Mohicap Lake",
+    "evidence": [
+      {
+        "sourceId": "llda-annual-report-2015",
+        "locator": "Printed p.36, “7 LAKES OF SAN PABLO” table, “Mojicap Lake” row."
+      },
+      {
+        "sourceId": "llda-seven-crater-lakes-page",
+        "locator": "Current LLDA page lists “Mohicap Lake” among the same seven crater lakes."
+      }
+    ],
+    "decision": "working-alias-supported;retain-both-source-spellings;not-a-legal-name-determination"
+  },
+  "assignments": [
+    {
+      "waterbodyId": "ph-wb-mohicap-lake",
+      "sourceId": "denr-bmb-philchm-inland-wetlands-2019",
+      "sourceIds": [
+        "denr-bmb-philchm-inland-wetlands-2019",
+        "llda-annual-report-2015",
+        "llda-seven-crater-lakes-page",
+        "psa-calabarzon-cities-list"
+      ],
+      "sourcePath": "data/research/philippines/calabarzon-bmb-2019-wetland-inventory-crosswalk-20261024.json",
+      "sourcePage": 3,
+      "sourceRow": "Lake Mojicap | Region IV-A | Laguna | San Pablo City | Lake | 18.68",
+      "sourceLocality": "City of San Pablo, Laguna",
+      "identityDisposition": "working-alias-supported-by-independent-LLDA-seven-lakes-lists",
+      "codes": [
+        {
+          "level": "city",
+          "psgcCode": "0403424000",
+          "name": "City of San Pablo",
+          "locality": "City of San Pablo, Laguna",
+          "sourceId": "psa-calabarzon-cities-list"
+        }
+      ],
+      "limit": "A research crosswalk between the BMB spelling Lake Mojicap and LLDA’s Mohicap Lake name; not a legal name determination, boundary, geometry, access, fish-presence assertion, or public admission."
+    }
+  ],
+  "counts": {
+    "waterbodyResearchLeadsBefore": 164,
+    "waterbodyResearchLeadsAfter": 164,
+    "leadsUpdated": 1,
+    "cityCodeAssignments": 1,
+    "municipalityCodeAssignments": 0,
+    "additionalAssociationRows": 1,
+    "administrativeAssociationRowsBefore": 215,
+    "administrativeAssociationRowsAfter": 216,
+    "leadsWithCityOrMunicipalityCodeAfter": 78,
+    "leadsWithProvinceCodeButNoCityOrMunicipalityCodeAfter": 82,
+    "leadsWithoutAnyLocalityCodeAfter": 4,
+    "cityCodedLeadsAfter": 24,
+    "municipalityCodedLeadsAfter": 60,
+    "cityCodesPresentAfter": 15,
+    "cityCodeDenominator": 22,
+    "municipalityCodesPresentAfter": 39,
+    "municipalityCodeDenominator": 120,
+    "geometryValidated": 0,
+    "speciesAssertionsAdded": 0,
+    "publicRecordsAdmitted": 0,
+    "scopeFrozen": false
+  },
+  "limitations": [
+    "The identity is recorded as a working alias supported by parallel LLDA seven-lake enumerations; retain the original source spellings and do not represent it as a formal renaming.",
+    "The BMB inventory and LLDA annual report are historical; no reported area, fish stocking quantity, or lake boundary is adopted.",
+    "PSGC identifies the printed San Pablo City locality only and does not establish a lake boundary, exact coordinates, public access, or fishing access.",
+    "No species assertions, geometry, safety/rules claims, or public records were added; scope remains unfrozen."
+  ],
+  "decision": "Link the BMB Lake Mojicap row’s San Pablo City locality to the existing Mohicap Lake research lead as a working alias supported by LLDA’s historical/current seven-lake lists; retain both spellings and all boundaries/access unresolved.",
+  "nextAction": "Continue reviewing source-backed locality candidates; keep Lumot’s blank BMB locality, Taal’s non-administrative “Batangas Lakehore” wording, and Laguna de Bay’s NCR row for their separate scoped reviews."
+}

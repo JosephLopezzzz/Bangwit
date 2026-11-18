@@ -49,7 +49,9 @@
     "quezon-pdrrmo-2026-flood-advisory-14-watercourses",
     "senate-eo-78-1947-kabibihan-boundary",
     "tagkawayan-lgu-2026-sakang-river-community-action",
-    "uplb-duya-makiling-thesis-summary-2011"
+    "uplb-duya-makiling-thesis-summary-2011",
+    "llda-annual-report-2015",
+    "llda-seven-crater-lakes-page"
   ],
   "inputs": [
     "data/research/philippines/calabarzon-bmb-2019-wetland-inventory-crosswalk-20261024.json",
@@ -73,10 +75,12 @@
     "data/research/philippines/national/reviews/calabarzon-locality-source-backed-batch-20261119-02.json",
     "data/research/philippines/national/reviews/calabarzon-locality-source-backed-batch-20261119-03.json",
     "data/research/philippines/national/reviews/calabarzon-locality-source-backed-batch-20261119-04.json",
-    "data/research/philippines/national/reviews/calabarzon-locality-source-backed-batch-20261119-05.json"
+    "data/research/philippines/national/reviews/calabarzon-locality-source-backed-batch-20261119-05.json",
+    "data/research/philippines/sources.json",
+    "data/research/philippines/national/reviews/calabarzon-locality-source-backed-batch-20261119-06.json"
   ],
   "snapshotHashes": {
-    "calabarzonScope": "499f622ff38509f5b098d91b7faf69fcd62637031297deec0583476fc03adf1a",
+    "calabarzonScope": "86daa9a1b7ed357ed632dbba1f16d43cbf0fbc1a5e647746ebbc3770e1a6740a",
     "administrativeDenominatorCrosswalk": "0688d4bf58dd848571c23cbc09f2bbb71244aace0f5842bb59ee473f483f7ce0",
     "mambaPalicpicanSourceReview": "651fec6c2b0b1aa8f9caa51bad93bdacf4b87ca2cc34d2d51562daf7c939e1c6",
     "bucalNameVariantReview": "39ea48ee5dca12f30e13a87cba2489cabbf119b26d5ee0c5b7468e729aab2567",
@@ -97,7 +101,9 @@
     "sourceBackedLocalityBatch07": "644cf5cb0f3ecdd764f6d83acd6d6854f7ef61f1c185afcbc0a036a56207fd47",
     "sourceBackedLocalityBatch08": "422b04feac090e46e52b911a8bfcaaf812ced7d951e920e44f3705e5916064b5",
     "sourceBackedLocalityBatch09": "21385022eb2fca8e9da6482bb88349e55c96353bfebbac95ca8a85c44d5fa291",
-    "sourceBackedLocalityBatch10": "fec01b2a5b2390442712b961b0e66a24477207672b5a6bb0f5cef185179c004e"
+    "sourceBackedLocalityBatch10": "fec01b2a5b2390442712b961b0e66a24477207672b5a6bb0f5cef185179c004e",
+    "sourceRegistry": "cef814f98b1b5deefe8c48371f3741478ff1e4b072e2b4effe45c0c5a7774307",
+    "sourceBackedLocalityBatch11": "55be0fb68fa9a08c9923f98c62324b9cc481226e8d50529b7d95840a391f3491"
   },
   "findings": {
     "scopeSnapshot": {
@@ -113,13 +119,13 @@
       "componentCityCount": 21,
       "sourceReviewId": "calabarzon-administrative-denominator-reconciliation-20261117"
     },
-    "administrativeAssociationRows": 215,
+    "administrativeAssociationRows": 216,
     "localityLinkage": {
       "leadsWithProvinceCode": 160,
-      "leadsWithProvinceCodeButNoCityOrMunicipalityCode": 83,
-      "leadsWithCityCode": 23,
+      "leadsWithProvinceCodeButNoCityOrMunicipalityCode": 82,
+      "leadsWithCityCode": 24,
       "leadsWithMunicipalityCode": 60,
-      "leadsWithCityOrMunicipalityCode": 77,
+      "leadsWithCityOrMunicipalityCode": 78,
       "leadsWithoutProvinceCityOrMunicipalityCode": 4,
       "municipalityCodeCoverage": "39 of 120 CALABARZON municipality codes appear in current waterbody administrativeAssociations",
       "cityCodesPresent": 15,
@@ -271,7 +277,7 @@
         "note": "One canonical shared-bay identity; province associations include Batangas, Quezon, and Marinduque; do not infer an official boundary."
       }
     ],
-    "decision": "The historical locality batches are preserved. The 19 November work links explicit BMB localities for Tanza and Wawa Dam to current PSA municipal codes, while preserving the Tres Cruzes Water Storage class/identity hold and Wawa Dam boundary/access limitations. The selected 164-lead scope now has 77 city/municipality-linked leads, 83 province-only leads, and 4 without locality codes; 15 of 22 city codes and 39 of 120 municipality codes appear. Laguna de Bay remains one shared lead, with its BMB NCR row held for a separate L2 crosswalk. These localities are not boundaries; scopeFrozen remains false.",
+    "decision": "The historical locality batches are preserved. The BMB Lake Mojicap spelling now has independent LLDA support as a working alias for the existing Mohicap Lake lead: the 2015 LLDA report lists Mojicap among seven San Pablo lakes, and the current LLDA page lists Mohicap among its seven. The printed San Pablo City locality is linked to PSA code 0403424000; this is not a legal name determination. The selected 164-lead scope now has 78 city/municipality-linked leads, 82 province-only leads, and 4 without locality codes; 15/22 city and 39/120 municipality codes appear. No geometry, fish assertion, access claim, or public record was added; scopeFrozen remains false.",
     "requiredFollowUps": [
       "Seek route-scale protected-area or hydrography sources for Mamba/Cacabay and Palicpican, and locality or delineation evidence for the Bucal (Lalangnan) and Labayat principal basins; retain their current unassigned locality status if no source resolves the specific feature.",
       "Continue source-backed locality review across the 85 province-only leads; link only explicit locality contexts and preserve source-scale distinctions.",
@@ -340,7 +346,7 @@
         }
       }
     ],
-    "reconciliationMethod": "Counts were recomputed from current CALABARZON scope waterbody administrativeAssociations using distinct waterbody IDs for lead counts and distinct PSGC codes for coverage counts. The latest source-backed locality batch links the BMB Wawa Dam locality to Rodriguez; no water geometry or access claim is inferred.",
+    "reconciliationMethod": "Counts were recomputed from current CALABARZON scope waterbody administrativeAssociations using distinct waterbody IDs for lead counts and distinct PSGC codes for coverage counts. The latest batch records a working Mojicap/Mohicap alias supported by LLDA name lists and links the BMB San Pablo City locality to the current PSA code.",
     "sourceBackedLocalityBatch03": {
       "reviewId": "calabarzon-locality-source-backed-batch-20261118",
       "path": "data/research/philippines/national/reviews/calabarzon-locality-source-backed-batch-20261118.json",
@@ -422,6 +428,16 @@
       "additionalAssociationRows": 1,
       "scopeBeforeBatchSha256": "b33ec1a4f34b251a0dc77b906d8bf74d53cb341349d87f6b530568e834927d93",
       "scopeAfterBatchSha256": "499f622ff38509f5b098d91b7faf69fcd62637031297deec0583476fc03adf1a"
+    },
+    "sourceBackedLocalityBatch11": {
+      "reviewId": "calabarzon-locality-source-backed-batch-20261119-06",
+      "path": "data/research/philippines/national/reviews/calabarzon-locality-source-backed-batch-20261119-06.json",
+      "sha256": "55be0fb68fa9a08c9923f98c62324b9cc481226e8d50529b7d95840a391f3491",
+      "waterbodyLeadsUpdated": 1,
+      "cityCodeAssignments": 1,
+      "additionalAssociationRows": 1,
+      "scopeBeforeBatchSha256": "499f622ff38509f5b098d91b7faf69fcd62637031297deec0583476fc03adf1a",
+      "scopeAfterBatchSha256": "86daa9a1b7ed357ed632dbba1f16d43cbf0fbc1a5e647746ebbc3770e1a6740a"
     }
   },
   "nonClaims": [
