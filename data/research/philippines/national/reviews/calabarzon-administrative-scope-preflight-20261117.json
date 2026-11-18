@@ -1,0 +1,57 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "calabarzon-administrative-scope-preflight-20261117",
+  "reviewedOn": "2026-11-17",
+  "phaseId": "L1",
+  "regionIds": ["0400000000"],
+  "status": "administrative-denominator-incomplete;scope-not-frozen",
+  "question": "Does the pinned administrative registry account for every CALABARZON province, city, and municipality needed to freeze the first regional scope?",
+  "sourceIds": [
+    "psa-psgc-2026-q3",
+    "psa-psgc-regions-2026-current-list",
+    "psa-psgc-region-iv-a-2026-current-list"
+  ],
+  "inputs": [
+    "data/research/philippines/administrative-registry.json",
+    "data/research/philippines/calabarzon-scope.json"
+  ],
+  "snapshotHashes": {
+    "administrativeRegistry": "c741456fbc2cfc9d5d813484a0b661ef206154977959fc27a289ca86732142e8",
+    "calabarzonScope": "9bb4cb392fc8cdc0e622eee489a568c48e54823c0a44813eb24cefea6ed58580"
+  },
+  "findings": {
+    "administrativeRegistrySnapshotDate": "2026-09-30",
+    "administrativeRegistryCapturedOn": "2026-10-22",
+    "workbookVerification": "pending",
+    "sourceWorkbookDownloadStatus": 403,
+    "unitsListedForRegion": {
+      "total": 6,
+      "provinces": [
+        { "name": "Batangas", "code": "0401000000" },
+        { "name": "Cavite", "code": "0402100000" },
+        { "name": "Laguna", "code": "0403400000" },
+        { "name": "Quezon", "code": "0405600000" },
+        { "name": "Rizal", "code": "0405800000" }
+      ],
+      "separatelyRepresentedCities": [
+        { "name": "City of Lucena", "code": "0431200000", "classificationNote": "PSA 3Q 2026 treats Lucena as an HUC for statistical purposes; the local registry does not claim a legal ruling on HUC status." }
+      ],
+      "municipalitiesEnumerated": 0
+    },
+    "existingWaterbodyLeadCount": 158,
+    "waterbodyLeadSnapshotDate": "2026-11-04",
+    "legacyScopeStatus": "in-progress-incomplete-baseline"
+  },
+  "decision": "Do not freeze the CALABARZON denominator from this registry. It lists the five expected provinces and separately represents Lucena City, but contains no municipality entries for the region. The PSGC workbook remains unverified, and the current 158 waterbody leads are explicitly an incomplete research scope rather than a complete inventory.",
+  "requiredFollowUps": [
+    "Verify a pinned municipality and city denominator from eligible PSA PSGC pages or another reusable, versioned administrative source; record the retrieval date and exact input hashes.",
+    "Reconcile all five provinces and every municipality/city, preserving historical names and source-year assignments; distinguish Lucena's administrative/statistical classification from legal status.",
+    "Reconcile the 158 waterbody leads against province and municipality coverage, islands, shared waters, and freshwater, brackish, and marine lanes before freezing the scope.",
+    "Keep scopeFrozen false until administrative and waterbody denominators are reviewed and reproducible."
+  ],
+  "nonClaims": [
+    "Zero municipality entries in this local registry is not evidence that CALABARZON has no municipalities.",
+    "The 158 waterbody leads are not a complete inventory or species denominator.",
+    "This preflight adds no taxa, public occurrence assertions, legal fishing guidance, or geometry."
+  ]
+}

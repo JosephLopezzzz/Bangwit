@@ -1,0 +1,96 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "source-identity-crosswalk-20261117",
+  "reviewedOn": "2026-11-17",
+  "phaseId": "NATIONAL",
+  "status": "metadata-identity-crosswalk;aliases-retained;no-evidence-row-merge;not-publication-approval",
+  "question": "Which repeated source-registry IDs point to the same underlying cited document, publication, or dataset page, and how should their distinct research uses be counted?",
+  "method": {
+    "input": "data/research/philippines/sources.json",
+    "matchRules": [
+      "Exact normalized DOI matches identify the same scholarly work.",
+      "Exact title plus exact URL matches identify the same cited source artifact for catalog purposes."
+    ],
+    "excludedSignals": [
+      "A repeated URL alone, especially a general API endpoint, does not identify the same query or evidence unit.",
+      "A repeated title alone does not identify the same source; titles can be shared by different articles, datasets, reviews, or follow-up notes."
+    ]
+  },
+  "limitations": [
+    "This crosswalk reconciles registry identity only; it does not combine study results, taxa, localities, queries, source access outcomes, or rights decisions.",
+    "Distinct checked dates, dataset versions, local research roles, and regional review findings remain separate and must be preserved.",
+    "Identity alone does not grant permission to reproduce or publish source content."
+  ],
+  "groups": [
+    {
+      "groupId": "doi-10.1002-edn3.70273",
+      "sourceIds": ["nob-et-al-2026-mangrove-edna", "nob-et-al-2026-iwahig-river-edna-review"],
+      "identityBasis": "same-normalized-doi",
+      "basisValue": "10.1002/edn3.70273",
+      "disposition": "same-underlying-publication;retain-both-registry-ids-as-use-and-site-specific-aliases"
+    },
+    {
+      "groupId": "title-url-gbif-copepods-southern-luzon",
+      "sourceIds": ["gbif-caliraya-copepod-occurrences", "gbif-ust-southern-luzon-calanoid-copepod-dataset"],
+      "identityBasis": "same-exact-title-and-url",
+      "basisValue": "https://www.gbif.org/dataset/3833ef8b-ac61-43a8-a513-0dfe1d4a69e8",
+      "disposition": "same-underlying-dataset-page;retain-both-registry-ids-for-distinct-locality-search-results"
+    },
+    {
+      "groupId": "title-url-north-luzon-teleost-barcode",
+      "sourceIds": ["north-luzon-dna-barcoding-teleost-2025", "dimaquibo-2025-north-luzon-teleost-dna-barcode-dataset", "dimaquibo-et-al-2025-north-luzon-teleost-barcode-dataset"],
+      "identityBasis": "same-exact-title-and-url",
+      "basisValue": "https://www.nature.com/articles/s41597-025-05758-3",
+      "disposition": "same-underlying-article;retain-both-regional-crosswalks-and-different-review-findings"
+    },
+    {
+      "groupId": "title-url-pterygoplichthys-luzon-preprint",
+      "sourceIds": ["rg-chavez-carandang-pterygoplichthys-luzon-preprint-2017", "chavez-carandang-2017-pterygoplichthys-luzon-preprint"],
+      "identityBasis": "same-exact-title-and-url",
+      "basisValue": "https://www.researchgate.net/publication/331903996_Invasion_Status_of_Pterygoplichthys_spp_Pisces_Loricariidae_in_the_Luzon_Island_Philippines_and_its_Policy_Implications",
+      "disposition": "same-underlying-author-uploaded-preprint;retain-separate-locality-and-access-caveats"
+    },
+    {
+      "groupId": "title-url-philippines-catchment-geodatabase",
+      "sourceIds": ["boothroyd-2023-philippines-river-catchment-geodata", "glasgow-philippines-catchments-stream-network-2023"],
+      "identityBasis": "same-exact-title-and-url",
+      "basisValue": "https://researchdata.gla.ac.uk/1396/",
+      "disposition": "same-underlying-geodatabase-record;retain-separate-geometry-and-crosswalk-review-scopes"
+    },
+    {
+      "groupId": "title-url-northern-palawan-field-report",
+      "sourceIds": ["nagao-maeda-northern-palawan-freshwater-estuary-survey-2026", "nagao-2026-northern-palawan-field-survey-report"],
+      "identityBasis": "same-exact-title-and-url",
+      "basisValue": "https://www.nagaofoundation.or.jp/comprehensive/documents/260507maeda.pdf",
+      "disposition": "same-underlying-field-report;retain-distinct-review-notes-and-limits"
+    },
+    {
+      "groupId": "title-url-nfrdi-five-lake-risk-assessment",
+      "sourceIds": ["nfrdi-2026-five-lake-introduced-fish-risk-assessment", "nfrdi-magistrado-five-lakes-2026-risk-assessment"],
+      "identityBasis": "same-exact-title-and-url",
+      "basisValue": "https://repository.nfrdi.da.gov.ph/items/c96db1a2-576f-43ea-b3c1-299f288f8a9a",
+      "disposition": "same-underlying-article;retain-separate-lake-specific-review-findings"
+    },
+    {
+      "groupId": "title-url-mainland-luzon-wetlands-atlas",
+      "sourceIds": ["denr-bmb-atlas-luzon-2014", "denr-bmb-luzon-inland-wetlands-atlas-2014"],
+      "identityBasis": "same-exact-title-and-url",
+      "basisValue": "https://www.ramsar.org/sites/default/files/documents/library/atlas_inland_wetland_mainland_luzon_philippines_2014_e.pdf",
+      "disposition": "same-underlying-atlas;retain-separate-reviewed-table-and-locality-notes"
+    },
+    {
+      "groupId": "title-url-cadp-manual-2022",
+      "sourceIds": ["da-2022-cadp-labac-alemang-caisobo-watershed-crosswalk", "da-2022-cadp-wangaga-aunugay-watershed-crosswalk"],
+      "identityBasis": "same-exact-title-and-url",
+      "basisValue": "https://ncisrd.da.gov.ph/wp-content/uploads/2023/01/CADP-Manops-fin-for-online.pdf",
+      "disposition": "same-underlying-manual;retain-distinct-watershed-crosswalks-and-page-level-evidence"
+    },
+    {
+      "groupId": "title-url-guerrero-nast-freshwater-review",
+      "sourceIds": ["nast-2022-guerrero-balite-page-crosscheck", "guerrero-2022-nast-commercially-caught-freshwater-fishes-review"],
+      "identityBasis": "same-exact-title-and-url",
+      "basisValue": "https://transactions.nast.ph/wp-content/uploads/2023/01/2022_RD-Guerrero.pdf",
+      "disposition": "same-underlying-review-article;retain-separate-page-crosscheck-and-regional-context"
+    }
+  ]
+}

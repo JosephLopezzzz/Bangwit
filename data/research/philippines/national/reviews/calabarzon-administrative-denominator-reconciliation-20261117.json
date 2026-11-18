@@ -1,0 +1,715 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "calabarzon-administrative-denominator-reconciliation-20261117",
+  "reviewedOn": "2026-11-17",
+  "phaseId": "L1",
+  "regionIds": [
+    "0400000000"
+  ],
+  "status": "working-administrative-denominator-enumerated;waterbody-scope-open",
+  "question": "Can the current CALABARZON province, municipality, and city denominator be assembled from public PSA PSGC pages and reconciled against published revisions without relying on the inaccessible workbook?",
+  "sourceIds": [
+    "psa-calabarzon-municipalities-list",
+    "psa-calabarzon-cities-list",
+    "psa-calabarzon-directory",
+    "psa-psgc-2026-q3",
+    "psa-psgc-region-iv-a-2026-current-list"
+  ],
+  "inputs": [
+    "data/research/philippines/administrative-registry.json",
+    "data/research/philippines/calabarzon-scope.json"
+  ],
+  "snapshotHashes": {
+    "administrativeRegistry": "c741456fbc2cfc9d5d813484a0b661ef206154977959fc27a289ca86732142e8",
+    "calabarzonScope": "398d778b17bcc2aac119a6c8b6c87a73d840f7edabd3c75f18af4a06c13d04d2"
+  },
+  "findings": {
+    "intendedPsgcSnapshotDate": "2026-09-30",
+    "checkedOn": "2026-11-17",
+    "latestRegionSummary": {
+      "provinceCount": 5,
+      "cityCount": 22,
+      "municipalityCount": 120,
+      "barangayCount": 3992,
+      "url": "https://psa.gov.ph/classification/psgc/provinces/0400000000"
+    },
+    "directoryTableAsOf": "2025-07-31",
+    "listingMethod": "Transcribed the full PSA Region IV-A municipality and city directory tables (names and 10-digit PSGC codes only), then compared their region totals with the current 3Q 2026 regional summary and reviewed Q4 2025 through Q3 2026 change releases for intervening municipality/city edits affecting CALABARZON.",
+    "quarterlyRevisionCheck": [
+      {
+        "period": "2025-Q4",
+        "url": "https://psa.gov.ph/content/fourth-quarter-2025-psgc-updates-correction-names-three-barangays",
+        "result": "Only three barangay-name corrections; no municipality/city change reported."
+      },
+      {
+        "period": "2026-Q1",
+        "url": "https://psa.gov.ph/content/first-quarter-2026-psgc-updates-merging-two-barangays-and-correction-names-one-municipality",
+        "result": "Municipality name correction was Sanchez Mira in Cagayan; Batangas change was a barangay merger. No CALABARZON municipality/city name or count change reported."
+      },
+      {
+        "period": "2026-Q2",
+        "url": "https://psa.gov.ph/content/second-quarter-2026-psgc-updates-renaming-one-municipality-and-one-barangay-and-correction",
+        "result": "Renaming occurred in Davao del Norte and municipality-name correction in Misamis Occidental; no CALABARZON municipality/city name or count change reported."
+      },
+      {
+        "period": "2026-Q3",
+        "url": "https://psa.gov.ph/classification/psgc",
+        "result": "Only a barangay-name correction in Bukidnon; no municipality/city name or count change reported."
+      }
+    ],
+    "workbookAccess": {
+      "url": "https://psa.gov.ph/system/files/scd/PSGC-3Q-2026-Publication-Datafile.xlsx",
+      "status": "403-cloudflare-challenge",
+      "downloaded": false,
+      "limitation": "No 3Q workbook bytes were available for independent row-level verification; this is not represented as a workbook import."
+    },
+    "currentAdministrativeRegistryGap": {
+      "registryPath": "data/research/philippines/administrative-registry.json",
+      "calabarzonMunicipalityEntries": 0,
+      "meaning": "The national pinned coverage-unit registry omits ordinary municipality and component-city rows by design; zero local rows did not mean there are no such units."
+    },
+    "municipalityCount": 120,
+    "componentCityCount": 21,
+    "separateStatisticalHucCount": 1,
+    "cityCount": 22,
+    "localityRecordCount": 142,
+    "provinces": [
+      {
+        "psgcCode": "0401000000",
+        "name": "Batangas",
+        "municipalityCount": 29,
+        "componentCityCount": 5,
+        "municipalities": [
+          {
+            "name": "Agoncillo",
+            "psgcCode": "0401001000"
+          },
+          {
+            "name": "Alitagtag",
+            "psgcCode": "0401002000"
+          },
+          {
+            "name": "Balayan",
+            "psgcCode": "0401003000"
+          },
+          {
+            "name": "Balete",
+            "psgcCode": "0401004000"
+          },
+          {
+            "name": "Bauan",
+            "psgcCode": "0401006000"
+          },
+          {
+            "name": "Calatagan",
+            "psgcCode": "0401008000"
+          },
+          {
+            "name": "Cuenca",
+            "psgcCode": "0401009000"
+          },
+          {
+            "name": "Ibaan",
+            "psgcCode": "0401010000"
+          },
+          {
+            "name": "Laurel",
+            "psgcCode": "0401011000"
+          },
+          {
+            "name": "Lemery",
+            "psgcCode": "0401012000"
+          },
+          {
+            "name": "Lian",
+            "psgcCode": "0401013000"
+          },
+          {
+            "name": "Lobo",
+            "psgcCode": "0401015000"
+          },
+          {
+            "name": "Mabini",
+            "psgcCode": "0401016000"
+          },
+          {
+            "name": "Malvar",
+            "psgcCode": "0401017000"
+          },
+          {
+            "name": "Mataasnakahoy",
+            "psgcCode": "0401018000"
+          },
+          {
+            "name": "Nasugbu",
+            "psgcCode": "0401019000"
+          },
+          {
+            "name": "Padre Garcia",
+            "psgcCode": "0401020000"
+          },
+          {
+            "name": "Rosario",
+            "psgcCode": "0401021000"
+          },
+          {
+            "name": "San Jose",
+            "psgcCode": "0401022000"
+          },
+          {
+            "name": "San Juan",
+            "psgcCode": "0401023000"
+          },
+          {
+            "name": "San Luis",
+            "psgcCode": "0401024000"
+          },
+          {
+            "name": "San Nicolas",
+            "psgcCode": "0401025000"
+          },
+          {
+            "name": "San Pascual",
+            "psgcCode": "0401026000"
+          },
+          {
+            "name": "Santa Teresita",
+            "psgcCode": "0401027000"
+          },
+          {
+            "name": "Taal",
+            "psgcCode": "0401029000"
+          },
+          {
+            "name": "Talisay",
+            "psgcCode": "0401030000"
+          },
+          {
+            "name": "Taysan",
+            "psgcCode": "0401032000"
+          },
+          {
+            "name": "Tingloy",
+            "psgcCode": "0401033000"
+          },
+          {
+            "name": "Tuy",
+            "psgcCode": "0401034000"
+          }
+        ],
+        "componentCities": [
+          {
+            "name": "Batangas City",
+            "psgcCode": "0401005000"
+          },
+          {
+            "name": "City of Calaca",
+            "psgcCode": "0401007000"
+          },
+          {
+            "name": "City of Lipa",
+            "psgcCode": "0401014000"
+          },
+          {
+            "name": "City of Sto. Tomas",
+            "psgcCode": "0401028000"
+          },
+          {
+            "name": "City of Tanauan",
+            "psgcCode": "0401031000"
+          }
+        ]
+      },
+      {
+        "psgcCode": "0402100000",
+        "name": "Cavite",
+        "municipalityCount": 15,
+        "componentCityCount": 8,
+        "municipalities": [
+          {
+            "name": "Alfonso",
+            "psgcCode": "0402101000"
+          },
+          {
+            "name": "Amadeo",
+            "psgcCode": "0402102000"
+          },
+          {
+            "name": "General Emilio Aguinaldo",
+            "psgcCode": "0402107000"
+          },
+          {
+            "name": "Indang",
+            "psgcCode": "0402110000"
+          },
+          {
+            "name": "Kawit",
+            "psgcCode": "0402111000"
+          },
+          {
+            "name": "Magallanes",
+            "psgcCode": "0402112000"
+          },
+          {
+            "name": "Maragondon",
+            "psgcCode": "0402113000"
+          },
+          {
+            "name": "Mendez",
+            "psgcCode": "0402114000"
+          },
+          {
+            "name": "Naic",
+            "psgcCode": "0402115000"
+          },
+          {
+            "name": "Noveleta",
+            "psgcCode": "0402116000"
+          },
+          {
+            "name": "Rosario",
+            "psgcCode": "0402117000"
+          },
+          {
+            "name": "Silang",
+            "psgcCode": "0402118000"
+          },
+          {
+            "name": "Tanza",
+            "psgcCode": "0402120000"
+          },
+          {
+            "name": "Ternate",
+            "psgcCode": "0402121000"
+          },
+          {
+            "name": "Gen. Mariano Alvarez",
+            "psgcCode": "0402123000"
+          }
+        ],
+        "componentCities": [
+          {
+            "name": "City of Bacoor",
+            "psgcCode": "0402103000"
+          },
+          {
+            "name": "City of Carmona",
+            "psgcCode": "0402104000"
+          },
+          {
+            "name": "City of Cavite",
+            "psgcCode": "0402105000"
+          },
+          {
+            "name": "City of Dasmariñas",
+            "psgcCode": "0402106000"
+          },
+          {
+            "name": "City of General Trias",
+            "psgcCode": "0402108000"
+          },
+          {
+            "name": "City of Imus",
+            "psgcCode": "0402109000"
+          },
+          {
+            "name": "City of Tagaytay",
+            "psgcCode": "0402119000"
+          },
+          {
+            "name": "City of Trece Martires",
+            "psgcCode": "0402122000"
+          }
+        ]
+      },
+      {
+        "psgcCode": "0403400000",
+        "name": "Laguna",
+        "municipalityCount": 24,
+        "componentCityCount": 6,
+        "municipalities": [
+          {
+            "name": "Alaminos",
+            "psgcCode": "0403401000"
+          },
+          {
+            "name": "Bay",
+            "psgcCode": "0403402000"
+          },
+          {
+            "name": "Calauan",
+            "psgcCode": "0403406000"
+          },
+          {
+            "name": "Cavinti",
+            "psgcCode": "0403407000"
+          },
+          {
+            "name": "Famy",
+            "psgcCode": "0403408000"
+          },
+          {
+            "name": "Kalayaan",
+            "psgcCode": "0403409000"
+          },
+          {
+            "name": "Liliw",
+            "psgcCode": "0403410000"
+          },
+          {
+            "name": "Los Baños",
+            "psgcCode": "0403411000"
+          },
+          {
+            "name": "Luisiana",
+            "psgcCode": "0403412000"
+          },
+          {
+            "name": "Lumban",
+            "psgcCode": "0403413000"
+          },
+          {
+            "name": "Mabitac",
+            "psgcCode": "0403414000"
+          },
+          {
+            "name": "Magdalena",
+            "psgcCode": "0403415000"
+          },
+          {
+            "name": "Majayjay",
+            "psgcCode": "0403416000"
+          },
+          {
+            "name": "Nagcarlan",
+            "psgcCode": "0403417000"
+          },
+          {
+            "name": "Paete",
+            "psgcCode": "0403418000"
+          },
+          {
+            "name": "Pagsanjan",
+            "psgcCode": "0403419000"
+          },
+          {
+            "name": "Pakil",
+            "psgcCode": "0403420000"
+          },
+          {
+            "name": "Pangil",
+            "psgcCode": "0403421000"
+          },
+          {
+            "name": "Pila",
+            "psgcCode": "0403422000"
+          },
+          {
+            "name": "Rizal",
+            "psgcCode": "0403423000"
+          },
+          {
+            "name": "Santa Cruz",
+            "psgcCode": "0403426000"
+          },
+          {
+            "name": "Santa Maria",
+            "psgcCode": "0403427000"
+          },
+          {
+            "name": "Siniloan",
+            "psgcCode": "0403429000"
+          },
+          {
+            "name": "Victoria",
+            "psgcCode": "0403430000"
+          }
+        ],
+        "componentCities": [
+          {
+            "name": "City of Biñan",
+            "psgcCode": "0403403000"
+          },
+          {
+            "name": "City of Cabuyao",
+            "psgcCode": "0403404000"
+          },
+          {
+            "name": "City of Calamba",
+            "psgcCode": "0403405000"
+          },
+          {
+            "name": "City of San Pablo",
+            "psgcCode": "0403424000"
+          },
+          {
+            "name": "City of San Pedro",
+            "psgcCode": "0403425000"
+          },
+          {
+            "name": "City of Santa Rosa",
+            "psgcCode": "0403428000"
+          }
+        ]
+      },
+      {
+        "psgcCode": "0405600000",
+        "name": "Quezon",
+        "municipalityCount": 39,
+        "componentCityCount": 1,
+        "municipalities": [
+          {
+            "name": "Agdangan",
+            "psgcCode": "0405601000"
+          },
+          {
+            "name": "Alabat",
+            "psgcCode": "0405602000"
+          },
+          {
+            "name": "Atimonan",
+            "psgcCode": "0405603000"
+          },
+          {
+            "name": "Buenavista",
+            "psgcCode": "0405605000"
+          },
+          {
+            "name": "Burdeos",
+            "psgcCode": "0405606000"
+          },
+          {
+            "name": "Calauag",
+            "psgcCode": "0405607000"
+          },
+          {
+            "name": "Candelaria",
+            "psgcCode": "0405608000"
+          },
+          {
+            "name": "Catanauan",
+            "psgcCode": "0405610000"
+          },
+          {
+            "name": "Dolores",
+            "psgcCode": "0405615000"
+          },
+          {
+            "name": "General Luna",
+            "psgcCode": "0405616000"
+          },
+          {
+            "name": "General Nakar",
+            "psgcCode": "0405617000"
+          },
+          {
+            "name": "Guinayangan",
+            "psgcCode": "0405618000"
+          },
+          {
+            "name": "Gumaca",
+            "psgcCode": "0405619000"
+          },
+          {
+            "name": "Infanta",
+            "psgcCode": "0405620000"
+          },
+          {
+            "name": "Jomalig",
+            "psgcCode": "0405621000"
+          },
+          {
+            "name": "Lopez",
+            "psgcCode": "0405622000"
+          },
+          {
+            "name": "Lucban",
+            "psgcCode": "0405623000"
+          },
+          {
+            "name": "Macalelon",
+            "psgcCode": "0405625000"
+          },
+          {
+            "name": "Mauban",
+            "psgcCode": "0405627000"
+          },
+          {
+            "name": "Mulanay",
+            "psgcCode": "0405628000"
+          },
+          {
+            "name": "Padre Burgos",
+            "psgcCode": "0405629000"
+          },
+          {
+            "name": "Pagbilao",
+            "psgcCode": "0405630000"
+          },
+          {
+            "name": "Panukulan",
+            "psgcCode": "0405631000"
+          },
+          {
+            "name": "Patnanungan",
+            "psgcCode": "0405632000"
+          },
+          {
+            "name": "Perez",
+            "psgcCode": "0405633000"
+          },
+          {
+            "name": "Pitogo",
+            "psgcCode": "0405634000"
+          },
+          {
+            "name": "Plaridel",
+            "psgcCode": "0405635000"
+          },
+          {
+            "name": "Polillo",
+            "psgcCode": "0405636000"
+          },
+          {
+            "name": "Quezon",
+            "psgcCode": "0405637000"
+          },
+          {
+            "name": "Real",
+            "psgcCode": "0405638000"
+          },
+          {
+            "name": "Sampaloc",
+            "psgcCode": "0405639000"
+          },
+          {
+            "name": "San Andres",
+            "psgcCode": "0405640000"
+          },
+          {
+            "name": "San Antonio",
+            "psgcCode": "0405641000"
+          },
+          {
+            "name": "San Francisco",
+            "psgcCode": "0405642000"
+          },
+          {
+            "name": "San Narciso",
+            "psgcCode": "0405644000"
+          },
+          {
+            "name": "Sariaya",
+            "psgcCode": "0405645000"
+          },
+          {
+            "name": "Tagkawayan",
+            "psgcCode": "0405646000"
+          },
+          {
+            "name": "Tiaong",
+            "psgcCode": "0405648000"
+          },
+          {
+            "name": "Unisan",
+            "psgcCode": "0405649000"
+          }
+        ],
+        "componentCities": [
+          {
+            "name": "City of Tayabas",
+            "psgcCode": "0405647000"
+          }
+        ]
+      },
+      {
+        "psgcCode": "0405800000",
+        "name": "Rizal",
+        "municipalityCount": 13,
+        "componentCityCount": 1,
+        "municipalities": [
+          {
+            "name": "Angono",
+            "psgcCode": "0405801000"
+          },
+          {
+            "name": "Baras",
+            "psgcCode": "0405803000"
+          },
+          {
+            "name": "Binangonan",
+            "psgcCode": "0405804000"
+          },
+          {
+            "name": "Cainta",
+            "psgcCode": "0405805000"
+          },
+          {
+            "name": "Cardona",
+            "psgcCode": "0405806000"
+          },
+          {
+            "name": "Jala-Jala",
+            "psgcCode": "0405807000"
+          },
+          {
+            "name": "Rodriguez",
+            "psgcCode": "0405808000"
+          },
+          {
+            "name": "Morong",
+            "psgcCode": "0405809000"
+          },
+          {
+            "name": "Pililla",
+            "psgcCode": "0405810000"
+          },
+          {
+            "name": "San Mateo",
+            "psgcCode": "0405811000"
+          },
+          {
+            "name": "Tanay",
+            "psgcCode": "0405812000"
+          },
+          {
+            "name": "Taytay",
+            "psgcCode": "0405813000"
+          },
+          {
+            "name": "Teresa",
+            "psgcCode": "0405814000"
+          }
+        ],
+        "componentCities": [
+          {
+            "name": "City of Antipolo",
+            "psgcCode": "0405802000"
+          }
+        ]
+      }
+    ],
+    "separatelyAssignedStatisticalCities": [
+      {
+        "name": "City of Lucena",
+        "psgcCode": "0431200000",
+        "classification": "HUC for statistical purposes per PSA explanatory note",
+        "coverageRegionCode": "0400000000",
+        "provinceCode": null,
+        "notes": "Kept as a separate regional statistical coverage unit. The PSA says this explanatory note is not a legal ruling on HUC status; no province parent or boundary is inferred here."
+      }
+    ]
+  },
+  "decision": "Use the 5-province, 120-municipality, 22-city (21 component cities plus separately listed City of Lucena) crosswalk as the working CALABARZON administrative locality denominator, with PSA attribution and codes. The rendered detailed lists are explicitly dated 31 July 2025; quarterly PSA revisions through 3Q 2026 do not report CALABARZON municipality/city edits, and the latest region summary reports matching totals. The inaccessible 3Q workbook remains a verification limitation. Do not freeze the full CALABARZON research scope: its 158 waterbody leads, island coverage, shared waters, and waterbody identities/geometries remain incomplete.",
+  "requiredFollowUps": [
+    "When the PSA downloadable 3Q 2026 workbook/API is accessible, verify the 142 names/codes against that version and refresh the row-level capture hash.",
+    "Reconcile all 158 waterbody leads and separately sourced additions against this locality denominator, including island units and shared waters; do not convert municipality associations into waterbody boundaries.",
+    "Retain scopeFrozen=false until marine, brackish, inland-water, island, geometry, and source-derived waterbody coverage is reviewed."
+  ],
+  "nonClaims": [
+    "PSGC localities are administrative/statistical identifiers, not fishing-ground or municipal-water polygons.",
+    "This crosswalk does not prove that all named waters in CALABARZON have been inventoried, that every locality has fishing access, or that an unlisted fish is absent.",
+    "Lucena's separate HUC statistical treatment is not a legal determination of city status or a province-boundary ruling.",
+    "The 3Q 2026 workbook was not downloaded; the artifact uses rendered PSA directory tables and documented quarterly changes."
+  ]
+}

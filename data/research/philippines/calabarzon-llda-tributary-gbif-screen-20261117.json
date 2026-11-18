@@ -1,0 +1,143 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "calabarzon-llda-tributary-gbif-screen-20261117",
+  "reviewedOn": "2026-11-17",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "regionName": "Region IV-A (CALABARZON)",
+  "status": "eight-bounded-exact-field-queries-zero;label-crosswalk-follow-up-complete;no-absence-inferred;no-species-assertions-admitted",
+  "question": "Do GBIF-indexed CoL XR Actinopterygii records match four exact LLDA Bay/Los Baños tributary labels in waterBody or locality fields? A follow-up source review reconciles one queried label (Calo) as an alias of Cambantoc River.",
+  "sourceId": "gbif-calabarzon-llda-tributaries-exact-text-screen-20261117",
+  "inputs": [
+    "data/research/philippines/calabarzon-scope.json",
+    "data/research/philippines/sources.json",
+    "data/research/philippines/luzon-completion-manifest.json"
+  ],
+  "snapshotHashes": {
+    "calabarzonScope": "3880081958acf13879ed823b154640351873d140a0c2fb79758e8233be01c214",
+    "sourceRegistry": "6810c4c6117c07656b83dd224e84dba0938c05732f31f21d62a3e2a642f5c1cf",
+    "luzonCompletionManifest": "c47f55e9015cf00899d431c8a998617a1d10afe07edeb3424635d211cc6b5e3b"
+  },
+  "queryDefinition": {
+    "endpoint": "https://api.gbif.org/v1/occurrence/search",
+    "country": "PH",
+    "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+    "taxonKey": "8VR36",
+    "taxonLabel": "Catalogue of Life XR Actinopterygii",
+    "limit": 0,
+    "matchSemantics": "Exact supplied field value as a bounded index screen; not a fuzzy, coordinate, or all-source search."
+  },
+  "counts": {
+    "queryCount": 8,
+    "http200Count": 8,
+    "zeroResultQueryCount": 8,
+    "returnedOccurrenceRows": 0,
+    "waterbodiesScreened": 4,
+    "speciesAssertionsAdded": 0,
+    "publicRecordsAdmitted": 0
+  },
+  "queries": [
+    {
+      "field": "waterBody",
+      "value": "Calo River",
+      "httpStatus": 200,
+      "count": 0,
+      "returnedRows": 0,
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&limit=0&waterBody=Calo+River"
+    },
+    {
+      "field": "locality",
+      "value": "Calo River",
+      "httpStatus": 200,
+      "count": 0,
+      "returnedRows": 0,
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&limit=0&locality=Calo+River"
+    },
+    {
+      "field": "waterBody",
+      "value": "Maitem River",
+      "httpStatus": 200,
+      "count": 0,
+      "returnedRows": 0,
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&limit=0&waterBody=Maitem+River"
+    },
+    {
+      "field": "locality",
+      "value": "Maitem River",
+      "httpStatus": 200,
+      "count": 0,
+      "returnedRows": 0,
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&limit=0&locality=Maitem+River"
+    },
+    {
+      "field": "waterBody",
+      "value": "Dampalit River",
+      "httpStatus": 200,
+      "count": 0,
+      "returnedRows": 0,
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&limit=0&waterBody=Dampalit+River"
+    },
+    {
+      "field": "locality",
+      "value": "Dampalit River",
+      "httpStatus": 200,
+      "count": 0,
+      "returnedRows": 0,
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&limit=0&locality=Dampalit+River"
+    },
+    {
+      "field": "waterBody",
+      "value": "Pele River",
+      "httpStatus": 200,
+      "count": 0,
+      "returnedRows": 0,
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&limit=0&waterBody=Pele+River"
+    },
+    {
+      "field": "locality",
+      "value": "Pele River",
+      "httpStatus": 200,
+      "count": 0,
+      "returnedRows": 0,
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&limit=0&locality=Pele+River"
+    }
+  ],
+  "waterbodyDecisions": [
+    {
+      "waterbodyLabel": "Calo River",
+      "waterbodyId": "ph-wb-cambantoc-makiling-river",
+      "waterbodyName": "Calo River (source-crosswalked alias of Cambantoc River)",
+      "result": "waterBody=0;locality=0",
+      "decision": "Keep the GBIF exact-label result as a bounded name-screen only. Bay municipal evidence crosswalks Calo to Cambantoc; remove the duplicate Calo lead. Zero exact-string results are not fish-absence evidence."
+    },
+    {
+      "waterbodyLabel": "Maitem River",
+      "waterbodyId": "ph-wb-maitem-bay-river",
+      "waterbodyName": "Maitem River",
+      "result": "waterBody=0;locality=0",
+      "decision": "Keep as an LLDA-named lead. This exact-string query did not test the separate Bay/thesis label Maitim; the possible spelling/identity relationship remains unresolved."
+    },
+    {
+      "waterbodyLabel": "Dampalit River",
+      "waterbodyId": "ph-wb-dampalit-los-banos-river",
+      "waterbodyName": "Dampalit River",
+      "result": "waterBody=0;locality=0",
+      "decision": "Keep as an LLDA-named lead and bounded exact-label gap. A thesis summary uses Dampit; the spellings are not merged and this query did not test Dampit."
+    },
+    {
+      "waterbodyLabel": "Pele River",
+      "waterbodyId": "ph-wb-pele-los-banos-river",
+      "waterbodyName": "Pele River",
+      "result": "waterBody=0;locality=0",
+      "decision": "Keep as a source-named research lead; no species assertion. This is not fish-absence evidence."
+    }
+  ],
+  "limitations": [
+    "Only four exact river-name strings and two indexed fields were searched.",
+    "Alternate spellings and abbreviations, records with broader locality labels, georeferenced records without matching text, non-GBIF repositories, and taxa outside the selected checklist/filter were not searched.",
+    "GBIF indexing and a zero count cannot establish ecological absence or failed surveys.",
+    "No record-level data were downloaded; no taxonomy, provider license, voucher, date, or coordinate review was required because no candidates were returned."
+  ],
+  "nextAction": "Search local and regional primary literature/reports for fish samples explicitly tied to Bay and Los Baños tributaries; where only broader Laguna de Bay evidence exists, keep it lake-level and do not assign it to these channels.",
+  "supersededInterpretationBy": "calabarzon-makiling-bay-local-waterbody-fish-crosswalk-20261117"
+}

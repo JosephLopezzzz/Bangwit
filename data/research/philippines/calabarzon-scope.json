@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "checkedOn": "2026-11-16",
+  "checkedOn": "2026-11-17",
   "regionId": "0400000000",
   "regionName": "Region IV-A (CALABARZON)",
   "status": "in-progress-incomplete-baseline",
@@ -69,25 +69,37 @@
         "speciesCoverage": "not-assessed"
       }
     ],
-    "limits": "Province plus separate-city starter coverage. Municipalities/component cities and each island/waterbody still require the source-sweep inventory; this is not a completed regional inventory."
+    "localityDenominator": {
+      "crosswalk": "national/reviews/calabarzon-administrative-denominator-reconciliation-20261117.json",
+      "intendedPsgcSnapshotDate": "2026-09-30",
+      "directoryTableAsOf": "2025-07-31",
+      "checkedThroughRevision": "2026-Q3",
+      "provinceCount": 5,
+      "municipalityCount": 120,
+      "cityCount": 22,
+      "componentCityCount": 21,
+      "separatelyAssignedStatisticalHucCount": 1,
+      "status": "enumerated-from-PSA-pages;3Q-workbook-row-verification-pending"
+    },
+    "limits": "PSA locality names and codes are enumerated in the linked working crosswalk. This remains an incomplete waterbody inventory: municipalities and cities do not substitute for named rivers, streams, lakes, reservoirs, wetlands, bays, reefs, islands, or shared-water identities and boundaries."
   },
   "counts": {
-    "waterbodyResearchLeads": 158,
+    "waterbodyResearchLeads": 164,
     "provincesWithLeads": 6,
     "separateCityCoverageUnits": 1,
     "byKind": {
       "bay": 8,
-      "river": 90,
       "estuary": 3,
-      "wetland": 11,
-      "reservoir": 5,
-      "lake": 18,
-      "stream": 10,
-      "gulf": 1,
-      "reef": 3,
+      "fish-sanctuary": 1,
       "fishpond": 1,
+      "gulf": 1,
+      "lake": 18,
+      "reef": 3,
+      "reservoir": 5,
+      "river": 94,
       "spring": 7,
-      "fish-sanctuary": 1
+      "stream": 12,
+      "wetland": 11
     },
     "geometryValidated": 0,
     "speciesAssertionsImported": 9,
@@ -709,7 +721,9 @@
         "sorgon-2025-laguna-tinfoil-barb",
         "denr-bmb-philchm-inland-wetlands-2019",
         "seafdec-palmaa-bartolome-2016-fish-for-the-people",
-        "llda-laguna-de-bay-biodiversity-page"
+        "llda-laguna-de-bay-biodiversity-page",
+        "llda-laguna-de-bay-overview",
+        "llda-laguna-de-bay-and-tributaries"
       ],
       "identityStatus": "source-named-research-lead",
       "boundaryStatus": "not-delineated",
@@ -718,7 +732,8 @@
       "publicAdmission": false,
       "evidenceBatchRefs": [
         "laguna-de-bay-tinfoil-barb-20261023",
-        "calabarzon-laguna-de-bay-midas-cichlid-capture-review-20261105"
+        "calabarzon-laguna-de-bay-midas-cichlid-capture-review-20261105",
+        "calabarzon-llda-tributary-scope-crosswalk-20261117.json"
       ],
       "scopeNote": "Shared lake. One 2024 preserved specimen is reported from a fisherfolk catch and associated with Laguna de Bay; the official 2026 corrigendum corrects the locality to Brgy. Calahan, Cardona, Rizal. Article text gives no capture coordinates; its sampling-location figure is not georeferenced in the app. A separate 2019 paper reports one *Amphilophus citrinellus* caught by hook and line near Kinagatan, Talim Island, Binangonan, in February 2019; COI barcoding supports the source identification. The exact capture day, coordinates, museum voucher and article-specific reuse license are unresolved, so this remains research-only and is not a current-presence or map-point claim. Basin/jurisdiction membership is broader than the lake; Cavite/Batangas/Quezon basin membership is not a lake-surface assertion. SEAFDEC 2016 Table 2 lists Laguna de Bay, Rizal, for municipal fish-sanctuary maintenance and invasive-species control in the NIFEP program; this is historical management context, not a local fish list or present-day fishing/safety notice. The 2026 NFRDI AS-ISK assessment screened 15 non-native fishes for Laguna de Bay (5 categorized as extant and 10 as horizon). This risk-screening is not a dated field occurrence or complete lake inventory; the CC BY-NC 4.0 article is not approved for Bangwit app reuse while commercialization status is unresolved. A 2014 fish-trap study sampled only West Cove and East Cove from April 2013 to March 2014; it reports historical site comparisons, not a lake-wide inventory or current-presence evidence. The proceedings state all rights reserved and no separate reuse permission was found. A 2018 *Chitala ornata* stomach-content paper analyzes specimens from three lake regions collected in early 2014, with source-reported crustacean/fish prey differences by size and region. This is historical natural-diet evidence, not bait effectiveness; its article-level license is unresolved, so no public diet row is approved. The LLDA biodiversity page reports an aggregate 31 fish species and a short commercial-fish text list, but gives no source dates, methods, stations, vouchers, full checklist, or item-specific reuse terms; it is linked as a research lead only. See national-calabarzon-laguna-de-bay-risk-assessment-crosswalk-20261101.json, national-calabarzon-laguna-de-bay-2014-cove-trap-survey-review-20261101.json, national-calabarzon-laguna-de-bay-chitala-ornata-diet-review-20261101.json, calabarzon-laguna-de-bay-midas-cichlid-capture-review-20261105.json, and national/reviews/calabarzon-llda-laguna-de-bay-biodiversity-page-review-20261116.json."
     },
@@ -1068,15 +1083,22 @@
           "sourceRefs": [
             "paller-2011-makiling-fishes",
             "gbif-nhm-london-collection-specimens",
-            "gbif-cas-ichthyology"
+            "gbif-cas-ichthyology",
+            "llda-laguna-de-bay-overview",
+            "psa-calabarzon-municipalities-list"
           ],
-          "provinceId": "0403400000"
+          "provinceId": "0403400000",
+          "municipalityId": "0403411000",
+          "locality": "Los Baños, Laguna; LLDA page lists Molawin, Dampalit and Pele Rivers in Los Baños."
         }
       ],
       "sourceRefs": [
         "paller-2011-makiling-fishes",
         "gbif-nhm-london-collection-specimens",
-        "gbif-cas-ichthyology"
+        "gbif-cas-ichthyology",
+        "llda-laguna-de-bay-overview",
+        "uplb-duya-makiling-thesis-summary-2011",
+        "fao-agris-cando-makiling-subwatershed-thesis-2014"
       ],
       "identityStatus": "source-named-research-lead",
       "boundaryStatus": "not-delineated",
@@ -1084,14 +1106,18 @@
       "reviewStatus": "historical-gbif-assertion-reviewed-in-local-projection",
       "publicAdmission": false,
       "evidenceBatchRefs": [
-        "makiling-molawin-gbif-20261023"
+        "makiling-molawin-gbif-20261023",
+        "calabarzon-llda-tributary-scope-crosswalk-20261117.json",
+        "data/research/philippines/calabarzon-makiling-bay-local-waterbody-fish-crosswalk-20261117.json"
       ],
-      "scopeNote": "One text-locality assertion for Gulaphallus mirabilis is based on three GBIF preserved-specimen records from two CC0 datasets. Paller et al. (2011) also report a historical three-site Makiling survey including Molawin Creek, but the full-text table was not visually verified or reused because field dates, current taxonomy and copyright terms remain unresolved. No event date, coordinate, exact station, abundance or current-presence claim is adopted."
+      "scopeNote": "One text-locality assertion for Gulaphallus mirabilis is based on three GBIF preserved-specimen records from two CC0 datasets. Paller et al. (2011) also report a historical three-site Makiling survey including Molawin Creek, but the full-text table was not visually verified or reused because field dates, current taxonomy and copyright terms remain unresolved. No event date, coordinate, exact station, abundance or current-presence claim is adopted. Two thesis summaries report aggregate fish assemblages across multiple Makiling subwatersheds, but do not supply a site-by-taxon matrix in the reviewed summaries; these taxa are not allocated to Molawin."
     },
     {
       "id": "ph-wb-cambantoc-makiling-river",
       "name": "Cambantoc River",
-      "aliases": [],
+      "aliases": [
+        "Calo River"
+      ],
       "kind": "river",
       "salinity": {
         "classification": "freshwater",
@@ -1107,25 +1133,38 @@
           "sourceRefs": [
             "paller-2011-makiling-fishes",
             "gbif-occurrence-downloads",
-            "gbif-cas-ichthyology"
+            "gbif-cas-ichthyology",
+            "llda-laguna-de-bay-overview",
+            "psa-calabarzon-municipalities-list",
+            "bay-ecological-profile-2025-waterbodies",
+            "bay-cdp-ldip-ecological-profile-2026-2031",
+            "uplb-duya-makiling-thesis-summary-2011",
+            "fao-agris-cando-makiling-subwatershed-thesis-2014"
           ],
-          "provinceId": "0403400000"
+          "provinceId": "0403400000",
+          "municipalityId": "0403402000",
+          "locality": "Bay, Laguna; municipal profiles identify Cambantoc River (Calo River in lowland areas) and list source-described barangay context."
         }
       ],
       "sourceRefs": [
         "paller-2011-makiling-fishes",
         "gbif-occurrence-downloads",
-        "gbif-cas-ichthyology"
+        "gbif-cas-ichthyology",
+        "bay-ecological-profile-2025-waterbodies",
+        "bay-cdp-ldip-ecological-profile-2026-2031",
+        "uplb-duya-makiling-thesis-summary-2011",
+        "fao-agris-cando-makiling-subwatershed-thesis-2014"
       ],
       "identityStatus": "source-named-research-lead",
       "boundaryStatus": "not-delineated",
       "fishEvidenceStatus": "bounded-COLXR-Actinopterygii-and-CAS-preserved-specimen-waterBody/locality-text-screens-zero; no-fish-absence-inferred",
-      "reviewStatus": "bounded-COLXR-and-CAS-exact-field-screens-zero-no-absence-inferred",
+      "reviewStatus": "Bay-locality-and-Calo-alias-crosswalked;bounded-COLXR-and-CAS-exact-field-screens-zero-no-absence-inferred",
       "publicAdmission": false,
       "evidenceBatchRefs": [
-        "calabarzon-makiling-adjacent-cas-screen-20261104"
+        "calabarzon-makiling-adjacent-cas-screen-20261104",
+        "data/research/philippines/calabarzon-makiling-bay-local-waterbody-fish-crosswalk-20261117.json"
       ],
-      "scopeNote": "Named freshwater study system in Laguna. Paller et al. (2011) report historical site richness here, but field dates, current taxonomy and reuse remain unresolved; no table cell or public species row was admitted. Corrected GBIF Actinopterygii searches for Cambantoc and Cambantoc River across waterBody and locality returned zero; a separate 2026 CAS preserved-specimen screen of Cambantoc River/Cambantoc also returned zero. These dataset/index gaps do not establish fish absence."
+      "scopeNote": "Named freshwater study system in Laguna. Paller et al. (2011) report historical site richness here, but field dates, current taxonomy and reuse remain unresolved; no table cell or public species row was admitted. Corrected GBIF Actinopterygii searches for Cambantoc and Cambantoc River across waterBody and locality returned zero; a separate 2026 CAS preserved-specimen screen of Cambantoc River/Cambantoc also returned zero. These dataset/index gaps do not establish fish absence. Bay municipal profile text identifies Calo River as the lowland name for Cambantoc River; the separate Calo lead is deduplicated as an alias. The profile reports unspecified small fish in the Calo area, not an identified taxon. Thesis summaries report aggregate fish assemblages across several Makiling creeks, with no site-by-taxon matrix; no species assertion is added."
     },
     {
       "id": "ph-wb-morong-rizal-river",
@@ -1152,14 +1191,20 @@
         "llda-annual-report-2022",
         "gbif-occurrence-downloads",
         "gbif-cas-ichthyology",
-        "calacademy-catalog-morong-candidate-crosscheck"
+        "calacademy-catalog-morong-candidate-crosscheck",
+        "llda-laguna-de-bay-overview",
+        "llda-laguna-de-bay-and-tributaries",
+        "llda-river-systems-overview"
       ],
       "identityStatus": "source-named-research-lead",
       "boundaryStatus": "not-delineated",
       "fishEvidenceStatus": "GBIF-text-hit-geography-conflict-held; no assertion",
       "reviewStatus": "geography-conflict-held",
       "publicAdmission": false,
-      "scopeNote": "Laguna de Bay tributary lead; same-name rivers elsewhere are not merged. A bounded GBIF specimen candidate uses the same river text, but the georeferenced administrative area conflicts with this Rizal Province lead and the source flags a georeference error. Exact identity, taxonomy, and redistribution terms remain unresolved; no species assertion or coordinates are admitted."
+      "scopeNote": "Laguna de Bay tributary lead; same-name rivers elsewhere are not merged. A bounded GBIF specimen candidate uses the same river text, but the georeferenced administrative area conflicts with this Rizal Province lead and the source flags a georeference error. Exact identity, taxonomy, and redistribution terms remain unresolved; no species assertion or coordinates are admitted.",
+      "evidenceBatchRefs": [
+        "calabarzon-llda-tributary-scope-crosswalk-20261117.json"
+      ]
     },
     {
       "id": "ph-wb-tanay-rizal-river",
@@ -1186,14 +1231,18 @@
         "llda-annual-report-2022",
         "gbif-occurrence-downloads",
         "llda-tanay-water-quality-assessment",
-        "denr-bmb-inland-wetlands-atlas-2016"
+        "denr-bmb-inland-wetlands-atlas-2016",
+        "llda-laguna-de-bay-overview"
       ],
       "identityStatus": "source-named-research-lead",
       "boundaryStatus": "not-delineated",
       "fishEvidenceStatus": "bounded-GBIF-locality-query-zero-no-absence-inferred",
       "reviewStatus": "bounded-GBIF-locality-string-checked-no-records-returned",
       "publicAdmission": false,
-      "scopeNote": "The official LLDA water-quality report documents five stations on the river but is not a fish inventory. GBIF returned zero rows for the source-backed Tanay River System and Mouth of Tanay River labels; this does not establish fish absence. The DENR-BMB 2016 Atlas Annex 2b prints Tanay River* under Rizal/Tanay; the asterisk is unexplained in the reviewed table pages."
+      "scopeNote": "The official LLDA water-quality report documents five stations on the river but is not a fish inventory. GBIF returned zero rows for the source-backed Tanay River System and Mouth of Tanay River labels; this does not establish fish absence. The DENR-BMB 2016 Atlas Annex 2b prints Tanay River* under Rizal/Tanay; the asterisk is unexplained in the reviewed table pages.",
+      "evidenceBatchRefs": [
+        "calabarzon-llda-tributary-scope-crosswalk-20261117.json"
+      ]
     },
     {
       "id": "ph-wb-tagbac-rizal-creek",
@@ -1213,7 +1262,18 @@
             "emb-calabarzon-waterbodies"
           ],
           "provinceId": "0405800000",
-          "locality": "Sitio Pag Asa and Sitio Kabisig; Barangay San Jose, Antipolo City; Barangay May-iba, Teresa, Rizal"
+          "cityId": "0405802000",
+          "locality": "Sitio Pag Asa and Sitio Kabisig; Barangay San Jose, Antipolo City; source-reported program segment only, not full creek geometry."
+        },
+        {
+          "regionId": "0400000000",
+          "relationship": "source-described-locality",
+          "sourceRefs": [
+            "emb-calabarzon-waterbodies"
+          ],
+          "provinceId": "0405800000",
+          "municipalityId": "0405814000",
+          "locality": "Sitio Pag Asa and Sitio Kabisig; Barangay May-iba, Teresa, Rizal; source-reported program segment only, not full creek geometry."
         }
       ],
       "sourceRefs": [
@@ -2361,6 +2421,7 @@
             "aiib-2023-bcib-final-eia"
           ],
           "provinceId": "0402100000",
+          "municipalityId": "0402115000",
           "locality": "Naic, Cavite; lower segment in the BCIB study area; full channel extent unresolved"
         }
       ],
@@ -2512,14 +2573,20 @@
       "sourceRefs": [
         "denr-bmb-inland-wetlands-atlas-2016",
         "gbif-occurrence-downloads",
-        "quezon-pdrrmo-2026-flood-advisory-14-watercourses"
+        "quezon-pdrrmo-2026-flood-advisory-14-watercourses",
+        "llda-laguna-de-bay-overview",
+        "llda-laguna-de-bay-and-tributaries",
+        "llda-pagsanjan-subbasin-profile-vol13"
       ],
       "identityStatus": "source-named-research-lead",
       "boundaryStatus": "not-delineated",
       "fishEvidenceStatus": "bounded-COLXR-Actinopterygii-waterBody-and-locality-text-screen-zero; no-fish-absence-inferred",
       "reviewStatus": "historical-source-name-locality-crosswalked;exact-advisory-reach-unresolved;bounded-fish-text-screen-zero-no-absence-inferred",
       "publicAdmission": false,
-      "scopeNote": "The DENR-BMB 2016 Atlas Annex 2b names Pagsanjan River; its province column says Laguna, while its locality list includes Lumban, Pagsanjan, Magdalena, Cavinti, Majayjay, Luisiana, and Lucban, Quezon. Quezon's 7 August 2026 advisory separately lists “Pagsanjan” under Quezon watercourses, supporting a source-name/locality crosswalk to this existing research lead only; the advisory's exact reach and route remain unknown. This is not channel geometry, a complete reach, current hazard guidance, or fish evidence. Any printed asterisk is unexplained by the reviewed pages and is preserved without interpretation. A bounded GBIF COL XR Actinopterygii exact-name screen searched waterBody and locality in PH and returned zero for both fields; this is not fish-absence evidence."
+      "scopeNote": "The DENR-BMB 2016 Atlas Annex 2b names Pagsanjan River; its province column says Laguna, while its locality list includes Lumban, Pagsanjan, Magdalena, Cavinti, Majayjay, Luisiana, and Lucban, Quezon. Quezon's 7 August 2026 advisory separately lists “Pagsanjan” under Quezon watercourses, supporting a source-name/locality crosswalk to this existing research lead only; the advisory's exact reach and route remain unknown. This is not channel geometry, a complete reach, current hazard guidance, or fish evidence. Any printed asterisk is unexplained by the reviewed pages and is preserved without interpretation. A bounded GBIF COL XR Actinopterygii exact-name screen searched waterBody and locality in PH and returned zero for both fields; this is not fish-absence evidence.",
+      "evidenceBatchRefs": [
+        "calabarzon-llda-tributary-scope-crosswalk-20261117.json"
+      ]
     },
     {
       "id": "ph-wb-kalumpang-batangas-river",
@@ -2884,14 +2951,19 @@
       ],
       "sourceRefs": [
         "denr-bmb-inland-wetlands-atlas-2016",
-        "gbif-occurrence-downloads"
+        "gbif-occurrence-downloads",
+        "llda-laguna-de-bay-overview",
+        "llda-river-systems-overview"
       ],
       "identityStatus": "source-named-research-lead",
       "boundaryStatus": "not-delineated",
       "fishEvidenceStatus": "bounded-COLXR-Actinopterygii-waterBody-and-locality-text-screen-zero; no-fish-absence-inferred",
       "reviewStatus": "bounded-COLXR-Actinopterygii-waterBody-and-locality-text-screen-zero-no-absence-inferred",
       "publicAdmission": false,
-      "scopeNote": "DENR-BMB 2016 Atlas Annex 2b names this river and reports locality context: Cabuyao; City of Santa Rosa. Historical inventory text only; it does not establish channel geometry, salinity, fish presence or legal/access status. The source asterisk, where printed, is unexplained. A 2026-10-24 exact GBIF waterBody/locality text screen returned zero for both fields (100-record limit); this is a bounded search gap, not fish absence."
+      "scopeNote": "DENR-BMB 2016 Atlas Annex 2b names this river and reports locality context: Cabuyao; City of Santa Rosa. Historical inventory text only; it does not establish channel geometry, salinity, fish presence or legal/access status. The source asterisk, where printed, is unexplained. A 2026-10-24 exact GBIF waterBody/locality text screen returned zero for both fields (100-record limit); this is a bounded search gap, not fish absence.",
+      "evidenceBatchRefs": [
+        "calabarzon-llda-tributary-scope-crosswalk-20261117.json"
+      ]
     },
     {
       "id": "ph-wb-santa-rosa-laguna-river",
@@ -2910,7 +2982,19 @@
           "sourceRefs": [
             "denr-bmb-inland-wetlands-atlas-2016"
           ],
-          "provinceId": "0403400000"
+          "provinceId": "0403400000",
+          "cityId": "0403428000",
+          "locality": "City of Santa Rosa, Laguna"
+        },
+        {
+          "regionId": "0400000000",
+          "relationship": "source-described-locality",
+          "sourceRefs": [
+            "denr-bmb-inland-wetlands-atlas-2016"
+          ],
+          "provinceId": "0403400000",
+          "cityId": "0403403000",
+          "locality": "City of Biñan, Laguna"
         },
         {
           "regionId": "0400000000",
@@ -2919,7 +3003,18 @@
             "denr-bmb-inland-wetlands-atlas-2016"
           ],
           "provinceId": "0402100000",
-          "locality": "Dasmariñas; Silang"
+          "cityId": "0402106000",
+          "locality": "Dasmariñas, Cavite"
+        },
+        {
+          "regionId": "0400000000",
+          "relationship": "source-described-locality",
+          "sourceRefs": [
+            "denr-bmb-inland-wetlands-atlas-2016"
+          ],
+          "provinceId": "0402100000",
+          "municipalityId": "0402118000",
+          "locality": "Silang, Cavite"
         }
       ],
       "sourceRefs": [
@@ -2959,24 +3054,34 @@
             "denr-bmb-inland-wetlands-atlas-2016"
           ],
           "provinceId": "0402100000",
+          "cityId": "0402119000",
           "locality": "Tagaytay City"
         }
       ],
       "sourceRefs": [
         "denr-bmb-inland-wetlands-atlas-2016",
-        "gbif-occurrence-downloads"
+        "gbif-occurrence-downloads",
+        "llda-laguna-de-bay-overview",
+        "llda-laguna-de-bay-and-tributaries",
+        "llda-san-cristobal-subbasin-profile-vol18"
       ],
       "identityStatus": "source-named-research-lead",
       "boundaryStatus": "not-delineated",
       "fishEvidenceStatus": "GBIF-text-hit-geography-conflict-held; no assertion",
       "reviewStatus": "geography-conflict-held",
       "publicAdmission": false,
-      "scopeNote": "DENR-BMB 2016 Atlas Annex 2b visually confirms source-reported localities in Laguna (Calamba City; Cabuyao) and Cavite (Tagaytay City). This is not channel geometry, salinity, fish presence or access/legal status. A GBIF text screen returned one preserved specimen twice across the waterBody/locality searches; its record says Rizal and coordinates 15.706832, 121.111876 with 13,748 m uncertainty. That record remains a geography conflict and is not attributed to this lead."
+      "scopeNote": "DENR-BMB 2016 Atlas Annex 2b visually confirms source-reported localities in Laguna (Calamba City; Cabuyao) and Cavite (Tagaytay City). This is not channel geometry, salinity, fish presence or access/legal status. A GBIF text screen returned one preserved specimen twice across the waterBody/locality searches; its record says Rizal and coordinates 15.706832, 121.111876 with 13,748 m uncertainty. That record remains a geography conflict and is not attributed to this lead.",
+      "evidenceBatchRefs": [
+        "calabarzon-llda-tributary-scope-crosswalk-20261117.json"
+      ]
     },
     {
       "id": "ph-wb-bay-laguna-river",
       "name": "Bay River",
-      "aliases": [],
+      "aliases": [
+        "Ilog ng Bae",
+        "San Nicolas River"
+      ],
       "kind": "river",
       "salinity": {
         "classification": "unknown",
@@ -2988,21 +3093,37 @@
           "regionId": "0400000000",
           "relationship": "source-described-locality",
           "sourceRefs": [
-            "denr-bmb-inland-wetlands-atlas-2016"
+            "denr-bmb-inland-wetlands-atlas-2016",
+            "llda-laguna-de-bay-overview",
+            "psa-calabarzon-municipalities-list",
+            "bay-ecological-profile-2025-waterbodies",
+            "bay-cdp-ldip-ecological-profile-2026-2031"
           ],
-          "provinceId": "0403400000"
+          "provinceId": "0403400000",
+          "municipalityId": "0403402000",
+          "locality": "Bay, Laguna; the municipal profile locally names Bay River as Ilog ng Bae or San Nicolas River and lists six traversed barangays; this does not resolve the full multi-locality route."
         }
       ],
       "sourceRefs": [
         "denr-bmb-inland-wetlands-atlas-2016",
-        "gbif-occurrence-downloads"
+        "gbif-occurrence-downloads",
+        "llda-laguna-de-bay-overview",
+        "bay-ecological-profile-2025-waterbodies",
+        "bay-cdp-ldip-ecological-profile-2026-2031",
+        "gbif-cas-ichthyology",
+        "gbif-calabarzon-makiling-bay-alias-exact-screen-20261117"
       ],
       "identityStatus": "source-named-research-lead",
       "boundaryStatus": "not-delineated",
-      "fishEvidenceStatus": "candidate-historical-specimen-records-held; exact river identity unresolved; no assertion",
-      "reviewStatus": "candidate-match-held-for-waterbody-identity",
+      "fishEvidenceStatus": "historical-specimen-candidates-held;municipal-common-name-fish-context-added;taxonomy-and-exact-river-identity-pending;no-species-assertion",
+      "reviewStatus": "Bay-local-aliases-crosswalked;two-1941-CAS-waterBody-candidates-held;site-and-taxon-validation-pending",
       "publicAdmission": false,
-      "scopeNote": "DENR-BMB 2016 Atlas Annex 2b names this river and reports locality context: Bay; Calauan; Alaminos. Historical inventory text only; it does not establish channel geometry, salinity, fish presence or legal/access status. The source asterisk, where printed, is unexplained. GBIF returned two 1941-10-16 CC0 preserved-specimen candidates tagged Bay River, but locality is only ?3 km from Laguna de Bay? and coordinate uncertainty is 1,743 m; no river-specific species assertion is admitted."
+      "scopeNote": "DENR-BMB 2016 Atlas Annex 2b names this river and reports locality context: Bay; Calauan; Alaminos. Historical inventory text only; it does not establish channel geometry, salinity, fish presence or legal/access status. The source asterisk, where printed, is unexplained. GBIF returned two 1941-10-16 CC0 preserved-specimen candidates tagged Bay River, but locality is only ?3 km from Laguna de Bay? and coordinate uncertainty is 1,743 m; no river-specific species assertion is admitted. The Bay 2026 profile uses Ilog ng Bae and San Nicolas River as local names for Bay River in its named Bay barangays; the entire broader Bay River route is not resolved by that local crosswalk. Municipal profile text reports common-name fish labels (including kanduli, ayungin, janitor fish, knight fish, and tilapia) and explicitly describes some hito/dalag as fishpond escapes. These are unverified common-name/context labels, not app species records; field method, taxa, and item-level reuse remain unresolved. Existing historical specimen candidates remain held. A 2026-11-17 GBIF exact-field refresh returned the same two CAS candidates under waterBody=Bay River; locality=Bay River and exact searches for the local aliases returned zero. No new record was admitted, and the two historical specimens remain held because the source locality and coordinate uncertainty do not resolve the exact river/reach.",
+      "evidenceBatchRefs": [
+        "calabarzon-llda-tributary-scope-crosswalk-20261117.json",
+        "data/research/philippines/calabarzon-makiling-bay-local-waterbody-fish-crosswalk-20261117.json",
+        "data/research/philippines/calabarzon-makiling-bay-alias-gbif-screen-20261117.json"
+      ]
     },
     {
       "id": "ph-wb-dayap-laguna-river",
@@ -3091,14 +3212,18 @@
       ],
       "sourceRefs": [
         "denr-bmb-inland-wetlands-atlas-2016",
-        "gbif-occurrence-downloads"
+        "gbif-occurrence-downloads",
+        "llda-laguna-de-bay-overview"
       ],
       "identityStatus": "source-named-research-lead",
       "boundaryStatus": "not-delineated",
       "fishEvidenceStatus": "bounded-COLXR-Actinopterygii-waterBody-and-locality-text-screen-zero; no-fish-absence-inferred",
       "reviewStatus": "bounded-COLXR-Actinopterygii-waterBody-and-locality-text-screen-zero-no-absence-inferred",
       "publicAdmission": false,
-      "scopeNote": "DENR-BMB 2016 Atlas Annex 2b names this river and reports locality context: Siniloan. Historical inventory text only; it does not establish channel geometry, salinity, fish presence or legal/access status. The source asterisk, where printed, is unexplained. A 2026-10-24 exact GBIF waterBody/locality text screen returned zero for both fields (100-record limit); this is a bounded search gap, not fish absence."
+      "scopeNote": "DENR-BMB 2016 Atlas Annex 2b names this river and reports locality context: Siniloan. Historical inventory text only; it does not establish channel geometry, salinity, fish presence or legal/access status. The source asterisk, where printed, is unexplained. A 2026-10-24 exact GBIF waterBody/locality text screen returned zero for both fields (100-record limit); this is a bounded search gap, not fish absence.",
+      "evidenceBatchRefs": [
+        "calabarzon-llda-tributary-scope-crosswalk-20261117.json"
+      ]
     },
     {
       "id": "ph-wb-pansol-laguna-river",
@@ -3180,7 +3305,8 @@
             "denr-bmb-inland-wetlands-atlas-2016"
           ],
           "provinceId": "0403400000",
-          "locality": "City of Biñan; Carmona"
+          "cityId": "0403403000",
+          "locality": "City of Biñan (explicit Atlas locality; Carmona/Carmonan crosswalk held)"
         },
         {
           "regionId": "0400000000",
@@ -3189,7 +3315,8 @@
             "denr-bmb-inland-wetlands-atlas-2016"
           ],
           "provinceId": "0402100000",
-          "locality": "Carmonan; GMA; Silang"
+          "municipalityId": "0402118000",
+          "locality": "Silang, Cavite (explicit Atlas locality; Carmonan and GMA left unresolved)"
         }
       ],
       "sourceRefs": [
@@ -3222,6 +3349,7 @@
             "batstateu-san-juan-calamba-fauna-table-access-lead-20261115"
           ],
           "provinceId": "0403400000",
+          "cityId": "0403405000",
           "locality": "Calamba City"
         },
         {
@@ -3231,7 +3359,38 @@
             "denr-bmb-inland-wetlands-atlas-2016"
           ],
           "provinceId": "0401000000",
-          "locality": "Lipa City; Malvar; Santo Tomas; Tanauan City"
+          "cityId": "0401014000",
+          "locality": "Lipa City; exact reach and full channel extent unresolved."
+        },
+        {
+          "regionId": "0400000000",
+          "relationship": "source-described-locality",
+          "sourceRefs": [
+            "denr-bmb-inland-wetlands-atlas-2016"
+          ],
+          "provinceId": "0401000000",
+          "municipalityId": "0401017000",
+          "locality": "Malvar; exact reach and full channel extent unresolved."
+        },
+        {
+          "regionId": "0400000000",
+          "relationship": "source-described-locality",
+          "sourceRefs": [
+            "denr-bmb-inland-wetlands-atlas-2016"
+          ],
+          "provinceId": "0401000000",
+          "cityId": "0401028000",
+          "locality": "Santo Tomas (PSGC name: City of Sto. Tomas); exact reach and full channel extent unresolved."
+        },
+        {
+          "regionId": "0400000000",
+          "relationship": "source-described-locality",
+          "sourceRefs": [
+            "denr-bmb-inland-wetlands-atlas-2016"
+          ],
+          "provinceId": "0401000000",
+          "cityId": "0401031000",
+          "locality": "Tanauan City; exact reach and full channel extent unresolved."
         }
       ],
       "sourceRefs": [
@@ -3399,6 +3558,7 @@
             "bacoor-city-clup-ecological-profile-inland-waters"
           ],
           "provinceId": "0402100000",
+          "cityId": "0402103000",
           "locality": "Pintong Gubat, Molino through Tanzang Luma, Salinas and Panapaan; source reports drainage to Bacoor Bay."
         }
       ],
@@ -3431,6 +3591,7 @@
             "bacoor-city-clup-ecological-profile-inland-waters"
           ],
           "provinceId": "0402100000",
+          "cityId": "0402103000",
           "locality": "Bacoor City; described as draining the eastern portion of the southern watershed and meeting Molino River at Molino Dam."
         }
       ],
@@ -3462,7 +3623,18 @@
             "bacoor-city-clup-ecological-profile-inland-waters"
           ],
           "provinceId": "0402100000",
-          "locality": "Bacoor City and Dasmariñas City; described as meeting Don Cella River at Molino Dam and spilling into Zapote River."
+          "cityId": "0402103000",
+          "locality": "Bacoor City; source describes this river meeting Don Cella River at Molino Dam and spilling into Zapote River."
+        },
+        {
+          "regionId": "0400000000",
+          "relationship": "source-described-locality",
+          "sourceRefs": [
+            "bacoor-city-clup-ecological-profile-inland-waters"
+          ],
+          "provinceId": "0402100000",
+          "cityId": "0402106000",
+          "locality": "Dasmariñas City; source describes this river's upper course extending from the city area toward Molino Dam; full channel extent unresolved."
         }
       ],
       "sourceRefs": [
@@ -3493,7 +3665,8 @@
             "bacoor-city-clup-ecological-profile-inland-waters"
           ],
           "provinceId": "0402100000",
-          "locality": "Bacoor City boundary and adjoining Las Piñas City; the profile names Bacoor barangays along its course."
+          "cityId": "0402103000",
+          "locality": "Bacoor City (Bacoor-side locality only)"
         }
       ],
       "sourceRefs": [
@@ -3524,7 +3697,8 @@
             "bacoor-city-clup-ecological-profile-inland-waters"
           ],
           "provinceId": "0402100000",
-          "locality": "The profile describes it as a tributary to Zapote River that comes from the Dasmariñas City area."
+          "cityId": "0402106000",
+          "locality": "Dasmariñas City area"
         }
       ],
       "sourceRefs": [
@@ -3555,7 +3729,8 @@
             "bacoor-city-clup-ecological-profile-inland-waters"
           ],
           "provinceId": "0402100000",
-          "locality": "Bacoor City; the profile describes it as a Bacoor River tributary crossing several coastal barangays."
+          "cityId": "0402103000",
+          "locality": "Bacoor City"
         }
       ],
       "sourceRefs": [
@@ -3588,7 +3763,48 @@
             "cavite-ecological-profile-2024-fisheries"
           ],
           "provinceId": "0402100000",
-          "locality": "Maitim, Amadeo through source-listed localities in Silang and General Trias, then Noveleta and Kawit."
+          "municipalityId": "0402102000",
+          "locality": "Maitim, Amadeo"
+        },
+        {
+          "regionId": "0400000000",
+          "relationship": "source-described-locality",
+          "sourceRefs": [
+            "cavite-ecological-profile-2024-fisheries"
+          ],
+          "provinceId": "0402100000",
+          "municipalityId": "0402118000",
+          "locality": "Silang"
+        },
+        {
+          "regionId": "0400000000",
+          "relationship": "source-described-locality",
+          "sourceRefs": [
+            "cavite-ecological-profile-2024-fisheries"
+          ],
+          "provinceId": "0402100000",
+          "cityId": "0402108000",
+          "locality": "General Trias"
+        },
+        {
+          "regionId": "0400000000",
+          "relationship": "source-described-locality",
+          "sourceRefs": [
+            "cavite-ecological-profile-2024-fisheries"
+          ],
+          "provinceId": "0402100000",
+          "municipalityId": "0402116000",
+          "locality": "Noveleta"
+        },
+        {
+          "regionId": "0400000000",
+          "relationship": "source-described-locality",
+          "sourceRefs": [
+            "cavite-ecological-profile-2024-fisheries"
+          ],
+          "provinceId": "0402100000",
+          "municipalityId": "0402111000",
+          "locality": "Kawit"
         }
       ],
       "sourceRefs": [
@@ -3621,7 +3837,28 @@
             "cavite-ecological-profile-2024-fisheries"
           ],
           "provinceId": "0402100000",
-          "locality": "Source-described routes include Indang, Mendez and Naic and drain to Manila Bay."
+          "municipalityId": "0402110000",
+          "locality": "Indang"
+        },
+        {
+          "regionId": "0400000000",
+          "relationship": "source-described-locality",
+          "sourceRefs": [
+            "cavite-ecological-profile-2024-fisheries"
+          ],
+          "provinceId": "0402100000",
+          "municipalityId": "0402114000",
+          "locality": "Mendez"
+        },
+        {
+          "regionId": "0400000000",
+          "relationship": "source-described-locality",
+          "sourceRefs": [
+            "cavite-ecological-profile-2024-fisheries"
+          ],
+          "provinceId": "0402100000",
+          "municipalityId": "0402115000",
+          "locality": "Naic"
         }
       ],
       "sourceRefs": [
@@ -3666,7 +3903,8 @@
             "jica-2017-cavite-flood-mitigation-eia-aquatic-ecology"
           ],
           "provinceId": "0402100000",
-          "locality": "Mouth station in Barangay Ligtong I, Rosario, Cavite"
+          "municipalityId": "0402117000",
+          "locality": "Barangay Ligtong I, Rosario (mouth station only)"
         }
       ],
       "sourceRefs": [
@@ -3814,7 +4052,8 @@
             "noaa-coris-pacific-place-keyword-thesaurus-2016"
           ],
           "provinceId": "0405600000",
-          "locality": "Ragay Gulf, Tagkawayan, Quezon; 2000 preliminary list names Candalapdap; 2022 study places Acha between Guinayangan and Tagkawayan; not a boundary"
+          "locality": "2004 plan names Tagkawayan; a 2022 study also describes the reef between Tagkawayan and Guinayangan, so this does not imply exclusivity.",
+          "municipalityId": "0405646000"
         }
       ],
       "sourceRefs": [
@@ -3850,11 +4089,12 @@
           "regionId": "0400000000",
           "relationship": "source-described-locality",
           "sourceRefs": [
-            "tagkawayan-water-district-history-sakang-river",
-            "tagkawayan-lgu-2026-sakang-river-community-action"
+            "tagkawayan-lgu-2026-sakang-river-community-action",
+            "tagkawayan-water-district-history-sakang-river"
           ],
           "provinceId": "0405600000",
-          "locality": "Tagkawayan, Quezon; undated Water District text places a source area approximately 3 km north of Poblacion and describes flow toward Tagkawayan River; a 2026 LGU notice names Sakang River in Barangay San Vicente; route not delineated"
+          "municipalityId": "0405646000",
+          "locality": "Barangay San Vicente, Tagkawayan"
         }
       ],
       "sourceRefs": [
@@ -3953,7 +4193,8 @@
             "psa-psgc-guinayangan-barangays-2025"
           ],
           "provinceId": "0405600000",
-          "locality": "Brgy. Balinarin/Hinabaan, Guinayangan, Quezon",
+          "municipalityId": "0405618000",
+          "locality": "Barangay Balinarin/Hinabaan, Guinayangan",
           "psgcBarangayCodes": [
             "0405618005",
             "0405618027"
@@ -3993,7 +4234,20 @@
             "quezon-pdrrmo-2026-flood-advisory-14-watercourses"
           ],
           "provinceId": "0405600000",
-          "locality": "Guinayangan-Tagkawayan, Quezon"
+          "municipalityId": "0405618000",
+          "locality": "Guinayangan, Quezon (source-named side)"
+        },
+        {
+          "regionId": "0400000000",
+          "relationship": "source-described-locality",
+          "sourceRefs": [
+            "emb-calabarzon-monitor-2005-vinas-river",
+            "nga-pub162-2025-vinas-river",
+            "quezon-pdrrmo-2026-flood-advisory-14-watercourses"
+          ],
+          "provinceId": "0405600000",
+          "municipalityId": "0405646000",
+          "locality": "Tagkawayan, Quezon (source-named side)"
         }
       ],
       "sourceRefs": [
@@ -4024,14 +4278,15 @@
       "administrativeAssociations": [
         {
           "regionId": "0400000000",
-          "provinceId": "0405600000",
           "relationship": "source-described-locality",
           "sourceRefs": [
+            "guinayangan-lgu-mspl-protected-area-profile-legacy-doc",
             "iirr-guinayangan-watershed-tributaries-brief",
-            "psa-psgc-guinayangan-barangays-2025",
-            "guinayangan-lgu-mspl-protected-area-profile-legacy-doc"
+            "psa-psgc-guinayangan-barangays-2025"
           ],
-          "locality": "Guinayangan, Quezon; source-described route from Maulawin Spring Protected Landscape through named upland/lowland barangays to the coastal ecosystem at Arbismen and Ragay Gulf; channel route not delineated"
+          "provinceId": "0405600000",
+          "municipalityId": "0405618000",
+          "locality": "Guinayangan, Quezon"
         }
       ],
       "sourceRefs": [
@@ -4059,14 +4314,15 @@
       "administrativeAssociations": [
         {
           "regionId": "0400000000",
-          "provinceId": "0405600000",
           "relationship": "source-described-locality",
           "sourceRefs": [
+            "guinayangan-lgu-mspl-protected-area-profile-legacy-doc",
             "iirr-guinayangan-watershed-tributaries-brief",
-            "psa-psgc-guinayangan-barangays-2025",
-            "guinayangan-lgu-mspl-protected-area-profile-legacy-doc"
+            "psa-psgc-guinayangan-barangays-2025"
           ],
-          "locality": "Maulawin Spring Protected Landscape and central/coastal barangays of Guinayangan, Quezon; source does not separate the channel reach"
+          "provinceId": "0405600000",
+          "municipalityId": "0405618000",
+          "locality": "Guinayangan, Quezon"
         }
       ],
       "sourceRefs": [
@@ -4094,13 +4350,14 @@
       "administrativeAssociations": [
         {
           "regionId": "0400000000",
-          "provinceId": "0405600000",
           "relationship": "source-described-locality",
           "sourceRefs": [
             "iirr-guinayangan-watershed-tributaries-brief",
             "psa-psgc-guinayangan-barangays-2025"
           ],
-          "locality": "Maulawin Spring Protected Landscape and central/coastal barangays of Guinayangan, Quezon; source does not separate the channel reach"
+          "provinceId": "0405600000",
+          "municipalityId": "0405618000",
+          "locality": "Guinayangan, Quezon"
         }
       ],
       "sourceRefs": [
@@ -4127,13 +4384,14 @@
       "administrativeAssociations": [
         {
           "regionId": "0400000000",
-          "provinceId": "0405600000",
           "relationship": "source-described-locality",
           "sourceRefs": [
             "iirr-guinayangan-watershed-tributaries-brief",
             "psa-psgc-guinayangan-barangays-2025"
           ],
-          "locality": "Maulawin Spring Protected Landscape and central/coastal barangays of Guinayangan, Quezon; source does not separate the channel reach"
+          "provinceId": "0405600000",
+          "municipalityId": "0405618000",
+          "locality": "Guinayangan, Quezon"
         }
       ],
       "sourceRefs": [
@@ -4166,7 +4424,8 @@
             "psa-psgc-guinayangan-barangays-2025"
           ],
           "provinceId": "0405600000",
-          "locality": "Barangay Calimpak/Sisi, Guinayangan, Quezon",
+          "municipalityId": "0405618000",
+          "locality": "Barangay Calimpak/Sisi, Guinayangan",
           "psgcBarangayCodes": [
             "0405618010",
             "0405618051"
@@ -4203,7 +4462,8 @@
             "psa-psgc-guinayangan-barangays-2025"
           ],
           "provinceId": "0405600000",
-          "locality": "Barangay Calimpak/Sisi, Guinayangan, Quezon",
+          "municipalityId": "0405618000",
+          "locality": "Barangay Calimpak/Sisi, Guinayangan",
           "psgcBarangayCodes": [
             "0405618010",
             "0405618051"
@@ -4240,7 +4500,8 @@
             "psa-psgc-guinayangan-barangays-2025"
           ],
           "provinceId": "0405600000",
-          "locality": "Barangay San Pedro I, Guinayangan, Quezon",
+          "municipalityId": "0405618000",
+          "locality": "Barangay San Pedro I, Guinayangan",
           "psgcBarangayCodes": [
             "0405618044"
           ]
@@ -4276,7 +4537,8 @@
             "psa-psgc-guinayangan-barangays-2025"
           ],
           "provinceId": "0405600000",
-          "locality": "Barangay Dungawan Paalyunan, Guinayangan, Quezon",
+          "municipalityId": "0405618000",
+          "locality": "Barangay Dungawan Paalyunan, Guinayangan",
           "psgcBarangayCodes": [
             "0405618021"
           ]
@@ -4312,7 +4574,8 @@
             "psa-psgc-guinayangan-barangays-2025"
           ],
           "provinceId": "0405600000",
-          "locality": "Barangay Sta. Cruz, Guinayangan, Quezon",
+          "municipalityId": "0405618000",
+          "locality": "Barangay Sta. Cruz, Guinayangan",
           "psgcBarangayCodes": [
             "0405618047"
           ]
@@ -4348,7 +4611,8 @@
             "psa-psgc-guinayangan-barangays-2025"
           ],
           "provinceId": "0405600000",
-          "locality": "Barangay Sta. Cruz, Guinayangan, Quezon",
+          "municipalityId": "0405618000",
+          "locality": "Barangay Sta. Cruz, Guinayangan",
           "psgcBarangayCodes": [
             "0405618047"
           ]
@@ -4384,7 +4648,8 @@
             "psa-psgc-guinayangan-barangays-2025"
           ],
           "provinceId": "0405600000",
-          "locality": "Barangay San Antonio, Guinayangan, Quezon",
+          "municipalityId": "0405618000",
+          "locality": "Barangay San Antonio, Guinayangan",
           "psgcBarangayCodes": [
             "0405618037"
           ]
@@ -4419,22 +4684,27 @@
       "administrativeAssociations": [
         {
           "regionId": "0400000000",
-          "provinceId": "0405600000",
-          "relationship": "historical-boundary-line-named",
+          "relationship": "source-described-administrative-boundary",
           "sourceRefs": [
-            "senate-eo-78-1947-kabibihan-boundary"
+            "psa-calabarzon-directory",
+            "senate-eo-78-1947-kabibihan-boundary",
+            "slsu-icfas-2021-kabibihan-gleaning-abstract"
           ],
-          "locality": "Executive Order No. 78 (1947; effective 1 January 1948) names the Kabibihan River as the line between Tagkawayan and Guinayangan; this source does not define current or surveyed geometry."
+          "provinceId": "0405600000",
+          "municipalityId": "0405646000",
+          "locality": "Tagkawayan side of the source-described administrative boundary"
         },
         {
           "regionId": "0400000000",
-          "provinceId": "0405600000",
-          "relationship": "study-area",
+          "relationship": "source-described-administrative-boundary",
           "sourceRefs": [
-            "slsu-icfas-2021-kabibihan-gleaning-abstract",
-            "psa-calabarzon-directory"
+            "psa-calabarzon-directory",
+            "senate-eo-78-1947-kabibihan-boundary",
+            "slsu-icfas-2021-kabibihan-gleaning-abstract"
           ],
-          "locality": "Study described across Guinayangan (six of eleven respondent barangays, names not supplied) and Tagkawayan (five barangays, names not supplied), Quezon."
+          "provinceId": "0405600000",
+          "municipalityId": "0405618000",
+          "locality": "Guinayangan side of the source-described administrative boundary"
         }
       ],
       "sourceRefs": [
@@ -4533,7 +4803,8 @@
             "psa-psgc-guinayangan-barangays-2025"
           ],
           "provinceId": "0405600000",
-          "locality": "Barangay Capuluan Central, Guinayangan, Quezon",
+          "municipalityId": "0405618000",
+          "locality": "Barangay Capuluan Central, Guinayangan",
           "psgcBarangayCodes": [
             "0405618011"
           ]
@@ -4688,7 +4959,8 @@
             "quezon-pdrrmo-2026-flood-advisory-14-watercourses",
             "pea-boulevard-2000-framework-plan-umiray-uatp-context"
           ],
-          "locality": "Infanta-General Nakar area in the 2025 profile; PRA project profile separately names Barangay Umiray, General Nakar. Name/locality context only; no route."
+          "locality": "Historical supply-source context: Barangay Umiray, General Nakar.",
+          "municipalityId": "0405617000"
         }
       ],
       "sourceRefs": [
@@ -4794,12 +5066,13 @@
       "administrativeAssociations": [
         {
           "regionId": "0400000000",
-          "provinceId": "0405600000",
           "relationship": "source-described-locality",
           "sourceRefs": [
             "quezon-province-2025-ecological-profile"
           ],
-          "locality": "Sariaya, Quezon; page calls it a central river basin"
+          "provinceId": "0405600000",
+          "municipalityId": "0405645000",
+          "locality": "Sariaya, Quezon"
         }
       ],
       "sourceRefs": [
@@ -4833,13 +5106,14 @@
       "administrativeAssociations": [
         {
           "regionId": "0400000000",
-          "provinceId": "0405600000",
           "relationship": "source-described-locality",
           "sourceRefs": [
             "chavez-carandang-2017-pterygoplichthys-luzon-preprint",
             "denr-bmb-inland-wetlands-atlas-2016"
           ],
-          "locality": "Sariaya, Quezon; the 2017 preprint names the MalaquingIlog Bridge area and the BMB atlas lists Malaquing Ilog River in Sariaya."
+          "provinceId": "0405600000",
+          "municipalityId": "0405645000",
+          "locality": "Sariaya, Quezon"
         }
       ],
       "sourceRefs": [
@@ -4871,12 +5145,13 @@
       "administrativeAssociations": [
         {
           "regionId": "0400000000",
-          "provinceId": "0405600000",
           "relationship": "source-described-locality",
           "sourceRefs": [
             "chavez-carandang-2017-pterygoplichthys-luzon-preprint"
           ],
-          "locality": "Sariaya, Quezon; vicinity of Maasin River Bridge"
+          "provinceId": "0405600000",
+          "municipalityId": "0405645000",
+          "locality": "Sariaya, Quezon"
         }
       ],
       "sourceRefs": [
@@ -5029,14 +5304,15 @@
       "administrativeAssociations": [
         {
           "regionId": "0400000000",
-          "provinceId": "0405600000",
           "relationship": "atlas-named-river-and-municipality-context",
           "sourceRefs": [
             "denr-bmb-inland-wetlands-atlas-2016",
             "dpwh-2025-catanauan-river-package-b-flood-control",
             "quezon-pdrrmo-2026-flood-advisory-14-watercourses"
           ],
-          "locality": "The BMB-DENR atlas names Catanauan River in Catanauan, Quezon; DPWH uses the same river name and locality for a 2025 flood-control project."
+          "provinceId": "0405600000",
+          "municipalityId": "0405610000",
+          "locality": "Catanauan, Quezon"
         }
       ],
       "sourceRefs": [
@@ -5070,12 +5346,43 @@
       "administrativeAssociations": [
         {
           "regionId": "0400000000",
-          "provinceId": "0405600000",
           "relationship": "source-described-watershed-assessment-area",
           "sourceRefs": [
             "denr-calabarzon-matandang-sabang-wcva-presentation-2025"
           ],
-          "locality": "The DENR-CENRO Catanauan / GRIDS WCVA presentation announcement says the Matandang Sabang River Watershed encompasses Catanauan, General Luna, Buenavista, and Lopez, Quezon. It does not provide a boundary or assign specific channel reaches to each municipality."
+          "provinceId": "0405600000",
+          "municipalityId": "0405610000",
+          "locality": "Catanauan, Quezon (assessment area)"
+        },
+        {
+          "regionId": "0400000000",
+          "relationship": "source-described-watershed-assessment-area",
+          "sourceRefs": [
+            "denr-calabarzon-matandang-sabang-wcva-presentation-2025"
+          ],
+          "provinceId": "0405600000",
+          "municipalityId": "0405616000",
+          "locality": "General Luna, Quezon (assessment area)"
+        },
+        {
+          "regionId": "0400000000",
+          "relationship": "source-described-watershed-assessment-area",
+          "sourceRefs": [
+            "denr-calabarzon-matandang-sabang-wcva-presentation-2025"
+          ],
+          "provinceId": "0405600000",
+          "municipalityId": "0405605000",
+          "locality": "Buenavista, Quezon (assessment area)"
+        },
+        {
+          "regionId": "0400000000",
+          "relationship": "source-described-watershed-assessment-area",
+          "sourceRefs": [
+            "denr-calabarzon-matandang-sabang-wcva-presentation-2025"
+          ],
+          "provinceId": "0405600000",
+          "municipalityId": "0405622000",
+          "locality": "Lopez, Quezon (assessment area)"
         }
       ],
       "sourceRefs": [
@@ -5104,13 +5411,14 @@
       "administrativeAssociations": [
         {
           "regionId": "0400000000",
-          "provinceId": "0405600000",
           "relationship": "official-EMB-waterbody-name-and-municipality-context",
           "sourceRefs": [
             "emb-national-sober-2016-2021-silongin-river",
             "quezon-province-tourism-directory"
           ],
-          "locality": "EMB lists Silongin River under San Francisco, Quezon; the provincial directory lists Silongin among the barangays of San Francisco."
+          "provinceId": "0405600000",
+          "municipalityId": "0405642000",
+          "locality": "San Francisco, Quezon"
         }
       ],
       "sourceRefs": [
@@ -5473,14 +5781,39 @@
       "administrativeAssociations": [
         {
           "regionId": "0400000000",
-          "provinceId": "0405600000",
           "relationship": "official-Atlas-river-name-and-locality-crosswalk-to-historical-advisory;exact-reach-unverified;DPWH-basin-not-merged",
           "sourceRefs": [
             "denr-bmb-inland-wetlands-atlas-2016",
             "dpwh-2022-principal-river-basins-annex-d2",
             "quezon-pdrrmo-2026-flood-advisory-14-watercourses"
           ],
-          "locality": "DENR-BMB 2016 Atlas Annex 2b lists Anibawan River in Burdeos, Panukulan, and Polillo, Quezon, with Anibawan Bay as the source-reported outflow. DPWH Annex D-2 row 104 separately lists a same-name Region IV-A principal basin at 97 sq km; that basin is not merged into the river lead. The advisory label is crosswalked at name/locality level only."
+          "provinceId": "0405600000",
+          "municipalityId": "0405606000",
+          "locality": "Burdeos, Quezon"
+        },
+        {
+          "regionId": "0400000000",
+          "relationship": "official-Atlas-river-name-and-locality-crosswalk-to-historical-advisory;exact-reach-unverified;DPWH-basin-not-merged",
+          "sourceRefs": [
+            "denr-bmb-inland-wetlands-atlas-2016",
+            "dpwh-2022-principal-river-basins-annex-d2",
+            "quezon-pdrrmo-2026-flood-advisory-14-watercourses"
+          ],
+          "provinceId": "0405600000",
+          "municipalityId": "0405631000",
+          "locality": "Panukulan, Quezon"
+        },
+        {
+          "regionId": "0400000000",
+          "relationship": "official-Atlas-river-name-and-locality-crosswalk-to-historical-advisory;exact-reach-unverified;DPWH-basin-not-merged",
+          "sourceRefs": [
+            "denr-bmb-inland-wetlands-atlas-2016",
+            "dpwh-2022-principal-river-basins-annex-d2",
+            "quezon-pdrrmo-2026-flood-advisory-14-watercourses"
+          ],
+          "provinceId": "0405600000",
+          "municipalityId": "0405636000",
+          "locality": "Polillo, Quezon"
         }
       ],
       "sourceRefs": [
@@ -5697,16 +6030,17 @@
       "administrativeAssociations": [
         {
           "regionId": "0400000000",
-          "provinceId": "0405600000",
           "relationship": "source-named-Pagbilao-locality;administrative-context-only",
           "sourceRefs": [
+            "pinto-1985-pagbilao-mangrove-fish-dissertation",
             "pinto-1987-pagbilao-juvenile-fish-survey",
             "pinto-1988-pagbilao-mangrove-fish-community",
-            "ronnback-et-al-1999-pagbilao-mangrove-microhabitat-study",
-            "pinto-1985-pagbilao-mangrove-fish-dissertation",
-            "psa-calabarzon-directory"
+            "psa-calabarzon-directory",
+            "ronnback-et-al-1999-pagbilao-mangrove-microhabitat-study"
           ],
-          "locality": "Historical source wording identifies mangroves at Pagbilao, Quezon; no station coordinates or exact feature boundary."
+          "provinceId": "0405600000",
+          "municipalityId": "0405630000",
+          "locality": "Pagbilao, Quezon"
         }
       ],
       "sourceRefs": [
@@ -5743,14 +6077,15 @@
       "administrativeAssociations": [
         {
           "regionId": "0400000000",
-          "provinceId": "0405600000",
           "relationship": "official-publication-names-Pagbilao;PSA-administrative-context-only",
           "sourceRefs": [
-            "janssen-padilla-1997-pagbilao-experimental-mangrove-study",
             "janssen-padilla-1996-pagbilao-mangrove-management-fishery-synthesis",
+            "janssen-padilla-1997-pagbilao-experimental-mangrove-study",
             "psa-calabarzon-directory"
           ],
-          "locality": "The 1996 and 1997 IIED papers name the Pagbilao experimental mangrove forest; the 1996 paper summarizes its fisheries component. Neither supplies the exact site boundary."
+          "provinceId": "0405600000",
+          "municipalityId": "0405630000",
+          "locality": "Pagbilao, Quezon"
         }
       ],
       "sourceRefs": [
@@ -5782,20 +6117,27 @@
       "administrativeAssociations": [
         {
           "regionId": "0400000000",
-          "provinceId": "0405600000",
           "relationship": "source-named-waterway-in-Pagbilao-study-context",
-          "sourceRefs": ["janssen-padilla-1997-pagbilao-experimental-mangrove-study"],
-          "locality": "The report places the river east of the Pagbilao experimental mangrove reserve; this source-described relationship does not define the channel extent."
+          "sourceRefs": [
+            "janssen-padilla-1997-pagbilao-experimental-mangrove-study"
+          ],
+          "provinceId": "0405600000",
+          "municipalityId": "0405630000",
+          "locality": "Pagbilao study-area context"
         }
       ],
-      "sourceRefs": ["janssen-padilla-1997-pagbilao-experimental-mangrove-study"],
+      "sourceRefs": [
+        "janssen-padilla-1997-pagbilao-experimental-mangrove-study"
+      ],
       "identityStatus": "source-named-waterway-research-lead",
       "boundaryStatus": "not-delineated",
       "fishEvidenceStatus": "named-as-waterway-in-the-historical-study-area;individual-fish-records-not-assigned-to-this-river",
       "reviewStatus": "historical-site-context-reviewed;length-and-width-figures-are-not-channel-geometry",
       "publicAdmission": false,
       "scopeNote": "The 1997 IIED report names Palsabangon River in the Pagbilao experimental mangrove study context and gives historical approximate length/width figures. Those figures are not an adopted channel trace, legal boundary, current condition, or fish occurrence. Fishery analysis is specifically tied to Bagarinao's sampling at Sukol Creek; no individual fish result is assigned to this river.",
-      "evidenceBatchRefs": ["calabarzon-pagbilao-1997-fisheries-chapter-review-20261104.json"]
+      "evidenceBatchRefs": [
+        "calabarzon-pagbilao-1997-fisheries-chapter-review-20261104.json"
+      ]
     },
     {
       "id": "ph-wb-pagbilao-sukol-creek",
@@ -5810,20 +6152,27 @@
       "administrativeAssociations": [
         {
           "regionId": "0400000000",
-          "provinceId": "0405600000",
           "relationship": "source-named-sampling-waterway-in-Pagbilao-study-context",
-          "sourceRefs": ["janssen-padilla-1997-pagbilao-experimental-mangrove-study"],
-          "locality": "The report identifies Sukol Creek in the Pagbilao experimental mangrove reserve study area; exact stations and channel extent remain unknown."
+          "sourceRefs": [
+            "janssen-padilla-1997-pagbilao-experimental-mangrove-study"
+          ],
+          "provinceId": "0405600000",
+          "municipalityId": "0405630000",
+          "locality": "Pagbilao study-area context"
         }
       ],
-      "sourceRefs": ["janssen-padilla-1997-pagbilao-experimental-mangrove-study"],
+      "sourceRefs": [
+        "janssen-padilla-1997-pagbilao-experimental-mangrove-study"
+      ],
       "identityStatus": "source-named-waterway-research-lead",
       "boundaryStatus": "not-delineated",
       "fishEvidenceStatus": "1997-chapter-identifies-Bagarinao-1995-sampling-at-Sukol-Creek;historical-sample-context-only;no-current-presence",
       "reviewStatus": "historical-sampling-locality-reviewed;field-date-stations-and-vouchers-unresolved;reuse-unresolved",
       "publicAdmission": false,
       "scopeNote": "The 1997 IIED chapter says the analyzed fisheries data came from Bagarinao's sampling at Sukol Creek and that estimates were extrapolated beyond the sampled creek using assumptions. It does not establish present-day occurrence, full-channel coverage, exact sampling dates/stations, a verified boundary, or public reuse rights. Keep this creek separate from the experimental mangrove-forest footprint and from the unresolved Nalahian/Nahalinan river-name variants.",
-      "evidenceBatchRefs": ["calabarzon-pagbilao-1997-fisheries-chapter-review-20261104.json"]
+      "evidenceBatchRefs": [
+        "calabarzon-pagbilao-1997-fisheries-chapter-review-20261104.json"
+      ]
     },
     {
       "id": "ph-wb-palsabangon-mangrove-forest",
@@ -5838,13 +6187,14 @@
       "administrativeAssociations": [
         {
           "regionId": "0400000000",
-          "provinceId": "0405600000",
           "relationship": "source-described-locality",
           "sourceRefs": [
-            "muhadiono-1986-palsabangon-mangrove-flora-thesis-abstract",
-            "bmb-efoi-palsabangon-mangrove-species-request-2023"
+            "bmb-efoi-palsabangon-mangrove-species-request-2023",
+            "muhadiono-1986-palsabangon-mangrove-flora-thesis-abstract"
           ],
-          "locality": "The SEARCA thesis abstract names Palsabangon, Pagbilao, Quezon; the BMB eFOI response record names Palsabangon Mangrove Forest in Pagbilao, Quezon."
+          "provinceId": "0405600000",
+          "municipalityId": "0405630000",
+          "locality": "Pagbilao, Quezon"
         }
       ],
       "sourceRefs": [
@@ -5859,6 +6209,245 @@
       "scopeNote": "SEARCA indexes an abstract for a 1986 UPLB mangrove-plant study in Palsabangon, Pagbilao, Quezon; it reports plant-community research, not fish. A BMB eFOI page records approval of a request for a list of plants and animals and names an attachment, but the attachment fetch failed and its contents were not reviewed. Do not infer that attachment provides fish taxa. The feature remains a habitat-name lead with no boundary, geometry, current fish evidence, or public app data. Its identity with Pagbilao Experimental Mangrove Forest is not established.",
       "evidenceBatchRefs": [
         "calabarzon-pagbilao-mangrove-fish-evidence-review-20261102.json"
+      ]
+    },
+    {
+      "id": "ph-wb-maitem-bay-river",
+      "name": "Maitem River",
+      "aliases": [],
+      "kind": "river",
+      "salinity": {
+        "classification": "unknown",
+        "reviewStatus": "not-assessed",
+        "sourceRefs": []
+      },
+      "administrativeAssociations": [
+        {
+          "regionId": "0400000000",
+          "relationship": "source-described-locality",
+          "sourceRefs": [
+            "llda-laguna-de-bay-overview",
+            "psa-calabarzon-municipalities-list"
+          ],
+          "provinceId": "0403400000",
+          "municipalityId": "0403402000",
+          "locality": "Bay, Laguna; LLDA page lists Maitem River in Bay."
+        }
+      ],
+      "sourceRefs": [
+        "llda-laguna-de-bay-overview",
+        "gbif-calabarzon-llda-tributaries-exact-text-screen-20261117",
+        "uplb-duya-makiling-thesis-summary-2011",
+        "fao-agris-cando-makiling-subwatershed-thesis-2014"
+      ],
+      "identityStatus": "source-named-research-lead;possible-Maitim-name-variant-unresolved",
+      "boundaryStatus": "not-delineated",
+      "fishEvidenceStatus": "bounded-GBIF-CoL-XR-Actinopterygii-waterBody-and-locality-text-screen-zero;no-fish-absence-inferred",
+      "reviewStatus": "exact-waterBody-and-locality-strings-screened-GBIF-zero;alternate-variants-and-locality-based-search-not-reviewed",
+      "publicAdmission": false,
+      "scopeNote": "Named by the LLDA Laguna de Bay overview as a tributary river in the stated municipality. This supports a research lead and municipality locality only; it does not establish route, channel boundary, fish presence, access, fishing rules, or safety. Separate Bay and Makiling sources name Maitim River/subwatershed. Its possible relationship to LLDA’s Maitem River remains unresolved; keep these as distinct research leads and do not apply the Maitem exact-string GBIF zero-result to Maitim.",
+      "evidenceBatchRefs": [
+        "calabarzon-llda-tributary-scope-crosswalk-20261117.json",
+        "calabarzon-llda-tributary-gbif-screen-20261117.json",
+        "data/research/philippines/calabarzon-makiling-bay-local-waterbody-fish-crosswalk-20261117.json"
+      ]
+    },
+    {
+      "id": "ph-wb-dampalit-los-banos-river",
+      "name": "Dampalit River",
+      "aliases": [],
+      "kind": "river",
+      "salinity": {
+        "classification": "unknown",
+        "reviewStatus": "not-assessed",
+        "sourceRefs": []
+      },
+      "administrativeAssociations": [
+        {
+          "regionId": "0400000000",
+          "relationship": "source-described-locality",
+          "sourceRefs": [
+            "llda-laguna-de-bay-overview",
+            "psa-calabarzon-municipalities-list"
+          ],
+          "provinceId": "0403400000",
+          "municipalityId": "0403411000",
+          "locality": "Los Baños, Laguna; LLDA page lists Dampalit River in Los Baños."
+        }
+      ],
+      "sourceRefs": [
+        "llda-laguna-de-bay-overview",
+        "gbif-calabarzon-llda-tributaries-exact-text-screen-20261117",
+        "uplb-duya-makiling-thesis-summary-2011",
+        "fao-agris-cando-makiling-subwatershed-thesis-2014"
+      ],
+      "identityStatus": "source-named-research-lead",
+      "boundaryStatus": "not-delineated",
+      "fishEvidenceStatus": "bounded-GBIF-CoL-XR-Actinopterygii-waterBody-and-locality-text-screen-zero;no-fish-absence-inferred",
+      "reviewStatus": "exact-waterBody-and-locality-strings-screened-GBIF-zero;alternate-variants-and-locality-based-search-not-reviewed",
+      "publicAdmission": false,
+      "scopeNote": "Named by the LLDA Laguna de Bay overview as a tributary river in the stated municipality. This supports a research lead and municipality locality only; it does not establish route, channel boundary, fish presence, access, fishing rules, or safety. Makiling thesis summaries use the spelling Dampit in one source and Dampalit in another. No equivalence is inferred from spelling alone, and aggregate study fish lists are not assigned to this LLDA-named river.",
+      "evidenceBatchRefs": [
+        "calabarzon-llda-tributary-scope-crosswalk-20261117.json",
+        "calabarzon-llda-tributary-gbif-screen-20261117.json",
+        "data/research/philippines/calabarzon-makiling-bay-local-waterbody-fish-crosswalk-20261117.json"
+      ]
+    },
+    {
+      "id": "ph-wb-pele-los-banos-river",
+      "name": "Pele River",
+      "aliases": [],
+      "kind": "river",
+      "salinity": {
+        "classification": "unknown",
+        "reviewStatus": "not-assessed",
+        "sourceRefs": []
+      },
+      "administrativeAssociations": [
+        {
+          "regionId": "0400000000",
+          "relationship": "source-described-locality",
+          "sourceRefs": [
+            "llda-laguna-de-bay-overview",
+            "psa-calabarzon-municipalities-list"
+          ],
+          "provinceId": "0403400000",
+          "municipalityId": "0403411000",
+          "locality": "Los Baños, Laguna; LLDA page lists Pele River in Los Baños."
+        }
+      ],
+      "sourceRefs": [
+        "llda-laguna-de-bay-overview",
+        "gbif-calabarzon-llda-tributaries-exact-text-screen-20261117"
+      ],
+      "identityStatus": "source-named-research-lead",
+      "boundaryStatus": "not-delineated",
+      "fishEvidenceStatus": "bounded-GBIF-CoL-XR-Actinopterygii-waterBody-and-locality-text-screen-zero;no-fish-absence-inferred",
+      "reviewStatus": "exact-waterBody-and-locality-strings-screened-GBIF-zero;alternate-variants-and-locality-based-search-not-reviewed",
+      "publicAdmission": false,
+      "scopeNote": "Named by the LLDA Laguna de Bay overview as a tributary river in the stated municipality. This supports a research lead and municipality locality only; it does not establish route, channel boundary, fish presence, access, fishing rules, or safety.",
+      "evidenceBatchRefs": [
+        "calabarzon-llda-tributary-scope-crosswalk-20261117.json",
+        "calabarzon-llda-tributary-gbif-screen-20261117.json",
+        "data/research/philippines/calabarzon-makiling-bay-local-waterbody-fish-crosswalk-20261117.json"
+      ]
+    },
+    {
+      "id": "ph-wb-maitim-bay-river",
+      "name": "Maitim River",
+      "aliases": [],
+      "kind": "river",
+      "salinity": {
+        "classification": "unknown",
+        "reviewStatus": "not-assessed",
+        "sourceRefs": []
+      },
+      "administrativeAssociations": [
+        {
+          "regionId": "0400000000",
+          "relationship": "source-described-locality",
+          "sourceRefs": [
+            "bay-cdp-ldip-ecological-profile-2026-2031",
+            "uplb-duya-makiling-thesis-summary-2011",
+            "fao-agris-cando-makiling-subwatershed-thesis-2014",
+            "psa-calabarzon-municipalities-list"
+          ],
+          "provinceId": "0403400000",
+          "municipalityId": "0403402000",
+          "locality": "Bay, Laguna; the Bay 2026 municipal profile locates Maitim River in Barangay Sto. Domingo."
+        }
+      ],
+      "sourceRefs": [
+        "bay-cdp-ldip-ecological-profile-2026-2031",
+        "uplb-duya-makiling-thesis-summary-2011",
+        "fao-agris-cando-makiling-subwatershed-thesis-2014",
+        "gbif-calabarzon-makiling-bay-alias-exact-screen-20261117"
+      ],
+      "identityStatus": "source-named-research-lead;watercourse-route-and-locality-unresolved",
+      "boundaryStatus": "not-delineated",
+      "fishEvidenceStatus": "aggregate-thesis-fish-lists-not-attributed-to-this-waterbody;no-site-specific-species-assertion",
+      "reviewStatus": "research-lead-crosswalked;species-taxonomy-site-matrix-geometry-and-reuse-open",
+      "publicAdmission": false,
+      "scopeNote": "Source-named river in Bay, Laguna. The Bay 2026 municipal profile identifies Barangay Sto. Domingo and Laguna de Bay context. UPLB thesis summaries also list Maitim among Mt. Makiling subwatersheds. This is not equated with LLDA’s “Maitem River”; the spelling/identity relationship is unresolved. Aggregate thesis fish lists lack per-waterbody allocation. No channel geometry, taxon assertion, legal/access status, or public data admission is made.",
+      "evidenceBatchRefs": [
+        "data/research/philippines/calabarzon-makiling-bay-local-waterbody-fish-crosswalk-20261117.json",
+        "data/research/philippines/calabarzon-makiling-bay-alias-gbif-screen-20261117.json"
+      ]
+    },
+    {
+      "id": "ph-wb-anos-makiling-creek",
+      "name": "Anos Creek",
+      "aliases": [],
+      "kind": "stream",
+      "salinity": {
+        "classification": "unknown",
+        "reviewStatus": "not-assessed",
+        "sourceRefs": []
+      },
+      "administrativeAssociations": [
+        {
+          "regionId": "0400000000",
+          "relationship": "source-described-locality",
+          "sourceRefs": [
+            "uplb-duya-makiling-thesis-summary-2011",
+            "fao-agris-cando-makiling-subwatershed-thesis-2014"
+          ],
+          "provinceId": "0403400000",
+          "locality": "Mt. Makiling study area collectively described in Los Baños and Bay, Laguna; the reviewed thesis summaries do not assign this individual creek to a specific municipality."
+        }
+      ],
+      "sourceRefs": [
+        "uplb-duya-makiling-thesis-summary-2011",
+        "fao-agris-cando-makiling-subwatershed-thesis-2014",
+        "gbif-calabarzon-makiling-bay-alias-exact-screen-20261117"
+      ],
+      "identityStatus": "source-named-research-lead;watercourse-route-and-locality-unresolved",
+      "boundaryStatus": "not-delineated",
+      "fishEvidenceStatus": "aggregate-thesis-fish-lists-not-attributed-to-this-waterbody;no-site-specific-species-assertion",
+      "reviewStatus": "research-lead-crosswalked;species-taxonomy-site-matrix-geometry-and-reuse-open",
+      "publicAdmission": false,
+      "scopeNote": "A source-named Mt. Makiling subwatershed/creek research lead in UPLB thesis summaries. The study area is described collectively as Los Baños and Bay, Laguna, but the reviewed summaries do not establish this creek’s specific municipality, station coordinates, channel route, or geometry. Aggregate fish assemblages are not assigned to Anos; no species assertion or public admission is made.",
+      "evidenceBatchRefs": [
+        "data/research/philippines/calabarzon-makiling-bay-local-waterbody-fish-crosswalk-20261117.json",
+        "data/research/philippines/calabarzon-makiling-bay-alias-gbif-screen-20261117.json"
+      ]
+    },
+    {
+      "id": "ph-wb-callos-makiling-creek",
+      "name": "Callos Creek",
+      "aliases": [],
+      "kind": "stream",
+      "salinity": {
+        "classification": "unknown",
+        "reviewStatus": "not-assessed",
+        "sourceRefs": []
+      },
+      "administrativeAssociations": [
+        {
+          "regionId": "0400000000",
+          "relationship": "source-described-locality",
+          "sourceRefs": [
+            "uplb-duya-makiling-thesis-summary-2011",
+            "fao-agris-cando-makiling-subwatershed-thesis-2014"
+          ],
+          "provinceId": "0403400000",
+          "locality": "Mt. Makiling study area collectively described in Los Baños and Bay, Laguna; the reviewed thesis summaries do not assign this individual creek to a specific municipality."
+        }
+      ],
+      "sourceRefs": [
+        "uplb-duya-makiling-thesis-summary-2011",
+        "fao-agris-cando-makiling-subwatershed-thesis-2014",
+        "gbif-calabarzon-makiling-bay-alias-exact-screen-20261117"
+      ],
+      "identityStatus": "source-named-research-lead;watercourse-route-and-locality-unresolved",
+      "boundaryStatus": "not-delineated",
+      "fishEvidenceStatus": "aggregate-thesis-fish-lists-not-attributed-to-this-waterbody;no-site-specific-species-assertion",
+      "reviewStatus": "research-lead-crosswalked;species-taxonomy-site-matrix-geometry-and-reuse-open",
+      "publicAdmission": false,
+      "scopeNote": "A source-named Mt. Makiling subwatershed/creek research lead in UPLB thesis summaries. The study area is described collectively as Los Baños and Bay, Laguna, but the reviewed summaries do not establish this creek’s specific municipality, station coordinates, channel route, or geometry. Aggregate fish assemblages are not assigned to Callos; no species assertion or public admission is made.",
+      "evidenceBatchRefs": [
+        "data/research/philippines/calabarzon-makiling-bay-local-waterbody-fish-crosswalk-20261117.json",
+        "data/research/philippines/calabarzon-makiling-bay-alias-gbif-screen-20261117.json"
       ]
     }
   ],
@@ -6168,14 +6757,48 @@
       "waterbodyIds": [
         "ph-wb-labac-river-cavite"
       ]
+    },
+    {
+      "priority": 22,
+      "task": "Obtain the full Makiling thesis station tables and item-level reuse terms; resolve Maitem/Maitim and Dampit/Dampalit with source authors or primary municipal records; crosswalk Anos and Callos to individual localities; seek separately licensed channel geometry. Do not project aggregate thesis taxa or municipal common-name fish labels.",
+      "sourceIds": [
+        "llda-laguna-de-bay-overview",
+        "bay-ecological-profile-2025-waterbodies",
+        "bay-cdp-ldip-ecological-profile-2026-2031",
+        "uplb-duya-makiling-thesis-summary-2011",
+        "fao-agris-cando-makiling-subwatershed-thesis-2014"
+      ],
+      "waterbodyIds": [
+        "ph-wb-bay-laguna-river",
+        "ph-wb-cambantoc-makiling-river",
+        "ph-wb-maitem-bay-river",
+        "ph-wb-maitim-bay-river",
+        "ph-wb-dampalit-los-banos-river",
+        "ph-wb-pele-los-banos-river",
+        "ph-wb-molawin-makiling-creek",
+        "ph-wb-anos-makiling-creek",
+        "ph-wb-callos-makiling-creek"
+      ]
+    },
+    {
+      "priority": 23,
+      "task": "Resolve the two 1941 CAS Bay River candidates against the original catalogue/locality notes and current accepted names; retain both on hold until source geography and specimen identity are verified. Follow up the 13 bounded exact-field zero queries only with documented alternate-name or station-level searches.",
+      "sourceIds": [
+        "gbif-cas-ichthyology",
+        "gbif-calabarzon-makiling-bay-alias-exact-screen-20261117",
+        "bay-cdp-ldip-ecological-profile-2026-2031"
+      ],
+      "waterbodyIds": [
+        "ph-wb-bay-laguna-river"
+      ]
     }
   ],
   "gaps": [
     {
       "id": "scope-not-exhaustive",
       "status": "open",
-      "count": 146,
-      "reason": "146 selected named water and habitat research leads are seeded across CALABARZON water types; this selected list is not a complete regional inventory. The official NFRDI 2024 handbook now has separate historical gear-label transcriptions for Nasugbu, Tayabas, Lamon, Ragay, and Batangas Bays/Gulf: 13, 36, 44, 33, and 23 finfish source-label rows, respectively. Taxonomic screens are recorded by source-named area, but field identification, dates, capture origin, and product-use review remain pending. The official 2024 Cavite profile adds source-named river courses, while reported route text remains distinct from verified channel geometry. Provincial, municipal, island, stream, pond and reservoir denominators remain incomplete; some leads are habitat/designation names rather than delineated waterbodies.",
+      "count": 164,
+      "reason": "164 selected named water and habitat research leads are seeded across CALABARZON water types; this selected list is not a complete regional inventory. The official NFRDI 2024 handbook now has separate historical gear-label transcriptions for Nasugbu, Tayabas, Lamon, Ragay, and Batangas Bays/Gulf: 13, 36, 44, 33, and 23 finfish source-label rows, respectively. Taxonomic screens are recorded by source-named area, but field identification, dates, capture origin, and product-use review remain pending. The official 2024 Cavite profile adds source-named river courses, while reported route text remains distinct from verified channel geometry. Provincial, municipal, island, stream, pond and reservoir denominators remain incomplete; some leads are habitat/designation names rather than delineated waterbodies.",
       "nextAction": "Continue the source-derived inventory with explicit inclusion criteria and a frozen manifest; resolve unnamed 2021 aggregate river/wetland counts before claiming a regional baseline."
     },
     {
@@ -6186,7 +6809,7 @@
         "denr-bmb-philippines-7th-national-report-cbd"
       ],
       "reason": "The 2024 official roadmap advertises 30 wetlands but its prose names 31 mixed site/habitat phrases. The 2019 BMB inventory adds historical named inland-wetland rows but is not a complete or directly comparable denominator. The official CBD 7th National Report separately gives 956 inland wetland sites and a PHILCHM-sourced 314 non-riverine total, with unexplained arithmetic differences in assessed/no-plan subtotals; none supplies a reconciled CALABARZON site denominator.",
-      "nextAction": "Read the active DENR DPCAS Summary of Assessed Critical Wetlands as of December 2024 and the underlying CALABARZON ENR Table 8 through normal public access; reconcile definitions, version, and site identity before using any count as a regional denominator."
+      "nextAction": "Continue site-specific CALABARZON evidence work with independently accessible primary sources. Revisit the DENR DPCAS wetlands dataset and CALABARZON ENR Table 8 only if ordinary public access succeeds or an authorized official copy is received; then reconcile definitions, version, and site identity before using any count as a regional denominator."
     },
     {
       "id": "direct-source-retrieval",
@@ -6211,15 +6834,15 @@
     {
       "id": "fish-coverage",
       "status": "open",
-      "count": 111,
-      "reason": "Regional species coverage remains incomplete across 111 selected leads without sufficient accepted species-level evidence for a complete place-specific checklist. The new Sakang and Tagkawayan River leads have no site-specific fish evidence. The new Naic Palanas River lead has name-only indexed context and no fish evidence. The Maalimango River lead has a historical, station-specific 2016 EIA fishery matrix with partial taxonomy and unresolved reuse/field identification; this is not a current or complete river list. The new Guinayangan river/spring source crosswalk contains no fish records. Exact-name database screens cover selected watercourses only; zero results are bounded discovery gaps, not evidence of fish absence. Nasugbu has 13 labels across three blocks (11 exact accepted species-rank matches, one subspecies, one unmatched); Tayabas has 36 labels across eight blocks (30 exact accepted species-rank matches); Lamon has 44 labels across ten blocks and 39 distinct names (35 exact accepted species-rank matches, one subspecies, two variants, one unmatched); Ragay has 33 labels across eight blocks and 26 names (24 exact accepted species-rank matches, one synonym, one unmatched); Batangas has 23 labels across five blocks and 17 distinct names, including 11 species-level exact matches and six genus-level labels. These historical gear crosswalks do not verify field identification, dated capture occurrence, or complete/current checklists. The Kaliwa-Kanan-Agos EIA contributes only historical system-level mixed interview/collection context; its taxa are not assigned to individual rivers or current presence. The Quezon 2025 Ecological Profile page also names Umiray, Agos, Nakar, and MalakingIlog but provides no river-specific fish taxa or survey. The 2017 author-uploaded preprint adds historical interview/observation leads for MalaquingIlog and Maasin Rivers in Sariaya, but peer-review, field date, site-linked voucher, taxonomy, and public reuse remain unresolved.",
+      "count": 117,
+      "reason": "Regional species coverage remains incomplete across 115 selected leads without sufficient accepted species-level evidence for a complete place-specific checklist. The new Sakang and Tagkawayan River leads have no site-specific fish evidence. The new Naic Palanas River lead has name-only indexed context and no fish evidence. The Maalimango River lead has a historical, station-specific 2016 EIA fishery matrix with partial taxonomy and unresolved reuse/field identification; this is not a current or complete river list. The new Guinayangan river/spring source crosswalk contains no fish records. Exact-name database screens cover selected watercourses only; zero results are bounded discovery gaps, not evidence of fish absence. Nasugbu has 13 labels across three blocks (11 exact accepted species-rank matches, one subspecies, one unmatched); Tayabas has 36 labels across eight blocks (30 exact accepted species-rank matches); Lamon has 44 labels across ten blocks and 39 distinct names (35 exact accepted species-rank matches, one subspecies, two variants, one unmatched); Ragay has 33 labels across eight blocks and 26 names (24 exact accepted species-rank matches, one synonym, one unmatched); Batangas has 23 labels across five blocks and 17 distinct names, including 11 species-level exact matches and six genus-level labels. These historical gear crosswalks do not verify field identification, dated capture occurrence, or complete/current checklists. The Kaliwa-Kanan-Agos EIA contributes only historical system-level mixed interview/collection context; its taxa are not assigned to individual rivers or current presence. The Quezon 2025 Ecological Profile page also names Umiray, Agos, Nakar, and MalakingIlog but provides no river-specific fish taxa or survey. The 2017 author-uploaded preprint adds historical interview/observation leads for MalaquingIlog and Maasin Rivers in Sariaya, but peer-review, field date, site-linked voucher, taxonomy, and public reuse remain unresolved. The Bay/LLDA/Makiling crosswalk adds source-named waters and two thesis-derived creek leads; Bay municipal common-name reports and multi-creek thesis fish summaries do not provide taxonomically and spatially resolved, reusable evidence for a place-specific checklist. No fish assertions were admitted for these leads.",
       "nextAction": "Join only independently reviewed evidence at its supported geographic scale."
     },
     {
       "id": "identity-and-geometry",
       "status": "open",
-      "count": 134,
-      "reason": "No validated waterbody geometry or precise point assignment has been created for 134 selected leads. Sakang and Tagkawayan River are source-named freshwater leads only; the Water District narrative does not provide a verified route. Nasugbu Bay is a source-named fishing-ground lead only; the NFRDI handbook does not provide a boundary or capture coordinates. Existing grouped springs remain unsplit, historical station points and project footprints do not delimit whole waterbodies, and repeated names, compound river names, source-era localities, and watershed-versus-channel identity remain under review. The Kaliwa-Kanan-Agos research unit is source-named at system scale but has no validated system/channel geometry or station coordinates. Four Quezon profile river-name leads were added without channel traces or precise reach crosswalks. Sariaya sources now crosswalk MalaquingIlog at name/locality level and link MalakingIlog/Malaking-Ilog at basin-name level; the likely atlas-channel/principal-basin system relationship remains an inference because no route-scale source verifies topology or geometry.",
+      "count": 140,
+      "reason": "No validated waterbody geometry or precise point assignment has been created for 138 selected leads. Sakang and Tagkawayan River are source-named freshwater leads only; the Water District narrative does not provide a verified route. Nasugbu Bay is a source-named fishing-ground lead only; the NFRDI handbook does not provide a boundary or capture coordinates. Existing grouped springs remain unsplit, historical station points and project footprints do not delimit whole waterbodies, and repeated names, compound river names, source-era localities, and watershed-versus-channel identity remain under review. The Kaliwa-Kanan-Agos research unit is source-named at system scale but has no validated system/channel geometry or station coordinates. Four Quezon profile river-name leads were added without channel traces or precise reach crosswalks. Sariaya sources now crosswalk MalaquingIlog at name/locality level and link MalakingIlog/Malaking-Ilog at basin-name level; the likely atlas-channel/principal-basin system relationship remains an inference because no route-scale source verifies topology or geometry. New Bay/LLDA/Makiling source crosswalks reconcile Cambantoc/Calo locally, retain Bay River aliases, and add Maitim, Anos and Callos research leads; no verified channel geometry is supplied. Maitem/Maitim and Dampit/Dampalit remain unresolved name pairs.",
       "nextAction": "Reconcile stable identities and source-era/current geography before map display."
     },
     {

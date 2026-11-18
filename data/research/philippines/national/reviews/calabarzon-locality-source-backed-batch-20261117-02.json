@@ -1,0 +1,815 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "calabarzon-locality-source-backed-batch-20261117-02",
+  "reviewedOn": "2026-11-17",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "status": "second-source-backed-locality-batch-applied;scope-not-frozen;geometry-unverified",
+  "question": "Which remaining CALABARZON waterbody leads have explicitly source-named locality contexts that can be linked to a working PSA PSGC city or municipality code without inferring a route or boundary?",
+  "sourceIds": [
+    "bacoor-city-clup-ecological-profile-inland-waters",
+    "bmb-efoi-palsabangon-mangrove-species-request-2023",
+    "cavite-ecological-profile-2024-fisheries",
+    "denr-bmb-inland-wetlands-atlas-2016",
+    "denr-calabarzon-matandang-sabang-wcva-presentation-2025",
+    "depdev-calabarzon-rpfp-2004-2030-vol2",
+    "emb-national-sober-2016-2021-silongin-river",
+    "guinayangan-crmp-2004-crm-learning-destinations",
+    "guinayangan-water-district-annual-report-2024",
+    "iirr-guinayangan-watershed-tributaries-brief",
+    "janssen-padilla-1997-pagbilao-experimental-mangrove-study",
+    "jica-2017-cavite-flood-mitigation-eia-aquatic-ecology",
+    "nga-pub162-2025-vinas-river",
+    "pea-boulevard-2000-framework-plan-umiray-uatp-context",
+    "pinto-1987-pagbilao-juvenile-fish-survey",
+    "psa-calabarzon-cities-list",
+    "psa-calabarzon-directory",
+    "psa-calabarzon-municipalities-list",
+    "senate-eo-78-1947-kabibihan-boundary",
+    "tagkawayan-lgu-2026-sakang-river-community-action"
+  ],
+  "inputs": [
+    "data/research/philippines/calabarzon-scope.json",
+    "data/research/philippines/national/reviews/calabarzon-administrative-denominator-reconciliation-20261117.json",
+    "data/research/philippines/national/reviews/calabarzon-locality-source-backed-batch-20261117.json",
+    "data/research/philippines/calabarzon-bacoor-inland-waterbody-crosswalk-20261026.json",
+    "data/research/philippines/calabarzon-bmb-2016-table-visual-review-20261024.json",
+    "data/research/philippines/calabarzon-cavite-2024-major-rivers-crosswalk-20261026.json",
+    "data/research/philippines/calabarzon-guinayangan-capuluan-palad-reef-crosswalk-review-20261101.json",
+    "data/research/philippines/calabarzon-guinayangan-freshwater-source-crosswalk-20261030.json",
+    "data/research/philippines/calabarzon-guinayangan-mspl-tributaries-crosswalk-20261030.json",
+    "data/research/philippines/calabarzon-kabibihan-river-system-review-20261030.json",
+    "data/research/philippines/calabarzon-matandang-sabang-wcva-fish-source-discovery-20261102.json",
+    "data/research/philippines/calabarzon-mctep-s5-yangyang-maalimango-fish-review-20261101.json",
+    "data/research/philippines/calabarzon-pagbilao-1997-fisheries-chapter-review-20261104.json",
+    "data/research/philippines/calabarzon-pagbilao-mangrove-fish-evidence-review-20261102.json",
+    "data/research/philippines/calabarzon-quezon-anibawan-advisory-crosswalk-20261101.json",
+    "data/research/philippines/calabarzon-quezon-catanauan-advisory-crosswalk-20261101.json",
+    "data/research/philippines/calabarzon-quezon-vinas-advisory-crosswalk-20261101.json",
+    "data/research/philippines/calabarzon-sariaya-malaquing-ilog-atlas-crosswalk-20261101.json",
+    "data/research/philippines/calabarzon-silongin-river-fish-survey-discovery-review-20261102.json",
+    "data/research/philippines/calabarzon-taghawayan-sakang-river-fish-search-review-20261101.json",
+    "data/research/philippines/calabarzon-acha-reef-locality-extent-conflict-review-20261101.json",
+    "data/research/philippines/calabarzon-quezon-upper-umiray-advisory-crosswalk-20261101.json"
+  ],
+  "snapshotHashes": {
+    "scopeBeforeSecondBatch": "398d778b17bcc2aac119a6c8b6c87a73d840f7edabd3c75f18af4a06c13d04d2",
+    "calabarzonScope": "940cce671cfb368a62c1555b2e447c3e37068c3e056613d283c9c24eabadd27b",
+    "administrativeDenominator": "0688d4bf58dd848571c23cbc09f2bbb71244aace0f5842bb59ee473f483f7ce0",
+    "previousLocalityBatch": "e5f41f800bb760bdfcf890eafec553166408b57f37e321d71210c66f37d10159",
+    "sourceReviews": {
+      "data/research/philippines/calabarzon-bacoor-inland-waterbody-crosswalk-20261026.json": "424c14697f8ecbff640edd5a1104a63e8bd192aac15459b8a9b8e6389469c3b3",
+      "data/research/philippines/calabarzon-bmb-2016-table-visual-review-20261024.json": "14cb8c4d748953f676a8f7e04898b016dacd70a8ef8fcfb653615f0adae4c126",
+      "data/research/philippines/calabarzon-cavite-2024-major-rivers-crosswalk-20261026.json": "1a3946677bf5bd02de3b77f13304f46d74227fe80aa4018dfe20621cf42233be",
+      "data/research/philippines/calabarzon-guinayangan-capuluan-palad-reef-crosswalk-review-20261101.json": "130b8043420e2237a032a3957831400d4d2569cfdeb7e4b946f91740fe9a9804",
+      "data/research/philippines/calabarzon-guinayangan-freshwater-source-crosswalk-20261030.json": "f6c8ff8e1fd550edd2ead1b8ca9132033489f53e1434be2234181796365ab97b",
+      "data/research/philippines/calabarzon-guinayangan-mspl-tributaries-crosswalk-20261030.json": "150d05b44ffc66f3caa86e7c987c8f4012bb3955b18d61a0ff717f87c319c038",
+      "data/research/philippines/calabarzon-kabibihan-river-system-review-20261030.json": "deda617963c85132862943f62229d30ec009441602347983ef44165e1fab522c",
+      "data/research/philippines/calabarzon-matandang-sabang-wcva-fish-source-discovery-20261102.json": "2abc0409e7171e3d366646eb505883cacecb594234d3f0708f0b4bf5bf1c88e4",
+      "data/research/philippines/calabarzon-mctep-s5-yangyang-maalimango-fish-review-20261101.json": "de953a701e9235454bacd90cc348d89171e11138a6e58977626b926bedd12ff2",
+      "data/research/philippines/calabarzon-pagbilao-1997-fisheries-chapter-review-20261104.json": "f32394f7e9eb6fa528791805e1d5e946253a3ef5e9cdd5899193a3372342edb6",
+      "data/research/philippines/calabarzon-pagbilao-mangrove-fish-evidence-review-20261102.json": "b70daa15c7d0b47181cfcc7387d49290a0bf9c67bd5804a16f36e2e83d8dfc78",
+      "data/research/philippines/calabarzon-quezon-anibawan-advisory-crosswalk-20261101.json": "81a9dd61495b88d7720f215a5d4fd64750f2df36b170547a6b08efed02e081e1",
+      "data/research/philippines/calabarzon-quezon-catanauan-advisory-crosswalk-20261101.json": "6339e33ede4c2cee76c07327fb75d00e76be741b24c7acc6ec88279c1fcaac50",
+      "data/research/philippines/calabarzon-quezon-vinas-advisory-crosswalk-20261101.json": "85889f8fc192c542dded065a9aa6433dcbd1f7ddb0fc1e8473942e72cd65d77a",
+      "data/research/philippines/calabarzon-sariaya-malaquing-ilog-atlas-crosswalk-20261101.json": "e6b96f98176367ad51951e29febf2d33d72d640f3004133a5aec24463d4b45bb",
+      "data/research/philippines/calabarzon-silongin-river-fish-survey-discovery-review-20261102.json": "484eb01dd95ca7f0785ea5f23cfa06a94e1c2868ed8567187aea7f2f007bd228",
+      "data/research/philippines/calabarzon-taghawayan-sakang-river-fish-search-review-20261101.json": "ed5113aa9ba5e9c2b4687fd9250b1dd8bdefbebacde72f18e0d8b8d7ed2828d8",
+      "data/research/philippines/calabarzon-acha-reef-locality-extent-conflict-review-20261101.json": "68f7b7833c47e0dae92d1fcb674da4c8c44e4cc5450fbb4496e52f82053cd772",
+      "data/research/philippines/calabarzon-quezon-upper-umiray-advisory-crosswalk-20261101.json": "a3b0ab87b8f50d6bd444877402f00704c5e3bf276bf96b7b737312988f14342e"
+    }
+  },
+  "method": "Reviewed the source locality wording already transcribed on each scoped waterbody and the linked source crosswalk, then attached only exact named locality labels to their enumerated 10-digit PSGC city or municipality codes. Replaced broad province-only associations with source-locality-specific rows where one source named several localities. No route, polygon, boundary, species, or public record was inferred.",
+  "counts": {
+    "waterbodyResearchLeads": 158,
+    "leadsUpdatedThisBatch": 38,
+    "localityCodeAssignmentsThisBatch": 55,
+    "associationRowsBeforeUpdate": 181,
+    "associationRowsAfterUpdate": 195,
+    "additionalAssociationRows": 14,
+    "cityCodedLeadsAfterUpdate": 15,
+    "uniqueCityCodesPresentAfterUpdate": 12,
+    "cityCodeDenominator": 22,
+    "municipalityCodedLeadsAfterUpdate": 38,
+    "uniqueMunicipalityCodesPresentAfterUpdate": 23,
+    "municipalityCodeDenominator": 120,
+    "leadsStillProvinceOnly": 106,
+    "leadsStillWithoutAnyLocalityCode": 4,
+    "geometryValidated": 0,
+    "publicRecordsAdmitted": 0,
+    "scopeFrozen": false
+  },
+  "assignments": [
+    {
+      "waterbodyId": "ph-wb-zapote-river",
+      "sourceId": "bacoor-city-clup-ecological-profile-inland-waters",
+      "reviewPath": "data/research/philippines/calabarzon-bacoor-inland-waterbody-crosswalk-20261026.json",
+      "sourceLocality": "Bacoor City boundary and adjoining Las Piñas City; the profile names Bacoor barangays along its course.",
+      "codes": [
+        {
+          "level": "city",
+          "psgcCode": "0402103000",
+          "name": "City of Bacoor",
+          "locality": "Bacoor City (Bacoor-side locality only)"
+        }
+      ],
+      "limit": "The code records the named Bacoor side; the Las Piñas side and complete channel are not resolved here."
+    },
+    {
+      "waterbodyId": "ph-wb-ilat-creek",
+      "sourceId": "bacoor-city-clup-ecological-profile-inland-waters",
+      "reviewPath": "data/research/philippines/calabarzon-bacoor-inland-waterbody-crosswalk-20261026.json",
+      "sourceLocality": "The profile describes a tributary to Zapote River that comes from the Dasmariñas City area.",
+      "codes": [
+        {
+          "level": "city",
+          "psgcCode": "0402106000",
+          "name": "City of Dasmariñas",
+          "locality": "Dasmariñas City area"
+        }
+      ],
+      "limit": "The source gives an area-level creek context, not a surveyed route."
+    },
+    {
+      "waterbodyId": "ph-wb-daang-bukid-creek",
+      "sourceId": "bacoor-city-clup-ecological-profile-inland-waters",
+      "reviewPath": "data/research/philippines/calabarzon-bacoor-inland-waterbody-crosswalk-20261026.json",
+      "sourceLocality": "Bacoor City; the profile describes it as a Bacoor River tributary crossing several coastal barangays.",
+      "codes": [
+        {
+          "level": "city",
+          "psgcCode": "0402103000",
+          "name": "City of Bacoor",
+          "locality": "Bacoor City"
+        }
+      ],
+      "limit": "The locality code does not define the creek route or the named barangay segments."
+    },
+    {
+      "waterbodyId": "ph-wb-san-juan-river-cavite",
+      "sourceId": "cavite-ecological-profile-2024-fisheries",
+      "reviewPath": "data/research/philippines/calabarzon-cavite-2024-major-rivers-crosswalk-20261026.json",
+      "sourceLocality": "The 2024 Cavite profile describes a course from Maitim, Amadeo through Silang and General Trias to Noveleta and Kawit.",
+      "codes": [
+        {
+          "level": "municipality",
+          "psgcCode": "0402102000",
+          "name": "Amadeo",
+          "locality": "Maitim, Amadeo"
+        },
+        {
+          "level": "municipality",
+          "psgcCode": "0402118000",
+          "name": "Silang",
+          "locality": "Silang"
+        },
+        {
+          "level": "city",
+          "psgcCode": "0402108000",
+          "name": "City of General Trias",
+          "locality": "General Trias"
+        },
+        {
+          "level": "municipality",
+          "psgcCode": "0402116000",
+          "name": "Noveleta",
+          "locality": "Noveleta"
+        },
+        {
+          "level": "municipality",
+          "psgcCode": "0402111000",
+          "name": "Kawit",
+          "locality": "Kawit"
+        }
+      ],
+      "limit": "The reported course/locality prose is not channel geometry; this Cavite river remains separate from the San Juan River lead in Laguna/Batangas."
+    },
+    {
+      "waterbodyId": "ph-wb-labac-river-cavite",
+      "sourceId": "cavite-ecological-profile-2024-fisheries",
+      "reviewPath": "data/research/philippines/calabarzon-cavite-2024-major-rivers-crosswalk-20261026.json",
+      "sourceLocality": "The 2024 Cavite profile names routes through Indang, Mendez and Naic and drainage toward Manila Bay.",
+      "codes": [
+        {
+          "level": "municipality",
+          "psgcCode": "0402110000",
+          "name": "Indang",
+          "locality": "Indang"
+        },
+        {
+          "level": "municipality",
+          "psgcCode": "0402114000",
+          "name": "Mendez",
+          "locality": "Mendez"
+        },
+        {
+          "level": "municipality",
+          "psgcCode": "0402115000",
+          "name": "Naic",
+          "locality": "Naic"
+        }
+      ],
+      "limit": "The source describes localities and river length, not a verified route or geometry."
+    },
+    {
+      "waterbodyId": "ph-wb-maalimango-river-cavite",
+      "sourceId": "jica-2017-cavite-flood-mitigation-eia-aquatic-ecology",
+      "reviewPath": "data/research/philippines/calabarzon-mctep-s5-yangyang-maalimango-fish-review-20261101.json",
+      "sourceLocality": "The JICA-hosted EIA locates its Maalimango River mouth station at Barangay Ligtong I, Rosario, Cavite.",
+      "codes": [
+        {
+          "level": "municipality",
+          "psgcCode": "0402117000",
+          "name": "Rosario",
+          "locality": "Barangay Ligtong I, Rosario (mouth station only)"
+        }
+      ],
+      "limit": "The code describes one historical mouth station locality, not the full river extent or a river-wide salinity class."
+    },
+    {
+      "waterbodyId": "ph-wb-binan-calabarzon-river",
+      "sourceId": "denr-bmb-inland-wetlands-atlas-2016",
+      "reviewPath": "data/research/philippines/calabarzon-bmb-2016-table-visual-review-20261024.json",
+      "sourceLocality": "The visually reviewed Atlas row names City of Biñan; Carmona; Carmonan; GMA; and Silang across Laguna and Cavite.",
+      "codes": [
+        {
+          "level": "city",
+          "psgcCode": "0403403000",
+          "name": "City of Biñan",
+          "locality": "City of Biñan (explicit Atlas locality; Carmona/Carmonan crosswalk held)"
+        },
+        {
+          "level": "municipality",
+          "psgcCode": "0402118000",
+          "name": "Silang",
+          "locality": "Silang, Cavite (explicit Atlas locality; Carmonan and GMA left unresolved)"
+        }
+      ],
+      "limit": "The source-era locality row is visually continued across two provinces; the Carmonan spelling and GMA expansion remain unresolved, and no river route is inferred."
+    },
+    {
+      "waterbodyId": "ph-wb-santa-rosa-laguna-river",
+      "sourceId": "denr-bmb-inland-wetlands-atlas-2016",
+      "reviewPath": "data/research/philippines/calabarzon-bmb-2016-table-visual-review-20261024.json",
+      "sourceLocality": "The visually reviewed Atlas row lists City of Santa Rosa and City of Biñan in Laguna, then Dasmariñas and Silang in Cavite.",
+      "codes": [
+        {
+          "level": "city",
+          "psgcCode": "0403428000",
+          "name": "City of Santa Rosa",
+          "locality": "City of Santa Rosa, Laguna"
+        },
+        {
+          "level": "city",
+          "psgcCode": "0403403000",
+          "name": "City of Biñan",
+          "locality": "City of Biñan, Laguna"
+        },
+        {
+          "level": "city",
+          "psgcCode": "0402106000",
+          "name": "City of Dasmariñas",
+          "locality": "Dasmariñas, Cavite"
+        },
+        {
+          "level": "municipality",
+          "psgcCode": "0402118000",
+          "name": "Silang",
+          "locality": "Silang, Cavite"
+        }
+      ],
+      "limit": "These are source-listed municipality/city contexts only; the exact channel reach and geometry remain unresolved."
+    },
+    {
+      "waterbodyId": "ph-wb-sakang-river-tagkawayan",
+      "sourceId": "tagkawayan-lgu-2026-sakang-river-community-action",
+      "reviewPath": "data/research/philippines/calabarzon-taghawayan-sakang-river-fish-search-review-20261101.json",
+      "sourceLocality": "The 2026 LGU notice names Sakang River in Barangay San Vicente, Tagkawayan.",
+      "codes": [
+        {
+          "level": "municipality",
+          "psgcCode": "0405646000",
+          "name": "Tagkawayan",
+          "locality": "Barangay San Vicente, Tagkawayan"
+        }
+      ],
+      "limit": "This is a source-located locality mention; the full route remains undelineated."
+    },
+    {
+      "waterbodyId": "ph-wb-hinabaan-river-quezon",
+      "sourceId": "guinayangan-water-district-annual-report-2024",
+      "reviewPath": "data/research/philippines/calabarzon-guinayangan-freshwater-source-crosswalk-20261030.json",
+      "sourceLocality": "Barangay Balinarin/Hinabaan, Guinayangan, Quezon.",
+      "codes": [
+        {
+          "level": "municipality",
+          "psgcCode": "0405618000",
+          "name": "Guinayangan",
+          "locality": "Barangay Balinarin/Hinabaan, Guinayangan"
+        }
+      ],
+      "limit": "The municipality is source-named; the watercourse line and fish evidence are not established."
+    },
+    {
+      "waterbodyId": "ph-wb-vinas-river-quezon",
+      "sourceId": "nga-pub162-2025-vinas-river",
+      "reviewPath": "data/research/philippines/calabarzon-quezon-vinas-advisory-crosswalk-20261101.json",
+      "sourceLocality": "The reviewed source wording places Viñas River in the Guinayangan-Tagkawayan context.",
+      "codes": [
+        {
+          "level": "municipality",
+          "psgcCode": "0405618000",
+          "name": "Guinayangan",
+          "locality": "Guinayangan, Quezon (source-named side)"
+        },
+        {
+          "level": "municipality",
+          "psgcCode": "0405646000",
+          "name": "Tagkawayan",
+          "locality": "Tagkawayan, Quezon (source-named side)"
+        }
+      ],
+      "limit": "The locality pair is not a surveyed route or a precise reach boundary."
+    },
+    {
+      "waterbodyId": "ph-wb-hiwasayan-river-guinayangan",
+      "sourceId": "iirr-guinayangan-watershed-tributaries-brief",
+      "reviewPath": "data/research/philippines/calabarzon-guinayangan-mspl-tributaries-crosswalk-20261030.json",
+      "sourceLocality": "Guinayangan, Quezon; the source describes a route from Maulawin Spring Protected Landscape through named barangays to the coast.",
+      "codes": [
+        {
+          "level": "municipality",
+          "psgcCode": "0405618000",
+          "name": "Guinayangan",
+          "locality": "Guinayangan, Quezon"
+        }
+      ],
+      "limit": "The source names Guinayangan locality context, not a full waterbody boundary or route."
+    },
+    {
+      "waterbodyId": "ph-wb-maulawin-river-guinayangan",
+      "sourceId": "iirr-guinayangan-watershed-tributaries-brief",
+      "reviewPath": "data/research/philippines/calabarzon-guinayangan-mspl-tributaries-crosswalk-20261030.json",
+      "sourceLocality": "Maulawin Spring Protected Landscape and central/coastal barangays of Guinayangan, Quezon; reach not separated.",
+      "codes": [
+        {
+          "level": "municipality",
+          "psgcCode": "0405618000",
+          "name": "Guinayangan",
+          "locality": "Guinayangan, Quezon"
+        }
+      ],
+      "limit": "The source names Guinayangan locality context, not a full waterbody boundary or route."
+    },
+    {
+      "waterbodyId": "ph-wb-prensa-creek-guinayangan",
+      "sourceId": "iirr-guinayangan-watershed-tributaries-brief",
+      "reviewPath": "data/research/philippines/calabarzon-guinayangan-mspl-tributaries-crosswalk-20261030.json",
+      "sourceLocality": "Maulawin Spring Protected Landscape and central/coastal barangays of Guinayangan, Quezon; reach not separated.",
+      "codes": [
+        {
+          "level": "municipality",
+          "psgcCode": "0405618000",
+          "name": "Guinayangan",
+          "locality": "Guinayangan, Quezon"
+        }
+      ],
+      "limit": "The source names Guinayangan locality context, not a full waterbody boundary or route."
+    },
+    {
+      "waterbodyId": "ph-wb-sisi-creek-guinayangan",
+      "sourceId": "iirr-guinayangan-watershed-tributaries-brief",
+      "reviewPath": "data/research/philippines/calabarzon-guinayangan-mspl-tributaries-crosswalk-20261030.json",
+      "sourceLocality": "Maulawin Spring Protected Landscape and central/coastal barangays of Guinayangan, Quezon; reach not separated.",
+      "codes": [
+        {
+          "level": "municipality",
+          "psgcCode": "0405618000",
+          "name": "Guinayangan",
+          "locality": "Guinayangan, Quezon"
+        }
+      ],
+      "limit": "The source names Guinayangan locality context, not a full waterbody boundary or route."
+    },
+    {
+      "waterbodyId": "ph-wb-maulawin-itaas-spring-guinayangan",
+      "sourceId": "guinayangan-water-district-annual-report-2024",
+      "reviewPath": "data/research/philippines/calabarzon-guinayangan-freshwater-source-crosswalk-20261030.json",
+      "sourceLocality": "Barangay Calimpak/Sisi, Guinayangan, Quezon.",
+      "codes": [
+        {
+          "level": "municipality",
+          "psgcCode": "0405618000",
+          "name": "Guinayangan",
+          "locality": "Barangay Calimpak/Sisi, Guinayangan"
+        }
+      ],
+      "limit": "The annual report names a spring source locality; it does not establish spring geometry, fish, or water safety."
+    },
+    {
+      "waterbodyId": "ph-wb-maulawin-ibaba-spring-guinayangan",
+      "sourceId": "guinayangan-water-district-annual-report-2024",
+      "reviewPath": "data/research/philippines/calabarzon-guinayangan-freshwater-source-crosswalk-20261030.json",
+      "sourceLocality": "Barangay Calimpak/Sisi, Guinayangan, Quezon.",
+      "codes": [
+        {
+          "level": "municipality",
+          "psgcCode": "0405618000",
+          "name": "Guinayangan",
+          "locality": "Barangay Calimpak/Sisi, Guinayangan"
+        }
+      ],
+      "limit": "The annual report names a spring source locality; it does not establish spring geometry, fish, or water safety."
+    },
+    {
+      "waterbodyId": "ph-wb-san-pedro-i-springs-guinayangan",
+      "sourceId": "guinayangan-water-district-annual-report-2024",
+      "reviewPath": "data/research/philippines/calabarzon-guinayangan-freshwater-source-crosswalk-20261030.json",
+      "sourceLocality": "Barangay San Pedro I, Guinayangan, Quezon.",
+      "codes": [
+        {
+          "level": "municipality",
+          "psgcCode": "0405618000",
+          "name": "Guinayangan",
+          "locality": "Barangay San Pedro I, Guinayangan"
+        }
+      ],
+      "limit": "The annual report names a spring source locality; it does not establish spring geometry, fish, or water safety."
+    },
+    {
+      "waterbodyId": "ph-wb-bahokhok-springs-guinayangan",
+      "sourceId": "guinayangan-water-district-annual-report-2024",
+      "reviewPath": "data/research/philippines/calabarzon-guinayangan-freshwater-source-crosswalk-20261030.json",
+      "sourceLocality": "Barangay Dungawan Paalyunan, Guinayangan, Quezon.",
+      "codes": [
+        {
+          "level": "municipality",
+          "psgcCode": "0405618000",
+          "name": "Guinayangan",
+          "locality": "Barangay Dungawan Paalyunan, Guinayangan"
+        }
+      ],
+      "limit": "The annual report names a spring source locality; it does not establish spring geometry, fish, or water safety."
+    },
+    {
+      "waterbodyId": "ph-wb-sta-cruz-spring-rosales-guinayangan",
+      "sourceId": "guinayangan-water-district-annual-report-2024",
+      "reviewPath": "data/research/philippines/calabarzon-guinayangan-freshwater-source-crosswalk-20261030.json",
+      "sourceLocality": "Barangay Sta. Cruz, Guinayangan, Quezon.",
+      "codes": [
+        {
+          "level": "municipality",
+          "psgcCode": "0405618000",
+          "name": "Guinayangan",
+          "locality": "Barangay Sta. Cruz, Guinayangan"
+        }
+      ],
+      "limit": "The annual report names a spring source locality; it does not establish spring geometry, fish, or water safety."
+    },
+    {
+      "waterbodyId": "ph-wb-sta-cruz-spring-marjes-guinayangan",
+      "sourceId": "guinayangan-water-district-annual-report-2024",
+      "reviewPath": "data/research/philippines/calabarzon-guinayangan-freshwater-source-crosswalk-20261030.json",
+      "sourceLocality": "Barangay Sta. Cruz, Guinayangan, Quezon.",
+      "codes": [
+        {
+          "level": "municipality",
+          "psgcCode": "0405618000",
+          "name": "Guinayangan",
+          "locality": "Barangay Sta. Cruz, Guinayangan"
+        }
+      ],
+      "limit": "The annual report names a spring source locality; it does not establish spring geometry, fish, or water safety."
+    },
+    {
+      "waterbodyId": "ph-wb-san-antonio-spring-guinayangan",
+      "sourceId": "guinayangan-water-district-annual-report-2024",
+      "reviewPath": "data/research/philippines/calabarzon-guinayangan-freshwater-source-crosswalk-20261030.json",
+      "sourceLocality": "Barangay San Antonio, Guinayangan, Quezon.",
+      "codes": [
+        {
+          "level": "municipality",
+          "psgcCode": "0405618000",
+          "name": "Guinayangan",
+          "locality": "Barangay San Antonio, Guinayangan"
+        }
+      ],
+      "limit": "The annual report names a spring source locality; it does not establish spring geometry, fish, or water safety."
+    },
+    {
+      "waterbodyId": "ph-wb-nabangka-fish-sanctuary-guinayangan",
+      "sourceId": "guinayangan-crmp-2004-crm-learning-destinations",
+      "reviewPath": "data/research/philippines/calabarzon-guinayangan-capuluan-palad-reef-crosswalk-review-20261101.json",
+      "sourceLocality": "Barangay Capuluan Central, Guinayangan, Quezon.",
+      "codes": [
+        {
+          "level": "municipality",
+          "psgcCode": "0405618000",
+          "name": "Guinayangan",
+          "locality": "Barangay Capuluan Central, Guinayangan"
+        }
+      ],
+      "limit": "The code records the source-named locality only; sanctuary status, legal rules, boundary, and access are not updated by this linkage."
+    },
+    {
+      "waterbodyId": "ph-wb-kabibihan-river-system-quezon",
+      "sourceId": "senate-eo-78-1947-kabibihan-boundary",
+      "reviewPath": "data/research/philippines/calabarzon-kabibihan-river-system-review-20261030.json",
+      "sourceLocality": "Executive Order No. 78 (1947) names Kabibihan River as the line between Tagkawayan and Guinayangan.",
+      "codes": [
+        {
+          "level": "municipality",
+          "psgcCode": "0405646000",
+          "name": "Tagkawayan",
+          "locality": "Tagkawayan side of the source-described administrative boundary"
+        },
+        {
+          "level": "municipality",
+          "psgcCode": "0405618000",
+          "name": "Guinayangan",
+          "locality": "Guinayangan side of the source-described administrative boundary"
+        }
+      ],
+      "limit": "This administrative-boundary relationship does not define a surveyed river line or imply that the full river lies within either municipality.",
+      "relationship": "source-described-administrative-boundary"
+    },
+    {
+      "waterbodyId": "ph-wb-malakingilog-river-sariaya-quezon",
+      "sourceId": "denr-bmb-inland-wetlands-atlas-2016",
+      "reviewPath": "data/research/philippines/calabarzon-sariaya-malaquing-ilog-atlas-crosswalk-20261101.json",
+      "sourceLocality": "Sariaya, Quezon; source calls it a central river basin.",
+      "codes": [
+        {
+          "level": "municipality",
+          "psgcCode": "0405645000",
+          "name": "Sariaya",
+          "locality": "Sariaya, Quezon"
+        }
+      ],
+      "limit": "The municipality context is source-named; this code does not merge the named rivers/basins or infer channel geometry."
+    },
+    {
+      "waterbodyId": "ph-wb-malaquingilog-river-sariaya-quezon",
+      "sourceId": "denr-bmb-inland-wetlands-atlas-2016",
+      "reviewPath": "data/research/philippines/calabarzon-sariaya-malaquing-ilog-atlas-crosswalk-20261101.json",
+      "sourceLocality": "Sariaya, Quezon; the Atlas lists Malaquing Ilog River in Sariaya.",
+      "codes": [
+        {
+          "level": "municipality",
+          "psgcCode": "0405645000",
+          "name": "Sariaya",
+          "locality": "Sariaya, Quezon"
+        }
+      ],
+      "limit": "The municipality context is source-named; this code does not merge the named rivers/basins or infer channel geometry."
+    },
+    {
+      "waterbodyId": "ph-wb-maasin-river-sariaya-quezon",
+      "sourceId": "denr-bmb-inland-wetlands-atlas-2016",
+      "reviewPath": "data/research/philippines/calabarzon-sariaya-malaquing-ilog-atlas-crosswalk-20261101.json",
+      "sourceLocality": "Sariaya, Quezon; vicinity of Maasin River Bridge.",
+      "codes": [
+        {
+          "level": "municipality",
+          "psgcCode": "0405645000",
+          "name": "Sariaya",
+          "locality": "Sariaya, Quezon"
+        }
+      ],
+      "limit": "The municipality context is source-named; this code does not merge the named rivers/basins or infer channel geometry."
+    },
+    {
+      "waterbodyId": "ph-wb-catanauan-river-quezon",
+      "sourceId": "denr-bmb-inland-wetlands-atlas-2016",
+      "reviewPath": "data/research/philippines/calabarzon-quezon-catanauan-advisory-crosswalk-20261101.json",
+      "sourceLocality": "The BMB-DENR atlas lists Catanauan River in Catanauan, Quezon; a 2025 DPWH document independently names the same river and locality.",
+      "codes": [
+        {
+          "level": "municipality",
+          "psgcCode": "0405610000",
+          "name": "Catanauan",
+          "locality": "Catanauan, Quezon"
+        }
+      ],
+      "limit": "The source-name/locality link does not identify the precise affected reach or channel boundary."
+    },
+    {
+      "waterbodyId": "ph-wb-matandang-sabang-river-watershed-quezon",
+      "sourceId": "denr-calabarzon-matandang-sabang-wcva-presentation-2025",
+      "reviewPath": "data/research/philippines/calabarzon-matandang-sabang-wcva-fish-source-discovery-20261102.json",
+      "sourceLocality": "The DENR-CENRO/GRIDS assessment announcement says the Matandang Sabang River Watershed encompasses Catanauan, General Luna, Buenavista, and Lopez, Quezon.",
+      "codes": [
+        {
+          "level": "municipality",
+          "psgcCode": "0405610000",
+          "name": "Catanauan",
+          "locality": "Catanauan, Quezon (assessment area)"
+        },
+        {
+          "level": "municipality",
+          "psgcCode": "0405616000",
+          "name": "General Luna",
+          "locality": "General Luna, Quezon (assessment area)"
+        },
+        {
+          "level": "municipality",
+          "psgcCode": "0405605000",
+          "name": "Buenavista",
+          "locality": "Buenavista, Quezon (assessment area)"
+        },
+        {
+          "level": "municipality",
+          "psgcCode": "0405622000",
+          "name": "Lopez",
+          "locality": "Lopez, Quezon (assessment area)"
+        }
+      ],
+      "limit": "Codes represent the assessment-area localities only; they do not imply channel reaches in each municipality or establish a watershed polygon.",
+      "relationship": "source-described-watershed-assessment-area"
+    },
+    {
+      "waterbodyId": "ph-wb-silongin-river-san-francisco-quezon",
+      "sourceId": "emb-national-sober-2016-2021-silongin-river",
+      "reviewPath": "data/research/philippines/calabarzon-silongin-river-fish-survey-discovery-review-20261102.json",
+      "sourceLocality": "EMB lists Silongin River under San Francisco, Quezon; the provincial directory lists Silongin as a barangay there.",
+      "codes": [
+        {
+          "level": "municipality",
+          "psgcCode": "0405642000",
+          "name": "San Francisco",
+          "locality": "San Francisco, Quezon"
+        }
+      ],
+      "limit": "The source supports administrative locality context, not a channel route, current water quality, or fish claim."
+    },
+    {
+      "waterbodyId": "ph-wb-anibawan-river-quezon",
+      "sourceId": "denr-bmb-inland-wetlands-atlas-2016",
+      "reviewPath": "data/research/philippines/calabarzon-quezon-anibawan-advisory-crosswalk-20261101.json",
+      "sourceLocality": "The DENR-BMB Atlas lists Anibawan River in Burdeos, Panukulan, and Polillo, Quezon.",
+      "codes": [
+        {
+          "level": "municipality",
+          "psgcCode": "0405606000",
+          "name": "Burdeos",
+          "locality": "Burdeos, Quezon"
+        },
+        {
+          "level": "municipality",
+          "psgcCode": "0405631000",
+          "name": "Panukulan",
+          "locality": "Panukulan, Quezon"
+        },
+        {
+          "level": "municipality",
+          "psgcCode": "0405636000",
+          "name": "Polillo",
+          "locality": "Polillo, Quezon"
+        }
+      ],
+      "limit": "The source-listed municipalities are not a full route; the separately listed DPWH principal basin remains unmerged."
+    },
+    {
+      "waterbodyId": "ph-wb-pagbilao-mangrove-fish-survey-locality",
+      "sourceId": "pinto-1987-pagbilao-juvenile-fish-survey",
+      "reviewPath": "data/research/philippines/calabarzon-pagbilao-mangrove-fish-evidence-review-20261102.json",
+      "sourceLocality": "Historical survey sources identify mangroves at Pagbilao, Quezon.",
+      "codes": [
+        {
+          "level": "municipality",
+          "psgcCode": "0405630000",
+          "name": "Pagbilao",
+          "locality": "Pagbilao, Quezon"
+        }
+      ],
+      "limit": "This administrative code does not identify a specific mangrove forest, river, sampling station, or boundary."
+    },
+    {
+      "waterbodyId": "ph-wb-pagbilao-experimental-mangrove-forest",
+      "sourceId": "janssen-padilla-1997-pagbilao-experimental-mangrove-study",
+      "reviewPath": "data/research/philippines/calabarzon-pagbilao-1997-fisheries-chapter-review-20261104.json",
+      "sourceLocality": "The 1996/1997 IIED papers name the Pagbilao Experimental Mangrove Forest.",
+      "codes": [
+        {
+          "level": "municipality",
+          "psgcCode": "0405630000",
+          "name": "Pagbilao",
+          "locality": "Pagbilao, Quezon"
+        }
+      ],
+      "limit": "The named site has no adopted boundary or exact site geometry."
+    },
+    {
+      "waterbodyId": "ph-wb-pagbilao-palsabangon-river",
+      "sourceId": "janssen-padilla-1997-pagbilao-experimental-mangrove-study",
+      "reviewPath": "data/research/philippines/calabarzon-pagbilao-1997-fisheries-chapter-review-20261104.json",
+      "sourceLocality": "The report places Palsabangon River east of the Pagbilao experimental mangrove reserve.",
+      "codes": [
+        {
+          "level": "municipality",
+          "psgcCode": "0405630000",
+          "name": "Pagbilao",
+          "locality": "Pagbilao study-area context"
+        }
+      ],
+      "limit": "The study-area relationship does not define the channel extent or merge the river with a mangrove feature."
+    },
+    {
+      "waterbodyId": "ph-wb-pagbilao-sukol-creek",
+      "sourceId": "janssen-padilla-1997-pagbilao-experimental-mangrove-study",
+      "reviewPath": "data/research/philippines/calabarzon-pagbilao-1997-fisheries-chapter-review-20261104.json",
+      "sourceLocality": "The report identifies Sukol Creek within the Pagbilao experimental mangrove reserve study area.",
+      "codes": [
+        {
+          "level": "municipality",
+          "psgcCode": "0405630000",
+          "name": "Pagbilao",
+          "locality": "Pagbilao study-area context"
+        }
+      ],
+      "limit": "The study-area relationship does not provide exact stations or a creek boundary."
+    },
+    {
+      "waterbodyId": "ph-wb-palsabangon-mangrove-forest",
+      "sourceId": "bmb-efoi-palsabangon-mangrove-species-request-2023",
+      "reviewPath": "data/research/philippines/calabarzon-pagbilao-mangrove-fish-evidence-review-20261102.json",
+      "sourceLocality": "The BMB eFOI record names Palsabangon Mangrove Forest in Pagbilao, Quezon; a SEARCA abstract separately names Palsabangon, Pagbilao.",
+      "codes": [
+        {
+          "level": "municipality",
+          "psgcCode": "0405630000",
+          "name": "Pagbilao",
+          "locality": "Pagbilao, Quezon"
+        }
+      ],
+      "limit": "The named locality does not establish a boundary or merge the forest with the experimental mangrove site."
+    },
+    {
+      "waterbodyId": "ph-wb-acha-reef-tagkawayan",
+      "sourceId": "depdev-calabarzon-rpfp-2004-2030-vol2",
+      "reviewPath": "data/research/philippines/calabarzon-acha-reef-locality-extent-conflict-review-20261101.json",
+      "sourceLocality": "The official 2004-2030 CALABARZON framework plan identifies Acha Reef in Ragay Gulf, Tagkawayan, Quezon; a 2022 study describes it between Guinayangan and Tagkawayan.",
+      "codes": [
+        {
+          "level": "municipality",
+          "psgcCode": "0405646000",
+          "name": "Tagkawayan",
+          "locality": "2004 plan names Tagkawayan; a 2022 study also describes the reef between Tagkawayan and Guinayangan, so this does not imply exclusivity."
+        }
+      ],
+      "limit": "Source-named Tagkawayan context only; the 500-hectare report is not geometry, and the competing locality description remains visible."
+    },
+    {
+      "waterbodyId": "ph-wb-umiray-river-quezon",
+      "sourceId": "pea-boulevard-2000-framework-plan-umiray-uatp-context",
+      "reviewPath": "data/research/philippines/calabarzon-quezon-upper-umiray-advisory-crosswalk-20261101.json",
+      "sourceLocality": "The PRA framework-plan project profile names Barangay Umiray, General Nakar and Umiray River as a historical supply source.",
+      "codes": [
+        {
+          "level": "municipality",
+          "psgcCode": "0405617000",
+          "name": "General Nakar",
+          "locality": "Historical supply-source context: Barangay Umiray, General Nakar."
+        }
+      ],
+      "limit": "This historical source relationship does not locate the separate Upper Umiray advisory reach or define the full river route."
+    }
+  ],
+  "notAssignedThisBatch": [
+    {
+      "waterbodyId": "ph-wb-tagkawayan-river-quezon",
+      "reason": "The receiving-river relationship is described, but the reviewed wording does not directly name a municipality-locality for this river itself; no code is inferred from the waterbody name or the Sakang source municipality."
+    },
+    {
+      "waterbodyId": "ph-wb-macalelon-river-quezon",
+      "reason": "The river/watershed-council context does not resolve the river locality to a municipality-level channel reach in the reviewed source text."
+    },
+    {
+      "waterbodyId": "ph-wb-macalelon-principal-basin-4a",
+      "reason": "The principal basin and same-named river remain distinct; a river or council name does not allocate the basin to Macalelon municipality."
+    },
+    {
+      "waterbodyId": "ph-wb-yabahan-river-quezon",
+      "reason": "Reviewed sources disagree on whether the watercourse is in San Andres only or also San Francisco; preserve the conflict pending source adjudication."
+    },
+    {
+      "waterbodyId": "ph-wb-ragay-gulf-quezon",
+      "reason": "Monitoring and fishery sources provide site context, not a defensible municipal allocation or gulf boundary."
+    },
+    {
+      "waterbodyIds": [
+        "ph-wb-mamba-cacabay-river-protected-landscape",
+        "ph-wb-palicpican-river-protected-landscape"
+      ],
+      "reason": "The source describes protected-landscape context but does not assign each river reach to an individual municipality."
+    }
+  ],
+  "nonClaims": [
+    "A city/municipality code records a source-described locality or assessment-area relationship only; it is not a river route, watershed boundary, polygon, coordinate, fishing ground, access right, or legal municipal-water boundary.",
+    "Watershed and administrative-boundary relationships are labeled as such and do not imply that a whole channel or basin lies in every linked municipality.",
+    "No species assertion, current presence/absence, catchability, diet, safety, water-quality, fishing-rule, or public admission claim was created.",
+    "The 158-lead CALABARZON waterbody inventory remains incomplete and scopeFrozen remains false; the PSGC denominator is not a waterbody inventory.",
+    "City-coded and municipality-coded lead counts may overlap for a multi-locality waterbody; they are not mutually exclusive groups."
+  ],
+  "nextAction": "Continue the source-backed locality review across the 106 province-only leads, separately resolve the four leads without any locality code, reconcile missing waterbodies and shared-water relationships, and seek route-scale geometry only from sources with reusable terms."
+}

@@ -1,0 +1,225 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "calabarzon-makiling-bay-local-waterbody-fish-crosswalk-20261117",
+  "reviewedOn": "2026-11-17",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "regionName": "Region IV-A (CALABARZON)",
+  "status": "selected-primary-and-bibliographic-excerpts-reviewed;local-name-crosswalk-partial;aggregate-fish-evidence-held;scope-open;no-public-species-assertions",
+  "supersedesReviewIds": [
+    "calabarzon-llda-tributary-scope-crosswalk-20261117",
+    "calabarzon-llda-tributary-gbif-screen-20261117"
+  ],
+  "question": "What Bay and Mt. Makiling tributary/subwatershed names, aliases, localities, and fish-evidence limits can be crosswalked from LLDA, Bay municipal profiles, and institutional thesis summaries without assigning aggregate taxa to individual waterbodies?",
+  "sourceIds": [
+    "llda-laguna-de-bay-overview",
+    "bay-ecological-profile-2025-waterbodies",
+    "bay-cdp-ldip-ecological-profile-2026-2031",
+    "uplb-duya-makiling-thesis-summary-2011",
+    "fao-agris-cando-makiling-subwatershed-thesis-2014",
+    "gbif-calabarzon-llda-tributaries-exact-text-screen-20261117"
+  ],
+  "inputs": [
+    "data/research/philippines/calabarzon-scope.json",
+    "data/research/philippines/sources.json",
+    "data/research/philippines/luzon-completion-manifest.json",
+    "data/research/philippines/calabarzon-llda-tributary-gbif-screen-20261117.json"
+  ],
+  "snapshotHashes": {
+    "calabarzonScope": "3880081958acf13879ed823b154640351873d140a0c2fb79758e8233be01c214",
+    "sourceRegistry": "6810c4c6117c07656b83dd224e84dba0938c05732f31f21d62a3e2a642f5c1cf",
+    "luzonCompletionManifest": "c47f55e9015cf00899d431c8a998617a1d10afe07edeb3424635d211cc6b5e3b"
+  },
+  "method": [
+    "Reviewed accessible official LLDA text, indexed excerpts from official municipal/institutional PDFs, and the FAO AGRIS bibliographic summary. The Bay and UPLB PDFs returned HTTP 403 when opened directly in this review, so only indexed excerpts and summaries were used.",
+    "Recorded explicit source-backed alias and locality statements separately from inference. Source-named channels and subwatersheds remain research leads; no geometry was digitized from narrative or raster maps.",
+    "Kept aggregate fish lists, common-name observations, uncertain spelling pairs, historic database zero-result queries, and current/app species assertions separate. No taxa were assigned to individual creeks or admitted to the app."
+  ],
+  "counts": {
+    "sourceRecordsAdded": 4,
+    "sourceLabelsReviewedInFollowUp": 7,
+    "waterbodyLeadsBefore": 162,
+    "waterbodyLeadsAfter": 164,
+    "duplicateCaloLeadRemoved": 1,
+    "newWaterbodyLeadsAdded": 3,
+    "administrativeAssociationRowsBefore": 199,
+    "administrativeAssociationRowsAfter": 201,
+    "speciesAssertionsAdded": 0,
+    "geometryValidated": 0,
+    "publicRecordsAdmitted": 0
+  },
+  "sourceFindings": [
+    {
+      "sourceId": "llda-laguna-de-bay-overview",
+      "locator": "About the lake; Characteristics of the lake ecosystem; tributary list",
+      "finding": "LLDA reports about 100 rivers/streams and 22 significant river systems and names Bay, Calo, and Maitem Rivers in Bay, plus Molawin, Dampalit, and Pele Rivers in Los Baños. The page is not a verified exhaustive channel inventory."
+    },
+    {
+      "sourceId": "bay-ecological-profile-2025-waterbodies",
+      "locator": "Indexed Bay River and Cambantoc River excerpts",
+      "finding": "The municipal profile calls Cambantoc River Calo River in lowland areas, reports unspecified small fish, and mentions Bay River through Barangays San Agustin and San Nicolas. It does not provide verified channel geometry or an identified fish taxon."
+    },
+    {
+      "sourceId": "bay-cdp-ldip-ecological-profile-2026-2031",
+      "locator": "Indexed Bay River, Cambantoc/Calo, and Maitim River excerpts",
+      "finding": "The profile uses Ilog ng Bae and San Nicolas River as local names for Bay River, names Maitim River in Barangay Sto. Domingo, and reports common-name fish observations. It describes some hito/dalag as fishpond escapes. These labels are not taxonomically verified or admitted as species records."
+    },
+    {
+      "sourceId": "uplb-duya-makiling-thesis-summary-2011",
+      "locator": "Duya 2011 thesis summary in UPLB SESAM thesis list",
+      "finding": "The summary names Dampit, Anos, Callos, Molawin, Maitim, and Cambantoc-Calo within a study area collectively described as Los Baños and Bay. It reports 16 stations and an aggregate 11-taxon fish assemblage, but the summary has no site-by-taxon matrix. Dampit is not automatically merged with LLDA’s Dampalit."
+    },
+    {
+      "sourceId": "fao-agris-cando-makiling-subwatershed-thesis-2014",
+      "locator": "Abstract and bibliographic information",
+      "finding": "The thesis summary lists Dampalit, Anos, Callos, Molawin, Maitim, and Cambantoc-Calo; reports 14 stations sampled during November 2012–May 2013 and ten fish taxa across the study. Although two taxa are described as present at all stations, the accessible record does not provide the station-to-waterbody mapping needed for individual waterbody assertions."
+    },
+    {
+      "sourceId": "gbif-calabarzon-llda-tributaries-exact-text-screen-20261117",
+      "locator": "Eight exact-field queries retained in the linked screen review",
+      "finding": "Calo, Maitem, Dampalit, and Pele exact waterBody/locality searches each returned zero results. Calo is now linked to Cambantoc as an alias; the query did not test Maitim or Dampit, and zero results do not establish fish absence."
+    }
+  ],
+  "assignments": [
+    {
+      "sourceLabel": "Calo River",
+      "decision": "crosswalk-to-existing-lead-as-alias",
+      "waterbodyId": "ph-wb-cambantoc-makiling-river",
+      "sourceIds": [
+        "bay-ecological-profile-2025-waterbodies"
+      ],
+      "basis": "The Bay municipal profile explicitly says Cambantoc River is also called Calo River in lowland areas; remove the duplicate Calo lead."
+    },
+    {
+      "sourceLabel": "Bay River",
+      "decision": "retain-existing-lead-and-add-local-aliases",
+      "waterbodyId": "ph-wb-bay-laguna-river",
+      "aliases": [
+        "Ilog ng Bae",
+        "San Nicolas River"
+      ],
+      "sourceIds": [
+        "bay-ecological-profile-2025-waterbodies",
+        "bay-cdp-ldip-ecological-profile-2026-2031"
+      ],
+      "basis": "Bay municipal profile names local aliases and listed barangays; the full multi-locality route remains unresolved."
+    },
+    {
+      "sourceLabel": "Maitem River",
+      "decision": "retain-distinct-LLDA-lead-name-variant-unresolved",
+      "waterbodyId": "ph-wb-maitem-bay-river",
+      "sourceIds": [
+        "llda-laguna-de-bay-overview"
+      ],
+      "basis": "LLDA uses Maitem; Bay and Makiling sources use Maitim. No source explicitly establishes these spellings as the same river."
+    },
+    {
+      "sourceLabel": "Maitim River",
+      "decision": "add-distinct-source-named-lead",
+      "waterbodyId": "ph-wb-maitim-bay-river",
+      "sourceIds": [
+        "bay-cdp-ldip-ecological-profile-2026-2031",
+        "uplb-duya-makiling-thesis-summary-2011",
+        "fao-agris-cando-makiling-subwatershed-thesis-2014"
+      ],
+      "basis": "Bay profile locates Maitim River in Barangay Sto. Domingo; do not merge with Maitem absent explicit identity evidence."
+    },
+    {
+      "sourceLabel": "Anos Creek",
+      "decision": "add-research-lead-province-level-locality-only",
+      "waterbodyId": "ph-wb-anos-makiling-creek",
+      "sourceIds": [
+        "uplb-duya-makiling-thesis-summary-2011",
+        "fao-agris-cando-makiling-subwatershed-thesis-2014"
+      ],
+      "basis": "Thesis summaries name Anos in the collective Los Baños/Bay study area but do not identify a specific municipality or site-to-taxon rows."
+    },
+    {
+      "sourceLabel": "Callos Creek",
+      "decision": "add-research-lead-province-level-locality-only",
+      "waterbodyId": "ph-wb-callos-makiling-creek",
+      "sourceIds": [
+        "uplb-duya-makiling-thesis-summary-2011",
+        "fao-agris-cando-makiling-subwatershed-thesis-2014"
+      ],
+      "basis": "Thesis summaries name Callos in the collective Los Baños/Bay study area but do not identify a specific municipality or site-to-taxon rows."
+    },
+    {
+      "sourceLabel": "Dampit Creek",
+      "decision": "hold-possible-variant-unresolved;do-not-merge",
+      "waterbodyId": null,
+      "relatedWaterbodyId": "ph-wb-dampalit-los-banos-river",
+      "sourceIds": [
+        "uplb-duya-makiling-thesis-summary-2011",
+        "fao-agris-cando-makiling-subwatershed-thesis-2014"
+      ],
+      "basis": "UPLB’s summary spelling differs from LLDA and AGRIS Dampalit; the sources do not explicitly establish equivalence."
+    }
+  ],
+  "unresolvedLabels": [
+    {
+      "labels": [
+        "Maitem River",
+        "Maitim River"
+      ],
+      "issue": "Possible spelling/identity variant; remain separate until a primary source explicitly resolves it."
+    },
+    {
+      "labels": [
+        "Dampit Creek",
+        "Dampalit River"
+      ],
+      "issue": "Source spellings differ and may refer to distinct features; no alias or merge applied."
+    },
+    {
+      "labels": [
+        "Anos Creek",
+        "Callos Creek"
+      ],
+      "issue": "Specific municipality, channel route, and station locations are not exposed in reviewed summaries."
+    },
+    {
+      "labels": [
+        "Bay River",
+        "Ilog ng Bae",
+        "San Nicolas River"
+      ],
+      "issue": "Aliases are recorded for the Bay municipal profile context only; the broader regional route identity remains unresolved."
+    }
+  ],
+  "heldFishEvidence": [
+    {
+      "sourceId": "bay-ecological-profile-2025-waterbodies",
+      "waterbodyId": "ph-wb-cambantoc-makiling-river",
+      "reason": "Unspecified small-fish observation; no taxon, sampling method, date, or station."
+    },
+    {
+      "sourceId": "bay-cdp-ldip-ecological-profile-2026-2031",
+      "waterbodyId": "ph-wb-bay-laguna-river",
+      "reason": "Municipal common-name observations, with some fish explicitly described as fishpond escapes; no taxonomic validation, site-voucher crosswalk, or reuse determination."
+    },
+    {
+      "sourceId": "bay-cdp-ldip-ecological-profile-2026-2031",
+      "waterbodyId": "ph-wb-maitim-bay-river",
+      "reason": "Common-name fish list only; exact identity, method, dates, vouchers, and item-level reuse remain unreviewed."
+    },
+    {
+      "sourceId": "uplb-duya-makiling-thesis-summary-2011",
+      "waterbodyId": null,
+      "reason": "Aggregate 11-taxon list across multiple creeks; the accessible summary lacks per-waterbody allocation."
+    },
+    {
+      "sourceId": "fao-agris-cando-makiling-subwatershed-thesis-2014",
+      "waterbodyId": null,
+      "reason": "Aggregate ten-taxon list and all-station statements without station-to-waterbody mapping; do not attribute to each creek."
+    }
+  ],
+  "nonClaims": [
+    "No fish absence is inferred from the bounded GBIF zero-result screen.",
+    "No aggregate or common-name fish label is converted into a public species assertion.",
+    "No channel route, catchment polygon, salinity boundary, or municipal-water boundary is created from narrative text or PDF map imagery.",
+    "No alias is inferred for Maitem/Maitim or Dampit/Dampalit.",
+    "No fishing access, catchability, legal, current safety, or water-quality status is asserted."
+  ],
+  "nextAction": "Seek the full thesis station tables and item-level reuse terms through ordinary authorized access; request municipal confirmation of Maitem/Maitim and Dampit/Dampalit identity; obtain source-backed locality/station maps and separately licensed geometry; then review taxon identity, date, and site allocation before any app-facing projection."
+}

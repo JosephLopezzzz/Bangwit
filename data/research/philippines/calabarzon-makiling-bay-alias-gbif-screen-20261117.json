@@ -1,0 +1,268 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "calabarzon-makiling-bay-alias-gbif-screen-20261117",
+  "reviewedOn": "2026-11-17",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "regionName": "Region IV-A (CALABARZON)",
+  "status": "14-bounded-exact-field-queries-complete;two-historical-CAS-candidates-held;no-public-species-assertions",
+  "relatedReviewIds": [
+    "calabarzon-makiling-bay-local-waterbody-fish-crosswalk-20261117"
+  ],
+  "question": "Do exact GBIF CoL XR Actinopterygii waterBody/locality strings for Bay and Mt. Makiling waterbody labels and aliases return candidates that can be safely assigned to the named waters?",
+  "sourceIds": [
+    "gbif-cas-ichthyology",
+    "gbif-calabarzon-makiling-bay-alias-exact-screen-20261117",
+    "bay-cdp-ldip-ecological-profile-2026-2031"
+  ],
+  "inputs": [
+    "data/research/philippines/calabarzon-scope.json",
+    "data/research/philippines/sources.json",
+    "data/research/philippines/luzon-completion-manifest.json",
+    "data/research/philippines/calabarzon-makiling-bay-local-waterbody-fish-crosswalk-20261117.json"
+  ],
+  "snapshotHashes": {
+    "calabarzonScope": "cc19533e2ff17f5d4b24cd820ffe98afc65d066fe4dcc5304e4ff88dc7266e7b",
+    "sourceRegistry": "9cd5a4201a9faa46fb4bfd575a0b8d7cb5bc8cbbcea04e3053d0f548f8ad445c",
+    "luzonCompletionManifest": "c6b69d2c1a5c6c594a60b02e715a4b898cab01f98ab5f0b99730bca9d1d6e9d5",
+    "nameCrosswalkReview": "7a65e10f931a1f1e6b6ea99c7fdeb3a946564afb6f4f38d81ef29158c9f8cd91"
+  },
+  "queryDefinition": {
+    "endpoint": "https://api.gbif.org/v1/occurrence/search",
+    "country": "PH",
+    "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+    "taxonKey": "8VR36",
+    "taxonLabel": "Catalogue of Life XR Actinopterygii",
+    "countQueryLimit": 0,
+    "matching": "Exact supplied text in waterBody or locality; no fuzzy, coordinate, municipality, or all-source search.",
+    "candidateRetrievalUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&limit=20&waterBody=Bay+River"
+  },
+  "counts": {
+    "exactNameLabelsScreened": 7,
+    "queryCount": 14,
+    "http200Count": 14,
+    "zeroResultQueryCount": 13,
+    "nonzeroQueryCount": 1,
+    "returnedOccurrenceRows": 2,
+    "candidateRowsRetainedForReview": 2,
+    "waterbodySpeciesAssertionsAdded": 0,
+    "publicRecordsAdmitted": 0
+  },
+  "queries": [
+    {
+      "field": "waterBody",
+      "value": "Bay River",
+      "httpStatus": 200,
+      "count": 2,
+      "returnedRows": 0,
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&limit=0&waterBody=Bay+River"
+    },
+    {
+      "field": "locality",
+      "value": "Bay River",
+      "httpStatus": 200,
+      "count": 0,
+      "returnedRows": 0,
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&limit=0&locality=Bay+River"
+    },
+    {
+      "field": "waterBody",
+      "value": "Ilog ng Bae",
+      "httpStatus": 200,
+      "count": 0,
+      "returnedRows": 0,
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&limit=0&waterBody=Ilog+ng+Bae"
+    },
+    {
+      "field": "locality",
+      "value": "Ilog ng Bae",
+      "httpStatus": 200,
+      "count": 0,
+      "returnedRows": 0,
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&limit=0&locality=Ilog+ng+Bae"
+    },
+    {
+      "field": "waterBody",
+      "value": "San Nicolas River",
+      "httpStatus": 200,
+      "count": 0,
+      "returnedRows": 0,
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&limit=0&waterBody=San+Nicolas+River"
+    },
+    {
+      "field": "locality",
+      "value": "San Nicolas River",
+      "httpStatus": 200,
+      "count": 0,
+      "returnedRows": 0,
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&limit=0&locality=San+Nicolas+River"
+    },
+    {
+      "field": "waterBody",
+      "value": "Maitim River",
+      "httpStatus": 200,
+      "count": 0,
+      "returnedRows": 0,
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&limit=0&waterBody=Maitim+River"
+    },
+    {
+      "field": "locality",
+      "value": "Maitim River",
+      "httpStatus": 200,
+      "count": 0,
+      "returnedRows": 0,
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&limit=0&locality=Maitim+River"
+    },
+    {
+      "field": "waterBody",
+      "value": "Anos Creek",
+      "httpStatus": 200,
+      "count": 0,
+      "returnedRows": 0,
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&limit=0&waterBody=Anos+Creek"
+    },
+    {
+      "field": "locality",
+      "value": "Anos Creek",
+      "httpStatus": 200,
+      "count": 0,
+      "returnedRows": 0,
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&limit=0&locality=Anos+Creek"
+    },
+    {
+      "field": "waterBody",
+      "value": "Callos Creek",
+      "httpStatus": 200,
+      "count": 0,
+      "returnedRows": 0,
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&limit=0&waterBody=Callos+Creek"
+    },
+    {
+      "field": "locality",
+      "value": "Callos Creek",
+      "httpStatus": 200,
+      "count": 0,
+      "returnedRows": 0,
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&limit=0&locality=Callos+Creek"
+    },
+    {
+      "field": "waterBody",
+      "value": "Dampit Creek",
+      "httpStatus": 200,
+      "count": 0,
+      "returnedRows": 0,
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&limit=0&waterBody=Dampit+Creek"
+    },
+    {
+      "field": "locality",
+      "value": "Dampit Creek",
+      "httpStatus": 200,
+      "count": 0,
+      "returnedRows": 0,
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&limit=0&locality=Dampit+Creek"
+    }
+  ],
+  "returnedCandidates": [
+    {
+      "gbifOccurrenceKey": 3426426192,
+      "occurrenceID": "urn:catalog:CAS:SU(ICH):37692",
+      "scientificNameAsReturned": "Zenarchopterus philippinus (Peters, 1868)",
+      "acceptedScientificNameAsReturned": "Zenarchopterus philippinus (Peters, 1868)",
+      "eventDate": "1941-10-16",
+      "waterBody": "Bay River",
+      "locality": "3 km from Laguna de Bay.",
+      "stateProvince": "Laguna",
+      "basisOfRecord": "PRESERVED_SPECIMEN",
+      "datasetKey": "5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+      "institutionCode": "CAS",
+      "collectionCode": "SU(ICH)",
+      "catalogNumber": "37692",
+      "coordinateUncertaintyInMeters": 1743,
+      "datasetLicense": "CC0 1.0",
+      "disposition": "hold; exact locality and river segment not confirmed"
+    },
+    {
+      "gbifOccurrenceKey": 3426461256,
+      "occurrenceID": "urn:catalog:CAS:SU(ICH):39167",
+      "scientificNameAsReturned": "Microphis jagorii Peters, 1868",
+      "acceptedScientificNameAsReturned": "Oostethus jagorii (Peters, 1868)",
+      "eventDate": "1941-10-16",
+      "waterBody": "Bay River",
+      "locality": "3 km from Laguna de Bay.",
+      "stateProvince": "Laguna",
+      "basisOfRecord": "PRESERVED_SPECIMEN",
+      "datasetKey": "5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+      "institutionCode": "CAS",
+      "collectionCode": "SU(ICH)",
+      "catalogNumber": "39167",
+      "coordinateUncertaintyInMeters": 1743,
+      "datasetLicense": "CC0 1.0",
+      "disposition": "hold; exact locality and river segment not confirmed"
+    }
+  ],
+  "decisions": [
+    {
+      "label": "Bay River",
+      "waterBodyQueryCount": 2,
+      "localityQueryCount": 0,
+      "disposition": "hold both 1941 CAS records",
+      "reason": "The waterBody text matches exactly, but the source locality is only “3 km from Laguna de Bay” and the coordinate uncertainty is 1,743 m. The query cannot establish whether these specimens came from the municipal Bay River, its San Nicolas/Ilog ng Bae segment, or another location represented by that historical label."
+    },
+    {
+      "label": "Ilog ng Bae",
+      "waterBodyQueryCount": 0,
+      "localityQueryCount": 0,
+      "disposition": "bounded exact-text discovery gap; no absence inferred"
+    },
+    {
+      "label": "San Nicolas River",
+      "waterBodyQueryCount": 0,
+      "localityQueryCount": 0,
+      "disposition": "bounded exact-text discovery gap; no absence inferred"
+    },
+    {
+      "label": "Maitim River",
+      "waterBodyQueryCount": 0,
+      "localityQueryCount": 0,
+      "disposition": "bounded exact-text discovery gap; no absence inferred"
+    },
+    {
+      "label": "Anos Creek",
+      "waterBodyQueryCount": 0,
+      "localityQueryCount": 0,
+      "disposition": "bounded exact-text discovery gap; no absence inferred"
+    },
+    {
+      "label": "Callos Creek",
+      "waterBodyQueryCount": 0,
+      "localityQueryCount": 0,
+      "disposition": "bounded exact-text discovery gap; no absence inferred"
+    },
+    {
+      "label": "Dampit Creek",
+      "waterBodyQueryCount": 0,
+      "localityQueryCount": 0,
+      "disposition": "bounded exact-text discovery gap; no absence inferred"
+    }
+  ],
+  "limitations": [
+    "The two Bay River candidates are the same two historical CAS rows previously held; this refresh adds no new species assertion.",
+    "GBIF-reported accepted names are recorded as returned metadata only; no independent taxonomic/voucher review was performed.",
+    "CC0 metadata licensing does not resolve locality identity, taxonomic correctness, or app suitability.",
+    "Thirteen zero-result exact-string queries do not establish absence and do not cover variants, alternate locality fields, coordinates, non-fish taxa, or sources outside GBIF.",
+    "CAS’s own indexed help describes wildcard searching; therefore, the exact GBIF string screen can miss abbreviated or variant source values. Direct CAS search-page access was unavailable in this review, and no access-control workaround was attempted."
+  ],
+  "nextAction": "Use an ordinary accessible route to query the CAS catalog by the two catalog numbers or by the CAS-recommended wildcard name fields, then inspect original locality remarks, collection data, and determinations. If the portal remains inaccessible, seek an authorized institutional export. Keep both records held until the exact collection site is resolved.",
+  "officialCASAccessChecks": [
+    {
+      "source": "CAS Ichthyology Collection Database",
+      "url": "https://researcharchive.calacademy.org/research/Ichthyology/collection/index.asp",
+      "result": "Indexed search-page result confirms that catalog number, waterbody, locality, and collection date fields exist. Direct page open returned HTTP 403 in this review; no CAS catalog query or source-side record inspection was performed."
+    },
+    {
+      "source": "CAS Ichthyology Collection Database — How to Search",
+      "url": "https://researcharchive.calacademy.org/research/ichthyology/collection/help.asp",
+      "result": "Indexed help text says the native catalog search appends wildcards to Water Body and Locality fields. Direct page open returned HTTP 403. This native wildcard behavior is not replicated by the exact-string GBIF queries in this review."
+    }
+  ]
+}

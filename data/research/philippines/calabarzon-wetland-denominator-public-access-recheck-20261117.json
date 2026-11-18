@@ -1,0 +1,61 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "calabarzon-wetland-denominator-public-access-recheck-20261117",
+  "checkedOn": "2026-11-17",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "regionName": "Region IV-A (CALABARZON)",
+  "status": "official-indexed-metadata-confirmed;inventory-rows-not-accessible",
+  "sourceIds": [
+    "denr-calabarzon-wetlands-2024",
+    "denr-calabarzon-enr-statistical-report-2025",
+    "denr-dpcas-assessed-critical-wetlands-2024"
+  ],
+  "question": "Did ordinary public retrieval expose the 2024 CALABARZON wetland roadmap attachment, 2025 ENR Statistical Report Table 8 rows, or the DENR DPCAS assessed-wetlands rows?",
+  "accessAttempts": [
+    {
+      "sourceId": "denr-calabarzon-wetlands-2024",
+      "url": "https://calabarzon.denr.gov.ph/news-events/denr-crafts-5-year-conservation-roadmap-for-calabarzon-inland-wetlands/",
+      "method": "public web search index, followed by ordinary page open",
+      "result": "The official indexed text repeats the 30-wetland headline and the named feature list already transcribed in the 2026-10-24 review. Opening the source page returned HTTP 403. No roadmap attachment or underlying inventory table was retrieved.",
+      "handling": "Used only the official indexed text to confirm the prior transcription; did not treat it as new site-level evidence or attempt an access-control bypass."
+    },
+    {
+      "sourceId": "denr-calabarzon-enr-statistical-report-2025",
+      "url": "https://calabarzon.denr.gov.ph/enr-statistics/2025-enr-statistical-report/",
+      "method": "public web search index, followed by ordinary page open",
+      "result": "The official index identifies Table 8 as 'Inland Wetland in the Region', but its rows are not present in the indexed extract. Opening the report page returned HTTP 403. No table rows or attachment were retrieved.",
+      "handling": "Recorded the table title only; did not infer a count, site roster, taxonomy, or region denominator."
+    },
+    {
+      "sourceId": "denr-bmb-denr-dpcas-assessed-critical-wetlands-2024",
+      "url": "https://dpcas.denr.gov.ph/",
+      "method": "public web search index, followed by ordinary page open",
+      "result": "The official index lists 'Summary of Assessed Critical Wetlands as of December 2024' as Active. Opening the portal timed out; no dataset detail page, rows, download link, or schema was retrieved.",
+      "handling": "Dataset title and status are metadata only; no site identity or denominator inferred. The earlier 2026-11-04 browser check remains documented separately."
+    }
+  ],
+  "crossChecks": {
+    "roadmapHeadlineWetlandCount": 30,
+    "previouslyTranscribedNamePhraseCount": 31,
+    "newSiteRowsRetrieved": 0,
+    "newFeatureIdentitiesResolved": 0,
+    "newAliasesAccepted": 0,
+    "newGeometryAdded": false,
+    "calabarzonRegionalDenominatorEstablished": false
+  },
+  "limitations": [
+    "Indexed snippets establish public metadata and repeat previously reviewed prose; they are not a substitute for the inaccessible underlying rows or roadmap attachment.",
+    "The 30-versus-31 phrase discrepancy remains unresolved, and the named list mixes inland waters, a dam, coastal habitats, a marine park, and a river sanctuary.",
+    "The 2025 Table 8 title does not establish whether the table contains a site roster, aggregate counts, or which wetland definitions and years it uses.",
+    "An Active DPCAS dataset title does not establish the dataset's row contents, regional coverage, metadata, or reuse terms."
+  ],
+  "disposition": {
+    "waterbodyLeadsAdded": 0,
+    "speciesAssertionsAdded": 0,
+    "regionalDenominatorChanged": false,
+    "publicAppRowsAdded": 0,
+    "publicationApproval": false
+  },
+  "nextAction": "Continue CALABARZON site-specific evidence work with independently accessible primary sources. Revisit these DENR products only if they become ordinarily accessible or an authorized official copy is received; reconcile definitions and feature identity before using any count as a regional denominator."
+}

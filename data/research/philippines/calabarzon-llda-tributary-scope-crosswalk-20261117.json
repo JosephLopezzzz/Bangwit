@@ -1,0 +1,235 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "calabarzon-llda-tributary-scope-crosswalk-20261117",
+  "reviewedOn": "2026-11-17",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "regionName": "Region IV-A (CALABARZON)",
+  "status": "selected-LLDA-tributary-names-crosswalked;four-localized-river-leads-added;scope-not-frozen;geometry-and-fish-evidence-open",
+  "question": "What Laguna de Bay tributary names, localities, and basin identities can be reconciled from public LLDA pages and selected hydrologic profiles without treating watersheds as river routes?",
+  "sourceIds": [
+    "llda-laguna-de-bay-overview",
+    "llda-laguna-de-bay-and-tributaries",
+    "llda-geographical-jurisdiction",
+    "llda-river-systems-overview",
+    "llda-hydrologic-atlas-24-subbasins-index",
+    "llda-pagsanjan-subbasin-profile-vol13",
+    "llda-san-cristobal-subbasin-profile-vol18",
+    "psa-calabarzon-municipalities-list"
+  ],
+  "inputs": [
+    "data/research/philippines/calabarzon-scope.json",
+    "data/research/philippines/sources.json",
+    "data/research/philippines/luzon-completion-manifest.json"
+  ],
+  "snapshotHashes": {
+    "calabarzonScope": "26b3ab96067c439a18d8a15c2550ea74a9203b65056816416c90005fa29fc418",
+    "sourceRegistry": "fc60fdee51d3eb0f139848ee893beec202c1ce86dc942286dbea90571136106e",
+    "luzonCompletionManifest": "ca564fe60f9087ad1e12dbb3428a248a54b8dde429f08c7986528cc0472f3d30"
+  },
+  "sourceFindings": [
+    {
+      "sourceId": "llda-laguna-de-bay-overview",
+      "locator": "About the lake; characteristics and tributary text",
+      "finding": "Reports about 100 rivers/streams and 22 significant river systems; explicitly names tributaries and places the Bay/Calo/Maitem rivers in Bay and Molawin/Dampalit/Pele rivers in Los Baños."
+    },
+    {
+      "sourceId": "llda-laguna-de-bay-and-tributaries",
+      "locator": "Laguna de Bay and its Tributaries",
+      "finding": "Reports 21 major tributary systems and a 3,820 km² watershed across portions of Laguna, Rizal, Cavite, Batangas, Quezon and Metro Manila."
+    },
+    {
+      "sourceId": "llda-geographical-jurisdiction",
+      "locator": "Geographical Jurisdiction",
+      "finding": "Reports the LLDA administrative region as 3,880 km² and states it is substantially larger than the basin."
+    },
+    {
+      "sourceId": "llda-hydrologic-atlas-24-subbasins-index",
+      "locator": "24-sub-basin index",
+      "finding": "Indexes 24 sub-basin profiles; this is a catchment count, not a tributary-river count. The selected Los Baños PDF link returned 403."
+    },
+    {
+      "sourceId": "llda-pagsanjan-subbasin-profile-vol13",
+      "locator": "Geographic Location; Administrative Boundary; Drainage Network",
+      "finding": "Accessible PDF names municipalities in the sub-basin and shows drainage-network content; printed UTM corner text and map images are not verified GIS polygons."
+    },
+    {
+      "sourceId": "llda-san-cristobal-subbasin-profile-vol18",
+      "locator": "Geographic location; Administrative Boundary; Drainage Network",
+      "finding": "Accessible PDF describes the broader San Cristobal sub-basin/system across Laguna, Cavite and Batangas; it says six localities while listing seven and has area-total discrepancies."
+    },
+    {
+      "sourceId": "llda-river-systems-overview",
+      "locator": "Selected river profiles",
+      "finding": "Provides source context for selected systems including Cabuyao, Morong-Teresa, Sapang Baho and Sta. Cruz; it is explicitly selective, and some linked details are historical."
+    },
+    {
+      "sourceId": "psa-calabarzon-municipalities-list",
+      "locator": "Laguna municipal directory; Bay and Los Baños",
+      "finding": "Used only to map the explicit LLDA municipality labels to PSA 10-digit codes 0403402000 and 0403411000."
+    }
+  ],
+  "method": {
+    "counting": "Kept source-defined units separate: approximately 100 rivers/streams and 22 significant river systems on the LLDA overview, 21 major tributary systems on a second LLDA page, and 24 sub-basins in the atlas. No count was reconciled into a complete inventory.",
+    "locality": "Mapped only explicit Bay and Los Baños wording to PSA municipality codes. Enriched existing Bay River and Molawin Creek locality associations, and added Calo, Maitem, Dampalit, and Pele as source-named leads.",
+    "identity": "Linked clear existing waterbody names only. Abbreviated Sta. Cruz, duplicate San Juan identities, ambiguous trailing text, and basin-to-channel identity remain held.",
+    "geometry": "No geometry was extracted. PDF maps and coordinate-corner text are not accepted as a verified channel or basin polygon; datum/zone and transformation were not established.",
+    "biologicalEvidence": "No fish, diet, current-presence, absence, catchability, legal rule, safety, or access claim was derived from water-quality or hydrology material.",
+    "rights": "No local raw source files were retained and no item-specific open license or application redistribution approval was verified."
+  },
+  "counts": {
+    "waterbodyResearchLeadsBefore": 158,
+    "newLeads": 4,
+    "waterbodyResearchLeadsAfter": 162,
+    "administrativeAssociationRowsBefore": 195,
+    "administrativeAssociationRowsAfter": 199,
+    "newAdministrativeAssociationRows": 4,
+    "existingLeadsGivenMunicipalityCode": 2,
+    "municipalityCodeAssignmentsAdded": 6,
+    "municipalityCodedLeadsAfter": 44,
+    "uniqueMunicipalityCodesPresentAfter": 25,
+    "municipalityCodeDenominator": 120,
+    "cityCodedLeadsAfter": 15,
+    "uniqueCityCodesPresentAfter": 12,
+    "cityCodeDenominator": 22,
+    "leadsStillProvinceOnly": 108,
+    "geometryValidated": 0,
+    "publicRecordsAdmitted": 0,
+    "speciesAssertionsImported": 9,
+    "scopeFrozen": false
+  },
+  "assignments": [
+    {
+      "waterbodyId": "ph-wb-bay-laguna-river",
+      "waterbodyName": "Bay River",
+      "sourceLocality": "Bay River listed among tributaries in Bay.",
+      "psgcCode": "0403402000",
+      "municipality": "Bay",
+      "province": "Laguna",
+      "decision": "Existing lead enriched with a source-reported locality; no channel route inferred."
+    },
+    {
+      "waterbodyId": "ph-wb-molawin-makiling-creek",
+      "waterbodyName": "Molawin Creek",
+      "sourceLocality": "Molawin River listed among tributaries in Los Baños; existing lead retains its source-name alias.",
+      "psgcCode": "0403411000",
+      "municipality": "Los Baños",
+      "province": "Laguna",
+      "decision": "Existing lead enriched with a municipality locality; no channel route inferred."
+    },
+    {
+      "waterbodyId": "ph-wb-calo-bay-river",
+      "waterbodyName": "Calo River",
+      "sourceLocality": "Calo River in Bay.",
+      "psgcCode": "0403402000",
+      "municipality": "Bay",
+      "province": "Laguna",
+      "decision": "Added as a research lead only; route, fish evidence, access, legal status and reuse remain unreviewed."
+    },
+    {
+      "waterbodyId": "ph-wb-maitem-bay-river",
+      "waterbodyName": "Maitem River",
+      "sourceLocality": "Maitem River in Bay.",
+      "psgcCode": "0403402000",
+      "municipality": "Bay",
+      "province": "Laguna",
+      "decision": "Added as a research lead only; route, fish evidence, access, legal status and reuse remain unreviewed."
+    },
+    {
+      "waterbodyId": "ph-wb-dampalit-los-banos-river",
+      "waterbodyName": "Dampalit River",
+      "sourceLocality": "Dampalit River in Los Baños.",
+      "psgcCode": "0403411000",
+      "municipality": "Los Baños",
+      "province": "Laguna",
+      "decision": "Added as a research lead only; route, fish evidence, access, legal status and reuse remain unreviewed."
+    },
+    {
+      "waterbodyId": "ph-wb-pele-los-banos-river",
+      "waterbodyName": "Pele River",
+      "sourceLocality": "Pele River in Los Baños.",
+      "psgcCode": "0403411000",
+      "municipality": "Los Baños",
+      "province": "Laguna",
+      "decision": "Added as a research lead only; route, fish evidence, access, legal status and reuse remain unreviewed."
+    }
+  ],
+  "explicitExistingNameMatches": [
+    {
+      "sourceLabel": "Pagsanjan River",
+      "waterbodyId": "ph-wb-pagsanjan-river",
+      "disposition": "LLDA name link recorded; linked PDF remains sub-basin context, not channel geometry."
+    },
+    {
+      "sourceLabel": "Cabuyao River",
+      "waterbodyId": "ph-wb-cabuyao-laguna-river",
+      "disposition": "LLDA name link recorded; selected river-system text provides source locality context."
+    },
+    {
+      "sourceLabel": "San Cristobal River",
+      "waterbodyId": "ph-wb-san-cristobal-river",
+      "disposition": "LLDA name link recorded; the profile concerns a broader cross-region sub-basin/system."
+    },
+    {
+      "sourceLabel": "Tanay River",
+      "waterbodyId": "ph-wb-tanay-rizal-river",
+      "disposition": "Name link recorded; existing bounded fish-screen result remains unchanged."
+    },
+    {
+      "sourceLabel": "Morong River",
+      "waterbodyId": "ph-wb-morong-rizal-river",
+      "disposition": "LLDA refers to Morong-Teresa; namesake identity and held occurrence candidate remain unchanged."
+    },
+    {
+      "sourceLabel": "Siniloan River",
+      "waterbodyId": "ph-wb-siniloan-laguna-river",
+      "disposition": "Name link recorded; existing bounded fish-screen result remains unchanged."
+    }
+  ],
+  "unresolvedLabels": [
+    {
+      "sourceLabel": "Sta. Cruz River",
+      "disposition": "Held against the existing Santa Cruz River lead pending an explicit abbreviation/identity crosswalk; no alias added."
+    },
+    {
+      "sourceLabel": "San Juan River",
+      "disposition": "Held because two same-name CALABARZON leads exist and this aggregate list gives no differentiating locality."
+    },
+    {
+      "sourceLabels": [
+        "Balanak River",
+        "Marikina River",
+        "Mangangate River",
+        "Tunasan River",
+        "San Pedro River",
+        "Pangil River",
+        "Sapang Baho River"
+      ],
+      "disposition": "Not assigned or added in this locality-focused pass; locality/route and duplicate-name checks remain open."
+    },
+    {
+      "sourceLabels": [
+        "Sta. Maria",
+        "Jala-jala",
+        "Pililla",
+        "Baras",
+        "Pila",
+        "Angono",
+        "Manggahan",
+        "Calauan"
+      ],
+      "disposition": "Their grammatical role in the LLDA prose is ambiguous; not interpreted as waterbody names or localities."
+    },
+    {
+      "sourceLabel": "Laguna de Bay watershed/sub-basins",
+      "disposition": "Kept distinct from the lake surface and individual river channels."
+    }
+  ],
+  "nonClaims": [
+    "The LLDA pages and profiles do not make a complete CALABARZON waterbody census.",
+    "No species, diet, current presence, fish absence, fishing rule, access, safety, or catchability assertion is made.",
+    "No lake, river, watershed, sub-basin, municipality, or administrative-jurisdiction geometry was generated or accepted.",
+    "No source text, map, or media is approved for app publication or redistribution."
+  ],
+  "nextAction": "Continue the accessible LLDA sub-basin profile sweep, keeping catchment identities separate from river channels; then seek fish records with item-level locality, taxonomic and reuse review. Revisit blocked PDFs only through normal public access or an authorized copy."
+}

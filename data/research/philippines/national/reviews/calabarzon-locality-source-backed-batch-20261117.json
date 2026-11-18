@@ -1,0 +1,271 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "calabarzon-locality-source-backed-batch-20261117",
+  "reviewedOn": "2026-11-17",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "status": "source-backed-locality-codes-added;scope-not-frozen;geometry-unverified",
+  "question": "Which current CALABARZON waterbody leads have source-reported locality text precise enough to attach a working PSA PSGC city or municipality code without inferring a route or boundary?",
+  "sourceIds": [
+    "psa-calabarzon-municipalities-list",
+    "psa-calabarzon-cities-list",
+    "emb-calabarzon-waterbodies",
+    "aiib-2023-bcib-final-eia",
+    "denr-bmb-inland-wetlands-atlas-2016",
+    "bacoor-city-clup-ecological-profile-inland-waters",
+    "cavite-sepp-2014-protected-landscape-rivers",
+    "dpwh-2022-principal-river-basins-annex-d2",
+    "quezon-pdrrmo-2026-flood-advisory-14-watercourses",
+    "denr-cavite-adopt-waterbody-gapan-river-2025",
+    "geonames-sapang-river-ternate"
+  ],
+  "inputs": [
+    "data/research/philippines/calabarzon-scope.json",
+    "data/research/philippines/national/reviews/calabarzon-administrative-denominator-reconciliation-20261117.json",
+    "data/research/philippines/calabarzon-tagbac-creek-source-review-20261026.json",
+    "data/research/philippines/calabarzon-bcib-cavite-watercourses-fish-review-20261031.json",
+    "data/research/philippines/calabarzon-bmb-2016-atlas-river-crosswalk-20261024.json",
+    "data/research/philippines/calabarzon-bmb-2016-batangas-laguna-river-crosswalk-20261024.json",
+    "data/research/philippines/calabarzon-bmb-2016-table-visual-review-20261024.json",
+    "data/research/philippines/calabarzon-bacoor-inland-waterbody-crosswalk-20261026.json",
+    "data/research/philippines/calabarzon-ternate-protected-landscape-rivers-review-20261026.json",
+    "data/research/philippines/calabarzon-quezon-bucal-lalangan-advisory-variant-review-20261101.json",
+    "data/research/philippines/calabarzon-quezon-lakayat-labayat-variant-review-20261101.json",
+    "data/research/philippines/calabarzon-gapan-sapang-river-source-review-20261026.json",
+    "data/research/philippines/calabarzon-gapan-sapang-geonames-crosscheck-20261026.json"
+  ],
+  "snapshotHashes": {
+    "calabarzonScope": "398d778b17bcc2aac119a6c8b6c87a73d840f7edabd3c75f18af4a06c13d04d2",
+    "administrativeDenominator": "0688d4bf58dd848571c23cbc09f2bbb71244aace0f5842bb59ee473f483f7ce0",
+    "tagbacReview": "a59a9012c846b5e98ff0aad452a95d5a8dd50205ed80f06deda8c3a641583e88",
+    "bcibWatercoursesReview": "236b43fafe87f467e0321e87c9ca163a76fc032b57e714cb1cb0e0c74440f901",
+    "bmbAtlasReview": "5a37642b559dd9a4c0c5512b21e86f11f9a90f9a061e69208d1a21f3f109dfe9",
+    "bmbBatangasLagunaReview": "c13b3104a45719b627ac4dbf88fa9e0a1d21f292d2350da0306cfe37351ba9fe",
+    "bmbTableVisualReview": "14cb8c4d748953f676a8f7e04898b016dacd70a8ef8fcfb653615f0adae4c126",
+    "bacoorInlandReview": "424c14697f8ecbff640edd5a1104a63e8bd192aac15459b8a9b8e6389469c3b3",
+    "mambaPalicpicanReview": "651fec6c2b0b1aa8f9caa51bad93bdacf4b87ca2cc34d2d51562daf7c939e1c6",
+    "bucalVariantReview": "39ea48ee5dca12f30e13a87cba2489cabbf119b26d5ee0c5b7468e729aab2567",
+    "labayatVariantReview": "67e38363c9c5f28bb04a4e2d1f7b0231fec44f368823726e11a52de1f7c4749b",
+    "gapanSourceReview": "7a293eb5d19cd74497f78a27a9c9dbe018c537d4f8ef5c5005440b71c883f997",
+    "gapanGeoNamesCrosscheck": "66e8d643543f2e8748494f93a0f0f2e35922b9c61c52640226975594f16140e4"
+  },
+  "method": "Reviewed source locality wording and existing source crosswalks, then matched only explicitly named city/municipality labels to their enumerated PSA 10-digit PSGC codes. This is a source-locality metadata pass; name matching did not create geometry or infer a whole channel.",
+  "counts": {
+    "currentWaterbodyResearchLeads": 158,
+    "leadsUpdated": 7,
+    "existingAssociationRows": 176,
+    "associationRowsAfterUpdate": 181,
+    "additionalAssociationRows": 5,
+    "localityCodeAssignments": 13,
+    "cityCodedLeadsAfterUpdate": 9,
+    "uniqueCityCodesPresentAfterUpdate": 9,
+    "cityCodeDenominator": 22,
+    "municipalityCodedLeadsAfterUpdate": 3,
+    "uniqueMunicipalityCodesPresentAfterUpdate": 3,
+    "municipalityCodeDenominator": 120,
+    "leadsStillProvinceOnly": 144,
+    "leadsStillWithoutAnyLocalityCode": 4,
+    "geometryValidated": 0,
+    "publicRecordsAdmitted": 0,
+    "scopeFrozen": false
+  },
+  "assignments": [
+    {
+      "waterbodyId": "ph-wb-tagbac-rizal-creek",
+      "waterbodyName": "Tagbac creek",
+      "sourceId": "emb-calabarzon-waterbodies",
+      "reviewPath": "data/research/philippines/calabarzon-tagbac-creek-source-review-20261026.json",
+      "sourceLocality": "Sitio Pag Asa and Sitio Kabisig; Barangay San Jose, Antipolo City; Barangay May-iba, Teresa, Rizal.",
+      "codes": [
+        {
+          "level": "city",
+          "psgcCode": "0405802000",
+          "name": "City of Antipolo",
+          "locality": "San Jose, Antipolo City"
+        },
+        {
+          "level": "municipality",
+          "psgcCode": "0405814000",
+          "name": "Teresa",
+          "locality": "May-iba, Teresa"
+        }
+      ],
+      "limit": "The source describes an adopted monitoring segment; it does not establish the full creek route or geometry."
+    },
+    {
+      "waterbodyId": "ph-wb-timbugan-creek",
+      "waterbodyName": "Timbugan Creek",
+      "sourceId": "aiib-2023-bcib-final-eia",
+      "reviewPath": "data/research/philippines/calabarzon-bcib-cavite-watercourses-fish-review-20261031.json",
+      "sourceLocality": "Naic, Cavite; one surveyed lower segment in the BCIB study area.",
+      "codes": [
+        {
+          "level": "municipality",
+          "psgcCode": "0402115000",
+          "name": "Naic",
+          "locality": "Naic, Cavite"
+        }
+      ],
+      "limit": "The lower study segment is source-located; the full channel extent remains unresolved."
+    },
+    {
+      "waterbodyId": "ph-wb-san-cristobal-river",
+      "waterbodyName": "San Cristobal River",
+      "sourceId": "denr-bmb-inland-wetlands-atlas-2016",
+      "reviewPath": "data/research/philippines/calabarzon-bmb-2016-table-visual-review-20261024.json",
+      "sourceLocality": "The visually reviewed Atlas row lists Tagaytay City in Cavite and separately lists Calamba City and Cabuyao in Laguna.",
+      "codes": [
+        {
+          "level": "city",
+          "psgcCode": "0402119000",
+          "name": "City of Tagaytay",
+          "locality": "Tagaytay City"
+        }
+      ],
+      "limit": "The code applies to the source-named locality association only; no route or full channel boundary is inferred."
+    },
+    {
+      "waterbodyId": "ph-wb-san-juan-calabarzon-river",
+      "waterbodyName": "San Juan River",
+      "sourceId": "denr-bmb-inland-wetlands-atlas-2016",
+      "reviewPath": "data/research/philippines/calabarzon-bmb-2016-table-visual-review-20261024.json",
+      "sourceLocality": "The visually reviewed Atlas row spans Calamba City in Laguna and Lipa City, Malvar, Santo Tomas, and Tanauan City in Batangas.",
+      "codes": [
+        {
+          "level": "city",
+          "psgcCode": "0403405000",
+          "name": "City of Calamba",
+          "locality": "Calamba City"
+        },
+        {
+          "level": "city",
+          "psgcCode": "0401014000",
+          "name": "City of Lipa",
+          "locality": "Lipa City"
+        },
+        {
+          "level": "municipality",
+          "psgcCode": "0401017000",
+          "name": "Malvar",
+          "locality": "Malvar"
+        },
+        {
+          "level": "city",
+          "psgcCode": "0401028000",
+          "name": "City of Sto. Tomas",
+          "locality": "Santo Tomas (PSGC crosswalk name: City of Sto. Tomas)"
+        },
+        {
+          "level": "city",
+          "psgcCode": "0401031000",
+          "name": "City of Tanauan",
+          "locality": "Tanauan City"
+        }
+      ],
+      "limit": "The source supplies localities, not the precise reach in each locality or full channel geometry."
+    },
+    {
+      "waterbodyId": "ph-wb-bacoor-river-cavite",
+      "waterbodyName": "Bacoor River",
+      "sourceId": "bacoor-city-clup-ecological-profile-inland-waters",
+      "reviewPath": "data/research/philippines/calabarzon-bacoor-inland-waterbody-crosswalk-20261026.json",
+      "sourceLocality": "The city profile describes the Bacoor segment through named Bacoor barangays and its drainage to Bacoor Bay.",
+      "codes": [
+        {
+          "level": "city",
+          "psgcCode": "0402103000",
+          "name": "City of Bacoor",
+          "locality": "Bacoor City"
+        }
+      ],
+      "limit": "Narrative city and barangay context is not a surveyed river line."
+    },
+    {
+      "waterbodyId": "ph-wb-don-cella-river",
+      "waterbodyName": "Don Cella River",
+      "sourceId": "bacoor-city-clup-ecological-profile-inland-waters",
+      "reviewPath": "data/research/philippines/calabarzon-bacoor-inland-waterbody-crosswalk-20261026.json",
+      "sourceLocality": "Bacoor City; the profile describes the river draining the eastern part of the southern watershed and meeting Molino River at Molino Dam.",
+      "codes": [
+        {
+          "level": "city",
+          "psgcCode": "0402103000",
+          "name": "City of Bacoor",
+          "locality": "Bacoor City"
+        }
+      ],
+      "limit": "No surveyed route or station coordinates are supplied."
+    },
+    {
+      "waterbodyId": "ph-wb-molino-river",
+      "waterbodyName": "Molino River",
+      "sourceId": "bacoor-city-clup-ecological-profile-inland-waters",
+      "reviewPath": "data/research/philippines/calabarzon-bacoor-inland-waterbody-crosswalk-20261026.json",
+      "sourceLocality": "Bacoor City and Dasmariñas City; the source describes the river meeting Don Cella River at Molino Dam and spilling into Zapote River.",
+      "codes": [
+        {
+          "level": "city",
+          "psgcCode": "0402103000",
+          "name": "City of Bacoor",
+          "locality": "Bacoor City"
+        },
+        {
+          "level": "city",
+          "psgcCode": "0402106000",
+          "name": "City of Dasmariñas",
+          "locality": "Dasmariñas City"
+        }
+      ],
+      "limit": "The source crosswalk is narrative and describes an upper course toward Molino Dam; full channel extent remains unresolved."
+    }
+  ],
+  "notAssignedThisBatch": [
+    {
+      "waterbodyIds": [
+        "ph-wb-mamba-cacabay-river-protected-landscape",
+        "ph-wb-palicpican-river-protected-landscape"
+      ],
+      "reason": "The 2014 Cavite profile locates named portions within a protected landscape that spans Ternate and Maragondon, Cavite and part of Nasugbu, Batangas, but does not assign the individual river portions to a municipality or define routes.",
+      "reviewPaths": [
+        "data/research/philippines/calabarzon-ternate-protected-landscape-rivers-review-20261026.json"
+      ]
+    },
+    {
+      "waterbodyIds": [
+        "ph-wb-bucal-lalangnan-principal-basin-4a",
+        "ph-wb-labayat-principal-basin-4a"
+      ],
+      "reason": "DPWH Annex D-2 identifies Region IV-A basin rows but does not provide province or municipality allocation; separate Quezon name variants do not prove identity with the principal basins.",
+      "reviewPaths": [
+        "data/research/philippines/calabarzon-quezon-bucal-lalangan-advisory-variant-review-20261101.json",
+        "data/research/philippines/calabarzon-quezon-lakayat-labayat-variant-review-20261101.json"
+      ]
+    },
+    {
+      "waterbodyIds": [
+        "ph-wb-gapan-sapang-river-ternate"
+      ],
+      "reason": "The Ternate Adopt-a-Waterbody signatories do not define the adopted one-kilometer segment locality sufficiently to code the full river lead.",
+      "reviewPaths": [
+        "data/research/philippines/calabarzon-gapan-sapang-river-source-review-20261026.json",
+        "data/research/philippines/calabarzon-gapan-sapang-geonames-crosscheck-20261026.json"
+      ]
+    },
+    {
+      "waterbodyIds": [
+        "ph-wb-binan-calabarzon-river"
+      ],
+      "reason": "The Atlas prints City of Biñan; Carmona; and Carmonan; GMA; Silang across a visually continued row. Whether Carmonan is a typo for Carmona is unresolved, so no municipality code was added from that ambiguous label.",
+      "reviewPaths": [
+        "data/research/philippines/calabarzon-bmb-2016-table-visual-review-20261024.json"
+      ]
+    }
+  ],
+  "nonClaims": [
+    "City or municipality codes record source-described locality mentions only; they are not river routes, watershed boundaries, polygons, coordinates, fishing grounds, or evidence of legal access.",
+    "The seven updated leads remain research leads. No fish occurrence, catchability, diet, safety, or fishing-rule conclusion was created.",
+    "The 158-lead CALABARZON waterbody inventory remains incomplete and scopeFrozen remains false.",
+    "No raw source table, map, or coordinates were copied into the public app projection."
+  ],
+  "nextAction": "Continue source-backed locality review across the 144 province-only leads while separately reconciling the four leads without any locality code, source-derived missing waterbodies, shared-water relationships, and reusable geometry. Add codes only where reviewed source text identifies a locality; keep scope unfrozen."
+}
