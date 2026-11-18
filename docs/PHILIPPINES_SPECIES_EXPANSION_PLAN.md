@@ -5913,3 +5913,14 @@ The waterbird source does not establish fish presence, and the municipality code
 See the [locality batch review](../data/research/philippines/national/reviews/calabarzon-locality-source-backed-batch-20261118.json), [current locality audit](../data/research/philippines/national/reviews/calabarzon-locality-linkage-gap-audit-20261118.json), [DENR/CENRO site crosswalk](../data/research/philippines/calabarzon-cenro-calauag-2026-awc-site-crosswalk-20261030.json), and [PSA PSGC directory](https://psa.gov.ph/classification/psgc/municipalities/0400000000). Continue the source-backed locality queue across the remaining 102 province-only leads; retain the four region-only leads and all geometry as unresolved.
 
 The deterministic Palico rebuild retained 12 assertions and three holds. `npm run species:national:audit:luzon-evidence`, `npm run species:status`, and `git diff --check` passed; project test suites were not run.
+
+
+### National rollout step 659: Link Quezon wetland leads to source-described locality — 18 November 2026
+
+Rechecked the original official DENR-BMB 2019 inland-wetlands table. Its Quezon entries name Dagat Dagatan Lake in Tayabas City, Ticub Lake in Tiaong, Lake Pagatan in San Antonio, Gunaw Lake in Dolores, Lake Podon in Jomalig, and Tan-ag Ilaya Peatland in Lopez. The original PDF gives Tiaong for Ticub Lake; the older crosswalk had left its locality cell untranscribed. Linked these six existing leads to the matching current PSA PSGC city/municipality codes.
+
+The inventory is historical and is not treated as a current/exhaustive waterbody list; no old area values were made into geometry. Tan-ag Ilaya remains a peatland lead. The Dagat Dagatan/Pagatan naming conflict remains unresolved; no feature identity or alias was inferred. No fish, salinity, access, safety, rules, or public-app records were added. Current locality linkage stands at 64 of 164 leads, with 96 province-only and four without locality codes; geometry and public-admission counts remain zero.
+
+See the [locality batch review](../data/research/philippines/national/reviews/calabarzon-locality-source-backed-batch-20261118-02.json), [current locality audit](../data/research/philippines/national/reviews/calabarzon-locality-linkage-gap-audit-20261118.json), [DENR-BMB 2019 inventory](https://www.philchm.ph/wp-content/uploads/2019/06/inland-wetlands-as-of-1st-qtr-2019-for-chm-2.pdf), and [PSA PSGC directories](https://psa.gov.ph/classification/psgc/cities/0400000000).
+
+The Palico-Lian scope fingerprint was refreshed because the shared CALABARZON scope changed; its 12 source-table assertions and three holds are unchanged. `npm run species:national:audit:luzon-evidence`, `npm run species:status`, and `git diff --check` are the scoped integrity checks; project test suites were not run.

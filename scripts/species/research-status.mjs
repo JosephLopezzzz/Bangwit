@@ -66,6 +66,7 @@ export function buildResearchStatus({
   calabarzonLocalitySourceBackedBatch,
   calabarzonLocalitySourceBackedBatch02,
   calabarzonLocalitySourceBackedBatch03,
+  calabarzonLocalitySourceBackedBatch04,
   calabarzonTagbacSourceReview,
   calabarzonBcibWatercoursesReview,
   calabarzonBmbAtlasReview,
@@ -264,7 +265,11 @@ export function buildResearchStatus({
     calabarzonLocalitySourceBackedBatch03.reviewId,
     "calabarzon-locality-source-backed-batch-20261118",
   );
-  assert.equal(calabarzonLocalitySourceBackedBatch03.snapshotHashes.calabarzonScope, inputHashes.scope);
+  assert.equal(
+    calabarzonLocalitySourceBackedBatch03.snapshotHashes.calabarzonScope,
+    calabarzonLocalitySourceBackedBatch04.snapshotHashes.scopeBeforeBatch,
+    "CALABARZON third locality batch output does not match the fourth batch input",
+  );
   assert.equal(
     calabarzonLocalitySourceBackedBatch03.snapshotHashes.scopeBeforeBatch,
     calabarzonLocalityLinkageAudit.findings.sourceBackedLocalityBatch03.scopeBeforeBatchSha256,
@@ -283,16 +288,41 @@ export function buildResearchStatus({
   );
   assert.equal(calabarzonLocalitySourceBackedBatch03.counts.leadsUpdated, 3);
   assert.equal(calabarzonLocalitySourceBackedBatch03.counts.municipalityCodeAssignments, 3);
+
   assert.equal(
-    calabarzonLocalitySourceBackedBatch03.counts.leadsWithCityOrMunicipalityCodeAfter,
+    calabarzonLocalitySourceBackedBatch04.reviewId,
+    "calabarzon-locality-source-backed-batch-20261118-02",
+  );
+  assert.equal(calabarzonLocalitySourceBackedBatch04.snapshotHashes.calabarzonScope, inputHashes.scope);
+  assert.equal(
+    calabarzonLocalitySourceBackedBatch04.snapshotHashes.scopeBeforeBatch,
+    calabarzonLocalityLinkageAudit.findings.sourceBackedLocalityBatch04.scopeBeforeBatchSha256,
+  );
+  assert.equal(
+    calabarzonLocalitySourceBackedBatch04.snapshotHashes.administrativeDenominator,
+    inputHashes.calabarzonAdministrativeDenominator,
+  );
+  assert.equal(
+    calabarzonLocalitySourceBackedBatch04.snapshotHashes.previousLocalityBatch,
+    inputHashes.calabarzonLocalitySourceBackedBatch03,
+  );
+  assert.equal(
+    calabarzonLocalitySourceBackedBatch04.snapshotHashes.bmb2019WetlandCrosswalk,
+    inputHashes.calabarzonBmb2019WetlandCrosswalk,
+  );
+  assert.equal(calabarzonLocalitySourceBackedBatch04.counts.leadsUpdated, 6);
+  assert.equal(calabarzonLocalitySourceBackedBatch04.counts.cityCodeAssignments, 1);
+  assert.equal(calabarzonLocalitySourceBackedBatch04.counts.municipalityCodeAssignments, 5);
+  assert.equal(
+    calabarzonLocalitySourceBackedBatch04.counts.leadsWithCityOrMunicipalityCodeAfter,
     calabarzonLocalityLinkageAudit.findings.localityLinkage.leadsWithCityOrMunicipalityCode,
   );
   assert.equal(
-    calabarzonLocalitySourceBackedBatch03.counts.leadsWithProvinceCodeButNoCityOrMunicipalityCodeAfter,
+    calabarzonLocalitySourceBackedBatch04.counts.leadsWithProvinceCodeButNoCityOrMunicipalityCodeAfter,
     calabarzonLocalityLinkageAudit.findings.localityLinkage.leadsWithProvinceCodeButNoCityOrMunicipalityCode,
   );
   assert.equal(
-    calabarzonLocalitySourceBackedBatch03.counts.municipalityCodesPresentAfter,
+    calabarzonLocalitySourceBackedBatch04.counts.municipalityCodesPresentAfter,
     calabarzonLocalityLinkageAudit.findings.localityLinkage.municipalityCodesPresent,
   );
   for (const [snapshotKey, hashKey] of [
@@ -329,6 +359,11 @@ export function buildResearchStatus({
     inputHashes.calabarzonLocalitySourceBackedBatch03,
     "CALABARZON locality audit third-batch hash is stale",
   );
+  assert.equal(
+    calabarzonLocalityLinkageAudit.snapshotHashes.sourceBackedLocalityBatch04,
+    inputHashes.calabarzonLocalitySourceBackedBatch04,
+    "CALABARZON locality audit fourth-batch hash is stale",
+  );
   for (const id of calabarzonLocalitySourceBackedBatch.sourceIds) {
     assert.ok(sourceIds.has(id), `Unknown CALABARZON locality batch source: ${id}`);
   }
@@ -337,6 +372,9 @@ export function buildResearchStatus({
   }
   for (const id of calabarzonLocalitySourceBackedBatch03.sourceIds) {
     assert.ok(sourceIds.has(id), `Unknown CALABARZON third locality batch source: ${id}`);
+  }
+  for (const id of calabarzonLocalitySourceBackedBatch04.sourceIds) {
+    assert.ok(sourceIds.has(id), `Unknown CALABARZON fourth locality batch source: ${id}`);
   }
   for (const [key, hashKey] of [
     ["mambaPalicpicanSourceReview", "mambaPalicpicanSourceReview"],
@@ -466,6 +504,7 @@ export function buildResearchStatus({
     ...calabarzonLocalitySourceBackedBatch.assignments,
     ...calabarzonLocalitySourceBackedBatch02.assignments,
     ...calabarzonLocalitySourceBackedBatch03.assignments,
+    ...calabarzonLocalitySourceBackedBatch04.assignments,
   ]) {
     const waterbody = waterbodiesById.get(assignment.waterbodyId);
     assert.ok(waterbody, `Unknown waterbody in CALABARZON locality batch: ${assignment.waterbodyId}`);
@@ -486,6 +525,16 @@ export function buildResearchStatus({
         association.locality === assignment.codes[0].locality,
       ),
       `CALABARZON third-batch locality text is missing from scope: ${assignment.waterbodyId}`,
+    );
+  }
+  for (const assignment of calabarzonLocalitySourceBackedBatch04.assignments) {
+    const waterbody = waterbodiesById.get(assignment.waterbodyId);
+    assert.ok(
+      waterbody.administrativeAssociations.some((association) =>
+        (association.cityId === assignment.codes[0].psgcCode || association.municipalityId === assignment.codes[0].psgcCode) &&
+        association.locality === assignment.codes[0].locality,
+      ),
+      `CALABARZON fourth-batch locality text is missing from scope: ${assignment.waterbodyId}`,
     );
   }
   const localityAssociations = scope.waterbodies.flatMap((waterbody) => waterbody.administrativeAssociations);
@@ -910,6 +959,14 @@ export async function readResearchInputs() {
     ),
     calabarzonLocalitySourceBackedBatch03: new URL(
       "national/reviews/calabarzon-locality-source-backed-batch-20261118.json",
+      research,
+    ),
+    calabarzonLocalitySourceBackedBatch04: new URL(
+      "national/reviews/calabarzon-locality-source-backed-batch-20261118-02.json",
+      research,
+    ),
+    calabarzonBmb2019WetlandCrosswalk: new URL(
+      "calabarzon-bmb-2019-wetland-inventory-crosswalk-20261024.json",
       research,
     ),
     calabarzonCenroSiteCrosswalk: new URL(

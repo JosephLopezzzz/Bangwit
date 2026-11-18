@@ -1,0 +1,205 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "calabarzon-locality-source-backed-batch-20261118-02",
+  "reviewedOn": "2026-11-18",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "status": "source-described-localities-linked-to-psgc;scope-not-frozen;geometry-unverified",
+  "question": "Can the official 2019 BMB wetland inventory locality labels be linked to current PSA PSGC city/municipality codes for existing Quezon research leads?",
+  "sourceIds": [
+    "denr-bmb-philchm-inland-wetlands-2019",
+    "psa-calabarzon-cities-list",
+    "psa-calabarzon-municipalities-list"
+  ],
+  "inputs": [
+    "data/research/philippines/calabarzon-scope.json",
+    "data/research/philippines/calabarzon-bmb-2019-wetland-inventory-crosswalk-20261024.json",
+    "data/research/philippines/administrative-registry.json",
+    "data/research/philippines/national/reviews/calabarzon-administrative-denominator-reconciliation-20261117.json",
+    "data/research/philippines/national/reviews/calabarzon-locality-source-backed-batch-20261118.json"
+  ],
+  "snapshotHashes": {
+    "scopeBeforeBatch": "5224e5fcea4aa8285467b8a8259f5844e3ebb05e90c67f93a870e914a11c0c70",
+    "calabarzonScope": "510a4b597b940f5c769c577060a1c68143c6fadc801b413816d53e40394f96f8",
+    "bmb2019WetlandCrosswalk": "3c7ca91e892100e4d67b264e8fcc454445d7b9fa2ea60cb5ff585e3fea37f7e1",
+    "administrativeRegistry": "c741456fbc2cfc9d5d813484a0b661ef206154977959fc27a289ca86732142e8",
+    "administrativeDenominator": "0688d4bf58dd848571c23cbc09f2bbb71244aace0f5842bb59ee473f483f7ce0",
+    "previousLocalityBatch": "49b5fe448717d47e7dcd09b0d36df36a0984c3d159a7871d148a8b0377a6cdbf"
+  },
+  "method": "Rechecked the original official PhilCHM-hosted DENR-BMB 2019 table rows on PDF pages 3-4 and linked their printed locality labels to current PSA PSGC codes. Updated only existing province-only administrative associations; kept the reported 2019 inventory context separate from exact feature location, current geometry, fish occurrence, or app admission.",
+  "sourceExtractionCorrection": {
+    "waterbodyId": "ph-wb-ticub-quezon-lake",
+    "priorCrosswalkPath": "data/research/philippines/calabarzon-bmb-2019-wetland-inventory-crosswalk-20261024.json",
+    "priorExtractedLocality": null,
+    "verifiedSourceLocality": "Tiaong",
+    "sourceRow": "Ticub Lake | Region IV-A | Quezon | Tiaong | Lake | 47.69 ha | 2012",
+    "note": "The source PDF explicitly includes Tiaong in its locality column; the earlier crosswalk left this cell untranscribed. The present association uses the primary table row."
+  },
+  "counts": {
+    "waterbodyResearchLeadsBefore": 164,
+    "waterbodyResearchLeadsAfter": 164,
+    "leadsUpdated": 6,
+    "administrativeAssociationRowsBefore": 201,
+    "administrativeAssociationRowsAfter": 201,
+    "additionalAssociationRows": 0,
+    "cityCodeAssignments": 1,
+    "municipalityCodeAssignments": 5,
+    "leadsWithCityOrMunicipalityCodeAfter": 64,
+    "leadsWithProvinceCodeButNoCityOrMunicipalityCodeAfter": 96,
+    "leadsWithoutAnyLocalityCodeAfter": 4,
+    "cityCodedLeadsAfter": 16,
+    "municipalityCodedLeadsAfter": 53,
+    "cityCodesPresentAfter": 13,
+    "municipalityCodesPresentAfter": 29,
+    "cityCodeDenominator": 22,
+    "municipalityCodeDenominator": 120,
+    "geometryValidated": 0,
+    "speciesAssertionsImported": 9,
+    "publicRecordsAdmitted": 0,
+    "scopeFrozen": false
+  },
+  "assignments": [
+    {
+      "waterbodyId": "ph-wb-dagatan-quezon-lake",
+      "sourceId": "denr-bmb-philchm-inland-wetlands-2019",
+      "sourcePath": "data/research/philippines/calabarzon-bmb-2019-wetland-inventory-crosswalk-20261024.json",
+      "sourcePage": 3,
+      "sourceRow": "Dagat Dagatan Lake | Region IV-A | Quezon | Tayabas City",
+      "sourceLocality": "Tayabas City, Quezon",
+      "codes": [
+        {
+          "level": "city",
+          "psgcCode": "0405647000",
+          "name": "City of Tayabas",
+          "locality": "Tayabas City, Quezon",
+          "sourceId": "psa-calabarzon-cities-list"
+        }
+      ],
+      "limit": "This source-described locality code is administrative context only. It does not locate the feature within the named LGU, define a waterbody or municipal-water boundary, establish fish presence or absence, or imply access, safety, current condition, or public admission."
+    },
+    {
+      "waterbodyId": "ph-wb-ticub-quezon-lake",
+      "sourceId": "denr-bmb-philchm-inland-wetlands-2019",
+      "sourcePath": "data/research/philippines/calabarzon-bmb-2019-wetland-inventory-crosswalk-20261024.json",
+      "sourcePage": 3,
+      "sourceRow": "Ticub Lake | Region IV-A | Quezon | Tiaong",
+      "sourceLocality": "Tiaong, Quezon",
+      "codes": [
+        {
+          "level": "municipality",
+          "psgcCode": "0405648000",
+          "name": "Tiaong",
+          "locality": "Tiaong, Quezon",
+          "sourceId": "psa-calabarzon-municipalities-list"
+        }
+      ],
+      "limit": "This source-described locality code is administrative context only. It does not locate the feature within the named LGU, define a waterbody or municipal-water boundary, establish fish presence or absence, or imply access, safety, current condition, or public admission."
+    },
+    {
+      "waterbodyId": "ph-wb-pagatan-quezon-lake",
+      "sourceId": "denr-bmb-philchm-inland-wetlands-2019",
+      "sourcePath": "data/research/philippines/calabarzon-bmb-2019-wetland-inventory-crosswalk-20261024.json",
+      "sourcePage": 3,
+      "sourceRow": "Lake Pagatan | Region IV-A | Quezon | San Antonio",
+      "sourceLocality": "San Antonio, Quezon",
+      "codes": [
+        {
+          "level": "municipality",
+          "psgcCode": "0405641000",
+          "name": "San Antonio",
+          "locality": "San Antonio, Quezon",
+          "sourceId": "psa-calabarzon-municipalities-list"
+        }
+      ],
+      "limit": "This source-described locality code is administrative context only. It does not locate the feature within the named LGU, define a waterbody or municipal-water boundary, establish fish presence or absence, or imply access, safety, current condition, or public admission."
+    },
+    {
+      "waterbodyId": "ph-wb-gunaw-quezon-lake",
+      "sourceId": "denr-bmb-philchm-inland-wetlands-2019",
+      "sourcePath": "data/research/philippines/calabarzon-bmb-2019-wetland-inventory-crosswalk-20261024.json",
+      "sourcePage": 3,
+      "sourceRow": "Gunaw Lake | Region IV-A | Quezon | Dolores",
+      "sourceLocality": "Dolores, Quezon",
+      "codes": [
+        {
+          "level": "municipality",
+          "psgcCode": "0405615000",
+          "name": "Dolores",
+          "locality": "Dolores, Quezon",
+          "sourceId": "psa-calabarzon-municipalities-list"
+        }
+      ],
+      "limit": "This source-described locality code is administrative context only. It does not locate the feature within the named LGU, define a waterbody or municipal-water boundary, establish fish presence or absence, or imply access, safety, current condition, or public admission."
+    },
+    {
+      "waterbodyId": "ph-wb-lake-podon-quezon",
+      "sourceId": "denr-bmb-philchm-inland-wetlands-2019",
+      "sourcePath": "data/research/philippines/calabarzon-bmb-2019-wetland-inventory-crosswalk-20261024.json",
+      "sourcePage": 3,
+      "sourceRow": "Lake Podon | Region IV-A | Quezon | Jomalig",
+      "sourceLocality": "Jomalig, Quezon",
+      "codes": [
+        {
+          "level": "municipality",
+          "psgcCode": "0405621000",
+          "name": "Jomalig",
+          "locality": "Jomalig, Quezon",
+          "sourceId": "psa-calabarzon-municipalities-list"
+        }
+      ],
+      "limit": "This source-described locality code is administrative context only. It does not locate the feature within the named LGU, define a waterbody or municipal-water boundary, establish fish presence or absence, or imply access, safety, current condition, or public admission."
+    },
+    {
+      "waterbodyId": "ph-wb-tan-ag-ilaya-quezon-peatland",
+      "sourceId": "denr-bmb-philchm-inland-wetlands-2019",
+      "sourcePath": "data/research/philippines/calabarzon-bmb-2019-wetland-inventory-crosswalk-20261024.json",
+      "sourcePage": 4,
+      "sourceRow": "Tan-ag Ilaya Peatland | Region IV-A | Quezon | Lopez",
+      "sourceLocality": "Lopez, Quezon",
+      "codes": [
+        {
+          "level": "municipality",
+          "psgcCode": "0405622000",
+          "name": "Lopez",
+          "locality": "Lopez, Quezon",
+          "sourceId": "psa-calabarzon-municipalities-list"
+        }
+      ],
+      "limit": "This source-described locality code is administrative context only. It does not locate the feature within the named LGU, define a waterbody or municipal-water boundary, establish fish presence or absence, or imply access, safety, current condition, or public admission."
+    }
+  ],
+  "limitations": [
+    "The inventory is a historical 2019 compilation, not an exhaustive or current waterbody census; its printed areas are not adopted as current measurements or geometry.",
+    "The locality values are source-described LGU context. They are not coordinates, exact shoreline or peatland extents, or legal boundaries.",
+    "Tan-ag Ilaya is retained as a peatland lead and is not reclassified as a lake or fish habitat.",
+    "The separate Dagat Dagatan/Tayabas and San Antonio Dagatan/Pagatan naming conflict remains unresolved; this batch does not merge or alias those features.",
+    "No fish presence or absence, abundance, catchability, diet, salinity, hazard, access, fishing rule, or public-app claim is added."
+  ],
+  "decisions": [
+    {
+      "waterbodyId": "ph-wb-dagatan-quezon-lake",
+      "decision": "Retain the existing research lead; attach Tayabas City, Quezon as the source-described locality and PSGC code only."
+    },
+    {
+      "waterbodyId": "ph-wb-ticub-quezon-lake",
+      "decision": "Retain the existing research lead; attach Tiaong, Quezon as the source-described locality and PSGC code only."
+    },
+    {
+      "waterbodyId": "ph-wb-pagatan-quezon-lake",
+      "decision": "Retain the existing research lead; attach San Antonio, Quezon as the source-described locality and PSGC code only."
+    },
+    {
+      "waterbodyId": "ph-wb-gunaw-quezon-lake",
+      "decision": "Retain the existing research lead; attach Dolores, Quezon as the source-described locality and PSGC code only."
+    },
+    {
+      "waterbodyId": "ph-wb-lake-podon-quezon",
+      "decision": "Retain the existing research lead; attach Jomalig, Quezon as the source-described locality and PSGC code only."
+    },
+    {
+      "waterbodyId": "ph-wb-tan-ag-ilaya-quezon-peatland",
+      "decision": "Retain the existing research lead; attach Lopez, Quezon as the source-described locality and PSGC code only."
+    }
+  ],
+  "nextAction": "Continue the remaining province-only locality queue with primary sources that explicitly name the locality; investigate exact waterbody extent and fish evidence as separate tasks. Keep scopeFrozen=false."
+}
