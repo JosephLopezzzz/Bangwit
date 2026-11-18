@@ -1,0 +1,174 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "calabarzon-locality-source-backed-batch-20261119-02",
+  "reviewedOn": "2026-11-19",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "status": "source-described-localities-linked-to-psgc;scope-not-frozen;geometry-unverified",
+  "question": "Can three exact-name BMB 2019 inland-water inventory rows with printed CALABARZON localities be linked to their PSA municipality codes?",
+  "sourceIds": [
+    "denr-bmb-philchm-inland-wetlands-2019",
+    "psa-calabarzon-municipalities-list"
+  ],
+  "inputs": [
+    "data/research/philippines/calabarzon-scope.json",
+    "data/research/philippines/calabarzon-bmb-2019-wetland-inventory-crosswalk-20261024.json",
+    "data/research/philippines/administrative-registry.json",
+    "data/research/philippines/national/reviews/calabarzon-administrative-denominator-reconciliation-20261117.json",
+    "data/research/philippines/national/reviews/calabarzon-locality-source-backed-batch-20261119.json"
+  ],
+  "snapshotHashes": {
+    "scopeBeforeBatch": "90efac60b5d04f1b0b835a337586df4e95e4c1b88fba93c2bc0d23029c5fe159",
+    "calabarzonScope": "b05f2d6debf5f32259971ad8e27a7ec2e5b0284ffb03e50b064fc2c09c311b64",
+    "bmb2019WetlandCrosswalk": "3c7ca91e892100e4d67b264e8fcc454445d7b9fa2ea60cb5ff585e3fea37f7e1",
+    "administrativeRegistry": "c741456fbc2cfc9d5d813484a0b661ef206154977959fc27a289ca86732142e8",
+    "administrativeDenominator": "0688d4bf58dd848571c23cbc09f2bbb71244aace0f5842bb59ee473f483f7ce0",
+    "previousLocalityBatch": "c233737f3d6b9706cdb0b29666d5cf64af70794d5c04904d802ae70049ff5cf3"
+  },
+  "method": "Rendered and visually reviewed page 3 of the original DENR-BMB 2019 inland-wetlands PDF. Linked only the municipality names printed in the exact Yellow Lake, Tadlac Lake, and Caliraya Reservoir rows to the PSA CALABARZON PSGC directory. The previous BMB crosswalk had omitted the printed Caliraya locality; this batch records the visually checked correction without rewriting the older hash-pinned crosswalk. The historical inventory areas were not adopted as current measurements or geometry.",
+  "sourcePage": 3,
+  "sourceRows": [
+    "Yellow Lake | Region IV-A | Batangas | Talisay, San Nicolas | Lake | 117.34 | 2014",
+    "Tadlac Lake | Region IV-A | Laguna | Los Banos | Lake | 23.32 | 2015",
+    "Caliraya Reservoir | Region IV-A | Laguna | Lumban, Kalayaan | Water Storage | 1,047.84"
+  ],
+  "crosswalkCorrection": {
+    "path": "data/research/philippines/calabarzon-bmb-2019-wetland-inventory-crosswalk-20261024.json",
+    "sourceName": "Caliraya Reservoir",
+    "previousLocality": null,
+    "verifiedPrintedLocality": "Lumban, Kalayaan",
+    "basis": "Direct visual check of DENR-BMB 2019 inventory page 3; the earlier crosswalk transcription omitted the locality cell."
+  },
+  "counts": {
+    "waterbodyResearchLeadsBefore": 164,
+    "waterbodyResearchLeadsAfter": 164,
+    "leadsUpdated": 3,
+    "municipalityCodeAssignments": 5,
+    "additionalAssociationRows": 5,
+    "administrativeAssociationRowsBefore": 202,
+    "administrativeAssociationRowsAfter": 207,
+    "leadsWithCityOrMunicipalityCodeAfter": 74,
+    "leadsWithProvinceCodeButNoCityOrMunicipalityCodeAfter": 86,
+    "leadsWithoutAnyLocalityCodeAfter": 4,
+    "cityCodedLeadsAfter": 22,
+    "municipalityCodedLeadsAfter": 57,
+    "cityCodesPresentAfter": 14,
+    "cityCodeDenominator": 22,
+    "municipalityCodesPresentAfter": 34,
+    "municipalityCodeDenominator": 120,
+    "geometryValidated": 0,
+    "speciesAssertionsAdded": 0,
+    "publicRecordsAdmitted": 0,
+    "scopeFrozen": false
+  },
+  "assignments": [
+    {
+      "waterbodyId": "ph-wb-yellow-lake",
+      "sourceId": "denr-bmb-philchm-inland-wetlands-2019",
+      "sourcePath": "data/research/philippines/calabarzon-bmb-2019-wetland-inventory-crosswalk-20261024.json",
+      "sourcePage": 3,
+      "sourceRow": "Yellow Lake | Region IV-A | Batangas | Talisay, San Nicolas | Lake | 117.34 | 2014",
+      "sourceLocality": "Talisay, San Nicolas, Batangas",
+      "codes": [
+        {
+          "level": "municipality",
+          "psgcCode": "0401030000",
+          "name": "Talisay",
+          "locality": "Talisay, Batangas",
+          "sourceId": "psa-calabarzon-municipalities-list"
+        }
+      ],
+      "limit": "Source-described municipality context only; the PSGC code is not waterbody geometry, a shoreline, exact coordinates, access, fish evidence, or public admission."
+    },
+    {
+      "waterbodyId": "ph-wb-yellow-lake",
+      "sourceId": "denr-bmb-philchm-inland-wetlands-2019",
+      "sourcePath": "data/research/philippines/calabarzon-bmb-2019-wetland-inventory-crosswalk-20261024.json",
+      "sourcePage": 3,
+      "sourceRow": "Yellow Lake | Region IV-A | Batangas | Talisay, San Nicolas | Lake | 117.34 | 2014",
+      "sourceLocality": "Talisay, San Nicolas, Batangas",
+      "codes": [
+        {
+          "level": "municipality",
+          "psgcCode": "0401025000",
+          "name": "San Nicolas",
+          "locality": "San Nicolas, Batangas",
+          "sourceId": "psa-calabarzon-municipalities-list"
+        }
+      ],
+      "limit": "Source-described municipality context only; the PSGC code is not waterbody geometry, a shoreline, exact coordinates, access, fish evidence, or public admission."
+    },
+    {
+      "waterbodyId": "ph-wb-tadlac-laguna-lake",
+      "sourceId": "denr-bmb-philchm-inland-wetlands-2019",
+      "sourcePath": "data/research/philippines/calabarzon-bmb-2019-wetland-inventory-crosswalk-20261024.json",
+      "sourcePage": 3,
+      "sourceRow": "Tadlac Lake | Region IV-A | Laguna | Los Banos | Lake | 23.32 | 2015",
+      "sourceLocality": "Los Banos, Laguna",
+      "codes": [
+        {
+          "level": "municipality",
+          "psgcCode": "0403411000",
+          "name": "Los Baños",
+          "locality": "Los Baños, Laguna",
+          "sourceId": "psa-calabarzon-municipalities-list"
+        }
+      ],
+      "limit": "Source-described municipality context only; the PSGC code is not waterbody geometry, a shoreline, exact coordinates, access, fish evidence, or public admission."
+    },
+    {
+      "waterbodyId": "ph-wb-caliraya-reservoir",
+      "sourceId": "denr-bmb-philchm-inland-wetlands-2019",
+      "sourcePath": "data/research/philippines/calabarzon-bmb-2019-wetland-inventory-crosswalk-20261024.json",
+      "sourcePage": 3,
+      "sourceRow": "Caliraya Reservoir | Region IV-A | Laguna | Lumban, Kalayaan | Water Storage | 1,047.84",
+      "sourceLocality": "Lumban, Kalayaan, Laguna",
+      "codes": [
+        {
+          "level": "municipality",
+          "psgcCode": "0403413000",
+          "name": "Lumban",
+          "locality": "Lumban, Laguna",
+          "sourceId": "psa-calabarzon-municipalities-list"
+        }
+      ],
+      "limit": "Source-described municipality context only; the PSGC code is not waterbody geometry, a shoreline, exact coordinates, access, fish evidence, or public admission."
+    },
+    {
+      "waterbodyId": "ph-wb-caliraya-reservoir",
+      "sourceId": "denr-bmb-philchm-inland-wetlands-2019",
+      "sourcePath": "data/research/philippines/calabarzon-bmb-2019-wetland-inventory-crosswalk-20261024.json",
+      "sourcePage": 3,
+      "sourceRow": "Caliraya Reservoir | Region IV-A | Laguna | Lumban, Kalayaan | Water Storage | 1,047.84",
+      "sourceLocality": "Lumban, Kalayaan, Laguna",
+      "codes": [
+        {
+          "level": "municipality",
+          "psgcCode": "0403409000",
+          "name": "Kalayaan",
+          "locality": "Kalayaan, Laguna",
+          "sourceId": "psa-calabarzon-municipalities-list"
+        }
+      ],
+      "limit": "Source-described municipality context only; the PSGC code is not waterbody geometry, a shoreline, exact coordinates, access, fish evidence, or public admission."
+    }
+  ],
+  "limitations": [
+    "The 2019 BMB inventory is a historical, selected wetlands compilation rather than a complete or current waterbody inventory. The reported areas are not adopted as current measurements or geometry.",
+    "The locality labels provide administrative context only; a municipality code is not a waterbody boundary, shoreline, fishing ground, access condition, or legal boundary.",
+    "The source prints the Tadlac locality as “Los Banos”; the PSA directory renders the official municipality name “Los Baños.” This is an orthographic diacritic normalization, not a separate waterbody-name crosswalk.",
+    "Caliraya Reservoir is associated with both Lumban and Kalayaan only because both municipalities are printed in the BMB locality cell; the reservoir route/extent is not mapped.",
+    "No fish presence or absence, species assertion, salinity, hazard, safety, access, fishing rule, or public-app record is created."
+  ],
+  "decisions": [
+    {
+      "waterbodyIds": [
+        "ph-wb-yellow-lake",
+        "ph-wb-tadlac-laguna-lake",
+        "ph-wb-caliraya-reservoir"
+      ],
+      "decision": "Add five source-described municipality links across three existing waterbody leads, preserving the source row locality and the official PSA codes."
+    }
+  ],
+  "nextAction": "Continue the CALABARZON locality queue with other multi-locality wetland rows only where the source locality cell is explicit; retain separate source rows for shared waters, and do not infer geographic extent from locality codes."
+}
