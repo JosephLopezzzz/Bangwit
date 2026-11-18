@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "calabarzon-locality-source-backed-batch-20261119-04",
+  "reviewedOn": "2026-11-19",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "status": "source-described-locality-linked-to-psgc;feature-identity-and-classification-held;geometry-unverified;scope-not-frozen",
+  "question": "Can the exact Tanza locality printed in the historical BMB row for Lawa ng Tres Cruses be linked to its current PSA municipality code while preserving separate waterbody-class and identity holds?",
+  "sourceIds": [
+    "denr-bmb-philchm-inland-wetlands-2019",
+    "psa-calabarzon-municipalities-list"
+  ],
+  "inputs": [
+    "data/research/philippines/calabarzon-scope.json",
+    "data/research/philippines/calabarzon-bmb-2019-wetland-inventory-crosswalk-20261024.json",
+    "data/research/philippines/administrative-registry.json",
+    "data/research/philippines/national/reviews/calabarzon-administrative-denominator-reconciliation-20261117.json",
+    "data/research/philippines/national/reviews/calabarzon-locality-source-backed-batch-20261119-03.json"
+  ],
+  "snapshotHashes": {
+    "scopeBeforeBatch": "cfef051ae74cc26d495985a36b41923bed0bf1195f87181cfb9944b9b5b16c46",
+    "calabarzonScope": "b33ec1a4f34b251a0dc77b906d8bf74d53cb341349d87f6b530568e834927d93",
+    "bmb2019WetlandCrosswalk": "3c7ca91e892100e4d67b264e8fcc454445d7b9fa2ea60cb5ff585e3fea37f7e1",
+    "administrativeRegistry": "c741456fbc2cfc9d5d813484a0b661ef206154977959fc27a289ca86732142e8",
+    "administrativeDenominator": "0688d4bf58dd848571c23cbc09f2bbb71244aace0f5842bb59ee473f483f7ce0",
+    "previousLocalityBatch": "422b04feac090e46e52b911a8bfcaaf812ced7d951e920e44f3705e5916064b5"
+  },
+  "method": "Used the visually reviewed page 3 BMB crosswalk row, which explicitly prints Tanza in Cavite, and matched the locality to the current PSA CALABARZON municipality code. This changes only locality context. It does not resolve the crosswalk note that BMB classifies the source feature as Water Storage while the scope lead identity and feature extent remain unverified.",
+  "sourcePage": 3,
+  "sourceRows": [
+    "Lawa ng Tres Cruses | Region IV-A | Cavite | Tanza | Water Storage | 15.65"
+  ],
+  "assignments": [
+    {
+      "waterbodyId": "ph-wb-tres-cruzes-cavite-lake",
+      "sourceId": "denr-bmb-philchm-inland-wetlands-2019",
+      "sourcePath": "data/research/philippines/calabarzon-bmb-2019-wetland-inventory-crosswalk-20261024.json",
+      "sourcePage": 3,
+      "sourceRow": "Lawa ng Tres Cruses | Region IV-A | Cavite | Tanza | Water Storage | 15.65",
+      "sourceLocality": "Tanza, Cavite",
+      "codes": [
+        {
+          "level": "municipality",
+          "psgcCode": "0402120000",
+          "name": "Tanza",
+          "locality": "Tanza, Cavite",
+          "sourceId": "psa-calabarzon-municipalities-list"
+        }
+      ],
+      "limit": "Historical source-described locality only. The BMB row classifies Lawa ng Tres Cruses as Water Storage; the scope lead identity and extent remain under separate review. No boundary, geometry, dam-to-lake identity, access, fish evidence, or public admission is established."
+    }
+  ],
+  "counts": {
+    "waterbodyResearchLeadsBefore": 164,
+    "waterbodyResearchLeadsAfter": 164,
+    "leadsUpdated": 1,
+    "cityCodeAssignments": 0,
+    "municipalityCodeAssignments": 1,
+    "additionalAssociationRows": 1,
+    "administrativeAssociationRowsBefore": 213,
+    "administrativeAssociationRowsAfter": 214,
+    "leadsWithCityOrMunicipalityCodeAfter": 76,
+    "leadsWithProvinceCodeButNoCityOrMunicipalityCodeAfter": 84,
+    "leadsWithoutAnyLocalityCodeAfter": 4,
+    "cityCodedLeadsAfter": 23,
+    "municipalityCodedLeadsAfter": 59,
+    "cityCodesPresentAfter": 15,
+    "cityCodeDenominator": 22,
+    "municipalityCodesPresentAfter": 38,
+    "municipalityCodeDenominator": 120,
+    "geometryValidated": 0,
+    "speciesAssertionsAdded": 0,
+    "publicRecordsAdmitted": 0,
+    "scopeFrozen": false
+  },
+  "limitations": [
+    "The BMB inventory is historical and selected; its reported area and feature class are not adopted as current measurements or geometry.",
+    "This locality link does not resolve the source-name spelling, waterbody-to-dam identity, or the held Water Storage versus scope classification question.",
+    "PSGC links a source locality to an administrative identifier only; it does not establish a waterbody boundary, fishing access, safety, legal rights, fish presence, or public-app status.",
+    "No species assertions, coordinates, geometry, rules, safety claims, or public records were added; scope remains unfrozen."
+  ],
+  "decision": "Add the source-described Tanza municipality code to the existing Tres Cruzes research lead while preserving the historical BMB Water Storage class and identity/extent conflict as unresolved.",
+  "nextAction": "Continue only with explicit BMB locality cells that map unambiguously to current PSA units; keep the Lake Mojicap/Mohicap identity hold and the Laguna de Bay NCR row queued for L2."
+}

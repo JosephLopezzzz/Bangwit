@@ -71,10 +71,11 @@
     "data/research/philippines/national/reviews/calabarzon-locality-source-backed-batch-20261118.json",
     "data/research/philippines/national/reviews/calabarzon-locality-source-backed-batch-20261119.json",
     "data/research/philippines/national/reviews/calabarzon-locality-source-backed-batch-20261119-02.json",
-    "data/research/philippines/national/reviews/calabarzon-locality-source-backed-batch-20261119-03.json"
+    "data/research/philippines/national/reviews/calabarzon-locality-source-backed-batch-20261119-03.json",
+    "data/research/philippines/national/reviews/calabarzon-locality-source-backed-batch-20261119-04.json"
   ],
   "snapshotHashes": {
-    "calabarzonScope": "cfef051ae74cc26d495985a36b41923bed0bf1195f87181cfb9944b9b5b16c46",
+    "calabarzonScope": "b33ec1a4f34b251a0dc77b906d8bf74d53cb341349d87f6b530568e834927d93",
     "administrativeDenominatorCrosswalk": "0688d4bf58dd848571c23cbc09f2bbb71244aace0f5842bb59ee473f483f7ce0",
     "mambaPalicpicanSourceReview": "651fec6c2b0b1aa8f9caa51bad93bdacf4b87ca2cc34d2d51562daf7c939e1c6",
     "bucalNameVariantReview": "39ea48ee5dca12f30e13a87cba2489cabbf119b26d5ee0c5b7468e729aab2567",
@@ -93,7 +94,8 @@
     "sourceBackedLocalityBatch05": "1cb29ede66cf81821476c003293a32ecad242297176250b0211f95a204340d2f",
     "sourceBackedLocalityBatch06": "c233737f3d6b9706cdb0b29666d5cf64af70794d5c04904d802ae70049ff5cf3",
     "sourceBackedLocalityBatch07": "644cf5cb0f3ecdd764f6d83acd6d6854f7ef61f1c185afcbc0a036a56207fd47",
-    "sourceBackedLocalityBatch08": "422b04feac090e46e52b911a8bfcaaf812ced7d951e920e44f3705e5916064b5"
+    "sourceBackedLocalityBatch08": "422b04feac090e46e52b911a8bfcaaf812ced7d951e920e44f3705e5916064b5",
+    "sourceBackedLocalityBatch09": "21385022eb2fca8e9da6482bb88349e55c96353bfebbac95ca8a85c44d5fa291"
   },
   "findings": {
     "scopeSnapshot": {
@@ -109,19 +111,19 @@
       "componentCityCount": 21,
       "sourceReviewId": "calabarzon-administrative-denominator-reconciliation-20261117"
     },
-    "administrativeAssociationRows": 213,
+    "administrativeAssociationRows": 214,
     "localityLinkage": {
       "leadsWithProvinceCode": 160,
-      "leadsWithProvinceCodeButNoCityOrMunicipalityCode": 85,
+      "leadsWithProvinceCodeButNoCityOrMunicipalityCode": 84,
       "leadsWithCityCode": 23,
-      "leadsWithMunicipalityCode": 58,
-      "leadsWithCityOrMunicipalityCode": 75,
+      "leadsWithMunicipalityCode": 59,
+      "leadsWithCityOrMunicipalityCode": 76,
       "leadsWithoutProvinceCityOrMunicipalityCode": 4,
-      "municipalityCodeCoverage": "37 of 120 CALABARZON municipality codes appear in current waterbody administrativeAssociations",
+      "municipalityCodeCoverage": "38 of 120 CALABARZON municipality codes appear in current waterbody administrativeAssociations",
       "cityCodesPresent": 15,
       "cityCodesExpected": 22,
       "cityCodeCoverage": "15 of 22 CALABARZON city codes appear in current waterbody administrativeAssociations",
-      "municipalityCodesPresent": 37,
+      "municipalityCodesPresent": 38,
       "municipalityCodesExpected": 120,
       "leadsWithoutAnyLocalityCode": 4
     },
@@ -267,7 +269,7 @@
         "note": "One canonical shared-bay identity; province associations include Batangas, Quezon, and Marinduque; do not infer an official boundary."
       }
     ],
-    "decision": "The historical locality batches are preserved. The 19 November work now links six San Pablo lakes, three inland waters to five printed municipality localities, and the shared Laguna de Bay identity to three Laguna cities plus three Rizal municipalities from two distinct BMB locality rows. Current counts are recomputed from the 164-lead CALABARZON scope: 75 city/municipality-linked leads, 85 province-only leads, and 4 without a locality code; 15 of 22 city codes and 37 of 120 municipality codes appear. The BMB NCR locality row is held for a separate L2 crosswalk. These are source-described localities, not boundaries; Dagatan/Pagatan remains unresolved and scopeFrozen remains false.",
+    "decision": "The historical locality batches are preserved. The 19 November work links the BMB Tanza locality to the Tres Cruzes candidate while keeping its Water Storage class and feature identity/extent unresolved. The selected 164-lead scope now has 76 city/municipality-linked leads, 84 province-only leads, and 4 without locality codes; 15 of 22 city codes and 38 of 120 municipality codes appear. Laguna de Bay remains one shared lead, with the BMB NCR row held for a separate L2 crosswalk. These source-described localities are not boundaries, and scopeFrozen remains false.",
     "requiredFollowUps": [
       "Seek route-scale protected-area or hydrography sources for Mamba/Cacabay and Palicpican, and locality or delineation evidence for the Bucal (Lalangnan) and Labayat principal basins; retain their current unassigned locality status if no source resolves the specific feature.",
       "Continue source-backed locality review across the 85 province-only leads; link only explicit locality contexts and preserve source-scale distinctions.",
@@ -336,7 +338,7 @@
         }
       }
     ],
-    "reconciliationMethod": "Counts were recomputed from current CALABARZON scope waterbody administrativeAssociations using distinct waterbody IDs for lead counts and distinct PSGC codes for coverage counts. The latest source-backed locality batch links six existing San Pablo lakes to the BMB 2019 table locality; locality links are not routes or geometry.",
+    "reconciliationMethod": "Counts were recomputed from current CALABARZON scope waterbody administrativeAssociations using distinct waterbody IDs for lead counts and distinct PSGC codes for coverage counts. The latest locality batch links only the historical BMB Tanza locality; source classification and feature identity remain held.",
     "sourceBackedLocalityBatch03": {
       "reviewId": "calabarzon-locality-source-backed-batch-20261118",
       "path": "data/research/philippines/national/reviews/calabarzon-locality-source-backed-batch-20261118.json",
@@ -398,6 +400,16 @@
       "additionalAssociationRows": 6,
       "scopeBeforeBatchSha256": "b05f2d6debf5f32259971ad8e27a7ec2e5b0284ffb03e50b064fc2c09c311b64",
       "scopeAfterBatchSha256": "cfef051ae74cc26d495985a36b41923bed0bf1195f87181cfb9944b9b5b16c46"
+    },
+    "sourceBackedLocalityBatch09": {
+      "reviewId": "calabarzon-locality-source-backed-batch-20261119-04",
+      "path": "data/research/philippines/national/reviews/calabarzon-locality-source-backed-batch-20261119-04.json",
+      "sha256": "21385022eb2fca8e9da6482bb88349e55c96353bfebbac95ca8a85c44d5fa291",
+      "waterbodyLeadsUpdated": 1,
+      "municipalityCodeAssignments": 1,
+      "additionalAssociationRows": 1,
+      "scopeBeforeBatchSha256": "cfef051ae74cc26d495985a36b41923bed0bf1195f87181cfb9944b9b5b16c46",
+      "scopeAfterBatchSha256": "b33ec1a4f34b251a0dc77b906d8bf74d53cb341349d87f6b530568e834927d93"
     }
   },
   "nonClaims": [
