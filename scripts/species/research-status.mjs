@@ -62,6 +62,7 @@ export function buildResearchStatus({
   sourceIdentityCrosswalk,
   calabarzonAdministrativeDenominator,
   calabarzonLocalityLinkageAudit,
+  calabarzonLocalityLinkageAuditHistorical,
   calabarzonLocalitySourceBackedBatch,
   calabarzonLocalitySourceBackedBatch02,
   calabarzonTagbacSourceReview,
@@ -151,7 +152,11 @@ export function buildResearchStatus({
     calabarzonAdministrativeDenominator.reviewId,
     "calabarzon-administrative-denominator-reconciliation-20261117",
   );
-  assert.equal(calabarzonLocalityLinkageAudit.reviewId, "calabarzon-locality-linkage-gap-audit-20261117");
+  assert.equal(calabarzonLocalityLinkageAudit.reviewId, "calabarzon-locality-linkage-gap-audit-20261118");
+  assert.equal(
+    calabarzonLocalityLinkageAuditHistorical.reviewId,
+    "calabarzon-locality-linkage-gap-audit-20261117",
+  );
   const calabarzonDenominator = calabarzonAdministrativeDenominator.findings;
   assert.equal(calabarzonDenominator.localityRecordCount, 142);
   assert.equal(calabarzonDenominator.municipalityCount, 120);
@@ -179,7 +184,7 @@ export function buildResearchStatus({
   assert.ok(calabarzonManifestRegion, "Luzon manifest is missing CALABARZON L1");
   assert.ok(
     calabarzonManifestRegion.evidenceRefs.includes(
-      "data/research/philippines/national/reviews/calabarzon-locality-linkage-gap-audit-20261117.json",
+      "data/research/philippines/national/reviews/calabarzon-locality-linkage-gap-audit-20261118.json",
     ),
     "CALABARZON manifest must link its locality-linkage audit",
   );
@@ -187,6 +192,29 @@ export function buildResearchStatus({
     calabarzonLocalityLinkageAudit.snapshotHashes.calabarzonScope,
     inputHashes.scope,
     "CALABARZON locality audit scope hash is stale",
+  );
+  const currentCalabarzonAssociations = scope.waterbodies.flatMap((waterbody) =>
+    (waterbody.administrativeAssociations ?? []).map((association) => ({ waterbodyId: waterbody.id, ...association })),
+  );
+  assert.equal(
+    calabarzonLocalityLinkageAudit.findings.scopeSnapshot.waterbodyResearchLeads,
+    scope.waterbodies.length,
+    "CALABARZON locality audit lead count is stale",
+  );
+  assert.equal(
+    calabarzonLocalityLinkageAudit.findings.administrativeAssociationRows,
+    currentCalabarzonAssociations.length,
+    "CALABARZON locality audit association count is stale",
+  );
+  assert.equal(
+    calabarzonLocalityLinkageAudit.findings.localityLinkage.municipalityCodesPresent,
+    new Set(currentCalabarzonAssociations.map((association) => association.municipalityId).filter(Boolean)).size,
+    "CALABARZON locality audit municipality-code count is stale",
+  );
+  assert.equal(
+    calabarzonLocalityLinkageAudit.findings.localityLinkage.cityCodesPresent,
+    new Set(currentCalabarzonAssociations.map((association) => association.cityId).filter(Boolean)).size,
+    "CALABARZON locality audit city-code count is stale",
   );
   assert.equal(
     calabarzonLocalityLinkageAudit.snapshotHashes.administrativeDenominatorCrosswalk,
@@ -213,8 +241,8 @@ export function buildResearchStatus({
   );
   assert.equal(
     calabarzonLocalitySourceBackedBatch02.snapshotHashes.calabarzonScope,
-    inputHashes.scope,
-    "CALABARZON second locality batch scope hash is stale",
+    calabarzonLocalityLinkageAuditHistorical.snapshotHashes.calabarzonScope,
+    "CALABARZON second locality batch output does not match its historical audit snapshot",
   );
   assert.equal(
     calabarzonLocalitySourceBackedBatch02.snapshotHashes.scopeBeforeSecondBatch,
@@ -428,6 +456,9 @@ export function buildResearchStatus({
       waterbody.administrativeAssociations.some((association) => association.provinceId) &&
       !waterbody.administrativeAssociations.some((association) => association.cityId || association.municipalityId),
     ).length,
+    leadsWithCityOrMunicipalityCode: scope.waterbodies.filter((waterbody) =>
+      waterbody.administrativeAssociations.some((association) => association.cityId || association.municipalityId),
+    ).length,
     leadsWithCityCode,
     leadsWithMunicipalityCode,
     leadsWithoutProvinceCityOrMunicipalityCode: leadsWithoutLocalityCode,
@@ -454,6 +485,7 @@ export function buildResearchStatus({
   for (const key of [
     "leadsWithProvinceCode",
     "leadsWithProvinceCodeButNoCityOrMunicipalityCode",
+    "leadsWithCityOrMunicipalityCode",
     "leadsWithCityCode",
     "leadsWithMunicipalityCode",
     "leadsWithoutProvinceCityOrMunicipalityCode",
@@ -470,13 +502,29 @@ export function buildResearchStatus({
   );
   assert.equal(localityLinkageStatus.cityCodesPresent, calabarzonLocalityLinkageAudit.findings.localityLinkage.cityCodesPresent);
   assert.equal(localityLinkageStatus.cityCodesExpected, calabarzonLocalityLinkageAudit.findings.workingPsgcDenominator.cityCount);
-  assert.equal(localityLinkageStatus.administrativeAssociationRows, calabarzonLocalitySourceBackedBatch02.counts.associationRowsAfterUpdate);
-  assert.equal(localityLinkageStatus.leadsWithCityCode, calabarzonLocalitySourceBackedBatch02.counts.cityCodedLeadsAfterUpdate);
-  assert.equal(localityLinkageStatus.cityCodesPresent, calabarzonLocalitySourceBackedBatch02.counts.uniqueCityCodesPresentAfterUpdate);
-  assert.equal(localityLinkageStatus.leadsWithMunicipalityCode, calabarzonLocalitySourceBackedBatch02.counts.municipalityCodedLeadsAfterUpdate);
-  assert.equal(localityLinkageStatus.municipalityCodesPresent, calabarzonLocalitySourceBackedBatch02.counts.uniqueMunicipalityCodesPresentAfterUpdate);
-  assert.equal(localityLinkageStatus.leadsWithProvinceCodeButNoCityOrMunicipalityCode, calabarzonLocalitySourceBackedBatch02.counts.leadsStillProvinceOnly);
-  assert.equal(localityLinkageStatus.leadsWithoutProvinceCityOrMunicipalityCode, calabarzonLocalitySourceBackedBatch02.counts.leadsStillWithoutAnyLocalityCode);
+  const historicalLocalityLinkage = calabarzonLocalityLinkageAuditHistorical.findings.localityLinkage;
+  assert.equal(
+    calabarzonLocalityLinkageAuditHistorical.findings.administrativeAssociationRows,
+    calabarzonLocalitySourceBackedBatch02.counts.associationRowsAfterUpdate,
+  );
+  assert.equal(historicalLocalityLinkage.leadsWithCityCode, calabarzonLocalitySourceBackedBatch02.counts.cityCodedLeadsAfterUpdate);
+  assert.equal(historicalLocalityLinkage.cityCodesPresent, calabarzonLocalitySourceBackedBatch02.counts.uniqueCityCodesPresentAfterUpdate);
+  assert.equal(
+    historicalLocalityLinkage.leadsWithMunicipalityCode,
+    calabarzonLocalitySourceBackedBatch02.counts.municipalityCodedLeadsAfterUpdate,
+  );
+  assert.equal(
+    historicalLocalityLinkage.municipalityCodesPresent,
+    calabarzonLocalitySourceBackedBatch02.counts.uniqueMunicipalityCodesPresentAfterUpdate,
+  );
+  assert.equal(
+    historicalLocalityLinkage.leadsWithProvinceCodeButNoCityOrMunicipalityCode,
+    calabarzonLocalitySourceBackedBatch02.counts.leadsStillProvinceOnly,
+  );
+  assert.equal(
+    historicalLocalityLinkage.leadsWithoutProvinceCityOrMunicipalityCode,
+    calabarzonLocalitySourceBackedBatch02.counts.leadsStillWithoutAnyLocalityCode,
+  );
   assert.equal(localityLinkageStatus.geometryValidated, 0);
   assert.equal(localityLinkageStatus.publicRecordsAdmitted, 0);
   for (const waterbody of scope.waterbodies) {
@@ -790,6 +838,10 @@ export async function readResearchInputs() {
       research,
     ),
     calabarzonLocalityLinkageAudit: new URL(
+      "national/reviews/calabarzon-locality-linkage-gap-audit-20261118.json",
+      research,
+    ),
+    calabarzonLocalityLinkageAuditHistorical: new URL(
       "national/reviews/calabarzon-locality-linkage-gap-audit-20261117.json",
       research,
     ),
@@ -893,7 +945,7 @@ if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.ur
         `Luzon audit: ${status.luzonEvidenceReconciliation.reviewArtifactsScanned} review artifacts; ${status.luzonEvidenceReconciliation.exactSourceIdentityGroups} source identity groups; ${status.luzonEvidenceReconciliation.localRawJsonReferences.matched}/${status.luzonEvidenceReconciliation.localRawJsonReferences.total} local raw JSON references matched; ${status.luzonEvidenceReconciliation.scopeFrozenRegions}/${status.luzonEvidenceReconciliation.regionCount} scopes frozen and ${status.luzonEvidenceReconciliation.baselineReviewedRegions}/${status.luzonEvidenceReconciliation.regionCount} baselines reviewed.`,
       );
       console.log(
-        `CALABARZON locality links: ${status.calabarzonLocalityLinkage.leadsWithProvinceCodeButNoCityOrMunicipalityCode} province-only; ${status.calabarzonLocalityLinkage.leadsWithCityCode} city-coded leads across ${status.calabarzonLocalityLinkage.cityCodesPresent}/${status.calabarzonLocalityLinkage.cityCodesExpected} city codes; ${status.calabarzonLocalityLinkage.leadsWithMunicipalityCode} municipality-coded leads across ${status.calabarzonLocalityLinkage.municipalityCodesPresent}/${status.calabarzonLocalityLinkage.municipalityCodesExpected} municipality codes; ${status.calabarzonLocalityLinkage.leadsWithoutProvinceCityOrMunicipalityCode} unresolved; geometry validated: ${status.calabarzonLocalityLinkage.geometryValidated}; scope frozen: ${status.calabarzonLocalityLinkage.scopeFrozen}.`,
+        `CALABARZON locality links: ${status.calabarzonLocalityLinkage.leadsWithCityOrMunicipalityCode} leads with a city/municipality code; ${status.calabarzonLocalityLinkage.leadsWithProvinceCodeButNoCityOrMunicipalityCode} province-only; ${status.calabarzonLocalityLinkage.leadsWithCityCode} city-coded across ${status.calabarzonLocalityLinkage.cityCodesPresent}/${status.calabarzonLocalityLinkage.cityCodesExpected} city codes; ${status.calabarzonLocalityLinkage.leadsWithMunicipalityCode} municipality-coded across ${status.calabarzonLocalityLinkage.municipalityCodesPresent}/${status.calabarzonLocalityLinkage.municipalityCodesExpected} municipality codes; ${status.calabarzonLocalityLinkage.leadsWithoutProvinceCityOrMunicipalityCode} unresolved; geometry validated: ${status.calabarzonLocalityLinkage.geometryValidated}; scope frozen: ${status.calabarzonLocalityLinkage.scopeFrozen}.`,
       );
       console.log(
         `Freshwater: ${status.nationalFreshwaterNameCandidates} frozen national name candidates; raw inputs retain no adopted regional/waterbody assignments.`,
