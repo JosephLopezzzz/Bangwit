@@ -1,0 +1,102 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "calabarzon-locality-source-backed-batch-20261118",
+  "reviewedOn": "2026-11-18",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "status": "source-backed-municipality-locality-associations-applied;scope-not-frozen;geometry-unverified",
+  "question": "Can the official DENR/CENRO-named Lopez marsh sites be linked to the verified PSA municipality code without resolving wetland identity or inventing geometry?",
+  "sourceIds": [
+    "denr-cenro-calauag-2026-asian-waterbird-census",
+    "psa-calabarzon-municipalities-list"
+  ],
+  "inputs": [
+    "data/research/philippines/calabarzon-scope.json",
+    "data/research/philippines/national/reviews/calabarzon-administrative-denominator-reconciliation-20261117.json",
+    "data/research/philippines/national/reviews/calabarzon-locality-source-backed-batch-20261117-02.json",
+    "data/research/philippines/calabarzon-cenro-calauag-2026-awc-site-crosswalk-20261030.json"
+  ],
+  "snapshotHashes": {
+    "scopeBeforeBatch": "cc19533e2ff17f5d4b24cd820ffe98afc65d066fe4dcc5304e4ff88dc7266e7b",
+    "calabarzonScope": "5224e5fcea4aa8285467b8a8259f5844e3ebb05e90c67f93a870e914a11c0c70",
+    "administrativeDenominator": "0688d4bf58dd848571c23cbc09f2bbb71244aace0f5842bb59ee473f483f7ce0",
+    "previousLocalityBatch": "ad772f9901ac74016f89f547fe7402695f947e87cc52cfa53b384d37a82992fa",
+    "cenroSiteCrosswalk": "f327475abe629670ef87488b824dea9267a115fba05e72e04682fe4f120673d1"
+  },
+  "method": "Reconciled the existing CENRO crosswalk against its official indexed source wording and the PSA PSGC municipality table. Replaced province-only associations with the exact source-described barangay locality and Lopez municipality code. Kept all three waterbodies as research leads; no feature identity, boundary, fish occurrence, or public claim was inferred.",
+  "counts": {
+    "waterbodyResearchLeadsBefore": 164,
+    "waterbodyResearchLeadsAfter": 164,
+    "leadsUpdated": 3,
+    "administrativeAssociationRowsBefore": 201,
+    "administrativeAssociationRowsAfter": 201,
+    "additionalAssociationRows": 0,
+    "municipalityCodeAssignments": 3,
+    "leadsWithCityOrMunicipalityCodeAfter": 58,
+    "leadsWithProvinceCodeButNoCityOrMunicipalityCodeAfter": 102,
+    "leadsWithoutAnyLocalityCodeAfter": 4,
+    "cityCodedLeadsAfter": 15,
+    "municipalityCodedLeadsAfter": 48,
+    "cityCodesPresentAfter": 12,
+    "municipalityCodesPresentAfter": 25,
+    "cityCodeDenominator": 22,
+    "municipalityCodeDenominator": 120,
+    "geometryValidated": 0,
+    "publicRecordsAdmitted": 0,
+    "scopeFrozen": false
+  },
+  "assignments": [
+    {
+      "waterbodyId": "ph-wb-kalantasan-lopez-marsh",
+      "sourceId": "denr-cenro-calauag-2026-asian-waterbird-census",
+      "reviewPath": "data/research/philippines/calabarzon-cenro-calauag-2026-awc-site-crosswalk-20261030.json",
+      "sourceLocality": "DENR/CENRO names this existing marsh lead at Barangay Rizal (Rural), Lopez, Quezon. PSA PSGC identifies Lopez as municipality 0405622000.",
+      "codes": [
+        {
+          "level": "municipality",
+          "psgcCode": "0405622000",
+          "name": "Lopez",
+          "locality": "Barangay Rizal (Rural), Lopez, Quezon"
+        }
+      ],
+      "limit": "The municipality code links the source-described locality only. It does not resolve wetland identity or class, define a boundary, establish fish evidence, or imply public access."
+    },
+    {
+      "waterbodyId": "ph-wb-lalaguna-quezon-marsh",
+      "sourceId": "denr-cenro-calauag-2026-asian-waterbird-census",
+      "reviewPath": "data/research/philippines/calabarzon-cenro-calauag-2026-awc-site-crosswalk-20261030.json",
+      "sourceLocality": "DENR/CENRO names this existing marsh lead at Barangay Lalaguna, Lopez, Quezon. PSA PSGC identifies Lopez as municipality 0405622000.",
+      "codes": [
+        {
+          "level": "municipality",
+          "psgcCode": "0405622000",
+          "name": "Lopez",
+          "locality": "Barangay Lalaguna, Lopez, Quezon"
+        }
+      ],
+      "limit": "The municipality code links the source-described locality only. It does not resolve wetland identity or class, define a boundary, establish fish evidence, or imply public access."
+    },
+    {
+      "waterbodyId": "ph-wb-lutang-lopez-marsh",
+      "sourceId": "denr-cenro-calauag-2026-asian-waterbird-census",
+      "reviewPath": "data/research/philippines/calabarzon-cenro-calauag-2026-awc-site-crosswalk-20261030.json",
+      "sourceLocality": "DENR/CENRO names this existing marsh lead at Barangay Pamampangin, Lopez, Quezon. PSA PSGC identifies Lopez as municipality 0405622000.",
+      "codes": [
+        {
+          "level": "municipality",
+          "psgcCode": "0405622000",
+          "name": "Lopez",
+          "locality": "Barangay Pamampangin, Lopez, Quezon"
+        }
+      ],
+      "limit": "The municipality code links the source-described locality only. It does not resolve wetland identity or class, define a boundary, establish fish evidence, or imply public access."
+    }
+  ],
+  "limitations": [
+    "The January 2026 Asian Waterbird Census is waterbird monitoring context, not fish evidence or a complete wetland inventory.",
+    "Barangay locality labels are site context only and do not resolve which mapped hydrographic feature is represented, including the BMB lake versus marshland wording for Lalaguna.",
+    "The PSA code identifies the municipality; it does not encode waterbody geometry, municipal-water boundaries, fishing rights, or safe access.",
+    "No fish presence or absence, salinity, area, boundary, access, or species image conclusion is derived from this locality pass."
+  ],
+  "nextAction": "Continue the current locality-gap queue with source-described site context only; keep the three marsh identities and all feature boundaries in research review until dedicated hydrography or field evidence resolves them."
+}

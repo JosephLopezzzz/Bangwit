@@ -19,6 +19,7 @@
     "denr-bmb-inland-wetlands-atlas-2016",
     "denr-calabarzon-matandang-sabang-wcva-presentation-2025",
     "denr-cavite-adopt-waterbody-gapan-river-2025",
+    "denr-cenro-calauag-2026-asian-waterbird-census",
     "dpwh-2022-principal-river-basins-annex-d2",
     "emb-calabarzon-waterbodies",
     "emb-national-sober-2016-2021-silongin-river",
@@ -60,10 +61,12 @@
     "data/research/philippines/calabarzon-llda-tributary-scope-crosswalk-20261117.json",
     "data/research/philippines/calabarzon-llda-tributary-gbif-screen-20261117.json",
     "data/research/philippines/calabarzon-makiling-bay-local-waterbody-fish-crosswalk-20261117.json",
-    "data/research/philippines/calabarzon-makiling-bay-alias-gbif-screen-20261117.json"
+    "data/research/philippines/calabarzon-makiling-bay-alias-gbif-screen-20261117.json",
+    "data/research/philippines/national/reviews/calabarzon-locality-source-backed-batch-20261118.json",
+    "data/research/philippines/calabarzon-cenro-calauag-2026-awc-site-crosswalk-20261030.json"
   ],
   "snapshotHashes": {
-    "calabarzonScope": "cc19533e2ff17f5d4b24cd820ffe98afc65d066fe4dcc5304e4ff88dc7266e7b",
+    "calabarzonScope": "5224e5fcea4aa8285467b8a8259f5844e3ebb05e90c67f93a870e914a11c0c70",
     "administrativeDenominatorCrosswalk": "0688d4bf58dd848571c23cbc09f2bbb71244aace0f5842bb59ee473f483f7ce0",
     "mambaPalicpicanSourceReview": "651fec6c2b0b1aa8f9caa51bad93bdacf4b87ca2cc34d2d51562daf7c939e1c6",
     "bucalNameVariantReview": "39ea48ee5dca12f30e13a87cba2489cabbf119b26d5ee0c5b7468e729aab2567",
@@ -73,7 +76,9 @@
     "lldaTributaryCrosswalk": "66461c76f2fa73dfd15eba143505e32cd7755c88d7d5eb751904e5f4ce28599a",
     "lldaTributaryGbifScreen": "ef83c615cd73ef8434b76ccda188a47590a25e099457c28d16213dbbcf814aed",
     "makilingBayCrosswalk": "7a65e10f931a1f1e6b6ea99c7fdeb3a946564afb6f4f38d81ef29158c9f8cd91",
-    "makilingBayAliasGbifScreen": "0d741117a76d5b111931d3805ed75516746375a443fdb8982828d6c537141fc9"
+    "makilingBayAliasGbifScreen": "0d741117a76d5b111931d3805ed75516746375a443fdb8982828d6c537141fc9",
+    "sourceBackedLocalityBatch03": "49b5fe448717d47e7dcd09b0d36df36a0984c3d159a7871d148a8b0377a6cdbf",
+    "cenroSiteCrosswalk": "f327475abe629670ef87488b824dea9267a115fba05e72e04682fe4f120673d1"
   },
   "findings": {
     "scopeSnapshot": {
@@ -92,17 +97,18 @@
     "administrativeAssociationRows": 201,
     "localityLinkage": {
       "leadsWithProvinceCode": 160,
-      "leadsWithProvinceCodeButNoCityOrMunicipalityCode": 105,
+      "leadsWithProvinceCodeButNoCityOrMunicipalityCode": 102,
       "leadsWithCityCode": 15,
-      "leadsWithMunicipalityCode": 45,
-      "leadsWithCityOrMunicipalityCode": 55,
+      "leadsWithMunicipalityCode": 48,
+      "leadsWithCityOrMunicipalityCode": 58,
       "leadsWithoutProvinceCityOrMunicipalityCode": 4,
       "municipalityCodeCoverage": "25 of 120 CALABARZON municipality codes appear in current waterbody administrativeAssociations",
       "cityCodesPresent": 12,
       "cityCodesExpected": 22,
       "cityCodeCoverage": "12 of 22 CALABARZON city codes appear in current waterbody administrativeAssociations",
       "municipalityCodesPresent": 25,
-      "municipalityCodesExpected": 120
+      "municipalityCodesExpected": 120,
+      "leadsWithoutAnyLocalityCode": 4
     },
     "uniqueProvinceCodesInAssociations": [
       {
@@ -246,10 +252,10 @@
         "note": "One canonical shared-bay identity; province associations include Batangas, Quezon, and Marinduque; do not infer an official boundary."
       }
     ],
-    "decision": "The two source-backed locality batches updated 45 leads in the former 158-lead snapshot. Subsequent source crosswalks added six net waterbody leads and updated administrative locality links. The current 164-lead scope has 55 leads with a city or municipality code, 105 province-only leads, 4 leads without a province/city/municipality code, 12 of 22 city codes, and 25 of 120 municipality codes. These are administrative locality links, not channel geometry. Preserve unresolved leads, shared-water identities, and the incomplete inventory; keep scopeFrozen=false.",
+    "decision": "The two historical source-backed locality batches are preserved as snapshots. The 18 November batch linked three existing Lopez marsh leads to the PSA municipality code using the DENR/CENRO source-described barangays, without resolving the Lalaguna feature-class conflict or asserting geometry. Current locality counts are recomputed from the 164-lead scope: 58 city/municipality-linked leads, 102 province-only leads, 4 with no locality code, 12 of 22 city codes and 25 of 120 municipality codes. These are locality relationships, not feature boundaries. scopeFrozen remains false.",
     "requiredFollowUps": [
       "Seek route-scale protected-area or hydrography sources for Mamba/Cacabay and Palicpican, and locality or delineation evidence for the Bucal (Lalangnan) and Labayat principal basins; retain their current unassigned locality status if no source resolves the specific feature.",
-      "Continue source-backed locality review across the 105 province-only leads; code only explicit locality contexts, and review watershed, source-site, or boundary relationships at their correct scale.",
+      "Continue source-backed locality review across the 102 province-only leads; link only explicit locality contexts and preserve source-scale distinctions.",
       "Retain Manila Bay, Laguna de Bay, and Tayabas Bay as one shared identity each with source-specific administrative associations; do not use locality codes to infer water geometry.",
       "Continue reconciling waterbodies absent from the current 164 leads, including islands, small streams, ponds, reservoirs, wetlands, brackish reaches, and marine or reef areas before any scope freeze."
     ],
@@ -315,7 +321,17 @@
         }
       }
     ],
-    "reconciliationMethod": "Counts were recomputed from current CALABARZON scope waterbody administrativeAssociations using distinct waterbody IDs for lead counts and distinct PSGC codes for coverage counts. The two earlier locality batches remain historical snapshots; no new locality assignment or species admission was made by this denominator refresh."
+    "reconciliationMethod": "Counts were recomputed from current CALABARZON scope waterbody administrativeAssociations using distinct waterbody IDs for lead counts and distinct PSGC codes for coverage counts. Historical locality batches remain preserved as historical snapshots; the 18 November Lopez batch adds three source-described locality links without adding rows or geometry.",
+    "sourceBackedLocalityBatch03": {
+      "reviewId": "calabarzon-locality-source-backed-batch-20261118",
+      "path": "data/research/philippines/national/reviews/calabarzon-locality-source-backed-batch-20261118.json",
+      "sha256": "49b5fe448717d47e7dcd09b0d36df36a0984c3d159a7871d148a8b0377a6cdbf",
+      "waterbodyLeadsUpdated": 3,
+      "municipalityCodeAssignments": 3,
+      "additionalAssociationRows": 0,
+      "scopeBeforeBatchSha256": "cc19533e2ff17f5d4b24cd820ffe98afc65d066fe4dcc5304e4ff88dc7266e7b",
+      "scopeAfterBatchSha256": "5224e5fcea4aa8285467b8a8259f5844e3ebb05e90c67f93a870e914a11c0c70"
+    }
   },
   "nonClaims": [
     "A missing municipality or city code means locality resolution is unrecorded, not that a waterbody or fish is absent.",
