@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "calabarzon-locality-source-backed-batch-20261119-05",
+  "reviewedOn": "2026-11-19",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "status": "source-described-locality-linked-to-psgc;waterbody-identity-and-extent-unverified;geometry-unverified;scope-not-frozen",
+  "question": "Can the exact Rodriguez locality printed in the BMB 2019 Wawa Dam row be linked to its current PSA municipality code without implying a dam boundary or public access?",
+  "sourceIds": [
+    "denr-bmb-philchm-inland-wetlands-2019",
+    "psa-calabarzon-municipalities-list"
+  ],
+  "inputs": [
+    "data/research/philippines/calabarzon-scope.json",
+    "data/research/philippines/calabarzon-bmb-2019-wetland-inventory-crosswalk-20261024.json",
+    "data/research/philippines/administrative-registry.json",
+    "data/research/philippines/national/reviews/calabarzon-administrative-denominator-reconciliation-20261117.json",
+    "data/research/philippines/national/reviews/calabarzon-locality-source-backed-batch-20261119-04.json"
+  ],
+  "snapshotHashes": {
+    "scopeBeforeBatch": "b33ec1a4f34b251a0dc77b906d8bf74d53cb341349d87f6b530568e834927d93",
+    "calabarzonScope": "499f622ff38509f5b098d91b7faf69fcd62637031297deec0583476fc03adf1a",
+    "bmb2019WetlandCrosswalk": "3c7ca91e892100e4d67b264e8fcc454445d7b9fa2ea60cb5ff585e3fea37f7e1",
+    "administrativeRegistry": "c741456fbc2cfc9d5d813484a0b661ef206154977959fc27a289ca86732142e8",
+    "administrativeDenominator": "0688d4bf58dd848571c23cbc09f2bbb71244aace0f5842bb59ee473f483f7ce0",
+    "previousLocalityBatch": "21385022eb2fca8e9da6482bb88349e55c96353bfebbac95ca8a85c44d5fa291"
+  },
+  "method": "Used the visually reviewed page 3 BMB crosswalk row, which explicitly names Wawa Dam in Rodriguez, Rizal, and matched Rodriguez to the PSA CALABARZON municipality code. The locality is a historical source context only; it does not establish the feature boundary, current status, dam ownership, access, or fish records.",
+  "sourcePage": 3,
+  "sourceRows": [
+    "Wawa Dam | Region IV-A | Rizal | Rodriguez | Water Storage | 1.29"
+  ],
+  "assignments": [
+    {
+      "waterbodyId": "ph-wb-wawa-rizal-dam",
+      "sourceId": "denr-bmb-philchm-inland-wetlands-2019",
+      "sourcePath": "data/research/philippines/calabarzon-bmb-2019-wetland-inventory-crosswalk-20261024.json",
+      "sourcePage": 3,
+      "sourceRow": "Wawa Dam | Region IV-A | Rizal | Rodriguez | Water Storage | 1.29",
+      "sourceLocality": "Rodriguez, Rizal",
+      "codes": [
+        {
+          "level": "municipality",
+          "psgcCode": "0405808000",
+          "name": "Rodriguez",
+          "locality": "Rodriguez, Rizal",
+          "sourceId": "psa-calabarzon-municipalities-list"
+        }
+      ],
+      "limit": "Historical source-described locality only. No Wawa Dam boundary, reservoir extent, current operational status, public access, fishing access, fish evidence, or public admission is established."
+    }
+  ],
+  "counts": {
+    "waterbodyResearchLeadsBefore": 164,
+    "waterbodyResearchLeadsAfter": 164,
+    "leadsUpdated": 1,
+    "cityCodeAssignments": 0,
+    "municipalityCodeAssignments": 1,
+    "additionalAssociationRows": 1,
+    "administrativeAssociationRowsBefore": 214,
+    "administrativeAssociationRowsAfter": 215,
+    "leadsWithCityOrMunicipalityCodeAfter": 77,
+    "leadsWithProvinceCodeButNoCityOrMunicipalityCodeAfter": 83,
+    "leadsWithoutAnyLocalityCodeAfter": 4,
+    "cityCodedLeadsAfter": 23,
+    "municipalityCodedLeadsAfter": 60,
+    "cityCodesPresentAfter": 15,
+    "cityCodeDenominator": 22,
+    "municipalityCodesPresentAfter": 39,
+    "municipalityCodeDenominator": 120,
+    "geometryValidated": 0,
+    "speciesAssertionsAdded": 0,
+    "publicRecordsAdmitted": 0,
+    "scopeFrozen": false
+  },
+  "limitations": [
+    "The BMB inventory is historical and selected; it does not establish present-day status, a boundary, or current measurements.",
+    "The municipality association is not a dam/reservoir geometry, catch location, legal-access statement, hazard assessment, or fish-presence claim.",
+    "No species assertions, coordinates, geometry, rules, safety claims, or public records were added; scope remains unfrozen."
+  ],
+  "decision": "Link the BMB-listed Wawa Dam locality to Rodriguez municipality code 0405808000 on the existing Wawa Dam research lead, retaining all scope and access limitations.",
+  "nextAction": "Continue with explicit, unambiguous locality rows; hold BMB entries with blank or non-administrative locality wording and maintain the Laguna de Bay NCR row for L2."
+}
