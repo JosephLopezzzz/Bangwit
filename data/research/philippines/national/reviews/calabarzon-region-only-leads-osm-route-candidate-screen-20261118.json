@@ -1,0 +1,192 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "calabarzon-region-only-leads-osm-route-candidate-screen-20261118",
+  "reviewedOn": "2026-11-18",
+  "phaseId": "L1",
+  "regionIds": [
+    "0400000000"
+  ],
+  "regionName": "Region IV-A (CALABARZON)",
+  "status": "bounded-osm-search-complete;palicpican-route-candidates-only;all-four-locality-assignments-held",
+  "question": "Does a bounded community-map search provide a source-backed route or locality crosswalk for the four CALABARZON leads that currently lack province, city, or municipality codes?",
+  "sourceIds": [
+    "cavite-sepp-2014-protected-landscape-rivers",
+    "dpwh-2022-principal-river-basins-annex-d2",
+    "osm-palicpican-river-route-candidates-20261118"
+  ],
+  "waterbodyIds": [
+    "ph-wb-mamba-cacabay-river-protected-landscape",
+    "ph-wb-palicpican-river-protected-landscape",
+    "ph-wb-bucal-lalangnan-principal-basin-4a",
+    "ph-wb-labayat-principal-basin-4a"
+  ],
+  "queryProtocol": {
+    "provider": "OpenStreetMap Nominatim public search endpoint",
+    "endpoint": "https://nominatim.openstreetmap.org/search",
+    "checkedOn": "2026-11-18",
+    "format": "jsonv2",
+    "limitPerQuery": 5,
+    "requestMode": "Single-threaded exact-name queries, spaced at least one second apart, with an identifying BangwitResearch/0.1 User-Agent.",
+    "rawResultsGitIgnored": true,
+    "queries": [
+      {
+        "query": "Palicpican River, Cavite, Philippines",
+        "resultCount": 3,
+        "results": [
+          {
+            "osmType": "way",
+            "osmId": "1473286520",
+            "type": "river",
+            "displayName": "Palicpican River, Sapang I, Ternate, Cavite, Calabarzon, 4111, Philippines"
+          },
+          {
+            "osmType": "way",
+            "osmId": "236509138",
+            "type": "stream",
+            "displayName": "Palicpican River, Ternate, Cavite, Calabarzon, 4111, Philippines"
+          },
+          {
+            "osmType": "way",
+            "osmId": "1360165255",
+            "type": "stream",
+            "displayName": "Palicpican River, Sapang I, Ternate, Cavite, Calabarzon, 4111, Philippines"
+          }
+        ]
+      },
+      {
+        "query": "Mamba/Cacabay River, Cavite, Philippines",
+        "resultCount": 0,
+        "results": []
+      },
+      {
+        "query": "Bucal (Lalangnan) Principal River Basin, CALABARZON, Philippines",
+        "resultCount": 0,
+        "results": []
+      },
+      {
+        "query": "Labayat Principal River Basin, CALABARZON, Philippines",
+        "resultCount": 0,
+        "results": []
+      }
+    ]
+  },
+  "findings": {
+    "officialSourceContext": {
+      "sourceId": "cavite-sepp-2014-protected-landscape-rivers",
+      "sourcePage": 28,
+      "reportedPalicpicanContext": "A portion of the named river is described in the Restoration Zone and Habitat Management Zone of Mts. Palay-Palay and Mataas na Gulod Protected Landscape.",
+      "reportedMambaCacabayContext": "A portion of the source-form Mamba/Cacabay River is described in the protected landscape management zones.",
+      "limitation": "The profile gives no river coordinates, channel route, municipality crosswalk, or linkage from either reported reach to an OSM way."
+    },
+    "osmWayCandidates": [
+      {
+        "osmType": "way",
+        "osmId": "1473286520",
+        "name": "Palicpican River",
+        "waterway": "river",
+        "version": 3,
+        "lastEdited": "2026-02-28T12:52:22Z",
+        "nodeCount": 176,
+        "nominatimDisplayName": "Palicpican River, Sapang I, Ternate, Cavite, Calabarzon, 4111, Philippines",
+        "sharedNodeIdsWithOtherCandidates": [
+          "13516225383"
+        ]
+      },
+      {
+        "osmType": "way",
+        "osmId": "236509138",
+        "name": "Palicpican River",
+        "waterway": "stream",
+        "version": 8,
+        "lastEdited": "2026-02-01T06:55:03Z",
+        "nodeCount": 85,
+        "nominatimDisplayName": "Palicpican River, Ternate, Cavite, Calabarzon, 4111, Philippines",
+        "sharedNodeIdsWithOtherCandidates": [
+          "13516225383"
+        ]
+      },
+      {
+        "osmType": "way",
+        "osmId": "1360165255",
+        "name": "Palicpican River",
+        "waterway": "stream",
+        "version": 1,
+        "lastEdited": "2025-02-15T20:14:41Z",
+        "nodeCount": 57,
+        "nominatimDisplayName": "Palicpican River, Sapang I, Ternate, Cavite, Calabarzon, 4111, Philippines",
+        "sharedNodeIdsWithOtherCandidates": []
+      }
+    ],
+    "topology": {
+      "candidateWays": 3,
+      "pairWithSharedNode": [
+        "1473286520",
+        "236509138"
+      ],
+      "sharedNodeId": "13516225383",
+      "candidateWayWithoutSharedNode": "1360165255",
+      "interpretation": "One pair is topologically connected in OSM; the third way remains disconnected. This does not establish that any way is the same river reach named by the official profile."
+    },
+    "zeroResultQueries": [
+      "Mamba/Cacabay River, Cavite, Philippines",
+      "Bucal (Lalangnan) Principal River Basin, CALABARZON, Philippines",
+      "Labayat Principal River Basin, CALABARZON, Philippines"
+    ],
+    "scopeSnapshot": {
+      "waterbodyResearchLeads": 164,
+      "administrativeAssociationRows": 201,
+      "leadsWithoutProvinceCityOrMunicipalityCode": 4,
+      "geometryValidated": 0,
+      "publicRecordsAdmitted": 0
+    }
+  },
+  "localResearchStorage": {
+    "rawDirectory": "data/research/philippines/raw/national/osm-palicpican-river-route-candidates-20261118/",
+    "rawDirectoryGitIgnored": true,
+    "snapshots": [
+      {
+        "path": "data/research/philippines/raw/national/osm-palicpican-river-route-candidates-20261118/nominatim-search.json",
+        "bytes": 1426,
+        "sha256": "2b1bb9843a11be6543ec730bd0d830bcfbd1c8185ffaf399e583d8f52348caec"
+      },
+      {
+        "path": "data/research/philippines/raw/national/osm-palicpican-river-route-candidates-20261118/nominatim-remaining-searches.json",
+        "bytes": 829,
+        "sha256": "8a75f88b2e60f955e3099730aab439f5628b8d3f7be6d3104284d7238f58003f"
+      },
+      {
+        "path": "data/research/philippines/raw/national/osm-palicpican-river-route-candidates-20261118/way-1473286520-full.json",
+        "bytes": 33553,
+        "sha256": "b2976a5c50e50cd413cfd349931b10ce2d0b261a7f492fd0b0756a64eb1fe324"
+      },
+      {
+        "path": "data/research/philippines/raw/national/osm-palicpican-river-route-candidates-20261118/way-236509138-full.json",
+        "bytes": 16057,
+        "sha256": "0b34912907082ac500240afd08c2d6f8cbe88101c24bf0d9b83252646853ecd1"
+      },
+      {
+        "path": "data/research/philippines/raw/national/osm-palicpican-river-route-candidates-20261118/way-1360165255-full.json",
+        "bytes": 11170,
+        "sha256": "1d8e4cf244b568e8260be992b02865d28d77435f6d270bdd7b64261d701fbc65"
+      }
+    ]
+  },
+  "decisions": {
+    "waterbodyIdentityMatchesValidated": 0,
+    "localityCodeAssignmentsAdded": 0,
+    "routeGeometryAddedToScope": false,
+    "speciesAssertionsAdded": 0,
+    "researchLeadCountChanged": false,
+    "publicRecordsAdded": 0,
+    "scopeFrozen": false,
+    "publicationApproval": false
+  },
+  "limitations": [
+    "Nominatim is a community-map geocoder, and its display-name locality labels are not official administrative boundaries.",
+    "OpenStreetMap is community maintained and not a hydrographic survey; name/tag agreement does not validate this river identity, route extent, water condition, habitat, or fishing access.",
+    "The official profile locates named river portions only within a protected landscape spanning Ternate, Maragondon, and Nasugbu; no source crosswalk connects the returned ways to the named management-zone reaches.",
+    "A zero Nominatim result only means no matching search result was returned for these exact queries. It is not evidence that the named waterbody is absent.",
+    "OSM data use ODbL 1.0. Raw geometry stays local; any later distribution needs qualified license and attribution review."
+  ],
+  "nextAction": "Seek an independent official or locally documented route/locality crosswalk for the Palicpican candidates and for the three no-result leads. Keep all four unassigned, keep OSM geometry out of the app, and do not infer species presence, access, or rules from this screen."
+}

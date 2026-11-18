@@ -1286,7 +1286,7 @@
     },
     {
       "path": "data/research/philippines/luzon-completion-manifest.json",
-      "sha256": "425e3a295ae86a6c29096b0e92627b9c1f71d5ddf917f60ba610d3814f35587b"
+      "sha256": "b1e6bff61e96010f10a397911fe8441d4e98c157273d6b307dc6048a2ed667a5"
     },
     {
       "path": "data/research/philippines/makiling-gbif-source-review.json",
@@ -2525,6 +2525,10 @@
       "sha256": "bacdc76de817872ee9a244df373bddcf8b9066745fd63f2dfb7dec51e64347e9"
     },
     {
+      "path": "data/research/philippines/national/reviews/calabarzon-region-only-leads-osm-route-candidate-screen-20261118.json",
+      "sha256": "db65be7bf2004dab341736e18e52e932b678a3755a791259171abce34b2b349c"
+    },
+    {
       "path": "data/research/philippines/national/reviews/calabarzon-san-juan-calamba-batstateu-fauna-table-access-review-20261115.json",
       "sha256": "c0050b7c79b087d0489524a3cc550b3773c5829f034efe5c4c01f95c4f550d82"
     },
@@ -2850,7 +2854,7 @@
     },
     {
       "path": "data/research/philippines/sources.json",
-      "sha256": "9cd5a4201a9faa46fb4bfd575a0b8d7cb5bc8cbbcea04e3053d0f548f8ad445c"
+      "sha256": "155b2498963266754c90bf379e4c7ec093644ce8349da13bb24d21f400d252ae"
     },
     {
       "path": "data/research/philippines/taal-checklist-decisions.json",
@@ -2910,24 +2914,24 @@
     }
   ],
   "summary": {
-    "reviewArtifactsScanned": 84,
+    "reviewArtifactsScanned": 85,
     "regionCount": 8,
-    "sourceRegistryUniqueIds": 920,
+    "sourceRegistryUniqueIds": 921,
     "sourceIdentityCrosswalkGroups": 10,
     "reviewClassifications": {
-      "directly-linked": 18,
+      "directly-linked": 19,
       "indirectly-linked": 16,
       "national-context-only": 2,
       "shared-across-regions": 48
     },
     "brokenOrUnresolvedJsonReferences": 0,
     "missingSourceIdLinks": 0,
-    "localRawReferenceCount": 836,
-    "localRawReferencesAvailable": 836,
+    "localRawReferenceCount": 841,
+    "localRawReferencesAvailable": 841,
     "localRawReferencesUnresolved": 0,
     "localRawHashMismatchReferences": 0,
     "localRawNonmatchingBasenameCandidates": 3,
-    "uniqueLocalRawInputsMatched": 798,
+    "uniqueLocalRawInputsMatched": 803,
     "manuallyReviewedRegionalAssociations": 32,
     "nationalContextArtifacts": 3,
     "unlinkedManualAssociations": 0,
@@ -2939,10 +2943,10 @@
       "rolloutKey": "L1",
       "regionId": "0400000000",
       "name": "Region IV-A (CALABARZON)",
-      "manifestReferenceCount": 26,
-      "directlyLinkedReviewCount": 20,
+      "manifestReferenceCount": 27,
+      "directlyLinkedReviewCount": 21,
       "indirectlyLinkedReviewCount": 62,
-      "declaredOrLinkedReviewCount": 82,
+      "declaredOrLinkedReviewCount": 83,
       "unaccountedExplicitReviewCount": 0,
       "baselineReviewed": false,
       "scopeFrozen": false
@@ -3417,6 +3421,34 @@
       "publicationApproval": null,
       "sourceIds": [
         "nfrdi-pansipit-taal-migratory-survey"
+      ],
+      "missingSourceIds": [],
+      "explicitSuccessorReferences": []
+    },
+    {
+      "path": "data/research/philippines/national/reviews/calabarzon-region-only-leads-osm-route-candidate-screen-20261118.json",
+      "sha256": "db65be7bf2004dab341736e18e52e932b678a3755a791259171abce34b2b349c",
+      "reviewId": "calabarzon-region-only-leads-osm-route-candidate-screen-20261118",
+      "reviewedOn": "2026-11-18",
+      "phaseId": "L1",
+      "declaredRegionIds": [
+        "0400000000"
+      ],
+      "manualAssociation": null,
+      "nationalContextDisposition": null,
+      "directRegionIds": [
+        "0400000000"
+      ],
+      "indirectRegionIds": [],
+      "relatedRegionIds": [
+        "0400000000"
+      ],
+      "classification": "directly-linked",
+      "publicationApproval": null,
+      "sourceIds": [
+        "cavite-sepp-2014-protected-landscape-rivers",
+        "dpwh-2022-principal-river-basins-annex-d2",
+        "osm-palicpican-river-route-candidates-20261118"
       ],
       "missingSourceIds": [],
       "explicitSuccessorReferences": []
@@ -14343,6 +14375,71 @@
         "nonmatchingCandidates": []
       },
       {
+        "from": "data/research/philippines/national/reviews/calabarzon-region-only-leads-osm-route-candidate-screen-20261118.json",
+        "field": "$.localResearchStorage.snapshots[0].path",
+        "referencedPath": "data/research/philippines/raw/national/osm-palicpican-river-route-candidates-20261118/nominatim-search.json",
+        "availability": "available-unpinned",
+        "matchedFiles": [
+          {
+            "path": "data/research/philippines/raw/national/osm-palicpican-river-route-candidates-20261118/nominatim-search.json",
+            "sha256": "2b1bb9843a11be6543ec730bd0d830bcfbd1c8185ffaf399e583d8f52348caec"
+          }
+        ],
+        "nonmatchingCandidates": []
+      },
+      {
+        "from": "data/research/philippines/national/reviews/calabarzon-region-only-leads-osm-route-candidate-screen-20261118.json",
+        "field": "$.localResearchStorage.snapshots[1].path",
+        "referencedPath": "data/research/philippines/raw/national/osm-palicpican-river-route-candidates-20261118/nominatim-remaining-searches.json",
+        "availability": "available-unpinned",
+        "matchedFiles": [
+          {
+            "path": "data/research/philippines/raw/national/osm-palicpican-river-route-candidates-20261118/nominatim-remaining-searches.json",
+            "sha256": "8a75f88b2e60f955e3099730aab439f5628b8d3f7be6d3104284d7238f58003f"
+          }
+        ],
+        "nonmatchingCandidates": []
+      },
+      {
+        "from": "data/research/philippines/national/reviews/calabarzon-region-only-leads-osm-route-candidate-screen-20261118.json",
+        "field": "$.localResearchStorage.snapshots[2].path",
+        "referencedPath": "data/research/philippines/raw/national/osm-palicpican-river-route-candidates-20261118/way-1473286520-full.json",
+        "availability": "available-unpinned",
+        "matchedFiles": [
+          {
+            "path": "data/research/philippines/raw/national/osm-palicpican-river-route-candidates-20261118/way-1473286520-full.json",
+            "sha256": "b2976a5c50e50cd413cfd349931b10ce2d0b261a7f492fd0b0756a64eb1fe324"
+          }
+        ],
+        "nonmatchingCandidates": []
+      },
+      {
+        "from": "data/research/philippines/national/reviews/calabarzon-region-only-leads-osm-route-candidate-screen-20261118.json",
+        "field": "$.localResearchStorage.snapshots[3].path",
+        "referencedPath": "data/research/philippines/raw/national/osm-palicpican-river-route-candidates-20261118/way-236509138-full.json",
+        "availability": "available-unpinned",
+        "matchedFiles": [
+          {
+            "path": "data/research/philippines/raw/national/osm-palicpican-river-route-candidates-20261118/way-236509138-full.json",
+            "sha256": "0b34912907082ac500240afd08c2d6f8cbe88101c24bf0d9b83252646853ecd1"
+          }
+        ],
+        "nonmatchingCandidates": []
+      },
+      {
+        "from": "data/research/philippines/national/reviews/calabarzon-region-only-leads-osm-route-candidate-screen-20261118.json",
+        "field": "$.localResearchStorage.snapshots[4].path",
+        "referencedPath": "data/research/philippines/raw/national/osm-palicpican-river-route-candidates-20261118/way-1360165255-full.json",
+        "availability": "available-unpinned",
+        "matchedFiles": [
+          {
+            "path": "data/research/philippines/raw/national/osm-palicpican-river-route-candidates-20261118/way-1360165255-full.json",
+            "sha256": "1d8e4cf244b568e8260be992b02865d28d77435f6d270bdd7b64261d701fbc65"
+          }
+        ],
+        "nonmatchingCandidates": []
+      },
+      {
         "from": "data/research/philippines/national/reviews/calabarzon-taal-cas-undated-candidates-rights-hold-20261116.json",
         "field": "$.provenance.receiptPath",
         "referencedPath": "data/research/philippines/raw/calabarzon-taal-cas-undated-specimen-followup-20261116/receipt.json",
@@ -20721,6 +20818,31 @@
       {
         "path": "data/research/philippines/raw/national/osm-calabarzon-waterway-name-crosscheck-20261108/overpass-response.json",
         "sha256": "3f1df0cfb86c10e1a3bb15cf0ef56d3c0aa9a3722dc6cdfdc94fe0af94ea3bbc",
+        "referenceCount": 1
+      },
+      {
+        "path": "data/research/philippines/raw/national/osm-palicpican-river-route-candidates-20261118/nominatim-remaining-searches.json",
+        "sha256": "8a75f88b2e60f955e3099730aab439f5628b8d3f7be6d3104284d7238f58003f",
+        "referenceCount": 1
+      },
+      {
+        "path": "data/research/philippines/raw/national/osm-palicpican-river-route-candidates-20261118/nominatim-search.json",
+        "sha256": "2b1bb9843a11be6543ec730bd0d830bcfbd1c8185ffaf399e583d8f52348caec",
+        "referenceCount": 1
+      },
+      {
+        "path": "data/research/philippines/raw/national/osm-palicpican-river-route-candidates-20261118/way-1360165255-full.json",
+        "sha256": "1d8e4cf244b568e8260be992b02865d28d77435f6d270bdd7b64261d701fbc65",
+        "referenceCount": 1
+      },
+      {
+        "path": "data/research/philippines/raw/national/osm-palicpican-river-route-candidates-20261118/way-1473286520-full.json",
+        "sha256": "b2976a5c50e50cd413cfd349931b10ce2d0b261a7f492fd0b0756a64eb1fe324",
+        "referenceCount": 1
+      },
+      {
+        "path": "data/research/philippines/raw/national/osm-palicpican-river-route-candidates-20261118/way-236509138-full.json",
+        "sha256": "0b34912907082ac500240afd08c2d6f8cbe88101c24bf0d9b83252646853ecd1",
         "referenceCount": 1
       },
       {
