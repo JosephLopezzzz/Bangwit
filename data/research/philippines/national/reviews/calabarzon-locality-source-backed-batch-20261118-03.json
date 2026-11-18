@@ -1,0 +1,140 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "calabarzon-locality-source-backed-batch-20261118-03",
+  "reviewedOn": "2026-11-18",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "status": "source-described-localities-linked-to-psgc;scope-not-frozen;geometry-unverified",
+  "question": "Can the explicit Yabahan River localities in DENR and EMB records be linked to the current PSA PSGC municipality codes without asserting river route or exact reach geometry?",
+  "sourceIds": [
+    "denr-dao-2025-28-classified-waterbodies",
+    "emb-national-sober-2016-2021-silongin-river",
+    "psa-calabarzon-municipalities-list"
+  ],
+  "inputs": [
+    "data/research/philippines/calabarzon-scope.json",
+    "data/research/philippines/calabarzon-quezon-yabahaan-yabahan-river-crosswalk-20261101.json",
+    "data/research/philippines/administrative-registry.json",
+    "data/research/philippines/national/reviews/calabarzon-administrative-denominator-reconciliation-20261117.json",
+    "data/research/philippines/national/reviews/calabarzon-locality-source-backed-batch-20261118-02.json"
+  ],
+  "snapshotHashes": {
+    "scopeBeforeBatch": "510a4b597b940f5c769c577060a1c68143c6fadc801b413816d53e40394f96f8",
+    "calabarzonScope": "6e2ae63ffc3bc7d6e907510a7dd5fade82732bbc54811a463f2ec4b6a18156f7",
+    "yabahanCrosswalkReview": "aca47d9b307496e6d668d1fe2fe99c55342e7db73b05f7ab87955014e3134589",
+    "administrativeRegistry": "c741456fbc2cfc9d5d813484a0b661ef206154977959fc27a289ca86732142e8",
+    "administrativeDenominator": "0688d4bf58dd848571c23cbc09f2bbb71244aace0f5842bb59ee473f483f7ce0",
+    "previousLocalityBatch": "c4e68fd45ee94460e863503cc7edf49fc6472cd96db0c54a0ec37219a8a8f623"
+  },
+  "method": "Reused the reviewed source row in the existing DENR/EMB river-name crosswalk, then matched only its printed locality names to the current PSA municipality directory. Replaced the single province-only association with two source-described locality associations, retaining distinct source attribution for the historical San Francisco locality. Neither assignment is a route or feature-boundary claim.",
+  "sourceLocalityEvidence": [
+    {
+      "waterbodyId": "ph-wb-yabahan-river-quezon",
+      "sourceId": "denr-dao-2025-28-classified-waterbodies",
+      "sourceReviewPath": "data/research/philippines/calabarzon-quezon-yabahaan-yabahan-river-crosswalk-20261101.json",
+      "sourceRow": "Yabahan River | San Andres | Quezon",
+      "sourceReportedLocality": "San Andres, Quezon",
+      "supports": [
+        "official river name",
+        "source-described San Andres locality"
+      ],
+      "doesNotSupport": [
+        "exact reach or channel route",
+        "river geometry",
+        "fish presence or current water quality"
+      ]
+    },
+    {
+      "waterbodyId": "ph-wb-yabahan-river-quezon",
+      "sourceId": "emb-national-sober-2016-2021-silongin-river",
+      "sourceReviewPath": "data/research/philippines/calabarzon-quezon-yabahaan-yabahan-river-crosswalk-20261101.json",
+      "sourceTable": "Table 3.3, River Waters in the Philippines",
+      "sourceRow": "YABAHAN RIVER | SAN ANDRES AND SAN FRANCISCO, QUEZNON (as printed) | B | 2020",
+      "sourceReportedLocalities": [
+        "San Andres",
+        "San Francisco"
+      ],
+      "supports": [
+        "historical source-name cross-check",
+        "source-described San Andres and San Francisco localities"
+      ],
+      "doesNotSupport": [
+        "exact reach topology or channel route",
+        "river geometry",
+        "fish presence or current water conditions"
+      ]
+    }
+  ],
+  "counts": {
+    "waterbodyResearchLeadsBefore": 164,
+    "waterbodyResearchLeadsAfter": 164,
+    "leadsUpdated": 1,
+    "localityAssignments": 2,
+    "administrativeAssociationRowsBefore": 201,
+    "administrativeAssociationRowsAfter": 202,
+    "additionalAssociationRows": 1,
+    "municipalityCodeAssignments": 2,
+    "leadsWithCityOrMunicipalityCodeAfter": 65,
+    "leadsWithProvinceCodeButNoCityOrMunicipalityCodeAfter": 95,
+    "leadsWithoutAnyLocalityCodeAfter": 4,
+    "cityCodesPresentAfter": 13,
+    "municipalityCodesPresentAfter": 30,
+    "cityCodeDenominator": 22,
+    "municipalityCodeDenominator": 120,
+    "geometryValidated": 0,
+    "speciesAssertionsAdded": 0,
+    "publicRecordsAdmitted": 0,
+    "scopeFrozen": false
+  },
+  "assignments": [
+    {
+      "waterbodyId": "ph-wb-yabahan-river-quezon",
+      "sourceId": "denr-dao-2025-28-classified-waterbodies",
+      "sourcePath": "data/research/philippines/calabarzon-quezon-yabahaan-yabahan-river-crosswalk-20261101.json",
+      "sourceRow": "DENR DAO 2025-28 lists Yabahan River in San Andres, Quezon.",
+      "sourceLocality": "San Andres, Quezon",
+      "codes": [
+        {
+          "level": "municipality",
+          "psgcCode": "0405640000",
+          "name": "San Andres",
+          "locality": "San Andres, Quezon",
+          "sourceId": "psa-calabarzon-municipalities-list"
+        }
+      ],
+      "limit": "This source-described municipality code is administrative context only; it is not a river boundary, route, exact reach, species claim, current-condition statement, or public admission."
+    },
+    {
+      "waterbodyId": "ph-wb-yabahan-river-quezon",
+      "sourceId": "emb-national-sober-2016-2021-silongin-river",
+      "sourcePath": "data/research/philippines/calabarzon-quezon-yabahaan-yabahan-river-crosswalk-20261101.json",
+      "sourceTable": "Table 3.3, River Waters in the Philippines",
+      "sourceRow": "YABAHAN RIVER | SAN ANDRES AND SAN FRANCISCO, QUEZNON (as printed)",
+      "sourceLocality": "San Francisco, Quezon (province printed as “QUEZNON”)",
+      "codes": [
+        {
+          "level": "municipality",
+          "psgcCode": "0405642000",
+          "name": "San Francisco",
+          "locality": "San Francisco, Quezon; EMB source prints “QUEZNON”",
+          "sourceId": "psa-calabarzon-municipalities-list"
+        }
+      ],
+      "limit": "Historical locality text is recorded verbatim as a source-described administrative context; the municipality code does not establish which reach lies in San Francisco or define channel geometry."
+    }
+  ],
+  "limitations": [
+    "The EMB table is historical and prints “QUEZNON”; the existing source review treats this as a typographic error in a Quezon report context, but the spelling is preserved rather than silently corrected in the quoted source row.",
+    "The PSA codes identify municipalities only; they are not river centerlines, waterbody boundaries, municipal-water boundaries, or proof of continuous channel passage through both localities.",
+    "The 2026 Quezon advisory spelling “Yabahaan” remains crosswalked at river-name/locality level only; its exact reach remains unresolved.",
+    "The DENR class B listing is regulatory classification context, not current ambient water quality, fish habitat, or safety guidance.",
+    "No fish presence or absence, abundance, geometry, salinity, access, fishing rule, hazard, species assertion, or public-app record is added."
+  ],
+  "decisions": [
+    {
+      "waterbodyId": "ph-wb-yabahan-river-quezon",
+      "decision": "Retain the existing river lead; link San Andres to the DENR and historical EMB locality wording, and San Francisco only to the historical EMB locality wording. Keep the source-era reach and route unresolved."
+    }
+  ],
+  "nextAction": "Continue the CALABARZON locality queue using explicit source-named LGU contexts; keep exact waterbody geometry and site-resolved fish evidence as separate workstreams."
+}

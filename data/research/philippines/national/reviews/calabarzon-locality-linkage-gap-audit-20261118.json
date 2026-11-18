@@ -60,16 +60,18 @@
     "data/research/philippines/calabarzon-makiling-bay-local-waterbody-fish-crosswalk-20261117.json",
     "data/research/philippines/calabarzon-quezon-bucal-lalangan-advisory-variant-review-20261101.json",
     "data/research/philippines/calabarzon-quezon-lakayat-labayat-variant-review-20261101.json",
+    "data/research/philippines/calabarzon-quezon-yabahaan-yabahan-river-crosswalk-20261101.json",
     "data/research/philippines/calabarzon-scope.json",
     "data/research/philippines/calabarzon-ternate-protected-landscape-rivers-review-20261026.json",
     "data/research/philippines/national/reviews/calabarzon-administrative-denominator-reconciliation-20261117.json",
     "data/research/philippines/national/reviews/calabarzon-locality-source-backed-batch-20261117-02.json",
     "data/research/philippines/national/reviews/calabarzon-locality-source-backed-batch-20261117.json",
     "data/research/philippines/national/reviews/calabarzon-locality-source-backed-batch-20261118-02.json",
+    "data/research/philippines/national/reviews/calabarzon-locality-source-backed-batch-20261118-03.json",
     "data/research/philippines/national/reviews/calabarzon-locality-source-backed-batch-20261118.json"
   ],
   "snapshotHashes": {
-    "calabarzonScope": "510a4b597b940f5c769c577060a1c68143c6fadc801b413816d53e40394f96f8",
+    "calabarzonScope": "6e2ae63ffc3bc7d6e907510a7dd5fade82732bbc54811a463f2ec4b6a18156f7",
     "administrativeDenominatorCrosswalk": "0688d4bf58dd848571c23cbc09f2bbb71244aace0f5842bb59ee473f483f7ce0",
     "mambaPalicpicanSourceReview": "651fec6c2b0b1aa8f9caa51bad93bdacf4b87ca2cc34d2d51562daf7c939e1c6",
     "bucalNameVariantReview": "39ea48ee5dca12f30e13a87cba2489cabbf119b26d5ee0c5b7468e729aab2567",
@@ -84,7 +86,8 @@
     "cenroSiteCrosswalk": "f327475abe629670ef87488b824dea9267a115fba05e72e04682fe4f120673d1",
     "sourceBackedLocalityBatch04": "c4e68fd45ee94460e863503cc7edf49fc6472cd96db0c54a0ec37219a8a8f623",
     "bmb2019WetlandCrosswalk": "3c7ca91e892100e4d67b264e8fcc454445d7b9fa2ea60cb5ff585e3fea37f7e1",
-    "administrativeRegistry": "c741456fbc2cfc9d5d813484a0b661ef206154977959fc27a289ca86732142e8"
+    "administrativeRegistry": "c741456fbc2cfc9d5d813484a0b661ef206154977959fc27a289ca86732142e8",
+    "sourceBackedLocalityBatch05": "1cb29ede66cf81821476c003293a32ecad242297176250b0211f95a204340d2f"
   },
   "findings": {
     "scopeSnapshot": {
@@ -100,19 +103,19 @@
       "componentCityCount": 21,
       "sourceReviewId": "calabarzon-administrative-denominator-reconciliation-20261117"
     },
-    "administrativeAssociationRows": 201,
+    "administrativeAssociationRows": 202,
     "localityLinkage": {
       "leadsWithProvinceCode": 160,
-      "leadsWithProvinceCodeButNoCityOrMunicipalityCode": 96,
+      "leadsWithProvinceCodeButNoCityOrMunicipalityCode": 95,
       "leadsWithCityCode": 16,
-      "leadsWithMunicipalityCode": 53,
-      "leadsWithCityOrMunicipalityCode": 64,
+      "leadsWithMunicipalityCode": 54,
+      "leadsWithCityOrMunicipalityCode": 65,
       "leadsWithoutProvinceCityOrMunicipalityCode": 4,
-      "municipalityCodeCoverage": "29 of 120 CALABARZON municipality codes appear in current waterbody administrativeAssociations",
+      "municipalityCodeCoverage": "30 of 120 CALABARZON municipality codes appear in current waterbody administrativeAssociations",
       "cityCodesPresent": 13,
       "cityCodesExpected": 22,
       "cityCodeCoverage": "13 of 22 CALABARZON city codes appear in current waterbody administrativeAssociations",
-      "municipalityCodesPresent": 29,
+      "municipalityCodesPresent": 30,
       "municipalityCodesExpected": 120,
       "leadsWithoutAnyLocalityCode": 4
     },
@@ -327,7 +330,7 @@
         }
       }
     ],
-    "reconciliationMethod": "Counts were recomputed from current CALABARZON scope waterbody administrativeAssociations using distinct waterbody IDs for lead counts and distinct PSGC codes for coverage counts. Historical locality batches remain preserved as historical snapshots; the 18 November Lopez batch adds three source-described locality links without adding rows or geometry.",
+    "reconciliationMethod": "Counts were recomputed from current CALABARZON scope waterbody administrativeAssociations using distinct waterbody IDs for lead counts and distinct PSGC codes for coverage counts. Historical locality batches remain preserved as historical snapshots; the latest source-backed locality batch links the Yabahan River source localities San Andres and San Francisco without asserting a route or geometry.",
     "sourceBackedLocalityBatch03": {
       "reviewId": "calabarzon-locality-source-backed-batch-20261118",
       "path": "data/research/philippines/national/reviews/calabarzon-locality-source-backed-batch-20261118.json",
@@ -348,6 +351,16 @@
       "additionalAssociationRows": 0,
       "scopeBeforeBatchSha256": "5224e5fcea4aa8285467b8a8259f5844e3ebb05e90c67f93a870e914a11c0c70",
       "scopeAfterBatchSha256": "510a4b597b940f5c769c577060a1c68143c6fadc801b413816d53e40394f96f8"
+    },
+    "sourceBackedLocalityBatch05": {
+      "reviewId": "calabarzon-locality-source-backed-batch-20261118-03",
+      "path": "data/research/philippines/national/reviews/calabarzon-locality-source-backed-batch-20261118-03.json",
+      "sha256": "1cb29ede66cf81821476c003293a32ecad242297176250b0211f95a204340d2f",
+      "waterbodyLeadsUpdated": 1,
+      "municipalityCodeAssignments": 2,
+      "additionalAssociationRows": 1,
+      "scopeBeforeBatchSha256": "510a4b597b940f5c769c577060a1c68143c6fadc801b413816d53e40394f96f8",
+      "scopeAfterBatchSha256": "6e2ae63ffc3bc7d6e907510a7dd5fade82732bbc54811a463f2ec4b6a18156f7"
     }
   },
   "nonClaims": [
