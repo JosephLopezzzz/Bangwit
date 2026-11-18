@@ -1,0 +1,202 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "calabarzon-locality-source-backed-batch-20261119-03",
+  "reviewedOn": "2026-11-19",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "status": "source-described-localities-linked-to-psgc;shared-water-identity-preserved;scope-not-frozen;geometry-unverified",
+  "question": "Can the exact Laguna- and Rizal-locality rows in the BMB 2019 Laguna Lake table be linked to their current PSA city and municipality codes without splitting the shared waterbody identity?",
+  "sourceIds": [
+    "denr-bmb-philchm-inland-wetlands-2019",
+    "psa-calabarzon-cities-list",
+    "psa-calabarzon-municipalities-list"
+  ],
+  "inputs": [
+    "data/research/philippines/calabarzon-scope.json",
+    "data/research/philippines/calabarzon-bmb-2019-wetland-inventory-crosswalk-20261024.json",
+    "data/research/philippines/administrative-registry.json",
+    "data/research/philippines/national/reviews/calabarzon-administrative-denominator-reconciliation-20261117.json",
+    "data/research/philippines/national/reviews/calabarzon-locality-source-backed-batch-20261119-02.json"
+  ],
+  "snapshotHashes": {
+    "scopeBeforeBatch": "b05f2d6debf5f32259971ad8e27a7ec2e5b0284ffb03e50b064fc2c09c311b64",
+    "calabarzonScope": "cfef051ae74cc26d495985a36b41923bed0bf1195f87181cfb9944b9b5b16c46",
+    "bmb2019WetlandCrosswalk": "3c7ca91e892100e4d67b264e8fcc454445d7b9fa2ea60cb5ff585e3fea37f7e1",
+    "administrativeRegistry": "c741456fbc2cfc9d5d813484a0b661ef206154977959fc27a289ca86732142e8",
+    "administrativeDenominator": "0688d4bf58dd848571c23cbc09f2bbb71244aace0f5842bb59ee473f483f7ce0",
+    "previousLocalityBatch": "644cf5cb0f3ecdd764f6d83acd6d6854f7ef61f1c185afcbc0a036a56207fd47"
+  },
+  "method": "Rendered and visually reviewed page 3 of the DENR-BMB 2019 inland-wetlands PDF. Linked only the municipalities/cities printed in the Laguna and Rizal locality cells to the current PSA Region IV-A PSGC rows. Kept Laguna de Bay as one shared waterbody lead. The earlier crosswalk omitted the locality cells; this batch records the visually checked correction without rewriting the older hash-pinned crosswalk. Historical area is not used as a current measurement.",
+  "sourcePage": 3,
+  "sourceRows": [
+    "Laguna Lake | Region IV-A | Laguna | San Pedro, Biñan, Sta. Rosa | Lake | 92,707.15",
+    "Laguna Lake | Region IV-A | Rizal | Jala-Jala, Pililia, Tanay"
+  ],
+  "crosswalkCorrections": [
+    {
+      "province": "Laguna",
+      "sourceName": "Laguna Lake",
+      "previousLocality": null,
+      "verifiedPrintedLocality": "San Pedro, Biñan, Sta. Rosa",
+      "basis": "Direct visual review of the page 3 locality cell; the older structured crosswalk left it blank."
+    },
+    {
+      "province": "Rizal",
+      "sourceName": "Laguna Lake",
+      "previousLocality": null,
+      "verifiedPrintedLocality": "Jala-Jala, Pililia, Tanay",
+      "basis": "Direct visual review of the page 3 locality cell; the older structured crosswalk left it blank."
+    }
+  ],
+  "assignments": [
+    {
+      "waterbodyId": "ph-wb-laguna-de-bay",
+      "sourceId": "denr-bmb-philchm-inland-wetlands-2019",
+      "sourcePath": "data/research/philippines/calabarzon-bmb-2019-wetland-inventory-crosswalk-20261024.json",
+      "sourcePage": 3,
+      "sourceRow": "Laguna Lake | Region IV-A | Laguna | San Pedro, Biñan, Sta. Rosa | Lake | 92,707.15",
+      "sourceLocality": "San Pedro, Biñan, Sta. Rosa, Laguna",
+      "codes": [
+        {
+          "level": "city",
+          "psgcCode": "0403425000",
+          "name": "City of San Pedro",
+          "locality": "City of San Pedro, Laguna",
+          "sourceId": "psa-calabarzon-cities-list"
+        }
+      ],
+      "limit": "Source-described locality context for the shared Laguna de Bay identity only; this does not confirm a sub-lake, jurisdictional extent, lake boundary, shoreline coordinates, access, fish evidence, or public admission."
+    },
+    {
+      "waterbodyId": "ph-wb-laguna-de-bay",
+      "sourceId": "denr-bmb-philchm-inland-wetlands-2019",
+      "sourcePath": "data/research/philippines/calabarzon-bmb-2019-wetland-inventory-crosswalk-20261024.json",
+      "sourcePage": 3,
+      "sourceRow": "Laguna Lake | Region IV-A | Laguna | San Pedro, Biñan, Sta. Rosa | Lake | 92,707.15",
+      "sourceLocality": "San Pedro, Biñan, Sta. Rosa, Laguna",
+      "codes": [
+        {
+          "level": "city",
+          "psgcCode": "0403403000",
+          "name": "City of Biñan",
+          "locality": "City of Biñan, Laguna",
+          "sourceId": "psa-calabarzon-cities-list"
+        }
+      ],
+      "limit": "Source-described locality context for the shared Laguna de Bay identity only; this does not confirm a sub-lake, jurisdictional extent, lake boundary, shoreline coordinates, access, fish evidence, or public admission."
+    },
+    {
+      "waterbodyId": "ph-wb-laguna-de-bay",
+      "sourceId": "denr-bmb-philchm-inland-wetlands-2019",
+      "sourcePath": "data/research/philippines/calabarzon-bmb-2019-wetland-inventory-crosswalk-20261024.json",
+      "sourcePage": 3,
+      "sourceRow": "Laguna Lake | Region IV-A | Laguna | San Pedro, Biñan, Sta. Rosa | Lake | 92,707.15",
+      "sourceLocality": "San Pedro, Biñan, Sta. Rosa, Laguna",
+      "codes": [
+        {
+          "level": "city",
+          "psgcCode": "0403428000",
+          "name": "City of Santa Rosa",
+          "locality": "City of Santa Rosa, Laguna",
+          "sourceId": "psa-calabarzon-cities-list"
+        }
+      ],
+      "limit": "Source-described locality context for the shared Laguna de Bay identity only; this does not confirm a sub-lake, jurisdictional extent, lake boundary, shoreline coordinates, access, fish evidence, or public admission."
+    },
+    {
+      "waterbodyId": "ph-wb-laguna-de-bay",
+      "sourceId": "denr-bmb-philchm-inland-wetlands-2019",
+      "sourcePath": "data/research/philippines/calabarzon-bmb-2019-wetland-inventory-crosswalk-20261024.json",
+      "sourcePage": 3,
+      "sourceRow": "Laguna Lake | Region IV-A | Rizal | Jala-Jala, Pililia, Tanay",
+      "sourceLocality": "Jala-Jala, Pililia, Tanay, Rizal",
+      "codes": [
+        {
+          "level": "municipality",
+          "psgcCode": "0405807000",
+          "name": "Jala-Jala",
+          "locality": "Jala-Jala, Rizal",
+          "sourceId": "psa-calabarzon-municipalities-list"
+        }
+      ],
+      "limit": "Source-described locality context for the shared Laguna de Bay identity only; this does not confirm a sub-lake, jurisdictional extent, lake boundary, shoreline coordinates, access, fish evidence, or public admission."
+    },
+    {
+      "waterbodyId": "ph-wb-laguna-de-bay",
+      "sourceId": "denr-bmb-philchm-inland-wetlands-2019",
+      "sourcePath": "data/research/philippines/calabarzon-bmb-2019-wetland-inventory-crosswalk-20261024.json",
+      "sourcePage": 3,
+      "sourceRow": "Laguna Lake | Region IV-A | Rizal | Jala-Jala, Pililia, Tanay",
+      "sourceLocality": "Jala-Jala, Pililia, Tanay, Rizal",
+      "codes": [
+        {
+          "level": "municipality",
+          "psgcCode": "0405810000",
+          "name": "Pililla",
+          "locality": "Pililla, Rizal",
+          "sourceId": "psa-calabarzon-municipalities-list"
+        }
+      ],
+      "limit": "Source-described locality context for the shared Laguna de Bay identity only; this does not confirm a sub-lake, jurisdictional extent, lake boundary, shoreline coordinates, access, fish evidence, or public admission."
+    },
+    {
+      "waterbodyId": "ph-wb-laguna-de-bay",
+      "sourceId": "denr-bmb-philchm-inland-wetlands-2019",
+      "sourcePath": "data/research/philippines/calabarzon-bmb-2019-wetland-inventory-crosswalk-20261024.json",
+      "sourcePage": 3,
+      "sourceRow": "Laguna Lake | Region IV-A | Rizal | Jala-Jala, Pililia, Tanay",
+      "sourceLocality": "Jala-Jala, Pililia, Tanay, Rizal",
+      "codes": [
+        {
+          "level": "municipality",
+          "psgcCode": "0405812000",
+          "name": "Tanay",
+          "locality": "Tanay, Rizal",
+          "sourceId": "psa-calabarzon-municipalities-list"
+        }
+      ],
+      "limit": "Source-described locality context for the shared Laguna de Bay identity only; this does not confirm a sub-lake, jurisdictional extent, lake boundary, shoreline coordinates, access, fish evidence, or public admission."
+    }
+  ],
+  "heldOutRow": {
+    "sourceRow": "Laguna Lake | Region IV-A | NCR | Taguig City, Muntinlupa",
+    "disposition": "Held for an NCR/L2 locality review; this L1 batch assigns only the Laguna and Rizal rows to CALABARZON codes. Do not omit the visible NCR localities from the national shared-water review."
+  },
+  "counts": {
+    "waterbodyResearchLeadsBefore": 164,
+    "waterbodyResearchLeadsAfter": 164,
+    "leadsUpdated": 1,
+    "cityCodeAssignments": 3,
+    "municipalityCodeAssignments": 3,
+    "additionalAssociationRows": 6,
+    "administrativeAssociationRowsBefore": 207,
+    "administrativeAssociationRowsAfter": 213,
+    "leadsWithCityOrMunicipalityCodeAfter": 75,
+    "leadsWithProvinceCodeButNoCityOrMunicipalityCodeAfter": 85,
+    "leadsWithoutAnyLocalityCodeAfter": 4,
+    "cityCodedLeadsAfter": 23,
+    "municipalityCodedLeadsAfter": 58,
+    "cityCodesPresentAfter": 15,
+    "cityCodeDenominator": 22,
+    "municipalityCodesPresentAfter": 37,
+    "municipalityCodeDenominator": 120,
+    "geometryValidated": 0,
+    "speciesAssertionsAdded": 0,
+    "publicRecordsAdmitted": 0,
+    "scopeFrozen": false
+  },
+  "limitations": [
+    "The BMB inventory is historical and selected, not a complete current lake or municipality inventory. Its historical area value is not adopted as current measurement or geometry.",
+    "All six codes represent source-listed locality context around one shared Laguna de Bay identity; no physical sub-lakes are created or inferred.",
+    "The visible NCR locality row is explicitly held out of this CALABARZON batch for a separate L2 crosswalk to NCR PSA codes.",
+    "Administrative localities do not define lake extent, shorelines, municipal-water boundaries, coordinates, access, fishing grounds, safety, or current fish presence.",
+    "No species assertions, salinity, hazards, regulations, or public-app records are added."
+  ],
+  "decisions": [
+    {
+      "waterbodyId": "ph-wb-laguna-de-bay",
+      "decision": "Preserve one canonical shared Laguna de Bay lead and add three Laguna city and three Rizal municipality localities from their respective BMB table rows, matched to PSA codes."
+    }
+  ],
+  "nextAction": "Review the BMB NCR row for Laguna de Bay under the NCR/L2 denominator, then continue exact locality rows for other CALABARZON waterbodies without splitting shared-water identities."
+}

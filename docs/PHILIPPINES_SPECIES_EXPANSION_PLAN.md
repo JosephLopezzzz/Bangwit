@@ -5948,3 +5948,11 @@ Rendered and visually checked the three exact-name rows on page 3 of the DENR-BM
 Added five municipality-code associations across three existing leads. This raises the 164-lead CALABARZON scope to 74 city/municipality-linked leads, 86 province-only leads, and 4 without a locality code, with 34/120 municipality codes represented. These locality links do not describe shoreline or route geometry, fishing access, fish presence, safety, rules, or public-app data. Scope remains unfrozen.
 
 See [the locality batch review](../data/research/philippines/national/reviews/calabarzon-locality-source-backed-batch-20261119-02.json), [current locality audit](../data/research/philippines/national/reviews/calabarzon-locality-linkage-gap-audit-20261118.json), the [DENR-BMB 2019 inventory](https://www.philchm.ph/wp-content/uploads/2019/06/inland-wetlands-as-of-1st-qtr-2019-for-chm-2.pdf), and the [PSA PSGC municipality directory](https://psa.gov.ph/classification/psgc/municipalities/0400000000).
+
+### National rollout step 663: Link Laguna de Bay locality rows to PSA codes — 19 November 2026
+
+Visually reviewed the Laguna and Rizal locality rows on page 3 of the DENR-BMB 2019 inland-wetlands inventory. Matched San Pedro, Biñan, and “Sta. Rosa” to the PSA cities of San Pedro, Biñan, and Santa Rosa; matched Jala-Jala, Pililia, and Tanay to the corresponding Rizal municipalities. The BMB table’s NCR row naming Taguig City and Muntinlupa is held for a separate L2 crosswalk.
+
+Added six locality-code associations to the existing shared Laguna de Bay lead, without creating sub-lakes or geometry. CALABARZON remains at 75/164 city/municipality-linked leads, 85 province-only, and 4 without a locality code; 15/22 city codes and 37/120 municipality codes are represented. No fish, access, safety, or app-facing claims were added; scope remains unfrozen.
+
+See [the locality batch review](../data/research/philippines/national/reviews/calabarzon-locality-source-backed-batch-20261119-03.json), [current audit](../data/research/philippines/national/reviews/calabarzon-locality-linkage-gap-audit-20261118.json), the [DENR-BMB 2019 inventory](https://www.philchm.ph/wp-content/uploads/2019/06/inland-wetlands-as-of-1st-qtr-2019-for-chm-2.pdf), and [PSA PSGC directories](https://psa.gov.ph/classification/psgc/cities/0400000000).
