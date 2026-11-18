@@ -1,6 +1,6 @@
 # Bangwit: implementation plan for completing the Luzon phase
 
-Prepared: 16 November 2026. Status: proposed implementation sequence; planning deliverable only.
+Prepared: 16 November 2026. Status: S1 reconciliation complete for the 17 November snapshot; L1 administrative-scope preflight underway. No regional scope or baseline is frozen.
 
 This plan turns the assessment's recommended order into five executable stages: reconcile existing work, freeze regional scope, complete evidence decisions and coverage, integrate eligible packages, then verify and release. It refines the [species expansion plan](PHILIPPINES_SPECIES_EXPANSION_PLAN.md) and reuses the [self-service acquisition backlog](SELF_SERVICE_DATA_ACQUISITION_PLAN.md). It does not mark any implementation stage or region complete.
 
@@ -13,12 +13,12 @@ The target is eight dated, reviewed regional fish baselines with visible gaps an
 | Luzon tracker | Eight regions; zero baseline-reviewed; zero frozen scopes; all seven phase completion gates open | Start with reconciliation and scope, not a completion claim. |
 | Source registry | 905 unique records across the project | Source count is not a Luzon species count or evidence-coverage measure. |
 | Regional references | 47 direct evidence references and 34 broad open-work items | These are indexes and task groups, not a complete source/search denominator. |
-| Region II index | 28 `region02-` review JSONs; 27 are not directly listed in L5 | Trace indirect references before classifying any file as unaccounted for. |
+| Region II index | At plan creation, 28 `region02-` review JSONs existed and 27 lacked direct L5 links | S1 has now audited and linked those 27 by their reviewed source locality/scope; see the current evidence index. |
 | Acquisition | OBIS snapshot/rights/triage tools, GBIF bulk adapter, taxonomy helpers, and hydrography candidate tools exist | Reuse verified inputs and tools; extend only missing capabilities. |
 | Fish selection | Current OBIS bootstrap covers Actinopterygii; the fish-wide GBIF selection remains unpinned | Resolve all intended fish groups, including sharks and rays, before claiming fish-wide acquisition. |
 | Regional packaging | `scripts/species/build-regional-packages.mjs`, `data/research/philippines/regions/`, and `src/data/species/` do not yet exist | The shared package path is proposed engineering work. |
-| App and media | Separate historical-evidence components exist; six canonical species-photo files and their standard/registry are in the working tree | Inventory current admissions and preserve their evidence meaning when adapting the UI. Six photos do not complete media coverage. |
-| Delivery | Existing local changes include research, UI, and image work | Attribute and review changes before staging. A local file, commit, successful build, and deployed release are separate outcomes. |
+| App and media | Separate historical-evidence components exist; six canonical species-photo files and their standard/registry were included in the initial implementation batch | The S1 index inventories all 13 current `src/data/*.json` projections and records three CAS rights exceptions for future package decisions. Six photos do not complete media coverage. |
+| Delivery | The initial research, UI, and image changes were pushed as `68f1f98`; S1 audit edits are now local | Current S1 work still needs attributable review and a separate commit/push. A local file, commit, successful build, and deployed release remain separate outcomes. |
 
 Use [the existing Luzon manifest](../data/research/philippines/luzon-completion-manifest.json) as the top-level progress index. Do not duplicate its region status into another manually maintained scoreboard.
 
@@ -26,7 +26,7 @@ Use [the existing Luzon manifest](../data/research/philippines/luzon-completion-
 
 | Stage | Deliverable | Depends on | Milestone reached |
 | --- | --- | --- | --- |
-| S1: Reconcile existing work | Complete evidence index, gap report, current admission inventory, corrected progress summary | Existing files | Existing work accounted for |
+| S1: Reconcile existing work | Complete evidence index, gap report, current admission inventory, corrected progress summary | Existing files | Snapshot reconciled; known rights and metadata gaps explicitly carried forward |
 | S2: Freeze scope | Versioned administrative, waterbody, habitat, search, and candidate scope for each region | S1 for that region | Review denominator fixed |
 | S3: Decide evidence and coverage | Reproducible regional decisions, coverage outcomes, and reconciled counts | S2; existing acquisition tools | Regional baseline reviewed |
 | S4: Integrate eligible packages | Shared package builder and usable region/waterbody/species navigation | Admitted S3 content; complete S3 for regional integration status | Regional package integrated |
@@ -35,6 +35,8 @@ Use [the existing Luzon manifest](../data/research/philippines/luzon-completion-
 Prove S1-S5 on CALABARZON first, then reuse the same contracts in L2-L8 order. Preparation and cached acquisition for later regions can continue while the current region is being reviewed. Discovery for Visayas and Mindanao can remain stored; it does not change the Luzon completion gate.
 
 All new paths and command names below are proposals until implemented. No new runtime dependency, cloud database, account flow, or provider key is needed merely to track regional evidence.
+
+The read-only audit and index now exist at `scripts/species/national/audit-regional-evidence.mjs` and `data/research/philippines/national/reviews/luzon-evidence-index-20261117.json`. The index inventories 79 review JSON files and 13 current app data projections, pins hashes for its tracked JSON inputs, records 32 source-scope regional decisions, checks local raw JSON availability without copying content, and captures the remaining gaps without changing species admission. The [source identity crosswalk](../data/research/philippines/national/reviews/source-identity-crosswalk-20261117.json) records ten exact DOI/title-and-URL identity groups while retaining their registry IDs, access histories, and distinct research findings. `npm run species:status` now summarizes this audit alongside the existing research inventory.
 
 ## 3. S1: Reconcile existing work
 
@@ -52,9 +54,13 @@ Proposed output: `data/research/philippines/national/reviews/luzon-evidence-inde
 Acceptance:
 
 - Every relevant review in the audited snapshot has a documented disposition and regional/context relationship, including indirect references.
-- Every required reference resolves or has a named unresolved finding. Shared sources remain shared; duplicate source IDs and broken paths are corrected.
+- Every required reference resolves or has a named unresolved finding. Shared sources remain shared; duplicate source-record aliases are crosswalked, broken source IDs are corrected, and distinct version/access histories stay separate.
 - Existing public outputs and research-only material are separately accounted for. No held research row gains publication approval through indexing.
 - The report distinguishes missing local raw inputs from missing source evidence. Its generated timestamp is outside content hashes so identical inputs produce identical indexed content.
+
+**S1 checkpoint, complete for the 17 November 2026 snapshot:** The audit directly links all 28 `region02-` review files to L5 after reviewing their stated source geography; it also links four Region II hydrography crosswalks, seven explicit CALABARZON follow-ups, the shared Magat review to CAR, and the CALABARZON administrative-scope preflight to L1. At the S1 checkpoint, the index reported 79 reviews and 905 source IDs, no unresolved JSON paths or missing source IDs, and three CAS-derived public projections requiring rights reconciliation before any new package includes those rows. A local-only availability pass matched all 255 referenced raw JSON paths to 255 unique ignored local files; every receipt-pinned raw reference had a candidate matching its expected hash. Three other same-basename candidates were rejected by hash, while the correct files matched. No raw file content is copied into the tracked index. The source identity crosswalk groups ten exact DOI/title-and-URL matches while preserving registry IDs, access histories, and distinct research findings; it does not assert that version histories are equivalent. Two legacy Region II `phaseId: L1` versus `regionId: 0200000000` key mismatches remain recorded as metadata gaps; their explicit region IDs, direct links, and reviewed geography support Region II, so historical labels remain unchanged. The three CAS publication exceptions remain blocked from new package redistribution. The stale Palico-Lian source/scope fingerprints were refreshed only after confirming its exact source record and waterbody entry were unchanged; the projection was regenerated with the same 12 admitted and 3 held rows. `species:status` reported the audit successfully. S1's reconciliation and inventory acceptance criteria are met; all rights, version, and phase-key caveats remain visible for later regional decisions.
+
+**S2 administrative-denominator and source-backed locality checkpoint, 17 November 2026:** The [initial preflight](../data/research/philippines/national/reviews/calabarzon-administrative-scope-preflight-20261117.json) found no lower-level locality rows in the pinned national registry. The [follow-up crosswalk](../data/research/philippines/national/reviews/calabarzon-administrative-denominator-reconciliation-20261117.json) enumerates 120 municipalities and 22 cities across five CALABARZON provinces (21 component cities plus separately represented Lucena). The detailed PSA directory tables state 31 July 2025; the current region page reports matching 2026 counts, and Q4 2025 through Q3 2026 releases were reviewed for changes. The official 3Q workbook remains blocked by a Cloudflare 403 challenge, so no workbook row-level import is claimed. The [first locality batch](../data/research/philippines/national/reviews/calabarzon-locality-source-backed-batch-20261117.json) recorded 13 assignments across seven leads. The [second batch](../data/research/philippines/national/reviews/calabarzon-locality-source-backed-batch-20261117-02.json) adds 55 assignments across 38 more leads and 14 association rows. The updated [locality-linkage audit](../data/research/philippines/national/reviews/calabarzon-locality-linkage-gap-audit-20261117.json) finds 106 of 158 leads still province-only, 15 leads with city codes spanning 12 of 22 city codes, 38 leads with municipality codes spanning 23 of 120 municipality codes, and four with no locality code. There are now 195 association rows. Manila Bay, Laguna de Bay, and Tayabas Bay remain shared identities. Codes describe source-named localities or explicitly labeled assessment/boundary contexts; they are not geometry. Zero leads have validated geometry or public admission. The 158 waterbody leads remain incomplete and `scopeFrozen` stays false. City and municipality counts may overlap for multi-locality waters.
 
 ## 4. S2: Freeze each regional scope
 
@@ -161,7 +167,7 @@ These are starting review priorities, not complete waterbody inventories. S2 mus
 
 | Order | Region | Work to close before baseline review |
 | --- | --- | --- |
-| L1 | CALABARZON | Reconcile the 158 selected leads, wetland/unnamed-water gaps, province/island coverage and Manila Bay sharing. Resolve or explicitly hold Santa Cruz/Taal CAS rights, Dryad access, West Bay EIS fish locality, and other source exceptions. Prove the shared package using independently eligible records. |
+| L1 | CALABARZON | Seek route-scale evidence for four region-only leads; the existing source reviews do not provide a per-feature municipality allocation. Then source-review the 151 province-only leads and add lower-level codes only where cited sources identify them. Reconcile missing islands, wetlands/unnamed waters and shared Manila Bay/Laguna de Bay/Tayabas Bay identities. Resolve or hold CAS rights, Dryad access, and West Bay EIS locality exceptions. No geometry is validated yet. |
 | L2 | NCR | Account for all 17 units and named waters; distinguish Pasig/Marikina reaches, La Mesa, Laguna de Bay connections and shared Manila Bay. Reconcile parasite-host studies and incomplete station/source matrices without widening historical claims. |
 | L3 | Central Luzon | Replace the unreconciled 168 mixed-waterbody total with a named/source-linked scope. Cover seven provinces, Pampanga reaches, Angat, Pantabangan, Candaba, wetlands, estuaries and Bataan/Zambales/Aurora coasts. Keep Bagac studies and sample-overlap questions distinct. |
 | L4 | Ilocos | Reconcile four provinces, Lower Agno/Abra/tributaries, Lingayen Gulf and the coast/estuaries. Resolve held historical taxonomy/site tables or use eligible alternatives; reconcile upstream relationships with CAR. |
@@ -190,6 +196,6 @@ Luzon phase completion requires all eight reconciled regional baselines, shared-
 
 ## 10. First implementation checkpoint
 
-Start with S1: implement the read-only evidence audit, reconcile direct and indirect Region II references, inventory current projection/rights exceptions, and generate the all-region evidence index. Then produce CALABARZON's first frozen scope/search/candidate snapshot and demonstrate that its counts and gaps reconcile before expanding acquisition or UI work.
+S1 reconciliation and the CALABARZON locality denominator are complete for the 17 November snapshot. Two source-backed locality batches now link 45 leads to explicit source locality, assessment-area, boundary, or historical supply-source contexts. Continue S2 across the remaining 106 province-only leads and four leads without locality codes, while inventorying omitted islands and shared marine, brackish, and inland waters. Keep source-specific locality separate from routes and geometry. Do not freeze the waterbody scope until its denominator and unresolved gaps are reproducible; do not promote research-only candidates into the app without passing the evidence and rights gates.
 
 Planning validation: check Markdown links, proposed-versus-existing path labels, stage dependencies and consistency with the current manifests; run `git diff --check`. This document alone requires no project test, build, provider download, source admission, commit, or deployment.
