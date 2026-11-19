@@ -1,0 +1,186 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "central-luzon-bmb-2014-wetland-atlas-count-crosswalk-20261119",
+  "reviewedOn": "2026-11-19",
+  "phaseId": "L3",
+  "regionId": "0300000000",
+  "regionName": "Region III (Central Luzon)",
+  "waterbodyNames": [
+    "Pantabangan Reservoir",
+    "Paitan Lake",
+    "Lake Ladioan",
+    "Lake Malimanga",
+    "Alindayat Lake",
+    "Lake Canarin",
+    "Canarem Lake",
+    "Tambo Lake",
+    "Mt. Pinatubo Crater Lake",
+    "Mapanuepe Lake",
+    "Lake Look",
+    "Candaba Swamp",
+    "Angat Reservoir",
+    "Ipo Reservoir",
+    "Nabao Oxbow Lake",
+    "Angat River",
+    "Catmon River",
+    "Ipo River",
+    "Macua River",
+    "Pamaraman River",
+    "Sapang Labuyo River",
+    "Taguan Moro River",
+    "Meycauayan River",
+    "Cadaklan River",
+    "Carangalan River",
+    "Degayot River",
+    "Diamnan River",
+    "Longalon River",
+    "Manablon River",
+    "San Juan-Digoliat River",
+    "Pampanga River",
+    "Pasag River",
+    "Orani River",
+    "Umiray River",
+    "Nayom River"
+  ],
+  "status": "official-2014-atlas-count-breakdown-exactly-matches-rdp-168;15-table1-region-iii-leads;20-selected-table2-watercourse-leads;river-unit-and-lineage-unresolved;research-only",
+  "question": "Does the BMB 2014 Atlas provide a historical Central Luzon inland-water crosswalk for the RDP's reported 168 wetland units, and what does the source establish about the count, names and river scope?",
+  "sourceIds": [
+    "denr-bmb-luzon-inland-wetlands-atlas-2014",
+    "depdev-region-iii-rdp-2023-2028"
+  ],
+  "inputs": [
+    "data/research/philippines/central-luzon-discovery-checkpoint-20261024.json"
+  ],
+  "sourceDocuments": [
+    {
+      "sourceId": "denr-bmb-luzon-inland-wetlands-atlas-2014",
+      "title": "Atlas of Inland Wetlands in Mainland Luzon, Philippines",
+      "publisher": "Biodiversity Management Bureau, Department of Environment and Natural Resources",
+      "publicationYear": 2014,
+      "url": "https://www.ramsar.org/sites/default/files/documents/library/atlas_inland_wetland_mainland_luzon_philippines_2014_e.pdf",
+      "catalogUrl": "https://elibrary.bmb.gov.ph/elibrary/?books=atlas-of-inland-wetlands-in-mainland-luzon-philippines",
+      "reviewedSections": [
+        "Table 1, all Region III rows: codes 53-66 and 105",
+        "Map 1 river-system count table and its notes",
+        "Table 2 selected Region III watercourse rows for Angat, Pantabangan, Pampanga, and shared-boundary crosswalks",
+        "Copyright and ground-verification note"
+      ],
+      "accessNote": "PDF text and table rows reviewed through the browser's extracted PDF text. The Ramsar host returned HTTP 403 to a direct local fetch; no local PDF or table image is retained."
+    },
+    {
+      "sourceId": "depdev-region-iii-rdp-2023-2028",
+      "title": "Central Luzon Regional Development Plan 2023-2028",
+      "publisher": "Department of Economy, Planning, and Development Region III",
+      "url": "https://dro3.depdev.gov.ph/wp-content/uploads/2024/04/Final-CL-RDP-2023-2028_com.pdf",
+      "reviewedSections": [
+        "Wetlands and River Systems section, official PDF text returned in web search"
+      ],
+      "accessNote": "The official PDF search result exposes the relevant text; the direct PDF request previously returned HTTP 403. No local PDF is retained."
+    }
+  ],
+  "countCrosswalk": {
+    "rdpReported": {
+      "totalWetlandUnits": 168,
+      "majorAndMinorRivers": 153,
+      "lakes": 11,
+      "reservoirs": 3,
+      "swamps": 1,
+      "separateRiverStatement": "The RDP also states that Central Luzon has 202 rivers. Its definition and relationship to the 153 major/minor rivers counted among the 168 wetlands are not provided in the reviewed passage."
+    },
+    "bmbAtlasReported": {
+      "table1RegionIIIRecords": 15,
+      "table1ClassBreakdown": {
+        "lakes": 11,
+        "waterStorageAreas": 3,
+        "marshesOrSwamps": 1
+      },
+      "map1RegionIIIRiverSystems": 153,
+      "map1ProvinceCountsAsPrinted": [
+        { "province": "Aurora", "countAsPrinted": "53" },
+        { "province": "Bataan", "countAsPrinted": "55" },
+        { "province": "Bulacan", "countAsPrinted": "3 (5**)" },
+        { "province": "Nueva Ecija", "countAsPrinted": "0 (7**)" },
+        { "province": "Pampanga", "countAsPrinted": "2*" },
+        { "province": "Tarlac", "countAsPrinted": "0 (1**)" },
+        { "province": "Zambales", "countAsPrinted": "40" }
+      ],
+      "map1ProvinceSubtotal": 153,
+      "sourceNotes": [
+        "Map 1 says a single asterisk marks a river system draining toward the same stream that was counted as one unit.",
+        "Map 1 says double asterisks identify the province where a river system is counted.",
+        "The markers are retained verbatim in selected Table 2 names; this review does not infer row-level meanings for triple- or quadruple-marker forms."
+      ]
+    },
+    "finding": "The BMB Atlas independently reports the same 153 river-system subtotal and a matching 11-lake, 3-water-storage-area, 1-swamp Table 1 breakdown, yielding 168 named-category units at the count level. This is an exact arithmetic and category-level concordance with the RDP statement, not proof that both publications use the same source, definitions, date, or exact set of waterbodies.",
+    "decision": "Count-level crosswalk supported; the named waterbody denominator remains incomplete and the underlying unit/source lineage remains unresolved. Do not label the RDP's 168 a verified current inventory."
+  },
+  "table1RegionIIILeads": [
+    { "atlasCode": 53, "sourceReportedName": "Pantabangan Reservoir", "sourceReportedRegion": "Region III", "approximateAreaHa": 3527.5, "sourceReportedWetlandType": "Water Storage Area" },
+    { "atlasCode": 54, "sourceReportedName": "Paitan Lake", "sourceReportedRegion": "Region III", "approximateAreaHa": 63.83, "sourceReportedWetlandType": "Lake" },
+    { "atlasCode": 55, "sourceReportedName": "Lake Ladioan", "sourceReportedRegion": "Region III", "approximateAreaHa": 11.6, "sourceReportedWetlandType": "Lake" },
+    { "atlasCode": 56, "sourceReportedName": "Lake Malimanga", "sourceReportedRegion": "Region III", "approximateAreaHa": 21.87, "sourceReportedWetlandType": "Lake" },
+    { "atlasCode": 57, "sourceReportedName": "Alindayat Lake", "sourceReportedRegion": "Region III", "approximateAreaHa": 63.53, "sourceReportedWetlandType": "Lake" },
+    { "atlasCode": 58, "sourceReportedName": "Lake Canarin", "sourceReportedRegion": "Region III", "approximateAreaHa": 103.39, "sourceReportedWetlandType": "Lake" },
+    { "atlasCode": 59, "sourceReportedName": "Canarem Lake", "sourceReportedRegion": "Region III", "approximateAreaHa": 59.43, "sourceReportedWetlandType": "Lake" },
+    { "atlasCode": 60, "sourceReportedName": "Tambo Lake", "sourceReportedRegion": "Region III", "approximateAreaHa": 91.98, "sourceReportedWetlandType": "Lake" },
+    { "atlasCode": 61, "sourceReportedName": "Mt. Pinatubo Crater Lake", "sourceReportedRegion": "Region III", "approximateAreaHa": 176.13, "sourceReportedWetlandType": "Lake" },
+    { "atlasCode": 62, "sourceReportedName": "Mapanuepe Lake", "sourceReportedRegion": "Region III", "approximateAreaHa": 646.06, "sourceReportedWetlandType": "Lake" },
+    { "atlasCode": 63, "sourceReportedName": "Lake Look", "sourceReportedRegion": "Region III", "approximateAreaHa": 4.82, "sourceReportedWetlandType": "Lake" },
+    { "atlasCode": 64, "sourceReportedName": "Candaba Swamp", "sourceReportedRegion": "Region III", "approximateAreaHa": 9706.98, "sourceReportedWetlandType": "Marshes/Pool" },
+    { "atlasCode": 65, "sourceReportedName": "Angat Reservoir", "sourceReportedRegion": "Region III", "approximateAreaHa": 2221.51, "sourceReportedWetlandType": "Water Storage Area" },
+    { "atlasCode": 66, "sourceReportedName": "Ipo Reservoir", "sourceReportedRegion": "Region III", "approximateAreaHa": 104.45, "sourceReportedWetlandType": "Water Storage Area" },
+    { "atlasCode": 105, "sourceReportedName": "Nabao Oxbow Lake", "sourceReportedRegion": "Region III", "approximateAreaHa": 32.06, "sourceReportedWetlandType": "Lake" }
+  ],
+  "selectedTable2WatercourseLeads": [
+    { "sourceReportedNameVerbatim": "Angat River**", "sourceNameWithoutMarker": "Angat River", "gridAsPrinted": "H-22", "provinceAsPrinted": "Bulacan", "outflowAsPrinted": "Taguan-Moro River" },
+    { "sourceReportedNameVerbatim": "Catmon River**", "sourceNameWithoutMarker": "Catmon River", "gridAsPrinted": "I-21, F-23", "provinceAsPrinted": "Bulacan", "outflowAsPrinted": "Angat Reservoir" },
+    { "sourceReportedNameVerbatim": "Ipo River**", "sourceNameWithoutMarker": "Ipo River", "gridAsPrinted": "I-22, F-23", "provinceAsPrinted": "Bulacan", "outflowAsPrinted": "Angat River" },
+    { "sourceReportedNameVerbatim": "Macua River**", "sourceNameWithoutMarker": "Macua River", "gridAsPrinted": "I-22, F-23", "provinceAsPrinted": "Bulacan", "outflowAsPrinted": "Angat Reservoir" },
+    { "sourceReportedNameVerbatim": "Pamaraman River***", "sourceNameWithoutMarker": "Pamaraman River", "gridAsPrinted": "G-23", "provinceAsPrinted": "Bulacan", "outflowAsPrinted": "Manila Bay" },
+    { "sourceReportedNameVerbatim": "Sapang Labuyo River**", "sourceNameWithoutMarker": "Sapang Labuyo River", "gridAsPrinted": "I-22, F-23", "provinceAsPrinted": "Bulacan", "outflowAsPrinted": "Angat Reservoir" },
+    { "sourceReportedNameVerbatim": "Taguan Moro River*", "sourceNameWithoutMarker": "Taguan Moro River", "gridAsPrinted": "F-23", "provinceAsPrinted": "Bulacan", "outflowAsPrinted": "Manila Bay" },
+    { "sourceReportedNameVerbatim": "Meycauayan River*", "sourceNameWithoutMarker": "Meycauayan River", "gridAsPrinted": "G-23", "provinceAsPrinted": "Bulacan and NCR", "outflowAsPrinted": "Manila Bay" },
+    { "sourceReportedNameVerbatim": "Cadaklan River**", "sourceNameWithoutMarker": "Cadaklan River", "gridAsPrinted": "I-17, F-23", "provinceAsPrinted": "Nueva Ecija", "outflowAsPrinted": "Pantabangan Reservoir" },
+    { "sourceReportedNameVerbatim": "Carangalan River**", "sourceNameWithoutMarker": "Carangalan River", "gridAsPrinted": "H-17, F-23", "provinceAsPrinted": "Nueva Ecija", "outflowAsPrinted": "Pantabangan Reservoir" },
+    { "sourceReportedNameVerbatim": "Degayot River**", "sourceNameWithoutMarker": "Degayot River", "gridAsPrinted": "I-17, F-23", "provinceAsPrinted": "Nueva Ecija", "outflowAsPrinted": "Pantabangan Reservoir" },
+    { "sourceReportedNameVerbatim": "Diamnan River**", "sourceNameWithoutMarker": "Diamnan River", "gridAsPrinted": "I-17, F-23", "provinceAsPrinted": "Nueva Ecija", "outflowAsPrinted": "Pantabangan Reservoir" },
+    { "sourceReportedNameVerbatim": "Longalon River**", "sourceNameWithoutMarker": "Longalon River", "gridAsPrinted": "I-17, F-23", "provinceAsPrinted": "Nueva Ecija", "outflowAsPrinted": "Pantabangan Reservoir" },
+    { "sourceReportedNameVerbatim": "Manablon River**", "sourceNameWithoutMarker": "Manablon River", "gridAsPrinted": "I-17, F-23", "provinceAsPrinted": "Nueva Ecija", "outflowAsPrinted": "Pantabangan Reservoir" },
+    { "sourceReportedNameVerbatim": "San Juan-Digoliat River**", "sourceNameWithoutMarker": "San Juan-Digoliat River", "gridAsPrinted": "I-17, F-23", "provinceAsPrinted": "Nueva Ecija, Nueva Viscaya and Aurora", "outflowAsPrinted": "Pantabangan Reservoir" },
+    { "sourceReportedNameVerbatim": "Pampanga River*", "sourceNameWithoutMarker": "Pampanga River", "gridAsPrinted": "F-23", "provinceAsPrinted": "Pampanga, Bulacan, Zambales, Tarlac, Nueva Ecija, Aurora, Nueva Vizcaya", "outflowAsPrinted": "Manila Bay" },
+    { "sourceReportedNameVerbatim": "Pasag River", "sourceNameWithoutMarker": "Pasag River", "gridAsPrinted": "F-23", "provinceAsPrinted": "Pampanga", "outflowAsPrinted": "Manila Bay" },
+    { "sourceReportedNameVerbatim": "Orani River", "sourceNameWithoutMarker": "Orani River", "gridAsPrinted": "E-23", "provinceAsPrinted": "Bataan and Pampanga", "outflowAsPrinted": "Manila Bay" },
+    { "sourceReportedNameVerbatim": "Umiray River*", "sourceNameWithoutMarker": "Umiray River", "gridAsPrinted": "J-20", "provinceAsPrinted": "Aurora, Quezon, Bulacan", "outflowAsPrinted": "Dingalan Bay" },
+    { "sourceReportedNameVerbatim": "Nayom River", "sourceNameWithoutMarker": "Nayom River", "gridAsPrinted": "B-17", "provinceAsPrinted": "Zambales and Infanta (Pangasinan)", "outflowAsPrinted": "West Philippine Sea" }
+  ],
+  "method": {
+    "table1Selection": "Every Table 1 row explicitly assigned to Region III: codes 53-66 and 105. Area values are preserved as the atlas's approximate historical hectares.",
+    "table2Selection": "A non-exhaustive subset selected for explicit named connections to Angat Reservoir, Pantabangan Reservoir and Pampanga River, plus cross-region/shared-province rows visible in those table sections. This is not a transcription of all Region III river systems.",
+    "rowCount": {
+      "table1": 15,
+      "selectedTable2": 20,
+      "combinedSourceRows": 35
+    },
+    "sourceTableNamesAreNotCanonicalized": true
+  },
+  "limitations": [
+    "The exact count/category match does not establish that the 2023-2028 RDP derived its numbers from the 2014 Atlas or that both sources define units identically.",
+    "The RDP's separate statement of 202 rivers is not reconciled with the 153 river systems counted in its 168-unit wetland breakdown or the Atlas map table.",
+    "The Table 1 list is complete only for rows the 2014 Atlas assigns to Region III; it is not a current or exhaustive inventory of rivers, streams, tributaries, wetlands, ponds or aquatic habitats.",
+    "Only 20 selected Table 2 rows were transcribed. Names, map grids and outflows do not establish exact channel identity, basin boundary, route geometry, waterbody boundary or current status.",
+    "The Atlas describes its inland-wetland locations and boundaries as requiring ground verification and survey/delineation; administrative boundaries are approximate.",
+    "The source is historical and does not establish fish identity, present fish presence or absence, catchability, access, fishing rules, water quality, hazard status, diet, safety, or species-specific photo references.",
+    "The Atlas copyright page permits reproduction for educational or non-profit purposes with acknowledgement; this is not a general open-data license. No public-app redistribution or derived-database rights are approved by this review."
+  ],
+  "disposition": {
+    "researchOnly": true,
+    "speciesRowsAdded": 0,
+    "appRowsAdded": 0,
+    "geometryAdded": false,
+    "fishAbsenceClaim": false,
+    "currentSafetyOrLegalClaim": false,
+    "regionalBaselineComplete": false,
+    "publicationApproval": false
+  },
+  "nextStep": "Resolve the RDP's 202 rivers statement and source lineage for its 168-unit category count, transcribe or locate a current complete name-level L3 waterbody source, then independently crosswalk atlas names to current hydrology/admin units and seek dated, taxon-resolved, reusable fish evidence for each waterbody. Keep the Central Luzon baseline incomplete."
+}
