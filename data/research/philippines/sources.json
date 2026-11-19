@@ -3,7 +3,7 @@
   "checkedOn": "2026-11-19",
   "status": "research-only-source-registry",
   "scope": "National acquisition references, freshwater spatial-source leads, MIMAROPA/CALABARZON/Central Luzon identity and inland-water source reviews, and Mindanao regional freshwater survey reviews. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 952,
+  "sourceCount": 953,
   "sources": [
     {
       "id": "aoyama-et-al-2015-cagayan-glass-eel-recruitment",
@@ -32790,6 +32790,44 @@
         "Any future nonzero result must be reviewed for verbatim locality, waterBody, event date, basis of record, dataset and record license, coordinate uncertainty, and taxonomic issues before it is assigned to a waterbody."
       ],
       "researchStatus": "central-luzon;paitan-lake;vaca-dam-reservoir;colxr-actinopterygii;12-exact-field-zeroes;bounded-index-gap-only"
+    },
+    {
+      "id": "gbif-central-luzon-bmb-atlas-colxr-actinopterygii-screen-20261119",
+      "title": "GBIF CoL XR Actinopterygii count-only name-field screen for BMB Atlas Central Luzon waters",
+      "provider": "Global Biodiversity Information Facility",
+      "url": "https://api.gbif.org/v1/occurrence/search",
+      "additionalUrls": [
+        "https://techdocs.gbif.org/en/openapi/v1/occurrence",
+        "national/reviews/central-luzon-bmb-atlas-gbif-count-screen-20261119.json"
+      ],
+      "role": "Seventy count-only searches tested waterBody and locality text for 35 names from the BMB 2014 Atlas crosswalk. One query returned a count of 1 for locality=Angat River; this is an unreviewed record-retrieval lead, not verified Angat River evidence. The other 69 zeroes are bounded text-index gaps, not absence evidence.",
+      "checkedOn": "2026-11-19",
+      "citation": "Global Biodiversity Information Facility. Occurrence Search API v1. CoL XR Actinopterygii count-only waterBody/locality field queries reviewed 2026-11-19.",
+      "access": {
+        "status": "70-http-200-count-only-queries;one-nonzero-row-retrieval-lead;69-bounded-zeroes",
+        "reviewFiles": [
+          "national/reviews/central-luzon-bmb-atlas-gbif-count-screen-20261119.json",
+          "national/reviews/central-luzon-bmb-2014-wetland-atlas-count-crosswalk-20261119.json"
+        ],
+        "queryCount": 70,
+        "rawSnapshotDirectory": "raw/central-luzon-bmb-atlas-gbif-screen-20261119/",
+        "reviewedSections": "Country PH, CoL XR checklist 7ddf754f-d193-4cc9-b351-99906754a03b, Actinopterygii usage 8VR36, waterBody and locality fields, limit=0. No occurrence rows were downloaded."
+      },
+      "reuse": {
+        "metadata": "The single positive response contains only a count and no dataset or occurrence metadata; record-level licensing remains unknown until the row is retrieved.",
+        "raw": "Count-only GBIF responses are stored in the ignored local raw directory with byte lengths and SHA-256 hashes.",
+        "content": "No occurrence record, species assertion, coordinate, geometry, image, or public app row was created."
+      },
+      "publicationApproval": false,
+      "license": null,
+      "licenseUrl": null,
+      "caveats": [
+        "The selected Actinopterygii usage is ray-finned fishes only, not sharks, rays, or every group commonly called fish.",
+        "One locality-field count does not confirm the match is a fish collected from the named Angat River; retrieve and review the occurrence record before assigning a waterbody.",
+        "Zero counts may miss alternate spellings, absent or unindexed locality/waterBody fields, records tagged only to other localities, and other taxonomic backbones; they do not establish fish absence.",
+        "The 35-name input includes only 20 selected Table 2 river leads and is not a screen of every Atlas river row or a complete Central Luzon waterbody denominator."
+      ],
+      "researchStatus": "central-luzon;bmb-2014-atlas;35-name-leads;70-count-only-field-queries;angat-river-positive-count-unreviewed;research-only"
     }
   ],
   "sourcePolicy": {
