@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "region01-binday-dam-soriano-fish-source-review-20261119",
+  "reviewedOn": "2026-11-19",
+  "phaseId": "L4",
+  "regionId": "0100000000",
+  "regionName": "Region I (Ilocos Region)",
+  "waterbodyName": "Binday Dam",
+  "status": "publisher-full-text-reviewed;historical-two-site-fish-survey;license-conflict;taxon-spelling-and-origin-conflicts;counts-and-vouchers-unavailable;research-only",
+  "question": "Does the Binday Dam study provide reproducible, reusable, site-resolved historical fish evidence for San Fabian, Pangasinan?",
+  "method": {
+    "summary": "Reviewed the publisher article page and full PDF for Soriano et al. (2023), focusing on study locality, sampling period and method, fish table and prose, nomenclature and reuse terms. Compared article-page licensing statements against each other and retained the more restrictive/uncertain rights status pending clarification. No PDF, table image, fish image, or source dataset was retained.",
+    "fishMethodAsReported": "The article reports questionnaire responses from 32 volunteer fishers, split evenly between upstream and downstream study areas. It says catch-and-release was used during the third and fourth sampling and that fish data were collected during the study period. It does not state a standardized gear/effort protocol, provide per-month fish counts, or cite voucher/accession numbers for the identifications.",
+    "reuseFinding": "The publisher article page lists License: CC BY-NC 4.0, but its separate Copyright Information section says the article is distributed under CC BY 4.0. The PDF is labeled open access but the reviewed front matter does not resolve this conflict. Do not choose the more permissive term or redistribute article text, tables, images, or data until the publisher clarifies the article-specific license."
+  },
+  "study": {
+    "citation": "Soriano, M. V., Cadion, J. G., Dela Cruz, F. J. T., Tumampo, M. L. L., & Aspiras, B. E. (2023). Assessment of physicochemical parameters with fish identification in selected water areas in Binday Dam, San Fabian, Pangasinan. Journal of Biodiversity and Environmental Sciences, 23(1), 231–241.",
+    "publisherRecord": "https://innspub.net/assessment-of-physicochemical-parameters-with-fish-identification-in-selected-water-areas-in-binday-dam-san-fabian-pangasinan/",
+    "articlePdf": "https://www.innspub.net/wp-content/uploads/2023/09/JBES-V23-No1-p231-241.pdf",
+    "collectionPeriod": "Rainy season, September–December 2021; the article describes four sampling months at two locations, but does not supply month-by-month fish observations.",
+    "sites": [
+      {
+        "location": "Barangay Colisao, San Fabian, Pangasinan",
+        "articleRole": "Upstream",
+        "latitude": 16.1292,
+        "longitude": 120.4645
+      },
+      {
+        "location": "Barangay Aramal, San Fabian, Pangasinan",
+        "articleRole": "Downstream",
+        "latitude": 16.124,
+        "longitude": 120.4352
+      }
+    ],
+    "coordinateLimit": "Coordinates are printed in decimal degrees, but the article does not state a datum or CRS. Treat them as source-reported study locations only; do not claim WGS84, convert them to navigation points, or infer dam/river geometry.",
+    "taxonLabelsAndVariations": [
+      {
+        "reportedLabel": "Clarias gariepinus",
+        "variantsOrConflicts": ["The abstract groups this label under native species; Table 3 and later discussion classify it as invasive."],
+        "reportedDistribution": "Both upstream and downstream in the article's narrative/table."
+      },
+      {
+        "reportedLabel": "Oreochromis niloticus",
+        "variantsOrConflicts": [],
+        "reportedDistribution": "Both upstream and downstream in the article's narrative/table."
+      },
+      {
+        "reportedLabel": "Gambusia affinis",
+        "variantsOrConflicts": ["The results prose also spells it Ganbusia affinis."],
+        "reportedDistribution": "Downstream only in the article's narrative/table."
+      },
+      {
+        "reportedLabel": "Sarotherodon melatheron",
+        "variantsOrConflicts": ["The abstract spells melatheron; the table and results prose spell melanotheron."],
+        "reportedDistribution": "Both upstream and downstream in the article's narrative/table."
+      },
+      {
+        "reportedLabel": "Carangidae sp.",
+        "variantsOrConflicts": ["Family-level placeholder, not a species identification."],
+        "reportedDistribution": "Upstream only in the article's narrative/table."
+      },
+      {
+        "reportedLabel": "Yanica hyalosoma",
+        "variantsOrConflicts": ["The discussion also spells the genus Yarica; no specimen-level name resolution is supplied."],
+        "reportedDistribution": "Upstream only in the article's discussion."
+      },
+      {
+        "reportedLabel": "Channa striata",
+        "variantsOrConflicts": ["Table 3 spells the genus Chana."],
+        "reportedDistribution": "Both upstream and downstream in the article's narrative/table."
+      },
+      {
+        "reportedLabel": "Glossogobius sp.",
+        "variantsOrConflicts": ["Genus-level identification; no species-level assertion."],
+        "reportedDistribution": "Both upstream and downstream in the article's narrative/table."
+      },
+      {
+        "reportedLabel": "Glossogobius circumpectus",
+        "variantsOrConflicts": ["The article's table also omits the second 's' in circumpectus."],
+        "reportedDistribution": "Both upstream and downstream in the article's narrative/table."
+      }
+    ],
+    "reportedTotalLimit": "The paper calls these nine species across seven families, but at least Carangidae sp. and Glossogobius sp. are not species-resolved labels. It provides qualitative upstream/downstream markers rather than numeric fish counts in the reviewed table."
+  },
+  "limitations": [
+    "Fish evidence partly relies on fisher questionnaires and catch-and-release observations in only the third and fourth sampling; a standardized gear and effort protocol and dated site-by-site fish counts are not provided.",
+    "Several scientific-name spellings differ across the abstract, table, and discussion, including Yanica/Yarica hyalosoma and Sarotherodon melatheron/melanotheron. Keep source strings and variants separate until an independent taxonomic review; do not silently normalize specimens.",
+    "The article's native/invasive classification of Clarias gariepinus conflicts between the abstract and later sections. Do not reuse the article's origin-status labels as verified claims.",
+    "The publisher page presents conflicting CC BY-NC 4.0 and CC BY 4.0 statements. No public data extraction, media reuse, or app projection is approved until rights are clarified.",
+    "The four-month 2021 water-quality measurements are historical and are not a current water-safety advisory."
+  ],
+  "decision": {
+    "sourceRegistryEntriesAdded": 1,
+    "researchTaxonLabelsRecorded": 9,
+    "speciesAssertionsAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "waterbodyAssignmentsAdded": 0,
+    "mapPointsAdded": 0,
+    "geometryAdded": false,
+    "photosReused": false,
+    "publicAppProjection": false,
+    "publicationApproval": false,
+    "regionalBaselineComplete": false,
+    "reason": "The source offers useful two-site freshwater survey context, but fish effort/count details are incomplete, taxonomic strings and origin labels conflict, and its article page states incompatible reuse terms. Keep the evidence research-only pending independent identity and rights resolution."
+  },
+  "nextAction": "Retain Binday Dam as a research-only freshwater lead. Ask the publisher to resolve the article's license only if reuse is needed; otherwise prioritize independent, clearly licensed site-level fish sources for Region I and keep the two sampling sites distinct from the dam's full waterbody geometry.",
+  "sourceReferences": [
+    "https://innspub.net/assessment-of-physicochemical-parameters-with-fish-identification-in-selected-water-areas-in-binday-dam-san-fabian-pangasinan/",
+    "https://www.innspub.net/wp-content/uploads/2023/09/JBES-V23-No1-p231-241.pdf"
+  ]
+}
