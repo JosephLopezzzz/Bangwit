@@ -1,0 +1,149 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "manila-bay-national-museum-gbif-obis-crosswalk-20261119",
+  "checkedOn": "2026-11-19",
+  "phaseId": "L3",
+  "regionId": "0300000000",
+  "regionName": "Region III (Central Luzon)",
+  "regionIds": ["0300000000", "0400000000", "1300000000"],
+  "crossReferencedRegions": [
+    { "rolloutKey": "L1", "regionId": "0400000000", "name": "Region IV-A (CALABARZON)" },
+    { "rolloutKey": "L2", "regionId": "1300000000", "name": "National Capital Region" },
+    { "rolloutKey": "L3", "regionId": "0300000000", "name": "Region III (Central Luzon)" }
+  ],
+  "waterbodyId": "ph-wb-manila-bay",
+  "waterbodyName": "Manila Bay",
+  "status": "bounded-national-museum-gbif-obis-identity-crosswalk-complete;capture-origin-unresolved;shared-water-reconciliation-open",
+  "purpose": "Crosswalk the existing CALABARZON and NCR National Museum record screens with a current GBIF bounding-box result and the previously reviewed OBIS refresh, so mirrored occurrence rows are not counted as independent evidence.",
+  "source": {
+    "id": "asean-cb-national-museum-fish-collection-gbif",
+    "datasetTitle": "Fish Specimen Collection of National Museum, Philippines",
+    "gbifDatasetKey": "18896efa-22df-4fbd-9782-42f47257e753",
+    "obisDatasetId": "288e63af-5f94-43d4-a039-f238b432129c",
+    "datasetVersionPreviouslyVerified": "1.38",
+    "datasetLicensePreviouslyVerified": "CC-BY-4.0",
+    "metadataUrl": "https://www.gbif.org/dataset/18896efa-22df-4fbd-9782-42f47257e753",
+    "sourceArchiveReview": "data/research/philippines/calabarzon-manila-bay-national-museum-gbif-screen-20261025.json"
+  },
+  "inputReviews": [
+    "data/research/philippines/calabarzon-manila-bay-national-museum-gbif-screen-20261025.json",
+    "data/research/philippines/ncr-manila-bay-gbif-record-triage-20261024.json",
+    "data/research/philippines/national/reviews/calabarzon-manila-bay-national-museum-obis-refresh-20261116.json"
+  ],
+  "rawSnapshot": {
+    "directory": "raw",
+    "gitIgnored": true,
+    "containsExactCoordinates": true,
+    "appBundleIncluded": false,
+    "files": [
+      { "path": "national-mb-nmp-crosswalk-20261119/gbif-page-0.json", "bytes": 1344980, "sha256": "7c8a1635cbf1cf7fbece3d7cc06735269eba35566751b493e5a8917e153245b9" },
+      { "path": "national-mb-nmp-crosswalk-20261119/gbif-page-300.json", "bytes": 1342954, "sha256": "c74b8cbae47d4245058bcf2349b69156cceb3f2c313491960a93ab16eb5bd670" },
+      { "path": "national-mb-nmp-crosswalk-20261119/gbif-page-600.json", "bytes": 466265, "sha256": "e8a8dfbe866212197069f90dc3edad861334d878cf5c94db978f27b1af1d27b1" },
+      { "path": "ncr-manila-bay-national-museum-refresh-20261116/obis-occurrences.json", "bytes": 773173, "sha256": "7c0fa27ec613225f79facf36bd735d4922d4c38044d41e9a9cc20be6ebd740f0" }
+    ]
+  },
+  "queries": {
+    "gbif": {
+      "endpoint": "https://api.gbif.org/v1/occurrence/search",
+      "queriedOn": "2026-11-19",
+      "datasetKey": "18896efa-22df-4fbd-9782-42f47257e753",
+      "areaDefinition": "The same bounding rectangle used by the 16 November OBIS refresh; it is a retrieval window, not a Manila Bay boundary.",
+      "limit": 300,
+      "offsets": [0, 300, 600],
+      "returnedRows": 704,
+      "uniqueOccurrenceIds": 704,
+      "rawSnapshotFileIndices": [0, 1, 2]
+    },
+    "obis": {
+      "endpoint": "https://api.obis.org/v3/occurrence",
+      "retrievedOn": "2026-11-16",
+      "datasetId": "288e63af-5f94-43d4-a039-f238b432129c",
+      "priorReview": "data/research/philippines/national/reviews/calabarzon-manila-bay-national-museum-obis-refresh-20261116.json",
+      "areaDefinition": "Same bounding rectangle as the GBIF query; the prior review also screened the 524 returned points against an unchanged, research-only Marine Regions named-bay polygon.",
+      "returnedRows": 524,
+      "rowsInsideResearchPolygon": 507,
+      "responseBytes": 773173,
+      "responseSha256": "7c0fa27ec613225f79facf36bd735d4922d4c38044d41e9a9cc20be6ebd740f0",
+      "rawSnapshotFileIndex": 3
+    }
+  },
+  "crosswalk": {
+    "comparisonMethod": "Case- and punctuation-normalized occurrenceID, catalogNumber, institutionCode, and collectionCode comparisons. Counts are record-identity checks between indexed feeds, not independent specimen verification.",
+    "gbifBoundingBoxRows": 704,
+    "obisRows": 524,
+    "obisRowsMatchedToGbifByOccurrenceId": 524,
+    "obisRowsMatchedToGbifByInstitutionCollectionCatalog": 524,
+    "obisUniqueCatalogNumbersMatched": 515,
+    "gbifRowsNotReturnedByObis": 180,
+    "matchedRowsWithEqualYear": 524,
+    "matchedRowsWithExactlyEqualCoordinates": 524,
+    "matchedRowsWithEqualStateProvinceText": 524,
+    "matchedRowsWithLiteralScientificNameEquality": 2,
+    "matchedFieldAvailability": {
+      "gbifEventDatePresent": 524,
+      "obisEventDatePresent": 0,
+      "gbifLocalityPresent": 0,
+      "obisLocalityPresent": 0,
+      "gbifWaterBodyPresent": 0,
+      "obisWaterBodyPresent": 0,
+      "gbifCoordinateUncertaintyPresent": 0,
+      "obisCoordinateUncertaintyPresent": 0
+    }
+  },
+  "regionalScreenCrosswalk": [
+    {
+      "rolloutKey": "L1",
+      "priorReview": "data/research/philippines/calabarzon-manila-bay-national-museum-gbif-screen-20261025.json",
+      "priorRowsWithSourceStateProvinceCavite": 7,
+      "rowsMatchedInCurrentGbifBoundingBoxByOccurrenceId": 7,
+      "rowsMatchedInObisRefreshByOccurrenceId": 4,
+      "decision": "Four rows are mirrored in the OBIS result; the remaining three were not returned there. All seven still lack record-level locality and waterBody and remain held as administrative-text candidates, not Cavite-water or Manila Bay capture records."
+    },
+    {
+      "rolloutKey": "L2",
+      "priorReview": "data/research/philippines/ncr-manila-bay-gbif-record-triage-20261024.json",
+      "priorNationalMuseumRowsInNcrAdministrativeFilter": 65,
+      "rowsMatchedInCurrentGbifBoundingBoxByOccurrenceId": 65,
+      "rowsMatchedInObisRefreshByOccurrenceId": 0,
+      "decision": "The 65 broad Metro Manila-filter rows are distinct from the 524 rows returned by OBIS in this snapshot. Their administrative filter does not assign them to NCR waters or Manila Bay; retain the prior research-only disposition."
+    }
+  ],
+  "interpretation": [
+    "All 524 rows returned by the OBIS refresh match GBIF occurrence identities in the same bounding rectangle. Do not add the OBIS rows to the 704 GBIF rows as 524 independent occurrences or independent confirmations.",
+    "The 507 points inside the exploratory polygon are the same 507 source coordinates in both feeds. Coordinate agreement is not a capture-origin check; the polygon is not an official, legal, navigation, municipal-water, or fishing-ground boundary.",
+    "GBIF provides eventDate on the 524 matched rows while the OBIS response omits that field. Year values agree, but the feeds do not provide locality, waterBody, or coordinate uncertainty for these matched rows.",
+    "Only two scientificName field strings are literally equal across the feeds. This comparison does not validate or resolve taxa; do not union name strings or turn these counts into a species total.",
+    "The 180 GBIF rows not returned by the OBIS query and the three Cavite administrative-text rows absent from the OBIS result are feed/query differences, not evidence of biological absence or a resolved capture site."
+  ],
+  "decision": {
+    "newSourceRegistryEntries": 0,
+    "newSpeciesAssertions": 0,
+    "newOccurrenceRows": 0,
+    "waterbodyAssignments": 0,
+    "mapPointsAdded": 0,
+    "geometryAdded": false,
+    "publicAppProjection": false,
+    "publicationApproval": false,
+    "regionalBaselineComplete": false,
+    "reason": "The crosswalk prevents double-counting mirrored feeds but does not establish capture waters. The source records lack locality, waterBody, and coordinate uncertainty; the historical coordinates cannot be treated as confirmed catch locations."
+  },
+  "nextActions": [
+    "Keep the 704-row GBIF rectangle screen and 524-row OBIS refresh linked to one existing dataset and count mirrored records once in research inventories.",
+    "Continue crosswalking separate Manila Bay studies and collections by stable source identifiers without merging evidence or localities across L1, L2, and L3.",
+    "Keep the L1, L2, and L3 shared-water completion gates open until the wider Manila Bay source set, capture provenance, and source-specific localities are reconciled."
+  ],
+  "sources": [
+    {
+      "url": "https://api.gbif.org/v1/occurrence/search?datasetKey=18896efa-22df-4fbd-9782-42f47257e753",
+      "supports": "Current GBIF occurrence result queried on 19 November 2026; raw page responses and hashes are retained in ignored local research storage."
+    },
+    {
+      "url": "https://api.obis.org/v3/occurrence",
+      "supports": "The previously reviewed OBIS occurrence result; its matched rows are crosswalked to GBIF by record identifiers."
+    },
+    {
+      "url": "https://www.gbif.org/dataset/18896efa-22df-4fbd-9782-42f47257e753",
+      "supports": "Dataset identity and the previously verified dataset metadata/license; not capture-site or taxonomic verification."
+    }
+  ]
+}
