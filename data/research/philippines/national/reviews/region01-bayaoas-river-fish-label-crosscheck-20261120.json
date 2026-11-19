@@ -1,0 +1,114 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "region01-bayaoas-river-fish-label-crosscheck-20261120",
+  "reviewedOn": "2026-11-20",
+  "phaseId": "L4",
+  "regionId": "0100000000",
+  "regionName": "Region I (Ilocos Region)",
+  "province": "Pangasinan",
+  "municipality": "Aguilar",
+  "waterbodyName": "Bayaoas River",
+  "relatedReviewFiles": [
+    "national/reviews/region01-bayaoas-river-bsrip-eis-fish-source-screen-20261119.json"
+  ],
+  "sourceReviewId": "region01-bayaoas-river-bsrip-eis-fish-source-screen-20261119",
+  "sourceIds": [
+    "pangasinan-bayaoas-river-bsrip-eis-freshwater-survey-2020",
+    "calacademy-catalog-bayaoas-fish-label-crosscheck-20261120"
+  ],
+  "status": "bounded-name-crosscheck;two-genus-only-labels-retained;two-spelling-candidate-groups;source-strings-preserved;specimen-identities-unverified;research-only",
+  "question": "Do accepted-name records help interpret the two Bayaoas EIS misspelled binomials, and can the genus-level table rows be resolved to species?",
+  "method": {
+    "summary": "Compared the two binomial-like EIS table labels with Eschmeyer's Catalog of Fishes indexed records. Official record search results list Zenarchopterus buffonis and Gambusia affinis as valid. Bounded searches for the exact printed forms did not produce usable record text, and direct record URL opens were inaccessible in the web reader. The two genus-only entries were kept at genus resolution; no species-level candidate was inferred for either.",
+    "sourceConflictContext": "The source review reports conflicting prose and station-table values. The name crosswalk does not decide whether either label or the displayed count belongs at FE2 or FE3 and does not merge the two EIS draft versions into independent surveys.",
+    "accessAndReuse": "No catalog export, photo, EIS page image, or specimen record was downloaded. No separate Catalog content-reuse terms were reviewed. The existing EIS source review records the unresolved report-data reuse terms; no publication permission is granted here."
+  },
+  "sources": [
+    {
+      "sourceId": "pangasinan-bayaoas-river-bsrip-eis-freshwater-survey-2020",
+      "authority": "National Irrigation Administration Region I / Pangasinan Irrigation Management Office; EIS hosted by DENR Environmental Management Bureau",
+      "recordUrls": [
+        "https://eia.emb.gov.ph/wp-content/uploads/2020/03/BSRIP_EIS_Main_Report_Draft_02_2019_0928_1000H.pdf",
+        "https://eia.emb.gov.ph/wp-content/uploads/2020/08/BSRIP_EIS_DRAFT_03_Main_Report_2020_0725_1330H-2.pdf"
+      ],
+      "role": "Original four-label source context; its two drafts are treated as one historical survey batch in the companion source review."
+    },
+    {
+      "sourceId": "calacademy-catalog-bayaoas-fish-label-crosscheck-20261120",
+      "authority": "Eschmeyer's Catalog of Fishes, California Academy of Sciences",
+      "recordUrls": [
+        "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=13496",
+        "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Gambusia&tbl=species",
+        "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=13762"
+      ],
+      "sourceLabelGroups": [
+        {
+          "label": "Glossogobius sp.",
+          "location": "Bayaoas EIS fish table",
+          "catalogCandidate": null,
+          "disposition": "Retain at genus level; the source does not give a species epithet and no species-level identification is inferred."
+        },
+        {
+          "label": "Oreochromis sp.",
+          "location": "Bayaoas EIS fish table",
+          "catalogCandidate": null,
+          "disposition": "Retain at genus level; the source does not give a species epithet and no species-level identification is inferred."
+        },
+        {
+          "label": "Zenarchpterus buffonis",
+          "location": "Bayaoas EIS fish table",
+          "catalogCandidate": "Zenarchopterus buffonis (Valenciennes, 1847)",
+          "catalogStatus": "The Catalog record lists Zenarchopterus buffonis as valid.",
+          "disposition": "Spelling-near nomenclatural candidate only. Preserve Zenarchpterus as printed; the Catalog result does not confirm the Bayaoas specimen or resolve the conflicting prose/table station counts."
+        },
+        {
+          "label": "Gambussia affinis",
+          "location": "Bayaoas EIS fish table",
+          "catalogCandidate": "Gambusia affinis (Baird & Girard, 1853)",
+          "catalogStatus": "The Catalog record lists Gambusia affinis as valid.",
+          "disposition": "Spelling-near nomenclatural candidate only. Preserve Gambussia as printed. The EIS table has zero counts at all five stations while its prose says G. affinis occurs only at FE3; this crosscheck does not repair or choose between those source statements."
+        }
+      ],
+      "boundedSearchNote": "Exact-name searches for Zenarchpterus buffonis and Gambussia affinis did not return usable Catalog result text in this check. This does not establish that either spelling is absent from the Catalog or that the candidate spelling identifies the source fish."
+    }
+  ],
+  "interpretation": {
+    "sourceLabelGroupsReviewed": 4,
+    "genusOnlyGroupsPreserved": 2,
+    "acceptedNameCandidates": [
+      "Zenarchopterus buffonis (Valenciennes, 1847)",
+      "Gambusia affinis (Baird & Girard, 1853)"
+    ],
+    "sourceVariantRelationsConfirmed": 0,
+    "sourceStringsCorrected": 0,
+    "specimenIdentitiesConfirmed": 0,
+    "sourceStringsPolicy": "Keep the EIS's genus-level rows and spellings verbatim. Store accepted-name strings only as candidate cross-references; do not change counts, assign narrative names to table stations, or infer species identity from a close spelling.",
+    "limits": [
+      "An accepted taxon name in the Catalog does not verify the identity of any fish in the Bayaoas source.",
+      "The two source versions are not treated as separate field surveys. The crosscheck does not resolve conflicts between prose and station table for Cichlidae, Hemiramphidae, or Gambusia affinis.",
+      "Glossogobius sp. and Oreochromis sp. remain unresolved below genus level; common names, geography, and nearby species records were not used to choose an epithet.",
+      "No vouchers, accession numbers, species photographs, item-specific source reuse terms, or exact coordinate datum were added or resolved.",
+      "No species assertions, occurrences, station points, geometry, images, conservation claims, legal guidance, safety advisories, or public-app rows were added."
+    ]
+  },
+  "decision": {
+    "acceptedNameCandidatesRecorded": 2,
+    "genusOnlyGroupsPreserved": 2,
+    "sourceVariantRelationsConfirmed": 0,
+    "sourceStringsCorrected": 0,
+    "specimenIdentitiesConfirmed": 0,
+    "speciesAssertionsAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "publicAppRowsAdded": 0,
+    "publicationApproval": false,
+    "regionalBaselineComplete": false
+  },
+  "nextAction": "Keep all four source labels research-only and retain the Bayaoas table/prose contradictions. Seek specimen-level or author evidence before any species-level claim; continue the Region I freshwater, brackish, and marine source sweep.",
+  "sourceReferences": [
+    "https://eia.emb.gov.ph/wp-content/uploads/2020/03/BSRIP_EIS_Main_Report_Draft_02_2019_0928_1000H.pdf",
+    "https://eia.emb.gov.ph/wp-content/uploads/2020/08/BSRIP_EIS_DRAFT_03_Main_Report_2020_0725_1330H-2.pdf",
+    "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=13496",
+    "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Gambusia&tbl=species",
+    "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=13762"
+  ]
+}
