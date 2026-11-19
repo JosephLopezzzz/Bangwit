@@ -9051,13 +9051,23 @@
         "https://operations.osmfoundation.org/policies/nominatim/",
         "https://www.openstreetmap.org/copyright"
       ],
-      "role": "One-off reverse-geocoder cross-check of the eight Agno River Basin source coordinates; not fish evidence, a survey-site authority, or a generic app geocoding dependency.",
-      "checkedOn": "2026-10-30",
+      "role": "One-off reverse-geocoder cross-checks for eight Agno Basin coordinates and the PAREX FWE 6 source coordinate; not fish evidence, an official survey-site authority, or a generic app geocoding dependency.",
+      "checkedOn": "2026-11-19",
       "access": {
-        "status": "Eight one-off WGS84 reverse queries sent serially, at least 1.1 seconds apart, with an identifying User-Agent; zoom 14 and address details enabled.",
+        "status": "Eight one-off WGS84 reverse queries for Agno Basin coordinates and one additional one-off PAREX FWE 6 coordinate query; serial requests used an identifying User-Agent and followed the public rate limit.",
         "rawPath": "raw/agno-station-admin-crosswalk-20261030/",
         "reviewFiles": [
-          "national-agno-station-locality-crosswalk-20261030.json"
+          "national-agno-station-locality-crosswalk-20261030.json",
+          "national/reviews/ncr-parex-fwe6-waterway-crosswalk-20261119.json"
+        ],
+        "additionalRawPaths": [
+          "raw/ncr-parex-fwe6-crosswalk-20261119/"
+        ],
+        "rawReceipts": [
+          {
+            "file": "ncr-parex-fwe6-crosswalk-20261119/nominatim-reverse.json",
+            "sha256": "0b59959a16c578d42c046a6adf65ccdb76ff288fd5ab5fe6ed60e77c92f043ee"
+          }
         ]
       },
       "reuse": {
@@ -9066,7 +9076,7 @@
         "content": "Results identify the closest suitable indexed OSM object, not the exact address or official municipality of an input coordinate. Not redistributed as app content or geometry."
       },
       "publicationApproval": false,
-      "researchStatus": "one-off-reverse-geocoder-crosscheck;closest-object-not-exact-address;research-only",
+      "researchStatus": "one-off-reverse-geocoder-crosschecks;closest-object-not-exact-address;research-only",
       "license": "OpenStreetMap data: ODbL 1.0",
       "licenseUrl": "https://www.openstreetmap.org/copyright",
       "caveats": [
@@ -32265,7 +32275,8 @@
       "access": {
         "status": "official-emb-eia-pdf-text-view-reviewed;freshwater-ecology-fish-method-and-station-matrix-reviewed;internal-taxon-table-conflict;research-only",
         "reviewFiles": [
-          "national/reviews/ncr-pasig-parex-revised-eis-fish-survey-review-20261119.json"
+          "national/reviews/ncr-pasig-parex-revised-eis-fish-survey-review-20261119.json",
+          "national/reviews/ncr-parex-fwe6-waterway-crosswalk-20261119.json"
         ],
         "fullTextRetrieved": true,
         "localRawSnapshot": null,
@@ -32285,7 +32296,8 @@
         "Table 2-19 contains 13 binomial rows plus an Actinopteri higher-taxon row, while the narrative says 14 fish species were observed. Table 2-20 also lists 13 binomials but replaces Anabas testudineus, Megalops cyprinoides, and Lutjanus bohar from the station matrix with Trichopodus pectoralis, Pempheris oualensis, and Lipocheilus carnolabrum.",
         "Table 2-19 spells Pangasius hypophthalmus while Table 2-20 spells Pangasianodon hypophthalmus; this review does not resolve the name or merge the table rows.",
         "The six sites were reported on one sampling date only. Their point coordinates do not define whole-river distributions or an official waterbody boundary; the report labels FWE 6 Taytay, Rizal, so its locality context is cross-region and its exact watercourse identity is not independently validated.",
-        "No current presence, abundance, catchability, legal access, safety, or public-app claim follows from this EIS. The report's fish photos were not reused."
+        "No current presence, abundance, catchability, legal access, safety, or public-app claim follows from this EIS. The report's fish photos were not reused.",
+        "A separate 2026 research-only crosswalk found that FWE 6’s printed Taytay locality is not resolved by the point’s OSM reverse-geocoder road result or by municipality-level waterway names; its exact waterbody assignment remains unverified."
       ]
     },
     {
@@ -32522,6 +32534,40 @@
         "A Cagayan Ludong taxonomic result cannot be transferred to a different 2019 NCR fish sample without a sample, voucher, or sequence crosswalk."
       ],
       "researchStatus": "region02;cagayan-river;ludong;primary-morphological-taxonomy;related-to-2022-archival-sequences;not-ncr-evidence;research-only"
+    },
+    {
+      "id": "dotr-2023-mrt4-eis-taytay-waterway-context",
+      "title": "Environmental Impact Statement: Manila Metro Rail Transit Line 4 Project, Volume 1 Main Report (Revised Draft)",
+      "provider": "Department of Transportation; hosted by the DENR Environmental Management Bureau EIA portal",
+      "url": "https://eia.emb.gov.ph/wp-content/uploads/2023/05/MRT4-EIS-report.pdf",
+      "role": "Officially hosted 2023 revised-draft EIS naming regional and Taytay surface-water systems, including Taytay River, Hulo River, Napindan Channel, and Manggahan Floodway context. It does not identify PAREX FWE 6 by coordinate or establish the exact waterbody at that station.",
+      "checkedOn": "2026-11-19",
+      "sourceYear": 2023,
+      "citation": "Department of Transportation. (2023). Environmental Impact Statement: Manila Metro Rail Transit Line 4 Project (MRT4), Volume 1: Main Report (Revised Draft, May 2023). Official PDF hosted by the DENR Environmental Management Bureau EIA portal.",
+      "access": {
+        "status": "official-EMB-hosted-revised-draft-PDF-reviewed-online;no-local-copy-retained",
+        "reviewFiles": [
+          "national/reviews/ncr-parex-fwe6-waterway-crosswalk-20261119.json"
+        ],
+        "fullTextRetrieved": true,
+        "localRawSnapshot": null,
+        "reviewedSections": "Cover/date; Section 3.2.1 Hydrology/Hydrogeology local drainage context for Taytay and Cainta (EIS pages ES-12 and 3-2); named Taytay River, Hulo River, Napindan Channel, Antipolo River/Manggahan Floodway relation."
+      },
+      "reuse": {
+        "metadata": "Retain attribution to Department of Transportation and the official EMB-hosted EIS. No item-specific open license or permission to republish the PDF, maps, or derived geometry was identified.",
+        "raw": "No local PDF, map image, station data, or geometry retained.",
+        "content": "Only attributed waterway names and limits of the report are recorded for internal locality crosswalk research; no fish occurrence, station-to-waterway assignment, or geometry is approved for publication."
+      },
+      "publicationApproval": false,
+      "license": "No item-specific open license verified",
+      "licenseUrl": null,
+      "caveats": [
+        "This is a revised draft EIS dated May 2023, not a hydrologic gazetteer or official waterway-boundary dataset.",
+        "The report lists several waterways in Taytay but does not match any one of them to the PAREX FWE 6 point.",
+        "It does not establish current fish presence, fishing access, catchability, safety, or legal fishing status.",
+        "The term “Napindan Channel” is preserved as printed; it is not normalized to another source spelling."
+      ],
+      "researchStatus": "official-draft-eis-waterway-name-context;no-fwe6-coordinate-match;research-only;no-geometry-or-species-claims"
     }
   ],
   "sourcePolicy": {

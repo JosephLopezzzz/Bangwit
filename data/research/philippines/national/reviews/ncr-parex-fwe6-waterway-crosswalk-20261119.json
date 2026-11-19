@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "ncr-parex-fwe6-waterway-crosswalk-20261119",
+  "reviewedOn": "2026-11-19",
+  "phaseId": "L2",
+  "regionIds": [
+    "1300000000",
+    "0400000000"
+  ],
+  "status": "station-waterbody-unresolved;PAREX-Taytay-label-vs-OSM-Pasig-road-result;MRT4-waterway-names-only;research-only",
+  "question": "Can PAREX revised EIS station FWE 6 be assigned to a named river, channel, floodway, or lake using independent source-named waterway evidence?",
+  "sourceIds": [
+    "rhr-smc-2022-parex-revised-eis-pasig-fish-survey",
+    "dotr-2023-mrt4-eis-taytay-waterway-context",
+    "openstreetmap-nominatim-reverse-geocoding"
+  ],
+  "snapshotHashes": {
+    "sourceRegistry": "2ce39409335aac6f67dbafe615ff5cb5afcea4b7fd41186a319d5e1155bf1bfd",
+    "parexFishReview": "34306ff09b6abfa9cc3af2e8dca1e4d0a73abf9a173760487af7d81ffdfd03da",
+    "ncrDiscoveryCheckpoint": "90a8eb789797a4a56a50a4a06a2d9e31cbf0997549e87fbe5941aea479d82e59",
+    "rawNominatimResponse": "0b59959a16c578d42c046a6adf65ccdb76ff288fd5ab5fe6ed60e77c92f043ee"
+  },
+  "method": "Compared the exact PAREX FWE 6 DMS coordinate against the official EIS map metadata, a single WGS84 Nominatim reverse-geocode response, and the waterway names in the official EMB-hosted 2023 revised-draft MRT4 EIS. Nominatim was called once, with a named User-Agent, and its response retained locally with SHA-256. Its nearest-object result is treated only as an OSM discovery clue, not as a waterway or legal administrative determination.",
+  "station": {
+    "sourceId": "rhr-smc-2022-parex-revised-eis-pasig-fish-survey",
+    "nameAsPrinted": "FWE 6",
+    "localityAsPrinted": "Taytay, Rizal",
+    "coordinateDmsAsPrinted": "14° 32’ 05.48” N, 121° 06’ 13.96” E",
+    "coordinateDecimalWgs84": {
+      "latitude": 14.53485556,
+      "longitude": 121.10387778
+    },
+    "dateAsPrinted": "2021-10-07",
+    "waterbodyContextAsPrinted": "Table 2-16 is captioned as freshwater ecology sampling sites along the Pasig River; the source separately labels FWE 6 locality as Taytay, Rizal. Figure 2-51 shows the southeastern project end but does not identify the exact channel or lake at FWE 6.",
+    "sourceCoordinateDatum": "Figure 2-51 states WGS 1984, but the report does not explicitly state that the Table 2-16 coordinate pair uses that datum; WGS84 was used only as a provisional input for one exploratory lookup."
+  },
+  "independentWaterwayContext": {
+    "sourceId": "dotr-2023-mrt4-eis-taytay-waterway-context",
+    "locator": "Revised Draft EIS, May 2023, Section 3.2.1 Hydrology/Hydrogeology, page ES-12; lines/source text describe Taytay drainage context.",
+    "waterwayNamesAsPrinted": [
+      "Taytay River",
+      "Hulo River",
+      "Napindan Channel",
+      "Antipolo River (present course of Manggahan Floodway)"
+    ],
+    "reportedRelationships": [
+      "The report says Taytay River, Hulo River, and Napindan Channel empty into Laguna Lake.",
+      "It says Taytay River joins the Antipolo River (present course of Manggahan Floodway) near barangays Sta. Ana and San Juan."
+    ],
+    "coordinateToWaterwayLink": "No PAREX FWE 6 point, matching station ID, or coordinate-to-waterway linkage appears in this MRT4 EIS passage. The named systems are candidate context only."
+  },
+  "mapCrossCheck": {
+    "sourceId": "openstreetmap-nominatim-reverse-geocoding",
+    "request": "https://nominatim.openstreetmap.org/reverse?format=jsonv2&lat=14.5348556&lon=121.1038778&zoom=17&addressdetails=1",
+    "returnedObject": {
+      "osmType": "way",
+      "osmId": 763259881,
+      "category": "highway",
+      "type": "cycleway",
+      "name": "C-6 Extension bike lane",
+      "returnedPoint": {
+        "latitude": 14.5348575,
+        "longitude": 121.1038815
+      }
+    },
+    "returnedAddressAsPrinted": "C-6 Extension bike lane, Purok 8, Santa Ana, Pasig Second District, Pasig, Eastern Manila District, Rizal, Metro Manila, 1920, Philippines",
+    "resultInterpretation": "The nearest suitable indexed OSM object is a road feature tagged as a cycleway (“C-6 Extension bike lane”), with an OSM address label for Santa Ana/Pasig. It is not a waterway object. Reverse-geocoding snaps to a suitable indexed object and does not assert that the sampling happened on that road or settle the official station municipality.",
+    "rawResponsePath": "raw/ncr-parex-fwe6-crosswalk-20261119/nominatim-reverse.json",
+    "rawResponseSha256": "0b59959a16c578d42c046a6adf65ccdb76ff288fd5ab5fe6ed60e77c92f043ee"
+  },
+  "decision": {
+    "resolvedWaterbodyId": null,
+    "namedWaterbodyAssignment": null,
+    "disposition": "Keep FWE 6 attached to the source’s reported Taytay locality and Pasig-corridor EIS context, but flag the coordinate/locality crosswalk as unresolved. The OSM result does not override the source label and does not identify the waterbody.",
+    "alternativeNamesNotAdopted": [
+      "Taytay River",
+      "Hulo River",
+      "Napindan Channel",
+      "Antipolo River",
+      "Manggahan Floodway",
+      "Laguna de Bay"
+    ],
+    "publicProjection": false
+  },
+  "appDecision": {
+    "speciesAssertionsAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "stationCoordinatesPublished": 0,
+    "geometryAdded": false,
+    "photosAdded": 0,
+    "safetyOrAccessClaimsAdded": 0,
+    "publicProjection": false
+  },
+  "limitations": [
+    "A one-day environmental-survey station coordinate is not a fishing spot or waterbody boundary.",
+    "The PAREX report’s municipality label and the OSM reverse-geocoder address result differ; Nominatim documentation explicitly says it returns the closest suitable indexed OSM object and can return a different street or unexpected address.",
+    "The MRT4 EIS provides municipality-level waterway names and general drainage relationships, not an FWE 6 coordinate crosswalk.",
+    "No authoritative coordinate geometry, field notebook, corrected survey table, station photographs, fish voucher, or site-specific license evidence was established here.",
+    "The source’s separate 14-species narrative versus 13-binomial tables and Table 2-19/Table 2-20 name conflicts remain unchanged and outside this locality-only review."
+  ],
+  "nextActions": [
+    "Keep FWE 6 and its fish names research-only; do not transfer it to the named Taytay channels or Laguna de Bay.",
+    "Use a source-matched field coordinate record or a clearly labeled station map with waterway label as the minimum independent resolution evidence; do not infer from nearest streets or municipal name alone.",
+    "Continue the NCR waterbody evidence inventory using independently source-named, site-resolved datasets."
+  ]
+}

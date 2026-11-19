@@ -1290,7 +1290,7 @@
     },
     {
       "path": "data/research/philippines/luzon-completion-manifest.json",
-      "sha256": "c701ac25d8506e2e7ecc5197d086e56eff721fa9f8b5369ffae0d320f4d14dc0"
+      "sha256": "7a8a7e1d4e3b82c2d77acfb098c776c4dd74e3e8307eb1fe928827aed3ba46e2"
     },
     {
       "path": "data/research/philippines/makiling-gbif-source-review.json",
@@ -2745,6 +2745,10 @@
       "sha256": "e5f14a678a07d82981ba3fc0488803078e8b11bc4699612dee5af4a33bdfeffb"
     },
     {
+      "path": "data/research/philippines/national/reviews/ncr-parex-fwe6-waterway-crosswalk-20261119.json",
+      "sha256": "be87805c26e2b590128f57962f23d4c61ed1c7dc0ba6250982c3f5d8024b82ce"
+    },
+    {
       "path": "data/research/philippines/national/reviews/ncr-pasig-biodiversity-report-refresh-20261116.json",
       "sha256": "c1c245002e9b53b1183049846bd40a187d471f09fa9c21090cd2b84013fe724c"
     },
@@ -2954,7 +2958,7 @@
     },
     {
       "path": "data/research/philippines/sources.json",
-      "sha256": "c436b21119c6ae48f1ca6c7f4882e1529370f4d674592681274e0eaa3854e097"
+      "sha256": "2ce39409335aac6f67dbafe615ff5cb5afcea4b7fd41186a319d5e1155bf1bfd"
     },
     {
       "path": "data/research/philippines/taal-checklist-decisions.json",
@@ -3014,24 +3018,24 @@
     }
   ],
   "summary": {
-    "reviewArtifactsScanned": 109,
+    "reviewArtifactsScanned": 110,
     "regionCount": 8,
-    "sourceRegistryUniqueIds": 944,
+    "sourceRegistryUniqueIds": 945,
     "sourceIdentityCrosswalkGroups": 10,
     "reviewClassifications": {
       "directly-linked": 30,
       "indirectly-linked": 16,
       "national-context-only": 1,
-      "shared-across-regions": 62
+      "shared-across-regions": 63
     },
     "brokenOrUnresolvedJsonReferences": 0,
     "missingSourceIdLinks": 0,
-    "localRawReferenceCount": 857,
-    "localRawReferencesAvailable": 857,
+    "localRawReferenceCount": 859,
+    "localRawReferencesAvailable": 859,
     "localRawReferencesUnresolved": 0,
     "localRawHashMismatchReferences": 0,
     "localRawNonmatchingBasenameCandidates": 3,
-    "uniqueLocalRawInputsMatched": 810,
+    "uniqueLocalRawInputsMatched": 811,
     "manuallyReviewedRegionalAssociations": 32,
     "nationalContextArtifacts": 3,
     "unlinkedManualAssociations": 0,
@@ -3045,8 +3049,8 @@
       "name": "Region IV-A (CALABARZON)",
       "manifestReferenceCount": 41,
       "directlyLinkedReviewCount": 33,
-      "indirectlyLinkedReviewCount": 75,
-      "declaredOrLinkedReviewCount": 108,
+      "indirectlyLinkedReviewCount": 76,
+      "declaredOrLinkedReviewCount": 109,
       "unaccountedExplicitReviewCount": 0,
       "baselineReviewed": false,
       "scopeFrozen": false
@@ -3058,7 +3062,7 @@
       "manifestReferenceCount": 17,
       "directlyLinkedReviewCount": 15,
       "indirectlyLinkedReviewCount": 1,
-      "declaredOrLinkedReviewCount": 18,
+      "declaredOrLinkedReviewCount": 19,
       "unaccountedExplicitReviewCount": 0,
       "baselineReviewed": false,
       "scopeFrozen": false
@@ -5017,6 +5021,36 @@
         "lichel-2019-makati-public-rail-pasig-freshwater-eis",
         "orozco-zafaralla-2012-manila-esteros-fish-chapter",
         "orozco-zafaralla-flavier-2008-manila-estero-fish-survey"
+      ],
+      "missingSourceIds": [],
+      "explicitSuccessorReferences": []
+    },
+    {
+      "path": "data/research/philippines/national/reviews/ncr-parex-fwe6-waterway-crosswalk-20261119.json",
+      "sha256": "be87805c26e2b590128f57962f23d4c61ed1c7dc0ba6250982c3f5d8024b82ce",
+      "reviewId": "ncr-parex-fwe6-waterway-crosswalk-20261119",
+      "reviewedOn": "2026-11-19",
+      "phaseId": "L2",
+      "declaredRegionIds": [
+        "0400000000",
+        "1300000000"
+      ],
+      "manualAssociation": null,
+      "nationalContextDisposition": null,
+      "directRegionIds": [],
+      "indirectRegionIds": [
+        "0400000000"
+      ],
+      "relatedRegionIds": [
+        "0400000000",
+        "1300000000"
+      ],
+      "classification": "shared-across-regions",
+      "publicationApproval": null,
+      "sourceIds": [
+        "dotr-2023-mrt4-eis-taytay-waterway-context",
+        "openstreetmap-nominatim-reverse-geocoding",
+        "rhr-smc-2022-parex-revised-eis-pasig-fish-survey"
       ],
       "missingSourceIds": [],
       "explicitSuccessorReferences": []
@@ -16676,6 +16710,19 @@
         "nonmatchingCandidates": []
       },
       {
+        "from": "data/research/philippines/national/reviews/ncr-parex-fwe6-waterway-crosswalk-20261119.json",
+        "field": "$.mapCrossCheck.rawResponsePath",
+        "referencedPath": "raw/ncr-parex-fwe6-crosswalk-20261119/nominatim-reverse.json",
+        "availability": "available-unpinned",
+        "matchedFiles": [
+          {
+            "path": "data/research/philippines/raw/ncr-parex-fwe6-crosswalk-20261119/nominatim-reverse.json",
+            "sha256": "0b59959a16c578d42c046a6adf65ccdb76ff288fd5ab5fe6ed60e77c92f043ee"
+          }
+        ],
+        "nonmatchingCandidates": []
+      },
+      {
         "from": "data/research/philippines/national/reviews/obis-cas-ich-cc0-rights-review-20261107.json",
         "field": "$.evidence[1].sanitizedMetadataPath",
         "referencedPath": "data/research/philippines/raw/national/obis-ph-actinopterygii-area-191-v1/datasets/d6af0fac-8a21-4d77-8872-f10d471fc0cf.json",
@@ -18189,6 +18236,19 @@
           {
             "path": "data/research/philippines/raw/nga-gns-rogo-20261030/all-name-contains.json",
             "sha256": "d072565af7266b33ca5c05d6ef4e5ec860335d4f5b7ef740704df584033ca6ef"
+          }
+        ],
+        "nonmatchingCandidates": []
+      },
+      {
+        "from": "data/research/philippines/sources.json",
+        "field": "$.sources[288].access.rawReceipts[0].file",
+        "referencedPath": "ncr-parex-fwe6-crosswalk-20261119/nominatim-reverse.json",
+        "availability": "available-and-hash-verified",
+        "matchedFiles": [
+          {
+            "path": "data/research/philippines/raw/ncr-parex-fwe6-crosswalk-20261119/nominatim-reverse.json",
+            "sha256": "0b59959a16c578d42c046a6adf65ccdb76ff288fd5ab5fe6ed60e77c92f043ee"
           }
         ],
         "nonmatchingCandidates": []
@@ -22141,6 +22201,11 @@
         "path": "data/research/philippines/raw/ncr-marikina-colxr-taxonomy-20261116/sarotherodon-melanotheron.json",
         "sha256": "d5c776ecc9cae486d50bccd51ee01c11f8e25dfd550b724733ed3827be5ea1d9",
         "referenceCount": 1
+      },
+      {
+        "path": "data/research/philippines/raw/ncr-parex-fwe6-crosswalk-20261119/nominatim-reverse.json",
+        "sha256": "0b59959a16c578d42c046a6adf65ccdb76ff288fd5ab5fe6ed60e77c92f043ee",
+        "referenceCount": 2
       },
       {
         "path": "data/research/philippines/raw/nfrdi-ragay-gulf-colxr-match-20261030/01-sardinella-lemuru.json",
