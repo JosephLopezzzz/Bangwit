@@ -1,0 +1,311 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "region01-lingayen-small-pelagic-gaerlan-fish-name-crosscheck-20261120",
+  "reviewedOn": "2026-11-20",
+  "phaseId": "L4",
+  "regionId": "0100000000",
+  "regionName": "Region I (Ilocos Region)",
+  "waterbodyName": "Lingayen Gulf",
+  "relatedReviewFiles": [
+    "national/reviews/region01-lingayen-small-pelagic-gaerlan-2009-2013-source-review-20261119.json"
+  ],
+  "sourceReviewId": "region01-lingayen-small-pelagic-gaerlan-2009-2013-source-review-20261119",
+  "sourceIds": [
+    "gaerlan-et-al-2018-lingayen-small-pelagic-fisheries",
+    "worms-gaerlan-lingayen-name-crosscheck-20261120",
+    "calacademy-catalog-gaerlan-decapterus-crosscheck-20261120"
+  ],
+  "status": "bounded-exact-name-crosscheck;twenty-source-labels;woRMS-accepted-name-matches;catalog-validity-crosscheck-for-decapterus;source-spellings-retained;specimen-identities-unverified;research-only",
+  "question": "What current-name candidates do authoritative fish catalogs support for the 20 printed Lingayen small-pelagic labels, without treating nomenclatural matches as verified catch identities?",
+  "method": {
+    "summary": "Compared the 20 exact Table 2 strings recorded in the companion source review with a WoRMS AphiaRecordsByNames batch query using exact-name matching, marine_only=true and extant_only=true. Each source string returned one exact accepted-name record. Independently queried the Eschmeyer Catalog of Fishes for the two Decapterus labels discussed in the source review; both have valid current-status records. No study specimen, raw NSAP catch record, numeric table, figure, photo or voucher was retrieved or inferred.",
+    "serviceQuery": {
+      "authority": "World Register of Marine Species (WoRMS), Aphia REST API",
+      "endpoint": "https://www.marinespecies.org/rest/AphiaRecordsByNames",
+      "parameters": [
+        "scientificnames[] repeated once per source label",
+        "marine_only=true",
+        "extant_only=true"
+      ],
+      "matchMode": "exact",
+      "sourceLabelCount": 20,
+      "exactAcceptedRecordCount": 20,
+      "accessedOn": "2026-11-20"
+    },
+    "nameUseBoundary": "A taxonomic accepted-name record is nomenclatural context only. It does not validate any landed fish, study identification, historical occurrence, count, capture site, waterbody assignment, present-day presence, or catchability.",
+    "sourceScope": "Only the 20 source strings already preserved from Table 2 were checked. No article table values or other study data were re-extracted.",
+    "reuseBoundary": "The companion source review still finds the 2018 article-specific reuse terms unresolved. This crosscheck grants no permission to reproduce its table, figures, raw landings, or derived site-level data.",
+    "distributionNote": "For Decapterus tabl, the Catalog gives a broad circumglobal tropical/warm-temperate distribution except the eastern Pacific, while the WoRMS distribution endpoint returns a limited set of localities whose qualityStatus is unreviewed and includes no Philippines entry. The WoRMS list is not evidence of absence, and neither range display identifies the Lingayen source fish."
+  },
+  "sources": [
+    {
+      "sourceId": "gaerlan-et-al-2018-lingayen-small-pelagic-fisheries",
+      "authority": "The Philippine Journal of Fisheries; Gaerlan, Buccat and Ragutero (2018)",
+      "recordUrls": [
+        "https://www.nfrdi.da.gov.ph/tpjf/vol25/A%20Review%20on%20the%20Status%20of%20Small%20Pelagic%20Fish%20Resources%20in%20the%20Lingayen%20Gulf%20for%20the%20Year%202009-2013.pdf"
+      ],
+      "role": "Provides the 20 exact table labels as transcribed in the companion source review. The article reports aggregated historical landings, not a species-by-capture-site matrix or specimen-linked records."
+    },
+    {
+      "sourceId": "worms-gaerlan-lingayen-name-crosscheck-20261120",
+      "authority": "World Register of Marine Species (WoRMS); Flanders Marine Institute",
+      "recordUrls": [
+        "https://www.marinespecies.org/aphia.php?p=taxdetails&id=273278",
+        "https://www.marinespecies.org/aphia.php?p=taxdetails&id=218426",
+        "https://www.marinespecies.org/aphia.php?p=taxdetails&id=159646",
+        "https://www.marinespecies.org/aphia.php?p=taxdetails&id=273807",
+        "https://www.marinespecies.org/aphia.php?p=taxdetails&id=127020",
+        "https://www.marinespecies.org/aphia.php?p=taxdetails&id=218384",
+        "https://www.marinespecies.org/aphia.php?p=taxdetails&id=218450",
+        "https://www.marinespecies.org/aphia.php?p=taxdetails&id=126813",
+        "https://www.marinespecies.org/aphia.php?p=taxdetails&id=218428",
+        "https://www.marinespecies.org/aphia.php?p=taxdetails&id=273808",
+        "https://www.marinespecies.org/aphia.php?p=taxdetails&id=212280",
+        "https://www.marinespecies.org/aphia.php?p=taxdetails&id=282745",
+        "https://www.marinespecies.org/aphia.php?p=taxdetails&id=152017",
+        "https://www.marinespecies.org/aphia.php?p=taxdetails&id=212277",
+        "https://www.marinespecies.org/aphia.php?p=taxdetails&id=278536",
+        "https://www.marinespecies.org/aphia.php?p=taxdetails&id=279626",
+        "https://www.marinespecies.org/aphia.php?p=taxdetails&id=127016",
+        "https://www.marinespecies.org/aphia.php?p=taxdetails&id=217439",
+        "https://www.marinespecies.org/aphia.php?p=taxdetails&id=159484",
+        "https://www.marinespecies.org/aphia.php?p=taxdetails&id=272273"
+      ],
+      "role": "WoRMS Aphia REST exact-name lookup returned accepted records for all 20 printed labels. This supports accepted-name candidates only and does not validate study specimens, Philippine occurrences, or capture locations."
+    },
+    {
+      "sourceId": "calacademy-catalog-gaerlan-decapterus-crosscheck-20261120",
+      "authority": "Eschmeyer’s Catalog of Fishes, California Academy of Sciences",
+      "recordUrls": [
+        "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?tbl=species&genus=Decapterus&species=tabl",
+        "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?tbl=species&genus=Decapterus&species=maruadsi"
+      ],
+      "role": "The Catalog lists Decapterus tabl Berry, 1968 and Decapterus maruadsi (Temminck & Schlegel, 1843) as valid. For D. tabl, the Catalog records a Colombian Caribbean type locality and a broad circumglobal warm-seas distribution; this does not determine the identity or locality of any fish in the Lingayen paper."
+    }
+  ],
+  "sourceLabelGroups": [
+    {
+      "label": "Decapterus maruadsi",
+      "sourceLocation": "Gaerlan et al. (2018), Table 2; exact printed label as preserved in the companion source review",
+      "candidateName": "Decapterus maruadsi (Temminck & Schlegel, 1843)",
+      "aphiaId": 273278,
+      "authorityFinding": "WoRMS exact-name response: accepted, AphiaID 273278.",
+      "interpretation": "Exact accepted-name match only; it does not verify a Gaerlan study specimen, a catch record, a capture locality, or current presence."
+    },
+    {
+      "label": "Decapterus macrosoma",
+      "sourceLocation": "Gaerlan et al. (2018), Table 2; exact printed label as preserved in the companion source review",
+      "candidateName": "Decapterus macrosoma Bleeker, 1851",
+      "aphiaId": 218426,
+      "authorityFinding": "WoRMS exact-name response: accepted, AphiaID 218426.",
+      "interpretation": "Exact accepted-name match only; it does not verify a Gaerlan study specimen, a catch record, a capture locality, or current presence."
+    },
+    {
+      "label": "Selar crumenophthalmus",
+      "sourceLocation": "Gaerlan et al. (2018), Table 2; exact printed label as preserved in the companion source review",
+      "candidateName": "Selar crumenophthalmus (Bloch, 1793)",
+      "aphiaId": 159646,
+      "authorityFinding": "WoRMS exact-name response: accepted, AphiaID 159646.",
+      "interpretation": "Exact accepted-name match only; it does not verify a Gaerlan study specimen, a catch record, a capture locality, or current presence."
+    },
+    {
+      "label": "Rastrelliger brachysoma",
+      "sourceLocation": "Gaerlan et al. (2018), Table 2; exact printed label as preserved in the companion source review",
+      "candidateName": "Rastrelliger brachysoma (Bleeker, 1851)",
+      "aphiaId": 273807,
+      "authorityFinding": "WoRMS exact-name response: accepted, AphiaID 273807.",
+      "interpretation": "Exact accepted-name match only; it does not verify a Gaerlan study specimen, a catch record, a capture locality, or current presence."
+    },
+    {
+      "label": "Rastrelliger kanagurta",
+      "sourceLocation": "Gaerlan et al. (2018), Table 2; exact printed label as preserved in the companion source review",
+      "candidateName": "Rastrelliger kanagurta (Cuvier, 1816)",
+      "aphiaId": 127020,
+      "authorityFinding": "WoRMS exact-name response: accepted, AphiaID 127020.",
+      "interpretation": "Exact accepted-name match only; it does not verify a Gaerlan study specimen, a catch record, a capture locality, or current presence."
+    },
+    {
+      "label": "Atule mate",
+      "sourceLocation": "Gaerlan et al. (2018), Table 2; exact printed label as preserved in the companion source review",
+      "candidateName": "Atule mate (Cuvier, 1833)",
+      "aphiaId": 218384,
+      "authorityFinding": "WoRMS exact-name response: accepted, AphiaID 218384.",
+      "interpretation": "Exact accepted-name match only; it does not verify a Gaerlan study specimen, a catch record, a capture locality, or current presence."
+    },
+    {
+      "label": "Mene maculata",
+      "sourceLocation": "Gaerlan et al. (2018), Table 2; exact printed label as preserved in the companion source review",
+      "candidateName": "Mene maculata (Bloch & Schneider, 1801)",
+      "aphiaId": 218450,
+      "authorityFinding": "WoRMS exact-name response: accepted, AphiaID 218450.",
+      "interpretation": "Exact accepted-name match only; it does not verify a Gaerlan study specimen, a catch record, a capture locality, or current presence."
+    },
+    {
+      "label": "Selar boops",
+      "sourceLocation": "Gaerlan et al. (2018), Table 2; exact printed label as preserved in the companion source review",
+      "candidateName": "Selar boops (Cuvier, 1833)",
+      "aphiaId": 126813,
+      "authorityFinding": "WoRMS exact-name response: accepted, AphiaID 126813.",
+      "interpretation": "Exact accepted-name match only; it does not verify a Gaerlan study specimen, a catch record, a capture locality, or current presence."
+    },
+    {
+      "label": "Decapterus kurroides",
+      "sourceLocation": "Gaerlan et al. (2018), Table 2; exact printed label as preserved in the companion source review",
+      "candidateName": "Decapterus kurroides Bleeker, 1855",
+      "aphiaId": 218428,
+      "authorityFinding": "WoRMS exact-name response: accepted, AphiaID 218428.",
+      "interpretation": "Exact accepted-name match only; it does not verify a Gaerlan study specimen, a catch record, a capture locality, or current presence."
+    },
+    {
+      "label": "Rastrelliger faughni",
+      "sourceLocation": "Gaerlan et al. (2018), Table 2; exact printed label as preserved in the companion source review",
+      "candidateName": "Rastrelliger faughni Matsui, 1967",
+      "aphiaId": 273808,
+      "authorityFinding": "WoRMS exact-name response: accepted, AphiaID 273808.",
+      "interpretation": "Exact accepted-name match only; it does not verify a Gaerlan study specimen, a catch record, a capture locality, or current presence."
+    },
+    {
+      "label": "Stolephorus indicus",
+      "sourceLocation": "Gaerlan et al. (2018), Table 2; exact printed label as preserved in the companion source review",
+      "candidateName": "Stolephorus indicus (van Hasselt, 1823)",
+      "aphiaId": 212280,
+      "authorityFinding": "WoRMS exact-name response: accepted, AphiaID 212280.",
+      "interpretation": "Exact accepted-name match only; it does not verify a Gaerlan study specimen, a catch record, a capture locality, or current presence."
+    },
+    {
+      "label": "Selaroides leptolepis",
+      "sourceLocation": "Gaerlan et al. (2018), Table 2; exact printed label as preserved in the companion source review",
+      "candidateName": "Selaroides leptolepis (Cuvier, 1833)",
+      "aphiaId": 282745,
+      "authorityFinding": "WoRMS exact-name response: accepted, AphiaID 282745.",
+      "interpretation": "Exact accepted-name match only; it does not verify a Gaerlan study specimen, a catch record, a capture locality, or current presence."
+    },
+    {
+      "label": "Stolephorus commersonnii",
+      "sourceLocation": "Gaerlan et al. (2018), Table 2; exact printed label as preserved in the companion source review",
+      "candidateName": "Stolephorus commersonnii Lacepède, 1803",
+      "aphiaId": 152017,
+      "authorityFinding": "WoRMS exact-name response: accepted, AphiaID 152017.",
+      "interpretation": "Exact accepted-name match only; it does not verify a Gaerlan study specimen, a catch record, a capture locality, or current presence."
+    },
+    {
+      "label": "Sardinella gibbosa",
+      "sourceLocation": "Gaerlan et al. (2018), Table 2; exact printed label as preserved in the companion source review",
+      "candidateName": "Sardinella gibbosa (Bleeker, 1849)",
+      "aphiaId": 212277,
+      "authorityFinding": "WoRMS exact-name response: accepted, AphiaID 212277.",
+      "interpretation": "Exact accepted-name match only; it does not verify a Gaerlan study specimen, a catch record, a capture locality, or current presence."
+    },
+    {
+      "label": "Caesio cuning",
+      "sourceLocation": "Gaerlan et al. (2018), Table 2; exact printed label as preserved in the companion source review",
+      "candidateName": "Caesio cuning (Bloch, 1791)",
+      "aphiaId": 278536,
+      "authorityFinding": "WoRMS exact-name response: accepted, AphiaID 278536.",
+      "interpretation": "Exact accepted-name match only; it does not verify a Gaerlan study specimen, a catch record, a capture locality, or current presence."
+    },
+    {
+      "label": "Anodontostoma chacunda",
+      "sourceLocation": "Gaerlan et al. (2018), Table 2; exact printed label as preserved in the companion source review",
+      "candidateName": "Anodontostoma chacunda (Hamilton, 1822)",
+      "aphiaId": 279626,
+      "authorityFinding": "WoRMS exact-name response: accepted, AphiaID 279626.",
+      "interpretation": "Exact accepted-name match only; it does not verify a Gaerlan study specimen, a catch record, a capture locality, or current presence."
+    },
+    {
+      "label": "Auxis thazard",
+      "sourceLocation": "Gaerlan et al. (2018), Table 2; exact printed label as preserved in the companion source review",
+      "candidateName": "Auxis thazard (Lacepède, 1800)",
+      "aphiaId": 127016,
+      "authorityFinding": "WoRMS exact-name response: accepted, AphiaID 127016.",
+      "interpretation": "Exact accepted-name match only; it does not verify a Gaerlan study specimen, a catch record, a capture locality, or current presence."
+    },
+    {
+      "label": "Amblygaster sirm",
+      "sourceLocation": "Gaerlan et al. (2018), Table 2; exact printed label as preserved in the companion source review",
+      "candidateName": "Amblygaster sirm (Walbaum, 1792)",
+      "aphiaId": 217439,
+      "authorityFinding": "WoRMS exact-name response: accepted, AphiaID 217439.",
+      "interpretation": "Exact accepted-name match only; it does not verify a Gaerlan study specimen, a catch record, a capture locality, or current presence."
+    },
+    {
+      "label": "Decapterus tabl",
+      "sourceLocation": "Gaerlan et al. (2018), Table 2; exact printed label as preserved in the companion source review",
+      "candidateName": "Decapterus tabl Berry, 1968",
+      "aphiaId": 159484,
+      "authorityFinding": "WoRMS exact-name response: accepted, AphiaID 159484. The Catalog of Fishes independently says “Current status: Valid as Decapterus tabl Berry 1968”; its record gives a Colombian Caribbean type locality and describes the species distribution broadly as circumglobal in tropical and warm temperate seas except the eastern Pacific. WoRMS distribution entries for this name are individually marked unreviewed and are not a complete range determination.",
+      "interpretation": "The printed spelling is a valid name, so do not silently replace it with another name. This catalogue match does not confirm a Lingayen Gulf specimen, and the available distribution records do not establish a catch location or a Philippine occurrence."
+    },
+    {
+      "label": "Sardinella lemuru",
+      "sourceLocation": "Gaerlan et al. (2018), Table 2; exact printed label as preserved in the companion source review",
+      "candidateName": "Sardinella lemuru Bleeker, 1853",
+      "aphiaId": 272273,
+      "authorityFinding": "WoRMS exact-name response: accepted, AphiaID 272273.",
+      "interpretation": "Exact accepted-name match only; it does not verify a Gaerlan study specimen, a catch record, a capture locality, or current presence."
+    }
+  ],
+  "interpretation": {
+    "sourceLabelGroupsReviewed": 20,
+    "exactWoRMSAcceptedNameMatches": 20,
+    "catalogValidNameCrosschecks": 2,
+    "sourceStringsCorrected": 0,
+    "specimenIdentitiesConfirmed": 0,
+    "occurrenceRowsAdded": 0,
+    "waterbodyAssignmentsAdded": 0,
+    "geometryAdded": false,
+    "publicAppRowsAdded": 0,
+    "sourceStringsPolicy": "Retain the 20 Table 2 strings verbatim. Store current nomenclatural matches only in this separate review; do not convert them into accepted species assertions or site-level occurrences.",
+    "limits": [
+      "A WoRMS exact-name accepted record does not confirm the source article identified that taxon correctly or that any source specimen was collected in the named gulf.",
+      "The article provides no voucher or specimen-linked determination for these labels, and its published tables do not assign taxa to named landing sites or capture grounds.",
+      "Decapterus tabl is a currently valid name in both WoRMS and the Catalog of Fishes. Do not silently correct it; any source-specific identity question still requires the authors’ source records or a voucher crosswalk.",
+      "WoRMS distribution entries for Decapterus tabl are quality-marked unreviewed and do not include a Philippines entry in the returned set; this is not evidence of absence. The Catalog’s broader range statement is not a verified Philippine occurrence either.",
+      "The article’s 2018 item-specific reuse terms remain unresolved. No article-derived table, numeric value, image, raw data, or public app content was reproduced or approved."
+    ]
+  },
+  "decision": {
+    "authorityCandidateNamesRecorded": 20,
+    "exactWoRMSAcceptedNameMatches": 20,
+    "catalogValidNameCrosschecks": 2,
+    "sourceStringsCorrected": 0,
+    "specimenIdentitiesConfirmed": 0,
+    "speciesAssertionsAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "waterbodyAssignmentsAdded": 0,
+    "geometryAdded": false,
+    "publicAppRowsAdded": 0,
+    "publicationApproval": false,
+    "regionalBaselineComplete": false,
+    "reason": "The catalogs support accepted-name matches for all 20 printed labels and independently support the validity of the two checked Decapterus names. They cannot verify the historical catch identities or locality assignments; the source article remains a gulf/gear-level landing summary with unresolved 2018 reuse terms. Keep the source and all normalized candidates research-only."
+  },
+  "nextAction": "Keep the historical Lingayen landings research-only. For any stronger taxon identification, seek the original NSAP source records, an author-supplied correction, or a traceable voucher crosswalk; separately clarify the 2018 article reuse terms. Continue Region I discovery for reusable, dated, site-resolved river, lake, mangrove, estuary and reef surveys.",
+  "sourceReferences": [
+    "https://www.nfrdi.da.gov.ph/tpjf/vol25/A%20Review%20on%20the%20Status%20of%20Small%20Pelagic%20Fish%20Resources%20in%20the%20Lingayen%20Gulf%20for%20the%20Year%202009-2013.pdf",
+    "https://www.marinespecies.org/rest/",
+    "https://www.marinespecies.org/aphia.php?p=webservice",
+    "https://www.marinespecies.org/aphia.php?p=taxdetails&id=273278",
+    "https://www.marinespecies.org/aphia.php?p=taxdetails&id=218426",
+    "https://www.marinespecies.org/aphia.php?p=taxdetails&id=159646",
+    "https://www.marinespecies.org/aphia.php?p=taxdetails&id=273807",
+    "https://www.marinespecies.org/aphia.php?p=taxdetails&id=127020",
+    "https://www.marinespecies.org/aphia.php?p=taxdetails&id=218384",
+    "https://www.marinespecies.org/aphia.php?p=taxdetails&id=218450",
+    "https://www.marinespecies.org/aphia.php?p=taxdetails&id=126813",
+    "https://www.marinespecies.org/aphia.php?p=taxdetails&id=218428",
+    "https://www.marinespecies.org/aphia.php?p=taxdetails&id=273808",
+    "https://www.marinespecies.org/aphia.php?p=taxdetails&id=212280",
+    "https://www.marinespecies.org/aphia.php?p=taxdetails&id=282745",
+    "https://www.marinespecies.org/aphia.php?p=taxdetails&id=152017",
+    "https://www.marinespecies.org/aphia.php?p=taxdetails&id=212277",
+    "https://www.marinespecies.org/aphia.php?p=taxdetails&id=278536",
+    "https://www.marinespecies.org/aphia.php?p=taxdetails&id=279626",
+    "https://www.marinespecies.org/aphia.php?p=taxdetails&id=127016",
+    "https://www.marinespecies.org/aphia.php?p=taxdetails&id=217439",
+    "https://www.marinespecies.org/aphia.php?p=taxdetails&id=159484",
+    "https://www.marinespecies.org/aphia.php?p=taxdetails&id=272273",
+    "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?tbl=species&genus=Decapterus&species=tabl",
+    "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?tbl=species&genus=Decapterus&species=maruadsi",
+    "https://www.marinespecies.org/rest/AphiaDistributionsByAphiaID/159484"
+  ]
+}
