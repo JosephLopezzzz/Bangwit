@@ -3,7 +3,7 @@
   "checkedOn": "2026-11-19",
   "status": "research-only-source-registry",
   "scope": "National acquisition references, freshwater spatial-source leads, MIMAROPA/CALABARZON/Central Luzon identity and inland-water source reviews, and Mindanao regional freshwater survey reviews. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 957,
+  "sourceCount": 958,
   "sources": [
     {
       "id": "aoyama-et-al-2015-cagayan-glass-eel-recruitment",
@@ -32966,6 +32966,66 @@
         "The submitted Arius dispar name is held against the GBIF Backbone Netuma thalassina mapping pending taxonomic review."
       ],
       "researchStatus": "ncbi;genbank;KF604634.1;ANAd1;angat-river;research-only"
+    },
+    {
+      "id": "bold-bin-aac5247-member-records-20261119",
+      "title": "BOLD BIN member-record export for BOLD:AAC5247",
+      "provider": "Barcode of Life Data Systems (BOLD)",
+      "url": "https://portal.boldsystems.org/api/query?query=bin%3Auri%3ABOLD%3AAAC5247&extent=full",
+      "additionalUrls": [
+        "https://portal.boldsystems.org/api/query/preprocessor?query=bin%3Auri%3ABOLD%3AAAC5247",
+        "https://portal.boldsystems.org/api/summary?query=bin%3Auri%3ABOLD%3AAAC5247&fields=specimens%3Bspecies%3Bidentified_by%3Bcountry%2Focean",
+        "https://v5.boldsystems.org/data/api/",
+        "https://portal.boldsystems.org/"
+      ],
+      "role": "A bounded BOLD API export for BIN BOLD:AAC5247 returned 210 barcode documents (207 process IDs) carrying six named species-field values plus five records without a species field. The Philippines subset itself has Arius dispar and Arius manillensis labels, so BIN membership does not resolve the BPC001-13 specimen identification.",
+      "checkedOn": "2026-11-19",
+      "citation": "Barcode of Life Data Systems. Public Data Portal API: BIN BOLD:AAC5247 member-record export, retrieved 2026-11-19.",
+      "access": {
+        "status": "bin-query-http-200;210-jsonl-documents;summary-endpoint-returned-empty-object",
+        "reviewFiles": [
+          "national/reviews/central-luzon-angat-river-aac5247-bin-membership-review-20261119.json"
+        ],
+        "rawPath": "raw/central-luzon-bmb-atlas-gbif-screen-20261119/",
+        "rawReceipts": [
+          {
+            "file": "bold-bin-aac5247-preprocessor.json",
+            "sha256": "9d2ac01d1e0644d43ac349da04c04c4329417e28aaaad01584d0c0ed58436f2b",
+            "bytes": 92
+          },
+          {
+            "file": "bold-bin-aac5247-summary.json",
+            "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+            "bytes": 2
+          },
+          {
+            "file": "bold-bin-aac5247-query.json",
+            "sha256": "5ef84e1c5fc2f50105a398f0b1eb5f1b8abd054aae5a0bd6cc05b8c5c2d93b0b",
+            "bytes": 79
+          },
+          {
+            "file": "bold-bin-aac5247-download.json",
+            "sha256": "8e9eabee8ccfa8646b7640a9521c199dc961d455bdcb4d1f9ebb5be1cb929031",
+            "bytes": 594340
+          }
+        ],
+        "reviewedSections": "BIN scope, document count, unique BOLD process IDs, BOLD species and identification fields, country and Central Luzon-reported field values, and the BPC001-13 member row."
+      },
+      "reuse": {
+        "metadata": "The API export did not provide a record-level reuse license; no redistribution or public projection is approved.",
+        "raw": "The ignored JSON Lines export contains barcode sequences and coordinate fields; it remains local only and is pinned by byte length and SHA-256.",
+        "content": "Only aggregate counts and a non-coordinate record crosswalk are stored in the tracked review; no barcode sequence, image or exact coordinate is copied."
+      },
+      "publicationApproval": false,
+      "license": null,
+      "licenseUrl": null,
+      "caveats": [
+        "BOLD describes BINs as putative species clusters; multiple source names under one BIN do not independently resolve a specimen identification.",
+        "The query returned 210 barcode documents but 207 process IDs; document count is not a unique-fish or abundance estimate.",
+        "The BOLD summary endpoint returned an empty object despite the nonempty export; no zero-count conclusion is drawn from that endpoint.",
+        "The administrative field order in BOLD Central Luzon rows is not used as verified jurisdiction or river geometry."
+      ],
+      "researchStatus": "bold;BIN-AAC5247;210-documents;multiple-name-values;taxonomy-crosswalk-open;research-only"
     }
   ],
   "sourcePolicy": {

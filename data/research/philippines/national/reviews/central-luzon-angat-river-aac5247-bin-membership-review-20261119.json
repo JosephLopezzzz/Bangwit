@@ -1,0 +1,224 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "central-luzon-angat-river-aac5247-bin-membership-review-20261119",
+  "reviewedOn": "2026-11-19",
+  "phaseId": "L3",
+  "regionId": "0300000000",
+  "regionName": "Region III (Central Luzon)",
+  "waterbodyName": "Angat River",
+  "status": "bold-bin-export-reviewed;multiple-species-labels-within-bin;specimen-name-not-resolved-by-bin;research-only",
+  "question": "Does BOLD BIN BOLD:AAC5247 provide a stable taxonomic crosswalk for the single Angat River BPC001-13 record?",
+  "sourceIds": [
+    "bold-bin-aac5247-member-records-20261119",
+    "bold-bpc001-13-barcode-record",
+    "gbif-angat-river-bpc001-13-occurrence-2248809978",
+    "gbif-ibol-dataset-040c5662-da76-4782-a48e-cdea1892d14c",
+    "ncbi-kf604634-1-genbank-submission"
+  ],
+  "inputs": [
+    "data/research/philippines/national/reviews/central-luzon-angat-river-bpc001-13-record-review-20261119.json"
+  ],
+  "provider": "Barcode of Life Data Systems (BOLD)",
+  "query": {
+    "scope": "bin:uri:BOLD:AAC5247",
+    "preprocessorUrl": "https://portal.boldsystems.org/api/query/preprocessor?query=bin%3Auri%3ABOLD%3AAAC5247",
+    "queryUrl": "https://portal.boldsystems.org/api/query?query=bin%3Auri%3ABOLD%3AAAC5247&extent=full",
+    "summaryUrl": "https://portal.boldsystems.org/api/summary?query=bin%3Auri%3ABOLD%3AAAC5247&fields=specimens%3Bspecies%3Bidentified_by%3Bcountry%2Focean",
+    "downloadFormat": "JSON Lines (one JSON object per line; BOLD format=json; content-type text/plain)",
+    "preprocessorHttpStatus": 200,
+    "preprocessorSuccessfulTerms": 1,
+    "queryHttpStatus": 200,
+    "queryTokenReturned": true,
+    "summaryHttpStatus": 200,
+    "summaryBody": {},
+    "summaryInterpretation": "The BOLD summary endpoint returned an empty JSON object; it was not interpreted as a zero count. Counts below were computed from the bounded BIN export.",
+    "downloadHttpStatus": 200,
+    "downloadedBarcodeDocuments": 210,
+    "uniqueProcessIds": 207,
+    "allRowsMatchRequestedBin": true
+  },
+  "rawSnapshot": {
+    "directory": "raw/central-luzon-bmb-atlas-gbif-screen-20261119/",
+    "gitIgnored": true,
+    "sequenceAndCoordinatesPresentInRaw": true,
+    "appBundleIncluded": false,
+    "files": [
+      {
+        "path": "bold-bin-aac5247-preprocessor.json",
+        "bytes": 92,
+        "sha256": "9d2ac01d1e0644d43ac349da04c04c4329417e28aaaad01584d0c0ed58436f2b"
+      },
+      {
+        "path": "bold-bin-aac5247-summary.json",
+        "bytes": 2,
+        "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+      },
+      {
+        "path": "bold-bin-aac5247-query.json",
+        "bytes": 79,
+        "sha256": "5ef84e1c5fc2f50105a398f0b1eb5f1b8abd054aae5a0bd6cc05b8c5c2d93b0b"
+      },
+      {
+        "path": "bold-bin-aac5247-download.json",
+        "bytes": 594340,
+        "sha256": "8e9eabee8ccfa8646b7640a9521c199dc961d455bdcb4d1f9ebb5be1cb929031"
+      }
+    ]
+  },
+  "findings": {
+    "binSpeciesFieldCounts": [
+      {
+        "name": "Arius maculatus",
+        "count": 123
+      },
+      {
+        "name": "Netuma thalassina",
+        "count": 37
+      },
+      {
+        "name": "Arius manillensis",
+        "count": 21
+      },
+      {
+        "name": "Arius dispar",
+        "count": 18
+      },
+      {
+        "name": "(missing)",
+        "count": 5
+      },
+      {
+        "name": "Tachysurus sinensis",
+        "count": 4
+      },
+      {
+        "name": "Arius arius",
+        "count": 2
+      }
+    ],
+    "binIdentificationFieldCounts": [
+      {
+        "name": "Arius maculatus",
+        "count": 123
+      },
+      {
+        "name": "Netuma thalassina",
+        "count": 37
+      },
+      {
+        "name": "Arius manillensis",
+        "count": 21
+      },
+      {
+        "name": "Arius dispar",
+        "count": 18
+      },
+      {
+        "name": "Chordata",
+        "count": 4
+      },
+      {
+        "name": "Tachysurus sinensis",
+        "count": 4
+      },
+      {
+        "name": "Arius arius",
+        "count": 2
+      },
+      {
+        "name": "Ariidae",
+        "count": 1
+      }
+    ],
+    "binCountryCounts": [
+      {
+        "name": "Taiwan",
+        "count": 115
+      },
+      {
+        "name": "China",
+        "count": 41
+      },
+      {
+        "name": "Philippines",
+        "count": 39
+      },
+      {
+        "name": "(missing)",
+        "count": 9
+      },
+      {
+        "name": "Unrecoverable",
+        "count": 6
+      }
+    ],
+    "philippinesSubset": {
+      "documentCount": 39,
+      "speciesFieldCounts": [
+        {
+          "name": "Arius manillensis",
+          "count": 21
+        },
+        {
+          "name": "Arius dispar",
+          "count": 18
+        }
+      ]
+    },
+    "centralLuzonFieldSubset": {
+      "filter": "province/state=Central Luzon as reported by BOLD; this field is retained verbatim and not treated as an administrative geometry.",
+      "documentCount": 6,
+      "speciesFieldCounts": [
+        {
+          "name": "Arius dispar",
+          "count": 5
+        },
+        {
+          "name": "Arius manillensis",
+          "count": 1
+        }
+      ],
+      "regionFieldCounts": [
+        {
+          "name": "Bulacan",
+          "count": 1
+        },
+        {
+          "name": "Pampanga",
+          "count": 5
+        }
+      ],
+      "administrativeFieldCaveat": "Rows label province/state as Central Luzon and region as Bulacan or Pampanga; do not infer administrative hierarchy or a waterbody/reach from these fields."
+    },
+    "targetRecord": {
+      "processId": "BPC001-13",
+      "sampleId": "ANAd1",
+      "speciesField": "Arius dispar",
+      "identification": "Arius dispar",
+      "identificationMethod": "Morphology",
+      "collectionDate": "2011-07-08",
+      "matchingBin": "BOLD:AAC5247"
+    },
+    "interpretation": "The 210 BOLD barcode documents include six named species values plus five missing species values under the same BIN. The Philippines subset itself contains Arius dispar and Arius manillensis labels. This establishes that the BIN is not a safe one-to-one species identifier for this source chain; it does not establish which of the other names, if any, is a misidentification. The exact BPC001-13 record remains source-reported as Arius dispar by morphology, but this BIN export is not an independent identification of that specimen and does not resolve the separate GBIF Backbone mapping to Netuma thalassina."
+  },
+  "rights": {
+    "licenseReturnedByBOLDApi": null,
+    "disposition": "The BOLD export did not provide an item-level reuse license. Raw documents include sequence and location fields and remain Git-ignored; no sequence, coordinate, image or member record is copied into tracked research or the app."
+  },
+  "decision": {
+    "taxonomicCrosswalkResolved": false,
+    "sourceReportedNameRetained": "Arius dispar",
+    "speciesAssertionAdded": false,
+    "occurrenceAdded": false,
+    "geometryAdded": false,
+    "exactCoordinatesAdded": false,
+    "publicAppProjection": false,
+    "publicationApproval": false,
+    "disposition": "Retain BPC001-13 as a single historical, source-reported candidate with taxonomy and reach assignment held. Do not map BOLD:AAC5247 directly to Arius dispar or Netuma thalassina."
+  },
+  "nextActions": [
+    "Seek a curator-reviewed BIN/specimen determination for BPC001-13 rather than relying on cluster membership.",
+    "Verify the ANAd1 specimen or original morphology records and review the reported coordinate precision.",
+    "Continue the Angat River reach geometry cross-check and keep the source-record candidate out of public app data until both taxon and reach decisions are documented."
+  ]
+}

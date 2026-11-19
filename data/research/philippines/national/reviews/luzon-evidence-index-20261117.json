@@ -1290,7 +1290,7 @@
     },
     {
       "path": "data/research/philippines/luzon-completion-manifest.json",
-      "sha256": "4a66ecc644a8968838a5fdfd22d94a327d2bd9315f154c6892d4a5ab3148bdfb"
+      "sha256": "5d0c2836feaf45e8e5c7a2a5335664092a6ea2c5075adfc1653e6b97a56f9d56"
     },
     {
       "path": "data/research/philippines/makiling-gbif-source-review.json",
@@ -2617,6 +2617,10 @@
       "sha256": "230b86f681d56fd0dfe03276f33d186a7ec295ff3e8c0daf07c02926b99f2544"
     },
     {
+      "path": "data/research/philippines/national/reviews/central-luzon-angat-river-aac5247-bin-membership-review-20261119.json",
+      "sha256": "ff29abafeabf37640160ec53701f918fc1d62dccd1c0471360586ec1b8f0c08e"
+    },
+    {
       "path": "data/research/philippines/national/reviews/central-luzon-angat-river-bpc001-13-record-review-20261119.json",
       "sha256": "c132c6cd723cb27f78609f72c24cd6a4e448a2b35dd350aa5eada1eee27bb677"
     },
@@ -2990,7 +2994,7 @@
     },
     {
       "path": "data/research/philippines/sources.json",
-      "sha256": "1793b3dc55f5606ebb5c54f9c2ab16acc2a58bad8917972835f65f0b57fe2597"
+      "sha256": "2f5c29a0c359874b7a5ef59e4583ccb7800f49d24722fc055555d8f9b53f0525"
     },
     {
       "path": "data/research/philippines/taal-checklist-decisions.json",
@@ -3050,24 +3054,24 @@
     }
   ],
   "summary": {
-    "reviewArtifactsScanned": 118,
+    "reviewArtifactsScanned": 119,
     "regionCount": 8,
-    "sourceRegistryUniqueIds": 957,
+    "sourceRegistryUniqueIds": 958,
     "sourceIdentityCrosswalkGroups": 10,
     "reviewClassifications": {
       "directly-linked": 30,
       "indirectly-linked": 16,
       "national-context-only": 1,
-      "shared-across-regions": 71
+      "shared-across-regions": 72
     },
     "brokenOrUnresolvedJsonReferences": 0,
     "missingSourceIdLinks": 0,
-    "localRawReferenceCount": 949,
-    "localRawReferencesAvailable": 949,
+    "localRawReferenceCount": 957,
+    "localRawReferencesAvailable": 957,
     "localRawReferencesUnresolved": 0,
     "localRawHashMismatchReferences": 0,
     "localRawNonmatchingBasenameCandidates": 3,
-    "uniqueLocalRawInputsMatched": 901,
+    "uniqueLocalRawInputsMatched": 905,
     "manuallyReviewedRegionalAssociations": 32,
     "nationalContextArtifacts": 3,
     "unlinkedManualAssociations": 0,
@@ -3081,8 +3085,8 @@
       "name": "Region IV-A (CALABARZON)",
       "manifestReferenceCount": 41,
       "directlyLinkedReviewCount": 33,
-      "indirectlyLinkedReviewCount": 84,
-      "declaredOrLinkedReviewCount": 117,
+      "indirectlyLinkedReviewCount": 85,
+      "declaredOrLinkedReviewCount": 118,
       "unaccountedExplicitReviewCount": 0,
       "baselineReviewed": false,
       "scopeFrozen": false
@@ -3103,10 +3107,10 @@
       "rolloutKey": "L3",
       "regionId": "0300000000",
       "name": "Region III (Central Luzon)",
-      "manifestReferenceCount": 17,
-      "directlyLinkedReviewCount": 13,
+      "manifestReferenceCount": 18,
+      "directlyLinkedReviewCount": 14,
       "indirectlyLinkedReviewCount": 0,
-      "declaredOrLinkedReviewCount": 13,
+      "declaredOrLinkedReviewCount": 14,
       "unaccountedExplicitReviewCount": 0,
       "baselineReviewed": false,
       "scopeFrozen": false
@@ -4156,6 +4160,39 @@
       "publicationApproval": null,
       "sourceIds": [
         "ash-angat-cablitas-lumba-diet-risk-2024"
+      ],
+      "missingSourceIds": [],
+      "explicitSuccessorReferences": []
+    },
+    {
+      "path": "data/research/philippines/national/reviews/central-luzon-angat-river-aac5247-bin-membership-review-20261119.json",
+      "sha256": "ff29abafeabf37640160ec53701f918fc1d62dccd1c0471360586ec1b8f0c08e",
+      "reviewId": "central-luzon-angat-river-aac5247-bin-membership-review-20261119",
+      "reviewedOn": "2026-11-19",
+      "phaseId": "L3",
+      "declaredRegionIds": [
+        "0300000000"
+      ],
+      "manualAssociation": null,
+      "nationalContextDisposition": null,
+      "directRegionIds": [
+        "0300000000"
+      ],
+      "indirectRegionIds": [
+        "0400000000"
+      ],
+      "relatedRegionIds": [
+        "0300000000",
+        "0400000000"
+      ],
+      "classification": "shared-across-regions",
+      "publicationApproval": null,
+      "sourceIds": [
+        "bold-bin-aac5247-member-records-20261119",
+        "bold-bpc001-13-barcode-record",
+        "gbif-angat-river-bpc001-13-occurrence-2248809978",
+        "gbif-ibol-dataset-040c5662-da76-4782-a48e-cdea1892d14c",
+        "ncbi-kf604634-1-genbank-submission"
       ],
       "missingSourceIds": [],
       "explicitSuccessorReferences": []
@@ -15578,6 +15615,58 @@
         "nonmatchingCandidates": []
       },
       {
+        "from": "data/research/philippines/national/reviews/central-luzon-angat-river-aac5247-bin-membership-review-20261119.json",
+        "field": "$.rawSnapshot.files[0].path",
+        "referencedPath": "bold-bin-aac5247-preprocessor.json",
+        "availability": "available-and-hash-verified",
+        "matchedFiles": [
+          {
+            "path": "data/research/philippines/raw/central-luzon-bmb-atlas-gbif-screen-20261119/bold-bin-aac5247-preprocessor.json",
+            "sha256": "9d2ac01d1e0644d43ac349da04c04c4329417e28aaaad01584d0c0ed58436f2b"
+          }
+        ],
+        "nonmatchingCandidates": []
+      },
+      {
+        "from": "data/research/philippines/national/reviews/central-luzon-angat-river-aac5247-bin-membership-review-20261119.json",
+        "field": "$.rawSnapshot.files[1].path",
+        "referencedPath": "bold-bin-aac5247-summary.json",
+        "availability": "available-and-hash-verified",
+        "matchedFiles": [
+          {
+            "path": "data/research/philippines/raw/central-luzon-bmb-atlas-gbif-screen-20261119/bold-bin-aac5247-summary.json",
+            "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+          }
+        ],
+        "nonmatchingCandidates": []
+      },
+      {
+        "from": "data/research/philippines/national/reviews/central-luzon-angat-river-aac5247-bin-membership-review-20261119.json",
+        "field": "$.rawSnapshot.files[2].path",
+        "referencedPath": "bold-bin-aac5247-query.json",
+        "availability": "available-and-hash-verified",
+        "matchedFiles": [
+          {
+            "path": "data/research/philippines/raw/central-luzon-bmb-atlas-gbif-screen-20261119/bold-bin-aac5247-query.json",
+            "sha256": "5ef84e1c5fc2f50105a398f0b1eb5f1b8abd054aae5a0bd6cc05b8c5c2d93b0b"
+          }
+        ],
+        "nonmatchingCandidates": []
+      },
+      {
+        "from": "data/research/philippines/national/reviews/central-luzon-angat-river-aac5247-bin-membership-review-20261119.json",
+        "field": "$.rawSnapshot.files[3].path",
+        "referencedPath": "bold-bin-aac5247-download.json",
+        "availability": "available-and-hash-verified",
+        "matchedFiles": [
+          {
+            "path": "data/research/philippines/raw/central-luzon-bmb-atlas-gbif-screen-20261119/bold-bin-aac5247-download.json",
+            "sha256": "8e9eabee8ccfa8646b7640a9521c199dc961d455bdcb4d1f9ebb5be1cb929031"
+          }
+        ],
+        "nonmatchingCandidates": []
+      },
+      {
         "from": "data/research/philippines/national/reviews/central-luzon-angat-river-bpc001-13-record-review-20261119.json",
         "field": "$.rawSnapshot.files[0].path",
         "referencedPath": "angat-river-locality-occurrence.json",
@@ -19811,6 +19900,58 @@
           }
         ],
         "nonmatchingCandidates": []
+      },
+      {
+        "from": "data/research/philippines/sources.json",
+        "field": "$.sources[957].access.rawReceipts[0].file",
+        "referencedPath": "bold-bin-aac5247-preprocessor.json",
+        "availability": "available-and-hash-verified",
+        "matchedFiles": [
+          {
+            "path": "data/research/philippines/raw/central-luzon-bmb-atlas-gbif-screen-20261119/bold-bin-aac5247-preprocessor.json",
+            "sha256": "9d2ac01d1e0644d43ac349da04c04c4329417e28aaaad01584d0c0ed58436f2b"
+          }
+        ],
+        "nonmatchingCandidates": []
+      },
+      {
+        "from": "data/research/philippines/sources.json",
+        "field": "$.sources[957].access.rawReceipts[1].file",
+        "referencedPath": "bold-bin-aac5247-summary.json",
+        "availability": "available-and-hash-verified",
+        "matchedFiles": [
+          {
+            "path": "data/research/philippines/raw/central-luzon-bmb-atlas-gbif-screen-20261119/bold-bin-aac5247-summary.json",
+            "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+          }
+        ],
+        "nonmatchingCandidates": []
+      },
+      {
+        "from": "data/research/philippines/sources.json",
+        "field": "$.sources[957].access.rawReceipts[2].file",
+        "referencedPath": "bold-bin-aac5247-query.json",
+        "availability": "available-and-hash-verified",
+        "matchedFiles": [
+          {
+            "path": "data/research/philippines/raw/central-luzon-bmb-atlas-gbif-screen-20261119/bold-bin-aac5247-query.json",
+            "sha256": "5ef84e1c5fc2f50105a398f0b1eb5f1b8abd054aae5a0bd6cc05b8c5c2d93b0b"
+          }
+        ],
+        "nonmatchingCandidates": []
+      },
+      {
+        "from": "data/research/philippines/sources.json",
+        "field": "$.sources[957].access.rawReceipts[3].file",
+        "referencedPath": "bold-bin-aac5247-download.json",
+        "availability": "available-and-hash-verified",
+        "matchedFiles": [
+          {
+            "path": "data/research/philippines/raw/central-luzon-bmb-atlas-gbif-screen-20261119/bold-bin-aac5247-download.json",
+            "sha256": "8e9eabee8ccfa8646b7640a9521c199dc961d455bdcb4d1f9ebb5be1cb929031"
+          }
+        ],
+        "nonmatchingCandidates": []
       }
     ],
     "localRawInputs": [
@@ -22273,6 +22414,26 @@
         "path": "data/research/philippines/raw/central-luzon-bmb-atlas-gbif-screen-20261119/angat-verbatim.json",
         "sha256": "b4f21cb0e5a2bbf4cd9c60dd09eef3536336e64a98a028ad19732361b9db2f61",
         "referenceCount": 1
+      },
+      {
+        "path": "data/research/philippines/raw/central-luzon-bmb-atlas-gbif-screen-20261119/bold-bin-aac5247-download.json",
+        "sha256": "8e9eabee8ccfa8646b7640a9521c199dc961d455bdcb4d1f9ebb5be1cb929031",
+        "referenceCount": 2
+      },
+      {
+        "path": "data/research/philippines/raw/central-luzon-bmb-atlas-gbif-screen-20261119/bold-bin-aac5247-preprocessor.json",
+        "sha256": "9d2ac01d1e0644d43ac349da04c04c4329417e28aaaad01584d0c0ed58436f2b",
+        "referenceCount": 2
+      },
+      {
+        "path": "data/research/philippines/raw/central-luzon-bmb-atlas-gbif-screen-20261119/bold-bin-aac5247-query.json",
+        "sha256": "5ef84e1c5fc2f50105a398f0b1eb5f1b8abd054aae5a0bd6cc05b8c5c2d93b0b",
+        "referenceCount": 2
+      },
+      {
+        "path": "data/research/philippines/raw/central-luzon-bmb-atlas-gbif-screen-20261119/bold-bin-aac5247-summary.json",
+        "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+        "referenceCount": 2
       },
       {
         "path": "data/research/philippines/raw/central-luzon-bmb-atlas-gbif-screen-20261119/bold-preprocessor-bpc001-13.json",
