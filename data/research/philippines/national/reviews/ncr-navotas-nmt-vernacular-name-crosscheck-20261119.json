@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "ncr-navotas-nmt-vernacular-name-crosscheck-20261119",
+  "reviewedOn": "2026-11-19",
+  "phaseId": "L2",
+  "regionId": "1300000000",
+  "regionName": "National Capital Region (NCR)",
+  "parentReviewId": "ncr-navotas-nmt-2024-ichthyofauna-review-20261119",
+  "sourceId": "encarnacion-etal-2024-navotas-nmt-ichthyofauna",
+  "sourceIds": [
+    "encarnacion-etal-2024-navotas-nmt-ichthyofauna",
+    "nfrdi-common-local-marine-fish-names-1999",
+    "bfar-ncr-weekly-rcpmr-2024-01-22-26"
+  ],
+  "status": "official-market-name-crosscheck;vernacular-ambiguity;potential-taxonomic-mismatch-unresolved;research-only",
+  "question": "Do official Philippine fish-name references resolve why the 2024 Navotas-Malabon-Tullahan table prints Lutjanus argentimaculatus under both alakaak and kabang?",
+  "snapshotHashes": {
+    "sourceRegistry": "658a45fbfa9f615ee819921a141b9d9dfb76754406ead74969137b7ce187ebad"
+  },
+  "method": {
+    "summary": "Compared the parent study's verbatim local-name rows with the existing NFRDI/BFAR common-name sources. Retrieved and text-extracted the official NFRDI 1999 PDF from its repository; inspected the BFAR NCR weekly price-monitoring PDF and its market-name table. This is a local-name cross-check, not specimen re-identification.",
+    "nfrdiReference": "The NFRDI/BFAR reference is a broad Philippine compilation whose tables list alakaak for multiple Sciaenidae. The extracted PDF text did not return a Kabang entry. Its broad and mixed locality scope does not establish which label was used for the NMT study specimens.",
+    "bfarReference": "The BFAR NCR report for 22-26 January 2024 lists Dendrophysa russelii (Goatee Croaker) with local name Alakaak. Its NCR table has entries under the Navotas 3, 4 & 5 and Malabon Central market columns, and its Summary Source Area field includes Navotas and Palawan. This is fish-market price-monitoring context, not a specimen record or a river capture-site survey.",
+    "scopeLimit": "A shared vernacular name, or a market report pairing a vernacular name with a scientific name, cannot validate the identity of the NMT study's unvouchered fish. The market report is contemporaneous with and independent of the 2024 study's January-April sampling window; it does not identify the study's individual specimens."
+  },
+  "nameEvidence": {
+    "studyRowsAsPrinted": [
+      {
+        "scientificName": "Lutjanus argentimaculatus",
+        "familyAsPrinted": "Lutjanidae",
+        "localName": "alakaak",
+        "total": 34
+      },
+      {
+        "scientificName": "Lutjanus argentimaculatus",
+        "familyAsPrinted": "Lutjanidae",
+        "localName": "kabang",
+        "total": 26
+      }
+    ],
+    "independentNcrMarketPairing": {
+      "scientificName": "Dendrophysa russelii",
+      "englishName": "Goatee Croaker",
+      "localName": "Alakaak",
+      "reportPeriod": "2024-01-22/2024-01-26",
+      "marketColumnsWithEntriesAsPrinted": [
+        "Navotas 3, 4 & 5",
+        "Malabon Central"
+      ],
+      "summarySourceAreaAsPrinted": "Navotas, Palawan",
+      "sourceId": "bfar-ncr-weekly-rcpmr-2024-01-22-26"
+    },
+    "nfrdiNameScope": "The 1999 national reference lists alakaak for multiple Sciaenidae; it is not a unique species identifier and the checked entries do not provide a Navotas NMT specimen crosswalk."
+  },
+  "assessment": {
+    "finding": "The official NCR market report independently shows alakaak paired with a Sciaenidae, while the NMT article prints the same local name under Lutjanidae. This raises a plausible local-name/taxon-row inconsistency, but market nomenclature cannot establish whether the NMT table contains an identification error. No source reviewed here resolves kabang for those specimens.",
+    "confidence": "High that the local name alakaak is non-unique in the checked Philippine references; insufficient evidence to correct or re-identify either NMT row.",
+    "articleCountConflict": "Unchanged: seven table rows contain six distinct binomials; the abstract says six native and one invasive species. The name cross-check does not reveal a seventh taxon."
+  },
+  "regionIndexNote": "The generated evidence index may mark this review shared across NCR and CALABARZON because the national NFRDI name reference is also linked to a CALABARZON name review. This relationship is reference linkage only; it does not assign the NMT fish, Navotas River, or study localities to CALABARZON or to a shared waterbody.",
+  "decision": {
+    "retainOriginalStudyRows": true,
+    "studyRowsChanged": 0,
+    "speciesReassignments": 0,
+    "speciesAssertionsAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "publicAppProjection": false,
+    "disposition": "Keep both Lutjanus argentimaculatus rows verbatim as unresolved research transcription. Do not substitute Dendrophysa russelii, merge the rows, add a seventh species, or treat BFAR market-source-area context as river occurrence evidence."
+  },
+  "nonClaims": [
+    "The BFAR market report does not establish a fish capture in Navotas River, Malabon River, or Tullahan River.",
+    "The shared local name does not prove that either NMT study row is Dendrophysa russelii or that the article contains a taxonomic error.",
+    "The NFRDI compilation's multi-region name tables are not a site-specific interview or specimen voucher for Navotas.",
+    "No conclusions are added about abundance, current presence, habitat, catchability, diet, safety, legal status, or photo identity."
+  ],
+  "nextActions": [
+    "Request the authors' original identification notes, diagnostic photographs, voucher or accession numbers, and clarification of the alakaak and kabang rows.",
+    "If the specimens or diagnostic images cannot be checked, preserve the duplicated binomial and leave the species count discrepancy unresolved.",
+    "Keep market-monitoring records separate from river survey occurrences and do not infer capture locations from Summary Source Area labels."
+  ]
+}
