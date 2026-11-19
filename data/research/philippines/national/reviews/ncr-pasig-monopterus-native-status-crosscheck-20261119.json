@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "ncr-pasig-monopterus-native-status-crosscheck-20261119",
+  "reviewedOn": "2026-11-19",
+  "phaseId": "L2",
+  "regionId": "1300000000",
+  "regionName": "National Capital Region (NCR)",
+  "parentReviewId": "ncr-pasig-biodiversity-report-refresh-20261116",
+  "status": "native-status-conflict;taxonomy-and-locality-unresolved;research-only",
+  "question": "Can the DENR-NCR 2025 Annual Report's Pasig River native-fish wording for Monopterus albus be reconciled with Philippine introduction accounts and current taxonomic references?",
+  "snapshotHashes": {
+    "sourceRegistry": "dc957c8396fedcac90f43739e0aea53e058ab48a20fe718f4f3142eb2239e47e",
+    "administrativeRegistry": "c741456fbc2cfc9d5d813484a0b661ef206154977959fc27a289ca86732142e8",
+    "parentReview": "c1c245002e9b53b1183049846bd40a187d471f09fa9c21090cd2b84013fe724c"
+  },
+  "method": {
+    "summary": "Re-reviewed the official DENR-NCR Annual Report 2025 fish narrative and compared the published taxon strings with the current Eschmeyer's Catalog of Fishes, the IUCN Red List range classification, an NFRDI journal article, and a DLSU dissertation abstract. Claims are retained at the scope and wording of each source.",
+    "accessNotes": [
+      "The official DENR report's parsed text for section 3.2.8, pages 237-239, was available through the web search/open index. No report file was saved locally.",
+      "The Catalog and IUCN pages returned HTTP 403 on direct open; their indexed entry text was reviewed. No access control was bypassed.",
+      "The NFRDI article page returned HTTP 502 on direct open; the publisher's indexed article text and PDF result exposed the relevant bibliographic and introduction statement.",
+      "The DLSU repository metadata and abstract were directly reviewed; the dissertation full text was not reviewed."
+    ],
+    "reuseFinding": "No item-specific permission to republish the source text, images, or dissertation tables was verified. This review records short attributed findings only."
+  },
+  "sourceFindings": [
+    {
+      "sourceId": "denr-ncr-pasig-river-biodiversity-2024",
+      "scope": "The 2025 annual report summarizes the 2024 Pasig River assessment. Its fish narrative calls Arius manillensis, Monopterus albus, and Valamugil seheli among the few native species persisting in the river, and names janitor fish among introduced fish.",
+      "limits": "The reviewed report narrative has no fish-by-station table, capture date by taxon, specimen or voucher identifiers, or taxonomic verification protocol. The common name janitor fish is not resolved to a scientific taxon in that passage.",
+      "attribution": "Keep native wording attributed to DENR-NCR; do not convert it into an independently verified Pasig population-origin finding."
+    },
+    {
+      "sourceId": "catalog-fishes-pasig-native-name-crosscheck-20261119",
+      "scope": "The current catalog entry lists Monopterus albus as valid and identifies Moolgarda seheli as the valid name corresponding to the report spelling Valamugil seheli.",
+      "limits": "The catalog describes M. albus as an East Asian taxon introduced elsewhere and notes taxonomic confusion and possible cryptic taxa. Its broad range and nomenclatural entry do not identify or genetically characterize Pasig fish.",
+      "attribution": "Retain Valamugil seheli as published in the DENR citation; use Moolgarda seheli only as a current-name crosswalk, without making a Pasig occurrence row."
+    },
+    {
+      "sourceId": "iucn-2021-monopterus-albus-native-range-20261119",
+      "scope": "The 2021 global Red List entry includes the Philippines in the native extant-resident range for Monopterus albus.",
+      "limits": "This is a global range classification and does not assess the ancestry or status of a Pasig River population. The reviewed page does not resolve the species-complex caveat or reconcile Philippine introduction accounts.",
+      "attribution": "Record as the IUCN classification, not as proof that every Philippine population is native."
+    },
+    {
+      "sourceId": "nfrdi-ame-mayor-2021-monopterus-introduction-20261119",
+      "scope": "The NFRDI-hosted Ame and Mayor (2021) article states that Monopterus albus was introduced in the Philippines in 1905 as an aquaculture species. The study concerns rice fields in Cagayan Valley.",
+      "limits": "Cagayan Valley study sites do not establish a Pasig occurrence or identify the origin of NCR fish. The introduction date is an attributed historical statement; its underlying historical evidence was not independently re-evaluated here.",
+      "attribution": "Keep the 1905 date as the article's claim, not a settled national or Pasig-specific introduction date."
+    },
+    {
+      "sourceId": "dlsu-nisperos-2022-monopterus-introduction-20261119",
+      "scope": "The DLSU dissertation abstract describes M. albus as introduced in the Philippines and says it was first recorded in 1918. It also says samples came from four Luzon sites.",
+      "limits": "The abstract does not name those four sites, and the dissertation was not reviewed in full. None of these localities can be assigned to Pasig or NCR from the abstract.",
+      "attribution": "Keep the 1918 date as the dissertation abstract's claim; it conflicts with the 1905 claim in Ame and Mayor (2021)."
+    }
+  ],
+  "conflictAssessment": {
+    "taxonAsReported": "Monopterus albus",
+    "denrPosition": "Named as native in the Pasig River fish narrative.",
+    "iucnPosition": "Philippines included in the global native range.",
+    "philippineIntroductionAccounts": [
+      "Ame and Mayor (2021) state introduction in 1905.",
+      "Nisperos (2022) states the species was first recorded in the country in 1918."
+    ],
+    "resolution": "Unresolved. The sources use different population and historical scopes; the introduction dates disagree, the underlying historical records were not checked here, and the Catalog notes taxonomic complexity. None of the reviewed non-DENR sources establishes Pasig-specific origin or a fish collection at a named Pasig station.",
+    "decision": "Do not assign a native, introduced, or invasive label to the Pasig record from this evidence. Preserve each claim with its source attribution until the population identity, historical evidence, and site linkage are independently resolved."
+  },
+  "scopeAndReuseDecision": {
+    "decision": "Research-only source conflict and name crosswalk; no public species assertion, occurrence row, image, diet, geometry, or app projection.",
+    "sourceClaimsCompared": 5,
+    "taxonomicNameCrosswalks": 1,
+    "historicalIntroductionDatesInConflict": 2,
+    "nativeStatusConflictsRecorded": 1,
+    "speciesAssertionsAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "publicAppProjection": false,
+    "safetyOrConsumptionAdvice": false
+  },
+  "nonClaims": [
+    "The DENR narrative does not locate each named fish at each Pasig sampling point or tributary.",
+    "The IUCN global native-range label does not establish the origin of an individual Pasig population.",
+    "The Cagayan Valley study and four unspecified Luzon dissertation sites are not NCR or Pasig occurrence evidence.",
+    "The common name janitor fish is not resolved to a species by the reviewed DENR passage.",
+    "The DENR contaminant narrative is not a current, station-specific food-safety result or a Bangwit consumption advisory.",
+    "No fishing access, legal rule, abundance, season, bait, or current-presence claim is made."
+  ],
+  "nextActions": [
+    "Seek a directly reviewable Pasig assessment table with station-to-taxon rows, methods, collection dates, and vouchers or accession identifiers.",
+    "Trace the historical sources underlying the 1905 and 1918 introduction claims and compare their taxon concepts; do not infer that the dates describe separate introductions.",
+    "Continue NCR freshwater, brackish, marine, wetland, and river-reach source discovery; this review does not change NCR baseline or completion status."
+  ]
+}
