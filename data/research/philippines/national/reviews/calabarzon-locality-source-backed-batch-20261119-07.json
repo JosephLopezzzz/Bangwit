@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "calabarzon-locality-source-backed-batch-20261119-07",
+  "reviewedOn": "2026-11-19",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "status": "official-event-locality-supports-existing-lake-alias;reservoir-extent-unverified;scope-not-frozen",
+  "question": "Does NPC reporting of a Lumot Lake event at Barangay Bukal, Cavinti support a municipality-coded research locality for the existing Lumot Reservoir lead?",
+  "sourceIds": [
+    "denr-bmb-philchm-inland-wetlands-2019",
+    "npc-lumut-lake-cavinti-2024",
+    "psa-calabarzon-municipalities-list"
+  ],
+  "inputs": [
+    "data/research/philippines/calabarzon-scope.json",
+    "data/research/philippines/calabarzon-bmb-2019-wetland-inventory-crosswalk-20261024.json",
+    "data/research/philippines/sources.json",
+    "data/research/philippines/administrative-registry.json",
+    "data/research/philippines/national/reviews/calabarzon-administrative-denominator-reconciliation-20261117.json",
+    "data/research/philippines/national/reviews/calabarzon-locality-source-backed-batch-20261119-06.json"
+  ],
+  "snapshotHashes": {
+    "scopeBeforeBatch": "86daa9a1b7ed357ed632dbba1f16d43cbf0fbc1a5e647746ebbc3770e1a6740a",
+    "calabarzonScope": "1332a609ae4ffb3ddaedc6e65f0390693723f01f23a168b84ad7914a934a0eac",
+    "bmb2019WetlandCrosswalk": "3c7ca91e892100e4d67b264e8fcc454445d7b9fa2ea60cb5ff585e3fea37f7e1",
+    "administrativeRegistry": "c741456fbc2cfc9d5d813484a0b661ef206154977959fc27a289ca86732142e8",
+    "administrativeDenominator": "0688d4bf58dd848571c23cbc09f2bbb71244aace0f5842bb59ee473f483f7ce0",
+    "previousLocalityBatch": "55be0fb68fa9a08c9923f98c62324b9cc481226e8d50529b7d95840a391f3491",
+    "sourceRegistryBefore": "cef814f98b1b5deefe8c48371f3741478ff1e4b072e2b4effe45c0c5a7774307",
+    "sourceRegistry": "197b6a5f9ed7c69a485f0ef085d240925a43a875ae5dc3c21012a5576818e955"
+  },
+  "method": "Compared the historical BMB inventory row naming Lumot Reservoir, whose locality field is blank, with the existing scope lead alias Lumot Lake. NPC CLWAT reporting places a 12 December 2024 community clean-up event at Lumot Lake, Barangay Bukal, Cavinti, Laguna. PSA identifies Cavinti as municipality code 0403407000. Link only the NPC-described event locality through the already-recorded Lumot Lake alias; do not infer reservoir extent, a perimeter, or exclusive municipal containment.",
+  "sourceRows": [
+    "BMB 2019: Lumot Reservoir | Laguna | locality blank | Water Storage | 637.36 ha.",
+    "NPC 2024: community clean-up event at Lumot Lake, Barangay Bukal, Cavinti, Laguna; 12 December 2024."
+  ],
+  "identityAssessment": {
+    "sourceName": "Lumot Lake",
+    "scopeName": "Lumot Reservoir",
+    "existingScopeAlias": "Lumot Lake",
+    "decision": "use-existing-scope-alias-for-source-described-event-locality-only;do-not-determine-formal-name-or-reservoir-extent",
+    "evidence": [
+      {
+        "sourceId": "denr-bmb-philchm-inland-wetlands-2019",
+        "locator": "Page 4, row Lumot Reservoir; locality cell blank."
+      },
+      {
+        "sourceId": "npc-lumut-lake-cavinti-2024",
+        "locator": "Opening paragraph; event locality and date."
+      }
+    ]
+  },
+  "assignments": [
+    {
+      "waterbodyId": "ph-wb-lumot-reservoir",
+      "sourceId": "npc-lumut-lake-cavinti-2024",
+      "sourceIds": [
+        "denr-bmb-philchm-inland-wetlands-2019",
+        "npc-lumut-lake-cavinti-2024",
+        "psa-calabarzon-municipalities-list"
+      ],
+      "sourcePath": "data/research/philippines/sources.json",
+      "sourcePage": "NPC article opening paragraph",
+      "sourceRow": "Lumot Lake | Barangay Bukal | Cavinti, Laguna | 12 December 2024 community clean-up event",
+      "sourceLocality": "NPC-described community-event locality at Lumot Lake, Barangay Bukal, Cavinti, Laguna",
+      "identityDisposition": "existing-Lumot-Lake-scope-alias-used-for-source-described-event-locality-only",
+      "codes": [
+        {
+          "level": "municipality",
+          "psgcCode": "0403407000",
+          "name": "Cavinti",
+          "locality": "Barangay Bukal, Cavinti, Laguna",
+          "sourceId": "psa-calabarzon-municipalities-list"
+        }
+      ],
+      "limit": "This links a reported community-event locality to the existing research alias. It is not a surveyed lake/reservoir boundary, does not establish exclusive containment within Cavinti, and supports no geometry, access, species, safety, regulation, or public-app assertion."
+    }
+  ],
+  "counts": {
+    "waterbodyResearchLeadsBefore": 164,
+    "waterbodyResearchLeadsAfter": 164,
+    "leadsUpdated": 1,
+    "cityCodeAssignments": 0,
+    "municipalityCodeAssignments": 1,
+    "additionalAssociationRows": 1,
+    "administrativeAssociationRowsBefore": 216,
+    "administrativeAssociationRowsAfter": 217,
+    "leadsWithCityOrMunicipalityCodeAfter": 79,
+    "leadsWithProvinceCodeButNoCityOrMunicipalityCodeAfter": 81,
+    "leadsWithoutAnyLocalityCodeAfter": 4,
+    "cityCodedLeadsAfter": 24,
+    "municipalityCodedLeadsAfter": 61,
+    "cityCodesPresentAfter": 15,
+    "cityCodeDenominator": 22,
+    "municipalityCodesPresentAfter": 40,
+    "municipalityCodeDenominator": 120,
+    "geometryValidated": 0,
+    "speciesAssertionsAdded": 0,
+    "publicRecordsAdmitted": 0,
+    "scopeFrozen": false
+  },
+  "limitations": [
+    "The NPC article reports a clean-up event locality, not a surveyed limnological or cadastral perimeter.",
+    "The BMB 2019 row classifies Lumot Reservoir as Water Storage and leaves its locality field blank; its reported area is not adopted.",
+    "The match uses the existing Lumot Lake scope alias as a working crosswalk, not a formal name determination.",
+    "PSGC confirms administrative names and codes only; no barangay or municipal polygon is imported.",
+    "No species assertions, geometry, access/safety/rules claims, or public records were added; scope remains unfrozen."
+  ],
+  "decision": "Link the NPC-described Lumot Lake community-event locality at Barangay Bukal to Cavinti PSGC code 0403407000 through the existing Lumot Lake research alias; retain reservoir identity/extent and exclusive municipal containment as unresolved.",
+  "nextAction": "Continue the source-backed locality queue; retain Taal Lake’s broad Batangas Lakehore source wording and Laguna de Bay’s NCR locality row for separate scoped review."
+}

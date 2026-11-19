@@ -74,6 +74,7 @@ export function buildResearchStatus({
   calabarzonLocalitySourceBackedBatch09,
   calabarzonLocalitySourceBackedBatch10,
   calabarzonLocalitySourceBackedBatch11,
+  calabarzonLocalitySourceBackedBatch12,
   calabarzonTagbacSourceReview,
   calabarzonBcibWatercoursesReview,
   calabarzonBmbAtlasReview,
@@ -196,6 +197,12 @@ export function buildResearchStatus({
       "data/research/philippines/national/reviews/calabarzon-locality-linkage-gap-audit-20261118.json",
     ),
     "CALABARZON manifest must link its locality-linkage audit",
+  );
+  assert.ok(
+    calabarzonManifestRegion.evidenceRefs.includes(
+      "data/research/philippines/national/reviews/calabarzon-locality-source-backed-batch-20261119-07.json",
+    ),
+    "CALABARZON manifest must link its twelfth source-backed locality batch",
   );
   assert.equal(
     calabarzonLocalityLinkageAudit.snapshotHashes.calabarzonScope,
@@ -607,7 +614,11 @@ export function buildResearchStatus({
     calabarzonLocalitySourceBackedBatch11.reviewId,
     "calabarzon-locality-source-backed-batch-20261119-06",
   );
-  assert.equal(calabarzonLocalitySourceBackedBatch11.snapshotHashes.calabarzonScope, inputHashes.scope);
+  assert.equal(
+    calabarzonLocalitySourceBackedBatch11.snapshotHashes.calabarzonScope,
+    calabarzonLocalitySourceBackedBatch12.snapshotHashes.scopeBeforeBatch,
+    "CALABARZON eleventh locality batch output must feed the twelfth locality batch",
+  );
   assert.equal(
     calabarzonLocalitySourceBackedBatch11.snapshotHashes.scopeBeforeBatch,
     calabarzonLocalityLinkageAudit.findings.sourceBackedLocalityBatch11.scopeBeforeBatchSha256,
@@ -628,7 +639,11 @@ export function buildResearchStatus({
     calabarzonLocalitySourceBackedBatch11.snapshotHashes.administrativeDenominator,
     inputHashes.calabarzonAdministrativeDenominator,
   );
-  assert.equal(calabarzonLocalitySourceBackedBatch11.snapshotHashes.sourceRegistry, inputHashes.sources);
+  assert.match(
+    calabarzonLocalitySourceBackedBatch11.snapshotHashes.sourceRegistry,
+    /^[a-f0-9]{64}$/,
+    "CALABARZON eleventh locality batch retains its historical source-registry snapshot",
+  );
   assert.equal(calabarzonLocalitySourceBackedBatch11.counts.leadsUpdated, 1);
   assert.equal(calabarzonLocalitySourceBackedBatch11.counts.cityCodeAssignments, 1);
   assert.equal(calabarzonLocalitySourceBackedBatch11.counts.additionalAssociationRows, 1);
@@ -636,11 +651,11 @@ export function buildResearchStatus({
   assert.equal(calabarzonLocalitySourceBackedBatch11.counts.administrativeAssociationRowsAfter, 216);
   assert.equal(
     calabarzonLocalitySourceBackedBatch11.counts.leadsWithCityOrMunicipalityCodeAfter,
-    calabarzonLocalityLinkageAudit.findings.localityLinkage.leadsWithCityOrMunicipalityCode,
+    78,
   );
   assert.equal(
     calabarzonLocalitySourceBackedBatch11.counts.leadsWithProvinceCodeButNoCityOrMunicipalityCodeAfter,
-    calabarzonLocalityLinkageAudit.findings.localityLinkage.leadsWithProvinceCodeButNoCityOrMunicipalityCode,
+    82,
   );
   assert.equal(
     calabarzonLocalitySourceBackedBatch11.counts.cityCodesPresentAfter,
@@ -648,8 +663,46 @@ export function buildResearchStatus({
   );
   assert.equal(
     calabarzonLocalitySourceBackedBatch11.counts.municipalityCodesPresentAfter,
-    calabarzonLocalityLinkageAudit.findings.localityLinkage.municipalityCodesPresent,
+    39,
   );
+  assert.equal(
+    calabarzonLocalitySourceBackedBatch12.reviewId,
+    "calabarzon-locality-source-backed-batch-20261119-07",
+  );
+  assert.equal(calabarzonLocalitySourceBackedBatch12.snapshotHashes.calabarzonScope, inputHashes.scope);
+  assert.equal(
+    calabarzonLocalitySourceBackedBatch12.snapshotHashes.scopeBeforeBatch,
+    calabarzonLocalityLinkageAudit.findings.sourceBackedLocalityBatch12.scopeBeforeBatchSha256,
+  );
+  assert.equal(
+    calabarzonLocalitySourceBackedBatch12.snapshotHashes.previousLocalityBatch,
+    inputHashes.calabarzonLocalitySourceBackedBatch11,
+  );
+  assert.equal(
+    calabarzonLocalitySourceBackedBatch12.snapshotHashes.bmb2019WetlandCrosswalk,
+    inputHashes.calabarzonBmb2019WetlandCrosswalk,
+  );
+  assert.equal(
+    calabarzonLocalitySourceBackedBatch12.snapshotHashes.administrativeRegistry,
+    inputHashes.registry,
+  );
+  assert.equal(
+    calabarzonLocalitySourceBackedBatch12.snapshotHashes.administrativeDenominator,
+    inputHashes.calabarzonAdministrativeDenominator,
+  );
+  assert.equal(calabarzonLocalitySourceBackedBatch12.snapshotHashes.sourceRegistry, inputHashes.sources);
+  assert.equal(calabarzonLocalitySourceBackedBatch12.counts.leadsUpdated, 1);
+  assert.equal(calabarzonLocalitySourceBackedBatch12.counts.municipalityCodeAssignments, 1);
+  assert.equal(calabarzonLocalitySourceBackedBatch12.counts.additionalAssociationRows, 1);
+  assert.equal(calabarzonLocalitySourceBackedBatch12.counts.waterbodyResearchLeadsAfter, 164);
+  assert.equal(calabarzonLocalitySourceBackedBatch12.counts.administrativeAssociationRowsAfter, 217);
+  assert.equal(calabarzonLocalitySourceBackedBatch12.counts.leadsWithCityOrMunicipalityCodeAfter, 79);
+  assert.equal(
+    calabarzonLocalitySourceBackedBatch12.counts.leadsWithProvinceCodeButNoCityOrMunicipalityCodeAfter,
+    81,
+  );
+  assert.equal(calabarzonLocalitySourceBackedBatch12.counts.cityCodesPresentAfter, 15);
+  assert.equal(calabarzonLocalitySourceBackedBatch12.counts.municipalityCodesPresentAfter, 40);
   for (const [snapshotKey, hashKey] of [
     ["tagbacReview", "calabarzonTagbacSourceReview"],
     ["bcibWatercoursesReview", "calabarzonBcibWatercoursesReview"],
@@ -724,6 +777,11 @@ export function buildResearchStatus({
     inputHashes.calabarzonLocalitySourceBackedBatch11,
     "CALABARZON locality audit eleventh-batch hash is stale",
   );
+  assert.equal(
+    calabarzonLocalityLinkageAudit.snapshotHashes.sourceBackedLocalityBatch12,
+    inputHashes.calabarzonLocalitySourceBackedBatch12,
+    "CALABARZON locality audit twelfth-batch hash is stale",
+  );
   for (const id of calabarzonLocalitySourceBackedBatch.sourceIds) {
     assert.ok(sourceIds.has(id), `Unknown CALABARZON locality batch source: ${id}`);
   }
@@ -756,6 +814,9 @@ export function buildResearchStatus({
   }
   for (const id of calabarzonLocalitySourceBackedBatch11.sourceIds) {
     assert.ok(sourceIds.has(id), `Unknown CALABARZON eleventh locality batch source: ${id}`);
+  }
+  for (const id of calabarzonLocalitySourceBackedBatch12.sourceIds) {
+    assert.ok(sourceIds.has(id), `Unknown CALABARZON twelfth locality batch source: ${id}`);
   }
   for (const [key, hashKey] of [
     ["mambaPalicpicanSourceReview", "mambaPalicpicanSourceReview"],
@@ -1458,6 +1519,10 @@ export async function readResearchInputs() {
     ),
     calabarzonLocalitySourceBackedBatch11: new URL(
       "national/reviews/calabarzon-locality-source-backed-batch-20261119-06.json",
+      research,
+    ),
+    calabarzonLocalitySourceBackedBatch12: new URL(
+      "national/reviews/calabarzon-locality-source-backed-batch-20261119-07.json",
       research,
     ),
     calabarzonYabahanCrosswalkReview: new URL(
