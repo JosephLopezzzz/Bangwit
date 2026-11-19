@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "ncr-prcmo-cluster-iii-independent-name-crosswalk-20261120",
+  "reviewedOn": "2026-11-20",
+  "phaseId": "L2",
+  "regionId": "1300000000",
+  "regionName": "National Capital Region (NCR)",
+  "status": "9-waterway-name-leads-independently-supported;8-exact-name-strings;1-orthographic-candidate;guadalupe-nuevo-unresolved;research-only",
+  "question": "Which Cluster III names in the DENR-NCR 2025 Pasig River system management list have independent official name/locality support, and which entries remain ambiguous?",
+  "sourceIds": [
+    "denr-ncr-pasig-river-biodiversity-2024",
+    "mandaluyong-physical-spatial-waterways-profile",
+    "makati-city-official-waterways-profile-4-3",
+    "denr-ncr-balisampan-creek-makati-cleanup-2020",
+    "denr-ncr-estero-sta-clara-makati-cleanup",
+    "denr-ncr-statistical-profile-2022-pineda-creek",
+    "makati-cembo-profile-guadalupe-nuevo-label-context"
+  ],
+  "inputs": [
+    "data/research/philippines/national/reviews/ncr-prcmo-2025-pasig-system-52-entry-scope-review-20261120.json"
+  ],
+  "snapshotHashes": {
+    "sourceRegistry": "1eb9c1905fee59e7dec4c3a9267f704de31b9d7140a7d2fbbca9cb136a57d6ed",
+    "parentClusterScopeReview": "57db35519628a96e98e8d6fe25cc16c21dc5c77d3e2675005594a6ca184e9f13"
+  },
+  "method": "Compared only the ten Cluster III labels already reviewed in the linked DENR-NCR Annual Report 2025 scope artifact with independent official city and DENR-NCR text. Exact-name support, orthographic difference, and ambiguous administrative/monitoring labels were kept separate. The city sources establish textual name and broad locality context only; no geometry or taxon claims were inferred.",
+  "sourceAccess": {
+    "clusterScope": {
+      "sourceId": "denr-ncr-pasig-river-biodiversity-2024",
+      "sourceUrl": "https://ncr.denr.gov.ph/wp-content/uploads/2026/01/ANNUAL-REPORT-2025.pdf",
+      "retrieval": "Used the ten Cluster III labels and cluster-level locality context from the prior same-day official-PDF text review recorded in the linked artifact. Direct PDF retrieval returned HTTP 403; no access control was bypassed and no local PDF was retained."
+    },
+    "independentSources": [
+      {
+        "sourceId": "mandaluyong-physical-spatial-waterways-profile",
+        "retrieval": "Official city page opened and relevant water-characteristics text reviewed."
+      },
+      {
+        "sourceId": "makati-city-official-waterways-profile-4-3",
+        "retrieval": "Official PDF text opened and section 4.3, printed pages 33–34, reviewed."
+      },
+      {
+        "sourceId": "denr-ncr-balisampan-creek-makati-cleanup-2020",
+        "retrieval": "Official indexed article text reviewed; direct page fetch returned HTTP 403."
+      },
+      {
+        "sourceId": "denr-ncr-estero-sta-clara-makati-cleanup",
+        "retrieval": "Official indexed article text reviewed; the direct article page was not opened in this pass."
+      },
+      {
+        "sourceId": "denr-ncr-statistical-profile-2022-pineda-creek",
+        "retrieval": "Official indexed PDF table text reviewed; direct PDF fetch returned HTTP 403."
+      },
+      {
+        "sourceId": "makati-cembo-profile-guadalupe-nuevo-label-context",
+        "retrieval": "Official indexed page text reviewed; direct open rendered only an image."
+      }
+    ],
+    "itemSpecificReuseLicenseFound": false,
+    "copiedMapsOrRawTablesRetained": false
+  },
+  "crosswalk": [
+    {
+      "nameAsPublished": "Pasig River",
+      "independentNameEvidence": "Exact name in Mandaluyong’s surface-water profile and Makati’s official waterways table.",
+      "reportedLocalityContext": "Mandaluyong and Makati city profiles independently associate the river with their city.",
+      "disposition": "Name/locality supported; no segment geometry or cross-record canonical link created."
+    },
+    {
+      "nameAsPublished": "Buhangin Creek",
+      "independentNameEvidence": "Exact name in Mandaluyong’s official surface-water profile.",
+      "reportedLocalityContext": "Mandaluyong City.",
+      "disposition": "Name/locality supported; no geometry or fish evidence."
+    },
+    {
+      "nameAsPublished": "San Juan River",
+      "independentNameEvidence": "Exact name in Mandaluyong’s official surface-water profile, which describes it along the city perimeter.",
+      "reportedLocalityContext": "Mandaluyong City; the report’s cluster-level context also includes San Juan City.",
+      "disposition": "Name/locality supported for Mandaluyong; no cross-city reach or geometry resolved."
+    },
+    {
+      "nameAsPublished": "Balisampan Creek",
+      "independentNameEvidence": "Exact name in the Makati official waterways table and DENR-NCR cleanup article.",
+      "reportedLocalityContext": "Makati City; DENR-NCR describes an open canal draining to Pasig River.",
+      "disposition": "Name/locality and broad drainage text supported; no surveyed route created."
+    },
+    {
+      "nameAsPublished": "Estero de Sta. Clara",
+      "independentNameEvidence": "Exact name in DENR-NCR indexed article text, which describes an open drainage canal in Makati and reports activity in Barangays Kasilawan and Tejeros.",
+      "reportedLocalityContext": "Makati City and multiple barangays; Makati’s separate profile lists “Sta. Clara Creek.”",
+      "disposition": "The source name and locality are supported. Treat “Sta. Clara Creek” as a possible alias only; no feature merge."
+    },
+    {
+      "nameAsPublished": "Guadalupe Nuevo",
+      "independentNameEvidence": "No independent source located in this bounded check that names a waterway with this exact label. Makati records use the label for a barangay and a water-quality monitoring station.",
+      "reportedLocalityContext": "Makati City administrative/monitoring context.",
+      "disposition": "Unresolved management-list label; do not classify as a canonical waterway."
+    },
+    {
+      "nameAsPublished": "Buayang Bato Creek",
+      "independentNameEvidence": "Exact name in Mandaluyong’s official surface-water profile.",
+      "reportedLocalityContext": "Mandaluyong City.",
+      "disposition": "Name/locality supported; no geometry or fish evidence."
+    },
+    {
+      "nameAsPublished": "Pineda Creek",
+      "independentNameEvidence": "Exact name in the DENR-NCR Statistical Profile 2022 water-sector activity table.",
+      "reportedLocalityContext": "Pasig City.",
+      "disposition": "Name/locality supported by an independent administrative activity record; no route or species claim."
+    },
+    {
+      "nameAsPublished": "Ermitanyo Creek",
+      "independentNameEvidence": "Mandaluyong’s official profile names “Ermitaño Creek.”",
+      "reportedLocalityContext": "Mandaluyong City.",
+      "disposition": "Orthographic/name-form candidate only; preserve both source forms and do not merge canonical features."
+    },
+    {
+      "nameAsPublished": "Maytunas Creek",
+      "independentNameEvidence": "Exact name in Mandaluyong’s official surface-water profile.",
+      "reportedLocalityContext": "Mandaluyong City.",
+      "disposition": "Name/locality supported; no geometry or fish evidence."
+    }
+  ],
+  "counts": {
+    "clusterIIIManagementLabelsReviewed": 10,
+    "labelsWithExactIndependentWaterwayNameSupport": 8,
+    "labelsWithOrthographicCandidateOnly": 1,
+    "unresolvedLabels": 1,
+    "canonicalFeatureLinksConfirmed": 0,
+    "geometryAdded": 0,
+    "speciesAssertionsAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "publicAppRecordsAdded": 0
+  },
+  "rightsDecision": {
+    "itemSpecificReuseTermsVerified": false,
+    "rawPagesMapsOrTablesRetained": false,
+    "appProjectionApproved": false,
+    "decision": "Keep findings as short attributed internal research notes. Official hosting does not establish a blanket redistribution license; do not publish source maps, tables, or derived geometries from this batch."
+  },
+  "limitations": [
+    "The annual report gives cluster-level administrative context, not an individual locality for every Cluster III entry.",
+    "Name-level source support does not establish a unique channel identity, precise route, bank boundary, catchment, habitat condition, fish occurrence, fishing access, legality, or safety.",
+    "The source spelling “Ermitanyo” and Mandaluyong’s “Ermitaño” remain an orthographic candidate and were not merged.",
+    "Makati’s “Sta. Clara Creek” and DENR-NCR’s “Estero de Sta. Clara” are retained as a possible name relationship, not a confirmed physical-feature identity.",
+    "Makati uses “Guadalupe Nuevo” as a barangay and “Guadalupe Nuevo Station” as a monitoring-site label; no separate waterway identity was corroborated in this bounded search.",
+    "The cluster is a selected management list, not a complete inventory of NCR waterways or fish habitats.",
+    "No water quality, fish, access, legal, hazard, geometry, or public-app claims are admitted."
+  ],
+  "nextActions": [
+    "Crosswalk Cluster IV labels independently; keep shared river-system context separate from feature identity and localities.",
+    "Continue source discovery across all 17 NCR units and freshwater, brackish, marine, and wetland contexts; do not freeze NCR or Luzon scope."
+  ]
+}
