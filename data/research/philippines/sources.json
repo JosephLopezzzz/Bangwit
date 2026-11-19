@@ -3,7 +3,7 @@
   "checkedOn": "2026-11-19",
   "status": "research-only-source-registry",
   "scope": "National acquisition references, freshwater spatial-source leads, MIMAROPA/CALABARZON/Central Luzon identity and inland-water source reviews, and Mindanao regional freshwater survey reviews. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 934,
+  "sourceCount": 937,
   "sources": [
     {
       "id": "aoyama-et-al-2015-cagayan-glass-eel-recruitment",
@@ -32137,6 +32137,119 @@
         "The CoL XR candidate key 8VR36 is scoped to ray-finned fishes (Actinopterygii), not sharks or rays or every group commonly called fish.",
         "The legacy GBIF Backbone key 204 is deleted; any initial results using taxonKey=204 were discarded and are not evidence. The corrected searches use taxonKey=8VR36 with checklistKey 7ddf754f-d193-4cc9-b351-99906754a03b.",
         "Exact searches cover only indexed waterBody/locality strings, country PH, the selected taxon scope, and the check date. They are not spatial searches, exhaustive queries, or absence evidence."
+      ]
+    },
+    {
+      "id": "gbif-inaturalist-napwc-spatial-candidate-20261119",
+      "title": "GBIF spatial occurrence screen for the NAPWC Lagoon candidate",
+      "provider": "Global Biodiversity Information Facility; iNaturalist observation dataset",
+      "url": "https://api.gbif.org/v1/occurrence/6147530142",
+      "additionalUrls": [
+        "https://www.inaturalist.org/observations/337892640",
+        "https://api.gbif.org/v1/occurrence/search",
+        "https://api.gbif.org/v1/dataset/50c9509d-22c7-4a22-a47d-8c48425ef4a7",
+        "https://techdocs.gbif.org/en/openapi/v1/occurrence",
+        "https://creativecommons.org/licenses/by-nc/4.0/"
+      ],
+      "role": "One ray-finned-fish human-observation record intersects a query polygon derived from community-mapped OSM way 37400786. The observation lacks waterBody and specific lagoon locality text; its reported location uncertainty overlaps the mapped feature edge. It is a research lead, not a confirmed NAPWC Lagoon record.",
+      "checkedOn": "2026-11-19",
+      "sourceYear": 2025,
+      "citation": "iNaturalist observation 337892640, indexed by GBIF occurrence 6147530142; observed 2025-12-04.",
+      "access": {
+        "status": "single-spatial-index-hit;locality-crosswalk-held;research-only",
+        "reviewFiles": [
+          "national/reviews/ncr-napwc-spatial-observation-followup-20261119.json"
+        ],
+        "rawPath": "raw/national/gbif-napwc-osm-polygon-screen-20261119/napwc-osm-way-37400786-limit-1.json",
+        "rawReceipts": [
+          {
+            "file": "napwc-osm-way-37400786-limit-1.json",
+            "sha256": "2bebac1b11025cc8d02fc4c90db94465674b25704115c10438adbd595753260e"
+          }
+        ]
+      },
+      "reuse": {
+        "metadata": "GBIF occurrence fields and the linked public iNaturalist observation/API record were reviewed. The iNaturalist observation and its two attached photographs report CC BY-NC; the GBIF row carries a TAXON_ID_NOT_FOUND issue.",
+        "raw": "The ignored local GBIF response includes the occurrence coordinates. No photograph was downloaded or copied.",
+        "content": "No item-specific public-app reuse approval was established. Preserve CC BY-NC and GBIF quality flags; do not use the observation or photographs in public Bangwit data pending item-level rights and locality review."
+      },
+      "publicationApproval": false,
+      "researchStatus": "inaturalist-human-observation;osm-polygon-proximity-candidate;8m-coordinate-uncertainty;research-only",
+      "license": "CC BY-NC 4.0 reported for the observation; attached photos report CC BY-NC",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "caveats": [
+        "The query polygon comes from community-mapped OSM way 37400786, version 8, and is not an official or field-validated lagoon shoreline.",
+        "The observation coordinate center falls within the OSM ring by a point-in-polygon screen, but the approximate 7 m distance to the mapped edge is less than the reported 8 m coordinate uncertainty.",
+        "GBIF reports no specific waterBody or locality, and flags TAXON_ID_NOT_FOUND. The iNaturalist page labels the human observation Research Grade and gives Channa striata as its community taxon, but that does not establish the exact lagoon location.",
+        "This is one historical citizen-science observation, not a fish inventory, survey, voucher record, abundance estimate, or current-presence guarantee."
+      ]
+    },
+    {
+      "id": "lakansining-napwc-lagoon-fish-binomial-secondary-lead-20200706",
+      "title": "Diliman Quadrangle, Quezon City: Animal Tales at the Ninoy Aquino Parks and Wildlife Center",
+      "provider": "Lakbay ng Lakan",
+      "url": "https://lakansining.wordpress.com/2020/07/06/diliman-quadrangle-quezon-city-animal-tales-at-the-ninoy-aquino-parks-and-wildlife-center/",
+      "role": "Secondary travelogue that gives binomial fish-name leads for the NAPWC lagoon and states that visitors can fish there. The article has no fish-specific survey method, citation trail, collection dates, station details, or voucher list; its fishing statement is not current access authorization.",
+      "checkedOn": "2026-11-19",
+      "sourceYear": 2020,
+      "access": {
+        "status": "public-secondary-article-read;no-primary-citation-found;research-lead-only",
+        "reviewFiles": [
+          "national/reviews/ncr-napwc-spatial-observation-followup-20261119.json"
+        ],
+        "fullTextRetrieved": true
+      },
+      "reuse": {
+        "metadata": "Article date, author description, lagoon passage and linked image captions were reviewed.",
+        "raw": "No article text, image, or page capture is retained.",
+        "content": "No article-specific open reuse terms were identified. Only attributed source-name notes are retained; no prose or images are reproduced."
+      },
+      "publicationApproval": false,
+      "researchStatus": "secondary-fish-name-leads;no-survey-provenance;research-only",
+      "license": null,
+      "licenseUrl": null,
+      "caveats": [
+        "The article reports Leiopotherapon plumbeus, Pandaka pygmaea, Clarias batrachus, Cyprinus carpio, Channa melsoma (spelling as published), Channa micropeltes, Channa striata, Oreochromis aureus, Oreochromis niloticus, Coptodon zillii, and Trichopodus pectoralis.",
+        "No listed binomial is adopted as a lagoon assertion because the article does not connect the names to a traceable fish survey or vouchers.",
+        "A nearby 1983 photo caption does not date the fish list.",
+        "The visitors-can-fish statement is secondary and historical/contextual, not a current rule or access decision."
+      ]
+    },
+    {
+      "id": "dela-paz-et-al-2018-metro-manila-freshwater-microcrustaceans",
+      "title": "Freshwater microcrustaceans (Cladocera: Anomopoda and Ctenopoda, Copepoda: Cyclopoida and Calanoida) in the highly urbanized Metropolitan Manila area (Luzon, Philippines)",
+      "provider": "Check List: Journal of Species Lists and Distribution, 14(5)",
+      "url": "https://doi.org/10.15560/14.5.751",
+      "additionalUrls": [
+        "https://checklist.pensoft.net/article/25305/",
+        "https://checklist.pensoft.net/article/25305/download/pdf/",
+        "https://field.biodiversitylibrary.org/page/64814006",
+        "https://tb.plazi.org/GgServer/summary/85315B40096D2315CC55FF8CFFD6FFA8"
+      ],
+      "role": "Peer-reviewed primary inventory of Metro Manila freshwater microcrustaceans that includes a sampled NAPWC Lagoon locality. It is aquatic-site research context only, not a fish survey or fish checklist.",
+      "checkedOn": "2026-11-19",
+      "sourceYear": 2018,
+      "citation": "Dela Paz, E.S.P., Lopez, M.L.D., David, C.I.H.A., Dela Cruz, D.R.A., Viernes, G.A.A., Wong, J.F., & Papa, R.D.S. (2018). Check List 14(5): 751–762. https://doi.org/10.15560/14.5.751",
+      "access": {
+        "status": "bibliographic-and-indexed-site-sampling-lead;publisher-direct-page-403;no-fish-data",
+        "reviewFiles": [
+          "national/reviews/ncr-napwc-spatial-observation-followup-20261119.json"
+        ],
+        "fullTextRetrieved": false
+      },
+      "reuse": {
+        "metadata": "Pensoft-contributed Biodiversity Heritage Library metadata reports CC BY 4.0; confirm the article's publisher license before any future reuse.",
+        "raw": "No paper, table, figure, or image is retained.",
+        "content": "Only the article citation and concise site/scope note are recorded. It is not used as fish evidence."
+      },
+      "publicationApproval": false,
+      "researchStatus": "primary-aquatic-site-study;microcrustaceans-only;no-fish-inventory;research-only",
+      "license": "CC BY 4.0 reported by Biodiversity Heritage Library metadata; publisher item verification pending",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "caveats": [
+        "The study concerns freshwater microcrustaceans, not fish; its taxa and sampling results are outside Bangwit's fish evidence.",
+        "The journal landing page returned HTTP 403 during this check. Indexed article text identifies a June 2016 NAPWC Lagoon sampling locality and UST-ZRC material; the publisher PDF was not retrieved for direct review.",
+        "The published sampling locality and coordinate are not transferred to the fish observation or used as a lagoon boundary."
       ]
     }
   ],

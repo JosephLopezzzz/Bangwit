@@ -1,0 +1,133 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "ncr-napwc-spatial-observation-followup-20261119",
+  "reviewedOn": "2026-11-19",
+  "phaseId": "L2",
+  "regionId": "1300000000",
+  "regionName": "National Capital Region (NCR)",
+  "status": "one-inaturalist-Channa-striata-spatial-candidate;OSM-location-uncertainty-overlaps-edge;fish-survey-provenance-unresolved;research-only",
+  "question": "Does a bounded spatial GBIF screen or a secondary NAPWC lagoon fish list provide a traceable species-level fish record for the NAPWC Lagoon?",
+  "parentReviewIds": [
+    "ncr-napwc-lagoon-alias-review-20261119",
+    "ncr-napwc-fish-common-name-and-gbif-screen-20261119"
+  ],
+  "sourceIds": [
+    "gbif-inaturalist-napwc-spatial-candidate-20261119",
+    "lakansining-napwc-lagoon-fish-binomial-secondary-lead-20200706",
+    "dela-paz-et-al-2018-metro-manila-freshwater-microcrustaceans"
+  ],
+  "inputs": [
+    "data/research/philippines/national/reviews/ncr-napwc-lagoon-alias-review-20261119.json",
+    "data/research/philippines/national/reviews/ncr-napwc-fish-common-name-and-gbif-screen-20261119.json",
+    "data/research/philippines/raw/national/osm-napwc-lagoon-20261119/way-37400786-full.json"
+  ],
+  "snapshotHashes": {
+    "sourceRegistry": "1e5ddd52ab45404deb1643848e9faca5a7b6fe049ca2cb9971c94a754f920a42",
+    "gbifSpatialResponse": "2bebac1b11025cc8d02fc4c90db94465674b25704115c10438adbd595753260e",
+    "osmLagoonWay": "2c4caddadea42a9ff25f24fa0312ae5acdb074db7336a284c30bab42f4e9e427",
+    "napwcLagoonAliasReview": "c598fa2ee573c10687259b1f6ff14c4b4e4f731b72b5084be8e6ed00d5a940e3",
+    "napwcFishCommonNameReview": "fd5ce7fe3143fe056bcd286f14c0da6fa21f166abdf116b368eac91a2869f8c5"
+  },
+  "method": "Built a GBIF spatial query polygon from the closed ring of OSM way 37400786, version 8, without treating the community geometry as official. Queried GBIF for country PH, the reviewed Catalogue of Life XR Actinopterygii class-scope key 8VR36 and checklist 7ddf754f-d193-4cc9-b351-99906754a03b, limit 1. The query returned one record and endOfRecords=true. Reviewed its GBIF fields and the linked public iNaturalist observation/API metadata. Compared the public coordinate center to the OSM ring locally; the point-in-polygon result and approximate nearest-edge distance are retained only as a spatial triage diagnostic. Read the secondary Lakbay ng Lakan lagoon passage and searched for an underlying cited fish survey. Identified, but did not directly retrieve from the publisher, a peer-reviewed Metro Manila microcrustacean study that sampled the NAPWC Lagoon; it is not fish evidence.",
+  "findings": {
+    "spatialOccurrenceCandidate": {
+      "sourceId": "gbif-inaturalist-napwc-spatial-candidate-20261119",
+      "gbifKey": "6147530142",
+      "iNaturalistObservationId": "337892640",
+      "iNaturalistUrl": "https://www.inaturalist.org/observations/337892640",
+      "scientificNameAsIndexed": "Channa striata (Bloch, 1793)",
+      "basisOfRecord": "HUMAN_OBSERVATION",
+      "eventDate": "2025-12-04",
+      "verbatimPlaceGuess": "Project 6, Quezon City, Metro Manila, Philippines",
+      "waterBody": null,
+      "locality": null,
+      "reportedCoordinateUncertaintyMeters": 8,
+      "gbifIssues": [
+        "COORDINATE_ROUNDED",
+        "CONTINENT_DERIVED_FROM_COORDINATES",
+        "TAXON_ID_NOT_FOUND"
+      ],
+      "iNaturalistReview": {
+        "qualityGrade": "research",
+        "communityTaxon": "Channa striata",
+        "identificationSummary": "The public API shows the species as community taxon, with two current external species-level identifications in addition to the observer's original genus-level identification.",
+        "recordLicense": "CC BY-NC",
+        "attachedPhotoLicenses": [
+          "CC BY-NC",
+          "CC BY-NC"
+        ]
+      },
+      "spatialCrosscheck": {
+        "queryGeometrySource": "OSM way 37400786, version 8, named Parks and Wildlife Lagoon; community-mapped natural=water polygon.",
+        "pointCenterInsideMappedRing": true,
+        "approximateDistanceFromPointCenterToMappedRingEdgeMeters": 7,
+        "coordinateUncertaintyMeters": 8,
+        "interpretation": "The point center lies inside this OSM polygon, but its reported uncertainty is larger than the approximate point-to-edge distance. The observation could fall outside the mapped ring, and the community polygon's shoreline accuracy is unknown. Do not assign this record to the lagoon as a confirmed occurrence."
+      },
+      "rawSnapshot": {
+        "path": "data/research/philippines/raw/national/gbif-napwc-osm-polygon-screen-20261119/napwc-osm-way-37400786-limit-1.json",
+        "sha256": "2bebac1b11025cc8d02fc4c90db94465674b25704115c10438adbd595753260e",
+        "gitIgnored": true,
+        "coordinatesCommitted": false
+      },
+      "disposition": "Retain as one research-only iNaturalist human-observation candidate. Preserve the GBIF taxonomy issue and CC BY-NC licenses. No public species assertion, app row, photo, map point, or current-presence claim."
+    },
+    "secondaryFishList": {
+      "sourceId": "lakansining-napwc-lagoon-fish-binomial-secondary-lead-20200706",
+      "reportedNamesAsPublished": [
+        "Leiopotherapon plumbeus",
+        "Pandaka pygmaea",
+        "Clarias batrachus",
+        "Cyprinus carpio",
+        "Channa melsoma",
+        "Channa micropeltes",
+        "Channa striata",
+        "Oreochromis aureus",
+        "Oreochromis niloticus",
+        "Coptodon zillii",
+        "Trichopodus pectoralis"
+      ],
+      "sourceLimitations": [
+        "No fish-specific survey method, sampling date, station, voucher, specimen catalog, sequence accession, or primary citation trail was found in the article.",
+        "Channa melsoma is retained exactly as printed; no correction or taxonomic assignment is made.",
+        "The article's nearby 1983 image caption does not establish the date or provenance of its fish list.",
+        "Its statement that visitors can fish is not evidence of current park access, rules, safety, or legal permission."
+      ],
+      "disposition": "Discovery lead only. Do not map these names to the BMB guidebook's vernacular groups or use them as confirmed NAPWC Lagoon records."
+    },
+    "relatedPrimaryAquaticStudy": {
+      "sourceId": "dela-paz-et-al-2018-metro-manila-freshwater-microcrustaceans",
+      "citation": "Dela Paz, E.S.P., Lopez, M.L.D., David, C.I.H.A., Dela Cruz, D.R.A., Viernes, G.A.A., Wong, J.F., and Papa, R.D.S. (2018), Check List 14(5):751-762, DOI 10.15560/14.5.751.",
+      "finding": "Indexed article text identifies the NAPWC Lagoon as a freshwater microcrustacean sampling locality and reports UST-ZRC material. This is a primary site-specific aquatic study lead, but its scope is microcrustaceans and it contains no fish checklist.",
+      "accessLimit": "The publisher landing page returned HTTP 403. The study's site/sample context was visible in indexed article text; the publisher PDF was not directly retrieved or independently transcribed.",
+      "rightsLimit": "Biodiversity Heritage Library metadata contributed by Pensoft reports CC BY 4.0, but the publisher item-level license should be rechecked before any content reuse.",
+      "disposition": "Keep as aquatic-site research context only; do not use as fish occurrence evidence or transfer its sampling coordinate to the fish observation."
+    },
+    "previousOfficialFishSources": {
+      "sourceReview": "ncr-napwc-fish-common-name-and-gbif-screen-20261119",
+      "summary": "The official BMB guidebook gives nine fish as a total and seven common-name groups as examples without scientific names or fish-survey provenance; the 2016 bulletin is a sample guide script, not an independent fish survey. Five exact-text GBIF searches returned zero."
+    }
+  },
+  "decisions": {
+    "spatialQueries": 1,
+    "spatialRecordsReturned": 1,
+    "recordsAssignedToNapwcLagoon": 0,
+    "secondaryNamesAdoptedAsFishAssertions": 0,
+    "speciesAssertionsAdded": 0,
+    "publicRecordsAdmitted": 0,
+    "photosReused": 0,
+    "geometryAdded": 0,
+    "currentPresenceClaimsAdded": 0,
+    "accessOrLegalFishingClaimsAdded": 0,
+    "publicationApproval": false
+  },
+  "limitations": [
+    "The one spatial hit is an iNaturalist human observation, not a standardized fish survey or museum voucher. GBIF flags TAXON_ID_NOT_FOUND; the iNaturalist community taxon does not resolve the site's identity.",
+    "The observation has no waterBody or specific locality field. Its Project 6 place label is broader than the lagoon.",
+    "The point-in-polygon result uses a community-mapped OSM feature, and the reported positional uncertainty overlaps the mapped edge. No official shoreline or exact observation-to-lagoon crosswalk is established.",
+    "The observation and photographs are CC BY-NC; no app reuse is approved. No image was downloaded or reused.",
+    "The secondary blog's binomials and historical fishing statement lack a traceable primary survey source and do not establish current presence or access.",
+    "The 2018 primary study covers freshwater microcrustaceans, not fish; its publisher PDF and item-specific license were not directly verified."
+  ],
+  "nextAction": "Keep Channa striata as an unresolved spatial candidate. Continue the NCR search for directly inspectable, fish-specific primary sources with dated methods and voucher or catalog evidence. Separately review current park access and fishing rules through an authoritative current source before making any fishing-site statement."
+}
