@@ -52,7 +52,12 @@
         {
           "group": "fish",
           "commonName": "bugsang bakes",
-          "scientificName": "Agpogon spp."
+          "scientificName": "Apogon spp.",
+          "textExtractionVariants": [
+            "Agpogon spp.",
+            "Apoogon spp."
+          ],
+          "transcriptionNote": "Visual inspection of printed page 58 reads 'Apogon spp.'; the publisher PDF text extraction reads 'Agpogon spp.' and an indexed text rendering reads 'Apoogon spp.'. Preserve these as transcription variants; no taxon identification is inferred."
         },
         {
           "group": "crustacean",
@@ -118,8 +123,8 @@
   },
   "internalConsistency": [
     {
-      "issue": "The Dagupan abstract claims 25 finfish species but gives no complete fish list; the only fish name is the source string 'Agpogon spp.' and the only named crustacean is 'Metapenae usensis.'",
-      "disposition": "Preserve both verbatim strings as unresolved source labels. Do not silently correct spelling, map them to accepted species, or treat the aggregate count as a checklist."
+      "issue": "The Dagupan abstract claims 25 finfish species but gives no complete fish list; the only fish label is rendered 'Apogon spp.' on printed page 58, while PDF and indexed text extraction produce 'Agpogon spp.' and 'Apoogon spp.'. The only named crustacean is 'Metapenae usensis.'",
+      "disposition": "Preserve the page-image reading and text-extraction variants as a transcription discrepancy. Do not resolve it taxonomically or treat the aggregate count as a checklist."
     },
     {
       "issue": "The Dagupan abstract mentions multiple stations and variation in abundance, but provides no station names, study dates, sampling methods, counts or fish-by-station table.",
