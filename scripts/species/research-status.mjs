@@ -76,6 +76,7 @@ export function buildResearchStatus({
   calabarzonLocalitySourceBackedBatch11,
   calabarzonLocalitySourceBackedBatch12,
   calabarzonLocalitySourceBackedBatch13,
+  lagunaDeBayNcrLocalityReview,
   calabarzonTagbacSourceReview,
   calabarzonBcibWatercoursesReview,
   calabarzonBmbAtlasReview,
@@ -211,11 +212,54 @@ export function buildResearchStatus({
     ),
     "CALABARZON manifest must link its thirteenth source-backed locality batch",
   );
+  const ncrManifestRegion = luzonCompletionManifest.regions.find((region) => region.rolloutKey === "L2");
+  assert.ok(ncrManifestRegion, "Luzon manifest is missing NCR L2");
+  assert.ok(
+    ncrManifestRegion.evidenceRefs.includes(
+      "data/research/philippines/national/reviews/laguna-de-bay-ncr-locality-crosswalk-20261119.json",
+    ),
+    "NCR manifest must link the Laguna de Bay locality crosswalk",
+  );
+  assert.equal(lagunaDeBayNcrLocalityReview.reviewId, "laguna-de-bay-ncr-locality-crosswalk-20261119");
+  assert.equal(lagunaDeBayNcrLocalityReview.regionId, "1300000000");
+  for (const id of lagunaDeBayNcrLocalityReview.sourceIds) {
+    assert.ok(sourceIds.has(id), `Unknown Laguna de Bay NCR crosswalk source: ${id}`);
+  }
+  assert.equal(lagunaDeBayNcrLocalityReview.snapshotHashes.scopeAfterNcrBatch, inputHashes.scope);
+  assert.equal(
+    lagunaDeBayNcrLocalityReview.snapshotHashes.scopeBeforeNcrBatch,
+    calabarzonLocalitySourceBackedBatch13.snapshotHashes.calabarzonScope,
+    "NCR locality review must follow the latest CALABARZON source-backed batch",
+  );
+  assert.equal(lagunaDeBayNcrLocalityReview.snapshotHashes.sourceRegistry, inputHashes.sources);
+  assert.equal(lagunaDeBayNcrLocalityReview.snapshotHashes.administrativeRegistry, inputHashes.registry);
+  assert.equal(lagunaDeBayNcrLocalityReview.snapshotHashes.bmb2019WetlandCrosswalk, inputHashes.calabarzonBmb2019WetlandCrosswalk);
+  assert.equal(lagunaDeBayNcrLocalityReview.counts.ncrCityCodeAssignments, 2);
+  assert.equal(lagunaDeBayNcrLocalityReview.counts.administrativeAssociationRowsAfter, 233);
+  for (const assignment of lagunaDeBayNcrLocalityReview.assignments) {
+    const waterbody = scope.waterbodies.find((candidate) => candidate.id === assignment.waterbodyId);
+    assert.ok(waterbody, `NCR locality review references an unknown waterbody: ${assignment.waterbodyId}`);
+    assert.ok(
+      assignment.codes.every((code) => waterbody.administrativeAssociations.some((association) =>
+        association.regionId === "1300000000" &&
+        association.cityId === code.psgcCode &&
+        association.sourceRefs.includes("denr-bmb-philchm-inland-wetlands-2019") &&
+        association.sourceRefs.includes("psa-ncr-cities-list"),
+      )),
+      `NCR locality assignment is missing from the shared waterbody scope: ${assignment.waterbodyId}`,
+    );
+  }
   assert.equal(
     calabarzonLocalityLinkageAudit.snapshotHashes.calabarzonScope,
     inputHashes.scope,
     "CALABARZON locality audit scope hash is stale",
   );
+  assert.equal(
+    calabarzonLocalityLinkageAudit.snapshotHashes.lagunaBayNcrLocalityCrosswalk,
+    inputHashes.lagunaDeBayNcrLocalityReview,
+    "CALABARZON locality audit NCR crosswalk hash is stale",
+  );
+  assert.equal(calabarzonLocalityLinkageAudit.snapshotHashes.sourceRegistry, inputHashes.sources);
   const currentCalabarzonAssociations = scope.waterbodies.flatMap((waterbody) =>
     (waterbody.administrativeAssociations ?? []).map((association) => ({ waterbodyId: waterbody.id, ...association })),
   );
@@ -231,12 +275,18 @@ export function buildResearchStatus({
   );
   assert.equal(
     calabarzonLocalityLinkageAudit.findings.localityLinkage.municipalityCodesPresent,
-    new Set(currentCalabarzonAssociations.map((association) => association.municipalityId).filter(Boolean)).size,
+    new Set(currentCalabarzonAssociations
+      .filter((association) => association.regionId === "0400000000")
+      .map((association) => association.municipalityId)
+      .filter(Boolean)).size,
     "CALABARZON locality audit municipality-code count is stale",
   );
   assert.equal(
     calabarzonLocalityLinkageAudit.findings.localityLinkage.cityCodesPresent,
-    new Set(currentCalabarzonAssociations.map((association) => association.cityId).filter(Boolean)).size,
+    new Set(currentCalabarzonAssociations
+      .filter((association) => association.regionId === "0400000000")
+      .map((association) => association.cityId)
+      .filter(Boolean)).size,
     "CALABARZON locality audit city-code count is stale",
   );
   assert.equal(
@@ -701,7 +751,11 @@ export function buildResearchStatus({
     calabarzonLocalitySourceBackedBatch12.snapshotHashes.administrativeDenominator,
     inputHashes.calabarzonAdministrativeDenominator,
   );
-  assert.equal(calabarzonLocalitySourceBackedBatch12.snapshotHashes.sourceRegistry, inputHashes.sources);
+  assert.equal(
+    calabarzonLocalitySourceBackedBatch12.snapshotHashes.sourceRegistry,
+    calabarzonLocalityLinkageAudit.snapshotHashes.historicalSourceRegistryForBatches,
+    "CALABARZON twelfth locality batch must retain its historical source-registry snapshot",
+  );
   assert.equal(calabarzonLocalitySourceBackedBatch12.counts.leadsUpdated, 1);
   assert.equal(calabarzonLocalitySourceBackedBatch12.counts.municipalityCodeAssignments, 1);
   assert.equal(calabarzonLocalitySourceBackedBatch12.counts.additionalAssociationRows, 1);
@@ -718,7 +772,10 @@ export function buildResearchStatus({
     calabarzonLocalitySourceBackedBatch13.reviewId,
     "calabarzon-locality-source-backed-batch-20261119-08",
   );
-  assert.equal(calabarzonLocalitySourceBackedBatch13.snapshotHashes.calabarzonScope, inputHashes.scope);
+  assert.equal(
+    calabarzonLocalitySourceBackedBatch13.snapshotHashes.calabarzonScope,
+    lagunaDeBayNcrLocalityReview.snapshotHashes.scopeBeforeNcrBatch,
+  );
   assert.equal(
     calabarzonLocalitySourceBackedBatch13.snapshotHashes.scopeBeforeBatch,
     calabarzonLocalityLinkageAudit.findings.sourceBackedLocalityBatch13.scopeBeforeBatchSha256,
@@ -739,7 +796,11 @@ export function buildResearchStatus({
     calabarzonLocalitySourceBackedBatch13.snapshotHashes.administrativeDenominator,
     inputHashes.calabarzonAdministrativeDenominator,
   );
-  assert.equal(calabarzonLocalitySourceBackedBatch13.snapshotHashes.sourceRegistry, inputHashes.sources);
+  assert.equal(
+    calabarzonLocalitySourceBackedBatch13.snapshotHashes.sourceRegistry,
+    calabarzonLocalityLinkageAudit.snapshotHashes.historicalSourceRegistryForBatches,
+    "CALABARZON thirteenth locality batch must retain its historical source-registry snapshot",
+  );
   assert.equal(calabarzonLocalitySourceBackedBatch13.counts.leadsUpdated, 1);
   assert.equal(calabarzonLocalitySourceBackedBatch13.counts.cityCodeAssignments, 2);
   assert.equal(calabarzonLocalitySourceBackedBatch13.counts.municipalityCodeAssignments, 12);
@@ -1124,6 +1185,9 @@ export function buildResearchStatus({
     );
   }
   const localityAssociations = scope.waterbodies.flatMap((waterbody) => waterbody.administrativeAssociations);
+  const calabarzonLocalityAssociations = localityAssociations.filter(
+    (association) => association.regionId === "0400000000",
+  );
   const leadsWithProvinceCode = scope.waterbodies.filter((waterbody) =>
     waterbody.administrativeAssociations.some((association) => association.provinceId),
   ).length;
@@ -1153,11 +1217,11 @@ export function buildResearchStatus({
     leadsWithMunicipalityCode,
     leadsWithoutProvinceCityOrMunicipalityCode: leadsWithoutLocalityCode,
     cityCodesPresent: new Set(
-      localityAssociations.flatMap((association) => association.cityId ? [association.cityId] : []),
+      calabarzonLocalityAssociations.flatMap((association) => association.cityId ? [association.cityId] : []),
     ).size,
     cityCodesExpected: calabarzonCityCodes.size,
     municipalityCodesPresent: new Set(
-      localityAssociations.flatMap((association) => association.municipalityId ? [association.municipalityId] : []),
+      calabarzonLocalityAssociations.flatMap((association) => association.municipalityId ? [association.municipalityId] : []),
     ).size,
     municipalityCodesExpected: calabarzonMunicipalityCodes.size,
     geometryValidated: calabarzonLocalityLinkageAudit.findings.scopeSnapshot.geometryValidated,
@@ -1585,6 +1649,10 @@ export async function readResearchInputs() {
     ),
     calabarzonLocalitySourceBackedBatch13: new URL(
       "national/reviews/calabarzon-locality-source-backed-batch-20261119-08.json",
+      research,
+    ),
+    lagunaDeBayNcrLocalityReview: new URL(
+      "national/reviews/laguna-de-bay-ncr-locality-crosswalk-20261119.json",
       research,
     ),
     calabarzonYabahanCrosswalkReview: new URL(

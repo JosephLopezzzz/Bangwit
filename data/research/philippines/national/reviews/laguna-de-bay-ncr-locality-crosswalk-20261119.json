@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "laguna-de-bay-ncr-locality-crosswalk-20261119",
+  "reviewedOn": "2026-11-19",
+  "phaseId": "L2",
+  "regionId": "1300000000",
+  "status": "source-described-NCR-localities-crosswalked-to-PSGC;shared-lake-identity-preserved;geometry-unverified;scope-not-frozen",
+  "question": "Can the NCR locality cell for Laguna Lake in the DENR-BMB 2019 inland-wetlands inventory be linked to current PSA city codes without treating those codes as the lake boundary?",
+  "sourceIds": [
+    "denr-bmb-philchm-inland-wetlands-2019",
+    "psa-ncr-cities-list",
+    "psa-psgc-2026-q3"
+  ],
+  "inputs": [
+    "data/research/philippines/calabarzon-bmb-2019-wetland-inventory-crosswalk-20261024.json",
+    "data/research/philippines/administrative-registry.json"
+  ],
+  "snapshotHashes": {
+    "scopeBeforeNcrBatch": "aec6243742f755b88e96ecf878326a82ddc9fff2dd2f286632f04cccba37ac9f",
+    "scopeAfterNcrBatch": "857a46aeca90e5bfc2a03b152fb582e2d16e815787ff7344ad48a8b853f14b49",
+    "bmb2019WetlandCrosswalk": "3c7ca91e892100e4d67b264e8fcc454445d7b9fa2ea60cb5ff585e3fea37f7e1",
+    "administrativeRegistry": "c741456fbc2cfc9d5d813484a0b661ef206154977959fc27a289ca86732142e8",
+    "sourceRegistry": "3dd9171a5efb0f331531bc620fc06194ed5bd6179358869f5690aac03a4839ee",
+    "previousCalabarzonLocalityBatch": "57dbcd759ea2bbff908b3d8a9d13c612c96ddedb28971607bb9de8da2c221af6"
+  },
+  "method": "Reviewed the NCR row on page 3 of the official DENR-BMB 2019 inland-wetlands PDF and matched its two printed city names against the PSA NCR PSGC city table. Checked the PSA 3Q 2026 release/current PSGC date for intervening updates. Linked both codes to the existing singular Laguna de Bay research lead as source-described locality context only. The BMB table is a historical selected inventory; the locality associations do not define lake extent, shoreline, city overlap, access, or fish presence.",
+  "sourcePage": 3,
+  "sourceRows": [
+    "Laguna Lake | Region IV-A | NCR | Taguig City, Muntinlupa | Lake"
+  ],
+  "assignments": [
+    {
+      "waterbodyId": "ph-wb-laguna-de-bay",
+      "sourceId": "denr-bmb-philchm-inland-wetlands-2019",
+      "sourceIds": [
+        "denr-bmb-philchm-inland-wetlands-2019",
+        "psa-ncr-cities-list",
+        "psa-psgc-2026-q3"
+      ],
+      "sourcePath": "data/research/philippines/calabarzon-bmb-2019-wetland-inventory-crosswalk-20261024.json",
+      "sourcePage": 3,
+      "sourceRow": "Laguna Lake | Region IV-A | NCR | Taguig City, Muntinlupa | Lake",
+      "sourceLocality": "City of Muntinlupa, NCR",
+      "identityDisposition": "explicit-BMB-NCR-locality;shared-lake-context-only",
+      "codes": [
+        {
+          "level": "city",
+          "psgcCode": "1380800000",
+          "name": "City of Muntinlupa",
+          "locality": "City of Muntinlupa, NCR",
+          "sourceId": "psa-ncr-cities-list"
+        }
+      ],
+      "limit": "This links a city name printed in the BMB inventory to its PSA code. It does not establish lake shoreline, exact overlap, exclusive containment, access, fishing permission, safety, fish presence, or public-app eligibility."
+    },
+    {
+      "waterbodyId": "ph-wb-laguna-de-bay",
+      "sourceId": "denr-bmb-philchm-inland-wetlands-2019",
+      "sourceIds": [
+        "denr-bmb-philchm-inland-wetlands-2019",
+        "psa-ncr-cities-list",
+        "psa-psgc-2026-q3"
+      ],
+      "sourcePath": "data/research/philippines/calabarzon-bmb-2019-wetland-inventory-crosswalk-20261024.json",
+      "sourcePage": 3,
+      "sourceRow": "Laguna Lake | Region IV-A | NCR | Taguig City, Muntinlupa | Lake",
+      "sourceLocality": "City of Taguig, NCR",
+      "identityDisposition": "explicit-BMB-NCR-locality;shared-lake-context-only",
+      "codes": [
+        {
+          "level": "city",
+          "psgcCode": "1381500000",
+          "name": "City of Taguig",
+          "locality": "City of Taguig, NCR",
+          "sourceId": "psa-ncr-cities-list"
+        }
+      ],
+      "limit": "This links a city name printed in the BMB inventory to its PSA code. It does not establish lake shoreline, exact overlap, exclusive containment, access, fishing permission, safety, fish presence, or public-app eligibility."
+    }
+  ],
+  "counts": {
+    "waterbodyResearchLeadsBefore": 164,
+    "waterbodyResearchLeadsAfter": 164,
+    "sharedWaterbodyLeadsUpdated": 1,
+    "ncrCityCodeAssignments": 2,
+    "sourceNamedNcrLocalities": 2,
+    "sourceNamedNcrLocalitiesCrosswalked": 2,
+    "administrativeAssociationRowsBefore": 231,
+    "administrativeAssociationRowsAfter": 233,
+    "geometryValidated": 0,
+    "speciesAssertionsAdded": 0,
+    "publicRecordsAdmitted": 0,
+    "scopeFrozen": false
+  },
+  "decisions": [
+    {
+      "waterbodyId": "ph-wb-laguna-de-bay",
+      "decision": "Keep Laguna de Bay as one canonical shared-water research lead and link the BMB 2019 NCR locality cell to PSA codes for Muntinlupa and Taguig under NCR L2; record the relationship as source-described locality context only."
+    }
+  ],
+  "limitations": [
+    "The BMB 2019 inventory is historical and selected; its locality text is not a current or complete lake inventory.",
+    "NCR city associations do not imply that the lake lies wholly within either city, define shorelines, or create separate lake features.",
+    "PSA city codes identify administrative units only; no polygon, shoreline, coordinate, or legal jurisdiction was imported or inferred.",
+    "No fish assertion, habitat classification change, access/safety/rules claim, or public-app record is added.",
+    "The NCR baseline and Luzon phase remain incomplete; scopeFrozen remains false."
+  ],
+  "nextAction": "Continue the NCR source and locality review for other named inland, brackish, estuarine, and marine waters; preserve shared-water identities and keep locality evidence separate from geometry and species evidence."
+}
