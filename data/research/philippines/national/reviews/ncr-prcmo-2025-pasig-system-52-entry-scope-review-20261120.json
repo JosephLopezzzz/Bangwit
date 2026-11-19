@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "ncr-prcmo-2025-pasig-system-52-entry-scope-review-20261120",
+  "reviewedOn": "2026-11-20",
+  "phaseId": "L2",
+  "regionId": "1300000000",
+  "regionName": "National Capital Region (NCR)",
+  "status": "official-report-text-reviewed;52-management-entries;identity-crosswalk-pending;research-only",
+  "sourceIds": [
+    "denr-ncr-pasig-river-biodiversity-2024",
+    "denr-ncr-gawad-taga-ilog-2025"
+  ],
+  "question": "Does the DENR-NCR 2025 Annual Report's 52-entry Pasig River system management list expand the NCR source-named waterway scope, and which entries can safely be treated as named waterbody leads?",
+  "snapshotHashes": {
+    "sourceRegistry": "94b9b45d6f8c3296c323012dab68d3e01441b512cbcf7fae1808b8be8d36f3ba",
+    "previousGawadWaterwayCrosswalk": "f3943dcd5175565b4a17c0a7377dcb2d0e417e57b80a5b6d4ce35a5056ab88ed",
+    "previousPasigBiodiversityReview": "c1c245002e9b53b1183049846bd40a187d471f09fa9c21090cd2b84013fe724c"
+  },
+  "sourceAccess": {
+    "url": "https://ncr.denr.gov.ph/wp-content/uploads/2026/01/ANNUAL-REPORT-2025.pdf",
+    "accessMethod": "Reviewed the official PDF text extraction in the browser on 2026-11-20, Section C, report pages 203-204. The earlier local direct-PDF request returned HTTP 403; no access restriction was bypassed and no local PDF, image, or list transcription was retained.",
+    "sourceLocators": [
+      "Annual Report 2025, pp. 203-204, Section C, Monitoring of Waterways of the Pasig River System: four management clusters and their printed entry counts.",
+      "Annual Report 2025, pp. 237-239, Section 3.2.8: separate 2024 biodiversity-assessment scope and high-level fish narrative, reviewed in the linked prior artifact."
+    ],
+    "itemSpecificReuseLicenseFound": false,
+    "fullNameListReproduced": false
+  },
+  "sourceScope": {
+    "sourceStatement": "The report labels the Pasig River system as covering 52 waterways managed in four clusters.",
+    "reportedClusterEntryCounts": [
+      {
+        "cluster": "I",
+        "reportedAdministrativeContext": "Manila City",
+        "entries": 15
+      },
+      {
+        "cluster": "II",
+        "reportedAdministrativeContext": "Manila City and Quezon City",
+        "entries": 15
+      },
+      {
+        "cluster": "III",
+        "reportedAdministrativeContext": "Manila City, Pasig City, Mandaluyong City, San Juan, and Makati City",
+        "entries": 10
+      },
+      {
+        "cluster": "IV",
+        "reportedAdministrativeContext": "Pateros, Taguig City, Marikina City, and Pasig City",
+        "entries": 12
+      }
+    ],
+    "arithmeticCheck": "15 + 15 + 10 + 12 = 52.",
+    "interpretation": "This is an agency management-scope list. The report assigns administrative context at cluster level, not a city/municipality or barangay to each printed entry, and supplies no source-matched feature geometry in this section."
+  },
+  "nameFormScreen": {
+    "entriesWithExplicitEsteroCreekOrRiverTerm": 47,
+    "entriesLabeledAsAreas": 2,
+    "method": "Screened the 52 printed labels by their visible name form only. These counts classify strings, not aquatic feature identity; no untyped name was silently expanded to River or Creek.",
+    "disposition": "The three additional labels without an explicit estero/creek/river term and the two area-labeled contexts remain unresolved feature-name contexts.",
+    "otherUntypedNameLabelsExcludingAreaLabels": 3,
+    "categoryRelationship": "The three counts are mutually exclusive and sum to the 52 reported entries."
+  },
+  "crosswalk": {
+    "comparisonArtifacts": [
+      "data/research/philippines/national/reviews/ncr-pasig-biodiversity-report-refresh-20261116.json",
+      "data/research/philippines/national/reviews/ncr-denr-nominated-waterways-crosswalk-20261119.json"
+    ],
+    "normalization": "Exact label comparison after case and surrounding-whitespace normalization only; no accent stripping, prefix removal, token reordering, locality-based merging, or geometry match was used.",
+    "exactLabelMatchesWith2024BiodiversityScope": 4,
+    "exactLabelMatchesWith2025GawadNominations": 2,
+    "candidateNameVariantsFlaggedForLaterReview": 7,
+    "interpretation": "Exact text overlap and name similarity are discovery hints, not proof that two labels identify the same channel or waterbody. Candidate variants are left unmerged."
+  },
+  "evidenceDecision": {
+    "managementListIsFishEvidence": false,
+    "managementListDefines52ValidatedWaterbodies": false,
+    "featureIdentityCrosswalksConfirmed": 0,
+    "newCanonicalWaterbodyLeadsCreated": 0,
+    "geometryAdded": false,
+    "speciesAssertionsAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "appFacingProjection": false,
+    "ncrScopeFrozen": false,
+    "luzonBaselineComplete": false
+  },
+  "rightsDecision": {
+    "itemSpecificReuseTermsVerified": false,
+    "rawPagesOrFiguresRetained": false,
+    "decision": "Keep aggregate source-scope counts and the attributed review in internal research. Do not redistribute the report's page, images, map, or a copied full list without checking applicable permission."
+  },
+  "limits": [
+    "The annual report's 52 is the report's management-entry count, not a verified count of unique ecological waterbodies or complete NCR waterways.",
+    "Cluster membership does not establish that every listed name is located in every city/municipality named for its cluster.",
+    "A source name, including a River/Creek/Estero suffix, does not establish route geometry, fish habitat, current fish presence, public access, fishing permission, water quality, or safety.",
+    "Cross-cluster names and candidate variants may refer to connected or repeated features, but no merge was made.",
+    "No fish species list or fish sampling results are provided by this Section C management scope."
+  ],
+  "nextActions": [
+    "Crosswalk individual source names and locality contexts to independent official or peer-reviewed records before converting any management entry into a canonical waterbody lead.",
+    "Continue looking for the underlying 2024 Pasig biodiversity dataset through publicly accessible, authorized materials; the annual-report narrative remains non-site-resolved.",
+    "Continue freshwater, brackish, marine, and wetland source discovery across all 17 NCR administrative units; do not close NCR or Luzon coverage."
+  ]
+}
