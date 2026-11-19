@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "calabarzon-taal-aquilino-dryad-api-access-refresh-20261119",
+  "checkedOn": "2026-11-19",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "regionName": "Region IV-A (CALABARZON)",
+  "sourceId": "aquilino-2011-taal-dna-barcoding-dryad-dataset",
+  "scope": "Recheck whether Dryad's documented public metadata API offers an ordinary no-login route to the Taal specimen files after the landing-page file stream returned 403. This is an access-status update only; it does not transcribe the dataset or approve app content.",
+  "method": {
+    "metadataRequest": "GET https://datadryad.org/api/v2/datasets/doi%3A10.5061%2Fdryad.8416 with Accept: application/json",
+    "metadataResult": "HTTP 200. The record identifies dataset id 25424, total storage size 44,251,698 bytes, and current version resource 25497. No file contents were returned by this metadata request.",
+    "versionRequest": "GET https://datadryad.org/api/v2/versions/25497",
+    "fileListRequest": "GET https://datadryad.org/api/v2/versions/25497/files",
+    "versionAndFileListResults": "Both API requests timed out after 25 seconds in this run; no response body or file metadata was retained.",
+    "ordinaryLandingPageFileResult": "The official landing-page link to SpecimenData.xlsx still returned HTTP 403 in the research reader.",
+    "documentedDownloadRequirement": "Dryad's official API documentation says downloading dataset files requires an API token. No account, API token, authenticated request, privileged share link, alternate host, or access-control workaround was used.",
+    "reproducibility": "Only the public metadata response was read; no local raw data, spreadsheet, image archive, sequence file, or trace archive was created."
+  },
+  "rightsReview": {
+    "datasetPolicy": "Dryad's current reuse guide states that published Dryad datasets use CC0 and recommends citing the dataset. The 2011 record does not expose a per-file license field in the reviewed page.",
+    "license": "CC0 1.0 Universal (Dryad platform policy for published datasets)",
+    "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "assessment": "The general CC0 policy remains relevant to the published dataset, but it does not resolve access to files, identify specimen rows, validate taxa, or approve any embedded fish photograph for Bangwit."
+  },
+  "decision": {
+    "metadataApiRetrieved": true,
+    "specimenRowsTranscribed": 0,
+    "imageFilesInspected": 0,
+    "speciesAssertionsAdded": 0,
+    "waterbodyAssignmentsChanged": false,
+    "geometryAdded": false,
+    "publicAppProjectionChanged": false,
+    "publicationApproval": false,
+    "rationale": "The public metadata API confirms the archived record and its version, but version/file metadata calls timed out and the ordinary spreadsheet link returned 403. Dryad documents token authentication for dataset downloads. No token or privileged access route was used; the underlying files remain uninspected."
+  },
+  "nextActions": [
+    "Continue with independently accessible sources for other CALABARZON rivers, lakes, wetlands, and brackish waters while the Taal file contents remain unavailable.",
+    "If the dataset owner or project operator later chooses to use Dryad's documented authenticated download, retrieve the specimen table through the normal API, record the downloaded file hashes, and review voucher, date, locality, taxon, and BOLD process-ID joins before any projection.",
+    "Inspect any fish image only after an authorized archive retrieval, then check image-to-specimen identity, source provenance, hash, credit, and Bangwit's image standard individually."
+  ],
+  "sources": [
+    {
+      "url": "https://datadryad.org/api/v2/datasets/doi%3A10.5061%2Fdryad.8416",
+      "supports": "Public Dryad REST API dataset metadata response and links to dataset/version resources; HTTP 200 in the 19 November 2026 check."
+    },
+    {
+      "url": "https://datadryad.org/dataset/doi:10.5061/dryad.8416",
+      "supports": "Official Taal Lake dataset record, file names/sizes, abstract, and ordinary SpecimenData.xlsx landing-page download link."
+    },
+    {
+      "url": "https://github.com/datadryad/dryad-app/blob/main/documentation/apis/README.md",
+      "supports": "Dryad's official API documentation describing dataset metadata, versions, file-list, and download endpoints."
+    },
+    {
+      "url": "https://github.com/datadryad/dryad-app/blob/main/documentation/apis/api_accounts.md",
+      "supports": "Dryad's official API account documentation stating that calls that download files require an API token."
+    },
+    {
+      "url": "https://datadryad.org/help/guides/reuse",
+      "supports": "Current Dryad dataset reuse policy and citation guidance."
+    }
+  ]
+}
