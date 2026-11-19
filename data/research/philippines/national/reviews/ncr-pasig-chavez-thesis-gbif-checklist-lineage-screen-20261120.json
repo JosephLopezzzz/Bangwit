@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "ncr-pasig-chavez-thesis-gbif-checklist-lineage-screen-20261120",
+  "reviewedOn": "2026-11-20",
+  "phaseId": "L2",
+  "regionId": "1300000000",
+  "regionName": "National Capital Region (NCR)",
+  "status": "institutional-thesis-metadata-and-gbif-checklist-reviewed;related-study-lineage;no-new-occurrence-data;research-only",
+  "question": "Do the DLSU thesis record or GBIF/Plazi registration add an independent specimen-level Pasig fish dataset beyond Chavez et al. (2006)?",
+  "sourceIds": [
+    "chavez-et-al-2006-zootaxa-loricariidae-laguna-bay",
+    "dlsu-chavez-2005-pterygoplichthys-thesis-record",
+    "gbif-plazi-chavez-2006-loricariidae-checklist"
+  ],
+  "snapshotHashes": {
+    "sourceRegistryBeforeThisReview": "119e009f7a4a4b2c81ccac10c2ba7be5c3f5cb91053a4e2b7331b0988526201b",
+    "priorPasigSiteEvidenceReview": "9f0d3f7a78a096a4ee5822788ddc4a8cb9fa5bdc282a6d6563c318e08b04b22e"
+  },
+  "sourceAccess": {
+    "dlsuRepository": {
+      "url": "https://animorepository.dlsu.edu.ph/etd_masteral/5864/",
+      "accessMethod": "Directly reviewed the public institutional-repository metadata page, including title, author, May 2005 date, abstract, physical description, listed embargo end, and download link. The full-text download endpoint returned HTTP 403; no access control was bypassed.",
+      "downloadEndpointStatus": "HTTP 403",
+      "recordedEmbargoEnd": "2022-02-09",
+      "metadataScope": "The public page identifies a master's thesis with 66 leaves and gives an abstract. No thesis PDF, appendix, specimen table, or collection sheet was retrieved."
+    },
+    "gbifPlazi": {
+      "url": "https://www.gbif.org/dataset/ca3659b9-2830-4a4d-914a-2a1a509d70ff",
+      "datasetKey": "ca3659b9-2830-4a4d-914a-2a1a509d70ff",
+      "doi": "10.15468/eigeyd",
+      "accessMethod": "Reviewed indexed GBIF dataset metadata and search-result text, which label the registration Checklist and list Plazi as the host. Direct dataset-page and API opens were not retrievable; no endpoint download or occurrence-count query completed.",
+      "directPageStatus": "HTTP 403 in browser fetch",
+      "apiStatus": "API endpoints were inaccessible in the available browser call; a local read-only request did not complete and was stopped.",
+      "registrationDate": "2013-12-12",
+      "metadataLastModified": "2026-09-10"
+    },
+    "rawFilesRetained": false,
+    "itemSpecificReuseTermsVerified": false
+  },
+  "crosswalk": {
+    "thesisRecord": {
+      "author": "Joel M. Chavez",
+      "publicationDate": "2005-05",
+      "recordType": "Master's thesis",
+      "physicalDescription": "xi, 66 leaves",
+      "abstractScope": "A taxonomic and biogeographic study of specimens from five Laguna de Bay-basin sites, including Pasig River; the abstract reports Pterygoplichthys disjunctivus as the only one of the two study species collected there.",
+      "relationshipTo2006Paper": "Strong related-lineage candidate: same lead author, same five-site study scope, and matching species/site findings. The full thesis was unavailable, so the degree of text, specimen, or data reuse was not checked."
+    },
+    "gbifRegistration": {
+      "datasetType": "CHECKLIST",
+      "host": "Plazi.org taxonomic treatments database",
+      "descriptionScope": "Indexed description reproduces the 2006 paper's taxonomic treatment and abstract-level five-site result.",
+      "relationshipTo2006Paper": "A GBIF-registered checklist/taxonomic-treatment representation of the same publication, not an independent specimen collection or occurrence-event dataset.",
+      "occurrenceSearchResultCount": null,
+      "countInterpretation": "No GBIF occurrence API result count was obtained; do not infer zero records or any particular occurrence total."
+    },
+    "primaryArticle": {
+      "sourceId": "chavez-et-al-2006-zootaxa-loricariidae-laguna-bay",
+      "alreadyReviewedPasigFinding": "The 2006 publisher paper reports Pterygoplichthys disjunctivus at Pasig River, City of Manila, and says P. pardalis was not collected at that site in the study; exact collection date, site-specific voucher number/count, and coordinates are not provided."
+    }
+  },
+  "evidenceDecision": {
+    "independentPasigSurveyFound": false,
+    "thesisFullTextReviewed": false,
+    "newCollectionEventsFound": 0,
+    "newSpecimenNumbersFound": 0,
+    "newCollectionDatesFound": 0,
+    "newCoordinatesFound": 0,
+    "newTaxaAdded": 0,
+    "newOccurrenceRows": 0,
+    "appFacingProjection": false,
+    "publicationApproval": false,
+    "decision": "Treat the thesis metadata and GBIF checklist as related provenance records for the previously reviewed 2006 study. They provide no independently reviewed Pasig specimens, dates, vouchers, coordinates, or occurrence rows."
+  },
+  "nonClaims": [
+    "The end of the listed thesis embargo does not prove that the current download endpoint is accessible or grant permission to redistribute the thesis.",
+    "The thesis abstract is not a substitute for its full methods, tables, specimen catalog, or appendices.",
+    "A GBIF CHECKLIST dataset is not treated as an occurrence-event record set here; its occurrence API count was not verified.",
+    "A failed page/API request is not evidence that records do not exist.",
+    "No modern Pasig fish presence/absence, fishing access, catchability, legal status, safety, geometry, or habitat claim is established."
+  ],
+  "nextActions": [
+    "Continue with separately published, source-resolved Pasig or connected-water fish studies; keep same-study thesis/article/checklist records deduplicated as one research lineage.",
+    "If an authorized full-text path becomes available, inspect the thesis's collection dates and voucher appendix before revising the site evidence; do not bypass the current HTTP 403.",
+    "Continue freshwater, brackish, marine, and wetland evidence review across NCR; keep the NCR baseline and Luzon phase incomplete."
+  ]
+}
