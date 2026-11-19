@@ -1,0 +1,69 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "ncr-monopterus-fowler-1918-jstor-retrieval-followup-20261120",
+  "reviewedOn": "2026-11-20",
+  "phaseId": "L2",
+  "regionId": "1300000000",
+  "regionName": "National Capital Region (NCR)",
+  "parentReviewId": "ncr-monopterus-fowler-1918-access-review-20261120",
+  "snapshotHashes": {
+    "sourceRegistry": "6e6e31f665cfda4e0b6afc8ce869cc290d132d8c0b27bbdf27146a5096a085c3"
+  },
+  "status": "jstor-open-metadata-confirmed;direct-pdf-client-challenge;no-primary-content-retrieved;research-only",
+  "question": "Does the JSTOR open article route provide Fowler's 1918 page 62 to this research environment?",
+  "method": {
+    "summary": "Rechecked JSTOR's public article landing page and requested the linked stable PDF endpoint with ordinary HTTP HEAD and GET requests. Compared response metadata only; did not execute challenge scripts, bypass access controls, or retain the response body.",
+    "requests": [
+      {
+        "method": "GET",
+        "url": "https://www.jstor.org/stable/1436970",
+        "result": "The landing page identifies Henry W. Fowler's A List of Philippine Fishes, Copeia no. 58, dated 18 June 1918, pages 62–65; it labels the article FREE and openly available in the Open JSTOR Collection. JSTOR says the issue is, to its knowledge, in the public domain and disclaims a warranty."
+      },
+      {
+        "method": "HEAD and GET",
+        "url": "https://www.jstor.org/stable/pdf/1436970.pdf",
+        "result": "The endpoint returned HTML rather than PDF bytes; the GET response title was Client Challenge. No original article page or OCR text was retrieved."
+      }
+    ],
+    "constraints": [
+      "No JavaScript challenge was solved or bypassed.",
+      "No login, account action, email, request, payment, or file download was performed.",
+      "No response body or article scan was retained."
+    ]
+  },
+  "sourceIds": [
+    "fowler-1918-list-philippine-fishes-bibliographic-lead-20261120"
+  ],
+  "findings": [
+    {
+      "sourceId": "fowler-1918-list-philippine-fishes-bibliographic-lead-20261120",
+      "scope": "JSTOR's public landing page verifies the citation, article extent, and its stated free/open metadata. The direct PDF route served a browser-challenge HTML response in this environment.",
+      "limits": "The primary pages remain unread. The retrieval result does not establish whether the article is inaccessible in a normal signed-in or interactive browser session.",
+      "attribution": "Retain Fowler as a primary-page review lead only. Do not use the landing page or challenge response to claim species, locality, specimen identity, collection date, or introduction year."
+    }
+  ],
+  "retrievalAssessment": {
+    "articleMetadataConfirmed": true,
+    "primaryPagesRetrieved": false,
+    "page62Read": false,
+    "speciesContextVerified": false,
+    "generalAccessDenied": false,
+    "environmentSpecificOutcome": "The direct PDF request produced a Client Challenge HTML page instead of article PDF content.",
+    "interpretation": "This is an environment-specific retrieval limitation, not proof of general user inaccessibility. The original Fowler wording, specimen label, collection date, catalog identifiers, and exact locality remain unverified."
+  },
+  "scopeAndReuseDecision": {
+    "decision": "Research-only access follow-up. No text, image, species assertion, occurrence, waterbody association, historical introduction claim, or public projection is added.",
+    "publicSpeciesAssertionsAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "publicAppProjection": false,
+    "publicationApproval": false
+  },
+  "nextActions": [
+    "Continue NCR freshwater, brackish, and marine evidence and scope work; this access follow-up does not change the regional baseline or Luzon completion status.",
+    "If the user later opens the article interactively, verify the original page image directly before revising any historical claim. Do not ask for credentials or bypass a challenge."
+  ],
+  "sourceReferences": [
+    "https://www.jstor.org/stable/1436970",
+    "https://www.jstor.org/stable/pdf/1436970.pdf"
+  ]
+}
