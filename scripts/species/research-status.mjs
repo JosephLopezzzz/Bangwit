@@ -332,6 +332,12 @@ export function buildResearchStatus({
   assert.equal(ncrAdministrativeDenominatorReview.counts.publicRecordsAdmitted, 0);
   assert.equal(ncrAdministrativeDenominatorReview.counts.scopeFrozen, false);
   assert.equal(ncrAdministrativeDenominatorReview.counts.baselineReviewed, false);
+  const ncrPsgcContinuity = ncrAdministrativeDenominatorReview.releaseChainFollowUp;
+  assert.equal(ncrPsgcContinuity.ncrCityOrMunicipalityChangesReported, 0);
+  assert.equal(ncrPsgcContinuity.workbookAccess.downloaded, false);
+  assert.equal(ncrPsgcContinuity.workbookAccess.rowParsed, false);
+  assert.equal(ncrPsgcContinuity.psaRevisions.at(-1).period, "2026-Q3");
+  assert.match(ncrPsgcContinuity.continuityDecision, /not a row-by-row extraction/i);
   assert.equal(
     calabarzonLocalityLinkageAudit.snapshotHashes.calabarzonScope,
     inputHashes.scope,

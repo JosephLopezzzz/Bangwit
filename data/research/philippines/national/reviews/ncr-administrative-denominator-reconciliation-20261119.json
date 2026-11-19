@@ -4,7 +4,7 @@
   "reviewedOn": "2026-11-19",
   "phaseId": "L2",
   "regionId": "1300000000",
-  "status": "17-unit-denominator-matches-PSA-rendered-2025-directories;3Q2026-workbook-row-check-pending;no-geometry;waterbody-inventory-incomplete",
+  "status": "17-unit-denominator-continuity-supported-through-2026-Q3-by-PSA-revision-chain;exact-workbook-row-check-pending;no-geometry;waterbody-inventory-incomplete",
   "question": "Do the 16 city and one municipality rows in the rendered PSA NCR PSGC directories match the pinned 17-unit NCR administrative denominator?",
   "sourceIds": [
     "psa-ncr-cities-list",
@@ -19,10 +19,55 @@
     "sourceRegistry": "5646cc97ada19600e9a59370d31875d4ed6994a7762aafa837ea8a099d64be51"
   },
   "method": "Compared every row of the PSA-rendered NCR city directory and the single Pateros row of its municipality directory against the region 1300000000 entries in the pinned administrative registry. The rendered directory tables are labeled as of 31 July 2025. The pages link the 30 September 2026 PSGC publication and the Q3 2026 update; the publication workbook was not retrieved or parsed, so this is a directory-to-registry reconciliation, not a row-level import of the 2026 workbook. No coordinates, geometry, waterbody-to-city relationships, or public-app records were created.",
-  "snapshotRefreshNote": "On 2026-11-19, refreshed the unrelated source-registry fingerprint after adding two DENR-NCR water-resource source records for a separate selected-waterway research review; the underlying 17-unit directory comparison was unchanged.",
+  "snapshotRefreshNote": "The source-registry fingerprint remains pinned to the 2026-11-19 snapshot after the two DENR-NCR source records were added for a separate selected-waterway review. This PSA revision-chain follow-up uses already-registered PSA sources and does not alter that registry snapshot; the original 17-unit directory comparison and administrative-registry snapshot are unchanged.",
   "cityDirectoryAsOf": "2025-07-31",
   "municipalityDirectoryAsOf": "2025-07-31",
   "latestLinkedPsgcSnapshot": "2026-09-30",
+  "releaseChainFollowUp": {
+    "checkedOn": "2026-11-19",
+    "directoryBaseline": "The 16 city rows and Pateros row with their 10-digit codes were matched against the pinned NCR registry in the original review. The rendered tables say 31 July 2025.",
+    "psaRevisions": [
+      {
+        "period": "2025-Q3",
+        "url": "https://psa.gov.ph/content/third-quarter-2025-psgc-updates-correction-names-two-barangays",
+        "result": "Two barangay-name corrections in Lapuyan, Zamboanga del Sur and Calauag, Quezon; PSA says the quarter's changes were name corrections and other LGU counts stayed the same as 30 June 2025. No NCR city or municipality change reported."
+      },
+      {
+        "event": "2025-Sulu-region-transfer",
+        "url": "https://psa.gov.ph/content/province-sulu-officially-transferred-region-ix-zamboanga-peninsula?vcode=xNQy4P",
+        "result": "Sulu was reassigned from BARMM to Region IX; the release says its municipalities and barangays retained existing codes except for the province's region code. This did not change NCR composition."
+      },
+      {
+        "period": "2025-Q4",
+        "url": "https://psa.gov.ph/content/fourth-quarter-2025-psgc-updates-correction-names-three-barangays",
+        "result": "Three barangay-name corrections in San Jose City, Nueva Ecija and Magallanes, Agusan del Norte; PSA says other LGU counts stayed the same as 30 September 2025. No NCR city or municipality change reported."
+      },
+      {
+        "period": "2026-Q1",
+        "url": "https://psa.gov.ph/classification/psgc/node/1684083211",
+        "result": "The municipality-name correction was Sanchez Mira, Cagayan; the barangay merger was in Calaca, Batangas; seven barangay-name corrections were reported in Catanduanes, Benguet, and Bukidnon. No NCR city or municipality change reported."
+      },
+      {
+        "period": "2026-Q2",
+        "url": "https://psa.gov.ph/content/second-quarter-2026-psgc-updates-renaming-one-municipality-and-one-barangay-and-correction",
+        "result": "San Isidro was renamed Sawata in Davao del Norte, and Don Victoriano Chiongbian was corrected to Don Victoriano in Misamis Occidental; the remaining reported edits concern barangays. No NCR city or municipality change reported."
+      },
+      {
+        "period": "2026-Q3",
+        "url": "https://psa.gov.ph/classification/psgc",
+        "result": "The reported change was one barangay-name correction in Cabanglasan, Bukidnon; PSA says total LGU counts were consistent with 30 June 2026. No NCR city or municipality change reported."
+      }
+    ],
+    "ncrCityOrMunicipalityChangesReported": 0,
+    "continuityDecision": "The 17-unit NCR denominator's names and 10-digit codes are supported as unchanged through the 30 September 2026 PSGC snapshot by the rendered 31 July 2025 NCR tables and PSA's intervening official release chain. This is not a row-by-row extraction from the Q3 workbook.",
+    "workbookAccess": {
+      "url": "https://psa.gov.ph/system/files/scd/PSGC-3Q-2026-Publication-Datafile.xlsx",
+      "status": "blocked-by-cloudflare-challenge",
+      "downloaded": false,
+      "rowParsed": false,
+      "limitation": "The normal direct request returned a browser-verification challenge; no challenge was bypassed and no workbook bytes were retained."
+    }
+  },
   "units": [
     { "name": "City of Caloocan", "psgcCode": "1380100000", "level": "city", "sourceId": "psa-ncr-cities-list", "match": "exact-name-and-code" },
     { "name": "City of Las Piñas", "psgcCode": "1380200000", "level": "city", "sourceId": "psa-ncr-cities-list", "match": "exact-name-and-code" },
@@ -57,10 +102,10 @@
     "baselineReviewed": false
   },
   "limitations": [
-    "The rendered PSA city and municipality directories are dated 31 July 2025; the downloadable PSGC workbook for 30 September 2026 has not been retrieved or parsed row by row.",
+    "The rendered PSA city and municipality directories are dated 31 July 2025. PSA's public revision chain supports NCR denominator continuity through 30 September 2026, but the downloadable workbook was not retrieved or parsed row by row.",
     "This validates the names and codes in the pinned 17-unit administrative denominator against the rendered directory pages; it does not validate municipal or city boundary geometry.",
     "The 17-unit administrative match does not reconcile NCR's source-named water inventory, waterbody identities, shared-water relationships, habitats, or fish coverage.",
     "No waterbody-city relation, fish presence or absence, access, safety, legal rule, or public-app assertion is inferred."
   ],
-  "nextAction": "Retain the 17-unit administrative denominator as a matched working directory baseline with the 2026 workbook limitation visible. Continue source-named NCR waterbody and habitat reconciliation independently; obtain or parse the 2026 PSGC workbook before claiming row-level currency."
+  "nextAction": "Use the 17-unit denominator as continuity-supported through Q3 2026 by the PSA change notices while retaining the exact workbook row-parse limitation. Continue source-named NCR waterbody and habitat reconciliation; do not let workbook access block that work, and do not infer boundaries or waterbody coverage from administrative codes."
 }
