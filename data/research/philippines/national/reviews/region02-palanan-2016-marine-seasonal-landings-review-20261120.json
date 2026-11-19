@@ -5,7 +5,7 @@
   "phaseId": "L5",
   "regionIds": ["0200000000"],
   "province": "Isabela",
-  "status": "historical-palanan-marine-landings;74-reported-species;landing-only;field-year-unspecified;coordinate-conflict;taxonomic-internal-conflicts;publisher-direct-fetch-403;page-image-review-pending;reuse-unverified;research-only",
+  "status": "historical-palanan-marine-landings;74-reported-species;landing-only;field-year-unspecified;coordinate-conflict;taxonomic-and-biogeographic-conflicts;publisher-indexed-text-reviewed;table-image-review-pending;reuse-unverified;research-only",
   "question": "Does Baleta and Baleta (2016) provide reliable Palanan species-by-site or seasonal occurrence evidence, or a historical landing-name lead only?",
   "source": {
     "id": "fisheriesjournal-palanan-marine-food-fish-seasonality-2016",
@@ -16,10 +16,26 @@
     "copyrightAndReuse": "The article displays © 2016 IJFAS. No item-specific open license or permission to redistribute its list, figures, or reported photos was verified.",
     "retrievalFollowUp": {
       "checkedOn": "2026-11-20",
-      "publisherDirectPdf": "Direct HTTPS retrieval returned HTTP 403; the browser PDF open and page screenshot routes also rejected the publisher URL as restricted.",
-      "indexedText": "A search-indexed extraction of the publisher PDF was available, but its table flow contains column/row alignment noise and OCR-like spelling inconsistencies.",
-      "pageImageReview": "Not completed: no page image was available from the publisher through the checked retrieval routes.",
-      "disposition": "Do not transcribe the 74-name table or treat the indexed text as visually verified. Seek a readable publisher, author, or institutional-library copy, then manually check table rows and bibliography images."
+      "publisherDirectPdf": "The publisher-hosted PDF could not be retrieved as a file through direct fetch; browser/web open was blocked or restricted. A search provider returned indexed text from the publisher PDF, and a Doczz transcription was also readable.",
+      "indexedText": "The indexed extraction exposes the abstract, methods and table text. The Doczz transcription agrees on major printed labels, but it is a secondary text mirror, not a page-image check. Table 1 name/common-name columns and Table 2 season marks are reflowed; individual row associations and checkmarks are not considered visually verified.",
+      "pageImageReview": "Not completed: no PDF page images were retrieved. Table layout, Figure 1 station map and the paper's claimed fish photo documentation remain unreviewed.",
+      "disposition": "Use the surfaced text only to document selected source conflicts. Do not transcribe the 74-name list, normalize spellings, infer seasonal presence, or treat the extracted table as a verified checklist. Seek an author, Isabela State University, journal or library scan before any row-level crosswalk.",
+      "secondaryTextMirror": {
+        "provider": "Doczz",
+        "itemId": "9065882",
+        "purpose": "Compared the readable transcription with the publisher-indexed extraction to identify access and text-reflow limitations; not treated as an independent scientific source or page-image check."
+      }
+    },
+    "indexedTableAudit": {
+      "fullListTranscribed": false,
+      "selectedSourceLabelExamplesDocumented": true,
+      "conflicts": [
+        "The abstract prints Acanthurus lineatus; Table 1 prints Acanthurus lineathus and the extracted Table 2 prints Acanthunus lineathus. Do not select or normalize one spelling from the text extraction.",
+        "The extracted Table 1 text appears to align Cheilopogon melanurus with the common name Atlantic Flyingfish. FAO identifies that English name and describes a western Atlantic distribution; this is a material biogeographic flag for the Palanan attribution, not a confirmed misidentification. The table pairing still needs page-image review.",
+        "The extracted Table 1 text appears to align Istiophorus albicans with Atlantic Sailfish. ITIS treats I. albicans as a junior synonym of I. platypterus, while an ICCAT 2024 paper summarizes genetic evidence for a single worldwide I. platypterus and documents continuing naming differences. Preserve the source label and taxonomic disagreement; do not use the Atlantic common name alone to reject the Palanan report. The table pairing still needs page-image review.",
+        "The extracted Table 1 repeats Lutjanus decussates with different Filipino-name cells; the available text does not establish whether this is a duplicate row, transcription issue, or distinct vernacular observation."
+      ],
+      "seasonTableDisposition": "Do not convert the April-versus-October checkmarks into presence/absence assertions until the table image and row alignment are reviewed."
     }
   },
   "reportedScope": {
@@ -33,11 +49,14 @@
       "families": 37,
       "orders": 9
     },
-    "tableScope": "Table 1 presents a pooled list with scientific, English, Filipino and Paranan names. Table 2 presents a pooled summer-versus-rainy-season list; the article does not provide a verified species-by-landing-site matrix or capture coordinates."
+    "tableScope": "Table 1 is described as a pooled list with scientific, English, Filipino and Paranan names. Table 2 is a pooled summer-versus-rainy-season comparison, but its text extraction does not preserve reliable checkmark-to-name alignment. The article does not provide a verified species-by-landing-site matrix or capture coordinates."
   },
   "conflictsAndLimits": [
     "The paper prints 7°3′32″ N, 122°25′47″ E as the study-area coordinate. This is held as suspect for the stated Palanan/Isabela locality and is not used to georeference any record; the article gives no corrected station coordinates.",
-    "The abstract names Acanthurus lineatus, whereas Table 1 spells it Acanthurus lineathus. Other table and family spellings also need image-level and taxonomic verification before normalization.",
+    "The abstract and extracted tables disagree on the printed Acanthurus spelling (lineatus / lineathus / Acanthunus lineathus). Additional table labels have common-name, duplicate-row or biogeographic flags. See indexedTableAudit; no label is normalized.",
+    "The extracted table text appears to pair Cheilopogon melanurus with Atlantic Flyingfish, while the FAO account gives a western Atlantic distribution. This raises a source-identification or locality flag that needs voucher, photo or author clarification; the table pairing itself is not image-verified and it is not silently treated as a false record.",
+    "The extracted table text appears to pair Istiophorus albicans with Atlantic Sailfish. Taxonomic authorities differ on whether I. albicans is a separate Atlantic species or a synonym of the worldwide I. platypterus; preserve that disagreement and do not infer the Philippine report is impossible from the common name. The extracted table pairing needs page-image review.",
+    "The extracted Table 1 repeats Lutjanus decussates with different Filipino-name cells. Without the page image, do not assume whether this is a duplicate, a transcription problem or a vernacular-name detail.",
     "The paper says 74 species; its results report 52 genera, 37 families and 9 orders. These are source claims, not an independently checked count or an app checklist.",
     "Landing-site records describe fish reported or seen at market/landing contexts, not confirmed capture coordinates or occurrence inside the adjacent municipal-water polygon.",
     "The paper does not specify the sampling year, survey effort beyond the interviews, fisher sampling frame, catch-landing inclusion rules, vouchers, station coordinates, or reproducible species-by-site counts.",
@@ -53,13 +72,30 @@
     "addedDietClaims": 0,
     "publicAppRows": 0,
     "photosReused": 0,
-    "publicationApproval": false
+    "publicationApproval": false,
+    "selectedSourceLabelsQuotedInReview": true
   },
-  "nextAction": "Obtain a readable publisher, author, or institutional-library copy because the publisher PDF returned HTTP 403 and available indexed text does not preserve table alignment. Then inspect table/bibliography page images, reconcile each printed spelling and count against authoritative fish taxonomy, identify any specimen or photo vouchers, recover exact sampling year and station/capture crosswalk, and confirm item-specific reuse permission. Until then, keep all 74 reported names untranscribed and research-only. Keep this source separate from the 2017 Isabela-wide landings paper and do not sum their aggregate species counts.",
+  "nextAction": "Continue searching non-government academic/library/author copies for a page-image-readable PDF and ask the authors or Isabela State University to clarify the table labels, photo/voucher trail, and coordinates if a public contact is available. Meanwhile, keep the complete list, seasonal marks, map and reported photos out of app data. A future crosswalk may examine only selected labels against authoritative taxonomy after the original table image is checked. Keep this paper separate from the 2017 Isabela-wide landing study and do not sum their aggregate counts.",
   "sources": [
     {
+      "sourceId": "fisheriesjournal-palanan-marine-food-fish-seasonality-2016",
       "url": "https://www.fisheriesjournal.com/archives/2016/vol4issue3/PartF/4-2-75-646.pdf",
-      "supports": "Publisher-indexed article text for landing stations, interview/ocular method, April/October season labels, aggregate taxon claims, field guide/FishBase identification method, printed coordinate and internal volume/species-name discrepancies. Direct PDF retrieval returned HTTP 403 during the 2026-11-20 follow-up, so page-image verification of table layout and bibliography remains pending."
+      "supports": "Publisher-indexed article text for the four Palanan landing stations, interview/ocular method, April/October labels, paper-reported aggregate counts, identification method, printed coordinate, and selected conflicting scientific/common-name labels. Direct PDF fetch/page images were unavailable; table layout and seasonal checkmark alignment remain unverified."
+    },
+    {
+      "sourceId": "fao-2002-cheilopogon-melanurus-atlantic-range",
+      "url": "https://www.fao.org/4/y4161e/y4161e35.pdf",
+      "supports": "FAO species account for Cheilopogon melanurus identifies the FAO English name Atlantic flyingfish and describes its western Atlantic range; this supports flagging the Palanan table's name/locality pair for review, not rejecting a catch record without voucher evidence."
+    },
+    {
+      "sourceId": "itis-istiophorus-albicans-taxonomy-2026",
+      "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=550888",
+      "supports": "ITIS taxonomic entry for Istiophorus albicans lists Atlantic Sailfish as a common name and Istiophorus platypterus as its valid name, reflecting one current treatment of the sailfish name."
+    },
+    {
+      "sourceId": "iccat-2024-istiophorus-single-species-taxonomy",
+      "url": "https://www.iccat.int/Documents/CVSP/CV081_2024/n_1/CV08101182.pdf",
+      "supports": "2024 ICCAT scientific paper reviews the Atlantic/Indo-Pacific sailfish naming question and summarizes genetic evidence for a single worldwide Istiophorus platypterus; cited to preserve the disagreement around the source table's I. albicans label, not to identify its specimen."
     }
   ]
 }
