@@ -1,10 +1,10 @@
 {
   "schemaVersion": 1,
-  "reviewedOn": "2026-10-24",
+  "reviewedOn": "2026-11-19",
   "phaseId": "L3",
   "regionId": "0300000000",
-  "status": "source-reconciliation-research-only-not-app-ready",
-  "decision": "Keep Paitan Lake and Vaca Dam Reservoir as separate inland-water leads. Do not turn a joint stocking announcement, historical aggregate surveys, or conflicting news reports into current wild-presence or catchability claims.",
+  "status": "historical-paitan-site-candidates-reviewed-vaca-inventory-unresolved-research-only",
+  "decision": "Keep Paitan Lake and Vaca Dam Reservoir as separate inland-water leads. The publisher-indexed Silliman text supports historical Paitan candidates for Leiopotherapon plumbeus and Oreochromis niloticus, but does not establish current presence or clear public reuse. Do not allocate the joint stocking announcement to either waterbody or transfer Paitan findings to Vaca.",
   "waterbodies": [
     {
       "name": "Paitan Lake",
@@ -76,7 +76,7 @@
       "access": "The official metadata/indexed abstract was reviewed. The journal PDF endpoint returned HTTP 404 during this review; no full article table was transcribed.",
       "authorRelationship": "Three authors overlap with the 2006 NAST freshwater survey, and both sources cover five Nueva Ecija waters. Do not count their related historical richness totals as independent estimates.",
       "reuse": "The Silliman Journal policy reviewed for this project states journal/author co-ownership and requires written permission to reproduce an article in full or two or more tables/figures. No item-specific open license was identified.",
-      "disposition": "Historical source lead only; no species-by-waterbody row is admitted from the inaccessible table."
+      "disposition": "Historical multi-site source. Earlier excerpts did not support a site-specific row; the 2026-11-19 follow-up records two explicit Paitan candidates for research only. No public/app row is admitted."
     },
     {
       "id": "punto-paitan-janitor-fish-report-2009",
@@ -92,6 +92,25 @@
       "disposition": "Conflict lead only; do not admit Pterygoplichthys pardalis or any other species from this article."
     }
   ],
+  "sillimanSiteFollowUp": {
+    "reviewFile": "national/reviews/central-luzon-paitan-vaca-silliman-site-followup-20261119.json",
+    "checkedOn": "2026-11-19",
+    "accessUpdate": "Search-indexed text from the publisher-hosted article PDF exposed selected methods, results, and site-table excerpts. Direct PDF retrieval and screenshot attempts still returned HTTP 502; no local PDF or full-text copy was retained.",
+    "paitanHistoricalCandidates": [
+      {
+        "scientificNameAsReported": "Leiopotherapon plumbeus",
+        "support": "The article discussion explicitly names Paitan Lake among the Nueva Ecija sites where it was identified.",
+        "limits": "Historical survey; field date, vouchers, current presence, and item-specific public reuse permission are unverified."
+      },
+      {
+        "scientificNameAsReported": "Oreochromis niloticus",
+        "support": "The article's Table 3 has a reported cell for this fish under the Paitan Lake column.",
+        "limits": "Historical survey; field date, vouchers, current presence, and item-specific public reuse permission are unverified."
+      }
+    ],
+    "vacaDisposition": "Vaca Dam Reservoir is not a study site in the Silliman article. The 2021 CLSU stocking report provides only a joint event and combined taxa/counts, without waterbody allocation.",
+    "admission": "Two historical Paitan candidates retained for research triage only; no species, diet, geometry, or public app assertion added."
+  },
   "gbifQueryAudit": {
     "reviewFile": "gbif-actinopterygii-retired-key-correction-20261024.json",
     "legacyLocalityQueries": {
@@ -120,7 +139,7 @@
   "scopeLimits": [
     "The joint stocking count is not split between Paitan and Vaca Dam.",
     "No validated waterbody polygon, sampling station, reach, salinity class, or legal fishing boundary was obtained.",
-    "The historical studies do not provide an accessible, rights-cleared, verified species-by-waterbody table in this review.",
+    "The Silliman publisher-indexed excerpts provide two historical Paitan fish candidates, but direct full-PDF access, complete table extraction, field dates, voucher links, current evidence, and rights clearance remain unresolved.",
     "No source here establishes current abundance, catchability, food safety, fishing permission, or absence of a species."
   ],
   "appUse": {
@@ -130,5 +149,5 @@
     "publicChecklistChanged": false,
     "regionalReleaseApproved": false
   },
-  "nextStep": "Continue the Central Luzon freshwater and wetland source sweep with accessible official and primary evidence for Paitan, Vaca Dam, Candaba, and the Pampanga basin. The corrected 12-query GBIF text screen returned only bounded zeroes, not evidence of absence. Keep stocking, survey, occurrence, and catch evidence distinct, and leave Central Luzon incomplete."
+  "nextStep": "Cross-check the two historical Paitan fish candidates against current authoritative taxonomy and independent dated locality evidence; continue separate Vaca inventory research. The corrected 12-query GBIF text screen returned bounded zeroes, not evidence of absence. Keep stocking, survey, occurrence, and catch evidence distinct, and leave Central Luzon incomplete."
 }
