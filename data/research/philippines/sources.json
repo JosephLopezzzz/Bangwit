@@ -3,7 +3,7 @@
   "checkedOn": "2026-11-20",
   "status": "research-only-source-registry",
   "scope": "National acquisition references, freshwater spatial-source leads, shared Manila Bay marine evidence, MIMAROPA/CALABARZON/Central Luzon identity and inland-water source reviews, and Mindanao regional freshwater survey reviews. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 1069,
+  "sourceCount": 1070,
   "sources": [
     {
       "id": "aoyama-et-al-2015-cagayan-glass-eel-recruitment",
@@ -1036,10 +1036,10 @@
       "title": "Environmental Impact Statement: 19.7MW Ilaguen 3A Hydro-Electric Power Plant",
       "provider": "Rio Norte Hydropower Corporation; Environmental Management Bureau, Department of Environment and Natural Resources EIA portal",
       "url": "https://eia.emb.gov.ph/wp-content/uploads/2021/06/2_Revised_EIS.pdf",
-      "role": "Search-indexed revised EIS reports ten freshwater-fish table rows for Barangay San Miguel, Echague, including one genus-only record. The direct PDF returned HTTP 403; methods, field dates, exact stations and reuse terms remain unverified. Research-only; no species rows admitted.",
+      "role": "Search-indexed revised EIS reports ten freshwater-fish table rows for Barangay San Miguel, Echague, including one genus-only record. A name-only ITIS crosswalk finds six exact valid-name matches and three provisional spelling corrections; none verifies the source identifications. The direct PDF returned HTTP 403; methods, field dates, exact stations and reuse terms remain unverified. Research-only; no species rows admitted.",
       "checkedOn": "2026-11-20",
       "access": {
-        "status": "official-emb-pdf-search-index-text-reviewed;direct-request-http-403;table-image-and-methods-unverified;research-only",
+        "status": "official-emb-pdf-search-index-text-reviewed;direct-request-http-403;table-image-and-methods-unverified;name-crosswalk-only;source-identifications-unverified;research-only",
         "reviewFiles": [
           "national/reviews/region02-isabela-ilaguen-3a-eis-freshwater-fish-list-access-review-20261120.json"
         ]
@@ -1050,16 +1050,49 @@
         "content": "No item-specific reuse license or data permission was verified. Public app reproduction or redistribution of the table, maps or photos is not approved."
       },
       "publicationApproval": false,
-      "researchStatus": "isabela-ilaguen-3a-freshwater-eis;ten-source-reported-rows;genus-only-record;taxonomy-and-station-crosswalk-unresolved;direct-pdf-403;research-only",
+      "researchStatus": "isabela-ilaguen-3a-freshwater-eis;ten-source-reported-rows;six-exact-name-matches;three-provisional-spelling-corrections;genus-only-record;source-identifications-unverified;direct-pdf-403;research-only",
       "license": "No item-specific license verified",
       "licenseUrl": null,
       "caveats": [
         "The EIS claims ten species, but one table row is identified only as Glossogobius sp.; do not treat the count as ten resolved species.",
-        "Indexed text shows conflicting spellings between the table and adjacent narrative; without page-image access, source typos and OCR artifacts cannot be distinguished.",
+        "Indexed text shows table/narrative spelling conflicts and three provisional crosswalk candidates; without page-image access, source typos and OCR artifacts cannot be distinguished.",
         "Barangay San Miguel is not an exact fish capture site or verified Ilaguen River reach; project infrastructure coordinates do not locate fish records.",
         "Survey year, method, effort, vouchers, identification basis and current status-source versions were not verified.",
         "No native, wild, current-presence, abundance, catchability, diet, legal, safety, geometry or public-app assertion is admitted."
       ]
+    },
+    {
+      "id": "itis-ilaguen-3a-eis-table51-name-crosswalk-20261120",
+      "title": "ITIS fish-name crosswalk for the Ilaguen 3A EIS Table 51",
+      "provider": "Integrated Taxonomic Information System (ITIS)",
+      "url": "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=161134",
+      "additionalUrls": [
+        "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=680700",
+        "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=166667",
+        "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=164120",
+        "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=163537",
+        "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=630317",
+        "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=165878",
+        "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=165903",
+        "https://www.itis.gov/servlet/SingleRpt/SingleRpt?search_topic=TSN&search_value=166697"
+      ],
+      "role": "Nomenclatural cross-check for nine binomial strings or spelling-correction candidates in the indexed EIS table. ITIS name standing does not confirm any EIS specimen identification, Isabela occurrence, habitat, or river reach.",
+      "checkedOn": "2026-11-20",
+      "access": {
+        "status": "public-itis-taxonomic-records-reviewed;name-status-only;no-specimen-validation",
+        "reviewFiles": [
+          "national/reviews/region02-isabela-ilaguen-3a-eis-freshwater-fish-list-access-review-20261120.json"
+        ],
+        "rawPath": null,
+        "rawSha256Recorded": false
+      },
+      "reuse": {
+        "metadata": "ITIS public taxonomic record pages were checked for the nine binomial candidate names; taxon identifiers and status outcomes are recorded in the review artifact.",
+        "raw": "No ITIS bulk file, full record text, or images were retained.",
+        "content": "Only taxon-name/status crosswalk facts are recorded. No source specimen, species occurrence, habitat, current presence, legal, safety, diet, or app claim follows from a name match."
+      },
+      "publicationApproval": false,
+      "researchStatus": "isabela-ilaguen-3a-table51-taxonomic-name-crosswalk-only;three-spelling-candidates-unconfirmed;no-occurrence-assertions"
     },
     {
       "id": "emb-ilaguen-3a-project-description-river-site-2019",

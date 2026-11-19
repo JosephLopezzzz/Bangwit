@@ -5,7 +5,7 @@
   "phaseId": "L5",
   "regionIds": ["0200000000"],
   "province": "Isabela",
-  "status": "freshwater-eis-fish-list-lead;ten-reported-table-rows;one-genus-only;taxonomy-spelling-conflicts;survey-method-date-unverified;fish-site-crosswalk-unresolved;direct-pdf-403;reuse-unverified;research-only",
+  "status": "freshwater-eis-fish-list-lead;ten-reported-table-rows;six-exact-taxonomic-name-matches;three-provisional-spelling-corrections;one-genus-only;source-identifications-unverified;survey-method-date-unverified;fish-site-crosswalk-unresolved;direct-pdf-403;reuse-unverified;research-only",
   "question": "Can the Ilaguen 3A Revised EIS support an Isabela freshwater fish checklist or fish-by-river assertion from its Table 51?",
   "project": {
     "name": "19.7MW Ilaguen 3A Hydro-Electric Power Plant",
@@ -34,10 +34,115 @@
       "context": "The EMB-hosted project description identifies the proposed run-of-river project with Ilaguen River and prints coordinates for the proposed weir and powerhouse. It says the weir site is about 20 km from Barangay San Miguel. These are infrastructure coordinates and must not be assigned to the EIS fish rows."
     }
   },
+  "taxonomicNameCrosswalk": {
+    "sourceId": "itis-ilaguen-3a-eis-table51-name-crosswalk-20261120",
+    "method": "Compared the ten indexed Table 51 name strings against public ITIS taxonomic records. Adjacent EIS narrative spellings are recorded only as internal text cross-checks. This resolves candidate nomenclature, not any source specimen or field identification.",
+    "counts": {
+      "reportedTableRows": 10,
+      "exactBinomialMatchesToValidItisNames": 6,
+      "provisionalSpellingCorrectionCandidates": 3,
+      "genusOnlyRows": 1,
+      "sourceSpecimenIdentificationsVerified": 0,
+      "occurrenceRowsAdmitted": 0
+    },
+    "rows": [
+      {
+        "row": 1,
+        "verbatimIndexedName": "Anguilla japonica",
+        "candidateTaxon": "Anguilla japonica",
+        "crosswalk": "exact-binomial-name-match-to-valid-ITIS-name",
+        "itisTaxonId": "161134",
+        "limit": "Name validity does not verify the EIS identification, capture site, date, or river reach."
+      },
+      {
+        "row": 2,
+        "verbatimIndexedName": "Arius manillensis",
+        "candidateTaxon": "Arius manillensis",
+        "crosswalk": "exact-binomial-name-match-to-valid-ITIS-name",
+        "itisTaxonId": "680700",
+        "limit": "ITIS gives the English common name Manila sea catfish; the EIS's freshwater grouping needs ecological and site-level review and is not settled by this name match."
+      },
+      {
+        "row": 3,
+        "verbatimIndexedName": "Channa striata",
+        "candidateTaxon": "Channa striata",
+        "crosswalk": "exact-binomial-name-match-to-valid-ITIS-name",
+        "itisTaxonId": "166667",
+        "limit": "Name validity does not verify the EIS identification, capture site, date, or river reach."
+      },
+      {
+        "row": 4,
+        "verbatimIndexedName": "Clarias batrachius",
+        "candidateTaxon": "Clarias batrachus",
+        "crosswalk": "provisional-spelling-correction-only",
+        "itisTaxonId": "164120",
+        "basis": "The adjacent indexed EIS narrative uses Clarias batrachus and ITIS recognizes that spelling as valid; no page image is available to distinguish a printed typo from OCR error.",
+        "limit": "Do not treat the candidate as a confirmed source identification."
+      },
+      {
+        "row": 5,
+        "verbatimIndexedName": "Ctenopharyngodon idella",
+        "candidateTaxon": "Ctenopharyngodon idella",
+        "crosswalk": "exact-binomial-name-match-to-valid-ITIS-name",
+        "itisTaxonId": "163537",
+        "limit": "Name validity does not verify the EIS identification, capture site, date, or river reach."
+      },
+      {
+        "row": 6,
+        "verbatimIndexedName": "Glossogobius sp.",
+        "candidateTaxon": null,
+        "crosswalk": "genus-only-unresolved-to-species",
+        "itisTaxonId": null,
+        "limit": "Cannot support a species-level checklist row or species-specific ecology."
+      },
+      {
+        "row": 7,
+        "verbatimIndexedName": "Cestraeus pliicatilis",
+        "candidateTaxon": "Cestraeus plicatilis",
+        "crosswalk": "provisional-spelling-correction-only",
+        "itisTaxonId": "630317",
+        "basis": "The adjacent indexed EIS narrative uses Cestreus plicatilis and ITIS recognizes Cestraeus plicatilis as valid; the PDF page image is unavailable to distinguish source spelling from OCR error.",
+        "limit": "Do not treat the candidate as a confirmed source identification."
+      },
+      {
+        "row": 8,
+        "verbatimIndexedName": "Gambusia affinis",
+        "candidateTaxon": "Gambusia affinis",
+        "crosswalk": "exact-binomial-name-match-to-valid-ITIS-name",
+        "itisTaxonId": "165878",
+        "limit": "Name validity does not verify the EIS identification, capture site, date, or river reach."
+      },
+      {
+        "row": 9,
+        "verbatimIndexedName": "Poecilla reliculata",
+        "candidateTaxon": "Poecilia reticulata",
+        "crosswalk": "lower-confidence-provisional-spelling-correction-only",
+        "itisTaxonId": "165903",
+        "basis": "ITIS recognizes Poecilia reticulata as valid, but the accessible EIS narrative does not independently repeat this row and no page image is available.",
+        "limit": "This is a spelling hypothesis only; do not admit it as a source-identified species."
+      },
+      {
+        "row": 10,
+        "verbatimIndexedName": "Monopterus albus",
+        "candidateTaxon": "Monopterus albus",
+        "crosswalk": "exact-binomial-name-match-to-valid-ITIS-name",
+        "itisTaxonId": "166697",
+        "limit": "Name validity does not verify the EIS identification, capture site, date, or river reach."
+      }
+    ],
+    "interpretation": [
+      "The six exact matches mean ITIS recognizes those binomials as valid names; they do not validate any EIS specimen, wild status, native status, or occurrence.",
+      "The three spelling corrections remain hypotheses because only indexed text was accessible and the printed Table 51 page could not be inspected.",
+      "Glossogobius sp. is genus-level only and is not a resolved species record.",
+      "The EIS freshwater table heading is source wording, not a verified habitat classification for each taxon. Actual survey waterbody, reach, salinity context, dates, methods, and any stocking or aquaculture context remain unresolved."
+    ],
+    "disposition": "Name crosswalk only. No species assertion, occurrence, geometry, app row, diet claim, current-status claim, or conservation-status value is admitted."
+  },
   "limits": [
     "A barangay-level heading is not a precise capture locality, river-reach identity, or occurrence coordinate.",
     "The fish survey date, collection and interview methods, effort, station locations, vouchers and identification authority could not be checked in the accessible EIS excerpt.",
-    "The source's ten-row count includes a genus-only record; the count is not independently validated as ten species.",
+    "The source's ten-row count includes a genus-only record. Six indexed binomials exactly match valid ITIS names; three are only provisional spelling-correction candidates because the PDF page image is unavailable. None of the name matches validates the source identifications.",
+    "The EIS freshwater heading does not independently establish habitat for every taxon. Actual sample stations and water conditions, especially for taxa whose ecology may require a different salinity context, remain unverified.",
     "Do not copy the EIS IUCN codes into current app status fields; their assessment source and date are not established.",
     "The report concerns an infrastructure project, so potential captive, stocked, aquaculture, construction-baseline, and wild-capture contexts must be distinguished before interpreting individual records.",
     "No item-specific reuse license was verified. A public agency-hosted or indexed report is not treated as permission to redistribute its table, maps or photos."
@@ -52,8 +157,12 @@
     "publicAppRows": 0,
     "publicationApproval": false
   },
-  "nextAction": "Locate a directly accessible copy or page images of the revised EIS and verify Table 51 against the printed page; recover fish-survey dates, methods, stations, exact receiving water, identifications and voucher/photo documentation; resolve each table/narrative spelling against authoritative taxonomic references; confirm whether any listed species were stocked or aquaculture-associated; and verify item-specific reuse terms before admitting any species-level evidence.",
+  "nextAction": "Locate a directly accessible copy or page images of the revised EIS and verify Table 51 against the printed page; recover fish-survey dates, methods, stations, exact receiving water, salinity context, identifications and voucher/photo documentation; confirm whether any listed species were stocked or aquaculture-associated; and verify item-specific reuse terms before admitting any species-level evidence.",
   "sources": [
+    {
+      "url": "https://www.itis.gov/",
+      "supports": "ITIS name-status checks for nine binomial candidate spellings listed in taxonomicNameCrosswalk. These are nomenclatural cross-checks only and do not validate the EIS identifications or local occurrences."
+    },
     {
       "url": "https://eia.emb.gov.ph/wp-content/uploads/2021/06/2_Revised_EIS.pdf",
       "supports": "EMB-hosted revised EIS and the search-indexed text of its project fact sheet, Section 2.2.3.1 and Table 51; direct PDF retrieval returned HTTP 403 during this review."
