@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "central-luzon-angat-bpc001-13-georeference-plausibility-20261119",
+  "reviewedOn": "2026-11-19",
+  "phaseId": "L3",
+  "regionId": "0300000000",
+  "regionName": "Region III (Central Luzon)",
+  "waterbodyName": "Angat River",
+  "status": "source-coordinate-spatial-plausibility-supported;named-reach-and-coordinate-uncertainty-unresolved;research-only",
+  "question": "Does the historical BPC001-13 source coordinate plausibly align with the Angat River locality, and can it be assigned to an exact named reach?",
+  "sourceIds": [
+    "gbif-angat-river-bpc001-13-occurrence-2248809978",
+    "bold-bpc001-13-barcode-record",
+    "bold-bin-aac5247-member-records-20261119",
+    "ncbi-kf604634-1-genbank-submission",
+    "fao-aquastat-rivers-global-2026-wfs",
+    "geonames-ph-country-hydrography-2026-11-07",
+    "geoboundaries-phl-adm2-2020-simplified",
+    "bulacan-pdpfp-2024-2036-river-network",
+    "bulacan-pdrrmo-hydrological-area",
+    "pagasa-pampanga-river-basin-description"
+  ],
+  "inputs": [
+    "data/research/philippines/national/reviews/central-luzon-angat-river-bpc001-13-record-review-20261119.json",
+    "data/research/philippines/national/reviews/central-luzon-angat-river-aac5247-bin-membership-review-20261119.json",
+    "data/research/philippines/national/reviews/fao-hydrorivers-calabarzon-wfs-screen-20261108.json",
+    "data/research/philippines/national/reviews/geonames-ph-hydrography-geoboundaries-overlay-20261107.json",
+    "data/research/philippines/national/reviews/geonames-ph-hydrography-extract-20261107.json"
+  ],
+  "rawSnapshot": {
+    "directory": "raw/central-luzon-bmb-atlas-gbif-screen-20261119/",
+    "gitIgnored": true,
+    "containsExactCoordinates": true,
+    "appBundleIncluded": false,
+    "files": [
+      {
+        "path": "angat-occurrence.json",
+        "bytes": 6253,
+        "sha256": "7b38348076680c3cea41dc193393360b3002e7ccd00a0a1800c985680efc03f1"
+      },
+      {
+        "path": "bold-bin-aac5247-download.json",
+        "bytes": 594340,
+        "sha256": "8e9eabee8ccfa8646b7640a9521c199dc961d455bdcb4d1f9ebb5be1cb929031"
+      },
+      {
+        "path": "HydroRIVERS_v10_as_shp.zip",
+        "bytes": 90510995,
+        "sha256": "29780b0a75f90024f22e7e2029e5e3045f7325cda0528db65c5cc4c864b98525"
+      }
+    ]
+  },
+  "method": {
+    "coordinateHandling": "Exact source coordinates were read only from Git-ignored GBIF/BOLD snapshots. No coordinate, point geometry, or nearest-reach identifier is copied into this review.",
+    "sourceCoordinateCrosscheck": "The target BOLD coord array interpreted in latitude/longitude order matches the GBIF decimal coordinates within 1 m. The two records represent the same ANAd1 specimen chain, not independent georeferences. Neither GBIF coordinateUncertaintyInMeters nor BOLD coord_accuracy is supplied; GBIF flags its WGS84 datum as assumed.",
+    "faoNetwork": {
+      "sourceReview": "data/research/philippines/national/reviews/fao-hydrorivers-calabarzon-wfs-screen-20261108.json",
+      "queryWindowCrs84": [
+        120.45,
+        13.13,
+        122.82,
+        15.25
+      ],
+      "returnedFeatures": 4719,
+      "pointInsideQueryWindow": true,
+      "distanceMethod": "Regional equirectangular point-to-segment screen using the existing FAO/HydroRIVERS acquisition helper; no exact location or reach identifier retained here.",
+      "nearestModeledLineDistanceKmRoundedTo0_1": 0.7,
+      "nearestLineAndGeoNamesAngatPointShareMainRiverIdentifier": true,
+      "nearestLineAndGeoNamesAngatPointShareReachIdentifier": false,
+      "distanceToGeoNamesAngatRiverGazetteerPointKmRoundedTo0_1": 39.6,
+      "interpretation": "The recorded coordinate is close to a modeled river line, and the nearest modeled line has the same HydroRIVERS MAIN_RIV grouping as the line nearest to GeoNames' Angat River point. The reach IDs differ. This supports spatial plausibility only; HydroRIVERS does not name its reaches and GeoNames supplies a representative point, not a surveyed route."
+    },
+    "administrativeContext": {
+      "boundarySourceReview": "data/research/philippines/national/reviews/geonames-ph-hydrography-geoboundaries-overlay-20261107.json",
+      "boundaryVintage": "Simplified geoBoundaries Philippines ADM2 2020; source data updated 2023.",
+      "singlePolygonNameCandidate": "Bulacan",
+      "interpretation": "Coarse land-polygon context only; not a current official boundary determination or waterbody identity check."
+    },
+    "coverageDiagnostic": {
+      "product": "HydroRIVERS v1 Asia shapefile archive, downloaded from the official HydroSHEDS product page.",
+      "knownLuzonReferenceWindowsWithIntersectingLineBboxesWithin0_5Degrees": 0,
+      "referenceControls": [
+        "Manila",
+        "Angat municipality"
+      ],
+      "disposition": "Excluded the direct Asia archive's zero results as a coverage gap for the Philippines; it was not used to infer that the occurrence is distant from a river. Used the existing FAO WFS snapshot, which returns modeled line features in the Philippine query window, for the proximity screen."
+    }
+  },
+  "officialNamedWatercourseContext": {
+    "bulacanPdpFp": "The Province of Bulacan's 2024-2036 draft final PDPFP identifies Angat River as its main and largest river system and describes it as draining the Sierra Madre side and reaching Manila Bay through Bulacan municipalities; the document includes a river-network map. It is descriptive context, not a downloadable, georeferenced centerline.",
+    "bulacanPdrrmo": "The Bulacan PDRRMO describes the Angat River as running about 61 km from Ipo Reservoir to its diversion in Labangan Channel. This endpoint-specific description is not treated as the complete river length.",
+    "pagasa": "PAGASA describes the Angat River joining the Pampanga River at Calumpit via Bagbag River and Labangan Channel acting as a cut-off channel toward Manila Bay.",
+    "reuse": "No map image or official geometry was copied. These sources support named-system context only; source-level reuse terms were not established for the PDF/page contents."
+  },
+  "findings": {
+    "sourceLocality": "Angat River",
+    "recordCoordinatePlausibility": "supported-as-a-candidate-by-coarse-spatial-crosschecks",
+    "exactNamedReachIdentity": "unresolved",
+    "sourceCoordinateUncertainty": "not supplied by GBIF or BOLD",
+    "geometryResolution": "No publishable Angat River geometry was derived; the observed HydroRIVERS line remains an unnamed modeled reach candidate.",
+    "taxonomyStatus": "The source-reported Arius dispar identification remains in conflict with GBIF Backbone treatment of BOLD:AAC5247; the BOLD BIN review does not resolve the specimen.",
+    "independence": "GBIF, BOLD, and GenBank resolve to one specimen/source chain. GeoNames, geoBoundaries, FAO/HydroRIVERS, and the government descriptions provide different context but do not constitute field verification of this specimen location."
+  },
+  "rightsAndLimitations": [
+    "HydroRIVERS v1 is derived from 15 arc-second source grids and omits streams below its stated catchment/flow thresholds. HydroSHEDS states that its river products do not identify the name of each waterbody.",
+    "The direct HydroRIVERS Asia archive showed no line-feature bounding boxes in half-degree windows around the Manila and Angat reference controls. This was treated as missing coverage for this screen, not as absence evidence.",
+    "The FAO catalog describes the network as CC BY 4.0, while the underlying HydroSHEDS v1 license separately imposes integration, end-user licensing, attribution, and non-standalone redistribution conditions. No public geometry distribution is approved.",
+    "The simplified 2020 geoBoundaries polygon is a coarse cross-check, not a current authoritative province or water boundary.",
+    "A modeled line near an occurrence coordinate and a shared MAIN_RIV grouping do not prove the named reach, collection site, coordinate precision, current fish presence, catchability, legal access, or safety."
+  ],
+  "decision": {
+    "spatialPlausibilityAcceptedForResearchOnly": true,
+    "speciesAssertionAdded": false,
+    "waterbodyIdentityAdded": false,
+    "publicOccurrenceAdded": false,
+    "geometryAdded": false,
+    "exactCoordinatesAdded": false,
+    "publicAppProjection": false,
+    "publicationApproval": false,
+    "disposition": "Retain BPC001-13 as a spatially plausible historical Angat River candidate, but keep the exact reach, coordinate precision, and fish identity unresolved. Do not draw a point or river geometry in the app from this record."
+  },
+  "nextActions": [
+    "Check the Bulacan PDPFP river-network map and the Bulacan PDRRMO Figure 3 against the modeled reach at a coarse scale; record only a named-route decision if the source map itself supports it.",
+    "Seek an independently curated voucher/taxonomy determination for ANAd1 and BOLD:AAC5247.",
+    "Keep HydroSHEDS/FAO reuse restrictions unresolved before any end-user geometry distribution."
+  ]
+}

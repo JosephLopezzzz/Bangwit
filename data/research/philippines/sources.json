@@ -3,7 +3,7 @@
   "checkedOn": "2026-11-19",
   "status": "research-only-source-registry",
   "scope": "National acquisition references, freshwater spatial-source leads, MIMAROPA/CALABARZON/Central Luzon identity and inland-water source reviews, and Mindanao regional freshwater survey reviews. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 958,
+  "sourceCount": 962,
   "sources": [
     {
       "id": "aoyama-et-al-2015-cagayan-glass-eel-recruitment",
@@ -7666,7 +7666,8 @@
           "national-philippines-river-wfs-source-review-20261026.json",
           "national/reviews/fao-hydrorivers-calabarzon-wfs-screen-20261108.json",
           "national/reviews/fao-hydrorivers-calabarzon-stream-scope-priority-20261108.json",
-          "national/reviews/calabarzon-waterway-three-source-priority-20261109.json"
+          "national/reviews/calabarzon-waterway-three-source-priority-20261109.json",
+          "national/reviews/central-luzon-angat-bpc001-13-georeference-plausibility-20261119.json"
         ],
         "rawPath": "raw/national/fao-hydrorivers-calabarzon-wfs-20261108/",
         "serviceEndpoint": "https://data.apps.fao.org/map/gsrv/gsrv1/aquamaps/wms",
@@ -28998,7 +28999,8 @@
           "national/reviews/geonames-calabarzon-hydrolakes-proximity-crosswalk-20261108.json",
           "national/reviews/geonames-hydrolakes-region02-nifep-crosswalk-20261109.json",
           "national/reviews/geonames-calabarzon-stream-scope-crosswalk-20261108.json",
-          "national/reviews/calabarzon-waterway-three-source-priority-20261109.json"
+          "national/reviews/calabarzon-waterway-three-source-priority-20261109.json",
+          "national/reviews/central-luzon-angat-bpc001-13-georeference-plausibility-20261119.json"
         ],
         "localRawSnapshot": "raw/national/geonames-ph-20261107/PH.zip"
       },
@@ -32847,7 +32849,8 @@
         "status": "one-row-retrieved;source-record-and-verbatim-reviewed;taxonomy-and-reach-held",
         "reviewFiles": [
           "national/reviews/central-luzon-angat-river-bpc001-13-record-review-20261119.json",
-          "national/reviews/central-luzon-bmb-atlas-gbif-count-screen-20261119.json"
+          "national/reviews/central-luzon-bmb-atlas-gbif-count-screen-20261119.json",
+          "national/reviews/central-luzon-angat-bpc001-13-georeference-plausibility-20261119.json"
         ],
         "reviewedSections": "GBIF occurrence and verbatim records, event date, locality, basis of record, original dataset, license, media, taxonomic classifications and issue flags."
       },
@@ -32915,7 +32918,8 @@
       "access": {
         "status": "public-api-record-retrieved-http-200;specimen-chain-reviewed",
         "reviewFiles": [
-          "national/reviews/central-luzon-angat-river-bpc001-13-record-review-20261119.json"
+          "national/reviews/central-luzon-angat-river-bpc001-13-record-review-20261119.json",
+          "national/reviews/central-luzon-angat-bpc001-13-georeference-plausibility-20261119.json"
         ],
         "reviewedSections": "Process ID, sample/museum ID, institution, taxonomic identification, method and identifier, BIN, marker, date, locality linkage and coordinate-accuracy field."
       },
@@ -32948,7 +32952,8 @@
       "access": {
         "status": "genbank-record-retrieved-http-200;source-fields-reviewed",
         "reviewFiles": [
-          "national/reviews/central-luzon-angat-river-bpc001-13-record-review-20261119.json"
+          "national/reviews/central-luzon-angat-river-bpc001-13-record-review-20261119.json",
+          "national/reviews/central-luzon-angat-bpc001-13-georeference-plausibility-20261119.json"
         ],
         "reviewedSections": "Definition, source organism, voucher, collection date, geo_loc_name, lat_lon, associated BOLD record, identified_by and COI feature length."
       },
@@ -32984,7 +32989,8 @@
       "access": {
         "status": "bin-query-http-200;210-jsonl-documents;summary-endpoint-returned-empty-object",
         "reviewFiles": [
-          "national/reviews/central-luzon-angat-river-aac5247-bin-membership-review-20261119.json"
+          "national/reviews/central-luzon-angat-river-aac5247-bin-membership-review-20261119.json",
+          "national/reviews/central-luzon-angat-bpc001-13-georeference-plausibility-20261119.json"
         ],
         "rawPath": "raw/central-luzon-bmb-atlas-gbif-screen-20261119/",
         "rawReceipts": [
@@ -33026,6 +33032,143 @@
         "The administrative field order in BOLD Central Luzon rows is not used as verified jurisdiction or river geometry."
       ],
       "researchStatus": "bold;BIN-AAC5247;210-documents;multiple-name-values;taxonomy-crosswalk-open;research-only"
+    },
+    {
+      "id": "geoboundaries-phl-adm2-2020-simplified",
+      "title": "geoBoundaries gbOpen Philippines ADM2 simplified polygons (2020 vintage)",
+      "provider": "geoBoundaries, William & Mary geoLab",
+      "url": "https://github.com/wmgeolab/geoBoundaries/raw/41af8f1/releaseData/gbOpen/PHL/ADM2/geoBoundaries-PHL-ADM2_simplified.geojson",
+      "additionalUrls": [
+        "https://www.geoboundaries.org/api.html",
+        "https://raw.githubusercontent.com/wmgeolab/geoBoundaries/41af8f1/releaseData/gbOpen/PHL/ADM2/geoBoundaries-PHL-ADM2_simplified.geojson"
+      ],
+      "role": "Historical simplified land ADM2 polygons used only for a coarse source-coordinate context check; not current authoritative provincial boundaries, municipal-water boundaries, river geometry, or proof of waterbody identity.",
+      "checkedOn": "2026-11-19",
+      "sourceYear": 2020,
+      "citation": "geoBoundaries (2023). geoBoundaries Open release, Philippines ADM2, 2020 boundary vintage, simplified; based on NAMRIA, PSA, and OCHA Philippines.",
+      "access": {
+        "status": "pinned-2020-simplified-adm2-used-for-coarse-point-overlay-only",
+        "reviewFiles": [
+          "national/reviews/geonames-ph-hydrography-geoboundaries-overlay-20261107.json",
+          "national/reviews/central-luzon-angat-bpc001-13-georeference-plausibility-20261119.json"
+        ],
+        "rawPath": "raw/national/geoboundaries-phl-adm2-2020/",
+        "rawReceipts": [
+          {
+            "file": "geoBoundaries-PHL-ADM2_simplified-41af8f1.geojson",
+            "sha256": "fa77b9f17db2e419acaae714a935f7812be4409e2983675d34020e8426a3e189",
+            "bytes": 3140454
+          }
+        ]
+      },
+      "reuse": {
+        "metadata": "The pinned overlay review records the source license as CC BY 3.0 IGO and its attribution to geoBoundaries (2023), based on NAMRIA, the Philippine Statistics Authority, and OCHA Philippines.",
+        "raw": "The simplified GeoJSON remains in Git-ignored research storage and is pinned by SHA-256.",
+        "content": "Use only as coarse 2020-vintage land-polygon context. Do not treat the result as a current official boundary, water boundary, or app-approved geometry."
+      },
+      "publicationApproval": false,
+      "license": "CC BY 3.0 IGO",
+      "licenseUrl": null,
+      "caveats": [
+        "This simplified 2020-vintage layer is not a current provincial boundary or maritime water geometry.",
+        "A point-in-polygon result cannot identify a named river reach or validate the occurrence coordinate.",
+        "The source overlay review records source data updated in 2023, not a current boundary update."
+      ],
+      "researchStatus": "geoboundaries;adm2;2020-vintage;simplified;coarse-context-only"
+    },
+    {
+      "id": "bulacan-pdpfp-2024-2036-river-network",
+      "title": "Bulacan Provincial Development and Physical Framework Plan 2024-2036 (draft final report)",
+      "provider": "Provincial Government of Bulacan",
+      "url": "https://bulacan.gov.ph/wp-content/uploads/2025/04/BulacanPDPFP_2024-2036.pdf",
+      "role": "Official provincial-plan narrative and map context for the Angat River system in Bulacan; identifies its upstream and downstream systems, municipality span, and outlet to Manila Bay. Not a downloadable, georeferenced river centerline.",
+      "checkedOn": "2026-11-19",
+      "sourceYear": 2025,
+      "citation": "Province of Bulacan. Provincial Development and Physical Framework Plan 2024-2036, draft final report, water characteristics and river systems sections (2025 PDF).",
+      "access": {
+        "status": "official-provincial-pdf-opened;angat-river-context-reviewed;no-gis-extraction",
+        "reviewFiles": [
+          "national/reviews/central-luzon-angat-bpc001-13-georeference-plausibility-20261119.json"
+        ],
+        "reviewedSections": "Water Characteristics and Resources; Angat River description; Table 3.3.7; River Network Map 3.11.",
+        "rawPath": null
+      },
+      "reuse": {
+        "metadata": "No item-specific open-data license was verified for the report or embedded map.",
+        "raw": "The public PDF was read online; no map image or PDF page is copied into the project.",
+        "content": "Use the named-system description as cited research context only. Do not derive or redistribute river geometry from the map without rights and scale review."
+      },
+      "publicationApproval": false,
+      "license": null,
+      "licenseUrl": null,
+      "caveats": [
+        "The PDF labels itself a draft final report.",
+        "Its river-network map is descriptive context and was not georeferenced in this review.",
+        "The reported 86 km Angat River length uses a different described extent from the PDRRMO Ipo-to-Labangan segment."
+      ],
+      "researchStatus": "bulacan;pdpfp;angat-river;named-system-context;no-centerline;research-only"
+    },
+    {
+      "id": "bulacan-pdrrmo-hydrological-area",
+      "title": "Bulacan PDRRMO: The Hydrological Area of Bulacan Province",
+      "provider": "Provincial Disaster Risk Reduction and Management Office, Government of Bulacan",
+      "url": "https://pdrrmo.bulacan.gov.ph/programs-and-services/cbfmmp/the-hydrological-area-bulacan-province/",
+      "role": "Provincial hydrology description of the Angat, Ipo, and Bustos dam system; states that the Angat River runs about 61 km from Ipo Reservoir to its diversion in Labangan Channel. Not a GIS dataset or fishing-access source.",
+      "checkedOn": "2026-11-19",
+      "sourceYear": 2026,
+      "citation": "Bulacan Provincial Disaster Risk Reduction and Management Office. The Hydrological Area: Bulacan Province. Accessed 2026-11-19.",
+      "access": {
+        "status": "official-provincial-page-opened;angat-river-description-reviewed;no-gis-download",
+        "reviewFiles": [
+          "national/reviews/central-luzon-angat-bpc001-13-georeference-plausibility-20261119.json"
+        ],
+        "reviewedSections": "Angat/Ipo/Bustos dam descriptions and the Angat River Ipo Reservoir-to-Labangan Channel extent.",
+        "rawPath": null
+      },
+      "reuse": {
+        "metadata": "No item-specific open-data license was verified for the page or embedded figures.",
+        "raw": "The page was read online; no embedded figure was copied into the project.",
+        "content": "Use as cited descriptive context only. The 61 km statement is tied to the endpoints named by the page and is not treated as the full river length."
+      },
+      "publicationApproval": false,
+      "license": null,
+      "licenseUrl": null,
+      "caveats": [
+        "This source gives an approximate segment extent, not coordinate geometry or reach-level survey accuracy.",
+        "The site describes hydrologic and flood context; it does not establish fish presence or safe fishing access."
+      ],
+      "researchStatus": "bulacan;pdrrmo;angat-river;named-system-context;no-centerline;research-only"
+    },
+    {
+      "id": "pagasa-pampanga-river-basin-description",
+      "title": "PAGASA Flood Forecasting and Warning System for River Basins: Pampanga River Basin",
+      "provider": "Philippine Atmospheric, Geophysical and Astronomical Services Administration",
+      "url": "https://pagasa.dost.gov.ph/information/flood-forecasting-and-warning-system-river-basins",
+      "role": "National hydrology description of Angat River's connection to the Pampanga River at Calumpit via Bagbag River and the Labangan Channel cut-off toward Manila Bay; not channel geometry or a current hazard bulletin.",
+      "checkedOn": "2026-11-19",
+      "sourceYear": null,
+      "citation": "PAGASA. Flood Forecasting and Warning System for River Basins, Pampanga River Basin. Accessed 2026-11-19.",
+      "access": {
+        "status": "official-pagasa-page-opened;pampanga-basin-angat-link-reviewed;no-gis-download",
+        "reviewFiles": [
+          "national/reviews/central-luzon-angat-bpc001-13-georeference-plausibility-20261119.json"
+        ],
+        "reviewedSections": "Pampanga River Basin description of Angat River, Bagbag River, Labangan Channel, and Manila Bay.",
+        "rawPath": null
+      },
+      "reuse": {
+        "metadata": "No item-specific open-data license was verified for the page.",
+        "raw": "The official page was read online; no map image or underlying geometry was copied.",
+        "content": "Use the named basin-connection statement as cited context only. This is not a current flood warning, water-quality statement, or fishing-safety notice."
+      },
+      "publicationApproval": false,
+      "license": null,
+      "licenseUrl": null,
+      "caveats": [
+        "Narrative basin connectivity is not a georeferenced channel centerline.",
+        "PAGASA flood-basin descriptions do not establish fish occurrence, legal access, or present hazard conditions."
+      ],
+      "researchStatus": "pagasa;pampanga-basin;angat-river;named-connectivity-context;research-only"
     }
   ],
   "sourcePolicy": {
