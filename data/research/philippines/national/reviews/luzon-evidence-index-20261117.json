@@ -1290,7 +1290,7 @@
     },
     {
       "path": "data/research/philippines/luzon-completion-manifest.json",
-      "sha256": "57b40acd36b05d2489a8240eef3e0b2bd7da40815733662830f618ef9e6fe6f0"
+      "sha256": "4a66ecc644a8968838a5fdfd22d94a327d2bd9315f154c6892d4a5ab3148bdfb"
     },
     {
       "path": "data/research/philippines/makiling-gbif-source-review.json",
@@ -2617,6 +2617,10 @@
       "sha256": "230b86f681d56fd0dfe03276f33d186a7ec295ff3e8c0daf07c02926b99f2544"
     },
     {
+      "path": "data/research/philippines/national/reviews/central-luzon-angat-river-bpc001-13-record-review-20261119.json",
+      "sha256": "c132c6cd723cb27f78609f72c24cd6a4e448a2b35dd350aa5eada1eee27bb677"
+    },
+    {
       "path": "data/research/philippines/national/reviews/central-luzon-bagac-roque-2019-source-review-20261116.json",
       "sha256": "f32e72cfd228d390fd8bb852d117c710167642cba5cb41e002c009c83c010825"
     },
@@ -2986,7 +2990,7 @@
     },
     {
       "path": "data/research/philippines/sources.json",
-      "sha256": "62a593665dc16a978c376d0e3d78c8a23feae7e42ae2ee5f2c8b2ac6591493a9"
+      "sha256": "1793b3dc55f5606ebb5c54f9c2ab16acc2a58bad8917972835f65f0b57fe2597"
     },
     {
       "path": "data/research/philippines/taal-checklist-decisions.json",
@@ -3046,24 +3050,24 @@
     }
   ],
   "summary": {
-    "reviewArtifactsScanned": 117,
+    "reviewArtifactsScanned": 118,
     "regionCount": 8,
-    "sourceRegistryUniqueIds": 953,
+    "sourceRegistryUniqueIds": 957,
     "sourceIdentityCrosswalkGroups": 10,
     "reviewClassifications": {
       "directly-linked": 30,
       "indirectly-linked": 16,
       "national-context-only": 1,
-      "shared-across-regions": 70
+      "shared-across-regions": 71
     },
     "brokenOrUnresolvedJsonReferences": 0,
     "missingSourceIdLinks": 0,
-    "localRawReferenceCount": 942,
-    "localRawReferencesAvailable": 942,
+    "localRawReferenceCount": 949,
+    "localRawReferencesAvailable": 949,
     "localRawReferencesUnresolved": 0,
     "localRawHashMismatchReferences": 0,
     "localRawNonmatchingBasenameCandidates": 3,
-    "uniqueLocalRawInputsMatched": 894,
+    "uniqueLocalRawInputsMatched": 901,
     "manuallyReviewedRegionalAssociations": 32,
     "nationalContextArtifacts": 3,
     "unlinkedManualAssociations": 0,
@@ -3077,8 +3081,8 @@
       "name": "Region IV-A (CALABARZON)",
       "manifestReferenceCount": 41,
       "directlyLinkedReviewCount": 33,
-      "indirectlyLinkedReviewCount": 83,
-      "declaredOrLinkedReviewCount": 116,
+      "indirectlyLinkedReviewCount": 84,
+      "declaredOrLinkedReviewCount": 117,
       "unaccountedExplicitReviewCount": 0,
       "baselineReviewed": false,
       "scopeFrozen": false
@@ -3099,10 +3103,10 @@
       "rolloutKey": "L3",
       "regionId": "0300000000",
       "name": "Region III (Central Luzon)",
-      "manifestReferenceCount": 16,
-      "directlyLinkedReviewCount": 12,
+      "manifestReferenceCount": 17,
+      "directlyLinkedReviewCount": 13,
       "indirectlyLinkedReviewCount": 0,
-      "declaredOrLinkedReviewCount": 12,
+      "declaredOrLinkedReviewCount": 13,
       "unaccountedExplicitReviewCount": 0,
       "baselineReviewed": false,
       "scopeFrozen": false
@@ -4152,6 +4156,38 @@
       "publicationApproval": null,
       "sourceIds": [
         "ash-angat-cablitas-lumba-diet-risk-2024"
+      ],
+      "missingSourceIds": [],
+      "explicitSuccessorReferences": []
+    },
+    {
+      "path": "data/research/philippines/national/reviews/central-luzon-angat-river-bpc001-13-record-review-20261119.json",
+      "sha256": "c132c6cd723cb27f78609f72c24cd6a4e448a2b35dd350aa5eada1eee27bb677",
+      "reviewId": "central-luzon-angat-river-bpc001-13-record-review-20261119",
+      "reviewedOn": "2026-11-19",
+      "phaseId": "L3",
+      "declaredRegionIds": [
+        "0300000000"
+      ],
+      "manualAssociation": null,
+      "nationalContextDisposition": null,
+      "directRegionIds": [
+        "0300000000"
+      ],
+      "indirectRegionIds": [
+        "0400000000"
+      ],
+      "relatedRegionIds": [
+        "0300000000",
+        "0400000000"
+      ],
+      "classification": "shared-across-regions",
+      "publicationApproval": null,
+      "sourceIds": [
+        "bold-bpc001-13-barcode-record",
+        "gbif-angat-river-bpc001-13-occurrence-2248809978",
+        "gbif-ibol-dataset-040c5662-da76-4782-a48e-cdea1892d14c",
+        "ncbi-kf604634-1-genbank-submission"
       ],
       "missingSourceIds": [],
       "explicitSuccessorReferences": []
@@ -15542,6 +15578,97 @@
         "nonmatchingCandidates": []
       },
       {
+        "from": "data/research/philippines/national/reviews/central-luzon-angat-river-bpc001-13-record-review-20261119.json",
+        "field": "$.rawSnapshot.files[0].path",
+        "referencedPath": "angat-river-locality-occurrence.json",
+        "availability": "available-and-hash-verified",
+        "matchedFiles": [
+          {
+            "path": "data/research/philippines/raw/central-luzon-bmb-atlas-gbif-screen-20261119/angat-river-locality-occurrence.json",
+            "sha256": "ff6b2650af019f1094b94b75dac3dab749301d1ad3697157bd04742fe020cea5"
+          }
+        ],
+        "nonmatchingCandidates": []
+      },
+      {
+        "from": "data/research/philippines/national/reviews/central-luzon-angat-river-bpc001-13-record-review-20261119.json",
+        "field": "$.rawSnapshot.files[1].path",
+        "referencedPath": "angat-occurrence.json",
+        "availability": "available-and-hash-verified",
+        "matchedFiles": [
+          {
+            "path": "data/research/philippines/raw/central-luzon-bmb-atlas-gbif-screen-20261119/angat-occurrence.json",
+            "sha256": "7b38348076680c3cea41dc193393360b3002e7ccd00a0a1800c985680efc03f1"
+          }
+        ],
+        "nonmatchingCandidates": []
+      },
+      {
+        "from": "data/research/philippines/national/reviews/central-luzon-angat-river-bpc001-13-record-review-20261119.json",
+        "field": "$.rawSnapshot.files[2].path",
+        "referencedPath": "angat-verbatim.json",
+        "availability": "available-and-hash-verified",
+        "matchedFiles": [
+          {
+            "path": "data/research/philippines/raw/central-luzon-bmb-atlas-gbif-screen-20261119/angat-verbatim.json",
+            "sha256": "b4f21cb0e5a2bbf4cd9c60dd09eef3536336e64a98a028ad19732361b9db2f61"
+          }
+        ],
+        "nonmatchingCandidates": []
+      },
+      {
+        "from": "data/research/philippines/national/reviews/central-luzon-angat-river-bpc001-13-record-review-20261119.json",
+        "field": "$.rawSnapshot.files[3].path",
+        "referencedPath": "angat-dataset.json",
+        "availability": "available-and-hash-verified",
+        "matchedFiles": [
+          {
+            "path": "data/research/philippines/raw/central-luzon-bmb-atlas-gbif-screen-20261119/angat-dataset.json",
+            "sha256": "3679b95958ed3135eea94c62d16e058293a602204e24153315a4b8df5e484a33"
+          }
+        ],
+        "nonmatchingCandidates": []
+      },
+      {
+        "from": "data/research/philippines/national/reviews/central-luzon-angat-river-bpc001-13-record-review-20261119.json",
+        "field": "$.rawSnapshot.files[4].path",
+        "referencedPath": "bold-preprocessor-bpc001-13.json",
+        "availability": "available-and-hash-verified",
+        "matchedFiles": [
+          {
+            "path": "data/research/philippines/raw/central-luzon-bmb-atlas-gbif-screen-20261119/bold-preprocessor-bpc001-13.json",
+            "sha256": "549c1bfca9d9e091f2686c728ef12e9fc49a6d780bf9ab27182dae72cf14e970"
+          }
+        ],
+        "nonmatchingCandidates": []
+      },
+      {
+        "from": "data/research/philippines/national/reviews/central-luzon-angat-river-bpc001-13-record-review-20261119.json",
+        "field": "$.rawSnapshot.files[5].path",
+        "referencedPath": "bold-query-bpc001-13.json",
+        "availability": "available-and-hash-verified",
+        "matchedFiles": [
+          {
+            "path": "data/research/philippines/raw/central-luzon-bmb-atlas-gbif-screen-20261119/bold-query-bpc001-13.json",
+            "sha256": "022a8ccf657500e4f9ebe62d8ba0b2ab9ac5cae60af197d6bf151a4a95d35c9d"
+          }
+        ],
+        "nonmatchingCandidates": []
+      },
+      {
+        "from": "data/research/philippines/national/reviews/central-luzon-angat-river-bpc001-13-record-review-20261119.json",
+        "field": "$.rawSnapshot.files[6].path",
+        "referencedPath": "bold-record-bpc001-13-retry.json",
+        "availability": "available-and-hash-verified",
+        "matchedFiles": [
+          {
+            "path": "data/research/philippines/raw/central-luzon-bmb-atlas-gbif-screen-20261119/bold-record-bpc001-13-retry.json",
+            "sha256": "818a852dc13275f2634307c70a7f49ce54aa40ab4d1234b476efc5a67db0d124"
+          }
+        ],
+        "nonmatchingCandidates": []
+      },
+      {
         "from": "data/research/philippines/national/reviews/central-luzon-bmb-atlas-gbif-count-screen-20261119.json",
         "field": "$.queries[0].rawFile",
         "referencedPath": "raw/central-luzon-bmb-atlas-gbif-screen-20261119/pantabangan-reservoir-waterBody.json",
@@ -22108,6 +22235,16 @@
         "referenceCount": 1
       },
       {
+        "path": "data/research/philippines/raw/central-luzon-bmb-atlas-gbif-screen-20261119/angat-dataset.json",
+        "sha256": "3679b95958ed3135eea94c62d16e058293a602204e24153315a4b8df5e484a33",
+        "referenceCount": 1
+      },
+      {
+        "path": "data/research/philippines/raw/central-luzon-bmb-atlas-gbif-screen-20261119/angat-occurrence.json",
+        "sha256": "7b38348076680c3cea41dc193393360b3002e7ccd00a0a1800c985680efc03f1",
+        "referenceCount": 1
+      },
+      {
         "path": "data/research/philippines/raw/central-luzon-bmb-atlas-gbif-screen-20261119/angat-reservoir-locality.json",
         "sha256": "842e210a1dc11a43b863a7438d0b8ae273f0182c290a7c64e760c176778cc9fa",
         "referenceCount": 1
@@ -22118,6 +22255,11 @@
         "referenceCount": 1
       },
       {
+        "path": "data/research/philippines/raw/central-luzon-bmb-atlas-gbif-screen-20261119/angat-river-locality-occurrence.json",
+        "sha256": "ff6b2650af019f1094b94b75dac3dab749301d1ad3697157bd04742fe020cea5",
+        "referenceCount": 1
+      },
+      {
         "path": "data/research/philippines/raw/central-luzon-bmb-atlas-gbif-screen-20261119/angat-river-locality.json",
         "sha256": "ac70273e6e3c55c4fd9f2c17eb5a18d6acae12398b195409de222f4f294b514f",
         "referenceCount": 1
@@ -22125,6 +22267,26 @@
       {
         "path": "data/research/philippines/raw/central-luzon-bmb-atlas-gbif-screen-20261119/angat-river-waterBody.json",
         "sha256": "842e210a1dc11a43b863a7438d0b8ae273f0182c290a7c64e760c176778cc9fa",
+        "referenceCount": 1
+      },
+      {
+        "path": "data/research/philippines/raw/central-luzon-bmb-atlas-gbif-screen-20261119/angat-verbatim.json",
+        "sha256": "b4f21cb0e5a2bbf4cd9c60dd09eef3536336e64a98a028ad19732361b9db2f61",
+        "referenceCount": 1
+      },
+      {
+        "path": "data/research/philippines/raw/central-luzon-bmb-atlas-gbif-screen-20261119/bold-preprocessor-bpc001-13.json",
+        "sha256": "549c1bfca9d9e091f2686c728ef12e9fc49a6d780bf9ab27182dae72cf14e970",
+        "referenceCount": 1
+      },
+      {
+        "path": "data/research/philippines/raw/central-luzon-bmb-atlas-gbif-screen-20261119/bold-query-bpc001-13.json",
+        "sha256": "022a8ccf657500e4f9ebe62d8ba0b2ab9ac5cae60af197d6bf151a4a95d35c9d",
+        "referenceCount": 1
+      },
+      {
+        "path": "data/research/philippines/raw/central-luzon-bmb-atlas-gbif-screen-20261119/bold-record-bpc001-13-retry.json",
+        "sha256": "818a852dc13275f2634307c70a7f49ce54aa40ab4d1234b476efc5a67db0d124",
         "referenceCount": 1
       },
       {

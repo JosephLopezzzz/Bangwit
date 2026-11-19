@@ -1,0 +1,194 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "central-luzon-angat-river-bpc001-13-record-review-20261119",
+  "reviewedOn": "2026-11-19",
+  "phaseId": "L3",
+  "regionId": "0300000000",
+  "regionName": "Region III (Central Luzon)",
+  "waterbodyName": "Angat River",
+  "status": "single-historical-molecular-voucher-candidate;BOLD-and-GenBank-source-name-agree;GBIF-backbone-taxonomy-conflict;research-only",
+  "question": "What does the single positive GBIF locality count for Angat River represent, and does its underlying row support a reusable, species-resolved waterbody record?",
+  "sourceIds": [
+    "gbif-angat-river-bpc001-13-occurrence-2248809978",
+    "gbif-ibol-dataset-040c5662-da76-4782-a48e-cdea1892d14c",
+    "bold-bpc001-13-barcode-record",
+    "ncbi-kf604634-1-genbank-submission"
+  ],
+  "inputs": [
+    "data/research/philippines/national/reviews/central-luzon-bmb-atlas-gbif-count-screen-20261119.json",
+    "data/research/philippines/national/reviews/central-luzon-bmb-2014-wetland-atlas-count-crosswalk-20261119.json"
+  ],
+  "retrieval": {
+    "provider": "Global Biodiversity Information Facility",
+    "endpoint": "https://api.gbif.org/v1/occurrence/search",
+    "documentation": "https://techdocs.gbif.org/en/openapi/v1/occurrence",
+    "filters": {
+      "country": "PH",
+      "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+      "taxonKey": "8VR36",
+      "locality": "Angat River"
+    },
+    "searchUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&locality=Angat+River&limit=20",
+    "searchHttpStatus": 200,
+    "searchCount": 1,
+    "returnedRows": 1,
+    "occurrenceKey": 2248809978,
+    "occurrenceUrl": "https://api.gbif.org/v1/occurrence/2248809978",
+    "verbatimUrl": "https://api.gbif.org/v1/occurrence/2248809978/verbatim",
+    "datasetUrl": "https://api.gbif.org/v1/dataset/040c5662-da76-4782-a48e-cdea1892d14c",
+    "datasetTitle": "International Barcode of Life project (iBOL)",
+    "datasetKey": "040c5662-da76-4782-a48e-cdea1892d14c",
+    "datasetDoi": "10.15468/inygc6",
+    "datasetCitation": "The International Barcode of Life Consortium (2026). International Barcode of Life project (iBOL). Occurrence dataset https://doi.org/10.15468/inygc6 accessed via GBIF.org on 2026-11-19.",
+    "method": "The one nonzero locality count was retrieved from the GBIF Occurrence Search API, then checked against the occurrence and verbatim endpoints, the GBIF dataset metadata, the matching BOLD process ID, and its linked GenBank accession."
+  },
+  "rawSnapshot": {
+    "directory": "raw/central-luzon-bmb-atlas-gbif-screen-20261119/",
+    "gitIgnored": true,
+    "containsFullSequenceOrExactCoordinates": true,
+    "appBundleIncluded": false,
+    "files": [
+      {
+        "path": "angat-river-locality-occurrence.json",
+        "bytes": 6331,
+        "sha256": "ff6b2650af019f1094b94b75dac3dab749301d1ad3697157bd04742fe020cea5"
+      },
+      {
+        "path": "angat-occurrence.json",
+        "bytes": 6253,
+        "sha256": "7b38348076680c3cea41dc193393360b3002e7ccd00a0a1800c985680efc03f1"
+      },
+      {
+        "path": "angat-verbatim.json",
+        "bytes": 3128,
+        "sha256": "b4f21cb0e5a2bbf4cd9c60dd09eef3536336e64a98a028ad19732361b9db2f61"
+      },
+      {
+        "path": "angat-dataset.json",
+        "bytes": 5918,
+        "sha256": "3679b95958ed3135eea94c62d16e058293a602204e24153315a4b8df5e484a33"
+      },
+      {
+        "path": "bold-preprocessor-bpc001-13.json",
+        "bytes": 98,
+        "sha256": "549c1bfca9d9e091f2686c728ef12e9fc49a6d780bf9ab27182dae72cf14e970"
+      },
+      {
+        "path": "bold-query-bpc001-13.json",
+        "bytes": 83,
+        "sha256": "022a8ccf657500e4f9ebe62d8ba0b2ab9ac5cae60af197d6bf151a4a95d35c9d"
+      },
+      {
+        "path": "bold-record-bpc001-13-retry.json",
+        "bytes": 2895,
+        "sha256": "818a852dc13275f2634307c70a7f49ce54aa40ab4d1234b476efc5a67db0d124"
+      },
+      {
+        "path": "ncbi-kf604634.gb.txt",
+        "bytes": 3221,
+        "sha256": "2a9ba495e19832a708cb19375cdc487520067f98ad03c61e9c16b9797b769b8e"
+      }
+    ]
+  },
+  "recordAssessment": {
+    "gbif": {
+      "gbifId": "2248809978",
+      "occurrenceId": "BPC001-13",
+      "datasetTitle": "International Barcode of Life project (iBOL)",
+      "doi": "10.15468/inygc6",
+      "eventDate": "2011-07-08",
+      "basisOfRecord": "MATERIAL_SAMPLE",
+      "sourceLocality": "Angat River",
+      "sourceReportedStateProvince": "Central Luzon",
+      "sourceCountry": "Philippines",
+      "sourceRecordedScientificName": "BOLD:AAC5247",
+      "sourceAcceptedScientificName": "BOLD:AAC5247",
+      "taxonRank": "UNRANKED",
+      "recordLicense": "http://creativecommons.org/licenses/by/4.0/legalcode",
+      "issueFlags": [
+        "GEODETIC_DATUM_ASSUMED_WGS84",
+        "CONTINENT_DERIVED_FROM_COORDINATES",
+        "TAXON_CONCEPT_ID_NOT_FOUND",
+        "TAXON_ID_NOT_FOUND",
+        "INSTITUTION_MATCH_NONE"
+      ],
+      "coordinatePresent": true,
+      "coordinateUncertaintySupplied": false,
+      "geodeticDatumIssue": true,
+      "mediaCount": 0
+    },
+    "originalSourceChain": {
+      "boldRecordUrl": "https://portal.boldsystems.org/record/BPC001-13",
+      "boldApiDocumentation": "https://v5.boldsystems.org/data/api/",
+      "boldProcessId": "BPC001-13",
+      "boldSampleId": "ANAd1",
+      "boldMuseumId": "ANAd1",
+      "boldInstitution": "University of the Philippines Diliman, Institute of Biology",
+      "boldIdentification": "Arius dispar",
+      "boldIdentificationMethod": "Morphology",
+      "boldIdentifiedBy": "Jonas P. Quilang",
+      "boldBin": "BOLD:AAC5247",
+      "boldMarker": "COI-5P",
+      "boldCollectionDate": "2011-07-08",
+      "boldLocalityFromGenBankVerbatim": "Angat River",
+      "boldCoordinateAccuracySupplied": false,
+      "genBankAccession": "KF604634.1",
+      "genBankUrl": "https://www.ncbi.nlm.nih.gov/nuccore/KF604634.1",
+      "genBankDefinition": "Arius dispar voucher ANAd1 cytochrome oxidase subunit 1 (COI) gene, partial cds; mitochondrial.",
+      "genBankSequenceLength": 652,
+      "genBankVoucher": "ANAd1",
+      "genBankReportedName": "Arius dispar",
+      "genBankGeoLocName": "Philippines: Bulacan, Central Luzon, Angat River",
+      "identificationMethod": "Morphology",
+      "linkageAssessment": "BOLD sampleId/museumId ANAd1, GBIF occurrenceID BPC001-13, and GenBank voucher ANAd1/accession KF604634.1 align as one source specimen chain. BOLD and GenBank are cross-linked representations of the same specimen/sequence, not independent occurrence confirmations."
+    },
+    "taxonomicCrosscheck": {
+      "sourceReportedName": "Arius dispar",
+      "catalogueOfLifeXrUsage": "BOLD:AAC5247",
+      "catalogueOfLifeXrRank": "UNRANKED",
+      "catalogueOfLifeXrIssues": [
+        "TAXON_ID_NOT_FOUND",
+        "TAXON_CONCEPT_ID_NOT_FOUND"
+      ],
+      "gbifBackboneSpecies": "Netuma thalassina",
+      "gbifBackboneIssues": [
+        "TAXON_ID_NOT_FOUND",
+        "TAXON_CONCEPT_ID_NOT_FOUND"
+      ],
+      "interpretation": "The original BOLD/GenBank specimen identification is Arius dispar. GBIF CoL XR treats BOLD:AAC5247 as an unranked usage with taxon-concept issues, while the GBIF Backbone classification associates that unranked identifier with Netuma thalassina. Do not replace the source-reported identification with either backbone mapping without a curator-reviewed BIN/specimen taxonomy crosswalk."
+    },
+    "localityCrosscheck": {
+      "gbifAndGenBankLocality": "Angat River",
+      "bmbAtlasRow": "The BMB 2014 Atlas selected Table 2 list includes Angat River** in Bulacan; its grid/outflow notation is not a channel outline or a sample-reach match.",
+      "geographicConfidence": "Strong named-locality text match for an Angat River candidate; exact channel/reach remains unverified because no coordinate-uncertainty value or authoritative river geometry was cross-checked.",
+      "exactCoordinatesStoredInTrackedReview": false,
+      "coordinateHandling": "Exact coordinates are retained only in the Git-ignored raw API/GenBank snapshots. GBIF flags that the WGS84 datum was assumed; BOLD supplies no coordinate-accuracy value."
+    },
+    "ecologicalScope": "This historical specimen/locality candidate does not establish current presence, population, catchability, freshwater residency, diet, legal status, access, or safety at the named river."
+  },
+  "rightsAssessment": {
+    "gbifRecordLicense": "http://creativecommons.org/licenses/by/4.0/legalcode",
+    "gbifDatasetLicense": "http://creativecommons.org/licenses/by/4.0/legalcode",
+    "attributionCitation": "The International Barcode of Life Consortium (2026). International Barcode of Life project (iBOL). Occurrence dataset https://doi.org/10.15468/inygc6 accessed via GBIF.org on 2026-11-19.",
+    "boldRecordLicenseReturned": null,
+    "ncbiReuseTerms": "No item-specific reuse license was captured from the GenBank record; do not infer a blanket image, sequence, or database license from public accessibility.",
+    "disposition": "The GBIF record and dataset declare CC BY 4.0. Preserve dataset attribution for any later permitted use. BOLD/GenBank source copies remain provenance links; no image, sequence, coordinates, or source row is projected into the app. Public projection remains unapproved while identity/location checks are open."
+  },
+  "decision": {
+    "classification": "historical Angat River source-record candidate; species and reach mapping held",
+    "researchUse": "Retain the source-reported Arius dispar label with specimen/sequence provenance and the conflicting GBIF backbone mappings visible.",
+    "speciesAssertionAdded": false,
+    "waterbodyGeometryAdded": false,
+    "exactCoordinatesAdded": false,
+    "speciesImageAdded": false,
+    "publicAppProjection": false,
+    "publicationApproval": false,
+    "reason": "One source specimen chain contains useful dated, voucher-linked, locality-reported evidence, but its GBIF identifier has unresolved backbone taxonomy and its coordinate uncertainty/reach geometry are not established. Do not claim that the species is currently catchable or present throughout Angat River."
+  },
+  "nextActions": [
+    "Obtain a curator-reviewed crosswalk among BOLD:AAC5247, the morphology identification Arius dispar, and the GBIF Backbone Netuma thalassina mapping.",
+    "Confirm voucher ANAd1 against an institutional specimen/catalog record if one is publicly available.",
+    "Cross-check the source coordinate against an authoritative Angat River reach geometry and record positional uncertainty before any map placement.",
+    "Retain the GBIF CC BY attribution and separately review provider terms before reusing sequence or images; the row has no media."
+  ]
+}

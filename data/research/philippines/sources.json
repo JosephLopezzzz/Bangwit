@@ -3,7 +3,7 @@
   "checkedOn": "2026-11-19",
   "status": "research-only-source-registry",
   "scope": "National acquisition references, freshwater spatial-source leads, MIMAROPA/CALABARZON/Central Luzon identity and inland-water source reviews, and Mindanao regional freshwater survey reviews. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 953,
+  "sourceCount": 957,
   "sources": [
     {
       "id": "aoyama-et-al-2015-cagayan-glass-eel-recruitment",
@@ -32807,7 +32807,8 @@
         "status": "70-http-200-count-only-queries;one-nonzero-row-retrieval-lead;69-bounded-zeroes",
         "reviewFiles": [
           "national/reviews/central-luzon-bmb-atlas-gbif-count-screen-20261119.json",
-          "national/reviews/central-luzon-bmb-2014-wetland-atlas-count-crosswalk-20261119.json"
+          "national/reviews/central-luzon-bmb-2014-wetland-atlas-count-crosswalk-20261119.json",
+          "national/reviews/central-luzon-angat-river-bpc001-13-record-review-20261119.json"
         ],
         "queryCount": 70,
         "rawSnapshotDirectory": "raw/central-luzon-bmb-atlas-gbif-screen-20261119/",
@@ -32828,6 +32829,143 @@
         "The 35-name input includes only 20 selected Table 2 river leads and is not a screen of every Atlas river row or a complete Central Luzon waterbody denominator."
       ],
       "researchStatus": "central-luzon;bmb-2014-atlas;35-name-leads;70-count-only-field-queries;angat-river-positive-count-unreviewed;research-only"
+    },
+    {
+      "id": "gbif-angat-river-bpc001-13-occurrence-2248809978",
+      "title": "GBIF occurrence 2248809978: iBOL/BOLD specimen BPC001-13",
+      "provider": "Global Biodiversity Information Facility",
+      "url": "https://api.gbif.org/v1/occurrence/2248809978",
+      "additionalUrls": [
+        "https://api.gbif.org/v1/occurrence/2248809978/verbatim",
+        "https://www.gbif.org/occurrence/2248809978",
+        "https://api.gbif.org/v1/dataset/040c5662-da76-4782-a48e-cdea1892d14c"
+      ],
+      "role": "One historic MATERIAL_SAMPLE occurrence returned by the Angat River locality query. The original BOLD/GenBank chain reports Arius dispar (voucher/sample ANAd1), while GBIF taxonomic mappings conflict; retain as a research-only candidate.",
+      "checkedOn": "2026-11-19",
+      "citation": "International Barcode of Life project (iBOL) (2026). International Barcode of Life project occurrence dataset. https://doi.org/10.15468/inygc6. Record BPC001-13 accessed via GBIF.org on 2026-11-19.",
+      "access": {
+        "status": "one-row-retrieved;source-record-and-verbatim-reviewed;taxonomy-and-reach-held",
+        "reviewFiles": [
+          "national/reviews/central-luzon-angat-river-bpc001-13-record-review-20261119.json",
+          "national/reviews/central-luzon-bmb-atlas-gbif-count-screen-20261119.json"
+        ],
+        "reviewedSections": "GBIF occurrence and verbatim records, event date, locality, basis of record, original dataset, license, media, taxonomic classifications and issue flags."
+      },
+      "reuse": {
+        "metadata": "GBIF occurrence record and iBOL dataset label CC BY 4.0; use dataset citation and attribution if later approved.",
+        "raw": "Full API responses, including the exact coordinates, are stored only in the Git-ignored local research directory with byte lengths and SHA-256 hashes.",
+        "content": "No species assertion, map point, image, sequence, or public-app occurrence row was created."
+      },
+      "publicationApproval": false,
+      "license": "CC-BY-4.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by/4.0/legalcode",
+      "caveats": [
+        "The source-level name is Arius dispar, but GBIF CoL XR leaves BOLD:AAC5247 unranked and the GBIF Backbone classification associates it with Netuma thalassina; taxon issues are present.",
+        "The occurrence and GenBank record share the same BPC001-13/ANAd1 specimen chain and are not independent occurrence confirmations.",
+        "The named locality is Angat River; coordinate uncertainty and an authoritative reach crosswalk are not supplied.",
+        "The historical row does not establish present-day catchability, habitat use, diet, legal status, access or safety."
+      ],
+      "researchStatus": "central-luzon;angat-river;gbif-row-2248809978;bold-bpc001-13;taxonomy-conflict;research-only"
+    },
+    {
+      "id": "gbif-ibol-dataset-040c5662-da76-4782-a48e-cdea1892d14c",
+      "title": "GBIF dataset metadata: International Barcode of Life project (iBOL)",
+      "provider": "International Barcode of Life project (iBOL), indexed by GBIF",
+      "url": "https://api.gbif.org/v1/dataset/040c5662-da76-4782-a48e-cdea1892d14c",
+      "additionalUrls": [
+        "https://doi.org/10.15468/inygc6",
+        "https://www.gbif.org/dataset/040c5662-da76-4782-a48e-cdea1892d14c"
+      ],
+      "role": "Dataset-level provenance, citation, DOI and license metadata for the GBIF record follow-up; metadata does not resolve the specimen taxon or river reach.",
+      "checkedOn": "2026-11-19",
+      "citation": "The International Barcode of Life Consortium (2026). International Barcode of Life project (iBOL). Occurrence dataset https://doi.org/10.15468/inygc6 accessed via GBIF.org on 2026-11-19.",
+      "access": {
+        "status": "gbif-dataset-api-200;dataset-metadata-reviewed",
+        "reviewFiles": [
+          "national/reviews/central-luzon-angat-river-bpc001-13-record-review-20261119.json"
+        ],
+        "reviewedSections": "Dataset title, DOI, citation, publishing project and dataset license."
+      },
+      "reuse": {
+        "metadata": "Dataset metadata reports Creative Commons Attribution 4.0 International (CC BY 4.0); cite the dataset on reuse.",
+        "raw": "The dataset metadata response is retained only in Git-ignored local research storage.",
+        "content": "This entry records dataset provenance only; it is not blanket permission to reuse third-party images or sequence material from other providers."
+      },
+      "publicationApproval": false,
+      "license": "CC-BY-4.0",
+      "licenseUrl": "http://creativecommons.org/licenses/by/4.0/legalcode",
+      "caveats": [
+        "The dataset license is recorded as GBIF metadata and should be preserved with attribution.",
+        "The dataset license does not resolve taxonomic or locality uncertainty in any individual row."
+      ],
+      "researchStatus": "ibol;gbif-dataset-metadata;doi-10.15468/inygc6;cc-by-4.0;research-only"
+    },
+    {
+      "id": "bold-bpc001-13-barcode-record",
+      "title": "BOLD public barcode record BPC001-13 (sample ANAd1)",
+      "provider": "Barcode of Life Data Systems (BOLD)",
+      "url": "https://portal.boldsystems.org/record/BPC001-13",
+      "additionalUrls": [
+        "https://v5.boldsystems.org/data/api/",
+        "https://portal.boldsystems.org/api/docs"
+      ],
+      "role": "BOLD API record for the barcode-linked specimen; reports Arius dispar, identification by morphology, sample/museum identifier ANAd1, and BIN BOLD:AAC5247.",
+      "checkedOn": "2026-11-19",
+      "citation": "Barcode of Life Data Systems. BPC001-13 public barcode record; retrieved through BOLD Data Portal API on 2026-11-19.",
+      "access": {
+        "status": "public-api-record-retrieved-http-200;specimen-chain-reviewed",
+        "reviewFiles": [
+          "national/reviews/central-luzon-angat-river-bpc001-13-record-review-20261119.json"
+        ],
+        "reviewedSections": "Process ID, sample/museum ID, institution, taxonomic identification, method and identifier, BIN, marker, date, locality linkage and coordinate-accuracy field."
+      },
+      "reuse": {
+        "metadata": "The returned BOLD record did not supply an item-level reuse license. Do not infer BOLD reuse terms from the GBIF copy license.",
+        "raw": "The BOLD API record containing a sequence is retained only in Git-ignored local research storage; no sequence string was copied into the tracked review.",
+        "content": "No BOLD media or image was returned or reused."
+      },
+      "publicationApproval": false,
+      "license": null,
+      "licenseUrl": null,
+      "caveats": [
+        "The BOLD BIN is a sequence cluster and its relation to the species identification conflicts with GBIF backbone treatment.",
+        "The BOLD record and GenBank accession describe the same specimen/sample chain, not independent occurrence rows.",
+        "No image or item-level BOLD reuse license was verified."
+      ],
+      "researchStatus": "bold;BPC001-13;ANAd1;ariidae;taxonomy-crosswalk-open;research-only"
+    },
+    {
+      "id": "ncbi-kf604634-1-genbank-submission",
+      "title": "GenBank accession KF604634.1: Arius dispar voucher ANAd1 COI sequence",
+      "provider": "National Center for Biotechnology Information (NCBI), GenBank",
+      "url": "https://www.ncbi.nlm.nih.gov/nuccore/KF604634.1",
+      "additionalUrls": [
+        "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=KF604634&rettype=gb&retmode=text"
+      ],
+      "role": "GenBank direct-submission record links voucher ANAd1 and a 652-bp COI sequence to Arius dispar, date 2011-07-08, and verbatim Angat River locality in Bulacan, Central Luzon.",
+      "checkedOn": "2026-11-19",
+      "citation": "Quilang, J.P. and Yu, S.C. DNA barcoding of commercially important catfishes in the Philippines. Unpublished direct submission to GenBank, accession KF604634.1, submitted 2013-08-30.",
+      "access": {
+        "status": "genbank-record-retrieved-http-200;source-fields-reviewed",
+        "reviewFiles": [
+          "national/reviews/central-luzon-angat-river-bpc001-13-record-review-20261119.json"
+        ],
+        "reviewedSections": "Definition, source organism, voucher, collection date, geo_loc_name, lat_lon, associated BOLD record, identified_by and COI feature length."
+      },
+      "reuse": {
+        "metadata": "No item-level reuse license was recorded from the GenBank submission; public accessibility alone is not treated as blanket reuse permission.",
+        "raw": "The GenBank-format record including the sequence is retained only in Git-ignored local research storage; no sequence string is copied into tracked files or app data.",
+        "content": "Used as provenance for a historical specimen candidate only; no sequence or exact coordinate is republished."
+      },
+      "publicationApproval": false,
+      "license": null,
+      "licenseUrl": null,
+      "caveats": [
+        "The GenBank and BOLD data trace to the same ANAd1 specimen, so they are not independent taxon confirmations.",
+        "The coordinate has no reported uncertainty in the captured GenBank entry; retain exact coordinates locally only.",
+        "The submitted Arius dispar name is held against the GBIF Backbone Netuma thalassina mapping pending taxonomic review."
+      ],
+      "researchStatus": "ncbi;genbank;KF604634.1;ANAd1;angat-river;research-only"
     }
   ],
   "sourcePolicy": {
