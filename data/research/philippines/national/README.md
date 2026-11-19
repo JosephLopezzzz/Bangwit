@@ -73,6 +73,14 @@ In this 3,268-row consistency screen, 320 points fell inside the province named 
 
 The 1,298-row attribute and pour-point queue is Git-ignored at `data/research/philippines/raw/national/hydrolakes-philippines-v1-waterbody-candidates.jsonl`; its tracked receipt is `reviews/hydrolakes-philippines-candidate-extract-20261107.json`. No lake polygons are copied into the app, and no region, waterbody identity or fish assertion is assigned. HydroLAKES v1 aims at lakes of at least 10 ha and explicitly omits river and wetland polygons, so separate source work remains necessary for small lakes, ponds, rivers, streams and wetlands. The original product and the Zenodo Asia subset are CC BY 4.0; preserve attribution and re-review the actual source version before any redistribution.
 
+## NCR waterbody source leads
+
+### NCR NAPWC Lagoon geometry lead
+
+The historical BMB inland-wetlands rows label a Quezon City pond as “Ninoy Aquino Parks and Wildlife Center Lagoon” in the 2016 atlas and “Ninoy Aquino Parks and Wildlife Center” in the 2019 inventory; both show 3.39 ha and likely share inventory lineage. Quezon City's 2018 ecological profile independently describes a man-made lagoon at NAPWC. BMB PAIS's indexed profile describes an approximate 4.0 ha man-made lagoon in the park's northwest, with an islet; the direct PAIS page request timed out, so this is recorded as an indexed source finding. The two reported areas conflict and their dates and measurement methods are not reconciled.
+
+OpenStreetMap contributors have a closed `natural=water` polygon named “Parks and Wildlife Lagoon” ([way 37400786](https://www.openstreetmap.org/way/37400786)). It is a community geometry lead, not an official outline or independent survey. The API snapshot remains in ignored local research storage; no geometry is committed or used by the app. OSM data is under ODbL 1.0, with attribution and share-alike terms for adapted database distribution ([OpenStreetMap copyright and license](https://www.openstreetmap.org/copyright)). The BMB-to-OSM match, official shoreline, current area, fishing permission, and fish presence remain unverified. See `reviews/ncr-napwc-lagoon-alias-review-20261119.json` and the source entries in `data/research/philippines/sources.json`.
+
 ## Existing inputs reused by M0
 
 - `data/research/philippines/raw/freshwater-download-receipt.json` and `freshwater-checklist-candidates.json`: the existing pinned Plazi/GBIF freshwater checklist snapshot; 374 extracted names remain research candidates.

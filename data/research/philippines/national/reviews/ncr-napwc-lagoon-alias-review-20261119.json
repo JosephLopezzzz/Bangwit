@@ -5,20 +5,23 @@
   "phaseId": "L2",
   "regionId": "1300000000",
   "regionName": "National Capital Region (NCR)",
-  "status": "BMB-park-named-pond-has-strong-historical-NAPWC-Lagoon-alias-candidate;feature-geometry-unverified;no-current-access-or-fish-claim",
+  "status": "BMB-row-has-strong-NAPWC-Lagoon-alias-candidate;OSM-feature-polygon-found-but-not-authoritative;area-discrepancy-open;no-current-access-or-fish-claim",
   "parentReviewId": "ncr-bmb-2019-freshwater-locality-crosswalk-20261119",
   "question": "Can the BMB 2019 park-named pond row be reconciled with the NAPWC Lagoon name without treating repeated historical inventory values as independent surveys or geometry?",
   "sourceIds": [
     "denr-bmb-philchm-inland-wetlands-2019",
     "denr-bmb-inland-wetlands-atlas-2016",
-    "psa-ncr-cities-list"
+    "bmb-pais-napwc-protected-area-profile",
+    "osm-napwc-lagoon-way-37400786",
+    "psa-ncr-cities-list",
+    "quezon-city-2018-ecological-profile"
   ],
   "snapshotHashes": {
-    "sourceRegistry": "5646cc97ada19600e9a59370d31875d4ed6994a7762aafa837ea8a099d64be51",
+    "sourceRegistry": "6afe0aa649af513f5bb10d96a6b68ddbffc0ab72d8244576a077425f5c61eeea",
     "administrativeRegistry": "c741456fbc2cfc9d5d813484a0b661ef206154977959fc27a289ca86732142e8",
     "parentBmbLocalityReview": "dc13095efd5aa4f3c33addc29e4740e5ffa456e2346dabc24f14c9fc380e5c1c"
   },
-  "method": "Compared the BMB 2019 park-named row with the BMB 2016 atlas row named Ninoy Aquino Parks and Wildlife Center Lagoon. Both indexed table rows assign Quezon City, pond class, and 3.39 ha. The two BMB records share a publisher and likely an underlying inventory lineage, so they are not treated as independent surveys. Separately reviewed Quezon City's 2018 Ecological Profile, which describes a man-made lagoon among NAPWC amenities. The profile supports the existence of a park lagoon but does not identify it by the atlas label or provide the BMB area. This supports a strong source-name alias candidate only; it does not prove exact one-to-one feature identity, geometry, current area, current fishing permission, or fish presence.",
+  "method": "Compared the BMB 2019 park-named row with the BMB 2016 atlas row named Ninoy Aquino Parks and Wildlife Center Lagoon. Both BMB table rows assign Quezon City, pond class, and 3.39 ha; their shared publisher and likely inventory lineage mean they are not independent surveys. Quezon City's 2018 Ecological Profile independently confirms a man-made lagoon among NAPWC amenities, while BMB PAIS's indexed description places an approximate 4.0 ha man-made lagoon in the park's northwest and mentions a central islet; direct PAIS page retrieval timed out and the indexed summary is used with that limitation. OpenStreetMap provides a named, closed natural=water way (way 37400786) as a community-mapped feature-level geometry candidate. The OSM object is not an official shoreline and is not spatially cross-validated against either BMB record or the PAIS description. The 3.39 ha BMB and approximate 4.0 ha PAIS values remain an unresolved source discrepancy. No current area, official boundary, exact source-to-source feature identity, current fishing permission, or fish presence is established.",
   "inventoryRows": [
     {
       "sourceId": "denr-bmb-inland-wetlands-atlas-2016",
@@ -47,20 +50,51 @@
     "historicalAmenityLimit": "The profile's dated amenity description is not current fishing authorization, safety guidance, public access confirmation, or evidence that all fishing is allowed in the protected area.",
     "reuse": "No item-specific open license was verified. Only attributed factual findings are retained; no text, map, or photographs are reproduced."
   },
+  "officialBmbPaisContext": {
+    "publisher": "Biodiversity Management Bureau, DENR",
+    "title": "Ninoy Aquino Parks and Wildlife Center protected-area profile, Protected Area Information System",
+    "url": "https://pais.bmb.gov.ph/home/info/QNLIAKBLTFX",
+    "accessedOn": "2026-11-19",
+    "finding": "The indexed official profile describes a man-made lagoon of approximately 4.0 ha in the north-western portion of NAPWC and mentions a central islet.",
+    "retrievalLimit": "Direct page retrieval timed out; the factual summary was available in the official page's indexed rendering. No downloadable lagoon outline or map layer was retrieved.",
+    "dateAndAreaLimit": "The value is approximate and its measurement date and method are not specified in the reviewed indexed rendering. PAIS warns that profile data may lag actual conditions while updates and validation are ongoing.",
+    "reuse": "No item-specific reuse license was verified. Only attributed factual context is retained; no PAIS text, map, or geometry is reproduced."
+  },
+  "communityMappedGeometryCandidate": {
+    "sourceId": "osm-napwc-lagoon-way-37400786",
+    "featureUrl": "https://www.openstreetmap.org/way/37400786",
+    "apiUrl": "https://api.openstreetmap.org/api/0.6/way/37400786/full.json",
+    "retrievedOn": "2026-11-19",
+    "osmObjectVersion": 8,
+    "osmLastEditedAt": "2025-10-11T14:13:54Z",
+    "sourceTags": {
+      "name": "Parks and Wildlife Lagoon",
+      "natural": "water"
+    },
+    "geometryDisposition": "The API returned a closed named water way with polygon geometry. Geometry and its coordinates remain only in ignored local research storage; no coordinates or adapted boundary are committed or served by the app.",
+    "snapshot": {
+      "path": "data/research/philippines/raw/national/osm-napwc-lagoon-20261119/way-37400786-full.json",
+      "sha256": "2c4caddadea42a9ff25f24fa0312ae5acdb074db7336a284c30bab42f4e9e427",
+      "gitIgnored": true
+    },
+    "reuse": "OpenStreetMap data is licensed under ODbL 1.0. Credit OpenStreetMap contributors; review share-alike compatibility before any future distribution of adapted geometry or database content.",
+    "identityLimit": "The matching name is a crosswalk lead, not proof that the OSM feature is exactly the BMB inventory waterbody or official PAIS lagoon footprint. Community mapping is not independent field or survey validation."
+  },
   "localityCrosswalk": {
     "administrativeUnit": {
       "name": "Quezon City",
       "psgcCode": "1381300000",
       "sourceId": "psa-ncr-cities-list"
     },
-    "relationshipDisposition": "strong-historical-alias-candidate;BMB-2016-NAPWC-Lagoon-and-BMB-2019-park-name-row-match-city-wetland-class-and-reported-area;QC-profile-independently-confirms-a-man-made-park-lagoon;exact-water-feature-one-to-one-match-and-outline-unverified",
-    "areaDisposition": "3.39 ha appears in both historical BMB table rows; preserve only as source-reported inventory metadata, not as a current area or geometry.",
-    "decision": "Cross-reference the two BMB labels as a strong research alias candidate for the lagoon described in the QC profile, but retain the original source strings and do not create or merge a canonical NCR waterbody lead without feature-level spatial evidence."
+    "relationshipDisposition": "BMB-historical-alias-candidate-with-OSM-named-polygon-lead;QC-profile-and-PAIS-independently-describe-park-lagoon;exact-BMB-OSM-crosswalk-and-official-outline-unverified",
+    "areaDisposition": "BMB lists 3.39 ha in the 2016 and 2019 records, likely repeated inventory metadata; PAIS gives approximately 4.0 ha. These source values have no reconciled measurement date or method and must not be collapsed into a current area or geometry.",
+    "decision": "Retain original BMB source labels and link the named OSM polygon as a community geometry candidate for follow-up only. Keep the BMB-to-OSM feature match, official shoreline, and area unresolved; do not create a canonical public NCR waterbody or publish geometry."
   },
   "counts": {
     "bmbInventoryRowsCompared": 2,
     "independentMunicipalContextSources": 1,
     "strongNameAliasCandidatesRecorded": 1,
+    "namedCommunityPolygonCandidatesRecorded": 1,
     "exactSpatialMatchesValidated": 0,
     "canonicalWaterbodyLeadsCreated": 0,
     "geometryValidated": 0,
@@ -71,10 +105,11 @@
   },
   "limitations": [
     "BMB's 2016 and 2019 records are from the same agency and likely repeat a shared historical inventory; they do not count as two independent measurements or surveys.",
-    "The matching 3.39 ha values are historical source attributes, not present-day measurement, lake/pond boundary, or geometry.",
+    "The BMB 3.39 ha values and PAIS approximate 4.0 ha value conflict; measurement dates, methods, and feature extents have not been reconciled. Neither value is a current survey measurement or geometry.",
     "Quezon City's profile confirms a man-made lagoon within NAPWC but does not explicitly link its lagoon to the BMB rows or establish a unique one-to-one feature crosswalk.",
+    "The OSM way is community-mapped and not an official boundary. Its name does not independently validate the BMB/PAIS identity, shoreline accuracy, reported area, or current water extent; the underlying polygon remains local-only and ODbL-governed.",
     "The QC profile's historical fishing-amenity description is not current fishing permission. NAPWC's protected-area status and present park rules require separate, current authority review before any fishing-site presentation.",
     "No fish inventory, taxon occurrence, access, water safety, legal rule, geometry, or public-app record is added; NCR and Luzon coverage remain incomplete."
   ],
-  "nextAction": "Keep this as a research alias candidate. Seek a reusable, feature-level park plan or geospatial source and current access/rules documentation before creating a canonical waterbody lead or describing fishing access; continue the NCR inventory without interpreting missing records as species absence."
+  "nextAction": "Seek authoritative or independently surveyed geospatial evidence to reconcile the OSM candidate with the BMB/PAIS feature and area discrepancy. Separately review current protected-area access/rules and independently sourced fish records before making any fishing-site claim. Continue the NCR waterbody and freshwater, brackish, and marine source sweep; do not interpret missing records as species absence."
 }
