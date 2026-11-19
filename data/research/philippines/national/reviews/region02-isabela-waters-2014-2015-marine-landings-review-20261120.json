@@ -5,7 +5,7 @@
   "phaseId": "L5",
   "regionIds": ["0200000000"],
   "province": "Isabela",
-  "status": "historical-fishery-dependent-marine-landings;238-species-aggregate-claim;four-municipality-landing-centers;capture-sites-unresolved;status-count-conflict;reuse-unverified;research-only",
+  "status": "historical-fishery-dependent-marine-landings;abstract-and-methods-crosschecked;238-species-aggregate-claim;four-municipality-landing-centers;capture-sites-unresolved;table-not-visually-verified;status-count-conflict;reuse-unverified;research-only",
   "question": "Can Encarnacion et al. (2017) support species-by-waterbody or current-presence claims for the Isabela coast, or only a historical fishery-landings summary?",
   "source": {
     "id": "kochi-kuroshio-isabela-waters-marine-fish-landings-2017",
@@ -34,9 +34,43 @@
     },
     "scopeInterpretation": "A historical, fishery-dependent landing summary for the Isabela fishing ground. The four landing-municipality labels are not capture coordinates or waterbody-specific catch locations; the paper does not provide a verified species-by-capture-site matrix in the reviewed text."
   },
+  "verifiedAggregateFindings": {
+    "abstractAndMethodsReviewed": true,
+    "samplingUnit": "Fishers' landed catch recorded by trained NSAP enumerators at established landing centers; not a direct station-based ecological survey.",
+    "samplingFrequency": "Every other two days, including weekends and holidays, from July 2014 through June 2015.",
+    "landingCenters": ["Palanan", "Divilacan", "Maconacon", "Dinapigue"],
+    "recordedFields": ["species composition", "species weight", "total species count", "fishing gear"],
+    "enumeratorAndGearContext": {
+      "fishersReported": 286,
+      "gearTypesReported": 15
+    },
+    "sourceReportedAggregate": {
+      "landedFishIndividuals": 23980,
+      "species": 238,
+      "genera": 109,
+      "families": 54
+    },
+    "topSourceReportedCatchShares": [
+      {
+        "nameAsPublished": "Thunnus obesus",
+        "reportedSharePercent": 18.63
+      },
+      {
+        "nameAsPublished": "Decapterus macarellus",
+        "reportedSharePercent": 14.27
+      },
+      {
+        "nameAsPublished": "Terapon theraps",
+        "reportedSharePercent": 13.66
+      }
+    ],
+    "shareMetricInterpretation": "The abstract reports these percentages as shares of total catch landings. The methods define catch percentage abundance using landed weight in kilograms; no independent recalculation was made.",
+    "tableAccess": "The PDF reader exposes the article text and Table 1 heading but not the table rows. Page screenshot retrieval returned HTTP 429, and an attempted direct PDF download followed a temporary object-storage redirect that returned HTTP 403. No table values or names were transcribed from OCR or inferred.",
+    "taxonomicScope": "The paper's 238-species aggregate is reported as fish in the abstract and species-diversity section, while its catch-composition discussion also separately reports invertebrates, sharks, and rays. The fish-only versus mixed-catch denominator remains unresolved until the original table is visually checked."
+  },
   "conflictsAndLimits": [
     "The abstract reports four near-threatened, one vulnerable and one endangered species; the results instead report 14 near-threatened, one endangered, one vulnerable, 140 least concern, 10 data deficient and 72 not evaluated; the conclusion repeats 14 near-threatened and endangered but omits the vulnerable count. Treat all conservation-status totals as internally inconsistent and historical, not current IUCN status.",
-    "The paper includes a species-composition table, but its rows were not reliably exposed in the reviewed text extraction and were not transcribed or taxonomically checked in this screen.",
+    "The paper includes a species-composition table, but its rows remain unavailable for reliable visual review and were not transcribed or taxonomically checked; only the three top catch shares exposed in the abstract are recorded above.",
     "The paper describes landing-center sampling, not georeferenced capture events; landings in a municipality do not establish that every listed species was captured inside that municipality's waters.",
     "Catch data may include highly mobile and migratory fish. Do not interpret the 2014–2015 landing list as current local presence, habitat residency, abundance, or catchability.",
     "The article uses mixed fishery categories and mentions invertebrates, sharks and rays in its discussion; the precise taxonomic scope of the 238-species aggregate needs confirmation against the original table before species-row extraction.",
@@ -52,7 +86,7 @@
     "publicAppRows": 0,
     "publicationApproval": false
   },
-  "nextAction": "For any future extraction, manually verify the full species table from the primary PDF, check every name against current authoritative taxonomic sources, resolve the paper's status-count discrepancies, determine fish-only versus mixed-catch scope, seek capture-ground/landing-center crosswalks, and verify the article's item-specific reuse terms. Keep the source separate from Babuyan Channel and Batanes summaries and do not sum their catch counts.",
+  "nextAction": "Obtain a readable article copy or page images after the repository rate limit clears; visually verify the full species table, then check names against current authoritative taxonomic sources, resolve the paper's status-count discrepancies, determine fish-only versus mixed-catch scope, seek capture-ground/landing-center crosswalks, and verify item-specific reuse terms. Keep this source separate from Babuyan Channel and Batanes summaries and do not sum their catch counts.",
   "sources": [
     {
       "url": "https://kochi.repo.nii.ac.jp/records/7513",
