@@ -1,0 +1,71 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "ncr-marikina-2011-source-prefix-and-public-catalog-search-20261119",
+  "reviewedOn": "2026-11-19",
+  "phaseId": "L2",
+  "regionId": "1300000000",
+  "regionName": "National Capital Region (NCR)",
+  "parentReviewId": "ncr-marikina-2011-genbank-bold-metadata-crosswalk-20261119",
+  "status": "primary-paper-prefix-confirmed;bounded-public-catalog-search-no-independent-crosswalk;station-sample-join-unresolved;research-only",
+  "question": "Does the primary 2011 article or a publicly indexed UP museum catalog/supplement resolve the BMP versus BPMP ID discrepancy or link individual vouchers/accessions to the five Marikina stations?",
+  "sourceIds": [
+    "jumawan-et-al-2011-marikina-pterygoplichthys-dna-barcodes",
+    "ncbi-marikina-jf498719-jf498754-genbank-metadata-20261119",
+    "bold-marikina-bpmp001-036-processid-lookup-20261119"
+  ],
+  "sourceSearch": {
+    "primaryArticle": {
+      "url": "https://scienggj.org/2011/2011n2.17.pdf",
+      "reviewedSections": "Materials and Methods, Collection and sorting; Discussion, Shared genealogy and inconclusive relationships; published voucher, BOLD process-ID, and GenBank accession statements.",
+      "findings": [
+        "The article explicitly prints Marikina BOLD Process IDs as BMP001-11 through BMP036-11.",
+        "The article reports deposit at the UP Diliman Zoological Museum and category voucher labels P0 1-6, PI 1-6, P2 1-6, P3 1-6, P4 1-6, and P5 1-6.",
+        "The article names five Marikina sampling stations and shows a sampling-station figure, but the reviewed text does not assign individual BOLD IDs, GenBank accessions, or voucher numbers to a station."
+      ]
+    },
+    "publicCatalogSearch": {
+      "searchedOn": "2026-11-19",
+      "searches": [
+        "Exact GenBank voucher-string searches including Ppar0-1MR and Pdis5-1MR.",
+        "Article voucher-category string searches including P0 1-6 and Marikina Pterygoplichthys.",
+        "Domain-restricted indexed searches on upd.edu.ph and repository.upd.edu.ph for the Zoological Museum, fish catalog, Pterygoplichthys, Marikina, and voucher terms."
+      ],
+      "result": "The indexed results surfaced the same primary article and secondary full-text copies, but no independent museum catalog record, accession-to-voucher table, or article supplement that resolves the links.",
+      "scopeLimit": "This is a bounded public web-index search, not an exhaustive museum database query and not evidence that unpublished or unindexed records do not exist.",
+      "contactOrLoginAttempted": false
+    },
+    "priorDatabaseCrosscheck": {
+      "reviewId": "ncr-marikina-2011-genbank-bold-metadata-crosswalk-20261119",
+      "result": "NCBI db_xref metadata links the 36 accessions to BPMP001-11 through BPMP036-11, while the bounded current BOLD API query returned no metadata. The legacy v3 endpoint returned HTML rather than TSV."
+    }
+  },
+  "crosswalkFindings": {
+    "identifierConflict": "The BMP spelling is confirmed in the primary article PDF; BPMP is confirmed in NCBI GenBank db_xref. The conflict is present between primary-source records and is not a prior transcription-only discrepancy. Do not silently add or remove a character.",
+    "voucherConflict": "The article gives morphology-category voucher labels, while GenBank provides distinct specimen_voucher strings. Their category-prefix pattern is compatible, but no public museum catalog source establishes a one-to-one museum label crosswalk.",
+    "stationConflict": "The paper names five stations and depicts them in Figure 1, but does not join the 36 sequence IDs or voucher labels to those stations. Five GenBank coordinate clusters do not independently establish the station mapping.",
+    "databaseLimit": "The empty BOLD API result is bounded to the queried process IDs and date; it does not disprove the article’s historical statement that metadata were submitted or establish global absence from BOLD."
+  },
+  "evidenceDecision": {
+    "decision": "Record the BMP/BPMP disagreement as an unresolved identifier conflict and retain accession, voucher, and station links as research-only. Do not infer the intended identifier spelling or assign a specimen to a station.",
+    "independentCatalogCrosswalkFound": false,
+    "identifierConflictResolved": false,
+    "accessionToStationLinksAdded": 0,
+    "museumVoucherLinksVerified": 0,
+    "speciesRowsAdded": 0,
+    "exactCoordinatesAddedToTrackedFiles": 0,
+    "publicProjection": false,
+    "publicationApproval": false,
+    "reason": "The primary paper and GenBank metadata disagree on the process-ID string, the BOLD query did not return specimen records, and no independent indexed museum catalog or supplement was found. The paper’s sampling map is not an accession-to-station table."
+  },
+  "nonClaims": [
+    "No source establishes that BMP is a typo for BPMP or that either spelling is an alias for the other.",
+    "A bounded web-index search does not establish that no museum or unpublished catalog record exists.",
+    "The five named stations and five GenBank coordinate clusters are not joined without specimen-level provenance.",
+    "No species identity, current presence, abundance, catchability, access, legal harvest, safety, diet, native status, or invasive status is inferred."
+  ],
+  "nextActions": [
+    "If an indexed public museum dataset or authorized catalog extract becomes available, match it by the complete accession and voucher string before station mapping.",
+    "Keep the BMP/BPMP conflict explicit in future citations and data lineage; do not normalize either identifier automatically.",
+    "Continue NCR freshwater source work independently of this unresolved historical accession chain."
+  ]
+}
