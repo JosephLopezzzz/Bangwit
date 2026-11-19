@@ -1,0 +1,127 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "ncr-pasig-parex-eis-version-and-fish-table-reconciliation-20261120",
+  "reviewedOn": "2026-11-20",
+  "phaseId": "L2",
+  "regionIds": [
+    "0400000000",
+    "1300000000"
+  ],
+  "status": "official-draft-and-revised-eis-compared;fish-method-conflict;table-row-conflicts-quantified;source-only;research-only",
+  "question": "Can the Draft and Revised PAREX EIS fish methods, station matrix, and taxonomic table be reconciled into one reliable fish dataset?",
+  "sources": [
+    {
+      "id": "rhr-smc-2022-parex-draft-eis-pasig-fish-survey",
+      "citation": "RHR Consulting Services, Inc. (2022). Environmental Impact Assessment: Pasig River Expressway Project (Draft EIS). Prepared for SMC Infrastructure; official copy hosted on the DENR Environmental Management Bureau EIA portal.",
+      "url": "https://eia.emb.gov.ph/wp-content/uploads/2022/03/PAREX_Draft-EIS_2022FEB11.pdf",
+      "supports": "Draft EIS cover, six-station sampling table, electric-fishing method, Tables 2-18/2-19, and the narrative count."
+    },
+    {
+      "id": "rhr-smc-2022-parex-revised-eis-pasig-fish-survey",
+      "citation": "RHR Consulting Services, Inc. (2022). Environmental Impact Assessment: Pasig River Expressway Project (Revised EIS Report). Prepared for SMC Infrastructure; official copy hosted on the DENR Environmental Management Bureau EIA portal.",
+      "url": "https://eia.emb.gov.ph/wp-content/uploads/2022/09/3.PAREX_-Revised-EIS-Report.pdf",
+      "supports": "Revised EIS six-station sampling table, fisherfolk fishing-line method, Tables 2-19/2-20, and the narrative count."
+    }
+  ],
+  "versionFrame": {
+    "draft": {
+      "versionAsTitled": "Draft EIS",
+      "coverYear": 2022,
+      "sourceLocators": [
+        "Cover and preparer/client: printed page i; web-reader lines 0-13.",
+        "Station/date table: printed report pages 2-99 to 2-100; web-reader lines 7502-7554.",
+        "Fish method, station matrix and taxonomic table: printed pages 2-106 to 2-108; web-reader lines 7971-8143."
+      ],
+      "methodAsReported": "Electric fishing; each site fished for 30 minutes.",
+      "stationMatrixTable": "Table 2-18.",
+      "taxonomicTable": "Table 2-19.",
+      "narrativeAsReported": "14 fish species overall; 12 at “EWE4”."
+    },
+    "revised": {
+      "versionAsTitled": "Revised EIS Report",
+      "coverYear": 2022,
+      "sourceLocators": [
+        "Station/date table: printed page 2-98; web-reader lines 9589-9603.",
+        "Fish method, station matrix and taxonomic table: printed pages 2-108 to 2-110; web-reader lines 10243-10312."
+      ],
+      "methodAsReported": "Fish samples collected through fishing lines by fisherfolk; each site fished for 30 minutes.",
+      "stationMatrixTable": "Table 2-19.",
+      "taxonomicTable": "Table 2-20.",
+      "narrativeAsReported": "14 fish species overall; 12 at “FWE4”."
+    }
+  },
+  "comparison": {
+    "stationFrame": "Both versions list the same six FWE stations, reported localities, printed coordinates and 7 October 2021 sampling date. Matching station metadata does not establish that the method statements or fish identifications are correct.",
+    "methodConflict": {
+      "draft": "Electric fishing.",
+      "revised": "Fishing lines used by fisherfolk.",
+      "sharedEffort": "Each version says 30 minutes per site.",
+      "decision": "The source versions conflict about collection method. Do not choose one as the verified field method without field logs or a correction from the preparer."
+    },
+    "tableNumberShift": "The Draft labels the station matrix Table 2-18 and taxonomic table Table 2-19; the Revised EIS renumbers these as Tables 2-19 and 2-20.",
+    "exactRowComparison": {
+      "draftStationMatrixBinomialRows": 13,
+      "revisedStationMatrixBinomialRows": 13,
+      "stationMatrixExactBinomialStringsMatch": true,
+      "draftTaxonomicTableBinomialRows": 13,
+      "revisedTaxonomicTableBinomialRows": 13,
+      "taxonomicTableExactBinomialStringsMatch": true,
+      "exactBinomialStringsSharedBetweenMatrixAndTaxonomicTable": 9,
+      "matrixOnlyExactStrings": [
+        "Anabas testudineus",
+        "Megalops cyprinoides",
+        "Lutjanus bohar",
+        "Pangasius hypophthalmus"
+      ],
+      "taxonomicTableOnlyExactStrings": [
+        "Trichopodus pectoralis",
+        "Pempheris oualensis",
+        "Lipocheilus carnolabrum",
+        "Pangasianodon hypophthalmus"
+      ],
+      "distinctExactStringsAcrossTables": 17,
+      "interpretation": "These are exact source-string counts, not a count of biological species. Pangasius hypophthalmus and Pangasianodon hypophthalmus are kept as different printed combinations here; this review does not normalize them."
+    },
+    "revisedFwe4MatrixCheck": {
+      "binomialRowsMarkedPresent": 11,
+      "names": [
+        "Anabas testudineus",
+        "Channa striata",
+        "Oreochromis mossambicus",
+        "Oreochromis niloticus",
+        "Cyprinus carpio",
+        "Lutjanus bohar",
+        "Glossogobius giuris",
+        "Clarias batrachus",
+        "Pangasius hypophthalmus",
+        "Pterygoplichthys disjunctivus",
+        "Chitala ornata"
+      ],
+      "higherTaxonRowExcluded": "Actinopteri is not a species row; order headings are also excluded.",
+      "narrativeConflict": "The Revised EIS says 12 species were present at FWE4, while its matrix marks 11 binomial rows present. The Draft narrative says 12 at “EWE4,” which is not the station spelling used in its tables."
+    },
+    "status": "The Draft and Revised tables remain unreconciled. Their shared station matrix lists 13 binomials; the separate 13-row taxonomic table has four different exact strings, including the Pangasius/Pangasianodon combination conflict. The text says 14 total and 12 at the terminal station, neither of which reconciles with the printed matrix. The revision changes the stated method but does not supply a corrected dataset or field documentation."
+  },
+  "evidenceLimits": [
+    "The comparison uses the official EMB-hosted searchable text views; no PDF copy, page images, raw field sheet, specimen, voucher, or correction notice was retained.",
+    "A row marked present in these reports remains a historical source-reported station result, not an independently verified specimen or current occurrence.",
+    "The source-provided Taytay, Rizal station label remains unresolved to a named waterbody; its coordinates are not a waterbody boundary or a fishing spot.",
+    "Item-specific reuse terms for both EIS documents remain unverified; official hosting does not authorize table, image, or coordinate republication."
+  ],
+  "decision": "Keep Draft and Revised EIS evidence separate. For any later review, cite the Revised EIS as the later document but retain its method statement as conflicting with the Draft. Preserve every exact table string and the published row presence marks only in research notes. Do not synthesize a 14-species list, reconcile the Pangasius name pair, infer a corrected FWE4 count, create species/occurrence rows, or project either table into the app.",
+  "appDecision": {
+    "speciesAssertionsAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "coordinatesPublished": 0,
+    "geometryAdded": false,
+    "photosAdded": 0,
+    "currentPresenceInferred": false,
+    "legalFishingOrSafetyClaimsAdded": 0,
+    "publicAppProjection": false
+  },
+  "nextActions": [
+    "Seek primary field sheets, specimen/voucher identifiers, or a written correction from the EIS preparer before considering species-level projection.",
+    "Keep FWE 6 waterbody identity and all source rights unresolved; do not transfer the station point to a whole river or lake.",
+    "Continue the NCR freshwater, brackish, tidal and marine source sweep beyond this project corridor."
+  ]
+}

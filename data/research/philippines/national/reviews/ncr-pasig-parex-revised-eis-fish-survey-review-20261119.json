@@ -107,25 +107,29 @@
     "absenceMeaning": "The source's '-' cells are outcomes of this single reported survey event at the listed stations; they are not evidence of ecological absence or current absence."
   },
   "tableReconciliation": {
-    "reportedTotal": "The narrative following Table 2-20 states that 14 fish species were observed.",
+    "reportedTotal": "The revised narrative after Table 2-20 reports 14 fish species overall and 12 at FWE4.",
     "table2_19BinomialRowCount": 13,
     "table2_20BinomialRowCount": 13,
-    "stationMatrixOnlyNames": [
-      "Anabas testudineus",
-      "Megalops cyprinoides",
-      "Lutjanus bohar"
-    ],
-    "taxonomicTableOnlyNames": [
-      "Trichopodus pectoralis",
-      "Pempheris oualensis",
-      "Lipocheilus carnolabrum"
-    ],
-    "nameSpellingConflict": {
+    "revisedFwe4BinomialPresenceCount": 11,
+    "revisedFwe4BinomialPresenceNames": ["Anabas testudineus", "Channa striata", "Oreochromis mossambicus", "Oreochromis niloticus", "Cyprinus carpio", "Lutjanus bohar", "Glossogobius giuris", "Clarias batrachus", "Pangasius hypophthalmus", "Pterygoplichthys disjunctivus", "Chitala ornata"],
+    "exactNameSetComparison": {
+      "sharedExactNames": 9,
+      "stationMatrixOnlyNames": ["Anabas testudineus", "Megalops cyprinoides", "Lutjanus bohar", "Pangasius hypophthalmus"],
+      "taxonomicTableOnlyNames": ["Trichopodus pectoralis", "Pempheris oualensis", "Lipocheilus carnolabrum", "Pangasianodon hypophthalmus"],
+      "distinctExactStringsAcrossBothTables": 17,
+      "interpretation": "Exact string counts only, not a biological species count. Pangasius hypophthalmus and Pangasianodon hypophthalmus remain unmerged source labels."
+    },
+    "nameCombinationConflict": {
       "table2_19": "Pangasius hypophthalmus",
       "table2_20": "Pangasianodon hypophthalmus",
-      "decision": "Preserve both source spellings; do not merge or resolve them in this review."
+      "decision": "Preserve both source spellings/combinations; do not merge them in this review."
     },
-    "decision": "The station matrix and separate taxonomic description are not a reconciled species-by-station dataset. No row is admitted as a public assertion."
+    "decision": "The 13-row station matrix and separate 13-row taxonomic description are not a reconciled species-by-station dataset. The text states 14 total and 12 at FWE4, while the matrix has 13 binomial rows overall and 11 marked at FWE4. No row is admitted as a public assertion."
+  },
+  "versionComparisonReview": {
+    "reviewId": "ncr-pasig-parex-eis-version-and-fish-table-reconciliation-20261120",
+    "file": "national/reviews/ncr-pasig-parex-eis-version-and-fish-table-reconciliation-20261120.json",
+    "result": "The Draft and Revised EIS list the same six stations/date but report conflicting collection methods. Table names/numbering shifted; the row-set mismatch and narrative count conflict persist."
   },
   "regionalCrosswalk": {
     "ncrStationLocalities": ["Manila", "Mandaluyong", "Makati", "Pasig"],
@@ -154,13 +158,13 @@
   },
   "limits": [
     "This is a project-focused 2021 snapshot described in a 2022 revised EIS, not a systematic or current Pasig River inventory.",
-    "The report describes fisherfolk hook-and-line collection for 30 minutes per site but does not identify voucher specimens, collection catalog numbers, sequences, or an independent verification record in the reviewed pages.",
+    "The Revised EIS describes fisherfolk fishing-line collection for 30 minutes per site, but the Draft EIS instead says electric fishing. Neither version identifies voucher specimens, collection catalog numbers, sequences, or an independent verification record in the reviewed pages.",
     "The report's 14-species narrative, 13-row station matrix, and non-matching 13-row taxonomic table remain internally inconsistent.",
     "Station FWE 6 is source-labeled Taytay, Rizal. Its watercourse identity and its relation to the Pasig corridor are not independently crosswalked here.",
     "No present-day occurrence, population trend, water quality or safety clearance, fishing access, or legal catchability statement follows from this source."
   ],
   "nextActions": [
-    "Keep this source as a held cross-region research lead; search for independently identifiable vouchers, raw station field records, or a corrected survey table before any species-level projection.",
+    "Keep this as a held cross-region lead; the draft-versus-revised comparison confirms that method, row-set, and narrative-count conflicts remain unresolved. Seek independently identifiable vouchers, raw station field records, or a corrected table before any species-level projection.",
     "Continue the NCR inventory across other freshwater, brackish, tidal, and marine contexts, including source-derived site scope beyond the project corridor.",
     "Reconcile FWE 6 with source-named waterway records without transferring the station coordinate to an entire river, floodway, or lake."
   ]
