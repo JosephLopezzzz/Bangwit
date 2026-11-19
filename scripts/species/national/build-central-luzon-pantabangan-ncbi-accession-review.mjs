@@ -40,7 +40,7 @@ function parseRecord(record) {
     collectionDate: qualifier(record, "collection_date"),
     boldCrossReference: [...record.matchAll(/\/db_xref="(BOLD:[^"]+)"/g)].map((match) => match[1])[0] ?? null,
     projectReferenceTitle: referenceField(reference, "TITLE"),
-    directSubmissionDate: reference.match(/JOURNAL\s+Submitted \(([^)]+)\)/)?.[1] ?? null,
+    directSubmissionDate: record.match(/JOURNAL\s+Submitted \(([^)]+)\)/)?.[1] ?? null,
     directWaterbodyText: location?.includes("Pantabangan Dam") ?? false,
   };
 }
@@ -58,6 +58,14 @@ const datasetTitle = "DNA barcoding of commercially-important fish species in Pa
 const fishRecords = parsed
   .filter((record) => record.projectReferenceTitle === datasetTitle && record.definition?.includes("COI"))
   .sort((a, b) => a.accession.localeCompare(b.accession));
+const clariasCrosswalkAccessions = new Set([
+  "KC789523.1",
+  "KC789524.1",
+  "KC789525.1",
+  "KC789526.1",
+  "KC789527.1",
+]);
+const clariasCrosswalkRecords = fishRecords.filter((record) => clariasCrosswalkAccessions.has(record.accession));
 const excludedMatches = parsed
   .filter((record) => !fishRecords.some((fish) => fish.accession === record.accession))
   .map(({ accession, submittedName, definition, projectReferenceTitle }) => ({
@@ -86,6 +94,12 @@ if (records.length !== Number(receipt.reportedCount)) {
 if (fishRecords.length !== 40 || species.length !== 9) {
   throw new Error(`Expected 40 project records and 9 names, got ${fishRecords.length} records and ${species.length} names`);
 }
+if (
+  clariasCrosswalkRecords.length !== 5
+  || clariasCrosswalkRecords.some((record) => record.submittedName !== "Clarias batrachus" || !record.directWaterbodyText)
+) {
+  throw new Error("The 2015 Clarias accession crosswalk did not match five Pantabangan records");
+}
 
 const review = {
   schemaVersion: 1,
@@ -100,6 +114,7 @@ const review = {
   sourceIds: [
     "pantabangan-2013-fish-coi-submission-ncbi",
     "pantabangan-dam-dna-fish-inventory-2026",
+    "clarias-philippines-barcode-review-2015",
   ],
   inputs: [
     "data/research/philippines/central-luzon-pantabangan-source-reconciliation-20261024.json",
@@ -150,6 +165,22 @@ const review = {
       specimenVoucherFields: "NCBI GenBank source qualifiers; voucher identifiers are submitted metadata, not independently verified museum catalogues.",
       coordinates: "No latitude/longitude qualifier was returned for the fish-project records.",
     },
+    historicalPublishedCrosswalk: {
+      sourceId: "clarias-philippines-barcode-review-2015",
+      citation: "Santos, B. S., Vesagas, F. P. C., Tan, M. T. C., Jumawan, J. C., & Quilang, J. P. (2015). Status Assessment of Clarias Species in the Philippines: Insights from DNA Barcodes. Science Diliman, 27(2), 21-40.",
+      authorUploadedArticleCopy: "https://www.researchgate.net/publication/291830804_Status_Assessment_of_Clarias_Species_in_the_Philippines_Insights_from_DNA_Barcodes",
+      accessNote: "The ResearchGate page identifies coauthor Joycelyn Cagatin Jumawan as the uploader. The UP Diliman journal article record was not retrievable during this check; no reuse permission is inferred from the available copy.",
+      tableLocator: "Table 1, printed page 25: Philippines accessions KC789523-27 are attributed to Yambot et al. (unpublished).",
+      textLocator: "Section 'Additional Philippine sequences of C. batrachus', printed page 30: the authors say five C. batrachus COI sequences from Pantabangan Dam obtained by Yambot et al. (unpublished) were included.",
+      accessionRange: "KC789523-KC789527",
+      ncbiRecords: clariasCrosswalkRecords,
+      result: "The 2015 paper's range resolves to exactly five GenBank records. Their submitted organism is Clarias batrachus, their specimen vouchers are PNT-14, PNT-02, PNT-17, PNT-16, and PNT-15, and all five NCBI geo_loc_name fields explicitly include Pantabangan Dam. This verifies a historical accession crosswalk for that five-record subset only.",
+      limits: [
+        "The accession-to-paper crosswalk does not independently validate voucher custody, specimen diagnosis, or current nomenclature.",
+        "It does not show that these five, or the other 35 records, are the exact dataset analyzed in the 2026 article.",
+        "These are a single historical sequence sample set used in related analyses, not five independent confirmations of present-day occurrence.",
+      ],
+    },
     comparisonWith2026Article: {
       doi: "10.1080/24701394.2026.2631395",
       articleAbstractReportedCounts: { coiSequences: 40, species: 9 },
@@ -168,7 +199,7 @@ const review = {
         "Cyprinus carpio",
         "Channa striata",
       ],
-      interpretation: "The matching 40-record/nine-name totals, shared names, and overlapping authors/title are a strong discovery lead, but the abstract does not expose sequence accessions. The NCBI records cite an unpublished project submitted in 2013, before the journal article was received in 2025. This review cannot establish that the NCBI records are the exact set analyzed in the 2026 article; keep the datasets linked only as a crosswalk question.",
+      interpretation: "The matching 40-record/nine-name totals, shared names, and overlapping authors/title are a strong discovery lead, and the five Clarias accessions are confirmed as having been analyzed in the separate 2015 Clarias paper. The NCBI records cite an unpublished project submitted in 2013, before the 2026 journal article was received in 2025. The 2026 abstract does not expose accession IDs, so the exact 2026 article sequence set remains unverified; do not extend the five-accession 2015 crosswalk to all 40 records.",
     },
     disposition: "Historical accession-level evidence for an NCBI-submitted Pantabangan fish-barcode project. The 39 explicitly waterbody-localized records and one province-only fish record remain research-only; no species app assertion, sequence redistribution, diet statement, abundance estimate, current-presence claim, or regional release is approved.",
     reuse: "Public NCBI sequence records were retrieved for research review. No separate determination of application redistribution rights was made. Keep nucleotide sequences local and ignored; require taxonomy, source-lineage, and reuse review before any public projection.",
