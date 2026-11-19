@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "ncr-napwc-lagoon-alias-review-20261119",
+  "reviewedOn": "2026-11-19",
+  "phaseId": "L2",
+  "regionId": "1300000000",
+  "regionName": "National Capital Region (NCR)",
+  "status": "BMB-park-named-pond-has-strong-historical-NAPWC-Lagoon-alias-candidate;feature-geometry-unverified;no-current-access-or-fish-claim",
+  "parentReviewId": "ncr-bmb-2019-freshwater-locality-crosswalk-20261119",
+  "question": "Can the BMB 2019 park-named pond row be reconciled with the NAPWC Lagoon name without treating repeated historical inventory values as independent surveys or geometry?",
+  "sourceIds": [
+    "denr-bmb-philchm-inland-wetlands-2019",
+    "denr-bmb-inland-wetlands-atlas-2016",
+    "psa-ncr-cities-list"
+  ],
+  "snapshotHashes": {
+    "sourceRegistry": "5646cc97ada19600e9a59370d31875d4ed6994a7762aafa837ea8a099d64be51",
+    "administrativeRegistry": "c741456fbc2cfc9d5d813484a0b661ef206154977959fc27a289ca86732142e8",
+    "parentBmbLocalityReview": "dc13095efd5aa4f3c33addc29e4740e5ffa456e2346dabc24f14c9fc380e5c1c"
+  },
+  "method": "Compared the BMB 2019 park-named row with the BMB 2016 atlas row named Ninoy Aquino Parks and Wildlife Center Lagoon. Both indexed table rows assign Quezon City, pond class, and 3.39 ha. The two BMB records share a publisher and likely an underlying inventory lineage, so they are not treated as independent surveys. Separately reviewed Quezon City's 2018 Ecological Profile, which describes a man-made lagoon among NAPWC amenities. The profile supports the existence of a park lagoon but does not identify it by the atlas label or provide the BMB area. This supports a strong source-name alias candidate only; it does not prove exact one-to-one feature identity, geometry, current area, current fishing permission, or fish presence.",
+  "inventoryRows": [
+    {
+      "sourceId": "denr-bmb-inland-wetlands-atlas-2016",
+      "url": "https://www.philchm.ph/wp-content/uploads/2019/03/Atlas-of-Philippine-Inland-Wetlands-and-Classsified-Caves-2016_BMB_DENR.pdf",
+      "accessedOn": "2026-11-19",
+      "sourceRowAsIndexed": "Ninoy Aquino Parks and Wildlife Center Lagoon | NCR | Quezon City | Pond | 3.39 ha",
+      "retrievalLimit": "The official PHILCHM search-index table exposed this row. Direct browser retrieval of the 61,473,809-byte PDF failed on a content-size limit; no access control was bypassed and no local copy was retained.",
+      "reuse": "No item-specific reuse license was verified. The PDF, tables, and images are not redistributed."
+    },
+    {
+      "sourceId": "denr-bmb-philchm-inland-wetlands-2019",
+      "url": "https://www.philchm.ph/wp-content/uploads/2019/06/inland-wetlands-as-of-1st-qtr-2019-for-chm-2.pdf",
+      "accessedOn": "2026-11-19",
+      "page": 3,
+      "sourceRowAsPrinted": "Ninoy Aquino Parks and Wildlife Center | NCR | Quezon City | Pond | 3.39 ha",
+      "reuse": "No item-specific reuse license was verified. The table and PDF are not redistributed."
+    }
+  ],
+  "independentMunicipalContext": {
+    "publisher": "Quezon City Government",
+    "title": "2018 Quezon City Ecological Profile",
+    "url": "https://quezoncity.gov.ph/wp-content/uploads/2020/09/2018-QC-Ecological-Profile_11-11-2022.pdf",
+    "accessedOn": "2026-11-19",
+    "section": "5.4.1 Major and Special Parks, printed page 158",
+    "finding": "The city profile describes NAPWC as a 19.29-hectare park with a man-made lagoon among its amenities. It separately describes the center's protected-area context. The profile does not name the lagoon as NAPWC Lagoon, connect it to the 3.39 ha BMB value, provide the water outline, or state current fishing rules.",
+    "historicalAmenityLimit": "The profile's dated amenity description is not current fishing authorization, safety guidance, public access confirmation, or evidence that all fishing is allowed in the protected area.",
+    "reuse": "No item-specific open license was verified. Only attributed factual findings are retained; no text, map, or photographs are reproduced."
+  },
+  "localityCrosswalk": {
+    "administrativeUnit": {
+      "name": "Quezon City",
+      "psgcCode": "1381300000",
+      "sourceId": "psa-ncr-cities-list"
+    },
+    "relationshipDisposition": "strong-historical-alias-candidate;BMB-2016-NAPWC-Lagoon-and-BMB-2019-park-name-row-match-city-wetland-class-and-reported-area;QC-profile-independently-confirms-a-man-made-park-lagoon;exact-water-feature-one-to-one-match-and-outline-unverified",
+    "areaDisposition": "3.39 ha appears in both historical BMB table rows; preserve only as source-reported inventory metadata, not as a current area or geometry.",
+    "decision": "Cross-reference the two BMB labels as a strong research alias candidate for the lagoon described in the QC profile, but retain the original source strings and do not create or merge a canonical NCR waterbody lead without feature-level spatial evidence."
+  },
+  "counts": {
+    "bmbInventoryRowsCompared": 2,
+    "independentMunicipalContextSources": 1,
+    "strongNameAliasCandidatesRecorded": 1,
+    "exactSpatialMatchesValidated": 0,
+    "canonicalWaterbodyLeadsCreated": 0,
+    "geometryValidated": 0,
+    "currentAreaMeasurementsAdded": 0,
+    "speciesAssertionsAdded": 0,
+    "currentFishingOrAccessClaimsAdded": 0,
+    "publicRecordsAdmitted": 0
+  },
+  "limitations": [
+    "BMB's 2016 and 2019 records are from the same agency and likely repeat a shared historical inventory; they do not count as two independent measurements or surveys.",
+    "The matching 3.39 ha values are historical source attributes, not present-day measurement, lake/pond boundary, or geometry.",
+    "Quezon City's profile confirms a man-made lagoon within NAPWC but does not explicitly link its lagoon to the BMB rows or establish a unique one-to-one feature crosswalk.",
+    "The QC profile's historical fishing-amenity description is not current fishing permission. NAPWC's protected-area status and present park rules require separate, current authority review before any fishing-site presentation.",
+    "No fish inventory, taxon occurrence, access, water safety, legal rule, geometry, or public-app record is added; NCR and Luzon coverage remain incomplete."
+  ],
+  "nextAction": "Keep this as a research alias candidate. Seek a reusable, feature-level park plan or geospatial source and current access/rules documentation before creating a canonical waterbody lead or describing fishing access; continue the NCR inventory without interpreting missing records as species absence."
+}
