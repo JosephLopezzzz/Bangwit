@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "ncr-administrative-denominator-reconciliation-20261119",
+  "reviewedOn": "2026-11-19",
+  "phaseId": "L2",
+  "regionId": "1300000000",
+  "status": "17-unit-denominator-matches-PSA-rendered-2025-directories;3Q2026-workbook-row-check-pending;no-geometry;waterbody-inventory-incomplete",
+  "question": "Do the 16 city and one municipality rows in the rendered PSA NCR PSGC directories match the pinned 17-unit NCR administrative denominator?",
+  "sourceIds": [
+    "psa-ncr-cities-list",
+    "psa-ncr-municipality-list",
+    "psa-psgc-2026-q3"
+  ],
+  "inputs": [
+    "data/research/philippines/administrative-registry.json"
+  ],
+  "snapshotHashes": {
+    "administrativeRegistry": "c741456fbc2cfc9d5d813484a0b661ef206154977959fc27a289ca86732142e8",
+    "sourceRegistry": "3bd19dd44ad213baf1289c225e53bc4579e238bf122ab6fe22b00dd749f1dafd"
+  },
+  "method": "Compared every row of the PSA-rendered NCR city directory and the single Pateros row of its municipality directory against the region 1300000000 entries in the pinned administrative registry. The rendered directory tables are labeled as of 31 July 2025. The pages link the 30 September 2026 PSGC publication and the Q3 2026 update; the publication workbook was not retrieved or parsed, so this is a directory-to-registry reconciliation, not a row-level import of the 2026 workbook. No coordinates, geometry, waterbody-to-city relationships, or public-app records were created.",
+  "cityDirectoryAsOf": "2025-07-31",
+  "municipalityDirectoryAsOf": "2025-07-31",
+  "latestLinkedPsgcSnapshot": "2026-09-30",
+  "units": [
+    { "name": "City of Caloocan", "psgcCode": "1380100000", "level": "city", "sourceId": "psa-ncr-cities-list", "match": "exact-name-and-code" },
+    { "name": "City of Las Piñas", "psgcCode": "1380200000", "level": "city", "sourceId": "psa-ncr-cities-list", "match": "exact-name-and-code" },
+    { "name": "City of Makati", "psgcCode": "1380300000", "level": "city", "sourceId": "psa-ncr-cities-list", "match": "exact-name-and-code" },
+    { "name": "City of Malabon", "psgcCode": "1380400000", "level": "city", "sourceId": "psa-ncr-cities-list", "match": "exact-name-and-code" },
+    { "name": "City of Mandaluyong", "psgcCode": "1380500000", "level": "city", "sourceId": "psa-ncr-cities-list", "match": "exact-name-and-code" },
+    { "name": "City of Manila", "psgcCode": "1380600000", "level": "city", "sourceId": "psa-ncr-cities-list", "match": "exact-name-and-code" },
+    { "name": "City of Marikina", "psgcCode": "1380700000", "level": "city", "sourceId": "psa-ncr-cities-list", "match": "exact-name-and-code" },
+    { "name": "City of Muntinlupa", "psgcCode": "1380800000", "level": "city", "sourceId": "psa-ncr-cities-list", "match": "exact-name-and-code" },
+    { "name": "City of Navotas", "psgcCode": "1380900000", "level": "city", "sourceId": "psa-ncr-cities-list", "match": "exact-name-and-code" },
+    { "name": "City of Parañaque", "psgcCode": "1381000000", "level": "city", "sourceId": "psa-ncr-cities-list", "match": "exact-name-and-code" },
+    { "name": "Pasay City", "psgcCode": "1381100000", "level": "city", "sourceId": "psa-ncr-cities-list", "match": "exact-name-and-code" },
+    { "name": "City of Pasig", "psgcCode": "1381200000", "level": "city", "sourceId": "psa-ncr-cities-list", "match": "exact-name-and-code" },
+    { "name": "Quezon City", "psgcCode": "1381300000", "level": "city", "sourceId": "psa-ncr-cities-list", "match": "exact-name-and-code" },
+    { "name": "City of San Juan", "psgcCode": "1381400000", "level": "city", "sourceId": "psa-ncr-cities-list", "match": "exact-name-and-code" },
+    { "name": "City of Taguig", "psgcCode": "1381500000", "level": "city", "sourceId": "psa-ncr-cities-list", "match": "exact-name-and-code" },
+    { "name": "City of Valenzuela", "psgcCode": "1381600000", "level": "city", "sourceId": "psa-ncr-cities-list", "match": "exact-name-and-code" },
+    { "name": "Pateros", "psgcCode": "1381701000", "level": "municipality", "sourceId": "psa-ncr-municipality-list", "match": "exact-name-and-code" }
+  ],
+  "counts": {
+    "pinnedAdministrativeUnits": 17,
+    "psaCityRowsReviewed": 16,
+    "psaMunicipalityRowsReviewed": 1,
+    "matchedNameAndCodeRows": 17,
+    "unmatchedPsaRows": 0,
+    "pinnedRowsNotFoundInRenderedDirectories": 0,
+    "geometryValidated": 0,
+    "waterbodyAssociationsCreated": 0,
+    "speciesAssertionsAdded": 0,
+    "publicRecordsAdmitted": 0,
+    "scopeFrozen": false,
+    "baselineReviewed": false
+  },
+  "limitations": [
+    "The rendered PSA city and municipality directories are dated 31 July 2025; the downloadable PSGC workbook for 30 September 2026 has not been retrieved or parsed row by row.",
+    "This validates the names and codes in the pinned 17-unit administrative denominator against the rendered directory pages; it does not validate municipal or city boundary geometry.",
+    "The 17-unit administrative match does not reconcile NCR's source-named water inventory, waterbody identities, shared-water relationships, habitats, or fish coverage.",
+    "No waterbody-city relation, fish presence or absence, access, safety, legal rule, or public-app assertion is inferred."
+  ],
+  "nextAction": "Retain the 17-unit administrative denominator as a matched working directory baseline with the 2026 workbook limitation visible. Continue source-named NCR waterbody and habitat reconciliation independently; obtain or parse the 2026 PSGC workbook before claiming row-level currency."
+}

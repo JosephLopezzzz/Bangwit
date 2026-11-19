@@ -78,6 +78,7 @@ export function buildResearchStatus({
   calabarzonLocalitySourceBackedBatch13,
   lagunaDeBayNcrLocalityReview,
   ncrBmbFreshwaterLocalityReview,
+  ncrAdministrativeDenominatorReview,
   calabarzonTagbacSourceReview,
   calabarzonBcibWatercoursesReview,
   calabarzonBmbAtlasReview,
@@ -263,7 +264,11 @@ export function buildResearchStatus({
   for (const id of ncrBmbFreshwaterLocalityReview.sourceIds) {
     assert.ok(sourceIds.has(id), `Unknown NCR freshwater locality source: ${id}`);
   }
-  assert.equal(ncrBmbFreshwaterLocalityReview.snapshotHashes.sourceRegistry, inputHashes.sources);
+  assert.equal(
+    ncrBmbFreshwaterLocalityReview.snapshotHashes.sourceRegistry,
+    calabarzonLocalityLinkageAudit.snapshotHashes.historicalSourceRegistryForNcrFreshwaterCrosswalk,
+    "The NCR BMB freshwater review must retain its original source-registry snapshot",
+  );
   assert.equal(ncrBmbFreshwaterLocalityReview.snapshotHashes.administrativeRegistry, inputHashes.registry);
   assert.equal(
     ncrBmbFreshwaterLocalityReview.snapshotHashes.bmb2019WetlandCrosswalk,
@@ -293,6 +298,40 @@ export function buildResearchStatus({
   assert.equal(ncrBmbFreshwaterLocalityReview.counts.speciesAssertionsAdded, 0);
   assert.equal(ncrBmbFreshwaterLocalityReview.counts.publicRecordsAdmitted, 0);
   assert.equal(ncrBmbFreshwaterLocalityReview.counts.scopeFrozen, false);
+  const ncrAdministrativeReviewPath =
+    "data/research/philippines/national/reviews/ncr-administrative-denominator-reconciliation-20261119.json";
+  assert.ok(ncrManifestRegion.evidenceRefs.includes(ncrAdministrativeReviewPath));
+  assert.equal(ncrAdministrativeDenominatorReview.reviewId, "ncr-administrative-denominator-reconciliation-20261119");
+  assert.equal(ncrAdministrativeDenominatorReview.phaseId, "L2");
+  assert.equal(ncrAdministrativeDenominatorReview.regionId, "1300000000");
+  for (const id of ncrAdministrativeDenominatorReview.sourceIds) {
+    assert.ok(sourceIds.has(id), `Unknown NCR administrative-denominator source: ${id}`);
+  }
+  assert.equal(ncrAdministrativeDenominatorReview.snapshotHashes.administrativeRegistry, inputHashes.registry);
+  assert.equal(ncrAdministrativeDenominatorReview.snapshotHashes.sourceRegistry, inputHashes.sources);
+  const currentNcrUnits = registry.administrativeUnits
+    .filter((unit) => unit.regionId === "1300000000")
+    .map((unit) => ({ name: unit.name, psgcCode: unit.code, level: unit.level }))
+    .sort((a, b) => a.psgcCode.localeCompare(b.psgcCode));
+  const reviewedNcrUnits = ncrAdministrativeDenominatorReview.units
+    .map(({ name, psgcCode, level }) => ({ name, psgcCode, level }))
+    .sort((a, b) => a.psgcCode.localeCompare(b.psgcCode));
+  assert.deepEqual(reviewedNcrUnits, currentNcrUnits, "NCR PSA denominator rows do not match the pinned 17-unit registry");
+  assert.ok(ncrAdministrativeDenominatorReview.units.every((unit) => unit.match === "exact-name-and-code"));
+  assert.equal(ncrAdministrativeDenominatorReview.units.filter((unit) => unit.level === "city").length, 16);
+  assert.equal(ncrAdministrativeDenominatorReview.units.filter((unit) => unit.level === "municipality").length, 1);
+  assert.equal(ncrAdministrativeDenominatorReview.counts.pinnedAdministrativeUnits, 17);
+  assert.equal(ncrAdministrativeDenominatorReview.counts.psaCityRowsReviewed, 16);
+  assert.equal(ncrAdministrativeDenominatorReview.counts.psaMunicipalityRowsReviewed, 1);
+  assert.equal(ncrAdministrativeDenominatorReview.counts.matchedNameAndCodeRows, 17);
+  assert.equal(ncrAdministrativeDenominatorReview.counts.unmatchedPsaRows, 0);
+  assert.equal(ncrAdministrativeDenominatorReview.counts.pinnedRowsNotFoundInRenderedDirectories, 0);
+  assert.equal(ncrAdministrativeDenominatorReview.counts.geometryValidated, 0);
+  assert.equal(ncrAdministrativeDenominatorReview.counts.waterbodyAssociationsCreated, 0);
+  assert.equal(ncrAdministrativeDenominatorReview.counts.speciesAssertionsAdded, 0);
+  assert.equal(ncrAdministrativeDenominatorReview.counts.publicRecordsAdmitted, 0);
+  assert.equal(ncrAdministrativeDenominatorReview.counts.scopeFrozen, false);
+  assert.equal(ncrAdministrativeDenominatorReview.counts.baselineReviewed, false);
   assert.equal(
     calabarzonLocalityLinkageAudit.snapshotHashes.calabarzonScope,
     inputHashes.scope,
@@ -1701,6 +1740,10 @@ export async function readResearchInputs() {
     ),
     ncrBmbFreshwaterLocalityReview: new URL(
       "national/reviews/ncr-bmb-2019-freshwater-locality-crosswalk-20261119.json",
+      research,
+    ),
+    ncrAdministrativeDenominatorReview: new URL(
+      "national/reviews/ncr-administrative-denominator-reconciliation-20261119.json",
       research,
     ),
     calabarzonYabahanCrosswalkReview: new URL(
