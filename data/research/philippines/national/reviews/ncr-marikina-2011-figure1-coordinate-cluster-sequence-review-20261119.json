@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "ncr-marikina-2011-figure1-coordinate-cluster-sequence-review-20261119",
+  "reviewedOn": "2026-11-19",
+  "phaseId": "L2",
+  "regionId": "1300000000",
+  "regionName": "National Capital Region (NCR)",
+  "parentReviewId": "ncr-marikina-2011-coarse-municipal-boundary-crosscheck-20261119",
+  "status": "figure1-sites-transcribed;coordinate-cluster-order-consistent;individual-station-join-unverified;research-only",
+  "question": "Does Figure 1 provide a defensible correspondence between the five GenBank coordinate clusters and the five named Marikina River-system stations?",
+  "sourceIds": [
+    "jumawan-et-al-2011-marikina-pterygoplichthys-dna-barcodes",
+    "ncbi-marikina-jf498719-jf498754-genbank-metadata-20261119",
+    "geoboundaries-phl-adm3-2020-municipal-boundaries-20261119"
+  ],
+  "primaryFigure": {
+    "sourceId": "jumawan-et-al-2011-marikina-pterygoplichthys-dna-barcodes",
+    "figure": "Figure 1, sampling stations map",
+    "stationOrderAsNumbered": [
+      {
+        "number": 1,
+        "label": "San Jose, Rodriguez, Rizal"
+      },
+      {
+        "number": 2,
+        "label": "Banaba, San Mateo"
+      },
+      {
+        "number": 3,
+        "label": "Tumana"
+      },
+      {
+        "number": 4,
+        "label": "Malanday, Marikina"
+      },
+      {
+        "number": 5,
+        "label": "River Park, Marikina City"
+      }
+    ],
+    "methodNote": "The figure includes a schematic station map and location labels. It does not identify GenBank accession IDs, specimen-voucher strings, station-specific record counts, or a station-to-coordinate table."
+  },
+  "crosscheck": {
+    "coordinateClusters": 5,
+    "clusterSequence": "When ordered north-to-south, the coarse cluster pattern is one Rodriguez location, one location near the Marikina-San Mateo boundary, then three locations in Marikina; this is spatially consistent with the numbered order shown in Figure 1.",
+    "interpretation": "The matching order and the article statement that specimens were collected at five stations make a one-cluster-per-station relationship plausible. This is an inference from spatial order and administrative containment, not a source-provided accession-to-station relationship.",
+    "limitations": [
+      "The paper does not state that every station produced a distinct coordinate cluster or give station-specific specimen counts.",
+      "The GenBank coordinate values are rounded and one cluster is close to the Marikina-San Mateo boundary.",
+      "Figure 1 is not a georeferenced data table; the map alone cannot prove which coordinate cluster represents a named station.",
+      "No individual accession or voucher can be assigned to a station from the available sources."
+    ]
+  },
+  "evidenceDecision": {
+    "decision": "Record the geographic sequence as a candidate correspondence only; keep station identities and all accession/voucher joins unresolved.",
+    "candidateSequenceCorrespondence": true,
+    "verifiedStationClusterAssignments": 0,
+    "verifiedAccessionStationLinks": 0,
+    "exactCoordinatesAddedToTrackedFiles": 0,
+    "speciesRowsAdded": 0,
+    "geometryAdded": false,
+    "publicProjection": false,
+    "publicationApproval": false,
+    "reason": "Figure 1 names and orders the five stations, and the independent coordinate-cluster sequence is compatible with that order. Neither source explicitly links a cluster or accession to a station, and the boundary-near cluster plus generalized map prevent a defensible exact assignment."
+  },
+  "nonClaims": [
+    "Spatial-order agreement does not establish that coordinate cluster 1 corresponds to station 1, or any other one-to-one match.",
+    "No accession, BOLD process ID, voucher, species identity, or capture event is attributed to a named station.",
+    "This candidate correspondence does not establish current presence, abundance, catchability, access, legal harvest, safety, diet, native status, or invasive status."
+  ],
+  "nextActions": [
+    "Seek a specimen-to-station table, original field sheet, station-specific collection counts, or museum catalog record before creating any named station link.",
+    "Continue other NCR freshwater, brackish, and marine source work independently."
+  ]
+}
