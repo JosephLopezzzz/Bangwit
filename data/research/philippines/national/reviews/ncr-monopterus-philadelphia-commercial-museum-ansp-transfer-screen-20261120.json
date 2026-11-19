@@ -1,0 +1,154 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "ncr-monopterus-philadelphia-commercial-museum-ansp-transfer-screen-20261120",
+  "reviewedOn": "2026-11-20",
+  "phaseId": "L2",
+  "regionId": "1300000000",
+  "regionName": "National Capital Region (NCR)",
+  "parentReviewId": "ncr-monopterus-philippines-historical-source-chain-review-20261120",
+  "snapshotHashes": {
+    "sourceRegistry": "6e6e31f665cfda4e0b6afc8ce869cc290d132d8c0b27bbdf27146a5096a085c3",
+    "administrativeRegistry": "c741456fbc2cfc9d5d813484a0b661ef206154977959fc27a289ca86732142e8",
+    "parentReview": "e2f8378cf398a2203312dd3541813ac4be4b6db03993c2edd595a92bbcebe66a"
+  },
+  "status": "pcm-to-ansp-transfer-route-documented;fowler-specimen-not-linked;public-catalog-screen-bounded;research-only",
+  "question": "Does the collection-level 1917 transfer of Philadelphia Commercial Museum fishes to ANSP identify or plausibly locate Fowler’s historical Philippine eel specimen?",
+  "method": {
+    "summary": "Compared Sabaj’s published collection-code appendix, Fowler’s public unpublished Philippine-fishes manuscript and its BHL OCR, ANSP’s official collection-resource page, and bounded iDigBio API queries under the ANSP institution code. The review distinguishes the documented collection-level transfer route from specimen-level identity.",
+    "accessNotes": [
+      "Sabaj (2020), Copeia 108(3), and Supplemental Appendix 1 were reviewed; the PCM entry is code 1920, p. 165.",
+      "The Smithsonian Institution Archives manuscript scan, digitized by BHL, and BHL item metadata/OCR were reviewed. Bounded searches for Monopterus, Fluta alba, Synbranchus, and eel returned no OCR matches; context shows other named eel entries carrying PCM references.",
+      "ANSP’s official Ichthyology information page was reviewed. Its departmental database link redirects to a public collections search portal, but the database itself was not independently queried with text tools.",
+      "The iDigBio public API query for Monopterus albus + institutioncode ANSP returned all 25 matches; none contained Philippines text in indexed record fields. Ophisternon bengalense + ANSP returned five rows, including Orion/Bataan 1923 (remarks: purchased) and four Malabon 1930 entries. The aggregator reports lastModified 2025-09-22.",
+      "No contact, email, scan request, payment, specimen loan, or access-control bypass was made. No raw response, archival scan, or image was retained."
+    ],
+    "reuseFinding": "Only concise attributed collection-history and catalog facts are retained. BioOne limits article use to personal, educational, and non-commercial use; BHL reports no known restrictions as determined by the scanning institution. No independent rights determination or republication approval was made."
+  },
+  "sourceIds": [
+    "sabaj-2020-pcm-transfer-ansp-supplement-20261120",
+    "ansp-ichthyology-collections-search-portal-20261120",
+    "idigbio-ansp-monopterus-ophisternon-philippines-screen-20261120",
+    "fowler-philippine-fish-manuscript-bhl-1930-1941-20261120"
+  ],
+  "sourceFindings": [
+    {
+      "sourceId": "sabaj-2020-pcm-transfer-ansp-supplement-20261120",
+      "scope": "Sabaj’s appendix records the PCM’s extant fishes, mostly from the Philippines, as transferred to ANSP in 1917.",
+      "limits": "No specimen-level list, Fowler name, catalog number, or accession crosswalk is provided.",
+      "attribution": "A plausible historical collection route, not an individual specimen identification."
+    },
+    {
+      "sourceId": "fowler-philippine-fish-manuscript-bhl-1930-1941-20261120",
+      "scope": "The later Fowler manuscript’s OCR places PCM references under Pisoodonophis macgregori and Pisodonophis boro; no direct Monopterus/Fluta alba hit was found in the bounded OCR name search.",
+      "limits": "Unpublished later manuscript and imperfect OCR; lack of a text hit is not proof of absence.",
+      "attribution": "Exclude these nearby passages as false matches to Fowler’s swamp eel."
+    },
+    {
+      "sourceId": "ansp-ichthyology-collections-search-portal-20261120",
+      "scope": "ANSP maintains a public fish collection portal and says collection managers can supply up-to-date holdings information.",
+      "limits": "No specimen record or individual accession was found in the official overview page.",
+      "attribution": "A public search/holdings route only; no request was made."
+    },
+    {
+      "sourceId": "idigbio-ansp-monopterus-ophisternon-philippines-screen-20261120",
+      "scope": "The current aggregator query returns 25 ANSP Monopterus albus records with no Philippines text, and five Ophisternon bengalense records, one with Orion/Bataan 1923 and four with Malabon 1930.",
+      "limits": "Aggregator snapshot last modified in 2025; the query is not exhaustive and no result has a PCM/Fowler identifier.",
+      "attribution": "No specimen match found in this bounded search; do not claim the specimen is absent."
+    }
+  ],
+  "transferChain": [
+    {
+      "dateOrPeriod": "1917",
+      "assertion": "PCM extant fish holdings, mostly Philippines-derived, transferred to ANSP.",
+      "sourceId": "sabaj-2020-pcm-transfer-ansp-supplement-20261120",
+      "evidenceLevel": "collection-level secondary reference; no accession list"
+    },
+    {
+      "dateOrPeriod": "1918",
+      "assertion": "Fowler published A List of Philippine Fishes; article page 62 remains unread in this review chain.",
+      "sourceId": "fowler-1918-list-philippine-fishes-bibliographic-lead-20261120",
+      "evidenceLevel": "bibliographic citation only"
+    },
+    {
+      "dateOrPeriod": "1923",
+      "assertion": "Herre’s OCR-only account attributes Fowler’s broadly Philippines-labeled specimen to PCM.",
+      "sourceId": "herre-1923-philippine-eels-review-fowler-context-20261120",
+      "evidenceLevel": "secondary OCR; no catalog number; holder statement conflicts with assumed transfer"
+    },
+    {
+      "dateOrPeriod": "1930–1941",
+      "assertion": "Fowler manuscript passages with PCM references appear under other named eels.",
+      "sourceId": "fowler-philippine-fish-manuscript-bhl-1930-1941-20261120",
+      "evidenceLevel": "primary unpublished manuscript OCR; excluded as target-taxon matches"
+    }
+  ],
+  "anspCatalogScreen": {
+    "provider": "iDigBio public API; institutioncode ANSP; recordset lastModified 2025-09-22T17:23:30.783Z",
+    "monopterusAlbus": {
+      "query": "scientificname=Monopterus albus AND institutioncode=ANSP",
+      "resultCount": 25,
+      "returnedCount": 25,
+      "recordsWithPhilippinesText": 0,
+      "interpretation": "No indexed match in the full returned page; not evidence of absence from non-digitized, differently named, or otherwise unindexed holdings."
+    },
+    "ophisternonBengalense": {
+      "query": "scientificname=Ophisternon bengalense AND institutioncode=ANSP",
+      "resultCount": 5,
+      "returnedCount": 5,
+      "records": [
+        {
+          "catalogNumber": "63532",
+          "locality": "Orion, Bataan Province, Luzon.",
+          "eventDate": "11 May 1923",
+          "remarks": "Purchased. See Fowler, 1927j."
+        },
+        {
+          "catalogNumbers": [
+            "193294",
+            "208980",
+            "208981",
+            "208982"
+          ],
+          "locality": "Malabon, Rizal.",
+          "eventDate": "16 April 1930",
+          "otherCatalogNumbers": [
+            "Bur. Sci. 265",
+            "Bur. Sci. 266",
+            "Bur. Sci. 267",
+            "Bur. Sci. 268"
+          ],
+          "remarks": "Salinity unknown; possibly marine or brackish."
+        }
+      ],
+      "interpretation": "These are differently catalogued current-name records; none records a Philadelphia Commercial Museum catalog number or a link to Fowler’s historical item."
+    }
+  },
+  "conclusion": {
+    "routeDocumented": true,
+    "specificTransferVerified": false,
+    "anspSpecimenIdentityVerified": false,
+    "collectionAbsenceEstablished": false,
+    "herreHolderDiscrepancyResolved": false,
+    "decision": "Sabaj documents a broad PCM-to-ANSP fish collection transfer, mostly involving Philippine fish holdings, but available sources and bounded public catalog searches do not identify Fowler’s swamp-eel specimen among those holdings. The 1917 route remains plausible at the collection level, while individual identity and custody stay unresolved."
+  },
+  "scopeAndReuseDecision": {
+    "decision": "Research-only collection-history and public-catalog review. No species assertion, occurrence row, habitat, diet, fishery rule, safety statement, image, or public app projection.",
+    "sourceClaimsCompared": 4,
+    "publicSpeciesAssertionsAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "publicAppProjection": false,
+    "externalContactMade": false
+  },
+  "nonClaims": [
+    "No claim that Fowler’s specimen was transferred in 1917 or is currently held by ANSP.",
+    "No claim that the specimen is absent from ANSP; iDigBio and current-name queries are incomplete historical-collection screens.",
+    "The Ophisternon bengalense catalog results are not linked to the Fowler specimen or the reported 14 Smithsonian lots.",
+    "The Fowler manuscript PCM passages under other named eels are not a taxonomic or accession match for the swamp eel.",
+    "No date of introduction, collection waterbody, Pasig origin, native/introduced status, present-day presence, or public occurrence is asserted."
+  ],
+  "nextActions": [
+    "If item-level identification remains necessary, locate a permitted Fowler 1918 page 62 scan or the PCM/ANSP accession ledger and search by the original Fluta alba name, the Fowler source note, specimen length, and any catalog identifier; keep the request unsent until explicitly authorized.",
+    "Treat the public ANSP departmental search as a route for future manual search. Its collection managers are listed for current holdings information; no email or request has been sent.",
+    "Continue the separate NCR freshwater/brackish/marine evidence work; this review does not change baseline or regional completion status."
+  ]
+}
