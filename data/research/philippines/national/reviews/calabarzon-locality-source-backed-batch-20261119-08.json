@@ -1,0 +1,487 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "calabarzon-locality-source-backed-batch-20261119-08",
+  "reviewedOn": "2026-11-19",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "status": "official-regional-plan-cluster-localities-crosswalked;not-a-shoreline-boundary;scope-not-frozen",
+  "question": "Can the official CALABARZON Regional Physical Framework Plan Taal Lake Cluster locality list be connected to PSA city and municipality codes without treating the cluster as lake geometry?",
+  "sourceIds": [
+    "denr-bmb-philchm-inland-wetlands-2019",
+    "calabarzon-rpfp-2017-2046-critical-watersheds-table-3-11",
+    "psa-calabarzon-cities-list",
+    "psa-calabarzon-municipalities-list"
+  ],
+  "inputs": [
+    "data/research/philippines/calabarzon-scope.json",
+    "data/research/philippines/calabarzon-bmb-2019-wetland-inventory-crosswalk-20261024.json",
+    "data/research/philippines/sources.json",
+    "data/research/philippines/administrative-registry.json",
+    "data/research/philippines/national/reviews/calabarzon-administrative-denominator-reconciliation-20261117.json",
+    "data/research/philippines/national/reviews/calabarzon-locality-source-backed-batch-20261119-07.json"
+  ],
+  "snapshotHashes": {
+    "scopeBeforeBatch": "1332a609ae4ffb3ddaedc6e65f0390693723f01f23a168b84ad7914a934a0eac",
+    "calabarzonScope": "aec6243742f755b88e96ecf878326a82ddc9fff2dd2f286632f04cccba37ac9f",
+    "bmb2019WetlandCrosswalk": "3c7ca91e892100e4d67b264e8fcc454445d7b9fa2ea60cb5ff585e3fea37f7e1",
+    "administrativeRegistry": "c741456fbc2cfc9d5d813484a0b661ef206154977959fc27a289ca86732142e8",
+    "administrativeDenominator": "0688d4bf58dd848571c23cbc09f2bbb71244aace0f5842bb59ee473f483f7ce0",
+    "previousLocalityBatch": "d29b78ce533981fa91cefb39b9175959cdbffcd7d33e8825cf256f686bd94e43",
+    "sourceRegistry": "197b6a5f9ed7c69a485f0ef085d240925a43a875ae5dc3c21012a5576818e955"
+  },
+  "method": "Reviewed the official DEPDev CALABARZON Regional Physical Framework Plan 2017-2046 section and Map 4.16 description. It states that the Taal Lake Cluster comprises lakeshore communities in 14 Batangas LGUs and says the delineation uses hydrological considerations and local economic activity anchored on the lake. Cross-checked the listed city and municipality names/codes against PSA CALABARZON directories. Added only source-described planning-cluster associations to the Taal Lake lead; did not derive a lake perimeter, shoreline, or exclusive containment.",
+  "sourceRows": [
+    "BMB 2019: Taal Lake | Batangas | Batangas Lakehore | Lake | 26360.25 ha; broad source locality retained.",
+    "DEPDev CALABARZON Regional Physical Framework Plan 2017-2046, printed pp.127-128: Taal Lake Cluster list of 14 LGUs; cluster delineation based on hydrological considerations and local economic activities anchored on the lake."
+  ],
+  "clusterAssessment": {
+    "sourceName": "Taal Lake Cluster",
+    "scopeName": "Taal Lake",
+    "identityDisposition": "official-planning-context-crosswalk;not-a-hydrological-or-cadastral-boundary",
+    "localities": [
+      {
+        "name": "Talisay",
+        "level": "municipality",
+        "code": "0401030000",
+        "psaSource": "psa-calabarzon-municipalities-list"
+      },
+      {
+        "name": "City of Tanauan",
+        "sourceName": "Tanauan City",
+        "level": "city",
+        "code": "0401031000",
+        "psaSource": "psa-calabarzon-cities-list"
+      },
+      {
+        "name": "Balete",
+        "level": "municipality",
+        "code": "0401004000",
+        "psaSource": "psa-calabarzon-municipalities-list"
+      },
+      {
+        "name": "Malvar",
+        "level": "municipality",
+        "code": "0401017000",
+        "psaSource": "psa-calabarzon-municipalities-list"
+      },
+      {
+        "name": "City of Lipa",
+        "sourceName": "Lipa City",
+        "level": "city",
+        "code": "0401014000",
+        "psaSource": "psa-calabarzon-cities-list"
+      },
+      {
+        "name": "Mataasnakahoy",
+        "level": "municipality",
+        "code": "0401018000",
+        "psaSource": "psa-calabarzon-municipalities-list"
+      },
+      {
+        "name": "Cuenca",
+        "level": "municipality",
+        "code": "0401009000",
+        "psaSource": "psa-calabarzon-municipalities-list"
+      },
+      {
+        "name": "Alitagtag",
+        "level": "municipality",
+        "code": "0401002000",
+        "psaSource": "psa-calabarzon-municipalities-list"
+      },
+      {
+        "name": "Santa Teresita",
+        "level": "municipality",
+        "code": "0401027000",
+        "psaSource": "psa-calabarzon-municipalities-list"
+      },
+      {
+        "name": "Taal",
+        "level": "municipality",
+        "code": "0401029000",
+        "psaSource": "psa-calabarzon-municipalities-list"
+      },
+      {
+        "name": "San Nicolas",
+        "level": "municipality",
+        "code": "0401025000",
+        "psaSource": "psa-calabarzon-municipalities-list"
+      },
+      {
+        "name": "Agoncillo",
+        "level": "municipality",
+        "code": "0401001000",
+        "psaSource": "psa-calabarzon-municipalities-list"
+      },
+      {
+        "name": "Lemery",
+        "level": "municipality",
+        "code": "0401012000",
+        "psaSource": "psa-calabarzon-municipalities-list"
+      },
+      {
+        "name": "Laurel",
+        "level": "municipality",
+        "code": "0401011000",
+        "psaSource": "psa-calabarzon-municipalities-list"
+      }
+    ],
+    "decision": "record-the-14-explicitly-named-LGU-cluster-associations-only;retain-waterbody-boundary-and-shoreline-unresolved"
+  },
+  "assignments": [
+    {
+      "waterbodyId": "ph-wb-taal-lake",
+      "sourceId": "calabarzon-rpfp-2017-2046-critical-watersheds-table-3-11",
+      "sourceIds": [
+        "calabarzon-rpfp-2017-2046-critical-watersheds-table-3-11",
+        "psa-calabarzon-municipalities-list",
+        "denr-bmb-philchm-inland-wetlands-2019"
+      ],
+      "sourcePath": "https://calabarzon.depdev.gov.ph/wp-content/uploads/2020/12/RPFPDec222020.pdf",
+      "sourcePage": "Printed pp.127-128, Taal Lake Cluster paragraph and Map 4.16 heading",
+      "sourceRow": "Talisay - Tanauan City - Balete - Malvar - Lipa City - Mataasnakahoy - Cuenca - Alitagtag - Santa Teresita - Taal - San Nicolas - Agoncillo - Lemery - Laurel",
+      "sourceLocality": "Taal Lake planning-cluster locality: Talisay, Batangas",
+      "identityDisposition": "explicit-DEPDev-Taal-Lake-Cluster-member;planning-context-only",
+      "codes": [
+        {
+          "level": "municipality",
+          "psgcCode": "0401030000",
+          "name": "Talisay",
+          "sourceId": "psa-calabarzon-municipalities-list"
+        }
+      ],
+      "limit": "The association identifies membership in the named regional planning cluster. It is not proof of a lake shoreline, waterbody boundary, exact spatial overlap, access, fishing permission, safety, species presence, or public-app eligibility."
+    },
+    {
+      "waterbodyId": "ph-wb-taal-lake",
+      "sourceId": "calabarzon-rpfp-2017-2046-critical-watersheds-table-3-11",
+      "sourceIds": [
+        "calabarzon-rpfp-2017-2046-critical-watersheds-table-3-11",
+        "psa-calabarzon-cities-list",
+        "denr-bmb-philchm-inland-wetlands-2019"
+      ],
+      "sourcePath": "https://calabarzon.depdev.gov.ph/wp-content/uploads/2020/12/RPFPDec222020.pdf",
+      "sourcePage": "Printed pp.127-128, Taal Lake Cluster paragraph and Map 4.16 heading",
+      "sourceRow": "Talisay - Tanauan City - Balete - Malvar - Lipa City - Mataasnakahoy - Cuenca - Alitagtag - Santa Teresita - Taal - San Nicolas - Agoncillo - Lemery - Laurel",
+      "sourceLocality": "Taal Lake planning-cluster locality: Tanauan City, Batangas",
+      "identityDisposition": "explicit-DEPDev-Taal-Lake-Cluster-member;planning-context-only",
+      "codes": [
+        {
+          "level": "city",
+          "psgcCode": "0401031000",
+          "name": "City of Tanauan",
+          "sourceId": "psa-calabarzon-cities-list"
+        }
+      ],
+      "limit": "The association identifies membership in the named regional planning cluster. It is not proof of a lake shoreline, waterbody boundary, exact spatial overlap, access, fishing permission, safety, species presence, or public-app eligibility."
+    },
+    {
+      "waterbodyId": "ph-wb-taal-lake",
+      "sourceId": "calabarzon-rpfp-2017-2046-critical-watersheds-table-3-11",
+      "sourceIds": [
+        "calabarzon-rpfp-2017-2046-critical-watersheds-table-3-11",
+        "psa-calabarzon-municipalities-list",
+        "denr-bmb-philchm-inland-wetlands-2019"
+      ],
+      "sourcePath": "https://calabarzon.depdev.gov.ph/wp-content/uploads/2020/12/RPFPDec222020.pdf",
+      "sourcePage": "Printed pp.127-128, Taal Lake Cluster paragraph and Map 4.16 heading",
+      "sourceRow": "Talisay - Tanauan City - Balete - Malvar - Lipa City - Mataasnakahoy - Cuenca - Alitagtag - Santa Teresita - Taal - San Nicolas - Agoncillo - Lemery - Laurel",
+      "sourceLocality": "Taal Lake planning-cluster locality: Balete, Batangas",
+      "identityDisposition": "explicit-DEPDev-Taal-Lake-Cluster-member;planning-context-only",
+      "codes": [
+        {
+          "level": "municipality",
+          "psgcCode": "0401004000",
+          "name": "Balete",
+          "sourceId": "psa-calabarzon-municipalities-list"
+        }
+      ],
+      "limit": "The association identifies membership in the named regional planning cluster. It is not proof of a lake shoreline, waterbody boundary, exact spatial overlap, access, fishing permission, safety, species presence, or public-app eligibility."
+    },
+    {
+      "waterbodyId": "ph-wb-taal-lake",
+      "sourceId": "calabarzon-rpfp-2017-2046-critical-watersheds-table-3-11",
+      "sourceIds": [
+        "calabarzon-rpfp-2017-2046-critical-watersheds-table-3-11",
+        "psa-calabarzon-municipalities-list",
+        "denr-bmb-philchm-inland-wetlands-2019"
+      ],
+      "sourcePath": "https://calabarzon.depdev.gov.ph/wp-content/uploads/2020/12/RPFPDec222020.pdf",
+      "sourcePage": "Printed pp.127-128, Taal Lake Cluster paragraph and Map 4.16 heading",
+      "sourceRow": "Talisay - Tanauan City - Balete - Malvar - Lipa City - Mataasnakahoy - Cuenca - Alitagtag - Santa Teresita - Taal - San Nicolas - Agoncillo - Lemery - Laurel",
+      "sourceLocality": "Taal Lake planning-cluster locality: Malvar, Batangas",
+      "identityDisposition": "explicit-DEPDev-Taal-Lake-Cluster-member;planning-context-only",
+      "codes": [
+        {
+          "level": "municipality",
+          "psgcCode": "0401017000",
+          "name": "Malvar",
+          "sourceId": "psa-calabarzon-municipalities-list"
+        }
+      ],
+      "limit": "The association identifies membership in the named regional planning cluster. It is not proof of a lake shoreline, waterbody boundary, exact spatial overlap, access, fishing permission, safety, species presence, or public-app eligibility."
+    },
+    {
+      "waterbodyId": "ph-wb-taal-lake",
+      "sourceId": "calabarzon-rpfp-2017-2046-critical-watersheds-table-3-11",
+      "sourceIds": [
+        "calabarzon-rpfp-2017-2046-critical-watersheds-table-3-11",
+        "psa-calabarzon-cities-list",
+        "denr-bmb-philchm-inland-wetlands-2019"
+      ],
+      "sourcePath": "https://calabarzon.depdev.gov.ph/wp-content/uploads/2020/12/RPFPDec222020.pdf",
+      "sourcePage": "Printed pp.127-128, Taal Lake Cluster paragraph and Map 4.16 heading",
+      "sourceRow": "Talisay - Tanauan City - Balete - Malvar - Lipa City - Mataasnakahoy - Cuenca - Alitagtag - Santa Teresita - Taal - San Nicolas - Agoncillo - Lemery - Laurel",
+      "sourceLocality": "Taal Lake planning-cluster locality: Lipa City, Batangas",
+      "identityDisposition": "explicit-DEPDev-Taal-Lake-Cluster-member;planning-context-only",
+      "codes": [
+        {
+          "level": "city",
+          "psgcCode": "0401014000",
+          "name": "City of Lipa",
+          "sourceId": "psa-calabarzon-cities-list"
+        }
+      ],
+      "limit": "The association identifies membership in the named regional planning cluster. It is not proof of a lake shoreline, waterbody boundary, exact spatial overlap, access, fishing permission, safety, species presence, or public-app eligibility."
+    },
+    {
+      "waterbodyId": "ph-wb-taal-lake",
+      "sourceId": "calabarzon-rpfp-2017-2046-critical-watersheds-table-3-11",
+      "sourceIds": [
+        "calabarzon-rpfp-2017-2046-critical-watersheds-table-3-11",
+        "psa-calabarzon-municipalities-list",
+        "denr-bmb-philchm-inland-wetlands-2019"
+      ],
+      "sourcePath": "https://calabarzon.depdev.gov.ph/wp-content/uploads/2020/12/RPFPDec222020.pdf",
+      "sourcePage": "Printed pp.127-128, Taal Lake Cluster paragraph and Map 4.16 heading",
+      "sourceRow": "Talisay - Tanauan City - Balete - Malvar - Lipa City - Mataasnakahoy - Cuenca - Alitagtag - Santa Teresita - Taal - San Nicolas - Agoncillo - Lemery - Laurel",
+      "sourceLocality": "Taal Lake planning-cluster locality: Mataasnakahoy, Batangas",
+      "identityDisposition": "explicit-DEPDev-Taal-Lake-Cluster-member;planning-context-only",
+      "codes": [
+        {
+          "level": "municipality",
+          "psgcCode": "0401018000",
+          "name": "Mataasnakahoy",
+          "sourceId": "psa-calabarzon-municipalities-list"
+        }
+      ],
+      "limit": "The association identifies membership in the named regional planning cluster. It is not proof of a lake shoreline, waterbody boundary, exact spatial overlap, access, fishing permission, safety, species presence, or public-app eligibility."
+    },
+    {
+      "waterbodyId": "ph-wb-taal-lake",
+      "sourceId": "calabarzon-rpfp-2017-2046-critical-watersheds-table-3-11",
+      "sourceIds": [
+        "calabarzon-rpfp-2017-2046-critical-watersheds-table-3-11",
+        "psa-calabarzon-municipalities-list",
+        "denr-bmb-philchm-inland-wetlands-2019"
+      ],
+      "sourcePath": "https://calabarzon.depdev.gov.ph/wp-content/uploads/2020/12/RPFPDec222020.pdf",
+      "sourcePage": "Printed pp.127-128, Taal Lake Cluster paragraph and Map 4.16 heading",
+      "sourceRow": "Talisay - Tanauan City - Balete - Malvar - Lipa City - Mataasnakahoy - Cuenca - Alitagtag - Santa Teresita - Taal - San Nicolas - Agoncillo - Lemery - Laurel",
+      "sourceLocality": "Taal Lake planning-cluster locality: Cuenca, Batangas",
+      "identityDisposition": "explicit-DEPDev-Taal-Lake-Cluster-member;planning-context-only",
+      "codes": [
+        {
+          "level": "municipality",
+          "psgcCode": "0401009000",
+          "name": "Cuenca",
+          "sourceId": "psa-calabarzon-municipalities-list"
+        }
+      ],
+      "limit": "The association identifies membership in the named regional planning cluster. It is not proof of a lake shoreline, waterbody boundary, exact spatial overlap, access, fishing permission, safety, species presence, or public-app eligibility."
+    },
+    {
+      "waterbodyId": "ph-wb-taal-lake",
+      "sourceId": "calabarzon-rpfp-2017-2046-critical-watersheds-table-3-11",
+      "sourceIds": [
+        "calabarzon-rpfp-2017-2046-critical-watersheds-table-3-11",
+        "psa-calabarzon-municipalities-list",
+        "denr-bmb-philchm-inland-wetlands-2019"
+      ],
+      "sourcePath": "https://calabarzon.depdev.gov.ph/wp-content/uploads/2020/12/RPFPDec222020.pdf",
+      "sourcePage": "Printed pp.127-128, Taal Lake Cluster paragraph and Map 4.16 heading",
+      "sourceRow": "Talisay - Tanauan City - Balete - Malvar - Lipa City - Mataasnakahoy - Cuenca - Alitagtag - Santa Teresita - Taal - San Nicolas - Agoncillo - Lemery - Laurel",
+      "sourceLocality": "Taal Lake planning-cluster locality: Alitagtag, Batangas",
+      "identityDisposition": "explicit-DEPDev-Taal-Lake-Cluster-member;planning-context-only",
+      "codes": [
+        {
+          "level": "municipality",
+          "psgcCode": "0401002000",
+          "name": "Alitagtag",
+          "sourceId": "psa-calabarzon-municipalities-list"
+        }
+      ],
+      "limit": "The association identifies membership in the named regional planning cluster. It is not proof of a lake shoreline, waterbody boundary, exact spatial overlap, access, fishing permission, safety, species presence, or public-app eligibility."
+    },
+    {
+      "waterbodyId": "ph-wb-taal-lake",
+      "sourceId": "calabarzon-rpfp-2017-2046-critical-watersheds-table-3-11",
+      "sourceIds": [
+        "calabarzon-rpfp-2017-2046-critical-watersheds-table-3-11",
+        "psa-calabarzon-municipalities-list",
+        "denr-bmb-philchm-inland-wetlands-2019"
+      ],
+      "sourcePath": "https://calabarzon.depdev.gov.ph/wp-content/uploads/2020/12/RPFPDec222020.pdf",
+      "sourcePage": "Printed pp.127-128, Taal Lake Cluster paragraph and Map 4.16 heading",
+      "sourceRow": "Talisay - Tanauan City - Balete - Malvar - Lipa City - Mataasnakahoy - Cuenca - Alitagtag - Santa Teresita - Taal - San Nicolas - Agoncillo - Lemery - Laurel",
+      "sourceLocality": "Taal Lake planning-cluster locality: Santa Teresita, Batangas",
+      "identityDisposition": "explicit-DEPDev-Taal-Lake-Cluster-member;planning-context-only",
+      "codes": [
+        {
+          "level": "municipality",
+          "psgcCode": "0401027000",
+          "name": "Santa Teresita",
+          "sourceId": "psa-calabarzon-municipalities-list"
+        }
+      ],
+      "limit": "The association identifies membership in the named regional planning cluster. It is not proof of a lake shoreline, waterbody boundary, exact spatial overlap, access, fishing permission, safety, species presence, or public-app eligibility."
+    },
+    {
+      "waterbodyId": "ph-wb-taal-lake",
+      "sourceId": "calabarzon-rpfp-2017-2046-critical-watersheds-table-3-11",
+      "sourceIds": [
+        "calabarzon-rpfp-2017-2046-critical-watersheds-table-3-11",
+        "psa-calabarzon-municipalities-list",
+        "denr-bmb-philchm-inland-wetlands-2019"
+      ],
+      "sourcePath": "https://calabarzon.depdev.gov.ph/wp-content/uploads/2020/12/RPFPDec222020.pdf",
+      "sourcePage": "Printed pp.127-128, Taal Lake Cluster paragraph and Map 4.16 heading",
+      "sourceRow": "Talisay - Tanauan City - Balete - Malvar - Lipa City - Mataasnakahoy - Cuenca - Alitagtag - Santa Teresita - Taal - San Nicolas - Agoncillo - Lemery - Laurel",
+      "sourceLocality": "Taal Lake planning-cluster locality: Taal, Batangas",
+      "identityDisposition": "explicit-DEPDev-Taal-Lake-Cluster-member;planning-context-only",
+      "codes": [
+        {
+          "level": "municipality",
+          "psgcCode": "0401029000",
+          "name": "Taal",
+          "sourceId": "psa-calabarzon-municipalities-list"
+        }
+      ],
+      "limit": "The association identifies membership in the named regional planning cluster. It is not proof of a lake shoreline, waterbody boundary, exact spatial overlap, access, fishing permission, safety, species presence, or public-app eligibility."
+    },
+    {
+      "waterbodyId": "ph-wb-taal-lake",
+      "sourceId": "calabarzon-rpfp-2017-2046-critical-watersheds-table-3-11",
+      "sourceIds": [
+        "calabarzon-rpfp-2017-2046-critical-watersheds-table-3-11",
+        "psa-calabarzon-municipalities-list",
+        "denr-bmb-philchm-inland-wetlands-2019"
+      ],
+      "sourcePath": "https://calabarzon.depdev.gov.ph/wp-content/uploads/2020/12/RPFPDec222020.pdf",
+      "sourcePage": "Printed pp.127-128, Taal Lake Cluster paragraph and Map 4.16 heading",
+      "sourceRow": "Talisay - Tanauan City - Balete - Malvar - Lipa City - Mataasnakahoy - Cuenca - Alitagtag - Santa Teresita - Taal - San Nicolas - Agoncillo - Lemery - Laurel",
+      "sourceLocality": "Taal Lake planning-cluster locality: San Nicolas, Batangas",
+      "identityDisposition": "explicit-DEPDev-Taal-Lake-Cluster-member;planning-context-only",
+      "codes": [
+        {
+          "level": "municipality",
+          "psgcCode": "0401025000",
+          "name": "San Nicolas",
+          "sourceId": "psa-calabarzon-municipalities-list"
+        }
+      ],
+      "limit": "The association identifies membership in the named regional planning cluster. It is not proof of a lake shoreline, waterbody boundary, exact spatial overlap, access, fishing permission, safety, species presence, or public-app eligibility."
+    },
+    {
+      "waterbodyId": "ph-wb-taal-lake",
+      "sourceId": "calabarzon-rpfp-2017-2046-critical-watersheds-table-3-11",
+      "sourceIds": [
+        "calabarzon-rpfp-2017-2046-critical-watersheds-table-3-11",
+        "psa-calabarzon-municipalities-list",
+        "denr-bmb-philchm-inland-wetlands-2019"
+      ],
+      "sourcePath": "https://calabarzon.depdev.gov.ph/wp-content/uploads/2020/12/RPFPDec222020.pdf",
+      "sourcePage": "Printed pp.127-128, Taal Lake Cluster paragraph and Map 4.16 heading",
+      "sourceRow": "Talisay - Tanauan City - Balete - Malvar - Lipa City - Mataasnakahoy - Cuenca - Alitagtag - Santa Teresita - Taal - San Nicolas - Agoncillo - Lemery - Laurel",
+      "sourceLocality": "Taal Lake planning-cluster locality: Agoncillo, Batangas",
+      "identityDisposition": "explicit-DEPDev-Taal-Lake-Cluster-member;planning-context-only",
+      "codes": [
+        {
+          "level": "municipality",
+          "psgcCode": "0401001000",
+          "name": "Agoncillo",
+          "sourceId": "psa-calabarzon-municipalities-list"
+        }
+      ],
+      "limit": "The association identifies membership in the named regional planning cluster. It is not proof of a lake shoreline, waterbody boundary, exact spatial overlap, access, fishing permission, safety, species presence, or public-app eligibility."
+    },
+    {
+      "waterbodyId": "ph-wb-taal-lake",
+      "sourceId": "calabarzon-rpfp-2017-2046-critical-watersheds-table-3-11",
+      "sourceIds": [
+        "calabarzon-rpfp-2017-2046-critical-watersheds-table-3-11",
+        "psa-calabarzon-municipalities-list",
+        "denr-bmb-philchm-inland-wetlands-2019"
+      ],
+      "sourcePath": "https://calabarzon.depdev.gov.ph/wp-content/uploads/2020/12/RPFPDec222020.pdf",
+      "sourcePage": "Printed pp.127-128, Taal Lake Cluster paragraph and Map 4.16 heading",
+      "sourceRow": "Talisay - Tanauan City - Balete - Malvar - Lipa City - Mataasnakahoy - Cuenca - Alitagtag - Santa Teresita - Taal - San Nicolas - Agoncillo - Lemery - Laurel",
+      "sourceLocality": "Taal Lake planning-cluster locality: Lemery, Batangas",
+      "identityDisposition": "explicit-DEPDev-Taal-Lake-Cluster-member;planning-context-only",
+      "codes": [
+        {
+          "level": "municipality",
+          "psgcCode": "0401012000",
+          "name": "Lemery",
+          "sourceId": "psa-calabarzon-municipalities-list"
+        }
+      ],
+      "limit": "The association identifies membership in the named regional planning cluster. It is not proof of a lake shoreline, waterbody boundary, exact spatial overlap, access, fishing permission, safety, species presence, or public-app eligibility."
+    },
+    {
+      "waterbodyId": "ph-wb-taal-lake",
+      "sourceId": "calabarzon-rpfp-2017-2046-critical-watersheds-table-3-11",
+      "sourceIds": [
+        "calabarzon-rpfp-2017-2046-critical-watersheds-table-3-11",
+        "psa-calabarzon-municipalities-list",
+        "denr-bmb-philchm-inland-wetlands-2019"
+      ],
+      "sourcePath": "https://calabarzon.depdev.gov.ph/wp-content/uploads/2020/12/RPFPDec222020.pdf",
+      "sourcePage": "Printed pp.127-128, Taal Lake Cluster paragraph and Map 4.16 heading",
+      "sourceRow": "Talisay - Tanauan City - Balete - Malvar - Lipa City - Mataasnakahoy - Cuenca - Alitagtag - Santa Teresita - Taal - San Nicolas - Agoncillo - Lemery - Laurel",
+      "sourceLocality": "Taal Lake planning-cluster locality: Laurel, Batangas",
+      "identityDisposition": "explicit-DEPDev-Taal-Lake-Cluster-member;planning-context-only",
+      "codes": [
+        {
+          "level": "municipality",
+          "psgcCode": "0401011000",
+          "name": "Laurel",
+          "sourceId": "psa-calabarzon-municipalities-list"
+        }
+      ],
+      "limit": "The association identifies membership in the named regional planning cluster. It is not proof of a lake shoreline, waterbody boundary, exact spatial overlap, access, fishing permission, safety, species presence, or public-app eligibility."
+    }
+  ],
+  "counts": {
+    "waterbodyResearchLeadsBefore": 164,
+    "waterbodyResearchLeadsAfter": 164,
+    "leadsUpdated": 1,
+    "cityCodeAssignments": 2,
+    "municipalityCodeAssignments": 12,
+    "additionalAssociationRows": 14,
+    "administrativeAssociationRowsBefore": 217,
+    "administrativeAssociationRowsAfter": 231,
+    "leadsWithCityOrMunicipalityCodeAfter": 80,
+    "leadsWithProvinceCodeButNoCityOrMunicipalityCodeAfter": 80,
+    "leadsWithoutAnyLocalityCodeAfter": 4,
+    "cityCodedLeadsAfter": 25,
+    "municipalityCodedLeadsAfter": 62,
+    "cityCodesPresentAfter": 15,
+    "cityCodeDenominator": 22,
+    "municipalityCodesPresentAfter": 49,
+    "municipalityCodeDenominator": 120,
+    "geometryValidated": 0,
+    "speciesAssertionsAdded": 0,
+    "publicRecordsAdmitted": 0,
+    "scopeFrozen": false
+  },
+  "limitations": [
+    "The framework plan defines a regional planning cluster using hydrological and economic considerations; it does not publish an authoritative lake shoreline dataset.",
+    "Cluster membership is retained as planning context only, not as proof of a municipal waterbody perimeter or exclusive containment.",
+    "The BMB 2019 Batangas Lakehore wording remains broad and is not replaced with municipal boundaries.",
+    "PSA directories confirm administrative names/codes only; no administrative polygon is imported.",
+    "No fish assertions, geometry, access/safety/rules claims, or public records were added; scope remains unfrozen."
+  ],
+  "decision": "Crosswalk all 14 LGUs explicitly named in the official Taal Lake Cluster text to their PSA city/municipality codes as source-described planning-context associations; keep the actual lake boundary and shoreline unverified.",
+  "nextAction": "Continue the locality queue with a separately scoped review of Laguna de Bay locality rows attributed to NCR; keep cross-region lake identity singular and geometry unresolved."
+}

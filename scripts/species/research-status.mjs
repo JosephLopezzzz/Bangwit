@@ -75,6 +75,7 @@ export function buildResearchStatus({
   calabarzonLocalitySourceBackedBatch10,
   calabarzonLocalitySourceBackedBatch11,
   calabarzonLocalitySourceBackedBatch12,
+  calabarzonLocalitySourceBackedBatch13,
   calabarzonTagbacSourceReview,
   calabarzonBcibWatercoursesReview,
   calabarzonBmbAtlasReview,
@@ -203,6 +204,12 @@ export function buildResearchStatus({
       "data/research/philippines/national/reviews/calabarzon-locality-source-backed-batch-20261119-07.json",
     ),
     "CALABARZON manifest must link its twelfth source-backed locality batch",
+  );
+  assert.ok(
+    calabarzonManifestRegion.evidenceRefs.includes(
+      "data/research/philippines/national/reviews/calabarzon-locality-source-backed-batch-20261119-08.json",
+    ),
+    "CALABARZON manifest must link its thirteenth source-backed locality batch",
   );
   assert.equal(
     calabarzonLocalityLinkageAudit.snapshotHashes.calabarzonScope,
@@ -669,7 +676,11 @@ export function buildResearchStatus({
     calabarzonLocalitySourceBackedBatch12.reviewId,
     "calabarzon-locality-source-backed-batch-20261119-07",
   );
-  assert.equal(calabarzonLocalitySourceBackedBatch12.snapshotHashes.calabarzonScope, inputHashes.scope);
+  assert.equal(
+    calabarzonLocalitySourceBackedBatch12.snapshotHashes.calabarzonScope,
+    calabarzonLocalitySourceBackedBatch13.snapshotHashes.scopeBeforeBatch,
+    "CALABARZON twelfth locality batch output must feed the thirteenth locality batch",
+  );
   assert.equal(
     calabarzonLocalitySourceBackedBatch12.snapshotHashes.scopeBeforeBatch,
     calabarzonLocalityLinkageAudit.findings.sourceBackedLocalityBatch12.scopeBeforeBatchSha256,
@@ -703,6 +714,45 @@ export function buildResearchStatus({
   );
   assert.equal(calabarzonLocalitySourceBackedBatch12.counts.cityCodesPresentAfter, 15);
   assert.equal(calabarzonLocalitySourceBackedBatch12.counts.municipalityCodesPresentAfter, 40);
+  assert.equal(
+    calabarzonLocalitySourceBackedBatch13.reviewId,
+    "calabarzon-locality-source-backed-batch-20261119-08",
+  );
+  assert.equal(calabarzonLocalitySourceBackedBatch13.snapshotHashes.calabarzonScope, inputHashes.scope);
+  assert.equal(
+    calabarzonLocalitySourceBackedBatch13.snapshotHashes.scopeBeforeBatch,
+    calabarzonLocalityLinkageAudit.findings.sourceBackedLocalityBatch13.scopeBeforeBatchSha256,
+  );
+  assert.equal(
+    calabarzonLocalitySourceBackedBatch13.snapshotHashes.previousLocalityBatch,
+    inputHashes.calabarzonLocalitySourceBackedBatch12,
+  );
+  assert.equal(
+    calabarzonLocalitySourceBackedBatch13.snapshotHashes.bmb2019WetlandCrosswalk,
+    inputHashes.calabarzonBmb2019WetlandCrosswalk,
+  );
+  assert.equal(
+    calabarzonLocalitySourceBackedBatch13.snapshotHashes.administrativeRegistry,
+    inputHashes.registry,
+  );
+  assert.equal(
+    calabarzonLocalitySourceBackedBatch13.snapshotHashes.administrativeDenominator,
+    inputHashes.calabarzonAdministrativeDenominator,
+  );
+  assert.equal(calabarzonLocalitySourceBackedBatch13.snapshotHashes.sourceRegistry, inputHashes.sources);
+  assert.equal(calabarzonLocalitySourceBackedBatch13.counts.leadsUpdated, 1);
+  assert.equal(calabarzonLocalitySourceBackedBatch13.counts.cityCodeAssignments, 2);
+  assert.equal(calabarzonLocalitySourceBackedBatch13.counts.municipalityCodeAssignments, 12);
+  assert.equal(calabarzonLocalitySourceBackedBatch13.counts.additionalAssociationRows, 14);
+  assert.equal(calabarzonLocalitySourceBackedBatch13.counts.waterbodyResearchLeadsAfter, 164);
+  assert.equal(calabarzonLocalitySourceBackedBatch13.counts.administrativeAssociationRowsAfter, 231);
+  assert.equal(calabarzonLocalitySourceBackedBatch13.counts.leadsWithCityOrMunicipalityCodeAfter, 80);
+  assert.equal(
+    calabarzonLocalitySourceBackedBatch13.counts.leadsWithProvinceCodeButNoCityOrMunicipalityCodeAfter,
+    80,
+  );
+  assert.equal(calabarzonLocalitySourceBackedBatch13.counts.cityCodesPresentAfter, 15);
+  assert.equal(calabarzonLocalitySourceBackedBatch13.counts.municipalityCodesPresentAfter, 49);
   for (const [snapshotKey, hashKey] of [
     ["tagbacReview", "calabarzonTagbacSourceReview"],
     ["bcibWatercoursesReview", "calabarzonBcibWatercoursesReview"],
@@ -782,6 +832,11 @@ export function buildResearchStatus({
     inputHashes.calabarzonLocalitySourceBackedBatch12,
     "CALABARZON locality audit twelfth-batch hash is stale",
   );
+  assert.equal(
+    calabarzonLocalityLinkageAudit.snapshotHashes.sourceBackedLocalityBatch13,
+    inputHashes.calabarzonLocalitySourceBackedBatch13,
+    "CALABARZON locality audit thirteenth-batch hash is stale",
+  );
   for (const id of calabarzonLocalitySourceBackedBatch.sourceIds) {
     assert.ok(sourceIds.has(id), `Unknown CALABARZON locality batch source: ${id}`);
   }
@@ -817,6 +872,9 @@ export function buildResearchStatus({
   }
   for (const id of calabarzonLocalitySourceBackedBatch12.sourceIds) {
     assert.ok(sourceIds.has(id), `Unknown CALABARZON twelfth locality batch source: ${id}`);
+  }
+  for (const id of calabarzonLocalitySourceBackedBatch13.sourceIds) {
+    assert.ok(sourceIds.has(id), `Unknown CALABARZON thirteenth locality batch source: ${id}`);
   }
   for (const [key, hashKey] of [
     ["mambaPalicpicanSourceReview", "mambaPalicpicanSourceReview"],
@@ -1523,6 +1581,10 @@ export async function readResearchInputs() {
     ),
     calabarzonLocalitySourceBackedBatch12: new URL(
       "national/reviews/calabarzon-locality-source-backed-batch-20261119-07.json",
+      research,
+    ),
+    calabarzonLocalitySourceBackedBatch13: new URL(
+      "national/reviews/calabarzon-locality-source-backed-batch-20261119-08.json",
       research,
     ),
     calabarzonYabahanCrosswalkReview: new URL(
