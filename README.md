@@ -207,3 +207,7 @@ See the [Cagayan B0380 synthesis](data/research/philippines/national-freshwater-
 ### Cagayan *Ilogton* source access review — 6 November 2026
 
 The original *Ilogton ilogton* description and holotype label were not located in the bounded public search. The National Museum of the Philippines publishes a Zoology Division contact for animal taxonomy questions; an inquiry is drafted but has not been sent. No coordinate or public occurrence was added. See the [access review](data/research/philippines/national-freshwater-cagayan-ilogton-primary-source-access-review-20261106.json) and [unsent inquiry](data/research/philippines/national-freshwater-cagayan-ilogton-pnm-15678-inquiry-draft-20261106.md).
+
+### NAPWC Lagoon fish-source lead — 19 November 2026
+
+The 2015 BMB guidebook reports nine fish species for the lagoon but gives common-name examples rather than a species-level checklist, fish-specific survey method, date, or voucher list. The 2016 BMB technical bulletin repeats tilapia, catfish, and mudfish in a sample ecotour script, so it is not treated as an independent survey. Five exact GBIF searches using the current CoL XR ray-finned-fish filter returned zero indexed matches; a retired Backbone key query was discarded. No scientific names, species images, public records, current-access claims, or absence claims were added. See the [review](data/research/philippines/national/reviews/ncr-napwc-fish-common-name-and-gbif-screen-20261119.json).

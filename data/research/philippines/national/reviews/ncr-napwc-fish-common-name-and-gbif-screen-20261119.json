@@ -1,0 +1,143 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "ncr-napwc-fish-common-name-and-gbif-screen-20261119",
+  "reviewedOn": "2026-11-19",
+  "phaseId": "L2",
+  "regionId": "1300000000",
+  "status": "historical-common-name-fish-lead-only;valid-col-xr-gbif-exact-text-screen-zero;no-species-identity-or-public-claim",
+  "question": "Do public sources provide species-level fish evidence for the NAPWC Lagoon, and does the bounded GBIF index screen locate exact-name ray-finned-fish records?",
+  "sourceIds": [
+    "bmb-2015-protected-areas-guidebook-napwc-fish-leads",
+    "bmb-technical-bulletin-2016-01-napwc-lagoon-fish-script",
+    "gbif-ncr-napwc-actinopterygii-exact-text-screen-20261119"
+  ],
+  "inputs": [
+    "data/research/philippines/national/reviews/ncr-napwc-lagoon-alias-review-20261119.json",
+    "data/research/philippines/gbif-actinopterygii-retired-key-correction-20261024.json",
+    "data/research/philippines/national/reviews/gbif-ph-fish-taxon-selection-20261107.json"
+  ],
+  "snapshotHashes": {
+    "sourceRegistry": "b28265ce4a979fa748ca90593779ad2153c373fc8fb8c6258c6fac2273cd12ec",
+    "napwcLagoonAliasReview": "c598fa2ee573c10687259b1f6ff14c4b4e4f731b72b5084be8e6ed00d5a940e3",
+    "gbifRetiredKeyCorrection": "c359473f8405ff5ce35dedc099142dd1ec238f2be194bbc0365d0aba6b2c6d6c",
+    "gbifTaxonSelection": "4e939ef8317abc7988822f24e6002123dfb04ad80cb809f244aea8e282e6dc9c"
+  },
+  "method": "Downloaded the official 2015 BMB guidebook PDF and verified its SHA-256 and 110-page length; extracted and checked PDF pages 16-17 (printed pages 8-9). Reviewed the official BMB Technical Bulletin No. 2016-01 in its online PDF, including its date, purpose, and Annex B NAPWC tour-script example. Queried the public GBIF Occurrence API five times using country PH, limit 0, exact waterBody or locality text, and the CoL XR checklist plus its reviewed Actinopterygii candidate key. All corrected responses were HTTP 200, count 0, and contained no occurrence rows; response snapshots are retained locally with hashes. An earlier request using deleted GBIF Backbone taxonKey 204 was discarded, not counted as valid evidence. No species names, occurrence rows, images, geometry, or public claims were created.",
+  "findings": {
+    "bmbGuidebook2015": {
+      "sourceId": "bmb-2015-protected-areas-guidebook-napwc-fish-leads",
+      "locator": "PDF pages 16-17; printed pages 8-9; NAPWC entry and facilities description.",
+      "reportedTotal": 9,
+      "reportedNameGroups": [
+        "tilapia",
+        "carp",
+        "mudfish",
+        "gouramy",
+        "sand goby / biya",
+        "catfish",
+        "silver theraponid"
+      ],
+      "interpretation": "The guidebook reports nine fish species and says its common-name examples include the seven groups listed here. It does not provide scientific names, identify nine distinct taxa, give a fish-specific survey method or date, name vouchers, or cite the provenance for the fish statement. An adjacent 2008 plant-survey reference is not assigned to the fish passage.",
+      "rawSnapshot": {
+        "path": "data/research/philippines/raw/national/napwc-fish-source-20261119/bmb-protected-areas-guidebook-2015.pdf",
+        "sha256": "3345574379311ffa66ad1c32532f7543ccef83555eb46e0bf6eba39c7cba0c01",
+        "bytes": 12925557,
+        "pages": 110,
+        "gitIgnored": true
+      },
+      "reuse": "PDF states Copyright © 2015 by BMB. No item-specific open license or reproduction permission was verified. The PDF remains local and ignored; this review records attributed facts only and reproduces no source prose, image, map, or table."
+    },
+    "bmbTechnicalBulletin2016": {
+      "sourceId": "bmb-technical-bulletin-2016-01-napwc-lagoon-fish-script",
+      "locator": "Dated 2016-06-14; Annex B sample Ecotour Guide Script for NAPWC; lagoon passage.",
+      "interpretation": "The bulletin describes a guide-script template and its sample narrative mentions tilapia, catfish, and mudfish. It is not a fish-survey report, checklist, or independent corroboration of the guidebook's total.",
+      "reuse": "No item-specific open license or republication permission was verified; no PDF copy or page image is retained."
+    },
+    "gbifExactTextScreen": {
+      "sourceId": "gbif-ncr-napwc-actinopterygii-exact-text-screen-20261119",
+      "taxonomy": {
+        "checklist": "Catalogue of Life eXtended Release",
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "taxonKey": "8VR36",
+        "matchedName": "Actinopterygii",
+        "matchedRank": "GIGACLASS",
+        "scope": "Ray-finned fishes only; not sharks or rays or all groups commonly called fish."
+      },
+      "discardedFilter": {
+        "taxonKey": 204,
+        "status": "deleted",
+        "deletedOn": "2022-11-23T06:43:29.920+00:00",
+        "disposition": "Any zero returned using this retired Backbone key is invalid for coverage and was excluded from the review."
+      },
+      "queries": [
+        {
+          "field": "waterBody",
+          "term": "Ninoy Aquino Parks and Wildlife Center Lagoon",
+          "httpStatus": 200,
+          "count": 0,
+          "endOfRecords": true,
+          "url": "https://api.gbif.org/v1/occurrence/search?country=PH&taxonKey=8VR36&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&limit=0&waterBody=Ninoy+Aquino+Parks+and+Wildlife+Center+Lagoon",
+          "rawPath": "data/research/philippines/raw/national/gbif-napwc-fish-exact-text-20261119/waterbody-napwc-lagoon.json",
+          "rawSha256": "842e210a1dc11a43b863a7438d0b8ae273f0182c290a7c64e760c176778cc9fa"
+        },
+        {
+          "field": "waterBody",
+          "term": "Ninoy Aquino Parks and Wildlife Center",
+          "httpStatus": 200,
+          "count": 0,
+          "endOfRecords": true,
+          "url": "https://api.gbif.org/v1/occurrence/search?country=PH&taxonKey=8VR36&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&limit=0&waterBody=Ninoy+Aquino+Parks+and+Wildlife+Center",
+          "rawPath": "data/research/philippines/raw/national/gbif-napwc-fish-exact-text-20261119/waterbody-napwc.json",
+          "rawSha256": "842e210a1dc11a43b863a7438d0b8ae273f0182c290a7c64e760c176778cc9fa"
+        },
+        {
+          "field": "waterBody",
+          "term": "Parks and Wildlife Lagoon",
+          "httpStatus": 200,
+          "count": 0,
+          "endOfRecords": true,
+          "url": "https://api.gbif.org/v1/occurrence/search?country=PH&taxonKey=8VR36&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&limit=0&waterBody=Parks+and+Wildlife+Lagoon",
+          "rawPath": "data/research/philippines/raw/national/gbif-napwc-fish-exact-text-20261119/waterbody-parks-wildlife-lagoon.json",
+          "rawSha256": "842e210a1dc11a43b863a7438d0b8ae273f0182c290a7c64e760c176778cc9fa"
+        },
+        {
+          "field": "locality",
+          "term": "Ninoy Aquino Parks and Wildlife Center",
+          "httpStatus": 200,
+          "count": 0,
+          "endOfRecords": true,
+          "url": "https://api.gbif.org/v1/occurrence/search?country=PH&taxonKey=8VR36&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&limit=0&locality=Ninoy+Aquino+Parks+and+Wildlife+Center",
+          "rawPath": "data/research/philippines/raw/national/gbif-napwc-fish-exact-text-20261119/locality-napwc.json",
+          "rawSha256": "842e210a1dc11a43b863a7438d0b8ae273f0182c290a7c64e760c176778cc9fa"
+        },
+        {
+          "field": "locality",
+          "term": "Parks and Wildlife Lagoon",
+          "httpStatus": 200,
+          "count": 0,
+          "endOfRecords": true,
+          "url": "https://api.gbif.org/v1/occurrence/search?country=PH&taxonKey=8VR36&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&limit=0&locality=Parks+and+Wildlife+Lagoon",
+          "rawPath": "data/research/philippines/raw/national/gbif-napwc-fish-exact-text-20261119/locality-parks-wildlife-lagoon.json",
+          "rawSha256": "842e210a1dc11a43b863a7438d0b8ae273f0182c290a7c64e760c176778cc9fa"
+        }
+      ],
+      "interpretation": "No records were found for these exact indexed waterBody/locality strings under this scope at the check time. The screen is not spatial, exhaustive, a fish-absence assessment, or proof that the guidebook's names are unverified."
+    }
+  },
+  "decisions": {
+    "vernacularNameGroupsRetainedAsResearchLeads": 7,
+    "scientificNamesAssigned": 0,
+    "speciesAssertionsAdded": 0,
+    "geometryAdded": 0,
+    "publicRecordsAdmitted": 0,
+    "publicationApproval": false
+  },
+  "limitations": [
+    "The BMB guidebook passage gives a reported total but no species-level checklist or traceable fish survey. Common-name groups are not unique taxon identifiers and cannot be used to select species photos.",
+    "The BMB Technical Bulletin is a sample tourism script and shares common-name material with the guidebook; these are not counted as two independent fish surveys.",
+    "GBIF exact-field zero results are bounded index outcomes, not absence evidence, and the selected CoL XR class scope covers ray-finned fishes only.",
+    "The historical documents do not establish current fish presence, fish abundance, fishing access or permission, safety, or current protected-area rules.",
+    "No item-specific open reuse terms were verified for either BMB document."
+  ],
+  "nextAction": "Search for a separate, species-level primary source with scientific names, fish-specific sampling dates and methods, site crosswalk, and preferably specimen vouchers or sequence accessions. Until such evidence and reuse scope are verified, keep these common-name groups research-only, retain no species image mapping, and do not publish a fishing-site claim."
+}
