@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "ncr-navotas-nmt-taxonomic-crosscheck-20261119",
+  "reviewedOn": "2026-11-19",
+  "phaseId": "L2",
+  "regionId": "1300000000",
+  "regionName": "National Capital Region (NCR)",
+  "parentReviewId": "ncr-navotas-nmt-2024-ichthyofauna-review-20261119",
+  "sourceId": "encarnacion-etal-2024-navotas-nmt-ichthyofauna",
+  "status": "accepted-name-crosswalk;row-count-conflict;specimen-identification-unverified;research-only",
+  "question": "Do the six distinct binomials printed in the 2024 Navotas-Malabon-Tullahan fish survey correspond to currently accepted species names, and does that resolve the paper's seven-species count?",
+  "snapshotHashes": {
+    "sourceRegistry": "c2a1535cdcbb3de268a6f8e33566dac49c5b55fc125d737131251e935d8df9da",
+    "administrativeRegistry": "c741456fbc2cfc9d5d813484a0b661ef206154977959fc27a289ca86732142e8",
+    "parentReview": "5fc9301911ca4e1800749559f48201a84aeddcc6125b614e918106cc611241ca"
+  },
+  "method": {
+    "summary": "Used the seven source-row transcriptions in the parent review, collapsed only the distinct-name set for taxonomic lookup, and checked current catalog/status entries in Eschmeyer's Catalog of Fishes, ITIS, and WoRMS. The duplicate source rows remain separate in the transcription.",
+    "accessNotes": [
+      "Eschmeyer's Catalog pages and indexed entries were reviewed; direct access varied by record, with some pages returning HTTP 403.",
+      "The official ITIS species report for Sarotherodon melanotheron opened and exposed its valid standing and Cichlidae placement.",
+      "The WoRMS Nematalosa nasus page returned HTTP 403 on direct open; its indexed taxon text reported accepted status. No access control was bypassed.",
+      "No source vouchers, diagnostic images, specimen accessions, or field-identification records were available for review in this cross-check."
+    ],
+    "scopeLimit": "A nomenclatural match confirms the current status of a name string only; it cannot validate the identification of the fish caught by the study."
+  },
+  "taxonNameCrosswalk": [
+    {
+      "nameAsPrinted": "Scatophagus argus",
+      "currentName": "Scatophagus argus",
+      "currentStatus": "valid",
+      "sourceId": "catalog-fishes-nmt-taxonomy-crosscheck-20261119"
+    },
+    {
+      "nameAsPrinted": "Pelates quadrilineatus",
+      "currentName": "Pelates quadrilineatus",
+      "currentStatus": "valid",
+      "sourceId": "catalog-fishes-nmt-taxonomy-crosscheck-20261119"
+    },
+    {
+      "nameAsPrinted": "Sarotherodon melanotheron",
+      "currentName": "Sarotherodon melanotheron",
+      "currentStatus": "valid",
+      "sourceId": "itis-sarotherodon-melanotheron-taxonomy-20261119"
+    },
+    {
+      "nameAsPrinted": "Terapon jarbua",
+      "currentName": "Terapon jarbua",
+      "currentStatus": "valid",
+      "sourceId": "catalog-fishes-nmt-taxonomy-crosscheck-20261119"
+    },
+    {
+      "nameAsPrinted": "Lutjanus argentimaculatus",
+      "currentName": "Lutjanus argentimaculatus",
+      "currentStatus": "valid",
+      "sourceId": "catalog-fishes-nmt-taxonomy-crosscheck-20261119",
+      "sourceRowCount": 2,
+      "localNamesAsPrinted": ["alakaak", "kabang"],
+      "rowDecision": "One accepted binomial appears in two source rows under different local names. Catalog validity does not establish whether these labels refer to the same taxon or reveal an article table error; retain both verbatim, do not count them as separate species, and do not merge their site counts."
+    },
+    {
+      "nameAsPrinted": "Nematalosa nasus",
+      "currentName": "Nematalosa nasus",
+      "currentStatus": "accepted",
+      "sourceId": "worms-nematalosa-nasus-taxonomy-20261119"
+    }
+  ],
+  "countReconciliation": {
+    "articleAbstractClaim": "Six native species and one invasive species.",
+    "tableRows": 7,
+    "distinctScientificNamesInRows": 6,
+    "duplicateName": "Lutjanus argentimaculatus",
+    "result": "The name cross-check finds six currently accepted name strings. It does not reveal a seventh distinct name in the reviewed table or resolve the article's six-native-plus-one-invasive count. Keep the abstract/table discrepancy open; do not infer a missing taxon or reassign a source row."
+  },
+  "scopeAndReuseDecision": {
+    "decision": "Research-only accepted-name crosswalk; the field identifications, local-name mapping, source count, and station-level occurrence claims remain unresolved.",
+    "distinctNamesChecked": 6,
+    "acceptedNameMatches": 6,
+    "sourceRowsPreserved": 7,
+    "duplicateBinomialRows": 2,
+    "speciesAssertionsAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "publicAppProjection": false,
+    "photosOrFiguresCopied": false
+  },
+  "nonClaims": [
+    "A currently accepted binomial does not establish that the article's specimens were correctly identified.",
+    "The cross-check does not validate source local names, native/invasive labels, counts, or the source's table extraction.",
+    "The repeated Lutjanus argentimaculatus rows are not treated as two species and are not merged into one occurrence record.",
+    "No source fish is assigned to a canonical Navotas, Malabon, Tullahan, Tanza, or Tangos waterbody feature by this review.",
+    "No current-presence, abundance, fishing-access, legal, diet, safety, image, or bait claim is made."
+  ],
+  "nextActions": [
+    "Keep the seven original source rows intact and request or locate voucher/accession records and the authors' taxonomic verification details before species-level normalization.",
+    "Seek an article correction, author clarification, or source table that explains the seven-species abstract count versus six unique table names.",
+    "Resolve the malformed Site 3 coordinate from an authoritative correction or original field record and independently crosswalk all three site descriptions before any occurrence assignment."
+  ]
+}
