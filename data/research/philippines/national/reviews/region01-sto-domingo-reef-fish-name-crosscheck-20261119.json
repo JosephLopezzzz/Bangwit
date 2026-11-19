@@ -1,0 +1,118 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "region01-sto-domingo-reef-fish-name-crosscheck-20261119",
+  "reviewedOn": "2026-11-19",
+  "phaseId": "L4",
+  "regionId": "0100000000",
+  "regionName": "Region I (Ilocos Region)",
+  "province": "Ilocos Sur",
+  "status": "bounded-authority-name-crosscheck;four-source-label-groups;source-strings-preserved;specimen-identities-unverified;research-only",
+  "relatedReviewFiles": [
+    "national/reviews/region01-sto-domingo-calay-ab-reef-fish-source-review-20261119.json"
+  ],
+  "sourceReviewId": "region01-sto-domingo-calay-ab-reef-fish-source-review-20261119",
+  "sources": [
+    {
+      "sourceId": "gbif-pycnochromis-caudalis-checklistbank-crosscheck",
+      "authority": "Global Biodiversity Information Facility (GBIF), taxonomic backbone sourced from Checklist Bank",
+      "recordUrl": "https://www.gbif.org/taxon/D5B5F",
+      "sourceLabels": [
+        {
+          "label": "Pycnchromis caudalis",
+          "locations": ["Table 4", "Table 6", "Table 7"]
+        },
+        {
+          "label": "Pycnochromis caudalis",
+          "locations": ["Table 5", "Table 8"]
+        }
+      ],
+      "candidateName": "Pycnochromis caudalis (Randall, 1988)",
+      "catalogStatus": "GBIF taxon page displays Pycnochromis caudalis as an accepted species and attributes its classification to Checklist Bank.",
+      "interpretation": "This supports a candidate name-string crosswalk for the table variants only; it does not identify the fish counted in the paper."
+    },
+    {
+      "sourceId": "calacademy-catalog-chaetodontoplus-mesoleucus-crosscheck",
+      "authority": "Eschmeyer's Catalog of Fishes, California Academy of Sciences",
+      "recordUrl": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=38682",
+      "sourceLabels": [
+        {
+          "label": "Chaetodonplus mesoleucus",
+          "locations": ["Table 7"]
+        },
+        {
+          "label": "Chaetodontoplus mesoleucus",
+          "locations": ["Tables 4 and 6"]
+        }
+      ],
+      "candidateName": "Chaetodontoplus mesoleucus (Bloch, 1787)",
+      "catalogStatus": "The Catalog of Fishes states valid as Chaetodontoplus mesoleucus.",
+      "interpretation": "The catalog resolves a candidate nomenclatural string, not the identity of any surveyed organism."
+    },
+    {
+      "sourceId": "worms-sto-domingo-table-variant-crosscheck",
+      "authority": "World Register of Marine Species (WoRMS), Flanders Marine Institute",
+      "recordUrls": [
+        "https://www.marinespecies.org/aphia.php?p=taxlist&tName=Rhinecanthus",
+        "https://www.marinespecies.org/aphia.php?p=taxlist&tName=Lutjanus+russelli"
+      ],
+      "sourceLabels": [
+        {
+          "label": "Rhicanthus verrucosus",
+          "locations": ["Table 6"]
+        },
+        {
+          "label": "Rhinecanthus verrucosus",
+          "locations": ["Table 4"]
+        },
+        {
+          "label": "Lutjanus russelli",
+          "locations": ["Table 4"]
+        },
+        {
+          "label": "Lutjanus russellii",
+          "locations": ["Table 5"]
+        },
+        {
+          "label": "Lutjanus ruselli",
+          "locations": ["Table 6"]
+        }
+      ],
+      "candidateNames": [
+        {
+          "name": "Rhinecanthus verrucosus (Linnaeus, 1758)",
+          "status": "WoRMS lists this as an accepted species name."
+        },
+        {
+          "name": "Lutjanus russellii (Bleeker, 1849)",
+          "status": "WoRMS lists Lutjanus russellii as accepted and reports Lutjanus russelli as accepted as Lutjanus russellii. The paper's separate spelling Lutjanus ruselli is retained as printed and is not silently asserted as a recorded synonym."
+        }
+      ],
+      "interpretation": "WoRMS provides accepted-name candidates for the source-label strings; those matches do not independently verify the fish in the transects."
+    }
+  ],
+  "interpretation": {
+    "variantGroupsReviewed": 4,
+    "candidateNames": [
+      "Pycnochromis caudalis",
+      "Chaetodontoplus mesoleucus",
+      "Rhinecanthus verrucosus",
+      "Lutjanus russellii"
+    ],
+    "sourceStringsPolicy": "Preserve every spelling exactly as printed in Tables 4–8. Use the candidate names only in a separately attributed nomenclatural crosswalk; do not rewrite counts, merge source rows, or imply specimen determination.",
+    "limits": [
+      "No voucher identifiers, specimen catalog numbers, diagnostic descriptions, or author-confirmed mapping from each table spelling to a physical fish were retrieved.",
+      "The catalogs establish nomenclatural status, not a Sto. Domingo occurrence, count, transect assignment, identification quality, or current presence.",
+      "No source table or image was reproduced; source-listed names and counts remain attributed to the primary paper."
+    ]
+  },
+  "decision": {
+    "sourceStringsCorrected": 0,
+    "sampledOrganismIdentitiesConfirmed": 0,
+    "speciesAssertionsAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "publicAppRowsAdded": 0,
+    "publicationApproval": false,
+    "regionalBaselineComplete": false
+  },
+  "nextAction": "Keep the source review and name crosswalk linked; continue a separate Region I source search across river, lake, estuary, and marine studies. Seek specimen or author-confirmed table identity only if later evidence use requires it."
+}
