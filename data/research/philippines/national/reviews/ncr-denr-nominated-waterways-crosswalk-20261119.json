@@ -1,0 +1,241 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "ncr-denr-nominated-waterways-crosswalk-20261119",
+  "reviewedOn": "2026-11-19",
+  "phaseId": "L2",
+  "regionId": "1300000000",
+  "status": "12-selected-2025-waterway-nominations-crosswalked-to-PSGC;18-old-checkpoint-items-reclassified-as-mixed-contexts;no-geometry;no-species-records",
+  "question": "What NCR waterways were named in DENR-NCR's 2025 Gawad Taga-Ilog field validation, and how should the earlier 18-item discovery checkpoint be interpreted without conflating waterbodies, stations, watersheds, parks, and habitat contexts?",
+  "sourceIds": [
+    "denr-ncr-gawad-taga-ilog-2025",
+    "denr-ncr-water-resource-preparedness",
+    "denr-ncr-pasig-river-biodiversity-2024",
+    "denr-ncr-soe-2025",
+    "denr-bmb-philchm-inland-wetlands-2019",
+    "psa-ncr-cities-list",
+    "psa-ncr-municipality-list"
+  ],
+  "inputs": [
+    "data/research/philippines/administrative-registry.json",
+    "data/research/philippines/ncr-species-coverage-review-20261024.json",
+    "data/research/philippines/national/reviews/ncr-administrative-denominator-reconciliation-20261119.json",
+    "data/research/philippines/national/reviews/ncr-pasig-biodiversity-report-refresh-20261116.json",
+    "data/research/philippines/national/reviews/ncr-bmb-2019-freshwater-locality-crosswalk-20261119.json"
+  ],
+  "snapshotHashes": {
+    "administrativeRegistry": "c741456fbc2cfc9d5d813484a0b661ef206154977959fc27a289ca86732142e8",
+    "ncrDiscoveryCheckpoint": "90a8eb789797a4a56a50a4a06a2d9e31cbf0997549e87fbe5941aea479d82e59",
+    "ncrAdministrativeDenominatorReview": "593855c950cfe533f31e468d5201db5283693e2d7725963289df2b1792f32bc2",
+    "ncrPasigReportRefresh": "c1c245002e9b53b1183049846bd40a187d471f09fa9c21090cd2b84013fe724c",
+    "ncrBmbLocalityCrosswalk": "dc13095efd5aa4f3c33addc29e4740e5ffa456e2346dabc24f14c9fc380e5c1c",
+    "sourceRegistry": "5646cc97ada19600e9a59370d31875d4ed6994a7762aafa837ea8a099d64be51"
+  },
+  "method": "Reviewed the official DENR-NCR indexed text for the 2025 Gawad Taga-Ilog field-validation article and current water-resource preparedness article; direct requests to both pages returned HTTP 403, and no access control was bypassed or local copy retained. Crosswalked the article's printed city/municipality names to the PSA-rendered 2025 NCR city and municipality directories, whose 17-unit name/code comparison is recorded in the linked denominator review. Compared names only against the 2024 Pasig assessment refresh and the 2026-10-24 discovery checkpoint. This records selected source-named waterways and administrative locality context; it does not create canonical features, waterbody boundaries, species observations, or complete regional coverage.",
+  "sourceFindings": {
+    "gawadTagaIlog2025": {
+      "sourceId": "denr-ncr-gawad-taga-ilog-2025",
+      "url": "https://ncr.denr.gov.ph/news-events/denr-ncr-completes-field-validation-for-gawad-taga-ilog-2025-12-waterways-in-metro-manila-assessed-for-most-improved-estero-recognition/",
+      "reportedPeriod": "Field validation throughout April and early May 2025",
+      "scope": "Twelve nominated waterways across Metro Manila were assessed for a DENR-NCR recognition program. The page associates each nomination with a reported city or municipality and selected barangays.",
+      "accessLimit": "Official search-index text exposed the article and all twelve entries; direct page retrieval returned HTTP 403. Full page HTML, maps, photographs, methods for fish assessment, and any geometry were not retrieved.",
+      "interpretation": "These are selected waterway nominations and program-validation sites, not a complete NCR hydrologic inventory, a fish survey, or an all-waterbody denominator."
+    },
+    "waterResourceSystems": {
+      "sourceId": "denr-ncr-water-resource-preparedness",
+      "url": "https://ncr.denr.gov.ph/news-events/denr-ncr-strengthens-water-resource-preparedness-amid-el-nino-concerns/",
+      "reportedSystems": [
+        {
+          "nameAsPublished": "Malabon-Navotas-Tullahan-Tinajeros River System",
+          "shortNameAsPublished": "MANATUTI",
+          "monitoringStations": 21
+        },
+        {
+          "nameAsPublished": "Pasig-Marikina-San Juan River System",
+          "shortNameAsPublished": "PAMARISAN",
+          "monitoringStations": 32
+        },
+        {
+          "nameAsPublished": "Muntinlupa-Parañaque-Las Piñas-Zapote River System",
+          "shortNameAsPublished": "MUNTIPARLASPZAP",
+          "monitoringStations": 36
+        }
+      ],
+      "combinedRiverSystemMonitoringStations": 89,
+      "separateEmbncrAmbientWaterQualityStations": 377,
+      "accessLimit": "Official search-index text reviewed; direct page retrieval returned HTTP 403. The article's visible indexed text does not provide a station register or feature geometry.",
+      "interpretation": "The three names are system-level monitoring groupings. The stated 89 river-system stations and separate 377 EMB-NCR ambient water-quality stations are monitoring locations, not counts of distinct rivers, waterbodies, or fishing sites."
+    },
+    "previousPasigAssessment": {
+      "sourceId": "denr-ncr-pasig-river-biodiversity-2024",
+      "assessmentPeriod": "2024 dry and wet seasons",
+      "reportedMainRiverSamplingPoints": [
+        "Delpan",
+        "Hulo",
+        "Napindan",
+        "Bambang",
+        "PUP"
+      ],
+      "reportedMajorTributaries": [
+        "Taguig-Pateros River",
+        "Marikina River",
+        "San Juan River"
+      ],
+      "reportedMinorEsteros": [
+        "Aviles",
+        "San Miguel",
+        "Sampaloc",
+        "Uli-Uli",
+        "Quiapo",
+        "Paco",
+        "Estero de Magdalena"
+      ],
+      "interpretation": "The five point names are sampling stations on the Pasig main-river assessment, not five additional waterbodies. The assessment names a selected river-system scope and does not give a complete NCR denominator or a species-by-waterway table in the reviewed text."
+    }
+  },
+  "priorCheckpointDisposition": {
+    "sourceReview": "data/research/philippines/ncr-species-coverage-review-20261024.json",
+    "checkpointItems": 18,
+    "reconstructedGroups": [
+      {
+        "count": 11,
+        "description": "Pasig River, three named major tributaries, and seven named Manila esteros from the 2024 DENR assessment scope."
+      },
+      {
+        "count": 4,
+        "description": "La Mesa Watershed, Las Piñas-Parañaque Wetland Park, Baseco Lagoon, and Tanza Marine Tree Park from the DENR-NCR environment campaign lead."
+      },
+      {
+        "count": 2,
+        "description": "Shared-water contexts Manila Bay and Laguna de Bay."
+      },
+      {
+        "count": 1,
+        "description": "La Mesa Reservoir, a water-storage feature named separately from La Mesa Watershed."
+      }
+    ],
+    "countDisposition": "The historical count of 18 is a reconstructed mixed set of waterway names, shared waters, a reservoir, a watershed, a protected wetland park, and a marine-tree-park habitat. It must not be described as 18 validated waterbodies or a complete inventory. The five DENR sampling-point labels are subsites and were not counted as additional waterbodies. The later BMB Jamboree Lake and Ninoy Aquino Parks and Wildlife Center pond rows are two further source-row candidates held separately; the park name does not identify an individual pond."
+  },
+  "nominatedWaterways": [
+    {
+      "nameAsPublished": "Dolmar Creek",
+      "reportedLocality": "Barangay 168 (Dolmar II) to Barangay 167 (Dolmar I), Caloocan City",
+      "psgcCode": "1380100000",
+      "administrativeUnit": "City of Caloocan",
+      "sourceId": "denr-ncr-gawad-taga-ilog-2025"
+    },
+    {
+      "nameAsPublished": "Polo River",
+      "reportedLocality": "Barangay Tagalag, Valenzuela City",
+      "psgcCode": "1381600000",
+      "administrativeUnit": "City of Valenzuela",
+      "sourceId": "denr-ncr-gawad-taga-ilog-2025"
+    },
+    {
+      "nameAsPublished": "Spine Creek (Estero de Lapu-Lapu)",
+      "reportedLocality": "Barangay NBBS-Dagat Dagatan, Navotas City",
+      "psgcCode": "1380900000",
+      "administrativeUnit": "City of Navotas",
+      "sourceId": "denr-ncr-gawad-taga-ilog-2025"
+    },
+    {
+      "nameAsPublished": "Pasig River",
+      "reportedLocality": "Barangays Buting and San Joaquin, Pasig City",
+      "psgcCode": "1381200000",
+      "administrativeUnit": "City of Pasig",
+      "sourceId": "denr-ncr-gawad-taga-ilog-2025",
+      "nameCrosswalk": "Exact source-name overlap with the 2024 DENR Pasig assessment; this adds a program locality context, not a new river feature."
+    },
+    {
+      "nameAsPublished": "Arayat Creek",
+      "reportedLocality": "Barangay Immaculate Conception, Quezon City",
+      "psgcCode": "1381300000",
+      "administrativeUnit": "Quezon City",
+      "sourceId": "denr-ncr-gawad-taga-ilog-2025"
+    },
+    {
+      "nameAsPublished": "Estero de Paco",
+      "reportedLocality": "Barangays 677, 671, and 672, City of Manila",
+      "psgcCode": "1380600000",
+      "administrativeUnit": "City of Manila",
+      "sourceId": "denr-ncr-gawad-taga-ilog-2025",
+      "nameCrosswalk": "Possible name overlap with the 2024 assessment's shorter label 'Paco'; retain as a held name-variant crosswalk rather than merging by text alone."
+    },
+    {
+      "nameAsPublished": "Maricaban Creek",
+      "reportedLocality": "Source text prints 'Rbgy. 178', Pasay City",
+      "psgcCode": "1381100000",
+      "administrativeUnit": "Pasay City",
+      "sourceId": "denr-ncr-gawad-taga-ilog-2025",
+      "sourceSpellingNote": "Preserve the indexed article's apparent 'Rbgy.' typo in source quotation; the city-level match does not resolve the barangay wording."
+    },
+    {
+      "nameAsPublished": "Las Piñas River",
+      "reportedLocality": "Barangay Manuyo Dos, Las Piñas City",
+      "psgcCode": "1380200000",
+      "administrativeUnit": "City of Las Piñas",
+      "sourceId": "denr-ncr-gawad-taga-ilog-2025"
+    },
+    {
+      "nameAsPublished": "Pateros River",
+      "reportedLocality": "Barangay San Pedro, Municipality of Pateros",
+      "psgcCode": "1381701000",
+      "administrativeUnit": "Pateros",
+      "sourceId": "denr-ncr-gawad-taga-ilog-2025"
+    },
+    {
+      "nameAsPublished": "Sucat-Bagumbayan River",
+      "reportedLocality": "Barangay Sucat, Muntinlupa City",
+      "psgcCode": "1380800000",
+      "administrativeUnit": "City of Muntinlupa",
+      "sourceId": "denr-ncr-gawad-taga-ilog-2025"
+    },
+    {
+      "nameAsPublished": "San Dionisio River",
+      "reportedLocality": "Barangay San Dionisio, Parañaque City",
+      "psgcCode": "1381000000",
+      "administrativeUnit": "City of Parañaque",
+      "sourceId": "denr-ncr-gawad-taga-ilog-2025"
+    },
+    {
+      "nameAsPublished": "Mamali Creek",
+      "reportedLocality": "Barangay Lower Bicutan, Taguig City",
+      "psgcCode": "1381500000",
+      "administrativeUnit": "City of Taguig",
+      "sourceId": "denr-ncr-gawad-taga-ilog-2025"
+    }
+  ],
+  "counts": {
+    "historicalMixedCheckpointItemsReconstructed": 18,
+    "historicalCheckpointWaterwayScopeLabels": 11,
+    "historicalCheckpointConservationOrHabitatContexts": 4,
+    "historicalCheckpointSharedWaterContexts": 2,
+    "historicalCheckpointReservoirContexts": 1,
+    "2025NominatedWaterwaysReviewed": 12,
+    "distinctPSGCUnitsMatched": 12,
+    "ncrCityCodesMatched": 11,
+    "ncrMunicipalityCodesMatched": 1,
+    "exactNameOverlapWith2024Assessment": 1,
+    "possibleHeldNameVariantOverlaps": 1,
+    "namedRiverSystemMonitoringGroups": 3,
+    "riverSystemMonitoringStations": 89,
+    "separateAmbientWaterQualityMonitoringStations": 377,
+    "featureIdentityCrosswalksConfirmed": 0,
+    "waterbodyLeadsCreated": 0,
+    "geometryValidated": 0,
+    "speciesAssertionsAdded": 0,
+    "publicRecordsAdmitted": 0,
+    "scopeFrozen": false,
+    "baselineReviewed": false
+  },
+  "limitations": [
+    "The 2025 Gawad Taga-Ilog list is a selected program nomination set and cannot stand in for a complete NCR waterbody inventory or proof that omitted waterways do not exist.",
+    "PSA codes crosswalk the printed city/municipality only. Barangay strings are preserved as source context and were not independently crosswalked; city codes do not locate a waterway or define its route or boundary.",
+    "The source page text was available through official search indexing, but direct page retrieval returned HTTP 403; no full HTML or local source snapshot is available.",
+    "The DENR monitoring articles describe grouped systems and monitoring sites, not unique feature counts. Their station totals must not be added to waterbody counts.",
+    "The prior checkpoint's 18 items mix waterway, shared-water, reservoir, watershed, protected wetland, and habitat contexts; it is not a verified count. The 12 new program nominations also do not complete the inventory.",
+    "Estero de Paco and the earlier report label Paco are retained as a possible alias only. No feature merge or identity claim is made.",
+    "No fish species, fish presence or absence, fishing access, legal permission, safety, salinity, current water quality, abundance, or public-app claim is supported by this crosswalk.",
+    "The NCR source sweep remains incomplete across the 17 administrative units and freshwater, brackish, and marine habitats."
+  ],
+  "nextAction": "Continue source discovery for omitted waterway and wetland classes across all 17 NCR units, then reconcile source names and locality context through independent records before creating canonical feature links. Retrieve a lawful station register or suitable geodata with reuse terms before any route geometry; keep the 2025 selected nominations separate from fish evidence and public mapping."
+}

@@ -3,7 +3,7 @@
   "checkedOn": "2026-11-19",
   "status": "research-only-source-registry",
   "scope": "National acquisition references, freshwater spatial-source leads, MIMAROPA/CALABARZON/Central Luzon identity and inland-water source reviews, and Mindanao regional freshwater survey reviews. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 926,
+  "sourceCount": 928,
   "sources": [
     {
       "id": "aoyama-et-al-2015-cagayan-glass-eel-recruitment",
@@ -31787,7 +31787,7 @@
       "title": "National Capital Region (NCR), Philippine Standard Geographic Code city table",
       "provider": "Philippine Statistics Authority",
       "url": "https://psa.gov.ph/classification/psgc/provinces/1300000000",
-      "role": "Official PSA NCR city names and 10-digit PSGC codes; used to reconcile all 16 city rows in the pinned NCR administrative denominator and crosswalk explicit BMB 2019 locality labels. The page provides administrative identifiers, not waterbody or shoreline geometry.",
+      "role": "Official PSA NCR city names and 10-digit PSGC codes; used to reconcile all 16 city rows in the pinned NCR administrative denominator, crosswalk explicit BMB 2019 locality labels, and match city names printed in the 2025 DENR-NCR nominated-waterways article. The page provides administrative identifiers, not waterbody or shoreline geometry.",
       "checkedOn": "2026-11-19",
       "sourceYear": 2025,
       "asOf": "2025-07-31 city table; checked against the PSA 3Q 2026 release listing current PSGC through 2026-09-30",
@@ -31796,7 +31796,8 @@
         "reviewFiles": [
           "national/reviews/laguna-de-bay-ncr-locality-crosswalk-20261119.json",
           "national/reviews/ncr-bmb-2019-freshwater-locality-crosswalk-20261119.json",
-          "national/reviews/ncr-administrative-denominator-reconciliation-20261119.json"
+          "national/reviews/ncr-administrative-denominator-reconciliation-20261119.json",
+          "national/reviews/ncr-denr-nominated-waterways-crosswalk-20261119.json"
         ],
         "fullTextRetrieved": true,
         "localRawSnapshot": null,
@@ -31822,14 +31823,15 @@
       "title": "National Capital Region (NCR), Philippine Standard Geographic Code municipality table",
       "provider": "Philippine Statistics Authority",
       "url": "https://psa.gov.ph/classification/psgc/municipalities/1300000000",
-      "role": "Official PSA NCR municipality name and 10-digit PSGC code for Pateros; used to reconcile the single municipality in the pinned NCR administrative denominator. The page provides administrative identifiers, not waterbody or shoreline geometry.",
+      "role": "Official PSA NCR municipality name and 10-digit PSGC code for Pateros; used to reconcile the single municipality in the pinned NCR administrative denominator and match Pateros River's source-reported locality in the 2025 DENR-NCR nominated-waterways article. The page provides administrative identifiers, not waterbody or shoreline geometry.",
       "checkedOn": "2026-11-19",
       "sourceYear": 2025,
       "asOf": "2025-07-31 municipality table; PSA page links the current PSGC publication as of 2026-09-30",
       "access": {
         "status": "official-PSA-rendered-NCR-municipality-table-reviewed;Pateros-10-digit-code-checked;no-geometry-downloaded",
         "reviewFiles": [
-          "national/reviews/ncr-administrative-denominator-reconciliation-20261119.json"
+          "national/reviews/ncr-administrative-denominator-reconciliation-20261119.json",
+          "national/reviews/ncr-denr-nominated-waterways-crosswalk-20261119.json"
         ],
         "fullTextRetrieved": true,
         "localRawSnapshot": null,
@@ -31847,6 +31849,68 @@
       "caveats": [
         "The rendered municipality table is labeled as of 31 July 2025; row-level verification against the downloadable 30 September 2026 workbook remains pending.",
         "The Pateros administrative code is not a waterbody boundary, shoreline, fishing-ground designation, access permission, or proof of current fish presence."
+      ]
+    },
+    {
+      "id": "denr-ncr-gawad-taga-ilog-2025",
+      "title": "DENR-NCR Completes Field Validation for Gawad Taga-Ilog 2025: 12 Waterways in Metro Manila Assessed",
+      "provider": "Department of Environment and Natural Resources - National Capital Region",
+      "url": "https://ncr.denr.gov.ph/news-events/denr-ncr-completes-field-validation-for-gawad-taga-ilog-2025-12-waterways-in-metro-manila-assessed-for-most-improved-estero-recognition/",
+      "role": "Official search-index text names twelve selected waterway nominations and their reported city/municipality and barangay contexts for the 2025 Gawad Taga-Ilog field validation. This is a selected program list, not a complete NCR waterbody inventory, fish survey, or geometry source.",
+      "checkedOn": "2026-11-19",
+      "sourceYear": 2025,
+      "access": {
+        "status": "official-search-index-article-text-reviewed;direct-page-403;no-local-copy",
+        "reviewFiles": [
+          "national/reviews/ncr-denr-nominated-waterways-crosswalk-20261119.json"
+        ],
+        "fullTextRetrieved": false,
+        "officialSearchIndexTextReviewed": true,
+        "localRawSnapshot": null,
+        "reviewedSections": "Article scope, April/early May 2025 field-validation period, and all twelve listed waterways with source-reported localities."
+      },
+      "reuse": {
+        "metadata": "Retain attribution to DENR-NCR for the selected program scope and waterway names.",
+        "raw": "No local page copy, photographs, maps, or article assets retained.",
+        "content": "Only source-named waterway text and minimal locality context are recorded for internal research. No source geometry, fish data, or public app projection is approved."
+      },
+      "publicationApproval": false,
+      "researchStatus": "selected-2025-waterway-nominations;locality-context-only;no-geometry;no-fish-data;research-only",
+      "caveats": [
+        "The twelve entries are program nominations assessed for a recognition program and are not an exhaustive NCR waterway inventory.",
+        "The direct official page returned HTTP 403 during review; the indexed official page text was reviewed without bypassing access controls.",
+        "Reported barangays and city names do not provide waterway routes, coordinates, or boundaries.",
+        "No item-specific open-data license or republication permission was confirmed."
+      ]
+    },
+    {
+      "id": "denr-ncr-water-resource-preparedness",
+      "title": "DENR-NCR Strengthens Water-Resource Preparedness Amid El Niño Concerns",
+      "provider": "Department of Environment and Natural Resources - National Capital Region",
+      "url": "https://ncr.denr.gov.ph/news-events/denr-ncr-strengthens-water-resource-preparedness-amid-el-nino-concerns/",
+      "role": "Official search-index text names three priority NCR river-system monitoring groupings and station totals, and separately reports 377 EMB-NCR ambient water-quality monitoring stations. These groupings and station counts are research context, not counts of unique waterbodies or fish sites.",
+      "checkedOn": "2026-11-19",
+      "access": {
+        "status": "official-search-index-article-text-reviewed;direct-page-403;no-local-copy",
+        "reviewFiles": [
+          "national/reviews/ncr-denr-nominated-waterways-crosswalk-20261119.json"
+        ],
+        "fullTextRetrieved": false,
+        "officialSearchIndexTextReviewed": true,
+        "localRawSnapshot": null,
+        "reviewedSections": "Three river-system names and the stated 21/32/36 monitoring-station counts; separate 377-station EMB-NCR water-quality monitoring statement."
+      },
+      "reuse": {
+        "metadata": "Retain attribution to DENR-NCR for the named system-level and monitoring-program context.",
+        "raw": "No local article copy, station register, map, or geometry retained.",
+        "content": "Only system names and summary counts are recorded as internal research notes; no station locations, fish data, waterbody boundaries, or public app projection are approved."
+      },
+      "publicationApproval": false,
+      "researchStatus": "river-system-monitoring-context;station-counts-not-waterbody-denominator;research-only",
+      "caveats": [
+        "Direct official-page retrieval returned HTTP 403; indexed official page text was reviewed without bypassing access controls.",
+        "The source text does not provide a station register, exact station coordinates, or waterbody geometry.",
+        "No item-specific open-data license or republication permission was confirmed."
       ]
     }
   ],
