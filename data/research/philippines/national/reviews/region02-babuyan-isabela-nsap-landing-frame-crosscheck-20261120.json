@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "region02-babuyan-isabela-nsap-landing-frame-crosscheck-20261120",
+  "reviewedOn": "2026-11-20",
+  "phaseId": "L5",
+  "regionId": "0200000000",
+  "regionName": "Region II (Cagayan Valley)",
+  "status": "official-publisher-fulltext-crosschecked;historical-nsap-landing-summaries;distinct-time-and-landing-frames;capture-ground-crosswalk-unavailable;aggregate-taxonomic-scope-conflict;research-only",
+  "purpose": "Compare the official 2009–2013 Babuyan Channel NSAP assessment with the 2014–2015 Isabela Waters landing study cited alongside it, to keep regional landing summaries distinct and prevent aggregate counts from being presented as a combined checklist or site-level presence.",
+  "sources": [
+    {
+      "sourceId": "nfrdi-babuyan-channel-fisheries-assessment-2009-2013",
+      "citation": "Calicdan, M. A., Gumiran, E., Encarnacion, A. B., & Ayson, J. P. (2018). Assessment of Fisheries Resources in the Babuyan Channel. The Philippine Journal of Fisheries, 25(1), 14–24. https://doi.org/10.31398/tpjf/25.1.2017C0003.",
+      "url": "https://www.nfrdi.da.gov.ph/tpjf/vol25/Assessment%20of%20Fisheries%20Resources%20in%20the%20Babuyan%20Channel.pdf",
+      "repositoryUrl": "https://repository.nfrdi.da.gov.ph/items/2576004d-c9c7-4949-8efa-2095a1b5c9db/full",
+      "access": "Official Philippine Journal of Fisheries PDF opened and article text reviewed through the web reader; NFRDI repository record reviewed. No local PDF copy retained.",
+      "license": "No item-specific reuse license was found in the inspected PDF text or repository metadata; public hosting is not treated as redistribution permission."
+    },
+    {
+      "sourceId": "kochi-kuroshio-isabela-waters-marine-fish-landings-2017",
+      "reviewFile": "national/reviews/region02-isabela-waters-2014-2015-marine-landings-review-20261120.json",
+      "useInThisReview": "Comparison source only: the article describes a separate July 2014–June 2015 NSAP landing-center summary for Palanan, Divilacan, Maconacon, and Dinapigue, with no species-by-capture-site matrix."
+    }
+  ],
+  "babuyanAssessment": {
+    "surveyWindow": "2009–2013",
+    "programAndMethod": "The article says its municipal and commercial fisheries data came mainly from established NSAP landing centers. Trained enumerators sampled landed catch every other two days, recording boats, gear, effort, hauls, lengths, and species composition; samples were taken from fish holds, tubs, and styrofoam boxes.",
+    "landingSitesPrinted": [
+      { "municipality": "Santa Ana", "sites": ["Centro", "Palawig"] },
+      { "municipality": "Gonzaga", "sites": ["Batangan", "Minanga"] },
+      { "municipality": "Buguey", "sites": ["Minanga", "Centro"] },
+      { "municipality": "Abulug", "sites": ["Centro", "Bagu"] },
+      { "municipality": "Aparri", "sites": ["Centro", "Punta"] },
+      { "municipality": "Claveria", "sites": ["Taggat", "Minanga"] }
+    ],
+    "geographicScopeLimit": "The paper names twelve landing sites in six municipalities. It separately describes Babuyan Channel as connecting eleven coastal municipalities, so the broader fishing-ground extent must not be confused with the municipalities represented by the listed landing centers. Landing localities are not capture coordinates or species-by-site assignments.",
+    "aggregateAsReported": {
+      "species": 256,
+      "families": 69,
+      "sourceScope": "Historical catch-composition aggregate; not a visually transcribed or independently checked fish-only checklist."
+    },
+    "sourceNamedCatchLeaders": [
+      { "labelAsReported": "Nematopalaemon tenuipes / N. tennuipes", "context": "The PDF text varies in spelling; the article identifies it as aramang and describes Palaemonidae as spider shrimp. It is a non-fish catch group and must not be counted as a fish occurrence." },
+      { "labelAsReported": "Auxis thazard", "context": "Named among the leading landed taxa." },
+      { "labelAsReported": "Decapterus macrosoma", "context": "Named among the leading landed taxa and selected for population-parameter analysis." },
+      { "labelAsReported": "Gazza minuta", "context": "Named among the leading landed taxa." },
+      { "labelAsReported": "Encrasicholina punctifer", "context": "Named among the leading landed taxa." }
+    ],
+    "tableLimit": "Table 3 is organized by broad habitat, family, common-name group, monitored harvest and abundance; it is not the complete 256-binomial list. Figure 7 is described as ranking twenty dominant fish species but was not transcribed here.",
+    "internalCountAndCategoryIssues": [
+      "The abstract and results state 256 species and 69 families, while the conclusion text extracted by the PDF reader states 25 species and 69 families. Page-image verification was unavailable, so the conflict is retained rather than silently corrected.",
+      "The article reports 96% vertebrates, 3% invertebrates, and 1% elasmobranchs, but treats elasmobranchs as a separate catch partition from vertebrates. The category basis and the taxonomic scope of the 256-species total need source-level clarification.",
+      "The abstract’s leading label has a spelling variant (N. tennuipes); the body uses N. tenuipes. Do not use this source alone to resolve the taxon name or a specimen identity."
+    ],
+    "coordinateLimit": "The methods paragraph prints an anomalous latitude range (18°16′ to 11°35′ N) and no verified station coordinate table. Do not use those values to create a channel boundary or occurrence geometry."
+  },
+  "crossSourceComparison": {
+    "sharedContext": "Both are historical BFAR Region II / NSAP-related fishery landing summaries, and the Isabela article explicitly compares its reported richness with the Babuyan Channel assessment and says their observed species were similar.",
+    "distinctReportedFrames": [
+      "Babuyan Channel assessment: catch data from 2009–2013; twelve named landing sites in six Cagayan municipalities.",
+      "Isabela Waters article: catch sampling from July 2014 through June 2015 at established landing centers in Palanan, Divilacan, Maconacon, and Dinapigue."
+    ],
+    "lineageConclusion": "The publication windows and listed landing-center sets differ, so the papers are distinct summary frames. Their shared NSAP setting and authorship do not establish whether any underlying records or fishing grounds overlap; the source papers provide no row-level crosswalk to settle that question.",
+    "aggregateComparisonLimit": "The reported Babuyan value of 256 and Isabela value of 238 cannot be added or treated as a unique regional checklist total. They are historical landing summaries with unresolved fish-only versus mixed-catch accounting and no shared event, taxon, or capture-ground crosswalk."
+  },
+  "qualityAndReuseLimits": [
+    "The Babuyan paper is landing-center and fishery dependent; it does not provide a species-by-landing-site or species-by-capture-ground matrix in the reviewed text.",
+    "The listed municipalities identify where catch was unloaded, not where each fish was captured. Do not project all Babuyan Channel labels to every listed coastal municipality, Cagayan River, or Batanes.",
+    "The 256/69 aggregate and family-weight table do not constitute a verified fish-only checklist; invertebrate catch is present and the conclusion count conflicts with the abstract/results.",
+    "The paper reports historical fishery and population metrics, not current presence, abundance, catchability, conservation status, or fishing advice.",
+    "No item-specific license was located. No table, figure, full species list, map, or PDF was copied into the repository."
+  ],
+  "disposition": {
+    "sourceRegistryEntriesAdded": 1,
+    "verbatimSpeciesLabelsRecordedForContext": 5,
+    "canonicalSpeciesAssertionsAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "waterbodyAssignmentsAdded": 0,
+    "coordinatesAdded": 0,
+    "geometryAdded": false,
+    "dietOrBaitClaimsAdded": 0,
+    "stockOrLegalClaimsAdded": 0,
+    "sourceTablesOrFiguresReused": false,
+    "publicAppProjection": false,
+    "publicationApproval": false,
+    "status": "research-only;distinct-historical-landing-frames;aggregate-scope-and-capture-localities-unresolved"
+  },
+  "nextAction": "Keep the Babuyan and Isabela landing summaries separate. Revisit their species tables only when page images or underlying NSAP records support reliable transcription, taxonomy, scope clarification, and capture-ground crosswalks; do not add either aggregate as a unique species total."
+}
