@@ -1,0 +1,832 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "central-luzon-pantabangan-ncbi-accession-review-20261119",
+  "reviewedOn": "2026-11-19",
+  "phaseId": "L3",
+  "regionId": "0300000000",
+  "regionName": "Region III (Central Luzon)",
+  "waterbodyNames": [
+    "Pantabangan Dam",
+    "Pantabangan Reservoir",
+    "Pantabangan Lake"
+  ],
+  "status": "historical-NCBI-COI-accessions-retrieved;2013-project-and-2026-paper-crosswalk-unverified;research-only",
+  "question": "Do public NCBI sequence records provide specimen metadata for the Pantabangan fish-barcode lead, and are they demonstrably the accessions used by the 2026 journal article?",
+  "sourceIds": [
+    "pantabangan-2013-fish-coi-submission-ncbi",
+    "pantabangan-dam-dna-fish-inventory-2026"
+  ],
+  "inputs": [
+    "data/research/philippines/central-luzon-pantabangan-source-reconciliation-20261024.json"
+  ],
+  "query": {
+    "database": "NCBI Nucleotide",
+    "term": "Pantabangan[All Fields]",
+    "searchUrl": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=nuccore&retmode=json&retmax=100&term=Pantabangan%5BAll%20Fields%5D",
+    "searchHttpStatus": 200,
+    "searchResultCount": 41,
+    "retrievalUrl": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=1580139307,520688082,520688080,520688078,520688076,520688074,520688072,520688070,520688068,520688066,520688064,520688062,520688060,520688058,520688056,520688054,520688052,520688050,520688048,520688046,520688044,520688042,520688040,520688038,520688036,520688034,520688032,520688030,520688028,520688026,520688024,520688022,520688020,520688018,520688016,520688014,520688012,520688010,520688008,520688006,485073710&rettype=gb&retmode=text",
+    "retrievalHttpStatus": 200,
+    "method": "NCBI E-utilities Nucleotide search with Pantabangan[All Fields], followed by GenBank-format retrieval for all returned NCBI record IDs. A fish-project subset was identified by the exact GenBank REFERENCE 1 title, not by locality text alone.",
+    "limitations": [
+      "The text search is a discovery query, not a spatial or validated waterbody filter.",
+      "The GenBank project title alone is not used as a substitute for row-level geo_loc_name; one fish record is only localized to Nueva Ecija.",
+      "The EFetch file contains nucleotide sequences and is retained only in the ignored local raw directory; no sequence strings are embedded in this review."
+    ]
+  },
+  "rawSnapshot": {
+    "directory": "raw/pantabangan-ncbi-sequence-search-20261119",
+    "files": [
+      {
+        "path": "pantabangan-all-41-records.gb",
+        "sha256": "c369f3e0cf4984b43194eb74adf0514beb405706af46cb4559b747938b636ea7",
+        "bytes": 137983
+      },
+      {
+        "path": "receipt.json",
+        "sha256": "9b2f739bfdee8117099a7de916960880d132da0d6f52ba9e2bf5f252ba82c722",
+        "bytes": 1844
+      }
+    ],
+    "gitIgnored": true
+  },
+  "findings": {
+    "retrieval": {
+      "nucleotideSearchMatches": 41,
+      "fishProjectRecords": 40,
+      "distinctSubmittedNames": 9,
+      "recordsWithExplicitPantabanganDamLocality": 39,
+      "recordsOnlyLocalizedToNuevaEcija": [
+        "KC684999.1"
+      ],
+      "excludedIndexMatches": [
+        {
+          "accession": "MH014021.1",
+          "submittedName": "Hipposideros obscurus",
+          "definition": "Hipposideros obscurus voucher MRMD1155 cytochrome oxidase subunit 1 (COI) gene, partial cds; mitochondrial.",
+          "projectReferenceTitle": "DNA barcoding of Philippine rhinolophids",
+          "disposition": "Excluded from the fish-project subset because the NCBI result is not linked to the Pantabangan fish-project reference title."
+        }
+      ],
+      "sourceSubmissionTitle": "DNA barcoding of commercially-important fish species in Pantabangan Dam, Nueva Ecija Philippines",
+      "sequenceSubmissionDates": [
+        null
+      ],
+      "taxonSummaries": [
+        {
+          "submittedName": "Channa striata",
+          "accessionCount": 4,
+          "accessions": [
+            "KC789519.1",
+            "KC789520.1",
+            "KC789521.1",
+            "KC789522.1"
+          ],
+          "specimenVouchers": [
+            "PNT-03",
+            "PNT-09",
+            "PNT-10",
+            "PNT-11"
+          ],
+          "collectionDates": [
+            "14-May-2012",
+            "16-Jun-2012"
+          ],
+          "geoLocNames": [
+            "Philippines: Luzon, Central Luzon, Nueva Ecija, Pantabangan Dam",
+            "Philippines: Luzon, Pantabangan Dam, Nueva Ecija, Central Luzon"
+          ],
+          "recordsWithExplicitPantabanganDamLocality": 4
+        },
+        {
+          "submittedName": "Clarias batrachus",
+          "accessionCount": 5,
+          "accessions": [
+            "KC789523.1",
+            "KC789524.1",
+            "KC789525.1",
+            "KC789526.1",
+            "KC789527.1"
+          ],
+          "specimenVouchers": [
+            "PNT-14",
+            "PNT-02",
+            "PNT-17",
+            "PNT-16",
+            "PNT-15"
+          ],
+          "collectionDates": [
+            "14-May-2012",
+            "16-Jun-2012"
+          ],
+          "geoLocNames": [
+            "Philippines: Luzon, Central Luzon, Nueva Ecija, Pantabangan Dam",
+            "Philippines: Luzon, Pantabangan Dam, Nueva Ecija, Central Luzon"
+          ],
+          "recordsWithExplicitPantabanganDamLocality": 5
+        },
+        {
+          "submittedName": "Coptodon zillii",
+          "accessionCount": 2,
+          "accessions": [
+            "KC789553.1",
+            "KC789554.1"
+          ],
+          "specimenVouchers": [
+            "PNT-33",
+            "PNT-05"
+          ],
+          "collectionDates": [
+            "14-May-2012",
+            "16-Jun-2012"
+          ],
+          "geoLocNames": [
+            "Philippines: Luzon, Central Luzon, Nueva Ecija, Pantabangan Dam",
+            "Philippines: Luzon, Pantabangan Dam, Nueva Ecija, Central Luzon"
+          ],
+          "recordsWithExplicitPantabanganDamLocality": 2
+        },
+        {
+          "submittedName": "Cyprinus carpio",
+          "accessionCount": 5,
+          "accessions": [
+            "KC789528.1",
+            "KC789529.1",
+            "KC789530.1",
+            "KC789531.1",
+            "KC789532.1"
+          ],
+          "specimenVouchers": [
+            "PNT-25",
+            "PNT-01",
+            "PNT-28",
+            "PNT-27",
+            "PNT-26"
+          ],
+          "collectionDates": [
+            "14-May-2012",
+            "16-Jun-2012"
+          ],
+          "geoLocNames": [
+            "Philippines: Luzon, Central Luzon, Nueva Ecija, Pantabangan Dam",
+            "Philippines: Luzon, Pantabangan Dam, Nueva Ecija, Central Luzon"
+          ],
+          "recordsWithExplicitPantabanganDamLocality": 5
+        },
+        {
+          "submittedName": "Glossogobius aureus",
+          "accessionCount": 3,
+          "accessions": [
+            "KC789533.1",
+            "KC789534.1",
+            "KC789535.1"
+          ],
+          "specimenVouchers": [
+            "PNT-06",
+            "PNT-34",
+            "PNT-35"
+          ],
+          "collectionDates": [
+            "14-May-2012",
+            "16-Jun-2012"
+          ],
+          "geoLocNames": [
+            "Philippines: Luzon, Central Luzon, Nueva Ecija, Pantabangan Dam",
+            "Philippines: Luzon, Pantabangan Dam, Nueva Ecija, Central Luzon"
+          ],
+          "recordsWithExplicitPantabanganDamLocality": 3
+        },
+        {
+          "submittedName": "Leiopotherapon plumbeus",
+          "accessionCount": 8,
+          "accessions": [
+            "KC789536.1",
+            "KC789537.1",
+            "KC789538.1",
+            "KC789539.1",
+            "KC789540.1",
+            "KC789541.1",
+            "KC789542.1",
+            "KC789543.1"
+          ],
+          "specimenVouchers": [
+            "PNT-22",
+            "PNT-21",
+            "PNT-20",
+            "PNT-19",
+            "PNT-18",
+            "PNT-08",
+            "PNT-24",
+            "PNT-23"
+          ],
+          "collectionDates": [
+            "14-May-2012",
+            "16-Jun-2012"
+          ],
+          "geoLocNames": [
+            "Philippines: Luzon, Central Luzon, Nueva Ecija, Pantabangan Dam",
+            "Philippines: Luzon, Pantabangan Dam, Nueva Ecija, Central Luzon"
+          ],
+          "recordsWithExplicitPantabanganDamLocality": 8
+        },
+        {
+          "submittedName": "Micropterus salmoides floridanus",
+          "accessionCount": 5,
+          "accessions": [
+            "KC684999.1",
+            "KC789544.1",
+            "KC789545.1",
+            "KC789546.1",
+            "KC789547.1"
+          ],
+          "specimenVouchers": [
+            "MON1024",
+            "PNT-38",
+            "PNT-37",
+            "PNT-36",
+            "PNT-39"
+          ],
+          "collectionDates": [
+            "07-Jun-2012",
+            "16-Jun-2012"
+          ],
+          "geoLocNames": [
+            "Philippines: Luzon, Central Luzon, Nueva Ecija, Pantabangan Dam",
+            "Philippines: Nueva Ecija"
+          ],
+          "recordsWithExplicitPantabanganDamLocality": 4
+        },
+        {
+          "submittedName": "Oreochromis niloticus",
+          "accessionCount": 5,
+          "accessions": [
+            "KC789548.1",
+            "KC789549.1",
+            "KC789550.1",
+            "KC789551.1",
+            "KC789552.1"
+          ],
+          "specimenVouchers": [
+            "PNT-30",
+            "PNT-04",
+            "PNT-31",
+            "PNT-29",
+            "PNT-32"
+          ],
+          "collectionDates": [
+            "14-May-2012",
+            "16-Jun-2012"
+          ],
+          "geoLocNames": [
+            "Philippines: Luzon, Central Luzon, Nueva Ecija, Pantabangan Dam",
+            "Philippines: Luzon, Pantabangan Dam, Nueva Ecija, Central Luzon"
+          ],
+          "recordsWithExplicitPantabanganDamLocality": 5
+        },
+        {
+          "submittedName": "Trichopodus trichopterus",
+          "accessionCount": 3,
+          "accessions": [
+            "KC789555.1",
+            "KC789556.1",
+            "KC789557.1"
+          ],
+          "specimenVouchers": [
+            "PNT-12",
+            "PNT-07",
+            "PNT-13"
+          ],
+          "collectionDates": [
+            "14-May-2012",
+            "16-Jun-2012"
+          ],
+          "geoLocNames": [
+            "Philippines: Luzon, Central Luzon, Nueva Ecija, Pantabangan Dam",
+            "Philippines: Luzon, Pantabangan Dam, Nueva Ecija, Central Luzon"
+          ],
+          "recordsWithExplicitPantabanganDamLocality": 3
+        }
+      ],
+      "accessionRecords": [
+        {
+          "accession": "KC684999.1",
+          "submittedName": "Micropterus salmoides floridanus",
+          "definition": "Micropterus floridanus voucher MON1024 cytochrome oxidase subunit 1 (COI) gene, partial cds; mitochondrial.",
+          "voucher": "MON1024",
+          "geoLocName": "Philippines: Nueva Ecija",
+          "collectionDate": "07-Jun-2012",
+          "boldCrossReference": "BOLD:PANTS001-12.COI-5P",
+          "projectReferenceTitle": "DNA barcoding of commercially-important fish species in Pantabangan Dam, Nueva Ecija Philippines",
+          "directSubmissionDate": null,
+          "directWaterbodyText": false
+        },
+        {
+          "accession": "KC789519.1",
+          "submittedName": "Channa striata",
+          "definition": "Channa striata voucher PNT-03 cytochrome oxidase subunit 1 (COI) gene, partial cds; mitochondrial.",
+          "voucher": "PNT-03",
+          "geoLocName": "Philippines: Luzon, Pantabangan Dam, Nueva Ecija, Central Luzon",
+          "collectionDate": "14-May-2012",
+          "boldCrossReference": "BOLD:PANTS004-13.COI-5P",
+          "projectReferenceTitle": "DNA barcoding of commercially-important fish species in Pantabangan Dam, Nueva Ecija Philippines",
+          "directSubmissionDate": null,
+          "directWaterbodyText": true
+        },
+        {
+          "accession": "KC789520.1",
+          "submittedName": "Channa striata",
+          "definition": "Channa striata voucher PNT-09 cytochrome oxidase subunit 1 (COI) gene, partial cds; mitochondrial.",
+          "voucher": "PNT-09",
+          "geoLocName": "Philippines: Luzon, Central Luzon, Nueva Ecija, Pantabangan Dam",
+          "collectionDate": "16-Jun-2012",
+          "boldCrossReference": "BOLD:PANTS010-13.COI-5P",
+          "projectReferenceTitle": "DNA barcoding of commercially-important fish species in Pantabangan Dam, Nueva Ecija Philippines",
+          "directSubmissionDate": null,
+          "directWaterbodyText": true
+        },
+        {
+          "accession": "KC789521.1",
+          "submittedName": "Channa striata",
+          "definition": "Channa striata voucher PNT-10 cytochrome oxidase subunit 1 (COI) gene, partial cds; mitochondrial.",
+          "voucher": "PNT-10",
+          "geoLocName": "Philippines: Luzon, Central Luzon, Nueva Ecija, Pantabangan Dam",
+          "collectionDate": "16-Jun-2012",
+          "boldCrossReference": "BOLD:PANTS011-13.COI-5P",
+          "projectReferenceTitle": "DNA barcoding of commercially-important fish species in Pantabangan Dam, Nueva Ecija Philippines",
+          "directSubmissionDate": null,
+          "directWaterbodyText": true
+        },
+        {
+          "accession": "KC789522.1",
+          "submittedName": "Channa striata",
+          "definition": "Channa striata voucher PNT-11 cytochrome oxidase subunit 1 (COI) gene, partial cds; mitochondrial.",
+          "voucher": "PNT-11",
+          "geoLocName": "Philippines: Luzon, Central Luzon, Nueva Ecija, Pantabangan Dam",
+          "collectionDate": "16-Jun-2012",
+          "boldCrossReference": "BOLD:PANTS012-13.COI-5P",
+          "projectReferenceTitle": "DNA barcoding of commercially-important fish species in Pantabangan Dam, Nueva Ecija Philippines",
+          "directSubmissionDate": null,
+          "directWaterbodyText": true
+        },
+        {
+          "accession": "KC789523.1",
+          "submittedName": "Clarias batrachus",
+          "definition": "Clarias batrachus voucher PNT-14 cytochrome oxidase subunit 1 (COI) gene, partial cds; mitochondrial.",
+          "voucher": "PNT-14",
+          "geoLocName": "Philippines: Luzon, Central Luzon, Nueva Ecija, Pantabangan Dam",
+          "collectionDate": "16-Jun-2012",
+          "boldCrossReference": "BOLD:PANTS015-13.COI-5P",
+          "projectReferenceTitle": "DNA barcoding of commercially-important fish species in Pantabangan Dam, Nueva Ecija Philippines",
+          "directSubmissionDate": null,
+          "directWaterbodyText": true
+        },
+        {
+          "accession": "KC789524.1",
+          "submittedName": "Clarias batrachus",
+          "definition": "Clarias batrachus voucher PNT-02 cytochrome oxidase subunit 1 (COI) gene, partial cds; mitochondrial.",
+          "voucher": "PNT-02",
+          "geoLocName": "Philippines: Luzon, Pantabangan Dam, Nueva Ecija, Central Luzon",
+          "collectionDate": "14-May-2012",
+          "boldCrossReference": "BOLD:PANTS003-13.COI-5P",
+          "projectReferenceTitle": "DNA barcoding of commercially-important fish species in Pantabangan Dam, Nueva Ecija Philippines",
+          "directSubmissionDate": null,
+          "directWaterbodyText": true
+        },
+        {
+          "accession": "KC789525.1",
+          "submittedName": "Clarias batrachus",
+          "definition": "Clarias batrachus voucher PNT-17 cytochrome oxidase subunit 1 (COI) gene, partial cds; mitochondrial.",
+          "voucher": "PNT-17",
+          "geoLocName": "Philippines: Luzon, Central Luzon, Nueva Ecija, Pantabangan Dam",
+          "collectionDate": "16-Jun-2012",
+          "boldCrossReference": "BOLD:PANTS018-13.COI-5P",
+          "projectReferenceTitle": "DNA barcoding of commercially-important fish species in Pantabangan Dam, Nueva Ecija Philippines",
+          "directSubmissionDate": null,
+          "directWaterbodyText": true
+        },
+        {
+          "accession": "KC789526.1",
+          "submittedName": "Clarias batrachus",
+          "definition": "Clarias batrachus voucher PNT-16 cytochrome oxidase subunit 1 (COI) gene, partial cds; mitochondrial.",
+          "voucher": "PNT-16",
+          "geoLocName": "Philippines: Luzon, Central Luzon, Nueva Ecija, Pantabangan Dam",
+          "collectionDate": "16-Jun-2012",
+          "boldCrossReference": "BOLD:PANTS017-13.COI-5P",
+          "projectReferenceTitle": "DNA barcoding of commercially-important fish species in Pantabangan Dam, Nueva Ecija Philippines",
+          "directSubmissionDate": null,
+          "directWaterbodyText": true
+        },
+        {
+          "accession": "KC789527.1",
+          "submittedName": "Clarias batrachus",
+          "definition": "Clarias batrachus voucher PNT-15 cytochrome oxidase subunit 1 (COI) gene, partial cds; mitochondrial.",
+          "voucher": "PNT-15",
+          "geoLocName": "Philippines: Luzon, Central Luzon, Nueva Ecija, Pantabangan Dam",
+          "collectionDate": "16-Jun-2012",
+          "boldCrossReference": "BOLD:PANTS016-13.COI-5P",
+          "projectReferenceTitle": "DNA barcoding of commercially-important fish species in Pantabangan Dam, Nueva Ecija Philippines",
+          "directSubmissionDate": null,
+          "directWaterbodyText": true
+        },
+        {
+          "accession": "KC789528.1",
+          "submittedName": "Cyprinus carpio",
+          "definition": "Cyprinus carpio voucher PNT-25 cytochrome oxidase subunit 1 (COI) gene, partial cds; mitochondrial.",
+          "voucher": "PNT-25",
+          "geoLocName": "Philippines: Luzon, Central Luzon, Nueva Ecija, Pantabangan Dam",
+          "collectionDate": "16-Jun-2012",
+          "boldCrossReference": "BOLD:PANTS026-13.COI-5P",
+          "projectReferenceTitle": "DNA barcoding of commercially-important fish species in Pantabangan Dam, Nueva Ecija Philippines",
+          "directSubmissionDate": null,
+          "directWaterbodyText": true
+        },
+        {
+          "accession": "KC789529.1",
+          "submittedName": "Cyprinus carpio",
+          "definition": "Cyprinus carpio voucher PNT-01 cytochrome oxidase subunit 1 (COI) gene, partial cds; mitochondrial.",
+          "voucher": "PNT-01",
+          "geoLocName": "Philippines: Luzon, Pantabangan Dam, Nueva Ecija, Central Luzon",
+          "collectionDate": "14-May-2012",
+          "boldCrossReference": "BOLD:PANTS002-13.COI-5P",
+          "projectReferenceTitle": "DNA barcoding of commercially-important fish species in Pantabangan Dam, Nueva Ecija Philippines",
+          "directSubmissionDate": null,
+          "directWaterbodyText": true
+        },
+        {
+          "accession": "KC789530.1",
+          "submittedName": "Cyprinus carpio",
+          "definition": "Cyprinus carpio voucher PNT-28 cytochrome oxidase subunit 1 (COI) gene, partial cds; mitochondrial.",
+          "voucher": "PNT-28",
+          "geoLocName": "Philippines: Luzon, Central Luzon, Nueva Ecija, Pantabangan Dam",
+          "collectionDate": "16-Jun-2012",
+          "boldCrossReference": "BOLD:PANTS029-13.COI-5P",
+          "projectReferenceTitle": "DNA barcoding of commercially-important fish species in Pantabangan Dam, Nueva Ecija Philippines",
+          "directSubmissionDate": null,
+          "directWaterbodyText": true
+        },
+        {
+          "accession": "KC789531.1",
+          "submittedName": "Cyprinus carpio",
+          "definition": "Cyprinus carpio voucher PNT-27 cytochrome oxidase subunit 1 (COI) gene, partial cds; mitochondrial.",
+          "voucher": "PNT-27",
+          "geoLocName": "Philippines: Luzon, Central Luzon, Nueva Ecija, Pantabangan Dam",
+          "collectionDate": "16-Jun-2012",
+          "boldCrossReference": "BOLD:PANTS028-13.COI-5P",
+          "projectReferenceTitle": "DNA barcoding of commercially-important fish species in Pantabangan Dam, Nueva Ecija Philippines",
+          "directSubmissionDate": null,
+          "directWaterbodyText": true
+        },
+        {
+          "accession": "KC789532.1",
+          "submittedName": "Cyprinus carpio",
+          "definition": "Cyprinus carpio voucher PNT-26 cytochrome oxidase subunit 1 (COI) gene, partial cds; mitochondrial.",
+          "voucher": "PNT-26",
+          "geoLocName": "Philippines: Luzon, Central Luzon, Nueva Ecija, Pantabangan Dam",
+          "collectionDate": "16-Jun-2012",
+          "boldCrossReference": "BOLD:PANTS027-13.COI-5P",
+          "projectReferenceTitle": "DNA barcoding of commercially-important fish species in Pantabangan Dam, Nueva Ecija Philippines",
+          "directSubmissionDate": null,
+          "directWaterbodyText": true
+        },
+        {
+          "accession": "KC789533.1",
+          "submittedName": "Glossogobius aureus",
+          "definition": "Glossogobius aureus voucher PNT-06 cytochrome oxidase subunit 1 (COI) gene, partial cds; mitochondrial.",
+          "voucher": "PNT-06",
+          "geoLocName": "Philippines: Luzon, Pantabangan Dam, Nueva Ecija, Central Luzon",
+          "collectionDate": "14-May-2012",
+          "boldCrossReference": "BOLD:PANTS007-13.COI-5P",
+          "projectReferenceTitle": "DNA barcoding of commercially-important fish species in Pantabangan Dam, Nueva Ecija Philippines",
+          "directSubmissionDate": null,
+          "directWaterbodyText": true
+        },
+        {
+          "accession": "KC789534.1",
+          "submittedName": "Glossogobius aureus",
+          "definition": "Glossogobius aureus voucher PNT-34 cytochrome oxidase subunit 1 (COI) gene, partial cds; mitochondrial.",
+          "voucher": "PNT-34",
+          "geoLocName": "Philippines: Luzon, Central Luzon, Nueva Ecija, Pantabangan Dam",
+          "collectionDate": "16-Jun-2012",
+          "boldCrossReference": "BOLD:PANTS035-13.COI-5P",
+          "projectReferenceTitle": "DNA barcoding of commercially-important fish species in Pantabangan Dam, Nueva Ecija Philippines",
+          "directSubmissionDate": null,
+          "directWaterbodyText": true
+        },
+        {
+          "accession": "KC789535.1",
+          "submittedName": "Glossogobius aureus",
+          "definition": "Glossogobius aureus voucher PNT-35 cytochrome oxidase subunit 1 (COI) gene, partial cds; mitochondrial.",
+          "voucher": "PNT-35",
+          "geoLocName": "Philippines: Luzon, Central Luzon, Nueva Ecija, Pantabangan Dam",
+          "collectionDate": "16-Jun-2012",
+          "boldCrossReference": "BOLD:PANTS036-13.COI-5P",
+          "projectReferenceTitle": "DNA barcoding of commercially-important fish species in Pantabangan Dam, Nueva Ecija Philippines",
+          "directSubmissionDate": null,
+          "directWaterbodyText": true
+        },
+        {
+          "accession": "KC789536.1",
+          "submittedName": "Leiopotherapon plumbeus",
+          "definition": "Leiopotherapon plumbeus voucher PNT-22 cytochrome oxidase subunit 1 (COI) gene, partial cds; mitochondrial.",
+          "voucher": "PNT-22",
+          "geoLocName": "Philippines: Luzon, Central Luzon, Nueva Ecija, Pantabangan Dam",
+          "collectionDate": "16-Jun-2012",
+          "boldCrossReference": "BOLD:PANTS023-13.COI-5P",
+          "projectReferenceTitle": "DNA barcoding of commercially-important fish species in Pantabangan Dam, Nueva Ecija Philippines",
+          "directSubmissionDate": null,
+          "directWaterbodyText": true
+        },
+        {
+          "accession": "KC789537.1",
+          "submittedName": "Leiopotherapon plumbeus",
+          "definition": "Leiopotherapon plumbeus voucher PNT-21 cytochrome oxidase subunit 1 (COI) gene, partial cds; mitochondrial.",
+          "voucher": "PNT-21",
+          "geoLocName": "Philippines: Luzon, Central Luzon, Nueva Ecija, Pantabangan Dam",
+          "collectionDate": "16-Jun-2012",
+          "boldCrossReference": "BOLD:PANTS022-13.COI-5P",
+          "projectReferenceTitle": "DNA barcoding of commercially-important fish species in Pantabangan Dam, Nueva Ecija Philippines",
+          "directSubmissionDate": null,
+          "directWaterbodyText": true
+        },
+        {
+          "accession": "KC789538.1",
+          "submittedName": "Leiopotherapon plumbeus",
+          "definition": "Leiopotherapon plumbeus voucher PNT-20 cytochrome oxidase subunit 1 (COI) gene, partial cds; mitochondrial.",
+          "voucher": "PNT-20",
+          "geoLocName": "Philippines: Luzon, Central Luzon, Nueva Ecija, Pantabangan Dam",
+          "collectionDate": "16-Jun-2012",
+          "boldCrossReference": "BOLD:PANTS021-13.COI-5P",
+          "projectReferenceTitle": "DNA barcoding of commercially-important fish species in Pantabangan Dam, Nueva Ecija Philippines",
+          "directSubmissionDate": null,
+          "directWaterbodyText": true
+        },
+        {
+          "accession": "KC789539.1",
+          "submittedName": "Leiopotherapon plumbeus",
+          "definition": "Leiopotherapon plumbeus voucher PNT-19 cytochrome oxidase subunit 1 (COI) gene, partial cds; mitochondrial.",
+          "voucher": "PNT-19",
+          "geoLocName": "Philippines: Luzon, Central Luzon, Nueva Ecija, Pantabangan Dam",
+          "collectionDate": "16-Jun-2012",
+          "boldCrossReference": "BOLD:PANTS020-13.COI-5P",
+          "projectReferenceTitle": "DNA barcoding of commercially-important fish species in Pantabangan Dam, Nueva Ecija Philippines",
+          "directSubmissionDate": null,
+          "directWaterbodyText": true
+        },
+        {
+          "accession": "KC789540.1",
+          "submittedName": "Leiopotherapon plumbeus",
+          "definition": "Leiopotherapon plumbeus voucher PNT-18 cytochrome oxidase subunit 1 (COI) gene, partial cds; mitochondrial.",
+          "voucher": "PNT-18",
+          "geoLocName": "Philippines: Luzon, Central Luzon, Nueva Ecija, Pantabangan Dam",
+          "collectionDate": "16-Jun-2012",
+          "boldCrossReference": "BOLD:PANTS019-13.COI-5P",
+          "projectReferenceTitle": "DNA barcoding of commercially-important fish species in Pantabangan Dam, Nueva Ecija Philippines",
+          "directSubmissionDate": null,
+          "directWaterbodyText": true
+        },
+        {
+          "accession": "KC789541.1",
+          "submittedName": "Leiopotherapon plumbeus",
+          "definition": "Leiopotherapon plumbeus voucher PNT-08 cytochrome oxidase subunit 1 (COI) gene, partial cds; mitochondrial.",
+          "voucher": "PNT-08",
+          "geoLocName": "Philippines: Luzon, Pantabangan Dam, Nueva Ecija, Central Luzon",
+          "collectionDate": "14-May-2012",
+          "boldCrossReference": "BOLD:PANTS009-13.COI-5P",
+          "projectReferenceTitle": "DNA barcoding of commercially-important fish species in Pantabangan Dam, Nueva Ecija Philippines",
+          "directSubmissionDate": null,
+          "directWaterbodyText": true
+        },
+        {
+          "accession": "KC789542.1",
+          "submittedName": "Leiopotherapon plumbeus",
+          "definition": "Leiopotherapon plumbeus voucher PNT-24 cytochrome oxidase subunit 1 (COI) gene, partial cds; mitochondrial.",
+          "voucher": "PNT-24",
+          "geoLocName": "Philippines: Luzon, Central Luzon, Nueva Ecija, Pantabangan Dam",
+          "collectionDate": "16-Jun-2012",
+          "boldCrossReference": "BOLD:PANTS025-13.COI-5P",
+          "projectReferenceTitle": "DNA barcoding of commercially-important fish species in Pantabangan Dam, Nueva Ecija Philippines",
+          "directSubmissionDate": null,
+          "directWaterbodyText": true
+        },
+        {
+          "accession": "KC789543.1",
+          "submittedName": "Leiopotherapon plumbeus",
+          "definition": "Leiopotherapon plumbeus voucher PNT-23 cytochrome oxidase subunit 1 (COI) gene, partial cds; mitochondrial.",
+          "voucher": "PNT-23",
+          "geoLocName": "Philippines: Luzon, Central Luzon, Nueva Ecija, Pantabangan Dam",
+          "collectionDate": "16-Jun-2012",
+          "boldCrossReference": "BOLD:PANTS024-13.COI-5P",
+          "projectReferenceTitle": "DNA barcoding of commercially-important fish species in Pantabangan Dam, Nueva Ecija Philippines",
+          "directSubmissionDate": null,
+          "directWaterbodyText": true
+        },
+        {
+          "accession": "KC789544.1",
+          "submittedName": "Micropterus salmoides floridanus",
+          "definition": "Micropterus floridanus voucher PNT-38 cytochrome oxidase subunit 1 (COI) gene, partial cds; mitochondrial.",
+          "voucher": "PNT-38",
+          "geoLocName": "Philippines: Luzon, Central Luzon, Nueva Ecija, Pantabangan Dam",
+          "collectionDate": "16-Jun-2012",
+          "boldCrossReference": "BOLD:PANTS039-13.COI-5P",
+          "projectReferenceTitle": "DNA barcoding of commercially-important fish species in Pantabangan Dam, Nueva Ecija Philippines",
+          "directSubmissionDate": null,
+          "directWaterbodyText": true
+        },
+        {
+          "accession": "KC789545.1",
+          "submittedName": "Micropterus salmoides floridanus",
+          "definition": "Micropterus floridanus voucher PNT-37 cytochrome oxidase subunit 1 (COI) gene, partial cds; mitochondrial.",
+          "voucher": "PNT-37",
+          "geoLocName": "Philippines: Luzon, Central Luzon, Nueva Ecija, Pantabangan Dam",
+          "collectionDate": "16-Jun-2012",
+          "boldCrossReference": "BOLD:PANTS038-13.COI-5P",
+          "projectReferenceTitle": "DNA barcoding of commercially-important fish species in Pantabangan Dam, Nueva Ecija Philippines",
+          "directSubmissionDate": null,
+          "directWaterbodyText": true
+        },
+        {
+          "accession": "KC789546.1",
+          "submittedName": "Micropterus salmoides floridanus",
+          "definition": "Micropterus floridanus voucher PNT-36 cytochrome oxidase subunit 1 (COI) gene, partial cds; mitochondrial.",
+          "voucher": "PNT-36",
+          "geoLocName": "Philippines: Luzon, Central Luzon, Nueva Ecija, Pantabangan Dam",
+          "collectionDate": "16-Jun-2012",
+          "boldCrossReference": "BOLD:PANTS037-13.COI-5P",
+          "projectReferenceTitle": "DNA barcoding of commercially-important fish species in Pantabangan Dam, Nueva Ecija Philippines",
+          "directSubmissionDate": null,
+          "directWaterbodyText": true
+        },
+        {
+          "accession": "KC789547.1",
+          "submittedName": "Micropterus salmoides floridanus",
+          "definition": "Micropterus floridanus voucher PNT-39 cytochrome oxidase subunit 1 (COI) gene, partial cds; mitochondrial.",
+          "voucher": "PNT-39",
+          "geoLocName": "Philippines: Luzon, Central Luzon, Nueva Ecija, Pantabangan Dam",
+          "collectionDate": "16-Jun-2012",
+          "boldCrossReference": "BOLD:PANTS040-13.COI-5P",
+          "projectReferenceTitle": "DNA barcoding of commercially-important fish species in Pantabangan Dam, Nueva Ecija Philippines",
+          "directSubmissionDate": null,
+          "directWaterbodyText": true
+        },
+        {
+          "accession": "KC789548.1",
+          "submittedName": "Oreochromis niloticus",
+          "definition": "Oreochromis niloticus voucher PNT-30 cytochrome oxidase subunit 1 (COI) gene, partial cds; mitochondrial.",
+          "voucher": "PNT-30",
+          "geoLocName": "Philippines: Luzon, Central Luzon, Nueva Ecija, Pantabangan Dam",
+          "collectionDate": "16-Jun-2012",
+          "boldCrossReference": "BOLD:PANTS031-13.COI-5P",
+          "projectReferenceTitle": "DNA barcoding of commercially-important fish species in Pantabangan Dam, Nueva Ecija Philippines",
+          "directSubmissionDate": null,
+          "directWaterbodyText": true
+        },
+        {
+          "accession": "KC789549.1",
+          "submittedName": "Oreochromis niloticus",
+          "definition": "Oreochromis niloticus voucher PNT-04 cytochrome oxidase subunit 1 (COI) gene, partial cds; mitochondrial.",
+          "voucher": "PNT-04",
+          "geoLocName": "Philippines: Luzon, Pantabangan Dam, Nueva Ecija, Central Luzon",
+          "collectionDate": "14-May-2012",
+          "boldCrossReference": "BOLD:PANTS005-13.COI-5P",
+          "projectReferenceTitle": "DNA barcoding of commercially-important fish species in Pantabangan Dam, Nueva Ecija Philippines",
+          "directSubmissionDate": null,
+          "directWaterbodyText": true
+        },
+        {
+          "accession": "KC789550.1",
+          "submittedName": "Oreochromis niloticus",
+          "definition": "Oreochromis niloticus voucher PNT-31 cytochrome oxidase subunit 1 (COI) gene, partial cds; mitochondrial.",
+          "voucher": "PNT-31",
+          "geoLocName": "Philippines: Luzon, Central Luzon, Nueva Ecija, Pantabangan Dam",
+          "collectionDate": "16-Jun-2012",
+          "boldCrossReference": "BOLD:PANTS032-13.COI-5P",
+          "projectReferenceTitle": "DNA barcoding of commercially-important fish species in Pantabangan Dam, Nueva Ecija Philippines",
+          "directSubmissionDate": null,
+          "directWaterbodyText": true
+        },
+        {
+          "accession": "KC789551.1",
+          "submittedName": "Oreochromis niloticus",
+          "definition": "Oreochromis niloticus voucher PNT-29 cytochrome oxidase subunit 1 (COI) gene, partial cds; mitochondrial.",
+          "voucher": "PNT-29",
+          "geoLocName": "Philippines: Luzon, Central Luzon, Nueva Ecija, Pantabangan Dam",
+          "collectionDate": "16-Jun-2012",
+          "boldCrossReference": "BOLD:PANTS030-13.COI-5P",
+          "projectReferenceTitle": "DNA barcoding of commercially-important fish species in Pantabangan Dam, Nueva Ecija Philippines",
+          "directSubmissionDate": null,
+          "directWaterbodyText": true
+        },
+        {
+          "accession": "KC789552.1",
+          "submittedName": "Oreochromis niloticus",
+          "definition": "Oreochromis niloticus voucher PNT-32 cytochrome oxidase subunit 1 (COI) gene, partial cds; mitochondrial.",
+          "voucher": "PNT-32",
+          "geoLocName": "Philippines: Luzon, Central Luzon, Nueva Ecija, Pantabangan Dam",
+          "collectionDate": "16-Jun-2012",
+          "boldCrossReference": "BOLD:PANTS033-13.COI-5P",
+          "projectReferenceTitle": "DNA barcoding of commercially-important fish species in Pantabangan Dam, Nueva Ecija Philippines",
+          "directSubmissionDate": null,
+          "directWaterbodyText": true
+        },
+        {
+          "accession": "KC789553.1",
+          "submittedName": "Coptodon zillii",
+          "definition": "Coptodon zillii voucher PNT-33 cytochrome oxidase subunit 1 (COI) gene, partial cds; mitochondrial.",
+          "voucher": "PNT-33",
+          "geoLocName": "Philippines: Luzon, Central Luzon, Nueva Ecija, Pantabangan Dam",
+          "collectionDate": "16-Jun-2012",
+          "boldCrossReference": "BOLD:PANTS034-13.COI-5P",
+          "projectReferenceTitle": "DNA barcoding of commercially-important fish species in Pantabangan Dam, Nueva Ecija Philippines",
+          "directSubmissionDate": null,
+          "directWaterbodyText": true
+        },
+        {
+          "accession": "KC789554.1",
+          "submittedName": "Coptodon zillii",
+          "definition": "Coptodon zillii voucher PNT-05 cytochrome oxidase subunit 1 (COI) gene, partial cds; mitochondrial.",
+          "voucher": "PNT-05",
+          "geoLocName": "Philippines: Luzon, Pantabangan Dam, Nueva Ecija, Central Luzon",
+          "collectionDate": "14-May-2012",
+          "boldCrossReference": "BOLD:PANTS006-13.COI-5P",
+          "projectReferenceTitle": "DNA barcoding of commercially-important fish species in Pantabangan Dam, Nueva Ecija Philippines",
+          "directSubmissionDate": null,
+          "directWaterbodyText": true
+        },
+        {
+          "accession": "KC789555.1",
+          "submittedName": "Trichopodus trichopterus",
+          "definition": "Trichogaster trichopterus voucher PNT-12 cytochrome oxidase subunit 1 (COI) gene, partial cds; mitochondrial.",
+          "voucher": "PNT-12",
+          "geoLocName": "Philippines: Luzon, Central Luzon, Nueva Ecija, Pantabangan Dam",
+          "collectionDate": "16-Jun-2012",
+          "boldCrossReference": "BOLD:PANTS013-13.COI-5P",
+          "projectReferenceTitle": "DNA barcoding of commercially-important fish species in Pantabangan Dam, Nueva Ecija Philippines",
+          "directSubmissionDate": null,
+          "directWaterbodyText": true
+        },
+        {
+          "accession": "KC789556.1",
+          "submittedName": "Trichopodus trichopterus",
+          "definition": "Trichogaster trichopterus voucher PNT-07 cytochrome oxidase subunit 1 (COI) gene, partial cds; mitochondrial.",
+          "voucher": "PNT-07",
+          "geoLocName": "Philippines: Luzon, Pantabangan Dam, Nueva Ecija, Central Luzon",
+          "collectionDate": "14-May-2012",
+          "boldCrossReference": "BOLD:PANTS008-13.COI-5P",
+          "projectReferenceTitle": "DNA barcoding of commercially-important fish species in Pantabangan Dam, Nueva Ecija Philippines",
+          "directSubmissionDate": null,
+          "directWaterbodyText": true
+        },
+        {
+          "accession": "KC789557.1",
+          "submittedName": "Trichopodus trichopterus",
+          "definition": "Trichogaster trichopterus voucher PNT-13 cytochrome oxidase subunit 1 (COI) gene, partial cds; mitochondrial.",
+          "voucher": "PNT-13",
+          "geoLocName": "Philippines: Luzon, Central Luzon, Nueva Ecija, Pantabangan Dam",
+          "collectionDate": "16-Jun-2012",
+          "boldCrossReference": "BOLD:PANTS014-13.COI-5P",
+          "projectReferenceTitle": "DNA barcoding of commercially-important fish species in Pantabangan Dam, Nueva Ecija Philippines",
+          "directSubmissionDate": null,
+          "directWaterbodyText": true
+        }
+      ],
+      "specimenVoucherFields": "NCBI GenBank source qualifiers; voucher identifiers are submitted metadata, not independently verified museum catalogues.",
+      "coordinates": "No latitude/longitude qualifier was returned for the fish-project records."
+    },
+    "comparisonWith2026Article": {
+      "doi": "10.1080/24701394.2026.2631395",
+      "articleAbstractReportedCounts": {
+        "coiSequences": 40,
+        "species": 9
+      },
+      "ncbiPriorSubmissionCounts": {
+        "records": 40,
+        "distinctSubmittedNames": 9
+      },
+      "aggregateCountsAlign": true,
+      "abstractNameOverlap": [
+        "Leiopotherapon plumbeus",
+        "Glossogobius aureus",
+        "Clarias batrachus",
+        "Coptodon zillii",
+        "Micropterus floridanus (NCBI annotation: Micropterus salmoides floridanus)"
+      ],
+      "additionalNamesInPriorNCBISetNotVisibleInAbstract": [
+        "Trichopodus trichopterus",
+        "Oreochromis niloticus",
+        "Cyprinus carpio",
+        "Channa striata"
+      ],
+      "interpretation": "The matching 40-record/nine-name totals, shared names, and overlapping authors/title are a strong discovery lead, but the abstract does not expose sequence accessions. The NCBI records cite an unpublished project submitted in 2013, before the journal article was received in 2025. This review cannot establish that the NCBI records are the exact set analyzed in the 2026 article; keep the datasets linked only as a crosswalk question."
+    },
+    "disposition": "Historical accession-level evidence for an NCBI-submitted Pantabangan fish-barcode project. The 39 explicitly waterbody-localized records and one province-only fish record remain research-only; no species app assertion, sequence redistribution, diet statement, abundance estimate, current-presence claim, or regional release is approved.",
+    "reuse": "Public NCBI sequence records were retrieved for research review. No separate determination of application redistribution rights was made. Keep nucleotide sequences local and ignored; require taxonomy, source-lineage, and reuse review before any public projection."
+  },
+  "appUse": {
+    "speciesAssertionsAdded": 0,
+    "sequenceDataPublished": false,
+    "geometryAdded": false,
+    "publicChecklistChanged": false,
+    "regionalReleaseApproved": false
+  },
+  "nextStep": "Obtain or locate the full 2026 article/supplement and compare its accession table to the 2013 NCBI submissions. Keep the source datasets separate until an exact crosswalk is documented; then review current taxonomy and reuse terms before deciding on any public species record."
+}
