@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "ncr-bmb-2019-freshwater-locality-crosswalk-20261119",
+  "reviewedOn": "2026-11-19",
+  "phaseId": "L2",
+  "regionId": "1300000000",
+  "status": "three-BMB-locality-rows-crosswalked-to-PSGC;two-waterbody-identities-held;no-geometry;scope-inventory-incomplete",
+  "question": "Can the three NCR freshwater-related rows in the DENR-BMB 2019 inland-wetlands inventory be linked to PSA city codes while preserving source names and unresolved feature identity?",
+  "sourceIds": [
+    "denr-bmb-philchm-inland-wetlands-2019",
+    "psa-ncr-cities-list",
+    "psa-psgc-2026-q3"
+  ],
+  "inputs": [
+    "data/research/philippines/administrative-registry.json"
+  ],
+  "snapshotHashes": {
+    "administrativeRegistry": "c741456fbc2cfc9d5d813484a0b661ef206154977959fc27a289ca86732142e8",
+    "sourceRegistry": "0047e958f78159176840fe278afad93d0a47b2eb3d8a59e4ed6033831c14c997",
+    "bmb2019WetlandCrosswalk": "3c7ca91e892100e4d67b264e8fcc454445d7b9fa2ea60cb5ff585e3fea37f7e1"
+  },
+  "method": "Reviewed the NCR freshwater-related rows on page 3 of the official DENR-BMB 2019 inland-wetlands PDF and matched the printed city labels against the PSA NCR city table. Kept the BMB waterbody labels and wetland types verbatim. La Mesa Reservoir matches an existing source-named historical study locality; Jamboree Lake and the Ninoy Aquino Parks and Wildlife Center pond row remain source-row candidates without canonical feature crosswalks. Recorded administrative codes only; did not infer feature boundaries, local access, fish presence, or current water conditions.",
+  "sourcePage": 3,
+  "sourceRows": [
+    "Jamboree Lake | NCR | Muntinlupa City | Lake | 2.64 ha",
+    "La Mesa Reservoir | NCR | Quezon City | Water Storage | 324.42 ha",
+    "Ninoy Aquino Parks and Wildlife Center | NCR | Quezon City | Pond | 3.39 ha"
+  ],
+  "assignments": [
+    {
+      "sourceNameAsPrinted": "Jamboree Lake",
+      "sourceWetlandType": "Lake",
+      "sourceLocality": "Muntinlupa City, NCR",
+      "identityDisposition": "BMB-source-row-candidate-only;not-matched-to-a-canonical-NCR-waterbody-lead",
+      "codes": [
+        {
+          "level": "city",
+          "psgcCode": "1380800000",
+          "name": "City of Muntinlupa",
+          "locality": "City of Muntinlupa, NCR",
+          "sourceId": "psa-ncr-cities-list"
+        }
+      ],
+      "limit": "The city code crosswalks the printed administrative locality only. It does not establish the identity, location, boundary, extent, access, or current condition of a Jamboree Lake feature."
+    },
+    {
+      "sourceNameAsPrinted": "La Mesa Reservoir",
+      "sourceWetlandType": "Water Storage",
+      "sourceLocality": "Quezon City, NCR",
+      "identityDisposition": "matches-existing-source-named-La-Mesa-Reservoir-historical-study-locality;boundary-and-management-extent-unverified",
+      "relatedResearchReviewId": "ncr-la-mesa-reservoir-fish-host-crosswalk-20261116",
+      "codes": [
+        {
+          "level": "city",
+          "psgcCode": "1381300000",
+          "name": "Quezon City",
+          "locality": "Quezon City, NCR",
+          "sourceId": "psa-ncr-cities-list"
+        }
+      ],
+      "limit": "This administrative locality match does not define reservoir or watershed boundaries, management jurisdiction, fishing access, current fish community, or species presence."
+    },
+    {
+      "sourceNameAsPrinted": "Ninoy Aquino Parks and Wildlife Center",
+      "sourceWetlandType": "Pond",
+      "sourceLocality": "Quezon City, NCR",
+      "identityDisposition": "BMB-source-row-candidate-only;park-name-is-not-a-verified-individual-pond-name",
+      "codes": [
+        {
+          "level": "city",
+          "psgcCode": "1381300000",
+          "name": "Quezon City",
+          "locality": "Quezon City, NCR",
+          "sourceId": "psa-ncr-cities-list"
+        }
+      ],
+      "limit": "Preserve the park label and BMB wetland class as printed. This does not identify a specific pond, establish a waterbody boundary, or support fish presence, access, or public-app inclusion."
+    }
+  ],
+  "counts": {
+    "bmbRowsReviewed": 3,
+    "explicitLocalityRowsCrosswalked": 3,
+    "ncrCityCodeAssignments": 3,
+    "distinctNcrCityCodes": 2,
+    "existingNamedLeadMatches": 1,
+    "sourceRowFeatureCandidatesHeld": 2,
+    "waterbodyLeadsCreated": 0,
+    "geometryValidated": 0,
+    "speciesAssertionsAdded": 0,
+    "publicRecordsAdmitted": 0,
+    "scopeFrozen": false
+  },
+  "limitations": [
+    "The BMB 2019 inventory is historical and selected; the listed area values are not adopted as current measurements or geometry.",
+    "The source does not provide coordinates or feature outlines for these three rows.",
+    "The Jamboree Lake and Ninoy Aquino Parks and Wildlife Center entries remain unverified source-row candidates; no canonical waterbody leads are created from a single inventory mention.",
+    "The Quezon City and Muntinlupa codes describe administrative localities, not lake or reservoir extents, ownership, access, fishing permission, or legal jurisdiction.",
+    "No fish checklist, current presence, safety, regulation, or public-app claim is added; the NCR baseline and Luzon phase remain incomplete."
+  ],
+  "nextAction": "Reconcile these source-row candidates against additional independent NCR waterbody inventories before assigning canonical lead identifiers or boundaries; continue freshwater, brackish, and coastal source review in parallel."
+}

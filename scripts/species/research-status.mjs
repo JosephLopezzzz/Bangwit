@@ -77,6 +77,7 @@ export function buildResearchStatus({
   calabarzonLocalitySourceBackedBatch12,
   calabarzonLocalitySourceBackedBatch13,
   lagunaDeBayNcrLocalityReview,
+  ncrBmbFreshwaterLocalityReview,
   calabarzonTagbacSourceReview,
   calabarzonBcibWatercoursesReview,
   calabarzonBmbAtlasReview,
@@ -231,7 +232,11 @@ export function buildResearchStatus({
     calabarzonLocalitySourceBackedBatch13.snapshotHashes.calabarzonScope,
     "NCR locality review must follow the latest CALABARZON source-backed batch",
   );
-  assert.equal(lagunaDeBayNcrLocalityReview.snapshotHashes.sourceRegistry, inputHashes.sources);
+  assert.equal(
+    lagunaDeBayNcrLocalityReview.snapshotHashes.sourceRegistry,
+    calabarzonLocalityLinkageAudit.snapshotHashes.historicalSourceRegistryForPreviousNcrCrosswalk,
+    "The earlier NCR Laguna de Bay crosswalk must retain its original source-registry snapshot",
+  );
   assert.equal(lagunaDeBayNcrLocalityReview.snapshotHashes.administrativeRegistry, inputHashes.registry);
   assert.equal(lagunaDeBayNcrLocalityReview.snapshotHashes.bmb2019WetlandCrosswalk, inputHashes.calabarzonBmb2019WetlandCrosswalk);
   assert.equal(lagunaDeBayNcrLocalityReview.counts.ncrCityCodeAssignments, 2);
@@ -249,6 +254,45 @@ export function buildResearchStatus({
       `NCR locality assignment is missing from the shared waterbody scope: ${assignment.waterbodyId}`,
     );
   }
+  const ncrFreshwaterReviewPath =
+    "data/research/philippines/national/reviews/ncr-bmb-2019-freshwater-locality-crosswalk-20261119.json";
+  assert.ok(ncrManifestRegion.evidenceRefs.includes(ncrFreshwaterReviewPath));
+  assert.equal(ncrBmbFreshwaterLocalityReview.reviewId, "ncr-bmb-2019-freshwater-locality-crosswalk-20261119");
+  assert.equal(ncrBmbFreshwaterLocalityReview.phaseId, "L2");
+  assert.equal(ncrBmbFreshwaterLocalityReview.regionId, "1300000000");
+  for (const id of ncrBmbFreshwaterLocalityReview.sourceIds) {
+    assert.ok(sourceIds.has(id), `Unknown NCR freshwater locality source: ${id}`);
+  }
+  assert.equal(ncrBmbFreshwaterLocalityReview.snapshotHashes.sourceRegistry, inputHashes.sources);
+  assert.equal(ncrBmbFreshwaterLocalityReview.snapshotHashes.administrativeRegistry, inputHashes.registry);
+  assert.equal(
+    ncrBmbFreshwaterLocalityReview.snapshotHashes.bmb2019WetlandCrosswalk,
+    inputHashes.calabarzonBmb2019WetlandCrosswalk,
+  );
+  assert.equal(ncrBmbFreshwaterLocalityReview.assignments.length, 3);
+  const ncrCityCodes = new Map(
+    registry.administrativeUnits
+      .filter((unit) => unit.regionId === "1300000000" && unit.level === "city")
+      .map((unit) => [unit.code, unit.name]),
+  );
+  for (const assignment of ncrBmbFreshwaterLocalityReview.assignments) {
+    assert.equal(assignment.codes.length, 1, `NCR BMB row must have one city code: ${assignment.sourceNameAsPrinted}`);
+    const code = assignment.codes[0];
+    assert.equal(code.level, "city");
+    assert.equal(code.sourceId, "psa-ncr-cities-list");
+    assert.equal(ncrCityCodes.get(code.psgcCode), code.name, `NCR BMB city code does not match the administrative registry: ${code.psgcCode}`);
+  }
+  assert.equal(ncrBmbFreshwaterLocalityReview.counts.bmbRowsReviewed, 3);
+  assert.equal(ncrBmbFreshwaterLocalityReview.counts.explicitLocalityRowsCrosswalked, 3);
+  assert.equal(ncrBmbFreshwaterLocalityReview.counts.ncrCityCodeAssignments, 3);
+  assert.equal(ncrBmbFreshwaterLocalityReview.counts.distinctNcrCityCodes, 2);
+  assert.equal(ncrBmbFreshwaterLocalityReview.counts.existingNamedLeadMatches, 1);
+  assert.equal(ncrBmbFreshwaterLocalityReview.counts.sourceRowFeatureCandidatesHeld, 2);
+  assert.equal(ncrBmbFreshwaterLocalityReview.counts.waterbodyLeadsCreated, 0);
+  assert.equal(ncrBmbFreshwaterLocalityReview.counts.geometryValidated, 0);
+  assert.equal(ncrBmbFreshwaterLocalityReview.counts.speciesAssertionsAdded, 0);
+  assert.equal(ncrBmbFreshwaterLocalityReview.counts.publicRecordsAdmitted, 0);
+  assert.equal(ncrBmbFreshwaterLocalityReview.counts.scopeFrozen, false);
   assert.equal(
     calabarzonLocalityLinkageAudit.snapshotHashes.calabarzonScope,
     inputHashes.scope,
@@ -1653,6 +1697,10 @@ export async function readResearchInputs() {
     ),
     lagunaDeBayNcrLocalityReview: new URL(
       "national/reviews/laguna-de-bay-ncr-locality-crosswalk-20261119.json",
+      research,
+    ),
+    ncrBmbFreshwaterLocalityReview: new URL(
+      "national/reviews/ncr-bmb-2019-freshwater-locality-crosswalk-20261119.json",
       research,
     ),
     calabarzonYabahanCrosswalkReview: new URL(
