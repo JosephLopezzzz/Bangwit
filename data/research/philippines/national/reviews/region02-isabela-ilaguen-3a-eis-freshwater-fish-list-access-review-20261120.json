@@ -1,0 +1,66 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "region02-isabela-ilaguen-3a-eis-freshwater-fish-list-access-review-20261120",
+  "reviewedOn": "2026-11-20",
+  "phaseId": "L5",
+  "regionIds": ["0200000000"],
+  "province": "Isabela",
+  "status": "freshwater-eis-fish-list-lead;ten-reported-table-rows;one-genus-only;taxonomy-spelling-conflicts;survey-method-date-unverified;fish-site-crosswalk-unresolved;direct-pdf-403;reuse-unverified;research-only",
+  "question": "Can the Ilaguen 3A Revised EIS support an Isabela freshwater fish checklist or fish-by-river assertion from its Table 51?",
+  "project": {
+    "name": "19.7MW Ilaguen 3A Hydro-Electric Power Plant",
+    "proponent": "Rio Norte Hydropower Corporation",
+    "projectLocalityAsReported": "Barangay San Miguel, Echague, Isabela",
+    "freshwaterContext": "The project description identifies Ilaguen River for the proposed run-of-river plant. The fish-list table names Barangay San Miguel but does not provide a verified station-to-reach crosswalk in the accessible text."
+  },
+  "sourceFindings": {
+    "revisedEis": {
+      "sourceId": "emb-ilaguen-3a-revised-eis-freshwater-fishes-2021",
+      "title": "Environmental Impact Statement: 19.7MW Ilaguen 3A Hydro-Electric Power Plant",
+      "table": "Table 51, List of Freshwater Fishes Recorded in Brgy. San Miguel, Echague, Isabela",
+      "access": "The official EMB-hosted PDF is discoverable through its public index, whose extracted text exposes the section and table. Direct requests returned HTTP 403 in the reviewed environment, so the PDF page image, surrounding methodology and full document could not be visually checked.",
+      "reportedScope": "The indexed EIS text says ten fish species were recorded and lists ten table rows. One row is Glossogobius sp., which is identified only to genus. The excerpt does not establish field dates, sampling effort, capture coordinates, collection method, voucher accessions or an exact river reach.",
+      "identityConflicts": [
+        "The table text spells the Clarias name as Clarias batrachius, while the adjacent narrative says Clarias batrachus.",
+        "The table text spells the mullet name as Cestraeus pliicatilis, while the narrative says Cestreus plicatilis.",
+        "The indexed table text contains apparent family-name and scientific-name spelling irregularities; without the PDF page image, these cannot be separated from extraction/OCR errors or verified as the EIS's printed spelling.",
+        "The EIS attaches IUCN category codes, but the accessible excerpt does not give the assessment citation or version date. These codes are not treated as current conservation assessments."
+      ]
+    },
+    "projectDescription": {
+      "sourceId": "emb-ilaguen-3a-project-description-river-site-2019",
+      "citation": "Rio Norte Hydropower Corporation. (2019). Project Description Report (PDR) of Ilaguen 3A Hydro Electric Plant Project.",
+      "url": "https://eia.emb.gov.ph/wp-content/uploads/2019/06/PDR_RIONORTE.pdf",
+      "context": "The EMB-hosted project description identifies the proposed run-of-river project with Ilaguen River and prints coordinates for the proposed weir and powerhouse. It says the weir site is about 20 km from Barangay San Miguel. These are infrastructure coordinates and must not be assigned to the EIS fish rows."
+    }
+  },
+  "limits": [
+    "A barangay-level heading is not a precise capture locality, river-reach identity, or occurrence coordinate.",
+    "The fish survey date, collection and interview methods, effort, station locations, vouchers and identification authority could not be checked in the accessible EIS excerpt.",
+    "The source's ten-row count includes a genus-only record; the count is not independently validated as ten species.",
+    "Do not copy the EIS IUCN codes into current app status fields; their assessment source and date are not established.",
+    "The report concerns an infrastructure project, so potential captive, stocked, aquaculture, construction-baseline, and wild-capture contexts must be distinguished before interpreting individual records.",
+    "No item-specific reuse license was verified. A public agency-hosted or indexed report is not treated as permission to redistribute its table, maps or photos."
+  ],
+  "disposition": {
+    "sourceUse": "Research-only access lead for freshwater fish evidence in the Ilaguen 3A project locality, subject to direct report review and taxonomic/site validation.",
+    "speciesNameRowsTranscribed": false,
+    "addedSpeciesAssertions": 0,
+    "addedOccurrenceRows": 0,
+    "addedGeometry": 0,
+    "addedDietClaims": 0,
+    "publicAppRows": 0,
+    "publicationApproval": false
+  },
+  "nextAction": "Locate a directly accessible copy or page images of the revised EIS and verify Table 51 against the printed page; recover fish-survey dates, methods, stations, exact receiving water, identifications and voucher/photo documentation; resolve each table/narrative spelling against authoritative taxonomic references; confirm whether any listed species were stocked or aquaculture-associated; and verify item-specific reuse terms before admitting any species-level evidence.",
+  "sources": [
+    {
+      "url": "https://eia.emb.gov.ph/wp-content/uploads/2021/06/2_Revised_EIS.pdf",
+      "supports": "EMB-hosted revised EIS and the search-indexed text of its project fact sheet, Section 2.2.3.1 and Table 51; direct PDF retrieval returned HTTP 403 during this review."
+    },
+    {
+      "url": "https://eia.emb.gov.ph/wp-content/uploads/2019/06/PDR_RIONORTE.pdf",
+      "supports": "Project-level Ilaguen River and infrastructure-location context only; its proposed weir and powerhouse coordinates are not fish sampling coordinates."
+    }
+  ]
+}
