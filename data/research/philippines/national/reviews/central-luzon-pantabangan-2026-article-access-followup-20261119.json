@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "central-luzon-pantabangan-2026-article-access-followup-20261119",
+  "reviewedOn": "2026-11-19",
+  "phaseId": "L3",
+  "regionId": "0300000000",
+  "regionName": "Region III (Central Luzon)",
+  "waterbodyNames": ["Pantabangan Dam", "Pantabangan Reservoir"],
+  "status": "publisher-and-pubmed-abstract-confirmed;fulltext-gated;2013-sequence-aggregate-aligns;exact-crosswalk-unresolved;research-only",
+  "question": "Did an accessible full text, supplement, or accession table resolve whether the 2026 Pantabangan journal article uses the 2013 GenBank sequence submission?",
+  "sourceIds": [
+    "pantabangan-dam-dna-fish-inventory-2026",
+    "pantabangan-2013-fish-coi-submission-ncbi",
+    "pantabangan-mangahas-student-dna-study-manuscript"
+  ],
+  "inputs": [
+    "data/research/philippines/national/reviews/central-luzon-pantabangan-ncbi-accession-review-20261119.json",
+    "data/research/philippines/national/reviews/central-luzon-pantabangan-student-dna-review-20261119.json"
+  ],
+  "article": {
+    "citation": "Alcantara, S. G., Juanico, C. S. T., Ordynets, A., Fernandez, M. C., & Yambot, A. V. DNA barcoding for identification of ichthyofauna in Pantabangan Dam, Nueva Ecija, Philippines. Mitochondrial DNA Part A, 35(7–8), 249–256. Published online 2026-02-19; issue volume is labeled 2025. DOI: 10.1080/24701394.2026.2631395.",
+    "publisherRecord": "https://www.tandfonline.com/doi/abs/10.1080/24701394.2026.2631395",
+    "pubmedRecord": "https://pubmed.ncbi.nlm.nih.gov/41715976/",
+    "abstractReportedCounts": {
+      "coiSequences": 40,
+      "species": 9,
+      "families": 8,
+      "orders": 6
+    },
+    "abstractReportedFirstRecords": ["Micropterus floridanus", "Coptodon zillii"],
+    "access": "Publisher metadata and abstract are indexed. The publisher's full-article link requires access; direct page retrieval returned HTTP 403 during this review. PubMed links to the publisher full-text source but does not provide the article body here. No full text, accession table, or supplemental file was retrieved."
+  },
+  "boundedAlternativeSearch": {
+    "approach": "Searched the exact DOI, exact title with supplement/accession terms, and DOI-qualified queries for UPLB/PSAU/CLSU institutional hosting and NCBI accessions.",
+    "result": "Search results led to the publisher, PubMed metadata/abstract, and non-full-text citation pages; no clearly authorized full article, accession table, or supplement was identified in this bounded search. This does not establish that none exists.",
+    "outreach": "No author or institution was contacted."
+  },
+  "sequenceLineageCrosswalk": {
+    "2013NcbIProject": {
+      "records": 40,
+      "distinctSubmittedNames": 9,
+      "recordsWithExplicitPantabanganDamLocality": 39,
+      "remainingRecordLocality": "Nueva Ecija only",
+      "submissionPeriod": "2013",
+      "specimenCollectionDates": "2012"
+    },
+    "comparison": "The 2026 abstract's 40 sequences and nine species numerically match the 2013 NCBI project total of 40 fish records and nine submitted names. Aggregate count agreement is a strong reconciliation lead only; the article abstract provides no accession identifiers, and no sequence/voucher/specimen-code join was available.",
+    "firstRecordConflict": "The 2026 abstract says Micropterus floridanus and Coptodon zillii were first recorded in the dam. The earlier NCBI submission contains four Micropterus salmoides floridanus records with an explicit Pantabangan Dam locality (one additional record is localized only to Nueva Ecija) and two Coptodon zillii records explicitly localized to Pantabangan Dam, collected in 2012. Those GenBank records are described as an unpublished project in the accession review; whether the article means first published record, first taxonomically confirmed record, or another scope cannot be resolved without the full article. Preserve the claims as unresolved rather than declaring them wrong or verified.",
+    "studentStudy": "The separate 2024–2025 student manuscript reports 43 specimens and 14 source taxon labels. It remains a third evidence stream; no specimen-level link to either the 2013 NCBI submission or 2026 article was found."
+  },
+  "reuseAndDisposition": {
+    "reuse": "No article-specific license or redistribution terms were verified. The publisher record and abstract do not authorize copying the full text, tables, figures, sequence results, or specimen imagery.",
+    "decision": "Keep the 2026 abstract and 2013 GenBank records as separately attributed historical research evidence. Do not merge their counts or infer exact sequence identity from aggregate agreement.",
+    "speciesAssertionsAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "dietClaimsAdded": 0,
+    "geometryAdded": false,
+    "imagesAdded": 0,
+    "publicAppRowsAdded": 0,
+    "publicationApproval": false
+  },
+  "nextAction": "Seek an authorized article copy or publisher supplement/accession table and reconcile accession, voucher, collection date, submitted name, and paper specimen IDs one by one. If the publisher or authors confirm no table exists, retain the accession relationship as unresolved; do not merge the datasets.",
+  "sources": [
+    {
+      "url": "https://www.tandfonline.com/doi/abs/10.1080/24701394.2026.2631395",
+      "supports": "Publisher citation, author list, volume/issue/pages, online publication date, abstract counts, and first-record statements; the publisher full-text link is access-gated."
+    },
+    {
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41715976/",
+      "supports": "NCBI-indexed article citation, DOI, online publication metadata, abstract, and publisher full-text linkout."
+    },
+    {
+      "url": "data/research/philippines/national/reviews/central-luzon-pantabangan-ncbi-accession-review-20261119.json",
+      "supports": "Hash-checked local NCBI retrieval summary for the 2013 direct-submission project; no sequence strings are copied into this review."
+    },
+    {
+      "url": "data/research/philippines/national/reviews/central-luzon-pantabangan-student-dna-review-20261119.json",
+      "supports": "Separate 43-specimen student manuscript and its limits; no cross-study specimen join."
+    }
+  ]
+}
