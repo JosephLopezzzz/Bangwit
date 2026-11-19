@@ -3,7 +3,7 @@
   "checkedOn": "2026-11-19",
   "status": "research-only-source-registry",
   "scope": "National acquisition references, freshwater spatial-source leads, MIMAROPA/CALABARZON/Central Luzon identity and inland-water source reviews, and Mindanao regional freshwater survey reviews. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 987,
+  "sourceCount": 988,
   "sources": [
     {
       "id": "aoyama-et-al-2015-cagayan-glass-eel-recruitment",
@@ -33950,6 +33950,41 @@
         "Do not infer that the article’s BMP ID strings and GenBank’s BPMP db_xref strings are interchangeable solely from the shared numbering."
       ],
       "researchStatus": "ncr;marikina-river;bold;BPMP001-11-to-BPMP036-11;metadata-query-empty;research-only"
+    },
+    {
+      "id": "geoboundaries-phl-adm3-2020-municipal-boundaries-20261119",
+      "title": "geoBoundaries gbOpen Philippines ADM3 simplified municipal boundary geometry",
+      "provider": "geoBoundaries; source organizations named in metadata include NAMRIA, Philippines Statistics Authority, and OCHA Philippines",
+      "url": "https://www.geoboundaries.org/api/current/gbOpen/PHL/ADM3/",
+      "additionalUrls": [
+        "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/PHL/ADM3/geoBoundaries-PHL-ADM3_simplified.geojson"
+      ],
+      "role": "Generalized 2020 ADM3 municipal polygons used only for a coarse containment screen of historical GenBank coordinate clusters near Marikina. Not a river-waterbody, shoreline, municipal-water, or legal boundary layer.",
+      "checkedOn": "2026-11-19",
+      "citation": "geoBoundaries. geoBoundaries Open Data, Philippines ADM3 (municipalities), boundary year 2020; metadata accessed 2026-11-19.",
+      "access": {
+        "status": "metadata-reviewed;simplified-geometry-downloaded;coarse-locality-screen-only;research-only",
+        "reviewFiles": [
+          "national/reviews/ncr-marikina-2011-coarse-municipal-boundary-crosscheck-20261119.json"
+        ],
+        "reviewedSections": "Current gbOpen PHL ADM3 metadata and simplified GeoJSON feature geometries for Marikina, Rodriguez, and San Mateo.",
+        "rawPath": "raw/ncr-marikina-2011-station-boundary-check-20261119/geoboundaries-PHL-ADM3-simplified.geojson (Git-ignored; SHA-256 2ece3d44a5c6a2afb385ffbf3a6b88d83e4d3a3e7eed9a52cb3be1bc59e289fc)."
+      },
+      "reuse": {
+        "metadata": "The geoBoundaries metadata declares CC BY 3.0 IGO. Retain attribution and license terms for any later use; inclusion here does not authorize republishing derivative geometry.",
+        "raw": "Simplified source GeoJSON remains Git-ignored local research material.",
+        "content": "No polygon coordinates or derived geometry are redistributed in tracked files; only aggregate locality-screen findings are summarized."
+      },
+      "publicationApproval": false,
+      "license": "CC BY 3.0 IGO",
+      "licenseUrl": "https://creativecommons.org/licenses/by/3.0/igo/",
+      "caveats": [
+        "The polygons represent 2020 ADM3 administrative boundaries and are not a municipal-water boundary, river channel, coastal extent, or survey certification.",
+        "The simplified geometry is suitable only for coarse locality screening; one tested point is close to the Marikina-San Mateo boundary.",
+        "Administrative containment does not link a GenBank record or voucher to a named station.",
+        "No station assignment, species row, geometry, catch guidance, or public projection is supported by this source alone."
+      ],
+      "researchStatus": "ncr;marikina-river;administrative-boundary;genbank-station-crosscheck;coarse-only;station-unresolved;research-only"
     }
   ],
   "sourcePolicy": {

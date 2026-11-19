@@ -1,0 +1,72 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "ncr-marikina-2011-coarse-municipal-boundary-crosscheck-20261119",
+  "reviewedOn": "2026-11-19",
+  "phaseId": "L2",
+  "regionId": "1300000000",
+  "regionName": "National Capital Region (NCR)",
+  "parentReviewId": "ncr-marikina-2011-source-prefix-and-public-catalog-search-20261119",
+  "status": "coarse-municipal-containment-screened;station-sample-crosswalk-unresolved;research-only",
+  "question": "Do the five rounded GenBank coordinate clusters support a coarse administrative locality screen against the article's five named Marikina River-system stations?",
+  "sourceIds": [
+    "jumawan-et-al-2011-marikina-pterygoplichthys-dna-barcodes",
+    "ncbi-marikina-jf498719-jf498754-genbank-metadata-20261119",
+    "geoboundaries-phl-adm3-2020-municipal-boundaries-20261119"
+  ],
+  "boundaryDataset": {
+    "metadataUrl": "https://www.geoboundaries.org/api/current/gbOpen/PHL/ADM3/",
+    "geometryUrl": "https://github.com/wmgeolab/geoBoundaries/raw/9469f09/releaseData/gbOpen/PHL/ADM3/geoBoundaries-PHL-ADM3_simplified.geojson",
+    "boundaryYearRepresented": "2020",
+    "boundaryType": "ADM3 municipal boundaries",
+    "sourceDataUpdateDate": "2023-01-19",
+    "buildDate": "2023-12-12",
+    "unitCount": 1647,
+    "declaredSourceOrganizations": [
+      "NAMRIA",
+      "Philippines Statistics Authority",
+      "OCHA Philippines"
+    ],
+    "license": "CC BY 3.0 IGO",
+    "localRawSnapshot": {
+      "path": "raw/ncr-marikina-2011-station-boundary-check-20261119/geoboundaries-PHL-ADM3-simplified.geojson",
+      "sha256": "2ece3d44a5c6a2afb385ffbf3a6b88d83e4d3a3e7eed9a52cb3be1bc59e289fc",
+      "gitIgnored": true
+    }
+  },
+  "method": {
+    "coordinateInput": "Five distinct coordinate clusters derived from NCBI GenBank lat_lon metadata; exact values omitted from this tracked review.",
+    "screen": "Local point-in-polygon check against the simplified ADM3 municipal GeoJSON, with a local proximity check for the nearest Marikina and San Mateo boundary segments.",
+    "purpose": "Coarse administrative locality cross-check only; the result is not a surveyed coordinate, site verification, river geometry, or specimen-to-station crosswalk."
+  },
+  "findings": [
+    "Four coordinate clusters fall within the City of Marikina ADM3 polygon and one falls within Rodriguez ADM3. This is a generalized administrative containment result, not a named sampling-station identification.",
+    "One cluster classified inside Marikina lies close to the Marikina-San Mateo municipal boundary. Its source coordinate precision and the simplified boundary are insufficient to treat the side-of-boundary assignment as definitive.",
+    "The 2011 paper names five sampling stations, but neither its article text nor the reviewed GenBank/BOLD records join an individual accession or voucher to one station. Five coordinate clusters therefore cannot be assumed to equal the five station locations.",
+    "The boundary metadata describes 2020 ADM3 municipal units from sources including NAMRIA, PSA and OCHA; it does not provide a municipal-water boundary, river-channel polygon, specimen location uncertainty, or legal survey certification."
+  ],
+  "evidenceDecision": {
+    "decision": "Use only as a coarse research locality check; keep every accession-to-station link and the near-boundary municipal assignment unresolved.",
+    "coordinateClustersScreened": 5,
+    "coarseContainmentCounts": {
+      "cityOfMarikina": 4,
+      "rodriguez": 1
+    },
+    "stationAssignmentsAdded": 0,
+    "exactCoordinatesAddedToTrackedFiles": 0,
+    "geometryAdded": false,
+    "speciesRowsAdded": 0,
+    "publicProjection": false,
+    "publicationApproval": false,
+    "reason": "A simplified 2020 administrative polygon can indicate broad containment but cannot resolve station names or provide authoritative positional accuracy. One cluster is near the Marikina-San Mateo boundary, while specimen-level station joins are absent."
+  },
+  "nonClaims": [
+    "Containment in an administrative polygon does not establish the exact river reach, named barangay station, or capture location.",
+    "A near-boundary point is not evidence that the coordinate is wrong or that it belongs to San Mateo; source rounding and boundary generalization are unresolved.",
+    "The article's five stations are not mapped one-to-one to the five coordinate clusters.",
+    "No current species presence, abundance, catchability, access, legal harvest, safety, diet, native status, or invasive status is inferred."
+  ],
+  "nextActions": [
+    "Seek a source-authored specimen-to-station table, original field sheet, or museum catalog crosswalk before assigning any accession to a station.",
+    "Continue NCR freshwater source research independently of the unresolved 2011 voucher and station chain."
+  ]
+}
