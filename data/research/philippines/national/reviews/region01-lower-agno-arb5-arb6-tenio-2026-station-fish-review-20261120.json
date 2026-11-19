@@ -1,0 +1,197 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "region01-lower-agno-arb5-arb6-tenio-2026-station-fish-review-20261120",
+  "reviewedOn": "2026-11-20",
+  "phaseId": "L4",
+  "regionId": "0100000000",
+  "regionName": "Region I (Ilocos Region)",
+  "province": "Pangasinan",
+  "status": "historical-primary-study-and-cc-by-dataset-reconciled-at-two-lower-agno-stations;season-date-and-locality-limits-retained;research-only",
+  "question": "What station-specific freshwater fish labels and source-matrix counts do Tenio et al. (2026) report for ARB5 and ARB6 in Pangasinan, and which limits prevent projecting them as current public species records?",
+  "sources": [
+    {
+      "sourceId": "agno-river-basin-fish-survey-article-2026",
+      "citation": "Tenio, K. F. C., et al. (2026). Diversity and distribution of freshwater fish in mineralized watersheds of the Agno River Basin, northern Philippines. Watershed Ecology and the Environment, 8, 248–260. https://doi.org/10.1016/j.wsee.2026.05.001",
+      "recordUrl": "https://eprints.gla.ac.uk/386293/",
+      "fullTextUrl": "https://researchonline.ljmu.ac.uk/id/eprint/28808/1/Diversity%20and%20distribution%20of%20freshwater%20fish%20in%20mineralized%20watersheds%20of%20the%20Agno%20River%20Basin%2C%20northern%20Philippines.pdf",
+      "license": "CC BY 4.0",
+      "reviewedContent": [
+        "Table 1: station label, coordinate, elevation and upstream land-use note",
+        "Table 4: reported taxon labels and station distribution",
+        "Table 5: station richness and abundance summary",
+        "Methods: seasonal sampling, gear, transect and effort limits"
+      ]
+    },
+    {
+      "sourceId": "agno-river-basin-fish-assemblage-dataset-2026",
+      "citation": "Tenio, K. F., et al. (2026). Diversity and Distribution of Freshwater Fish in Mineralized Watersheds of the Agno River Basin, Northern Philippines [Data Collection]. University of Glasgow Enlighten Research Data. https://doi.org/10.5525/gla.researchdata.2287",
+      "recordUrl": "https://researchdata.gla.ac.uk/2287/",
+      "datasetUrl": "https://researchdata.gla.ac.uk/2287/1/Data_2287.zip",
+      "license": "CC BY 4.0",
+      "filesReviewed": [
+        "Sampling_sites.csv",
+        "Fish_count.csv",
+        "README_2287.txt"
+      ],
+      "localArchiveRetained": false
+    }
+  ],
+  "scope": {
+    "waterbodySystem": "Agno River Basin, Lower Agno station records ARB5 and ARB6 only",
+    "studyPeriod": "July 2021–January 2022",
+    "seasonDateConflict": "The article methods label July as wet season and January as dry season. University of Glasgow repository metadata and README map January 2022 to wet season and July 2021 to dry season. The Fish_count.csv values contain only Wet and Dry columns. Preserve those labels and do not assign exact dates until the source conflict is resolved.",
+    "samplingMethod": "The article reports one fish-sampling occasion per station in each season, using electrofishing and seine netting as appropriate along a 100 m riverbank transect, with effort up to 2 hours per station.",
+    "specimenContext": "The article says fish were initially identified morphologically; representative samples were selected for measurement and photo documentation and preserved in 75% ethanol, while identified and unidentified samples were sent to the University of the Philippines Los Baños Museum of Natural History for validation. No catalogue accession or individual specimen-to-count-row crosswalk was found in the reviewed article and dataset.",
+    "stationCountScope": "Counts are source-matrix station-by-season aggregates. They are not individual specimen records, independently reidentified vouchers, current abundance estimates, or capture-site coordinates."
+  },
+  "stations": [
+    {
+      "stationId": "ARB5",
+      "catchmentPositionVerbatim": "Lower Agno",
+      "articleTable1LocalityVerbatim": "San Roque, San Manuel, Pangasinan",
+      "articleBodyLocalityShortForm": "San Roque, Pangasinan",
+      "datasetLocalityVerbatim": "San Roque, San Manuel, Pangasinan",
+      "coordinatesWgs84DecimalDegrees": {
+        "latitude": 16.1056,
+        "longitude": 120.7019
+      },
+      "coordinateMeaning": "Article Table 1 and Sampling_sites.csv station reference coordinate; not an individual capture coordinate, reach line or waterbody boundary.",
+      "elevationMasl": 79,
+      "upstreamLandUseVerbatim": "San Roque Dam outflow",
+      "localityCrosswalk": {
+        "sourceAndArticleTableAgreement": true,
+        "boundaryScreenMunicipality": "San Nicolas",
+        "reverseGeocoderMunicipality": "San Nicolas",
+        "reverseGeocoderLocality": "San Felipe East",
+        "assessment": "Both point screens differ from the article Table 1 and dataset locality San Roque, San Manuel. The station coordinate and dam-outflow note do not resolve the exact survey reach or municipality; retain the source wording and hold the mapped municipality assignment."
+      },
+      "articleTable4SourceLabels": [
+        "Glossogobius aureus (Akihito & Meguro, 1975)",
+        "Glossogobius giuris (Hamilton, 1822)",
+        "Oreochromis mossambicus (Peters, 1852)",
+        "Oreochromis niloticus (Linnaeus, 1758)",
+        "Sarotherodon melanotheron (Rüppell, 1852)",
+        "Channa striata (Bloch, 1793)",
+        "Clarias batrachus (Linnaeus, 1758)",
+        "Cyprinus carpio (Linnaues, 1975)",
+        "Pterygoplichthys disjunctivus (Weber, 1991)",
+        "Leiopotherapon plumbeus (Kner, 1864)"
+      ],
+      "datasetCountRows": [
+        { "sourceNameVerbatim": "Channa striata (Bloch, 1793)", "wetLabelCount": 2, "dryLabelCount": 0, "total": 2 },
+        { "sourceNameVerbatim": "Clarias batrachus (Linnaeus, 1758)", "wetLabelCount": 1, "dryLabelCount": 0, "total": 1 },
+        { "sourceNameVerbatim": "Cyprinus carpio (Linnaues, 1975)", "wetLabelCount": 1, "dryLabelCount": 0, "total": 1 },
+        { "sourceNameVerbatim": "Glossogobius aureus (Akihito & Meguro, 1975)", "wetLabelCount": 74, "dryLabelCount": 6, "total": 80 },
+        { "sourceNameVerbatim": "Glossogobius giuris (Hamilton, 1822)", "wetLabelCount": 52, "dryLabelCount": 2, "total": 54 },
+        { "sourceNameVerbatim": "Leiopotherapon plumbeus (Kner, 1864)", "wetLabelCount": 4, "dryLabelCount": 0, "total": 4 },
+        { "sourceNameVerbatim": "Oreochromis mozambicus (Peters, 1852)", "articleTable4Spelling": "Oreochromis mossambicus (Peters, 1852)", "wetLabelCount": 42, "dryLabelCount": 4, "total": 46, "spellingConflict": true },
+        { "sourceNameVerbatim": "Oreochromis niloticus (Linnaeus, 1758)", "wetLabelCount": 49, "dryLabelCount": 0, "total": 49 },
+        { "sourceNameVerbatim": "Pterygoplichthys disjunctivus (Weber, 1991)", "wetLabelCount": 2, "dryLabelCount": 0, "total": 2 },
+        { "sourceNameVerbatim": "Sarotherodon melanotheron (Rüppell, 1852)", "wetLabelCount": 6, "dryLabelCount": 0, "total": 6 }
+      ],
+      "sourceMatrixSummary": {
+        "taxonLabelRows": 10,
+        "wetLabelCount": 233,
+        "dryLabelCount": 12,
+        "totalIndividuals": 245
+      },
+      "articleTable5Summary": {
+        "richness": 10,
+        "abundance": 245
+      },
+      "matrixAndArticleAgreement": "The 10 positive matrix labels correspond to the article Table 4 station list, retaining the Oreochromis spelling conflict; richness and total abundance match the ARB5 values summarized in article Table 5. This checks transcription consistency only, not individual fish identity."
+    },
+    {
+      "stationId": "ARB6",
+      "catchmentPositionVerbatim": "Lower Agno",
+      "articleTable1LocalityVerbatim": "Viray, Natividad, Pangasinan",
+      "datasetLocalityVerbatim": "Viray, Natividad, Pangasinan",
+      "coordinatesWgs84DecimalDegrees": {
+        "latitude": 16.0585,
+        "longitude": 120.8345
+      },
+      "coordinateMeaning": "Article Table 1 and Sampling_sites.csv station reference coordinate; not an individual capture coordinate, reach line or waterbody boundary.",
+      "elevationMasl": 168,
+      "upstreamLandUseVerbatim": "Mineralized subwatershed without mining activities",
+      "localityCrosswalk": {
+        "sourceAndArticleTableAgreement": true,
+        "boundaryScreenMunicipality": "Natividad",
+        "reverseGeocoderMunicipality": "Natividad",
+        "reverseGeocoderLocality": "Batchelor East",
+        "assessment": "Province and municipality agree with the source label. The reverse geocoder returns a smaller locality different from Viray; the exact site identity remains unverified."
+      },
+      "articleTable4SourceLabels": [
+        "Awaous sp.",
+        "Pseudogobius javanicus (Bleeker, 1856)",
+        "Rhinogobius bucculentus (Herre, 1927)"
+      ],
+      "datasetCountRows": [
+        { "sourceNameVerbatim": "Awaous sp.", "wetLabelCount": 0, "dryLabelCount": 12, "total": 12, "taxonomicResolution": "genus only; unresolved" },
+        { "sourceNameVerbatim": "Pseudogobius javanicus (Bleeker, 1856)", "wetLabelCount": 257, "dryLabelCount": 24, "total": 281 },
+        { "sourceNameVerbatim": "Rhinogobius bucculentus (Herre, 1927)", "wetLabelCount": 344, "dryLabelCount": 22, "total": 366 }
+      ],
+      "sourceMatrixSummary": {
+        "taxonLabelRows": 3,
+        "wetLabelCount": 601,
+        "dryLabelCount": 58,
+        "totalIndividuals": 659
+      },
+      "articleTable5Summary": {
+        "richness": 3,
+        "abundance": 659
+      },
+      "matrixAndArticleAgreement": "The three positive matrix labels correspond to the article Table 4 station list and the station richness and total abundance match the ARB6 values summarized in article Table 5. Awaous sp. remains genus-level; this checks transcription consistency only, not individual fish identity."
+    }
+  ],
+  "crossSourceConflicts": [
+    {
+      "topic": "season-to-date mapping",
+      "articleMapping": "Article methods map July to wet season and January to dry season.",
+      "repositoryMapping": "University of Glasgow repository metadata and README map July 2021 to dry season and January 2022 to wet season.",
+      "disposition": "Do not map Wet/Dry counts to exact dates."
+    },
+    {
+      "topic": "ARB5 locality and station coordinate",
+      "sourceWording": "The article Table 1 and dataset both name San Roque, San Manuel, Pangasinan; the article body also uses the shorter San Roque, Pangasinan.",
+      "pointScreen": "The existing municipal-boundary and reverse-geocoder screens both return San Nicolas for the coordinate.",
+      "disposition": "Do not choose a municipality or move the station based on point screens; seek source-author clarification or a stronger station map."
+    },
+    {
+      "topic": "dataset/article taxon spelling",
+      "sourceWording": "The count CSV prints Oreochromis mozambicus, while article Table 4 prints Oreochromis mossambicus.",
+      "disposition": "Retain both verbatim and treat nomenclature crosswalks as candidates, not specimen identification."
+    }
+  ],
+  "limitations": [
+    "This review covers only ARB5 and ARB6, not the whole Lower Agno, Agno River Basin, Pangasinan, Region I or Luzon.",
+    "The source is a historical survey with one fish-sampling occasion per station per season and limited temporal replication; positive historical counts do not establish current presence or abundance.",
+    "No voucher catalogue identifiers or individual specimen crosswalk were found. Name authorities and spelling checks do not independently identify the sampled fish.",
+    "Station reference points are not fish occurrence coordinates, mapped river reaches, waterbody boundaries, legal fishing waters, access points, or safety guidance.",
+    "The source does not support diet, bait suitability, catchability, current fishing legality or present-day water safety claims."
+  ],
+  "decision": {
+    "newSourceRegistryEntries": 0,
+    "existingSourceRegistryEntriesUpdated": 2,
+    "stationReviewsAdded": 2,
+    "sourceTaxonLabelRowsRecorded": 13,
+    "matrixIndividualsTranscribed": 904,
+    "canonicalSpeciesAssertionsAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "waterbodyAssignmentsAdded": 0,
+    "mapPointsAdded": 0,
+    "geometryAdded": false,
+    "photosReused": false,
+    "publicAppProjection": false,
+    "publicationApproval": false,
+    "regionalBaselineComplete": false,
+    "reason": "The primary study and CC BY 4.0 dataset support a bounded historical station-level research extraction. Season/date mapping, ARB5 municipality/reach, specimen crosswalk and name-identification limits remain; this research review is not public-app approval."
+  },
+  "nextAction": "Keep the ARB5 and ARB6 count tables research-only. Seek clarification for the season/date mapping and ARB5 station locality, locate voucher accession identifiers if available, and continue the separate Lower Agno/Abra/tributary and other Region I waterbody evidence sweep.",
+  "sourceReferences": [
+    "https://researchonline.ljmu.ac.uk/id/eprint/28808/1/Diversity%20and%20distribution%20of%20freshwater%20fish%20in%20mineralized%20watersheds%20of%20the%20Agno%20River%20Basin%2C%20northern%20Philippines.pdf",
+    "https://researchdata.gla.ac.uk/2287/",
+    "https://researchdata.gla.ac.uk/2287/1/Data_2287.zip"
+  ],
+  "relatedLocalReview": "data/research/philippines/national-agno-station-locality-crosswalk-20261030.json",
+  "relatedCrossRegionalReview": "data/research/philippines/national-agno-river-basin-fish-survey-review-20261030.json"
+}
