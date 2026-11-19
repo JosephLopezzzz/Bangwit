@@ -1,0 +1,208 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "central-luzon-paitan-vaca-gbif-exact-text-screen-20261119",
+  "checkedOn": "2026-11-19",
+  "phaseId": "L3",
+  "regionId": "0300000000",
+  "regionName": "Region III (Central Luzon)",
+  "status": "corrected-colxr-exact-field-screen-complete;record-triage-required-for-nonzero-results",
+  "sourceId": "gbif-central-luzon-paitan-vaca-colxr-actinopterygii-screen-20261119",
+  "question": "Do corrected GBIF CoL XR Actinopterygii exact-field searches expose indexed fish occurrence candidates for the separate Paitan Lake and Vaca Dam Reservoir leads?",
+  "query": {
+    "provider": "GBIF Occurrence Search API v1",
+    "endpoint": "https://api.gbif.org/v1/occurrence/search",
+    "documentation": "https://techdocs.gbif.org/en/openapi/v1/occurrence",
+    "filters": {
+      "country": "PH",
+      "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+      "taxonKey": "8VR36",
+      "limit": 0
+    },
+    "taxonLabel": "Catalogue of Life Extended Release Actinopterygii",
+    "taxonomicLimit": "Ray-finned fishes only; this filter does not cover sharks and rays or every taxonomic group commonly called fish.",
+    "fieldSemantics": "Queries use the GBIF occurrence-search waterBody or locality field with the listed text. Matching a text label is only a discovery lead; it does not validate the occurrence's waterbody identity.",
+    "legacyKey": "The prior key 204 is deleted and its saved zeroes remain invalidated; this screen uses the corrected CoL XR key 8VR36 and checklist 7ddf754f-d193-4cc9-b351-99906754a03b.",
+    "rawStorage": "Response JSON files are local-only under the ignored research raw directory; each query records its SHA-256 and byte length."
+  },
+  "leads": [
+    {
+      "id": "paitan-lake",
+      "name": "Paitan Lake",
+      "alias": "Libsong Lake",
+      "municipality": "Cuyapo"
+    },
+    {
+      "id": "vaca-dam-reservoir",
+      "name": "Vaca Dam Reservoir",
+      "municipality": "Llanera"
+    }
+  ],
+  "results": [
+    {
+      "leadId": "paitan-lake",
+      "waterbodyAsReported": "Paitan Lake",
+      "field": "waterBody",
+      "searchValue": "Paitan Lake",
+      "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&waterBody=Paitan+Lake&limit=0",
+      "httpStatus": 200,
+      "count": 0,
+      "resultsReturned": 0,
+      "responseBytes": 77,
+      "responseSha256": "842e210a1dc11a43b863a7438d0b8ae273f0182c290a7c64e760c176778cc9fa",
+      "rawFile": "raw/central-luzon-paitan-vaca-gbif-screen-20261119/paitan-lake-waterBody-paitan-lake.json"
+    },
+    {
+      "leadId": "paitan-lake",
+      "waterbodyAsReported": "Paitan Lake",
+      "field": "waterBody",
+      "searchValue": "Libsong Lake",
+      "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&waterBody=Libsong+Lake&limit=0",
+      "httpStatus": 200,
+      "count": 0,
+      "resultsReturned": 0,
+      "responseBytes": 77,
+      "responseSha256": "842e210a1dc11a43b863a7438d0b8ae273f0182c290a7c64e760c176778cc9fa",
+      "rawFile": "raw/central-luzon-paitan-vaca-gbif-screen-20261119/paitan-lake-waterBody-libsong-lake.json"
+    },
+    {
+      "leadId": "vaca-dam-reservoir",
+      "waterbodyAsReported": "Vaca Dam Reservoir",
+      "field": "waterBody",
+      "searchValue": "Vaca Dam Reservoir",
+      "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&waterBody=Vaca+Dam+Reservoir&limit=0",
+      "httpStatus": 200,
+      "count": 0,
+      "resultsReturned": 0,
+      "responseBytes": 77,
+      "responseSha256": "842e210a1dc11a43b863a7438d0b8ae273f0182c290a7c64e760c176778cc9fa",
+      "rawFile": "raw/central-luzon-paitan-vaca-gbif-screen-20261119/vaca-dam-reservoir-waterBody-vaca-dam-reservoir.json"
+    },
+    {
+      "leadId": "paitan-lake",
+      "waterbodyAsReported": "Paitan Lake",
+      "field": "locality",
+      "searchValue": "Paitan Lake",
+      "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&locality=Paitan+Lake&limit=0",
+      "httpStatus": 200,
+      "count": 0,
+      "resultsReturned": 0,
+      "responseBytes": 77,
+      "responseSha256": "842e210a1dc11a43b863a7438d0b8ae273f0182c290a7c64e760c176778cc9fa",
+      "rawFile": "raw/central-luzon-paitan-vaca-gbif-screen-20261119/paitan-lake-locality-paitan-lake.json"
+    },
+    {
+      "leadId": "paitan-lake",
+      "waterbodyAsReported": "Paitan Lake",
+      "field": "locality",
+      "searchValue": "Libsong Lake",
+      "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&locality=Libsong+Lake&limit=0",
+      "httpStatus": 200,
+      "count": 0,
+      "resultsReturned": 0,
+      "responseBytes": 77,
+      "responseSha256": "842e210a1dc11a43b863a7438d0b8ae273f0182c290a7c64e760c176778cc9fa",
+      "rawFile": "raw/central-luzon-paitan-vaca-gbif-screen-20261119/paitan-lake-locality-libsong-lake.json"
+    },
+    {
+      "leadId": "paitan-lake",
+      "waterbodyAsReported": "Paitan Lake",
+      "field": "locality",
+      "searchValue": "Paitan",
+      "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&locality=Paitan&limit=0",
+      "httpStatus": 200,
+      "count": 0,
+      "resultsReturned": 0,
+      "responseBytes": 77,
+      "responseSha256": "842e210a1dc11a43b863a7438d0b8ae273f0182c290a7c64e760c176778cc9fa",
+      "rawFile": "raw/central-luzon-paitan-vaca-gbif-screen-20261119/paitan-lake-locality-paitan.json"
+    },
+    {
+      "leadId": "paitan-lake",
+      "waterbodyAsReported": "Paitan Lake",
+      "field": "locality",
+      "searchValue": "Cuyapo",
+      "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&locality=Cuyapo&limit=0",
+      "httpStatus": 200,
+      "count": 0,
+      "resultsReturned": 0,
+      "responseBytes": 77,
+      "responseSha256": "842e210a1dc11a43b863a7438d0b8ae273f0182c290a7c64e760c176778cc9fa",
+      "rawFile": "raw/central-luzon-paitan-vaca-gbif-screen-20261119/paitan-lake-locality-cuyapo.json"
+    },
+    {
+      "leadId": "vaca-dam-reservoir",
+      "waterbodyAsReported": "Vaca Dam Reservoir",
+      "field": "locality",
+      "searchValue": "Vaca Dam Reservoir",
+      "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&locality=Vaca+Dam+Reservoir&limit=0",
+      "httpStatus": 200,
+      "count": 0,
+      "resultsReturned": 0,
+      "responseBytes": 77,
+      "responseSha256": "842e210a1dc11a43b863a7438d0b8ae273f0182c290a7c64e760c176778cc9fa",
+      "rawFile": "raw/central-luzon-paitan-vaca-gbif-screen-20261119/vaca-dam-reservoir-locality-vaca-dam-reservoir.json"
+    },
+    {
+      "leadId": "vaca-dam-reservoir",
+      "waterbodyAsReported": "Vaca Dam Reservoir",
+      "field": "locality",
+      "searchValue": "Vaca",
+      "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&locality=Vaca&limit=0",
+      "httpStatus": 200,
+      "count": 0,
+      "resultsReturned": 0,
+      "responseBytes": 77,
+      "responseSha256": "842e210a1dc11a43b863a7438d0b8ae273f0182c290a7c64e760c176778cc9fa",
+      "rawFile": "raw/central-luzon-paitan-vaca-gbif-screen-20261119/vaca-dam-reservoir-locality-vaca.json"
+    },
+    {
+      "leadId": "vaca-dam-reservoir",
+      "waterbodyAsReported": "Vaca Dam Reservoir",
+      "field": "locality",
+      "searchValue": "Llanera",
+      "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&locality=Llanera&limit=0",
+      "httpStatus": 200,
+      "count": 0,
+      "resultsReturned": 0,
+      "responseBytes": 77,
+      "responseSha256": "842e210a1dc11a43b863a7438d0b8ae273f0182c290a7c64e760c176778cc9fa",
+      "rawFile": "raw/central-luzon-paitan-vaca-gbif-screen-20261119/vaca-dam-reservoir-locality-llanera.json"
+    },
+    {
+      "leadId": "vaca-dam-reservoir",
+      "waterbodyAsReported": "Vaca Dam Reservoir",
+      "field": "waterBody",
+      "searchValue": "Vaca Dam",
+      "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&waterBody=Vaca+Dam&limit=0",
+      "httpStatus": 200,
+      "count": 0,
+      "resultsReturned": 0,
+      "responseBytes": 77,
+      "responseSha256": "842e210a1dc11a43b863a7438d0b8ae273f0182c290a7c64e760c176778cc9fa",
+      "rawFile": "raw/central-luzon-paitan-vaca-gbif-screen-20261119/vaca-dam-reservoir-waterBody-vaca-dam.json"
+    },
+    {
+      "leadId": "vaca-dam-reservoir",
+      "waterbodyAsReported": "Vaca Dam Reservoir",
+      "field": "locality",
+      "searchValue": "Vaca Dam",
+      "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&locality=Vaca+Dam&limit=0",
+      "httpStatus": 200,
+      "count": 0,
+      "resultsReturned": 0,
+      "responseBytes": 77,
+      "responseSha256": "842e210a1dc11a43b863a7438d0b8ae273f0182c290a7c64e760c176778cc9fa",
+      "rawFile": "raw/central-luzon-paitan-vaca-gbif-screen-20261119/vaca-dam-reservoir-locality-vaca-dam.json"
+    }
+  ],
+  "interpretation": {
+    "nonzeroQueries": 0,
+    "zeroQueriesAreAbsenceEvidence": false,
+    "occurrenceRowsAdmitted": 0,
+    "speciesAssertionsAdded": 0,
+    "coordinatesPublished": 0,
+    "geometryAdded": false,
+    "publicProjection": false,
+    "disposition": "Triage every nonzero result against the verbatim locality/waterBody, event date, basis of record, dataset and record-level license, coordinate uncertainty, taxonomic issues, and source dataset before admitting even historical waterbody-specific evidence. Do not treat zeroes as absence."
+  }
+}

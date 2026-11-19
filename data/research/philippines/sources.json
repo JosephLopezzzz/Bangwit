@@ -32645,6 +32645,43 @@
         "The January–April 2024 survey is historical and limited to three study sites; it does not establish present-day abundance, fishing access, legal catchability, or food safety."
       ],
       "researchStatus": "ncr;navotas-malabon-tullahan;2024-site-level-fish-catch-table;duplicate-binomial;malformed-site3-dms;research-only"
+    },
+    {
+      "id": "gbif-central-luzon-paitan-vaca-colxr-actinopterygii-screen-20261119",
+      "title": "GBIF CoL XR Actinopterygii exact-field screen for Paitan Lake and Vaca Dam Reservoir",
+      "provider": "Global Biodiversity Information Facility",
+      "url": "https://api.gbif.org/v1/occurrence/search",
+      "additionalUrls": [
+        "https://techdocs.gbif.org/en/openapi/v1/occurrence",
+        "national/reviews/central-luzon-paitan-vaca-gbif-exact-text-screen-20261119.json"
+      ],
+      "role": "Twelve corrected GBIF occurrence-search queries tested the exact waterBody and locality fields for source-reported Paitan Lake/Libsong Lake and Vaca Dam Reservoir names and municipalities. Every HTTP 200 response returned count 0; this is a bounded text-index gap only, not evidence of fish absence or a contradiction of historical survey/stocking evidence.",
+      "checkedOn": "2026-11-19",
+      "citation": "Global Biodiversity Information Facility. Occurrence Search API v1. CoL XR Actinopterygii exact-field searches reviewed 2026-11-19.",
+      "access": {
+        "status": "12-http-200-count-only-zeroes;corrected-colxr-actinopterygii-filter;raw-empty-responses-local-only",
+        "reviewFiles": [
+          "national/reviews/central-luzon-paitan-vaca-gbif-exact-text-screen-20261119.json"
+        ],
+        "queryCount": 12,
+        "rawSnapshotDirectory": "raw/central-luzon-paitan-vaca-gbif-screen-20261119/",
+        "reviewedSections": "Twelve occurrence/search count responses using country=PH, CoL XR checklist 7ddf754f-d193-4cc9-b351-99906754a03b, Actinopterygii usage 8VR36, and exact waterBody/locality text fields. No occurrence rows were returned."
+      },
+      "reuse": {
+        "metadata": "No occurrence record or dataset metadata was returned; dataset-level licenses were not applicable to these empty responses.",
+        "raw": "Empty API response JSON files are retained only in the ignored local research raw directory and are hash-referenced in the review artifact.",
+        "content": "No occurrence, species assertion, coordinate, geometry, image, or public app row was created."
+      },
+      "publicationApproval": false,
+      "license": null,
+      "licenseUrl": null,
+      "caveats": [
+        "The selected Actinopterygii taxon covers ray-finned fishes only and does not cover sharks and rays or every group commonly called fish.",
+        "Exact text-field queries miss alternate spellings, absent waterBody/locality values, non-matching dataset labels, unindexed records, and other taxonomic backbones.",
+        "Zero results do not establish fish absence and do not override historical surveys or stocking records.",
+        "Any future nonzero result must be reviewed for verbatim locality, waterBody, event date, basis of record, dataset and record license, coordinate uncertainty, and taxonomic issues before it is assigned to a waterbody."
+      ],
+      "researchStatus": "central-luzon;paitan-lake;vaca-dam-reservoir;colxr-actinopterygii;12-exact-field-zeroes;bounded-index-gap-only"
     }
   ],
   "sourcePolicy": {
