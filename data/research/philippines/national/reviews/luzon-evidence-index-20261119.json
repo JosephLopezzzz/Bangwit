@@ -1290,7 +1290,7 @@
     },
     {
       "path": "data/research/philippines/luzon-completion-manifest.json",
-      "sha256": "a0aa5f1fe7700effec20435d9900975bb3c41a1ad9590aac3a23045d5d3ee940"
+      "sha256": "54fef898205fd7680728cc3cd9ce99ebdc1ef6f74208a3e86470b97b5e1533e1"
     },
     {
       "path": "data/research/philippines/makiling-gbif-source-review.json",
@@ -2805,6 +2805,10 @@
       "sha256": "2cdd41466f7aa5daa40aa7bb5c9b2688e077c357c75a9c9fc7478f3771a2fa79"
     },
     {
+      "path": "data/research/philippines/national/reviews/ncr-marikina-2011-genbank-bold-metadata-crosswalk-20261119.json",
+      "sha256": "fb92ed2b82097c3001b5fa08536f885e216f2ea558be53ed0647bb05cb6350da"
+    },
+    {
       "path": "data/research/philippines/national/reviews/ncr-marikina-2011-pterygoplichthys-barcode-review-20261119.json",
       "sha256": "670835863b57c3bb37643def499e193e779b3537d086c7fd394785ff5ffe169c"
     },
@@ -3062,7 +3066,7 @@
     },
     {
       "path": "data/research/philippines/sources.json",
-      "sha256": "1e8ed88492a178152ed7ad5fcac8783882224054cfb8b0e422d4b7b5ccae36d6"
+      "sha256": "1a41731a1fcee16d8a6e008628eac0ccce00f53c6dc4ba137e8b2efb99fe2ac5"
     },
     {
       "path": "data/research/philippines/taal-checklist-decisions.json",
@@ -3122,24 +3126,24 @@
     }
   ],
   "summary": {
-    "reviewArtifactsScanned": 136,
+    "reviewArtifactsScanned": 137,
     "regionCount": 8,
-    "sourceRegistryUniqueIds": 985,
+    "sourceRegistryUniqueIds": 987,
     "sourceIdentityCrosswalkGroups": 10,
     "reviewClassifications": {
       "directly-linked": 30,
       "indirectly-linked": 14,
       "national-context-only": 1,
-      "shared-across-regions": 91
+      "shared-across-regions": 92
     },
     "brokenOrUnresolvedJsonReferences": 0,
     "missingSourceIdLinks": 0,
-    "localRawReferenceCount": 963,
-    "localRawReferencesAvailable": 963,
+    "localRawReferenceCount": 965,
+    "localRawReferencesAvailable": 965,
     "localRawReferencesUnresolved": 0,
     "localRawHashMismatchReferences": 0,
     "localRawNonmatchingBasenameCandidates": 3,
-    "uniqueLocalRawInputsMatched": 908,
+    "uniqueLocalRawInputsMatched": 910,
     "manuallyReviewedRegionalAssociations": 32,
     "nationalContextArtifacts": 3,
     "unlinkedManualAssociations": 0,
@@ -3153,8 +3157,8 @@
       "name": "Region IV-A (CALABARZON)",
       "manifestReferenceCount": 41,
       "directlyLinkedReviewCount": 33,
-      "indirectlyLinkedReviewCount": 102,
-      "declaredOrLinkedReviewCount": 135,
+      "indirectlyLinkedReviewCount": 103,
+      "declaredOrLinkedReviewCount": 136,
       "unaccountedExplicitReviewCount": 0,
       "baselineReviewed": false,
       "scopeFrozen": false
@@ -3163,10 +3167,10 @@
       "rolloutKey": "L2",
       "regionId": "1300000000",
       "name": "National Capital Region (NCR)",
-      "manifestReferenceCount": 22,
-      "directlyLinkedReviewCount": 20,
+      "manifestReferenceCount": 23,
+      "directlyLinkedReviewCount": 21,
       "indirectlyLinkedReviewCount": 1,
-      "declaredOrLinkedReviewCount": 26,
+      "declaredOrLinkedReviewCount": 27,
       "unaccountedExplicitReviewCount": 0,
       "baselineReviewed": false,
       "scopeFrozen": false
@@ -5590,6 +5594,37 @@
       "publicationApproval": null,
       "sourceIds": [
         "lichel-2019-makati-public-rail-pasig-freshwater-eis"
+      ],
+      "missingSourceIds": [],
+      "explicitSuccessorReferences": []
+    },
+    {
+      "path": "data/research/philippines/national/reviews/ncr-marikina-2011-genbank-bold-metadata-crosswalk-20261119.json",
+      "sha256": "fb92ed2b82097c3001b5fa08536f885e216f2ea558be53ed0647bb05cb6350da",
+      "reviewId": "ncr-marikina-2011-genbank-bold-metadata-crosswalk-20261119",
+      "reviewedOn": "2026-11-19",
+      "phaseId": "L2",
+      "declaredRegionIds": [
+        "1300000000"
+      ],
+      "manualAssociation": null,
+      "nationalContextDisposition": null,
+      "directRegionIds": [
+        "1300000000"
+      ],
+      "indirectRegionIds": [
+        "0400000000"
+      ],
+      "relatedRegionIds": [
+        "0400000000",
+        "1300000000"
+      ],
+      "classification": "shared-across-regions",
+      "publicationApproval": null,
+      "sourceIds": [
+        "bold-marikina-bpmp001-036-processid-lookup-20261119",
+        "jumawan-et-al-2011-marikina-pterygoplichthys-dna-barcodes",
+        "ncbi-marikina-jf498719-jf498754-genbank-metadata-20261119"
       ],
       "missingSourceIds": [],
       "explicitSuccessorReferences": []
@@ -18691,6 +18726,32 @@
         "nonmatchingCandidates": []
       },
       {
+        "from": "data/research/philippines/national/reviews/ncr-marikina-2011-genbank-bold-metadata-crosswalk-20261119.json",
+        "field": "$.retrieval.bold.localSnapshot.path",
+        "referencedPath": "raw/ncr-marikina-2011-ncbi-accessions-20261119/bold-processid-query.json",
+        "availability": "available-unpinned",
+        "matchedFiles": [
+          {
+            "path": "data/research/philippines/raw/ncr-marikina-2011-ncbi-accessions-20261119/bold-processid-query.json",
+            "sha256": "3096dab5fe40f73510ae8a65cce28b9a1700fbebfcaac87d4e901627fbb87ee2"
+          }
+        ],
+        "nonmatchingCandidates": []
+      },
+      {
+        "from": "data/research/philippines/national/reviews/ncr-marikina-2011-genbank-bold-metadata-crosswalk-20261119.json",
+        "field": "$.retrieval.ncbi.localSnapshot.sanitizedMetadata",
+        "referencedPath": "raw/ncr-marikina-2011-ncbi-accessions-20261119/marikina-genbank-metadata.json",
+        "availability": "available-unpinned",
+        "matchedFiles": [
+          {
+            "path": "data/research/philippines/raw/ncr-marikina-2011-ncbi-accessions-20261119/marikina-genbank-metadata.json",
+            "sha256": "9f56438c90fd92af61504b6a43e1c39dbb6061ef1b9ebce3f13263eb9edac4ec"
+          }
+        ],
+        "nonmatchingCandidates": []
+      },
+      {
         "from": "data/research/philippines/national/reviews/ncr-marikina-river-fish-hosts-crosswalk-20261116.json",
         "field": "$.taxonomyCrosscheck.metadataSnapshot.path",
         "referencedPath": "raw/ncr-marikina-colxr-taxonomy-20261116/metadata-colxr.json",
@@ -24890,6 +24951,16 @@
         "path": "data/research/philippines/raw/ncr-manila-bay-national-museum-refresh-20261116/obis-occurrences.json",
         "sha256": "7c0fa27ec613225f79facf36bd735d4922d4c38044d41e9a9cc20be6ebd740f0",
         "referenceCount": 2
+      },
+      {
+        "path": "data/research/philippines/raw/ncr-marikina-2011-ncbi-accessions-20261119/bold-processid-query.json",
+        "sha256": "3096dab5fe40f73510ae8a65cce28b9a1700fbebfcaac87d4e901627fbb87ee2",
+        "referenceCount": 1
+      },
+      {
+        "path": "data/research/philippines/raw/ncr-marikina-2011-ncbi-accessions-20261119/marikina-genbank-metadata.json",
+        "sha256": "9f56438c90fd92af61504b6a43e1c39dbb6061ef1b9ebce3f13263eb9edac4ec",
+        "referenceCount": 1
       },
       {
         "path": "data/research/philippines/raw/ncr-marikina-colxr-taxonomy-20261116/channa-striata.json",

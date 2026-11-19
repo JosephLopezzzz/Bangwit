@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "ncr-marikina-2011-genbank-bold-metadata-crosswalk-20261119",
+  "reviewedOn": "2026-11-19",
+  "phaseId": "L2",
+  "regionId": "1300000000",
+  "regionName": "National Capital Region (NCR)",
+  "parentReviewId": "ncr-marikina-2011-pterygoplichthys-barcode-review-20261119",
+  "status": "genbank-records-retrieved;36-accessions-cross-linked-to-bold-process-ids;bold-query-returned-no-metadata;station-crosswalk-unresolved;species-identity-unresolved;research-only",
+  "question": "Do public GenBank feature metadata and BOLD specimen metadata independently reconcile the 36 Marikina accessions, BOLD process IDs, museum voucher labels, and five named stations?",
+  "sourceIds": [
+    "ncbi-marikina-jf498719-jf498754-genbank-metadata-20261119",
+    "bold-marikina-bpmp001-036-processid-lookup-20261119",
+    "jumawan-et-al-2011-marikina-pterygoplichthys-dna-barcodes"
+  ],
+  "retrieval": {
+    "ncbi": {
+      "query": "JF498719:JF498754[ACCN]",
+      "httpStatusSearch": 200,
+      "recordsReturned": 36,
+      "fieldsReviewed": [
+        "accession",
+        "organism",
+        "specimen_voucher",
+        "collection_date",
+        "lat_lon",
+        "identified_by",
+        "db_xref BOLD process ID",
+        "sequence length"
+      ],
+      "all36HadVoucherDateCoordinateIdentifierAndBoldId": true,
+      "uniqueAccessionCount": 36,
+      "uniqueVoucherCount": 36,
+      "uniqueBoldProcessIdCount": 36,
+      "uniqueCoordinateClusterCount": 5,
+      "distinctCollectionDateCount": 3,
+      "sequenceLengthBp": 655,
+      "genbankOrganismAnnotations": {
+        "Pterygoplichthys pardalis": 30,
+        "Pterygoplichthys disjunctivus": 6
+      },
+      "localSnapshot": {
+        "sanitizedMetadata": "raw/ncr-marikina-2011-ncbi-accessions-20261119/marikina-genbank-metadata.json",
+        "sanitizedMetadataSha256": "9f56438c90fd92af61504b6a43e1c39dbb6061ef1b9ebce3f13263eb9edac4ec",
+        "sequenceFlatFile": "raw/ncr-marikina-2011-ncbi-accessions-20261119/marikina-genbank-36.gb",
+        "sequenceFlatFileGitIgnored": true,
+        "sequenceStringsIncludedInTrackedReview": false
+      }
+    },
+    "bold": {
+      "apiDocumentation": "https://portal.boldsystems.org/api/docs",
+      "queryScopes": "ids:processid; terms submitted in six batches of six process IDs",
+      "batchCount": 6,
+      "idsSubmitted": 36,
+      "preprocessorAcceptedIds": 36,
+      "summaryEndpoint": "/api/summary with specimens,species,coord,identified_by,collection_date_start",
+      "batchHttpStatuses": "all HTTP 200",
+      "batchResponses": "All six summary responses were empty JSON objects {}; no specimen metadata was returned for the submitted IDs.",
+      "legacyV3Probe": {
+        "endpoint": "https://v3.boldsystems.org/index.php/API_Public/specimen",
+        "idsProbed": [
+          "BPMP001-11",
+          "BPMP002-11"
+        ],
+        "httpStatus": 200,
+        "response": "HTML portal content rather than the documented TSV; treated as an unusable response, not as a zero-record TSV."
+      },
+      "localSnapshot": {
+        "path": "raw/ncr-marikina-2011-ncbi-accessions-20261119/bold-processid-query.json",
+        "sha256": "3096dab5fe40f73510ae8a65cce28b9a1700fbebfcaac87d4e901627fbb87ee2",
+        "containsSequenceStrings": false,
+        "gitIgnored": true
+      }
+    }
+  },
+  "crosswalkFindings": {
+    "accessionToBoldId": "NCBI GenBank db_xref fields provide a one-to-one linkage for all 36 accession records to process IDs BPMP001-11 through BPMP036-11.",
+    "identifierDiscrepancy": "The 2011 article review transcribed the paper-reported range as BMP001-11 through BMP036-11; GenBank db_xref values include an additional P (BPMP...). The BOLD public metadata query did not resolve this discrepancy independently.",
+    "voucherRelationship": "GenBank reports 36 unique specimen_voucher strings whose category prefixes follow Ppar0-Ppar4 and Pdis5. This is consistent with the paper’s P0-P5 morphology-category scheme, but the museum catalogue and physical specimens were not inspected, so this is not a verified museum-catalog crosswalk.",
+    "stationRelationship": "Five distinct coordinate clusters and three collection dates are present in GenBank metadata. Neither the GenBank records nor the accessible BOLD query results map each accession to one of the five station names printed in the article. No station name or river reach is assigned to any coordinate cluster.",
+    "taxonomy": "The 30/6 GenBank organism annotations preserve submitted database labels; they do not independently resolve the article’s COI and morphology conflict, possible introgression, or single-variable-species alternative."
+  },
+  "evidenceDecision": {
+    "decision": "Accept the NCBI accession-to-BOLD-ID relationship as a metadata cross-reference only. Keep all 36 records as historical, research-only Pterygoplichthys evidence with unresolved station mapping and species identity.",
+    "accessionToBoldIdLinksRecorded": 36,
+    "newSpeciesAssertions": 0,
+    "newGenusLevelOccurrenceRows": 0,
+    "exactCoordinatesAddedToTrackedFiles": 0,
+    "stationAssignmentsAdded": 0,
+    "geometryAdded": false,
+    "publicProjection": false,
+    "publicationApproval": false,
+    "reason": "GenBank supplied a complete one-to-one accession/process-ID cross-reference and specimen metadata, but BOLD returned no record metadata for the bounded query and the article’s reported process-ID prefix differs from the GenBank cross-reference. No source links individual accessions to the article’s station names or verifies the museum catalog entries. The parent paper explicitly leaves the species boundary unresolved."
+  },
+  "nonClaims": [
+    "The empty BOLD API summaries establish only that this dated, bounded query returned no metadata; they do not establish global absence from BOLD or explain why records were not returned.",
+    "Five GenBank coordinate clusters are not treated as the five article stations without a source-matched station crosswalk.",
+    "GenBank organism names and voucher-code prefixes are not treated as independent taxonomic confirmation or museum-catalog validation.",
+    "No current occurrence, abundance, fishability, access, legal harvest, safety, diet, native status, or invasive status is inferred."
+  ],
+  "nextActions": [
+    "Seek a lawful public catalog response from the UP Diliman Zoological Museum that maps the GenBank voucher strings to accession records and, if available, original field stations.",
+    "Resolve the article BMP versus GenBank BPMP process-ID prefix discrepancy from the published article source table or BOLD project record; do not repair the string by assumption.",
+    "If an original station map or field table becomes available, independently test whether the five rounded coordinate clusters correspond to the printed station names before publishing any locality relationship.",
+    "Keep the 36 records and both morphology-based species labels out of public species rows until specimen identity and station relationships are independently reviewed."
+  ]
+}

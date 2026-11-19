@@ -3,7 +3,7 @@
   "checkedOn": "2026-11-19",
   "status": "research-only-source-registry",
   "scope": "National acquisition references, freshwater spatial-source leads, MIMAROPA/CALABARZON/Central Luzon identity and inland-water source reviews, and Mindanao regional freshwater survey reviews. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 985,
+  "sourceCount": 987,
   "sources": [
     {
       "id": "aoyama-et-al-2015-cagayan-glass-eel-recruitment",
@@ -33877,6 +33877,76 @@
         "The separate Agusan Marsh comparison samples are outside this NCR source review."
       ],
       "researchStatus": "ncr;marikina-river;pterygoplichthys;2011-coi-barcoding;voucher-and-accession-lead;species-identity-unresolved;research-only"
+    },
+    {
+      "id": "ncbi-marikina-jf498719-jf498754-genbank-metadata-20261119",
+      "title": "NCBI GenBank accessions JF498719.1-JF498754.1 for Marikina Pterygoplichthys barcode specimens",
+      "provider": "National Center for Biotechnology Information (NCBI), GenBank",
+      "url": "https://www.ncbi.nlm.nih.gov/nuccore/?term=JF498719%3AJF498754%5BACCN%5D",
+      "additionalUrls": [
+        "https://www.ncbi.nlm.nih.gov/books/NBK25499/"
+      ],
+      "role": "Public GenBank feature metadata for 36 655-bp Pterygoplichthys records. Each entry contains a specimen_voucher, collection date, coordinate string, identifier, and BOLD process-ID db_xref. Historical provenance only; station names and current occurrence are not inferred.",
+      "checkedOn": "2026-11-19",
+      "citation": "National Center for Biotechnology Information. GenBank records JF498719.1-JF498754.1; retrieved through NCBI E-utilities on 2026-11-19.",
+      "access": {
+        "status": "36-accession-records-retrieved-http-200;voucher-and-bold-cross-references-reviewed;station-crosswalk-unresolved;research-only",
+        "reviewFiles": [
+          "national/reviews/ncr-marikina-2011-genbank-bold-metadata-crosswalk-20261119.json"
+        ],
+        "reviewedSections": "GenBank source features: accession, organism, specimen_voucher, collection_date, lat_lon, identified_by, db_xref and sequence length.",
+        "rawPath": "raw/ncr-marikina-2011-ncbi-accessions-20261119/marikina-genbank-metadata.json (sanitized metadata); GenBank flat file is also retained locally but ignored by Git."
+      },
+      "reuse": {
+        "metadata": "No item-level reuse license is stated by the direct-submission records; public access is not treated as blanket permission to republish the sequence, coordinates, or specimen data.",
+        "raw": "The GenBank flat file with nucleotide sequences is Git-ignored. The tracked review contains no sequence strings or exact coordinates.",
+        "content": "Only aggregate metadata counts and provenance limits are summarized. No species row, station assignment, geometry, image, or sequence is redistributed."
+      },
+      "publicationApproval": false,
+      "license": "No item-specific reuse terms verified",
+      "licenseUrl": null,
+      "caveats": [
+        "The GenBank organism field preserves submitted taxon annotations and does not resolve the parent article’s species-boundary uncertainty.",
+        "The BOLD ID prefix in GenBank db_xref differs from the prefix transcribed in the article review; BOLD did not return specimen metadata in the bounded query.",
+        "Five coordinate clusters are not assigned to the five named stations without an independent field-station crosswalk.",
+        "The museum voucher strings have not been verified against the physical catalog."
+      ],
+      "researchStatus": "ncr;marikina-river;pterygoplichthys;36-genbank-accessions;voucher-and-process-id-crosswalk;station-unresolved;species-unresolved;research-only"
+    },
+    {
+      "id": "bold-marikina-bpmp001-036-processid-lookup-20261119",
+      "title": "BOLD Data Portal bounded metadata lookup for Marikina process IDs BPMP001-11 through BPMP036-11",
+      "provider": "Barcode of Life Data Systems (BOLD), BOLD Data Portal API",
+      "url": "https://portal.boldsystems.org/api/docs",
+      "additionalUrls": [
+        "https://www.boldsystems.org/data/api/",
+        "https://v3.boldsystems.org/index.php/resources/api?type=webservices"
+      ],
+      "role": "Bounded lookup of 36 GenBank-linked BOLD process IDs using the current portal API. All IDs were accepted by the query preprocessor, but all six metadata-summary responses were empty. This records a failed/unavailable cross-check only, not global absence from BOLD.",
+      "checkedOn": "2026-11-19",
+      "citation": "Barcode of Life Data Systems. BOLD Data Portal API process-ID metadata lookup; retrieved 2026-11-19.",
+      "access": {
+        "status": "36-processids-submitted;preprocessor-accepted;summary-returned-no-metadata;legacy-v3-returned-html-not-tsv;bounded-query-only;research-only",
+        "reviewFiles": [
+          "national/reviews/ncr-marikina-2011-genbank-bold-metadata-crosswalk-20261119.json"
+        ],
+        "reviewedSections": "Current portal API query scopes, query preprocessor and summary endpoint; six process-ID batches; legacy specimen endpoint response type.",
+        "rawPath": "raw/ncr-marikina-2011-ncbi-accessions-20261119/bold-processid-query.json (summary-query responses only; no specimen records or sequences returned)."
+      },
+      "reuse": {
+        "metadata": "No BOLD specimen metadata or item-level reuse terms were returned for this query.",
+        "raw": "Only query IDs, request scope, status and empty aggregate responses are retained in Git-ignored storage; no sequences are present.",
+        "content": "No BOLD specimen data, image, sequence, or species claim is redistributed."
+      },
+      "publicationApproval": false,
+      "license": "No item-specific reuse terms verified",
+      "licenseUrl": null,
+      "caveats": [
+        "The empty results are bounded to these 36 queried IDs and the retrieval date; they do not prove the records are absent from all BOLD services.",
+        "The legacy endpoint returned HTML rather than its documented TSV, so it could not provide an independent record-level result.",
+        "Do not infer that the article’s BMP ID strings and GenBank’s BPMP db_xref strings are interchangeable solely from the shared numbering."
+      ],
+      "researchStatus": "ncr;marikina-river;bold;BPMP001-11-to-BPMP036-11;metadata-query-empty;research-only"
     }
   ],
   "sourcePolicy": {
