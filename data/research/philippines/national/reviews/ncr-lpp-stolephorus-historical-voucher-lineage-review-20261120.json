@@ -1,0 +1,132 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "ncr-lpp-stolephorus-historical-voucher-lineage-review-20261120",
+  "reviewedOn": "2026-11-20",
+  "phaseId": "L2",
+  "regionId": "1300000000",
+  "regionName": "National Capital Region (NCR)",
+  "status": "historical-voucher-lineage-documented;2007-lagoon-label-unresolved;research-only",
+  "question": "Do historical Smithsonian anchovy type records or later taxonomic publications identify the Stolephorus label in Su et al. (2009)'s 2007 Las Piñas–Parañaque Lagoon sample?",
+  "sourceIds": [
+    "su-et-al-2009-manila-bay-lpp-lagoon-fish-sampling",
+    "calacademy-catalog-su-2009-lpp-fish-names-20261120",
+    "smithsonian-nmnh-stolephorus-usnm-138518-138534-records-20261120",
+    "hata-motomura-2018-stolephorus-insignus-description",
+    "hata-lavoue-motomura-2021-stolephorus-taxonomic-revision",
+    "balisco-liao-2025-philippines-fish-type-checklist"
+  ],
+  "inputs": [
+    "data/research/philippines/national/reviews/ncr-lpp-lagoon-su-et-al-2009-fish-sample-review-20261120.json",
+    "data/research/philippines/national/reviews/ncr-lpp-lagoon-su-et-al-2009-catalog-name-crosswalk-review-20261120.json"
+  ],
+  "method": {
+    "summary": "Compared the 2007 paper's unresolved Table 2 and prose strings with two official Smithsonian NMNH catalog records and a 2025 peer-reviewed checklist of Philippine fish type material. Used the 2018 and 2021 taxonomic papers only for nomenclatural context through their citation and accessible abstract metadata; the full texts of those two papers were not reviewed in this pass.",
+    "retrievedOn": "2026-11-20",
+    "authorityUse": "Smithsonian catalog fields and the checklist describe separate historical type material. They do not identify the fish sampled by Su et al. in 2007. The 2021 paper's abstract establishes that multiple Stolephorus taxa were reassessed from historically broad synonymies; this is nomenclatural context only.",
+    "accessLimitations": [
+      "The Smithsonian public Open Access API requires an API key. The collection-search results and published checklist were reviewed, but no machine-readable Smithsonian payload or local raw snapshot was retained.",
+      "The NMNH Fishes search endpoint served a JavaScript shell in this retrieval environment. The Smithsonian Collections Search Center records were consulted through its indexed official record pages.",
+      "The Hata and Motomura (2018) and Hata, Lavoué, and Motomura (2021) full texts were not reviewed; their DOI citations and, for the 2021 paper, the AGRIS abstract were used only to identify the taxonomic publications and their stated scope.",
+      "The 2025 checklist's section heading prints Stolephorus insiguns, while its entry text and the Smithsonian record use Stolephorus insignus. The source typo is retained here as a source-quality note, not copied into the taxon field."
+    ],
+    "limitations": [
+      "The 2009 paper reports no fish voucher or accession, specimen photograph, diagnostic description, or fish-specific coordinates for independent reidentification.",
+      "Neither USNM 138518 nor USNM 138534 is linked to Su et al.'s 2007 sample; both are distinct Albatross-era historical type records collected decades earlier.",
+      "USNM 138518 is cataloged from Cavite and San Roque Markets. The 2025 checklist says the Stolephorus insignus type material was purchased from fish markets, so this place string is not an exact fish capture point.",
+      "USNM 138534's Pucot River / Manila Bay / Mariveles place wording is a historical catalog locality, not a validated modern waterbody boundary or coordinate.",
+      "The 2018 and 2021 papers' taxonomic reassessments cannot be transferred to a specimen without a voucher or diagnostic comparison."
+    ]
+  },
+  "historicalVouchers": [
+    {
+      "catalogSource": "Smithsonian NMNH Collections Search Center, EDAN record edanmdm:nmnhvz_7601307",
+      "catalogUrl": "https://collections.si.edu/search/detail/edanmdm:nmnhvz_7601307",
+      "catalogRecord": "USNM 138518",
+      "accessionNumber": "065731",
+      "typeStatus": "Paratype",
+      "collectionDate": "1908-06-27",
+      "currentCatalogName": "Stolephorus insignus",
+      "otherPublishedNameInCatalog": "Stolephorus commersonnii",
+      "placeAsCataloged": "Cavite and San Roque Markets; Manila Bay, Cavite, Philippines, North Pacific Ocean",
+      "typeCitationAsCataloged": "Hata, H. and Motomura, H. 2018. Ichthyological Research 66(2): 284, Fig. 3; Tables 1, 2.",
+      "independentChecklistCrosscheck": "Balisco and Liao (2025), entry 96, lists USNM 138518 as five Stolephorus insignus paratypes from Cavite, Manila Bay, and says all type specimens were bought from fish markets.",
+      "assessment": "This is a separate 1908 market-associated paratype lot, not the 2007 lagoon sample. The catalog's market locality must not be mapped as a specimen capture point."
+    },
+    {
+      "catalogSource": "Smithsonian NMNH Collections Search Center, EDAN record edanmdm:nmnhvz_7601330",
+      "catalogUrl": "https://collections.si.edu/search/detail/edanmdm:nmnhvz_7601330",
+      "catalogRecord": "USNM 138534",
+      "accessionNumber": "065731",
+      "typeStatus": "Paratype",
+      "collectionDate": "1909-01-29",
+      "currentCatalogName": "Stolephorus mercurius",
+      "otherPublishedNameInCatalog": "Stolephorus commersonnii",
+      "placeAsCataloged": "Manila Bay; Pucot River (Near Mariveles), Mariveles, Bataan, Philippines, North Pacific Ocean",
+      "typeCitationAsCataloged": "Hata, H., Lavoué, S., and Motomura, H. 2021. Ichthyological Research 68(3): 327–372, p. 32, Fig. 21.",
+      "independentChecklistCrosscheck": "Balisco and Liao (2025), entry 97, lists USNM 138534 as a Stolephorus mercurius paratype from Pucot River, Manila Bay.",
+      "assessment": "This is a separate 1909 historical paratype record, not the 2007 lagoon sample. Preserve the Smithsonian place wording as source metadata; do not infer a precise point or boundary."
+    }
+  ],
+  "taxonomicContext": {
+    "sourceNameFormsInSu2009": [
+      {
+        "sourceLocation": "Table 2",
+        "nameAsPrinted": "Stolephorus comersonii"
+      },
+      {
+        "sourceLocation": "prose elsewhere in the paper",
+        "nameAsPrinted": "Stolephorus commersonii"
+      }
+    ],
+    "catalogAcceptedName": "Stolephorus commersonnii",
+    "historicalRecords": "Smithsonian records list Stolephorus commersonnii as an additional published name for USNM 138518, now cataloged as Stolephorus insignus, and USNM 138534, now cataloged as Stolephorus mercurius. The two records are historical taxonomic context and show why the 2007 spellings cannot safely be normalized by string similarity.",
+    "2021RevisionScope": "The accessible abstract states that Hata, Lavoué, and Motomura reassessed nominal species previously regarded as synonyms of Stolephorus commersonnii and Stolephorus indicus, validating several distinct species and describing Stolephorus mercurius among three new species.",
+    "decision": "Keep the 2007 Table 2 spelling comersonii, prose spelling commersonii, and Catalog spelling commersonnii distinct. The museum voucher records do not resolve the 2007 fish identity."
+  },
+  "summary": {
+    "historicalMuseumRecordsReviewed": 2,
+    "distinctHistoricalVoucherLots": 2,
+    "independentChecklistCrosschecks": 2,
+    "2007SampleVoucherLinksFound": 0,
+    "2007SampleSpeciesIdentitiesVerified": 0
+  },
+  "decision": {
+    "sourceStringsPreserved": true,
+    "speciesAssertionsAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "coordinatesPublished": 0,
+    "geometryAdded": false,
+    "photosAdded": 0,
+    "publicAppProjection": false,
+    "currentPresenceInferred": false,
+    "fishingRuleOrSafetyClaimsAdded": 0,
+    "publicationApproval": false
+  },
+  "nextActions": [
+    "Keep the 2007 Stolephorus label unresolved unless a voucher, specimen image, diagnostic notes, or author-held material can be linked directly to the sample.",
+    "Continue NCR evidence discovery across freshwater, brackish, marine, and wetland sources; do not count these historical type records as a current species inventory.",
+    "If machine-readable museum provenance is needed later, retrieve the two Smithsonian records through its documented Open Access API after obtaining an API key; do not treat API access as permission to reuse item media."
+  ],
+  "sources": [
+    {
+      "url": "https://collections.si.edu/search/detail/edanmdm:nmnhvz_7601307",
+      "supports": "Smithsonian NMNH catalog fields for historical paratype USNM 138518, including current name, alternate published name, date, type citation, and market locality string."
+    },
+    {
+      "url": "https://collections.si.edu/search/detail/edanmdm:nmnhvz_7601330",
+      "supports": "Smithsonian NMNH catalog fields for historical paratype USNM 138534, including Stolephorus mercurius, the alternate published name Stolephorus commersonnii, date, and Pucot River / Manila Bay place string."
+    },
+    {
+      "url": "https://zookeys.pensoft.net/article/145752/download/pdf/",
+      "supports": "Balisco and Liao (2025), entries 96–97, lists the two Smithsonian numbers under Stolephorus insignus and Stolephorus mercurius and records fish-market purchase context for S. insignus type specimens; article is CC BY 4.0."
+    },
+    {
+      "url": "https://doi.org/10.1007/s10228-020-00792-0",
+      "supports": "Hata, Lavoué, and Motomura (2021) taxonomic revision citation. Full text not reviewed in this batch; only bibliographic/abstract context was used."
+    },
+    {
+      "url": "https://www.si.edu/openaccess/devtools",
+      "supports": "Smithsonian Open Access API documentation and API key requirement."
+    }
+  ]
+}
