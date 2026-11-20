@@ -1,0 +1,2496 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "ncr-scssap-lppwp-tmtp-remaining-col-fish-names-20261120",
+  "reviewedOn": "2026-11-20",
+  "phaseId": "L2",
+  "regionId": "1300000000",
+  "regionName": "National Capital Region (NCR)",
+  "status": "catalog-search-screen-complete;manual-taxonomic-review-pending;specimen-identity-unverified;research-only",
+  "question": "How do the remaining 30 CoL XR accepted-name candidates in the SCSSAP LPPWP/TMTP binomial labels appear in direct Eschmeyer's Catalog of Fishes search results?",
+  "sourceIds": [
+    "scssap-ph-ecosystems-ch4-lppwp-tmtp-2026",
+    "calacademy-catalog-scssap-wetland-taxa-20261120"
+  ],
+  "inputs": [
+    "data/research/philippines/national/reviews/ncr-scssap-lppwp-tmtp-taxonomy-crosswalk-20261120.json",
+    "data/research/philippines/national/reviews/ncr-scssap-lppwp-tmtp-catalog-of-fishes-issues-20261120.json"
+  ],
+  "snapshotHashes": {
+    "parentColXrCrosswalk": "6b45e82a99a6aa9e731b6a531936dafd8bcf9986193288d48d5c27cb7909a787",
+    "targetedCatalogIssueReview": "58516bc09ad047004220452e31dace0ecc17c8c4cc56364a253841f2837001c4"
+  },
+  "method": {
+    "summary": "Submitted each remaining source-printed binomial separately through the Catalog of Fishes Species search form and preserved the raw HTML response locally. The parser records exact headings, exact current-status matches, and historical valid-name mentions whose record now has a different current status.",
+    "limitations": [
+      "A web-catalog search block is a name-status lead, not independent specimen identification or evidence that the species was present in either park.",
+      "This screen does not resolve the source's non-binomial, misspelled, higher-rank, or numbered sp. strings.",
+      "Multiple historical synonym records in a broad search do not imply multiple study specimens. Two source names have a Catalog status discrepancy and remain unresolved against the source’s organism identity.",
+      "The 2020 Ancog et al. source, vouchers, field methods, sampling dates, site assignment, and item-specific reuse terms remain unresolved."
+    ]
+  },
+  "matchCounts": {
+    "queried": 30,
+    "exactCatalogRecords": 7,
+    "exactValidNameStatus": 28,
+    "currentStatusAlternativeQueries": 2,
+    "noExactValidNameStatus": 2,
+    "queriesWithoutCapturedStatusEvidence": 0
+  },
+  "results": [
+    {
+      "queriedName": "Ambassis gymnocephalus",
+      "query": {
+        "endpoint": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatmain.asp",
+        "method": "POST",
+        "parameters": {
+          "tbl": "Species",
+          "contains": "Ambassis gymnocephalus",
+          "Submit": "Search"
+        }
+      },
+      "exactOrAcceptedMatches": [],
+      "currentStatusAlternatives": [
+        {
+          "spid": "15815",
+          "originalCombination": "Lutjanus gymnocephalus",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Ambassis ambassis (Lacepède 1802). Ambassidae.",
+          "familyAndSubfamily": "Ambassidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": false
+        }
+      ],
+      "httpStatus": 200,
+      "responseBytes": 27248,
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-fish-catalog-remaining-20261120/364b316b244d2b48.html",
+        "sha256": "a8ac517bd04e8b4adce3717dd18d34581781ed08646ee79e491be54affa1cbcc"
+      }
+    },
+    {
+      "queriedName": "Ambassis marianus",
+      "query": {
+        "endpoint": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatmain.asp",
+        "method": "POST",
+        "parameters": {
+          "tbl": "Species",
+          "contains": "Ambassis marianus",
+          "Submit": "Search"
+        }
+      },
+      "exactOrAcceptedMatches": [
+        {
+          "spid": "34360",
+          "originalCombination": "Pseudambassis convexus",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Ambassis marianus Günther 1880. Ambassidae.",
+          "familyAndSubfamily": "Ambassidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "34407",
+          "originalCombination": "Ambassis marianus",
+          "isExactHeading": true,
+          "currentStatus": "Valid as Ambassis marianus Günther 1880. Ambassidae.",
+          "familyAndSubfamily": "Ambassidae.",
+          "supportsExactValidName": true,
+          "supportsExactSynonymTarget": false
+        },
+        {
+          "spid": "21873",
+          "originalCombination": "Pseudoambassis ramsayi",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Ambassis marianus Günther 1880. Ambassidae.",
+          "familyAndSubfamily": "Ambassidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        }
+      ],
+      "currentStatusAlternatives": [],
+      "httpStatus": 200,
+      "responseBytes": 11730,
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-fish-catalog-remaining-20261120/f1b9a81fd4153f7a.html",
+        "sha256": "dbb19c6d8fb24f7ba98ce435c79c1176e1169da5c095e7f3d022aeca7a84a769"
+      }
+    },
+    {
+      "queriedName": "Anguilla marmorata",
+      "query": {
+        "endpoint": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatmain.asp",
+        "method": "POST",
+        "parameters": {
+          "tbl": "Species",
+          "contains": "Anguilla marmorata",
+          "Submit": "Search"
+        }
+      },
+      "exactOrAcceptedMatches": [
+        {
+          "spid": "47297",
+          "originalCombination": "Anguilla fidjiensis",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Anguilla marmorata Quoy & Gaimard 1824. Anguillidae.",
+          "familyAndSubfamily": "Anguillidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "59936",
+          "originalCombination": "Anguilla hildebrandti",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Anguilla marmorata Quoy & Gaimard 1824. Anguillidae.",
+          "familyAndSubfamily": "Anguillidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "58080",
+          "originalCombination": "Anguilla johannae",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Anguilla marmorata Quoy & Gaimard 1824. Anguillidae.",
+          "familyAndSubfamily": "Anguillidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "48436",
+          "originalCombination": "Anguilla labrosa",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Anguilla marmorata Quoy & Gaimard 1824. Anguillidae.",
+          "familyAndSubfamily": "Anguillidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "49092",
+          "originalCombination": "Muraena manillensis",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Anguilla marmorata Quoy & Gaimard 1824. Anguillidae.",
+          "familyAndSubfamily": "Anguillidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "59338",
+          "originalCombination": "Anguilla marmorata",
+          "isExactHeading": true,
+          "currentStatus": "Valid as Anguilla marmorata Quoy & Gaimard 1824. Anguillidae.",
+          "familyAndSubfamily": "Anguillidae.",
+          "supportsExactValidName": true,
+          "supportsExactSynonymTarget": false
+        },
+        {
+          "spid": "44116",
+          "originalCombination": "Anguilla mauritiana",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Anguilla marmorata Quoy & Gaimard 1824. Anguillidae.",
+          "familyAndSubfamily": "Anguillidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        }
+      ],
+      "currentStatusAlternatives": [],
+      "httpStatus": 200,
+      "responseBytes": 21018,
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-fish-catalog-remaining-20261120/8492bdf028f2d5f6.html",
+        "sha256": "a89c87e4ca08177e2888c3e9ff3c534146b09cc75314c8f4903ed10de1aeb91e"
+      }
+    },
+    {
+      "queriedName": "Chanos chanos",
+      "query": {
+        "endpoint": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatmain.asp",
+        "method": "POST",
+        "parameters": {
+          "tbl": "Species",
+          "contains": "Chanos chanos",
+          "Submit": "Search"
+        }
+      },
+      "exactOrAcceptedMatches": [
+        {
+          "spid": "44925",
+          "originalCombination": "Chanos aldrovandi",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Chanos chanos (Fabricius 1775). Chanidae.",
+          "familyAndSubfamily": "Chanidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "1321",
+          "originalCombination": "Chanos arabicus",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Chanos chanos (Fabricius 1775). Chanidae.",
+          "familyAndSubfamily": "Chanidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "63978",
+          "originalCombination": "Butirinus argenteus",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Chanos chanos (Fabricius 1775). Chanidae.",
+          "familyAndSubfamily": "Chanidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "27660",
+          "originalCombination": "Mugil chanos",
+          "isExactHeading": false,
+          "currentStatus": "Valid as Chanos chanos (Fabricius 1775). Chanidae.",
+          "familyAndSubfamily": "Chanidae.",
+          "supportsExactValidName": true,
+          "supportsExactSynonymTarget": false
+        },
+        {
+          "spid": "1290",
+          "originalCombination": "Chanos chloropterus",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Chanos chanos (Fabricius 1775). Chanidae.",
+          "familyAndSubfamily": "Chanidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "1293",
+          "originalCombination": "Chanos cyprinella",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Chanos chanos (Fabricius 1775). Chanidae.",
+          "familyAndSubfamily": "Chanidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "63559",
+          "originalCombination": "Lutodira (Chanos) elongata",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Chanos chanos (Fabricius 1775). Chanidae.",
+          "familyAndSubfamily": "Chanidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "27676",
+          "originalCombination": "Chanos gardineri",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Chanos chanos (Fabricius 1775). Chanidae.",
+          "familyAndSubfamily": "Chanidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "1320",
+          "originalCombination": "Lutodeira indica",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Chanos chanos (Fabricius 1775). Chanidae.",
+          "familyAndSubfamily": "Chanidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "1292",
+          "originalCombination": "Chanos lubina",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Chanos chanos (Fabricius 1775). Chanidae.",
+          "familyAndSubfamily": "Chanidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "27675",
+          "originalCombination": "Butirinus maderaspatensis",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Chanos chanos (Fabricius 1775). Chanidae.",
+          "familyAndSubfamily": "Chanidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "1289",
+          "originalCombination": "Chanos mento",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Chanos chanos (Fabricius 1775). Chanidae.",
+          "familyAndSubfamily": "Chanidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "1294",
+          "originalCombination": "Lutodeira (Chanos) mossambica",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Chanos chanos (Fabricius 1775). Chanidae.",
+          "familyAndSubfamily": "Chanidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "1291",
+          "originalCombination": "Chanos nuchalis",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Chanos chanos (Fabricius 1775). Chanidae.",
+          "familyAndSubfamily": "Chanidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "27672",
+          "originalCombination": "Chanos orientalis",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Chanos chanos (Fabricius 1775). Chanidae.",
+          "familyAndSubfamily": "Chanidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "27666",
+          "originalCombination": "Cyprinus pala",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Chanos chanos (Fabricius 1775). Chanidae.",
+          "familyAndSubfamily": "Chanidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "1288",
+          "originalCombination": "Mugil salmoneus",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Chanos chanos (Fabricius 1775). Chanidae.",
+          "familyAndSubfamily": "Chanidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "27664",
+          "originalCombination": "Cyprinus tolo",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Chanos chanos (Fabricius 1775). Chanidae.",
+          "familyAndSubfamily": "Chanidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "27667",
+          "originalCombination": "Leuciscus zeylonicus",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Chanos chanos (Fabricius 1775). Chanidae.",
+          "familyAndSubfamily": "Chanidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        }
+      ],
+      "currentStatusAlternatives": [],
+      "httpStatus": 200,
+      "responseBytes": 38835,
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-fish-catalog-remaining-20261120/4fa944e22c3ce72b.html",
+        "sha256": "301b48c46877f0b81aac9211a463cf69313ec8915407c066b10962ed8dfe01c9"
+      }
+    },
+    {
+      "queriedName": "Crenimugil seheli",
+      "query": {
+        "endpoint": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatmain.asp",
+        "method": "POST",
+        "parameters": {
+          "tbl": "Species",
+          "contains": "Crenimugil seheli",
+          "Submit": "Search"
+        }
+      },
+      "exactOrAcceptedMatches": [],
+      "currentStatusAlternatives": [
+        {
+          "spid": "16936",
+          "originalCombination": "Mugil crenilabis seheli",
+          "isExactHeading": false,
+          "currentStatus": "Valid as Moolgarda seheli (Fabricius 1775). Mugilidae.",
+          "familyAndSubfamily": "Mugilidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": false
+        }
+      ],
+      "httpStatus": 200,
+      "responseBytes": 31502,
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-fish-catalog-remaining-20261120/8c813076a2c89648.html",
+        "sha256": "c32179d6f63d34149ef2cf4f8573c93906d51b7aefef9eec277316b459a42c19"
+      }
+    },
+    {
+      "queriedName": "Eleutheronema tetradactylum",
+      "query": {
+        "endpoint": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatmain.asp",
+        "method": "POST",
+        "parameters": {
+          "tbl": "Species",
+          "contains": "Eleutheronema tetradactylum",
+          "Submit": "Search"
+        }
+      },
+      "exactOrAcceptedMatches": [
+        {
+          "spid": "34081",
+          "originalCombination": "Polynemus coecus",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Eleutheronema tetradactylum (Shaw 1804). Polynemidae.",
+          "familyAndSubfamily": "Polynemidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "34078",
+          "originalCombination": "Polynemus teria",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Eleutheronema tetradactylum (Shaw 1804). Polynemidae.",
+          "familyAndSubfamily": "Polynemidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "20395",
+          "originalCombination": "Polynemus tetradactylus",
+          "isExactHeading": false,
+          "currentStatus": "Valid as Eleutheronema tetradactylum (Shaw 1804). Polynemidae.",
+          "familyAndSubfamily": "Polynemidae.",
+          "supportsExactValidName": true,
+          "supportsExactSynonymTarget": false
+        }
+      ],
+      "currentStatusAlternatives": [],
+      "httpStatus": 200,
+      "responseBytes": 15872,
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-fish-catalog-remaining-20261120/e95bf862e68b0f78.html",
+        "sha256": "220b7319ed20c3d58f4cd816c7b0e7cbe7ff90d90e811fa65795832f1ca8304d"
+      }
+    },
+    {
+      "queriedName": "Ellochelon vaigiensis",
+      "query": {
+        "endpoint": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatmain.asp",
+        "method": "POST",
+        "parameters": {
+          "tbl": "Species",
+          "contains": "Ellochelon vaigiensis",
+          "Submit": "Search"
+        }
+      },
+      "exactOrAcceptedMatches": [
+        {
+          "spid": "33623",
+          "originalCombination": "Mugil macrolepidotus",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Ellochelon vaigiensis (Quoy & Gaimard 1825). Mugilidae.",
+          "familyAndSubfamily": "Mugilidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "33626",
+          "originalCombination": "Mugil melanochir",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Ellochelon vaigiensis (Quoy & Gaimard 1825). Mugilidae.",
+          "familyAndSubfamily": "Mugilidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "33629",
+          "originalCombination": "Mugil rossii",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Ellochelon vaigiensis (Quoy & Gaimard 1825). Mugilidae.",
+          "familyAndSubfamily": "Mugilidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "33631",
+          "originalCombination": "Mugil tegobuan",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Ellochelon vaigiensis (Quoy & Gaimard 1825). Mugilidae.",
+          "familyAndSubfamily": "Mugilidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "21499",
+          "originalCombination": "Mugil vaigiensis",
+          "isExactHeading": false,
+          "currentStatus": "Valid as Ellochelon vaigiensis (Quoy & Gaimard 1825). Mugilidae.",
+          "familyAndSubfamily": "Mugilidae.",
+          "supportsExactValidName": true,
+          "supportsExactSynonymTarget": false
+        }
+      ],
+      "currentStatusAlternatives": [],
+      "httpStatus": 200,
+      "responseBytes": 23283,
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-fish-catalog-remaining-20261120/8f7350de05e9bee4.html",
+        "sha256": "ff7bfd4924ae5793626efdd47ec15beef12f7bb8e9aad00e040fa3c3459f2e4c"
+      }
+    },
+    {
+      "queriedName": "Elops hawaiensis",
+      "query": {
+        "endpoint": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatmain.asp",
+        "method": "POST",
+        "parameters": {
+          "tbl": "Species",
+          "contains": "Elops hawaiensis",
+          "Submit": "Search"
+        }
+      },
+      "exactOrAcceptedMatches": [
+        {
+          "spid": "57825",
+          "originalCombination": "Elops australis",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Elops hawaiensis Regan 1909. Elopidae.",
+          "familyAndSubfamily": "Elopidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "58306",
+          "originalCombination": "Elops hawaiensis",
+          "isExactHeading": true,
+          "currentStatus": "Valid as Elops hawaiensis Regan 1909. Elopidae.",
+          "familyAndSubfamily": "Elopidae.",
+          "supportsExactValidName": true,
+          "supportsExactSynonymTarget": false
+        }
+      ],
+      "currentStatusAlternatives": [],
+      "httpStatus": 200,
+      "responseBytes": 17388,
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-fish-catalog-remaining-20261120/3d4895760bdfc934.html",
+        "sha256": "1c2568fe60f2adf18dcc82ebfa3cdef520c1e5bca4889fa30f55e5b9822b5f52"
+      }
+    },
+    {
+      "queriedName": "Eubleekeria splendens",
+      "query": {
+        "endpoint": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatmain.asp",
+        "method": "POST",
+        "parameters": {
+          "tbl": "Species",
+          "contains": "Eubleekeria splendens",
+          "Submit": "Search"
+        }
+      },
+      "exactOrAcceptedMatches": [
+        {
+          "spid": "45344",
+          "originalCombination": "Equula argentea",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Eubleekeria splendens (Cuvier 1829). Leiognathidae: Gazzinae.",
+          "familyAndSubfamily": "Leiognathidae: Gazzinae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "35816",
+          "originalCombination": "Leiognathus devisi",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Eubleekeria splendens (Cuvier 1829). Leiognathidae: Gazzinae.",
+          "familyAndSubfamily": "Leiognathidae: Gazzinae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "35871",
+          "originalCombination": "Equula gomorah",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Eubleekeria splendens (Cuvier 1829). Leiognathidae: Gazzinae.",
+          "familyAndSubfamily": "Leiognathidae: Gazzinae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "35872",
+          "originalCombination": "Equula splendens novemaculeata",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Eubleekeria splendens (Cuvier 1829). Leiognathidae: Gazzinae.",
+          "familyAndSubfamily": "Leiognathidae: Gazzinae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "35873",
+          "originalCombination": "Equula ovalis",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Eubleekeria splendens (Cuvier 1829). Leiognathidae: Gazzinae.",
+          "familyAndSubfamily": "Leiognathidae: Gazzinae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "35869",
+          "originalCombination": "Leiognathus philippinus",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Eubleekeria splendens (Cuvier 1829). Leiognathidae: Gazzinae.",
+          "familyAndSubfamily": "Leiognathidae: Gazzinae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "35874",
+          "originalCombination": "Equula simplex",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Eubleekeria splendens (Cuvier 1829). Leiognathidae: Gazzinae.",
+          "familyAndSubfamily": "Leiognathidae: Gazzinae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "35798",
+          "originalCombination": "Leiognathus spilotus",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Eubleekeria splendens (Cuvier 1829). Leiognathidae: Gazzinae.",
+          "familyAndSubfamily": "Leiognathidae: Gazzinae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "21163",
+          "originalCombination": "Equula splendens",
+          "isExactHeading": false,
+          "currentStatus": "Valid as Eubleekeria splendens (Cuvier 1829). Leiognathidae: Gazzinae.",
+          "familyAndSubfamily": "Leiognathidae: Gazzinae.",
+          "supportsExactValidName": true,
+          "supportsExactSynonymTarget": false
+        }
+      ],
+      "currentStatusAlternatives": [],
+      "httpStatus": 200,
+      "responseBytes": 25059,
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-fish-catalog-remaining-20261120/9a96902b99f524ac.html",
+        "sha256": "d465082b577b3bdcfba17e0ac744d6a9557d40ff308b81327a6c0d796847afd7"
+      }
+    },
+    {
+      "queriedName": "Glossogobius aureus",
+      "query": {
+        "endpoint": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatmain.asp",
+        "method": "POST",
+        "parameters": {
+          "tbl": "Species",
+          "contains": "Glossogobius aureus",
+          "Submit": "Search"
+        }
+      },
+      "exactOrAcceptedMatches": [
+        {
+          "spid": "18730",
+          "originalCombination": "Glossogobius aureus",
+          "isExactHeading": true,
+          "currentStatus": "Valid as Glossogobius aureus Akihito & Meguro 1975. Gobiidae: Gobiinae.",
+          "familyAndSubfamily": "Gobiidae: Gobiinae.",
+          "supportsExactValidName": true,
+          "supportsExactSynonymTarget": false
+        }
+      ],
+      "currentStatusAlternatives": [],
+      "httpStatus": 200,
+      "responseBytes": 13134,
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-fish-catalog-remaining-20261120/4cf7b8f329ca20ec.html",
+        "sha256": "9b1c501d6bf689afd4a975d73a8daf1334a807c640b5b9e4da025ae3e4989b9d"
+      }
+    },
+    {
+      "queriedName": "Johnius belangerii",
+      "query": {
+        "endpoint": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatmain.asp",
+        "method": "POST",
+        "parameters": {
+          "tbl": "Species",
+          "contains": "Johnius belangerii",
+          "Submit": "Search"
+        }
+      },
+      "exactOrAcceptedMatches": [
+        {
+          "spid": "36595",
+          "originalCombination": "Corvina belengerii",
+          "isExactHeading": false,
+          "currentStatus": "Valid as Johnius belangerii (Cuvier 1830). Sciaenidae.",
+          "familyAndSubfamily": "Sciaenidae.",
+          "supportsExactValidName": true,
+          "supportsExactSynonymTarget": false
+        },
+        {
+          "spid": "24547",
+          "originalCombination": "Johnius fasciatus",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Johnius belangerii (Cuvier 1830). Sciaenidae.",
+          "familyAndSubfamily": "Sciaenidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "36596",
+          "originalCombination": "Corvina kuhlii",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Johnius belangerii (Cuvier 1830). Sciaenidae.",
+          "familyAndSubfamily": "Sciaenidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "36597",
+          "originalCombination": "Corvina lobata",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Johnius belangerii (Cuvier 1830). Sciaenidae.",
+          "familyAndSubfamily": "Sciaenidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "36809",
+          "originalCombination": "Sciaena (Corvina) nasus",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Johnius belangerii (Cuvier 1830). Sciaenidae.",
+          "familyAndSubfamily": "Sciaenidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        }
+      ],
+      "currentStatusAlternatives": [],
+      "httpStatus": 200,
+      "responseBytes": 25242,
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-fish-catalog-remaining-20261120/c2edc0adb648aef9.html",
+        "sha256": "48345a15b5548bcfd902bbe170f933e85d79e5b5d9ddd0b7e00174918bfc86e5"
+      }
+    },
+    {
+      "queriedName": "Leiognathus equula",
+      "query": {
+        "endpoint": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatmain.asp",
+        "method": "POST",
+        "parameters": {
+          "tbl": "Species",
+          "contains": "Leiognathus equula",
+          "Submit": "Search"
+        }
+      },
+      "exactOrAcceptedMatches": [
+        {
+          "spid": "19958",
+          "originalCombination": "Leiognathus argenteus",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Leiognathus equula (Forsskål 1775). Leiognathidae: Leiognathinae.",
+          "familyAndSubfamily": "Leiognathidae: Leiognathinae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "35809",
+          "originalCombination": "Equula caballa",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Leiognathus equula (Forsskål 1775). Leiognathidae: Leiognathinae.",
+          "familyAndSubfamily": "Leiognathidae: Leiognathinae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "35752",
+          "originalCombination": "Equula coma",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Leiognathus equula (Forsskål 1775). Leiognathidae: Leiognathinae.",
+          "familyAndSubfamily": "Leiognathidae: Leiognathinae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "35807",
+          "originalCombination": "Scomber edentulus",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Leiognathus equula (Forsskål 1775). Leiognathidae: Leiognathinae.",
+          "familyAndSubfamily": "Leiognathidae: Leiognathinae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "47082",
+          "originalCombination": "Equula ensifera",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Leiognathus equula (Forsskål 1775). Leiognathidae: Leiognathinae.",
+          "familyAndSubfamily": "Leiognathidae: Leiognathinae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "19740",
+          "originalCombination": "Scomber equula",
+          "isExactHeading": false,
+          "currentStatus": "Valid as Leiognathus equula (Forsskål 1775). Leiognathidae: Leiognathinae.",
+          "familyAndSubfamily": "Leiognathidae: Leiognathinae.",
+          "supportsExactValidName": true,
+          "supportsExactSynonymTarget": false
+        },
+        {
+          "spid": "35877",
+          "originalCombination": "Leiognathus obscura",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Leiognathus equula (Forsskål 1775). Leiognathidae: Leiognathinae.",
+          "familyAndSubfamily": "Leiognathidae: Leiognathinae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "51904",
+          "originalCombination": "Equula totta",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Leiognathus equula (Forsskål 1775). Leiognathidae: Leiognathinae.",
+          "familyAndSubfamily": "Leiognathidae: Leiognathinae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        }
+      ],
+      "currentStatusAlternatives": [],
+      "httpStatus": 200,
+      "responseBytes": 98129,
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-fish-catalog-remaining-20261120/33af867e9ef4d1e8.html",
+        "sha256": "511fb4c3f8e529dabcab6396c9904f2f0f11a2172a7e9bfffdbf00d5c7a6422f"
+      }
+    },
+    {
+      "queriedName": "Megalops cyprinoides",
+      "query": {
+        "endpoint": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatmain.asp",
+        "method": "POST",
+        "parameters": {
+          "tbl": "Species",
+          "contains": "Megalops cyprinoides",
+          "Submit": "Search"
+        }
+      },
+      "exactOrAcceptedMatches": [
+        {
+          "spid": "58836",
+          "originalCombination": "Cyprinodon cundinga",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Megalops cyprinoides (Broussonet 1782). Megalopidae.",
+          "familyAndSubfamily": "Megalopidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "58837",
+          "originalCombination": "Megalops curtifilis",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Megalops cyprinoides (Broussonet 1782). Megalopidae.",
+          "familyAndSubfamily": "Megalopidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "52948",
+          "originalCombination": "Clupea cyprinoides",
+          "isExactHeading": false,
+          "currentStatus": "Valid as Megalops cyprinoides (Broussonet 1782). Megalopidae.",
+          "familyAndSubfamily": "Megalopidae.",
+          "supportsExactValidName": true,
+          "supportsExactSynonymTarget": false
+        },
+        {
+          "spid": "57828",
+          "originalCombination": "Megalops filamentosus",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Megalops cyprinoides (Broussonet 1782). Megalopidae.",
+          "familyAndSubfamily": "Megalopidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "27559",
+          "originalCombination": "Clupea gigantea",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Megalops cyprinoides (Broussonet 1782). Megalopidae.",
+          "familyAndSubfamily": "Megalopidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "58838",
+          "originalCombination": "Megalops indicus",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Megalops cyprinoides (Broussonet 1782). Megalopidae.",
+          "familyAndSubfamily": "Megalopidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "48416",
+          "originalCombination": "Megalops kundinga",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Megalops cyprinoides (Broussonet 1782). Megalopidae.",
+          "familyAndSubfamily": "Megalopidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "58839",
+          "originalCombination": "Megalops macrophthalmus",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Megalops cyprinoides (Broussonet 1782). Megalopidae.",
+          "familyAndSubfamily": "Megalopidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "58840",
+          "originalCombination": "Megalops macropterus",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Megalops cyprinoides (Broussonet 1782). Megalopidae.",
+          "familyAndSubfamily": "Megalopidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "58841",
+          "originalCombination": "Megalops oligolepis",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Megalops cyprinoides (Broussonet 1782). Megalopidae.",
+          "familyAndSubfamily": "Megalopidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "58307",
+          "originalCombination": "Megalops setipinnis",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Megalops cyprinoides (Broussonet 1782). Megalopidae.",
+          "familyAndSubfamily": "Megalopidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "57827",
+          "originalCombination": "Brisbania staigeri",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Megalops cyprinoides (Broussonet 1782). Megalopidae.",
+          "familyAndSubfamily": "Megalopidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "27557",
+          "originalCombination": "Clupea thrissoides",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Megalops cyprinoides (Broussonet 1782). Megalopidae.",
+          "familyAndSubfamily": "Megalopidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        }
+      ],
+      "currentStatusAlternatives": [],
+      "httpStatus": 200,
+      "responseBytes": 30347,
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-fish-catalog-remaining-20261120/333510968a2c4e5a.html",
+        "sha256": "39a4414b508728d7f3f930f83ae1f2751d6be702be87742d4fd88842f745ce92"
+      }
+    },
+    {
+      "queriedName": "Mugil cephalus",
+      "query": {
+        "endpoint": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatmain.asp",
+        "method": "POST",
+        "parameters": {
+          "tbl": "Species",
+          "contains": "Mugil cephalus",
+          "Submit": "Search"
+        }
+      },
+      "exactOrAcceptedMatches": [
+        {
+          "spid": "33679",
+          "originalCombination": "Mugil albula",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Mugil cephalus Linnaeus 1758. Mugilidae.",
+          "familyAndSubfamily": "Mugilidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "16948",
+          "originalCombination": "Mugil ashanteensis",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Mugil cephalus Linnaeus 1758. Mugilidae.",
+          "familyAndSubfamily": "Mugilidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "33708",
+          "originalCombination": "Myxus barnardi",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Mugil cephalus Linnaeus 1758. Mugilidae.",
+          "familyAndSubfamily": "Mugilidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "33689",
+          "originalCombination": "Mugil berlandieri",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Mugil cephalus Linnaeus 1758. Mugilidae.",
+          "familyAndSubfamily": "Mugilidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "33685",
+          "originalCombination": "Mugil borbonicus",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Mugil cephalus Linnaeus 1758. Mugilidae.",
+          "familyAndSubfamily": "Mugilidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "33701",
+          "originalCombination": "Myxus caecutiens",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Mugil cephalus Linnaeus 1758. Mugilidae.",
+          "familyAndSubfamily": "Mugilidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "35708",
+          "originalCombination": "Mugil catalarum",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Mugil cephalus Linnaeus 1758. Mugilidae.",
+          "familyAndSubfamily": "Mugilidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "33683",
+          "originalCombination": "Mugil cephalotus",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Mugil cephalus Linnaeus 1758. Mugilidae.",
+          "familyAndSubfamily": "Mugilidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "19549",
+          "originalCombination": "Mugil cephalus",
+          "isExactHeading": true,
+          "currentStatus": "Valid as Mugil cephalus Linnaeus 1758. Mugilidae.",
+          "familyAndSubfamily": "Mugilidae.",
+          "supportsExactValidName": true,
+          "supportsExactSynonymTarget": false
+        },
+        {
+          "spid": "46301",
+          "originalCombination": "Mugil cephalus cestreo",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Mugil cephalus Linnaeus 1758. Mugilidae.",
+          "familyAndSubfamily": "Mugilidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "71103",
+          "originalCombination": "Sparus cetaceus",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Mugil cephalus Linnaeus 1758. Mugilidae.",
+          "familyAndSubfamily": "Mugilidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "33901",
+          "originalCombination": "Mugil chaptalii",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Mugil cephalus Linnaeus 1758. Mugilidae.",
+          "familyAndSubfamily": "Mugilidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "46325",
+          "originalCombination": "Mugil cephalus chelone",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Mugil cephalus Linnaeus 1758. Mugilidae.",
+          "familyAndSubfamily": "Mugilidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "33884",
+          "originalCombination": "Mugil ciliilabis",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Mugil cephalus Linnaeus 1758. Mugilidae.",
+          "familyAndSubfamily": "Mugilidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "46621",
+          "originalCombination": "Mugil constantiae",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Mugil cephalus Linnaeus 1758. Mugilidae.",
+          "familyAndSubfamily": "Mugilidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "33693",
+          "originalCombination": "Mugil dobula",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Mugil cephalus Linnaeus 1758. Mugilidae.",
+          "familyAndSubfamily": "Mugilidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "33893",
+          "originalCombination": "Myxus flavus",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Mugil cephalus Linnaeus 1758. Mugilidae.",
+          "familyAndSubfamily": "Mugilidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "24885",
+          "originalCombination": "Mugil galapagensis",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Mugil cephalus Linnaeus 1758. Mugilidae.",
+          "familyAndSubfamily": "Mugilidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "33707",
+          "originalCombination": "Mugil hypselosoma",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Mugil cephalus Linnaeus 1758. Mugilidae.",
+          "familyAndSubfamily": "Mugilidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "33686",
+          "originalCombination": "Mugil japonicus",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Mugil cephalus Linnaeus 1758. Mugilidae.",
+          "familyAndSubfamily": "Mugilidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "54745",
+          "originalCombination": "Myxus lepidopterus",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Mugil cephalus Linnaeus 1758. Mugilidae.",
+          "familyAndSubfamily": "Mugilidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "33682",
+          "originalCombination": "Mugil lineatus",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Mugil cephalus Linnaeus 1758. Mugilidae.",
+          "familyAndSubfamily": "Mugilidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "33759",
+          "originalCombination": "Mugil marginalis",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Mugil cephalus Linnaeus 1758. Mugilidae.",
+          "familyAndSubfamily": "Mugilidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "33700",
+          "originalCombination": "Mugil mexicanus",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Mugil cephalus Linnaeus 1758. Mugilidae.",
+          "familyAndSubfamily": "Mugilidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "33817",
+          "originalCombination": "Mugil muelleri",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Mugil cephalus Linnaeus 1758. Mugilidae.",
+          "familyAndSubfamily": "Mugilidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "49644",
+          "originalCombination": "Mugil cephalus myxone",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Mugil cephalus Linnaeus 1758. Mugilidae.",
+          "familyAndSubfamily": "Mugilidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "33896",
+          "originalCombination": "Myxus niger",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Mugil cephalus Linnaeus 1758. Mugilidae.",
+          "familyAndSubfamily": "Mugilidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "50122",
+          "originalCombination": "Mugil crenilabis our",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Mugil cephalus Linnaeus 1758. Mugilidae.",
+          "familyAndSubfamily": "Mugilidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "33800",
+          "originalCombination": "Mugil peruanus",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Mugil cephalus Linnaeus 1758. Mugilidae.",
+          "familyAndSubfamily": "Mugilidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "33680",
+          "originalCombination": "Mugil plumieri",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Mugil cephalus Linnaeus 1758. Mugilidae.",
+          "familyAndSubfamily": "Mugilidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "16950",
+          "originalCombination": "Mugil provensalis",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Mugil cephalus Linnaeus 1758. Mugilidae.",
+          "familyAndSubfamily": "Mugilidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "33687",
+          "originalCombination": "Mugil rammelsbergii",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Mugil cephalus Linnaeus 1758. Mugilidae.",
+          "familyAndSubfamily": "Mugilidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "33697",
+          "originalCombination": "Myxus superficialis",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Mugil cephalus Linnaeus 1758. Mugilidae.",
+          "familyAndSubfamily": "Mugilidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "16949",
+          "originalCombination": "Mugil tang",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Mugil cephalus Linnaeus 1758. Mugilidae.",
+          "familyAndSubfamily": "Mugilidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "33899",
+          "originalCombination": "Myxus tincoides",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Mugil cephalus Linnaeus 1758. Mugilidae.",
+          "familyAndSubfamily": "Mugilidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "33825",
+          "originalCombination": "Mugil tongae",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Mugil cephalus Linnaeus 1758. Mugilidae.",
+          "familyAndSubfamily": "Mugilidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "33600",
+          "originalCombination": "Mugil trichilus",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Mugil cephalus Linnaeus 1758. Mugilidae.",
+          "familyAndSubfamily": "Mugilidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        }
+      ],
+      "currentStatusAlternatives": [],
+      "httpStatus": 200,
+      "responseBytes": 89070,
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-fish-catalog-remaining-20261120/bf73702c6a113ead.html",
+        "sha256": "e0f1932e402a48d87c8662f1e79d65ce03296c143521180e7ecf9017c577e14a"
+      }
+    },
+    {
+      "queriedName": "Nematalosa nasus",
+      "query": {
+        "endpoint": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatmain.asp",
+        "method": "POST",
+        "parameters": {
+          "tbl": "Species",
+          "contains": "Nematalosa nasus",
+          "Submit": "Search"
+        }
+      },
+      "exactOrAcceptedMatches": [
+        {
+          "spid": "25967",
+          "originalCombination": "Clupanodon nasica",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Nematalosa nasus (Bloch 1795). Dorosomatidae.",
+          "familyAndSubfamily": "Dorosomatidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "1271",
+          "originalCombination": "Clupea nasus",
+          "isExactHeading": false,
+          "currentStatus": "Valid as Nematalosa nasus (Bloch 1795). Dorosomatidae.",
+          "familyAndSubfamily": "Dorosomatidae.",
+          "supportsExactValidName": true,
+          "supportsExactSynonymTarget": false
+        }
+      ],
+      "currentStatusAlternatives": [],
+      "httpStatus": 200,
+      "responseBytes": 14281,
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-fish-catalog-remaining-20261120/b93359dec0abc5a2.html",
+        "sha256": "f06162ba3bc6234f2b8498d77c7edaa8563be063ec425fb33a98ae03543b46dd"
+      }
+    },
+    {
+      "queriedName": "Nemipterus japonicus",
+      "query": {
+        "endpoint": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatmain.asp",
+        "method": "POST",
+        "parameters": {
+          "tbl": "Species",
+          "contains": "Nemipterus japonicus",
+          "Submit": "Search"
+        }
+      },
+      "exactOrAcceptedMatches": [
+        {
+          "spid": "21171",
+          "originalCombination": "Dentex blochii",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Nemipterus japonicus (Bloch 1791). Nemipteridae.",
+          "familyAndSubfamily": "Nemipteridae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "35576",
+          "originalCombination": "Cantharus filamentosus",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Nemipterus japonicus (Bloch 1791). Nemipteridae.",
+          "familyAndSubfamily": "Nemipteridae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "53999",
+          "originalCombination": "Synagris flavolinea",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Nemipterus japonicus (Bloch 1791). Nemipteridae.",
+          "familyAndSubfamily": "Nemipteridae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "35583",
+          "originalCombination": "Synagris grammicus",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Nemipterus japonicus (Bloch 1791). Nemipteridae.",
+          "familyAndSubfamily": "Nemipteridae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "35574",
+          "originalCombination": "Sparus japonicus",
+          "isExactHeading": false,
+          "currentStatus": "Valid as Nemipterus japonicus (Bloch 1791). Nemipteridae.",
+          "familyAndSubfamily": "Nemipteridae.",
+          "supportsExactValidName": true,
+          "supportsExactSynonymTarget": false
+        },
+        {
+          "spid": "35580",
+          "originalCombination": "Dentex tambulus",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Nemipterus japonicus (Bloch 1791). Nemipteridae.",
+          "familyAndSubfamily": "Nemipteridae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        }
+      ],
+      "currentStatusAlternatives": [],
+      "httpStatus": 200,
+      "responseBytes": 23104,
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-fish-catalog-remaining-20261120/4f9d838fadfb7d44.html",
+        "sha256": "45fac55b3fa448d34b5f013de611c9a96c3061a8be50ca6ff823220e422f0f32"
+      }
+    },
+    {
+      "queriedName": "Oxyurichthys microlepis",
+      "query": {
+        "endpoint": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatmain.asp",
+        "method": "POST",
+        "parameters": {
+          "tbl": "Species",
+          "contains": "Oxyurichthys microlepis",
+          "Submit": "Search"
+        }
+      },
+      "exactOrAcceptedMatches": [
+        {
+          "spid": "43802",
+          "originalCombination": "Euctenogobius cristatus",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Oxyurichthys microlepis (Bleeker 1849). Oxudercidae: Gobionellinae.",
+          "familyAndSubfamily": "Oxudercidae: Gobionellinae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "54927",
+          "originalCombination": "Apocryptes maculatus",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Oxyurichthys microlepis (Bleeker 1849). Oxudercidae: Oxudercinae.",
+          "familyAndSubfamily": "Oxudercidae: Oxudercinae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "43801",
+          "originalCombination": "Gobius microlepis",
+          "isExactHeading": false,
+          "currentStatus": "Valid as Oxyurichthys microlepis (Bleeker 1849). Oxudercidae: Gobionellinae.",
+          "familyAndSubfamily": "Oxudercidae: Gobionellinae.",
+          "supportsExactValidName": true,
+          "supportsExactSynonymTarget": false
+        }
+      ],
+      "currentStatusAlternatives": [],
+      "httpStatus": 200,
+      "responseBytes": 17282,
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-fish-catalog-remaining-20261120/ce2c45277c39e1c8.html",
+        "sha256": "5449cc379cae0503ee32440cd3691fb8fd0ec2ef54e616e968eb9c01cdaac293"
+      }
+    },
+    {
+      "queriedName": "Pelates quadrilineatus",
+      "query": {
+        "endpoint": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatmain.asp",
+        "method": "POST",
+        "parameters": {
+          "tbl": "Species",
+          "contains": "Pelates quadrilineatus",
+          "Submit": "Search"
+        }
+      },
+      "exactOrAcceptedMatches": [
+        {
+          "spid": "36162",
+          "originalCombination": "Therapon cuvieri",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Pelates quadrilineatus (Bloch 1790). Terapontidae.",
+          "familyAndSubfamily": "Terapontidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "36161",
+          "originalCombination": "Helotes polytaenia",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Pelates quadrilineatus (Bloch 1790). Terapontidae.",
+          "familyAndSubfamily": "Terapontidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "36157",
+          "originalCombination": "Holocentrus quadrilineatus",
+          "isExactHeading": false,
+          "currentStatus": "Valid as Pelates quadrilineatus (Bloch 1790). Terapontidae.",
+          "familyAndSubfamily": "Terapontidae.",
+          "supportsExactValidName": true,
+          "supportsExactSynonymTarget": false
+        },
+        {
+          "spid": "50814",
+          "originalCombination": "Pelates quadrilineatus",
+          "isExactHeading": true,
+          "currentStatus": "Synonym of Pelates quadrilineatus (Bloch 1790). Terapontidae.",
+          "familyAndSubfamily": "Terapontidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "50824",
+          "originalCombination": "Grammistes quadrivittatus",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Pelates quadrilineatus (Bloch 1790). Terapontidae.",
+          "familyAndSubfamily": "Terapontidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "36158",
+          "originalCombination": "Therapon xanthurus",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Pelates quadrilineatus (Bloch 1790). Terapontidae.",
+          "familyAndSubfamily": "Terapontidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        }
+      ],
+      "currentStatusAlternatives": [],
+      "httpStatus": 200,
+      "responseBytes": 20595,
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-fish-catalog-remaining-20261120/8aac4a558b3b8925.html",
+        "sha256": "ab969687db74a5618af4ff948592e68f9f66b36541d845b4e16b438f5e53a5a7"
+      }
+    },
+    {
+      "queriedName": "Platycephalus indicus",
+      "query": {
+        "endpoint": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatmain.asp",
+        "method": "POST",
+        "parameters": {
+          "tbl": "Species",
+          "contains": "Platycephalus indicus",
+          "Submit": "Search"
+        }
+      },
+      "exactOrAcceptedMatches": [
+        {
+          "spid": "42921",
+          "originalCombination": "Callionymus indicus",
+          "isExactHeading": false,
+          "currentStatus": "Valid as Platycephalus indicus (Linnaeus 1758). Platycephalidae.",
+          "familyAndSubfamily": "Platycephalidae.",
+          "supportsExactValidName": true,
+          "supportsExactSynonymTarget": false
+        },
+        {
+          "spid": "42923",
+          "originalCombination": "Cottus insidiator",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Platycephalus indicus (Linnaeus 1758). Platycephalidae.",
+          "familyAndSubfamily": "Platycephalidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "42927",
+          "originalCombination": "Cottus madagascariensis",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Platycephalus indicus (Linnaeus 1758). Platycephalidae.",
+          "familyAndSubfamily": "Platycephalidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "42924",
+          "originalCombination": "Cottus rogad",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Platycephalus indicus (Linnaeus 1758). Platycephalidae.",
+          "familyAndSubfamily": "Platycephalidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "42926",
+          "originalCombination": "Platycephalus spathula",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Platycephalus indicus (Linnaeus 1758). Platycephalidae.",
+          "familyAndSubfamily": "Platycephalidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        }
+      ],
+      "currentStatusAlternatives": [],
+      "httpStatus": 200,
+      "responseBytes": 21933,
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-fish-catalog-remaining-20261120/d396cd8781b05c32.html",
+        "sha256": "b2ab4344ea6f09122b7f945e65629ade5a3ef2ec6b37fb7845482f201d425528"
+      }
+    },
+    {
+      "queriedName": "Pomadasys kaakan",
+      "query": {
+        "endpoint": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatmain.asp",
+        "method": "POST",
+        "parameters": {
+          "tbl": "Species",
+          "contains": "Pomadasys kaakan",
+          "Submit": "Search"
+        }
+      },
+      "exactOrAcceptedMatches": [
+        {
+          "spid": "36338",
+          "originalCombination": "Pristipoma kaakan",
+          "isExactHeading": false,
+          "currentStatus": "Valid as Pomadasys kaakan (Cuvier 1830). Haemulidae: Haemulinae.",
+          "familyAndSubfamily": "Haemulidae: Haemulinae.",
+          "supportsExactValidName": true,
+          "supportsExactSynonymTarget": false
+        }
+      ],
+      "currentStatusAlternatives": [],
+      "httpStatus": 200,
+      "responseBytes": 13121,
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-fish-catalog-remaining-20261120/9da3759b883bdecc.html",
+        "sha256": "df58dbe03c53dc7d3e700d9768e2c4372302fff6d16ba41bb4dc30ed77efbf7d"
+      }
+    },
+    {
+      "queriedName": "Rastrelliger brachysoma",
+      "query": {
+        "endpoint": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatmain.asp",
+        "method": "POST",
+        "parameters": {
+          "tbl": "Species",
+          "contains": "Rastrelliger brachysoma",
+          "Submit": "Search"
+        }
+      },
+      "exactOrAcceptedMatches": [
+        {
+          "spid": "21251",
+          "originalCombination": "Scomber brachysoma",
+          "isExactHeading": false,
+          "currentStatus": "Valid as Rastrelliger brachysoma (Bleeker 1851). Scombridae: Scombrinae.",
+          "familyAndSubfamily": "Scombridae: Scombrinae.",
+          "supportsExactValidName": true,
+          "supportsExactSynonymTarget": false
+        },
+        {
+          "spid": "56409",
+          "originalCombination": "Scomber neglectus",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Rastrelliger brachysoma (Bleeker 1851). Scombridae: Scombrinae.",
+          "familyAndSubfamily": "Scombridae: Scombrinae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        }
+      ],
+      "currentStatusAlternatives": [],
+      "httpStatus": 200,
+      "responseBytes": 11458,
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-fish-catalog-remaining-20261120/8d0a3ce0cb742ec4.html",
+        "sha256": "e43325ccd1ffab39fb3381b1df0f03a392c6acd73632a3f71a3843c9205003fd"
+      }
+    },
+    {
+      "queriedName": "Remora remora",
+      "query": {
+        "endpoint": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatmain.asp",
+        "method": "POST",
+        "parameters": {
+          "tbl": "Species",
+          "contains": "Remora remora",
+          "Submit": "Search"
+        }
+      },
+      "exactOrAcceptedMatches": [
+        {
+          "spid": "66844",
+          "originalCombination": "Echeneis arrostii",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Remora remora (Linnaeus 1758). Echeneidae.",
+          "familyAndSubfamily": "Echeneidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "55694",
+          "originalCombination": "Echeneis borboniensis",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Remora remora (Linnaeus 1758). Echeneidae.",
+          "familyAndSubfamily": "Echeneidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "46262",
+          "originalCombination": "Echeneis caudabifurca",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Remora remora (Linnaeus 1758). Echeneidae.",
+          "familyAndSubfamily": "Echeneidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "65026",
+          "originalCombination": "Pseudoremora golubevi",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Remora remora (Linnaeus 1758). Echeneidae.",
+          "familyAndSubfamily": "Echeneidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "61527",
+          "originalCombination": "Echeneis imperati",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Remora remora (Linnaeus 1758). Echeneidae.",
+          "familyAndSubfamily": "Echeneidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "48205",
+          "originalCombination": "Remora jacoboea",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Remora remora (Linnaeus 1758). Echeneidae.",
+          "familyAndSubfamily": "Echeneidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "49213",
+          "originalCombination": "Echeneis mediterraneus",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Remora remora (Linnaeus 1758). Echeneidae.",
+          "familyAndSubfamily": "Echeneidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "15343",
+          "originalCombination": "Echeneis nubifera",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Remora remora (Linnaeus 1758). Echeneidae.",
+          "familyAndSubfamily": "Echeneidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "15337",
+          "originalCombination": "Echeneis pallida",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Remora remora (Linnaeus 1758). Echeneidae.",
+          "familyAndSubfamily": "Echeneidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "15338",
+          "originalCombination": "Echeneis parva",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Remora remora (Linnaeus 1758). Echeneidae.",
+          "familyAndSubfamily": "Echeneidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "15341",
+          "originalCombination": "Echeneis postica",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Remora remora (Linnaeus 1758). Echeneidae.",
+          "familyAndSubfamily": "Echeneidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "50897",
+          "originalCombination": "Echeneis remeligo",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Remora remora (Linnaeus 1758). Echeneidae.",
+          "familyAndSubfamily": "Echeneidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "20466",
+          "originalCombination": "Echeneis remora",
+          "isExactHeading": false,
+          "currentStatus": "Valid as Remora remora (Linnaeus 1758). Echeneidae.",
+          "familyAndSubfamily": "Echeneidae.",
+          "supportsExactValidName": true,
+          "supportsExactSynonymTarget": false
+        },
+        {
+          "spid": "15340",
+          "originalCombination": "Echeneis remoroides",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Remora remora (Linnaeus 1758). Echeneidae.",
+          "familyAndSubfamily": "Echeneidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "15336",
+          "originalCombination": "Echeneis squalipeta",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Remora remora (Linnaeus 1758). Echeneidae.",
+          "familyAndSubfamily": "Echeneidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "15319",
+          "originalCombination": "Echeneis veterum",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Remora remora (Linnaeus 1758). Echeneidae.",
+          "familyAndSubfamily": "Echeneidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        }
+      ],
+      "currentStatusAlternatives": [],
+      "httpStatus": 200,
+      "responseBytes": 69634,
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-fish-catalog-remaining-20261120/da5669733684a653.html",
+        "sha256": "d4ec555acf4e42bebfa8677e7dbaf768d255341f8ddfd6c3450ce8b9a5a7e22b"
+      }
+    },
+    {
+      "queriedName": "Sardinella fimbriata",
+      "query": {
+        "endpoint": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatmain.asp",
+        "method": "POST",
+        "parameters": {
+          "tbl": "Species",
+          "contains": "Sardinella fimbriata",
+          "Submit": "Search"
+        }
+      },
+      "exactOrAcceptedMatches": [
+        {
+          "spid": "25746",
+          "originalCombination": "Spratella fimbriata",
+          "isExactHeading": false,
+          "currentStatus": "Valid as Sardinella fimbriata (Valenciennes 1847). Dorosomatidae.",
+          "familyAndSubfamily": "Dorosomatidae.",
+          "supportsExactValidName": true,
+          "supportsExactSynonymTarget": false
+        }
+      ],
+      "currentStatusAlternatives": [],
+      "httpStatus": 200,
+      "responseBytes": 10885,
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-fish-catalog-remaining-20261120/67dff0ccde1a903f.html",
+        "sha256": "f532f55bbe44bc032d9c5b31f8a175e9c75e27075789369b4a502b4af371e2df"
+      }
+    },
+    {
+      "queriedName": "Sarotherodon melanotheron",
+      "query": {
+        "endpoint": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatmain.asp",
+        "method": "POST",
+        "parameters": {
+          "tbl": "Species",
+          "contains": "Sarotherodon melanotheron",
+          "Submit": "Search"
+        }
+      },
+      "exactOrAcceptedMatches": [
+        {
+          "spid": "47961",
+          "originalCombination": "Tilapia heudelotii",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Sarotherodon melanotheron Rüppell 1852. Cichlidae: Pseudocrenilabrinae.",
+          "familyAndSubfamily": "Cichlidae: Pseudocrenilabrinae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "22763",
+          "originalCombination": "Tilapia (Sarotherodon) leonensis",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Sarotherodon melanotheron Rüppell 1852. Cichlidae: Pseudocrenilabrinae.",
+          "familyAndSubfamily": "Cichlidae: Pseudocrenilabrinae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "38583",
+          "originalCombination": "Chromis macrocephalus",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Sarotherodon melanotheron Rüppell 1852. Cichlidae: Pseudocrenilabrinae.",
+          "familyAndSubfamily": "Cichlidae: Pseudocrenilabrinae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "20496",
+          "originalCombination": "Melanogenes macrocephalus",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Sarotherodon melanotheron Rüppell 1852. Cichlidae: Pseudocrenilabrinae.",
+          "familyAndSubfamily": "Cichlidae: Pseudocrenilabrinae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "38633",
+          "originalCombination": "Tilapia multifasciata macrostoma",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Sarotherodon melanotheron Rüppell 1852. Cichlidae: Pseudocrenilabrinae.",
+          "familyAndSubfamily": "Cichlidae: Pseudocrenilabrinae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "20157",
+          "originalCombination": "Sarotherodon melanotheron",
+          "isExactHeading": true,
+          "currentStatus": "Valid as Sarotherodon melanotheron Rüppell 1852. Cichlidae: Pseudocrenilabrinae.",
+          "familyAndSubfamily": "Cichlidae: Pseudocrenilabrinae.",
+          "supportsExactValidName": true,
+          "supportsExactSynonymTarget": false
+        },
+        {
+          "spid": "38551",
+          "originalCombination": "Chromis microcephalus",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Sarotherodon melanotheron Rüppell 1852. Cichlidae: Pseudocrenilabrinae.",
+          "familyAndSubfamily": "Cichlidae: Pseudocrenilabrinae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "8202",
+          "originalCombination": "Sarotherodon melanotheron paludinosus",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Sarotherodon melanotheron Rüppell 1852. Cichlidae: Pseudocrenilabrinae.",
+          "familyAndSubfamily": "Cichlidae: Pseudocrenilabrinae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "50860",
+          "originalCombination": "Tilapia rangii",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Sarotherodon melanotheron Rüppell 1852. Cichlidae: Pseudocrenilabrinae.",
+          "familyAndSubfamily": "Cichlidae: Pseudocrenilabrinae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        }
+      ],
+      "currentStatusAlternatives": [],
+      "httpStatus": 200,
+      "responseBytes": 22664,
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-fish-catalog-remaining-20261120/b7a0a7de267b1d82.html",
+        "sha256": "4087529ab70e6b6035deb4877f7f95d1b0fe8cfb910e845fe8a0954a4c264672"
+      }
+    },
+    {
+      "queriedName": "Scatophagus argus",
+      "query": {
+        "endpoint": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatmain.asp",
+        "method": "POST",
+        "parameters": {
+          "tbl": "Species",
+          "contains": "Scatophagus argus",
+          "Submit": "Search"
+        }
+      },
+      "exactOrAcceptedMatches": [
+        {
+          "spid": "38372",
+          "originalCombination": "Scatophagus altermans",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Scatophagus argus (Linnaeus 1766). Scatophagidae.",
+          "familyAndSubfamily": "Scatophagidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "19833",
+          "originalCombination": "Chaetodon argus",
+          "isExactHeading": false,
+          "currentStatus": "Valid as Scatophagus argus (Linnaeus 1766). Scatophagidae.",
+          "familyAndSubfamily": "Scatophagidae.",
+          "supportsExactValidName": true,
+          "supportsExactSynonymTarget": false
+        },
+        {
+          "spid": "45537",
+          "originalCombination": "Chaetodon atromaculatus",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Scatophagus argus (Linnaeus 1766). Scatophagidae.",
+          "familyAndSubfamily": "Scatophagidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "38355",
+          "originalCombination": "Scatophagus bougainvillii",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Scatophagus argus (Linnaeus 1766). Scatophagidae.",
+          "familyAndSubfamily": "Scatophagidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "38363",
+          "originalCombination": "Sargus maculatus",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Scatophagus argus (Linnaeus 1766). Scatophagidae.",
+          "familyAndSubfamily": "Scatophagidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "49971",
+          "originalCombination": "Scatophagus argus ocellata",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Scatophagus argus (Linnaeus 1766). Scatophagidae.",
+          "familyAndSubfamily": "Scatophagidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "38356",
+          "originalCombination": "Scatophagus ornatus",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Scatophagus argus (Linnaeus 1766). Scatophagidae.",
+          "familyAndSubfamily": "Scatophagidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "38352",
+          "originalCombination": "Chaetodon pairatalis",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Scatophagus argus (Linnaeus 1766). Scatophagidae.",
+          "familyAndSubfamily": "Scatophagidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "38360",
+          "originalCombination": "Scatophagus purpurascens",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Scatophagus argus (Linnaeus 1766). Scatophagidae.",
+          "familyAndSubfamily": "Scatophagidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "38365",
+          "originalCombination": "Scatophagus quadratus",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Scatophagus argus (Linnaeus 1766). Scatophagidae.",
+          "familyAndSubfamily": "Scatophagidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "73366",
+          "originalCombination": "Scatophagus rubrifrons",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Scatophagus argus (Linnaeus 1766). Scatophagidae.",
+          "familyAndSubfamily": "Scatophagidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        }
+      ],
+      "currentStatusAlternatives": [],
+      "httpStatus": 200,
+      "responseBytes": 29886,
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-fish-catalog-remaining-20261120/571b8cf0fe8189fe.html",
+        "sha256": "7f22fe4079cc89904ead144d5bae30451207b7043360dae0029be27b3d43b148"
+      }
+    },
+    {
+      "queriedName": "Selaroides leptolepis",
+      "query": {
+        "endpoint": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatmain.asp",
+        "method": "POST",
+        "parameters": {
+          "tbl": "Species",
+          "contains": "Selaroides leptolepis",
+          "Submit": "Search"
+        }
+      },
+      "exactOrAcceptedMatches": [
+        {
+          "spid": "34630",
+          "originalCombination": "Caranx bidii",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Selaroides leptolepis (Cuvier 1833). Carangidae: Caranginae.",
+          "familyAndSubfamily": "Carangidae: Caranginae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "34632",
+          "originalCombination": "Caranx cheverti",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Selaroides leptolepis (Cuvier 1833). Carangidae: Caranginae.",
+          "familyAndSubfamily": "Carangidae: Caranginae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "20151",
+          "originalCombination": "Caranx leptolepis",
+          "isExactHeading": false,
+          "currentStatus": "Valid as Selaroides leptolepis (Cuvier 1833). Carangidae: Caranginae.",
+          "familyAndSubfamily": "Carangidae: Caranginae.",
+          "supportsExactValidName": true,
+          "supportsExactSynonymTarget": false
+        },
+        {
+          "spid": "34397",
+          "originalCombination": "Caranx mertensii",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Selaroides leptolepis (Cuvier 1833). Carangidae: Caranginae.",
+          "familyAndSubfamily": "Carangidae: Caranginae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "34634",
+          "originalCombination": "Caranx procaranx",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Selaroides leptolepis (Cuvier 1833). Carangidae: Caranginae.",
+          "familyAndSubfamily": "Carangidae: Caranginae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        }
+      ],
+      "currentStatusAlternatives": [],
+      "httpStatus": 200,
+      "responseBytes": 16257,
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-fish-catalog-remaining-20261120/2cd5b2f9f42c5b34.html",
+        "sha256": "bbb5c6b31633ba02da40e107b0573d169add3b1b746b78a70c3bf514f169339c"
+      }
+    },
+    {
+      "queriedName": "Sillago sihama",
+      "query": {
+        "endpoint": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatmain.asp",
+        "method": "POST",
+        "parameters": {
+          "tbl": "Species",
+          "contains": "Sillago sihama",
+          "Submit": "Search"
+        }
+      },
+      "exactOrAcceptedMatches": [
+        {
+          "spid": "19719",
+          "originalCombination": "Sillago acuta",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Sillago sihama (Fabricius 1775). Sillaginidae.",
+          "familyAndSubfamily": "Sillaginidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "34124",
+          "originalCombination": "Sillago erythraea",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Sillago sihama (Fabricius 1775). Sillaginidae.",
+          "familyAndSubfamily": "Sillaginidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "15257",
+          "originalCombination": "Atherina sihama",
+          "isExactHeading": false,
+          "currentStatus": "Valid as Sillago sihama (Fabricius 1775). Sillaginidae.",
+          "familyAndSubfamily": "Sillaginidae.",
+          "supportsExactValidName": true,
+          "supportsExactSynonymTarget": false
+        }
+      ],
+      "currentStatusAlternatives": [],
+      "httpStatus": 200,
+      "responseBytes": 22614,
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-fish-catalog-remaining-20261120/a7f107cb7d922eea.html",
+        "sha256": "9eb4040f790d23c5eea0e87cc71d29df8b3fea8ae3a8aadc14baecaeb4beb1d2"
+      }
+    },
+    {
+      "queriedName": "Terapon jarbua",
+      "query": {
+        "endpoint": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatmain.asp",
+        "method": "POST",
+        "parameters": {
+          "tbl": "Species",
+          "contains": "Terapon jarbua",
+          "Submit": "Search"
+        }
+      },
+      "exactOrAcceptedMatches": [
+        {
+          "spid": "45180",
+          "originalCombination": "Grammistes annularis",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Terapon jarbua (Fabricius 1775). Terapontidae.",
+          "familyAndSubfamily": "Terapontidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "36182",
+          "originalCombination": "Therapon bouzetianus",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Terapon jarbua (Fabricius 1775). Terapontidae.",
+          "familyAndSubfamily": "Terapontidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "36184",
+          "originalCombination": "Therapon gerager",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Terapon jarbua (Fabricius 1775). Terapontidae.",
+          "familyAndSubfamily": "Terapontidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "53983",
+          "originalCombination": "Stereolepis inoko",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Terapon jarbua (Fabricius 1775). Terapontidae.",
+          "familyAndSubfamily": "Terapontidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "19627",
+          "originalCombination": "Sciaena jarbua",
+          "isExactHeading": false,
+          "currentStatus": "Valid as Terapon jarbua (Fabricius 1775). Terapontidae.",
+          "familyAndSubfamily": "Terapontidae.",
+          "supportsExactValidName": true,
+          "supportsExactSynonymTarget": false
+        },
+        {
+          "spid": "19730",
+          "originalCombination": "Holocentrus servus",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Terapon jarbua (Fabricius 1775). Terapontidae.",
+          "familyAndSubfamily": "Terapontidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "36181",
+          "originalCombination": "Terapon timoriensis",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Terapon jarbua (Fabricius 1775). Terapontidae.",
+          "familyAndSubfamily": "Terapontidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "36202",
+          "originalCombination": "Coius trivittatus",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Terapon jarbua (Fabricius 1775). Terapontidae.",
+          "familyAndSubfamily": "Terapontidae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        }
+      ],
+      "currentStatusAlternatives": [],
+      "httpStatus": 200,
+      "responseBytes": 26325,
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-fish-catalog-remaining-20261120/153ae094726c2fd8.html",
+        "sha256": "ae420151703b6373ceb1fc2d066cecf9a77fff05308182a21918971ef35c993d"
+      }
+    },
+    {
+      "queriedName": "Trichopodus trichopterus",
+      "query": {
+        "endpoint": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatmain.asp",
+        "method": "POST",
+        "parameters": {
+          "tbl": "Species",
+          "contains": "Trichopodus trichopterus",
+          "Submit": "Search"
+        }
+      },
+      "exactOrAcceptedMatches": [
+        {
+          "spid": "26110",
+          "originalCombination": "Stethochaetus biguttatus",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Trichopodus trichopterus (Pallas 1770). Osphronemidae: Trichogastrinae.",
+          "familyAndSubfamily": "Osphronemidae: Trichogastrinae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "42011",
+          "originalCombination": "Osphomenus trichopterus cantoris",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Trichopodus trichopterus (Pallas 1770). Osphronemidae: Trichogastrinae.",
+          "familyAndSubfamily": "Osphronemidae: Trichogastrinae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "42031",
+          "originalCombination": "Osphromenus insulatus",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Trichopodus trichopterus (Pallas 1770). Osphronemidae: Trichogastrinae.",
+          "familyAndSubfamily": "Osphronemidae: Trichogastrinae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "42010",
+          "originalCombination": "Osphromenus trichopterus koelreuteri",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Trichopodus trichopterus (Pallas 1770). Osphronemidae: Trichogastrinae.",
+          "familyAndSubfamily": "Osphronemidae: Trichogastrinae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "42009",
+          "originalCombination": "Colisa (Trichopus) maculatus",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Trichopodus trichopterus (Pallas 1770). Osphronemidae: Trichogastrinae.",
+          "familyAndSubfamily": "Osphronemidae: Trichogastrinae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "19480",
+          "originalCombination": "Osphromenus siamensis",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Trichopodus trichopterus (Pallas 1770). Osphronemidae: Trichogastrinae.",
+          "familyAndSubfamily": "Osphronemidae: Trichogastrinae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "73372",
+          "originalCombination": "Trichogaster sumatranus",
+          "isExactHeading": false,
+          "currentStatus": "Synonym of Trichopodus trichopterus (Pallas 1770). Osphronemidae: Trichogastrinae.",
+          "familyAndSubfamily": "Osphronemidae: Trichogastrinae.",
+          "supportsExactValidName": false,
+          "supportsExactSynonymTarget": true
+        },
+        {
+          "spid": "42008",
+          "originalCombination": "Labrus trichopterus",
+          "isExactHeading": false,
+          "currentStatus": "Valid as Trichopodus trichopterus (Pallas 1770). Osphronemidae: Trichogastrinae.",
+          "familyAndSubfamily": "Osphronemidae: Trichogastrinae.",
+          "supportsExactValidName": true,
+          "supportsExactSynonymTarget": false
+        }
+      ],
+      "currentStatusAlternatives": [],
+      "httpStatus": 200,
+      "responseBytes": 18635,
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-fish-catalog-remaining-20261120/29792f78ad9693f6.html",
+        "sha256": "26846cc3887489308ea4481c18bea48da959f84cb9756197334a71053c83762b"
+      }
+    },
+    {
+      "queriedName": "Trixiphichthys weberi",
+      "query": {
+        "endpoint": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatmain.asp",
+        "method": "POST",
+        "parameters": {
+          "tbl": "Species",
+          "contains": "Trixiphichthys weberi",
+          "Submit": "Search"
+        }
+      },
+      "exactOrAcceptedMatches": [
+        {
+          "spid": "23877",
+          "originalCombination": "Triacanthus weberi",
+          "isExactHeading": false,
+          "currentStatus": "Valid as Trixiphichthys weberi (Chaudhuri 1910). Triacanthidae.",
+          "familyAndSubfamily": "Triacanthidae.",
+          "supportsExactValidName": true,
+          "supportsExactSynonymTarget": false
+        }
+      ],
+      "currentStatusAlternatives": [],
+      "httpStatus": 200,
+      "responseBytes": 10109,
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-fish-catalog-remaining-20261120/e48f57b43cb15e29.html",
+        "sha256": "9d7f7482ca23290b34c203206a4cbfff746df53e489849f1bf43667236b224eb"
+      }
+    }
+  ],
+  "decision": {
+    "sourceRowsCorrected": 0,
+    "acceptedNamesApplied": 0,
+    "speciesAssertionsAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "waterbodyAssignmentsAdded": 0,
+    "geometryAdded": false,
+    "publicAppProjection": false,
+    "publicationApproval": false,
+    "regionalBaselineComplete": false
+  },
+  "nextActions": [
+    "Resolve the Ambassis gymnocephalus and Crenimugil seheli current-name discrepancies against direct taxon records, the chosen checklist, and the underlying study material before changing any source label.",
+    "Seek the underlying Ancog et al. report, voucher or photo index, dates, methods, site mapping, and reuse terms; no taxonomic catalog can supply that missing study context.",
+    "Keep all source names and densities research-only until specimen identity, precise site evidence, and rights are resolved."
+  ]
+}

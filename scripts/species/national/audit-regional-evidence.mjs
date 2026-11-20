@@ -70,6 +70,18 @@ function rawReferenceCandidates(reference) {
     return [{ path: repositoryPath(absolute), expectedSha256: file?.sha256 ?? null }];
   }
 
+  const rawResponsePath = field.endsWith(".rawResponse.path");
+  if (rawResponsePath) {
+    const parentPath = field.replace(/\.path$/, "");
+    const segments = parentPath.replace(/^\$\.?/, "").replace(/\[(\d+)\]/g, ".$1").split(".").filter(Boolean);
+    const rawResponse = segments.reduce((value, segment) => value?.[segment], documents.get(from)?.value);
+    const cleaned = slash(referencedPath.trim()).replace(/^\.\//, "");
+    const absolute = cleaned.startsWith("data/")
+      ? path.resolve(root, cleaned)
+      : path.resolve(root, researchRoot, cleaned);
+    return [{ path: repositoryPath(absolute), expectedSha256: rawResponse?.sha256 ?? null }];
+  }
+
   const sourceReceipt = field.match(/^\$\.sources\[(\d+)\]\.access\.rawReceipts\[(\d+)\]\.file$/);
   if (from === sourcesPath && sourceReceipt) {
     const source = sourceRegistry.sources[Number(sourceReceipt[1])];
@@ -120,7 +132,7 @@ function collectJsonReferences(value, fromPath, keyPath = "$", rows = []) {
     typeof value === "string"
     && !/^https?:\/\//i.test(value)
     && !/\s/.test(value.trim())
-    && /\.json(?:$|#)/i.test(value.trim())
+    && (/\.json(?:$|#)/i.test(value.trim()) || keyPath.endsWith(".rawResponse.path"))
   ) {
     const raw = value.trim().replace(/#.*$/, "");
     const normalized = slash(raw);
@@ -128,7 +140,8 @@ function collectJsonReferences(value, fromPath, keyPath = "$", rows = []) {
       || normalized.startsWith("raw/")
       || keyPath.includes(".rawReceipts[")
       || keyPath.includes(".rawSnapshot.files[")
-      || keyPath.includes(".pageResponses[");
+      || keyPath.includes(".pageResponses[")
+      || keyPath.endsWith(".rawResponse.path");
     const isRawFileField = keyPath.endsWith(".rawFile");
     rows.push({ field: keyPath, raw, resolvedPath: resolveReference(raw, fromPath), localRaw: localRaw || isRawFileField });
   }
