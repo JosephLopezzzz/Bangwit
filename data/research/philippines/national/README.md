@@ -73,6 +73,12 @@ In this 3,268-row consistency screen, 320 points fell inside the province named 
 
 The 1,298-row attribute and pour-point queue is Git-ignored at `data/research/philippines/raw/national/hydrolakes-philippines-v1-waterbody-candidates.jsonl`; its tracked receipt is `reviews/hydrolakes-philippines-candidate-extract-20261107.json`. No lake polygons are copied into the app, and no region, waterbody identity or fish assertion is assigned. HydroLAKES v1 aims at lakes of at least 10 ha and explicitly omits river and wetland polygons, so separate source work remains necessary for small lakes, ponds, rivers, streams and wetlands. The original product and the Zenodo Asia subset are CC BY 4.0; preserve attribution and re-review the actual source version before any redistribution.
 
+## Central Luzon source leads
+
+### Guiguinto and Meycauyan river nekton lead
+
+The March 2015 draft North South Commuter Rail EPRMP's Table 2.15 lists giant mottled eel, catfish, tilapia, and mudfish/striped snakehead as nekton for the Guiguinto and Meycauyan rivers. These are common-name labels only; the report gives no fish-specific collection date, method, counts, vouchers, or separate river/station attribution. Browser text extraction renders the nekton cell as shared across both river rows, but the PDF screenshot request timed out, so the table layout is not visually verified. No scientific-name, occurrence, or app rows were added. Keep this as a historical research lead and do not equate the March 2015 report date with a fish sampling date. See `reviews/region03-guiguinto-meycauyan-2015-nscr-eprmp-fish-context-review-20261120.json` and the source entry in `data/research/philippines/sources.json`.
+
 ## NCR waterbody source leads
 
 ### NCR NAPWC Lagoon geometry lead
