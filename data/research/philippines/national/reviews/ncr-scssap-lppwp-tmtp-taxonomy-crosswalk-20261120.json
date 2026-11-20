@@ -1,0 +1,1919 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "ncr-scssap-lppwp-tmtp-taxonomy-crosswalk-20261120",
+  "reviewedOn": "2026-11-20",
+  "phaseId": "L2",
+  "regionId": "1300000000",
+  "regionName": "National Capital Region (NCR)",
+  "status": "col-xr-name-match-screen-complete;source-row-preservation;identification-unverified;research-only",
+  "question": "How do the source-printed fish names and family labels in the LPPWP/TMTP tables compare with the pinned Catalogue of Life XR match service, without changing source spellings or treating matches as specimen identification?",
+  "sourceIds": [
+    "scssap-ph-ecosystems-ch4-lppwp-tmtp-2026",
+    "gbif-col-xr-taxonomy-matching"
+  ],
+  "inputs": [
+    "data/research/philippines/national/reviews/ncr-scssap-lppwp-tmtp-fish-list-scope-review-20261120.json"
+  ],
+  "snapshotHashes": {
+    "parentSourceReview": "86eff70bfb4e9e57d3d56a1d395aaf08022eb0bbbba5b69cf6f39aa60e45a6c6"
+  },
+  "sourceAccess": {
+    "endpoint": "https://api.gbif.org/v2/species/match",
+    "metadataUrl": "https://api.gbif.org/v2/species/match/metadata?checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b",
+    "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+    "checklistAlias": "COL26.10 XR",
+    "buildSha": "95c83537b1cb3c0884a646cc4e7a21217283d4f4",
+    "indexCreated": "2026-11-19T14:17:15.229Z",
+    "indexStableDuringQueries": true,
+    "metadataStartReceipt": {
+      "path": "data/research/philippines/raw/national/scssap-lppwp-tmtp-colxr-20261120/service-metadata-start.json",
+      "sha256": "83648ce86b8283b8da07acf36ed3a4fea6bc4609b766b68a2177bf59289df2cd"
+    },
+    "metadataEndReceipt": {
+      "path": "data/research/philippines/raw/national/scssap-lppwp-tmtp-colxr-20261120/service-metadata-end.json",
+      "sha256": "83648ce86b8283b8da07acf36ed3a4fea6bc4609b766b68a2177bf59289df2cd"
+    },
+    "responseCapture": "Each unique source-printed binomial was queried once. Generic, numbered sp., plural spp., missing-epithet, and higher-rank strings were not sent as species names. Raw API JSON bytes are local-only snapshots; hashes and paths are recorded below."
+  },
+  "method": {
+    "summary": "Preserved all 72 site-table fish rows and their printed family/name strings. Deduplicated only exact name strings for the GBIF v2 matcher, queried against the explicit Catalogue of Life XR checklist, and compared the returned family string with the family printed in each row.",
+    "classifier": "An exact accepted species-name match is a nomenclatural candidate only. Fuzzy matches, synonyms, higher-rank matches, no-matches, and family-text differences remain unresolved. No source text was corrected.",
+    "limitations": [
+      "The Catalogue of Life XR match service is one automated taxonomic resource; it is not an independent second authority or fish-specimen determination.",
+      "No key, specimen photograph, voucher, diagnostic description, or author confirmation was available to verify the underlying field identifications.",
+      "A family name returned by the matcher is a name-level comparison only; family disagreement does not prove the source's fish was identified incorrectly.",
+      "No geographic, habitat, native-range, or occurrence inference is made from a taxon-name match."
+    ]
+  },
+  "sourceRowCounts": {
+    "LPPWP": 20,
+    "TMTP": 52,
+    "total": 72
+  },
+  "matchCounts": {
+    "uniqueSourceStrings": 59,
+    "uniqueBinomialsQueried": 35,
+    "exactAcceptedNameMatches": 34,
+    "exactSynonymMatches": 1,
+    "fuzzyOrOtherCandidates": 0,
+    "noMatch": 0,
+    "familyTextMismatches": 3,
+    "nonBinomialRowsNotQueried": 29,
+    "allPendingBiologicalIdentificationReview": true
+  },
+  "uniqueNameMatches": [
+    {
+      "queriedName": "Ambassis gymnocephalus",
+      "queryUrl": "https://api.gbif.org/v2/species/match?scientificName=Ambassis+gymnocephalus&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&kingdom=Animalia",
+      "queryParameters": {
+        "scientificName": "Ambassis gymnocephalus",
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "kingdom": "Animalia"
+      },
+      "matchType": "EXACT",
+      "confidence": 100,
+      "classification": "exact-accepted-name",
+      "usage": {
+        "key": "CKRP",
+        "scientificName": "Ambassis gymnocephalus (Lacepède, 1802)",
+        "canonicalName": "Ambassis gymnocephalus",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "authorship": "(Lacepède, 1802)"
+      },
+      "acceptedUsage": null,
+      "matchedFamily": "Ambassidae",
+      "sourceFamilyLabels": [
+        "Ambassidae"
+      ],
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-lppwp-tmtp-colxr-20261120/matches/364b316b244d2b48.json",
+        "sha256": "b7731c336448357e1f4ee973da7a70a390e8d50b44331f7743c2f5da9f91404d"
+      }
+    },
+    {
+      "queriedName": "Ambassis marianus",
+      "queryUrl": "https://api.gbif.org/v2/species/match?scientificName=Ambassis+marianus&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&kingdom=Animalia",
+      "queryParameters": {
+        "scientificName": "Ambassis marianus",
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "kingdom": "Animalia"
+      },
+      "matchType": "EXACT",
+      "confidence": 100,
+      "classification": "exact-accepted-name",
+      "usage": {
+        "key": "CKS8",
+        "scientificName": "Ambassis marianus Günther, 1880",
+        "canonicalName": "Ambassis marianus",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "authorship": "Günther, 1880"
+      },
+      "acceptedUsage": null,
+      "matchedFamily": "Ambassidae",
+      "sourceFamilyLabels": [
+        "Ambassidae"
+      ],
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-lppwp-tmtp-colxr-20261120/matches/f1b9a81fd4153f7a.json",
+        "sha256": "0df26637ac5862cf08e03f6775f40d9ef0e1e497b49f3f54421c8d23adb12006"
+      }
+    },
+    {
+      "queriedName": "Anguilla marmorata",
+      "queryUrl": "https://api.gbif.org/v2/species/match?scientificName=Anguilla+marmorata&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&kingdom=Animalia",
+      "queryParameters": {
+        "scientificName": "Anguilla marmorata",
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "kingdom": "Animalia"
+      },
+      "matchType": "EXACT",
+      "confidence": 100,
+      "classification": "exact-accepted-name",
+      "usage": {
+        "key": "66R6D",
+        "scientificName": "Anguilla marmorata Quoy & Gaimard, 1824",
+        "canonicalName": "Anguilla marmorata",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "authorship": "Quoy & Gaimard, 1824"
+      },
+      "acceptedUsage": null,
+      "matchedFamily": "Anguillidae",
+      "sourceFamilyLabels": [
+        "Anguillidae"
+      ],
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-lppwp-tmtp-colxr-20261120/matches/8492bdf028f2d5f6.json",
+        "sha256": "aeb6229a837bf62f2420c470e559fd0eff4bc230a1eafe7d5a1e31d849fd081b"
+      }
+    },
+    {
+      "queriedName": "Carangoides armatus",
+      "queryUrl": "https://api.gbif.org/v2/species/match?scientificName=Carangoides+armatus&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&kingdom=Animalia",
+      "queryParameters": {
+        "scientificName": "Carangoides armatus",
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "kingdom": "Animalia"
+      },
+      "matchType": "EXACT",
+      "confidence": 99,
+      "classification": "exact-synonym",
+      "usage": {
+        "key": "MC8KN",
+        "scientificName": "Carangoides armatus (Rüppell, 1830)",
+        "canonicalName": "Carangoides armatus",
+        "rank": "SPECIES",
+        "status": "SYNONYM",
+        "authorship": "(Rüppell, 1830)"
+      },
+      "acceptedUsage": {
+        "key": "KTYSL",
+        "scientificName": "Atropus armatus (Forsskål, 1775)",
+        "canonicalName": "Atropus armatus",
+        "rank": "SPECIES",
+        "status": null
+      },
+      "matchedFamily": "Carangidae",
+      "sourceFamilyLabels": [
+        "Carangidae"
+      ],
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-lppwp-tmtp-colxr-20261120/matches/a6f539258df9285f.json",
+        "sha256": "9117f5933d657bed35c34a9c0363657c89aeea7328506260419d0e2c93fe6923"
+      }
+    },
+    {
+      "queriedName": "Chanos chanos",
+      "queryUrl": "https://api.gbif.org/v2/species/match?scientificName=Chanos+chanos&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&kingdom=Animalia",
+      "queryParameters": {
+        "scientificName": "Chanos chanos",
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "kingdom": "Animalia"
+      },
+      "matchType": "EXACT",
+      "confidence": 100,
+      "classification": "exact-accepted-name",
+      "usage": {
+        "key": "KV4XR",
+        "scientificName": "Chanos chanos (Fabricius, 1775)",
+        "canonicalName": "Chanos chanos",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "authorship": "(Fabricius, 1775)"
+      },
+      "acceptedUsage": null,
+      "matchedFamily": "Chanidae",
+      "sourceFamilyLabels": [
+        "Chanidae"
+      ],
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-lppwp-tmtp-colxr-20261120/matches/4fa944e22c3ce72b.json",
+        "sha256": "9c27b69f8373fada3e89abf6c7850334cf286f38ed50c9dfd84d29f44d0c20f1"
+      }
+    },
+    {
+      "queriedName": "Crenimugil seheli",
+      "queryUrl": "https://api.gbif.org/v2/species/match?scientificName=Crenimugil+seheli&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&kingdom=Animalia",
+      "queryParameters": {
+        "scientificName": "Crenimugil seheli",
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "kingdom": "Animalia"
+      },
+      "matchType": "EXACT",
+      "confidence": 99,
+      "classification": "exact-accepted-name",
+      "usage": {
+        "key": "KV6ZL",
+        "scientificName": "Crenimugil seheli (Fabricius, 1775)",
+        "canonicalName": "Crenimugil seheli",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "authorship": "(Fabricius, 1775)"
+      },
+      "acceptedUsage": null,
+      "matchedFamily": "Mugilidae",
+      "sourceFamilyLabels": [
+        "Mugilidae"
+      ],
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-lppwp-tmtp-colxr-20261120/matches/8c813076a2c89648.json",
+        "sha256": "914c9ac136737a599bce2a7fc233c07909168ad7faf1ad6856494629fd8463cd"
+      }
+    },
+    {
+      "queriedName": "Eleutheronema tetradactylum",
+      "queryUrl": "https://api.gbif.org/v2/species/match?scientificName=Eleutheronema+tetradactylum&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&kingdom=Animalia",
+      "queryParameters": {
+        "scientificName": "Eleutheronema tetradactylum",
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "kingdom": "Animalia"
+      },
+      "matchType": "EXACT",
+      "confidence": 100,
+      "classification": "exact-accepted-name",
+      "usage": {
+        "key": "399W4",
+        "scientificName": "Eleutheronema tetradactylum (Shaw, 1804)",
+        "canonicalName": "Eleutheronema tetradactylum",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "authorship": "(Shaw, 1804)"
+      },
+      "acceptedUsage": null,
+      "matchedFamily": "Polynemidae",
+      "sourceFamilyLabels": [
+        "Polynemidae"
+      ],
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-lppwp-tmtp-colxr-20261120/matches/e95bf862e68b0f78.json",
+        "sha256": "c350c8bfc05ba072f721dc7ecf04a4b7c8bc9683e23aa9fcb8b40131b4f44236"
+      }
+    },
+    {
+      "queriedName": "Ellochelon vaigiensis",
+      "queryUrl": "https://api.gbif.org/v2/species/match?scientificName=Ellochelon+vaigiensis&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&kingdom=Animalia",
+      "queryParameters": {
+        "scientificName": "Ellochelon vaigiensis",
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "kingdom": "Animalia"
+      },
+      "matchType": "EXACT",
+      "confidence": 100,
+      "classification": "exact-accepted-name",
+      "usage": {
+        "key": "39BX8",
+        "scientificName": "Ellochelon vaigiensis (Quoy & Gaimard, 1825)",
+        "canonicalName": "Ellochelon vaigiensis",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "authorship": "(Quoy & Gaimard, 1825)"
+      },
+      "acceptedUsage": null,
+      "matchedFamily": "Mugilidae",
+      "sourceFamilyLabels": [
+        "Mugilidae"
+      ],
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-lppwp-tmtp-colxr-20261120/matches/8f7350de05e9bee4.json",
+        "sha256": "ba07dc446027d0a85f8721a75c2b9a594ab17bac8300a499c5ac5894f1c066f6"
+      }
+    },
+    {
+      "queriedName": "Elops hawaiensis",
+      "queryUrl": "https://api.gbif.org/v2/species/match?scientificName=Elops+hawaiensis&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&kingdom=Animalia",
+      "queryParameters": {
+        "scientificName": "Elops hawaiensis",
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "kingdom": "Animalia"
+      },
+      "matchType": "EXACT",
+      "confidence": 100,
+      "classification": "exact-accepted-name",
+      "usage": {
+        "key": "39CJ5",
+        "scientificName": "Elops hawaiensis Regan, 1909",
+        "canonicalName": "Elops hawaiensis",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "authorship": "Regan, 1909"
+      },
+      "acceptedUsage": null,
+      "matchedFamily": "Elopidae",
+      "sourceFamilyLabels": [
+        "Elopidae"
+      ],
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-lppwp-tmtp-colxr-20261120/matches/3d4895760bdfc934.json",
+        "sha256": "9f501c86365a4b1333dc372658f116c6058b15808d21d0dd85d09a149125c95a"
+      }
+    },
+    {
+      "queriedName": "Elops saurus",
+      "queryUrl": "https://api.gbif.org/v2/species/match?scientificName=Elops+saurus&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&kingdom=Animalia",
+      "queryParameters": {
+        "scientificName": "Elops saurus",
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "kingdom": "Animalia"
+      },
+      "matchType": "EXACT",
+      "confidence": 100,
+      "classification": "exact-accepted-name",
+      "usage": {
+        "key": "6F549",
+        "scientificName": "Elops saurus Linnaeus, 1766",
+        "canonicalName": "Elops saurus",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "authorship": "Linnaeus, 1766"
+      },
+      "acceptedUsage": null,
+      "matchedFamily": "Elopidae",
+      "sourceFamilyLabels": [
+        "Elopidae"
+      ],
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-lppwp-tmtp-colxr-20261120/matches/7e6a2c63fd3682f1.json",
+        "sha256": "1c455edc8139fcd183b137a62bfab2dba23578aa8b32f1161e9b17d34513e238"
+      }
+    },
+    {
+      "queriedName": "Eubleekeria splendens",
+      "queryUrl": "https://api.gbif.org/v2/species/match?scientificName=Eubleekeria+splendens&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&kingdom=Animalia",
+      "queryParameters": {
+        "scientificName": "Eubleekeria splendens",
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "kingdom": "Animalia"
+      },
+      "matchType": "EXACT",
+      "confidence": 100,
+      "classification": "exact-accepted-name",
+      "usage": {
+        "key": "6H4JC",
+        "scientificName": "Eubleekeria splendens (Cuvier, 1829)",
+        "canonicalName": "Eubleekeria splendens",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "authorship": "(Cuvier, 1829)"
+      },
+      "acceptedUsage": null,
+      "matchedFamily": "Leiognathidae",
+      "sourceFamilyLabels": [
+        "Leiognathidae"
+      ],
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-lppwp-tmtp-colxr-20261120/matches/9a96902b99f524ac.json",
+        "sha256": "37a88db396f6a903ba2d0a62151a09ceabd65ffabed093657839fedfba70e8d9"
+      }
+    },
+    {
+      "queriedName": "Gerres filamentosus",
+      "queryUrl": "https://api.gbif.org/v2/species/match?scientificName=Gerres+filamentosus&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&kingdom=Animalia",
+      "queryParameters": {
+        "scientificName": "Gerres filamentosus",
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "kingdom": "Animalia"
+      },
+      "matchType": "EXACT",
+      "confidence": 100,
+      "classification": "exact-accepted-name",
+      "usage": {
+        "key": "3FX2R",
+        "scientificName": "Gerres filamentosus Cuvier, 1829",
+        "canonicalName": "Gerres filamentosus",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "authorship": "Cuvier, 1829"
+      },
+      "acceptedUsage": null,
+      "matchedFamily": "Gerreidae",
+      "sourceFamilyLabels": [
+        "Gerridae"
+      ],
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-lppwp-tmtp-colxr-20261120/matches/1f96800c9e8aaa0a.json",
+        "sha256": "77bd9ad98527a1f08c118c414ae84f51486d9e7ee60f6bd23f37a5330a557e9e"
+      }
+    },
+    {
+      "queriedName": "Glossogobius aureus",
+      "queryUrl": "https://api.gbif.org/v2/species/match?scientificName=Glossogobius+aureus&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&kingdom=Animalia",
+      "queryParameters": {
+        "scientificName": "Glossogobius aureus",
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "kingdom": "Animalia"
+      },
+      "matchType": "EXACT",
+      "confidence": 100,
+      "classification": "exact-accepted-name",
+      "usage": {
+        "key": "3GDN8",
+        "scientificName": "Glossogobius aureus Akihito & Meguro, 1975",
+        "canonicalName": "Glossogobius aureus",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "authorship": "Akihito & Meguro, 1975"
+      },
+      "acceptedUsage": null,
+      "matchedFamily": "Gobiidae",
+      "sourceFamilyLabels": [
+        "Gobiidae"
+      ],
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-lppwp-tmtp-colxr-20261120/matches/4cf7b8f329ca20ec.json",
+        "sha256": "ad725548513e3093e1c5bda6c9e4050a2ed7a53f5d053f936a0c7f2aaa36f1d2"
+      }
+    },
+    {
+      "queriedName": "Johnius belangerii",
+      "queryUrl": "https://api.gbif.org/v2/species/match?scientificName=Johnius+belangerii&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&kingdom=Animalia",
+      "queryParameters": {
+        "scientificName": "Johnius belangerii",
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "kingdom": "Animalia"
+      },
+      "matchType": "EXACT",
+      "confidence": 100,
+      "classification": "exact-accepted-name",
+      "usage": {
+        "key": "3QQ4J",
+        "scientificName": "Johnius belangerii (Cuvier, 1830)",
+        "canonicalName": "Johnius belangerii",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "authorship": "(Cuvier, 1830)"
+      },
+      "acceptedUsage": null,
+      "matchedFamily": "Sciaenidae",
+      "sourceFamilyLabels": [
+        "Sciaenidae"
+      ],
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-lppwp-tmtp-colxr-20261120/matches/c2edc0adb648aef9.json",
+        "sha256": "3bfaf74cea11322a0500b5979e6caca5b556539bee38f2437cbd01000d19f75c"
+      }
+    },
+    {
+      "queriedName": "Leiognathus equula",
+      "queryUrl": "https://api.gbif.org/v2/species/match?scientificName=Leiognathus+equula&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&kingdom=Animalia",
+      "queryParameters": {
+        "scientificName": "Leiognathus equula",
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "kingdom": "Animalia"
+      },
+      "matchType": "EXACT",
+      "confidence": 100,
+      "classification": "exact-accepted-name",
+      "usage": {
+        "key": "3SYNG",
+        "scientificName": "Leiognathus equula (Forsskål, 1775)",
+        "canonicalName": "Leiognathus equula",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "authorship": "(Forsskål, 1775)"
+      },
+      "acceptedUsage": null,
+      "matchedFamily": "Leiognathidae",
+      "sourceFamilyLabels": [
+        "Leiognathidae"
+      ],
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-lppwp-tmtp-colxr-20261120/matches/33af867e9ef4d1e8.json",
+        "sha256": "ea4a966b32d97bad37fa554b87192a2caec31fb2f048bcf410a396ffaf07ad62"
+      }
+    },
+    {
+      "queriedName": "Megalops cyprinoides",
+      "queryUrl": "https://api.gbif.org/v2/species/match?scientificName=Megalops+cyprinoides&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&kingdom=Animalia",
+      "queryParameters": {
+        "scientificName": "Megalops cyprinoides",
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "kingdom": "Animalia"
+      },
+      "matchType": "EXACT",
+      "confidence": 100,
+      "classification": "exact-accepted-name",
+      "usage": {
+        "key": "3YVJV",
+        "scientificName": "Megalops cyprinoides (Broussonet, 1782)",
+        "canonicalName": "Megalops cyprinoides",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "authorship": "(Broussonet, 1782)"
+      },
+      "acceptedUsage": null,
+      "matchedFamily": "Megalopidae",
+      "sourceFamilyLabels": [
+        "Megalopidae"
+      ],
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-lppwp-tmtp-colxr-20261120/matches/333510968a2c4e5a.json",
+        "sha256": "f55a127ea49b3a3ae7c37811581ecb90b8b04d670924e9ecce8238e3238ec95c"
+      }
+    },
+    {
+      "queriedName": "Mugil cephalus",
+      "queryUrl": "https://api.gbif.org/v2/species/match?scientificName=Mugil+cephalus&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&kingdom=Animalia",
+      "queryParameters": {
+        "scientificName": "Mugil cephalus",
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "kingdom": "Animalia"
+      },
+      "matchType": "EXACT",
+      "confidence": 100,
+      "classification": "exact-accepted-name",
+      "usage": {
+        "key": "44J42",
+        "scientificName": "Mugil cephalus Linnaeus, 1758",
+        "canonicalName": "Mugil cephalus",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "authorship": "Linnaeus, 1758"
+      },
+      "acceptedUsage": null,
+      "matchedFamily": "Mugilidae",
+      "sourceFamilyLabels": [
+        "Mugilidae"
+      ],
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-lppwp-tmtp-colxr-20261120/matches/bf73702c6a113ead.json",
+        "sha256": "5b6e635b79afba09518a58638cdd5c890c7194d4594ae9aa7c3c8ee844a40f25"
+      }
+    },
+    {
+      "queriedName": "Nematalosa nasus",
+      "queryUrl": "https://api.gbif.org/v2/species/match?scientificName=Nematalosa+nasus&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&kingdom=Animalia",
+      "queryParameters": {
+        "scientificName": "Nematalosa nasus",
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "kingdom": "Animalia"
+      },
+      "matchType": "EXACT",
+      "confidence": 100,
+      "classification": "exact-accepted-name",
+      "usage": {
+        "key": "466LT",
+        "scientificName": "Nematalosa nasus (Bloch, 1795)",
+        "canonicalName": "Nematalosa nasus",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "authorship": "(Bloch, 1795)"
+      },
+      "acceptedUsage": null,
+      "matchedFamily": "Dorosomatidae",
+      "sourceFamilyLabels": [
+        "Dorosomatidae"
+      ],
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-lppwp-tmtp-colxr-20261120/matches/b93359dec0abc5a2.json",
+        "sha256": "ea7b6185a9f5a9b424ffc29d7c4329d8c61b3aeb8d92945fc683b1fcc4c893db"
+      }
+    },
+    {
+      "queriedName": "Nemipterus japonicus",
+      "queryUrl": "https://api.gbif.org/v2/species/match?scientificName=Nemipterus+japonicus&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&kingdom=Animalia",
+      "queryParameters": {
+        "scientificName": "Nemipterus japonicus",
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "kingdom": "Animalia"
+      },
+      "matchType": "EXACT",
+      "confidence": 100,
+      "classification": "exact-accepted-name",
+      "usage": {
+        "key": "467ZF",
+        "scientificName": "Nemipterus japonicus (Bloch, 1791)",
+        "canonicalName": "Nemipterus japonicus",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "authorship": "(Bloch, 1791)"
+      },
+      "acceptedUsage": null,
+      "matchedFamily": "Nemipteridae",
+      "sourceFamilyLabels": [
+        "Nemipteridae"
+      ],
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-lppwp-tmtp-colxr-20261120/matches/4f9d838fadfb7d44.json",
+        "sha256": "6e9a1afd2bced4e561a886cc6fbf15965bd4ddbd7438a74f6086cae943b2a2c0"
+      }
+    },
+    {
+      "queriedName": "Oxyurichthys microlepis",
+      "queryUrl": "https://api.gbif.org/v2/species/match?scientificName=Oxyurichthys+microlepis&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&kingdom=Animalia",
+      "queryParameters": {
+        "scientificName": "Oxyurichthys microlepis",
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "kingdom": "Animalia"
+      },
+      "matchType": "EXACT",
+      "confidence": 100,
+      "classification": "exact-accepted-name",
+      "usage": {
+        "key": "4BMQK",
+        "scientificName": "Oxyurichthys microlepis (Bleeker, 1849)",
+        "canonicalName": "Oxyurichthys microlepis",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "authorship": "(Bleeker, 1849)"
+      },
+      "acceptedUsage": null,
+      "matchedFamily": "Gobiidae",
+      "sourceFamilyLabels": [
+        "Gobiidae"
+      ],
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-lppwp-tmtp-colxr-20261120/matches/ce2c45277c39e1c8.json",
+        "sha256": "d935f580294ecb13c0c0c39784fc21f374c6d598b2e184624990cee7c8984fed"
+      }
+    },
+    {
+      "queriedName": "Pelates quadrilineatus",
+      "queryUrl": "https://api.gbif.org/v2/species/match?scientificName=Pelates+quadrilineatus&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&kingdom=Animalia",
+      "queryParameters": {
+        "scientificName": "Pelates quadrilineatus",
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "kingdom": "Animalia"
+      },
+      "matchType": "EXACT",
+      "confidence": 100,
+      "classification": "exact-accepted-name",
+      "usage": {
+        "key": "6TZ73",
+        "scientificName": "Pelates quadrilineatus (Bloch, 1790)",
+        "canonicalName": "Pelates quadrilineatus",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "authorship": "(Bloch, 1790)"
+      },
+      "acceptedUsage": null,
+      "matchedFamily": "Terapontidae",
+      "sourceFamilyLabels": [
+        "Terapontidae"
+      ],
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-lppwp-tmtp-colxr-20261120/matches/8aac4a558b3b8925.json",
+        "sha256": "a8e8160777c367d2c9fce3c22017be3629d015066142b23a773b72137dbfcfb4"
+      }
+    },
+    {
+      "queriedName": "Platycephalus indicus",
+      "queryUrl": "https://api.gbif.org/v2/species/match?scientificName=Platycephalus+indicus&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&kingdom=Animalia",
+      "queryParameters": {
+        "scientificName": "Platycephalus indicus",
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "kingdom": "Animalia"
+      },
+      "matchType": "EXACT",
+      "confidence": 100,
+      "classification": "exact-accepted-name",
+      "usage": {
+        "key": "4JP4M",
+        "scientificName": "Platycephalus indicus (Linnaeus, 1758)",
+        "canonicalName": "Platycephalus indicus",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "authorship": "(Linnaeus, 1758)"
+      },
+      "acceptedUsage": null,
+      "matchedFamily": "Platycephalidae",
+      "sourceFamilyLabels": [
+        "Platycephalidae"
+      ],
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-lppwp-tmtp-colxr-20261120/matches/d396cd8781b05c32.json",
+        "sha256": "fe723e6298514afa2eab8686244165a5b5a268739c7c69e31a96b8c3868a7618"
+      }
+    },
+    {
+      "queriedName": "Pomadasys kaakan",
+      "queryUrl": "https://api.gbif.org/v2/species/match?scientificName=Pomadasys+kaakan&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&kingdom=Animalia",
+      "queryParameters": {
+        "scientificName": "Pomadasys kaakan",
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "kingdom": "Animalia"
+      },
+      "matchType": "EXACT",
+      "confidence": 100,
+      "classification": "exact-accepted-name",
+      "usage": {
+        "key": "4LQLG",
+        "scientificName": "Pomadasys kaakan (Cuvier, 1830)",
+        "canonicalName": "Pomadasys kaakan",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "authorship": "(Cuvier, 1830)"
+      },
+      "acceptedUsage": null,
+      "matchedFamily": "Haemulidae",
+      "sourceFamilyLabels": [
+        "Haemulidae"
+      ],
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-lppwp-tmtp-colxr-20261120/matches/9da3759b883bdecc.json",
+        "sha256": "3b03cbca243837845c85a9989a2e85225deaef3c88b6f152792bc6583f6b4a5f"
+      }
+    },
+    {
+      "queriedName": "Rastrelliger brachysoma",
+      "queryUrl": "https://api.gbif.org/v2/species/match?scientificName=Rastrelliger+brachysoma&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&kingdom=Animalia",
+      "queryParameters": {
+        "scientificName": "Rastrelliger brachysoma",
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "kingdom": "Animalia"
+      },
+      "matchType": "EXACT",
+      "confidence": 100,
+      "classification": "exact-accepted-name",
+      "usage": {
+        "key": "4RLTD",
+        "scientificName": "Rastrelliger brachysoma (Bleeker, 1851)",
+        "canonicalName": "Rastrelliger brachysoma",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "authorship": "(Bleeker, 1851)"
+      },
+      "acceptedUsage": null,
+      "matchedFamily": "Scombridae",
+      "sourceFamilyLabels": [
+        "Scombridae"
+      ],
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-lppwp-tmtp-colxr-20261120/matches/8d0a3ce0cb742ec4.json",
+        "sha256": "fd33c02e1d877b6c38695f6887eb325a9f9e28bfb527063b7a82039e7504eaa0"
+      }
+    },
+    {
+      "queriedName": "Remora remora",
+      "queryUrl": "https://api.gbif.org/v2/species/match?scientificName=Remora+remora&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&kingdom=Animalia",
+      "queryParameters": {
+        "scientificName": "Remora remora",
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "kingdom": "Animalia"
+      },
+      "matchType": "EXACT",
+      "confidence": 100,
+      "classification": "exact-accepted-name",
+      "usage": {
+        "key": "4RRHV",
+        "scientificName": "Remora remora (Linnaeus, 1758)",
+        "canonicalName": "Remora remora",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "authorship": "(Linnaeus, 1758)"
+      },
+      "acceptedUsage": null,
+      "matchedFamily": "Echeneidae",
+      "sourceFamilyLabels": [
+        "Echeneidae"
+      ],
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-lppwp-tmtp-colxr-20261120/matches/da5669733684a653.json",
+        "sha256": "c261e5b10e481c1c39efa651e3a0d8ac21268b0f2ee58c6af2fe2a542f964438"
+      }
+    },
+    {
+      "queriedName": "Sardinella fimbriata",
+      "queryUrl": "https://api.gbif.org/v2/species/match?scientificName=Sardinella+fimbriata&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&kingdom=Animalia",
+      "queryParameters": {
+        "scientificName": "Sardinella fimbriata",
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "kingdom": "Animalia"
+      },
+      "matchType": "EXACT",
+      "confidence": 100,
+      "classification": "exact-accepted-name",
+      "usage": {
+        "key": "6XMLT",
+        "scientificName": "Sardinella fimbriata (Valenciennes, 1847)",
+        "canonicalName": "Sardinella fimbriata",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "authorship": "(Valenciennes, 1847)"
+      },
+      "acceptedUsage": null,
+      "matchedFamily": "Dorosomatidae",
+      "sourceFamilyLabels": [
+        "Dorosomatidae"
+      ],
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-lppwp-tmtp-colxr-20261120/matches/67dff0ccde1a903f.json",
+        "sha256": "637c49d9d333d946cf7c70461a367594949f6d63536b070ed23262e5eeb9017b"
+      }
+    },
+    {
+      "queriedName": "Sarotherodon melanotheron",
+      "queryUrl": "https://api.gbif.org/v2/species/match?scientificName=Sarotherodon+melanotheron&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&kingdom=Animalia",
+      "queryParameters": {
+        "scientificName": "Sarotherodon melanotheron",
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "kingdom": "Animalia"
+      },
+      "matchType": "EXACT",
+      "confidence": 100,
+      "classification": "exact-accepted-name",
+      "usage": {
+        "key": "79PHB",
+        "scientificName": "Sarotherodon melanotheron Rüppell, 1852",
+        "canonicalName": "Sarotherodon melanotheron",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "authorship": "Rüppell, 1852"
+      },
+      "acceptedUsage": null,
+      "matchedFamily": "Cichlidae",
+      "sourceFamilyLabels": [
+        "Cichlidae"
+      ],
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-lppwp-tmtp-colxr-20261120/matches/b7a0a7de267b1d82.json",
+        "sha256": "b025dda7cc5373dcd0563f7d882b747dea2a8910359b72238a2471156d86280c"
+      }
+    },
+    {
+      "queriedName": "Saurida tumbil",
+      "queryUrl": "https://api.gbif.org/v2/species/match?scientificName=Saurida+tumbil&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&kingdom=Animalia",
+      "queryParameters": {
+        "scientificName": "Saurida tumbil",
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "kingdom": "Animalia"
+      },
+      "matchType": "EXACT",
+      "confidence": 100,
+      "classification": "exact-accepted-name",
+      "usage": {
+        "key": "6XQ8C",
+        "scientificName": "Saurida tumbil (Bloch, 1795)",
+        "canonicalName": "Saurida tumbil",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "authorship": "(Bloch, 1795)"
+      },
+      "acceptedUsage": null,
+      "matchedFamily": "Harpadontidae",
+      "sourceFamilyLabels": [
+        "Dorosomatidae"
+      ],
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-lppwp-tmtp-colxr-20261120/matches/db93f7bc57688f38.json",
+        "sha256": "0bf22bdf48fb4029f15f0d5f4bfce8d9f6fdfcaac6738979624d9456c2a3bc10"
+      }
+    },
+    {
+      "queriedName": "Scatophagus argus",
+      "queryUrl": "https://api.gbif.org/v2/species/match?scientificName=Scatophagus+argus&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&kingdom=Animalia",
+      "queryParameters": {
+        "scientificName": "Scatophagus argus",
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "kingdom": "Animalia"
+      },
+      "matchType": "EXACT",
+      "confidence": 100,
+      "classification": "exact-accepted-name",
+      "usage": {
+        "key": "4V435",
+        "scientificName": "Scatophagus argus (Linnaeus, 1766)",
+        "canonicalName": "Scatophagus argus",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "authorship": "(Linnaeus, 1766)"
+      },
+      "acceptedUsage": null,
+      "matchedFamily": "Scatophagidae",
+      "sourceFamilyLabels": [
+        "Scatophagidae"
+      ],
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-lppwp-tmtp-colxr-20261120/matches/571b8cf0fe8189fe.json",
+        "sha256": "248398b2e085a2f938956452b30c6e7d1720381ae9e988c52b4b4b81be428085"
+      }
+    },
+    {
+      "queriedName": "Selaroides leptolepis",
+      "queryUrl": "https://api.gbif.org/v2/species/match?scientificName=Selaroides+leptolepis&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&kingdom=Animalia",
+      "queryParameters": {
+        "scientificName": "Selaroides leptolepis",
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "kingdom": "Animalia"
+      },
+      "matchType": "EXACT",
+      "confidence": 100,
+      "classification": "exact-accepted-name",
+      "usage": {
+        "key": "4WD5B",
+        "scientificName": "Selaroides leptolepis (Cuvier, 1833)",
+        "canonicalName": "Selaroides leptolepis",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "authorship": "(Cuvier, 1833)"
+      },
+      "acceptedUsage": null,
+      "matchedFamily": "Carangidae",
+      "sourceFamilyLabels": [
+        "Carangidae"
+      ],
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-lppwp-tmtp-colxr-20261120/matches/2cd5b2f9f42c5b34.json",
+        "sha256": "66ed9214b768aabfa5f141eb48c9522c18438574074d733e5fbdc80c744744ea"
+      }
+    },
+    {
+      "queriedName": "Sillago sihama",
+      "queryUrl": "https://api.gbif.org/v2/species/match?scientificName=Sillago+sihama&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&kingdom=Animalia",
+      "queryParameters": {
+        "scientificName": "Sillago sihama",
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "kingdom": "Animalia"
+      },
+      "matchType": "EXACT",
+      "confidence": 99,
+      "classification": "exact-accepted-name",
+      "usage": {
+        "key": "4XDQL",
+        "scientificName": "Sillago sihama (Forsskål, 1775)",
+        "canonicalName": "Sillago sihama",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "authorship": "(Forsskål, 1775)"
+      },
+      "acceptedUsage": null,
+      "matchedFamily": "Sillaginidae",
+      "sourceFamilyLabels": [
+        "Sillaginidae"
+      ],
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-lppwp-tmtp-colxr-20261120/matches/a7f107cb7d922eea.json",
+        "sha256": "e1701a4695c9f4c8e963f56598aebb8254e882f0a1272dff94a13e97a8a9029e"
+      }
+    },
+    {
+      "queriedName": "Terapon jarbua",
+      "queryUrl": "https://api.gbif.org/v2/species/match?scientificName=Terapon+jarbua&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&kingdom=Animalia",
+      "queryParameters": {
+        "scientificName": "Terapon jarbua",
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "kingdom": "Animalia"
+      },
+      "matchType": "EXACT",
+      "confidence": 99,
+      "classification": "exact-accepted-name",
+      "usage": {
+        "key": "55DL2",
+        "scientificName": "Terapon jarbua (Forsskål, 1775)",
+        "canonicalName": "Terapon jarbua",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "authorship": "(Forsskål, 1775)"
+      },
+      "acceptedUsage": null,
+      "matchedFamily": "Terapontidae",
+      "sourceFamilyLabels": [
+        "Terapontidae"
+      ],
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-lppwp-tmtp-colxr-20261120/matches/153ae094726c2fd8.json",
+        "sha256": "38fa8aaec93ffee272ed9b4ba508ec27dd2be556e789499af00e67a4a7c22b2b"
+      }
+    },
+    {
+      "queriedName": "Tor tambroides",
+      "queryUrl": "https://api.gbif.org/v2/species/match?scientificName=Tor+tambroides&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&kingdom=Animalia",
+      "queryParameters": {
+        "scientificName": "Tor tambroides",
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "kingdom": "Animalia"
+      },
+      "matchType": "EXACT",
+      "confidence": 99,
+      "classification": "exact-accepted-name",
+      "usage": {
+        "key": "57FBV",
+        "scientificName": "Tor tambroides (Bleeker, 1854)",
+        "canonicalName": "Tor tambroides",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "authorship": "(Bleeker, 1854)"
+      },
+      "acceptedUsage": null,
+      "matchedFamily": "Cyprinidae",
+      "sourceFamilyLabels": [
+        "Cyprinidae"
+      ],
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-lppwp-tmtp-colxr-20261120/matches/5ba8f3e8f64202bd.json",
+        "sha256": "1195fc50c2bc43ff385d9a948432a98c69f34cf3f6666da0e00735215cea83f2"
+      }
+    },
+    {
+      "queriedName": "Trichopodus trichopterus",
+      "queryUrl": "https://api.gbif.org/v2/species/match?scientificName=Trichopodus+trichopterus&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&kingdom=Animalia",
+      "queryParameters": {
+        "scientificName": "Trichopodus trichopterus",
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "kingdom": "Animalia"
+      },
+      "matchType": "EXACT",
+      "confidence": 99,
+      "classification": "exact-accepted-name",
+      "usage": {
+        "key": "7D4QX",
+        "scientificName": "Trichopodus trichopterus (Pallas, 1770)",
+        "canonicalName": "Trichopodus trichopterus",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "authorship": "(Pallas, 1770)"
+      },
+      "acceptedUsage": null,
+      "matchedFamily": "Osphronemidae",
+      "sourceFamilyLabels": [
+        "Osphronemidae"
+      ],
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-lppwp-tmtp-colxr-20261120/matches/29792f78ad9693f6.json",
+        "sha256": "0209377b1926ef5e90b658d97e4ad499f72c40c79b8549ef875a025f10050df8"
+      }
+    },
+    {
+      "queriedName": "Trixiphichthys weberi",
+      "queryUrl": "https://api.gbif.org/v2/species/match?scientificName=Trixiphichthys+weberi&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&kingdom=Animalia",
+      "queryParameters": {
+        "scientificName": "Trixiphichthys weberi",
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "kingdom": "Animalia"
+      },
+      "matchType": "EXACT",
+      "confidence": 100,
+      "classification": "exact-accepted-name",
+      "usage": {
+        "key": "59662",
+        "scientificName": "Trixiphichthys weberi (Chaudhuri, 1910)",
+        "canonicalName": "Trixiphichthys weberi",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "authorship": "(Chaudhuri, 1910)"
+      },
+      "acceptedUsage": null,
+      "matchedFamily": "Triacanthidae",
+      "sourceFamilyLabels": [
+        "Triacanthidae"
+      ],
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-lppwp-tmtp-colxr-20261120/matches/e48f57b43cb15e29.json",
+        "sha256": "0a6f20c7ed37cfc97a78cdcf2a1a129d5322747c0ed95ad7cf7d717c9876f309"
+      }
+    }
+  ],
+  "sourceRows": [
+    {
+      "sourceRow": 1,
+      "site": "LPPWP",
+      "table": "4.E.1",
+      "familyAsPrinted": "Ambassidae",
+      "nameAsPrinted": "Ambassis gymnocephalus",
+      "lookupStatus": "exact-accepted-name",
+      "nameMatchQuery": "Ambassis gymnocephalus",
+      "matchedFamily": "Ambassidae",
+      "sourceFamilyExactTextMatch": true
+    },
+    {
+      "sourceRow": 2,
+      "site": "LPPWP",
+      "table": "4.E.1",
+      "familyAsPrinted": "Carangidae",
+      "nameAsPrinted": "Caranx sp.",
+      "lookupStatus": "not-queried-non-binomial-source-label",
+      "nameMatchQuery": null,
+      "matchedFamily": null,
+      "sourceFamilyExactTextMatch": null
+    },
+    {
+      "sourceRow": 3,
+      "site": "LPPWP",
+      "table": "4.E.1",
+      "familyAsPrinted": "Carangidae",
+      "nameAsPrinted": "Selaroides leptolepis",
+      "lookupStatus": "exact-accepted-name",
+      "nameMatchQuery": "Selaroides leptolepis",
+      "matchedFamily": "Carangidae",
+      "sourceFamilyExactTextMatch": true
+    },
+    {
+      "sourceRow": 4,
+      "site": "LPPWP",
+      "table": "4.E.1",
+      "familyAsPrinted": "Carangidae",
+      "nameAsPrinted": "Scomberoides sp.",
+      "lookupStatus": "not-queried-non-binomial-source-label",
+      "nameMatchQuery": null,
+      "matchedFamily": null,
+      "sourceFamilyExactTextMatch": null
+    },
+    {
+      "sourceRow": 5,
+      "site": "LPPWP",
+      "table": "4.E.1",
+      "familyAsPrinted": "Cichlidae",
+      "nameAsPrinted": "Sarotherodon melanotheron",
+      "lookupStatus": "exact-accepted-name",
+      "nameMatchQuery": "Sarotherodon melanotheron",
+      "matchedFamily": "Cichlidae",
+      "sourceFamilyExactTextMatch": true
+    },
+    {
+      "sourceRow": 6,
+      "site": "LPPWP",
+      "table": "4.E.1",
+      "familyAsPrinted": "Dorosomatidae",
+      "nameAsPrinted": "Sardinela sp.",
+      "lookupStatus": "not-queried-non-binomial-source-label",
+      "nameMatchQuery": null,
+      "matchedFamily": null,
+      "sourceFamilyExactTextMatch": null
+    },
+    {
+      "sourceRow": 7,
+      "site": "LPPWP",
+      "table": "4.E.1",
+      "familyAsPrinted": "Dorosomatidae",
+      "nameAsPrinted": "Nematalosa nasus",
+      "lookupStatus": "exact-accepted-name",
+      "nameMatchQuery": "Nematalosa nasus",
+      "matchedFamily": "Dorosomatidae",
+      "sourceFamilyExactTextMatch": true
+    },
+    {
+      "sourceRow": 8,
+      "site": "LPPWP",
+      "table": "4.E.1",
+      "familyAsPrinted": "Elopidae",
+      "nameAsPrinted": "Elops saurus",
+      "lookupStatus": "exact-accepted-name",
+      "nameMatchQuery": "Elops saurus",
+      "matchedFamily": "Elopidae",
+      "sourceFamilyExactTextMatch": true
+    },
+    {
+      "sourceRow": 9,
+      "site": "LPPWP",
+      "table": "4.E.1",
+      "familyAsPrinted": "Gerridae",
+      "nameAsPrinted": "Gerres filamentosus",
+      "lookupStatus": "exact-accepted-name",
+      "nameMatchQuery": "Gerres filamentosus",
+      "matchedFamily": "Gerreidae",
+      "sourceFamilyExactTextMatch": false
+    },
+    {
+      "sourceRow": 10,
+      "site": "LPPWP",
+      "table": "4.E.1",
+      "familyAsPrinted": "Gobiidae",
+      "nameAsPrinted": "Amblygobius sp.",
+      "lookupStatus": "not-queried-non-binomial-source-label",
+      "nameMatchQuery": null,
+      "matchedFamily": null,
+      "sourceFamilyExactTextMatch": null
+    },
+    {
+      "sourceRow": 11,
+      "site": "LPPWP",
+      "table": "4.E.1",
+      "familyAsPrinted": "Hemiramphidae",
+      "nameAsPrinted": "Hemiramphus sp.",
+      "lookupStatus": "not-queried-non-binomial-source-label",
+      "nameMatchQuery": null,
+      "matchedFamily": null,
+      "sourceFamilyExactTextMatch": null
+    },
+    {
+      "sourceRow": 12,
+      "site": "LPPWP",
+      "table": "4.E.1",
+      "familyAsPrinted": "Leiognathidae",
+      "nameAsPrinted": "Leignathus sp.",
+      "lookupStatus": "not-queried-non-binomial-source-label",
+      "nameMatchQuery": null,
+      "matchedFamily": null,
+      "sourceFamilyExactTextMatch": null
+    },
+    {
+      "sourceRow": 13,
+      "site": "LPPWP",
+      "table": "4.E.1",
+      "familyAsPrinted": "Megalopidae",
+      "nameAsPrinted": "Megalops cyprinoides",
+      "lookupStatus": "exact-accepted-name",
+      "nameMatchQuery": "Megalops cyprinoides",
+      "matchedFamily": "Megalopidae",
+      "sourceFamilyExactTextMatch": true
+    },
+    {
+      "sourceRow": 14,
+      "site": "LPPWP",
+      "table": "4.E.1",
+      "familyAsPrinted": "Mugilidae",
+      "nameAsPrinted": "Crenimugil seheli",
+      "lookupStatus": "exact-accepted-name",
+      "nameMatchQuery": "Crenimugil seheli",
+      "matchedFamily": "Mugilidae",
+      "sourceFamilyExactTextMatch": true
+    },
+    {
+      "sourceRow": 15,
+      "site": "LPPWP",
+      "table": "4.E.1",
+      "familyAsPrinted": "Mugilidae",
+      "nameAsPrinted": "Mugil cephalus",
+      "lookupStatus": "exact-accepted-name",
+      "nameMatchQuery": "Mugil cephalus",
+      "matchedFamily": "Mugilidae",
+      "sourceFamilyExactTextMatch": true
+    },
+    {
+      "sourceRow": 16,
+      "site": "LPPWP",
+      "table": "4.E.1",
+      "familyAsPrinted": "Mugilidae",
+      "nameAsPrinted": "Ellochelon vaigiensis",
+      "lookupStatus": "exact-accepted-name",
+      "nameMatchQuery": "Ellochelon vaigiensis",
+      "matchedFamily": "Mugilidae",
+      "sourceFamilyExactTextMatch": true
+    },
+    {
+      "sourceRow": 17,
+      "site": "LPPWP",
+      "table": "4.E.1",
+      "familyAsPrinted": "Osphronemidae",
+      "nameAsPrinted": "Trichopodus trichopterus",
+      "lookupStatus": "exact-accepted-name",
+      "nameMatchQuery": "Trichopodus trichopterus",
+      "matchedFamily": "Osphronemidae",
+      "sourceFamilyExactTextMatch": true
+    },
+    {
+      "sourceRow": 18,
+      "site": "LPPWP",
+      "table": "4.E.1",
+      "familyAsPrinted": "Serranidae",
+      "nameAsPrinted": "Epinephelus sp.",
+      "lookupStatus": "not-queried-non-binomial-source-label",
+      "nameMatchQuery": null,
+      "matchedFamily": null,
+      "sourceFamilyExactTextMatch": null
+    },
+    {
+      "sourceRow": 19,
+      "site": "LPPWP",
+      "table": "4.E.1",
+      "familyAsPrinted": "Terapontidae",
+      "nameAsPrinted": "Pelates quadrilineatus",
+      "lookupStatus": "exact-accepted-name",
+      "nameMatchQuery": "Pelates quadrilineatus",
+      "matchedFamily": "Terapontidae",
+      "sourceFamilyExactTextMatch": true
+    },
+    {
+      "sourceRow": 20,
+      "site": "LPPWP",
+      "table": "4.E.1",
+      "familyAsPrinted": "Tetraodontidae",
+      "nameAsPrinted": "Arothron sp.",
+      "lookupStatus": "not-queried-non-binomial-source-label",
+      "nameMatchQuery": null,
+      "matchedFamily": null,
+      "sourceFamilyExactTextMatch": null
+    },
+    {
+      "sourceRow": 21,
+      "site": "TMTP",
+      "table": "4.F.1",
+      "familyAsPrinted": "Ambassidae",
+      "nameAsPrinted": "Ambassis gymnocephalus",
+      "lookupStatus": "exact-accepted-name",
+      "nameMatchQuery": "Ambassis gymnocephalus",
+      "matchedFamily": "Ambassidae",
+      "sourceFamilyExactTextMatch": true
+    },
+    {
+      "sourceRow": 22,
+      "site": "TMTP",
+      "table": "4.F.1",
+      "familyAsPrinted": "Ambassidae",
+      "nameAsPrinted": "Ambassis sp. 1",
+      "lookupStatus": "not-queried-non-binomial-source-label",
+      "nameMatchQuery": null,
+      "matchedFamily": null,
+      "sourceFamilyExactTextMatch": null
+    },
+    {
+      "sourceRow": 23,
+      "site": "TMTP",
+      "table": "4.F.1",
+      "familyAsPrinted": "Ambassidae",
+      "nameAsPrinted": "Ambassis sp. 2",
+      "lookupStatus": "not-queried-non-binomial-source-label",
+      "nameMatchQuery": null,
+      "matchedFamily": null,
+      "sourceFamilyExactTextMatch": null
+    },
+    {
+      "sourceRow": 24,
+      "site": "TMTP",
+      "table": "4.F.1",
+      "familyAsPrinted": "Ambassidae",
+      "nameAsPrinted": "Ambassis marianus",
+      "lookupStatus": "exact-accepted-name",
+      "nameMatchQuery": "Ambassis marianus",
+      "matchedFamily": "Ambassidae",
+      "sourceFamilyExactTextMatch": true
+    },
+    {
+      "sourceRow": 25,
+      "site": "TMTP",
+      "table": "4.F.1",
+      "familyAsPrinted": "Anguillidae",
+      "nameAsPrinted": "Anguilla marmorata",
+      "lookupStatus": "exact-accepted-name",
+      "nameMatchQuery": "Anguilla marmorata",
+      "matchedFamily": "Anguillidae",
+      "sourceFamilyExactTextMatch": true
+    },
+    {
+      "sourceRow": 26,
+      "site": "TMTP",
+      "table": "4.F.1",
+      "familyAsPrinted": "Carangidae",
+      "nameAsPrinted": "Carangoides armatus",
+      "lookupStatus": "exact-synonym",
+      "nameMatchQuery": "Carangoides armatus",
+      "matchedFamily": "Carangidae",
+      "sourceFamilyExactTextMatch": true
+    },
+    {
+      "sourceRow": 27,
+      "site": "TMTP",
+      "table": "4.F.1",
+      "familyAsPrinted": "Carangidae",
+      "nameAsPrinted": "Caranx sp.",
+      "lookupStatus": "not-queried-non-binomial-source-label",
+      "nameMatchQuery": null,
+      "matchedFamily": null,
+      "sourceFamilyExactTextMatch": null
+    },
+    {
+      "sourceRow": 28,
+      "site": "TMTP",
+      "table": "4.F.1",
+      "familyAsPrinted": "Carangidae",
+      "nameAsPrinted": "Scomberoides sp.",
+      "lookupStatus": "not-queried-non-binomial-source-label",
+      "nameMatchQuery": null,
+      "matchedFamily": null,
+      "sourceFamilyExactTextMatch": null
+    },
+    {
+      "sourceRow": 29,
+      "site": "TMTP",
+      "table": "4.F.1",
+      "familyAsPrinted": "Chanidae",
+      "nameAsPrinted": "Chanos chanos",
+      "lookupStatus": "exact-accepted-name",
+      "nameMatchQuery": "Chanos chanos",
+      "matchedFamily": "Chanidae",
+      "sourceFamilyExactTextMatch": true
+    },
+    {
+      "sourceRow": 30,
+      "site": "TMTP",
+      "table": "4.F.1",
+      "familyAsPrinted": "Cichlidae",
+      "nameAsPrinted": "Sarotherodon melanotheron",
+      "lookupStatus": "exact-accepted-name",
+      "nameMatchQuery": "Sarotherodon melanotheron",
+      "matchedFamily": "Cichlidae",
+      "sourceFamilyExactTextMatch": true
+    },
+    {
+      "sourceRow": 31,
+      "site": "TMTP",
+      "table": "4.F.1",
+      "familyAsPrinted": "Cynoglossidae",
+      "nameAsPrinted": "Paraplagusia sp.",
+      "lookupStatus": "not-queried-non-binomial-source-label",
+      "nameMatchQuery": null,
+      "matchedFamily": null,
+      "sourceFamilyExactTextMatch": null
+    },
+    {
+      "sourceRow": 32,
+      "site": "TMTP",
+      "table": "4.F.1",
+      "familyAsPrinted": "Cyprinidae",
+      "nameAsPrinted": "Tor tambroides",
+      "lookupStatus": "exact-accepted-name",
+      "nameMatchQuery": "Tor tambroides",
+      "matchedFamily": "Cyprinidae",
+      "sourceFamilyExactTextMatch": true
+    },
+    {
+      "sourceRow": 33,
+      "site": "TMTP",
+      "table": "4.F.1",
+      "familyAsPrinted": "Dorosomatidae",
+      "nameAsPrinted": "Saurida tumbil",
+      "lookupStatus": "exact-accepted-name",
+      "nameMatchQuery": "Saurida tumbil",
+      "matchedFamily": "Harpadontidae",
+      "sourceFamilyExactTextMatch": false
+    },
+    {
+      "sourceRow": 34,
+      "site": "TMTP",
+      "table": "4.F.1",
+      "familyAsPrinted": "Dorosomatidae",
+      "nameAsPrinted": "Anodontostoma sp.",
+      "lookupStatus": "not-queried-non-binomial-source-label",
+      "nameMatchQuery": null,
+      "matchedFamily": null,
+      "sourceFamilyExactTextMatch": null
+    },
+    {
+      "sourceRow": 35,
+      "site": "TMTP",
+      "table": "4.F.1",
+      "familyAsPrinted": "Dorosomatidae",
+      "nameAsPrinted": "Sardinella fimbriata",
+      "lookupStatus": "exact-accepted-name",
+      "nameMatchQuery": "Sardinella fimbriata",
+      "matchedFamily": "Dorosomatidae",
+      "sourceFamilyExactTextMatch": true
+    },
+    {
+      "sourceRow": 36,
+      "site": "TMTP",
+      "table": "4.F.1",
+      "familyAsPrinted": "Dorosomatidae",
+      "nameAsPrinted": "Sardinella sp.",
+      "lookupStatus": "not-queried-non-binomial-source-label",
+      "nameMatchQuery": null,
+      "matchedFamily": null,
+      "sourceFamilyExactTextMatch": null
+    },
+    {
+      "sourceRow": 37,
+      "site": "TMTP",
+      "table": "4.F.1",
+      "familyAsPrinted": "Dorosomatidae",
+      "nameAsPrinted": "Nematalosa nasus",
+      "lookupStatus": "exact-accepted-name",
+      "nameMatchQuery": "Nematalosa nasus",
+      "matchedFamily": "Dorosomatidae",
+      "sourceFamilyExactTextMatch": true
+    },
+    {
+      "sourceRow": 38,
+      "site": "TMTP",
+      "table": "4.F.1",
+      "familyAsPrinted": "Echeneidae",
+      "nameAsPrinted": "Remora remora",
+      "lookupStatus": "exact-accepted-name",
+      "nameMatchQuery": "Remora remora",
+      "matchedFamily": "Echeneidae",
+      "sourceFamilyExactTextMatch": true
+    },
+    {
+      "sourceRow": 39,
+      "site": "TMTP",
+      "table": "4.F.1",
+      "familyAsPrinted": "Elopidae",
+      "nameAsPrinted": "Elops hawaiensis",
+      "lookupStatus": "exact-accepted-name",
+      "nameMatchQuery": "Elops hawaiensis",
+      "matchedFamily": "Elopidae",
+      "sourceFamilyExactTextMatch": true
+    },
+    {
+      "sourceRow": 40,
+      "site": "TMTP",
+      "table": "4.F.1",
+      "familyAsPrinted": "Gerridae",
+      "nameAsPrinted": "Gerres filamentosus",
+      "lookupStatus": "exact-accepted-name",
+      "nameMatchQuery": "Gerres filamentosus",
+      "matchedFamily": "Gerreidae",
+      "sourceFamilyExactTextMatch": false
+    },
+    {
+      "sourceRow": 41,
+      "site": "TMTP",
+      "table": "4.F.1",
+      "familyAsPrinted": "Gerridae",
+      "nameAsPrinted": "Gerres",
+      "lookupStatus": "not-queried-non-binomial-source-label",
+      "nameMatchQuery": null,
+      "matchedFamily": null,
+      "sourceFamilyExactTextMatch": null
+    },
+    {
+      "sourceRow": 42,
+      "site": "TMTP",
+      "table": "4.F.1",
+      "familyAsPrinted": "Gobiidae",
+      "nameAsPrinted": "Amblygobius sp. 1",
+      "lookupStatus": "not-queried-non-binomial-source-label",
+      "nameMatchQuery": null,
+      "matchedFamily": null,
+      "sourceFamilyExactTextMatch": null
+    },
+    {
+      "sourceRow": 43,
+      "site": "TMTP",
+      "table": "4.F.1",
+      "familyAsPrinted": "Gobiidae",
+      "nameAsPrinted": "Ambyglobius sp. 2",
+      "lookupStatus": "not-queried-non-binomial-source-label",
+      "nameMatchQuery": null,
+      "matchedFamily": null,
+      "sourceFamilyExactTextMatch": null
+    },
+    {
+      "sourceRow": 44,
+      "site": "TMTP",
+      "table": "4.F.1",
+      "familyAsPrinted": "Gobiidae",
+      "nameAsPrinted": "Ambyglobius sp. 3",
+      "lookupStatus": "not-queried-non-binomial-source-label",
+      "nameMatchQuery": null,
+      "matchedFamily": null,
+      "sourceFamilyExactTextMatch": null
+    },
+    {
+      "sourceRow": 45,
+      "site": "TMTP",
+      "table": "4.F.1",
+      "familyAsPrinted": "Gobiidae",
+      "nameAsPrinted": "Glossogobius aureus",
+      "lookupStatus": "exact-accepted-name",
+      "nameMatchQuery": "Glossogobius aureus",
+      "matchedFamily": "Gobiidae",
+      "sourceFamilyExactTextMatch": true
+    },
+    {
+      "sourceRow": 46,
+      "site": "TMTP",
+      "table": "4.F.1",
+      "familyAsPrinted": "Gobiidae",
+      "nameAsPrinted": "Oxyurichthys microlepis",
+      "lookupStatus": "exact-accepted-name",
+      "nameMatchQuery": "Oxyurichthys microlepis",
+      "matchedFamily": "Gobiidae",
+      "sourceFamilyExactTextMatch": true
+    },
+    {
+      "sourceRow": 47,
+      "site": "TMTP",
+      "table": "4.F.1",
+      "familyAsPrinted": "Haemulidae",
+      "nameAsPrinted": "Pomadasys kaakan",
+      "lookupStatus": "exact-accepted-name",
+      "nameMatchQuery": "Pomadasys kaakan",
+      "matchedFamily": "Haemulidae",
+      "sourceFamilyExactTextMatch": true
+    },
+    {
+      "sourceRow": 48,
+      "site": "TMTP",
+      "table": "4.F.1",
+      "familyAsPrinted": "Hemiramphidae",
+      "nameAsPrinted": "Hyporhampus sp.",
+      "lookupStatus": "not-queried-non-binomial-source-label",
+      "nameMatchQuery": null,
+      "matchedFamily": null,
+      "sourceFamilyExactTextMatch": null
+    },
+    {
+      "sourceRow": 49,
+      "site": "TMTP",
+      "table": "4.F.1",
+      "familyAsPrinted": "Latidae",
+      "nameAsPrinted": "Lates sp.",
+      "lookupStatus": "not-queried-non-binomial-source-label",
+      "nameMatchQuery": null,
+      "matchedFamily": null,
+      "sourceFamilyExactTextMatch": null
+    },
+    {
+      "sourceRow": 50,
+      "site": "TMTP",
+      "table": "4.F.1",
+      "familyAsPrinted": "Leiognathidae",
+      "nameAsPrinted": "Leignathus sp.",
+      "lookupStatus": "not-queried-non-binomial-source-label",
+      "nameMatchQuery": null,
+      "matchedFamily": null,
+      "sourceFamilyExactTextMatch": null
+    },
+    {
+      "sourceRow": 51,
+      "site": "TMTP",
+      "table": "4.F.1",
+      "familyAsPrinted": "Leiognathidae",
+      "nameAsPrinted": "Leiognathus equula",
+      "lookupStatus": "exact-accepted-name",
+      "nameMatchQuery": "Leiognathus equula",
+      "matchedFamily": "Leiognathidae",
+      "sourceFamilyExactTextMatch": true
+    },
+    {
+      "sourceRow": 52,
+      "site": "TMTP",
+      "table": "4.F.1",
+      "familyAsPrinted": "Leiognathidae",
+      "nameAsPrinted": "Eubleekeria splendens",
+      "lookupStatus": "exact-accepted-name",
+      "nameMatchQuery": "Eubleekeria splendens",
+      "matchedFamily": "Leiognathidae",
+      "sourceFamilyExactTextMatch": true
+    },
+    {
+      "sourceRow": 53,
+      "site": "TMTP",
+      "table": "4.F.1",
+      "familyAsPrinted": "Megalopidae",
+      "nameAsPrinted": "Megalops cyprinoides",
+      "lookupStatus": "exact-accepted-name",
+      "nameMatchQuery": "Megalops cyprinoides",
+      "matchedFamily": "Megalopidae",
+      "sourceFamilyExactTextMatch": true
+    },
+    {
+      "sourceRow": 54,
+      "site": "TMTP",
+      "table": "4.F.1",
+      "familyAsPrinted": "Mugilidae",
+      "nameAsPrinted": "Crenimugil seheli",
+      "lookupStatus": "exact-accepted-name",
+      "nameMatchQuery": "Crenimugil seheli",
+      "matchedFamily": "Mugilidae",
+      "sourceFamilyExactTextMatch": true
+    },
+    {
+      "sourceRow": 55,
+      "site": "TMTP",
+      "table": "4.F.1",
+      "familyAsPrinted": "Mugilidae",
+      "nameAsPrinted": "Mugil cephalus",
+      "lookupStatus": "exact-accepted-name",
+      "nameMatchQuery": "Mugil cephalus",
+      "matchedFamily": "Mugilidae",
+      "sourceFamilyExactTextMatch": true
+    },
+    {
+      "sourceRow": 56,
+      "site": "TMTP",
+      "table": "4.F.1",
+      "familyAsPrinted": "Nemipteridae",
+      "nameAsPrinted": "Nemipterus japonicus",
+      "lookupStatus": "exact-accepted-name",
+      "nameMatchQuery": "Nemipterus japonicus",
+      "matchedFamily": "Nemipteridae",
+      "sourceFamilyExactTextMatch": true
+    },
+    {
+      "sourceRow": 57,
+      "site": "TMTP",
+      "table": "4.F.1",
+      "familyAsPrinted": "Platycephalidae",
+      "nameAsPrinted": "Platycephalus sp. 1",
+      "lookupStatus": "not-queried-non-binomial-source-label",
+      "nameMatchQuery": null,
+      "matchedFamily": null,
+      "sourceFamilyExactTextMatch": null
+    },
+    {
+      "sourceRow": 58,
+      "site": "TMTP",
+      "table": "4.F.1",
+      "familyAsPrinted": "Platycephalidae",
+      "nameAsPrinted": "Platycephalus indicus",
+      "lookupStatus": "exact-accepted-name",
+      "nameMatchQuery": "Platycephalus indicus",
+      "matchedFamily": "Platycephalidae",
+      "sourceFamilyExactTextMatch": true
+    },
+    {
+      "sourceRow": 59,
+      "site": "TMTP",
+      "table": "4.F.1",
+      "familyAsPrinted": "Platycephalidae",
+      "nameAsPrinted": "Platycephalus sp. 2",
+      "lookupStatus": "not-queried-non-binomial-source-label",
+      "nameMatchQuery": null,
+      "matchedFamily": null,
+      "sourceFamilyExactTextMatch": null
+    },
+    {
+      "sourceRow": 60,
+      "site": "TMTP",
+      "table": "4.F.1",
+      "familyAsPrinted": "Pleuronectiformes",
+      "nameAsPrinted": "Pleuronectiformes sp.",
+      "lookupStatus": "not-queried-non-binomial-source-label",
+      "nameMatchQuery": null,
+      "matchedFamily": null,
+      "sourceFamilyExactTextMatch": null
+    },
+    {
+      "sourceRow": 61,
+      "site": "TMTP",
+      "table": "4.F.1",
+      "familyAsPrinted": "Polynemidae",
+      "nameAsPrinted": "Eleutheronema tetradactylum",
+      "lookupStatus": "exact-accepted-name",
+      "nameMatchQuery": "Eleutheronema tetradactylum",
+      "matchedFamily": "Polynemidae",
+      "sourceFamilyExactTextMatch": true
+    },
+    {
+      "sourceRow": 62,
+      "site": "TMTP",
+      "table": "4.F.1",
+      "familyAsPrinted": "Scatophagidae",
+      "nameAsPrinted": "Scatophagus argus",
+      "lookupStatus": "exact-accepted-name",
+      "nameMatchQuery": "Scatophagus argus",
+      "matchedFamily": "Scatophagidae",
+      "sourceFamilyExactTextMatch": true
+    },
+    {
+      "sourceRow": 63,
+      "site": "TMTP",
+      "table": "4.F.1",
+      "familyAsPrinted": "Sciaenidae",
+      "nameAsPrinted": "Johnius belangerii",
+      "lookupStatus": "exact-accepted-name",
+      "nameMatchQuery": "Johnius belangerii",
+      "matchedFamily": "Sciaenidae",
+      "sourceFamilyExactTextMatch": true
+    },
+    {
+      "sourceRow": 64,
+      "site": "TMTP",
+      "table": "4.F.1",
+      "familyAsPrinted": "Scombridae",
+      "nameAsPrinted": "Rastrelliger brachysoma",
+      "lookupStatus": "exact-accepted-name",
+      "nameMatchQuery": "Rastrelliger brachysoma",
+      "matchedFamily": "Scombridae",
+      "sourceFamilyExactTextMatch": true
+    },
+    {
+      "sourceRow": 65,
+      "site": "TMTP",
+      "table": "4.F.1",
+      "familyAsPrinted": "Serranidae",
+      "nameAsPrinted": "Epinephelus sp.",
+      "lookupStatus": "not-queried-non-binomial-source-label",
+      "nameMatchQuery": null,
+      "matchedFamily": null,
+      "sourceFamilyExactTextMatch": null
+    },
+    {
+      "sourceRow": 66,
+      "site": "TMTP",
+      "table": "4.F.1",
+      "familyAsPrinted": "Siganidae",
+      "nameAsPrinted": "Siganus spp.",
+      "lookupStatus": "not-queried-non-binomial-source-label",
+      "nameMatchQuery": null,
+      "matchedFamily": null,
+      "sourceFamilyExactTextMatch": null
+    },
+    {
+      "sourceRow": 67,
+      "site": "TMTP",
+      "table": "4.F.1",
+      "familyAsPrinted": "Sillaginidae",
+      "nameAsPrinted": "Sillago sihama",
+      "lookupStatus": "exact-accepted-name",
+      "nameMatchQuery": "Sillago sihama",
+      "matchedFamily": "Sillaginidae",
+      "sourceFamilyExactTextMatch": true
+    },
+    {
+      "sourceRow": 68,
+      "site": "TMTP",
+      "table": "4.F.1",
+      "familyAsPrinted": "Sphyraenidae",
+      "nameAsPrinted": "Sphyraena sp.",
+      "lookupStatus": "not-queried-non-binomial-source-label",
+      "nameMatchQuery": null,
+      "matchedFamily": null,
+      "sourceFamilyExactTextMatch": null
+    },
+    {
+      "sourceRow": 69,
+      "site": "TMTP",
+      "table": "4.F.1",
+      "familyAsPrinted": "Terapontidae",
+      "nameAsPrinted": "Terapon jarbua",
+      "lookupStatus": "exact-accepted-name",
+      "nameMatchQuery": "Terapon jarbua",
+      "matchedFamily": "Terapontidae",
+      "sourceFamilyExactTextMatch": true
+    },
+    {
+      "sourceRow": 70,
+      "site": "TMTP",
+      "table": "4.F.1",
+      "familyAsPrinted": "Terapontidae",
+      "nameAsPrinted": "Pelates quadrilineatus",
+      "lookupStatus": "exact-accepted-name",
+      "nameMatchQuery": "Pelates quadrilineatus",
+      "matchedFamily": "Terapontidae",
+      "sourceFamilyExactTextMatch": true
+    },
+    {
+      "sourceRow": 71,
+      "site": "TMTP",
+      "table": "4.F.1",
+      "familyAsPrinted": "Tetraodontidae",
+      "nameAsPrinted": "Arothron sp.",
+      "lookupStatus": "not-queried-non-binomial-source-label",
+      "nameMatchQuery": null,
+      "matchedFamily": null,
+      "sourceFamilyExactTextMatch": null
+    },
+    {
+      "sourceRow": 72,
+      "site": "TMTP",
+      "table": "4.F.1",
+      "familyAsPrinted": "Triacanthidae",
+      "nameAsPrinted": "Trixiphichthys weberi",
+      "lookupStatus": "exact-accepted-name",
+      "nameMatchQuery": "Trixiphichthys weberi",
+      "matchedFamily": "Triacanthidae",
+      "sourceFamilyExactTextMatch": true
+    }
+  ],
+  "interpretation": {
+    "exactMatchedNames": "Current name-service agreement does not prove the source authors correctly identified a fish, nor does it establish presence at either park.",
+    "familyMismatches": "Printed family names differ from matcher lineage in some rows. Retain the source family verbatim and investigate these cases against the underlying study and independent ichthyological authority.",
+    "distributionAndHabitat": "Do not transfer marine/brackish taxonomy matches to a locality checklist; any geographic or habitat outlier must be reviewed independently using specimen and site evidence.",
+    "publication": "All matches remain internal research proposals; neither this screen nor the parent project chapter has item-specific redistribution clearance."
+  },
+  "decision": {
+    "speciesAssertionsAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "acceptedNamesAppliedToSourceRows": 0,
+    "familyLabelsCorrected": 0,
+    "waterbodyAssignmentsAdded": 0,
+    "geometryAdded": false,
+    "publicAppProjection": false,
+    "publicationApproval": false,
+    "regionalBaselineComplete": false,
+    "reason": "The matcher supports candidate name status only. Family conflicts, source spellings, generic/higher-rank labels, undocumented methods and missing voucher evidence prevent biological identification decisions; all 72 original rows remain unchanged and research-only."
+  },
+  "nextActions": [
+    "Independently check exact accepted-name candidates and all family conflicts against Eschmeyer's Catalog of Fishes and relevant specialist marine taxonomy resources; do not use the GBIF matcher as its own independent verification.",
+    "Seek the underlying Ancog et al. report, specimen/voucher basis, and author clarification for source strings such as Sardinela, Leignathus, Ambyglobius, Hyporhampus, Gerres, and Pleuronectiformes sp.",
+    "Review apparent habitat or geographic outliers (including Tor tambroides in the TMTP table and Elops saurus at LPPWP) only against source vouchers, sampling context, and authoritative distribution evidence.",
+    "Keep all names and densities research-only until exact site/locality evidence, identification basis, date, method, and reuse terms are established."
+  ],
+  "sources": [
+    {
+      "url": "https://api.gbif.org/v2/species/match",
+      "supports": "Automated name matching against the explicit Catalogue of Life XR checklist; raw requests and responses are pinned in local-only research snapshots."
+    },
+    {
+      "url": "https://techdocs.gbif.org/en/data-processing/taxonomy-interpretation",
+      "supports": "GBIF documentation for interpreting taxonomic matches; automated matches require review and do not establish occurrence."
+    },
+    {
+      "url": "https://scssap.org/library/publications/871-ch4-ecosystems-v20260103-1/file",
+      "supports": "Source rows transcribed from Table 4.E.1 and Table 4.F.1, preserving printed spellings and family strings."
+    }
+  ]
+}
