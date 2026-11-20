@@ -1,0 +1,146 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "ncr-prcmo-establishment-table-waterway-scope-crosswalk-20261120",
+  "reviewedOn": "2026-11-20",
+  "phaseId": "L2",
+  "regionId": "1300000000",
+  "regionName": "National Capital Region (NCR)",
+  "status": "official-report-table-screened;17-source-labels;12-exact-text-overlaps;5-name-form-candidates;research-only",
+  "question": "Does the DENR-NCR Annual Report 2025 establishment table add distinct NCR waterway names beyond the separately reported 52 management entries, and can its counts be reconciled with the report's other monitoring scopes?",
+  "sourceIds": [
+    "denr-ncr-pasig-river-biodiversity-2024"
+  ],
+  "inputs": [
+    "data/research/philippines/national/reviews/ncr-prcmo-2025-pasig-system-52-entry-scope-review-20261120.json",
+    "data/research/philippines/national/reviews/ncr-prcmo-cluster-i-independent-name-crosswalk-20261120.json",
+    "data/research/philippines/national/reviews/ncr-prcmo-cluster-ii-independent-name-crosswalk-20261120.json",
+    "data/research/philippines/national/reviews/ncr-prcmo-cluster-iii-independent-name-crosswalk-20261120.json",
+    "data/research/philippines/national/reviews/ncr-prcmo-cluster-iv-independent-name-crosswalk-20261120.json"
+  ],
+  "snapshotHashes": {
+    "sourceRegistry": "b560595bcd5c451d182902d0f05779f45da6fe8e3971a9c9b37aa5faffff9b8d",
+    "pasig52EntryScopeReview": "57db35519628a96e98e8d6fe25cc16c21dc5c77d3e2675005594a6ca184e9f13",
+    "clusterI": "514ab699421dd9eca34b54c0ce1707c606d07ae7fd410a65947ea403f6e8e725",
+    "clusterII": "467fe76e13aaccbb5e8d675ef7ef0e724d8e760f356648212110e1c7d91e6f17",
+    "clusterIII": "42895ac5109f701f783e3fb9e052f1cad07b27f2fe3f49873e88d225cacd93fc",
+    "clusterIV": "4d1e6519ef19c754dfbbbc155f9ef1b47be4e4906713cf28cdcb5cd23017ca42"
+  },
+  "sourceAccess": {
+    "url": "https://ncr.denr.gov.ph/wp-content/uploads/2026/01/ANNUAL-REPORT-2025.pdf",
+    "accessMethod": "Reviewed official browser-extracted PDF text for Annual Report 2025 pages 228-230 and 235-237 on 2026-11-20. No PDF copy, report page image, full source label list, or table content was retained. The local direct-PDF fetch had previously returned HTTP 403; no access control was bypassed.",
+    "sections": [
+      "Section 3.2.2: 46 Pasig River minor tributaries and 138 monitored stations (report p. 228), plus a monitoring-station map (p. 230).",
+      "Section 3.2.7: 152 establishments reported within a 100-meter radius along the Pasig River (p. 235).",
+      "Table 10: 17 River/Estero rows and reported total of 1,248 inventoried establishments (p. 237).",
+      "Section C: 52 Pasig River system management entries in four clusters (report pp. 203-204), assessed in the linked scope review."
+    ],
+    "itemSpecificReuseLicenseFound": false
+  },
+  "tableScope": {
+    "tableTitleAsPublished": "Total number of inventoried establishments per category for CY 2025",
+    "firstColumnAsPublished": "River/Estero",
+    "sourceLabelRows": 17,
+    "reportedEstablishmentTotal": 1248,
+    "rowTotalsArithmeticCheck": "The 17 displayed row totals sum to the report's displayed total of 1,248.",
+    "interpretation": "This is an establishment-monitoring table indexed by River/Estero labels, not an ecological waterbody inventory, fish survey, reach delineation, or fish-by-site dataset. It supplies no per-row municipality column, channel geometry, fish names, catch records, or feature identifiers. The full label list was not reproduced here."
+  },
+  "crosswalk": {
+    "comparisonSet": "The 17 Table 10 labels were compared with the four report-referenced Cluster I-IV management-name crosswalks, covering 52 printed labels.",
+    "exactTextMatches": 12,
+    "nonExactNameFormCandidates": 5,
+    "unmatchedTableLabels": 0,
+    "normalization": "Case and surrounding whitespace only for exact comparison. Punctuation, diacritics, word order, and class suffixes were retained for the non-exact screen.",
+    "candidates": [
+      {
+        "tableLabel": "Ermiñão Creek",
+        "managementLabelCandidate": "Ermitanyo Creek",
+        "finding": "Spelling/name-form candidate only. The earlier cluster review independently supports the Ermitanyo/Ermitaño source forms, but this Table 10 form is not confirmed as the same channel."
+      },
+      {
+        "tableLabel": "Taguig-Pateros",
+        "managementLabelCandidate": "Pateros-Taguig River",
+        "finding": "Word-order and class-label difference. Preserve both source labels; no feature or cross-city reach identity is established."
+      },
+      {
+        "tableLabel": "Ibayo-Tipas Creek",
+        "managementLabelCandidate": "Ibayo Tipas Creek",
+        "finding": "Hyphenation difference only; retain both source forms and leave feature identity unconfirmed."
+      },
+      {
+        "tableLabel": "Sapang Buli Creek",
+        "managementLabelCandidate": "Sapang Buli",
+        "finding": "The creek suffix appears only in the Table 10 label. Existing review treats this as a waterway-name/class candidate, not a confirmed alias."
+      },
+      {
+        "tableLabel": "Rio Dayap River",
+        "managementLabelCandidate": "Rio Dayap",
+        "finding": "The river suffix appears only in the Table 10 label. Existing review supports the source name but not a canonical feature or route."
+      }
+    ],
+    "decision": "The table contributes no clearly unmatched name beyond the 52-label management set: 12 labels are exact text overlaps and five are unresolved name-form candidates. Because Table 10 and the management list are separate sections of the same report, overlap is not independent confirmation that labels denote unique, identical physical channels. Keep the five candidates unmerged and all names research-only."
+  },
+  "countAndScopeReconciliation": {
+    "reportedFrames": [
+      {
+        "count": 46,
+        "unit": "minor tributaries",
+        "context": "Section 3.2.2 water-quality monitoring scope; five monitoring clusters and 138 stations in 2025."
+      },
+      {
+        "count": 52,
+        "unit": "management entries",
+        "context": "Section C Pasig River system management scope; four administrative clusters. Not a validated count of unique ecological waterbodies."
+      },
+      {
+        "count": 17,
+        "unit": "River/Estero table labels",
+        "context": "Table 10 establishment-monitoring rows; each row reports establishment-category counts."
+      },
+      {
+        "count": 152,
+        "unit": "establishments",
+        "context": "Section 3.2.7 narrative reports establishments surveyed within a 100-meter radius along the Pasig River."
+      },
+      {
+        "count": 1248,
+        "unit": "establishments",
+        "context": "Table 10 displayed total across its 17 River/Estero rows."
+      }
+    ],
+    "interpretation": "These counts describe different report sections and apparent operational frames. The report does not explain whether the 152-establishment Pasig River survey is a subset, earlier pass, or separate scope from Table 10's 1,248 total. Do not reconcile, compare as one denominator, sum, or use these counts as waterbody totals without additional methods documentation. The 46 tributaries, 52 management entries, and 17 table labels are not interchangeable inventories."
+  },
+  "limits": [
+    "The table is not fish evidence and cannot support species presence, fishability, current condition, fishing access, legal rules, or safety claims.",
+    "Exact label overlap within one report does not prove physical feature identity or unique channel count.",
+    "The five non-exact forms remain candidates, not aliases; no line geometry, boundary, or locality assignment was added.",
+    "The source's displayed establishment counts are not species records, waterbody coverage counts, or a complete NCR freshwater inventory.",
+    "No source-specific redistribution license or permission was verified."
+  ],
+  "decision": {
+    "sourceRegistryEntriesAdded": 0,
+    "speciesAssertionsAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "waterbodyLeadsAdded": 0,
+    "waterbodyAssignmentsAdded": 0,
+    "geometryAdded": false,
+    "publicAppProjection": false,
+    "publicationApproval": false,
+    "regionalBaselineComplete": false,
+    "reason": "The establishment table is a secondary operational index of reported waterway labels and counts, not a fish or feature inventory. Twelve exact text overlaps and five unresolved name-form candidates add no confirmed physical waterbodies. The relationship among the report's different monitoring and establishment counts remains undocumented."
+  },
+  "nextActions": [
+    "Continue source discovery for NCR coastal, mangrove, tidal, wetland, lagoon, and reservoir habitats beyond the Pasig management list.",
+    "Seek a publicly accessible, rights-clear fish dataset with station-to-taxon rows for each aquatic habitat; do not project the Pasig-wide narrative to individual tributaries.",
+    "Keep the DENR-NCR 17/46/52 counts scoped to their source sections and preserve NCR and Luzon as incomplete."
+  ],
+  "sources": [
+    {
+      "url": "https://ncr.denr.gov.ph/wp-content/uploads/2026/01/ANNUAL-REPORT-2025.pdf",
+      "supports": "DENR-NCR Annual Report 2025 Sections 3.2.2, 3.2.7, Table 10, and Section C for the distinct monitoring and management scopes compared in this review."
+    },
+    {
+      "url": "https://ncr.denr.gov.ph/news-events/denr-national-capital-region-nagsagawa-ng-greenspace-river-at-urban-biodiversity-monitoring-assessment-sa-lower-marikina-river-basin/",
+      "supports": "Independent DENR-NCR source for the separate Lower Marikina/La Mesa monitoring context; it is not an input to the Table 10 name counts."
+    }
+  ]
+}
