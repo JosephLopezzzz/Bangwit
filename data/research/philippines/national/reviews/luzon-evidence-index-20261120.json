@@ -1290,7 +1290,7 @@
     },
     {
       "path": "data/research/philippines/luzon-completion-manifest.json",
-      "sha256": "02dc6bf302b28a07cb775ee2082132a6c287b7fdd7e3230d9b40f64e95ccc60a"
+      "sha256": "965e1b999af7424ddd0d1d55201e589e24826f59231766ae36b088425d876f69"
     },
     {
       "path": "data/research/philippines/makiling-gbif-source-review.json",
@@ -2813,6 +2813,10 @@
       "sha256": "b8e1e456dedda14d6b588519dd8f43b7ba14148f3ab376ff52ad453186943353"
     },
     {
+      "path": "data/research/philippines/national/reviews/ncr-lpp-lagoon-su-et-al-2009-catalog-name-crosswalk-review-20261120.json",
+      "sha256": "1fd3e17ac3bbd0a46f821f48451d6c7424bd08205a04dfa5476d36539aca4cb4"
+    },
+    {
       "path": "data/research/philippines/national/reviews/ncr-lpp-lagoon-su-et-al-2009-fish-sample-review-20261120.json",
       "sha256": "b6815388ec8a70823e4a62a9fff78e43a2c1c695775f3311673ab31dae8172dd"
     },
@@ -3454,7 +3458,7 @@
     },
     {
       "path": "data/research/philippines/sources.json",
-      "sha256": "76aed58ad5f3d3a31ac56c817e6fc2ba08ab70f25e8ca2b81cd0fa1b35741ec7"
+      "sha256": "84d1f0db633d5a2f0345d9d587799685bc69e5de6013487ae7ebaf135a911501"
     },
     {
       "path": "data/research/philippines/taal-checklist-decisions.json",
@@ -3514,24 +3518,24 @@
     }
   ],
   "summary": {
-    "reviewArtifactsScanned": 233,
+    "reviewArtifactsScanned": 234,
     "regionCount": 8,
-    "sourceRegistryUniqueIds": 1124,
+    "sourceRegistryUniqueIds": 1125,
     "sourceIdentityCrosswalkGroups": 10,
     "reviewClassifications": {
       "directly-linked": 31,
       "indirectly-linked": 14,
       "national-context-only": 1,
-      "shared-across-regions": 187
+      "shared-across-regions": 188
     },
     "brokenOrUnresolvedJsonReferences": 0,
     "missingSourceIdLinks": 0,
-    "localRawReferenceCount": 1075,
-    "localRawReferencesAvailable": 1075,
+    "localRawReferenceCount": 1083,
+    "localRawReferencesAvailable": 1083,
     "localRawReferencesUnresolved": 0,
     "localRawHashMismatchReferences": 0,
     "localRawNonmatchingBasenameCandidates": 3,
-    "uniqueLocalRawInputsMatched": 1020,
+    "uniqueLocalRawInputsMatched": 1028,
     "manuallyReviewedRegionalAssociations": 32,
     "nationalContextArtifacts": 3,
     "unlinkedManualAssociations": 0,
@@ -3545,8 +3549,8 @@
       "name": "Region IV-A (CALABARZON)",
       "manifestReferenceCount": 46,
       "directlyLinkedReviewCount": 38,
-      "indirectlyLinkedReviewCount": 194,
-      "declaredOrLinkedReviewCount": 232,
+      "indirectlyLinkedReviewCount": 195,
+      "declaredOrLinkedReviewCount": 233,
       "unaccountedExplicitReviewCount": 0,
       "baselineReviewed": false,
       "scopeFrozen": false
@@ -3555,10 +3559,10 @@
       "rolloutKey": "L2",
       "regionId": "1300000000",
       "name": "National Capital Region (NCR)",
-      "manifestReferenceCount": 65,
-      "directlyLinkedReviewCount": 63,
+      "manifestReferenceCount": 66,
+      "directlyLinkedReviewCount": 64,
       "indirectlyLinkedReviewCount": 1,
-      "declaredOrLinkedReviewCount": 71,
+      "declaredOrLinkedReviewCount": 72,
       "unaccountedExplicitReviewCount": 0,
       "baselineReviewed": false,
       "scopeFrozen": false
@@ -6008,6 +6012,36 @@
         "nast-lopez-1991-la-mesa-ectoparasite-hosts",
         "seafdec-abesamis-mamaril-lopez-2001-la-mesa-fish-ecology-abstract",
         "seafdec-lopez-2001-la-mesa-parasitic-crustacean-hosts"
+      ],
+      "missingSourceIds": [],
+      "explicitSuccessorReferences": []
+    },
+    {
+      "path": "data/research/philippines/national/reviews/ncr-lpp-lagoon-su-et-al-2009-catalog-name-crosswalk-review-20261120.json",
+      "sha256": "1fd3e17ac3bbd0a46f821f48451d6c7424bd08205a04dfa5476d36539aca4cb4",
+      "reviewId": "ncr-lpp-lagoon-su-et-al-2009-catalog-name-crosswalk-review-20261120",
+      "reviewedOn": "2026-11-20",
+      "phaseId": "L2",
+      "declaredRegionIds": [
+        "1300000000"
+      ],
+      "manualAssociation": null,
+      "nationalContextDisposition": null,
+      "directRegionIds": [
+        "1300000000"
+      ],
+      "indirectRegionIds": [
+        "0400000000"
+      ],
+      "relatedRegionIds": [
+        "0400000000",
+        "1300000000"
+      ],
+      "classification": "shared-across-regions",
+      "publicationApproval": null,
+      "sourceIds": [
+        "calacademy-catalog-su-2009-lpp-fish-names-20261120",
+        "su-et-al-2009-manila-bay-lpp-lagoon-fish-sampling"
       ],
       "missingSourceIds": [],
       "explicitSuccessorReferences": []
@@ -22008,6 +22042,110 @@
         "nonmatchingCandidates": []
       },
       {
+        "from": "data/research/philippines/national/reviews/ncr-lpp-lagoon-su-et-al-2009-catalog-name-crosswalk-review-20261120.json",
+        "field": "$.sourceLabels[0].rawResponse.path",
+        "referencedPath": "data/research/philippines/raw/ncr-lpp-2009-catalog-crosswalk-20261120/hyporhamphus-dussumieri.html",
+        "availability": "available-and-hash-verified",
+        "matchedFiles": [
+          {
+            "path": "data/research/philippines/raw/ncr-lpp-2009-catalog-crosswalk-20261120/hyporhamphus-dussumieri.html",
+            "sha256": "9cccdd27caa22a34ec245e878f36d91bea36e4143e11f988b917204a0c353d43"
+          }
+        ],
+        "nonmatchingCandidates": []
+      },
+      {
+        "from": "data/research/philippines/national/reviews/ncr-lpp-lagoon-su-et-al-2009-catalog-name-crosswalk-review-20261120.json",
+        "field": "$.sourceLabels[3].rawResponse.path",
+        "referencedPath": "data/research/philippines/raw/ncr-lpp-2009-catalog-crosswalk-20261120/mugil-melinopterus.html",
+        "availability": "available-and-hash-verified",
+        "matchedFiles": [
+          {
+            "path": "data/research/philippines/raw/ncr-lpp-2009-catalog-crosswalk-20261120/mugil-melinopterus.html",
+            "sha256": "db88edd1caa1b4f41445a1b15e178440dc848fcd561fabd357e2ef46f021e6a9"
+          }
+        ],
+        "nonmatchingCandidates": []
+      },
+      {
+        "from": "data/research/philippines/national/reviews/ncr-lpp-lagoon-su-et-al-2009-catalog-name-crosswalk-review-20261120.json",
+        "field": "$.sourceLabels[4].rawResponse.path",
+        "referencedPath": "data/research/philippines/raw/ncr-lpp-2009-catalog-crosswalk-20261120/sardinella-brachysoma.html",
+        "availability": "available-and-hash-verified",
+        "matchedFiles": [
+          {
+            "path": "data/research/philippines/raw/ncr-lpp-2009-catalog-crosswalk-20261120/sardinella-brachysoma.html",
+            "sha256": "3f1ab9b33701301f33226fad5fa53369e63a3d65997ec919e75190eed179a5fe"
+          }
+        ],
+        "nonmatchingCandidates": []
+      },
+      {
+        "from": "data/research/philippines/national/reviews/ncr-lpp-lagoon-su-et-al-2009-catalog-name-crosswalk-review-20261120.json",
+        "field": "$.sourceLabels[5].rawResponse.path",
+        "referencedPath": "data/research/philippines/raw/ncr-lpp-2009-catalog-crosswalk-20261120/scomberoides-tala.html",
+        "availability": "available-and-hash-verified",
+        "matchedFiles": [
+          {
+            "path": "data/research/philippines/raw/ncr-lpp-2009-catalog-crosswalk-20261120/scomberoides-tala.html",
+            "sha256": "5520e3f1135f9e5f1bcd52d4363bb1a84a1fbe90576fde29dc98f32d47d6802a"
+          }
+        ],
+        "nonmatchingCandidates": []
+      },
+      {
+        "from": "data/research/philippines/national/reviews/ncr-lpp-lagoon-su-et-al-2009-catalog-name-crosswalk-review-20261120.json",
+        "field": "$.sourceLabels[6].rawResponse.path",
+        "referencedPath": "data/research/philippines/raw/ncr-lpp-2009-catalog-crosswalk-20261120/selaroides-leptolepis.html",
+        "availability": "available-and-hash-verified",
+        "matchedFiles": [
+          {
+            "path": "data/research/philippines/raw/ncr-lpp-2009-catalog-crosswalk-20261120/selaroides-leptolepis.html",
+            "sha256": "c52f927d86b9fac88d9a264e6860123b50e1f10e6ad811b1ee80a4f90b046924"
+          }
+        ],
+        "nonmatchingCandidates": []
+      },
+      {
+        "from": "data/research/philippines/national/reviews/ncr-lpp-lagoon-su-et-al-2009-catalog-name-crosswalk-review-20261120.json",
+        "field": "$.sourceLabels[7].rawResponse.path",
+        "referencedPath": "data/research/philippines/raw/ncr-lpp-2009-catalog-crosswalk-20261120/sphyraena-qenie.html",
+        "availability": "available-and-hash-verified",
+        "matchedFiles": [
+          {
+            "path": "data/research/philippines/raw/ncr-lpp-2009-catalog-crosswalk-20261120/sphyraena-qenie.html",
+            "sha256": "14fc07a73e16591c861b9cf89a3b87ab9f1c58b2611ff3be3ee205018a730829"
+          }
+        ],
+        "nonmatchingCandidates": []
+      },
+      {
+        "from": "data/research/philippines/national/reviews/ncr-lpp-lagoon-su-et-al-2009-catalog-name-crosswalk-review-20261120.json",
+        "field": "$.sourceLabels[9].rawResponse.path",
+        "referencedPath": "data/research/philippines/raw/ncr-lpp-2009-catalog-crosswalk-20261120/terapon-jarbua.html",
+        "availability": "available-and-hash-verified",
+        "matchedFiles": [
+          {
+            "path": "data/research/philippines/raw/ncr-lpp-2009-catalog-crosswalk-20261120/terapon-jarbua.html",
+            "sha256": "85540e88496c5725d57e8da202487ba6ac71958477ced0318072974e99932746"
+          }
+        ],
+        "nonmatchingCandidates": []
+      },
+      {
+        "from": "data/research/philippines/national/reviews/ncr-lpp-lagoon-su-et-al-2009-catalog-name-crosswalk-review-20261120.json",
+        "field": "$.sourceNameDiscrepancies[0].rawResponse.path",
+        "referencedPath": "data/research/philippines/raw/ncr-lpp-2009-catalog-crosswalk-20261120/hyporhampus-dussumieri.html",
+        "availability": "available-and-hash-verified",
+        "matchedFiles": [
+          {
+            "path": "data/research/philippines/raw/ncr-lpp-2009-catalog-crosswalk-20261120/hyporhampus-dussumieri.html",
+            "sha256": "abdbfdf8ab9b19bcb80c2ae16004b5273bf14a6fba0cf8b6315adeba34042adb"
+          }
+        ],
+        "nonmatchingCandidates": []
+      },
+      {
         "from": "data/research/philippines/national/reviews/ncr-marikina-2011-genbank-bold-metadata-crosswalk-20261119.json",
         "field": "$.retrieval.bold.localSnapshot.path",
         "referencedPath": "raw/ncr-marikina-2011-ncbi-accessions-20261119/bold-processid-query.json",
@@ -30207,6 +30345,46 @@
       {
         "path": "data/research/philippines/raw/ncr-la-mesa-1989-1990-colxr-20261116/tilapia-zillii.json",
         "sha256": "238be5ec9b75c3e0bb0e09b36c6d2a98a71aac6fc091fbda0ab6e1ed1b812022",
+        "referenceCount": 1
+      },
+      {
+        "path": "data/research/philippines/raw/ncr-lpp-2009-catalog-crosswalk-20261120/hyporhamphus-dussumieri.html",
+        "sha256": "9cccdd27caa22a34ec245e878f36d91bea36e4143e11f988b917204a0c353d43",
+        "referenceCount": 1
+      },
+      {
+        "path": "data/research/philippines/raw/ncr-lpp-2009-catalog-crosswalk-20261120/hyporhampus-dussumieri.html",
+        "sha256": "abdbfdf8ab9b19bcb80c2ae16004b5273bf14a6fba0cf8b6315adeba34042adb",
+        "referenceCount": 1
+      },
+      {
+        "path": "data/research/philippines/raw/ncr-lpp-2009-catalog-crosswalk-20261120/mugil-melinopterus.html",
+        "sha256": "db88edd1caa1b4f41445a1b15e178440dc848fcd561fabd357e2ef46f021e6a9",
+        "referenceCount": 1
+      },
+      {
+        "path": "data/research/philippines/raw/ncr-lpp-2009-catalog-crosswalk-20261120/sardinella-brachysoma.html",
+        "sha256": "3f1ab9b33701301f33226fad5fa53369e63a3d65997ec919e75190eed179a5fe",
+        "referenceCount": 1
+      },
+      {
+        "path": "data/research/philippines/raw/ncr-lpp-2009-catalog-crosswalk-20261120/scomberoides-tala.html",
+        "sha256": "5520e3f1135f9e5f1bcd52d4363bb1a84a1fbe90576fde29dc98f32d47d6802a",
+        "referenceCount": 1
+      },
+      {
+        "path": "data/research/philippines/raw/ncr-lpp-2009-catalog-crosswalk-20261120/selaroides-leptolepis.html",
+        "sha256": "c52f927d86b9fac88d9a264e6860123b50e1f10e6ad811b1ee80a4f90b046924",
+        "referenceCount": 1
+      },
+      {
+        "path": "data/research/philippines/raw/ncr-lpp-2009-catalog-crosswalk-20261120/sphyraena-qenie.html",
+        "sha256": "14fc07a73e16591c861b9cf89a3b87ab9f1c58b2611ff3be3ee205018a730829",
+        "referenceCount": 1
+      },
+      {
+        "path": "data/research/philippines/raw/ncr-lpp-2009-catalog-crosswalk-20261120/terapon-jarbua.html",
+        "sha256": "85540e88496c5725d57e8da202487ba6ac71958477ced0318072974e99932746",
         "referenceCount": 1
       },
       {

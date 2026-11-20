@@ -211,3 +211,7 @@ The original *Ilogton ilogton* description and holotype label were not located i
 ### NAPWC Lagoon fish-source lead — 19 November 2026
 
 The 2015 BMB guidebook reports nine fish species for the lagoon but gives common-name examples rather than a species-level checklist, fish-specific survey method, date, or voucher list. The 2016 BMB technical bulletin repeats tilapia, catfish, and mudfish in a sample ecotour script, so it is not treated as an independent survey. Five exact GBIF searches using the current CoL XR ray-finned-fish filter returned zero indexed matches; a retired Backbone key query was discarded. No scientific names, species images, public records, current-access claims, or absence claims were added. See the [review](data/research/philippines/national/reviews/ncr-napwc-fish-common-name-and-gbif-screen-20261119.json).
+
+### LPP Lagoon fish-label nomenclature cross-check — 20 November 2026
+
+The official Eschmeyer Catalog cross-check found six of Su et al. (2009)'s binomial Table 2 labels matching current Catalog names, two current-name candidates, and one unresolved *Stolephorus* spelling. The Catalog’s accepted *Stolephorus commersonnii* record lists *commersonii* as a spelling used in literature, but does not establish the Manila Bay specimen identity; Table 2’s *comersonii* remains a distinct source label. No public species, occurrence, coordinate, image, or app row was added. See the [research-only crosswalk](data/research/philippines/national/reviews/ncr-lpp-lagoon-su-et-al-2009-catalog-name-crosswalk-review-20261120.json).
