@@ -1294,7 +1294,7 @@
     },
     {
       "path": "data/research/philippines/luzon-completion-manifest.json",
-      "sha256": "4332c6431651fc5bc985676c64b8b258b35934dfc784934eb587ab74ba43371c"
+      "sha256": "f66c2e0f79edf87f719d28b63bf579cc3e3a7514957b15f397f7cb6001f1e49c"
     },
     {
       "path": "data/research/philippines/makiling-gbif-source-review.json",
@@ -2514,7 +2514,7 @@
     },
     {
       "path": "data/research/philippines/national/reviews/calabarzon-locality-linkage-gap-audit-20261118.json",
-      "sha256": "89754b50ae8d1767f12f7ff79aaab69db18bd4f53425eab3260c1fdcdffba08d"
+      "sha256": "e1b5a2df3a7f5f0ec32cb29d82d1abfa1f8eba654659c2bc63985fe97d9e3d05"
     },
     {
       "path": "data/research/philippines/national/reviews/calabarzon-locality-source-backed-batch-20261117-02.json",
@@ -2689,6 +2689,10 @@
       "sha256": "c91cae5832910329aeee65f302901445d3d1577e814dab6d2b06a793e49e94e7"
     },
     {
+      "path": "data/research/philippines/national/reviews/central-luzon-clsu-emi-biodiversity-2005-access-review-20261120.json",
+      "sha256": "e252a20435b25380a1abc76de51fcdcd6ae1b0c94ef9db924009858f24780a93"
+    },
+    {
       "path": "data/research/philippines/national/reviews/central-luzon-minalin-publisher-media-refresh-20261116.json",
       "sha256": "12ccd3749978623c3bb931fc716c340342df47a82df4bc127fd49ead184fd319"
     },
@@ -2810,7 +2814,7 @@
     },
     {
       "path": "data/research/philippines/national/reviews/ncr-administrative-denominator-reconciliation-20261119.json",
-      "sha256": "7667d30dabc201eebfa8d9fd1e69a6d7a295d8f0c4b027beff640d6d1a0b80c5"
+      "sha256": "a40707bf46d2f2d600689fe98759898067b333835d943aec45244fee198a3794"
     },
     {
       "path": "data/research/philippines/national/reviews/ncr-bmb-2019-freshwater-locality-crosswalk-20261119.json",
@@ -3478,7 +3482,7 @@
     },
     {
       "path": "data/research/philippines/palico-river-decisions.json",
-      "sha256": "29fe5da2f74d51fa5b3085eec54fc406d8c138314a52551f8cad6553c9026d19"
+      "sha256": "fa4c11bf2b6d63d2110f2de82f7e807a1fafc0be46858eb6858df55e2311c90c"
     },
     {
       "path": "data/research/philippines/pansipit-river-gbif-source-review.json",
@@ -3502,7 +3506,7 @@
     },
     {
       "path": "data/research/philippines/sources.json",
-      "sha256": "749522568fe0e8f234b5f562cbb1f04c9e8a054b78810af241306af07a48b313"
+      "sha256": "17b89aa83113008180f0f172c143f1b02810c6a7fc8224485cacc92f80e38c5f"
     },
     {
       "path": "data/research/philippines/taal-checklist-decisions.json",
@@ -3542,7 +3546,7 @@
     },
     {
       "path": "src/data/palico-river-survey-evidence.json",
-      "sha256": "08e758f716b4037e5f9294c6295ef1928c102b267d513374cfd2f134f07fee35"
+      "sha256": "03f661a5c68abb06e8a5e7a5955f767556f9271a0d7464c6ef6ea0472d56ff9e"
     },
     {
       "path": "src/data/pansipit-river-gbif-evidence.json",
@@ -3562,15 +3566,13 @@
     }
   ],
   "summary": {
-    "reviewArtifactsScanned": 244,
+    "reviewArtifactsScanned": 245,
     "regionCount": 8,
-    "sourceRegistryUniqueIds": 1136,
+    "sourceRegistryUniqueIds": 1137,
     "sourceIdentityCrosswalkGroups": 10,
     "reviewClassifications": {
-      "directly-linked": 31,
-      "indirectly-linked": 14,
       "national-context-only": 1,
-      "shared-across-regions": 198
+      "shared-across-regions": 244
     },
     "brokenOrUnresolvedJsonReferences": 0,
     "missingSourceIdLinks": 0,
@@ -3593,8 +3595,8 @@
       "name": "Region IV-A (CALABARZON)",
       "manifestReferenceCount": 46,
       "directlyLinkedReviewCount": 38,
-      "indirectlyLinkedReviewCount": 205,
-      "declaredOrLinkedReviewCount": 243,
+      "indirectlyLinkedReviewCount": 206,
+      "declaredOrLinkedReviewCount": 244,
       "unaccountedExplicitReviewCount": 0,
       "baselineReviewed": false,
       "scopeFrozen": false
@@ -3615,10 +3617,10 @@
       "rolloutKey": "L3",
       "regionId": "0300000000",
       "name": "Region III (Central Luzon)",
-      "manifestReferenceCount": 33,
-      "directlyLinkedReviewCount": 29,
-      "indirectlyLinkedReviewCount": 3,
-      "declaredOrLinkedReviewCount": 37,
+      "manifestReferenceCount": 34,
+      "directlyLinkedReviewCount": 30,
+      "indirectlyLinkedReviewCount": 214,
+      "declaredOrLinkedReviewCount": 244,
       "unaccountedExplicitReviewCount": 0,
       "baselineReviewed": false,
       "scopeFrozen": false
@@ -3699,11 +3701,14 @@
       "directRegionIds": [
         "0400000000"
       ],
-      "indirectRegionIds": [],
+      "indirectRegionIds": [
+        "0300000000"
+      ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000"
       ],
-      "classification": "directly-linked",
+      "classification": "shared-across-regions",
       "publicationApproval": null,
       "sourceIds": [
         "psa-calabarzon-cities-list",
@@ -3729,11 +3734,14 @@
       "directRegionIds": [
         "0400000000"
       ],
-      "indirectRegionIds": [],
+      "indirectRegionIds": [
+        "0300000000"
+      ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000"
       ],
-      "classification": "directly-linked",
+      "classification": "shared-across-regions",
       "publicationApproval": null,
       "sourceIds": [
         "psa-psgc-2026-q3",
@@ -3757,11 +3765,14 @@
       "directRegionIds": [
         "0400000000"
       ],
-      "indirectRegionIds": [],
+      "indirectRegionIds": [
+        "0300000000"
+      ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000"
       ],
-      "classification": "directly-linked",
+      "classification": "shared-across-regions",
       "publicationApproval": null,
       "sourceIds": [
         "dpwh-emb-laguna-lakeshore-road-network-eis-2021"
@@ -3783,11 +3794,14 @@
       "directRegionIds": [
         "0400000000"
       ],
-      "indirectRegionIds": [],
+      "indirectRegionIds": [
+        "0300000000"
+      ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000"
       ],
-      "classification": "directly-linked",
+      "classification": "shared-across-regions",
       "publicationApproval": null,
       "sourceIds": [
         "llda-laguna-de-bay-biodiversity-page"
@@ -3809,11 +3823,14 @@
       "directRegionIds": [
         "0400000000"
       ],
-      "indirectRegionIds": [],
+      "indirectRegionIds": [
+        "0300000000"
+      ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000"
       ],
-      "classification": "directly-linked",
+      "classification": "shared-across-regions",
       "publicationApproval": null,
       "sourceIds": [
         "aiib-2023-bcib-final-eia",
@@ -3847,7 +3864,7 @@
     },
     {
       "path": "data/research/philippines/national/reviews/calabarzon-locality-linkage-gap-audit-20261118.json",
-      "sha256": "89754b50ae8d1767f12f7ff79aaab69db18bd4f53425eab3260c1fdcdffba08d",
+      "sha256": "e1b5a2df3a7f5f0ec32cb29d82d1abfa1f8eba654659c2bc63985fe97d9e3d05",
       "reviewId": "calabarzon-locality-linkage-gap-audit-20261118",
       "reviewedOn": "2026-11-19",
       "phaseId": "L1",
@@ -3859,11 +3876,14 @@
       "directRegionIds": [
         "0400000000"
       ],
-      "indirectRegionIds": [],
+      "indirectRegionIds": [
+        "0300000000"
+      ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000"
       ],
-      "classification": "directly-linked",
+      "classification": "shared-across-regions",
       "publicationApproval": null,
       "sourceIds": [
         "aiib-2023-bcib-final-eia",
@@ -3931,11 +3951,14 @@
       "directRegionIds": [
         "0400000000"
       ],
-      "indirectRegionIds": [],
+      "indirectRegionIds": [
+        "0300000000"
+      ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000"
       ],
-      "classification": "directly-linked",
+      "classification": "shared-across-regions",
       "publicationApproval": null,
       "sourceIds": [
         "bacoor-city-clup-ecological-profile-inland-waters",
@@ -3976,11 +3999,14 @@
       "directRegionIds": [
         "0400000000"
       ],
-      "indirectRegionIds": [],
+      "indirectRegionIds": [
+        "0300000000"
+      ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000"
       ],
-      "classification": "directly-linked",
+      "classification": "shared-across-regions",
       "publicationApproval": null,
       "sourceIds": [
         "aiib-2023-bcib-final-eia",
@@ -4012,11 +4038,14 @@
       "directRegionIds": [
         "0400000000"
       ],
-      "indirectRegionIds": [],
+      "indirectRegionIds": [
+        "0300000000"
+      ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000"
       ],
-      "classification": "directly-linked",
+      "classification": "shared-across-regions",
       "publicationApproval": null,
       "sourceIds": [
         "denr-bmb-philchm-inland-wetlands-2019",
@@ -4040,11 +4069,14 @@
       "directRegionIds": [
         "0400000000"
       ],
-      "indirectRegionIds": [],
+      "indirectRegionIds": [
+        "0300000000"
+      ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000"
       ],
-      "classification": "directly-linked",
+      "classification": "shared-across-regions",
       "publicationApproval": null,
       "sourceIds": [
         "denr-dao-2025-28-classified-waterbodies",
@@ -4068,11 +4100,14 @@
       "directRegionIds": [
         "0400000000"
       ],
-      "indirectRegionIds": [],
+      "indirectRegionIds": [
+        "0300000000"
+      ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000"
       ],
-      "classification": "directly-linked",
+      "classification": "shared-across-regions",
       "publicationApproval": null,
       "sourceIds": [
         "denr-cenro-calauag-2026-asian-waterbird-census",
@@ -4095,11 +4130,14 @@
       "directRegionIds": [
         "0400000000"
       ],
-      "indirectRegionIds": [],
+      "indirectRegionIds": [
+        "0300000000"
+      ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000"
       ],
-      "classification": "directly-linked",
+      "classification": "shared-across-regions",
       "publicationApproval": null,
       "sourceIds": [
         "denr-bmb-philchm-inland-wetlands-2019",
@@ -4122,11 +4160,14 @@
       "directRegionIds": [
         "0400000000"
       ],
-      "indirectRegionIds": [],
+      "indirectRegionIds": [
+        "0300000000"
+      ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000"
       ],
-      "classification": "directly-linked",
+      "classification": "shared-across-regions",
       "publicationApproval": null,
       "sourceIds": [
         "denr-bmb-philchm-inland-wetlands-2019",
@@ -4150,11 +4191,14 @@
       "directRegionIds": [
         "0400000000"
       ],
-      "indirectRegionIds": [],
+      "indirectRegionIds": [
+        "0300000000"
+      ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000"
       ],
-      "classification": "directly-linked",
+      "classification": "shared-across-regions",
       "publicationApproval": null,
       "sourceIds": [
         "denr-bmb-philchm-inland-wetlands-2019",
@@ -4177,11 +4221,14 @@
       "directRegionIds": [
         "0400000000"
       ],
-      "indirectRegionIds": [],
+      "indirectRegionIds": [
+        "0300000000"
+      ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000"
       ],
-      "classification": "directly-linked",
+      "classification": "shared-across-regions",
       "publicationApproval": null,
       "sourceIds": [
         "denr-bmb-philchm-inland-wetlands-2019",
@@ -4204,11 +4251,14 @@
       "directRegionIds": [
         "0400000000"
       ],
-      "indirectRegionIds": [],
+      "indirectRegionIds": [
+        "0300000000"
+      ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000"
       ],
-      "classification": "directly-linked",
+      "classification": "shared-across-regions",
       "publicationApproval": null,
       "sourceIds": [
         "denr-bmb-philchm-inland-wetlands-2019",
@@ -4233,11 +4283,14 @@
       "directRegionIds": [
         "0400000000"
       ],
-      "indirectRegionIds": [],
+      "indirectRegionIds": [
+        "0300000000"
+      ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000"
       ],
-      "classification": "directly-linked",
+      "classification": "shared-across-regions",
       "publicationApproval": null,
       "sourceIds": [
         "denr-bmb-philchm-inland-wetlands-2019",
@@ -4261,11 +4314,14 @@
       "directRegionIds": [
         "0400000000"
       ],
-      "indirectRegionIds": [],
+      "indirectRegionIds": [
+        "0300000000"
+      ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000"
       ],
-      "classification": "directly-linked",
+      "classification": "shared-across-regions",
       "publicationApproval": null,
       "sourceIds": [
         "calabarzon-rpfp-2017-2046-critical-watersheds-table-3-11",
@@ -4290,11 +4346,14 @@
       "directRegionIds": [
         "0400000000"
       ],
-      "indirectRegionIds": [],
+      "indirectRegionIds": [
+        "0300000000"
+      ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000"
       ],
-      "classification": "directly-linked",
+      "classification": "shared-across-regions",
       "publicationApproval": null,
       "sourceIds": [
         "denr-bmb-philchm-inland-wetlands-2019",
@@ -4320,11 +4379,14 @@
       "directRegionIds": [
         "0400000000"
       ],
-      "indirectRegionIds": [],
+      "indirectRegionIds": [
+        "0300000000"
+      ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000"
       ],
-      "classification": "directly-linked",
+      "classification": "shared-across-regions",
       "publicationApproval": null,
       "sourceIds": [
         "paller-2011-makiling-fishes"
@@ -4374,11 +4436,14 @@
       "directRegionIds": [
         "0400000000"
       ],
-      "indirectRegionIds": [],
+      "indirectRegionIds": [
+        "0300000000"
+      ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000"
       ],
-      "classification": "directly-linked",
+      "classification": "shared-across-regions",
       "publicationApproval": null,
       "sourceIds": [
         "nfrdi-pansipit-taal-migratory-survey"
@@ -4400,11 +4465,14 @@
       "directRegionIds": [
         "0400000000"
       ],
-      "indirectRegionIds": [],
+      "indirectRegionIds": [
+        "0300000000"
+      ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000"
       ],
-      "classification": "directly-linked",
+      "classification": "shared-across-regions",
       "publicationApproval": null,
       "sourceIds": [
         "cavite-sepp-2014-protected-landscape-rivers",
@@ -4428,11 +4496,14 @@
       "directRegionIds": [
         "0400000000"
       ],
-      "indirectRegionIds": [],
+      "indirectRegionIds": [
+        "0300000000"
+      ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000"
       ],
-      "classification": "directly-linked",
+      "classification": "shared-across-regions",
       "publicationApproval": null,
       "sourceIds": [
         "batstateu-san-juan-calamba-fauna-table-access-lead-20261115"
@@ -4454,11 +4525,14 @@
       "directRegionIds": [
         "0400000000"
       ],
-      "indirectRegionIds": [],
+      "indirectRegionIds": [
+        "0300000000"
+      ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000"
       ],
-      "classification": "directly-linked",
+      "classification": "shared-across-regions",
       "publicationApproval": null,
       "sourceIds": [
         "lspu-domasian-2024-san-juan-river-fish-contaminant-abstract"
@@ -4480,11 +4554,14 @@
       "directRegionIds": [
         "0400000000"
       ],
-      "indirectRegionIds": [],
+      "indirectRegionIds": [
+        "0300000000"
+      ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000"
       ],
-      "classification": "directly-linked",
+      "classification": "shared-across-regions",
       "publicationApproval": null,
       "sourceIds": [
         "chavez-et-al-2006-zootaxa-pterygoplichthys-laguna-basin-aparri-report",
@@ -4507,11 +4584,14 @@
       "directRegionIds": [
         "0400000000"
       ],
-      "indirectRegionIds": [],
+      "indirectRegionIds": [
+        "0300000000"
+      ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000"
       ],
-      "classification": "directly-linked",
+      "classification": "shared-across-regions",
       "publicationApproval": null,
       "sourceIds": [
         "gbif-cas-ichthyology"
@@ -4533,11 +4613,14 @@
       "directRegionIds": [
         "0400000000"
       ],
-      "indirectRegionIds": [],
+      "indirectRegionIds": [
+        "0300000000"
+      ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000"
       ],
-      "classification": "directly-linked",
+      "classification": "shared-across-regions",
       "publicationApproval": null,
       "sourceIds": [
         "aquilino-2011-taal-dna-barcoding-dryad-dataset"
@@ -4559,11 +4642,14 @@
       "directRegionIds": [
         "0400000000"
       ],
-      "indirectRegionIds": [],
+      "indirectRegionIds": [
+        "0300000000"
+      ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000"
       ],
-      "classification": "directly-linked",
+      "classification": "shared-across-regions",
       "publicationApproval": null,
       "sourceIds": [
         "aquilino-2011-taal-dna-barcoding-dryad-dataset"
@@ -4585,11 +4671,14 @@
       "directRegionIds": [
         "0400000000"
       ],
-      "indirectRegionIds": [],
+      "indirectRegionIds": [
+        "0300000000"
+      ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000"
       ],
-      "classification": "directly-linked",
+      "classification": "shared-across-regions",
       "publicationApproval": null,
       "sourceIds": [
         "calacademy-cas-ichthyology-gbif-dataset-efh2ib"
@@ -4611,11 +4700,14 @@
       "directRegionIds": [
         "0400000000"
       ],
-      "indirectRegionIds": [],
+      "indirectRegionIds": [
+        "0300000000"
+      ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000"
       ],
-      "classification": "directly-linked",
+      "classification": "shared-across-regions",
       "publicationApproval": null,
       "sourceIds": [],
       "missingSourceIds": [],
@@ -4635,11 +4727,14 @@
       "directRegionIds": [
         "0400000000"
       ],
-      "indirectRegionIds": [],
+      "indirectRegionIds": [
+        "0300000000"
+      ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000"
       ],
-      "classification": "directly-linked",
+      "classification": "shared-across-regions",
       "publicationApproval": null,
       "sourceIds": [
         "asean-cb-national-museum-fish-collection-gbif"
@@ -4658,12 +4753,14 @@
       "nationalContextDisposition": null,
       "directRegionIds": [],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000"
       ],
-      "classification": "indirectly-linked",
+      "classification": "shared-across-regions",
       "publicationApproval": null,
       "sourceIds": [],
       "missingSourceIds": [],
@@ -4684,9 +4781,11 @@
         "1400000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000",
         "1400000000"
       ],
@@ -4843,6 +4942,7 @@
       "nationalContextDisposition": null,
       "directRegionIds": [],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
@@ -5161,6 +5261,35 @@
       "explicitSuccessorReferences": []
     },
     {
+      "path": "data/research/philippines/national/reviews/central-luzon-clsu-emi-biodiversity-2005-access-review-20261120.json",
+      "sha256": "e252a20435b25380a1abc76de51fcdcd6ae1b0c94ef9db924009858f24780a93",
+      "reviewId": "central-luzon-clsu-emi-biodiversity-2005-access-review-20261120",
+      "reviewedOn": "2026-11-20",
+      "phaseId": "L3",
+      "declaredRegionIds": [
+        "0300000000"
+      ],
+      "manualAssociation": null,
+      "nationalContextDisposition": null,
+      "directRegionIds": [
+        "0300000000"
+      ],
+      "indirectRegionIds": [
+        "0400000000"
+      ],
+      "relatedRegionIds": [
+        "0300000000",
+        "0400000000"
+      ],
+      "classification": "shared-across-regions",
+      "publicationApproval": null,
+      "sourceIds": [
+        "clsu-emi-biodiversity-volume-2005"
+      ],
+      "missingSourceIds": [],
+      "explicitSuccessorReferences": []
+    },
+    {
       "path": "data/research/philippines/national/reviews/central-luzon-minalin-publisher-media-refresh-20261116.json",
       "sha256": "12ccd3749978623c3bb931fc716c340342df47a82df4bc127fd49ead184fd319",
       "reviewId": "central-luzon-minalin-publisher-media-refresh-20261116",
@@ -5202,6 +5331,7 @@
       "nationalContextDisposition": null,
       "directRegionIds": [],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
@@ -5476,6 +5606,7 @@
       "nationalContextDisposition": null,
       "directRegionIds": [],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
@@ -5531,12 +5662,14 @@
       "nationalContextDisposition": null,
       "directRegionIds": [],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000"
       ],
-      "classification": "indirectly-linked",
+      "classification": "shared-across-regions",
       "publicationApproval": null,
       "sourceIds": [],
       "missingSourceIds": [],
@@ -5577,10 +5710,12 @@
       "nationalContextDisposition": "National GBIF fish-taxon retrieval design; candidate scope only, not a Luzon species checklist or regional evidence item.",
       "directRegionIds": [],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000",
         "1300000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000",
         "1300000000"
       ],
@@ -5602,10 +5737,12 @@
       "directRegionIds": [],
       "indirectRegionIds": [
         "0200000000",
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0200000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -5626,10 +5763,12 @@
       "directRegionIds": [],
       "indirectRegionIds": [
         "0200000000",
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0200000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -5650,10 +5789,12 @@
       "directRegionIds": [],
       "indirectRegionIds": [
         "0200000000",
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0200000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -5673,12 +5814,14 @@
       "nationalContextDisposition": null,
       "directRegionIds": [],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000"
       ],
-      "classification": "indirectly-linked",
+      "classification": "shared-across-regions",
       "publicationApproval": null,
       "sourceIds": [],
       "missingSourceIds": [],
@@ -5695,12 +5838,14 @@
       "nationalContextDisposition": null,
       "directRegionIds": [],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000"
       ],
-      "classification": "indirectly-linked",
+      "classification": "shared-across-regions",
       "publicationApproval": null,
       "sourceIds": [],
       "missingSourceIds": [],
@@ -5717,12 +5862,14 @@
       "nationalContextDisposition": null,
       "directRegionIds": [],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000"
       ],
-      "classification": "indirectly-linked",
+      "classification": "shared-across-regions",
       "publicationApproval": null,
       "sourceIds": [],
       "missingSourceIds": [],
@@ -5746,10 +5893,12 @@
         "0200000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0200000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -5826,10 +5975,12 @@
         "0200000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0200000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -5856,10 +6007,12 @@
         "0200000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0200000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -5886,10 +6039,12 @@
         "0200000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0200000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -5910,10 +6065,12 @@
       "directRegionIds": [],
       "indirectRegionIds": [
         "0200000000",
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0200000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -5937,9 +6094,11 @@
         "1300000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000",
         "1300000000"
       ],
@@ -5968,6 +6127,7 @@
       "nationalContextDisposition": null,
       "directRegionIds": [],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
@@ -5985,7 +6145,7 @@
     },
     {
       "path": "data/research/philippines/national/reviews/ncr-administrative-denominator-reconciliation-20261119.json",
-      "sha256": "7667d30dabc201eebfa8d9fd1e69a6d7a295d8f0c4b027beff640d6d1a0b80c5",
+      "sha256": "a40707bf46d2f2d600689fe98759898067b333835d943aec45244fee198a3794",
       "reviewId": "ncr-administrative-denominator-reconciliation-20261119",
       "reviewedOn": "2026-11-19",
       "phaseId": "L2",
@@ -5998,9 +6158,11 @@
         "1300000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000",
         "1300000000"
       ],
@@ -6029,9 +6191,11 @@
         "1300000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000",
         "1300000000"
       ],
@@ -6060,9 +6224,11 @@
         "1300000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000",
         "1300000000"
       ],
@@ -6095,9 +6261,11 @@
         "1300000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000",
         "1300000000"
       ],
@@ -6124,9 +6292,11 @@
         "1300000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000",
         "1300000000"
       ],
@@ -6154,9 +6324,11 @@
         "1300000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000",
         "1300000000"
       ],
@@ -6186,9 +6358,11 @@
         "1300000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000",
         "1300000000"
       ],
@@ -6216,9 +6390,11 @@
         "1300000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000",
         "1300000000"
       ],
@@ -6245,9 +6421,11 @@
         "1300000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000",
         "1300000000"
       ],
@@ -6279,9 +6457,11 @@
         "1300000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000",
         "1300000000"
       ],
@@ -6310,9 +6490,11 @@
         "1300000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000",
         "1300000000"
       ],
@@ -6341,9 +6523,11 @@
         "1300000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000",
         "1300000000"
       ],
@@ -6370,9 +6554,11 @@
         "1300000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000",
         "1300000000"
       ],
@@ -6399,9 +6585,11 @@
         "1300000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000",
         "1300000000"
       ],
@@ -6430,9 +6618,11 @@
         "1300000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000",
         "1300000000"
       ],
@@ -6461,9 +6651,11 @@
         "1300000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000",
         "1300000000"
       ],
@@ -6492,9 +6684,11 @@
         "1300000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000",
         "1300000000"
       ],
@@ -6521,9 +6715,11 @@
         "1300000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000",
         "1300000000"
       ],
@@ -6552,9 +6748,11 @@
         "1300000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000",
         "1300000000"
       ],
@@ -6581,9 +6779,11 @@
         "1300000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000",
         "1300000000"
       ],
@@ -6610,9 +6810,11 @@
         "1300000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000",
         "1300000000"
       ],
@@ -6639,9 +6841,11 @@
         "1300000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000",
         "1300000000"
       ],
@@ -6668,9 +6872,11 @@
         "1300000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000",
         "1300000000"
       ],
@@ -6697,9 +6903,11 @@
         "1300000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000",
         "1300000000"
       ],
@@ -6727,9 +6935,11 @@
         "1300000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000",
         "1300000000"
       ],
@@ -6752,9 +6962,11 @@
       "nationalContextDisposition": null,
       "directRegionIds": [],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000",
         "1300000000"
       ],
@@ -6783,9 +6995,11 @@
         "1300000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000",
         "1300000000"
       ],
@@ -6812,9 +7026,11 @@
         "1300000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000",
         "1300000000"
       ],
@@ -6840,9 +7056,11 @@
       "nationalContextDisposition": null,
       "directRegionIds": [],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000",
         "1300000000"
       ],
@@ -6870,9 +7088,11 @@
       "nationalContextDisposition": null,
       "directRegionIds": [],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000",
         "1300000000"
       ],
@@ -6904,9 +7124,11 @@
         "1300000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000",
         "1300000000"
       ],
@@ -6946,9 +7168,11 @@
         "1300000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000",
         "1300000000"
       ],
@@ -6976,9 +7200,11 @@
         "1300000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000",
         "1300000000"
       ],
@@ -7007,9 +7233,11 @@
         "1300000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000",
         "1300000000"
       ],
@@ -7041,9 +7269,11 @@
         "1300000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000",
         "1300000000"
       ],
@@ -7072,9 +7302,11 @@
         "1300000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000",
         "1300000000"
       ],
@@ -7101,9 +7333,11 @@
         "1300000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000",
         "1300000000"
       ],
@@ -7133,9 +7367,11 @@
         "1300000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000",
         "1300000000"
       ],
@@ -7164,9 +7400,11 @@
         "1300000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000",
         "1300000000"
       ],
@@ -7193,9 +7431,11 @@
         "1300000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000",
         "1300000000"
       ],
@@ -7223,9 +7463,11 @@
         "1300000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000",
         "1300000000"
       ],
@@ -7254,9 +7496,11 @@
         "1300000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000",
         "1300000000"
       ],
@@ -7286,9 +7530,11 @@
         "1300000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000",
         "1300000000"
       ],
@@ -7319,9 +7565,11 @@
         "1300000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000",
         "1300000000"
       ],
@@ -7348,9 +7596,11 @@
         "1300000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000",
         "1300000000"
       ],
@@ -7379,9 +7629,11 @@
         "1300000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000",
         "1300000000"
       ],
@@ -7412,9 +7664,11 @@
         "1300000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000",
         "1300000000"
       ],
@@ -7441,9 +7695,11 @@
       "nationalContextDisposition": null,
       "directRegionIds": [],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000",
         "1300000000"
       ],
@@ -7472,9 +7728,11 @@
         "1300000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000",
         "1300000000"
       ],
@@ -7499,9 +7757,11 @@
       "nationalContextDisposition": null,
       "directRegionIds": [],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000",
         "1300000000"
       ],
@@ -7529,9 +7789,11 @@
         "1300000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000",
         "1300000000"
       ],
@@ -7561,9 +7823,11 @@
         "1300000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000",
         "1300000000"
       ],
@@ -7590,9 +7854,11 @@
         "1300000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000",
         "1300000000"
       ],
@@ -7621,9 +7887,11 @@
         "1300000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000",
         "1300000000"
       ],
@@ -7655,8 +7923,11 @@
         "0400000000",
         "1300000000"
       ],
-      "indirectRegionIds": [],
+      "indirectRegionIds": [
+        "0300000000"
+      ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000",
         "1300000000"
       ],
@@ -7685,8 +7956,11 @@
         "0400000000",
         "1300000000"
       ],
-      "indirectRegionIds": [],
+      "indirectRegionIds": [
+        "0300000000"
+      ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000",
         "1300000000"
       ],
@@ -7713,9 +7987,11 @@
         "1300000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000",
         "1300000000"
       ],
@@ -7743,9 +8019,11 @@
         "1300000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000",
         "1300000000"
       ],
@@ -7775,9 +8053,11 @@
         "1300000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000",
         "1300000000"
       ],
@@ -7814,9 +8094,11 @@
         "1300000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000",
         "1300000000"
       ],
@@ -7849,9 +8131,11 @@
         "1300000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000",
         "1300000000"
       ],
@@ -7887,9 +8171,11 @@
         "1300000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000",
         "1300000000"
       ],
@@ -7914,9 +8200,11 @@
       "nationalContextDisposition": null,
       "directRegionIds": [],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000",
         "1300000000"
       ],
@@ -7942,9 +8230,11 @@
       "nationalContextDisposition": null,
       "directRegionIds": [],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000",
         "1300000000"
       ],
@@ -7973,9 +8263,11 @@
         "1300000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000",
         "1300000000"
       ],
@@ -8003,9 +8295,11 @@
         "1300000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000",
         "1300000000"
       ],
@@ -8033,9 +8327,11 @@
         "1300000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000",
         "1300000000"
       ],
@@ -8062,9 +8358,11 @@
         "1300000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000",
         "1300000000"
       ],
@@ -8092,9 +8390,11 @@
         "1300000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000",
         "1300000000"
       ],
@@ -8122,9 +8422,11 @@
         "1300000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000",
         "1300000000"
       ],
@@ -8152,9 +8454,11 @@
         "1300000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000",
         "1300000000"
       ],
@@ -8276,10 +8580,12 @@
         "0200000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0200000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -8299,12 +8605,14 @@
       "nationalContextDisposition": null,
       "directRegionIds": [],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000"
       ],
-      "classification": "indirectly-linked",
+      "classification": "shared-across-regions",
       "publicationApproval": null,
       "sourceIds": [],
       "missingSourceIds": [],
@@ -8321,12 +8629,14 @@
       "nationalContextDisposition": null,
       "directRegionIds": [],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000"
       ],
-      "classification": "indirectly-linked",
+      "classification": "shared-across-regions",
       "publicationApproval": null,
       "sourceIds": [],
       "missingSourceIds": [],
@@ -8343,12 +8653,14 @@
       "nationalContextDisposition": null,
       "directRegionIds": [],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000"
       ],
-      "classification": "indirectly-linked",
+      "classification": "shared-across-regions",
       "publicationApproval": null,
       "sourceIds": [],
       "missingSourceIds": [],
@@ -8365,12 +8677,14 @@
       "nationalContextDisposition": null,
       "directRegionIds": [],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000"
       ],
-      "classification": "indirectly-linked",
+      "classification": "shared-across-regions",
       "publicationApproval": null,
       "sourceIds": [],
       "missingSourceIds": [],
@@ -8387,12 +8701,14 @@
       "nationalContextDisposition": null,
       "directRegionIds": [],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000"
       ],
-      "classification": "indirectly-linked",
+      "classification": "shared-across-regions",
       "publicationApproval": null,
       "sourceIds": [],
       "missingSourceIds": [],
@@ -8409,12 +8725,14 @@
       "nationalContextDisposition": null,
       "directRegionIds": [],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000"
       ],
-      "classification": "indirectly-linked",
+      "classification": "shared-across-regions",
       "publicationApproval": null,
       "sourceIds": [],
       "missingSourceIds": [],
@@ -8431,12 +8749,14 @@
       "nationalContextDisposition": null,
       "directRegionIds": [],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000"
       ],
-      "classification": "indirectly-linked",
+      "classification": "shared-across-regions",
       "publicationApproval": null,
       "sourceIds": [],
       "missingSourceIds": [],
@@ -8453,12 +8773,14 @@
       "nationalContextDisposition": null,
       "directRegionIds": [],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000"
       ],
-      "classification": "indirectly-linked",
+      "classification": "shared-across-regions",
       "publicationApproval": null,
       "sourceIds": [],
       "missingSourceIds": [],
@@ -8507,12 +8829,14 @@
       "nationalContextDisposition": "Philippines-wide freshwater source-access and rights review; no regional species extraction or admission.",
       "directRegionIds": [],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
+        "0300000000",
         "0400000000"
       ],
-      "classification": "indirectly-linked",
+      "classification": "shared-across-regions",
       "publicationApproval": null,
       "sourceIds": [
         "jamandre-et-al-2026-philippine-freshwater-biogeographic-regions"
@@ -8536,10 +8860,12 @@
         "0100000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0100000000",
+        "0300000000",
         "0400000000",
         "1400000000"
       ],
@@ -8566,10 +8892,12 @@
         "0100000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0100000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -8593,10 +8921,12 @@
         "0100000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0100000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -8623,10 +8953,12 @@
         "0100000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0100000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -8653,10 +8985,12 @@
         "0100000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0100000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -8680,10 +9014,12 @@
         "0100000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0100000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -8709,10 +9045,12 @@
         "0100000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0100000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -8739,10 +9077,12 @@
         "0100000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0100000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -8768,10 +9108,12 @@
         "0100000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0100000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -8797,10 +9139,12 @@
         "0100000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0100000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -8828,10 +9172,12 @@
         "0100000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0100000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -8857,10 +9203,12 @@
         "0100000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0100000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -8887,10 +9235,12 @@
         "0100000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0100000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -8916,10 +9266,12 @@
         "0100000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0100000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -8946,10 +9298,12 @@
         "0100000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0100000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -8975,10 +9329,12 @@
         "0100000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0100000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -9004,10 +9360,12 @@
         "0100000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0100000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -9035,10 +9393,12 @@
         "0100000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0100000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -9066,10 +9426,12 @@
         "0100000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0100000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -9095,10 +9457,12 @@
         "0100000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0100000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -9124,10 +9488,12 @@
         "0100000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0100000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -9153,10 +9519,12 @@
         "0100000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0100000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -9182,10 +9550,12 @@
         "0100000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0100000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -9211,10 +9581,12 @@
         "0100000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0100000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -9240,10 +9612,12 @@
         "0100000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0100000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -9269,10 +9643,12 @@
         "0100000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0100000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -9300,10 +9676,12 @@
         "0100000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0100000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -9330,10 +9708,12 @@
         "0100000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0100000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -9359,10 +9739,12 @@
         "0100000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0100000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -9388,10 +9770,12 @@
         "0100000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0100000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -9418,10 +9802,12 @@
         "0100000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0100000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -9447,10 +9833,12 @@
         "0100000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0100000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -9477,10 +9865,12 @@
         "0100000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0100000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -9508,10 +9898,12 @@
         "0100000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0100000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -9538,10 +9930,12 @@
         "0100000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0100000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -9567,10 +9961,12 @@
         "0100000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0100000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -9598,10 +9994,12 @@
         "0100000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0100000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -9630,10 +10028,12 @@
         "0200000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0200000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -9663,10 +10063,12 @@
         "0200000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0200000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -9693,10 +10095,12 @@
         "0200000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0200000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -9722,10 +10126,12 @@
         "0200000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0200000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -9755,10 +10161,12 @@
         "0200000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0200000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -9787,10 +10195,12 @@
         "0200000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0200000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -9812,10 +10222,12 @@
         "0200000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0200000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -9844,10 +10256,12 @@
         "0200000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0200000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -9873,10 +10287,12 @@
         "0200000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0200000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -9900,10 +10316,12 @@
         "0200000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0200000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -9929,10 +10347,12 @@
         "0200000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0200000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -9958,10 +10378,12 @@
         "0200000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0200000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -9990,10 +10412,12 @@
         "0200000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0200000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -10018,10 +10442,12 @@
         "1700000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0200000000",
+        "0300000000",
         "0400000000",
         "1700000000"
       ],
@@ -10051,10 +10477,12 @@
         "0200000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0200000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -10084,10 +10512,12 @@
         "0200000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0200000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -10117,10 +10547,12 @@
         "0200000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0200000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -10149,10 +10581,12 @@
         "0200000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0200000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -10179,10 +10613,12 @@
         "0200000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0200000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -10211,10 +10647,12 @@
         "0200000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0200000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -10243,10 +10681,12 @@
         "0200000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0200000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -10273,10 +10713,12 @@
         "0200000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0200000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -10300,10 +10742,12 @@
         "0200000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0200000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -10334,10 +10778,12 @@
         "0200000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0200000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -10366,10 +10812,12 @@
         "0200000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0200000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -10395,10 +10843,12 @@
         "0200000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0200000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -10427,10 +10877,12 @@
         "0200000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0200000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -10457,10 +10909,12 @@
         "0200000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0200000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -10489,10 +10943,12 @@
         "0200000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0200000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -10521,10 +10977,12 @@
         "0200000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0200000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -10551,10 +11009,12 @@
         "0200000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0200000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -10582,10 +11042,12 @@
         "0200000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0200000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -10614,10 +11076,12 @@
         "0200000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0200000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -10648,10 +11112,12 @@
         "0200000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0200000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -10680,10 +11146,12 @@
         "0200000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0200000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -10709,10 +11177,12 @@
         "0200000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0200000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -10741,10 +11211,12 @@
         "1400000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0200000000",
+        "0300000000",
         "0400000000",
         "1400000000"
       ],
@@ -10769,10 +11241,12 @@
         "0200000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0200000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -10804,10 +11278,12 @@
         "0200000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0200000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -10833,10 +11309,12 @@
         "0200000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0200000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -10881,10 +11359,12 @@
         "0200000000"
       ],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
         "0200000000",
+        "0300000000",
         "0400000000"
       ],
       "classification": "shared-across-regions",
@@ -10909,6 +11389,7 @@
       "nationalContextDisposition": null,
       "directRegionIds": [],
       "indirectRegionIds": [
+        "0300000000",
         "0400000000"
       ],
       "relatedRegionIds": [
@@ -11441,7 +11922,7 @@
     },
     {
       "path": "src/data/palico-river-survey-evidence.json",
-      "sha256": "08e758f716b4037e5f9294c6295ef1928c102b267d513374cfd2f134f07fee35",
+      "sha256": "03f661a5c68abb06e8a5e7a5955f767556f9271a0d7464c6ef6ea0472d56ff9e",
       "renderedBy": "src/components/palico-river-survey-evidence.tsx",
       "evidenceKind": "species-evidence-projection",
       "recordCounts": {
