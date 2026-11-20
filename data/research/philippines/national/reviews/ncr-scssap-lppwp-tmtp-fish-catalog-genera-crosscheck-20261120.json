@@ -1,0 +1,393 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "ncr-scssap-lppwp-tmtp-fish-catalog-genera-crosscheck-20261120",
+  "reviewedOn": "2026-11-20",
+  "phaseId": "L2",
+  "regionId": "1300000000",
+  "regionName": "National Capital Region (NCR)",
+  "status": "specialist-genus-name-crosscheck-complete;source-spellings-retained;species-identity-unresolved;research-only",
+  "question": "Do the specialist fish catalog records provide name-level context for five genus strings highlighted by the CoL XR rank screen, without correcting the source text or inferring study-specimen identities?",
+  "sourceIds": [
+    "calacademy-catalog-scssap-wetland-taxa-20261120",
+    "scssap-ph-ecosystems-ch4-lppwp-tmtp-2026"
+  ],
+  "inputs": [
+    "data/research/philippines/national/reviews/ncr-scssap-lppwp-tmtp-unresolved-fish-genera-20261120.json"
+  ],
+  "snapshotHashes": {
+    "parentRankScreen": "54809509401c6116da83c5cb2c48971b52bcbb6bcd05f7355c39f72e2628a415"
+  },
+  "sourceAccess": {
+    "catalogSearchUrl": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatmain.asp",
+    "databaseSearched": "Genus",
+    "queryCount": 9,
+    "exactCandidateGenusRecords": 5,
+    "rawCapture": "Each query submitted to the Catalog's official Genus search. Exact name results were checked against their direct genus record pages. Raw HTML is retained in local-only ignored storage, with SHA-256 hashes recorded here."
+  },
+  "method": {
+    "summary": "Queried the four printed spelling forms, their four comparison forms, and Platycephalus against the Catalog of Fishes Genus database. A result counted only when the returned genus-record heading exactly matched the query and a direct record page confirmed it.",
+    "limitations": [
+      "A Catalog genus record confirms only a nomenclatural name entry; it does not identify a fish sampled by SCSSAP or confirm any species at LPPWP or TMTP.",
+      "No-exact-result outcomes describe this bounded Catalog Genus search only and do not establish that a name is unavailable or invalid in every source.",
+      "The four source strings remain verbatim. Comparison-name records do not prove the table contains typographic errors or authorize normalization.",
+      "Platycephalus is confirmed at genus rank only; its source row remains genus-level and unresolved below that rank.",
+      "The cited underlying Ancog et al. report, vouchers, sampling dates, exact stations, and item-specific reuse terms remain unresolved."
+    ]
+  },
+  "pairwiseComparisons": [
+    {
+      "sourceForm": "Sardinela",
+      "sourceFormHasExactCatalogGenusRecord": false,
+      "comparisonForm": "Sardinella",
+      "comparisonFormHasExactCatalogGenusRecord": true,
+      "interpretation": "A difference in Catalog search results is a nomenclatural lead only; it does not authorize correction of the source table or identification of any study organism."
+    },
+    {
+      "sourceForm": "Leignathus",
+      "sourceFormHasExactCatalogGenusRecord": false,
+      "comparisonForm": "Leiognathus",
+      "comparisonFormHasExactCatalogGenusRecord": true,
+      "interpretation": "A difference in Catalog search results is a nomenclatural lead only; it does not authorize correction of the source table or identification of any study organism."
+    },
+    {
+      "sourceForm": "Ambyglobius",
+      "sourceFormHasExactCatalogGenusRecord": false,
+      "comparisonForm": "Amblygobius",
+      "comparisonFormHasExactCatalogGenusRecord": true,
+      "interpretation": "A difference in Catalog search results is a nomenclatural lead only; it does not authorize correction of the source table or identification of any study organism."
+    },
+    {
+      "sourceForm": "Hyporhampus",
+      "sourceFormHasExactCatalogGenusRecord": false,
+      "comparisonForm": "Hyporhamphus",
+      "comparisonFormHasExactCatalogGenusRecord": true,
+      "interpretation": "A difference in Catalog search results is a nomenclatural lead only; it does not authorize correction of the source table or identification of any study organism."
+    }
+  ],
+  "queries": [
+    {
+      "queriedName": "Sardinela",
+      "queryRole": "source-printed-form",
+      "queryUrl": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatmain.asp",
+      "queryParameters": {
+        "database": "Genus",
+        "contains": "Sardinela"
+      },
+      "exactGenusRecordCount": 0,
+      "exactGenusRecords": [],
+      "correspondingSourceRows": [
+        {
+          "sourceRow": 6,
+          "site": "LPPWP",
+          "sourceLabel": "Sardinela sp.",
+          "familyAsPrinted": "Dorosomatidae"
+        }
+      ],
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-fish-catalog-genera-20261120/search/sardinela.html",
+        "sha256": "96894f5dd9624a38b9fbea2ac0cbcf8d687b1d1514fc97b27f50f92d931cd94a"
+      }
+    },
+    {
+      "queriedName": "Sardinella",
+      "queryRole": "comparison-name-candidate",
+      "queryUrl": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatmain.asp",
+      "queryParameters": {
+        "database": "Genus",
+        "contains": "Sardinella"
+      },
+      "exactGenusRecordCount": 1,
+      "exactGenusRecords": [
+        {
+          "catalogGenusId": "1940",
+          "directRecordUrl": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genid=1940",
+          "recordHead": "Sardinella Valenciennes [A.] in Cuvier & Valenciennes 1847:261 [Histoire naturelle des poissons v. 20; ref. 1012 ] Fem. Sardinella aurita Valenciennes 1847. Type by subsequent desi",
+          "currentStatus": "Valid as Sardinella Valenciennes 1847.",
+          "directRecordVersion": "18 Nov. 2026",
+          "rawResponse": {
+            "path": "data/research/philippines/raw/national/scssap-fish-catalog-genera-20261120/records/sardinella-1940.html",
+            "sha256": "33b99b567f1a1ea543c6612e1341fa6d600ad0ae04437f304c04e36635bb49bb"
+          }
+        }
+      ],
+      "correspondingSourceRows": [
+        {
+          "sourceRow": 36,
+          "site": "TMTP",
+          "sourceLabel": "Sardinella sp.",
+          "familyAsPrinted": "Dorosomatidae"
+        }
+      ],
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-fish-catalog-genera-20261120/search/sardinella.html",
+        "sha256": "c1fe5389987b0b19fcfd25c3674b8cff92c683202c2c8f92de86cb225b3a3018"
+      }
+    },
+    {
+      "queriedName": "Leignathus",
+      "queryRole": "source-printed-form",
+      "queryUrl": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatmain.asp",
+      "queryParameters": {
+        "database": "Genus",
+        "contains": "Leignathus"
+      },
+      "exactGenusRecordCount": 0,
+      "exactGenusRecords": [],
+      "correspondingSourceRows": [
+        {
+          "sourceRow": 12,
+          "site": "LPPWP",
+          "sourceLabel": "Leignathus sp.",
+          "familyAsPrinted": "Leiognathidae"
+        },
+        {
+          "sourceRow": 50,
+          "site": "TMTP",
+          "sourceLabel": "Leignathus sp.",
+          "familyAsPrinted": "Leiognathidae"
+        }
+      ],
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-fish-catalog-genera-20261120/search/leignathus.html",
+        "sha256": "525dc9ec7a1527db27949119687c85e1169ada5403b484b5b3e534aec2e53a75"
+      }
+    },
+    {
+      "queriedName": "Leiognathus",
+      "queryRole": "comparison-name-candidate",
+      "queryUrl": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatmain.asp",
+      "queryParameters": {
+        "database": "Genus",
+        "contains": "Leiognathus"
+      },
+      "exactGenusRecordCount": 1,
+      "exactGenusRecords": [
+        {
+          "catalogGenusId": "515",
+          "directRecordUrl": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genid=515",
+          "recordHead": "Leiognathus Lacepède [B. G. E.] 1802:448 [Histoire naturelle des poissons (Lacepède) v. 4; ref. 4929 ] Masc. Leiognathus argenteus Lacepède 1802 (= Scomber edentulus Bloch 1785). T",
+          "currentStatus": "Valid as Leiognathus Lacepède 1802.",
+          "directRecordVersion": "18 Nov. 2026",
+          "rawResponse": {
+            "path": "data/research/philippines/raw/national/scssap-fish-catalog-genera-20261120/records/leiognathus-515.html",
+            "sha256": "e395ca91c5a5e4a554ed721fd9484eec5fd39c23348e9b24f1aadcaeb9905120"
+          }
+        }
+      ],
+      "correspondingSourceRows": [],
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-fish-catalog-genera-20261120/search/leiognathus.html",
+        "sha256": "47a07c325aafb598acfb741c7720c4c59f5dcc390d7eec0202d1f113bb625bfb"
+      }
+    },
+    {
+      "queriedName": "Ambyglobius",
+      "queryRole": "source-printed-form",
+      "queryUrl": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatmain.asp",
+      "queryParameters": {
+        "database": "Genus",
+        "contains": "Ambyglobius"
+      },
+      "exactGenusRecordCount": 0,
+      "exactGenusRecords": [],
+      "correspondingSourceRows": [
+        {
+          "sourceRow": 43,
+          "site": "TMTP",
+          "sourceLabel": "Ambyglobius sp. 2",
+          "familyAsPrinted": "Gobiidae"
+        },
+        {
+          "sourceRow": 44,
+          "site": "TMTP",
+          "sourceLabel": "Ambyglobius sp. 3",
+          "familyAsPrinted": "Gobiidae"
+        }
+      ],
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-fish-catalog-genera-20261120/search/ambyglobius.html",
+        "sha256": "e3229061ce0729c5789ce0546a6d8481c578388b7bc85c4441012f04d73f45a8"
+      }
+    },
+    {
+      "queriedName": "Amblygobius",
+      "queryRole": "comparison-name-candidate",
+      "queryUrl": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatmain.asp",
+      "queryParameters": {
+        "database": "Genus",
+        "contains": "Amblygobius"
+      },
+      "exactGenusRecordCount": 1,
+      "exactGenusRecords": [
+        {
+          "catalogGenusId": "3746",
+          "directRecordUrl": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genid=3746",
+          "recordHead": "Amblygobius Bleeker [P.] 1874:322 [Archives néerlandaises des sciences exactes et naturelles v. 9; ref. 437 ] Masc. Gobius sphynx Valenciennes 1837. Type by original designation (a",
+          "currentStatus": "Valid as Amblygobius Bleeker 1874.",
+          "directRecordVersion": "18 Nov. 2026",
+          "rawResponse": {
+            "path": "data/research/philippines/raw/national/scssap-fish-catalog-genera-20261120/records/amblygobius-3746.html",
+            "sha256": "6b6b595f0f2f79fbea81c6e18764a5c94ce03934f117848998833fe8a7e51838"
+          }
+        }
+      ],
+      "correspondingSourceRows": [
+        {
+          "sourceRow": 10,
+          "site": "LPPWP",
+          "sourceLabel": "Amblygobius sp.",
+          "familyAsPrinted": "Gobiidae"
+        },
+        {
+          "sourceRow": 42,
+          "site": "TMTP",
+          "sourceLabel": "Amblygobius sp. 1",
+          "familyAsPrinted": "Gobiidae"
+        }
+      ],
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-fish-catalog-genera-20261120/search/amblygobius.html",
+        "sha256": "a6e2a6ce7b1d9211161751e489d6c29bf702a7772a932ec3467ead26243232bd"
+      }
+    },
+    {
+      "queriedName": "Hyporhampus",
+      "queryRole": "source-printed-form",
+      "queryUrl": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatmain.asp",
+      "queryParameters": {
+        "database": "Genus",
+        "contains": "Hyporhampus"
+      },
+      "exactGenusRecordCount": 0,
+      "exactGenusRecords": [],
+      "correspondingSourceRows": [
+        {
+          "sourceRow": 48,
+          "site": "TMTP",
+          "sourceLabel": "Hyporhampus sp.",
+          "familyAsPrinted": "Hemiramphidae"
+        }
+      ],
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-fish-catalog-genera-20261120/search/hyporhampus.html",
+        "sha256": "ecf277913217d112c1d990946713d68394c60ca6bf6b7244bb724c9a77055106"
+      }
+    },
+    {
+      "queriedName": "Hyporhamphus",
+      "queryRole": "comparison-name-candidate",
+      "queryUrl": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatmain.asp",
+      "queryParameters": {
+        "database": "Genus",
+        "contains": "Hyporhamphus"
+      },
+      "exactGenusRecordCount": 1,
+      "exactGenusRecords": [
+        {
+          "catalogGenusId": "2582",
+          "directRecordUrl": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genid=2582",
+          "recordHead": "Hyporhamphus Gill [T. N.] 1859:131 [Proceedings of the Academy of Natural Sciences of Philadelphia v. 11; ref. 1759 ] Masc. Hyporhamphus tricuspidatus Gill 1859. Type by monotypy. ",
+          "currentStatus": "Valid as Hyporhamphus Gill 1859.",
+          "directRecordVersion": "18 Nov. 2026",
+          "rawResponse": {
+            "path": "data/research/philippines/raw/national/scssap-fish-catalog-genera-20261120/records/hyporhamphus-2582.html",
+            "sha256": "f064737750f3fdf2f0c799b085402d3ad57aaba09a1911a1563704c6fdf4868a"
+          }
+        }
+      ],
+      "correspondingSourceRows": [],
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-fish-catalog-genera-20261120/search/hyporhamphus.html",
+        "sha256": "1f437809e5772ca3344e6fa6eb05a9bc8dd432406b1edd8e838334310b74c0a3"
+      }
+    },
+    {
+      "queriedName": "Platycephalus",
+      "queryRole": "source-printed-form",
+      "queryUrl": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatmain.asp",
+      "queryParameters": {
+        "database": "Genus",
+        "contains": "Platycephalus"
+      },
+      "exactGenusRecordCount": 1,
+      "exactGenusRecords": [
+        {
+          "catalogGenusId": "387",
+          "directRecordUrl": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genid=387",
+          "recordHead": "Platycephalus Bloch [M. E.] 1795:96 [Naturgeschichte der ausländischen Fische v. 9; ref. 464 ] Masc. Platycephalus spathula Bloch 1795 (= Callionymus indicus Linnaeus 1758). Type b",
+          "currentStatus": "Valid as Platycephalus Bloch 1795.",
+          "directRecordVersion": "18 Nov. 2026",
+          "rawResponse": {
+            "path": "data/research/philippines/raw/national/scssap-fish-catalog-genera-20261120/records/platycephalus-387.html",
+            "sha256": "d55bb68327b66cfde6af154843e84195feaf399f13207abcb178186fe66d8262"
+          }
+        }
+      ],
+      "correspondingSourceRows": [
+        {
+          "sourceRow": 57,
+          "site": "TMTP",
+          "sourceLabel": "Platycephalus sp. 1",
+          "familyAsPrinted": "Platycephalidae"
+        },
+        {
+          "sourceRow": 59,
+          "site": "TMTP",
+          "sourceLabel": "Platycephalus sp. 2",
+          "familyAsPrinted": "Platycephalidae"
+        }
+      ],
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-fish-catalog-genera-20261120/search/platycephalus.html",
+        "sha256": "467d0a43f111cd20cb76734e139a27ed9a3e4c2ddc4658ccf6d857e73a75bd8a"
+      }
+    }
+  ],
+  "decision": {
+    "sourceLabelsCorrected": 0,
+    "sourceRowsMerged": 0,
+    "speciesIdentitiesVerified": 0,
+    "speciesAssertionsAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "waterbodyAssignmentsAdded": 0,
+    "geometryAdded": false,
+    "publicAppProjection": false,
+    "publicationApproval": false,
+    "regionalBaselineComplete": false
+  },
+  "nextActions": [
+    "Keep the SCSSAP spellings and numbered genus placeholders unchanged until the original table or underlying report can be checked directly.",
+    "Continue seeking the cited Ancog et al. report, its methods and dated station roster, and any voucher or specimen-photo index.",
+    "Retain this Catalog comparison as research-only nomenclatural context; do not create species or park-occurrence rows from it."
+  ],
+  "sources": [
+    {
+      "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatmain.asp",
+      "supports": "Official Eschmeyer Catalog Genus search for exact source and comparison strings."
+    },
+    {
+      "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genid=1940",
+      "supports": "Direct Catalog genus record 1940 and its current nomenclatural status for Sardinella."
+    },
+    {
+      "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genid=515",
+      "supports": "Direct Catalog genus record 515 and its current nomenclatural status for Leiognathus."
+    },
+    {
+      "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genid=3746",
+      "supports": "Direct Catalog genus record 3746 and its current nomenclatural status for Amblygobius."
+    },
+    {
+      "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genid=2582",
+      "supports": "Direct Catalog genus record 2582 and its current nomenclatural status for Hyporhamphus."
+    },
+    {
+      "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genid=387",
+      "supports": "Direct Catalog genus record 387 and its current nomenclatural status for Platycephalus."
+    },
+    {
+      "url": "https://scssap.org/library/publications/871-ch4-ecosystems-v20260103-1/file",
+      "supports": "SCSSAP Chapter 4 table context and source spellings; not study specimen verification."
+    }
+  ]
+}
