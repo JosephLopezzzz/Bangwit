@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "ncr-orozco-2008-uplb-abstract-access-refresh-20261120",
+  "reviewedOn": "2026-11-20",
+  "phaseId": "L2",
+  "regionId": "1300000000",
+  "regionName": "National Capital Region (NCR)",
+  "parentReviewId": "ncr-orozco-2008-thesis-catalog-access-review-20261119",
+  "status": "institutional-thesis-abstract-found;original-thesis-unavailable;duplicate-lineage-only;research-only",
+  "question": "Does a public UPLB-hosted source provide access to the Orozco (2008) estero thesis abstract, and does it add any independent fish or station evidence?",
+  "sourceIds": [
+    "uplb-orozco-perez-estero-thesis-catalog-2008-3225",
+    "uplb-sesam-2024-dissertation-abstract-compilation-orozco-2008",
+    "orozco-zafaralla-flavier-2008-manila-estero-fish-survey",
+    "orozco-zafaralla-2012-manila-esteros-fish-chapter"
+  ],
+  "inputs": [
+    "data/research/philippines/national/reviews/ncr-orozco-2008-thesis-catalog-access-review-20261119.json",
+    "data/research/philippines/national/reviews/ncr-orozco-zafaralla-estero-fish-locality-crosscheck-20261119.json"
+  ],
+  "method": {
+    "summary": "Rechecked the official UPLB thesis repository record and the SESAM Library-hosted 2024 dissertation abstract compilation. Compared the embedded Orozco abstract with the existing DLSU 2008 article and 2012 chapter abstracts for study scope and source lineage.",
+    "retrievedOn": "2026-11-20",
+    "accessFinding": "The UPLB repository confirms the 2008 title, author, and MS Environmental Science degree, but says the thesis is unavailable. The SESAM Library compilation, marked as of January 2024 and compiled by Evangeline L. Alcantara, includes an Orozco-Glorina D. entry with the same thesis title and an abstract. This compilation is not the original thesis or a scanned thesis copy.",
+    "comparisonFinding": "The compiled abstract names Estero de San Miguel and Estero de Quiapo and repeats the same four fish labels found in the DLSU article and 2012 chapter abstracts. It adds no fish-by-station matrix, collection date, voucher, capture coordinate, or new taxon assertion. Repeated abstract content is treated as one unresolved research lineage, not independent survey confirmation."
+  },
+  "abstractDetails": {
+    "compilationUrl": "https://sesamlibrary.uplb.edu.ph/wp-content/uploads/2024/08/dissertation2024.pdf",
+    "compilationCoverText": "DISSERTATION (PhD Environmental Science); As of January 2024; Compiled by Evangeline L. Alcantara",
+    "entryLocator": "Printed p. 50, OROZCO-GLORINA D. entry",
+    "studyTitleAsPrinted": "Biophysico-chemical and socioeconomic study of two major Manila esteros -- 2008",
+    "namedStudyWaters": [
+      "Estero de San Miguel",
+      "Estero de Quiapo"
+    ],
+    "fishNamesAsPrinted": [
+      "Rasbora maculata",
+      "Gambusia affinis",
+      "Anabas testudineus",
+      "Hypostomus plecostomus"
+    ],
+    "additionalAbstractContext": "The abstract says Rasbora and Gambusia were dominant across the two esteros; it does not assign each fish label to a particular estero or station."
+  },
+  "discrepanciesAndLimits": {
+    "degree": "The UPLB repository record gives MS Environmental Science. The DLSU 2008 article abstract says the study was part of the senior author's PhD dissertation. The 2024 compilation's cover is headed PhD Environmental Science, but that broad compilation heading does not identify the degree of the individual 2008 Orozco entry. Preserve the discrepancy; do not use the compilation heading to resolve it.",
+    "lineage": "The 2008 article and 2012 chapter share named waters and the same four fish labels. The available abstracts do not establish whether they use the same dataset or independent field campaigns.",
+    "fullText": "Neither the full 2008 thesis nor the full 2008 article or 2012 chapter was retrieved. The 2024 PDF is an abstract compilation, not full study documentation.",
+    "reuse": "The SESAM PDF is publicly accessible, but no item-specific license or reuse permission was verified. Only bibliographic facts and an attributed summary are retained; no PDF text, table, or image is reproduced."
+  },
+  "decision": {
+    "newIndependentSurveyEstablished": false,
+    "speciesAssertionsAdded": 0,
+    "speciesToWaterAssignmentsAdded": 0,
+    "stationAssignmentsAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "coordinatesAdded": 0,
+    "publicAppProjection": false,
+    "currentPresenceInferred": false,
+    "publicationApproval": false
+  },
+  "nextActions": [
+    "Keep the four names as aggregated historical research-only leads for the two named esteros; do not assign taxa to individual reaches or transfer them to Pasig River.",
+    "Continue looking for the original thesis or an itemized fish table in independently available sources; do not count abstract mirrors as separate surveys.",
+    "Retain the MS-versus-PhD metadata conflict and the 2008/2012 dataset-lineage question until the underlying thesis or field records can be inspected."
+  ],
+  "sources": [
+    {
+      "url": "https://www.ukdr.uplb.edu.ph/etd-grad/3225/",
+      "supports": "Official UPLB repository metadata identifying Glorina D. Perez-Orozco's 2008 thesis, MS Environmental Science degree, and unavailable full-text statement."
+    },
+    {
+      "url": "https://sesamlibrary.uplb.edu.ph/wp-content/uploads/2024/08/dissertation2024.pdf",
+      "supports": "SESAM Library compilation cover and the printed p. 50 Orozco-Glorina D. abstract entry, including the two esteros and four aggregated fish labels. The PDF is not the original 2008 thesis."
+    },
+    {
+      "url": "https://animorepository.dlsu.edu.ph/faculty_research/9122/",
+      "supports": "DLSU repository abstract and five-station scope for the related 2008 article; the record states that no upload is available."
+    },
+    {
+      "url": "https://doi.org/10.1007/978-94-6091-927-5_17",
+      "supports": "Bibliographic and abstract-level comparison for the related 2012 chapter; full chapter not reviewed in this pass."
+    }
+  ]
+}
