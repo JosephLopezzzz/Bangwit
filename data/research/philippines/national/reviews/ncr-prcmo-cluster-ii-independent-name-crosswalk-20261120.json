@@ -1,0 +1,248 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "ncr-prcmo-cluster-ii-independent-name-crosswalk-20261120",
+  "reviewedOn": "2026-11-20",
+  "phaseId": "L2",
+  "regionId": "1300000000",
+  "regionName": "National Capital Region (NCR)",
+  "status": "14-exact-independent-waterway-name-support;1-accent-name-form-candidate;source-name-and-locality-conflicts;research-only",
+  "question": "Which Cluster II labels in the DENR-NCR 2025 Pasig River system management list have independent name/locality support, and which source spellings, locality scopes, or feature identities remain unresolved?",
+  "sourceIds": [
+    "denr-ncr-pasig-river-biodiversity-2024",
+    "lrt2-west-extension-eis-manila-open-waterways-2020",
+    "denr-emb-ncr-adopt-an-estero-cy2015-assessment",
+    "maynilad-tatalon-wrf-eprmp-qc-hydrology-2025",
+    "denr-ncr-diliman-creek-cleanup-2021",
+    "denr-ncr-manila-estero-cleanup-maynila-undated",
+    "denr-ncr-tripa-de-galina-manila-barangays-2025",
+    "quezoncity-creeks-and-waterways-cleanup-program-2023",
+    "quezoncity-kamias-creek-flood-control-project-2023",
+    "quezoncity-talayan-san-francisco-creek-project-limits-2023",
+    "quezoncity-pasong-tamo-creek-maintenance-2025"
+  ],
+  "inputs": [
+    "data/research/philippines/national/reviews/ncr-prcmo-2025-pasig-system-52-entry-scope-review-20261120.json"
+  ],
+  "snapshotHashes": {
+    "sourceRegistry": "f6cd43011f0df8e6e61bde5d774d06ab2aa957b83ead3d29d5b3e46a6bb5613b",
+    "parentClusterScopeReview": "57db35519628a96e98e8d6fe25cc16c21dc5c77d3e2675005594a6ca184e9f13"
+  },
+  "method": "Compared the 15 Cluster II labels in the DENR-NCR Annual Report 2025 scope with official EMB documents, DENR-NCR indexed articles, and Quezon City Government project/maintenance records. Exact strings, spelling variants, and locality evidence remain separate. Station points, project limits, lengths, maps, and hydrology narratives were not converted to geometry or canonical feature links. The annual report p. 211 nomination table is internal corroboration from the same report, not an independent publication.",
+  "sourceAccess": {
+    "clusterScope": {
+      "sourceId": "denr-ncr-pasig-river-biodiversity-2024",
+      "sourceUrl": "https://ncr.denr.gov.ph/wp-content/uploads/2026/01/ANNUAL-REPORT-2025.pdf",
+      "retrieval": "Reviewed official PDF text for the Cluster II list and cluster context at p. 204, plus the separate nomination table at p. 211. Local download unavailable; no restriction bypassed and no report content copied."
+    },
+    "independentSources": [
+      {
+        "sourceId": "lrt2-west-extension-eis-manila-open-waterways-2020",
+        "retrieval": "Reviewed official EMB EIS Table 2-12/Figure 2-38, p. 2-59, and the reproduced City of Manila CLUP list/Figure 2-41, pp. 2-62-63. Names differ between lists; no map copied."
+      },
+      {
+        "sourceId": "denr-emb-ncr-adopt-an-estero-cy2015-assessment",
+        "retrieval": "Reviewed official EMB-NCR CY 2015 assessment entries for Tanque Creek and Pasong Tamo Creek; no coordinates or water-quality values transcribed."
+      },
+      {
+        "sourceId": "maynilad-tatalon-wrf-eprmp-qc-hydrology-2025",
+        "retrieval": "Reviewed section 4.2.1.1, p. 49, of the official EMB-DMS-hosted EPRMP."
+      },
+      {
+        "sourceId": "denr-ncr-diliman-creek-cleanup-2021",
+        "retrieval": "Reviewed official DENR-NCR search-index text; direct page returned HTTP 403; no workaround."
+      },
+      {
+        "sourceId": "denr-ncr-manila-estero-cleanup-maynila-undated",
+        "retrieval": "Reviewed official DENR-NCR search-index text; direct page returned HTTP 403; publication year not visible."
+      },
+      {
+        "sourceId": "denr-ncr-tripa-de-galina-manila-barangays-2025",
+        "retrieval": "Reviewed official indexed article dated 19 March 2025; direct page returned HTTP 403."
+      },
+      {
+        "sourceId": "quezoncity-creeks-and-waterways-cleanup-program-2023",
+        "retrieval": "Reviewed Quezon City Government page updated 3 November 2023 for Diliman and “Culliat” creek entries."
+      },
+      {
+        "sourceId": "quezoncity-kamias-creek-flood-control-project-2023",
+        "retrieval": "Reviewed Quezon City procurement PDF project 23-00167 for Kamias Creek and Payatas."
+      },
+      {
+        "sourceId": "quezoncity-talayan-san-francisco-creek-project-limits-2023",
+        "retrieval": "Reviewed Quezon City FY 2023 plan for distinct Talayan Creek and San Francisco River labels; project limits not used as geometry."
+      },
+      {
+        "sourceId": "quezoncity-pasong-tamo-creek-maintenance-2025",
+        "retrieval": "Reviewed official QC article dated 29 July 2025 for Pasong Tamo Creek, Barangay Holy Spirit."
+      }
+    ],
+    "itemSpecificReuseLicenseFound": false,
+    "copiedMapsCoordinatesOrRawTablesRetained": false
+  },
+  "sourceNameAndLocalityConflicts": [
+    {
+      "labels": [
+        "Estero de Tanque"
+      ],
+      "finding": "EIS list versions disagree; the reproduced Manila CLUP list and DENR cleanup article use Tanque, the MMDA map uses Tangue, and EMB separately lists Tanque Creek in Quezon City.",
+      "disposition": "Preserve spellings and cities; no identity match."
+    },
+    {
+      "labels": [
+        "Estero de Balete"
+      ],
+      "finding": "One LRT EIS list and MMDA map use Balete; the second reproduced CLUP list says Beata.",
+      "disposition": "Preserve both; no feature link."
+    },
+    {
+      "labels": [
+        "Estero de Santibañez"
+      ],
+      "finding": "Other official records use Santibanez without the tilde.",
+      "disposition": "Accent-only name-form candidate."
+    },
+    {
+      "labels": [
+        "Estero de Tripa de Galina"
+      ],
+      "finding": "DENR sources and Cluster II list use Galina; other official sources use Gallina and may describe other city segments.",
+      "disposition": "Preserve strings and locality scope; no route merge."
+    },
+    {
+      "labels": [
+        "Culiat Creek"
+      ],
+      "finding": "Tatalon EPRMP prints Culiat; QC cleanup page prints Culliat.",
+      "disposition": "Possible spelling variant only."
+    },
+    {
+      "labels": [
+        "San Francisco River",
+        "Estero de San Francisco"
+      ],
+      "finding": "Tatalon EPRMP separately uses both forms.",
+      "disposition": "Do not merge from narrative alone."
+    }
+  ],
+  "crosswalk": [
+    {
+      "nameAsPublished": "Estero de Paco",
+      "independentNameEvidence": "Exact name in the EMB-hosted LRT EIS Manila open-waterway list. The DENR report p. 211 nominations table repeats the name and city.",
+      "reportedLocalityContext": "Manila City / City of Manila.",
+      "disposition": "Exact independent name/locality support; no surveyed route, fish evidence, or canonical feature link."
+    },
+    {
+      "nameAsPublished": "Estero de Pandacan",
+      "independentNameEvidence": "Exact name in the LRT EIS; the official DENR-NCR indexed cleanup article names Estero de Pandacan in Barangay 843, Pandacan.",
+      "reportedLocalityContext": "Pandacan, City of Manila.",
+      "disposition": "Exact independent name/locality support; cleanup text is not a route survey or fish record."
+    },
+    {
+      "nameAsPublished": "Estero de Tanque",
+      "independentNameEvidence": "The LRT EIS reproduced CLUP list and DENR cleanup article use “Estero de Tanque”; another EIS list version omits Tanque, and the reproduced EMB/MMDA map prints “Estero de Tangue.” EMB CY 2015 separately lists “Tanque Creek” at West Avenue, Quezon City.",
+      "reportedLocalityContext": "Manila for Estero de Tanque; Quezon City for separate Tanque Creek entry.",
+      "disposition": "Exact spelling supported but locality/feature ambiguity remains. Preserve source labels; no alias or merge."
+    },
+    {
+      "nameAsPublished": "Estero de Balete",
+      "independentNameEvidence": "LRT EIS Table 2-12 and the EMB-hosted MMDA drainage-map appendix list “Balete”; a second reproduced Manila CLUP table prints “Beata.”",
+      "reportedLocalityContext": "City of Manila, with the MMDA appendix identifying South Manila.",
+      "disposition": "Exact name support with internal source-list conflict; no normalization or canonical feature link."
+    },
+    {
+      "nameAsPublished": "Estero de Provisor",
+      "independentNameEvidence": "Exact form appears in the LRT EIS and official DENR-NCR indexed Manila cleanup article.",
+      "reportedLocalityContext": "City of Manila.",
+      "disposition": "Exact independent name/locality support; no route, fish, or current condition added."
+    },
+    {
+      "nameAsPublished": "Estero de Santibañez",
+      "independentNameEvidence": "Official DENR indexed text and the annual-report nomination table use “Santibanez” without the tilde.",
+      "reportedLocalityContext": "Manila City / Manila.",
+      "disposition": "Accent-only name-form candidate; retain both spellings and do not assert feature identity."
+    },
+    {
+      "nameAsPublished": "Estero de Concordia",
+      "independentNameEvidence": "Exact form in the LRT EIS and DENR-NCR indexed cleanup article; p. 211 nomination table also lists Manila City.",
+      "reportedLocalityContext": "Paco, Manila / Manila City.",
+      "disposition": "Exact independent name/locality support; no route or fish evidence."
+    },
+    {
+      "nameAsPublished": "Estero de Tripa de Galina",
+      "independentNameEvidence": "Official DENR-NCR indexed article dated 19 March 2025 names Tripa de Galina along Manila barangays 738, 739, 799, 800, and 810. Other official sources spell Gallina.",
+      "reportedLocalityContext": "Manila for the Galina source; other Gallina references have different segment/locality descriptions.",
+      "disposition": "Exact Cluster II spelling supported, but source forms/locality scopes vary. Keep separate; do not merge routes."
+    },
+    {
+      "nameAsPublished": "Pasong Tamo Creek",
+      "independentNameEvidence": "EMB CY 2015 report lists it in Quezon City; Quezon City reports clearing works at Barangay Holy Spirit.",
+      "reportedLocalityContext": "Quezon City.",
+      "disposition": "Exact independent name/locality support; no monitoring points, lengths, or work limits become geometry."
+    },
+    {
+      "nameAsPublished": "Diliman Creek",
+      "independentNameEvidence": "Maynilad EPRMP names it in QC hydrology; DENR indexed article says Barangay UP Campus; QC cleanup page lists several work locations.",
+      "reportedLocalityContext": "Quezon City.",
+      "disposition": "Exact independent name/locality support; narrative connectivity is not a validated route."
+    },
+    {
+      "nameAsPublished": "Talayan Creek",
+      "independentNameEvidence": "Quezon City FY 2023 procurement plan names it separately from San Francisco River in Barangay Talayan; a QC article also says “Talayan (Araneta) Creek.”",
+      "reportedLocalityContext": "Barangay Talayan, Quezon City.",
+      "disposition": "Exact name/locality support; keep “Araneta” as source form only; no alias or project-limit geometry inferred."
+    },
+    {
+      "nameAsPublished": "Kamias Creek",
+      "independentNameEvidence": "QC procurement document names slope-protection work along Kamias Creek in Payatas; DENR indexed text describes a connection with Diliman Creek.",
+      "reportedLocalityContext": "Quezon City; Payatas in procurement.",
+      "disposition": "Exact name/locality support; connection is narrative, not a feature or route crosswalk."
+    },
+    {
+      "nameAsPublished": "San Francisco River",
+      "independentNameEvidence": "Maynilad EPRMP identifies it as a QC receiving waterway; QC FY 2023 plan lists it separately from Talayan Creek in Barangay Talayan.",
+      "reportedLocalityContext": "Quezon City.",
+      "disposition": "Exact independent name/locality support; do not merge with the EPRMP’s separately named Estero de San Francisco or infer full boundary."
+    },
+    {
+      "nameAsPublished": "Culiat Creek",
+      "independentNameEvidence": "Tatalon WRF EPRMP names Culiat Creek; QC cleanup page prints “Culliat Creek.”",
+      "reportedLocalityContext": "Quezon City.",
+      "disposition": "Exact Cluster II string support; Culliat is an unresolved possible spelling variant, not a confirmed alias."
+    },
+    {
+      "nameAsPublished": "Mariblo Creek",
+      "independentNameEvidence": "Tatalon WRF EPRMP names Mariblo Creek among waterways influencing San Francisco River hydrology.",
+      "reportedLocalityContext": "Quezon City hydrology context.",
+      "disposition": "Exact independent name/locality support; no route, fish occurrence, or canonical feature link."
+    }
+  ],
+  "counts": {
+    "clusterIIManagementLabelsReviewed": 15,
+    "labelsWithExactIndependentWaterwayNameSupport": 14,
+    "labelsWithAccentOnlyNameFormCandidate": 1,
+    "labelsWithUnresolvedSourceNameOrLocalityConflict": 6,
+    "canonicalFeatureLinksConfirmed": 0,
+    "geometryAdded": 0,
+    "speciesAssertionsAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "publicAppRecordsAdded": 0
+  },
+  "rightsDecision": {
+    "itemSpecificReuseTermsVerified": false,
+    "rawPagesMapsTablesCoordinatesOrProjectLimitsRetained": false,
+    "appProjectionApproved": false,
+    "decision": "Retain only short attributed name/locality findings as internal research. Government publication or hosting does not grant blanket rights to republish maps, tables, or geometry."
+  },
+  "limitations": [
+    "The Cluster II report list is selected management scope for Manila and Quezon City, not a complete waterway inventory; its cluster-level city context does not assign each name to one city.",
+    "The LRT EIS summary says 29 esteros, while the reviewed named list contains 20; the EIS lists also disagree on names. It is not treated as a complete inventory.",
+    "The p. 211 nomination table is from the same annual report and does not independently validate the cluster list.",
+    "Names and locality text do not establish unique channels, boundaries, route continuity, fish occurrence, current conditions, public access, fishing permission, water quality, or safety.",
+    "Tanque/Tangue/Tanque Creek; Balete/Beata; Santibanez/Santibañez; Galina/Gallina; Culiat/Culliat; and San Francisco River/Estero de San Francisco remain separate source strings or unresolved identity candidates.",
+    "No geometry, species, occurrence, access, legal, hazard, or public-app claim is admitted."
+  ],
+  "nextActions": [
+    "Cluster II name crosswalk is complete as research-only. Keep all four cluster reviews separate from a complete NCR waterbody inventory.",
+    "Continue freshwater, brackish, marine, wetland, reservoir, and fish-source discovery across the 17 NCR units; do not freeze NCR or Luzon scope or publish geometry/species claims before source, feature, locality, and rights review."
+  ]
+}
