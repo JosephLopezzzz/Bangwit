@@ -118,3 +118,7 @@ The official UPLB repository catalogs Glorina D. Perez-Orozco's 2008 thesis, `Bi
 ### Pasig River Phase One slide summary
 
 A GWP-hosted PRRC presentation contains a slide attributing the `Biodiversity Assessment of Pasig River and Its Tributaries: Ecosystems Approach (Phase One)` to Carmelita Villamor et al. and DENR-ERDB, with a September 2008–February 2009 study period. The slide lists eight fish with local/common-name labels and English glosses, but has no scientific names, methods, vouchers, fish-to-site assignments, or station-level table. Bounded exact-title and ERDB searches found citations to the 2009 terminal report in later EIS material but did not locate the report itself. Keep the eight labels verbatim as historical retrieval leads; add no species or occurrence rows and do not distribute slide content without item-specific reuse terms. The presentation summarizes the earlier assessment and is not an independent survey. See `reviews/ncr-pasig-2008-phase-one-slide-summary-review-20261120.json` and the source entry in `data/research/philippines/sources.json`.
+
+## Navotas NMT introductory name crosswalk
+
+See reviews/ncr-navotas-nmt-intro-name-crosswalk-review-20261120.json for the bounded source and taxonomy review of the six introductory local-name/scientific-name pairs in the 2024 Navotas-Malabon-Tullahan article. The named CLUP cross-reference mismatch and local-name ambiguity remain unresolved. This file is research-only; it admits no local species assertions or occurrence rows.
