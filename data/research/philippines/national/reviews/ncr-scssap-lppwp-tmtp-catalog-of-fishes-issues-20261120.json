@@ -1,0 +1,243 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "ncr-scssap-lppwp-tmtp-catalog-of-fishes-issues-20261120",
+  "reviewedOn": "2026-11-20",
+  "phaseId": "L2",
+  "regionId": "1300000000",
+  "regionName": "National Capital Region (NCR)",
+  "status": "targeted-catalog-crosscheck-complete;specimen-identity-unverified;research-only",
+  "question": "Do independent Eschmeyer's Catalog of Fishes records support the CoL XR name candidate, resolve printed family-name conflicts, and clarify selected range or habitat flags in the LPPWP/TMTP source tables?",
+  "sourceIds": [
+    "scssap-ph-ecosystems-ch4-lppwp-tmtp-2026",
+    "calacademy-catalog-scssap-wetland-taxa-20261120"
+  ],
+  "inputs": [
+    "data/research/philippines/national/reviews/ncr-scssap-lppwp-tmtp-fish-list-scope-review-20261120.json",
+    "data/research/philippines/national/reviews/ncr-scssap-lppwp-tmtp-taxonomy-crosswalk-20261120.json"
+  ],
+  "snapshotHashes": {
+    "parentFishTableReview": "86eff70bfb4e9e57d3d56a1d395aaf08022eb0bbbba5b69cf6f39aa60e45a6c6",
+    "parentColXrCrosswalk": "6b45e82a99a6aa9e731b6a531936dafd8bcf9986193288d48d5c27cb7909a787"
+  },
+  "method": {
+    "summary": "Retrieved seven direct Eschmeyer's Catalog of Fishes records: the current accepted-name record and a historical combination record for the Carangoides/Atropus candidate, all three source rows with family-string conflicts, and the Elops and Tor source-table flags. These selected-record checks do not re-run the 35-binomial crosswalk.",
+    "authorityUse": "Catalog status, family, range, and habitat fields are independent nomenclatural/context references. A record does not verify the organism sampled in the source study or its precise park site.",
+    "limitations": [
+      "No voucher, image, diagnostic description, station record, or author statement was available to reidentify source specimens.",
+      "Catalog distribution summaries are not proof of absence outside their stated range; a range or habitat discrepancy is a review flag only.",
+      "The remaining CoL XR binomial candidates were not individually checked against the Catalog in this targeted batch.",
+      "The underlying Ancog et al. report, field methods, sample dates, item-specific reuse terms, and exact site assignment remain unresolved."
+    ]
+  },
+  "sourceRows": [
+    {
+      "sourceRow": 8,
+      "site": "LPPWP",
+      "table": "4.E.1",
+      "familyAsPrinted": "Elopidae",
+      "nameAsPrinted": "Elops saurus",
+      "lookupStatus": "exact-accepted-name",
+      "nameMatchQuery": "Elops saurus",
+      "matchedFamily": "Elopidae",
+      "sourceFamilyExactTextMatch": true
+    },
+    {
+      "sourceRow": 9,
+      "site": "LPPWP",
+      "table": "4.E.1",
+      "familyAsPrinted": "Gerridae",
+      "nameAsPrinted": "Gerres filamentosus",
+      "lookupStatus": "exact-accepted-name",
+      "nameMatchQuery": "Gerres filamentosus",
+      "matchedFamily": "Gerreidae",
+      "sourceFamilyExactTextMatch": false
+    },
+    {
+      "sourceRow": 26,
+      "site": "TMTP",
+      "table": "4.F.1",
+      "familyAsPrinted": "Carangidae",
+      "nameAsPrinted": "Carangoides armatus",
+      "lookupStatus": "exact-synonym",
+      "nameMatchQuery": "Carangoides armatus",
+      "matchedFamily": "Carangidae",
+      "sourceFamilyExactTextMatch": true
+    },
+    {
+      "sourceRow": 32,
+      "site": "TMTP",
+      "table": "4.F.1",
+      "familyAsPrinted": "Cyprinidae",
+      "nameAsPrinted": "Tor tambroides",
+      "lookupStatus": "exact-accepted-name",
+      "nameMatchQuery": "Tor tambroides",
+      "matchedFamily": "Cyprinidae",
+      "sourceFamilyExactTextMatch": true
+    },
+    {
+      "sourceRow": 33,
+      "site": "TMTP",
+      "table": "4.F.1",
+      "familyAsPrinted": "Dorosomatidae",
+      "nameAsPrinted": "Saurida tumbil",
+      "lookupStatus": "exact-accepted-name",
+      "nameMatchQuery": "Saurida tumbil",
+      "matchedFamily": "Harpadontidae",
+      "sourceFamilyExactTextMatch": false
+    },
+    {
+      "sourceRow": 40,
+      "site": "TMTP",
+      "table": "4.F.1",
+      "familyAsPrinted": "Gerridae",
+      "nameAsPrinted": "Gerres filamentosus",
+      "lookupStatus": "exact-accepted-name",
+      "nameMatchQuery": "Gerres filamentosus",
+      "matchedFamily": "Gerreidae",
+      "sourceFamilyExactTextMatch": false
+    }
+  ],
+  "catalogRecords": [
+    {
+      "label": "Atropus armatus accepted-name record",
+      "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=34496",
+      "pageVersion": "18 Nov. 2026",
+      "currentStatus": "Valid as Atropus armatus (Forsskål 1775). Carangidae: Caranginae.",
+      "familyAndSubfamily": "Carangidae: Caranginae.",
+      "distribution": "Red Sea; Indo-West Pacific: East London (South Africa), East Africa, Seychelles, Madagascar, western Mascarenes and Persian Gulf east to northern Vietnam and southern China, north to southern Japan IUCN (2018): Least Concern, as Carangoides armatus .",
+      "habitat": "brackish, marine.",
+      "responseBytes": 10750,
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-fish-catalog-check-20261120/34496.html",
+        "sha256": "74e18addd706200f2a8c9cc543fc9d37314a573bb3a08ea3beb41dd924c6ac1c"
+      }
+    },
+    {
+      "label": "Carangoides armatus historical combination record",
+      "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=59622",
+      "pageVersion": "18 Nov. 2026",
+      "currentStatus": "Synonym of Atropus armatus (Forsskål 1775). Carangidae: Caranginae.",
+      "familyAndSubfamily": "Carangidae: Caranginae.",
+      "distribution": "Red Sea; Indo-West Pacific: Eastern Cape and KwaZulu-Natal (South Africa), East Africa, Persian Gulf, Seychelles, Madagascar and western Mascarenes (La Réunion, Mauritius) east to northern Vietnam, southern China and Taiwan, north to southern Japan [if valid]",
+      "habitat": "brackish, marine.",
+      "responseBytes": 12721,
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-fish-catalog-check-20261120/59622.html",
+        "sha256": "827eaa5e3432bfbcaf12dc52682bb47f2ebee05ea2ecf977f77ed3743fe0422b"
+      }
+    },
+    {
+      "label": "Gerres filamentosus",
+      "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=15647",
+      "pageVersion": "18 Nov. 2026",
+      "currentStatus": "Valid as Gerres filamentosus Cuvier 1829. Gerreidae.",
+      "familyAndSubfamily": "Gerreidae.",
+      "distribution": "Indo-West Pacific: KwaZulu-Natal (South Africa), East Africa (Mozambique, Tanzania, Kenya), Madagascar and western Mascarenes (La Réunion, Mauritius) east to Fiji, north to southern Japan, south to Western Australia, Queensland (Australia) and New Caledonia. IUCN (2017): Least Concern.",
+      "habitat": "freshwater, brackish, marine.",
+      "responseBytes": 16334,
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-fish-catalog-check-20261120/15647.html",
+        "sha256": "757d100b9f291420f09a2c0f3b4e11ab7cc73767d5ca83192b1cfc900b040000"
+      }
+    },
+    {
+      "label": "Saurida tumbil",
+      "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=11427",
+      "pageVersion": "18 Nov. 2026",
+      "currentStatus": "Valid as Saurida tumbil (Bloch 1795). Harpadontidae.",
+      "familyAndSubfamily": "Harpadontidae.",
+      "distribution": "Red Sea; Indian Ocean: South Africa, East Africa and Persian Gulf east to Papua New Guinea, south to Queensland (Australia). IUCN (2016): Least Concern.",
+      "habitat": "marine.",
+      "responseBytes": 13671,
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-fish-catalog-check-20261120/11427.html",
+        "sha256": "e6de4bab4c742f66a279c1b12eb30fae5c7210a63cc6a6f9163a88e62cdcfb7f"
+      }
+    },
+    {
+      "label": "Tor tambroides",
+      "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=31936",
+      "pageVersion": "18 Nov. 2026",
+      "currentStatus": "Valid as Tor tambroides (Bleeker 1854). Cyprinidae: Torinae.",
+      "familyAndSubfamily": "Cyprinidae: Torinae.",
+      "distribution": "Southeast Asia: Malaysia,Singapore, Indonesia and Mekong River basin.",
+      "habitat": "freshwater.",
+      "responseBytes": 11087,
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-fish-catalog-check-20261120/31936.html",
+        "sha256": "1b10c91eb52c74e767e57e66bc70f1118572bf8fb1a9f3f5ed85fc091df5f9d9"
+      }
+    },
+    {
+      "label": "Elops saurus",
+      "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=57824",
+      "pageVersion": "18 Nov. 2026",
+      "currentStatus": "Valid as Elops saurus Linnaeus 1766. Elopidae.",
+      "familyAndSubfamily": "Elopidae.",
+      "distribution": "Western Atlantic: Massachusetts south to Florida (U.S.A.), including Gulf of Mexico.",
+      "habitat": "brackish, marine.",
+      "responseBytes": 13202,
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-fish-catalog-check-20261120/57824.html",
+        "sha256": "144c17e19c684cdd71491b9a9a2dcf40d62e0399b8f9a5872b49def802fb8dd5"
+      }
+    },
+    {
+      "label": "Elops hawaiensis",
+      "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=58306",
+      "pageVersion": "18 Nov. 2026",
+      "currentStatus": "Valid as Elops hawaiensis Regan 1909. Elopidae.",
+      "familyAndSubfamily": "Elopidae.",
+      "distribution": "Eastern Indian Ocean, western Pacific: Andaman Sea east to Hawaiian Islands (U.S.A.) and Tuamotu Archipelago (French Polynesia), north to southern Korea and Japan, south to northwestern Australia, New South Wales (Australia) and New Caledonia. IUCN (2022): Data Deficient.",
+      "habitat": "freshwater, brackish, marine.",
+      "responseBytes": 12084,
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-fish-catalog-check-20261120/58306.html",
+        "sha256": "248039da26d6f6505d3e7ebb10126da9051f24c69058defbdbc1ec138b89029d"
+      }
+    }
+  ],
+  "findings": [
+    {
+      "name": "Carangoides armatus",
+      "result": "The Catalog's current treatment resolves the related historical combination as a synonym of Atropus armatus and identifies Atropus armatus as valid; this independently agrees with the CoL XR accepted-name candidate.",
+      "sourceDecision": "Preserve Carangoides armatus exactly as printed. Do not rewrite the survey table or assert that the sampled fish was Atropus armatus."
+    },
+    {
+      "name": "Gerres filamentosus",
+      "result": "The Catalog lists Gerreidae, while both source rows print Gerridae. This supports a family-string conflict at the nomenclatural-reference level only.",
+      "sourceDecision": "Keep Gerridae unchanged in the transcribed source rows pending the original study or author clarification."
+    },
+    {
+      "name": "Saurida tumbil",
+      "result": "The Catalog lists Harpadontidae and marine habitat, while the TMTP row prints Dorosomatidae. This supports a family-string conflict at the nomenclatural-reference level only.",
+      "sourceDecision": "Keep Dorosomatidae unchanged in the transcribed source row pending the original study or author clarification."
+    },
+    {
+      "name": "Elops saurus / Elops hawaiensis",
+      "result": "The Catalog treats E. saurus as valid with a Western Atlantic distribution, and E. hawaiensis as valid with an Eastern Indian Ocean/western Pacific distribution. This makes the LPPWP table's E. saurus label a substantial range/identification flag.",
+      "sourceDecision": "Do not substitute E. hawaiensis. Verify the original study, voucher, or author identification; no specimen identity or correction is established."
+    },
+    {
+      "name": "Tor tambroides",
+      "result": "The Catalog lists freshwater habitat and a Southeast Asian distribution (Malaysia, Singapore, Indonesia, and the Mekong River basin) for the name printed in the TMTP table.",
+      "sourceDecision": "Flag for source-method and locality follow-up. Do not infer impossibility, absence, or erroneous identity from this range summary alone."
+    }
+  ],
+  "decision": {
+    "independentCrosscheckOfAll35Binomials": false,
+    "sourceRowsCorrected": 0,
+    "acceptedNamesApplied": 0,
+    "speciesAssertionsAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "geometryAdded": false,
+    "publicAppProjection": false,
+    "publicationApproval": false,
+    "regionalBaselineComplete": false
+  },
+  "nextActions": [
+    "Seek the underlying Ancog et al. Coastal Biodiversity Report, its voucher or photo catalog, survey dates, methods, and park/station mapping.",
+    "Independently cross-check the remaining accepted-name candidates; prioritize table misspellings and taxa whose source habitats or regions appear inconsistent.",
+    "Retain all source strings, measurements, site labels, and imagery as research-only until identification, locality, date, and reuse rights are resolved."
+  ]
+}
