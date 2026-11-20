@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "ncr-navotas-eis-table-2-35-taxonomy-crosscheck-20261120",
+  "reviewedOn": "2026-11-20",
+  "phaseId": "L2",
+  "regionId": "1300000000",
+  "regionName": "National Capital Region (NCR)",
+  "status": "taxonomy-screen-complete;two-family-discrepancies;one-species-complex-flag;identity-unverified;research-only",
+  "question": "What can current fish-taxonomy references establish about the eight names and printed family fields in Navotas EIS Table 2-35 without treating nomenclatural agreement as specimen identification?",
+  "sourceIds": [
+    "emb-ncr-navotas-coastal-bay-reclamation-eis-2020-fisheries",
+    "calacademy-navotas-eis-table235-taxonomy-20261120",
+    "fao-1999-western-central-pacific-ariidae-manillensis-account"
+  ],
+  "inputs": [
+    {
+      "reviewId": "ncr-navotas-coastal-bay-reclamation-eis-fishery-source-access-review-20261120",
+      "table": "Table 2-35",
+      "printedPage": "2-165",
+      "sourceReportedRows": 8,
+      "sourceReportedBinomials": 7,
+      "sourceReportedGenusLevelNames": 1
+    }
+  ],
+  "method": "Compared the exact EIS name and family strings with selected records from the online Eschmeyer Catalog of Fishes (version updated 13 August 2026), and checked Arius manillensis against the FAO Western Central Pacific guide species account on printed page 1855. Two Catalog pages were retrieved as full text; selected other Catalog records were available as official indexed record excerpts, while some direct page requests returned 403. This is a nomenclatural and family-classification screen only. No source specimen, fisher catch, voucher, or image was independently identified.",
+  "crosswalkRows": [
+    {
+      "row": 1,
+      "scientificNameAsPrinted": "Mugil spp.",
+      "familyAsPrinted": "Mugilidae",
+      "catalogAssessment": "Genus-level label only; the source does not identify a binomial. Mugilidae is consistent with the Catalog treatment of Mugil.",
+      "identityDisposition": "Retain at genus rank; do not expand to Mugil cephalus or another species."
+    },
+    {
+      "row": 2,
+      "scientificNameAsPrinted": "Mugil cephalus",
+      "familyAsPrinted": "Mugilidae",
+      "catalogAssessment": "The Catalog lists Mugil cephalus Linnaeus, 1758 as valid in Mugilidae, but notes it may represent a species complex and that true M. cephalus may be restricted to the northeastern Atlantic, Mediterranean, Black Sea, Caspian Sea, and northern Red Sea.",
+      "identityDisposition": "The name is a current Catalog name, but the Manila Bay source identification remains unresolved in light of the Catalog's species-complex and range caveat. Preserve the printed label; do not silently replace it or accept a Philippine specimen identification."
+    },
+    {
+      "row": 3,
+      "scientificNameAsPrinted": "Anodontostoma chacunda",
+      "familyAsPrinted": "Clupeidae",
+      "catalogAssessment": "The Catalog lists Anodontostoma chacunda (Hamilton, 1822) as valid and assigns it to Dorosomatidae.",
+      "familyDisposition": "Family-level classification differs: the EIS prints Clupeidae, while the current Catalog uses Dorosomatidae. Treat this as a classification-scheme discrepancy, not a species-identity error; retain both values with their source provenance."
+    },
+    {
+      "row": 4,
+      "scientificNameAsPrinted": "Arius manillensis",
+      "familyAsPrinted": "Plotosidae",
+      "catalogAssessment": "The Catalog treats Pseudarius philippinus as a synonym of Arius manillensis and places that name in Ariidae: Ariinae. The FAO guide's Arius manillensis account is under Siluriformes: Ariidae.",
+      "familyDisposition": "The printed Plotosidae value conflicts with both taxonomic references checked. Preserve Plotosidae as the verbatim EIS value and record Ariidae as the independent current crosswalk; do not imply that the unvouchered fish was re-identified."
+    },
+    {
+      "row": 5,
+      "scientificNameAsPrinted": "Chanos chanos",
+      "familyAsPrinted": "Chanidae",
+      "catalogAssessment": "The Catalog lists Chanos chanos (Fabricius, 1775) as valid in Chanidae.",
+      "identityDisposition": "Printed name and family agree with the Catalog name treatment; specimen identity and interview-to-row linkage remain unverified."
+    },
+    {
+      "row": 6,
+      "scientificNameAsPrinted": "Pomadasys argenteus",
+      "familyAsPrinted": "Haemulidae",
+      "catalogAssessment": "The Catalog lists Pomadasys argenteus (Forsskål, 1775) as valid in Haemulidae.",
+      "identityDisposition": "Printed name and family agree with the Catalog name treatment; specimen identity and interview-to-row linkage remain unverified."
+    },
+    {
+      "row": 7,
+      "scientificNameAsPrinted": "Scatophagus argus",
+      "familyAsPrinted": "Scatophagidae",
+      "catalogAssessment": "The Catalog lists Scatophagus argus (Linnaeus, 1766) as valid in Scatophagidae.",
+      "identityDisposition": "Printed name and family agree with the Catalog name treatment; specimen identity and interview-to-row linkage remain unverified."
+    },
+    {
+      "row": 8,
+      "scientificNameAsPrinted": "Terapon jarbua",
+      "familyAsPrinted": "Terapontidae",
+      "catalogAssessment": "The Catalog lists Terapon jarbua (Fabricius, 1775) as valid in Terapontidae.",
+      "identityDisposition": "Printed name and family agree with the Catalog name treatment; specimen identity and interview-to-row linkage remain unverified."
+    }
+  ],
+  "summary": {
+    "sourceRowsReviewed": 8,
+    "binomialRows": 7,
+    "genusLevelRows": 1,
+    "acceptedNameMatchesAtPrintedRank": 7,
+    "familyClassificationDiscrepancies": 2,
+    "speciesComplexCaveats": 1,
+    "specimensOrVouchersVerified": 0,
+    "sourceReportedRowsPromotedToOccurrences": 0
+  },
+  "decision": "Keep every EIS row as a source-reported interview-context label. The independent taxonomy crosswalk identifies two family-field discrepancies (Anodontostoma chacunda: Clupeidae versus Catalog Dorosomatidae; Arius manillensis: printed Plotosidae versus Catalog/FAO Ariidae) and a species-complex caution for Mugil cephalus. Do not rewrite source strings, infer specimen identity, merge the generic Mugil spp. row with M. cephalus, or create occurrence/app rows.",
+  "rightsDecision": "Taxonomy references support short nomenclatural comparisons in this internal research record. The Navotas EIS item-specific reuse status remains unresolved; no source table content, photo, map, or derived public-app row is approved.",
+  "nextActions": [
+    "Keep the EIS's original family/name strings and the independent current taxonomy fields separate in any future provenance model.",
+    "Seek a Philippine mullet-focused taxonomic assessment before treating the EIS Mugil cephalus label as a resolved local species identification.",
+    "Locate and assess the separately cited Navotas CLUP (2011) before elevating its four narrative vernacular leads.",
+    "Resolve item-specific reuse terms before any public projection; NCR and Luzon remain incomplete."
+  ],
+  "sources": [
+    {
+      "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatmain.asp",
+      "supports": "Eschmeyer's Catalog of Fishes version information and selected current name/family records. Full text was opened for Anodontostoma chacunda and the Chanos genus list; official indexed excerpts were used for selected Mugil, Arius synonym, Pomadasys, Scatophagus, and Terapon records where direct page access was limited."
+    },
+    {
+      "url": "https://www.fao.org/4/x2401e/x2401e34.pdf",
+      "supports": "The FAO 1999 Western Central Pacific guide's Arius manillensis species account at printed page 1855, listed under Siluriformes: Ariidae. This is a taxonomic reference, not a Navotas field record."
+    },
+    {
+      "url": "https://www.fao.org/4/x2401e/x2401e00.htm",
+      "supports": "Official FAO volume title, editors, Rome publication details, 1999 publication date, and copyright notice."
+    }
+  ]
+}
