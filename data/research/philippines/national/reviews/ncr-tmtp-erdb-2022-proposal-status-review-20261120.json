@@ -1,0 +1,77 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "ncr-tmtp-erdb-2022-proposal-status-review-20261120",
+  "reviewedOn": "2026-11-20",
+  "phaseId": "L2",
+  "regionId": "1300000000",
+  "regionName": "National Capital Region (NCR)",
+  "status": "named-proposal-in-q2-and-q3-2022;completion-and-fish-output-unverified;research-only",
+  "question": "Do ERDB FY2022 Q2 and Q3 operational reports establish that the proposed Tanza Marine Tree Park ecological characterization was completed or produced fish data?",
+  "sourceIds": [
+    "erdb-fy2022-q2-tanza-marine-tree-park-characterization-proposal",
+    "erdb-fy2022-q3-tanza-marine-tree-park-characterization-proposal"
+  ],
+  "inputs": [
+    "data/research/philippines/national/reviews/ncr-scssap-lppwp-tmtp-fish-list-scope-review-20261120.json"
+  ],
+  "method": "Reviewed exact-title web-indexed text for the official ERDB FY2022 Q2 and Q3 Quarterly Physical Reports and attempted to open each official PDF directly. Both direct opens returned HTTP 403. The review is limited to indexed report excerpts; no access control was bypassed, and no PDF pages or tables were downloaded or visually inspected.",
+  "findings": [
+    {
+      "sourceId": "erdb-fy2022-q2-tanza-marine-tree-park-characterization-proposal",
+      "finding": "The Q2 report lists Ecological Characterization of Tanza Marine Tree Park, Navotas City, Metro Manila among urban-ecosystem RDE proposals reviewed. A separate aggregate indicator reports zero proposals endorsed for approval overall and says proposals were put on hold due to changed priorities, but it does not identify the Tanza proposal as one of those outcomes.",
+      "interpretation": "Confirms proposal-review status only. It does not establish project-specific rejection, approval, field completion, fish sampling, or a final report."
+    },
+    {
+      "sourceId": "erdb-fy2022-q3-tanza-marine-tree-park-characterization-proposal",
+      "finding": "The Q3 report lists the named Tanza characterization proposal again, including a project entry marked Proposed project for the 2nd Quarter. Indexed output headings include water/soil environmental-quality datasets collected and data analyzed, but the reviewed excerpt shows blank quarter cells. The report also lists the proposal among July–September proposal-review remarks.",
+      "interpretation": "Blank cells are unreported values in the reviewed excerpt, not zeros. The headings concern water/soil environmental quality and do not provide fish taxa or a fish survey result."
+    }
+  ],
+  "interpretation": {
+    "evidenceType": "Official administrative proposal-status records, not ecological survey data.",
+    "sourceValue": "The records establish that an ecological-characterization proposal for the Navotas Tanza Marine Tree Park was under ERDB review in FY2022.",
+    "unresolved": [
+      "Whether the Tanza proposal was approved, conducted, revised, or completed after the Q3 2022 reporting period.",
+      "Whether a final report or raw data was produced and where it may be accessed.",
+      "Whether any completed study included fish sampling, vouchers, station-level results, or reuse terms."
+    ],
+    "geographicScope": "Proposal title names Tanza Marine Tree Park, Navotas City, Metro Manila. No boundary, station, sample locality, or geometry is established."
+  },
+  "limits": [
+    "The Q2 aggregate endorsement remark cannot be assigned to the named Tanza proposal without project-specific evidence.",
+    "The Q3 table excerpt contains blank output cells; no zero or non-completion inference is made from blanks.",
+    "The reports do not establish any fish species, fish occurrence, abundance, present-day status, catchability, access, safety, or fishing permission.",
+    "No species assertion, occurrence row, waterbody geometry, app projection, or publication approval is added."
+  ],
+  "decision": {
+    "sourceRegistryEntriesAdded": 2,
+    "speciesAssertionsAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "waterbodyLeadsAdded": 0,
+    "waterbodyAssignmentsAdded": 0,
+    "geometryAdded": false,
+    "publicAppProjection": false,
+    "publicationApproval": false,
+    "regionalBaselineComplete": false,
+    "reason": "The official administrative reports provide a bounded project-status lead but no completed survey evidence or fish data. Keep the cited SCSSAP fish table and ERDB proposal distinct; seek any final study/report before considering species-level use."
+  },
+  "nextActions": [
+    "Search official ERDB, DENR-NCR, UPLB SESAM, Adamson University, and SCS-SAP repositories for a post-2022 final report or later project-status record using Tanza Marine Tree Park and title variants; do not infer absence from this bounded search.",
+    "If a final report is found, verify field dates, methods, taxon tables, station/site identities, vouchers, and reuse terms before matching it to the SCSSAP tables.",
+    "Keep this administrative lead separate from historical fish-table evidence; NCR and Luzon remain incomplete."
+  ],
+  "sources": [
+    {
+      "url": "https://erdb.denr.gov.ph/wp-content/uploads/2023/06/BAR1_2022_Q2.pdf",
+      "supports": "Official ERDB FY2022 Q2 proposal-review text and aggregate endorsement remark; indexed text only because direct PDF access returned 403."
+    },
+    {
+      "url": "https://erdb.denr.gov.ph/wp-content/uploads/2023/06/BAR1_2022_Q3.pdf",
+      "supports": "Official ERDB FY2022 Q3 proposal listing and environmental-quality output headings with blank cells in the indexed excerpt; direct PDF access returned 403."
+    },
+    {
+      "url": "https://scssap.org/library/publications/871-ch4-ecosystems-v20260103-1/file",
+      "supports": "Secondary source that cites the undated Ancog et al. LPPWP/TMTP Coastal Biodiversity Report and reproduces the historical site fish tables."
+    }
+  ]
+}
