@@ -1,0 +1,172 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "ncr-prcmo-cluster-i-independent-name-crosswalk-20261120",
+  "reviewedOn": "2026-11-20",
+  "phaseId": "L2",
+  "regionId": "1300000000",
+  "regionName": "National Capital Region (NCR)",
+  "status": "14-exact-independent-waterway-name-support;1-name-form-candidate;inventory-count-conflict;research-only",
+  "question": "Which Cluster I estero labels in the DENR-NCR 2025 Pasig River system management list have independent official or environmental-document name support, and which name forms or scope counts remain unresolved?",
+  "sourceIds": [
+    "denr-ncr-pasig-river-biodiversity-2024",
+    "philkairos-maynilad-manila-north-wrf-eprmp-vitas-freshwater-ecology",
+    "lrt2-west-extension-eis-manila-open-waterways-2020",
+    "denr-ncr-mpic-20-estero-rehab-2019"
+  ],
+  "inputs": [
+    "data/research/philippines/national/reviews/ncr-prcmo-2025-pasig-system-52-entry-scope-review-20261120.json"
+  ],
+  "snapshotHashes": {
+    "sourceRegistry": "72fd6284e22b59d02665f9ef6a8e6b24c9b519c192e13f95149735e30ea07bef",
+    "parentClusterScopeReview": "57db35519628a96e98e8d6fe25cc16c21dc5c77d3e2675005594a6ca184e9f13"
+  },
+  "method": "Compared the fifteen Cluster I labels from the linked DENR-NCR Annual Report 2025 scope review against the EMB-DMS-hosted Manila North WRF EPRMP drainage-map appendix, the EMB-hosted 2020 LRT Line 2 West Extension EIS, and a 2019 DENR announcement of the Manila estero cleanup partnership. Exact name strings, name-form candidates, inventory counts, and map descriptions were kept separate. No waterway geometry, canonical feature match, fish evidence, or app record was inferred.",
+  "sourceAccess": {
+    "clusterScope": {
+      "sourceId": "denr-ncr-pasig-river-biodiversity-2024",
+      "sourceUrl": "https://ncr.denr.gov.ph/wp-content/uploads/2026/01/ANNUAL-REPORT-2025.pdf",
+      "retrieval": "Used the Cluster I fifteen-name list and Manila City cluster context already reviewed from the official PDF text extraction in the linked scope artifact. Direct PDF access was unavailable in this pass; no access restriction was bypassed and no PDF or list image was retained."
+    },
+    "independentSources": [
+      {
+        "sourceId": "philkairos-maynilad-manila-north-wrf-eprmp-vitas-freshwater-ecology",
+        "retrieval": "Official EMB Integrated Information System Document Management System PDF opened. Reviewed the reproduced MMDA Drainage Map of Manila City, Figure 2.2-2, printed p. 2.2-3, including the listed North Manila and Central Manila waterways. No map image, table, or geometry retained."
+      },
+      {
+        "sourceId": "lrt2-west-extension-eis-manila-open-waterways-2020",
+        "retrieval": "Official EMB EIA-hosted July 2020 EIS opened. Reviewed section 2.3, “Waterways and Esteros,” Table 2-12 and Figure 2-38, printed p. 2-59. The EIS attributes the list to Manila CLUP 2005–2020. No EIS map or table copied."
+      },
+      {
+        "sourceId": "denr-ncr-mpic-20-estero-rehab-2019",
+        "retrieval": "Reviewed the DENR-NCR article through official DENR search-index text and an official DENR regional mirror that states the partnership and named esteros; the NCR article fetch returned HTTP 403. The article is a 2019 cleanup partnership list, not a current inventory or waterway survey."
+      }
+    ],
+    "itemSpecificReuseLicenseFound": false,
+    "copiedMapsOrRawTablesRetained": false
+  },
+  "inventoryCountConflict": {
+    "eisSummary": "The 2020 LRT Line 2 EIS text describes 29 esteros in Manila (19 North and 10 South) and 31.812 km total length, alongside one creek and two open canals.",
+    "eisNamedTable": "The named “List of Existing Estero” reproduced in Figure 2-38 enumerates 20 esteros, of which 13 match Cluster I names; other listed entries belong to different Manila lists/clusters.",
+    "disposition": "The summary count and visible named list do not reconcile in the reviewed text. Treat the EIS as corroboration for listed names only, not a complete or current Manila waterway inventory."
+  },
+  "crosswalk": [
+    {
+      "nameAsPublished": "Estero de Maypajo",
+      "independentNameEvidence": "Exact name in the EMB-DMS-hosted MMDA drainage-map appendix and the 2020 LRT EIS Manila estero list.",
+      "reportedLocalityContext": "North Manila in the drainage-map appendix; City of Manila in the EIS.",
+      "disposition": "Exact name/locality supported. No route geometry or fish evidence added."
+    },
+    {
+      "nameAsPublished": "Estero de Sunog Apog",
+      "independentNameEvidence": "Exact name in the MMDA drainage-map appendix, the LRT EIS list, and the DENR-MPIC cleanup-partnership list.",
+      "reportedLocalityContext": "North Manila / City of Manila.",
+      "disposition": "Exact name/locality supported as a management and planning label; no surveyed route or feature boundary established."
+    },
+    {
+      "nameAsPublished": "Estero de Vitas",
+      "independentNameEvidence": "Exact name in the MMDA drainage-map appendix, LRT EIS, and DENR-MPIC cleanup-partnership list. A separate EPRMP narrative places a project-nearby Vitas–La Reina connection but does not define a boundary.",
+      "reportedLocalityContext": "North Manila / City of Manila; the EPRMP also identifies Estero de Vitas near the Tondo project area.",
+      "disposition": "Exact name/locality supported. Do not use the project-nearby map or connectivity narrative as an estero boundary or species locality."
+    },
+    {
+      "nameAsPublished": "Estero de San Lazaro",
+      "independentNameEvidence": "Exact name in the MMDA drainage-map appendix, LRT EIS list, and DENR-MPIC cleanup-partnership list.",
+      "reportedLocalityContext": "North Manila / City of Manila.",
+      "disposition": "Exact name/locality supported; no route, geometry, condition, or fish assertion."
+    },
+    {
+      "nameAsPublished": "Estero de Kabulusan",
+      "independentNameEvidence": "Exact name in the MMDA drainage-map appendix and DENR-MPIC cleanup-partnership list.",
+      "reportedLocalityContext": "North Manila / City of Manila.",
+      "disposition": "Exact name/locality supported; the cleanup list is operational context, not a waterway survey."
+    },
+    {
+      "nameAsPublished": "Estero de Magdalena",
+      "independentNameEvidence": "Exact name in the MMDA drainage-map appendix, LRT EIS list, and DENR-MPIC cleanup-partnership list.",
+      "reportedLocalityContext": "North Manila / City of Manila.",
+      "disposition": "Exact name/locality supported; no route geometry or fish evidence added."
+    },
+    {
+      "nameAsPublished": "Estero de Binondo",
+      "independentNameEvidence": "Exact name in the MMDA drainage-map appendix, LRT EIS list, and DENR-MPIC cleanup-partnership list.",
+      "reportedLocalityContext": "North Manila / City of Manila.",
+      "disposition": "Exact name/locality supported; no route geometry or fish evidence added."
+    },
+    {
+      "nameAsPublished": "Estero dela Reina",
+      "independentNameEvidence": "Exact name form in the 2020 LRT EIS list. The MMDA drainage-map appendix prints “Estero de la Reina,” and the DENR partnership article prints “Dela Reina.”",
+      "reportedLocalityContext": "North Manila / City of Manila.",
+      "disposition": "The DENR label has exact independent string support. Keep source spelling variants as metadata; no segment-level identity or geometry is resolved."
+    },
+    {
+      "nameAsPublished": "Estero de Aviles",
+      "independentNameEvidence": "Exact name in the MMDA drainage-map appendix and the LRT EIS list.",
+      "reportedLocalityContext": "Central Manila, District III–IV, in the drainage-map appendix; City of Manila in the EIS.",
+      "disposition": "Exact name/locality supported; no route geometry or fish evidence added."
+    },
+    {
+      "nameAsPublished": "Estero de Sampaloc",
+      "independentNameEvidence": "Exact name in the MMDA drainage-map appendix, LRT EIS list, and DENR-MPIC cleanup-partnership list.",
+      "reportedLocalityContext": "Central Manila / District IV and City of Manila.",
+      "disposition": "Exact name/locality supported; no route geometry or fish evidence added."
+    },
+    {
+      "nameAsPublished": "Estero de San Sebastian",
+      "independentNameEvidence": "Exact name in the MMDA drainage-map appendix, LRT EIS list, and DENR-MPIC cleanup-partnership list.",
+      "reportedLocalityContext": "Central Manila / City of Manila.",
+      "disposition": "Exact name/locality supported; no route geometry or fish evidence added."
+    },
+    {
+      "nameAsPublished": "Estero de San Miguel",
+      "independentNameEvidence": "Exact name in the MMDA drainage-map appendix, LRT EIS list, and DENR-MPIC cleanup-partnership list.",
+      "reportedLocalityContext": "Central Manila / District VI and City of Manila.",
+      "disposition": "Exact name/locality supported; no route geometry or fish evidence added."
+    },
+    {
+      "nameAsPublished": "Estero de Valencia",
+      "independentNameEvidence": "Exact name in the MMDA drainage-map appendix, LRT EIS list, and DENR-MPIC cleanup-partnership list.",
+      "reportedLocalityContext": "Central Manila / City of Manila.",
+      "disposition": "Exact name/locality supported; no route geometry or fish evidence added."
+    },
+    {
+      "nameAsPublished": "Estero de Quiapo",
+      "independentNameEvidence": "Exact name in the MMDA drainage-map appendix, LRT EIS list, and DENR-MPIC cleanup-partnership list.",
+      "reportedLocalityContext": "Central Manila / District III and City of Manila.",
+      "disposition": "Exact name/locality supported; no route geometry or fish evidence added."
+    },
+    {
+      "nameAsPublished": "Estero de Uli-uli",
+      "independentNameEvidence": "Independent records use “Estero Uli-Uli” in the drainage-map appendix, “Uli-uli” in the DENR partnership list, and “Estero de Uli” in the LRT EIS list.",
+      "reportedLocalityContext": "Central Manila / City of Manila.",
+      "disposition": "Name-form candidate only. Preserve all printed forms; do not merge or normalize away the terminal “-uli” variation without a source that explicitly crosswalks them."
+    }
+  ],
+  "counts": {
+    "clusterIManagementLabelsReviewed": 15,
+    "labelsWithExactIndependentWaterwayNameSupport": 14,
+    "labelsWithNameFormCandidateOnly": 1,
+    "canonicalFeatureLinksConfirmed": 0,
+    "geometryAdded": 0,
+    "speciesAssertionsAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "publicAppRecordsAdded": 0
+  },
+  "rightsDecision": {
+    "itemSpecificReuseTermsVerified": false,
+    "rawPagesMapsOrTablesRetained": false,
+    "appProjectionApproved": false,
+    "decision": "Keep short attributed name/locality findings as internal research notes. The EIS states that its list derives from the Manila CLUP and the EPRMP reproduces an MMDA drainage map; neither hosting nor derivation grants a blanket right to republish source maps, tables, or geometry."
+  },
+  "limitations": [
+    "The 2025 DENR-NCR report is a management list, not a complete, independently surveyed inventory of Manila esteros.",
+    "The LRT EIS states a total of 29 esteros in Manila but the reviewed named table enumerates 20; this discrepancy remains unresolved and means the EIS list is not treated as complete.",
+    "The EPRMP and LRT EIS reproduce/attribute municipal planning and MMDA map material; no map or geometry is republished from them.",
+    "Name support and city/district context do not establish a unique channel, route, boundary, water quality, current condition, fish presence, public access, fishing permission, or safety.",
+    "The Uli-uli source forms differ; no alias or feature match is confirmed.",
+    "No fish, species, occurrence, access, legal, hazard, geometry, or public-app claims are admitted."
+  ],
+  "nextActions": [
+    "Crosswalk Cluster II labels independently and preserve its Manila/Quezon City cluster context.",
+    "Continue source discovery for freshwater, brackish, marine, wetland, and reservoir contexts across all 17 NCR administrative units; do not freeze NCR or Luzon scope."
+  ]
+}
