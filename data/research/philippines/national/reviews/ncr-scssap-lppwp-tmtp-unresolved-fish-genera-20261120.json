@@ -1,0 +1,1374 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "ncr-scssap-lppwp-tmtp-unresolved-fish-genera-20261120",
+  "reviewedOn": "2026-11-20",
+  "phaseId": "L2",
+  "regionId": "1300000000",
+  "regionName": "National Capital Region (NCR)",
+  "status": "unresolved-label-rank-screen-complete;candidate-spellings-held;species-identity-unresolved;research-only",
+  "question": "What rank and label forms remain in the 29 SCSSAP LPPWP/TMTP rows excluded from the binomial species-name screen, and what genus/order name candidates does the pinned CoL XR matcher return?",
+  "sourceIds": [
+    "scssap-ph-ecosystems-ch4-lppwp-tmtp-2026",
+    "gbif-col-xr-taxonomy-matching"
+  ],
+  "inputs": [
+    "data/research/philippines/national/reviews/ncr-scssap-lppwp-tmtp-taxonomy-crosswalk-20261120.json"
+  ],
+  "snapshotHashes": {
+    "parentColXrCrosswalk": "6b45e82a99a6aa9e731b6a531936dafd8bcf9986193288d48d5c27cb7909a787"
+  },
+  "sourceAccess": {
+    "endpoint": "https://api.gbif.org/v2/species/match",
+    "metadataUrl": "https://api.gbif.org/v2/species/match/metadata?checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b",
+    "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+    "checklistAlias": "COL26.10 XR",
+    "buildSha": "95c83537b1cb3c0884a646cc4e7a21217283d4f4",
+    "indexCreated": "2026-11-19T14:17:15.229Z",
+    "indexStableDuringQueries": true,
+    "metadataStart": {
+      "path": "data/research/philippines/raw/national/scssap-unresolved-fish-genera-colxr-20261120/checklist-metadata-start.json",
+      "sha256": "83648ce86b8283b8da07acf36ed3a4fea6bc4609b766b68a2177bf59289df2cd"
+    },
+    "metadataEnd": {
+      "path": "data/research/philippines/raw/national/scssap-unresolved-fish-genera-colxr-20261120/checklist-metadata-end.json",
+      "sha256": "83648ce86b8283b8da07acf36ed3a4fea6bc4609b766b68a2177bf59289df2cd"
+    },
+    "queryCount": 20,
+    "rawCapture": "One exact source-genus or source-order string per distinct query. Query results are rank/name candidates only; response JSON files are local-only snapshots."
+  },
+  "method": {
+    "summary": "Classified the 29 source strings excluded from the earlier binomial screen, then queried the exact genus or order token against the same pinned CoL XR index. Retained every site row, printed family, spelling, and numbered/plural placeholder as written.",
+    "labelForms": {
+      "genus-level-placeholder": "A genus label followed by sp.; species remains unspecified.",
+      "numbered-genus-placeholder": "A source-numbered sp. label; numbering is source context and is not a species identifier.",
+      "plural-genus-label-unspecified-count": "A genus followed by spp.; the source states plural species but does not provide identities or count.",
+      "order-level-placeholder": "An order-level label with sp.; the genus and species are unspecified.",
+      "genus-only-name": "A genus name without a species epithet; no species identity is inferred."
+    },
+    "limitations": [
+      "A genus or order match cannot identify any individual species or any fish sampled at either park.",
+      "Fuzzy candidates, spelling variants, and family differences remain unresolved; no source spelling is corrected.",
+      "Repeated or numbered placeholders are not merged across rows or sites, even where the printed genus is the same.",
+      "The underlying Ancog et al. report, voucher basis, methods, dates, exact sampling sites, and item-specific reuse terms remain unavailable in this review."
+    ]
+  },
+  "sourceRowCounts": {
+    "LPPWP": 8,
+    "TMTP": 21,
+    "total": 29
+  },
+  "matchCounts": {
+    "unresolvedSourceRows": 29,
+    "distinctGenusOrOrderQueries": 20,
+    "exactGenusNameMatches": 16,
+    "exactOrderNameMatches": 1,
+    "fuzzyOrOtherCandidates": 3,
+    "noMatch": 0,
+    "numberedPlaceholderRows": 7,
+    "pluralPlaceholderRows": 1,
+    "orderLevelRows": 1,
+    "speciesNamesAdded": 0,
+    "identitiesVerified": 0
+  },
+  "matches": [
+    {
+      "queriedName": "Ambassis",
+      "queryUrl": "https://api.gbif.org/v2/species/match?scientificName=Ambassis&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&kingdom=Animalia",
+      "queryParameters": {
+        "scientificName": "Ambassis",
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "kingdom": "Animalia"
+      },
+      "matchType": "EXACT",
+      "confidence": 96,
+      "classification": "exact-genus-name",
+      "usage": {
+        "key": "KTWTV",
+        "scientificName": "Ambassis Cuvier, 1828",
+        "canonicalName": "Ambassis",
+        "rank": "GENUS",
+        "status": "ACCEPTED",
+        "authorship": "Cuvier, 1828"
+      },
+      "acceptedUsage": null,
+      "matchedFamily": "Ambassidae",
+      "sourceLabels": [
+        {
+          "sourceRow": 22,
+          "site": "TMTP",
+          "nameAsPrinted": "Ambassis sp. 1",
+          "familyAsPrinted": "Ambassidae",
+          "labelForm": "numbered-genus-placeholder"
+        },
+        {
+          "sourceRow": 23,
+          "site": "TMTP",
+          "nameAsPrinted": "Ambassis sp. 2",
+          "familyAsPrinted": "Ambassidae",
+          "labelForm": "numbered-genus-placeholder"
+        }
+      ],
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-unresolved-fish-genera-colxr-20261120/matches/128ed0a7ced82952.json",
+        "sha256": "3e7236818c0b0fe43f8bdd58981581090139da457168a30b84c6bf06ee144876"
+      }
+    },
+    {
+      "queriedName": "Amblygobius",
+      "queryUrl": "https://api.gbif.org/v2/species/match?scientificName=Amblygobius&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&kingdom=Animalia",
+      "queryParameters": {
+        "scientificName": "Amblygobius",
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "kingdom": "Animalia"
+      },
+      "matchType": "EXACT",
+      "confidence": 96,
+      "classification": "exact-genus-name",
+      "usage": {
+        "key": "KTWWD",
+        "scientificName": "Amblygobius Bleeker, 1874",
+        "canonicalName": "Amblygobius",
+        "rank": "GENUS",
+        "status": "ACCEPTED",
+        "authorship": "Bleeker, 1874"
+      },
+      "acceptedUsage": null,
+      "matchedFamily": "Gobiidae",
+      "sourceLabels": [
+        {
+          "sourceRow": 10,
+          "site": "LPPWP",
+          "nameAsPrinted": "Amblygobius sp.",
+          "familyAsPrinted": "Gobiidae",
+          "labelForm": "genus-level-placeholder"
+        },
+        {
+          "sourceRow": 42,
+          "site": "TMTP",
+          "nameAsPrinted": "Amblygobius sp. 1",
+          "familyAsPrinted": "Gobiidae",
+          "labelForm": "numbered-genus-placeholder"
+        }
+      ],
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-unresolved-fish-genera-colxr-20261120/matches/41db3986e098169b.json",
+        "sha256": "cd162497ab0b1b2c961a66f69e9fb979dd015207391cabbd3afbb9d19f4320af"
+      }
+    },
+    {
+      "queriedName": "Ambyglobius",
+      "queryUrl": "https://api.gbif.org/v2/species/match?scientificName=Ambyglobius&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&kingdom=Animalia",
+      "queryParameters": {
+        "scientificName": "Ambyglobius",
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "kingdom": "Animalia"
+      },
+      "matchType": "HIGHERRANK",
+      "confidence": 99,
+      "classification": "candidate-higherrank",
+      "usage": {
+        "key": "N",
+        "scientificName": "Animalia",
+        "canonicalName": "Animalia",
+        "rank": "KINGDOM",
+        "status": "ACCEPTED",
+        "authorship": null
+      },
+      "acceptedUsage": null,
+      "matchedFamily": null,
+      "sourceLabels": [
+        {
+          "sourceRow": 43,
+          "site": "TMTP",
+          "nameAsPrinted": "Ambyglobius sp. 2",
+          "familyAsPrinted": "Gobiidae",
+          "labelForm": "numbered-genus-placeholder"
+        },
+        {
+          "sourceRow": 44,
+          "site": "TMTP",
+          "nameAsPrinted": "Ambyglobius sp. 3",
+          "familyAsPrinted": "Gobiidae",
+          "labelForm": "numbered-genus-placeholder"
+        }
+      ],
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-unresolved-fish-genera-colxr-20261120/matches/2eab2e6f23a6a74c.json",
+        "sha256": "84dd87a626dd9738b5c90a05d6242f807fd46b818f6bcd86bec05048431aed86"
+      }
+    },
+    {
+      "queriedName": "Anodontostoma",
+      "queryUrl": "https://api.gbif.org/v2/species/match?scientificName=Anodontostoma&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&kingdom=Animalia",
+      "queryParameters": {
+        "scientificName": "Anodontostoma",
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "kingdom": "Animalia"
+      },
+      "matchType": "EXACT",
+      "confidence": 96,
+      "classification": "exact-genus-name",
+      "usage": {
+        "key": "KTXLY",
+        "scientificName": "Anodontostoma Bleeker, 1849",
+        "canonicalName": "Anodontostoma",
+        "rank": "GENUS",
+        "status": "ACCEPTED",
+        "authorship": "Bleeker, 1849"
+      },
+      "acceptedUsage": null,
+      "matchedFamily": "Dorosomatidae",
+      "sourceLabels": [
+        {
+          "sourceRow": 34,
+          "site": "TMTP",
+          "nameAsPrinted": "Anodontostoma sp.",
+          "familyAsPrinted": "Dorosomatidae",
+          "labelForm": "genus-level-placeholder"
+        }
+      ],
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-unresolved-fish-genera-colxr-20261120/matches/44f5926cb009531f.json",
+        "sha256": "49ddfa15456b2a3c855c697e89e2e22ab068df803179100d23e2e3c8988fd2f0"
+      }
+    },
+    {
+      "queriedName": "Arothron",
+      "queryUrl": "https://api.gbif.org/v2/species/match?scientificName=Arothron&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&kingdom=Animalia",
+      "queryParameters": {
+        "scientificName": "Arothron",
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "kingdom": "Animalia"
+      },
+      "matchType": "EXACT",
+      "confidence": 96,
+      "classification": "exact-genus-name",
+      "usage": {
+        "key": "KTXQD",
+        "scientificName": "Arothron Müller, 1841",
+        "canonicalName": "Arothron",
+        "rank": "GENUS",
+        "status": "ACCEPTED",
+        "authorship": "Müller, 1841"
+      },
+      "acceptedUsage": null,
+      "matchedFamily": "Tetraodontidae",
+      "sourceLabels": [
+        {
+          "sourceRow": 20,
+          "site": "LPPWP",
+          "nameAsPrinted": "Arothron sp.",
+          "familyAsPrinted": "Tetraodontidae",
+          "labelForm": "genus-level-placeholder"
+        },
+        {
+          "sourceRow": 71,
+          "site": "TMTP",
+          "nameAsPrinted": "Arothron sp.",
+          "familyAsPrinted": "Tetraodontidae",
+          "labelForm": "genus-level-placeholder"
+        }
+      ],
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-unresolved-fish-genera-colxr-20261120/matches/4eb280fa39a6d213.json",
+        "sha256": "9ee2ab8b1a1d72e36e7c9a600095a519dbcbf95730503802f2804bd85ae24c8c"
+      }
+    },
+    {
+      "queriedName": "Caranx",
+      "queryUrl": "https://api.gbif.org/v2/species/match?scientificName=Caranx&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&kingdom=Animalia",
+      "queryParameters": {
+        "scientificName": "Caranx",
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "kingdom": "Animalia"
+      },
+      "matchType": "EXACT",
+      "confidence": 96,
+      "classification": "exact-genus-name",
+      "usage": {
+        "key": "KV3KQ",
+        "scientificName": "Caranx Lacepède, 1801",
+        "canonicalName": "Caranx",
+        "rank": "GENUS",
+        "status": "ACCEPTED",
+        "authorship": "Lacepède, 1801"
+      },
+      "acceptedUsage": null,
+      "matchedFamily": "Carangidae",
+      "sourceLabels": [
+        {
+          "sourceRow": 2,
+          "site": "LPPWP",
+          "nameAsPrinted": "Caranx sp.",
+          "familyAsPrinted": "Carangidae",
+          "labelForm": "genus-level-placeholder"
+        },
+        {
+          "sourceRow": 27,
+          "site": "TMTP",
+          "nameAsPrinted": "Caranx sp.",
+          "familyAsPrinted": "Carangidae",
+          "labelForm": "genus-level-placeholder"
+        }
+      ],
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-unresolved-fish-genera-colxr-20261120/matches/a084c1892d896885.json",
+        "sha256": "1d51cb64f83f314b9b9b3061ad0327b881e6ac420ca1b54973462feba7422251"
+      }
+    },
+    {
+      "queriedName": "Epinephelus",
+      "queryUrl": "https://api.gbif.org/v2/species/match?scientificName=Epinephelus&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&kingdom=Animalia",
+      "queryParameters": {
+        "scientificName": "Epinephelus",
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "kingdom": "Animalia"
+      },
+      "matchType": "EXACT",
+      "confidence": 96,
+      "classification": "exact-genus-name",
+      "usage": {
+        "key": "KV9J4",
+        "scientificName": "Epinephelus Bloch, 1793",
+        "canonicalName": "Epinephelus",
+        "rank": "GENUS",
+        "status": "ACCEPTED",
+        "authorship": "Bloch, 1793"
+      },
+      "acceptedUsage": null,
+      "matchedFamily": "Epinephelidae",
+      "sourceLabels": [
+        {
+          "sourceRow": 18,
+          "site": "LPPWP",
+          "nameAsPrinted": "Epinephelus sp.",
+          "familyAsPrinted": "Serranidae",
+          "labelForm": "genus-level-placeholder"
+        },
+        {
+          "sourceRow": 65,
+          "site": "TMTP",
+          "nameAsPrinted": "Epinephelus sp.",
+          "familyAsPrinted": "Serranidae",
+          "labelForm": "genus-level-placeholder"
+        }
+      ],
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-unresolved-fish-genera-colxr-20261120/matches/28f9cc22971f8070.json",
+        "sha256": "29861d875f0db41e5a23d285cff57575204d317332121c2af2d5c1c1a8b05e4c"
+      }
+    },
+    {
+      "queriedName": "Gerres",
+      "queryUrl": "https://api.gbif.org/v2/species/match?scientificName=Gerres&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&kingdom=Animalia",
+      "queryParameters": {
+        "scientificName": "Gerres",
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "kingdom": "Animalia"
+      },
+      "matchType": "EXACT",
+      "confidence": 96,
+      "classification": "exact-genus-name",
+      "usage": {
+        "key": "KVCQ8",
+        "scientificName": "Gerres Quoy & Gaimard, 1824",
+        "canonicalName": "Gerres",
+        "rank": "GENUS",
+        "status": "ACCEPTED",
+        "authorship": "Quoy & Gaimard, 1824"
+      },
+      "acceptedUsage": null,
+      "matchedFamily": "Gerreidae",
+      "sourceLabels": [
+        {
+          "sourceRow": 41,
+          "site": "TMTP",
+          "nameAsPrinted": "Gerres",
+          "familyAsPrinted": "Gerridae",
+          "labelForm": "genus-only-name"
+        }
+      ],
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-unresolved-fish-genera-colxr-20261120/matches/96022f56f937bf60.json",
+        "sha256": "dfcfaf8f803dfb47f06168311ea282f19318654789fca75a15bc13e7ef7f70b1"
+      }
+    },
+    {
+      "queriedName": "Hemiramphus",
+      "queryUrl": "https://api.gbif.org/v2/species/match?scientificName=Hemiramphus&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&kingdom=Animalia",
+      "queryParameters": {
+        "scientificName": "Hemiramphus",
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "kingdom": "Animalia"
+      },
+      "matchType": "EXACT",
+      "confidence": 96,
+      "classification": "exact-genus-name",
+      "usage": {
+        "key": "KVCSY",
+        "scientificName": "Hemiramphus Cuvier, 1816",
+        "canonicalName": "Hemiramphus",
+        "rank": "GENUS",
+        "status": "ACCEPTED",
+        "authorship": "Cuvier, 1816"
+      },
+      "acceptedUsage": null,
+      "matchedFamily": "Hemiramphidae",
+      "sourceLabels": [
+        {
+          "sourceRow": 11,
+          "site": "LPPWP",
+          "nameAsPrinted": "Hemiramphus sp.",
+          "familyAsPrinted": "Hemiramphidae",
+          "labelForm": "genus-level-placeholder"
+        }
+      ],
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-unresolved-fish-genera-colxr-20261120/matches/0115b5d314f2d269.json",
+        "sha256": "5a42706f30d1a87c7cd7f0b0de5eae686f2b89b116e53af072828cf3d347b240"
+      }
+    },
+    {
+      "queriedName": "Hyporhampus",
+      "queryUrl": "https://api.gbif.org/v2/species/match?scientificName=Hyporhampus&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&kingdom=Animalia",
+      "queryParameters": {
+        "scientificName": "Hyporhampus",
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "kingdom": "Animalia"
+      },
+      "matchType": "EXACT",
+      "confidence": 96,
+      "classification": "exact-genus-name",
+      "usage": {
+        "key": "D55Q2",
+        "scientificName": "Hyporhampus",
+        "canonicalName": "Hyporhampus",
+        "rank": "GENUS",
+        "status": "SYNONYM",
+        "authorship": null
+      },
+      "acceptedUsage": {
+        "key": "KVDHX",
+        "scientificName": "Hyporhamphus Gill, 1859",
+        "canonicalName": "Hyporhamphus",
+        "rank": "GENUS",
+        "status": null
+      },
+      "matchedFamily": "Hemiramphidae",
+      "sourceLabels": [
+        {
+          "sourceRow": 48,
+          "site": "TMTP",
+          "nameAsPrinted": "Hyporhampus sp.",
+          "familyAsPrinted": "Hemiramphidae",
+          "labelForm": "genus-level-placeholder"
+        }
+      ],
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-unresolved-fish-genera-colxr-20261120/matches/3016418cf849afb1.json",
+        "sha256": "c7b6b777caf221de01d23d331934e7a89a5b74adaa64b2334e92069f86afe1e6"
+      }
+    },
+    {
+      "queriedName": "Lates",
+      "queryUrl": "https://api.gbif.org/v2/species/match?scientificName=Lates&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&kingdom=Animalia",
+      "queryParameters": {
+        "scientificName": "Lates",
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "kingdom": "Animalia"
+      },
+      "matchType": "EXACT",
+      "confidence": 96,
+      "classification": "exact-genus-name",
+      "usage": {
+        "key": "KVJ2B",
+        "scientificName": "Lates Cuvier, 1828",
+        "canonicalName": "Lates",
+        "rank": "GENUS",
+        "status": "ACCEPTED",
+        "authorship": "Cuvier, 1828"
+      },
+      "acceptedUsage": null,
+      "matchedFamily": "Latidae",
+      "sourceLabels": [
+        {
+          "sourceRow": 49,
+          "site": "TMTP",
+          "nameAsPrinted": "Lates sp.",
+          "familyAsPrinted": "Latidae",
+          "labelForm": "genus-level-placeholder"
+        }
+      ],
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-unresolved-fish-genera-colxr-20261120/matches/b22ad4fb131e47fb.json",
+        "sha256": "ec9020effa98eeb692548eee2875ed56aa3c5b7ddf62f0ac66af65ab25948773"
+      }
+    },
+    {
+      "queriedName": "Leignathus",
+      "queryUrl": "https://api.gbif.org/v2/species/match?scientificName=Leignathus&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&kingdom=Animalia",
+      "queryParameters": {
+        "scientificName": "Leignathus",
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "kingdom": "Animalia"
+      },
+      "matchType": "EXACT",
+      "confidence": 96,
+      "classification": "exact-genus-name",
+      "usage": {
+        "key": "F5FMB",
+        "scientificName": "Leignathus",
+        "canonicalName": "Leignathus",
+        "rank": "GENUS",
+        "status": "SYNONYM",
+        "authorship": null
+      },
+      "acceptedUsage": {
+        "key": "KVGMN",
+        "scientificName": "Leiognathus Lacepède, 1802",
+        "canonicalName": "Leiognathus",
+        "rank": "GENUS",
+        "status": null
+      },
+      "matchedFamily": "Leiognathidae",
+      "sourceLabels": [
+        {
+          "sourceRow": 12,
+          "site": "LPPWP",
+          "nameAsPrinted": "Leignathus sp.",
+          "familyAsPrinted": "Leiognathidae",
+          "labelForm": "genus-level-placeholder"
+        },
+        {
+          "sourceRow": 50,
+          "site": "TMTP",
+          "nameAsPrinted": "Leignathus sp.",
+          "familyAsPrinted": "Leiognathidae",
+          "labelForm": "genus-level-placeholder"
+        }
+      ],
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-unresolved-fish-genera-colxr-20261120/matches/66f7f64b77565631.json",
+        "sha256": "9e33121e4ea50d639272325faa8270ae813ea38e9b07db3d9da5b77ca46ab04b"
+      }
+    },
+    {
+      "queriedName": "Paraplagusia",
+      "queryUrl": "https://api.gbif.org/v2/species/match?scientificName=Paraplagusia&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&kingdom=Animalia",
+      "queryParameters": {
+        "scientificName": "Paraplagusia",
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "kingdom": "Animalia"
+      },
+      "matchType": "EXACT",
+      "confidence": 96,
+      "classification": "exact-genus-name",
+      "usage": {
+        "key": "KVNYK",
+        "scientificName": "Paraplagusia Bleeker, 1865",
+        "canonicalName": "Paraplagusia",
+        "rank": "GENUS",
+        "status": "ACCEPTED",
+        "authorship": "Bleeker, 1865"
+      },
+      "acceptedUsage": null,
+      "matchedFamily": "Cynoglossidae",
+      "sourceLabels": [
+        {
+          "sourceRow": 31,
+          "site": "TMTP",
+          "nameAsPrinted": "Paraplagusia sp.",
+          "familyAsPrinted": "Cynoglossidae",
+          "labelForm": "genus-level-placeholder"
+        }
+      ],
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-unresolved-fish-genera-colxr-20261120/matches/dfbf32c24fae4dcf.json",
+        "sha256": "8001a39ae8be6eee254bbabb6824b79d83be035457ad6a2a90dc1e3b1a9e6146"
+      }
+    },
+    {
+      "queriedName": "Platycephalus",
+      "queryUrl": "https://api.gbif.org/v2/species/match?scientificName=Platycephalus&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&kingdom=Animalia",
+      "queryParameters": {
+        "scientificName": "Platycephalus",
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "kingdom": "Animalia"
+      },
+      "matchType": "HIGHERRANK",
+      "confidence": 95,
+      "classification": "candidate-higherrank",
+      "usage": {
+        "key": "N",
+        "scientificName": "Animalia",
+        "canonicalName": "Animalia",
+        "rank": "KINGDOM",
+        "status": "ACCEPTED",
+        "authorship": null
+      },
+      "acceptedUsage": null,
+      "matchedFamily": null,
+      "sourceLabels": [
+        {
+          "sourceRow": 57,
+          "site": "TMTP",
+          "nameAsPrinted": "Platycephalus sp. 1",
+          "familyAsPrinted": "Platycephalidae",
+          "labelForm": "numbered-genus-placeholder"
+        },
+        {
+          "sourceRow": 59,
+          "site": "TMTP",
+          "nameAsPrinted": "Platycephalus sp. 2",
+          "familyAsPrinted": "Platycephalidae",
+          "labelForm": "numbered-genus-placeholder"
+        }
+      ],
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-unresolved-fish-genera-colxr-20261120/matches/b101ff7ccb542372.json",
+        "sha256": "d2a70e6e1e21000b24f99d5d94f9debf21cf0cec7c21f2055b30945273e276b1"
+      }
+    },
+    {
+      "queriedName": "Pleuronectiformes",
+      "queryUrl": "https://api.gbif.org/v2/species/match?scientificName=Pleuronectiformes&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&kingdom=Animalia",
+      "queryParameters": {
+        "scientificName": "Pleuronectiformes",
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "kingdom": "Animalia"
+      },
+      "matchType": "EXACT",
+      "confidence": 96,
+      "classification": "exact-order-name",
+      "usage": {
+        "key": "622V4",
+        "scientificName": "Pleuronectiformes",
+        "canonicalName": "Pleuronectiformes",
+        "rank": "ORDER",
+        "status": "ACCEPTED",
+        "authorship": null
+      },
+      "acceptedUsage": null,
+      "matchedFamily": null,
+      "sourceLabels": [
+        {
+          "sourceRow": 60,
+          "site": "TMTP",
+          "nameAsPrinted": "Pleuronectiformes sp.",
+          "familyAsPrinted": "Pleuronectiformes",
+          "labelForm": "order-level-placeholder"
+        }
+      ],
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-unresolved-fish-genera-colxr-20261120/matches/06b293fdee3fcaba.json",
+        "sha256": "aa6e590ab5dc5614264bd038fc48e1ceffcee75c801eff2ab1caa0c20599daa7"
+      }
+    },
+    {
+      "queriedName": "Sardinela",
+      "queryUrl": "https://api.gbif.org/v2/species/match?scientificName=Sardinela&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&kingdom=Animalia",
+      "queryParameters": {
+        "scientificName": "Sardinela",
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "kingdom": "Animalia"
+      },
+      "matchType": "VARIANT",
+      "confidence": 85,
+      "classification": "candidate-variant",
+      "usage": {
+        "key": "KVSD7",
+        "scientificName": "Sardinella Valenciennes, 1847",
+        "canonicalName": "Sardinella",
+        "rank": "GENUS",
+        "status": "ACCEPTED",
+        "authorship": "Valenciennes, 1847"
+      },
+      "acceptedUsage": null,
+      "matchedFamily": "Dorosomatidae",
+      "sourceLabels": [
+        {
+          "sourceRow": 6,
+          "site": "LPPWP",
+          "nameAsPrinted": "Sardinela sp.",
+          "familyAsPrinted": "Dorosomatidae",
+          "labelForm": "genus-level-placeholder"
+        }
+      ],
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-unresolved-fish-genera-colxr-20261120/matches/e1c1e53345f7c382.json",
+        "sha256": "5a347d953b6b11a40871bf3aa6dad4d09305e1741541de93408fdaf2a13b0837"
+      }
+    },
+    {
+      "queriedName": "Sardinella",
+      "queryUrl": "https://api.gbif.org/v2/species/match?scientificName=Sardinella&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&kingdom=Animalia",
+      "queryParameters": {
+        "scientificName": "Sardinella",
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "kingdom": "Animalia"
+      },
+      "matchType": "EXACT",
+      "confidence": 96,
+      "classification": "exact-genus-name",
+      "usage": {
+        "key": "KVSD7",
+        "scientificName": "Sardinella Valenciennes, 1847",
+        "canonicalName": "Sardinella",
+        "rank": "GENUS",
+        "status": "ACCEPTED",
+        "authorship": "Valenciennes, 1847"
+      },
+      "acceptedUsage": null,
+      "matchedFamily": "Dorosomatidae",
+      "sourceLabels": [
+        {
+          "sourceRow": 36,
+          "site": "TMTP",
+          "nameAsPrinted": "Sardinella sp.",
+          "familyAsPrinted": "Dorosomatidae",
+          "labelForm": "genus-level-placeholder"
+        }
+      ],
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-unresolved-fish-genera-colxr-20261120/matches/2a85090bff90270c.json",
+        "sha256": "9b151cbf5adf49f03c9cf0bec6df03483ec5e168564e19f52dc1e854c363220d"
+      }
+    },
+    {
+      "queriedName": "Scomberoides",
+      "queryUrl": "https://api.gbif.org/v2/species/match?scientificName=Scomberoides&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&kingdom=Animalia",
+      "queryParameters": {
+        "scientificName": "Scomberoides",
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "kingdom": "Animalia"
+      },
+      "matchType": "EXACT",
+      "confidence": 96,
+      "classification": "exact-genus-name",
+      "usage": {
+        "key": "KVSY6",
+        "scientificName": "Scomberoides Lacepède, 1801",
+        "canonicalName": "Scomberoides",
+        "rank": "GENUS",
+        "status": "ACCEPTED",
+        "authorship": "Lacepède, 1801"
+      },
+      "acceptedUsage": null,
+      "matchedFamily": "Carangidae",
+      "sourceLabels": [
+        {
+          "sourceRow": 4,
+          "site": "LPPWP",
+          "nameAsPrinted": "Scomberoides sp.",
+          "familyAsPrinted": "Carangidae",
+          "labelForm": "genus-level-placeholder"
+        },
+        {
+          "sourceRow": 28,
+          "site": "TMTP",
+          "nameAsPrinted": "Scomberoides sp.",
+          "familyAsPrinted": "Carangidae",
+          "labelForm": "genus-level-placeholder"
+        }
+      ],
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-unresolved-fish-genera-colxr-20261120/matches/88fa79c46c97c0b9.json",
+        "sha256": "dccc60c6d1f22a4671dd6d5bdcf5e60ab94836af13c51d3f3b9a958a260a3aba"
+      }
+    },
+    {
+      "queriedName": "Siganus",
+      "queryUrl": "https://api.gbif.org/v2/species/match?scientificName=Siganus&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&kingdom=Animalia",
+      "queryParameters": {
+        "scientificName": "Siganus",
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "kingdom": "Animalia"
+      },
+      "matchType": "EXACT",
+      "confidence": 96,
+      "classification": "exact-genus-name",
+      "usage": {
+        "key": "KVT2Y",
+        "scientificName": "Siganus Forsskål, 1775",
+        "canonicalName": "Siganus",
+        "rank": "GENUS",
+        "status": "ACCEPTED",
+        "authorship": "Forsskål, 1775"
+      },
+      "acceptedUsage": null,
+      "matchedFamily": "Siganidae",
+      "sourceLabels": [
+        {
+          "sourceRow": 66,
+          "site": "TMTP",
+          "nameAsPrinted": "Siganus spp.",
+          "familyAsPrinted": "Siganidae",
+          "labelForm": "plural-genus-label-unspecified-count"
+        }
+      ],
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-unresolved-fish-genera-colxr-20261120/matches/af96f8e9fe1eaac1.json",
+        "sha256": "77ee704b5f9c675b1142fb31a9e9e352645518566e1d78bfa493a6e7e259c564"
+      }
+    },
+    {
+      "queriedName": "Sphyraena",
+      "queryUrl": "https://api.gbif.org/v2/species/match?scientificName=Sphyraena&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&kingdom=Animalia",
+      "queryParameters": {
+        "scientificName": "Sphyraena",
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "kingdom": "Animalia"
+      },
+      "matchType": "EXACT",
+      "confidence": 96,
+      "classification": "exact-genus-name",
+      "usage": {
+        "key": "KVTVD",
+        "scientificName": "Sphyraena Artedi, 1793",
+        "canonicalName": "Sphyraena",
+        "rank": "GENUS",
+        "status": "ACCEPTED",
+        "authorship": "Artedi, 1793"
+      },
+      "acceptedUsage": null,
+      "matchedFamily": "Sphyraenidae",
+      "sourceLabels": [
+        {
+          "sourceRow": 68,
+          "site": "TMTP",
+          "nameAsPrinted": "Sphyraena sp.",
+          "familyAsPrinted": "Sphyraenidae",
+          "labelForm": "genus-level-placeholder"
+        }
+      ],
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/scssap-unresolved-fish-genera-colxr-20261120/matches/87517d929152ed6a.json",
+        "sha256": "b902436822dc36c808610d6b7e23984985a0b2162260376d74fda051c0d6357d"
+      }
+    }
+  ],
+  "sourceRows": [
+    {
+      "sourceRow": 2,
+      "site": "LPPWP",
+      "table": "4.E.1",
+      "familyAsPrinted": "Carangidae",
+      "nameAsPrinted": "Caranx sp.",
+      "labelForm": "genus-level-placeholder",
+      "sourceRank": "GENUS",
+      "genusOrHigherNameAsPrinted": "Caranx",
+      "matchClassification": "exact-genus-name",
+      "matchType": "EXACT",
+      "confidence": 96,
+      "candidateName": "Caranx Lacepède, 1801",
+      "candidateRank": "GENUS",
+      "candidateFamily": "Carangidae",
+      "candidateDiffersFromSourceString": false
+    },
+    {
+      "sourceRow": 4,
+      "site": "LPPWP",
+      "table": "4.E.1",
+      "familyAsPrinted": "Carangidae",
+      "nameAsPrinted": "Scomberoides sp.",
+      "labelForm": "genus-level-placeholder",
+      "sourceRank": "GENUS",
+      "genusOrHigherNameAsPrinted": "Scomberoides",
+      "matchClassification": "exact-genus-name",
+      "matchType": "EXACT",
+      "confidence": 96,
+      "candidateName": "Scomberoides Lacepède, 1801",
+      "candidateRank": "GENUS",
+      "candidateFamily": "Carangidae",
+      "candidateDiffersFromSourceString": false
+    },
+    {
+      "sourceRow": 6,
+      "site": "LPPWP",
+      "table": "4.E.1",
+      "familyAsPrinted": "Dorosomatidae",
+      "nameAsPrinted": "Sardinela sp.",
+      "labelForm": "genus-level-placeholder",
+      "sourceRank": "GENUS",
+      "genusOrHigherNameAsPrinted": "Sardinela",
+      "matchClassification": "candidate-variant",
+      "matchType": "VARIANT",
+      "confidence": 85,
+      "candidateName": "Sardinella Valenciennes, 1847",
+      "candidateRank": "GENUS",
+      "candidateFamily": "Dorosomatidae",
+      "candidateDiffersFromSourceString": false
+    },
+    {
+      "sourceRow": 10,
+      "site": "LPPWP",
+      "table": "4.E.1",
+      "familyAsPrinted": "Gobiidae",
+      "nameAsPrinted": "Amblygobius sp.",
+      "labelForm": "genus-level-placeholder",
+      "sourceRank": "GENUS",
+      "genusOrHigherNameAsPrinted": "Amblygobius",
+      "matchClassification": "exact-genus-name",
+      "matchType": "EXACT",
+      "confidence": 96,
+      "candidateName": "Amblygobius Bleeker, 1874",
+      "candidateRank": "GENUS",
+      "candidateFamily": "Gobiidae",
+      "candidateDiffersFromSourceString": false
+    },
+    {
+      "sourceRow": 11,
+      "site": "LPPWP",
+      "table": "4.E.1",
+      "familyAsPrinted": "Hemiramphidae",
+      "nameAsPrinted": "Hemiramphus sp.",
+      "labelForm": "genus-level-placeholder",
+      "sourceRank": "GENUS",
+      "genusOrHigherNameAsPrinted": "Hemiramphus",
+      "matchClassification": "exact-genus-name",
+      "matchType": "EXACT",
+      "confidence": 96,
+      "candidateName": "Hemiramphus Cuvier, 1816",
+      "candidateRank": "GENUS",
+      "candidateFamily": "Hemiramphidae",
+      "candidateDiffersFromSourceString": false
+    },
+    {
+      "sourceRow": 12,
+      "site": "LPPWP",
+      "table": "4.E.1",
+      "familyAsPrinted": "Leiognathidae",
+      "nameAsPrinted": "Leignathus sp.",
+      "labelForm": "genus-level-placeholder",
+      "sourceRank": "GENUS",
+      "genusOrHigherNameAsPrinted": "Leignathus",
+      "matchClassification": "exact-genus-name",
+      "matchType": "EXACT",
+      "confidence": 96,
+      "candidateName": "Leignathus",
+      "candidateRank": "GENUS",
+      "candidateFamily": "Leiognathidae",
+      "candidateDiffersFromSourceString": false
+    },
+    {
+      "sourceRow": 18,
+      "site": "LPPWP",
+      "table": "4.E.1",
+      "familyAsPrinted": "Serranidae",
+      "nameAsPrinted": "Epinephelus sp.",
+      "labelForm": "genus-level-placeholder",
+      "sourceRank": "GENUS",
+      "genusOrHigherNameAsPrinted": "Epinephelus",
+      "matchClassification": "exact-genus-name",
+      "matchType": "EXACT",
+      "confidence": 96,
+      "candidateName": "Epinephelus Bloch, 1793",
+      "candidateRank": "GENUS",
+      "candidateFamily": "Epinephelidae",
+      "candidateDiffersFromSourceString": false
+    },
+    {
+      "sourceRow": 20,
+      "site": "LPPWP",
+      "table": "4.E.1",
+      "familyAsPrinted": "Tetraodontidae",
+      "nameAsPrinted": "Arothron sp.",
+      "labelForm": "genus-level-placeholder",
+      "sourceRank": "GENUS",
+      "genusOrHigherNameAsPrinted": "Arothron",
+      "matchClassification": "exact-genus-name",
+      "matchType": "EXACT",
+      "confidence": 96,
+      "candidateName": "Arothron Müller, 1841",
+      "candidateRank": "GENUS",
+      "candidateFamily": "Tetraodontidae",
+      "candidateDiffersFromSourceString": false
+    },
+    {
+      "sourceRow": 22,
+      "site": "TMTP",
+      "table": "4.F.1",
+      "familyAsPrinted": "Ambassidae",
+      "nameAsPrinted": "Ambassis sp. 1",
+      "labelForm": "numbered-genus-placeholder",
+      "sourceRank": "GENUS",
+      "genusOrHigherNameAsPrinted": "Ambassis",
+      "matchClassification": "exact-genus-name",
+      "matchType": "EXACT",
+      "confidence": 96,
+      "candidateName": "Ambassis Cuvier, 1828",
+      "candidateRank": "GENUS",
+      "candidateFamily": "Ambassidae",
+      "candidateDiffersFromSourceString": false
+    },
+    {
+      "sourceRow": 23,
+      "site": "TMTP",
+      "table": "4.F.1",
+      "familyAsPrinted": "Ambassidae",
+      "nameAsPrinted": "Ambassis sp. 2",
+      "labelForm": "numbered-genus-placeholder",
+      "sourceRank": "GENUS",
+      "genusOrHigherNameAsPrinted": "Ambassis",
+      "matchClassification": "exact-genus-name",
+      "matchType": "EXACT",
+      "confidence": 96,
+      "candidateName": "Ambassis Cuvier, 1828",
+      "candidateRank": "GENUS",
+      "candidateFamily": "Ambassidae",
+      "candidateDiffersFromSourceString": false
+    },
+    {
+      "sourceRow": 27,
+      "site": "TMTP",
+      "table": "4.F.1",
+      "familyAsPrinted": "Carangidae",
+      "nameAsPrinted": "Caranx sp.",
+      "labelForm": "genus-level-placeholder",
+      "sourceRank": "GENUS",
+      "genusOrHigherNameAsPrinted": "Caranx",
+      "matchClassification": "exact-genus-name",
+      "matchType": "EXACT",
+      "confidence": 96,
+      "candidateName": "Caranx Lacepède, 1801",
+      "candidateRank": "GENUS",
+      "candidateFamily": "Carangidae",
+      "candidateDiffersFromSourceString": false
+    },
+    {
+      "sourceRow": 28,
+      "site": "TMTP",
+      "table": "4.F.1",
+      "familyAsPrinted": "Carangidae",
+      "nameAsPrinted": "Scomberoides sp.",
+      "labelForm": "genus-level-placeholder",
+      "sourceRank": "GENUS",
+      "genusOrHigherNameAsPrinted": "Scomberoides",
+      "matchClassification": "exact-genus-name",
+      "matchType": "EXACT",
+      "confidence": 96,
+      "candidateName": "Scomberoides Lacepède, 1801",
+      "candidateRank": "GENUS",
+      "candidateFamily": "Carangidae",
+      "candidateDiffersFromSourceString": false
+    },
+    {
+      "sourceRow": 31,
+      "site": "TMTP",
+      "table": "4.F.1",
+      "familyAsPrinted": "Cynoglossidae",
+      "nameAsPrinted": "Paraplagusia sp.",
+      "labelForm": "genus-level-placeholder",
+      "sourceRank": "GENUS",
+      "genusOrHigherNameAsPrinted": "Paraplagusia",
+      "matchClassification": "exact-genus-name",
+      "matchType": "EXACT",
+      "confidence": 96,
+      "candidateName": "Paraplagusia Bleeker, 1865",
+      "candidateRank": "GENUS",
+      "candidateFamily": "Cynoglossidae",
+      "candidateDiffersFromSourceString": false
+    },
+    {
+      "sourceRow": 34,
+      "site": "TMTP",
+      "table": "4.F.1",
+      "familyAsPrinted": "Dorosomatidae",
+      "nameAsPrinted": "Anodontostoma sp.",
+      "labelForm": "genus-level-placeholder",
+      "sourceRank": "GENUS",
+      "genusOrHigherNameAsPrinted": "Anodontostoma",
+      "matchClassification": "exact-genus-name",
+      "matchType": "EXACT",
+      "confidence": 96,
+      "candidateName": "Anodontostoma Bleeker, 1849",
+      "candidateRank": "GENUS",
+      "candidateFamily": "Dorosomatidae",
+      "candidateDiffersFromSourceString": false
+    },
+    {
+      "sourceRow": 36,
+      "site": "TMTP",
+      "table": "4.F.1",
+      "familyAsPrinted": "Dorosomatidae",
+      "nameAsPrinted": "Sardinella sp.",
+      "labelForm": "genus-level-placeholder",
+      "sourceRank": "GENUS",
+      "genusOrHigherNameAsPrinted": "Sardinella",
+      "matchClassification": "exact-genus-name",
+      "matchType": "EXACT",
+      "confidence": 96,
+      "candidateName": "Sardinella Valenciennes, 1847",
+      "candidateRank": "GENUS",
+      "candidateFamily": "Dorosomatidae",
+      "candidateDiffersFromSourceString": false
+    },
+    {
+      "sourceRow": 41,
+      "site": "TMTP",
+      "table": "4.F.1",
+      "familyAsPrinted": "Gerridae",
+      "nameAsPrinted": "Gerres",
+      "labelForm": "genus-only-name",
+      "sourceRank": "GENUS",
+      "genusOrHigherNameAsPrinted": "Gerres",
+      "matchClassification": "exact-genus-name",
+      "matchType": "EXACT",
+      "confidence": 96,
+      "candidateName": "Gerres Quoy & Gaimard, 1824",
+      "candidateRank": "GENUS",
+      "candidateFamily": "Gerreidae",
+      "candidateDiffersFromSourceString": false
+    },
+    {
+      "sourceRow": 42,
+      "site": "TMTP",
+      "table": "4.F.1",
+      "familyAsPrinted": "Gobiidae",
+      "nameAsPrinted": "Amblygobius sp. 1",
+      "labelForm": "numbered-genus-placeholder",
+      "sourceRank": "GENUS",
+      "genusOrHigherNameAsPrinted": "Amblygobius",
+      "matchClassification": "exact-genus-name",
+      "matchType": "EXACT",
+      "confidence": 96,
+      "candidateName": "Amblygobius Bleeker, 1874",
+      "candidateRank": "GENUS",
+      "candidateFamily": "Gobiidae",
+      "candidateDiffersFromSourceString": false
+    },
+    {
+      "sourceRow": 43,
+      "site": "TMTP",
+      "table": "4.F.1",
+      "familyAsPrinted": "Gobiidae",
+      "nameAsPrinted": "Ambyglobius sp. 2",
+      "labelForm": "numbered-genus-placeholder",
+      "sourceRank": "GENUS",
+      "genusOrHigherNameAsPrinted": "Ambyglobius",
+      "matchClassification": "candidate-higherrank",
+      "matchType": "HIGHERRANK",
+      "confidence": 99,
+      "candidateName": "Animalia",
+      "candidateRank": "KINGDOM",
+      "candidateFamily": null,
+      "candidateDiffersFromSourceString": false
+    },
+    {
+      "sourceRow": 44,
+      "site": "TMTP",
+      "table": "4.F.1",
+      "familyAsPrinted": "Gobiidae",
+      "nameAsPrinted": "Ambyglobius sp. 3",
+      "labelForm": "numbered-genus-placeholder",
+      "sourceRank": "GENUS",
+      "genusOrHigherNameAsPrinted": "Ambyglobius",
+      "matchClassification": "candidate-higherrank",
+      "matchType": "HIGHERRANK",
+      "confidence": 99,
+      "candidateName": "Animalia",
+      "candidateRank": "KINGDOM",
+      "candidateFamily": null,
+      "candidateDiffersFromSourceString": false
+    },
+    {
+      "sourceRow": 48,
+      "site": "TMTP",
+      "table": "4.F.1",
+      "familyAsPrinted": "Hemiramphidae",
+      "nameAsPrinted": "Hyporhampus sp.",
+      "labelForm": "genus-level-placeholder",
+      "sourceRank": "GENUS",
+      "genusOrHigherNameAsPrinted": "Hyporhampus",
+      "matchClassification": "exact-genus-name",
+      "matchType": "EXACT",
+      "confidence": 96,
+      "candidateName": "Hyporhampus",
+      "candidateRank": "GENUS",
+      "candidateFamily": "Hemiramphidae",
+      "candidateDiffersFromSourceString": false
+    },
+    {
+      "sourceRow": 49,
+      "site": "TMTP",
+      "table": "4.F.1",
+      "familyAsPrinted": "Latidae",
+      "nameAsPrinted": "Lates sp.",
+      "labelForm": "genus-level-placeholder",
+      "sourceRank": "GENUS",
+      "genusOrHigherNameAsPrinted": "Lates",
+      "matchClassification": "exact-genus-name",
+      "matchType": "EXACT",
+      "confidence": 96,
+      "candidateName": "Lates Cuvier, 1828",
+      "candidateRank": "GENUS",
+      "candidateFamily": "Latidae",
+      "candidateDiffersFromSourceString": false
+    },
+    {
+      "sourceRow": 50,
+      "site": "TMTP",
+      "table": "4.F.1",
+      "familyAsPrinted": "Leiognathidae",
+      "nameAsPrinted": "Leignathus sp.",
+      "labelForm": "genus-level-placeholder",
+      "sourceRank": "GENUS",
+      "genusOrHigherNameAsPrinted": "Leignathus",
+      "matchClassification": "exact-genus-name",
+      "matchType": "EXACT",
+      "confidence": 96,
+      "candidateName": "Leignathus",
+      "candidateRank": "GENUS",
+      "candidateFamily": "Leiognathidae",
+      "candidateDiffersFromSourceString": false
+    },
+    {
+      "sourceRow": 57,
+      "site": "TMTP",
+      "table": "4.F.1",
+      "familyAsPrinted": "Platycephalidae",
+      "nameAsPrinted": "Platycephalus sp. 1",
+      "labelForm": "numbered-genus-placeholder",
+      "sourceRank": "GENUS",
+      "genusOrHigherNameAsPrinted": "Platycephalus",
+      "matchClassification": "candidate-higherrank",
+      "matchType": "HIGHERRANK",
+      "confidence": 95,
+      "candidateName": "Animalia",
+      "candidateRank": "KINGDOM",
+      "candidateFamily": null,
+      "candidateDiffersFromSourceString": false
+    },
+    {
+      "sourceRow": 59,
+      "site": "TMTP",
+      "table": "4.F.1",
+      "familyAsPrinted": "Platycephalidae",
+      "nameAsPrinted": "Platycephalus sp. 2",
+      "labelForm": "numbered-genus-placeholder",
+      "sourceRank": "GENUS",
+      "genusOrHigherNameAsPrinted": "Platycephalus",
+      "matchClassification": "candidate-higherrank",
+      "matchType": "HIGHERRANK",
+      "confidence": 95,
+      "candidateName": "Animalia",
+      "candidateRank": "KINGDOM",
+      "candidateFamily": null,
+      "candidateDiffersFromSourceString": false
+    },
+    {
+      "sourceRow": 60,
+      "site": "TMTP",
+      "table": "4.F.1",
+      "familyAsPrinted": "Pleuronectiformes",
+      "nameAsPrinted": "Pleuronectiformes sp.",
+      "labelForm": "order-level-placeholder",
+      "sourceRank": "ORDER",
+      "genusOrHigherNameAsPrinted": "Pleuronectiformes",
+      "matchClassification": "exact-order-name",
+      "matchType": "EXACT",
+      "confidence": 96,
+      "candidateName": "Pleuronectiformes",
+      "candidateRank": "ORDER",
+      "candidateFamily": null,
+      "candidateDiffersFromSourceString": false
+    },
+    {
+      "sourceRow": 65,
+      "site": "TMTP",
+      "table": "4.F.1",
+      "familyAsPrinted": "Serranidae",
+      "nameAsPrinted": "Epinephelus sp.",
+      "labelForm": "genus-level-placeholder",
+      "sourceRank": "GENUS",
+      "genusOrHigherNameAsPrinted": "Epinephelus",
+      "matchClassification": "exact-genus-name",
+      "matchType": "EXACT",
+      "confidence": 96,
+      "candidateName": "Epinephelus Bloch, 1793",
+      "candidateRank": "GENUS",
+      "candidateFamily": "Epinephelidae",
+      "candidateDiffersFromSourceString": false
+    },
+    {
+      "sourceRow": 66,
+      "site": "TMTP",
+      "table": "4.F.1",
+      "familyAsPrinted": "Siganidae",
+      "nameAsPrinted": "Siganus spp.",
+      "labelForm": "plural-genus-label-unspecified-count",
+      "sourceRank": "GENUS",
+      "genusOrHigherNameAsPrinted": "Siganus",
+      "matchClassification": "exact-genus-name",
+      "matchType": "EXACT",
+      "confidence": 96,
+      "candidateName": "Siganus Forsskål, 1775",
+      "candidateRank": "GENUS",
+      "candidateFamily": "Siganidae",
+      "candidateDiffersFromSourceString": false
+    },
+    {
+      "sourceRow": 68,
+      "site": "TMTP",
+      "table": "4.F.1",
+      "familyAsPrinted": "Sphyraenidae",
+      "nameAsPrinted": "Sphyraena sp.",
+      "labelForm": "genus-level-placeholder",
+      "sourceRank": "GENUS",
+      "genusOrHigherNameAsPrinted": "Sphyraena",
+      "matchClassification": "exact-genus-name",
+      "matchType": "EXACT",
+      "confidence": 96,
+      "candidateName": "Sphyraena Artedi, 1793",
+      "candidateRank": "GENUS",
+      "candidateFamily": "Sphyraenidae",
+      "candidateDiffersFromSourceString": false
+    },
+    {
+      "sourceRow": 71,
+      "site": "TMTP",
+      "table": "4.F.1",
+      "familyAsPrinted": "Tetraodontidae",
+      "nameAsPrinted": "Arothron sp.",
+      "labelForm": "genus-level-placeholder",
+      "sourceRank": "GENUS",
+      "genusOrHigherNameAsPrinted": "Arothron",
+      "matchClassification": "exact-genus-name",
+      "matchType": "EXACT",
+      "confidence": 96,
+      "candidateName": "Arothron Müller, 1841",
+      "candidateRank": "GENUS",
+      "candidateFamily": "Tetraodontidae",
+      "candidateDiffersFromSourceString": false
+    }
+  ],
+  "decision": {
+    "sourceRowsCorrected": 0,
+    "speciesAssertionsAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "waterbodyAssignmentsAdded": 0,
+    "geometryAdded": false,
+    "publicAppProjection": false,
+    "publicationApproval": false,
+    "regionalBaselineComplete": false
+  },
+  "nextActions": [
+    "Review the four likely genus spelling variants against an independent specialist authority and the underlying source table image; retain all printed forms until resolved.",
+    "Seek the cited Ancog et al. report, voucher/photo index, survey methods, dates, and site-specific roster to resolve the genus and numbered-placeholder rows.",
+    "Keep all genus/order matches as research-only nomenclature context; do not convert a genus match into a species entry or combine numbered rows."
+  ],
+  "sources": [
+    {
+      "url": "https://api.gbif.org/v2/species/match",
+      "supports": "Automated taxonomic name matching against the explicit Catalogue of Life XR checklist; this review queries genus/order strings only."
+    },
+    {
+      "url": "https://techdocs.gbif.org/en/data-processing/taxonomy-interpretation",
+      "supports": "GBIF documentation for interpreting name matching; automated matches require review and do not establish species occurrence."
+    },
+    {
+      "url": "https://scssap.org/library/publications/871-ch4-ecosystems-v20260103-1/file",
+      "supports": "Source labels and their table/site context, retained verbatim from Chapter 4."
+    }
+  ]
+}
