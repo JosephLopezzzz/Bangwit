@@ -1,0 +1,188 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "ncr-prcmo-cluster-iv-independent-name-crosswalk-20261120",
+  "reviewedOn": "2026-11-20",
+  "phaseId": "L2",
+  "regionId": "1300000000",
+  "regionName": "National Capital Region (NCR)",
+  "status": "6-exact-independent-waterway-name-support;3-variant-or-relationship-candidates;1-name-class-unresolved;2-area-labels;research-only",
+  "question": "Which Cluster IV labels in the DENR-NCR 2025 Pasig River system management list have independent name or locality support, and which names, feature classes, and administrative contexts remain unresolved?",
+  "sourceIds": [
+    "denr-ncr-pasig-river-biodiversity-2024",
+    "pasig-city-clwup-zoning-ordinance-63-2024",
+    "mmda-manila-metropolitan-flood-management-final-report-2023-labasan",
+    "denr-ncr-ilugin-river-pinagbuhatan-cleanup",
+    "denr-ncr-statistical-profile-2022-pineda-creek",
+    "denr-ncr-pateros-river-panday-pira-trash-traps",
+    "pateros-municipal-resolutions-1988-2019-pateros-river",
+    "dpwh-taguig-pateros-boundary-river-2025-design",
+    "marikina-city-facts-figures-2023-rivers-creeks",
+    "denr-ncr-manila-bay-regional-scope"
+  ],
+  "inputs": [
+    "data/research/philippines/national/reviews/ncr-prcmo-2025-pasig-system-52-entry-scope-review-20261120.json"
+  ],
+  "snapshotHashes": {
+    "sourceRegistry": "28c65029b0047b4b5e9a0679bf0799237e3643880b8e30faee5740f0cdfd3315",
+    "parentClusterScopeReview": "57db35519628a96e98e8d6fe25cc16c21dc5c77d3e2675005594a6ca184e9f13"
+  },
+  "method": "Compared the twelve Cluster IV labels from the linked DENR-NCR Annual Report 2025 scope review with independent Pasig City, Marikina City, Pateros municipal, DPWH, MMDA, and DENR-NCR text. Kept exact strings, punctuation/name-class variants, potential relationships, and place/management-area labels separate. Cluster-number conflicts inside the annual report are recorded as source-context inconsistencies. No geography, species, or canonical-feature match was inferred.",
+  "sourceAccess": {
+    "clusterScope": {
+      "sourceId": "denr-ncr-pasig-river-biodiversity-2024",
+      "sourceUrl": "https://ncr.denr.gov.ph/wp-content/uploads/2026/01/ANNUAL-REPORT-2025.pdf",
+      "retrieval": "Used the twelve Cluster IV labels and cluster-level locality context already transcribed from the official PDF text extraction in the linked scope artifact. Search-indexed report text also exposes a separate 2025 cleanup-cluster passage naming Baseco and Parola as Manila areas. Direct PDF access was unavailable in this review; no access control was bypassed and no PDF or figure was retained."
+    },
+    "independentSources": [
+      {
+        "sourceId": "pasig-city-clwup-zoning-ordinance-63-2024",
+        "retrieval": "Official Pasig City ordinance PDF opened and text extraction searched for Daang Paa Creek, Ilugin River, Rio Dayap, Mahabang Sapa Creek, and Sapang Buli Creek. Zoning/easement text only; no geometry digitized."
+      },
+      {
+        "sourceId": "mmda-manila-metropolitan-flood-management-final-report-2023-labasan",
+        "retrieval": "Official MMDA-hosted final report PDF opened; Figure 3.3-5, printed chapter page 46, reviewed for its Labasan trash-trap list and map labels. No map image or coordinates retained."
+      },
+      {
+        "sourceId": "denr-ncr-ilugin-river-pinagbuhatan-cleanup",
+        "retrieval": "Official DENR-NCR article text reviewed through its public search-index result; direct article fetch returned HTTP 403. No local page copy or photograph retained."
+      },
+      {
+        "sourceId": "denr-ncr-statistical-profile-2022-pineda-creek",
+        "retrieval": "Reused the previously reviewed official DENR-NCR statistical-profile PDF table text, including the Ibayo Tipas Creek entry and Taguig locality context; direct PDF retrieval had returned HTTP 403. No table copy retained."
+      },
+      {
+        "sourceId": "denr-ncr-pateros-river-panday-pira-trash-traps",
+        "retrieval": "Official DENR-NCR article text reviewed through its public search-index result; direct article fetch returned HTTP 403. The indexed text distinguishes Pateros River from the unsuffixed Panday Pira label in Taguig."
+      },
+      {
+        "sourceId": "pateros-municipal-resolutions-1988-2019-pateros-river",
+        "retrieval": "Official Municipality of Pateros PDF opened; 1997 resolution entries naming Pateros River from the Pasig River junction to the boundary with Taguig were reviewed."
+      },
+      {
+        "sourceId": "dpwh-taguig-pateros-boundary-river-2025-design",
+        "retrieval": "Official DPWH detailed engineering design PDF opened; title and location map identify the Taguig/Pateros Boundary River project reach between Barangays Pembo and Comembo, Taguig. No design coordinates, alignment, or geometry extracted."
+      },
+      {
+        "sourceId": "marikina-city-facts-figures-2023-rivers-creeks",
+        "retrieval": "Official Marikina City facts-and-figures PDF opened; the Rivers/Creeks table lists Marikina River, a city-boundary description, and a reported 9.74 km length. The table was not copied into the app or treated as surveyed geometry."
+      },
+      {
+        "sourceId": "denr-ncr-manila-bay-regional-scope",
+        "retrieval": "Official DENR-NCR program-page text reviewed through public search-index output; direct page fetch returned HTTP 403. Reviewed Manila Bay/river-system context, the South MEO hotspot list, and text locating Baseco and Parola in Manila."
+      }
+    ],
+    "itemSpecificReuseLicenseFound": false,
+    "copiedMapsOrRawTablesRetained": false
+  },
+  "clusterContextConflict": {
+    "clusterIVManagementListContext": "The Annual Report 2025, p. 204, assigns the twelve-entry Cluster IV list to Pateros, Taguig City, Marikina City, and Pasig City.",
+    "separateCleanupClusterContext": "A separate section of the same annual report, p. 199, describes Cluster IV as focused on Manila's Baseco and Parola areas; the report's Manila Bay program text locates Baseco and Parola in Manila.",
+    "disposition": "Do not force these different cluster descriptions into one locality assignment. The report appears to use cluster numbering for different management/cleanup contexts or contains an internal scope inconsistency; this review cannot resolve which. Baseco Area and Parola Area remain Manila management-area labels and are not assigned to the Pateros/Taguig/Marikina/Pasig waterway set."
+  },
+  "crosswalk": [
+    {
+      "nameAsPublished": "Ilugin River",
+      "independentNameEvidence": "Exact name in the Pasig City CLWUP/Zoning Ordinance and a DENR-NCR cleanup article identifying Ilugin River at Barangay Pinagbuhatan, Pasig City; the article describes broad connection to the Pasig River system.",
+      "reportedLocalityContext": "Pasig City; the DENR-NCR article identifies Barangay Pinagbuhatan.",
+      "disposition": "Exact source name and locality supported. Narrative connectivity is not a surveyed route, channel boundary, or fish record."
+    },
+    {
+      "nameAsPublished": "Daang Paa Creek",
+      "independentNameEvidence": "Exact name in Pasig City's CLWUP/Zoning Ordinance and the MMDA-hosted Labasan trash-trap list/map labels.",
+      "reportedLocalityContext": "Pasig City land-use/easement context and Labasan drainage-management context; the latter is not a feature-boundary record.",
+      "disposition": "Exact name supported in independent official planning and drainage-management records; no geometry or full route established."
+    },
+    {
+      "nameAsPublished": "Pateros-Taguig River",
+      "independentNameEvidence": "The Pateros municipal resolution compilation names Pateros River from its Pasig River junction to the boundary with Taguig. DPWH separately names a Taguig/Pateros Boundary River project reach in Taguig, between Barangays Pembo and Comembo. Neither independent source uses the exact compound form in the Cluster IV label.",
+      "reportedLocalityContext": "Pateros-to-Taguig boundary context in a 1997 Pateros resolution; a distinct 2025 DPWH reach in Taguig.",
+      "disposition": "Possible name/corridor relationship only. Keep Pateros River, Taguig/Pateros Boundary River, and Pateros-Taguig River as separate source labels until a source explicitly crosswalks the features."
+    },
+    {
+      "nameAsPublished": "Panday Pira River",
+      "independentNameEvidence": "A DENR-NCR indexed article names Panday Pira in Taguig and reports a trash-trap installation coordinated with Barangay Ligid-Tipas. It does not append River or Creek. MMDA's Labasan report separately names Panday Paltok River; no source establishes these names as aliases.",
+      "reportedLocalityContext": "Taguig City, Barangay Ligid-Tipas, for the unsuffixed Panday Pira report.",
+      "disposition": "Name/locality lead supported, but the waterbody class suffix in the management-list label is not independently confirmed. Keep Panday Pira distinct from Panday Paltok and Panday River."
+    },
+    {
+      "nameAsPublished": "Tipas River",
+      "independentNameEvidence": "Exact name in the MMDA-hosted Labasan trash-trap list/map and in the DENR-NCR Manila Bay program's water-hyacinth hotspot list.",
+      "reportedLocalityContext": "Labasan pumping-station drainage context and the DENR-NCR South MEO jurisdiction, which covers Taguig and Pateros.",
+      "disposition": "Exact name supported as a waterway-management label; no individual reach, route geometry, condition, or species presence established."
+    },
+    {
+      "nameAsPublished": "Ibayo Tipas Creek",
+      "independentNameEvidence": "The DENR-NCR statistical-profile table names Ibayo Tipas Creek in Taguig; the MMDA-hosted Labasan figure writes Ibayo-Tipas Creek with a hyphen and labels Ibayo-Tipas on the map.",
+      "reportedLocalityContext": "Taguig City; the indexed DENR-NCR table associates it with the Calzada-Tipas boundary context.",
+      "disposition": "Punctuation/name-form candidate only. Preserve both spellings and do not merge or create geometry without a feature-level crosswalk."
+    },
+    {
+      "nameAsPublished": "Rio Dayap",
+      "independentNameEvidence": "Exact name in Pasig City's CLWUP/Zoning Ordinance among waterways with mandated legal easement context.",
+      "reportedLocalityContext": "Pasig City land-use/easement context.",
+      "disposition": "Exact source-name support; no coordinate-referenced path, independent fish evidence, or item-specific reuse terms established."
+    },
+    {
+      "nameAsPublished": "Mahabang Sapa Creek",
+      "independentNameEvidence": "Exact name in Pasig City's CLWUP/Zoning Ordinance and as a waterway map label in the MMDA-hosted Labasan figure.",
+      "reportedLocalityContext": "Pasig City land-use/easement and Labasan drainage-management context.",
+      "disposition": "Exact name supported in two official records; the map label is not a downloadable or licensed creek boundary."
+    },
+    {
+      "nameAsPublished": "Sapang Buli",
+      "independentNameEvidence": "Pasig City's CLWUP/Zoning Ordinance refers to both Sapang Buli and Sapang Buli Creek in zoning descriptions; the DENR cluster label omits the Creek suffix.",
+      "reportedLocalityContext": "Pasig City zoning context.",
+      "disposition": "Waterway-name/class candidate; retain the source forms separately and do not expand the DENR label to a canonical Creek identity yet."
+    },
+    {
+      "nameAsPublished": "Marikina River",
+      "independentNameEvidence": "Exact name in the official Marikina City Rivers/Creeks table, which reports a Marikina-boundary-to-Nangka-boundary segment and 9.74 km; also named in DENR-NCR's river-system and hotspot context.",
+      "reportedLocalityContext": "Marikina City, with the city table describing a boundary-to-boundary segment.",
+      "disposition": "Exact name/locality supported. The city-reported length/endpoints are management-table descriptors, not a surveyed route or feature polygon."
+    },
+    {
+      "nameAsPublished": "Baseco Area",
+      "independentNameEvidence": "DENR-NCR program text identifies Baseco as a coastal barangay/area in Manila and separately names Baseco beachfront, Baseco lagoon, and a Pasig River easement nearby.",
+      "reportedLocalityContext": "City of Manila; separately described coastal, lagoon, and easement contexts.",
+      "disposition": "Area label, not independently supported as a waterway feature name. Do not substitute Baseco lagoon or the Pasig River easement for the broader area label."
+    },
+    {
+      "nameAsPublished": "Parola Area",
+      "independentNameEvidence": "DENR-NCR program text places Parola in Manila and describes a separate easement/resettlement area extending toward Delpan Bridge.",
+      "reportedLocalityContext": "City of Manila; management-area and easement context.",
+      "disposition": "Area label, not independently supported as a waterway feature name. Do not infer a river boundary or fish habitat polygon from the management-area name."
+    }
+  ],
+  "counts": {
+    "clusterIVManagementLabelsReviewed": 12,
+    "labelsWithExactIndependentWaterwayNameSupport": 6,
+    "labelsWithVariantOrRelationshipCandidatesOnly": 3,
+    "labelsWithWaterbodyNameButUnresolvedFeatureClass": 1,
+    "areaLabelsNotWaterwayNames": 2,
+    "canonicalFeatureLinksConfirmed": 0,
+    "geometryAdded": 0,
+    "speciesAssertionsAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "publicAppRecordsAdded": 0
+  },
+  "rightsDecision": {
+    "itemSpecificReuseTermsVerified": false,
+    "rawPagesMapsOrTablesRetained": false,
+    "appProjectionApproved": false,
+    "decision": "Keep short attributed name/locality findings as internal research notes. Official hosting does not establish blanket reuse rights. Do not reproduce maps, tables, design coordinates, or derived feature geometries in the app from this batch."
+  },
+  "limitations": [
+    "The report gives cluster-level context for the twelve-entry management list, not a locality for every listed waterway.",
+    "The annual report also uses Cluster IV for a separate Manila cleanup context focused on Baseco and Parola; this conflicts with the p. 204 Cluster IV administrative context. This review leaves the report's internal cluster-numbering relationship unresolved.",
+    "Exact names and narrative localities do not establish a unique physical channel, surveyed route, waterbody boundary, catchment, hydrologic connection, habitat condition, fish occurrence, public access, fishing permission, water quality, or safety.",
+    "Pateros River, Taguig/Pateros Boundary River, and Pateros-Taguig River remain separate source labels; Panday Pira, Panday Paltok, and Panday River remain separate source labels.",
+    "Ibayo Tipas/Ibayo-Tipas and Sapang Buli/Sapang Buli Creek are retained as name-form candidates, not confirmed feature matches.",
+    "Baseco Area and Parola Area are not treated as waterway-name records; the separate Baseco lagoon, beachfront, and Pasig easement descriptions are not substituted for these area labels.",
+    "The DENR management list is selected operational scope, not a complete inventory of NCR waterways or fish habitats.",
+    "No map, table, water-quality, fish, access, legal, hazard, geometry, or public-app claims are admitted from this review."
+  ],
+  "nextActions": [
+    "Crosswalk Cluster I and Cluster II labels independently and preserve the report's distinct city context for each cluster.",
+    "Continue discovery for freshwater, brackish, marine, wetland, and reservoir contexts across all 17 NCR administrative units; do not freeze NCR or Luzon scope."
+  ]
+}
