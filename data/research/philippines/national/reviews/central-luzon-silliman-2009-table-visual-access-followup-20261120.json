@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "central-luzon-silliman-2009-table-visual-access-followup-20261120",
+  "reviewedOn": "2026-11-20",
+  "phaseId": "L3",
+  "regionId": "0300000000",
+  "regionName": "Region III (Central Luzon)",
+  "status": "official-current-publisher-page-reviewed;pdf-download-404;former-pdf-route-502;no-visual-table-verification;research-only",
+  "question": "Can the official Silliman article's Nueva Ecija species table be visually inspected to confirm which taxa occupy each waterbody column?",
+  "sourceId": "silliman-nueva-ecija-pampanga-freshwater-study",
+  "relatedSourceIds": [
+    "nast-nueva-ecija-freshwater-survey-2006",
+    "clsu-emi-biodiversity-volume-2005"
+  ],
+  "inputs": [
+    "data/research/philippines/sources.json",
+    "data/research/philippines/national/reviews/central-luzon-silliman-2009-fulltext-lineage-followup-20261120.json",
+    "data/research/philippines/national/reviews/central-luzon-nast-nueva-ecija-2006-fish-name-scope-followup-20261120.json",
+    "data/research/philippines/national/reviews/central-luzon-clsu-emi-biodiversity-2005-access-review-20261120.json",
+    "data/research/philippines/luzon-completion-manifest.json"
+  ],
+  "snapshotHashes": {
+    "sourceRegistry": "de591c92b9137b28458163be90e529a5bf949413e816382f95fb4a31ecebb5d5",
+    "sillimanLineageReview": "71153668531d38ae97cf0b1fa88ba74e01a15c8e0a569a2be8911f77a2dac173",
+    "nastScopeReview": "1a313717c724bcdd0aff1e840b9b38a3ff02c85f111286db95e51fc19fa1b927",
+    "clsuVolumeAccessReview": "e252a20435b25380a1abc76de51fcdcd6ae1b0c94ef9db924009858f24780a93",
+    "luzonCompletionManifest": "7babcea11dd7fbfd53e2ccfa8439800a5b4f312d151c34a3e0c0a2bfd190b6ce"
+  },
+  "accessAttempts": [
+    {
+      "route": "https://su-journal.su.edu.ph/index.php/sj/article/view/196",
+      "result": "Official publisher article page is retrievable and lists a PDF download."
+    },
+    {
+      "route": "https://su-journal.su.edu.ph/index.php/sj/article/download/196/197/802",
+      "result": "Publisher PDF download returned HTTP 404 through the browser tool."
+    },
+    {
+      "route": "https://sillimanjournal.su.edu.ph/index.php/sj/article/download/196/197",
+      "result": "Former official publisher URL returned HTTP 502 in a direct fetch. Search indexing still exposes article text, but not a page image."
+    },
+    {
+      "route": "https://nast.dost.gov.ph/images/pdf%20files/Publications/NAST%20Transactions/NAST%202006%20Transactions%20Volume%2028%20Issue%20No.%201/Biological%20Sciences.pdf",
+      "result": "Official 2006 NAST proceedings PDF is accessible but contains only the short abstract, not the 2009 Silliman site-by-species table."
+    }
+  ],
+  "reviewedOfficialPage": {
+    "url": "https://su-journal.su.edu.ph/index.php/sj/article/view/196",
+    "observation": "The publisher page identifies the article and its 2009 issue, shows only the abstract in the accessible HTML, and lists a separate PDF download."
+  },
+  "decision": {
+    "tableVisualVerification": "not completed; no image or rendered PDF page could be retrieved from the official publisher route.",
+    "tableDerivedSiteMatrix": "not created.",
+    "existingHeldRows": "Preserve the prior explicit historical Paitan lead for Leiopotherapon plumbeus as stated in article prose; do not promote Oreochromis niloticus text-extracted cell positions or other flattened rows into site-level assignments.",
+    "interpretation": "A PDF route failure is an access limitation, not evidence about whether taxa occur in any waterbody."
+  },
+  "rightsAndDisposition": {
+    "rights": "No new reuse permission was identified.",
+    "contentHandling": "No external user-uploaded copy was used to verify the table. No table values, images, or article text were copied.",
+    "appDisposition": {
+      "speciesAssertionsAdded": 0,
+      "occurrenceRowsAdded": 0,
+      "siteAssignmentsAdded": 0,
+      "absenceClaimsAdded": 0,
+      "geometryAdded": false,
+      "imagesAdded": 0,
+      "publicationApproval": false
+    }
+  },
+  "nextActions": [
+    "Retry the official publisher PDF or use an author/institution-hosted lawful copy if it becomes available; visually verify each site-column cell before any waterbody mapping.",
+    "Keep the text-extracted site matrix unresolved and the Silliman and NAST sources non-independent until source pages, field dates, or a field log resolve the lineage."
+  ],
+  "sources": [
+    {
+      "url": "https://su-journal.su.edu.ph/index.php/sj/article/view/196",
+      "supports": "Official current publisher metadata, abstract, 2009 issue, and PDF link."
+    },
+    {
+      "url": "https://su-journal.su.edu.ph/index.php/sj/article/download/196/197/802",
+      "supports": "The official publisher's linked PDF route; returned 404 in this retrieval attempt."
+    },
+    {
+      "url": "https://sillimanjournal.su.edu.ph/index.php/sj/article/download/196/197",
+      "supports": "Former official article PDF route; direct access returned 502, while search-indexed text remains available."
+    },
+    {
+      "url": "https://nast.dost.gov.ph/images/pdf%20files/Publications/NAST%20Transactions/NAST%202006%20Transactions%20Volume%2028%20Issue%20No.%201/Biological%20Sciences.pdf",
+      "supports": "Official short abstract; not a substitute for the 2009 table."
+    }
+  ]
+}
