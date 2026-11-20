@@ -122,3 +122,7 @@ A GWP-hosted PRRC presentation contains a slide attributing the `Biodiversity As
 ## Navotas NMT introductory name crosswalk
 
 See reviews/ncr-navotas-nmt-intro-name-crosswalk-review-20261120.json for the bounded source and taxonomy review of the six introductory local-name/scientific-name pairs in the 2024 Navotas-Malabon-Tullahan article. The named CLUP cross-reference mismatch and local-name ambiguity remain unresolved. This file is research-only; it admits no local species assertions or occurrence rows.
+
+## BFAR NCR retail market-name screen
+
+The 10–14 July 2023 BFAR NCR retail report is summarized in reviews/ncr-navotas-bfar-2023-market-name-crosswalk-review-20261120.json. It contributes aggregated market-label candidates only. The report's summary source areas are not fish-capture locations, and none of its rows are promoted to a species assertion, occurrence or app record.
