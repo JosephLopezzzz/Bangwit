@@ -1,0 +1,122 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "calabarzon-canas-emb-2021-monitoring-station-review-20261121",
+  "reviewedOn": "2026-11-21",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "regionName": "Region IV-A (CALABARZON)",
+  "province": "Cavite",
+  "waterbodyId": "ph-wb-canas-river",
+  "sourceIds": [
+    "emb-calabarzon-annual-report-2021"
+  ],
+  "status": "official-EMB-CALABARZON-2021-water-quality-station-coordinates-reviewed;fish-evidence-none;station-points-not-river-geometry;research-only",
+  "question": "Can the official EMB CALABARZON 2021 annual report provide traceable Cañas River station coordinates to guide later source discovery without misrepresenting water-quality points as fish records or river boundaries?",
+  "method": {
+    "reviewedSections": [
+      "Figure 41 and Table 39: Map and Sampling Stations and Geographical Coordinates of Cañas River, printed pp. 116–117",
+      "Figure 46 and Table 51: Map and Sampling Stations and Geographical Coordinates of Cañas River Mouth, printed pp. 134–135",
+      "Table 52: Laboratory Results for Cañas River Mouth CY 2021, printed p. 136"
+    ],
+    "access": "The official EMB-hosted PDF text was reviewed through the indexed document view. A direct HTTP HEAD request from the workspace returned 403 Forbidden; no local PDF copy, checksum, or map image was retained.",
+    "coordinateConversion": "DMS values were converted using degrees + minutes/60 + seconds/3600. Coordinates are stored in [longitude, latitude] order. The report does not state the coordinate reference datum in the reviewed table.",
+    "scope": "Station coordinates are monitoring-point anchors only. The report's station map and points do not define a surveyed channel centerline, river reach boundary, fish sampling station, or legal fishing boundary."
+  },
+  "findings": {
+    "riverStations": [
+      {
+        "station": 1,
+        "sourceName": "Julugan Wawa Hanging Bridge",
+        "latitudeDms": "14°24′29.5″N",
+        "longitudeDms": "120°50′47.3″E",
+        "coordinates": [120.84647222, 14.40819444]
+      },
+      {
+        "station": 2,
+        "sourceName": "Tejero Bridge",
+        "latitudeDms": "14°23′44.29″N",
+        "longitudeDms": "120°51′41.5″E",
+        "coordinates": [120.86152778, 14.39563611]
+      },
+      {
+        "station": 3,
+        "sourceName": "Paradahan Bridge",
+        "latitudeDms": "14°19′14″N",
+        "longitudeDms": "120°52′0.81″E",
+        "coordinates": [120.86689167, 14.32055556]
+      },
+      {
+        "station": 4,
+        "sourceName": "Mag-asawang Layon Bridge",
+        "latitudeDms": "14°16′48.48″N",
+        "longitudeDms": "120°52′21.82″E",
+        "coordinates": [120.87272778, 14.28013333]
+      },
+      {
+        "station": 5,
+        "sourceName": "Patda Bridge",
+        "latitudeDms": "14°16′51.48″N",
+        "longitudeDms": "120°53′15.53″E",
+        "coordinates": [120.88764722, 14.28096667]
+      },
+      {
+        "station": 6,
+        "sourceName": "Panaysayan Bridge",
+        "latitudeDms": "14°17′14.28″N",
+        "longitudeDms": "120°53′47.32″E",
+        "coordinates": [120.89647778, 14.2873]
+      }
+    ],
+    "riverMouthStations": [
+      {
+        "station": 1,
+        "latitudeDms": "14°24′39.4″",
+        "longitudeDms": "120°50′42.21″",
+        "coordinates": [120.84505833, 14.41094444]
+      },
+      {
+        "station": 2,
+        "latitudeDms": "14°24′37.6″",
+        "longitudeDms": "120°50′42.25″",
+        "coordinates": [120.84506944, 14.41044444]
+      },
+      {
+        "station": 3,
+        "latitudeDms": "14°24′37.89″",
+        "longitudeDms": "120°50′43.21″",
+        "coordinates": [120.84533611, 14.410525]
+      }
+    ],
+    "reportedUse": "EMB presents these points with CY 2021 water-quality monitoring tables. No fish taxa, fish captures, fish survey method, or fish sampling date is reported in the reviewed Cañas station tables.",
+    "mapReview": "The report text extractor describes a map with six named river stations and a separate river-mouth map. Map pixels were not visually inspected; the coordinates above come from the printed tables, not digitization."
+  },
+  "decisions": {
+    "stationPointsRecorded": 9,
+    "waterbodyCenterlineAdded": false,
+    "fishOccurrenceRowsAdded": 0,
+    "speciesAssertionsAdded": 0,
+    "fishStationCrosswalkAdded": false,
+    "waterQualityOrSafetyStatusInferred": false,
+    "publicProjectionAdded": false,
+    "publicationApproval": false,
+    "regionalBaselineComplete": false,
+    "disposition": "Keep the nine official monitoring points as historical research/map anchors. They may support a later candidate-source search but cannot assign a nearby biological record to Cañas River without its own locality evidence."
+  },
+  "limitations": [
+    "The report's CY 2021 water-quality monitoring does not establish fish occurrence, species identity, catchability, current conditions, safety, or legal access.",
+    "No coordinate datum, horizontal accuracy, field method, or individual collection date for these station points is stated in the reviewed tables.",
+    "Station points are sparse monitoring locations and cannot be connected into a river geometry or used as a precise buffer for species attribution.",
+    "The EMB annual-report PDF could not be downloaded directly from the workspace because the host returned HTTP 403; no original file or cryptographic receipt is included.",
+    "Item-specific reuse terms for public redistribution of extracted station coordinates were not verified."
+  ],
+  "nextActions": [
+    "Use station anchors only to discover candidate open fish records; review each candidate's original dataset, coordinate uncertainty, locality and license before any waterbody linkage.",
+    "Continue the separate search for the 2017 Cañas fish-thesis species table and its station appendix; do not infer fish names from aggregate richness or water-quality stations."
+  ],
+  "sources": [
+    {
+      "sourceId": "emb-calabarzon-annual-report-2021",
+      "supports": "Officially published station names and DMS coordinates for the CY 2021 Cañas River and Cañas River Mouth water-quality monitoring network, plus the report's placement of maps and annual laboratory tables."
+    }
+  ]
+}
