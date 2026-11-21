@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "reportId": "calabarzon-makibis-gbif-checklist-fish-scope-review-20261121",
+  "checkedOn": "2026-11-21",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "regionName": "Region IV-A (CALABARZON)",
+  "status": "cc0-checklist-verified;plant-only-taxonomy;zero-fish-taxa;zero-occurrence-records;not-fish-evidence",
+  "sourceId": "acb-makibis-cc0-checklist",
+  "question": "Can the publicly reusable MakiBIS checklist registered by the ASEAN Centre for Biodiversity supply fish-species evidence for the Makiling waters?",
+  "sourceMetadata": {
+    "title": "Makiling Biodiversity Information System (MAKIBIS)",
+    "publisher": "ASEAN Centre for Biodiversity (ACB)",
+    "datasetType": "Checklist; Darwin Core Archive",
+    "doi": "10.15468/ptgavt",
+    "gbifDatasetKey": "c4074965-7f04-46b9-a422-fdd47a0e2e03",
+    "publicationDate": "2026-04-30",
+    "geographicDescription": "Mt. Makiling, Los Baños, Laguna",
+    "boundingCoordinates": {
+      "south": 14.112,
+      "west": 121.165,
+      "north": 14.164,
+      "east": 121.233
+    },
+    "iptRecords": {
+      "taxonCoreRecords": 250,
+      "descriptionExtensionRecords": 250
+    },
+    "license": "CC0 1.0; the ACB IPT rights statement says the publisher waived rights to the data and dedicated it to the public domain.",
+    "urls": {
+      "iptResource": "https://ipt.aseanbiodiversity.org/resource?r=makibis_forupload",
+      "gbifDataset": "https://www.gbif.org/dataset/c4074965-7f04-46b9-a422-fdd47a0e2e03",
+      "obisDataset": "https://obis.org/dataset/e3738261-4e01-4561-a2e3-97e56a791ebe"
+    }
+  },
+  "gbifTaxonApiScreen": {
+    "documentationUrl": "https://techdocs.gbif.org/openapi/taxon.json",
+    "endpoint": "https://api.gbif.org/v2/taxon/search/{datasetKey}",
+    "datasetKey": "c4074965-7f04-46b9-a422-fdd47a0e2e03",
+    "httpStatus": 200,
+    "queries": [
+      {
+        "parameters": "limit=1000",
+        "count": 275,
+        "returned": 275
+      },
+      {
+        "parameters": "taxonomicGroup=Chordates&limit=1000",
+        "count": 0,
+        "returned": 0
+      },
+      {
+        "parameters": "taxonRank=SPECIES&limit=1000",
+        "count": 0,
+        "returned": 0
+      }
+    ],
+    "returnedNameUsages": {
+      "taxonomicGroups": {
+        "Angiosperms": 269,
+        "Plants": 6
+      },
+      "ranks": {
+        "GENUS": 250,
+        "FAMILY": 23,
+        "CLASS": 1,
+        "KINGDOM": 1
+      }
+    },
+    "interpretation": "The 275 API name usages comprise 250 genus usages plus 25 higher-rank classification usages; all returned usages are in plant groups. The IPT archive's 250 core records and the API's 275 indexed usages are different counts and are not conflated. No species-rank or chordate/fish name usage is indexed in this dataset."
+  },
+  "obisOccurrenceCheck": {
+    "datasetUrl": "https://obis.org/dataset/e3738261-4e01-4561-a2e3-97e56a791ebe",
+    "reportedOccurrenceRecords": 0,
+    "interpretation": "This OBIS dataset page reports zero occurrence records. The related GBIF registration is a taxonomic checklist, not an occurrence feed. Neither can support fish presence or absence claims for Makiling waters."
+  },
+  "decision": {
+    "usableForFishSpeciesEvidence": false,
+    "usableForLocalityResolvedFishOccurrences": false,
+    "fishTaxaAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "waterbodyAssignmentsAdded": 0,
+    "geometryAdded": false,
+    "publicAppRowsAdded": 0,
+    "publicationApproval": false,
+    "reason": "The current openly licensed GBIF checklist is plant-rank-only and has no species-rank taxa; its OBIS counterpart reports no occurrence records. MakiBIS's broader portal description is not evidence that this particular registered checklist contains fish."
+  },
+  "limitations": [
+    "The dataset's CC0 license supports reuse of this published checklist, but does not supply fish evidence where none is present.",
+    "The broader MakiBIS portal may contain fish information elsewhere; this review covers only the specified ACB GBIF/OBIS resources and does not claim the portal has no fish data.",
+    "No present-day fish presence, absence, abundance, water quality, safety, catchability, fishing access, legal rule, diet, bait recommendation, photo, or geometry is established."
+  ],
+  "nextAction": "Continue searching independently reusable fish checklists and locality-resolved fish surveys; keep MakiBIS as a plant-only source for this GBIF registration unless a distinct fish dataset is identified."
+}
