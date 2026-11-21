@@ -1,0 +1,129 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "calabarzon-vil-san-nicolas-shoal-name-pair-crosscheck-20261121",
+  "reviewedOn": "2026-11-21",
+  "nationalStep": 707,
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "regionName": "Region IV-A (CALABARZON)",
+  "parentReviewId": "calabarzon-vil-san-nicolas-shoal-fishery-source-review-20261121",
+  "sourceIds": [
+    "emb-vil-san-nicolas-shoal-phr-2022-fisheries",
+    "nfrdi-common-local-marine-fish-names-1999",
+    "bfar-fao-217-s-2001-vil-common-name-context",
+    "worms-vil-san-nicolas-exact-name-crosscheck-20261121",
+    "calacademy-catalog-scssap-wetland-taxa-20261120",
+    "calacademy-catalog-meycauayan-name-crosscheck"
+  ],
+  "status": "authority-name-mapping-conflict-identified;source-specimen-identity-unresolved;research-only",
+  "purpose": "Check the two conflicting Spotted scat/Kitang and Spadefish/Kitang pairings printed in the VIL San Nicolas Shoal PHR fisheries list against exact accepted-name results and Philippine reference name lists. Keep all report labels verbatim and distinguish table-level name conflicts from specimen identification.",
+  "method": {
+    "sourceTable": "Printed page 97, Fisheries Profiling table; rows counted in table order after the header.",
+    "worms": {
+      "provider": "World Register of Marine Species (WoRMS), Aphia exact-name API",
+      "checkedOn": "2026-11-21",
+      "exactQueryPolicy": "like=false; marine_only=false",
+      "fields": [
+        "HTTP status",
+        "scientificname",
+        "status",
+        "rank",
+        "AphiaID",
+        "valid_name",
+        "valid_AphiaID"
+      ],
+      "results": [
+        {
+          "name": "Gerres filamentosus",
+          "httpStatus": 200,
+          "status": "accepted",
+          "rank": "Species",
+          "aphiaId": 218524,
+          "validName": "Gerres filamentosus",
+          "validAphiaId": 218524,
+          "queryUrl": "https://www.marinespecies.org/rest/AphiaRecordsByName/Gerres%20filamentosus?like=false&marine_only=false"
+        },
+        {
+          "name": "Scatophagus argus",
+          "httpStatus": 200,
+          "status": "accepted",
+          "rank": "Species",
+          "aphiaId": 276970,
+          "validName": "Scatophagus argus",
+          "validAphiaId": 276970,
+          "queryUrl": "https://www.marinespecies.org/rest/AphiaRecordsByName/Scatophagus%20argus?like=false&marine_only=false"
+        }
+      ]
+    },
+    "specialistCatalogs": {
+      "provider": "Eschmeyer’s Catalog of Fishes, California Academy of Sciences",
+      "checkedOn": "2026-11-21",
+      "results": [
+        {
+          "name": "Gerres filamentosus",
+          "status": "valid as Gerres filamentosus Cuvier 1829",
+          "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=15647"
+        },
+        {
+          "name": "Scatophagus argus",
+          "status": "valid as Scatophagus argus Linnaeus 1766",
+          "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=19833"
+        }
+      ],
+      "note": "Nomenclatural status only; no specimen morphology was reviewed."
+    },
+    "philippineNameReferences": [
+      {
+        "sourceId": "nfrdi-common-local-marine-fish-names-1999",
+        "finding": "The national compilation names Gerres filamentosus as Whipfin silver-biddy and lists varying vernacular names by locality; one entry gives Scatophagus argus as Spotted scat — Kitang. It is not a Cavite-specific survey."
+      },
+      {
+        "sourceId": "bfar-fao-217-s-2001-vil-common-name-context",
+        "finding": "The official historical list gives Gerres filamentosus as Mojarra — Malakapas and Scatophagus argus as Spadefish/Butterfish — Kitang. The Order’s broader legal status is outside this review."
+      }
+    ],
+    "scopeLimit": "This is a bounded check of two name pairings, not a complete taxonomic crosswalk for all 23 VIL table rows."
+  },
+  "findings": {
+    "reviewedRows": [
+      {
+        "tableRow": 11,
+        "englishNameAsPrinted": "Spotted scat",
+        "localNameAsPrinted": "Kitang",
+        "scientificNameAsPrinted": "Gerres filamentosus",
+        "crossCheck": "The WoRMS and Eschmeyer records accept Gerres filamentosus. Philippine reference lists instead pair this species with Whipfin silver-biddy and varied local names; NFRDI pairs Spotted scat/Kitang with Scatophagus argus.",
+        "interpretation": "Strong table-level name conflict; likely misassociated common/local-name cells or a table transcription issue. The underlying fish is not identified by this cross-check."
+      },
+      {
+        "tableRow": 14,
+        "englishNameAsPrinted": "Spadefish",
+        "localNameAsPrinted": "Kitang",
+        "scientificNameAsPrinted": "Scatophagus argus",
+        "crossCheck": "WoRMS and Eschmeyer accept Scatophagus argus. BFAR’s historical list supports Spadefish/Butterfish — Kitang for this scientific name, and NFRDI supports Spotted scat — Kitang.",
+        "interpretation": "The scientific-name/local-name pairing is supported by Philippine references; the source-specific English label “Spadefish” is also documented. This does not confirm the VIL fish specimen."
+      }
+    ],
+    "distinction": "The likely error is in the VIL row 11 name pairing, not evidence that its underlying specimen is Scatophagus argus. Rows 11 and 14 must not be merged or corrected without source notes, an identified specimen, or a linked image/voucher."
+  },
+  "decision": {
+    "sourceRowsAltered": 0,
+    "sourceNamesReplaced": 0,
+    "specimenIdentitiesResolved": 0,
+    "occurrenceRowsAdded": 0,
+    "speciesAssertionsAdded": 0,
+    "speciesImagesAdded": 0,
+    "publicAppProjection": false,
+    "publicationApproval": false,
+    "disposition": "Retain row 11 as a source-table naming conflict; retain row 14 as a separate source row with its printed labels. Do not convert either row into a verified Cavite occurrence, silently correct names, or infer that both entries represent the same catch taxon."
+  },
+  "nonClaims": [
+    "Accepted-name status in WoRMS and Eschmeyer does not validate the identity of a VIL-caught specimen.",
+    "National name references are not a Cavite-specific vernacular survey and do not establish which fishers or surveyors meant by Kitang at each VIL location.",
+    "The report still lacks a taxon-to-gear-post, municipality, spot-dive, catch-date, photograph, or voucher crosswalk.",
+    "No row proves a current occurrence, abundance, habitat use, diet, bait preference, access, safety, or legal fishing boundary."
+  ],
+  "nextActions": [
+    "Keep this naming conflict attached to the VIL source review and do not promote the two rows into Bangwit species data.",
+    "Continue with independently attributable freshwater, brackish, and marine survey sources for CALABARZON; pooled fisheries-profile tables cannot fill station-level occurrence gaps."
+  ]
+}
