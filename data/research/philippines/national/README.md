@@ -130,3 +130,7 @@ The 10–14 July 2023 BFAR NCR retail report is summarized in reviews/ncr-navota
 ## Navotas Fish Port thesis access screen
 
 The DLSU thesis catalog metadata and abstract are recorded in reviews/ncr-navotas-dlsu-fishport-thesis-access-review-20261120.json. The direct full-text link returned HTTP 403; the abstract does not provide species evidence. No access restriction was bypassed and no data was added.
+
+## Cavite FishNet2/KAUM cardinalfish name cross-check
+
+The 14 catalog-number candidate pairs and their source/GBIF name relations are recorded in `reviews/calabarzon-canas-fishnet2-kaum-gbif-catalog-crosswalk-20261121.json`; the current WoRMS and Eschmeyer name reconciliation is in `reviews/calabarzon-canas-kaum-catalog-taxonomy-crosscheck-20261121.json`. The accepted-name crosswalk is research-only. It does not confirm museum record identity, a Cañas River locality, or FishNet2 redistribution rights, and it creates no public species assertion.

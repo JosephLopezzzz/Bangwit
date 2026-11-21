@@ -1,0 +1,165 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "calabarzon-canas-kaum-catalog-taxonomy-crosscheck-20261121",
+  "reviewedOn": "2026-11-21",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "regionName": "Region IV-A (CALABARZON)",
+  "province": "Cavite",
+  "sourceIds": [
+    "obis-fishnet2-marine-data",
+    "kaum-kagoshima-fish-collection-nmns",
+    "worms-canas-kaum-cardinalfish-taxonomy-crosscheck-20261121",
+    "calacademy-catalog-canas-kaum-cardinalfish-taxonomy-crosscheck-20261121"
+  ],
+  "status": "current-name-relations-crosschecked;14-occurrence-pairs-remain-candidate-only;curator-identity-and-reuse-unresolved;research-only",
+  "question": "Do current taxonomic authorities reconcile the two name groups in the 14 candidate FishNet2/KAUM catalog-number pairs without overstating specimen identity, locality, or reuse?",
+  "method": {
+    "parentCrosswalk": "calabarzon-canas-fishnet2-kaum-gbif-catalog-crosswalk-20261121.json",
+    "worms": {
+      "provider": "World Register of Marine Species (WoRMS), Aphia REST API",
+      "endpointPattern": "https://www.marinespecies.org/rest/AphiaRecordsByName/{URL-encoded exact name}?like=false&marine_only=false",
+      "checkedOn": "2026-11-21",
+      "queriedNames": [
+        "Jaydia poecilopterus",
+        "Jaydia poeciloptera",
+        "Apogon poecilopterus",
+        "Ostorhinchus poecilopterus",
+        "Ostorhinchus pleuron",
+        "Apogon pleuron"
+      ],
+      "responseStatus": "All six exact-name requests returned HTTP 200 with one exact-name record each.",
+      "interpretation": "WoRMS accepted-name links support a nomenclatural crosswalk only; they do not validate any collection specimen or occurrence row."
+    },
+    "catalogOfFishes": {
+      "provider": "California Academy of Sciences, Eschmeyer's Catalog of Fishes",
+      "checkedOn": "2026-11-21",
+      "queries": [
+        "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?tbl=species&genus=jaydia&species=poeciloptera",
+        "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?tbl=species&genus=jaydia&species=poecilopterus",
+        "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?tbl=species&genus=ostorhinchus&species=pleuron"
+      ],
+      "interpretation": "The exact Jaydia poeciloptera and Ostorhinchus pleuron catalog records report those current valid usages. The Jaydia poecilopterus exact-combination query returned no records; the poeciloptera record notes historical literature using that combination but gives current status as Jaydia poeciloptera."
+    },
+    "candidatePairingLimit": "The source-row pairs are inherited from the separate GBIF candidate crosswalk and still carry institution/collection quality flags. Taxonomic agreement cannot upgrade a candidate row-pair to curator confirmation."
+  },
+  "sourceCitation": "WoRMS Editorial Board (2026), Aphia REST name records accessed 2026-11-21; Fricke, R., Eschmeyer, W. N. & Van der Laan, R. (eds.) (2026), Eschmeyer's Catalog of Fishes, California Academy of Sciences, records accessed 2026-11-21.",
+  "rawSnapshot": {
+    "directory": "raw/kaum-catalog-taxonomy-crosscheck-20261121",
+    "files": [
+      {
+        "path": "worms-exact-name-responses.json",
+        "bytes": 9319,
+        "sha256": "1fdbf2fe8cfbca1bd3efdf90445354d010db7dcf43e07f0f74d7680d8327c6c6",
+        "httpStatus": 200,
+        "queryUrl": "https://www.marinespecies.org/rest/AphiaRecordsByName/{URL-encoded exact name}?like=false&marine_only=false"
+      },
+      {
+        "path": "catalog-jaydia-poeciloptera.json",
+        "bytes": 14852,
+        "sha256": "e5ad2f66efe10fd8c7868be87de57732dc95ffa5483635e4717e7f2b9e4fe390",
+        "httpStatus": 200,
+        "queryUrl": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?tbl=species&genus=jaydia&species=poeciloptera"
+      },
+      {
+        "path": "catalog-jaydia-poecilopterus.json",
+        "bytes": 10134,
+        "sha256": "9058d88703ac36609e43be69c02274cfd6c41f9f5d1343b69c737cc35df8266f",
+        "httpStatus": 200,
+        "queryUrl": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?tbl=species&genus=jaydia&species=poecilopterus"
+      },
+      {
+        "path": "catalog-ostorhinchus-pleuron.json",
+        "bytes": 12203,
+        "sha256": "084c7a8569a781cd8a1b8798c248beef1b6b9946a4b39f38d2e9b37d8b75c84d",
+        "httpStatus": 200,
+        "queryUrl": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?tbl=species&genus=ostorhinchus&species=pleuron"
+      }
+    ]
+  },
+  "findings": {
+    "candidatePairs": 14,
+    "catalogNumberGroups": {
+      "57150-57151": 2,
+      "57152-57163": 12
+    },
+    "nameCrosswalks": [
+      {
+        "candidateRows": 12,
+        "catalogNumbers": "57152-57163",
+        "fishNet2Name": "Jaydia poeciloptera",
+        "kaumOriginalName": "Apogon poecilopterus Cuvier, 1828",
+        "gbifInterpretedName": "Jaydia poecilopterus (Cuvier, 1828)",
+        "authorityName": "Jaydia poeciloptera (Cuvier, 1828)",
+        "authorityRelations": [
+          {
+            "queriedName": "Jaydia poeciloptera",
+            "aphiaId": 1059799,
+            "status": "accepted",
+            "acceptedName": "Jaydia poeciloptera"
+          },
+          {
+            "queriedName": "Apogon poecilopterus",
+            "aphiaId": 273074,
+            "status": "unaccepted",
+            "unacceptReason": "superseded original combination",
+            "validAphiaId": 1059799,
+            "validName": "Jaydia poeciloptera"
+          },
+          {
+            "queriedName": "Jaydia poecilopterus",
+            "aphiaId": 1017998,
+            "status": "unaccepted",
+            "unacceptReason": "specific epithet misspelling",
+            "validAphiaId": 1059799,
+            "validName": "Jaydia poeciloptera"
+          }
+        ],
+        "catalogStatus": "Current status: valid as Jaydia poeciloptera (Cuvier, 1828). The record also documents historical usages of Jaydia poecilopterus and Ostorhinchus poecilopterus.",
+        "decision": "A supported nomenclatural crosswalk to Jaydia poeciloptera; preserve all three source and GBIF name strings in provenance."
+      },
+      {
+        "candidateRows": 2,
+        "catalogNumbers": "57150-57151",
+        "fishNet2Name": "Ostorhinchus pleuron",
+        "kaumOriginalName": "Apogon pleuron Fraser, 2005",
+        "gbifInterpretedName": "Ostorhinchus pleuron (Fraser, 2005)",
+        "authorityName": "Ostorhinchus pleuron (Fraser, 2005)",
+        "authorityRelations": [
+          {
+            "queriedName": "Ostorhinchus pleuron",
+            "aphiaId": 712683,
+            "status": "accepted",
+            "acceptedName": "Ostorhinchus pleuron"
+          },
+          {
+            "queriedName": "Apogon pleuron",
+            "aphiaId": 273073,
+            "status": "unaccepted",
+            "validAphiaId": 712683,
+            "validName": "Ostorhinchus pleuron"
+          }
+        ],
+        "catalogStatus": "Current status: valid as Ostorhinchus pleuron (Fraser, 2005).",
+        "decision": "The original Apogon combination maps nomenclaturally to Ostorhinchus pleuron; preserve both strings in provenance."
+      }
+    ],
+    "catalogAndAuthorityNamesAgree": true,
+    "curatorConfirmedSourceRowMapping": false,
+    "fishNet2ReusePermissionResolved": false,
+    "kaumGbifQualityFlagsResolved": false
+  },
+  "limitations": [
+    "This review reconciles names only. It does not re-identify any fish or verify specimen images, vouchers, or museum labels.",
+    "The 14 source-row pairs remain candidates because the separate GBIF rows carry INSTITUTION_MATCH_FUZZY and INSTITUTION_COLLECTION_MISMATCH flags and no curator confirmation was obtained.",
+    "The separate KAUM GBIF candidate data reports locality as off Rosario, Cavite; it does not assign any fish to Cañas River. The FishNet2 export itself lacks a locality string, event date, coordinate uncertainty, and explicit datum for these rows.",
+    "FishNet2 redistribution permission remains unresolved despite the separate KAUM dataset's CC-BY 4.0 metadata. No public reuse is approved.",
+    "Taxonomic name status does not establish current local presence, habitat use at a specific waterbody, abundance, safety, catchability, fishing access, diet, or bait advice."
+  ],
+  "decision": "Retain both current-name crosswalks in research metadata while preserving verbatim FishNet2, KAUM-source, and GBIF-interpreted labels. Do not create a Cañas River or Cavite presence assertion, add app species rows, or project the candidate pairs publicly until record identity, locality, and reuse questions are independently resolved.",
+  "followUps": [
+    "Seek a curator-confirmed mapping from the KAUM/NMNS collection source for catalog numbers 57150-57163, if access becomes available.",
+    "Clarify whether FishNet2 portal restrictions apply to these records in the OBIS mirror and obtain any required redistribution consent before public reuse.",
+    "Keep the candidate source locality off Rosario separate from Cañas River and from any named Cavite fishing-waterbody assignment."
+  ]
+}

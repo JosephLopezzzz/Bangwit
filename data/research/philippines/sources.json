@@ -40669,7 +40669,7 @@
         "https://fishnet.tulane.edu/ipt/resource?r=fishnet2_obis",
         "https://fishnet.tulane.edu/ipt/archive.do?r=fishnet2_obis"
       ],
-      "role": "Marine specimen dataset represented in the existing Cavite OBIS export. Its 14 KAUM candidate rows are only spatially screened against Cañas EMB water-quality anchors; they do not establish Cañas locality or river fish presence.",
+      "role": "Marine specimen dataset represented in the existing Cavite OBIS export. Its 14 KAUM catalog-number pairs are candidate cross-source matches and were nomenclaturally cross-checked, but they do not establish Cañas River locality or fish presence.",
       "checkedOn": "2026-11-21",
       "sourceYear": 2023,
       "access": {
@@ -40679,7 +40679,8 @@
           "national/reviews/calabarzon-canas-obis-fishnet2-monitoring-station-proximity-review-20261121.json",
           "../obis/cavite/cavite-obis-dataset-license-review.csv",
           "national/reviews/obis-fishnet2-rights-and-kaum-alternate-source-review-20261121.json",
-          "national/reviews/calabarzon-canas-fishnet2-kaum-gbif-catalog-crosswalk-20261121.json"
+          "national/reviews/calabarzon-canas-fishnet2-kaum-gbif-catalog-crosswalk-20261121.json",
+          "national/reviews/calabarzon-canas-kaum-catalog-taxonomy-crosscheck-20261121.json"
         ]
       },
       "license": "CC-BY-NC 4.0",
@@ -40709,25 +40710,26 @@
         "https://ipt.kahaku.go.jp/archive.do?r=snet-1131-101&v=1.11",
         "https://science-net.kahaku.go.jp/search/detail?cls=collect12&pkey=1131-101"
       ],
-      "role": "Separate KAUM institutional fish-collection dataset identified as a potential direct catalog cross-check for FishNet2 records. Its published metadata states CC-BY 4.0, but none of the 14 FishNet2 candidates has been matched to a KAUM source row in this review.",
+      "role": "Separate KAUM institutional fish-collection dataset with CC-BY 4.0 metadata. GBIF exposes 14 catalog-number candidate pairs with FishNet2; taxonomic names have been reconciled, while institution/collection quality flags and curator confirmation remain unresolved.",
       "checkedOn": "2026-11-21",
       "sourceYear": 2026,
       "datasetId": "80f63c1e-f762-11e1-a439-00145eb45e9a",
       "access": {
-        "status": "current-KAUM-NMNS-dataset-queried-via-GBIF;14-catalog-candidate-rows-returned;quality-flags-and-curator-crosswalk-unresolved;research-only",
+        "status": "current-KAUM-NMNS-dataset-queried-via-GBIF;14-catalog-number-candidate-pairs;taxonomy-crosswalk-recorded;quality-flags-and-curator-confirmation-unresolved;research-only",
         "localRawSnapshot": "data/research/philippines/raw/kaum-catalog-crosswalk-20261121",
         "reviewFiles": [
           "national/reviews/obis-fishnet2-rights-and-kaum-alternate-source-review-20261121.json",
-          "national/reviews/calabarzon-canas-fishnet2-kaum-gbif-catalog-crosswalk-20261121.json"
+          "national/reviews/calabarzon-canas-fishnet2-kaum-gbif-catalog-crosswalk-20261121.json",
+          "national/reviews/calabarzon-canas-kaum-catalog-taxonomy-crosscheck-20261121.json"
         ]
       },
       "license": "CC-BY 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
       "publicationApproval": false,
-      "researchStatus": "14-catalog-candidate-rows-found;institution-collection-QC-flags;not-curator-confirmed;no-public-admission",
+      "researchStatus": "14-catalog-number-candidate-pairs;current-name-relations-crosschecked;institution-collection-QC-flags;not-curator-confirmed;no-public-admission",
       "caveats": [
         "The current IPT metadata page reports 184,557 records and a latest version published 21 April 2026.",
-        "A direct archive retrieval attempt did not complete in this review; the FishNet2 catalog numbers, locality, and coordinates were not verified in this separate dataset.",
+        "A direct IPT archive retrieval did not complete. The separate GBIF index returned 14 catalog-number candidate pairs with aligned name stems, dates, and coordinates; institution/collection quality flags remain and no curator confirmed the mapping.",
         "Do not treat the separate dataset license as permission to redistribute a FishNet2 mirror record unless the specimen/source row is matched and the applicable terms are confirmed.",
         "A GBIF occurrence API query returned 14 candidates paired by institutionCode, collectionCode, catalogNumber, original-name stem, date and coordinates. Each retains INSTITUTION_MATCH_FUZZY and INSTITUTION_COLLECTION_MISMATCH flags; exact source match is not curator-confirmed.",
         "The returned source locality is “off Rosario, Cavite, Luzon Island, Philippines”; it is not a Cañas River locality."
@@ -40737,6 +40739,81 @@
         "raw": "Four local-only GBIF occurrence API response batches are retained under data/research/philippines/raw/kaum-catalog-crosswalk-20261121 with SHA-256 hashes in the review.",
         "content": "The dataset metadata lists CC-BY 4.0, but do not substitute its data for FishNet2 records until source identity and quality flags are resolved. No regional or app species assertion is approved."
       }
+    },
+    {
+      "id": "worms-canas-kaum-cardinalfish-taxonomy-crosscheck-20261121",
+      "title": "WoRMS exact-name cross-check for KAUM/FishNet2 cardinalfish candidates",
+      "provider": "World Register of Marine Species (WoRMS); Flanders Marine Institute",
+      "url": "https://www.marinespecies.org/rest/AphiaRecordsByName/Jaydia%20poecilopterus?like=false&marine_only=false",
+      "additionalUrls": [
+        "https://www.marinespecies.org/rest/AphiaRecordsByName/Jaydia%20poeciloptera?like=false&marine_only=false",
+        "https://www.marinespecies.org/rest/AphiaRecordsByName/Apogon%20poecilopterus?like=false&marine_only=false",
+        "https://www.marinespecies.org/rest/AphiaRecordsByName/Ostorhinchus%20poecilopterus?like=false&marine_only=false",
+        "https://www.marinespecies.org/rest/AphiaRecordsByName/Ostorhinchus%20pleuron?like=false&marine_only=false",
+        "https://www.marinespecies.org/rest/AphiaRecordsByName/Apogon%20pleuron?like=false&marine_only=false"
+      ],
+      "role": "Exact-name and accepted-name relation cross-check for two cardinalfish name groups in a 14-row FishNet2/KAUM candidate crosswalk. It resolves nomenclatural relations only and does not validate collection records or locality.",
+      "checkedOn": "2026-11-21",
+      "sourceYear": 2026,
+      "citation": "World Register of Marine Species Editorial Board (2026). World Register of Marine Species. Available from https://www.marinespecies.org. Accessed 21 November 2026. https://doi.org/10.14284/170.",
+      "access": {
+        "status": "six-exact-name-Aphia-API-queries;current-name-relations-recorded;taxonomy-only;research-only",
+        "reviewFiles": [
+          "national/reviews/calabarzon-canas-kaum-catalog-taxonomy-crosscheck-20261121.json"
+        ],
+        "api": "https://www.marinespecies.org/rest/",
+        "localRawSnapshot": "data/research/philippines/raw/kaum-catalog-taxonomy-crosscheck-20261121/worms-exact-name-responses.json",
+        "fullTextRetrieved": true
+      },
+      "reuse": {
+        "metadata": "Aphia identifiers and minimal name-status relations are recorded with WoRMS attribution.",
+        "raw": "Six exact-name API responses retained in ignored local research storage; no full database or image was copied.",
+        "content": "Taxonomy-only research cross-check. No occurrence, specimen dataset, or public app data is approved by this record."
+      },
+      "publicationApproval": false,
+      "license": "No bulk-database or occurrence reuse permission is inferred from this name-status query.",
+      "licenseUrl": "https://www.marinespecies.org/aphia.php?p=webservice",
+      "caveats": [
+        "Accepted-name relations do not identify any museum specimen or independently verify the GBIF candidate row pair.",
+        "Preserve the FishNet2, KAUM original, and GBIF-interpreted name strings in their own source fields."
+      ],
+      "researchStatus": "calabarzon;cavite;kaum-fishnet2;worms-aphia;accepted-name-crosswalk;specimen-identity-unverified;research-only"
+    },
+    {
+      "id": "calacademy-catalog-canas-kaum-cardinalfish-taxonomy-crosscheck-20261121",
+      "title": "Eschmeyer Catalog of Fishes cross-check for KAUM/FishNet2 cardinalfish candidates",
+      "provider": "California Academy of Sciences, Institute for Biodiversity Science and Sustainability",
+      "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatmain.asp",
+      "additionalUrls": [
+        "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?tbl=species&genus=jaydia&species=poeciloptera",
+        "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?tbl=species&genus=jaydia&species=poecilopterus",
+        "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?tbl=species&genus=ostorhinchus&species=pleuron"
+      ],
+      "role": "Current name-status cross-check for the two Apogonidae name groups in the 14-row FishNet2/KAUM candidate crosswalk. It does not validate the specimens, source-row pairing, or locality.",
+      "checkedOn": "2026-11-21",
+      "sourceYear": 2026,
+      "citation": "Fricke, R., Eschmeyer, W. N. & Van der Laan, R. (eds.) (2026). Eschmeyer's Catalog of Fishes: Genera, Species, References. California Academy of Sciences. Records accessed 21 November 2026.",
+      "access": {
+        "status": "three-focused-Catalog-queries-retrieved;two-current-valid-usages-confirmed;taxonomy-only;research-only",
+        "reviewFiles": [
+          "national/reviews/calabarzon-canas-kaum-catalog-taxonomy-crosscheck-20261121.json"
+        ],
+        "localRawSnapshot": "data/research/philippines/raw/kaum-catalog-taxonomy-crosscheck-20261121/catalog-jaydia-poeciloptera.json",
+        "fullTextRetrieved": true
+      },
+      "reuse": {
+        "metadata": "Minimal linked name-status findings are recorded with Catalog attribution and record URLs.",
+        "raw": "Three focused HTML response bodies retained inside JSON envelopes in ignored local research storage; no bulk export or image was copied.",
+        "content": "Taxonomy-only research cross-check. No occurrence, specimen dataset, or public app data is approved by this record."
+      },
+      "publicationApproval": false,
+      "license": "No separate Catalog content-reuse terms were reviewed; this record does not grant data or image reuse.",
+      "licenseUrl": "https://researcharchive.calacademy.org/research/ichthyology/catalog/index.asp",
+      "caveats": [
+        "Catalog accepted-name status does not validate any source specimen identification.",
+        "The historical use of Jaydia poecilopterus in the Catalog is kept distinct from its current status as Jaydia poeciloptera."
+      ],
+      "researchStatus": "calabarzon;cavite;kaum-fishnet2;catalog-of-fishes;accepted-name-crosswalk;specimen-identity-unverified;research-only"
     }
   ],
   "sourcePolicy": {

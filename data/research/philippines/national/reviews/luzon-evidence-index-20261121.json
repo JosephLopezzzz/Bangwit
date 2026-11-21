@@ -1306,7 +1306,7 @@
     },
     {
       "path": "data/research/philippines/luzon-completion-manifest.json",
-      "sha256": "6802283b066280b6398b857d8ae7b87cc5d76b614702d2e36ea0eafa5d1c668a"
+      "sha256": "33a7a40e1d3aea78f5c5218c417eb00ba93aa49e1b3e1244d1257c50001d249a"
     },
     {
       "path": "data/research/philippines/makiling-gbif-source-review.json",
@@ -2517,6 +2517,10 @@
       "sha256": "8b39ef442c37fa311a48d67b5c9f38ea7020deef3928ad0edc4126bd01ae09a1"
     },
     {
+      "path": "data/research/philippines/national/reviews/calabarzon-canas-kaum-catalog-taxonomy-crosscheck-20261121.json",
+      "sha256": "e96e3256576a7566599f997bc5874b1f7569262d2c55c802fae6d2928b80107c"
+    },
+    {
       "path": "data/research/philippines/national/reviews/calabarzon-canas-obis-fishnet2-monitoring-station-proximity-review-20261121.json",
       "sha256": "15cdfa274ea82f350b34d7374418da07f5c84eba75d3b3fd486e104400a6057a"
     },
@@ -3646,7 +3650,7 @@
     },
     {
       "path": "data/research/philippines/sources.json",
-      "sha256": "f7d245330c6ddf151e9efdb6cd5c4afa5f840cf7a4d62f90e453761fbdfa5de7"
+      "sha256": "99b9173090f4b875d8238a9f7b668330be39952804579529e57179883da462b0"
     },
     {
       "path": "data/research/philippines/taal-checklist-decisions.json",
@@ -3706,22 +3710,22 @@
     }
   ],
   "summary": {
-    "reviewArtifactsScanned": 277,
+    "reviewArtifactsScanned": 278,
     "regionCount": 8,
-    "sourceRegistryUniqueIds": 1173,
+    "sourceRegistryUniqueIds": 1175,
     "sourceIdentityCrosswalkGroups": 10,
     "reviewClassifications": {
       "national-context-only": 1,
-      "shared-across-regions": 276
+      "shared-across-regions": 277
     },
     "brokenOrUnresolvedJsonReferences": 0,
     "missingSourceIdLinks": 0,
-    "localRawReferenceCount": 1087,
-    "localRawReferencesAvailable": 1087,
+    "localRawReferenceCount": 1093,
+    "localRawReferencesAvailable": 1093,
     "localRawReferencesUnresolved": 0,
     "localRawHashMismatchReferences": 0,
     "localRawNonmatchingBasenameCandidates": 3,
-    "uniqueLocalRawInputsMatched": 1032,
+    "uniqueLocalRawInputsMatched": 1036,
     "manuallyReviewedRegionalAssociations": 32,
     "nationalContextArtifacts": 3,
     "unlinkedManualAssociations": 0,
@@ -3733,10 +3737,10 @@
       "rolloutKey": "L1",
       "regionId": "0400000000",
       "name": "Region IV-A (CALABARZON)",
-      "manifestReferenceCount": 55,
-      "directlyLinkedReviewCount": 45,
+      "manifestReferenceCount": 56,
+      "directlyLinkedReviewCount": 46,
       "indirectlyLinkedReviewCount": 231,
-      "declaredOrLinkedReviewCount": 276,
+      "declaredOrLinkedReviewCount": 277,
       "unaccountedExplicitReviewCount": 0,
       "baselineReviewed": false,
       "scopeFrozen": false
@@ -3759,8 +3763,8 @@
       "name": "Region III (Central Luzon)",
       "manifestReferenceCount": 39,
       "directlyLinkedReviewCount": 35,
-      "indirectlyLinkedReviewCount": 241,
-      "declaredOrLinkedReviewCount": 276,
+      "indirectlyLinkedReviewCount": 242,
+      "declaredOrLinkedReviewCount": 277,
       "unaccountedExplicitReviewCount": 0,
       "baselineReviewed": false,
       "scopeFrozen": false
@@ -3916,6 +3920,38 @@
       "sourceIds": [
         "kaum-kagoshima-fish-collection-nmns",
         "obis-fishnet2-marine-data"
+      ],
+      "missingSourceIds": [],
+      "explicitSuccessorReferences": []
+    },
+    {
+      "path": "data/research/philippines/national/reviews/calabarzon-canas-kaum-catalog-taxonomy-crosscheck-20261121.json",
+      "sha256": "e96e3256576a7566599f997bc5874b1f7569262d2c55c802fae6d2928b80107c",
+      "reviewId": "calabarzon-canas-kaum-catalog-taxonomy-crosscheck-20261121",
+      "reviewedOn": "2026-11-21",
+      "phaseId": "L1",
+      "declaredRegionIds": [
+        "0400000000"
+      ],
+      "manualAssociation": null,
+      "nationalContextDisposition": null,
+      "directRegionIds": [
+        "0400000000"
+      ],
+      "indirectRegionIds": [
+        "0300000000"
+      ],
+      "relatedRegionIds": [
+        "0300000000",
+        "0400000000"
+      ],
+      "classification": "shared-across-regions",
+      "publicationApproval": null,
+      "sourceIds": [
+        "calacademy-catalog-canas-kaum-cardinalfish-taxonomy-crosscheck-20261121",
+        "kaum-kagoshima-fish-collection-nmns",
+        "obis-fishnet2-marine-data",
+        "worms-canas-kaum-cardinalfish-taxonomy-crosscheck-20261121"
       ],
       "missingSourceIds": [],
       "explicitSuccessorReferences": []
@@ -21467,6 +21503,58 @@
         "nonmatchingCandidates": []
       },
       {
+        "from": "data/research/philippines/national/reviews/calabarzon-canas-kaum-catalog-taxonomy-crosscheck-20261121.json",
+        "field": "$.rawSnapshot.files[0].path",
+        "referencedPath": "worms-exact-name-responses.json",
+        "availability": "available-and-hash-verified",
+        "matchedFiles": [
+          {
+            "path": "data/research/philippines/raw/kaum-catalog-taxonomy-crosscheck-20261121/worms-exact-name-responses.json",
+            "sha256": "1fdbf2fe8cfbca1bd3efdf90445354d010db7dcf43e07f0f74d7680d8327c6c6"
+          }
+        ],
+        "nonmatchingCandidates": []
+      },
+      {
+        "from": "data/research/philippines/national/reviews/calabarzon-canas-kaum-catalog-taxonomy-crosscheck-20261121.json",
+        "field": "$.rawSnapshot.files[1].path",
+        "referencedPath": "catalog-jaydia-poeciloptera.json",
+        "availability": "available-and-hash-verified",
+        "matchedFiles": [
+          {
+            "path": "data/research/philippines/raw/kaum-catalog-taxonomy-crosscheck-20261121/catalog-jaydia-poeciloptera.json",
+            "sha256": "e5ad2f66efe10fd8c7868be87de57732dc95ffa5483635e4717e7f2b9e4fe390"
+          }
+        ],
+        "nonmatchingCandidates": []
+      },
+      {
+        "from": "data/research/philippines/national/reviews/calabarzon-canas-kaum-catalog-taxonomy-crosscheck-20261121.json",
+        "field": "$.rawSnapshot.files[2].path",
+        "referencedPath": "catalog-jaydia-poecilopterus.json",
+        "availability": "available-and-hash-verified",
+        "matchedFiles": [
+          {
+            "path": "data/research/philippines/raw/kaum-catalog-taxonomy-crosscheck-20261121/catalog-jaydia-poecilopterus.json",
+            "sha256": "9058d88703ac36609e43be69c02274cfd6c41f9f5d1343b69c737cc35df8266f"
+          }
+        ],
+        "nonmatchingCandidates": []
+      },
+      {
+        "from": "data/research/philippines/national/reviews/calabarzon-canas-kaum-catalog-taxonomy-crosscheck-20261121.json",
+        "field": "$.rawSnapshot.files[3].path",
+        "referencedPath": "catalog-ostorhinchus-pleuron.json",
+        "availability": "available-and-hash-verified",
+        "matchedFiles": [
+          {
+            "path": "data/research/philippines/raw/kaum-catalog-taxonomy-crosscheck-20261121/catalog-ostorhinchus-pleuron.json",
+            "sha256": "084c7a8569a781cd8a1b8798c248beef1b6b9946a4b39f38d2e9b37d8b75c84d"
+          }
+        ],
+        "nonmatchingCandidates": []
+      },
+      {
         "from": "data/research/philippines/national/reviews/calabarzon-manila-bay-national-museum-obis-refresh-20261116.json",
         "field": "$.query.rawSnapshot",
         "referencedPath": "raw/ncr-manila-bay-national-museum-refresh-20261116/obis-occurrences.json",
@@ -27153,6 +27241,32 @@
       },
       {
         "from": "data/research/philippines/sources.json",
+        "field": "$.sources[1173].access.localRawSnapshot",
+        "referencedPath": "data/research/philippines/raw/kaum-catalog-taxonomy-crosscheck-20261121/worms-exact-name-responses.json",
+        "availability": "available-unpinned",
+        "matchedFiles": [
+          {
+            "path": "data/research/philippines/raw/kaum-catalog-taxonomy-crosscheck-20261121/worms-exact-name-responses.json",
+            "sha256": "1fdbf2fe8cfbca1bd3efdf90445354d010db7dcf43e07f0f74d7680d8327c6c6"
+          }
+        ],
+        "nonmatchingCandidates": []
+      },
+      {
+        "from": "data/research/philippines/sources.json",
+        "field": "$.sources[1174].access.localRawSnapshot",
+        "referencedPath": "data/research/philippines/raw/kaum-catalog-taxonomy-crosscheck-20261121/catalog-jaydia-poeciloptera.json",
+        "availability": "available-unpinned",
+        "matchedFiles": [
+          {
+            "path": "data/research/philippines/raw/kaum-catalog-taxonomy-crosscheck-20261121/catalog-jaydia-poeciloptera.json",
+            "sha256": "e5ad2f66efe10fd8c7868be87de57732dc95ffa5483635e4717e7f2b9e4fe390"
+          }
+        ],
+        "nonmatchingCandidates": []
+      },
+      {
+        "from": "data/research/philippines/sources.json",
         "field": "$.sources[137].access.additionalRawPaths[0]",
         "referencedPath": "raw/gbif-bulacan-preserved-no-coordinate-20261024.json",
         "availability": "available-unpinned",
@@ -30835,6 +30949,26 @@
         "path": "data/research/philippines/raw/kaum-catalog-crosswalk-20261121/batch-4.json",
         "sha256": "a8c6ea8bc686ca7082c083f35ce8bffbc2d8d762468824038ab9712a4d2ae071",
         "referenceCount": 1
+      },
+      {
+        "path": "data/research/philippines/raw/kaum-catalog-taxonomy-crosscheck-20261121/catalog-jaydia-poeciloptera.json",
+        "sha256": "e5ad2f66efe10fd8c7868be87de57732dc95ffa5483635e4717e7f2b9e4fe390",
+        "referenceCount": 2
+      },
+      {
+        "path": "data/research/philippines/raw/kaum-catalog-taxonomy-crosscheck-20261121/catalog-jaydia-poecilopterus.json",
+        "sha256": "9058d88703ac36609e43be69c02274cfd6c41f9f5d1343b69c737cc35df8266f",
+        "referenceCount": 1
+      },
+      {
+        "path": "data/research/philippines/raw/kaum-catalog-taxonomy-crosscheck-20261121/catalog-ostorhinchus-pleuron.json",
+        "sha256": "084c7a8569a781cd8a1b8798c248beef1b6b9946a4b39f38d2e9b37d8b75c84d",
+        "referenceCount": 1
+      },
+      {
+        "path": "data/research/philippines/raw/kaum-catalog-taxonomy-crosscheck-20261121/worms-exact-name-responses.json",
+        "sha256": "1fdbf2fe8cfbca1bd3efdf90445354d010db7dcf43e07f0f74d7680d8327c6c6",
+        "referenceCount": 2
       },
       {
         "path": "data/research/philippines/raw/marineregions-manila-bay-20261024/datasets/288e63af-5f94-43d4-a039-f238b432129c.json",
