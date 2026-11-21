@@ -3,7 +3,7 @@
   "checkedOn": "2026-11-21",
   "status": "research-only-source-registry",
   "scope": "National acquisition references, freshwater spatial-source leads, shared Manila Bay marine evidence, MIMAROPA/CALABARZON/Central Luzon identity and inland-water source reviews, and Mindanao regional freshwater survey reviews. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 1170,
+  "sourceCount": 1172,
   "sources": [
     {
       "id": "aoyama-et-al-2015-cagayan-glass-eel-recruitment",
@@ -40657,6 +40657,42 @@
         "metadata": "Cite the official UPLB record and note the AGRIS record as provider-supplied secondary metadata.",
         "raw": "The full report was unavailable and no local copy was obtained.",
         "content": "Only a concise attributed abstract-scope note is retained; no report table, map, image, or taxa list is reproduced."
+      }
+    },
+    {
+      "id": "obis-fishnet2-marine-data",
+      "title": "FishNet2 Marine Data (OBIS dataset 2891a788-9f30-4413-8f73-9e7686890e9d)",
+      "provider": "FishNet2 provider resource indexed by UNESCO-IOC OBIS",
+      "url": "https://obis.org/dataset/2891a788-9f30-4413-8f73-9e7686890e9d",
+      "additionalUrls": [
+        "https://api.obis.org/v3/dataset/2891a788-9f30-4413-8f73-9e7686890e9d",
+        "https://fishnet.tulane.edu/ipt/resource?r=fishnet2_obis",
+        "https://fishnet.tulane.edu/ipt/archive.do?r=fishnet2_obis"
+      ],
+      "role": "Marine specimen dataset represented in the existing Cavite OBIS export. Its 14 KAUM candidate rows are only spatially screened against Cañas EMB water-quality anchors; they do not establish Cañas locality or river fish presence.",
+      "checkedOn": "2026-11-21",
+      "sourceYear": 2023,
+      "access": {
+        "status": "existing-local-OBIS-export-reviewed;FishNet2-source-row-crosswalk-not-verified;research-only",
+        "localRawSnapshot": "data/research/obis/cavite/cavite-obis-occurrences.csv",
+        "reviewFiles": [
+          "national/reviews/calabarzon-canas-obis-fishnet2-monitoring-station-proximity-review-20261121.json",
+          "../obis/cavite/cavite-obis-dataset-license-review.csv"
+        ]
+      },
+      "license": "CC-BY-NC 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-nc/4.0/",
+      "publicationApproval": false,
+      "researchStatus": "historical-marine-specimen-candidates;Cañas-proximity-screen-only;source-locality-unverified;noncommercial-terms;no-public-admission",
+      "caveats": [
+        "The 14 selected rows have the same exported coordinates (120.833333 E, 14.433333 N); locality, waterBody, eventDate, coordinate uncertainty, and datum are blank in the export.",
+        "The nominal distance to the nearest EMB water-quality station is not evidence of collection at Cañas River or Cañas River Mouth; the station data do not describe fish sampling.",
+        "The local dataset-rights review records CC-BY-NC 4.0 at both record and dataset level, but the provider citation field is blank and the local citation is provisional. Confirm item-level provenance and reuse before publishing."
+      ],
+      "reuse": {
+        "metadata": "Dataset metadata and record licenses are summarized in data/research/obis/cavite/cavite-obis-dataset-license-review.csv; its citation is marked candidate because the provider citation field was blank.",
+        "raw": "The full FishNet2 source archive was not obtained in this review. The filtered candidates are traceable to the existing local OBIS export hash recorded in the research review.",
+        "content": "Keep candidate rows out of Bangwit. No Cañas occurrence, species assertion, river geometry, catchability, or public projection is approved."
       }
     }
   ],
