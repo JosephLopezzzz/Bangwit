@@ -1,0 +1,109 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "nfrdi-2017-manila-bay-table-resolution-reuse-followup-20261121",
+  "reviewedOn": "2026-11-21",
+  "phaseId": "L2",
+  "regionId": "1300000000",
+  "regionName": "National Capital Region (NCR)",
+  "regionIds": [
+    "0400000000",
+    "1300000000",
+    "0300000000"
+  ],
+  "crossReferencedRegions": [
+    {
+      "rolloutKey": "L1",
+      "regionId": "0400000000",
+      "name": "Region IV-A (CALABARZON)"
+    },
+    {
+      "rolloutKey": "L2",
+      "regionId": "1300000000",
+      "name": "National Capital Region"
+    },
+    {
+      "rolloutKey": "L3",
+      "regionId": "0300000000",
+      "name": "Region III (Central Luzon)"
+    }
+  ],
+  "waterbodyId": "ph-wb-manila-bay",
+  "waterbodyName": "Manila Bay",
+  "status": "official-publisher-and-repository-copies-compared;table-image-resolution-confirmed-insufficient;alternate-catalogs-screened;reuse-unverified;research-only",
+  "question": "Does an accessible alternate copy provide a higher-resolution or author-provided version of Table 3.2, and do the reviewed records establish permission to reuse it?",
+  "sourceId": "bendano-et-al-2017-manila-bay-trawl-sector-catches",
+  "parentReviewId": "nfrdi-2017-manila-bay-trawl-sector-catch-scope-review-20261119",
+  "accessComparison": {
+    "publisherPdf": "https://www.nfrdi.da.gov.ph/tpjf/vol24/Manila%20Bay%20Resources/Species%20Composition%2C%20Distribution%2C%20Biomass%20Trends%20and%20Exploitation%20of.pdf",
+    "repositoryRecord": "https://repository.nfrdi.da.gov.ph/items/5845cc49-44c8-4c18-8d4d-d458ceaa0aad",
+    "repositoryBitstream": "https://repository.nfrdi.da.gov.ph/server/api/core/bitstreams/a2965005-8feb-46dc-90c6-840fe0189f93/content",
+    "comparisonMethod": "Downloaded the official NFRDI journal PDF and repository bitstream to a task-local temporary directory, compared SHA-256 hashes, inspected the PDF image objects, and rendered the page containing Table 3.2 for visual review. Temporary copies are excluded from the repository.",
+    "publisherAndRepositorySha256": "dc5733fbc9040efbc37a3ed80cba5cb923e67beb4b42870f34692d657aa2ad08",
+    "publisherAndRepositoryByteLength": 1368815,
+    "sameFile": true,
+    "tableImage": {
+      "printedPage": 37,
+      "pdfPage": 7,
+      "embeddedRasterWidthPixels": 273,
+      "embeddedRasterHeightPixels": 385,
+      "finding": "The sector table is embedded as a 273 by 385 pixel raster image. Higher-DPI rendering enlarges the same low-resolution image and does not recover readable taxon names or symbols."
+    },
+    "alternateCatalogs": [
+      {
+        "url": "https://aquadocs.org/items/44973214-d0af-44ee-afd4-95634f088adc",
+        "finding": "The Aquatic Commons/AquaDocs record indexes the same 2017 article and names the PDF, but the page labels it Request copy; no separate higher-resolution file was exposed in the reviewed record."
+      },
+      {
+        "url": "https://www.academia.edu/111678894/Species_Composition_Distribution_Biomass_Trends_and_Exploitation_of_Dominant_Fish_Species_in_Manila_Bay_using_Experimental_Trawl_Survey",
+        "finding": "The indexed author-uploaded article text matches the same 2017 publication and exposes text from the article, but its Table 3.2 remains an image and the page did not identify a distinct higher-resolution table or item-specific reuse license."
+      }
+    ],
+    "resolutionOutcome": "No higher-resolution table file or supplementary taxon-by-sector dataset was located in the official publisher/repository copies or the bounded alternate-catalog screen. This does not establish that no author-held copy exists."
+  },
+  "reuseAssessment": {
+    "finding": "The reviewed NFRDI repository metadata and indexed alternate-catalog pages did not expose an item-specific reuse license or permission to redistribute the table or underlying observations. Keep reuse unverified; do not reproduce the table or transcribe it into Bangwit without a verified rights basis.",
+    "publicationApproval": false
+  },
+  "decision": {
+    "tableTranscribed": false,
+    "speciesAssertionsAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "sectorAssignmentsAdded": 0,
+    "waterbodyAssignmentsAdded": 0,
+    "mapPointsAdded": 0,
+    "geometryAdded": false,
+    "publicAppProjection": false,
+    "regionalBaselineComplete": false,
+    "reason": "The official publisher and repository PDFs are byte-identical, and the embedded table image is too low-resolution for reliable reading. Alternate catalog entries did not yield another table copy or a reuse license. The parent review's historical, broad-sector, research-only limits remain in force."
+  },
+  "nextActions": [
+    "If the author or publisher later provides a readable table or underlying dataset and a clear reuse basis, review it as a new version; separate fish from invertebrates, preserve the 2014–2015 sampling window and broad sector labels, normalize taxa against a pinned backbone, and do not interpret a dash as biological absence.",
+    "Continue independent Manila Bay and cross-region source discovery without treating this unresolved table as a blocker or assigning its sector labels to municipalities, esteros, rivers, or legal municipal-water boundaries."
+  ],
+  "sources": [
+    {
+      "url": "https://www.nfrdi.da.gov.ph/tpjf/vol24/Manila%20Bay%20Resources/Species%20Composition%2C%20Distribution%2C%20Biomass%20Trends%20and%20Exploitation%20of.pdf",
+      "supports": "Official journal-hosted PDF inspected; its SHA-256 matched the NFRDI repository bitstream, and its Table 3.2 page contains a 273 by 385 pixel embedded raster table."
+    },
+    {
+      "url": "https://repository.nfrdi.da.gov.ph/items/5845cc49-44c8-4c18-8d4d-d458ceaa0aad",
+      "supports": "NFRDI repository record and its one listed 1.31 MB PDF file."
+    },
+    {
+      "url": "https://repository.nfrdi.da.gov.ph/server/api/core/bitstreams/a2965005-8feb-46dc-90c6-840fe0189f93/content",
+      "supports": "Repository PDF bitstream used for the hash and embedded-image comparison."
+    },
+    {
+      "url": "https://aquadocs.org/items/44973214-d0af-44ee-afd4-95634f088adc",
+      "supports": "Alternate Aquatic Commons/AquaDocs bibliographic record; its displayed PDF is marked Request copy."
+    },
+    {
+      "url": "https://www.academia.edu/111678894/Species_Composition_Distribution_Biomass_Trends_and_Exploitation_of_Dominant_Fish_Species_in_Manila_Bay_using_Experimental_Trawl_Survey",
+      "supports": "Alternate indexed article text for the same publication; no distinct higher-resolution table or item-specific license was identified in the reviewed page."
+    },
+    {
+      "url": "https://doi.org/10.31398/tpjf/24.1.2016A0002",
+      "supports": "Persistent identifier for the article reviewed in this follow-up."
+    }
+  ]
+}
