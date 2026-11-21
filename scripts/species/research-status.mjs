@@ -76,6 +76,7 @@ export function buildResearchStatus({
   calabarzonLocalitySourceBackedBatch11,
   calabarzonLocalitySourceBackedBatch12,
   calabarzonLocalitySourceBackedBatch13,
+  calabarzonLocalitySourceBackedBatch14,
   lagunaDeBayNcrLocalityReview,
   ncrBmbFreshwaterLocalityReview,
   ncrAdministrativeDenominatorReview,
@@ -227,7 +228,11 @@ export function buildResearchStatus({
   for (const id of lagunaDeBayNcrLocalityReview.sourceIds) {
     assert.ok(sourceIds.has(id), `Unknown Laguna de Bay NCR crosswalk source: ${id}`);
   }
-  assert.equal(lagunaDeBayNcrLocalityReview.snapshotHashes.scopeAfterNcrBatch, inputHashes.scope);
+  assert.equal(
+    lagunaDeBayNcrLocalityReview.snapshotHashes.scopeAfterNcrBatch,
+    calabarzonLocalitySourceBackedBatch14.snapshotHashes.scopeBeforeBatch,
+    "The Palicpican follow-up must start from the prior shared-lake locality crosswalk output",
+  );
   assert.equal(
     lagunaDeBayNcrLocalityReview.snapshotHashes.scopeBeforeNcrBatch,
     calabarzonLocalitySourceBackedBatch13.snapshotHashes.calabarzonScope,
@@ -903,6 +908,61 @@ export function buildResearchStatus({
   );
   assert.equal(calabarzonLocalitySourceBackedBatch13.counts.cityCodesPresentAfter, 15);
   assert.equal(calabarzonLocalitySourceBackedBatch13.counts.municipalityCodesPresentAfter, 49);
+  assert.equal(calabarzonLocalitySourceBackedBatch14.reviewId, "calabarzon-palicpican-herbarium-locality-crosswalk-20261121");
+  assert.equal(
+    calabarzonLocalitySourceBackedBatch14.snapshotHashes.scopeBeforeBatch,
+    lagunaDeBayNcrLocalityReview.snapshotHashes.scopeAfterNcrBatch,
+    "CALABARZON fourteenth locality batch must follow the shared-lake locality crosswalk",
+  );
+  assert.equal(
+    calabarzonLocalitySourceBackedBatch14.snapshotHashes.previousLocalityBatch,
+    inputHashes.calabarzonLocalitySourceBackedBatch13,
+  );
+  assert.equal(calabarzonLocalitySourceBackedBatch14.snapshotHashes.scopeAfterBatch, inputHashes.scope);
+  assert.equal(calabarzonLocalitySourceBackedBatch14.snapshotHashes.calabarzonScope, inputHashes.scope);
+  assert.equal(calabarzonLocalitySourceBackedBatch14.snapshotHashes.sourceRegistry, inputHashes.sources);
+  assert.equal(
+    calabarzonLocalitySourceBackedBatch14.snapshotHashes.administrativeRegistry,
+    inputHashes.registry,
+  );
+  assert.equal(
+    calabarzonLocalitySourceBackedBatch14.snapshotHashes.administrativeDenominator,
+    inputHashes.calabarzonAdministrativeDenominator,
+  );
+  assert.equal(calabarzonLocalitySourceBackedBatch14.assignments.length, 1);
+  const palicpicanLocalityAssignment = calabarzonLocalitySourceBackedBatch14.assignments[0];
+  assert.equal(palicpicanLocalityAssignment.waterbodyId, "ph-wb-palicpican-river-protected-landscape");
+  assert.equal(palicpicanLocalityAssignment.relationship, "source-described-locality");
+  assert.equal(palicpicanLocalityAssignment.codes[0].psgcCode, "0402121000");
+  assert.ok(palicpicanLocalityAssignment.limit.includes("full channel"));
+  const palicpicanWaterbody = scope.waterbodies.find((waterbody) =>
+    waterbody.id === palicpicanLocalityAssignment.waterbodyId,
+  );
+  assert.ok(palicpicanWaterbody, "Palicpican River locality assignment references an unknown waterbody");
+  assert.ok(palicpicanWaterbody.administrativeAssociations.some((association) =>
+    association.regionId === "0400000000" &&
+    association.provinceId === "0402100000" &&
+    association.municipalityId === "0402121000" &&
+    association.relationship === "source-described-locality" &&
+    palicpicanLocalityAssignment.sourceIds.every((id) => association.sourceRefs.includes(id)),
+  ));
+  assert.equal(palicpicanWaterbody.boundaryStatus, "not-delineated");
+  assert.equal(palicpicanWaterbody.fishEvidenceStatus, "not-reviewed");
+  assert.equal(palicpicanWaterbody.publicAdmission, false);
+  assert.equal(calabarzonLocalitySourceBackedBatch14.counts.waterbodyResearchLeadsAfter, 164);
+  assert.equal(calabarzonLocalitySourceBackedBatch14.counts.administrativeAssociationRowsAfter, 234);
+  assert.equal(calabarzonLocalitySourceBackedBatch14.counts.leadsWithCityOrMunicipalityCodeAfter, 81);
+  assert.equal(calabarzonLocalitySourceBackedBatch14.counts.leadsWithoutProvinceCityOrMunicipalityCodeAfter, 3);
+  assert.equal(calabarzonLocalitySourceBackedBatch14.counts.cityCodesPresentAfter, 15);
+  assert.equal(calabarzonLocalitySourceBackedBatch14.counts.municipalityCodesPresentAfter, 50);
+  assert.equal(calabarzonLocalitySourceBackedBatch14.counts.geometryValidated, 0);
+  assert.equal(calabarzonLocalitySourceBackedBatch14.counts.fishAssertionsAdded, 0);
+  assert.equal(calabarzonLocalitySourceBackedBatch14.counts.publicRecordsAdmitted, 0);
+  assert.equal(calabarzonLocalitySourceBackedBatch14.counts.scopeFrozen, false);
+  assert.equal(
+    calabarzonLocalityLinkageAudit.findings.sourceBackedLocalityBatch14.sha256,
+    inputHashes.calabarzonLocalitySourceBackedBatch14,
+  );
   for (const [snapshotKey, hashKey] of [
     ["tagbacReview", "calabarzonTagbacSourceReview"],
     ["bcibWatercoursesReview", "calabarzonBcibWatercoursesReview"],
@@ -1025,6 +1085,9 @@ export function buildResearchStatus({
   }
   for (const id of calabarzonLocalitySourceBackedBatch13.sourceIds) {
     assert.ok(sourceIds.has(id), `Unknown CALABARZON thirteenth locality batch source: ${id}`);
+  }
+  for (const id of calabarzonLocalitySourceBackedBatch14.sourceIds) {
+    assert.ok(sourceIds.has(id), `Unknown CALABARZON fourteenth locality batch source: ${id}`);
   }
   for (const [key, hashKey] of [
     ["mambaPalicpicanSourceReview", "mambaPalicpicanSourceReview"],
@@ -1738,6 +1801,10 @@ export async function readResearchInputs() {
     ),
     calabarzonLocalitySourceBackedBatch13: new URL(
       "national/reviews/calabarzon-locality-source-backed-batch-20261119-08.json",
+      research,
+    ),
+    calabarzonLocalitySourceBackedBatch14: new URL(
+      "national/reviews/calabarzon-palicpican-herbarium-locality-crosswalk-20261121.json",
       research,
     ),
     lagunaDeBayNcrLocalityReview: new URL(

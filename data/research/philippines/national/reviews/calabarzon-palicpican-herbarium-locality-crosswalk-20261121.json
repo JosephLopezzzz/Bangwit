@@ -1,0 +1,120 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "calabarzon-palicpican-herbarium-locality-crosswalk-20261121",
+  "reviewedOn": "2026-11-21",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "status": "historical-botanical-text-locality-supports-ternate-segment-crosswalk;route-geometry-unresolved;research-only",
+  "question": "Does an independently indexed primary herbarium record support a source-described locality association between the Palicpican River research lead and Ternate, without assigning the full river route?",
+  "sourceIds": [
+    "naturalis-bioportal-palicpican-river-locality-l4175587",
+    "cavite-sepp-2014-protected-landscape-rivers",
+    "psa-calabarzon-municipalities-list"
+  ],
+  "inputs": [
+    "data/research/philippines/calabarzon-scope.json",
+    "data/research/philippines/sources.json",
+    "data/research/philippines/administrative-registry.json",
+    "data/research/philippines/national/reviews/calabarzon-administrative-denominator-reconciliation-20261117.json",
+    "data/research/philippines/calabarzon-ternate-protected-landscape-rivers-review-20261026.json",
+    "data/research/philippines/national/reviews/calabarzon-region-only-leads-osm-route-candidate-screen-20261118.json",
+    "data/research/philippines/national/reviews/calabarzon-locality-source-backed-batch-20261119-08.json",
+    "data/research/philippines/national/reviews/laguna-de-bay-ncr-locality-crosswalk-20261119.json",
+    "data/research/philippines/national/reviews/calabarzon-locality-linkage-gap-audit-20261118.json"
+  ],
+  "snapshotHashes": {
+    "scopeBeforeBatch": "857a46aeca90e5bfc2a03b152fb582e2d16e815787ff7344ad48a8b853f14b49",
+    "scopeAfterBatch": "5c00323a0fbc65ca1e40f1718b3acc572a426b64295d3ec71a726daee367789e",
+    "calabarzonScope": "5c00323a0fbc65ca1e40f1718b3acc572a426b64295d3ec71a726daee367789e",
+    "sourceRegistryBefore": "e3a57d8f7e4440932b74d234ec3f63698c8b71bec7ce8849fd2e8286f16893cc",
+    "sourceRegistry": "91cc3570ae2183dfbfd440fbe37e713f4869beaa73ae02bafc38579535ba99c5",
+    "administrativeRegistry": "c741456fbc2cfc9d5d813484a0b661ef206154977959fc27a289ca86732142e8",
+    "administrativeDenominator": "0688d4bf58dd848571c23cbc09f2bbb71244aace0f5842bb59ee473f483f7ce0",
+    "protectedLandscapeSourceReview": "651fec6c2b0b1aa8f9caa51bad93bdacf4b87ca2cc34d2d51562daf7c939e1c6",
+    "osmRouteCandidateScreen": "db65be7bf2004dab341736e18e52e932b678a3755a791259171abce34b2b349c",
+    "previousLocalityBatch": "57dbcd759ea2bbff908b3d8a9d13c612c96ddedb28971607bb9de8da2c221af6",
+    "previousNcrCrosswalk": "14df988aeafcff7819f7bf99751db0668d9aa5bcf702a18fd0aa28ee7ddfc010",
+    "baselineAuditBeforeBatch": "f73122e827a46c35a335ca081c3d0e6d662dc15fce67ddc4d3748317ccf7a52b"
+  },
+  "method": "Reviewed the Naturalis Bioportal catalog record for herbarium sheet L.4175587, checked the specimen text against the official Cavite profile naming a portion of Palicpican River, and cross-checked Ternate’s PSA municipality code. Used only the specimen’s textual locality, not its displayed coordinates. Added one source-described locality association; did not infer route geometry, exclusive containment, fish presence, access, or fishing rules.",
+  "sourceRows": [
+    "Naturalis L.4175587: Jasminum herbarium sheet; collected 1996-07-13 by Gaerlan, Fuentes, and Romero; locality text describes Mt. Palaypalay/Mataas na Gulod National Park, Sitio Malauyas, Barangay Sapang, Ternate, and travel/collection along Palicpican River.",
+    "Cavite Socio-Economic and Physical Profile 2014, Chapter 3, printed page 28: names a portion of Palicpican River in protected-landscape restoration and habitat-management zones; does not identify municipality or route.",
+    "PSA CALABARZON municipalities directory: Ternate municipality code 0402121000; locality crosswalk only, no waterbody or boundary geometry."
+  ],
+  "localityAssessment": {
+    "sourceName": "Palicpican River",
+    "sourceLocality": "One botanical collection locality along Palicpican River, Barangay Sapang, Ternate, Cavite, within the Mt. Palaypalay/Mataas na Gulod protected-landscape context.",
+    "identityDisposition": "historical-specimen-text-locality-crosswalk-to-one-river-segment;not-a-whole-channel-assignment",
+    "specimen": {
+      "registrationNumber": "L.4175587",
+      "scientificName": "Jasminum",
+      "basisOfRecord": "herbarium sheet",
+      "collectionDate": "1996-07-13",
+      "collector": "Gaerlan, FJM; Fuentes, RE; Romero, EM",
+      "recordLicense": "CC0 1.0"
+    },
+    "municipality": {
+      "name": "Ternate",
+      "province": "Cavite",
+      "psgcCode": "0402121000",
+      "provincePsgcCode": "0402100000",
+      "sourceId": "psa-calabarzon-municipalities-list"
+    },
+    "coordinateHandling": "Naturalis displays one site coordinate pair for the botanical specimen. It was not used as river geometry, a route point, or a boundary crosswalk.",
+    "interpretation": "The locality string supports a historical collection-site association with a Palicpican River reach in Ternate. It does not locate all reaches or the river mouth/source."
+  },
+  "assignments": [
+    {
+      "waterbodyId": "ph-wb-palicpican-river-protected-landscape",
+      "sourceIds": [
+        "naturalis-bioportal-palicpican-river-locality-l4175587",
+        "cavite-sepp-2014-protected-landscape-rivers",
+        "psa-calabarzon-municipalities-list"
+      ],
+      "sourcePath": "data/research/philippines/sources.json",
+      "sourcePage": "Naturalis Bioportal record L.4175587, Locality field; Cavite SEPP 2014 Chapter 3, printed p.28; PSA CALABARZON municipality directory, Ternate row.",
+      "sourceRow": "Naturalis specimen L.4175587: Barangay Sapang, Ternate; along Palicpican River. PSA code: 0402121000.",
+      "sourceLocality": "Historical botanical collection site along Palicpican River, Barangay Sapang, Ternate, Cavite.",
+      "relationship": "source-described-locality",
+      "codes": [
+        {
+          "level": "municipality",
+          "psgcCode": "0402121000",
+          "name": "Ternate",
+          "sourceId": "psa-calabarzon-municipalities-list"
+        }
+      ],
+      "limit": "One historical collecting locality/segment only. The full channel location, municipality/province crossings, route geometry, outlet, fish evidence, access, safety, and current regulations remain unresolved."
+    }
+  ],
+  "counts": {
+    "waterbodyResearchLeadsBefore": 164,
+    "waterbodyResearchLeadsAfter": 164,
+    "leadsUpdated": 1,
+    "localityCodeAssignmentsAdded": 1,
+    "municipalityCodeAssignments": 1,
+    "cityCodeAssignments": 0,
+    "administrativeAssociationRowsBefore": 233,
+    "administrativeAssociationRowsAfter": 234,
+    "leadsWithCityOrMunicipalityCodeAfter": 81,
+    "leadsWithProvinceCodeButNoCityOrMunicipalityCodeAfter": 80,
+    "leadsWithoutProvinceCityOrMunicipalityCodeAfter": 3,
+    "cityCodesPresentAfter": 15,
+    "municipalityCodesPresentAfter": 50,
+    "municipalityCodeDenominator": 120,
+    "geometryValidated": 0,
+    "fishAssertionsAdded": 0,
+    "publicRecordsAdmitted": 0,
+    "scopeFrozen": false
+  },
+  "nonClaims": [
+    "No fish species, occurrence, abundance, or current-presence claim was added; the specimen is botanical.",
+    "No river route, catchment, shoreline, protected-area boundary, salinity class, or coordinate was added to the app.",
+    "Ternate is a source-described locality for one historic specimen locality along the named river, not proof that the whole channel lies in Ternate.",
+    "No fishing access, safety, legal restriction, or seasonal condition was determined.",
+    "Naturalis record metadata are CC0 1.0; the specimen image or other multimedia was not reused."
+  ],
+  "decision": "Add Ternate as one municipality-coded, source-described locality for the Palicpican River research lead. Keep geometry, full-channel attribution, and fish evidence unresolved; do not admit public application content.",
+  "nextAction": "Continue source-backed locality review for Mamba/Cacabay, Bucal (Lalangnan), and Labayat; search for route-scale official hydrography and site-resolved fish surveys for Palicpican and other inland-water leads. Keep scopeFrozen=false."
+}
