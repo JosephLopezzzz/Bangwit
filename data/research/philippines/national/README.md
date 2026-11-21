@@ -126,3 +126,7 @@ See reviews/ncr-navotas-nmt-intro-name-crosswalk-review-20261120.json for the bo
 ## BFAR NCR retail market-name screen
 
 The 10–14 July 2023 BFAR NCR retail report is summarized in reviews/ncr-navotas-bfar-2023-market-name-crosswalk-review-20261120.json. It contributes aggregated market-label candidates only. The report's summary source areas are not fish-capture locations, and none of its rows are promoted to a species assertion, occurrence or app record.
+
+## Navotas Fish Port thesis access screen
+
+The DLSU thesis catalog metadata and abstract are recorded in reviews/ncr-navotas-dlsu-fishport-thesis-access-review-20261120.json. The direct full-text link returned HTTP 403; the abstract does not provide species evidence. No access restriction was bypassed and no data was added.
