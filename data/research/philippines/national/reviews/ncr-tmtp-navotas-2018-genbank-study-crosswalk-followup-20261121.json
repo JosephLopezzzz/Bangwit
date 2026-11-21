@@ -1,0 +1,104 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "ncr-tmtp-navotas-2018-genbank-study-crosswalk-followup-20261121",
+  "reviewedOn": "2026-11-21",
+  "phaseId": "L2",
+  "regionId": "1300000000",
+  "regionName": "National Capital Region (NCR)",
+  "parentReviewId": "ncr-tmtp-navotas-gbif-insdc-sequence-screen-20261121",
+  "sourceIds": [
+    "gbif-insdc-sequences-lake-danao-albay-records"
+  ],
+  "status": "bounded-public-copy-search-completed;sample-crosswalk-not-found;research-only",
+  "question": "Do the 30 GenBank-linked NTJ records have a publicly accessible copy of the cited 2018 analysis or a traceable sample crosswalk to the separate 2023 Boquiren and Quilang study?",
+  "method": {
+    "summary": "Rechecked public GenBank record annotations for endpoint accessions MK016019 and MK016048, searched the exact accession-cited study title and accession range in public web results and PubMed, and reviewed the publicly indexed 2023 article preview. No access control was bypassed and no sequence bases or article text were copied into this review.",
+    "boundedSearches": [
+      {
+        "query": "\"Genetic diversity analysis of the catadromous thornfish\" Boquiren Quilang",
+        "places": [
+          "Public web search",
+          "PubMed exact-title search"
+        ],
+        "result": "No matching public manuscript or PubMed record appeared in the reviewed results. The PubMed exact-title query returned zero results.",
+        "limitation": "Search-engine indexing and PubMed coverage are incomplete; this is not proof that no manuscript or copy exists."
+      },
+      {
+        "query": "\"MK016019\" \"MK016048\" Terapon jarbua",
+        "places": [
+          "Public web search"
+        ],
+        "result": "No public sample-code or accession crosswalk to the 2023 article appeared in the reviewed results.",
+        "limitation": "A negative search result does not establish that no crosswalk exists in an unindexed supplement, repository, or author-held record."
+      },
+      {
+        "query": "site:ukdr.uplb.edu.ph Boquiren Quilang Terapon jarbua control region 2018 unpublished",
+        "places": [
+          "UPLB repository-scoped public web search"
+        ],
+        "result": "No matching repository item appeared in the reviewed results.",
+        "limitation": "This was a bounded search, not a complete repository export or exhaustive catalog review."
+      }
+    ],
+    "genbankRecordCheck": "The accession records identify the cited analysis as unpublished and expose the NTJ voucher labels, J.P. Quilang as collector, collection date 2011-09-10, and the coarse locality Eastern Manila Bay, Navotas, Metro Manila. The reviewed endpoint records do not supply a physical-voucher repository, exact field station, or a capture-versus-market procurement method.",
+    "publishedArticleCheck": "The public preview for Boquiren and Quilang (2023) reports 270 Terapon jarbua samples from nine coastal areas, including Navotas, and says the fish were procured from fishermen and fish vendors. The preview reviewed here does not display a sample-code or accession list tying that cohort to NTJ1–NTJ30 or MK016019–MK016048; full-text and supplementary-file contents were not verified.",
+    "comparisonRule": "Shared authors, species, and Navotas locality are not an accession crosswalk. Do not infer that the 2018 direct submissions are part of the separate 2023 procurement cohort without an explicit voucher/accession match or source statement."
+  },
+  "findings": {
+    "endpointAccessionsReviewed": [
+      "MK016019",
+      "MK016048"
+    ],
+    "cited2018AnalysisTitle": "Genetic diversity analysis of the catadromous thornfish, Terapon jarbua (Forsskål, 1775), as inferred by the mitochondrial control region",
+    "cited2018AnalysisPublicationStatus": "unpublished in the GenBank records",
+    "publicFullCopyLocated": false,
+    "publicSupplementWithSampleCrosswalkLocated": false,
+    "accessionTo2023StudyCrosswalkLocated": false,
+    "physicalVoucherRepositoryVerified": false,
+    "captureVersusProcurementResolved": false,
+    "siteSpecificWildCaptureEstablished": false,
+    "tanzaMarineTreeParkLinkEstablished": false
+  },
+  "decision": {
+    "sequenceLocalityLeadChanged": false,
+    "speciesAssertionsAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "waterbodyAssignmentsAdded": 0,
+    "geometryAdded": false,
+    "publicAppProjection": false,
+    "publicationApproval": false,
+    "disposition": "Keep the 30 accessions as one research-only historical Navotas/Manila Bay sequence-locality lead. The public-copy search and article preview do not establish a sample crosswalk, wild-capture waterbody, or link to Tanza Marine Tree Park."
+  },
+  "nonClaims": [
+    "A zero-result PubMed or web search does not prove that the unpublished analysis or a repository copy does not exist.",
+    "The separate 2023 Navotas sampling study is not assumed to include the 30 earlier accession-linked vouchers.",
+    "The GenBank locality does not establish a wild-capture location, precise station, municipal-water assignment, or Tanza Marine Tree Park occurrence.",
+    "No current presence, abundance, catchability, diet, safety, legal catchability, or waterbody condition is established."
+  ],
+  "nextActions": [
+    "Continue the Tanza marine-source search for a dated primary fish survey with station coordinates, field methods, traceable vouchers, and item-specific reuse terms.",
+    "If a public manuscript or accession-linked supplement is found later, compare the exact NTJ voucher and MK016019–MK016048 identifiers before revisiting provenance."
+  ],
+  "sources": [
+    {
+      "sourceId": "gbif-insdc-sequences-lake-danao-albay-records",
+      "supports": "GBIF-hosted INSDC sequence dataset and linked primary GenBank record metadata for the NTJ voucher labels and accessions; the related source review records the 30-row locality/date/coordinate pattern."
+    },
+    {
+      "url": "https://www.ncbi.nlm.nih.gov/nuccore/MK016019",
+      "additionalUrls": [
+        "https://www.ncbi.nlm.nih.gov/nuccore/MK016048",
+        "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=pubmed&term=%22Genetic+diversity+analysis+of+the+catadromous+thornfish%22%5BTitle%5D&retmode=json"
+      ],
+      "supports": "Primary endpoint GenBank annotations for the accession-cited unpublished analysis and the bounded exact-title PubMed search result."
+    },
+    {
+      "url": "https://www.sciencedirect.com/science/article/abs/pii/S2352485522003814",
+      "supports": "Public preview of Boquiren and Quilang (2023), including the aggregate 270-sample count, nine coastal areas including Navotas, and procurement from fishermen and fish vendors; the reviewed preview did not expose an accession-to-sample crosswalk."
+    },
+    {
+      "url": "https://www.ukdr.uplb.edu.ph/",
+      "supports": "UPLB repository-scoped bounded search for a public copy of the exact 2018 accession-cited analysis; no matching item appeared in reviewed results."
+    }
+  ]
+}
