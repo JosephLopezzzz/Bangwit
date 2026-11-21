@@ -1,0 +1,185 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "calabarzon-maragondon-goby-ncbi-reference-crosscheck-20261121",
+  "reviewedOn": "2026-11-21",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "regionName": "Region IV-A (CALABARZON)",
+  "status": "expanded-ncbi-search;philippine-reference-barcodes-found;no-maragondon-fish-sequence-or-voucher-crosswalk;research-only",
+  "purpose": "Refresh the 2014 Maragondon River goby identity lead against NCBI nucleotide, SRA, BioProject and BioSample records; separate useful Philippine reference barcodes from local evidence and check for a phenotype-to-accession or voucher link.",
+  "inputSource": {
+    "sourceId": "ijcs-2014-maragondon-goby-barcoding",
+    "priorReviewId": "calabarzon-maragondon-goby-taxonomy-crosscheck-20261102",
+    "reportedSampling": "Three pre-collected goby phenotypes A1, B2 and D4 from Maragondon River in summers 2010 and 2011. The paper says voucher specimens were sent to the Philippine National Museum for verification but reports no catalogue numbers or verification outcome.",
+    "unresolvedEvidence": "The paper provides no accession numbers or publicly retrievable query sequences for its three samples; its morphological and putative molecular identifications conflict."
+  },
+  "sequenceSearch": {
+    "provider": "NCBI Entrez E-utilities; Nucleotide, SRA, BioProject and BioSample databases",
+    "checkedOn": "2026-11-21",
+    "directLocalityQueries": [
+      {
+        "database": "nuccore",
+        "query": "Maragondon[All Fields]",
+        "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=nuccore&term=Maragondon%5BAll%20Fields%5D&retmode=json",
+        "resultCount": 0
+      },
+      {
+        "database": "sra",
+        "query": "Maragondon[All Fields]",
+        "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=sra&term=Maragondon%5BAll%20Fields%5D&retmode=json",
+        "resultCount": 0
+      },
+      {
+        "database": "bioproject",
+        "query": "Maragondon[All Fields]",
+        "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=bioproject&term=Maragondon%5BAll%20Fields%5D&retmode=json",
+        "resultCount": 0
+      },
+      {
+        "database": "biosample",
+        "query": "Maragondon[All Fields]",
+        "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=biosample&term=Maragondon%5BAll%20Fields%5D&retmode=json",
+        "resultCount": 1,
+        "returnedRecord": "SAMN41619231"
+      },
+      {
+        "database": "biosample",
+        "query": "Maragondon[All Fields] AND goby[All Fields]",
+        "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=biosample&term=Maragondon%5BAll%20Fields%5D%20AND%20goby%5BAll%20Fields%5D&retmode=json",
+        "resultCount": 0
+      },
+      {
+        "database": "biosample",
+        "query": "Maragondon[All Fields] AND fish[All Fields]",
+        "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=biosample&term=Maragondon%5BAll%20Fields%5D%20AND%20fish%5BAll%20Fields%5D&retmode=json",
+        "resultCount": 0
+      }
+    ],
+    "bioSampleFalsePositive": {
+      "accession": "SAMN41619231",
+      "submittedTaxon": "Ceratina (Neoceratina) cf. dentipes",
+      "recordType": "invertebrate sample",
+      "localityText": "Philippines: Cavite Maragondon",
+      "interpretation": "The only broad BioSample locality hit is a bee sample, not a fish or goby record; it is not evidence for any fish taxon."
+    },
+    "candidateTaxonQueries": [
+      {
+        "database": "nuccore",
+        "query": "\"Amblygobius sphynx\"[Organism] AND Philippines[All Fields]",
+        "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=nuccore&term=%22Amblygobius%20sphynx%22%5BOrganism%5D%20AND%20Philippines%5BAll%20Fields%5D&retmode=json",
+        "resultCount": 1,
+        "interpretation": "Candidate reference-taxon search only; it does not retrieve the Maragondon A1 query sequence or establish that A1 is this species."
+      },
+      {
+        "database": "nuccore",
+        "query": "\"Glossogobius giuris\"[Organism] AND Philippines[All Fields]",
+        "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=nuccore&term=%22Glossogobius%20giuris%22%5BOrganism%5D%20AND%20Philippines%5BAll%20Fields%5D&retmode=json",
+        "resultCount": 11,
+        "interpretation": "Candidate reference-taxon search only; these accessions do not identify the Maragondon B2 phenotype."
+      },
+      {
+        "database": "nuccore",
+        "query": "\"Oxyurichthys ophthalmonema\"[Organism] AND Philippines[All Fields]",
+        "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=nuccore&term=%22Oxyurichthys%20ophthalmonema%22%5BOrganism%5D%20AND%20Philippines%5BAll%20Fields%5D&retmode=json",
+        "resultCount": 2,
+        "interpretation": "Candidate reference-taxon search only; these accessions do not identify the Maragondon D4 phenotype."
+      }
+    ],
+    "limit": "These searches are limited to NCBI indexed fields and the exact terms recorded here. Zero hits are not proof that no sequence or specimen exists elsewhere, under another name, or in an unindexed archive. No BOLD search, museum-catalog search or author inquiry was performed."
+  },
+  "candidateReferenceRecords": [
+    {
+      "candidatePhenotype": "A1",
+      "accession": "OQ387285.1",
+      "taxonAsSubmitted": "Amblygobius sphynx",
+      "voucher": "VERDE-281",
+      "sequence": "COI, 655 bp",
+      "locality": "Puerto Galera, Oriental Mindoro; unnamed cove north of Markoe Cove",
+      "collectionDate": "2015-04-08",
+      "coordinates": "13.513 N, 120.981 E",
+      "referencePublication": {
+        "citation": "Bemis, K. E., Girard, M. G., Santos, M. D., et al. (2023). Biodiversity of Philippine marine fishes: A DNA barcode reference library based on voucher specimens. Scientific Data, 10, 411.",
+        "url": "https://www.nature.com/articles/s41597-023-02306-9",
+        "license": "The article states CC BY 4.0; no sequence or image content copied."
+      },
+      "interpretation": "A voucher-backed Philippine reference sequence for a taxon named as one putative A1 match in the 2014 paper. It is from a different locality and year; the Maragondon A1 sequence is unavailable for direct comparison."
+    },
+    {
+      "candidatePhenotype": "B2",
+      "accession": "OQ386497.1",
+      "taxonAsSubmitted": "Glossogobius giuris",
+      "voucher": "RP-240",
+      "sequence": "COI, 655 bp",
+      "locality": "Northern Cagayan vicinity, based on vendor statement for a fish purchased at Dugu Public Market",
+      "collectionDate": "2012-06-02",
+      "coordinates": "18.257 N, 121.688 E",
+      "referencePublication": {
+        "citation": "Bemis, K. E., Girard, M. G., Santos, M. D., et al. (2023). Biodiversity of Philippine marine fishes: A DNA barcode reference library based on voucher specimens. Scientific Data, 10, 411.",
+        "url": "https://www.nature.com/articles/s41597-023-02306-9",
+        "license": "The article states CC BY 4.0; no sequence or image content copied."
+      },
+      "interpretation": "A candidate-taxon market reference from another province, not a Maragondon specimen or catch-site occurrence."
+    },
+    {
+      "candidatePhenotype": "B2",
+      "accessions": [
+        "KF714950.1",
+        "PP413503.1",
+        "PP413504.1",
+        "PP413505.1",
+        "PP413506.1",
+        "PP413507.1",
+        "PP413508.1",
+        "PP413509.1",
+        "PP413510.1",
+        "PP481381.1"
+      ],
+      "taxonAsSubmitted": "Glossogobius giuris",
+      "sequenceTypes": "COI accessions KF714950.1 and PP413503.1-PP413510.1; mitochondrial small-subunit ribosomal RNA accession PP481381.1",
+      "localityDetail": "KF714950.1 is labeled Pangasinan, Region I. PP413503.1-PP413510.1 and PP481381.1 give Philippines only in the retrieved GenBank source qualifiers; the North Luzon article lists the associated taxon/accession set but does not create a Maragondon phenotype crosswalk.",
+      "referenceSourceIds": [
+        "dimaquibo-et-al-2025-north-luzon-teleost-barcode-dataset"
+      ],
+      "interpretation": "Public Philippine reference accessions help compare candidate taxa but have different or coarse localities and no connection to the 2010/2011 Maragondon B2 sample."
+    },
+    {
+      "candidatePhenotype": "D4",
+      "accessions": [
+        "OR114038.1",
+        "KF714987.1"
+      ],
+      "taxonAsSubmitted": "Oxyurichthys ophthalmonema",
+      "localities": [
+        "OR114038.1: Cebu",
+        "KF714987.1: Pangasinan, Region I"
+      ],
+      "ncbiAccessionUrls": [
+        "https://www.ncbi.nlm.nih.gov/nuccore/OR114038.1",
+        "https://www.ncbi.nlm.nih.gov/nuccore/KF714987.1"
+      ],
+      "interpretation": "Both records are outside Maragondon and are not linked to the D4 phenotype; the 2014 paper's reported sequence is not available for a direct check."
+    }
+  ],
+  "articleCrosscheck": {
+    "paperUrl": "https://rjpn.org/ijcspub/papers/IJCSP10A1190.pdf",
+    "observations": [
+      "The paper reports no accession number or public sequence for A1, B2 or D4 and no museum voucher catalogue number or determination outcome.",
+      "It describes the matches as putative and recommends sequence verification; candidate reference accessions cannot replace the missing Maragondon query sequences or museum determinations.",
+      "The paper's cited unpublished Jacinto (2011) D-loop/16S study was not independently located in a public archive during this pass."
+    ]
+  },
+  "disposition": {
+    "newSourceRegistryEntries": 0,
+    "newMaragondonSequenceAccessions": 0,
+    "voucherDeterminationsResolved": 0,
+    "speciesAssertionsAdmitted": 0,
+    "occurrenceAssertionsAdmitted": 0,
+    "publicAppRowsAdded": 0,
+    "dietOrBaitClaimsAdded": 0,
+    "coordinatesAdded": 0,
+    "geometryAdded": false,
+    "sequenceOrImageContentCopied": false,
+    "status": "three-goby-phenotypes-remain-research-only;all-species-identities-held"
+  },
+  "nextAction": "Keep A1, B2 and D4 unresolved. Continue the freshwater evidence sweep; resolve this lead only if a traceable accession-to-phenotype sequence record, museum voucher determination, or independent specimen-level re-identification becomes available. Do not infer a Maragondon occurrence from taxon-reference barcodes collected elsewhere."
+}
