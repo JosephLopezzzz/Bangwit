@@ -11,7 +11,7 @@
     "obis-fishnet2-marine-data",
     "kaum-kagoshima-fish-collection-nmns"
   ],
-  "status": "FishNet2-OBIS-CC-BY-NC-metadata-and-portal-redistribution-condition-reviewed;applicability-unresolved;alternate-KAUM-CC-BY-source-identified-but-no-row-crosswalk;research-only",
+  "status": "FishNet2-OBIS-license-and-portal-redistribution-condition-reviewed;14-KAUM-catalog-candidate-rows-returned-by-GBIF;provenance-flags-and-rights-unresolved;research-only",
   "question": "Does the OBIS CC-BY-NC label alone establish permission to redistribute FishNet2-derived records in Bangwit, and can a separately published KAUM dataset provide a direct, independently licensed record crosswalk?",
   "method": {
     "sourcePagesReviewed": [
@@ -66,9 +66,12 @@
       "listedLicense": "CC-BY 4.0",
       "archiveRetrieved": false,
       "matchingCatalogRowsVerified": 0,
-      "substitutionPermitted": false
+      "substitutionPermitted": false,
+      "gbifApiQueryRetrieved": true,
+      "candidateRowsReturned": 14,
+      "curatorConfirmedRows": 0
     },
-    "crosswalkState": "No record-specific connection between FishNet2 occurrence/catalog IDs 57150–57163 and a row in the separate KAUM/NMNS dataset was verified. Its CC-BY license cannot be applied to the FishNet2 rows without a valid source-record match."
+    "crosswalkState": "A subsequent GBIF query returned one KAUM/NMNS candidate row for each catalog number 57150–57163, matching FishNet2 institution, collection, source-name stem, date components and coordinates. All rows retain INSTITUTION_MATCH_FUZZY and INSTITUTION_COLLECTION_MISMATCH flags; no direct curator confirmation was obtained. See the follow-up catalog crosswalk review."
   },
   "decisions": {
     "fishNet2RowsMayBeRedistributedInBangwit": false,
@@ -79,11 +82,13 @@
     "speciesAssertionsAdded": 0,
     "publicProjectionChanged": false,
     "externalContactSent": false,
-    "portalAgreementAccepted": false
+    "portalAgreementAccepted": false,
+    "kaumCandidateRowsReturned": 14
   },
   "nextActions": [
-    "Hold the 14 FishNet2 candidates from app/public reuse until written terms from the contributing curators clarify redistribution permission for the OBIS mirror.",
+    "Completed a GBIF query for the separate KAUM dataset: 14 catalog-number candidate rows were returned. They remain unconfirmed because the GBIF records carry institution/collection mismatch flags; see the follow-up review.",
     "Retry the official KAUM archive or query its publisher-hosted search when reachable, and require exact institution/catalog/occurrence identity before considering any KAUM row as an independent source.",
     "If an exact KAUM source record is found, preserve its own citation, license, locality, date and coordinates; do not transfer those fields to a FishNet2 row without a documented match."
-  ]
+  ],
+  "followUpReviewId": "calabarzon-canas-fishnet2-kaum-gbif-catalog-crosswalk-20261121"
 }

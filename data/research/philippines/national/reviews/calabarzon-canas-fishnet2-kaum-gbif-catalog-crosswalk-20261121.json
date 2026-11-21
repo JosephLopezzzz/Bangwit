@@ -1,0 +1,873 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "calabarzon-canas-fishnet2-kaum-gbif-catalog-crosswalk-20261121",
+  "reviewedOn": "2026-11-21",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "regionName": "Region IV-A (CALABARZON)",
+  "province": "Cavite",
+  "waterbodyId": "ph-wb-canas-river",
+  "sourceIds": [
+    "obis-fishnet2-marine-data",
+    "kaum-kagoshima-fish-collection-nmns"
+  ],
+  "status": "14-FishNet2-catalog-numbers-returned-by-separate-KAUM-GBIF-dataset;all-row-identifiers-coordinates-and-dates-align;GBIF-institution-collection-QC-flags-remain;candidate-crosswalk-only;not-Cañas-River-evidence;research-only",
+  "question": "Can source fields for the 14 KAUM FishNet2 records be independently cross-checked against the separate KAUM collection dataset indexed by GBIF, without transferring unverified locality or reuse claims?",
+  "method": {
+    "queryMethod": "GBIF occurrence search API queried by institutionCode=KAUM, collectionCode=I, and the 14 catalogNumber values in four batches. The result datasetKey was checked against the KAUM/NMNS dataset registered as 80f63c1e-f762-11e1-a439-00145eb45e9a.",
+    "queryBatches": [
+      {
+        "batch": 1,
+        "catalogNumbers": [
+          "57150",
+          "57151",
+          "57152",
+          "57153"
+        ],
+        "count": 4,
+        "queryUrl": "https://api.gbif.org/v1/occurrence/search?institutionCode=KAUM&collectionCode=I&catalogNumber=57150&catalogNumber=57151&catalogNumber=57152&catalogNumber=57153&limit=100"
+      },
+      {
+        "batch": 2,
+        "catalogNumbers": [
+          "57154",
+          "57155",
+          "57156",
+          "57157"
+        ],
+        "count": 4,
+        "queryUrl": "https://api.gbif.org/v1/occurrence/search?institutionCode=KAUM&collectionCode=I&catalogNumber=57154&catalogNumber=57155&catalogNumber=57156&catalogNumber=57157&limit=100"
+      },
+      {
+        "batch": 3,
+        "catalogNumbers": [
+          "57158",
+          "57159",
+          "57160"
+        ],
+        "count": 3,
+        "queryUrl": "https://api.gbif.org/v1/occurrence/search?institutionCode=KAUM&collectionCode=I&catalogNumber=57158&catalogNumber=57159&catalogNumber=57160&limit=100"
+      },
+      {
+        "batch": 4,
+        "catalogNumbers": [
+          "57161",
+          "57162",
+          "57163"
+        ],
+        "count": 3,
+        "queryUrl": "https://api.gbif.org/v1/occurrence/search?institutionCode=KAUM&collectionCode=I&catalogNumber=57161&catalogNumber=57162&catalogNumber=57163&limit=100"
+      }
+    ],
+    "rawSnapshot": {
+      "directory": "raw/kaum-catalog-crosswalk-20261121",
+      "files": [
+        {
+          "path": "batch-1.json",
+          "bytes": 20946,
+          "sha256": "ef374cf3173120fe02097c72f09b79050539fee0f2ea91e1a4fcdd169ae5178e",
+          "queryUrl": "https://api.gbif.org/v1/occurrence/search?institutionCode=KAUM&collectionCode=I&catalogNumber=57150&catalogNumber=57151&catalogNumber=57152&catalogNumber=57153&limit=100",
+          "httpStatus": 200
+        },
+        {
+          "path": "batch-2.json",
+          "bytes": 21010,
+          "sha256": "70507afcd593adfa435f105c4ec9731c2bda66e8b662a28c085b2130f51f6bb7",
+          "queryUrl": "https://api.gbif.org/v1/occurrence/search?institutionCode=KAUM&collectionCode=I&catalogNumber=57154&catalogNumber=57155&catalogNumber=57156&catalogNumber=57157&limit=100",
+          "httpStatus": 200
+        },
+        {
+          "path": "batch-3.json",
+          "bytes": 15777,
+          "sha256": "e3e133d66b5e653f4b96301154248f99827e4e1b701003b44666686c387498c8",
+          "queryUrl": "https://api.gbif.org/v1/occurrence/search?institutionCode=KAUM&collectionCode=I&catalogNumber=57158&catalogNumber=57159&catalogNumber=57160&limit=100",
+          "httpStatus": 200
+        },
+        {
+          "path": "batch-4.json",
+          "bytes": 15777,
+          "sha256": "a8c6ea8bc686ca7082c083f35ce8bffbc2d8d762468824038ab9712a4d2ae071",
+          "queryUrl": "https://api.gbif.org/v1/occurrence/search?institutionCode=KAUM&collectionCode=I&catalogNumber=57161&catalogNumber=57162&catalogNumber=57163&limit=100",
+          "httpStatus": 200
+        }
+      ]
+    },
+    "pairingRule": "Candidate pairing requires the same institutionCode, collectionCode, catalogNumber, original-name stem, source date components, and decimal coordinates. This is a strong row-level crosswalk candidate but not curator confirmation; the GBIF occurrence IDs are distinct between the sources.",
+    "stationDistance": "Approximate great-circle point-to-point comparison against the nine EMB CY2021 water-quality station anchors, using spherical Haversine radius 6,371,000 m. Station coordinates have no stated datum and candidate records lack coordinate uncertainty; distance is indicative only."
+  },
+  "sourceCitation": "Motomura H (2026). Fish collection of the Kagoshima University Museum. National Museum of Nature and Science, Japan. Occurrence dataset https://doi.org/10.15468/vcj3j8; accessed via GBIF on 2026-11-21. CC-BY 4.0.",
+  "findings": {
+    "fishNet2Rows": 14,
+    "kaumDatasetRowsReturned": 14,
+    "candidateCatalogPairs": 14,
+    "allComparisonChecksPassed": true,
+    "localFishNetNameCounts": {
+      "Jaydia poeciloptera": 12,
+      "Ostorhinchus pleuron": 2
+    },
+    "kaumSourceNameCounts": {
+      "Apogon pleuron Fraser, 2005": 2,
+      "Apogon poecilopterus Cuvier, 1828": 12
+    },
+    "dates": [
+      "2013-10-11"
+    ],
+    "localities": [
+      "off Rosario, Cavite, Luzon Island, Philippines"
+    ],
+    "sharedCoordinates": [
+      "120.833333,14.433333"
+    ],
+    "coordinateUncertaintyReported": false,
+    "datumStatus": "GBIF displays WGS84 but flags GEODETIC_DATUM_ASSUMED_WGS84 on every selected row; no coordinate uncertainty is reported.",
+    "gbifIssueCounts": {
+      "GEODETIC_DATUM_ASSUMED_WGS84": 14,
+      "CONTINENT_DERIVED_FROM_COORDINATES": 14,
+      "INSTITUTION_MATCH_FUZZY": 14,
+      "INSTITUTION_COLLECTION_MISMATCH": 14
+    },
+    "nearestStation": {
+      "nearestAnchor": "Cañas River Mouth station 1",
+      "nominalPointToPointMeters": 2791.4
+    },
+    "records": [
+      {
+        "catalogNumber": "57150",
+        "fishNet2": {
+          "occurrenceId": "FN2[31561992]:KAUM-72[273073:57150]",
+          "datasetId": "2891a788-9f30-4413-8f73-9e7686890e9d",
+          "sourceName": "Ostorhinchus pleuron",
+          "originalScientificName": "Apogon pleuron",
+          "sourceDateComponents": "2013-10-11",
+          "coordinates": [
+            120.833333,
+            14.433333
+          ],
+          "recordLicense": "(CC-BY NC) 4.0"
+        },
+        "kaumGbifCandidate": {
+          "gbifOccurrenceKey": 1830750381,
+          "gbifOccurrenceId": "9c9aae8e-f8be-11e6-9782-70e2840fc270",
+          "sourceScientificName": "Apogon pleuron Fraser, 2005",
+          "gbifInterpretedAcceptedName": "Ostorhinchus pleuron (Fraser, 2005)",
+          "taxonomicStatus": "SYNONYM",
+          "eventDate": "2013-10-11",
+          "locality": "off Rosario, Cavite, Luzon Island, Philippines",
+          "waterBody": null,
+          "coordinates": [
+            120.833333,
+            14.433333
+          ],
+          "coordinateUncertaintyInMeters": null,
+          "geodeticDatum": "WGS84",
+          "license": "http://creativecommons.org/licenses/by/4.0/legalcode",
+          "basisOfRecord": "PRESERVED_SPECIMEN",
+          "issues": [
+            "GEODETIC_DATUM_ASSUMED_WGS84",
+            "CONTINENT_DERIVED_FROM_COORDINATES",
+            "INSTITUTION_MATCH_FUZZY",
+            "INSTITUTION_COLLECTION_MISMATCH"
+          ]
+        },
+        "comparison": {
+          "institutionCodeMatches": true,
+          "collectionCodeMatches": true,
+          "catalogNumberMatches": true,
+          "originalNameStemMatches": true,
+          "dateComponentsMatch": true,
+          "coordinatesMatch": true
+        },
+        "stationProximity": {
+          "nearestAnchor": "Cañas River Mouth station 1",
+          "nominalPointToPointMeters": 2791.4
+        }
+      },
+      {
+        "catalogNumber": "57151",
+        "fishNet2": {
+          "occurrenceId": "FN2[31561993]:KAUM-72[273073:57151]",
+          "datasetId": "2891a788-9f30-4413-8f73-9e7686890e9d",
+          "sourceName": "Ostorhinchus pleuron",
+          "originalScientificName": "Apogon pleuron",
+          "sourceDateComponents": "2013-10-11",
+          "coordinates": [
+            120.833333,
+            14.433333
+          ],
+          "recordLicense": "(CC-BY NC) 4.0"
+        },
+        "kaumGbifCandidate": {
+          "gbifOccurrenceKey": 1830750505,
+          "gbifOccurrenceId": "9c9adb48-f8be-11e6-bc5c-70e2840fc270",
+          "sourceScientificName": "Apogon pleuron Fraser, 2005",
+          "gbifInterpretedAcceptedName": "Ostorhinchus pleuron (Fraser, 2005)",
+          "taxonomicStatus": "SYNONYM",
+          "eventDate": "2013-10-11",
+          "locality": "off Rosario, Cavite, Luzon Island, Philippines",
+          "waterBody": null,
+          "coordinates": [
+            120.833333,
+            14.433333
+          ],
+          "coordinateUncertaintyInMeters": null,
+          "geodeticDatum": "WGS84",
+          "license": "http://creativecommons.org/licenses/by/4.0/legalcode",
+          "basisOfRecord": "PRESERVED_SPECIMEN",
+          "issues": [
+            "GEODETIC_DATUM_ASSUMED_WGS84",
+            "CONTINENT_DERIVED_FROM_COORDINATES",
+            "INSTITUTION_MATCH_FUZZY",
+            "INSTITUTION_COLLECTION_MISMATCH"
+          ]
+        },
+        "comparison": {
+          "institutionCodeMatches": true,
+          "collectionCodeMatches": true,
+          "catalogNumberMatches": true,
+          "originalNameStemMatches": true,
+          "dateComponentsMatch": true,
+          "coordinatesMatch": true
+        },
+        "stationProximity": {
+          "nearestAnchor": "Cañas River Mouth station 1",
+          "nominalPointToPointMeters": 2791.4
+        }
+      },
+      {
+        "catalogNumber": "57152",
+        "fishNet2": {
+          "occurrenceId": "FN2[31561994]:KAUM-72[273074:57152]",
+          "datasetId": "2891a788-9f30-4413-8f73-9e7686890e9d",
+          "sourceName": "Jaydia poeciloptera",
+          "originalScientificName": "Apogon poecilopterus",
+          "sourceDateComponents": "2013-10-11",
+          "coordinates": [
+            120.833333,
+            14.433333
+          ],
+          "recordLicense": "(CC-BY NC) 4.0"
+        },
+        "kaumGbifCandidate": {
+          "gbifOccurrenceKey": 1830750506,
+          "gbifOccurrenceId": "9c9b0500-f8be-11e6-9ba6-70e2840fc270",
+          "sourceScientificName": "Apogon poecilopterus Cuvier, 1828",
+          "gbifInterpretedAcceptedName": "Jaydia poecilopterus (Cuvier, 1828)",
+          "taxonomicStatus": "SYNONYM",
+          "eventDate": "2013-10-11",
+          "locality": "off Rosario, Cavite, Luzon Island, Philippines",
+          "waterBody": null,
+          "coordinates": [
+            120.833333,
+            14.433333
+          ],
+          "coordinateUncertaintyInMeters": null,
+          "geodeticDatum": "WGS84",
+          "license": "http://creativecommons.org/licenses/by/4.0/legalcode",
+          "basisOfRecord": "PRESERVED_SPECIMEN",
+          "issues": [
+            "GEODETIC_DATUM_ASSUMED_WGS84",
+            "CONTINENT_DERIVED_FROM_COORDINATES",
+            "INSTITUTION_MATCH_FUZZY",
+            "INSTITUTION_COLLECTION_MISMATCH"
+          ]
+        },
+        "comparison": {
+          "institutionCodeMatches": true,
+          "collectionCodeMatches": true,
+          "catalogNumberMatches": true,
+          "originalNameStemMatches": true,
+          "dateComponentsMatch": true,
+          "coordinatesMatch": true
+        },
+        "stationProximity": {
+          "nearestAnchor": "Cañas River Mouth station 1",
+          "nominalPointToPointMeters": 2791.4
+        }
+      },
+      {
+        "catalogNumber": "57153",
+        "fishNet2": {
+          "occurrenceId": "FN2[31561995]:KAUM-72[273074:57153]",
+          "datasetId": "2891a788-9f30-4413-8f73-9e7686890e9d",
+          "sourceName": "Jaydia poeciloptera",
+          "originalScientificName": "Apogon poecilopterus",
+          "sourceDateComponents": "2013-10-11",
+          "coordinates": [
+            120.833333,
+            14.433333
+          ],
+          "recordLicense": "(CC-BY NC) 4.0"
+        },
+        "kaumGbifCandidate": {
+          "gbifOccurrenceKey": 1830748871,
+          "gbifOccurrenceId": "9c9b30de-f8be-11e6-aeda-70e2840fc270",
+          "sourceScientificName": "Apogon poecilopterus Cuvier, 1828",
+          "gbifInterpretedAcceptedName": "Jaydia poecilopterus (Cuvier, 1828)",
+          "taxonomicStatus": "SYNONYM",
+          "eventDate": "2013-10-11",
+          "locality": "off Rosario, Cavite, Luzon Island, Philippines",
+          "waterBody": null,
+          "coordinates": [
+            120.833333,
+            14.433333
+          ],
+          "coordinateUncertaintyInMeters": null,
+          "geodeticDatum": "WGS84",
+          "license": "http://creativecommons.org/licenses/by/4.0/legalcode",
+          "basisOfRecord": "PRESERVED_SPECIMEN",
+          "issues": [
+            "GEODETIC_DATUM_ASSUMED_WGS84",
+            "CONTINENT_DERIVED_FROM_COORDINATES",
+            "INSTITUTION_MATCH_FUZZY",
+            "INSTITUTION_COLLECTION_MISMATCH"
+          ]
+        },
+        "comparison": {
+          "institutionCodeMatches": true,
+          "collectionCodeMatches": true,
+          "catalogNumberMatches": true,
+          "originalNameStemMatches": true,
+          "dateComponentsMatch": true,
+          "coordinatesMatch": true
+        },
+        "stationProximity": {
+          "nearestAnchor": "Cañas River Mouth station 1",
+          "nominalPointToPointMeters": 2791.4
+        }
+      },
+      {
+        "catalogNumber": "57154",
+        "fishNet2": {
+          "occurrenceId": "FN2[31561996]:KAUM-72[273074:57154]",
+          "datasetId": "2891a788-9f30-4413-8f73-9e7686890e9d",
+          "sourceName": "Jaydia poeciloptera",
+          "originalScientificName": "Apogon poecilopterus",
+          "sourceDateComponents": "2013-10-11",
+          "coordinates": [
+            120.833333,
+            14.433333
+          ],
+          "recordLicense": "(CC-BY NC) 4.0"
+        },
+        "kaumGbifCandidate": {
+          "gbifOccurrenceKey": 1830748939,
+          "gbifOccurrenceId": "9c9b5f0a-f8be-11e6-b57d-70e2840fc270",
+          "sourceScientificName": "Apogon poecilopterus Cuvier, 1828",
+          "gbifInterpretedAcceptedName": "Jaydia poecilopterus (Cuvier, 1828)",
+          "taxonomicStatus": "SYNONYM",
+          "eventDate": "2013-10-11",
+          "locality": "off Rosario, Cavite, Luzon Island, Philippines",
+          "waterBody": null,
+          "coordinates": [
+            120.833333,
+            14.433333
+          ],
+          "coordinateUncertaintyInMeters": null,
+          "geodeticDatum": "WGS84",
+          "license": "http://creativecommons.org/licenses/by/4.0/legalcode",
+          "basisOfRecord": "PRESERVED_SPECIMEN",
+          "issues": [
+            "GEODETIC_DATUM_ASSUMED_WGS84",
+            "CONTINENT_DERIVED_FROM_COORDINATES",
+            "INSTITUTION_MATCH_FUZZY",
+            "INSTITUTION_COLLECTION_MISMATCH"
+          ]
+        },
+        "comparison": {
+          "institutionCodeMatches": true,
+          "collectionCodeMatches": true,
+          "catalogNumberMatches": true,
+          "originalNameStemMatches": true,
+          "dateComponentsMatch": true,
+          "coordinatesMatch": true
+        },
+        "stationProximity": {
+          "nearestAnchor": "Cañas River Mouth station 1",
+          "nominalPointToPointMeters": 2791.4
+        }
+      },
+      {
+        "catalogNumber": "57155",
+        "fishNet2": {
+          "occurrenceId": "FN2[31561997]:KAUM-72[273074:57155]",
+          "datasetId": "2891a788-9f30-4413-8f73-9e7686890e9d",
+          "sourceName": "Jaydia poeciloptera",
+          "originalScientificName": "Apogon poecilopterus",
+          "sourceDateComponents": "2013-10-11",
+          "coordinates": [
+            120.833333,
+            14.433333
+          ],
+          "recordLicense": "(CC-BY NC) 4.0"
+        },
+        "kaumGbifCandidate": {
+          "gbifOccurrenceKey": 1830748918,
+          "gbifOccurrenceId": "9c9b8bce-f8be-11e6-a58b-70e2840fc270",
+          "sourceScientificName": "Apogon poecilopterus Cuvier, 1828",
+          "gbifInterpretedAcceptedName": "Jaydia poecilopterus (Cuvier, 1828)",
+          "taxonomicStatus": "SYNONYM",
+          "eventDate": "2013-10-11",
+          "locality": "off Rosario, Cavite, Luzon Island, Philippines",
+          "waterBody": null,
+          "coordinates": [
+            120.833333,
+            14.433333
+          ],
+          "coordinateUncertaintyInMeters": null,
+          "geodeticDatum": "WGS84",
+          "license": "http://creativecommons.org/licenses/by/4.0/legalcode",
+          "basisOfRecord": "PRESERVED_SPECIMEN",
+          "issues": [
+            "GEODETIC_DATUM_ASSUMED_WGS84",
+            "CONTINENT_DERIVED_FROM_COORDINATES",
+            "INSTITUTION_MATCH_FUZZY",
+            "INSTITUTION_COLLECTION_MISMATCH"
+          ]
+        },
+        "comparison": {
+          "institutionCodeMatches": true,
+          "collectionCodeMatches": true,
+          "catalogNumberMatches": true,
+          "originalNameStemMatches": true,
+          "dateComponentsMatch": true,
+          "coordinatesMatch": true
+        },
+        "stationProximity": {
+          "nearestAnchor": "Cañas River Mouth station 1",
+          "nominalPointToPointMeters": 2791.4
+        }
+      },
+      {
+        "catalogNumber": "57156",
+        "fishNet2": {
+          "occurrenceId": "FN2[31561998]:KAUM-72[273074:57156]",
+          "datasetId": "2891a788-9f30-4413-8f73-9e7686890e9d",
+          "sourceName": "Jaydia poeciloptera",
+          "originalScientificName": "Apogon poecilopterus",
+          "sourceDateComponents": "2013-10-11",
+          "coordinates": [
+            120.833333,
+            14.433333
+          ],
+          "recordLicense": "(CC-BY NC) 4.0"
+        },
+        "kaumGbifCandidate": {
+          "gbifOccurrenceKey": 1830748948,
+          "gbifOccurrenceId": "9c9bb70c-f8be-11e6-ab2c-70e2840fc270",
+          "sourceScientificName": "Apogon poecilopterus Cuvier, 1828",
+          "gbifInterpretedAcceptedName": "Jaydia poecilopterus (Cuvier, 1828)",
+          "taxonomicStatus": "SYNONYM",
+          "eventDate": "2013-10-11",
+          "locality": "off Rosario, Cavite, Luzon Island, Philippines",
+          "waterBody": null,
+          "coordinates": [
+            120.833333,
+            14.433333
+          ],
+          "coordinateUncertaintyInMeters": null,
+          "geodeticDatum": "WGS84",
+          "license": "http://creativecommons.org/licenses/by/4.0/legalcode",
+          "basisOfRecord": "PRESERVED_SPECIMEN",
+          "issues": [
+            "GEODETIC_DATUM_ASSUMED_WGS84",
+            "CONTINENT_DERIVED_FROM_COORDINATES",
+            "INSTITUTION_MATCH_FUZZY",
+            "INSTITUTION_COLLECTION_MISMATCH"
+          ]
+        },
+        "comparison": {
+          "institutionCodeMatches": true,
+          "collectionCodeMatches": true,
+          "catalogNumberMatches": true,
+          "originalNameStemMatches": true,
+          "dateComponentsMatch": true,
+          "coordinatesMatch": true
+        },
+        "stationProximity": {
+          "nearestAnchor": "Cañas River Mouth station 1",
+          "nominalPointToPointMeters": 2791.4
+        }
+      },
+      {
+        "catalogNumber": "57157",
+        "fishNet2": {
+          "occurrenceId": "FN2[31561999]:KAUM-72[273074:57157]",
+          "datasetId": "2891a788-9f30-4413-8f73-9e7686890e9d",
+          "sourceName": "Jaydia poeciloptera",
+          "originalScientificName": "Apogon poecilopterus",
+          "sourceDateComponents": "2013-10-11",
+          "coordinates": [
+            120.833333,
+            14.433333
+          ],
+          "recordLicense": "(CC-BY NC) 4.0"
+        },
+        "kaumGbifCandidate": {
+          "gbifOccurrenceKey": 1830750540,
+          "gbifOccurrenceId": "9c9be376-f8be-11e6-83af-70e2840fc270",
+          "sourceScientificName": "Apogon poecilopterus Cuvier, 1828",
+          "gbifInterpretedAcceptedName": "Jaydia poecilopterus (Cuvier, 1828)",
+          "taxonomicStatus": "SYNONYM",
+          "eventDate": "2013-10-11",
+          "locality": "off Rosario, Cavite, Luzon Island, Philippines",
+          "waterBody": null,
+          "coordinates": [
+            120.833333,
+            14.433333
+          ],
+          "coordinateUncertaintyInMeters": null,
+          "geodeticDatum": "WGS84",
+          "license": "http://creativecommons.org/licenses/by/4.0/legalcode",
+          "basisOfRecord": "PRESERVED_SPECIMEN",
+          "issues": [
+            "GEODETIC_DATUM_ASSUMED_WGS84",
+            "CONTINENT_DERIVED_FROM_COORDINATES",
+            "INSTITUTION_MATCH_FUZZY",
+            "INSTITUTION_COLLECTION_MISMATCH"
+          ]
+        },
+        "comparison": {
+          "institutionCodeMatches": true,
+          "collectionCodeMatches": true,
+          "catalogNumberMatches": true,
+          "originalNameStemMatches": true,
+          "dateComponentsMatch": true,
+          "coordinatesMatch": true
+        },
+        "stationProximity": {
+          "nearestAnchor": "Cañas River Mouth station 1",
+          "nominalPointToPointMeters": 2791.4
+        }
+      },
+      {
+        "catalogNumber": "57158",
+        "fishNet2": {
+          "occurrenceId": "FN2[31562000]:KAUM-72[273074:57158]",
+          "datasetId": "2891a788-9f30-4413-8f73-9e7686890e9d",
+          "sourceName": "Jaydia poeciloptera",
+          "originalScientificName": "Apogon poecilopterus",
+          "sourceDateComponents": "2013-10-11",
+          "coordinates": [
+            120.833333,
+            14.433333
+          ],
+          "recordLicense": "(CC-BY NC) 4.0"
+        },
+        "kaumGbifCandidate": {
+          "gbifOccurrenceKey": 1830750397,
+          "gbifOccurrenceId": "9c9c0e14-f8be-11e6-81da-70e2840fc270",
+          "sourceScientificName": "Apogon poecilopterus Cuvier, 1828",
+          "gbifInterpretedAcceptedName": "Jaydia poecilopterus (Cuvier, 1828)",
+          "taxonomicStatus": "SYNONYM",
+          "eventDate": "2013-10-11",
+          "locality": "off Rosario, Cavite, Luzon Island, Philippines",
+          "waterBody": null,
+          "coordinates": [
+            120.833333,
+            14.433333
+          ],
+          "coordinateUncertaintyInMeters": null,
+          "geodeticDatum": "WGS84",
+          "license": "http://creativecommons.org/licenses/by/4.0/legalcode",
+          "basisOfRecord": "PRESERVED_SPECIMEN",
+          "issues": [
+            "GEODETIC_DATUM_ASSUMED_WGS84",
+            "CONTINENT_DERIVED_FROM_COORDINATES",
+            "INSTITUTION_MATCH_FUZZY",
+            "INSTITUTION_COLLECTION_MISMATCH"
+          ]
+        },
+        "comparison": {
+          "institutionCodeMatches": true,
+          "collectionCodeMatches": true,
+          "catalogNumberMatches": true,
+          "originalNameStemMatches": true,
+          "dateComponentsMatch": true,
+          "coordinatesMatch": true
+        },
+        "stationProximity": {
+          "nearestAnchor": "Cañas River Mouth station 1",
+          "nominalPointToPointMeters": 2791.4
+        }
+      },
+      {
+        "catalogNumber": "57159",
+        "fishNet2": {
+          "occurrenceId": "FN2[31562001]:KAUM-72[273074:57159]",
+          "datasetId": "2891a788-9f30-4413-8f73-9e7686890e9d",
+          "sourceName": "Jaydia poeciloptera",
+          "originalScientificName": "Apogon poecilopterus",
+          "sourceDateComponents": "2013-10-11",
+          "coordinates": [
+            120.833333,
+            14.433333
+          ],
+          "recordLicense": "(CC-BY NC) 4.0"
+        },
+        "kaumGbifCandidate": {
+          "gbifOccurrenceKey": 1830750398,
+          "gbifOccurrenceId": "9c9c3ad8-f8be-11e6-88aa-70e2840fc270",
+          "sourceScientificName": "Apogon poecilopterus Cuvier, 1828",
+          "gbifInterpretedAcceptedName": "Jaydia poecilopterus (Cuvier, 1828)",
+          "taxonomicStatus": "SYNONYM",
+          "eventDate": "2013-10-11",
+          "locality": "off Rosario, Cavite, Luzon Island, Philippines",
+          "waterBody": null,
+          "coordinates": [
+            120.833333,
+            14.433333
+          ],
+          "coordinateUncertaintyInMeters": null,
+          "geodeticDatum": "WGS84",
+          "license": "http://creativecommons.org/licenses/by/4.0/legalcode",
+          "basisOfRecord": "PRESERVED_SPECIMEN",
+          "issues": [
+            "GEODETIC_DATUM_ASSUMED_WGS84",
+            "CONTINENT_DERIVED_FROM_COORDINATES",
+            "INSTITUTION_MATCH_FUZZY",
+            "INSTITUTION_COLLECTION_MISMATCH"
+          ]
+        },
+        "comparison": {
+          "institutionCodeMatches": true,
+          "collectionCodeMatches": true,
+          "catalogNumberMatches": true,
+          "originalNameStemMatches": true,
+          "dateComponentsMatch": true,
+          "coordinatesMatch": true
+        },
+        "stationProximity": {
+          "nearestAnchor": "Cañas River Mouth station 1",
+          "nominalPointToPointMeters": 2791.4
+        }
+      },
+      {
+        "catalogNumber": "57160",
+        "fishNet2": {
+          "occurrenceId": "FN2[31562002]:KAUM-72[273074:57160]",
+          "datasetId": "2891a788-9f30-4413-8f73-9e7686890e9d",
+          "sourceName": "Jaydia poeciloptera",
+          "originalScientificName": "Apogon poecilopterus",
+          "sourceDateComponents": "2013-10-11",
+          "coordinates": [
+            120.833333,
+            14.433333
+          ],
+          "recordLicense": "(CC-BY NC) 4.0"
+        },
+        "kaumGbifCandidate": {
+          "gbifOccurrenceKey": 1830750360,
+          "gbifOccurrenceId": "9c9c6602-f8be-11e6-8dd9-70e2840fc270",
+          "sourceScientificName": "Apogon poecilopterus Cuvier, 1828",
+          "gbifInterpretedAcceptedName": "Jaydia poecilopterus (Cuvier, 1828)",
+          "taxonomicStatus": "SYNONYM",
+          "eventDate": "2013-10-11",
+          "locality": "off Rosario, Cavite, Luzon Island, Philippines",
+          "waterBody": null,
+          "coordinates": [
+            120.833333,
+            14.433333
+          ],
+          "coordinateUncertaintyInMeters": null,
+          "geodeticDatum": "WGS84",
+          "license": "http://creativecommons.org/licenses/by/4.0/legalcode",
+          "basisOfRecord": "PRESERVED_SPECIMEN",
+          "issues": [
+            "GEODETIC_DATUM_ASSUMED_WGS84",
+            "CONTINENT_DERIVED_FROM_COORDINATES",
+            "INSTITUTION_MATCH_FUZZY",
+            "INSTITUTION_COLLECTION_MISMATCH"
+          ]
+        },
+        "comparison": {
+          "institutionCodeMatches": true,
+          "collectionCodeMatches": true,
+          "catalogNumberMatches": true,
+          "originalNameStemMatches": true,
+          "dateComponentsMatch": true,
+          "coordinatesMatch": true
+        },
+        "stationProximity": {
+          "nearestAnchor": "Cañas River Mouth station 1",
+          "nominalPointToPointMeters": 2791.4
+        }
+      },
+      {
+        "catalogNumber": "57161",
+        "fishNet2": {
+          "occurrenceId": "FN2[31562003]:KAUM-72[273074:57161]",
+          "datasetId": "2891a788-9f30-4413-8f73-9e7686890e9d",
+          "sourceName": "Jaydia poeciloptera",
+          "originalScientificName": "Apogon poecilopterus",
+          "sourceDateComponents": "2013-10-11",
+          "coordinates": [
+            120.833333,
+            14.433333
+          ],
+          "recordLicense": "(CC-BY NC) 4.0"
+        },
+        "kaumGbifCandidate": {
+          "gbifOccurrenceKey": 1830750355,
+          "gbifOccurrenceId": "9c9c9064-f8be-11e6-9ae4-70e2840fc270",
+          "sourceScientificName": "Apogon poecilopterus Cuvier, 1828",
+          "gbifInterpretedAcceptedName": "Jaydia poecilopterus (Cuvier, 1828)",
+          "taxonomicStatus": "SYNONYM",
+          "eventDate": "2013-10-11",
+          "locality": "off Rosario, Cavite, Luzon Island, Philippines",
+          "waterBody": null,
+          "coordinates": [
+            120.833333,
+            14.433333
+          ],
+          "coordinateUncertaintyInMeters": null,
+          "geodeticDatum": "WGS84",
+          "license": "http://creativecommons.org/licenses/by/4.0/legalcode",
+          "basisOfRecord": "PRESERVED_SPECIMEN",
+          "issues": [
+            "GEODETIC_DATUM_ASSUMED_WGS84",
+            "CONTINENT_DERIVED_FROM_COORDINATES",
+            "INSTITUTION_MATCH_FUZZY",
+            "INSTITUTION_COLLECTION_MISMATCH"
+          ]
+        },
+        "comparison": {
+          "institutionCodeMatches": true,
+          "collectionCodeMatches": true,
+          "catalogNumberMatches": true,
+          "originalNameStemMatches": true,
+          "dateComponentsMatch": true,
+          "coordinatesMatch": true
+        },
+        "stationProximity": {
+          "nearestAnchor": "Cañas River Mouth station 1",
+          "nominalPointToPointMeters": 2791.4
+        }
+      },
+      {
+        "catalogNumber": "57162",
+        "fishNet2": {
+          "occurrenceId": "FN2[31562004]:KAUM-72[273074:57162]",
+          "datasetId": "2891a788-9f30-4413-8f73-9e7686890e9d",
+          "sourceName": "Jaydia poeciloptera",
+          "originalScientificName": "Apogon poecilopterus",
+          "sourceDateComponents": "2013-10-11",
+          "coordinates": [
+            120.833333,
+            14.433333
+          ],
+          "recordLicense": "(CC-BY NC) 4.0"
+        },
+        "kaumGbifCandidate": {
+          "gbifOccurrenceKey": 1830750516,
+          "gbifOccurrenceId": "9c9cbe54-f8be-11e6-b52b-70e2840fc270",
+          "sourceScientificName": "Apogon poecilopterus Cuvier, 1828",
+          "gbifInterpretedAcceptedName": "Jaydia poecilopterus (Cuvier, 1828)",
+          "taxonomicStatus": "SYNONYM",
+          "eventDate": "2013-10-11",
+          "locality": "off Rosario, Cavite, Luzon Island, Philippines",
+          "waterBody": null,
+          "coordinates": [
+            120.833333,
+            14.433333
+          ],
+          "coordinateUncertaintyInMeters": null,
+          "geodeticDatum": "WGS84",
+          "license": "http://creativecommons.org/licenses/by/4.0/legalcode",
+          "basisOfRecord": "PRESERVED_SPECIMEN",
+          "issues": [
+            "GEODETIC_DATUM_ASSUMED_WGS84",
+            "CONTINENT_DERIVED_FROM_COORDINATES",
+            "INSTITUTION_MATCH_FUZZY",
+            "INSTITUTION_COLLECTION_MISMATCH"
+          ]
+        },
+        "comparison": {
+          "institutionCodeMatches": true,
+          "collectionCodeMatches": true,
+          "catalogNumberMatches": true,
+          "originalNameStemMatches": true,
+          "dateComponentsMatch": true,
+          "coordinatesMatch": true
+        },
+        "stationProximity": {
+          "nearestAnchor": "Cañas River Mouth station 1",
+          "nominalPointToPointMeters": 2791.4
+        }
+      },
+      {
+        "catalogNumber": "57163",
+        "fishNet2": {
+          "occurrenceId": "FN2[31562005]:KAUM-72[273074:57163]",
+          "datasetId": "2891a788-9f30-4413-8f73-9e7686890e9d",
+          "sourceName": "Jaydia poeciloptera",
+          "originalScientificName": "Apogon poecilopterus",
+          "sourceDateComponents": "2013-10-11",
+          "coordinates": [
+            120.833333,
+            14.433333
+          ],
+          "recordLicense": "(CC-BY NC) 4.0"
+        },
+        "kaumGbifCandidate": {
+          "gbifOccurrenceKey": 1830750502,
+          "gbifOccurrenceId": "9c9cec44-f8be-11e6-8296-70e2840fc270",
+          "sourceScientificName": "Apogon poecilopterus Cuvier, 1828",
+          "gbifInterpretedAcceptedName": "Jaydia poecilopterus (Cuvier, 1828)",
+          "taxonomicStatus": "SYNONYM",
+          "eventDate": "2013-10-11",
+          "locality": "off Rosario, Cavite, Luzon Island, Philippines",
+          "waterBody": null,
+          "coordinates": [
+            120.833333,
+            14.433333
+          ],
+          "coordinateUncertaintyInMeters": null,
+          "geodeticDatum": "WGS84",
+          "license": "http://creativecommons.org/licenses/by/4.0/legalcode",
+          "basisOfRecord": "PRESERVED_SPECIMEN",
+          "issues": [
+            "GEODETIC_DATUM_ASSUMED_WGS84",
+            "CONTINENT_DERIVED_FROM_COORDINATES",
+            "INSTITUTION_MATCH_FUZZY",
+            "INSTITUTION_COLLECTION_MISMATCH"
+          ]
+        },
+        "comparison": {
+          "institutionCodeMatches": true,
+          "collectionCodeMatches": true,
+          "catalogNumberMatches": true,
+          "originalNameStemMatches": true,
+          "dateComponentsMatch": true,
+          "coordinatesMatch": true
+        },
+        "stationProximity": {
+          "nearestAnchor": "Cañas River Mouth station 1",
+          "nominalPointToPointMeters": 2791.4
+        }
+      }
+    ],
+    "interpretation": "All 14 catalog-keyed rows share institution, collection, catalog number, source-name stem, date components and coordinates. The separate KAUM dataset supplies eventDate 2013-10-11 and locality “off Rosario, Cavite, Luzon Island, Philippines.” However, all GBIF rows carry INSTITUTION_MATCH_FUZZY and INSTITUTION_COLLECTION_MISMATCH flags; therefore the source identity remains a candidate pending curatorial verification. These are marine specimens associated with an offshore Rosario locality in the source, not Cañas River or river-mouth fish records."
+  },
+  "decisions": {
+    "catalogCandidatePairsReturned": 14,
+    "curatorConfirmedCrosswalks": 0,
+    "recordsAssignedToCanasRiver": 0,
+    "riverGeometryAdded": false,
+    "speciesAssertionsAdded": 0,
+    "publicProjectionChanged": false,
+    "fishNet2RedistributionApproved": false,
+    "kaumCCBYLicenseTransferredToFishNet2Rows": false
+  },
+  "limitations": [
+    "The direct KAUM IPT archive and original museum catalog entry were not downloaded; API results are GBIF-published records of the separate KAUM dataset.",
+    "The GBIF quality flags INSTITUTION_MATCH_FUZZY and INSTITUTION_COLLECTION_MISMATCH are retained as unresolved provenance issues, not dismissed.",
+    "The GBIF-interpreted name Jaydia poecilopterus differs from the FishNet2/OBIS name Jaydia poeciloptera; no taxonomic authority decision is made here.",
+    "The source coordinates have no reported uncertainty and GBIF flags the datum as assumed. The exact sampling point is not established.",
+    "A locality 2.8 km from a Cañas River Mouth water-quality station does not establish collection from the river or its mouth."
+  ],
+  "followUp": [
+    "Request source-provider/museum confirmation of the 14 collection-number mappings and collection locality, or verify directly through an accessible primary collection archive.",
+    "Reconcile Apogon poecilopterus/Jaydia poeciloptera/Jaydia poecilopterus and the two Apogon pleuron/Ostorhinchus pleuron source concepts with a taxonomic authority before asserting a canonical species name.",
+    "Keep the records out of app/public data until provenance flags, the FishNet2 redistribution restriction, attribution, coordinate uncertainty and permitted reuse are resolved."
+  ]
+}

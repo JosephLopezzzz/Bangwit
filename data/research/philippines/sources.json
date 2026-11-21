@@ -40673,28 +40673,30 @@
       "checkedOn": "2026-11-21",
       "sourceYear": 2023,
       "access": {
-        "status": "FishNet2-OBIS-license-and-portal-terms-reviewed;written-redistribution-permission-unverified;research-only-hold",
+        "status": "FishNet2-OBIS-CC-BY-NC-and-portal-terms-reviewed;14-KAUM-catalog-candidate-crosswalks-found;curator-identity-and-redistribution-unresolved;hold",
         "localRawSnapshot": "data/research/obis/cavite/cavite-obis-occurrences.csv",
         "reviewFiles": [
           "national/reviews/calabarzon-canas-obis-fishnet2-monitoring-station-proximity-review-20261121.json",
           "../obis/cavite/cavite-obis-dataset-license-review.csv",
-          "national/reviews/obis-fishnet2-rights-and-kaum-alternate-source-review-20261121.json"
+          "national/reviews/obis-fishnet2-rights-and-kaum-alternate-source-review-20261121.json",
+          "national/reviews/calabarzon-canas-fishnet2-kaum-gbif-catalog-crosswalk-20261121.json"
         ]
       },
       "license": "CC-BY-NC 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by-nc/4.0/",
       "publicationApproval": false,
-      "researchStatus": "FishNet2-OBIS-CC-BY-NC-metadata-plus-portal-redistribution-restriction;permission-unresolved;no-public-admission",
+      "researchStatus": "14-KAUM-catalog-candidate-crosswalks;GBIF-institution-collection-flags;FishNet2-redistribution-permission-unresolved;no-public-admission",
       "caveats": [
         "The 14 selected rows have the same exported coordinates (120.833333 E, 14.433333 N); locality, waterBody, eventDate, coordinate uncertainty, and datum are blank in the export.",
         "The nominal distance to the nearest EMB water-quality station is not evidence of collection at Cañas River or Cañas River Mouth; the station data do not describe fish sampling.",
         "The local dataset-rights review records CC-BY-NC 4.0 at both record and dataset level, but the provider citation field is blank and the local citation is provisional. Confirm item-level provenance and reuse before publishing.",
-        "FishNet2 portal terms separately state that records may not be repackaged, resold, or redistributed without express written consent from the appropriate curatorial authorities. Applicability to the OBIS mirror is unresolved; treat onward reuse as unapproved until clarified."
+        "FishNet2 portal terms separately state that records may not be repackaged, resold, or redistributed without express written consent from the appropriate curatorial authorities. Applicability to the OBIS mirror is unresolved; treat onward reuse as unapproved until clarified.",
+        "A GBIF query to the separate KAUM/NMNS dataset returned candidate source rows for catalog numbers 57150–57163, with locality “off Rosario, Cavite” and event date 2013-10-11. All carry INSTITUTION_MATCH_FUZZY and INSTITUTION_COLLECTION_MISMATCH; no curator confirmation was obtained."
       ],
       "reuse": {
         "metadata": "OBIS lists CC-BY-NC 4.0 for the dataset and selected occurrence records. FishNet2 portal terms also impose a written-consent condition on repackaging, resale, and redistribution; confirm which terms govern the OBIS mirror and each institution source.",
-        "raw": "The local Cavite export is a filtered OBIS download, not the full FishNet2 source archive. No source archive row or curator permission for these records was obtained.",
-        "content": "Do not copy these candidates into Bangwit or redistribute them pending written clarification/permission from the relevant curatorial authorities and record-level provenance. No public projection is approved."
+        "raw": "FishNet2 rows remain from the existing Cavite OBIS export; candidate matches to separate KAUM/NMNS GBIF rows are recorded in a follow-up review. The GBIF API response snapshots are local-only.",
+        "content": "No app/public reuse is approved. FishNet2 portal redistribution permission remains unresolved, and the candidate source-row mapping retains GBIF institution/collection mismatch flags and taxonomy discrepancies."
       }
     },
     {
@@ -40712,25 +40714,28 @@
       "sourceYear": 2026,
       "datasetId": "80f63c1e-f762-11e1-a439-00145eb45e9a",
       "access": {
-        "status": "latest-2026-metadata-reviewed;archive-retrieval-failed;catalog-row-crosswalk-not-verified;research-only",
-        "localRawSnapshot": null,
+        "status": "current-KAUM-NMNS-dataset-queried-via-GBIF;14-catalog-candidate-rows-returned;quality-flags-and-curator-crosswalk-unresolved;research-only",
+        "localRawSnapshot": "data/research/philippines/raw/kaum-catalog-crosswalk-20261121",
         "reviewFiles": [
-          "national/reviews/obis-fishnet2-rights-and-kaum-alternate-source-review-20261121.json"
+          "national/reviews/obis-fishnet2-rights-and-kaum-alternate-source-review-20261121.json",
+          "national/reviews/calabarzon-canas-fishnet2-kaum-gbif-catalog-crosswalk-20261121.json"
         ]
       },
       "license": "CC-BY 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
       "publicationApproval": false,
-      "researchStatus": "separate-potential-source;no-catalog-crosswalk;no-regional-fish-evidence-admitted",
+      "researchStatus": "14-catalog-candidate-rows-found;institution-collection-QC-flags;not-curator-confirmed;no-public-admission",
       "caveats": [
         "The current IPT metadata page reports 184,557 records and a latest version published 21 April 2026.",
         "A direct archive retrieval attempt did not complete in this review; the FishNet2 catalog numbers, locality, and coordinates were not verified in this separate dataset.",
-        "Do not treat the separate dataset license as permission to redistribute a FishNet2 mirror record unless the specimen/source row is matched and the applicable terms are confirmed."
+        "Do not treat the separate dataset license as permission to redistribute a FishNet2 mirror record unless the specimen/source row is matched and the applicable terms are confirmed.",
+        "A GBIF occurrence API query returned 14 candidates paired by institutionCode, collectionCode, catalogNumber, original-name stem, date and coordinates. Each retains INSTITUTION_MATCH_FUZZY and INSTITUTION_COLLECTION_MISMATCH flags; exact source match is not curator-confirmed.",
+        "The returned source locality is “off Rosario, Cavite, Luzon Island, Philippines”; it is not a Cañas River locality."
       ],
       "reuse": {
         "metadata": "Current IPT resource metadata identifies National Museum of Nature and Science, Japan as publisher/rights holder and states CC-BY 4.0. The current DOI points to the latest dataset version.",
-        "raw": "No local Darwin Core Archive or metadata archive was retained; web archive retrieval returned an error and a workspace HEAD request timed out.",
-        "content": "Use as a future independent cross-check only after exact catalog/source-row matching. No record was admitted to the Cavite checklist or app."
+        "raw": "Four local-only GBIF occurrence API response batches are retained under data/research/philippines/raw/kaum-catalog-crosswalk-20261121 with SHA-256 hashes in the review.",
+        "content": "The dataset metadata lists CC-BY 4.0, but do not substitute its data for FishNet2 records until source identity and quality flags are resolved. No regional or app species assertion is approved."
       }
     }
   ],
