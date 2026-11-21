@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "ncr-tmtp-post-2022-fish-output-search-20261121",
+  "reviewedOn": "2026-11-21",
+  "phaseId": "L2",
+  "regionId": "1300000000",
+  "regionName": "National Capital Region (NCR)",
+  "status": "later-official-output-leads-found;no-independent-tmtp-fish-survey-located;research-only",
+  "question": "Do public outputs located after the 2022 ERDB proposal establish a completed Tanza Marine Tree Park fish characterization, or expose usable site-specific fish data?",
+  "sourceIds": [
+    "erdb-fy2022-q2-tanza-marine-tree-park-characterization-proposal",
+    "erdb-fy2022-q3-tanza-marine-tree-park-characterization-proposal",
+    "scssap-ph-ecosystems-ch4-lppwp-tmtp-2026",
+    "nfrdi-2017-manila-bay-trawl"
+  ],
+  "inputs": [
+    "data/research/philippines/national/reviews/ncr-tmtp-erdb-2022-proposal-status-review-20261120.json",
+    "data/research/philippines/national/reviews/ncr-scssap-lppwp-tmtp-fish-list-scope-review-20261120.json"
+  ],
+  "method": {
+    "summary": "Ran a bounded exact-title and locality search across public ERDB, DENR-NCR, UPLB SESAM, Adamson, PLM, SCSSAP, and NFRDI pages and repositories; inspected official indexed DENR/NFRDI summaries, the public SCSSAP Chapter 4 PDF, and NFRDI repository records. No login, contact request, access-control bypass, or unpublished-data inference was used.",
+    "queryFamilies": [
+      "\"Tanza Marine Tree Park\" fish survey biodiversity Navotas study",
+      "\"Isla Pulo\" fish inventory Navotas fish species",
+      "\"Assessment of Biodiversity Associated with the Wetland Ecosystems\" LPPWP TMTP Ancog",
+      "\"Coastal Biodiversity Report for LPPWP and TMTP\"",
+      "site:repository.uplb.edu.ph Ancog \"Coastal Biodiversity\" Tanza",
+      "site:plm.edu.ph \"Tanza Marine Tree Park\" fish research",
+      "site:erdb.denr.gov.ph \"Tanza Marine Tree Park\" 2023 OR 2024 OR 2025"
+    ],
+    "accessNotes": [
+      "The public SCSSAP Chapter 4 PDF was readable through the browser text view.",
+      "Some DENR-NCR pages and one NFRDI news page returned HTTP 403 or 502 when opened directly; only their public search-indexed summaries were used for those claims.",
+      "A bounded exact-title search did not locate an independent public copy of the Ancog et al. Coastal Biodiversity Report. This does not establish that no copy exists in a non-indexed or physical archive."
+    ]
+  },
+  "findings": [
+    {
+      "source": "scssap-ph-ecosystems-ch4-lppwp-tmtp-2026",
+      "finding": "The 2026 project-hosted chapter reproduces a TMTP table with 52 printed fish entries and reports five crustacean species. It captions a map of fish sampling points in open water and mangrove forest, but the bibliography cites the underlying Ancog et al. Coastal Biodiversity Report as undated (20__ n.d.).",
+      "interpretation": "This is a later publication of historical, secondary table content, not evidence that the FY2022 ERDB proposal was completed or that a later fish survey occurred. The chapter does not provide the missing underlying report, field dates, full sampling protocol, vouchers, exact station coordinate table, or item-specific reuse terms. Its 52 source labels remain research-only under the existing identity review."
+    },
+    {
+      "source": "DENR-NCR public TMTP and Manila Bay pages",
+      "finding": "The indexed ‘Shallow Waters of Tanza Marine Tree Park Reveal’ article discusses sea anemones observed at TMTP and separately summarizes ERDB's 2019 Manila Bay coral-ecosystem inventory. It does not report a TMTP fish checklist, fish sampling stations, or a fish dataset. DENR-NCR's 2023 regional statistical report lists a TMTP coral-area value attributed to NAMRIA but its coral-inventory detail rows are marked N/A / for clarification.",
+      "interpretation": "These pages provide ecological context and a coral-inventory lead, not fish occurrence evidence or a completed Tanza fish characterization."
+    },
+    {
+      "source": "DA-NFRDI Manila Bay project updates and FY2024 annual report",
+      "finding": "NFRDI's 2023 update describes data validation for its ongoing Fish Resources Assessment of Manila Bay across eight selected fish landing sites, with enumerators in Metro Manila, Bataan, and Cavite. Its 2024 repository item reports a data-harmonization workshop for the continuing Manila Bay fish-resources and ecological-conditions study; the FY2024 annual report lists the Manila Bay assessment as continuing across NCR, Region III, and Region IV-A.",
+      "interpretation": "This is a promising independent, later fishery-data lead, but the public items reviewed do not disclose a Tanza sample site, a site-resolved taxon table, or capture coordinates. Landing-site records cannot be assigned to TMTP waters or treated as wild occurrence points. Track it as a separate Manila Bay fishery/landing-data lane."
+    },
+    {
+      "source": "nfrdi-2017-manila-bay-trawl",
+      "finding": "The primary 2017 paper reports a March 2014–October 2015 experimental trawl survey at 16 pre-established Manila Bay stations and 146 fish-and-invertebrate species overall.",
+      "interpretation": "This is a separate, pre-2022 bay-wide survey. The reviewed repository record and abstract do not establish that a station corresponds to TMTP, so it does not close the ERDB proposal question or justify transferring taxa to Tanza."
+    }
+  ],
+  "limits": [
+    "The search was bounded to the recorded query families and indexed/public repository pages; it is not an exhaustive search of private, physical, internal, or unindexed archives.",
+    "A public project page, work plan, landing-site summary, coral area, or habitat statement is not a fish specimen record.",
+    "The SCSSAP chapter's sampling-map graticule is not a station-coordinate dataset, and the 52 printed fish rows are not independently validated species occurrences.",
+    "No legal fishing boundary, current access, fishing permission, safety, abundance, catchability, or present-day presence claim is made."
+  ],
+  "decision": {
+    "independentPost2022TmtpFishSurveyLocated": false,
+    "underlyingAncogReportLocated": false,
+    "sourceRegistryEntriesAdded": 0,
+    "speciesAssertionsAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "waterbodyLeadsAdded": 0,
+    "waterbodyAssignmentsAdded": 0,
+    "geometryAdded": false,
+    "publicAppProjection": false,
+    "publicationApproval": false,
+    "regionalBaselineComplete": false,
+    "reason": "The public follow-up surfaced contextual and project-status leads but no independently accessible primary Tanza fish survey with traceable dates, methods, locality, and reuse terms. Keep the SCSSAP table research-only and keep bay-wide landing or trawl data separate from TMTP."
+  },
+  "nextActions": [
+    "Continue the NCR evidence sweep across freshwater, brackish/wetland, and marine lanes; log each inaccessible or non-site-resolved source as a coverage gap, not biological absence.",
+    "Monitor public NFRDI/BFAR Manila Bay assessment outputs for a dated, site-resolved species table and distinguish landing-site catch records from ecological sampling.",
+    "If the underlying Ancog et al. report appears in a public repository, verify its field dates, methods, station crosswalk, specimen basis, and reuse terms before revisiting any TMTP taxon row.",
+    "Keep NCR and the Luzon phase incomplete."
+  ],
+  "sources": [
+    {
+      "url": "https://scssap.org/library/publications/871-ch4-ecosystems-v20260103-1/file",
+      "supports": "Chapter 4 bibliography citation to the undated Ancog et al. report, Annex 4.F, the 52-row TMTP fish table, and the sampling-map caption."
+    },
+    {
+      "url": "https://ncr.denr.gov.ph/news-events/shallow-waters-of-tanza-marine-tree-park-reveal/",
+      "supports": "DENR-NCR public article about sea anemones at TMTP and the separate 2019 Manila Bay coral inventory; no fish list is presented in the indexed content."
+    },
+    {
+      "url": "https://ncr.denr.gov.ph/wp-content/uploads/2024/01/2023-RSP.pdf",
+      "supports": "DENR-NCR 2023 regional statistical report entry for TMTP coral area and the coral-inventory table marked for clarification."
+    },
+    {
+      "url": "https://nfrdi.da.gov.ph/2023/12/30/manila-bay-project-holds-review-and-planning-workshop/",
+      "supports": "Official NFRDI account of 2023 data validation across eight Manila Bay fish landing sites and enumerators in Metro Manila, Bataan, and Cavite."
+    },
+    {
+      "url": "https://repository.nfrdi.da.gov.ph/items/535a84b4-e528-4435-8586-5a28c808d0aa",
+      "supports": "Official DA-NFRDI repository metadata and abstract for the 2024 Manila Bay data-harmonization workshop."
+    },
+    {
+      "url": "https://repository.nfrdi.da.gov.ph/server/api/core/bitstreams/481aa7b3-9a98-4760-918f-353db5edfcff/content",
+      "supports": "DA-NFRDI FY2024 annual report listing the continuing Manila Bay Fish Resources Assessment and its NCR/Region III/Region IV-A scope."
+    },
+    {
+      "url": "https://repository.nfrdi.da.gov.ph/items/5845cc49-44c8-4c18-8d4d-d458ceaa0aad",
+      "supports": "Official NFRDI repository abstract and metadata for the separate 2014–2015 Manila Bay experimental-trawl paper."
+    }
+  ]
+}
