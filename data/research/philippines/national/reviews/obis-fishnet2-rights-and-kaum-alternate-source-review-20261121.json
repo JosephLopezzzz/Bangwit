@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "obis-fishnet2-rights-and-kaum-alternate-source-review-20261121",
+  "reviewedOn": "2026-11-21",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "regionName": "Region IV-A (CALABARZON)",
+  "province": "Cavite",
+  "waterbodyId": "ph-wb-canas-river",
+  "sourceIds": [
+    "obis-fishnet2-marine-data",
+    "kaum-kagoshima-fish-collection-nmns"
+  ],
+  "status": "FishNet2-OBIS-CC-BY-NC-metadata-and-portal-redistribution-condition-reviewed;applicability-unresolved;alternate-KAUM-CC-BY-source-identified-but-no-row-crosswalk;research-only",
+  "question": "Does the OBIS CC-BY-NC label alone establish permission to redistribute FishNet2-derived records in Bangwit, and can a separately published KAUM dataset provide a direct, independently licensed record crosswalk?",
+  "method": {
+    "sourcePagesReviewed": [
+      "https://obis.org/dataset/2891a788-9f30-4413-8f73-9e7686890e9d",
+      "https://www.fishnet2.net/",
+      "https://ipt.kahaku.go.jp/resource?r=snet-1131-101"
+    ],
+    "priorReviewFiles": [
+      "data/research/philippines/national/reviews/calabarzon-canas-obis-fishnet2-monitoring-station-proximity-review-20261121.json",
+      "data/research/obis/cavite/cavite-obis-dataset-license-review.csv"
+    ],
+    "verificationAttempts": [
+      {
+        "target": "FishNet2 portal use terms",
+        "url": "https://www.fishnet2.net/",
+        "result": "Publicly indexed portal terms reviewed; full portal UI is JavaScript-rendered."
+      },
+      {
+        "target": "KAUM latest Darwin Core Archive",
+        "url": "https://ipt.kahaku.go.jp/archive.do?r=snet-1131-101&v=1.11",
+        "result": "Web retrieval returned 404; workspace HEAD request timed out; no archive retained."
+      },
+      {
+        "target": "Exact KAUM/GBIF source-row match",
+        "query": "institutionCode=KAUM&catalogNumber=57153",
+        "result": "No exact indexed record match found; GBIF API request timed out/inaccessible in this review. This is an access limitation, not a zero-occurrence result."
+      }
+    ],
+    "limitations": "This is a source-rights and access review, not legal advice, a final interpretation of license precedence, or a specimen/locality determination. No one was contacted and no portal agreement was accepted."
+  },
+  "findings": {
+    "fishNet2ObisDataset": {
+      "datasetId": "2891a788-9f30-4413-8f73-9e7686890e9d",
+      "datasetTitle": "FishNet2 Marine Data",
+      "providerDescription": "OBIS describes the dataset as compiled from the FishNet2 service and limited to marine specimens.",
+      "obisListedLicense": "CC-BY-NC 4.0",
+      "selectedCaviteCandidateCount": 14,
+      "recordLicense": "CC-BY-NC 4.0"
+    },
+    "fishNet2PortalTerms": {
+      "reportedAudience": "Non-profit educational use and personal research by students and scholars.",
+      "redistributionCondition": "The portal terms state that data may not be repackaged, resold, or redistributed without express written consent from the appropriate curatorial authority at each contributing institution.",
+      "provenanceCondition": "Acknowledge the original data providers and FishNet2 in presentations/publications; the portal advises direct specimen/record verification because outdated names and locality errors can occur."
+    },
+    "unresolvedApplicability": "The OBIS dataset page displays CC-BY-NC 4.0 while the FishNet2 portal states an additional written-consent condition for repackaging/redistribution. Whether and how the portal terms apply to the OBIS-mirrored records and each contributing collection was not resolved. Do not assume the broader CC license is sufficient for app redistribution.",
+    "alternateKaumDataset": {
+      "datasetId": "80f63c1e-f762-11e1-a439-00145eb45e9a",
+      "title": "Fish collection of the Kagoshima University Museum",
+      "publisher": "National Museum of Nature and Science, Japan",
+      "latestVersionDate": "2026-04-21",
+      "recordCount": 184557,
+      "listedLicense": "CC-BY 4.0",
+      "archiveRetrieved": false,
+      "matchingCatalogRowsVerified": 0,
+      "substitutionPermitted": false
+    },
+    "crosswalkState": "No record-specific connection between FishNet2 occurrence/catalog IDs 57150–57163 and a row in the separate KAUM/NMNS dataset was verified. Its CC-BY license cannot be applied to the FishNet2 rows without a valid source-record match."
+  },
+  "decisions": {
+    "fishNet2RowsMayBeRedistributedInBangwit": false,
+    "writtenCuratorialPermissionVerified": false,
+    "licenseApplicabilityResolved": false,
+    "kaumSourceRowsMatched": false,
+    "occurrenceRowsAdded": 0,
+    "speciesAssertionsAdded": 0,
+    "publicProjectionChanged": false,
+    "externalContactSent": false,
+    "portalAgreementAccepted": false
+  },
+  "nextActions": [
+    "Hold the 14 FishNet2 candidates from app/public reuse until written terms from the contributing curators clarify redistribution permission for the OBIS mirror.",
+    "Retry the official KAUM archive or query its publisher-hosted search when reachable, and require exact institution/catalog/occurrence identity before considering any KAUM row as an independent source.",
+    "If an exact KAUM source record is found, preserve its own citation, license, locality, date and coordinates; do not transfer those fields to a FishNet2 row without a documented match."
+  ]
+}
