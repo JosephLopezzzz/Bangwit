@@ -1,0 +1,261 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "ncr-tmtp-navotas-gbif-insdc-sequence-screen-20261121",
+  "reviewedOn": "2026-11-21",
+  "phaseId": "L2",
+  "regionId": "1300000000",
+  "regionName": "National Capital Region (NCR)",
+  "status": "navotas-taxon-sequence-records-found;coarse-locality-not-tmtp;research-only",
+  "question": "Does the map-grid discovery window around Tanza Marine Tree Park contain traceable fish records in GBIF or OBIS, and can any be assigned to TMTP?",
+  "sourceIds": [
+    "gbif-insdc-sequences-lake-danao-albay-records",
+    "scssap-ph-ecosystems-ch4-lppwp-tmtp-2026"
+  ],
+  "inputs": [
+    "data/research/philippines/national/reviews/ncr-scssap-lppwp-tmtp-fish-list-scope-review-20261120.json",
+    "data/research/philippines/national/reviews/ncr-tmtp-post-2022-fish-output-search-20261121.json"
+  ],
+  "method": {
+    "summary": "Queried the public GBIF and OBIS occurrence APIs using the approximate map-grid extent documented in the SCSSAP sampling-figure review, then inspected fish-order records and their linked INSDC/GenBank sequence metadata. The rectangle is a discovery window only; no official TMTP polygon or station-coordinate dataset was available. No access control was bypassed and no sequence bases were copied into the repository.",
+    "discoveryWindow": {
+      "geometryType": "bounding rectangle",
+      "west": 120.9,
+      "east": 120.93,
+      "south": 14.67,
+      "north": 14.72,
+      "basis": "Approximate graticule extent visible in the SCSSAP Chapter 4 TMTP sampling-map figure; not a surveyed park boundary, waterbody polygon, or fish-sampling station geometry.",
+      "use": "Candidate discovery only. Results within this rectangle are not thereby assigned to Tanza Marine Tree Park or its waters."
+    },
+    "taxonomicFilterNote": "The GBIF class-key query for Actinopterygii (taxonKey 204) returned zero. The GBIF backbone record for Perciformes (taxonKey 587) has Chordata (key 44) as its parent and does not expose Actinopterygii in that hierarchy path. Therefore the class-filter zero is a taxonomy-index limitation for this query, not evidence of fish absence; the follow-up searched the fish order directly.",
+    "accessNotes": [
+      "GBIF and OBIS APIs were queried read-only on 2026-11-21.",
+      "The exact-window OBIS query returned 23 observations, all identified as shorebirds in the returned results; each carries OBIS ON_LAND flags. A wider Manila Bay/NCR taxonomic query returned many fish records, but those are not local to the TMTP discovery window.",
+      "The direct NCBI GenBank records identify their cited study as unpublished in the accession record. A separate 2023 Boquiren and Quilang paper reports a later fish-sampling effort at nine Philippine coastal areas, including Navotas, with fish procured from fishers and vendors; no accession-to-study crosswalk was established here."
+    ]
+  },
+  "queryResults": {
+    "gbifClassFilter": {
+      "endpoint": "https://api.gbif.org/v1/occurrence/search",
+      "parameters": {
+        "country": "PH",
+        "taxonKey": 204,
+        "decimalLatitude": "14.67,14.72",
+        "decimalLongitude": "120.90,120.93",
+        "hasCoordinate": true,
+        "limit": 100
+      },
+      "resultCount": 0,
+      "responseSha256": "16004ddeb6b1eb033e3665fa6082d9cdd36533ce1f36272a2a95f5664f1b9dcd"
+    },
+    "gbifPerciformes": {
+      "endpoint": "https://api.gbif.org/v1/occurrence/search",
+      "parameters": {
+        "country": "PH",
+        "taxonKey": 587,
+        "decimalLatitude": "14.67,14.72",
+        "decimalLongitude": "120.90,120.93",
+        "hasCoordinate": true,
+        "limit": 100
+      },
+      "resultCount": 30,
+      "returnedRecords": 30,
+      "uniqueTaxa": 1,
+      "responseSha256": "2fe45f05d07f1e811a67c7f964951647c8e3c16e9a370567dfbce1c616203599",
+      "recordSummary": {
+        "scientificName": "Terapon jarbua (Forsskål, 1775)",
+        "eventDate": "2011-09-10",
+        "coordinates": {
+          "decimalLatitude": 14.67,
+          "decimalLongitude": 120.93,
+          "coordinateUncertaintyInMeters": null,
+          "coordinatePrecisionContext": "Coordinates are supplied to two decimal places and occur at the edge of the discovery rectangle. No uncertainty radius is supplied; do not interpret them as an exact station point."
+        },
+        "locality": "Eastern Manila Bay, Navotas, Metro",
+        "verbatimLocality": null,
+        "waterBody": null,
+        "basisOfRecord": "PRESERVED_SPECIMEN",
+        "datasetKey": "d8cd16ba-bb74-4420-821e-083f2bac17c2",
+        "datasetTitle": "INSDC Sequences",
+        "datasetDoi": "10.15468/sbmztx",
+        "datasetLicense": "CC BY 4.0",
+        "recordLicense": "CC BY 4.0",
+        "recordedBy": "J.P. Quilang",
+        "identifiedBy": null,
+        "gbifOccurrenceIds": [
+          3968774781,
+          3968778622,
+          3969022103,
+          3969022104,
+          3969022105,
+          3969025016,
+          3969025017,
+          3969025018,
+          3969035947,
+          3969035948,
+          3969035949,
+          3969041929,
+          3969043862,
+          3969043863,
+          3969045731,
+          3969045732,
+          3969049312,
+          3969049313,
+          3969049314,
+          3969053672,
+          3969053673,
+          3969053674,
+          3969056514,
+          3969056515,
+          3969056516,
+          3969291403,
+          3969291404,
+          3969291405,
+          3969322914,
+          3969322915
+        ],
+        "voucherLabels": [
+          "NTJ1",
+          "NTJ2",
+          "NTJ3",
+          "NTJ4",
+          "NTJ5",
+          "NTJ6",
+          "NTJ7",
+          "NTJ8",
+          "NTJ9",
+          "NTJ10",
+          "NTJ11",
+          "NTJ12",
+          "NTJ13",
+          "NTJ14",
+          "NTJ15",
+          "NTJ16",
+          "NTJ17",
+          "NTJ18",
+          "NTJ19",
+          "NTJ20",
+          "NTJ21",
+          "NTJ22",
+          "NTJ23",
+          "NTJ24",
+          "NTJ25",
+          "NTJ26",
+          "NTJ27",
+          "NTJ28",
+          "NTJ29",
+          "NTJ30"
+        ],
+        "sequenceAccessions": {
+          "start": "MK016019",
+          "end": "MK016048",
+          "count": 30,
+          "responseSha256": "c617c43f0f144d831f9c8348a9afe92cce1fe783abf37055e08322e8c090ef63"
+        },
+        "sequenceMetadataCrosscheck": {
+          "collectionDate": "10-Sep-2011",
+          "collectionLocality": "Philippines: Eastern Manila Bay, Navotas, Metro Manila",
+          "coordinate": "14.67 N 120.93 E",
+          "collectedBy": "J.P. Quilang",
+          "voucherCount": 30,
+          "accessionCount": 30,
+          "allRecordsShareSameRoundedLocalityAndDate": true,
+          "depositRepositoryForPhysicalVouchers": null,
+          "NCBIReferenceStatus": "The accession cites an unpublished genetic-diversity analysis and a direct submission; the accession alone does not establish publication, physical-voucher repository, exact collection method, or exact capture station."
+        },
+        "interpretation": "Thirty sequence-linked accession records for one species, not thirty species and not a validated set of thirty wild capture locations. The repeated two-decimal point has no uncertainty value and cannot distinguish a fish collection point from an aggregated or generalized locality."
+      }
+    },
+    "obisDiscoveryWindow": {
+      "endpoint": "https://api.obis.org/v3/occurrence",
+      "parameters": {
+        "geometry": "POLYGON ((120.90 14.67,120.93 14.67,120.93 14.72,120.90 14.72,120.90 14.67))",
+        "size": 100
+      },
+      "resultCount": 23,
+      "returnedRecords": 23,
+      "uniqueTaxa": 13,
+      "allReturnedRecordsIdentifiedAsShorebirds": true,
+      "obisOnLandFlagPresentOnReturnedRecords": true,
+      "responseSha256": "db9d7e800e2a81366ab528b1ef5384e1155a92b1eee78b89e5f92655fa8b1902"
+    },
+    "obisWiderContext": {
+      "endpoint": "https://api.obis.org/v3/occurrence",
+      "parameters": {
+        "geometry": "POLYGON ((120.45 14.3,121.05 14.3,121.05 14.9,120.45 14.9,120.45 14.3))",
+        "taxonid": 10194,
+        "size": 10
+      },
+      "resultCount": 2934,
+      "interpretation": "A wider Manila Bay/NCR marine-fish query demonstrates nearby regional records exist, but its geographic extent is far too broad to assign those records to TMTP."
+    }
+  },
+  "publishedContext": {
+    "source": "Boquiren and Quilang (2023), Genetic diversity and population structure of the crescent perch Terapon jarbua in the Philippines",
+    "doi": "10.1016/j.rsma.2022.102786",
+    "finding": "The paper reports 270 T. jarbua individuals from nine Philippine coastal areas, including Navotas, and states that samples were procured from fishermen and fish vendors.",
+    "interpretation": "This supports a Navotas fishery/procurement sampling context in a separate published study. No sample-code or accession crosswalk ties its 270 fish to the 30 GenBank vouchers screened here, and procurement locality is not automatically a wild-capture waterbody or station."
+  },
+  "limits": [
+    "The approximate rectangle comes from a map graticule and is not an official Tanza Marine Tree Park boundary, municipal-water boundary, or sampling-station polygon.",
+    "The 30 GBIF sequence records share one species name, one two-decimal coordinate, one date, and a coarse locality label. Null coordinate uncertainty and the repeated boundary point prevent exact site assignment.",
+    "The NCBI accession identifies a sequence record and voucher label, but the physical voucher repository, complete field protocol, collector notes, and capture-versus-procurement pathway were not verified.",
+    "The separate 2023 Navotas paper is not crosswalked to these 30 accessions; it cannot be used to infer their specific specimen provenance.",
+    "OBIS exact-window observations are shorebirds with ON_LAND flags; a marine-area API result is not automatically a fish record or a marine capture record.",
+    "No current presence, abundance, catchability, diet, fishing permission, safety, legal boundary, or site-specific ecological status is established."
+  ],
+  "decision": {
+    "historicalSequenceLocalityLeadPrepared": 1,
+    "uniqueSpeciesAssertionsAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "waterbodyLeadsAdded": 0,
+    "waterbodyAssignmentsAdded": 0,
+    "geometryAdded": false,
+    "publicAppProjection": false,
+    "publicationApproval": false,
+    "regionalBaselineComplete": false,
+    "classification": "Research-only historical sequence/voucher locality lead labelled Eastern Manila Bay, Navotas; not a verified Tanza Marine Tree Park capture or station record.",
+    "reason": "The direct sequence metadata reports a broad Navotas locality, a rounded coordinate without uncertainty, and a historical date, while related published Navotas fish samples are explicitly procured from fishers and vendors. The evidence is useful for follow-up at the shared Manila Bay/municipal context, but cannot localize a wild occurrence to TMTP or be presented as a current app record."
+  },
+  "nextActions": [
+    "Check the 2018 unpublished accession-cited analysis and public supplemental records for a voucher, sampling-method, and capture-versus-market provenance crosswalk; use only public materials and do not infer a match to the separate 2023 study.",
+    "Continue the Tanza marine-source search for a dated primary fish survey with station coordinates, field methods, vouchers, and item-specific reuse terms.",
+    "Retain the 52-row SCSSAP TMTP fish table and these sequence-linked locality records as separate research leads; keep NCR and Luzon incomplete."
+  ],
+  "sources": [
+    {
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&taxonKey=587&decimalLatitude=14.67%2C14.72&decimalLongitude=120.90%2C120.93&hasCoordinate=true&limit=100",
+      "supports": "GBIF search response for 30 Terapon jarbua sequence-linked records and record-level occurrence, locality, coordinate, date, voucher-label and license fields."
+    },
+    {
+      "url": "https://api.gbif.org/v1/dataset/d8cd16ba-bb74-4420-821e-083f2bac17c2",
+      "supports": "Dataset title, sequence-aggregation description, DOI, version metadata, and CC BY 4.0 dataset license."
+    },
+    {
+      "url": "https://www.ncbi.nlm.nih.gov/nuccore/MK016019",
+      "additionalUrls": [
+        "https://www.ncbi.nlm.nih.gov/nuccore/MK016048",
+        "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=nuccore&id=MK016019%2CMK016020%2CMK016021%2CMK016022%2CMK016023%2CMK016024%2CMK016025%2CMK016026%2CMK016027%2CMK016028%2CMK016029%2CMK016030%2CMK016031%2CMK016032%2CMK016033%2CMK016034%2CMK016035%2CMK016036%2CMK016037%2CMK016038%2CMK016039%2CMK016040%2CMK016041%2CMK016042%2CMK016043%2CMK016044%2CMK016045%2CMK016046%2CMK016047%2CMK016048&rettype=gb&retmode=text"
+      ],
+      "supports": "Primary GenBank sequence-submission metadata for voucher labels NTJ1–NTJ30, the shared collection date and locality, two-decimal coordinates, and the cited unpublished analysis. Sequence bases were not copied into this review."
+    },
+    {
+      "url": "https://doi.org/10.1016/j.rsma.2022.102786",
+      "supports": "Boquiren and Quilang's 2023 paper on T. jarbua population genetics; its abstract reports Navotas among nine coastal sites, with samples procured from fishers and fish vendors. This is a separate study without an accession crosswalk in this review."
+    },
+    {
+      "url": "https://api.obis.org/v3/occurrence?geometry=POLYGON+%28%28120.90+14.67%2C120.93+14.67%2C120.93+14.72%2C120.90+14.72%2C120.90+14.67%29%29&size=100",
+      "supports": "OBIS API response of 23 shorebird observations in the discovery rectangle; returned records carry ON_LAND quality flags."
+    },
+    {
+      "url": "https://manual.obis.org/FAQ.html",
+      "supports": "OBIS guidance to query a bounding box for complex geography and apply exact spatial filtering before treating results as an area checklist."
+    },
+    {
+      "url": "https://api.gbif.org/v1/species/204",
+      "additionalUrls": [
+        "https://api.gbif.org/v1/species/587"
+      ],
+      "supports": "GBIF backbone taxon-key ranks and Perciformes-to-Chordata parent linkage used to explain why the Actinopterygii class filter returned zero."
+    }
+  ]
+}
