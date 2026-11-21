@@ -1,0 +1,70 @@
+{
+  "schemaVersion": 1,
+  "reportId": "calabarzon-makiling-pjs-table-consistency-review-20261121",
+  "checkedOn": "2026-11-21",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "regionName": "Region IV-A (CALABARZON)",
+  "status": "official-publisher-pdf-text-reviewed;table-narrative-count-conflict;visual-verification-blocked;rights-unresolved;research-only",
+  "sourceId": "paller-2011-makiling-fishes",
+  "question": "Does the official publisher PDF text view resolve the site-by-taxon table, and are the paper's summary counts internally consistent?",
+  "accessReview": {
+    "provider": "Philippine Journal of Science / Department of Science and Technology",
+    "pdfUrl": "https://philjournalsci.dost.gov.ph/images/pdf/pjs_pdf/vol140no2/pdfs/Freshwater_Fish_Fauna_in_Watersheds_of_Mt_Makiling.pdf",
+    "method": "Read the official PDF text extraction and requested a screenshot of the table page. Text extraction returned the table; the screenshot request returned HTTP 403. No access control was bypassed and no local source copy was retained.",
+    "tablePage": "Journal page 199, Table 1",
+    "visualTableVerification": false
+  },
+  "tableTextCheck": {
+    "rowsExtractedByTextView": 16,
+    "sourceReportedSiteTotals": {
+      "Dampalit Falls": 12,
+      "Molawin Creek": 12,
+      "Cambantoc River": 9
+    },
+    "tableStatusCounts": {
+      "endemic": 1,
+      "native": 5,
+      "introduced": 10
+    },
+    "unresolvedHigherRankRows": ["Rhinogobius sp."],
+    "retainedSiteByTaxonMatrix": false,
+    "finding": "The extracted table text presents 16 nominal rows and site totals of 12, 12, and 9. Because the table image could not be visually checked, the row-to-column marks are not admitted as a verified occurrence matrix."
+  },
+  "narrativeConflict": {
+    "discussionAndConclusionTotal": 16,
+    "endemicClaim": 1,
+    "nativeClaim": 5,
+    "introducedClaim": 12,
+    "introducedNamesEnumerated": 10,
+    "statusCountSum": 18,
+    "finding": "The text-extracted discussion/conclusion says 16 total, one endemic, five native, and twelve introduced; that status arithmetic sums to 18, while its introduced-name list contains ten names and Table 1 has ten introduced rows. This conflict is recorded without selecting one account as correct."
+  },
+  "studyContext": {
+    "waterbodies": ["Molawin Creek", "Dampalit Falls", "Cambantoc River"],
+    "fieldCollectionDates": null,
+    "methodSummary": "The article describes multiple collection methods and sampling locations within the three study units. The accessible text gives no fish collection dates.",
+    "timeAndScope": "Historical survey published in 2011; not a current fish-presence or catchability assessment."
+  },
+  "rightsAndUse": {
+    "itemSpecificReuseLicenseFound": false,
+    "copyrightTransferAndOpenAccessNote": "The existing source review records that PJS calls the journal open access and its Author's Guide requires copyright transfer; no article-specific reuse license was found.",
+    "decision": "Keep the minimal discrepancy summary for internal research. Do not redistribute the table or convert it into a public checklist or app projection without item-specific permission and visual verification."
+  },
+  "disposition": {
+    "taxaAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "siteAssignmentsAdded": 0,
+    "geometryAdded": false,
+    "imagesAdded": 0,
+    "publicAppRowsAdded": 0,
+    "publicationApproval": false
+  },
+  "limitations": [
+    "PDF text extraction is not equivalent to visually verifying the table cells; the official screenshot endpoint returned HTTP 403.",
+    "The paper's own table and narrative counts conflict; no corrected count is inferred.",
+    "Rhinogobius sp. is genus-level and is not a resolved species identification.",
+    "No collection date, specimen accession, station coordinate, current presence, water quality, fishing access, diet, or legal rule is established here."
+  ],
+  "nextAction": "Treat the PJS article as historical research context. If structured use is needed, request permission and a readable table image or author-verified dataset; continue public app work from independently reusable records."
+}
