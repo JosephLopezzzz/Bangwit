@@ -1,0 +1,267 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "calabarzon-mctep-s5-marine-taxonomy-crosscheck-20261121",
+  "reviewedOn": "2026-11-21",
+  "nationalStep": 704,
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "regionName": "Region IV-A (CALABARZON)",
+  "parentReviewId": "calabarzon-mctep-s5-marine-fish-pool-review-20261121",
+  "sourceIds": [
+    "emb-mctep-segment-5-eis-freshwater-fish-2019",
+    "worms-mctep-s5-marine-taxon-name-crosscheck-20261121",
+    "calacademy-catalog-mctep-s5-marine-fish-taxonomy-crosscheck-20261121"
+  ],
+  "status": "authority-name-crosscheck-complete;source-specimen-identities-unresolved;research-only",
+  "purpose": "Compare all 18 marine fish and 3 crustacean name strings printed in MCTEP EIS Table 2.27 with exact-name WoRMS records and focused Eschmeyer's Catalog of Fishes records. Keep original strings, accepted-name mappings, and any possible spelling variants distinct from specimen identity.",
+  "method": {
+    "worms": {
+      "provider": "World Register of Marine Species (WoRMS), Aphia exact-name API",
+      "endpointPattern": "https://www.marinespecies.org/rest/AphiaRecordsByName/{URL-encoded exact source string}?like=false&marine_only=false",
+      "checkedOn": "2026-11-21",
+      "resultFields": ["HTTP status", "scientificname", "status", "rank", "AphiaID", "valid_name", "valid_AphiaID"],
+      "noResultMeaning": "HTTP 204 means this exact query returned no Aphia record in this request. It is not proof that the name is nonexistent, that no synonym exists, or that the EIS specimen is misidentified."
+    },
+    "catalogOfFishes": {
+      "provider": "California Academy of Sciences, Eschmeyer's Catalog of Fishes",
+      "onlineVersionAsSeen": "Catalog species pages show online versions updated between 10 June and 21 September 2026.",
+      "checkedOn": "2026-11-21",
+      "scope": "Focused checks of the accepted-name and related-name entries needed to assess the material spelling variants and current combinations; this was not a morphological re-identification."
+    },
+    "sourceText": "The raw labels and source families below are transcribed from the pooled Table 2.27 in the parent EIS review. WoRMS family and rank outputs do not overwrite the printed EIS values."
+  },
+  "summary": {
+    "sourceRows": 21,
+    "fishRows": 18,
+    "crustaceanRows": 3,
+    "exactAcceptedSpeciesNameRows": 11,
+    "exactAcceptedGenusNameRows": 2,
+    "exactNonCurrentOrSynonymRows": 4,
+    "exactQueriesWithHttp204": 4,
+    "possibleSpellingOrCombinationCandidates": 7,
+    "sourceReportedFishSpeciesCountStillConflictsWithTable": true
+  },
+  "taxonRows": [
+    {
+      "tableRow": 1,
+      "group": "fish",
+      "sourceName": "Sardinella albella",
+      "sourceRank": "species",
+      "sourceFamilyAsPrinted": "Clupeidae",
+      "worms": {"status": "accepted", "rank": "Species", "aphiaId": 212268, "validName": "Sardinella albella", "validAphiaId": 212268, "url": "https://www.marinespecies.org/aphia.php?id=212268&p=taxdetails"},
+      "interpretation": "Exact name is accepted in WoRMS; the EIS identification and site allocation remain unverified."
+    },
+    {
+      "tableRow": 2,
+      "group": "fish",
+      "sourceName": "Stolephorus heterolobus",
+      "sourceRank": "species",
+      "sourceFamilyAsPrinted": "Engraulidae",
+      "worms": {"status": "unaccepted", "rank": "Species", "aphiaId": 212283, "validName": "Encrasicholina heteroloba", "validAphiaId": 219980, "url": "https://www.marinespecies.org/aphia.php?id=212283&p=taxdetails"},
+      "catalogOfFishesUrl": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=58156",
+      "interpretation": "WoRMS resolves this combination to Encrasicholina heteroloba; the Catalog of Fishes also reports the current treatment under that combination. Preserve the EIS string; this does not re-identify the specimen."
+    },
+    {
+      "tableRow": 3,
+      "group": "fish",
+      "sourceName": "Saurida englemani",
+      "sourceRank": "species as printed; unresolved",
+      "sourceFamilyAsPrinted": "Synodontidae",
+      "worms": {"httpStatus": 204, "status": "no exact Aphia record", "queryUrl": "https://www.marinespecies.org/rest/AphiaRecordsByName/Saurida%20englemani?like=false&marine_only=false"},
+      "catalogOfFishesUrl": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Synodus&species=variegatus&tbl=species",
+      "catalogNote": "The related Catalog page contains Synodus englemani and treats that name as a synonym of Synodus variegatus. That is a different genus/name string from Saurida englemani.",
+      "interpretation": "Do not silently replace Saurida with Synodus or identify the EIS specimen as Synodus variegatus. The exact source name remains unresolved."
+    },
+    {
+      "tableRow": 4,
+      "group": "fish",
+      "sourceName": "Malacanthus brevirostris",
+      "sourceRank": "species",
+      "sourceFamilyAsPrinted": "Malacanthidae",
+      "worms": {"status": "accepted", "rank": "Species", "aphiaId": 218378, "validName": "Malacanthus brevirostris", "validAphiaId": 218378, "url": "https://www.marinespecies.org/aphia.php?id=218378&p=taxdetails"},
+      "interpretation": "Exact name is accepted in WoRMS; no specimen or site attribution is established by the name match."
+    },
+    {
+      "tableRow": 5,
+      "group": "fish",
+      "sourceName": "Sphyraena jello",
+      "sourceRank": "species",
+      "sourceFamilyAsPrinted": "Sphyraenidae",
+      "worms": {"status": "accepted", "rank": "Species", "aphiaId": 212045, "validName": "Sphyraena jello", "validAphiaId": 212045, "url": "https://www.marinespecies.org/aphia.php?id=212045&p=taxdetails"},
+      "interpretation": "Exact name is accepted in WoRMS. This does not reconcile the EIS species-row count or map the row to a site."
+    },
+    {
+      "tableRow": 6,
+      "group": "fish",
+      "sourceName": "Sphyraena sp.",
+      "sourceRank": "genus only",
+      "sourceFamilyAsPrinted": "Sphyraenidae",
+      "worms": {"status": "accepted genus", "rank": "Genus", "aphiaId": 126084, "validName": "Sphyraena", "validAphiaId": 126084, "url": "https://www.marinespecies.org/aphia.php?id=126084&p=taxdetails"},
+      "interpretation": "Retain as genus-level; do not convert this row to a species or count it as a confirmed species identity."
+    },
+    {
+      "tableRow": 7,
+      "group": "fish",
+      "sourceName": "Upeneus vittatus",
+      "sourceRank": "species",
+      "sourceFamilyAsPrinted": "Mullidae",
+      "worms": {"status": "accepted", "rank": "Species", "aphiaId": 218691, "validName": "Upeneus vittatus", "validAphiaId": 218691, "url": "https://www.marinespecies.org/aphia.php?id=218691&p=taxdetails"},
+      "interpretation": "Exact name is accepted in WoRMS; the EIS identification and site allocation remain unverified."
+    },
+    {
+      "tableRow": 8,
+      "group": "fish",
+      "sourceName": "Epinephelus amblycephalus",
+      "sourceRank": "species",
+      "sourceFamilyAsPrinted": "Serranidae",
+      "worms": {"status": "accepted", "rank": "Species", "aphiaId": 273834, "validName": "Epinephelus amblycephalus", "validAphiaId": 273834, "url": "https://www.marinespecies.org/aphia.php?id=273834&p=taxdetails"},
+      "interpretation": "Exact name is accepted in WoRMS; no specimen or site attribution is established by the name match."
+    },
+    {
+      "tableRow": 9,
+      "group": "fish",
+      "sourceName": "Gerres filamentosus",
+      "sourceRank": "species",
+      "sourceFamilyAsPrinted": "Gerreidae",
+      "worms": {"status": "accepted", "rank": "Species", "aphiaId": 218524, "validName": "Gerres filamentosus", "validAphiaId": 218524, "url": "https://www.marinespecies.org/aphia.php?id=218524&p=taxdetails"},
+      "interpretation": "Exact name is accepted in WoRMS; no specimen or site attribution is established by the name match."
+    },
+    {
+      "tableRow": 10,
+      "group": "fish",
+      "sourceName": "Rastrelliger brachysoma",
+      "sourceRank": "species",
+      "sourceFamilyAsPrinted": "Scombridae",
+      "worms": {"status": "accepted", "rank": "Species", "aphiaId": 273807, "validName": "Rastrelliger brachysoma", "validAphiaId": 273807, "url": "https://www.marinespecies.org/aphia.php?id=273807&p=taxdetails"},
+      "interpretation": "Exact name is accepted in WoRMS; no specimen or site attribution is established by the name match."
+    },
+    {
+      "tableRow": 11,
+      "group": "fish",
+      "sourceName": "Nemipterus sp.",
+      "sourceRank": "genus only",
+      "sourceFamilyAsPrinted": "Nemipteridae",
+      "worms": {"status": "accepted genus", "rank": "Genus", "aphiaId": 205457, "validName": "Nemipterus", "validAphiaId": 205457, "url": "https://www.marinespecies.org/aphia.php?id=205457&p=taxdetails"},
+      "interpretation": "Retain as genus-level; do not infer a species epithet."
+    },
+    {
+      "tableRow": 12,
+      "group": "fish",
+      "sourceName": "Gymnocranius elongates",
+      "sourceRank": "species as printed; likely spelling variant",
+      "sourceFamilyAsPrinted": "Lethrinidae",
+      "worms": {"status": "unaccepted", "rank": "Species", "aphiaId": 713383, "validName": "Gymnocranius elongatus", "validAphiaId": 218578, "url": "https://www.marinespecies.org/aphia.php?id=713383&p=taxdetails"},
+      "catalogOfFishesUrl": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=22747",
+      "interpretation": "Both catalogs support elongatus as the accepted spelling/name. Preserve elongates verbatim as the source label and treat elongatus only as a taxonomic name crosswalk, not proof of the specimen identity."
+    },
+    {
+      "tableRow": 13,
+      "group": "fish",
+      "sourceName": "Terapon jarbua",
+      "sourceRank": "species",
+      "sourceFamilyAsPrinted": "Teraponidae",
+      "worms": {"status": "accepted", "rank": "Species", "aphiaId": 218350, "validName": "Terapon jarbua", "validAphiaId": 218350, "url": "https://www.marinespecies.org/aphia.php?id=218350&p=taxdetails"},
+      "interpretation": "Exact name is accepted in WoRMS; the EIS identification and site allocation remain unverified."
+    },
+    {
+      "tableRow": 14,
+      "group": "fish",
+      "sourceName": "Selaroides leptolepis",
+      "sourceRank": "species",
+      "sourceFamilyAsPrinted": "Carangidae",
+      "worms": {"status": "accepted", "rank": "Species", "aphiaId": 282745, "validName": "Selaroides leptolepis", "validAphiaId": 282745, "url": "https://www.marinespecies.org/aphia.php?id=282745&p=taxdetails"},
+      "interpretation": "Exact name is accepted in WoRMS; no specimen or site attribution is established by the name match."
+    },
+    {
+      "tableRow": 15,
+      "group": "fish",
+      "sourceName": "Leiognathus bindus",
+      "sourceRank": "species as printed; non-current combination",
+      "sourceFamilyAsPrinted": "Leiognathidae",
+      "worms": {"status": "unaccepted", "rank": "Species", "aphiaId": 218458, "validName": "Photopectoralis bindus", "validAphiaId": 398536, "url": "https://www.marinespecies.org/aphia.php?id=218458&p=taxdetails"},
+      "catalogOfFishesUrl": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=15510",
+      "interpretation": "WoRMS and the Catalog of Fishes support Photopectoralis bindus as the current combination. Preserve Leiognathus bindus as printed; the nomenclatural mapping is not specimen re-identification."
+    },
+    {
+      "tableRow": 16,
+      "group": "fish",
+      "sourceName": "Trichiurus japonicas",
+      "sourceRank": "species as printed; no exact match",
+      "sourceFamilyAsPrinted": "Trichiuridae",
+      "worms": {"httpStatus": 204, "status": "no exact Aphia record", "queryUrl": "https://www.marinespecies.org/rest/AphiaRecordsByName/Trichiurus%20japonicas?like=false&marine_only=false"},
+      "candidateNameOnly": {"name": "Trichiurus japonicus", "wormsStatus": "accepted", "aphiaId": 305414, "wormsUrl": "https://www.marinespecies.org/aphia.php?id=305414&p=taxdetails", "catalogOfFishesUrl": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=19190"},
+      "interpretation": "japonicus is a plausible spelling/grammatical candidate, but the exact EIS label returned no record and the candidate does not establish the sampled fish identity."
+    },
+    {
+      "tableRow": 17,
+      "group": "fish",
+      "sourceName": "Abudefduf sexfaciatus",
+      "sourceRank": "species as printed; no exact match",
+      "sourceFamilyAsPrinted": "Pomacentridae",
+      "worms": {"httpStatus": 204, "status": "no exact Aphia record", "queryUrl": "https://www.marinespecies.org/rest/AphiaRecordsByName/Abudefduf%20sexfaciatus?like=false&marine_only=false"},
+      "candidateNameOnly": {"name": "Abudefduf sexfasciatus", "wormsStatus": "accepted", "aphiaId": 159289, "wormsUrl": "https://www.marinespecies.org/aphia.php?id=159289&p=taxdetails"},
+      "interpretation": "sexfasciatus is a plausible spelling candidate. Retain the raw EIS label and do not assert the specimen was Abudefduf sexfasciatus."
+    },
+    {
+      "tableRow": 18,
+      "group": "fish",
+      "sourceName": "Lutjanus carponotatus",
+      "sourceRank": "species",
+      "sourceFamilyAsPrinted": "Lutjanidae",
+      "worms": {"status": "accepted", "rank": "Species", "aphiaId": 276528, "validName": "Lutjanus carponotatus", "validAphiaId": 276528, "url": "https://www.marinespecies.org/aphia.php?id=276528&p=taxdetails"},
+      "interpretation": "Exact name is accepted in WoRMS; no specimen or site attribution is established by the name match."
+    },
+    {
+      "tableRow": 19,
+      "group": "crustacean",
+      "sourceName": "Acetes intermedins",
+      "sourceRank": "species as printed; no exact match",
+      "sourceFamilyAsPrinted": "Sergestidae",
+      "worms": {"httpStatus": 204, "status": "no exact Aphia record", "queryUrl": "https://www.marinespecies.org/rest/AphiaRecordsByName/Acetes%20intermedins?like=false&marine_only=false"},
+      "candidateNameOnly": {"name": "Acetes intermedius", "wormsStatus": "accepted", "aphiaId": 377410, "wormsUrl": "https://www.marinespecies.org/aphia.php?id=377410&p=taxdetails"},
+      "interpretation": "intermedius is a plausible spelling candidate only; the EIS crustacean is not independently identified here."
+    },
+    {
+      "tableRow": 20,
+      "group": "crustacean",
+      "sourceName": "Charybdis feriata",
+      "sourceRank": "species as printed; older combination",
+      "sourceFamilyAsPrinted": "Portunidae",
+      "worms": {"status": "superseded combination", "rank": "Species", "aphiaId": 1671022, "validName": "Charybdis (Charybdis) feriata", "validAphiaId": 208822, "url": "https://www.marinespecies.org/aphia.php?id=1671022&p=taxdetails"},
+      "acceptedTaxonUrl": "https://www.marinespecies.org/aphia.php?id=208822&p=taxdetails",
+      "interpretation": "WoRMS supplies the accepted subgenus combination. This is a nomenclatural update only."
+    },
+    {
+      "tableRow": 21,
+      "group": "crustacean",
+      "sourceName": "Thenus orientalis",
+      "sourceRank": "species",
+      "sourceFamilyAsPrinted": "Scyllaridae",
+      "worms": {"status": "accepted", "rank": "Species", "aphiaId": 210362, "validName": "Thenus orientalis", "validAphiaId": 210362, "url": "https://www.marinespecies.org/aphia.php?id=210362&p=taxdetails"},
+      "interpretation": "Exact name is accepted in WoRMS; no specimen or site attribution is established by the name match."
+    }
+  ],
+  "decision": {
+    "sourceRowsAltered": 0,
+    "sourceSpellingsOverwritten": 0,
+    "specimenIdentitiesResolved": 0,
+    "siteResolvedFishRows": 0,
+    "occurrenceRowsAdded": 0,
+    "speciesAssertionsAdded": 0,
+    "publicAppProjection": false,
+    "reuseApproval": false,
+    "regionalBaselineComplete": false,
+    "disposition": "Store this as a nomenclatural crosswalk only. Preserve every MCTEP source spelling and rank alongside any accepted-name result. Keep all rows out of Bangwit species projections until the study's identifications, per-site allocation, provenance and item-specific reuse rights are independently resolved."
+  },
+  "nonClaims": [
+    "A catalog name match does not independently validate the fish or crustacean specimen identified in the EIS.",
+    "Candidate spelling variants do not justify silently correcting the EIS or asserting an identification.",
+    "The EIS taxon rows remain pooled across three named contexts; no fish can be assigned specifically to Julugan, Tanza, Kawit or Rosario from this crosscheck.",
+    "Nothing here establishes current presence, abundance, capture location, habitat use, local diet, bait effectiveness, catchability, safety, legal access, or completeness of Cavite or Manila Bay records.",
+    "WoRMS exact-query HTTP 204 results are limited to the exact query and API response at review time; they are not taxon-absence evidence."
+  ],
+  "nextActions": [
+    "Search for a Cavite marine-fisheries source with per-site species allocation, fish-specific collection dates, gear and a traceable specimen/voucher crosswalk; retain the Julugan Tanza locality separately from Tanza Marine Tree Park.",
+    "Keep the EIS count conflict open: narrative reports 17 fish species while Table 2.27 contains 18 fish rows, including one genus-only row and both Sphyraena jello and Sphyraena sp."
+  ]
+}
