@@ -34575,10 +34575,11 @@
       "checkedOn": "2026-11-20",
       "sourceYear": 2006,
       "access": {
-        "status": "publisher-pdf-reviewed;historical-Pasig-site-taxon-statement;site-voucher-date-and-count-unreported;research-only",
+        "status": "publisher-pdf-reviewed;historical-Pasig-site-taxon-statement;independent-P-disjunctivus-study;site-voucher-date-and-count-unreported;research-only",
         "reviewFiles": [
           "national/reviews/central-luzon-paitan-janitor-fish-source-conflict-followup-20261119.json",
-          "national/reviews/ncr-pasig-2006-pterygoplichthys-site-evidence-review-20261120.json"
+          "national/reviews/ncr-pasig-2006-pterygoplichthys-site-evidence-review-20261120.json",
+          "national/reviews/ncr-pasig-pmrcip-phase-ii-fish-source-lineage-review-20261123.json"
         ],
         "fullTextRetrieved": true
       },
@@ -37422,12 +37423,13 @@
       "sourceYear": 2018,
       "citation": "Department of Public Works and Highways. (2018). Supplemental Environmental Impact Statement: Pasig-Marikina River Channel Improvement Project (Phase IV). September 2018.",
       "access": {
-        "status": "official-dpwh-public-eis-reviewed;2014-single-site-fish-survey;secondary-surveys-separated;research-only",
+        "status": "official-dpwh-public-eis-reviewed;2014-single-site-fish-survey;phaseII-secondary-taxa-list;voucher-and-reuse-terms-unresolved;research-only",
         "reviewFiles": [
           "national/reviews/ncr-marikina-pmrcip-phase-iv-fish-survey-review-20261120.json",
-          "national/reviews/ncr-marikina-pterygoplichthys-disjunctivus-name-crosscheck-20261120.json"
+          "national/reviews/ncr-marikina-pterygoplichthys-disjunctivus-name-crosscheck-20261120.json",
+          "national/reviews/ncr-pasig-pmrcip-phase-ii-fish-source-lineage-review-20261123.json"
         ],
-        "reviewedSections": "Cover, aquatic biota method/result, separate Phase II/III secondary summaries, and river-dependency context.",
+        "reviewedSections": "Cover, primary 2014 survey, Phase II richness table and taxa narrative (printed pp. 113–114), and separate Phase III discussion (printed p. 115).",
         "fullTextRetrieved": true,
         "localRawSnapshot": null
       },
@@ -37560,29 +37562,36 @@
       "citation": "Chavez, J. M., de la Paz, R. M., Manohar, S. K., Pagulayan, R. C., Carandang VI, J. R., & Stierhof, T. (2006). New Philippine record of south american sailfin catfishes (Pisces: Loricariidae). Plazi taxonomic treatments database. https://doi.org/10.15468/eigeyd",
       "sourceYear": 2006,
       "access": {
-        "status": "gbif-indexed-dataset-metadata-reviewed;checklist-type;abstract-level-only;direct-page-403;research-only",
+        "status": "gbif-dataset-api-reviewed;checklist-type;cc0-dataset-metadata;dataset-filtered-occurrence-count-zero;research-only",
         "reviewFiles": [
-          "national/reviews/ncr-pasig-chavez-thesis-gbif-checklist-lineage-screen-20261120.json"
+          "national/reviews/ncr-pasig-chavez-thesis-gbif-checklist-lineage-screen-20261120.json",
+          "national/reviews/ncr-pasig-pmrcip-phase-ii-fish-source-lineage-review-20261123.json"
         ],
         "datasetKey": "ca3659b9-2830-4a4d-914a-2a1a509d70ff",
         "datasetType": "CHECKLIST",
+        "datasetApiUrl": "https://api.gbif.org/v1/dataset/ca3659b9-2830-4a4d-914a-2a1a509d70ff",
+        "datasetLicense": "CC0 1.0 (as reported by GBIF dataset API)",
         "gbifRegistrationDate": "2013-12-12",
         "metadataLastModified": "2026-09-10",
-        "accessMethod": "Reviewed indexed GBIF dataset metadata. Direct GBIF page and API endpoints were not retrievable in this session; no occurrence-count or zero-result claim is made."
+        "occurrenceQueryUrl": "https://api.gbif.org/v1/occurrence/search?datasetKey=ca3659b9-2830-4a4d-914a-2a1a509d70ff&limit=100",
+        "occurrenceQueryResultCount": 0,
+        "occurrenceQueryCheckedOn": "2026-11-23",
+        "accessMethod": "GBIF dataset API returned dataset metadata; dataset-key-filtered occurrence API returned count=0. The GBIF web page itself returned HTTP 403 in the reviewed session."
       },
       "reuse": {
-        "metadata": "Dataset identifier and high-level checklist metadata retained with attribution.",
+        "metadata": "GBIF dataset API reports CC0 1.0 for this registered checklist dataset item.",
         "raw": "No Darwin Core Archive, occurrence export, paper text, table, or figure retained.",
-        "content": "No item-specific license or permission for article-derived text/data was verified; no record-level reuse is approved."
+        "content": "This is a Checklist dataset; its dataset-filtered occurrence query returned zero records. The dataset metadata license does not authorize reuse of the underlying copyrighted Zootaxa article or its figures/images."
       },
       "publicationApproval": false,
-      "license": "No item-specific dataset reuse terms verified",
-      "licenseUrl": null,
+      "license": "CC0 1.0 as reported for the GBIF checklist dataset; this does not license the underlying Magnolia Press article.",
+      "licenseUrl": "http://creativecommons.org/publicdomain/zero/1.0/legalcode",
       "researchStatus": "ncr;pasig-river;plazi-gbif-checklist;article-derived-metadata;not-occurrence-evidence;research-only",
       "caveats": [
         "GBIF metadata classifies the registration as a Checklist dataset, not an occurrence-event dataset.",
         "The indexed abstract and result summary reproduce the same five-site study reported in the 2006 Zootaxa article; this is not an independent sample.",
-        "The GBIF API occurrence count was not verified; do not infer that the dataset has zero or any particular number of occurrence records.",
+        "The dataset-key-filtered GBIF occurrence API query returned zero records in this checklist dataset; this is not evidence of biological absence at Pasig or elsewhere.",
+        "CC0 is the dataset license returned by GBIF metadata and does not grant rights to reproduce the source article or figures.",
         "No collection event date, Pasig specimen number, site-specific count, or coordinates were obtained from this registration."
       ]
     },
@@ -41205,9 +41214,10 @@
       "sourceYear": 2011,
       "citation": "Department of Public Works and Highways. (2011, September). Supplemental Environmental Impact Statement: Pasig-Marikina River Channel Improvement Project (Phase III). Hosted by Japan International Cooperation Agency.",
       "access": {
-        "status": "official-jica-library-pdf-reviewed;fish-claim-without-date-method-count-or-voucher;event-lineage-unresolved;taxon-identification-unresolved;research-only",
+        "status": "official-jica-library-pdf-reviewed;fish-claim-without-date-method-count-or-voucher;phaseII-cross-source-comparison;event-lineage-unresolved;taxon-identification-unresolved;research-only",
         "reviewFiles": [
-          "national/reviews/ncr-marikina-pmrcip-phase-iii-eis-janitor-fish-claim-review-20261123.json"
+          "national/reviews/ncr-marikina-pmrcip-phase-iii-eis-janitor-fish-claim-review-20261123.json",
+          "national/reviews/ncr-pasig-pmrcip-phase-ii-fish-source-lineage-review-20261123.json"
         ],
         "fullTextRetrieved": true,
         "officialPdfReviewed": true,
