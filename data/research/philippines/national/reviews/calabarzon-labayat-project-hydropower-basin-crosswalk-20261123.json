@@ -1,0 +1,146 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "calabarzon-labayat-project-hydropower-basin-crosswalk-20261123",
+  "reviewedOn": "2026-11-23",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "provinceId": "0405600000",
+  "status": "upper-lower-labayat-project-locality-and-catchment-context-reviewed;DPWH-principal-basin-crosswalk-unresolved;research-only",
+  "question": "Do primary hydropower project and power-register records establish the locality, route, or geometry of DPWH's separate 56 sq km Region IV-A Labayat principal basin?",
+  "purpose": "Cross-check date-bounded official plant-register locations and company-hosted technical catchment figures against the separately recorded DPWH basin and BMB Atlas river without inferring channel continuity, basin boundaries, or a merge.",
+  "waterbodyIds": [
+    "ph-wb-labayat-principal-basin-4a",
+    "ph-wb-labayat-river-quezon-laguna"
+  ],
+  "sourceIds": [
+    "doe-luzon-grid-existing-power-plants-2025-01-31",
+    "doe-luzon-grid-existing-power-plants-2025-11-30",
+    "redc-annual-report-2024-labayat-hydrology"
+  ],
+  "inputs": [
+    "data/research/philippines/calabarzon-scope.json",
+    "data/research/philippines/sources.json",
+    "data/research/philippines/administrative-registry.json",
+    "data/research/philippines/calabarzon-quezon-lakayat-labayat-variant-review-20261101.json",
+    "data/research/philippines/national/reviews/calabarzon-labayat-atlas-locality-crosswalk-20261123.json"
+  ],
+  "snapshotHashes": {
+    "scopeBeforeReview": "0c327893f8a0540846d8bcd78b38a3df17176e064939fd9e3b5c031367245ec3",
+    "scopeAfterReview": "0c327893f8a0540846d8bcd78b38a3df17176e064939fd9e3b5c031367245ec3",
+    "sourceRegistryBeforeReview": "42125ae05570d3f2ba89eb47797444520bdd0934190b12ffbaa9b2fa92b7c838",
+    "sourceRegistry": "4d4d5900cb309f081ad71cb28c491de75db6efd2e02add8a08df3e9f8f61f2fd",
+    "administrativeRegistry": "c741456fbc2cfc9d5d813484a0b661ef206154977959fc27a289ca86732142e8",
+    "labayatNameVariantReview": "67e38363c9c5f28bb04a4e2d1f7b0231fec44f368823726e11a52de1f7c4749b",
+    "labayatAtlasLocalityCrosswalk": "25877d66eb42fa1f87f6bc9d22329ec3cf3da383ff4124cf64f0bf1ff7408f1a"
+  },
+  "method": "Reviewed the DOE Luzon grid-connected power-plant tables as of 31 January and 30 November 2025 and the company-hosted REDC Annual Report 2024 sections that reproduce 2015 hydropower feasibility-study summaries. Compared their exact project names, municipality/barangay labels, reported weir catchment areas, and date context with DPWH Annex D-2 row 101 and BMB Atlas Annex 2b row BL 75. No map was digitized, and no project site, catchment, channel, or principal basin was assigned geometry.",
+  "findings": [
+    {
+      "sourceId": "doe-luzon-grid-existing-power-plants-2025-01-31",
+      "locator": "Luzon Grid, hydroelectric/mini-hydroelectric register rows for LABAYAT (UPPER CASCADE) and LOWER LABAYAT; snapshot as of 31 January 2025.",
+      "evidence": "The Upper Labayat row lists Barangay Magalong, Real, Quezon; the Lower Labayat row lists Barangay Labayat, Real, Quezon. Both rows provide plant/status fields, not watercourse coordinates or boundaries.",
+      "supports": [
+        "historical DOE plant-name and municipality context",
+        "date-specific barangay labels"
+      ],
+      "doesNotSupport": [
+        "exact barangay resolution",
+        "river route or reach geometry",
+        "identity with the DPWH 56 sq km basin",
+        "fish presence or absence"
+      ]
+    },
+    {
+      "sourceId": "doe-luzon-grid-existing-power-plants-2025-11-30",
+      "locator": "Luzon Grid, hydroelectric/mini-hydroelectric register rows for LABAYAT (UPPER CASCADE) and LOWER LABAYAT; snapshot as of 30 November 2025.",
+      "evidence": "The Upper Labayat entry lists Barangay Maragondon, Real, Quezon (3.5 MW; commissioned September 2021); the Lower Labayat entry lists Barangay Lubayat, Real, Quezon (1.4 MW; commercial operation May 2024).",
+      "supports": [
+        "date-specific project names and operating status",
+        "shared municipality-level label Real, Quezon"
+      ],
+      "doesNotSupport": [
+        "a river or plant-site point",
+        "exact watercourse route",
+        "watershed boundaries",
+        "identity with the DPWH principal basin",
+        "fish presence or absence"
+      ]
+    },
+    {
+      "sourceId": "redc-annual-report-2024-labayat-hydrology",
+      "locator": "Annual Report 2024, Summary of the Feasibility Study for the Upper Labayat MHP and Summary of the Feasibility Study for the Lower Labayat MHP; embedded technical report says prepared by Vergel3 Consult in 2015.",
+      "evidence": "The Upper Labayat River hydrology section names Barangay Maragondon, Real, Quezon and reports a 37.09 sq km watershed area at its project weir. The Lower Labayat River section names Barangay Lubayat, Real, Quezon and reports an 8.53 sq km watershed area. The Lower section retains a dated/older narrative estimating operation in 1H 2023; DOE's November 2025 register later records May 2024 commercial operation.",
+      "supports": [
+        "project-specific upper/lower Labayat river names",
+        "project-site locality context in Real, Quezon",
+        "reported study-catchment areas at two project weirs"
+      ],
+      "doesNotSupport": [
+        "public watershed polygons",
+        "whether the two figures are nested, disjoint, or directly comparable",
+        "summation/subtraction against DPWH's 56 sq km",
+        "full-channel topology with BMB Atlas Labayat River",
+        "fish occurrence or current water conditions"
+      ]
+    },
+    {
+      "sourceId": "dpwh-2022-principal-river-basins-annex-d2",
+      "locator": "Department Order No. 47, s. 2022, Annex D-2, row 101.",
+      "evidence": "DPWH lists a Region IV-A principal basin named Labayat and reports 56 sq km; the row supplies no municipality, route, or geometry.",
+      "supports": [
+        "regional principal-basin name and reported area only"
+      ],
+      "doesNotSupport": [
+        "Real municipality allocation",
+        "identity with the project catchments or Atlas river",
+        "channel route, outlet, or polygon"
+      ]
+    },
+    {
+      "sourceId": "denr-bmb-inland-wetlands-atlas-2016",
+      "locator": "Annex 2b, row BL 75, PDF page 129 (printed page 117).",
+      "evidence": "The Atlas names Labayat River, lists Real, Quezon and Sta. Maria, Famy, and Siniloan, Laguna as source locality context, and reports Lamon Bay outflow; it supplies no route geometry.",
+      "supports": [
+        "a distinct historical Atlas-named river lead and its listed locality cell"
+      ],
+      "doesNotSupport": [
+        "whole-channel route or exact catchment delineation",
+        "identity with the DPWH basin or complete hydropower project drainage"
+      ]
+    }
+  ],
+  "crosswalkAssessment": {
+    "stableLocality": "Real, Quezon is the municipality name shared by both date-bounded DOE entries and the REDC project summaries; the exact barangay labels are not stable across the two DOE data vintages and should remain unassigned.",
+    "basinIdentity": "The hydropower records document Upper and Lower Labayat project subcatchment studies around Real. The records do not identify these technical catchments as the entire 56 sq km DPWH principal basin and do not demonstrate their topology relative to the BMB Atlas river.",
+    "areaTreatment": "Keep DPWH's 56 sq km basin area and REDC's 37.09 sq km Upper and 8.53 sq km Lower project-weir catchment figures as separate source-specific measurements. Do not add, subtract, compare as a closure equation, or derive polygons from them.",
+    "geometry": "No public GIS boundary, reach line, source coordinates, or reproducible route was found in the reviewed records. No point or geometry was created.",
+    "fishEvidence": "The reviewed materials are administrative power-register and hydropower-engineering sources, not fish surveys. They add no fish occurrence, absence, taxonomic, or species-coverage assertion.",
+    "reuse": "No item-specific open-data license or redistribution permission was identified for the new DOE or REDC materials. Keep extracted context research-only; publication or app redistribution remains unapproved."
+  },
+  "counts": {
+    "waterbodyResearchLeadsBefore": 164,
+    "waterbodyResearchLeadsAfter": 164,
+    "scopeRowsChanged": 0,
+    "municipalityCodeAssignments": 0,
+    "geometryValidated": 0,
+    "fishAssertionsAdded": 0,
+    "publicRecordsAdmitted": 0,
+    "sourceRegistryRecordsAdded": 3,
+    "publicationApproval": false,
+    "scopeFrozen": false
+  },
+  "decision": "Record the DOE/REDC material as project-level context only. Use Real, Quezon as the stable municipality-level context across the reviewed rows, retain the DOE barangay-version discrepancy, and keep the DPWH principal basin, project-specific weir catchments, and Atlas Labayat River separate because no route/topology source links them. Add no locality code, fish assertion, route, geometry, or public-app record.",
+  "nonClaims": [
+    "The project plant locations are not mapped river-channel or basin geometry.",
+    "The two REDC catchment figures are not shown to be directly comparable or additive to each other or to DPWH's regional 56 sq km figure.",
+    "No complete Labayat River route, mouth, tributary network, or principal-basin boundary is inferred.",
+    "No fish presence or absence, water quality, salinity, current hazard, public access, fishing legality, or bait/diet claim is made.",
+    "The separate Quezon advisory spelling Lakayat is not confirmed as a typo or synonym of Labayat.",
+    "This review does not change species coverage, locality scope, or public application data."
+  ],
+  "nextActions": [
+    "Seek a dated route-scale hydrography or georeferenced technical map that connects each project weir/catchment with the DPWH principal-basin frame and the BMB Atlas locality entry.",
+    "If an alternate DEM-derived delineation is attempted, preserve it as a modeled candidate with its elevation product, algorithm, pour point source, resolution, and validation limits; do not treat it as official geometry.",
+    "Review fish records independently by verified reach and date; engineering project presence is not biological occurrence."
+  ]
+}
