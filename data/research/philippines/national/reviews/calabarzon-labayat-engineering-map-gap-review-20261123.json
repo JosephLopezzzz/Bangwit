@@ -5,9 +5,9 @@
   "phaseId": "L1",
   "regionId": "0400000000",
   "provinceId": "0405600000",
-  "status": "upper-lower-project-engineering-parameters-screened;georeferenced-route-map-unverified;vertical-reference-anomaly-held;research-only",
-  "question": "Do publicly available Upper and Lower Labayat engineering excerpts provide enough georeferencing to resolve the route and check the DOE plant point against the named river?",
-  "purpose": "Record project engineering values that could help validate a future site-map comparison, while checking whether the available document text declares coordinates, a route map, or a spatial reference.",
+  "status": "upper-lower-project-engineering-parameters-screened;province-cluster-maps-visually-screened;site-route-map-unverified;vertical-reference-anomaly-held;research-only",
+  "question": "Do publicly available Upper and Lower Labayat engineering excerpts or project-location figures provide enough georeferencing to resolve the route and check the DOE plant point against the named river?",
+  "purpose": "Record project engineering values and screen identified project-location figures for site-level features, coordinates, and spatial references without deriving a route.",
   "waterbodyIds": [
     "ph-wb-labayat-river-quezon-laguna",
     "ph-wb-labayat-principal-basin-4a"
@@ -30,7 +30,7 @@
     "labayatDoePlantCoordinateCrosscheck": "0bf9cf76034baa717e9e5b1b4cf4f36c4e4435fa5778413812acdde1026b1ca5",
     "labayatHydroRiversGeonamesTriangulation": "f77e960cffa3b3fe637d2d09fe1c1fc3434f9bf20eb2c7e7f1bb05ba2a7996b1"
   },
-  "method": "Reviewed the searchable text of REDC's company-hosted Annual Report 2024, including its embedded Upper and Lower Labayat feasibility-study sections (identified in the report as prepared by Vergel3 Consult in 2015). Transcribed only the listed project-specification values. Searched the report text for latitude, longitude, easting, northing, site map, and location map terms; none were found. The DOE plant coordinate and earlier HydroRIVERS/GeoNames comparisons were used only as prior research context. The PDF was not visually rendered in this pass; raster or unindexed drawings may therefore remain undiscovered. No coordinate transformation, map digitization, geometry, or route inference was performed.",
+  "method": "Reviewed the searchable text of REDC's company-hosted Annual Report 2024, including its embedded Upper and Lower Labayat feasibility-study sections (identified in the report as prepared by Vergel3 Consult in 2015). Transcribed only the listed project-specification values. Searched the report text for latitude, longitude, easting, northing, site map, and location map terms; none were found. Also retrieved the archived 1 December 2016 Pure Energy Holdings preliminary prospectus (Internet Archive capture timestamp 20231213214825; downloaded PDF SHA-256 20f70219765aa7eae30509b3d930dedc019b853b89faae6a9b0a48105d9f864b) and visually rendered PDF pages 90 and 105, printed pages 79 and 94. Figures 10 and 16 show grouped Quezon hydropower project locations, not individual Upper/Lower Labayat infrastructure or a route. The DOE plant coordinate and earlier HydroRIVERS/GeoNames comparisons were used only as prior research context. No coordinate transformation, map digitization, geometry, or route inference was performed.",
   "observations": [
     {
       "sourceId": "redc-annual-report-2024-labayat-hydrology",
@@ -78,18 +78,35 @@
       "doesNotSupport": [
         "assigning the DOE point to the weir, intake, powerhouse, or river channel"
       ]
+    },
+    {
+      "sourceTitle": "Pure Energy Holdings Corporation Preliminary Prospectus dated 1 December 2016 (archived copy)",
+      "sourceUrl": "https://web.archive.org/web/20231213214825id_/https://www.pureenergy.com.ph/PEHC_PRELIMINARY_PROSPECTUS_1%20_DECEMBER_2016.pdf",
+      "sourceOriginalUrl": "https://www.pureenergy.com.ph/PEHC_PRELIMINARY_PROSPECTUS_1%20_DECEMBER_2016.pdf",
+      "locator": "PDF page 90 (printed p.79), Figure 10, Map of PURE Project Locations; PDF page 105 (printed p.94), Figure 16, Map of Hydropower Projects.",
+      "finding": "Both figures depict generalized Philippine project-location maps and group the Quezon hydropower sites. Neither figure distinguishes the Upper and Lower Labayat works, identifies the Labayat channel or project infrastructure, nor supplies a scale, coordinate grid, CRS/datum, or georeferenced route. The local archived PDF reviewed had SHA-256 20f70219765aa7eae30509b3d930dedc019b853b89faae6a9b0a48105d9f864b.",
+      "supports": [
+        "Quezon province-level project-cluster context only",
+        "a bounded visual screen showing that these two cited figures do not resolve the Labayat route"
+      ],
+      "doesNotSupport": [
+        "identifying an Upper or Lower Labayat project marker individually",
+        "a river or headrace route, intake, weir, powerhouse, coordinate, CRS, or boundary",
+        "copying either map into Bangwit; no item-specific reuse terms were identified"
+      ]
     }
   ],
   "candidateAssessment": {
     "engineeringValues": "Keep reported structure lengths, elevations, and project catchment areas as source-specific attributes. They are not coordinates or a substitute for georeferenced plans.",
     "elevationOrder": "The source's nominal Upper/Lower crest values are internally surprising by label, but without verified shared vertical reference and benchmarks they remain a discrepancy to check rather than a route verdict.",
-    "mapSearch": "No route-scale map with coordinates or declared spatial reference was found in the searchable text reviewed. The PDF was not visually inspected, so no conclusion is made about possible raster/unindexed diagrams.",
+    "mapSearch": "The REDC report's searchable text provides no route coordinates or spatial reference. Two visually screened figures in the archived 2016 prospectus show only grouped Quezon hydropower project locations and do not resolve Upper/Lower Labayat sites or routes. Other prospectus pages were not visually screened, so no claim is made about every figure in that document.",
     "identity": "The project-to-Atlas river and DPWH principal-basin crosswalks remain unresolved; the current technical excerpts do not connect the project infrastructure to a channel or catchment boundary.",
     "speciesEvidence": "No fish sampling, taxon, occurrence, diet, or species evidence was reviewed or changed."
   },
   "counts": {
     "projectEngineeringSectionsReviewed": 2,
     "projectCoordinatePairsInRedcText": 0,
+    "prospectusMapFiguresVisuallyScreened": 2,
     "projectRouteMapsGeoreferencedAndVerified": 0,
     "verticalReferenceDiscrepanciesFlagged": 1,
     "routeIdentitiesValidated": 0,
@@ -104,12 +121,14 @@
     "The REDC specification excerpts do not provide reproducible route geometry or horizontal coordinates in the searchable text reviewed.",
     "The reported headrace lengths and elevations were not used to draw or infer a route.",
     "The 19.6 m crest-elevation ordering discrepancy has not been adjudicated and may reflect source, design, reference, or transcription issues.",
-    "Raster or unindexed drawings in the PDF were not visually inspected and cannot be ruled out.",
+    "Only the two cited prospectus map figures were visually inspected; other prospectus pages or drawings may contain additional information and were not assessed.",
     "No Labayat river/basin identity, municipality-by-reach assignment, basin boundary, species evidence, public record, or app data was added."
   ],
   "nextAction": "Continue the public-source screen for a visually inspectable and dated plan/profile or as-built drawing that locates the Upper and Lower project weirs, headraces, and powerhouses on stated horizontal and vertical references. If none can be verified, keep the source-to-watercourse crosswalk and geometry unresolved; do not derive a route from engineering lengths or project labels.",
   "sourceLinks": {
     "redcAnnualReport2024": "https://repowerenergy.com.ph/files/REDC_ANNUAL_REPORT_2024_FINAL.pdf",
+    "pureEnergyProspectus2016Original": "https://www.pureenergy.com.ph/PEHC_PRELIMINARY_PROSPECTUS_1%20_DECEMBER_2016.pdf",
+    "pureEnergyProspectus2016Archived": "https://web.archive.org/web/20231213214825id_/https://www.pureenergy.com.ph/PEHC_PRELIMINARY_PROSPECTUS_1%20_DECEMBER_2016.pdf",
     "doeGenerationCompaniesRegister": "https://legacy.doe.gov.ph/sites/default/files/pdf/er1-94/Program%20Partners%20-%20Generation%20Companies.pdf"
   }
 }
