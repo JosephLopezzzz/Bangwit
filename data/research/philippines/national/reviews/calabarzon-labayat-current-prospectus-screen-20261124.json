@@ -1,0 +1,78 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "calabarzon-labayat-current-prospectus-screen-20261124",
+  "reviewedOn": "2026-11-24",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "provinceId": "0405600000",
+  "status": "selected-engineering-pages-screened;route-map-not-seen;research-only",
+  "question": "Do the currently company-linked Labayat feasibility-study pages in REDC's final prospectus show route-scale georeferencing?",
+  "purpose": "Visually screen a small, explicitly listed sample of prospectus pages for site plans, project coordinates, and route references; do not infer geometry from engineering tables.",
+  "waterbodyIds": [
+    "ph-wb-labayat-river-quezon-laguna",
+    "ph-wb-labayat-principal-basin-4a"
+  ],
+  "sourceIds": [],
+  "sourceTitle": "Repower Energy Development Corporation Final Prospectus dated 23 June 2023",
+  "sourceUrl": "https://www.repowerenergy.com.ph/assets/files/repower-investor-relations/prospectus/Final_Prospectus.pdf",
+  "sourceLandingPage": "https://www.repowerenergy.com.ph/prospectus",
+  "inputs": [
+    "data/research/philippines/sources.json",
+    "data/research/philippines/national/reviews/calabarzon-labayat-engineering-map-gap-review-20261123.json"
+  ],
+  "snapshotHashes": {
+    "sourceRegistry": "688830ff54d648d68b903c737ceb955069434a02e237039d6d6b8ee7b439b923",
+    "parentEngineeringMapGapReview": "d4dfdb53e629aabd32746ca34c2ae52846f61fd12d8a106386a68e125a30c9ec"
+  },
+  "method": "Followed REDC's official Prospectus page to its linked Final Prospectus PDF. The PDF viewer reports 486 pages. Visually inspected PDF pages 154, 155, 160, 166, and 170. Page 154 opens the Upper Labayat feasibility summary and states that the embedded technical report was prepared by Vergel3 Consult in 2015; page 155 shows a monthly-rainfall chart; pages 160 and 166 show project-cost and hydrology tables; page 170 opens the Lower Labayat feasibility summary. No page image was copied or digitized. This sample is not a full-document map audit.",
+  "observations": [
+    {
+      "sourceTitle": "Repower Energy Development Corporation Final Prospectus dated 23 June 2023",
+      "sourceUrl": "https://www.repowerenergy.com.ph/assets/files/repower-investor-relations/prospectus/Final_Prospectus.pdf",
+      "sourceLandingPage": "https://www.repowerenergy.com.ph/prospectus",
+      "locator": "PDF pp.154, 155, 160, 166, and 170.",
+      "finding": "The sampled pages show historical project-engineering summaries, charts, and tables. None of the sampled pages visibly shows a site plan or a georeferenced Upper/Lower Labayat route.",
+      "supports": [
+        "a bounded visual screen of the five cited pages for route-scale map content",
+        "historical project-engineering context only"
+      ],
+      "doesNotSupport": [
+        "a conclusion that other prospectus pages contain no map, plan, or coordinate",
+        "a surveyed route, project-site coordinate, CRS/datum, intake/weir/powerhouse location, channel identity, or catchment boundary",
+        "fish presence, catchability, habitat suitability, diet, fishing access, or fishing rules",
+        "reproduction or redistribution of prospectus images or tables; item-specific reuse terms were not identified"
+      ]
+    }
+  ],
+  "candidateAssessment": {
+    "pageScreen": "The sampled pages are not route maps and supply no visible route-level georeferencing. The sample is intentionally limited; do not treat it as a search of all prospectus figures or annex pages.",
+    "engineeringUse": "Keep any specification values in the parent review as source-attributed engineering context. Do not derive coordinates, align reaches, or draw a project route from lengths, elevations, or labels.",
+    "waterbodyIdentity": "The relationship among the Upper/Lower Labayat projects, the Atlas-named Labayat River, the DPWH Labayat principal basin, and advisory spelling Lakayat remains unresolved.",
+    "speciesEvidence": "No fish sampling, taxon, occurrence, diet, or species evidence was reviewed or changed."
+  },
+  "counts": {
+    "prospectusPdfPagesReported": 486,
+    "prospectusPagesVisuallySampled": 5,
+    "sitePlansSeenInSample": 0,
+    "routeMapsSeenInSample": 0,
+    "projectRouteMapsGeoreferencedAndVerified": 0,
+    "scopeRowsChanged": 0,
+    "geometryValidated": 0,
+    "fishAssertionsAdded": 0,
+    "publicRecordsAdmitted": 0,
+    "publicationApproval": false,
+    "scopeFrozen": false
+  },
+  "nonClaims": [
+    "Only PDF pages 154, 155, 160, 166, and 170 were visually inspected; other pages may contain additional drawings or spatial references.",
+    "No prospectus image, table, geometry, coordinate, or route was copied, digitized, or inferred.",
+    "The embedded feasibility material is historical project engineering, not ecological or fishery evidence.",
+    "No source-to-watercourse identity, municipal reach assignment, basin boundary, species, public record, or app data was added."
+  ],
+  "nextAction": "Continue with independently accessible route-scale material or public hydrographic datasets with explicit coverage, CRS, and provenance. Keep the Labayat project-to-river and project-to-basin crosswalk unresolved until a source locates the infrastructure on a declared spatial reference.",
+  "sourceLinks": {
+    "redcProspectusPage": "https://www.repowerenergy.com.ph/prospectus",
+    "redcFinalProspectusPdf": "https://www.repowerenergy.com.ph/assets/files/repower-investor-relations/prospectus/Final_Prospectus.pdf",
+    "parentEngineeringMapGapReview": "calabarzon-labayat-engineering-map-gap-review-20261123.json"
+  }
+}
