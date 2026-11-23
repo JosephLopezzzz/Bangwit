@@ -1,0 +1,170 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "calabarzon-labayat-hydrorivers-geonames-triangulation-20261123",
+  "reviewedOn": "2026-11-23",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "provinceId": "0405600000",
+  "status": "same-name-geonames-point-near-fao-modeled-reach;osm-name-match-absent;route-identity-unverified;research-only",
+  "question": "Do the existing GeoNames, FAO AQUASTAT HydroRIVERS, and OpenStreetMap screens independently identify the Labayat River or establish the route of the separate DPWH principal basin?",
+  "purpose": "Prioritize the next primary-map search by cross-checking the exact-name gazetteer point with archived modeled lines, the OSM feature-name query, the historical Atlas locality cell, and the DOE/REDC project context without treating name or proximity agreement as identity proof.",
+  "waterbodyIds": [
+    "ph-wb-labayat-river-quezon-laguna",
+    "ph-wb-labayat-principal-basin-4a"
+  ],
+  "sourceIds": [
+    "denr-bmb-inland-wetlands-atlas-2016",
+    "doe-luzon-grid-existing-power-plants-2025-01-31",
+    "doe-luzon-grid-existing-power-plants-2025-11-30",
+    "dpwh-2022-principal-river-basins-annex-d2",
+    "fao-aquastat-rivers-global-2026-wfs",
+    "geonames-ph-country-hydrography-2026-11-07",
+    "osm-calabarzon-waterway-name-crosscheck-20261108",
+    "redc-annual-report-2024-labayat-hydrology"
+  ],
+  "inputs": [
+    "data/research/philippines/calabarzon-scope.json",
+    "data/research/philippines/national/reviews/calabarzon-labayat-atlas-locality-crosswalk-20261123.json",
+    "data/research/philippines/national/reviews/calabarzon-labayat-project-hydropower-basin-crosswalk-20261123.json",
+    "data/research/philippines/national/reviews/fao-hydrorivers-calabarzon-wfs-screen-20261108.json",
+    "data/research/philippines/national/reviews/calabarzon-waterway-three-source-priority-20261109.json",
+    "data/research/philippines/raw/national/geonames-ph-20261107/calabarzon-hydrographic-candidates.jsonl",
+    "data/research/philippines/raw/national/geonames-ph-20261107/calabarzon-stream-scope-review.jsonl",
+    "data/research/philippines/raw/national/fao-hydrorivers-calabarzon-wfs-20261108/calabarzon-geonames-stream-nearest-hydrorivers.jsonl",
+    "data/research/philippines/raw/national/fao-hydrorivers-calabarzon-wfs-20261108/stream-scope-nearest-line-review.jsonl",
+    "data/research/philippines/raw/national/fao-hydrorivers-calabarzon-wfs-20261108/page-01500.geojson",
+    "data/research/philippines/raw/national/osm-calabarzon-waterway-name-crosscheck-20261108/candidate-crosscheck.jsonl",
+    "data/research/philippines/raw/national/osm-calabarzon-waterway-name-crosscheck-20261108/three-source-priority-20261109.jsonl",
+    "data/research/philippines/raw/national/hydrorivers-v1-asia-20261123/HydroRIVERS_v10_as_shp.zip"
+  ],
+  "snapshotHashes": {
+    "scope": "0c327893f8a0540846d8bcd78b38a3df17176e064939fd9e3b5c031367245ec3",
+    "sourceRegistry": "4d4d5900cb309f081ad71cb28c491de75db6efd2e02add8a08df3e9f8f61f2fd",
+    "labayatAtlasLocalityCrosswalk": "25877d66eb42fa1f87f6bc9d22329ec3cf3da383ff4124cf64f0bf1ff7408f1a",
+    "labayatHydropowerBasinReview": "975dc4f1930c2de5521143efb28607aaa2d45b7b51b4902f8f4af6cda418e893",
+    "faoHydroRiversWfsScreen": "adfbb8610c0311155b6fed4ae1d7eb320bdb20222ecce6cc3675c94c9fb27138",
+    "threeSourcePriorityReview": "906ce08d9c95918fa41411788c8a225a35cc066b1e798305d627f7fad5ede561",
+    "geonamesCandidates": "3b104459534ab8eb1f0fdb3b45d66c67f44954be863073dddee8ecd5cab8969a",
+    "geonamesScopeRows": "5b535f6d65872f224b72c2d1f300b3d9b08ee8d076b041af00a2c8acaa76c454",
+    "faoNearestReachRows": "711f20be9d195a258eb770354d94ba123934922fbe3be337bfdfd6ceadd5fbee",
+    "faoScopeNearestRows": "095bd645f09efe081350099d030d242003a041d1f79fdca0f04f9208875ab211",
+    "faoFeaturePage1500": "6e6dd9cd7a651bfb19e78898aa222a49c2901eea868344e4a319bedfb06df521",
+    "osmCandidateRows": "530c93fa4b226861c75c8e04791ac553b765abdd1a49c304531dfbecebbc169d",
+    "threeSourceCandidateRows": "8986bc47666ee7b873f581239bc8defbf754bc119f7d908cd700b065449d862b",
+    "hydroRiversAsiaArchive": "29780b0a75f90024f22e7e2029e5e3045f7325cda0528db65c5cc4c864b98525"
+  },
+  "method": "Reused the immutable, Git-ignored GeoNames and FAO WFS snapshots from November 2026 and their saved OSM cross-check. Read the GeoNames record and same-scope rows, joined by geonameId 1708329, and inspected FAO feature HYRIV_ID 50013694 from page offset 1500. Repeated a direct HydroRIVERS v1 Asia ZIP geometry-envelope scan from the official product download, counting shapefile record bounding boxes against the Philippines envelope (116,4,128,21.3) and a local CALABARZON envelope (121,14.2,122,15.2); comparison windows over the Mekong Delta, northern Thailand and Taiwan returned 3531, 6012 and 4859 reaches, respectively. Reviewed the prior OSM query result for the candidate. No local line was assigned to a named waterbody.",
+  "observations": [
+    {
+      "sourceId": "geonames-ph-country-hydrography-2026-11-07",
+      "locator": "Philippines GeoNames extract, geonameId 1708329; local CALABARZON candidate extract and name-to-scope review rows.",
+      "finding": "One exact-name 'Labayat River' stream point is recorded at WGS84 longitude 121.63147, latitude 14.5034. Its simplified polygon context is Quezon, not a municipality code or official route. The candidate is paired by name with the separate Atlas-named Labayat River lead, but the crosswalk explicitly leaves identity unvalidated.",
+      "supports": [
+        "a named gazetteer discovery point",
+        "a coordinate around which an independent route-scale source can be searched"
+      ],
+      "doesNotSupport": [
+        "a surveyed watercourse position or route",
+        "a Real municipality assignment for the point",
+        "fish presence or absence"
+      ]
+    },
+    {
+      "sourceId": "fao-aquastat-rivers-global-2026-wfs",
+      "locator": "Saved CALABARZON WFS response page-01500.geojson; feature HYRIV_ID 50013694, joined to GeoNames geonameId 1708329 in the 8 November three-source screen.",
+      "finding": "The nearest saved modeled feature is a 4.12 km MultiLineString reach whose envelope is 121.6021–121.6312 E and 14.4937–14.5021 N. The earlier regional equirectangular screen places it 0.147 km from the GeoNames point. The feature reports NEXT_DOWN=0, MAIN_RIV=50013694, CATCH_SKM=8.31, UPLAND_SKM=86, DIS_AV_CMS=5.678 and Strahler order 6. These are modeled-network attributes; the terminal destination, local route, drainage semantics, and identity with Labayat are not independently established.",
+      "supports": [
+        "a nearby modeled line candidate for manual map comparison",
+        "a traceable HydroRIVERS feature ID and source attributes"
+      ],
+      "doesNotSupport": [
+        "identity with the named GeoNames point, Atlas river, DOE/REDC project reaches, or DPWH basin",
+        "a Lamon Bay outlet assignment or official catchment boundary",
+        "equivalence between the modeled 8.31 sq km direct-reach catchment and REDC's separate 8.53 sq km Lower Labayat project-weir study area",
+        "current flow, water quality, fish presence or fishing access"
+      ]
+    },
+    {
+      "sourceId": "osm-calabarzon-waterway-name-crosscheck-20261108",
+      "locator": "Saved candidate-crosscheck.jsonl row for geonameId 1708329 and the earlier bounded CALABARZON Overpass query result.",
+      "finding": "The saved cross-check reports zero OSM waterway features with the same normalized name and no nearest same-name feature. This is a community-map coverage result only; it does not show that the river is absent. A bounded repeat on 23 November produced no new data: overpass-api.de returned HTTP 502 with a queue-full message, and one alternate public endpoint timed out. Neither failure is an OSM result or evidence of absence.",
+      "supports": [
+        "no same-name OSM feature in the saved 8 November query result"
+      ],
+      "doesNotSupport": [
+        "absence of a river or proof that the 2026 OSM database remains unchanged"
+      ]
+    },
+    {
+      "sourceId": "fao-aquastat-rivers-global-2026-wfs",
+      "locator": "Official HydroRIVERS v1 Asia shapefile ZIP, SHA-256 29780b0a75f90024f22e7e2029e5e3045f7325cda0528db65c5cc4c864b98525; retained in Git-ignored research storage.",
+      "finding": "The 90,510,995-byte package contains 1,428,959 reach records. The direct v1 Asia shapefile envelope scan found zero record bounding boxes intersecting either the broad Philippines rectangle (116,4,128,21.3) or the target CALABARZON rectangle (121,14.2,122,15.2). Control windows in the same file returned thousands of records. This package-level outcome does not negate the separate FAO 2026 WFS snapshot, which returned 4,719 reaches in its wider CALABARZON-area query; the products and vintages must not be treated as interchangeable.",
+      "supports": [
+        "a dated package-specific coverage gap in this HydroRIVERS v1 Asia ZIP over the tested Philippine envelope"
+      ],
+      "doesNotSupport": [
+        "a claim that HydroRIVERS v1 or FAO's 2026 WFS has no Philippine data overall",
+        "a conclusion that a river or species is absent"
+      ]
+    },
+    {
+      "sourceId": "doe-luzon-grid-existing-power-plants-2025-11-30",
+      "locator": "DOE Luzon grid-connected existing-plant register, 30 November 2025; paired with the 31 January 2025 register and REDC Annual Report 2024 technical excerpts in the preceding project crosswalk.",
+      "finding": "The reviewed DOE vintages and REDC project summaries provide Real, Quezon municipality context for Upper and Lower Labayat hydropower projects, while DOE's barangay labels differ across vintages. They provide no coordinates that link the GeoNames point or HYRIV_ID 50013694 to either project. The earlier REDC 8.53 sq km figure is a project-weir study area, not the modeled reach's 8.31 sq km direct-contributing area.",
+      "supports": [
+        "project activity under a shared municipality name that can guide a search for georeferenced technical maps"
+      ],
+      "doesNotSupport": [
+        "a point or route match to the nearby HydroRIVERS reach",
+        "the principal-basin relationship or a fish assertion"
+      ]
+    },
+    {
+      "sourceId": "denr-bmb-inland-wetlands-atlas-2016",
+      "locator": "Annex 2b, row BL 75, PDF page 129 (printed page 117), as transcribed in the separate Atlas locality crosswalk.",
+      "finding": "The Atlas names Labayat River, lists Real, Quezon and Sta. Maria, Famy and Siniloan, Laguna as locality context, and reports Lamon Bay outflow, but gives no route geometry. This supplies a source-named search context only; it does not prove that the point or modeled reach is the Atlas feature or that the full river is contained in those municipalities.",
+      "supports": [
+        "an independent historical locality and outflow description for prioritizing a map search"
+      ],
+      "doesNotSupport": [
+        "a digitized route, exact outlet, reach identity, or municipal-boundary crosswalk"
+      ]
+    }
+  ],
+  "candidateAssessment": {
+    "identity": "Exact name plus a single nearby modeled line raises the Labayat river candidate's review priority, but the name point, OSM result, HydroRIVERS reach, Atlas feature, hydropower project reaches, and DPWH principal basin remain unlinked by a route-scale primary source.",
+    "municipality": "Retain the separate DOE/REDC Real, Quezon project context and the GeoNames province context as distinct facts. Add no municipality code to the point or the waterbody from proximity.",
+    "archiveDiscrepancy": "The local HydroRIVERS v1 Asia ZIP screen returned no Philippines-envelope lines while FAO's separately published 2026 WFS snapshot includes modeled reaches around the candidate. Preserve this package/version difference; do not use the ZIP's zero result as a negative presence record.",
+    "geometry": "The WFS candidate is modeled geometry only. The 147 m point-to-line result is a prioritization distance from the earlier regional equirectangular screen, not a geodetic identity determination or field validation.",
+    "speciesEvidence": "No fish survey, taxonomy, catch, diet, or species evidence is supplied by these hydrography and project-location comparisons."
+  },
+  "counts": {
+    "namedGeoNamesCandidates": 1,
+    "nearbyModeledReachCandidates": 1,
+    "savedOsmSameNameFeatures": 0,
+    "directHydroRiversAsiaArchiveFeaturesInPhilippinesEnvelope": 0,
+    "watercourseIdentitiesValidated": 0,
+    "municipalityAssignmentsAdded": 0,
+    "scopeRowsChanged": 0,
+    "geometryValidated": 0,
+    "fishAssertionsAdded": 0,
+    "publicRecordsAdmitted": 0,
+    "publicationApproval": false,
+    "scopeFrozen": false
+  },
+  "nonClaims": [
+    "The GeoNames point and nearby HydroRIVERS line are not established as the same Labayat River feature.",
+    "The modeled feature's terminal line graph position does not identify its outlet as Lamon Bay.",
+    "The HydroRIVERS direct-reach catchment figure is not interchangeable with REDC's project-weir catchment figure or DPWH's 56 sq km regional basin area.",
+    "The direct v1 ZIP's zero count in a broad rectangle does not prove that waterways or fish are absent in the Philippines.",
+    "No province or municipality code, current route, boundary, species occurrence, safety/access rule, or public-app geometry is added."
+  ],
+  "nextAction": "Seek a dated, georeferenced DOE/REDC plant-site map or another independently sourced route-scale hydrographic map for the Upper and Lower Labayat reaches; compare it to the GeoNames point and FAO reach only if the map exposes readable coordinates or a reproducible spatial reference. If no such map is public, keep all identities and geometry unresolved.",
+  "sourceLinks": {
+    "hydroRiversV1AsiaZip": "https://data.hydrosheds.org/file/HydroRIVERS/HydroRIVERS_v10_as_shp.zip",
+    "hydroRiversProduct": "https://www.hydrosheds.org/products/hydrorivers",
+    "hydroRiversTechnicalDocumentation": "https://data.hydrosheds.org/file/technical-documentation/HydroRIVERS_TechDoc_v10.pdf",
+    "hydroShedsV2Coverage": "https://www.hydrosheds.org/products/hydrosheds-v2",
+    "faoRivers2026Catalog": "https://data.fao.org/catalog/dataset/e22667af-3977-4e9f-b58b-67fb91b0fa87"
+  }
+}
