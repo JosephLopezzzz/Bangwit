@@ -1,0 +1,236 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "calabarzon-labayat-atlas-locality-crosswalk-20261123",
+  "reviewedOn": "2026-11-23",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "status": "four-atlas-listed-locality-codes-crosswalked-to-labayat-river;route-and-name-identity-unresolved;research-only",
+  "question": "Which CALABARZON municipality names does the visually reviewed DENR-BMB Atlas locality cell list for Labayat River, and what source scale can be safely recorded?",
+  "purpose": "Crosswalk only municipality names explicitly listed in the Atlas row to the PSA municipality denominator while keeping the route, separate basin, and Quezon advisory spelling unresolved.",
+  "waterbodyId": "ph-wb-labayat-river-quezon-laguna",
+  "sourceIds": [
+    "denr-bmb-inland-wetlands-atlas-2016",
+    "psa-calabarzon-municipalities-list"
+  ],
+  "inputs": [
+    "data/research/philippines/calabarzon-scope.json",
+    "data/research/philippines/sources.json",
+    "data/research/philippines/administrative-registry.json",
+    "data/research/philippines/national/reviews/calabarzon-administrative-denominator-reconciliation-20261117.json",
+    "data/research/philippines/calabarzon-bmb-2016-table-visual-review-20261024.json",
+    "data/research/philippines/calabarzon-quezon-lakayat-labayat-variant-review-20261101.json",
+    "data/research/philippines/raw/philchm/atlas-philippine-inland-wetlands-classified-caves-2016.pdf"
+  ],
+  "snapshotHashes": {
+    "scopeBeforeReview": "5c00323a0fbc65ca1e40f1718b3acc572a426b64295d3ec71a726daee367789e",
+    "scopeAfterReview": "0c327893f8a0540846d8bcd78b38a3df17176e064939fd9e3b5c031367245ec3",
+    "sourceRegistryBeforeReview": "64398eff0e01b42c583ac5b7ab10c5fddd7af519279546803e0167b273b39431",
+    "sourceRegistry": "42125ae05570d3f2ba89eb47797444520bdd0934190b12ffbaa9b2fa92b7c838",
+    "administrativeRegistry": "c741456fbc2cfc9d5d813484a0b661ef206154977959fc27a289ca86732142e8",
+    "administrativeDenominator": "0688d4bf58dd848571c23cbc09f2bbb71244aace0f5842bb59ee473f483f7ce0",
+    "atlasTableVisualReview": "14cb8c4d748953f676a8f7e04898b016dacd70a8ef8fcfb653615f0adae4c126",
+    "labayatNameVariantReview": "67e38363c9c5f28bb04a4e2d1f7b0231fec44f368823726e11a52de1f7c4749b"
+  },
+  "method": "Visually inspected official BMB Atlas PDF page 129 (printed page 117), Annex 2b row BL 75; transcribed the locality names and cross-checked their PSA CALABARZON municipality codes. Recorded source-listed locality context only; did not digitize map features or infer channel reaches.",
+  "sourceRows": [
+    {
+      "sourceId": "denr-bmb-inland-wetlands-atlas-2016",
+      "source": "DENR-BMB Atlas of Philippine Inland Wetlands and Classified Caves (2016), Annex 2b, row BL 75.",
+      "page": "PDF page 129; printed page 117.",
+      "transcription": {
+        "waterbody": "Labayat River",
+        "region": "Region IV-A",
+        "province": "Quezon",
+        "locality": "Real, Quezon and Sta. Maria, Famy, Siniloan, Laguna",
+        "outflow": "Lamon Bay"
+      },
+      "interpretation": "Historical locality field only; no separate channel reaches or line geometry are supplied."
+    },
+    {
+      "sourceId": "psa-calabarzon-municipalities-list",
+      "source": "PSA CALABARZON municipality directory, as crosswalked in the 2026-11-17 working denominator reconciliation.",
+      "rows": [
+        {
+          "municipality": "Real",
+          "province": "Quezon",
+          "psgcCode": "0405638000"
+        },
+        {
+          "municipality": "Santa Maria",
+          "province": "Laguna",
+          "psgcCode": "0403427000"
+        },
+        {
+          "municipality": "Famy",
+          "province": "Laguna",
+          "psgcCode": "0403408000"
+        },
+        {
+          "municipality": "Siniloan",
+          "province": "Laguna",
+          "psgcCode": "0403429000"
+        }
+      ],
+      "interpretation": "Name/code crosswalk only; the directory does not supply a waterbody boundary."
+    }
+  ],
+  "localityAssessment": {
+    "atlasLocalityText": "Real, Quezon and Sta. Maria, Famy, Siniloan, Laguna",
+    "sourceName": "Labayat River",
+    "assignments": [
+      {
+        "municipality": "Real",
+        "province": "Quezon",
+        "psgcCode": "0405638000",
+        "sourceLocality": "Real, Quezon",
+        "relationship": "historical-atlas-listed-locality"
+      },
+      {
+        "municipality": "Santa Maria",
+        "province": "Laguna",
+        "psgcCode": "0403427000",
+        "sourceLocality": "Sta. Maria, Laguna",
+        "relationship": "historical-atlas-listed-locality"
+      },
+      {
+        "municipality": "Famy",
+        "province": "Laguna",
+        "psgcCode": "0403408000",
+        "sourceLocality": "Famy, Laguna",
+        "relationship": "historical-atlas-listed-locality"
+      },
+      {
+        "municipality": "Siniloan",
+        "province": "Laguna",
+        "psgcCode": "0403429000",
+        "sourceLocality": "Siniloan, Laguna",
+        "relationship": "historical-atlas-listed-locality"
+      }
+    ],
+    "identityDisposition": "four-source-listed-locality-names-crosswalked;whole-channel-extent-and-reach-geometry-unresolved",
+    "sourceScale": "Historical Atlas locality cell; named municipality context does not imply that the entire channel lies in each municipality.",
+    "separateFeatures": {
+      "labayatPrincipalBasin": "Separate Region IV-A basin-name lead; row 101 area is not geometry and does not establish municipality allocation or topology with this river.",
+      "quezonAdvisoryLakayat": "Spelling and identity relationship remain unconfirmed."
+    }
+  },
+  "assignments": [
+    {
+      "waterbodyId": "ph-wb-labayat-river-quezon-laguna",
+      "sourceIds": [
+        "denr-bmb-inland-wetlands-atlas-2016",
+        "psa-calabarzon-municipalities-list"
+      ],
+      "sourcePage": "DENR-BMB 2016 Atlas, Annex 2b, row BL 75; PDF p.129 (printed p.117), visually checked. PSA CALABARZON municipality directory crosswalk for names and PSGC codes.",
+      "sourceRow": "Atlas row BL 75 locality field: Real, Quezon and Sta. Maria, Famy, Siniloan, Laguna; PSA code 0405638000.",
+      "sourceLocality": "Real, Quezon",
+      "relationship": "historical-atlas-listed-locality",
+      "codes": [
+        {
+          "level": "municipality",
+          "psgcCode": "0405638000",
+          "name": "Real",
+          "province": "Quezon",
+          "provincePsgcCode": "0405600000",
+          "sourceId": "psa-calabarzon-municipalities-list"
+        }
+      ],
+      "limit": "Historical Atlas locality context only. The source does not delineate the channel reach, complete route, exclusive municipal containment, or a relationship to the separate Labayat basin or advisory spelling “Lakayat.”"
+    },
+    {
+      "waterbodyId": "ph-wb-labayat-river-quezon-laguna",
+      "sourceIds": [
+        "denr-bmb-inland-wetlands-atlas-2016",
+        "psa-calabarzon-municipalities-list"
+      ],
+      "sourcePage": "DENR-BMB 2016 Atlas, Annex 2b, row BL 75; PDF p.129 (printed p.117), visually checked. PSA CALABARZON municipality directory crosswalk for names and PSGC codes.",
+      "sourceRow": "Atlas row BL 75 locality field: Real, Quezon and Sta. Maria, Famy, Siniloan, Laguna; PSA code 0403427000.",
+      "sourceLocality": "Sta. Maria, Laguna",
+      "relationship": "historical-atlas-listed-locality",
+      "codes": [
+        {
+          "level": "municipality",
+          "psgcCode": "0403427000",
+          "name": "Santa Maria",
+          "province": "Laguna",
+          "provincePsgcCode": "0403400000",
+          "sourceId": "psa-calabarzon-municipalities-list"
+        }
+      ],
+      "limit": "Historical Atlas locality context only. The source does not delineate the channel reach, complete route, exclusive municipal containment, or a relationship to the separate Labayat basin or advisory spelling “Lakayat.”"
+    },
+    {
+      "waterbodyId": "ph-wb-labayat-river-quezon-laguna",
+      "sourceIds": [
+        "denr-bmb-inland-wetlands-atlas-2016",
+        "psa-calabarzon-municipalities-list"
+      ],
+      "sourcePage": "DENR-BMB 2016 Atlas, Annex 2b, row BL 75; PDF p.129 (printed p.117), visually checked. PSA CALABARZON municipality directory crosswalk for names and PSGC codes.",
+      "sourceRow": "Atlas row BL 75 locality field: Real, Quezon and Sta. Maria, Famy, Siniloan, Laguna; PSA code 0403408000.",
+      "sourceLocality": "Famy, Laguna",
+      "relationship": "historical-atlas-listed-locality",
+      "codes": [
+        {
+          "level": "municipality",
+          "psgcCode": "0403408000",
+          "name": "Famy",
+          "province": "Laguna",
+          "provincePsgcCode": "0403400000",
+          "sourceId": "psa-calabarzon-municipalities-list"
+        }
+      ],
+      "limit": "Historical Atlas locality context only. The source does not delineate the channel reach, complete route, exclusive municipal containment, or a relationship to the separate Labayat basin or advisory spelling “Lakayat.”"
+    },
+    {
+      "waterbodyId": "ph-wb-labayat-river-quezon-laguna",
+      "sourceIds": [
+        "denr-bmb-inland-wetlands-atlas-2016",
+        "psa-calabarzon-municipalities-list"
+      ],
+      "sourcePage": "DENR-BMB 2016 Atlas, Annex 2b, row BL 75; PDF p.129 (printed p.117), visually checked. PSA CALABARZON municipality directory crosswalk for names and PSGC codes.",
+      "sourceRow": "Atlas row BL 75 locality field: Real, Quezon and Sta. Maria, Famy, Siniloan, Laguna; PSA code 0403429000.",
+      "sourceLocality": "Siniloan, Laguna",
+      "relationship": "historical-atlas-listed-locality",
+      "codes": [
+        {
+          "level": "municipality",
+          "psgcCode": "0403429000",
+          "name": "Siniloan",
+          "province": "Laguna",
+          "provincePsgcCode": "0403400000",
+          "sourceId": "psa-calabarzon-municipalities-list"
+        }
+      ],
+      "limit": "Historical Atlas locality context only. The source does not delineate the channel reach, complete route, exclusive municipal containment, or a relationship to the separate Labayat basin or advisory spelling “Lakayat.”"
+    }
+  ],
+  "counts": {
+    "waterbodyResearchLeadsBefore": 164,
+    "waterbodyResearchLeadsAfter": 164,
+    "leadsUpdated": 1,
+    "localityCodeAssignmentsAdded": 4,
+    "municipalityCodeAssignments": 4,
+    "administrativeAssociationRowsBefore": 234,
+    "administrativeAssociationRowsAfter": 238,
+    "leadsWithCityOrMunicipalityCodeAfter": 82,
+    "leadsWithProvinceCodeButNoCityOrMunicipalityCodeAfter": 79,
+    "leadsWithoutProvinceCityOrMunicipalityCodeAfter": 3,
+    "cityCodesPresentAfter": 15,
+    "municipalityCodesPresentAfter": 54,
+    "municipalityCodeDenominator": 120,
+    "cityCodeDenominator": 22,
+    "geometryValidated": 0,
+    "fishAssertionsAdded": 0,
+    "publicRecordsAdmitted": 0,
+    "scopeFrozen": false
+  },
+  "nonClaims": [
+    "The Atlas is historical; it does not establish present-day condition, fish presence or absence, or a complete inventory.",
+    "Municipality names are source-listed locality context only; no channel segment, route, basin boundary, or municipality-wide water coverage was digitized or inferred.",
+    "The Atlas Labayat River, DPWH Labayat Principal River Basin, and advisory spelling “Lakayat” remain separate unresolved identities.",
+    "No species, occurrence, abundance, taxonomy, photo, salinity, water quality, safety, access, or fishing-rule assertion was added.",
+    "No public application record or geometry was admitted."
+  ],
+  "decision": "Add four historical-atlas-listed municipality locality associations—Real in Quezon and Santa Maria, Famy, and Siniloan in Laguna—to the Labayat River research lead only. Keep the river route, basin relationship, Quezon advisory “Lakayat” identity, and fish evidence unresolved.",
+  "nextAction": "Continue locality and route-scale source review for Mamba/Cacabay and the separate Bucal and Labayat principal-basin leads. Keep the L1 scope unfrozen and do not infer geometry from locality names or basin areas."
+}

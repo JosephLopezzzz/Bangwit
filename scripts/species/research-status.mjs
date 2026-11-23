@@ -90,6 +90,7 @@ export function buildResearchStatus({
   calabarzonMambaCacabayIdentityReview,
   calabarzonBucalVariantReview,
   calabarzonLabayatVariantReview,
+  calabarzonLabayatAtlasLocalityCrosswalk,
   calabarzonGapanReview,
   calabarzonGapanGeoNamesCrosscheck,
   inputHashes,
@@ -919,8 +920,14 @@ export function buildResearchStatus({
     calabarzonLocalitySourceBackedBatch14.snapshotHashes.previousLocalityBatch,
     inputHashes.calabarzonLocalitySourceBackedBatch13,
   );
-  assert.equal(calabarzonLocalitySourceBackedBatch14.snapshotHashes.scopeAfterBatch, inputHashes.scope);
-  assert.equal(calabarzonLocalitySourceBackedBatch14.snapshotHashes.calabarzonScope, inputHashes.scope);
+  assert.equal(
+    calabarzonLocalitySourceBackedBatch14.snapshotHashes.scopeAfterBatch,
+    calabarzonLabayatAtlasLocalityCrosswalk.snapshotHashes.scopeBeforeReview,
+  );
+  assert.equal(
+    calabarzonLocalitySourceBackedBatch14.snapshotHashes.calabarzonScope,
+    calabarzonLabayatAtlasLocalityCrosswalk.snapshotHashes.scopeBeforeReview,
+  );
   assert.equal(
     calabarzonLocalitySourceBackedBatch14.snapshotHashes.sourceRegistry,
     calabarzonMambaCacabayIdentityReview.snapshotHashes.sourceRegistryBeforeReview,
@@ -965,6 +972,67 @@ export function buildResearchStatus({
   assert.equal(calabarzonLocalitySourceBackedBatch14.counts.publicRecordsAdmitted, 0);
   assert.equal(calabarzonLocalitySourceBackedBatch14.counts.scopeFrozen, false);
   assert.equal(
+    calabarzonLabayatAtlasLocalityCrosswalk.reviewId,
+    "calabarzon-labayat-atlas-locality-crosswalk-20261123",
+  );
+  assert.equal(calabarzonLabayatAtlasLocalityCrosswalk.regionId, "0400000000");
+  assert.equal(calabarzonLabayatAtlasLocalityCrosswalk.waterbodyId, "ph-wb-labayat-river-quezon-laguna");
+  assert.deepEqual(calabarzonLabayatAtlasLocalityCrosswalk.sourceIds, [
+    "denr-bmb-inland-wetlands-atlas-2016",
+    "psa-calabarzon-municipalities-list",
+  ]);
+  assert.equal(
+    calabarzonLabayatAtlasLocalityCrosswalk.snapshotHashes.scopeBeforeReview,
+    calabarzonLocalitySourceBackedBatch14.snapshotHashes.scopeAfterBatch,
+  );
+  assert.equal(calabarzonLabayatAtlasLocalityCrosswalk.snapshotHashes.scopeAfterReview, inputHashes.scope);
+  assert.equal(calabarzonLabayatAtlasLocalityCrosswalk.snapshotHashes.sourceRegistry, inputHashes.sources);
+  assert.equal(
+    calabarzonLabayatAtlasLocalityCrosswalk.snapshotHashes.administrativeRegistry,
+    inputHashes.registry,
+  );
+  assert.equal(
+    calabarzonLabayatAtlasLocalityCrosswalk.snapshotHashes.administrativeDenominator,
+    inputHashes.calabarzonAdministrativeDenominator,
+  );
+  for (const id of calabarzonLabayatAtlasLocalityCrosswalk.sourceIds) {
+    assert.ok(sourceIds.has(id), `Unknown Labayat locality crosswalk source: ${id}`);
+  }
+  const labayatRiver = scope.waterbodies.find((waterbody) =>
+    waterbody.id === calabarzonLabayatAtlasLocalityCrosswalk.waterbodyId,
+  );
+  const labayatAssignments = calabarzonLabayatAtlasLocalityCrosswalk.assignments;
+  assert.equal(labayatAssignments.length, 4);
+  assert.deepEqual(
+    labayatAssignments.map((assignment) => assignment.codes[0].psgcCode).sort(),
+    ["0403408000", "0403427000", "0403429000", "0405638000"],
+  );
+  for (const assignment of labayatAssignments) {
+    assert.equal(assignment.relationship, "historical-atlas-listed-locality");
+    assert.ok(labayatRiver.administrativeAssociations.some((association) =>
+      association.regionId === "0400000000" &&
+      association.provinceId === assignment.codes[0].provincePsgcCode &&
+      association.municipalityId === assignment.codes[0].psgcCode &&
+      association.relationship === assignment.relationship &&
+      assignment.sourceIds.every((id) => association.sourceRefs.includes(id)),
+    ));
+  }
+  const labayatBasin = scope.waterbodies.find((waterbody) => waterbody.id === "ph-wb-labayat-principal-basin-4a");
+  assert.ok(labayatBasin);
+  assert.equal(labayatBasin.administrativeAssociations.some((association) => association.municipalityId), false);
+  assert.equal(labayatRiver.boundaryStatus, "not-delineated");
+  assert.equal(labayatRiver.fishEvidenceStatus, "not-reviewed");
+  assert.equal(labayatRiver.publicAdmission, false);
+  assert.equal(calabarzonLabayatAtlasLocalityCrosswalk.counts.administrativeAssociationRowsAfter, 238);
+  assert.equal(calabarzonLabayatAtlasLocalityCrosswalk.counts.leadsWithCityOrMunicipalityCodeAfter, 82);
+  assert.equal(calabarzonLabayatAtlasLocalityCrosswalk.counts.leadsWithProvinceCodeButNoCityOrMunicipalityCodeAfter, 79);
+  assert.equal(calabarzonLabayatAtlasLocalityCrosswalk.counts.municipalityCodesPresentAfter, 54);
+  assert.equal(calabarzonLabayatAtlasLocalityCrosswalk.counts.cityCodesPresentAfter, 15);
+  assert.equal(calabarzonLabayatAtlasLocalityCrosswalk.counts.geometryValidated, 0);
+  assert.equal(calabarzonLabayatAtlasLocalityCrosswalk.counts.fishAssertionsAdded, 0);
+  assert.equal(calabarzonLabayatAtlasLocalityCrosswalk.counts.publicRecordsAdmitted, 0);
+  assert.equal(calabarzonLabayatAtlasLocalityCrosswalk.counts.scopeFrozen, false);
+  assert.equal(
     calabarzonMambaCacabayIdentityReview.reviewId,
     "calabarzon-mamba-cacabay-name-relationship-review-20261121",
   );
@@ -998,6 +1066,12 @@ export function buildResearchStatus({
       "data/research/philippines/national/reviews/calabarzon-mamba-cacabay-name-relationship-review-20261121.json",
     ),
     "CALABARZON manifest must link the Mamba/Cacabay source-name review",
+  );
+  assert.ok(
+    calabarzonManifestRegion.evidenceRefs.includes(
+      "data/research/philippines/national/reviews/calabarzon-labayat-atlas-locality-crosswalk-20261123.json",
+    ),
+    "CALABARZON manifest must link the Labayat Atlas locality crosswalk",
   );
   assert.equal(
     calabarzonLocalityLinkageAudit.findings.sourceBackedLocalityBatch14.sha256,
@@ -1133,6 +1207,7 @@ export function buildResearchStatus({
     ["mambaPalicpicanSourceReview", "mambaPalicpicanSourceReview"],
     ["bucalNameVariantReview", "bucalNameVariantReview"],
     ["labayatNameVariantReview", "labayatNameVariantReview"],
+    ["labayatAtlasLocalityCrosswalk", "calabarzonLabayatAtlasLocalityCrosswalk"],
   ]) {
     assert.equal(
       calabarzonLocalityLinkageAudit.snapshotHashes[key],
@@ -1148,6 +1223,7 @@ export function buildResearchStatus({
   assert.equal(luzonEvidenceIndex.summary.brokenOrUnresolvedJsonReferences, 0);
   assert.equal(luzonEvidenceIndex.summary.missingSourceIdLinks, 0);
   assert.ok(luzonEvidenceIndex.reviews.some((review) => review.reviewId === sourceIdentityCrosswalk.reviewId));
+  assert.ok(luzonEvidenceIndex.reviews.some((review) => review.reviewId === calabarzonLabayatAtlasLocalityCrosswalk.reviewId));
   for (const group of sourceIdentityCrosswalk.groups) {
     for (const sourceId of group.sourceIds) assert.ok(sourceIds.has(sourceId), `Unknown identity-crosswalk source: ${sourceId}`);
   }
@@ -1884,6 +1960,10 @@ export async function readResearchInputs() {
     calabarzonProtectedLandscapeReview: new URL("calabarzon-ternate-protected-landscape-rivers-review-20261026.json", research),
     calabarzonBucalVariantReview: new URL("calabarzon-quezon-bucal-lalangan-advisory-variant-review-20261101.json", research),
     calabarzonLabayatVariantReview: new URL("calabarzon-quezon-lakayat-labayat-variant-review-20261101.json", research),
+    calabarzonLabayatAtlasLocalityCrosswalk: new URL(
+      "national/reviews/calabarzon-labayat-atlas-locality-crosswalk-20261123.json",
+      research,
+    ),
     calabarzonGapanReview: new URL("calabarzon-gapan-sapang-river-source-review-20261026.json", research),
     calabarzonGapanGeoNamesCrosscheck: new URL("calabarzon-gapan-sapang-geonames-crosscheck-20261026.json", research),
     mambaPalicpicanSourceReview: new URL(
