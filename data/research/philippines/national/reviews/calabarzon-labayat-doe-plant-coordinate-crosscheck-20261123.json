@@ -1,0 +1,163 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "calabarzon-labayat-doe-plant-coordinate-crosscheck-20261123",
+  "reviewedOn": "2026-11-23",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "provinceId": "0405600000",
+  "status": "doe-upper-plant-coordinate-screened-against-geonames-and-modeled-network;lower-coordinate-unavailable;route-identity-unresolved;research-only",
+  "question": "Does the DOE-published Upper Labayat plant coordinate identify a river route or independently connect the GeoNames Labayat point to a modeled HydroRIVERS network?",
+  "purpose": "Use an official plant-site coordinate as a bounded spatial search anchor, compare it with the prior named-point and archived modeled-reach candidates, and retain datum, point semantics, river identity, and route uncertainties.",
+  "waterbodyIds": [
+    "ph-wb-labayat-river-quezon-laguna",
+    "ph-wb-labayat-principal-basin-4a"
+  ],
+  "coordinatePairs": {
+    "upperLabayatPlant": {
+      "sourceText": "14.542435102561956, 121.5875786629132",
+      "latitudeForSearchOnly": 14.542435102561956,
+      "longitudeForSearchOnly": 121.5875786629132,
+      "axisOrderAssumption": "latitude, longitude; inferred only from plausible Philippine coordinate ranges",
+      "crsOrDatumDeclared": false,
+      "pointSemanticsDeclared": false
+    },
+    "lowerLabayatPlant": null
+  },
+  "sourceIds": [
+    "denr-bmb-inland-wetlands-atlas-2016",
+    "doe-generation-companies-register-2024-12",
+    "doe-luzon-grid-existing-power-plants-2025-11-30",
+    "dpwh-2022-principal-river-basins-annex-d2",
+    "fao-aquastat-rivers-global-2026-wfs",
+    "geonames-ph-country-hydrography-2026-11-07",
+    "redc-annual-report-2024-labayat-hydrology"
+  ],
+  "inputs": [
+    "data/research/philippines/sources.json",
+    "data/research/philippines/calabarzon-scope.json",
+    "data/research/philippines/national/reviews/calabarzon-labayat-atlas-locality-crosswalk-20261123.json",
+    "data/research/philippines/national/reviews/calabarzon-labayat-project-hydropower-basin-crosswalk-20261123.json",
+    "data/research/philippines/national/reviews/calabarzon-labayat-hydrorivers-geonames-triangulation-20261123.json",
+    "data/research/philippines/raw/national/geonames-ph-20261107/calabarzon-hydrographic-candidates.jsonl",
+    "data/research/philippines/raw/national/fao-hydrorivers-calabarzon-wfs-20261108/page-00000.geojson",
+    "data/research/philippines/raw/national/fao-hydrorivers-calabarzon-wfs-20261108/page-00500.geojson",
+    "data/research/philippines/raw/national/fao-hydrorivers-calabarzon-wfs-20261108/page-01000.geojson",
+    "data/research/philippines/raw/national/fao-hydrorivers-calabarzon-wfs-20261108/page-01500.geojson",
+    "data/research/philippines/raw/national/fao-hydrorivers-calabarzon-wfs-20261108/page-02000.geojson",
+    "data/research/philippines/raw/national/fao-hydrorivers-calabarzon-wfs-20261108/page-02500.geojson",
+    "data/research/philippines/raw/national/fao-hydrorivers-calabarzon-wfs-20261108/page-03000.geojson",
+    "data/research/philippines/raw/national/fao-hydrorivers-calabarzon-wfs-20261108/page-03500.geojson",
+    "data/research/philippines/raw/national/fao-hydrorivers-calabarzon-wfs-20261108/page-04000.geojson",
+    "data/research/philippines/raw/national/fao-hydrorivers-calabarzon-wfs-20261108/page-04500.geojson"
+  ],
+  "snapshotHashes": {
+    "scope": "0c327893f8a0540846d8bcd78b38a3df17176e064939fd9e3b5c031367245ec3",
+    "sourceRegistry": "688830ff54d648d68b903c737ceb955069434a02e237039d6d6b8ee7b439b923",
+    "labayatAtlasLocalityCrosswalk": "3d5830806f8a4e1f42e9fa7810bd1136a6c8d5c6b1c4a76c52b49e00b506a27a",
+    "labayatHydropowerBasinReview": "c753ae780dcc112a99c5f467d0243716ae271e6794634ab3bc15cb3793409581",
+    "labayatHydroRiversGeonamesTriangulation": "f77e960cffa3b3fe637d2d09fe1c1fc3434f9bf20eb2c7e7f1bb05ba2a7996b1",
+    "geonamesCandidateExtract": "3b104459534ab8eb1f0fdb3b45d66c67f44954be863073dddee8ecd5cab8969a",
+    "faoCalabarzonWfsPages": "121301ef1823752729493c1f7aab59c8d01bb1343c137ca0c4190f889454e87a"
+  },
+  "method": "Read the official DOE List of Generation Companies as of December 2024, page 10, for the Upper Labayat plant row. The source coordinate pair has no stated CRS, datum, axis order, point semantics, or accuracy; latitude/longitude order was assumed only for a plausibility-bounded comparison. Calculated the plant-to-GeoNames point distance using the haversine formula. Scanned all 4,719 features from the ten immutable local FAO 2026 WFS GeoJSON pages and ranked line segments with a local equirectangular point-to-segment approximation at the target latitude; this is a discovery screen, not a surveyed/geodetic position fix. Followed only the stated HydroRIVERS NEXT_DOWN and MAIN_RIV attributes. No geometry, municipality, waterbody identity, or species record was admitted.",
+  "observations": [
+    {
+      "sourceId": "doe-generation-companies-register-2024-12",
+      "locator": "Official DOE PDF, PDF page 10, List of Generation Companies as of December 2024, LABAYAT (UPPER CASCADE) row; Lower Labayat row also checked.",
+      "finding": "The Upper Labayat row publishes Plant Geo Coordinates as the raw pair 14.542435102561956, 121.5875786629132 and lists September 2021 commercial operation. Interpreting that pair as latitude then longitude places it within Philippine geographic bounds, but the document does not declare axis order, CRS/datum, point type, or accuracy. The Lower Labayat row has an empty coordinate cell.",
+      "supports": [
+        "an official source-published point pair for prioritizing a map search for the Upper project",
+        "confirmation that this document provides no corresponding Lower project point"
+      ],
+      "doesNotSupport": [
+        "a surveyed weir/intake coordinate, powerhouse-vs-intake semantics, headrace line, river route, watershed geometry, or fish evidence",
+        "a CRS, datum, or precision/accuracy claim"
+      ]
+    },
+    {
+      "sourceId": "geonames-ph-country-hydrography-2026-11-07",
+      "locator": "Philippines GeoNames extract, geonameId 1708329, raw point at WGS84 14.5034 N, 121.63147 E.",
+      "finding": "Under the provisional latitude/longitude interpretation of the DOE pair, the plant point and GeoNames Labayat River name point are about 6.416 km apart by haversine distance. Their separation means the points are not interchangeable; it does not rule out their being on different locations along a river.",
+      "supports": [
+        "a reproducible approximate separation between the two published point candidates"
+      ],
+      "doesNotSupport": [
+        "identity, route continuity, or a municipality assignment"
+      ]
+    },
+    {
+      "sourceId": "fao-aquastat-rivers-global-2026-wfs",
+      "locator": "All ten saved CALABARZON WFS pages (4,719 features); nearest segment screen from the provisional DOE plant point. Candidate reach attributes cross-checked in the saved GeoJSON pages.",
+      "finding": "The closest modeled reach is HYRIV_ID 50013610 at approximately 1.328 km, with MAIN_RIV=50013590 and NEXT_DOWN=50013603. A further candidate, HYRIV_ID 50013657, is approximately 1.685 km away and has MAIN_RIV=50013694; its NEXT_DOWN sequence is 50013657 to 50013675 to 50013687 to 50013694. The final reach HYRIV_ID 50013694 is the same modeled feature previously screened about 0.148 km from the GeoNames point. This offers a possible modeled-network connection between the broad project-point area and the GeoNames-near reach, while the closest line belongs to another MAIN_RIV group. The DOE point type and datum are unknown and model geometry is generalized, so candidate ordering and network membership do not establish the project river or route.",
+      "supports": [
+        "specific modeled reaches and their published graph attributes for a route-scale source search",
+        "a hypothesis to compare against a georeferenced project map"
+      ],
+      "doesNotSupport": [
+        "identifying HYRIV_ID 50013610 or the 50013694 main-river network as Labayat",
+        "placing the DOE plant, intake, or headrace on any modeled segment",
+        "a watershed or municipality boundary, outlet, fish presence, or safe fishing access"
+      ]
+    },
+    {
+      "sourceId": "redc-annual-report-2024-labayat-hydrology",
+      "locator": "Upper Labayat project hydrology excerpt, previously reviewed in the separate project/basin crosswalk.",
+      "finding": "The company report supplies project engineering and named-watercourse context but the reviewed excerpt does not georeference the DOE plant point to a channel line or provide a reusable route geometry.",
+      "supports": [
+        "project context for searching a site map"
+      ],
+      "doesNotSupport": [
+        "a point-to-reach identity match, complete channel route, public boundary, or fish assertion"
+      ]
+    },
+    {
+      "sourceId": "denr-bmb-inland-wetlands-atlas-2016",
+      "locator": "Atlas Annex 2b, row BL 75, PDF page 129 (printed page 117), as transcribed in the Atlas locality crosswalk.",
+      "finding": "The historical Atlas names Labayat River and lists locality context extending across Quezon and Laguna but supplies no route geometry; the coordinate comparison does not resolve whether the DOE project reach is the Atlas feature.",
+      "supports": [
+        "historical name/locality context only"
+      ],
+      "doesNotSupport": [
+        "a route, exact municipality-by-reach assignment, basin identity, or outlet"
+      ]
+    }
+  ],
+  "candidateAssessment": {
+    "coordinate": "Record DOE pair verbatim as a plant coordinate only. Geographic axis interpretation is provisional; no datum/CRS is established.",
+    "network": "HydroRIVERS places one reach 1.328 km from the provisional DOE point and another reach 1.685 km away on the modeled main-river chain containing the GeoNames-near reach. The 1.328 km closest reach is on a different main_riv group. These are competing coarse-grid candidates, not a route verdict.",
+    "identity": "The coordinate improves the map-search anchor and makes a modeled connection hypothesis testable, but does not prove Upper Labayat-to-GeoNames/Atlas route identity. The 6.416 km point separation can be consistent with distinct sites along a river or with distinct features.",
+    "lowerPlant": "No Lower Labayat coordinate was present in the checked DOE December 2024 register. Do not infer it from the Upper point or from barangay/project names.",
+    "principalBasin": "This point-to-line screen does not identify the point or any candidate reach with DPWH’s separate 56 sq km Labayat principal basin.",
+    "speciesEvidence": "No fish sampling, taxon, occurrence, diet, or species evidence was reviewed or changed."
+  },
+  "counts": {
+    "officialUpperPlantCoordinatePairs": 1,
+    "lowerPlantCoordinatePairsInCheckedDoeRegister": 0,
+    "faoWfsFeaturesScreened": 4719,
+    "candidateModeledMainRiverChainsNearProjectPoint": 2,
+    "pointToPointDistanceKm": 6.416,
+    "nearestModeledReachDistanceKm": 1.328,
+    "routeIdentitiesValidated": 0,
+    "municipalityAssignmentsAdded": 0,
+    "scopeRowsChanged": 0,
+    "geometryValidated": 0,
+    "fishAssertionsAdded": 0,
+    "publicRecordsAdmitted": 0,
+    "publicationApproval": false,
+    "scopeFrozen": false
+  },
+  "nonClaims": [
+    "The DOE coordinate pair has not been established as WGS84 or as an intake, weir, powerhouse, or river point.",
+    "The same MAIN_RIV linkage in HydroRIVERS is a modeled-network relationship, not independent proof of named river identity or field connectivity.",
+    "The nearest reach ranking uses a local equirectangular approximation and coarse modeled linework; reported distances are for prioritization only.",
+    "The DOE register supplies no Lower Labayat coordinate in the checked row.",
+    "No route geometry, municipality-by-reach assignment, basin boundary, species evidence, public record, or app data was added."
+  ],
+  "nextAction": "Search for a dated, georeferenced plan/profile or as-built map that identifies Upper project weir/intake, powerhouse, and headrace on a declared datum, and separately find Lower Labayat coordinates. If no public route-scale reference can be reproduced, keep the stream/basin crosswalk and geometry unresolved.",
+  "sourceLinks": {
+    "doeGenerationCompaniesRegister": "https://legacy.doe.gov.ph/sites/default/files/pdf/er1-94/Program%20Partners%20-%20Generation%20Companies.pdf",
+    "doeNovember2025PlantRegister": "https://prod-cms.doe.gov.ph/documents/d/guest/01-luzon-pdf",
+    "redcAnnualReport2024": "https://repowerenergy.com.ph/files/REDC_ANNUAL_REPORT_2024_FINAL.pdf",
+    "faoRivers2026Catalog": "https://data.fao.org/catalog/dataset/e22667af-3977-4e9f-b58b-67fb91b0fa87"
+  }
+}
