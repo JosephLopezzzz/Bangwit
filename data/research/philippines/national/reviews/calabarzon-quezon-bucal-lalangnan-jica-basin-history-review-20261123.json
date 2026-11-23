@@ -1,0 +1,73 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "calabarzon-quezon-bucal-lalangnan-jica-basin-history-review-20261123",
+  "reviewedOn": "2026-11-23",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "status": "historical-JICA-DPWH-basin-register-corroborates-name-code-and-area;Quezon-advisory-identity-and-municipality-unresolved;research-only",
+  "question": "Does the 2004 JICA/DPWH hydrological inventory add authoritative basin provenance or resolve whether Bucal (Lalangnan) is the Quezon advisory label Bucal (Lalangan)?",
+  "waterbodyId": "ph-wb-bucal-lalangnan-principal-basin-4a",
+  "sourceIds": [
+    "jica-dpwh-2004-principal-rivers-supporting-report-annexes",
+    "dpwh-2022-principal-river-basins-annex-d2",
+    "quezon-pdrrmo-2026-flood-advisory-14-watercourses"
+  ],
+  "inputs": [
+    "data/research/philippines/calabarzon-scope.json",
+    "data/research/philippines/sources.json",
+    "data/research/philippines/calabarzon-quezon-bucal-lalangan-advisory-variant-review-20261101.json",
+    "data/research/philippines/luzon-completion-manifest.json"
+  ],
+  "snapshotHashes": {
+    "scopeBeforeReview": "5c00323a0fbc65ca1e40f1718b3acc572a426b64295d3ec71a726daee367789e",
+    "scopeAfterReview": "5c00323a0fbc65ca1e40f1718b3acc572a426b64295d3ec71a726daee367789e",
+    "sourceRegistryBeforeReview": "7839f251c8de3e39089377bbbda6333fbdcfc4d015835b8a1e168d45044c1b8f",
+    "sourceRegistry": "64398eff0e01b42c583ac5b7ab10c5fddd7af519279546803e0167b273b39431",
+    "priorBucalAdvisoryReview": "39ea48ee5dca12f30e13a87cba2489cabf119b26d5ee0c5b7468e729aab2567"
+  },
+  "method": "Reviewed the official JICA catalog record and September 2004 supporting-report annex PDF, then compared the Annex 4 basin row with DPWH Department Order No. 47 s. 2022 Annex D-2 and Quezon Provincial Government General Flood Advisory No. 14 (7 August 2026). Treated historic basin-register continuity, Quezon advisory grouping, municipality allocation, and feature identity as separate questions.",
+  "sourceFindings": [
+    {
+      "sourceId": "jica-dpwh-2004-principal-rivers-supporting-report-annexes",
+      "locator": "Annex 4, Station Density of the Streamflow Gauging in Principal River Basins (4a/12), printed p. A-58; Water Resources Region No. 4 / Southern Tagalog; code 4105.",
+      "finding": "The table reports “Bucal (Lalangnan)” with drainage area 77 sq km, 0 operational gauging stations, and estimated annual runoff 123 MCM in this 2004 report. It identifies a historical regional basin-register entry, not a province, municipality, route, outlet, or boundary. The station count and runoff are historical inventory values only."
+    },
+    {
+      "sourceId": "dpwh-2022-principal-river-basins-annex-d2",
+      "locator": "Annex D-2, row 100.",
+      "finding": "DPWH lists Region IV-A “Bucal (Lalangnan)” with reported area 77 sq km. Its matching source-form name and area are consistent with the 2004 JICA/DPWH basin-register row, but the 2022 table also does not assign a municipality or give geometry."
+    },
+    {
+      "sourceId": "quezon-pdrrmo-2026-flood-advisory-14-watercourses",
+      "locator": "General Flood Advisory No. 14, issued 7 August 2026; Quezon watercourses likely to be affected.",
+      "finding": "The advisory lists “Bucal (Lalangan)” in a Quezon grouping. This is an advisory label and forecast context; it does not give a stable waterbody identifier, basin code, locality, route, or link to the DPWH/JICA basin."
+    }
+  ],
+  "identityAssessment": {
+    "officialBasinName": "Bucal (Lalangnan) Principal River Basin",
+    "historicalRegisterAssessment": "The 2004 JICA/DPWH Annex 4 and 2022 DPWH Annex D-2 share the “Bucal (Lalangnan)” form and reported 77 sq km area. This supports historical registry continuity of a region-level principal-basin label, not independent proof of an exact mapped boundary.",
+    "advisoryRelationship": "Quezon's “Bucal (Lalangan)” is a possible name-variant candidate only. No authoritative source located in this review confirms spelling equivalence or assigns the region-level basin to Quezon.",
+    "localityDisposition": "Do not assign a Quezon province or municipality code from the advisory grouping or from unrelated Bucal place names.",
+    "geometryDisposition": "No basin polygon, centerline, outlet, or route is provided or inferred. The reported 77 sq km area is not geometry."
+  },
+  "decision": "Add the 2004 JICA/DPWH supporting report as historical provenance for the regional Bucal (Lalangnan) basin label, code 4105, and reported area. Keep the Quezon advisory spelling as an unresolved possible variant and preserve the two feature records without merging or locality assignment.",
+  "counts": {
+    "waterbodyResearchLeadsBefore": 164,
+    "waterbodyResearchLeadsAfter": 164,
+    "scopeRowsChanged": 0,
+    "municipalityCodeAssignments": 0,
+    "geometryValidated": 0,
+    "fishAssertionsAdded": 0,
+    "publicRecordsAdmitted": 0,
+    "publicationApproval": false,
+    "scopeFrozen": false
+  },
+  "nonClaims": [
+    "No Quezon municipality or barangay is assigned to the DPWH/JICA basin.",
+    "The JICA report's 2004 operational-gauge count and estimated runoff are not current hydrological measurements or present monitoring coverage.",
+    "No channel route, outlet, catchment polygon, or fishing area is inferred from the basin name, code, or reported area.",
+    "No fish presence or absence, complete species checklist, water quality, safety, access, fishing legality, diet, or bait guidance is asserted.",
+    "No item-specific open-data license or public-app reuse approval was found; report tables and figures are not reproduced."
+  ],
+  "nextAction": "Continue with a separate locality and source-identity review for the Labayat principal-basin lead. Keep the CALABARZON waterbody scope unfrozen until locality, geometry, and fish evidence are independently resolved."
+}
