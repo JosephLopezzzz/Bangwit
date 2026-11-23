@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "calabarzon-labayat-engineering-map-gap-review-20261123",
+  "reviewedOn": "2026-11-23",
+  "phaseId": "L1",
+  "regionId": "0400000000",
+  "provinceId": "0405600000",
+  "status": "upper-lower-project-engineering-parameters-screened;georeferenced-route-map-unverified;vertical-reference-anomaly-held;research-only",
+  "question": "Do publicly available Upper and Lower Labayat engineering excerpts provide enough georeferencing to resolve the route and check the DOE plant point against the named river?",
+  "purpose": "Record project engineering values that could help validate a future site-map comparison, while checking whether the available document text declares coordinates, a route map, or a spatial reference.",
+  "waterbodyIds": [
+    "ph-wb-labayat-river-quezon-laguna",
+    "ph-wb-labayat-principal-basin-4a"
+  ],
+  "sourceIds": [
+    "doe-generation-companies-register-2024-12",
+    "redc-annual-report-2024-labayat-hydrology"
+  ],
+  "inputs": [
+    "data/research/philippines/calabarzon-scope.json",
+    "data/research/philippines/sources.json",
+    "data/research/philippines/national/reviews/calabarzon-labayat-project-hydropower-basin-crosswalk-20261123.json",
+    "data/research/philippines/national/reviews/calabarzon-labayat-doe-plant-coordinate-crosscheck-20261123.json",
+    "data/research/philippines/national/reviews/calabarzon-labayat-hydrorivers-geonames-triangulation-20261123.json"
+  ],
+  "snapshotHashes": {
+    "scope": "0c327893f8a0540846d8bcd78b38a3df17176e064939fd9e3b5c031367245ec3",
+    "sourceRegistry": "688830ff54d648d68b903c737ceb955069434a02e237039d6d6b8ee7b439b923",
+    "labayatProjectHydropowerBasinReview": "c753ae780dcc112a99c5f467d0243716ae271e6794634ab3bc15cb3793409581",
+    "labayatDoePlantCoordinateCrosscheck": "0bf9cf76034baa717e9e5b1b4cf4f36c4e4435fa5778413812acdde1026b1ca5",
+    "labayatHydroRiversGeonamesTriangulation": "f77e960cffa3b3fe637d2d09fe1c1fc3434f9bf20eb2c7e7f1bb05ba2a7996b1"
+  },
+  "method": "Reviewed the searchable text of REDC's company-hosted Annual Report 2024, including its embedded Upper and Lower Labayat feasibility-study sections (identified in the report as prepared by Vergel3 Consult in 2015). Transcribed only the listed project-specification values. Searched the report text for latitude, longitude, easting, northing, site map, and location map terms; none were found. The DOE plant coordinate and earlier HydroRIVERS/GeoNames comparisons were used only as prior research context. The PDF was not visually rendered in this pass; raster or unindexed drawings may therefore remain undiscovered. No coordinate transformation, map digitization, geometry, or route inference was performed.",
+  "observations": [
+    {
+      "sourceId": "redc-annual-report-2024-labayat-hydrology",
+      "locator": "Annual Report 2024, embedded Upper Labayat MHP feasibility-study excerpt, salient technical features and hydrologic features.",
+      "finding": "The report lists an 8 m Upper Labayat weir with crest elevation 188.40 masl, a 2,433 m headrace line, powerhouse tailrace level 84.0 masl, and a 37.09 sq km watershed area.",
+      "supports": [
+        "source-attributed Upper project design values for later engineering-document consistency checks"
+      ],
+      "doesNotSupport": [
+        "a horizontal coordinate, horizontal CRS/datum, surveyed route, or polygon for the project catchment",
+        "transfer of the headrace's stated length into a route geometry"
+      ]
+    },
+    {
+      "sourceId": "redc-annual-report-2024-labayat-hydrology",
+      "locator": "Annual Report 2024, embedded Lower Labayat MHP feasibility-study excerpt, salient technical features and hydrologic features.",
+      "finding": "The report lists a 5 m Lower Labayat weir with crest elevation 208 masl, an 877 m steel headrace line, powerhouse tailrace level 32.0 masl, and an 8.53 sq km watershed area.",
+      "supports": [
+        "source-attributed Lower project design values for later engineering-document consistency checks"
+      ],
+      "doesNotSupport": [
+        "a horizontal coordinate, horizontal CRS/datum, surveyed route, or polygon for the project catchment",
+        "transfer of the headrace's stated length into a route geometry"
+      ]
+    },
+    {
+      "sourceId": "redc-annual-report-2024-labayat-hydrology",
+      "locator": "Comparison of the source-listed Upper and Lower weir crest elevations.",
+      "finding": "The nominal Lower crest elevation (208 masl) is 19.6 m higher than the nominal Upper crest elevation (188.40 masl). Both values are printed in the same report, but the excerpt does not declare a vertical datum or survey benchmarks. This is a source-level consistency flag to verify, not proof of an error or of separate watercourses.",
+      "supports": [
+        "a documented elevation-order discrepancy requiring resolution before using the figures to validate an Upper/Lower route relationship"
+      ],
+      "doesNotSupport": [
+        "changing the project names, asserting non-contiguity, or correcting either value"
+      ]
+    },
+    {
+      "sourceId": "doe-generation-companies-register-2024-12",
+      "locator": "Official DOE December 2024 List of Generation Companies, Upper and Lower Labayat entries; prior coordinate cross-check review.",
+      "finding": "The DOE register supplies one Upper plant coordinate pair without declared point semantics, axis order, CRS/datum, or accuracy; the Lower entry has no coordinate. The REDC technical specifications do not resolve those gaps in their searchable text.",
+      "supports": [
+        "continuing to treat the Upper coordinate as a provisional project search anchor only",
+        "continuing to mark the Lower coordinate as unavailable in the checked register"
+      ],
+      "doesNotSupport": [
+        "assigning the DOE point to the weir, intake, powerhouse, or river channel"
+      ]
+    }
+  ],
+  "candidateAssessment": {
+    "engineeringValues": "Keep reported structure lengths, elevations, and project catchment areas as source-specific attributes. They are not coordinates or a substitute for georeferenced plans.",
+    "elevationOrder": "The source's nominal Upper/Lower crest values are internally surprising by label, but without verified shared vertical reference and benchmarks they remain a discrepancy to check rather than a route verdict.",
+    "mapSearch": "No route-scale map with coordinates or declared spatial reference was found in the searchable text reviewed. The PDF was not visually inspected, so no conclusion is made about possible raster/unindexed diagrams.",
+    "identity": "The project-to-Atlas river and DPWH principal-basin crosswalks remain unresolved; the current technical excerpts do not connect the project infrastructure to a channel or catchment boundary.",
+    "speciesEvidence": "No fish sampling, taxon, occurrence, diet, or species evidence was reviewed or changed."
+  },
+  "counts": {
+    "projectEngineeringSectionsReviewed": 2,
+    "projectCoordinatePairsInRedcText": 0,
+    "projectRouteMapsGeoreferencedAndVerified": 0,
+    "verticalReferenceDiscrepanciesFlagged": 1,
+    "routeIdentitiesValidated": 0,
+    "scopeRowsChanged": 0,
+    "geometryValidated": 0,
+    "fishAssertionsAdded": 0,
+    "publicRecordsAdmitted": 0,
+    "publicationApproval": false,
+    "scopeFrozen": false
+  },
+  "nonClaims": [
+    "The REDC specification excerpts do not provide reproducible route geometry or horizontal coordinates in the searchable text reviewed.",
+    "The reported headrace lengths and elevations were not used to draw or infer a route.",
+    "The 19.6 m crest-elevation ordering discrepancy has not been adjudicated and may reflect source, design, reference, or transcription issues.",
+    "Raster or unindexed drawings in the PDF were not visually inspected and cannot be ruled out.",
+    "No Labayat river/basin identity, municipality-by-reach assignment, basin boundary, species evidence, public record, or app data was added."
+  ],
+  "nextAction": "Continue the public-source screen for a visually inspectable and dated plan/profile or as-built drawing that locates the Upper and Lower project weirs, headraces, and powerhouses on stated horizontal and vertical references. If none can be verified, keep the source-to-watercourse crosswalk and geometry unresolved; do not derive a route from engineering lengths or project labels.",
+  "sourceLinks": {
+    "redcAnnualReport2024": "https://repowerenergy.com.ph/files/REDC_ANNUAL_REPORT_2024_FINAL.pdf",
+    "doeGenerationCompaniesRegister": "https://legacy.doe.gov.ph/sites/default/files/pdf/er1-94/Program%20Partners%20-%20Generation%20Companies.pdf"
+  }
+}

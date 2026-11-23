@@ -94,6 +94,7 @@ export function buildResearchStatus({
   calabarzonLabayatHydropowerBasinReview,
   calabarzonLabayatHydroRiversGeonamesTriangulation,
   calabarzonLabayatDoePlantCoordinateCrosscheck,
+  calabarzonLabayatEngineeringMapGapReview,
   calabarzonGapanReview,
   calabarzonGapanGeoNamesCrosscheck,
   inputHashes,
@@ -1164,6 +1165,46 @@ export function buildResearchStatus({
   assert.equal(calabarzonLabayatDoePlantCoordinateCrosscheck.counts.fishAssertionsAdded, 0);
   assert.equal(calabarzonLabayatDoePlantCoordinateCrosscheck.counts.publicRecordsAdmitted, 0);
   assert.equal(calabarzonLabayatDoePlantCoordinateCrosscheck.counts.scopeFrozen, false);
+  assert.equal(
+    calabarzonLabayatEngineeringMapGapReview.reviewId,
+    "calabarzon-labayat-engineering-map-gap-review-20261123",
+  );
+  assert.equal(calabarzonLabayatEngineeringMapGapReview.regionId, "0400000000");
+  assert.deepEqual(calabarzonLabayatEngineeringMapGapReview.waterbodyIds, [
+    "ph-wb-labayat-river-quezon-laguna",
+    "ph-wb-labayat-principal-basin-4a",
+  ]);
+  assert.deepEqual(calabarzonLabayatEngineeringMapGapReview.sourceIds, [
+    "doe-generation-companies-register-2024-12",
+    "redc-annual-report-2024-labayat-hydrology",
+  ]);
+  for (const id of calabarzonLabayatEngineeringMapGapReview.sourceIds) {
+    assert.ok(sourceIds.has(id), `Unknown Labayat engineering/map-gap source: ${id}`);
+  }
+  assert.equal(calabarzonLabayatEngineeringMapGapReview.snapshotHashes.scope, inputHashes.scope);
+  assert.equal(calabarzonLabayatEngineeringMapGapReview.snapshotHashes.sourceRegistry, inputHashes.sources);
+  assert.equal(
+    calabarzonLabayatEngineeringMapGapReview.snapshotHashes.labayatProjectHydropowerBasinReview,
+    inputHashes.calabarzonLabayatHydropowerBasinReview,
+  );
+  assert.equal(
+    calabarzonLabayatEngineeringMapGapReview.snapshotHashes.labayatDoePlantCoordinateCrosscheck,
+    inputHashes.calabarzonLabayatDoePlantCoordinateCrosscheck,
+  );
+  assert.equal(
+    calabarzonLabayatEngineeringMapGapReview.snapshotHashes.labayatHydroRiversGeonamesTriangulation,
+    inputHashes.calabarzonLabayatHydroRiversGeonamesTriangulation,
+  );
+  assert.equal(calabarzonLabayatEngineeringMapGapReview.counts.projectEngineeringSectionsReviewed, 2);
+  assert.equal(calabarzonLabayatEngineeringMapGapReview.counts.projectRouteMapsGeoreferencedAndVerified, 0);
+  assert.equal(calabarzonLabayatEngineeringMapGapReview.counts.verticalReferenceDiscrepanciesFlagged, 1);
+  assert.equal(calabarzonLabayatEngineeringMapGapReview.counts.routeIdentitiesValidated, 0);
+  assert.equal(calabarzonLabayatEngineeringMapGapReview.counts.scopeRowsChanged, 0);
+  assert.equal(calabarzonLabayatEngineeringMapGapReview.counts.geometryValidated, 0);
+  assert.equal(calabarzonLabayatEngineeringMapGapReview.counts.fishAssertionsAdded, 0);
+  assert.equal(calabarzonLabayatEngineeringMapGapReview.counts.publicRecordsAdmitted, 0);
+  assert.equal(calabarzonLabayatEngineeringMapGapReview.counts.publicationApproval, false);
+  assert.equal(calabarzonLabayatEngineeringMapGapReview.counts.scopeFrozen, false);
   const labayatPrincipalBasin = scope.waterbodies.find(
     (waterbody) => waterbody.id === "ph-wb-labayat-principal-basin-4a",
   );
@@ -1230,6 +1271,12 @@ export function buildResearchStatus({
       "data/research/philippines/national/reviews/calabarzon-labayat-doe-plant-coordinate-crosscheck-20261123.json",
     ),
     "CALABARZON manifest must link the Labayat DOE coordinate cross-check",
+  );
+  assert.ok(
+    calabarzonManifestRegion.evidenceRefs.includes(
+      "data/research/philippines/national/reviews/calabarzon-labayat-engineering-map-gap-review-20261123.json",
+    ),
+    "CALABARZON manifest must link the Labayat engineering/map-gap review",
   );
   assert.equal(
     calabarzonLocalityLinkageAudit.findings.sourceBackedLocalityBatch14.sha256,
@@ -1388,6 +1435,9 @@ export function buildResearchStatus({
   );
   assert.ok(
     luzonEvidenceIndex.reviews.some((review) => review.reviewId === calabarzonLabayatDoePlantCoordinateCrosscheck.reviewId),
+  );
+  assert.ok(
+    luzonEvidenceIndex.reviews.some((review) => review.reviewId === calabarzonLabayatEngineeringMapGapReview.reviewId),
   );
   for (const group of sourceIdentityCrosswalk.groups) {
     for (const sourceId of group.sourceIds) assert.ok(sourceIds.has(sourceId), `Unknown identity-crosswalk source: ${sourceId}`);
@@ -2139,6 +2189,10 @@ export async function readResearchInputs() {
     ),
     calabarzonLabayatDoePlantCoordinateCrosscheck: new URL(
       "national/reviews/calabarzon-labayat-doe-plant-coordinate-crosscheck-20261123.json",
+      research,
+    ),
+    calabarzonLabayatEngineeringMapGapReview: new URL(
+      "national/reviews/calabarzon-labayat-engineering-map-gap-review-20261123.json",
       research,
     ),
     calabarzonGapanReview: new URL("calabarzon-gapan-sapang-river-source-review-20261026.json", research),
