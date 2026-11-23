@@ -87,6 +87,7 @@ export function buildResearchStatus({
   calabarzonBmbTableVisualReview,
   calabarzonBacoorInlandReview,
   calabarzonProtectedLandscapeReview,
+  calabarzonMambaCacabayIdentityReview,
   calabarzonBucalVariantReview,
   calabarzonLabayatVariantReview,
   calabarzonGapanReview,
@@ -920,7 +921,11 @@ export function buildResearchStatus({
   );
   assert.equal(calabarzonLocalitySourceBackedBatch14.snapshotHashes.scopeAfterBatch, inputHashes.scope);
   assert.equal(calabarzonLocalitySourceBackedBatch14.snapshotHashes.calabarzonScope, inputHashes.scope);
-  assert.equal(calabarzonLocalitySourceBackedBatch14.snapshotHashes.sourceRegistry, inputHashes.sources);
+  assert.equal(
+    calabarzonLocalitySourceBackedBatch14.snapshotHashes.sourceRegistry,
+    calabarzonMambaCacabayIdentityReview.snapshotHashes.sourceRegistryBeforeReview,
+    "Palicpican batch must retain the registry snapshot that preceded the Mamba/Cacabay review sources",
+  );
   assert.equal(
     calabarzonLocalitySourceBackedBatch14.snapshotHashes.administrativeRegistry,
     inputHashes.registry,
@@ -959,6 +964,41 @@ export function buildResearchStatus({
   assert.equal(calabarzonLocalitySourceBackedBatch14.counts.fishAssertionsAdded, 0);
   assert.equal(calabarzonLocalitySourceBackedBatch14.counts.publicRecordsAdmitted, 0);
   assert.equal(calabarzonLocalitySourceBackedBatch14.counts.scopeFrozen, false);
+  assert.equal(
+    calabarzonMambaCacabayIdentityReview.reviewId,
+    "calabarzon-mamba-cacabay-name-relationship-review-20261121",
+  );
+  assert.equal(calabarzonMambaCacabayIdentityReview.regionId, "0400000000");
+  assert.equal(
+    calabarzonMambaCacabayIdentityReview.snapshotHashes.scopeAfterReview,
+    inputHashes.scope,
+    "Mamba/Cacabay name review scope snapshot is stale",
+  );
+  assert.equal(
+    calabarzonMambaCacabayIdentityReview.snapshotHashes.sourceRegistry,
+    inputHashes.sources,
+    "Mamba/Cacabay name review source-registry snapshot is stale",
+  );
+  for (const id of calabarzonMambaCacabayIdentityReview.sourceIds) {
+    assert.ok(sourceIds.has(id), `Unknown Mamba/Cacabay name-review source: ${id}`);
+  }
+  const mambaCacabayWaterbody = scope.waterbodies.find(
+    (waterbody) => waterbody.id === calabarzonMambaCacabayIdentityReview.waterbodyId,
+  );
+  assert.ok(mambaCacabayWaterbody, "Mamba/Cacabay name review references an unknown waterbody");
+  assert.equal(mambaCacabayWaterbody.name, "Mamba/Cacabay River");
+  assert.equal(mambaCacabayWaterbody.publicAdmission, false);
+  assert.equal(calabarzonMambaCacabayIdentityReview.counts.scopeRowsChanged, 0);
+  assert.equal(calabarzonMambaCacabayIdentityReview.counts.municipalityCodeAssignments, 0);
+  assert.equal(calabarzonMambaCacabayIdentityReview.counts.geometryValidated, 0);
+  assert.equal(calabarzonMambaCacabayIdentityReview.counts.fishAssertionsAdded, 0);
+  assert.equal(calabarzonMambaCacabayIdentityReview.counts.publicRecordsAdmitted, 0);
+  assert.ok(
+    calabarzonManifestRegion.evidenceRefs.includes(
+      "data/research/philippines/national/reviews/calabarzon-mamba-cacabay-name-relationship-review-20261121.json",
+    ),
+    "CALABARZON manifest must link the Mamba/Cacabay source-name review",
+  );
   assert.equal(
     calabarzonLocalityLinkageAudit.findings.sourceBackedLocalityBatch14.sha256,
     inputHashes.calabarzonLocalitySourceBackedBatch14,
@@ -1805,6 +1845,10 @@ export async function readResearchInputs() {
     ),
     calabarzonLocalitySourceBackedBatch14: new URL(
       "national/reviews/calabarzon-palicpican-herbarium-locality-crosswalk-20261121.json",
+      research,
+    ),
+    calabarzonMambaCacabayIdentityReview: new URL(
+      "national/reviews/calabarzon-mamba-cacabay-name-relationship-review-20261121.json",
       research,
     ),
     lagunaDeBayNcrLocalityReview: new URL(
