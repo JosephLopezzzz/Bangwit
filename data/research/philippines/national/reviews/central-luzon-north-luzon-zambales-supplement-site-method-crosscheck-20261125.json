@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "central-luzon-north-luzon-zambales-supplement-site-method-crosscheck-20261125",
+  "reviewedOn": "2026-11-25",
+  "phaseId": "L3",
+  "regionId": "0300000000",
+  "regionName": "Region III (Central Luzon)",
+  "sourceIds": [
+    "dimaquibo-2025-north-luzon-teleost-dna-barcode-dataset"
+  ],
+  "relatedReviews": [
+    "national-luzon-north-luzon-teleost-dna-barcode-dataset-source-review-20261106",
+    "central-luzon-north-luzon-genbank-project-metadata-screen-20261124"
+  ],
+  "status": "zambales-table-supplement-site-and-method-mismatch;locality-crosswalk-unresolved;research-only",
+  "question": "Does the North Luzon barcode paper's Zambales site table align with specimen-area and method labels in supplement S1c closely enough to support river-level fish assertions?",
+  "scope": {
+    "province": "Zambales",
+    "articleTable": "Table 1",
+    "supplementWorksheet": "STS1C. Zambales",
+    "localSupplementRowCount": 235,
+    "localSupplementSnapshot": {
+      "path": "data/research/philippines/raw/41597_2025_5758_MOESM2_ESM.xlsx",
+      "ignoredByGit": true,
+      "committed": false,
+      "bytes": 85445,
+      "sha256": "7004383BF7069BAB34D5F82FE78778CB0A9F630755A150D42B517EB2370F06CA"
+    }
+  },
+  "method": {
+    "primaryArticle": "Read the PMC full text's Table 1 and Methods. The article describes marine specimens from fish markets/landing sites and freshwater specimens collected from rivers.",
+    "supplementReview": "Read the existing ignored publisher XLSX in memory with Python zipfile and XML parsing. Compared only area labels, row totals, and the source-reported collection-method field; no row-level taxon, specimen, accession, coordinate, photograph, or sequence data were copied into tracked files.",
+    "rawFileIntegrity": "The local XLSX SHA-256 matches the value recorded in the 2026-11-06 source review. The XLSX itself remains ignored and uncommitted."
+  },
+  "results": {
+    "articleVsSupplementAreaLabels": [
+      "Article Table 1 lists Masinloc River site1 and Masinloc River site2; S1c groups its corresponding area under one Masinloc River label, so a one-to-one site crosswalk is not established.",
+      "S1c contains a Dupinga River area label that does not appear in the article's Zambales Table 1 site list. No equivalence to another site is inferred."
+    ],
+    "areaVsMethodConflicts": [
+      "Some S1c rows labeled Baquilan River and Masinloc River are marked Purchased at market.",
+      "One S1c row labeled Subic market is marked Collected in field.",
+      "These field-level conflicts are not resolved by the article's broad market-versus-river methods description. An area label alone cannot establish a specimen's capture waterbody."
+    ],
+    "interpretation": "Do not assign the supplement's species or specimen rows to a named Zambales river based only on the sampling-area text. Preserve source method and area as separate, unresolved fields if a future authorized review requires them. Market-purchased fish are not local wild-occurrence evidence at the market, and inconsistent method labels need an author or data-custodian crosswalk.",
+    "rights": "The article states CC BY-NC-ND 4.0. Separate reuse terms for the supplementary XLSX and underlying specimen metadata remain unverified; this review grants no permission to adapt, redistribute, or publish a derived species-by-site dataset."
+  },
+  "disposition": {
+    "speciesRowsAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "coordinatesCopied": 0,
+    "geometryAdded": false,
+    "photosCopiedOrApproved": 0,
+    "publicAppRowsAdded": 0,
+    "supplementRowsRedistributed": false,
+    "publicationApproval": false,
+    "regionThreeCoverageCompletion": false
+  },
+  "nextAction": "Keep the Zambales supplement research-only. Prioritize independently reusable, locality-resolved sources for Central Luzon. If a future use case requires this dataset, first resolve the Table 1/S1c site crosswalk, record-level method conflicts, and supplement-specific reuse terms.",
+  "sources": [
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12475234/",
+      "supports": "Primary article, CC BY-NC-ND 4.0 statement, Table 1 Zambales site list, methods distinction between market/landing specimens and river collections, and description of supplementary specimen metadata."
+    },
+    {
+      "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41597-025-05758-3/MediaObjects/41597_2025_5758_MOESM2_ESM.xlsx",
+      "supports": "Publisher-provided supplement S1c reviewed locally; its separate reuse terms were not verified."
+    },
+    {
+      "url": "https://doi.org/10.1038/s41597-025-05758-3",
+      "supports": "Article DOI and bibliographic identity."
+    }
+  ]
+}
