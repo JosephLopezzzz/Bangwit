@@ -85,6 +85,10 @@ The official BFAR/NFRDI 2009 stock assessment summarizes NSAP landing data from 
 
 The 2018 NFRDI-hosted Yutuc et al. tuna assessment covers six NSAP landing stations in Subic, Masinloc and Sta. Cruz for 2003-2012 and names eight tuna species in its appendix. It is a later period than the 1998-2002 report, but shares the NSAP program and some named stations; catches are raised and may include vessels from nearby provinces. Keep the periods and metrics separate, and do not map port landings to capture waters or call the appendix a current distribution list. No item-specific reuse terms were found, and no app or occurrence rows were added. See `reviews/central-luzon-zambales-yutuc-2018-tuna-resource-review-20261124.json` and the source entry in `data/research/philippines/sources.json`.
 
+### Bulacan 2006 freshwater table follow-up
+
+The official indexed text for the 2018 SNMC EPRMP exposes ten fish-row labels and station X marks for its reported 2006 six-site survey. A text-derived count check matches the report's totals for stations 5 and 6, but the PDF image remains blocked with HTTP 403, so row-to-station marks are provisional and not visually verified. The report says identifications used both actual identification and local interviews without naming the evidence mode per taxon. Preserve all labels verbatim; do not interpret X marks as specimen occurrences or blank cells as absences. No occurrence, taxonomy-normalized species, geometry, or app rows were added; reuse terms remain unverified. See `reviews/central-luzon-bulacan-snmc-2018-eprmp-indexed-table-followup-20261124.json` and the source entry in `data/research/philippines/sources.json`.
+
 ## NCR waterbody source leads
 
 ### NCR incomplete-discovery checkpoint
