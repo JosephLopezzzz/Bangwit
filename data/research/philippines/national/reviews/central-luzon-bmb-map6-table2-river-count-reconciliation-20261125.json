@@ -1,0 +1,89 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "central-luzon-bmb-map6-table2-river-count-reconciliation-20261125",
+  "reviewedOn": "2026-11-25",
+  "phaseId": "L3",
+  "regionId": "0300000000",
+  "regionName": "Region III (Central Luzon)",
+  "status": "atlas-map6-and-table2-counts-compared;row-to-system-crosswalk-unresolved;research-only",
+  "question": "How do the BMB 2014 Atlas Map 6 Region III river subtotal and Table 2 Region III row count relate?",
+  "sourceIds": [
+    "denr-bmb-luzon-inland-wetlands-atlas-2014",
+    "depdev-region-iii-rdp-2023-2028"
+  ],
+  "inputs": [
+    "data/research/philippines/national/reviews/central-luzon-bmb-2014-wetland-atlas-count-crosswalk-20261119.json",
+    "data/research/philippines/national/reviews/central-luzon-bmb-rdp-168-footnote-and-202-rivers-followup-20261125.json"
+  ],
+  "sourceAccess": {
+    "atlasUrl": "https://www.ramsar.org/sites/default/files/documents/library/atlas_inland_wetland_mainland_luzon_philippines_2014_e.pdf",
+    "map6Locator": "Map 6, Rivers and River Systems; indexed PDF text lines 527-534; notes at lines 550-551",
+    "table2Locators": [
+      "Region III Aurora rows: indexed PDF text lines 1036-1092",
+      "Region III Bataan rows: lines 1093-1164",
+      "Region III Bulacan and Nueva Ecija rows: lines 1165-1180",
+      "Region III Pampanga and first Zambales rows: lines 1182-1205",
+      "remaining Region III Zambales rows: lines 1223-1242"
+    ],
+    "directPdfStatus": "The official indexed PDF text was reviewed. Direct PDF requests returned HTTP 403; no access control was bypassed and no local PDF was retained."
+  },
+  "comparison": {
+    "table2RegionIIIRowMentions": 165,
+    "table2RowsByProvinceField": {
+      "Aurora": 53,
+      "Bataan": 55,
+      "Bulacan": 8,
+      "Nueva Ecija": 7,
+      "Pampanga": 2,
+      "Tarlac": 0,
+      "Zambales": 40
+    },
+    "table2RowCountMeaning": "Count of table rows whose Region cell says Region III, grouped by the source's province field. Rows and source labels are not deduplicated into unique physical rivers or systems. Cross-province entries remain attached to the source wording.",
+    "map6CountsAsPrinted": [
+      { "province": "Aurora", "countAsPrinted": "53" },
+      { "province": "Bataan", "countAsPrinted": "55" },
+      { "province": "Bulacan", "countAsPrinted": "3 (5**)" },
+      { "province": "Nueva Ecija", "countAsPrinted": "0 (7**)" },
+      { "province": "Pampanga", "countAsPrinted": "2*" },
+      { "province": "Tarlac", "countAsPrinted": "0 (1**)" },
+      { "province": "Zambales", "countAsPrinted": "40" }
+    ],
+    "map6BaseSubtotal": 153,
+    "parentheticalStarredValuesArithmetic": 13,
+    "naiveBasePlusParentheticalArithmetic": 166,
+    "rowVersusSubtotalDifference": 12,
+    "assessment": "The explicit Region III Table 2 rows total 165, while the Map 6 base subtotal is 153. The Map 6 printed parenthetical values sum to 13; adding them mechanically to 153 gives 166, one more than the Table 2 row count. Map 6 explains single-star and double-star notation but does not provide a row-by-row join to Table 2 in the reviewed text. The available text therefore does not establish an exact reconciliation or show that each row mention is a distinct river system.",
+    "relationshipToRdp202": "This atlas comparison does not identify a source or definition for the RDP's separate 202-rivers sentence. It must remain unresolved."
+  },
+  "method": {
+    "approach": "Counted only official indexed PDF Table 2 entries explicitly labeled Region III and grouped them by the printed province field. Compared those row mentions with Map 6's Region III province counts and subtotal. Kept the source's starred values verbatim and did not infer aliases, duplicate identities, channel geometry, or current status.",
+    "reproducibilityLimit": "No complete Table 2 transcription was added to this review. It records aggregate row counts and official text locators only; the previously reviewed 20 selected watercourse entries remain a non-exhaustive name subset."
+  },
+  "decision": "Record 165 as the historical Region III Table 2 row-mention count and 153 as the Map 6 printed base subtotal. Do not substitute either for a current inventory or claim the arithmetic difference is explained. Keep the one-row bridge after mechanical addition of the parenthetical values unresolved, as well as all current identities, crosswalks and geometry.",
+  "disposition": {
+    "researchOnly": true,
+    "waterbodyIdentitiesValidated": 0,
+    "geometryAdded": false,
+    "speciesAssertionsAdded": 0,
+    "occurrenceRecordsAdded": 0,
+    "publicAppRowsAdded": 0,
+    "publicationApproval": false
+  },
+  "nextActions": [
+    "Locate an independently reusable current Region III river/waterbody name source and crosswalk historical atlas labels to it without inferring identity from name equality alone.",
+    "Seek a documented row-to-count method for the Atlas Map 6 and Table 2 differences; do not infer the RDP's 202-river count from these values.",
+    "Continue dated, taxon-resolved and rights-reviewed freshwater, brackish and marine fish-source coverage for the region."
+  ],
+  "sources": [
+    {
+      "sourceId": "denr-bmb-luzon-inland-wetlands-atlas-2014",
+      "url": "https://www.ramsar.org/sites/default/files/documents/library/atlas_inland_wetland_mainland_luzon_philippines_2014_e.pdf",
+      "supports": "Map 6 gives provincial river-system counts and notes the star markers. Table 2 supplies Region III river and river-system row mentions with printed province fields; no row-by-row join from Table 2 to Map 6 counts is provided in the reviewed text."
+    },
+    {
+      "sourceId": "depdev-region-iii-rdp-2023-2028",
+      "url": "https://dro3.depdev.gov.ph/wp-content/uploads/2024/04/Final-CL-RDP-2023-2028_com.pdf",
+      "supports": "The RDP separately reports 168 wetland units with a BMB 2014 footnote and 202 rivers without a footnote in the reviewed passage. This comparison does not resolve the latter."
+    }
+  ]
+}
