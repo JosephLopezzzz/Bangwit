@@ -107,6 +107,8 @@ The ADB-hosted MWSS semi-annual monitoring report includes a 2018 dry/wet-season
 
 The follow-up crosswalk checked all 19 Table 13 spellings against GBIF ChecklistBank v2: 18 strict exact name matches (16 accepted usages and two synonyms) and one strict no-match for the printed `Pterygoplychtys pardalis` typo. A non-strict query returned `Pterygoplichthys pardalis` as an 81-confidence variant candidate, not a specimen identification. The Catalog of Fishes agrees with GBIF on `Trichopodus pectoralis` but differs in the accepted spelling for `Giuris` (`margaritaceus` in the Catalog versus `margaritacea` in GBIF). Source spellings and family labels remain intact; no species or occurrence rows were promoted. See `reviews/central-luzon-awtip-tunnel4-fish-taxonomy-crosswalk-20261124.json`.
 
+Table 13’s 19 rows were then transcribed across its nine May/September station pairs from the visually checked PDF pages 348–350. The transcription contains 106 numeric cells and 236 visibly blank cells; blanks are preserved as blanks, not zeros or confirmed absences. These are historical values under the report’s stated density header, not new occurrence records or current abundance estimates. See `reviews/central-luzon-awtip-tunnel4-table13-density-transcription-20261124.json`.
+
 ## NCR waterbody source leads
 
 ### NCR incomplete-discovery checkpoint
