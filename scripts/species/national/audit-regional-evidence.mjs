@@ -576,7 +576,7 @@ const publicProjections = [...publicProjectionComponents.entries()].map(([name, 
 
 const index = {
   schemaVersion: 1,
-  snapshotId: "luzon-evidence-audit-20261124",
+  snapshotId: "luzon-evidence-audit-20261125",
   status: "generated-read-only-audit;review-linkage-complete;phase-id-namespace-separated;publication-exceptions-open",
   purpose: "Reconcile existing regional review artifacts and their explicit JSON reference chains. The global sources.json catalog and Luzon manifest are linkage leaves rather than regional scope edges; this index does not admit research rows or change regional completion status.",
   inputs: [...inputPaths]
