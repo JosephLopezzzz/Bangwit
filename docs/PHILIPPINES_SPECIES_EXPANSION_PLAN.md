@@ -6233,3 +6233,7 @@ The NAST Transactions abstract reports source-labeled *Gambusia affinis affinis*
 ### National rollout step 717: Refresh shared-source provenance snapshots — 24 November 2026
 
 Refreshed ten review snapshot fingerprints after the shared source registry gained unrelated research-only Valenzuela river-context, Tullahan macroplastic-context, and Parañaque EIS fishery-context/version-lineage records. Updated the dependent Labayat review-artifact fingerprints in dependency order and regenerated the Palico-Lian evidence projection. The Palico source rows remain 12 admitted historical survey-table assertions and 3 held; no species, locality, geometry, or current-presence claim changed. Updated the generated Luzon evidence index. `npm run species:status`, `npm run species:national:audit:luzon-evidence`, and `git diff --check` passed; no project tests were run.
+
+### National rollout step 728: Screen the NLEX-C5 Tullahan EIS context lead — 24 November 2026
+
+Official EMB-indexed excerpts identify two Tullahan River water-quality stations and cite the already registered Dela Paz et al. microcrustacean inventory. Direct retrieval of the full EIS returned HTTP 403, so this remains a limited research/context lead, not a complete source review. No coordinates, water-quality values, fish evidence, geometry, or app content were admitted. See `data/research/philippines/national/reviews/ncr-nlex-c5-segment-8-2-tullahan-eis-context-lead-review-20261124.json`. NCR and Luzon remain incomplete.
