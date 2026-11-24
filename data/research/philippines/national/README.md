@@ -83,6 +83,8 @@ The March 2015 draft North South Commuter Rail EPRMP's Table 2.15 lists giant mo
 
 The official BFAR/NFRDI 2009 stock assessment summarizes NSAP landing data from 1998-2002 and says 121 species were identified. Its reviewed figure and selected tables expose 19 scientific-name labels, including ten dominant raised-catch entries, but not the complete species-by-site matrix. The abstract and methods differ in how they describe the named study/landing areas; species and catches remain aggregated to Northern Zambales. Preserve the historical period and raised-catch metric, do not assign names to individual municipalities or current waters, and do not treat the list as a full checklist or abundance estimate. The PDF provides no item-specific reuse license. No occurrence, waterbody, geometry, or app data were added. See `reviews/central-luzon-northern-zambales-nfrdi-2009-fish-stock-assessment-review-20261124.json` and the source entry in `data/research/philippines/sources.json`.
 
+The 2018 NFRDI-hosted Yutuc et al. tuna assessment covers six NSAP landing stations in Subic, Masinloc and Sta. Cruz for 2003-2012 and names eight tuna species in its appendix. It is a later period than the 1998-2002 report, but shares the NSAP program and some named stations; catches are raised and may include vessels from nearby provinces. Keep the periods and metrics separate, and do not map port landings to capture waters or call the appendix a current distribution list. No item-specific reuse terms were found, and no app or occurrence rows were added. See `reviews/central-luzon-zambales-yutuc-2018-tuna-resource-review-20261124.json` and the source entry in `data/research/philippines/sources.json`.
+
 ## NCR waterbody source leads
 
 ### NCR incomplete-discovery checkpoint
