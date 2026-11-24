@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "central-luzon-bmb-rdp-168-footnote-and-202-rivers-followup-20261125",
+  "reviewedOn": "2026-11-25",
+  "phaseId": "L3",
+  "regionId": "0300000000",
+  "regionName": "Region III (Central Luzon)",
+  "status": "168-wetland-footnote-explicitly-cites-bmb-2014;153-river-unit-wording-differs;202-river-count-unresolved;research-only",
+  "question": "Does the Central Luzon RDP footnote resolve the source lineage of its 168-wetland breakdown, and does it explain the separate 202-rivers statement?",
+  "sourceIds": [
+    "depdev-region-iii-rdp-2023-2028",
+    "denr-bmb-luzon-inland-wetlands-atlas-2014"
+  ],
+  "inputs": [
+    "data/research/philippines/central-luzon-discovery-checkpoint-20261024.json",
+    "data/research/philippines/national/reviews/central-luzon-bmb-2014-wetland-atlas-count-crosswalk-20261119.json"
+  ],
+  "sourceAccess": {
+    "rdpUrl": "https://dro3.depdev.gov.ph/wp-content/uploads/2024/04/Final-CL-RDP-2023-2028_com.pdf",
+    "rdpCountLocator": "Wetlands and River Systems; printed page 18; indexed PDF text lines 743-745",
+    "rdpEndnoteLocator": "Endnotes; printed page 50; indexed PDF text line 1737",
+    "atlasUrl": "https://www.ramsar.org/sites/default/files/documents/library/atlas_inland_wetland_mainland_luzon_philippines_2014_e.pdf",
+    "atlasRiverCountLocator": "River-system map count table; indexed PDF text lines 527-534, with unit notes at lines 550-551",
+    "atlasWetlandTableLocator": "Table 1 Region III rows, codes 53-66 and 105; indexed PDF text lines 778-802",
+    "directPdfStatus": "Search-indexed PDF text was reviewed. Direct PDF requests returned HTTP 403; no access control was bypassed and no local PDF was retained."
+  },
+  "findings": {
+    "rdp168Statement": "The RDP says Central Luzon has 168 wetlands comprising 153 major and minor rivers, 11 lakes, three water reservoirs, and one swamp. Superscript footnote 6 is attached to that sentence.",
+    "footnote6": "The RDP endnotes identify footnote 6 as DENR-Biodiversity Management Bureau, 2014. This explicitly attributes the 168-wetland sentence to the BMB 2014 source.",
+    "bmbCountCrosswalk": {
+      "riverCount": 153,
+      "riverTermAsPrinted": "river systems",
+      "table1NonRiverClasses": {
+        "lakes": 11,
+        "waterStorageAreas": 3,
+        "marshesOrSwamps": 1
+      },
+      "nonRiverTableRows": 15,
+      "arithmeticTotal": 168,
+      "assessment": "The atlas counts and the RDP's 168-category arithmetic agree, and the RDP footnote establishes the BMB 2014 citation lineage. The RDP describes 153 as major/minor rivers while the atlas labels its 153 units river systems. The atlas notes that some systems are assigned to one province or counted once when draining to a shared stream; the matching number does not establish identical unit definitions, a current named inventory, or a verified denominator."
+    },
+    "separate202RiverStatement": {
+      "count": 202,
+      "sentenceLocator": "RDP printed page 18; indexed PDF text line 745",
+      "footnoteAttached": false,
+      "definitionOrDerivationInReviewedPassage": false,
+      "result": "The sentence says 202 rivers are primarily in Bataan, Aurora, and Zambales but carries no footnote. The reviewed RDP passage does not define the counting unit or explain its relationship to the 153-unit figure. A bounded search did not locate a separate primary list or method that establishes the 202 count."
+    },
+    "draftLineage": "The indexed pre-publication RDP repeats the same 168 and 202 statements; it is an earlier version of the same planning document, not independent confirmation.",
+    "boundedSearch": {
+      "approach": "Reviewed the official DEPDev Region III RDP indexed PDF text at the 168/202 paragraph and endnote 6; reviewed the cited BMB atlas river-system count table, notes, and all Region III Table 1 rows; searched exact phrases and related Central Luzon river-count terms in official and public indexes.",
+      "result": "Confirmed explicit BMB 2014 citation lineage for the 168 breakdown. No independent primary source, named complete 202-river list, or definition reconciling the 202 and 153 counts was found in the bounded search. This does not establish that no such source exists.",
+      "outreach": "No agency, author, or project proponent was contacted."
+    }
+  },
+  "decision": "Treat the 168 figure as a historical, source-reported planning count explicitly cited to BMB 2014, with category-level arithmetic concordance. Keep the RDP's 202-river count and the meaning of its relationship to the atlas's 153 river systems unresolved. Neither number is a current complete waterbody inventory; do not infer missing names, river geometry, fish occurrence, access, safety, or fishing rules.",
+  "disposition": {
+    "researchOnly": true,
+    "speciesAssertionsAdded": 0,
+    "occurrenceRecordsAdded": 0,
+    "waterbodyIdentitiesValidated": 0,
+    "geometryAdded": false,
+    "publicAppRowsAdded": 0,
+    "publicationApproval": false
+  },
+  "nextActions": [
+    "Search for an independently published, primary-source list or method for the RDP's 202-river figure; keep it unresolved if none is located.",
+    "Continue name-level crosswalking the historical BMB atlas rows against current waterbody sources without treating atlas map grids as geometry.",
+    "Seek dated, taxon-resolved and reusable fish evidence by named Central Luzon waterbody; retain the regional baseline as incomplete."
+  ],
+  "sources": [
+    {
+      "sourceId": "depdev-region-iii-rdp-2023-2028",
+      "url": "https://dro3.depdev.gov.ph/wp-content/uploads/2024/04/Final-CL-RDP-2023-2028_com.pdf",
+      "supports": "Printed page 18 reports the 168 category breakdown with footnote 6, followed by a separate unfootnoted 202-rivers statement. Printed page 50 identifies footnote 6 as DENR-Biodiversity Management Bureau, 2014."
+    },
+    {
+      "sourceId": "denr-bmb-luzon-inland-wetlands-atlas-2014",
+      "url": "https://www.ramsar.org/sites/default/files/documents/library/atlas_inland_wetland_mainland_luzon_philippines_2014_e.pdf",
+      "supports": "The river-system map table reports a Region III subtotal of 153 and explains its asterisk counting notes; Table 1 lists 11 lakes, three water storage areas, and one marsh/pool row for Region III."
+    }
+  ]
+}

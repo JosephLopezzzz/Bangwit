@@ -75,6 +75,10 @@ The 1,298-row attribute and pour-point queue is Git-ignored at `data/research/ph
 
 ## Central Luzon source leads
 
+### RDP 168-wetland footnote and separate 202-river figure
+
+The Central Luzon RDP's 168-wetland breakdown carries footnote 6, which its endnotes identify as DENR-BMB (2014). The cited atlas reports 153 Region III river systems and Table 1 lists 11 lakes, three water-storage areas and one marsh/pool row; those counts match the RDP's 153/11/3/1 arithmetic. The unit wording still differs (“major and minor rivers” in the RDP versus “river systems” in the atlas), so this is citation lineage and count-level concordance, not a current or complete waterbody inventory. The RDP's following 202-rivers statement has no footnote in that passage, and a bounded search found no separate primary list or definition reconciling it with 153. Keep 202 unresolved. No species, occurrence, waterbody identity, geometry, or public app data was added. See `reviews/central-luzon-bmb-rdp-168-footnote-and-202-rivers-followup-20261125.json` and the RDP and BMB source records.
+
 ### Guiguinto and Meycauyan river nekton lead
 
 The March 2015 draft North South Commuter Rail EPRMP's Table 2.15 lists giant mottled eel, catfish, tilapia, and mudfish/striped snakehead as nekton for the Guiguinto and Meycauyan rivers. These are common-name labels only; the report gives no fish-specific collection date, method, counts, vouchers, or separate river/station attribution. Browser text extraction renders the nekton cell as shared across both river rows, but the PDF screenshot request timed out, so the table layout is not visually verified. No scientific-name, occurrence, or app rows were added. Keep this as a historical research lead and do not equate the March 2015 report date with a fish sampling date. See `reviews/region03-guiguinto-meycauyan-2015-nscr-eprmp-fish-context-review-20261120.json` and the source entry in `data/research/philippines/sources.json`.
