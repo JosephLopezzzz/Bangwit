@@ -1,0 +1,67 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "ncr-nlex-c5-tullahan-eis-full-text-access-followup-20261124",
+  "reviewedOn": "2026-11-24",
+  "phaseId": "L2",
+  "regionId": "1300000000",
+  "regionName": "National Capital Region (NCR)",
+  "parentReviewId": "ncr-nlex-c5-segment-8-2-tullahan-eis-context-lead-review-20261124",
+  "status": "official-eis-browser-extracted-full-text-accessible;freshwater-ecology-sections-screened;no-fish-specific-evidence-in-reviewed-sections;research-only",
+  "question": "Does browser access to the official NLEX-C5 Segment 8.2 EIS freshwater-ecology chapter add fish-specific evidence for Tullahan River?",
+  "snapshotHashes": {
+    "sourceRegistryBeforeFollowup": "35eb6f4e1b12d4934ecbb435321493e06b7769612d9c7f0c5b7aedfa006b0622"
+  },
+  "method": {
+    "summary": "Opened the official EMB-hosted EIS as a searchable browser-extracted PDF text document. The full extracted document was indexed with 46,072 text lines; this follow-up examined the water-quality and freshwater-ecology sections and searched the extracted text for fish-specific terms. Direct binary retrieval had returned HTTP 403 in the earlier workflow. No access control was bypassed and no local PDF was saved.",
+    "reviewedContent": "Reviewed Chapter 2 sections 2.2.2.1.2 (surface-water quality), Table 2.23, and 2.2.3.1-2.2.3.3 (freshwater ecology). The EIS says the ecological account uses published literature and monitoring reports. Its Tullahan baseline cites Dela Paz et al. (2018) and names Moina micrura, Moinodaphnia macleaya, Mesocyclops aspericornis, and Thermocyclops taihokuensis, all microcrustaceans rather than fish. Table 2.23 water-quality stations are not fish-collection stations.",
+    "coverageLimit": "The browser exposed searchable full-document text, but this was a targeted review of the relevant water-quality and freshwater-ecology sections, not a page-by-page review of every report chapter. No report-wide fish-absence conclusion is made; other chapters may contain fish-related discussion."
+  },
+  "findings": {
+    "waterbodyContext": "The EIS places two project-era environmental water-quality stations along Tullahan River within the Navotas-Malabon-Tullahan-Tenejeros system. The stations describe water-quality sampling only and do not define a fish survey reach, fish occurrence point, fishing access, or river geometry.",
+    "freshwaterEcologyContext": "The reviewed baseline relays four microcrustacean taxa from the already registered Dela Paz et al. (2018) literature. These are invertebrates, not fish, and the EIS citation is not an independent fish survey.",
+    "fishEvidence": "No fish-specific sampling method, fish taxon, fish observation, or fish-collection station was found in the reviewed freshwater-ecology sections. This finding is limited to those sections and is not evidence that fish are absent from Tullahan River.",
+    "coordinateHandling": "The EIS includes coordinates for environmental water-quality stations, but none were copied into this review. They must not be represented as fish locations or river geometry.",
+    "sourceAccess": "Full browser-extracted text of the official EMB EIS is now accessible to this review workflow even though direct binary PDF retrieval previously returned HTTP 403. The initial lead review remains as the earlier access-limited snapshot."
+  },
+  "rights": {
+    "license": "No item-specific reuse terms verified.",
+    "reuseDecision": "Retain an attributed internal scope note and citation only. Do not reproduce EIS prose, tables, figures, maps, coordinates, or water-quality measurements in a public product without a separate rights review.",
+    "rawHandling": "Reviewed browser-extracted text from the official EMB-hosted PDF. No PDF, image, table, figure, coordinate, or measurement was copied or retained locally."
+  },
+  "decision": {
+    "freshwaterContextLeadConfirmed": true,
+    "microcrustaceanTaxaListedInReviewedEcologySection": 4,
+    "fishSpecificEvidenceInReviewedSections": 0,
+    "fishOccurrenceRowsAdded": 0,
+    "fishSpeciesAssertionsAdded": 0,
+    "coordinatesTranscribed": 0,
+    "waterbodyGeometryAdded": false,
+    "publicAppProjection": false,
+    "regionalBaselineComplete": false,
+    "disposition": "Update the existing source record from excerpt-only access to targeted review of the official browser-extracted EIS text. Keep the source as freshwater project context; it adds no verified fish evidence, species assertion, occurrence, or public-app content."
+  },
+  "nonClaims": [
+    "The four names in the reviewed freshwater baseline are microcrustaceans and are not fish taxa.",
+    "The water-quality stations do not establish fish presence, fish absence, a fish sampling reach, or a fishing location.",
+    "The section-limited screen does not establish report-wide absence of fish-related content.",
+    "No water safety, fishing access, legal rule, river-channel geometry, or present-day biological status is inferred."
+  ],
+  "relatedReviews": [
+    "national/reviews/ncr-nlex-c5-segment-8-2-tullahan-eis-context-lead-review-20261124.json"
+  ],
+  "nextActions": [
+    "Continue the NCR freshwater sweep for primary fish studies with dated sampling, explicit field methods, site-resolved taxa, and voucher or accession links.",
+    "Keep water-quality, microcrustacean, and fish evidence in separate evidence lanes.",
+    "Do not treat lack of fish-specific evidence in this EIS section as a biological-absence statement."
+  ],
+  "sources": [
+    {
+      "url": "https://eia.emb.gov.ph/wp-content/uploads/2021/04/EIS-NLEX-Segment-8.2.pdf",
+      "supports": "Official EMB-hosted NLEX-C5 Segment 8.2 EIS; browser-extracted full text, particularly Chapter 2 sections 2.2.2.1.2 and 2.2.3.1-2.2.3.3 and Table 2.23."
+    },
+    {
+      "url": "https://doi.org/10.15560/14.5.751",
+      "supports": "Dela Paz et al. (2018), the microcrustacean study cited by the EIS and already registered separately; it is not a fish source."
+    }
+  ]
+}
