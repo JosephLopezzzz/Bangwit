@@ -1,0 +1,74 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "central-luzon-sacobia-concepcion-steelasia-eis-fish-review-20261124",
+  "reviewedOn": "2026-11-24",
+  "phaseId": "L3",
+  "regionId": "0300000000",
+  "regionName": "Region III (Central Luzon)",
+  "waterbodyNamesAsReported": ["Sacobia River", "Parua River"],
+  "status": "official-EMB-EIS-fulltext-reviewed;single-day-freshwater-baseline;generic-fish-groups-only;station-count-scope-unresolved;Sacobia-Parua-name-dispute;research-only",
+  "question": "Does the official Concepcion EIS provide locality-resolved freshwater fish evidence, and can its observations be treated as a verified Sacobia River checklist?",
+  "sourceId": "steelasia-concepcion-sacobia-freshwater-fish-eis-2018",
+  "source": {
+    "citation": "SteelAsia Manufacturing Corporation. (2018). Environmental Impact Statement (EIS): Proposed Scrap Recycling Steel Mill (Mini-Mill) Project, Barangay Telabanca, Concepcion, Tarlac. Prepared by Mediatrix Business Consultancy; hosted by the DENR Environmental Management Bureau EIA Portal.",
+    "officialEisPdf": "https://eia.emb.gov.ph/wp-content/uploads/2018/09/SteelAsia-Concepcion_EIS_Sept2018.pdf",
+    "officialPublicHearingReport": "https://eia.emb.gov.ph/wp-content/uploads/2018/12/Public-Hearing-Report.pdf",
+    "surveyDate": "2017-08-20",
+    "reviewedSections": ["Freshwater ecology methods and station descriptions", "Table 3: freshwater fish sampling stations", "Section 3.1.4 and Table 3.1.4.1: fish and fisheries", "Public Hearing Report p. 10: Sacobia/Parua naming and fish-finding comments"],
+    "reuse": "No item-specific open license or permission to reproduce the EIS table, maps, or photographs was verified. No PDF, figure, or image was retained."
+  },
+  "siteAndSampling": {
+    "studyAreaAsReported": "Freshwater ecology assessment in Barangays Telabanca and San Francisco, Concepcion, Tarlac.",
+    "stations": [
+      {"id": "FWB1", "relatedRiverStationId": "RVR1", "siteAsReported": "Downstream along Sacobia River", "latitude": 15.292917, "longitude": 120.634, "crs": null},
+      {"id": "FWB2", "relatedRiverStationId": "RVR2", "siteAsReported": "Midstream along Sacobia River", "latitude": 15.288194, "longitude": 120.627056, "crs": null},
+      {"id": "FWB3", "relatedRiverStationId": "RVR3", "siteAsReported": "Upstream along Sacobia River", "latitude": 15.283425, "longitude": 120.616383, "crs": null},
+      {"id": "FWB4", "relatedRiverStationId": "RVR4", "siteAsReported": "Canal near fishponds in Barangay San Francisco, not one of the three river stations", "latitude": 15.302556, "longitude": 120.630194, "crs": null}
+    ],
+    "coordinateLimit": "Decimal-degree station coordinates are printed, but no datum or CRS is specified. They are study-station locations, not individual capture points, a verified river path, a waterbody boundary, or public fishing locations.",
+    "methodAsReported": "One-day environmental baseline on 2017-08-20. Scoop nets were used at suspected fish shelters in shallow, calmer portions; cast-netting was not possible under the reported rapid, turbid conditions. The report says no actual fishing operations occurred at the stations.",
+    "riverNameConflict": "A public-hearing participant said the nearby river was Parua, not Sacobia. The EIS team answered that it used Sacobia as the officially recognized name and that Parua was a local term. This response does not independently resolve channel identity or prove an alias; keep the names separate pending an independent crosswalk."
+  },
+  "sourceReportedBiota": [
+    {
+      "sourceName": "Glossogobius sp.", "sourceFamily": "Gobiidae", "localName": "Goby/Biya", "rank": "genus-level fish label",
+      "tableCounts": {"FWB1": 5, "FWB2": 4, "FWB3": 0, "FWB4": 1}, "tableSum": 10, "narrativeCount": 9,
+      "limit": "The table totals ten across FWB1, FWB2, and FWB4; the narrative says nine in two stations but does not name them. This could describe the two river stations and exclude the canal's FWB4 goby, but that station mapping is not explicit. No species-level or current-presence claim is supported."
+    },
+    {
+      "sourceName": "Oreochromis sp.", "sourceGroup": "Tilapia", "localName": "Tilapia", "rank": "genus-level fish label",
+      "tableCounts": {"FWB1": 3, "FWB2": 1, "FWB3": 1, "FWB4": 0}, "tableSum": 5, "narrativeCount": 5,
+      "limit": "No species-level identification is supported."
+    },
+    {
+      "sourceNameInStationRemarks": "Macrobrachium sp.", "speciesNameAlsoUsedElsewhere": "Macrobrachium rosenbergii", "sourceFamily": "Palaemonidae", "localName": "Freshwater giant prawn/Ulang", "tableCounts": {"FWB1": 17, "FWB2": 25, "FWB3": 0, "FWB4": 0}, "tableSum": 42,
+      "limit": "A crustacean, not a fish. Station remarks are genus-level but other EIS text names M. rosenbergii; no specimen voucher or taxonomic resolution was found."
+    },
+    {
+      "sourceName": "Thiaridae", "sourceGroup": "Gastropod", "localName": "Kuhol", "tableCounts": {"FWB1": 0, "FWB2": 0, "FWB3": 0, "FWB4": 2},
+      "limit": "The EIS describes two shells at FWB4; not a fish and no species-level identification is given."
+    }
+  ],
+  "qualityAndInterpretation": {
+    "tableStationTotals": {"FWB1": 25, "FWB2": 30, "FWB3": 1, "FWB4": 3, "sum": 59},
+    "countScopeNote": "The four table rows and station totals both sum to 59 counted items (10 Glossogobius sp. + 5 Oreochromis sp. + 42 Macrobrachium sp. + 2 Thiaridae shells). The narrative's nine gobies at two stations could refer to FWB1-FWB2, with the table's extra goby at canal FWB4, but it does not name the stations. Do not claim a numeric contradiction; retain the unverified station-scope crosswalk.",
+    "hearingDispute": "The public-hearing report records a participant disputing both the Sacobia name and the fish/shrimp findings. The EIS team's response defends its sampling and naming; it is not an independent taxonomic or hydrological verification.",
+    "studyLimit": "Three river stations and one nearby canal on one date are not a complete inventory, abundance estimate, current-presence or fish-absence finding, catchability result, or seasonality study. Project-era statements about fishing activity/feasibility are not current advice.",
+    "reuse": "No item-specific reuse license or permission was verified. Do not copy/publish source tables, maps, or photographs from this review."
+  },
+  "disposition": {
+    "sourceRegistryRecordsAdded": 1, "sourceReportedGroupsReviewed": 4, "verifiedFishSpeciesAdded": 0,
+    "speciesAssertionsAdded": 0, "occurrenceRecordsAdded": 0, "dietClaimsAdded": 0, "imagesAdded": 0,
+    "waterbodyAliasAdded": false, "geometryAdded": false, "publicAppRowsAdded": 0,
+    "publicationApproval": false, "regionalReleaseApproved": false
+  },
+  "nextActions": [
+    "Keep Sacobia and Parua as separate source-reported locality names until an independent hydrological/map source resolves their relationship.",
+    "Seek recent, taxon-resolved surveys with clear station and specimen/voucher evidence for Tarlac rivers and lakes.",
+    "Continue Central Luzon coverage across river, lake, reservoir, wetland, brackish, and coastal habitats; the region and Luzon remain incomplete."
+  ],
+  "sources": [
+    {"url": "https://eia.emb.gov.ph/wp-content/uploads/2018/09/SteelAsia-Concepcion_EIS_Sept2018.pdf", "supports": "Official EMB-hosted EIS: methods, station coordinates/descriptions, source-reported biota and count tables."},
+    {"url": "https://eia.emb.gov.ph/wp-content/uploads/2018/12/Public-Hearing-Report.pdf", "supports": "Public-hearing record of the Parua/Sacobia naming dispute and objection to the reported fish/shrimp findings, with the EIS team's reply."}
+  ]
+}
