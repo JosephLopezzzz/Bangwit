@@ -341,6 +341,10 @@ for (const region of manifest.regions) {
     if (reviewPathSet.has(current)) reached.add(current);
     const document = loadDocument(current);
     if (!document) continue;
+    // These files organize the corpus globally. Their links identify catalog and
+    // manifest membership, but do not make every listed review part of each
+    // region's evidence scope.
+    if (current === sourcesPath || current === manifestPath) continue;
     for (const ref of document.refs) {
       if (ref.localRaw || !ref.resolvedPath || isGeneratedAuditIndex(ref.resolvedPath)) continue;
       queue.push(ref.resolvedPath);
@@ -574,7 +578,7 @@ const index = {
   schemaVersion: 1,
   snapshotId: "luzon-evidence-audit-20261124",
   status: "generated-read-only-audit;review-linkage-complete;phase-id-namespace-separated;publication-exceptions-open",
-  purpose: "Reconcile existing regional review artifacts and their explicit JSON reference chains; this index does not admit research rows or change regional completion status.",
+  purpose: "Reconcile existing regional review artifacts and their explicit JSON reference chains. The global sources.json catalog and Luzon manifest are linkage leaves rather than regional scope edges; this index does not admit research rows or change regional completion status.",
   inputs: [...inputPaths]
     .filter((relativePath) => existsSync(path.join(root, relativePath)))
     .sort()
