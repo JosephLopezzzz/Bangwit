@@ -115,6 +115,10 @@ Figure 1 numbers five named Marikina River-system stations from north to south. 
 
 The public eFOI search index shows a 22 May 2023 BFAR response to a Marikina River fish-information request and names an attached letter from DA-BFAR Regional Fisheries Office-NCR. The response text does not expose the letter or any biological data. Direct retrieval returned a service error and Cloudflare challenge; neither was bypassed, and no attachment was downloaded. The requester-entered 2000–2023 coverage range is not verified data coverage. Treat this as a retrieval lead only; it adds no species, occurrence, sighting, gear, or fisher records. See `reviews/ncr-bfar-marikina-public-foi-attachment-access-review-20261124.json`.
 
+### PSA Marikina request and general statistics referrals
+
+A separate public PSA response dated 2 June 2023 says PSA did not have specific data for a request about Marikina River fish species, sighting locations, fishing gears, and fisher counts. It points to four general statistics products, but no table-level Marikina waterbody or taxonomic resolution has been established. Treat those links as discovery routes only; they are not fish-occurrence evidence or substitutes for a site-resolved survey. No species, catch, gear, or fisher records were added. See `reviews/ncr-psa-2023-marikina-fish-species-foi-response-review-20261124.json`.
+
 ### Valenzuela river-system context
 
 Maynilad's 2014 Environmental Assessment Report for the Valenzuela Sewerage System names the Tullahan, Polo, and Meycauayan river systems and describes project-era catchment and tidal context. Its Tullahan “no fish” statement is explicitly based on observations and interviews; the report gives no fish-survey method or repeatable non-detection protocol. Keep it as historical waterbody-discovery context, never as proof of fish absence, current condition, or fishing access. The separate 2024 Navotas-Malabon-Tullahan survey has a malformed Site 3 coordinate and does not establish an exact Tullahan-reach crosswalk. See `reviews/ncr-worldbank-valenzuela-sewerage-ea-tullahan-no-fish-claim-review-20261124.json`.
