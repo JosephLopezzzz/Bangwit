@@ -1,0 +1,115 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "ncr-incomplete-coverage-checkpoint-20261124",
+  "reviewedOn": "2026-11-24",
+  "phaseId": "L2",
+  "regionId": "1300000000",
+  "regionName": "National Capital Region (NCR)",
+  "status": "discovery-checkpoint-incomplete;continue-regional-work;L3-discovery-unblocked",
+  "question": "Is the current NCR discovery state documented well enough to begin the next Luzon region's discovery work without treating NCR as complete?",
+  "inputs": {
+    "priorDiscoveryReview": "data/research/philippines/ncr-species-coverage-review-20261024.json"
+  },
+  "snapshotTiming": "Counts below reflect the NCR manifest and evidence-audit snapshot before this checkpoint was added to NCR evidenceRefs. The current manifest therefore has one additional NCR evidence reference.",
+  "currentState": {
+    "administrativeUnitsInPriorCheckpoint": 17,
+    "administrativeUnitNames": [
+      "City of Caloocan",
+      "City of Las Piñas",
+      "City of Makati",
+      "City of Malabon",
+      "City of Mandaluyong",
+      "City of Manila",
+      "City of Marikina",
+      "City of Muntinlupa",
+      "City of Navotas",
+      "City of Parañaque",
+      "Pasay City",
+      "City of Pasig",
+      "Quezon City",
+      "City of San Juan",
+      "City of Taguig",
+      "City of Valenzuela",
+      "Pateros"
+    ],
+    "regionalManifestWorkStatus": "reviewing",
+    "regionalEvidenceCoverage": "partial",
+    "baselineReviewed": false,
+    "scopeFrozen": false,
+    "regionalEvidenceReferenceCount": 107,
+    "remainingOpenWorkItems": 74,
+    "requiredHabitatLanes": ["freshwater", "brackish", "marine"],
+    "sourceNamedWaterbodyContextCount": {
+      "count": 18,
+      "asOf": "2026-10-24",
+      "interpretation": "Historical mixed waterbody, shared-water, reservoir, watershed, wetland-park and habitat contexts from the prior checkpoint; not a current or reconciled count of unique aquatic features."
+    },
+    "evidenceAudit": {
+      "snapshotId": "luzon-evidence-audit-20261124",
+      "reviewArtifactsScannedNationally": 317,
+      "ncrManifestReferences": 107,
+      "ncrDirectlyLinkedReviewArtifacts": 105,
+      "ncrIndirectlyLinkedReviewArtifacts": 1,
+      "ncrDeclaredOrLinkedReviewArtifacts": 118,
+      "ncrUnaccountedExplicitReviewArtifacts": 0,
+      "brokenOrUnresolvedJsonReferences": 0,
+      "missingSourceIdLinks": 0,
+      "meaning": "These are pre-checkpoint artifact-linkage and integrity counts, not fish-coverage, waterbody-completion or release counts."
+    }
+  },
+  "existingAppEvidence": {
+    "sourceTreeProjection": "src/data/pasig-river-species-evidence.json",
+    "component": "src/components/pasig-river-species-evidence.tsx",
+    "assertions": 1,
+    "collectionEvents": 1,
+    "sourceReportedIndividuals": 3,
+    "taxon": "Arius manillensis Valenciennes, 1840",
+    "reportedWaterbody": "Pasig River",
+    "reportedCollectionDate": "2025-10-29",
+    "coordinateShown": false,
+    "interpretation": "A narrowly attributed historical collection-event card exists in the source tree. It is not a complete NCR fish baseline, an abundance estimate, a fishing location, a safety recommendation or regional release approval. This checkpoint does not verify a production deployment."
+  },
+  "evidenceDecision": {
+    "checkpointAllowsNextRegionDiscovery": true,
+    "ncrBaselineComplete": false,
+    "ncrWaterbodyDenominatorReconciled": false,
+    "ncrScopeFrozen": false,
+    "phaseExitMet": false,
+    "speciesAssertionsAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "geometryAdded": false,
+    "newPublicProjectionAdded": false,
+    "decision": "Record an incomplete regional discovery checkpoint and permit L3 Central Luzon discovery to begin. Keep NCR open and continue its remaining 74 work items; do not describe this checkpoint as regional completion or biological absence."
+  },
+  "crossRegionHandling": {
+    "sharedWaters": [
+      {
+        "name": "Manila Bay",
+        "regions": ["NCR", "Central Luzon", "CALABARZON"],
+        "rule": "Keep source-specific coverage and identities shared; do not assign broad bay records to NCR or count them as independent regional records without locality evidence."
+      },
+      {
+        "name": "Laguna de Bay",
+        "regions": ["NCR", "CALABARZON"],
+        "rule": "Keep collection site and administrative region distinct; do not widen source-specific localities."
+      },
+      {
+        "name": "Marikina River",
+        "regions": ["NCR", "CALABARZON"],
+        "rule": "Reconcile river reaches from source locations and verified geography rather than duplicating whole-river coverage by region."
+      }
+    ]
+  },
+  "limitations": [
+    "The 17-unit administrative list does not establish the complete waterbody inventory within those units.",
+    "The current manifest still marks NCR evidence coverage partial, baselineReviewed false and scopeFrozen false.",
+    "The 18-context figure is an explicitly dated historical discovery count, not a unique waterbody denominator.",
+    "A completed audit-linkage check does not verify the biological accuracy, reuse rights or completeness of all linked studies.",
+    "No fishing access, legal rules, catchability, safety, food-consumption guidance or current fish absence is established."
+  ],
+  "nextStep": {
+    "phaseId": "L3",
+    "region": "Region III (Central Luzon)",
+    "action": "Start the next Luzon regional discovery pass from its current administrative and waterbody scope; cover rivers, tributaries, lakes, reservoirs, wetlands, brackish estuaries and marine waters, then review primary fish sources. Keep NCR listed as incomplete and reconcile shared Manila Bay and Marikina River evidence across regional boundaries."
+  }
+}

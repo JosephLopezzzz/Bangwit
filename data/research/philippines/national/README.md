@@ -81,6 +81,10 @@ The March 2015 draft North South Commuter Rail EPRMP's Table 2.15 lists giant mo
 
 ## NCR waterbody source leads
 
+### NCR incomplete-discovery checkpoint
+
+The 24 November checkpoint records 17 administrative units, 107 NCR evidence references and 74 open research items. It preserves NCR as partial and leaves its source-derived waterbody denominator and scope freeze unresolved. The generated Luzon evidence audit has no broken JSON references or missing source links, but that integrity check is not a regional coverage result. One attributed historical Pasig River collection-event card is present in the source tree for *Arius manillensis* (three individuals, 29 October 2025); its coordinates are withheld and it is not a complete NCR baseline or release approval. The checkpoint permits Region III discovery to begin while NCR remains open. See `reviews/ncr-incomplete-coverage-checkpoint-20261124.json`.
+
 ### NCR NAPWC Lagoon geometry lead
 
 The historical BMB inland-wetlands rows label a Quezon City pond as “Ninoy Aquino Parks and Wildlife Center Lagoon” in the 2016 atlas and “Ninoy Aquino Parks and Wildlife Center” in the 2019 inventory; both show 3.39 ha and likely share inventory lineage. Quezon City's 2018 ecological profile independently describes a man-made lagoon at NAPWC. BMB PAIS's indexed profile describes an approximate 4.0 ha man-made lagoon in the park's northwest, with an islet; the direct PAIS page request timed out, so this is recorded as an indexed source finding. The two reported areas conflict and their dates and measurement methods are not reconciled.
