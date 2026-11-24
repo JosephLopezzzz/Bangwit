@@ -1,0 +1,92 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "central-luzon-angat-bpc001-13-multigene-taxonomy-followup-20261125",
+  "reviewedOn": "2026-11-25",
+  "phaseId": "L3",
+  "regionId": "0300000000",
+  "regionName": "Region III (Central Luzon)",
+  "waterbodyNames": [
+    "Angat River"
+  ],
+  "status": "primary-multigene-taxonomy-context-reviewed;no-target-voucher-crosswalk-found;species-identity-held;research-only",
+  "question": "Does the Philippine multi-gene catfish study or a bounded public catalog search independently verify the ANAd1 voucher or resolve the species identity of BPC001-13?",
+  "sourceIds": [
+    "yu-quilang-2014-philippines-catfish-phylogeny-cagayan-records",
+    "gbif-angat-river-bpc001-13-occurrence-2248809978",
+    "bold-bpc001-13-barcode-record",
+    "ncbi-kf604634-1-genbank-submission",
+    "bold-bin-aac5247-member-records-20261119"
+  ],
+  "inputs": [
+    "data/research/philippines/national/reviews/central-luzon-angat-river-bpc001-13-record-review-20261119.json",
+    "data/research/philippines/national/reviews/central-luzon-angat-river-aac5247-bin-membership-review-20261119.json",
+    "data/research/philippines/national/reviews/central-luzon-angat-bpc001-13-georeference-plausibility-20261119.json"
+  ],
+  "publicationCrosscheck": {
+    "citation": "Yu, S. C. S., & Quilang, J. P. (2014). Molecular Phylogeny of Catfishes (Teleostei: Siluriformes) in the Philippines Using the Mitochondrial Genes COI, Cyt b, 16S rRNA, and the Nuclear Genes Rag1 and Rag2. Philippine Journal of Science, 143(2), 187-198.",
+    "publisherUrl": "https://philjournalsci.dost.gov.ph/molecular-phylogeny-of-catfishes-teleostei-siluriformes-in-the-philippines-using-the-mitochondrial-genes-coi-cyt-b-16s-rrna-and-the-nuclear-genes-rag1-and-rag2/",
+    "pdfUrl": "https://philjournalsci.dost.gov.ph/images/pdf/pjs_pdf/vol143no2/pdf/Molecular_phylogency_of_catfishes.pdf",
+    "reviewedLocators": [
+      "Methods: sample collection and initial morphological identification, indexed PDF text lines 135-156",
+      "Table 1: species, collection-site, accession, and voucher fields, indexed PDF text lines 162-387",
+      "Specimen preservation/deposit statement, indexed PDF text lines 398-403",
+      "Arius species nondiscrimination and suggested future markers, indexed PDF text lines 799-827"
+    ],
+    "reportedDesign": "The paper analyzes 22 specimens representing 11 catfish species, with two specimens per species, using three mitochondrial and two nuclear gene regions. It says specimens were initially identified morphologically and deposited in the Institute of Biology, University of the Philippines Diliman.",
+    "taxonomyResult": "The authors report that concatenated sequences of nominal Arius manillensis and A. dispar could not be discriminated and discuss possible synonymy, while recommending additional cytogenomic and combined morphological/molecular work. This is evidence of a known taxonomic-resolution limitation, not a specimen-specific reidentification of ANAd1.",
+    "targetRecordJoin": "The indexed Table 1 does not contain voucher ANAd1 or COI accession KF604634. It includes other voucher/accession rows and does not identify BPC001-13 as one of the study specimens. The paper therefore cannot serve as an independent voucher determination for the Angat record.",
+    "access": "The official PJS publisher PDF's indexed text was reviewed. A direct binary PDF download was not obtained in this check. Article-specific reuse terms were not verified, and no PDF or figure was copied into the repository."
+  },
+  "boundedCatalogAndIdentifierSearch": {
+    "queries": [
+      "BPC001-13",
+      "ANAd1",
+      "KF604634",
+      "ANAd1 KF604634 UP Diliman fish voucher",
+      "site:up.edu.ph ANAd1 fish voucher",
+      "site:upd.edu.ph ANAd1 fish"
+    ],
+    "result": "The bounded public search returned the known GBIF, BOLD and GenBank source chain and taxonomic literature, but no distinct public institutional catalog record linking voucher ANAd1 to an accessioned preserved specimen. Search-index results were noisy; this is not an exhaustive search of offline or unindexed UP Diliman collections and does not establish that no catalog record exists.",
+    "independence": "GBIF, BOLD and GenBank are cross-linked representations of the same source specimen/sequence chain. The 2014 paper's studied specimens are a separate sample set unless an explicit voucher/accession join is produced."
+  },
+  "assessment": {
+    "sourceReportedIdentification": "Arius dispar, morphology-reported in BOLD and the linked KF604634.1 GenBank submission",
+    "alternativeMapping": "GBIF Backbone associates the unranked BOLD:AAC5247 identifier with Netuma thalassina; the BIN membership export includes multiple species labels and cannot identify the target specimen.",
+    "identityOutcome": "Unresolved. The 2014 five-locus study reinforces that the two source-named Arius taxa may not be separated by the available loci, but it does not overturn the original morphology label or establish a curator-reviewed synonymy for ANAd1.",
+    "localityOutcome": "Unchanged. The record remains a historically reported Angat River candidate with spatial plausibility only; its exact reach and coordinate uncertainty are unresolved."
+  },
+  "decision": {
+    "targetVoucherPubliclyCrosswalked": false,
+    "speciesIdentityResolved": false,
+    "sourceReportedNameRetained": "Arius dispar",
+    "speciesAssertionAdded": false,
+    "occurrenceAdded": false,
+    "geometryAdded": false,
+    "exactCoordinatesAdded": false,
+    "publicAppProjection": false,
+    "publicationApproval": false,
+    "disposition": "Retain BPC001-13/ANAd1 as one historical, source-reported candidate with taxonomic and reach assignment held. The multi-gene study is taxonomic context only; neither it nor the BIN-to-backbone mapping is a specimen-specific determination."
+  },
+  "nextActions": [
+    "If a specimen-specific resolution is still needed, seek a publicly cataloged ANAd1 voucher or an explicit determination from the holding collection; no outbound contact was made.",
+    "Keep the historical Angat record separate from the distinct AWTIP Tunnel 4, Tunnel 5, and Angat fish-survey source chains.",
+    "Do not add a species assertion, occurrence row, exact coordinate, or river geometry from this record until taxonomy, coordinate uncertainty, and exact reach mapping are independently supported."
+  ],
+  "sources": [
+    {
+      "sourceId": "yu-quilang-2014-philippines-catfish-phylogeny-cagayan-records",
+      "url": "https://philjournalsci.dost.gov.ph/images/pdf/pjs_pdf/vol143no2/pdf/Molecular_phylogency_of_catfishes.pdf",
+      "supports": "Primary multi-gene study methods, voucher/accession table, repository statement, and the authors' finding that their nominal Arius manillensis and A. dispar samples were not distinguished. It provides no ANAd1/KF604634 target join."
+    },
+    {
+      "sourceId": "ncbi-kf604634-1-genbank-submission",
+      "url": "https://www.ncbi.nlm.nih.gov/nuccore/KF604634.1",
+      "supports": "The original direct-submission record for voucher ANAd1, source-reported Arius dispar and Angat River locality."
+    },
+    {
+      "sourceId": "bold-bpc001-13-barcode-record",
+      "url": "https://portal.boldsystems.org/record/BPC001-13",
+      "supports": "BOLD source metadata linking process/sample identifier BPC001-13/ANAd1, morphology-reported name, BIN and collection details. No separate public museum accession was found in the bounded search."
+    }
+  ]
+}
