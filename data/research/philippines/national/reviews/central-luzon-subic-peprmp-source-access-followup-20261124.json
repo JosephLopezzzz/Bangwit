@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "central-luzon-subic-peprmp-source-access-followup-20261124",
+  "reviewedOn": "2026-11-24",
+  "phaseId": "L3",
+  "regionId": "0300000000",
+  "regionName": "Region III (Central Luzon)",
+  "status": "bounded-primary-report-search-no-copy-located;secondary-project-timeline-only;fish-data-not-extracted;research-only",
+  "question": "Can the SBFZ PEPRMP cited in the Subic International Golf Club EIS be located through public search, and does the accessible timeline help identify the exact source?",
+  "inputs": [
+    "data/research/philippines/sources.json",
+    "data/research/philippines/luzon-completion-manifest.json"
+  ],
+  "snapshotHashes": {
+    "sourceRegistry": "bac71c1e517b9ba4f8a20db4fc716403e336a47dac0f51f943dae2fe652a7b03",
+    "luzonCompletionManifest": "7fcbbc88044f7c094f747c1646a2318b08d048f396897440c7034dc8d2842a4b"
+  },
+  "sourceIds": [
+    "emb-subic-international-golf-eis-aquatic-fishes",
+    "sbfcc-2012-subic-peprmp-progress-timeline",
+    "inquirer-2012-subic-peprmp-preliminary-status"
+  ],
+  "search": {
+    "searchedOn": "2026-11-24",
+    "boundedQueries": [
+      "Subic Bay Freeport Zone PEPRMP 2012 fish exploratory surveys March April September 2012",
+      "SBFZ PEPRMP fish 2012 Subic Bay",
+      "Subic Bay exploratory fish surveys PEPRMP",
+      "Berkman Systems PEPRMP Subic Bay report fish",
+      "Programmatic Environmental Performance Report Subic Bay Freeport Berkman 2012 PDF",
+      "PEPRMP Progress Report for SBFZ Berkman",
+      "Subic Bay Freeport Zone Progress Report PEPRMP Berkman Systems"
+    ],
+    "primaryReportResult": "No direct copy of the SBFZ PEPRMP progress report, fish annex, species list, or underlying exploratory-survey tables was located in these bounded public searches. This does not prove that no copy exists.",
+    "directAccess": "The report cited by the 2021/2020-era Subic golf EIS remains a citation-only primary-source lead; no report URL, report number, final title page, or item-specific reuse terms were verified."
+  },
+  "timelineFindings": {
+    "chamberNewsletter": {
+      "sourceId": "sbfcc-2012-subic-peprmp-progress-timeline",
+      "finding": "The September 2012 SBFCC newsletter identifies Berkman Systems Inc. as the SBMA PEPRMP contractor, says the contract was awarded in September 2011, says the nine-month study began in February 2012 and was expected to finish in October 2012, and characterizes the then-presented material as preliminary.",
+      "limitation": "Secondary newsletter timeline only; it is not the report and does not establish delivery, finalization, fish sampling methods, taxa, or fish-to-waterbody assignments."
+    },
+    "newspaperExcerpt": {
+      "sourceId": "inquirer-2012-subic-peprmp-preliminary-status",
+      "finding": "A publisher-indexed December 2012 article excerpt reports that the Berkman study had not yet been completed and was still at a preliminary stage.",
+      "limitation": "Direct page access returned HTTP 403; this is only a search-index excerpt and a contemporaneous status clue, not proof that the project was never finalized."
+    },
+    "citedFishLineage": {
+      "sourceId": "emb-subic-international-golf-eis-aquatic-fishes",
+      "finding": "The golf EIS footnote attributes its Table 4-48 checkmarks to exploratory Subic Bay fish surveys in March-April and September 2012 and calls the source PEPRMP, SBFZ.",
+      "limitation": "The EIS does not provide a full bibliographic citation or the underlying row-level table lineage; it is not enough to identify the exact PEPRMP version or reconcile the table independently."
+    }
+  },
+  "decision": "Close this bounded retrieval attempt as unresolved. Keep the 2012 PEPRMP as a research lead only; do not copy or infer species names, occurrences, dates, stations, abundance, current presence, diet, safety, or fishing rules from secondary timeline coverage. Prioritize independently reusable, site-resolved sources for the L3 app evidence pipeline rather than waiting on this report.",
+  "disposition": {
+    "primaryReportLocated": false,
+    "speciesNamesExtracted": 0,
+    "speciesAssertionsAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "waterbodyAssignmentsAdded": 0,
+    "geometryAdded": false,
+    "reuseApproved": false,
+    "appProjection": false,
+    "regionalCoverageStatus": "partial; L3 remains reviewing and baselineReviewed=false"
+  },
+  "nextAction": "Continue the L3 source sweep with independently reusable records and primary studies for rivers, reservoirs, wetlands, estuaries, and marine waters. Reopen the PEPRMP lead only if a lawful primary copy becomes publicly available or permission is established.",
+  "sources": [
+    {
+      "url": "https://eia.emb.gov.ph/wp-content/uploads/2021/05/EIS.pdf",
+      "supports": "Official EIS indexed footnote that identifies March-April and September 2012 exploratory fish surveys as PEPRMP/SBFZ."
+    },
+    {
+      "url": "https://sbfcc.com/SBFCC_PresidentMessage.html",
+      "supports": "September 2012 Chamber newsletter project timeline and preliminary-status description; secondary source only."
+    },
+    {
+      "url": "https://newsinfo.inquirer.net/322583/clear-present-danger-to-subic-bay",
+      "supports": "Search-indexed December 2012 report excerpt on the contemporary preliminary/incomplete status; direct page returned HTTP 403."
+    }
+  ]
+}
