@@ -1,0 +1,60 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "central-luzon-bulacan-inaturalist-observation-refresh-20261124",
+  "reviewedOn": "2026-11-24",
+  "phaseId": "L3",
+  "regionId": "0300000000",
+  "regionName": "Region III (Central Luzon)",
+  "waterbodyNames": [],
+  "status": "public-api-refresh-same-14-record-ids;no-new-waterbody-resolved-records;research-only",
+  "question": "Did a direct current iNaturalist API refresh add any new fish observations or named freshwater-body locality beyond the 24 October 2026 metadata screen?",
+  "sourceIds": ["inaturalist-bulacan-observation-metadata-followup-20261024"],
+  "refresh": {
+    "endpoint": "https://api.inaturalist.org/v1/observations",
+    "query": {
+      "place_id": 11556,
+      "place_name": "Bulacan, Philippines",
+      "taxon_id": 47178,
+      "taxon_name": "Actinopterygii",
+      "quality_grade": "research",
+      "captive": false,
+      "per_page": 200
+    },
+    "queryUrl": "https://api.inaturalist.org/v1/observations?place_id=11556&taxon_id=47178&quality_grade=research&captive=false&per_page=200",
+    "retrievedOn": "2026-11-24",
+    "resultCount": 14,
+    "previousScreen": {
+      "reviewFile": "central-luzon-bulacan-gbif-waterbody-screen-20261024.json",
+      "previousResultCount": 14,
+      "previousRecordSnapshot": "raw/gbif-bulacan-waterbody-screen-20261024/inat-observations-bulk.json",
+      "recordIdSetComparison": "all 14 current record IDs matched the prior local snapshot; zero new or missing IDs"
+    },
+    "qualityAndReuseContext": {
+      "qualityGrade": "All returned rows were marked Research Grade by iNaturalist; this is platform metadata, not independent specimen verification or proof of wild capture.",
+      "captiveField": "All returned rows had captive=false; this flag alone does not establish that an animal was observed in a natural river, lake, or wetland.",
+      "licenses": "The refreshed 14 rows retained mixed record-level licenses, including CC BY and CC BY-NC.",
+      "geoprivacy": "Some observations are obscured or have only broad locality context. Exact coordinates and protected locations were not copied into this review."
+    }
+  },
+  "localityAssessment": {
+    "namedRiverLakeReservoirOrWetlandInPlaceGuess": 0,
+    "interpretation": "Displayed public place guesses resolve to administrative or broad community context, not to a named waterbody or capture station. Do not assign any row to a river, lake, reservoir, pond, estuary, or wetland from the administrative place alone.",
+    "coordinateHandling": "No coordinate was copied, mapped, or retained from the refresh."
+  },
+  "evidenceDecision": {
+    "newRecordIds": 0,
+    "newSpeciesAssertions": 0,
+    "newOccurrenceRows": 0,
+    "geometryAdded": false,
+    "photoAssetsDownloaded": 0,
+    "publicProjectionAdded": false,
+    "decision": "The refresh confirms the prior 14-record set, but adds no new records or named-waterbody resolution. Keep the observations as research-only discovery context and do not count this as an additional dataset or as a Bulacan wild-fish checklist."
+  },
+  "limitations": [
+    "A place ID is an administrative search scope, not a fishing location or river boundary.",
+    "Research Grade and captive=false do not prove species identity independently, wild capture, or a natural habitat observation.",
+    "Mixed licenses require record-level rights review before any reuse; no photos or observation data were imported into the app.",
+    "A zero named-waterbody count in this query is a result of the refreshed public place-guess fields, not evidence that the species or waterbodies are absent."
+  ],
+  "nextStep": "Continue independent locality-resolved Bulacan river and lake source discovery. Treat iNaturalist as a candidate-record source and re-review taxon, wild/captive context, visible locality, geoprivacy, and record license before any row is promoted."
+}
