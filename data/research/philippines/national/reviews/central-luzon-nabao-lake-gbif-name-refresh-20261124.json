@@ -1,0 +1,107 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "central-luzon-nabao-lake-gbif-name-refresh-20261124",
+  "reviewedOn": "2026-11-24",
+  "phaseId": "L3",
+  "regionId": "0300000000",
+  "regionName": "Region III (Central Luzon)",
+  "sourceIds": [
+    "gbif-occurrence-downloads",
+    "calacademy-cas-ichthyology-gbif-dataset-efh2ib"
+  ],
+  "status": "four-all-taxa-literal-waterbody-locality-searches-zero;province-level-candidate-held;CAS-redistribution-terms-unresolved;research-only",
+  "question": "Do GBIF indexed occurrence fields contain records under the two currently unresolved Nabao Lake name forms, and can a province-level candidate be assigned or reused?",
+  "scope": {
+    "province": "Nueva Ecija",
+    "municipality": "Cabiao",
+    "waterbody": "Nabao Lake",
+    "relatedAtlasName": "Nabao Oxbow Lake",
+    "aliasRelationshipVerified": false,
+    "spatialSearchPerformed": false
+  },
+  "method": {
+    "system": "GBIF Occurrence API",
+    "endpoint": "https://api.gbif.org/v1/occurrence/search",
+    "accessedOn": "2026-11-24",
+    "filters": {
+      "country": "PH",
+      "taxonFilter": null,
+      "limit": 0
+    },
+    "interpretation": "Each query searches one indexed text field for one literal waterbody-name form across all indexed taxa. Zero results only describe these four text searches; they do not establish fish absence, lack of surveys, or absence of variant spellings and blank locality fields."
+  },
+  "queries": [
+    {
+      "field": "waterBody",
+      "term": "Nabao Lake",
+      "count": 0,
+      "httpStatus": 200,
+      "queryUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&waterBody=Nabao+Lake&limit=0",
+      "rawResponse": {
+        "path": "raw/central-luzon-nabao-lake-gbif-name-refresh-20261124/nabao-lake-waterBody.json",
+        "bytes": 77,
+        "sha256": "842e210a1dc11a43b863a7438d0b8ae273f0182c290a7c64e760c176778cc9fa"
+      }
+    },
+    {
+      "field": "locality",
+      "term": "Nabao Lake",
+      "count": 0,
+      "httpStatus": 200,
+      "queryUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Nabao+Lake&limit=0",
+      "rawResponse": {
+        "path": "raw/central-luzon-nabao-lake-gbif-name-refresh-20261124/nabao-lake-locality.json",
+        "bytes": 77,
+        "sha256": "842e210a1dc11a43b863a7438d0b8ae273f0182c290a7c64e760c176778cc9fa"
+      }
+    },
+    {
+      "field": "waterBody",
+      "term": "Nabao Oxbow Lake",
+      "count": 0,
+      "httpStatus": 200,
+      "queryUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&waterBody=Nabao+Oxbow+Lake&limit=0",
+      "rawResponse": {
+        "path": "raw/central-luzon-nabao-lake-gbif-name-refresh-20261124/nabao-oxbow-waterBody.json",
+        "bytes": 77,
+        "sha256": "842e210a1dc11a43b863a7438d0b8ae273f0182c290a7c64e760c176778cc9fa"
+      }
+    },
+    {
+      "field": "locality",
+      "term": "Nabao Oxbow Lake",
+      "count": 0,
+      "httpStatus": 200,
+      "queryUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Nabao+Oxbow+Lake&limit=0",
+      "rawResponse": {
+        "path": "raw/central-luzon-nabao-lake-gbif-name-refresh-20261124/nabao-oxbow-locality.json",
+        "bytes": 77,
+        "sha256": "842e210a1dc11a43b863a7438d0b8ae273f0182c290a7c64e760c176778cc9fa"
+      }
+    }
+  ],
+  "candidateDisposition": {
+    "provinceLevelFollowupPerformed": true,
+    "waterbodyAssignment": "not-established",
+    "recordLevelDetailsCopied": false,
+    "reason": "A separate province-level screen surfaced a candidate that could not be assigned to Cabiao or either Nabao name. The California Academy of Sciences Ichthyology terms state that its collection data may not be repackaged, resold, or redistributed; GBIF dataset metadata marks the dataset CC0. The relationship between these terms has not been clarified for this use, so no row-level names, identifiers, dates, coordinates, or verbatim locality are reproduced here.",
+    "disposition": "hold from app projection and redistributed research packages pending item-specific clarification or permission"
+  },
+  "limitations": [
+    "The four API queries are text-field searches, not a complete taxonomic, geographic, literature, or collection search.",
+    "Nabao Lake and Nabao Oxbow Lake remain separate strings because an independent name-and-geometry crosswalk has not verified that they identify the same waterbody.",
+    "The province-level candidate does not establish occurrence in Cabiao, Nabao Lake, or Nabao Oxbow Lake; its record-level fields are withheld under the unresolved CAS reuse terms.",
+    "No fish-absence, current-presence, coordinate, geometry, natural-diet, bait, or public-app claim follows from this screen."
+  ],
+  "decision": {
+    "exactNameRecordsReturned": 0,
+    "provinceCandidateAdmitted": false,
+    "taxaAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "coordinatesOrGeometryAdded": 0,
+    "publicAppRowsAdded": 0,
+    "aliasRelationshipResolved": false,
+    "publicationApproval": false
+  },
+  "nextAction": "Seek a fish-specific source with item-level reuse terms and a dated, waterbody-resolved locality, or obtain written clarification for the held collection candidate. Keep the Nabao names separate and retain the four zero-result queries as bounded discovery only."
+}
