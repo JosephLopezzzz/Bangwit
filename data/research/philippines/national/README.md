@@ -79,6 +79,10 @@ The 1,298-row attribute and pour-point queue is Git-ignored at `data/research/ph
 
 The March 2015 draft North South Commuter Rail EPRMP's Table 2.15 lists giant mottled eel, catfish, tilapia, and mudfish/striped snakehead as nekton for the Guiguinto and Meycauyan rivers. These are common-name labels only; the report gives no fish-specific collection date, method, counts, vouchers, or separate river/station attribution. Browser text extraction renders the nekton cell as shared across both river rows, but the PDF screenshot request timed out, so the table layout is not visually verified. No scientific-name, occurrence, or app rows were added. Keep this as a historical research lead and do not equate the March 2015 report date with a fish sampling date. See `reviews/region03-guiguinto-meycauyan-2015-nscr-eprmp-fish-context-review-20261120.json` and the source entry in `data/research/philippines/sources.json`.
 
+### Northern Zambales historical marine landings
+
+The official BFAR/NFRDI 2009 stock assessment summarizes NSAP landing data from 1998-2002 and says 121 species were identified. Its reviewed figure and selected tables expose 19 scientific-name labels, including ten dominant raised-catch entries, but not the complete species-by-site matrix. The abstract and methods differ in how they describe the named study/landing areas; species and catches remain aggregated to Northern Zambales. Preserve the historical period and raised-catch metric, do not assign names to individual municipalities or current waters, and do not treat the list as a full checklist or abundance estimate. The PDF provides no item-specific reuse license. No occurrence, waterbody, geometry, or app data were added. See `reviews/central-luzon-northern-zambales-nfrdi-2009-fish-stock-assessment-review-20261124.json` and the source entry in `data/research/philippines/sources.json`.
+
 ## NCR waterbody source leads
 
 ### NCR incomplete-discovery checkpoint
