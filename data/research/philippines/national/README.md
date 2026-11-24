@@ -111,6 +111,10 @@ Table 13’s 19 rows were then transcribed across its nine May/September station
 
 The richness cross-check matches Table 13’s nonblank-row counts against Tables 14–15 for every numeric station-season except Site 2 Ipo Lake MS in September: Table 13 has six taxon rows with values, while Table 15 reports richness 12. The narrative also reports 12 taxa across Ipo Lake sites in September, while Table 13 shows seven distinct rows with numeric values there. These source discrepancies remain unresolved; no blank cell was filled. See `reviews/central-luzon-awtip-tunnel4-table13-richness-consistency-20261124.json`.
 
+### AWTIP Tunnel 5 comparison-source search
+
+A bounded search for the EPRMP's cited 2016 Norzagaray fish assessment and its 12-site station/specimen table found no independently identifiable report or dataset. The 2022 indexed comparison table shows 15 rows marked for 2016 even though the report claims 17 taxa. A separate 2017 Norzagaray River study reports 116 *Glossogobius giuris* morphometric samples across five named stations, but it gives no fish collection date or link to that AWTIP survey. Keep the sources separate and the missing two taxa unresolved; no 2016 occurrence, taxonomy, geometry, or app rows were inferred. See `reviews/central-luzon-awtip-tunnel5-2016-assessment-source-search-20261125.json`.
+
 ## NCR waterbody source leads
 
 ### NCR incomplete-discovery checkpoint
