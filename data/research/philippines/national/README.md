@@ -101,6 +101,10 @@ The 2025 barcode paper covers Aurora and Zambales as well as Cagayan, which is i
 
 The official indexed text for the 2018 SNMC EPRMP exposes ten fish-row labels and station X marks for its reported 2006 six-site survey. A text-derived count check matches the report's totals for stations 5 and 6, but the PDF image remains blocked with HTTP 403, so row-to-station marks are provisional and not visually verified. The report says identifications used both actual identification and local interviews without naming the evidence mode per taxon. Preserve all labels verbatim; do not interpret X marks as specimen occurrences or blank cells as absences. No occurrence, taxonomy-normalized species, geometry, or app rows were added; reuse terms remain unverified. See `reviews/central-luzon-bulacan-snmc-2018-eprmp-indexed-table-followup-20261124.json` and the source entry in `data/research/philippines/sources.json`.
 
+### AWTIP Tunnel 4 freshwater fish survey, 2018
+
+The ADB-hosted MWSS semi-annual monitoring report includes a 2018 dry/wet-season fish survey for Ipo Lake, Angat River, Bigte Creek, and Sta Maria River in Norzagaray, Bulacan. Appendix 8.7 reports 19 fish-name rows in Table 13 and lists nine biota-station IDs, including a wet-season-only Angat-Pogpog site. Its methods include electrofishing at riverine sites and seine nets at Ipo Lake. Names and station coordinates are retained as source-reported research context; no taxonomic normalization, occurrence row, public geometry, diet advice, photo reuse, or app entry was approved. The appendix has date conflicts and inconsistent 2013/2014 comparison counts; it is a distinct Tunnel 4 survey and does not resolve the Tunnel 5 EPRMP's reported 2016 source. See `reviews/central-luzon-awtip-tunnel4-freshwater-fish-review-20261125.json` and its source registry entry.
+
 ## NCR waterbody source leads
 
 ### NCR incomplete-discovery checkpoint
