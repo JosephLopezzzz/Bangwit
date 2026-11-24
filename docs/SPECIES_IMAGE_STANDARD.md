@@ -135,7 +135,7 @@ The photo is registered under `worms:1006861` for the Palawan goby feeding-guide
 
 ## Asset-to-registry visual cross-check
 
-**Reviewed:** 15 November 2026. This pass checks that the six local files match their registry assignments and visible descriptions. It is not an independent scientific re-identification of the photographed specimens.
+**Reviewed:** 24 November 2026. This pass rechecks that the six local files match their registry assignments and visible descriptions, and that their SHA-256 values remain unchanged from the individual reviews. It is not an independent scientific re-identification of the photographed specimens.
 
 | Registry taxon | Visual cross-check |
 | --- | --- |
@@ -165,6 +165,14 @@ Keep the shared fallback until a standalone photo has verified taxon identity an
 - The Commons file page displays both CC BY-SA 4.0 and CC BY 4.0 statements in different sections. That conflict needs resolution against the original FishBase contributor terms before reuse. **Disposition: hold; no local copy or registry entry.**
 
 The Pila image remains a sourcing lead only. Its locality is not treated as a new occurrence record or proof that *C. striata* occurs in any selected fishing ground.
+
+## Held source figure — Looc Lake fish assemblage article
+
+**Reviewed:** 24 November 2026. See `data/research/philippines/national/reviews/central-luzon-looc-lake-fish-assemblage-fulltext-review-20261124.json`.
+
+- Figure 3's extracted caption maps panels A–H to the eight fish taxa listed in the article, and the PDF copyright footer states CC BY 4.0. The PDF was not locally rendered, so the panels themselves, their image quality, and the caption-to-image matches have not been visually checked.
+- **Disposition:** no panel was copied, cropped, or admitted to the species-image registry. Treat Figure 3 as a research lead only; before any reuse, visually inspect the specific panel, confirm the taxon match and item-level attribution, and retain the source/license trail. Unapproved taxa continue to use the localized neutral fallback.
+- Source: [publisher article page](https://www.mbimph.com/index.php/UPJOZ/article/view/5953); [article PDF](https://mbimph.com/index.php/UPJOZ/article/download/5953/9294/9682).
 
 ## Reviewed source figure — Marikina River fish-host preprint (not admitted)
 
