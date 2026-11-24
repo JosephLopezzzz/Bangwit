@@ -123,6 +123,10 @@ Maynilad's 2014 Environmental Assessment Report for the Valenzuela Sewerage Syst
 
 Talavera et al. (2024) report a 2023 macroplastic study across an approximately 5.17 km Tullahan segment, with five numbered sampling points at four named bridges in Quezon City and Valenzuela. The article's table provides dates and barangay/bridge names but no station coordinates; one bridge has distinct floating-litter and riverbank-litter points. This is open-access freshwater reach context under CC BY 4.0, not fish evidence or an official channel boundary. See `reviews/ncr-frontiers-2024-tullahan-macroplastic-study-waterbody-context-review-20261124.json`.
 
+### Parañaque estuary and nearshore fisheries context
+
+The official 2021 Parañaque reclamation EIS distinguishes dated underwater/marine observations (2017 and 2020) from a nearshore catch list attributed to fishers around the Parañaque River estuary and protected habitat. The list contains nine fish-name rows plus one crab, but has unresolved printed scientific names and no species-by-station matrix, capture-event dates, coordinates, or vouchers. Keep it as historical research context only; do not use it as a current checklist, occurrence table, safety advisory, or evidence of fishing access. See `reviews/ncr-emb-paranaque-reclamation-eis-nearshore-fisheries-context-review-20261124.json`.
+
 ### Orozco estero thesis catalog access check
 
 The official UPLB repository catalogs Glorina D. Perez-Orozco's 2008 thesis, `Biophysico-chemical and socioeconomic study of two major Manila esteros`, as an MS in Environmental Science thesis, but states that the document is currently unavailable. The DLSU article abstract calls the study part of a PhD dissertation, so the degree metadata conflict remains unresolved. The 2012 Springer chapter repeats the same two esteros and four fish taxa in its abstract; available records do not show whether it reused or added samples. No station-level fish data, vouchers, or coordinates were obtained. Keep the taxa as a historical two-estero research lead only. See `reviews/ncr-orozco-2008-thesis-catalog-access-review-20261119.json`.
