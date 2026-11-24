@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "central-luzon-north-luzon-genbank-project-metadata-screen-20261124",
+  "reviewedOn": "2026-11-24",
+  "phaseId": "L3",
+  "regionId": "0300000000",
+  "regionName": "Region III (Central Luzon)",
+  "sourceIds": [
+    "dimaquibo-2025-north-luzon-teleost-dna-barcode-dataset"
+  ],
+  "relatedReviews": [
+    "national-luzon-north-luzon-teleost-dna-barcode-dataset-source-review-20261106",
+    "north-luzon-2025-teleost-dna-barcode-cagayan-river-crosswalk-review-20261111"
+  ],
+  "status": "all-two-cited-bioprojects-screened;country-only-location-metadata;article-sequence-count-crosswalk-open;research-only",
+  "question": "Can a comprehensive read-only screen of the two NCBI BioProjects provide province, named-waterbody, or coordinate links for the North Luzon study's sequence records?",
+  "scope": {
+    "sourceReportedStudyCoverage": ["Aurora", "Cagayan", "Zambales"],
+    "regionThreeProvinces": ["Aurora", "Zambales"],
+    "otherRegionProvince": "Cagayan belongs to Region II and remains outside this L3 locality assignment.",
+    "articleReportedSuccessfulSequences": {
+      "COI": 707,
+      "12S": 343,
+      "total": 1050
+    }
+  },
+  "method": {
+    "provider": "NCBI Entrez Nucleotide / GenBank",
+    "query": "PRJNA1294862[BioProject] OR PRJNA1294866[BioProject]",
+    "retrieval": "Entrez ESearch retrieved the complete 1,078-record result set; GenBank flat files were fetched in batches of 60 and parsed in memory. No raw sequence strings or response files were retained.",
+    "fieldsChecked": [
+      "BioProject",
+      "specimen_voucher",
+      "collection_date",
+      "geo_loc_name",
+      "country",
+      "locality",
+      "lat_lon"
+    ],
+    "retrievalFailures": 0
+  },
+  "results": {
+    "bioprojectCounts": {
+      "PRJNA1294862": 702,
+      "PRJNA1294866": 376,
+      "totalDistinctEntrezRecords": 1078
+    },
+    "recordsWithSpecimenVoucher": 1078,
+    "recordsWithCollectionDate": 1078,
+    "recordsWithGeoLocNameOrCountry": 1078,
+    "recordsWhoseOnlyGeoLocNameIsPhilippines": 1078,
+    "recordsWithProvinceOrLocalityQualifier": 0,
+    "recordsWithLatitudeLongitudeQualifier": 0,
+    "recordsLinkedToNamedAuroraOrZambalesWaterbodyByGenBankMetadata": 0,
+    "articleVsEntrezCountDifference": {
+      "articleReportedTotal": 1050,
+      "entrezBioProjectTotal": 1078,
+      "difference": 28,
+      "interpretation": "The 1,078 BioProject records are not assumed to equal the article's reported 1,050 successful COI and 12S sequences. The accession-level membership/count crosswalk remains unresolved; the count difference is not treated as a biological or publication error."
+    }
+  },
+  "interpretationLimits": [
+    "Voucher and collection-date fields alone do not identify the specimen's province, waterbody, or capture coordinates.",
+    "Country-only GenBank qualifiers cannot attach a sequence record to Aurora, Zambales, a river site, or one of the article's Table 1 coordinates.",
+    "A GenBank organism field or voucher qualifier does not independently verify the specimen identification or its relationship to the paper's supplementary row.",
+    "The two BioProjects are part of the same North Luzon study data pathway and are not an independent species survey.",
+    "The paper's 1,050 reported sequences and the 1,078 BioProject-linked GenBank records need an accession-level crosswalk before their counts can be reconciled.",
+    "The article states CC BY-NC-ND 4.0. The supplement's separate reuse terms remain unverified; this metadata screen does not authorize adapting or publishing the article/supplement species-by-site data."
+  ],
+  "disposition": {
+    "speciesRowsAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "coordinatesAdded": 0,
+    "geometryAdded": false,
+    "photosCopiedOrApproved": 0,
+    "publicAppRowsAdded": 0,
+    "publicationApproval": false,
+    "regionThreeCoverageCompletion": false
+  },
+  "nextAction": "For Region III, continue with independent, rights-clear locality-resolved river, lake, reservoir, wetland, estuarine and marine sources. For this dataset, a documented accession-to-supplement/site crosswalk and separate rights decision are still required before adapting specimen rows; keep market/landing specimens distinct from river-collected material.",
+  "sources": [
+    {
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12475234/",
+      "supports": "Primary study's two BioProject links, reported 707 COI and 343 12S sequences, study sites and CC BY-NC-ND 4.0 license statement."
+    },
+    {
+      "url": "https://www.ncbi.nlm.nih.gov/bioproject/PRJNA1294862",
+      "supports": "First cited BioProject and complete Nucleotide record count."
+    },
+    {
+      "url": "https://www.ncbi.nlm.nih.gov/bioproject/PRJNA1294866",
+      "supports": "Second cited BioProject and complete Nucleotide record count."
+    },
+    {
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=nuccore&term=PRJNA1294862%5BBioProject%5D%20OR%20PRJNA1294866%5BBioProject%5D&retmax=2000&retmode=json",
+      "supports": "Reproducible bounded NCBI Nucleotide BioProject query used for the complete record screen."
+    }
+  ]
+}
