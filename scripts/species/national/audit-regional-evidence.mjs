@@ -8,7 +8,7 @@ const researchRoot = "data/research/philippines";
 const manifestPath = `${researchRoot}/luzon-completion-manifest.json`;
 const sourcesPath = `${researchRoot}/sources.json`;
 const reviewsRoot = `${researchRoot}/national/reviews`;
-const outputPath = `${reviewsRoot}/luzon-evidence-index-20261124.json`;
+const outputPath = `${reviewsRoot}/luzon-evidence-index-20261125.json`;
 const rawRoot = path.resolve(root, researchRoot, "raw");
 const slash = (value) => value.replaceAll("\\", "/");
 
