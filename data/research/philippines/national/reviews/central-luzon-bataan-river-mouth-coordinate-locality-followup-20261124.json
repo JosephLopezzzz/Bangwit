@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-11-24",
+  "phaseId": "L3",
+  "regionId": "0300000000",
+  "status": "research-only-source-reported-river-mouth-coordinates",
+  "decision": "Retain the article's three river-mouth coordinates as source-reported locality anchors only. They are not fish-sampling station coordinates, occurrence points, or river boundary geometry.",
+  "source": {
+    "id": "bioflux-bataan-three-rivers-fish-survey-2025",
+    "title": "Environmental and habitat variables influencing the fish assemblages in the three tropical river systems in Bataan Peninsula, Luzon Island, Philippines",
+    "citation": "Corpuz, M. N. C., Nacorda, H. M. E., Casal, C. M. E., Faustino-Eslava, D. V., Jaranilla-Sanchez, P. A., & Espaldon, M. V. O. (2025). AACL Bioflux, 18(4), 1650-1662.",
+    "articleUrl": "https://bioflux.com.ro/docs/2025.1650-1662.pdf",
+    "license": "CC-BY-4.0",
+    "licenseEvidence": "The publisher PDF states that the article is open access under a Creative Commons Attribution License. This review records coordinates as factual source data and does not reproduce article figures or prose."
+  },
+  "studyDesign": {
+    "studyPeriod": "2021-12 through 2022-11",
+    "rivers": ["Talisay", "Bagac", "Almacen"],
+    "stationsPerRiver": 9,
+    "stationsPerStreamSection": 3,
+    "streamSections": ["upstream", "midstream", "downstream"],
+    "stationLength": "about 100 m",
+    "stationPositionMethod": "The methods state that geographic position and elevation were recorded at each sampling station using a GPS device.",
+    "publishedStationCoordinates": "No per-station coordinate list or station-coordinate table is provided in the reviewed article. River-level fish presence in Table 2 cannot be assigned to individual stations or stream sections."
+  },
+  "sourceReportedRiverMouthCoordinates": [
+    {
+      "waterbody": "Talisay River",
+      "printedCoordinate": "14°48′46″N; 120°33′19″E",
+      "decimalDegreesDerived": {
+        "latitude": 14.812778,
+        "longitude": 120.555278
+      },
+      "coordinateRole": "river mouth",
+      "publishedPage": 1651
+    },
+    {
+      "waterbody": "Bagac River",
+      "printedCoordinate": "14°35′27″N; 120°23′22″E",
+      "decimalDegreesDerived": {
+        "latitude": 14.590833,
+        "longitude": 120.389444
+      },
+      "coordinateRole": "river mouth",
+      "publishedPage": 1651
+    },
+    {
+      "waterbody": "Almacen River",
+      "printedCoordinate": "14°41′33″N; 120°33′53″E",
+      "decimalDegreesDerived": {
+        "latitude": 14.692500,
+        "longitude": 120.564722
+      },
+      "coordinateRole": "river mouth",
+      "publishedPage": 1651
+    }
+  ],
+  "coordinateHandling": {
+    "conversion": "Decimal degree values are arithmetic conversions from the article's printed degrees-minutes-seconds coordinates, rounded to six decimal places.",
+    "datumOrCrs": "Not specified in the article; do not label the values WGS 84 or another CRS.",
+    "geometryCreated": false,
+    "independentRiverGeometryValidation": false,
+    "limitations": [
+      "The article labels these positions as river mouths; they do not describe the extent or boundary of any river.",
+      "The mouth coordinates must not be substituted for the 27 sampling station positions.",
+      "No fish row, station, reach, or stream section can be spatially assigned from these mouth coordinates alone."
+    ]
+  },
+  "relatedEvidence": {
+    "riverTableReview": "data/research/philippines/central-luzon-bataan-river-table-review-20261024.json",
+    "tableNumber": 2,
+    "tableMeaning": "Source-reported presence/absence by river only; not a station-level detection matrix.",
+    "sourceTableRows": 52,
+    "speciesAssertionsAdded": 0
+  },
+  "disposition": {
+    "researchOnly": true,
+    "appProjection": false,
+    "occurrencePointsAdded": 0,
+    "mapGeometryAdded": false,
+    "taxonomicDecisionsChanged": false,
+    "regionalCompletionClaim": false
+  },
+  "nextStep": "If station-level spatial evidence is needed, seek a lawful author or institutional supplement containing station coordinates and its datum/CRS. Until then, retain only the article's river-mouth anchors and keep all fish detections at the source's river-level granularity."
+}
