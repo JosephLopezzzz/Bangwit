@@ -1,0 +1,84 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "ncr-pasig-parex-pangasius-name-conflict-crosscheck-20261124",
+  "reviewedOn": "2026-11-24",
+  "phaseId": "L2",
+  "regionIds": [
+    "0400000000",
+    "1300000000"
+  ],
+  "sourceIds": [
+    "rhr-smc-2022-parex-draft-eis-pasig-fish-survey",
+    "rhr-smc-2022-parex-revised-eis-pasig-fish-survey",
+    "calacademy-catalog-parex-pangasius-name-conflict-crosscheck-20261124"
+  ],
+  "status": "catalog-supported-name-combination-crosswalk;parex-source-rows-unreconciled;specimen-identity-unverified;research-only",
+  "question": "Does the current Eschmeyer's Catalog of Fishes resolve the Pangasius hypophthalmus/Pangasianodon hypophthalmus conflict between the PAREX EIS station matrix and taxonomy table, and does that permit the EIS rows to be merged or counted as one verified fish record?",
+  "method": {
+    "parentReview": "national/reviews/ncr-pasig-parex-eis-version-and-fish-table-reconciliation-20261120.json",
+    "authority": "California Academy of Sciences, Eschmeyer's Catalog of Fishes",
+    "authorityVersion": "The indexed Catalog record identifies its online version as updated 2026-08-13. The official record excerpt was retrieved through bounded web search on 2026-11-24; opening the record directly returned HTTP 403.",
+    "query": "Catalog record 56294 for the hypophthalmus name-group, URL https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=56294",
+    "sourceStrings": {
+      "stationMatrix": "Pangasius hypophthalmus",
+      "taxonomyTable": "Pangasianodon hypophthalmus"
+    },
+    "interpretation": "The Catalog documents both genus combinations as historical valid-as usages under the same nominal species record, and gives Pangasianodon hypophthalmus as current status. This supports a nomenclatural relationship between the printed combinations, not proof that the separate EIS rows refer to the same sampled organism, were correctly identified, or can be combined into a reliable count."
+  },
+  "sourceCitation": "RHR Consulting Services, Inc. (2022), PAREX Draft EIS Table 2-18 and Table 2-19; Revised EIS Tables 2-19 and 2-20; Fricke, R., Eschmeyer, W. N. & Van der Laan, R. (eds.), Eschmeyer's Catalog of Fishes, species record 56294, checked 2026-11-24.",
+  "nameCrosswalk": {
+    "stationMatrixLabel": {
+      "sourceLabel": "Pangasius hypophthalmus",
+      "sourceRole": "Exact binomial string appearing in the Draft and Revised EIS station matrices.",
+      "catalogTreatment": "The Catalog lists Pangasius hypophthalmus (Sauvage 1878) as a historical valid-as combination under its hypophthalmus record.",
+      "catalogUrl": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=56294"
+    },
+    "taxonomyTableLabel": {
+      "sourceLabel": "Pangasianodon hypophthalmus",
+      "sourceRole": "Exact binomial string appearing in the Draft and Revised EIS taxonomic tables.",
+      "catalogTreatment": "The Catalog gives Pangasianodon hypophthalmus (Sauvage 1878) as current status under the same hypophthalmus record.",
+      "catalogUrl": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=56294"
+    },
+    "boundedConclusion": "A present-day taxonomic crosswalk may link the two strings as alternative historical/current generic combinations for the same nominal species. Preserve both verbatim in the source transcription and annotate the candidate relationship separately."
+  },
+  "findings": {
+    "sourceStringLabelsCompared": 2,
+    "catalogRecordSupportsNameCombinationRelationship": true,
+    "currentCatalogCombination": "Pangasianodon hypophthalmus",
+    "sourceSpecimenIdentityVerified": 0,
+    "fieldRowsOrCountsReconciled": false,
+    "captureEventsOrStationsIndependentlyResolved": 0,
+    "speciesAssertionsAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "coordinatesPublished": 0,
+    "publicAppRowsAdded": 0,
+    "publicRedistributionApproved": false
+  },
+  "limitations": [
+    "The Catalog's current name status does not authenticate either PAREX field identification or show that the two table rows derive from the same specimen or event.",
+    "The PAREX Draft and Revised EIS conflict on fish collection method and contain unreconciled table and narrative totals; the taxonomy cross-check does not correct those source inconsistencies.",
+    "No field sheets, specimen identifiers, vouchers, fish-specific coordinates, or written correction from the EIS preparer were reviewed for this cross-check.",
+    "The direct Catalog page request returned HTTP 403; conclusions are limited to the official indexed record excerpt.",
+    "No item-specific permission to redistribute the EIS-derived list or Catalog content was established."
+  ],
+  "decision": "Keep Pangasius hypophthalmus and Pangasianodon hypophthalmus as distinct verbatim source strings in the EIS transcription. Record the Catalog-supported nomenclatural relationship only as a candidate name crosswalk; do not silently normalize either label, merge table rows, change the EIS's exact-string counts, claim a verified single biological species, add a species/occurrence/app row, or infer current presence. NCR and Luzon remain incomplete.",
+  "appDecision": {
+    "speciesAssertionsAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "coordinatesPublished": 0,
+    "geometryAdded": false,
+    "photosAdded": 0,
+    "currentPresenceInferred": false,
+    "legalFishingOrSafetyClaimsAdded": 0,
+    "publicAppProjection": false
+  },
+  "followUps": [
+    "Seek a field log, specimen/voucher identifier, or written correction from the PAREX EIS preparer before treating the two table strings as one row or counting them as one source taxon.",
+    "Request specialist review if the source organism is ever considered for a species-level assertion.",
+    "Keep the parent EIS method conflict, station attribution, and source reuse questions open independently of this name cross-check."
+  ],
+  "snapshotHashes": {
+    "parentReview": "0c15f561ce22616e0e05930ffa5eb381ae4d249e2fda310bd7a4f40d38ed5f68",
+    "sourceRegistry": "ecbf08fd846dff7914b3ae8c767759210585b1670169851838e2bd09c8ecc0f7"
+  }
+}
