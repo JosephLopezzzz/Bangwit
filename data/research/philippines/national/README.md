@@ -125,7 +125,7 @@ Talavera et al. (2024) report a 2023 macroplastic study across an approximately 
 
 ### Parañaque estuary and nearshore fisheries context
 
-The official 2021 Parañaque reclamation EIS distinguishes dated underwater/marine observations (2017 and 2020) from a nearshore catch list attributed to fishers around the Parañaque River estuary and protected habitat. The list contains nine fish-name rows plus one crab, but has unresolved printed scientific names and no species-by-station matrix, capture-event dates, coordinates, or vouchers. Keep it as historical research context only; do not use it as a current checklist, occurrence table, safety advisory, or evidence of fishing access. See `reviews/ncr-emb-paranaque-reclamation-eis-nearshore-fisheries-context-review-20261124.json`.
+The official 2021 Parañaque reclamation EIS and its 2020 draft predecessor describe boat-based pelagic-fish observations and catch-composition notes from fishers encountered during survey activities, supplemented by key-informant interviews. They are one EIS lineage, not independent survey confirmations. Table 2.2-19 contains nine fish-name rows plus one crab, with unresolved printed scientific names and no taxon-to-event/date/station crosswalk, capture coordinates, or vouchers. Survey-component dates vary by section; do not assign them to individual taxa. Keep this as historical research context only, not a current checklist, occurrence table, safety advisory, or proof of fishing access. See `reviews/ncr-emb-paranaque-reclamation-eis-nearshore-fisheries-context-review-20261124.json`.
 
 ### Orozco estero thesis catalog access check
 
