@@ -1,0 +1,121 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "central-luzon-pantabangan-2026-article-access-and-ncbi-refresh-20261125",
+  "reviewedOn": "2026-11-25",
+  "phaseId": "L3",
+  "regionId": "0300000000",
+  "regionName": "Region III (Central Luzon)",
+  "waterbodyNames": [
+    "Pantabangan Dam",
+    "Pantabangan Reservoir"
+  ],
+  "status": "publisher-abstract-currently-indexed;direct-fulltext-and-supplement-not-found;ncbi-refresh-shows-no-new-pantabangan-fish-accessions;exact-crosswalk-unresolved;research-only",
+  "question": "Did a refreshed search locate authorized full text, an accession supplement, or new public fish sequence records that link the 2026 Pantabangan article to the 2013 GenBank submission?",
+  "sourceIds": [
+    "pantabangan-dam-dna-fish-inventory-2026",
+    "pantabangan-2013-fish-coi-submission-ncbi"
+  ],
+  "inputs": [
+    "data/research/philippines/national/reviews/central-luzon-pantabangan-ncbi-accession-review-20261119.json",
+    "data/research/philippines/national/reviews/central-luzon-pantabangan-2026-article-access-followup-20261119.json",
+    "data/research/philippines/national/reviews/central-luzon-pantabangan-student-dna-review-20261119.json"
+  ],
+  "publicationAccessRefresh": {
+    "citation": "Alcantara, S. G., Juanico, C. S. T., Ordynets, A., Fernandez, M. C., & Yambot, A. V. DNA barcoding for identification of ichthyofauna in Pantabangan Dam, Nueva Ecija, Philippines. Mitochondrial DNA Part A, 35(7–8), 249–256. Published online 2026-02-19; issue labeled 2025. DOI: 10.1080/24701394.2026.2631395.",
+    "publisherUrl": "https://www.tandfonline.com/doi/abs/10.1080/24701394.2026.2631395",
+    "pubmedUrl": "https://pubmed.ncbi.nlm.nih.gov/41715976/",
+    "metadataAndAbstract": "The current publisher-indexed result and PubMed record continue to expose citation metadata and the abstract: 40 COI sequences, nine species, and first-record claims for Micropterus floridanus and Coptodon zillii.",
+    "boundedSearch": {
+      "queries": [
+        "10.1080/24701394.2026.2631395 full text PDF supplement",
+        "exact article title accession supplement",
+        "site:uplb.edu.ph exact article title",
+        "site:clsu.edu.ph exact article title",
+        "site:repository.up.edu.ph Pantabangan Alcantara fish DNA barcoding",
+        "exact DOI supplementary file figures data"
+      ],
+      "result": "The bounded search located the publisher and PubMed abstract, but no authorized full-text copy, article accession table, or DOI-specific supplementary file. The publisher's full-text link remains access-gated; the direct publisher page returned HTTP 403 in the earlier recorded attempt. No access control was bypassed and no author or institution was contacted.",
+      "relatedLead": "A separately surfaced student manuscript is the distinct 2024–2025 source stream already tracked in central-luzon-pantabangan-student-dna-review-20261119.json. It is not the journal article's supplement and has no verified specimen-level join to the 2013 GenBank accessions."
+    }
+  },
+  "ncbiRefresh": {
+    "provider": "NCBI Entrez E-utilities",
+    "queries": [
+      {
+        "database": "nuccore",
+        "term": "Pantabangan[All Fields]",
+        "resultCount": 41,
+        "interpretation": "The 41 results comprise the previously reviewed 40 fish COI accessions (KC789519–KC789557 plus KC684999) and one unrelated bat barcode. This refresh exposes no additional Pantabangan fish accession beyond the existing review set."
+      },
+      {
+        "database": "nuccore",
+        "term": "Pantabangan[All Fields] AND 2024:2026[Create Date]",
+        "resultCount": 0
+      },
+      {
+        "database": "nuccore",
+        "term": "Pantabangan[All Fields] AND 2025:2026[Modification Date]",
+        "resultCount": 0
+      },
+      {
+        "database": "biosample",
+        "term": "Pantabangan[All Fields]",
+        "resultCount": 5,
+        "interpretation": "All five indexed BioSample records describe groundwater metagenome samples in the separate PRJNA1464134 project. These are not fish specimens or the journal article's COI sequence set."
+      },
+      {
+        "database": "sra",
+        "term": "Pantabangan[All Fields]",
+        "resultCount": 5,
+        "interpretation": "The five SRA records correspond to the same unrelated groundwater 16S metagenome project, not fish COI barcodes."
+      }
+    ],
+    "method": "Read-only Entrez ESearch queries and summary checks; no nucleotide strings or sample coordinates were copied into this review. The exact Pantabangan locality query does not rule out unlocalized or differently indexed sequences, and date-filtered zeroes are bounded search results rather than evidence of absence."
+  },
+  "sequenceLineageCrosswalk": {
+    "existingSubmission": "The prior accession review identifies 40 fish records with nine submitted names; 39 explicitly state Pantabangan Dam and one states Nueva Ecija only. Four Micropterus records and two Coptodon zillii records carry Pantabangan locality metadata from 2012.",
+    "comparison": "The publisher abstract's 40-sequence/nine-species aggregate still numerically matches the earlier GenBank submission. The refreshed query found no new Pantabangan fish accession or article accession table that would establish a sequence-to-specimen or accession-to-publication join.",
+    "firstRecordConflict": "The abstract's first-record statements for Micropterus floridanus and Coptodon zillii remain semantically unresolved against earlier Pantabangan-locality GenBank records. The article may define first record by publication, validation, or another scope, but the inaccessible full text provides no basis to choose among those interpretations."
+  },
+  "reuseAndDisposition": {
+    "articleRights": "No item-specific article or supplement license was verified. Public metadata and an abstract do not authorize redistribution of the full article, tables, figures, or sequence content.",
+    "decision": "Keep the 2026 abstract and the earlier GenBank submission separately attributed as research evidence. Do not merge their sequence counts or infer exact sequence identity from matching aggregate totals.",
+    "speciesAssertionsAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "dietClaimsAdded": 0,
+    "geometryAdded": false,
+    "imagesAdded": 0,
+    "publicAppRowsAdded": 0,
+    "publicationApproval": false
+  },
+  "nextActions": [
+    "If an authorized full text or publisher supplement becomes publicly available, extract its accession, voucher, sample code, collection date, taxon, and site fields and compare them one by one with the 2013 records.",
+    "If the authors later clarify whether 'first record' means first publication or first taxonomic confirmation, record the clarification with its source; do not infer that meaning from the abstract.",
+    "Keep the student manuscript as a distinct evidence stream and do not merge its 43-specimen/14-label results into this article or the 2013 accession set."
+  ],
+  "sources": [
+    {
+      "sourceId": "pantabangan-dam-dna-fish-inventory-2026",
+      "url": "https://www.tandfonline.com/doi/abs/10.1080/24701394.2026.2631395",
+      "supports": "Publisher citation metadata, online-publication date, abstract totals, and the two stated first-record claims; no full article or accession supplement was retrieved."
+    },
+    {
+      "sourceId": "pantabangan-dam-dna-fish-inventory-2026",
+      "url": "https://pubmed.ncbi.nlm.nih.gov/41715976/",
+      "supports": "NCBI-indexed article citation, DOI, abstract, and publisher full-text linkout."
+    },
+    {
+      "sourceId": "pantabangan-2013-fish-coi-submission-ncbi",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=nuccore&term=Pantabangan%5BAll%20Fields%5D&retmax=200&retmode=json",
+      "supports": "Refreshed Entrez counts for the Pantabangan locality query; the detailed accession interpretation is cross-referenced to the existing accession review."
+    },
+    {
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=biosample&term=Pantabangan%5BAll%20Fields%5D&retmax=100&retmode=json",
+      "supports": "The five matching BioSample entries are groundwater metagenome records and are excluded from fish occurrence or sequence evidence."
+    },
+    {
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=sra&term=Pantabangan%5BAll%20Fields%5D&retmax=100&retmode=json",
+      "supports": "The five matching SRA entries are 16S groundwater metagenome records in the separate project, not fish COI sequence records."
+    }
+  ]
+}
