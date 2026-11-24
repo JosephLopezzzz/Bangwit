@@ -105,6 +105,8 @@ The official indexed text for the 2018 SNMC EPRMP exposes ten fish-row labels an
 
 The ADB-hosted MWSS semi-annual monitoring report includes a 2018 dry/wet-season fish survey for Ipo Lake, Angat River, Bigte Creek, and Sta Maria River in Norzagaray, Bulacan. Appendix 8.7 reports 19 fish-name rows in Table 13 and lists nine biota-station IDs, including a wet-season-only Angat-Pogpog site. Its methods include electrofishing at riverine sites and seine nets at Ipo Lake. Names and station coordinates are retained as source-reported research context; no taxonomic normalization, occurrence row, public geometry, diet advice, photo reuse, or app entry was approved. The appendix has date conflicts and inconsistent 2013/2014 comparison counts; it is a distinct Tunnel 4 survey and does not resolve the Tunnel 5 EPRMP's reported 2016 source. See `reviews/central-luzon-awtip-tunnel4-freshwater-fish-review-20261125.json` and its source registry entry.
 
+The follow-up crosswalk checked all 19 Table 13 spellings against GBIF ChecklistBank v2: 18 strict exact name matches (16 accepted usages and two synonyms) and one strict no-match for the printed `Pterygoplychtys pardalis` typo. A non-strict query returned `Pterygoplichthys pardalis` as an 81-confidence variant candidate, not a specimen identification. The Catalog of Fishes agrees with GBIF on `Trichopodus pectoralis` but differs in the accepted spelling for `Giuris` (`margaritaceus` in the Catalog versus `margaritacea` in GBIF). Source spellings and family labels remain intact; no species or occurrence rows were promoted. See `reviews/central-luzon-awtip-tunnel4-fish-taxonomy-crosswalk-20261124.json`.
+
 ## NCR waterbody source leads
 
 ### NCR incomplete-discovery checkpoint

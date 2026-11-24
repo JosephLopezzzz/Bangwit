@@ -3,7 +3,7 @@
   "checkedOn": "2026-11-25",
   "status": "research-only-source-registry",
   "scope": "National acquisition references, freshwater spatial-source leads, shared Manila Bay marine evidence, MIMAROPA/CALABARZON/Central Luzon identity and inland-water source reviews, and Mindanao regional freshwater survey reviews. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 1226,
+  "sourceCount": 1228,
   "sources": [
     {
       "id": "aoyama-et-al-2015-cagayan-glass-eel-recruitment",
@@ -42,6 +42,45 @@
         "The collection area is indicated in a figure but no coordinate series or reusable survey boundary was reviewed.",
         "The 2009 samples may overlap with the separately published Yoshinaga et al. (2014) Aparri samples, but no sample identifiers or catch crosswalk was found; their February Anguilla japonica results also differ. Do not add totals or claim independent confirmation until resolved.",
         "These glass-eel recruitment findings do not establish current presence, adult distribution, basin-wide range, catchability, legal status, safety, or seasonality advice."
+      ]
+    },
+    {
+      "id": "calacademy-catalog-awtip-tunnel4-taxonomy-crosswalk-20261124",
+      "title": "Eschmeyer’s Catalog of Fishes selected-name cross-check for AWTIP Tunnel 4 Table 13",
+      "provider": "California Academy of Sciences, Institute for Biodiversity Science and Sustainability",
+      "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=21756",
+      "additionalUrls": [
+        "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Trichopodus&species=pectoralis&tbl=species",
+        "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=5362",
+        "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=31800",
+        "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=22356"
+      ],
+      "role": "Selected current-name cross-checks for source spellings and GBIF synonym/candidate cases in the AWTIP Tunnel 4 freshwater fish table. Nomenclature only; it does not identify the 2018 specimens or establish local occurrence.",
+      "checkedOn": "2026-11-24",
+      "sourceYear": 2026,
+      "citation": "Eschmeyer’s Catalog of Fishes. Selected entries accessed 2026-11-24. California Academy of Sciences.",
+      "access": {
+        "status": "five-selected-records-reviewed;one-record-opened-as-full-text;remaining-records-reviewed-from-official-indexed-record-text;taxonomy-only;research-only",
+        "reviewFiles": [
+          "national/reviews/central-luzon-awtip-tunnel4-fish-taxonomy-crosswalk-20261124.json"
+        ],
+        "fullTextRetrieved": false,
+        "indexedRecordTextReviewed": true,
+        "reviewedSections": "Selected current-status and classification text for Ophieleotris aporos, Trichopodus pectoralis, Pterygoplichthys pardalis, Zenarchopterus gilli, and Leiopotherapon plumbeus. The Trichopodus pectoralis entry opened directly; other records were captured from official indexed record text where direct retrieval was unavailable."
+      },
+      "reuse": {
+        "metadata": "Catalog names, current-status text, family, and record URLs recorded for internal taxonomic checking.",
+        "raw": "No Catalog page snapshots, images, or bulk data were copied into the repository.",
+        "content": "No item-specific license or permission to redistribute Catalog record text was reviewed. Keep this brief attributed synthesis research-only; public reuse is not approved."
+      },
+      "publicationApproval": false,
+      "researchStatus": "central-luzon;awtip-tunnel4;selected-catalog-name-crosscheck;taxonomy-only;research-only",
+      "license": "Not assessed for redistribution; consult Catalog of Fishes terms before public reuse.",
+      "licenseUrl": null,
+      "caveats": [
+        "Catalog name status is not specimen re-identification; no voucher or museum catalogue number was found for the AWTIP fish rows.",
+        "The Catalog’s current synonym treatment for Giuris margaritaceus differs from GBIF spelling Giuris margaritacea.",
+        "The fuzzy Pterygoplichthys pardalis candidate is not used to correct the source typo or identify a local specimen."
       ]
     },
     {
@@ -773,13 +812,14 @@
         "https://techdocs.gbif.org/en/openapi/"
       ],
       "role": "Taxonomic name-matching reference only; not a source of occurrence or distribution evidence.",
-      "checkedOn": "2026-10-30",
+      "checkedOn": "2026-11-24",
       "sourceYear": 2026,
-      "citation": "GBIF Secretariat. (2026-10-30 query). ChecklistBank Species Matching API v2, default GBIF Backbone taxonomy. https://api.gbif.org/v2/species/match",
+      "citation": "GBIF Secretariat. (2026-11-24 query). ChecklistBank Species Matching API v2, default GBIF Backbone taxonomy. https://api.gbif.org/v2/species/match",
       "access": {
-        "status": "One documented batch POST matched 86 guide scientific-name strings using kingdom=Animalia, strict=true and verbose=true. HTTP 200 returned 86 results in input order. Match types, usage status, confidence and alternatives are recorded in the Asid Gulf review file.",
+        "status": "One documented batch POST matched 86 guide scientific-name strings on 2026-10-30. Follow-up: 19 strict GET requests for AWTIP Tunnel 4 Table 13 names returned HTTP 200; 18 were exact name matches (16 accepted usages, 2 synonym usages), and one misspelled source string had no strict match. Its non-strict follow-up returned one 81-confidence VARIANT candidate. See the AWTIP Tunnel 4 taxonomy crosswalk.",
         "reviewFiles": [
-          "national-visayas-asid-gulf-fish-guide-profile-review-20261030.json"
+          "national-visayas-asid-gulf-fish-guide-profile-review-20261030.json",
+          "national/reviews/central-luzon-awtip-tunnel4-fish-taxonomy-crosswalk-20261124.json"
         ],
         "fullTextRetrieved": true
       },
@@ -789,7 +829,7 @@
         "content": "Terms for redistribution of API-derived taxonomy output were not separately reviewed. Retain source attribution and re-check terms before public app reuse."
       },
       "publicationApproval": false,
-      "researchStatus": "official-gbif-checklistbank-api-v2;86-batch-name-matches;taxonomy-only;manual-review-pending;research-only",
+      "researchStatus": "official-gbif-checklistbank-api-v2;taxonomy-only;awtip-tunnel4-19-name-crosswalk;manual-review-pending;research-only",
       "license": "Not assessed for redistribution; consult GBIF terms before public reuse.",
       "licenseUrl": "https://www.gbif.org/terms",
       "caveats": [
@@ -797,7 +837,10 @@
         "Strict name matching and confidence do not independently validate the source identification or local name.",
         "Two source strings matched usages marked SYNONYM; one returned a VARIANT; six queries returned alternatives. All nine are flagged for manual review.",
         "The GBIF Backbone is maintained and can change; these outputs reflect the query date 2026-10-30.",
-        "No public-app publication approval or occurrence claim was created."
+        "No public-app publication approval or occurrence claim was created.",
+        "Nineteen source-reported names were queried individually on 2026-11-24 with kingdom=Animalia, strict=true and verbose=true: 18 exact name matches (16 accepted usages and 2 synonyms), one strict no-match.",
+        "The non-strict query for source spelling Pterygoplychtys pardalis returned Pterygoplichthys pardalis as a VARIANT at confidence 81; this is only a candidate for checking a typo, not a specimen identification or occurrence.",
+        "GBIF returns Giuris margaritacea for Ophieleotris aporos, while the selected Catalog of Fishes record states Giuris margaritaceus; keep the authority discrepancy unresolved."
       ]
     },
     {

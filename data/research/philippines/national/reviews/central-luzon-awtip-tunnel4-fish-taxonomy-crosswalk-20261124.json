@@ -1,0 +1,610 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "central-luzon-awtip-tunnel4-fish-taxonomy-crosswalk-20261124",
+  "reviewedOn": "2026-11-24",
+  "phaseId": "L3",
+  "regionId": "0300000000",
+  "regionName": "Region III (Central Luzon)",
+  "status": "19-source-name-gbif-v2-crosswalk;18-strict-exact;2-synonym-usages;one-source-typo-unmatched-strict;catalog-checks-partial;authority-conflict-retained;research-only",
+  "question": "What taxonomic name-match candidates do GBIF ChecklistBank v2 and selected Catalog of Fishes records return for the 19 fish names printed in AWTIP Tunnel 4 Table 13, and do those matches identify the report specimens?",
+  "parentReviewId": "central-luzon-awtip-tunnel4-freshwater-fish-review-20261125",
+  "parentReviewFile": "national/reviews/central-luzon-awtip-tunnel4-freshwater-fish-review-20261125.json",
+  "sourceRegistryBeforeReview": "9f7cd195d18142a8b58eddf484e4207bf8674c6aaf090c6c2efda295572d1aa2",
+  "sourceRegistry": "8e39ea06676511bde6ec6a5310f4c6eb68c1fc9c53ec3cb9a14950bec16dd787",
+  "scope": {
+    "source": "MWSS Environmental Monitoring Report (2019), Appendix 8.7, Table 13; 19 printed freshwater fish taxon rows.",
+    "sourceNameHandling": "Table spellings and both printed variants are preserved; no string was silently normalized.",
+    "specimenTraceability": "Parent review found no museum catalogue numbers, voucher accession identifiers, or retained specimen repository. Name matching does not re-identify the 2018 specimens."
+  },
+  "gbifMethod": {
+    "authority": "GBIF ChecklistBank Species Matching API v2, default GBIF Backbone taxonomy.",
+    "endpoint": "https://api.gbif.org/v2/species/match",
+    "requestMethod": "GET",
+    "strictParameters": {
+      "kingdom": "Animalia",
+      "strict": true,
+      "verbose": true
+    },
+    "strictQueryCount": 19,
+    "httpStatuses": [
+      200
+    ],
+    "counts": {
+      "strictExactMatches": 18,
+      "exactAcceptedUsages": 16,
+      "exactSynonymUsages": 2,
+      "strictNoMatches": 1
+    },
+    "resultInterpretation": "EXACT and confidence 100 describe matching of the submitted string to a GBIF Backbone name usage. They do not validate the original field identification, specimen, locality, occurrence, or Philippine status."
+  },
+  "nameCrosswalk": [
+    {
+      "tableRow": 1,
+      "familyAsPrinted": "Phallostethidae",
+      "scientificNameAsPrinted": "Gulaphallus mirabilis",
+      "otherSourceSpellings": [
+        {
+          "spelling": "Gullaphalus mirabilis",
+          "location": "Table 13 versus narrative/photo caption"
+        }
+      ],
+      "gbifStrictQuery": {
+        "url": "https://api.gbif.org/v2/species/match?scientificName=Gulaphallus+mirabilis&kingdom=Animalia&strict=true&verbose=true",
+        "httpStatus": 200,
+        "matchType": "EXACT",
+        "confidence": 100,
+        "usage": {
+          "key": "2412092",
+          "name": "Gulaphallus mirabilis Herre, 1925",
+          "canonicalName": "Gulaphallus mirabilis",
+          "status": "ACCEPTED"
+        },
+        "acceptedUsage": null,
+        "familyInMatchedClassification": "Phallostethidae"
+      },
+      "disposition": "exact-name-match-to-accepted-usage;not-specimen-verification"
+    },
+    {
+      "tableRow": 2,
+      "familyAsPrinted": "Eleotrididae",
+      "scientificNameAsPrinted": "Eleotris fusca",
+      "otherSourceSpellings": [],
+      "gbifStrictQuery": {
+        "url": "https://api.gbif.org/v2/species/match?scientificName=Eleotris+fusca&kingdom=Animalia&strict=true&verbose=true",
+        "httpStatus": 200,
+        "matchType": "EXACT",
+        "confidence": 100,
+        "usage": {
+          "key": "2386106",
+          "name": "Eleotris fusca (Forster, 1801)",
+          "canonicalName": "Eleotris fusca",
+          "status": "ACCEPTED"
+        },
+        "acceptedUsage": null,
+        "familyInMatchedClassification": "Eleotridae"
+      },
+      "disposition": "exact-name-match-to-accepted-usage;not-specimen-verification"
+    },
+    {
+      "tableRow": 3,
+      "familyAsPrinted": "Eleotrididae",
+      "scientificNameAsPrinted": "Ophieleotris aporos",
+      "otherSourceSpellings": [],
+      "gbifStrictQuery": {
+        "url": "https://api.gbif.org/v2/species/match?scientificName=Ophieleotris+aporos&kingdom=Animalia&strict=true&verbose=true",
+        "httpStatus": 200,
+        "matchType": "EXACT",
+        "confidence": 100,
+        "usage": {
+          "key": "2386294",
+          "name": "Ophieleotris aporos (Bleeker, 1854)",
+          "canonicalName": "Ophieleotris aporos",
+          "status": "SYNONYM"
+        },
+        "acceptedUsage": {
+          "key": "4285919",
+          "name": "Giuris margaritacea (Valenciennes, 1837)",
+          "canonicalName": "Giuris margaritacea"
+        },
+        "familyInMatchedClassification": "Eleotridae"
+      },
+      "disposition": "exact-name-match-to-synonym;accepted-name-candidate-only"
+    },
+    {
+      "tableRow": 4,
+      "familyAsPrinted": "Gobiidae",
+      "scientificNameAsPrinted": "Glossogobius aureus",
+      "otherSourceSpellings": [],
+      "gbifStrictQuery": {
+        "url": "https://api.gbif.org/v2/species/match?scientificName=Glossogobius+aureus&kingdom=Animalia&strict=true&verbose=true",
+        "httpStatus": 200,
+        "matchType": "EXACT",
+        "confidence": 100,
+        "usage": {
+          "key": "2379425",
+          "name": "Glossogobius aureus Akihito & Meguro, 1975",
+          "canonicalName": "Glossogobius aureus",
+          "status": "ACCEPTED"
+        },
+        "acceptedUsage": null,
+        "familyInMatchedClassification": "Gobiidae"
+      },
+      "disposition": "exact-name-match-to-accepted-usage;not-specimen-verification"
+    },
+    {
+      "tableRow": 5,
+      "familyAsPrinted": "Gobiidae",
+      "scientificNameAsPrinted": "Glossogobius giuris",
+      "otherSourceSpellings": [],
+      "gbifStrictQuery": {
+        "url": "https://api.gbif.org/v2/species/match?scientificName=Glossogobius+giuris&kingdom=Animalia&strict=true&verbose=true",
+        "httpStatus": 200,
+        "matchType": "EXACT",
+        "confidence": 100,
+        "usage": {
+          "key": "2378087",
+          "name": "Glossogobius giuris (Hamilton, 1822)",
+          "canonicalName": "Glossogobius giuris",
+          "status": "ACCEPTED"
+        },
+        "acceptedUsage": null,
+        "familyInMatchedClassification": "Gobiidae"
+      },
+      "disposition": "exact-name-match-to-accepted-usage;not-specimen-verification"
+    },
+    {
+      "tableRow": 6,
+      "familyAsPrinted": "Channidae",
+      "scientificNameAsPrinted": "Channa striata",
+      "otherSourceSpellings": [],
+      "gbifStrictQuery": {
+        "url": "https://api.gbif.org/v2/species/match?scientificName=Channa+striata&kingdom=Animalia&strict=true&verbose=true",
+        "httpStatus": 200,
+        "matchType": "EXACT",
+        "confidence": 100,
+        "usage": {
+          "key": "2391463",
+          "name": "Channa striata (Bloch, 1793)",
+          "canonicalName": "Channa striata",
+          "status": "ACCEPTED"
+        },
+        "acceptedUsage": null,
+        "familyInMatchedClassification": "Channidae"
+      },
+      "disposition": "exact-name-match-to-accepted-usage;not-specimen-verification"
+    },
+    {
+      "tableRow": 7,
+      "familyAsPrinted": "Belontiidae",
+      "scientificNameAsPrinted": "Trichogaster pectoralis",
+      "otherSourceSpellings": [],
+      "gbifStrictQuery": {
+        "url": "https://api.gbif.org/v2/species/match?scientificName=Trichogaster+pectoralis&kingdom=Animalia&strict=true&verbose=true",
+        "httpStatus": 200,
+        "matchType": "EXACT",
+        "confidence": 100,
+        "usage": {
+          "key": "5211176",
+          "name": "Trichogaster pectoralis (Regan, 1910)",
+          "canonicalName": "Trichogaster pectoralis",
+          "status": "SYNONYM"
+        },
+        "acceptedUsage": {
+          "key": "5211177",
+          "name": "Trichopodus pectoralis Regan, 1910",
+          "canonicalName": "Trichopodus pectoralis"
+        },
+        "familyInMatchedClassification": "Osphronemidae"
+      },
+      "disposition": "exact-name-match-to-synonym;accepted-name-candidate-only"
+    },
+    {
+      "tableRow": 8,
+      "familyAsPrinted": "Hemiramphidae",
+      "scientificNameAsPrinted": "Rhynchorhamphus georgii",
+      "otherSourceSpellings": [],
+      "gbifStrictQuery": {
+        "url": "https://api.gbif.org/v2/species/match?scientificName=Rhynchorhamphus+georgii&kingdom=Animalia&strict=true&verbose=true",
+        "httpStatus": 200,
+        "matchType": "EXACT",
+        "confidence": 100,
+        "usage": {
+          "key": "2368937",
+          "name": "Rhynchorhamphus georgii (Valenciennes, 1847)",
+          "canonicalName": "Rhynchorhamphus georgii",
+          "status": "ACCEPTED"
+        },
+        "acceptedUsage": null,
+        "familyInMatchedClassification": "Hemiramphidae"
+      },
+      "disposition": "exact-name-match-to-accepted-usage;not-specimen-verification"
+    },
+    {
+      "tableRow": 9,
+      "familyAsPrinted": "Hemiramphidae",
+      "scientificNameAsPrinted": "Zenarchopterus gilli",
+      "otherSourceSpellings": [],
+      "gbifStrictQuery": {
+        "url": "https://api.gbif.org/v2/species/match?scientificName=Zenarchopterus+gilli&kingdom=Animalia&strict=true&verbose=true",
+        "httpStatus": 200,
+        "matchType": "EXACT",
+        "confidence": 100,
+        "usage": {
+          "key": "2368778",
+          "name": "Zenarchopterus gilli Smith, 1945",
+          "canonicalName": "Zenarchopterus gilli",
+          "status": "ACCEPTED"
+        },
+        "acceptedUsage": null,
+        "familyInMatchedClassification": "Zenarchopteridae"
+      },
+      "disposition": "exact-name-match-to-accepted-usage;not-specimen-verification"
+    },
+    {
+      "tableRow": 10,
+      "familyAsPrinted": "Clariidae",
+      "scientificNameAsPrinted": "Clarias batrachus",
+      "otherSourceSpellings": [],
+      "gbifStrictQuery": {
+        "url": "https://api.gbif.org/v2/species/match?scientificName=Clarias+batrachus&kingdom=Animalia&strict=true&verbose=true",
+        "httpStatus": 200,
+        "matchType": "EXACT",
+        "confidence": 100,
+        "usage": {
+          "key": "5202683",
+          "name": "Clarias batrachus (Linnaeus, 1758)",
+          "canonicalName": "Clarias batrachus",
+          "status": "ACCEPTED"
+        },
+        "acceptedUsage": null,
+        "familyInMatchedClassification": "Clariidae"
+      },
+      "disposition": "exact-name-match-to-accepted-usage;not-specimen-verification"
+    },
+    {
+      "tableRow": 11,
+      "familyAsPrinted": "Ariidae",
+      "scientificNameAsPrinted": "Arius dispar",
+      "otherSourceSpellings": [],
+      "gbifStrictQuery": {
+        "url": "https://api.gbif.org/v2/species/match?scientificName=Arius+dispar&kingdom=Animalia&strict=true&verbose=true",
+        "httpStatus": 200,
+        "matchType": "EXACT",
+        "confidence": 100,
+        "usage": {
+          "key": "2345282",
+          "name": "Arius dispar Herre, 1926",
+          "canonicalName": "Arius dispar",
+          "status": "ACCEPTED"
+        },
+        "acceptedUsage": null,
+        "familyInMatchedClassification": "Ariidae"
+      },
+      "disposition": "exact-name-match-to-accepted-usage;not-specimen-verification"
+    },
+    {
+      "tableRow": 12,
+      "familyAsPrinted": "Cichlidae",
+      "scientificNameAsPrinted": "Oreochromis niloticus",
+      "otherSourceSpellings": [],
+      "gbifStrictQuery": {
+        "url": "https://api.gbif.org/v2/species/match?scientificName=Oreochromis+niloticus&kingdom=Animalia&strict=true&verbose=true",
+        "httpStatus": 200,
+        "matchType": "EXACT",
+        "confidence": 100,
+        "usage": {
+          "key": "4285694",
+          "name": "Oreochromis niloticus (Linnaeus, 1758)",
+          "canonicalName": "Oreochromis niloticus",
+          "status": "ACCEPTED"
+        },
+        "acceptedUsage": null,
+        "familyInMatchedClassification": "Cichlidae"
+      },
+      "disposition": "exact-name-match-to-accepted-usage;not-specimen-verification"
+    },
+    {
+      "tableRow": 13,
+      "familyAsPrinted": "Cyprinidae",
+      "scientificNameAsPrinted": "Labeo rohita",
+      "otherSourceSpellings": [],
+      "gbifStrictQuery": {
+        "url": "https://api.gbif.org/v2/species/match?scientificName=Labeo+rohita&kingdom=Animalia&strict=true&verbose=true",
+        "httpStatus": 200,
+        "matchType": "EXACT",
+        "confidence": 100,
+        "usage": {
+          "key": "5206083",
+          "name": "Labeo rohita (Hamilton, 1822)",
+          "canonicalName": "Labeo rohita",
+          "status": "ACCEPTED"
+        },
+        "acceptedUsage": null,
+        "familyInMatchedClassification": "Cyprinidae"
+      },
+      "disposition": "exact-name-match-to-accepted-usage;not-specimen-verification"
+    },
+    {
+      "tableRow": 14,
+      "familyAsPrinted": "Teraponidae",
+      "scientificNameAsPrinted": "Leiopotherapon plumbeus",
+      "otherSourceSpellings": [],
+      "gbifStrictQuery": {
+        "url": "https://api.gbif.org/v2/species/match?scientificName=Leiopotherapon+plumbeus&kingdom=Animalia&strict=true&verbose=true",
+        "httpStatus": 200,
+        "matchType": "EXACT",
+        "confidence": 100,
+        "usage": {
+          "key": "2374507",
+          "name": "Leiopotherapon plumbeus (Kner, 1864)",
+          "canonicalName": "Leiopotherapon plumbeus",
+          "status": "ACCEPTED"
+        },
+        "acceptedUsage": null,
+        "familyInMatchedClassification": "Terapontidae"
+      },
+      "disposition": "exact-name-match-to-accepted-usage;not-specimen-verification"
+    },
+    {
+      "tableRow": 15,
+      "familyAsPrinted": "Poecillidae",
+      "scientificNameAsPrinted": "Gambusia affinis",
+      "otherSourceSpellings": [],
+      "gbifStrictQuery": {
+        "url": "https://api.gbif.org/v2/species/match?scientificName=Gambusia+affinis&kingdom=Animalia&strict=true&verbose=true",
+        "httpStatus": 200,
+        "matchType": "EXACT",
+        "confidence": 100,
+        "usage": {
+          "key": "2350580",
+          "name": "Gambusia affinis (Baird & Girard, 1853)",
+          "canonicalName": "Gambusia affinis",
+          "status": "ACCEPTED"
+        },
+        "acceptedUsage": null,
+        "familyInMatchedClassification": "Poeciliidae"
+      },
+      "disposition": "exact-name-match-to-accepted-usage;not-specimen-verification"
+    },
+    {
+      "tableRow": 16,
+      "familyAsPrinted": "Poecillidae",
+      "scientificNameAsPrinted": "Poecilia reticulata",
+      "otherSourceSpellings": [],
+      "gbifStrictQuery": {
+        "url": "https://api.gbif.org/v2/species/match?scientificName=Poecilia+reticulata&kingdom=Animalia&strict=true&verbose=true",
+        "httpStatus": 200,
+        "matchType": "EXACT",
+        "confidence": 100,
+        "usage": {
+          "key": "2350050",
+          "name": "Poecilia reticulata Peters, 1859",
+          "canonicalName": "Poecilia reticulata",
+          "status": "ACCEPTED"
+        },
+        "acceptedUsage": null,
+        "familyInMatchedClassification": "Poeciliidae"
+      },
+      "disposition": "exact-name-match-to-accepted-usage;not-specimen-verification"
+    },
+    {
+      "tableRow": 17,
+      "familyAsPrinted": "Anguillidae",
+      "scientificNameAsPrinted": "Anguilla marmorata",
+      "otherSourceSpellings": [],
+      "gbifStrictQuery": {
+        "url": "https://api.gbif.org/v2/species/match?scientificName=Anguilla+marmorata&kingdom=Animalia&strict=true&verbose=true",
+        "httpStatus": 200,
+        "matchType": "EXACT",
+        "confidence": 100,
+        "usage": {
+          "key": "5213048",
+          "name": "Anguilla marmorata Quoy & Gaimard, 1824",
+          "canonicalName": "Anguilla marmorata",
+          "status": "ACCEPTED"
+        },
+        "acceptedUsage": null,
+        "familyInMatchedClassification": "Anguillidae"
+      },
+      "disposition": "exact-name-match-to-accepted-usage;not-specimen-verification"
+    },
+    {
+      "tableRow": 18,
+      "familyAsPrinted": "Synbranchidae",
+      "scientificNameAsPrinted": "Monopterus albus",
+      "otherSourceSpellings": [],
+      "gbifStrictQuery": {
+        "url": "https://api.gbif.org/v2/species/match?scientificName=Monopterus+albus&kingdom=Animalia&strict=true&verbose=true",
+        "httpStatus": 200,
+        "matchType": "EXACT",
+        "confidence": 100,
+        "usage": {
+          "key": "5204081",
+          "name": "Monopterus albus (Zuiew, 1793)",
+          "canonicalName": "Monopterus albus",
+          "status": "ACCEPTED"
+        },
+        "acceptedUsage": null,
+        "familyInMatchedClassification": "Synbranchidae"
+      },
+      "disposition": "exact-name-match-to-accepted-usage;not-specimen-verification"
+    },
+    {
+      "tableRow": 19,
+      "familyAsPrinted": "Loricariidae",
+      "scientificNameAsPrinted": "Pterygoplychtys pardalis",
+      "otherSourceSpellings": [
+        {
+          "spelling": "Pterygoplicthys pardalis",
+          "location": "Table 13 versus photo caption; retain both pending taxonomic review"
+        }
+      ],
+      "gbifStrictQuery": {
+        "url": "https://api.gbif.org/v2/species/match?scientificName=Pterygoplychtys+pardalis&kingdom=Animalia&strict=true&verbose=true",
+        "httpStatus": 200,
+        "matchType": "NONE",
+        "confidence": null,
+        "usage": null,
+        "acceptedUsage": null,
+        "familyInMatchedClassification": null
+      },
+      "disposition": "no-strict-match;source-spelling-retained",
+      "gbifNonStrictFollowup": {
+        "url": "https://api.gbif.org/v2/species/match?scientificName=Pterygoplychtys+pardalis&kingdom=Animalia&strict=false&verbose=true",
+        "httpStatus": 200,
+        "matchType": "VARIANT",
+        "confidence": 81,
+        "candidateUsage": {
+          "key": "2339971",
+          "name": "Pterygoplichthys pardalis (Castelnau, 1855)",
+          "canonicalName": "Pterygoplichthys pardalis",
+          "status": "ACCEPTED"
+        },
+        "familyInMatchedClassification": "Loricariidae",
+        "interpretation": "Fuzzy candidate only; it cannot correct source spelling or identify an AWTIP specimen."
+      }
+    }
+  ],
+  "sourceFamilyLabelDifferences": [
+    {
+      "tableRow": 2,
+      "nameAsPrinted": "Eleotris fusca",
+      "familyAsPrinted": "Eleotrididae",
+      "familyInGbifClassification": "Eleotridae",
+      "interpretation": "Classification-label discrepancy only; source label retained and no specimen or family assignment is corrected."
+    },
+    {
+      "tableRow": 3,
+      "nameAsPrinted": "Ophieleotris aporos",
+      "familyAsPrinted": "Eleotrididae",
+      "familyInGbifClassification": "Eleotridae",
+      "interpretation": "Classification-label discrepancy only; source label retained and no specimen or family assignment is corrected."
+    },
+    {
+      "tableRow": 7,
+      "nameAsPrinted": "Trichogaster pectoralis",
+      "familyAsPrinted": "Belontiidae",
+      "familyInGbifClassification": "Osphronemidae",
+      "interpretation": "Classification-label discrepancy only; source label retained and no specimen or family assignment is corrected."
+    },
+    {
+      "tableRow": 9,
+      "nameAsPrinted": "Zenarchopterus gilli",
+      "familyAsPrinted": "Hemiramphidae",
+      "familyInGbifClassification": "Zenarchopteridae",
+      "interpretation": "Classification-label discrepancy only; source label retained and no specimen or family assignment is corrected."
+    },
+    {
+      "tableRow": 14,
+      "nameAsPrinted": "Leiopotherapon plumbeus",
+      "familyAsPrinted": "Teraponidae",
+      "familyInGbifClassification": "Terapontidae",
+      "interpretation": "Classification-label discrepancy only; source label retained and no specimen or family assignment is corrected."
+    },
+    {
+      "tableRow": 15,
+      "nameAsPrinted": "Gambusia affinis",
+      "familyAsPrinted": "Poecillidae",
+      "familyInGbifClassification": "Poeciliidae",
+      "interpretation": "Classification-label discrepancy only; source label retained and no specimen or family assignment is corrected."
+    },
+    {
+      "tableRow": 16,
+      "nameAsPrinted": "Poecilia reticulata",
+      "familyAsPrinted": "Poecillidae",
+      "familyInGbifClassification": "Poeciliidae",
+      "interpretation": "Classification-label discrepancy only; source label retained and no specimen or family assignment is corrected."
+    }
+  ],
+  "catalogOfFishesChecks": [
+    {
+      "nameAsPrinted": "Ophieleotris aporos",
+      "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=21756",
+      "retrieval": "Official indexed record text; direct open unavailable.",
+      "catalogFinding": "Current status is reported as synonym of Giuris margaritaceus (Valenciennes, 1837); the entry also records older alternative usages.",
+      "gbifComparison": "GBIF returns the exact submitted name as SYNONYM and accepted usage Giuris margaritacea (Valenciennes, 1837).",
+      "disposition": "Authority spelling/status conflict retained; do not replace source spelling or re-identify specimen."
+    },
+    {
+      "nameAsPrinted": "Trichogaster pectoralis",
+      "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Trichopodus&species=pectoralis&tbl=species",
+      "retrieval": "Official Catalog record opened as HTML.",
+      "catalogFinding": "Current status is valid as Trichopodus pectoralis Regan, 1910; Osphronemidae.",
+      "gbifComparison": "GBIF returns exact submitted name as SYNONYM and accepted usage Trichopodus pectoralis Regan, 1910.",
+      "disposition": "Name-level current-usage agreement only; no specimen re-identification."
+    },
+    {
+      "nameAsPrinted": "Pterygoplychtys pardalis",
+      "sourceVariant": "Pterygoplicthys pardalis",
+      "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=5362",
+      "retrieval": "Official indexed record text; direct open unavailable.",
+      "catalogFinding": "Pterygoplichthys pardalis is listed as valid; the record gives a South American Amazon native distribution and notes introductions in parts of Asia.",
+      "gbifComparison": "Exact source spelling has no strict match; non-strict result is an 81-confidence VARIANT for Pterygoplichthys pardalis.",
+      "disposition": "Potential correction candidate only; does not prove AWTIP specimen identity or local occurrence."
+    },
+    {
+      "nameAsPrinted": "Zenarchopterus gilli",
+      "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=31800",
+      "retrieval": "Official indexed record text.",
+      "catalogFinding": "Current status is valid as Zenarchopterus gilli Smith, 1945; Zenarchopteridae.",
+      "gbifComparison": "GBIF exact accepted usage in Zenarchopteridae; report prints Hemiramphidae.",
+      "disposition": "Source family label retained; classification difference only."
+    },
+    {
+      "nameAsPrinted": "Leiopotherapon plumbeus",
+      "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=22356",
+      "retrieval": "Official indexed record text.",
+      "catalogFinding": "Current status is valid as Leiopotherapon plumbeus (Kner, 1864); Terapontidae; Philippines endemic.",
+      "gbifComparison": "GBIF exact accepted usage in Terapontidae; report prints Teraponidae.",
+      "disposition": "Source family label retained; nomenclature is not local specimen validation."
+    }
+  ],
+  "specimenIdentityLimit": "No matched usage, synonym mapping, or fuzzy candidate is treated as re-identification of AWTIP specimens. Voucher/accession evidence is absent.",
+  "dietDisposition": "No diet or bait claims were assessed or added.",
+  "imageDisposition": "No report photographs were copied or linked to name matches; image identity and reuse rights remain unreviewed.",
+  "rightsAndPublication": {
+    "decision": "Research-only crosswalk. GBIF redistribution terms for derived taxonomy fields and Catalog item-level reuse terms were not reviewed for public app reuse. Attribution retained; no public projection approved."
+  },
+  "disposition": {
+    "sourceRowsReviewed": 19,
+    "gbifStrictExactMatches": 18,
+    "exactSynonymUsages": 2,
+    "strictUnmatchedRows": 1,
+    "fuzzyCandidateRows": 1,
+    "sourceRegistryRecordsAdded": 1,
+    "sourceRegistryRecordsUpdated": 1,
+    "speciesAssertionsAdded": 0,
+    "occurrenceRecordsAdded": 0,
+    "dietClaimsAdded": 0,
+    "imagesAdded": 0,
+    "geometryAdded": false,
+    "publicAppRowsAdded": 0,
+    "publicationApproval": false,
+    "regionalReleaseApproved": false
+  },
+  "nextActions": [
+    "Keep source-name and family transcription separate from accepted-name candidates; search for vouchers or catalogue identifiers before record-level re-identification.",
+    "Review Table 13 species-by-site density cells as a separate transcription task; do not infer absence from blank cells.",
+    "Continue Central Luzon freshwater source coverage; this crosswalk does not complete Norzagaray, Bulacan, or Region III."
+  ],
+  "sources": [
+    {
+      "sourceId": "adb-mwss-awtip-tunnel4-freshwater-ecology-2018",
+      "url": "https://www.adb.org/sites/default/files/project-documents/46362/46362-002-emr-en_2.pdf",
+      "supports": "Table 13 source spellings, family labels, variants, and missing voucher details as documented in parent review."
+    },
+    {
+      "sourceId": "gbif-checklistbank-species-match-api-v2",
+      "url": "https://techdocs.gbif.org/en/openapi/v1/species",
+      "apiUrl": "https://api.gbif.org/v2/species/match",
+      "supports": "Nineteen strict name matches and one non-strict follow-up; taxonomic candidates only."
+    },
+    {
+      "sourceId": "calacademy-catalog-awtip-tunnel4-taxonomy-crosswalk-20261124",
+      "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=21756",
+      "supports": "Selected Catalog of Fishes name-status and classification checks; not specimen identifications."
+    }
+  ],
+  "publicationApproval": false,
+  "regionalReleaseApproved": false
+}
