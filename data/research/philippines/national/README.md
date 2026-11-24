@@ -109,6 +109,8 @@ The follow-up crosswalk checked all 19 Table 13 spellings against GBIF Checklist
 
 Table 13’s 19 rows were then transcribed across its nine May/September station pairs from the visually checked PDF pages 348–350. The transcription contains 106 numeric cells and 236 visibly blank cells; blanks are preserved as blanks, not zeros or confirmed absences. These are historical values under the report’s stated density header, not new occurrence records or current abundance estimates. See `reviews/central-luzon-awtip-tunnel4-table13-density-transcription-20261124.json`.
 
+The richness cross-check matches Table 13’s nonblank-row counts against Tables 14–15 for every numeric station-season except Site 2 Ipo Lake MS in September: Table 13 has six taxon rows with values, while Table 15 reports richness 12. The narrative also reports 12 taxa across Ipo Lake sites in September, while Table 13 shows seven distinct rows with numeric values there. These source discrepancies remain unresolved; no blank cell was filled. See `reviews/central-luzon-awtip-tunnel4-table13-richness-consistency-20261124.json`.
+
 ## NCR waterbody source leads
 
 ### NCR incomplete-discovery checkpoint

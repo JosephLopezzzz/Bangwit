@@ -1,0 +1,304 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "central-luzon-awtip-tunnel4-table13-richness-consistency-20261124",
+  "reviewedOn": "2026-11-24",
+  "phaseId": "L3",
+  "regionId": "0300000000",
+  "regionName": "Region III (Central Luzon)",
+  "status": "table13-versus-tables14-15-crosscheck;one-site-season-richness-discrepancy;lake-september-narrative-count-discrepancy;source-conflict-retained;research-only",
+  "question": "Do the per-station species-richness values in AWTIP Tunnel 4 Tables 14–15 and the habitat-level narrative agree with the Table 13 station-season density transcription?",
+  "parentReviewId": "central-luzon-awtip-tunnel4-table13-density-transcription-20261124",
+  "parentReviewFile": "national/reviews/central-luzon-awtip-tunnel4-table13-density-transcription-20261124.json",
+  "sourceRegistryBeforeReview": "f9e891c50813f9af9b0a83c88111a256d8aab10eddc21b27d36233465b5b51bf",
+  "sourceRegistry": "34f3a2812c01a799e1076474b97d047241e67708433bbcf9e0934e3db1fc7c35",
+  "source": {
+    "sourceId": "adb-mwss-awtip-tunnel4-freshwater-ecology-2018",
+    "url": "https://www.adb.org/sites/default/files/project-documents/46362/46362-002-emr-en_2.pdf",
+    "citation": "Metropolitan Waterworks and Sewerage System. (2019). Environmental Monitoring Report, Semi-Annual Report January–June 2019: Philippines—Angat Water Transmission Improvement Project, Tunnel 4. Appendix 8.7: Freshwater Ecology Monitoring Report (Dry & Wet Season 2018). Prepared for the Asian Development Bank.",
+    "table14": {
+      "title": "Fish diversity indices; May 2018",
+      "printedPage": 43,
+      "pdfPage": 353
+    },
+    "table15": {
+      "title": "Fish diversity indices; September 2018",
+      "printedPage": 44,
+      "pdfPage": 354
+    },
+    "reviewMethod": "Tables 14–15 were visually checked from rendered pages in the exact same SHA-256-matched PDF used for the Table 13 transcription. Their Species Richness column was compared with Table 13 nonblank cell counts by station-season."
+  },
+  "comparisonMethod": {
+    "table13Metric": "Count of distinct taxon rows with a numeric (nonblank) cell for that station-season. Blank cells are unknown/unreported for this comparison and are not converted to zero.",
+    "richnessMeaning": "Species Richness values copied from the report tables; not independently recalculated from raw specimens.",
+    "limit": "A mismatch is a source-document inconsistency signal. It does not establish which table is correct and does not justify filling blank cells."
+  },
+  "stationComparison": [
+    {
+      "siteId": "site-1-ipo-lake-us",
+      "stationAsPrinted": "Site 1 Ipo US",
+      "may2018": {
+        "table14SpeciesRichnessAsPrinted": 9,
+        "table13NonblankRows": 9,
+        "match": true
+      },
+      "september2018": {
+        "table15SpeciesRichnessAsPrinted": 6,
+        "table13NonblankRows": 6,
+        "match": true,
+        "table13TaxaWithNumericCells": [
+          "Gulaphallus mirabilis",
+          "Glossogobius aureus",
+          "Rhynchorhamphus georgii",
+          "Zenarchopterus gilli",
+          "Oreochromis niloticus",
+          "Gambusia affinis"
+        ]
+      }
+    },
+    {
+      "siteId": "site-2-ipo-lake-ms",
+      "stationAsPrinted": "Site 2 Ipo MS",
+      "may2018": {
+        "table14SpeciesRichnessAsPrinted": 7,
+        "table13NonblankRows": 7,
+        "match": true
+      },
+      "september2018": {
+        "table15SpeciesRichnessAsPrinted": 12,
+        "table13NonblankRows": 6,
+        "match": false,
+        "table13TaxaWithNumericCells": [
+          "Gulaphallus mirabilis",
+          "Glossogobius aureus",
+          "Rhynchorhamphus georgii",
+          "Zenarchopterus gilli",
+          "Oreochromis niloticus",
+          "Gambusia affinis"
+        ]
+      }
+    },
+    {
+      "siteId": "site-3-ipo-dam",
+      "stationAsPrinted": "Site 3 Ipo Dam",
+      "may2018": {
+        "table14SpeciesRichnessAsPrinted": 9,
+        "table13NonblankRows": 9,
+        "match": true
+      },
+      "september2018": {
+        "table15SpeciesRichnessAsPrinted": 6,
+        "table13NonblankRows": 6,
+        "match": true,
+        "table13TaxaWithNumericCells": [
+          "Gulaphallus mirabilis",
+          "Glossogobius aureus",
+          "Rhynchorhamphus georgii",
+          "Zenarchopterus gilli",
+          "Oreochromis niloticus",
+          "Leiopotherapon plumbeus"
+        ]
+      }
+    },
+    {
+      "siteId": "site-4-angat-below-dam",
+      "stationAsPrinted": "Site 4 Angat below Dam",
+      "may2018": {
+        "table14SpeciesRichnessAsPrinted": 12,
+        "table13NonblankRows": 12,
+        "match": true
+      },
+      "september2018": {
+        "table15SpeciesRichnessAsPrinted": 3,
+        "table13NonblankRows": 3,
+        "match": true,
+        "table13TaxaWithNumericCells": [
+          "Gulaphallus mirabilis",
+          "Zenarchopterus gilli",
+          "Oreochromis niloticus"
+        ]
+      }
+    },
+    {
+      "siteId": "site-5-angat-bitbit-bridge",
+      "stationAsPrinted": "Site 5 Angat Bitbit Bridge",
+      "may2018": {
+        "table14SpeciesRichnessAsPrinted": 6,
+        "table13NonblankRows": 6,
+        "match": true
+      },
+      "september2018": {
+        "table15SpeciesRichnessAsPrinted": 1,
+        "table13NonblankRows": 1,
+        "match": true,
+        "table13TaxaWithNumericCells": [
+          "Gulaphallus mirabilis"
+        ]
+      }
+    },
+    {
+      "siteId": "site-5b-angat-pogpog",
+      "stationAsPrinted": "Site 5b Angat Pogpog",
+      "may2018": {
+        "table14SpeciesRichnessAsPrinted": null,
+        "table13NonblankRows": 0,
+        "match": null
+      },
+      "september2018": {
+        "table15SpeciesRichnessAsPrinted": 8,
+        "table13NonblankRows": 8,
+        "match": true,
+        "table13TaxaWithNumericCells": [
+          "Glossogobius giuris",
+          "Channa striata",
+          "Zenarchopterus gilli",
+          "Clarias batrachus",
+          "Oreochromis niloticus",
+          "Gambusia affinis",
+          "Monopterus albus",
+          "Pterygoplychtys pardalis"
+        ]
+      }
+    },
+    {
+      "siteId": "site-6-bigte-mwss",
+      "stationAsPrinted": "Site 6 Bigte MWSS",
+      "may2018": {
+        "table14SpeciesRichnessAsPrinted": 9,
+        "table13NonblankRows": 9,
+        "match": true
+      },
+      "september2018": {
+        "table15SpeciesRichnessAsPrinted": 5,
+        "table13NonblankRows": 5,
+        "match": true,
+        "table13TaxaWithNumericCells": [
+          "Eleotris fusca",
+          "Ophieleotris aporos",
+          "Glossogobius aureus",
+          "Oreochromis niloticus",
+          "Gambusia affinis"
+        ]
+      }
+    },
+    {
+      "siteId": "site-7-bigte-ds",
+      "stationAsPrinted": "Site 7 Bigte DS",
+      "may2018": {
+        "table14SpeciesRichnessAsPrinted": 3,
+        "table13NonblankRows": 3,
+        "match": true
+      },
+      "september2018": {
+        "table15SpeciesRichnessAsPrinted": 4,
+        "table13NonblankRows": 4,
+        "match": true,
+        "table13TaxaWithNumericCells": [
+          "Clarias batrachus",
+          "Oreochromis niloticus",
+          "Gambusia affinis",
+          "Poecilia reticulata"
+        ]
+      }
+    },
+    {
+      "siteId": "site-8-sta-maria",
+      "stationAsPrinted": "Site 8 Sta Maria",
+      "may2018": {
+        "table14SpeciesRichnessAsPrinted": 8,
+        "table13NonblankRows": 8,
+        "match": true
+      },
+      "september2018": {
+        "table15SpeciesRichnessAsPrinted": 4,
+        "table13NonblankRows": 4,
+        "match": true,
+        "table13TaxaWithNumericCells": [
+          "Glossogobius aureus",
+          "Oreochromis niloticus",
+          "Gambusia affinis",
+          "Poecilia reticulata"
+        ]
+      }
+    }
+  ],
+  "narrativeComparisons": [
+    {
+      "habitatAsDiscussed": "Ipo Lake sites 1–3",
+      "season": "May 2018",
+      "narrativeDistinctFishTaxa": 14,
+      "table13DistinctRowsWithNumericCells": 14,
+      "assessment": "Counts align as row counts in the published table; this does not resolve any other table issue."
+    },
+    {
+      "habitatAsDiscussed": "Ipo Lake sites 1–3",
+      "season": "September 2018",
+      "narrativeDistinctFishTaxa": 12,
+      "table13DistinctRowsWithNumericCells": 7,
+      "assessment": "Table 13 contains only seven distinct taxon rows with numeric values across the three lake sites, while the narrative reports twelve lake taxa and Table 15 assigns richness 12 to Site 2. Preserve this publication discrepancy; do not fill blank cells."
+    },
+    {
+      "habitatAsDiscussed": "Angat River sites 4, 5, and 5b",
+      "season": "May versus September 2018",
+      "narrativeDistinctFishTaxa": null,
+      "table13DistinctRowsWithNumericCells": {
+        "may": 13,
+        "september": 9
+      },
+      "assessment": "The qualitative narrative says more fish taxa were collected in May than September; the count of distinct Table 13 rows with numeric cells is directionally consistent (13 versus 9), but blank cells are not treated as confirmed absences."
+    },
+    {
+      "habitatAsDiscussed": "Bigte–Sta Maria sites 6–8",
+      "season": "May versus September 2018",
+      "narrativeDistinctFishTaxa": null,
+      "table13DistinctRowsWithNumericCells": {
+        "may": 12,
+        "september": 7
+      },
+      "assessment": "The qualitative narrative says more taxa were collected in May than September and identifies Site 6 as most taxa; Table 13 nonblank-row counts are directionally consistent (12 versus 7) and Site 6 has the most May nonblank rows (9). Blank cells are not treated as confirmed absences."
+    }
+  ],
+  "findings": {
+    "mayStationsCompared": 8,
+    "mayNonblankCountMatches": 8,
+    "mayBlankStationRows": 1,
+    "septemberStationsCompared": 9,
+    "septemberNonblankCountMatches": 8,
+    "septemberDiscrepancies": 1,
+    "primaryDiscrepancy": "Site 2 Ipo Lake MS, September 2018: Table 13 has numeric cells for six distinct taxon rows, while Table 15 prints Species Richness = 12.",
+    "lakeSeptemberDiscrepancy": "The narrative reports 12 fish taxa across the Ipo Lake sites in September; Table 13 has numeric values in seven distinct taxon rows across Sites 1–3. Table 15 also reports 12 for Site 2 alone, amplifying the unresolved inconsistency.",
+    "otherSeasonSiteComparisons": "The other numeric Table 14/15 site-season richness values match their Table 13 nonblank-row counts. Site 5b has no May richness entry and no May numeric density cells; September richness and matrix counts both equal eight."
+  },
+  "disposition": {
+    "sourceRegistryRecordsAdded": 0,
+    "sourceRegistryRecordsUpdated": 1,
+    "table14MayStationComparisons": 8,
+    "table14MayStationMatches": 8,
+    "table15SeptemberStationComparisons": 9,
+    "table15SeptemberStationMatches": 8,
+    "sourceDiscrepanciesRecorded": 2,
+    "blankCellsFilled": 0,
+    "table13ValuesChanged": 0,
+    "occurrenceRecordsAdded": 0,
+    "speciesAssertionsAdded": 0,
+    "publicAppRowsAdded": 0,
+    "publicationApproval": false,
+    "regionalReleaseApproved": false
+  },
+  "publicationApproval": false,
+  "regionalReleaseApproved": false,
+  "rightsAndPublication": {
+    "decision": "Research-only comparison of attributed report tables. No table data was promoted to the public app, and report reuse terms remain unverified."
+  },
+  "nextActions": [
+    "Keep the Site 2 September and Ipo Lake September count discrepancies visible; request a corrected source table or erratum only if an authoritative copy becomes available.",
+    "Do not revise or fill Table 13 cells based on the richness tables or narrative alone.",
+    "Continue the remaining Central Luzon freshwater source work independently of this historical report."
+  ],
+  "sources": [
+    {
+      "sourceId": "adb-mwss-awtip-tunnel4-freshwater-ecology-2018",
+      "url": "https://www.adb.org/sites/default/files/project-documents/46362/46362-002-emr-en_2.pdf",
+      "supports": "Table 13 station-season cells; Tables 14–15 per-site species richness; and narrative May/September comparisons across the three habitat groupings."
+    }
+  ]
+}
