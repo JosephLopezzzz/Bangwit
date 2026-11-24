@@ -28,6 +28,7 @@ export const filDictionary: Dictionary = {
   },
   nav: {
     explore: "Explore",
+    fishActivity: "Aktibidad ng isda",
     species: "Species",
     myCatches: "My Catches",
     mySpecies: "My Species",
@@ -46,12 +47,12 @@ export const filDictionary: Dictionary = {
     readComplete: "Nakarating ka na sa dulo. Maaari mo nang i-check ang kahon.",
     summaryTitle: "Mahahalagang limitasyon ng prototype",
     summaryText:
-      "Hindi pa verified ang species coverage, fishing rules, boundaries, weather alerts, o food-safety guidance. Huwag gamitin ito para magpasya kung legal o ligtas mangisda o kung ligtas kainin ang huli.",
+      "Hindi pa verified ang species coverage, fishing rules, boundaries, weather alerts, o food-safety guidance. Tantiya sa oras lang ang activity windows, hindi beripikadong activity ng isda, at hindi para sa navigation o safety ang model conditions. Huwag gamitin ito para magpasya kung legal o ligtas mangisda o kung ligtas kainin ang huli.",
     agreeCheckbox:
-      "Nabasa at sinasang-ayunan ko ang mga draft notice para sa prototype. Nauunawaan kong sa browser storage ng device na ito nananatili ang catch records at photos, at hindi pahintulot sa cloud upload ang acknowledgment na ito.",
+      "Nabasa at sinasang-ayunan ko ang mga draft notice para sa prototype. Nauunawaan kong sa browser storage ng device na ito nananatili ang catch records, fishing trips, at photos, at hindi pahintulot sa cloud upload ang acknowledgment na ito.",
     agreeBtn: "Sumang-ayon at magpatuloy",
     disclaimer:
-      "Draft para sa prototype ang mga notice na ito sa Filipino at English. Si Joseph Lopez ang namamahala sa Bangwit at nagmo-monitor ng tepezzzz070@gmail.com para sa privacy at support. Kailangan pa ng final review ang pagproseso ng hosting provider sa request metadata at logs bago public launch. Hindi ito pahintulot na i-upload sa cloud ang mga tala at larawan ng huli.",
+      "Draft para sa prototype ang mga notice na ito sa Filipino at English. Si Joseph Lopez ang namamahala sa Bangwit at nagmo-monitor ng tepezzzz070@gmail.com para sa privacy at support. Kailangan pa ng final review ang pagproseso ng hosting at forecast provider sa request metadata at logs bago public launch. Hindi ito pahintulot na i-upload sa cloud ang mga fishing record.",
     selectLanguage: "Pumili ng wika / Select language",
   },
   onboarding: {
@@ -495,7 +496,8 @@ export const filDictionary: Dictionary = {
       "Makasaysayang koleksiyon at field observation mula 1985–2015 ito, hindi patunay ng presensya ngayon o standardized na pagtatantiya ng dami. Magkaiba ang field observation at preserved specimen; hindi ginagawang bilang ang salitang kwalitatibo. Hindi nito pinatutunayan ang access o legalidad ng pangingisda, kaligtasan o bisa ng pain; hindi ito kumpletong talaan ng isda sa Palawan.",
     sourceDetails: "Citation, source at terms sa paggamit",
     taxonomyLabel: "Kasalukuyang status ng pangalan",
-    taxonomyCaveat: "Hindi nito muling tinutukoy ang mga makasaysayang specimen o pinatutunayan ang presensya ngayon sa mga lugar na ito.",
+    taxonomyCaveat:
+      "Hindi nito muling tinutukoy ang mga makasaysayang specimen o pinatutunayan ang presensya ngayon sa mga lugar na ito.",
     taxonomyLink: "Catalog of Fishes",
     articleLink: "Artikulo ng publisher",
     pdfLink: "Buong PDF",
@@ -673,6 +675,88 @@ export const filDictionary: Dictionary = {
       "Hindi napapatunayan ng natural na diet ang epektibong pain, legal na gamit, o pahintulot mangisda. Walang pain recommendation hangga't walang hiwalay na source at local rules review.",
     reviewDateLabel: "Petsa ng source review",
   },
+  fishActivity: {
+    tag: "Para sa anglers · gabay sa pagpaplano",
+    title: "Aktibidad ng isda",
+    description: "Magplano gamit ang oras at kondisyon ng tubig, pagkatapos itala ang nangyari sa iyong fishing trip.",
+    waterTypeLabel: "Uri ng tubig",
+    waterTypes: { sea: "Dagat", lake: "Lawa", river: "Ilog" },
+    coverageTitle: "Saklaw ng forecast",
+    seaCoverage:
+      "May live model conditions para sa isang coastal pilot malapit sa Puerto Azul, Ternate, Cavite. Maaaring ilang kilometro ang layo ng model grid sa pinangalanang punto.",
+    freshwaterCoverage:
+      "Wala pang live activity forecast para sa lawa at ilog. Maaari ka pa ring magtala rito ng fishing trip para makabuo ng lokal na datos sa Bangwit.",
+    loading: "Kinukuha ang lokal na kondisyon sa dagat…",
+    refresh: "I-refresh ang kondisyon",
+    refreshing: "Nagre-refresh…",
+    updatedAt: "Na-update",
+    stale: "Ipinapakita ang naka-save na kondisyon. Maaaring luma na ito.",
+    loadError: "Hindi makuha ang live na kondisyon. Subukan ulit kapag may koneksyon.",
+    timingTitle: "Mga posibleng oras ng aktibidad",
+    timingDescription:
+      "Isang oras na gabay na nakasentro sa pagsikat at paglubog ng araw at paglitaw at paglubog ng buwan. Gabay lang ito sa oras, hindi aktuwal na obserbasyon ng aktibidad ng isda.",
+    windowLabel: "Gabay sa oras",
+    noWindows: "Walang ibinalik na paparating na oras ng pagsikat o paglubog ng araw o buwan.",
+    cues: {
+      sunrise: "Pagsikat ng araw",
+      sunset: "Paglubog ng araw",
+      moonrise: "Paglitaw ng buwan",
+      moonset: "Paglubog ng buwan",
+    },
+    conditionsTitle: "Kondisyon ng dagat · tantiya ng modelo",
+    seaLevelTrend: "Galaw ng lebel ng dagat",
+    rising: "Tumataas",
+    falling: "Bumababa",
+    steady: "Halos walang pagbabago",
+    waveHeight: "Taas ng alon",
+    currentSpeed: "Agos sa ibabaw",
+    modelCell: "Model grid cell",
+    estimateNote:
+      "Tantiya ng modelo ang lebel ng dagat, alon, at agos. Maaaring limitado ang katumpakan sa baybayin at hindi ito para sa navigation.",
+    safetyNote:
+      "Hindi ito weather o marine safety service. Tingnan ang kasalukuyang PAGASA at lokal na advisory bago bumiyahe o pumalaot.",
+    attribution:
+      "Marine data mula sa Open-Meteo · iniangkop ang sea-level values bilang panandaliang trend cue · kabilang sa mga source provider ang Météo-France / Copernicus Marine, ECMWF, NOAA NCEP, DWD, at Copernicus Climate Change Service",
+    dataLicense: "Lisensya ng data: CC BY 4.0",
+    logTitle: "Itala ang fishing trip",
+    logDescription:
+      "Itala pati ang mga trip na walang kagat. Mananatili ang mga entry sa browser ng device na ito at maisasama sa Bangwit backup.",
+    locationLabel: "Katubigan o lugar ng pangingisda",
+    locationPlaceholder: "Halimbawa, Puerto Azul o daanan papunta sa ilog",
+    dateLabel: "Petsa ng trip",
+    startTimeLabel: "Oras ng simula",
+    endTimeLabel: "Oras ng pagtatapos",
+    targetSpeciesLabel: "Target na species",
+    targetSpeciesPlaceholder: "Opsyonal",
+    methodLabel: "Paraan o pain",
+    methodPlaceholder: "Opsyonal",
+    outcomeLabel: "Kumusta ang trip?",
+    outcomes: {
+      noBites: "Walang kagat",
+      bites: "May kagat, walang nahuli",
+      caughtFish: "May nahuling isda",
+      notRecorded: "Hindi itinala",
+    },
+    biteCountLabel: "Bilang ng kagat (opsyonal)",
+    notesLabel: "Mga tala",
+    notesPlaceholder: "Panahon, galaw ng tubig, pagbabago ng pain…",
+    saveTrip: "I-save ang trip",
+    savingTrip: "Sine-save…",
+    tripSaved: "Naka-save ang fishing trip sa device na ito.",
+    saveError: "Hindi na-save ang trip sa device na ito.",
+    locationRequired: "Ilagay ang katubigan o lugar ng pangingisda para ma-save ang trip.",
+    timeRangeInvalid: "Dapat mas huli ang oras ng pagtatapos kaysa simula para sa trip sa iisang araw.",
+    historyTitle: "Mga kamakailang trip",
+    emptyHistory:
+      "Wala pang naka-log na trip. Itala rin ang mga trip na walang kagat para maikumpara ang mga activity estimate sa totoong kinalabasan.",
+    removeTrip: "Burahin ang trip na ito",
+    deleteConfirm: "Burahin ang fishing trip na ito sa device?",
+    tripOutcome: "Kinalabasan",
+    tripTarget: "Target",
+    tripMethod: "Paraan",
+    tripNotes: "Mga tala",
+    noTargetRecorded: "Walang target na naitala",
+  },
   photos: {
     viewFull: "Tingnan ang buong larawan",
     previous: "Nakaraang larawan",
@@ -714,20 +798,20 @@ export const filDictionary: Dictionary = {
     helpDesc: "Iha-highlight ng guide ang pagpili ng lugar, species status, offline catch log, at collection.",
     restartTourBtn: "Ulitin ang guide",
     backupTag: "Local backup",
-    backupTitle: "I-save o ibalik ang catch log",
+    backupTitle: "I-save o ibalik ang fishing journal",
     backupDesc:
-      "Nasa browser address lang nakakabit ang local data. Gumawa ng backup bago lumipat ng address o browser. Kasama sa file ang photos at lahat ng fields.",
+      "Nasa browser address lang nakakabit ang local data. Gumawa ng backup bago lumipat ng address o browser. Kasama sa file ang catch entry, fishing trip, larawan at lahat ng field.",
     downloadBackupBtn: "I-download ang backup",
     restoreBackupBtn: "I-restore ang backup",
     backupNote:
-      "Ang restore ay papayag lang sa empty journal. Hindi nito papalitan o paghahaluin ang kasalukuyang records. Ingatan ang backup file dahil may pribadong impormasyon ito.",
+      "Sa empty journal lang puwedeng mag-restore para hindi mapalitan o mapagsama ang catch entry at fishing trip. Ingatan ang backup file dahil may pribadong impormasyon ito.",
     prototypeBackupNote:
       "Galing ba sa lumang Bangwit prototype ang entries mo? I-export muna sa old address na may local records:",
     prototypeBackupLink: "Buksan ang prototype backup page",
     privacyTag: "Privacy controls",
     privacyTitle: "Local prototype data",
     privacyDesc:
-      "Catch logs at optional na larawan ay naka-save sa browser storage ng device na ito. Walang account o cloud sync. Walang kinukuhang GPS.",
+      "Catch logs, fishing trip at optional na larawan ay naka-save sa browser storage ng device na ito. Walang account o cloud sync. Walang kinukuhang GPS.",
     eraseBtn: "Burahin ang Bangwit data sa device",
     erasePending: "Hinihintay ang kumpirmasyon bago burahin ang data.",
     erasingLabel: "Binubura…",
@@ -736,7 +820,7 @@ export const filDictionary: Dictionary = {
     eraseFailed: "Hindi nabura ang Bangwit data. Subukang muli.",
     eraseCanceled: "Kinansela ang pagbura ng data.",
     eraseConfirm:
-      "Permanenteng buburahin ang Bangwit catch logs, larawan, preferences, at policy acknowledgment sa browser na ito kapag kinumpirma mo. Magtabi ng backup; hindi na ito maibabalik.",
+      "Permanenteng buburahin ang Bangwit catch logs, fishing trip, larawan, preferences, at policy acknowledgment sa browser na ito kapag kinumpirma mo. Magtabi ng backup; hindi na ito maibabalik.",
     policiesTag: "Terms & privacy",
     policiesTitle: "Basahin ang mga policy",
     policiesDesc:
@@ -752,13 +836,13 @@ export const filDictionary: Dictionary = {
   termsPage: {
     tag: "Bangwit prototype · draft",
     title: "Terms of Use",
-    lastUpdated: "Huling inayos: Oktubre 17, 2026 · prototype draft",
+    lastUpdated: "Huling inayos: Nobyembre 25, 2026 · prototype draft",
     reviewNotice: "Draft ng prototype policy · kailangan pa ng legal review",
     sections: [
       {
         heading: "1. Prototype lamang",
         content:
-          "Ang Bangwit build na ito ay pang-testing ng interface at local catch journal. Hindi pa verified ang species records, fishery boundaries, access points, fishing rules, closed seasons, protected-species at protected-area restrictions, impormasyon tungkol sa diet, mungkahi sa pain o paraan ng pangingisda, at weather, flood, o red-tide alerts.",
+          "Ang Bangwit build na ito ay pang-testing ng interface at local fishing journal. Hindi pa verified ang species records, fishery boundaries, access points, fishing rules, closed seasons, protected-species at protected-area restrictions, impormasyon tungkol sa diet, mungkahi sa pain o paraan ng pangingisda, at weather, flood, o red-tide alerts. Tantiya lang sa oras ang activity windows; hindi ito obserbasyon sa isda o validated na bite prediction.",
       },
       {
         heading: "2. Huwag gawing batayan ng kaligtasan o legal na desisyon",
@@ -768,7 +852,7 @@ export const filDictionary: Dictionary = {
       {
         heading: "3. Personal na tala",
         content:
-          "Ikaw ang responsable sa katumpakan ng mga impormasyong inilagay mo sa personal na catch log. Mananatili sa browser storage ng device na ito ang catch records at photos; hindi awtomatikong ia-upload o isi-sync ang mga ito sa Bangwit. Maaari silang mawala kapag binura o na-evict ang browser data.",
+          "Ikaw ang responsable sa katumpakan ng mga impormasyong inilagay mo sa personal na catch log at fishing-trip journal. Mananatili sa browser storage ng device na ito ang catch records, detalye ng trip, at photos; hindi awtomatikong ia-upload o isi-sync ang mga ito sa Bangwit. Maaari silang mawala kapag binura o na-evict ang browser data.",
       },
       {
         heading: "4. Walang garantiya ng serbisyo",
@@ -785,7 +869,7 @@ export const filDictionary: Dictionary = {
   privacyPage: {
     tag: "Bangwit prototype · draft",
     title: "Privacy Notice",
-    lastUpdated: "Huling inayos: Oktubre 19, 2026 · prototype draft",
+    lastUpdated: "Huling inayos: Nobyembre 25, 2026 · prototype draft",
     reviewNotice: "Draft ng prototype policy · kailangan pa ng legal review",
     sections: [
       {
@@ -801,17 +885,17 @@ export const filDictionary: Dictionary = {
       {
         heading: "Anong impormasyon ang mase-save",
         content:
-          "Kapag nag-log ka ng huli, maaaring itago ng browser ang pangalan ng species, petsa, uri ng tubig, opsyonal na spot label, haba, timbang, pain, notes, catch status, at larawan. Opsyonal ang location field at ikaw ang naglalagay nito. Hindi kinukuha ng prototype ang GPS.",
+          "Kapag nag-log ka ng huli, maaaring itago ng browser ang pangalan ng species, petsa, uri ng tubig, opsyonal na spot label, haba, timbang, pain, notes, catch status, at larawan. Maaari ring itago ng fishing-trip entry ang pangalan ng katubigan, petsa at oras, uri ng tubig, target species, paraan, bilang ng kagat, kinalabasan, at notes. Ikaw ang naglalagay ng location label. Hindi kinukuha ng prototype ang GPS.",
       },
       {
         heading: "Saan ito naka-save",
         content:
-          "Nasa lokal na browser storage ng device na ito ang catch log at photos. Walang Bangwit account o awtomatikong upload o sync ng catch records at photos sa prototype. Naka-save rin locally ang Terms acknowledgment at optional preferences.",
+          "Nasa lokal na browser storage ng device na ito ang catch log, fishing trip at photos. Walang Bangwit account o awtomatikong upload o sync ng fishing records sa prototype. Naka-save rin locally ang Terms acknowledgment at optional preferences.",
       },
       {
         heading: "Layunin at lokal na retention",
         content:
-          "Ginagamit ang local records para sa catch journal, personal species collection, at pag-backup o restore ng entries. Para sa napili mong interface at prototype notice ang preferences at acknowledgments. Mananatili ang local records hanggang burahin mo o ma-clear o ma-evict ang browser data. Hindi nabubura ang dating exported backup files kapag binura ang browser data.",
+          "Ginagamit ang local records para sa catch journal, pagtatala ng fishing trip, personal species collection, at pag-backup o restore ng entries. Para sa napili mong interface at prototype notice ang preferences at acknowledgments. Mananatili ang local records hanggang burahin mo o ma-clear o ma-evict ang browser data. Hindi nabubura ang dating exported backup files kapag binura ang browser data.",
       },
       {
         heading: "Hosting metadata",
@@ -819,9 +903,9 @@ export const filDictionary: Dictionary = {
           "Vercel ang host ng website. Hiwalay sa local catch storage ang pagproseso ng hosting provider sa request metadata at logs: kapag nagbukas ng page o humiling ng advisory, maaaring maproseso ng Vercel ang technical information gaya ng IP address, browser details, request path, oras, at response status. Na-check noong Oktubre 17, 2026 na Hobby ang project at walang configured drains. Ayon sa Vercel, isang oras ang Hobby runtime-log window; hindi nito itinatakda kung kailan buburahin ang lahat ng CDN, security, o iba pang provider metadata. Nasa review pa ang retention ng mga iyon at ang final notice.",
       },
       {
-        heading: "Public advisories at source links",
+        heading: "Forecast at source links",
         content:
-          "Humihiling ang map ng public advisories mula sa website na ito at maaaring mag-cache ng validated public snapshot sa browser storage. Walang catch entries, larawan, spot label, profile fields, o GPS coordinates sa request na iyon. Hindi kasama sa catch backups ang public cache at nabubura ito sa Settings erasure; hindi patunay ng kasalukuyang kondisyon ang lumang copy. Unavailable pa ang live warnings. Kapag binuksan ang external source link, pupunta ka sa website ng provider at ang sarili nitong privacy practices ang iiral doon.",
+          "Humihiling ang map ng public advisories mula sa website na ito at maaaring mag-cache ng validated public snapshot sa browser storage. Humihingi rin ang fish-activity page sa Open-Meteo ng public timing at marine forecast para sa nakapirming Puerto Azul, Ternate pilot point; walang trip entry, profile field o GPS ng device ang ipinapadala. Maaaring magproseso ang forecast provider ng request metadata gaya ng IP address ayon sa sarili nitong notice. Hindi kasama sa backup ang forecast cache at nabubura ito sa Settings erasure. Tantiya lang ang kondisyon sa forecast at hindi nito pinatutunayan ang activity ng isda o kaligtasan. Kapag binuksan ang external source link, pupunta ka sa website ng provider at ang sariling privacy practices nito ang iiral doon.",
       },
       {
         heading: "Pagbabahagi at access",
@@ -831,7 +915,7 @@ export const filDictionary: Dictionary = {
       {
         heading: "Pag-backup, pag-export, at pagbura",
         content:
-          "Maaari kang gumawa ng local JSON backup sa Settings. Kasama rito ang catch details, photos, notes, at anumang optional na location text na ikaw ang naglagay. Ingatan ang na-download na file. Maaari mo itong i-restore sa empty Bangwit journal o burahin ang local journal data, preferences, acknowledgments, at public advisory cache sa Settings. Hindi kayang kunin o burahin ni Joseph nang remote ang journal sa device mo; humingi ng gabay sa support inbox nang hindi ipinapadala ang backup mismo.",
+          "Maaari kang gumawa ng local JSON backup sa Settings. Kasama rito ang catch details, fishing trips, photos, notes, at location text na ikaw ang naglagay. Ingatan ang na-download na file. Maaari mo itong i-restore sa empty Bangwit journal o burahin ang local fishing records, preferences, acknowledgments, at public cache sa Settings. Hindi kayang kunin o burahin ni Joseph nang remote ang journal sa device mo; humingi ng gabay sa support inbox nang hindi ipinapadala ang backup mismo.",
       },
       {
         heading: "Pagbabago sa data handling",

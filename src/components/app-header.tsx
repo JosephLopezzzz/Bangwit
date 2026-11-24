@@ -1,6 +1,7 @@
 "use client";
 
 import {
+  Activity,
   BookOpen,
   ChevronsLeft,
   CircleHelp,
@@ -105,6 +106,7 @@ export function AppHeader() {
 
   const links = [
     { href: "/", label: dict.nav.explore, icon: MapPin },
+    { href: "/fish-activity", label: dict.nav.fishActivity, icon: Activity },
     { href: "/species", label: dict.nav.species, icon: Fish },
     { href: "/catches", label: dict.nav.myCatches, icon: NotebookPen },
     { href: "/my-species", label: dict.nav.mySpecies, icon: BookOpen },

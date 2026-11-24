@@ -1,7 +1,7 @@
 import { createHash } from "node:crypto";
 import type { InjectManifestOptions } from "@serwist/turbopack";
 
-const offlineDocuments = ["/~offline", "/catches"];
+const offlineDocuments = ["/~offline", "/catches", "/fish-activity"];
 
 export const offlinePrecacheOptions = {
   // Species photography can grow with national coverage; let the bounded image

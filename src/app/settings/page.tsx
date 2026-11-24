@@ -11,16 +11,17 @@ import {
   LoaderCircle,
   LockKeyhole,
   Trash2,
-  UserRound,
   Upload,
+  UserRound,
   X,
 } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useRef, useState } from "react";
 import { useBangwit } from "@/components/bangwit-provider";
 import { getFisherTypeLabel, getPreferredWaterLabel } from "@/i18n/labels";
+import { MARINE_ACTIVITY_CACHE_KEY } from "@/lib/fish-activity";
 import { PUBLIC_ADVISORY_CACHE_KEY } from "@/lib/map-advisories";
-import { clearCatches, exportCatchBackup, restoreCatchBackup } from "@/lib/storage/catches";
+import { clearLocalFishingData, exportCatchBackup, restoreCatchBackup } from "@/lib/storage/catches";
 import "./settings.css";
 
 export default function SettingsPage() {
@@ -41,20 +42,23 @@ export default function SettingsPage() {
           privacyMore: "Tungkol sa privacy at local storage",
           privacyLink: "Basahin ang privacy notice",
           backupTitle: "Gumawa ng backup?",
-          backupText: "Magda-download ng file na may catch details, optional na spot label, at photos. Ingatan ito dahil pribado ang laman.",
+          backupText:
+            "Magda-download ng file na may catch details, fishing trips, optional na spot label, at photos. Ingatan ito dahil pribado ang laman.",
           backupCancel: "Huwag muna",
           backupConfirm: "I-download ang backup",
           restoreTitle: "I-restore ang backup?",
           restoreText:
-            "Kasama sa file ang pribadong records, photos, at optional na spot label. Sa empty journal lang puwedeng mag-restore; hindi nito ihahalo o papalitan ang laman.",
+            "Kasama sa file ang pribadong catch entries, fishing trips, photos, at optional na spot label. Sa empty journal lang puwedeng mag-restore; hindi nito ihahalo o papalitan ang laman.",
           restoreCancel: "Huwag muna",
           restoreConfirm: "I-restore ang file",
-          backupSuccess: "Nagawa ang backup file sa device mo. Ingatan ito dahil may pribadong catch details at photos.",
-          restoreSuccess: (count: number) => `${count} ${count === 1 ? "catch record" : "catch records"} ang na-restore sa device na ito.`,
+          backupSuccess:
+            "Nagawa ang backup file sa device mo. Ingatan ito dahil may pribadong catch details, fishing trips, at photos.",
+          restoreSuccess: (count: number) =>
+            `${count} ${count === 1 ? "fishing record" : "fishing records"} ang na-restore sa device na ito.`,
           dangerHeading: "Danger zone",
           eraseTitle: "Burahin ang lahat ng Bangwit data?",
           eraseText:
-            "Permanenteng mabubura ang catch logs, photos, preferences, at policy acknowledgment na naka-save ng Bangwit sa browser na ito. Hindi na ito maibabalik.",
+            "Permanenteng mabubura ang catch logs, fishing trips, photos, preferences, at policy acknowledgment na naka-save ng Bangwit sa browser na ito. Hindi na ito maibabalik.",
           eraseCancel: "Panatilihin ang data",
           eraseConfirm: "Burahin ang data",
           eraseSuccess: "Nabura ang local Bangwit data. Babalik sa simula…",
@@ -65,20 +69,23 @@ export default function SettingsPage() {
           privacyMore: "About privacy and local storage",
           privacyLink: "Read the Privacy Notice",
           backupTitle: "Create a backup?",
-          backupText: "This downloads a file with catch details, optional spot labels, and photos. Keep it safe because it contains private information.",
+          backupText:
+            "This downloads a file with catch details, fishing trips, optional spot labels, and photos. Keep it safe because it contains private information.",
           backupCancel: "Cancel",
           backupConfirm: "Download backup",
           restoreTitle: "Restore this backup?",
           restoreText:
-            "The file includes private records, photos, and optional spot labels. Restore works only when this journal is empty; it will not merge with or replace existing records.",
+            "The file includes private catch entries, fishing trips, photos, and optional spot labels. Restore works only when this journal is empty; it will not merge with or replace existing records.",
           restoreCancel: "Cancel",
           restoreConfirm: "Restore backup",
-          backupSuccess: "Backup file downloaded to this device. Keep it safe; it contains private catch details and photos.",
-          restoreSuccess: (count: number) => `${count} ${count === 1 ? "catch record" : "catch records"} restored on this device.`,
+          backupSuccess:
+            "Backup file downloaded to this device. Keep it safe; it contains private catch details, fishing trips, and photos.",
+          restoreSuccess: (count: number) =>
+            `${count} ${count === 1 ? "fishing record" : "fishing records"} restored on this device.`,
           dangerHeading: "Danger zone",
           eraseTitle: "Erase all Bangwit data?",
           eraseText:
-            "This permanently removes catch logs, photos, preferences, and policy acknowledgments stored by Bangwit in this browser. It cannot be undone.",
+            "This permanently removes catch logs, fishing trips, photos, preferences, and policy acknowledgments stored by Bangwit in this browser. It cannot be undone.",
           eraseCancel: "Keep my data",
           eraseConfirm: "Erase data",
           eraseSuccess: "Local Bangwit data erased. Returning to the start…",
@@ -167,7 +174,7 @@ export default function SettingsPage() {
     setBusy(true);
     setFeedback("");
     try {
-      await clearCatches();
+      await clearLocalFishingData();
       for (const key of [
         "bangwit.policy.2026-09-prototype",
         "bangwit.profile",
@@ -176,6 +183,7 @@ export default function SettingsPage() {
         "bangwit.theme",
         "bangwit.lang",
         PUBLIC_ADVISORY_CACHE_KEY,
+        MARINE_ACTIVITY_CACHE_KEY,
       ]) {
         localStorage.removeItem(key);
       }

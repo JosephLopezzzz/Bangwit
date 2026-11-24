@@ -1,0 +1,459 @@
+.fish-activity-page {
+  width: min(100%, 1120px);
+  margin: 0 auto;
+  padding: 28px clamp(16px, 3vw, 34px) 48px;
+}
+
+.fish-activity-hero {
+  margin-bottom: 18px;
+}
+
+.fish-activity-eyebrow,
+.fish-activity-section-tag {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  margin: 0;
+  color: var(--teal);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.13em;
+  line-height: 1.4;
+  text-transform: uppercase;
+}
+
+.fish-activity-title-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 8px;
+}
+
+.fish-activity-title-row h1 {
+  margin: 0;
+  color: var(--ink);
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1.08;
+}
+
+.fish-activity-mark,
+.fish-activity-window-icon {
+  display: grid;
+  flex: 0 0 auto;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  border-radius: 13px;
+  background: var(--teal-soft);
+  color: var(--teal-dark);
+}
+
+.fish-activity-hero > p:last-child,
+.fish-activity-muted,
+.fish-activity-coverage-copy {
+  max-width: 780px;
+  margin: 9px 0 0;
+  color: var(--muted);
+  font-size: 14px;
+  line-height: 1.65;
+}
+
+.fish-activity-water-picker {
+  display: grid;
+  grid-template-columns: minmax(200px, 320px) minmax(0, 1fr);
+  align-items: center;
+  gap: 8px 28px;
+  margin-bottom: 16px;
+}
+
+.fish-activity-water-select {
+  grid-row: span 2;
+}
+
+.fish-activity-coverage-label {
+  margin: 0;
+  color: var(--ink);
+  font-size: 13px;
+  font-weight: 800;
+}
+
+.fish-activity-coverage-copy {
+  margin: 0;
+  font-size: 13px;
+}
+
+.fish-activity-forecast,
+.fish-activity-log,
+.fish-activity-history {
+  margin-top: 16px;
+}
+
+.fish-activity-section-heading,
+.fish-activity-trip-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+
+.fish-activity-section-heading h2,
+.fish-activity-section-heading h3,
+.fish-activity-trip-heading h3 {
+  margin: 4px 0 0;
+  color: var(--ink);
+  font-size: 20px;
+  font-weight: 800;
+  letter-spacing: -0.025em;
+  line-height: 1.25;
+}
+
+.fish-activity-section-heading h3 {
+  font-size: 16px;
+}
+
+.fish-activity-refresh {
+  flex-shrink: 0;
+  min-height: 38px;
+  gap: 8px;
+  font-size: 12px;
+}
+
+.fish-activity-spin {
+  animation: fish-activity-spin 1s linear infinite;
+}
+
+@keyframes fish-activity-spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.fish-activity-window-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.fish-activity-window {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  min-width: 0;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--paper);
+}
+
+.fish-activity-window-icon {
+  width: 36px;
+  height: 36px;
+  border-radius: 11px;
+}
+
+.fish-activity-window-label,
+.fish-activity-window-time,
+.fish-activity-window-date {
+  margin: 0;
+}
+
+.fish-activity-window-label {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.fish-activity-window-time {
+  margin-top: 3px;
+  color: var(--ink);
+  font-size: 17px;
+  font-weight: 800;
+  font-variant-numeric: tabular-nums;
+}
+
+.fish-activity-window-date {
+  margin-top: 3px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.fish-activity-conditions {
+  margin-top: 20px;
+  padding-top: 17px;
+  border-top: 1px solid var(--line);
+}
+
+.fish-activity-conditions-heading {
+  align-items: flex-end;
+}
+
+.fish-activity-updated {
+  color: var(--muted);
+  font-size: 11px;
+  font-variant-numeric: tabular-nums;
+}
+
+.fish-activity-metric-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  margin-top: 12px;
+}
+
+.fish-activity-metric {
+  display: flex;
+  min-height: 74px;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 6px;
+  padding: 12px;
+  border-radius: 10px;
+  background: var(--paper);
+}
+
+.fish-activity-metric-label {
+  color: var(--muted);
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.fish-activity-metric strong {
+  color: var(--ink);
+  font-size: 17px;
+  font-variant-numeric: tabular-nums;
+}
+
+.fish-activity-model-cell {
+  margin-top: 10px;
+  font-size: 11px;
+}
+
+.fish-activity-footnote,
+.fish-activity-attribution {
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.6;
+}
+
+.fish-activity-safety-note {
+  margin-top: 6px;
+}
+
+.fish-activity-attribution a {
+  color: var(--teal-dark);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+
+.fish-activity-status,
+.fish-activity-empty,
+.fish-activity-stale,
+.fish-activity-alert {
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: 13px;
+  line-height: 1.55;
+}
+
+.fish-activity-stale {
+  padding: 9px 11px;
+  border-radius: 8px;
+  background: var(--review-surface);
+  color: var(--review-copy);
+}
+
+.fish-activity-alert {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  background: var(--review-surface);
+  color: var(--review-copy);
+}
+
+.fish-activity-form {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin-top: 18px;
+}
+
+.fish-activity-field {
+  display: flex;
+  min-width: 0;
+  flex-direction: column;
+  gap: 6px;
+  color: var(--ink);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.fish-activity-field--wide,
+.fish-activity-form-error,
+.fish-activity-form-actions {
+  grid-column: 1 / -1;
+}
+
+.fish-activity-notes-input {
+  min-height: 82px;
+  resize: vertical;
+}
+
+.fish-activity-form-error {
+  margin: 0;
+  color: var(--hazard-emergency-ink);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.fish-activity-form-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding-top: 2px;
+}
+
+.fish-activity-private-note {
+  color: var(--muted);
+  font-size: 11px;
+}
+
+.fish-activity-trip-list {
+  display: grid;
+  gap: 10px;
+  margin-top: 16px;
+}
+
+.fish-activity-trip {
+  min-width: 0;
+  padding: 14px;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: var(--paper);
+}
+
+.fish-activity-trip-date,
+.fish-activity-trip-detail {
+  margin: 0;
+  color: var(--muted);
+  font-size: 12px;
+  line-height: 1.5;
+}
+
+.fish-activity-trip-date {
+  font-variant-numeric: tabular-nums;
+}
+
+.fish-activity-trip-heading h3 {
+  overflow-wrap: anywhere;
+  font-size: 16px;
+}
+
+.fish-activity-delete {
+  display: grid;
+  flex: 0 0 auto;
+  width: 36px;
+  height: 36px;
+  place-items: center;
+  border: 1px solid var(--line);
+  border-radius: 9px;
+  background: var(--white);
+  color: var(--muted);
+  cursor: pointer;
+}
+
+.fish-activity-delete:hover {
+  border-color: var(--hazard-emergency);
+  color: var(--hazard-emergency-ink);
+}
+
+.fish-activity-trip-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin: 11px 0 8px;
+}
+
+.fish-activity-trip-meta span {
+  padding: 4px 8px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--white);
+  color: var(--ink);
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.fish-activity-trip-detail + .fish-activity-trip-detail {
+  margin-top: 4px;
+}
+
+.fish-activity-trip-detail strong {
+  color: var(--ink);
+}
+
+@media (max-width: 640px) {
+  .fish-activity-water-picker {
+    grid-template-columns: minmax(0, 1fr);
+    gap: 10px;
+  }
+
+  .fish-activity-water-select {
+    grid-row: auto;
+  }
+
+  .fish-activity-window-grid,
+  .fish-activity-form {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .fish-activity-field--wide,
+  .fish-activity-form-error,
+  .fish-activity-form-actions {
+    grid-column: auto;
+  }
+
+  .fish-activity-section-heading {
+    align-items: flex-start;
+  }
+
+  .fish-activity-refresh {
+    width: 38px;
+    min-width: 38px;
+    overflow: hidden;
+    padding: 0;
+    font-size: 0;
+  }
+
+  .fish-activity-refresh svg {
+    flex-shrink: 0;
+  }
+
+  .fish-activity-metric-grid {
+    gap: 7px;
+  }
+
+  .fish-activity-metric {
+    min-height: 68px;
+    padding: 10px;
+  }
+
+  .fish-activity-metric-label {
+    font-size: 10px;
+  }
+
+  .fish-activity-metric strong {
+    font-size: 14px;
+  }
+
+  .fish-activity-form-actions {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}

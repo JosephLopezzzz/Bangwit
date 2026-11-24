@@ -28,6 +28,7 @@ export const enDictionary: Dictionary = {
   },
   nav: {
     explore: "Explore",
+    fishActivity: "Fish activity",
     species: "Species",
     myCatches: "My Catches",
     mySpecies: "My Species",
@@ -46,12 +47,12 @@ export const enDictionary: Dictionary = {
     readComplete: "You’ve reached the end. You can now select the agreement checkbox.",
     summaryTitle: "Important prototype limitations",
     summaryText:
-      "Species coverage, fishing rules, boundaries, weather alerts, and food safety advisories are not yet verified. Do not rely on this prototype to determine whether it is legal or safe to fish or consume your catch.",
+      "Species coverage, fishing rules, boundaries, weather alerts, and food safety advisories are not yet verified. Activity windows are timing estimates, not verified fish activity, and model conditions are not for navigation or safety decisions. Do not rely on this prototype to determine whether it is legal or safe to fish or consume your catch.",
     agreeCheckbox:
-      "I have read and agree to these prototype draft notices. I understand catch records and photos stay in this device's browser storage and that this acknowledgment does not authorize cloud uploads.",
+      "I have read and agree to these prototype draft notices. I understand catch records, fishing trips, and photos stay in this device's browser storage and that this acknowledgment does not authorize cloud uploads.",
     agreeBtn: "Agree and continue",
     disclaimer:
-      "These bilingual notices are prototype drafts. Joseph Lopez maintains Bangwit and monitors tepezzzz070@gmail.com for privacy and support. Hosting-provider request metadata and log handling still need final review before public launch. This does not authorize cloud uploads of catch records.",
+      "These bilingual notices are prototype drafts. Joseph Lopez maintains Bangwit and monitors tepezzzz070@gmail.com for privacy and support. Hosting-provider and forecast-provider request metadata and log handling still need final review before public launch. This does not authorize cloud uploads of fishing records.",
     selectLanguage: "Select language / Pumili ng wika",
   },
   onboarding: {
@@ -489,7 +490,8 @@ export const enDictionary: Dictionary = {
       "Historical collections and field observations from 1985–2015, not current-presence or standardized abundance estimates. A field observation is distinct from a preserved specimen, and qualitative wording is not a numeric count. These entries do not establish fishing access, legality, safety, or bait effectiveness; this is not a complete Palawan fish list.",
     sourceDetails: "Citation, source and reuse terms",
     taxonomyLabel: "Current name status",
-    taxonomyCaveat: "This name check does not re-identify the historical specimens or show current presence at these sites.",
+    taxonomyCaveat:
+      "This name check does not re-identify the historical specimens or show current presence at these sites.",
     taxonomyLink: "Catalog of Fishes",
     articleLink: "Publisher article",
     pdfLink: "Full text PDF",
@@ -666,6 +668,83 @@ export const enDictionary: Dictionary = {
       "Natural diet does not establish effective bait, legal gear, or whether fishing is allowed. No bait recommendation is shown until those claims have separate sources and local rule review.",
     reviewDateLabel: "Source review",
   },
+  fishActivity: {
+    tag: "For anglers · planning cues",
+    title: "Fish activity",
+    description: "Plan a trip around timing cues and water conditions, then record what happened on the water.",
+    waterTypeLabel: "Water type",
+    waterTypes: { sea: "Sea", lake: "Lake", river: "River" },
+    coverageTitle: "Forecast coverage",
+    seaCoverage:
+      "Live model conditions currently cover one coastal pilot near Puerto Azul, Ternate, Cavite. The model grid can sit a few kilometres from the named point.",
+    freshwaterCoverage:
+      "Live lake and river activity forecasts are not connected yet. You can still record trips here to build Bangwit’s local evidence.",
+    loading: "Loading local sea conditions…",
+    refresh: "Refresh conditions",
+    refreshing: "Refreshing…",
+    updatedAt: "Updated",
+    stale: "Showing saved conditions. They may be out of date.",
+    loadError: "Live conditions could not be loaded. Try again when you have a connection.",
+    timingTitle: "Possible activity windows",
+    timingDescription:
+      "One-hour planning windows centered on sunrise, sunset, moonrise, and moonset. These are timing cues, not observed fish activity.",
+    windowLabel: "Timing cue",
+    noWindows: "No upcoming sun or moon timing windows were returned.",
+    cues: { sunrise: "Sunrise", sunset: "Sunset", moonrise: "Moonrise", moonset: "Moonset" },
+    conditionsTitle: "Sea conditions · model estimate",
+    seaLevelTrend: "Sea-level trend",
+    rising: "Rising",
+    falling: "Falling",
+    steady: "Little change",
+    waveHeight: "Wave height",
+    currentSpeed: "Surface current",
+    modelCell: "Model grid cell",
+    estimateNote:
+      "Sea level, waves, and currents are model estimates. Coastal sea-level accuracy can be limited, and this information is not for navigation.",
+    safetyNote:
+      "This is not a weather or marine safety service. Check current PAGASA and local advisories before travelling or going on the water.",
+    attribution:
+      "Marine data by Open-Meteo · sea-level values adapted into a short-term trend cue · source providers include Météo-France / Copernicus Marine, ECMWF, NOAA NCEP, DWD, and Copernicus Climate Change Service",
+    dataLicense: "Data license: CC BY 4.0",
+    logTitle: "Log a fishing trip",
+    logDescription:
+      "Record quiet trips and bites alike. Entries stay in this browser on this device and can be included in your Bangwit backup.",
+    locationLabel: "Waterbody or fishing spot",
+    locationPlaceholder: "For example, Puerto Azul or a river access point",
+    dateLabel: "Trip date",
+    startTimeLabel: "Start time",
+    endTimeLabel: "End time",
+    targetSpeciesLabel: "Target species",
+    targetSpeciesPlaceholder: "Optional",
+    methodLabel: "Method or bait",
+    methodPlaceholder: "Optional",
+    outcomeLabel: "How did the trip go?",
+    outcomes: {
+      noBites: "No bites",
+      bites: "Bites, no fish landed",
+      caughtFish: "Caught fish",
+      notRecorded: "Not recorded",
+    },
+    biteCountLabel: "Bites (optional)",
+    notesLabel: "Notes",
+    notesPlaceholder: "Weather, water movement, bait changes…",
+    saveTrip: "Save trip",
+    savingTrip: "Saving…",
+    tripSaved: "Fishing trip saved on this device.",
+    saveError: "The trip could not be saved on this device.",
+    locationRequired: "Add the waterbody or fishing spot to save this trip.",
+    timeRangeInvalid: "End time must be later than the start time for this same-day trip.",
+    historyTitle: "Recent trips",
+    emptyHistory:
+      "No trips logged yet. Include sessions with no bites so future activity estimates can be compared with real outcomes.",
+    removeTrip: "Delete this trip",
+    deleteConfirm: "Delete this fishing trip from this device?",
+    tripOutcome: "Outcome",
+    tripTarget: "Target",
+    tripMethod: "Method",
+    tripNotes: "Notes",
+    noTargetRecorded: "No target recorded",
+  },
   photos: {
     viewFull: "View full photo",
     previous: "Previous photo",
@@ -707,20 +786,20 @@ export const enDictionary: Dictionary = {
     helpDesc: "The guide highlights choosing areas, species status, offline catch logging, and your collection.",
     restartTourBtn: "Restart guide",
     backupTag: "Local backup",
-    backupTitle: "Save or restore catch log",
+    backupTitle: "Save or restore fishing journal",
     backupDesc:
-      "Local data is tied strictly to this browser address. Create a backup before switching browsers or addresses. The backup file includes photos and all entry fields.",
+      "Local data is tied strictly to this browser address. Create a backup before switching browsers or addresses. The file includes catch entries, fishing trips, photos, and all entry fields.",
     downloadBackupBtn: "Download backup",
     restoreBackupBtn: "Restore backup",
     backupNote:
-      "Restore is only permitted into an empty journal to avoid overwriting or mixing records. Keep your backup file secure as it contains private information.",
+      "Restore is only permitted into an empty journal to avoid overwriting or mixing catch entries and fishing trips. Keep your backup file secure as it contains private information.",
     prototypeBackupNote:
       "Looking to import records from an older Bangwit prototype? Export from the old address first:",
     prototypeBackupLink: "Open prototype backup page",
     privacyTag: "Privacy controls",
     privacyTitle: "Local prototype data",
     privacyDesc:
-      "Catch logs and optional photos are stored in this device's browser storage. No account, no cloud sync, and no GPS tracking.",
+      "Catch logs, fishing trips, and optional photos are stored in this device's browser storage. No account, no cloud sync, and no GPS tracking.",
     eraseBtn: "Erase Bangwit data on device",
     erasePending: "Data erasure is waiting for your confirmation.",
     erasingLabel: "Erasing…",
@@ -729,7 +808,7 @@ export const enDictionary: Dictionary = {
     eraseFailed: "Could not erase Bangwit data. Please try again.",
     eraseCanceled: "Erasure canceled.",
     eraseConfirm:
-      "This permanently erases Bangwit catch logs, photos, preferences, and policy acknowledgments from this browser after you confirm. Keep a backup; erasure cannot be undone.",
+      "This permanently erases Bangwit catch logs, fishing trips, photos, preferences, and policy acknowledgments from this browser after you confirm. Keep a backup; erasure cannot be undone.",
     policiesTag: "Terms & privacy",
     policiesTitle: "Review policies",
     policiesDesc:
@@ -745,13 +824,13 @@ export const enDictionary: Dictionary = {
   termsPage: {
     tag: "Bangwit prototype · draft",
     title: "Terms of Use",
-    lastUpdated: "Last updated: October 17, 2026 · prototype draft",
+    lastUpdated: "Last updated: November 25, 2026 · prototype draft",
     reviewNotice: "Prototype policy draft · legal review pending",
     sections: [
       {
         heading: "1. Prototype Only",
         content:
-          "This Bangwit build is for testing interface design and local catch journaling. Species records, fishery boundaries, access points, fishing regulations, closed seasons, protected-species and protected-area restrictions, diet information, bait or method suggestions, and weather, flood, or red-tide alerts are not yet verified.",
+          "This Bangwit build is for testing interface design and local fishing journals. Species records, fishery boundaries, access points, fishing regulations, closed seasons, protected-species and protected-area restrictions, diet information, bait or method suggestions, and weather, flood, or red-tide alerts are not yet verified. Activity windows are timing estimates, not fish observations or validated bite predictions.",
       },
       {
         heading: "2. Do Not Rely on This for Safety or Legal Decisions",
@@ -761,7 +840,7 @@ export const enDictionary: Dictionary = {
       {
         heading: "3. Personal Records",
         content:
-          "You are solely responsible for the accuracy of information entered into your personal catch log. Catch records and photos remain in this device's browser storage and are not automatically uploaded or synced to Bangwit. They may be lost if browser data is cleared or evicted.",
+          "You are solely responsible for the accuracy of information entered into your personal catch log and fishing-trip journal. Catch records, trip details, and photos remain in this device's browser storage and are not automatically uploaded or synced to Bangwit. They may be lost if browser data is cleared or evicted.",
       },
       {
         heading: "4. No Service Guarantee",
@@ -778,7 +857,7 @@ export const enDictionary: Dictionary = {
   privacyPage: {
     tag: "Bangwit prototype · draft",
     title: "Privacy Notice",
-    lastUpdated: "Last updated: October 19, 2026 · prototype draft",
+    lastUpdated: "Last updated: November 25, 2026 · prototype draft",
     reviewNotice: "Prototype policy draft · legal review pending",
     sections: [
       {
@@ -794,17 +873,17 @@ export const enDictionary: Dictionary = {
       {
         heading: "Information Stored",
         content:
-          "When you log a catch, the browser may store species names, date, water type, optional spot labels, length, weight, bait, notes, disposition, and photos. The location field is optional and manually entered. The prototype does not collect GPS coordinates.",
+          "When you log a catch, the browser may store species names, date, water type, optional spot labels, length, weight, bait, notes, disposition, and photos. A fishing trip entry may store its waterbody label, date and times, water type, target species, method, bite count, outcome, and notes. Location labels are manually entered. The prototype does not collect GPS coordinates.",
       },
       {
         heading: "Where Data is Stored",
         content:
-          "Catch logs and photos reside in this device's local browser storage. There are no Bangwit accounts or automatic uploads or synchronization of catch records and photos in this prototype. Policy acknowledgments and preferences are also saved locally.",
+          "Catch logs, fishing trips, and photos reside in this device's local browser storage. There are no Bangwit accounts or automatic uploads or synchronization of fishing records in this prototype. Policy acknowledgments and preferences are also saved locally.",
       },
       {
         heading: "Purpose and Local Retention",
         content:
-          "Local records let you keep a catch journal, view your personal species collection, and back up or restore your entries. Preferences and acknowledgments support your chosen interface and the prototype notice. Local records stay until you delete them or browser data is cleared or evicted. Deleting browser data does not delete previously exported backup files.",
+          "Local records let you keep a catch journal, record fishing trips, view your personal species collection, and back up or restore your entries. Preferences and acknowledgments support your chosen interface and the prototype notice. Local records stay until you delete them or browser data is cleared or evicted. Deleting browser data does not delete previously exported backup files.",
       },
       {
         heading: "Hosting Metadata",
@@ -812,9 +891,9 @@ export const enDictionary: Dictionary = {
           "Vercel hosts the website. The hosting provider's processing of website request metadata or logs is separate from local catch storage: opening a page or requesting an advisory can expose technical information such as IP address, browser details, request path, time, and response status to Vercel. The project was checked on October 17, 2026 on Hobby with no configured drains. Vercel documents a one-hour Hobby runtime-log window; this does not establish a deletion deadline for all CDN, security, or other provider metadata. Those retention details and the final notice remain under review.",
       },
       {
-        heading: "Public Advisories and Source Links",
+        heading: "Forecasts and Source Links",
         content:
-          "The map requests public advisories from this website and may cache a validated public snapshot in browser storage. That request contains no catch entries, photos, spot labels, profile fields, or GPS coordinates. The public cache is excluded from catch backups and is cleared by Settings erasure; an old copy does not confirm current conditions. Live warnings remain unavailable. Opening an external source link visits that provider's website and its own privacy practices apply.",
+          "The map requests public advisories from this website and may cache a validated public snapshot in browser storage. The fish-activity page requests public timing and marine forecasts from Open-Meteo for the fixed Puerto Azul, Ternate pilot point; no trip entries, profile fields, or device GPS are sent. Forecast providers may process request metadata such as IP addresses under their own notices. Forecast caches are excluded from backups and are cleared by Settings erasure. Forecast conditions are estimates and do not confirm fish activity or safety. Opening an external source link visits that provider's website and its own privacy practices apply.",
       },
       {
         heading: "Sharing and Access",
@@ -824,7 +903,7 @@ export const enDictionary: Dictionary = {
       {
         heading: "Backup, Export, and Deletion",
         content:
-          "You can create a local JSON backup under Settings. This file includes catch details, photo data, notes, and any optional manually entered location text. Store downloaded backup files securely. You can also restore backups into an empty journal or delete local journal data, preferences, acknowledgments, and the public advisory cache from Settings. Joseph cannot retrieve or erase your device-local journal remotely; contact the support inbox for guidance without sending the backup itself.",
+          "You can create a local JSON backup under Settings. This file includes catch details, fishing trips, photo data, notes, and manually entered location text. Store downloaded backup files securely. You can also restore backups into an empty journal or delete local fishing records, preferences, acknowledgments, and public caches from Settings. Joseph cannot retrieve or erase your device-local journal remotely; contact the support inbox for guidance without sending the backup itself.",
       },
       {
         heading: "Changes to Data Handling",

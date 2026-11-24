@@ -1,12 +1,17 @@
 import type { CatchEntry } from "@/types/catch";
+import type { FishingTrip } from "@/types/fishing-trip";
 
 const DATABASE = "bangwit-local";
-const VERSION = 1;
-const STORE = "catches";
+const VERSION = 2;
+const CATCH_STORE = "catches";
+const TRIP_STORE = "fishing-trips";
 
 type PhotoBackup = { type: string; name: string; lastModified: number; data: string };
 type BackupEntry = Omit<CatchEntry, "id" | "photo"> & { id: number; photo: PhotoBackup | null };
-type CatchBackup = { format: "bangwit-catches"; version: 1; exportedAt: string; catches: BackupEntry[] };
+type BackupTrip = Omit<FishingTrip, "id"> & { id: number };
+type CatchBackup =
+  | { format: "bangwit-catches"; version: 1; exportedAt: string; catches: BackupEntry[] }
+  | { format: "bangwit-catches"; version: 2; exportedAt: string; catches: BackupEntry[]; fishingTrips: BackupTrip[] };
 
 let databasePromise: Promise<IDBDatabase> | undefined;
 
@@ -18,8 +23,11 @@ function openDatabase(): Promise<IDBDatabase> {
   const opening = new Promise<IDBDatabase>((resolve, reject) => {
     const request = indexedDB.open(DATABASE, VERSION);
     request.onupgradeneeded = () => {
-      if (!request.result.objectStoreNames.contains(STORE)) {
-        request.result.createObjectStore(STORE, { keyPath: "id", autoIncrement: true });
+      if (!request.result.objectStoreNames.contains(CATCH_STORE)) {
+        request.result.createObjectStore(CATCH_STORE, { keyPath: "id", autoIncrement: true });
+      }
+      if (!request.result.objectStoreNames.contains(TRIP_STORE)) {
+        request.result.createObjectStore(TRIP_STORE, { keyPath: "id", autoIncrement: true });
       }
     };
     request.onsuccess = () => {
@@ -36,12 +44,16 @@ function openDatabase(): Promise<IDBDatabase> {
   return opening;
 }
 
-function transact<T>(mode: IDBTransactionMode, action: (store: IDBObjectStore) => IDBRequest<T>): Promise<T> {
+function transact<T>(
+  storeName: string,
+  mode: IDBTransactionMode,
+  action: (store: IDBObjectStore) => IDBRequest<T>,
+): Promise<T> {
   return openDatabase().then(
     (db) =>
       new Promise<T>((resolve, reject) => {
-        const transaction = db.transaction(STORE, mode);
-        const request = action(transaction.objectStore(STORE));
+        const transaction = db.transaction(storeName, mode);
+        const request = action(transaction.objectStore(storeName));
         let result: T;
         request.onsuccess = () => {
           result = request.result;
@@ -55,9 +67,15 @@ function transact<T>(mode: IDBTransactionMode, action: (store: IDBObjectStore) =
   );
 }
 
-export const listCatches = () => transact<CatchEntry[]>("readonly", (store) => store.getAll());
-export const saveCatch = (entry: CatchEntry) => transact<IDBValidKey>("readwrite", (store) => store.add(entry));
-export const removeCatch = (id: number) => transact<undefined>("readwrite", (store) => store.delete(id));
+export const listCatches = () => transact<CatchEntry[]>(CATCH_STORE, "readonly", (store) => store.getAll());
+export const saveCatch = (entry: CatchEntry) =>
+  transact<IDBValidKey>(CATCH_STORE, "readwrite", (store) => store.add(entry));
+export const removeCatch = (id: number) => transact<undefined>(CATCH_STORE, "readwrite", (store) => store.delete(id));
+export const listFishingTrips = () => transact<FishingTrip[]>(TRIP_STORE, "readonly", (store) => store.getAll());
+export const saveFishingTrip = (entry: FishingTrip) =>
+  transact<IDBValidKey>(TRIP_STORE, "readwrite", (store) => store.add(entry));
+export const removeFishingTrip = (id: number) =>
+  transact<undefined>(TRIP_STORE, "readwrite", (store) => store.delete(id));
 
 function encodeBytes(bytes: Uint8Array): string {
   let binary = "";
@@ -88,7 +106,7 @@ async function photoToBackup(photo: Blob | File | null): Promise<PhotoBackup | n
 }
 
 export async function exportCatchBackup(): Promise<string> {
-  const catches = await listCatches();
+  const [catches, fishingTrips] = await Promise.all([listCatches(), listFishingTrips()]);
   const entries = await Promise.all(
     catches.map(async (entry) => ({
       ...entry,
@@ -98,9 +116,10 @@ export async function exportCatchBackup(): Promise<string> {
   );
   const backup: CatchBackup = {
     format: "bangwit-catches",
-    version: 1,
+    version: 2,
     exportedAt: new Date().toISOString(),
     catches: entries,
+    fishingTrips: fishingTrips.map((trip) => ({ ...trip, id: trip.id as number })),
   };
   return JSON.stringify(backup, null, 2);
 }
@@ -109,18 +128,24 @@ function isRecord(value: unknown): value is Record<string, unknown> {
   return typeof value === "object" && value !== null;
 }
 
-async function parseBackup(file: File): Promise<CatchEntry[]> {
+async function parseBackup(file: File): Promise<{ catches: CatchEntry[]; fishingTrips: FishingTrip[] }> {
   let input: unknown;
   try {
     input = JSON.parse(await file.text());
   } catch {
     throw new Error("Hindi mabasa ang backup. Pumili ng valid na Bangwit JSON file.");
   }
-  if (!isRecord(input) || input.format !== "bangwit-catches" || input.version !== 1 || !Array.isArray(input.catches)) {
+  if (
+    !isRecord(input) ||
+    input.format !== "bangwit-catches" ||
+    (input.version !== 1 && input.version !== 2) ||
+    !Array.isArray(input.catches) ||
+    (input.version === 2 && !Array.isArray(input.fishingTrips))
+  ) {
     throw new Error("Hindi tugma ang format ng backup na ito sa Bangwit.");
   }
 
-  return Promise.all(
+  const catches = await Promise.all(
     input.catches.map(async (value): Promise<CatchEntry> => {
       if (!isRecord(value) || !Number.isSafeInteger(value.id) || Number(value.id) < 1) {
         throw new Error("May invalid na catch entry o ID sa backup.");
@@ -178,34 +203,99 @@ async function parseBackup(file: File): Promise<CatchEntry[]> {
       return { ...(entry as Omit<CatchEntry, "photo">), id: Number(value.id), photo };
     }),
   );
+
+  const tripValues = Array.isArray(input.fishingTrips) ? input.fishingTrips : [];
+  const fishingTrips =
+    input.version === 2
+      ? tripValues.map((value): FishingTrip => {
+          if (
+            !isRecord(value) ||
+            !Number.isSafeInteger(value.id) ||
+            Number(value.id) < 1 ||
+            (value.waterType !== "sea" && value.waterType !== "lake" && value.waterType !== "river") ||
+            (value.outcome !== "no-bites" &&
+              value.outcome !== "bites" &&
+              value.outcome !== "caught-fish" &&
+              value.outcome !== "not-recorded") ||
+            (value.biteCount !== null && (!Number.isSafeInteger(value.biteCount) || Number(value.biteCount) < 0))
+          ) {
+            throw new Error("May invalid na fishing trip o ID sa backup.");
+          }
+          for (const field of [
+            "date",
+            "startTime",
+            "endTime",
+            "location",
+            "targetSpecies",
+            "method",
+            "notes",
+            "savedAt",
+          ] as const) {
+            if (typeof value[field] !== "string") throw new Error(`May invalid na ${field} field sa backup.`);
+          }
+          return { ...(value as Omit<FishingTrip, "id">), id: Number(value.id) };
+        })
+      : [];
+
+  return { catches, fishingTrips };
 }
 
 export async function restoreCatchBackup(file: File): Promise<number> {
-  const entries = await parseBackup(file);
+  const { catches, fishingTrips } = await parseBackup(file);
   const db = await openDatabase();
   return new Promise((resolve, reject) => {
-    const transaction = db.transaction(STORE, "readwrite");
-    const store = transaction.objectStore(STORE);
-    const countRequest = store.count();
-    countRequest.onsuccess = () => {
-      if (countRequest.result > 0) {
+    const transaction = db.transaction([CATCH_STORE, TRIP_STORE], "readwrite");
+    const catchStore = transaction.objectStore(CATCH_STORE);
+    const tripStore = transaction.objectStore(TRIP_STORE);
+    let catchCount: number | undefined;
+    let tripCount: number | undefined;
+    const maybeRestore = () => {
+      if (catchCount === undefined || tripCount === undefined) return;
+      if (catchCount > 0 || tripCount > 0) {
         transaction.abort();
         reject(
           new Error(
-            "May laman na ang catch journal na ito. I-export muna ito; hindi papalitan o paghahaluin ang records.",
+            "May laman na ang local fishing journal. I-export muna ito; hindi papalitan o paghahaluin ang records.",
           ),
         );
         return;
       }
-      for (const entry of entries) store.add(entry);
+      for (const entry of catches) catchStore.add(entry);
+      for (const trip of fishingTrips) tripStore.add(trip);
     };
-    countRequest.onerror = () => reject(countRequest.error ?? new Error("Hindi ma-validate ang destination storage."));
-    transaction.oncomplete = () => resolve(entries.length);
+    const catchCountRequest = catchStore.count();
+    const tripCountRequest = tripStore.count();
+    catchCountRequest.onsuccess = () => {
+      catchCount = catchCountRequest.result;
+      maybeRestore();
+    };
+    tripCountRequest.onsuccess = () => {
+      tripCount = tripCountRequest.result;
+      maybeRestore();
+    };
+    catchCountRequest.onerror = () =>
+      reject(catchCountRequest.error ?? new Error("Hindi ma-validate ang destination storage."));
+    tripCountRequest.onerror = () =>
+      reject(tripCountRequest.error ?? new Error("Hindi ma-validate ang destination storage."));
+    transaction.oncomplete = () => resolve(catches.length + fishingTrips.length);
     transaction.onerror = () => reject(transaction.error ?? new Error("Hindi na-restore ang backup."));
     transaction.onabort = () => reject(transaction.error ?? new Error("Hindi natuloy ang restore."));
   });
 }
 
 export async function clearCatches(): Promise<void> {
-  await transact<undefined>("readwrite", (store) => store.clear());
+  await transact<undefined>(CATCH_STORE, "readwrite", (store) => store.clear());
+}
+
+export async function clearLocalFishingData(): Promise<void> {
+  const db = await openDatabase();
+  await new Promise<void>((resolve, reject) => {
+    const transaction = db.transaction([CATCH_STORE, TRIP_STORE], "readwrite");
+    transaction.objectStore(CATCH_STORE).clear();
+    transaction.objectStore(TRIP_STORE).clear();
+    transaction.oncomplete = () => resolve();
+    transaction.onerror = () => reject(transaction.error ?? new Error("Hindi nabura ang local fishing data."));
+    transaction.onabort = () =>
+      reject(transaction.error ?? new Error("Hindi natuloy ang pagbura ng local fishing data."));
+  });
 }
