@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "reviewId": "central-luzon-tarlac-tambo-lake-locality-geometry-crosswalk-20261125",
-  "reviewedOn": "2026-11-25",
+  "reviewedOn": "2026-11-26",
   "phaseId": "L3",
   "regionId": "0300000000",
   "regionName": "Region III (Central Luzon)",
@@ -11,7 +11,7 @@
     "Tambo Lake",
     "Lake Tambo"
   ],
-  "status": "locality-corroborated;name-variant-and-geometry-crosswalk-unresolved;microcrustacean-locality-only;no-fish-evidence;research-only",
+  "status": "2016-BMB-Annex1-row60-confirms-Tambo-Lake-Capas-and-91.98ha;Tambo-Lake-Lake-Tambo-name-locality-crosswalk-supported;site-specific-evidence-is-copepods-only;targeted-fish-survey-search-found-no-eligible-fish-record;geometry-unresolved;research-only",
   "question": "Do independent locality, sampling, and mapped-wetland sources establish that the Tambo Lake / Lake Tambo lead in Sta. Juliana, Capas is the same lake and provide a publishable boundary?",
   "sourceIds": [
     "pna-bfar-capas-tarlac-lakes-fingerling-release-2020",
@@ -19,7 +19,9 @@
     "lopez-et-al-2017-freshwater-microcrustaceans-tambo-lake-site",
     "denr-bmb-atlas-luzon-2014",
     "denr-agno-river-basin-integrated-master-plan-camiling",
-    "osm-way-103928039-tambo-lake-outline"
+    "osm-way-103928039-tambo-lake-outline",
+    "denr-bmb-inland-wetlands-atlas-2016",
+    "dela-paz-papa-2018-cyclopoid-locality-tambo-lake"
   ],
   "waterbodyId": null,
   "findings": {
@@ -118,17 +120,134 @@
       },
       "license": "Open Database License 1.0 (ODbL); attribution to OpenStreetMap contributors and ODbL notice required.",
       "interpretation": "Community-mapped outline candidate only. The near-edge point and approximate areas (79.37 ha versus atlas 91.98 ha) do not settle waterbody identity or true extent."
+    },
+    "officialWetlandInventoryCrosscheck": {
+      "sourceId": "denr-bmb-inland-wetlands-atlas-2016",
+      "annex": "Annex 1",
+      "table": "List of Lakes, Marshes, Swamps, Water Storage Areas, and Ponds",
+      "row": 60,
+      "pdfPage": 116,
+      "printedPage": 104,
+      "nameAsPrinted": "Tambo Lake",
+      "regionAsPrinted": "Region III",
+      "provinceAsPrinted": "Tarlac",
+      "locationAsPrinted": "Capas",
+      "wetlandTypeAsPrinted": "Lake",
+      "approximateAreaHa": 91.98,
+      "supports": "Official national atlas row places a lake named Tambo Lake in Capas, Tarlac and reports an approximate area of 91.98 ha. Together with the Capas charter listing under Barangay Sta. Juliana and published Lake Tambo sampling records naming Santa Juliana, this strongly supports the spelling/locality crosswalk.",
+      "doesNotSupport": [
+        "a surveyed shoreline, legal boundary, or CRS/geometry",
+        "fish presence, a fish survey, or a current fish inventory",
+        "current lake extent or water level"
+      ],
+      "visualVerification": "Downloaded official-hosted PDF hash matches the previously registered atlas copy; PDF page 116 / printed p. 104 was visually checked and row 60 reads Tambo Lake, Region III, Tarlac, Capas, Lake, 91.98 ha."
+    },
+    "peerReviewedCopepodVoucherCrosscheck": {
+      "sourceId": "dela-paz-papa-2018-cyclopoid-locality-tambo-lake",
+      "samplingLocalityAsPrinted": "Lake Tambo, Santa Juliana, Tarlac",
+      "tableSiteNumber": 36,
+      "printedPage": 5,
+      "studyScope": "Cyclopoid copepods in UST-ZRC freshwater samples; not fish.",
+      "broaderSampleCollectionPeriod": "2006–2013; no Tambo-specific sample date given",
+      "taxaReportedAtSite": [
+        {
+          "scientificName": "Thermocyclops decipiens",
+          "sourceAbbreviation": "TD*",
+          "voucher": "UST-ZRC 0236A–0236B"
+        },
+        {
+          "scientificName": "Mesocyclops thermocyclopoides",
+          "sourceAbbreviation": "MT*",
+          "voucher": "UST-ZRC 0227A–0227B"
+        }
+      ],
+      "coordinateAsPrinted": {
+        "latitude": "15°17′30.2″ N",
+        "longitude": "120°22′45.2″ E",
+        "coordinateReferenceSystem": null,
+        "datum": null
+      },
+      "supports": "A separate peer-reviewed article reports site-specific copepod voucher records at a locality printed as Lake Tambo, Santa Juliana, Tarlac. Its coordinate is essentially the same rounded sampling point reported by the 2017 nationwide microcrustacean checklist; the papers may draw on overlapping UST-ZRC collections, so they are not treated as independent field surveys.",
+      "doesNotSupport": [
+        "fish taxa or fish occurrence",
+        "a Tambo-specific sampling date",
+        "a lake boundary, CRS, or coordinate accuracy"
+      ],
+      "caveat": "The 2017 and 2018 articles may use overlapping UST-ZRC material; separate publications do not establish independent collecting events."
+    },
+    "fishEvidenceSearch": {
+      "searchedOn": [
+        "2026-11-25",
+        "2026-11-26"
+      ],
+      "searchScope": "Targeted web and GBIF occurrence screening for fish surveys or taxon-resolved records explicitly tied to Tambo Lake / Lake Tambo, Capas or Sta. Juliana, Tarlac.",
+      "webSearches": [
+        "Tambo Lake Capas Tarlac fish survey ichthyofauna",
+        "Lake Tambo Santa Juliana fish species survey",
+        "Tambo Lake Tarlac ichthyofauna",
+        "Sta. Juliana Capas freshwater fish survey"
+      ],
+      "gbifOccurrenceApi": {
+        "api": "https://api.gbif.org/v1/occurrence/search",
+        "fishTaxon": "Actinopterygii (GBIF species key 204)",
+        "exactLocalityQueries": [
+          {
+            "locality": "Tambo Lake",
+            "country": "PH",
+            "resultCount": 0,
+            "queryUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Tambo%20Lake&limit=100",
+            "taxonConstraint": "none"
+          },
+          {
+            "locality": "Lake Tambo",
+            "country": "PH",
+            "resultCount": 0,
+            "queryUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Lake%20Tambo&limit=100",
+            "taxonConstraint": "none"
+          }
+        ],
+        "nameOnlyHomonymCheck": {
+          "locality": "Tambo",
+          "country": "PH",
+          "resultCount": 3,
+          "disposition": "Returned Cymodoceaceae records associated with Samal Island and without coordinates; rejected as unrelated name matches and not fish records for Tarlac.",
+          "queryUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Tambo&limit=100"
+        },
+        "spatialScreen": {
+          "geoDistance": "15.291722,120.379222,5km",
+          "centerSource": "dela-paz-papa-2018-cyclopoid-locality-tambo-lake",
+          "resultCount": 0,
+          "interpretation": "No indexed Actinopterygii occurrence was returned within this simple 5 km search around the published copepod sampling coordinate. This is not a surveyed lake boundary or evidence of fish absence.",
+          "queryUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&taxonKey=204&geoDistance=15.291722,120.379222,5km&limit=100"
+        }
+      },
+      "retrievedRelevantResults": [
+        {
+          "sourceId": "dela-paz-papa-2018-cyclopoid-locality-tambo-lake",
+          "disposition": "Non-fish copepod vouchers at the named site; useful locality/sampling evidence only."
+        },
+        {
+          "sourceId": "pna-bfar-capas-tarlac-lakes-fingerling-release-2020",
+          "disposition": "Historical fingerling stocking/management report; not a survey, surviving population record, or wild-capture occurrence."
+        },
+        {
+          "sourceId": "pna-bfar-capas-tambo-lake-tilapia-stocking-2017",
+          "disposition": "Search-indexed 2017 fingerling release report; direct page retrieval was unavailable, so retained only as a stocking lead and not as fish survey or verified current occurrence."
+        }
+      ],
+      "result": "No taxon-resolved fish survey, specimen voucher, or capture occurrence eligible for a local fish inventory was identified in these bounded searches.",
+      "limitation": "These targeted searches cover named pages, indexed literature, and GBIF records returned by the stated query parameters; they do not establish that no fish or unindexed survey exists in the lake."
     }
   },
   "synthesis": {
-    "namesAsReported": "PNA and Capas use “Tambo Lake”; the microcrustacean paper and OSM use “Lake Tambo” / “Tambo Lake”. Shared Capas/Tarlac locality context supports investigating a name-variant relationship, but no formal exact-identity crosswalk was established.",
-    "geometry": "No authoritative or field-verified boundary was found. Do not promote the OSM candidate to app geometry; the coordinate offset and area difference remain unresolved and the OSM source is community mapped.",
-    "fishEvidence": "No fish taxon-resolved survey, fish occurrence, or catch record for this lake was added by this review. The paper concerns microcrustacean zooplankton; taxa in its aggregate nationwide checklist are not site observations absent explicit site linkage.",
+    "namesAsReported": "The DENR-BMB 2016 Atlas lists Tambo Lake in Capas; the Capas charter places Tambo Lake under Barangay Sta. Juliana; and two separate peer-reviewed microcrustacean studies print Lake Tambo in Santa Juliana, Tarlac. This strongly supports Tambo Lake / Lake Tambo as a name/locality variant for the Capas/Sta. Juliana lake, while a canonical gazetteer identifier and field-verified identity remain unset.",
+    "geometry": "No authoritative or field-verified boundary was found. The BMB 2016 approximate area of 91.98 ha is locality/area context only; it does not supply geometry. The community-mapped OSM outline candidate remains unapproved; its 79.37 ha estimate and the published copepod coordinate near/outside its edge remain unreconciled.",
+    "fishEvidence": "The targeted web and GBIF screens found no eligible Tambo Lake fish survey, fish specimen record, or taxon-resolved catch record. The site-specific published taxa are copepods, and PNA sources report stocking only. Do not infer fish absence or create fish inventory rows from these bounded negative results.",
     "sanMarcosLake": "No new locality, survey, or geometry evidence for San Marcos Lake was found; retain the prior PNA stocking-only lead unchanged."
   },
   "disposition": {
-    "sourceRegistryRecordsAdded": 3,
-    "existingSourceRegistryRecordsUpdated": 2,
+    "sourceRegistryRecordsAdded": 4,
+    "existingSourceRegistryRecordsUpdated": 3,
     "waterbodyResearchLeadRecordsUpdated": 1,
     "scientificFishSpeciesAssertionsAdded": 0,
     "fishOccurrenceRecordsAdded": 0,
@@ -140,7 +259,8 @@
     "geometryAdded": false,
     "publicAppRowsAdded": 0,
     "publicationApproval": false,
-    "regionalReleaseApproved": false
+    "regionalReleaseApproved": false,
+    "peerReviewedNonFishVoucherLocalityCrosschecksAdded": 1
   },
   "localResearchStorage": {
     "rawDirectoryGitIgnored": true,
@@ -149,16 +269,22 @@
         "path": "raw/national/osm-tambo-lake-crosswalk-20261125/way-103928039-full.json",
         "bytes": 68932,
         "sha256": "70a122ca566233beebb27ba0aec7f6456b824ebf79a0e90f895061d6a79a4095"
+      },
+      {
+        "path": "raw/philchm/atlas-philippine-inland-wetlands-classified-caves-2016.pdf",
+        "bytes": 61473809,
+        "sha256": "39fb2731b45612143b7543d3afb1217673106bb97846ccc81019988e9d869768"
       }
     ]
   },
   "snapshotHashes": {
-    "sourceRegistry": "507d0902d831f95b8f3ab7ac83dbabebbb9c6167f33055df4d7869e324a205b1"
+    "sourceRegistry": "44000a083eeff42de1397f7ae4d5ca035f350cbefd092edb669852397b5ed573",
+    "sourceRegistryBeforeFollowup": "507d0902d831f95b8f3ab7ac83dbabebbb9c6167f33055df4d7869e324a205b1"
   },
   "nextActions": [
-    "Seek recent and historical taxon-resolved fish surveys or specimen vouchers explicitly tied to Tambo Lake/Sta. Juliana; do not treat stocking or microcrustacean records as fish evidence.",
-    "Seek a municipality-specific, datum-documented wetland boundary or independent field/geospatial survey before selecting geometry; keep the OSM candidate out of app data.",
-    "Keep Tambo and San Marcos Lake fish baselines, Central Luzon, and Luzon incomplete."
+    "Continue searching independently indexed university repository theses, peer-reviewed freshwater fish studies, museum/GBIF/OBIS records, and historical field reports for Tambo Lake / Capas; admit only taxon-resolved fish evidence with locality-level linkage and traceable source records.",
+    "Seek an authoritative or independently surveyed shoreline with date, datum, and method; do not substitute the atlas approximate area or OSM candidate for geometry.",
+    "Keep stocking, copepod vouchers, and informal travel-narrative fish labels outside a verified fish inventory; keep Central Luzon and Luzon incomplete."
   ],
   "sources": [
     {
@@ -190,7 +316,17 @@
       "sourceId": "osm-way-103928039-tambo-lake-outline",
       "url": "https://api.openstreetmap.org/api/0.6/way/103928039/full.json",
       "supports": "OSM community-mapped version 3 outline metadata and ring used only to calculate candidate bbox/area/proximity; no app geometry."
+    },
+    {
+      "sourceId": "denr-bmb-inland-wetlands-atlas-2016",
+      "url": "https://www.philchm.ph/wp-content/uploads/2019/03/Atlas-of-Philippine-Inland-Wetlands-and-Classsified-Caves-2016_BMB_DENR.pdf",
+      "supports": "Annex 1 Table 1 row 60 (PDF p. 116 / printed p. 104) lists Tambo Lake, Region III, Tarlac, Capas, Lake, approximate area 91.98 ha; locality and approximate-area corroboration only, no geometry."
+    },
+    {
+      "sourceId": "dela-paz-papa-2018-cyclopoid-locality-tambo-lake",
+      "url": "https://www.scienggj.org/2018/PSL%202018-vol11-no01-p3-9%20Dela%20Paz%20and%20Papa.pdf",
+      "supports": "Materials examined and Table 1 site 36 report UST-ZRC copepod vouchers for two copepod species at Lake Tambo, Santa Juliana, Tarlac, with a coordinate; non-fish sampling evidence only."
     }
   ],
-  "snapshotRefreshNote": "On 2026-11-25, refreshed only the shared source-registry fingerprint after registering a DENR/ADB Agusan Marsh report for a separate Central Luzon San Marcos locality disambiguation review. Existing source-specific findings and app assertions remain unchanged. On 2026-11-25, refreshed only the shared source-registry fingerprint after adding two Malolos, Bulacan source records for a separate research-only watercourse review. This review’s source evidence and conclusions are unchanged. On 2026-11-25, refreshed only the shared source-registry fingerprint after adding the official City of Malolos DRRM plan and correcting the Malolos tributary source crosswalk. This review’s evidence and conclusions are unchanged."
+  "snapshotRefreshNote": "On 2026-11-25, refreshed only the shared source-registry fingerprint after registering a DENR/ADB Agusan Marsh report for a separate Central Luzon San Marcos locality disambiguation review. Existing source-specific findings and app assertions remain unchanged. On 2026-11-25, refreshed only the shared source-registry fingerprint after adding two Malolos, Bulacan source records for a separate research-only watercourse review. This review’s source evidence and conclusions are unchanged. On 2026-11-25, refreshed only the shared source-registry fingerprint after adding the official City of Malolos DRRM plan and correcting the Malolos tributary source crosswalk. This review’s evidence and conclusions are unchanged. On 2026-11-26, visually reviewed the DENR-BMB 2016 Atlas Annex 1 Table 1 Tambo Lake row and registered a separate 2018 UST-ZRC copepod locality source; the Capas/Sta. Juliana name-locality crosswalk is strengthened, but no fish taxa or geometry were admitted."
 }
