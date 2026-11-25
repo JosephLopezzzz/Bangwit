@@ -21,7 +21,8 @@
     "denr-agno-river-basin-integrated-master-plan-camiling",
     "osm-way-103928039-tambo-lake-outline",
     "denr-bmb-inland-wetlands-atlas-2016",
-    "dela-paz-papa-2018-cyclopoid-locality-tambo-lake"
+    "dela-paz-papa-2018-cyclopoid-locality-tambo-lake",
+    "inat-tambo-lake-actinopterygii-nearby-screen-20261126"
   ],
   "waterbodyId": null,
   "findings": {
@@ -185,7 +186,11 @@
         "Tambo Lake Capas Tarlac fish survey ichthyofauna",
         "Lake Tambo Santa Juliana fish species survey",
         "Tambo Lake Tarlac ichthyofauna",
-        "Sta. Juliana Capas freshwater fish survey"
+        "Sta. Juliana Capas freshwater fish survey",
+        "\"Tambo Lake\" fish species Capas Tarlac study",
+        "\"Tambo Lake\" ichthyofauna Philippines Capas",
+        "site:repository.uplb.edu.ph \"Tambo Lake\" fish OR fishes",
+        "site:ust.edu.ph \"Tambo Lake\" Capas fish"
       ],
       "gbifOccurrenceApi": {
         "api": "https://api.gbif.org/v1/occurrence/search",
@@ -242,10 +247,40 @@
         {
           "sourceId": "pna-bfar-capas-tambo-lake-tilapia-stocking-2017",
           "disposition": "Search-indexed 2017 fingerling release report; direct page retrieval was unavailable, so retained only as a stocking lead and not as fish survey or verified current occurrence."
+        },
+        {
+          "sourceId": "inat-tambo-lake-actinopterygii-nearby-screen-20261126",
+          "disposition": "The iNaturalist research-grade 5 km observation query returned zero records; bounded discovery screen only, not evidence of fish absence."
         }
       ],
       "result": "No taxon-resolved fish survey, specimen voucher, or capture occurrence eligible for a local fish inventory was identified in these bounded searches.",
-      "limitation": "These targeted searches cover named pages, indexed literature, and GBIF records returned by the stated query parameters; they do not establish that no fish or unindexed survey exists in the lake."
+      "limitation": "These targeted searches cover named pages, indexed literature, and GBIF records returned by the stated query parameters; they do not establish that no fish or unindexed survey exists in the lake.",
+      "iNaturalistObservationApi": {
+        "api": "https://api.inaturalist.org/v1/observations",
+        "taxonAutocompleteUrl": "https://api.inaturalist.org/v1/taxa/autocomplete?q=Actinopterygii",
+        "taxon": {
+          "id": 47178,
+          "name": "Actinopterygii",
+          "rank": "class"
+        },
+        "queryUrl": "https://api.inaturalist.org/v1/observations?taxon_id=47178&lat=15.291722&lng=120.379222&radius=5&quality_grade=research&per_page=200&order=desc&order_by=observed_on",
+        "queryParameters": {
+          "latitude": 15.291722,
+          "longitude": 120.379222,
+          "radiusKm": 5,
+          "qualityGrade": "research",
+          "perPage": 200
+        },
+        "totalResults": 0,
+        "recordsReturned": 0,
+        "interpretation": "No research-grade iNaturalist Actinopterygii observations were returned in this 5 km radius search. The search center is a published copepod sample coordinate, not a lake center or shoreline; a zero does not establish fish absence.",
+        "limitations": [
+          "Other observation quality grades were not queried.",
+          "The radius is not a waterbody boundary and may include land or neighboring water.",
+          "iNaturalist observations are community observations, not a systematic fish survey."
+        ]
+      },
+      "followupWebSearchResult": "No taxon-resolved fish survey tied to Tambo Lake was identified in these university-repository and exact-name searches. Results repeated the wetland atlas, microcrustacean, tourism, and stocking leads; no new fish assertion was admitted."
     }
   },
   "synthesis": {
@@ -255,7 +290,7 @@
     "sanMarcosLake": "No new locality, survey, or geometry evidence for San Marcos Lake was found; retain the prior PNA stocking-only lead unchanged."
   },
   "disposition": {
-    "sourceRegistryRecordsAdded": 4,
+    "sourceRegistryRecordsAdded": 5,
     "existingSourceRegistryRecordsUpdated": 3,
     "waterbodyResearchLeadRecordsUpdated": 1,
     "scientificFishSpeciesAssertionsAdded": 0,
@@ -287,8 +322,9 @@
     ]
   },
   "snapshotHashes": {
-    "sourceRegistry": "44000a083eeff42de1397f7ae4d5ca035f350cbefd092edb669852397b5ed573",
-    "sourceRegistryBeforeFollowup": "507d0902d831f95b8f3ab7ac83dbabebbb9c6167f33055df4d7869e324a205b1"
+    "sourceRegistry": "e223f0c51886d15e1821e730710b8b2eef6962a9788bab55b08a37260804dbc5",
+    "sourceRegistryBeforeFollowup": "507d0902d831f95b8f3ab7ac83dbabebbb9c6167f33055df4d7869e324a205b1",
+    "sourceRegistryBeforeINaturalistFollowup": "44000a083eeff42de1397f7ae4d5ca035f350cbefd092edb669852397b5ed573"
   },
   "nextActions": [
     "Continue searching independently indexed university repository theses, peer-reviewed freshwater fish studies, museum/GBIF/OBIS records, and historical field reports for Tambo Lake / Capas; admit only taxon-resolved fish evidence with locality-level linkage and traceable source records.",
@@ -335,7 +371,12 @@
       "sourceId": "dela-paz-papa-2018-cyclopoid-locality-tambo-lake",
       "url": "https://www.scienggj.org/2018/PSL%202018-vol11-no01-p3-9%20Dela%20Paz%20and%20Papa.pdf",
       "supports": "Materials examined and Table 1 site 36 report UST-ZRC copepod vouchers for two copepod species at Lake Tambo, Santa Juliana, Tarlac, with a coordinate; non-fish sampling evidence only."
+    },
+    {
+      "sourceId": "inat-tambo-lake-actinopterygii-nearby-screen-20261126",
+      "url": "https://api.inaturalist.org/v1/observations?taxon_id=47178&lat=15.291722&lng=120.379222&radius=5&quality_grade=research&per_page=200&order=desc&order_by=observed_on",
+      "supports": "Read-only iNaturalist API screen for research-grade Actinopterygii observations within 5 km of the published copepod point; zero rows returned on 2026-11-26, not fish-absence evidence."
     }
   ],
-  "snapshotRefreshNote": "On 2026-11-25, refreshed only the shared source-registry fingerprint after registering a DENR/ADB Agusan Marsh report for a separate Central Luzon San Marcos locality disambiguation review. Existing source-specific findings and app assertions remain unchanged. On 2026-11-25, refreshed only the shared source-registry fingerprint after adding two Malolos, Bulacan source records for a separate research-only watercourse review. This review’s source evidence and conclusions are unchanged. On 2026-11-25, refreshed only the shared source-registry fingerprint after adding the official City of Malolos DRRM plan and correcting the Malolos tributary source crosswalk. This review’s evidence and conclusions are unchanged. On 2026-11-26, visually reviewed the DENR-BMB 2016 Atlas Annex 1 Table 1 Tambo Lake row and registered a separate 2018 UST-ZRC copepod locality source; the Capas/Sta. Juliana name-locality crosswalk is strengthened, but no fish taxa or geometry were admitted. On 2026-11-26, corrected the Tambo GBIF fish screen after detecting deleted taxon key 204; re-ran both exact localities and the 5 km coordinate query with current CoL XR Actinopterygii key 8VR36 and checklist key 7ddf754f-d193-4cc9-b351-99906754a03b. All three corrected counts were zero; the invalid legacy count is explicitly excluded from coverage conclusions."
+  "snapshotRefreshNote": "On 2026-11-25, refreshed only the shared source-registry fingerprint after registering a DENR/ADB Agusan Marsh report for a separate Central Luzon San Marcos locality disambiguation review. Existing source-specific findings and app assertions remain unchanged. On 2026-11-25, refreshed only the shared source-registry fingerprint after adding two Malolos, Bulacan source records for a separate research-only watercourse review. This review’s source evidence and conclusions are unchanged. On 2026-11-25, refreshed only the shared source-registry fingerprint after adding the official City of Malolos DRRM plan and correcting the Malolos tributary source crosswalk. This review’s evidence and conclusions are unchanged. On 2026-11-26, visually reviewed the DENR-BMB 2016 Atlas Annex 1 Table 1 Tambo Lake row and registered a separate 2018 UST-ZRC copepod locality source; the Capas/Sta. Juliana name-locality crosswalk is strengthened, but no fish taxa or geometry were admitted. On 2026-11-26, corrected the Tambo GBIF fish screen after detecting deleted taxon key 204; re-ran both exact localities and the 5 km coordinate query with current CoL XR Actinopterygii key 8VR36 and checklist key 7ddf754f-d193-4cc9-b351-99906754a03b. All three corrected counts were zero; the invalid legacy count is explicitly excluded from coverage conclusions. On 2026-11-26, screened the iNaturalist API for research-grade Actinopterygii observations within 5 km of the published copepod sample point; no records were returned. The source is registered as a bounded discovery screen only, and no fish occurrence or species row was added."
 }
