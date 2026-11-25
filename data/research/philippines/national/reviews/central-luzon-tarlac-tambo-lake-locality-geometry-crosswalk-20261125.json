@@ -189,21 +189,21 @@
       ],
       "gbifOccurrenceApi": {
         "api": "https://api.gbif.org/v1/occurrence/search",
-        "fishTaxon": "Actinopterygii (GBIF species key 204)",
+        "fishTaxon": "Actinopterygii in Catalogue of Life eXtended Release (checklistKey 7ddf754f-d193-4cc9-b351-99906754a03b; taxonKey 8VR36; GBIF rank GIGACLASS; ray-finned fishes only).",
         "exactLocalityQueries": [
           {
             "locality": "Tambo Lake",
             "country": "PH",
             "resultCount": 0,
-            "queryUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Tambo%20Lake&limit=100",
-            "taxonConstraint": "none"
+            "queryUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&locality=Tambo%20Lake&limit=100",
+            "taxonConstraint": "CoL XR Actinopterygii; checklistKey 7ddf754f-d193-4cc9-b351-99906754a03b; taxonKey 8VR36"
           },
           {
             "locality": "Lake Tambo",
             "country": "PH",
             "resultCount": 0,
-            "queryUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&locality=Lake%20Tambo&limit=100",
-            "taxonConstraint": "none"
+            "queryUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&locality=Lake%20Tambo&limit=100",
+            "taxonConstraint": "CoL XR Actinopterygii; checklistKey 7ddf754f-d193-4cc9-b351-99906754a03b; taxonKey 8VR36"
           }
         ],
         "nameOnlyHomonymCheck": {
@@ -218,8 +218,17 @@
           "centerSource": "dela-paz-papa-2018-cyclopoid-locality-tambo-lake",
           "resultCount": 0,
           "interpretation": "No indexed Actinopterygii occurrence was returned within this simple 5 km search around the published copepod sampling coordinate. This is not a surveyed lake boundary or evidence of fish absence.",
-          "queryUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&taxonKey=204&geoDistance=15.291722,120.379222,5km&limit=100"
-        }
+          "queryUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&geoDistance=15.291722,120.379222,5km&limit=100"
+        },
+        "invalidatedPreCorrectionScreen": {
+          "taxonKey": 204,
+          "scientificName": "Actinopterygii",
+          "deletedOn": "2022-11-23",
+          "previousRadiusResultCount": 0,
+          "disposition": "Invalid for fish-coverage conclusions because GBIF marks key 204 deleted. The original zero was superseded by the corrected CoL XR query above.",
+          "correctionReference": "data/research/philippines/gbif-actinopterygii-retired-key-correction-20261024.json"
+        },
+        "resultInterpretation": "The corrected, bounded GBIF exact-locality and 5 km queries returned zero Actinopterygii records. This is not a surveyed lake boundary or evidence of fish absence."
       },
       "retrievedRelevantResults": [
         {
@@ -328,5 +337,5 @@
       "supports": "Materials examined and Table 1 site 36 report UST-ZRC copepod vouchers for two copepod species at Lake Tambo, Santa Juliana, Tarlac, with a coordinate; non-fish sampling evidence only."
     }
   ],
-  "snapshotRefreshNote": "On 2026-11-25, refreshed only the shared source-registry fingerprint after registering a DENR/ADB Agusan Marsh report for a separate Central Luzon San Marcos locality disambiguation review. Existing source-specific findings and app assertions remain unchanged. On 2026-11-25, refreshed only the shared source-registry fingerprint after adding two Malolos, Bulacan source records for a separate research-only watercourse review. This review’s source evidence and conclusions are unchanged. On 2026-11-25, refreshed only the shared source-registry fingerprint after adding the official City of Malolos DRRM plan and correcting the Malolos tributary source crosswalk. This review’s evidence and conclusions are unchanged. On 2026-11-26, visually reviewed the DENR-BMB 2016 Atlas Annex 1 Table 1 Tambo Lake row and registered a separate 2018 UST-ZRC copepod locality source; the Capas/Sta. Juliana name-locality crosswalk is strengthened, but no fish taxa or geometry were admitted."
+  "snapshotRefreshNote": "On 2026-11-25, refreshed only the shared source-registry fingerprint after registering a DENR/ADB Agusan Marsh report for a separate Central Luzon San Marcos locality disambiguation review. Existing source-specific findings and app assertions remain unchanged. On 2026-11-25, refreshed only the shared source-registry fingerprint after adding two Malolos, Bulacan source records for a separate research-only watercourse review. This review’s source evidence and conclusions are unchanged. On 2026-11-25, refreshed only the shared source-registry fingerprint after adding the official City of Malolos DRRM plan and correcting the Malolos tributary source crosswalk. This review’s evidence and conclusions are unchanged. On 2026-11-26, visually reviewed the DENR-BMB 2016 Atlas Annex 1 Table 1 Tambo Lake row and registered a separate 2018 UST-ZRC copepod locality source; the Capas/Sta. Juliana name-locality crosswalk is strengthened, but no fish taxa or geometry were admitted. On 2026-11-26, corrected the Tambo GBIF fish screen after detecting deleted taxon key 204; re-ran both exact localities and the 5 km coordinate query with current CoL XR Actinopterygii key 8VR36 and checklist key 7ddf754f-d193-4cc9-b351-99906754a03b. All three corrected counts were zero; the invalid legacy count is explicitly excluded from coverage conclusions."
 }
