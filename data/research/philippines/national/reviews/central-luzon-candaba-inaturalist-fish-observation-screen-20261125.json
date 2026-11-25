@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "central-luzon-candaba-inaturalist-fish-observation-screen-20261125",
+  "checkedOn": "2026-11-25",
+  "phaseId": "L3",
+  "regionId": "0300000000",
+  "regionName": "Region III (Central Luzon)",
+  "status": "bounded-inaturalist-public-place-and-fish-observation-screen-complete;not-absence-evidence",
+  "question": "Does iNaturalist currently index wild Actinopterygii observations in its Candaba place scope?",
+  "source": {
+    "provider": "iNaturalist",
+    "endpoint": "https://api.inaturalist.org/v1/observations",
+    "documentation": "https://api.inaturalist.org/v1/docs/",
+    "licensingGuidance": "https://help.inaturalist.org/en/support/solutions/articles/151000175695",
+    "note": "Observation data and each media item have separate licenses. No observation rows or photos were returned in this screen, so no row-level reuse decision applies."
+  },
+  "placeLookup": {
+    "query": "Candaba",
+    "exactNameMatchesInPhilippines": 1,
+    "placeId": 26991,
+    "name": "Candaba",
+    "displayName": "Candaba, PH, PM",
+    "placeType": 9,
+    "adminLevel": 20,
+    "ancestorPlaceIds": [
+      97395,
+      6873,
+      11586,
+      26991
+    ],
+    "geometryReturnedByProvider": true,
+    "geometryDisposition": "The provider returned a place polygon, but it is not independently validated as an official administrative boundary. The geometry was retained only in the ignored local response and was not copied to any public data or map."
+  },
+  "query": {
+    "requestUrl": "https://api.inaturalist.org/v1/observations?place_id=26991&taxon_id=47178&captive=false&per_page=200",
+    "filters": {
+      "placeId": 26991,
+      "taxonId": 47178,
+      "taxonName": "Actinopterygii",
+      "captive": false,
+      "perPage": 200
+    },
+    "taxonLabel": "Ray-finned Fishes",
+    "resultCount": 0,
+    "resultsReturned": 0,
+    "interpretation": "The place ID scopes the iNaturalist search only; it does not establish an official municipal extent or a species survey denominator. Research-grade status, if any future row is found, is platform metadata and not independent specimen verification."
+  },
+  "rawResponses": [
+    {
+      "requestUrl": "https://api.inaturalist.org/v1/places/autocomplete?q=Candaba&per_page=30",
+      "httpStatus": 200,
+      "responseBytes": 16497,
+      "responseSha256": "15ae827b5353485876d82e1f3e515b213b192a3a04aca6548c0f1a048132bea4",
+      "rawFile": "raw/central-luzon-candaba-inaturalist-screen-20261125/01-place-autocomplete.json"
+    },
+    {
+      "requestUrl": "https://api.inaturalist.org/v1/places/26991",
+      "httpStatus": 200,
+      "responseBytes": 16497,
+      "responseSha256": "15ae827b5353485876d82e1f3e515b213b192a3a04aca6548c0f1a048132bea4",
+      "rawFile": "raw/central-luzon-candaba-inaturalist-screen-20261125/02-place-detail.json"
+    },
+    {
+      "requestUrl": "https://api.inaturalist.org/v1/taxa/47178",
+      "httpStatus": 200,
+      "responseBytes": 53388,
+      "responseSha256": "02af78fa69e7e69761f15011767ed52d7175983ed83f7a1c428a4266fcbbd3b2",
+      "rawFile": "raw/central-luzon-candaba-inaturalist-screen-20261125/03-actinopterygii-taxon.json"
+    },
+    {
+      "requestUrl": "https://api.inaturalist.org/v1/observations?place_id=26991&taxon_id=47178&captive=false&per_page=200",
+      "httpStatus": 200,
+      "responseBytes": 56,
+      "responseSha256": "fd3f5273480beb5b21f0093988495568550347782a2ec8776cd9a3bafae0c489",
+      "rawFile": "raw/central-luzon-candaba-inaturalist-screen-20261125/04-wild-actinopterygii-observations.json"
+    }
+  ],
+  "interpretation": {
+    "observationRowsAdmitted": 0,
+    "speciesAssertionsAdded": 0,
+    "coordinatesPublished": 0,
+    "geometryAdded": false,
+    "publicProjection": false,
+    "zeroResultsAreAbsenceEvidence": false,
+    "disposition": "This single-platform place-and-taxon screen returned no wild ray-finned-fish observations. It does not establish species absence, survey absence, or the completeness of iNaturalist for Candaba. Continue using source-resolved historical survey, museum, and field records; do not treat the returned provider geometry as authoritative."
+  }
+}
