@@ -1,0 +1,166 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "central-luzon-tarlac-san-marcos-lake-occurrence-geometry-screen-20261126",
+  "reviewedOn": "2026-11-26",
+  "phaseId": "L3",
+  "regionId": "0300000000",
+  "regionName": "Region III (Central Luzon)",
+  "provinceId": "0305700000",
+  "provinceName": "Tarlac",
+  "waterbodyNamesAsReported": [
+    "San Marcos Lake"
+  ],
+  "status": "pna-stocked-fish-only;osm-nearby-unnamed-lake-outline-unlinked;gbif-and-inaturalist-bounded-zero-screens;fish-baseline-and-geometry-unresolved;research-only",
+  "question": "Do available map and biodiversity sources identify a publishable outline or fish evidence for the San Marcos Lake in Capas, Tarlac?",
+  "sourceIds": [
+    "pna-bfar-capas-tarlac-lakes-fingerling-release-2020",
+    "osm-way-272180970-unnamed-lake-outline-near-san-marcos-capas",
+    "gbif-san-marcos-lake-actinopterygii-nearby-screen-20261126",
+    "inat-san-marcos-lake-actinopterygii-nearby-screen-20261126"
+  ],
+  "relatedReviewPaths": [
+    "national/reviews/central-luzon-tarlac-san-marcos-lake-agusan-mihaba-name-collision-review-20261125.json"
+  ],
+  "waterbodyId": null,
+  "findings": {
+    "sourceReportedLocality": {
+      "sourceId": "pna-bfar-capas-tarlac-lakes-fingerling-release-2020",
+      "sourceReportedName": "San Marcos Lake",
+      "administrativeAreaAsReported": "Capas, Tarlac",
+      "reportedEvent": "A 2020 BASIL release of 15,000 tilapia and 5,000 carp fingerlings.",
+      "supports": "A dated stocking/management event associated with a San Marcos Lake in Capas, Tarlac.",
+      "doesNotSupport": [
+        "a scientific fish inventory or taxon-resolved wild occurrence",
+        "scientific identity of the generic labels tilapia and carp",
+        "post-release survival, reproduction, present-day presence, or catchability",
+        "lake coordinates, shoreline, or legal boundary",
+        "a connection to the separate Agusan Marsh locality named Barangay San Marcos (Lake Mihaba)"
+      ]
+    },
+    "mappedOutlineCandidate": {
+      "sourceId": "osm-way-272180970-unnamed-lake-outline-near-san-marcos-capas",
+      "provider": "OpenStreetMap contributors",
+      "osmWayId": 272180970,
+      "wayVersion": 2,
+      "lastEdited": "2022-02-01T07:29:24Z",
+      "tags": {
+        "natural": "water",
+        "water": "lake"
+      },
+      "nameTagPresent": false,
+      "closedRing": true,
+      "nodeCount": 72,
+      "boundingBox": {
+        "south": 15.3110544,
+        "north": 15.3177897,
+        "west": 120.3829793,
+        "east": 120.3889848
+      },
+      "queryCenter": {
+        "latitude": 15.31442205,
+        "longitude": 120.38598205,
+        "method": "midpoint of the candidate bounding box; not a lake centroid or verified locality coordinate"
+      },
+      "derivedPlanarAreaHa": 16.4,
+      "derivedSphericalAreaHa": 16.478,
+      "areaMethod": "Computed from the closed OSM ring using a spherical polygon-area approximation; rounded to 16.48 ha.",
+      "identityAssessment": "The OSM object is an unnamed lake polygon near the Capas lead. No independent source links this way to the PNA-reported San Marcos Lake, so it remains a candidate and its outline is not admitted as that lake boundary.",
+      "rights": "OSM data are ODbL 1.0; attribution/share-alike obligations require separate review before any distribution.",
+      "doesNotSupport": [
+        "official or surveyed geometry",
+        "confirmed San Marcos Lake identity",
+        "current lake extent or water level",
+        "fish presence, water safety, access, or fishing rules"
+      ],
+      "rawSnapshot": {
+        "path": "raw/national/osm-san-marcos-lake-screen-20261126/way-272180970-full.json",
+        "bytes": 13257,
+        "sha256": "540573fb1c6cee63f280c3cbd186fa3eb6d84817c3ad8ef66b4de27ced200027"
+      }
+    },
+    "occurrenceScreens": {
+      "queryScope": "Count-only/discovery screens for ray-finned fishes (Actinopterygii) around the midpoint of the unnamed OSM polygon bounding box.",
+      "gbif": {
+        "sourceId": "gbif-san-marcos-lake-actinopterygii-nearby-screen-20261126",
+        "api": "GBIF Occurrence Search API v1",
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "checklist": "Catalogue of Life eXtended Release",
+        "taxonKey": "8VR36",
+        "taxon": "Actinopterygii",
+        "rank": "GIGACLASS",
+        "distanceKm": 5,
+        "limit": 0,
+        "resultCount": 0,
+        "response": {
+          "status": 200,
+          "bytes": 77,
+          "sha256": "842e210a1dc11a43b863a7438d0b8ae273f0182c290a7c64e760c176778cc9fa",
+          "path": "raw/national/san-marcos-lake-screen-20261126/gbif-radius.json"
+        }
+      },
+      "iNaturalist": {
+        "sourceId": "inat-san-marcos-lake-actinopterygii-nearby-screen-20261126",
+        "taxonId": 47178,
+        "taxon": "Actinopterygii",
+        "rank": "class",
+        "qualityGrade": "research",
+        "radiusKm": 5,
+        "pageSize": 200,
+        "resultCount": 0,
+        "response": {
+          "status": 200,
+          "bytes": 56,
+          "sha256": "fd3f5273480beb5b21f0093988495568550347782a2ec8776cd9a3bafae0c489",
+          "path": "raw/national/san-marcos-lake-screen-20261126/inat-radius.json"
+        }
+      },
+      "limitation": "Both zero-result screens are bounded discovery outcomes, not a fish-absence result, a survey, or evidence that no records exist under other names, taxonomic backbones, quality grades, or locations."
+    }
+  },
+  "synthesis": {
+    "fishEvidence": "The reviewed Capas-specific fish evidence remains a stocking event with generic names only. The two bounded occurrence screens returned zero around an unnamed nearby OSM polygon; neither screen can establish absence or resolve the lake name.",
+    "geometry": "One OSM lake outline is nearby but unnamed. The PNA report does not supply coordinates, and no source-to-outline crosswalk was established. Do not use the 16.48 ha computed candidate area as the San Marcos Lake area.",
+    "publicUse": "No scientific species, occurrence, geometry, diet, safety, access, or app row is admitted. San Marcos Lake and Central Luzon remain incomplete."
+  },
+  "disposition": {
+    "sourceRegistryRecordsAdded": 3,
+    "candidateOutlinesReviewed": 1,
+    "speciesAssertionsAdded": 0,
+    "occurrenceRecordsAdded": 0,
+    "geometryAdded": false,
+    "dietClaimsAdded": 0,
+    "publicAppRowsAdded": 0,
+    "publicationApproval": false,
+    "regionalReleaseApproved": false
+  },
+  "nextActions": [
+    "Seek an independent official or field-verified locality source that links the Capas San Marcos Lake name to a mapped outline.",
+    "Search for a dated, taxon-resolved fish survey or voucher/catch record explicitly tied to that same lake.",
+    "Keep the Agusan Marsh Lake Mihaba material separate and retain the Central Luzon/Luzon incomplete status."
+  ],
+  "snapshotHashes": {
+    "sourceRegistry": "f68cb42bccf9c25ebb3144ba8217f52779074bd8dce724f0a9bd0ef3600dd84e"
+  },
+  "sources": [
+    {
+      "sourceId": "pna-bfar-capas-tarlac-lakes-fingerling-release-2020",
+      "url": "https://www.pna.gov.ph/articles/1110424",
+      "supports": "A 2020 stocking event in San Marcos Lake, Capas, Tarlac; not a fish inventory or geometry source."
+    },
+    {
+      "sourceId": "osm-way-272180970-unnamed-lake-outline-near-san-marcos-capas",
+      "url": "https://api.openstreetmap.org/api/0.6/way/272180970/full.json",
+      "supports": "Community-mapped unnamed lake outline; candidate comparison only, not linked to the Capas name."
+    },
+    {
+      "sourceId": "gbif-san-marcos-lake-actinopterygii-nearby-screen-20261126",
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&decimalLatitude=15.31442205&decimalLongitude=120.38598205&distance=5km&limit=0",
+      "supports": "Count-only nearby Actinopterygii discovery screen; zero is not absence evidence."
+    },
+    {
+      "sourceId": "inat-san-marcos-lake-actinopterygii-nearby-screen-20261126",
+      "url": "https://api.inaturalist.org/v1/observations?taxon_id=47178&lat=15.31442205&lng=120.38598205&radius=5&quality_grade=research&per_page=200&order=desc&order_by=observed_on",
+      "supports": "Research-grade nearby Actinopterygii discovery screen; zero is not absence evidence."
+    }
+  ]
+}

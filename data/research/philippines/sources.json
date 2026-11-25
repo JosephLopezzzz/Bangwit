@@ -43535,6 +43535,147 @@
         "No record returned does not establish that fish are absent or that no fish survey exists.",
         "No observation images or user-generated content were retrieved or reused."
       ]
+    },
+    {
+      "id": "osm-way-272180970-unnamed-lake-outline-near-san-marcos-capas",
+      "title": "OpenStreetMap way 272180970, unnamed lake outline near San Marcos Lake, Capas",
+      "provider": "OpenStreetMap contributors via the OpenStreetMap API",
+      "url": "https://api.openstreetmap.org/api/0.6/way/272180970/full.json",
+      "additionalUrls": [
+        "https://www.openstreetmap.org/way/272180970",
+        "https://www.openstreetmap.org/copyright",
+        "https://opendatacommons.org/licenses/odbl/1-0/"
+      ],
+      "role": "Community-mapped, unnamed lake polygon in the Capas search area. Kept only as an unresolved geometry candidate near the San Marcos Lake lead; the name-to-outline crosswalk is not established, and the polygon is not an official or surveyed boundary.",
+      "checkedOn": "2026-11-26",
+      "sourceYear": 2022,
+      "citation": "OpenStreetMap contributors. Way 272180970, version 2, last edited 2022-02-01; full-way JSON API response accessed 2026-11-26.",
+      "access": {
+        "status": "osm-api-200;closed-unnamed-lake-polygon;candidate-only;research-only",
+        "reviewFiles": [
+          "national/reviews/central-luzon-tarlac-san-marcos-lake-occurrence-geometry-screen-20261126.json"
+        ],
+        "fullTextRetrieved": true,
+        "reviewedSections": [
+          "Way tags, metadata, and closed-ring node coordinates"
+        ],
+        "rawPath": "raw/national/osm-san-marcos-lake-screen-20261126",
+        "rawSnapshot": {
+          "bytes": 13257,
+          "sha256": "540573fb1c6cee63f280c3cbd186fa3eb6d84817c3ad8ef66b4de27ced200027"
+        }
+      },
+      "reuse": {
+        "metadata": "OpenStreetMap data are licensed under ODbL 1.0; attribution to OpenStreetMap contributors and an ODbL notice/link are required, and adapted databases may carry share-alike obligations.",
+        "raw": "Full-way XML is retained only in the Git-ignored local research directory.",
+        "content": "The outline is retained as a research comparison candidate only. No geometry is admitted to the app or approved for redistribution because the name, waterbody identity, and boundary remain unverified."
+      },
+      "publicationApproval": false,
+      "license": "Open Database License 1.0 (ODbL)",
+      "licenseUrl": "https://opendatacommons.org/licenses/odbl/1-0/",
+      "researchStatus": "central-luzon;tarlac;capas;san-marcos-lake-nearby-unnamed-osm-lake;candidate-outline-only;not-official-boundary;research-only",
+      "caveats": [
+        "The OSM way has only natural=water and water=lake tags and no name tag; proximity does not link it to the PNA-reported San Marcos Lake.",
+        "The approximately 16.48 ha area is computed from this community-mapped ring and is not an authoritative lake area or boundary.",
+        "The geometry does not establish fish presence, water safety, access, or fishing rules."
+      ]
+    },
+    {
+      "id": "gbif-san-marcos-lake-actinopterygii-nearby-screen-20261126",
+      "title": "GBIF CoL XR Actinopterygii nearby screen around the unnamed OSM lake candidate near San Marcos Lake",
+      "provider": "Global Biodiversity Information Facility",
+      "url": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&decimalLatitude=15.31442205&decimalLongitude=120.38598205&distance=5km&limit=0",
+      "additionalUrls": [
+        "https://techdocs.gbif.org/en/openapi/v1/occurrence",
+        "national/reviews/central-luzon-tarlac-san-marcos-lake-occurrence-geometry-screen-20261126.json"
+      ],
+      "role": "Bounded count-only discovery query for CoL XR Actinopterygii occurrences within 5 km of the bounding-box midpoint of an unnamed OSM lake polygon in the Capas search area. The API returned zero; this is not a fish survey or evidence of absence.",
+      "checkedOn": "2026-11-26",
+      "citation": "Global Biodiversity Information Facility. Occurrence Search API v1; CoL XR Actinopterygii query accessed 2026-11-26.",
+      "access": {
+        "status": "http-200-count-zero-bounded-radius-screen;current-colxr-actinopterygii;research-only",
+        "reviewFiles": [
+          "national/reviews/central-luzon-tarlac-san-marcos-lake-occurrence-geometry-screen-20261126.json"
+        ],
+        "queryParameters": {
+          "country": "PH",
+          "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+          "taxonKey": "8VR36",
+          "taxonName": "Actinopterygii",
+          "taxonRank": "GIGACLASS",
+          "latitude": 15.31442205,
+          "longitude": 120.38598205,
+          "coordinateMeaning": "midpoint of the OSM candidate polygon bounding box; not a verified San Marcos Lake coordinate",
+          "distanceKm": 5,
+          "limit": 0,
+          "resultCount": 0
+        },
+        "rawSnapshotDirectory": "raw/national/san-marcos-lake-screen-20261126/",
+        "rawResponsesRetained": true
+      },
+      "reuse": {
+        "metadata": "No occurrence row or dataset metadata was returned; dataset-level licenses do not apply to the empty count response.",
+        "raw": "The empty API response JSON is retained only in the Git-ignored local research directory and hash-referenced in the review artifact.",
+        "content": "No occurrence record, species assertion, coordinate, geometry, image, or public app row was created."
+      },
+      "publicationApproval": false,
+      "license": null,
+      "licenseUrl": null,
+      "researchStatus": "central-luzon;tarlac;capas;san-marcos-lake-nearby-screen;gbif-colxr-actinopterygii;bounded-zero;research-only",
+      "caveats": [
+        "Actinopterygii covers ray-finned fishes only; it does not cover sharks and rays or every group commonly called fish.",
+        "The 5 km query is centered on an unnamed OSM candidate polygon, not an identified lake boundary.",
+        "Zero results do not establish absence; alternate taxon mappings, unindexed/missing coordinates and locality variants may be missed."
+      ]
+    },
+    {
+      "id": "inat-san-marcos-lake-actinopterygii-nearby-screen-20261126",
+      "title": "iNaturalist research-grade Actinopterygii nearby screen around the unnamed OSM lake candidate near San Marcos Lake",
+      "provider": "iNaturalist",
+      "url": "https://api.inaturalist.org/v1/observations?taxon_id=47178&lat=15.31442205&lng=120.38598205&radius=5&quality_grade=research&per_page=200&order=desc&order_by=observed_on",
+      "additionalUrls": [
+        "https://api.inaturalist.org/v1/taxa/autocomplete?q=Actinopterygii",
+        "https://www.inaturalist.org/pages/api+recommended+practices",
+        "https://www.inaturalist.org/pages/developers",
+        "national/reviews/central-luzon-tarlac-san-marcos-lake-occurrence-geometry-screen-20261126.json"
+      ],
+      "role": "Bounded discovery query for research-grade iNaturalist Actinopterygii observations within 5 km of the bounding-box midpoint of an unnamed OSM lake polygon in the Capas search area. The API returned zero; this is not a fish survey or evidence of absence.",
+      "checkedOn": "2026-11-26",
+      "citation": "iNaturalist API. Actinopterygii observation query accessed 2026-11-26.",
+      "access": {
+        "status": "actinopterygii-taxonomy-id-47178;research-grade-5km-query-count-zero;no-observation-rows-returned;research-only",
+        "reviewFiles": [
+          "national/reviews/central-luzon-tarlac-san-marcos-lake-occurrence-geometry-screen-20261126.json"
+        ],
+        "queryParameters": {
+          "taxonId": 47178,
+          "taxonName": "Actinopterygii",
+          "taxonRank": "class",
+          "latitude": 15.31442205,
+          "longitude": 120.38598205,
+          "coordinateMeaning": "midpoint of the OSM candidate polygon bounding box; not a verified San Marcos Lake coordinate",
+          "radiusKm": 5,
+          "qualityGrade": "research",
+          "pageSize": 200,
+          "resultCount": 0
+        },
+        "rawSnapshotDirectory": "raw/national/san-marcos-lake-screen-20261126/",
+        "rawResponsesRetained": true
+      },
+      "reuse": {
+        "metadata": "Only API access behavior and count metadata were reviewed.",
+        "raw": "The empty API response JSON is retained only in the Git-ignored local research directory and hash-referenced in the review artifact.",
+        "content": "No observation record, photograph, or user-generated content was retrieved or reused."
+      },
+      "publicationApproval": false,
+      "license": null,
+      "licenseUrl": null,
+      "researchStatus": "central-luzon;tarlac;capas;san-marcos-lake-nearby-screen;inat-actinopterygii;bounded-zero;research-only",
+      "caveats": [
+        "Only research-grade Actinopterygii observations were queried; other quality grades were not searched.",
+        "The radius uses the bounding-box midpoint of an unnamed OSM candidate polygon, not a verified San Marcos Lake point or boundary.",
+        "A zero-result API query does not establish that fish are absent or that no survey exists."
+      ]
     }
   ],
   "sourcePolicy": {
