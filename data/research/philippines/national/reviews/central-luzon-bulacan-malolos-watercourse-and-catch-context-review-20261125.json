@@ -5,30 +5,43 @@
   "phaseId": "L3",
   "regionId": "0300000000",
   "regionName": "Region III (Central Luzon)",
-  "status": "official-river-context-and-third-party-watercourse-leads-reviewed;fish-taxa-not-established;research-only",
+  "status": "official-city-tributary-inventory-and-third-party-catch-context-reviewed;fish-taxa-not-established;research-only",
   "question": "Do accessible sources identify Malolos inland and brackish watercourses or provide fish evidence that can be safely assigned to species and waterbody records?",
   "sourceIds": [
+    "city-malolos-drrm-plan-2022-2026",
     "city-malolos-enhanced-lccap-2023-2032",
     "malolos-ecological-profile-2023-scribd-copy"
   ],
   "findings": {
     "officialWatercourseContext": {
-      "sourceId": "city-malolos-enhanced-lccap-2023-2032",
-      "locator": "Section A.2.1, Climate Change and Disaster Risk Profile",
-      "finding": "The City of Malolos Enhanced Local Climate Change Action Plan 2023–2032 names Pamarawan, Galas, Malaway, Pangagtan, and Bugwan rivers. It provides city-level river context but no fish survey, species list, capture event, or river geometry."
+      "sourceIds": [
+        "city-malolos-enhanced-lccap-2023-2032",
+        "city-malolos-drrm-plan-2022-2026"
+      ],
+      "lccapLocator": "Section A.2.1, Climate Change and Disaster Risk Profile",
+      "lccapFinding": "The City of Malolos Enhanced Local Climate Change Action Plan 2023–2032 names Pamarawan, Galas, Malaway, Pangagtan, and Bugwan rivers.",
+      "drrmLocator": "City Disaster Risk Reduction and Management Plan 2022–2026, Section 1.4 Environmental Sector, subsection 1.4.2 Tributaries",
+      "drrmFinding": "The official city-hosted DRRM plan contains a tributary table naming 11 rivers and all 15 creeks, with source-reported drain-area barangay labels. It corroborates all 26 normalized watercourse names in the third-party Ecological Profile copy, subject to two spelling variants noted below. Neither official plan provides fish survey data or channel geometry."
     },
     "thirdPartyWatercourseInventory": {
       "sourceId": "malolos-ecological-profile-2023-scribd-copy",
       "locator": "Table EnS-1, printed page 134",
       "officialCopyLocated": false,
-      "finding": "The reviewed third-party copy lists 11 rivers and 15 creeks (26 names total), with barangay labels described as drain areas. Five river names overlap the city-hosted climate plan. The other six river names and all creek names are not corroborated by the official plan reviewed here. A bounded search did not find the profile on the city website, but this is not proof an official copy does not exist."
+      "finding": "The reviewed third-party copy lists 11 rivers and 15 creeks (26 names total), with barangay labels described as drain areas. A City-hosted 2022–2026 DRRM plan lists the same 11 rivers and all 15 creeks, although the tributary table continues across a page. A bounded search did not locate the Ecological Profile itself on the city website; this does not prove that an official copy does not exist.",
+      "officialComparison": "All 26 normalized watercourse names in the third-party profile copy are also listed in the official DRRM tributary table. The official plan prints “Apulid - Malangam Creek” while the profile copy prints “Apulid - Malanggam Creek”; the official table splits “Guin h awa” while the profile copy prints “Guinhawa”. The official table continues after the page break to include the last four creeks."
     },
     "watercourses": {
       "rivers": [
         {
           "name": "Atlag River",
-          "officialPlanNameCorroborated": false,
-          "barangaysAsReportedOnlyInThirdPartyCopy": [
+          "officialPlanNameCorroborated": true,
+          "officialDrrmPlanNameAsReported": "Atlag River",
+          "barangaysAsReportedInThirdPartyCopy": [
+            "Atlag",
+            "Bagna",
+            "Balayong"
+          ],
+          "barangaysAsReportedInOfficialDRRMPlan": [
             "Atlag",
             "Bagna",
             "Balayong"
@@ -37,21 +50,36 @@
         {
           "name": "Malaway River",
           "officialPlanNameCorroborated": true,
-          "barangaysAsReportedOnlyInThirdPartyCopy": [
+          "officialDrrmPlanNameAsReported": "Malaway River",
+          "barangaysAsReportedInThirdPartyCopy": [
+            "Babatnin"
+          ],
+          "barangaysAsReportedInOfficialDRRMPlan": [
             "Babatnin"
           ]
         },
         {
           "name": "Galas River",
           "officialPlanNameCorroborated": true,
-          "barangaysAsReportedOnlyInThirdPartyCopy": [
+          "officialDrrmPlanNameAsReported": "Galas River",
+          "barangaysAsReportedInThirdPartyCopy": [
+            "Babatnin"
+          ],
+          "barangaysAsReportedInOfficialDRRMPlan": [
             "Babatnin"
           ]
         },
         {
           "name": "Pamarawan River",
           "officialPlanNameCorroborated": true,
-          "barangaysAsReportedOnlyInThirdPartyCopy": [
+          "officialDrrmPlanNameAsReported": "Pamarawan River",
+          "barangaysAsReportedInThirdPartyCopy": [
+            "Babatnin",
+            "Masile",
+            "Namayan",
+            "Pamarawan"
+          ],
+          "barangaysAsReportedInOfficialDRRMPlan": [
             "Babatnin",
             "Masile",
             "Namayan",
@@ -61,7 +89,12 @@
         {
           "name": "Pangagtan River",
           "officialPlanNameCorroborated": true,
-          "barangaysAsReportedOnlyInThirdPartyCopy": [
+          "officialDrrmPlanNameAsReported": "Pangagtan River",
+          "barangaysAsReportedInThirdPartyCopy": [
+            "Babatnin",
+            "Panasahan"
+          ],
+          "barangaysAsReportedInOfficialDRRMPlan": [
             "Babatnin",
             "Panasahan"
           ]
@@ -69,47 +102,76 @@
         {
           "name": "Bugwan River",
           "officialPlanNameCorroborated": true,
-          "barangaysAsReportedOnlyInThirdPartyCopy": [
+          "officialDrrmPlanNameAsReported": "Bugwan River",
+          "barangaysAsReportedInThirdPartyCopy": [
+            "Babatnin",
+            "Pamarawan"
+          ],
+          "barangaysAsReportedInOfficialDRRMPlan": [
             "Babatnin",
             "Pamarawan"
           ]
         },
         {
           "name": "Lico-lico River",
-          "officialPlanNameCorroborated": false,
-          "barangaysAsReportedOnlyInThirdPartyCopy": [
+          "officialPlanNameCorroborated": true,
+          "officialDrrmPlanNameAsReported": "Lico-lico River",
+          "barangaysAsReportedInThirdPartyCopy": [
+            "Calero",
+            "Panasahan"
+          ],
+          "barangaysAsReportedInOfficialDRRMPlan": [
             "Calero",
             "Panasahan"
           ]
         },
         {
           "name": "Matimbo River",
-          "officialPlanNameCorroborated": false,
-          "barangaysAsReportedOnlyInThirdPartyCopy": [
+          "officialPlanNameCorroborated": true,
+          "officialDrrmPlanNameAsReported": "Matimbo River",
+          "barangaysAsReportedInThirdPartyCopy": [
+            "Matimbo",
+            "Mambog"
+          ],
+          "barangaysAsReportedInOfficialDRRMPlan": [
             "Matimbo",
             "Mambog"
           ]
         },
         {
           "name": "Lagyo River",
-          "officialPlanNameCorroborated": false,
-          "barangaysAsReportedOnlyInThirdPartyCopy": [
+          "officialPlanNameCorroborated": true,
+          "officialDrrmPlanNameAsReported": "Lagyo River",
+          "barangaysAsReportedInThirdPartyCopy": [
+            "Matimbo",
+            "Panasahan"
+          ],
+          "barangaysAsReportedInOfficialDRRMPlan": [
             "Matimbo",
             "Panasahan"
           ]
         },
         {
           "name": "Manicnic River",
-          "officialPlanNameCorroborated": false,
-          "barangaysAsReportedOnlyInThirdPartyCopy": [
+          "officialPlanNameCorroborated": true,
+          "officialDrrmPlanNameAsReported": "Manicnic River",
+          "barangaysAsReportedInThirdPartyCopy": [
+            "Masile",
+            "Panasahan"
+          ],
+          "barangaysAsReportedInOfficialDRRMPlan": [
             "Masile",
             "Panasahan"
           ]
         },
         {
           "name": "Parila River",
-          "officialPlanNameCorroborated": false,
-          "barangaysAsReportedOnlyInThirdPartyCopy": [
+          "officialPlanNameCorroborated": true,
+          "officialDrrmPlanNameAsReported": "Parila River",
+          "barangaysAsReportedInThirdPartyCopy": [
+            "Panasahan"
+          ],
+          "barangaysAsReportedInOfficialDRRMPlan": [
             "Panasahan"
           ]
         }
@@ -117,7 +179,13 @@
       "creeks": [
         {
           "name": "Sapang Pari",
-          "barangaysAsReportedOnlyInThirdPartyCopy": [
+          "officialDrrmNameAsReported": "Sapang Pari",
+          "barangaysAsReportedInOfficialDRRMPlan": [
+            "Atlag",
+            "San Juan",
+            "Sto. Cristo"
+          ],
+          "barangaysAsReportedInThirdPartyCopy": [
             "Atlag",
             "San Juan",
             "Sto. Cristo"
@@ -125,94 +193,156 @@
         },
         {
           "name": "Sapang Dakila",
-          "barangaysAsReportedOnlyInThirdPartyCopy": [
+          "officialDrrmNameAsReported": "Sapang Dakila",
+          "barangaysAsReportedInOfficialDRRMPlan": [
+            "Bagong Bayan",
+            "Cofradia"
+          ],
+          "barangaysAsReportedInThirdPartyCopy": [
             "Bagong Bayan",
             "Cofradia"
           ]
         },
         {
           "name": "Balayong Creek",
-          "barangaysAsReportedOnlyInThirdPartyCopy": [
+          "officialDrrmNameAsReported": "Balayong Creek",
+          "barangaysAsReportedInOfficialDRRMPlan": [
+            "Balayong"
+          ],
+          "barangaysAsReportedInThirdPartyCopy": [
             "Balayong"
           ]
         },
         {
           "name": "Barihan Creek",
-          "barangaysAsReportedOnlyInThirdPartyCopy": [
+          "officialDrrmNameAsReported": "Barihan Creek",
+          "barangaysAsReportedInOfficialDRRMPlan": [
+            "Barihan"
+          ],
+          "barangaysAsReportedInThirdPartyCopy": [
             "Barihan"
           ]
         },
         {
           "name": "Apulid - Malanggam Creek",
-          "barangaysAsReportedOnlyInThirdPartyCopy": [
+          "officialDrrmNameAsReported": "Apulid - Malangam Creek",
+          "barangaysAsReportedInOfficialDRRMPlan": [
+            "Lugam",
+            "Look 1st",
+            "Longos",
+            "Bulihan"
+          ],
+          "barangaysAsReportedInThirdPartyCopy": [
             "Longos",
             "Bulihan"
           ]
         },
         {
           "name": "Caniogan Creek",
-          "barangaysAsReportedOnlyInThirdPartyCopy": [
+          "officialDrrmNameAsReported": "Caniogan Creek",
+          "barangaysAsReportedInOfficialDRRMPlan": [
+            "Caniogan"
+          ],
+          "barangaysAsReportedInThirdPartyCopy": [
             "Caniogan"
           ]
         },
         {
           "name": "Sapang Mabolo",
-          "barangaysAsReportedOnlyInThirdPartyCopy": [
+          "officialDrrmNameAsReported": "Sapang Mabolo",
+          "barangaysAsReportedInOfficialDRRMPlan": [
+            "Cofradia",
+            "Mabolo"
+          ],
+          "barangaysAsReportedInThirdPartyCopy": [
             "Cofradia",
             "Mabolo"
           ]
         },
         {
           "name": "Guinhawa Creek",
-          "barangaysAsReportedOnlyInThirdPartyCopy": [
+          "officialDrrmNameAsReported": "Guin h awa Creek",
+          "barangaysAsReportedInOfficialDRRMPlan": [
+            "Guinhawa"
+          ],
+          "barangaysAsReportedInThirdPartyCopy": [
             "Guinhawa"
           ]
         },
         {
           "name": "Estero de Mercado",
-          "barangaysAsReportedOnlyInThirdPartyCopy": [
+          "officialDrrmNameAsReported": "Estero de Mercado",
+          "barangaysAsReportedInOfficialDRRMPlan": [
+            "Liang",
+            "San Vicente"
+          ],
+          "barangaysAsReportedInThirdPartyCopy": [
             "Liang",
             "San Vicente"
           ]
         },
         {
           "name": "Sta. Rita Creek",
-          "barangaysAsReportedOnlyInThirdPartyCopy": [
+          "officialDrrmNameAsReported": "Sta. Rita Creek",
+          "barangaysAsReportedInOfficialDRRMPlan": [
+            "Ligas"
+          ],
+          "barangaysAsReportedInThirdPartyCopy": [
             "Ligas"
           ]
         },
         {
           "name": "Mojon Creek",
-          "barangaysAsReportedOnlyInThirdPartyCopy": [
+          "officialDrrmNameAsReported": "Mojon Creek",
+          "barangaysAsReportedInOfficialDRRMPlan": [
+            "Mojon"
+          ],
+          "barangaysAsReportedInThirdPartyCopy": [
             "Mojon"
           ]
         },
         {
           "name": "Santor Creek",
-          "barangaysAsReportedOnlyInThirdPartyCopy": [
+          "officialDrrmNameAsReported": "Santor Creek",
+          "barangaysAsReportedInOfficialDRRMPlan": [
+            "Santor"
+          ],
+          "barangaysAsReportedInThirdPartyCopy": [
             "Santor"
           ]
         },
         {
           "name": "Sapang Baliwag",
-          "barangaysAsReportedOnlyInThirdPartyCopy": [
+          "officialDrrmNameAsReported": "Sapang Baliwag",
+          "barangaysAsReportedInOfficialDRRMPlan": [
+            "Santor"
+          ],
+          "barangaysAsReportedInThirdPartyCopy": [
             "Santor"
           ]
         },
         {
           "name": "Sumapang Bata Creek",
-          "barangaysAsReportedOnlyInThirdPartyCopy": [
+          "officialDrrmNameAsReported": "Sumapang Bata Creek",
+          "barangaysAsReportedInOfficialDRRMPlan": [
+            "Sumapang Bata"
+          ],
+          "barangaysAsReportedInThirdPartyCopy": [
             "Sumapang Bata"
           ]
         },
         {
           "name": "Sumapang Matanda Creek",
-          "barangaysAsReportedOnlyInThirdPartyCopy": [
+          "officialDrrmNameAsReported": "Sumapang Matanda Creek",
+          "barangaysAsReportedInOfficialDRRMPlan": [
+            "Sumapang Matanda"
+          ],
+          "barangaysAsReportedInThirdPartyCopy": [
             "Sumapang Matanda"
           ]
         }
       ],
-      "interpretation": "These are source-derived research leads only. Barangay associations are copied as reported from the unauthenticated profile copy and are not an independently verified hydrological crosswalk. No channel geometry, aliases, flow connectivity, or surveyed reaches were established."
+      "interpretation": "The city-hosted DRRM plan provides source-reported names and drain-area barangay labels for all 11 rivers and 15 creeks also listed in the third-party Ecological Profile copy. Differences are typographic variants for Apulid-Malangam/Malang(g)am and Guinhawa; the tributary table continues across a page, which explains why the first extraction showed only 11 creek rows. The barangay labels are not independently verified hydrological crosswalks. Neither table establishes channel geometry, aliases, flow connectivity, or a fish inventory."
     },
     "catchStatistics": {
       "sourceId": "malolos-ecological-profile-2023-scribd-copy",
@@ -242,15 +372,19 @@
       "officialLccapPdfReviewed": true,
       "thirdPartyCopyUploaderAuthenticated": false,
       "itemSpecificReuseTermsVerified": false,
-      "decision": "Record source citations and concise facts only. Do not reproduce the profile tables/maps or project catch totals into public app data. Seek an official profile copy and an independently reusable, taxon-resolved fish survey."
+      "decision": "Record source citations and concise facts only. Do not reproduce the profile tables/maps or project catch totals into public app data. Seek an official profile copy and an independently reusable, taxon-resolved fish survey.",
+      "officialDrrmPlanReviewed": true,
+      "officialDrrmPlanUrl": "https://maloloscity.gov.ph/wp-content/uploads/2023/05/City-of-Malolos-DRRM-Plan-2022-2026.pdf",
+      "officialDrrmPlanListsAll26Names": true
     }
   },
   "disposition": {
-    "sourceRegistryRecordsAdded": 2,
-    "namedWatercourseResearchLeadsAdded": 26,
-    "officialPlanCorroboratedRiverNames": 5,
-    "thirdPartyCopyOnlyRiverNames": 6,
-    "thirdPartyCopyOnlyCreekNames": 15,
+    "sourceRegistryRecordsAdded": 1,
+    "namedWatercourseLeadsAdded": 0,
+    "existingMalolosLeadsUpdated": 26,
+    "officialDrrmPlanCorroboratedNames": 26,
+    "officialLccapCorroboratedRiverNames": 5,
+    "thirdPartyOnlyCreekNames": 0,
     "fishTaxaAdded": 0,
     "occurrenceRecordsAdded": 0,
     "dietClaimsAdded": 0,
@@ -258,7 +392,8 @@
     "geometryAdded": false,
     "publicAppRowsAdded": 0,
     "publicationApproval": false,
-    "regionalReleaseApproved": false
+    "regionalReleaseApproved": false,
+    "watercourseNameSpellingVariants": 2
   },
   "nextActions": [
     "Search for an official City of Malolos Ecological Profile and verify the table provenance, version, and fishery definitions before relying on the third-party copy.",
@@ -268,14 +403,19 @@
   ],
   "sources": [
     {
+      "sourceId": "city-malolos-drrm-plan-2022-2026",
+      "url": "https://maloloscity.gov.ph/wp-content/uploads/2023/05/City-of-Malolos-DRRM-Plan-2022-2026.pdf",
+      "supports": "Official city-hosted DRRM tributary table lists all 11 rivers and 15 creeks with source-reported drain-area barangay labels; no fish inventory or channel geometry."
+    },
+    {
       "sourceId": "city-malolos-enhanced-lccap-2023-2032",
       "url": "https://maloloscity.gov.ph/wp-content/uploads/2023/05/Enhanced-LCCAP-2023-2032.pdf",
-      "supports": "Official city-hosted plan names five Malolos rivers; no fish list or mapped channel geometry."
+      "supports": "Official city-hosted climate plan corroborates five of the 11 named rivers."
     },
     {
       "sourceId": "malolos-ecological-profile-2023-scribd-copy",
       "url": "https://www.scribd.com/document/846730135/Ecological-Profile-2023",
-      "supports": "Third-party Ecological Profile copy lists 11 rivers, 15 creeks, barangay associations, and aggregate catch tables; uploader/version and reuse terms unverified."
+      "supports": "Third-party copy lists the same 11 rivers and 15 creeks plus aggregate catch tables; no taxa or watercourse-specific catch allocation."
     }
   ]
 }
