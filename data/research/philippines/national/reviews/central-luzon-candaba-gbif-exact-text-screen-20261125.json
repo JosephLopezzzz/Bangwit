@@ -1,0 +1,176 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "central-luzon-candaba-gbif-exact-text-screen-20261125",
+  "checkedOn": "2026-11-25",
+  "phaseId": "L3",
+  "regionId": "0300000000",
+  "regionName": "Region III (Central Luzon)",
+  "status": "bounded-colxr-actinopterygii-exact-field-screen-complete;not-absence-evidence",
+  "source": {
+    "provider": "Global Biodiversity Information Facility",
+    "endpoint": "https://api.gbif.org/v1/occurrence/search",
+    "documentation": "https://techdocs.gbif.org/en/openapi/v1/occurrence",
+    "citation": "Global Biodiversity Information Facility. Occurrence Search API v1. CoL XR Actinopterygii exact-field searches reviewed 2026-11-25."
+  },
+  "question": "Do corrected GBIF CoL XR Actinopterygii exact-field searches expose indexed occurrence candidates for Candaba wetland and its named historical locality leads?",
+  "query": {
+    "provider": "GBIF Occurrence Search API v1",
+    "endpoint": "https://api.gbif.org/v1/occurrence/search",
+    "documentation": "https://techdocs.gbif.org/en/openapi/v1/occurrence",
+    "filters": {
+      "country": "PH",
+      "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+      "taxonKey": "8VR36",
+      "limit": 0
+    },
+    "taxonLabel": "Catalogue of Life Extended Release Actinopterygii",
+    "taxonomicLimit": "Ray-finned fishes only; this filter does not cover sharks and rays or every taxonomic group commonly called fish.",
+    "fieldSemantics": "Queries use supported GBIF occurrence-search waterBody or locality text fields. A text match is a discovery lead, not confirmation of the named waterbody or locality. The endpoint has no municipality or county filter; unsupported fields are not used.",
+    "rawStorage": "Count-only response JSON files are local-only under the ignored research raw directory; each query records its SHA-256 and byte length."
+  },
+  "leads": [
+    {
+      "id": "candaba-wetland",
+      "name": "Candaba Swamp / Candaba Wetlands",
+      "basis": "Name variants used as text-search leads only; no geometry or official waterbody identity is asserted."
+    },
+    {
+      "id": "maasin-river-candaba-context",
+      "name": "Maasin River, Candaba context",
+      "basis": "Historical research lead identifies Maasin River near Barangay San Agustin, Candaba; GBIF string matches would need locality, event, dataset, and record triage."
+    }
+  ],
+  "results": [
+    {
+      "field": "waterBody",
+      "searchValue": "Candaba Swamp",
+      "rationale": "Named wetland lead from the Candaba inventory research.",
+      "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&waterBody=Candaba+Swamp&limit=0",
+      "httpStatus": 200,
+      "count": 0,
+      "resultsReturned": 0,
+      "responseBytes": 77,
+      "responseSha256": "842e210a1dc11a43b863a7438d0b8ae273f0182c290a7c64e760c176778cc9fa",
+      "rawFile": "raw/central-luzon-candaba-gbif-screen-20261125/01-waterBody-candaba-swamp.json"
+    },
+    {
+      "field": "waterBody",
+      "searchValue": "Candaba Wetlands",
+      "rationale": "Common plural name variant for the same wetland lead.",
+      "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&waterBody=Candaba+Wetlands&limit=0",
+      "httpStatus": 200,
+      "count": 0,
+      "resultsReturned": 0,
+      "responseBytes": 77,
+      "responseSha256": "842e210a1dc11a43b863a7438d0b8ae273f0182c290a7c64e760c176778cc9fa",
+      "rawFile": "raw/central-luzon-candaba-gbif-screen-20261125/02-waterBody-candaba-wetlands.json"
+    },
+    {
+      "field": "waterBody",
+      "searchValue": "Candaba",
+      "rationale": "Short waterBody text variant.",
+      "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&waterBody=Candaba&limit=0",
+      "httpStatus": 200,
+      "count": 0,
+      "resultsReturned": 0,
+      "responseBytes": 77,
+      "responseSha256": "842e210a1dc11a43b863a7438d0b8ae273f0182c290a7c64e760c176778cc9fa",
+      "rawFile": "raw/central-luzon-candaba-gbif-screen-20261125/03-waterBody-candaba.json"
+    },
+    {
+      "field": "waterBody",
+      "searchValue": "Maasin River",
+      "rationale": "Historical tributary lead described in Candaba research; text match alone cannot establish Candaba locality.",
+      "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&waterBody=Maasin+River&limit=0",
+      "httpStatus": 200,
+      "count": 0,
+      "resultsReturned": 0,
+      "responseBytes": 77,
+      "responseSha256": "842e210a1dc11a43b863a7438d0b8ae273f0182c290a7c64e760c176778cc9fa",
+      "rawFile": "raw/central-luzon-candaba-gbif-screen-20261125/04-waterBody-maasin-river.json"
+    },
+    {
+      "field": "locality",
+      "searchValue": "Candaba",
+      "rationale": "Exact locality text for the municipality name.",
+      "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&locality=Candaba&limit=0",
+      "httpStatus": 200,
+      "count": 0,
+      "resultsReturned": 0,
+      "responseBytes": 77,
+      "responseSha256": "842e210a1dc11a43b863a7438d0b8ae273f0182c290a7c64e760c176778cc9fa",
+      "rawFile": "raw/central-luzon-candaba-gbif-screen-20261125/05-locality-candaba.json"
+    },
+    {
+      "field": "locality",
+      "searchValue": "Candaba, Pampanga",
+      "rationale": "Municipality and province locality variant.",
+      "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&locality=Candaba%2C+Pampanga&limit=0",
+      "httpStatus": 200,
+      "count": 0,
+      "resultsReturned": 0,
+      "responseBytes": 77,
+      "responseSha256": "842e210a1dc11a43b863a7438d0b8ae273f0182c290a7c64e760c176778cc9fa",
+      "rawFile": "raw/central-luzon-candaba-gbif-screen-20261125/06-locality-candaba-pampanga.json"
+    },
+    {
+      "field": "locality",
+      "searchValue": "Candaba Swamp",
+      "rationale": "Wetland-name locality variant.",
+      "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&locality=Candaba+Swamp&limit=0",
+      "httpStatus": 200,
+      "count": 0,
+      "resultsReturned": 0,
+      "responseBytes": 77,
+      "responseSha256": "842e210a1dc11a43b863a7438d0b8ae273f0182c290a7c64e760c176778cc9fa",
+      "rawFile": "raw/central-luzon-candaba-gbif-screen-20261125/07-locality-candaba-swamp.json"
+    },
+    {
+      "field": "locality",
+      "searchValue": "Candaba Wetlands",
+      "rationale": "Wetland-name locality variant.",
+      "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&locality=Candaba+Wetlands&limit=0",
+      "httpStatus": 200,
+      "count": 0,
+      "resultsReturned": 0,
+      "responseBytes": 77,
+      "responseSha256": "842e210a1dc11a43b863a7438d0b8ae273f0182c290a7c64e760c176778cc9fa",
+      "rawFile": "raw/central-luzon-candaba-gbif-screen-20261125/08-locality-candaba-wetlands.json"
+    },
+    {
+      "field": "locality",
+      "searchValue": "San Agustin, Candaba",
+      "rationale": "Locality string from a historical Maasin River lead.",
+      "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&locality=San+Agustin%2C+Candaba&limit=0",
+      "httpStatus": 200,
+      "count": 0,
+      "resultsReturned": 0,
+      "responseBytes": 77,
+      "responseSha256": "842e210a1dc11a43b863a7438d0b8ae273f0182c290a7c64e760c176778cc9fa",
+      "rawFile": "raw/central-luzon-candaba-gbif-screen-20261125/09-locality-san-agustin-candaba.json"
+    },
+    {
+      "field": "locality",
+      "searchValue": "Maasin River, Candaba",
+      "rationale": "River-plus-municipality locality variant.",
+      "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&locality=Maasin+River%2C+Candaba&limit=0",
+      "httpStatus": 200,
+      "count": 0,
+      "resultsReturned": 0,
+      "responseBytes": 77,
+      "responseSha256": "842e210a1dc11a43b863a7438d0b8ae273f0182c290a7c64e760c176778cc9fa",
+      "rawFile": "raw/central-luzon-candaba-gbif-screen-20261125/10-locality-maasin-river-candaba.json"
+    }
+  ],
+  "interpretation": {
+    "nonzeroQueries": 0,
+    "occurrenceRowsReturned": 0,
+    "zeroQueriesAreAbsenceEvidence": false,
+    "occurrenceRowsAdmitted": 0,
+    "speciesAssertionsAdded": 0,
+    "coordinatesPublished": 0,
+    "geometryAdded": false,
+    "publicProjection": false,
+    "disposition": "This is a bounded text-index screen. Zeroes do not establish species absence and may miss spelling variants, missing locality/waterBody metadata, unindexed records, and records outside the selected ray-finned-fish checklist. Triage every nonzero result against the verbatim locality/waterBody, event date, basis of record, dataset and record-level license, coordinate uncertainty, taxonomic issues, and source dataset before assigning any record to Candaba or a named waterbody."
+  }
+}
