@@ -1,0 +1,195 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "central-luzon-tarlac-tambo-lake-locality-geometry-crosswalk-20261125",
+  "reviewedOn": "2026-11-25",
+  "phaseId": "L3",
+  "regionId": "0300000000",
+  "regionName": "Region III (Central Luzon)",
+  "provinceId": "0305700000",
+  "provinceName": "Tarlac",
+  "waterbodyNamesAsReported": [
+    "Tambo Lake",
+    "Lake Tambo"
+  ],
+  "status": "locality-corroborated;name-variant-and-geometry-crosswalk-unresolved;microcrustacean-locality-only;no-fish-evidence;research-only",
+  "question": "Do independent locality, sampling, and mapped-wetland sources establish that the Tambo Lake / Lake Tambo lead in Sta. Juliana, Capas is the same lake and provide a publishable boundary?",
+  "sourceIds": [
+    "pna-bfar-capas-tarlac-lakes-fingerling-release-2020",
+    "capas-citizens-charter-2024-tambo-lake-locality",
+    "lopez-et-al-2017-freshwater-microcrustaceans-tambo-lake-site",
+    "denr-bmb-atlas-luzon-2014",
+    "denr-agno-river-basin-integrated-master-plan-camiling",
+    "osm-way-103928039-tambo-lake-outline"
+  ],
+  "waterbodyId": null,
+  "findings": {
+    "officialLocality": {
+      "sourceId": "capas-citizens-charter-2024-tambo-lake-locality",
+      "sourceReportedName": "Tambo Lake",
+      "administrativeAreaAsReported": "Barangay Sta. Juliana, Capas, Tarlac",
+      "page": 118,
+      "supports": "Municipal charter explicitly lists Tambo Lake under Capas tourist destinations and associates the listing with Barangay Sta. Juliana.",
+      "doesNotSupport": [
+        "exact shoreline or legal waterbody boundary",
+        "coordinates or CRS",
+        "fish species or capture records",
+        "current access, safety, or fishing rules"
+      ]
+    },
+    "publishedSamplingSite": {
+      "sourceId": "lopez-et-al-2017-freshwater-microcrustaceans-tambo-lake-site",
+      "nameAsReported": "Lake Tambo",
+      "municipalityCityAsPrinted": "Santa Juliana",
+      "provinceAsPrinted": "Tarlac",
+      "tableSiteNumber": 25,
+      "coordinateAsPrinted": {
+        "latitude": 15.2917,
+        "longitude": 120.3792,
+        "coordinateReferenceSystem": null,
+        "datum": null
+      },
+      "coordinateOrderAsPrinted": [
+        "latitude",
+        "longitude"
+      ],
+      "samplingProgramPeriod": "2008–2015",
+      "siteSpecificCollectionDate": null,
+      "biologicalScope": "Freshwater microcrustacean zooplankton sampling sites; not fish sampling.",
+      "supports": "A published historical sampling-locality lead near the Capas charter locality. The spelling order differs from PNA and Capas charter but exact waterbody identity is not formally crosswalked.",
+      "doesNotSupport": [
+        "fish occurrence or fish inventory",
+        "assigning every taxon in the nationwide checklist to this site",
+        "site-specific collection date",
+        "precise positional accuracy or lake boundary"
+      ]
+    },
+    "historicalWetlandArea": {
+      "sourceId": "denr-bmb-atlas-luzon-2014",
+      "atlasRow": 60,
+      "nameAsReported": "Tambo Lake",
+      "wetlandTypeAsReported": "Lake",
+      "approximateAreaHa": 91.98,
+      "regionAsReported": "Region III",
+      "municipality": null,
+      "coordinates": null,
+      "boundary": null,
+      "crs": null,
+      "sourceReuseStatement": "Educational or non-profit reproduction with acknowledgement per BMB copyright notice; Bangwit public-app reuse remains unapproved.",
+      "crosswalkDisposition": "Regional name and approximate area context only; no municipality is reported in this row, so identity with the Capas/Sta. Juliana lake is not independently proven."
+    },
+    "denrBasinPlanCorroboration": {
+      "sourceId": "denr-agno-river-basin-integrated-master-plan-camiling",
+      "table": "Table 70, Inland Wetlands",
+      "nameAsReported": "Tambo Lake",
+      "approximateAreaHa": 92,
+      "regionAsReported": "3",
+      "attribution": "Table cites BMB (2014), Atlas of Inland Wetlands in Mainland Luzon.",
+      "interpretation": "Rounded secondary restatement of historical regional area context; not an independent survey or boundary."
+    },
+    "osmCandidateOutline": {
+      "sourceId": "osm-way-103928039-tambo-lake-outline",
+      "wayId": 103928039,
+      "version": 3,
+      "lastEdited": "2017-02-19T17:16:09Z",
+      "tags": {
+        "name": "Tambo Lake",
+        "natural": "water",
+        "source": "Bing"
+      },
+      "nodeCountIncludingClosure": 399,
+      "uniqueNodeCount": 398,
+      "closedRing": true,
+      "boundingBoxWgs84LikeCoordinates": {
+        "west": 120.3670014,
+        "south": 15.2886234,
+        "east": 120.379616,
+        "north": 15.3047059
+      },
+      "sphericalAreaEstimateHa": 79.37,
+      "areaMethod": "Spherical polygon area using Earth radius 6,371,008.8 m and the closed-ring longitude/sine-latitude summation formula; derived estimate, not a surveyed area.",
+      "paperCoordinateRelation": {
+        "reportedCoordinateLonLat": [
+          120.3792,
+          15.2917
+        ],
+        "insidePolygon": false,
+        "nearestEdgeDistanceApproxMeters": 106,
+        "distanceMethod": "Local equirectangular approximation at latitude 15.2917; rounded to nearest metre."
+      },
+      "license": "Open Database License 1.0 (ODbL); attribution to OpenStreetMap contributors and ODbL notice required.",
+      "interpretation": "Community-mapped outline candidate only. The near-edge point and approximate areas (79.37 ha versus atlas 91.98 ha) do not settle waterbody identity or true extent."
+    }
+  },
+  "synthesis": {
+    "namesAsReported": "PNA and Capas use “Tambo Lake”; the microcrustacean paper and OSM use “Lake Tambo” / “Tambo Lake”. Shared Capas/Tarlac locality context supports investigating a name-variant relationship, but no formal exact-identity crosswalk was established.",
+    "geometry": "No authoritative or field-verified boundary was found. Do not promote the OSM candidate to app geometry; the coordinate offset and area difference remain unresolved and the OSM source is community mapped.",
+    "fishEvidence": "No fish taxon-resolved survey, fish occurrence, or catch record for this lake was added by this review. The paper concerns microcrustacean zooplankton; taxa in its aggregate nationwide checklist are not site observations absent explicit site linkage.",
+    "sanMarcosLake": "No new locality, survey, or geometry evidence for San Marcos Lake was found; retain the prior PNA stocking-only lead unchanged."
+  },
+  "disposition": {
+    "sourceRegistryRecordsAdded": 3,
+    "existingSourceRegistryRecordsUpdated": 2,
+    "waterbodyResearchLeadRecordsUpdated": 1,
+    "scientificFishSpeciesAssertionsAdded": 0,
+    "fishOccurrenceRecordsAdded": 0,
+    "siteSpecificMicrocrustaceanTaxonRowsAdded": 0,
+    "fishDietClaimsAdded": 0,
+    "imagesAdded": 0,
+    "aliasesResolved": 0,
+    "administrativeAssignmentsAdded": 0,
+    "geometryAdded": false,
+    "publicAppRowsAdded": 0,
+    "publicationApproval": false,
+    "regionalReleaseApproved": false
+  },
+  "localResearchStorage": {
+    "rawDirectoryGitIgnored": true,
+    "snapshots": [
+      {
+        "path": "raw/national/osm-tambo-lake-crosswalk-20261125/way-103928039-full.json",
+        "bytes": 68932,
+        "sha256": "70a122ca566233beebb27ba0aec7f6456b824ebf79a0e90f895061d6a79a4095"
+      }
+    ]
+  },
+  "snapshotHashes": {
+    "sourceRegistry": "44deac04c32f20d32d975b66eede7ae9ae866f4bea71d4605158f3f2cce7ad72"
+  },
+  "nextActions": [
+    "Seek recent and historical taxon-resolved fish surveys or specimen vouchers explicitly tied to Tambo Lake/Sta. Juliana; do not treat stocking or microcrustacean records as fish evidence.",
+    "Seek a municipality-specific, datum-documented wetland boundary or independent field/geospatial survey before selecting geometry; keep the OSM candidate out of app data.",
+    "Keep Tambo and San Marcos Lake fish baselines, Central Luzon, and Luzon incomplete."
+  ],
+  "sources": [
+    {
+      "sourceId": "pna-bfar-capas-tarlac-lakes-fingerling-release-2020",
+      "url": "https://www.pna.gov.ph/articles/1110424",
+      "supports": "The prior review records a 2020 Capas stocking event under the “Tambo Lake” spelling; this is management context only and does not establish the exact Lake Tambo identity or fish presence."
+    },
+    {
+      "sourceId": "capas-citizens-charter-2024-tambo-lake-locality",
+      "url": "https://www.capastarlac.gov.ph/wp-content/uploads/Capas_CC_20240326-Citizens-Charter.pdf",
+      "supports": "Capas municipal charter page 118 names Tambo Lake and associates it with Barangay Sta. Juliana."
+    },
+    {
+      "sourceId": "lopez-et-al-2017-freshwater-microcrustaceans-tambo-lake-site",
+      "url": "https://www.science.nus.edu.sg/wp-content/uploads/sites/11/2024/07/65rbz623-654.pdf",
+      "supports": "Methods and Table 1 site 25 identify a 2008–2015 microcrustacean sampling-locality frame and list Lake Tambo, Santa Juliana, Tarlac, with coordinates; it is not fish evidence."
+    },
+    {
+      "sourceId": "denr-bmb-atlas-luzon-2014",
+      "url": "https://www.ramsar.org/sites/default/files/documents/library/atlas_inland_wetland_mainland_luzon_philippines_2014_e.pdf",
+      "supports": "BMB Atlas Table 1 row 60 lists Tambo Lake as a Region III lake with approximate area 91.98 ha; no municipality or boundary."
+    },
+    {
+      "sourceId": "denr-agno-river-basin-integrated-master-plan-camiling",
+      "url": "https://faspselib.denr.gov.ph/uploads/materials/289ed13f-742d-4b76-aeb2-e0a3234acca4/d77c2db4-b131-4c11-b9f5-a038a13ee7b1.pdf",
+      "supports": "DENR-hosted report Table 70 repeats the BMB-derived Tambo Lake approximate area as 92.0 ha for Region 3."
+    },
+    {
+      "sourceId": "osm-way-103928039-tambo-lake-outline",
+      "url": "https://api.openstreetmap.org/api/0.6/way/103928039/full.json",
+      "supports": "OSM community-mapped version 3 outline metadata and ring used only to calculate candidate bbox/area/proximity; no app geometry."
+    }
+  ]
+}
