@@ -1,0 +1,994 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "central-luzon-pampanga-estuary-catalog-taxonomy-crosscheck-20261126",
+  "reviewedOn": "2026-11-26",
+  "phaseId": "L3",
+  "regionId": "0300000000",
+  "regionName": "Region III (Central Luzon)",
+  "waterbodyNameAsReported": "Pampanga estuary",
+  "status": "catalog-name-crosscheck-complete;source-identities-and-stations-unverified;research-only",
+  "question": "How do the 27 author-reported Pampanga estuary Table 1 labels compare with the current Catalog of Fishes while preserving source ranks, spelling, and unresolved sampling-site identities?",
+  "sourceIds": [
+    "abroguena-et-al-pampanga-estuary-2020"
+  ],
+  "inputs": [
+    "data/research/philippines/central-luzon-pampanga-estuary-fish-study-review-20261024.json"
+  ],
+  "inputSha256": "9a671227d72934f5457b390f48b048498bf5b17ad93fa98c2b6ad68254b69623",
+  "method": {
+    "nameAuthority": "California Academy of Sciences, Eschmeyer's Catalog of Fishes; exact source-name queries, a species-level base-name query for the trinomial, spelling candidate, and genus-filtered species listings accessed 2026-11-26.",
+    "catalogVersion": "18 Nov. 2026",
+    "procedure": "Preserved the source's 27 printed rows and identification ranks. Queried binomials as printed; queried only the binomial base for the single trinomial and did not infer subspecies validity. Queried the Oxyurichthys spelling candidate separately. Used genus-filtered species listings only to compare the two genus-only rows' families; no species from those listings is assigned to the source row. Raw HTML responses and SHA-256 hashes are retained in ignored local research storage.",
+    "limits": "The Catalog checks nomenclature and classification, not specimen identity, voucher evidence, the study's sampled station or reach assignment, current presence, fishery availability, food safety, completeness of an estuary checklist, or permission to reuse the source table. A valid-name match is not a redetermination of study specimens. The trinomial query covers only the base binomial."
+  },
+  "taxonCrosswalk": [
+    {
+      "sourceRow": 1,
+      "sourceNameVerbatim": null,
+      "familyAsPrinted": "Ophichthyidae",
+      "sourceRank": "family-only",
+      "currentCatalogFamily": null,
+      "familyComparison": null,
+      "disposition": "family-only source identification; no genus or species identity can be checked"
+    },
+    {
+      "sourceRow": 2,
+      "sourceNameVerbatim": "Engraulis japonicus",
+      "familyAsPrinted": "Engraulidae",
+      "sourceRank": "binomial",
+      "exactCatalogQuery": {
+        "queriedName": "Engraulis japonicus",
+        "queryRole": "source-table-exact-binomial",
+        "sourceLabel": "Engraulis japonicus",
+        "sourceRank": "binomial",
+        "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Engraulis&species=japonicus&tbl=species",
+        "resultClass": "valid-name",
+        "selectedCatalogRowName": "Engraulis japonicus",
+        "currentStatus": "Valid as Engraulis japonicus Temminck & Schlegel 1846. Engraulidae: Engraulinae.",
+        "statusName": "Engraulis japonicus",
+        "responseVersion": "18 Nov. 2026",
+        "matchingRows": 1,
+        "rawResponse": {
+          "path": "data/research/philippines/raw/national/pampanga-estuary-catalog-taxonomy-20261126/01-engraulis-japonicus.html",
+          "bytes": 14701,
+          "sha256": "d324881919f57ba5429823f564ce0ec47ec1417c5119d974b18b9e328d2aff8a"
+        }
+      },
+      "currentCatalogNameCandidate": "Engraulis japonicus",
+      "currentCatalogFamily": "Engraulidae",
+      "currentCatalogClassification": "Engraulidae: Engraulinae.",
+      "familyComparison": {
+        "sourceFamily": "Engraulidae",
+        "catalogFamily": "Engraulidae",
+        "agrees": true
+      },
+      "comparisonCandidates": [],
+      "disposition": "catalog-current-name-match; source specimen and locality remain unverified"
+    },
+    {
+      "sourceRow": 3,
+      "sourceNameVerbatim": "Anodontostoma sp.",
+      "familyAsPrinted": "Clupeidae",
+      "sourceRank": "genus-only",
+      "genusFamilyCheck": {
+        "genus": "Anodontostoma",
+        "sourceLabel": "Anodontostoma sp.",
+        "sourceFamily": "Clupeidae",
+        "catalogFamily": "Dorosomatidae",
+        "distinctFamilies": [
+          "Dorosomatidae"
+        ],
+        "catalogSpeciesRows": 3,
+        "allCatalogRows": 9,
+        "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Anodontostoma&tbl=species",
+        "responseVersion": "18 Nov. 2026",
+        "rawResponse": {
+          "path": "data/research/philippines/raw/national/pampanga-estuary-catalog-taxonomy-20261126/26-anodontostoma-genus-list.html",
+          "bytes": 20508,
+          "sha256": "1d842a48e438a8297aaa412f0c2aedacee14f398a837f6928696128ce786d966"
+        },
+        "disposition": "genus species-list family crosswalk only; no species identity inferred"
+      },
+      "currentCatalogFamily": "Dorosomatidae",
+      "familyComparison": {
+        "sourceFamily": "Clupeidae",
+        "catalogFamily": "Dorosomatidae",
+        "agrees": false
+      },
+      "disposition": "genus-only; family comparison available; species identity remains unresolved"
+    },
+    {
+      "sourceRow": 4,
+      "sourceNameVerbatim": "Arius manillensis",
+      "familyAsPrinted": "Ariidae",
+      "sourceRank": "binomial",
+      "exactCatalogQuery": {
+        "queriedName": "Arius manillensis",
+        "queryRole": "source-table-exact-binomial",
+        "sourceLabel": "Arius manillensis",
+        "sourceRank": "binomial",
+        "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Arius&species=manillensis&tbl=species",
+        "resultClass": "valid-name",
+        "selectedCatalogRowName": "Arius manillensis",
+        "currentStatus": "Valid as Arius manillensis Valenciennes 1840. Ariidae: Ariinae.",
+        "statusName": "Arius manillensis",
+        "responseVersion": "18 Nov. 2026",
+        "matchingRows": 1,
+        "rawResponse": {
+          "path": "data/research/philippines/raw/national/pampanga-estuary-catalog-taxonomy-20261126/02-arius-manillensis.html",
+          "bytes": 11461,
+          "sha256": "d5cd5a3b3c95e85471558e29c7b567dec88b02fc693c09e7f952aaf2b61b4ca1"
+        }
+      },
+      "currentCatalogNameCandidate": "Arius manillensis",
+      "currentCatalogFamily": "Ariidae",
+      "currentCatalogClassification": "Ariidae: Ariinae.",
+      "familyComparison": {
+        "sourceFamily": "Ariidae",
+        "catalogFamily": "Ariidae",
+        "agrees": true
+      },
+      "comparisonCandidates": [],
+      "disposition": "catalog-current-name-match; source specimen and locality remain unverified"
+    },
+    {
+      "sourceRow": 5,
+      "sourceNameVerbatim": "Valamugil perussi",
+      "familyAsPrinted": "Mugilidae",
+      "sourceRank": "binomial",
+      "exactCatalogQuery": {
+        "queriedName": "Valamugil perussi",
+        "queryRole": "source-table-exact-binomial",
+        "sourceLabel": "Valamugil perussi",
+        "sourceRank": "binomial",
+        "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Valamugil&species=perussi&tbl=species",
+        "resultClass": "status-unresolved",
+        "selectedCatalogRowName": null,
+        "currentStatus": null,
+        "statusName": null,
+        "responseVersion": "18 Nov. 2026",
+        "matchingRows": 0,
+        "rawResponse": {
+          "path": "data/research/philippines/raw/national/pampanga-estuary-catalog-taxonomy-20261126/03-valamugil-perussi.html",
+          "bytes": 8860,
+          "sha256": "e0d08c48e987b9762f46e91255fc9868c6bd6c85f06dc0cc66ba92db6bb85614"
+        }
+      },
+      "currentCatalogNameCandidate": null,
+      "currentCatalogFamily": null,
+      "currentCatalogClassification": null,
+      "familyComparison": null,
+      "comparisonCandidates": [],
+      "disposition": "exact source binomial unresolved; no accepted-name candidate inferred"
+    },
+    {
+      "sourceRow": 6,
+      "sourceNameVerbatim": "Ambassis nalua",
+      "familyAsPrinted": "Ambassidae",
+      "sourceRank": "binomial",
+      "exactCatalogQuery": {
+        "queriedName": "Ambassis nalua",
+        "queryRole": "source-table-exact-binomial",
+        "sourceLabel": "Ambassis nalua",
+        "sourceRank": "binomial",
+        "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Ambassis&species=nalua&tbl=species",
+        "resultClass": "valid-name",
+        "selectedCatalogRowName": "Chanda nalua",
+        "currentStatus": "Valid as Ambassis nalua (Hamilton 1822). Ambassidae.",
+        "statusName": "Ambassis nalua",
+        "responseVersion": "18 Nov. 2026",
+        "matchingRows": 1,
+        "rawResponse": {
+          "path": "data/research/philippines/raw/national/pampanga-estuary-catalog-taxonomy-20261126/04-ambassis-nalua.html",
+          "bytes": 11626,
+          "sha256": "ff4e90a462d1cc9b0c0324d3132aa0047dca6a4037bd1164902c042f69ebd8de"
+        }
+      },
+      "currentCatalogNameCandidate": "Ambassis nalua",
+      "currentCatalogFamily": "Ambassidae",
+      "currentCatalogClassification": "Ambassidae.",
+      "familyComparison": {
+        "sourceFamily": "Ambassidae",
+        "catalogFamily": "Ambassidae",
+        "agrees": true
+      },
+      "comparisonCandidates": [],
+      "disposition": "catalog-current-name-match; source specimen and locality remain unverified"
+    },
+    {
+      "sourceRow": 7,
+      "sourceNameVerbatim": "Apogon kiensis",
+      "familyAsPrinted": "Apogonidae",
+      "sourceRank": "binomial",
+      "exactCatalogQuery": {
+        "queriedName": "Apogon kiensis",
+        "queryRole": "source-table-exact-binomial",
+        "sourceLabel": "Apogon kiensis",
+        "sourceRank": "binomial",
+        "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Apogon&species=kiensis&tbl=species",
+        "resultClass": "valid-name",
+        "selectedCatalogRowName": "Apogon kiensis",
+        "currentStatus": "Valid as Ostorhinchus kiensis (Jordan & Snyder 1901). Apogonidae: Apogoninae.",
+        "statusName": "Ostorhinchus kiensis",
+        "responseVersion": "18 Nov. 2026",
+        "matchingRows": 1,
+        "rawResponse": {
+          "path": "data/research/philippines/raw/national/pampanga-estuary-catalog-taxonomy-20261126/05-apogon-kiensis.html",
+          "bytes": 12215,
+          "sha256": "dc9d48646b867c62d0b78d336c0a8223ec13285ae940f67cdd4bafd1fafeba89"
+        }
+      },
+      "currentCatalogNameCandidate": "Ostorhinchus kiensis",
+      "currentCatalogFamily": "Apogonidae",
+      "currentCatalogClassification": "Apogonidae: Apogoninae.",
+      "familyComparison": {
+        "sourceFamily": "Apogonidae",
+        "catalogFamily": "Apogonidae",
+        "agrees": true
+      },
+      "comparisonCandidates": [],
+      "disposition": "Catalog returns a different valid current-name candidate; preserve source spelling and do not redetermine the specimen"
+    },
+    {
+      "sourceRow": 8,
+      "sourceNameVerbatim": "Sillago sihama",
+      "familyAsPrinted": "Sillaginidae",
+      "sourceRank": "binomial",
+      "exactCatalogQuery": {
+        "queriedName": "Sillago sihama",
+        "queryRole": "source-table-exact-binomial",
+        "sourceLabel": "Sillago sihama",
+        "sourceRank": "binomial",
+        "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Sillago&species=sihama&tbl=species",
+        "resultClass": "valid-name",
+        "selectedCatalogRowName": "Atherina sihama",
+        "currentStatus": "Valid as Sillago sihama (Fabricius 1775). Sillaginidae.",
+        "statusName": "Sillago sihama",
+        "responseVersion": "18 Nov. 2026",
+        "matchingRows": 1,
+        "rawResponse": {
+          "path": "data/research/philippines/raw/national/pampanga-estuary-catalog-taxonomy-20261126/06-sillago-sihama.html",
+          "bytes": 20765,
+          "sha256": "6f819947ea3ba121984da02e191b930d9951e454dc5818d2661ad690d673a3cd"
+        }
+      },
+      "currentCatalogNameCandidate": "Sillago sihama",
+      "currentCatalogFamily": "Sillaginidae",
+      "currentCatalogClassification": "Sillaginidae.",
+      "familyComparison": {
+        "sourceFamily": "Sillaginidae",
+        "catalogFamily": "Sillaginidae",
+        "agrees": true
+      },
+      "comparisonCandidates": [],
+      "disposition": "catalog-current-name-match; source specimen and locality remain unverified"
+    },
+    {
+      "sourceRow": 9,
+      "sourceNameVerbatim": "Leiognathus blochii",
+      "familyAsPrinted": "Leiognathidae",
+      "sourceRank": "binomial",
+      "exactCatalogQuery": {
+        "queriedName": "Leiognathus blochii",
+        "queryRole": "source-table-exact-binomial",
+        "sourceLabel": "Leiognathus blochii",
+        "sourceRank": "binomial",
+        "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Leiognathus&species=blochii&tbl=species",
+        "resultClass": "status-unresolved",
+        "selectedCatalogRowName": null,
+        "currentStatus": null,
+        "statusName": null,
+        "responseVersion": "18 Nov. 2026",
+        "matchingRows": 0,
+        "rawResponse": {
+          "path": "data/research/philippines/raw/national/pampanga-estuary-catalog-taxonomy-20261126/07-leiognathus-blochii.html",
+          "bytes": 8862,
+          "sha256": "f3a845b3011c0055c0328911021a84b2f8a8fd50e258a4b02025eda200ce76cf"
+        }
+      },
+      "currentCatalogNameCandidate": null,
+      "currentCatalogFamily": null,
+      "currentCatalogClassification": null,
+      "familyComparison": null,
+      "comparisonCandidates": [],
+      "disposition": "exact source binomial unresolved; no accepted-name candidate inferred"
+    },
+    {
+      "sourceRow": 10,
+      "sourceNameVerbatim": "Leiognathus fasciatus",
+      "familyAsPrinted": "Leiognathidae",
+      "sourceRank": "binomial",
+      "exactCatalogQuery": {
+        "queriedName": "Leiognathus fasciatus",
+        "queryRole": "source-table-exact-binomial",
+        "sourceLabel": "Leiognathus fasciatus",
+        "sourceRank": "binomial",
+        "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Leiognathus&species=fasciatus&tbl=species",
+        "resultClass": "status-unresolved",
+        "selectedCatalogRowName": null,
+        "currentStatus": null,
+        "statusName": null,
+        "responseVersion": "18 Nov. 2026",
+        "matchingRows": 0,
+        "rawResponse": {
+          "path": "data/research/philippines/raw/national/pampanga-estuary-catalog-taxonomy-20261126/08-leiognathus-fasciatus.html",
+          "bytes": 8864,
+          "sha256": "ef4cf76cd1ad901ebda437745252b8f0f57648b6b937657ccef7fecee8470c15"
+        }
+      },
+      "currentCatalogNameCandidate": null,
+      "currentCatalogFamily": null,
+      "currentCatalogClassification": null,
+      "familyComparison": null,
+      "comparisonCandidates": [],
+      "disposition": "exact source binomial unresolved; no accepted-name candidate inferred"
+    },
+    {
+      "sourceRow": 11,
+      "sourceNameVerbatim": "Pomadasys maculatus",
+      "familyAsPrinted": "Haemulidae",
+      "sourceRank": "binomial",
+      "exactCatalogQuery": {
+        "queriedName": "Pomadasys maculatus",
+        "queryRole": "source-table-exact-binomial",
+        "sourceLabel": "Pomadasys maculatus",
+        "sourceRank": "binomial",
+        "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Pomadasys&species=maculatus&tbl=species",
+        "resultClass": "valid-name",
+        "selectedCatalogRowName": "Anthias maculatus",
+        "currentStatus": "Valid as Pomadasys maculatus (Bloch 1793). Haemulidae: Haemulinae.",
+        "statusName": "Pomadasys maculatus",
+        "responseVersion": "18 Nov. 2026",
+        "matchingRows": 1,
+        "rawResponse": {
+          "path": "data/research/philippines/raw/national/pampanga-estuary-catalog-taxonomy-20261126/09-pomadasys-maculatus.html",
+          "bytes": 16564,
+          "sha256": "bc742f6d9694189a350064dfd7329ca4284e7f5c2f7239301fb8da838a812ef2"
+        }
+      },
+      "currentCatalogNameCandidate": "Pomadasys maculatus",
+      "currentCatalogFamily": "Haemulidae",
+      "currentCatalogClassification": "Haemulidae: Haemulinae.",
+      "familyComparison": {
+        "sourceFamily": "Haemulidae",
+        "catalogFamily": "Haemulidae",
+        "agrees": true
+      },
+      "comparisonCandidates": [],
+      "disposition": "catalog-current-name-match; source specimen and locality remain unverified"
+    },
+    {
+      "sourceRow": 12,
+      "sourceNameVerbatim": "Gerres sp.",
+      "familyAsPrinted": "Gerreidae",
+      "sourceRank": "genus-only",
+      "genusFamilyCheck": {
+        "genus": "Gerres",
+        "sourceLabel": "Gerres sp.",
+        "sourceFamily": "Gerreidae",
+        "catalogFamily": "Gerreidae",
+        "distinctFamilies": [
+          "Gerreidae"
+        ],
+        "catalogSpeciesRows": 28,
+        "allCatalogRows": 60,
+        "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Gerres&tbl=species",
+        "responseVersion": "18 Nov. 2026",
+        "rawResponse": {
+          "path": "data/research/philippines/raw/national/pampanga-estuary-catalog-taxonomy-20261126/27-gerres-genus-list.html",
+          "bytes": 108019,
+          "sha256": "a35c30c7def37ba78a198f1cc982bba53bfdadd5f365eba0884fc5b0b09e71c5"
+        },
+        "disposition": "genus species-list family crosswalk only; no species identity inferred"
+      },
+      "currentCatalogFamily": "Gerreidae",
+      "familyComparison": {
+        "sourceFamily": "Gerreidae",
+        "catalogFamily": "Gerreidae",
+        "agrees": true
+      },
+      "disposition": "genus-only; family comparison available; species identity remains unresolved"
+    },
+    {
+      "sourceRow": 13,
+      "sourceNameVerbatim": "Johnius belangerii",
+      "familyAsPrinted": "Sciaenidae",
+      "sourceRank": "binomial",
+      "exactCatalogQuery": {
+        "queriedName": "Johnius belangerii",
+        "queryRole": "source-table-exact-binomial",
+        "sourceLabel": "Johnius belangerii",
+        "sourceRank": "binomial",
+        "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Johnius&species=belangerii&tbl=species",
+        "resultClass": "valid-name",
+        "selectedCatalogRowName": "Corvina belengerii",
+        "currentStatus": "Valid as Johnius belangerii (Cuvier 1830). Sciaenidae.",
+        "statusName": "Johnius belangerii",
+        "responseVersion": "18 Nov. 2026",
+        "matchingRows": 1,
+        "rawResponse": {
+          "path": "data/research/philippines/raw/national/pampanga-estuary-catalog-taxonomy-20261126/10-johnius-belangerii.html",
+          "bytes": 17559,
+          "sha256": "b451e8564cf9c2ece681064f681a39b8cdeb3f0ba933156a7d9b35071f9f5650"
+        }
+      },
+      "currentCatalogNameCandidate": "Johnius belangerii",
+      "currentCatalogFamily": "Sciaenidae",
+      "currentCatalogClassification": "Sciaenidae.",
+      "familyComparison": {
+        "sourceFamily": "Sciaenidae",
+        "catalogFamily": "Sciaenidae",
+        "agrees": true
+      },
+      "comparisonCandidates": [],
+      "disposition": "catalog-current-name-match; source specimen and locality remain unverified"
+    },
+    {
+      "sourceRow": 14,
+      "sourceNameVerbatim": "Upeneus tragula",
+      "familyAsPrinted": "Mullidae",
+      "sourceRank": "binomial",
+      "exactCatalogQuery": {
+        "queriedName": "Upeneus tragula",
+        "queryRole": "source-table-exact-binomial",
+        "sourceLabel": "Upeneus tragula",
+        "sourceRank": "binomial",
+        "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Upeneus&species=tragula&tbl=species",
+        "resultClass": "valid-name",
+        "selectedCatalogRowName": "Upeneus tragula",
+        "currentStatus": "Valid as Upeneus tragula Richardson 1846. Mullidae.",
+        "statusName": "Upeneus tragula",
+        "responseVersion": "18 Nov. 2026",
+        "matchingRows": 1,
+        "rawResponse": {
+          "path": "data/research/philippines/raw/national/pampanga-estuary-catalog-taxonomy-20261126/11-upeneus-tragula.html",
+          "bytes": 20023,
+          "sha256": "30ad73d52156b556bc65377c1e3048b2544d9208c95ead4bf7455da92c1ed957"
+        }
+      },
+      "currentCatalogNameCandidate": "Upeneus tragula",
+      "currentCatalogFamily": "Mullidae",
+      "currentCatalogClassification": "Mullidae.",
+      "familyComparison": {
+        "sourceFamily": "Mullidae",
+        "catalogFamily": "Mullidae",
+        "agrees": true
+      },
+      "comparisonCandidates": [],
+      "disposition": "catalog-current-name-match; source specimen and locality remain unverified"
+    },
+    {
+      "sourceRow": 15,
+      "sourceNameVerbatim": "Terapon jarbua",
+      "familyAsPrinted": "Terapontidae",
+      "sourceRank": "binomial",
+      "exactCatalogQuery": {
+        "queriedName": "Terapon jarbua",
+        "queryRole": "source-table-exact-binomial",
+        "sourceLabel": "Terapon jarbua",
+        "sourceRank": "binomial",
+        "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Terapon&species=jarbua&tbl=species",
+        "resultClass": "valid-name",
+        "selectedCatalogRowName": "Sciaena jarbua",
+        "currentStatus": "Valid as Terapon jarbua (Fabricius 1775). Terapontidae.",
+        "statusName": "Terapon jarbua",
+        "responseVersion": "18 Nov. 2026",
+        "matchingRows": 1,
+        "rawResponse": {
+          "path": "data/research/philippines/raw/national/pampanga-estuary-catalog-taxonomy-20261126/12-terapon-jarbua.html",
+          "bytes": 28731,
+          "sha256": "49476ed09aa0c99e43a3bee591e54d06f23328897fc43ed69de5ac632133c9d5"
+        }
+      },
+      "currentCatalogNameCandidate": "Terapon jarbua",
+      "currentCatalogFamily": "Terapontidae",
+      "currentCatalogClassification": "Terapontidae.",
+      "familyComparison": {
+        "sourceFamily": "Terapontidae",
+        "catalogFamily": "Terapontidae",
+        "agrees": true
+      },
+      "comparisonCandidates": [],
+      "disposition": "catalog-current-name-match; source specimen and locality remain unverified"
+    },
+    {
+      "sourceRow": 16,
+      "sourceNameVerbatim": "Pelates quadrilineatus",
+      "familyAsPrinted": "Terapontidae",
+      "sourceRank": "binomial",
+      "exactCatalogQuery": {
+        "queriedName": "Pelates quadrilineatus",
+        "queryRole": "source-table-exact-binomial",
+        "sourceLabel": "Pelates quadrilineatus",
+        "sourceRank": "binomial",
+        "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Pelates&species=quadrilineatus&tbl=species",
+        "resultClass": "synonym",
+        "selectedCatalogRowName": "Pelates quadrilineatus",
+        "currentStatus": "Synonym of Pelates quadrilineatus (Bloch 1790). Terapontidae.",
+        "statusName": "Pelates quadrilineatus",
+        "responseVersion": "18 Nov. 2026",
+        "matchingRows": 1,
+        "rawResponse": {
+          "path": "data/research/philippines/raw/national/pampanga-estuary-catalog-taxonomy-20261126/13-pelates-quadrilineatus.html",
+          "bytes": 18681,
+          "sha256": "fa77546a4a0101f9a92b030ee690292bc0830f5c218b3263be810e4d0ab22cf8"
+        }
+      },
+      "currentCatalogNameCandidate": "Pelates quadrilineatus",
+      "currentCatalogFamily": "Terapontidae",
+      "currentCatalogClassification": "Terapontidae.",
+      "familyComparison": {
+        "sourceFamily": "Terapontidae",
+        "catalogFamily": "Terapontidae",
+        "agrees": true
+      },
+      "comparisonCandidates": [],
+      "disposition": "Catalog returns a synonym record; review the nomenclatural relation without treating it as independent identity confirmation"
+    },
+    {
+      "sourceRow": 17,
+      "sourceNameVerbatim": "Acentrogobius nebulosus",
+      "familyAsPrinted": "Gobiidae",
+      "sourceRank": "binomial",
+      "exactCatalogQuery": {
+        "queriedName": "Acentrogobius nebulosus",
+        "queryRole": "source-table-exact-binomial",
+        "sourceLabel": "Acentrogobius nebulosus",
+        "sourceRank": "binomial",
+        "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Acentrogobius&species=nebulosus&tbl=species",
+        "resultClass": "status-unresolved",
+        "selectedCatalogRowName": null,
+        "currentStatus": null,
+        "statusName": null,
+        "responseVersion": "18 Nov. 2026",
+        "matchingRows": 0,
+        "rawResponse": {
+          "path": "data/research/philippines/raw/national/pampanga-estuary-catalog-taxonomy-20261126/14-acentrogobius-nebulosus.html",
+          "bytes": 8866,
+          "sha256": "63b821d795590ce21daf276f5528db2bf52df0e1d3cfd516e5ad3269bb6924d4"
+        }
+      },
+      "currentCatalogNameCandidate": null,
+      "currentCatalogFamily": null,
+      "currentCatalogClassification": null,
+      "familyComparison": null,
+      "comparisonCandidates": [],
+      "disposition": "exact source binomial unresolved; no accepted-name candidate inferred"
+    },
+    {
+      "sourceRow": 18,
+      "sourceNameVerbatim": "Glossogobius biocellatus",
+      "familyAsPrinted": "Gobiidae",
+      "sourceRank": "binomial",
+      "exactCatalogQuery": {
+        "queriedName": "Glossogobius biocellatus",
+        "queryRole": "source-table-exact-binomial",
+        "sourceLabel": "Glossogobius biocellatus",
+        "sourceRank": "binomial",
+        "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Glossogobius&species=biocellatus&tbl=species",
+        "resultClass": "status-unresolved",
+        "selectedCatalogRowName": null,
+        "currentStatus": null,
+        "statusName": null,
+        "responseVersion": "18 Nov. 2026",
+        "matchingRows": 0,
+        "rawResponse": {
+          "path": "data/research/philippines/raw/national/pampanga-estuary-catalog-taxonomy-20261126/15-glossogobius-biocellatus.html",
+          "bytes": 8867,
+          "sha256": "8902c9112f29a89cbfe2604ad174de281b87e7515dfaee85d3db9a6baaa8737a"
+        }
+      },
+      "currentCatalogNameCandidate": null,
+      "currentCatalogFamily": null,
+      "currentCatalogClassification": null,
+      "familyComparison": null,
+      "comparisonCandidates": [],
+      "disposition": "exact source binomial unresolved; no accepted-name candidate inferred"
+    },
+    {
+      "sourceRow": 19,
+      "sourceNameVerbatim": "Glossogobius celebius",
+      "familyAsPrinted": "Gobiidae",
+      "sourceRank": "binomial",
+      "exactCatalogQuery": {
+        "queriedName": "Glossogobius celebius",
+        "queryRole": "source-table-exact-binomial",
+        "sourceLabel": "Glossogobius celebius",
+        "sourceRank": "binomial",
+        "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Glossogobius&species=celebius&tbl=species",
+        "resultClass": "valid-name",
+        "selectedCatalogRowName": "Gobius celebius",
+        "currentStatus": "Valid as Glossogobius celebius (Valenciennes 1837). Gobiidae: Gobiinae.",
+        "statusName": "Glossogobius celebius",
+        "responseVersion": "18 Nov. 2026",
+        "matchingRows": 1,
+        "rawResponse": {
+          "path": "data/research/philippines/raw/national/pampanga-estuary-catalog-taxonomy-20261126/16-glossogobius-celebius.html",
+          "bytes": 11816,
+          "sha256": "ddab708c783e3debb21f7987b25c8353442cbff354d0c57b8f8c1d25892d1624"
+        }
+      },
+      "currentCatalogNameCandidate": "Glossogobius celebius",
+      "currentCatalogFamily": "Gobiidae",
+      "currentCatalogClassification": "Gobiidae: Gobiinae.",
+      "familyComparison": {
+        "sourceFamily": "Gobiidae",
+        "catalogFamily": "Gobiidae",
+        "agrees": true
+      },
+      "comparisonCandidates": [],
+      "disposition": "catalog-current-name-match; source specimen and locality remain unverified"
+    },
+    {
+      "sourceRow": 20,
+      "sourceNameVerbatim": "Oxyurichthys opthalmonema",
+      "familyAsPrinted": "Gobiidae",
+      "sourceRank": "binomial",
+      "exactCatalogQuery": {
+        "queriedName": "Oxyurichthys opthalmonema",
+        "queryRole": "source-table-exact-binomial",
+        "sourceLabel": "Oxyurichthys opthalmonema",
+        "sourceRank": "binomial",
+        "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Oxyurichthys&species=opthalmonema&tbl=species",
+        "resultClass": "status-unresolved",
+        "selectedCatalogRowName": null,
+        "currentStatus": null,
+        "statusName": null,
+        "responseVersion": "18 Nov. 2026",
+        "matchingRows": 0,
+        "rawResponse": {
+          "path": "data/research/philippines/raw/national/pampanga-estuary-catalog-taxonomy-20261126/17-oxyurichthys-opthalmonema.html",
+          "bytes": 8868,
+          "sha256": "3060467956e804c49743ce097aacefb825d87d1c9b0e7e767cc9c86dfc6b8698"
+        }
+      },
+      "currentCatalogNameCandidate": null,
+      "currentCatalogFamily": null,
+      "currentCatalogClassification": null,
+      "familyComparison": null,
+      "comparisonCandidates": [
+        {
+          "name": "Oxyurichthys ophthalmonema",
+          "role": "spelling-candidate",
+          "currentStatus": "Valid as Oxyurichthys ophthalmonema (Bleeker 1856). Oxudercidae: Gobionellinae.",
+          "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Oxyurichthys&species=ophthalmonema&tbl=species",
+          "matchingRows": 1
+        }
+      ],
+      "disposition": "exact source spelling unresolved; separate current-name candidate found, but no source-name correction or specimen identification is made"
+    },
+    {
+      "sourceRow": 21,
+      "sourceNameVerbatim": "Oxyurichthys tentacularis",
+      "familyAsPrinted": "Gobiidae",
+      "sourceRank": "binomial",
+      "exactCatalogQuery": {
+        "queriedName": "Oxyurichthys tentacularis",
+        "queryRole": "source-table-exact-binomial",
+        "sourceLabel": "Oxyurichthys tentacularis",
+        "sourceRank": "binomial",
+        "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Oxyurichthys&species=tentacularis&tbl=species",
+        "resultClass": "valid-name",
+        "selectedCatalogRowName": "Gobius tentacularis",
+        "currentStatus": "Valid as Oxyurichthys tentacularis (Valenciennes 1837). Oxudercidae: Gobionellinae.",
+        "statusName": "Oxyurichthys tentacularis",
+        "responseVersion": "18 Nov. 2026",
+        "matchingRows": 1,
+        "rawResponse": {
+          "path": "data/research/philippines/raw/national/pampanga-estuary-catalog-taxonomy-20261126/18-oxyurichthys-tentacularis.html",
+          "bytes": 12991,
+          "sha256": "8acea64e211b762b928b2c2cdc86b00aa121b7fe259b5a20a43e6ac845031e49"
+        }
+      },
+      "currentCatalogNameCandidate": "Oxyurichthys tentacularis",
+      "currentCatalogFamily": "Oxudercidae",
+      "currentCatalogClassification": "Oxudercidae: Gobionellinae.",
+      "familyComparison": {
+        "sourceFamily": "Gobiidae",
+        "catalogFamily": "Oxudercidae",
+        "agrees": false
+      },
+      "comparisonCandidates": [],
+      "disposition": "catalog-current-name-match; source specimen and locality remain unverified"
+    },
+    {
+      "sourceRow": 22,
+      "sourceNameVerbatim": "Psammogobius biocellatus",
+      "familyAsPrinted": "Gobiidae",
+      "sourceRank": "binomial",
+      "exactCatalogQuery": {
+        "queriedName": "Psammogobius biocellatus",
+        "queryRole": "source-table-exact-binomial",
+        "sourceLabel": "Psammogobius biocellatus",
+        "sourceRank": "binomial",
+        "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Psammogobius&species=biocellatus&tbl=species",
+        "resultClass": "valid-name",
+        "selectedCatalogRowName": "Gobius biocellatus",
+        "currentStatus": "Valid as Psammogobius biocellatus (Valenciennes 1837). Gobiidae: Gobiinae.",
+        "statusName": "Psammogobius biocellatus",
+        "responseVersion": "18 Nov. 2026",
+        "matchingRows": 1,
+        "rawResponse": {
+          "path": "data/research/philippines/raw/national/pampanga-estuary-catalog-taxonomy-20261126/19-psammogobius-biocellatus.html",
+          "bytes": 18764,
+          "sha256": "8b898dc0dfb4fb1aaad36c31df58d1b4654942f42c38bd3c04daf3e210b0b69d"
+        }
+      },
+      "currentCatalogNameCandidate": "Psammogobius biocellatus",
+      "currentCatalogFamily": "Gobiidae",
+      "currentCatalogClassification": "Gobiidae: Gobiinae.",
+      "familyComparison": {
+        "sourceFamily": "Gobiidae",
+        "catalogFamily": "Gobiidae",
+        "agrees": true
+      },
+      "comparisonCandidates": [],
+      "disposition": "catalog-current-name-match; source specimen and locality remain unverified"
+    },
+    {
+      "sourceRow": 23,
+      "sourceNameVerbatim": "Pseudorhombus cinnamomeus",
+      "familyAsPrinted": "Paralichthyidae",
+      "sourceRank": "binomial",
+      "exactCatalogQuery": {
+        "queriedName": "Pseudorhombus cinnamomeus",
+        "queryRole": "source-table-exact-binomial",
+        "sourceLabel": "Pseudorhombus cinnamomeus",
+        "sourceRank": "binomial",
+        "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Pseudorhombus&species=cinnamomeus&tbl=species",
+        "resultClass": "status-unresolved",
+        "selectedCatalogRowName": null,
+        "currentStatus": null,
+        "statusName": null,
+        "responseVersion": "18 Nov. 2026",
+        "matchingRows": 0,
+        "rawResponse": {
+          "path": "data/research/philippines/raw/national/pampanga-estuary-catalog-taxonomy-20261126/20-pseudorhombus-cinnamomeus.html",
+          "bytes": 8868,
+          "sha256": "4155cd11fe5c6297270fc05dbdafb533add5b427a0ce7194e31c12a82111dcd5"
+        }
+      },
+      "currentCatalogNameCandidate": null,
+      "currentCatalogFamily": null,
+      "currentCatalogClassification": null,
+      "familyComparison": null,
+      "comparisonCandidates": [],
+      "disposition": "exact source binomial unresolved; no accepted-name candidate inferred"
+    },
+    {
+      "sourceRow": 24,
+      "sourceNameVerbatim": "Cynoglossus abbreviatus",
+      "familyAsPrinted": "Cynoglossidae",
+      "sourceRank": "binomial",
+      "exactCatalogQuery": {
+        "queriedName": "Cynoglossus abbreviatus",
+        "queryRole": "source-table-exact-binomial",
+        "sourceLabel": "Cynoglossus abbreviatus",
+        "sourceRank": "binomial",
+        "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Cynoglossus&species=abbreviatus&tbl=species",
+        "resultClass": "valid-name",
+        "selectedCatalogRowName": "Plagusia abbreviata",
+        "currentStatus": "Valid as Cynoglossus abbreviatus (Gray 1834). Cynoglossidae: Cynoglossinae.",
+        "statusName": "Cynoglossus abbreviatus",
+        "responseVersion": "18 Nov. 2026",
+        "matchingRows": 1,
+        "rawResponse": {
+          "path": "data/research/philippines/raw/national/pampanga-estuary-catalog-taxonomy-20261126/21-cynoglossus-abbreviatus.html",
+          "bytes": 10947,
+          "sha256": "c96cae56e338cf1559ef1d33594a179a2f205658a41464c506be2edb5912760a"
+        }
+      },
+      "currentCatalogNameCandidate": "Cynoglossus abbreviatus",
+      "currentCatalogFamily": "Cynoglossidae",
+      "currentCatalogClassification": "Cynoglossidae: Cynoglossinae.",
+      "familyComparison": {
+        "sourceFamily": "Cynoglossidae",
+        "catalogFamily": "Cynoglossidae",
+        "agrees": true
+      },
+      "comparisonCandidates": [],
+      "disposition": "catalog-current-name-match; source specimen and locality remain unverified"
+    },
+    {
+      "sourceRow": 25,
+      "sourceNameVerbatim": "Triacanthus biaculeatus",
+      "familyAsPrinted": "Triacanthidae",
+      "sourceRank": "binomial",
+      "exactCatalogQuery": {
+        "queriedName": "Triacanthus biaculeatus",
+        "queryRole": "source-table-exact-binomial",
+        "sourceLabel": "Triacanthus biaculeatus",
+        "sourceRank": "binomial",
+        "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Triacanthus&species=biaculeatus&tbl=species",
+        "resultClass": "valid-name",
+        "selectedCatalogRowName": "Balistes biaculeatus",
+        "currentStatus": "Valid as Triacanthus biaculeatus (Bloch 1786). Triacanthidae.",
+        "statusName": "Triacanthus biaculeatus",
+        "responseVersion": "18 Nov. 2026",
+        "matchingRows": 1,
+        "rawResponse": {
+          "path": "data/research/philippines/raw/national/pampanga-estuary-catalog-taxonomy-20261126/22-triacanthus-biaculeatus.html",
+          "bytes": 19168,
+          "sha256": "a14110126c572dbe9b77a401f6d33c08b8ece08914e8d454efb3fa1dacc2b6cd"
+        }
+      },
+      "currentCatalogNameCandidate": "Triacanthus biaculeatus",
+      "currentCatalogFamily": "Triacanthidae",
+      "currentCatalogClassification": "Triacanthidae.",
+      "familyComparison": {
+        "sourceFamily": "Triacanthidae",
+        "catalogFamily": "Triacanthidae",
+        "agrees": true
+      },
+      "comparisonCandidates": [],
+      "disposition": "catalog-current-name-match; source specimen and locality remain unverified"
+    },
+    {
+      "sourceRow": 26,
+      "sourceNameVerbatim": "Arothron immaculatus",
+      "familyAsPrinted": "Tetraodontidae",
+      "sourceRank": "binomial",
+      "exactCatalogQuery": {
+        "queriedName": "Arothron immaculatus",
+        "queryRole": "source-table-exact-binomial",
+        "sourceLabel": "Arothron immaculatus",
+        "sourceRank": "binomial",
+        "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Arothron&species=immaculatus&tbl=species",
+        "resultClass": "valid-name",
+        "selectedCatalogRowName": "Tetrodon immaculatus",
+        "currentStatus": "Valid as Arothron immaculatus (Bloch & Schneider 1801). Tetraodontidae.",
+        "statusName": "Arothron immaculatus",
+        "responseVersion": "18 Nov. 2026",
+        "matchingRows": 1,
+        "rawResponse": {
+          "path": "data/research/philippines/raw/national/pampanga-estuary-catalog-taxonomy-20261126/23-arothron-immaculatus.html",
+          "bytes": 18279,
+          "sha256": "4e71b69a79f4e0e77eefcab8a921204aa2c2629865d493a1531ac49f6ea64bd5"
+        }
+      },
+      "currentCatalogNameCandidate": "Arothron immaculatus",
+      "currentCatalogFamily": "Tetraodontidae",
+      "currentCatalogClassification": "Tetraodontidae.",
+      "familyComparison": {
+        "sourceFamily": "Tetraodontidae",
+        "catalogFamily": "Tetraodontidae",
+        "agrees": true
+      },
+      "comparisonCandidates": [],
+      "disposition": "catalog-current-name-match; source specimen and locality remain unverified"
+    },
+    {
+      "sourceRow": 27,
+      "sourceNameVerbatim": "Cyprinus carpio carpio",
+      "familyAsPrinted": "Cyprinidae",
+      "sourceRank": "trinomial",
+      "exactCatalogQuery": {
+        "queriedName": "Cyprinus carpio",
+        "queryRole": "trinomial-base-species-query",
+        "sourceLabel": "Cyprinus carpio carpio",
+        "sourceRank": "trinomial",
+        "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Cyprinus&species=carpio&tbl=species",
+        "resultClass": "valid-name",
+        "selectedCatalogRowName": "Cyprinus carpio",
+        "currentStatus": "Valid as Cyprinus carpio Linnaeus 1758. Cyprinidae: Cyprininae.",
+        "statusName": "Cyprinus carpio",
+        "responseVersion": "18 Nov. 2026",
+        "matchingRows": 1,
+        "rawResponse": {
+          "path": "data/research/philippines/raw/national/pampanga-estuary-catalog-taxonomy-20261126/24-cyprinus-carpio.html",
+          "bytes": 55827,
+          "sha256": "c3560dedebcb90d6b61b7c36e6e85220594f3db36f7707625ebbf0822adb2be3"
+        }
+      },
+      "currentCatalogNameCandidate": "Cyprinus carpio",
+      "currentCatalogFamily": "Cyprinidae",
+      "currentCatalogClassification": "Cyprinidae: Cyprininae.",
+      "familyComparison": {
+        "sourceFamily": "Cyprinidae",
+        "catalogFamily": "Cyprinidae",
+        "agrees": true
+      },
+      "comparisonCandidates": [],
+      "disposition": "base species name matches Catalog; trinomial/subspecies status and source specimen remain unverified"
+    }
+  ],
+  "comparisonQueries": [
+    {
+      "queriedName": "Oxyurichthys ophthalmonema",
+      "queryRole": "spelling-candidate",
+      "sourceLabel": "Oxyurichthys opthalmonema",
+      "sourceRank": null,
+      "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Oxyurichthys&species=ophthalmonema&tbl=species",
+      "resultClass": "valid-name",
+      "selectedCatalogRowName": "Gobius ophthalmonema",
+      "currentStatus": "Valid as Oxyurichthys ophthalmonema (Bleeker 1856). Oxudercidae: Gobionellinae.",
+      "statusName": "Oxyurichthys ophthalmonema",
+      "responseVersion": "18 Nov. 2026",
+      "matchingRows": 1,
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/pampanga-estuary-catalog-taxonomy-20261126/25-oxyurichthys-ophthalmonema.html",
+        "bytes": 15457,
+        "sha256": "ac8f1bf23a3615711d6e21c6c6d9ac62afb4b63208914bb680f7e985f24c27df"
+      }
+    }
+  ],
+  "genusFamilyChecks": [
+    {
+      "genus": "Anodontostoma",
+      "sourceLabel": "Anodontostoma sp.",
+      "sourceFamily": "Clupeidae",
+      "catalogFamily": "Dorosomatidae",
+      "distinctFamilies": [
+        "Dorosomatidae"
+      ],
+      "catalogSpeciesRows": 3,
+      "allCatalogRows": 9,
+      "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Anodontostoma&tbl=species",
+      "responseVersion": "18 Nov. 2026",
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/pampanga-estuary-catalog-taxonomy-20261126/26-anodontostoma-genus-list.html",
+        "bytes": 20508,
+        "sha256": "1d842a48e438a8297aaa412f0c2aedacee14f398a837f6928696128ce786d966"
+      },
+      "disposition": "genus species-list family crosswalk only; no species identity inferred"
+    },
+    {
+      "genus": "Gerres",
+      "sourceLabel": "Gerres sp.",
+      "sourceFamily": "Gerreidae",
+      "catalogFamily": "Gerreidae",
+      "distinctFamilies": [
+        "Gerreidae"
+      ],
+      "catalogSpeciesRows": 28,
+      "allCatalogRows": 60,
+      "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Gerres&tbl=species",
+      "responseVersion": "18 Nov. 2026",
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/pampanga-estuary-catalog-taxonomy-20261126/27-gerres-genus-list.html",
+        "bytes": 108019,
+        "sha256": "a35c30c7def37ba78a198f1cc982bba53bfdadd5f365eba0884fc5b0b09e71c5"
+      },
+      "disposition": "genus species-list family crosswalk only; no species identity inferred"
+    }
+  ],
+  "summary": {
+    "sourceTableRows": 27,
+    "sourceBinomialRows": 23,
+    "sourceTrinomialRows": 1,
+    "sourceGenusOnlyRows": 2,
+    "familyOnlyRows": 1,
+    "exactBinomialCurrentNameMatches": 14,
+    "binomialQueriesWithoutSelectedStatus": 7,
+    "genusOnlyRowsWithFamilyChecks": 2,
+    "familyDisagreements": [
+      {
+        "sourceName": "Anodontostoma sp.",
+        "sourceFamily": "Clupeidae",
+        "catalogFamily": "Dorosomatidae"
+      },
+      {
+        "sourceName": "Oxyurichthys tentacularis",
+        "sourceFamily": "Gobiidae",
+        "catalogFamily": "Oxudercidae"
+      }
+    ],
+    "comparisonCandidateCount": 1,
+    "specimenIdentitiesVerified": 0,
+    "stationAssignmentsVerified": 0,
+    "occurrenceAssertionsAdmitted": 0,
+    "currentPresenceInferred": false,
+    "publicAppRowsAdded": 0
+  },
+  "decision": {
+    "speciesRowsAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "appProjectionsAdded": 0,
+    "speciesImagesAdded": 0,
+    "dietClaimsAdded": 0,
+    "geometryAdded": false,
+    "currentPresenceClaimed": false,
+    "regionalReleaseApproved": false,
+    "explanation": "Keep all source rows in the historical, one-dry-season, otter-trawl estuary review. Catalog results support nomenclatural comparison only; they do not resolve the conflicting article reuse signals, sampled station coordinates, or the estuary/Ramsar-site crosswalk. Do not assign the rows to a particular station or other Pampanga waterbody."
+  }
+}
