@@ -1,0 +1,189 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "central-luzon-camiling-gbif-locality-followup-20261126",
+  "checkedOn": "2026-11-26",
+  "phaseId": "L3",
+  "regionId": "0300000000",
+  "regionName": "Region III (Central Luzon)",
+  "waterbodyNamesAsReported": [
+    "Camiling River"
+  ],
+  "relatedReviewPaths": [
+    "central-luzon-camiling-river-waterbody-fish-evidence-review-20261124.json"
+  ],
+  "sourceIds": [
+    "gbif-occurrence-downloads",
+    "gbif-nmnh-usnm-extant-specimens"
+  ],
+  "status": "bounded-colxr-actinopterygii-camiling-field-search-zero;two-stateprovince-specimens-not-river-localized;research-only",
+  "question": "Does GBIF expose Camiling River fish records in exact waterBody/locality fields, and do Tarlac-wide specimen matches support a Camiling River assignment?",
+  "query": {
+    "provider": "Global Biodiversity Information Facility",
+    "endpoint": "https://api.gbif.org/v1/occurrence/search",
+    "documentation": "https://techdocs.gbif.org/en/openapi/v1/occurrence",
+    "filters": {
+      "country": "PH",
+      "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+      "taxonKey": "8VR36",
+      "taxonLabel": "Catalogue of Life Extended Release Actinopterygii",
+      "limit": 300
+    },
+    "taxonomicLimit": "The screen covers ray-finned fishes in the specified checklist; it does not screen sharks, rays, or every group colloquially called fish.",
+    "fieldSemantics": "waterBody and locality queries search the corresponding indexed text field. A match would be a record-review lead, not confirmation that the specimen came from Camiling River. stateProvince=Tarlac is a broader administrative query and cannot assign a record to the river.",
+    "rawStorage": "The API responses used in this review are saved in the ignored local research raw directory. Their paths, byte lengths, and SHA-256 values are listed in rawSnapshot; no raw response is committed."
+  },
+  "exactFieldQueries": [
+    {
+      "field": "waterBody",
+      "searchValue": "Camiling River",
+      "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&waterBody=Camiling%20River&limit=300",
+      "count": 0,
+      "resultsReturned": 0,
+      "rawFile": "raw/central-luzon-camiling-gbif-screen-20261126/01-waterBody-camiling-river.json"
+    },
+    {
+      "field": "waterBody",
+      "searchValue": "Camiling",
+      "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&waterBody=Camiling&limit=300",
+      "count": 0,
+      "resultsReturned": 0,
+      "rawFile": "raw/central-luzon-camiling-gbif-screen-20261126/02-waterBody-camiling.json"
+    },
+    {
+      "field": "locality",
+      "searchValue": "Camiling River",
+      "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&locality=Camiling%20River&limit=300",
+      "count": 0,
+      "resultsReturned": 0,
+      "rawFile": "raw/central-luzon-camiling-gbif-screen-20261126/03-locality-camiling-river.json"
+    },
+    {
+      "field": "locality",
+      "searchValue": "Camiling",
+      "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&locality=Camiling&limit=300",
+      "count": 0,
+      "resultsReturned": 0,
+      "rawFile": "raw/central-luzon-camiling-gbif-screen-20261126/04-locality-camiling.json"
+    },
+    {
+      "field": "locality",
+      "searchValue": "Camiling, Tarlac",
+      "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&locality=Camiling%2C%20Tarlac&limit=300",
+      "count": 0,
+      "resultsReturned": 0,
+      "rawFile": "raw/central-luzon-camiling-gbif-screen-20261126/05-locality-camiling-tarlac.json"
+    }
+  ],
+  "administrativeQuery": {
+    "field": "stateProvince",
+    "searchValue": "Tarlac",
+    "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&stateProvince=Tarlac&limit=300",
+    "count": 2,
+    "resultsReturned": 2,
+    "rawFile": "raw/central-luzon-camiling-gbif-screen-20261126/06-stateProvince-tarlac.json",
+    "interpretation": "Both results are preserved-specimen records whose source fields give waterBody=North Pacific Ocean, locality only Tarlac or Tarlac, Philippine Islands, and no coordinates. The administrative province string is not a Camiling River locality."
+  },
+  "exploratoryFullTextQuery": {
+    "field": "q",
+    "searchValue": "Camiling River",
+    "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&q=Camiling%20River&limit=20",
+    "count": 3477,
+    "resultsReturned": 20,
+    "rawFile": "raw/central-luzon-camiling-gbif-screen-20261126/07-exploratory-q-camiling-river-limit-20.json",
+    "interpretation": "The first returned records name other rivers and localities in Benguet, La Union, Palawan, and Cebu. This broad full-text result is not a Camiling-specific match and was excluded from the river evidence."
+  },
+  "stateProvinceSpecimens": [
+    {
+      "gbifID": "1319360144",
+      "scientificNameAsReportedByGBIF": "Zenarchopterus philippinus (Peters, 1868)",
+      "basisOfRecord": "PRESERVED_SPECIMEN",
+      "eventDate": "1903",
+      "locality": "Tarlac, Philippine Islands",
+      "waterBody": "North Pacific Ocean",
+      "stateProvince": "Tarlac",
+      "decimalLongitude": null,
+      "decimalLatitude": null,
+      "institutionCode": "USNM",
+      "collectionCode": "FISH",
+      "catalogNumber": "USNM 126627",
+      "license": "CC0 1.0",
+      "datasetKey": "821cc27a-e3bb-4bc5-ac34-89ada245069d",
+      "disposition": "Historical collection record; locality and waterBody fields do not support assignment to Camiling River."
+    },
+    {
+      "gbifID": "1321355393",
+      "scientificNameAsReportedByGBIF": "Zenarchopterus philippinus (Peters, 1868)",
+      "basisOfRecord": "PRESERVED_SPECIMEN",
+      "eventDate": null,
+      "locality": "Tarlac",
+      "waterBody": "North Pacific Ocean",
+      "stateProvince": "Tarlac",
+      "decimalLongitude": null,
+      "decimalLatitude": null,
+      "institutionCode": "USNM",
+      "collectionCode": "FISH",
+      "catalogNumber": "USNM 56239",
+      "license": "CC0 1.0",
+      "datasetKey": "821cc27a-e3bb-4bc5-ac34-89ada245069d",
+      "disposition": "Undated collection record; locality and waterBody fields do not support assignment to Camiling River."
+    }
+  ],
+  "datasetMetadata": {
+    "sourceId": "gbif-nmnh-usnm-extant-specimens",
+    "datasetKey": "821cc27a-e3bb-4bc5-ac34-89ada245069d",
+    "title": "NMNH Extant Specimen Records (USNM, US)",
+    "doi": "10.15468/hnhrg3",
+    "license": "CC0 1.0",
+    "metadataUrl": "https://api.gbif.org/v1/dataset/821cc27a-e3bb-4bc5-ac34-89ada245069d"
+  },
+  "decision": {
+    "exactRiverOrLocalityResults": 0,
+    "provinceLevelRecordsAssignedToRiver": 0,
+    "verifiedSpeciesAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "coordinatesCopied": 0,
+    "geometryAdded": false,
+    "dietClaimsAdded": 0,
+    "publicAppRowsAdded": 0,
+    "interpretation": "This bounded screen provides no Camiling River fish evidence. Its zero exact-field results are not evidence of fish absence. The two Tarlac-filtered Smithsonian specimens are retained only as province-level administrative matches and are not assigned to Camiling River."
+  },
+  "nextAction": "Continue discovery for accessible, dated Camiling-specific fish surveys or capture records with a defensible reach/station and specimen or diagnostic evidence. Do not treat a province-only locality or a broad full-text search hit as river evidence.",
+  "sources": [
+    {
+      "sourceId": "gbif-occurrence-downloads",
+      "url": "https://techdocs.gbif.org/en/openapi/v1/occurrence",
+      "supports": "GBIF Occurrence Search API v1 fielded and full-text query parameters used in this bounded search."
+    },
+    {
+      "sourceId": "gbif-nmnh-usnm-extant-specimens",
+      "url": "https://www.gbif.org/dataset/821cc27a-e3bb-4bc5-ac34-89ada245069d",
+      "supports": "NMNH Extant Specimen Records dataset identity, publisher, and CC0 license metadata."
+    },
+    {
+      "sourceId": "gbif-nmnh-usnm-extant-specimens",
+      "url": "https://api.gbif.org/v1/occurrence/1319360144",
+      "supports": "GBIF specimen occurrence record 1319360144 source-reported taxon, collection number, locality, waterBody, event date, coordinates, and record license."
+    },
+    {
+      "sourceId": "gbif-nmnh-usnm-extant-specimens",
+      "url": "https://api.gbif.org/v1/occurrence/1321355393",
+      "supports": "GBIF specimen occurrence record 1321355393 source-reported taxon, collection number, locality, waterBody, date precision, coordinates, and record license."
+    }
+  ],
+  "rawSnapshot": {
+    "directory": "raw/central-luzon-camiling-gbif-screen-20261126",
+    "storage": "Ignored local research raw directory; no API payloads are committed.",
+    "files": [
+      { "path": "01-waterBody-camiling-river.json", "bytes": 79, "sha256": "895e98c4fc942ab7d7a88a36b939ef457d89aa6b53c9aed51a7fd67ff354269a" },
+      { "path": "02-waterBody-camiling.json", "bytes": 79, "sha256": "895e98c4fc942ab7d7a88a36b939ef457d89aa6b53c9aed51a7fd67ff354269a" },
+      { "path": "03-locality-camiling-river.json", "bytes": 79, "sha256": "895e98c4fc942ab7d7a88a36b939ef457d89aa6b53c9aed51a7fd67ff354269a" },
+      { "path": "04-locality-camiling.json", "bytes": 79, "sha256": "895e98c4fc942ab7d7a88a36b939ef457d89aa6b53c9aed51a7fd67ff354269a" },
+      { "path": "05-locality-camiling-tarlac.json", "bytes": 79, "sha256": "895e98c4fc942ab7d7a88a36b939ef457d89aa6b53c9aed51a7fd67ff354269a" },
+      { "path": "06-stateProvince-tarlac.json", "bytes": 10967, "sha256": "83771d311796fe2259196c7d622140ec450f734a9bf6a8dceec84117670bc187" },
+      { "path": "07-exploratory-q-camiling-river-limit-20.json", "bytes": 112003, "sha256": "9e9068f9e4cf8813841bf308ece2079b3910cf5f5baab48d3551e16148db3fdf" },
+      { "path": "dataset-821cc27a-e3bb-4bc5-ac34-89ada245069d.json", "bytes": 19060, "sha256": "3bd9a03c513b0da90bf71c7945a41f92b22410c264121f5feb8702d860002d58" },
+      { "path": "occurrence-1319360144.json", "bytes": 5492, "sha256": "09041c9ecbaf55687e7ab71a7adafff3e1822ea84f8c4a0b63e77089498d94a8" },
+      { "path": "occurrence-1321355393.json", "bytes": 5395, "sha256": "17da44eea488ddf8dca92d106390c65a3560e031d59b7337f33a59058d3f4b1e" }
+    ]
+  }
+}
