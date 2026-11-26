@@ -1,0 +1,174 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-11-26",
+  "phaseId": "L3",
+  "regionId": "0300000000",
+  "regionName": "Region III (Central Luzon)",
+  "province": "Bataan",
+  "waterbodyNames": [
+    "Pucot River",
+    "Mariveles River",
+    "Mariveles Bay",
+    "Manila Bay"
+  ],
+  "status": "historical-locality-crosscheck;grouped-occurrence-waterbody-assignment-held;research-only",
+  "question": "Can the 1909 USNM fish records whose GBIF locality text combines Pucot River, Mariveles Bay/Wharf, and Manila Bay be safely assigned to Pucot River or another specific waterbody?",
+  "decision": "The archival record distinguishes a 29 January Pucot River locality from a 30 January Mariveles River locality, and one Smithsonian-indexed fish record exactly matches a Jan 29 GBIF row. The 89-row GBIF cluster still cannot be assigned wholesale to Pucot River, Mariveles River, or a bay: its modern catalog numbers are not crosswalked to the older Fowler lot numbers, the Jan 30 GBIF locality is mixed, and none of the 89 rows has coordinates. Retain as historical research-only evidence; add no species, occurrence, geometry, or image to the app.",
+  "method": {
+    "gbifEndpoint": "https://api.gbif.org/v1/occurrence/search",
+    "queryUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&stateProvince=Bataan&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&basisOfRecord=PRESERVED_SPECIMEN&limit=300&offset=0",
+    "querySource": "The bounded 319-record GBIF response already captured in the prior Bataan preserved-specimen screen; filtered its locality, verbatimLocality, and waterBody fields for Pucot River.",
+    "matchingTaxonomy": {
+      "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+      "checklist": "Catalogue of Life Extended Release",
+      "taxonKey": "8VR36",
+      "sourceRank": "GIGACLASS"
+    },
+    "filters": {
+      "country": "PH",
+      "stateProvince": "Bataan",
+      "basisOfRecord": "PRESERVED_SPECIMEN"
+    },
+    "selection": "Case-insensitive Pucot River text in locality, verbatimLocality, or waterBody; grouped by eventDate; cross-checked selected source fields against the Smithsonian NMNH search-result index and Fowler's public archival manuscript. No map geometry or coordinates were inferred."
+  },
+  "gbifCluster": {
+    "datasetKey": "821cc27a-e3bb-4bc5-ac34-89ada245069d",
+    "datasetTitle": "NMNH Extant Specimen Records (USNM, US)",
+    "records": 89,
+    "uniqueSourceScientificNameStrings": 65,
+    "uniqueCatalogNumbers": 89,
+    "coordinates": 0,
+    "dateGroups": [
+      {
+        "eventDate": "1909-01-29",
+        "records": 53,
+        "uniqueSourceScientificNameStrings": 43,
+        "sourceLocality": "Manila Bay; Pucot River (Near Mariveles)",
+        "waterBody": "North Pacific Ocean, Manila Bay"
+      },
+      {
+        "eventDate": "1909-01-30",
+        "records": 36,
+        "uniqueSourceScientificNameStrings": 33,
+        "sourceLocality": "Mariveles Bay and Pucot River, Mariveles Wharf; Manila Bay",
+        "waterBody": "North Pacific Ocean, Mariveles Bay; Manila Bay"
+      }
+    ],
+    "media": {
+      "recordsWithMedia": 4,
+      "mediaLinks": 9,
+      "rightsFinding": "The record-linked media contain mixed rights labels, including CC0 and Usage Conditions Apply. The underlying dataset metadata license does not itself grant rights to each image.",
+      "visualReview": false,
+      "reuseApproved": false
+    },
+    "interpretation": "Counts describe GBIF occurrence rows and distinct source name strings only. They do not represent accepted taxa, distinct collection events, abundance, or current populations."
+  },
+  "historicalLocalityCrosscheck": {
+    "sourceId": "fowler-philippine-fish-manuscript-bhl-1930-1941-20261120",
+    "printedPage": 481,
+    "sourceUrl": "https://upload.wikimedia.org/wikipedia/commons/0/06/Manuscript_of_Henry_Weed_Fowler_on_the_fishes_of_the_Philippines%2C_unpublished%2C_circa_1930-1941_%28IA_manuscripthenry00fowlcb%29.pdf",
+    "entries": [
+      {
+        "oldLotNumber": "7885",
+        "sourceLocality": "Pucot River near Mariveles, Manila Bay",
+        "sourceDate": "1909-01-29"
+      },
+      {
+        "oldLotNumbers": ["7893", "7894"],
+        "sourceLocality": "Mariveles River, Mariveles, Manila Bay",
+        "sourceDate": "1909-01-30"
+      }
+    ],
+    "crosswalkLimit": "These historic lot numbers do not match the modern six-digit USNM catalog numbers in the 89-row GBIF cluster. Their shared dates and similar wording do not establish a lot-level mapping."
+  },
+  "institutionalRecordCrosscheck": {
+    "sourceId": "smithsonian-si-usnm-138431-pucot-record-20261126",
+    "searchResultUrl": "https://collections.si.edu/search/results.htm?fq=tax_order%3A%22Clupeiformes%22&q=%22Philippines+Expedition%22",
+    "publishedRecord": {
+      "scientificName": "Thryssa baelama",
+      "usnmNumber": "USNM 138431",
+      "collectionDate": "1909-01-29",
+      "place": "Manila Bay; Pucot River (Near Mariveles), Mariveles, Bataan, Philippines, North Pacific Ocean",
+      "waterBody": "North Pacific Ocean, Manila Bay",
+      "guid": "http://n2t.net/ark:/65665/34cdde79f-5733-47df-94fc-8eb5ef6e2cdc",
+      "edanRecordId": "edanmdm:nmnhvz_5309150"
+    },
+    "matchingGbifOccurrence": {
+      "gbifId": "1318940529",
+      "occurrenceUrl": "https://api.gbif.org/v1/occurrence/1318940529",
+      "catalogNumber": "USNM 138431",
+      "scientificName": "Thryssa baelama (Forsskål, 1775)",
+      "eventDate": "1909-01-29",
+      "sourceLocality": "Manila Bay; Pucot River (Near Mariveles)",
+      "coordinates": null
+    },
+    "scope": "This exact record cross-check supports one historical specimen label only. It does not validate the other 88 GBIF rows or establish a modern river boundary or current presence."
+  },
+  "interpretation": {
+    "jan29": "Fowler's manuscript and Smithsonian's indexed USNM 138431 record independently support Pucot River as a historical source locality on 29 January 1909. Because the GBIF group is uncoordinated and its waterBody says Manila Bay, the 53 rows are not promoted as river-only species records.",
+    "jan30": "Fowler's manuscript separately names Mariveles River on 30 January, while the GBIF locality combines Mariveles Bay, Pucot River, Mariveles Wharf, and Manila Bay. The source mismatch is unresolved; the 36 rows are not relabeled as either river or bay records.",
+    "geography": "No river centerline, mouth, estuary boundary, or municipal-water geometry was derived from this historical text.",
+    "currentness": "Historical museum records do not establish present-day occurrence, abundance, catchability, fishing legality, or safety."
+  },
+  "decisions": {
+    "newAppSpeciesRows": 0,
+    "newCurrentPresenceAssertions": 0,
+    "newWaterbodyOccurrenceAssignments": 0,
+    "newGeometry": false,
+    "imagesVisuallyReviewed": 0,
+    "imageAssetsApproved": 0,
+    "abundanceInferred": false,
+    "publicProjectionApproved": false,
+    "regionalCompletionClaim": false
+  },
+  "limitations": [
+    "The GBIF cluster contains two mixed locality forms and broad bay-level waterBody values; no record in the cluster has coordinates.",
+    "The old Fowler lot numbers 7885 and 7893–7894 are not crosswalked to the modern GBIF catalog numbers, so they cannot resolve the 89 row-level source assignments.",
+    "Only USNM 138431 was individually cross-checked against the Smithsonian Collections Search Center index. The direct NMNH Fishes record interface was not used to verify every record payload.",
+    "The 65 count is unique source scientific-name strings, not an accepted species list or a new Luzon inventory.",
+    "Four GBIF rows link nine media items with mixed rights labels. No image was visually reviewed or approved for Bangwit reuse.",
+    "This review does not establish the contemporary state, location, habitat limits, or exact geometry of Pucot River or Mariveles River."
+  ],
+  "followUp": [
+    "Keep the 89 rows as historical discovery evidence until publicly available museum data provide an item-level crosswalk between current USNM identifiers, legacy Albatross lot numbers, and an unambiguous collection locality.",
+    "If a future public catalog export exposes a matching field/legacy number, review each linked row individually; do not infer a crosswalk from date, name, or adjacent catalog sequence.",
+    "Continue Central Luzon research with other source-backed waterbody leads; no government access request is required for this held result."
+  ],
+  "sourceIds": [
+    "gbif-nmnh-usnm-extant-specimens",
+    "fowler-philippine-fish-manuscript-bhl-1930-1941-20261120",
+    "smithsonian-si-usnm-138431-pucot-record-20261126"
+  ],
+  "sources": [
+    {
+      "sourceId": "gbif-nmnh-usnm-extant-specimens",
+      "supports": "The bounded Bataan preserved-specimen query and the 89 source records in the Pucot locality-text cluster; CC0 in dataset metadata is not applied to record-linked media by inference."
+    },
+    {
+      "sourceId": "fowler-philippine-fish-manuscript-bhl-1930-1941-20261120",
+      "supports": "The historic manuscript's separate Pucot River (29 January) and Mariveles River (30 January) entries with old lot numbers 7885 and 7893–7894."
+    },
+    {
+      "sourceId": "smithsonian-si-usnm-138431-pucot-record-20261126",
+      "supports": "One Smithsonian-indexed USNM 138431 Thryssa baelama record and its exact match to GBIF occurrence 1318940529."
+    }
+  ],
+  "relatedReviews": [
+    "data/research/philippines/national/reviews/central-luzon-bataan-tabios-river-museum-voucher-screen-20261126.json",
+    "data/research/philippines/national/reviews/central-luzon-bataan-tabios-cof-name-crosscheck-20261126.json"
+  ],
+  "rawSnapshot": {
+    "directory": "raw/central-luzon-bataan-occurrence-screen-20261126",
+    "files": [
+      {
+        "path": "gbif-bataan-actinopterygii-preserved-search.json",
+        "bytes": 2835944,
+        "sha256": "24bf2c2ae495b5fd091fb97064f8b47120a584d6c1c77b4c58ca87bc4d8a102f",
+        "queryUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&stateProvince=Bataan&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&basisOfRecord=PRESERVED_SPECIMEN&limit=300&offset=0",
+        "httpStatus": 200,
+        "reportedCount": 319,
+        "recordsFetched": 319
+      }
+    ]
+  }
+}
