@@ -1,0 +1,191 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "central-luzon-pasac-gbif-exact-text-screen-20261126",
+  "checkedOn": "2026-11-26",
+  "phaseId": "L3",
+  "regionId": "0300000000",
+  "regionName": "Region III (Central Luzon)",
+  "relatedReviewPaths": [
+    "central-luzon-pasac-river-mendoza-2019-proceedings-abstract-review-20261126.json",
+    "central-luzon-pasac-abstract-taxon-and-endemism-crosscheck-20261126.json",
+    "central-luzon-pasak-mendoza-psau-journal-fulltext-review-20261126.json",
+    "central-luzon-pasac-gonzales-thesis-year-and-access-review-20261126.json"
+  ],
+  "status": "bounded-colxr-actinopterygii-waterbody-locality-screen-complete;zero-text-hits-not-absence-evidence",
+  "source": {
+    "provider": "Global Biodiversity Information Facility",
+    "endpoint": "https://api.gbif.org/v1/occurrence/search",
+    "documentation": "https://techdocs.gbif.org/en/openapi/v1/occurrence",
+    "citation": "Global Biodiversity Information Facility. Occurrence Search API v1. Pasac/Pasak and Sasmuan exact-field screens reviewed 2026-11-26."
+  },
+  "question": "Does the GBIF Occurrence Search API index ray-finned fish records under Pasac/Pasak waterBody or locality labels, or Sasmuan locality text?",
+  "query": {
+    "provider": "GBIF Occurrence Search API v1",
+    "endpoint": "https://api.gbif.org/v1/occurrence/search",
+    "filters": {
+      "country": "PH",
+      "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+      "taxonKey": "8VR36",
+      "limit": 0,
+      "facet": "scientificName",
+      "facetLimit": 100
+    },
+    "taxonLabel": "Catalogue of Life Extended Release Actinopterygii",
+    "taxonomicLimit": "Ray-finned fishes only. This does not screen sharks, rays, or every taxonomic group colloquially called fish.",
+    "fieldSemantics": "Each request searched a supported occurrence waterBody or locality field using one supplied name string. A text-field result would be a discovery lead only; it would not confirm that the record came from Pasac River or establish a capture location.",
+    "rawStorage": "Each count-only JSON response was saved locally under the ignored research raw directory. Its byte length and SHA-256 are recorded below; no API response files are committed."
+  },
+  "leads": [
+    {
+      "id": "pasac-river",
+      "nameVariants": ["Pasac River", "Pasac", "Pasak River", "Pasak"],
+      "basis": "Spellings appearing in the reviewed proceedings abstract and PSAU journal article; the shared waterbody identity remains plausible but is not authoritatively crosswalked."
+    },
+    {
+      "id": "sasmuan-pampanga",
+      "nameVariants": ["Sasmuan", "Sasmuan, Pampanga"],
+      "basis": "Municipality and province named in the study titles; a broad locality text hit would not identify a river reach or station."
+    }
+  ],
+  "results": [
+    {
+      "field": "waterBody",
+      "searchValue": "Pasac River",
+      "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&limit=0&facet=scientificName&facetLimit=100&waterBody=Pasac+River",
+      "httpStatus": 200,
+      "count": 0,
+      "resultsReturned": 0,
+      "responseBytes": 116,
+      "responseSha256": "9bb682ff68130b9049f3b3af82333e0c8fcbc5f1b42412949d1ff558833bb12a",
+      "rawFile": "raw/central-luzon-pasac-gbif-screen-20261126/01-waterBody-pasac-river.json"
+    },
+    {
+      "field": "waterBody",
+      "searchValue": "Pasac",
+      "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&limit=0&facet=scientificName&facetLimit=100&waterBody=Pasac",
+      "httpStatus": 200,
+      "count": 0,
+      "resultsReturned": 0,
+      "responseBytes": 116,
+      "responseSha256": "9bb682ff68130b9049f3b3af82333e0c8fcbc5f1b42412949d1ff558833bb12a",
+      "rawFile": "raw/central-luzon-pasac-gbif-screen-20261126/02-waterBody-pasac.json"
+    },
+    {
+      "field": "waterBody",
+      "searchValue": "Pasak River",
+      "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&limit=0&facet=scientificName&facetLimit=100&waterBody=Pasak+River",
+      "httpStatus": 200,
+      "count": 0,
+      "resultsReturned": 0,
+      "responseBytes": 116,
+      "responseSha256": "9bb682ff68130b9049f3b3af82333e0c8fcbc5f1b42412949d1ff558833bb12a",
+      "rawFile": "raw/central-luzon-pasac-gbif-screen-20261126/03-waterBody-pasak-river.json"
+    },
+    {
+      "field": "waterBody",
+      "searchValue": "Pasak",
+      "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&limit=0&facet=scientificName&facetLimit=100&waterBody=Pasak",
+      "httpStatus": 200,
+      "count": 0,
+      "resultsReturned": 0,
+      "responseBytes": 116,
+      "responseSha256": "9bb682ff68130b9049f3b3af82333e0c8fcbc5f1b42412949d1ff558833bb12a",
+      "rawFile": "raw/central-luzon-pasac-gbif-screen-20261126/04-waterBody-pasak.json"
+    },
+    {
+      "field": "locality",
+      "searchValue": "Pasac River",
+      "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&limit=0&facet=scientificName&facetLimit=100&locality=Pasac+River",
+      "httpStatus": 200,
+      "count": 0,
+      "resultsReturned": 0,
+      "responseBytes": 116,
+      "responseSha256": "9bb682ff68130b9049f3b3af82333e0c8fcbc5f1b42412949d1ff558833bb12a",
+      "rawFile": "raw/central-luzon-pasac-gbif-screen-20261126/05-locality-pasac-river.json"
+    },
+    {
+      "field": "locality",
+      "searchValue": "Pasac, Sasmuan",
+      "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&limit=0&facet=scientificName&facetLimit=100&locality=Pasac%2C+Sasmuan",
+      "httpStatus": 200,
+      "count": 0,
+      "resultsReturned": 0,
+      "responseBytes": 116,
+      "responseSha256": "9bb682ff68130b9049f3b3af82333e0c8fcbc5f1b42412949d1ff558833bb12a",
+      "rawFile": "raw/central-luzon-pasac-gbif-screen-20261126/06-locality-pasac-sasmuan.json"
+    },
+    {
+      "field": "locality",
+      "searchValue": "Pasak River",
+      "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&limit=0&facet=scientificName&facetLimit=100&locality=Pasak+River",
+      "httpStatus": 200,
+      "count": 0,
+      "resultsReturned": 0,
+      "responseBytes": 116,
+      "responseSha256": "9bb682ff68130b9049f3b3af82333e0c8fcbc5f1b42412949d1ff558833bb12a",
+      "rawFile": "raw/central-luzon-pasac-gbif-screen-20261126/07-locality-pasak-river.json"
+    },
+    {
+      "field": "locality",
+      "searchValue": "Pasak",
+      "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&limit=0&facet=scientificName&facetLimit=100&locality=Pasak",
+      "httpStatus": 200,
+      "count": 0,
+      "resultsReturned": 0,
+      "responseBytes": 116,
+      "responseSha256": "9bb682ff68130b9049f3b3af82333e0c8fcbc5f1b42412949d1ff558833bb12a",
+      "rawFile": "raw/central-luzon-pasac-gbif-screen-20261126/08-locality-pasak.json"
+    },
+    {
+      "field": "locality",
+      "searchValue": "Sasmuan",
+      "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&limit=0&facet=scientificName&facetLimit=100&locality=Sasmuan",
+      "httpStatus": 200,
+      "count": 0,
+      "resultsReturned": 0,
+      "responseBytes": 116,
+      "responseSha256": "9bb682ff68130b9049f3b3af82333e0c8fcbc5f1b42412949d1ff558833bb12a",
+      "rawFile": "raw/central-luzon-pasac-gbif-screen-20261126/09-locality-sasmuan.json"
+    },
+    {
+      "field": "locality",
+      "searchValue": "Sasmuan, Pampanga",
+      "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&limit=0&facet=scientificName&facetLimit=100&locality=Sasmuan%2C+Pampanga",
+      "httpStatus": 200,
+      "count": 0,
+      "resultsReturned": 0,
+      "responseBytes": 116,
+      "responseSha256": "9bb682ff68130b9049f3b3af82333e0c8fcbc5f1b42412949d1ff558833bb12a",
+      "rawFile": "raw/central-luzon-pasac-gbif-screen-20261126/10-locality-sasmuan-pampanga.json"
+    }
+  ],
+  "interpretation": {
+    "successfulQueries": 10,
+    "nonzeroQueries": 0,
+    "occurrenceRowsReturned": 0,
+    "zeroQueriesAreAbsenceEvidence": false,
+    "occurrenceRowsAdmitted": 0,
+    "speciesAssertionsAdded": 0,
+    "coordinatesPublished": 0,
+    "geometryAdded": false,
+    "publicProjection": false,
+    "disposition": "This screen establishes only that GBIF returned zero ray-finned-fish rows for the listed country-scoped waterBody/locality text filters on the check date. It does not establish that fish are absent from Pasac River, Pasak River, or Sasmuan; misspellings, missing event locality metadata, taxonomy scope, and dataset coverage may limit discovery."
+  },
+  "limitations": [
+    "Pasac and Pasak spellings are not authoritatively reconciled as the same named waterbody.",
+    "No river geometry or coordinate was supplied; this is a text search, not a spatial query.",
+    "The CoL XR Actinopterygii filter does not include all groups commonly called fish.",
+    "GBIF index zeroes do not measure survey effort and cannot support absence claims.",
+    "No records, species assertions, coordinates, or source content were added to app-facing data."
+  ],
+  "sources": [
+    {
+      "url": "https://techdocs.gbif.org/en/openapi/v1/occurrence",
+      "supports": "Official GBIF occurrence API documentation for the search endpoint and supported occurrence fields."
+    },
+    {
+      "url": "https://api.gbif.org/v1/occurrence/search",
+      "supports": "GBIF occurrence search API responses for the ten country-scoped Actinopterygii text queries listed above; reproducible request URLs and response hashes are recorded per query."
+    }
+  ]
+}
