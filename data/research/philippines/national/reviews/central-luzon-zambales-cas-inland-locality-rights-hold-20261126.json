@@ -1,0 +1,80 @@
+{
+  "schemaVersion": 1,
+  "batchId": "central-luzon-zambales-cas-inland-locality-rights-hold-20261126",
+  "reviewId": "central-luzon-zambales-cas-inland-locality-rights-hold-20261126",
+  "phaseId": "L3",
+  "regionId": "0300000000",
+  "reviewedOn": "2026-11-26",
+  "reviewer": "Agent-assisted source and reuse desk review; not legal, taxonomic, or field certification",
+  "status": "held-provider-terms-vs-gbif-dataset-license-unresolved",
+  "publicationApproval": false,
+  "purpose": "Record a bounded Central Luzon discovery screen and its unresolved reuse terms without copying occurrence-level data into the public research repository or app.",
+  "region": {
+    "id": "0300000000",
+    "name": "Central Luzon",
+    "administrativeUnit": "Zambales"
+  },
+  "source": {
+    "id": "gbif-cas-ichthyology",
+    "provider": "California Academy of Sciences via GBIF",
+    "datasetKey": "5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+    "datasetTitle": "CAS Ichthyology (ICH)",
+    "doi": "10.15468/efh2ib",
+    "datasetUrl": "https://www.gbif.org/dataset/5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+    "metadataLastModified": "2026-11-23T22:38:15.271+00:00",
+    "citation": "Fong J (2026). CAS Ichthyology (ICH). California Academy of Sciences. Occurrence dataset. https://doi.org/10.15468/efh2ib accessed via GBIF on 2026-11-26.",
+    "gbifDatasetLicense": "CC0-1.0",
+    "reviewScope": "Dataset metadata, the bounded aggregate occurrence search, five exact waterBody-field follow-up query counts, and the provider terms page. No occurrence-level content is copied into this review."
+  },
+  "discoveryScreen": {
+    "endpoint": "https://api.gbif.org/v1/occurrence/search",
+    "query": {
+      "country": "PH",
+      "stateProvince": "Zambales",
+      "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+      "taxonKey": "8VR36",
+      "occurrenceStatus": "PRESENT",
+      "hasCoordinate": true,
+      "limit": 0
+    },
+    "taxonomicInterpretation": "The checklist key pins the search to the GBIF Catalogue of Life eXtended Release taxonomy; the supplied taxon key selects Actinopterygii in that checklist. This is a discovery screen, not a verified fish inventory.",
+    "broadScreenResultCount": 548,
+    "followUpQueryCount": 5,
+    "followUpResultRows": 19,
+    "followUpScope": "Five separately run exact waterBody-field searches among the Zambales screen. The field labels and row-level results are deliberately omitted here while source reuse terms remain unresolved.",
+    "interpretation": "These are GBIF search results from a preserved-specimen collection and are not evidence of current presence, fishability, catchability, water quality, or an exhaustive list. Administrative matching and a populated waterBody field do not by themselves verify a field station or exact waterbody identity."
+  },
+  "reuseReview": {
+    "gbifMetadata": {
+      "source": "GBIF dataset metadata",
+      "url": "https://www.gbif.org/dataset/5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+      "statement": "The dataset page identifies the publisher as the California Academy of Sciences and displays a CC0 1.0 dataset licence."
+    },
+    "providerTerms": {
+      "source": "California Academy of Sciences Terms of Use",
+      "url": "https://www.calacademy.org/terms-of-use",
+      "lastModified": "2026-11-18",
+      "checkedOn": "2026-11-26",
+      "relevantClauses": "The terms describe Academy Content as owned by the Academy and/or licensors, restrict unauthorized distribution, copying, publication and other uses, state personal/non-commercial use limits, and prohibit automated access to Academy services without express written permission.",
+      "scopeNote": "The page's application to records republished by GBIF under the dataset-level CC0 declaration has not been clarified for this batch. No legal conclusion is made."
+    },
+    "decision": "Do not redistribute occurrence-level names, identifiers, locality strings, coordinates, images, or derived row tables from this batch in Bangwit or the public source repository while the provider-terms versus GBIF-licence scope remains unresolved. Do not scrape the Academy collection website. A future rights clarification must be item- or dataset-specific and documented before projection."
+  },
+  "publicationDecision": {
+    "researchOnly": true,
+    "speciesAssertionsAdded": 0,
+    "publicOccurrenceRowsAdded": 0,
+    "coordinatesProjected": 0,
+    "waterbodyGeometryAdded": 0,
+    "imagesAdded": 0,
+    "currentPresenceClaimsAdded": 0,
+    "fishingOrSafetyRecommendationsAdded": 0,
+    "publicationApproval": false
+  },
+  "limits": [
+    "The 548-row screen is a bounded query result, not a provincial fish roster or evidence of occurrence absence outside the search.",
+    "The 19 follow-up result rows are an aggregate result count only; no row-level result was copied into this repository.",
+    "The difference between the GBIF CC0 dataset metadata and the Academy terms page requires source-specific clarification; this review does not resolve it.",
+    "No field survey, voucher examination, taxonomic re-identification, waterbody crosswalk, coordinate validation, or legal review was performed."
+  ]
+}
