@@ -1,0 +1,113 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "central-luzon-bataan-cof-direct-entries-followup-20261126",
+  "reviewedOn": "2026-11-26",
+  "phaseId": "L3",
+  "regionId": "0300000000",
+  "regionName": "Region III (Central Luzon)",
+  "waterbodyNames": [
+    "Almacen River",
+    "Bagac River",
+    "Talisay River"
+  ],
+  "status": "two-direct-catalog-entry-gaps-resolved;source-specimen-identities-unverified;historical-research-only",
+  "question": "Do direct current Catalog of Fishes records resolve the two outstanding Bataan survey name-page follow-ups without overclaiming specimen identity?",
+  "sourceIds": [
+    "bioflux-bataan-three-rivers-fish-survey-2025",
+    "calacademy-catalog-bataan-taxonomy-review-20261024"
+  ],
+  "inputs": [
+    "data/research/philippines/central-luzon-bataan-river-table-review-20261024.json",
+    "data/research/philippines/central-luzon-bataan-cof-name-review-20261024.json"
+  ],
+  "inputSha256": {
+    "bataanSurveyTableReview": "3fe5530e98fe91dc6ada57fc9d6831ea1ee845beb4a25db7834d64a96e5640ad",
+    "priorCoFNameReview": "e273788f077628bfd081b3ac3a2ba48251f0ca4202696a5e582f9e345fcb5fe8"
+  },
+  "method": {
+    "authority": "California Academy of Sciences, Eschmeyer’s Catalog of Fishes",
+    "catalogVersion": "Online version updated 18 November 2026, as shown on both direct record pages",
+    "retrievedOn": "2026-11-26",
+    "procedure": "Fetched the two catalog-record URLs already identified by the selected-name review. Followed the Bataan-table row identities to the direct record pages and retained local HTML response hashes. This checks current nomenclature and family placement only.",
+    "reproducibility": "Direct-record URLs, catalog record IDs, response codes, byte lengths, and SHA-256 values are recorded per candidate. Supporting raw HTML is local-only under data/research/philippines/raw/.",
+    "limitations": "A catalog entry does not redetermine fish in the Bioflux paper, confirm vouchers, verify river/station assignments, prove current presence, or approve publication. The survey’s source labels and river-level matrix remain unchanged."
+  },
+  "followUps": [
+    {
+      "candidateId": "bataan-table-row-004",
+      "sourceNameVerbatim": "Apogon hyalosoma",
+      "sourceFamilyVerbatim": "Apogonidae",
+      "directEntry": {
+        "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=15163",
+        "catalogRecordId": "15163",
+        "currentName": "Yarica hyalosoma (Bleeker 1852)",
+        "family": "Apogonidae",
+        "subfamily": "Apogoninae",
+        "retrievedOn": "2026-11-26",
+        "response": "HTTP 200",
+        "rawResponse": {
+          "path": "data/research/philippines/raw/national/bataan-cof-followup-20261126/04-apogon-hyalosoma-accepted-record.html",
+          "bytes": 11994,
+          "sha256": "b91b341d4190500cff3ccc4834c9b4b831cbae7b4cd816bbfde94346a8c9c069"
+        }
+      },
+      "catalogFinding": "The catalog record for the source combination Apogon hyalosoma states its current status as valid as Yarica hyalosoma (Bleeker 1852). The table’s printed spelling remains untouched.",
+      "disposition": "Nomenclature candidate confirmed; source fish identity and Bataan occurrence remain unverified."
+    },
+    {
+      "candidateId": "bataan-table-row-030",
+      "sourceNameVerbatim": "Gazza minuta",
+      "sourceFamilyVerbatim": "Leiognathidae",
+      "directEntry": {
+        "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=35731",
+        "catalogRecordId": "35731",
+        "currentName": "Gazza minuta (Bloch 1795)",
+        "family": "Leiognathidae",
+        "subfamily": "Gazzinae",
+        "retrievedOn": "2026-11-26",
+        "response": "HTTP 200",
+        "rawResponse": {
+          "path": "data/research/philippines/raw/national/bataan-cof-followup-20261126/05-gazza-minuta-accepted-record.html",
+          "bytes": 14897,
+          "sha256": "d605224a34dfe2f5a011a747d9a1e1ffe24a45adbd6bfa6bbfb12e610747d593"
+        }
+      },
+      "catalogFinding": "The direct catalog record states the current status as valid as Gazza minuta (Bloch 1795) in Leiognathidae.",
+      "disposition": "Nomenclature candidate confirmed; source fish identity and Bataan occurrence remain unverified."
+    }
+  ],
+  "counts": {
+    "priorBinomialCatalogRows": 42,
+    "directRecordFollowUpsCompleted": 2,
+    "directCurrentNameEntriesConfirmed": 2,
+    "sourceIdentitiesVerified": 0,
+    "voucherLinksVerified": 0,
+    "stationAssignmentsVerified": 0,
+    "occurrenceAssertionsAdmitted": 0,
+    "publicAppRowsAdded": 0
+  },
+  "limits": [
+    "The article reports a 52-row river-level presence/absence table, including 42 binomials, genus-only labels, and a reported hybrid. This follow-up addresses only two catalog-page capture gaps.",
+    "The existing independent-name review still marks all 52 table rows pending overall identity review; the ten genus-only or hybrid rows remain held.",
+    "No present-day presence, abundance, diet, bait, legality, safety, species image, or river geometry is inferred or added."
+  ],
+  "decision": "Close only the two direct Catalog page-capture follow-ups. Keep the source names and river-level table research-only; no occurrence or app projection is authorized by this nomenclature check.",
+  "nextAction": "Seek voucher- or image-supported independent identification evidence for the 2025 study if available. Until then, retain all paper identifications as source-reported and do not promote them to verified app species.",
+  "sources": [
+    {
+      "sourceId": "bioflux-bataan-three-rivers-fish-survey-2025",
+      "url": "https://bioflux.com.ro/docs/2025.1650-1662.pdf",
+      "supports": "The source-printed names and the existing Table 2 river-level rows under review."
+    },
+    {
+      "sourceId": "calacademy-catalog-bataan-taxonomy-review-20261024",
+      "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=15163",
+      "supports": "Direct accepted-status entry for the Apogon hyalosoma source combination; current name Yarica hyalosoma."
+    },
+    {
+      "sourceId": "calacademy-catalog-bataan-taxonomy-review-20261024",
+      "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=35731",
+      "supports": "Direct accepted-status entry for Gazza minuta."
+    }
+  ]
+}

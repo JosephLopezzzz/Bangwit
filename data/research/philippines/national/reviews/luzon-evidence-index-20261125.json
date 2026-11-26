@@ -1282,7 +1282,7 @@
     },
     {
       "path": "data/research/philippines/luzon-completion-manifest.json",
-      "sha256": "0697715eb04c6d14857552623314c9f6590257da9fa6d0ccfa4045983915e099"
+      "sha256": "8a8401812cb183f37333df43b416c44e1b5916b22f7458497df8adff3879e3ec"
     },
     {
       "path": "data/research/philippines/makiling-gbif-source-review.json",
@@ -2773,6 +2773,10 @@
       "sha256": "7d49acc4fac0a4d5df160920c8db7612f4242f96f712da3785388bb96491d0fd"
     },
     {
+      "path": "data/research/philippines/national/reviews/central-luzon-bataan-cof-direct-entries-followup-20261126.json",
+      "sha256": "4f45de71f72d688bc480263faa2f49f98c8d110a09e8458136164517535f0845"
+    },
+    {
       "path": "data/research/philippines/national/reviews/central-luzon-bataan-community-fishery-context-screen-20261124.json",
       "sha256": "0d096dbefb3c35b530d7af58426c7ed5cab009fa595820f83d4d22d5f325dc88"
     },
@@ -4070,12 +4074,12 @@
     }
   ],
   "summary": {
-    "reviewArtifactsScanned": 376,
+    "reviewArtifactsScanned": 377,
     "regionCount": 8,
     "sourceRegistryUniqueIds": 1262,
     "sourceIdentityCrosswalkGroups": 10,
     "reviewClassifications": {
-      "directly-linked": 302,
+      "directly-linked": 303,
       "indirectly-linked": 21,
       "national-context-only": 2,
       "shared-across-regions": 35,
@@ -4083,12 +4087,12 @@
     },
     "brokenOrUnresolvedJsonReferences": 0,
     "missingSourceIdLinks": 0,
-    "localRawReferenceCount": 692,
-    "localRawReferencesAvailable": 692,
+    "localRawReferenceCount": 694,
+    "localRawReferencesAvailable": 694,
     "localRawReferencesUnresolved": 0,
     "localRawHashMismatchReferences": 0,
     "localRawNonmatchingBasenameCandidates": 3,
-    "uniqueLocalRawInputsMatched": 666,
+    "uniqueLocalRawInputsMatched": 668,
     "manuallyReviewedRegionalAssociations": 32,
     "nationalContextArtifacts": 3,
     "unlinkedManualAssociations": 0,
@@ -4124,10 +4128,10 @@
       "rolloutKey": "L3",
       "regionId": "0300000000",
       "name": "Region III (Central Luzon)",
-      "manifestReferenceCount": 104,
-      "directlyLinkedReviewCount": 94,
+      "manifestReferenceCount": 105,
+      "directlyLinkedReviewCount": 95,
       "indirectlyLinkedReviewCount": 6,
-      "declaredOrLinkedReviewCount": 101,
+      "declaredOrLinkedReviewCount": 102,
       "unaccountedExplicitReviewCount": 0,
       "baselineReviewed": false,
       "scopeFrozen": false
@@ -6335,6 +6339,33 @@
       "publicationApproval": null,
       "sourceIds": [
         "roque-manliclic-corpuz-2022-bagac-river-fish-study"
+      ],
+      "missingSourceIds": [],
+      "explicitSuccessorReferences": []
+    },
+    {
+      "path": "data/research/philippines/national/reviews/central-luzon-bataan-cof-direct-entries-followup-20261126.json",
+      "sha256": "4f45de71f72d688bc480263faa2f49f98c8d110a09e8458136164517535f0845",
+      "reviewId": "central-luzon-bataan-cof-direct-entries-followup-20261126",
+      "reviewedOn": "2026-11-26",
+      "phaseId": "L3",
+      "declaredRegionIds": [
+        "0300000000"
+      ],
+      "manualAssociation": null,
+      "nationalContextDisposition": null,
+      "directRegionIds": [
+        "0300000000"
+      ],
+      "indirectRegionIds": [],
+      "relatedRegionIds": [
+        "0300000000"
+      ],
+      "classification": "directly-linked",
+      "publicationApproval": null,
+      "sourceIds": [
+        "bioflux-bataan-three-rivers-fish-survey-2025",
+        "calacademy-catalog-bataan-taxonomy-review-20261024"
       ],
       "missingSourceIds": [],
       "explicitSuccessorReferences": []
@@ -17397,6 +17428,32 @@
         "nonmatchingCandidates": []
       },
       {
+        "from": "data/research/philippines/national/reviews/central-luzon-bataan-cof-direct-entries-followup-20261126.json",
+        "field": "$.followUps[0].directEntry.rawResponse.path",
+        "referencedPath": "data/research/philippines/raw/national/bataan-cof-followup-20261126/04-apogon-hyalosoma-accepted-record.html",
+        "availability": "available-and-hash-verified",
+        "matchedFiles": [
+          {
+            "path": "data/research/philippines/raw/national/bataan-cof-followup-20261126/04-apogon-hyalosoma-accepted-record.html",
+            "sha256": "b91b341d4190500cff3ccc4834c9b4b831cbae7b4cd816bbfde94346a8c9c069"
+          }
+        ],
+        "nonmatchingCandidates": []
+      },
+      {
+        "from": "data/research/philippines/national/reviews/central-luzon-bataan-cof-direct-entries-followup-20261126.json",
+        "field": "$.followUps[1].directEntry.rawResponse.path",
+        "referencedPath": "data/research/philippines/raw/national/bataan-cof-followup-20261126/05-gazza-minuta-accepted-record.html",
+        "availability": "available-and-hash-verified",
+        "matchedFiles": [
+          {
+            "path": "data/research/philippines/raw/national/bataan-cof-followup-20261126/05-gazza-minuta-accepted-record.html",
+            "sha256": "d605224a34dfe2f5a011a747d9a1e1ffe24a45adbd6bfa6bbfb12e610747d593"
+          }
+        ],
+        "nonmatchingCandidates": []
+      },
+      {
         "from": "data/research/philippines/national/reviews/central-luzon-bmb-atlas-gbif-count-screen-20261119.json",
         "field": "$.queries[0].rawFile",
         "referencedPath": "raw/central-luzon-bmb-atlas-gbif-screen-20261119/pantabangan-reservoir-waterBody.json",
@@ -25611,6 +25668,16 @@
       {
         "path": "data/research/philippines/raw/national-mb-nmp-crosswalk-20261119/gbif-page-600.json",
         "sha256": "e8a8dfbe866212197069f90dc3edad861334d878cf5c94db978f27b1af1d27b1",
+        "referenceCount": 1
+      },
+      {
+        "path": "data/research/philippines/raw/national/bataan-cof-followup-20261126/04-apogon-hyalosoma-accepted-record.html",
+        "sha256": "b91b341d4190500cff3ccc4834c9b4b831cbae7b4cd816bbfde94346a8c9c069",
+        "referenceCount": 1
+      },
+      {
+        "path": "data/research/philippines/raw/national/bataan-cof-followup-20261126/05-gazza-minuta-accepted-record.html",
+        "sha256": "d605224a34dfe2f5a011a747d9a1e1ffe24a45adbd6bfa6bbfb12e610747d593",
         "referenceCount": 1
       },
       {
