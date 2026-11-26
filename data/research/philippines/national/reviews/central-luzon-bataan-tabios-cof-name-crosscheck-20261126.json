@@ -1,0 +1,227 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "central-luzon-bataan-tabios-cof-name-crosscheck-20261126",
+  "reviewedOn": "2026-11-26",
+  "phaseId": "luzon-regional-completion",
+  "regionId": "0300000000",
+  "regionName": "Region III (Central Luzon)",
+  "province": "Bataan",
+  "waterbodyName": "Tabios River",
+  "sourceIds": [
+    "gbif-col-xr-taxonomy-matching",
+    "jamandre-2023-plazi-freshwater"
+  ],
+  "status": "nomenclature cross-check complete; museum voucher identity and locality remain unverified",
+  "question": "Do authoritative current fish-name references support the two species-level names in the GBIF-indexed 1976 Tabios River USNM records?",
+  "inputs": [
+    {
+      "path": "data/research/philippines/freshwater-taxonomy-matches.json",
+      "sha256": "957ce9b9e2892ebd6085175920ebe2eeb6bdfbb62ad3c5fbef35f89b43da9161",
+      "records": [
+        {
+          "candidateId": "jamandre-2023-plazi-freshwater:80e96f685cf4aea236dd",
+          "candidateName": "Glossogobius obscuripinnis",
+          "usageKey": "3GDPC",
+          "status": "ACCEPTED",
+          "matchType": "EXACT",
+          "confidence": 100
+        },
+        {
+          "candidateId": "jamandre-2023-plazi-freshwater:adc87b22da012b17fb34",
+          "candidateName": "Redigobius tambujon",
+          "usageKey": "4RP9R",
+          "status": "ACCEPTED",
+          "matchType": "EXACT",
+          "confidence": 100
+        }
+      ]
+    },
+    {
+      "path": "data/research/philippines/freshwater-checklist-candidates.json",
+      "sha256": "b5021e735269096ca57a21b797ef785094669aeff27e94a3043fdca287b5e4e3",
+      "records": [
+        {
+          "id": "jamandre-2023-plazi-freshwater:80e96f685cf4aea236dd",
+          "candidateName": "Glossogobius obscuripinnis"
+        },
+        {
+          "id": "jamandre-2023-plazi-freshwater:adc87b22da012b17fb34",
+          "candidateName": "Redigobius tambujon"
+        }
+      ]
+    }
+  ],
+  "rawSnapshot": {
+    "directory": "raw/central-luzon-bataan-tabios-taxonomy-crosscheck-20261126",
+    "files": [
+      {
+        "path": "redigobius-tambujon-catalog-response.json",
+        "bytes": 11433,
+        "sha256": "1c6adf9497e636c87185a3c08a12a48486c67d99f9bb44f97723b8e637acdc6d",
+        "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=43862",
+        "httpStatus": 200,
+        "bodyBytes": 10189,
+        "bodySha256": "89f8ba7cf922b8d2e459a8d901378a9b2724d4b039c0dd736aa98303f64a7c91"
+      },
+      {
+        "path": "glossogobius-obscuripinnis-catalog-response.json",
+        "bytes": 10959,
+        "sha256": "9e289624314c16d6575fcf32ecb1cb0361af9a81f4733482c7911bae39ea9a8a",
+        "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=43719",
+        "httpStatus": 200,
+        "bodyBytes": 9726,
+        "bodySha256": "fd99e5125b0b6ab73a248a000486f1103a4b5f206f5635bbf935d2eaf6723215"
+      }
+    ]
+  },
+  "method": {
+    "primaryTaxonomyReference": "Eschmeyer’s Catalog of Fishes, California Academy of Sciences; individual record pages opened and stored as raw HTML.",
+    "pages": {
+      "redigobiusTambujon": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=43862",
+      "glossogobiusObscuripinnis": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=43719"
+    },
+    "crosswalk": "Compared current Catalog of Fishes status with existing exact Catalogue of Life Extended Release matches in freshwater-taxonomy-matches.json and the 2023 Philippines freshwater checklist entries. The checklist lists USNM 263429 for Redigobius tambujon, but that entry itself gives no Tabios locality.",
+    "boundedResult": "The names align as currently valid in both taxonomy references. This is a nomenclature check, not examination of the actual USNM specimens."
+  },
+  "findings": {
+    "RedigobiusTambujon": {
+      "catalogueOfFishes": {
+        "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=43862",
+        "sourceName": "Gobius tambujon Bleeker, 1854",
+        "currentStatus": "Valid as Redigobius tambujon (Bleeker 1854)",
+        "family": "Oxudercidae: Gobionellinae",
+        "catalogueDistribution": "Eastern Indian Ocean and western Pacific; includes north to the Philippines",
+        "habitat": [
+          "freshwater",
+          "brackish",
+          "marine"
+        ],
+        "historicalTypeLocality": "Panimbang River, Banten and Tjiliwong River, Jakarta, Java, Indonesia",
+        "cataloguePageVersionUpdated": "9 Sep. 2025"
+      },
+      "cataloguePageSnapshot": {
+        "path": "data/research/philippines/raw/central-luzon-bataan-tabios-taxonomy-crosscheck-20261126/redigobius-tambujon-catalog-response.json",
+        "bytes": 11433,
+        "sha256": "1c6adf9497e636c87185a3c08a12a48486c67d99f9bb44f97723b8e637acdc6d",
+        "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=43862",
+        "httpStatus": 200,
+        "bodyBytes": 10189,
+        "bodySha256": "89f8ba7cf922b8d2e459a8d901378a9b2724d4b039c0dd736aa98303f64a7c91"
+      },
+      "colExtendedReleaseMatch": {
+        "candidateId": "jamandre-2023-plazi-freshwater:adc87b22da012b17fb34",
+        "usageKey": "4RP9R",
+        "canonicalName": "Redigobius tambujon",
+        "authorship": "(Bleeker, 1854)",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "matchType": "EXACT",
+        "confidence": 100,
+        "retrievedAtUtc": "2026-10-22T05:37:08.726Z"
+      },
+      "checklist2023Line": {
+        "sourceId": "jamandre-2023-plazi-freshwater",
+        "sourceParagraph": 53,
+        "sourceUrl": "https://treatment.plazi.org/id/03D487F3FFC9FFA2FF322F4128AB0921",
+        "verbatimEntry": "Redigobius tambujon (Bleeker, 1854); Native; Found in river basins across the Philippines; USNM 263429; Kottelat 2013; LC",
+        "evidenceKind": "literature-checklist-entry",
+        "license": "CC0-1.0",
+        "reviewStatus": "pending"
+      }
+    },
+    "GlossogobiusObscuripinnis": {
+      "catalogueOfFishes": {
+        "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=43719",
+        "sourceName": "Gobius obscuripinnis Peters, 1868",
+        "currentStatus": "Valid as Glossogobius obscuripinnis (Peters 1868)",
+        "family": "Gobiidae: Gobiinae",
+        "catalogueDistribution": "Southeast Asia: Philippines",
+        "habitat": [
+          "freshwater"
+        ],
+        "historicalTypeLocality": "Bicol River in Province Bay and Kolabos Brook at Daraga, Luzon, Philippines",
+        "cataloguePageVersionUpdated": "13 Aug. 2026"
+      },
+      "cataloguePageSnapshot": {
+        "path": "data/research/philippines/raw/central-luzon-bataan-tabios-taxonomy-crosscheck-20261126/glossogobius-obscuripinnis-catalog-response.json",
+        "bytes": 10959,
+        "sha256": "9e289624314c16d6575fcf32ecb1cb0361af9a81f4733482c7911bae39ea9a8a",
+        "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=43719",
+        "httpStatus": 200,
+        "bodyBytes": 9726,
+        "bodySha256": "fd99e5125b0b6ab73a248a000486f1103a4b5f206f5635bbf935d2eaf6723215"
+      },
+      "colExtendedReleaseMatch": {
+        "candidateId": "jamandre-2023-plazi-freshwater:80e96f685cf4aea236dd",
+        "usageKey": "3GDPC",
+        "canonicalName": "Glossogobius obscuripinnis",
+        "authorship": "(Peters, 1868)",
+        "rank": "SPECIES",
+        "status": "ACCEPTED",
+        "matchType": "EXACT",
+        "confidence": 100,
+        "retrievedAtUtc": "2026-10-22T05:36:14.848Z"
+      },
+      "checklist2023Line": {
+        "sourceId": "jamandre-2023-plazi-freshwater",
+        "sourceParagraph": 23,
+        "sourceUrl": "https://treatment.plazi.org/id/03D487F3FFC9FFA2FF322F4128AB0921",
+        "verbatimEntry": "Glossogobius obscuripinnis (Peters, 1868); Native; Found in river basins of Luzon Island; ZMB 6498; Kottelat 2013; DD",
+        "evidenceKind": "literature-checklist-entry",
+        "license": "CC0-1.0",
+        "reviewStatus": "pending"
+      }
+    },
+    "specimenScope": {
+      "USNM263429": "The 2023 freshwater checklist includes this catalog number under Redigobius tambujon; GBIF occurrence 1319093707 reports the same catalog number and a Tabios River locality. The direct NMNH record page served an application shell in the prior pass, so the source payload has not been independently matched.",
+      "USNM369618and264382": "GBIF occurrence rows report these as Glossogobius obscuripinnis with Tabios River localities, but the current pass did not locate an independent published catalog crosswalk for either number."
+    }
+  },
+  "decision": {
+    "currentScientificNamesSupportedByCatalogOfFishes": 2,
+    "CoLExactSpeciesMatchesPresent": 2,
+    "USNMSpecimenIdentificationsIndependentlyVerified": 0,
+    "TabiosLocalityCrossCheckedAgainstOriginalMuseumPayload": 0,
+    "typeLocalityUsedAsBataanOccurrenceEvidence": false,
+    "newAppSpeciesRows": 0,
+    "newCurrentPresenceAssertions": 0,
+    "geometryApproved": false,
+    "imagesApproved": 0,
+    "publicationApproval": false
+  },
+  "limitations": [
+    "Catalog of Fishes confirms name status, family placement, broad distribution and habitat at species level; it does not confirm the identification of the individual Tabios River specimens.",
+    "The type localities are elsewhere: Indonesia for Redigobius tambujon and Bicol River/Kolabos Brook in Luzon for Glossogobius obscuripinnis. Neither is evidence that a Tabios specimen was correctly identified.",
+    "The three NMNH rows have no coordinates or media. Their locality strings and IDs still require the source collection payload or curator/source export for independent verification.",
+    "A broad Philippines distribution, freshwater habitat, or a 2023 checklist citation does not establish present-day Bataan occupancy, abundance, catchability, diet, rules, or safety.",
+    "The current checklist crosswalk remains research-only and is not authorized for app projection or species-image reuse."
+  ],
+  "followUp": [
+    "Obtain a source-level record export or original NMNH payload for USNM 263429, 369618, and 264382 before claiming independent specimen verification.",
+    "Continue locality and site-identity review for Tabios River and the separate Pucot River/Mariveles Bay cluster.",
+    "If photos are found, review each image’s item-level source and reuse terms separately; the GBIF rows screened here include no media for these three records."
+  ],
+  "sources": [
+    {
+      "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=43862",
+      "supports": "Current Catalog of Fishes name, family, distribution and habitat entry for Redigobius tambujon."
+    },
+    {
+      "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=43719",
+      "supports": "Current Catalog of Fishes name, family, distribution, habitat and type-locality entry for Glossogobius obscuripinnis."
+    },
+    {
+      "sourceId": "jamandre-2023-plazi-freshwater",
+      "url": "https://doi.org/10.11646/zootaxa.5301.2.1",
+      "supports": "2023 provisional freshwater checklist, including its source-reported Redigobius tambujon entry and voucher number USNM 263429."
+    },
+    {
+      "sourceId": "gbif-col-xr-taxonomy-matching",
+      "url": "https://techdocs.gbif.org/en/data-processing/taxonomy-interpretation",
+      "supports": "Interpretation context for the previously recorded Catalogue of Life Extended Release taxon matches."
+    }
+  ],
+  "relatedEvidence": [
+    "data/research/philippines/national/reviews/central-luzon-bataan-tabios-river-museum-voucher-screen-20261126.json"
+  ]
+}
