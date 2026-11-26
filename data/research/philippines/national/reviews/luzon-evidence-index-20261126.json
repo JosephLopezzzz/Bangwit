@@ -1282,7 +1282,7 @@
     },
     {
       "path": "data/research/philippines/luzon-completion-manifest.json",
-      "sha256": "0f5cdffd612e1db04c8d5e7ac8e88bb46ef110dd7ab2335c55c5f2f61c826b65"
+      "sha256": "541879dc6711ddb4f61659e4ee7a2b506ecb1730de81905b69dac51e9a69cb62"
     },
     {
       "path": "data/research/philippines/makiling-gbif-source-review.json",
@@ -2793,6 +2793,10 @@
       "sha256": "d47bc1c893fdd8f553e5cc0a0af9cc77cfce93580192adef8e0da3b8bd10c61d"
     },
     {
+      "path": "data/research/philippines/national/reviews/central-luzon-bataan-tabios-river-museum-voucher-screen-20261126.json",
+      "sha256": "6325421cc8f2a5ec49e03af2f10e9700b9e219cbea2d8b4f67cac1e523dd4cbc"
+    },
+    {
       "path": "data/research/philippines/national/reviews/central-luzon-bmb-2014-wetland-atlas-count-crosswalk-20261119.json",
       "sha256": "e6cbdc3d23b509444f5a8088b2eb0d5e47abf25fb5a6521e9ea423d5a3349499"
     },
@@ -4094,12 +4098,12 @@
     }
   ],
   "summary": {
-    "reviewArtifactsScanned": 382,
+    "reviewArtifactsScanned": 383,
     "regionCount": 8,
     "sourceRegistryUniqueIds": 1263,
     "sourceIdentityCrosswalkGroups": 10,
     "reviewClassifications": {
-      "directly-linked": 307,
+      "directly-linked": 308,
       "indirectly-linked": 22,
       "national-context-only": 2,
       "shared-across-regions": 35,
@@ -4107,12 +4111,12 @@
     },
     "brokenOrUnresolvedJsonReferences": 0,
     "missingSourceIdLinks": 0,
-    "localRawReferenceCount": 712,
-    "localRawReferencesAvailable": 712,
+    "localRawReferenceCount": 713,
+    "localRawReferencesAvailable": 713,
     "localRawReferencesUnresolved": 0,
     "localRawHashMismatchReferences": 0,
     "localRawNonmatchingBasenameCandidates": 3,
-    "uniqueLocalRawInputsMatched": 679,
+    "uniqueLocalRawInputsMatched": 680,
     "manuallyReviewedRegionalAssociations": 32,
     "nationalContextArtifacts": 3,
     "unlinkedManualAssociations": 0,
@@ -4148,10 +4152,10 @@
       "rolloutKey": "L3",
       "regionId": "0300000000",
       "name": "Region III (Central Luzon)",
-      "manifestReferenceCount": 109,
-      "directlyLinkedReviewCount": 99,
+      "manifestReferenceCount": 110,
+      "directlyLinkedReviewCount": 100,
       "indirectlyLinkedReviewCount": 7,
-      "declaredOrLinkedReviewCount": 107,
+      "declaredOrLinkedReviewCount": 108,
       "unaccountedExplicitReviewCount": 0,
       "baselineReviewed": false,
       "scopeFrozen": false
@@ -6492,6 +6496,33 @@
       "publicationApproval": null,
       "sourceIds": [
         "bioflux-bataan-three-rivers-fish-survey-2025"
+      ],
+      "missingSourceIds": [],
+      "explicitSuccessorReferences": []
+    },
+    {
+      "path": "data/research/philippines/national/reviews/central-luzon-bataan-tabios-river-museum-voucher-screen-20261126.json",
+      "sha256": "6325421cc8f2a5ec49e03af2f10e9700b9e219cbea2d8b4f67cac1e523dd4cbc",
+      "reviewId": "central-luzon-bataan-tabios-river-museum-voucher-screen-20261126",
+      "reviewedOn": "2026-11-26",
+      "phaseId": "luzon-regional-completion",
+      "declaredRegionIds": [
+        "0300000000"
+      ],
+      "manualAssociation": null,
+      "nationalContextDisposition": null,
+      "directRegionIds": [
+        "0300000000"
+      ],
+      "indirectRegionIds": [],
+      "relatedRegionIds": [
+        "0300000000"
+      ],
+      "classification": "directly-linked",
+      "publicationApproval": null,
+      "sourceIds": [
+        "gbif-cas-ichthyology",
+        "gbif-nmnh-usnm-extant-specimens"
       ],
       "missingSourceIds": [],
       "explicitSuccessorReferences": []
@@ -17607,6 +17638,19 @@
         "nonmatchingCandidates": []
       },
       {
+        "from": "data/research/philippines/national/reviews/central-luzon-bataan-tabios-river-museum-voucher-screen-20261126.json",
+        "field": "$.rawSnapshot.files[0].path",
+        "referencedPath": "gbif-bataan-actinopterygii-preserved-search.json",
+        "availability": "available-and-hash-verified",
+        "matchedFiles": [
+          {
+            "path": "data/research/philippines/raw/central-luzon-bataan-occurrence-screen-20261126/gbif-bataan-actinopterygii-preserved-search.json",
+            "sha256": "24bf2c2ae495b5fd091fb97064f8b47120a584d6c1c77b4c58ca87bc4d8a102f"
+          }
+        ],
+        "nonmatchingCandidates": []
+      },
+      {
         "from": "data/research/philippines/national/reviews/central-luzon-bmb-atlas-gbif-count-screen-20261119.json",
         "field": "$.queries[0].rawFile",
         "referencedPath": "raw/central-luzon-bmb-atlas-gbif-screen-20261119/pantabangan-reservoir-waterBody.json",
@@ -25190,6 +25234,11 @@
       {
         "path": "data/research/philippines/raw/calabarzon-tikub-colxr-crosswalk-20261031/colxr-name-matches.json",
         "sha256": "d6da366117f291f49ee9a96fe2e01e6fae90f9d426e1e80fcee5e4ea53c7f739",
+        "referenceCount": 1
+      },
+      {
+        "path": "data/research/philippines/raw/central-luzon-bataan-occurrence-screen-20261126/gbif-bataan-actinopterygii-preserved-search.json",
+        "sha256": "24bf2c2ae495b5fd091fb97064f8b47120a584d6c1c77b4c58ca87bc4d8a102f",
         "referenceCount": 1
       },
       {

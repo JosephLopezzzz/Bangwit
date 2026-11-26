@@ -1,0 +1,219 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "central-luzon-bataan-tabios-river-museum-voucher-screen-20261126",
+  "reviewedOn": "2026-11-26",
+  "phaseId": "luzon-regional-completion",
+  "regionId": "0300000000",
+  "regionName": "Region III (Central Luzon)",
+  "province": "Bataan",
+  "waterbodyNames": [
+    "Tabios River",
+    "Pucot River (unresolved river/coastal locality cluster)"
+  ],
+  "sourceIds": [
+    "gbif-nmnh-usnm-extant-specimens",
+    "gbif-cas-ichthyology"
+  ],
+  "status": "research-only historical occurrence screen",
+  "question": "Does a bounded public GBIF search surface museum occurrence rows whose source locality explicitly names Tabios River in Bataan, and are any suitable for current app records or images?",
+  "method": {
+    "endpoint": "https://api.gbif.org/v1/occurrence/search",
+    "requestMethod": "GET; public indexed occurrence search; no account or API key used",
+    "taxonomy": {
+      "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+      "checklistName": "Catalogue of Life Extended Release",
+      "taxonKey": "8VR36",
+      "taxonName": "Actinopterygii",
+      "sourceRank": "GIGACLASS"
+    },
+    "filters": {
+      "country": "PH",
+      "stateProvince": "Bataan",
+      "basisOfRecord": "PRESERVED_SPECIMEN"
+    },
+    "pagination": "limit=300, offset=0; the API reported 319 and all 319 result rows were captured in the local raw response.",
+    "textScreen": "Within the 319 captured rows, searched locality, verbatimLocality, and waterBody fields case-insensitively for Tabios River; checked locality-text API queries for exact Bagac and Talisay strings as a separate negative-result screen.",
+    "apiDocumentation": [
+      {
+        "url": "https://techdocs.gbif.org/en/openapi/v1/occurrence",
+        "supports": "Occurrence search endpoint, paging limit, and public record lookup."
+      },
+      {
+        "url": "https://techdocs.gbif.org/en/data-processing/taxonomy-interpretation",
+        "supports": "Occurrence search can use a selected taxonomy via checklistKey; taxonKey interpretation depends on the selected checklist."
+      }
+    ]
+  },
+  "findings": {
+    "queryCounts": {
+      "allFiltersBataanPreservedActinopterygii": 319,
+      "sameSearchWithoutBasisOfRecordRestriction": 443,
+      "exactLocalityBagac": 0,
+      "exactLocalityTalisay": 0
+    },
+    "corpusSummary": {
+      "uniqueScientificNameStrings": 240,
+      "recordsWithCoordinates": 131,
+      "recordsWithAnyMediaLink": 53
+    },
+    "tabiosRiverRows": [
+      {
+        "sourceReportedName": "Redigobius tambujon (Bleeker, 1854)",
+        "gbifId": "1319093707",
+        "occurrenceUrl": "https://api.gbif.org/v1/occurrence/1319093707",
+        "occurrencePage": "https://www.gbif.org/occurrence/1319093707",
+        "datasetId": "gbif-nmnh-usnm-extant-specimens",
+        "datasetKey": "821cc27a-e3bb-4bc5-ac34-89ada245069d",
+        "datasetTitle": "NMNH Extant Specimen Records (USNM, US)",
+        "datasetDoi": "https://doi.org/10.15468/hnhrg3",
+        "datasetLicense": "CC0-1.0 in GBIF dataset metadata",
+        "institutionCode": "USNM",
+        "collectionCode": "FISH",
+        "catalogNumber": "USNM 263429",
+        "occurrenceId": "http://n2t.net/ark:/65665/353a67775-bcbb-41d9-8550-2961ec09c977",
+        "museumCollectionUrl": "https://collections.nmnh.si.edu/search/fishes/?ark=ark:/65665/353a67775bcbb41d985502961ec09c977",
+        "eventDate": "1976-03-13",
+        "sourceLocality": "Philippines, Luzon, Bataan Province, Tabios River north of Dinalupihan.",
+        "sourceWaterBody": null,
+        "coordinates": null,
+        "mediaCount": 0
+      },
+      {
+        "sourceReportedName": "Glossogobius obscuripinnis (Peters, 1868)",
+        "gbifId": "1320377779",
+        "occurrenceUrl": "https://api.gbif.org/v1/occurrence/1320377779",
+        "occurrencePage": "https://www.gbif.org/occurrence/1320377779",
+        "datasetId": "gbif-nmnh-usnm-extant-specimens",
+        "datasetKey": "821cc27a-e3bb-4bc5-ac34-89ada245069d",
+        "datasetTitle": "NMNH Extant Specimen Records (USNM, US)",
+        "datasetDoi": "https://doi.org/10.15468/hnhrg3",
+        "datasetLicense": "CC0-1.0 in GBIF dataset metadata",
+        "institutionCode": "USNM",
+        "collectionCode": "FISH",
+        "catalogNumber": "USNM 369618",
+        "occurrenceId": "http://n2t.net/ark:/65665/38c78b362-342f-4658-b9f4-aa2f50394f6d",
+        "museumCollectionUrl": "https://collections.nmnh.si.edu/search/fishes/?ark=ark:/65665/38c78b362342f4658b9f4aa2f50394f6d",
+        "eventDate": "1976-03-13",
+        "sourceLocality": "Philippines, Luzon, Bataan Province, Tabios River north of Dinalupihan.",
+        "sourceWaterBody": null,
+        "coordinates": null,
+        "mediaCount": 0
+      },
+      {
+        "sourceReportedName": "Glossogobius obscuripinnis (Peters, 1868)",
+        "gbifId": "1321531003",
+        "occurrenceUrl": "https://api.gbif.org/v1/occurrence/1321531003",
+        "occurrencePage": "https://www.gbif.org/occurrence/1321531003",
+        "datasetId": "gbif-nmnh-usnm-extant-specimens",
+        "datasetKey": "821cc27a-e3bb-4bc5-ac34-89ada245069d",
+        "datasetTitle": "NMNH Extant Specimen Records (USNM, US)",
+        "datasetDoi": "https://doi.org/10.15468/hnhrg3",
+        "datasetLicense": "CC0-1.0 in GBIF dataset metadata",
+        "institutionCode": "USNM",
+        "collectionCode": "FISH",
+        "catalogNumber": "USNM 264382",
+        "occurrenceId": "http://n2t.net/ark:/65665/3bf68d699-97e1-464f-b746-f60c9c12688a",
+        "museumCollectionUrl": "https://collections.nmnh.si.edu/search/fishes/?ark=ark:/65665/3bf68d69997e1464fb746f60c9c12688a",
+        "eventDate": "1976-03-13",
+        "sourceLocality": "Philippines, Luzon, Bataan Province, Tabios River north of Dinalupihan.",
+        "sourceWaterBody": null,
+        "coordinates": null,
+        "mediaCount": 0
+      },
+      {
+        "sourceReportedName": "Phallostethidae",
+        "gbifId": "473263838",
+        "occurrenceUrl": "https://api.gbif.org/v1/occurrence/473263838",
+        "occurrencePage": "https://www.gbif.org/occurrence/473263838",
+        "datasetId": "gbif-cas-ichthyology",
+        "datasetKey": "5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+        "datasetTitle": "CAS Ichthyology (ICH)",
+        "datasetDoi": "https://doi.org/10.15468/efh2ib",
+        "datasetLicense": "CC0-1.0 in GBIF dataset metadata",
+        "institutionCode": "CAS",
+        "collectionCode": "ICH",
+        "catalogNumber": "53167",
+        "occurrenceId": "urn:catalog:CAS:ICH:53167",
+        "eventDate": "1976-03-13",
+        "sourceLocality": "N of Dinalupihan, Bataan, Philippines",
+        "sourceWaterBody": "Tabios River",
+        "coordinates": {
+          "decimalLongitude": 120.455146,
+          "decimalLatitude": 14.888676,
+          "uncertaintyMeters": 4306
+        },
+        "mediaCount": 0
+      }
+    ],
+    "localityAmbiguityLead": {
+      "localityRowsContainingPucotRiver": 89,
+      "distinctScientificNameStrings": 65,
+      "rowsWithMediaLink": 4,
+      "eventDates": [
+        "1909-01-29",
+        "1909-01-30"
+      ],
+      "coordinateCount": 0,
+      "waterBodyValues": [
+        "North Pacific Ocean, Manila Bay",
+        "North Pacific Ocean, Mariveles Bay; Manila Bay"
+      ],
+      "assessment": "A mixed Pucot River / Mariveles Bay / Manila Bay place-name cluster. The marine waterBody values and absent coordinates prevent treating these rows as river-only occurrences; retain as a separate historical locality-resolution lead."
+    }
+  },
+  "decisions": {
+    "historicalMuseumRecordCandidates": 4,
+    "speciesLevelTaxaIndependentlyCrossCheckedInCurrentPass": 0,
+    "candidateSpeciesNamesForSeparateTaxonomyReview": [
+      "Redigobius tambujon",
+      "Glossogobius obscuripinnis"
+    ],
+    "newAppSpeciesRows": 0,
+    "newCurrentPresenceAssertions": 0,
+    "newGeometry": false,
+    "imageAssetsApproved": 0,
+    "occurrenceAbundanceOrPopulationTotalsInferred": false,
+    "localitiesInterpretedAsSamplingStations": false,
+    "publicationOrImageReuseApproved": false
+  },
+  "limitations": [
+    "This is a GBIF-indexed museum-record screen, not an independent curator inspection or collection audit. The direct Smithsonian pages resolved to the NMNH Fishes search application shell; the record payload was not independently verified there during this pass.",
+    "The three NMNH rows contain distinct catalog numbers and the same 1976-03-13 date/locality string; do not combine them into abundance, independent surveys, or distinct population claims.",
+    "The GBIF screen gives no coordinates or media for the three NMNH Tabios River rows. The CAS row is family-level, has 4,306 m coordinate uncertainty, and is not a species-level locality confirmation.",
+    "GBIF occurrence filtering by taxon must use a matching checklistKey with its taxonKey. Literal locality query zeroes for Bagac/Talisay are bounded search results only, not evidence of species absence.",
+    "CC0-1.0 appears in dataset metadata and applies to data records/metadata as represented there; it does not provide diagnostic images for these four records or approve publishing third-party media in Bangwit.",
+    "A GBIF-indexed historical record is not current presence, abundance, catchability, habitat range, legality, safety, or a verified river boundary."
+  ],
+  "followUp": [
+    "Verify the two USNM catalog numbers and taxonomic identifications in the NMNH source record payload or a stable collection export before considering species-level historical evidence promotion.",
+    "Cross-check Redigobius tambujon and Glossogobius obscuripinnis against a current authoritative fish taxonomy source; preserve the source names until resolved.",
+    "Review the separate 1909 Pucot River / Mariveles Bay record cluster and source geography without treating Manila Bay records as river-only.",
+    "Do not add the four records to app occurrence/species content or reuse imagery unless the separate identity, locality, rights, and product-evidence gates are met."
+  ],
+  "sources": [
+    {
+      "sourceId": "gbif-nmnh-usnm-extant-specimens",
+      "url": "https://doi.org/10.15468/hnhrg3",
+      "supports": "NMNH Extant Specimen Records dataset identity, CC0 metadata, dataset citation, and the three USNM catalog-number occurrence rows."
+    },
+    {
+      "sourceId": "gbif-cas-ichthyology",
+      "url": "https://doi.org/10.15468/efh2ib",
+      "supports": "CAS Ichthyology (ICH) dataset identity, CC0 metadata, and the CAS-ICH 53167 family-level occurrence row."
+    }
+  ],
+  "rawSnapshot": {
+    "directory": "raw/central-luzon-bataan-occurrence-screen-20261126",
+    "files": [
+      {
+        "path": "gbif-bataan-actinopterygii-preserved-search.json",
+        "bytes": 2835944,
+        "sha256": "24bf2c2ae495b5fd091fb97064f8b47120a584d6c1c77b4c58ca87bc4d8a102f",
+        "queryUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&stateProvince=Bataan&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&basisOfRecord=PRESERVED_SPECIMEN&limit=300&offset=0",
+        "httpStatus": 200,
+        "reportedCount": 319,
+        "recordsFetched": 319
+      }
+    ]
+  }
+}
