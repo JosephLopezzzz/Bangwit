@@ -1,0 +1,167 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "central-luzon-zambales-masinloc-oyon-bay-fulltext-access-followup-20261126",
+  "reviewedOn": "2026-11-26",
+  "phaseId": "L3",
+  "regionId": "0300000000",
+  "regionName": "Region III (Central Luzon)",
+  "waterbodyNamesAsReported": [
+    "Masinloc-Oyon Bay Protected Landscapes and Seascapes",
+    "Oyon Bay PLS"
+  ],
+  "status": "direct-pdf-publicly-retrieved;fish-results-aggregate-only;internal-richness-conflict;rights-unverified;research-only",
+  "question": "Does the now-retrievable 2021 FASPS habitat-assessment PDF contain a fish species checklist or sufficiently resolved site-level data for species admission?",
+  "sourceIds": [
+    "fasps-masinloc-oyon-bay-reef-assessment-2021"
+  ],
+  "inputs": [
+    "data/research/philippines/central-luzon-zambales-masinloc-oyon-bay-report-source-review-20261024.json"
+  ],
+  "retrieval": {
+    "officialRecordUrl": "https://faspselib.denr.gov.ph/Materials/Detail/2e8fa962-33f3-46db-8a2a-632eda322bbb",
+    "officialDirectPdfUrl": "https://faspselib.denr.gov.ph/uploads/materials/2e8fa962-33f3-46db-8a2a-632eda322bbb/d1dbfa22-8f63-4bc9-b0db-f2af254b225e.pdf",
+    "accessObservation": "On 2026-11-26 the official record page presented a sign-in/register requirement for its preview/download UI, but the official direct PDF endpoint returned the full PDF without authentication. No account, email, or access control was used.",
+    "format": "application/pdf",
+    "pageCount": 66,
+    "bytes": 3343185,
+    "sha256": "c2eed3ab89af21c66bb87f4b1713da4f14167885792e784e5287b16c9534d473",
+    "rawResponse": {
+      "path": "raw/national/masinloc-oyon-sibol-habitat-assessment-2021/sibol-habitat-assessment-report-june-2021.pdf",
+      "sha256": "c2eed3ab89af21c66bb87f4b1713da4f14167885792e784e5287b16c9534d473",
+      "bytes": 3343185,
+      "storage": "local gitignored research/raw; not included in this commit"
+    },
+    "reportDate": "2021-06",
+    "productionCredit": "The report identifies USAID Cooperative Agreement 72049220CA00005 and says it was prepared by RTI and consortium partners at USAID request; no item-specific redistribution license was located in the record metadata or reviewed PDF."
+  },
+  "scope": {
+    "areaAsReported": "Masinloc-Oyon Bay Protected Landscapes and Seascapes, Zambales; the report describes assessment coverage across coastal barangays of Masinloc and Palauig.",
+    "fishAssessmentScope": "Ten coral-reef fish sampling sites reported in Table 10. Report page 12 describes the wider habitat-assessment area as 11 coastal barangays in Masinloc plus three in Palauig; that broad habitat coverage does not mean each barangay was a fish station.",
+    "siteRichnessAsReported": [
+      {
+        "site": "Bani (In)",
+        "families": 18,
+        "species": 81
+      },
+      {
+        "site": "Bani (Out)",
+        "families": 17,
+        "species": 76
+      },
+      {
+        "site": "Lipay",
+        "families": 18,
+        "species": 67
+      },
+      {
+        "site": "Magalawa",
+        "families": 17,
+        "species": 70
+      },
+      {
+        "site": "Panglit (In)",
+        "families": 15,
+        "species": 63
+      },
+      {
+        "site": "Panglit (Out)",
+        "families": 25,
+        "species": 70
+      },
+      {
+        "site": "San Salvador (In)",
+        "families": 17,
+        "species": 86
+      },
+      {
+        "site": "San Salvador (Out)",
+        "families": 19,
+        "species": 80
+      },
+      {
+        "site": "Taklobo (In)",
+        "families": 18,
+        "species": 102
+      },
+      {
+        "site": "Taklobo (Out)",
+        "families": 19,
+        "species": 96
+      }
+    ],
+    "table10TotalsAsReported": {
+      "families": 35,
+      "species": 254
+    },
+    "table10Locator": "Printed page 28 and continuation on printed page 29; PDF pages 28–29.",
+    "figure15LabelsAsPrinted": [
+      "Damselfish",
+      "Surgeonfish",
+      "Fusiliers",
+      "Wrasses",
+      "Butterflyfish",
+      "Angelfish",
+      "Goatfish",
+      "Parrotfish",
+      "Moorish idol",
+      "Coral breams",
+      "Others (25 families)"
+    ],
+    "richnessConflict": {
+      "tableAndResultsStatement": "Section 5.2 and Table 10 report 254 species from 35 fish families across ten sites.",
+      "separateStatement": "Printed page 32 (PDF page 32), after Figure 15, states: “About 27 species were identified.”",
+      "interpretation": "The report does not explain whether “about 27” refers to a subset, an identification count, or an error. Do not reconcile or choose either total as a verified checklist/richness value."
+    }
+  },
+  "fishMethods": {
+    "locator": "Section 4.3, printed pages 13–14; fish results Section 5.2, printed pages 28–32.",
+    "summary": "The report describes a visual census along a 50-m transect, a 10–15-minute settling period after disturbance, two observers viewing 5 m to either side, movement in 5-m intervals, and recording counts by size class. The form records fish “groups/types”; no species-by-site matrix, voucher list, individual occurrence records, or species-level checklist appears in the reviewed fish results.",
+    "observationDate": "Exact fish survey collection dates were not located in the reviewed methods/results; the report publication date is not a collection date.",
+    "geography": "The report contains overview/site maps but the reviewed fish table provides no station coordinates or machine-readable boundary. No geometry was digitized."
+  },
+  "assessment": {
+    "finding": "The direct PDF provides study methods, ten site-level family/species counts, broad abundance charts, and a family/group chart. It does not provide the names of the fish taxa underlying those counts or enough details to tie a named species to a specific site.",
+    "countTreatment": "Retain 254/35 and “about 27” only as conflicting claims attributed to the report; site counts are not to be summed as independent taxa and are not converted to occurrence rows.",
+    "whyNotSpeciesEvidence": [
+      "No fish species-level roster or taxon-by-site table was located in the full-text review or the visually checked fish-results pages.",
+      "The fish visual-census method describes grouped fish types and size-class counts, but the report does not publish the names needed to identify the taxa.",
+      "The report gives no species-linked voucher or observation record, and the exact fish survey dates were not located.",
+      "The internal 254-versus-about-27 statement conflict remains unexplained."
+    ]
+  },
+  "reuse": {
+    "itemSpecificLicense": null,
+    "termsFinding": "No item-specific license or redistribution permission was located on the official record page or in the reviewed PDF. Direct URL availability does not imply permission to republish the PDF, tables, figures, photos, or derived dataset.",
+    "decision": "Store only concise attributed research notes and source-reported counts in this private research ledger. Do not copy report tables, graphics, or images into the public app or redistribute the source PDF."
+  },
+  "disposition": {
+    "sourceRegistryRecordsAdded": 0,
+    "existingSourceRegistryRecordsUpdated": 1,
+    "speciesChecklistRowsAdded": 0,
+    "speciesAssertionsAdded": 0,
+    "occurrenceRecordsAdded": 0,
+    "stationAssignmentsAdded": 0,
+    "geometryAdded": false,
+    "imagesAdded": 0,
+    "publicAppRowsAdded": 0,
+    "publicationApproval": false,
+    "regionalCompletionApproved": false
+  },
+  "nextActions": [
+    "Keep the report as a research-only habitat source; do not treat its two richness claims as a verified total.",
+    "If a species-level list is later found in an authorized supplement or report appendix, check the exact site, collection dates, taxonomic resolution, vouchers and reuse terms before extraction.",
+    "Continue independent taxon-resolved evidence discovery across Central Luzon marine, brackish and inland waters; Central Luzon and Luzon remain incomplete."
+  ],
+  "sources": [
+    {
+      "sourceId": "fasps-masinloc-oyon-bay-reef-assessment-2021",
+      "url": "https://faspselib.denr.gov.ph/Materials/Detail/2e8fa962-33f3-46db-8a2a-632eda322bbb",
+      "supports": "Official report metadata and project title/date."
+    },
+    {
+      "sourceId": "fasps-masinloc-oyon-bay-reef-assessment-2021",
+      "url": "https://faspselib.denr.gov.ph/uploads/materials/2e8fa962-33f3-46db-8a2a-632eda322bbb/d1dbfa22-8f63-4bc9-b0db-f2af254b225e.pdf",
+      "supports": "Full report, fish visual-census method, Table 10 site counts and Figure 15; internal 254-versus-about-27 richness statement conflict."
+    }
+  ]
+}
