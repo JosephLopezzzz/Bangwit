@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "fao-hydrorivers-region03-emb-roster-prioritization-20261127",
+  "reviewedOn": "2026-11-27",
+  "phaseId": "L3",
+  "regionId": "0300000000",
+  "regionName": "Region III (Central Luzon)",
+  "status": "emb-geonames-name-candidates-joined-to-nearest-modeled-line;research-priority-only;identity-pending",
+  "sourceIds": [
+    "emb-r3-state-environment-2024",
+    "fao-aquastat-rivers-global-2026-wfs",
+    "geonames-ph-country-hydrography-2026-11-07"
+  ],
+  "inputs": {
+    "data/research/philippines/national/reviews/geonames-region03-emb-river-name-crosswalk-20261127.json": "geonames-region03-emb-river-name-crosswalk-20261127",
+    "data/research/philippines/national/reviews/fao-hydrorivers-region03-wfs-screen-20261127.json": "fao-hydrorivers-region03-wfs-screen-20261127",
+    "data/research/philippines/raw/national/geonames-ph-20261107/central-luzon-emb-river-name-review.jsonl": {
+      "sha256": "e9df72ef26ebe0b614f6af228066f08c19ceb4e4200a338a6c4d2ad2303061ea",
+      "rows": 14
+    },
+    "data/research/philippines/raw/national/fao-hydrorivers-region03-wfs-20261127/region03-geonames-stream-nearest-hydrorivers.jsonl": {
+      "sha256": "b70a0e121f13445b08c1a642b72626af3e60466fccc177db57f10bc6e37596fd",
+      "rows": 1062
+    }
+  },
+  "method": {
+    "joinKey": "GeoNames ID from the existing name-only candidate queue",
+    "prioritySignal": "nearest HydroRIVERS modeled line distance and shared MAIN_RIV identifier; neither identifies the EMB monitored river or reach",
+    "thresholdsKm": [
+      1,
+      5,
+      10,
+      25,
+      50
+    ],
+    "lineDistanceMethod": "inherited from the pinned regional equirectangular point-to-segment screen"
+  },
+  "results": {
+    "embLabelsScreened": 14,
+    "embLabelsWithGeoNamesNameCandidates": 6,
+    "joinedEmbGeoNamesCandidatePairs": 10,
+    "distinctGeoNamesRowsInPriorityQueue": 10,
+    "distinctNearestHydroRiversReachIds": 10,
+    "distinctNearestMainRiverIdentifiers": 6,
+    "candidatePairsWithinKm": {
+      "1": 7,
+      "5": 10,
+      "10": 10,
+      "25": 10,
+      "50": 10
+    },
+    "embLabelsWithAnyCandidateWithinKm": {
+      "1": 4,
+      "5": 6,
+      "10": 6,
+      "25": 6,
+      "50": 6
+    },
+    "candidatePairsByGeoNamesFeatureCode": {
+      "STM": 9,
+      "STMI": 1
+    },
+    "candidatePairsByProvincePolygonPointContext": {
+      "Bataan": 2,
+      "Bulacan": 4,
+      "Pampanga": 3,
+      "Tarlac": 1
+    },
+    "waterbodyIdentitiesValidated": 0,
+    "reachIdentitiesValidated": 0,
+    "regionAssignmentsAdded": 0,
+    "speciesAssertionsAdded": 0,
+    "publicGeometryAdded": false,
+    "publicationApproval": false
+  },
+  "localReviewQueue": {
+    "path": "data/research/philippines/raw/national/fao-hydrorivers-region03-wfs-20261127/emb-roster-nearest-reach-priority-review.jsonl",
+    "rows": 14,
+    "bytes": 8088,
+    "sha256": "f13573e4d6692c42ae7c3ab9a550dc11e5e709e7b000525bfef06cbc561ccc52",
+    "gitIgnored": true,
+    "containsNamesCoordinatesAndProviderIds": true,
+    "appBundleIncluded": false
+  },
+  "limitations": [
+    "The EMB roster labels are monitoring units, and GeoNames name matches are candidate strings only; the joins do not resolve local station or reach identity.",
+    "The nearest FAO line comes from a rectangular bbox with adjacent areas; its distance and MAIN_RIV grouping do not validate the named river.",
+    "FAO HydroRIVERS is a modeled reach network that omits streams below its threshold; it is not current field-verified geometry or fish evidence.",
+    "The GeoNames points, EMB labels and HydroRIVERS lines have different provenance and are not three independent confirmations of a waterbody.",
+    "No species occurrence, legal access, water safety, public geometry, or app content follows from this priority screen.",
+    "Raw names, coordinates, GeoNames IDs and HydroRIVERS IDs remain in Git-ignored local research storage."
+  ],
+  "nextAction": "Review only the highest-priority source name/line pairs against independent primary locality maps and site records; hold every match until a source resolves the same reach and sampling locality."
+}
