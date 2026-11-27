@@ -1,0 +1,648 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "central-luzon-emb-river-colxr-occurrence-screen-20261127",
+  "checkedOn": "2026-11-27",
+  "phaseId": "L3",
+  "regionId": "0300000000",
+  "regionName": "Region III (Central Luzon)",
+  "status": "bounded-gbif-col-xr-actinopterygii-index-screen;record-review-pending;research-only",
+  "question": "Do the 14 EMB Region III river labels expose GBIF indexed Actinopterygii occurrence leads through the waterBody or locality fields?",
+  "sourceIds": [
+    "emb-r3-state-environment-2024",
+    "gbif-occurrence-downloads"
+  ],
+  "inputs": {
+    "data/research/philippines/raw/national/fao-hydrorivers-region03-wfs-20261127/emb-roster-nearest-reach-priority-review.jsonl": {
+      "sha256": "f13573e4d6692c42ae7c3ab9a550dc11e5e709e7b000525bfef06cbc561ccc52",
+      "rows": 14
+    },
+    "data/research/philippines/raw/national/camiling-river-colxr-occurrence-screen-20261127/taxon-match-actinopterygii.json": {
+      "sha256": "01e8f9b1849920667c67c91d22f0d6129c2b89c5368239d3aa6775e8bdc33c29",
+      "taxonKey": "8VR36"
+    }
+  },
+  "taxonomy": {
+    "provider": "Global Biodiversity Information Facility",
+    "checklistName": "Catalogue of Life eXtended Release",
+    "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+    "higherTaxonName": "Actinopterygii",
+    "taxonKey": "8VR36",
+    "matchType": "EXACT",
+    "taxonomicStatus": "ACCEPTED",
+    "scope": "Ray-finned fishes only; this screen excludes sharks, rays and other non-Actinopterygii fish groups."
+  },
+  "querySemantics": {
+    "endpoint": "https://api.gbif.org/v1/occurrence/search",
+    "country": "PH",
+    "occurrenceStatus": "PRESENT",
+    "matchedFields": [
+      "waterBody",
+      "locality"
+    ],
+    "nameForms": "Original EMB label and, where parenthetical qualifiers occur, a separate qualifier-stripped search term; this does not merge labels or reach identities.",
+    "coordinateVariant": "For each positive no-coordinate text search, ran a second query requiring hasCoordinate=true.",
+    "pageLimit": 1,
+    "resultRowsRetainedPerQuery": "At most one first-page record; complete indexed count is recorded separately.",
+    "timeScope": "Current GBIF index snapshot; no date range and no download request."
+  },
+  "results": {
+    "embLabelsScreened": 14,
+    "distinctSearchTerms": 15,
+    "noCoordinateTextQueries": 30,
+    "textQueriesWithIndexedHits": 1,
+    "textQueriesWithZeroHits": 29,
+    "distinctEmbLabelsWithAtLeastOneTextQueryHit": 1,
+    "coordinateRequiredFollowupQueries": 1,
+    "coordinateRequiredFollowupsWithHits": 1,
+    "indexedOccurrenceCountIsNotUniqueAcrossFieldsOrNameVariants": true,
+    "occurrenceRowsReviewedAgainstOriginalSource": 0,
+    "waterbodyOrReachAssignmentsValidated": 0,
+    "speciesAssertionsAdded": 0,
+    "publicOccurrencesAdded": 0,
+    "publicGeometryAdded": false,
+    "publicationApproval": false
+  },
+  "queries": [
+    {
+      "term": "Angat River",
+      "termLabels": [
+        {
+          "label": "Angat River",
+          "relationship": "printed-label"
+        }
+      ],
+      "field": "waterBody",
+      "coordinatesRequired": false,
+      "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&occurrenceStatus=PRESENT&limit=1&offset=0&waterBody=Angat+River",
+      "count": 0,
+      "firstPageRowsReturned": 0,
+      "pageLimit": 1,
+      "pageOffset": 0,
+      "rawFile": "00-waterbody-angat-river-all.json",
+      "responseSha256": "f80b70551e630bf92a4f2d087f549acf03489da01c639913da79a1d4f34520b9"
+    },
+    {
+      "term": "Angat River",
+      "termLabels": [
+        {
+          "label": "Angat River",
+          "relationship": "printed-label"
+        }
+      ],
+      "field": "locality",
+      "coordinatesRequired": false,
+      "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&occurrenceStatus=PRESENT&limit=1&offset=0&locality=Angat+River",
+      "count": 1,
+      "firstPageRowsReturned": 1,
+      "pageLimit": 1,
+      "pageOffset": 0,
+      "rawFile": "01-locality-angat-river-all.json",
+      "responseSha256": "9aa69ce8b2ebefa28a1be847e53e4865b9177f388993cff7f65c8ffba214d3ba"
+    },
+    {
+      "term": "Angat River",
+      "termLabels": [
+        {
+          "label": "Angat River",
+          "relationship": "printed-label"
+        }
+      ],
+      "field": "locality",
+      "coordinatesRequired": true,
+      "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&occurrenceStatus=PRESENT&limit=1&offset=0&locality=Angat+River&hasCoordinate=true",
+      "count": 1,
+      "firstPageRowsReturned": 1,
+      "pageLimit": 1,
+      "pageOffset": 0,
+      "rawFile": "02-locality-angat-river-coordinates.json",
+      "responseSha256": "9aa69ce8b2ebefa28a1be847e53e4865b9177f388993cff7f65c8ffba214d3ba"
+    },
+    {
+      "term": "Atlag River",
+      "termLabels": [
+        {
+          "label": "Atlag River",
+          "relationship": "printed-label"
+        }
+      ],
+      "field": "waterBody",
+      "coordinatesRequired": false,
+      "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&occurrenceStatus=PRESENT&limit=1&offset=0&waterBody=Atlag+River",
+      "count": 0,
+      "firstPageRowsReturned": 0,
+      "pageLimit": 1,
+      "pageOffset": 0,
+      "rawFile": "03-waterbody-atlag-river-all.json",
+      "responseSha256": "f80b70551e630bf92a4f2d087f549acf03489da01c639913da79a1d4f34520b9"
+    },
+    {
+      "term": "Atlag River",
+      "termLabels": [
+        {
+          "label": "Atlag River",
+          "relationship": "printed-label"
+        }
+      ],
+      "field": "locality",
+      "coordinatesRequired": false,
+      "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&occurrenceStatus=PRESENT&limit=1&offset=0&locality=Atlag+River",
+      "count": 0,
+      "firstPageRowsReturned": 0,
+      "pageLimit": 1,
+      "pageOffset": 0,
+      "rawFile": "04-locality-atlag-river-all.json",
+      "responseSha256": "f80b70551e630bf92a4f2d087f549acf03489da01c639913da79a1d4f34520b9"
+    },
+    {
+      "term": "Bocaue River",
+      "termLabels": [
+        {
+          "label": "Bocaue River",
+          "relationship": "printed-label"
+        }
+      ],
+      "field": "waterBody",
+      "coordinatesRequired": false,
+      "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&occurrenceStatus=PRESENT&limit=1&offset=0&waterBody=Bocaue+River",
+      "count": 0,
+      "firstPageRowsReturned": 0,
+      "pageLimit": 1,
+      "pageOffset": 0,
+      "rawFile": "05-waterbody-bocaue-river-all.json",
+      "responseSha256": "f80b70551e630bf92a4f2d087f549acf03489da01c639913da79a1d4f34520b9"
+    },
+    {
+      "term": "Bocaue River",
+      "termLabels": [
+        {
+          "label": "Bocaue River",
+          "relationship": "printed-label"
+        }
+      ],
+      "field": "locality",
+      "coordinatesRequired": false,
+      "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&occurrenceStatus=PRESENT&limit=1&offset=0&locality=Bocaue+River",
+      "count": 0,
+      "firstPageRowsReturned": 0,
+      "pageLimit": 1,
+      "pageOffset": 0,
+      "rawFile": "06-locality-bocaue-river-all.json",
+      "responseSha256": "f80b70551e630bf92a4f2d087f549acf03489da01c639913da79a1d4f34520b9"
+    },
+    {
+      "term": "Guagua River",
+      "termLabels": [
+        {
+          "label": "Guagua River",
+          "relationship": "printed-label"
+        }
+      ],
+      "field": "waterBody",
+      "coordinatesRequired": false,
+      "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&occurrenceStatus=PRESENT&limit=1&offset=0&waterBody=Guagua+River",
+      "count": 0,
+      "firstPageRowsReturned": 0,
+      "pageLimit": 1,
+      "pageOffset": 0,
+      "rawFile": "07-waterbody-guagua-river-all.json",
+      "responseSha256": "f80b70551e630bf92a4f2d087f549acf03489da01c639913da79a1d4f34520b9"
+    },
+    {
+      "term": "Guagua River",
+      "termLabels": [
+        {
+          "label": "Guagua River",
+          "relationship": "printed-label"
+        }
+      ],
+      "field": "locality",
+      "coordinatesRequired": false,
+      "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&occurrenceStatus=PRESENT&limit=1&offset=0&locality=Guagua+River",
+      "count": 0,
+      "firstPageRowsReturned": 0,
+      "pageLimit": 1,
+      "pageOffset": 0,
+      "rawFile": "08-locality-guagua-river-all.json",
+      "responseSha256": "f80b70551e630bf92a4f2d087f549acf03489da01c639913da79a1d4f34520b9"
+    },
+    {
+      "term": "Hagonoy River",
+      "termLabels": [
+        {
+          "label": "Hagonoy River",
+          "relationship": "printed-label"
+        }
+      ],
+      "field": "waterBody",
+      "coordinatesRequired": false,
+      "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&occurrenceStatus=PRESENT&limit=1&offset=0&waterBody=Hagonoy+River",
+      "count": 0,
+      "firstPageRowsReturned": 0,
+      "pageLimit": 1,
+      "pageOffset": 0,
+      "rawFile": "09-waterbody-hagonoy-river-all.json",
+      "responseSha256": "f80b70551e630bf92a4f2d087f549acf03489da01c639913da79a1d4f34520b9"
+    },
+    {
+      "term": "Hagonoy River",
+      "termLabels": [
+        {
+          "label": "Hagonoy River",
+          "relationship": "printed-label"
+        }
+      ],
+      "field": "locality",
+      "coordinatesRequired": false,
+      "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&occurrenceStatus=PRESENT&limit=1&offset=0&locality=Hagonoy+River",
+      "count": 0,
+      "firstPageRowsReturned": 0,
+      "pageLimit": 1,
+      "pageOffset": 0,
+      "rawFile": "10-locality-hagonoy-river-all.json",
+      "responseSha256": "f80b70551e630bf92a4f2d087f549acf03489da01c639913da79a1d4f34520b9"
+    },
+    {
+      "term": "Labangan River",
+      "termLabels": [
+        {
+          "label": "Labangan River",
+          "relationship": "printed-label"
+        }
+      ],
+      "field": "waterBody",
+      "coordinatesRequired": false,
+      "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&occurrenceStatus=PRESENT&limit=1&offset=0&waterBody=Labangan+River",
+      "count": 0,
+      "firstPageRowsReturned": 0,
+      "pageLimit": 1,
+      "pageOffset": 0,
+      "rawFile": "11-waterbody-labangan-river-all.json",
+      "responseSha256": "f80b70551e630bf92a4f2d087f549acf03489da01c639913da79a1d4f34520b9"
+    },
+    {
+      "term": "Labangan River",
+      "termLabels": [
+        {
+          "label": "Labangan River",
+          "relationship": "printed-label"
+        }
+      ],
+      "field": "locality",
+      "coordinatesRequired": false,
+      "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&occurrenceStatus=PRESENT&limit=1&offset=0&locality=Labangan+River",
+      "count": 0,
+      "firstPageRowsReturned": 0,
+      "pageLimit": 1,
+      "pageOffset": 0,
+      "rawFile": "12-locality-labangan-river-all.json",
+      "responseSha256": "f80b70551e630bf92a4f2d087f549acf03489da01c639913da79a1d4f34520b9"
+    },
+    {
+      "term": "Marilao River",
+      "termLabels": [
+        {
+          "label": "Marilao River",
+          "relationship": "printed-label"
+        }
+      ],
+      "field": "waterBody",
+      "coordinatesRequired": false,
+      "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&occurrenceStatus=PRESENT&limit=1&offset=0&waterBody=Marilao+River",
+      "count": 0,
+      "firstPageRowsReturned": 0,
+      "pageLimit": 1,
+      "pageOffset": 0,
+      "rawFile": "13-waterbody-marilao-river-all.json",
+      "responseSha256": "f80b70551e630bf92a4f2d087f549acf03489da01c639913da79a1d4f34520b9"
+    },
+    {
+      "term": "Marilao River",
+      "termLabels": [
+        {
+          "label": "Marilao River",
+          "relationship": "printed-label"
+        }
+      ],
+      "field": "locality",
+      "coordinatesRequired": false,
+      "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&occurrenceStatus=PRESENT&limit=1&offset=0&locality=Marilao+River",
+      "count": 0,
+      "firstPageRowsReturned": 0,
+      "pageLimit": 1,
+      "pageOffset": 0,
+      "rawFile": "14-locality-marilao-river-all.json",
+      "responseSha256": "f80b70551e630bf92a4f2d087f549acf03489da01c639913da79a1d4f34520b9"
+    },
+    {
+      "term": "Meycauayan River",
+      "termLabels": [
+        {
+          "label": "Meycauayan River",
+          "relationship": "printed-label"
+        }
+      ],
+      "field": "waterBody",
+      "coordinatesRequired": false,
+      "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&occurrenceStatus=PRESENT&limit=1&offset=0&waterBody=Meycauayan+River",
+      "count": 0,
+      "firstPageRowsReturned": 0,
+      "pageLimit": 1,
+      "pageOffset": 0,
+      "rawFile": "15-waterbody-meycauayan-river-all.json",
+      "responseSha256": "f80b70551e630bf92a4f2d087f549acf03489da01c639913da79a1d4f34520b9"
+    },
+    {
+      "term": "Meycauayan River",
+      "termLabels": [
+        {
+          "label": "Meycauayan River",
+          "relationship": "printed-label"
+        }
+      ],
+      "field": "locality",
+      "coordinatesRequired": false,
+      "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&occurrenceStatus=PRESENT&limit=1&offset=0&locality=Meycauayan+River",
+      "count": 0,
+      "firstPageRowsReturned": 0,
+      "pageLimit": 1,
+      "pageOffset": 0,
+      "rawFile": "16-locality-meycauayan-river-all.json",
+      "responseSha256": "f80b70551e630bf92a4f2d087f549acf03489da01c639913da79a1d4f34520b9"
+    },
+    {
+      "term": "Obando River",
+      "termLabels": [
+        {
+          "label": "Obando River",
+          "relationship": "printed-label"
+        }
+      ],
+      "field": "waterBody",
+      "coordinatesRequired": false,
+      "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&occurrenceStatus=PRESENT&limit=1&offset=0&waterBody=Obando+River",
+      "count": 0,
+      "firstPageRowsReturned": 0,
+      "pageLimit": 1,
+      "pageOffset": 0,
+      "rawFile": "17-waterbody-obando-river-all.json",
+      "responseSha256": "f80b70551e630bf92a4f2d087f549acf03489da01c639913da79a1d4f34520b9"
+    },
+    {
+      "term": "Obando River",
+      "termLabels": [
+        {
+          "label": "Obando River",
+          "relationship": "printed-label"
+        }
+      ],
+      "field": "locality",
+      "coordinatesRequired": false,
+      "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&occurrenceStatus=PRESENT&limit=1&offset=0&locality=Obando+River",
+      "count": 0,
+      "firstPageRowsReturned": 0,
+      "pageLimit": 1,
+      "pageOffset": 0,
+      "rawFile": "18-locality-obando-river-all.json",
+      "responseSha256": "f80b70551e630bf92a4f2d087f549acf03489da01c639913da79a1d4f34520b9"
+    },
+    {
+      "term": "Pampanga River (Pampanga)",
+      "termLabels": [
+        {
+          "label": "Pampanga River (Pampanga)",
+          "relationship": "printed-label"
+        }
+      ],
+      "field": "waterBody",
+      "coordinatesRequired": false,
+      "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&occurrenceStatus=PRESENT&limit=1&offset=0&waterBody=Pampanga+River+%28Pampanga%29",
+      "count": 0,
+      "firstPageRowsReturned": 0,
+      "pageLimit": 1,
+      "pageOffset": 0,
+      "rawFile": "19-waterbody-pampanga-river-pampanga-all.json",
+      "responseSha256": "f80b70551e630bf92a4f2d087f549acf03489da01c639913da79a1d4f34520b9"
+    },
+    {
+      "term": "Pampanga River (Pampanga)",
+      "termLabels": [
+        {
+          "label": "Pampanga River (Pampanga)",
+          "relationship": "printed-label"
+        }
+      ],
+      "field": "locality",
+      "coordinatesRequired": false,
+      "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&occurrenceStatus=PRESENT&limit=1&offset=0&locality=Pampanga+River+%28Pampanga%29",
+      "count": 0,
+      "firstPageRowsReturned": 0,
+      "pageLimit": 1,
+      "pageOffset": 0,
+      "rawFile": "20-locality-pampanga-river-pampanga-all.json",
+      "responseSha256": "f80b70551e630bf92a4f2d087f549acf03489da01c639913da79a1d4f34520b9"
+    },
+    {
+      "term": "Pampanga River",
+      "termLabels": [
+        {
+          "label": "Pampanga River (Pampanga)",
+          "relationship": "qualifier-stripped-search-only"
+        },
+        {
+          "label": "Pampanga River (Upstream)",
+          "relationship": "qualifier-stripped-search-only"
+        }
+      ],
+      "field": "waterBody",
+      "coordinatesRequired": false,
+      "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&occurrenceStatus=PRESENT&limit=1&offset=0&waterBody=Pampanga+River",
+      "count": 0,
+      "firstPageRowsReturned": 0,
+      "pageLimit": 1,
+      "pageOffset": 0,
+      "rawFile": "21-waterbody-pampanga-river-all.json",
+      "responseSha256": "f80b70551e630bf92a4f2d087f549acf03489da01c639913da79a1d4f34520b9"
+    },
+    {
+      "term": "Pampanga River",
+      "termLabels": [
+        {
+          "label": "Pampanga River (Pampanga)",
+          "relationship": "qualifier-stripped-search-only"
+        },
+        {
+          "label": "Pampanga River (Upstream)",
+          "relationship": "qualifier-stripped-search-only"
+        }
+      ],
+      "field": "locality",
+      "coordinatesRequired": false,
+      "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&occurrenceStatus=PRESENT&limit=1&offset=0&locality=Pampanga+River",
+      "count": 0,
+      "firstPageRowsReturned": 0,
+      "pageLimit": 1,
+      "pageOffset": 0,
+      "rawFile": "22-locality-pampanga-river-all.json",
+      "responseSha256": "f80b70551e630bf92a4f2d087f549acf03489da01c639913da79a1d4f34520b9"
+    },
+    {
+      "term": "Pampanga River (Upstream)",
+      "termLabels": [
+        {
+          "label": "Pampanga River (Upstream)",
+          "relationship": "printed-label"
+        }
+      ],
+      "field": "waterBody",
+      "coordinatesRequired": false,
+      "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&occurrenceStatus=PRESENT&limit=1&offset=0&waterBody=Pampanga+River+%28Upstream%29",
+      "count": 0,
+      "firstPageRowsReturned": 0,
+      "pageLimit": 1,
+      "pageOffset": 0,
+      "rawFile": "23-waterbody-pampanga-river-upstream-all.json",
+      "responseSha256": "f80b70551e630bf92a4f2d087f549acf03489da01c639913da79a1d4f34520b9"
+    },
+    {
+      "term": "Pampanga River (Upstream)",
+      "termLabels": [
+        {
+          "label": "Pampanga River (Upstream)",
+          "relationship": "printed-label"
+        }
+      ],
+      "field": "locality",
+      "coordinatesRequired": false,
+      "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&occurrenceStatus=PRESENT&limit=1&offset=0&locality=Pampanga+River+%28Upstream%29",
+      "count": 0,
+      "firstPageRowsReturned": 0,
+      "pageLimit": 1,
+      "pageOffset": 0,
+      "rawFile": "24-locality-pampanga-river-upstream-all.json",
+      "responseSha256": "f80b70551e630bf92a4f2d087f549acf03489da01c639913da79a1d4f34520b9"
+    },
+    {
+      "term": "Sta. Maria River",
+      "termLabels": [
+        {
+          "label": "Sta. Maria River",
+          "relationship": "printed-label"
+        }
+      ],
+      "field": "waterBody",
+      "coordinatesRequired": false,
+      "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&occurrenceStatus=PRESENT&limit=1&offset=0&waterBody=Sta.+Maria+River",
+      "count": 0,
+      "firstPageRowsReturned": 0,
+      "pageLimit": 1,
+      "pageOffset": 0,
+      "rawFile": "25-waterbody-sta-maria-river-all.json",
+      "responseSha256": "f80b70551e630bf92a4f2d087f549acf03489da01c639913da79a1d4f34520b9"
+    },
+    {
+      "term": "Sta. Maria River",
+      "termLabels": [
+        {
+          "label": "Sta. Maria River",
+          "relationship": "printed-label"
+        }
+      ],
+      "field": "locality",
+      "coordinatesRequired": false,
+      "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&occurrenceStatus=PRESENT&limit=1&offset=0&locality=Sta.+Maria+River",
+      "count": 0,
+      "firstPageRowsReturned": 0,
+      "pageLimit": 1,
+      "pageOffset": 0,
+      "rawFile": "26-locality-sta-maria-river-all.json",
+      "responseSha256": "f80b70551e630bf92a4f2d087f549acf03489da01c639913da79a1d4f34520b9"
+    },
+    {
+      "term": "Talisay River",
+      "termLabels": [
+        {
+          "label": "Talisay River",
+          "relationship": "printed-label"
+        }
+      ],
+      "field": "waterBody",
+      "coordinatesRequired": false,
+      "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&occurrenceStatus=PRESENT&limit=1&offset=0&waterBody=Talisay+River",
+      "count": 0,
+      "firstPageRowsReturned": 0,
+      "pageLimit": 1,
+      "pageOffset": 0,
+      "rawFile": "27-waterbody-talisay-river-all.json",
+      "responseSha256": "f80b70551e630bf92a4f2d087f549acf03489da01c639913da79a1d4f34520b9"
+    },
+    {
+      "term": "Talisay River",
+      "termLabels": [
+        {
+          "label": "Talisay River",
+          "relationship": "printed-label"
+        }
+      ],
+      "field": "locality",
+      "coordinatesRequired": false,
+      "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&occurrenceStatus=PRESENT&limit=1&offset=0&locality=Talisay+River",
+      "count": 0,
+      "firstPageRowsReturned": 0,
+      "pageLimit": 1,
+      "pageOffset": 0,
+      "rawFile": "28-locality-talisay-river-all.json",
+      "responseSha256": "f80b70551e630bf92a4f2d087f549acf03489da01c639913da79a1d4f34520b9"
+    },
+    {
+      "term": "Lucong River",
+      "termLabels": [
+        {
+          "label": "Lucong River",
+          "relationship": "printed-label"
+        }
+      ],
+      "field": "waterBody",
+      "coordinatesRequired": false,
+      "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&occurrenceStatus=PRESENT&limit=1&offset=0&waterBody=Lucong+River",
+      "count": 0,
+      "firstPageRowsReturned": 0,
+      "pageLimit": 1,
+      "pageOffset": 0,
+      "rawFile": "29-waterbody-lucong-river-all.json",
+      "responseSha256": "f80b70551e630bf92a4f2d087f549acf03489da01c639913da79a1d4f34520b9"
+    },
+    {
+      "term": "Lucong River",
+      "termLabels": [
+        {
+          "label": "Lucong River",
+          "relationship": "printed-label"
+        }
+      ],
+      "field": "locality",
+      "coordinatesRequired": false,
+      "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&occurrenceStatus=PRESENT&limit=1&offset=0&locality=Lucong+River",
+      "count": 0,
+      "firstPageRowsReturned": 0,
+      "pageLimit": 1,
+      "pageOffset": 0,
+      "rawFile": "30-locality-lucong-river-all.json",
+      "responseSha256": "f80b70551e630bf92a4f2d087f549acf03489da01c639913da79a1d4f34520b9"
+    }
+  ],
+  "localResearchStorage": {
+    "directory": "data/research/philippines/raw/national/region03-emb-river-colxr-screen-20261127",
+    "gitIgnored": true,
+    "responseFiles": 31,
+    "containsOccurrenceSampleRowsWhenAvailable": true,
+    "publicAppIncluded": false
+  },
+  "limitations": [
+    "GBIF is a searchable index, not a complete fish survey or a census of Central Luzon rivers; zero results do not establish absence.",
+    "WaterBody/locality text matching is a lead only. Records may be broad, duplicated, misgeoreferenced, taxonomically unresolved, or refer to another site with a similar name.",
+    "The query uses CoL XR Actinopterygii only and can miss other fishes, synonyms not indexed under these text fields, and records absent from GBIF.",
+    "Only one sample row per query is retained; any positive count requires source dataset, taxon, dates, locality, coordinates, occurrence issues, and item-specific reuse review before a river link is accepted.",
+    "No occurrence, coordinates, species claim, waterbody geometry, access rule, or safety recommendation is promoted to the app."
+  ],
+  "nextAction": "Review each positive query's retained sample and dataset metadata, then page through only those specific searches if the sample has a credible source-level locality link."
+}
