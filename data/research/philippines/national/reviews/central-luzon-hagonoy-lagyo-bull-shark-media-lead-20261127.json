@@ -1,0 +1,187 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "central-luzon-hagonoy-lagyo-bull-shark-media-lead-20261127",
+  "reviewedOn": "2026-11-27",
+  "phaseId": "L3",
+  "regionId": "0300000000",
+  "regionName": "Region III (Central Luzon)",
+  "status": "media-reported-bull-shark-catch;lagyo-waterbody-crosswalk-unresolved;gbif-bounded-screen;research-only",
+  "question": "What evidence supports the 2025 report of juvenile bull sharks caught around Lagyo in Hagonoy, and can it be assigned to the EMB-listed Hagonoy River?",
+  "sourceIds": [
+    "gma-2025-hagonoy-lagyo-bull-sharks",
+    "manila-bulletin-2025-hagonoy-river-bull-sharks",
+    "gbif-hagonoy-lagyo-bounded-fish-occurrence-screen-20261127",
+    "gbif-backbone-carcharhinus-leucas-match-20261127"
+  ],
+  "inputs": [
+    "data/research/philippines/national/reviews/central-luzon-emb-r3-river-name-locality-crosswalk-20261127.json",
+    "data/research/philippines/national/reviews/central-luzon-hagonoy-cichlid-paper-locality-screen-20261127.json"
+  ],
+  "sourceAccess": {
+    "media": "GMA and Manila Bulletin search-indexed article text was reviewed. Direct page opens returned HTTP 403. The GMA article points to a Dami Mong Alam, Kuya Kim episode, but a direct episode/video URL was not located in the scoped search. No media was downloaded or retained.",
+    "gbif": "Read-only GBIF Occurrence API and Species API v1 requests returned HTTP 200 on 2026-11-27. Only query counts, selected name-match fields, URLs, and SHA-256 response hashes are recorded; no occurrence payloads were retained.",
+    "terms": "No media reuse terms or occurrence-level dataset licenses were verified. No article photograph or other image was copied."
+  },
+  "findings": {
+    "mediaEvent": {
+      "reportedEventDate": "2025-02 (GMA says the catch occurred in the preceding February; no day is given)",
+      "published": [
+        {
+          "sourceId": "gma-2025-hagonoy-lagyo-bull-sharks",
+          "date": "2025-04-08",
+          "reportedPlace": "a river section called Lagyo in Hagonoy, Bulacan",
+          "reportedCatch": "three juvenile bull sharks reportedly caught in a fishing net",
+          "reportedIdentification": "Animal expert Dr. Romulo Bernardo identified the animals as bull sharks in the report.",
+          "reportedDisposition": "The fisher reportedly released them while they were weak and was unsure whether they survived."
+        },
+        {
+          "sourceId": "manila-bulletin-2025-hagonoy-river-bull-sharks",
+          "date": "2025-04-09",
+          "reportedPlace": "Hagonoy River",
+          "reportedCatch": "the same three juvenile sharks caught by fisher Rex Arceo",
+          "reportedDisposition": "The article says they were released back into the river and uses a screengrab from the Dami Mong Alam, Kuya Kim report."
+        }
+      ],
+      "independence": "These articles describe the same event and the Manila Bulletin identifies a screengrab from the same television report. They are not independent field surveys or separate specimen records.",
+      "evidenceClass": "dated secondary-media catch lead with an expert-reported common-name identification; not a museum voucher, retained specimen, genetic record, or independently inspected field survey."
+    },
+    "waterbodyCrosswalk": {
+      "reportedNames": [
+        "Lagyo (GMA's local river-section name)",
+        "Hagonoy River (Manila Bulletin's event label and the separate EMB/locality crosswalk name)"
+      ],
+      "decision": "The two articles associate the same event with both labels, so this is a useful local name/reach crosswalk lead. The reviewed sources do not supply a map, coordinates, named station, or authoritative reach description connecting Lagyo to the specific EMB monitoring unit or the provincial Hagonoy River locality along San Agustin. Preserve the media-reported association as a candidate only; do not create a canonical alias or geometry.",
+      "spatialDataAdded": false
+    },
+    "taxonomy": {
+      "sourceReportedCommonName": "bull shark",
+      "candidateScientificName": "Carcharhinus leucas (Müller & Henle, 1839)",
+      "basis": "GBIF Backbone species/match returned an exact accepted species-name match at confidence 97 for the typed name Carcharhinus leucas. This checks the name only; it does not independently identify the three reported animals.",
+      "specimenIdentification": "Not independently verified; no retained specimen, diagnostic photo review, tissue, or voucher was located in the reviewed sources."
+    },
+    "gbifScreen": {
+      "queryDate": "2026-11-27",
+      "scope": "Bounded exact text searches, not an exhaustive survey or absence assessment.",
+      "fishTaxonomy": {
+        "name": "Catalogue of Life Extended Release Actinopterygii",
+        "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+        "taxonKey": "8VR36"
+      },
+      "queries": [
+        {
+          "label": "CoL XR Actinopterygii; locality=Hagonoy",
+          "url": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&locality=Hagonoy&limit=0",
+          "httpStatus": 200,
+          "count": 0,
+          "responseSha256": "842e210a1dc11a43b863a7438d0b8ae273f0182c290a7c64e760c176778cc9fa"
+        },
+        {
+          "label": "CoL XR Actinopterygii; stateProvince=Bulacan and locality=Hagonoy",
+          "url": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&stateProvince=Bulacan&locality=Hagonoy&limit=0",
+          "httpStatus": 200,
+          "count": 0,
+          "responseSha256": "842e210a1dc11a43b863a7438d0b8ae273f0182c290a7c64e760c176778cc9fa"
+        },
+        {
+          "label": "CoL XR Actinopterygii; waterBody=Hagonoy River",
+          "url": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&waterBody=Hagonoy+River&limit=0",
+          "httpStatus": 200,
+          "count": 0,
+          "responseSha256": "842e210a1dc11a43b863a7438d0b8ae273f0182c290a7c64e760c176778cc9fa"
+        },
+        {
+          "label": "CoL XR Actinopterygii; locality=Lagyo",
+          "url": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&locality=Lagyo&limit=0",
+          "httpStatus": 200,
+          "count": 0,
+          "responseSha256": "842e210a1dc11a43b863a7438d0b8ae273f0182c290a7c64e760c176778cc9fa"
+        },
+        {
+          "label": "CoL XR Actinopterygii positive query-path control; waterBody=Laguna de Bay",
+          "url": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&waterBody=Laguna+de+Bay&limit=0",
+          "httpStatus": 200,
+          "count": 22,
+          "responseSha256": "2f9f120315ab6dd43183ee9b130894f660f432db06155336ecaf0bc260cfecee"
+        }
+      ],
+      "bullSharkCandidate": {
+        "backboneKey": 2418036,
+        "nameMatch": {
+          "url": "https://api.gbif.org/v1/species/match?name=Carcharhinus%20leucas",
+          "httpStatus": 200,
+          "usageKey": 2418036,
+          "scientificName": "Carcharhinus leucas (Müller & Henle, 1839)",
+          "rank": "SPECIES",
+          "taxonomicStatus": "ACCEPTED",
+          "matchType": "EXACT",
+          "confidence": 97,
+          "responseSha256": "9304b701d6e5f8f3ff959e4c9cc83d18bea55d4741d4ccd6051751ce5b325f3a"
+        },
+        "philippinesOccurrenceCount": 4,
+        "localizedQueries": [
+          {
+            "filters": "country=PH, taxonKey=2418036, stateProvince=Bulacan, locality=Hagonoy",
+            "count": 0,
+            "responseSha256": "842e210a1dc11a43b863a7438d0b8ae273f0182c290a7c64e760c176778cc9fa"
+          },
+          {
+            "filters": "country=PH, taxonKey=2418036, locality=Lagyo",
+            "count": 0,
+            "responseSha256": "842e210a1dc11a43b863a7438d0b8ae273f0182c290a7c64e760c176778cc9fa"
+          },
+          {
+            "filters": "country=PH, taxonKey=2418036, waterBody=Hagonoy River",
+            "count": 0,
+            "responseSha256": "842e210a1dc11a43b863a7438d0b8ae273f0182c290a7c64e760c176778cc9fa"
+          }
+        ],
+        "nationalResultNote": "The four returned GBIF rows were labeled Cebu City, Cebu, and Dapitan City, Zamboanga del Norte. Two rows share the same catalog number across FishBase and SEAOBIS and may represent a duplicate; no deduplication decision was made. No Hagonoy record was returned by the localized exact-text queries."
+      },
+      "interpretation": "The Laguna de Bay control returned 22 under the same CoL XR fish filters, confirming that the Actinopterygii query path returned indexed records. Zero exact-text matches do not show that fish are absent, that no survey exists, or that Lagyo is not connected to Hagonoy River. GBIF search may miss unindexed names, alternate spellings, taxon treatments, and locality fields."
+    }
+  },
+  "method": {
+    "approach": "Reviewed the indexed text of two reports about the same media event; checked the exact Carcharhinus leucas name against GBIF Backbone; queried GBIF exact locality/waterBody fields for the CoL XR Actinopterygii class and for the candidate bull-shark taxon; included a positive Laguna de Bay query-path control.",
+    "limits": "The media pages could not be opened directly by the web reader, and the originating television episode, underlying field documentation, diagnostic photos, exact event date, coordinates, and specimen/voucher could not be independently inspected. GBIF zero exact-string counts are limited to the requested indexed fields and filters. The four national candidate records were not fully audited against their collection institutions."
+  },
+  "disposition": {
+    "researchOnly": true,
+    "mediaReportedEventsReviewed": 1,
+    "crossPublicationsOfSameEvent": 2,
+    "candidateCommonName": "bull shark",
+    "candidateScientificNameAdmitted": false,
+    "primarySurveyOrVoucherLocated": false,
+    "riverSpecificSpeciesAssertionsAdmitted": 0,
+    "canonicalLagyoHagonoyRiverAliasAdded": false,
+    "occurrenceCoordinatesAdded": 0,
+    "geometryAdded": false,
+    "speciesImagesAdded": 0,
+    "publicAppRowsAdded": 0,
+    "currentPresenceClaimAdded": false,
+    "publicationApproval": false
+  },
+  "nextActions": [
+    "Try to locate and review the originating Dami Mong Alam, Kuya Kim episode or its original footage; assess the fish identification and location only from what it directly shows or documents.",
+    "Find an independent field, specimen, or collection record for the reported catch; do not treat the two articles as independent occurrence records.",
+    "Resolve whether local 'Lagyo' names the same reach as the EMB Hagonoy River monitoring unit using a source with an explicit station, map, or coordinates before adding a canonical alias or geometry.",
+    "Keep the report visible as a research lead, but do not publish a bull-shark river occurrence, fishing advice, or image from this media-only evidence."
+  ],
+  "sources": [
+    {
+      "sourceId": "gma-2025-hagonoy-lagyo-bull-sharks",
+      "supports": "GMA Integrated News' dated media account of three juvenile bull sharks reportedly caught at a river section called Lagyo in Hagonoy in February 2025, the fisher's release account, and the expert-reported common-name identification."
+    },
+    {
+      "sourceId": "manila-bulletin-2025-hagonoy-river-bull-sharks",
+      "supports": "A second publication's account of the same three-shark catch, its Hagonoy River label, and its attribution of a screengrab to the same television report; not independent survey evidence."
+    },
+    {
+      "sourceId": "gbif-hagonoy-lagyo-bounded-fish-occurrence-screen-20261127",
+      "supports": "The exact GBIF query terms, filters, HTTP statuses, result counts, response hashes, and the bounded interpretation of zero textual matches."
+    },
+    {
+      "sourceId": "gbif-backbone-carcharhinus-leucas-match-20261127",
+      "supports": "GBIF Backbone's exact accepted name match for the typed name Carcharhinus leucas; nomenclature only, not the identity of the reported animals."
+    }
+  ]
+}
