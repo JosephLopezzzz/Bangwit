@@ -1,0 +1,159 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "central-luzon-bataan-remaining-inaturalist-context-review-20261128",
+  "reviewedOn": "2026-11-28",
+  "phaseId": "L3",
+  "regionId": "0300000000",
+  "regionName": "Region III (Central Luzon)",
+  "provinceTextScope": "Bataan; remaining 38 iNaturalist links from GBIF stateProvince text-filter screen after the 16-record Ilanin Bay subset",
+  "status": "inaturalist-public-metadata-followup;subic-bay-text-lead-only;administrative-label-conflict;geoprivacy-respected;research-only",
+  "question": "Do the other 38 Bataan-filtered iNaturalist observations resolve a named waterbody or a reusable, taxon-matched species photo?",
+  "sourceIds": [
+    "gbif-occurrence-downloads",
+    "inaturalist-bataan-observation-metadata-followup-20261128"
+  ],
+  "inputs": {
+    "gbif": {
+      "endpoint": "https://api.gbif.org/v1/occurrence/search",
+      "datasetKey": "50c9509d-22c7-4a22-a47d-8c48425ef4a7",
+      "priorCoordinateScreenRows": 251,
+      "iNaturalistCandidateTotal": 54,
+      "priorIlaninSubsetExcluded": 16,
+      "remainingCandidates": 38,
+      "all38LocalityFieldsMissing": true,
+      "all38WaterBodyFieldsMissing": true,
+      "snapshot": {
+        "path": "data/research/philippines/raw/central-luzon-bataan-georeferenced-fish-screen-20261127/occurrence-search.json",
+        "bytes": 1698589,
+        "sha256": "c6b88139b490251df044d828c117576adcccd3121c9d750b315b443cae389179",
+        "gitIgnored": true,
+        "retained": "The broader 251-row GBIF candidate search; coordinates remain only in ignored local storage."
+      }
+    },
+    "iNaturalist": {
+      "endpoint": "https://api.inaturalist.org/v1/observations",
+      "request": {
+        "linkedRecords": 38,
+        "observationIdSetSha256": "5f163a4571d43d3d07c4802a6e3c89c9c61d628b0cc0dd57488746b60b7a462e",
+        "idsRetainedInTrackedFiles": false
+      },
+      "response": {
+        "httpStatus": 200,
+        "returnedRows": 38,
+        "missingRows": 0,
+        "unexpectedRows": 0,
+        "bytes": 2431498,
+        "sha256": "e05e1e352c3933141cff3e788d26b088aa7ab2b75ec08e7cd2fb8d41290ae124",
+        "rawResponseSaved": false,
+        "coordinateValuesReadOrRetained": false
+      },
+      "summarySnapshot": {
+        "path": "data/research/philippines/raw/central-luzon-bataan-remaining-inaturalist-metadata-20261128/remaining-observation-metadata-summary.json",
+        "bytes": 4207,
+        "sha256": "f8f934da0ec77d59c9dc0b9e747c3b66f90de2d5815bb26f1fe292f3c60f53a5",
+        "gitIgnored": true,
+        "retained": "Aggregate and non-obscured broad place/taxon/photo-license metadata only; no observation IDs, exact coordinates, usernames, photo URLs, or media files."
+      }
+    }
+  },
+  "findings": {
+    "qualityGrades": {
+      "research": 38
+    },
+    "observationGeoprivacy": {
+      "obscured": 7,
+      "open-or-unspecified": 31
+    },
+    "taxonGeoprivacy": {
+      "open": 31,
+      "open-or-unspecified": 7
+    },
+    "obscuredOrPrivateExcludedFromPlaceReview": 7,
+    "nonObscuredRowsPlaceTextReviewed": 31,
+    "subicBayTextLead": {
+      "records": 12,
+      "labelVariants": {
+        "Subic Bay": 1,
+        "Subic Bay Freeport Zone, Philippines": 6,
+        "Subic Bay, Central Luzon, PH": 2,
+        "Subic Bay, Philippines": 1,
+        "Subic Bay, PI": 2
+      },
+      "sourceFields": [
+        "iNaturalist place_guess",
+        "GBIF verbatimLocality"
+      ]
+    },
+    "otherNotablePlaceText": {
+      "ilaniForestWestCount": 7,
+      "allHandsBeachOlongapoZambalesCount": 1,
+      "administrativeTextMismatch": "One record linked by the GBIF Bataan text screen has public iNaturalist place_guess “All Hands Beach, Olongapo, Zambales, PH”; this is an administrative-label conflict, not a polygon test."
+    },
+    "gbifRecordLicenseCounts": {
+      "http://creativecommons.org/licenses/by-nc/4.0/legalcode": 37,
+      "http://creativecommons.org/publicdomain/zero/1.0/legalcode": 1
+    },
+    "photoCount": 59,
+    "photoLicenseCounts": {
+      "cc-by-nc": 55,
+      "cc0": 4
+    },
+    "distinctPlatformTaxa": 32,
+    "recordsWithPlatformIdentificationDisagreements": {
+      "0": 38
+    }
+  },
+  "interpretation": {
+    "namedWaterbodyAssignmentsValidated": 0,
+    "taxonIdentitiesIndependentlyValidated": 0,
+    "speciesAssertionsAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "geometryAdded": false,
+    "imagesVisuallyReviewed": 0,
+    "imagesAdded": 0,
+    "publicAppRowsAdded": 0,
+    "decision": "Twelve non-obscured observations have Subic Bay place text (across spelling/label variants), but GBIF locality and waterBody are blank for all 38. Treat Subic Bay only as a marine source-discovery lead, not as a capture-station assignment or complete fish list. The province-text query also includes one place_guess naming Olongapo, Zambales, demonstrating that this filter cannot define Bataan coverage. Seven obscured/private records were not examined for place text. Of 59 attached photo-license entries, 55 are CC BY-NC and four CC0; no media was viewed or matched to taxa, so none is an app asset."
+  },
+  "limitations": [
+    "GBIF stateProvince=Bataan is indexed administrative text, not a provincial polygon query; the Olongapo, Zambales place label is a record-level textual inconsistency that needs geography review, not proof of a location.",
+    "The 12 Subic Bay mentions are broad place_guess/verbatimLocality labels; source rows provide no locality or waterBody value and no exact collection site or boundary was validated.",
+    "Seven observations marked obscured/private were excluded before reading any place text; their location was not inferred.",
+    "Research Grade and zero listed identification disagreements are platform metadata, not independent species identification or proof of a wild occurrence.",
+    "The 59 photo-license fields comprise 55 CC BY-NC and four CC0; exact media and species-to-image matching were not reviewed. No image was downloaded, visually checked, or admitted under the Bangwit species-image standard.",
+    "This text screen is not a species checklist; unreturned taxa do not support absence."
+  ],
+  "nextStep": "Continue Bataan with the 66 NMNH/iBOL material-sample candidates; prioritize original collection/capture context and any linked voucher/taxon evidence. Keep the 12 Subic Bay text mentions research-only and species images behind per-image taxon, visual-standard, and rights review.",
+  "sources": [
+    {
+      "sourceId": "gbif-occurrence-downloads",
+      "url": "https://api.gbif.org/v1/occurrence/search",
+      "supports": "The bounded Bataan coordinate-screen result, dataset links, source locality fields, and administrative text filter."
+    },
+    {
+      "sourceId": "inaturalist-bataan-observation-metadata-followup-20261128",
+      "url": "https://api.inaturalist.org/v1/observations",
+      "supports": "Current public metadata for the remaining 38 linked observation records and record-level photo-license codes."
+    },
+    {
+      "sourceId": "inaturalist-bataan-observation-metadata-followup-20261128",
+      "url": "https://help.inaturalist.org/en/support/solutions/articles/151000175695",
+      "supports": "iNaturalist explanation that observation and image licenses are separate."
+    }
+  ],
+  "snapshotHashes": {
+    "sourceRegistry": "d1c30b4cdbb8448ebbebe9421353b2e82fc76b3df0eeced8e1f22a5b6b392632"
+  },
+  "disposition": {
+    "admittedCandidates": 0,
+    "heldCandidates": 38,
+    "excludedCandidates": 0,
+    "siteAssignmentsValidated": 0,
+    "speciesAssertionsAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "geometryAdded": false,
+    "imagesAdded": 0,
+    "publicAppRowsAdded": 0,
+    "publicationApproval": false,
+    "decision": "Hold all 38 as research candidates; use Subic Bay only as a search lead, not as a verified waterbody occurrence or image asset."
+  }
+}
