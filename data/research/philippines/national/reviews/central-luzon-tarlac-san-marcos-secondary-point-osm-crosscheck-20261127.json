@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "central-luzon-tarlac-san-marcos-secondary-point-osm-crosscheck-20261127",
+  "reviewedOn": "2026-11-27",
+  "phaseId": "L3",
+  "regionId": "0300000000",
+  "regionName": "Region III (Central Luzon)",
+  "provinceId": "0305700000",
+  "provinceName": "Tarlac",
+  "waterbodyNamesAsReported": [
+    "San Marcos Lake"
+  ],
+  "status": "secondary-unreferenced-point-near-osm-candidate;candidate-boundary-not-confirmed;research-only",
+  "question": "Does the secondary lake-list coordinate for San Marcos Lake verify that the nearby unnamed OSM polygon is the same waterbody?",
+  "inputs": [
+    "data/research/philippines/national/reviews/central-luzon-tarlac-san-marcos-lake-occurrence-geometry-screen-20261126.json",
+    "data/research/philippines/national/reviews/central-luzon-tarlac-san-marcos-scholarly-index-screen-20261127.json"
+  ],
+  "sourceIds": [
+    "pna-bfar-capas-tarlac-lakes-fingerling-release-2020",
+    "osm-way-272180970-unnamed-lake-outline-near-san-marcos-capas"
+  ],
+  "secondaryLocator": {
+    "source": "List of lakes of the Philippines, Wikipedia",
+    "url": "https://en.wikipedia.org/wiki/List_of_lakes_of_the_Philippines",
+    "sourceReportedName": "San Marcos",
+    "sourceReportedProvince": "Tarlac",
+    "coordinate": {
+      "latitude": 15.313611,
+      "longitude": 120.390833,
+      "displayedAs": "15°18′49″N 120°23′27″E"
+    },
+    "reportedAreaHa": 24,
+    "citationAssessment": "The page displays the lake point and 24 ha value in its table, but no row-level citation is visible for this entry. Treat both as secondary unverified locator/area claims, not authoritative measurements. The separate PNA/BFAR report is the source that associates a San Marcos Lake with Capas, Tarlac.",
+    "doesNotSupport": [
+      "a surveyed coordinate or named centroid",
+      "an official lake boundary or shoreline",
+      "a validated area",
+      "fish species, present-day occurrence, access, safety, or fishing rules"
+    ]
+  },
+  "osmCandidate": {
+    "sourceId": "osm-way-272180970-unnamed-lake-outline-near-san-marcos-capas",
+    "url": "https://api.openstreetmap.org/api/0.6/way/272180970/full.json",
+    "wayId": 272180970,
+    "version": 2,
+    "nodeCount": 72,
+    "nameTagPresent": false,
+    "derivedAreaHa": 16.478,
+    "comparisonMethod": "The secondary locator point was projected to a local equirectangular plane at the point latitude. Point-in-ring and shortest point-to-segment distances were computed against the 72-node closed OSM ring.",
+    "locatorPointInsideRing": false,
+    "nearestBoundaryDistanceMeters": 206.4,
+    "areaDifferenceHa": 7.522,
+    "secondaryAreaPercentLargerThanOsmCandidate": 45.6,
+    "snapshot": {
+      "path": "data/research/philippines/raw/national/osm-san-marcos-lake-screen-20261126/way-272180970-full.json",
+      "bytes": 13257,
+      "sha256": "540573fb1c6cee63f280c3cbd186fa3eb6d84817c3ad8ef66b4de27ced200027"
+    },
+    "rights": "OpenStreetMap data are ODbL 1.0; reuse and redistribution obligations require a separate review.",
+    "doesNotSupport": [
+      "confirmed identity as San Marcos Lake",
+      "official or surveyed geometry",
+      "current shoreline or water level",
+      "fish presence or absence"
+    ]
+  },
+  "synthesis": {
+    "locality": "The Wikipedia-listed point is geographically near the unnamed OSM lake candidate, but it falls outside its mapped ring by about 206 m. Proximity supports a candidate comparison only; the secondary list does not cite the point or area, and it does not link the lake name to this OSM way.",
+    "area": "The unreferenced 24 ha table value is 7.52 ha (about 45.6%) larger than the derived 16.48 ha OSM candidate. The two figures are not comparable validated measurements and do not establish whether the polygon is incomplete, the point is offset, or the sources refer to different extents/features.",
+    "disposition": "Keep the OSM polygon as an unnamed candidate and the Wikipedia coordinate as a weak secondary locator. Do not promote the polygon, point, or either area into Bangwit waterbody geometry or app data. No species, occurrence, photo, diet claim, or safety claim is added."
+  },
+  "nextActions": [
+    "Seek a field-verified or independently cited Capas source that names the lake and supplies a map, coordinate, or shoreline suitable for a crosswalk.",
+    "Keep San Marcos Lake distinct from Agusan Marsh's Lake Mihaba and from the nearby unnamed OSM outline until locality evidence closes the link.",
+    "Keep Central Luzon and Luzon incomplete."
+  ],
+  "disposition": {
+    "speciesAssertionsAdded": 0,
+    "occurrenceRecordsAdded": 0,
+    "geometryAdded": false,
+    "imagesAdded": 0,
+    "publicAppRowsAdded": 0,
+    "regionalReleaseApproved": false
+  },
+  "sources": [
+    {
+      "url": "https://en.wikipedia.org/wiki/List_of_lakes_of_the_Philippines",
+      "supports": "Secondary table listing a San Marcos Lake in Tarlac with a coordinate and 24 ha area; no row-level citation is visible for the entry."
+    },
+    {
+      "sourceId": "pna-bfar-capas-tarlac-lakes-fingerling-release-2020",
+      "url": "https://www.pna.gov.ph/articles/1110424",
+      "supports": "Dated report associating San Marcos Lake with Capas, Tarlac; no coordinates or shoreline."
+    },
+    {
+      "sourceId": "osm-way-272180970-unnamed-lake-outline-near-san-marcos-capas",
+      "url": "https://api.openstreetmap.org/api/0.6/way/272180970/full.json",
+      "supports": "Community-mapped unnamed lake outline used for proximity comparison only."
+    },
+    {
+      "url": "https://www.openstreetmap.org/copyright",
+      "supports": "OpenStreetMap attribution and ODbL license context."
+    }
+  ]
+}
