@@ -1,0 +1,116 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "central-luzon-agno-basin-bmb-lake-list-crosscheck-20261127",
+  "reviewedOn": "2026-11-27",
+  "phaseId": "L3",
+  "regionId": "0300000000",
+  "regionName": "Region III (Central Luzon)",
+  "waterbodyNames": [
+    "Agno River Basin",
+    "Agno River System",
+    "Lake Ladiaoan / Lake Ladioan",
+    "Canarem Lake",
+    "Paitan Lake",
+    "Lake Canarin",
+    "Tambo Lake"
+  ],
+  "status": "denr-basin-plan-reproduces-five-bmb-region-iii-lake-rows;one-source-spelling-variant;not-an-independent-inventory;locality-and-geometry-unresolved;research-only",
+  "question": "Does the DENR Agno River Basin Phase 1 report provide a traceable, source-derived cross-check for Region III lake names and approximate areas in the BMB 2014 inland-wetlands atlas?",
+  "sourceIds": [
+    "denr-agno-river-basin-integrated-master-plan-camiling",
+    "denr-bmb-luzon-inland-wetlands-atlas-2014"
+  ],
+  "inputs": [
+    "data/research/philippines/national/reviews/central-luzon-bmb-2014-wetland-atlas-count-crosswalk-20261119.json",
+    "data/research/philippines/central-luzon-discovery-checkpoint-20261024.json",
+    "data/research/philippines/luzon-completion-manifest.json"
+  ],
+  "method": {
+    "planTable": "Read Table 70, 'List of inland wetlands in the Agno River Basin,' in the DENR FASPS-hosted Phase 1 report; retained only rows whose printed Region field is 3.",
+    "comparison": "Compared those five plan rows to the existing BMB 2014 Atlas Table 1 transcription. The plan explicitly cites the BMB Atlas as its source, so the plan is a traceable restatement, not an independent survey or corroborating inventory.",
+    "countBoundary": "The Agno River System is printed as spanning Regions 1, 2, 3, and CAR. It is not a Central Luzon-only river feature or geometry."
+  },
+  "regionThreeLakeRows": [
+    {
+      "denrPlanNameAsPrinted": "Lake Ladiaoan",
+      "denrPlanApproximateAreaHa": 11.6,
+      "atlasNameAsPrinted": "Lake Ladioan",
+      "atlasApproximateAreaHa": 11.6,
+      "comparison": "Same approximate area; one-letter spelling variation between the plan row and cited atlas transcription. Do not adopt the two spellings as a confirmed alias without a locality/source check."
+    },
+    {
+      "denrPlanNameAsPrinted": "Canarem Lake",
+      "denrPlanApproximateAreaHa": 59.4,
+      "atlasNameAsPrinted": "Canarem Lake",
+      "atlasApproximateAreaHa": 59.43,
+      "comparison": "Name agrees; the plan value is rounded to one decimal place."
+    },
+    {
+      "denrPlanNameAsPrinted": "Paitan Lake",
+      "denrPlanApproximateAreaHa": 63.8,
+      "atlasNameAsPrinted": "Paitan Lake",
+      "atlasApproximateAreaHa": 63.83,
+      "comparison": "Name agrees; the plan value is rounded to one decimal place."
+    },
+    {
+      "denrPlanNameAsPrinted": "Lake Canarin",
+      "denrPlanApproximateAreaHa": 103.4,
+      "atlasNameAsPrinted": "Lake Canarin",
+      "atlasApproximateAreaHa": 103.39,
+      "comparison": "Name agrees; the plan value is rounded to one decimal place."
+    },
+    {
+      "denrPlanNameAsPrinted": "Tambo Lake",
+      "denrPlanApproximateAreaHa": 92,
+      "atlasNameAsPrinted": "Tambo Lake",
+      "atlasApproximateAreaHa": 91.98,
+      "comparison": "Name agrees; the plan value is rounded to one decimal place."
+    }
+  ],
+  "findings": {
+    "sourceLineage": "The Agno Basin report's Table 70 cites the DENR-BMB 2014 Atlas immediately below its waterbody table. Its five Region III rows and approximate areas closely reproduce the existing BMB Atlas Table 1 transcription.",
+    "scope": "This is a basin-plan subset of five source-reported Region III lakes, not a complete Central Luzon waterbody inventory and not a resolution of the historical 153/165/168/202 river and wetland count differences.",
+    "locality": "The Region field is only '3'. The reviewed table does not assign each lake to a province, municipality, barangay, or particular basin reach; do not infer a local crosswalk from the basin title.",
+    "geometry": "Areas are explicitly approximate and no lake outline, source coordinate, CRS, or survey lineage was exposed by this table. No geometry was created.",
+    "biology": "The table is not fish evidence. No species, occurrence, catch, diet, safety, or app claims follow from it."
+  },
+  "disposition": {
+    "waterbodyInventoryLeadsAdded": 5,
+    "aliasesResolved": 0,
+    "administrativeAssignmentsAdded": 0,
+    "speciesAssertionsAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "dietClaimsAdded": 0,
+    "geometryAdded": false,
+    "imagesAdded": 0,
+    "publicAppRowsAdded": 0,
+    "regionalScopeFrozen": false,
+    "publicationApproval": false
+  },
+  "nextActions": [
+    "Retain the five rows as a source-derived historical name/area cross-check; reconcile spelling and lower-level locality only from evidence that explicitly supplies those links.",
+    "Continue the Central Luzon inventory from independently attributable waterbody sources; do not use this subset to infer the 202-river count or a regional denominator."
+  ],
+  "sources": [
+    {
+      "sourceId": "denr-agno-river-basin-integrated-master-plan-camiling",
+      "url": "https://faspselib.denr.gov.ph/uploads/materials/289ed13f-742d-4b76-aeb2-e0a3234acca4/d77c2db4-b131-4c11-b9f5-a038a13ee7b1.pdf",
+      "supports": "Table 70's five Region 3 lake names and approximate areas, its wider Agno River System region coverage, and its explicit citation to the BMB 2014 atlas."
+    },
+    {
+      "sourceId": "denr-bmb-luzon-inland-wetlands-atlas-2014",
+      "url": "https://www.ramsar.org/sites/default/files/documents/library/atlas_inland_wetland_mainland_luzon_philippines_2014_e.pdf",
+      "supports": "Historical BMB Atlas Table 1 spellings and approximate areas as transcribed in the linked prior review."
+    },
+    {
+      "sourceId": "denr-bmb-luzon-inland-wetlands-atlas-2014",
+      "url": "https://elibrary.bmb.gov.ph/elibrary/?books=atlas-of-inland-wetlands-in-mainland-luzon-philippines",
+      "supports": "BMB e-Library catalogue metadata identifying the atlas as a DENR-BMB e-copy and documenting its ISBN and catalogue record; the page lists a copy-request route rather than a direct data download."
+    }
+  ],
+  "snapshotHashes": {
+    "sourceRegistry": "f1ad3a45030dcd387c512d9bffbf6f95449bb655a981067b8afab57b6b0b28c1",
+    "bmb2014AtlasCountCrosswalk": "e6cbdc3d23b509444f5a8088b2eb0d5e47abf25fb5a6521e9ea423d5a3349499"
+  },
+  "snapshotRefreshNote": "Source-registry and cited BMB Atlas crosswalk fingerprints recorded on 2026-11-27; this review is a research-only derivative table comparison. On 2026-11-27, refreshed shared provenance fingerprints after recording a research-only cross-check of DENR Agno Basin Phase 1 Table 70 against the cited BMB 2014 Atlas. Existing scope-specific findings and decisions remain unchanged."
+}
