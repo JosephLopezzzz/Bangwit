@@ -1,0 +1,141 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "central-luzon-bataan-clarias-ncbi-sequence-linkage-followup-20261128",
+  "reviewedOn": "2026-11-28",
+  "phaseId": "L3",
+  "regionId": "0300000000",
+  "regionName": "Region III (Central Luzon)",
+  "status": "bounded-bataan-sequence-query-zero;philippines-query-positive;no-bataan-crosswalk;research-only",
+  "question": "Does the public NCBI Nucleotide index expose a sequence accession that links the 2025 Bataan Clarias batrachus diet-study samples to Bataan?",
+  "sourceIds": [
+    "ncbi-eutils-clarias-batrachus-bataan-sequence-query-20261128",
+    "corpuz-2025-clarias-batrachus-bataan-diet-study",
+    "pantabangan-2013-fish-coi-submission-ncbi",
+    "clarias-philippines-barcode-review-2015",
+    "dimaquibo-2025-north-luzon-teleost-dna-barcode-dataset"
+  ],
+  "relatedReviews": [
+    "data/research/philippines/national/reviews/central-luzon-bataan-clarias-2025-diet-identity-review-20261128.json",
+    "data/research/philippines/national/reviews/central-luzon-pantabangan-ncbi-accession-review-20261119.json",
+    "data/research/philippines/national/reviews/central-luzon-aurora-maria-aurora-supplement-site-method-crosscheck-20261127.json"
+  ],
+  "method": {
+    "database": "NCBI Nucleotide via public E-utilities ESearch",
+    "queries": [
+      {
+        "term": "\"Clarias batrachus\"[Organism] AND Bataan[All Fields]",
+        "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=nuccore&term=%22Clarias%20batrachus%22%5BOrganism%5D%20AND%20Bataan%5BAll%20Fields%5D&retmode=json&retmax=100",
+        "httpStatus": 200,
+        "reportedCount": 0,
+        "recordsReturned": 0
+      },
+      {
+        "term": "\"Clarias batrachus\"[Organism] AND Philippines[All Fields]",
+        "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi?db=nuccore&term=%22Clarias%20batrachus%22%5BOrganism%5D%20AND%20Philippines%5BAll%20Fields%5D&retmode=json&retmax=100",
+        "httpStatus": 200,
+        "reportedCount": 41,
+        "recordsReturned": 41
+      }
+    ],
+    "scope": "Exact Nucleotide text-index queries only. No BOLD search, sequence alignment, author contact, or specimen examination was performed.",
+    "limitations": [
+      "A zero exact Bataan text result means only that this NCBI query returned no matching records; annotations may omit Bataan, and this is not evidence that a species, sequence, or specimen is absent.",
+      "The Philippines query is an index-positive context search, not 41 distinct specimens, collection events, localities, or independent studies.",
+      "A submitted organism name, accession, or voucher string does not independently validate the identification of the Bataan paper's fish."
+    ]
+  },
+  "findings": {
+    "bataanLinkage": {
+      "exactBataanTextMatches": 0,
+      "bataanDietStudyAccessionFound": false,
+      "interpretation": "No Bataan-text NCBI sequence record was found in the bounded query. The 2025 diet article itself still supplies no linked sequence accession, museum catalog number, or voucher crosswalk. Keep its Clarias batrachus identification held; do not infer absence or substitute another taxon."
+    },
+    "nonBataanPhilippineContext": {
+      "exactPhilippinesTextMatches": 41,
+      "knownPantabanganSubset": {
+        "accessions": ["KC789523.1", "KC789524.1", "KC789525.1", "KC789526.1", "KC789527.1"],
+        "sourceReportedWaterbody": "Pantabangan Dam, Nueva Ecija",
+        "specimenVoucherLabels": ["PNT-14", "PNT-02", "PNT-17", "PNT-16", "PNT-15"],
+        "collectionDates": ["2012-05-14", "2012-06-16"],
+        "basis": "Previously crosswalked to GenBank metadata and the 2015 Philippine Clarias barcode paper in the linked Pantabangan review.",
+        "relevance": "A separate historical Central Luzon sequence set; it does not link to the Bataan samples or redetermine them."
+      },
+      "northLuzonExample": {
+        "accessions": ["PP396130.1", "PP536564.1"],
+        "submittedVoucher": "DOS09091-1",
+        "submittedGeoLocName": "Philippines",
+        "collectionDate": "2023-01-14",
+        "basis": "Current GenBank feature metadata and the separately reviewed North Luzon article/supplement context.",
+        "relevance": "The country-only GenBank locality does not establish Bataan or a named watercourse; the shared voucher label means these two loci are not two independent specimens."
+      },
+      "decision": "Do not transfer non-Bataan accessions, identities, or locality claims to the 2025 Bataan gut-content sample."
+    },
+    "taxonomy": "This screen does not resolve the Catalog of Fishes range concern, identify the Bataan specimens, or establish a native/introduction history."
+  },
+  "disposition": {
+    "speciesAssertionsAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "dietGuideRowsAdded": 0,
+    "baitSuggestionsAdded": 0,
+    "sequenceDataPublished": false,
+    "geometryAdded": false,
+    "imagesAdded": 0,
+    "publicAppRowsAdded": 0,
+    "publicationApproval": false,
+    "decision": "Keep the Bataan diet study as a sample-specific, research-only lead with unresolved taxon and Bagac locality. The bounded NCBI screen adds no Bataan specimen-level identity crosswalk."
+  },
+  "rawSnapshot": {
+    "directory": "raw/bataan-clarias-ncbi-query-20261128",
+    "gitIgnored": true,
+    "files": [
+      {
+        "path": "clarias-batrachus-bataan-esearch.json",
+        "bytes": 490,
+        "sha256": "b9f2518f66120b6bc8a7892c7bae9360cc39d606bb7581a6fa97b4a1af64da1a"
+      },
+      {
+        "path": "clarias-batrachus-philippines-esearch.json",
+        "bytes": 1008,
+        "sha256": "4eb6aa14a7d61711c70ef10de6be5f55ddebfe8cc3558831e719fb39fdf51ae8"
+      }
+    ],
+    "sequenceStringsRetained": false
+  },
+  "sources": [
+    {
+      "sourceId": "ncbi-eutils-clarias-batrachus-bataan-sequence-query-20261128",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi",
+      "supports": "The two exact bounded Nucleotide search results and their returned record counts; API response snapshots are local-only and ignored by Git."
+    },
+    {
+      "sourceId": "corpuz-2025-clarias-batrachus-bataan-diet-study",
+      "url": "https://dergipark.org.tr/en/download/article-file/4032995",
+      "supports": "The source-reported Bataan study taxon, sampling rivers, dates, and lack of a linked accession or voucher in the reviewed article."
+    },
+    {
+      "sourceId": "pantabangan-2013-fish-coi-submission-ncbi",
+      "url": "https://www.ncbi.nlm.nih.gov/nuccore/?term=Pantabangan%5BAll+Fields%5D",
+      "supports": "The separately crosswalked Pantabangan sequence subset and source-reported locality; used only to distinguish another Central Luzon study from the Bataan samples."
+    },
+    {
+      "sourceId": "clarias-philippines-barcode-review-2015",
+      "url": "https://www.researchgate.net/publication/291830804_Status_Assessment_of_Clarias_Species_in_the_Philippines_Insights_from_DNA_Barcodes",
+      "supports": "The separate Philippine Clarias barcode analysis that includes the previously crosswalked Pantabangan subset; no inference is made about the later Bataan samples."
+    },
+    {
+      "sourceId": "dimaquibo-2025-north-luzon-teleost-dna-barcode-dataset",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12475234/",
+      "supports": "The distinct North Luzon barcode study and its generic Aurora site context; not evidence of Bataan locality."
+    },
+    {
+      "sourceId": "ncbi-eutils-clarias-batrachus-bataan-sequence-query-20261128",
+      "url": "https://www.ncbi.nlm.nih.gov/nuccore/PP396130.1",
+      "supports": "GenBank feature metadata reports voucher DOS09091-1, country-level Philippines locality, and collection date 2023-01-14 for one North Luzon barcode locus; this is not a Bataan or named-watercourse record."
+    },
+    {
+      "sourceId": "ncbi-eutils-clarias-batrachus-bataan-sequence-query-20261128",
+      "url": "https://www.ncbi.nlm.nih.gov/nuccore/PP536564.1",
+      "supports": "GenBank feature metadata reports the same voucher DOS09091-1 for a second locus, with country-level Philippines locality and collection date 2023-01-14; it is not an independent specimen or a Bataan record."
+    }
+  ]
+}
