@@ -1,0 +1,85 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "central-luzon-aurora-maria-aurora-supplement-site-method-crosscheck-20261127",
+  "reviewedOn": "2026-11-27",
+  "phaseId": "L3",
+  "regionId": "0300000000",
+  "regionName": "Region III (Central Luzon)",
+  "sourceIds": [
+    "dimaquibo-2025-north-luzon-teleost-dna-barcode-dataset"
+  ],
+  "relatedReviews": [
+    "central-luzon-aurora-maria-aurora-generic-site-hydronym-crosswalk-20261127",
+    "central-luzon-north-luzon-genbank-project-metadata-screen-20261124"
+  ],
+  "status": "same-study-site-labels-crosschecked;10-field-collected-rows;named-watercourse-unresolved;supplement-reuse-pending",
+  "question": "Does the publisher's Aurora specimen supplement link its two generic Maria Aurora site labels to field-collected rows, and does that name a river or support app use?",
+  "scope": {
+    "worksheet": "STS1B. Aurora",
+    "fieldsRead": [
+      "Sampling area",
+      "Collection method"
+    ],
+    "sourceWorkbook": {
+      "path": "data/research/philippines/raw/41597_2025_5758_MOESM2_ESM.xlsx",
+      "ignoredByGit": true,
+      "committed": false,
+      "bytes": 85445,
+      "sha256": "7004383bf7069bab34d5f82fe78778cb0a9f630755a150d42b517eb2370f06ca"
+    },
+    "articleReference": "Table 1 and Methods of Dimaquibo et al. (2025); article Table 1 labels Maria Aurora site1 and site2 as river sites."
+  },
+  "method": {
+    "procedure": "Parsed the existing publisher XLSX in memory with Python standard-library ZIP/XML readers. Located the STS1B. Aurora header and counted only exact Sampling area strings and their Collection method values. Compared those labels with the same article's Table 1. No taxon, specimen ID, accession, sample date, photograph, sequence, or coordinate values were copied into this review.",
+    "rawIntegrity": "The local workbook's size and SHA-256 match the previously registered source snapshot; the workbook remains in Git-ignored research storage.",
+    "independence": "The article and its supplement are one study source, not independent corroboration."
+  },
+  "results": {
+    "auroraWorksheetDataRows": 199,
+    "rowsWithBlankSamplingArea": 1,
+    "rowsWithBlankCollectionMethod": 1,
+    "mariaAuroraSite1": {
+      "supplementRows": 1,
+      "collectedInField": 1,
+      "purchasedAtMarket": 0
+    },
+    "mariaAuroraSite2": {
+      "supplementRows": 9,
+      "collectedInField": 9,
+      "purchasedAtMarket": 0
+    },
+    "sameStudyTable1LabelMatches": 2,
+    "namedWatercourseCrosswalksAccepted": 0,
+    "speciesAssertionsAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "coordinatesCopied": 0,
+    "geometryAdded": false,
+    "photosCopiedOrApproved": 0,
+    "publicAppRowsAdded": 0,
+    "publicationApproval": false
+  },
+  "interpretation": [
+    "The supplement's two exact Maria Aurora site labels match the generic river-site labels used in the article's Table 1, and all ten matching supplement rows are marked Collected in field.",
+    "This is a same-study label and collection-method cross-check. It does not identify either site as Pacugao River, Bazal River, or another named watercourse, validate a channel reach, or make the article's table an independent survey.",
+    "The article states CC BY-NC-ND 4.0. A separate reuse grant or explicit license for the supplementary workbook and a rights basis for adapting specimen-level data were not verified. Do not copy, redistribute, or publish its taxa or specimen-level rows in Bangwit on the basis of this review."
+  ],
+  "limitations": [
+    "The article and supplement are from the same publication; matching labels do not independently verify field location or the reported site coordinates.",
+    "The generic Maria Aurora site labels remain unresolved against named channels. The prior GeoNames/OSM line screen is proximity context only.",
+    "Collection-method labels are source-reported; this review did not independently verify specimens, vouchers, field logs, or collection permits.",
+    "No current-presence, abundance, catchability, safety, water quality, fishing access, or legal-rule claim follows from these rows."
+  ],
+  "nextAction": "Continue Central Luzon discovery with independently sourced and rights-clear freshwater and coastal evidence. Keep these ten study rows research-only until supplement reuse terms are clear; retain the two site labels as generic and do not assign either to a named river without an authoritative site-to-watercourse source.",
+  "sources": [
+    {
+      "sourceId": "dimaquibo-2025-north-luzon-teleost-dna-barcode-dataset",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12475234/",
+      "supports": "Article Table 1's generic Maria Aurora river-site labels, study methods, article license statement, and description of supplementary specimen metadata."
+    },
+    {
+      "sourceId": "dimaquibo-2025-north-luzon-teleost-dna-barcode-dataset",
+      "url": "https://static-content.springer.com/esm/art%3A10.1038%2Fs41597-025-05758-3/MediaObjects/41597_2025_5758_MOESM2_ESM.xlsx",
+      "supports": "Publisher workbook, worksheet STS1B. Aurora, screened in memory for exact site-label and collection-method counts only; separate supplement reuse terms were not verified."
+    }
+  ]
+}
