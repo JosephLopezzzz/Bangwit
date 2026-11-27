@@ -8763,18 +8763,20 @@
         "https://data.hydrosheds.org/file/technical-documentation/HydroRIVERS_TechDoc_v10.pdf"
       ],
       "role": "Nationwide candidate for modeled river-reach discovery and regional query windows. It is not a fish-occurrence layer, complete stream map, surveyed channel trace or fishing-access source.",
-      "checkedOn": "2026-11-08",
+      "checkedOn": "2026-11-27",
       "sourceYear": 2026,
       "access": {
-        "status": "FAO-metadata-and-WFS-verified;4719-reach-bbox-snapshot-stored-locally;783-GeoNames-points-screened;46-stream-scope-name-pairs-prioritized-by-line-proximity;zero-reach-identities-validated;not-an-administrative-subset;publication-not-approved",
+        "status": "FAO-metadata-and-WFS-verified;CALABARZON-and-Central-Luzon-bbox-snapshots-stored-locally;783-CALABARZON-and-1062-Central-Luzon-GeoNames-points-screened;zero-reach-identities-validated;not-administrative-subsets;publication-not-approved",
         "reviewFiles": [
           "national-philippines-river-wfs-source-review-20261026.json",
           "national/reviews/fao-hydrorivers-calabarzon-wfs-screen-20261108.json",
           "national/reviews/fao-hydrorivers-calabarzon-stream-scope-priority-20261108.json",
           "national/reviews/calabarzon-waterway-three-source-priority-20261109.json",
-          "national/reviews/central-luzon-angat-bpc001-13-georeference-plausibility-20261119.json"
+          "national/reviews/central-luzon-angat-bpc001-13-georeference-plausibility-20261119.json",
+          "national/reviews/fao-hydrorivers-region03-wfs-screen-20261127.json"
         ],
         "rawPath": "raw/national/fao-hydrorivers-calabarzon-wfs-20261108/",
+        "additionalRawPaths": ["raw/national/fao-hydrorivers-region03-wfs-20261127/"],
         "serviceEndpoint": "https://data.apps.fao.org/map/gsrv/gsrv1/aquamaps/wms",
         "queryLayer": "aquamaps:river_network"
       },
@@ -8791,6 +8793,7 @@
         "The catalog describes a river filter of catchment area at least 10 km² or average flow at least 0.1 m³/s, so small streams may be absent.",
         "An earlier WFS probe used a smaller rectangular bbox around Cavite and returned 1,420 features; the current CALABARZON query returned 4,719 features in a box covering all five province polygons plus adjacent areas. Neither is an exact administrative subset or province feature count.",
         "The probe demonstrated service access and MultiLineString output, not a stable service-level agreement, local river-name completeness, or correct feature classifications.",
+        "The Central Luzon WFS query is a separate 2026-11-27 bounding-rectangle snapshot; it must not be summed with the CALABARZON snapshot or treated as a unique national reach count.",
         "Perennial/intermittent class attribute semantics require review of the linked FAO technical report before display.",
         "The HydroSHEDS v1 license requires integrated derivative use, end-user license restrictions, and prominent attribution; public geometry is not approved by this source review."
       ]
