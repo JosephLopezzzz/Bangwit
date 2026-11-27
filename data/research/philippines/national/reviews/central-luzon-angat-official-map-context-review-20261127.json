@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "central-luzon-angat-official-map-context-review-20261127",
+  "checkedOn": "2026-11-27",
+  "phaseId": "L3",
+  "regionId": "0300000000",
+  "regionName": "Region III (Central Luzon)",
+  "waterbodyName": "Angat River",
+  "status": "official-province-map-context-reviewed;PDRRMO-figure-is-longitudinal-profile-not-route-map;exact-reach-unresolved;research-only",
+  "question": "Do the Bulacan PDPFP River Network and Wetlands Map or the PDRRMO Figure 3 provide enough spatial detail to verify the previously reviewed Angat River specimen's exact named reach?",
+  "sourceIds": [
+    "bulacan-pdpfp-2024-2036-river-network",
+    "bulacan-pdrrmo-hydrological-area",
+    "gbif-angat-river-bpc001-13-occurrence-2248809978",
+    "bold-bpc001-13-barcode-record",
+    "ncbi-kf604634-1-genbank-submission"
+  ],
+  "inputs": {
+    "data/research/philippines/national/reviews/central-luzon-angat-bpc001-13-georeference-plausibility-20261119.json": {
+      "sha256": "2dc6d944fe6704fab9b1f011b772c666b68a425cbe3c218f026d51c42b412872",
+      "role": "Prior occurrence-coordinate and modeled-reach plausibility review; source precision and exact reach remain unresolved."
+    },
+    "data/research/philippines/raw/central-luzon-angat-figure3-source-review-20261127/bulacan-pdpfp-2024-2036.pdf": {
+      "sha256": "62b4e269e2a5f9a5b9c2c50c92a26552844512272bcdee45e8e1635dce3a40f5",
+      "bytes": 22940399,
+      "pages": 927,
+      "gitIgnored": true
+    },
+    "data/research/philippines/raw/central-luzon-angat-figure3-source-review-20261127/figure_3.gif": {
+      "sha256": "f5d92f32ffffeeac06900c8ad1ff9af3b4fd273ab155cd46577612835b074be0",
+      "bytes": 18418,
+      "gitIgnored": true
+    }
+  },
+  "method": {
+    "provincialPlan": {
+      "title": "Bulacan Provincial Development and Physical Framework Plan 2024-2036, Draft Final Report",
+      "map": "Map 3.11, River Network and Wetlands Map",
+      "printedPage": 94,
+      "pdfPage": 151,
+      "visualReview": "Province-wide raster page with satellite background, provincial/municipal context, coordinate graticules, generalized blue river-network lines, and wetland symbols. At this page scale the individual river/reach labels are not sufficiently legible to crosswalk the specimen point to a named channel segment.",
+      "machineReadableGeometryFoundInReviewedDocument": false
+    },
+    "provincialDisasterOffice": {
+      "page": "The Hydrological Area: Bulacan Province",
+      "figure": "Figure 3, Angat River Longitudinal Profile (January 2006)",
+      "visualReview": "Elevation-versus-distance profile, not a route map. The page text describes an approximately 61 km Angat River extent from Ipo Reservoir to the diversion in Labangan Channel; those endpoints and the profile do not supply a georeferenced centerline or a specimen-to-reach link."
+    },
+    "coordinateHandling": "The specimen's exact coordinate was not copied into this report, overlaid on the raster, or used to draw geometry. The prior review records that GBIF/BOLD did not supply coordinate uncertainty and that GBIF assumed WGS84."
+  },
+  "findings": {
+    "namedAngatSystemContext": "The provincial plan shows a regional river-and-wetland network, while PDRRMO and PAGASA describe the Angat system and its downstream connection. These support water-system context only.",
+    "exactNamedReachIdentity": "unresolved",
+    "specimenPointValidatedAgainstOfficialMap": false,
+    "publicRiverGeometryAvailableFromReviewedPages": false,
+    "mapSupportsSpeciesPresence": false,
+    "sourceIndependence": "The maps and hydrology descriptions do not independently identify the GBIF/BOLD/GenBank specimen or its collection reach."
+  },
+  "rightsAndLimitations": [
+    "The reviewed PDPFP map is embedded as a page image in a draft-final provincial plan. No item-specific reuse or redistribution license for its map artwork was identified; the local source copy remains Git-ignored.",
+    "The PDRRMO Figure 3 profile is dated January 2006 and is a longitudinal profile, not a geospatial route layer.",
+    "Province-wide visual context and named system descriptions cannot resolve source coordinate uncertainty, current reach geometry, present-day fish presence, catchability, access, or safety."
+  ],
+  "decision": {
+    "waterbodySystemContextAcceptedForResearchOnly": true,
+    "exactReachValidated": false,
+    "speciesAssertionAdded": false,
+    "occurrenceAdded": false,
+    "geometryAdded": false,
+    "exactCoordinatesAdded": false,
+    "publicAppProjection": false,
+    "publicationApproval": false,
+    "disposition": "Retain the historical record as a previously reviewed Angat River source-chain candidate. The official provincial map and longitudinal profile do not resolve its exact named reach; do not map the occurrence or generate a river line from these pages."
+  },
+  "nextAction": "Continue Central Luzon evidence work with independent site-resolved fish surveys, specimen records, or reusable geospatial river sources; do not recount the BPC001-13/ANAd1 chain as new evidence."
+}
