@@ -1,0 +1,138 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "central-luzon-baler-river-colxr-occurrence-screen-20261127",
+  "reviewedOn": "2026-11-27",
+  "phaseId": "L3",
+  "regionId": "0300000000",
+  "regionName": "Region III (Central Luzon)",
+  "waterbodyNameAsReported": "Baler River",
+  "relatedReviewFiles": [
+    "data/research/philippines/national/reviews/central-luzon-aurora-baler-river-abstract-taxonomy-review-20261127.json"
+  ],
+  "sourceIds": [
+    "ijat-aatsea-2017-baler-river-fish-abstract",
+    "gbif-baler-river-colxr-screen-20261127",
+    "gbif-col-xr-taxonomy-matching"
+  ],
+  "status": "three-bounded-colxr-fish-text-queries-zero;one-all-taxa-locality-control-74;not-absence-evidence;research-only",
+  "question": "Do the GBIF indexed waterBody/locality fields contain CoL XR Actinopterygii records for the Baler River study name or Baler, Aurora locality?",
+  "input": {
+    "taxonSnapshot": {
+      "path": "data/research/philippines/raw/national/camiling-river-colxr-occurrence-screen-20261127/taxon-match-actinopterygii.json",
+      "sha256": "01e8f9b1849920667c67c91d22f0d6129c2b89c5368239d3aa6775e8bdc33c29",
+      "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+      "taxonKey": "8VR36",
+      "taxonName": "Actinopterygii"
+    },
+    "relatedAbstractReview": "data/research/philippines/national/reviews/central-luzon-aurora-baler-river-abstract-taxonomy-review-20261127.json"
+  },
+  "method": {
+    "endpoint": "https://api.gbif.org/v1/occurrence/search",
+    "procedure": "Ran one all-taxa PH/Aurora/locality=Baler count control and three exact-field CoL XR Actinopterygii count queries: waterBody=Baler River, locality=Baler River plus stateProvince=Aurora, and locality=Baler plus stateProvince=Aurora. All requests used occurrenceStatus=PRESENT, limit=0 and offset=0. Raw count responses and SHA-256 receipts are kept in the Git-ignored raw research directory.",
+    "taxonomicScope": "Catalogue of Life Extended Release Actinopterygii only; this is a filter boundary and excludes fish outside that concept, including sharks and rays.",
+    "queryResults": [
+      {
+        "id": "broad-locality-control",
+        "field": "locality",
+        "term": "Baler",
+        "stateProvince": "Aurora",
+        "taxonFiltered": false,
+        "purpose": "All-taxa control for the municipality/locality text; not a fish checklist.",
+        "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&occurrenceStatus=PRESENT&limit=0&offset=0&stateProvince=Aurora&locality=Baler",
+        "count": 74,
+        "resultRowsReturned": 0,
+        "rawResponse": {
+          "path": "data/research/philippines/raw/national/baler-river-colxr-screen-20261127/broad-locality-control.json",
+          "bytes": 79,
+          "sha256": "2d078502033dac2d6897ea8181a46bfac306ff3800907f839739d04c96433c6b"
+        }
+      },
+      {
+        "id": "waterbody-exact",
+        "field": "waterBody",
+        "term": "Baler River",
+        "taxonFiltered": true,
+        "purpose": "Exact GBIF waterBody field query for the study waterbody.",
+        "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&occurrenceStatus=PRESENT&limit=0&offset=0&waterBody=Baler+River&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36",
+        "count": 0,
+        "resultRowsReturned": 0,
+        "rawResponse": {
+          "path": "data/research/philippines/raw/national/baler-river-colxr-screen-20261127/waterbody-exact.json",
+          "bytes": 77,
+          "sha256": "842e210a1dc11a43b863a7438d0b8ae273f0182c290a7c64e760c176778cc9fa"
+        }
+      },
+      {
+        "id": "locality-river-exact",
+        "field": "locality",
+        "term": "Baler River",
+        "stateProvince": "Aurora",
+        "taxonFiltered": true,
+        "purpose": "Exact locality field query for the river name within Aurora.",
+        "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&occurrenceStatus=PRESENT&limit=0&offset=0&stateProvince=Aurora&locality=Baler+River&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36",
+        "count": 0,
+        "resultRowsReturned": 0,
+        "rawResponse": {
+          "path": "data/research/philippines/raw/national/baler-river-colxr-screen-20261127/locality-river-exact.json",
+          "bytes": 77,
+          "sha256": "842e210a1dc11a43b863a7438d0b8ae273f0182c290a7c64e760c176778cc9fa"
+        }
+      },
+      {
+        "id": "locality-municipality-fish",
+        "field": "locality",
+        "term": "Baler",
+        "stateProvince": "Aurora",
+        "taxonFiltered": true,
+        "purpose": "Fish-filtered locality query for Baler, Aurora; locality text alone does not identify a river site.",
+        "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&occurrenceStatus=PRESENT&limit=0&offset=0&stateProvince=Aurora&locality=Baler&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36",
+        "count": 0,
+        "resultRowsReturned": 0,
+        "rawResponse": {
+          "path": "data/research/philippines/raw/national/baler-river-colxr-screen-20261127/locality-municipality-fish.json",
+          "bytes": 77,
+          "sha256": "842e210a1dc11a43b863a7438d0b8ae273f0182c290a7c64e760c176778cc9fa"
+        }
+      }
+    ],
+    "limits": "Zero counts are bounded text-index results, not evidence of absence. Exact strings can miss aliases, spelling variants, records without standard waterBody/locality values, unindexed datasets, and records absent from GBIF. The broad control counts all taxa and cannot be used as a fish count. No records or record-level licenses were reviewed because the filtered searches returned zero."
+  },
+  "summary": {
+    "broadAllTaxaBalerAuroraLocalityCount": 74,
+    "fishFilteredExactFieldQueries": 3,
+    "fishFilteredExactFieldPositiveQueries": 0,
+    "fishFilteredExactFieldZeroQueries": 3,
+    "occurrenceRowsFetched": 0,
+    "coordinateRequiredFollowups": 0,
+    "occurrenceAssertionsAdded": 0,
+    "publicAppRowsAdded": 0
+  },
+  "decision": {
+    "fishOccurrencesAdmitted": 0,
+    "occurrenceRowsAdded": 0,
+    "speciesAssertionsAdded": 0,
+    "publicAppRowsAdded": 0,
+    "geometryAdded": false,
+    "publicationApproval": false,
+    "regionalBaselineComplete": false,
+    "explanation": "Keep this as a bounded source-discovery result only. It neither confirms nor rules out Baler River fish; the 2017 abstract remains historical research-only evidence with no specimen-level or rights resolution."
+  },
+  "nextAction": "Continue searching independent, site-resolved Aurora freshwater studies and voucher records; keep the Baler River abstract labels held unless a fuller method, diagnostic, voucher, and reuse trail is found.",
+  "sources": [
+    {
+      "sourceId": "ijat-aatsea-2017-baler-river-fish-abstract",
+      "url": "https://www.ijat-aatsea.com/aatsea/icist2017/CIENTFIC%20PROGRAM%20and%20BOOK%20OF%20ABSTRACTS.pdf",
+      "supports": "Names the Baler River study target; it does not establish a GBIF occurrence or complete locality inventory."
+    },
+    {
+      "sourceId": "gbif-baler-river-colxr-screen-20261127",
+      "url": "https://api.gbif.org/v1/occurrence/search",
+      "supports": "Exact count-query parameters and results recorded in queryResults; the filtered zeroes are not absence evidence."
+    },
+    {
+      "sourceId": "gbif-col-xr-taxonomy-matching",
+      "url": "https://techdocs.gbif.org/en/data-processing/taxonomy-interpretation",
+      "supports": "Explains explicit GBIF taxonomy/checklist matching; the pinned CoL XR Actinopterygii snapshot supplies the query taxon identifier."
+    }
+  ]
+}

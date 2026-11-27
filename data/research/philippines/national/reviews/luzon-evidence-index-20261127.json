@@ -1286,7 +1286,7 @@
     },
     {
       "path": "data/research/philippines/luzon-completion-manifest.json",
-      "sha256": "8690af6647d39d1bc84f6e1d346ef32e33584e6a8cb7e7677e2879de555ebd75"
+      "sha256": "1dd71aa24abc0acc001f2e5aae0ebca7b7a9971f10e81402070a91f86052faed"
     },
     {
       "path": "data/research/philippines/makiling-gbif-source-review.json",
@@ -2797,6 +2797,10 @@
       "sha256": "7d49acc4fac0a4d5df160920c8db7612f4242f96f712da3785388bb96491d0fd"
     },
     {
+      "path": "data/research/philippines/national/reviews/central-luzon-baler-river-colxr-occurrence-screen-20261127.json",
+      "sha256": "4217e4f9ca2b5ba796237ebccdb01b825965920ab8a20d48f0632236c85d9927"
+    },
+    {
       "path": "data/research/philippines/national/reviews/central-luzon-bataan-2023-2025-survey-lineage-review-20261126.json",
       "sha256": "6f75711b61faaf7c6d363149bdb416fb18384d63a2941eeea1ebd14015b68907"
     },
@@ -4138,7 +4142,7 @@
     },
     {
       "path": "data/research/philippines/sources.json",
-      "sha256": "8381d85ada0b80ad4145f0146a2ee427cf510c70bdf55e19b99e3a9975262158"
+      "sha256": "e7ad6094ddb9a385c3c04a34ca42696565d3b415783b73a95f8a039169652933"
     },
     {
       "path": "data/research/philippines/taal-checklist-decisions.json",
@@ -4198,12 +4202,12 @@
     }
   ],
   "summary": {
-    "reviewArtifactsScanned": 407,
+    "reviewArtifactsScanned": 408,
     "regionCount": 8,
-    "sourceRegistryUniqueIds": 1281,
+    "sourceRegistryUniqueIds": 1282,
     "sourceIdentityCrosswalkGroups": 10,
     "reviewClassifications": {
-      "directly-linked": 332,
+      "directly-linked": 333,
       "indirectly-linked": 22,
       "national-context-only": 2,
       "shared-across-regions": 35,
@@ -4211,12 +4215,12 @@
     },
     "brokenOrUnresolvedJsonReferences": 0,
     "missingSourceIdLinks": 0,
-    "localRawReferenceCount": 811,
-    "localRawReferencesAvailable": 811,
+    "localRawReferenceCount": 816,
+    "localRawReferencesAvailable": 816,
     "localRawReferencesUnresolved": 0,
     "localRawHashMismatchReferences": 0,
     "localRawNonmatchingBasenameCandidates": 3,
-    "uniqueLocalRawInputsMatched": 771,
+    "uniqueLocalRawInputsMatched": 775,
     "manuallyReviewedRegionalAssociations": 32,
     "nationalContextArtifacts": 3,
     "unlinkedManualAssociations": 0,
@@ -4252,10 +4256,10 @@
       "rolloutKey": "L3",
       "regionId": "0300000000",
       "name": "Region III (Central Luzon)",
-      "manifestReferenceCount": 135,
-      "directlyLinkedReviewCount": 124,
+      "manifestReferenceCount": 136,
+      "directlyLinkedReviewCount": 125,
       "indirectlyLinkedReviewCount": 8,
-      "declaredOrLinkedReviewCount": 133,
+      "declaredOrLinkedReviewCount": 134,
       "unaccountedExplicitReviewCount": 0,
       "baselineReviewed": false,
       "scopeFrozen": false
@@ -6601,6 +6605,34 @@
       "publicationApproval": null,
       "sourceIds": [
         "roque-manliclic-corpuz-2022-bagac-river-fish-study"
+      ],
+      "missingSourceIds": [],
+      "explicitSuccessorReferences": []
+    },
+    {
+      "path": "data/research/philippines/national/reviews/central-luzon-baler-river-colxr-occurrence-screen-20261127.json",
+      "sha256": "4217e4f9ca2b5ba796237ebccdb01b825965920ab8a20d48f0632236c85d9927",
+      "reviewId": "central-luzon-baler-river-colxr-occurrence-screen-20261127",
+      "reviewedOn": "2026-11-27",
+      "phaseId": "L3",
+      "declaredRegionIds": [
+        "0300000000"
+      ],
+      "manualAssociation": null,
+      "nationalContextDisposition": null,
+      "directRegionIds": [
+        "0300000000"
+      ],
+      "indirectRegionIds": [],
+      "relatedRegionIds": [
+        "0300000000"
+      ],
+      "classification": "directly-linked",
+      "publicationApproval": null,
+      "sourceIds": [
+        "gbif-baler-river-colxr-screen-20261127",
+        "gbif-col-xr-taxonomy-matching",
+        "ijat-aatsea-2017-baler-river-fish-abstract"
       ],
       "missingSourceIds": [],
       "explicitSuccessorReferences": []
@@ -18791,6 +18823,71 @@
         "nonmatchingCandidates": []
       },
       {
+        "from": "data/research/philippines/national/reviews/central-luzon-baler-river-colxr-occurrence-screen-20261127.json",
+        "field": "$.input.taxonSnapshot.path",
+        "referencedPath": "data/research/philippines/raw/national/camiling-river-colxr-occurrence-screen-20261127/taxon-match-actinopterygii.json",
+        "availability": "available-unpinned",
+        "matchedFiles": [
+          {
+            "path": "data/research/philippines/raw/national/camiling-river-colxr-occurrence-screen-20261127/taxon-match-actinopterygii.json",
+            "sha256": "01e8f9b1849920667c67c91d22f0d6129c2b89c5368239d3aa6775e8bdc33c29"
+          }
+        ],
+        "nonmatchingCandidates": []
+      },
+      {
+        "from": "data/research/philippines/national/reviews/central-luzon-baler-river-colxr-occurrence-screen-20261127.json",
+        "field": "$.method.queryResults[0].rawResponse.path",
+        "referencedPath": "data/research/philippines/raw/national/baler-river-colxr-screen-20261127/broad-locality-control.json",
+        "availability": "available-and-hash-verified",
+        "matchedFiles": [
+          {
+            "path": "data/research/philippines/raw/national/baler-river-colxr-screen-20261127/broad-locality-control.json",
+            "sha256": "2d078502033dac2d6897ea8181a46bfac306ff3800907f839739d04c96433c6b"
+          }
+        ],
+        "nonmatchingCandidates": []
+      },
+      {
+        "from": "data/research/philippines/national/reviews/central-luzon-baler-river-colxr-occurrence-screen-20261127.json",
+        "field": "$.method.queryResults[1].rawResponse.path",
+        "referencedPath": "data/research/philippines/raw/national/baler-river-colxr-screen-20261127/waterbody-exact.json",
+        "availability": "available-and-hash-verified",
+        "matchedFiles": [
+          {
+            "path": "data/research/philippines/raw/national/baler-river-colxr-screen-20261127/waterbody-exact.json",
+            "sha256": "842e210a1dc11a43b863a7438d0b8ae273f0182c290a7c64e760c176778cc9fa"
+          }
+        ],
+        "nonmatchingCandidates": []
+      },
+      {
+        "from": "data/research/philippines/national/reviews/central-luzon-baler-river-colxr-occurrence-screen-20261127.json",
+        "field": "$.method.queryResults[2].rawResponse.path",
+        "referencedPath": "data/research/philippines/raw/national/baler-river-colxr-screen-20261127/locality-river-exact.json",
+        "availability": "available-and-hash-verified",
+        "matchedFiles": [
+          {
+            "path": "data/research/philippines/raw/national/baler-river-colxr-screen-20261127/locality-river-exact.json",
+            "sha256": "842e210a1dc11a43b863a7438d0b8ae273f0182c290a7c64e760c176778cc9fa"
+          }
+        ],
+        "nonmatchingCandidates": []
+      },
+      {
+        "from": "data/research/philippines/national/reviews/central-luzon-baler-river-colxr-occurrence-screen-20261127.json",
+        "field": "$.method.queryResults[3].rawResponse.path",
+        "referencedPath": "data/research/philippines/raw/national/baler-river-colxr-screen-20261127/locality-municipality-fish.json",
+        "availability": "available-and-hash-verified",
+        "matchedFiles": [
+          {
+            "path": "data/research/philippines/raw/national/baler-river-colxr-screen-20261127/locality-municipality-fish.json",
+            "sha256": "842e210a1dc11a43b863a7438d0b8ae273f0182c290a7c64e760c176778cc9fa"
+          }
+        ],
+        "nonmatchingCandidates": []
+      },
+      {
         "from": "data/research/philippines/national/reviews/central-luzon-bataan-cof-direct-entries-followup-20261126.json",
         "field": "$.followUps[0].directEntry.rawResponse.path",
         "referencedPath": "data/research/philippines/raw/national/bataan-cof-followup-20261126/04-apogon-hyalosoma-accepted-record.html",
@@ -26477,20 +26574,7 @@
       },
       {
         "from": "data/research/philippines/sources.json",
-        "field": "$.sources[100].access.additionalRawPaths[2]",
-        "referencedPath": "raw/bfar-ragay-gulf-gbif-preview-20261030.json",
-        "availability": "available-unpinned",
-        "matchedFiles": [
-          {
-            "path": "data/research/philippines/raw/bfar-ragay-gulf-gbif-preview-20261030.json",
-            "sha256": "8090819168d5442c429a4f6d5392a8c65ce9bfbd7460123eaa0de31a5bfd016e"
-          }
-        ],
-        "nonmatchingCandidates": []
-      },
-      {
-        "from": "data/research/philippines/sources.json",
-        "field": "$.sources[1004].access.rawReceipts[0].file",
+        "field": "$.sources[1005].access.rawReceipts[0].file",
         "referencedPath": "bold-bin-aac5247-preprocessor.json",
         "availability": "available-and-hash-verified",
         "matchedFiles": [
@@ -26503,7 +26587,7 @@
       },
       {
         "from": "data/research/philippines/sources.json",
-        "field": "$.sources[1004].access.rawReceipts[1].file",
+        "field": "$.sources[1005].access.rawReceipts[1].file",
         "referencedPath": "bold-bin-aac5247-summary.json",
         "availability": "available-and-hash-verified",
         "matchedFiles": [
@@ -26516,7 +26600,7 @@
       },
       {
         "from": "data/research/philippines/sources.json",
-        "field": "$.sources[1004].access.rawReceipts[2].file",
+        "field": "$.sources[1005].access.rawReceipts[2].file",
         "referencedPath": "bold-bin-aac5247-query.json",
         "availability": "available-and-hash-verified",
         "matchedFiles": [
@@ -26529,7 +26613,7 @@
       },
       {
         "from": "data/research/philippines/sources.json",
-        "field": "$.sources[1004].access.rawReceipts[3].file",
+        "field": "$.sources[1005].access.rawReceipts[3].file",
         "referencedPath": "bold-bin-aac5247-download.json",
         "availability": "available-and-hash-verified",
         "matchedFiles": [
@@ -26542,7 +26626,20 @@
       },
       {
         "from": "data/research/philippines/sources.json",
-        "field": "$.sources[118].access.rawPath",
+        "field": "$.sources[101].access.additionalRawPaths[2]",
+        "referencedPath": "raw/bfar-ragay-gulf-gbif-preview-20261030.json",
+        "availability": "available-unpinned",
+        "matchedFiles": [
+          {
+            "path": "data/research/philippines/raw/bfar-ragay-gulf-gbif-preview-20261030.json",
+            "sha256": "8090819168d5442c429a4f6d5392a8c65ce9bfbd7460123eaa0de31a5bfd016e"
+          }
+        ],
+        "nonmatchingCandidates": []
+      },
+      {
+        "from": "data/research/philippines/sources.json",
+        "field": "$.sources[119].access.rawPath",
         "referencedPath": "raw/gbif-batangas-bay-fish-20261024/occurrence-search.json",
         "availability": "available-unpinned",
         "matchedFiles": [
@@ -26555,7 +26652,7 @@
       },
       {
         "from": "data/research/philippines/sources.json",
-        "field": "$.sources[1190].access.localRawSnapshot",
+        "field": "$.sources[1191].access.localRawSnapshot",
         "referencedPath": "data/research/philippines/raw/kaum-catalog-taxonomy-crosscheck-20261121/worms-exact-name-responses.json",
         "availability": "available-unpinned",
         "matchedFiles": [
@@ -26568,7 +26665,7 @@
       },
       {
         "from": "data/research/philippines/sources.json",
-        "field": "$.sources[1191].access.localRawSnapshot",
+        "field": "$.sources[1192].access.localRawSnapshot",
         "referencedPath": "data/research/philippines/raw/kaum-catalog-taxonomy-crosscheck-20261121/catalog-jaydia-poeciloptera.json",
         "availability": "available-unpinned",
         "matchedFiles": [
@@ -26581,7 +26678,7 @@
       },
       {
         "from": "data/research/philippines/sources.json",
-        "field": "$.sources[1248].access.rawPath",
+        "field": "$.sources[1249].access.rawPath",
         "referencedPath": "raw/national/osm-tambo-lake-crosswalk-20261125/way-103928039-full.json",
         "availability": "available-unpinned",
         "matchedFiles": [
@@ -26594,7 +26691,7 @@
       },
       {
         "from": "data/research/philippines/sources.json",
-        "field": "$.sources[138].access.additionalRawPaths[0]",
+        "field": "$.sources[139].access.additionalRawPaths[0]",
         "referencedPath": "raw/gbif-bulacan-preserved-no-coordinate-20261024.json",
         "availability": "available-unpinned",
         "matchedFiles": [
@@ -26607,7 +26704,7 @@
       },
       {
         "from": "data/research/philippines/sources.json",
-        "field": "$.sources[194].access.rawPath",
+        "field": "$.sources[195].access.rawPath",
         "referencedPath": "raw/gbif-bulacan-waterbody-screen-20261024/inat-observations-bulk.json",
         "availability": "available-unpinned",
         "matchedFiles": [
@@ -26620,7 +26717,7 @@
       },
       {
         "from": "data/research/philippines/sources.json",
-        "field": "$.sources[203].access.rawPath",
+        "field": "$.sources[204].access.rawPath",
         "referencedPath": "raw/bulacan-qifs-2025-annual.json",
         "availability": "available-unpinned",
         "matchedFiles": [
@@ -26633,7 +26730,7 @@
       },
       {
         "from": "data/research/philippines/sources.json",
-        "field": "$.sources[229].access.additionalRawPaths[0]",
+        "field": "$.sources[230].access.additionalRawPaths[0]",
         "referencedPath": "raw/calabarzon-balayan-fieldmuseum-source-check-20261025/worms-*.json",
         "availability": "available-unpinned",
         "matchedFiles": [
@@ -26650,7 +26747,7 @@
       },
       {
         "from": "data/research/philippines/sources.json",
-        "field": "$.sources[231].access.additionalRawPaths[0]",
+        "field": "$.sources[232].access.additionalRawPaths[0]",
         "referencedPath": "raw/calabarzon-balayan-nmnh-source-check-20261025/worms-ventrifossa-divergens-20261025.json",
         "availability": "available-unpinned",
         "matchedFiles": [
@@ -26663,7 +26760,7 @@
       },
       {
         "from": "data/research/philippines/sources.json",
-        "field": "$.sources[233].access.additionalRawPaths[0]",
+        "field": "$.sources[234].access.additionalRawPaths[0]",
         "referencedPath": "raw/calabarzon-balayan-cas-primary-archive-20261025/worms-*.json",
         "availability": "available-unpinned",
         "matchedFiles": [
@@ -26704,7 +26801,7 @@
       },
       {
         "from": "data/research/philippines/sources.json",
-        "field": "$.sources[235].access.additionalRawPaths[0]",
+        "field": "$.sources[236].access.additionalRawPaths[0]",
         "referencedPath": "raw/calabarzon-balayan-ummz-primary-archive-20261025/worms-sillago-sihama.json",
         "availability": "available-unpinned",
         "matchedFiles": [
@@ -26717,7 +26814,7 @@
       },
       {
         "from": "data/research/philippines/sources.json",
-        "field": "$.sources[271].access.rawPath",
+        "field": "$.sources[272].access.rawPath",
         "referencedPath": "raw/hydrolakes-asia-subset-screen-20261030/osm-relation-1557746-full.json",
         "availability": "available-unpinned",
         "matchedFiles": [
@@ -26730,7 +26827,7 @@
       },
       {
         "from": "data/research/philippines/sources.json",
-        "field": "$.sources[273].access.rawPath",
+        "field": "$.sources[274].access.rawPath",
         "referencedPath": "raw/national/osm-napwc-lagoon-20261119/way-37400786-full.json",
         "availability": "available-unpinned",
         "matchedFiles": [
@@ -26743,7 +26840,7 @@
       },
       {
         "from": "data/research/philippines/sources.json",
-        "field": "$.sources[303].access.rawPath",
+        "field": "$.sources[304].access.rawPath",
         "referencedPath": "raw/smithsonian-canmahala-20261030/canmahala-camarines-sur-selected.json",
         "availability": "available-unpinned",
         "matchedFiles": [
@@ -26756,7 +26853,7 @@
       },
       {
         "from": "data/research/philippines/sources.json",
-        "field": "$.sources[311].access.rawReceipts[0].file",
+        "field": "$.sources[312].access.rawReceipts[0].file",
         "referencedPath": "exact-full-name.json",
         "availability": "available-and-hash-verified",
         "matchedFiles": [
@@ -26769,7 +26866,7 @@
       },
       {
         "from": "data/research/philippines/sources.json",
-        "field": "$.sources[311].access.rawReceipts[1].file",
+        "field": "$.sources[312].access.rawReceipts[1].file",
         "referencedPath": "full-name-contains.json",
         "availability": "available-and-hash-verified",
         "matchedFiles": [
@@ -26782,7 +26879,7 @@
       },
       {
         "from": "data/research/philippines/sources.json",
-        "field": "$.sources[311].access.rawReceipts[2].file",
+        "field": "$.sources[312].access.rawReceipts[2].file",
         "referencedPath": "all-name-contains.json",
         "availability": "available-and-hash-verified",
         "matchedFiles": [
@@ -26795,7 +26892,7 @@
       },
       {
         "from": "data/research/philippines/sources.json",
-        "field": "$.sources[325].access.rawReceipts[0].file",
+        "field": "$.sources[326].access.rawReceipts[0].file",
         "referencedPath": "ncr-parex-fwe6-crosswalk-20261119/nominatim-reverse.json",
         "availability": "available-and-hash-verified",
         "matchedFiles": [
@@ -26808,7 +26905,7 @@
       },
       {
         "from": "data/research/philippines/sources.json",
-        "field": "$.sources[505].access.rawPath",
+        "field": "$.sources[506].access.rawPath",
         "referencedPath": "raw/calabarzon-tayabas-idigbio-specimen-20261031/idigbio-search.json",
         "availability": "available-unpinned",
         "matchedFiles": [
@@ -26821,7 +26918,7 @@
       },
       {
         "from": "data/research/philippines/sources.json",
-        "field": "$.sources[978].access.rawReceipts[0].file",
+        "field": "$.sources[979].access.rawReceipts[0].file",
         "referencedPath": "waterbody-napwc-lagoon.json",
         "availability": "available-and-hash-verified",
         "matchedFiles": [
@@ -26834,7 +26931,7 @@
       },
       {
         "from": "data/research/philippines/sources.json",
-        "field": "$.sources[978].access.rawReceipts[1].file",
+        "field": "$.sources[979].access.rawReceipts[1].file",
         "referencedPath": "waterbody-napwc.json",
         "availability": "available-and-hash-verified",
         "matchedFiles": [
@@ -26847,7 +26944,7 @@
       },
       {
         "from": "data/research/philippines/sources.json",
-        "field": "$.sources[978].access.rawReceipts[2].file",
+        "field": "$.sources[979].access.rawReceipts[2].file",
         "referencedPath": "waterbody-parks-wildlife-lagoon.json",
         "availability": "available-and-hash-verified",
         "matchedFiles": [
@@ -26860,7 +26957,7 @@
       },
       {
         "from": "data/research/philippines/sources.json",
-        "field": "$.sources[978].access.rawReceipts[3].file",
+        "field": "$.sources[979].access.rawReceipts[3].file",
         "referencedPath": "locality-napwc.json",
         "availability": "available-and-hash-verified",
         "matchedFiles": [
@@ -26873,7 +26970,7 @@
       },
       {
         "from": "data/research/philippines/sources.json",
-        "field": "$.sources[978].access.rawReceipts[4].file",
+        "field": "$.sources[979].access.rawReceipts[4].file",
         "referencedPath": "locality-parks-wildlife-lagoon.json",
         "availability": "available-and-hash-verified",
         "matchedFiles": [
@@ -26886,7 +26983,7 @@
       },
       {
         "from": "data/research/philippines/sources.json",
-        "field": "$.sources[979].access.rawPath",
+        "field": "$.sources[980].access.rawPath",
         "referencedPath": "raw/national/gbif-napwc-osm-polygon-screen-20261119/napwc-osm-way-37400786-limit-1.json",
         "availability": "available-unpinned",
         "matchedFiles": [
@@ -26899,7 +26996,7 @@
       },
       {
         "from": "data/research/philippines/sources.json",
-        "field": "$.sources[979].access.rawReceipts[0].file",
+        "field": "$.sources[980].access.rawReceipts[0].file",
         "referencedPath": "napwc-osm-way-37400786-limit-1.json",
         "availability": "available-and-hash-verified",
         "matchedFiles": [
@@ -28253,6 +28350,26 @@
         "referenceCount": 1
       },
       {
+        "path": "data/research/philippines/raw/national/baler-river-colxr-screen-20261127/broad-locality-control.json",
+        "sha256": "2d078502033dac2d6897ea8181a46bfac306ff3800907f839739d04c96433c6b",
+        "referenceCount": 1
+      },
+      {
+        "path": "data/research/philippines/raw/national/baler-river-colxr-screen-20261127/locality-municipality-fish.json",
+        "sha256": "842e210a1dc11a43b863a7438d0b8ae273f0182c290a7c64e760c176778cc9fa",
+        "referenceCount": 1
+      },
+      {
+        "path": "data/research/philippines/raw/national/baler-river-colxr-screen-20261127/locality-river-exact.json",
+        "sha256": "842e210a1dc11a43b863a7438d0b8ae273f0182c290a7c64e760c176778cc9fa",
+        "referenceCount": 1
+      },
+      {
+        "path": "data/research/philippines/raw/national/baler-river-colxr-screen-20261127/waterbody-exact.json",
+        "sha256": "842e210a1dc11a43b863a7438d0b8ae273f0182c290a7c64e760c176778cc9fa",
+        "referenceCount": 1
+      },
+      {
         "path": "data/research/philippines/raw/national/bataan-cof-followup-20261126/04-apogon-hyalosoma-accepted-record.html",
         "sha256": "b91b341d4190500cff3ccc4834c9b4b831cbae7b4cd816bbfde94346a8c9c069",
         "referenceCount": 1
@@ -28305,7 +28422,7 @@
       {
         "path": "data/research/philippines/raw/national/camiling-river-colxr-occurrence-screen-20261127/taxon-match-actinopterygii.json",
         "sha256": "01e8f9b1849920667c67c91d22f0d6129c2b89c5368239d3aa6775e8bdc33c29",
-        "referenceCount": 2
+        "referenceCount": 3
       },
       {
         "path": "data/research/philippines/raw/national/camiling-river-colxr-occurrence-screen-20261127/waterbody-camiling-river-no-coordinate-filter-offset-0.json",
