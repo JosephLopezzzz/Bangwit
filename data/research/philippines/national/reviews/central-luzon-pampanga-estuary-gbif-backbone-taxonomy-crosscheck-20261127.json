@@ -1,0 +1,397 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "central-luzon-pampanga-estuary-gbif-backbone-taxonomy-crosscheck-20261127",
+  "reviewedOn": "2026-11-27",
+  "phaseId": "L3",
+  "regionId": "0300000000",
+  "regionName": "Region III (Central Luzon)",
+  "waterbodyNameAsReported": "Pampanga estuary study area; exact station/waterbody assignment not independently verified",
+  "status": "independent-gbif-backbone-crosscheck;catalog-status-difference;research-only",
+  "question": "What does the GBIF Backbone return for the eight exact fish-label queries that lacked a selected Catalog of Fishes status in the prior Pampanga estuary crosscheck?",
+  "sourceIds": [
+    "abroguena-et-al-pampanga-estuary-2020"
+  ],
+  "inputs": [
+    "data/research/philippines/national/reviews/central-luzon-pampanga-estuary-catalog-taxonomy-crosscheck-20261126.json"
+  ],
+  "inputSha256": "b32378211533462d5b681a83e00394b50d6b5b402821d73d192dc34b4163f886",
+  "method": {
+    "authority": "GBIF Secretariat, ChecklistBank Species Matching API using the default GBIF Backbone (NUB)",
+    "documentationUrl": "https://techdocs.gbif.org/en/openapi/v1/species",
+    "endpoints": [
+      "https://api.gbif.org/v1/species/match",
+      "https://api.gbif.org/v1/species/{usageKey}"
+    ],
+    "retrievedOn": "2026-11-27",
+    "procedure": "Queried each of the eight exact source-table binomials with strict=true. When the match response supplied acceptedUsageKey, fetched that usage record separately. Stored raw API responses locally with SHA-256 fingerprints. The GBIF match service returned fuzzy results for some queries despite strict=true; those are retained as fuzzy candidates.",
+    "limits": "GBIF Backbone match status and acceptedUsageKey are taxonomic name-use proposals, not specimen re-identifications, locality verification, station assignments, occurrence records, fishing advice, or proof of current presence. The backbone is dynamic. Preserve every source spelling and the prior Catalog of Fishes result; resolve authority differences before any public taxon mapping."
+  },
+  "taxonCrosswalk": [
+    {
+      "sourceRow": 5,
+      "sourceNameVerbatim": "Valamugil perussi",
+      "sourceFamilyAsPrinted": "Mugilidae",
+      "catalogOfFishesPriorResult": {
+        "resultClass": "status-unresolved",
+        "status": null,
+        "comparisonCandidates": []
+      },
+      "gbifMatch": {
+        "queryName": "Valamugil perussi",
+        "queryUrl": "https://api.gbif.org/v1/species/match?name=Valamugil%20perussi&strict=true",
+        "matchType": "FUZZY",
+        "confidence": 96,
+        "usageKey": 2400916,
+        "acceptedUsageKey": 9465525,
+        "status": "SYNONYM",
+        "scientificName": "Valamugil perusii (Valenciennes, 1836)",
+        "canonicalName": "Valamugil perusii",
+        "family": "Mugilidae",
+        "genus": "Osteomugil",
+        "rank": "SPECIES",
+        "acceptedUsage": {
+          "usageKey": 9465525,
+          "scientificName": "Osteomugil perusii (Valenciennes, 1836)",
+          "canonicalName": "Osteomugil perusii",
+          "rank": "SPECIES",
+          "status": "ACCEPTED",
+          "family": "Mugilidae",
+          "genus": "Osteomugil",
+          "url": "https://api.gbif.org/v1/species/9465525",
+          "raw": {
+            "file": "data/research/philippines/raw/national/pampanga-estuary-gbif-backbone-crosscheck-20261127/usage-9465525.json",
+            "sha256": "06074881774ae75e1895d910ef5e0f028c1eb8e3bebf0939ce38325eeac52e68"
+          }
+        }
+      },
+      "raw": {
+        "file": "data/research/philippines/raw/national/pampanga-estuary-gbif-backbone-crosscheck-20261127/01-valamugil-perussi.json",
+        "sha256": "12b5abfa640b73c89cd43cbf9c648d8df7fb615fecb7df4fa50ba9e05030f293"
+      },
+      "disposition": "Taxonomic name-match proposal only; preserve the source string and do not treat as specimen identity or local occurrence."
+    },
+    {
+      "sourceRow": 9,
+      "sourceNameVerbatim": "Leiognathus blochii",
+      "sourceFamilyAsPrinted": "Leiognathidae",
+      "catalogOfFishesPriorResult": {
+        "resultClass": "status-unresolved",
+        "status": null,
+        "comparisonCandidates": []
+      },
+      "gbifMatch": {
+        "queryName": "Leiognathus blochii",
+        "queryUrl": "https://api.gbif.org/v1/species/match?name=Leiognathus%20blochii&strict=true",
+        "matchType": "FUZZY",
+        "confidence": 96,
+        "usageKey": 5211403,
+        "acceptedUsageKey": 2396250,
+        "status": "SYNONYM",
+        "scientificName": "Leiognathus blochi (Valenciennes, 1835)",
+        "canonicalName": "Leiognathus blochi",
+        "family": "Leiognathidae",
+        "genus": "Nuchequula",
+        "rank": "SPECIES",
+        "acceptedUsage": {
+          "usageKey": 2396250,
+          "scientificName": "Nuchequula blochii (Valenciennes, 1835)",
+          "canonicalName": "Nuchequula blochii",
+          "rank": "SPECIES",
+          "status": "ACCEPTED",
+          "family": "Leiognathidae",
+          "genus": "Nuchequula",
+          "url": "https://api.gbif.org/v1/species/2396250",
+          "raw": {
+            "file": "data/research/philippines/raw/national/pampanga-estuary-gbif-backbone-crosscheck-20261127/usage-2396250.json",
+            "sha256": "c86723e91d9315cd1a3117b07b2f8af09651a2ae2aa08b169b3cd9ecba23b540"
+          }
+        }
+      },
+      "raw": {
+        "file": "data/research/philippines/raw/national/pampanga-estuary-gbif-backbone-crosscheck-20261127/02-leiognathus-blochii.json",
+        "sha256": "f140c6d2d258d2b0deed4d95456903f7d69fafea43d13bb7034ca062b9ccec2b"
+      },
+      "disposition": "Taxonomic name-match proposal only; preserve the source string and do not treat as specimen identity or local occurrence."
+    },
+    {
+      "sourceRow": 10,
+      "sourceNameVerbatim": "Leiognathus fasciatus",
+      "sourceFamilyAsPrinted": "Leiognathidae",
+      "catalogOfFishesPriorResult": {
+        "resultClass": "status-unresolved",
+        "status": null,
+        "comparisonCandidates": []
+      },
+      "gbifMatch": {
+        "queryName": "Leiognathus fasciatus",
+        "queryUrl": "https://api.gbif.org/v1/species/match?name=Leiognathus%20fasciatus&strict=true",
+        "matchType": "EXACT",
+        "confidence": 99,
+        "usageKey": 5211419,
+        "acceptedUsageKey": 8031079,
+        "status": "SYNONYM",
+        "scientificName": "Leiognathus fasciatus (Lacepède, 1803)",
+        "canonicalName": "Leiognathus fasciatus",
+        "family": "Leiognathidae",
+        "genus": "Aurigequula",
+        "rank": "SPECIES",
+        "acceptedUsage": {
+          "usageKey": 8031079,
+          "scientificName": "Aurigequula fasciata (Lacepède, 1803)",
+          "canonicalName": "Aurigequula fasciata",
+          "rank": "SPECIES",
+          "status": "ACCEPTED",
+          "family": "Leiognathidae",
+          "genus": "Aurigequula",
+          "url": "https://api.gbif.org/v1/species/8031079",
+          "raw": {
+            "file": "data/research/philippines/raw/national/pampanga-estuary-gbif-backbone-crosscheck-20261127/usage-8031079.json",
+            "sha256": "68c4003e6ce654b998cde8cc1e4558c2b1564e24b8ce1b7906f931ea77a1d440"
+          }
+        }
+      },
+      "raw": {
+        "file": "data/research/philippines/raw/national/pampanga-estuary-gbif-backbone-crosscheck-20261127/03-leiognathus-fasciatus.json",
+        "sha256": "bab4fab942e054fb11a2ce073cf11702b2ea3a85ebefc3eb440ed563e4297eaf"
+      },
+      "disposition": "Taxonomic name-match proposal only; preserve the source string and do not treat as specimen identity or local occurrence."
+    },
+    {
+      "sourceRow": 16,
+      "sourceNameVerbatim": "Pelates quadrilineatus",
+      "sourceFamilyAsPrinted": "Terapontidae",
+      "catalogOfFishesPriorResult": {
+        "resultClass": "synonym",
+        "status": "Synonym of Pelates quadrilineatus (Bloch 1790). Terapontidae.",
+        "comparisonCandidates": []
+      },
+      "gbifMatch": {
+        "queryName": "Pelates quadrilineatus",
+        "queryUrl": "https://api.gbif.org/v1/species/match?name=Pelates%20quadrilineatus&strict=true",
+        "matchType": "EXACT",
+        "confidence": 99,
+        "usageKey": 5208652,
+        "acceptedUsageKey": null,
+        "status": "ACCEPTED",
+        "scientificName": "Pelates quadrilineatus (Bloch, 1790)",
+        "canonicalName": "Pelates quadrilineatus",
+        "family": "Terapontidae",
+        "genus": "Pelates",
+        "rank": "SPECIES",
+        "acceptedUsage": null
+      },
+      "raw": {
+        "file": "data/research/philippines/raw/national/pampanga-estuary-gbif-backbone-crosscheck-20261127/04-pelates-quadrilineatus.json",
+        "sha256": "d03e893e4c9576b1f82c22c97f4be3853d523ad75d81aee08b8bab5ae1cb3428"
+      },
+      "disposition": "GBIF and the Catalog of Fishes return different status wording for the same source label; keep the authority difference open."
+    },
+    {
+      "sourceRow": 17,
+      "sourceNameVerbatim": "Acentrogobius nebulosus",
+      "sourceFamilyAsPrinted": "Gobiidae",
+      "catalogOfFishesPriorResult": {
+        "resultClass": "status-unresolved",
+        "status": null,
+        "comparisonCandidates": []
+      },
+      "gbifMatch": {
+        "queryName": "Acentrogobius nebulosus",
+        "queryUrl": "https://api.gbif.org/v1/species/match?name=Acentrogobius%20nebulosus&strict=true",
+        "matchType": "EXACT",
+        "confidence": 99,
+        "usageKey": 2378123,
+        "acceptedUsageKey": null,
+        "status": "ACCEPTED",
+        "scientificName": "Acentrogobius nebulosus (Forsskål, 1775)",
+        "canonicalName": "Acentrogobius nebulosus",
+        "family": "Gobiidae",
+        "genus": "Acentrogobius",
+        "rank": "SPECIES",
+        "acceptedUsage": null
+      },
+      "raw": {
+        "file": "data/research/philippines/raw/national/pampanga-estuary-gbif-backbone-crosscheck-20261127/05-acentrogobius-nebulosus.json",
+        "sha256": "e2df30e51464bcb603df0175fe4503d1c13e67560b31952c38d77887b74f6885"
+      },
+      "disposition": "Taxonomic name-match proposal only; preserve the source string and do not treat as specimen identity or local occurrence."
+    },
+    {
+      "sourceRow": 18,
+      "sourceNameVerbatim": "Glossogobius biocellatus",
+      "sourceFamilyAsPrinted": "Gobiidae",
+      "catalogOfFishesPriorResult": {
+        "resultClass": "status-unresolved",
+        "status": null,
+        "comparisonCandidates": []
+      },
+      "gbifMatch": {
+        "queryName": "Glossogobius biocellatus",
+        "queryUrl": "https://api.gbif.org/v1/species/match?name=Glossogobius%20biocellatus&strict=true",
+        "matchType": "EXACT",
+        "confidence": 99,
+        "usageKey": 2378085,
+        "acceptedUsageKey": 2378083,
+        "status": "SYNONYM",
+        "scientificName": "Glossogobius biocellatus (Valenciennes, 1837)",
+        "canonicalName": "Glossogobius biocellatus",
+        "family": "Gobiidae",
+        "genus": "Psammogobius",
+        "rank": "SPECIES",
+        "acceptedUsage": {
+          "usageKey": 2378083,
+          "scientificName": "Psammogobius biocellatus (Valenciennes, 1837)",
+          "canonicalName": "Psammogobius biocellatus",
+          "rank": "SPECIES",
+          "status": "ACCEPTED",
+          "family": "Gobiidae",
+          "genus": "Psammogobius",
+          "url": "https://api.gbif.org/v1/species/2378083",
+          "raw": {
+            "file": "data/research/philippines/raw/national/pampanga-estuary-gbif-backbone-crosscheck-20261127/usage-2378083.json",
+            "sha256": "f35264f5b7fdb24c84d7ba6d8d5e937514343b0a1903e6b4492d835adfc879c5"
+          }
+        }
+      },
+      "raw": {
+        "file": "data/research/philippines/raw/national/pampanga-estuary-gbif-backbone-crosscheck-20261127/06-glossogobius-biocellatus.json",
+        "sha256": "92a76aced8cf26249689f29665fcefb12f63366c93f52baf65cb238efe0598b3"
+      },
+      "disposition": "Taxonomic name-match proposal only; preserve the source string and do not treat as specimen identity or local occurrence."
+    },
+    {
+      "sourceRow": 20,
+      "sourceNameVerbatim": "Oxyurichthys opthalmonema",
+      "sourceFamilyAsPrinted": "Gobiidae",
+      "catalogOfFishesPriorResult": {
+        "resultClass": "status-unresolved",
+        "status": null,
+        "comparisonCandidates": [
+          {
+            "name": "Oxyurichthys ophthalmonema",
+            "role": "spelling-candidate",
+            "currentStatus": "Valid as Oxyurichthys ophthalmonema (Bleeker 1856). Oxudercidae: Gobionellinae.",
+            "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Oxyurichthys&species=ophthalmonema&tbl=species",
+            "matchingRows": 1
+          }
+        ]
+      },
+      "gbifMatch": {
+        "queryName": "Oxyurichthys opthalmonema",
+        "queryUrl": "https://api.gbif.org/v1/species/match?name=Oxyurichthys%20opthalmonema&strict=true",
+        "matchType": "FUZZY",
+        "confidence": 96,
+        "usageKey": 6168297,
+        "acceptedUsageKey": 2377994,
+        "status": "SYNONYM",
+        "scientificName": "Oxyurichthys opthalmonemus (Bleeker, 1856)",
+        "canonicalName": "Oxyurichthys opthalmonemus",
+        "family": "Gobiidae",
+        "genus": "Oxyurichthys",
+        "rank": "SPECIES",
+        "acceptedUsage": {
+          "usageKey": 2377994,
+          "scientificName": "Oxyurichthys ophthalmonema (Bleeker, 1856)",
+          "canonicalName": "Oxyurichthys ophthalmonema",
+          "rank": "SPECIES",
+          "status": "ACCEPTED",
+          "family": "Gobiidae",
+          "genus": "Oxyurichthys",
+          "url": "https://api.gbif.org/v1/species/2377994",
+          "raw": {
+            "file": "data/research/philippines/raw/national/pampanga-estuary-gbif-backbone-crosscheck-20261127/usage-2377994.json",
+            "sha256": "4535e573f8f67e55375456e533f1fce45bbbe888bbe03bb3dd7934adeec7324b"
+          }
+        }
+      },
+      "raw": {
+        "file": "data/research/philippines/raw/national/pampanga-estuary-gbif-backbone-crosscheck-20261127/07-oxyurichthys-opthalmonema.json",
+        "sha256": "50c0cb30b00c751bb2b310531f557465dccb89f169b700031f16fe471c54124e"
+      },
+      "disposition": "GBIF fuzzy match plus accepted usage is a spelling/name candidate; the Catalog separately found Oxyurichthys ophthalmonema valid. Do not replace the source label or identify a specimen."
+    },
+    {
+      "sourceRow": 23,
+      "sourceNameVerbatim": "Pseudorhombus cinnamomeus",
+      "sourceFamilyAsPrinted": "Paralichthyidae",
+      "catalogOfFishesPriorResult": {
+        "resultClass": "status-unresolved",
+        "status": null,
+        "comparisonCandidates": []
+      },
+      "gbifMatch": {
+        "queryName": "Pseudorhombus cinnamomeus",
+        "queryUrl": "https://api.gbif.org/v1/species/match?name=Pseudorhombus%20cinnamomeus&strict=true",
+        "matchType": "EXACT",
+        "confidence": 99,
+        "usageKey": 2408669,
+        "acceptedUsageKey": 2408827,
+        "status": "SYNONYM",
+        "scientificName": "Pseudorhombus cinnamomeus (Temminck & Schlegel, 1846)",
+        "canonicalName": "Pseudorhombus cinnamomeus",
+        "family": "Paralichthyidae",
+        "genus": "Pseudorhombus",
+        "rank": "SPECIES",
+        "acceptedUsage": {
+          "usageKey": 2408827,
+          "scientificName": "Pseudorhombus cinnamoneus (Temminck & Schlegel, 1846)",
+          "canonicalName": "Pseudorhombus cinnamoneus",
+          "rank": "SPECIES",
+          "status": "ACCEPTED",
+          "family": "Paralichthyidae",
+          "genus": "Pseudorhombus",
+          "url": "https://api.gbif.org/v1/species/2408827",
+          "raw": {
+            "file": "data/research/philippines/raw/national/pampanga-estuary-gbif-backbone-crosscheck-20261127/usage-2408827.json",
+            "sha256": "75ec9efe1593e3b3a07f1a72034e9462595c66f914d5c0fd61d56a39890aab1c"
+          }
+        }
+      },
+      "raw": {
+        "file": "data/research/philippines/raw/national/pampanga-estuary-gbif-backbone-crosscheck-20261127/08-pseudorhombus-cinnamomeus.json",
+        "sha256": "9b59f771f13310b7af3fd350f56b9c6083aada1257d5cb466631d02ef1208f82"
+      },
+      "disposition": "Taxonomic name-match proposal only; preserve the source string and do not treat as specimen identity or local occurrence."
+    }
+  ],
+  "summary": {
+    "sourceLabelsReviewed": 8,
+    "exactMatches": 5,
+    "fuzzyMatches": 3,
+    "acceptedUsageMatches": 2,
+    "synonymUsageMatches": 6,
+    "priorCatalogNoSelectedStatus": 7,
+    "authorityStatusDifferences": [
+      {
+        "sourceName": "Pelates quadrilineatus",
+        "catalogOfFishes": "Synonym of Pelates quadrilineatus (Bloch 1790). Terapontidae.",
+        "gbifBackbone": "Exact match; status ACCEPTED; canonical name Pelates quadrilineatus.",
+        "decision": "Unresolved authority status difference; no source label or identity is changed."
+      }
+    ],
+    "sourceSpecimenIdentitiesVerified": 0,
+    "estuaryStationsVerified": 0,
+    "occurrenceRowsAdmitted": 0,
+    "publicAppRowsAdded": 0
+  },
+  "decision": {
+    "sourceLabelsChanged": 0,
+    "taxonomicCorrectionsApplied": 0,
+    "speciesAssertionsAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "imagesAdded": 0,
+    "dietClaimsAdded": 0,
+    "geometryAdded": false,
+    "currentPresenceClaimed": false,
+    "publicAppRowsAdded": 0,
+    "regionalReleaseApproved": false,
+    "explanation": "Keep this as a research-only authority crosscheck. GBIF provides accepted-name candidates for six synonym usages and exact accepted matches for two labels, but does not validate any sampled organism or estuary station. The Pelates status difference remains unresolved."
+  },
+  "sources": [
+    {
+      "name": "GBIF ChecklistBank Species Matching API, default GBIF Backbone",
+      "documentationUrl": "https://techdocs.gbif.org/en/openapi/v1/species",
+      "supports": "Eight name-match responses and six accepted usage records; taxonomy only, not occurrence evidence."
+    }
+  ]
+}
