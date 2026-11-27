@@ -1,0 +1,185 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "central-luzon-aurora-maria-aurora-generic-site-hydronym-crosswalk-20261127",
+  "reviewedOn": "2026-11-27",
+  "phaseId": "L3",
+  "regionId": "0300000000",
+  "regionName": "Region III (Central Luzon)",
+  "status": "two-generic-maria-aurora-sites-screened;site1-pacugao-line-candidate;site2-near-unnamed-line;no-site-crosswalk-accepted;research-only",
+  "purpose": "Screen whether the two generic Maria Aurora river-site labels in the 2025 North Luzon barcode paper can be responsibly linked to named watercourses without transferring any species data.",
+  "sourceIds": [
+    "dimaquibo-2025-north-luzon-teleost-dna-barcode-dataset",
+    "geonames-ph-country-hydrography-2026-11-07",
+    "osm-maria-aurora-site-waterway-crosscheck-20261127",
+    "lawphil-proclamation-110-pacugao-river-watershed-1992",
+    "lawphil-proclamation-402-bazal-river-watershed-1994",
+    "mariaaurora-bazal-baubo-watershed-page-2026"
+  ],
+  "question": "Do the published generic Maria Aurora site1/site2 points have enough independent, source-aligned name evidence to relabel either sampling site as a specific river?",
+  "inputs": {
+    "article": {
+      "sourceId": "dimaquibo-2025-north-luzon-teleost-dna-barcode-dataset",
+      "location": "Table 1, Maria Aurora site1 and Maria Aurora site2; both are labelled as river sites in Aurora.",
+      "exactCoordinatesStoredInTrackedReview": false,
+      "speciesSupplementReused": false,
+      "rightsNote": "The article is CC BY-NC-ND 4.0. The tracked review does not reproduce its coordinate values or any species-by-site rows; site-level data reuse remains held for separate rights review."
+    },
+    "geonamesExtract": {
+      "sourceId": "geonames-ph-country-hydrography-2026-11-07",
+      "path": "data/research/philippines/raw/national/geonames-ph-20261107/central-luzon-hydrographic-candidates.jsonl",
+      "bytes": 571882,
+      "sha256": "865964a931f9c7c52ffdad84b5bf5d045ddc1d677b002ad934a6137f545afbeb",
+      "license": "CC BY 4.0",
+      "role": "Gazetteer locator points used for nearest-point discovery only; not river-line geometry."
+    },
+    "osmScreen": {
+      "sourceId": "osm-maria-aurora-site-waterway-crosscheck-20261127",
+      "endpoint": "https://overpass-api.de/api/interpreter",
+      "osmDataTimestamp": "2026-11-27T13:18:28Z",
+      "attribution": "© OpenStreetMap contributors; ODbL 1.0.",
+      "elementsReturned": 64,
+      "waterwayTags": [
+        "river",
+        "stream",
+        "canal",
+        "drain"
+      ],
+      "distanceMethod": "Approximate local equirectangular point-to-polyline distance, rounded to the nearest metre for screening; not survey-grade georeferencing.",
+      "querySha256": "5d5549da9ef02aa6398046559f17c4f1eced3b956cff9bb8963e369bcfea7201",
+      "rawResponse": {
+        "path": "data/research/philippines/raw/national/maria-aurora-generic-site-osm-crosswalk-20261127/overpass-response.json",
+        "bytes": 147116,
+        "sha256": "9726d383f7459cff1b8cffe27954ceb0db1bc1480b08ead83587d40c49bc0bd8"
+      },
+      "query": {
+        "path": "data/research/philippines/raw/national/maria-aurora-generic-site-osm-crosswalk-20261127/query.txt",
+        "bytes": 196,
+        "sha256": "5d5549da9ef02aa6398046559f17c4f1eced3b956cff9bb8963e369bcfea7201"
+      },
+      "candidateResults": {
+        "path": "data/research/philippines/raw/national/maria-aurora-generic-site-osm-crosswalk-20261127/candidate-results.json",
+        "bytes": 8423,
+        "sha256": "984ec2803785f620420fb76b6472c328a6e820becc3d7d64c62213eecea22eb7"
+      },
+      "geonamesNearestPoints": {
+        "path": "data/research/philippines/raw/national/maria-aurora-generic-site-osm-crosswalk-20261127/geonames-nearest-points.json",
+        "bytes": 1603,
+        "sha256": "9fc6729dfa557d6b2cd25ad8ea2ae2a670f72bea302e7e9a60b7ba1fb93b7049"
+      },
+      "rawStorage": "All exact source coordinates, query bounds, point/line geometry, and feature-level results are retained only in Git-ignored local research storage. No map geometry is committed or bundled."
+    }
+  },
+  "results": {
+    "mariaAuroraSite1": {
+      "sourceLabel": "Maria Aurora site1",
+      "sourceHabitatLabel": "river",
+      "nearestNamedOsmLine": {
+        "name": "Pacugao River",
+        "waterway": "river",
+        "elementType": "way",
+        "elementId": 345780761,
+        "approximateDistanceKm": 0.003
+      },
+      "nearestGeoNamesPoint": {
+        "name": "Ramada River",
+        "featureCode": "STM",
+        "geonameId": 1691922,
+        "approximateDistanceKm": 2.335
+      },
+      "officialContext": "Proclamation No. 110 names the Pacugao River watershed reserve across Maria Aurora and Dupax. It does not georeference this article station. The municipal page and Proclamation No. 402 identify Bazal/Bazal-Baubo watershed context elsewhere in Maria Aurora, but do not map this site to Bazal.",
+      "decision": "Pacugao is a plausible map-name candidate because an OSM river line is very close to the article point and an independent legal source confirms the toponym in Maria Aurora. Keep the article label generic: OSM is not field-verified and the GeoNames locator-point comparison does not provide a matching river route. No accepted crosswalk."
+    },
+    "mariaAuroraSite2": {
+      "sourceLabel": "Maria Aurora site2",
+      "sourceHabitatLabel": "river",
+      "nearestOsmFeature": {
+        "name": null,
+        "waterway": "river",
+        "elementType": "way",
+        "elementId": 584805188,
+        "approximateDistanceKm": 0.002
+      },
+      "nearestNamedOsmLines": [
+        {
+          "name": "Maria Aurora Creek",
+          "waterway": "river",
+          "elementId": 584805169,
+          "approximateDistanceKm": 1.534
+        },
+        {
+          "name": "Baubo-Bazal Stream",
+          "waterway": "stream",
+          "elementId": 1179641295,
+          "approximateDistanceKm": 2.879
+        }
+      ],
+      "nearestGeoNamesPoint": {
+        "name": "Nagulogulo River",
+        "featureCode": "STM",
+        "geonameId": 1698580,
+        "approximateDistanceKm": 1.589
+      },
+      "decision": "The point is close to an unnamed mapped river, while named candidates are materially farther and differ by provider. Retain the generic article label; no named watercourse crosswalk is accepted."
+    },
+    "crosswalksAccepted": 0,
+    "speciesAssertionsAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "geometryAdded": false,
+    "publicAppRowsAdded": 0,
+    "publicationApproval": false
+  },
+  "sourceContext": [
+    {
+      "sourceId": "lawphil-proclamation-110-pacugao-river-watershed-1992",
+      "supports": "Historical Pacugao River and watershed-reserve name plus Maria Aurora/Dupax administrative context; not the article site coordinate or a fish inventory."
+    },
+    {
+      "sourceId": "lawphil-proclamation-402-bazal-river-watershed-1994",
+      "supports": "Historical Bazal River Watershed Forest Reserve name in Maria Aurora; its referenced Map No. 92 was not obtained or georeferenced here."
+    },
+    {
+      "sourceId": "mariaaurora-bazal-baubo-watershed-page-2026",
+      "supports": "Municipal context page places Bazal River in the northwest watershed area and names ASCOT Bazal Campus; no site coordinates or fish evidence."
+    }
+  ],
+  "limitations": [
+    "A location's nearest line or gazetteer point does not establish that the article's sampling station is on that named feature; source coordinate uncertainty and map completeness are unknown.",
+    "OpenStreetMap is community-maintained and unevenly mapped. The close Pacugao line and unnamed site2 line are candidates only, not field-verified locations.",
+    "GeoNames records are named locator points, not channel geometry; their nearest-point labels are not contradictory river routes.",
+    "The article's species-by-site supplement remains subject to its CC BY-NC-ND 4.0 and field-level reuse review. No taxa were transferred, and no biological presence or absence is inferred.",
+    "Historical proclamations and municipal visitor information do not provide a downloadable, validated sampling-site route or watershed boundary for this crosswalk."
+  ],
+  "nextAction": "Seek a source-authored site map or author-confirmed station-to-river crosswalk, review the applicable specimen-table reuse terms, and compare any authorized locality information with primary hydrography. Until then, retain Maria Aurora site1/site2 as published and unassigned.",
+  "sources": [
+    {
+      "sourceId": "dimaquibo-2025-north-luzon-teleost-dna-barcode-dataset",
+      "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC12475234/",
+      "supports": "Table 1 labels two Aurora river sites generically as Maria Aurora site1 and site2; the exact coordinate values are not repeated in this tracked review."
+    },
+    {
+      "sourceId": "geonames-ph-country-hydrography-2026-11-07",
+      "url": "https://download.geonames.org/export/dump/PH.zip",
+      "supports": "Gazetteer name and point candidates used only for nearest-point context."
+    },
+    {
+      "sourceId": "osm-maria-aurora-site-waterway-crosscheck-20261127",
+      "url": "https://overpass-api.de/api/interpreter",
+      "supports": "Bounded OSM line-name/proximity candidate screen and its raw-response receipts; no feature identity accepted."
+    },
+    {
+      "sourceId": "lawphil-proclamation-110-pacugao-river-watershed-1992",
+      "url": "https://www.lawphil.net/executive/proc/proc1992/proc_110_1992.html",
+      "supports": "Pacugao River watershed reserve name and Maria Aurora/Dupax context."
+    },
+    {
+      "sourceId": "lawphil-proclamation-402-bazal-river-watershed-1994",
+      "url": "https://www.lawphil.net/executive/proc/proc1994/proc_402_1994.html",
+      "supports": "Bazal River Watershed Forest Reserve name and Maria Aurora context."
+    },
+    {
+      "sourceId": "mariaaurora-bazal-baubo-watershed-page-2026",
+      "url": "https://mariaaurora.gov.ph/baubo-bazal-water-shed/",
+      "supports": "Municipal context for the Bazal-Baubo watershed and Bazal River; no fish list or station map."
+    }
+  ]
+}
