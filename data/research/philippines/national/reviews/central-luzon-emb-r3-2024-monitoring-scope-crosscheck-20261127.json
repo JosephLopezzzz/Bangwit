@@ -1,0 +1,93 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "central-luzon-emb-r3-2024-monitoring-scope-crosscheck-20261127",
+  "reviewedOn": "2026-11-27",
+  "phaseId": "L3",
+  "regionId": "0300000000",
+  "regionName": "Region III (Central Luzon)",
+  "status": "reported-27-monitoring-count-not-reconciled-to-indexed-rows;research-only",
+  "question": "Can EMB Region III's reported 27 monitored water bodies be reconciled to the names and table units in its 2024 report?",
+  "sourceIds": [
+    "emb-r3-state-environment-2024"
+  ],
+  "inputs": [
+    "data/research/philippines/national/reviews/central-luzon-rdp-202-river-claim-source-search-followup-20261127.json"
+  ],
+  "sourceAccess": {
+    "reportUrl": "https://r3.emb.gov.ph/wp-content/uploads/2026/01/EMB_R3_2024_RSOBER.pdf",
+    "reportTitle": "Regional State of the Environment Report 2024, Environmental Management Bureau Region III",
+    "inlandLocator": "Section 4.1.1, indexed PDF lines 2060-2081; printed page 41.",
+    "coastalLocator": "Section 4.1.2, indexed PDF lines 2083-2094; printed page 42.",
+    "separateProgramLocator": "Table 10, indexed PDF lines 2177-2199; adopted water bodies for 2024.",
+    "directPdfStatus": "The official indexed PDF text was reviewed. Direct PDF request and page screenshot returned HTTP 403; no access control was bypassed and no local copy was retained."
+  },
+  "findings": {
+    "reportedMonitoringCount": {
+      "value": 27,
+      "scopeAsPrinted": "Water bodies regularly monitored by EMB Region 3 within the Manila Bay Area in Central Luzon; the report says monitoring was monthly and quarterly.",
+      "unitDefinition": "The reviewed passage does not define whether the count treats river reaches, named river systems, river-mouth sites, management areas or other monitoring units as separate water bodies."
+    },
+    "indexedTableRows": {
+      "inlandTable": {
+        "riverNameEntryCount": 14,
+        "riverNamesAsPrinted": [
+          "Angat River",
+          "Atlag River",
+          "Bocaue River",
+          "Guagua River",
+          "Hagonoy River",
+          "Labangan River",
+          "Marilao River",
+          "Meycauayan River",
+          "Obando River",
+          "Pampanga River (Pampanga)",
+          "Pampanga River (Upstream)",
+          "Sta. Maria River",
+          "Talisay River",
+          "Lucong River"
+        ],
+        "additionalNonRiverLabel": "ASFMSRS-WQMA (printed as a separate table row; not treated here as a river name or a distinct waterbody identity)."
+      },
+      "coastalAndMarineTable": {
+        "rowNamesAsPrinted": [
+          "Manila Bay",
+          "Obando River Mouth",
+          "Pampanga River Mouth",
+          "Talisay River Mouth"
+        ],
+        "scopeNote": "The river-mouth labels overlap river names in the inland table and are not counted as distinct systems without an explicit crosswalk."
+      },
+      "separateAdoptedWaterbodyTable": "Table 10 lists Adopt-a-Waterbody Program records and segments; these are a separate program and are not assumed to be part of the regular-monitoring total."
+    },
+    "reconciliation": "The indexed inland and coastal tables do not establish a unique 27-name roster. Their printed row labels include repeated river/river-mouth relationships and a WQMA label, but the report passage does not state how those relate to its total. The 27 is retained as a source-reported monitoring count only, not as 27 unique river systems or a complete regional waterbody denominator.",
+    "dataUse": "The report provides monitoring-program context and candidate waterbody names. It does not provide fish occurrence evidence, species presence, fishing access, current fishing rules, or river geometry in the reviewed passages."
+  },
+  "method": {
+    "approach": "Compared the official indexed 4.1.1 count statement against the row labels in the immediately following inland table and the separate coastal/marine table. Kept the adopted-waterbody program table separate and did not infer unique identities from similar names.",
+    "limits": "The PDF could not be fetched directly or visually inspected because the official host returned HTTP 403. Findings are limited to the official indexed text and may not reveal layout distinctions lost in text extraction. No table rows, coordinates, measurements, or raw report were retained locally."
+  },
+  "decision": "Use the EMB report only as a dated monitoring-scope lead. Do not treat 27 as a complete Region III inventory, use the table rows as fish evidence, merge river mouths with river systems, or interpret water-quality classifications as fishing permission.",
+  "disposition": {
+    "researchOnly": true,
+    "sourceReportedRiverNameEntries": 14,
+    "uniqueWaterbodyIdentitiesValidated": 0,
+    "waterbodyCrosswalksMade": 0,
+    "geometryAdded": false,
+    "speciesAssertionsAdded": 0,
+    "occurrenceRecordsAdded": 0,
+    "publicAppRowsAdded": 0,
+    "publicationApproval": false
+  },
+  "nextActions": [
+    "Crosswalk these source-reported monitoring names to current waterbody sources only with locality, scope and identity evidence; preserve river-mouth and upstream-reach qualifiers.",
+    "Search each selected waterbody independently for dated, taxon-resolved fish records and review dataset and item reuse terms.",
+    "Keep the 27-monitor count and RDP's 202-river claim outside the regional denominator until their units and coverage are documented."
+  ],
+  "sources": [
+    {
+      "sourceId": "emb-r3-state-environment-2024",
+      "url": "https://r3.emb.gov.ph/wp-content/uploads/2026/01/EMB_R3_2024_RSOBER.pdf",
+      "supports": "The report's 27-body Manila Bay Area monitoring statement, indexed inland river table, separate coastal/marine table and separate adopted-waterbody program table."
+    }
+  ]
+}
