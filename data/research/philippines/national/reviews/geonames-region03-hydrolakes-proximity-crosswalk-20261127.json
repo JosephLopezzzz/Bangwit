@@ -1,0 +1,91 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "geonames-region03-hydrolakes-proximity-crosswalk-20261127",
+  "generatedOn": "2026-11-27",
+  "status": "local-name-and-pour-point-proximity-screen-built;identity-and-region-review-pending",
+  "scope": {
+    "regionReviewScope": "Region III (Central Luzon) candidate screen only",
+    "regionId": "0300000000",
+    "geonamesCandidateFeatureGroup": "lake_or_reservoir",
+    "geonamesRowsCompared": 9,
+    "waterbodyIdentityValidated": false,
+    "regionAssignmentsAdded": 0
+  },
+  "inputs": {
+    "data/research/philippines/raw/national/geonames-ph-20261107/central-luzon-hydrographic-candidates.jsonl": {
+      "sha256": "865964a931f9c7c52ffdad84b5bf5d045ddc1d677b002ad934a6137f545afbeb",
+      "bytes": 571882
+    },
+    "data/research/philippines/raw/national/hydrolakes-philippines-v1-waterbody-candidates.jsonl": {
+      "sha256": "357a30e95c8580a64a295a2bb329026aff15612b7b9c0b084d72552249134030",
+      "bytes": 410371
+    }
+  },
+  "sources": {
+    "GeoNames": {
+      "review": "data/research/philippines/national/reviews/geonames-region03-central-luzon-hydrographic-candidates-20261127.json",
+      "license": "CC BY 4.0",
+      "attribution": "GeoNames Gazetteer (https://www.geonames.org/), Philippines extract downloaded 2026-11-07; CC BY 4.0."
+    },
+    "HydroLAKES": {
+      "review": "data/research/philippines/national/reviews/hydrolakes-philippines-candidate-extract-20261107.json",
+      "license": "CC BY 4.0",
+      "attribution": "HydroLAKES v1 by Lehner and Messager; Asia subset by Daniel Schönberger (2025), Zenodo DOI 10.5281/zenodo.17503891; CC BY 4.0."
+    }
+  },
+  "method": {
+    "nameMatching": "exact normalized string after Unicode normalization, case-folding, punctuation collapse and removal of generic English lake/lakes tokens; no fuzzy or translated-name matching",
+    "spatialMatching": "Haversine distance between GeoNames gazetteer points and HydroLAKES outlet pour points; nearest distance is a manual review lead, not geometry overlap or identity confirmation",
+    "distanceThresholdsKm": [
+      1,
+      5,
+      10,
+      25
+    ]
+  },
+  "results": {
+    "geonamesLakeReservoirCandidatesCompared": 9,
+    "hydrolakesPhilippinesCandidatesSearched": 1298,
+    "geonamesRowsWithExactNormalizedNameMatch": 0,
+    "exactNameMatchedRowsWhoseHydrolakesIdIsAlsoNearest": 0,
+    "nearestHydrolakesRowsWithinDistanceKm": {
+      "within10Km": 6,
+      "within1Km": 2,
+      "within25Km": 9,
+      "within5Km": 4
+    },
+    "geonamesRowsByFeatureCode": {
+      "LK": 6,
+      "RSV": 3
+    },
+    "waterbodyIdentitiesValidated": 0,
+    "regionAssignmentsAdded": 0,
+    "speciesAssertionsAdded": 0,
+    "publicGeometryAdded": false
+  },
+  "localReviewQueue": {
+    "path": "data/research/philippines/raw/national/geonames-ph-20261107/central-luzon-hydrolakes-nearest-review.jsonl",
+    "rows": 9,
+    "bytes": 6030,
+    "sha256": "f38214c5b51eb981d745799a9d055c41ffcb7aacb4db44fdccfbd6d48d5ff511",
+    "gitIgnored": true,
+    "appBundleIncluded": false,
+    "containsExactCoordinates": true,
+    "containsNamesAndIdentifiers": true
+  },
+  "privacy": {
+    "exactCoordinatesInTrackedReport": false,
+    "candidateNamesInTrackedReport": false,
+    "perRecordIdsInTrackedReport": false
+  },
+  "limitations": [
+    "The Central Luzon GeoNames candidates were selected by point-in-simplified-polygon context; this does not assign a lake to an official province or region.",
+    "HydroLAKES v1 targets lakes of at least 10 ha, includes reservoirs and some saline lakes, and omits rivers, wetlands and smaller waterbodies; an unmatched candidate is not evidence of absence.",
+    "HydroLAKES pour points are outlets, not shoreline polygons or lake centers; distance may compare different places along one water system.",
+    "Name matching does not resolve local-language aliases, spelling variants, shared names, or changes in waterbody naming.",
+    "GeoNames aggregates many sources; GeoNames and HydroLAKES matches are not independent confirmations of identity.",
+    "This is a research-only screen. No species presence, habitat, access, legal boundary, safety, public geometry, or app claim was added.",
+    "Exact names, identifiers, and coordinates remain only in Git-ignored local storage."
+  ],
+  "nextAction": "Review each exact-name and nearest-point pair against locality-specific independent maps or publications; leave every pair unverified until evidence establishes the same waterbody, and review fish records separately."
+}
