@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "central-luzon-bmb-map6-table2-annotation-semantics-20261127",
+  "reviewedOn": "2026-11-27",
+  "phaseId": "L3",
+  "regionId": "0300000000",
+  "regionName": "Region III (Central Luzon)",
+  "status": "atlas-annotation-keys-clarified;map6-table2-count-bridge-unresolved;research-only",
+  "question": "Do the BMB 2014 Atlas notes make the Map 6 and Table 2 river counts directly comparable?",
+  "sourceIds": [
+    "denr-bmb-luzon-inland-wetlands-atlas-2014"
+  ],
+  "inputs": [
+    "data/research/philippines/national/reviews/central-luzon-bmb-map6-table2-river-count-reconciliation-20261125.json"
+  ],
+  "sourceAccess": {
+    "atlasUrl": "https://www.ramsar.org/sites/default/files/documents/library/atlas_inland_wetland_mainland_luzon_philippines_2014_e.pdf",
+    "map6Locator": "Indexed PDF text lines 527-558; Region III counts and map footnotes at lines 527-551; Map 6 points to Table 2 for names and grid locations at line 558.",
+    "table2Locator": "Indexed PDF text lines 1747-1751; Table 2 annotation key and river-system definition.",
+    "directPdfStatus": "The official indexed PDF text was reviewed. Direct PDF requests returned HTTP 403; no access control was bypassed and no local PDF was retained."
+  },
+  "findings": {
+    "map6AnnotationKey": {
+      "*": "A river system draining toward the same stream is counted as one unit.",
+      "**": "Identifies the province where the river-system count is assigned."
+    },
+    "table2AnnotationKey": {
+      "*": "Marks a river system with shared provincial jurisdiction.",
+      "**": "A river system draining toward the same stream is counted as one unit.",
+      "***": "Identifies the province where the river-system count is assigned."
+    },
+    "table2SystemDefinition": "The Atlas says a river system is named after its largest river and includes tributaries, smaller river systems and creeks.",
+    "countComparison": {
+      "map6RegionIIIBaseSubtotal": 153,
+      "map6ParentheticalValuesArithmetic": 13,
+      "map6BasePlusParentheticalArithmetic": 166,
+      "table2RegionIIIRowMentions": 165,
+      "assessment": "Map 6 and Table 2 use different star keys: Table 2's single star means shared provincial jurisdiction, while the same-drainage count-once and count-assigned-to-province notes appear as two and three stars respectively. Table 2 also defines a river system as a grouping that includes tributaries and smaller systems. These conventions show why a printed row count cannot be assumed to equal a count of unique systems, but they do not provide a row-by-row join or explain the one-row arithmetic difference between 165 and 166. Exact reconciliation remains unresolved."
+    },
+    "boundedMethod": "Reviewed the indexed official PDF text at the Map 6 Region III count table and footnotes, the Map 6 cross-reference to Table 2, and the Table 2 footnotes and system definition. Compared only the already recorded Region III totals; did not infer aliases, physical identities, or geometry."
+  },
+  "decision": "Retain 165 as historical Table 2 Region III row mentions, 153 as the Map 6 base subtotal, and 166 only as the arithmetic result of adding printed parenthetical values. The footnote keys clarify the different counting conventions but do not resolve the exact bridge. None is a current waterbody inventory or unique-system count.",
+  "disposition": {
+    "researchOnly": true,
+    "waterbodyIdentitiesValidated": 0,
+    "geometryAdded": false,
+    "speciesAssertionsAdded": 0,
+    "occurrenceRecordsAdded": 0,
+    "publicAppRowsAdded": 0,
+    "publicationApproval": false
+  },
+  "nextActions": [
+    "Keep the historical name-to-system roster unresolved until the Atlas rows can be crosswalked to independent, reusable current waterbody evidence.",
+    "Search for a documented source and method behind the RDP's separate 202-river statement; do not derive it from the Atlas counts.",
+    "Continue dated, taxon-resolved and rights-reviewed freshwater, brackish and marine fish-source coverage for Central Luzon."
+  ],
+  "sources": [
+    {
+      "sourceId": "denr-bmb-luzon-inland-wetlands-atlas-2014",
+      "url": "https://www.ramsar.org/sites/default/files/documents/library/atlas_inland_wetland_mainland_luzon_philippines_2014_e.pdf",
+      "supports": "Map 6 Region III river-system totals, Map 6 star footnotes and its Table 2 cross-reference; Table 2 star footnotes and the Atlas's river-system grouping definition."
+    }
+  ]
+}
