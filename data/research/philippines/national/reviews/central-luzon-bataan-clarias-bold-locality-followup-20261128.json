@@ -1,0 +1,207 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "central-luzon-bataan-clarias-bold-locality-followup-20261128",
+  "reviewedOn": "2026-11-28",
+  "phaseId": "L3",
+  "regionId": "0300000000",
+  "regionName": "Region III (Central Luzon)",
+  "status": "bataan-filter-zero;philippines-records-other-sites;no-sample-crosswalk;research-only",
+  "question": "Does the public BOLD Data Portal expose a Bataan or Orani/Bagac barcode record that can link to the 2025 Bataan Clarias batrachus diet-study samples?",
+  "sourceIds": [
+    "bold-portal-clarias-batrachus-bataan-locality-query-20261128",
+    "corpuz-2025-clarias-batrachus-bataan-diet-study"
+  ],
+  "relatedReviews": [
+    "data/research/philippines/national/reviews/central-luzon-bataan-clarias-2025-diet-identity-review-20261128.json",
+    "data/research/philippines/national/reviews/central-luzon-bataan-clarias-ncbi-sequence-linkage-followup-20261128.json"
+  ],
+  "method": {
+    "database": "BOLD Data Portal public API",
+    "apiDocumentation": "https://www.boldsystems.org/data/api/",
+    "detailedDocumentation": "https://portal.boldsystems.org/api/docs",
+    "queryLanguage": "The documentation supports taxonomic rank queries and geographic country/province-state/region queries combined with semicolon-delimited search criteria.",
+    "queries": [
+      {
+        "term": "tax:species:Clarias batrachus;geo:province/state:Bataan",
+        "preprocessorUrl": "https://portal.boldsystems.org/api/query/preprocessor?query=tax%3Aspecies%3AClarias%20batrachus%3Bgeo%3Aprovince%2Fstate%3ABataan",
+        "preprocessorHttpStatus": 200,
+        "queryUrl": "https://portal.boldsystems.org/api/query?query=tax%3Aspecies%3AClarias%20batrachus%3Bgeo%3Aprovince%2Fstate%3ABataan&extent=limited",
+        "httpStatus": 200,
+        "extent": "limited",
+        "extentLimit": 1000,
+        "metadataFieldsRequested": [
+          "province/state",
+          "region",
+          "site",
+          "species"
+        ],
+        "recordsReturned": 0,
+        "summaryUrl": "https://portal.boldsystems.org/api/summary?query=tax%3Aspecies%3AClarias+batrachus%3Bgeo%3Aprovince%2Fstate%3ABataan&fields=specimens%2Ccoord%2Ccountry%2Focean%2Cinst%2Cspecies%2Cmarker_code",
+        "summaryHttpStatus": 200,
+        "summary": {}
+      },
+      {
+        "term": "tax:species:Clarias batrachus;geo:country/ocean:Philippines",
+        "preprocessorUrl": "https://portal.boldsystems.org/api/query/preprocessor?query=tax%3Aspecies%3AClarias%20batrachus%3Bgeo%3Acountry%2Focean%3APhilippines",
+        "preprocessorHttpStatus": 200,
+        "queryUrl": "https://portal.boldsystems.org/api/query?query=tax%3Aspecies%3AClarias%20batrachus%3Bgeo%3Acountry%2Focean%3APhilippines&extent=limited",
+        "httpStatus": 200,
+        "extent": "limited",
+        "extentLimit": 1000,
+        "metadataFieldsRequested": [
+          "province/state",
+          "region",
+          "site",
+          "species"
+        ],
+        "recordsReturned": 26,
+        "summaryUrl": "https://portal.boldsystems.org/api/summary?query=tax%3Aspecies%3AClarias+batrachus%3Bgeo%3Acountry%2Focean%3APhilippines&fields=specimens%2Ccoord%2Ccountry%2Focean%2Cinst%2Cspecies%2Cmarker_code",
+        "summaryHttpStatus": 200,
+        "summary": {
+          "coord": {
+            "(14.1, 120.1)": 1,
+            "(14.5, 121.3)": 3,
+            "(18.3, 121.7)": 5,
+            "(13.4, 123.4)": 3,
+            "(13.4, 123.5)": 4,
+            "(8, 124.3)": 10
+          },
+          "country/ocean": {
+            "Philippines": 26
+          },
+          "counts": {
+            "species": 4,
+            "specimens": 26
+          },
+          "inst": {
+            "University of the Philippines Diliman, Institute of Biology": 26
+          },
+          "marker_code": {
+            "COI-5P": 26
+          },
+          "species": {
+            "Clarias batrachus": 26
+          }
+        }
+      }
+    ],
+    "metadataDownload": "The BOLD API export was filtered to province/state, region, site, and species. The export contained 26 rows. It omitted process/sample identifiers, coordinates, and sequence fields; only aggregate facets were retained.",
+    "limitations": [
+      "The BOLD field filter and public portal scope are not a complete search of all specimens, private records, legacy portal records, GenBank, or unsubmitted material.",
+      "No BOLD sample/process ID, voucher, accession, sequence, or catalog number links a returned record to the Bataan diet paper.",
+      "BOLD source locality fields are transcribed metadata, not independently verified sampling-site geometry.",
+      "The summary endpoint reports counts.species=4 although its species facet and the 26-row filtered metadata export show only Clarias batrachus; this summary counter is not used as a species count.",
+      "The API query token is transient and was not retained."
+    ]
+  },
+  "findings": {
+    "bataanFilter": {
+      "provinceStateMatches": 0,
+      "summary": {},
+      "interpretation": "No record matched the exact BOLD province/state query. This is a bounded query result only, not evidence of absence."
+    },
+    "philippinesContext": {
+      "recordDocuments": 26,
+      "speciesFieldFrequencies": {
+        "Clarias batrachus": 26
+      },
+      "namedSiteFrequencies": {
+        "Lake Lanao, Autonomous Region in Muslim Mindanao": 10,
+        "Calamaniugan, Brg. Minanga": 5,
+        "Laguna de Bay, Tanay": 3,
+        "Lake Bato, Camarines Sur": 3,
+        "Lake Buhi, Camarines Sur": 2,
+        "Lake Manapao, Buhi Camarines Sur": 2,
+        "Taal Lake, Talisay": 1
+      },
+      "studyLocalityTextMatches": 0,
+      "sites": [
+        "Lake Lanao, Autonomous Region in Muslim Mindanao",
+        "Calamaniugan, Brg. Minanga",
+        "Laguna de Bay, Tanay",
+        "Lake Bato, Camarines Sur",
+        "Lake Buhi, Camarines Sur",
+        "Lake Manapao, Buhi Camarines Sur",
+        "Taal Lake, Talisay"
+      ],
+      "interpretation": "All returned site strings are outside the Bataan paper localities; they are context records, not evidence for the Orani or Bagac samples."
+    },
+    "administrativeMetadata": {
+      "provinceStateFieldFrequencies": {
+        "Autonomous Region in Muslim Mindanao": 10,
+        "Bicol Region": 7,
+        "Cagayan": 5,
+        "Calabarzon": 4
+      },
+      "regionFieldFrequencies": {
+        "Autonomous Region in Muslim Mindanao": 10,
+        "Camarines Sur": 7,
+        "Cagayan": 5,
+        "Rizal": 3,
+        "Batangas": 1
+      },
+      "decision": "Retain the raw field facets only as source strings. The field pairings are not treated as verified province/region assignments or jurisdiction boundaries."
+    },
+    "summary": {
+      "coord": {
+        "(14.1, 120.1)": 1,
+        "(14.5, 121.3)": 3,
+        "(18.3, 121.7)": 5,
+        "(13.4, 123.4)": 3,
+        "(13.4, 123.5)": 4,
+        "(8, 124.3)": 10
+      },
+      "country/ocean": {
+        "Philippines": 26
+      },
+      "counts": {
+        "species": 4,
+        "specimens": 26
+      },
+      "inst": {
+        "University of the Philippines Diliman, Institute of Biology": 26
+      },
+      "marker_code": {
+        "COI-5P": 26
+      },
+      "species": {
+        "Clarias batrachus": 26
+      }
+    },
+    "identityDecision": "BOLD did not supply a Bataan sample-level identity crosswalk. Keep the Bataan paper taxon held; do not transfer IDs or localities from other Philippines records."
+  },
+  "inputSnapshotHashes": {
+    "sourceRegistry": "7aeb40e61126f63203ce29df45297ae6b63fc3bc70a5694efe273e86631a9455"
+  },
+  "rawSnapshot": {
+    "directory": "raw/bataan-clarias-bold-locality-20261128",
+    "gitIgnored": true,
+    "file": "data/research/philippines/raw/bataan-clarias-bold-locality-20261128/bold-clarias-batrachus-locality-query-snapshot.json",
+    "bytes": 4543,
+    "sha256": "b0caae7cd5555c8af34b3ea22adb1947053eb08fe054e5e58ec4cf67265fa4b3",
+    "retained": "Sanitized query counts and locality facets only; no query tokens, IDs, row-level records, or sequence strings."
+  },
+  "disposition": {
+    "speciesAssertionsAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "dietGuideRowsAdded": 0,
+    "baitSuggestionsAdded": 0,
+    "geometryAdded": false,
+    "imagesAdded": 0,
+    "publicAppRowsAdded": 0,
+    "publicationApproval": false,
+    "decision": "Keep the Bataan diet study research-only with unresolved identity and Bagac locality. The bounded BOLD query adds no direct evidence linking a barcode to its samples."
+  },
+  "sources": [
+    {
+      "sourceId": "bold-portal-clarias-batrachus-bataan-locality-query-20261128",
+      "url": "https://portal.boldsystems.org/api/query",
+      "supports": "The bounded BOLD Data Portal API query and sanitized metadata locality facets."
+    },
+    {
+      "sourceId": "corpuz-2025-clarias-batrachus-bataan-diet-study",
+      "url": "https://dergipark.org.tr/en/download/article-file/4032995",
+      "supports": "The 2025 Bataan diet-study localities and lack of a linked public voucher/accession crosswalk in the reviewed article."
+    }
+  ]
+}

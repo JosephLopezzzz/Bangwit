@@ -3,7 +3,7 @@
   "checkedOn": "2026-11-28",
   "status": "research-only-source-registry",
   "scope": "National acquisition references, freshwater spatial-source leads, shared Manila Bay marine evidence, MIMAROPA/CALABARZON/Central Luzon identity and inland-water source reviews, and Mindanao regional freshwater survey reviews. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 1296,
+  "sourceCount": 1297,
   "sources": [
     {
       "id": "aoyama-et-al-2015-cagayan-glass-eel-recruitment",
@@ -45279,6 +45279,53 @@
         "The Philippines-wide result count is not a distinct-specimen count and does not establish locality for every record.",
         "Accession organism and voucher labels do not independently verify the identification of the Bataan study samples."
       ]
+    },
+    {
+      "id": "bold-portal-clarias-batrachus-bataan-locality-query-20261128",
+      "title": "BOLD Data Portal locality screen for Clarias batrachus in Bataan",
+      "provider": "Barcode of Life Data Systems (BOLD), Data Portal API",
+      "url": "https://portal.boldsystems.org/api/query?query=tax%3Aspecies%3AClarias%20batrachus%3Bgeo%3Aprovince%2Fstate%3ABataan&extent=limited",
+      "additionalUrls": [
+        "https://www.boldsystems.org/data/api/",
+        "https://portal.boldsystems.org/api/docs",
+        "https://portal.boldsystems.org/api/query/preprocessor?query=tax%3Aspecies%3AClarias%20batrachus%3Bgeo%3Aprovince%2Fstate%3ABataan",
+        "https://portal.boldsystems.org/api/summary?query=tax%3Aspecies%3AClarias%20batrachus%3Bgeo%3Aprovince%2Fstate%3ABataan&fields=specimens%2Ccoord%2Ccountry%2Focean%2Cinst%2Cspecies%2Cmarker_code",
+        "https://portal.boldsystems.org/api/query?query=tax%3Aspecies%3AClarias%20batrachus%3Bgeo%3Acountry%2Focean%3APhilippines&extent=limited",
+        "https://portal.boldsystems.org/api/summary?query=tax%3Aspecies%3AClarias%20batrachus%3Bgeo%3Acountry%2Focean%3APhilippines&fields=specimens%2Ccoord%2Ccountry%2Focean%2Cinst%2Cspecies%2Cmarker_code"
+      ],
+      "role": "A BOLD public API query using the Bataan province/state filter returned zero matching Clarias batrachus records. A broader Philippines query returned 26 metadata records, with named sites outside the Bataan diet paper; none crosswalks to the Orani or Bagac study samples.",
+      "checkedOn": "2026-11-28",
+      "citation": "Barcode of Life Data Systems. Public Data Portal API locality screen for Clarias batrachus; retrieved 2026-11-28.",
+      "access": {
+        "status": "Bataan province query accepted; zero records; Philippines query returned 26; filtered metadata-only TSV fields used; no sequence strings or record identifiers retained.",
+        "reviewFiles": [
+          "national/reviews/central-luzon-bataan-clarias-bold-locality-followup-20261128.json"
+        ],
+        "rawPath": "raw/bataan-clarias-bold-locality-20261128/bold-clarias-batrachus-locality-query-snapshot.json (sanitized aggregate only)",
+        "rawReceipts": [
+          {
+            "file": "bold-clarias-batrachus-locality-query-snapshot.json",
+            "sha256": "b0caae7cd5555c8af34b3ea22adb1947053eb08fe054e5e58ec4cf67265fa4b3",
+            "bytes": 4543
+          }
+        ],
+        "reviewedSections": "BOLD query-scope documentation, exact province-filter result, Philippines metadata counts, source locality facets, and summary consistency limits."
+      },
+      "reuse": {
+        "metadata": "No record-level reuse license was verified. This review retains only aggregate counts and named-locality frequencies.",
+        "raw": "Only a sanitized aggregate is retained in Git-ignored local storage; temporary query IDs, process/sample identifiers, exact row data, and sequence strings are excluded.",
+        "content": "No sequences, images, or BOLD specimen-level claims are republished or approved for app use."
+      },
+      "publicationApproval": false,
+      "license": null,
+      "licenseUrl": null,
+      "caveats": [
+        "The zero Bataan result is limited to the exact province/state query and is not proof that no sequence or specimen exists in BOLD or elsewhere.",
+        "The 26 Philippines records are from other named site strings and do not link to the Bataan paper samples.",
+        "BOLD metadata region fields and its summary species counter show inconsistencies; do not treat those as verified administrative assignments or a species checklist.",
+        "A source database taxon label is not independent identification of the 2025 Bataan diet-study specimens."
+      ],
+      "researchStatus": "central-luzon;bataan;clarias-batrachus;bold-locality-screen;no-sample-crosswalk;research-only"
     }
   ],
   "sourcePolicy": {
