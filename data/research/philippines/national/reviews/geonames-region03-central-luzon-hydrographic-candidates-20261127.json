@@ -1,0 +1,251 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "geonames-region03-central-luzon-hydrographic-candidates-20261127",
+  "generatedOn": "2026-11-27",
+  "status": "regional-discovery-screen-built;source-code-groupings-only;waterbody-and-species-review-pending",
+  "scope": {
+    "regionReviewScope": "Region III (Central Luzon)",
+    "provincePolygonNames": [
+      "Aurora",
+      "Bataan",
+      "Bulacan",
+      "Nueva Ecija",
+      "Pampanga",
+      "Tarlac",
+      "Zambales"
+    ],
+    "selectionRule": "only GeoNames hydrographic records whose points fell inside exactly one of the seven named simplified ADM2 province polygons in the pinned overlay",
+    "overlayReview": "data/research/philippines/national/reviews/geonames-ph-hydrography-geoboundaries-overlay-20261107.json",
+    "overlayQueueSha256": "d413a93dbbb68e860ffa76f9874a327d5580b4c93c08843f5cfb010f760b396d",
+    "allPhilippinesOverlayRows": 13513,
+    "regionAssignmentsAdded": 0
+  },
+  "source": {
+    "provider": "GeoNames Gazetteer Philippines country extract",
+    "featureClass": "H",
+    "extractReview": "data/research/philippines/national/reviews/geonames-ph-hydrography-extract-20261107.json",
+    "featureCodeDefinitions": "https://www.geonames.org/export/codes.html",
+    "license": "CC BY 4.0",
+    "attribution": "GeoNames Gazetteer (https://www.geonames.org/), country extract PH, downloaded 2026-11-07; CC BY 4.0."
+  },
+  "featureCodeDefinitions": {
+    "AIRS": "seaplane landing area",
+    "ANCH": "anchorage",
+    "BAY": "bay",
+    "CHN": "channel",
+    "CHNM": "marine channel",
+    "CNLA": "aqueduct",
+    "COVE": "cove(s)",
+    "CRKT": "tidal creek(s)",
+    "FLLS": "waterfall(s)",
+    "LGN": "lagoon",
+    "LK": "lake",
+    "MRSH": "marsh(es)",
+    "RSV": "reservoir(s)",
+    "SHOL": "shoal(s)",
+    "STM": "stream",
+    "STMC": "canalized stream",
+    "STMD": "distributary(-ies)",
+    "STMI": "intermittent stream",
+    "STMIX": "section of intermittent stream",
+    "STMX": "section of stream",
+    "SWMP": "swamp",
+    "SYSI": "irrigation system",
+    "WTRC": "watercourse"
+  },
+  "featureCodeGroups": {
+    "flowing_water_or_channel": {
+      "codes": [
+        "CHN",
+        "STM",
+        "STMC",
+        "STMD",
+        "STMI",
+        "STMIX",
+        "STMX",
+        "WTRC"
+      ],
+      "rows": 1062,
+      "meaning": "GeoNames source labels grouped for research triage; not an ecological habitat, salinity, catchability, or access conclusion"
+    },
+    "lake_or_reservoir": {
+      "codes": [
+        "LK",
+        "RSV"
+      ],
+      "rows": 9,
+      "meaning": "GeoNames source labels grouped for research triage; not an ecological habitat, salinity, catchability, or access conclusion"
+    },
+    "wetland": {
+      "codes": [
+        "MRSH",
+        "SWMP"
+      ],
+      "rows": 3,
+      "meaning": "GeoNames source labels grouped for research triage; not an ecological habitat, salinity, catchability, or access conclusion"
+    },
+    "coastal_or_tidal_water_feature": {
+      "codes": [
+        "BAY",
+        "CHNM",
+        "COVE",
+        "CRKT",
+        "LGN"
+      ],
+      "rows": 25,
+      "meaning": "GeoNames source labels grouped for research triage; not an ecological habitat, salinity, catchability, or access conclusion"
+    },
+    "water_infrastructure": {
+      "codes": [
+        "CNLA",
+        "SYSI"
+      ],
+      "rows": 2,
+      "meaning": "GeoNames source labels grouped for research triage; not an ecological habitat, salinity, catchability, or access conclusion"
+    },
+    "waterfall": {
+      "codes": [
+        "FLLS"
+      ],
+      "rows": 1,
+      "meaning": "GeoNames source labels grouped for research triage; not an ecological habitat, salinity, catchability, or access conclusion"
+    },
+    "navigation_or_water_access_context": {
+      "codes": [
+        "AIRS",
+        "ANCH",
+        "SHOL"
+      ],
+      "rows": 4,
+      "meaning": "GeoNames source labels grouped for research triage; not an ecological habitat, salinity, catchability, or access conclusion"
+    }
+  },
+  "results": {
+    "candidateRows": 1106,
+    "distinctNormalizedNameStrings": 1058,
+    "candidateRowsByProvincePolygonPointContext": {
+      "Aurora": 115,
+      "Bataan": 139,
+      "Bulacan": 137,
+      "Nueva Ecija": 177,
+      "Pampanga": 327,
+      "Tarlac": 54,
+      "Zambales": 157
+    },
+    "candidateRowsByProvinceAndFeatureCode": {
+      "Aurora": {
+        "ANCH": 1,
+        "STM": 114
+      },
+      "Bataan": {
+        "BAY": 1,
+        "COVE": 2,
+        "FLLS": 1,
+        "STM": 116,
+        "STMI": 12,
+        "STMIX": 1,
+        "STMX": 2,
+        "WTRC": 4
+      },
+      "Bulacan": {
+        "CHNM": 1,
+        "CNLA": 1,
+        "RSV": 2,
+        "STM": 129,
+        "STMX": 4
+      },
+      "Nueva Ecija": {
+        "LK": 1,
+        "RSV": 1,
+        "STM": 171,
+        "STMC": 1,
+        "STMX": 1,
+        "SWMP": 1,
+        "SYSI": 1
+      },
+      "Pampanga": {
+        "CHN": 2,
+        "CHNM": 15,
+        "COVE": 1,
+        "LGN": 1,
+        "LK": 1,
+        "MRSH": 1,
+        "STM": 300,
+        "STMD": 1,
+        "STMI": 4,
+        "STMX": 1
+      },
+      "Tarlac": {
+        "LK": 2,
+        "STM": 44,
+        "STMD": 3,
+        "STMI": 3,
+        "STMX": 2
+      },
+      "Zambales": {
+        "AIRS": 1,
+        "ANCH": 1,
+        "CRKT": 3,
+        "LGN": 1,
+        "LK": 2,
+        "SHOL": 1,
+        "STM": 140,
+        "STMI": 7,
+        "SWMP": 1
+      }
+    },
+    "candidateRowsByFeatureCode": {
+      "AIRS": 1,
+      "ANCH": 2,
+      "BAY": 1,
+      "CHN": 2,
+      "CHNM": 16,
+      "CNLA": 1,
+      "COVE": 3,
+      "CRKT": 3,
+      "FLLS": 1,
+      "LGN": 2,
+      "LK": 6,
+      "MRSH": 1,
+      "RSV": 3,
+      "SHOL": 1,
+      "STM": 1014,
+      "STMC": 1,
+      "STMD": 4,
+      "STMI": 26,
+      "STMIX": 1,
+      "STMX": 10,
+      "SWMP": 2,
+      "SYSI": 1,
+      "WTRC": 4
+    },
+    "regionAssignmentsAdded": 0,
+    "waterbodyIdentitiesValidated": 0,
+    "speciesAssertionsAdded": 0,
+    "publicGeometryAdded": false
+  },
+  "localReviewQueue": {
+    "path": "data/research/philippines/raw/national/geonames-ph-20261107/central-luzon-hydrographic-candidates.jsonl",
+    "rows": 1106,
+    "bytes": 571882,
+    "sha256": "865964a931f9c7c52ffdad84b5bf5d045ddc1d677b002ad934a6137f545afbeb",
+    "gitIgnored": true,
+    "appBundleIncluded": false,
+    "containsExactCoordinates": true,
+    "containsNamesAndIdentifiers": true
+  },
+  "privacy": {
+    "exactCoordinatesInTrackedReport": false,
+    "candidateNamesInTrackedReport": false,
+    "perRecordIdsInTrackedReport": false
+  },
+  "limitations": [
+    "A point inside one simplified province polygon is coarse point context only; it does not verify waterbody identity, province/region assignment, or legal boundaries.",
+    "The pinned overlay uses simplified 2020 land polygons and does not define municipal waters, coastlines, waterbody boundaries, or fishing areas.",
+    "GeoNames feature labels and the research groupings do not establish salinity, habitat, fish presence, ecological condition, fishing access, or current condition.",
+    "Some entries are channels, stream sections, irrigation context, navigation features, or waterfalls rather than distinct waterbodies; repeated names and records were not resolved into unique sites.",
+    "GeoNames aggregates over a hundred source datasets; records are not independent confirmations and may have varying precision or currency.",
+    "This candidate screen contains no fish observations. No species assertions, public geometry, or app records were created.",
+    "Exact candidate names, IDs, coordinates, and source administrative codes remain only in Git-ignored local storage."
+  ]
+}
