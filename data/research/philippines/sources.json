@@ -3,7 +3,7 @@
   "checkedOn": "2026-11-27",
   "status": "research-only-source-registry",
   "scope": "National acquisition references, freshwater spatial-source leads, shared Manila Bay marine evidence, MIMAROPA/CALABARZON/Central Luzon identity and inland-water source reviews, and Mindanao regional freshwater survey reviews. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 1265,
+  "sourceCount": 1268,
   "sources": [
     {
       "id": "aoyama-et-al-2015-cagayan-glass-eel-recruitment",
@@ -4318,22 +4318,30 @@
       "title": "Regional State of the Environment Report 2024",
       "provider": "Environmental Management Bureau Region III",
       "url": "https://r3.emb.gov.ph/wp-content/uploads/2026/01/EMB_R3_2024_RSOBER.pdf",
-      "role": "Official discovery lead reporting 27 routinely monitored water bodies within the Manila Bay Area in Central Luzon; this is not a regional fish inventory.",
+      "role": "Official Region III report with a source-reported Manila Bay Area monitoring count of 27, a 14-name inland river roster, and selected station tables; not a regional fish inventory or complete waterbody denominator.",
       "checkedOn": "2026-10-24",
       "access": {
-        "status": "official-search-indexed-text-reviewed-direct-pdf-403",
+        "status": "official-indexed-PDF-text-reviewed-direct-PDF-403;14-river-name-and-station-locality-screened",
         "reviewFiles": [
-          "central-luzon-discovery-checkpoint-20261024.json"
-        ]
+          "central-luzon-discovery-checkpoint-20261024.json",
+          "national/reviews/central-luzon-emb-r3-2024-monitoring-scope-crosscheck-20261127.json",
+          "national/reviews/central-luzon-emb-r3-river-name-locality-crosswalk-20261127.json"
+        ],
+        "reviewedSections": "Section 4.1.1 roster and 4.4 river station tables; direct PDF fetch and screenshot returned HTTP 403."
       },
       "reuse": {
-        "metadata": "Official report metadata and indexed summary reviewed.",
+        "metadata": "Report metadata and concise source-attributed waterbody labels/station locality descriptions only.",
         "raw": "No report copy retained because direct retrieval returned HTTP 403.",
-        "content": "The monitored-site count is held as a subset lead; site names, tables, species and measurements were not transcribed."
+        "content": "No report copy, table image, species, measurements, geometry, or full station dataset retained or redistributed. Public projection is not approved."
       },
       "publicationApproval": false,
-      "researchStatus": "reported-monitoring-count;waterbody-rows-pending",
-      "sourceYear": 2024
+      "researchStatus": "reported-27-monitoring-count-not-reconciled;14-river-name-entries-screened;locality-crosswalk-partial;research-only",
+      "sourceYear": 2024,
+      "caveats": [
+        "The report does not define how its 27-body monitoring count relates to the 14 river-name entries, river mouths, management labels, or stations.",
+        "The roster labels and station descriptions are not a complete regional waterbody inventory, canonical identities, or channel geometries.",
+        "Water-quality monitoring is not fish occurrence, fishing access, current safety, or regulatory evidence."
+      ]
     },
     {
       "id": "pcaarrd-clsu-denr-central-luzon-watersheds-2019",
@@ -22221,7 +22229,7 @@
       "provider": "Department of Environment and Natural Resources, Environmental Management Bureau",
       "url": "https://air.emb.gov.ph/wp-content/uploads/2025/01/NSOBER-2016-2021-fin-1-1.pdf",
       "additionalUrls": [],
-      "role": "Official EMB national report Table 3.3 names the Silongin and Yabahan rivers in Quezon localities; used for historical source-name/locality leads only, not current water quality, fish evidence, or route geometry.",
+      "role": "Official EMB national report, Table 3.3, with historical waterbody names and localities including Silongin and Yabahan in Quezon and Lucong River in Tarlac; not current water-quality, fish, or route-geometry evidence.",
       "checkedOn": "2026-11-01",
       "sourceYear": 2022,
       "citation": "Department of Environment and Natural Resources, Environmental Management Bureau. (2022). National State of the Brown Environment Report 2016–2021.",
@@ -22236,13 +22244,20 @@
         "reviewFiles": [
           "calabarzon-quezon-silongin-lagda-partial-crosswalk-20261101.json",
           "calabarzon-quezon-yabahaan-yabahan-river-crosswalk-20261101.json",
-          "calabarzon-quezon-silongin-lagda-advisory-recurrence-review-20261102.json"
+          "calabarzon-quezon-silongin-lagda-advisory-recurrence-review-20261102.json",
+          "national/reviews/central-luzon-emb-r3-river-name-locality-crosswalk-20261127.json"
         ],
         "additionalTableRows": [
           {
             "sourceReportedWaterbody": "YABAHAN RIVER",
             "sourceReportedLocality": "SAN ANDRES AND SAN FRANCISCO, QUEZNON (as printed)",
             "sourceReportedClassification": "B",
+            "sourceReportedClassificationYear": 2020
+          },
+          {
+            "sourceReportedWaterbody": "LUCONG RIVER",
+            "sourceReportedLocality": "BAMBAN, CAPAS AND CONCEPCION, TARLAC",
+            "sourceReportedClassification": "C",
             "sourceReportedClassificationYear": 2020
           }
         ]
@@ -22252,7 +22267,7 @@
         "content": "Only minimal factual river-name and locality metadata are retained. The historic classification is recorded as source context, not a current environmental claim."
       },
       "publicationApproval": false,
-      "researchStatus": "official-EMB-Quezon-river-name-and-locality-rows-reviewed;historical-classification-metadata-only;no-current-quality-or-fish-claims",
+      "researchStatus": "official-EMB-historical-river-name-and-locality-rows-reviewed;quezon-and-tarlac;no-current-quality-or-fish-claims",
       "license": "Educational/non-profit reproduction with source acknowledgement per report copyright page; other reuse not established.",
       "licenseUrl": null,
       "caveats": [
@@ -44210,6 +44225,94 @@
       "license": "No item-specific catalog-data reuse terms verified",
       "publicationApproval": false,
       "researchStatus": "central-luzon;bataan;pucot-river;mariveles;historical-specimens;89-record-item-crosscheck;legacy-lot-crosswalk-unresolved;research-only"
+    },
+    {
+      "id": "bulacan-pg-hagonoy-river-dredging-2022",
+      "title": "Photo Release – Dredging of Hagonoy River",
+      "provider": "Provincial Government of Bulacan",
+      "url": "https://bulacan.gov.ph/photo-release-dredging-of-hagonoy-river/",
+      "role": "Official provincial announcement identifying Hagonoy River along San Agustin, Hagonoy, Bulacan; local-name context only, not a river geometry or fish source.",
+      "checkedOn": "2026-11-27",
+      "sourceYear": 2022,
+      "citation": "Provincial Government of Bulacan. (2022, September 5). Photo Release – Dredging of Hagonoy River.",
+      "access": {
+        "status": "official-provincial-page-opened;Hagonoy-River-locality-reviewed",
+        "reviewFiles": [
+          "national/reviews/central-luzon-emb-r3-river-name-locality-crosswalk-20261127.json"
+        ]
+      },
+      "reuse": {
+        "metadata": "Retain the provincial-government attribution, date, title, and source URL.",
+        "raw": "No image, page copy, or project document retained.",
+        "content": "Only the place-name statement is summarized. No species, geometry, access, safety, or current river condition is inferred."
+      },
+      "publicationApproval": false,
+      "license": null,
+      "licenseUrl": null,
+      "researchStatus": "bulacan;hagonoy-river;san-agustin-locality-lead;research-only",
+      "caveats": [
+        "The announcement does not provide a channel boundary or establish relationships to other river systems.",
+        "A dredging project is not evidence of fish presence or public fishing access."
+      ]
+    },
+    {
+      "id": "pia-bulacan-labangan-channel-angat-link-2026",
+      "title": "Agaran, pangmatagalang solusyon sa pagbabaha sa Bulacan, inilatag",
+      "provider": "Philippine Information Agency",
+      "url": "https://pia.gov.ph/news/agaran-pangmatagalang-solusyon-sa-pagbabaha-sa-bulacan-inilatag/",
+      "role": "Government information report describing Labangan Channel as an artificial waterway linking Angat River near Calumpit and Hagonoy toward Manila Bay; connectivity context only, not a channel geometry.",
+      "checkedOn": "2026-11-27",
+      "sourceYear": 2026,
+      "citation": "Velasco, S. F. (2026, September 21). Agaran, pangmatagalang solusyon sa pagbabaha sa Bulacan, inilatag. Philippine Information Agency.",
+      "access": {
+        "status": "official-PIA-page-opened;Labangan-Channel-description-reviewed",
+        "reviewFiles": [
+          "national/reviews/central-luzon-emb-r3-river-name-locality-crosswalk-20261127.json"
+        ]
+      },
+      "reuse": {
+        "metadata": "Retain the PIA attribution, author, date, title, and URL.",
+        "raw": "No article copy, photograph, or map retained.",
+        "content": "Only a concise description of the waterway relationship is summarized. No geometry, fish presence, access, or current safety claim is made."
+      },
+      "publicationApproval": false,
+      "license": null,
+      "licenseUrl": null,
+      "researchStatus": "bulacan;labangan-channel;angat-connectivity;channel-vs-river-identity-unresolved;research-only",
+      "caveats": [
+        "The article describes a connected artificial channel but does not establish that every source use of Labangan River names the same reach.",
+        "No legal or surveyed geometry is provided."
+      ]
+    },
+    {
+      "id": "emb-pnr-clark-phase2-eis-labangan-river-2018",
+      "title": "Environmental Impact Statement Report for the Proposed PNR Clark Phase 2 (Malolos–Clark Railway) Project, Volume I: Main Report",
+      "provider": "Environmental Management Bureau EIA Portal; project proponent/consultants",
+      "url": "https://eia.emb.gov.ph/wp-content/uploads/2018/05/MCRP-EISR-DOTr-Malolos.pdf",
+      "role": "EMB-hosted project EIS with a Labangan River sampling-site description near Labangan Bridge and the Angat/Bagbag confluence; source-specific station context only, not a fish survey or reusable waterbody geometry.",
+      "checkedOn": "2026-11-27",
+      "sourceYear": 2018,
+      "citation": "PNR Clark Phase 2 (Malolos–Clark Railway) Project. Environmental Impact Statement Report, Volume I: Main Report, Section 3.2.7, paragraphs 626–628.",
+      "access": {
+        "status": "official-EMB-EIA-hosted-PDF-indexed-text-opened;Labangan-station-description-reviewed",
+        "reviewFiles": [
+          "national/reviews/central-luzon-emb-r3-river-name-locality-crosswalk-20261127.json"
+        ],
+        "reviewedSections": "Section 3.2.7, SW-2 Labangan River, paragraphs 626–628."
+      },
+      "reuse": {
+        "metadata": "Retain the EIS title, hosting portal, section/paragraph locator, and source URL.",
+        "raw": "No report copy, map, table, or figure retained.",
+        "content": "Only station place-name and relative-location context is summarized. The EIS does not authorize redistribution of its geometry or underlying project data."
+      },
+      "publicationApproval": false,
+      "license": null,
+      "licenseUrl": null,
+      "researchStatus": "bulacan;labangan-river;project-eis-station-context;not-fish-evidence;research-only",
+      "caveats": [
+        "The EIS is project-specific and its station description does not establish a canonical Labangan River/Channel identity.",
+        "Water-quality site descriptions do not establish current water condition, fish occurrence, safety, or fishing permission."
+      ]
     }
   ],
   "sourcePolicy": {

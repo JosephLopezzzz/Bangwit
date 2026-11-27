@@ -1,0 +1,198 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "central-luzon-emb-r3-river-name-locality-crosswalk-20261127",
+  "reviewedOn": "2026-11-27",
+  "phaseId": "L3",
+  "regionId": "0300000000",
+  "regionName": "Region III (Central Luzon)",
+  "status": "14-emb-monitoring-names-screened;locality-and-alias-evidence-mixed;research-only",
+  "question": "Can the 14 river-name entries in EMB Region III's 2024 Manila Bay Area monitoring roster be linked to existing Central Luzon records without treating name similarity as a verified waterbody identity?",
+  "sourceIds": [
+    "emb-r3-state-environment-2024",
+    "bfar-region-iii-bulacan-fisheries-profile",
+    "bulacan-pdrrmo-hydrological-area",
+    "bulacan-pdpfp-2024-2036-river-network",
+    "nwrb-pampanga-river-basin-master-plan",
+    "emb-national-sober-2016-2021-silongin-river",
+    "denr-bmb-luzon-inland-wetlands-atlas-2014",
+    "bulacan-pg-hagonoy-river-dredging-2022",
+    "pia-bulacan-labangan-channel-angat-link-2026",
+    "emb-pnr-clark-phase2-eis-labangan-river-2018"
+  ],
+  "inputs": [
+    "data/research/philippines/national/reviews/central-luzon-emb-r3-2024-monitoring-scope-crosscheck-20261127.json",
+    "data/research/philippines/central-luzon-bulacan-waterbody-source-review-20261024.json",
+    "data/research/philippines/national/reviews/central-luzon-bulacan-meycauayan-freshwater-aquaculture-context-screen-20261124.json",
+    "data/research/philippines/national/reviews/central-luzon-pasac-pasak-guagua-name-crosswalk-20261126.json",
+    "data/research/philippines/national/reviews/central-luzon-bmb-2014-wetland-atlas-count-crosswalk-20261119.json",
+    "data/research/philippines/central-luzon-bataan-river-table-review-20261024.json",
+    "data/research/philippines/national/reviews/central-luzon-bulacan-malolos-watercourse-and-catch-context-review-20261125.json"
+  ],
+  "sourceAccess": {
+    "primaryRoster": {
+      "sourceId": "emb-r3-state-environment-2024",
+      "locator": "Section 4.1.1, indexed PDF lines 2060-2081, printed page 41; per-river monitoring tables in Section 4.4, printed pages 97-107.",
+      "access": "Official indexed PDF text reviewed. Direct PDF request and page screenshot returned HTTP 403; no restriction was bypassed and no local copy was retained."
+    },
+    "supplementarySources": "Existing source reviews and official provincial, PIA, EMB, NWRB, and BMB pages/PDFs listed below were checked for source-reported names, localities, and system relationships. No geometry was digitized."
+  },
+  "findings": {
+    "monitoringRoster": {
+      "sourceReportedRiverNameEntryCount": 14,
+      "namesAsPrinted": [
+        "Angat River",
+        "Atlag River",
+        "Bocaue River",
+        "Guagua River",
+        "Hagonoy River",
+        "Labangan River",
+        "Marilao River",
+        "Meycauayan River",
+        "Obando River",
+        "Pampanga River (Pampanga)",
+        "Pampanga River (Upstream)",
+        "Sta. Maria River",
+        "Talisay River",
+        "Lucong River"
+      ],
+      "interpretation": "These are report-specific monitoring labels and counts of stations/frequency, not a complete regional river inventory. Station names are not coordinates or channel boundaries."
+    },
+    "crosswalks": [
+      {
+        "embName": "Angat River",
+        "result": "Strong Bulacan system-name and locality match; exact river extent remains source-dependent.",
+        "evidence": "EMB lists three stations including Baliwag-Bustos Bridge and Pulilan-Plaridel Bridge. The Bulacan fisheries profile and provincial hydrology sources also name the Angat system; PDRRMO describes an approximately 61 km Ipo Reservoir-to-Labangan Channel extent, while the provincial plan describes a different provincial-scale extent.",
+        "decision": "Link only as a named Bulacan waterbody candidate. Do not treat either length/map as a complete channel geometry or infer fish from water-quality stations.",
+        "reviewRefs": ["data/research/philippines/central-luzon-bulacan-waterbody-source-review-20261024.json", "data/research/philippines/national/reviews/central-luzon-angat-bpc001-13-georeference-plausibility-20261119.json"]
+      },
+      {
+        "embName": "Atlag River",
+        "result": "Monitoring name is documented; a specific channel-level locality crosswalk remains unresolved.",
+        "evidence": "EMB reports three monthly stations under this label. Existing Malolos material mentions Atlag among river districts in a proposal lead, not as a verified identity for the EMB monitored river.",
+        "decision": "Keep the monitoring label as a discovery lead. Do not equate it with the Malolos proposal's Atlag district or create a species/waterbody row.",
+        "reviewRefs": ["data/research/philippines/national/reviews/central-luzon-bulacan-malolos-watercourse-and-catch-context-review-20261125.json"]
+      },
+      {
+        "embName": "Bocaue River",
+        "result": "Strong source-name and municipal locality match; geometry and broader system identity remain open.",
+        "evidence": "EMB's monitoring table names Expressway Bridge (NLEX), Bocaue, Bulacan and McArthur Bridge, Bocaue. The BFAR provincial profile independently lists Bocaue River as an inland/communal-resource name.",
+        "decision": "Use as a Bulacan locality-resolved waterbody lead only; no fish occurrence, legal access, or centerline follows from these sources.",
+        "reviewRefs": ["data/research/philippines/central-luzon-bulacan-waterbody-source-review-20261024.json"]
+      },
+      {
+        "embName": "Guagua River",
+        "result": "Connected name/reach evidence exists, but the exact alias and reach boundary are unresolved.",
+        "evidence": "NWRB's basin plan describes Pasac (or Guagua) River and Guagua as an upstream stretch/name in the Pasac system, while distinguishing that system from the main Pampanga River drainage. The EMB roster's shorter Guagua River label does not identify a precise reach.",
+        "decision": "Preserve Guagua and Pasac source labels and their reach qualifiers. Do not globally merge the rivers or infer a shared species list.",
+        "reviewRefs": ["data/research/philippines/national/reviews/central-luzon-pasac-pasak-guagua-name-crosswalk-20261126.json"]
+      },
+      {
+        "embName": "Hagonoy River",
+        "result": "Bulacan municipality-level name match; relationship to neighboring channels or river systems is unresolved.",
+        "evidence": "The Provincial Government of Bulacan identifies a dredging project along Hagonoy River in San Agustin, Hagonoy. EMB's roster reports four quarterly stations but does not provide a channel boundary in the reviewed table.",
+        "decision": "Keep the source-specific Hagonoy label and San Agustin locality as a lead. Do not merge it with Angat, Labangan, Pampanga, or Taguan-Moro without a reach-level source.",
+        "reviewRefs": []
+      },
+      {
+        "embName": "Labangan River",
+        "result": "Hydrologic connectivity is documented; equivalence with Labangan Channel is not established.",
+        "evidence": "EMB lists three monthly stations. A Bulacan PDRRMO page says Angat River reaches its diversion at Labangan Channel; PIA describes the artificial channel as linking Angat River in Calumpit and Hagonoy toward Manila Bay. A 2018 EMB-hosted EIS separately uses Labangan River for a station near Labangan Bridge and the Angat/Bagbag confluence. These descriptions are compatible with connected waters but do not prove that the labels denote one identical reach or canonical waterbody.",
+        "decision": "Retain Labangan River and Labangan Channel as separate source labels with a connected-system relationship; no merge, geometry, safety, or fish inference.",
+        "reviewRefs": ["data/research/philippines/central-luzon-bulacan-waterbody-source-review-20261024.json"]
+      },
+      {
+        "embName": "Marilao River",
+        "result": "Strong Bulacan municipal name and station match; system boundaries remain unresolved.",
+        "evidence": "EMB's 2024 report lists five stations, including Loma de Gato, Prenza Dam, Sta. Rosa 1, Tabing-Ilog, and Ibayo in Marilao. BFAR independently lists Marilao River and Marilao-Meycauayan River as resource names. Aquaculture-pond studies use river-system water but are not wild-river fish surveys.",
+        "decision": "Keep Marilao River and the broader Marilao-Meycauayan-Obando system as related but distinct source units until a reach crosswalk supports a merge. Do not carry pond taxa into river occurrences.",
+        "reviewRefs": ["data/research/philippines/central-luzon-bulacan-waterbody-source-review-20261024.json", "data/research/philippines/national/reviews/central-luzon-bulacan-meycauayan-freshwater-aquaculture-context-screen-20261124.json"]
+      },
+      {
+        "embName": "Meycauayan River",
+        "result": "Strong Bulacan municipal name and station match; connected system and cross-city reach relationships need a separate crosswalk.",
+        "evidence": "EMB lists five stations in Meycauayan, including Perez, Viente Reales, Banga, and Zamora. BFAR lists Meycauayan River and Marilao-Meycauayan River; the aquaculture studies describe ponds supplied with water from the broader river system, not wild fish occurrences.",
+        "decision": "Keep the EMB monitored river distinct from pond study sites and any broader connected-system entity.",
+        "reviewRefs": ["data/research/philippines/central-luzon-bulacan-waterbody-source-review-20261024.json", "data/research/philippines/national/reviews/central-luzon-bulacan-meycauayan-freshwater-aquaculture-context-screen-20261124.json"]
+      },
+      {
+        "embName": "Obando River",
+        "result": "Strong source-name and Bulacan locality match, with a station extending to Valenzuela City.",
+        "evidence": "EMB lists three stations: Polo Bridge in Valenzuela City, the municipal fishport near Obando Public Market, and Tawiran Bridge, Obando, Bulacan. BFAR lists the Obando/Meycauayan-Marilao resource names, but the station list does not define an administrative or channel boundary.",
+        "decision": "Preserve the cross-city station evidence and do not clip or assign the whole river to one municipality from the name alone.",
+        "reviewRefs": ["data/research/philippines/central-luzon-bulacan-waterbody-source-review-20261024.json"]
+      },
+      {
+        "embName": "Pampanga River (Pampanga)",
+        "result": "A report-specific provincial monitoring label; relation to the separate upstream row remains unresolved.",
+        "evidence": "EMB assigns five quarterly stations to this label. The report's per-river table names Expressway Bridge, Sulipan Bridge, Calumpit Bridge, and two facility-adjacent stations, but the reviewed text does not map each station back to the parenthetical roster label.",
+        "decision": "Retain the parenthetical label and its five-station count as an EMB monitoring unit; do not collapse it with the upstream or river-mouth rows.",
+        "reviewRefs": ["data/research/philippines/national/reviews/central-luzon-rdp-202-river-claim-source-search-followup-20261127.json"]
+      },
+      {
+        "embName": "Pampanga River (Upstream)",
+        "result": "Separate source-reported monitoring unit; exact reach and station crosswalk unresolved.",
+        "evidence": "EMB reports three quarterly stations under this qualifier. It also has a separate Pampanga River row and Pampanga River Mouth row. No reviewed source establishes whether upstream is a reach of the mainstem, a distinct monitoring sector, or a different table aggregation.",
+        "decision": "Keep all three report labels distinct and avoid combining their counts, geometry, or species claims.",
+        "reviewRefs": ["data/research/philippines/national/reviews/central-luzon-rdp-202-river-claim-source-search-followup-20261127.json"]
+      },
+      {
+        "embName": "Sta. Maria River",
+        "result": "Bulacan locality is resolved within the EMB report; the abbreviated name is not globally unique.",
+        "evidence": "The 2024 report roster prints Sta. Maria River, and its results section identifies Santa Maria River, Province of Bulacan, with Catmon, Poblacion, and Sta. Clara Bridge stations. Other provinces also have rivers with Santa Maria in their names.",
+        "decision": "Crosswalk only to the report's Bulacan monitoring entry; preserve the spelling difference and do not match by name outside that locality.",
+        "reviewRefs": []
+      },
+      {
+        "embName": "Talisay River",
+        "result": "Bataan is a plausible regional candidate, but the 2024 monitoring table does not provide a municipality or coordinates for the three stations.",
+        "evidence": "EMB lists Camacho Bridge, Talisay Bridge, and Magsaysay Dam. The BMB Luzon wetland atlas includes a Talisay River entry associated with Bataan and Manila Bay, but the shared name and regional context do not prove the monitoring stations are the same mapped river system.",
+        "decision": "Retain as a candidate crosswalk only. Resolve locality and station identity before joining to Bataan fish records or geometry.",
+        "reviewRefs": ["data/research/philippines/national/reviews/central-luzon-bmb-2014-wetland-atlas-count-crosswalk-20261119.json", "data/research/philippines/central-luzon-bataan-river-table-review-20261024.json"]
+      },
+      {
+        "embName": "Lucong River",
+        "result": "Strong Tarlac administrative locality match; full reach identity and current condition remain open.",
+        "evidence": "EMB's National State of the Brown Environment Report Table 3.3 lists Lucong River in Bamban, Capas, and Concepcion, Tarlac, as a river with a 2020 classification year. The 2024 Region III report separately lists three quarterly monitoring stations under Lucong River.",
+        "decision": "Record the dated Tarlac locality as a waterbody discovery crosswalk only. The historic classification is not a current water-quality result or fish/safety claim.",
+        "reviewRefs": []
+      }
+    ],
+    "countInterpretation": "The 14 river-name entries are not 14 validated unique river systems and cannot be reconciled to the report's 27 monitored water bodies. The roster also includes source-specific qualifiers and name variants, while waterbody geometry and a station-to-canonical-system bridge are unavailable.",
+    "researchOutcome": "This review improves name/locality discovery and records candidate relationships only. It does not supply fish evidence, occurrence records, catch advice, fishing access, regulatory status, water safety, or publishable geometry."
+  },
+  "method": {
+    "approach": "Compared the EMB report's 14 printed inland river labels and station descriptions with existing Bulacan, Pampanga/Pasac, Bataan, and national EMB/BMB source reviews. Added a municipality or province link only where a source explicitly named it. Kept connected channels, estuaries, reaches, and river systems distinct unless a source established the relationship.",
+    "limits": "The principal report could only be reviewed through official indexed PDF text because direct retrieval and screenshots returned HTTP 403. Some station tables lack municipality names or coordinates, and extraction may lose visual table grouping. This is not a full Central Luzon waterbody inventory."
+  },
+  "disposition": {
+    "researchOnly": true,
+    "sourceReportedRiverNameEntriesScreened": 14,
+    "administrativeLocalityMatchesRecorded": 8,
+    "candidateOrUnresolvedNameCrosswalks": 6,
+    "canonicalWaterbodyIdentitiesValidated": 0,
+    "stationCoordinatesAdded": 0,
+    "geometryAdded": false,
+    "speciesAssertionsAdded": 0,
+    "occurrenceRecordsAdded": 0,
+    "publicAppRowsAdded": 0,
+    "publicationApproval": false
+  },
+  "nextActions": [
+    "Resolve Atlag, Guagua/Pasac, Labangan River/Channel, the two Pampanga River reporting units, and Talisay at reach/station level before building a canonical river inventory.",
+    "For the Bulacan name matches, obtain source-quality station coordinates or a reusable hydrography centerline and document its datum, scale, license, and source version.",
+    "Search these waterbodies independently for taxon-resolved fish sources; review sampling locality, date, methods, taxonomy, and item/dataset reuse terms before admitting any species evidence.",
+    "Keep the EMB 27-body count, RDP 202-river claim, and this 14-name roster as separate source-reported units until their scope and denominators are reconciled."
+  ],
+  "sources": [
+    {"sourceId": "emb-r3-state-environment-2024", "supports": "The 27-body Manila Bay Area monitoring statement, 14 river-name roster, per-river station counts, selected station locality descriptions, and separate river-mouth labels."},
+    {"sourceId": "bfar-region-iii-bulacan-fisheries-profile", "supports": "Bulacan inland-resource names including Angat, Bocaue, Labangan Channel, Marilao, Meycauayan, and Marilao-Meycauayan; no fish-by-river checklist."},
+    {"sourceId": "bulacan-pdrrmo-hydrological-area", "supports": "Approximate Angat River reach from Ipo Reservoir to diversion at Labangan Channel; not a channel geometry."},
+    {"sourceId": "bulacan-pdpfp-2024-2036-river-network", "supports": "Provincial-scale Angat system context and administrative span; not a georeferenced river centerline."},
+    {"sourceId": "nwrb-pampanga-river-basin-master-plan", "supports": "Pasac/Guagua system relationship and distinction from the main Pampanga River drainage; exact reach alias remains unresolved."},
+    {"sourceId": "emb-national-sober-2016-2021-silongin-river", "supports": "Table 3.3's historical Lucong River locality row for Bamban, Capas, and Concepcion, Tarlac, and classification year 2020."},
+    {"sourceId": "denr-bmb-luzon-inland-wetlands-atlas-2014", "supports": "A Bataan Talisay River entry; candidate name/locality context only."},
+    {"sourceId": "bulacan-pg-hagonoy-river-dredging-2022", "supports": "Provincial government identification of Hagonoy River along San Agustin, Hagonoy, Bulacan."},
+    {"sourceId": "pia-bulacan-labangan-channel-angat-link-2026", "supports": "PIA-reported description of Labangan Channel as an artificial waterway connecting Angat River near Calumpit/Hagonoy toward Manila Bay."},
+    {"sourceId": "emb-pnr-clark-phase2-eis-labangan-river-2018", "supports": "EMB-hosted EIS's Labangan River station description near Labangan Bridge and the Angat/Bagbag confluence; not fish evidence or reusable geometry."}
+  ]
+}
