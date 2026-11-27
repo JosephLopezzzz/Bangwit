@@ -1,0 +1,148 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "central-luzon-bataan-clarias-ena-sequence-linkage-followup-20261128",
+  "reviewedOn": "2026-11-28",
+  "phaseId": "L3",
+  "regionId": "0300000000",
+  "regionName": "Region III (Central Luzon)",
+  "status": "bounded-ena-bataan-locality-zero;philippines-context-positive;indsc-cross-access-point-only;research-only",
+  "question": "Does ENA's public sequence metadata expose a Bataan, Orani, or Bagac locality link to the 2025 Bataan Clarias batrachus diet-study samples?",
+  "sourceIds": [
+    "ena-portal-clarias-batrachus-bataan-sequence-locality-screen-20261128",
+    "corpuz-2025-clarias-batrachus-bataan-diet-study",
+    "ncbi-eutils-clarias-batrachus-bataan-sequence-query-20261128",
+    "bold-portal-clarias-batrachus-bataan-locality-query-20261128"
+  ],
+  "relatedReviews": [
+    "data/research/philippines/national/reviews/central-luzon-bataan-clarias-2025-diet-identity-review-20261128.json",
+    "data/research/philippines/national/reviews/central-luzon-bataan-clarias-ncbi-sequence-linkage-followup-20261128.json",
+    "data/research/philippines/national/reviews/central-luzon-bataan-clarias-bold-locality-followup-20261128.json"
+  ],
+  "method": {
+    "database": "European Nucleotide Archive (ENA) Portal API and taxonomy REST API",
+    "documentation": [
+      "https://ena-docs.readthedocs.io/en/latest/retrieval/programmatic-access/advanced-search.html",
+      "https://ena-docs.readthedocs.io/en/latest/retrieval/programmatic-access/taxon-based-search.html",
+      "https://ena-docs.readthedocs.io/en/latest/retrieval/programmatic-access/taxon-api.html"
+    ],
+    "taxonomyLookup": {
+      "url": "https://www.ebi.ac.uk/ena/taxonomy/rest/scientific-name/Clarias%20batrachus",
+      "httpStatus": 200,
+      "taxId": "59899",
+      "scientificName": "Clarias batrachus",
+      "rank": "species",
+      "basis": "ENA taxonomy API lookup used to construct the tax_eq query; the submitted name is not an independent identification of the Bataan study specimens."
+    },
+    "resultType": "sequence",
+    "metadataFieldsRequested": [
+      "scientific_name",
+      "country",
+      "isolation_source",
+      "description"
+    ],
+    "queries": [
+      {
+        "label": "Philippines context",
+        "query": "tax_eq(59899) AND country=\"Philippines\"",
+        "url": "https://www.ebi.ac.uk/ena/portal/api/search?result=sequence&query=tax_eq%2859899%29+AND+country%3D%22Philippines%22&fields=scientific_name%2Ccountry%2Cisolation_source%2Cdescription&format=json&limit=1000",
+        "httpStatus": 200,
+        "recordsReturned": 41
+      },
+      {
+        "label": "Bataan exact country-field filter",
+        "query": "tax_eq(59899) AND country=\"Philippines:Bataan\"",
+        "url": "https://www.ebi.ac.uk/ena/portal/api/search?result=sequence&query=tax_eq%2859899%29+AND+country%3D%22Philippines%3ABataan%22&fields=scientific_name%2Ccountry%2Cisolation_source%2Cdescription&format=json&limit=1000",
+        "httpStatus": 200,
+        "recordsReturned": 0
+      },
+      {
+        "label": "Orani exact country-field filter",
+        "query": "tax_eq(59899) AND country=\"Philippines:Orani\"",
+        "url": "https://www.ebi.ac.uk/ena/portal/api/search?result=sequence&query=tax_eq%2859899%29+AND+country%3D%22Philippines%3AOrani%22&fields=scientific_name%2Ccountry%2Cisolation_source%2Cdescription&format=json&limit=1000",
+        "httpStatus": 200,
+        "recordsReturned": 0
+      },
+      {
+        "label": "Bagac exact country-field filter",
+        "query": "tax_eq(59899) AND country=\"Philippines:Bagac\"",
+        "url": "https://www.ebi.ac.uk/ena/portal/api/search?result=sequence&query=tax_eq%2859899%29+AND+country%3D%22Philippines%3ABagac%22&fields=scientific_name%2Ccountry%2Cisolation_source%2Cdescription&format=json&limit=1000",
+        "httpStatus": 200,
+        "recordsReturned": 0
+      }
+    ],
+    "scope": "Metadata-only exact country-field searches and one Philippines context query. No individual rows, accession IDs, sample/voucher IDs, coordinates, or sequence strings were retained.",
+    "limitations": [
+      "ENA and NCBI are access points within the shared INSDC nucleotide archive ecosystem; the matching Philippines count is a cross-access-point reconciliation, not an independent biological confirmation or an additive count.",
+      "The 41 ENA results are sequence metadata rows, not necessarily distinct specimens, collection events, or studies; multiple loci may refer to one specimen.",
+      "The exact country-field filters can miss records with omitted, differently formatted, or less specific locality metadata. Zero matches are not evidence that no sequence or specimen exists.",
+      "All 41 returned rows had a blank isolation_source field, limiting locality resolution.",
+      "The ENA taxon label and taxonomy lookup do not independently validate the identity of fish in the 2025 Bataan diet study.",
+      "No alignment, author contact, museum-catalog lookup, or specimen examination was part of this screen."
+    ]
+  },
+  "findings": {
+    "bataanStudyLocalityLink": {
+      "bataanExactCountryFieldMatches": 0,
+      "oraniExactCountryFieldMatches": 0,
+      "bagacExactCountryFieldMatches": 0,
+      "studyLocalityTextMatchesAcrossReturnedMetadata": 0,
+      "interpretation": "The bounded ENA metadata search did not return a Bataan, Orani, or Bagac text crosswalk to the diet-study samples. This is a metadata-index result only; it neither proves absence nor resolves the study's taxonomic or locality uncertainty."
+    },
+    "philippinesContext": {
+      "sequenceMetadataRows": 41,
+      "countryFieldFrequencies": {
+        "Philippines": 10,
+        "Philippines:Autonomous Region in Muslim Mindanao,": 10,
+        "Philippines:Camarines Sur, Bicol Region, Lake": 7,
+        "Philippines:Cagayan, Cagayan Valley,": 5,
+        "Philippines:Luzon, Central Luzon, Nueva Ecija,": 4,
+        "Philippines:Rizal, Calabarzon, Laguna de Bay,": 3,
+        "Philippines:Batangas, Calabarzon, Taal Lake,": 1,
+        "Philippines:Luzon, Pantabangan Dam, Nueva Ecija,": 1
+      },
+      "blankIsolationSourceRows": 41,
+      "interpretation": "The country field contains varied locality strings, including broad Philippines-only entries. These are source metadata facets, not independently verified waterbody geometry or a complete distribution; none is linked to the Bataan study samples."
+    },
+    "archiveRelationship": "ENA and NCBI expose the same INSDC record ecosystem. Their 41 Philippines-level query results are consistent cross-access-point counts and must not be counted as separate evidence sets."
+  },
+  "inputSnapshotHashes": {
+    "sourceRegistry": "f0e469dd2a18af7fb5e5338c8782155b897c70f4dd21568b78083b73ebdc62a4"
+  },
+  "rawSnapshot": {
+    "directory": "raw/bataan-clarias-ena-locality-20261128",
+    "gitIgnored": true,
+    "file": "data/research/philippines/raw/bataan-clarias-ena-locality-20261128/ena-clarias-batrachus-locality-query-snapshot.json",
+    "bytes": 2826,
+    "sha256": "b6c2c60c31cab0157e99493e55a3c93381dcfe96cab55a3f1930e7865994e886",
+    "retained": "Sanitized counts, status codes, query definitions, and country-field frequencies only; no accessions, record-level metadata, exact coordinates, identifiers, or sequence strings."
+  },
+  "disposition": {
+    "speciesAssertionsAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "dietGuideRowsAdded": 0,
+    "baitSuggestionsAdded": 0,
+    "sequenceDataPublished": false,
+    "geometryAdded": false,
+    "imagesAdded": 0,
+    "publicAppRowsAdded": 0,
+    "publicationApproval": false,
+    "decision": "The ENA screen does not link public sequence metadata to the 2025 Bataan diet-study samples. Preserve the source identification and localities as research-only and unresolved; do not infer absence or promote a species, occurrence, diet, or image claim."
+  },
+  "sources": [
+    {
+      "sourceId": "ena-portal-clarias-batrachus-bataan-sequence-locality-screen-20261128",
+      "url": "https://www.ebi.ac.uk/ena/portal/api/search",
+      "supports": "The exact ENA query scopes, returned aggregate counts, and sanitized country-field frequencies; local raw snapshot is ignored by Git."
+    },
+    {
+      "sourceId": "corpuz-2025-clarias-batrachus-bataan-diet-study",
+      "url": "https://dergipark.org.tr/en/download/article-file/4032995",
+      "supports": "The source-reported Bataan localities and the study context whose samples remain without a public accession or voucher crosswalk."
+    },
+    {
+      "sourceId": "ncbi-eutils-clarias-batrachus-bataan-sequence-query-20261128",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/esearch.fcgi",
+      "supports": "The matching bounded Philippines query count from the NCBI access point; this is reconciled with ENA as shared-INSDC access, not counted independently."
+    }
+  ]
+}
