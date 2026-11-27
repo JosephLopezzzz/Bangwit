@@ -1,0 +1,157 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "central-luzon-aquino-2025-pampanga-risk-taxa-taxonomy-crosscheck-20261127",
+  "reviewedOn": "2026-11-27",
+  "phaseId": "L3",
+  "regionId": "0300000000",
+  "regionName": "Region III (Central Luzon)",
+  "relatedReviewFiles": [
+    "data/research/philippines/national/reviews/central-luzon-aquino-2025-pampanga-aquaculture-risk-review-20261127.json",
+    "data/research/philippines/national/reviews/central-luzon-minalin-channel-catalog-taxonomy-crosscheck-20261126.json",
+    "data/research/philippines/national/reviews/ncr-marikina-pterygoplichthys-disjunctivus-name-crosscheck-20261120.json"
+  ],
+  "sourceIds": [
+    "aquino-2025-pampanga-aquaculture-invasive-risk-assessment",
+    "calacademy-catalog-aquino-pampanga-risk-taxa-taxonomy-crosscheck-20261127",
+    "calacademy-catalog-pterygoplichthys-disjunctivus-crosscheck-20261120",
+    "reptile-database-aquino-pampanga-pelodiscus-taxonomy-crosscheck-20261127"
+  ],
+  "status": "six-source-reported-risk-taxa-name-crosswalked;five-fish-one-turtle;specimen-identities-and-pond-links-unverified;research-only",
+  "question": "How do the six aquatic names in the Pampanga aquaculture risk-screen compare with current nomenclatural references, without treating the names as verified specimens or wild-waterway occurrences?",
+  "inputs": [
+    {
+      "path": "data/research/philippines/national/reviews/central-luzon-aquino-2025-pampanga-aquaculture-risk-review-20261127.json",
+      "sha256": "c8f3ca93e909a04b21ccc48ad64f517ddaed2ddd4bcc76f9d78e63e617f2cc8a"
+    },
+    {
+      "path": "data/research/philippines/national/reviews/central-luzon-minalin-channel-catalog-taxonomy-crosscheck-20261126.json",
+      "sha256": "8eede3df439e94f65aa28fcea69ee568b107c04b6eae28231bf4a1e1dafab949"
+    },
+    {
+      "path": "data/research/philippines/national/reviews/ncr-marikina-pterygoplichthys-disjunctivus-name-crosscheck-20261120.json",
+      "sha256": "8464a47a5e29e7090ede900327475048fff185e2d330a8e5becee9821691f25c"
+    }
+  ],
+  "method": {
+    "fishNameAuthority": "California Academy of Sciences, Eschmeyer's Catalog of Fishes.",
+    "reptileNameAuthority": "The Reptile Database, cross-referencing the Turtle Taxonomy Working Group (TTWG) 2025 checklist.",
+    "procedure": "Compared the six labels already transcribed in the source review with exact-name records. Reused three exact Catalog response files already retained and SHA-256 pinned in the related Minalin taxonomy review (Clarias batrachus, Channa striata, Sarotherodon melanotheron); reused the separately registered Pterygoplichthys disjunctivus name review; and checked the official Catalog search-indexed current-status excerpt for Monopterus albus. Opened the Reptile Database Pelodiscus sinensis page on 2026-11-27. Direct Catalog page retrieval for the selected Pterygoplichthys and Monopterus records returned HTTP 403 in this pass, so no new raw files were created for those two queries.",
+    "recordVersion": "The retained exact Catalog pages for the three Minalin names display Online Version updated 18 Nov. 2026. The separate Pterygoplichthys review was checked 20 Nov. 2026. Do not treat this as a single synchronized Catalog snapshot for all five fishes.",
+    "sourceLabelBasis": "The labels come from sourceReportedRiskTaxa.namesAsReported in the linked source review. The article's extracted table layout does not support a reliable source-row order, municipality-by-taxon matrix, or pond-level assignment.",
+    "limits": "Taxonomic name status does not authenticate the paper's specimens, validate a species identification, establish pond or wild-waterway presence, assign a location, prove native or invasive status, or establish fishery availability, catchability, diet, safety, legal status, or reuse rights."
+  },
+  "sourceContext": {
+    "primarySource": "Aquino (2025), a questionnaire-based aquaculture-pond operator study plus AS-ISK potential-invasiveness assessment in freshwater and brackish Pampanga zones.",
+    "collectionAndIdentification": "The paper says specimens were collected with local residents and submitted to the National Museum of the Philippines for identification, but the reviewed text contains no catalogue or accession identifiers to connect an identified specimen to each printed name.",
+    "taxonBySiteCrosswalkAvailable": false,
+    "wildRiverSamplingReported": false,
+    "studyDatesReported": false
+  },
+  "taxonCrosswalk": [
+    {
+      "sourceNameVerbatim": "Clarias batrachus",
+      "sourceReviewGroup": "fish",
+      "currentNameStatus": "The Catalog record reports Valid as Clarias batrachus (Linnaeus 1758).",
+      "authorityUrl": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Clarias&species=batrachus&tbl=species",
+      "authorityEvidence": "Exact record retained in the related Central Luzon Minalin crosswalk; Catalog page version updated 18 Nov. 2026; local ignored HTML is SHA-256 pinned there.",
+      "identificationCaution": "The Catalog distribution text says the species is known definitely only from Java according to Ng and Kottelat (2008), and is introduced elsewhere. This makes the Pampanga label a priority for specimen/accession verification; it does not prove the source label is wrong or establish absence in Pampanga.",
+      "disposition": "current-name-match;source-specimen-and-pond-identity-unverified"
+    },
+    {
+      "sourceNameVerbatim": "Channa striata",
+      "sourceReviewGroup": "fish",
+      "currentNameStatus": "The Catalog record reports Valid as Channa striata (Bloch 1793).",
+      "authorityUrl": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Channa&species=striata&tbl=species",
+      "authorityEvidence": "Exact record retained in the related Central Luzon Minalin crosswalk; Catalog page version updated 18 Nov. 2026; local ignored HTML is SHA-256 pinned there.",
+      "disposition": "current-name-match;source-specimen-and-pond-identity-unverified"
+    },
+    {
+      "sourceNameVerbatim": "Pelodiscus sinensis",
+      "sourceReviewGroup": "freshwater-turtle",
+      "currentNameStatus": "The Reptile Database uses Pelodiscus sinensis (Wiegmann, 1835) and places it in Trionychidae and Testudines; its page cites the TTWG 2025 treatment.",
+      "authorityUrl": "https://reptile-database.reptarium.cz/Pelodiscus/sinensis",
+      "authorityEvidence": "Public taxon page opened on 2026-11-27; the page explicitly notes taxonomic complexity within Pelodiscus.",
+      "identificationCaution": "The genus-level species-complex discussion and missing specimen accession prevent this review from verifying the Pampanga turtle identity. The taxon is a turtle, not a fish.",
+      "disposition": "current-name-treatment;source-specimen-and-pond-identity-unverified"
+    },
+    {
+      "sourceNameVerbatim": "Pterygoplichthys disjunctivus",
+      "sourceReviewGroup": "fish",
+      "currentNameStatus": "The Catalog reports Valid as Pterygoplichthys disjunctivus (Weber 1991).",
+      "authorityUrl": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=58209",
+      "authorityEvidence": "Existing registered Catalog name review checked 2026-11-20; official indexed Catalog status was also visible in the bounded search on 2026-11-27. Direct page retrieval returned HTTP 403 in this pass.",
+      "disposition": "current-name-match;source-specimen-and-pond-identity-unverified"
+    },
+    {
+      "sourceNameVerbatim": "Monopterus albus",
+      "sourceReviewGroup": "fish",
+      "currentNameStatus": "The Catalog indexed record reports Valid as Monopterus albus (Zuiew 1793).",
+      "authorityUrl": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=34274",
+      "authorityEvidence": "Official indexed current-status text reviewed on 2026-11-27; direct page retrieval returned HTTP 403, so no raw response was retained.",
+      "identificationCaution": "The Catalog entry contains a nomenclatural note about protecting current usage of the name. This review preserves the source label and does not make a specimen-level or nomenclatural adjudication.",
+      "disposition": "indexed-current-name-match;source-specimen-and-pond-identity-unverified"
+    },
+    {
+      "sourceNameVerbatim": "Sarotherodon melanotheron",
+      "sourceReviewGroup": "fish",
+      "currentNameStatus": "The Catalog record reports Valid as Sarotherodon melanotheron Rüppell 1852.",
+      "authorityUrl": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?genus=Sarotherodon&species=melanotheron&tbl=species",
+      "authorityEvidence": "Exact record retained in the related Central Luzon Minalin crosswalk; Catalog page version updated 18 Nov. 2026; local ignored HTML is SHA-256 pinned there.",
+      "disposition": "current-name-match;source-specimen-and-pond-identity-unverified"
+    }
+  ],
+  "findings": {
+    "sourceReportedAquaticTaxa": 6,
+    "taxonomicGroups": {
+      "fish": 5,
+      "freshwaterTurtle": 1
+    },
+    "fishNamesWithCurrentCatalogMatch": 5,
+    "taxaWithSpecimenIdentityVerified": 0,
+    "taxonByPondOrMunicipalityAssignmentsVerified": 0,
+    "taxonomyStatusDoesNotValidateTheArticleRiskScore": true,
+    "articleConclusionCallsAllSixFish": true
+  },
+  "decision": {
+    "sourceStringsCorrected": 0,
+    "specimenIdentitiesVerified": 0,
+    "speciesAssertionsAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "wildWaterwayAssignmentsAdded": 0,
+    "pondAssignmentsAdded": 0,
+    "dietClaimsAdded": 0,
+    "riskLabelsAddedToApp": false,
+    "geometryAdded": false,
+    "imagesAdded": 0,
+    "publicAppRowsAdded": 0,
+    "publicationApproval": false,
+    "centralLuzonCompletion": false,
+    "explanation": "The five fish strings correspond to current Catalog names, and Pelodiscus sinensis is treated as a turtle in the current specialist database. None of these name checks redetermines the study specimens or supports a site-resolved Pampanga wild-water checklist. Preserve the article's source labels and risk-screen context separately."
+  },
+  "nextAction": "If the paper is used in future species coverage, seek an anonymized specimen-to-pond/taxon crosswalk and National Museum accession identifiers; prioritize Clarias batrachus and Pelodiscus sinensis identification checks. Continue sourcing independent, dated and site-resolved freshwater surveys for rivers, wetlands, ponds, and estuaries, with reuse terms recorded per source.",
+  "authorities": [
+    {
+      "sourceId": "calacademy-catalog-aquino-pampanga-risk-taxa-taxonomy-crosscheck-20261127",
+      "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatmain.asp",
+      "supports": "Current name-status checks for the five source-reported fish labels, with per-name query URLs and retrieval limitations recorded above."
+    },
+    {
+      "sourceId": "calacademy-catalog-pterygoplichthys-disjunctivus-crosscheck-20261120",
+      "url": "https://researcharchive.calacademy.org/research/ichthyology/catalog/fishcatget.asp?spid=58209",
+      "supports": "Previously registered exact current-name check for Pterygoplichthys disjunctivus; no Pampanga specimen identification is implied."
+    },
+    {
+      "sourceId": "reptile-database-aquino-pampanga-pelodiscus-taxonomy-crosscheck-20261127",
+      "url": "https://reptile-database.reptarium.cz/Pelodiscus/sinensis",
+      "supports": "Current specialist turtle taxonomy page and its explicit Pelodiscus species-complex caution; no Pampanga specimen identity or occurrence is established."
+    }
+  ],
+  "primarySource": {
+    "sourceId": "aquino-2025-pampanga-aquaculture-invasive-risk-assessment",
+    "url": "https://doi.org/10.21608/ejabf.2025.426853",
+    "supports": "Six labels in the source-reviewed AS-ISK risk screen and the study's aquaculture pond, specimen-collection and reporting context."
+  },
+  "snapshotHashes": {
+    "sourceRegistry": "8f8eb73dd66c0f07d50f78e239b83bd7a1989e061c0a2855c1f4c24ba6f22395"
+  }
+}
