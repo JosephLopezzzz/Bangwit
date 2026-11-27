@@ -11,6 +11,8 @@
     "gma-2025-hagonoy-lagyo-bull-sharks",
     "gma-public-affairs-2025-hagonoy-lagyo-shark-broadcast",
     "manila-bulletin-2025-hagonoy-river-bull-sharks",
+    "bulacan-pdpfp-2024-2036-river-network",
+    "bulacan-pg-hagonoy-river-dredging-2022",
     "gbif-hagonoy-lagyo-bounded-fish-occurrence-screen-20261127",
     "gbif-backbone-carcharhinus-leucas-match-20261127"
   ],
@@ -20,6 +22,7 @@
   ],
   "sourceAccess": {
     "media": "GMA and Manila Bulletin article text plus the GMA Public Affairs Dailymotion broadcast page and its rendered English transcript were reviewed on 2026-11-27. The video page was accessible; the underlying video was not downloaded, visually inspected, or audio-transcribed independently. The broadcast gives a tentative photo-based shark identification and renders the local name as Laguio, while the article spells it Lagyo. No media assets were retained and no reuse terms were verified.",
+    "locality": "The official Bulacan PFP and Provincial Government photo release were opened. The PFP lists Matimbo Mangrove Area (Lagyo) under Bulakan; the photo release identifies Hagonoy River along San Agustin. Neither source links the reported Lagyo/Laguio event location to that Hagonoy River reach.",
     "gbif": "Read-only GBIF Occurrence API and Species API v1 requests returned HTTP 200 on 2026-11-27. Only query counts, selected name-match fields, URLs, and SHA-256 response hashes are recorded; no occurrence payloads were retained.",
     "terms": "No media reuse terms or occurrence-level dataset licenses were verified. No article photograph or other image was copied."
   },
@@ -73,7 +76,17 @@
         "Laguio (spelling in the Dailymotion-rendered English transcript; audio not independently checked)",
         "Hagonoy River (Manila Bulletin's event label and the separate EMB/locality crosswalk name)"
       ],
-      "decision": "The article and broadcast associate the same event with the Hagonoy area, but the written article's 'Lagyo' and the broadcast page's rendered transcript 'Laguio' are not reconciled against the Filipino audio or an authoritative map. The sources do not supply coordinates, a named station, or an authoritative reach description connecting the reported place to the EMB monitoring unit or the provincial Hagonoy River locality along San Agustin. Preserve the spellings and media association as a candidate only; do not create a canonical alias or geometry.",
+      "officialLocalityChecks": [
+        {
+          "sourceId": "bulacan-pdpfp-2024-2036-river-network",
+          "finding": "The provincial plan's mangrove table lists 'Matimbo Mangrove Area (Lagyo)' under Bulakan, not Hagonoy. It is a distinct named mangrove locality, not evidence that the reported catch occurred there or that the label identifies a river reach."
+        },
+        {
+          "sourceId": "bulacan-pg-hagonoy-river-dredging-2022",
+          "finding": "A provincial photo release identifies a Hagonoy River dredging project along San Agustin, Hagonoy. It supplies no coordinates, reach geometry, or connection to the incident's reported Lagyo/Laguio locality."
+        }
+      ],
+      "decision": "The article and broadcast associate the same event with the Hagonoy area, but the written article's 'Lagyo' and the broadcast page's rendered transcript 'Laguio' are not reconciled against the Filipino audio or an authoritative map. The provincial plan also uses 'Lagyo' for a mangrove locality in the separate municipality of Bulakan, while a different provincial source locates Hagonoy River along San Agustin; neither links the incident to that river reach. Preserve the spellings and media association as a candidate only; do not create a canonical alias or geometry.",
       "spatialDataAdded": false
     },
     "taxonomy": {
@@ -164,7 +177,7 @@
     }
   },
   "method": {
-    "approach": "Reviewed the GMA Public Affairs Dailymotion page and its rendered English transcript alongside two reports of the same media event; checked the exact Carcharhinus leucas name against GBIF Backbone; queried GBIF exact locality/waterBody fields for the CoL XR Actinopterygii class and the candidate bull-shark taxon; included a positive Laguna de Bay query-path control.",
+    "approach": "Reviewed the GMA Public Affairs Dailymotion page and its rendered English transcript alongside two reports of the same media event; compared its reported local names with the official Bulacan PFP mangrove locality and the provincial Hagonoy River along San Agustin reference; checked the exact Carcharhinus leucas name against GBIF Backbone; queried GBIF exact locality/waterBody fields for the CoL XR Actinopterygii class and the candidate bull-shark taxon; included a positive Laguna de Bay query-path control.",
     "limits": "The broadcast page was opened but its video frames and Filipino audio were not independently inspected; the transcript is rendered in English and its 'Laguio' spelling may not reflect the spoken or official name. No underlying field documentation, diagnostic photo review, exact event date, coordinates, or specimen/voucher was located. GBIF zero exact-string counts are limited to the requested indexed fields and filters. The four national candidate records were not fully audited against their collection institutions."
   },
   "disposition": {
@@ -203,6 +216,14 @@
     {
       "sourceId": "manila-bulletin-2025-hagonoy-river-bull-sharks",
       "supports": "A second publication's account of the same three-shark catch, its Hagonoy River label, and its attribution of a screengrab to the same television report; not independent survey evidence."
+    },
+    {
+      "sourceId": "bulacan-pdpfp-2024-2036-river-network",
+      "supports": "The official provincial plan's separate Matimbo Mangrove Area (Lagyo) locality under Bulakan; used as a name-collision warning only, not a Hagonoy catch-location or river crosswalk."
+    },
+    {
+      "sourceId": "bulacan-pg-hagonoy-river-dredging-2022",
+      "supports": "The provincial source's Hagonoy River place reference along San Agustin; it does not identify a coordinate or connect the reported Lagyo/Laguio event reach."
     },
     {
       "sourceId": "gbif-hagonoy-lagyo-bounded-fish-occurrence-screen-20261127",
