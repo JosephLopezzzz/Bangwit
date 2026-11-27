@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "checkedOn": "2026-11-27",
+  "checkedOn": "2026-11-28",
   "status": "research-only-source-registry",
   "scope": "National acquisition references, freshwater spatial-source leads, shared Manila Bay marine evidence, MIMAROPA/CALABARZON/Central Luzon identity and inland-water source reviews, and Mindanao regional freshwater survey reviews. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 1292,
+  "sourceCount": 1293,
   "sources": [
     {
       "id": "aoyama-et-al-2015-cagayan-glass-eel-recruitment",
@@ -2055,7 +2055,8 @@
           "central-luzon-camiling-river-colxr-occurrence-screen-20261127.json",
           "central-luzon-emb-river-colxr-occurrence-screen-20261127.json",
           "central-luzon-emb-river-gbif-prior-review-reconciliation-20261127.json",
-          "national/reviews/central-luzon-bataan-georeferenced-gbif-fish-screen-20261127.json"
+          "national/reviews/central-luzon-bataan-georeferenced-gbif-fish-screen-20261127.json",
+          "national/reviews/central-luzon-bataan-inaturalist-metadata-followup-20261128.json"
         ],
         "additionalRawPaths": [
           "raw/calabarzon-bmb-gbif-screen-20261024/",
@@ -45133,6 +45134,44 @@
         "The page discusses taxonomic diversity within Pelodiscus; no specimen identity is adjudicated here."
       ],
       "researchStatus": "central-luzon;pampanga;pelodiscus-sinensis;turtle-taxonomy-only;specimens-unverified;research-only"
+    },
+    {
+      "id": "inaturalist-bataan-observation-metadata-followup-20261128",
+      "title": "iNaturalist public metadata follow-up for Bataan GBIF-linked observations",
+      "provider": "iNaturalist",
+      "url": "https://api.inaturalist.org/v1/observations",
+      "additionalUrls": [
+        "https://help.inaturalist.org/en/support/solutions/articles/151000169938-what-is-geoprivacy-what-does-it-mean-for-an-observation-to-be-obscured-",
+        "https://help.inaturalist.org/en/support/solutions/articles/151000175695"
+      ],
+      "role": "Research-only aggregate metadata follow-up for 54 Bataan iNaturalist observations linked from a GBIF coordinate screen. It checks public place-guess text classes, geoprivacy and separate observation/photo license codes; no identifiers, localities, coordinates, usernames, or media are retained.",
+      "checkedOn": "2026-11-28",
+      "sourceYear": 2026,
+      "access": {
+        "status": "public-observation-api-54-of-54-matched;7-obscured-observations-withheld-from-place-classification;place-text-only-aggregate;separate-photo-license-counts;no-raw-response-or-identifiers-retained;research-only",
+        "reviewFiles": [
+          "national/reviews/central-luzon-bataan-inaturalist-metadata-followup-20261128.json"
+        ],
+        "reviewedSections": "Aggregate metadata for the 54 GBIF-linked observations: quality/captive/geoprivacy fields, broad place-guess text classes for non-obscured records, and observation/photo license codes. The public request was unauthenticated. No coordinate fields were accessed; no photo files were downloaded or viewed; no hidden location was inferred.",
+        "fullTextRetrieved": true,
+        "rawPath": null,
+        "rawSha256Recorded": false
+      },
+      "reuse": {
+        "metadata": "Observation-data and image licenses are separate. iNaturalist documents that contributors retain ownership and may set different licenses for observations and media; terms must be checked per item.",
+        "raw": "The public v1 observations endpoint returns broad observation records including location fields. Only needed metadata fields were accessed in memory; no raw response, coordinate, locality string, or item-level identity was retained.",
+        "content": "Only aggregate counts are retained. No photos were viewed, downloaded, or reused; license metadata alone does not establish image suitability or taxonomic correctness."
+      },
+      "publicationApproval": false,
+      "license": null,
+      "licenseUrl": null,
+      "caveats": [
+        "Seven observations marked obscured were excluded from place-guess classification; iNaturalist warns that obscured locations can be inferred, so do not attempt reconstruction.",
+        "Place-guess text categories are not exact collection sites or proof of capture from a named waterbody.",
+        "Research Grade and captive=false are platform fields, not independent verification of species identity or a wild occurrence.",
+        "A reported photo license does not verify what the image depicts, image quality, or suitability for app use."
+      ],
+      "researchStatus": "central-luzon;bataan;inaturalist-linked;geoprivacy-respected;aggregate-metadata-only;no-app-projection"
     }
   ],
   "sourcePolicy": {

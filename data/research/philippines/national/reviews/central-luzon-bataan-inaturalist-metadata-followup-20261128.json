@@ -1,0 +1,99 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "central-luzon-bataan-inaturalist-metadata-followup-20261128",
+  "reviewedOn": "2026-11-28",
+  "phaseId": "L3",
+  "regionId": "0300000000",
+  "regionName": "Region III (Central Luzon)",
+  "provinceTextScope": "Bataan; record IDs discovered through a GBIF stateProvince text filter",
+  "status": "inaturalist-public-metadata-followup;location-payload-not-retained;research-only",
+  "question": "Does direct public iNaturalist metadata for the 54 GBIF-linked Bataan candidates add a trustworthy named-waterbody fish record or clear photo-reuse candidate?",
+  "sourceIds": [
+    "gbif-occurrence-downloads",
+    "inaturalist-bataan-observation-metadata-followup-20261128"
+  ],
+  "source": {
+    "endpoint": "https://api.inaturalist.org/v1/observations",
+    "query": {
+      "gbifDatasetKey": "50c9509d-22c7-4a22-a47d-8c48425ef4a7",
+      "linkedCandidateCount": 54,
+      "linkedCandidateSetSha256": "ce5e1adcfe598c1df8003d14a26d83ed3a249554a27e581ea48bc091bbf3a215",
+      "filters": {
+        "idSet": "54 GBIF occurrenceID links from the ignored snapshot",
+        "perPage": 200,
+        "locale": "en"
+      },
+      "queryUrlPersisted": false
+    },
+    "response": {
+      "httpStatus": 200,
+      "authenticated": false,
+      "bytes": 3538470,
+      "sha256": "55a3a206d9f014f80c9cbdf3083ec0b2a3a571dac25a6548568c3969ed0b16ae",
+      "rows": 54,
+      "matchedCandidateIds": 54,
+      "missingCandidateIds": 0,
+      "unexpectedRows": 0,
+      "rawResponseSaved": false,
+      "reason": "The public v1 API response includes location fields. The script reads only metadata fields needed for aggregate counts, never accesses coordinate properties, and processes the response in memory; no response body, observation IDs, coordinates, localities, usernames, photo URLs, or media files were persisted."
+    },
+    "privacyReferences": [
+      "https://help.inaturalist.org/en/support/solutions/articles/151000169938-what-is-geoprivacy-what-does-it-mean-for-an-observation-to-be-obscured-",
+      "https://help.inaturalist.org/en/support/solutions/articles/151000175695"
+    ]
+  },
+  "result": {
+    "qualityGrade": {
+      "research": 54
+    },
+    "captiveFlag": {
+      "false": 54
+    },
+    "observationGeoprivacy": {
+      "obscured": 7,
+      "open-or-unspecified": 47
+    },
+    "taxonGeoprivacy": {
+      "open": 44,
+      "open-or-unspecified": 10
+    },
+    "placeGuessOrPrivacyDisposition": {
+      "administrative-locality-text-only": 11,
+      "contains-waterbody-type-word": 28,
+      "other-or-country-level-text": 8,
+      "withheld-by-geoprivacy": 7
+    },
+    "placeGuessFieldsNotReviewedDueToGeoprivacy": 7,
+    "placeGuessWithWaterbodyTypeWord": 28,
+    "placeGuessWithRecognizedHydronymToken": 0,
+    "observationLicenseCodes": {
+      "cc-by-nc": 53,
+      "cc0": 1
+    },
+    "recordsWithPhotos": 54,
+    "photoCount": 78,
+    "photoLicenseCodes": {
+      "cc-by-nc": 74,
+      "cc0": 4
+    },
+    "photoFilesDownloadedOrViewed": 0
+  },
+  "interpretation": {
+    "namedWaterbodyAssignmentsValidated": 0,
+    "taxonIdentitiesIndependentlyValidated": 0,
+    "speciesAssertionsAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "geometryAdded": false,
+    "publicAppRowsAdded": 0,
+    "decision": "This item-level metadata follow-up is a bounded candidate screen only. Public place guesses and platform Research Grade labels do not verify a named capture waterbody, taxonomic identification, or wild occurrence. Do not infer hidden locations from public coordinates, photos, dates, usernames, or neighboring observations. Observation-data and photo licenses are separate; any later reuse needs per-record and per-photo review. No image or coordinate was admitted."
+  },
+  "limitations": [
+    "The 54 candidate IDs were linked from a GBIF stateProvince text-filter result; that filter is not a verified provincial polygon.",
+    "The public API response was not retained because it includes location fields; aggregate results cannot support later item-by-item reproduction without the ignored GBIF snapshot and a fresh API request.",
+    "Place guesses were reduced to broad text categories and are not proof of a collection station or fish habitat.",
+    "Obscured or private locations were not inferred or reconstructed; public map points may be generalized.",
+    "Research Grade and captive=false are platform metadata, not independent taxonomic or wild-capture verification.",
+    "Observation-data licenses do not automatically license every associated photo; photo rights were counted by license code but no photo was inspected or reused."
+  ],
+  "nextStep": "Continue Bataan waterbody source discovery with dated, locality-resolved surveys or vouchers. This metadata-only screen does not assign any observation to a named waterbody or independently verify its taxon. If an individual iNaturalist record is later considered, review only public evidence, respect geoprivacy, and assess the observation and each media license separately; do not infer obscured locations or treat this screen as a fish checklist."
+}
