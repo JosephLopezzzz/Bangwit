@@ -1,0 +1,176 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "central-luzon-camiling-river-colxr-occurrence-screen-20261127",
+  "checkedOn": "2026-11-27",
+  "phaseId": "L3",
+  "regionId": "0300000000",
+  "regionName": "Region III (Central Luzon)",
+  "waterbodyNamesAsReported": [
+    "Camiling River"
+  ],
+  "relatedReviewPaths": [
+    "central-luzon-camiling-river-waterbody-fish-evidence-review-20261124.json",
+    "central-luzon-camiling-gbif-locality-followup-20261126.json"
+  ],
+  "sourceIds": [
+    "gbif-occurrence-downloads"
+  ],
+  "status": "bounded-col-xr-actinopterygii-camiling-indexed-field-screen-zero;no-absence-inferred;research-only",
+  "question": "Do indexed GBIF occurrence fields provide fish-record leads explicitly associated with Camiling River or Camiling, Tarlac?",
+  "method": "Resolved Actinopterygii through the GBIF v2 Species Match API against the explicitly pinned Catalogue of Life eXtended Release checklist, then queried the v1 Occurrence Search API with the returned higher-taxon key. Ran three indexed-field combinations both with and without the coordinate requirement. No download was requested.",
+  "taxonomy": {
+    "provider": "Global Biodiversity Information Facility",
+    "matchUrl": "https://api.gbif.org/v2/species/match?scientificName=Actinopterygii&taxonRank=class&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b",
+    "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+    "checklistName": "Catalogue of Life eXtended Release",
+    "usageKey": "8VR36",
+    "matchedName": "Actinopterygii",
+    "matchedRank": "GIGACLASS",
+    "matchType": "EXACT",
+    "taxonomicStatus": "ACCEPTED",
+    "scope": "Ray-finned fish records matched to this CoL XR higher taxon; this screen does not cover sharks, rays, or other vertebrate groups.",
+    "rawFile": "taxon-match-actinopterygii.json",
+    "responseSha256": "01e8f9b1849920667c67c91d22f0d6129c2b89c5368239d3aa6775e8bdc33c29"
+  },
+  "querySemantics": {
+    "endpoint": "https://api.gbif.org/v1/occurrence/search",
+    "country": "PH",
+    "taxonKey": "8VR36",
+    "checklistKey": "7ddf754f-d193-4cc9-b351-99906754a03b",
+    "pageLimit": 300,
+    "pageOffset": 0,
+    "fieldMeaning": "GBIF indexed waterBody and locality fields are search leads only. A matching text value would still require record-level locality, taxon, date, source, and rights review before any river assignment.",
+    "coordinateVariants": "The first three queries require hasCoordinate=true. The last three omit that filter so records without coordinates are also counted.",
+    "dateRange": "No date filter; this is a current GBIF index snapshot, not a time-bounded or complete census."
+  },
+  "queries": [
+    {
+      "label": "waterBody=Camiling River; coordinates required",
+      "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&limit=300&offset=0&waterBody=Camiling+River&hasCoordinate=true",
+      "count": 0,
+      "resultsReturned": 0,
+      "rawFile": "waterbody-camiling-river-offset-0.json",
+      "responseSha256": "895e98c4fc942ab7d7a88a36b939ef457d89aa6b53c9aed51a7fd67ff354269a"
+    },
+    {
+      "label": "locality=Camiling River; coordinates required",
+      "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&limit=300&offset=0&locality=Camiling+River&hasCoordinate=true",
+      "count": 0,
+      "resultsReturned": 0,
+      "rawFile": "locality-camiling-river-offset-0.json",
+      "responseSha256": "895e98c4fc942ab7d7a88a36b939ef457d89aa6b53c9aed51a7fd67ff354269a"
+    },
+    {
+      "label": "locality=Camiling; stateProvince=Tarlac; coordinates required",
+      "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&limit=300&offset=0&locality=Camiling&stateProvince=Tarlac&hasCoordinate=true",
+      "count": 0,
+      "resultsReturned": 0,
+      "rawFile": "locality-camiling-tarlac-offset-0.json",
+      "responseSha256": "895e98c4fc942ab7d7a88a36b939ef457d89aa6b53c9aed51a7fd67ff354269a"
+    },
+    {
+      "label": "waterBody=Camiling River; no coordinate filter",
+      "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&limit=300&offset=0&waterBody=Camiling+River",
+      "count": 0,
+      "resultsReturned": 0,
+      "rawFile": "waterbody-camiling-river-no-coordinate-filter-offset-0.json",
+      "responseSha256": "895e98c4fc942ab7d7a88a36b939ef457d89aa6b53c9aed51a7fd67ff354269a"
+    },
+    {
+      "label": "locality=Camiling River; no coordinate filter",
+      "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&limit=300&offset=0&locality=Camiling+River",
+      "count": 0,
+      "resultsReturned": 0,
+      "rawFile": "locality-camiling-river-no-coordinate-filter-offset-0.json",
+      "responseSha256": "895e98c4fc942ab7d7a88a36b939ef457d89aa6b53c9aed51a7fd67ff354269a"
+    },
+    {
+      "label": "locality=Camiling; stateProvince=Tarlac; no coordinate filter",
+      "requestUrl": "https://api.gbif.org/v1/occurrence/search?country=PH&checklistKey=7ddf754f-d193-4cc9-b351-99906754a03b&taxonKey=8VR36&limit=300&offset=0&locality=Camiling&stateProvince=Tarlac",
+      "count": 0,
+      "resultsReturned": 0,
+      "rawFile": "locality-camiling-tarlac-no-coordinate-filter-offset-0.json",
+      "responseSha256": "895e98c4fc942ab7d7a88a36b939ef457d89aa6b53c9aed51a7fd67ff354269a"
+    }
+  ],
+  "decision": {
+    "indexedQueries": 6,
+    "queryResults": 0,
+    "directCamilingRiverRecordsReviewed": 0,
+    "speciesAssertionsAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "coordinatesCopied": 0,
+    "geometryAdded": false,
+    "dietClaimsAdded": 0,
+    "publicAppRowsAdded": 0,
+    "interpretation": "All six bounded indexed-field searches returned zero results. This means only that this query set surfaced no matching GBIF records in the checked index; it is not evidence that fish are absent from Camiling River or that no other records, spellings, datasets, or literature exist."
+  },
+  "limitations": [
+    "The query covers Actinopterygii under the pinned CoL XR taxonomy only and excludes other fish groups.",
+    "Only exact values and the specified Camiling/Tarlac combination were queried; alternative spellings, tributaries, older locality labels, and unindexed datasets may be missed.",
+    "GBIF occurrence indexing is not a complete survey. No positive local record was available to validate against source records or voucher material.",
+    "No data-use permission is inferred from query availability; no raw occurrence rows or third-party media are redistributed."
+  ],
+  "nextAction": "Continue searching accessible, dated Camiling-specific fish surveys, institutional repositories, and museum/locality records. Keep any municipality-level, basin-level, hatchery, market, or stocking evidence separate from wild river occurrences.",
+  "sources": [
+    {
+      "sourceId": "gbif-occurrence-downloads",
+      "url": "https://techdocs.gbif.org/en/openapi/v1/species",
+      "supports": "GBIF Species Match API and taxonomic checklist usage for resolving the pinned CoL XR higher-taxon key."
+    },
+    {
+      "sourceId": "gbif-occurrence-downloads",
+      "url": "https://techdocs.gbif.org/en/openapi/v1/occurrence",
+      "supports": "GBIF occurrence indexed-field search, pagination, and returned occurrence results."
+    },
+    {
+      "sourceId": "gbif-occurrence-downloads",
+      "url": "https://techdocs.gbif.org/en/data-processing/taxonomy-interpretation",
+      "supports": "GBIF occurrence search supports explicit CoL XR checklist selection; the older GBIF Backbone is retained for backwards compatibility but is no longer updated."
+    }
+  ],
+  "rawSnapshot": {
+    "directory": "raw/national/camiling-river-colxr-occurrence-screen-20261127/",
+    "storage": "Ignored local research raw directory; API payloads are not committed.",
+    "files": [
+      {
+        "path": "taxon-match-actinopterygii.json",
+        "bytes": 998,
+        "sha256": "01e8f9b1849920667c67c91d22f0d6129c2b89c5368239d3aa6775e8bdc33c29"
+      },
+      {
+        "path": "waterbody-camiling-river-offset-0.json",
+        "bytes": 79,
+        "sha256": "895e98c4fc942ab7d7a88a36b939ef457d89aa6b53c9aed51a7fd67ff354269a"
+      },
+      {
+        "path": "locality-camiling-river-offset-0.json",
+        "bytes": 79,
+        "sha256": "895e98c4fc942ab7d7a88a36b939ef457d89aa6b53c9aed51a7fd67ff354269a"
+      },
+      {
+        "path": "locality-camiling-tarlac-offset-0.json",
+        "bytes": 79,
+        "sha256": "895e98c4fc942ab7d7a88a36b939ef457d89aa6b53c9aed51a7fd67ff354269a"
+      },
+      {
+        "path": "waterbody-camiling-river-no-coordinate-filter-offset-0.json",
+        "bytes": 79,
+        "sha256": "895e98c4fc942ab7d7a88a36b939ef457d89aa6b53c9aed51a7fd67ff354269a"
+      },
+      {
+        "path": "locality-camiling-river-no-coordinate-filter-offset-0.json",
+        "bytes": 79,
+        "sha256": "895e98c4fc942ab7d7a88a36b939ef457d89aa6b53c9aed51a7fd67ff354269a"
+      },
+      {
+        "path": "locality-camiling-tarlac-no-coordinate-filter-offset-0.json",
+        "bytes": 79,
+        "sha256": "895e98c4fc942ab7d7a88a36b939ef457d89aa6b53c9aed51a7fd67ff354269a"
+      }
+    ]
+  },
+  "snapshotHashes": {
+    "sourceRegistry": "5e4736b85d57efd0c8539fab415adbab37f854342ff0068b28bd2a6d959890b2"
+  }
+}
