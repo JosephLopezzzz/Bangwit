@@ -3,7 +3,7 @@
   "checkedOn": "2026-11-28",
   "status": "research-only-source-registry",
   "scope": "National acquisition references, freshwater spatial-source leads, shared Manila Bay marine evidence, MIMAROPA/CALABARZON/Central Luzon identity and inland-water source reviews, and Mindanao regional freshwater survey reviews. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 1300,
+  "sourceCount": 1303,
   "sources": [
     {
       "id": "aoyama-et-al-2015-cagayan-glass-eel-recruitment",
@@ -4483,7 +4483,8 @@
           "national/reviews/region02-batanes-usnm-331725-freshwater-eel-review-20261112.json",
           "national/reviews/central-luzon-bataan-pucot-mariveles-1909-locality-crosscheck-20261126.json",
           "national/reviews/central-luzon-bataan-pucot-mariveles-1909-nmnh-ark-crosscheck-20261127.json",
-          "national/reviews/central-luzon-bataan-georeferenced-gbif-fish-screen-20261127.json"
+          "national/reviews/central-luzon-bataan-georeferenced-gbif-fish-screen-20261127.json",
+          "national/reviews/central-luzon-bataan-nmnh-ibol-material-sample-crosscheck-20261128.json"
         ],
         "rawPath": "raw/ncr-colxr-actinopterygii-administrative-20261024/",
         "additionalRawPaths": [
@@ -34922,7 +34923,8 @@
       "access": {
         "status": "gbif-dataset-api-200;dataset-metadata-reviewed",
         "reviewFiles": [
-          "national/reviews/central-luzon-angat-river-bpc001-13-record-review-20261119.json"
+          "national/reviews/central-luzon-angat-river-bpc001-13-record-review-20261119.json",
+          "national/reviews/central-luzon-bataan-nmnh-ibol-material-sample-crosscheck-20261128.json"
         ],
         "reviewedSections": "Dataset title, DOI, citation, publishing project and dataset license."
       },
@@ -45457,6 +45459,110 @@
         "CC0 metadata terms do not license source-linked imagery; the record contains no media."
       ],
       "researchStatus": "central-luzon;clarias-batrachus;pampanga-river;market-purchase-provenance;large-coordinate-uncertainty;research-only"
+    },
+    {
+      "id": "gbif-nmnh-material-samples-bataan-crosscheck-20261128",
+      "title": "NMNH Material Samples (USNM): Bataan-linked material-sample crosswalk",
+      "provider": "National Museum of Natural History, Smithsonian Institution, via GBIF",
+      "url": "https://www.gbif.org/dataset/26098c25-8f7f-4c71-97ac-1d3db181c65e",
+      "additionalUrls": [
+        "https://api.gbif.org/v1/dataset/26098c25-8f7f-4c71-97ac-1d3db181c65e",
+        "https://collections.nmnh.si.edu/ipt/resource?r=nmnh_material_sample",
+        "https://doi.org/10.15468/jb9tdf"
+      ],
+      "role": "Dataset-level provenance and material-sample records for a bounded Bataan GBIF screen. Forty-seven sample rows matched 47 unique USNM catalog numbers in the NMNH preserved-specimen dataset. Their market/vendor locality narratives do not verify field capture sites.",
+      "checkedOn": "2026-11-28",
+      "citation": "Orrell T, Informatics and Data Science Center, Digital Stewardship Team (2026). NMNH Material Samples (USNM). Version 1.96. National Museum of Natural History, Smithsonian Institution. Occurrence dataset https://doi.org/10.15468/jb9tdf accessed via GBIF.org on 2026-11-28.",
+      "access": {
+        "status": "dataset-metadata-reviewed;bataan-material-sample-catalog-crosswalk-complete;market-origin-unverified;research-only",
+        "reviewFiles": [
+          "national/reviews/central-luzon-bataan-nmnh-ibol-material-sample-crosscheck-20261128.json"
+        ],
+        "reviewedSections": "Dataset identity, DOI, version, dataset-level license and citation; 47 Bataan-filtered NMNH material-sample rows cross-matched to preserved USNM catalog numbers and their vendor/market locality narratives."
+      },
+      "reuse": {
+        "metadata": "GBIF dataset metadata reports CC0 1.0; preserve the dataset citation when using the metadata.",
+        "raw": "The Bataan occurrence query and item-level crosswalk remain in Git-ignored local research storage.",
+        "content": "No nucleotide sequence strings, source-linked image, coordinates, or specimen media were copied into the app or public data."
+      },
+      "publicationApproval": false,
+      "license": "CC0-1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+      "caveats": [
+        "The 47 rows are linked sample records, not proof of 47 Bataan capture stations or a complete Bataan fish list.",
+        "The GBIF stateProvince filter is indexed administrative text and includes market/vendor locality narratives.",
+        "A dataset-level metadata license does not grant reuse rights for specimen photographs or independently verify specimen taxonomy."
+      ],
+      "researchStatus": "central-luzon;bataan;NMNH-material-samples;47-catalog-crosswalks;market-origin-unverified;research-only"
+    },
+    {
+      "id": "ncbi-genbank-bataan-ibol-voucher-crosscheck-20261128",
+      "title": "NCBI GenBank voucher and date cross-check for 19 Bataan-linked iBOL samples",
+      "provider": "National Center for Biotechnology Information, GenBank / Nucleotide",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi",
+      "additionalUrls": [
+        "https://www.ncbi.nlm.nih.gov/nuccore/OQ385817",
+        "https://www.ncbi.nlm.nih.gov/nuccore/PZ231560"
+      ],
+      "role": "Bounded NCBI feature-metadata cross-check for the 19 GBIF/iBOL sample rows. Every returned record has a specimen-voucher field matching its iBOL field number and a collection date matching the linked NMNH sample metadata; this is a record-linkage result, not a new specimen collection or independent taxonomic redetermination.",
+      "checkedOn": "2026-11-28",
+      "citation": "NCBI GenBank Nucleotide records accessed through EFetch on 2026-11-28; accession-level links and aggregate response hash are recorded in the linked research review.",
+      "access": {
+        "status": "efetch-http-200;19-of-19-records-returned;voucher-and-date-crosswalk-complete;no-sequence-retained;research-only",
+        "reviewFiles": [
+          "national/reviews/central-luzon-bataan-nmnh-ibol-material-sample-crosscheck-20261128.json"
+        ],
+        "reviewedSections": "GenBank organism, specimen_voucher and collection_date feature qualifiers for 19 accessions linked from iBOL sample records; no nucleotide sequence text was retained."
+      },
+      "reuse": {
+        "metadata": "Public GenBank feature metadata was reviewed for provenance cross-checking; no item-specific permission for sequence redistribution is asserted here.",
+        "raw": "Only response byte count/hash and aggregate voucher/name/date crosswalk facts are retained; the raw flatfile and nucleotide sequences were not saved.",
+        "content": "No nucleotide sequences were reproduced, incorporated into Bangwit, or used for public identification claims."
+      },
+      "publicationApproval": false,
+      "license": null,
+      "licenseUrl": null,
+      "caveats": [
+        "Voucher and collection-date qualifiers link database records; they do not supply an independently verified Bataan capture locality.",
+        "GenBank organism names are submitter-provided labels and may differ in rank or spelling from museum material labels.",
+        "No sequence alignment, phylogenetic analysis, or specimen re-examination was performed."
+      ],
+      "researchStatus": "central-luzon;bataan;iBOL;GenBank;19-voucher-date-crosswalks;no-country-qualifier;research-only"
+    },
+    {
+      "id": "fda-rssl-bataan-market-voucher-crosscheck-20261128",
+      "title": "FDA Reference Standard Sequence Library: Bataan-linked market voucher cross-check",
+      "provider": "U.S. Food and Drug Administration, Division of Seafood Safety",
+      "url": "https://hfpappexternal.fda.gov/scripts/fdcc/index.cfm?set=RSSL_seafood_barcode_data",
+      "additionalUrls": [
+        "https://hfpappexternal.fda.gov/scripts/fdcc/index.cfm?id=PHISH-303&set=RSSL_seafood_barcode_data",
+        "https://www.ncbi.nlm.nih.gov/nuccore/OQ385817"
+      ],
+      "role": "External reference-library cross-check for one linked sample: PHISH-303 is labeled Caranx sexfasciatus, NMNH voucher USNM 443143, and GenBank OQ385817; FDA metadata describes it as a Smithsonian NMNH market survey from the Philippines. The record does not establish a specific capture water.",
+      "checkedOn": "2026-11-28",
+      "citation": "U.S. Food and Drug Administration. Reference Standard Sequence Library for Seafood Identification, PHISH-303 detail record, accessed 2026-11-28.",
+      "access": {
+        "status": "official-FDA-library-and-PHISH-303-detail-reviewed;one-voucher-crosslink;market-context-only;image-not-reviewed",
+        "reviewFiles": [
+          "national/reviews/central-luzon-bataan-nmnh-ibol-material-sample-crosscheck-20261128.json"
+        ],
+        "reviewedSections": "RSSL purpose and authentication description; PHISH-303 taxon, museum voucher, GenBank accession and metadata context."
+      },
+      "reuse": {
+        "metadata": "Public FDA page facts were recorded as a source cross-check; item-specific reuse terms were not assessed.",
+        "raw": "The page was read online; no sequence or image file was downloaded or copied.",
+        "content": "No FDA specimen image or barcode sequence is used in Bangwit. Review image-specific rights separately before any image use."
+      },
+      "publicationApproval": false,
+      "license": null,
+      "licenseUrl": null,
+      "caveats": [
+        "FDA describes the RSSL as a seafood-identification reference library for products marketed in the United States; this is not a Philippine capture survey.",
+        "The PHISH-303 market-survey description is consistent with the source market context but does not identify a precise wild capture locality.",
+        "This one record cannot independently validate the other 18 linked samples or a regional species inventory.",
+        "The detail page links an image, but it was not viewed and no image reuse rights were established."
+      ],
+      "researchStatus": "central-luzon;bataan;FDA-RSSL;PHISH-303;market-voucher-crosslink;image-not-used;research-only"
     }
   ],
   "sourcePolicy": {

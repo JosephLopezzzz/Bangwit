@@ -1,0 +1,175 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "central-luzon-bataan-nmnh-ibol-material-sample-crosscheck-20261128",
+  "reviewedOn": "2026-11-28",
+  "phaseId": "L3",
+  "regionId": "0300000000",
+  "regionName": "Region III (Central Luzon)",
+  "provinceTextScope": "Bataan; 47 NMNH Material Samples and 19 iBOL material-sample keys linked by the preceding broad GBIF coordinate screen",
+  "status": "voucher-records-crosswalked;market-capture-origin-unverified;sequence-metadata-linked;taxonomic-variation-held;research-only",
+  "question": "Do the 66 NMNH/iBOL GBIF material-sample keys represent 66 independently captured Bataan fish, and do they resolve capture locality, taxon identity, or reusable species images?",
+  "sourceIds": [
+    "gbif-occurrence-downloads",
+    "gbif-nmnh-usnm-extant-specimens",
+    "gbif-nmnh-material-samples-bataan-crosscheck-20261128",
+    "gbif-ibol-dataset-040c5662-da76-4782-a48e-cdea1892d14c",
+    "ncbi-genbank-bataan-ibol-voucher-crosscheck-20261128",
+    "fda-rssl-bataan-market-voucher-crosscheck-20261128"
+  ],
+  "inputs": {
+    "gbifCoordinateScreen": {
+      "path": "data/research/philippines/raw/central-luzon-bataan-georeferenced-fish-screen-20261127/occurrence-search.json",
+      "bytes": 1698589,
+      "sha256": "c6b88139b490251df044d828c117576adcccd3121c9d750b315b443cae389179",
+      "gitIgnored": true,
+      "datasetKeys": {
+        "nmnhMaterialSamples": "26098c25-8f7f-4c71-97ac-1d3db181c65e",
+        "nmnhPreservedSpecimens": "821cc27a-e3bb-4bc5-ac34-89ada245069d",
+        "ibol": "040c5662-da76-4782-a48e-cdea1892d14c"
+      }
+    },
+    "metadataCrosswalkSnapshot": {
+      "path": "data/research/philippines/raw/central-luzon-bataan-material-sample-crosscheck-20261128/bataan-material-sequence-metadata-summary.json",
+      "bytes": 16554,
+      "sha256": "b822a545b50fea3e7934cfcdebac3e11e9b2eeea47b85dce0c1e8c3a54ea5e8f",
+      "gitIgnored": true,
+      "retained": "Aggregate counts and a bounded voucher/accession/date/name crosswalk; no nucleotide sequence text, exact coordinates, or media retained."
+    },
+    "ncbiEfetch": {
+      "endpoint": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi",
+      "httpStatus": 200,
+      "requestedAccessions": 19,
+      "returnedRecords": 19,
+      "responseBytes": 75145,
+      "responseSha256": "f099c6f99d8800cecb493537fcf8c1947151d6895d1dc86acc0870d024b50e56",
+      "rawFlatfileSaved": false,
+      "nucleotideSequenceRetained": false
+    }
+  },
+  "findings": {
+    "recordRepresentation": {
+      "nmnhMaterialSampleRows": 47,
+      "uniqueNmnhCatalogNumbers": 47,
+      "matchedPreservedSpecimenRowsByCatalogNumber": 47,
+      "ibolMaterialSampleRows": 19,
+      "ibolRowsMatchingNmnhMaterialAndPreservedCatalogs": 19,
+      "interpretation": "The 66 GBIF occurrence keys are dataset representations of 47 cataloged USNM vouchers plus 19 linked iBOL material-sample records; they are not 66 independent fish or capture events."
+    },
+    "sourceTaxonLabels": {
+      "uniqueNmnhNameStrings": 31,
+      "nmnhMaterialRowsBySourceRank": {
+        "SPECIES": 39,
+        "GENUS": 8
+      },
+      "sequenceLinkedUniqueGenBankOrganismNames": 15,
+      "sourceDisagreements": [
+        "Two vouchers labeled Pennahia anea in NMNH material metadata are named Pennahia aneus in GenBank organism metadata; retain this as a nomenclature/source-label discrepancy rather than silently standardizing it.",
+        "One NMNH material row is genus-level Pempheris while its linked GenBank record names Pempheris schwenkii; the sequence submitter label alone is not an independent museum redetermination."
+      ]
+    },
+    "sequenceVoucherCrosswalk": {
+      "ibolRowsWithGenBankAccession": 19,
+      "recordsReturnedByNCBI": 19,
+      "exactGenBankVoucherToIbolFieldNumberMatches": 19,
+      "collectionDatesMatchingNmnhMaterialRows": 19,
+      "ibolCatalogNumbersMatchingNmnhMaterialAndPreservedRecords": 19,
+      "recordsWithGenBankCountryQualifier": 0,
+      "interpretation": "Public GenBank feature metadata cross-links each iBOL sample to the same USNM voucher and collection date. These fields confirm record linkage, not the specimen's field capture station or a new taxonomic determination."
+    },
+    "collectionAndLocalityContext": {
+      "marketLocalityNarratives": {
+        "Orani provincial market with vendor claim of Manila Bay origin": 42,
+        "Olongapo market with vendor claim of catch from Orani, Bataan": 3,
+        "Orani public market / Navotas fish landing with vendor uncertainty and possible Bicol origin": 2
+      },
+      "verifiedCaptureSites": 0,
+      "allCoordinateUncertaintyGreaterThanMeters": 1000,
+      "broadWaterBodyLabelCountsNonExclusive": {
+        "North Pacific Ocean": 47,
+        "West Philippine Sea": 45,
+        "Manila Bay": 45,
+        "Philippine Sea": 2
+      },
+      "interpretation": "Market location and vendor-supplied origin statements are not georeferenced capture stations. Broad, overlapping waterBody labels and coordinates with more than 1 km uncertainty do not resolve capture water or a Bataan-only occurrence."
+    },
+    "externalReferenceCrosscheck": {
+      "fdaDetailRecord": {
+        "sampleId": "PHISH-303",
+        "scientificName": "Caranx sexfasciatus",
+        "voucher": "USNM 443143",
+        "genBankAccession": "OQ385817",
+        "metadataContext": "Smithsonian Institution NMNH, market survey, Philippines"
+      },
+      "interpretation": "The FDA RSSL record provides a useful external voucher/taxon/accession cross-link for this sample and describes a market-survey context; it does not identify a capture water or validate the other 18 vouchers. The linked image was not viewed or reused."
+    },
+    "mediaAndReuse": {
+      "nmnhDatasetLicense": "CC0-1.0 dataset-level metadata",
+      "ibolDatasetLicense": "CC-BY-4.0 dataset-level metadata",
+      "imagesViewed": 0,
+      "imagesAdded": 0,
+      "sequenceTextRetained": false,
+      "interpretation": "Dataset metadata licenses do not establish image-specific reuse rights or approve biological claims. No image was reviewed, copied, or added."
+    }
+  },
+  "interpretation": {
+    "namedCaptureWaterbodiesValidated": 0,
+    "captureSitesIndependentlyValidated": 0,
+    "taxonIdentitiesIndependentlyRedetermined": 0,
+    "speciesAssertionsAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "geometryAdded": false,
+    "imagesVisuallyReviewed": 0,
+    "imagesAdded": 0,
+    "publicAppRowsAdded": 0,
+    "publicationApproval": false,
+    "decision": "Close this bounded item-level crosswalk task, but keep its market-origin specimen and linked sequence records in research-only status. The 19 voucher/accession/date links clarify catalog relationships; they do not establish Bataan capture sites or a wild-waterbody inventory. The 66 GBIF keys are not 66 distinct fish. Preserve source-name conflicts and do not use the FDA reference image."
+  },
+  "limitations": [
+    "The Bataan GBIF filter is an indexed administrative-text candidate screen, not a verified provincial boundary or capture locality.",
+    "Market and vendor statements are unverified origin claims and can refer to places outside Bataan.",
+    "Coordinates have more than 1,000 m uncertainty and are not used for waterbody geometry or occurrence assignment.",
+    "GenBank voucher and collection-date qualifiers establish cross-record linkage but are submitter-supplied metadata and do not independently identify a capture station or resolve taxonomy.",
+    "The FDA RSSL is designed for seafood identification and includes authenticated, often-vouchered reference specimens, but its market-survey provenance does not establish a Philippine wild capture locality.",
+    "No image was examined; record or dataset license metadata is not blanket permission to reuse specimen photographs.",
+    "This review is not a complete taxonomic checklist for Bataan, Manila Bay, or Central Luzon."
+  ],
+  "nextStep": "Continue L3 source discovery with independent, taxon-resolved freshwater and brackish surveys in Central Luzon, then continue distinct wetland, estuary, and marine waterbody leads. Prioritize date, site-level methods, voucher or accession, and item-specific reuse evidence; preserve shared Manila Bay records and do not assign market-vendor claims to capture waters.",
+  "sources": [
+    {
+      "sourceId": "gbif-occurrence-downloads",
+      "url": "https://api.gbif.org/v1/occurrence/search",
+      "supports": "The Bataan coordinate-screen dataset keys, catalog numbers, basis of record, coordinate-uncertainty fields, and source locality text."
+    },
+    {
+      "sourceId": "gbif-nmnh-material-samples-bataan-crosscheck-20261128",
+      "url": "https://www.gbif.org/dataset/26098c25-8f7f-4c71-97ac-1d3db181c65e",
+      "supports": "NMNH Material Samples dataset identity and dataset-level license/citation metadata."
+    },
+    {
+      "sourceId": "gbif-nmnh-usnm-extant-specimens",
+      "url": "https://www.gbif.org/dataset/821cc27a-e3bb-4bc5-ac34-89ada245069d",
+      "supports": "The matching preserved USNM voucher catalog records."
+    },
+    {
+      "sourceId": "gbif-ibol-dataset-040c5662-da76-4782-a48e-cdea1892d14c",
+      "url": "https://www.gbif.org/dataset/040c5662-da76-4782-a48e-cdea1892d14c",
+      "supports": "The 19 iBOL material-sample dataset records and dataset-level metadata."
+    },
+    {
+      "sourceId": "ncbi-genbank-bataan-ibol-voucher-crosscheck-20261128",
+      "url": "https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi",
+      "supports": "GenBank specimen-voucher, organism-name, and collection-date qualifiers for the 19 linked accessions; nucleotide strings were not retained."
+    },
+    {
+      "sourceId": "fda-rssl-bataan-market-voucher-crosscheck-20261128",
+      "url": "https://hfpappexternal.fda.gov/scripts/fdcc/index.cfm?id=PHISH-303&set=RSSL_seafood_barcode_data",
+      "supports": "FDA RSSL authentication and voucher context for PHISH-303 / USNM 443143 / OQ385817, plus the library's stated market-identification purpose."
+    }
+  ],
+  "snapshotHashes": {
+    "gbifOccurrenceScreen": "c6b88139b490251df044d828c117576adcccd3121c9d750b315b443cae389179",
+    "materialSequenceSummary": "b822a545b50fea3e7934cfcdebac3e11e9b2eeea47b85dce0c1e8c3a54ea5e8f",
+    "ncbiEfetchResponse": "f099c6f99d8800cecb493537fcf8c1947151d6895d1dc86acc0870d024b50e56"
+  },
+  "disposition": "reviewed-and-closed-as-a-bounded-crosswalk;voucher-and-sequence-metadata-links-confirmed;capture-locality-and-independent-taxon-verification-unresolved;research-only;no-public-app-rows"
+}
