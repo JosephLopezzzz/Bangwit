@@ -1,0 +1,98 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "osm-region03-emb-river-crosscheck-20261127",
+  "reviewedOn": "2026-11-27",
+  "phaseId": "L3",
+  "regionId": "0300000000",
+  "regionName": "Region III (Central Luzon)",
+  "status": "bounded-osm-name-and-distance-screen;community-map-only;identity-pending",
+  "sourceIds": [
+    "emb-r3-state-environment-2024",
+    "geonames-ph-country-hydrography-2026-11-07",
+    "osm-region03-emb-river-crosscheck-2026-11-27"
+  ],
+  "inputs": {
+    "data/research/philippines/national/reviews/fao-hydrorivers-region03-emb-roster-prioritization-20261127.json": "fao-hydrorivers-region03-emb-roster-prioritization-20261127",
+    "data/research/philippines/raw/national/fao-hydrorivers-region03-wfs-20261127/emb-roster-nearest-reach-priority-review.jsonl": {
+      "sha256": "f13573e4d6692c42ae7c3ab9a550dc11e5e709e7b000525bfef06cbc561ccc52",
+      "rows": 14
+    }
+  },
+  "source": {
+    "provider": "OpenStreetMap contributors via Overpass API",
+    "endpoint": "https://overpass-api.de/api/interpreter",
+    "queryType": "one bounded nwr query for named waterway elements matching the 14 EMB report labels",
+    "queryBoundingBoxWgs84": [
+      119.735873,
+      14.357534,
+      122.292975,
+      16.559255
+    ],
+    "queryBoundsIncludeAdjacentAreas": true,
+    "osmDataTimestamp": "2026-11-27T11:32:52Z",
+    "querySha256": "095dd3821dde39c2c2e5531308b8337e26b0eb50eff3b78f32e771df1b946305",
+    "response": {
+      "path": "data/research/philippines/raw/national/osm-region03-emb-river-crosscheck-20261127/overpass-response.json",
+      "bytes": 899371,
+      "sha256": "0b893d3d689dc35867632d180f3236c35ec159532b9ca5622b9f5951f6b610b2",
+      "elements": 364
+    },
+    "license": "Open Database License 1.0 (ODbL)",
+    "copyrightUrl": "https://www.openstreetmap.org/copyright"
+  },
+  "results": {
+    "embLabelsScreened": 14,
+    "labelsWithSameNormalizedOsmBaseNameFeature": 9,
+    "uniqueSameNameOsmElements": 316,
+    "returnedElementsByType": {
+      "node": 1,
+      "relation": 4,
+      "way": 359
+    },
+    "candidateGeoNamesRowsWithSameNameOsmGeometry": 9,
+    "candidateGeoNamesRowsWithSameNameOsmFeatureWithinKm": {
+      "1": 7,
+      "5": 8,
+      "10": 8,
+      "25": 8,
+      "50": 8
+    },
+    "candidateFeaturePairsWithinKm": {
+      "1": 22,
+      "5": 66,
+      "10": 111,
+      "25": 190,
+      "50": 198
+    },
+    "candidatePairsScreened": 323,
+    "distinctSameNameOsmFeaturesByWaterwayTag": {
+      "drain": 2,
+      "river": 299,
+      "stream": 15
+    },
+    "waterbodyIdentitiesValidated": 0,
+    "reachIdentitiesValidated": 0,
+    "speciesAssertionsAdded": 0,
+    "regionAssignmentsAdded": 0,
+    "publicGeometryAdded": false,
+    "publicationApproval": false
+  },
+  "localResearchStorage": {
+    "rawDirectory": "data/research/philippines/raw/national/osm-region03-emb-river-crosscheck-20261127",
+    "rawDirectoryGitIgnored": true,
+    "candidateCrosswalkQueue": "data/research/philippines/raw/national/osm-region03-emb-river-crosscheck-20261127/emb-osm-candidate-crosswalk.jsonl",
+    "candidateCrosswalkRows": 14,
+    "candidateCrosswalkSha256": "c6b4c63037e7423ebd270d0b404ba1e496f2a4744388a8ae0b770c349c1a70e2",
+    "candidateCrosswalkGitIgnored": true,
+    "containsNamesCoordinatesAndProviderIds": true
+  },
+  "limitations": [
+    "OpenStreetMap is community-mapped with uneven coverage and is not an official hydrographic survey, field verification, or species-occurrence source.",
+    "The query uses a broad bounding box that includes adjacent areas; names and nearby lines do not prove that a GeoNames point, OSM feature and EMB monitoring station refer to one reach.",
+    "The point-to-line calculation is approximate and inherited from a local equirectangular screen; it is for triage, not survey positioning.",
+    "EMB qualifiers remain separate labels; stripping parenthetical text is used only to form a name-search key and does not merge monitoring units.",
+    "ODbL terms require attribution and may impose share-alike duties on adapted databases; raw geometries and exact crosswalk rows remain local until a qualified distribution review.",
+    "A missing OSM feature is not evidence of a missing watercourse; no species occurrence, fishing access, regulation, water safety or app geometry follows from this screen."
+  ],
+  "nextAction": "Use any nearby same-name OSM geometry only to prioritize review against independent primary locality maps or station records; retain all river, reach and species claims as unresolved."
+}

@@ -1286,7 +1286,7 @@
     },
     {
       "path": "data/research/philippines/luzon-completion-manifest.json",
-      "sha256": "2ecb47ccceb38a69e47814c23102cab84f4e89939a116f2d4d610a119d74558e"
+      "sha256": "3b07420572c8f5746e57217f392e8e2bad79f57b19aee5c14c873dd78797777c"
     },
     {
       "path": "data/research/philippines/makiling-gbif-source-review.json",
@@ -3745,6 +3745,10 @@
       "sha256": "d9047db7d694bd8584629c8733a5cd7f256b4addbdbaeded8c772b94a11a35a3"
     },
     {
+      "path": "data/research/philippines/national/reviews/osm-region03-emb-river-crosscheck-20261127.json",
+      "sha256": "ee6af0705fb6cfb549bb4ab50a6724182e4c270c1e794ae8e8a8a0aa2e733198"
+    },
+    {
       "path": "data/research/philippines/national/reviews/philippine-freshwater-goby-systematic-review-lead-screen-20261116.json",
       "sha256": "c07b7189a3006cf38e4d07755e903562b0417c50ad55872c84a6b71128b851d9"
     },
@@ -4114,7 +4118,7 @@
     },
     {
       "path": "data/research/philippines/sources.json",
-      "sha256": "9f6c7b2f4569c9abc7a83a981d3b19b5a6902ab60f34b65829cbcd19554b3484"
+      "sha256": "5dfaeb08435aac0ab31098c37629867a7f035a9c0716d6ba8bc50105eb5a8009"
     },
     {
       "path": "data/research/philippines/taal-checklist-decisions.json",
@@ -4174,12 +4178,12 @@
     }
   ],
   "summary": {
-    "reviewArtifactsScanned": 401,
+    "reviewArtifactsScanned": 402,
     "regionCount": 8,
-    "sourceRegistryUniqueIds": 1277,
+    "sourceRegistryUniqueIds": 1278,
     "sourceIdentityCrosswalkGroups": 10,
     "reviewClassifications": {
-      "directly-linked": 326,
+      "directly-linked": 327,
       "indirectly-linked": 22,
       "national-context-only": 2,
       "shared-across-regions": 35,
@@ -4187,12 +4191,12 @@
     },
     "brokenOrUnresolvedJsonReferences": 0,
     "missingSourceIdLinks": 0,
-    "localRawReferenceCount": 747,
-    "localRawReferencesAvailable": 747,
+    "localRawReferenceCount": 748,
+    "localRawReferencesAvailable": 748,
     "localRawReferencesUnresolved": 0,
     "localRawHashMismatchReferences": 0,
     "localRawNonmatchingBasenameCandidates": 3,
-    "uniqueLocalRawInputsMatched": 710,
+    "uniqueLocalRawInputsMatched": 711,
     "manuallyReviewedRegionalAssociations": 32,
     "nationalContextArtifacts": 3,
     "unlinkedManualAssociations": 0,
@@ -4228,10 +4232,10 @@
       "rolloutKey": "L3",
       "regionId": "0300000000",
       "name": "Region III (Central Luzon)",
-      "manifestReferenceCount": 128,
-      "directlyLinkedReviewCount": 118,
+      "manifestReferenceCount": 129,
+      "directlyLinkedReviewCount": 119,
       "indirectlyLinkedReviewCount": 8,
-      "declaredOrLinkedReviewCount": 127,
+      "declaredOrLinkedReviewCount": 128,
       "unaccountedExplicitReviewCount": 0,
       "baselineReviewed": false,
       "scopeFrozen": false
@@ -12996,6 +13000,34 @@
       "classification": "indirectly-linked",
       "publicationApproval": null,
       "sourceIds": [],
+      "missingSourceIds": [],
+      "explicitSuccessorReferences": []
+    },
+    {
+      "path": "data/research/philippines/national/reviews/osm-region03-emb-river-crosscheck-20261127.json",
+      "sha256": "ee6af0705fb6cfb549bb4ab50a6724182e4c270c1e794ae8e8a8a0aa2e733198",
+      "reviewId": "osm-region03-emb-river-crosscheck-20261127",
+      "reviewedOn": "2026-11-27",
+      "phaseId": "L3",
+      "declaredRegionIds": [
+        "0300000000"
+      ],
+      "manualAssociation": null,
+      "nationalContextDisposition": null,
+      "directRegionIds": [
+        "0300000000"
+      ],
+      "indirectRegionIds": [],
+      "relatedRegionIds": [
+        "0300000000"
+      ],
+      "classification": "directly-linked",
+      "publicationApproval": null,
+      "sourceIds": [
+        "emb-r3-state-environment-2024",
+        "geonames-ph-country-hydrography-2026-11-07",
+        "osm-region03-emb-river-crosscheck-2026-11-27"
+      ],
       "missingSourceIds": [],
       "explicitSuccessorReferences": []
     },
@@ -25011,6 +25043,19 @@
         "nonmatchingCandidates": []
       },
       {
+        "from": "data/research/philippines/national/reviews/osm-region03-emb-river-crosscheck-20261127.json",
+        "field": "$.source.response.path",
+        "referencedPath": "data/research/philippines/raw/national/osm-region03-emb-river-crosscheck-20261127/overpass-response.json",
+        "availability": "available-unpinned",
+        "matchedFiles": [
+          {
+            "path": "data/research/philippines/raw/national/osm-region03-emb-river-crosscheck-20261127/overpass-response.json",
+            "sha256": "0b893d3d689dc35867632d180f3236c35ec159532b9ca5622b9f5951f6b610b2"
+          }
+        ],
+        "nonmatchingCandidates": []
+      },
+      {
         "from": "data/research/philippines/ncr-species-coverage-review-20261024.json",
         "field": "$.gbif.administrativeSearch.pageResponses[0].file",
         "referencedPath": "page-0.json",
@@ -25458,7 +25503,7 @@
       },
       {
         "from": "data/research/philippines/sources.json",
-        "field": "$.sources[1000].access.rawReceipts[0].file",
+        "field": "$.sources[1001].access.rawReceipts[0].file",
         "referencedPath": "bold-bin-aac5247-preprocessor.json",
         "availability": "available-and-hash-verified",
         "matchedFiles": [
@@ -25471,7 +25516,7 @@
       },
       {
         "from": "data/research/philippines/sources.json",
-        "field": "$.sources[1000].access.rawReceipts[1].file",
+        "field": "$.sources[1001].access.rawReceipts[1].file",
         "referencedPath": "bold-bin-aac5247-summary.json",
         "availability": "available-and-hash-verified",
         "matchedFiles": [
@@ -25484,7 +25529,7 @@
       },
       {
         "from": "data/research/philippines/sources.json",
-        "field": "$.sources[1000].access.rawReceipts[2].file",
+        "field": "$.sources[1001].access.rawReceipts[2].file",
         "referencedPath": "bold-bin-aac5247-query.json",
         "availability": "available-and-hash-verified",
         "matchedFiles": [
@@ -25497,7 +25542,7 @@
       },
       {
         "from": "data/research/philippines/sources.json",
-        "field": "$.sources[1000].access.rawReceipts[3].file",
+        "field": "$.sources[1001].access.rawReceipts[3].file",
         "referencedPath": "bold-bin-aac5247-download.json",
         "availability": "available-and-hash-verified",
         "matchedFiles": [
@@ -25523,7 +25568,7 @@
       },
       {
         "from": "data/research/philippines/sources.json",
-        "field": "$.sources[1186].access.localRawSnapshot",
+        "field": "$.sources[1187].access.localRawSnapshot",
         "referencedPath": "data/research/philippines/raw/kaum-catalog-taxonomy-crosscheck-20261121/worms-exact-name-responses.json",
         "availability": "available-unpinned",
         "matchedFiles": [
@@ -25536,7 +25581,7 @@
       },
       {
         "from": "data/research/philippines/sources.json",
-        "field": "$.sources[1187].access.localRawSnapshot",
+        "field": "$.sources[1188].access.localRawSnapshot",
         "referencedPath": "data/research/philippines/raw/kaum-catalog-taxonomy-crosscheck-20261121/catalog-jaydia-poeciloptera.json",
         "availability": "available-unpinned",
         "matchedFiles": [
@@ -25549,7 +25594,7 @@
       },
       {
         "from": "data/research/philippines/sources.json",
-        "field": "$.sources[1244].access.rawPath",
+        "field": "$.sources[1245].access.rawPath",
         "referencedPath": "raw/national/osm-tambo-lake-crosswalk-20261125/way-103928039-full.json",
         "availability": "available-unpinned",
         "matchedFiles": [
@@ -25789,7 +25834,7 @@
       },
       {
         "from": "data/research/philippines/sources.json",
-        "field": "$.sources[974].access.rawReceipts[0].file",
+        "field": "$.sources[975].access.rawReceipts[0].file",
         "referencedPath": "waterbody-napwc-lagoon.json",
         "availability": "available-and-hash-verified",
         "matchedFiles": [
@@ -25802,7 +25847,7 @@
       },
       {
         "from": "data/research/philippines/sources.json",
-        "field": "$.sources[974].access.rawReceipts[1].file",
+        "field": "$.sources[975].access.rawReceipts[1].file",
         "referencedPath": "waterbody-napwc.json",
         "availability": "available-and-hash-verified",
         "matchedFiles": [
@@ -25815,7 +25860,7 @@
       },
       {
         "from": "data/research/philippines/sources.json",
-        "field": "$.sources[974].access.rawReceipts[2].file",
+        "field": "$.sources[975].access.rawReceipts[2].file",
         "referencedPath": "waterbody-parks-wildlife-lagoon.json",
         "availability": "available-and-hash-verified",
         "matchedFiles": [
@@ -25828,7 +25873,7 @@
       },
       {
         "from": "data/research/philippines/sources.json",
-        "field": "$.sources[974].access.rawReceipts[3].file",
+        "field": "$.sources[975].access.rawReceipts[3].file",
         "referencedPath": "locality-napwc.json",
         "availability": "available-and-hash-verified",
         "matchedFiles": [
@@ -25841,7 +25886,7 @@
       },
       {
         "from": "data/research/philippines/sources.json",
-        "field": "$.sources[974].access.rawReceipts[4].file",
+        "field": "$.sources[975].access.rawReceipts[4].file",
         "referencedPath": "locality-parks-wildlife-lagoon.json",
         "availability": "available-and-hash-verified",
         "matchedFiles": [
@@ -25854,7 +25899,7 @@
       },
       {
         "from": "data/research/philippines/sources.json",
-        "field": "$.sources[975].access.rawPath",
+        "field": "$.sources[976].access.rawPath",
         "referencedPath": "raw/national/gbif-napwc-osm-polygon-screen-20261119/napwc-osm-way-37400786-limit-1.json",
         "availability": "available-unpinned",
         "matchedFiles": [
@@ -25867,7 +25912,7 @@
       },
       {
         "from": "data/research/philippines/sources.json",
-        "field": "$.sources[975].access.rawReceipts[0].file",
+        "field": "$.sources[976].access.rawReceipts[0].file",
         "referencedPath": "napwc-osm-way-37400786-limit-1.json",
         "availability": "available-and-hash-verified",
         "matchedFiles": [
@@ -28123,6 +28168,11 @@
       {
         "path": "data/research/philippines/raw/national/osm-palicpican-river-route-candidates-20261118/way-236509138-full.json",
         "sha256": "0b34912907082ac500240afd08c2d6f8cbe88101c24bf0d9b83252646853ecd1",
+        "referenceCount": 1
+      },
+      {
+        "path": "data/research/philippines/raw/national/osm-region03-emb-river-crosscheck-20261127/overpass-response.json",
+        "sha256": "0b893d3d689dc35867632d180f3236c35ec159532b9ca5622b9f5951f6b610b2",
         "referenceCount": 1
       },
       {
