@@ -3,7 +3,7 @@
   "checkedOn": "2026-11-28",
   "status": "research-only-source-registry",
   "scope": "National acquisition references, freshwater spatial-source leads, shared Manila Bay marine evidence, MIMAROPA/CALABARZON/Central Luzon identity and inland-water source reviews, and Mindanao regional freshwater survey reviews. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 1298,
+  "sourceCount": 1300,
   "sources": [
     {
       "id": "aoyama-et-al-2015-cagayan-glass-eel-recruitment",
@@ -45375,6 +45375,82 @@
         "A source database taxon label does not independently validate the Bataan diet-study specimens."
       ],
       "researchStatus": "central-luzon;bataan;clarias-batrachus;ena-locality-screen;shared-indsc-access-point;no-sample-crosswalk;research-only"
+    },
+    {
+      "id": "idigbio-gbif-hosted-portal-transition-faq-20261128",
+      "title": "iDigBio transition and GBIF Hosted Portal access FAQ",
+      "provider": "Integrated Digitized Biocollections (iDigBio)",
+      "url": "https://idigbio.gbif.us/en/faq/",
+      "additionalUrls": [
+        "https://www.idigbio.org/we-moved"
+      ],
+      "role": "Official iDigBio documentation states that the legacy Portal/API shut down on 2026-11-20 and directs users to GBIF and the GBIF Hosted Portal for data that were published to GBIF. The FAQ says records never published to GBIF are unavailable through the successor; this is an access-path constraint, not a biological finding.",
+      "checkedOn": "2026-11-28",
+      "citation": "Integrated Digitized Biocollections. Frequently Asked Questions and transition page; retrieved 2026-11-28.",
+      "access": {
+        "status": "The current FAQ and official transition page were available. The legacy search.idigbio.org endpoint returned HTTP 410 in the preceding screen.",
+        "reviewFiles": [
+          "national/reviews/central-luzon-clarias-batrachus-gbif-market-provenance-crosscheck-20261128.json"
+        ],
+        "reviewedSections": "Legacy Portal/API transition, data availability through GBIF, hosted portal, and programmatic access."
+      },
+      "reuse": {
+        "metadata": "The FAQ explains where data are served; it does not grant a blanket license to partner specimen records or linked media.",
+        "content": "No specimen data or images were copied from iDigBio."
+      },
+      "publicationApproval": false,
+      "license": null,
+      "licenseUrl": null,
+      "caveats": [
+        "Only records published to GBIF are available through the successor route according to the FAQ; no result from a global GBIF query proves that every iDigBio record was searched.",
+        "The iDigBio-hosted portal interface itself was not queried with the Clarias filter in this review."
+      ],
+      "researchStatus": "idigbio;legacy-api-shutdown;gbif-hosted-portal-transition;source-access-only"
+    },
+    {
+      "id": "gbif-clarias-batrachus-central-luzon-market-provenance-screen-20261128",
+      "title": "GBIF Philippines Clarias batrachus occurrence search and CAS market-provenance record",
+      "provider": "GBIF Secretariat; source dataset CAS Ichthyology (ICH)",
+      "url": "https://api.gbif.org/v1/occurrence/search?taxonKey=5202683&country=PH&limit=300&offset=0",
+      "additionalUrls": [
+        "https://api.gbif.org/v1/occurrence/3426433018",
+        "https://api.gbif.org/v1/dataset/5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+        "https://doi.org/10.15468/efh2ib",
+        "https://techdocs.gbif.org/en/openapi/v1/occurrence"
+      ],
+      "role": "A GBIF Backbone taxonKey Philippines query returned 125 rows. A broad client-side coordinate window surfaced a 1924 CAS preserved-specimen record whose source locality says it was bought in Manila Market; its coordinate uncertainty is 63,577 m. This does not establish capture from the Pampanga River or link the 2025 Bataan diet-study specimens.",
+      "checkedOn": "2026-11-28",
+      "citation": "GBIF occurrence 3426433018, CAS catalog SU(ICH) 54139, event date 1924-11-18; dataset CAS Ichthyology (ICH), DOI 10.15468/efh2ib; queried 2026-11-28.",
+      "access": {
+        "status": "Public GBIF occurrence search and occurrence detail returned HTTP 200; 125 country-level rows and one item-level CAS record were retained in a sanitized local snapshot.",
+        "reviewFiles": [
+          "national/reviews/central-luzon-clarias-batrachus-gbif-market-provenance-crosscheck-20261128.json"
+        ],
+        "rawPath": "raw/central-luzon-clarias-gbif-screen-20261128",
+        "rawReceipts": [
+          {
+            "file": "gbif-clarias-philippines-screen-summary.json",
+            "sha256": "33a220321b4011ae897ca0e8a87e50e6cdc8399113ee22b12f8d69af28bbcf30",
+            "bytes": 2031
+          }
+        ],
+        "reviewedSections": "Occurrence-search query scope, source name, basis of record, CAS catalog number, event date, source locality, dataset license metadata, coordinate uncertainty, and GBIF issue flags."
+      },
+      "reuse": {
+        "metadata": "GBIF and the CAS dataset report CC0-1.0 for this record's metadata. This does not establish biological identity or capture locality.",
+        "content": "No image, sequence, article table, or media asset was copied. The record has no associated media."
+      },
+      "publicationApproval": false,
+      "license": "CC0-1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/legalcode",
+      "caveats": [
+        "A historical specimen and a source-reported market purchase are not evidence of a capture event at the named river.",
+        "The coordinate uncertainty is too broad for site-level assignment and overlaps more than a single waterbody or administrative unit.",
+        "This is a global GBIF API search, not a filter-specific search of the iDigBio Hosted Portal; the successor FAQ does not imply all records are in GBIF.",
+        "GBIF taxonomy and dataset labels do not independently redetermine the specimen or connect it to the 2025 Bataan diet study.",
+        "CC0 metadata terms do not license source-linked imagery; the record contains no media."
+      ],
+      "researchStatus": "central-luzon;clarias-batrachus;pampanga-river;market-purchase-provenance;large-coordinate-uncertainty;research-only"
     }
   ],
   "sourcePolicy": {

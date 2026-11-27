@@ -1,0 +1,179 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "central-luzon-clarias-batrachus-gbif-market-provenance-crosscheck-20261128",
+  "reviewedOn": "2026-11-28",
+  "phaseId": "L3",
+  "regionId": "0300000000",
+  "regionName": "Region III (Central Luzon)",
+  "waterbodyNames": [
+    "Rio Grande de Pampanga (source label only; capture site unresolved)"
+  ],
+  "status": "gbif-record-positive;market-provenance;coordinate-uncertainty-63577m;not-a-river-occurrence;research-only",
+  "question": "Does the official post-transition GBIF access route expose a Clarias batrachus specimen that can verify the Bataan diet-study samples or support a Pampanga River occurrence?",
+  "relatedReviews": [
+    "data/research/philippines/national/reviews/central-luzon-bataan-clarias-2025-diet-identity-review-20261128.json",
+    "data/research/philippines/national/reviews/central-luzon-bataan-clarias-ncbi-sequence-linkage-followup-20261128.json",
+    "data/research/philippines/national/reviews/central-luzon-bataan-clarias-bold-locality-followup-20261128.json",
+    "data/research/philippines/national/reviews/central-luzon-bataan-clarias-ena-sequence-linkage-followup-20261128.json",
+    "data/research/philippines/national/reviews/central-luzon-pampanga-riverine-catch-mendoza-2019-review-20261127.json"
+  ],
+  "sourceIds": [
+    "idigbio-gbif-hosted-portal-transition-faq-20261128",
+    "gbif-clarias-batrachus-central-luzon-market-provenance-screen-20261128",
+    "gbif-cas-ichthyology"
+  ],
+  "method": {
+    "successorAccess": {
+      "officialNotice": "https://idigbio.gbif.us/en/faq/",
+      "legacyEndpoint": "https://search.idigbio.org/v2/summary/count/records/",
+      "legacyEndpointObservedStatus": 410,
+      "officialFaqSays": "The legacy iDigBio Portal and API shut down on 2026-11-20. Specimen data are available through GBIF and the GBIF Hosted Portal when the source data were published to GBIF; unpublished data are unavailable through that successor.",
+      "hostedPortalQueryPerformed": false,
+      "interpretation": "The query below uses the general GBIF occurrence API. It is a practical public-data alternative, not proof of full coverage of the former iDigBio corpus."
+    },
+    "database": "GBIF public Occurrence API",
+    "apiDocumentation": "https://techdocs.gbif.org/en/openapi/v1/occurrence",
+    "taxonomy": {
+      "checklist": "GBIF Backbone Taxonomy",
+      "taxonKey": 5202683,
+      "acceptedName": "Clarias batrachus (Linnaeus, 1758)",
+      "note": "The GBIF name match is a database taxon label only; it does not validate the Bataan study specimens."
+    },
+    "query": {
+      "url": "https://api.gbif.org/v1/occurrence/search?taxonKey=5202683&country=PH&limit=300&offset=0",
+      "httpStatus": 200,
+      "filters": {
+        "taxonKey": 5202683,
+        "country": "PH"
+      },
+      "pagination": {
+        "limit": 300,
+        "offset": 0
+      },
+      "rowsReported": 125,
+      "rowsFetched": 125,
+      "basisOfRecordFrequencies": {
+        "MATERIAL_SAMPLE": 34,
+        "PRESERVED_SPECIMEN": 79,
+        "MATERIAL_CITATION": 12
+      },
+      "distinctDatasetCount": 17,
+      "localityTextScope": [
+        "stateProvince",
+        "locality",
+        "verbatimLocality",
+        "waterBody",
+        "county",
+        "municipality"
+      ],
+      "exactTextMatchesForBataanOrStudyLocalities": 0,
+      "textSearchLimit": "Case-insensitive substring check over the 125 fetched rows for Bataan, Orani, Bagac, Silahis, Pag-asa, or Parang. This is not an exact API filter and cannot establish absence.",
+      "rowsWithClariasNameText": 124,
+      "sourceScientificNameFrequencies": {
+        "Clarias batrachus (Linnaeus, 1758)": 98,
+        "BOLD:AAM1927": 27
+      }
+    },
+    "spatialTriage": {
+      "type": "client-side rectangular coordinate filter",
+      "bounds": {
+        "south": 14.25,
+        "north": 15.5,
+        "west": 119.6,
+        "east": 121
+      },
+      "note": "A deliberately broad search window around Bataan and adjacent waters; it is not an administrative or waterbody boundary and does not assign records to a place.",
+      "rowsInWindow": 3,
+      "selectedCasRecordKey": 3426433018,
+      "otherRowsRetained": false
+    },
+    "record": {
+      "detailUrl": "https://api.gbif.org/v1/occurrence/3426433018",
+      "detailHttpStatus": 200,
+      "sourceDatasetUrl": "https://api.gbif.org/v1/dataset/5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+      "sourceDatasetDoi": "10.15468/efh2ib",
+      "summary": {
+        "key": 3426433018,
+        "sourceName": "Clarias batrachus (Linnaeus, 1758)",
+        "acceptedName": "Clarias batrachus (Linnaeus, 1758)",
+        "basisOfRecord": "PRESERVED_SPECIMEN",
+        "occurrenceStatus": "DETECTED",
+        "datasetTitle": "CAS Ichthyology (ICH)",
+        "datasetKey": "5d6c10bd-ea31-4363-8b79-58c96d859f5b",
+        "datasetDoi": "10.15468/efh2ib",
+        "datasetLicense": "CC0-1.0",
+        "catalogNumber": "54139",
+        "institutionCode": "CAS",
+        "collectionCode": "SU(ICH)",
+        "eventDate": "1924-11-18",
+        "recordedBy": "Herre, Albert W.",
+        "identifiedBy": "Albert W. Herre",
+        "country": "Philippines",
+        "stateProvince": "Bulacan",
+        "locality": "Rio Grande de Pampanga, bought in Manila Market",
+        "decimalLatitude": 15.296412,
+        "decimalLongitude": 120.864984,
+        "coordinateUncertaintyInMeters": 63577,
+        "geodeticDatum": "WGS84",
+        "occurrenceId": "urn:catalog:CAS:SU(ICH):54139",
+        "mediaCount": 0,
+        "gbifIssues": [
+          "GEODETIC_DATUM_ASSUMED_WGS84",
+          "CONTINENT_INVALID",
+          "CONTINENT_DERIVED_FROM_COORDINATES",
+          "OCCURRENCE_STATUS_INFERRED_FROM_INDIVIDUAL_COUNT"
+        ],
+        "occurrenceRemarks": "Starks bone collection."
+      }
+    },
+    "scope": "One country-level taxon query and a client-side coordinate triage of its returned rows. The review did not query the iDigBio-hosted portal directly, inspect the physical specimen, request a museum determination, or link any barcode/voucher to the Bataan diet-study samples.",
+    "limitations": [
+      "The GBIF occurrence query combines multiple source datasets and is not an independent specimen count; the 125 rows include 27 BOLD barcode identifiers under the taxon key.",
+      "The CAS locality explicitly says the specimen was bought in Manila Market. The source text does not establish where the fish was captured.",
+      "The CAS coordinate has 63,577 m uncertainty, and the row flags a datum assumption and other interpretation issues. It cannot support a river, town, or provincial boundary assignment.",
+      "The locality field's Rio Grande de Pampanga phrase is kept as a source label and is not promoted to a Pampanga River occurrence.",
+      "No exact Bataan, Orani, Bagac, Silahis, Pag-asa, or Parang text appeared in the bounded 125-row result, but these text checks are not absence evidence.",
+      "The cataloged taxon remains unverified against the 2025 study material; the row does not solve the previously reviewed range and voucher concerns.",
+      "The record has no associated media; no image or reuse inference was made."
+    ]
+  },
+  "inputSnapshotHashes": {
+    "sourceRegistry": "60fec39a99dd82c322d5f45c91688ca9cdf149cd96935d53cd6e5f5f39096a4f"
+  },
+  "rawSnapshot": {
+    "directory": "raw/central-luzon-clarias-gbif-screen-20261128",
+    "gitIgnored": true,
+    "file": "data/research/philippines/raw/central-luzon-clarias-gbif-screen-20261128/gbif-clarias-philippines-screen-summary.json",
+    "bytes": 2031,
+    "sha256": "33a220321b4011ae897ca0e8a87e50e6cdc8399113ee22b12f8d69af28bbcf30",
+    "retained": "A sanitized query count/frequency summary and the one CAS source row; no other returned row-level occurrence data or images retained."
+  },
+  "disposition": {
+    "speciesAssertionsAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "dietGuideRowsAdded": 0,
+    "baitSuggestionsAdded": 0,
+    "geometryAdded": false,
+    "imagesAdded": 0,
+    "publicAppRowsAdded": 0,
+    "publicationApproval": false,
+    "decision": "The GBIF/CAS result is a historical specimen with market-purchase provenance and unusably broad coordinate precision for river assignment. It neither verifies a Pampanga River capture nor crosswalks the Bataan diet-study samples. Preserve it as a research-only provenance lead; do not add species, occurrence, diet, geometry, image, or app rows."
+  },
+  "sources": [
+    {
+      "sourceId": "idigbio-gbif-hosted-portal-transition-faq-20261128",
+      "url": "https://idigbio.gbif.us/en/faq/",
+      "supports": "The successor route, legacy shutdown date, distinction between GBIF-published and unpublished source data, and availability of programmatic access."
+    },
+    {
+      "sourceId": "gbif-clarias-batrachus-central-luzon-market-provenance-screen-20261128",
+      "url": "https://api.gbif.org/v1/occurrence/search?taxonKey=5202683&country=PH&limit=300&offset=0",
+      "supports": "The bounded Philippines query counts, client-side coordinate-window count, and the selected CAS catalog record's fields."
+    },
+    {
+      "sourceId": "gbif-cas-ichthyology",
+      "url": "https://doi.org/10.15468/efh2ib",
+      "supports": "CAS Ichthyology dataset identity and the CC0-1.0 dataset metadata supplied with the selected GBIF occurrence record."
+    }
+  ]
+}
