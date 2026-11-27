@@ -8,7 +8,7 @@ const researchRoot = "data/research/philippines";
 const manifestPath = `${researchRoot}/luzon-completion-manifest.json`;
 const sourcesPath = `${researchRoot}/sources.json`;
 const reviewsRoot = `${researchRoot}/national/reviews`;
-const outputPath = `${reviewsRoot}/luzon-evidence-index-20261126.json`;
+const outputPath = `${reviewsRoot}/luzon-evidence-index-20261127.json`;
 const rawRoot = path.resolve(root, researchRoot, "raw");
 const slash = (value) => value.replaceAll("\\", "/");
 
@@ -576,7 +576,7 @@ const publicProjections = [...publicProjectionComponents.entries()].map(([name, 
 
 const index = {
   schemaVersion: 1,
-  snapshotId: "luzon-evidence-audit-20261126",
+  snapshotId: "luzon-evidence-audit-20261127",
   status: "generated-read-only-audit;review-linkage-complete;phase-id-namespace-separated;publication-exceptions-open",
   purpose: "Reconcile existing regional review artifacts and their explicit JSON reference chains. The global sources.json catalog and Luzon manifest are linkage leaves rather than regional scope edges; this index does not admit research rows or change regional completion status.",
   inputs: [...inputPaths]

@@ -1,0 +1,180 @@
+{
+  "schemaVersion": 1,
+  "reviewedOn": "2026-11-27",
+  "phaseId": "L3",
+  "regionId": "0300000000",
+  "regionName": "Region III (Central Luzon)",
+  "province": "Bataan",
+  "waterbodyNames": [
+    "Pucot River",
+    "Mariveles River",
+    "Mariveles Bay",
+    "Manila Bay"
+  ],
+  "status": "direct-nmnh-record-crosscheck-89-of-89;historical-lot-crosswalk-unresolved;research-only",
+  "question": "Can public, item-level NMNH Division of Fishes records recover a row-level link between this 89-row GBIF cluster and the older Albatross collection-lot numbers?",
+  "decision": "The official NMNH Fishes search returned one matching museum record for each of the 89 GBIF ARK identifiers. Current catalog number, collection day, source locality and waterbody fields match row-for-row. The museum records keep the same compound locality text: all 53 records dated 29 January 1909 say “Manila Bay; Pucot River (Near Mariveles)” while their waterbody is “North Pacific Ocean, Manila Bay”; all 36 records dated 30 January say “Mariveles Bay and Pucot River, Mariveles Wharf; Manila Bay” while their waterbody includes Mariveles Bay and Manila Bay. The API payloads do not expose Fowler lot numbers 7885, 7893 or 7894. Keep all rows historical research-only; no exclusive river assignment, current presence, app species, coordinates, geometry or image reuse is approved.",
+  "method": {
+    "gbifInput": "Filter the previously captured 319-row Bataan preserved-specimen screen for Pucot River in locality, verbatimLocality or waterBody; retain each GBIF record identifier, catalog number, scientific name, event date, locality and waterBody.",
+    "nmnhEndpoint": "https://collections.nmnh.si.edu/search/fishes/search.php",
+    "nmnhInterface": "https://collections.nmnh.si.edu/search/fishes/",
+    "request": "One POST per GBIF ARK: action=1, qtype=12 (query string), view=keyword:grid, start=0, limit=1, terms=\"ark <internal-id>\". The internal ID follows the search UI transformation: remove the ark:/65665/ prefix and its ARK type digit, then remove hyphens. 125 ms spacing was used between requests.",
+    "access": "The institution’s public Fishes search interface returned the results without sign-in, API key, or access-control bypass. This was not the Smithsonian Open Access API and is not asserted to be a stable bulk API.",
+    "matchedIdentity": "Each returned admuu ARK and darcx catalog number was compared with the GBIF row; the collection date was normalized to YYYY-MM-DD for day-level comparison."
+  },
+  "gbifCluster": {
+    "datasetKey": "821cc27a-e3bb-4bc5-ac34-89ada245069d",
+    "records": 89,
+    "uniqueSourceScientificNameStrings": 65,
+    "uniqueCatalogNumbers": 89,
+    "coordinates": 0
+  },
+  "nmnhCrosscheck": {
+    "endpointResultCount": 89,
+    "uniqueMuseumRecords": 89,
+    "exactArkMatches": 89,
+    "exactCatalogNumberMatches": 89,
+    "collectionDateDayMatches": 89,
+    "exactLocalityMatches": 89,
+    "exactWaterBodyMatches": 89,
+    "nameComparison": {
+      "binomialStringsMatching": 88,
+      "higherTaxonRows": 1,
+      "note": "The remaining GBIF source string is genus-level “Gerres”; NMNH also returns “Gerres”. It is not counted as a species-level record."
+    },
+    "byDate": [
+      {
+        "eventDate": "1909-01-29",
+        "records": 53,
+        "sourcePlace": "Manila Bay; Pucot River (Near Mariveles)",
+        "waterBody": "North Pacific Ocean, Manila Bay",
+        "nmnhEventIds": {
+          "5091476": 33,
+          "5110355": 20
+        },
+        "acqlnFieldValues": {
+          "065731": 24,
+          "000000": 12,
+          "missing": 17
+        }
+      },
+      {
+        "eventDate": "1909-01-30",
+        "records": 36,
+        "sourcePlace": "Mariveles Bay and Pucot River, Mariveles Wharf; Manila Bay",
+        "waterBody": "North Pacific Ocean, Mariveles Bay; Manila Bay",
+        "nmnhEventIds": {
+          "5105574": 36
+        },
+        "acqlnFieldValues": {
+          "065731": 7,
+          "000000": 10,
+          "missing": 19
+        }
+      }
+    ],
+    "legacyLotNumbersSearched": [
+      "7885",
+      "7893",
+      "7894"
+    ],
+    "legacyLotNumberMatches": 0,
+    "returnedFieldWithLotLikeName": {
+      "key": "acqln",
+      "values": {
+        "065731": 31,
+        "000000": 22,
+        "missing": 36
+      },
+      "interpretation": "Literal field and values only. Its relationship, if any, to Fowler’s older lot numbers was not established."
+    },
+    "museumCoordinateFieldsReturned": [],
+    "note": "The three NMNH event IDs and the acqln field do not themselves establish a crosswalk to Fowler lots or an exclusive collection waterbody."
+  },
+  "historicalLocalityCrosscheck": {
+    "sourceId": "fowler-philippine-fish-manuscript-bhl-1930-1941-20261120",
+    "printedPage": 481,
+    "entries": [
+      {
+        "oldLotNumber": "7885",
+        "sourceLocality": "Pucot River near Mariveles, Manila Bay",
+        "sourceDate": "1909-01-29"
+      },
+      {
+        "oldLotNumbers": [
+          "7893",
+          "7894"
+        ],
+        "sourceLocality": "Mariveles River, Mariveles, Manila Bay",
+        "sourceDate": "1909-01-30"
+      }
+    ],
+    "crosswalkLimit": "None of these old lot numbers appeared in the 89 returned NMNH record payloads. Date and place phrase similarity does not establish an item-level lot mapping."
+  },
+  "interpretation": {
+    "jan29": "Museum data confirm the same compound Pucot River/Manila Bay place for all 53 rows, but still give Manila Bay as the waterbody and provide no coordinates; do not project these as river-only occurrences.",
+    "jan30": "Museum data confirm the same compound Mariveles Bay/Pucot River/Mariveles Wharf/Manila Bay phrase for all 36 rows; they do not name Mariveles River as the exclusive waterbody. Do not relabel them as river-only records.",
+    "geography": "No river centerline, estuary boundary, shoreline or municipal-water geometry was derived.",
+    "currentness": "Historical preserved specimens do not establish contemporary presence, abundance, habitat limits, catchability, legality or safety."
+  },
+  "decisions": {
+    "newAppSpeciesRows": 0,
+    "newCurrentPresenceAssertions": 0,
+    "newWaterbodyOccurrenceAssignments": 0,
+    "newGeometry": false,
+    "imagesVisuallyReviewed": 0,
+    "imageAssetsApproved": 0,
+    "abundanceInferred": false,
+    "publicProjectionApproved": false,
+    "regionalCompletionClaim": false
+  },
+  "limitations": [
+    "NMNH catalog search results are individual historical collection records, not a current biodiversity inventory.",
+    "The endpoint is the interface backend used by the NMNH Fishes search; its stability as a public bulk service was not established.",
+    "No item-level NMNH catalog-data license or image reuse terms were verified. The GBIF dataset CC0 statement is not transferred to Smithsonian content or record-linked media by inference.",
+    "GBIF supplies no coordinates for these 89 rows, and the NMNH returned records supplied no coordinate fields in the reviewed result payloads.",
+    "The source returns 65 distinct GBIF scientific-name strings; one record is genus-level and must not count as a species.",
+    "The older Fowler lot numbers remain unlinked to the modern USNM catalog numbers; the returned acqln values are not treated as equivalent identifiers."
+  ],
+  "followUp": [
+    "Keep all 89 rows research-only. Do not add species or assign a specific waterbody from this cluster.",
+    "Continue the Central Luzon work with a separate, source-backed waterbody and current or otherwise well-scoped fish evidence; do not wait on government correspondence for this held cluster."
+  ],
+  "sourceIds": [
+    "gbif-nmnh-usnm-extant-specimens",
+    "fowler-philippine-fish-manuscript-bhl-1930-1941-20261120",
+    "smithsonian-nmnh-pucot-mariveles-89-ark-crosscheck-20261127"
+  ],
+  "sources": [
+    {
+      "sourceId": "gbif-nmnh-usnm-extant-specimens",
+      "supports": "The 89-row Bataan GBIF preserved-specimen cluster and its ARK identifiers, modern catalog numbers, dates, locality strings, broad Manila Bay waterBody labels, and absence of coordinates."
+    },
+    {
+      "sourceId": "fowler-philippine-fish-manuscript-bhl-1930-1941-20261120",
+      "supports": "The handwritten archival manuscript records old Albatross lot 7885 at Pucot River on 29 January 1909, and lots 7893–7894 at Mariveles River on 30 January 1909."
+    },
+    {
+      "sourceId": "smithsonian-nmnh-pucot-mariveles-89-ark-crosscheck-20261127",
+      "supports": "Official NMNH Fishes search payloads for 89 item-level ARK lookups; confirms matching modern catalog/date/locality/waterbody metadata but exposes no match to the Fowler lot numbers."
+    }
+  ],
+  "relatedReviews": [
+    "data/research/philippines/national/reviews/central-luzon-bataan-pucot-mariveles-1909-locality-crosscheck-20261126.json"
+  ],
+  "rawSnapshot": {
+    "directory": "raw/central-luzon-bataan-pucot-nmnh-fishes-api-20261127",
+    "files": [
+      {
+        "path": "nmnh-fishes-ark-crosscheck.json",
+        "bytes": 217800,
+        "sha256": "fb8fe05c4eb1493868575a55e1ae2207f7753e9164acfac2822145d6f39b062d"
+      }
+    ],
+    "retrievedAt": "2026-11-27T07:19:58.993Z",
+    "endpoint": "https://collections.nmnh.si.edu/search/fishes/search.php",
+    "recordsRequested": 89,
+    "recordsReturned": 89,
+    "queryMethod": "One public search-interface POST per ARK; see method.request."
+  }
+}

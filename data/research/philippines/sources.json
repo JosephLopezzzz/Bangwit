@@ -1,9 +1,9 @@
 {
   "schemaVersion": 1,
-  "checkedOn": "2026-11-26",
+  "checkedOn": "2026-11-27",
   "status": "research-only-source-registry",
   "scope": "National acquisition references, freshwater spatial-source leads, shared Manila Bay marine evidence, MIMAROPA/CALABARZON/Central Luzon identity and inland-water source reviews, and Mindanao regional freshwater survey reviews. Listing is not blanket publication approval; explicitly named projection batches have separate field-level decisions.",
-  "sourceCount": 1264,
+  "sourceCount": 1265,
   "sources": [
     {
       "id": "aoyama-et-al-2015-cagayan-glass-eel-recruitment",
@@ -4215,16 +4215,17 @@
         "https://doi.org/10.15468/hnhrg3",
         "https://api.gbif.org/v1/dataset/821cc27a-e3bb-4bc5-ac34-89ada245069d"
       ],
-      "role": "Dataset source for selected dated, preserved-specimen records from the Philippines, including shared Manila Bay/Bulacan and a historical freshwater-labeled Basco, Batanes eel specimen; these remain source-specific historical evidence, not current inventories. A bounded Bataan screen also found 89 1909 records with mixed Pucot River, Mariveles Bay/Wharf, and Manila Bay text; these remain unassigned to a specific waterbody.",
-      "checkedOn": "2026-11-26",
+      "role": "Dataset source for selected dated, preserved-specimen records from the Philippines, including shared Manila Bay/Bulacan and a historical freshwater-labeled Basco, Batanes eel specimen; these remain source-specific historical evidence, not current inventories. A bounded Bataan screen found 89 1909 rows with mixed Pucot River, Mariveles Bay/Wharf, and Manila Bay text. All 89 item ARKs were cross-checked against the direct NMNH Fishes search; exact waterbody assignments remain unresolved.",
+      "checkedOn": "2026-11-27",
       "access": {
-        "status": "dataset-metadata-and-selected-occurrence-records-reviewed;USNM-204231-GBIF-record-cross-checked-with-primary-description;USNM-331725-Basco-freshwater-locality-reviewed;direct-NMNH-catalog-page-served-JavaScript-shell;source-label-confirmation-pending;bataan-pucot-mariveles-1909-cluster-crosschecked-with-smithsonian-index;row-level-waterbody-unresolved;research-only",
+        "status": "dataset-metadata-and-selected-occurrence-records-reviewed;USNM-204231-GBIF-record-cross-checked-with-primary-description;USNM-331725-Basco-freshwater-locality-reviewed;direct-NMNH-catalog-page-served-JavaScript-shell;source-label-confirmation-pending;bataan-pucot-mariveles-1909-cluster-crosschecked-with-smithsonian-index;row-level-waterbody-unresolved;research-only;bataan-pucot-mariveles-89-item-arks-crosschecked-with-nmnh-fishes;legacy-lot-crosswalk-unresolved",
         "reviewFiles": [
           "ncr-manila-bay-gbif-record-triage-20261024.json",
           "central-luzon-bulacan-manila-bay-usnm-source-review-20261024.json",
           "calabarzon-manila-bay-stolephorus-celsior-gbif-review-20261031.json",
           "national/reviews/region02-batanes-usnm-331725-freshwater-eel-review-20261112.json",
-          "national/reviews/central-luzon-bataan-pucot-mariveles-1909-locality-crosscheck-20261126.json"
+          "national/reviews/central-luzon-bataan-pucot-mariveles-1909-locality-crosscheck-20261126.json",
+          "national/reviews/central-luzon-bataan-pucot-mariveles-1909-nmnh-ark-crosscheck-20261127.json"
         ],
         "rawPath": "raw/ncr-colxr-actinopterygii-administrative-20261024/",
         "additionalRawPaths": [
@@ -44175,6 +44176,40 @@
         "This single catalog match does not crosswalk or validate the remaining 88 GBIF records in the historical locality cluster.",
         "The collection date and locality are historical; they do not establish current presence, a river boundary, habitat limits, catchability, legality, or safety."
       ]
+    },
+    {
+      "id": "smithsonian-nmnh-pucot-mariveles-89-ark-crosscheck-20261127",
+      "title": "Smithsonian NMNH Fishes item records for the 89-row Pucot/Mariveles GBIF cluster",
+      "provider": "Smithsonian National Museum of Natural History, Division of Fishes",
+      "url": "https://collections.nmnh.si.edu/search/fishes/",
+      "additionalUrls": [
+        "https://collections.nmnh.si.edu/search/fishes/search.php",
+        "https://naturalhistory.si.edu/research/idsc/data-access",
+        "https://api.gbif.org/v1/dataset/821cc27a-e3bb-4bc5-ac34-89ada245069d"
+      ],
+      "role": "Direct source check for each of the 89 GBIF ARKs in the 1909 Bataan Pucot/Mariveles locality cluster. Confirms modern catalog numbers, dates, place strings and broad/compound waterBody strings row-by-row; does not link Fowler legacy lot numbers or establish exclusive waterbody assignments.",
+      "checkedOn": "2026-11-27",
+      "access": {
+        "status": "public-NMNH-Fishes-search-interface-89-ARK-records-crosschecked;exact-GBIF-catalog-date-locality-waterBody-match;historic-lot-crosswalk-unresolved;research-only",
+        "reviewFiles": [
+          "central-luzon-bataan-pucot-mariveles-1909-nmnh-ark-crosscheck-20261127.json",
+          "central-luzon-bataan-pucot-mariveles-1909-locality-crosscheck-20261126.json"
+        ],
+        "rawPath": "raw/central-luzon-bataan-pucot-nmnh-fishes-api-20261127",
+        "rawBytes": 217800,
+        "rawSha256": "fb8fe05c4eb1493868575a55e1ae2207f7753e9164acfac2822145d6f39b062d",
+        "fieldAllowlistOnly": true,
+        "coordinatesRetained": false,
+        "accessMethod": "One rate-spaced item-level query per ARK through the official Fishes search interface backend. No login, API key or access-control bypass. Not a claim of a stable supported bulk API."
+      },
+      "reuse": {
+        "metadata": "The NMNH search result includes factual catalog fields, but an item-specific catalog-data license was not verified. GBIF dataset licensing is not assumed to grant rights to NMNH catalog text or record-linked media.",
+        "raw": "A selected-field response snapshot is kept in ignored local research storage; no images were downloaded.",
+        "content": "Use for source attribution and research comparison only. Do not copy images, substantial catalog notes, or assert publication rights. Historical records do not establish present-day presence, catchability, legality or safety."
+      },
+      "license": "No item-specific catalog-data reuse terms verified",
+      "publicationApproval": false,
+      "researchStatus": "central-luzon;bataan;pucot-river;mariveles;historical-specimens;89-record-item-crosscheck;legacy-lot-crosswalk-unresolved;research-only"
     }
   ],
   "sourcePolicy": {
