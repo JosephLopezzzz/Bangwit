@@ -1,0 +1,233 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "central-luzon-aquino-2025-national-museum-accession-crosscheck-20261128",
+  "reviewedOn": "2026-11-28",
+  "phaseId": "L3",
+  "regionId": "0300000000",
+  "regionName": "Region III (Central Luzon)",
+  "waterbodyNames": [
+    "Pampanga aquaculture-study context; no natural waterbody is assigned"
+  ],
+  "status": "national-museum-dataset-screened;no-study-accession-crosswalk;province-field-not-capture-site;research-only",
+  "question": "Can the publicly published National Museum fish-collection dataset identify the specimens submitted for identification in Aquino (2025), especially the Clarias batrachus label, or place any of the six source taxa in Pampanga?",
+  "relatedReviews": [
+    "data/research/philippines/national/reviews/central-luzon-aquino-2025-pampanga-aquaculture-risk-review-20261127.json",
+    "data/research/philippines/national/reviews/central-luzon-aquino-2025-pampanga-risk-taxa-taxonomy-crosscheck-20261127.json",
+    "data/research/philippines/national/reviews/central-luzon-clarias-batrachus-gbif-market-provenance-crosscheck-20261128.json"
+  ],
+  "sourceIds": [
+    "asean-cb-national-museum-fish-collection-gbif",
+    "aquino-2025-pampanga-aquaculture-invasive-risk-assessment",
+    "gbif-occurrence-downloads"
+  ],
+  "method": {
+    "dataset": {
+      "datasetKey": "18896efa-22df-4fbd-9782-42f47257e753",
+      "doi": "10.15468/qdw6v3",
+      "title": "Fish Specimen Collection of National Museum, Philippines",
+      "publisher": "ASEAN Centre for Biodiversity (ACB)",
+      "archiveVersion": "1.38",
+      "archivePublished": "2026-09-11",
+      "archiveSha256": "63bbcf7a9842538913e602f69c41f802be5d056b5909f98768267a14a90d9bbf",
+      "archiveBytes": 306743,
+      "coreRecords": 8225,
+      "license": "CC-BY-4.0",
+      "datasetApiModified": "2026-09-10T19:53:52.774+00:00",
+      "collectionDescription": "The published dataset describes common/commercial fish specimens collected within landing sites and markets of commercial ports and nearby seas. This description does not establish capture origin for each row."
+    },
+    "queries": {
+      "endpoint": "https://api.gbif.org/v1/occurrence/search",
+      "nameMatchingEndpoint": "https://api.gbif.org/v1/species/match",
+      "taxonFilter": "For each of the six source labels, GBIF Species Match supplied an accepted usageKey; occurrence searches used datasetKey=18896efa-22df-4fbd-9782-42f47257e753, country=PH, taxonKey=<accepted usageKey>, limit=300. Each was repeated with stateProvince=Pampanga.",
+      "wholeDatasetPampangaFilter": "datasetKey=18896efa-22df-4fbd-9782-42f47257e753, country=PH, stateProvince=Pampanga, limit=100.",
+      "httpStatus": 200,
+      "wholeDatasetCount": 8225,
+      "taxa": [
+        {
+          "sourceLabel": "Clarias batrachus",
+          "acceptedName": "Clarias batrachus (Linnaeus, 1758)",
+          "taxonKey": 5202683,
+          "matchConfidence": 100,
+          "datasetRecords": 11,
+          "pampangaProvinceFieldMatches": 0,
+          "recordBasis": "All 11 are preserved-specimen records.",
+          "missingFields": {
+            "locality": 11,
+            "waterBody": 11,
+            "municipality": 11,
+            "county": 11,
+            "stateProvince": 3,
+            "eventDate": 1,
+            "coordinateUncertaintyInMeters": 11,
+            "associatedMedia": 11
+          },
+          "qualityFlags": {
+            "GEODETIC_DATUM_ASSUMED_WGS84": 11,
+            "COUNTRY_COORDINATE_MISMATCH": 4,
+            "COLLECTION_MATCH_NONE": 11
+          }
+        },
+        {
+          "sourceLabel": "Channa striata",
+          "acceptedName": "Channa striata (Bloch, 1793)",
+          "taxonKey": 2391463,
+          "matchConfidence": 100,
+          "datasetRecords": 16,
+          "pampangaProvinceFieldMatches": 0,
+          "recordBasis": "All 16 are preserved-specimen records.",
+          "datasetSourceNameVariants": {
+            "Channa striata": 2,
+            "Ophicephalus striatus": 8,
+            "Ophiocephalus striatus": 6
+          },
+          "missingFields": {
+            "locality": 16,
+            "waterBody": 16,
+            "municipality": 16,
+            "county": 16,
+            "stateProvince": 1,
+            "eventDate": 0,
+            "coordinateUncertaintyInMeters": 16,
+            "associatedMedia": 16
+          },
+          "qualityFlags": {
+            "GEODETIC_DATUM_ASSUMED_WGS84": 16,
+            "COUNTRY_COORDINATE_MISMATCH": 1,
+            "COLLECTION_MATCH_NONE": 16
+          }
+        },
+        {
+          "sourceLabel": "Pterygoplichthys disjunctivus",
+          "acceptedName": "Pterygoplichthys disjunctivus (Weber, 1991)",
+          "taxonKey": 2340003,
+          "matchConfidence": 100,
+          "datasetRecords": 0,
+          "pampangaProvinceFieldMatches": 0
+        },
+        {
+          "sourceLabel": "Monopterus albus",
+          "acceptedName": "Monopterus albus (Zuiew, 1793)",
+          "taxonKey": 5204081,
+          "matchConfidence": 100,
+          "datasetRecords": 0,
+          "pampangaProvinceFieldMatches": 0
+        },
+        {
+          "sourceLabel": "Sarotherodon melanotheron",
+          "acceptedName": "Sarotherodon melanotheron Rüppell, 1852",
+          "taxonKey": 4285710,
+          "matchConfidence": 100,
+          "datasetRecords": 0,
+          "pampangaProvinceFieldMatches": 0
+        },
+        {
+          "sourceLabel": "Pelodiscus sinensis",
+          "acceptedName": "Pelodiscus sinensis Wiegmann, 1835",
+          "taxonKey": 5220435,
+          "matchConfidence": 100,
+          "datasetRecords": 0,
+          "pampangaProvinceFieldMatches": 0
+        }
+      ],
+      "archiveCrosscheck": {
+        "localArchivePath": "data/research/philippines/raw/calabarzon-manila-bay-nmp-primary-archive-20261025/nmp-fish-collection-v1.38.zip",
+        "archiveSha256": "63bbcf7a9842538913e602f69c41f802be5d056b5909f98768267a14a90d9bbf",
+        "coreRows": 8225,
+        "checkedFields": [
+          "scientificName",
+          "catalogNumber",
+          "year",
+          "stateProvince",
+          "verbatimLocality",
+          "locationRemarks",
+          "basisOfRecord"
+        ],
+        "result": "The archive confirms the source-name variants and leaves source-locality and locationRemarks blank for the Pampanga Taenioides record; it does not contain an accession identifier that links the six taxa to the 2025 study."
+      },
+      "pampangaProvinceControl": {
+        "httpStatus": 200,
+        "resultCount": 1,
+        "record": {
+          "gbifOccurrenceKey": 6517569929,
+          "scientificName": "Taenioides gracilis (Valenciennes, 1837)",
+          "catalogNumber": "NMI 11707",
+          "year": 1948,
+          "basisOfRecord": "PRESERVED_SPECIMEN",
+          "stateProvince": "Pampanga",
+          "locality": null,
+          "verbatimLocality": null,
+          "waterBody": null,
+          "municipality": null,
+          "coordinateUncertaintyInMeters": null
+        },
+        "interpretation": "An unrelated historical source-province row, not one of the six study taxa. Its province field does not establish where the specimen was captured."
+      }
+    },
+    "studyAccessionBasis": "Aquino (2025) says potential invasive specimens collected with local residents were submitted to the National Museum for identification, but the article review found no catalogue/accession numbers, study dates, pond-by-taxon table, or specimen-to-pond crosswalk."
+  },
+  "findings": {
+    "acceptedTaxonMatchesScreened": 6,
+    "datasetRowsForStudyTaxa": 27,
+    "studyTaxaWithAnyDatasetRows": 2,
+    "sourceProvincePampangaMatchesAcrossStudyTaxa": 0,
+    "unrelatedDatasetRowsWithSourceProvincePampanga": 1,
+    "recordsLinkedToStudySpecimens": 0,
+    "localityResolvedStudyTaxa": 0,
+    "waterbodyResolvedStudyTaxa": 0,
+    "locationFieldsMissingForAllClariasRows": true,
+    "locationFieldsMissingForAllChannaRows": true,
+    "coordinatesUncertaintyMissingForAll27StudyTaxonRows": true
+  },
+  "interpretation": {
+    "decision": "The dataset contains older National Museum collection records for Clarias batrachus and Channa striata, but none has sourceProvince=Pampanga, and locality/waterBody fields are absent for every returned row. Four other study labels return zero in this bounded dataset screen. The single dataset row labeled Pampanga is an unrelated 1948 Taenioides gracilis preserved specimen and also lacks locality/waterBody. The paper supplies no catalog numbers or dates to link any NMP record to its specimens. Do not treat the dataset matches, province labels, or zeros as a pond or wild-waterway checklist.",
+    "provenance": "The NMP dataset metadata describes samples from landing sites, markets, commercial ports, and nearby seas; no row-level capture-origin rule is supplied. Province labels and coordinates alone cannot establish a study pond, river, or catch site.",
+    "taxonomy": "The taxon keys are GBIF Backbone accepted-name filters; Channa striata results include legacy source strings Ophicephalus striatus and Ophiocephalus striatus. Name matching does not authenticate the 2025 paper specimens.",
+    "rights": "The ACB IPT and GBIF dataset list CC BY 4.0 for this dataset. Retain attribution for any future use; it does not grant rights to Aquino article content or unreviewed linked media."
+  },
+  "rawSnapshot": {
+    "path": "data/research/philippines/raw/central-luzon-aquino-nmp-accession-screen-20261128/gbif-nmp-six-taxa-summary.json",
+    "gitIgnored": true,
+    "bytes": 23541,
+    "sha256": "f88f059af5765cf0e2aa3201fc092eafe343975c2074ca685c56a23e22e45a78",
+    "retained": "Query URLs, counts, accepted taxon keys, quality and field-missingness summaries, catalog-number/year/province values, and no specimen coordinates or image content."
+  },
+  "snapshotHashes": {
+    "sourceRegistry": "eb33de7a265f42488d3f78d33b46feefebe6d5bb3058ec5e6b1708acc0453c55"
+  },
+  "disposition": {
+    "speciesAssertionsAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "dietGuideRowsAdded": 0,
+    "baitSuggestionsAdded": 0,
+    "pondAssignmentsAdded": 0,
+    "wildWaterwayAssignmentsAdded": 0,
+    "geometryAdded": false,
+    "imagesAdded": 0,
+    "publicAppRowsAdded": 0,
+    "publicationApproval": false,
+    "decision": "Research-only access crosswalk. No NMP specimen can be matched to the 2025 study from the published identifiers or location fields; keep the study labels unassigned to ponds and natural waterbodies."
+  },
+  "nextAction": "Continue L3 with independent site-resolved freshwater and brackish sources; treat this NMP resource as a national collection lead, not a verified Pampanga species list. Revisit the study crosswalk only if a source supplies catalog numbers, dates, and the pond/locality mapping.",
+  "sources": [
+    {
+      "sourceId": "asean-cb-national-museum-fish-collection-gbif",
+      "url": "https://ipt.aseanbiodiversity.org/resource?r=ph_fish_collection_museum_b1&request_locale=en&v=1.38",
+      "supports": "Dataset title, ACB publisher, version 1.38, 8,225 occurrence-core records, CC BY 4.0, collection identity, and published landing-site/market/port/nearby-seas description."
+    },
+    {
+      "sourceId": "asean-cb-national-museum-fish-collection-gbif",
+      "url": "https://api.gbif.org/v1/dataset/18896efa-22df-4fbd-9782-42f47257e753",
+      "supports": "GBIF dataset key, DOI, license, update timestamp, and published dataset registration."
+    },
+    {
+      "sourceId": "gbif-occurrence-downloads",
+      "url": "https://api.gbif.org/v1/occurrence/search",
+      "supports": "Bounded six-taxon and Pampanga-province searches, record counts, source fields, basis of record, and issue flags."
+    },
+    {
+      "sourceId": "aquino-2025-pampanga-aquaculture-invasive-risk-assessment",
+      "url": "https://doi.org/10.21608/ejabf.2025.426853",
+      "supports": "The article describes resident-assisted specimen submission to the National Museum; the prior full-text review found no accession identifiers or specimen-to-pond crosswalk."
+    }
+  ]
+}
