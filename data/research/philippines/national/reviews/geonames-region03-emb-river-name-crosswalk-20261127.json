@@ -1,0 +1,81 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "geonames-region03-emb-river-name-crosswalk-20261127",
+  "reviewedOn": "2026-11-27",
+  "phaseId": "L3",
+  "regionId": "0300000000",
+  "regionName": "Region III (Central Luzon)",
+  "status": "14-emb-roster-labels-screened-against-geonames;name-candidates-only;research-only",
+  "sourceIds": [
+    "emb-r3-state-environment-2024",
+    "geonames-ph-country-hydrography-2026-11-07"
+  ],
+  "inputs": [
+    "data/research/philippines/national/reviews/central-luzon-emb-r3-river-name-locality-crosswalk-20261127.json",
+    "data/research/philippines/national/reviews/central-luzon-emb-r3-2024-monitoring-scope-crosscheck-20261127.json",
+    "data/research/philippines/raw/national/geonames-ph-20261107/central-luzon-hydrographic-candidates.jsonl"
+  ],
+  "method": {
+    "candidateGeoNamesFeatureCodes": [
+      "CHN",
+      "STM",
+      "STMC",
+      "STMD",
+      "STMI",
+      "STMIX",
+      "STMX",
+      "WTRC"
+    ],
+    "fullNameMatching": "exact normalized text after Unicode decomposition, case-folding, and punctuation/space normalization",
+    "baseNameCandidateMatching": "exact normalized tokens after stripping parenthetical qualifiers from the EMB label and removing a terminal generic river/stream/watercourse/channel term; qualifier-stripped candidates are discovery leads only",
+    "fuzzyMatching": false,
+    "spatialRole": "already screened against simplified province polygons for coarse point context; no reach geometry or official province assignment is implied"
+  },
+  "results": {
+    "embRiverLabelsScreened": 14,
+    "geonamesStreamChannelRowsEligibleForNameScreen": 1062,
+    "embLabelsWithFullNormalizedNameMatch": 6,
+    "embLabelsWithQualifierStrippedBaseNameCandidate": 6,
+    "baseCandidateLabelsWithoutFullNameMatch": 0,
+    "uniqueGeoNamesRowsInCandidateUnion": 10,
+    "candidateLabelPairsByFeatureCode": {
+      "STM": 9,
+      "STMI": 1
+    },
+    "candidateLabelPairsByProvincePolygonPointContext": {
+      "Bataan": 2,
+      "Bulacan": 4,
+      "Pampanga": 3,
+      "Tarlac": 1
+    },
+    "waterbodyIdentitiesValidated": 0,
+    "riverReachAssignmentsValidated": 0,
+    "speciesAssertionsAdded": 0,
+    "publicGeometryAdded": false
+  },
+  "localReviewQueue": {
+    "path": "data/research/philippines/raw/national/geonames-ph-20261107/central-luzon-emb-river-name-review.jsonl",
+    "rows": 14,
+    "bytes": 6237,
+    "sha256": "e9df72ef26ebe0b614f6af228066f08c19ceb4e4200a338a6c4d2ad2303061ea",
+    "gitIgnored": true,
+    "appBundleIncluded": false,
+    "containsExactCoordinates": true,
+    "containsNamesAndIdentifiers": true
+  },
+  "privacy": {
+    "exactCoordinatesInTrackedReport": false,
+    "candidateNamesInTrackedReport": false,
+    "perRecordIdsInTrackedReport": false
+  },
+  "limitations": [
+    "The EMB source's 14 labels are monitoring roster units, not a complete regional river list or proof of unique systems.",
+    "A name match does not establish that a GeoNames point is the EMB-monitored waterbody, station, reach, or segment.",
+    "Qualifiers such as upstream or provincial reporting labels are ignored only to retrieve possible base-name candidates; they are not resolved or merged.",
+    "GeoNames records are gazetteer points with aggregated source provenance, not river centerlines or independent confirmations.",
+    "The prior EMB locality crosswalk found mixed locality precision and unresolved reach relationships; the underlying official report was only available as indexed text because direct PDF and screenshot requests returned HTTP 403.",
+    "No species occurrence, fishing access, regulation, water safety, public geometry, or app assertion follows from these name candidates.",
+    "Exact names, identifiers, and coordinates remain only in Git-ignored local storage."
+  ],
+  "nextAction": "Review each name candidate with locality-specific source evidence and a rights-cleared river centerline or station map; do not assign species records until reach and sampling-site links are separately resolved."
+}
