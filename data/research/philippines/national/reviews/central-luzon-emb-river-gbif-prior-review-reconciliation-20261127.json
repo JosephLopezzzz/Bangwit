@@ -1,0 +1,94 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "central-luzon-emb-river-gbif-prior-review-reconciliation-20261127",
+  "checkedOn": "2026-11-27",
+  "phaseId": "L3",
+  "regionId": "0300000000",
+  "regionName": "Region III (Central Luzon)",
+  "status": "two-positive-query-variants-deduplicated-to-previously-reviewed-specimen-chain;taxonomy-and-exact-reach-unresolved;research-only",
+  "question": "Does the positive Angat River hit from the 2026-11-27 GBIF screen represent a new record, or the specimen already reviewed on 2026-11-19?",
+  "sourceIds": [
+    "gbif-occurrence-downloads",
+    "gbif-angat-river-bpc001-13-occurrence-2248809978",
+    "gbif-ibol-dataset-040c5662-da76-4782-a48e-cdea1892d14c",
+    "bold-bpc001-13-barcode-record",
+    "ncbi-kf604634-1-genbank-submission",
+    "bold-bin-aac5247-member-records-20261119",
+    "fao-aquastat-rivers-global-2026-wfs",
+    "geonames-ph-country-hydrography-2026-11-07",
+    "geoboundaries-phl-adm2-2020-simplified",
+    "bulacan-pdpfp-2024-2036-river-network",
+    "bulacan-pdrrmo-hydrological-area",
+    "pagasa-pampanga-river-basin-description"
+  ],
+  "inputs": {
+    "data/research/philippines/national/reviews/central-luzon-emb-river-colxr-occurrence-screen-20261127.json": {
+      "sha256": "22c6792f2314743d216c4056f794330047eee5e29ace669b5bf0e55dc11a9542",
+      "queryCount": 31
+    },
+    "data/research/philippines/national/reviews/central-luzon-angat-river-bpc001-13-record-review-20261119.json": {
+      "sha256": "c132c6cd723cb27f78609f72c24cd6a4e448a2b35dd350aa5eada1eee27bb677",
+      "reviewId": "central-luzon-angat-river-bpc001-13-record-review-20261119"
+    },
+    "data/research/philippines/national/reviews/central-luzon-angat-river-aac5247-bin-membership-review-20261119.json": {
+      "sha256": "ff29abafeabf37640160ec53701f918fc1d62dccd1c0471360586ec1b8f0c08e",
+      "reviewId": "central-luzon-angat-river-aac5247-bin-membership-review-20261119"
+    },
+    "data/research/philippines/national/reviews/central-luzon-angat-bpc001-13-georeference-plausibility-20261119.json": {
+      "sha256": "2dc6d944fe6704fab9b1f011b772c666b68a425cbe3c218f026d51c42b412872",
+      "reviewId": "central-luzon-angat-bpc001-13-georeference-plausibility-20261119"
+    },
+    "data/research/philippines/raw/national/region03-emb-river-colxr-screen-20261127/01-locality-angat-river-all.json": {
+      "sha256": "9aa69ce8b2ebefa28a1be847e53e4865b9177f388993cff7f65c8ffba214d3ba",
+      "gitIgnored": true
+    },
+    "data/research/philippines/raw/national/region03-emb-river-colxr-screen-20261127/02-locality-angat-river-coordinates.json": {
+      "sha256": "9aa69ce8b2ebefa28a1be847e53e4865b9177f388993cff7f65c8ffba214d3ba",
+      "gitIgnored": true
+    }
+  },
+  "reconciliation": {
+    "labelsScreened": 14,
+    "nonCoordinatePositiveQueryVariants": 1,
+    "coordinateRequiredPositiveFollowups": 1,
+    "retainedPositiveSampleRows": 2,
+    "uniqueOccurrenceIdentities": 1,
+    "matchedPriorRecordReviews": 1,
+    "sameSpecimenChainAcrossGbifBoldAndGenBank": true,
+    "independentNewOccurrenceEvidence": false,
+    "matchedOccurrenceKey": "2248809978",
+    "matchedDatasetKey": "040c5662-da76-4782-a48e-cdea1892d14c",
+    "matchedOccurrenceId": "BPC001-13",
+    "gbifIndexedName": "BOLD:AAC5247",
+    "originalSourceIdentification": "Arius dispar",
+    "previousRecordReview": {
+      "path": "data/research/philippines/national/reviews/central-luzon-angat-river-bpc001-13-record-review-20261119.json",
+      "status": "single-historical-molecular-voucher-candidate;BOLD-and-GenBank-source-name-agree;GBIF-backbone-taxonomy-conflict;research-only",
+      "identityDecision": "historical Angat River source-record candidate; species and reach mapping held",
+      "sourceChainAssessment": "BOLD sampleId/museumId ANAd1, GBIF occurrenceID BPC001-13, and GenBank voucher ANAd1/accession KF604634.1 align as one source specimen chain. BOLD and GenBank are cross-linked representations of the same specimen/sequence, not independent occurrence confirmations.",
+      "taxonomyAssessment": "The original BOLD/GenBank specimen identification is Arius dispar. GBIF CoL XR treats BOLD:AAC5247 as an unranked usage with taxon-concept issues, while the GBIF Backbone classification associates that unranked identifier with Netuma thalassina. Do not replace the source-reported identification with either backbone mapping without a curator-reviewed BIN/specimen taxonomy crosswalk."
+    },
+    "previousBinReview": {
+      "path": "data/research/philippines/national/reviews/central-luzon-angat-river-aac5247-bin-membership-review-20261119.json",
+      "status": "bold-bin-export-reviewed;multiple-species-labels-within-bin;specimen-name-not-resolved-by-bin;research-only",
+      "speciesCrosswalkResolved": false,
+      "interpretation": "The 210 BOLD barcode documents include six named species values plus five missing species values under the same BIN. The Philippines subset itself contains Arius dispar and Arius manillensis labels. This establishes that the BIN is not a safe one-to-one species identifier for this source chain; it does not establish which of the other names, if any, is a misidentification. The exact BPC001-13 record remains source-reported as Arius dispar by morphology, but this BIN export is not an independent identification of that specimen and does not resolve the separate GBIF Backbone mapping to Netuma thalassina."
+    },
+    "previousGeoreferenceReview": {
+      "path": "data/research/philippines/national/reviews/central-luzon-angat-bpc001-13-georeference-plausibility-20261119.json",
+      "status": "source-coordinate-spatial-plausibility-supported;named-reach-and-coordinate-uncertainty-unresolved;research-only",
+      "exactNamedReachIdentity": "unresolved",
+      "coordinateUncertainty": "not supplied by GBIF or BOLD",
+      "disposition": "Retain BPC001-13 as a spatially plausible historical Angat River candidate, but keep the exact reach, coordinate precision, and fish identity unresolved. Do not draw a point or river geometry in the app from this record."
+    }
+  },
+  "decision": {
+    "newSpeciesAssertionAdded": false,
+    "newOccurrenceAdded": false,
+    "newGeometryAdded": false,
+    "publicAppProjection": false,
+    "publicationApproval": false,
+    "interpretation": "The new GBIF screen rediscovered the same BPC001-13/ANAd1 source specimen already reviewed on 2026-11-19. Its GBIF and coordinate-required query variants are not independent records, and the BOLD/GenBank entries are linked representations of the same specimen/sequence. Preserve the source-reported Arius dispar identification as a held label; the BOLD BIN and GBIF taxonomic mapping do not settle the species. The prior spatial review supports coarse plausibility but does not establish coordinate precision or an exact named reach."
+  },
+  "nextAction": "Continue seeking a curator-reviewed determination for the linked specimen and independent support for exact Angat River reach identity; do not duplicate this hit as new evidence or promote it to the app."
+}
