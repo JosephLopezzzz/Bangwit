@@ -1,0 +1,184 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "central-luzon-bataan-ilanin-bay-inaturalist-record-crosscheck-20261128",
+  "reviewedOn": "2026-11-28",
+  "phaseId": "L3",
+  "regionId": "0300000000",
+  "regionName": "Region III (Central Luzon)",
+  "provinceTextScope": "Bataan; subset selected by exact GBIF verbatimLocality text, not a validated administrative polygon",
+  "status": "gbif-linked-inaturalist-item-crosscheck;place-label-only;taxon-conflict-held;photo-rights-not-cleared;research-only",
+  "question": "Does the Ilanin Bay-labeled subset of Bataan GBIF-linked iNaturalist records support a site-verified species assertion or any approved species image?",
+  "sourceIds": [
+    "gbif-occurrence-downloads",
+    "inaturalist-bataan-observation-metadata-followup-20261128"
+  ],
+  "inputs": {
+    "gbif": {
+      "endpoint": "https://api.gbif.org/v1/occurrence/search",
+      "datasetKey": "50c9509d-22c7-4a22-a47d-8c48425ef4a7",
+      "selection": {
+        "verbatimLocality": "Ilanin Bay, Central Luzon, PH",
+        "rows": 16,
+        "localityFieldMissing": 16,
+        "waterBodyFieldMissing": 16
+      },
+      "snapshot": {
+        "path": "data/research/philippines/raw/central-luzon-bataan-georeferenced-fish-screen-20261127/occurrence-search.json",
+        "bytes": 1698589,
+        "sha256": "c6b88139b490251df044d828c117576adcccd3121c9d750b315b443cae389179",
+        "gitIgnored": true,
+        "retained": "The broader 251-row candidate search snapshot; exact coordinates remain only in ignored local storage."
+      },
+      "occurrenceKeys": [
+        4054740857,
+        4054842866,
+        4054859871,
+        4054934942,
+        4599914890,
+        4599982949,
+        4600194918,
+        4600205867,
+        4606652770,
+        4852766184,
+        5188097392,
+        5215998655,
+        5892525785,
+        5892544115,
+        5892702434,
+        5892888066
+      ]
+    },
+    "iNaturalist": {
+      "endpoint": "https://api.inaturalist.org/v1/observations",
+      "request": {
+        "linkedRecords": 16,
+        "observationIdSetSha256": "a1d6a6341bde5b4b7eb36372916593b352c987ec4f49cb6988347d884500cca0",
+        "idsRetainedInIgnoredSummaryOnly": true,
+        "requestUrlWithIdsPersistedInTrackedFiles": false
+      },
+      "response": {
+        "httpStatus": 200,
+        "returnedRows": 16,
+        "missingRows": 0,
+        "unexpectedRows": 0,
+        "responseBodyRetained": false,
+        "responseBodyBytesOrSha256Recorded": false
+      },
+      "summarySnapshot": {
+        "path": "data/research/philippines/raw/central-luzon-bataan-ilanin-inaturalist-metadata-20261128/inaturalist-observation-metadata-summary.json",
+        "bytes": 14166,
+        "sha256": "350bd1c63514651a4910ea80e35f2965daeb5eb4d81a937c8dd569a0fc3e0d53",
+        "gitIgnored": true,
+        "retained": "Sanitized metadata summary with public observation IDs, GBIF keys, taxon labels, broad placeGuess, privacy state, positional-accuracy summaries, and photo-license counts; no coordinates, usernames, photo URLs, or image files."
+      }
+    }
+  },
+  "findings": {
+    "qualityGrades": {
+      "research": 16
+    },
+    "geoprivacy": {
+      "null": 16
+    },
+    "obscured": {
+      "false": 16
+    },
+    "placeGuess": {
+      "Ilanin Bay, Central Luzon, PH": 16
+    },
+    "positionalAccuracyMeters": {
+      "min": 12,
+      "median": 44,
+      "max": 1983
+    },
+    "iNaturalistCommunityTaxonCounts": {
+      "Abudefduf sexfasciatus": 2,
+      "Abudefduf sordidus": 1,
+      "Abudefduf vaigiensis": 1,
+      "Acanthurus triostegus": 1,
+      "Amphiprion annamensis": 1,
+      "Amphiprion ocellaris": 1,
+      "Caranx sexfasciatus": 1,
+      "Ellochelon vaigiensis": 1,
+      "Halichoeres scapularis": 1,
+      "Monodactylus argenteus": 4,
+      "Plectorhinchus lineatus": 1,
+      "Thalassoma lunare": 1
+    },
+    "recordsWithIdentificationDisagreement": 0,
+    "recordPhotoCount": 19,
+    "recordPhotoLicenseCounts": {
+      "cc-by-nc": 19
+    },
+    "gbifRecordLicenseCounts": {
+      "http://creativecommons.org/licenses/by-nc/4.0/legalcode": 16
+    },
+    "crossPlatformTaxonConflict": {
+      "gbifOccurrenceKey": 4054934942,
+      "gbifSourceName": "Amphiprion amamiensis Mori, 1966",
+      "gbifAcceptedName": "Amphiprion perideraion Bleeker, 1855",
+      "iNaturalistCommunityName": "Amphiprion annamensis",
+      "disposition": "Hold identity; do not merge name variants or project a species assertion until an authoritative taxonomic crosswalk and visual evidence resolve the record."
+    },
+    "positionalAccuracyMedianNote": "Arithmetic median recomputed from the 16 retained positional-accuracy values is 44 m; the ignored source summary reports 46 m. Preserve this discrepancy rather than treating the summary statistic as independently confirmed."
+  },
+  "interpretation": {
+    "siteAssignmentsValidated": 0,
+    "taxonIdentitiesIndependentlyValidated": 0,
+    "speciesAssertionsAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "geometryAdded": false,
+    "imagesVisuallyReviewed": 0,
+    "imagesAdded": 0,
+    "publicAppRowsAdded": 0,
+    "decision": "The records share a broad public place label, but GBIF locality and waterBody fields are absent and verbatimLocality/placeGuess do not establish the capture station or a validated Ilanin Bay polygon. Research Grade and zero platform disagreements are not independent taxonomic verification. One Amphiprion record has conflicting platform labels. All 19 iNaturalist photo licenses are CC BY-NC; no media was viewed, checked against the existing Bangwit visual standard, or admitted. Keep the entire subset research-only."
+  },
+  "limitations": [
+    "The original 54 candidates came from GBIF stateProvince=Bataan text filtering, not provincial-polygon intersection; this 16-row subset is a further verbatimLocality string filter.",
+    "The exact GBIF locality and waterBody fields are absent for all 16 rows. Ilanin Bay is only the record text label; no boundary geometry or capture-site link was validated.",
+    "Reported positional accuracy ranges from 12 to 1,983 m; no coordinate values were retained in the review or sanitized summary.",
+    "All 16 observations are platform Research Grade and have zero listed identification disagreements, but those platform states do not establish a correct identification or wild occurrence.",
+    "GBIF maps occurrence 4054934942 from source name Amphiprion amamiensis to accepted name Amphiprion perideraion, while the current iNaturalist community taxon is Amphiprion annamensis; hold this identity conflict.",
+    "All 19 attached iNaturalist photos are marked CC BY-NC. Observation and photo licenses are separate; no image was downloaded, visually inspected, or approved for Bangwit. Do not use as an image reference without the species-image standard review, individual attribution, and a reuse decision that fits the app distribution.",
+    "These 16 records are observations, not a complete Ilanin Bay fish inventory; unreturned taxa do not imply absence.",
+    "The ignored source summary reports a 46 m positional-accuracy median; recomputing the conventional arithmetic median from all 16 stored values gives 44 m. Minimum and maximum agree; retain this small summary-statistic discrepancy."
+  ],
+  "nextStep": "Continue Bataan candidate review with the remaining 38 iNaturalist observations and 66 NMNH/iBOL material-sample keys, prioritizing original site, capture-context, voucher and taxon evidence. Keep images gated by src/lib/species-images.ts and docs/SPECIES_IMAGE_STANDARD.md.",
+  "sources": [
+    {
+      "sourceId": "gbif-occurrence-downloads",
+      "url": "https://api.gbif.org/v1/occurrence/4054934942",
+      "supports": "The GBIF occurrence source and accepted-name crosswalk for the one held Amphiprion record; its locality and waterBody fields are absent in the reviewed search snapshot."
+    },
+    {
+      "sourceId": "inaturalist-bataan-observation-metadata-followup-20261128",
+      "url": "https://api.inaturalist.org/v1/observations",
+      "supports": "Public metadata for the 16 linked observations, including Research Grade, current community taxa, geoprivacy/obscured flags, positional-accuracy values, and item photo-license codes."
+    },
+    {
+      "sourceId": "inaturalist-bataan-observation-metadata-followup-20261128",
+      "url": "https://www.inaturalist.org/observations/150205315",
+      "supports": "Public observation page used to identify the iNaturalist side of the cross-platform Amphiprion name conflict; not independent taxon verification."
+    },
+    {
+      "sourceId": "inaturalist-bataan-observation-metadata-followup-20261128",
+      "url": "https://help.inaturalist.org/en/support/solutions/articles/151000175695",
+      "supports": "iNaturalist explanation that observation-data and photo licenses are separate and require image-level attention."
+    }
+  ],
+  "snapshotHashes": {
+    "sourceRegistry": "a6de4e0030275936319b30f90e9e7273c23e4fa24ca754f129227d205782dc67"
+  },
+  "disposition": {
+    "admittedCandidates": 0,
+    "heldCandidates": 16,
+    "excludedCandidates": 0,
+    "speciesAssertionsAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "geometryAdded": false,
+    "imagesAdded": 0,
+    "publicAppRowsAdded": 0,
+    "publicationApproval": false,
+    "decision": "Keep all 16 records research-only; no verified local species, waterbody occurrence, geometry, or image has been established."
+  }
+}

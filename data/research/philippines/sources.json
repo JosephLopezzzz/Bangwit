@@ -45183,19 +45183,20 @@
       "checkedOn": "2026-11-28",
       "sourceYear": 2026,
       "access": {
-        "status": "public-observation-api-54-of-54-matched;7-obscured-observations-withheld-from-place-classification;place-text-only-aggregate;separate-photo-license-counts;no-raw-response-or-identifiers-retained;research-only",
+        "status": "public-observation-api-54-of-54-aggregate-plus-16-of-16-ilanin-text-subset-matched;geoprivacy-respected;separate-photo-license-counts;no-coordinate-or-media-retained;research-only",
         "reviewFiles": [
-          "national/reviews/central-luzon-bataan-inaturalist-metadata-followup-20261128.json"
+          "national/reviews/central-luzon-bataan-inaturalist-metadata-followup-20261128.json",
+          "national/reviews/central-luzon-bataan-ilanin-bay-inaturalist-record-crosscheck-20261128.json"
         ],
-        "reviewedSections": "Aggregate metadata for the 54 GBIF-linked observations: quality/captive/geoprivacy fields, broad place-guess text classes for non-obscured records, and observation/photo license codes. The public request was unauthenticated. No coordinate fields were accessed; no photo files were downloaded or viewed; no hidden location was inferred.",
+        "reviewedSections": "Aggregate metadata for the 54 GBIF-linked observations and a separate 16-record Ilanin Bay verbatimLocality subset cross-checked against public iNaturalist metadata: quality/captive/geoprivacy fields, broad placeGuess, taxon labels and disagreements, positional-accuracy summaries, and observation/photo license codes. Public requests were unauthenticated. Exact coordinates, usernames, photo URLs, and media files were not retained; the focused subset has a separate sanitized ignored summary.",
         "fullTextRetrieved": true,
         "rawPath": null,
         "rawSha256Recorded": false
       },
       "reuse": {
         "metadata": "Observation-data and image licenses are separate. iNaturalist documents that contributors retain ownership and may set different licenses for observations and media; terms must be checked per item.",
-        "raw": "The public v1 observations endpoint returns broad observation records including location fields. Only needed metadata fields were accessed in memory; no raw response, coordinate, locality string, or item-level identity was retained.",
-        "content": "Only aggregate counts are retained. No photos were viewed, downloaded, or reused; license metadata alone does not establish image suitability or taxonomic correctness."
+        "raw": "Raw API response bodies are not retained. For the later 16-record focused subset, a sanitized, hash-receipted metadata summary is held under ignored local research storage; it contains public identifiers and broad place text but no coordinates, usernames, photo URLs, or media files. The earlier 54-record aggregate follow-up retained no identifiers.",
+        "content": "No photos were viewed, downloaded, or reused. The focused 16-record subset has 19 photo-license entries marked CC BY-NC. Observation-data and image licenses are separate; license metadata alone does not establish image suitability, taxonomic correctness, or permission for the app's intended distribution."
       },
       "publicationApproval": false,
       "license": null,
@@ -45204,7 +45205,8 @@
         "Seven observations marked obscured were excluded from place-guess classification; iNaturalist warns that obscured locations can be inferred, so do not attempt reconstruction.",
         "Place-guess text categories are not exact collection sites or proof of capture from a named waterbody.",
         "Research Grade and captive=false are platform fields, not independent verification of species identity or a wild occurrence.",
-        "A reported photo license does not verify what the image depicts, image quality, or suitability for app use."
+        "A reported photo license does not verify what the image depicts, image quality, or suitability for app use.",
+        "The 16-record Ilanin Bay subset is selected by a GBIF verbatimLocality text value; it is not a verified capture-site or provincial geometry assignment. One Amphiprion name differs between the GBIF source/accepted names and iNaturalist current community taxon."
       ],
       "researchStatus": "central-luzon;bataan;inaturalist-linked;geoprivacy-respected;aggregate-metadata-only;no-app-projection"
     },
