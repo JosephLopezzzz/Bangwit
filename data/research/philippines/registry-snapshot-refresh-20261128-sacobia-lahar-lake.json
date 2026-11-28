@@ -1,0 +1,52 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "philippines-source-registry-refresh-sacobia-lahar-lake-20261128",
+  "reviewedOn": "2026-11-28",
+  "status": "source-registry-receipts-refreshed;existing-source-references-unchanged;research-only",
+  "purpose": "Record the source-registry and dependent provenance refresh after adding the DLSU Sacobia Lahar Lake thesis abstract lead.",
+  "inputs": {
+    "priorRegistrySha256": "c74b8d22e4946311d049f662f965657f647685c5863f0dd89326fc744bf9f6ed",
+    "currentRegistrySha256": "e48e2f3dff1f964c1fd1a49683116953494fef3207ac8567ecf5a26ade610b27",
+    "priorSourceCount": 1305,
+    "currentSourceCount": 1306,
+    "newSourceIds": [
+      "dlsu-1994-sacobia-lahar-lake-thesis"
+    ],
+    "changedExistingSourceIds": []
+  },
+  "method": "Added one official repository-record source for a historical abstract-only thesis lead. Refreshed the full source-registry fingerprint in existing review receipts and reconciled dependent Labayat review hashes in dependency order. Rebuilt the Palico provenance projection and Luzon evidence index. Earlier historical input hashes were retained.",
+  "findings": {
+    "reviewSourceRegistryRefsRefreshed": 13,
+    "preexistingReviewSourceRegistryRefsRefreshed": 12,
+    "dependentReviewHashLinksReconciled": 10,
+    "changedReferencedExistingSourceObjects": 0,
+    "speciesAssertionsAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "waterbodyIdentityOrGeometryRowsAdded": 0,
+    "publicAppRowsAdded": 0,
+    "updatedArtifacts": [
+      "data/research/philippines/national/reviews/central-luzon-tarlac-sacobia-lahar-lake-1994-thesis-abstract-review-20261128.json",
+      "data/research/philippines/national/reviews/luzon-evidence-index-20261128.json",
+      "data/research/philippines/palico-river-decisions.json",
+      "src/data/palico-river-survey-evidence.json"
+    ]
+  },
+  "palicoProjectionRefresh": {
+    "decisionSource": "data/research/philippines/palico-river-decisions.json",
+    "previousRegistrySha256": "c74b8d22e4946311d049f662f965657f647685c5863f0dd89326fc744bf9f6ed",
+    "currentRegistrySha256": "e48e2f3dff1f964c1fd1a49683116953494fef3207ac8567ecf5a26ade610b27",
+    "linkedSourceRecordUnchanged": true,
+    "generatedProjection": "src/data/palico-river-survey-evidence.json",
+    "projectionCheck": "passed",
+    "assertions": 12,
+    "heldRows": 3,
+    "semanticRowsComparedWithPreviousCommit": "records and counts are unchanged"
+  },
+  "validation": {
+    "researchStatus": "passed;1306-source-references",
+    "luzonEvidenceAudit": "passed;433-review-artifacts;0-unresolved-JSON-references;0-missing-source-ids;849/849-local-raw-refs-matched;0-manifest-reference-problems",
+    "palicoRiverProjectionCheck": "passed;12-assertions;3-held",
+    "diffCheck": "passed"
+  },
+  "disposition": "Research-only registry and provenance maintenance. The six historical abstract labels remain unverified and are not admitted as species or occurrence assertions. No current waterbody identity, geometry, publication permission, or public-app claim was added."
+}
