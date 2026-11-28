@@ -1,0 +1,40 @@
+{
+  "schemaVersion": 1,
+  "reviewId": "philippines-source-registry-refresh-clsu-goby-20261128",
+  "reviewedOn": "2026-11-28",
+  "status": "source-registry-receipts-refreshed;existing-source-references-unchanged;research-only",
+  "purpose": "Record the source-registry and dependent provenance refresh after adding the CLSU indexed goby thesis lead.",
+  "inputs": {
+    "priorRegistrySha256": "e3de2b6d29ac34dba9bc0885b30dc64a6f1a3e3660d59cdfa5ab4e5e91b8cd26",
+    "currentRegistrySha256": "c74b8d22e4946311d049f662f965657f647685c5863f0dd89326fc744bf9f6ed",
+    "priorSourceCount": 1304,
+    "currentSourceCount": 1305,
+    "newSourceIds": [
+      "clsu-daquigan-central-luzon-goby-thesis-2012"
+    ],
+    "changedExistingSourceIds": []
+  },
+  "method": "Added one institutional indexed-thesis source record after reviewing the official CLSU CVSM research index result. Updated current review snapshot hashes and reconciled dependent review-file hash references so each value matches the bytes now stored. Historical inputSnapshotHashes and the earlier Romero registry-refresh receipt remain unchanged. Rebuilt the Palico projection and regenerated the Luzon evidence index.",
+  "findings": {
+    "currentReviewSourceRegistrySnapshotRefs": 12,
+    "preexistingReviewSourceRegistryRefsRefreshed": 11,
+    "dependentReviewHashLinksReconciled": 8,
+    "speciesAssertionsAdded": 0,
+    "provinceSpeciesAssignmentsAdded": 0,
+    "occurrenceRowsAdded": 0,
+    "waterbodyRowsAdded": 0,
+    "publicAppRowsAdded": 0,
+    "updatedArtifacts": [
+      "data/research/philippines/national/reviews/central-luzon-clsu-2012-goby-thesis-abstract-review-20261128.json",
+      "data/research/philippines/national/reviews/luzon-evidence-index-20261128.json",
+      "data/research/philippines/palico-river-decisions.json",
+      "src/data/palico-river-survey-evidence.json"
+    ]
+  },
+  "validation": {
+    "researchStatus": "passed",
+    "luzonEvidenceAudit": "passed;432-review-artifacts;0-unresolved-references;0-missing-source-ids;0-manifest-reference-problems",
+    "palicoRiverProjectionCheck": "passed;12-assertions;3-held",
+    "diffCheck": "passed"
+  }
+}
