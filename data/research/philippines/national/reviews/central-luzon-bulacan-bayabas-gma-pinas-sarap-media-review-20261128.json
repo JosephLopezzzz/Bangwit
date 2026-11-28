@@ -9,21 +9,27 @@
   "provinceName": "Bulacan",
   "localityNamesAsReported": [
     "Doña Remedios Trinidad (video title)",
-    "Bayabas (rendered English transcript)"
+    "Bayabas (rendered English transcript; PSGC-listed barangay of DRT)"
   ],
   "waterbodyNameAsReported": null,
-  "status": "publisher-channel-transcript-reviewed;dated-community-media-lead;local-fish-identities-unresolved;unnamed-river-reach;research-only",
+  "status": "publisher-channel-transcript-reviewed;dated-community-media-lead;bayabas-barangay-confirmed;salapangan-watercourse-crosswalk-unresolved;local-fish-identities-unresolved;research-only",
   "question": "What freshwater and fish-locality evidence does the GMA Public Affairs segment provide for Doña Remedios Trinidad and Bayabas, and can its local fish labels be resolved to species or a named river?",
   "sourceIds": [
-    "gma-pinas-sarap-drt-bayabas-fish-media-lead-2024"
+    "gma-pinas-sarap-drt-bayabas-fish-media-lead-2024",
+    "psa-psgc-drtrinidad-bayabas-barangays-2025",
+    "emb-snmc-2023-eprmp-conlong-salapangan-freshwater",
+    "emb-eagle-cement-2022-eprmp-conlong-salapangan-freshwater"
   ],
   "inputs": {
-    "sourceRegistrySha256": "5c1c52b844fa4bb7fac6cadba1c7b7f05147828e5d542c376318d1149dbe0246"
+    "sourceRegistrySha256": "fe10ad76f3b8d820708206927ab766c6c9872491b63e6fde4a91b5fbe6f819b5",
+    "existingFreshwaterReview": "data/research/philippines/national/reviews/central-luzon-bulacan-snmc-eprmp-freshwater-fish-review-20261120.json",
+    "overlappingCampaignLineageReview": "data/research/philippines/national/reviews/central-luzon-bulacan-eagle-snmc-conlong-salapangan-campaign-lineage-review-20261120.json"
   },
   "sourceAccess": {
     "page": "The Dailymotion page identifies GMA Public Affairs, gives the title and states an air date of January 28, 2024. Its rendered English transcript was reviewed.",
     "video": "Video frames and Filipino audio were not independently reviewed. The video and transcript were not downloaded; no images or media assets were retained.",
-    "terms": "No item-specific license or permission to reuse the segment, images, or transcript was established."
+    "terms": "No item-specific license or permission to reuse the segment, images, or transcript was established.",
+    "administrativeCrossCheck": "The Philippine Statistics Authority PSGC page, listing DRT barangays as of 2025-07-31, identifies Bayabas as barangay code 0301424001. This confirms the administrative label only; it provides no river reach or waterbody geometry."
   },
   "findings": {
     "mediaContext": {
@@ -70,10 +76,16 @@
     "localityCrosswalk": {
       "titlePlace": "Doña Remedios Trinidad, Bulacan",
       "transcriptPlace": "Bayabas",
+      "administrativeCrosswalk": {
+        "status": "confirmed-as-DRT-barangay-by-PSA-PSGC",
+        "barangayCode": "0301424001",
+        "psgcListingAsOf": "2025-07-31",
+        "sourceId": "psa-psgc-drtrinidad-bayabas-barangays-2025"
+      },
       "namedRiver": null,
       "coordinates": null,
       "geometryAdded": false,
-      "decision": "The page and transcript do not identify a river by name, barangay-level site, coordinates, or reach. Do not resolve Bayabas to a particular mapped watercourse or infer the exact relationship between the title locality and the transcript locality."
+      "decision": "The transcript names Bayabas and the PSA PSGC page confirms it is a DRT barangay. The exact media fishing reach and river name remain unresolved. A separate 2022 environmental assessment names Salapangan River stations W03/W04 in DRT, but neither report says those stations are in Bayabas or connects them to the media segment; no barangay boundary geometry or station-to-barangay crosswalk was established. Do not resolve the media river to Salapangan."
     },
     "taxonomy": {
       "sourceReportedScientificNames": [],
@@ -89,11 +101,27 @@
       "currentPresenceClaimAdded": false,
       "catchabilityOrSafetyClaimAdded": false,
       "publicAppRowsAdded": 0
+    },
+    "existingFreshwaterStudyCrossCheck": {
+      "existingStudyReview": "data/research/philippines/national/reviews/central-luzon-bulacan-snmc-eprmp-freshwater-fish-review-20261120.json",
+      "overlappingCampaignLineageReview": "data/research/philippines/national/reviews/central-luzon-bulacan-eagle-snmc-conlong-salapangan-campaign-lineage-review-20261120.json",
+      "sourceIds": [
+        "emb-snmc-2023-eprmp-conlong-salapangan-freshwater",
+        "emb-eagle-cement-2022-eprmp-conlong-salapangan-freshwater"
+      ],
+      "reportedScope": "The 2023 SNMC EPRMP names four stations on portions of Conlong River and Salapangan River in San Ildefonso and DRT. Salapangan stations W03/W04 are in DRT; the reviewed report provides coordinates but no Bayabas barangay crosswalk.",
+      "fishEvidence": "The reviewed EPRMP describes guppies, source-named Poecilia reticulata, as visual observations at W02/W03/W04 and one unidentified tilapia at W03. It says fish data relied on interviews and secondary sources and the fish were not sampled. Bulig and hito are interview/secondary leads; the report’s broader Channa striata table entry is not assigned to a station and does not resolve the GMA media label bulig.",
+      "reportLineage": "The 2022 Eagle EPRMP and 2023 SNMC EPRMP reproduce the matching May 2022 assessment/station material. The existing lineage review treats them as one likely shared campaign/evidence unit, not independent confirmations.",
+      "dateConflict": "The 2023 EPRMP executive-summary milestone table labels the Freshwater Ecology Survey April 2022, while detailed section 2.2.4 gives May 7–8, 2022. The overlapping Eagle report also reproduces the detailed May dates. Preserve this source-internal discrepancy; do not treat it as settled by the repeated report.",
+      "geographicDecision": "Municipality-level overlap between DRT and the Salapangan assessment is insufficient to identify the media river. Bayabas administrative identity does not prove W03/W04 are in that barangay.",
+      "newSpeciesOrOccurrenceRows": 0,
+      "geometryAdded": false,
+      "decision": "Use as a cross-check only. Do not add the media labels as species, do not equate media bulig with the EPRMP interview/table entries, and do not transfer Salapangan station evidence to Bayabas."
     }
   },
   "method": {
-    "approach": "Reviewed the Dailymotion publisher page and its rendered English transcript on 2026-11-28, recording only page-stated publisher/date metadata and relevant transcript time ranges.",
-    "limits": "The source is a community-media segment. Its rendered transcript may not preserve the exact spoken Filipino labels or pronunciation. No video, audio, specimen, diagnostic image, survey report, mapped river reach, or reuse permission was independently reviewed. This bounded review is not evidence that no other records exist."
+    "approach": "Reviewed the Dailymotion publisher page and its rendered English transcript on 2026-11-28, recording only page-stated publisher/date metadata and relevant transcript time ranges. On 2026-11-28, cross-checked the transcript locality against the PSA PSGC barangay listing and linked the result to the already-reviewed SNMC/Eagle EPRMP locality and campaign-lineage reviews.",
+    "limits": "The source is a community-media segment. Its rendered transcript may not preserve the exact spoken Filipino labels or pronunciation. No video, audio, specimen, diagnostic image, survey report, mapped river reach, or reuse permission was independently reviewed. This bounded review is not evidence that no other records exist. The PSA PSGC source confirms only the administrative barangay name and code; it supplies no boundary geometry. Existing EPRMP station points cannot be assigned to Bayabas from the reviewed evidence."
   },
   "disposition": {
     "researchOnly": true,
@@ -108,13 +136,29 @@
   },
   "nextActions": [
     "Seek a taxon-level source with diagnostic characters, voucher/accession evidence, or a qualified identification before mapping bobondat, biyapo/biya/bia, or bulig to scientific names.",
-    "Resolve the Bayabas locality and unnamed river independently with a primary survey, institution record, or source containing a named station or coordinates before adding any locality crosswalk or geometry.",
-    "Keep this as a community-media discovery lead only and continue the locality-resolved Bulacan freshwater source sweep."
+    "Resolve the named river and exact Bayabas reach independently with a primary survey, institution record, or source containing a named station or coordinates; do not transfer Salapangan W03/W04 records to Bayabas.",
+    "If a defensible Bayabas boundary source becomes available, compare it against the SNMC/Eagle station coordinates without treating polygon proximity alone as a locality crosswalk.",
+    "Keep this as a community-media discovery lead and continue the locality-resolved Bulacan freshwater source sweep."
   ],
   "sources": [
     {
       "sourceId": "gma-pinas-sarap-drt-bayabas-fish-media-lead-2024",
       "supports": "Publisher-stated title, account and air date, plus the rendered transcript’s local labels and locality wording. It does not independently establish scientific fish identity, named river reach, or current presence."
+    },
+    {
+      "sourceId": "psa-psgc-drtrinidad-bayabas-barangays-2025",
+      "supports": "PSA PSGC listing as of 2025-07-31 identifies Bayabas (0301424001) as a barangay of Doña Remedios Trinidad. It does not identify a watercourse or fishing reach."
+    },
+    {
+      "sourceId": "emb-snmc-2023-eprmp-conlong-salapangan-freshwater",
+      "supports": "Existing review of official EMB-indexed EPRMP text for the named Conlong/Salapangan stations, fish-evidence methods, and unresolved station locality; it does not connect its Salapangan stations to Bayabas."
+    },
+    {
+      "sourceId": "emb-eagle-cement-2022-eprmp-conlong-salapangan-freshwater",
+      "supports": "Existing overlap review showing the 2022 Eagle report repeats the same Conlong/Salapangan assessment material; counted as one likely campaign, not independent corroboration."
     }
-  ]
+  ],
+  "snapshotHashes": {
+    "sourceRegistry": "fe10ad76f3b8d820708206927ab766c6c9872491b63e6fde4a91b5fbe6f819b5"
+  }
 }
